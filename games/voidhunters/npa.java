@@ -46,7 +46,7 @@ final class npa implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var5), "npa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var5), "npa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class npa implements dja {
           }
           var8 = di.a(param1, param0 - 90);
           if (var8 == null) {
-            stackIn_12_0 = isa.a(dh.field_q, new String[]{param1}, 118);
+            stackIn_12_0 = SetReverbGain.a(SetSniperCannonAimarc.field_q, new String[]{param1}, 118);
             return stackIn_12_0;
           }
           mr.field_M.a(3, var8);
@@ -93,8 +93,8 @@ final class npa implements dja {
           }
           var8.b(-3846);
           var8.d((byte) -35);
-          vob.field_p = vob.field_p - 1;
-          var9 = dpa.field_p;
+          GetBoostersCooldown.field_p = GetBoostersCooldown.field_p - 1;
+          var9 = RequestNewestBlackboxRecording.field_p;
           if (param0 != 90) {
             field_c = 0.9397013753078566;
           }
@@ -116,7 +116,7 @@ final class npa implements dja {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ final class npa implements dja {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 

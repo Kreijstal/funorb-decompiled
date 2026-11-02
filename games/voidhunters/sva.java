@@ -59,9 +59,9 @@ final class sva extends le {
             var8 = stackIn_7_0;
             var8 = var8 >> 4 & 255;
             var9 = hob.a(var6, hob.field_d, 127);
-            var10 = hob.a(var6, noa.field_o, 117);
-            var11 = var9 + (jmb.field_q[var8] * this.field_l >> 12);
-            var12 = var10 + (qta.field_o[var8] * this.field_l >> 12);
+            var10 = hob.a(var6, GetTorpedoReload.field_o, 117);
+            var11 = var9 + (GetBombletSprayProjectiles.field_q[var8] * this.field_l >> 12);
+            var12 = var10 + (GetDebrisPartitioned.field_o[var8] * this.field_l >> 12);
             var13 = -var10 + var12;
             var14 = -var9 + var11;
             if (var14 != 0 ||
@@ -103,7 +103,7 @@ final class sva extends le {
               }
               for (var23 = var9; var23 < var11; var23++) {
                 var24 = var20 * (var23 - var9) + 1024 + var21;
-                var25 = gbb.field_q & var23;
+                var25 = SetMassDriverEnergyUsed.field_q & var23;
                 var26 = var16Lifetime2 & wf.field_d;
                 var19 = var19 + var18;
                 if (var15 == 0) {
@@ -178,7 +178,7 @@ final class sva extends le {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -186,14 +186,14 @@ final class sva extends le {
         if (param0 >= -35) {
           sva.e((byte) -123);
         }
-        taa.e((byte) -120);
+        GetTrapMouse.e((byte) -120);
     }
 
     final static boolean e(byte param0) {
         if (param0 != -34) {
           sva.e((byte) 68);
         }
-        return !wba.field_p.a(4) ? true : false;
+        return !GetBombletSprayPushMultiplier.field_p.a(4) ? true : false;
     }
 
     static {

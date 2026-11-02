@@ -7,7 +7,7 @@ final class pn implements dja {
 
     public final tv a(byte param0) {
         int var2 = 124 % ((param0 + 64) / 50);
-        return (tv) ((Object) new qjb());
+        return (tv) ((Object) new WeaponBehaviour());
     }
 
     public static void a(int param0) {
@@ -21,7 +21,7 @@ final class pn implements dja {
         if (param0 != 11995) {
           return (tv[]) null;
         }
-        return (tv[]) ((Object) new qjb[param1]);
+        return (tv[]) ((Object) new WeaponBehaviour[param1]);
     }
 
     static {

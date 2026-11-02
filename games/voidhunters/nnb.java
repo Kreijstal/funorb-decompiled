@@ -20,9 +20,9 @@ final class nnb extends uj {
     final int a(int param0) {
         if (param0 != -1) {
           nnb.b(true);
-          return wpa.field_p;
+          return GetPointDefenceLaserRandomness.field_p;
         }
-        return wpa.field_p;
+        return GetPointDefenceLaserRandomness.field_p;
     }
 
     final int b(byte param0) {
@@ -36,9 +36,9 @@ final class nnb extends uj {
     final int d(byte param0) {
         if (param0 != 64) {
           field_e = -50;
-          return oq.field_o;
+          return Particle.field_o;
         }
-        return oq.field_o;
+        return Particle.field_o;
     }
 
     nnb() {

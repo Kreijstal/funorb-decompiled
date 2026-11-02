@@ -8,7 +8,7 @@ abstract class mnb {
     static String field_g;
     private boolean field_e;
     int field_f;
-    qfa field_c;
+    OpenGlToolkit field_c;
 
     abstract void a(int param0);
 
@@ -22,19 +22,19 @@ abstract class mnb {
         super.finalize();
     }
 
-    mnb(qfa param0, int param1, byte[] param2, int param3, boolean param4) {
+    mnb(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
         this.field_e = false;
         try {
           this.field_b = param3;
           this.field_c = param0;
           this.field_a = param4 ? true : false;
-          jaggl.OpenGL.glGenBuffersARB(1, qra.field_p, 0);
-          this.field_f = qra.field_p[0];
+          jaggl.OpenGL.glGenBuffersARB(1, SetLaserAimarc.field_p, 0);
+          this.field_f = SetLaserAimarc.field_p[0];
           this.a(34962);
           jaggl.OpenGL.glBufferDataARBub(param1, this.field_b, param2, 0, !this.field_a ? 35044 : 35040);
           this.field_c.field_mc = this.field_c.field_mc + this.field_b;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "mnb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mnb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -61,10 +61,10 @@ abstract class mnb {
             field_d = false;
           }
           param0.b(-3846);
-          var2 = (jk) (cta.field_q.d(0));
+          var2 = (jk) (SetMachineGunAimarc.field_q.d(0));
           while (var2 != null) {
             if (var2.a(26344, param0)) {
-              var2 = (jk) (cta.field_q.a((byte) 114));
+              var2 = (jk) (SetMachineGunAimarc.field_q.a((byte) 114));
               continue;
             }
             break;
@@ -73,7 +73,7 @@ abstract class mnb {
             al.a(param0, var2, 2);
             return;
           }
-          cta.field_q.b(-10258, param0);
+          SetMachineGunAimarc.field_q.b(-10258, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ abstract class mnb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

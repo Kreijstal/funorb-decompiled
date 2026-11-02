@@ -7,8 +7,8 @@ final class ct {
 
     final static int a(int param0, int param1) {
         if (param0 != 19143) {
-          ij var3 = (ij) null;
-          ct.a((ml) null, 95, (ij) null);
+          IntrusiveDeque var3 = (IntrusiveDeque) null;
+          ct.a((ShipComponent) null, 95, (IntrusiveDeque) null);
         }
         if (li.field_i) {
           return mmb.field_d[param1].a();
@@ -16,7 +16,7 @@ final class ct {
         return 100;
     }
 
-    final static void a(ml param0, int param1, ij param2) {
+    final static void a(ShipComponent param0, int param1, IntrusiveDeque param2) {
         int var4 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -26,25 +26,25 @@ final class ct {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        imb var5 = null;
+        Hardpoint var5 = null;
         int var6 = 0;
         var6 = VoidHunters.field_G;
         try {
           if (param1 <= 30) {
             field_a = (gj) null;
           }
-          param2.b(-10258, new hua(param0.field_j));
-          if (null != param0.field_d) {
-            if (0 >= param0.field_d.length) {
+          param2.b(-10258, new hua(param0.componentTypeId));
+          if (null != param0.hardpoints) {
+            if (0 >= param0.hardpoints.length) {
               return;
             }
             var3_int = 0;
-            for (var4 = 0; var4 < param0.field_d.length; var4++) {
-              var5 = param0.field_d[var4];
-              if (var5.field_c != -1) {
+            for (var4 = 0; var4 < param0.hardpoints.length; var4++) {
+              var5 = param0.hardpoints[var4];
+              if (var5.connectedComponentIdx != -1) {
                 param2.b(-10258, new hua(var4));
-                ct.a(param0.field_f[var5.field_c], 108, param2);
-                if (-1 + param0.field_d.length == var4) {
+                ct.a(param0.subcomponents[var5.connectedComponentIdx], 108, param2);
+                if (-1 + param0.hardpoints.length == var4) {
                   var3_int = 1;
                 }
               }
@@ -71,7 +71,7 @@ final class ct {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

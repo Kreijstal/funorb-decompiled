@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oma implements ntb, mfa {
+final class oma implements DiffableState, mfa {
     private int field_d;
     int field_k;
     boolean field_e;
     int field_g;
     int field_a;
     static String field_b;
-    mib field_l;
+    CarouselCommongameInfo carouselInfo;
     int field_j;
     static String field_c;
     int field_f;
@@ -22,7 +22,7 @@ final class oma implements ntb, mfa {
             this.b(96);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "oma.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "oma.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -33,12 +33,12 @@ final class oma implements ntb, mfa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          nkb.a(param1, "Starting to read");
+          GetDebrisThrowable.a(param1, "Starting to read");
           if (!kv.a(false, param0)) {
-            this.field_l = null;
+            this.carouselInfo = null;
           } else {
-            this.field_l = new mib((mfa) (this));
-            this.field_l.a(param0, false);
+            this.carouselInfo = new CarouselCommongameInfo((mfa) (this));
+            this.carouselInfo.a(param0, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -51,7 +51,7 @@ final class oma implements ntb, mfa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -67,13 +67,13 @@ final class oma implements ntb, mfa {
             this.a(125, -119);
           }
           var3 = (oma) (param1);
-          if (null == this.field_l) {
-            var3.field_l = null;
+          if (null == this.carouselInfo) {
+            var3.carouselInfo = null;
           } else {
-            if (null == var3.field_l) {
-              var3.field_l = new mib((mfa) (this));
+            if (null == var3.carouselInfo) {
+              var3.carouselInfo = new CarouselCommongameInfo((mfa) (this));
             }
-            this.field_l.b((byte) 91, var3.field_l);
+            this.carouselInfo.b((byte) 91, var3.carouselInfo);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -86,7 +86,7 @@ final class oma implements ntb, mfa {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -100,15 +100,15 @@ final class oma implements ntb, mfa {
 
     final void c(int param0) {
         pr.field_c = this;
-        this.field_l.a(kdb.field_o, (byte) 106);
+        this.carouselInfo.a(SetMinimapWidth.field_o, (byte) 106);
         int var2 = 5 % ((67 - param0) / 57);
     }
 
-    final pe a(byte param0) {
+    final World a(byte param0) {
         if (param0 < 20) {
           field_i = 1.3303049802780151f;
         }
-        return ((rsb) (this.field_l.b(28120))).field_g;
+        return ((GameSnapshot) (this.carouselInfo.b(28120))).world;
     }
 
     final void a(int param0, faa param1) {
@@ -119,25 +119,25 @@ final class oma implements ntb, mfa {
           return;
         }
         try {
-          nc.b(0);
+          ConsoleValue.b(0);
           param1.f((byte) -50);
           var3_int = param1.position;
           param1.p(-23497);
           this.a(param1, false);
           param1.f((byte) -47);
-          var4 = k.a((byte) -69, param1.position, param1.payload, var3_int);
+          var4 = GetMessageMaxage.a((byte) -69, param1.position, param1.payload, var3_int);
           var5 = param1.h(97);
           if (var5 == var4) {
-            nkb.a(false, "cg readstate: Hmm, it seems correct");
+            GetDebrisThrowable.a(false, "cg readstate: Hmm, it seems correct");
           }
           param1.p(-23497);
-          nkb.a(false, "has read state");
+          GetDebrisThrowable.a(false, "has read state");
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "oma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "oma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         int var4 = 0;
         oma var5 = null;
         int stackIn_8_0 = 0;
@@ -148,26 +148,26 @@ final class oma implements ntb, mfa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param1 >= -19) {
+          if (obfuscationGuard >= -19) {
             oma.a(7);
           }
-          var5 = (oma) (param0);
-          if (null != this.field_l &&
-            null != var5.field_l) {
-            this.field_l.a(var5.field_l, -91);
+          var5 = (oma) (other);
+          if (null != this.carouselInfo &&
+            null != var5.carouselInfo) {
+            this.carouselInfo.reportDifferences(var5.carouselInfo, -91);
           }
           var4 = 0;
-          stackIn_8_0 = (this.field_l != null) ? 0 : 1;
-          if (null != var5.field_l) {
+          stackIn_8_0 = (this.carouselInfo != null) ? 0 : 1;
+          if (null != var5.carouselInfo) {
             stackIn_11_1 = 0;
           } else {
             stackIn_11_1 = 1;
           }
           if ((stackIn_8_0 ^ stackIn_11_1) != 0 ||
-            this.field_l != null &&
-            this.field_l.a((byte) 106, var5.field_l)) {
+            this.carouselInfo != null &&
+            this.carouselInfo.a((byte) 106, var5.carouselInfo)) {
             var4 = 1;
-            System.out.println("Carousel_commongame_Info carousel_info has changed. before=" + var5.field_l + ", now=" + this.field_l);
+            System.out.println("Carousel_commongame_Info carousel_info has changed. before=" + var5.carouselInfo + ", now=" + this.carouselInfo);
           }
           if (var4 != 0) {
             System.out.println("This instance of commongame has changed");
@@ -178,12 +178,12 @@ final class oma implements ntb, mfa {
           var3 = decompiledCaughtException;
           stackIn_21_0 = var3;
           stackIn_21_1 = new StringBuilder().append("oma.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -202,9 +202,9 @@ final class oma implements ntb, mfa {
           }
           stackIn_4_0 = (faa) (param0);
           stackIn_4_1 = -107;
-          stackIn_5_2 = (null != this.field_l);
+          stackIn_5_2 = (null != this.carouselInfo);
           if (vq.a(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
-            this.field_l.b(param0, -114);
+            this.carouselInfo.b(param0, -114);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -217,12 +217,12 @@ final class oma implements ntb, mfa {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final String a(int param0, int param1) {
-        if (foa.field_p == param0 &&
+        if (SetMissionResnetResourceTickTime.field_p == param0 &&
           !this.b(1).a(param1, (byte) 59).field_a) {
           return "Bot " + param1;
         }
@@ -297,12 +297,12 @@ final class oma implements ntb, mfa {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
     final static void a(boolean param0) {
-        sl.a((byte) -28, tha.field_o);
+        sl.a((byte) -28, GetShieldsDamageEnergyConversion.field_o);
         if (!param0) {
           field_i = 0.1389508843421936f;
         }
@@ -322,15 +322,15 @@ final class oma implements ntb, mfa {
         try {
           var3 = (oma) (param1);
           var4 = -29 % ((22 - param0) / 59);
-          stackIn_3_0 = (var3.field_l != null) ? 0 : 1;
-          if (this.field_l != null) {
+          stackIn_3_0 = (var3.carouselInfo != null) ? 0 : 1;
+          if (this.carouselInfo != null) {
             stackIn_6_1 = 0;
           } else {
             stackIn_6_1 = 1;
           }
           boolean decompiledFrameRemainder0 = true;
-          if ((stackIn_3_0 ^ stackIn_6_1) == 0 && (null == this.field_l ||
-            !this.field_l.a((byte) -75, var3.field_l))) {
+          if ((stackIn_3_0 ^ stackIn_6_1) == 0 && (null == this.carouselInfo ||
+            !this.carouselInfo.a((byte) -75, var3.carouselInfo))) {
             stackIn_12_0 = false;
             decompiledFrameRemainder0 = false;
           }
@@ -348,15 +348,15 @@ final class oma implements ntb, mfa {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final rsb b(int param0) {
+    final GameSnapshot b(int param0) {
         if (param0 != 1) {
           this.a((byte) -95);
         }
-        return (rsb) (this.field_l.b(28120));
+        return (GameSnapshot) (this.carouselInfo.b(28120));
     }
 
     oma(String[] param0, int param1, int param2, int param3, boolean param4) {
@@ -368,13 +368,13 @@ final class oma implements ntb, mfa {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        rsb var10 = null;
-        hkb var11 = null;
-        rsb var12 = null;
-        hkb var13 = null;
-        bba var14 = null;
-        crb var15 = null;
-        crb var16 = null;
+        GameSnapshot var10 = null;
+        Mission var11 = null;
+        GameSnapshot var12 = null;
+        Mission var13 = null;
+        MissionEvent var14 = null;
+        Asteroid var15 = null;
+        Asteroid var16 = null;
         bea var17 = null;
         try {
           pr.field_c = this;
@@ -382,38 +382,38 @@ final class oma implements ntb, mfa {
           this.field_d = param3;
           this.field_h = param0;
           this.field_g = param2;
-          this.field_l = new mib((mfa) (this), param4);
-          this.field_l.b(this.field_a, 107);
-          var10 = (rsb) (this.field_l.b(28120));
+          this.carouselInfo = new CarouselCommongameInfo((mfa) (this), param4);
+          this.carouselInfo.b(this.field_a, 107);
+          var10 = (GameSnapshot) (this.carouselInfo.b(28120));
           var12 = var10;
           if (this.field_g != 0 &&
             this.field_g != 1) {
             if (this.field_g == 2) {
-              var12.field_e.a(this.field_d, 1, 13);
+              var12.missionState.a(this.field_d, 1, 13);
               var17 = new bea();
-              var17.field_d = this.field_d;
+              var17.seed = this.field_d;
               var17.a(-89, var12);
-              var12.field_e.c(5, -7, 0);
+              var12.missionState.c(5, -7, 0);
             } else if (this.field_g == 3) {
-              var12.field_e.c(5, -7, 0);
-              var12.field_g.b(13, (byte) 23);
-              var14 = new bba();
-              var14.a((byte) -117, (wm) (new dab(1)));
-              var14.a(new cf(0, 10), true);
-              var12.field_g.a(var14, -38);
-              var15 = new crb(new ml(54));
+              var12.missionState.c(5, -7, 0);
+              var12.world.b(13, (byte) 23);
+              var14 = new MissionEvent();
+              var14.a((byte) -117, (MissionCondition) (new TickCondition(1)));
+              var14.a(new SetVariableLabelAction(0, 10), true);
+              var12.world.a(var14, -38);
+              var15 = new Asteroid(new ShipComponent(54));
               var15.a(65536, 81920, (byte) -60);
-              var12.field_g.a((byte) 126, var15);
-              var16 = new crb(new ml(50));
+              var12.world.a((byte) 126, var15);
+              var16 = new Asteroid(new ShipComponent(50));
               var16.a(-131072, 65536, (byte) 69);
-              var12.field_g.a((byte) 126, var16);
+              var12.world.a((byte) 126, var16);
             }
           } else {
-            if (!unb.field_o) {
+            if (!SetMissionTerrainAsteroidProbability.field_o) {
               var13 = bkb.a(0);
               var13.a(false, var12, -48);
             } else {
-              var11 = pba.b(false).a(3, false);
+              var11 = SetDebrisPartitioned.b(false).a(3, false);
               var11.a(false, var12, 126);
             }
           }
@@ -433,7 +433,7 @@ final class oma implements ntb, mfa {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

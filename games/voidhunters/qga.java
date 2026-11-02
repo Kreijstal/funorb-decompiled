@@ -22,25 +22,25 @@ final class qga {
           if (param2 <= 34) {
             field_a = -92L;
           }
-          lrb.field_b = gka.field_o;
+          SetShipTeamAction.field_b = SetSniperCannonFireForce.field_o;
           if (param1 == 255) {
-            stackIn_12_0 = !(iua.field_p >= 13);
+            stackIn_12_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
             jra.field_a = rv.a(stackIn_12_0, 1);
             var6 = (String[]) null;
             mfb.a((String[]) null, 11113);
             return;
           }
           if (param1 < 100) {
-            jra.field_a = tma.a(param1, param0, (byte) -124);
+            jra.field_a = GetArmageddonLength.a(param1, param0, (byte) -124);
             return;
           }
           if (param1 > 105) {
-            jra.field_a = tma.a(param1, param0, (byte) -124);
+            jra.field_a = GetArmageddonLength.a(param1, param0, (byte) -124);
             return;
           }
           var4 = param3;
           mfb.a(var4, 11113);
-          jra.field_a = wm.a(param3, (byte) -123);
+          jra.field_a = MissionCondition.a(param3, (byte) -123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ final class qga {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

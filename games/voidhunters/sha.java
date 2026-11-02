@@ -19,7 +19,7 @@ final class sha extends oda {
           }
           this.field_A = param0 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sha.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sha.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class sha extends oda {
           this.field_u[2] = (shb) ((Object) dupTemp$0);
           this.d(16777215);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sha.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sha.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,23 +83,23 @@ final class sha extends oda {
     }
 
     final static void a(int param0, String param1, int param2, int param3, byte param4, int param5, int param6, eab param7, int param8) {
-        wlb.field_o = param0;
+        GetFixedaim.field_o = param0;
         gia.field_k = param7;
         hob.field_l = param1;
-        nia.field_p = param5;
-        qfa.field_Ib = param8;
+        SetPointDefenceLaserProjectileDamage.field_p = param5;
+        OpenGlToolkit.field_Ib = param8;
         ea.field_d = param6;
         if (param4 != -2) {
           return;
         }
         try {
-          esa.field_p = param2;
-          vwa.field_p = param3;
-          ff.field_o = (ona) ((Object) new wh());
+          SetDefaultFiringLeeway.field_p = param2;
+          GetLaserProjectiles.field_p = param3;
+          GetAutozoomAmountMultiply.field_o = (ona) ((Object) new wh());
           nj.field_a = new pfa(param7);
-          ho.field_a = new fwa(ff.field_o, nj.field_a);
+          ho.field_a = new fwa(GetAutozoomAmountMultiply.field_o, nj.field_a);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sha.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sha.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -667,7 +667,7 @@ final class sha extends oda {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -681,7 +681,7 @@ final class sha extends oda {
           this.h((byte) -113);
           this.e(-1715704688);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sha.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sha.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -727,7 +727,7 @@ final class sha extends oda {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -23,7 +23,7 @@ final class soa extends llb {
         var10.field_j = param0;
         var10.field_r = param3;
         var10.c((byte) -105);
-        hr.a(param5, param7, -108);
+        SetPhasedEnergyBeamProjectiles.a(param5, param7, -108);
         for (var11 = 0; var11 < param5; var11++) {
           var10.a(1, var11, var15[var11]);
         }
@@ -84,7 +84,7 @@ final class soa extends llb {
         var12 = VoidHunters.field_G;
         try {
           lkb.a(nf.field_a, (byte) -101);
-          if (null != ohb.field_o) {
+          if (null != SetThrusterParticleSpeedDownshift.field_o) {
             var15 = vw.field_a;
             var17 = var15;
             vw.field_a.field_G = 0;
@@ -92,29 +92,29 @@ final class soa extends llb {
             var5 = qsa.field_b;
             qsa.field_b.field_G = 0;
             var5.field_hb = 0;
-            qi.field_p.field_G = 0;
-            var6 = qi.field_p;
+            SetAutozoomSpeedDivide.field_p.field_G = 0;
+            var6 = SetAutozoomSpeedDivide.field_p;
             var6.field_hb = 0;
-            rob.field_q.field_R = hgb.field_p.toUpperCase();
+            GetWeaponParticleSpeedDownshift.field_q.field_R = GetTorpedoAimspeed.field_p.toUpperCase();
             var7 = (2 + vva.field_r.field_hb) / 2;
-            qi.field_p.a(0, 6, var7 - 2, vva.field_r.field_G - 40, 40);
+            SetAutozoomSpeedDivide.field_p.a(0, 6, var7 - 2, vva.field_r.field_G - 40, 40);
             qsa.field_b.a(var7, -120, vva.field_r.field_hb - var7, -40 + vva.field_r.field_G, 40);
-            if (ieb.field_o.length == 1 &&
-              ieb.field_o[0] == 2) {
+            if (SetMutatorVotes.field_o.length == 1 &&
+              SetMutatorVotes.field_o[0] == 2) {
               var8 = 0;
             } else {
               var8 = 0;
               var9_int = 0;
               var10 = 0;
               while (true) {
-                if (ieb.field_o.length > var10) {
-                  stackIn_11_0 = ((ce.field_o[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
+                if (SetMutatorVotes.field_o.length > var10) {
+                  stackIn_11_0 = ((GetPlayerRepairTime.field_o[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
                   var11_int = stackIn_11_0;
                   if (var11_int != 0) {
                     var9_int++;
                   }
                   if (var11_int != 0 &&
-                    ieb.field_o[var10] != 2) {
+                    SetMutatorVotes.field_o[var10] != 2) {
                     var8 = 1;
                   } else {
                     var10++;
@@ -132,27 +132,27 @@ final class soa extends llb {
             if (!ii.field_h) {
               stackIn_36_0 = qsa.field_b;
               if (var8 != 0) {
-                stackIn_37_1 = tsb.field_p;
+                stackIn_37_1 = SetAudioRangeCutoff.field_p;
               } else {
                 stackIn_37_1 = spb.field_a;
               }
               stackIn_36_0.field_R = ((String) (Object) stackIn_37_1).toUpperCase();
-              stackIn_39_0 = wo.field_p;
+              stackIn_39_0 = GetTorpedoProjectileDamage.field_p;
               if (var8 != 0) {
                 stackIn_40_1 = qpa.field_b;
               } else {
                 stackIn_40_1 = aaa.field_a;
               }
-              stackIn_39_0.field_R = isa.a(stackIn_40_1, new String[]{qsa.field_b.field_R}, 76);
+              stackIn_39_0.field_R = SetReverbGain.a(stackIn_40_1, new String[]{qsa.field_b.field_R}, 76);
               hrb.field_b = true;
-              nt.field_q.field_y = true;
-              qi.field_p.field_R = nva.field_D;
+              GetShipToShipRamDamage.field_q.field_y = true;
+              SetAutozoomSpeedDivide.field_p.field_R = nva.field_D;
               if (ncb.field_a != null) {
                 if (null == tib.field_i) {
                   mia.field_a = new boolean[ocb.field_l];
                   tib.field_i = new byte[ocb.field_l];
                 }
-                nr.field_p = false;
+                GetMissionVotes.field_p = false;
                 hrb.field_b = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
@@ -160,9 +160,9 @@ final class soa extends llb {
                   mia.field_a[var13] = false;
                   var13++;
                 }
-                bea.a(ocb.field_l, -1, ohb.field_o, -1, 115, true, 0, -1);
-                if (!(go.field_p < 2) &&
-                  si.field_o[12]) {
+                bea.a(ocb.field_l, -1, SetThrusterParticleSpeedDownshift.field_o, -1, 115, true, 0, -1);
+                if (!(SetAngularVelocitySustain.field_p < 2) &&
+                  SetMachineGunEnergyUsed.field_o[12]) {
                   hrb.field_b = true;
                 }
               }
@@ -170,7 +170,7 @@ final class soa extends llb {
                 qsa.field_b.field_y = false;
                 if (qsa.field_b.field_Q) {
                   var9 = null;
-                  if (nr.field_p) {
+                  if (GetMissionVotes.field_p) {
                     var9 = "<col=A00000>" + uda.field_a + "</col>";
                     var11 = var9;
                     var9 = var11;
@@ -189,12 +189,12 @@ final class soa extends llb {
                       }
                     }
                   }
-                  lob.field_a = "<col=A00000>" + fq.field_q + "<br>" + haa.field_p + (String) (var9);
+                  lob.field_a = "<col=A00000>" + GetReloadBarWidth.field_q + "<br>" + GetRepairModeCooldown.field_p + (String) (var9);
                 }
               }
             } else {
-              wo.field_p.field_R = hqb.field_j;
-              nt.field_q.field_y = false;
+              GetTorpedoProjectileDamage.field_p.field_R = hqb.field_j;
+              GetShipToShipRamDamage.field_q.field_y = false;
               if (var8 == 0) {
                 stackIn_25_0 = cn.field_b;
               } else {
@@ -204,53 +204,53 @@ final class soa extends llb {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = qi.field_p.field_eb.b(var16) + 3 * qi.field_p.field_eb.a('.');
-              qi.field_p.field_F = 0;
-              if ((ls.field_o & 48) == 16) {
+              var10Lifetime1 = SetAutozoomSpeedDivide.field_p.field_eb.b(var16) + 3 * SetAutozoomSpeedDivide.field_p.field_eb.a('.');
+              SetAutozoomSpeedDivide.field_p.field_F = 0;
+              if ((GetMissionTerrainNebulaProbability.field_o & 48) == 16) {
                 var9 = var16 + ".";
               }
-              qi.field_p.field_w = (-var10Lifetime1 + qi.field_p.field_hb) / 2;
-              if (32 == (48 & ls.field_o)) {
+              SetAutozoomSpeedDivide.field_p.field_w = (-var10Lifetime1 + SetAutozoomSpeedDivide.field_p.field_hb) / 2;
+              if (32 == (48 & GetMissionTerrainNebulaProbability.field_o)) {
                 var9 = (String) (var9) + "..";
               }
-              if ((48 & ls.field_o) == 48) {
+              if ((48 & GetMissionTerrainNebulaProbability.field_o) == 48) {
                 var9 = (String) (var9) + "...";
               }
-              qi.field_p.field_R = (String) (var9);
-              qsa.field_b.field_R = fqb.field_p.toUpperCase();
+              SetAutozoomSpeedDivide.field_p.field_R = (String) (var9);
+              qsa.field_b.field_R = SetMissileLauncherProjectiles.field_p.toUpperCase();
             }
           }
           stackIn_71_0 = rga.field_g;
-          stackIn_72_1 = (param0) && (!param2) && (!wo.field_o);
+          stackIn_72_1 = (param0) && (!param2) && (!GetTorpedoProjectileDamage.field_o);
           ((llb) (Object) stackIn_71_0).a(stackIn_72_1, 1332);
           stackIn_76_0 = vva.field_r;
-          stackIn_77_1 = (param0) && (!param2) && (!wo.field_o);
+          stackIn_77_1 = (param0) && (!param2) && (!GetTorpedoProjectileDamage.field_o);
           ((llb) (Object) stackIn_76_0).a(stackIn_77_1, 1332);
           if (param1 > -89) {
             return;
           }
-          stackIn_83_0 = jfb.field_o;
-          stackIn_84_1 = (param0) && (!param2) && (wo.field_o);
+          stackIn_83_0 = SetUseCircleFill.field_o;
+          stackIn_84_1 = (param0) && (!param2) && (GetTorpedoProjectileDamage.field_o);
           ((llb) (Object) stackIn_83_0).a(stackIn_84_1, 1332);
-          hra.field_o.field_a.i(10000);
-          if (ohb.field_o != null) {
-            if (nt.field_q.field_o != 0) {
+          GetReverbWidth.field_o.field_a.i(10000);
+          if (SetThrusterParticleSpeedDownshift.field_o != null) {
+            if (GetShipToShipRamDamage.field_q.field_o != 0) {
               ts.a(false, param3);
             }
             if (qsa.field_b.field_o != 0) {
               if (ii.field_h) {
-                stb.a(38, param3);
+                GetComponentBreakingExplosionForceMultiplier.a(38, param3);
               } else {
                 mjb.a((byte) 108, param3);
               }
             }
-            asb.a(param3, ohb.field_o, true, (byte) -67);
+            asb.a(param3, SetThrusterParticleSpeedDownshift.field_o, true, (byte) -67);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var4), "soa.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var4), "soa.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -264,7 +264,7 @@ final class soa extends llb {
           this.field_wb = param1;
           this.field_xb.b(-561, param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "soa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "soa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

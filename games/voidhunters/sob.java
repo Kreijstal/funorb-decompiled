@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sob extends ha {
+final class sob extends GraphicsToolkit {
     private int field_E;
     private int field_z;
     private gnb field_t;
@@ -1406,7 +1406,7 @@ final class sob extends ha {
           }
           this.a(param0, param1, param2);
         } else {
-          var4 = rba.a(param1, true, param0, param2);
+          var4 = ResourceNode.a(param1, true, param0, param2);
           this.field_t.a((long)param0.hashCode(), var4, (byte) -124);
         }
     }
@@ -1571,7 +1571,7 @@ final class sob extends ha {
         RasterBuffer var6 = (RasterBuffer) (this.field_t.a((long)param0.hashCode(), 97));
         if (var6 != null) {
           var6.b(-3846);
-          var7 = rba.a(param1, true, param0, param2);
+          var7 = ResourceNode.a(param1, true, param0, param2);
           this.field_t.a((long)param0.hashCode(), var7, (byte) -122);
           if (this.field_l == param0 &&
             this.field_c == null) {
@@ -2203,7 +2203,7 @@ final class sob extends ha {
 
     final void o() {
         if (this.field_B) {
-          uhb.a((byte) -101, false, true);
+          SetDebrisFoundInPairs.a((byte) -101, false, true);
           this.field_B = false;
         }
         this.field_D = null;

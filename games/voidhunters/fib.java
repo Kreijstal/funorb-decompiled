@@ -35,7 +35,7 @@ final class fib extends uda {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -120,9 +120,9 @@ final class fib extends uda {
             this.field_e = false;
             return;
           }
-          var6 = gha.a(param1.a("environment_mapped_water_v", true, "gl"), 35633, (byte) -15, param0);
+          var6 = GetMomentOfInertiaPerpointCalcDownshift.a(param1.a("environment_mapped_water_v", true, "gl"), 35633, (byte) -15, param0);
           var4 = var6;
-          var5 = gha.a(param1.a("environment_mapped_water_f", true, "gl"), 35632, (byte) -15, param0);
+          var5 = GetMomentOfInertiaPerpointCalcDownshift.a(param1.a("environment_mapped_water_f", true, "gl"), 35632, (byte) -15, param0);
           this.field_f = gnb.a(0, new ue[]{var6, var5}, param0);
           stackIn_8_1 = (this.field_f != null) && (this.field_g.b((byte) 63));
           this.field_e = stackIn_8_1;
@@ -149,7 +149,7 @@ final class fib extends uda {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

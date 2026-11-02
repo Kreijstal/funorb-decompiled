@@ -69,7 +69,7 @@ final class ko extends vjb {
           var18 = var15 - (float)var16;
           var19 = -var18 + 1.0f;
           var16 = var16 & var14;
-          var20 = pob.a((byte) -125, var18);
+          var20 = SetVariableAction.a((byte) -125, var18);
           var17 = var17 & var14;
           var21 = this.field_f[var16];
           var22 = this.field_f[var17];
@@ -79,7 +79,7 @@ final class ko extends vjb {
             var26 = var25 + 1;
             var27 = var24 - (float)var25;
             var28 = -var27 + 1.0f;
-            var29 = pob.a((byte) -123, var27);
+            var29 = SetVariableAction.a((byte) -123, var27);
             var26 = var26 & var13;
             var25 = var25 & var13;
             var30 = this.field_f[var21 + var25];
@@ -92,12 +92,12 @@ final class ko extends vjb {
               var37 = 1 + var36;
               var38 = (float)(-var36) + var35;
               var39 = 1.0f - var38;
-              var40 = pob.a((byte) 127, var38);
+              var40 = SetVariableAction.a((byte) 127, var38);
               var37 = var37 & var12_int;
               var36 = var36 & var12_int;
               incrementValue$1 = param7;
               param7++;
-              param2[incrementValue$1] = param5 * kfb.a(kfb.a(kfb.a(rha.a(var18, var38, dla.a(7, this.field_f[var33 + var37]), var27, (byte) 69), var40, -14, rha.a(var18, var39, dla.a(7, this.field_f[var36 + var33]), var27, (byte) 78)), var29, -9, kfb.a(rha.a(var18, var38, dla.a(7, this.field_f[var32 + var37]), var28, (byte) 66), var40, -75, rha.a(var18, var39, dla.a(this.field_f[var32 + var36], 7), var28, (byte) 99))), var20, -28, kfb.a(kfb.a(rha.a(var19, var38, dla.a(7, this.field_f[var31 + var37]), var27, (byte) 69), var40, -86, rha.a(var19, var39, dla.a(7, this.field_f[var31 + var36]), var27, (byte) 65)), var29, -97, kfb.a(rha.a(var19, var38, dla.a(7, this.field_f[var30 + var37]), var28, (byte) 70), var40, -97, rha.a(var19, var39, dla.a(7, this.field_f[var36 + var30]), var28, (byte) 54))));
+              param2[incrementValue$1] = param5 * GetBuildViewAutozoom.a(GetBuildViewAutozoom.a(GetBuildViewAutozoom.a(Message.a(var18, var38, dla.a(7, this.field_f[var33 + var37]), var27, (byte) 69), var40, -14, Message.a(var18, var39, dla.a(7, this.field_f[var36 + var33]), var27, (byte) 78)), var29, -9, GetBuildViewAutozoom.a(Message.a(var18, var38, dla.a(7, this.field_f[var32 + var37]), var28, (byte) 66), var40, -75, Message.a(var18, var39, dla.a(this.field_f[var32 + var36], 7), var28, (byte) 99))), var20, -28, GetBuildViewAutozoom.a(GetBuildViewAutozoom.a(Message.a(var19, var38, dla.a(7, this.field_f[var31 + var37]), var27, (byte) 69), var40, -86, Message.a(var19, var39, dla.a(7, this.field_f[var31 + var36]), var27, (byte) 65)), var29, -97, GetBuildViewAutozoom.a(Message.a(var19, var38, dla.a(7, this.field_f[var30 + var37]), var28, (byte) 70), var40, -97, Message.a(var19, var39, dla.a(7, this.field_f[var36 + var30]), var28, (byte) 54))));
             }
           }
           return;
@@ -111,7 +111,7 @@ final class ko extends vjb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 

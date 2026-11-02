@@ -7,7 +7,7 @@ final class etb implements dja {
 
     public final tv a(byte param0) {
         int var2 = -63 / ((-64 - param0) / 50);
-        return (tv) ((Object) new aqa());
+        return (tv) ((Object) new ThrusterBehaviour());
     }
 
     final static java.awt.Container b(int param0) {
@@ -16,16 +16,16 @@ final class etb implements dja {
         }
         if (param0 != -28941) {
           field_a = (String) null;
-          return (java.awt.Container) ((Object) vpa.b((byte) -122));
+          return (java.awt.Container) ((Object) MissionList.b((byte) -122));
         }
-        return (java.awt.Container) ((Object) vpa.b((byte) -122));
+        return (java.awt.Container) ((Object) MissionList.b((byte) -122));
     }
 
     final static boolean a(int param0) {
         if (param0 != 31065) {
           return true;
         }
-        return jpa.field_a;
+        return AdjustVariableAction.field_a;
     }
 
     public static void b(byte param0) {
@@ -38,7 +38,7 @@ final class etb implements dja {
         if (param0 != 11995) {
           return (tv[]) null;
         }
-        return (tv[]) ((Object) new aqa[param1]);
+        return (tv[]) ((Object) new ThrusterBehaviour[param1]);
     }
 
     static {

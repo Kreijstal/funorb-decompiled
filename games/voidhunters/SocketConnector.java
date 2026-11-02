@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class SocketConnector {
-    static ij field_c;
+    static IntrusiveDeque field_c;
     int field_b;
     String field_a;
 

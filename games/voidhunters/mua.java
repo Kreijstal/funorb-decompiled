@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mua extends eka implements ntb {
-    private boolean field_c;
+final class mua extends ComponentBehaviour implements DiffableState {
+    private boolean operationalLastFrame;
     static int field_d;
-    private int field_e;
-    private int field_f;
+    private int previousShieldX;
+    private int previousShieldY;
 
-    final void a(boolean param0, int param1, anb param2, int[] param3, pe param4, int param5, int param6, int param7) {
+    final void a(boolean param0, int param1, ShipBody param2, int[] param3, World param4, int param5, int param6, int param7) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -21,41 +21,41 @@ final class mua extends eka implements ntb {
         uwa var10 = null;
         int var11 = 0;
         int var12 = 0;
-        sg var13 = null;
+        Ship var13 = null;
         try {
           var9 = null;
-          if (!(param2 instanceof sg)) {
-            if (this.field_c) {
-              this.field_c = false;
+          if (!(param2 instanceof Ship)) {
+            if (this.operationalLastFrame) {
+              this.operationalLastFrame = false;
               param2.d((byte) 59);
             }
             return;
           }
-          var13 = (sg) (param2);
+          var13 = (Ship) (param2);
           if (param6 <= 74) {
             return;
           }
           if (!param0 &&
-            var13.n(31390)) {
+            var13.getShieldsOn(31390)) {
             var13.t((byte) -112);
-            if (var13.n(31390)) {
+            if (var13.getShieldsOn(31390)) {
               var10 = ccb.field_a.a(0);
               var11 = 0;
               var12 = 0;
-              if (this.field_c) {
-                var11 = -this.field_e + param7;
-                var12 = -this.field_f + param1;
+              if (this.operationalLastFrame) {
+                var11 = -this.previousShieldX + param7;
+                var12 = -this.previousShieldY + param1;
               }
-              var10.a(eha.field_q, param1, param7, rjb.field_u, 0, var11, (byte) 38, param2, param5, var12);
-              this.field_c = true;
-              this.field_f = param1;
-              this.field_e = param7;
+              var10.a(SetMissileLauncherFireForce.field_q, param1, param7, rjb.field_u, 0, var11, (byte) 38, param2, param5, var12);
+              this.operationalLastFrame = true;
+              this.previousShieldY = param1;
+              this.previousShieldX = param7;
               param2.d((byte) 80);
             }
             return;
           }
-          if (this.field_c) {
-            this.field_c = false;
+          if (this.operationalLastFrame) {
+            this.operationalLastFrame = false;
             param2.d((byte) 113);
           }
           return;
@@ -81,15 +81,15 @@ final class mua extends eka implements ntb {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    final void a(anb param0, int[] param1, int param2, int param3, int param4, int param5, int param6, pe param7, int param8, int param9, int param10) {
-        sg var13 = null;
+    final void a(ShipBody param0, int[] param1, int param2, int param3, int param4, int param5, int param6, World param7, int param8, int param9, int param10) {
+        Ship var13 = null;
         Object var12 = null;
-        if (param0 instanceof sg) {
-          var13 = (sg) (param0);
+        if (param0 instanceof Ship) {
+          var13 = (Ship) (param0);
           var13.m(-13539);
         } else {
           return;
@@ -99,11 +99,11 @@ final class mua extends eka implements ntb {
             field_d = 75;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "mua.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + param10 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mua.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -114,24 +114,24 @@ final class mua extends eka implements ntb {
         tv var5 = null;
         mua var6 = null;
         try {
-          if (param1 > -19) {
+          if (obfuscationGuard > -19) {
             var5 = (tv) null;
             this.a((byte) 121, (tv) null);
           }
-          var6 = (mua) (param0);
-          super.a(param0, -50);
+          var6 = (mua) (other);
+          super.reportDifferences(other, -50);
           var4 = 0;
-          stackIn_5_0 = (var6.field_c) ? 0 : 1;
-          if (stackIn_5_0 == (this.field_c ? 1 : 0)) {
+          stackIn_5_0 = (var6.operationalLastFrame) ? 0 : 1;
+          if (stackIn_5_0 == (this.operationalLastFrame ? 1 : 0)) {
             var4 = 1;
-            System.out.println("boolean operational_last_frame has changed. before=" + var6.field_c + ", now=" + this.field_c);
+            System.out.println("boolean operational_last_frame has changed. before=" + var6.operationalLastFrame + ", now=" + this.operationalLastFrame);
           }
-          if (this.field_e != var6.field_e) {
-            System.out.println("int previous_shield_x has changed. before=" + var6.field_e + ", now=" + this.field_e);
+          if (this.previousShieldX != var6.previousShieldX) {
+            System.out.println("int previous_shield_x has changed. before=" + var6.previousShieldX + ", now=" + this.previousShieldX);
             var4 = 1;
           }
-          if (var6.field_f != this.field_f) {
-            System.out.println("int previous_shield_y has changed. before=" + var6.field_f + ", now=" + this.field_f);
+          if (var6.previousShieldY != this.previousShieldY) {
+            System.out.println("int previous_shield_y has changed. before=" + var6.previousShieldY + ", now=" + this.previousShieldY);
             var4 = 1;
           }
           if (var4 == 0) {
@@ -144,12 +144,12 @@ final class mua extends eka implements ntb {
           var3 = decompiledCaughtException;
           stackIn_19_0 = var3;
           stackIn_19_1 = new StringBuilder().append("mua.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -158,42 +158,42 @@ final class mua extends eka implements ntb {
         mua var7 = null;
         try {
           if (param0 <= 54) {
-            pe var4 = (pe) null;
-            this.a((anb) null, (int[]) null, -13, 109, 122, -45, -75, (pe) null, -117, 73, 98);
+            World var4 = (World) null;
+            this.a((ShipBody) null, (int[]) null, -13, 109, 122, -45, -75, (World) null, -117, 73, 98);
           }
           super.b((byte) 85, param1);
           var6 = (mua) (param1);
           var7 = var6;
-          var7.field_c = this.field_c;
-          var7.field_f = this.field_f;
-          var7.field_e = this.field_e;
+          var7.operationalLastFrame = this.operationalLastFrame;
+          var7.previousShieldY = this.previousShieldY;
+          var7.previousShieldX = this.previousShieldX;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "mua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void b(faa param0, int param1) {
         try {
           super.b(param0, -120);
-          vq.a(param0, 120, this.field_c);
-          param0.a(-632, this.field_e, 32);
+          vq.a(param0, 120, this.operationalLastFrame);
+          param0.a(-632, this.previousShieldX, 32);
           if (param1 >= -109) {
-            this.field_c = false;
+            this.operationalLastFrame = false;
           }
-          param0.a(-632, this.field_f, 32);
+          param0.a(-632, this.previousShieldY, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "mua.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mua.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void a(faa param0, boolean param1) {
         try {
           super.a(param0, false);
-          this.field_c = kv.a(param1, param0);
-          this.field_e = param0.i(0, 32);
-          this.field_f = param0.i(0, 32);
+          this.operationalLastFrame = kv.a(param1, param0);
+          this.previousShieldX = param0.i(0, 32);
+          this.previousShieldY = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "mua.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mua.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -212,10 +212,10 @@ final class mua extends eka implements ntb {
           var3 = (mua) (param1);
           var4 = -29 % ((22 - param0) / 59);
           if (!super.a((byte) 93, param1)) {
-            stackIn_4_0 = (this.field_c) ? 0 : 1;
-            if (stackIn_4_0 != (var3.field_c ? 1 : 0) &&
-              this.field_e == var3.field_e &&
-              this.field_f == var3.field_f) {
+            stackIn_4_0 = (this.operationalLastFrame) ? 0 : 1;
+            if (stackIn_4_0 != (var3.operationalLastFrame ? 1 : 0) &&
+              this.previousShieldX == var3.previousShieldX &&
+              this.previousShieldY == var3.previousShieldY) {
               stackIn_10_0 = false;
               decompiledFrameRemainder0 = false;
             }
@@ -234,11 +234,11 @@ final class mua extends eka implements ntb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    final int a(int param0, sg param1) {
+    final int a(int param0, Ship param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -247,7 +247,7 @@ final class mua extends eka implements ntb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 73) {
-            this.field_f = 89;
+            this.previousShieldY = 89;
           }
           stackIn_3_0 = param1.l(-465);
           return stackIn_3_0;
@@ -261,7 +261,7 @@ final class mua extends eka implements ntb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

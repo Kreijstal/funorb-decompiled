@@ -38,7 +38,7 @@ final class cp extends ev {
         int var12 = -88 / ((param0 + 48) / 40);
         int var10 = param2 * this.field_k >> 12;
         int var11 = this.field_o * param1 >> 12;
-        pqa.a(var9, var5, var4, this.field_d, var6, var7, var8, 88, var11, var10);
+        GetPointDefenceLaserProjectiles.a(var9, var5, var4, this.field_d, var6, var7, var8, 88, var11, var10);
     }
 
     final void a(int param0, byte param1, int param2) {

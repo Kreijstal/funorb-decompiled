@@ -52,7 +52,7 @@ final class cv {
         var3 = param0.field_a;
         var4 = param0.field_p;
         var5 = param0.field_A;
-        var15 = ppa.field_p;
+        var15 = SetMinimapHeight.field_p;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_e;
@@ -154,7 +154,7 @@ final class cv {
         param0.field_a = var3;
         param0.field_p = var4;
         param0.field_A = var5;
-        ppa.field_p = var6;
+        SetMinimapHeight.field_p = var6;
         param0.field_e = var7;
         param0.field_j = var8;
         param0.field_y = var9;
@@ -262,8 +262,8 @@ final class cv {
         var24 = null;
         var25 = null;
         param0.field_b = 1;
-        if (ppa.field_p == null) {
-          ppa.field_p = new int[param0.field_b * 100000];
+        if (SetMinimapHeight.field_p == null) {
+          SetMinimapHeight.field_p = new int[param0.field_b * 100000];
         }
         var26 = 1;
         while (true) {
@@ -434,14 +434,14 @@ final class cv {
                 param0.field_s[var4] = param0.field_s[var4] + param0.field_s[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(ppa.field_p[var4] & 255);
+                var1 = (byte)(SetMinimapHeight.field_p[var4] & 255);
                 dupTemp$1 = param0.field_s[var1 & 255];
-                ppa.field_p[dupTemp$1] = ppa.field_p[dupTemp$1] | var4 << 8;
+                SetMinimapHeight.field_p[dupTemp$1] = SetMinimapHeight.field_p[dupTemp$1] | var4 << 8;
                 param0.field_s[var1 & 255] = param0.field_s[var1 & 255] + 1;
               }
-              param0.field_e = ppa.field_p[param0.field_x] >> 8;
+              param0.field_e = SetMinimapHeight.field_p[param0.field_x] >> 8;
               param0.field_p = 0;
-              param0.field_e = ppa.field_p[param0.field_e];
+              param0.field_e = SetMinimapHeight.field_p[param0.field_e];
               param0.field_A = (byte)(param0.field_e & 255);
               param0.field_e = param0.field_e >> 8;
               param0.field_p = param0.field_p + 1;
@@ -505,7 +505,7 @@ final class cv {
               }
               dupTemp$0 = param0.field_D[var1 & 255] & 255;
               param0.field_d[dupTemp$0] = param0.field_d[dupTemp$0] + 1;
-              ppa.field_p[var14] = param0.field_D[var1 & 255] & 255;
+              SetMinimapHeight.field_p[var14] = param0.field_D[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -562,7 +562,7 @@ final class cv {
             var1 = param0.field_D[param0.field_g[param0.field_C[0]] & 255];
             param0.field_d[var1 & 255] = param0.field_d[var1 & 255] + var15;
             while (var15 > 0) {
-              ppa.field_p[var14] = var1 & 255;
+              SetMinimapHeight.field_p[var14] = var1 & 255;
               var14++;
               var15--;
             }

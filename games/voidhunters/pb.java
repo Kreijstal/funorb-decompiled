@@ -103,7 +103,7 @@ final class pb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class pb {
         field_l = new pb(4, 2, mj.field_d);
         field_h = new pb(5, 3, mj.field_d);
         field_b = new pb(6, 4, mj.field_d);
-        field_m = ieb.a(16, -111);
+        field_m = SetMutatorVotes.a(16, -111);
         field_f = new byte[]{(byte)31, (byte)-117, (byte)8, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
         field_n = "Launches a fighter for harrassment";
     }

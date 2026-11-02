@@ -31,13 +31,13 @@ final class jra {
               }
               var5Lifetime1 = null;
               if (0 == rc.field_b) {
-                var5Lifetime1 = ukb.a(var4, param0, param2 - 10115);
+                var5Lifetime1 = SetPhasedEnergyBeamPulsetime.a(var4, param0, param2 - 10115);
               }
               if (rc.field_b == 1) {
                 var5Lifetime1 = npa.a((byte) 90, var4, param0);
               }
               if (2 == rc.field_b) {
-                var5Lifetime1 = tba.a(2, var4, param0);
+                var5Lifetime1 = SetExplosionPushMultiplier.a(2, var4, param0);
               }
               if (rc.field_b == 3) {
                 var5Lifetime1 = iab.a(param0, var4, var4, (byte) -76);

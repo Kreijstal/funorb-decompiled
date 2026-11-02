@@ -19,12 +19,12 @@ final class ot {
         String var2Lifetime1;
         if (param0 <= -94) {
           var2 = (String) null;
-          uhb.a((String) null, "", 0);
+          SetDebrisFoundInPairs.a((String) null, "", 0);
           return;
         }
         field_c = (String) null;
         var2Lifetime1 = (String) null;
-        uhb.a((String) null, "", 0);
+        SetDebrisFoundInPairs.a((String) null, "", 0);
     }
 
     static {

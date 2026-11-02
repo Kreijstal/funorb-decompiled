@@ -11,7 +11,7 @@ final class faa extends PacketBuffer {
         int fieldTemp$0 = 0;
         int var5;
         var5 = VoidHunters.field_G;
-        param1 = param1 & uta.field_q[param2];
+        param1 = param1 & SetMissionDebrisVotingChancestep.field_q[param2];
         while (this.field_k < param2) {
           param2 = param2 - this.field_k;
           fieldTemp$1 = this.position;
@@ -56,7 +56,7 @@ final class faa extends PacketBuffer {
         return 255 & this.payload[fieldTemp$1] - this.field_j.a((byte) -41);
     }
 
-    final static vab a(byte param0, qfa param1, int param2, String param3) {
+    final static vab a(byte param0, OpenGlToolkit param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         vab stackIn_2_0 = null;
@@ -101,7 +101,7 @@ final class faa extends PacketBuffer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -115,14 +115,14 @@ final class faa extends PacketBuffer {
         while (var4 < param1) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.payload[incrementValue$0] & uta.field_q[var4]) << param1 - var4);
+          var5 = var5 + ((this.payload[incrementValue$0] & SetMissionDebrisVotingChancestep.field_q[var4]) << param1 - var4);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (param1 != var4) {
-          var5 = var5 + (this.payload[var3] >> -param1 + var4 & uta.field_q[param1]);
+          var5 = var5 + (this.payload[var3] >> -param1 + var4 & SetMissionDebrisVotingChancestep.field_q[param1]);
         } else {
-          var5 = var5 + (this.payload[var3] & uta.field_q[var4]);
+          var5 = var5 + (this.payload[var3] & SetMissionDebrisVotingChancestep.field_q[var4]);
         }
         return var5;
     }
@@ -167,7 +167,7 @@ final class faa extends PacketBuffer {
             this.r(-43);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class faa extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

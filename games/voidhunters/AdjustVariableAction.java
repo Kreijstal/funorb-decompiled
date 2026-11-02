@@ -1,0 +1,346 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AdjustVariableAction extends MissionAction implements DiffableState {
+    private int index;
+    static dja field_c;
+    static boolean field_a;
+    private int mode;
+
+    final ucb a(World param0, int param1) {
+        RuntimeException var3 = null;
+        Object stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 == 26964) {
+            return null;
+          }
+          this.a(-98, -31);
+          stackIn_3_0 = null;
+          return (ucb) (stackIn_3_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("jpa.I(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void a(World param0, boolean param1, int param2, int param3) {
+        RuntimeException var5 = null;
+        World var6 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 == 0) {
+            this.index = param3;
+            if (this.index < 0) {
+              this.index = 0;
+            }
+          } else {
+            this.mode = (param3 + 2) % 2;
+          }
+          if (!param1) {
+            return;
+          }
+          var6 = (World) null;
+          this.a((World) null, false, 39, -42);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_10_0 = var5;
+          stackIn_10_1 = new StringBuilder().append("jpa.K(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final void a(int param0, int[] param1, GameSnapshot param2) {
+        int var4_int = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        tv var8 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_23_2 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var4 = null;
+        var7 = VoidHunters.field_G;
+        try {
+          if (param1 == null) {
+            return;
+          }
+          if (param0 != 1) {
+            var8 = (tv) null;
+            this.a((byte) 94, (tv) null);
+          }
+          for (var4_int = 0; param1.length > var4_int; var4_int++) {
+            var5 = 1;
+            var6 = this.mode;
+            if (var6 == 0) {
+              var5 = 1;
+              param2.missionState.a((byte) -93, var5, this.index);
+            } else {
+              if (1 != var6) {
+                param2.missionState.a((byte) -93, var5, this.index);
+              } else {
+                var5 = -1;
+                param2.missionState.a((byte) -93, var5, this.index);
+              }
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_22_0 = var4;
+          stackIn_22_1 = new StringBuilder().append("jpa.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
+          }
+          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
+          if (param2 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+        }
+    }
+
+    public final void a(faa param0, boolean param1) {
+        try {
+          super.a(param0, param1);
+          this.index = param0.i(0, 8);
+          this.mode = param0.i(0, 1);
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jpa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public final void b(byte param0, tv param1) {
+        AdjustVariableAction var4 = (AdjustVariableAction) (param1);
+        AdjustVariableAction var3 = var4;
+        super.b((byte) 90, param1);
+        if (param0 < 54) {
+          return;
+        }
+        try {
+          var4.mode = this.mode;
+          var4.index = this.index;
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jpa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void a(boolean param0) {
+        field_c = null;
+        if (!param0) {
+          AdjustVariableAction.b(127);
+        }
+    }
+
+    final String a(int param0) {
+        String var5 = null;
+        String var7 = null;
+        String var6 = null;
+        String var10 = null;
+        int var3 = 0;
+        int var4 = VoidHunters.field_G;
+        int var3Lifetime1;
+        if (param0 != -1325) {
+          AdjustVariableAction.a(true);
+          var5 = "Unknown mode";
+          var3 = this.mode;
+          if (var3 != 0) {
+            if (var3 == 1) {
+              var7 = "Subtract 1 from";
+              return var7 + " custom variable " + this.index;
+            }
+            return var5 + " custom variable " + this.index;
+          }
+          var6 = "Add 1 to";
+          return var6 + " custom variable " + this.index;
+        }
+        String var8 = "Unknown mode";
+        var3Lifetime1 = this.mode;
+        if (var3Lifetime1 != 0) {
+          if (var3Lifetime1 == 1) {
+            var10 = "Subtract 1 from";
+            return var10 + " custom variable " + this.index;
+          }
+          return var8 + " custom variable " + this.index;
+        }
+        String var9 = "Add 1 to";
+        return var9 + " custom variable " + this.index;
+    }
+
+    public final void b(faa param0, int param1) {
+        try {
+          super.b(param0, -116);
+          param0.a(-632, this.index, 8);
+          if (param1 >= -109) {
+            field_c = (dja) null;
+          }
+          param0.a(-632, this.mode, 1);
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jpa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final static boolean b(int param0) {
+        long var1;
+        long var3;
+        int var5;
+        int var6;
+        var6 = VoidHunters.field_G;
+        var1 = wt.a(false);
+        if (param0 != 7) {
+          return true;
+        }
+        var3 = -GetUseModels.field_o + var1;
+        if (30000L < var3) {
+          GetUseModels.field_o = var1;
+          GetDebrisThrowable.field_q = 0;
+          return true;
+        }
+        var5 = 3000;
+        if (GetDebrisThrowable.field_q >= 7) {
+          var5 = 12000;
+        } else {
+          if (GetDebrisThrowable.field_q >= 5) {
+            var5 = 9000;
+          } else {
+            if (3 <= GetDebrisThrowable.field_q) {
+              var5 = 6000;
+            }
+          }
+        }
+        if (var3 <= (long)var5) {
+          return false;
+        }
+        GetDebrisThrowable.field_q = GetDebrisThrowable.field_q + 1;
+        GetUseModels.field_o = var1;
+        return true;
+    }
+
+    public final void reportDifferences(tv other, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        int var4 = 0;
+        faa var5 = null;
+        AdjustVariableAction var6 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          super.reportDifferences(other, -67);
+          var6 = (AdjustVariableAction) (other);
+          var4 = 0;
+          if (obfuscationGuard > -19) {
+            var5 = (faa) null;
+            this.a((faa) null, false);
+          }
+          if (this.index != var6.index) {
+            System.out.println("int index has changed. before=" + var6.index + ", now=" + this.index);
+            var4 = 1;
+          }
+          if (var6.mode != this.mode) {
+            var4 = 1;
+            System.out.println("int mode has changed. before=" + var6.mode + ", now=" + this.mode);
+          }
+          if (var4 == 0) {
+            return;
+          }
+          System.out.println("This instance of MissionActionAddNodeInfo has changed");
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("jpa.F(");
+          if (other == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    public final boolean a(byte param0, tv param1) {
+        AdjustVariableAction var3 = null;
+        int var4 = 0;
+        boolean stackIn_6_0 = false;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3_ref = null;
+        try {
+          var3 = (AdjustVariableAction) (param1);
+          var4 = 67 % ((22 - param0) / 59);
+          stackIn_6_0 = (super.a((byte) 92, param1)) || (this.index != var3.index) || (var3.mode != this.mode);
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("jpa.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    AdjustVariableAction() {
+    }
+
+    final int a(int param0, int param1) {
+        if (param1 >= -100) {
+          World var4 = (World) null;
+          this.a((World) null, 85);
+          if (param0 != 0) {
+            return this.mode;
+          }
+          return this.index;
+        }
+        if (param0 != 0) {
+          return this.mode;
+        }
+        return this.index;
+    }
+
+    AdjustVariableAction(int param0, int param1) {
+        this.mode = param1;
+        this.index = param0;
+    }
+
+    static {
+        field_c = (dja) ((Object) new csb());
+    }
+}

@@ -4,10 +4,10 @@
 final class eqb {
     static char[] field_a;
 
-    final static void a(ml param0, int param1) {
+    final static void a(ShipComponent param0, int param1) {
         int var2_int = 0;
-        ml var3 = null;
-        ml var4 = null;
+        ShipComponent var3 = null;
+        ShipComponent var4 = null;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -17,11 +17,11 @@ final class eqb {
         var5 = VoidHunters.field_G;
         try {
           for (var2_int = 0; var2_int < 4; var2_int++) {
-            var3 = new ml(29);
-            var4 = new ml(32);
-            var4.a(param1 ^ 14671, 2, new ml(25));
-            var4.a(1, 3, new ml(25));
-            var4.a(1, 4, new ml(25));
+            var3 = new ShipComponent(29);
+            var4 = new ShipComponent(32);
+            var4.a(param1 ^ 14671, 2, new ShipComponent(25));
+            var4.a(1, 3, new ShipComponent(25));
+            var4.a(1, 4, new ShipComponent(25));
             var3.a(1, 0, var4);
             param0.a(param1 ^ 14671, var2_int, var3);
           }
@@ -39,7 +39,7 @@ final class eqb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

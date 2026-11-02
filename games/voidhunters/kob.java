@@ -7,17 +7,17 @@ final class kob extends IntrusiveNode {
     boolean field_d;
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        int var5 = 128 + (eu.a(kdb.field_o * 128 % 8192, param0 + 90) * 127 >> 16);
+        int var5 = 128 + (eu.a(SetMinimapWidth.field_o * 128 % 8192, param0 + 90) * 127 >> 16);
         var5 = var5 / 4;
         int var6 = 16711680 | var5 << 8 | var5;
         if (param0 != 17) {
           return;
         }
         if (li.field_i) {
-          wk.a(4.0f, (float)param3, var6, 255, (float)ip.field_p.width, -1520350600, (float)param3, 0.0f);
-          wk.a(4.0f, (float)param2, var6, 255, (float)ip.field_p.width, -1520350600, (float)param2, 0.0f);
-          wk.a(4.0f, 0.0f, var6, 255, (float)param4, -1520350600, (float)ip.field_p.height, (float)param4);
-          wk.a(4.0f, 0.0f, var6, 255, (float)param1, -1520350600, (float)ip.field_p.height, (float)param1);
+          wk.a(4.0f, (float)param3, var6, 255, (float)GetBombletSprayEnergyUsed.field_p.width, -1520350600, (float)param3, 0.0f);
+          wk.a(4.0f, (float)param2, var6, 255, (float)GetBombletSprayEnergyUsed.field_p.width, -1520350600, (float)param2, 0.0f);
+          wk.a(4.0f, 0.0f, var6, 255, (float)param4, -1520350600, (float)GetBombletSprayEnergyUsed.field_p.height, (float)param4);
+          wk.a(4.0f, 0.0f, var6, 255, (float)param1, -1520350600, (float)GetBombletSprayEnergyUsed.field_p.height, (float)param1);
           return;
         }
         uv.a(param0 ^ 102, -2 + param4, 4 + (param2 - param3), param3 - 2, 16711680, param1 - param4 + 4);

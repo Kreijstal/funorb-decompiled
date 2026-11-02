@@ -28,9 +28,9 @@ abstract class ps {
           var3 = -4 & var2_int + 3;
           var4 = 3 * (var3 / 4);
           if (var2_int > var3 - 2 &&
-            mwa.a(param0.charAt(-2 + var3), -82) != -1) {
+            SetThrusterParticleLife.a(param0.charAt(-2 + var3), -82) != -1) {
             if (var3 - 1 >= var2_int ||
-              mwa.a(param0.charAt(var3 - 1), -46) == -1) {
+              SetThrusterParticleLife.a(param0.charAt(var3 - 1), -46) == -1) {
               var4--;
             }
           } else {
@@ -43,7 +43,7 @@ abstract class ps {
             stackIn_13_0 = (byte[]) null;
             return stackIn_13_0;
           }
-          ij.a(var7, param1 - 10389, 0, param0);
+          IntrusiveDeque.a(var7, param1 - 10389, 0, param0);
           stackIn_15_0 = var5;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -56,7 +56,7 @@ abstract class ps {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

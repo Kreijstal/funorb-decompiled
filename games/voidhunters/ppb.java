@@ -5,7 +5,7 @@ final class ppb {
     static ri field_c;
     static String field_d;
     static asb field_a;
-    static cda field_b;
+    static PartitionZoneList field_b;
 
     public static void a(int param0) {
         field_a = null;
@@ -32,7 +32,7 @@ final class ppb {
           }
           if (param0 instanceof byte[]) {
             var4 = (byte[]) (param0);
-            stackIn_6_0 = qcb.a(param3, var4, param1, 31783);
+            stackIn_6_0 = SetGrapplingHookMaxExtension8Force.a(param3, var4, param1, 31783);
             return stackIn_6_0;
           }
           if (!param2) {
@@ -55,7 +55,7 @@ final class ppb {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class ppb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

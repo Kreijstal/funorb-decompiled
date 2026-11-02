@@ -32,7 +32,7 @@ final class qva extends kva implements hdb {
           var7 = 0;
           var5_intLifetime1 = var7;
           while (var7 < 6) {
-            jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, this.e((byte) -31), param1, param1, 0, una.a(-29328, this.field_f), this.field_h.field_Nc, param3[var7], 0);
+            jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, this.e((byte) -31), param1, param1, 0, MissionControl.a(-29328, this.field_f), this.field_h.field_Nc, param3[var7], 0);
             var7++;
           }
           return;
@@ -52,7 +52,7 @@ final class qva extends kva implements hdb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -60,7 +60,7 @@ final class qva extends kva implements hdb {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qva.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qva.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

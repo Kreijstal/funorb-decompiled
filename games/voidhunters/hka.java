@@ -42,9 +42,9 @@ final class hka extends uj {
         llb var5 = null;
         llb var6 = null;
         llb var3 = null;
-        iqb.field_o = gra.a(param0, "display_name_changed", "basic", true);
-        re.field_n = new wdb(0L, rbb.field_k, jj.field_q, esa.field_o);
-        vra.field_b = new wdb(0L, rbb.field_k, bnb.field_q, ci.field_a);
+        SetMissileLauncherRandomness.field_o = SetSniperCannonProjectiles.a(param0, "display_name_changed", "basic", true);
+        re.field_n = new wdb(0L, rbb.field_k, SetMissileLauncherEnergyUsed.field_q, SetDefaultFiringLeeway.field_o);
+        vra.field_b = new wdb(0L, rbb.field_k, SetMissilesTopSpeed.field_q, ci.field_a);
         ci.field_c = new llb(0L, (llb) null);
         rtb.field_h = new llb(0L, qc.field_q);
         rtb.field_h.field_F = 1;
@@ -52,11 +52,11 @@ final class hka extends uj {
           return;
         }
         try {
-          aha.field_o = new llb(0L, sdb.field_p, kpb.field_r);
+          SetCountermeasureLauncherRandomness.field_o = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
           GameKeyHandler.field_b = new llb(0L, qsa.field_d, mab.field_e);
-          nf.field_c = new llb(0L, iga.field_o);
+          nf.field_c = new llb(0L, GetMissionDebrisDefaultProbability.field_o);
           ci.field_c.b(-561, rtb.field_h);
-          ci.field_c.b(-561, aha.field_o);
+          ci.field_c.b(-561, SetCountermeasureLauncherRandomness.field_o);
           ci.field_c.b(-561, GameKeyHandler.field_b);
           ci.field_c.b(-561, re.field_n);
           ci.field_c.b(-561, nf.field_c);
@@ -70,7 +70,7 @@ final class hka extends uj {
           vra.field_b.field_xb.field_xb.field_B = 1;
           var3.field_F = 1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hka.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hka.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -102,23 +102,23 @@ final class hka extends uj {
           if (ef.field_z >= 10) {
             if (!lm.a(true)) {
               dma.a();
-              uba.a((byte) 82, 320, 240);
-              dh.a(param1, 0, 0, 0);
+              SetRadialMenuRadius.a((byte) 82, 320, 240);
+              SetSniperCannonAimarc.a(param1, 0, 0, 0);
             } else {
-              if (qmb.field_q == 0) {
+              if (GetSpinningBladeAimspeed.field_q == 0) {
                 pi.a((byte) -70, false, param2);
-                dh.a(param1, 0, 0, 0);
+                SetSniperCannonAimarc.a(param1, 0, 0, 0);
               } else {
-                pga.a(param1, true);
+                GetPhasedEnergyBeamAimspeed.a(param1, true);
               }
             }
           } else {
             var3_int = 0;
-            if (aob.field_o) {
-              aob.field_o = false;
+            if (GetShowTutorial.field_o) {
+              GetShowTutorial.field_o = false;
               var3_int = 1;
             }
-            skb.a(wpb.field_p, 13, bj.e((byte) 97), var3_int != 0, dua.e((byte) -79));
+            Lo.a(SetBlueprintSaveTime.field_p, 13, GetMissileLauncherFireForce.e((byte) 97), var3_int != 0, SetMassDriverFireForce.e((byte) -79));
           }
           if (param0 == 111) {
             return;
@@ -135,16 +135,16 @@ final class hka extends uj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final int d(byte param0) {
         if (param0 != 64) {
           field_d = (String[]) null;
-          return oq.field_t;
+          return Particle.field_t;
         }
-        return oq.field_t;
+        return Particle.field_t;
     }
 
     final boolean a(boolean param0) {

@@ -22,13 +22,13 @@ final class qqa extends le {
           }
           nqa.field_c = !param0 ? true : false;
           mfb.field_a = !param0 ? true : false;
-          mja.field_o = !param0 ? true : false;
-          eka.field_b = !param0 ? true : false;
+          SetUseTrails.field_o = !param0 ? true : false;
+          ComponentBehaviour.field_b = !param0 ? true : false;
           bva.field_d = !param0 ? true : false;
-          gk.field_p = !param0 ? true : false;
-          m.a(37);
+          GetPointDefenceLaserReload.field_p = !param0 ? true : false;
+          GetShieldsDirectionalRadius.a(37);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qqa.C(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qqa.C(" + param0 + ',' + param1 + ')');
         }
     }
 

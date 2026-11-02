@@ -12,9 +12,9 @@ final class hp extends OutputStream {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        tra.field_o.a(param5, -6, param0, param6, param1);
+        GetGrapplingHookFireForce.field_o.a(param5, -6, param0, param6, param1);
         if (null != fkb.field_m) {
-          fkb.field_m.a(12, param1, -ejb.field_p + param2, param2, param1, param4);
+          fkb.field_m.a(12, param1, -GetLaserAimspeed.field_p + param2, param2, param1, param4);
           if (param3) {
             hp.a(-122, 15, -4, false, -81, -103, -22);
             return;
@@ -38,7 +38,7 @@ final class hp extends OutputStream {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -11,7 +11,7 @@ abstract class MouseWheelInput {
           return;
         }
         if (ne.field_v) {
-          og.field_r.a(1, (byte) 120, param0 | -16777216, 1, param1, param2);
+          GetDebrisGroupColour.field_r.a(1, (byte) 120, param0 | -16777216, 1, param1, param2);
           return;
         }
     }

@@ -32,7 +32,7 @@ final class moa extends le {
         var12 = var13;
         var3 = var12;
         if (this.field_f.field_e) {
-          var4 = sj.field_p[param0];
+          var4 = SetSalvoUsesAllEnergy.field_p[param0];
           if (this.field_k == 0) {
             var5 = 0;
             var6 = 0;
@@ -168,7 +168,7 @@ final class moa extends le {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -180,8 +180,8 @@ final class moa extends le {
     }
 
     final static void a(boolean param0) {
-        int var1 = (gp.field_p - 640) / 2;
-        int var2 = ldb.field_o * ldb.field_o;
+        int var1 = (GetShieldsDirectionalArcParticleLife.field_p - 640) / 2;
+        int var2 = GetRepairModePower.field_o * GetRepairModePower.field_o;
         if (!param0) {
           field_n = (String) null;
         }

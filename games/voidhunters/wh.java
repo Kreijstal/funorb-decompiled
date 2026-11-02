@@ -105,7 +105,7 @@ final class wh extends ona {
                   this.field_p.a(-122, this.field_i.position, var5, this.field_i.payload);
                   if (0 != this.field_j) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_i.payload[this.field_i.position + var6] = (byte)mgb.a((int) this.field_i.payload[this.field_i.position + var6], (int) this.field_j);
+                      this.field_i.payload[this.field_i.position + var6] = (byte)SetFixedaim.a((int) this.field_i.payload[this.field_i.position + var6], (int) this.field_j);
                     }
                   }
                   this.field_i.position = this.field_i.position + var5;
@@ -179,7 +179,7 @@ final class wh extends ona {
                   this.field_p.a(param0 ^ -126, this.field_b.field_p.position, var6, this.field_b.field_p.payload);
                   if (this.field_j != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_b.field_p.payload[var7 + this.field_b.field_p.position] = (byte)mgb.a((int) this.field_b.field_p.payload[var7 + this.field_b.field_p.position], (int) this.field_j);
+                      this.field_b.field_p.payload[var7 + this.field_b.field_p.position] = (byte)SetFixedaim.a((int) this.field_b.field_p.payload[var7 + this.field_b.field_p.position], (int) this.field_j);
                     }
                   }
                   this.field_b.field_r = this.field_b.field_r + var6;
@@ -333,7 +333,7 @@ final class wh extends ona {
         if (param0 > -113) {
           wh.a(-4, (byte) 35, 31);
         }
-        stackIn_6_0 = (null != ov.field_o) && (sp.field_o == tc.field_c);
+        stackIn_6_0 = (null != SetShipSpawnInvulnerabilityTime.field_o) && (GetOndamageParticleSpeed.field_o == tc.field_c);
         return stackIn_6_0;
     }
 
@@ -437,7 +437,7 @@ final class wh extends ona {
             } else {
               stackIn_28_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

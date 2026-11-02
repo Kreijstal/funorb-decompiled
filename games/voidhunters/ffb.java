@@ -30,7 +30,7 @@ final class ffb {
               stackIn_9_0 = var3;
               return stackIn_9_0;
             }
-            stackIn_7_0 = nia.a(var3, (byte) -116);
+            stackIn_7_0 = SetPointDefenceLaserProjectileDamage.a(var3, (byte) -116);
             return stackIn_7_0;
           }
           if (param1 instanceof ps) {
@@ -53,7 +53,7 @@ final class ffb {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -93,9 +93,9 @@ final class ffb {
           var6 = param0;
           var7 = -param0;
           var8 = -1;
-          var9 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param4 + param0);
-          var10 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param4 - param0);
-          ww.a(param3, var9, rba.field_b[param2], (byte) 75, var10);
+          var9 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 + param0);
+          var10 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - param0);
+          GetSalvoRepairTimeMultiplier.a(param3, var9, ResourceNode.field_b[param2], (byte) 75, var10);
           while (var6 > var5_int) {
             var8 += 2;
             var7 = var7 + var8;
@@ -104,42 +104,42 @@ final class ffb {
               var7 = var7 - (var6 << 1);
               var11 = -var6 + param2;
               var12 = param2 + var6;
-              if (lua.field_c <= var12 &&
+              if (NebulaField.field_c <= var12 &&
                 hab.field_i >= var11) {
-                var13 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, var5_int + param4);
-                var14 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param4 - var5_int);
+                var13 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, var5_int + param4);
+                var14 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var5_int);
                 if (var12 <= hab.field_i) {
-                  ww.a(param3, var13, rba.field_b[var12], (byte) 75, var14);
+                  GetSalvoRepairTimeMultiplier.a(param3, var13, ResourceNode.field_b[var12], (byte) 75, var14);
                 }
-                if (var11 >= lua.field_c) {
-                  ww.a(param3, var13, rba.field_b[var11], (byte) 75, var14);
+                if (var11 >= NebulaField.field_c) {
+                  GetSalvoRepairTimeMultiplier.a(param3, var13, ResourceNode.field_b[var11], (byte) 75, var14);
                 }
               }
             }
             var5_int++;
             var11Lifetime1 = -var5_int + param2;
             var12Lifetime1 = var5_int + param2;
-            if (lua.field_c > var12Lifetime1) {
+            if (NebulaField.field_c > var12Lifetime1) {
               continue;
             }
             if (var11Lifetime1 > hab.field_i) {
               continue;
             }
-            var13Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param4 + var6);
-            var14Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param4 - var6);
+            var13Lifetime1 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 + var6);
+            var14Lifetime1 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var6);
             if (hab.field_i >= var12Lifetime1) {
-              ww.a(param3, var13Lifetime1, rba.field_b[var12Lifetime1], (byte) 75, var14Lifetime1);
+              GetSalvoRepairTimeMultiplier.a(param3, var13Lifetime1, ResourceNode.field_b[var12Lifetime1], (byte) 75, var14Lifetime1);
             }
-            if (lua.field_c > var11Lifetime1) {
+            if (NebulaField.field_c > var11Lifetime1) {
               continue;
             }
-            ww.a(param3, var13Lifetime1, rba.field_b[var11Lifetime1], (byte) 75, var14Lifetime1);
+            GetSalvoRepairTimeMultiplier.a(param3, var13Lifetime1, ResourceNode.field_b[var11Lifetime1], (byte) 75, var14Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var5), "ffb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var5), "ffb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

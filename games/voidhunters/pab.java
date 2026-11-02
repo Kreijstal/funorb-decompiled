@@ -7,18 +7,18 @@ final class pab extends DualLinkNode {
     byte[] field_l;
 
     final static void a(int param0, int param1, byte param2) {
-        rda.field_p = param1;
-        lva.field_p = param1;
+        GetDebrisSurvives.field_p = param1;
+        GetPhasedEnergyBeamFireForce.field_p = param1;
         if (param2 < -27) {
-          fua.field_p = param0;
-          uqa.field_p = param0;
-          rda.field_q = true;
+          SetPointDefenceLaserReload.field_p = param0;
+          GetLoadingMissions.field_p = param0;
+          GetDebrisSurvives.field_q = true;
           return;
         }
         field_k = (kka[]) null;
-        fua.field_p = param0;
-        uqa.field_p = param0;
-        rda.field_q = true;
+        SetPointDefenceLaserReload.field_p = param0;
+        GetLoadingMissions.field_p = param0;
+        GetDebrisSurvives.field_q = true;
     }
 
     public static void a(boolean param0) {
@@ -32,7 +32,7 @@ final class pab extends DualLinkNode {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

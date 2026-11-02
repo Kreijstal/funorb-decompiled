@@ -33,7 +33,7 @@ final class tea {
             field_a = (String) null;
           }
           if (li.field_i) {
-            stackIn_6_0 = de.a(param0, param2 ^ 14107).a(param1, param2 - 13878);
+            stackIn_6_0 = SetTorpedoEnergyUsed.a(param0, param2 ^ 14107).a(param1, param2 - 13878);
             return stackIn_6_0;
           }
           stackIn_4_0 = ita.a(param0, param2 - 5891).b(param1);
@@ -48,7 +48,7 @@ final class tea {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 

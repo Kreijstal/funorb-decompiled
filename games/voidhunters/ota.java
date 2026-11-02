@@ -187,7 +187,7 @@ final class ota {
         var2 = this.field_e.length;
         System.arraycopy(this.field_e, 0, field_i, 0, var2);
         var3 = field_g[this.field_d - 1];
-        var4 = ieb.a(var3 - 1, 103);
+        var4 = SetMutatorVotes.a(var3 - 1, 103);
         field_h[0] = fca.c(var4);
         field_h[1] = fca.c(var4);
         var5 = 2;

@@ -12,9 +12,9 @@ final class wqb extends mfb {
     final int a(int param0) {
         if (param0 != 0) {
           field_b = (String) null;
-          return qra.field_o;
+          return SetLaserAimarc.field_o;
         }
-        return qra.field_o;
+        return SetLaserAimarc.field_o;
     }
 
     final int c(int param0) {
@@ -38,9 +38,9 @@ final class wqb extends mfb {
     final int f(byte param0) {
         if (param0 <= 0) {
           field_b = (String) null;
-          return nca.field_o;
+          return GetPhysicsCollisionGrapplingHookForceMultiplier.field_o;
         }
-        return nca.field_o;
+        return GetPhysicsCollisionGrapplingHookForceMultiplier.field_o;
     }
 
     final int k(int param0) {
@@ -53,9 +53,9 @@ final class wqb extends mfb {
     final int b(boolean param0) {
         if (param0) {
           this.b(23);
-          return klb.field_p;
+          return GetLagStandardDeviationIn.field_p;
         }
-        return klb.field_p;
+        return GetLagStandardDeviationIn.field_p;
     }
 
     final int b(int param0) {
@@ -66,9 +66,9 @@ final class wqb extends mfb {
     final int d(byte param0) {
         if (param0 >= -52) {
           this.a(true);
-          return cca.field_p;
+          return SetArmageddonLength.field_p;
         }
-        return cca.field_p;
+        return SetArmageddonLength.field_p;
     }
 
     final int g(int param0) {
@@ -88,15 +88,15 @@ final class wqb extends mfb {
 
     final int a(byte param0) {
         int var2 = 126 % ((-48 - param0) / 43);
-        return wob.field_o;
+        return SetGrapplingHookRopeChangeRate.field_o;
     }
 
     final int g(byte param0) {
         if (param0 >= -12) {
           field_e = (Hashtable) null;
-          return ioa.field_p;
+          return GetBombletSprayProjectileDamage.field_p;
         }
-        return ioa.field_p;
+        return GetBombletSprayProjectileDamage.field_p;
     }
 
     wqb() {

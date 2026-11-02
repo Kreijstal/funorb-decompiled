@@ -6,12 +6,12 @@ final class bcb implements dja {
         if (param0 != 11995) {
           return (tv[]) null;
         }
-        return (tv[]) ((Object) new una[param1]);
+        return (tv[]) ((Object) new MissionControl[param1]);
     }
 
     public final tv a(byte param0) {
         int var2 = 4 / ((-64 - param0) / 50);
-        return (tv) ((Object) new una());
+        return (tv) ((Object) new MissionControl());
     }
 
     static {

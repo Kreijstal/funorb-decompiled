@@ -1,0 +1,76 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GetLagIn extends ConsoleCommand {
+    final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (obfuscationGuard <= -119) {
+            stackIn_4_0 = new ConsoleValue(dla.a(-63));
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = (ConsoleValue) null;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("mva.A(");
+          if (arguments == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    final static int a(int param0, int param1, Object param2) {
+        Object var3 = null;
+        RuntimeException var3_ref = null;
+        int stackIn_2_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 <= 13) {
+            stackIn_2_0 = 61;
+            return stackIn_2_0;
+          }
+          var3 = wqb.field_e.get(param2);
+          if (!(var3 instanceof Integer)) {
+            stackIn_7_0 = param0;
+            return stackIn_7_0;
+          }
+          stackIn_5_0 = ((Integer) (var3)).intValue();
+          return stackIn_5_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_10_0 = var3_ref;
+          stackIn_10_1 = new StringBuilder().append("mva.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    GetLagIn(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    static {
+    }
+}

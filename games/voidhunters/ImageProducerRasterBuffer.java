@@ -14,7 +14,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hq.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hq.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param0.drawImage(this.field_j, -param4 + param6, param5 - param2, (java.awt.image.ImageObserver) ((Object) this.field_k));
           param0.setClip(var9);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -56,10 +56,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           Exception var1 = null;
           Throwable decompiledCaughtException = null;
-          if (vsa.field_r != null) {
+          if (SetCountermeasureLauncherAimarc.field_r != null) {
             try {
-              vsa.field_r.a(0, 0L);
-              vsa.field_r.a(24, qga.field_b.position, (byte) -88, qga.field_b.payload);
+              SetCountermeasureLauncherAimarc.field_r.a(0, 0L);
+              SetCountermeasureLauncherAimarc.field_r.a(24, qga.field_b.position, (byte) -88, qga.field_b.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
@@ -88,7 +88,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param0.setColorModel(this.field_h);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hq.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hq.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           this.e((byte) 105);
           this.field_k.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_k));
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hq.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hq.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             this.field_g = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hq.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hq.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

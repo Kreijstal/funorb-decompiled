@@ -20,7 +20,7 @@ final class fj {
           return;
         }
         if (uga.field_d) {
-          fea.a(-1);
+          GetUseExtraBackground.a(-1);
         }
     }
 
@@ -38,7 +38,7 @@ final class fj {
         int var8 = 0;
         var8 = VoidHunters.field_G;
         try {
-          this.field_f[this.field_g] = (byte)knb.a((int) this.field_f[this.field_g], 128 >>> dla.a(this.field_e, 7));
+          this.field_f[this.field_g] = (byte)SetAngularForceDownshift.a((int) this.field_f[this.field_g], 128 >>> dla.a(this.field_e, 7));
           this.field_g = this.field_g + 1;
           if (param2 <= 37) {
             fj.b(-1);
@@ -85,7 +85,7 @@ final class fj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class fj {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_j[var2] = ihb.a(ihb.a(hoa.a(255L, (long)this.field_f[6 + var3]) << 8, ihb.a(hoa.a(255L, (long)this.field_f[5 + var3]) << 16, ihb.a(hoa.a(255L, (long)this.field_f[4 + var3]) << 24, ihb.a(hoa.a(255L, (long)this.field_f[3 + var3]) << 32, ihb.a(hoa.a(280375465082880L, (long)this.field_f[var3 + 2] << 40), ihb.a(hoa.a((long)this.field_f[1 + var3], 255L) << 48, (long)this.field_f[var3] << 56)))))), hoa.a((long)this.field_f[var3 + 7], 255L));
+          this.field_j[var2] = ihb.a(ihb.a(SetExplosionProjectileDamage.a(255L, (long)this.field_f[6 + var3]) << 8, ihb.a(SetExplosionProjectileDamage.a(255L, (long)this.field_f[5 + var3]) << 16, ihb.a(SetExplosionProjectileDamage.a(255L, (long)this.field_f[4 + var3]) << 24, ihb.a(SetExplosionProjectileDamage.a(255L, (long)this.field_f[3 + var3]) << 32, ihb.a(SetExplosionProjectileDamage.a(280375465082880L, (long)this.field_f[var3 + 2] << 40), ihb.a(SetExplosionProjectileDamage.a((long)this.field_f[1 + var3], 255L) << 48, (long)this.field_f[var3] << 56)))))), SetExplosionProjectileDamage.a((long)this.field_f[var3 + 7], 255L));
           var2++;
           var3 += 8;
         }
@@ -148,7 +148,7 @@ final class fj {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_h[var3Lifetime1] = ihb.a(this.field_h[var3Lifetime1], gp.field_r[var4][dla.a(255, (int)(this.field_i[dla.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_h[var3Lifetime1] = ihb.a(this.field_h[var3Lifetime1], GetShieldsDirectionalArcParticleLife.field_r[var4][dla.a(255, (int)(this.field_i[dla.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -156,14 +156,14 @@ final class fj {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_i[var3Lifetime1Lifetime1] = this.field_h[var3Lifetime1Lifetime1];
           }
-          this.field_i[0] = ihb.a(this.field_i[0], gp.field_o[var2Lifetime2]);
+          this.field_i[0] = ihb.a(this.field_i[0], GetShieldsDirectionalArcParticleLife.field_o[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_h[var3Lifetime1Lifetime2] = this.field_i[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_h[var3Lifetime1Lifetime2] = ihb.a(this.field_h[var3Lifetime1Lifetime2], gp.field_r[var7][dla.a(255, (int)(this.field_d[dla.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_h[var3Lifetime1Lifetime2] = ihb.a(this.field_h[var3Lifetime1Lifetime2], GetShieldsDirectionalArcParticleLife.field_r[var7][dla.a(255, (int)(this.field_d[dla.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -224,7 +224,7 @@ final class fj {
             var8 = 255 & param0[var5_int] << var6 | (255 & param0[1 + var5_int]) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_f[this.field_g] = (byte)knb.a((int) this.field_f[this.field_g], var8 >>> var7);
+              this.field_f[this.field_g] = (byte)SetAngularForceDownshift.a((int) this.field_f[this.field_g], var8 >>> var7);
               this.field_g = this.field_g + 1;
               this.field_e = this.field_e + (8 - var7);
               if (this.field_e == 512) {
@@ -244,7 +244,7 @@ final class fj {
             stackIn_18_0 = param0[var5_int] << var6;
             stackIn_18_1 = 255;
             var8Lifetime1 = stackIn_18_0 & stackIn_18_1;
-            this.field_f[this.field_g] = (byte)knb.a((int) this.field_f[this.field_g], var8Lifetime1 >>> var7);
+            this.field_f[this.field_g] = (byte)SetAngularForceDownshift.a((int) this.field_f[this.field_g], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -273,7 +273,7 @@ final class fj {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

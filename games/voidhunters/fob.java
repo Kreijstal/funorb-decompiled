@@ -10,9 +10,9 @@ final class fob implements dja {
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_c = -32;
-          return (tv[]) ((Object) new eka[param1]);
+          return (tv[]) ((Object) new ComponentBehaviour[param1]);
         }
-        return (tv[]) ((Object) new eka[param1]);
+        return (tv[]) ((Object) new ComponentBehaviour[param1]);
     }
 
     public static void a(int param0) {

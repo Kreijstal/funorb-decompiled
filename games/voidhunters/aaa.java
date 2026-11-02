@@ -33,25 +33,25 @@ final class aaa {
         try {
           pea.$cfr$intArgs$a$91f64d33677c(0L, param1, -1, (int[]) null, (String) null, rgb.field_f, (String) null, 50, param1.f((byte) -13));
           if (param1.field_fc && (param1.field_Bb == 2 ||
-            !(go.field_p < 2))) {
-            var7 = cka.field_o;
-            var8 = isa.a(hmb.field_o, new String[]{param2}, 113);
+            !(SetAngularVelocitySustain.field_p < 2))) {
+            var7 = GetLagStandardDeviationOut.field_o;
+            var8 = SetReverbGain.a(GetMassDriverProjectileLife.field_o, new String[]{param2}, 113);
             var7.field_i.a(var8, (byte) -53, 10);
           }
-          cka.field_o.a(true);
+          GetLagStandardDeviationOut.field_o.a(true);
           if (param3) {
-            if (cka.field_o.field_h != paa.field_q) {
-              var11 = cka.field_o;
-              var12 = isa.a(nga.field_a, new String[]{param2}, param0 ^ 57);
+            if (GetLagStandardDeviationOut.field_o.field_h != GetMachineGunPulsetime.field_q) {
+              var11 = GetLagStandardDeviationOut.field_o;
+              var12 = SetReverbGain.a(nga.field_a, new String[]{param2}, param0 ^ 57);
               var11.field_i.a(var12, (byte) -53, 15);
             } else {
-              var9 = cka.field_o;
-              var10 = isa.a(ot.field_c, new String[]{param2}, 120);
+              var9 = GetLagStandardDeviationOut.field_o;
+              var10 = SetReverbGain.a(ot.field_c, new String[]{param2}, 120);
               var9.field_i.a(var10, (byte) -53, 16);
             }
           }
-          var13 = cka.field_o;
-          var5 = oq.field_H;
+          var13 = GetLagStandardDeviationOut.field_o;
+          var5 = Particle.field_H;
           var6 = qs.field_a;
           if (param0 != 112) {
             field_a = (String) null;
@@ -74,7 +74,7 @@ final class aaa {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -201,7 +201,7 @@ final class qaa implements dja {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param8).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param8).append(')').toString());
         }
     }
 

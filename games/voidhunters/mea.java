@@ -3,8 +3,8 @@
  */
 abstract class mea extends IntrusiveNode {
     boolean field_f;
-    static ij field_e;
-    qfa field_d;
+    static IntrusiveDeque field_e;
+    OpenGlToolkit field_d;
 
     abstract void a(int param0, int param1);
 
@@ -45,7 +45,7 @@ abstract class mea extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -60,7 +60,7 @@ abstract class mea extends IntrusiveNode {
     public static void c(int param0) {
         field_e = null;
         if (param0 >= -88) {
-          field_e = (ij) null;
+          field_e = (IntrusiveDeque) null;
         }
     }
 
@@ -95,12 +95,12 @@ abstract class mea extends IntrusiveNode {
         if (param3 == 0) {
           if (param0 == kib.field_d) {
             if (param1 > -69) {
-              field_e = (ij) null;
+              field_e = (IntrusiveDeque) null;
             }
             if (param3 == 1 &&
-              idb.field_p != param0) {
+              GetThrusterSmallForce.field_p != param0) {
               ebb.field_b = true;
-              idb.field_p = param0;
+              GetThrusterSmallForce.field_p = param0;
               deb.a(40, param2);
             }
             if (2 != param3) {
@@ -120,15 +120,15 @@ abstract class mea extends IntrusiveNode {
         }
         if (param1 <= -69) {
           if (param3 == 1 &&
-            idb.field_p != param0) {
+            GetThrusterSmallForce.field_p != param0) {
             ebb.field_b = true;
-            idb.field_p = param0;
+            GetThrusterSmallForce.field_p = param0;
             deb.a(40, param2);
           }
         } else {
-          field_e = (ij) null;
+          field_e = (IntrusiveDeque) null;
           if (param3 == 1) {
-            if (idb.field_p == param0) {
+            if (GetThrusterSmallForce.field_p == param0) {
               if (2 != param3) {
                 return;
               }
@@ -141,7 +141,7 @@ abstract class mea extends IntrusiveNode {
               return;
             }
             ebb.field_b = true;
-            idb.field_p = param0;
+            GetThrusterSmallForce.field_p = param0;
             deb.a(40, param2);
           }
         }
@@ -161,17 +161,17 @@ abstract class mea extends IntrusiveNode {
 
     abstract boolean a(int param0);
 
-    mea(qfa param0) {
+    mea(OpenGlToolkit param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "mea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String a(boolean param0) {
         if (!param0) {
-          field_e = (ij) null;
+          field_e = (IntrusiveDeque) null;
           return qga.field_b.a(-1);
         }
         return qga.field_b.a(-1);

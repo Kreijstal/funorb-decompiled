@@ -145,7 +145,7 @@ class hbb extends f {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ class hbb extends f {
         try {
           this.a(param1, true, -11886, param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hbb.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hbb.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -190,7 +190,7 @@ class hbb extends f {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -276,7 +276,7 @@ class hbb extends f {
           this.field_F = this.field_u.field_b[this.field_m];
           this.field_i = this.field_u.a(this.field_F);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hbb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hbb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -356,7 +356,7 @@ class hbb extends f {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -519,7 +519,7 @@ class hbb extends f {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -660,7 +660,7 @@ class hbb extends f {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -718,7 +718,7 @@ class hbb extends f {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -754,7 +754,7 @@ class hbb extends f {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -900,7 +900,7 @@ class hbb extends f {
         }
         if (var5Lifetime4 == 64) {
           if (var6Lifetime3 >= 64) {
-            this.field_v[var4Lifetime4] = knb.a(this.field_v[var4Lifetime4], 1);
+            this.field_v[var4Lifetime4] = SetAngularForceDownshift.a(this.field_v[var4Lifetime4], 1);
           } else {
             this.field_v[var4Lifetime4] = dla.a(this.field_v[var4Lifetime4], -2);
           }
@@ -910,7 +910,7 @@ class hbb extends f {
             this.a(var4Lifetime4, (byte) -89);
             this.field_v[var4Lifetime4] = dla.a(this.field_v[var4Lifetime4], -3);
           } else {
-            this.field_v[var4Lifetime4] = knb.a(this.field_v[var4Lifetime4], 2);
+            this.field_v[var4Lifetime4] = SetAngularForceDownshift.a(this.field_v[var4Lifetime4], 2);
           }
         }
         if (99 == var5Lifetime4) {
@@ -954,7 +954,7 @@ class hbb extends f {
         }
         if (var5Lifetime4 == 81) {
           if (var6Lifetime3 >= 64) {
-            this.field_v[var4Lifetime4] = knb.a(this.field_v[var4Lifetime4], 4);
+            this.field_v[var4Lifetime4] = SetAngularForceDownshift.a(this.field_v[var4Lifetime4], 4);
           } else {
             this.b(var4Lifetime4, false);
             this.field_v[var4Lifetime4] = dla.a(this.field_v[var4Lifetime4], -5);
@@ -1107,7 +1107,7 @@ class hbb extends f {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1297,7 +1297,7 @@ class hbb extends f {
           this.b(256, (byte) 18, -1);
           this.a(true, true);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hbb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hbb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

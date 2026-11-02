@@ -5,7 +5,7 @@ final class tla extends aja {
     private int field_b;
     static String field_k;
     private int field_j;
-    private qfa field_g;
+    private OpenGlToolkit field_g;
     private im field_e;
     static String field_h;
     private int field_a;
@@ -85,7 +85,7 @@ final class tla extends aja {
     }
 
     private final void a(boolean param0, int param1) {
-        qfa stackIn_12_0 = null;
+        OpenGlToolkit stackIn_12_0 = null;
         float stackIn_12_1 = 0.0f;
         float stackIn_12_2 = 0.0f;
         boolean stackIn_13_3;
@@ -108,7 +108,7 @@ final class tla extends aja {
           stackIn_12_1 = 0.0f;
           stackIn_12_2 = 0.5f;
           stackIn_13_3 = (param0) ? false : true;
-          ((qfa) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2, stackIn_13_3, 0.5f, 1.0f);
+          ((OpenGlToolkit) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2, stackIn_13_3, 0.5f, 1.0f);
         } else {
           if (this.field_j == 1) {
             this.field_g.a(0.0f, 1.0f, false, 0.5f, 0.5f);
@@ -128,7 +128,7 @@ final class tla extends aja {
         try {
           this.field_f.a((byte) 32, param6, param2, param1, param3, param0, param5, true, param4);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "tla.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tla.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -372,7 +372,7 @@ final class tla extends aja {
           var15 = var11;
           if (var11 != null) {
             for (var9 = 0; var9 < var14.length; var9++) {
-              var11[var9] = knb.a(var14[var9], -16777216);
+              var11[var9] = SetAngularForceDownshift.a(var14[var9], -16777216);
             }
             this.a(param0, param2, param1, param6, var15, 0, param1);
           }
@@ -450,7 +450,7 @@ final class tla extends aja {
         }
     }
 
-    tla(qfa param0, int param1, int param2, boolean param3) {
+    tla(OpenGlToolkit param0, int param1, int param2, boolean param3) {
         this.field_a = 0;
         this.field_d = 0;
         this.field_b = 0;
@@ -459,13 +459,13 @@ final class tla extends aja {
         this.field_l = false;
         try {
           this.field_g = param0;
-          this.field_f = jr.a(28, param1, param2, param0, param3 ? 6408 : 6407);
+          this.field_f = SetAngleset.a(28, param1, param2, param0, param3 ? 6408 : 6407);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    tla(qfa param0, int param1, int param2, int[] param3, int param4, int param5) {
+    tla(OpenGlToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
         this.field_a = 0;
         this.field_d = 0;
         this.field_b = 0;
@@ -476,7 +476,7 @@ final class tla extends aja {
           this.field_g = param0;
           this.field_f = uw.a(param0, param4, param5, param2, param3, param1, false, (byte) 60);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

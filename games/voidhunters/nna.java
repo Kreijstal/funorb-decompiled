@@ -35,7 +35,7 @@ final class nna extends dqa implements oo {
             }
             var7 = this.field_E[var6_int];
             if (var7 != -1) {
-              cea.a(127, this.field_E[var6_int]);
+              GetSelfDestructPrepareToggleCooldown.a(127, this.field_E[var6_int]);
             } else {
               this.field_B.l((byte) -106);
             }
@@ -52,7 +52,7 @@ final class nna extends dqa implements oo {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class nna extends dqa implements oo {
           this.field_y[var4_int] = this.a((byte) 62, param1, (sba) (this));
           this.field_E[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "nna.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nna.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class nna extends dqa implements oo {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class nna extends dqa implements oo {
           var4_int = null != this.field_x ? this.field_H.b(this.field_x, 260, this.field_H.field_k) : 0;
           this.a(0, 288, var4_int + 22, 1, 0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "nna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

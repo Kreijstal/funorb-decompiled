@@ -9,7 +9,7 @@ final class jga implements dja {
         if (param0 != 11995) {
           return (tv[]) null;
         }
-        return (tv[]) ((Object) new pe[param1]);
+        return (tv[]) ((Object) new World[param1]);
     }
 
     public static void a(int param0) {
@@ -21,7 +21,7 @@ final class jga implements dja {
 
     public final tv a(byte param0) {
         int var2 = -80 / ((-64 - param0) / 50);
-        return (tv) ((Object) new pe());
+        return (tv) ((Object) new World());
     }
 
     static {

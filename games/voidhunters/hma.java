@@ -40,7 +40,7 @@ final class hma {
           var4_int = param2.b(param0, -112);
           var6 = -104 / ((-47 - param1) / 40);
           var5 = param2.a(true, var4_int, param3);
-          stackIn_1_0 = dmb.a(var5, (byte) 75, param2, var4_int);
+          stackIn_1_0 = MapClearanceArea.a(var5, (byte) 75, param2, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,7 +64,7 @@ final class hma {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

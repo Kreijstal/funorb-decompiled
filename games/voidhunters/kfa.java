@@ -5,9 +5,9 @@ final class kfa implements dja {
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a((byte) -41);
-          return (tv[]) ((Object) new cq[param1]);
+          return (tv[]) ((Object) new MapZone[param1]);
         }
-        return (tv[]) ((Object) new cq[param1]);
+        return (tv[]) ((Object) new MapZone[param1]);
     }
 
     final static boolean a(int param0) {
@@ -28,7 +28,7 @@ final class kfa implements dja {
 
     public final tv a(byte param0) {
         int var2 = 5 % ((param0 + 64) / 50);
-        return (tv) ((Object) new cq());
+        return (tv) ((Object) new MapZone());
     }
 
     static {

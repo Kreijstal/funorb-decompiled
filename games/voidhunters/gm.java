@@ -3,7 +3,7 @@
  */
 final class gm extends kja {
     private phb field_N;
-    static ij field_H;
+    static IntrusiveDeque field_H;
     private int field_K;
     private eeb field_L;
     static byte[] field_M;
@@ -15,7 +15,7 @@ final class gm extends kja {
           this.field_K = this.field_K + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gm.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gm.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -82,8 +82,8 @@ final class gm extends kja {
         var30 = null;
         var13 = VoidHunters.field_G;
         var6 = this.field_L.a((byte) 35);
-        if (tg.field_p != var6 &&
-          var6 != dsa.field_q) {
+        if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6 &&
+          var6 != SetFighterRepairTime.field_q) {
           var5 = this.field_L.c((byte) -79);
           if (var5 == null) {
             var5 = this.field_J;
@@ -99,14 +99,14 @@ final class gm extends kja {
             var34 = (at) ((Object) this.field_q);
             var9 = param0 + this.field_g;
             var10 = var34.b(-3, param3, (shb) (this)) + (var34.a((shb) (this), 3).a(29565) >> 1);
-            if (tg.field_p != var6Lifetime1 &&
-              dsa.field_q != var6Lifetime1) {
-              if (cca.field_o == var6Lifetime1) {
+            if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime1 &&
+              SetFighterRepairTime.field_q != var6Lifetime1) {
+              if (SetArmageddonLength.field_o == var6Lifetime1) {
                 var18 = ps.field_a[2];
                 var18.c(var9, var10 - (var18.field_p >> 1), 256);
                 return;
               }
-              if (var6Lifetime1 != lea.field_o) {
+              if (var6Lifetime1 != GetShipPersistence.field_o) {
                 return;
               }
               var19 = ps.field_a[1];
@@ -119,11 +119,11 @@ final class gm extends kja {
             if (this.field_N != null &&
               var11 <= this.field_N.field_q &&
               var12 <= this.field_N.field_p) {
-              de.a(94, this.field_N);
+              SetTorpedoEnergyUsed.a(94, this.field_N);
               dma.a();
             } else {
               this.field_N = new phb(var11, var12);
-              de.a(99, this.field_N);
+              SetTorpedoEnergyUsed.a(99, this.field_N);
             }
             var20.b(112, 144, var20.field_m << 4, var20.field_n << 4, -this.field_K << 10, 4096);
             bia.a((byte) 124);
@@ -135,14 +135,14 @@ final class gm extends kja {
           var35 = (at) ((Object) this.field_q);
           var9Lifetime3 = param0 + this.field_g;
           var10Lifetime3 = var35.b(-3, param3, (shb) (this)) + (var35.a((shb) (this), 3).a(29565) >> 1);
-          if (tg.field_p != var6Lifetime1Lifetime1 &&
-            dsa.field_q != var6Lifetime1Lifetime1) {
-            if (cca.field_o == var6Lifetime1Lifetime1) {
+          if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime1Lifetime1 &&
+            SetFighterRepairTime.field_q != var6Lifetime1Lifetime1) {
+            if (SetArmageddonLength.field_o == var6Lifetime1Lifetime1) {
               var22 = ps.field_a[2];
               var22.c(var9Lifetime3, var10Lifetime3 - (var22.field_p >> 1), 256);
               return;
             }
-            if (var6Lifetime1Lifetime1 != lea.field_o) {
+            if (var6Lifetime1Lifetime1 != GetShipPersistence.field_o) {
               return;
             }
             var23 = ps.field_a[1];
@@ -154,17 +154,17 @@ final class gm extends kja {
           var12Lifetime4 = var24.field_n << 1;
           if (this.field_N == null) {
             this.field_N = new phb(var11Lifetime4, var12Lifetime4);
-            de.a(99, this.field_N);
+            SetTorpedoEnergyUsed.a(99, this.field_N);
           } else {
             if (var11Lifetime4 > this.field_N.field_q) {
               this.field_N = new phb(var11Lifetime4, var12Lifetime4);
-              de.a(99, this.field_N);
+              SetTorpedoEnergyUsed.a(99, this.field_N);
             } else {
               if (var12Lifetime4 > this.field_N.field_p) {
                 this.field_N = new phb(var11Lifetime4, var12Lifetime4);
-                de.a(99, this.field_N);
+                SetTorpedoEnergyUsed.a(99, this.field_N);
               } else {
-                de.a(94, this.field_N);
+                SetTorpedoEnergyUsed.a(94, this.field_N);
                 dma.a();
               }
             }
@@ -182,14 +182,14 @@ final class gm extends kja {
           var37 = (at) ((Object) this.field_q);
           var9Lifetime1 = param0 + this.field_g;
           var10Lifetime1 = var37.b(-3, param3, (shb) (this)) + (var37.a((shb) (this), 3).a(29565) >> 1);
-          if (tg.field_p != var6Lifetime2 &&
-            dsa.field_q != var6Lifetime2) {
-            if (cca.field_o == var6Lifetime2) {
+          if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime2 &&
+            SetFighterRepairTime.field_q != var6Lifetime2) {
+            if (SetArmageddonLength.field_o == var6Lifetime2) {
               var31 = ps.field_a[2];
               var31.c(var9Lifetime1, var10Lifetime1 - (var31.field_p >> 1), 256);
               return;
             }
-            if (var6Lifetime2 != lea.field_o) {
+            if (var6Lifetime2 != GetShipPersistence.field_o) {
               return;
             }
             var32 = ps.field_a[1];
@@ -201,18 +201,18 @@ final class gm extends kja {
           var12Lifetime1 = var33.field_n << 1;
           if (this.field_N == null) {
             this.field_N = new phb(var11Lifetime1, var12Lifetime1);
-            de.a(99, this.field_N);
+            SetTorpedoEnergyUsed.a(99, this.field_N);
           } else {
             if (var11Lifetime1 > this.field_N.field_q) {
               this.field_N = new phb(var11Lifetime1, var12Lifetime1);
-              de.a(99, this.field_N);
+              SetTorpedoEnergyUsed.a(99, this.field_N);
             } else {
               if (var12Lifetime1 <= this.field_N.field_p) {
-                de.a(94, this.field_N);
+                SetTorpedoEnergyUsed.a(94, this.field_N);
                 dma.a();
               } else {
                 this.field_N = new phb(var11Lifetime1, var12Lifetime1);
-                de.a(99, this.field_N);
+                SetTorpedoEnergyUsed.a(99, this.field_N);
               }
             }
           }
@@ -227,31 +227,31 @@ final class gm extends kja {
         var36 = (at) ((Object) this.field_q);
         var9Lifetime2 = param0 + this.field_g;
         var10Lifetime2 = var36.b(-3, param3, (shb) (this)) + (var36.a((shb) (this), 3).a(29565) >> 1);
-        if (tg.field_p == var6Lifetime3) {
+        if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p == var6Lifetime3) {
           var26 = ps.field_a[0];
           var11Lifetime2 = var26.field_m << 1;
           var12Lifetime2 = var26.field_n << 1;
           if (this.field_N != null &&
             var11Lifetime2 <= this.field_N.field_q &&
             var12Lifetime2 <= this.field_N.field_p) {
-            de.a(94, this.field_N);
+            SetTorpedoEnergyUsed.a(94, this.field_N);
             dma.a();
           } else {
             this.field_N = new phb(var11Lifetime2, var12Lifetime2);
-            de.a(99, this.field_N);
+            SetTorpedoEnergyUsed.a(99, this.field_N);
           }
           var26.b(112, 144, var26.field_m << 4, var26.field_n << 4, -this.field_K << 10, 4096);
           bia.a((byte) 124);
           this.field_N.c(var9Lifetime2 - (var26.field_m >> 1), -var26.field_n + var10Lifetime2, 256);
           return;
         }
-        if (dsa.field_q != var6Lifetime3) {
-          if (cca.field_o == var6Lifetime3) {
+        if (SetFighterRepairTime.field_q != var6Lifetime3) {
+          if (SetArmageddonLength.field_o == var6Lifetime3) {
             var27 = ps.field_a[2];
             var27.c(var9Lifetime2, var10Lifetime2 - (var27.field_p >> 1), 256);
             return;
           }
-          if (var6Lifetime3 != lea.field_o) {
+          if (var6Lifetime3 != GetShipPersistence.field_o) {
             return;
           }
           var28 = ps.field_a[1];
@@ -264,17 +264,17 @@ final class gm extends kja {
         var12Lifetime3 = var29.field_n << 1;
         if (this.field_N == null) {
           this.field_N = new phb(var11Lifetime3, var12Lifetime3);
-          de.a(99, this.field_N);
+          SetTorpedoEnergyUsed.a(99, this.field_N);
         } else {
           if (var11Lifetime3 > this.field_N.field_q) {
             this.field_N = new phb(var11Lifetime3, var12Lifetime3);
-            de.a(99, this.field_N);
+            SetTorpedoEnergyUsed.a(99, this.field_N);
           } else {
             if (var12Lifetime3 > this.field_N.field_p) {
               this.field_N = new phb(var11Lifetime3, var12Lifetime3);
-              de.a(99, this.field_N);
+              SetTorpedoEnergyUsed.a(99, this.field_N);
             } else {
-              de.a(94, this.field_N);
+              SetTorpedoEnergyUsed.a(94, this.field_N);
               dma.a();
             }
           }
@@ -295,7 +295,7 @@ final class gm extends kja {
           if (param0 == 0) {
             return false;
           }
-          field_H = (ij) null;
+          field_H = (IntrusiveDeque) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -307,7 +307,7 @@ final class gm extends kja {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -337,12 +337,12 @@ final class gm extends kja {
             stackIn_9_0 = 34065;
             return stackIn_9_0;
           }
-          if (param0 == tma.field_p) {
+          if (param0 == GetArmageddonLength.field_p) {
             stackIn_7_0 = 34066;
             return stackIn_7_0;
           }
           if (param1 != 9216) {
-            field_H = (ij) null;
+            field_H = (IntrusiveDeque) null;
           }
           throw new IllegalArgumentException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -355,7 +355,7 @@ final class gm extends kja {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -366,12 +366,12 @@ final class gm extends kja {
           this.field_L = param0;
           this.a(param2, param4, param5, 1, param3);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        field_H = new ij();
+        field_H = new IntrusiveDeque();
         field_I = "Stingray chassis";
     }
 }

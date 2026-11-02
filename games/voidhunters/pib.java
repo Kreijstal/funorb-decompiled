@@ -5,7 +5,7 @@ abstract class pib implements mda {
     int field_c;
     private int field_a;
     int field_d;
-    qfa field_g;
+    OpenGlToolkit field_g;
     int field_b;
     private boolean field_f;
     private boolean field_e;
@@ -42,7 +42,7 @@ abstract class pib implements mda {
         if (param0 != 118) {
           return 29;
         }
-        return pqa.a(false, nua.field_p);
+        return GetPointDefenceLaserProjectiles.a(false, SetAutoaim.field_p);
     }
 
     final static phb[] a(asb param0, int param1, int param2, int param3) {
@@ -71,7 +71,7 @@ abstract class pib implements mda {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ abstract class pib implements mda {
           var2 = this.field_g.e(this.field_d, 2) * this.field_a;
           return !this.field_e ? var2 : var2 * 4 / 3;
         }
-        this.field_g = (qfa) null;
+        this.field_g = (OpenGlToolkit) null;
         var2Lifetime1 = this.field_g.e(this.field_d, 2) * this.field_a;
         return !this.field_e ? var2Lifetime1 : var2Lifetime1 * 4 / 3;
     }
@@ -141,7 +141,7 @@ abstract class pib implements mda {
         this.field_b = -88;
     }
 
-    pib(qfa param0, int param1, int param2, int param3, boolean param4) {
+    pib(OpenGlToolkit param0, int param1, int param2, int param3, boolean param4) {
         this.field_f = false;
         try {
           this.field_g = param0;
@@ -149,11 +149,11 @@ abstract class pib implements mda {
           this.field_b = param1;
           this.field_a = param3;
           this.field_e = param4 ? true : false;
-          jaggl.OpenGL.glGenTextures(1, ika.field_a, 0);
-          this.field_c = ika.field_a[0];
+          jaggl.OpenGL.glGenTextures(1, AwardVictoryToTeamAction.field_a, 0);
+          this.field_c = AwardVictoryToTeamAction.field_a[0];
           this.a(0, 0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -12,9 +12,9 @@ final class jla extends htb {
     private jla(String param0, wwa param1, sba param2) {
         super(param0, param1, param2);
         try {
-          this.field_q = msa.field_s.field_d;
+          this.field_q = GetDebrisMax.field_s.field_d;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "jla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,11 +24,11 @@ final class jla extends htb {
     }
 
     private jla(String param0, sba param1) {
-        this(param0, msa.field_s.field_a, param1);
+        this(param0, GetDebrisMax.field_s.field_a, param1);
         try {
-          this.field_q = msa.field_s.field_d;
+          this.field_q = GetDebrisMax.field_s.field_d;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "jla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class jla extends htb {
         try {
           var3 = new dnb(param0);
           var4 = -111 / ((param1 + 2) / 45);
-          ahb.field_o.b(-10258, var3);
+          SetGrapplingHookAimarc.field_o.b(-10258, var3);
           nv.a((byte) -61, var3, param2);
           stackIn_1_0 = var3;
           return stackIn_1_0;
@@ -58,7 +58,7 @@ final class jla extends htb {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class jla extends htb {
         try {
           this.field_u = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "jla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -8,11 +8,11 @@ final class ccb implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 == 11995) {
-          return (tv[]) ((Object) new sg[param1]);
+          return (tv[]) ((Object) new Ship[param1]);
         }
         String var4 = (String) null;
-        ccb.a(117, (qfa) null, 46, (String) null);
-        return (tv[]) ((Object) new sg[param1]);
+        ccb.a(117, (OpenGlToolkit) null, 46, (String) null);
+        return (tv[]) ((Object) new Ship[param1]);
     }
 
     public static void b(byte param0) {
@@ -36,7 +36,7 @@ final class ccb implements dja {
           if (param2 != -21) {
             field_a = (kl) null;
           }
-          stackIn_3_0 = sj.a(-71, param1.length, param0, param3, param1);
+          stackIn_3_0 = SetSalvoUsesAllEnergy.a(-71, param1.length, param0, param3, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,11 +54,11 @@ final class ccb implements dja {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static ts a(int param0, qfa param1, int param2, String param3) {
+    final static ts a(int param0, OpenGlToolkit param1, int param2, String param3) {
         Object stackIn_12_0 = null;
         ts stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -75,22 +75,22 @@ final class ccb implements dja {
           var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param0);
           if (param2 != 18753) {
             var7 = (String) null;
-            ccb.a(-110, (qfa) null, 41, (String) null);
+            ccb.a(-110, (OpenGlToolkit) null, 41, (String) null);
           }
           jaggl.OpenGL.glShaderSourceARB(var4_long, param3);
           jaggl.OpenGL.glCompileShaderARB(var4_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, ika.field_c, 0);
-          if (ika.field_c[0] == 0) {
-            if (ika.field_c[0] == 0) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, AwardVictoryToTeamAction.field_c, 0);
+          if (AwardVictoryToTeamAction.field_c[0] == 0) {
+            if (AwardVictoryToTeamAction.field_c[0] == 0) {
               System.out.println("Shader compile failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, ika.field_c, 1);
-            if (ika.field_c[1] > 1) {
-              var11 = new byte[ika.field_c[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var4_long, ika.field_c[1], ika.field_c, 0, var11, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, AwardVictoryToTeamAction.field_c, 1);
+            if (AwardVictoryToTeamAction.field_c[1] > 1) {
+              var11 = new byte[AwardVictoryToTeamAction.field_c[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var4_long, AwardVictoryToTeamAction.field_c[1], AwardVictoryToTeamAction.field_c, 0, var11, 0);
               System.out.println(new String(var11));
             }
-            if (0 == ika.field_c[0]) {
+            if (0 == AwardVictoryToTeamAction.field_c[0]) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_12_0 = null;
               return (ts) (stackIn_12_0);
@@ -114,13 +114,13 @@ final class ccb implements dja {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     public final tv a(byte param0) {
         int var2 = -8 % ((param0 + 64) / 50);
-        return (tv) ((Object) new sg());
+        return (tv) ((Object) new Ship());
     }
 
     static {

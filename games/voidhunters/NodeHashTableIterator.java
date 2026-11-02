@@ -19,9 +19,9 @@ final class NodeHashTableIterator implements Iterator {
           NodeHashTableIterator.a(121);
           nmb.d(-87);
           nf.b(14194);
-          oga.a(16928);
-          if (ap.e(215)) {
-            dpa.field_p.h(24335, 1);
+          GetPedrosRepairModeSwitchtime.a(16928);
+          if (GetRepairModeActiveTime.e(215)) {
+            RequestNewestBlackboxRecording.field_p.h(24335, 1);
             lnb.b(0, 127);
             ifb.l(-125);
             return;
@@ -31,12 +31,12 @@ final class NodeHashTableIterator implements Iterator {
         }
         nmb.d(-87);
         nf.b(14194);
-        oga.a(16928);
-        if (!ap.e(215)) {
+        GetPedrosRepairModeSwitchtime.a(16928);
+        if (!GetRepairModeActiveTime.e(215)) {
           ifb.l(-125);
           return;
         }
-        dpa.field_p.h(24335, 1);
+        RequestNewestBlackboxRecording.field_p.h(24335, 1);
         lnb.b(0, 127);
         ifb.l(-125);
     }
@@ -83,7 +83,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_d = this.field_e.field_a.field_e;
           this.field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

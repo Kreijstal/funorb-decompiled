@@ -6,7 +6,7 @@ final class lu {
     int field_g;
     static boolean field_d;
     static String field_a;
-    ml field_b;
+    ShipComponent field_b;
     int field_e;
     static String field_c;
 
@@ -19,13 +19,13 @@ final class lu {
         }
     }
 
-    lu(int param0, ml param1, int param2) {
+    lu(int param0, ShipComponent param1, int param2) {
         try {
           this.field_g = param2;
           this.field_e = param0;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "lu.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lu.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

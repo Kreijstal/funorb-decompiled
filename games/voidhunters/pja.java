@@ -12,14 +12,14 @@ class pja extends le {
     static String field_i;
 
     final static void e(int param0) {
-        if (bm.field_o == null) {
+        if (SetTorpedoProjectiles.field_o == null) {
           return;
         }
         if (param0 <= -42) {
           if (psb.field_b != null) {
             spb.a((byte) -95);
-            ip.field_p.height = eta.field_a.height;
-            ip.field_p.width = eta.field_a.width;
+            GetBombletSprayEnergyUsed.field_p.height = eta.field_a.height;
+            GetBombletSprayEnergyUsed.field_p.width = eta.field_a.width;
           }
           return;
         }
@@ -49,7 +49,7 @@ class pja extends le {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ class pja extends le {
         if (this.field_m < param0) {
           return false;
         }
-        ima var2 = dbb.field_o < 0 ? ima.a(qnb.field_o, this.field_m) : ima.a(qnb.field_o, dbb.field_o, this.field_m);
+        ima var2 = GetFighterRepairTime.field_o < 0 ? ima.a(GetAngularVelocitySustainMax.field_o, this.field_m) : ima.a(GetAngularVelocitySustainMax.field_o, GetFighterRepairTime.field_o, this.field_m);
         var2.d();
         this.field_k = var2.b();
         this.field_p = var2.field_e;
@@ -166,8 +166,8 @@ class pja extends le {
           var5 = var14[1];
           var6 = var14[2];
           stackIn_9_0 = this.field_j;
-          if (noa.field_o != this.field_p) {
-            stackIn_10_1 = param1 * this.field_p / noa.field_o;
+          if (GetTorpedoReload.field_o != this.field_p) {
+            stackIn_10_1 = param1 * this.field_p / GetTorpedoReload.field_o;
           } else {
             stackIn_10_1 = param1;
           }
@@ -206,8 +206,8 @@ class pja extends le {
         var5Lifetime1 = var14Lifetime1[1];
         var6Lifetime1 = var14Lifetime1[2];
         stackIn_26_0 = this.field_j;
-        if (noa.field_o != this.field_p) {
-          stackIn_27_1 = param1 * this.field_p / noa.field_o;
+        if (GetTorpedoReload.field_o != this.field_p) {
+          stackIn_27_1 = param1 * this.field_p / GetTorpedoReload.field_o;
         } else {
           stackIn_27_1 = param1;
         }

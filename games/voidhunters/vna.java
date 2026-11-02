@@ -9,15 +9,15 @@ final class vna implements dja {
 
     public final tv a(byte param0) {
         int var2 = -43 / ((-64 - param0) / 50);
-        return (tv) ((Object) new tbb());
+        return (tv) ((Object) new TrailHolder());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           vna.b((byte) 55);
-          return (tv[]) ((Object) new tbb[param1]);
+          return (tv[]) ((Object) new TrailHolder[param1]);
         }
-        return (tv[]) ((Object) new tbb[param1]);
+        return (tv[]) ((Object) new TrailHolder[param1]);
     }
 
     static {

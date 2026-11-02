@@ -53,7 +53,7 @@ final class dqb {
             var14 = var12 + (var11 + (var13 - 1) >> 3);
             var8 = var8 + var11;
             var13 += 24;
-            dupTemp$0 = knb.a(var7_int, var10 >>> var13);
+            dupTemp$0 = SetAngularForceDownshift.a(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param2[var12] = (byte)dupTemp$0;
             if (var14 > var12) {
@@ -98,7 +98,7 @@ final class dqb {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class dqb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class dqb {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var3[var10] = knb.a(var11, var12);
+                  var3[var10] = SetAngularForceDownshift.a(var11, var12);
                   var10--;
                 }
                 if (decompiledFrameCompleted1) {
@@ -244,7 +244,7 @@ final class dqb {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -455,7 +455,7 @@ final class dqb {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

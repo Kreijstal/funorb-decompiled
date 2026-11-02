@@ -10,8 +10,8 @@ final class ci implements dja {
         if (li.field_i) {
           param5 = param5 | -16777216;
           param2 = param2 | -16777216;
-          hcb.a(8, param0 + param1, 1, param2, param4, param3 + param4, param1 + param0, param0, param2, param4, param5);
-          hcb.a(8, param0, 1, param5, param4, param3 + param4, param1 + param0, param0, param2, param3 + param4, param5);
+          GetDebrisCarryOver.a(8, param0 + param1, 1, param2, param4, param3 + param4, param1 + param0, param0, param2, param4, param5);
+          GetDebrisCarryOver.a(8, param0, 1, param5, param4, param3 + param4, param1 + param0, param0, param2, param3 + param4, param5);
           if (param6 != 0) {
             field_a = (String) null;
             return;
@@ -47,7 +47,7 @@ final class ci implements dja {
 
     final static boolean b(byte param0) {
         if (vja.field_a == -1) {
-          if (!boa.a(1, 30000)) {
+          if (!ShipBlueprint.a(1, 30000)) {
             return false;
           }
           vja.field_a = qga.field_b.e((byte) -126);
@@ -56,24 +56,24 @@ final class ci implements dja {
         if (param0 <= 9) {
           ci.b((byte) -116);
           if (vja.field_a == -2) {
-            if (boa.a(2, 30000)) {
+            if (ShipBlueprint.a(2, 30000)) {
               vja.field_a = qga.field_b.e(1869);
               qga.field_b.position = 0;
-              return boa.a(vja.field_a, 30000);
+              return ShipBlueprint.a(vja.field_a, 30000);
             }
             return false;
           }
-          return boa.a(vja.field_a, 30000);
+          return ShipBlueprint.a(vja.field_a, 30000);
         }
         if (vja.field_a == -2) {
-          if (boa.a(2, 30000)) {
+          if (ShipBlueprint.a(2, 30000)) {
             vja.field_a = qga.field_b.e(1869);
             qga.field_b.position = 0;
-            return boa.a(vja.field_a, 30000);
+            return ShipBlueprint.a(vja.field_a, 30000);
           }
           return false;
         }
-        return boa.a(vja.field_a, 30000);
+        return ShipBlueprint.a(vja.field_a, 30000);
     }
 
     static {

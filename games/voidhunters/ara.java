@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ara extends IntrusiveNode implements ntb {
-    int field_f;
-    int field_e;
-    int field_d;
+class ara extends IntrusiveNode implements DiffableState {
+    int dx;
+    int y;
+    int x;
     static String field_g;
-    int field_h;
+    int dy;
 
     public static void a(boolean param0) {
         field_g = null;
@@ -36,7 +36,7 @@ class ara extends IntrusiveNode implements ntb {
               var2 = Runtime.getRuntime();
               var4 = (Object[]) null;
               var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-              qob.field_b = 1 + (int)(var3.longValue() / 1048576L);
+              Nebula.field_b = 1 + (int)(var3.longValue() / 1048576L);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,18 +57,18 @@ class ara extends IntrusiveNode implements ntb {
 
     public void b(faa param0, int param1) {
         try {
-          param0.a(-632, this.field_d, 32);
+          param0.a(-632, this.x, 32);
           if (param1 >= -109) {
-            this.field_e = 34;
+            this.y = 34;
           }
-          param0.a(-632, this.field_e, 32);
+          param0.a(-632, this.y, 32);
           this.b(param0, false);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ara.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ara.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public void a(tv param0, int param1) {
+    public void reportDifferences(tv other, int obfuscationGuard) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -77,26 +77,26 @@ class ara extends IntrusiveNode implements ntb {
         int var4 = 0;
         ara var5 = null;
         try {
-          var5 = (ara) (param0);
+          var5 = (ara) (other);
           var4 = 0;
-          if (var5.field_d != this.field_d) {
+          if (var5.x != this.x) {
             var4 = 1;
-            System.out.println("int x has changed. before=" + var5.field_d + ", now=" + this.field_d);
+            System.out.println("int x has changed. before=" + var5.x + ", now=" + this.x);
           }
-          if (var5.field_e != this.field_e) {
+          if (var5.y != this.y) {
             var4 = 1;
-            System.out.println("int y has changed. before=" + var5.field_e + ", now=" + this.field_e);
+            System.out.println("int y has changed. before=" + var5.y + ", now=" + this.y);
           }
-          if (this.field_f != var5.field_f) {
-            System.out.println("int dx has changed. before=" + var5.field_f + ", now=" + this.field_f);
+          if (this.dx != var5.dx) {
+            System.out.println("int dx has changed. before=" + var5.dx + ", now=" + this.dx);
             var4 = 1;
           }
-          if (param1 > -19) {
+          if (obfuscationGuard > -19) {
             return;
           }
-          if (this.field_h != var5.field_h) {
+          if (this.dy != var5.dy) {
             var4 = 1;
-            System.out.println("int dy has changed. before=" + var5.field_h + ", now=" + this.field_h);
+            System.out.println("int dy has changed. before=" + var5.dy + ", now=" + this.dy);
           }
           if (var4 == 0) {
             return;
@@ -108,12 +108,12 @@ class ara extends IntrusiveNode implements ntb {
           var3 = decompiledCaughtException;
           stackIn_18_0 = var3;
           stackIn_18_1 = new StringBuilder().append("ara.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ class ara extends IntrusiveNode implements ntb {
         try {
           var3_int = -111 / ((22 - param0) / 59);
           var4 = (ara) (param1);
-          stackIn_5_0 = (var4.field_d != this.field_d) || (this.field_e != var4.field_e);
+          stackIn_5_0 = (var4.x != this.x) || (this.y != var4.y);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -141,7 +141,7 @@ class ara extends IntrusiveNode implements ntb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -151,15 +151,15 @@ class ara extends IntrusiveNode implements ntb {
         try {
           var5 = (ara) (param1);
           var6 = var5;
-          var6.field_d = this.field_d;
+          var6.x = this.x;
           if (param0 <= 54) {
-            this.field_h = 125;
+            this.dy = 125;
           }
-          var6.field_f = this.field_f;
-          var6.field_h = this.field_h;
-          var6.field_e = this.field_e;
+          var6.dx = this.dx;
+          var6.dy = this.dy;
+          var6.y = this.y;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ara.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ara.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -178,12 +178,12 @@ class ara extends IntrusiveNode implements ntb {
           }
           stackIn_5_0 = (faa) (param0);
           stackIn_5_1 = 87;
-          stackIn_7_2 = (this.field_f != 0) || (this.field_h != 0);
+          stackIn_7_2 = (this.dx != 0) || (this.dy != 0);
           if (!vq.a(stackIn_5_0, stackIn_5_1, stackIn_7_2)) {
             return;
           }
-          param0.a(-632, this.field_f, 32);
-          param0.a(-632, this.field_h, 32);
+          param0.a(-632, this.dx, 32);
+          param0.a(-632, this.dy, 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -195,7 +195,7 @@ class ara extends IntrusiveNode implements ntb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -215,8 +215,8 @@ class ara extends IntrusiveNode implements ntb {
           if (!kv.a(false, param0)) {
             return;
           }
-          this.field_f = param0.i(param1 - 32, 32);
-          this.field_h = param0.i(0, 32);
+          this.dx = param0.i(param1 - 32, 32);
+          this.dy = param0.i(0, 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -228,20 +228,20 @@ class ara extends IntrusiveNode implements ntb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public void a(faa param0, boolean param1) {
         try {
-          this.field_d = param0.i(0, 32);
+          this.x = param0.i(0, 32);
           if (param1) {
             field_g = (String) null;
           }
-          this.field_e = param0.i(0, 32);
+          this.y = param0.i(0, 32);
           this.c(param0, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ara.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ara.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

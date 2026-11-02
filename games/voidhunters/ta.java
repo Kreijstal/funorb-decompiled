@@ -6,7 +6,7 @@ final class ta {
     static int[] field_b;
 
     final static void a(byte param0, int param1) {
-        wp.field_a = maa.field_o;
+        wp.field_a = SetBombletSprayEnergyUsed.field_o;
         if (param0 > -101) {
           ta.a((byte) -35);
           pw.field_a = param1;
@@ -98,7 +98,7 @@ final class ta {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

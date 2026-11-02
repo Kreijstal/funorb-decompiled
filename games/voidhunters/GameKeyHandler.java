@@ -25,21 +25,21 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != gha.field_q) {
-            baa.field_q = 0;
+          if (null != GetMomentOfInertiaPerpointCalcDownshift.field_q) {
+            GetUseCircleOutline.field_q = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              ee.field_o.length > var2_int) {
-              var2_int = ee.field_o[var2_int] & -129;
+              GetBombletSprayRandomness.field_o.length > var2_int) {
+              var2_int = GetBombletSprayRandomness.field_o[var2_int] & -129;
             } else {
               var2_int = -1;
             }
-            if (dh.field_p >= 0 &&
+            if (SetSniperCannonAimarc.field_p >= 0 &&
               var2_int >= 0) {
-              kq.field_o[dh.field_p] = ~var2_int;
-              dh.field_p = 127 & 1 + dh.field_p;
-              if (wlb.field_p == dh.field_p) {
-                dh.field_p = -1;
+              SetNumStars.field_o[SetSniperCannonAimarc.field_p] = ~var2_int;
+              SetSniperCannonAimarc.field_p = 127 & 1 + SetSniperCannonAimarc.field_p;
+              if (GetFixedaim.field_p == SetSniperCannonAimarc.field_p) {
+                SetSniperCannonAimarc.field_p = -1;
               }
             }
           }
@@ -55,7 +55,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -63,21 +63,21 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != gha.field_q) {
+          if (null != GetMomentOfInertiaPerpointCalcDownshift.field_q) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && var2_int != 65535 &&
               mia.a((char) var2_int, true)) {
-              var3 = tna.field_o + 1 & 127;
+              var3 = SetComponentBreakingExplosionForceMultiplier.field_o + 1 & 127;
               if (var3 != bva.field_c) {
-                npa.field_a[tna.field_o] = -1;
-                gca.field_q[tna.field_o] = (char)var2_int;
-                tna.field_o = var3;
+                npa.field_a[SetComponentBreakingExplosionForceMultiplier.field_o] = -1;
+                GetGrapplingHookCooldown.field_q[SetComponentBreakingExplosionForceMultiplier.field_o] = (char)var2_int;
+                SetComponentBreakingExplosionForceMultiplier.field_o = var3;
               }
             }
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rrb.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rrb.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,32 +91,32 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (null != gha.field_q) {
-            baa.field_q = 0;
+          if (null != GetMomentOfInertiaPerpointCalcDownshift.field_q) {
+            GetUseCircleOutline.field_q = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
-              ee.field_o.length > var2_int) {
-              var2_int = ee.field_o[var2_int];
+              GetBombletSprayRandomness.field_o.length > var2_int) {
+              var2_int = GetBombletSprayRandomness.field_o[var2_int];
               if ((128 & var2_int) != 0) {
                 var2_int = -1;
               }
             } else {
               var2_int = -1;
             }
-            if (dh.field_p >= 0 &&
+            if (SetSniperCannonAimarc.field_p >= 0 &&
               var2_int >= 0) {
-              kq.field_o[dh.field_p] = var2_int;
-              dh.field_p = dh.field_p + 1 & 127;
-              if (dh.field_p == wlb.field_p) {
-                dh.field_p = -1;
+              SetNumStars.field_o[SetSniperCannonAimarc.field_p] = var2_int;
+              SetSniperCannonAimarc.field_p = SetSniperCannonAimarc.field_p + 1 & 127;
+              if (SetSniperCannonAimarc.field_p == GetFixedaim.field_p) {
+                SetSniperCannonAimarc.field_p = -1;
               }
             }
             if (0 <= var2_int) {
-              var3 = 127 & 1 + tna.field_o;
+              var3 = 127 & 1 + SetComponentBreakingExplosionForceMultiplier.field_o;
               if (var3 != bva.field_c) {
-                npa.field_a[tna.field_o] = var2_int;
-                gca.field_q[tna.field_o] = (char)0;
-                tna.field_o = var3;
+                npa.field_a[SetComponentBreakingExplosionForceMultiplier.field_o] = var2_int;
+                GetGrapplingHookCooldown.field_q[SetComponentBreakingExplosionForceMultiplier.field_o] = (char)0;
+                SetComponentBreakingExplosionForceMultiplier.field_o = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();
@@ -138,7 +138,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             stackIn_6_0 = ita.a(param2, 7988).b(param4, param3);
             return stackIn_6_0;
           }
-          stackIn_4_0 = de.a(param2, 300).a(param3, param4, true, (aja[]) null);
+          stackIn_4_0 = SetTorpedoEnergyUsed.a(param2, 300).a(param3, param4, true, (aja[]) null);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -178,7 +178,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -189,10 +189,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == gha.field_q) {
+          if (null == GetMomentOfInertiaPerpointCalcDownshift.field_q) {
             return;
           }
-          dh.field_p = -1;
+          SetSniperCannonAimarc.field_p = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -204,7 +204,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

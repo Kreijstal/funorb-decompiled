@@ -25,7 +25,7 @@ final class se extends ps {
           this.field_c.position(0);
           this.field_c.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "se.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "se.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -24,7 +24,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
           param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
           this.a((byte) -108);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sib.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sib.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sib.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sib.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
           int var5_int = -106 % ((-6 - param2) / 41);
           param0.drawImage(this.field_g, param1, param3, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sib.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sib.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
               var4_int = param0;
             }
             var5 = new byte[var4_int];
-            param1.position = param1.position + eob.field_o.a(0, param1.payload, var5, var4_int, 0, param1.position);
+            param1.position = param1.position + GetMissileLauncherAimspeed.field_o.a(0, param1.payload, var5, var4_int, 0, param1.position);
             var6 = tja.a(0, 0, var4_int, var5);
             stackIn_4_0 = var6;
             return stackIn_4_0;
@@ -103,7 +103,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -144,7 +144,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
           param0.setColorModel(this.field_j);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sib.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sib.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

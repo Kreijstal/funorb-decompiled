@@ -84,7 +84,7 @@ final class sd extends IntrusiveNode {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -499,7 +499,7 @@ final class sd extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = (-var27Lifetime6Lifetime1 + var30) * var28_int + (-var27Lifetime6Lifetime1 + var30) / 2;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = lb.a(var32, var30 - var27Lifetime6Lifetime1, false);
+                var34 = SetBombletSprayRandomness.a(var32, var30 - var27Lifetime6Lifetime1, false);
                 var32 = var32 + (-var28_int + var31);
                 this.field_f[var33] = (byte)(32 + this.field_f[var33] * var34 >> 6);
               }
@@ -539,7 +539,7 @@ final class sd extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = lb.a(var32Lifetime1, -var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, false);
+                var34Lifetime1 = SetBombletSprayRandomness.a(var32Lifetime1, -var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, false);
                 var35 = var34Lifetime1 + (this.field_g[var37] & 255);
                 if (var35 < 0) {
                   var35 = 0;
@@ -609,7 +609,7 @@ final class sd extends IntrusiveNode {
           } else {
             stackIn_205_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_204_1).append(stackIn_205_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_204_1).append(stackIn_205_2).append(')').toString());
         }
     }
 

@@ -7,10 +7,10 @@ final class ssa {
 
     final static boolean b(int param0) {
         if (param0 == 2) {
-          return 2 <= go.field_p ? true : false;
+          return 2 <= SetAngularVelocitySustain.field_p ? true : false;
         }
         ssa.b(104);
-        return 2 <= go.field_p ? true : false;
+        return 2 <= SetAngularVelocitySustain.field_p ? true : false;
     }
 
     public static void a(int param0) {

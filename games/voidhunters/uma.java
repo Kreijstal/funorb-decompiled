@@ -48,13 +48,13 @@ final class uma extends ev {
         if (param1 == 110) {
           var6 = this.field_h * param0 >> 12;
           var7 = param0 * this.field_i >> 12;
-          nt.a((byte) 11, var7, this.field_e, this.field_a, this.field_d, var5, var4, var6);
+          GetShipToShipRamDamage.a((byte) 11, var7, this.field_e, this.field_a, this.field_d, var5, var4, var6);
           return;
         }
         this.field_h = -115;
         var6Lifetime1 = this.field_h * param0 >> 12;
         var7Lifetime1 = param0 * this.field_i >> 12;
-        nt.a((byte) 11, var7Lifetime1, this.field_e, this.field_a, this.field_d, var5, var4, var6Lifetime1);
+        GetShipToShipRamDamage.a((byte) 11, var7Lifetime1, this.field_e, this.field_a, this.field_d, var5, var4, var6Lifetime1);
     }
 
     static {

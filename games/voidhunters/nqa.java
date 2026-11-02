@@ -6,7 +6,7 @@ final class nqa {
     static boolean[][] field_b;
     static volatile boolean field_a;
 
-    final static Object a(ij param0, int param1) {
+    final static Object a(IntrusiveDeque param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         Object stackIn_6_0 = null;
@@ -18,7 +18,7 @@ final class nqa {
         RuntimeException var2_ref = null;
         var3 = VoidHunters.field_G;
         try {
-          if (!ls.field_q) {
+          if (!GetMissionTerrainNebulaProbability.field_q) {
             return null;
           }
           if (param1 != 12642) {
@@ -51,7 +51,7 @@ final class nqa {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 

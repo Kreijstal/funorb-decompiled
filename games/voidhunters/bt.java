@@ -33,11 +33,11 @@ final class bt {
         jaggl.OpenGL.glCallList(this.field_c + param1);
     }
 
-    bt(qfa param0, int param1) {
+    bt(OpenGlToolkit param0, int param1) {
         try {
           this.field_c = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

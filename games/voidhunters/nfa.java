@@ -43,17 +43,17 @@ final class nfa extends uj {
     final int a(int param0) {
         if (param0 != -1) {
           this.b((byte) 92);
-          return tnb.field_o;
+          return SetMassDriverAimarc.field_o;
         }
-        return tnb.field_o;
+        return SetMassDriverAimarc.field_o;
     }
 
     final int d(byte param0) {
         if (param0 != 64) {
           nfa.d(64);
-          return oq.field_t;
+          return Particle.field_t;
         }
-        return oq.field_t;
+        return Particle.field_t;
     }
 
     static {

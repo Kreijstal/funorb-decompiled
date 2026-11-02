@@ -20,7 +20,7 @@ final class oqb extends le {
         if (param1 != 1047718) {
           return false;
         }
-        var5 = jmb.field_q[(255 * var4 & 1046912) >> 12];
+        var5 = GetBombletSprayProjectiles.field_q[(255 * var4 & 1046912) >> 12];
         var5 = (var5 << 12) / this.field_q;
         var5 = (var5 << 12) / this.field_m;
         var5 = this.field_p * var5 >> 12;
@@ -44,7 +44,7 @@ final class oqb extends le {
         if (param0 >= -35) {
           discarded$0 = this.d(-93, -27, 100);
         }
-        taa.e((byte) 118);
+        GetTrapMouse.e((byte) 118);
     }
 
     final int[] a(int param0, boolean param1) {
@@ -84,7 +84,7 @@ final class oqb extends le {
         var12 = this.field_f.a((byte) 119, param0);
         var3 = var12;
         if (this.field_f.field_e) {
-          var4 = sj.field_p[param0] - 2048;
+          var4 = SetSalvoUsesAllEnergy.field_p[param0] - 2048;
           for (var5 = 0; var5 < hob.field_d; var5++) {
             var6 = -2048 + grb.field_l[var5];
             var7 = this.field_o + var6;
@@ -213,7 +213,7 @@ final class oqb extends le {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ final class oqb extends le {
         int var5;
         boolean stackIn_6_0 = false;
         var4 = (-param2 + param0) * this.field_q >> 12;
-        var5 = jmb.field_q[(var4 * 255 & 1047718) >> 12];
+        var5 = GetBombletSprayProjectiles.field_q[(var4 * 255 & 1047718) >> 12];
         var5 = (var5 << 12) / this.field_q;
         if (param1 != -23429) {
           return true;

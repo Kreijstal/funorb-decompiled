@@ -41,11 +41,11 @@ final class dpb {
           var3Lifetime1 = "";
           if (param1.field_a != 2) {
             if (0 == param1.field_a &&
-              cqb.field_e) {
+              VariableCondition.field_e) {
               var3Lifetime1 = "[" + bib.field_e + "] ";
             }
             if (param1.field_a == 1) {
-              var3Lifetime1 = "[" + isa.a(wt.field_b, new String[]{param1.field_o}, 107) + "] ";
+              var3Lifetime1 = "[" + SetReverbGain.a(wt.field_b, new String[]{param1.field_o}, 107) + "] ";
             }
             if (param1.field_a == 4 &&
               null != vla.field_E) {
@@ -61,9 +61,9 @@ final class dpb {
             if (!param1.field_k) {
               if (0 == param1.field_f &&
                 param1.field_h == 0) {
-                var3Lifetime1 = isa.a(tia.field_G, new String[]{(String) (var2)}, 119);
+                var3Lifetime1 = SetReverbGain.a(tia.field_G, new String[]{(String) (var2)}, 119);
               } else {
-                var3Lifetime1 = isa.a(ejb.field_o, new String[]{(String) (var2)}, 123);
+                var3Lifetime1 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{(String) (var2)}, 123);
               }
             }
           }
@@ -79,7 +79,7 @@ final class dpb {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw rta.a((Throwable) (stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) (stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 

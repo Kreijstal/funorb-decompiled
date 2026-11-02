@@ -23,7 +23,7 @@ final class ku extends qg {
         this.field_b.c(32925, true);
     }
 
-    ku(qfa param0) {
+    ku(OpenGlToolkit param0) {
         super(param0);
     }
 
@@ -35,7 +35,7 @@ final class ku extends qg {
           }
           this.field_b.c(0, param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ku.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ku.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -55,22 +55,22 @@ final class ku extends qg {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (dn.field_r != kla.field_d) {
+          if (SetCountermeasureLauncherAimspeed.field_r != kla.field_d) {
             return false;
           }
-          var9 = new sn(klb.field_r, param2);
+          var9 = new sn(GetLagStandardDeviationIn.field_r, param2);
           var7 = var9;
-          klb.field_r.a(false, var9);
-          if (ws.f(0)) {
+          GetLagStandardDeviationIn.field_r.a(false, var9);
+          if (SetAutozoomAmountMultiply.f(0)) {
             var9.e(false);
           } else {
-            dn.field_r = dw.field_c;
-            bfa.field_p = param6;
-            mqb.field_x = param0;
-            iua.field_p = param1;
+            SetCountermeasureLauncherAimspeed.field_r = dw.field_c;
+            SetResourceNodeCaptureTime.field_p = param6;
+            GrapplingHook.field_x = param0;
+            SetDebrisCarryOverPercentage.field_p = param1;
             cjb.field_b = null;
-            tca.field_o = param5;
-            jpa.field_a = param3;
+            GetTabForScores.field_o = param5;
+            AdjustVariableAction.field_a = param3;
           }
           if (param4 == 1) {
             return true;
@@ -106,7 +106,7 @@ final class ku extends qg {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

@@ -5,7 +5,7 @@ final class sh {
     static byte[][] field_a;
 
     final static void a(int param0, int param1, int param2) {
-        faa var3 = dpa.field_p;
+        faa var3 = RequestNewestBlackboxRecording.field_p;
         var3.h(24335, param2);
         var3.c(0, 3);
         var3.c(0, 9);
@@ -66,7 +66,7 @@ final class sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1_ref), "sh.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "sh.D(" + param0 + ')');
         }
     }
 

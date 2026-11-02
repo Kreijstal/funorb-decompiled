@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pwa implements ntb {
+final class pwa implements DiffableState {
     boolean field_c;
     static String field_a;
     gtb field_f;
@@ -9,7 +9,7 @@ final class pwa implements ntb {
     hg field_d;
     static int field_b;
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         int stackIn_14_0 = 0;
         int stackIn_17_1 = 0;
         int stackIn_25_0 = 0;
@@ -26,18 +26,18 @@ final class pwa implements ntb {
         int var4 = 0;
         pwa var5 = null;
         try {
-          var5 = (pwa) (param0);
+          var5 = (pwa) (other);
           if (null != this.field_e &&
             var5.field_e != null) {
-            this.field_e.a(var5.field_e, -63);
+            this.field_e.reportDifferences(var5.field_e, -63);
           }
           if (this.field_d != null &&
             var5.field_d != null) {
-            this.field_d.a(var5.field_d, -125);
+            this.field_d.reportDifferences(var5.field_d, -125);
           }
           if (this.field_f != null &&
             var5.field_f != null) {
-            this.field_f.a(var5.field_f, -39);
+            this.field_f.reportDifferences(var5.field_f, -39);
           }
           var4 = 0;
           stackIn_14_0 = (this.field_e != null) ? 0 : 1;
@@ -49,7 +49,7 @@ final class pwa implements ntb {
           if ((stackIn_14_0 ^ stackIn_17_1) != 0 ||
             null != this.field_e &&
             this.field_e.a((byte) 115, var5.field_e)) {
-            iva.a(-6940, "PlayerJoin join has changed. before=" + var5.field_e + ", now=" + this.field_e);
+            GetSniperCannonAimarc.a(-6940, "PlayerJoin join has changed. before=" + var5.field_e + ", now=" + this.field_e);
             var4 = 1;
           }
           stackIn_25_0 = (this.field_d != null) ? 0 : 1;
@@ -61,7 +61,7 @@ final class pwa implements ntb {
           if ((stackIn_25_0 ^ stackIn_28_1) != 0 ||
             this.field_d != null &&
             this.field_d.a((byte) -51, var5.field_d)) {
-            iva.a(-6940, "PlayerLeave leave has changed. before=" + var5.field_d + ", now=" + this.field_d);
+            GetSniperCannonAimarc.a(-6940, "PlayerLeave leave has changed. before=" + var5.field_d + ", now=" + this.field_d);
             var4 = 1;
           }
           stackIn_36_0 = (this.field_f != null) ? 0 : 1;
@@ -74,7 +74,7 @@ final class pwa implements ntb {
             this.field_f != null &&
             this.field_f.a((byte) -121, var5.field_f)) {
             var4 = 1;
-            iva.a(-6940, "PlayerReady ready has changed. before=" + var5.field_f + ", now=" + this.field_f);
+            GetSniperCannonAimarc.a(-6940, "PlayerReady ready has changed. before=" + var5.field_f + ", now=" + this.field_f);
           }
           stackIn_47_0 = (this.field_c) ? 0 : 1;
           if (var5.field_c) {
@@ -83,13 +83,13 @@ final class pwa implements ntb {
             stackIn_50_1 = 1;
           }
           if (stackIn_47_0 != stackIn_50_1) {
-            iva.a(-6940, "boolean event_cancellation has changed. before=" + var5.field_c + ", now=" + this.field_c);
+            GetSniperCannonAimarc.a(-6940, "boolean event_cancellation has changed. before=" + var5.field_c + ", now=" + this.field_c);
             var4 = 1;
           }
           if (var4 != 0) {
-            iva.a(-6940, "This instance of CarouselSystemEvent has changed");
+            GetSniperCannonAimarc.a(-6940, "This instance of CarouselSystemEvent has changed");
           }
-          if (param1 <= -19) {
+          if (obfuscationGuard <= -19) {
             return;
           }
           this.field_e = (gqa) null;
@@ -99,12 +99,12 @@ final class pwa implements ntb {
           var3 = decompiledCaughtException;
           stackIn_60_0 = var3;
           stackIn_60_1 = new StringBuilder().append("pwa.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_61_2 = "null";
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class pwa implements ntb {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class pwa implements ntb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -304,7 +304,7 @@ final class pwa implements ntb {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -357,7 +357,7 @@ final class pwa implements ntb {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 

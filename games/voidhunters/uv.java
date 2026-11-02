@@ -40,14 +40,14 @@ final class uv implements wwa {
           }
           return;
         }
-        if (!fua.field_o) {
+        if (!SetPointDefenceLaserReload.field_o) {
           if (param0 < 106) {
             field_f = (String) null;
             return;
           }
           return;
         }
-        og.field_r.a(-83, param3, param5, -16777216 | param4, param1, param2);
+        GetDebrisGroupColour.field_r.a(-83, param3, param5, -16777216 | param4, param1, param2);
         if (param0 >= 106) {
           return;
         }
@@ -107,7 +107,7 @@ final class uv implements wwa {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class uv implements wwa {
           this.field_k = param9;
           this.field_i = param7;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

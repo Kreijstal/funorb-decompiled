@@ -13,7 +13,7 @@ final class cfa extends oib {
 
     final dka a(byte param0) {
         int var2 = -125 % ((param0 + 7) / 56);
-        return bta.field_r;
+        return GetSalvoDamageMultiplier.field_r;
     }
 
     final void a(PacketBuffer param0, int param1) {
@@ -24,20 +24,20 @@ final class cfa extends oib {
             this.field_d = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "cfa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cfa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static bob b(byte param0) {
         if (param0 <= -66) {
           if (null == elb.field_f) {
-            elb.field_f = new bob(web.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, web.field_o.field_k, -1, 2147483647, true);
+            elb.field_f = new bob(SetTorpedoProjectileLife.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, SetTorpedoProjectileLife.field_o.field_k, -1, 2147483647, true);
           }
           return elb.field_f;
         }
         cfa.c((byte) 108);
         if (null == elb.field_f) {
-          elb.field_f = new bob(web.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, web.field_o.field_k, -1, 2147483647, true);
+          elb.field_f = new bob(SetTorpedoProjectileLife.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, SetTorpedoProjectileLife.field_o.field_k, -1, 2147483647, true);
         }
         return elb.field_f;
     }
@@ -47,7 +47,7 @@ final class cfa extends oib {
           this.field_f = param0;
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "cfa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cfa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

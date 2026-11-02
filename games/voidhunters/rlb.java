@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rlb {
-    private qfa field_b;
+    private OpenGlToolkit field_b;
     static int[] field_d;
     static int field_e;
     static llb field_a;
@@ -104,13 +104,13 @@ final class rlb {
         int var1 = 115 / ((-54 - param0) / 51);
     }
 
-    rlb(qfa param0, d param1) {
+    rlb(OpenGlToolkit param0, d param1) {
         this.field_f = new pfb(256);
         try {
           this.field_c = param1;
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rlb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rlb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

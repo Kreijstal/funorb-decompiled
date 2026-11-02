@@ -4,7 +4,7 @@
 final class wgb extends eca {
     static boolean field_g;
     static String field_h;
-    static anb field_i;
+    static ShipBody field_i;
     static int field_f;
 
     final qrb a(String param0, int param1) {
@@ -21,8 +21,8 @@ final class wgb extends eca {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!hwa.a(var4, param1 ^ 16394)) {
-            stackIn_2_0 = cca.field_o;
+          if (!SetPointDefenceLaserAimarc.a(var4, param1 ^ 16394)) {
+            stackIn_2_0 = SetArmageddonLength.field_o;
             return stackIn_2_0;
           }
           var5 = (CharSequence) ((Object) param0);
@@ -32,10 +32,10 @@ final class wgb extends eca {
             if (param1 != 16384) {
               wgb.a(-0.8688769340515137f, 0.8470385074615479f, 1.5502856969833374f, 23, 0.4921734631061554f, 0.5438073873519897f, -1.1896488666534424f);
             }
-            stackIn_11_0 = lea.field_o;
+            stackIn_11_0 = GetShipPersistence.field_o;
             return stackIn_11_0;
           }
-          stackIn_7_0 = cca.field_o;
+          stackIn_7_0 = SetArmageddonLength.field_o;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,7 +47,7 @@ final class wgb extends eca {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -79,10 +79,10 @@ final class wgb extends eca {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (this.a(param0, 16384) != cca.field_o) {
+          if (this.a(param0, 16384) != SetArmageddonLength.field_o) {
             return null;
           }
-          stackIn_6_0 = gra.field_p;
+          stackIn_6_0 = SetSniperCannonProjectiles.field_p;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,7 +94,7 @@ final class wgb extends eca {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -5,7 +5,7 @@ final class vf {
     static kba field_a;
     private uq field_b;
 
-    final void a(int param0, qfa param1) {
+    final void a(int param0, OpenGlToolkit param1) {
         od discarded$0 = null;
         od discarded$1 = null;
         od discarded$2 = null;
@@ -15,13 +15,13 @@ final class vf {
           discarded$1 = new od(this.field_b, 5126, 3, param0);
           discarded$2 = new od(this.field_b, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "vf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     vf() {
         mb discarded$0 = new mb(786336);
-        ieb.a(1600, -61);
+        SetMutatorVotes.a(1600, -61);
     }
 
     public static void a(byte param0) {

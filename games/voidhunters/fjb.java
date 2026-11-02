@@ -10,7 +10,7 @@ final class fjb implements dja {
 
     public final tv a(byte param0) {
         int var2 = 124 % ((-64 - param0) / 50);
-        return (tv) ((Object) new rha());
+        return (tv) ((Object) new Message());
     }
 
     public static void a(int param0) {
@@ -25,19 +25,19 @@ final class fjb implements dja {
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_c = (kob) null;
-          return (tv[]) ((Object) new rha[param1]);
+          return (tv[]) ((Object) new Message[param1]);
         }
-        return (tv[]) ((Object) new rha[param1]);
+        return (tv[]) ((Object) new Message[param1]);
     }
 
-    final static nc a(String param0, nc[] param1, rqa[] param2, byte param3) throws gva {
+    final static ConsoleValue a(String param0, ConsoleValue[] param1, ConsoleCommand[] param2, byte param3) throws gva {
         int var5 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$0 = null;
-        nc stackIn_5_0 = null;
-        nc stackIn_9_0 = null;
+        ConsoleValue stackIn_5_0 = null;
+        ConsoleValue stackIn_9_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -58,11 +58,11 @@ final class fjb implements dja {
               var4_int++;
               continue;
             }
-            stackIn_5_0 = param2[var4_int].a(param1, -123);
+            stackIn_5_0 = param2[var4_int].execute(param1, -123);
             return stackIn_5_0;
           }
           if (param3 >= -122) {
-            stackIn_9_0 = (nc) null;
+            stackIn_9_0 = (ConsoleValue) null;
             return stackIn_9_0;
           }
           var7 = new StringBuilder("The method " + param0 + "(");
@@ -100,7 +100,7 @@ final class fjb implements dja {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
         }
     }
 

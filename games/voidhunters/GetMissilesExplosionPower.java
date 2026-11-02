@@ -1,0 +1,83 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GetMissilesExplosionPower extends ConsoleCommand {
+    static int field_p;
+    static String field_o;
+
+    final static void a(ShipComponent param0, int param1) {
+        ShipComponent var4 = null;
+        ShipComponent var3 = null;
+        try {
+          param0.a(1, 1, new ShipComponent(13));
+          param0.a(1, 3, new ShipComponent(13));
+          param0.a(1, 23, new ShipComponent(13));
+          param0.a(1, 25, new ShipComponent(13));
+          param0.a(1, 11, new ShipComponent(15));
+          param0.a(1, 15, new ShipComponent(15));
+          param0.a(1, 10, new ShipComponent(42));
+          param0.a(1, 13, new ShipComponent(42));
+          param0.a(1, 16, new ShipComponent(42));
+          var4 = new ShipComponent(31);
+          var4.a(1, 1, new ShipComponent(13));
+          var4.a(1, 2, new ShipComponent(13));
+          var4.a(1, 3, new ShipComponent(13));
+          var4.a(1, 0, new ShipComponent(15));
+          param0.a(1, 7, var4);
+          int var2_int = 13 % ((param1 - 61) / 42);
+          var3 = new ShipComponent(31);
+          var3.a(1, 0, new ShipComponent(13));
+          var3.a(1, 2, new ShipComponent(13));
+          var3.a(1, 3, new ShipComponent(13));
+          var3.a(1, 1, new ShipComponent(15));
+          param0.a(1, 19, var3);
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tkb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public static void a(int param0) {
+        field_o = null;
+        if (param0 != 3) {
+          ShipComponent var2 = (ShipComponent) null;
+          GetMissilesExplosionPower.a((ShipComponent) null, 113);
+        }
+    }
+
+    GetMissilesExplosionPower(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (obfuscationGuard <= -119) {
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(206, 122));
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = (ConsoleValue) null;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("tkb.A(");
+          if (arguments == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    static {
+        field_p = 1;
+    }
+}

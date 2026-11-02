@@ -4,16 +4,16 @@
 final class vab {
     int field_b;
     static String field_a;
-    private qfa field_c;
+    private OpenGlToolkit field_c;
 
     protected final void finalize() throws Throwable {
         this.field_c.g(this.field_b, -92);
         super.finalize();
     }
 
-    final static void a(byte param0, ml param1) {
+    final static void a(byte param0, ShipComponent param1) {
         int var2_int = 0;
-        ml var3 = null;
+        ShipComponent var3 = null;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -26,12 +26,12 @@ final class vab {
             field_a = (String) null;
           }
           for (var2_int = 0; var2_int < 4; var2_int++) {
-            var3 = new ml(32);
-            var3.a(1, 1, new ml(24));
-            var3.a(param0 ^ -93, 2, new ml(24));
-            var3.a(1, 3, new ml(24));
-            var3.a(param0 ^ -93, 4, new ml(24));
-            var3.a(1, 5, new ml(24));
+            var3 = new ShipComponent(32);
+            var3.a(1, 1, new ShipComponent(24));
+            var3.a(param0 ^ -93, 2, new ShipComponent(24));
+            var3.a(1, 3, new ShipComponent(24));
+            var3.a(param0 ^ -93, 4, new ShipComponent(24));
+            var3.a(1, 5, new ShipComponent(24));
             param1.a(param0 ^ -93, var2_int, var3);
           }
           return;
@@ -45,7 +45,7 @@ final class vab {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -56,12 +56,12 @@ final class vab {
         }
     }
 
-    vab(qfa param0, int param1, int param2) {
+    vab(OpenGlToolkit param0, int param1, int param2) {
         try {
           this.field_b = param2;
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "vab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

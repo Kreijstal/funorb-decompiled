@@ -21,10 +21,10 @@ final class mna extends mfb {
 
     final static void a(boolean param0, byte param1) {
         pa.field_b = 0;
-        otb.field_q = si.field_p;
-        ao.field_o = 0;
+        SetBots.field_q = SetMachineGunEnergyUsed.field_p;
+        SetSpecialOrderBoxWidth.field_o = 0;
         nna.field_z = new ae(2);
-        nna.field_z.a(param0, param1 - 91, -1, pmb.a(param1 - 91, uia.field_b, kc.field_b));
+        nna.field_z.a(param0, param1 - 91, -1, GetGrapplingHookAimspeed.a(param1 - 91, uia.field_b, kc.field_b));
         if (param1 != 90) {
           mna.i((byte) 38);
         }
@@ -33,22 +33,22 @@ final class mna extends mfb {
     final int f(byte param0) {
         if (param0 < 0) {
           this.b(true);
-          return tta.field_p;
+          return SetMomentOfInertiaPerpointCalcDownshift.field_p;
         }
-        return tta.field_p;
+        return SetMomentOfInertiaPerpointCalcDownshift.field_p;
     }
 
     final int g(byte param0) {
         if (param0 > -12) {
           this.b(true);
-          return ww.field_o;
+          return GetSalvoRepairTimeMultiplier.field_o;
         }
-        return ww.field_o;
+        return GetSalvoRepairTimeMultiplier.field_o;
     }
 
     final int a(byte param0) {
         int var2 = 65 % ((param0 + 48) / 43);
-        return gu.field_p;
+        return GetReadyRoomMissionTime.field_p;
     }
 
     final int k(int param0) {
@@ -71,9 +71,9 @@ final class mna extends mfb {
     final int d(byte param0) {
         if (param0 > -52) {
           mna.i((byte) 119);
-          return lr.field_p;
+          return GetMachineGunAimspeed.field_p;
         }
-        return lr.field_p;
+        return GetMachineGunAimspeed.field_p;
     }
 
     final int b(int param0) {
@@ -84,9 +84,9 @@ final class mna extends mfb {
     final int g(int param0) {
         if (param0 != 2769) {
           this.a(71);
-          return mtb.field_o;
+          return GetMissionTerrainAsteroidProbability.field_o;
         }
-        return mtb.field_o;
+        return GetMissionTerrainAsteroidProbability.field_o;
     }
 
     final int a(int param0) {

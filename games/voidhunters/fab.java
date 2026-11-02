@@ -11,35 +11,35 @@ final class fab {
     final static void a(int param0, byte[] param1) {
         String var4 = null;
         kc var2_ref = null;
-        nkb.a(false, "Reading gamedata from server");
+        GetDebrisThrowable.a(false, "Reading gamedata from server");
         Object var2 = null;
         try {
-          var2_ref = (kc) (beb.a(param1, 6429, jpa.field_c));
+          var2_ref = (kc) (beb.a(param1, 6429, AdjustVariableAction.field_c));
         } catch (Exception exception) {
           var4 = ila.a(param1, param0 ^ 29411);
           var2_ref = new kc();
-          eg.e((byte) -69);
+          GetMissionResnetResourceTickTime.e((byte) -69);
           gna.a((Throwable) ((Object) exception), "Gamedata is corrupted - " + var4, 0);
         }
         if (var2_ref == null) {
           return;
         }
-        if (!(1 >= var2_ref.field_d)) {
-          gna.a((Throwable) null, "Gamedata is for a version that doesn't exist yet (" + var2_ref.field_d + ")! The clientdata is probably corrupted.", 0);
+        if (!(1 >= var2_ref.version)) {
+          gna.a((Throwable) null, "Gamedata is for a version that doesn't exist yet (" + var2_ref.version + ")! The clientdata is probably corrupted.", 0);
           return;
         }
         try {
-          nkb.a(false, "Player gamedata=" + var2_ref);
+          GetDebrisThrowable.a(false, "Player gamedata=" + var2_ref);
           if (var2_ref != null) {
-            nkb.a(false, "Player gamedata blueprint=" + var2_ref.field_f);
+            GetDebrisThrowable.a(false, "Player gamedata blueprint=" + var2_ref.blueprint);
           }
           if (param0 != -29365) {
             field_b = (String) null;
           }
           es.field_b = var2_ref;
-          dt.a(-118);
+          GetSalvoUsesAllEnergy.a(-118);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fab.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fab.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class fab {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class fab {
         bra var8 = null;
         int var9 = 0;
         int var10 = 0;
-        ha var11 = null;
+        GraphicsToolkit var11 = null;
         var10 = VoidHunters.field_G;
         try {
           var3 = null;
@@ -269,7 +269,7 @@ final class fab {
                   }
                 }
                 try {
-                  var11 = hr.a(false, param0, var6.field_c, this.field_a, lwa.field_xb, var6.field_a);
+                  var11 = SetPhasedEnergyBeamProjectiles.a(false, param0, var6.field_c, this.field_a, lwa.field_xb, var6.field_a);
                   if (var11 != null) {
                     var8 = new bra(var11, var6, param0);
                     if (var6.a(var8, -97)) {
@@ -316,7 +316,7 @@ final class fab {
           } else {
             stackIn_119_2 = "{...}";
           }
-          throw rta.a((Throwable) (stackIn_118_0), ((StringBuilder) (Object) stackIn_118_1).append(stackIn_119_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) (stackIn_118_0), ((StringBuilder) (Object) stackIn_118_1).append(stackIn_119_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -350,8 +350,8 @@ final class fab {
         var10 = VoidHunters.field_G;
         try {
           var7_int = kob.a(param1, -18262);
-          if (jo.field_a == null) {
-            jo.field_a = new java.security.SecureRandom();
+          if (PartitionZone.field_a == null) {
+            PartitionZone.field_a = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
@@ -360,7 +360,7 @@ final class fab {
             field_b = (String) null;
           }
           for (var9 = 0; 4 > var9; var9++) {
-            var8[var9] = jo.field_a.nextInt();
+            var8[var9] = PartitionZone.field_a.nextInt();
           }
           if (null == bt.field_a ||
             !(bt.field_a.payload.length >= var7_int)) {
@@ -370,21 +370,21 @@ final class fab {
           bt.field_a.a(param0, param3, -1, param1);
           bt.field_a.b(var7_int, (byte) 66);
           bt.field_a.a(var13, (byte) 127);
-          if (null == pha.field_o ||
-            !(pha.field_o.payload.length >= 100)) {
-            pha.field_o = new PacketBuffer(100);
+          if (null == GetKeepTeamColours.field_o ||
+            !(GetKeepTeamColours.field_o.payload.length >= 100)) {
+            GetKeepTeamColours.field_o = new PacketBuffer(100);
           }
-          pha.field_o.position = 0;
-          pha.field_o.c(param5 ^ 47, 10);
+          GetKeepTeamColours.field_o.position = 0;
+          GetKeepTeamColours.field_o.c(param5 ^ 47, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            pha.field_o.d(var13[var11], param5 ^ 332614567);
+            GetKeepTeamColours.field_o.d(var13[var11], param5 ^ 332614567);
             var11++;
           }
-          pha.field_o.a(param1, true);
-          pha.field_o.a(param6, param4, 16711680);
-          param2.a(0, pha.field_o.payload, -1, pha.field_o.position);
+          GetKeepTeamColours.field_o.a(param1, true);
+          GetKeepTeamColours.field_o.a(param6, param4, 16711680);
+          param2.a(0, GetKeepTeamColours.field_o.payload, -1, GetKeepTeamColours.field_o.position);
           param2.a(0, bt.field_a.payload, param5 - 48, bt.field_a.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -415,7 +415,7 @@ final class fab {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -447,12 +447,12 @@ final class fab {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     fab(d param0, fs[] param1) {
-        this(g.a(0), qc.b(0), param0, bm.field_o, param1);
+        this(GetAiRepairAmount.a(0), qc.b(0), param0, SetTorpedoProjectiles.field_o, param1);
     }
 
     private fab(asb param0, asb param1, d param2, eab param3, fs[] param4) {
@@ -464,7 +464,7 @@ final class fab {
           eu.a(param3, (byte) 127, param0);
           this.a(false, param4);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -509,7 +509,7 @@ final class fab {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

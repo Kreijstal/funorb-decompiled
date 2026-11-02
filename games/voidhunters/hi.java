@@ -10,7 +10,7 @@ final class hi implements dja {
           CharSequence var4 = (CharSequence) null;
           hi.a((CharSequence) null, 67);
         }
-        return (tv[]) ((Object) new vpa[param1]);
+        return (tv[]) ((Object) new MissionList[param1]);
     }
 
     final static byte[] a(CharSequence param0, int param1) {
@@ -143,13 +143,13 @@ final class hi implements dja {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final tv a(byte param0) {
         int var2 = 118 % ((param0 + 64) / 50);
-        return (tv) ((Object) new vpa());
+        return (tv) ((Object) new MissionList());
     }
 
     final static phb[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

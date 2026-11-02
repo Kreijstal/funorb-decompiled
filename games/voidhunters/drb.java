@@ -16,7 +16,7 @@ final class drb extends le {
     final static kob a(boolean param0, int param1) {
         kob var2 = new kob();
         if (param0) {
-          cnb.field_q.b(-10258, var2);
+          GetBoostersActiveTime.field_q.b(-10258, var2);
           wva.b(param1, 22681);
           return var2;
         }
@@ -73,7 +73,7 @@ final class drb extends le {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

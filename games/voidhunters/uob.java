@@ -8,7 +8,7 @@ final class uob extends qg {
     private bt field_c;
     static int[][] field_g;
 
-    uob(qfa param0) {
+    uob(OpenGlToolkit param0) {
         super(param0);
         this.field_d = false;
         try {
@@ -42,7 +42,7 @@ final class uob extends qg {
             this.field_c.b(4864);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class uob extends qg {
             field_f = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uob.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uob.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -126,8 +126,8 @@ final class uob extends qg {
 
     final static void a(boolean param0, byte param1, String param2, float param3) {
         if (null == vqa.field_i) {
-          vqa.field_i = new goa(klb.field_r, hab.field_j);
-          klb.field_r.a(false, vqa.field_i);
+          vqa.field_i = new goa(GetLagStandardDeviationIn.field_r, hab.field_j);
+          GetLagStandardDeviationIn.field_r.a(false, vqa.field_i);
         }
         vqa.field_i.a(param0, param2, param3, (byte) -89);
         dma.a();
@@ -135,9 +135,9 @@ final class uob extends qg {
           return;
         }
         try {
-          vqb.a(true, -114);
+          GetPointDefenceLaserProjectileDamage.a(true, -114);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uob.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uob.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

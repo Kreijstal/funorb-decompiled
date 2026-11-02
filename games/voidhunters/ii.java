@@ -275,7 +275,7 @@ final class ii implements d {
           } else {
             stackIn_135_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_128_0), ((StringBuilder) (Object) stackIn_134_1).append(stackIn_135_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_128_0), ((StringBuilder) (Object) stackIn_134_1).append(stackIn_135_2).append(')').toString());
         }
     }
 

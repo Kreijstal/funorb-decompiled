@@ -304,7 +304,7 @@ final class roa extends ka {
               for (var19 = 0; param1.field_g.length > var19; var19++) {
                 var20_ref_bqa = param1.field_g[var19];
                 if (var12 == var20_ref_bqa.field_b) {
-                  var21_ref_sr = jm.a(var20_ref_bqa.field_e, 0);
+                  var21_ref_sr = GetBombletSprayAimspeed.a(var20_ref_bqa.field_e, 0);
                   if (var21_ref_sr.field_a) {
                     var18 = 1;
                   }
@@ -363,7 +363,7 @@ final class roa extends ka {
               var9[var11_int] = (long)var15_int + ((long)var14 << 32);
             }
           }
-          kn.a((byte) -24, var81, var82);
+          GetFighterBayReload.a((byte) -24, var81, var82);
           this.field_P = param1.field_D;
           this.field_j = param1.field_G;
           this.field_p = param1.field_x;
@@ -375,7 +375,7 @@ final class roa extends ka {
             this.field_E = new gib[this.field_u];
             for (var12Lifetime1 = 0; this.field_u > var12Lifetime1; var12Lifetime1++) {
               var69 = param1.field_g[var12Lifetime1];
-              var70 = jm.a(var69.field_e, 0);
+              var70 = GetBombletSprayAimspeed.a(var69.field_e, 0);
               var15_intLifetime1 = -1;
               for (var16Lifetime1 = 0; var16Lifetime1 < this.field_v; var16Lifetime1++) {
                 if (var81[var16Lifetime1] != var69.field_b) {
@@ -387,7 +387,7 @@ final class roa extends ka {
               if (var15_intLifetime1 == -1) {
                 throw new RuntimeException();
               }
-              var16Lifetime1Lifetime1 = 16777215 & klb.field_o[param1.field_b[var69.field_b] & 65535];
+              var16Lifetime1Lifetime1 = 16777215 & GetLagStandardDeviationIn.field_o[param1.field_b[var69.field_b] & 65535];
               stackIn_63_0 = var16Lifetime1Lifetime1;
               if (param1.field_r == null) {
                 stackIn_64_1 = 0;
@@ -427,7 +427,7 @@ final class roa extends ka {
             var13 = var13 + var15_intLifetime2;
           }
           this.field_l[param1.field_D] = var13;
-          var75 = ao.a(param1, var81, this.field_v, -3);
+          var75 = SetSpecialOrderBoxWidth.a(param1, var81, this.field_v, -3);
           var15 = new vib[param1.field_j];
           var16Lifetime2 = 0;
           while (var16Lifetime2 < param1.field_j) {
@@ -616,27 +616,27 @@ final class roa extends ka {
                       var55 = ((float)var51_int * var86[2] + ((float)var49_int * var86[0] + (float)var50_int * var86[1])) / var52;
                       var56 = (var86[5] * (float)var51_int + ((float)var50_int * var86[4] + (float)var49_int * var86[3])) / var53;
                       var57 = (var86[7] * (float)var50_int + (float)var49_int * var86[6] + (float)var51_int * var86[8]) / var54;
-                      var30Lifetime1 = mpa.a(-74, var56, var55, var57);
-                      dhb.a(var42, param1.field_x[var32_int], var41, (byte) 47, param1.field_v[var32_int], var37, param1.field_G[var32_int], var30Lifetime1, jqb.field_o, var35, var39_int, var86, var36, var40);
-                      var23 = jqb.field_o[1];
-                      var22_float = jqb.field_o[0];
-                      dhb.a(var42, param1.field_x[var33_int], var41, (byte) 81, param1.field_v[var33_int], var37, param1.field_G[var33_int], var30Lifetime1, jqb.field_o, var35, var39_int, var86, var36, var40);
-                      var24 = jqb.field_o[0];
-                      var25 = jqb.field_o[1];
-                      dhb.a(var42, param1.field_x[var34], var41, (byte) 39, param1.field_v[var34], var37, param1.field_G[var34], var30Lifetime1, jqb.field_o, var35, var39_int, var86, var36, var40);
-                      var26 = jqb.field_o[0];
-                      var27 = jqb.field_o[1];
+                      var30Lifetime1 = GetSniperCannonRandomness.a(-74, var56, var55, var57);
+                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var32_int], var41, (byte) 47, param1.field_v[var32_int], var37, param1.field_G[var32_int], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
+                      var23 = GetAutozoomSpeedDivide.field_o[1];
+                      var22_float = GetAutozoomSpeedDivide.field_o[0];
+                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var33_int], var41, (byte) 81, param1.field_v[var33_int], var37, param1.field_G[var33_int], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
+                      var24 = GetAutozoomSpeedDivide.field_o[0];
+                      var25 = GetAutozoomSpeedDivide.field_o[1];
+                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var34], var41, (byte) 39, param1.field_v[var34], var37, param1.field_G[var34], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
+                      var26 = GetAutozoomSpeedDivide.field_o[0];
+                      var27 = GetAutozoomSpeedDivide.field_o[1];
                     } else {
                       if (var31 == 3) {
-                        oma.a(var86, param1.field_x[var32_int], var40, jqb.field_o, var37, param1.field_v[var32_int], (byte) -82, var36, param1.field_G[var32_int], var39_int, var35);
-                        var23 = jqb.field_o[1];
-                        var22_float = jqb.field_o[0];
-                        oma.a(var86, param1.field_x[var33_int], var40, jqb.field_o, var37, param1.field_v[var33_int], (byte) -82, var36, param1.field_G[var33_int], var39_int, var35);
-                        var25 = jqb.field_o[1];
-                        var24 = jqb.field_o[0];
-                        oma.a(var86, param1.field_x[var34], var40, jqb.field_o, var37, param1.field_v[var34], (byte) -82, var36, param1.field_G[var34], var39_int, var35);
-                        var26 = jqb.field_o[0];
-                        var27 = jqb.field_o[1];
+                        oma.a(var86, param1.field_x[var32_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var32_int], (byte) -82, var36, param1.field_G[var32_int], var39_int, var35);
+                        var23 = GetAutozoomSpeedDivide.field_o[1];
+                        var22_float = GetAutozoomSpeedDivide.field_o[0];
+                        oma.a(var86, param1.field_x[var33_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var33_int], (byte) -82, var36, param1.field_G[var33_int], var39_int, var35);
+                        var25 = GetAutozoomSpeedDivide.field_o[1];
+                        var24 = GetAutozoomSpeedDivide.field_o[0];
+                        oma.a(var86, param1.field_x[var34], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var34], (byte) -82, var36, param1.field_G[var34], var39_int, var35);
+                        var26 = GetAutozoomSpeedDivide.field_o[0];
+                        var27 = GetAutozoomSpeedDivide.field_o[1];
                         if ((1 & var39_int) != 0) {
                           if (!(var25 - var23 > 0.5f)) {
                             if (var23 - var25 > 0.5f) {
@@ -680,15 +680,15 @@ final class roa extends ka {
                     }
                   } else {
                     var41 = (float)param1.field_C[var19Lifetime2] / 1024.0f;
-                    ac.a(var86, var36, var39_int, var40, param1.field_v[var32_int], param1.field_G[var32_int], (byte) -52, var41, var37, jqb.field_o, var35, param1.field_x[var32_int]);
-                    var22_float = jqb.field_o[0];
-                    var23 = jqb.field_o[1];
-                    ac.a(var86, var36, var39_int, var40, param1.field_v[var33_int], param1.field_G[var33_int], (byte) -52, var41, var37, jqb.field_o, var35, param1.field_x[var33_int]);
-                    var25 = jqb.field_o[1];
-                    var24 = jqb.field_o[0];
-                    ac.a(var86, var36, var39_int, var40, param1.field_v[var34], param1.field_G[var34], (byte) -52, var41, var37, jqb.field_o, var35, param1.field_x[var34]);
-                    var27 = jqb.field_o[1];
-                    var26 = jqb.field_o[0];
+                    ac.a(var86, var36, var39_int, var40, param1.field_v[var32_int], param1.field_G[var32_int], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var32_int]);
+                    var22_float = GetAutozoomSpeedDivide.field_o[0];
+                    var23 = GetAutozoomSpeedDivide.field_o[1];
+                    ac.a(var86, var36, var39_int, var40, param1.field_v[var33_int], param1.field_G[var33_int], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var33_int]);
+                    var25 = GetAutozoomSpeedDivide.field_o[1];
+                    var24 = GetAutozoomSpeedDivide.field_o[0];
+                    ac.a(var86, var36, var39_int, var40, param1.field_v[var34], param1.field_G[var34], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var34]);
+                    var27 = GetAutozoomSpeedDivide.field_o[1];
+                    var26 = GetAutozoomSpeedDivide.field_o[0];
                     var42 = var41 / 2.0f;
                     if ((var39_int & 1) == 0) {
                       if (!(var42 < var24 - var22_float)) {
@@ -830,16 +830,16 @@ final class roa extends ka {
             this.field_g[var16Lifetime4] = this.field_Q;
           }
           bsb.field_b = null;
-          this.field_A = rh.a(this.field_L, this.field_A, (byte) 53);
-          this.field_J = rh.a(this.field_L, this.field_J, (byte) 108);
-          this.field_F = rh.a(this.field_L, this.field_F, (byte) 69);
-          this.field_r = rh.a(this.field_L, this.field_r, (byte) 50);
-          this.field_x = rh.a(this.field_L, this.field_x, (byte) 59);
+          this.field_A = GetDebrisCarryOverPercentage.a(this.field_L, this.field_A, (byte) 53);
+          this.field_J = GetDebrisCarryOverPercentage.a(this.field_L, this.field_J, (byte) 108);
+          this.field_F = GetDebrisCarryOverPercentage.a(this.field_L, this.field_F, (byte) 69);
+          this.field_r = GetDebrisCarryOverPercentage.a(this.field_L, this.field_r, (byte) 50);
+          this.field_x = GetDebrisCarryOverPercentage.a(this.field_L, this.field_x, (byte) 59);
           this.field_b = aba.a(this.field_b, this.field_L, -28321);
           this.field_D = jp.a(this.field_D, this.field_L, 7353);
           this.field_y = jp.a(this.field_y, this.field_L, 7353);
           if (null != param1.field_p &&
-            kg.a((byte) 11, this.field_s, param2)) {
+            GetLaserBeamProjectileDamage.a((byte) 11, this.field_s, param2)) {
             param1.a((byte) -37, false);
           }
           if (null != param1.field_g &&
@@ -847,7 +847,7 @@ final class roa extends ka {
             param1.a(-126);
           }
           if (null != param1.field_y &&
-            mhb.a(this.field_s, param2, -2679)) {
+            SetSalvoHoldable.a(this.field_s, param2, -2679)) {
             var16Lifetime5 = 0;
             var84 = new int[256];
             var80 = var84;
@@ -895,7 +895,7 @@ final class roa extends ka {
           } else {
             stackIn_217_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_213_0), ((StringBuilder) (Object) stackIn_216_1).append(stackIn_217_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_213_0), ((StringBuilder) (Object) stackIn_216_1).append(stackIn_217_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -969,7 +969,7 @@ final class roa extends ka {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -1110,20 +1110,20 @@ final class roa extends ka {
           this.field_I = param1;
           this.field_s = param2;
           if (param3 ||
-            rfb.a((byte) -89, this.field_I, this.field_s)) {
+            SetDebrisThrowable.a((byte) -89, this.field_I, this.field_s)) {
             this.field_o = new glb(lga.a(14216, this.field_s, this.field_I));
           }
           if (param3 ||
-            bdb.a(this.field_s, false, this.field_I)) {
+            SetHealthBarWidth.a(this.field_s, false, this.field_I)) {
             this.field_q = new glb(cma.a(this.field_s, this.field_I, -22785));
           }
           if (param3 ||
-            eja.a(this.field_I, (byte) -111, this.field_s)) {
+            GetUseCircleFill.a(this.field_I, (byte) -111, this.field_s)) {
             this.field_C = new glb(pf.a(0, this.field_I, this.field_s));
           }
           if (param3 ||
             wh.a(this.field_s, (byte) 127, this.field_I)) {
-            this.field_h = new glb(lbb.a(this.field_s, this.field_I, (byte) 30));
+            this.field_h = new glb(MissionState.a(this.field_s, this.field_I, (byte) 30));
           }
           if (!param3 &&
             !eta.a(this.field_s, -1104, this.field_I)) {
@@ -1141,7 +1141,7 @@ final class roa extends ka {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

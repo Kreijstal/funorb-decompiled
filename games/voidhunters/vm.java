@@ -106,7 +106,7 @@ final class vm extends le {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -151,13 +151,13 @@ final class vm extends le {
         }
         var3 = this.field_f.a((byte) 118, param0);
         if (this.field_f.field_e) {
-          var4 = 2048 + sj.field_p[param0] * this.field_p;
+          var4 = 2048 + SetSalvoUsesAllEnergy.field_p[param0] * this.field_p;
           var5 = var4 >> 12;
           var6 = var5 + 1;
           for (var14 = 0; hob.field_d > var14; var14++) {
             woa.field_b = 2147483647;
             qd.field_b = 2147483647;
-            fd.field_q = 2147483647;
+            SetSalvoRepairTimeMultiplier.field_q = 2147483647;
             hi.field_b = 2147483647;
             var15 = 2048 + grb.field_l[var14] * this.field_m;
             var16 = var15 >> 12;
@@ -246,11 +246,11 @@ final class vm extends le {
                 } else {
                   var11 = var9 * var9 + var10 * var10 >> 12;
                 }
-                if (fd.field_q > var11) {
+                if (SetSalvoRepairTimeMultiplier.field_q > var11) {
                   woa.field_b = qd.field_b;
                   qd.field_b = hi.field_b;
-                  hi.field_b = fd.field_q;
-                  fd.field_q = var11;
+                  hi.field_b = SetSalvoRepairTimeMultiplier.field_q;
+                  SetSalvoRepairTimeMultiplier.field_q = var11;
                 } else {
                   if (var11 >= hi.field_b) {
                     if (qd.field_b <= var11) {
@@ -271,7 +271,7 @@ final class vm extends le {
             }
             var18Lifetime1 = this.field_o;
             if (0 == var18Lifetime1) {
-              var3[var14] = fd.field_q;
+              var3[var14] = SetSalvoRepairTimeMultiplier.field_q;
             } else {
               if (var18Lifetime1 == 1) {
                 var3[var14] = hi.field_b;
@@ -279,7 +279,7 @@ final class vm extends le {
                 if (var18Lifetime1 != 3) {
                   if (4 != var18Lifetime1) {
                     if (2 == var18Lifetime1) {
-                      var3[var14] = -fd.field_q + hi.field_b;
+                      var3[var14] = -SetSalvoRepairTimeMultiplier.field_q + hi.field_b;
                     }
                   } else {
                     var3[var14] = woa.field_b;

@@ -57,7 +57,7 @@ final class olb extends le {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -176,26 +176,26 @@ final class olb extends le {
         int var2Lifetime1;
         var3 = VoidHunters.field_G;
         try {
-          if (oab.field_o == wgb.field_f) {
+          if (GetArmageddonTimerStart.field_o == wgb.field_f) {
             return;
           }
-          if (wqa.a(false, oab.field_o)) {
-            lo.field_a[oab.field_o].b((byte) 49);
+          if (wqa.a(false, GetArmageddonTimerStart.field_o)) {
+            lo.field_a[GetArmageddonTimerStart.field_o].b((byte) 49);
           }
-          lrb.field_f = bg.field_o;
-          oab.field_o = wgb.field_f;
+          SetShipTeamAction.field_f = GetMessageFadetime.field_o;
+          GetArmageddonTimerStart.field_o = wgb.field_f;
           if (param0 != 991426348) {
             olb.d(25);
           }
-          pob.field_b = 0;
+          SetVariableAction.field_b = 0;
           if (aeb.field_a) {
-            nkb.a(false, "Destroying game");
+            GetDebrisThrowable.a(false, "Destroying game");
             vqa.field_g = null;
             aeb.field_a = false;
             ndb.field_a = null;
           }
-          if (fhb.field_p) {
-            qa.field_o = new ij();
+          if (GetMachineGunAimarc.field_p) {
+            SetGrapplingHookCooldown.field_o = new IntrusiveDeque();
             var9 = bv.field_a;
             var7 = var9;
             var4 = var7;
@@ -213,20 +213,20 @@ final class olb extends le {
               var10[var6] = 0;
               var6++;
             }
-            fhb.field_p = false;
+            GetMachineGunAimarc.field_p = false;
           }
           if (!enb.field_b) {
             return;
           }
           vjb.a((byte) 95);
-          qo.a(15);
+          SetGrapplingHooksDamageableBySourcePlayer.a(15);
           ija.a(114);
           enb.field_b = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1_ref), "olb.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "olb.C(" + param0 + ')');
         }
     }
 

@@ -88,7 +88,7 @@ final class i extends ka implements e {
         for (var15 = 0; var15 < var12Lifetime2; var15++) {
           var18 = param2.field_g[var15];
           var21 = var18;
-          var17 = jm.a(var21.field_e, 0);
+          var17 = GetBombletSprayAimspeed.a(var21.field_e, 0);
           incrementValue$4 = var14;
           var14++;
           var13[incrementValue$4] = var18.field_b;

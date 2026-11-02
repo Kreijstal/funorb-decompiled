@@ -179,7 +179,7 @@ final class rp extends da {
               }
             }
           }
-          if (!param0.a(-26, nw.field_p, mj.field_f)) {
+          if (!param0.a(-26, GetMinimapWidth.field_p, mj.field_f)) {
             var36 = new int[var35.length];
             var28 = var36;
             var8_ref_int__ = var28;
@@ -188,11 +188,11 @@ final class rp extends da {
             }
             this.field_d = param0.a(var6Lifetime1, false, var6Lifetime1, (byte) -37, var36);
           } else {
-            this.field_d = param0.a(var6Lifetime1, nw.field_p, 0, var6Lifetime1, false, var35);
+            this.field_d = param0.a(var6Lifetime1, GetMinimapWidth.field_p, 0, var6Lifetime1, false, var35);
           }
           this.field_c = true;
         }
-        this.field_d.a(jd.field_o, -28798);
+        this.field_d.a(SetLagVariant.field_o, -28798);
         this.field_e = param0.a(false, 3);
         this.field_e.a(20, 20480, 96);
         var7 = 0;
@@ -277,9 +277,9 @@ final class rp extends da {
         this.field_f.a(this.field_d, -121);
         if (!this.field_c &&
           !param4) {
-          this.field_f.a(et.field_c, true, et.field_c);
+          this.field_f.a(MissionVariable.field_c, true, MissionVariable.field_c);
         } else {
-          this.field_f.a(asa.field_a, true, et.field_c);
+          this.field_f.a(asa.field_a, true, MissionVariable.field_c);
           this.field_f.a(0, pea.field_d, 7);
           this.field_f.e(-122, param3);
         }
@@ -291,7 +291,7 @@ final class rp extends da {
         this.field_f.a(bk.field_v, param0 * 4, 2, 56);
         if (this.field_c ||
           param4) {
-          this.field_f.a(0, qcb.field_q, 7);
+          this.field_f.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
         }
     }
 }

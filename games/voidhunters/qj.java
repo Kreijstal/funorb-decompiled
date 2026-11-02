@@ -42,7 +42,7 @@ final class qj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ final class qj {
         if (param0 < 126) {
           return;
         }
-        cea.a(-88, 17);
+        GetSelfDestructPrepareToggleCooldown.a(-88, 17);
     }
 
     static {

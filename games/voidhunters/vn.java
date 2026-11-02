@@ -46,7 +46,7 @@ final class vn extends le {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class vn extends le {
           for (var4 = 0; var4 < hob.field_d; var4++) {
             boolean decompiledFrameRemainder0 = true;
             var5 = grb.field_l[var4];
-            var6 = sj.field_p[param0];
+            var6 = SetSalvoUsesAllEnergy.field_p[param0];
             var7 = var5 * this.field_j >> 12;
             var8 = this.field_l * var6 >> 12;
             var9 = this.field_j * (var5 % (4096 / this.field_j));

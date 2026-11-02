@@ -18,7 +18,7 @@ final class eu extends ev {
     final static boolean a(boolean param0) {
         if (!param0) {
           eu.a(true);
-          if (qmb.field_q < 10) {
+          if (GetSpinningBladeAimspeed.field_q < 10) {
             return false;
           }
           if (ef.field_z >= 13) {
@@ -26,7 +26,7 @@ final class eu extends ev {
           }
           return false;
         }
-        if (qmb.field_q < 10) {
+        if (GetSpinningBladeAimspeed.field_q < 10) {
           return false;
         }
         if (ef.field_z >= 13) {
@@ -83,23 +83,23 @@ final class eu extends ev {
         int var4 = 0;
         var4 = VoidHunters.field_G;
         try {
-          oea.field_p = "";
-          tba.field_q = param2;
-          nwa.field_c = param0;
+          SetSniperCannonEnergyUsed.field_p = "";
+          SetExplosionPushMultiplier.field_q = param2;
+          MessageLog.field_c = param0;
           if (fjb.field_b.startsWith("win")) {
-            oea.field_p = oea.field_p + "windows/";
+            SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "windows/";
           } else {
             if (fjb.field_b.startsWith("linux")) {
-              oea.field_p = oea.field_p + "linux/";
+              SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "linux/";
             } else {
               if (fjb.field_b.startsWith("mac")) {
-                oea.field_p = oea.field_p + "macos/";
+                SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "macos/";
               }
             }
           }
           var3_int = -92 % ((param1 - 67) / 49);
-          if (nwa.field_c.field_j) {
-            oea.field_p = oea.field_p + "msjava/";
+          if (MessageLog.field_c.field_j) {
+            SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "msjava/";
             return;
           }
           if (!fjb.field_a.startsWith("amd64") &&
@@ -109,16 +109,16 @@ final class eu extends ev {
               !fjb.field_a.startsWith("i586") &&
               !fjb.field_a.startsWith("x86")) {
               if (fjb.field_a.startsWith("ppc")) {
-                oea.field_p = oea.field_p + "ppc/";
+                SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "ppc/";
                 return;
               }
-              oea.field_p = oea.field_p + "universal/";
+              SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "universal/";
               return;
             }
-            oea.field_p = oea.field_p + "x86/";
+            SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "x86/";
             return;
           }
-          oea.field_p = oea.field_p + "x86_64/";
+          SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "x86_64/";
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +136,7 @@ final class eu extends ev {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class eu extends ev {
         int var5 = this.field_j * param2 >> 12;
         int var6 = param1 * this.field_k >> 12;
         int var7 = param1 * this.field_f >> 12;
-        ew.a(var6, var5, (byte) 84, var4, var7, this.field_d);
+        GetBurstFireMaxEnergy.a(var6, var5, (byte) 84, var4, var7, this.field_d);
         int var8 = -73 / ((param0 + 48) / 40);
     }
 

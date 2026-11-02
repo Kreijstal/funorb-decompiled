@@ -50,7 +50,7 @@ final class ujb {
             var7 = param1[1 + var5_int];
             var8 = param1[(2 + var5_int) % param1.length];
             var9 = param1[(var5_int + 3) % param1.length];
-            var10 = lv.a(param4, var7, var9, param2, var6, 8, var8, param3, param0 + 100);
+            var10 = SetShieldsDamageEnergyConversion.a(param4, var7, var9, param2, var6, 8, var8, param3, param0 + 100);
             if (var10 == -1) {
               var5_int += 2;
               continue;
@@ -68,7 +68,7 @@ final class ujb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class ujb {
           if (!wh.g(-118)) {
             return false;
           }
-          if (hcb.field_o > 0) {
+          if (GetDebrisCarryOver.field_o > 0) {
             return true;
           }
           return false;
@@ -93,7 +93,7 @@ final class ujb {
         if (!wh.g(-118)) {
           return false;
         }
-        if (hcb.field_o > 0) {
+        if (GetDebrisCarryOver.field_o > 0) {
           return true;
         }
         return false;
@@ -111,14 +111,14 @@ final class ujb {
         int var7Lifetime2;
         hb.field_d[bea.field_e] = param4;
         sv.field_f[bea.field_e] = bea.field_e;
-        fmb.field_o[bea.field_e] = param1;
+        GetLaserEnergyUsed.field_o[bea.field_e] = param1;
         if (pn.field_b < param1) {
           qbb.field_a = param1;
         }
-        if (param1 >= rha.field_d) {
-          emb.field_o[bea.field_e] = param0;
+        if (param1 >= Message.field_d) {
+          SetPhasedEnergyBeamRandomness.field_o[bea.field_e] = param0;
           hma.field_d[bea.field_e] = param2;
-          fv.field_o[bea.field_e] = param5;
+          GetMissionVariablesHudY.field_o[bea.field_e] = param5;
           var6 = param0 + param2 + param5;
           if (param3 == 13336) {
             if (0 == var6) {
@@ -127,7 +127,7 @@ final class ujb {
               stackIn_39_0 = 1000 * param0 / var6;
             }
             var7 = stackIn_39_0;
-            hga.field_o[bea.field_e] = var7;
+            SetRespawnTime.field_o[bea.field_e] = var7;
             bea.field_e = bea.field_e + 1;
             if (var7 > qbb.field_a) {
               qbb.field_a = var7;
@@ -145,7 +145,7 @@ final class ujb {
             stackIn_29_0 = 1000 * param0 / var6;
           }
           var7Lifetime2 = stackIn_29_0;
-          hga.field_o[bea.field_e] = var7Lifetime2;
+          SetRespawnTime.field_o[bea.field_e] = var7Lifetime2;
           bea.field_e = bea.field_e + 1;
           if (var7Lifetime2 > qbb.field_a) {
             qbb.field_a = var7Lifetime2;
@@ -157,9 +157,9 @@ final class ujb {
           return;
         }
         npa.field_d = param1;
-        emb.field_o[bea.field_e] = param0;
+        SetPhasedEnergyBeamRandomness.field_o[bea.field_e] = param0;
         hma.field_d[bea.field_e] = param2;
-        fv.field_o[bea.field_e] = param5;
+        GetMissionVariablesHudY.field_o[bea.field_e] = param5;
         var6Lifetime1 = param0 + param2 + param5;
         if (param3 == 13336) {
           if (0 == var6Lifetime1) {
@@ -177,7 +177,7 @@ final class ujb {
           }
           var7Lifetime1 = stackIn_18_0;
         }
-        hga.field_o[bea.field_e] = var7Lifetime1;
+        SetRespawnTime.field_o[bea.field_e] = var7Lifetime1;
         bea.field_e = bea.field_e + 1;
         if (var7Lifetime1 > qbb.field_a) {
           qbb.field_a = var7Lifetime1;

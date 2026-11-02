@@ -6,7 +6,7 @@ final class gb extends uj {
         if (param0 != -1) {
           return -91;
         }
-        return jq.field_o;
+        return SetSelfDestructActivateCooldown.field_o;
     }
 
     final boolean c(byte param0) {

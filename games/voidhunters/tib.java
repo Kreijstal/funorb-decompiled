@@ -25,8 +25,8 @@ final class tib extends eca {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!oc.a(var4, 0)) {
-            stackIn_3_0 = cca.field_o;
+          if (!GetUseBackground.a(var4, 0)) {
+            stackIn_3_0 = SetArmageddonLength.field_o;
             return stackIn_3_0;
           }
           if (param1 != 16384) {
@@ -39,14 +39,14 @@ final class tib extends eca {
               this.field_f = param0;
               this.field_g = var3.field_g;
             } else {
-              stackIn_12_0 = dsa.field_q;
+              stackIn_12_0 = SetFighterRepairTime.field_q;
               return stackIn_12_0;
             }
           }
           if (this.field_g) {
-            stackIn_17_0 = lea.field_o;
+            stackIn_17_0 = GetShipPersistence.field_o;
           } else {
-            stackIn_17_0 = cca.field_o;
+            stackIn_17_0 = SetArmageddonLength.field_o;
           }
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,7 +59,7 @@ final class tib extends eca {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class tib extends eca {
             stackIn_19_0 = uc.field_a;
             return stackIn_19_0;
           }
-          stackIn_17_0 = ks.field_p;
+          stackIn_17_0 = GetLaserReload.field_p;
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,7 +123,7 @@ final class tib extends eca {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -133,12 +133,12 @@ final class tib extends eca {
           if (!li.field_i) {
             return ita.a(param1, 7988).field_k;
           }
-          return de.a(param1, 300).field_c;
+          return SetTorpedoEnergyUsed.a(param1, 300).field_c;
         }
         if (!li.field_i) {
           return ita.a(param1, 7988).field_k;
         }
-        return de.a(param1, 300).field_c;
+        return SetTorpedoEnergyUsed.a(param1, 300).field_c;
     }
 
     final static int a(int param0, CharSequence param1, int param2) {
@@ -152,7 +152,7 @@ final class tib extends eca {
           if (param0 != -596) {
             field_h = (mma) null;
           }
-          stackIn_3_0 = ua.a(true, param1, true, param2);
+          stackIn_3_0 = SetMissionTerrainVotingChancestep.a(true, param1, true, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,7 +164,7 @@ final class tib extends eca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 

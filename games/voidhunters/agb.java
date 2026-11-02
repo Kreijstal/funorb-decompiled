@@ -4,7 +4,7 @@
 final class agb implements dja {
     public final tv a(byte param0) {
         int var2 = -61 % ((param0 + 64) / 50);
-        return (tv) ((Object) new tt());
+        return (tv) ((Object) new AdjustBodyComponentsAction());
     }
 
     final static long a(CharSequence param0, int param1) {
@@ -67,16 +67,16 @@ final class agb implements dja {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a((byte) 63);
-          return (tv[]) ((Object) new tt[param1]);
+          return (tv[]) ((Object) new AdjustBodyComponentsAction[param1]);
         }
-        return (tv[]) ((Object) new tt[param1]);
+        return (tv[]) ((Object) new AdjustBodyComponentsAction[param1]);
     }
 
     static {

@@ -78,8 +78,8 @@ final class sb extends ora implements eb {
           this.field_i = param2;
           this.field_j = param3;
         } else {
-          this.field_i = hj.a(param2, (byte) -127);
-          this.field_j = hj.a(param3, (byte) -99);
+          this.field_i = GetSalvoaim.a(param2, (byte) -127);
+          this.field_j = GetSalvoaim.a(param3, (byte) -99);
         }
         if (!param4) {
           this.field_h = this.field_d.field_Mc.a(this.field_i, this.field_j, 1, 0, nla.a(this.field_c, mj.field_f, -122), 1);
@@ -113,8 +113,8 @@ final class sb extends ora implements eb {
           this.field_j = param4;
           this.field_i = param3;
         } else {
-          this.field_i = hj.a(param3, (byte) -113);
-          this.field_j = hj.a(param4, (byte) -97);
+          this.field_i = GetSalvoaim.a(param3, (byte) -113);
+          this.field_j = GetSalvoaim.a(param4, (byte) -97);
         }
         this.field_h = this.field_d.field_Mc.a(param3, param4, 1, 0, nla.a(this.field_c, this.field_a, -122), 1);
     }
@@ -192,8 +192,8 @@ final class sb extends ora implements eb {
           stackIn_4_4Lifetime1 = 0;
         }
         if (!this.field_d.field_Nc) {
-          this.field_i = hj.a(param1, (byte) -119);
-          this.field_j = hj.a(param2, (byte) -97);
+          this.field_i = GetSalvoaim.a(param1, (byte) -119);
+          this.field_j = GetSalvoaim.a(param2, (byte) -97);
         } else {
           this.field_i = param1;
           this.field_j = param2;

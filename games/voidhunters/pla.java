@@ -25,82 +25,82 @@ final class pla extends htb {
           return;
         }
         qrb var8 = this.field_C.a((byte) 35);
-        if (tg.field_p == var8) {
+        if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p == var8) {
           var15 = ps.field_a[0];
           var9 = var15.field_m << 1;
           var10 = var15.field_n << 1;
-          if (mi.field_o == null) {
-            mi.field_o = new phb(var9, var10);
-            de.a(26, mi.field_o);
+          if (GetWeaponProjectileSpeedMultiply.field_o == null) {
+            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9, var10);
+            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.b(112, 144, var15.field_m << 4, var15.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            mi.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
             return;
           }
-          if (mi.field_o.field_q < var9) {
-            mi.field_o = new phb(var9, var10);
-            de.a(26, mi.field_o);
+          if (GetWeaponProjectileSpeedMultiply.field_o.field_q < var9) {
+            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9, var10);
+            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.b(112, 144, var15.field_m << 4, var15.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            mi.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
             return;
           }
-          if (var10 > mi.field_o.field_p) {
-            mi.field_o = new phb(var9, var10);
-            de.a(26, mi.field_o);
+          if (var10 > GetWeaponProjectileSpeedMultiply.field_o.field_p) {
+            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9, var10);
+            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.b(112, 144, var15.field_m << 4, var15.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            mi.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
             return;
           }
-          de.a(85, mi.field_o);
+          SetTorpedoEnergyUsed.a(85, GetWeaponProjectileSpeedMultiply.field_o);
           dma.a();
           var15.b(112, 144, var15.field_m << 4, var15.field_n << 4, -this.field_B << 10, 4096);
           bia.a((byte) 124);
-          mi.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
+          GetWeaponProjectileSpeedMultiply.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
           return;
         }
-        if (dsa.field_q == var8) {
+        if (SetFighterRepairTime.field_q == var8) {
           var16 = ps.field_a[0];
           var9Lifetime1 = var16.field_m << 1;
           var10Lifetime1 = var16.field_n << 1;
-          if (mi.field_o == null) {
-            mi.field_o = new phb(var9Lifetime1, var10Lifetime1);
-            de.a(26, mi.field_o);
+          if (GetWeaponProjectileSpeedMultiply.field_o == null) {
+            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9Lifetime1, var10Lifetime1);
+            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.b(112, 144, var16.field_m << 4, var16.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            mi.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
             return;
           }
-          if (mi.field_o.field_q < var9Lifetime1) {
-            mi.field_o = new phb(var9Lifetime1, var10Lifetime1);
-            de.a(26, mi.field_o);
+          if (GetWeaponProjectileSpeedMultiply.field_o.field_q < var9Lifetime1) {
+            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9Lifetime1, var10Lifetime1);
+            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.b(112, 144, var16.field_m << 4, var16.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            mi.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
             return;
           }
-          if (var10Lifetime1 > mi.field_o.field_p) {
-            mi.field_o = new phb(var9Lifetime1, var10Lifetime1);
-            de.a(26, mi.field_o);
+          if (var10Lifetime1 > GetWeaponProjectileSpeedMultiply.field_o.field_p) {
+            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9Lifetime1, var10Lifetime1);
+            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.b(112, 144, var16.field_m << 4, var16.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            mi.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
             return;
           }
-          de.a(85, mi.field_o);
+          SetTorpedoEnergyUsed.a(85, GetWeaponProjectileSpeedMultiply.field_o);
           dma.a();
           var16.b(112, 144, var16.field_m << 4, var16.field_n << 4, -this.field_B << 10, 4096);
           bia.a((byte) 124);
-          mi.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
+          GetWeaponProjectileSpeedMultiply.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
           return;
         }
-        if (var8 == cca.field_o) {
+        if (var8 == SetArmageddonLength.field_o) {
           var13 = ps.field_a[2];
           var13.c(var5 - (var13.field_q >> 1), var6 - (var13.field_p >> 1), 256);
           return;
         }
-        if (lea.field_o == var8) {
+        if (GetShipPersistence.field_o == var8) {
           var12 = ps.field_a[1];
           var12.c(var5 - (var12.field_q >> 1), var6 - (var12.field_p >> 1), 256);
           return;
@@ -112,8 +112,8 @@ final class pla extends htb {
           throw new IllegalStateException();
         }
         djb.field_r = true;
-        aka.a(false, param0 - 122);
-        qmb.field_q = param0;
+        GetSniperCannonProjectiles.a(false, param0 - 122);
+        GetSpinningBladeAimspeed.field_q = param0;
     }
 
     final String d(byte param0) {
@@ -147,7 +147,7 @@ final class pla extends htb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class pla extends htb {
           this.field_B = this.field_B + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pla.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pla.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class pla extends htb {
         try {
           this.field_C = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

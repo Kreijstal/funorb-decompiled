@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fba implements ntb, ofa {
+final class fba implements DiffableState, ofa {
     private int field_b;
-    private cda[] field_a;
+    private PartitionZoneList[] zonelists;
     static String field_c;
 
-    private final jo b(int param0, int param1, int param2, int param3) {
+    private final PartitionZone b(int param0, int param1, int param2, int param3) {
         int var5 = this.a(param3, param1, param0 + 8, param2);
-        int var6 = param0 + this.field_a.length & var5;
-        if (null == this.field_a[var6]) {
-          this.field_a[var6] = new cda();
+        int var6 = param0 + this.zonelists.length & var5;
+        if (null == this.zonelists[var6]) {
+          this.zonelists[var6] = new PartitionZoneList();
         }
-        ppb.field_b = this.field_a[var6];
-        return this.field_a[var6].a((byte) 120, param3, param1, param2);
+        ppb.field_b = this.zonelists[var6];
+        return this.zonelists[var6].a((byte) 120, param3, param1, param2);
     }
 
     final int a(int param0, int[] param1, int param2, int param3) {
@@ -48,13 +48,13 @@ final class fba implements ntb, ofa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final jo a(int param0, int param1, int param2, byte param3) {
+    private final PartitionZone a(int param0, int param1, int param2, byte param3) {
         int var5 = this.a(param2, param1, 7, param0);
-        cda var6 = this.field_a[-1 + this.field_a.length & var5];
+        PartitionZoneList var6 = this.zonelists[-1 + this.zonelists.length & var5];
         if (param3 < 108) {
           this.field_b = 69;
         }
@@ -68,7 +68,7 @@ final class fba implements ntb, ofa {
     final void a(int[] param0, int param1, int param2, boolean param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
-        jo var8 = null;
+        PartitionZone var8 = null;
         int var9 = VoidHunters.field_G;
         try {
           var6_int = this.a((byte) -102, param0, param2);
@@ -82,12 +82,12 @@ final class fba implements ntb, ofa {
           }
           this.a(-15536);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fba.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fba.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     private final int c(int param0, int param1) {
-        jo discarded$0 = null;
+        PartitionZone discarded$0 = null;
         if (param1 > -21) {
           discarded$0 = this.a(-94, -43, -100, (byte) -113);
         }
@@ -100,12 +100,12 @@ final class fba implements ntb, ofa {
     final void a(int[] param0, byte param1) {
         try {
           int var3_int = 123 % ((6 - param1) / 45);
-          ah.field_o[3] = param0[3];
-          ah.field_o[0] = param0[0];
-          ah.field_o[2] = param0[2];
-          ah.field_o[1] = param0[1];
+          SetReadyRoomMutatorTime.field_o[3] = param0[3];
+          SetReadyRoomMutatorTime.field_o[0] = param0[0];
+          SetReadyRoomMutatorTime.field_o[2] = param0[2];
+          SetReadyRoomMutatorTime.field_o[1] = param0[1];
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fba.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fba.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class fba implements ntb, ofa {
         try {
           var3 = (fba) (param1);
           var4 = 43 / ((param0 - 22) / 59);
-          stackIn_1_0 = dn.a(var3.field_a, false, 1, this.field_a, 122);
+          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var3.zonelists, false, 1, this.zonelists, 122);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class fba implements ntb, ofa {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class fba implements ntb, ofa {
             field_c = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fba.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fba.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class fba implements ntb, ofa {
           }
           this.a(-15536);
           if (param1 < 1) {
-            this.field_a = (cda[]) null;
+            this.zonelists = (PartitionZoneList[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -192,12 +192,12 @@ final class fba implements ntb, ofa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     private final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        jo var6 = this.b(-1, param1, param3, param4);
+        PartitionZone var6 = this.b(-1, param1, param3, param4);
         if (!param0) {
           this.a((byte) -57, 94, 86);
         }
@@ -215,7 +215,7 @@ final class fba implements ntb, ofa {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        jo var11 = null;
+        PartitionZone var11 = null;
         int var12 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -254,7 +254,7 @@ final class fba implements ntb, ofa {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -274,7 +274,7 @@ final class fba implements ntb, ofa {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        jo var12 = null;
+        PartitionZone var12 = null;
         int var13 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -316,7 +316,7 @@ final class fba implements ntb, ofa {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -324,7 +324,7 @@ final class fba implements ntb, ofa {
         if (param0 > -75) {
           this.field_b = 57;
         }
-        return this.a(-1, ah.field_o, param1, 74);
+        return this.a(-1, SetReadyRoomMutatorTime.field_o, param1, 74);
     }
 
     public static void b(int param0) {
@@ -334,7 +334,7 @@ final class fba implements ntb, ofa {
         }
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         fba var3 = null;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -343,14 +343,14 @@ final class fba implements ntb, ofa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = (fba) (param0);
-          tja.a(var3.field_a, 1, this.field_a, false, 5547);
+          var3 = (fba) (other);
+          tja.a(var3.zonelists, 1, this.zonelists, false, 5547);
           var4 = 0;
-          if (dn.a(var3.field_a, false, 1, this.field_a, -99)) {
+          if (SetCountermeasureLauncherAimspeed.a(var3.zonelists, false, 1, this.zonelists, -99)) {
             var4 = 1;
             System.out.println("PartitionZoneList[] zonelists has changed. ");
           }
-          if (param1 > -19) {
+          if (obfuscationGuard > -19) {
             field_c = (String) null;
           }
           if (var4 != 0) {
@@ -362,23 +362,23 @@ final class fba implements ntb, ofa {
           var3_ref = decompiledCaughtException;
           stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("fba.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     public final void b(faa param0, int param1) {
-        jo discarded$1 = null;
+        PartitionZone discarded$1 = null;
         int var7 = 0;
         faa var3 = null;
-        cda[] var4 = null;
+        PartitionZoneList[] var4 = null;
         int var5 = 0;
-        cda[] var6 = null;
-        cda var8 = null;
+        PartitionZoneList[] var6 = null;
+        PartitionZoneList var8 = null;
         int var9 = 0;
         int stackIn_6_0 = 0;
         faa stackIn_12_0 = null;
@@ -392,7 +392,7 @@ final class fba implements ntb, ofa {
         var9 = VoidHunters.field_G;
         try {
           var3 = param0;
-          var4 = this.field_a;
+          var4 = this.zonelists;
           if (param1 >= -109) {
             discarded$1 = this.b(-108, -16, 66, 92);
           }
@@ -411,7 +411,7 @@ final class fba implements ntb, ofa {
               stackIn_12_1 = 53;
               stackIn_13_2 = (var8 != null);
               if (vq.a(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
-                stb.a(2, 1, var3, var8);
+                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }
             return;
@@ -427,7 +427,7 @@ final class fba implements ntb, ofa {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -435,7 +435,7 @@ final class fba implements ntb, ofa {
         if (param3 != 2) {
           return;
         }
-        jo var6 = this.a(param2, param1, param0, (byte) 114);
+        PartitionZone var6 = this.a(param2, param1, param0, (byte) 114);
         if (var6 != null) {
           ppb.field_b.a(param3 - 14);
           this.a(1, var6, param4);
@@ -446,8 +446,8 @@ final class fba implements ntb, ofa {
         int var3_int = 0;
         int var4 = 0;
         int var5 = VoidHunters.field_G;
-        cda[] var6 = new cda[sl.field_c.length * 2];
-        cda[] var2 = var6;
+        PartitionZoneList[] var6 = new PartitionZoneList[sl.field_c.length * 2];
+        PartitionZoneList[] var2 = var6;
         for (var3_int = 0; sl.field_c.length > var3_int; var3_int++) {
           var6[var3_int] = sl.field_c[var3_int];
         }
@@ -455,7 +455,7 @@ final class fba implements ntb, ofa {
         if (param0 != -16) {
           this.field_b = -122;
         }
-        jo[] var3 = new jo[2 * kpb.field_s.length];
+        PartitionZone[] var3 = new PartitionZone[2 * kpb.field_s.length];
         for (var4 = 0; var4 < kpb.field_s.length; var4++) {
           var3[var4] = kpb.field_s[var4];
         }
@@ -472,22 +472,22 @@ final class fba implements ntb, ofa {
             field_c = (String) null;
           }
           var3.field_b = this.field_b;
-          var3.field_a = (cda[]) (sqb.a(var3.field_a, this.field_a, 1, mjb.field_c, false));
+          var3.zonelists = (PartitionZoneList[]) (sqb.a(var3.zonelists, this.zonelists, 1, mjb.field_c, false));
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fba.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fba.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void a(byte param0) {
-        this.field_a = new cda[1023];
+        this.zonelists = new PartitionZoneList[1023];
         if (param0 != -10) {
-          this.field_a = (cda[]) null;
+          this.zonelists = (PartitionZoneList[]) null;
         }
     }
 
     private final void a(int param0) {
-        int fieldTemp$0 = fha.field_p;
-        fha.field_p = fha.field_p + 1;
+        int fieldTemp$0 = GetDebugLineLife.field_p;
+        GetDebugLineLife.field_p = GetDebugLineLife.field_p + 1;
         this.field_b = fieldTemp$0;
         if (param0 != -15536) {
           this.field_b = -3;
@@ -496,14 +496,14 @@ final class fba implements ntb, ofa {
 
     private final void a(byte param0, int param1, int param2) {
         int var4 = 0;
-        cda var5;
+        PartitionZoneList var5;
         int var6;
         var6 = VoidHunters.field_G;
         if (param0 > -61) {
           return;
         }
-        for (var4 = 0; var4 < this.field_a.length; var4++) {
-          var5 = this.field_a[var4];
+        for (var4 = 0; var4 < this.zonelists.length; var4++) {
+          var5 = this.zonelists[var4];
           if (var5 != null) {
             var5.a(param2, param1, (byte) -21);
           }
@@ -546,10 +546,10 @@ final class fba implements ntb, ofa {
           if (param1 < 0) {
             return;
           }
-          var5_int = this.c(ah.field_o[0], -78);
-          var6 = this.c(ah.field_o[1], param0 - 43);
-          var7 = this.a(ah.field_o[2], (byte) 19);
-          var8 = this.a(ah.field_o[3], (byte) 19);
+          var5_int = this.c(SetReadyRoomMutatorTime.field_o[0], -78);
+          var6 = this.c(SetReadyRoomMutatorTime.field_o[1], param0 - 43);
+          var7 = this.a(SetReadyRoomMutatorTime.field_o[2], (byte) 19);
+          var8 = this.a(SetReadyRoomMutatorTime.field_o[3], (byte) 19);
           var9 = this.c(param3[0], -81);
           var10 = this.c(param3[param0], -110);
           var11 = this.a(param3[2], (byte) 19);
@@ -612,7 +612,7 @@ final class fba implements ntb, ofa {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(')').toString());
         }
     }
 
@@ -621,9 +621,9 @@ final class fba implements ntb, ofa {
           return;
         }
         try {
-          this.field_a = (cda[]) (kcb.a(10, mjb.field_c, param0, 1, -102, this.field_a));
+          this.zonelists = (PartitionZoneList[]) (SetAutoDetail.a(10, mjb.field_c, param0, 1, -102, this.zonelists));
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fba.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fba.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -644,13 +644,13 @@ final class fba implements ntb, ofa {
         this.a((byte) -10);
     }
 
-    private final void a(int param0, jo param1, int param2) {
+    private final void a(int param0, PartitionZone param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        cda var10 = null;
+        PartitionZoneList var10 = null;
         tv var12 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -659,15 +659,15 @@ final class fba implements ntb, ofa {
         RuntimeException var4 = null;
         try {
           if (param1.c(param2, 8)) {
-            var5 = param1.field_h;
-            var6 = param1.field_b;
-            var7 = param1.field_f;
+            var5 = param1.gridx;
+            var6 = param1.gridy;
+            var7 = param1.type;
             var8 = this.a(var5, var6, 7, var7);
-            var9 = var8 & this.field_a.length - 1;
-            var10 = this.field_a[var9];
+            var9 = var8 & this.zonelists.length - 1;
+            var10 = this.zonelists[var9];
             if (var10 != null &&
               var10.b(var7, param0 - 6776, var6, var5)) {
-              this.field_a[var9] = null;
+              this.zonelists[var9] = null;
             }
           }
           if (param0 != 1) {
@@ -685,7 +685,7 @@ final class fba implements ntb, ofa {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

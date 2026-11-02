@@ -71,7 +71,7 @@ final class pnb implements Iterator {
           this.field_b = param0;
           this.a(1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pnb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pnb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

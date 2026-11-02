@@ -12,7 +12,7 @@ final class bh implements dja {
     final static void a(int param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
-        faa var2 = dpa.field_p;
+        faa var2 = RequestNewestBlackboxRecording.field_p;
         int var3Lifetime1;
         int var4Lifetime1;
         var2.h(24335, param0);
@@ -20,10 +20,10 @@ final class bh implements dja {
           var2.position = var2.position + 1;
           var3 = var2.position;
           var2.c(0, 5);
-          var2.c(0, lqa.field_o.field_Fb);
-          var4 = lqa.field_o.field_Cb + (lqa.field_o.field_Bb << 6);
+          var2.c(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Fb);
+          var4 = SetSpinningBladeSpindamageMultiplier.field_o.field_Cb + (SetSpinningBladeSpindamageMultiplier.field_o.field_Bb << 6);
           var2.c(0, var4);
-          var2.a(0, lqa.field_o.field_Pb, -1, lqa.field_o.field_Pb.length);
+          var2.a(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb, -1, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb.length);
           var2.e(-var3 + var2.position, -129);
           return;
         }
@@ -31,10 +31,10 @@ final class bh implements dja {
         var2.position = var2.position + 1;
         var3Lifetime1 = var2.position;
         var2.c(0, 5);
-        var2.c(0, lqa.field_o.field_Fb);
-        var4Lifetime1 = lqa.field_o.field_Cb + (lqa.field_o.field_Bb << 6);
+        var2.c(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Fb);
+        var4Lifetime1 = SetSpinningBladeSpindamageMultiplier.field_o.field_Cb + (SetSpinningBladeSpindamageMultiplier.field_o.field_Bb << 6);
         var2.c(0, var4Lifetime1);
-        var2.a(0, lqa.field_o.field_Pb, -1, lqa.field_o.field_Pb.length);
+        var2.a(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb, -1, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb.length);
         var2.e(-var3Lifetime1 + var2.position, -129);
     }
 
@@ -69,7 +69,7 @@ final class bh implements dja {
           var4 = new apb[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!kv.a(false, param0)) {
-              var6 = param0.i(0, iia.a(-97, var5 - 1));
+              var6 = param0.i(0, BodyInZoneCondition.a(-97, var5 - 1));
               var4[var5] = var4[var6];
             } else {
               var6_ref_apb = new apb();
@@ -95,7 +95,7 @@ final class bh implements dja {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

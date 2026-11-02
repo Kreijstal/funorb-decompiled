@@ -8,7 +8,7 @@ final class c extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (li.field_i) {
-          rnb.a(-16777216 | param5, (byte) 103, param3, param2, param0, param1);
+          SetMassDriverProjectileLife.a(-16777216 | param5, (byte) 103, param3, param2, param0, param1);
           return;
         }
         dma.a(param2, param3, param1, param0, param5);
@@ -23,7 +23,7 @@ final class c extends IntrusiveNode {
           this.field_e = param0;
           this.field_f = param2;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "c.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "c.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

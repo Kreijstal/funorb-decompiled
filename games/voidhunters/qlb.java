@@ -142,7 +142,7 @@ final class qlb implements dja {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -150,14 +150,14 @@ final class qlb implements dja {
         if (param0 != -75) {
           qlb.b((byte) 0);
         }
-        kl.a(vpa.b((byte) -119), 0);
+        kl.a(MissionList.b((byte) -119), 0);
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = -48;
         }
-        return (tv[]) ((Object) new dmb[param1]);
+        return (tv[]) ((Object) new MapClearanceArea[param1]);
     }
 
     static {

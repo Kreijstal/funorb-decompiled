@@ -21,7 +21,7 @@ final class qma {
           this.field_b = this.field_b + 1;
           this.field_a = this.field_a | (long)(param1.field_j << pb.field_m * fieldTemp$0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qma.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qma.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,13 +50,13 @@ final class qma {
         int var20_int = 0;
         RuntimeException var20 = null;
         try {
-          oja.field_p = param8;
+          GetUsePolygonFill.field_p = param8;
           bl.field_x = param0;
-          wm.a(param6, param10, 116, param19, param5);
+          MissionCondition.a(param6, param10, 116, param19, param5);
           ue.a(param15, (byte) 111, param9, param1);
           wqa.a(param17, param12, 114, param3, param18, param11);
           var20_int = 20 % ((param16 + 14) / 55);
-          tl.a(param4, -22699, param7);
+          SetFighterRepairAmount.a(param4, -22699, param7);
           nva.a(param13, true, param2, param14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -93,7 +93,7 @@ final class qma {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param19).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param19).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class qma {
           this.field_a = (long)param0.field_j;
           this.field_b = 1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class qma {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

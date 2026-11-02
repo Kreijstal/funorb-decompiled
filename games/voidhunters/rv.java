@@ -24,7 +24,7 @@ final class rv {
         int var6Lifetime3;
         var7 = VoidHunters.field_G;
         var2 = 0;
-        var3 = nd.field_r;
+        var3 = SetSalvoaim.field_r;
         if (5 > var3) {
           var2 = var3 * (var3 * 8192) / 1100;
           var4 = 1;
@@ -72,7 +72,7 @@ final class rv {
             var4 = 1;
             var5 = 1;
           }
-          eob.field_p = li.a(91, var2 * var4, var2 * var5);
+          GetMissileLauncherAimspeed.field_p = li.a(91, var2 * var4, var2 * var5);
           return;
         }
         if (var3 < 105) {
@@ -126,7 +126,7 @@ final class rv {
             var4Lifetime1 = 1;
             var5Lifetime1 = 1;
           }
-          eob.field_p = li.a(91, var2 * var4Lifetime1, var2 * var5Lifetime1);
+          GetMissileLauncherAimspeed.field_p = li.a(91, var2 * var4Lifetime1, var2 * var5Lifetime1);
           return;
         }
         if (var3 >= 120) {
@@ -175,7 +175,7 @@ final class rv {
             var4Lifetime2 = 1;
             var5Lifetime2 = 1;
           }
-          eob.field_p = li.a(91, var2 * var4Lifetime2, var2 * var5Lifetime2);
+          GetMissileLauncherAimspeed.field_p = li.a(91, var2 * var4Lifetime2, var2 * var5Lifetime2);
           return;
         }
         var3 = -var3 + 120;
@@ -225,7 +225,7 @@ final class rv {
           var4Lifetime3 = 1;
           var5Lifetime3 = 1;
         }
-        eob.field_p = li.a(91, var2Lifetime1 * var4Lifetime3, var2Lifetime1 * var5Lifetime3);
+        GetMissileLauncherAimspeed.field_p = li.a(91, var2Lifetime1 * var4Lifetime3, var2Lifetime1 * var5Lifetime3);
         return;
     }
 

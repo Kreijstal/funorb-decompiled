@@ -23,10 +23,10 @@ abstract class sc implements eeb {
 
     public final qrb a(byte param0) {
         if (this.b((byte) -120)) {
-          return mp.field_p;
+          return SetTorpedoFireForce.field_p;
         }
         if (!(350L + this.field_a <= wt.a(false))) {
-          return tg.field_p;
+          return SetShieldsDirectionalArcParticleSpeedDownshift.field_p;
         }
         if (param0 == 35) {
           return this.b(-1);

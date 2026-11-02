@@ -14,10 +14,10 @@ final class rla extends dqa implements oo {
           if (!upa.field_a) {
             return false;
           }
-          if (pk.field_o != -1) {
+          if (GetUseDetailLines.field_o != -1) {
             return true;
           }
-          if (-1 != noa.field_q) {
+          if (-1 != GetTorpedoReload.field_q) {
             return true;
           }
           return false;
@@ -25,10 +25,10 @@ final class rla extends dqa implements oo {
         if (!upa.field_a) {
           return false;
         }
-        if (pk.field_o != -1) {
+        if (GetUseDetailLines.field_o != -1) {
           return true;
         }
-        if (-1 == noa.field_q) {
+        if (-1 == GetTorpedoReload.field_q) {
           return false;
         }
         return true;
@@ -40,13 +40,13 @@ final class rla extends dqa implements oo {
         int var6Lifetime1;
         if (param2 > 47) {
           var6 = param3 + this.field_r;
-          loa.field_o.a(dkb.field_a, 20 + var5, var6 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, loa.field_o.field_k);
+          SetShipToShipRamDamage.field_o.a(dkb.field_a, 20 + var5, var6 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.field_k);
           super.b(param0, param1, 94, param3);
           return;
         }
         this.field_z = (htb) null;
         var6Lifetime1 = param3 + this.field_r;
-        loa.field_o.a(dkb.field_a, 20 + var5, var6Lifetime1 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, loa.field_o.field_k);
+        SetShipToShipRamDamage.field_o.a(dkb.field_a, 20 + var5, var6Lifetime1 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.field_k);
         super.b(param0, param1, 94, param3);
     }
 
@@ -59,8 +59,8 @@ final class rla extends dqa implements oo {
 
     public rla() {
         super(0, 0, 476, 225, (wwa) null);
-        this.field_w = new htb(gqb.field_b, (sba) null);
-        this.field_y = new htb(gsa.field_p, (sba) null);
+        this.field_w = new htb(TimedSpecialOrderBehaviour.field_b, (sba) null);
+        this.field_y = new htb(SetTorpedoReload.field_p, (sba) null);
         this.field_z = new htb(cjb.field_a, (sba) null);
         vva var1 = new vva();
         this.field_w.field_q = (wwa) ((Object) var1);
@@ -75,7 +75,7 @@ final class rla extends dqa implements oo {
         this.field_y.field_l = (sba) (this);
         this.field_w.field_l = (sba) (this);
         this.field_z.field_l = (sba) (this);
-        this.field_w.field_p = tt.field_a;
+        this.field_w.field_p = AdjustBodyComponentsAction.field_a;
         this.field_z.field_p = dqa.field_u;
         this.b(-18756, this.field_y);
         this.b(-18756, this.field_w);
@@ -117,7 +117,7 @@ final class rla extends dqa implements oo {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class rla extends dqa implements oo {
             ot.a(-96);
           } else {
             if (this.field_w == param3) {
-              kga.a(70);
+              GetPhasedEnergyBeamProjectiles.a(70);
             } else {
               if (param3 == this.field_z) {
                 pr.a(17496);
@@ -156,7 +156,7 @@ final class rla extends dqa implements oo {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 

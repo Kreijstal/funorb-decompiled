@@ -14,7 +14,7 @@ final class hab extends uda {
         if (param0 != 5) {
           return;
         }
-        this.field_d.a(et.field_c, true, asa.field_a);
+        this.field_d.a(MissionVariable.field_c, true, asa.field_a);
     }
 
     public static void e(int param0) {
@@ -45,7 +45,7 @@ final class hab extends uda {
           }
           this.field_d.h(-126, param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hab.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hab.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -56,25 +56,25 @@ final class hab extends uda {
         }
         hdb var3 = this.field_d.J(10);
         if (var3 == null) {
-          this.field_d.a(0, (byte) -78, tma.field_q);
+          this.field_d.a(0, (byte) -78, GetArmageddonLength.field_q);
           return;
         }
         if (param1) {
           this.field_d.g(1, -97);
           this.field_d.a(var3, param0 - 119);
-          this.field_d.a((byte) -111, tma.field_p);
+          this.field_d.a((byte) -111, GetArmageddonLength.field_p);
           this.field_d.g(1, param0 ^ -60);
-          this.field_d.a(et.field_c, true, df.field_o);
+          this.field_d.a(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
           this.field_d.a(true, param0 ^ -21120, false, pja.field_l, 2);
-          this.field_d.a(0, (byte) -97, tma.field_q);
+          this.field_d.a(0, (byte) -97, GetArmageddonLength.field_q);
           var4 = this.field_d.H((byte) -125);
           var4.b(param0 ^ 5, this.field_d.z((byte) 103));
-          this.field_d.a(wda.field_o, true);
+          this.field_d.a(LoadSettings.field_o, true);
           this.field_d.g(0, -71);
           this.field_f = true;
           return;
         }
-        this.field_d.a(0, (byte) -78, tma.field_q);
+        this.field_d.a(0, (byte) -78, GetArmageddonLength.field_q);
     }
 
     final boolean a(byte param0) {
@@ -84,7 +84,7 @@ final class hab extends uda {
 
     final void a(int param0) {
         if (!this.field_f) {
-          this.field_d.a(0, (byte) -97, qcb.field_q);
+          this.field_d.a(0, (byte) -97, SetGrapplingHookMaxExtension8Force.field_q);
           this.field_d.a(asa.field_a, true, asa.field_a);
           if (param0 != 2543) {
             field_i = -56;
@@ -96,7 +96,7 @@ final class hab extends uda {
         this.field_d.a((byte) -111, meb.field_d);
         this.field_d.a(asa.field_a, true, asa.field_a);
         this.field_d.a(2, pea.field_d, param0 - 2536);
-        this.field_d.a(0, (byte) -125, qcb.field_q);
+        this.field_d.a(0, (byte) -125, SetGrapplingHookMaxExtension8Force.field_q);
         this.field_d.F((byte) 116);
         this.field_d.a((ura) null, param0 - 2652);
         this.field_d.g(0, param0 ^ -2481);

@@ -85,26 +85,26 @@ abstract class abb {
               var19 = param1 * var8 / (var9 + var8) + param3;
               var18 = param1 * var8 / (var9 + var8) + param3;
             }
-            dma.a(eja.field_o);
+            dma.a(GetUseCircleFill.field_o);
             if (param4[0] != null) {
               dma.g(param5, param3, var16, var18);
               param4[0].a(param5, param3);
-              dma.b(eja.field_o);
+              dma.b(GetUseCircleFill.field_o);
             }
             if (param4[2] != null) {
               dma.g(var17, param3, var10, var18);
               param4[2].a(var13, param3);
-              dma.b(eja.field_o);
+              dma.b(GetUseCircleFill.field_o);
             }
             if (null != param4[6]) {
               dma.g(param5, var19, var16, var11);
               param4[6].a(param5, var15);
-              dma.b(eja.field_o);
+              dma.b(GetUseCircleFill.field_o);
             }
             if (null != param4[8]) {
               dma.g(var17, var19, var10, var11);
               param4[8].a(var13, var15);
-              dma.b(eja.field_o);
+              dma.b(GetUseCircleFill.field_o);
             }
             if (param4[1] != null &&
               0 != param4[1].field_m) {
@@ -112,7 +112,7 @@ abstract class abb {
               for (var20 = var12; var20 < var13; var20 = var20 + param4[1].field_m) {
                 param4[1].a(var20, param3);
               }
-              dma.b(eja.field_o);
+              dma.b(GetUseCircleFill.field_o);
             }
             if (null != param4[7] &&
               param4[7].field_m != 0) {
@@ -120,7 +120,7 @@ abstract class abb {
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param4[7].field_m) {
                 param4[7].a(var20Lifetime1, var15);
               }
-              dma.b(eja.field_o);
+              dma.b(GetUseCircleFill.field_o);
             }
             if (param4[3] != null &&
               0 != param4[3].field_n) {
@@ -128,7 +128,7 @@ abstract class abb {
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param4[3].field_n) {
                 param4[3].a(param5, var20Lifetime2);
               }
-              dma.b(eja.field_o);
+              dma.b(GetUseCircleFill.field_o);
             }
             if (null != param4[5] &&
               param4[5].field_n != 0) {
@@ -136,7 +136,7 @@ abstract class abb {
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param4[5].field_n) {
                 param4[5].a(var13, var20Lifetime3);
               }
-              dma.b(eja.field_o);
+              dma.b(GetUseCircleFill.field_o);
             }
             if (null != param4[4] &&
               0 != param4[4].field_m &&
@@ -147,7 +147,7 @@ abstract class abb {
                   param4[4].a(var21, var20Lifetime4);
                 }
               }
-              dma.b(eja.field_o);
+              dma.b(GetUseCircleFill.field_o);
               return;
             }
             return;
@@ -163,7 +163,7 @@ abstract class abb {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
         }
     }
 

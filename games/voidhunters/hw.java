@@ -68,8 +68,8 @@ final class hw {
         if (param1 < 88) {
           this.a(13L, (byte) 97);
         }
-        cka.a(-1, "Currentval=" + this.field_c[(-1 + (this.field_c.length + this.field_a)) % this.field_c.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
-        cka.a(-1, "Maxval=" + var7 / 1000L, var11, 20 - param0 / 2 + param3, param2 + param4, 4266);
+        GetLagStandardDeviationOut.a(-1, "Currentval=" + this.field_c[(-1 + (this.field_c.length + this.field_a)) % this.field_c.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
+        GetLagStandardDeviationOut.a(-1, "Maxval=" + var7 / 1000L, var11, 20 - param0 / 2 + param3, param2 + param4, 4266);
     }
 
     hw() {

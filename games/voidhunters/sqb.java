@@ -94,7 +94,7 @@ abstract class sqb extends DualLinkNode {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -116,17 +116,17 @@ abstract class sqb extends DualLinkNode {
             return 0;
           }
           if (0 <= param0) {
-            return kq.a(param0, param2, 11105);
+            return SetNumStars.a(param0, param2, 11105);
           }
-          return -kq.a(-param0, param2, 11105);
+          return -SetNumStars.a(-param0, param2, 11105);
         }
         if (0 == param0) {
           return 4096;
         }
         if (param0 < 0) {
-          return -4096 + kq.a(-param0, -param2, 11105);
+          return -4096 + SetNumStars.a(-param0, -param2, 11105);
         }
-        return -kq.a(param0, -param2, 11105) + 4096;
+        return -SetNumStars.a(param0, -param2, 11105) + 4096;
     }
 
     public static void a(boolean param0) {

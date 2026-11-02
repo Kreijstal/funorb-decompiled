@@ -38,7 +38,7 @@ final class vga {
           while (param0 != 0L) {
             var7 = param0;
             param0 = param0 / 37L;
-            var9 = ks.field_q[(int)(var7 - 37L * param0)];
+            var9 = GetLaserReload.field_q[(int)(var7 - 37L * param0)];
             if (var9 == 95) {
               var10 = -1 + var6.length();
               var9 = 160;
@@ -65,20 +65,20 @@ final class vga {
     }
 
     final static void a(int param0, byte param1, String param2, long param3, int param4, boolean param5) {
-        dpa.field_p.h(24335, param4);
-        dpa.field_p.position = dpa.field_p.position + 1;
-        int var7_int = dpa.field_p.position;
-        dpa.field_p.a(param3, 108);
-        dpa.field_p.a(true, param2);
+        RequestNewestBlackboxRecording.field_p.h(24335, param4);
+        RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 1;
+        int var7_int = RequestNewestBlackboxRecording.field_p.position;
+        RequestNewestBlackboxRecording.field_p.a(param3, 108);
+        RequestNewestBlackboxRecording.field_p.a(true, param2);
         if (param1 >= -94) {
           return;
         }
         try {
-          dpa.field_p.c(0, param0);
-          dpa.field_p.c(0, !param5 ? 0 : 1);
-          dpa.field_p.e(-var7_int + dpa.field_p.position, -129);
+          RequestNewestBlackboxRecording.field_p.c(0, param0);
+          RequestNewestBlackboxRecording.field_p.c(0, !param5 ? 0 : 1);
+          RequestNewestBlackboxRecording.field_p.e(-var7_int + RequestNewestBlackboxRecording.field_p.position, -129);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "vga.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vga.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class vga {
           param0.field_d.field_e = param0;
           param0.field_e.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "vga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class vga {
           param0.field_d.field_e = param0;
           param0.field_e.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "vga.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vga.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

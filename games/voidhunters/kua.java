@@ -11,10 +11,10 @@ final class kua {
 
     final static int a(byte param0) {
         if (param0 == 75) {
-          return (kib.field_d << 4) + ((idb.field_p << 2) + lla.field_h);
+          return (kib.field_d << 4) + ((GetThrusterSmallForce.field_p << 2) + lla.field_h);
         }
         kua.a(108);
-        return (kib.field_d << 4) + ((idb.field_p << 2) + lla.field_h);
+        return (kib.field_d << 4) + ((GetThrusterSmallForce.field_p << 2) + lla.field_h);
     }
 
     public static void a(int param0) {
@@ -31,7 +31,7 @@ final class kua {
           this.field_c = param3;
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

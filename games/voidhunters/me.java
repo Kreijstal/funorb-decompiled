@@ -17,7 +17,7 @@ final class me extends pja {
     public me() {
     }
 
-    final static String a(ml param0, byte param1) {
+    final static String a(ShipComponent param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
@@ -33,14 +33,14 @@ final class me extends pja {
             return stackIn_3_0;
           }
           if (param0.i((byte) -112).field_a == 3) {
-            stackIn_6_0 = ir.field_o;
+            stackIn_6_0 = GetMpSandboxEnemySpawnLimit.field_o;
             return stackIn_6_0;
           }
           var2_int = -75 % ((-24 - param1) / 52);
-          if (null == obb.field_o) {
+          if (null == SetSpinningBladeSpinupSpeed.field_o) {
             return null;
           }
-          stackIn_10_0 = obb.field_o[param0.k(0)];
+          stackIn_10_0 = SetSpinningBladeSpinupSpeed.field_o[param0.getComponentTypeId(0)];
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,7 +52,7 @@ final class me extends pja {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class me extends pja {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        ij var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         mm var12 = null;
@@ -213,35 +213,35 @@ final class me extends pja {
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_lb) {
-              var12.field_Mb = new llb(0L, geb.field_o);
+              var12.field_Mb = new llb(0L, SetShieldsDirectionalArc.field_o);
               stackIn_10_0 = param0;
               stackIn_10_1 = param5;
               var14 = stackIn_10_0 | stackIn_10_1;
               var12.b(-561, var12.field_Mb);
               var12.field_Mb.field_F = 1;
-              var12.field_dc = new llb(0L, bsa.field_q);
+              var12.field_dc = new llb(0L, SetReverbDamp.field_q);
               var12.b(-561, var12.field_dc);
-              var12.field_yb = new llb(0L, geb.field_o);
+              var12.field_yb = new llb(0L, SetShieldsDirectionalArc.field_o);
               var12.b(-561, var12.field_yb);
               var12.field_yb.field_w = 0;
-              var12.field_wb = new llb(0L, geb.field_o);
+              var12.field_wb = new llb(0L, SetShieldsDirectionalArc.field_o);
               var12.b(-561, var12.field_wb);
               var12.field_wb.field_w = 0;
-              var12.field_Hb = new llb(0L, bsa.field_q);
+              var12.field_Hb = new llb(0L, SetReverbDamp.field_q);
               var12.b(-561, var12.field_Hb);
               var12.field_Hb.field_F = 2;
               stackIn_12_0 = var12;
               stackIn_12_1 = null;
               stackIn_12_2 = null;
               stackIn_12_3 = 0L;
-              if (!ll.field_o) {
+              if (!GetGrapplingHooksDamageableBySourcePlayer.field_o) {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = bsa.field_q;
+                stackIn_13_4 = SetReverbDamp.field_q;
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = geb.field_o;
+                stackIn_13_4 = SetShieldsDirectionalArc.field_o;
               }
               stackIn_12_0.field_Lb = new llb(stackIn_12_3, stackIn_13_4);
               var12.b(-561, var12.field_Lb);
@@ -255,11 +255,11 @@ final class me extends pja {
                 var12.field_Lb.b(-561, var12.field_Eb);
               }
               var12.field_Ab = new llb(0L, (llb) null);
-              if ((var14 & 1 << nt.field_o) != 0) {
+              if ((var14 & 1 << GetShipToShipRamDamage.field_o) != 0) {
                 var12.field_Lb.b(-561, var12.field_Ab);
               }
               var12.field_Rb = new llb(0L, (llb) null);
-              if (0 != (var14 & 1 << eib.field_o)) {
+              if (0 != (var14 & 1 << GetFighterVision.field_o)) {
                 var12.field_Lb.b(-561, var12.field_Rb);
               }
               var45 = var12.field_Wb;
@@ -280,23 +280,23 @@ final class me extends pja {
               stackIn_29_1 = null;
               stackIn_29_2 = null;
               stackIn_29_3 = 0L;
-              if (!ll.field_o) {
+              if (!GetGrapplingHooksDamageableBySourcePlayer.field_o) {
                 stackIn_30_1 = null;
                 stackIn_30_2 = null;
-                stackIn_30_4 = geb.field_o;
+                stackIn_30_4 = SetShieldsDirectionalArc.field_o;
               } else {
                 stackIn_30_1 = null;
                 stackIn_30_2 = null;
-                stackIn_30_4 = bsa.field_q;
+                stackIn_30_4 = SetReverbDamp.field_q;
               }
               stackIn_29_0.field_Yb = new llb(stackIn_29_3, stackIn_30_4);
               var12.b(-561, var12.field_Yb);
               var12.field_Yb.field_F = 2;
-              var12.field_Jb = new llb(0L, bsa.field_q);
+              var12.field_Jb = new llb(0L, SetReverbDamp.field_q);
               var12.b(-561, var12.field_Jb);
-              var12.field_Tb = new llb(0L, iga.field_o);
+              var12.field_Tb = new llb(0L, GetMissionDebrisDefaultProbability.field_o);
               var12.b(-561, var12.field_Tb);
-              var12.field_vb = new llb(0L, iga.field_o);
+              var12.field_vb = new llb(0L, GetMissionDebrisDefaultProbability.field_o);
               var12.b(-561, var12.field_vb);
               var12.field_bc = new llb(0L, qc.field_q);
               var12.b(-561, var12.field_bc);
@@ -397,7 +397,7 @@ final class me extends pja {
                 }
               } else {
                 if (0 <= var12.field_Ub) {
-                  var12.field_Mb.field_R = sta.field_o;
+                  var12.field_Mb.field_R = SetTorpedoAimarc.field_o;
                 } else {
                   if (var12.field_Gb && (var12.field_cc ||
                     var12.field_ac)) {
@@ -437,7 +437,7 @@ final class me extends pja {
               }
               var12.field_Hb.field_R = Integer.toString(var12.field_Kb);
               var12.field_Hb.a(200, 39, 48, var31, nna.field_w);
-              stackIn_67_0 = (ll.field_o) ? 250 : 200;
+              stackIn_67_0 = (GetGrapplingHooksDamageableBySourcePlayer.field_o) ? 250 : 200;
               var33_intLifetime1 = stackIn_67_0;
               var12.field_Lb.a(var33_intLifetime1, 28, -var33_intLifetime1 + 363, var31, nna.field_w);
               var34_int = hi.field_a;
@@ -465,13 +465,13 @@ final class me extends pja {
                 var12.field_Eb.a(var34_int, 35, var51_ref.field_m, 0, var12.field_Lb.field_G);
                 var34_int = var34_int + (var51_ref.field_m + hi.field_a);
               }
-              if ((1 << nt.field_o & var14Lifetime1) != 0) {
-                var52_ref = lcb.field_t[var12.field_Bb - 1];
+              if ((1 << GetShipToShipRamDamage.field_o & var14Lifetime1) != 0) {
+                var52_ref = GetPointDefenceLaserProjectileInterceptDamage.field_t[var12.field_Bb - 1];
                 var12.field_Ab.field_tb = var52_ref;
                 var12.field_Ab.a(var34_int, 117, var52_ref.field_m, 0, var12.field_Lb.field_G);
                 var34_int = var34_int + (var52_ref.field_m + hi.field_a);
               }
-              if (0 != (1 << eib.field_o & var14Lifetime1)) {
+              if (0 != (1 << GetFighterVision.field_o & var14Lifetime1)) {
                 stackIn_87_0 = hnb.field_U;
                 if (!var12.field_xb) {
                   stackIn_88_1 = 0;
@@ -483,11 +483,11 @@ final class me extends pja {
                 var12.field_Rb.a(var34_int, 121, var53_ref.field_m, 0, var12.field_Lb.field_G);
                 var34_int = var34_int + (var53_ref.field_m + hi.field_a);
               }
-              if (null != hwa.field_p) {
+              if (null != SetPointDefenceLaserAimarc.field_p) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < ocb.field_l; var36Lifetime1++) {
-                  if (hwa.field_p[var36Lifetime1] != null &&
+                  if (SetPointDefenceLaserAimarc.field_p[var36Lifetime1] != null &&
                     (var14Lifetime1 & 1 << var36Lifetime1 + kb.field_b) != 0) {
-                    var42 = hwa.field_p[var36Lifetime1][var12.field_Pb[var36Lifetime1] & 255];
+                    var42 = SetPointDefenceLaserAimarc.field_p[var36Lifetime1][var12.field_Pb[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_Zb[var36Lifetime1].field_tb = var42;
                     var12.field_Zb[var36Lifetime1].a(var34_int, 120, var54.field_m, 0, var12.field_Lb.field_G);
@@ -540,22 +540,22 @@ final class me extends pja {
                 var31 = var31 + nna.field_w * var39Lifetime1;
               }
               if (var12.field_ac) {
-                var12.field_Tb.field_R = isa.a(og.field_o, new String[]{var32}, 104);
+                var12.field_Tb.field_R = SetReverbGain.a(GetDebrisGroupColour.field_o, new String[]{var32}, 104);
                 var12.field_Tb.a(qs.field_c, 122, var12.field_hb - qs.field_c * 2, var31, nna.field_w);
                 var31 = var31 + nna.field_w;
               }
               if (var12.field_Qb) {
-                var12.field_vb.field_R = isa.a(bna.field_m, new String[]{var32}, 79);
+                var12.field_vb.field_R = SetReverbGain.a(bna.field_m, new String[]{var32}, 79);
                 var12.field_vb.a(qs.field_c, 0, var12.field_hb - 2 * qs.field_c, var31, nna.field_w);
                 var31 = var31 + nna.field_w;
               }
             }
-            var33 = jm.a((byte) -126, var32, var12.field_ec);
+            var33 = GetBombletSprayAimspeed.a((byte) -126, var32, var12.field_ec);
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
               var34_intLifetime1 = var12.field_bc.field_eb.c(var33, -qs.field_c + (var12.field_hb - qs.field_c));
-              var12.field_bc.field_I = var12.field_Db * 256 / ktb.field_p;
+              var12.field_bc.field_I = var12.field_Db * 256 / GetMomentOfInertiaPredivideDownshift.field_p;
               var12.field_bc.field_R = var33;
               var12.field_bc.a(qs.field_c, 126, -(2 * qs.field_c) + var12.field_hb, var31, nna.field_w * var34_intLifetime1);
               var31 = var31 + nna.field_w * var34_intLifetime1;
@@ -568,11 +568,11 @@ final class me extends pja {
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < ocb.field_l; var34_intLifetime2++) {
               if (var12.field_Zb[var34_intLifetime2].field_O) {
-                if (awa.field_o != null) {
-                  if (null == awa.field_o[var34_intLifetime2]) {
+                if (SetShipAimLines.field_o != null) {
+                  if (null == SetShipAimLines.field_o[var34_intLifetime2]) {
                     var35 = null;
                   } else {
-                    var35 = awa.field_o[var34_intLifetime2][255 & var12.field_Pb[var34_intLifetime2]];
+                    var35 = SetShipAimLines.field_o[var34_intLifetime2][255 & var12.field_Pb[var34_intLifetime2]];
                   }
                 } else {
                   var35 = null;
@@ -586,9 +586,9 @@ final class me extends pja {
             }
             if (var12.field_Wb.field_O) {
               if (1 != var12.field_Cb) {
-                var34Lifetime2 = uka.field_p[var12.field_Cb];
+                var34Lifetime2 = SetHealthBarHeight.field_p[var12.field_Cb];
               } else {
-                var34Lifetime2 = og.field_p;
+                var34Lifetime2 = GetDebrisGroupColour.field_p;
               }
               lob.field_a = gib.field_c + " - " + var34Lifetime2;
             }
@@ -596,7 +596,7 @@ final class me extends pja {
               if (!var12.field_xb) {
                 stackIn_152_0 = dda.field_c;
               } else {
-                stackIn_152_0 = hgb.field_p;
+                stackIn_152_0 = GetTorpedoAimspeed.field_p;
               }
               lob.field_a = stackIn_152_0;
             }
@@ -606,7 +606,7 @@ final class me extends pja {
                 if (var12.field_Gb) {
                   stackIn_160_0 = rdb.field_f;
                 } else {
-                  stackIn_160_0 = jca.field_o;
+                  stackIn_160_0 = GetMissilesCooldown.field_o;
                 }
               } else {
                 stackIn_160_0 = gda.field_k;
@@ -644,7 +644,7 @@ final class me extends pja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var7), "me.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var7), "me.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

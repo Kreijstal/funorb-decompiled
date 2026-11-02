@@ -67,7 +67,7 @@ final class vcb extends oda implements oo {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class vcb extends oda implements oo {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -340,7 +340,7 @@ final class vcb extends oda implements oo {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -488,11 +488,11 @@ final class vcb extends oda implements oo {
             for (var14 = 0; var14 < param4.field_n.length; var14++) {
               var15 = param4.field_n[var14];
               if (var15 == -1) {
-                var8[var14 + var12Lifetime1] = cu.field_p;
+                var8[var14 + var12Lifetime1] = SetPhasedEnergyBeamEnergyUsed.field_p;
                 var9[var14 + var12Lifetime1] = param4.field_m[var14];
                 var10[var12Lifetime1 + var14] = param4.field_n[var14];
               } else {
-                var16 = usa.field_o.a(var15, -118);
+                var16 = GetTorpedoAimarc.field_o.a(var15, -118);
                 var8[var14 + var12Lifetime1] = var16.a(80);
                 var9[var14 + var12Lifetime1] = param4.field_m[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
@@ -533,7 +533,7 @@ final class vcb extends oda implements oo {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -608,7 +608,7 @@ final class vcb extends oda implements oo {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -635,9 +635,9 @@ final class vcb extends oda implements oo {
         if (param0 != 32) {
           vcb.j((byte) -101);
         }
-        if (hlb.field_p < 224) {
-          var1 = hlb.field_p % 32;
-          re.a(-var1 + hlb.field_p + 32, (byte) -100);
+        if (GetMutatorVotes.field_p < 224) {
+          var1 = GetMutatorVotes.field_p % 32;
+          re.a(-var1 + GetMutatorVotes.field_p + 32, (byte) -100);
         } else {
           re.a(256, (byte) -126);
         }
@@ -691,7 +691,7 @@ final class vcb extends oda implements oo {
             }
             if (102 == param1) {
               if (this.field_G &&
-                si.field_o[82]) {
+                SetMachineGunEnergyUsed.field_o[82]) {
                 this.a((byte) -17, 0);
                 return true;
               }
@@ -703,7 +703,7 @@ final class vcb extends oda implements oo {
             }
             if (103 == param1) {
               if (this.field_G &&
-                si.field_o[82]) {
+                SetMachineGunEnergyUsed.field_o[82]) {
                 this.a((byte) -17, 65536);
                 return true;
               }
@@ -724,7 +724,7 @@ final class vcb extends oda implements oo {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param3).append(')').toString());
         }
     }
 

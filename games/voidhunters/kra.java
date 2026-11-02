@@ -15,7 +15,7 @@ final class kra {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (li.field_i) {
-          og.field_r.a(param7, param5, param3, param4 << 24 | param0, false, param6, param1);
+          GetDebrisGroupColour.field_r.a(param7, param5, param3, param4 << 24 | param0, false, param6, param1);
           if (param2 != 16994) {
             field_a = (int[]) null;
             return;

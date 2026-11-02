@@ -6,7 +6,7 @@ final class jdb implements dja {
 
     public final tv a(byte param0) {
         int var2 = -11 / ((-64 - param0) / 50);
-        return (tv) ((Object) new cf());
+        return (tv) ((Object) new SetVariableLabelAction());
     }
 
     public static void a(boolean param0) {
@@ -104,7 +104,7 @@ final class jdb implements dja {
                 var22 = var22 + (var19 & 255);
                 incrementValue$9 = var15;
                 var15++;
-                var13[incrementValue$9] = knb.a(dla.a(var22 >> 2, 255), knb.a(dla.a(var21, 1020) << 6, knb.a(dla.a(16711680, var20 << 14), dla.a(-16777216, var23 << 22))));
+                var13[incrementValue$9] = SetAngularForceDownshift.a(dla.a(var22 >> 2, 255), SetAngularForceDownshift.a(dla.a(var21, 1020) << 6, SetAngularForceDownshift.a(dla.a(16711680, var20 << 14), dla.a(-16777216, var23 << 22))));
               }
               var24 = var24 + param7;
               var25 = var25 + param7;
@@ -128,7 +128,7 @@ final class jdb implements dja {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class jdb implements dja {
           param3.a(param4, true);
           param3.c(0, param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "jdb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jdb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class jdb implements dja {
         if (param0 != 11995) {
           return (tv[]) null;
         }
-        return (tv[]) ((Object) new cf[param1]);
+        return (tv[]) ((Object) new SetVariableLabelAction[param1]);
     }
 
     static {

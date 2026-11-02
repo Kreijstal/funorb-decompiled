@@ -9,7 +9,7 @@ final class im extends aia {
     float field_n;
     boolean field_l;
 
-    im(qfa param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
+    im(OpenGlToolkit param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
         super(param0, param1, 6408, param2, param3, param4, param5, param6, param7, true);
         try {
           this.field_m = param2;
@@ -24,11 +24,11 @@ final class im extends aia {
           }
           this.field_p = param3;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    im(qfa param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
+    im(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
         super(param0, 3553, param1, param4, param5);
         try {
           this.field_p = param3;
@@ -39,11 +39,11 @@ final class im extends aia {
           this.field_n = (float)param2 / (float)param4;
           this.a(false, false, 10497);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
-    im(qfa param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
+    im(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
         super(param0, param1, param2, param3, param4, param5, param6, param7, true);
         try {
           this.field_m = param3;
@@ -58,11 +58,11 @@ final class im extends aia {
           }
           this.field_p = param4;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
-    im(qfa param0, int param1, int param2, int param3, int param4, int[] param5) {
+    im(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, 3553, 6408, param3, param4);
         try {
           this.field_m = param1;
@@ -73,11 +73,11 @@ final class im extends aia {
           this.field_l = false;
           this.a(false, false, 10497);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    im(qfa param0, int param1, int param2, int param3, int param4) {
+    im(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
         super(param0, param1, param2, param3, param4);
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
@@ -107,7 +107,7 @@ final class im extends aia {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class im extends aia {
         field_q = null;
     }
 
-    im(qfa param0, int param1, int param2, int param3, int param4, int param5) {
+    im(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int param5) {
         super(param0, 3553, param1, param4, param5);
         try {
           this.field_o = (float)param3 / (float)param5;
@@ -128,7 +128,7 @@ final class im extends aia {
           this.field_l = false;
           this.a(false, false, 10497);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

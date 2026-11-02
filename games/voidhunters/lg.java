@@ -25,9 +25,9 @@ final class lg extends uj {
     final int d(byte param0) {
         if (param0 != 64) {
           field_d = (String) null;
-          return oq.field_a;
+          return Particle.field_a;
         }
-        return oq.field_a;
+        return Particle.field_a;
     }
 
     final int a(int param0) {

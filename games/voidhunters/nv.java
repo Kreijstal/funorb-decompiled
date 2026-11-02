@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nv extends DualLinkNode implements mda {
-    private qfa field_t;
+    private OpenGlToolkit field_t;
     private int field_l;
     private int field_q;
     static int field_o;
@@ -36,15 +36,15 @@ final class nv extends DualLinkNode implements mda {
         try {
           incrementValue$0 = param2;
           param2++;
-          ww.a(param0, param5, rba.field_b[incrementValue$0], (byte) 75, param4);
+          GetSalvoRepairTimeMultiplier.a(param0, param5, ResourceNode.field_b[incrementValue$0], (byte) 75, param4);
           if (param1 < 57) {
             field_o = 108;
           }
           incrementValue$1 = param3;
           param3--;
-          ww.a(param0, param5, rba.field_b[incrementValue$1], (byte) 75, param4);
+          GetSalvoRepairTimeMultiplier.a(param0, param5, ResourceNode.field_b[incrementValue$1], (byte) 75, param4);
           for (var6_int = param2; var6_int <= param3; var6_int++) {
-            var7 = rba.field_b[var6_int];
+            var7 = ResourceNode.field_b[var6_int];
             var7[param5] = param0;
             var7[param4] = param0;
           }
@@ -52,7 +52,7 @@ final class nv extends DualLinkNode implements mda {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var6), "nv.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var6), "nv.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class nv extends DualLinkNode implements mda {
         int var5 = 0;
         try {
           int var3_int = -87 % ((4 - param0) / 54);
-          var4 = dpa.field_p;
+          var4 = RequestNewestBlackboxRecording.field_p;
           var4.h(24335, param2);
           var4.position = var4.position + 1;
           var5 = var4.position;
@@ -77,7 +77,7 @@ final class nv extends DualLinkNode implements mda {
           param1.field_d = var4.h(35);
           var4.e(var4.position - var5, -129);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "nv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -93,11 +93,11 @@ final class nv extends DualLinkNode implements mda {
           if (param0 >= 106) {
             return;
           }
-          this.field_t = (qfa) null;
+          this.field_t = (OpenGlToolkit) null;
           return;
         }
         if (param0 < 106) {
-          this.field_t = (qfa) null;
+          this.field_t = (OpenGlToolkit) null;
           return;
         }
     }
@@ -134,19 +134,19 @@ final class nv extends DualLinkNode implements mda {
         String stackIn_34_0 = null;
         if (4 <= param0) {
           if (param2) {
-            return aqa.field_a[param0];
+            return ThrusterBehaviour.field_a[param0];
           }
           return (String) null;
         }
         if (param1 < 0) {
           if (param2) {
-            return aqa.field_a[param0];
+            return ThrusterBehaviour.field_a[param0];
           }
           return (String) null;
         }
-        if (param1 >= unb.field_p) {
+        if (param1 >= SetMissionTerrainAsteroidProbability.field_p) {
           if (param2) {
-            return aqa.field_a[param0];
+            return ThrusterBehaviour.field_a[param0];
           }
           return (String) null;
         }
@@ -155,7 +155,7 @@ final class nv extends DualLinkNode implements mda {
           if (param1 != 0) {
             stackIn_22_0 = fcb.field_g;
           } else {
-            stackIn_22_0 = cta.field_r;
+            stackIn_22_0 = SetMachineGunAimarc.field_r;
           }
           return stackIn_22_0;
         }
@@ -177,19 +177,19 @@ final class nv extends DualLinkNode implements mda {
         }
         if (var3 != 3) {
           if (param2) {
-            return aqa.field_a[param0];
+            return ThrusterBehaviour.field_a[param0];
           }
           return (String) null;
         }
         if (0 == param1) {
-          stackIn_34_0 = ipa.field_q;
+          stackIn_34_0 = GetThrusterParticleSpeedDownshift.field_q;
         } else {
           stackIn_34_0 = vm.field_q;
         }
         return stackIn_34_0;
     }
 
-    nv(qfa param0, int param1, int param2, int param3) {
+    nv(OpenGlToolkit param0, int param1, int param2, int param3) {
         this.field_s = -1;
         this.field_q = -1;
         try {
@@ -197,17 +197,17 @@ final class nv extends DualLinkNode implements mda {
           this.field_k = param1;
           this.field_u = param3;
           this.field_w = param2;
-          jaggl.OpenGL.glGenRenderbuffersEXT(1, job.field_p, 0);
-          this.field_l = job.field_p[0];
+          jaggl.OpenGL.glGenRenderbuffersEXT(1, SetMachineGunReload.field_p, 0);
+          this.field_l = SetMachineGunReload.field_p[0];
           jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_l);
           jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_k, this.field_w, this.field_u);
           this.field_m = this.field_u * this.field_w * this.field_t.e(this.field_k, 2);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    nv(qfa param0, int param1, int param2, int param3, int param4) {
+    nv(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
         this.field_s = -1;
         this.field_q = -1;
         try {
@@ -215,13 +215,13 @@ final class nv extends DualLinkNode implements mda {
           this.field_t = param0;
           this.field_u = param3;
           this.field_w = param2;
-          jaggl.OpenGL.glGenRenderbuffersEXT(1, job.field_p, 0);
-          this.field_l = job.field_p[0];
+          jaggl.OpenGL.glGenRenderbuffersEXT(1, SetMachineGunReload.field_p, 0);
+          this.field_l = SetMachineGunReload.field_p[0];
           jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_l);
           jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, this.field_k, this.field_w, this.field_u);
           this.field_m = this.field_w * (this.field_u * this.field_t.e(this.field_k, 2));
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

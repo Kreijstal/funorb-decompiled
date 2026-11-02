@@ -39,7 +39,7 @@ class gna extends elb {
           try {
             var3 = "";
             if (param0 != null) {
-              var3 = eva.a(true, param0);
+              var3 = GetMachineGunProjectileDamage.a(true, param0);
             }
             if (param1 != null) {
               if (param0 != null) {
@@ -52,13 +52,13 @@ class gna extends elb {
             var8 = sh.a("%40", "@", var7, param2 + 0);
             var9 = sh.a("%26", "&", var8, 0);
             var10 = sh.a("%23", "#", var9, param2 + 0);
-            if (null == qv.field_p) {
+            if (null == SetMachineGunAimspeed.field_p) {
               return;
             }
-            stackIn_13_0 = vpa.field_b;
+            stackIn_13_0 = MissionList.field_b;
             stackIn_13_1 = null;
             stackIn_13_2 = null;
-            stackIn_13_3 = qv.field_p.getCodeBase();
+            stackIn_13_3 = SetMachineGunAimspeed.field_p.getCodeBase();
             stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(w.field_y).append("&u=");
             if (null != ku.field_d) {
               stackIn_14_1 = null;

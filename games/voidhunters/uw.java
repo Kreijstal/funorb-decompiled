@@ -7,9 +7,9 @@ final class uw extends uj {
     final int b(int param0) {
         if (param0 != -25131) {
           field_d = (String) null;
-          return oq.field_p;
+          return Particle.field_p;
         }
-        return oq.field_p;
+        return Particle.field_p;
     }
 
     uw() {
@@ -32,7 +32,7 @@ final class uw extends uj {
           param2.a(param1, false);
           param1.f((byte) -59);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uw.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uw.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,14 +40,14 @@ final class uw extends uj {
         if (param0 != -1) {
           return 2;
         }
-        return pk.field_p;
+        return GetUseDetailLines.field_p;
     }
 
     final int d(byte param0) {
         if (param0 != 64) {
           return -9;
         }
-        return oq.field_g;
+        return Particle.field_g;
     }
 
     final boolean a(boolean param0) {
@@ -58,7 +58,7 @@ final class uw extends uj {
         return false;
     }
 
-    final static im a(qfa param0, int param1, int param2, int param3, int[] param4, int param5, boolean param6, byte param7) {
+    final static im a(OpenGlToolkit param0, int param1, int param2, int param3, int[] param4, int param5, boolean param6, byte param7) {
         RuntimeException var8 = null;
         im stackIn_2_0 = null;
         im stackIn_9_0 = null;
@@ -78,7 +78,7 @@ final class uw extends uj {
           if (!param0.field_n && (!bd.a(param5, (byte) -95) ||
             !bd.a(param3, (byte) -95))) {
             if (!param0.field_g) {
-              stackIn_11_0 = new im(param0, param5, param3, hj.a(param5, (byte) -110), hj.a(param3, (byte) -109), param4);
+              stackIn_11_0 = new im(param0, param5, param3, GetSalvoaim.a(param5, (byte) -110), GetSalvoaim.a(param3, (byte) -109), param4);
               return stackIn_11_0;
             }
             stackIn_9_0 = new im(param0, 34037, param5, param3, param6, param4, param2, param1);
@@ -102,7 +102,7 @@ final class uw extends uj {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

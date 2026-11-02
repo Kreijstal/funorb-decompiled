@@ -14,10 +14,10 @@ final class gn extends kva implements eb {
           this.field_l = param2;
           this.field_h.a((ura) (this), -108);
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.e((byte) -31), param2, param3, 0, una.a(-29328, this.field_f), 5126, param4, 4 * param5);
+          jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.e((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.field_f), 5126, param4, 4 * param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -25,7 +25,7 @@ final class gn extends kva implements eb {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class gn extends kva implements eb {
           jaggl.OpenGL.glTexImage2Di(this.field_e, 0, 6408, this.field_l, this.field_j, 0, 32993, this.field_h.field_Nc, param3, param4 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -61,11 +61,11 @@ final class gn extends kva implements eb {
           this.field_h.a((ura) (this), -108);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param2, param3, 0, una.a(-29328, this.field_f), 5121, param4, param5);
+          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.field_f), 5121, param4, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -89,15 +89,15 @@ final class gn extends kva implements eb {
         return false;
     }
 
-    final static ntb[] a(int param0, ij param1) {
+    final static DiffableState[] a(int param0, IntrusiveDeque param1) {
         int var4 = 0;
         IntrusiveNode[] var2 = null;
         RuntimeException var2_ref = null;
-        ntb[] var3 = null;
+        DiffableState[] var3 = null;
         int var5 = 0;
         IntrusiveNode[] var6 = null;
         Object stackIn_3_0 = null;
-        ntb[] stackIn_8_0 = null;
+        DiffableState[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -106,13 +106,13 @@ final class gn extends kva implements eb {
         try {
           if (param1 == null) {
             stackIn_3_0 = null;
-            return (ntb[]) (stackIn_3_0);
+            return (DiffableState[]) (stackIn_3_0);
           }
           var6 = param1.f(param0 - 4872);
           var2 = var6;
-          var3 = new ntb[var6.length];
+          var3 = new DiffableState[var6.length];
           for (var4 = param0; var6.length > var4; var4++) {
-            var3[var4] = (ntb) ((Object) var6[var4]);
+            var3[var4] = (DiffableState) ((Object) var6[var4]);
           }
           stackIn_8_0 = var3;
           return stackIn_8_0;
@@ -126,7 +126,7 @@ final class gn extends kva implements eb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class gn extends kva implements eb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -173,9 +173,9 @@ final class gn extends kva implements eb {
           this.field_j = param4;
           this.field_l = param3;
           this.field_h.a((ura) (this), -109);
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param3, param4, 0, una.a(-29328, this.field_f), od.a(true, this.field_b), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param3, param4, 0, MissionControl.a(-29328, this.field_f), od.a(true, this.field_b), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

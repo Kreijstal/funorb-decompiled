@@ -24,7 +24,7 @@ abstract class fsb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "fsb.F(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "fsb.F(" + param0 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ abstract class fsb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "fsb.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "fsb.C(" + param0 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ abstract class fsb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "fsb.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "fsb.D(" + param0 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ abstract class fsb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "fsb.E(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "fsb.E(" + param0 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ abstract class fsb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "fsb.A(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "fsb.A(" + param0 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ abstract class fsb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "fsb.B(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "fsb.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ abstract class fsb extends IntrusiveNode {
           if (param2 != 6407) {
             return;
           }
-          var10 = kdb.field_o;
+          var10 = SetMinimapWidth.field_o;
           var11 = eu.a(var10 * 1024, 54);
           var12 = param6;
           var13 = param7[var12];
@@ -281,7 +281,7 @@ abstract class fsb extends IntrusiveNode {
           var29 = param0.b(true, var19);
           var30 = param0.a(var20, (byte) 118);
           var31 = param0.b(true, var21);
-          hcb.a(param2 - 6399, var29, 1, param8, var26, var28, var31, var27, 16777215 | var13 << 24, var30, param8);
+          GetDebrisCarryOver.a(param2 - 6399, var29, 1, param8, var26, var28, var31, var27, 16777215 | var13 << 24, var30, param8);
           var32 = 1;
           while (var32 < var9_int) {
             var33 = (var9_int + param6 + var32) % var9_int;
@@ -326,7 +326,7 @@ abstract class fsb extends IntrusiveNode {
                   var76 != 0) {
                   var56 = var54 << 24 | param8;
                   var57 = 1;
-                  if (bta.field_q != 0) {
+                  if (GetSalvoDamageMultiplier.field_q != 0) {
                     var58_int = param1[var38];
                     var59 = param1[1 + var38];
                     var60 = param5[var38];
@@ -335,16 +335,16 @@ abstract class fsb extends IntrusiveNode {
                     var63 = param1[1 + var41];
                     var64 = param5[var41];
                     var65 = param5[var41 + 1];
-                    var58_int = wob.a(var45, var58_int, param2 ^ 6406, var39, var44);
-                    var59 = wob.a(var45, var59, 1, var40, var44);
-                    var60 = wob.a(var45, var60, param2 - 6406, var39, var44);
-                    var61 = wob.a(var45, var61, 1, var40, var44);
+                    var58_int = SetGrapplingHookRopeChangeRate.a(var45, var58_int, param2 ^ 6406, var39, var44);
+                    var59 = SetGrapplingHookRopeChangeRate.a(var45, var59, 1, var40, var44);
+                    var60 = SetGrapplingHookRopeChangeRate.a(var45, var60, param2 - 6406, var39, var44);
+                    var61 = SetGrapplingHookRopeChangeRate.a(var45, var61, 1, var40, var44);
                     if (var37 > 0) {
                       var45 = 16 * var37 + var44;
-                      var62 = wob.a(var45, var62, 1, var42, var44);
-                      var63 = wob.a(var45, var63, 1, var43, var44);
-                      var64 = wob.a(var45, var64, 1, var42, var44);
-                      var65 = wob.a(var45, var65, 1, var43, var44);
+                      var62 = SetGrapplingHookRopeChangeRate.a(var45, var62, 1, var42, var44);
+                      var63 = SetGrapplingHookRopeChangeRate.a(var45, var63, 1, var43, var44);
+                      var64 = SetGrapplingHookRopeChangeRate.a(var45, var64, 1, var42, var44);
+                      var65 = SetGrapplingHookRopeChangeRate.a(var45, var65, 1, var43, var44);
                     }
                     var66 = param0.a(var58_int, (byte) 121);
                     var67 = param0.b(true, var59);
@@ -356,17 +356,17 @@ abstract class fsb extends IntrusiveNode {
                     var73 = param0.b(true, var65);
                     var74 = param8 | var55 << 24;
                     var75 = param8;
-                    hcb.a(8, var69, var57, var75, var46, var68, var67, var47, var56, var66, var75);
-                    hcb.a(8, var69, var57, var56, var48, var68, var47, var49, var74, var46, var75);
-                    hcb.a(8, var49, var57, var56, var70, var48, var47, var71, var75, var46, var74);
-                    hcb.a(param2 ^ 6415, var49, var57, var75, var72, var48, var71, var73, var75, var70, var74);
+                    GetDebrisCarryOver.a(8, var69, var57, var75, var46, var68, var67, var47, var56, var66, var75);
+                    GetDebrisCarryOver.a(8, var69, var57, var56, var48, var68, var47, var49, var74, var46, var75);
+                    GetDebrisCarryOver.a(8, var49, var57, var56, var70, var48, var47, var71, var75, var46, var74);
+                    GetDebrisCarryOver.a(param2 ^ 6415, var49, var57, var75, var72, var48, var71, var73, var75, var70, var74);
                   } else {
                     try {
                       var58_int = (int)(param0.field_a * 2048.0f);
                       if (var58_int < 1) {
                         var58_int = 1;
                       }
-                      og.field_r.a(var46, var47, var48, var49, var56, var58_int, var57);
+                      GetDebrisGroupColour.field_r.a(var46, var47, var48, var49, var56, var58_int, var57);
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       var58 = (Exception) (Object) decompiledCaughtException;
@@ -412,7 +412,7 @@ abstract class fsb extends IntrusiveNode {
           } else {
             stackIn_67_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param8).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -424,7 +424,7 @@ abstract class fsb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1), "fsb.<init>()");
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "fsb.<init>()");
         }
     }
 
@@ -443,7 +443,7 @@ abstract class fsb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "fsb.H(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "fsb.H(" + param0 + ')');
         }
     }
 

@@ -29,12 +29,12 @@ final class nf implements dja {
         if (param0 != 14194) {
           field_a = 27;
         }
-        if (wj.field_q == null) {
+        if (GetDebrisFoundInPairs.field_q == null) {
           return;
         }
-        var1 = wj.field_q;
+        var1 = GetDebrisFoundInPairs.field_q;
         synchronized (var1) {
-          wj.field_q = null;
+          GetDebrisFoundInPairs.field_q = null;
         }
     }
 
@@ -53,7 +53,7 @@ final class nf implements dja {
         RuntimeException var2_ref = null;
         var5 = VoidHunters.field_G;
         try {
-          if (null == om.field_c) {
+          if (null == TeamNodeCondition.field_c) {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
@@ -61,7 +61,7 @@ final class nf implements dja {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (vu) (om.field_c.a(-1, (long)var2.hashCode()));
+          var3 = (vu) (TeamNodeCondition.field_c.a(-1, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               return null;
@@ -72,7 +72,7 @@ final class nf implements dja {
               var4 = var3.field_Fb;
             }
             if (!var4.equals(var2)) {
-              var3 = (vu) (om.field_c.e(-88));
+              var3 = (vu) (TeamNodeCondition.field_c.e(-88));
               continue;
             }
             break;
@@ -89,7 +89,7 @@ final class nf implements dja {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

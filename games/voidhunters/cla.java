@@ -8,14 +8,14 @@ final class cla implements dja {
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a(76, 47);
-          return (tv[]) ((Object) new uoa[param1]);
+          return (tv[]) ((Object) new IncrementVariableAction[param1]);
         }
-        return (tv[]) ((Object) new uoa[param1]);
+        return (tv[]) ((Object) new IncrementVariableAction[param1]);
     }
 
     public final tv a(byte param0) {
         int var2 = -122 / ((-64 - param0) / 50);
-        return (tv) ((Object) new uoa());
+        return (tv) ((Object) new IncrementVariableAction());
     }
 
     static {

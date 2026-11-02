@@ -15,9 +15,9 @@ final class rcb extends dqa implements oo {
         if (param1 != 0) {
           return;
         }
-        no var5 = loa.field_o;
+        no var5 = SetShipToShipRamDamage.field_o;
         if (null != this.field_w) {
-          var5.a(lrb.field_a, this.field_g + param0, this.field_r + param3, this.field_h, 20, 16777215, -1, 0, 0, var5.field_k + var5.field_A);
+          var5.a(SetShipTeamAction.field_a, this.field_g + param0, this.field_r + param3, this.field_h, 20, 16777215, -1, 0, 0, var5.field_k + var5.field_A);
         }
     }
 
@@ -53,7 +53,7 @@ final class rcb extends dqa implements oo {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class rcb extends dqa implements oo {
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.field_w[var4_int] = joa.a((CharSequence) ((Object) param0[var4_int]), false).replace(' ', ' ');
             }
-            var4 = new meb(loa.field_o, param1, 1);
+            var4 = new meb(SetShipToShipRamDamage.field_o, param1, 1);
             this.field_v = new htb[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_v[var5] = new htb(this.field_w[var5], (sba) (this));
@@ -87,7 +87,7 @@ final class rcb extends dqa implements oo {
               this.field_v[var5].a(0, 80, 15, 1, var5 * 16 + 20);
               this.b(-18756, this.field_v[var5]);
             }
-            this.field_v[var3_int] = new htb(wpa.field_o, (sba) (this));
+            this.field_v[var3_int] = new htb(GetPointDefenceLaserRandomness.field_o, (sba) (this));
             this.field_v[var3_int].field_q = (wwa) ((Object) var4);
             this.field_v[var3_int].a(0, 100, 15, 1, 16 + var3_int * 16 + 20);
             this.b(-18756, this.field_v[var3_int]);
@@ -105,7 +105,7 @@ final class rcb extends dqa implements oo {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class rcb extends dqa implements oo {
         try {
           this.field_x = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rcb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rcb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -149,7 +149,7 @@ final class rcb extends dqa implements oo {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

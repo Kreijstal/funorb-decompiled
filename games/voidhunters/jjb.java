@@ -22,7 +22,7 @@ final class jjb {
           dma.d(param4, param3, param5, param1, param0);
         } else {
           if (ne.field_v) {
-            og.field_r.aa(param4, param3, param5, param1, param0, 0);
+            GetDebrisGroupColour.field_r.aa(param4, param3, param5, param1, param0, 0);
           }
         }
         if (param2 == 17634) {
@@ -31,7 +31,7 @@ final class jjb {
         field_f = (String) null;
     }
 
-    jjb(qfa param0) {
+    jjb(OpenGlToolkit param0) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -53,11 +53,11 @@ final class jjb {
         this.field_b = null;
         try {
           this.field_d = param0.field_tc;
-          lna.a(param0, 16);
+          SetBombletSprayProjectileLife.a(param0, 16);
           if (!this.field_d) {
             this.field_e = new aia[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
-              var23 = ppb.a(pra.field_p, 32768 * var2_int, true, 32768);
+              var23 = ppb.a(GetMissionTimeLimit.field_p, 32768 * var2_int, true, 32768);
               this.field_e[var2_int] = new aia(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
             }
             this.field_c = new aia[16];
@@ -67,13 +67,13 @@ final class jjb {
             }
             return;
           }
-          var20 = ffb.a(false, pra.field_p, true);
+          var20 = ffb.a(false, GetMissionTimeLimit.field_p, true);
           this.field_b = new ob(param0, 6410, 128, 128, 16, var20, 6410);
           var21 = ffb.a(false, pjb.field_vb, true);
           this.field_g = new ob(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_yb;
           if (var10.a(92)) {
-            var22 = ffb.a(false, lda.field_o, true);
+            var22 = ffb.a(false, SetPhasedEnergyBeamProjectileOndamageParticles.field_o, true);
             this.field_a = new ob(param0, 6408, 128, 128, 16);
             var4 = new ob(param0, 6409, 128, 128, 16, var22, 6409);
             if (var10.a(2.0f, -28279, var4, this.field_a)) {
@@ -97,7 +97,7 @@ final class jjb {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

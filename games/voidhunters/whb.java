@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class whb implements ntb {
+final class whb implements DiffableState {
     static dja field_c;
     ub field_b;
     static String field_d;
@@ -15,7 +15,7 @@ final class whb implements ntb {
         }
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         int stackIn_9_0 = 0;
         int stackIn_12_1 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -27,15 +27,15 @@ final class whb implements ntb {
         tv var5 = null;
         whb var6 = null;
         try {
-          var6 = (whb) (param0);
-          if (param1 >= -19) {
+          var6 = (whb) (other);
+          if (obfuscationGuard >= -19) {
             var5 = (tv) null;
-            this.a((tv) null, 37);
+            this.reportDifferences((tv) null, 37);
           }
           if (null != this.field_b &&
             null != var6.field_b &&
             this.field_b.getClass() == var6.field_b.getClass()) {
-            this.field_b.a(var6.field_b, -110);
+            this.field_b.reportDifferences(var6.field_b, -110);
           }
           var4 = 0;
           stackIn_9_0 = (var6.field_b != null) ? 0 : 1;
@@ -50,24 +50,24 @@ final class whb implements ntb {
             this.field_b != null &&
             this.field_b.a((byte) -45, var6.field_b)) {
             var4 = 1;
-            iva.a(-6940, "DebugSendable response has changed. before=" + var6.field_b + ", now=" + this.field_b);
+            GetSniperCannonAimarc.a(-6940, "DebugSendable response has changed. before=" + var6.field_b + ", now=" + this.field_b);
           }
           if (var4 == 0) {
             return;
           }
-          tfb.a((byte) -108, "This instance of DebugMessage has changed");
+          SetDebrisGrabbingRange.a((byte) -108, "This instance of DebugMessage has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_26_0 = var3;
           stackIn_26_1 = new StringBuilder().append("whb.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class whb implements ntb {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class whb implements ntb {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ final class whb implements ntb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -251,7 +251,7 @@ final class whb implements ntb {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

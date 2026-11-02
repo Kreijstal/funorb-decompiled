@@ -32,7 +32,7 @@ final class lq extends le {
         int[] var7 = this.field_f.a((byte) -21, param0);
         int[] var3 = var7;
         if (this.field_f.field_e) {
-          var4 = sj.field_p[param0];
+          var4 = SetSalvoUsesAllEnergy.field_p[param0];
           for (var5 = 0; var5 < hob.field_d; var5++) {
             var7[var5] = this.c(grb.field_l[var5], var4, 789221) % 4096;
           }

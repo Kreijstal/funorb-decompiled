@@ -16,7 +16,7 @@ class us extends oib {
 
     dka a(byte param0) {
         int var2 = -127 % ((param0 + 7) / 56);
-        return noa.field_p;
+        return GetTorpedoReload.field_p;
     }
 
     us(long param0, String param1) {
@@ -24,7 +24,7 @@ class us extends oib {
           this.field_g = param0;
           this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "us.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "us.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,7 +36,7 @@ class us extends oib {
           param0.a(this.field_g, 90);
           param0.a((byte) -53, this.field_e);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "us.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "us.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

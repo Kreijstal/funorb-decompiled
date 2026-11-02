@@ -62,10 +62,10 @@ final class wk implements rs {
           var23 = (int)(param4 - var10);
           var24 = (int)(param6 - var11);
           var25 = param2 | param3 << 24;
-          hcb.a(8, var22, 1, var25, var13, var21, var16, var14, param2, var15, var25);
-          hcb.a(8, var20, 1, var25, var13, var19, var22, var14, param2, var21, param2);
-          hcb.a(8, var24, 1, param2, var15, var23, var18, var16, var25, var17, param2);
-          hcb.a(param5 + 1520350608, var22, 1, param2, var15, var21, var24, var16, var25, var23, var25);
+          GetDebrisCarryOver.a(8, var22, 1, var25, var13, var21, var16, var14, param2, var15, var25);
+          GetDebrisCarryOver.a(8, var20, 1, var25, var13, var19, var22, var14, param2, var21, param2);
+          GetDebrisCarryOver.a(8, var24, 1, param2, var15, var23, var18, var16, var25, var17, param2);
+          GetDebrisCarryOver.a(param5 + 1520350608, var22, 1, param2, var15, var21, var24, var16, var25, var23, var25);
           return;
         }
         field_b = (float[]) null;
@@ -85,10 +85,10 @@ final class wk implements rs {
         var23Lifetime1 = (int)(param4 - var10);
         var24Lifetime1 = (int)(param6 - var11);
         var25Lifetime1 = param2 | param3 << 24;
-        hcb.a(8, var22Lifetime1, 1, var25Lifetime1, var13Lifetime1, var21Lifetime1, var16Lifetime1, var14Lifetime1, param2, var15Lifetime1, var25Lifetime1);
-        hcb.a(8, var20Lifetime1, 1, var25Lifetime1, var13Lifetime1, var19Lifetime1, var22Lifetime1, var14Lifetime1, param2, var21Lifetime1, param2);
-        hcb.a(8, var24Lifetime1, 1, param2, var15Lifetime1, var23Lifetime1, var18Lifetime1, var16Lifetime1, var25Lifetime1, var17Lifetime1, param2);
-        hcb.a(param5 + 1520350608, var22Lifetime1, 1, param2, var15Lifetime1, var21Lifetime1, var24Lifetime1, var16Lifetime1, var25Lifetime1, var23Lifetime1, var25Lifetime1);
+        GetDebrisCarryOver.a(8, var22Lifetime1, 1, var25Lifetime1, var13Lifetime1, var21Lifetime1, var16Lifetime1, var14Lifetime1, param2, var15Lifetime1, var25Lifetime1);
+        GetDebrisCarryOver.a(8, var20Lifetime1, 1, var25Lifetime1, var13Lifetime1, var19Lifetime1, var22Lifetime1, var14Lifetime1, param2, var21Lifetime1, param2);
+        GetDebrisCarryOver.a(8, var24Lifetime1, 1, param2, var15Lifetime1, var23Lifetime1, var18Lifetime1, var16Lifetime1, var25Lifetime1, var17Lifetime1, param2);
+        GetDebrisCarryOver.a(param5 + 1520350608, var22Lifetime1, 1, param2, var15Lifetime1, var21Lifetime1, var24Lifetime1, var16Lifetime1, var25Lifetime1, var23Lifetime1, var25Lifetime1);
     }
 
     static {

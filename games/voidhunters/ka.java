@@ -7,7 +7,7 @@ abstract class ka {
     abstract int V();
 
     final static void a(int param0, int param1) {
-        jia.field_o = param0;
+        SetReverbDry.field_o = param0;
         if (param1 != -19266) {
           return;
         }
@@ -26,7 +26,7 @@ abstract class ka {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new ana(param1, param1);
-          cg.field_p.b(-10258, var2);
+          GetToggledScoreboard.field_p.b(-10258, var2);
           var3 = 119 / ((param0 - 18) / 37);
           kpb.field_q.b(param1);
           stackIn_1_0 = var2;
@@ -41,7 +41,7 @@ abstract class ka {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

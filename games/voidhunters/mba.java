@@ -8,10 +8,10 @@ final class mba {
     final static void a(int param0) {
         if (param0 > -107) {
           field_b = 31;
-          ls.field_q = false;
+          GetMissionTerrainNebulaProbability.field_q = false;
           return;
         }
-        ls.field_q = false;
+        GetMissionTerrainNebulaProbability.field_q = false;
     }
 
     public static void a(byte param0) {

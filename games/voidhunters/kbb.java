@@ -29,21 +29,21 @@ final class kbb extends le {
         try {
           djb.field_s = new ima[5][];
           ok.field_b = new sw[5];
-          ok.field_b[0] = tg.a(param3 + 14135, param1, "basic", "tinyfont_graphics2");
+          ok.field_b[0] = SetShieldsDirectionalArcParticleSpeedDownshift.a(param3 + 14135, param1, "basic", "tinyfont_graphics2");
           djb.field_s[0] = ima.a(param2, "basic", "tinyfont_graphics2");
-          ok.field_b[1] = tg.a(14223, param1, "basic", "antigrav_24_graphics2");
+          ok.field_b[1] = SetShieldsDirectionalArcParticleSpeedDownshift.a(14223, param1, "basic", "antigrav_24_graphics2");
           djb.field_s[1] = ima.a(param2, "basic", "font_antigrav_24_alpha");
-          ok.field_b[2] = tg.a(14223, param1, "basic", "antigrav_18_graphics2");
+          ok.field_b[2] = SetShieldsDirectionalArcParticleSpeedDownshift.a(14223, param1, "basic", "antigrav_18_graphics2");
           djb.field_s[2] = ima.a(param2, "basic", "font_antigrav_18_alpha");
-          ok.field_b[3] = tg.a(mgb.a((int) param3, 14295), param1, "basic", "calibri_11_graphics2");
+          ok.field_b[3] = SetShieldsDirectionalArcParticleSpeedDownshift.a(SetFixedaim.a((int) param3, 14295), param1, "basic", "calibri_11_graphics2");
           djb.field_s[3] = ima.a(param2, "basic", "font_calibri_11_alpha");
-          ok.field_b[4] = tg.a(14223, param1, "basic", "calibri_12_graphics2");
+          ok.field_b[4] = SetShieldsDirectionalArcParticleSpeedDownshift.a(14223, param1, "basic", "calibri_12_graphics2");
           djb.field_s[4] = ima.a(param2, "basic", "font_calibri_12_alpha");
           if (param3 != 88) {
             return;
           }
-          nkb.a(false, "Finished unpacking raw fonts");
-          po.field_o = true;
+          GetDebrisThrowable.a(false, "Finished unpacking raw fonts");
+          GetFighterBayAimarc.field_o = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class kbb extends le {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class kbb extends le {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

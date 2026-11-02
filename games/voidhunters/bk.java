@@ -20,9 +20,9 @@ final class bk extends mc {
               return;
             }
             if (this.field_f != 0) {
-              msa.field_s.a(this.field_r + param3 + this.field_f, (byte) 123, this.field_h + this.field_g + param0, param3 + this.field_r, param0 + this.field_g);
+              GetDebrisMax.field_s.a(this.field_r + param3 + this.field_f, (byte) 123, this.field_h + this.field_g + param0, param3 + this.field_r, param0 + this.field_g);
               this.field_t.b(param0 + this.field_g, param1, 63, param3 + this.field_r);
-              msa.field_s.a((byte) 92);
+              GetDebrisMax.field_s.a((byte) 92);
               return;
             }
             return;
@@ -36,9 +36,9 @@ final class bk extends mc {
           return;
         }
         if (this.field_f != 0) {
-          msa.field_s.a(this.field_r + param3 + this.field_f, (byte) 123, this.field_h + this.field_g + param0, param3 + this.field_r, param0 + this.field_g);
+          GetDebrisMax.field_s.a(this.field_r + param3 + this.field_f, (byte) 123, this.field_h + this.field_g + param0, param3 + this.field_r, param0 + this.field_g);
           this.field_t.b(param0 + this.field_g, param1, 63, param3 + this.field_r);
-          msa.field_s.a((byte) 92);
+          GetDebrisMax.field_s.a((byte) 92);
           return;
         }
     }
@@ -76,7 +76,7 @@ final class bk extends mc {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class bk extends mc {
         try {
           this.field_t = param5;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

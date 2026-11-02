@@ -92,7 +92,7 @@ final class rw extends le {
         int var10Lifetime3;
         var19 = VoidHunters.field_G;
         try {
-          var5 = this.field_o * sj.field_p[param1];
+          var5 = this.field_o * SetSalvoUsesAllEnergy.field_p[param1];
           if (param0 == this.field_r) {
             var8 = this.field_t[0] << 12;
             var9 = this.field_m[0];
@@ -191,7 +191,7 @@ final class rw extends le {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -292,7 +292,7 @@ final class rw extends le {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

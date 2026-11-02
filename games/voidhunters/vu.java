@@ -21,7 +21,7 @@ final class vu extends llb {
         int var7;
         int var8;
         int var9;
-        var5 = -14 + vkb.a(param1 + 35, param4 ^ param4 >> 31 | param2 >> 31 ^ param2 | param0 ^ param0 >> 31);
+        var5 = -14 + SetBuildViewAutozoom.a(param1 + 35, param4 ^ param4 >> 31 | param2 >> 31 ^ param2 | param0 ^ param0 >> 31);
         if (var5 > 0) {
           param2 = param2 >> var5;
           param4 = param4 >> var5;

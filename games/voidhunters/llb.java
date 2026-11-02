@@ -57,7 +57,7 @@ class llb extends fgb {
     boolean field_pb;
     int field_Y;
     int field_qb;
-    ij field_lb;
+    IntrusiveDeque field_lb;
     int field_F;
     int field_M;
     private boolean field_N;
@@ -98,7 +98,7 @@ class llb extends fgb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -257,7 +257,7 @@ class llb extends fgb {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
         }
     }
 
@@ -341,20 +341,20 @@ class llb extends fgb {
         var11 = dma.field_f;
         dma.g(this.field_M, this.field_u, this.field_hb + this.field_M, this.field_G + this.field_u);
         var12 = 0;
-        if (!ru.field_o &&
+        if (!GetThrusterBindingMoveAndTurnHasOppositeMove.field_o &&
           param3 &&
-          pba.field_o != 0 &&
-          oq.field_H >= dma.field_d &&
-          oq.field_H < dma.field_a &&
+          SetDebrisPartitioned.field_o != 0 &&
+          Particle.field_H >= dma.field_d &&
+          Particle.field_H < dma.field_a &&
           qs.field_a >= dma.field_c &&
           dma.field_f > qs.field_a) {
-          this.field_C = pba.field_o;
+          this.field_C = SetDebrisPartitioned.field_o;
           var12 = 1;
-          this.field_r = oq.field_H - this.field_M;
+          this.field_r = Particle.field_H - this.field_M;
           this.field_n = -this.field_u + qs.field_a;
-          this.field_o = pba.field_o;
+          this.field_o = SetDebrisPartitioned.field_o;
         } else {
-          if (pba.field_o != 0) {
+          if (SetDebrisPartitioned.field_o != 0) {
             this.field_C = 0;
           }
           this.field_o = 0;
@@ -362,7 +362,7 @@ class llb extends fgb {
         if (hu.field_b == 0) {
           this.field_C = 0;
         }
-        stackIn_35_1 = (!dca.field_p) && (kc.field_b >= dma.field_d) && (kc.field_b < dma.field_a) && (dma.field_c <= uia.field_b) && (dma.field_f > uia.field_b);
+        stackIn_35_1 = (!GetPlayerRepairAmount.field_p) && (kc.field_b >= dma.field_d) && (kc.field_b < dma.field_a) && (dma.field_c <= uia.field_b) && (dma.field_f > uia.field_b);
         this.field_Q = stackIn_35_1;
         stackIn_40_1 = (this.field_Q) && (this.field_C == hu.field_b) && (param3);
         this.field_O = stackIn_40_1;
@@ -374,10 +374,10 @@ class llb extends fgb {
           }
         }
         if (this.field_Q) {
-          dca.field_p = true;
+          GetPlayerRepairAmount.field_p = true;
         }
         if (var12 != 0) {
-          ru.field_o = true;
+          GetThrusterBindingMoveAndTurnHasOppositeMove.field_o = true;
         }
         dma.b(var8, var9, var10, var11);
         if (this.field_C != 0 &&
@@ -497,11 +497,11 @@ class llb extends fgb {
             this.field_I = -90;
           }
           if (this.field_lb == null) {
-            this.field_lb = new ij();
+            this.field_lb = new IntrusiveDeque();
           }
           this.field_lb.b(-10258, param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "llb.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "llb.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -548,7 +548,7 @@ class llb extends fgb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -561,8 +561,8 @@ class llb extends fgb {
 
     final void a(boolean param0, int param1) {
         if (param1 == 1332) {
-          ru.field_o = !param0 ? true : false;
-          dca.field_p = !param0 ? true : false;
+          GetThrusterBindingMoveAndTurnHasOppositeMove.field_o = !param0 ? true : false;
+          GetPlayerRepairAmount.field_p = !param0 ? true : false;
           this.a(true, 0, dma.field_j, true, 0, dma.field_g);
           return;
         }
@@ -799,7 +799,7 @@ class llb extends fgb {
             this.field_R = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "llb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "llb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

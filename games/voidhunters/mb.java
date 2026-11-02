@@ -67,10 +67,10 @@ final class mb extends PacketBuffer {
         }
     }
 
-    final static void a(int param0, ml param1) {
+    final static void a(int param0, ShipComponent param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        ml var3 = null;
+        ShipComponent var3 = null;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -79,8 +79,8 @@ final class mb extends PacketBuffer {
         var4 = VoidHunters.field_G;
         try {
           for (var2_int = 0; var2_int < 4; var2_int++) {
-            var3 = new ml(29);
-            var3.a(param0 ^ -1688588311, 0, new ml(24));
+            var3 = new ShipComponent(29);
+            var3.a(param0 ^ -1688588311, 0, new ShipComponent(24));
             param1.a(1, var2_int, var3);
           }
           if (param0 == -1688588312) {
@@ -98,7 +98,7 @@ final class mb extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class mb extends PacketBuffer {
             if (param1 < 88) {
               return;
             }
-            ia.a(new Object[]{new Integer(param0)}, vpa.b((byte) -107), "resizing", (byte) 88);
+            ia.a(new Object[]{new Integer(param0)}, MissionList.b((byte) -107), "resizing", (byte) 88);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uqb extends IntrusiveNode implements ntb {
+class uqb extends IntrusiveNode implements DiffableState {
     boolean field_f;
     static int field_h;
     int field_e;
@@ -18,7 +18,7 @@ class uqb extends IntrusiveNode implements ntb {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.a(-632, this.field_e, bnb.field_p);
+          param0.a(-632, this.field_e, SetMissilesTopSpeed.field_p);
           if (param1 >= -109) {
             return;
           }
@@ -40,7 +40,7 @@ class uqb extends IntrusiveNode implements ntb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ class uqb extends IntrusiveNode implements ntb {
             }
             var9.field_a = true;
             var9.a(param2, var5, -24354, this.field_e);
-            iva.a(-6940, "CarouselEvent: Applied join for " + var8.field_b);
+            GetSniperCannonAimarc.a(-6940, "CarouselEvent: Applied join for " + var8.field_b);
           } else {
             if (null != this.field_d &&
               this.field_d.field_d != null) {
@@ -82,7 +82,7 @@ class uqb extends IntrusiveNode implements ntb {
               var11 = param2.field_c[var5];
               var11.field_a = false;
               var11.a(true, param2, this.field_e, var5);
-              iva.a(-6940, "CarouselEvent: Applied leave for player " + var5);
+              GetSniperCannonAimarc.a(-6940, "CarouselEvent: Applied leave for player " + var5);
             }
           }
           if (null != this.field_d) {
@@ -106,7 +106,7 @@ class uqb extends IntrusiveNode implements ntb {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -152,11 +152,11 @@ class uqb extends IntrusiveNode implements ntb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    public void a(tv param0, int param1) {
+    public void reportDifferences(tv other, int obfuscationGuard) {
         int stackIn_12_0 = 0;
         int stackIn_15_1 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -168,19 +168,19 @@ class uqb extends IntrusiveNode implements ntb {
         faa var5 = null;
         uqb var6 = null;
         try {
-          var6 = (uqb) (param0);
+          var6 = (uqb) (other);
           var4 = 0;
           if (this.field_e != var6.field_e) {
-            iva.a(-6940, "int tick has changed. before=" + var6.field_e + ", now=" + this.field_e);
+            GetSniperCannonAimarc.a(-6940, "int tick has changed. before=" + var6.field_e + ", now=" + this.field_e);
             var4 = 1;
           }
-          if (param1 > -19) {
+          if (obfuscationGuard > -19) {
             var5 = (faa) null;
             this.b((faa) null, 67);
           }
           if (this.field_d != null &&
             null != var6.field_d) {
-            this.field_d.a(var6.field_d, -70);
+            this.field_d.reportDifferences(var6.field_d, -70);
           }
           stackIn_12_0 = (null != this.field_d) ? 0 : 1;
           if (var6.field_d != null) {
@@ -192,24 +192,24 @@ class uqb extends IntrusiveNode implements ntb {
             this.field_d != null &&
             this.field_d.a((byte) 108, var6.field_d)) {
             var4 = 1;
-            iva.a(-6940, "CarouselSystemMessage system_message has changed. before=" + var6.field_d + ", now=" + this.field_d);
+            GetSniperCannonAimarc.a(-6940, "CarouselSystemMessage system_message has changed. before=" + var6.field_d + ", now=" + this.field_d);
           }
           if (var4 == 0) {
             return;
           }
-          tfb.a((byte) -78, "This instance of CarouselEvent has changed");
+          SetDebrisGrabbingRange.a((byte) -78, "This instance of CarouselEvent has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_26_0 = var3;
           stackIn_26_1 = new StringBuilder().append("uqb.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ class uqb extends IntrusiveNode implements ntb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ class uqb extends IntrusiveNode implements ntb {
             this.a((byte) -98, (tv) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uqb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uqb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -289,7 +289,7 @@ class uqb extends IntrusiveNode implements ntb {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_e = param0.i(0, bnb.field_p);
+          this.field_e = param0.i(0, SetMissilesTopSpeed.field_p);
           if (param1) {
             return;
           }
@@ -312,7 +312,7 @@ class uqb extends IntrusiveNode implements ntb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

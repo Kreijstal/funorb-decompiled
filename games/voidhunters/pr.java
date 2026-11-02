@@ -27,7 +27,7 @@ final class pr {
           param0.field_e.field_d = param0;
           param0.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pr.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pr.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class pr {
         if (param0 != 17496) {
           return;
         }
-        cea.a(-29, 4);
+        GetSelfDestructPrepareToggleCooldown.a(-29, 4);
     }
 
     final DualLinkNode c(int param0) {

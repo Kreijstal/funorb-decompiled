@@ -7,14 +7,14 @@ final class fma extends mfb {
 
     final int c(byte param0) {
         int var2 = 3 / ((75 - param0) / 46);
-        return cqa.field_p;
+        return SetGrapplingHookMaxLength.field_p;
     }
 
     final int f(byte param0) {
         if (param0 < 0) {
           return 126;
         }
-        return bba.field_a;
+        return MissionEvent.field_a;
     }
 
     final int e(byte param0) {
@@ -74,14 +74,14 @@ final class fma extends mfb {
 
     final static void l(int param0) {
         lw.field_i = new llb(0L, (llb) null);
-        if (ll.field_o) {
+        if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
           lw.field_i.b(-561, nna.field_v);
           lw.field_i.b(param0 ^ -9108, DualLinkNode.field_f);
           lc.field_b = new bs(bib.field_e, lw.field_i);
           tb.field_a = new llb(0L, (llb) null);
           tb.field_a.b(param0 ^ -9108, lc.field_b.field_a);
           tb.field_a.b(-561, gmb.field_c);
-          bp.a(5);
+          SetGrapplingHookMinLength.a(5);
           if (param0 != 8611) {
             fma.i((byte) -29);
             return;
@@ -93,7 +93,7 @@ final class fma extends mfb {
         tb.field_a = new llb(0L, (llb) null);
         tb.field_a.b(param0 ^ -9108, lc.field_b.field_a);
         tb.field_a.b(-561, gmb.field_c);
-        bp.a(5);
+        SetGrapplingHookMinLength.a(5);
         if (param0 == 8611) {
           return;
         }

@@ -7,7 +7,7 @@ final class jua implements dja {
     final static void a(int param0, int param1, int param2) {
         faa var3 = null;
         if (param2 == 20694) {
-          var3 = dpa.field_p;
+          var3 = RequestNewestBlackboxRecording.field_p;
           var3.h(param2 ^ 4057, param1);
           var3.c(0, 3);
           var3.c(0, 10);

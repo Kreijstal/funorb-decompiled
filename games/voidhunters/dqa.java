@@ -4,7 +4,7 @@
 import java.util.*;
 
 class dqa extends shb implements nea {
-    ij field_t;
+    IntrusiveDeque field_t;
     static String field_u;
 
     boolean e(byte param0) {
@@ -61,7 +61,7 @@ class dqa extends shb implements nea {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ class dqa extends shb implements nea {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ class dqa extends shb implements nea {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ class dqa extends shb implements nea {
 
     dqa(int param0, int param1, int param2, int param3, wwa param4) {
         super(param0, param1, param2, param3, param4, (sba) null);
-        this.field_t = new ij();
+        this.field_t = new IntrusiveDeque();
     }
 
     void a(int param0, int param1, int param2, int param3, int param4) {
@@ -223,7 +223,7 @@ class dqa extends shb implements nea {
         if (param0 == 125) {
           return null;
         }
-        this.field_t = (ij) null;
+        this.field_t = (IntrusiveDeque) null;
         return null;
     }
 
@@ -239,53 +239,53 @@ class dqa extends shb implements nea {
         try {
           nfa.field_e[0] = jeb.field_b.nextInt();
           nfa.field_e[1] = jeb.field_b.nextInt();
-          nfa.field_e[2] = (int)(iqb.field_p >> 32);
-          ss.field_p.position = 0;
-          nfa.field_e[3] = (int)iqb.field_p;
-          ss.field_p.d(nfa.field_e[0], 332614536);
-          ss.field_p.d(nfa.field_e[1], 332614536);
-          ss.field_p.d(nfa.field_e[2], 332614536);
-          ss.field_p.d(nfa.field_e[3], 332614536);
-          nq.a((byte) -91, ss.field_p);
-          ss.field_p.a(param4, true);
-          param3.a(ss.field_p, -26216);
-          dpa.field_p.position = 0;
+          nfa.field_e[2] = (int)(SetMissileLauncherRandomness.field_p >> 32);
+          SetTorpedoAcceleration.field_p.position = 0;
+          nfa.field_e[3] = (int)SetMissileLauncherRandomness.field_p;
+          SetTorpedoAcceleration.field_p.d(nfa.field_e[0], 332614536);
+          SetTorpedoAcceleration.field_p.d(nfa.field_e[1], 332614536);
+          SetTorpedoAcceleration.field_p.d(nfa.field_e[2], 332614536);
+          SetTorpedoAcceleration.field_p.d(nfa.field_e[3], 332614536);
+          GetMissilesTopSpeed.a((byte) -91, SetTorpedoAcceleration.field_p);
+          SetTorpedoAcceleration.field_p.a(param4, true);
+          param3.a(SetTorpedoAcceleration.field_p, -26216);
+          RequestNewestBlackboxRecording.field_p.position = 0;
           if (!param2) {
-            dpa.field_p.c(0, 16);
+            RequestNewestBlackboxRecording.field_p.c(0, 16);
           } else {
-            dpa.field_p.c(0, 18);
+            RequestNewestBlackboxRecording.field_p.c(0, 18);
           }
-          dpa.field_p.position = dpa.field_p.position + 2;
-          var5_int = dpa.field_p.position;
-          dpa.field_p.d(fk.field_c, 332614536);
-          dpa.field_p.a(rda.field_o, 90);
+          RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 2;
+          var5_int = RequestNewestBlackboxRecording.field_p.position;
+          RequestNewestBlackboxRecording.field_p.d(fk.field_c, 332614536);
+          RequestNewestBlackboxRecording.field_p.a(GetDebrisSurvives.field_o, 90);
           var6 = 0;
-          if (bua.field_o) {
+          if (GetRespawnTime.field_o) {
             var6 = var6 | 1;
           }
-          if (js.field_q) {
+          if (GetBombletSprayReload.field_q) {
             var6 = var6 | 4;
           }
           if (param1) {
             var6 = var6 | 8;
           }
-          if (vda.field_o != null) {
+          if (GetFighterBayAimspeed.field_o != null) {
             var6 = var6 | 16;
           }
-          dpa.field_p.c(0, var6);
-          var7 = kh.a(-6465, vpa.b((byte) -121));
+          RequestNewestBlackboxRecording.field_p.c(0, var6);
+          var7 = GetMassDriverRandomness.a(-6465, MissionList.b((byte) -121));
           if (var7 == null) {
             var7 = "";
           }
           if (param0 >= -64) {
             field_u = (String) null;
           }
-          dpa.field_p.a(true, var7);
-          if (vda.field_o != null) {
-            dpa.field_p.b((byte) 0, vda.field_o);
+          RequestNewestBlackboxRecording.field_p.a(true, var7);
+          if (GetFighterBayAimspeed.field_o != null) {
+            RequestNewestBlackboxRecording.field_p.b((byte) 0, GetFighterBayAimspeed.field_o);
           }
-          ufa.a(dpa.field_p, (byte) -126, jnb.field_p, bib.field_g, ss.field_p);
-          dpa.field_p.a(dpa.field_p.position - var5_int, -125);
+          GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -126, SetSalvoDamageMultiplier.field_p, bib.field_g, SetTorpedoAcceleration.field_p);
+          RequestNewestBlackboxRecording.field_p.a(RequestNewestBlackboxRecording.field_p.position - var5_int, -125);
           lnb.b(-1, 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -298,7 +298,7 @@ class dqa extends shb implements nea {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -306,10 +306,10 @@ class dqa extends shb implements nea {
         try {
           this.field_t.b(-10258, param1);
           if (param0 != -18756) {
-            this.field_t = (ij) null;
+            this.field_t = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "dqa.PA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dqa.PA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -361,7 +361,7 @@ class dqa extends shb implements nea {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -398,7 +398,7 @@ class dqa extends shb implements nea {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -429,13 +429,13 @@ class dqa extends shb implements nea {
             break;
           }
           if (param0 != -15834) {
-            this.field_t = (ij) null;
+            this.field_t = (IntrusiveDeque) null;
           }
           var6 = param1;
           if (var6 != 80) {
             return false;
           }
-          if (!si.field_o[81]) {
+          if (!SetMachineGunEnergyUsed.field_o[81]) {
             stackIn_17_0 = this.a(true, param2);
           } else {
             stackIn_17_0 = this.a(param2, 0);
@@ -451,7 +451,7 @@ class dqa extends shb implements nea {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -506,7 +506,7 @@ class dqa extends shb implements nea {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -545,7 +545,7 @@ class dqa extends shb implements nea {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -587,7 +587,7 @@ class dqa extends shb implements nea {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -659,7 +659,7 @@ class dqa extends shb implements nea {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 

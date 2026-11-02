@@ -24,12 +24,12 @@ final class wca extends mfb {
         if (param0 > -52) {
           return 7;
         }
-        return ftb.field_o;
+        return GetMassDriverAimarc.field_o;
     }
 
     final int a(byte param0) {
         int var2 = -72 % ((-48 - param0) / 43);
-        return jt.field_p;
+        return SetAiFiringRangeUpshift.field_p;
     }
 
     wca() {
@@ -37,14 +37,14 @@ final class wca extends mfb {
 
     final int b(int param0) {
         int var2 = -102 / ((param0 - 7) / 47);
-        return cha.field_p;
+        return SetThrusterBindingBalanceThreshold.field_p;
     }
 
     final int f(byte param0) {
         if (param0 <= 0) {
           return 27;
         }
-        return qea.field_q;
+        return SetLaserRandomness.field_q;
     }
 
     final int a(boolean param0) {
@@ -65,9 +65,9 @@ final class wca extends mfb {
     final int g(byte param0) {
         if (param0 >= -12) {
           field_c = (String) null;
-          return itb.field_o;
+          return SetPhasedEnergyBeamPulseFadetime.field_o;
         }
-        return itb.field_o;
+        return SetPhasedEnergyBeamPulseFadetime.field_o;
     }
 
     final int a(int param0) {

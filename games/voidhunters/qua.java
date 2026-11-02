@@ -5,10 +5,10 @@ final class qua {
     static dpb field_a;
     lu field_e;
     static float field_b;
-    ml[] field_c;
+    ShipComponent[] field_c;
     static kb field_d;
 
-    final void a(byte param0, ml param1) {
+    final void a(byte param0, ShipComponent param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -34,12 +34,12 @@ final class qua {
             var4Lifetime1 = 0;
             while (var4Lifetime1 < this.field_c.length) {
               if (param1.a(16, this.field_c[var4Lifetime1])) {
-                this.field_c = (ml[]) (dt.a(ii.field_d, var4Lifetime1, 15667, this.field_c));
+                this.field_c = (ShipComponent[]) (GetSalvoUsesAllEnergy.a(ii.field_d, var4Lifetime1, 15667, this.field_c));
                 var4Lifetime1--;
               }
               var4Lifetime1++;
             }
-            this.field_c = (ml[]) (ija.a(param1, this.field_c, 0, ii.field_d));
+            this.field_c = (ShipComponent[]) (ija.a(param1, this.field_c, 0, ii.field_d));
           }
           if (param0 != 108) {
             var6 = (String) null;
@@ -56,7 +56,7 @@ final class qua {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class qua {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -170,56 +170,56 @@ final class qua {
         if (param3 < 65536) {
           if (param3 < 256) {
             if (param3 >= 0) {
-              return eo.field_o[param3] >> 12;
+              return GetBuildViewAutozoomEndOnAction.field_o[param3] >> 12;
             }
             return -1;
           }
           if (param3 < 4096) {
             if (param3 < 1024) {
-              return eo.field_o[param3 >> 2] >> 11;
+              return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 2] >> 11;
             }
-            return eo.field_o[param3 >> 4] >> 10;
+            return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 4] >> 10;
           }
           if (param3 >= 16384) {
-            return eo.field_o[param3 >> 8] >> 8;
+            return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 8] >> 8;
           }
-          return eo.field_o[param3 >> 6] >> 9;
+          return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 6] >> 9;
         }
         if (param3 < 16777216) {
           if (param3 < 1048576) {
             if (param3 < 262144) {
-              return eo.field_o[param3 >> 10] >> 7;
+              return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 10] >> 7;
             }
-            return eo.field_o[param3 >> 12] >> 6;
+            return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 12] >> 6;
           }
           if (4194304 > param3) {
-            return eo.field_o[param3 >> 14] >> 5;
+            return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 14] >> 5;
           }
-          return eo.field_o[param3 >> 16] >> 4;
+          return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 16] >> 4;
         }
         if (param3 >= 268435456) {
           if (1073741824 <= param3) {
-            return eo.field_o[param3 >> 24] << var4;
+            return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 24] << var4;
           }
           if (var4 < 1) {
-            stackIn_52_0 = eo.field_o[param3 >> 22] >> -var4 + 1;
+            stackIn_52_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 22] >> -var4 + 1;
           } else {
-            stackIn_52_0 = eo.field_o[param3 >> 22] << -1 + var4;
+            stackIn_52_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 22] << -1 + var4;
           }
           return stackIn_52_0;
         }
         if (param3 >= 67108864) {
           if (var4 < 2) {
-            stackIn_61_0 = eo.field_o[param3 >> 20] >> 2 - var4;
+            stackIn_61_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 20] >> 2 - var4;
           } else {
-            stackIn_61_0 = eo.field_o[param3 >> 20] << var4 - 2;
+            stackIn_61_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 20] << var4 - 2;
           }
           return stackIn_61_0;
         }
         if (3 <= var4) {
-          stackIn_57_0 = eo.field_o[param3 >> 18] << -3 + var4;
+          stackIn_57_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 18] << -3 + var4;
         } else {
-          stackIn_57_0 = eo.field_o[param3 >> 18] >> 3 - var4;
+          stackIn_57_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 18] >> 3 - var4;
         }
         return stackIn_57_0;
     }
@@ -239,7 +239,7 @@ final class qua {
             field_a = (dpb) null;
           }
           var4 = (String) null;
-          stackIn_3_0 = cnb.a(0, param2, param0, 0, 0, (String) null, false);
+          stackIn_3_0 = GetBoostersActiveTime.a(0, param2, param0, 0, 0, (String) null, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -257,16 +257,16 @@ final class qua {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     qua(lu param0) {
         try {
           this.field_e = param0;
-          this.field_c = new ml[]{};
+          this.field_c = new ShipComponent[]{};
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -280,22 +280,22 @@ final class qua {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (dw.field_c == lrb.field_b) {
+          if (dw.field_c == SetShipTeamAction.field_b) {
             return null;
           }
           if (param0) {
             var3 = (CharSequence) null;
             qua.a((CharSequence) null, true);
           }
-          if (gka.field_o == lrb.field_b &&
-            param1.equals(vsa.field_q)) {
-            lrb.field_b = kla.field_d;
+          if (SetSniperCannonFireForce.field_o == SetShipTeamAction.field_b &&
+            param1.equals(SetCountermeasureLauncherAimarc.field_q)) {
+            SetShipTeamAction.field_b = kla.field_d;
             stackIn_11_0 = jra.field_a;
             return stackIn_11_0;
           }
-          lrb.field_b = dw.field_c;
+          SetShipTeamAction.field_b = dw.field_c;
           jra.field_a = null;
-          vsa.field_q = param1;
+          SetCountermeasureLauncherAimarc.field_q = param1;
           stackIn_9_0 = null;
           return (tpa) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -308,7 +308,7 @@ final class qua {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

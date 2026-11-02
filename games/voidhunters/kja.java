@@ -4,10 +4,10 @@
 class kja extends htb {
     static String field_C;
     private hob field_F;
-    private ij field_B;
+    private IntrusiveDeque field_B;
     static String field_G;
     private String[] field_D;
-    static ij field_E;
+    static IntrusiveDeque field_E;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
@@ -69,7 +69,7 @@ class kja extends htb {
         try {
           this.field_q = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -104,7 +104,7 @@ class kja extends htb {
           }
           this.field_D[param0] = param2;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kja.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kja.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,7 +130,7 @@ class kja extends htb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ class kja extends htb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ class kja extends htb {
           var7 = var9.a(0, param0, (shb) (this));
           var8 = var9.b(-3, param3, (shb) (this));
           do {
-            aha.a(var6.field_k + var8 - 2, var6.field_g + 2, var7 + var6.field_h - 2, 2 + var6.field_j, (byte) -90);
+            SetCountermeasureLauncherRandomness.a(var6.field_k + var8 - 2, var6.field_g + 2, var7 + var6.field_h - 2, 2 + var6.field_j, (byte) -90);
             var6 = var6.field_f;
           } while (var6 != null);
         }
@@ -208,7 +208,7 @@ class kja extends htb {
         int var16;
         int var7Lifetime1;
         var16 = VoidHunters.field_G;
-        this.field_B = new ij();
+        this.field_B = new IntrusiveDeque();
         var2 = 0;
         var3 = (at) ((Object) this.field_q);
         var4 = var3.a((shb) (this), 3);

@@ -3,7 +3,7 @@
  */
 final class pq {
     private static int field_b;
-    private static ij field_a;
+    private static IntrusiveDeque field_a;
     private static boolean field_c;
 
     final synchronized static void a(int param0, e param1) {
@@ -63,6 +63,6 @@ final class pq {
     static {
         field_b = 0;
         field_c = false;
-        field_a = new ij();
+        field_a = new IntrusiveDeque();
     }
 }

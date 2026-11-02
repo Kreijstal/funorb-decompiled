@@ -42,7 +42,7 @@ final class owa extends le {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class owa extends le {
             var24 = this.field_n[-1 + var3];
             var35 = this.field_n[var3];
             var7 = (var4 - var24[0] << 12) / (var35[0] - var24[0]);
-            var8 = 4096 - jmb.field_q[(var7 & 8165) >> 5] >> 1;
+            var8 = 4096 - GetBombletSprayProjectiles.field_q[(var7 & 8165) >> 5] >> 1;
             var9 = 4096 - var8;
             var10 = var9 * var24[1] + var35[1] * var8 >> 12;
             if (var10 <= -32768) {
@@ -219,7 +219,7 @@ final class owa extends le {
         if (this.field_m == 2) {
           this.e(0);
         }
-        taa.e((byte) -21);
+        GetTrapMouse.e((byte) -21);
         this.d(90);
     }
 

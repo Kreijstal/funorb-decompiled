@@ -20,17 +20,17 @@ final class bpa implements wwa {
           return;
         }
         if (param3 <= param4) {
-          ww.a(param0, param4, rba.field_b[param1], (byte) 75, param3);
+          GetSalvoRepairTimeMultiplier.a(param0, param4, ResourceNode.field_b[param1], (byte) 75, param3);
           return;
         }
-        ww.a(param0, param3, rba.field_b[param1], (byte) 75, param4);
+        GetSalvoRepairTimeMultiplier.a(param0, param3, ResourceNode.field_b[param1], (byte) 75, param4);
     }
 
     bpa(nva param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bpa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bpa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class bpa implements wwa {
           var7 = param3 + param1.field_r;
           npa.a(var7, (byte) 115, param1.field_f, param1.field_h, var6_int);
           if (param1.e((byte) -120)) {
-            aha.a(var7 + 2, param1.field_h - 4, 2 + var6_int, param1.field_f - 4, (byte) -100);
+            SetCountermeasureLauncherRandomness.a(var7 + 2, param1.field_h - 4, 2 + var6_int, param1.field_f - 4, (byte) -100);
           }
           dma.b(var6_int, var7, param1.field_h + (var6_int - 2), param1.field_f + var7);
           var9 = 78 % ((-27 - param0) / 35);
@@ -77,7 +77,7 @@ final class bpa implements wwa {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

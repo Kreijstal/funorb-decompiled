@@ -13,7 +13,7 @@ final class feb {
         field_b = null;
     }
 
-    final static kla a(ha param0, boolean param1) {
+    final static kla a(GraphicsToolkit param0, boolean param1) {
         qgb var2 = null;
         kla var3 = null;
         kla stackIn_3_0 = null;
@@ -24,8 +24,8 @@ final class feb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if (nsa.field_p == param0) {
-            stackIn_3_0 = eia.field_q;
+          if (GetAutoaim.field_p == param0) {
+            stackIn_3_0 = GetBombletSprayProjectileLife.field_q;
             return stackIn_3_0;
           }
           var2 = (qgb) (fgb.field_k.a((long)param0.field_b, 124));
@@ -42,8 +42,8 @@ final class feb {
             var3 = new kla(param0);
             fgb.field_k.a((long)param0.field_b, new qgb(param0, var3), (byte) -127);
           }
-          nsa.field_p = param0;
-          eia.field_q = var3;
+          GetAutoaim.field_p = param0;
+          GetBombletSprayProjectileLife.field_q = var3;
           stackIn_15_0 = var3;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -56,7 +56,7 @@ final class feb {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

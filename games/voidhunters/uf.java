@@ -40,21 +40,21 @@ class uf extends htb {
         var3 = VoidHunters.field_G;
         try {
           od.field_a = od.field_a + 1;
-          if (ela.field_o == -1 &&
+          if (GetBombletSprayProjectileOndamageParticles.field_o == -1 &&
             -1 == gi.field_b) {
             gi.field_b = uia.field_b;
-            ela.field_o = kc.field_b;
+            GetBombletSprayProjectileOndamageParticles.field_o = kc.field_b;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 != null) {
-            decompiledFrameRemainder0 = !(param0.equals(rfa.field_o));
+            decompiledFrameRemainder0 = !(param0.equals(GetReadyRoomMutatorTime.field_o));
           } else {
-            decompiledFrameRemainder0 = (null == rfa.field_o);
+            decompiledFrameRemainder0 = (null == GetReadyRoomMutatorTime.field_o);
           }
           if (decompiledFrameRemainder0) {
-            if (!jib.field_o) {
+            if (!GetMissileLauncherAimarc.field_o) {
               if (fra.field_b <= od.field_a) {
-                stackIn_17_0 = (od.field_a < fra.field_b + k.field_r) ? 1 : 0;
+                stackIn_17_0 = (od.field_a < fra.field_b + GetMessageMaxage.field_r) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -65,7 +65,7 @@ class uf extends htb {
             if (param0 == null) {
               od.field_a = 0;
             } else {
-              if (jib.field_o) {
+              if (GetMissileLauncherAimarc.field_o) {
                 od.field_a = fra.field_b;
               } else {
                 if (var2_int != 0) {
@@ -77,29 +77,29 @@ class uf extends htb {
             }
             if (param0 == null) {
               if (var2_int != 0) {
-                jib.field_o = true;
+                GetMissileLauncherAimarc.field_o = true;
               }
             } else {
-              jib.field_o = false;
+              GetMissileLauncherAimarc.field_o = false;
             }
-            js.field_r = ela.field_o;
-            tmb.field_o = gi.field_b;
+            GetBombletSprayReload.field_r = GetBombletSprayProjectileOndamageParticles.field_o;
+            SetTestActionLag.field_o = gi.field_b;
           }
-          rfa.field_o = param0;
-          if (!jib.field_o &&
+          GetReadyRoomMutatorTime.field_o = param0;
+          if (!GetMissileLauncherAimarc.field_o &&
             od.field_a < fra.field_b &&
             upb.field_c) {
             od.field_a = 0;
-            js.field_r = ela.field_o;
-            tmb.field_o = gi.field_b;
+            GetBombletSprayReload.field_r = GetBombletSprayProjectileOndamageParticles.field_o;
+            SetTestActionLag.field_o = gi.field_b;
           }
-          if (jib.field_o &&
-            ioa.field_o == od.field_a) {
-            jib.field_o = false;
+          if (GetMissileLauncherAimarc.field_o &&
+            GetBombletSprayProjectileDamage.field_o == od.field_a) {
+            GetMissileLauncherAimarc.field_o = false;
             od.field_a = 0;
           }
           gi.field_b = -1;
-          ela.field_o = -1;
+          GetBombletSprayProjectileOndamageParticles.field_o = -1;
           if (param1 == 5757) {
             return;
           }
@@ -115,7 +115,7 @@ class uf extends htb {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ class uf extends htb {
                 }
                 if (param1 == 96) {
                   if (0 < this.field_K) {
-                    if (si.field_o[82]) {
+                    if (SetMachineGunEnergyUsed.field_o[82]) {
                       stackIn_56_1 = this.g(param0 + 15834);
                     } else {
                       stackIn_56_1 = -1 + this.field_K;
@@ -289,17 +289,17 @@ class uf extends htb {
                       this.k((byte) 68);
                       return true;
                     }
-                    if (si.field_o[82] &&
+                    if (SetMachineGunEnergyUsed.field_o[82] &&
                       param1 == 65) {
                       this.b(true);
                       return true;
                     }
-                    if (si.field_o[82] &&
+                    if (SetMachineGunEnergyUsed.field_o[82] &&
                       param1 == 66) {
                       this.l((byte) 24);
                       return true;
                     }
-                    if (si.field_o[82]) {
+                    if (SetMachineGunEnergyUsed.field_o[82]) {
                       if (param1 != 67) {
                         return false;
                       }
@@ -308,7 +308,7 @@ class uf extends htb {
                     }
                   } else {
                     if (this.field_K < this.field_j.length()) {
-                      if (!si.field_o[82]) {
+                      if (!SetMachineGunEnergyUsed.field_o[82]) {
                         stackIn_27_1 = this.field_K + 1;
                       } else {
                         stackIn_27_1 = this.i(62);
@@ -343,7 +343,7 @@ class uf extends htb {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ class uf extends htb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -423,7 +423,7 @@ class uf extends htb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -486,12 +486,12 @@ class uf extends htb {
         this.field_D = 0L;
         try {
           this.field_C = param2;
-          this.field_q = msa.field_s.field_o;
+          this.field_q = GetDebrisMax.field_s.field_o;
           this.a(true, 0, param0);
           this.field_G = true;
           this.field_J = wt.a(false);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -544,7 +544,7 @@ class uf extends htb {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -587,7 +587,7 @@ class uf extends htb {
             this.field_J = wt.a(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -648,13 +648,13 @@ class uf extends htb {
     private final void a(int param0, byte param1) {
         this.field_K = param0;
         if (param1 <= -35) {
-          if (!si.field_o[81]) {
+          if (!SetMachineGunEnergyUsed.field_o[81]) {
             this.field_H = this.field_K;
           }
           return;
         }
         this.b(false);
-        if (!si.field_o[81]) {
+        if (!SetMachineGunEnergyUsed.field_o[81]) {
           this.field_H = this.field_K;
         }
     }

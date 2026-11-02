@@ -1,0 +1,181 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class RoundResult implements DiffableState {
+    int winningTime;
+    int winner;
+    static tpb field_c;
+    static boolean field_e;
+    static String field_a;
+
+    final static int a(int param0, String param1, int param2, byte param3, String param4, boolean param5, String param6) {
+        dj var7 = null;
+        RuntimeException var7_ref = null;
+        dj var8 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var7 = new dj(param4);
+          if (param3 <= 71) {
+            stackIn_2_0 = 100;
+            return stackIn_2_0;
+          }
+          var8 = new dj(param1);
+          stackIn_4_0 = GetBoostersActiveTime.a(param0, var7, var8, param2, 0, param6, param5);
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7_ref = decompiledCaughtException;
+          stackIn_7_0 = var7_ref;
+          stackIn_7_1 = new StringBuilder().append("wna.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',');
+          if (param6 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+        }
+    }
+
+    public final void b(byte param0, tv param1) {
+        RoundResult var5 = null;
+        RoundResult var6 = null;
+        try {
+          if (param0 < 54) {
+            RoundResult.a((byte) -62);
+          }
+          var5 = (RoundResult) (param1);
+          var6 = var5;
+          var6.winner = this.winner;
+          var6.winningTime = this.winningTime;
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wna.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final boolean a(byte param0, tv param1) {
+        int var3_int = 0;
+        RoundResult var4 = null;
+        boolean stackIn_5_0 = false;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          var3_int = 15 / ((22 - param0) / 59);
+          var4 = (RoundResult) (param1);
+          stackIn_5_0 = (var4.winner != this.winner) || (this.winningTime != var4.winningTime);
+          return stackIn_5_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("wna.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+        }
+    }
+
+    public final void reportDifferences(tv other, int obfuscationGuard) {
+        RoundResult var3 = null;
+        RuntimeException var3_ref = null;
+        int var4 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3 = (RoundResult) (other);
+          var4 = 0;
+          if (var3.winner != this.winner) {
+            var4 = 1;
+            System.out.println("int winner has changed. before=" + var3.winner + ", now=" + this.winner);
+          }
+          if (this.winningTime != var3.winningTime) {
+            System.out.println("int winning_time has changed. before=" + var3.winningTime + ", now=" + this.winningTime);
+            var4 = 1;
+          }
+          if (obfuscationGuard > -19) {
+            this.winner = 97;
+          }
+          if (var4 == 0) {
+            return;
+          }
+          System.out.println("This instance of RoundResult has changed");
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_12_0 = var3_ref;
+          stackIn_12_1 = new StringBuilder().append("wna.F(");
+          if (other == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    public final void a(faa param0, boolean param1) {
+        this.winner = param0.i(0, 32);
+        if (param1) {
+          return;
+        }
+        try {
+          this.winningTime = param0.i(0, 32);
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wna.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public final void b(faa param0, int param1) {
+        try {
+          if (param1 > -109) {
+            this.winningTime = 87;
+          }
+          param0.a(-632, this.winner, 32);
+          param0.a(-632, this.winningTime, 32);
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wna.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public static void a(byte param0) {
+        field_a = null;
+        if (param0 > -27) {
+          return;
+        }
+        field_c = null;
+    }
+
+    static {
+        field_c = new tpb();
+        field_a = "This game has been updated! Please reload this page.";
+    }
+}

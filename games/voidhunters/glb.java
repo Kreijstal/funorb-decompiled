@@ -56,7 +56,7 @@ final class glb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1_ref2), "glb.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref2), "glb.C(" + param0 + ')');
         }
     }
 

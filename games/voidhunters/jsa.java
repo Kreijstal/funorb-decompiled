@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jsa {
-    final static ha a(asb param0, int param1, int param2, java.awt.Canvas param3, d param4) {
+    final static GraphicsToolkit a(asb param0, int param1, int param2, java.awt.Canvas param3, d param4) {
         try {
           Class var5 = null;
           RuntimeException var5_ref = null;
           Throwable var5_ref2 = null;
           java.lang.reflect.Method var6 = null;
-          ha stackIn_7_0 = null;
-          ha stackIn_9_0 = null;
+          GraphicsToolkit stackIn_7_0 = null;
+          GraphicsToolkit stackIn_9_0 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (!sab.e((byte) -118)) {
+            if (!GetBots.e((byte) -118)) {
               throw new RuntimeException("");
             }
             if (!RasterBuffer.a("jagdx", (byte) 114)) {
@@ -20,11 +20,11 @@ final class jsa {
             }
             var5 = Class.forName("nla");
             if (param2 != 27908) {
-              stackIn_7_0 = (ha) null;
+              stackIn_7_0 = (GraphicsToolkit) null;
               return stackIn_7_0;
             }
             var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("asb"), Class.forName("java.lang.Integer")});
-            stackIn_9_0 = (ha) (var6.invoke((Object) null, new Object[]{param3, param4, param0, new Integer(param1)}));
+            stackIn_9_0 = (GraphicsToolkit) (var6.invoke((Object) null, new Object[]{param3, param4, param0, new Integer(param1)}));
             return stackIn_9_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

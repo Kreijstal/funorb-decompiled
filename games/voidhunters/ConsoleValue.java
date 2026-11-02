@@ -1,0 +1,158 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ConsoleValue {
+    Object field_b;
+    boolean field_a;
+
+    public final String toString() {
+        if (this.field_a) {
+          return sna.a(this.field_b, (byte) 107) + "{" + this.field_b + "}";
+        }
+        if (this.field_b == null) {
+          return "null";
+        }
+        return this.field_b.toString();
+    }
+
+    final static void b(int param0) {
+        if (param0 != 0) {
+          return;
+        }
+        osa.field_e = SetSniperCannonFiringLeeway.field_p;
+    }
+
+    private final long c(int param0) {
+        if (this.field_b instanceof Long) {
+          return ((Long) (this.field_b)).longValue();
+        }
+        if (this.field_b instanceof Integer) {
+          return ((Integer) (this.field_b)).longValue();
+        }
+        if (this.field_b instanceof Short) {
+          return ((Short) (this.field_b)).longValue();
+        }
+        if (this.field_b instanceof Byte) {
+          return ((Byte) (this.field_b)).longValue();
+        }
+        if (this.field_b instanceof Double) {
+          return ((Double) (this.field_b)).longValue();
+        }
+        if (param0 != 0) {
+          return 104L;
+        }
+        if (!(this.field_b instanceof Float)) {
+          throw new ClassCastException();
+        }
+        return ((Float) (this.field_b)).longValue();
+    }
+
+    ConsoleValue(int param0) {
+        this.field_b = new Integer(param0);
+        this.field_a = true;
+    }
+
+    final boolean a(boolean param0) {
+        if (param0) {
+          this.field_b = (Object) null;
+          return ((Boolean) (this.field_b)).booleanValue();
+        }
+        return ((Boolean) (this.field_b)).booleanValue();
+    }
+
+    final int a(int param0) {
+        if (param0 < 5) {
+          ConsoleValue.b(-117);
+          if (!(this.field_b instanceof Integer)) {
+            return (int)this.c(0);
+          }
+          return ((Integer) (this.field_b)).intValue();
+        }
+        if (!(this.field_b instanceof Integer)) {
+          return (int)this.c(0);
+        }
+        return ((Integer) (this.field_b)).intValue();
+    }
+
+    ConsoleValue(long param0) {
+        this.field_b = new Long(param0);
+        this.field_a = true;
+    }
+
+    ConsoleValue(boolean param0) {
+        this.field_b = new Boolean(param0);
+        this.field_a = true;
+    }
+
+    final static void a(byte param0) {
+        int var1 = -53 % ((-32 - param0) / 53);
+        SetVelocitySustainMax.field_o = 0;
+        if (null == SetFogOfWarOn.field_o) {
+          SetFogOfWarOn.field_o = new Object[]{};
+        }
+        GetMissionTerrainNebulaProbability.field_q = true;
+    }
+
+    final static void a(byte param0, int param1, int param2, int param3, int param4) {
+        if (param0 > -79) {
+          ConsoleValue.b(-58);
+        }
+        if (ob.field_j > param3 - param4) {
+          ffb.a(param4, (byte) -89, param1, param2, param3);
+        } else {
+          if (param3 + param4 > GetCountermeasureLauncherProjectiles.field_o) {
+            ffb.a(param4, (byte) -89, param1, param2, param3);
+          } else {
+            if (-param4 + param1 < NebulaField.field_c) {
+              ffb.a(param4, (byte) -89, param1, param2, param3);
+            } else {
+              if (hab.field_i < param4 + param1) {
+                ffb.a(param4, (byte) -89, param1, param2, param3);
+              } else {
+                GetFixedaim.a(param2, param3, param1, param4, 2);
+              }
+            }
+          }
+        }
+    }
+
+    ConsoleValue(float param0) {
+        this.field_b = new Float(param0);
+        this.field_a = true;
+    }
+
+    ConsoleValue(double param0) {
+        this.field_b = new Double(param0);
+        this.field_a = true;
+    }
+
+    final float d(int param0) {
+        if (this.field_b instanceof Double) {
+          return ((Double) (this.field_b)).floatValue();
+        }
+        if (this.field_b instanceof Float) {
+          return ((Float) (this.field_b)).floatValue();
+        }
+        if (param0 == 0) {
+          return (float)this.c(0);
+        }
+        return (float)this.c(0);
+    }
+
+    ConsoleValue(char param0) {
+        this.field_b = new Character(param0);
+        this.field_a = true;
+    }
+
+    ConsoleValue(Object param0) {
+        try {
+          this.field_b = param0;
+          this.field_a = false;
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+    }
+}

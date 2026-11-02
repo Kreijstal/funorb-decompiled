@@ -43,7 +43,7 @@ final class smb extends le {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class smb extends le {
           var26 = this.a(0, 1 + param0 & wf.field_d, 255);
           for (var11 = 0; var11 < hob.field_d; var11++) {
             var12 = var7 * (-var25[var11] + var26[var11]) >> 12;
-            var13 = (var9[-1 + var11 & gbb.field_q] - var9[var11 + 1 & gbb.field_q]) * var7 >> 12;
+            var13 = (var9[-1 + var11 & SetMassDriverEnergyUsed.field_q] - var9[var11 + 1 & SetMassDriverEnergyUsed.field_q]) * var7 >> 12;
             var14 = var13 >> 4;
             var15 = var12 >> 4;
             if (var14 < 0) {
@@ -116,7 +116,7 @@ final class smb extends le {
             if (var15 > 255) {
               var15 = 255;
             }
-            var16 = rob.field_o[(var15 * (var15 + 1) >> 1) + var14] & 255;
+            var16 = GetWeaponParticleSpeedDownshift.field_o[(var15 * (var15 + 1) >> 1) + var14] & 255;
             var5 = var16 * var12 >> 8;
             var6 = var16 * 4096 >> 8;
             var4 = var16 * var13 >> 8;
@@ -194,7 +194,7 @@ final class smb extends le {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

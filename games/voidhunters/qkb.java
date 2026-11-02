@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qkb extends f {
-    private ij field_h;
-    private ij field_k;
+    private IntrusiveDeque field_h;
+    private IntrusiveDeque field_k;
     private int field_j;
     private int field_i;
 
@@ -161,8 +161,8 @@ final class qkb extends f {
     }
 
     public qkb() {
-        this.field_h = new ij();
-        this.field_k = new ij();
+        this.field_h = new IntrusiveDeque();
+        this.field_k = new IntrusiveDeque();
         this.field_i = -1;
         this.field_j = 0;
     }

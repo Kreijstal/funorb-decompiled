@@ -119,7 +119,7 @@ final class ne extends ka {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param9).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -298,7 +298,7 @@ final class ne extends ka {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -326,9 +326,9 @@ final class ne extends ka {
             var5Lifetime2 = var4;
           }
           var5Lifetime1 = null;
-          if (cta.field_p != null &&
-            !cta.field_p.equals(param2.getParameter("session"))) {
-            var5Lifetime1 = cta.field_p;
+          if (SetMachineGunAimarc.field_p != null &&
+            !SetMachineGunAimarc.field_p.equals(param2.getParameter("session"))) {
+            var5Lifetime1 = SetMachineGunAimarc.field_p;
           }
           stackIn_8_0 = mpb.a(-1, param0, (byte) 50, (String) (var4), (String) (var5Lifetime1));
           return stackIn_8_0;
@@ -348,7 +348,7 @@ final class ne extends ka {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -378,23 +378,23 @@ final class ne extends ka {
         if (param1 != -11) {
           return true;
         }
-        if (null == pqa.field_o) {
-          pqa.field_o = cp.field_n.a(pcb.field_p, ff.field_p, -122);
+        if (null == GetPointDefenceLaserProjectiles.field_o) {
+          GetPointDefenceLaserProjectiles.field_o = cp.field_n.a(SetNebulaProximityFadeDownshift.field_p, GetAutozoomAmountMultiply.field_p, -122);
         }
-        if (pqa.field_o.field_f == 0) {
+        if (GetPointDefenceLaserProjectiles.field_o.field_f == 0) {
           return false;
         }
         dupTemp$2 = wt.a(false);
-        bgb.field_o = dupTemp$2;
+        GetTorpedoProjectileOndamageParticles.field_o = dupTemp$2;
         cbb.field_q = dupTemp$2;
-        if (1 != pqa.field_o.field_f) {
+        if (1 != GetPointDefenceLaserProjectiles.field_o.field_f) {
         }
-        tc.field_c = rta.field_o;
-        pqa.field_o = null;
+        tc.field_c = GetMissileLauncherRandomness.field_o;
+        GetPointDefenceLaserProjectiles.field_o = null;
         return true;
     }
 
-    ne(qfa param0) {
+    ne(OpenGlToolkit param0) {
         od discarded$0 = null;
         od discarded$1 = null;
         od discarded$2 = null;
@@ -411,11 +411,11 @@ final class ne extends ka {
           discarded$2 = new od((uq) null, 5121, 4, 0);
           discarded$3 = new dgb();
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    ne(qfa param0, cbb param1, int param2, int param3, int param4, int param5) {
+    ne(OpenGlToolkit param0, cbb param1, int param2, int param3, int param4, int param5) {
         od discarded$0 = null;
         od discarded$1 = null;
         od discarded$2 = null;
@@ -599,7 +599,7 @@ final class ne extends ka {
         try {
           this.field_w = param2;
           this.field_u = param5;
-          if (lgb.a(param5, 82, param2)) {
+          if (GetCountermeasureLauncherEnergyUsed.a(param5, 82, param2)) {
             this.field_i = new od((uq) null, 5126, 3, 0);
           }
           if (mq.a(param5, param2, false)) {
@@ -611,7 +611,7 @@ final class ne extends ka {
           if (SocketConnector.a(-6070, param5, param2)) {
             discarded$2 = new od((uq) null, 5121, 4, 0);
           }
-          if (dwa.a(param2, param5, false)) {
+          if (GetMissionDebrisVotingChancestep.a(param2, param5, false)) {
             discarded$3 = new dgb();
           }
           var65 = param0.field_a;
@@ -661,7 +661,7 @@ final class ne extends ka {
               for (var19_int = 0; param1.field_g.length > var19_int; var19_int++) {
                 var20_ref_bqa = param1.field_g[var19_int];
                 if (~var20_ref_bqa.field_b == ~var12) {
-                  var21_ref_sr = jm.a(var20_ref_bqa.field_e, 0);
+                  var21_ref_sr = GetBombletSprayAimspeed.a(var20_ref_bqa.field_e, 0);
                   if (var21_ref_sr.field_a) {
                     var18 = 1;
                   }
@@ -723,7 +723,7 @@ final class ne extends ka {
               var9[var11_int] = ((long)var14 << 32) + (long)var15_int;
             }
           }
-          kn.a((byte) -24, var81, var82);
+          GetFighterBayReload.a((byte) -24, var81, var82);
           this.field_s = param1.field_x;
           this.field_y = param1.field_v;
           this.field_f = param1.field_D;
@@ -735,7 +735,7 @@ final class ne extends ka {
             this.field_D = new uia[this.field_o];
             for (var12Lifetime1 = 0; this.field_o > var12Lifetime1; var12Lifetime1++) {
               var69 = param1.field_g[var12Lifetime1];
-              var70 = jm.a(var69.field_e, 0);
+              var70 = GetBombletSprayAimspeed.a(var69.field_e, 0);
               var15_intLifetime1 = -1;
               for (var16Lifetime1 = 0; this.field_B > var16Lifetime1; var16Lifetime1++) {
                 if (var81[var16Lifetime1] != var69.field_b) {
@@ -747,7 +747,7 @@ final class ne extends ka {
               if (-1 == var15_intLifetime1) {
                 throw new RuntimeException();
               }
-              var16Lifetime1Lifetime1 = klb.field_o[65535 & param1.field_b[var69.field_b]] & 16777215;
+              var16Lifetime1Lifetime1 = GetLagStandardDeviationIn.field_o[65535 & param1.field_b[var69.field_b]] & 16777215;
               stackIn_75_0 = var16Lifetime1Lifetime1;
               if (param1.field_r == null) {
                 stackIn_76_1 = 0;
@@ -785,7 +785,7 @@ final class ne extends ka {
             var13 = var13 + var15_intLifetime2;
           }
           this.field_H[param1.field_D] = var13;
-          var75 = ao.a(param1, var81, this.field_B, -3);
+          var75 = SetSpecialOrderBoxWidth.a(param1, var81, this.field_B, -3);
           var15 = new dea[param1.field_j];
           var16Lifetime2 = 0;
           while (param1.field_j > var16Lifetime2) {
@@ -923,14 +923,14 @@ final class ne extends ka {
                       var55 = (var86[2] * (float)var51 + ((float)var49 * var86[0] + (float)var50 * var86[1])) / var52;
                       var56 = ((float)var50 * var86[4] + (float)var49 * var86[3] + var86[5] * (float)var51) / var53;
                       var57 = (var86[7] * (float)var50 + var86[6] * (float)var49 + var86[8] * (float)var51) / var54;
-                      var30Lifetime1 = mpa.a(-93, var56, var55, var57);
-                      dhb.a(var42, param1.field_x[var32_int], var41, (byte) 39, param1.field_v[var32_int], var37, param1.field_G[var32_int], var30Lifetime1, bea.field_f, var35, var39, var86, var36, var40);
+                      var30Lifetime1 = GetSniperCannonRandomness.a(-93, var56, var55, var57);
+                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var32_int], var41, (byte) 39, param1.field_v[var32_int], var37, param1.field_G[var32_int], var30Lifetime1, bea.field_f, var35, var39, var86, var36, var40);
                       var23 = bea.field_f[1];
                       var22 = bea.field_f[0];
-                      dhb.a(var42, param1.field_x[var33_int], var41, (byte) 67, param1.field_v[var33_int], var37, param1.field_G[var33_int], var30Lifetime1, bea.field_f, var35, var39, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var33_int], var41, (byte) 67, param1.field_v[var33_int], var37, param1.field_G[var33_int], var30Lifetime1, bea.field_f, var35, var39, var86, var36, var40);
                       var24 = bea.field_f[0];
                       var25 = bea.field_f[1];
-                      dhb.a(var42, param1.field_x[var34], var41, (byte) 26, param1.field_v[var34], var37, param1.field_G[var34], var30Lifetime1, bea.field_f, var35, var39, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var34], var41, (byte) 26, param1.field_v[var34], var37, param1.field_G[var34], var30Lifetime1, bea.field_f, var35, var39, var86, var36, var40);
                       var27 = bea.field_f[1];
                       var26 = bea.field_f[0];
                     } else {
@@ -1155,9 +1155,9 @@ final class ne extends ka {
           }
           this.field_F[var16Lifetime5] = this.field_d;
           fgb.field_m = null;
-          this.field_I = ioa.a(this.field_I, 125, this.field_x);
-          this.field_h = ioa.a(this.field_h, 99, this.field_x);
-          this.field_A = ioa.a(this.field_A, 73, this.field_x);
+          this.field_I = GetBombletSprayProjectileDamage.a(this.field_I, 125, this.field_x);
+          this.field_h = GetBombletSprayProjectileDamage.a(this.field_h, 99, this.field_x);
+          this.field_A = GetBombletSprayProjectileDamage.a(this.field_A, 73, this.field_x);
           this.field_z = sna.a(this.field_z, this.field_x, 5666);
           this.field_J = ht.a(this.field_x, 0, this.field_J);
           this.field_k = ht.a(this.field_x, 0, this.field_k);
@@ -1218,7 +1218,7 @@ final class ne extends ka {
           } else {
             stackIn_215_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_211_0), ((StringBuilder) (Object) stackIn_214_1).append(stackIn_215_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_211_0), ((StringBuilder) (Object) stackIn_214_1).append(stackIn_215_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

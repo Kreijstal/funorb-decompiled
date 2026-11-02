@@ -64,7 +64,7 @@ final class fra {
           if (param2 != 2) {
             fra.a(25);
           }
-          if (!em.a(5220, var5, param1, var7, param3, var4_int, var6)) {
+          if (!SetDebrisProjectileCollision.a(5220, var5, param1, var7, param3, var4_int, var6)) {
             return false;
           }
           var8Lifetime1 = param3;
@@ -109,13 +109,13 @@ final class fra {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static int a(byte param0) {
         int var1 = -17 / ((-44 - param0) / 49);
-        return sea.a(-19) - seb.a(27546) / 2;
+        return SetThrusterForce.a(-19) - SetArmageddonWarning.a(27546) / 2;
     }
 
     static {

@@ -11,7 +11,7 @@ final class pva extends uj {
         if (param0 != -1) {
           return -73;
         }
-        return ktb.field_r;
+        return GetMomentOfInertiaPredivideDownshift.field_r;
     }
 
     final boolean a(boolean param0) {
@@ -53,9 +53,9 @@ final class pva extends uj {
     final int d(byte param0) {
         if (param0 != 64) {
           this.c((byte) -72);
-          return oq.field_t;
+          return Particle.field_t;
         }
-        return oq.field_t;
+        return Particle.field_t;
     }
 
     pva() {

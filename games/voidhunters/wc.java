@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wc {
-    private ij field_c;
+    private IntrusiveDeque field_c;
     static String field_d;
     static dja field_a;
     private IntrusiveNode field_b;
@@ -36,7 +36,7 @@ final class wc {
     final IntrusiveNode c(int param0) {
         IntrusiveNode var2 = this.field_c.field_a.field_c;
         if (param0 != 570) {
-          this.field_c = (ij) null;
+          this.field_c = (IntrusiveDeque) null;
           if (var2 == this.field_c.field_a) {
             this.field_b = null;
             return null;
@@ -111,7 +111,7 @@ final class wc {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -162,15 +162,15 @@ final class wc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    wc(ij param0) {
+    wc(IntrusiveDeque param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "wc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

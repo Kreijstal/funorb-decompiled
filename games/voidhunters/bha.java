@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bha implements ntb {
+class bha implements DiffableState {
     boolean field_a;
 
     public boolean a(byte param0, tv param1) {
@@ -36,7 +36,7 @@ class bha implements ntb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -47,11 +47,11 @@ class bha implements ntb {
             this.a(true, (tja) null, -49, 117);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bha.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public void a(tv param0, int param1) {
+    public void reportDifferences(tv other, int obfuscationGuard) {
         bha var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -62,10 +62,10 @@ class bha implements ntb {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 >= -19) {
+          if (obfuscationGuard >= -19) {
             this.field_a = true;
           }
-          var3 = (bha) (param0);
+          var3 = (bha) (other);
           var4 = 0;
           stackIn_4_0 = this.field_a;
           if (var3.field_a) {
@@ -75,24 +75,24 @@ class bha implements ntb {
           }
           if ((stackIn_4_0 ? 1 : 0) == stackIn_5_1) {
             var4 = 1;
-            iva.a(-6940, "boolean connected has changed. before=" + var3.field_a + ", now=" + this.field_a);
+            GetSniperCannonAimarc.a(-6940, "boolean connected has changed. before=" + var3.field_a + ", now=" + this.field_a);
           }
           if (var4 == 0) {
             return;
           }
-          tfb.a((byte) -73, "This instance of CarouselPlayerInfo has changed");
+          SetDebrisGrabbingRange.a((byte) -73, "This instance of CarouselPlayerInfo has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_13_0 = var3_ref;
           stackIn_13_1 = new StringBuilder().append("bha.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ class bha implements ntb {
         try {
           this.field_a = kv.a(param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ class bha implements ntb {
             this.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bha.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -122,7 +122,7 @@ class bha implements ntb {
           }
           vq.a(param0, -82, this.field_a);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ class bha implements ntb {
           var6 = var5;
           var6.field_a = this.field_a;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bha.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

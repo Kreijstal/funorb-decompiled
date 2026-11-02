@@ -5,18 +5,18 @@ final class bra {
     static String[] field_f;
     private t field_c;
     java.awt.Canvas field_a;
-    ha field_g;
+    GraphicsToolkit field_g;
     long field_e;
     fs field_b;
     static int field_d;
 
-    bra(ha param0, fs param1, java.awt.Canvas param2) {
+    bra(GraphicsToolkit param0, fs param1, java.awt.Canvas param2) {
         try {
           this.field_a = param2;
           this.field_g = param0;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -42,7 +42,7 @@ class mfb {
 
     int a(byte param0) {
         int var2 = 66 % ((param0 + 48) / 43);
-        return oq.field_x;
+        return Particle.field_x;
     }
 
     int f(int param0) {
@@ -95,8 +95,8 @@ class mfb {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (fja.field_p != null) {
-            fja.field_p.field_C.a(args, 0);
+          if (GetFighterRepairAmount.field_p != null) {
+            GetFighterRepairAmount.field_p.field_C.a(args, 0);
           }
           if (null != fib.field_j) {
             fib.field_j.field_v.a(args, param1 - 11113);
@@ -116,7 +116,7 @@ class mfb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

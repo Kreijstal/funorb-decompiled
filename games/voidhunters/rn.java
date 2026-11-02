@@ -17,14 +17,14 @@ final class rn extends DualLinkNode {
         int var2Lifetime1;
         if (this.field_n != null) {
           for (var2 = 0; this.field_n.length > var2; var2++) {
-            this.field_n[var2] = knb.a(this.field_n[var2], 32768);
+            this.field_n[var2] = SetAngularForceDownshift.a(this.field_n[var2], 32768);
           }
         }
         if (this.field_l != null) {
           var4 = 0;
           var2Lifetime1 = var4;
           while (this.field_l.length > var4) {
-            this.field_l[var4] = knb.a(this.field_l[var4], 32768);
+            this.field_l[var4] = SetAngularForceDownshift.a(this.field_l[var4], 32768);
             var4++;
           }
         }
@@ -63,7 +63,7 @@ final class rn extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -91,14 +91,14 @@ final class rn extends DualLinkNode {
               this.field_q = new char[var4_int];
               this.field_l = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_l[var5] = param2.e(mgb.a((int) param1, 1886));
+                this.field_l[var5] = param2.e(SetFixedaim.a((int) param1, 1886));
                 var6 = param2.d((byte) -114);
                 stackIn_8_0 = this.field_q;
                 stackIn_8_1 = var5;
                 if (var6 == 0) {
                   stackIn_9_2 = (char)0;
                 } else {
-                  stackIn_9_2 = qe.a((byte) var6, param1 + 5);
+                  stackIn_9_2 = GetMassDriverEnergyUsed.a((byte) var6, param1 + 5);
                 }
                 stackIn_8_0[stackIn_8_1] = stackIn_9_2;
               }
@@ -115,7 +115,7 @@ final class rn extends DualLinkNode {
                   if (0 == var6) {
                     stackIn_16_2 = (char)0;
                   } else {
-                    stackIn_16_2 = qe.a((byte) var6, -120);
+                    stackIn_16_2 = GetMassDriverEnergyUsed.a((byte) var6, -120);
                   }
                   stackIn_15_0[stackIn_15_1] = stackIn_16_2;
                 }
@@ -142,7 +142,7 @@ final class rn extends DualLinkNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

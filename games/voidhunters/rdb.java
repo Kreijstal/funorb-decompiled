@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rdb extends IntrusiveNode implements ntb {
-    private int field_e;
-    private int field_g;
-    private int field_d;
+final class rdb extends IntrusiveNode implements DiffableState {
+    private int x;
+    private int team;
+    private int y;
     static String field_f;
 
     final int a(boolean param0) {
         if (!param0) {
           this.a(46);
-          return this.field_e;
+          return this.x;
         }
-        return this.field_e;
+        return this.x;
     }
 
     final boolean a(int param0, byte param1, int param2) {
@@ -20,8 +20,8 @@ final class rdb extends IntrusiveNode implements ntb {
         int var5 = 0;
         int var6 = 0;
         if (param1 < -54) {
-          var4 = param0 - this.field_e;
-          var5 = param2 - this.field_d;
+          var4 = param0 - this.x;
+          var5 = param2 - this.y;
           var6 = ar.a(var4, (byte) 106, var5);
           return 51200 > var6 ? true : false;
         }
@@ -31,51 +31,51 @@ final class rdb extends IntrusiveNode implements ntb {
     public final void a(faa param0, boolean param1) {
         try {
           if (param1) {
-            this.field_e = -114;
+            this.x = -114;
           }
-          this.field_e = param0.i(0, 32);
-          this.field_d = param0.i(0, 32);
-          this.field_g = param0.i(0, 1);
+          this.x = param0.i(0, 32);
+          this.y = param0.i(0, 32);
+          this.team = param0.i(0, 1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rdb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rdb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(lta param0, boolean param1) {
         int var3_int = 0;
         try {
-          var3_int = qpb.a(param1, this.field_g, 13894143);
-          kq.a(param0.field_a * 51200.0f, (byte) 89, param0.b(true, this.field_d), var3_int, param0.a(this.field_e, (byte) 121));
+          var3_int = qpb.a(param1, this.team, 13894143);
+          SetNumStars.a(param0.field_a * 51200.0f, (byte) 89, param0.b(true, this.y), var3_int, param0.a(this.x, (byte) 121));
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rdb.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rdb.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final int d(int param0) {
+    final int getTeam(int param0) {
         int var2 = 28 % ((param0 - 55) / 49);
-        return this.field_g;
+        return this.team;
     }
 
-    final void a(int param0, pe param1) {
+    final void a(int param0, World param1) {
         try {
           if (param0 != 3128) {
             this.a(-54, (byte) 92, -6);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rdb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rdb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void b(faa param0, int param1) {
         try {
           if (param1 >= -109) {
-            this.field_d = -98;
+            this.y = -98;
           }
-          param0.a(-632, this.field_e, 32);
-          param0.a(-632, this.field_d, 32);
-          param0.a(-632, this.field_g, 1);
+          param0.a(-632, this.x, 32);
+          param0.a(-632, this.y, 32);
+          param0.a(-632, this.team, 1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rdb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rdb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -85,29 +85,29 @@ final class rdb extends IntrusiveNode implements ntb {
         try {
           var6 = (rdb) (param1);
           var7 = var6;
-          var7.field_g = this.field_g;
-          var7.field_e = this.field_e;
+          var7.team = this.team;
+          var7.x = this.x;
           if (param0 < 54) {
             tv var4 = (tv) null;
             this.a((byte) 14, (tv) null);
           }
-          var7.field_d = this.field_d;
+          var7.y = this.y;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rdb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rdb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, byte param1) {
         int var3 = -111 % ((param1 + 20) / 61);
-        this.field_g = param0;
+        this.team = param0;
     }
 
     final int a(int param0) {
         if (param0 < 56) {
-          this.field_d = -12;
-          return this.field_d;
+          this.y = -12;
+          return this.y;
         }
-        return this.field_d;
+        return this.y;
     }
 
     public static void c(int param0) {
@@ -131,7 +131,7 @@ final class rdb extends IntrusiveNode implements ntb {
         try {
           var3_int = 28 % ((22 - param0) / 59);
           var4 = (rdb) (param1);
-          stackIn_6_0 = (this.field_e != var4.field_e) || (var4.field_d != this.field_d) || (var4.field_g != this.field_g);
+          stackIn_6_0 = (this.x != var4.x) || (var4.y != this.y) || (var4.team != this.team);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,7 +143,7 @@ final class rdb extends IntrusiveNode implements ntb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -151,12 +151,12 @@ final class rdb extends IntrusiveNode implements ntb {
     }
 
     rdb(int param0, int param1, int param2) {
-        this.field_g = param2;
-        this.field_d = param1;
-        this.field_e = param0;
+        this.team = param2;
+        this.y = param1;
+        this.x = param0;
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         rdb var5 = null;
@@ -165,21 +165,21 @@ final class rdb extends IntrusiveNode implements ntb {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = (rdb) (param0);
-          if (param1 >= -19) {
+          var5 = (rdb) (other);
+          if (obfuscationGuard >= -19) {
             return;
           }
           var4 = 0;
-          if (this.field_e != var5.field_e) {
-            System.out.println("int x has changed. before=" + var5.field_e + ", now=" + this.field_e);
+          if (this.x != var5.x) {
+            System.out.println("int x has changed. before=" + var5.x + ", now=" + this.x);
             var4 = 1;
           }
-          if (this.field_d != var5.field_d) {
+          if (this.y != var5.y) {
             var4 = 1;
-            System.out.println("int y has changed. before=" + var5.field_d + ", now=" + this.field_d);
+            System.out.println("int y has changed. before=" + var5.y + ", now=" + this.y);
           }
-          if (var5.field_g != this.field_g) {
-            System.out.println("int team has changed. before=" + var5.field_g + ", now=" + this.field_g);
+          if (var5.team != this.team) {
+            System.out.println("int team has changed. before=" + var5.team + ", now=" + this.team);
             var4 = 1;
           }
           if (var4 == 0) {
@@ -192,12 +192,12 @@ final class rdb extends IntrusiveNode implements ntb {
           var3 = decompiledCaughtException;
           stackIn_15_0 = var3;
           stackIn_15_1 = new StringBuilder().append("rdb.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

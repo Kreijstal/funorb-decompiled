@@ -10,7 +10,7 @@ final class jka {
           param0.field_m = new char[]{(char)63};
           param0.field_n = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "jka.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jka.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

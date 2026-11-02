@@ -129,12 +129,12 @@ final class ihb extends IntrusiveNode {
             var12Lifetime2Lifetime1 = (Math.abs(var13) >= Math.abs(var14Lifetime1)) ? var14Lifetime1 : var13;
             var13Lifetime1 = Math.min(var3_int, var5);
             var14Lifetime2 = Math.min(var7, var9);
-            var15Lifetime2 = fva.a(var12Lifetime2Lifetime1, var13Lifetime1, param2, var14Lifetime2, param0, var11Lifetime2, -1);
+            var15Lifetime2 = SetFightersPerPlayerMaximum.a(var12Lifetime2Lifetime1, var13Lifetime1, param2, var14Lifetime2, param0, var11Lifetime2, -1);
             if (var15Lifetime2 == 2147483647) {
               stackIn_49_0 = -1;
               return stackIn_49_0;
             }
-            var16Lifetime1 = fva.a(var15Lifetime2, var13Lifetime1, param0, var14Lifetime2, param2, var11Lifetime2, -1);
+            var16Lifetime1 = SetFightersPerPlayerMaximum.a(var15Lifetime2, var13Lifetime1, param0, var14Lifetime2, param2, var11Lifetime2, -1);
             if (Math.abs(var16Lifetime1) < Math.min(Math.abs(var15Lifetime2), Math.abs(var12Lifetime2Lifetime1))) {
             }
             if (var16Lifetime1 != 2147483647) {
@@ -162,7 +162,7 @@ final class ihb extends IntrusiveNode {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
         }
     }
 

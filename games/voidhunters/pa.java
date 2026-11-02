@@ -10,7 +10,7 @@ final class pa {
         faa var3 = null;
         faa var3Lifetime1;
         if (param1 < -82) {
-          var3 = dpa.field_p;
+          var3 = RequestNewestBlackboxRecording.field_p;
           var3.h(24335, param0);
           var3.c(0, 3);
           var3.c(0, 8);
@@ -19,7 +19,7 @@ final class pa {
         }
         asb var4 = (asb) null;
         pa.a(-92, -5, (asb) null, 15);
-        var3Lifetime1 = dpa.field_p;
+        var3Lifetime1 = RequestNewestBlackboxRecording.field_p;
         var3Lifetime1.h(24335, param0);
         var3Lifetime1.c(0, 3);
         var3Lifetime1.c(0, 8);
@@ -58,7 +58,7 @@ final class pa {
           if (var5 == null) {
             return false;
           }
-          wab.a(0, var5);
+          SetUseSprites.a(0, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class pa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -15,7 +15,7 @@ final class lm {
         if (!param0) {
           return false;
         }
-        return nd.field_r > 250 ? true : false;
+        return SetSalvoaim.field_r > 250 ? true : false;
     }
 
     static {

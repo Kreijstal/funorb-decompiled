@@ -606,7 +606,7 @@ final class bfb {
         field_h = param3 - param1;
         bfb.a();
         if (field_g.length < field_h) {
-          field_g = new int[hj.a(field_h, (byte) -105)];
+          field_g = new int[GetSalvoaim.a(field_h, (byte) -105)];
         }
         int var4 = param1 * dma.field_g + param0;
         for (var5 = 0; var5 < field_h; var5++) {

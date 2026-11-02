@@ -16,8 +16,8 @@ final class ga extends fnb {
     private byte[] field_d;
     private jtb field_r;
     private boolean field_o;
-    private ij field_v;
-    private ij field_i;
+    private IntrusiveDeque field_v;
+    private IntrusiveDeque field_i;
     private int field_h;
     private boolean field_q;
     private long field_e;
@@ -292,7 +292,7 @@ final class ga extends fnb {
         }
         this.field_q = true;
         if (this.field_i == null) {
-          this.field_i = new ij();
+          this.field_i = new IntrusiveDeque();
         }
     }
 
@@ -428,16 +428,16 @@ final class ga extends fnb {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              gkb.field_p.reset();
-              gkb.field_p.update(var5, 0, var18.length - 2);
-              var6_int = (int)gkb.field_p.getValue();
+              SetPointDefenceLaserProjectiles.field_p.reset();
+              SetPointDefenceLaserProjectiles.field_p.update(var5, 0, var18.length - 2);
+              var6_int = (int)SetPointDefenceLaserProjectiles.field_p.getValue();
               if (this.field_t.field_d[param2] != var6_int) {
                 throw new RuntimeException();
               }
               if (this.field_t.field_c != null &&
                 this.field_t.field_c[param2] != null) {
                 var29 = this.field_t.field_c[param2];
-                var30 = fqb.a((byte) 25, -2 + var18.length, var18, 0);
+                var30 = SetMissileLauncherProjectiles.a((byte) 25, -2 + var18.length, var18, 0);
                 var11 = 0;
                 var9 = var11;
                 while (64 > var11) {
@@ -482,16 +482,16 @@ final class ga extends fnb {
         try {
           if (var5 != null &&
             2 < var18.length) {
-            gkb.field_p.reset();
-            gkb.field_p.update(var5, 0, var18.length - 2);
-            var6_int = (int)gkb.field_p.getValue();
+            SetPointDefenceLaserProjectiles.field_p.reset();
+            SetPointDefenceLaserProjectiles.field_p.update(var5, 0, var18.length - 2);
+            var6_int = (int)SetPointDefenceLaserProjectiles.field_p.getValue();
             if (this.field_t.field_d[param2] != var6_int) {
               throw new RuntimeException();
             }
             if (this.field_t.field_c != null &&
               this.field_t.field_c[param2] != null) {
               var28 = this.field_t.field_c[param2];
-              var27 = fqb.a((byte) 25, -2 + var18.length, var18, 0);
+              var27 = SetMissileLauncherProjectiles.a((byte) 25, -2 + var18.length, var18, 0);
               for (var9 = 0; var9 < 64; var9++) {
                 if (var27[var9] != var28[var9]) {
                   throw new RuntimeException();
@@ -538,7 +538,7 @@ final class ga extends fnb {
           dma.e(param2, param3, param5, param4, param6, param0);
         } else {
           if (ne.field_v) {
-            og.field_r.a(param5, (byte) 120, param6 | param0 << 24, param4, param3, param2);
+            GetDebrisGroupColour.field_r.a(param5, (byte) 120, param6 | param0 << 24, param4, param3, param2);
           }
         }
         if (param1) {
@@ -563,7 +563,7 @@ final class ga extends fnb {
         RuntimeException var10 = null;
         this.field_u = new gnb(16);
         this.field_h = 0;
-        this.field_v = new ij();
+        this.field_v = new IntrusiveDeque();
         this.field_e = 0L;
         try {
           this.field_p = param0;
@@ -572,7 +572,7 @@ final class ga extends fnb {
             this.field_o = false;
           } else {
             this.field_o = true;
-            this.field_i = new ij();
+            this.field_i = new IntrusiveDeque();
           }
           this.field_j = param2;
           stackIn_7_1 = (param8);
@@ -620,7 +620,7 @@ final class ga extends fnb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

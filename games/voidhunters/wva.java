@@ -7,7 +7,7 @@ final class wva implements dja {
 
     final static void b(byte param0) {
         if (di.field_l != null) {
-          di.field_l.a(-32339, dpa.field_p);
+          di.field_l.a(-32339, RequestNewestBlackboxRecording.field_p);
         }
         int var1 = -93 % ((param0 + 11) / 55);
     }
@@ -21,14 +21,14 @@ final class wva implements dja {
         if (param0 != 11995) {
           field_b = 111;
         }
-        return (tv[]) ((Object) new qqb[param1]);
+        return (tv[]) ((Object) new MatchResults[param1]);
     }
 
     final static void b(int param0, int param1) {
         if (param1 != 22681) {
           wva.b((byte) 45);
         }
-        faa var2 = dpa.field_p;
+        faa var2 = RequestNewestBlackboxRecording.field_p;
         var2.h(24335, param0);
         var2.c(0, 1);
         var2.c(0, 0);
@@ -47,7 +47,7 @@ final class wva implements dja {
             if (param1 != 56) {
               field_a = (String) null;
             }
-            cta.field_p = param2;
+            SetMachineGunAimarc.field_p = param2;
             try {
               var3 = param0.getParameter("cookieprefix");
               var5 = var3;
@@ -64,7 +64,7 @@ final class wva implements dja {
             }
             hg.a(-102, param0);
           } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "wva.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wva.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -75,7 +75,7 @@ final class wva implements dja {
 
     public final tv a(byte param0) {
         int var2 = -42 % ((-64 - param0) / 50);
-        return (tv) ((Object) new qqb());
+        return (tv) ((Object) new MatchResults());
     }
 
     final static int a(int param0, String[] param1, int param2, String param3, no param4) {
@@ -167,7 +167,7 @@ final class wva implements dja {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 

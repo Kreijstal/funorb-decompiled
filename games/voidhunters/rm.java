@@ -7,25 +7,25 @@ final class rm extends eca {
     final static String d(byte param0) {
         if (param0 != 106) {
           field_f = (int[]) null;
-          if (jib.field_o) {
+          if (GetMissileLauncherAimarc.field_o) {
             return null;
           }
           if (fra.field_b > od.field_a) {
             return null;
           }
-          if (!(od.field_a >= fra.field_b + k.field_r)) {
-            return rfa.field_o;
+          if (!(od.field_a >= fra.field_b + GetMessageMaxage.field_r)) {
+            return GetReadyRoomMutatorTime.field_o;
           }
           return null;
         }
-        if (jib.field_o) {
+        if (GetMissileLauncherAimarc.field_o) {
           return null;
         }
         if (fra.field_b > od.field_a) {
           return null;
         }
-        if (!(od.field_a >= fra.field_b + k.field_r)) {
-          return rfa.field_o;
+        if (!(od.field_a >= fra.field_b + GetMessageMaxage.field_r)) {
+          return GetReadyRoomMutatorTime.field_o;
         }
         return null;
     }
@@ -44,8 +44,8 @@ final class rm extends eca {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, 16384) == cca.field_o) {
-            stackIn_3_0 = it.field_m;
+          if (this.a(param0, 16384) == SetArmageddonLength.field_o) {
+            stackIn_3_0 = EscapePod.field_m;
             return stackIn_3_0;
           }
           if (param1 == -1) {
@@ -64,7 +64,7 @@ final class rm extends eca {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -93,9 +93,9 @@ final class rm extends eca {
           stackIn_5_0 = (null != lkb.a(param0, (byte) -116)) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
-            return lea.field_o;
+            return GetShipPersistence.field_o;
           }
-          stackIn_8_0 = cca.field_o;
+          stackIn_8_0 = SetArmageddonLength.field_o;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +107,7 @@ final class rm extends eca {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

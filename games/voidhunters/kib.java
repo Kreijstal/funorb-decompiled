@@ -16,14 +16,14 @@ final class kib extends uj {
         if (param0 != -25131) {
           return 46;
         }
-        return oq.field_y;
+        return Particle.field_y;
     }
 
     final int d(byte param0) {
         if (param0 != 64) {
           return 5;
         }
-        return oq.field_e;
+        return Particle.field_e;
     }
 
     final int a(int param0) {

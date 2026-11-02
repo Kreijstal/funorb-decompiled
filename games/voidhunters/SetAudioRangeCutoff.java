@@ -1,0 +1,58 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SetAudioRangeCutoff extends ConsoleCommand {
+    static String field_p;
+    static String[] field_o;
+    static boolean field_q;
+
+    final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          Projectile.field_q = arguments[0].a(7);
+          if (obfuscationGuard < -119) {
+            stackIn_4_0 = new ConsoleValue("void");
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = (ConsoleValue) null;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("tsb.A(");
+          if (arguments == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    public static void b(boolean param0) {
+        if (param0) {
+          SetAudioRangeCutoff.b(true);
+          field_o = null;
+          field_p = null;
+          return;
+        }
+        field_o = null;
+        field_p = null;
+    }
+
+    SetAudioRangeCutoff(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    static {
+        field_p = "Find opponents";
+        field_o = new String[255];
+    }
+}

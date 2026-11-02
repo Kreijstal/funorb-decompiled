@@ -44,11 +44,11 @@ final class a implements e {
         this.M(this.field_nativeid);
     }
 
-    private final native void na(long param0, ha param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
+    private final native void na(long param0, GraphicsToolkit param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
 
-    private final native void HA(long param0, ha param1, int param2, int param3);
+    private final native void HA(long param0, GraphicsToolkit param1, int param2, int param3);
 
-    final void a(ha param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void a(GraphicsToolkit param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.na(this.field_nativeid, param0, param1, param2, param3, param4, param5, param6, param7);
     }
 }

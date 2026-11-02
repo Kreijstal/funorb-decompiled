@@ -74,7 +74,7 @@ final class jwa extends le {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -131,8 +131,8 @@ final class jwa extends le {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
-            if (qnb.a((byte) -128, (char) var7)) {
-              var8 = rr.a((char) var7, 102);
+            if (GetAngularVelocitySustainMax.a((byte) -128, (char) var7)) {
+              var8 = GetThrusterBoosterForce.a((char) var7, 102);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }
@@ -152,7 +152,7 @@ final class jwa extends le {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 

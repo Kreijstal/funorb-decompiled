@@ -8,7 +8,7 @@ final class aeb {
         faa var5 = null;
         int var4 = 0;
         try {
-          var5 = dpa.field_p;
+          var5 = RequestNewestBlackboxRecording.field_p;
           var5.h(24335, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
@@ -25,21 +25,21 @@ final class aeb {
           }
           var5.e(var5.position - var4, -129);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "aeb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aeb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1) {
         if (param1 == 1) {
-          tdb.field_p = qqa.field_i[param0];
+          GetSpinningBladeTopSpeed.field_p = qqa.field_i[param0];
           ocb.field_i = gib.field_b[param0];
-          lo.field_d = twa.field_b[param0];
+          lo.field_d = SpawnChoice.field_b[param0];
           return;
         }
         field_a = false;
-        tdb.field_p = qqa.field_i[param0];
+        GetSpinningBladeTopSpeed.field_p = qqa.field_i[param0];
         ocb.field_i = gib.field_b[param0];
-        lo.field_d = twa.field_b[param0];
+        lo.field_d = SpawnChoice.field_b[param0];
     }
 
     static {

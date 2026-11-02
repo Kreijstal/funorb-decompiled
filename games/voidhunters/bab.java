@@ -7,7 +7,7 @@ final class bab implements dja {
 
     public final tv a(byte param0) {
         int var2 = -28 / ((param0 + 64) / 50);
-        return (tv) ((Object) new dv());
+        return (tv) ((Object) new PlayerVote());
     }
 
     final static String a(String param0, int param1) {
@@ -52,10 +52,10 @@ final class bab implements dja {
             var7 = stackIn_8_0;
             var8 = param0.substring(var6, var7);
             if (var5.field_e != dla.field_d) {
-              if (var5.field_e == ek.field_o) {
+              if (var5.field_e == SetMissionTerrainSpaceProbability.field_o) {
                 discarded$0 = var3.append("<col=33bbff>").append(var8).append("</col>");
               } else {
-                if (hpa.field_p == var5.field_e) {
+                if (SetMissionVariablesHudX.field_p == var5.field_e) {
                   discarded$1 = var3.append("<col=ffff99>").append(var8).append("</col>");
                 } else {
                   if (fwa.field_h == var5.field_e) {
@@ -85,7 +85,7 @@ final class bab implements dja {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -104,11 +104,11 @@ final class bab implements dja {
           int var4_int = -104 / ((-6 - param2) / 42);
           ow.field_b = 2;
           var5 = (CharSequence) ((Object) param0);
-          nkb.field_o = jwa.a(false, var5);
+          GetDebrisThrowable.field_o = jwa.a(false, var5);
           lsa.field_f = param1;
           oma.a(true);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -116,36 +116,36 @@ final class bab implements dja {
         if (param0 != 11995) {
           return (tv[]) null;
         }
-        return (tv[]) ((Object) new dv[param1]);
+        return (tv[]) ((Object) new PlayerVote[param1]);
     }
 
-    final static void a(boolean param0, ml param1) {
+    final static void a(boolean param0, ShipComponent param1) {
         String var3 = null;
-        ml var4 = null;
-        ml var5 = null;
+        ShipComponent var4 = null;
+        ShipComponent var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          param1.a(1, 0, new ml(13));
-          param1.a(1, 1, new ml(13));
-          param1.a(1, 3, new ml(13));
-          param1.a(1, 23, new ml(13));
-          param1.a(1, 25, new ml(13));
-          param1.a(1, 13, new ml(16));
-          param1.a(1, 2, new ml(43));
-          param1.a(1, 24, new ml(43));
-          var4 = new ml(31);
-          var4.a(1, 1, new ml(13));
-          var4.a(1, 3, new ml(13));
-          var4.a(1, 2, new ml(16));
+          param1.a(1, 0, new ShipComponent(13));
+          param1.a(1, 1, new ShipComponent(13));
+          param1.a(1, 3, new ShipComponent(13));
+          param1.a(1, 23, new ShipComponent(13));
+          param1.a(1, 25, new ShipComponent(13));
+          param1.a(1, 13, new ShipComponent(16));
+          param1.a(1, 2, new ShipComponent(43));
+          param1.a(1, 24, new ShipComponent(43));
+          var4 = new ShipComponent(31);
+          var4.a(1, 1, new ShipComponent(13));
+          var4.a(1, 3, new ShipComponent(13));
+          var4.a(1, 2, new ShipComponent(16));
           param1.a(1, 6, var4);
-          var5 = new ml(31);
-          var5.a(1, 0, new ml(13));
-          var5.a(1, 2, new ml(13));
-          var5.a(1, 3, new ml(16));
+          var5 = new ShipComponent(31);
+          var5.a(1, 0, new ShipComponent(13));
+          var5.a(1, 2, new ShipComponent(13));
+          var5.a(1, 3, new ShipComponent(16));
           param1.a(1, 20, var5);
           if (!param0) {
             var3 = (String) null;
@@ -162,7 +162,7 @@ final class bab implements dja {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 

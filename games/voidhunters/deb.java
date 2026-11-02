@@ -10,9 +10,9 @@ final class deb extends mfb {
     final int b(boolean param0) {
         if (param0) {
           this.b(true);
-          return kg.field_o;
+          return GetLaserBeamProjectileDamage.field_o;
         }
-        return kg.field_o;
+        return GetLaserBeamProjectileDamage.field_o;
     }
 
     final int g(byte param0) {
@@ -25,7 +25,7 @@ final class deb extends mfb {
 
     final int b(int param0) {
         int var2 = 84 % ((param0 - 7) / 47);
-        return fua.field_q;
+        return SetPointDefenceLaserReload.field_q;
     }
 
     final static boolean a(int param0, char param1) {
@@ -58,7 +58,7 @@ final class deb extends mfb {
 
     final int a(byte param0) {
         int var2 = 106 % ((-48 - param0) / 43);
-        return oq.field_x;
+        return Particle.field_x;
     }
 
     final int d(byte param0) {
@@ -72,9 +72,9 @@ final class deb extends mfb {
     final int g(int param0) {
         if (param0 != 2769) {
           deb.i((byte) 112);
-          return ls.field_p;
+          return GetMissionTerrainNebulaProbability.field_p;
         }
-        return ls.field_p;
+        return GetMissionTerrainNebulaProbability.field_p;
     }
 
     final int k(int param0) {
@@ -105,7 +105,7 @@ final class deb extends mfb {
         faa var2 = null;
         faa var2Lifetime1;
         if (param0 == 40) {
-          var2 = dpa.field_p;
+          var2 = RequestNewestBlackboxRecording.field_p;
           var2.h(24335, param1);
           var2.c(0, 2);
           var2.c(0, 4);
@@ -113,7 +113,7 @@ final class deb extends mfb {
           return;
         }
         deb.i((byte) 62);
-        var2Lifetime1 = dpa.field_p;
+        var2Lifetime1 = RequestNewestBlackboxRecording.field_p;
         var2Lifetime1.h(24335, param1);
         var2Lifetime1.c(0, 2);
         var2Lifetime1.c(0, 4);
@@ -130,9 +130,9 @@ final class deb extends mfb {
     final int f(byte param0) {
         if (param0 <= 0) {
           deb.a(-4, 20);
-          return vt.field_o;
+          return SetSniperCannonAimspeed.field_o;
         }
-        return vt.field_o;
+        return SetSniperCannonAimspeed.field_o;
     }
 
     static {

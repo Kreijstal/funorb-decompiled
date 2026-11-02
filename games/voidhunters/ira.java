@@ -33,15 +33,15 @@ final class ira extends mfb {
 
     final int b(int param0) {
         int var2 = -55 / ((7 - param0) / 47);
-        return ljb.field_o;
+        return GetMaxShipSize.field_o;
     }
 
     final int f(byte param0) {
         if (param0 < 0) {
           field_c = (java.awt.Frame) null;
-          return fja.field_o;
+          return GetFighterRepairAmount.field_o;
         }
-        return fja.field_o;
+        return GetFighterRepairAmount.field_o;
     }
 
     final boolean e(int param0) {
@@ -61,17 +61,17 @@ final class ira extends mfb {
     final int a(int param0) {
         if (param0 != 0) {
           this.c((byte) -16);
-          return eg.field_o;
+          return GetMissionResnetResourceTickTime.field_o;
         }
-        return eg.field_o;
+        return GetMissionResnetResourceTickTime.field_o;
     }
 
     final int g(byte param0) {
         if (param0 > -12) {
           this.d((byte) -91);
-          return nob.field_p;
+          return GetRadialMenuRadius.field_p;
         }
-        return nob.field_p;
+        return GetRadialMenuRadius.field_p;
     }
 
     final int k(int param0) {
@@ -105,7 +105,7 @@ final class ira extends mfb {
             null != var4.field_Ab) {
             return true;
           }
-          stackIn_11_0 = (null != lqa.field_o) && (null != pjb.a(param0, true));
+          stackIn_11_0 = (null != SetSpinningBladeSpindamageMultiplier.field_o) && (null != pjb.a(param0, true));
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,7 +117,7 @@ final class ira extends mfb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class ira extends mfb {
         if (param0 != 2769) {
           return 6;
         }
-        return uh.field_q;
+        return GetAngularForceDownshift.field_q;
     }
 
     final boolean h(int param0) {
@@ -139,9 +139,9 @@ final class ira extends mfb {
     final int d(byte param0) {
         if (param0 >= -52) {
           field_b = (lkb) null;
-          return mqa.field_s;
+          return SetShipPersistence.field_s;
         }
-        return mqa.field_s;
+        return SetShipPersistence.field_s;
     }
 
     final int c(int param0) {

@@ -24,7 +24,7 @@ final class nl extends IntrusiveNode {
         var3 = VoidHunters.field_G;
         try {
           kt.field_l = param0;
-          var2 = (ana) (cg.field_p.d(param1 + 13205));
+          var2 = (ana) (GetToggledScoreboard.field_p.d(param1 + 13205));
           if (param1 != -13205) {
             nl.a(-88);
           }
@@ -34,10 +34,10 @@ final class nl extends IntrusiveNode {
             } else {
               var2.b(-3846);
             }
-            var2 = (ana) (cg.field_p.a((byte) 61));
+            var2 = (ana) (GetToggledScoreboard.field_p.a((byte) 61));
           }
-          if (null != rd.field_o) {
-            var2Lifetime1 = (ana) (rd.field_o.d(0));
+          if (null != GetSniperCannonReload.field_o) {
+            var2Lifetime1 = (ana) (GetSniperCannonReload.field_o.d(0));
             while (var2Lifetime1 != null) {
               stackIn_13_0 = var2Lifetime1.field_g.b((byte) -63);
               if (!stackIn_13_0) {
@@ -45,7 +45,7 @@ final class nl extends IntrusiveNode {
               } else {
                 var2Lifetime1.field_e.e(kt.field_l * var2Lifetime1.field_d + 128 >> 8);
               }
-              var2Lifetime1 = (ana) (rd.field_o.a((byte) 100));
+              var2Lifetime1 = (ana) (GetSniperCannonReload.field_o.a((byte) 100));
             }
             return;
           }
@@ -53,7 +53,7 @@ final class nl extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2_ref), "nl.B(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2_ref), "nl.B(" + param0 + ',' + param1 + ')');
         }
     }
 

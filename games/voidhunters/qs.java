@@ -39,7 +39,7 @@ final class qs {
               if (param4 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + tnb.a((byte) 98, param4 * 1000L + wt.a(false)) + "; Max-Age=" + param4;
+                var7Lifetime4 = var9 + "; Expires=" + SetMassDriverAimarc.a((byte) 98, param4 * 1000L + wt.a(false)) + "; Max-Age=" + param4;
               }
               ia.a((byte) -122, param0, "document.cookie=\"" + var7Lifetime4 + "\"");
               return;
@@ -70,7 +70,7 @@ final class qs {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -94,13 +94,13 @@ final class qs {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!fva.field_p) {
+          if (!SetFightersPerPlayerMaximum.field_p) {
             return false;
           }
           if (ow.field_b == 2 &&
-            nkb.field_o != null) {
+            GetDebrisThrowable.field_o != null) {
             var3 = (CharSequence) ((Object) param1);
-            if (!nkb.field_o.equals(jwa.a(false, var3))) {
+            if (!GetDebrisThrowable.field_o.equals(jwa.a(false, var3))) {
               return false;
             }
             if (param0 == 0) {
@@ -119,7 +119,7 @@ final class qs {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

@@ -12,29 +12,29 @@ final class sn extends os implements oo {
           rga.a(false, true, false);
           return;
         }
-        cnb.f((byte) -74);
+        GetBoostersActiveTime.f((byte) -74);
         if (param0 != 11) {
           return;
         }
         try {
           this.l((byte) -106);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sn.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sn.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     final void e(boolean param0) {
-        this.a(true, param0, tma.a(248, mtb.field_q, (byte) -124));
+        this.a(true, param0, GetArmageddonLength.a(248, GetMissionTerrainAsteroidProbability.field_q, (byte) -124));
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, lta param6) {
         try {
-          dva.a(param2, param6, param0, 3, param4, param5, 255, param3);
+          GetCountermeasureLauncherAimarc.a(param2, param6, param0, 3, param4, param5, 255, param3);
           if (param1 <= 68) {
             field_Y = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sn.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sn.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,10 +46,10 @@ final class sn extends os implements oo {
         int var11 = 0;
         try {
           pea.$cfr$intArgs$a$91f64d33677c(param2.field_zb, param2, -1, (int[]) null, param2.field_Hb, param5, param2.field_xb, 103, -1);
-          cka.field_o.a(true, param3 - 35);
-          cka.field_o.a(-70, 0, (int[]) null);
-          cka.field_o.b(param3 - 9994);
-          var13 = cka.field_o;
+          GetLagStandardDeviationOut.field_o.a(true, param3 - 35);
+          GetLagStandardDeviationOut.field_o.a(-70, 0, (int[]) null);
+          GetLagStandardDeviationOut.field_o.b(param3 - 9994);
+          var13 = GetLagStandardDeviationOut.field_o;
           var8 = param4;
           var9 = param0;
           var10 = param6;
@@ -60,7 +60,7 @@ final class sn extends os implements oo {
           var11 = param1;
           var13.field_i.b(var8, -29060, var9, var10, var11);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sn.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sn.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -86,17 +86,17 @@ final class sn extends os implements oo {
                 if (!param0) {
                   qlb.b((byte) -75);
                 }
-                var4 = mtb.field_q;
+                var4 = GetMissionTerrainAsteroidProbability.field_q;
                 this.field_ab = true;
               }
             } else {
-              var4 = ks.field_p;
+              var4 = GetLaserReload.field_p;
               if (null != this.field_X) {
                 this.field_X.a(1546);
               }
             }
           }
-          var5 = new nna((os) (this), vob.field_r, var4);
+          var5 = new nna((os) (this), GetBoostersCooldown.field_r, var4);
           if (param2.field_g) {
             if (param2.field_c) {
               this.b(new w(this), -99);
@@ -109,7 +109,7 @@ final class sn extends os implements oo {
             } else {
               if (param2.field_d == 5) {
                 var5.a(-128, fma.field_c, 11);
-                var5.a(-114, vda.field_q, 17);
+                var5.a(-114, GetFighterBayAimspeed.field_q, 17);
               } else {
                 var5.a(-115, vab.field_a, -1);
               }
@@ -138,16 +138,16 @@ final class sn extends os implements oo {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
     sn(ida param0, rq param1) {
-        super(param0, vob.field_r, oma.field_c, false, false);
+        super(param0, GetBoostersCooldown.field_r, oma.field_c, false, false);
         try {
           this.field_X = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class sn extends os implements oo {
           if (this.field_Z) {
             return super.a(248);
           }
-          var2 = nkb.a(10589);
+          var2 = GetDebrisThrowable.a(10589);
           if (var2 != null) {
             this.a(false, false, var2);
             return super.a(248);
@@ -175,7 +175,7 @@ final class sn extends os implements oo {
         if (this.field_Z) {
           return super.a(248);
         }
-        var2Lifetime1 = nkb.a(10589);
+        var2Lifetime1 = GetDebrisThrowable.a(10589);
         if (var2Lifetime1 != null) {
           this.a(false, false, var2Lifetime1);
           return super.a(248);

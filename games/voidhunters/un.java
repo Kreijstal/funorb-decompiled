@@ -61,7 +61,7 @@ final class un extends us {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class un extends us {
 
     final dka a(byte param0) {
         int var2 = -52 % ((param0 + 7) / 56);
-        return cha.field_q;
+        return SetThrusterBindingBalanceThreshold.field_q;
     }
 
     un(long param0, String param1) {

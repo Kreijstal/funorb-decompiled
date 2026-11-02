@@ -48,7 +48,7 @@ final class kw extends llb {
           this.field_Ab = dupTemp$1;
           this.field_Fb.field_R = this.field_Eb.toString();
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kw.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kw.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class kw extends llb {
           }
           this.field_Db = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kw.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kw.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -294,7 +294,7 @@ final class kw extends llb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -310,7 +310,7 @@ final class kw extends llb {
 
     private final void a(int param0, int param1) {
         this.field_Ab = param0;
-        if (!si.field_o[81]) {
+        if (!SetMachineGunEnergyUsed.field_o[81]) {
           this.field_Gb = this.field_Ab;
         }
         if (param1 != 3047) {
@@ -391,7 +391,7 @@ final class kw extends llb {
             if (96 != param0) {
               if (param0 == 97) {
                 if (this.field_Ab < this.field_Eb.length()) {
-                  if (si.field_o[82]) {
+                  if (SetMachineGunEnergyUsed.field_o[82]) {
                     stackIn_41_0 = this.m(-10001);
                   } else {
                     stackIn_41_0 = 1 + this.field_Ab;
@@ -409,17 +409,17 @@ final class kw extends llb {
                   this.a(this.field_Eb.length(), 3047);
                   return true;
                 }
-                if (si.field_o[82] &&
+                if (SetMachineGunEnergyUsed.field_o[82] &&
                   param0 == 65) {
                   this.e((byte) 116);
                   return true;
                 }
-                if (si.field_o[82] &&
+                if (SetMachineGunEnergyUsed.field_o[82] &&
                   param0 == 66) {
                   this.h(param1 + 31961);
                   return true;
                 }
-                if (si.field_o[82] &&
+                if (SetMachineGunEnergyUsed.field_o[82] &&
                   67 == param0) {
                   this.n(11090);
                   return true;
@@ -427,7 +427,7 @@ final class kw extends llb {
               }
             } else {
               if (this.field_Ab > 0) {
-                if (!si.field_o[82]) {
+                if (!SetMachineGunEnergyUsed.field_o[82]) {
                   stackIn_22_0 = this.field_Ab - 1;
                 } else {
                   stackIn_22_0 = this.k(param1 + 0);
@@ -506,7 +506,7 @@ final class kw extends llb {
           this.field_Fb.field_R = this.field_Eb.toString();
           this.field_Cb.field_s = "|";
           this.field_Cb.field_R = "";
-          this.field_lb = new ij();
+          this.field_lb = new IntrusiveDeque();
           this.b(-561, this.field_Kb);
           this.b(-561, this.field_Fb);
           this.b(-561, this.field_Cb);
@@ -534,7 +534,7 @@ final class kw extends llb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 

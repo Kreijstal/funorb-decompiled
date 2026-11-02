@@ -1,0 +1,69 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GetCountermeasureLauncherFireForce extends ConsoleCommand {
+    static int field_o;
+
+    final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (obfuscationGuard >= -119) {
+            field_o = 25;
+          }
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(107, 109));
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("qfb.A(");
+          if (arguments == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    final static void a(int param0) {
+        int fieldTemp$0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        faa var1 = null;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        int var3 = 0;
+        var3 = VoidHunters.field_G;
+        try {
+          if (param0 != 8) {
+            field_o = 71;
+          }
+          var1 = RequestNewestBlackboxRecording.field_p;
+          while (apb.a(57)) {
+            var1.h(param0 + 24327, 8);
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
+            var2 = fieldTemp$0;
+            ida.a(var1, (byte) 127);
+            RequestNewestBlackboxRecording.field_p.e(var1.position - var2, -129);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "qfb.B(" + param0 + ')');
+        }
+    }
+
+    GetCountermeasureLauncherFireForce(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    static {
+    }
+}

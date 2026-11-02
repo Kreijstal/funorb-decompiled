@@ -17,19 +17,19 @@ final class fia {
         byte[] var4;
         byte[] var2_ref_byte__Lifetime1;
         if (100 == param1 &&
-          ch.field_p > 0) {
-          fieldTemp$3 = ch.field_p - 1;
-          ch.field_p = ch.field_p - 1;
+          GetSpecialOrderBarYOffset.field_p > 0) {
+          fieldTemp$3 = GetSpecialOrderBarYOffset.field_p - 1;
+          GetSpecialOrderBarYOffset.field_p = GetSpecialOrderBarYOffset.field_p - 1;
           var2_ref_byte__ = fpb.field_d[fieldTemp$3];
-          fpb.field_d[ch.field_p] = null;
+          fpb.field_d[GetSpecialOrderBarYOffset.field_p] = null;
           return var2_ref_byte__;
         }
         if (param1 == 5000 &&
-          0 < hoa.field_o) {
-          fieldTemp$4 = hoa.field_o - 1;
-          hoa.field_o = hoa.field_o - 1;
+          0 < SetExplosionProjectileDamage.field_o) {
+          fieldTemp$4 = SetExplosionProjectileDamage.field_o - 1;
+          SetExplosionProjectileDamage.field_o = SetExplosionProjectileDamage.field_o - 1;
           var2_ref_byte__Lifetime1 = vcb.field_E[fieldTemp$4];
-          vcb.field_E[hoa.field_o] = null;
+          vcb.field_E[SetExplosionProjectileDamage.field_o] = null;
           return var2_ref_byte__Lifetime1;
         }
         var2 = -5 % ((51 - param0) / 54);
@@ -41,15 +41,15 @@ final class fia {
           npa.field_b[nma.field_a] = null;
           return var3_ref_byte__;
         }
-        if (ml.field_l != null) {
-          for (var3 = 0; var3 < dia.field_o.length; var3++) {
-            if (dia.field_o[var3] == param1 &&
+        if (ShipComponent.field_l != null) {
+          for (var3 = 0; var3 < SetCountermeasuresCooldown.field_o.length; var3++) {
+            if (SetCountermeasuresCooldown.field_o[var3] == param1 &&
               0 < fbb.field_f[var3]) {
               dupTemp$6 = fbb.field_f[var3] - 1;
-              arrayValue$7 = ml.field_l[var3];
+              arrayValue$7 = ShipComponent.field_l[var3];
               fbb.field_f[var3] = dupTemp$6;
               var4 = arrayValue$7[dupTemp$6];
-              ml.field_l[var3][fbb.field_f[var3]] = null;
+              ShipComponent.field_l[var3][fbb.field_f[var3]] = null;
               return var4;
             }
           }
@@ -79,9 +79,9 @@ final class fia {
           waa.field_x = param4;
           ow.field_b = param1;
           var8 = (CharSequence) ((Object) param4);
-          nkb.field_o = jwa.a(false, var8);
+          GetDebrisThrowable.field_o = jwa.a(false, var8);
           lsa.field_f = param3;
-          var7 = nwa.a(jwa.field_k, param0, 0, ej.field_a, wdb.field_Ab);
+          var7 = MessageLog.a(jwa.field_k, param0, 0, ej.field_a, wdb.field_Ab);
           sl.a((byte) -28, var7);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,7 +100,7 @@ final class fia {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -151,55 +151,55 @@ final class fia {
         var14 = VoidHunters.field_G;
         try {
           boolean decompiledFrameRemainder1 = true;
-          if (si.field_o[80]) {
+          if (SetMachineGunEnergyUsed.field_o[80]) {
             if (!khb.field_b) {
               au.field_c = (1 + au.field_c) % 3;
             }
             khb.field_b = true;
           } else {
-            if (!si.field_o[87] &&
-              tcb.field_o >= 0) {
-              if (!si.field_o[88] &&
-                tcb.field_o <= 0) {
-                if (si.field_o[9]) {
+            if (!SetMachineGunEnergyUsed.field_o[87] &&
+              GetPointDefenceLaserPulsetime.field_o >= 0) {
+              if (!SetMachineGunEnergyUsed.field_o[88] &&
+                GetPointDefenceLaserPulsetime.field_o <= 0) {
+                if (SetMachineGunEnergyUsed.field_o[9]) {
                   if (!khb.field_b) {
                     System.out.println("Reloading game types");
-                    dva.e((byte) 113);
+                    GetCountermeasureLauncherAimarc.e((byte) 113);
                   }
                   khb.field_b = true;
                 } else {
-                  if (si.field_o[5]) {
+                  if (SetMachineGunEnergyUsed.field_o[5]) {
                     if (!khb.field_b) {
-                      nkb.a(false, "Saving content data");
-                      web.a(-118);
+                      GetDebrisThrowable.a(false, "Saving content data");
+                      SetTorpedoProjectileLife.a(-118);
                     }
                     khb.field_b = true;
                   } else {
-                    if (si.field_o[97]) {
+                    if (SetMachineGunEnergyUsed.field_o[97]) {
                       if (!khb.field_b) {
-                        fe.field_p = fe.field_p + 1;
+                        SetMissileLauncherProjectileLife.field_p = SetMissileLauncherProjectileLife.field_p + 1;
                         uob.field_g = new int[1][0];
                         hw.field_d = new int[1][0];
-                        if (hab.field_g.length <= fe.field_p) {
-                          fe.field_p = -1;
+                        if (hab.field_g.length <= SetMissileLauncherProjectileLife.field_p) {
+                          SetMissileLauncherProjectileLife.field_p = -1;
                         }
                       }
                       khb.field_b = true;
                     } else {
-                      if (si.field_o[96]) {
+                      if (SetMachineGunEnergyUsed.field_o[96]) {
                         if (!khb.field_b) {
                           uob.field_g = new int[1][0];
-                          fe.field_p = fe.field_p - 1;
+                          SetMissileLauncherProjectileLife.field_p = SetMissileLauncherProjectileLife.field_p - 1;
                           hw.field_d = new int[1][0];
-                          if (fe.field_p < -1) {
-                            fe.field_p = hab.field_g.length - 1;
+                          if (SetMissileLauncherProjectileLife.field_p < -1) {
+                            SetMissileLauncherProjectileLife.field_p = hab.field_g.length - 1;
                           }
                         }
                         khb.field_b = true;
                       } else {
-                        if (si.field_o[85]) {
+                        if (SetMachineGunEnergyUsed.field_o[85]) {
                           if (!khb.field_b &&
-                            fe.field_p >= 0 &&
+                            SetMissileLauncherProjectileLife.field_p >= 0 &&
                             au.field_c == 2) {
                             var17 = uob.field_g[uob.field_g.length - 1];
                             if (1 < var17.length) {
@@ -214,11 +214,11 @@ final class fia {
                           }
                           khb.field_b = true;
                         } else {
-                          if (!si.field_o[41]) {
+                          if (!SetMachineGunEnergyUsed.field_o[41]) {
                             khb.field_b = false;
                           } else {
                             if (!khb.field_b &&
-                              fe.field_p >= 0) {
+                              SetMissileLauncherProjectileLife.field_p >= 0) {
                               if (au.field_c == 1) {
                                 System.out.print("int[][] convex_outlines=new int[][]{");
                                 for (var1_int = 0; var1_int < hw.field_d.length; var1_int++) {
@@ -235,7 +235,7 @@ final class fia {
                                   }
                                   System.out.print("}");
                                 }
-                                nkb.a(false, "};");
+                                GetDebrisThrowable.a(false, "};");
                               } else {
                                 if (au.field_c == 2) {
                                   System.out.print("int[][] detail_lines=new int[][]{");
@@ -253,7 +253,7 @@ final class fia {
                                     }
                                     System.out.print("}");
                                   }
-                                  nkb.a(false, "};");
+                                  GetDebrisThrowable.a(false, "};");
                                 }
                               }
                             }
@@ -266,7 +266,7 @@ final class fia {
                 }
               } else {
                 if (!khb.field_b) {
-                  ql.field_o = ql.field_o / 2.0f;
+                  GetUseTrails.field_o = GetUseTrails.field_o / 2.0f;
                 }
                 khb.field_b = true;
               }
@@ -274,46 +274,46 @@ final class fia {
             }
             else {
               if (!khb.field_b) {
-                ql.field_o = ql.field_o * 2.0f;
+                GetUseTrails.field_o = GetUseTrails.field_o * 2.0f;
               }
               khb.field_b = true;
             }
           }
-          if (si.field_o[33]) {
-            de.field_o = de.field_o - 8.0f / ql.field_o;
+          if (SetMachineGunEnergyUsed.field_o[33]) {
+            SetTorpedoEnergyUsed.field_o = SetTorpedoEnergyUsed.field_o - 8.0f / GetUseTrails.field_o;
           }
-          if (si.field_o[50]) {
-            gt.field_p = gt.field_p + 8.0f / ql.field_o;
+          if (SetMachineGunEnergyUsed.field_o[50]) {
+            SetPhysicsCollisionGrapplingHookForceMultiplier.field_p = SetPhysicsCollisionGrapplingHookForceMultiplier.field_p + 8.0f / GetUseTrails.field_o;
           }
           if (param0) {
             field_a = (String) null;
           }
-          if (si.field_o[49]) {
-            de.field_o = de.field_o + 8.0f / ql.field_o;
+          if (SetMachineGunEnergyUsed.field_o[49]) {
+            SetTorpedoEnergyUsed.field_o = SetTorpedoEnergyUsed.field_o + 8.0f / GetUseTrails.field_o;
           }
-          if (si.field_o[48]) {
-            gt.field_p = gt.field_p - 8.0f / ql.field_o;
+          if (SetMachineGunEnergyUsed.field_o[48]) {
+            SetPhysicsCollisionGrapplingHookForceMultiplier.field_p = SetPhysicsCollisionGrapplingHookForceMultiplier.field_p - 8.0f / GetUseTrails.field_o;
           }
-          if (fe.field_p >= 0) {
+          if (SetMissileLauncherProjectileLife.field_p >= 0) {
             boolean decompiledFrameRemainder0 = true;
-            var19 = hab.field_g[fe.field_p];
+            var19 = hab.field_g[SetMissileLauncherProjectileLife.field_p];
             if (var19 != null) {
               var21 = new lta();
-              var21.field_b = de.field_o;
-              var21.field_c = gt.field_p;
-              var21.field_a = ql.field_o;
+              var21.field_b = SetTorpedoEnergyUsed.field_o;
+              var21.field_c = SetPhysicsCollisionGrapplingHookForceMultiplier.field_p;
+              var21.field_a = GetUseTrails.field_o;
               if (au.field_c != 1) {
                 if (au.field_c != 2) {
                   return;
                 }
                 var23 = uob.field_g[-1 + uob.field_g.length];
                 var3 = var23;
-                var4 = var21.a(true, pk.field_o);
-                var5 = var21.a(0, noa.field_q);
+                var4 = var21.a(true, GetUseDetailLines.field_o);
+                var5 = var21.a(0, GetTorpedoReload.field_q);
                 if (ujb.field_c == 1 &&
-                  si.field_o[81]) {
-                  uob.field_g[-1 + uob.field_g.length] = qi.a(var4, false, var23, (byte) -14);
-                  uob.field_g[-1 + uob.field_g.length] = qi.a(var5, false, uob.field_g[-1 + uob.field_g.length], (byte) -14);
+                  SetMachineGunEnergyUsed.field_o[81]) {
+                  uob.field_g[-1 + uob.field_g.length] = SetAutozoomSpeedDivide.a(var4, false, var23, (byte) -14);
+                  uob.field_g[-1 + uob.field_g.length] = SetAutozoomSpeedDivide.a(var5, false, uob.field_g[-1 + uob.field_g.length], (byte) -14);
                 }
                 if (ujb.field_c == 2) {
                   var6_ref_int____ = new int[uob.field_g.length + 1][];
@@ -323,7 +323,7 @@ final class fia {
                   var6_ref_int____[uob.field_g.length] = new int[]{};
                   uob.field_g = var6_ref_int____;
                 }
-                if (sab.field_o != 1) {
+                if (GetBots.field_o != 1) {
                   return;
                 }
                 var6 = -1;
@@ -340,7 +340,7 @@ final class fia {
                   }
                 }
                 if ((var6 != -1)) {
-                  if (si.field_o[83]) {
+                  if (SetMachineGunEnergyUsed.field_o[83]) {
                     var8Lifetime2 = fnb.field_b / 2;
                     var5 = var8Lifetime2 * (var5 / var8Lifetime2);
                   }
@@ -361,16 +361,16 @@ final class fia {
                     var8Lifetime1 = var5_ref_int__[var6Lifetime1 + 1];
                     var9Lifetime1 = var21.a(var7Lifetime1, (byte) 125);
                     var10Lifetime1 = var21.b(true, var8Lifetime1);
-                    var11Lifetime1 = ar.a(-pk.field_o + var9Lifetime1, (byte) 119, var10Lifetime1 - noa.field_q);
+                    var11Lifetime1 = ar.a(-GetUseDetailLines.field_o + var9Lifetime1, (byte) 119, var10Lifetime1 - GetTorpedoReload.field_q);
                     if (var11Lifetime1 < var4Lifetime1) {
                       var4Lifetime1 = var11Lifetime1;
                       var3_intLifetime1 = var6Lifetime1 >> 1;
                     }
                   }
                   if (-1 != var3_intLifetime1) {
-                    nkb.a(false, "Adding point " + var3_intLifetime1);
+                    GetDebrisThrowable.a(false, "Adding point " + var3_intLifetime1);
                     var22 = hw.field_d[-1 + hw.field_d.length];
-                    hw.field_d[-1 + hw.field_d.length] = qi.a(var3_intLifetime1, true, var22, (byte) -14);
+                    hw.field_d[-1 + hw.field_d.length] = SetAutozoomSpeedDivide.a(var3_intLifetime1, true, var22, (byte) -14);
                   }
                 }
                 if (ujb.field_c == 2) {
@@ -389,7 +389,7 @@ final class fia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1), "fia.A(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "fia.A(" + param0 + ')');
         }
     }
 

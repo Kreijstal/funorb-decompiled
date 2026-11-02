@@ -21,10 +21,10 @@ final class meb implements wwa {
 
     final static mm a(int param0, int param1) {
         if (param1 == 1) {
-          return ks.field_r == null ? null : (mm) (ks.field_r.a(-1, (long)param0));
+          return GetLaserReload.field_r == null ? null : (mm) (GetLaserReload.field_r.a(-1, (long)param0));
         }
         meb.a(-8, 53);
-        return ks.field_r == null ? null : (mm) (ks.field_r.a(-1, (long)param0));
+        return GetLaserReload.field_r == null ? null : (mm) (GetLaserReload.field_r.a(-1, (long)param0));
     }
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
@@ -73,7 +73,7 @@ final class meb implements wwa {
               var11 = var11 + (-var9 + param1.field_f >> 1);
             }
           }
-          aha.a(var11 + 2, var8 + 4, var10 - 2, var9, (byte) -79);
+          SetCountermeasureLauncherRandomness.a(var11 + 2, var8 + 4, var10 - 2, var9, (byte) -79);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,12 +85,12 @@ final class meb implements wwa {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public meb() {
-        this.field_b = loa.field_o;
+        this.field_b = SetShipToShipRamDamage.field_o;
         this.field_e = 1;
         this.field_a = 1;
     }
@@ -101,7 +101,7 @@ final class meb implements wwa {
           this.field_b = param0;
           this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "meb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "meb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

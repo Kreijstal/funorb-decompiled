@@ -13,7 +13,7 @@ final class lwa extends llb {
         }
         boolean decompiledFrameRemainder0 = true;
         this.a(true, 1332);
-        if ((0 == pba.field_o ||
+        if ((0 == SetDebrisPartitioned.field_o ||
           this.field_o != 0) && 0 == this.field_wb.field_o) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
@@ -62,7 +62,7 @@ final class lwa extends llb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "lwa.D(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "lwa.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class lwa extends llb {
         llb var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new llb(0L, param1, cu.field_p.toUpperCase());
+          var17 = new llb(0L, param1, SetPhasedEnergyBeamEnergyUsed.field_p.toUpperCase());
           var17.field_F = 1;
           this.field_wb = new llb(0L, param2);
           var8 = new llb(0L, param3);
@@ -101,10 +101,10 @@ final class lwa extends llb {
           var9.field_F = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; var12 < skb.field_q.length; var12++) {
-            var13 = new llb(0L, param3, pha.field_r[var12]);
-            var14 = new llb(0L, param3, skb.field_q[var12]);
-            var15 = param3.field_eb.b(skb.field_q[var12]);
+          for (var12 = 0; var12 < Lo.field_q.length; var12++) {
+            var13 = new llb(0L, param3, GetKeepTeamColours.field_r[var12]);
+            var14 = new llb(0L, param3, Lo.field_q[var12]);
+            var15 = param3.field_eb.b(Lo.field_q[var12]);
             if (var15 > var11) {
               var11 = var15;
             }
@@ -168,7 +168,7 @@ final class lwa extends llb {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

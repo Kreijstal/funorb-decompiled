@@ -10,11 +10,11 @@ final class nn implements dja {
         int var8 = VoidHunters.field_G;
         try {
           for (var6_int = param2; var6_int <= param5; var6_int++) {
-            ww.a(param4, param1, rba.field_b[var6_int], (byte) 75, param0);
+            GetSalvoRepairTimeMultiplier.a(param4, param1, ResourceNode.field_b[var6_int], (byte) 75, param0);
           }
           int var7 = -38 % ((-5 - param3) / 63);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -57,15 +57,15 @@ final class nn implements dja {
           var12 = (var12 << 8) / var14;
           var15 = 64;
           for (var16 = param1; var15 + 1 > var16; var16++) {
-            var17 = fc.a(512 * kdb.field_o - (var16 << 8), (byte) -65) >> 14;
-            var18 = fc.a(-(var16 << 8) + kdb.field_o * 500, (byte) 59) >> 14;
+            var17 = GetNumStars.a(512 * SetMinimapWidth.field_o - (var16 << 8), (byte) -65) >> 14;
+            var18 = GetNumStars.a(-(var16 << 8) + SetMinimapWidth.field_o * 500, (byte) 59) >> 14;
             var19 = var12 * var17 + var10 * var16 / var15 + param5;
             var20 = var17 * var13 + var16 * var11 / var15 + param0;
             var21 = param5 + var10 * var16 / var15 - var18 * var12;
-            hha.a(param4.a(var6_int, (byte) 126), (byte) 66, param4.a(var19, (byte) 126), param4.b(true, var7), 11206400, param4.b(true, var20), 200);
+            SetShowTutorial.a(param4.a(var6_int, (byte) 126), (byte) 66, param4.a(var19, (byte) 126), param4.b(true, var7), 11206400, param4.b(true, var20), 200);
             var22 = -(var13 * var18) + (param0 + var11 * var16 / var15);
             var7 = var20;
-            hha.a(param4.a(var8, (byte) 113), (byte) 66, param4.a(var21, (byte) 125), param4.b(true, var9), 12320512, param4.b(true, var22), 240);
+            SetShowTutorial.a(param4.a(var8, (byte) 113), (byte) 66, param4.a(var21, (byte) 125), param4.b(true, var9), 12320512, param4.b(true, var22), 240);
             var6_int = var19;
             var8 = var21;
             var9 = var22;
@@ -81,7 +81,7 @@ final class nn implements dja {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(')').toString());
         }
     }
 

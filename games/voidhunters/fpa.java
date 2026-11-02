@@ -8,7 +8,7 @@ final class fpa extends uj {
         if (param0 != 64) {
           return -25;
         }
-        return oq.field_t;
+        return Particle.field_t;
     }
 
     final boolean c(byte param0) {
@@ -47,7 +47,7 @@ final class fpa extends uj {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
         if (li.field_i) {
-          feb.a(og.field_r, true).a(param4, param3, param0, param1, (byte) -45);
+          feb.a(GetDebrisGroupColour.field_r, true).a(param4, param3, param0, param1, (byte) -45);
           if (!param2) {
             fpa.a(117, -125, true, -70, 61);
             return;
@@ -65,7 +65,7 @@ final class fpa extends uj {
         if (param0 != -1) {
           return 67;
         }
-        return ve.field_p;
+        return SetDetachmentMode.field_p;
     }
 
     public static void d(int param0) {

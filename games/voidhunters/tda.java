@@ -30,7 +30,7 @@ final class tda extends iw implements oo {
           } else {
             spb.a((byte) -95);
             this.l((byte) -98);
-            this.field_v.a(false, new mr(this.field_v, oca.field_a));
+            this.field_v.a(false, new mr(this.field_v, RemoveEventAction.field_a));
           }
           if (this.field_z &&
             psb.field_b == null) {
@@ -55,7 +55,7 @@ final class tda extends iw implements oo {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -69,19 +69,19 @@ final class tda extends iw implements oo {
           var3.field_h = this.field_h;
           var3.field_r = 50;
           var3.field_f = 100;
-          var3.field_q = (wwa) ((Object) new bob(web.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var3.field_q = (wwa) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(-18756, var3);
           this.field_J = new shb(al.field_a, (sba) null);
           this.field_J.field_r = 20 + var3.field_r + var3.field_f;
           this.field_J.field_g = 0;
           this.field_J.field_h = this.field_h;
           this.field_J.field_f = 80;
-          this.field_J.field_q = (wwa) ((Object) new bob(vob.field_r, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_J.field_q = (wwa) ((Object) new bob(GetBoostersCooldown.field_r, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(-18756, this.field_J);
           this.field_N = this.a((byte) -104, (sba) (this), amb.field_b);
-          this.field_P = this.a((byte) -73, (sba) (this), fja.field_r);
+          this.field_P = this.a((byte) -73, (sba) (this), GetFighterRepairAmount.field_r);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "tda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class tda extends iw implements oo {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class tda extends iw implements oo {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class tda extends iw implements oo {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 

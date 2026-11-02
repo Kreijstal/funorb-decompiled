@@ -27,7 +27,7 @@ final class uea extends bob {
           }
           this.field_q[param0].field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uea.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uea.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class uea extends bob {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class uea extends bob {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class uea extends bob {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class uea extends bob {
         } else {
           if (param3 == -2) {
             dma.a();
-            wna.field_e = true;
+            RoundResult.field_e = true;
           } else {
             if (param1) {
               amb.a(-30428, false);
@@ -206,7 +206,7 @@ final class uea extends bob {
               var4 = 1;
               if (null != wca.field_b) {
                 stackIn_10_0 = wca.field_b;
-                stackIn_11_1 = (lo.field_a[param3].a(noa.field_q, pk.field_o, 6868) != -1) ? false : true;
+                stackIn_11_1 = (lo.field_a[param3].a(GetTorpedoReload.field_q, GetUseDetailLines.field_o, 6868) != -1) ? false : true;
                 ((dla) (Object) stackIn_10_0).a(stackIn_11_1, (byte) 55);
               }
             }
@@ -220,7 +220,7 @@ final class uea extends bob {
         var6 = 13421772;
         if (li.field_i) {
           var7 = 3;
-          pj.a(og.field_r, de.a(var7, 300), nma.field_b[var7], -125, var6, ip.field_p.width, pk.field_o, var5, noa.field_q, ip.field_p.height);
+          SetBoostersCooldown.a(GetDebrisGroupColour.field_r, SetTorpedoEnergyUsed.a(var7, 300), nma.field_b[var7], -125, var6, GetBombletSprayEnergyUsed.field_p.width, GetUseDetailLines.field_o, var5, GetTorpedoReload.field_q, GetBombletSprayEnergyUsed.field_p.height);
         }
     }
 
@@ -261,7 +261,7 @@ final class uea extends bob {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -340,7 +340,7 @@ final class uea extends bob {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -358,7 +358,7 @@ final class uea extends bob {
         try {
           param0.a(this, 6, param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

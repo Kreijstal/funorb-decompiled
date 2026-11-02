@@ -40,43 +40,43 @@ final class lw extends IntrusiveNode {
         if ((long)param1 < 65536L) {
           if ((long)param1 < 256L) {
             if (param1 >= 0) {
-              return eo.field_o[param1] >> 12;
+              return GetBuildViewAutozoomEndOnAction.field_o[param1] >> 12;
             }
             return -1;
           }
           if ((long)param1 >= 4096L) {
             if (16384L > (long)param1) {
-              return eo.field_o[param1 >> 6] >> 9;
+              return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 6] >> 9;
             }
-            return eo.field_o[param1 >> 8] >> 8;
+            return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 8] >> 8;
           }
           if ((long)param1 < 1024L) {
-            return eo.field_o[param1 >> 2] >> 11;
+            return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 2] >> 11;
           }
-          return eo.field_o[param1 >> 4] >> 10;
+          return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 4] >> 10;
         }
         if (16777216L <= (long)param1) {
           if ((long)param1 >= 268435456L) {
             if ((long)param1 >= 1073741824L) {
-              return eo.field_o[param1 >> 24];
+              return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 24];
             }
-            return eo.field_o[param1 >> 22] >> 1;
+            return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 22] >> 1;
           }
           if ((long)param1 >= 67108864L) {
-            return eo.field_o[param1 >> 20] >> 2;
+            return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 20] >> 2;
           }
-          return eo.field_o[param1 >> 18] >> 3;
+          return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 18] >> 3;
         }
         if ((long)param1 < 1048576L) {
           if ((long)param1 >= 262144L) {
-            return eo.field_o[param1 >> 12] >> 6;
+            return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 12] >> 6;
           }
-          return eo.field_o[param1 >> 10] >> 7;
+          return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 10] >> 7;
         }
         if ((long)param1 < 4194304L) {
-          return eo.field_o[param1 >> 14] >> 5;
+          return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 14] >> 5;
         }
-        return eo.field_o[param1 >> 16] >> 4;
+        return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 16] >> 4;
     }
 
     final void a(int param0, int param1) {

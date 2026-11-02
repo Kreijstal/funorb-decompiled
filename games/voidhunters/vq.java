@@ -18,7 +18,7 @@ abstract class vq extends dqa implements lca {
           }
           this.field_z.field_c = this;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "vq.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vq.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,7 +63,7 @@ abstract class vq extends dqa implements lca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -97,11 +97,11 @@ abstract class vq extends dqa implements lca {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (ff.field_o.field_g >= 4) {
-            if (ff.field_o.field_k == -1) {
+          if (GetAutozoomAmountMultiply.field_o.field_g >= 4) {
+            if (GetAutozoomAmountMultiply.field_o.field_k == -1) {
               return 3;
             }
-            if (ff.field_o.field_k == -2) {
+            if (GetAutozoomAmountMultiply.field_o.field_k == -2) {
               return 4;
             }
             return 1;
@@ -111,12 +111,12 @@ abstract class vq extends dqa implements lca {
           }
           try {
             if (0 == gob.field_c) {
-              ija.field_b = gia.field_k.a(esa.field_p, hob.field_l, param0 ^ -6201);
+              ija.field_b = gia.field_k.a(SetDefaultFiringLeeway.field_p, hob.field_l, param0 ^ -6201);
               gob.field_c = gob.field_c + 1;
             }
             if (1 == gob.field_c) {
               if (ija.field_b.field_f == 2) {
-                stackIn_17_0 = jia.a(-93, -1);
+                stackIn_17_0 = SetReverbDry.a(-93, -1);
                 return stackIn_17_0;
               }
               if (ija.field_b.field_f == 1) {
@@ -126,24 +126,24 @@ abstract class vq extends dqa implements lca {
             if (gob.field_c == 2) {
               eu.field_h = new lpb((java.net.Socket) (ija.field_b.field_d), gia.field_k);
               var2 = new PacketBuffer(13);
-              jdb.a(nia.field_p, (byte) -48, wlb.field_o, var2, qfa.field_Ib);
+              jdb.a(SetPointDefenceLaserProjectileDamage.field_p, (byte) -48, GetFixedaim.field_o, var2, OpenGlToolkit.field_Ib);
               var2.c(0, 15);
               var2.d(ea.field_d, 332614536);
               eu.field_h.a(0, var2.payload, 13, 0);
               gob.field_c = gob.field_c + 1;
-              ldb.field_r = 30000L + wt.a(false);
+              GetRepairModePower.field_r = 30000L + wt.a(false);
             }
             if (gob.field_c == 3) {
               if (0 < eu.field_h.c(param0 ^ -6269)) {
                 var1_int = eu.field_h.a(-123);
                 if (var1_int != 0) {
-                  stackIn_31_0 = jia.a(-71, var1_int);
+                  stackIn_31_0 = SetReverbDry.a(-71, var1_int);
                   return stackIn_31_0;
                 }
                 gob.field_c = gob.field_c + 1;
               } else {
-                if (ldb.field_r < wt.a(false)) {
-                  stackIn_27_0 = jia.a(-84, -2);
+                if (GetRepairModePower.field_r < wt.a(false)) {
+                  stackIn_27_0 = SetReverbDry.a(-84, -2);
                   return stackIn_27_0;
                 }
               }
@@ -152,7 +152,7 @@ abstract class vq extends dqa implements lca {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            ff.field_o.a(eu.field_h, sw.field_f, false);
+            GetAutozoomAmountMultiply.field_o.a(eu.field_h, sw.field_f, false);
             gob.field_c = 0;
             eu.field_h = null;
             ija.field_b = null;
@@ -161,7 +161,7 @@ abstract class vq extends dqa implements lca {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return jia.a(param0 ^ 6182, -3);
+            return SetReverbDry.a(param0 ^ 6182, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

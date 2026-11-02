@@ -14,7 +14,7 @@ final class hob extends IntrusiveNode {
     int field_k;
     int field_g;
 
-    final static tv[] a(ij param0, int param1) {
+    final static tv[] a(IntrusiveDeque param0, int param1) {
         int var4 = 0;
         IntrusiveNode[] var2 = null;
         RuntimeException var2_ref = null;
@@ -52,7 +52,7 @@ final class hob extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -66,17 +66,17 @@ final class hob extends IntrusiveNode {
         try {
           var3 = var2.field_q;
           var4 = var2.field_p;
-          vbb.e(3);
-          cg.field_o = new phb(var3, 3 * var4 / 4);
-          cg.field_o.b();
+          SetOndamageParticleSpeed.e(3);
+          GetToggledScoreboard.field_o = new phb(var3, 3 * var4 / 4);
+          GetToggledScoreboard.field_o.b();
           var2.c(0, 0);
-          reb.field_a = new phb(var3, var4 - cg.field_o.field_p);
+          reb.field_a = new phb(var3, var4 - GetToggledScoreboard.field_o.field_p);
           reb.field_a.b();
-          var2.c(0, -cg.field_o.field_p);
-          reb.field_a.field_l = cg.field_o.field_p;
+          var2.c(0, -GetToggledScoreboard.field_o.field_p);
+          reb.field_a.field_l = GetToggledScoreboard.field_o.field_p;
           bia.a((byte) 124);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hob.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hob.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,25 +91,25 @@ final class hob extends IntrusiveNode {
           field_e = (String) null;
           if (param0 >= 0) {
             if (param0 > 65536) {
-              return 2048 - tfb.field_o[134217728 / param0];
+              return 2048 - SetDebrisGrabbingRange.field_o[134217728 / param0];
             }
-            return tfb.field_o[param0 >> 5];
+            return SetDebrisGrabbingRange.field_o[param0 >> 5];
           }
           if (param0 >= -65536) {
-            return -tfb.field_o[-param0 >> 5];
+            return -SetDebrisGrabbingRange.field_o[-param0 >> 5];
           }
-          return -2048 + tfb.field_o[134217728 / -param0];
+          return -2048 + SetDebrisGrabbingRange.field_o[134217728 / -param0];
         }
         if (param0 >= 0) {
           if (param0 > 65536) {
-            return 2048 - tfb.field_o[134217728 / param0];
+            return 2048 - SetDebrisGrabbingRange.field_o[134217728 / param0];
           }
-          return tfb.field_o[param0 >> 5];
+          return SetDebrisGrabbingRange.field_o[param0 >> 5];
         }
         if (param0 >= -65536) {
-          return -tfb.field_o[-param0 >> 5];
+          return -SetDebrisGrabbingRange.field_o[-param0 >> 5];
         }
-        return -2048 + tfb.field_o[134217728 / -param0];
+        return -2048 + SetDebrisGrabbingRange.field_o[134217728 / -param0];
     }
 
     final static int a(Random param0, int param1, int param2) {
@@ -137,7 +137,7 @@ final class hob extends IntrusiveNode {
           do {
             var4 = param0.nextInt();
           } while (var3_int <= var4);
-          stackIn_12_0 = lva.b(var4, param1, -103);
+          stackIn_12_0 = GetPhasedEnergyBeamFireForce.b(var4, param1, -103);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ final class hob extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

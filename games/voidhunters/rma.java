@@ -8,7 +8,7 @@ final class rma extends mfb {
 
     final static void a(int param0, byte param1) {
         if (di.field_l != null) {
-          di.field_l.a((byte) 76, Integer.toString(param0), dpa.field_p);
+          di.field_l.a((byte) 76, Integer.toString(param0), RequestNewestBlackboxRecording.field_p);
           if (param1 != 47) {
             rma.a(112, (byte) -50);
             return;
@@ -53,26 +53,26 @@ final class rma extends mfb {
         kib.field_d = 3 & param0 >> 4;
         if (kib.field_d > 2) {
           kib.field_d = 2;
-          idb.field_p = (13 & param0) >> 2;
+          GetThrusterSmallForce.field_p = (13 & param0) >> 2;
           lla.field_h = param0 & 3;
-          if (idb.field_p <= 2) {
+          if (GetThrusterSmallForce.field_p <= 2) {
             if (2 >= lla.field_h) {
               return;
             }
             lla.field_h = 2;
             return;
           }
-          idb.field_p = 2;
+          GetThrusterSmallForce.field_p = 2;
           if (2 < lla.field_h) {
             lla.field_h = 2;
             return;
           }
           return;
         }
-        idb.field_p = (13 & param0) >> 2;
+        GetThrusterSmallForce.field_p = (13 & param0) >> 2;
         lla.field_h = param0 & 3;
-        if (idb.field_p > 2) {
-          idb.field_p = 2;
+        if (GetThrusterSmallForce.field_p > 2) {
+          GetThrusterSmallForce.field_p = 2;
           if (2 >= lla.field_h) {
             return;
           }
@@ -152,15 +152,15 @@ final class rma extends mfb {
 
     final int c(byte param0) {
         int var2 = -97 % ((param0 - 75) / 46);
-        return uaa.field_o;
+        return GetTorqueDownshift.field_o;
     }
 
     final int f(byte param0) {
         if (param0 < 0) {
           this.b(true);
-          return brb.field_o;
+          return SetSpinningBladeAimarc.field_o;
         }
-        return brb.field_o;
+        return SetSpinningBladeAimarc.field_o;
     }
 
     final int c(int param0) {

@@ -17,22 +17,22 @@ final class uab {
     final static boolean a(byte param0) {
         if (param0 != 44) {
           uab.a(54);
-          return knb.field_o;
+          return SetAngularForceDownshift.field_o;
         }
-        return knb.field_o;
+        return SetAngularForceDownshift.field_o;
     }
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-          param1.removeMouseListener(wj.field_q);
-          param1.removeMouseMotionListener(wj.field_q);
+          param1.removeMouseListener(GetDebrisFoundInPairs.field_q);
+          param1.removeMouseMotionListener(GetDebrisFoundInPairs.field_q);
           if (param0 != 1) {
             uab.a((byte) 73);
           }
-          param1.removeFocusListener(wj.field_q);
-          am.field_q = 0;
+          param1.removeFocusListener(GetDebrisFoundInPairs.field_q);
+          GetBombletSprayAimarc.field_q = 0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uab.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uab.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

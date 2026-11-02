@@ -54,7 +54,7 @@ final class gnb {
           param1.field_c.field_a = param1;
           param1.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gnb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gnb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -71,9 +71,9 @@ final class gnb {
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          var2_int = hob.a(param0, oea.field_o, 120);
+          var2_int = hob.a(param0, SetSniperCannonEnergyUsed.field_o, 120);
           for (var3 = 0; 56 > var3; var3++) {
-            if (tr.a(108, var3)) {
+            if (SettingsInstance.a(108, var3)) {
               if (0 == var2_int) {
                 stackIn_7_0 = var3;
                 return stackIn_7_0;
@@ -82,7 +82,7 @@ final class gnb {
             }
           }
           if (param1 > 52) {
-            throw new IllegalStateException("No asteroid type found. number_of_asteroids=" + oea.field_o);
+            throw new IllegalStateException("No asteroid type found. number_of_asteroids=" + SetSniperCannonEnergyUsed.field_o);
           }
           stackIn_12_0 = 14;
           return stackIn_12_0;
@@ -96,7 +96,7 @@ final class gnb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class gnb {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -236,8 +236,8 @@ final class gnb {
           throw new IllegalStateException();
         }
         djb.field_r = true;
-        aka.a(true, param0 ^ -125);
-        qmb.field_q = param0;
+        GetSniperCannonProjectiles.a(true, param0 ^ -125);
+        GetSpinningBladeAimspeed.field_q = param0;
     }
 
     gnb(int param0) {

@@ -19,13 +19,13 @@ final class bma extends uda {
         this.field_d.g(1, -64);
         this.field_d.a((ura) null, -114);
         this.field_d.a(asa.field_a, true, asa.field_a);
-        this.field_d.a(0, qcb.field_q, 7);
+        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
         this.field_d.a(2, pea.field_d, param0 - 2536);
-        this.field_d.a(0, (byte) -72, qcb.field_q);
+        this.field_d.a(0, (byte) -72, SetGrapplingHookMaxExtension8Force.field_q);
         this.field_d.g(0, -123);
         if (this.field_f) {
-          this.field_d.a(0, qcb.field_q, 7);
-          this.field_d.a(0, (byte) -118, qcb.field_q);
+          this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+          this.field_d.a(0, (byte) -118, SetGrapplingHookMaxExtension8Force.field_q);
           this.field_f = false;
           if (param0 == 2543) {
             if (!this.field_g) {
@@ -71,9 +71,9 @@ final class bma extends uda {
         this.field_i = param1 ? true : false;
         this.field_d.g(1, -72);
         this.field_d.a(this.field_e, param0 - 119);
-        this.field_d.a(et.field_c, true, df.field_o);
+        this.field_d.a(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
         this.field_d.a(0, pea.field_d, param0 ^ 2);
-        this.field_d.a(true, -21115, false, qcb.field_q, 2);
+        this.field_d.a(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
         this.field_d.a(0, (byte) -104, pja.field_l);
         this.field_d.g(0, -93);
         if (param0 != 5) {
@@ -173,7 +173,7 @@ final class bma extends uda {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -218,8 +218,8 @@ final class bma extends uda {
         try {
           if (param2 != null) {
             if (this.field_f) {
-              this.field_d.a(0, qcb.field_q, 7);
-              this.field_d.a(0, (byte) -58, qcb.field_q);
+              this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+              this.field_d.a(0, (byte) -58, SetGrapplingHookMaxExtension8Force.field_q);
               this.field_f = false;
             }
             this.field_d.a(param2, -118);
@@ -248,7 +248,7 @@ final class bma extends uda {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

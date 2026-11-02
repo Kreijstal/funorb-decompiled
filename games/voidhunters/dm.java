@@ -14,7 +14,7 @@ final class dm extends mfb {
 
     final int a(byte param0) {
         int var2 = 70 / ((param0 + 48) / 43);
-        return de.field_q;
+        return SetTorpedoEnergyUsed.field_q;
     }
 
     final int k(int param0) {
@@ -28,28 +28,28 @@ final class dm extends mfb {
         if (param1 != -78) {
           dm.a(-119, (byte) -85);
           if (param0 == 3) {
-            return oq.field_l * wkb.field_a;
+            return Particle.field_l * wkb.field_a;
           }
           if (param0 == 12) {
-            return oq.field_l * wkb.field_a;
+            return Particle.field_l * wkb.field_a;
           }
-          return wkb.field_a * oq.field_l;
+          return wkb.field_a * Particle.field_l;
         }
         if (param0 == 3) {
-          return oq.field_l * wkb.field_a;
+          return Particle.field_l * wkb.field_a;
         }
         if (param0 == 12) {
-          return oq.field_l * wkb.field_a;
+          return Particle.field_l * wkb.field_a;
         }
-        return wkb.field_a * oq.field_l;
+        return wkb.field_a * Particle.field_l;
     }
 
     final int f(byte param0) {
         if (param0 < 0) {
           this.b(-118);
-          return oq.field_m;
+          return Particle.field_m;
         }
-        return oq.field_m;
+        return Particle.field_m;
     }
 
     final int d(byte param0) {
@@ -63,7 +63,7 @@ final class dm extends mfb {
         if (param0) {
           return -12;
         }
-        return dca.field_o;
+        return GetPlayerRepairAmount.field_o;
     }
 
     final int a(boolean param0) {
@@ -76,9 +76,9 @@ final class dm extends mfb {
     final int g(byte param0) {
         if (param0 >= -12) {
           field_b = true;
-          return wda.field_s;
+          return LoadSettings.field_s;
         }
-        return wda.field_s;
+        return LoadSettings.field_s;
     }
 
     final boolean c(boolean param0) {
@@ -98,15 +98,15 @@ final class dm extends mfb {
         if (param0 != 0) {
           return 125;
         }
-        return rta.field_p;
+        return GetMissileLauncherRandomness.field_p;
     }
 
     final int a(int param0) {
         if (param0 != 0) {
           field_b = false;
-          return awa.field_q;
+          return SetShipAimLines.field_q;
         }
-        return awa.field_q;
+        return SetShipAimLines.field_q;
     }
 
     dm() {

@@ -29,7 +29,7 @@ final class ttb extends shb {
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
-        de.a(105, var14);
+        SetTorpedoEnergyUsed.a(105, var14);
         int var5 = this.field_f >> 1;
         int var6 = 0;
         if (!param0) {
@@ -93,7 +93,7 @@ final class ttb extends shb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class ttb extends shb {
         int var9 = VoidHunters.field_G;
         int var2 = this.field_f >> 1;
         phb var3 = new phb(var2, this.field_f);
-        de.a(78, var3);
+        SetTorpedoEnergyUsed.a(78, var3);
         if (param0) {
           phb var10 = (phb) null;
           this.a(-50, -55, (phb) null, -43);
@@ -197,7 +197,7 @@ final class ttb extends shb {
           }
           bia.a((byte) 124);
           if (param3 + this.field_y.field_q >= dma.field_d) {
-            de.a(param0 ^ 66, this.field_F);
+            SetTorpedoEnergyUsed.a(param0 ^ 66, this.field_F);
             param2.a(-this.field_w, 0);
             param2.a(this.field_E * 2 - this.field_w, 0);
             this.field_u.b(0, 0);
@@ -205,7 +205,7 @@ final class ttb extends shb {
             this.field_F.a(param3, param1);
           }
           if (dma.field_a >= var5_int - this.field_y.field_q) {
-            de.a(param0 + 22, this.field_F);
+            SetTorpedoEnergyUsed.a(param0 + 22, this.field_F);
             for (var7 = this.field_h - this.field_y.field_q + this.field_w; var7 > 2 * this.field_E; var7 = var7 - this.field_E * 2) {
             }
             param2.a(-var7, 0);
@@ -226,7 +226,7 @@ final class ttb extends shb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 

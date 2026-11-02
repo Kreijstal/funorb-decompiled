@@ -3,7 +3,7 @@
  */
 final class mr extends iw implements oo {
     static String field_L;
-    static ij field_M;
+    static IntrusiveDeque field_M;
     private htb field_K;
     static String field_J;
 
@@ -34,21 +34,21 @@ final class mr extends iw implements oo {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final static String m(byte param0) {
         String var1 = "";
-        if (null != jt.field_o) {
-          var1 = jt.field_o.a(30);
+        if (null != SetAiFiringRangeUpshift.field_o) {
+          var1 = SetAiFiringRangeUpshift.field_o.a(30);
         }
         int var2 = 80 / ((-61 - param0) / 55);
         if (0 == var1.length()) {
           var1 = dla.c(120);
         }
         if (0 == var1.length()) {
-          var1 = job.field_o;
+          var1 = SetMachineGunReload.field_o;
         }
         return var1;
     }
@@ -80,14 +80,14 @@ final class mr extends iw implements oo {
             if (param1 == bca.field_a) {
               this.field_f = this.field_f + 10;
               var3 = r.field_m;
-              if (oq.c((byte) 109)) {
+              if (Particle.c((byte) 109)) {
                 var3 = jga.field_b;
                 this.field_f = this.field_f + 20;
               }
             } else {
-              if (param1 == oca.field_a) {
+              if (param1 == RemoveEventAction.field_a) {
                 this.field_f = this.field_f + 30;
-                var3 = tl.field_o;
+                var3 = SetFighterRepairAmount.field_o;
               }
             }
           }
@@ -96,9 +96,9 @@ final class mr extends iw implements oo {
           var4.field_r = 50;
           var4.field_h = this.field_h;
           var4.field_g = 0;
-          var4.field_q = (wwa) ((Object) new bob(web.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_q = (wwa) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(-18756, var4);
-          this.field_K = this.a((byte) 113, (sba) (this), wm.field_b);
+          this.field_K = this.a((byte) 113, (sba) (this), MissionCondition.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,7 +116,7 @@ final class mr extends iw implements oo {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class mr extends iw implements oo {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

@@ -37,7 +37,7 @@ final class wv extends le {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -89,8 +89,8 @@ final class wv extends le {
         var3 = var12;
         if (this.field_d.field_g) {
           stackIn_5_0 = this.field_m;
-          if (noa.field_o != this.field_j) {
-            stackIn_6_1 = this.field_j * param1 / noa.field_o;
+          if (GetTorpedoReload.field_o != this.field_j) {
+            stackIn_6_1 = this.field_j * param1 / GetTorpedoReload.field_o;
           } else {
             stackIn_6_1 = param1;
           }

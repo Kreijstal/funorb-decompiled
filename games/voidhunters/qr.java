@@ -115,7 +115,7 @@ final class qr extends uda {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class qr extends uda {
           ura var4 = (ura) null;
           this.a((byte) -108, 75, (ura) null);
         }
-        this.field_d.a(et.field_c, true, asa.field_a);
+        this.field_d.a(MissionVariable.field_c, true, asa.field_a);
     }
 
     final void a(int param0, boolean param1) {
@@ -135,29 +135,29 @@ final class qr extends uda {
           return;
         }
         if (null == this.field_f) {
-          this.field_d.a(0, (byte) -113, tma.field_q);
+          this.field_d.a(0, (byte) -113, GetArmageddonLength.field_q);
         } else {
           if (!param1) {
-            this.field_d.a(0, (byte) -113, tma.field_q);
+            this.field_d.a(0, (byte) -113, GetArmageddonLength.field_q);
           } else {
             this.field_d.g(1, -51);
             this.field_d.a((byte) -111, tea.field_d);
             var5 = this.field_d.H((byte) 8);
             var5.a((byte) -80, 1024);
-            this.field_d.a(wda.field_o, true);
+            this.field_d.a(LoadSettings.field_o, true);
             if (!this.field_h) {
-              this.field_d.a(asa.field_a, true, et.field_c);
+              this.field_d.a(asa.field_a, true, MissionVariable.field_c);
               this.field_d.a(0, pja.field_l, 7);
               this.field_d.g(2, -51);
-              this.field_d.a(et.field_c, true, je.field_c);
+              this.field_d.a(MissionVariable.field_c, true, je.field_c);
               this.field_d.a(0, pja.field_l, param0 ^ 2);
               this.field_d.a(true, param0 ^ -21120, false, pja.field_l, 1);
-              this.field_d.a(0, (byte) -86, tma.field_q);
+              this.field_d.a(0, (byte) -86, GetArmageddonLength.field_q);
               this.field_d.a(this.field_d.field_Q, param0 - 119);
             } else {
-              this.field_d.a(et.field_c, true, je.field_c);
-              this.field_d.a(true, param0 - 21120, false, qcb.field_q, 0);
-              this.field_d.a(0, (byte) -96, tma.field_q);
+              this.field_d.a(MissionVariable.field_c, true, je.field_c);
+              this.field_d.a(true, param0 - 21120, false, SetGrapplingHookMaxExtension8Force.field_q, 0);
+              this.field_d.a(0, (byte) -96, GetArmageddonLength.field_q);
             }
             this.field_d.g(0, -100);
             this.field_e = true;
@@ -173,7 +173,7 @@ final class qr extends uda {
           this.field_d.a(param2, -113);
           this.field_d.h(-124, param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qr.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qr.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class qr extends uda {
         int var3;
         var3 = VoidHunters.field_G;
         if (!this.field_e) {
-          this.field_d.a(0, (byte) -99, qcb.field_q);
+          this.field_d.a(0, (byte) -99, SetGrapplingHookMaxExtension8Force.field_q);
         } else {
           this.field_d.g(1, -114);
           this.field_d.a((ura) null, -123);
@@ -189,16 +189,16 @@ final class qr extends uda {
           this.field_d.F((byte) 108);
           if (this.field_h) {
             this.field_d.a(asa.field_a, true, asa.field_a);
-            this.field_d.a(0, qcb.field_q, 7);
-            this.field_d.a(0, (byte) -92, qcb.field_q);
+            this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+            this.field_d.a(0, (byte) -92, SetGrapplingHookMaxExtension8Force.field_q);
           } else {
             this.field_d.a(asa.field_a, true, asa.field_a);
-            this.field_d.a(0, qcb.field_q, 7);
+            this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
             this.field_d.g(2, -90);
             this.field_d.a(asa.field_a, true, asa.field_a);
-            this.field_d.a(0, qcb.field_q, param0 - 2536);
+            this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, param0 - 2536);
             this.field_d.a(1, pja.field_l, 7);
-            this.field_d.a(0, (byte) -105, qcb.field_q);
+            this.field_d.a(0, (byte) -105, SetGrapplingHookMaxExtension8Force.field_q);
             this.field_d.a((ura) null, -128);
           }
           this.field_d.g(0, -110);

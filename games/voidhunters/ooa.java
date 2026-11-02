@@ -74,7 +74,7 @@ final class ooa extends llb {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class ooa extends llb {
             param3 == param6 &&
             param5 == param0 &&
             param1 == param7) {
-            ew.a(param3, param5, (byte) 52, param9, param1, param8);
+            GetBurstFireMaxEnergy.a(param3, param5, (byte) 52, param9, param1, param8);
           } else {
             var10_int = param9;
             var11 = param3;
@@ -189,7 +189,7 @@ final class ooa extends llb {
               var32 = var24 * var23;
               var33 = param9 + (var31 + var29 + var27 >> 12);
               var34 = param3 + (var32 + (var30 + var28) >> 12);
-              ew.a(var11, var33, (byte) 110, var10_int, var34, param8);
+              GetBurstFireMaxEnergy.a(var11, var33, (byte) 110, var10_int, var34, param8);
               var11 = var34;
               var10_int = var33;
             }
@@ -201,7 +201,7 @@ final class ooa extends llb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var10), "ooa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var10), "ooa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

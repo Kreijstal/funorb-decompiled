@@ -9,7 +9,7 @@ final class osb implements dja {
         if (param0 != 11995) {
           return (tv[]) null;
         }
-        return (tv[]) ((Object) new cc[param1]);
+        return (tv[]) ((Object) new BodyCondition[param1]);
     }
 
     public static void a(int param0) {
@@ -23,7 +23,7 @@ final class osb implements dja {
 
     public final tv a(byte param0) {
         int var2 = -16 % ((-64 - param0) / 50);
-        return (tv) ((Object) new cc());
+        return (tv) ((Object) new BodyCondition());
     }
 
     static {

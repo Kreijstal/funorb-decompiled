@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class md extends le {
-    static ij field_j;
+    static IntrusiveDeque field_j;
     private ev[] field_i;
 
     final static void b(int param0, int param1) {
@@ -13,21 +13,21 @@ final class md extends le {
         RuntimeException var2 = null;
         var3 = VoidHunters.field_G;
         try {
-          var4 = (ik) (mhb.field_o.d(0));
+          var4 = (ik) (SetSalvoHoldable.field_o.d(0));
           while (var4 != null) {
             aeb.a(param0, -21584, var4);
-            var4 = (ik) (mhb.field_o.a((byte) 8));
+            var4 = (ik) (SetSalvoHoldable.field_o.a((byte) 8));
           }
-          var5 = (br) (ca.field_p.d(param1));
+          var5 = (br) (SetDebugLineLife.field_p.d(param1));
           while (var5 != null) {
-            eva.a(var5, -60, param0);
-            var5 = (br) (ca.field_p.a((byte) 112));
+            GetMachineGunProjectileDamage.a(var5, -60, param0);
+            var5 = (br) (SetDebugLineLife.field_p.a((byte) 112));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "md.D(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "md.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -48,11 +48,11 @@ final class md extends le {
         int[][] var3 = this.field_d.a(param1, (byte) -92);
         if (this.field_d.field_g) {
           var4 = hob.field_d;
-          var5 = noa.field_o;
+          var5 = GetTorpedoReload.field_o;
           var29 = new int[var5][var4];
           var30 = this.field_d.b(param0 - 134);
           this.a(true, var29);
-          for (var8 = 0; noa.field_o > var8; var8++) {
+          for (var8 = 0; GetTorpedoReload.field_o > var8; var8++) {
             var32 = var29[var8];
             var31 = var30[var8];
             var11 = var31[0];
@@ -106,18 +106,18 @@ final class md extends le {
               var5 = param2.e((byte) -104);
               var6 = var5;
               if (var6 == 0) {
-                this.field_i[var4_int] = (ev) ((Object) frb.a(param2, (byte) 118));
+                this.field_i[var4_int] = (ev) ((Object) GetLaserFireForce.a(param2, (byte) 118));
               } else {
                 if (1 != var6) {
                   if (var6 == 2) {
-                    this.field_i[var4_int] = (ev) ((Object) ika.a(32, param2));
+                    this.field_i[var4_int] = (ev) ((Object) AwardVictoryToTeamAction.a(32, param2));
                   } else {
                     if (3 == var6) {
                       this.field_i[var4_int] = (ev) ((Object) uea.a(param2, -87));
                     }
                   }
                 } else {
-                  this.field_i[var4_int] = (ev) ((Object) pmb.a(126, param2));
+                  this.field_i[var4_int] = (ev) ((Object) GetGrapplingHookAimspeed.a(126, param2));
                 }
               }
             }
@@ -139,7 +139,7 @@ final class md extends le {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -163,9 +163,9 @@ final class md extends le {
         var9 = VoidHunters.field_G;
         try {
           var3_int = hob.field_d;
-          var4 = noa.field_o;
-          tt.a(param1, -98);
-          pk.a(wf.field_d, 0, param0, 0, gbb.field_q);
+          var4 = GetTorpedoReload.field_o;
+          AdjustBodyComponentsAction.a(param1, -98);
+          GetUseDetailLines.a(wf.field_d, 0, param0, 0, SetMassDriverEnergyUsed.field_q);
           if (this.field_i != null) {
             for (var5 = 0; var5 < this.field_i.length; var5++) {
               var6 = this.field_i[var5];
@@ -196,7 +196,7 @@ final class md extends le {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -208,6 +208,6 @@ final class md extends le {
     }
 
     static {
-        field_j = new ij();
+        field_j = new IntrusiveDeque();
     }
 }

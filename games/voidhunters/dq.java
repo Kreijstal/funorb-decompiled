@@ -21,7 +21,7 @@ final class dq {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ij var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         vu var6 = null;
         int var7 = 0;
@@ -49,7 +49,7 @@ final class dq {
           var4 = vra.field_b.field_yb.field_lb;
           if (iwa.field_b != 2 &&
             1 != iwa.field_b) {
-            vra.field_b.field_xb.field_xb.field_R = dsa.field_o;
+            vra.field_b.field_xb.field_xb.field_R = SetFighterRepairTime.field_o;
             vra.field_b.field_y = false;
             igb.a(vra.field_b.field_yb, (byte) -25);
             return;
@@ -61,9 +61,9 @@ final class dq {
           while (var6 != null) {
             var7 = 0;
             if (var6.field_lb == null) {
-              var6.field_wb = new llb(0L, bsa.field_q);
+              var6.field_wb = new llb(0L, SetReverbDamp.field_q);
               var6.b(-561, var6.field_wb);
-              var6.field_Bb = new llb(0L, bsa.field_q);
+              var6.field_Bb = new llb(0L, SetReverbDamp.field_q);
               var6.b(-561, var6.field_Bb);
               var7 = 1;
               var6.g(127);
@@ -73,15 +73,15 @@ final class dq {
             var8 = 0;
             if (null != var6.field_vb &&
               !var6.field_vb.equals("")) {
-              var6.field_Bb.field_tb = iqb.field_o;
+              var6.field_Bb.field_tb = SetMissileLauncherRandomness.field_o;
               var6.field_Bb.field_qb = 16737894;
               var8 = 1;
-              var6.field_Bb.a(0, -87, iqb.field_o.field_m + 3, 0, nna.field_w);
+              var6.field_Bb.a(0, -87, SetMissileLauncherRandomness.field_o.field_m + 3, 0, nna.field_w);
             }
             var9 = 0;
             var10 = var6.field_hb;
             if (var8 != 0) {
-              var9 = 3 + iqb.field_o.field_m;
+              var9 = 3 + SetMissileLauncherRandomness.field_o.field_m;
               var10 = var10 - var9;
             }
             stackIn_22_0 = var6.field_wb;
@@ -112,30 +112,30 @@ final class dq {
             var5 = var6;
             if (var6.field_o != 0) {
               pea.$cfr$intArgs$a$91f64d33677c(0L, var6, -1, (int[]) null, var6.field_Cb, vra.field_b.field_xb, var6.field_Fb, 72, -1);
-              var16 = cka.field_o;
+              var16 = GetLagStandardDeviationOut.field_o;
               var13_ref_String = ci.field_a;
               var16.field_i.a(var13_ref_String, (byte) -53, 7);
-              var17 = cka.field_o;
-              var13 = oq.field_H;
+              var17 = GetLagStandardDeviationOut.field_o;
+              var13 = Particle.field_H;
               var14 = qs.field_a;
               var17.field_i.b(var13, -29060, var14, 0, 0);
             }
             var6 = (vu) (var4.a((byte) 66));
           }
           if (0 != vra.field_b.field_wb.field_o) {
-            ola.field_p = new qka(vra.field_b.field_wb.field_M, vra.field_b.field_wb.field_u, vra.field_b.field_wb.field_hb, vra.field_b.field_wb.field_G, mw.field_d, msa.field_o, qc.field_q, qc.field_q);
+            ola.field_p = new qka(vra.field_b.field_wb.field_M, vra.field_b.field_wb.field_u, vra.field_b.field_wb.field_hb, vra.field_b.field_wb.field_G, mw.field_d, GetDebrisMax.field_o, qc.field_q, qc.field_q);
             rc.field_b = 2;
           }
           if (0 == vra.field_b.field_zb.field_o) {
             return;
           }
-          ola.field_p = new qka(vra.field_b.field_zb.field_M, vra.field_b.field_zb.field_u, vra.field_b.field_zb.field_hb, vra.field_b.field_zb.field_G, cab.field_q, msa.field_o, qc.field_q, qc.field_q);
+          ola.field_p = new qka(vra.field_b.field_zb.field_M, vra.field_b.field_zb.field_u, vra.field_b.field_zb.field_hb, vra.field_b.field_zb.field_G, GetUseNiceTrails.field_q, GetDebrisMax.field_o, qc.field_q, qc.field_q);
           rc.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "dq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "dq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class dq {
           }
           this.a(true);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "dq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

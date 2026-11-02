@@ -18,7 +18,7 @@ final class pd extends IntrusiveNode {
         this.field_h = param0;
         this.field_i = param1;
         this.field_f = param2;
-        this.field_d = nua.field_o;
+        this.field_d = SetAutoaim.field_o;
         this.field_e = param3;
     }
 
