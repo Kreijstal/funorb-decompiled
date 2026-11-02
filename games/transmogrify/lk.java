@@ -59,14 +59,14 @@ final class lk {
         byte[] var6_ref_byte__ = null;
         byte[] var7 = null;
         Object var8 = null;
-        oa var10 = null;
+        PacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
         try {
           var3 = -27 % ((param0 - 13) / 43);
-          var10 = new oa(param1);
+          var10 = new PacketBuffer(param1);
           var4 = var10.d((byte) 57);
           var5 = var10.c((byte) -126);
           if (var5 >= 0 && (ll.field_R == 0 ||

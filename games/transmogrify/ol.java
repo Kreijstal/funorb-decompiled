@@ -23,7 +23,7 @@ final class ol {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            nf.field_l = new hj(param1);
+            WordLanguage.field_l = new hj(param1);
             ff.field_D = new hj(param6);
             dh.field_x = param12;
             ua.field_c = param8;

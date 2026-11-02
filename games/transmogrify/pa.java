@@ -113,8 +113,8 @@ final class pa implements WidgetListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var9_int = param7 + jk.field_x.a(true);
-          if (param6 <= oa.field_j) {
-            if (param6 + param4 > oa.field_j) {
+          if (param6 <= PacketBuffer.field_j) {
+            if (param6 + param4 > PacketBuffer.field_j) {
               if (param0 <= bk.field_a) {
                 stackIn_10_0 = (bk.field_a < var9_int + param0) ? 1 : 0;
               } else {

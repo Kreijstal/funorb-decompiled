@@ -3,7 +3,7 @@
  */
 final class n {
     static String field_b;
-    static int field_a;
+    static int submittedWordCount;
 
     final static byte[] a(byte[] param0, int param1, int param2, int param3) {
         int var5_int = 0;

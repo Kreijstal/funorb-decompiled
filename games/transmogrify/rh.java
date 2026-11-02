@@ -11,7 +11,7 @@ abstract class rh extends DualLinkNode {
     static pd field_v;
     static ti[] field_l;
     static ti field_s;
-    static int field_n;
+    static int unlockedAchievementMask;
     static kg field_q;
 
     final static String a(byte param0, int param1) {
@@ -21,7 +21,7 @@ abstract class rh extends DualLinkNode {
 
     final static tf[] d(int param0) {
         if (param0 == -26481) {
-          return new tf[]{nf.field_m, og.field_d, oa.field_l, field_u, ef.field_e, gk.field_b, rf.field_db, gk.field_d, gh.field_g, oj.field_m, u.field_c, kb.field_q, ik.field_cb, nj.field_g};
+          return new tf[]{WordLanguage.field_m, og.field_d, PacketBuffer.field_l, field_u, ef.field_e, gk.field_b, rf.field_db, gk.field_d, gh.field_g, oj.field_m, u.field_c, kb.field_q, ik.field_cb, nj.field_g};
         }
         return (tf[]) null;
     }

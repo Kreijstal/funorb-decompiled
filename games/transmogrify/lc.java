@@ -439,7 +439,7 @@ final class lc extends PcmStream {
         int[] var16 = null;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
-          var12 = nf.field_l;
+          var12 = WordLanguage.field_l;
           if (param0) {
             field_L = (String) null;
           }
@@ -452,9 +452,9 @@ final class lc extends PcmStream {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((oa) ((Object) var5)).d((byte) 48);
+            var6 = ((PacketBuffer) ((Object) var5)).d((byte) 48);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((oa) ((Object) var5)).c((byte) -124);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).c((byte) -124);
             }
             var14 = (oh) (oc.field_G.a((byte) -95));
             if (var14 == null) {
@@ -961,7 +961,7 @@ final class lc extends PcmStream {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.field_h;
+            var4 = param1.position;
             param1.a(-109, var18.field_i);
             var5 = 117 % ((param0 - 0) / 44);
             for (var6 = 0; var18.field_p > var6; var6++) {

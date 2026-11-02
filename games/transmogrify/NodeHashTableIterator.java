@@ -63,7 +63,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_e = null;
     }
 
-    final static LetterTile a(TileRack param0, int param1, nf param2, byte param3, char param4) {
+    final static LetterTile a(TileRack param0, int param1, WordLanguage param2, byte param3, char param4) {
         LetterTile stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -74,11 +74,11 @@ final class NodeHashTableIterator implements Iterator {
         LetterTile var5 = null;
         RuntimeException var5_ref = null;
         LetterTile var6 = null;
-        nf var7 = null;
+        WordLanguage var7 = null;
         try {
           if (param3 <= 24) {
-            var7 = (nf) null;
-            NodeHashTableIterator.a((TileRack) null, -111, (nf) null, (byte) -120, '￬');
+            var7 = (WordLanguage) null;
+            NodeHashTableIterator.a((TileRack) null, -111, (WordLanguage) null, (byte) -120, '￬');
           }
           var5 = (LetterTile) (ab.field_c.c(-126));
           if (var5 == null) {
@@ -152,7 +152,7 @@ final class NodeHashTableIterator implements Iterator {
               var2 = wk.carryoverRack;
               var4 = wk.carryoverRack.tiles[var5].field_l;
             }
-            if (wk.carryoverRack.tiles[var5].field_x) {
+            if (wk.carryoverRack.tiles[var5].doublesWordScore) {
               var3 = var5;
               var4 = 2147483647;
               var2 = wk.carryoverRack;
@@ -169,7 +169,7 @@ final class NodeHashTableIterator implements Iterator {
               var2 = si.newRack;
               var4 = si.newRack.tiles[var7].field_l;
             }
-            if (si.newRack.tiles[var7].field_x) {
+            if (si.newRack.tiles[var7].doublesWordScore) {
               var3 = var7;
               var4 = 2147483647;
               var2 = si.newRack;

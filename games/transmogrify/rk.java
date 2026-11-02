@@ -124,10 +124,10 @@ final class rk extends DualLinkNode {
         }
     }
 
-    final void a(oa param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
-        oa var5 = null;
+        PacketBuffer var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -144,8 +144,8 @@ final class rk extends DualLinkNode {
             break;
           }
           if (param1 != -1) {
-            var5 = (oa) null;
-            this.a((oa) null, 91);
+            var5 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, 91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -171,7 +171,7 @@ final class rk extends DualLinkNode {
         field_q = null;
     }
 
-    private final void a(int param0, int param1, oa param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -184,12 +184,12 @@ final class rk extends DualLinkNode {
         int var6 = 0;
         tf var7 = null;
         int var9 = 0;
-        oa var10 = null;
+        PacketBuffer var10 = null;
         var9 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param0 != 32512) {
-            var10 = (oa) null;
-            this.a(61, -106, (oa) null);
+            var10 = (PacketBuffer) null;
+            this.a(61, -106, (PacketBuffer) null);
           }
           if (param1 != 1) {
             if (param1 == 2) {
@@ -266,8 +266,8 @@ final class rk extends DualLinkNode {
           }
         }
         if (param0 < 44) {
-          oa var4 = (oa) null;
-          this.a(119, -125, (oa) null);
+          PacketBuffer var4 = (PacketBuffer) null;
+          this.a(119, -125, (PacketBuffer) null);
         }
     }
 

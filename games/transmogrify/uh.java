@@ -14,9 +14,9 @@ abstract class uh {
     bk field_n;
     long field_l;
     int field_b;
-    oa field_i;
+    PacketBuffer field_i;
     byte field_m;
-    oa field_g;
+    PacketBuffer field_g;
     volatile int field_k;
     volatile int field_p;
     pj field_e;
@@ -131,11 +131,11 @@ abstract class uh {
         this.field_h = new bk();
         this.field_a = new bk();
         this.field_n = new bk();
-        this.field_i = new oa(6);
+        this.field_i = new PacketBuffer(6);
         this.field_m = (byte) 0;
         this.field_p = 0;
         this.field_k = 0;
-        this.field_g = new oa(10);
+        this.field_g = new PacketBuffer(10);
     }
 
     static {

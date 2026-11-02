@@ -22,7 +22,7 @@ class wj extends kk {
         hd.field_b = true;
     }
 
-    final void a(byte param0, oa param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           param1.b(1908720528, this.field_m);
           if (param0 > -50) {

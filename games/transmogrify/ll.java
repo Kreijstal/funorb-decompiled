@@ -77,7 +77,7 @@ final class ll extends bi implements df {
             }
             var2 = 1;
           }
-          bk.field_c.a(-112, tl.a(196077633, ol.field_b, nk.field_c), tl.a(196077633, oa.field_j, bk.field_a));
+          bk.field_c.a(-112, tl.a(196077633, ol.field_b, nk.field_c), tl.a(196077633, PacketBuffer.field_j, bk.field_a));
           if (bk.field_c.b(31552)) {
             var1_int = 1;
           }

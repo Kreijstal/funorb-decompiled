@@ -92,8 +92,8 @@ final class kf extends td {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        oa var16 = null;
-        oa var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -106,9 +106,9 @@ final class kf extends td {
         int var5Lifetime1;
         var15 = Transmogrify.field_A ? 1 : 0;
         try {
-          var16 = new oa(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
-          var17.field_h = param0.length - 2;
+          var17.position = param0.length - 2;
           ih.field_b = var17.a((byte) -126);
           wk.field_b = new int[ih.field_b];
           ld.field_e = new byte[ih.field_b][];
@@ -117,7 +117,7 @@ final class kf extends td {
           re.field_a = new int[ih.field_b];
           cc.field_e = new boolean[ih.field_b];
           re.field_K = new byte[ih.field_b][];
-          var17.field_h = param0.length - (7 + ih.field_b * 8);
+          var17.position = param0.length - (7 + ih.field_b * 8);
           pj.field_y = var17.a((byte) -122);
           ll.field_U = var17.a((byte) -100);
           var3 = (var17.d((byte) 102) & 255) + 1;
@@ -136,7 +136,7 @@ final class kf extends td {
           for (var4Lifetime3 = 0; var4Lifetime3 < ih.field_b; var4Lifetime3++) {
             wk.field_b[var4Lifetime3] = var17.a((byte) -112);
           }
-          var17.field_h = -(3 * (-1 + var3)) + param0.length - 7 - ih.field_b * 8;
+          var17.position = -(3 * (-1 + var3)) + param0.length - 7 - ih.field_b * 8;
           rg.field_D = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             rg.field_D[var4Lifetime4] = var17.g((byte) 124);
@@ -144,7 +144,7 @@ final class kf extends td {
               rg.field_D[var4Lifetime4] = 1;
             }
           }
-          var17.field_h = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < ih.field_b; var4Lifetime5++) {
             var5Lifetime1 = ql.field_b[var4Lifetime5];
             var6 = wk.field_b[var4Lifetime5];

@@ -39,7 +39,7 @@ final class sf extends ik implements df {
             this.field_lb = false;
           }
           if (param2.field_f) {
-            var4 = oa.field_i;
+            var4 = PacketBuffer.field_i;
           } else {
             if (param2.field_j == null) {
               var4 = param2.field_b;
@@ -80,7 +80,7 @@ final class sf extends ik implements df {
                 var5.a(ee.field_C, 9, 1);
               }
             } else {
-              var5.a(ad.field_f, 7, 1);
+              var5.a(WordDictionary.field_f, 7, 1);
             }
           }
           this.b(-128, var5);

@@ -703,7 +703,7 @@ final class ml extends IntrusiveNode {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        oa var2 = new oa(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_E = var2.c((byte) -128);
         this.field_s = var2.c((byte) -127);
         this.field_l = var2.c((byte) -127);

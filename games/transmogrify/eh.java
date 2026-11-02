@@ -7,7 +7,7 @@ final class eh {
     private static long[] field_d;
     static h field_e;
     static ti[] field_c;
-    static int field_a;
+    static int totalScore;
     static ii[] field_b;
 
     final static void a(ol param0, byte param1, String param2, kg param3, int param4) {
@@ -101,7 +101,7 @@ final class eh {
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param1 < 52) {
-            field_a = -6;
+            totalScore = -6;
           }
           var2_int = param0.slot;
           if (param0.previousRack != null &&
@@ -176,11 +176,11 @@ final class eh {
             } catch (IOException iOException) {
             }
           }
-          if (null != oa.field_m) {
-            for (var1_int = 0; var1_int < oa.field_m.length; var1_int++) {
-              if (oa.field_m[var1_int] != null) {
+          if (null != PacketBuffer.field_m) {
+            for (var1_int = 0; var1_int < PacketBuffer.field_m.length; var1_int++) {
+              if (PacketBuffer.field_m[var1_int] != null) {
                 try {
-                  oa.field_m[var1_int].a((byte) -61);
+                  PacketBuffer.field_m[var1_int].a((byte) -61);
                 } catch (IOException var2_ref) {
                 }
               }
@@ -341,7 +341,7 @@ final class eh {
           }
           field_d[var2] = var0;
         }
-        field_a = 0;
+        totalScore = 0;
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

@@ -476,12 +476,12 @@ final class BufferedSocket implements Runnable {
               var4_ref_b.field_g < var2_long) {
               var4_ref_b.c(5);
               tg.field_a = var4_ref_b.field_h.length;
-              nf.field_l.field_h = 0;
+              WordLanguage.field_l.position = 0;
               for (var5_int = 0; tg.field_a > var5_int; var5_int++) {
-                nf.field_l.field_g[var5_int] = var4_ref_b.field_h[var5_int];
+                WordLanguage.field_l.payload[var5_int] = var4_ref_b.field_h[var5_int];
               }
-              bd.field_t = nf.field_k;
-              nf.field_k = FullscreenFocusCanvas.field_a;
+              bd.field_t = WordLanguage.field_k;
+              WordLanguage.field_k = FullscreenFocusCanvas.field_a;
               FullscreenFocusCanvas.field_a = ca.field_e;
               ca.field_e = var4_ref_b.field_j;
               return true;
@@ -492,20 +492,20 @@ final class BufferedSocket implements Runnable {
           }
           while (true) {
             if (0 > md.field_k) {
-              nf.field_l.field_h = 0;
+              WordLanguage.field_l.position = 0;
               if (!ue.a(1, 0)) {
                 return false;
               }
-              md.field_k = nf.field_l.l(-12135);
-              nf.field_l.field_h = 0;
+              md.field_k = WordLanguage.field_l.l(-12135);
+              WordLanguage.field_l.position = 0;
               tg.field_a = param0[md.field_k];
             }
             if (!GameKeyHandler.a(0)) {
               return false;
             }
             if (aa.field_a == 0) {
-              bd.field_t = nf.field_k;
-              nf.field_k = FullscreenFocusCanvas.field_a;
+              bd.field_t = WordLanguage.field_k;
+              WordLanguage.field_k = FullscreenFocusCanvas.field_a;
               FullscreenFocusCanvas.field_a = ca.field_e;
               ca.field_e = md.field_k;
               md.field_k = -1;
@@ -520,7 +520,7 @@ final class BufferedSocket implements Runnable {
             }
             var5 = new b((long)var4 + var2_long, md.field_k, new byte[tg.field_a]);
             for (var6 = 0; tg.field_a > var6; var6++) {
-              var5.field_h[var6] = nf.field_l.field_g[var6];
+              var5.field_h[var6] = WordLanguage.field_l.payload[var6];
             }
             le.field_C.a(var5, -100);
             md.field_k = -1;

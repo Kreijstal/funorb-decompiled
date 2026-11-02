@@ -4,7 +4,7 @@
 final class dc {
     static int field_a;
 
-    final static void a(int param0, boolean param1) {
+    final static void submitWord(int param0, boolean param1) {
         int var3_int = 0;
         StringBuilder discarded$0 = null;
         boolean stackIn_8_0 = false;
@@ -32,28 +32,28 @@ final class dc {
           if (null != sg.field_d) {
             MouseInputHandler.a((byte) 117);
           }
-          var2_int = ni.a((byte) -113);
+          var2_int = ni.scoreSubmittedWord((byte) -113);
           if (var2_int == 0) {
-            stackIn_8_0 = !(ad.field_e);
-            ad.field_e = stackIn_8_0;
-            if (ad.field_e) {
+            stackIn_8_0 = !(WordDictionary.field_e);
+            WordDictionary.field_e = stackIn_8_0;
+            if (WordDictionary.field_e) {
               vk.a((byte) 115, FullscreenFocusCanvas.field_d[7]);
-              a.field_S.a(kk.a(param0 + 23327, oa.field_j, bk.field_a), 1, (byte) -112, param1);
+              a.field_S.a(kk.a(param0 + 23327, PacketBuffer.field_j, bk.field_a), 1, (byte) -112, param1);
               return;
             }
           }
           if (var2_int >= 0) {
             if (wl.a(false, 0)) {
               for (var3_int = 0; var3_int < ua.bonusWords.length; var3_int++) {
-                if (ua.bonusWords[var3_int].equalsIgnoreCase(of.field_e.toString())) {
-                  fi.b(0, 240, 15);
+                if (ua.bonusWords[var3_int].equalsIgnoreCase(of.wordBuffer.toString())) {
+                  fi.unlockAchievement(0, 240, 15);
                 }
               }
             }
-            discarded$0 = IterableNodeHashTable.field_g[n.field_a].append((CharSequence) ((Object) of.field_e));
-            IterableNodeHashTable.field_a[n.field_a] = var2_int;
+            discarded$0 = IterableNodeHashTable.usedWords[n.submittedWordCount].append((CharSequence) ((Object) of.wordBuffer));
+            IterableNodeHashTable.wordScores[n.submittedWordCount] = var2_int;
             hf.field_j = hf.field_j + (var2_int << 6);
-            eh.field_a = eh.field_a + var2_int;
+            eh.totalScore = eh.totalScore + var2_int;
             var16 = FullscreenFocusCanvas.field_d[10].field_l;
             var13 = var16;
             var3 = var13;
@@ -72,9 +72,9 @@ final class dc {
                 break;
               }
               wk.field_d = wk.field_d + var6;
-              var7 = BufferedSocket.a((byte) -39, IterableNodeHashTable.field_g[n.field_a].toString(), true);
-              if (!(0 >= n.field_a)) {
-                eh.field_a = eh.field_a + var7;
+              var7 = BufferedSocket.a((byte) -39, IterableNodeHashTable.usedWords[n.submittedWordCount].toString(), true);
+              if (!(0 >= n.submittedWordCount)) {
+                eh.totalScore = eh.totalScore + var7;
                 var5 = var5 + var7;
                 GameKeyHandler.field_c = GameKeyHandler.field_c + var7;
                 hf.field_j = hf.field_j + (var7 << 6);
@@ -83,13 +83,13 @@ final class dc {
             regionExit1: {
               boolean decompiledFrameCompleted0 = true;
               boolean decompiledFrameRemainder0 = true;
-              n.field_a = n.field_a + 1;
+              n.submittedWordCount = n.submittedWordCount + 1;
               rb.field_a = rb.field_a + field_a;
               re.field_A = 0;
               eg.field_b = 0;
               field_a = 0;
               var6Lifetime1 = 0;
-              if (n.field_a == 10) {
+              if (n.submittedWordCount == 10) {
                 rb.field_a = rb.field_a / 10;
                 var7 = 0;
                 for (var8 = 0; var8 < gd.field_n.length; var8++) {
@@ -101,26 +101,26 @@ final class dc {
                 }
                 var8 = 0;
                 for (var9 = 0; 10 > var9; var9++) {
-                  if (IterableNodeHashTable.field_a[var9] > 0) {
+                  if (IterableNodeHashTable.wordScores[var9] > 0) {
                     var8++;
                   }
                 }
                 var7 = var8 * var7 / 10;
                 wk.field_d = wk.field_d + var7;
                 vh.field_n = vh.field_n - (wk.field_d << 5);
-                eh.field_a = eh.field_a + wk.field_d;
+                eh.totalScore = eh.totalScore + wk.field_d;
                 hf.field_j = hf.field_j + (wk.field_d << 5);
                 ug.b(true);
                 if (100 <= wk.field_d) {
-                  if (fi.b(0, 243, 12)) {
+                  if (fi.unlockAchievement(0, 243, 12)) {
                     var6Lifetime1++;
                   }
                   if (wk.field_d >= 150 &&
-                    fi.b(0, 242, 13)) {
+                    fi.unlockAchievement(0, 242, 13)) {
                     var6Lifetime1++;
                   }
-                  if (eh.field_a >= 600 &&
-                    fi.b(0, 241, 14)) {
+                  if (eh.totalScore >= 600 &&
+                    fi.unlockAchievement(0, 241, 14)) {
                     var6Lifetime1++;
                   }
                 }
@@ -137,18 +137,18 @@ final class dc {
                   break;
                 }
                 if (var9 >= 1) {
-                  if (fi.b(0, 249, 6)) {
+                  if (fi.unlockAchievement(0, 249, 6)) {
                     var6Lifetime1++;
                   }
                   if (var9 >= 2 &&
-                    fi.b(0, 248, 7)) {
+                    fi.unlockAchievement(0, 248, 7)) {
                     var6Lifetime1++;
                   }
-                  if (eh.field_a >= 300) {
-                    var6Lifetime1 = var6Lifetime1 + (-200 + eh.field_a) / 100;
+                  if (eh.totalScore >= 300) {
+                    var6Lifetime1 = var6Lifetime1 + (-200 + eh.totalScore) / 100;
                   }
-                  if (800 > eh.field_a) {
-                    if (400 > eh.field_a) {
+                  if (800 > eh.totalScore) {
+                    if (400 > eh.totalScore) {
                       wd.a(17099, false, bd.field_u[9]);
                     } else {
                       wd.a(17099, false, bd.field_u[8]);
@@ -162,11 +162,11 @@ final class dc {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  if (eh.field_a >= 300) {
-                    var6Lifetime1 = var6Lifetime1 + (-200 + eh.field_a) / 100;
+                  if (eh.totalScore >= 300) {
+                    var6Lifetime1 = var6Lifetime1 + (-200 + eh.totalScore) / 100;
                   }
-                  if (800 > eh.field_a) {
-                    if (400 > eh.field_a) {
+                  if (800 > eh.totalScore) {
+                    if (400 > eh.totalScore) {
                       wd.a(17099, false, bd.field_u[9]);
                     } else {
                       wd.a(17099, false, bd.field_u[8]);
@@ -177,17 +177,17 @@ final class dc {
                   if (var6Lifetime1 == 0) {
                     var6Lifetime1++;
                   }
-                  if (eh.field_a >= 600) {
-                    if (fi.b(0, 255, 0)) {
+                  if (eh.totalScore >= 600) {
+                    if (fi.unlockAchievement(0, 255, 0)) {
                       var6Lifetime1++;
                     }
-                    if (1000 <= eh.field_a &&
-                      fi.b(param0 + 22991, 254, 1)) {
+                    if (1000 <= eh.totalScore &&
+                      fi.unlockAchievement(param0 + 22991, 254, 1)) {
                       var6Lifetime1++;
                     }
                   }
                   if (100 <= var2_int &&
-                    fi.b(0, 244, 11)) {
+                    fi.unlockAchievement(0, 244, 11)) {
                     var6Lifetime1++;
                   }
                   var8 = 2147483647;
@@ -229,17 +229,17 @@ final class dc {
                 }
               }
               if (decompiledFrameCompleted0) {
-                if (eh.field_a >= 600) {
-                  if (fi.b(0, 255, 0)) {
+                if (eh.totalScore >= 600) {
+                  if (fi.unlockAchievement(0, 255, 0)) {
                     var6Lifetime1++;
                   }
-                  if (1000 <= eh.field_a &&
-                    fi.b(param0 + 22991, 254, 1)) {
+                  if (1000 <= eh.totalScore &&
+                    fi.unlockAchievement(param0 + 22991, 254, 1)) {
                     var6Lifetime1++;
                   }
                 }
                 if (100 <= var2_int &&
-                  fi.b(0, 244, 11)) {
+                  fi.unlockAchievement(0, 244, 11)) {
                   var6Lifetime1++;
                 }
                 var8 = 2147483647;
@@ -259,40 +259,40 @@ final class dc {
               }
             }
             if (var7 >= 10) {
-              if (fi.b(0, 247, 8)) {
+              if (fi.unlockAchievement(0, 247, 8)) {
                 var6Lifetime1++;
               }
               if (var7 == 12 &&
-                fi.b(0, 246, 9)) {
+                fi.unlockAchievement(0, 246, 9)) {
                 var6Lifetime1++;
               }
             }
             if (0 < var7 &&
               var8 >= 2) {
-              if (fi.b(0, 251, 4)) {
+              if (fi.unlockAchievement(0, 251, 4)) {
                 var6Lifetime1++;
               }
               if (var8 >= 3 &&
-                fi.b(0, 250, 5)) {
+                fi.unlockAchievement(0, 250, 5)) {
                 var6Lifetime1++;
               }
             }
-            if (1 < n.field_a) {
-              var10Lifetime1 = IterableNodeHashTable.field_g[-2 + n.field_a].length();
+            if (1 < n.submittedWordCount) {
+              var10Lifetime1 = IterableNodeHashTable.usedWords[-2 + n.submittedWordCount].length();
               if (var10Lifetime1 == var9) {
                 if (var7 != var10Lifetime1) {
                   if (var7 >= 3 + var10Lifetime1 &&
                     var10Lifetime1 >= 4 &&
-                    fi.b(0, 245, 10)) {
+                    fi.unlockAchievement(0, 245, 10)) {
                     var6Lifetime1++;
                   }
                 } else {
                   if (var7 >= 6) {
-                    if (fi.b(0, 253, 2)) {
+                    if (fi.unlockAchievement(0, 253, 2)) {
                       var6Lifetime1++;
                     }
                     if (var7 >= 9 &&
-                      fi.b(param0 ^ -22991, 252, 3)) {
+                      fi.unlockAchievement(param0 ^ -22991, 252, 3)) {
                       var6Lifetime1++;
                     }
                   }
@@ -332,7 +332,7 @@ final class dc {
               jj.a((byte) 78, 0, FullscreenFocusCanvas.field_d[11]);
               GameApplet.a(256, FullscreenFocusCanvas.field_d[11], (byte) 127, 40);
             }
-            if (n.field_a > 1 &&
+            if (n.submittedWordCount > 1 &&
               0 == var6Lifetime1) {
               hi.field_a = 4;
             }
@@ -344,7 +344,7 @@ final class dc {
               hi.field_a = 17;
             }
             bg.field_m = 1500;
-            if (10 == n.field_a) {
+            if (10 == n.submittedWordCount) {
               hi.field_a = 28;
             }
           } else {

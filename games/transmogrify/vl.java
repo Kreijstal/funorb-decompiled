@@ -277,7 +277,7 @@ final class vl extends fi {
           if ((!(this.field_v instanceof lj) ||
             ((lj) (this.field_v)).field_t) &&
             this.field_s == 1) {
-            var5_int = oa.field_j + (-this.field_E - param3);
+            var5_int = PacketBuffer.field_j + (-this.field_E - param3);
             var6 = -this.field_H + bk.field_a - param0;
             if (this.field_p != var5_int ||
               var6 != this.field_n) {

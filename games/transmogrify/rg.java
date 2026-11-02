@@ -360,7 +360,7 @@ class rg extends lj {
           if (!(this.field_q instanceof m)) {
             return false;
           }
-          var8_int = ((m) ((Object) this.field_q)).a(param6, (byte) -50, bk.field_a, param3, oa.field_j, (UiWidget) (this));
+          var8_int = ((m) ((Object) this.field_q)).a(param6, (byte) -50, bk.field_a, param3, PacketBuffer.field_j, (UiWidget) (this));
           if (var8_int == -1) {
             stackIn_6_1 = 0;
           } else {
@@ -404,7 +404,7 @@ class rg extends lj {
           if (this.field_s == 1) {
             if (this.field_q instanceof m) {
               var5 = (m) ((Object) this.field_q);
-              var6 = var5.a(param0, (byte) -50, bk.field_a, param3, oa.field_j, (UiWidget) (this));
+              var6 = var5.a(param0, (byte) -50, bk.field_a, param3, PacketBuffer.field_j, (UiWidget) (this));
               if (var6 != -1) {
                 if (this.field_A &&
                   var6 < this.field_M &&
@@ -567,7 +567,7 @@ class rg extends lj {
 
     final static void n(int param0) {
         ub.field_d = false;
-        nf.field_l.d((byte) 29);
+        WordLanguage.field_l.d((byte) 29);
         if (param0 < 66) {
           rg.n(74);
         }

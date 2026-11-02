@@ -200,7 +200,7 @@ class le extends lj {
           super.a(param0, param1, param2, param3);
           this.field_B = null;
           if (this.field_g) {
-            var5_int = -this.field_p + oa.field_j - param3;
+            var5_int = -this.field_p + PacketBuffer.field_j - param3;
             var6 = -this.field_n + (bk.field_a - param0);
             this.field_B = this.a(var6, (byte) -5, var5_int);
           }

@@ -142,7 +142,7 @@ final class vg {
         var4 = 283;
         var5 = 112;
         if (!param0) {
-          stackIn_3_0 = rh.field_n;
+          stackIn_3_0 = rh.unlockedAchievementMask;
         } else {
           stackIn_3_0 = hc.field_u;
         }
@@ -162,8 +162,8 @@ final class vg {
                 }
                 ff.field_z.e(var4, var5 + param2);
               }
-              if (var4 <= oa.field_j &&
-                32 + var4 >= oa.field_j &&
+              if (var4 <= PacketBuffer.field_j &&
+                32 + var4 >= PacketBuffer.field_j &&
                 param2 + var5 <= bk.field_a &&
                 bk.field_a <= param2 + (var5 + 32)) {
                 sb.b(-2 + var4, -2 + var5, 36, 36, 6, 8421504);
@@ -262,7 +262,7 @@ final class vg {
         if (this.field_i == 3) {
           var3 = 2;
         }
-        this.field_j.a(this.a(oa.field_j, param1 + 1192, bk.field_a), var3, (byte) 61, param0);
+        this.field_j.a(this.a(PacketBuffer.field_j, param1 + 1192, bk.field_a), var3, (byte) 61, param0);
         this.field_e = -1;
         this.field_f = 0;
     }
@@ -383,7 +383,7 @@ final class vg {
                       SocketConnector.a(256, 9956);
                     }
                     if (this.field_j.b((byte) 78)) {
-                      var9 = 256 * (oa.field_j - this.field_c) / 80;
+                      var9 = 256 * (PacketBuffer.field_j - this.field_c) / 80;
                       if (var9 <= 0) {
                         SocketConnector.a(0, 9956);
                       } else {
@@ -422,7 +422,7 @@ final class vg {
                       uc.a(var8, (byte) -121);
                     }
                     if (this.field_j.b((byte) 83)) {
-                      var9 = 256 * (oa.field_j - this.field_c) / 80;
+                      var9 = 256 * (PacketBuffer.field_j - this.field_c) / 80;
                       if (var9 <= 0) {
                         uc.a(0, (byte) -117);
                       } else {
@@ -684,7 +684,7 @@ final class vg {
         if (param0 != 122) {
           this.g(-27, -43);
         }
-        this.field_j.a(-107, this.a(ol.field_b, 1448, nk.field_c), this.a(oa.field_j, 1448, bk.field_a));
+        this.field_j.a(-107, this.a(ol.field_b, 1448, nk.field_c), this.a(PacketBuffer.field_j, 1448, bk.field_a));
         if (-1 != this.field_j.field_d) {
           this.a(true, this.field_j.field_d, true);
         }

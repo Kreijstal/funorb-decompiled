@@ -75,8 +75,8 @@ final class rc {
           oj.field_u.g(-1);
           hc.field_u = 0;
           da.field_C = 0;
-          vh.field_n = vh.field_n + (eh.field_a << 6);
-          eh.field_a = 0;
+          vh.field_n = vh.field_n + (eh.totalScore << 6);
+          eh.totalScore = 0;
           if (null != MouseInputHandler.field_c) {
             hf.field_j = hf.field_j - MouseInputHandler.field_c.field_o;
           }
@@ -86,7 +86,7 @@ final class rc {
             null != MouseInputHandler.field_c.field_b) {
             for (var2_int = 0; var2_int < MouseInputHandler.field_c.field_b.length(); var2_int++) {
               si.newRack.tiles[var2_int] = NodeHashTableIterator.a(si.newRack, var2_int, MouseInputHandler.field_c, (byte) 42, MouseInputHandler.field_c.field_b.charAt(var2_int));
-              si.newRack.tiles[var2_int].field_x = false;
+              si.newRack.tiles[var2_int].doublesWordScore = false;
             }
           }
           if (mg.field_d &&
@@ -97,27 +97,27 @@ final class rc {
             sg.field_p = NodeHashTableIterator.a(de.field_d, 1, MouseInputHandler.field_c, (byte) 36, MouseInputHandler.field_c.field_n.charAt(1));
             var2 = sg.field_p;
             sg.field_p.destinationX = 1000;
-            sg.field_p.field_x = true;
+            sg.field_p.doublesWordScore = true;
             var2.x = 1000;
           }
           var4 = 0;
           var2_intLifetime1 = var4;
-          while (IterableNodeHashTable.field_g.length > var4) {
-            IterableNodeHashTable.field_g[var4].setLength(0);
-            IterableNodeHashTable.field_a[var4] = 0;
+          while (IterableNodeHashTable.usedWords.length > var4) {
+            IterableNodeHashTable.usedWords[var4].setLength(0);
+            IterableNodeHashTable.wordScores[var4] = 0;
             var4++;
           }
           od.submissionRack.clear(true);
           wk.field_d = 0;
           dc.field_a = 0;
           eg.field_b = 0;
-          n.field_a = 0;
+          n.submittedWordCount = 0;
           bi.field_J = 0;
           hi.field_a = 1;
           gk.field_e = 0;
           rb.field_a = 0;
           GameKeyHandler.field_c = 0;
-          ad.field_e = false;
+          WordDictionary.field_e = false;
           wk.field_c = 0;
           bg.field_m = 1500;
           return;

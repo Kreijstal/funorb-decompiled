@@ -7,8 +7,8 @@ final class IterableNodeHashTable implements Iterable {
     int field_c;
     private IntrusiveNode field_f;
     IntrusiveNode[] field_d;
-    static StringBuilder[] field_g;
-    static int[] field_a;
+    static StringBuilder[] usedWords;
+    static int[] wordScores;
     static String field_i;
     static String field_b;
     static boolean field_h;
@@ -117,22 +117,22 @@ final class IterableNodeHashTable implements Iterable {
         synchronized (var2) {
           b.field_k = cg.field_k;
           BufferedSocket.field_l = BufferedSocket.field_l + 1;
-          oa.field_j = fc.field_g;
+          PacketBuffer.field_j = fc.field_g;
           bk.field_a = uj.field_i;
           tl.field_a = li.field_j;
           li.field_j = false;
-          tg.field_d = ad.field_b;
+          tg.field_d = WordDictionary.field_b;
           ol.field_b = dh.field_w;
           nk.field_c = ga.field_b;
-          ad.field_b = 0;
+          WordDictionary.field_b = 0;
         }
     }
 
     public static void a(int param0) {
         field_b = null;
-        field_g = null;
+        usedWords = null;
         field_i = null;
-        field_a = null;
+        wordScores = null;
         if (param0 < 33) {
           IterableNodeHashTable.a(103);
         }
@@ -141,11 +141,11 @@ final class IterableNodeHashTable implements Iterable {
 
     static {
         int var0 = 0;
-        field_g = new StringBuilder[10];
-        for (var0 = 0; field_g.length > var0; var0++) {
-          field_g[var0] = new StringBuilder(12);
+        usedWords = new StringBuilder[10];
+        for (var0 = 0; usedWords.length > var0; var0++) {
+          usedWords[var0] = new StringBuilder(12);
         }
-        field_a = new int[field_g.length];
+        wordScores = new int[usedWords.length];
         field_i = "Creating your account";
         field_b = "Visit the Account Management section on the main site to view.";
     }

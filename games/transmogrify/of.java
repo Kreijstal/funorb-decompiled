@@ -6,19 +6,19 @@ final class of {
     static int field_c;
     static String field_b;
     static jc field_a;
-    static StringBuilder field_e;
+    static StringBuilder wordBuffer;
     static pd field_d;
 
     public static void a(int param0) {
         field_d = null;
         field_b = null;
-        field_e = null;
+        wordBuffer = null;
         field_a = null;
         if (param0 == -21068) {
           field_f = null;
           return;
         }
-        field_e = (StringBuilder) null;
+        wordBuffer = (StringBuilder) null;
         field_f = null;
     }
 
@@ -51,7 +51,7 @@ final class of {
     static {
         field_b = "Change display name";
         field_f = new kh("usename");
-        field_e = new StringBuilder(12);
+        wordBuffer = new StringBuilder(12);
         field_d = new pd();
     }
 }

@@ -326,10 +326,10 @@ final class ci {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        oa var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        oa var29 = null;
-        oa var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -381,8 +381,8 @@ final class ci {
             var35 = cf.a(this.field_h[param2], true, (byte) 16);
             var25 = var35;
             var9 = var25;
-            var26 = new oa(var35);
-            var26.a(param1, false, 5, var26.field_g.length);
+            var26 = new PacketBuffer(var35);
+            var26.a(param1, false, 5, var26.payload.length);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -410,10 +410,10 @@ final class ci {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * var12 * var5_int;
-              var29 = new oa(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
               var15_int = 0;
-              var29.field_h = var11;
+              var29.position = var11;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
@@ -434,7 +434,7 @@ final class ci {
               }
               var44 = new byte[var14_int];
               var14_intLifetime1 = 0;
-              var29.field_h = var11;
+              var29.position = var11;
               var17 = 0;
               for (var18 = 0; var12 > var18; var18++) {
                 var19 = 0;
@@ -458,8 +458,8 @@ final class ci {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * (var12 * var5_int);
-              var31 = new oa(var43);
-              var31.field_h = var11;
+              var31 = new PacketBuffer(var43);
+              var31.position = var11;
               var39 = new int[var5_int];
               var32 = var39;
               var14 = var32;
@@ -478,7 +478,7 @@ final class ci {
                 var15[var16] = array$1;
                 var39[var16] = 0;
               }
-              var31.field_h = var11;
+              var31.position = var11;
               var16 = 0;
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;

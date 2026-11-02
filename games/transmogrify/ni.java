@@ -4,7 +4,7 @@
 class ni extends h {
     static sh field_o;
 
-    final static int a(byte param0) {
+    final static int scoreSubmittedWord(byte param0) {
         StringBuilder discarded$1 = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -24,7 +24,7 @@ class ni extends h {
         int var4Lifetime1;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
-          of.field_e.setLength(0);
+          of.wordBuffer.setLength(0);
           if (param0 >= -107) {
             stackIn_3_0 = 87;
             return stackIn_3_0;
@@ -33,7 +33,7 @@ class ni extends h {
             stackIn_24_0 = 0;
             return stackIn_24_0;
           }
-          if (!MouseInputHandler.field_c.a(-1, od.submissionRack.tiles)) {
+          if (!MouseInputHandler.field_c.isValidWord(-1, od.submissionRack.tiles)) {
             stackIn_22_0 = -1;
             return stackIn_22_0;
           }
@@ -43,25 +43,25 @@ class ni extends h {
           for (var4 = 0; var4 < var9.length; var4++) {
             var5 = var9[var4];
             if (var5 != null) {
-              discarded$1 = of.field_e.append((char)(255 & var5.letter));
-              var2 = var2 != 0 | var5.field_x ? 1 : 0;
+              discarded$1 = of.wordBuffer.append((char)(255 & var5.letter));
+              var2 = var2 != 0 | var5.doublesWordScore ? 1 : 0;
               var1_int = var1_int + (var5.baseValue + (var5.carryoverFlag << 1));
               continue;
             }
             break;
           }
-          var7 = of.field_e.toString();
+          var7 = of.wordBuffer.toString();
           var8 = 0;
           var4Lifetime1 = var8;
           while (true) {
-            if (var8 >= n.field_a) {
+            if (var8 >= n.submittedWordCount) {
               if (var2 == 0) {
                 return var1_int;
               }
               stackIn_20_0 = var1_int << 1;
               return stackIn_20_0;
             }
-            if (!var7.equalsIgnoreCase(IterableNodeHashTable.field_g[var8].toString())) {
+            if (!var7.equalsIgnoreCase(IterableNodeHashTable.usedWords[var8].toString())) {
               var8++;
               continue;
             }

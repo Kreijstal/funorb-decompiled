@@ -74,7 +74,7 @@ abstract class SessionGameApplet extends GameApplet {
                             uc.a((byte) 98);
                           }
                         } else {
-                          ua.a(tg.field_a, lk.field_b, -22635, nf.field_l);
+                          ua.a(tg.field_a, lk.field_b, -22635, WordLanguage.field_l);
                         }
                       } else {
                         this.e((byte) -125);
@@ -577,7 +577,7 @@ abstract class SessionGameApplet extends GameApplet {
             lf.field_d = kh.a((byte) 91);
             tj.field_u = hg.b(param0 ^ 10017);
           }
-          ad.a(lf.field_d, tj.field_u, 22313, nd.field_n);
+          WordDictionary.a(lf.field_d, tj.field_u, 22313, nd.field_n);
           wi.field_e = null;
           RasterBuffer.field_c = null;
           nd.field_n = null;
@@ -660,7 +660,7 @@ abstract class SessionGameApplet extends GameApplet {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          oa var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Transmogrify.field_A ? 1 : 0;
@@ -755,7 +755,7 @@ abstract class SessionGameApplet extends GameApplet {
               if (field_m.a(0)) {
                 var12 = field_m.b(113);
                 if (var12 != null) {
-                  var7 = cc.a(0, param0 + 13298, var12.field_h, var12.field_g);
+                  var7 = cc.a(0, param0 + 13298, var12.position, var12.payload);
                   bg.a((byte) -120, var7);
                 } else {
                   var9 = (String) null;
@@ -811,11 +811,11 @@ abstract class SessionGameApplet extends GameApplet {
         if (param0 < 62) {
           this.field_w = 125;
         }
-        int var2 = nf.field_l.d((byte) 110);
+        int var2 = WordLanguage.field_l.d((byte) 110);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = tg.field_a - 1;
         byte[] var5 = new byte[var4];
-        nf.field_l.a(var5, var4, 0, 18570);
+        WordLanguage.field_l.a(var5, var4, 0, 18570);
         ea.a((byte) 68, ha.b(127), var3 != 0, eg.a(106, var5));
     }
 

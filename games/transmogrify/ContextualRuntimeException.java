@@ -1087,7 +1087,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("toserverlist", (byte) 107);
                 if (null != var2) {
-                  ad.field_f = eg.a(110, var2);
+                  WordDictionary.field_f = eg.a(110, var2);
                 }
                 var2 = kb.a("tocustomersupport", (byte) 105);
                 if (var2 != null) {
@@ -1710,7 +1710,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_account_success", (byte) 118);
                 if (null != var2) {
-                  oa.field_i = eg.a(127, var2);
+                  PacketBuffer.field_i = eg.a(127, var2);
                 }
                 var2 = kb.a("invalid_name", (byte) 107);
                 if (null != var2) {
@@ -2884,7 +2884,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("DEFAULT_PLAYER_NAME", (byte) 108);
                 if (var2 != null) {
-                  nf.field_q = eg.a(87, var2);
+                  WordLanguage.field_q = eg.a(87, var2);
                 }
                 var2 = kb.a("mustlogin1", (byte) 105);
                 if (null != var2) {
@@ -3260,33 +3260,33 @@ final class ContextualRuntimeException extends RuntimeException {
         }
     }
 
-    final static ad[] b(int param0, ci param1) {
+    final static WordDictionary[] b(int param0, ci param1) {
         int stackIn_13_0 = 0;
-        ad[] stackIn_14_0 = null;
+        WordDictionary[] stackIn_14_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ad[] var2 = null;
+        WordDictionary[] var2 = null;
         RuntimeException var2_ref = null;
-        oa var3 = null;
+        PacketBuffer var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        ad var7 = null;
+        WordDictionary var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var4Lifetime1;
         var9 = Transmogrify.field_A ? 1 : 0;
         try {
-          var2 = new ad[64];
-          var3 = new oa(param1.a("", (byte) 92, "index"));
+          var2 = new WordDictionary[64];
+          var3 = new PacketBuffer(param1.a("", (byte) 92, "index"));
           scanLoop1: while (true) {
-            if (var3.field_h < var3.field_g.length) {
+            if (var3.position < var3.payload.length) {
               var4 = var3.d((byte) 89);
               var5 = var3.a((byte) -120);
               var6 = var3.d((byte) 92);
-              var7 = new ad(var4, var3.a((byte) -106));
+              var7 = new WordDictionary(var4, var3.a((byte) -106));
               var2[var7.field_d] = var7;
               stackIn_13_0 = 0;
               if (var9 != 0) {
@@ -3298,7 +3298,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 var7.field_c[var8][1] = var3.g(12248);
                 var8++;
               }
-              var7.a(new oa(param1.a((byte) -93, var6, var5)), 1);
+              var7.a(new PacketBuffer(param1.a((byte) -93, var6, var5)), 1);
               continue scanLoop1;
             }
             stackIn_13_0 = 102 / ((param0 - 30) / 63);

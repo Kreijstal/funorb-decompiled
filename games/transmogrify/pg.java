@@ -4,7 +4,7 @@
 final class pg {
     private ti[] field_c;
     static boolean field_a;
-    static oa field_b;
+    static PacketBuffer field_b;
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
         dk.a(param4, this.field_c, -28018, param2, param1, param0);
@@ -64,7 +64,7 @@ final class pg {
 
     public static void a(byte param0) {
         if (param0 >= -15) {
-          field_b = (oa) null;
+          field_b = (PacketBuffer) null;
           field_b = null;
           return;
         }

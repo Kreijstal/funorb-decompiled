@@ -222,7 +222,7 @@ final class gb {
         ba.a(param0 ^ 60, 17);
     }
 
-    final static void a(oa param0, boolean param1) {
+    final static void a(PacketBuffer param0, boolean param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;

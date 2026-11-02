@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static nf field_c;
+    static WordLanguage field_c;
     static PlatformTaskDispatcher field_a;
     static int field_d;
     static String field_b;
@@ -89,10 +89,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             ga.field_b = param0.getY();
             lk.a(0);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              ad.field_b = 2;
+              WordDictionary.field_b = 2;
               cg.field_k = 2;
             } else {
-              ad.field_b = 1;
+              WordDictionary.field_b = 1;
               cg.field_k = 1;
             }
             var2_int = param0.getModifiers();
@@ -232,14 +232,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           var1 = null;
           if (null == od.submissionRack.tiles[11] &&
-            oa.field_j >= 34 &&
-            oa.field_j < 34 + wl.field_K.field_n * 12 &&
+            PacketBuffer.field_j >= 34 &&
+            PacketBuffer.field_j < 34 + wl.field_K.field_n * 12 &&
             bk.field_a >= 114 &&
             wl.field_K.field_m + 114 > bk.field_a) {
             var1 = od.submissionRack;
-            var2 = (-34 + oa.field_j) / wl.field_K.field_n;
+            var2 = (-34 + PacketBuffer.field_j) / wl.field_K.field_n;
           } else {
-            var2 = (oa.field_j - 34) / wl.field_K.field_n;
+            var2 = (PacketBuffer.field_j - 34) / wl.field_K.field_n;
             if (var2 >= 0 &&
               var2 < 12 &&
               wk.carryoverRack.tiles[var2] == null &&
@@ -247,7 +247,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               bk.field_a < 190 + wl.field_K.field_m) {
               var1 = wk.carryoverRack;
             } else {
-              var2 = (-161 + oa.field_j) / wl.field_K.field_n;
+              var2 = (-161 + PacketBuffer.field_j) / wl.field_K.field_n;
               if (var2 >= 0 &&
                 var2 < 8 &&
                 null == si.newRack.tiles[var2] &&

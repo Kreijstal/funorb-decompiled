@@ -268,7 +268,7 @@ final class ProxySocketConnector extends SocketConnector {
         String var4_ref_StringLifetime1;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
-          var1 = nf.field_l;
+          var1 = WordLanguage.field_l;
           var2 = var1.d((byte) 29);
           if (param0 != -7) {
             ProxySocketConnector.d(-7);
@@ -355,7 +355,7 @@ final class ProxySocketConnector extends SocketConnector {
             fieldTemp$0 = vl.field_A;
             vl.field_A = vl.field_A + 1;
             var6.field_hb = fieldTemp$0;
-            oa.field_k.a(var6, param0 ^ 116);
+            PacketBuffer.field_k.a(var6, param0 ^ 116);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -363,10 +363,10 @@ final class ProxySocketConnector extends SocketConnector {
           var6.field_eb = var4_ref_StringLifetime1;
           var6.field_fb = (String) (var3Lifetime1);
           var6.c(param0 + 12);
-          var7 = (uk) (oa.field_k.a((byte) -95));
+          var7 = (uk) (PacketBuffer.field_k.a((byte) -95));
           while (var7 != null) {
             if (fc.a((byte) 118, var7, var6)) {
-              var7 = (uk) (oa.field_k.a(true));
+              var7 = (uk) (PacketBuffer.field_k.a(true));
               if (var8 == 0) {
                 continue;
               }
@@ -374,7 +374,7 @@ final class ProxySocketConnector extends SocketConnector {
             break;
           }
           if (null == var7) {
-            oa.field_k.a(var6, param0 ^ 102);
+            PacketBuffer.field_k.a(var6, param0 ^ 102);
             if (var8 == 0) {
               return;
             }

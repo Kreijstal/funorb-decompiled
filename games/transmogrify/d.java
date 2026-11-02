@@ -8,7 +8,7 @@ final class d {
     static Random field_c;
     static pl field_e;
     static int[] field_a;
-    static oa field_d;
+    static PacketBuffer field_d;
     static int[] field_b;
 
     final static void a(Throwable param0, int param1, String param2) {
@@ -103,7 +103,7 @@ final class d {
     static {
         field_c = new Random();
         field_a = new int[8192];
-        field_d = new oa(256);
+        field_d = new PacketBuffer(256);
         field_b = new int[8192];
     }
 }

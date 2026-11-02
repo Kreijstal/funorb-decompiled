@@ -356,7 +356,7 @@ final class vd {
         int var25Lifetime2;
         var26 = Transmogrify.field_A ? 1 : 0;
         try {
-          var28 = nf.field_l;
+          var28 = WordLanguage.field_l;
           var2 = var28.d((byte) 114);
           if (var2 == 0) {
             var3 = var28.a((byte) -97);
@@ -410,7 +410,7 @@ final class vd {
                   var20 = var28.d((byte) 102);
                   var21 = od.field_l[var20].field_e;
                   var22 = var28.e((byte) 115);
-                  var24 = var28.field_h;
+                  var24 = var28.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
                     var9[0][var12] = od.field_l[var20].field_a;
@@ -428,7 +428,7 @@ final class vd {
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
-                    var28.field_h = var24;
+                    var28.position = var24;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
@@ -442,7 +442,7 @@ final class vd {
                     var9[2][var14] = od.field_l[var20].field_a;
                     var10[2][var14] = var22;
                     var14++;
-                    var28.field_h = var24;
+                    var28.position = var24;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;

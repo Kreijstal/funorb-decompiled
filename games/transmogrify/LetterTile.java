@@ -11,14 +11,14 @@ final class LetterTile extends IntrusiveNode {
     int carryoverFlag;
     int y;
     static wb field_u;
-    boolean field_x;
+    boolean doublesWordScore;
     TileRack rack;
     int slot;
     int destinationY;
     int x;
     int previousSlot;
     static String field_r;
-    nf field_n;
+    WordLanguage field_n;
     int destinationX;
     static long field_m;
     char letter;
@@ -54,7 +54,7 @@ final class LetterTile extends IntrusiveNode {
         int var10Lifetime1;
         int var10Lifetime2;
         wl.field_K.b(param3 + this.x, param1 + this.y, ff.field_H[this.carryoverFlag]);
-        if (!this.field_x) {
+        if (!this.doublesWordScore) {
           var14 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
           var6 = this.field_n.field_c.a(this.letter);
           var7 = hk.field_a.a(var14);
@@ -153,7 +153,7 @@ final class LetterTile extends IntrusiveNode {
     final void d(int param0) {
         ab.field_c.a((IntrusiveNode) (this), -127);
         if (param0 != 1) {
-          this.field_n = (nf) null;
+          this.field_n = (WordLanguage) null;
         }
     }
 
@@ -278,8 +278,8 @@ final class LetterTile extends IntrusiveNode {
         try {
           var5 = ff.field_D;
           var5.a(false, param1);
-          var5.field_h = var5.field_h + 1;
-          var4 = var5.field_h;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.f(6389, 1);
           var5.f(6389, param2.field_m);
           var5.g(-21770, param2.field_i);
@@ -288,7 +288,7 @@ final class LetterTile extends IntrusiveNode {
           var5.a(-123, param2.field_n);
           var5.a(-113, param2.field_k);
           var5.d(var4, -1323322296);
-          var5.a((byte) -42, var5.field_h - var4);
+          var5.a((byte) -42, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "sj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

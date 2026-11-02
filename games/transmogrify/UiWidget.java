@@ -279,7 +279,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.b(param3, param0, -1, oa.field_j, bk.field_a) ? 1 : 0;
+          var5_int = this.b(param3, param0, -1, PacketBuffer.field_j, bk.field_a) ? 1 : 0;
           if (param1 != -12) {
             this.field_s = 86;
           }
@@ -489,7 +489,7 @@ class UiWidget extends IntrusiveNode {
         if (param2) {
           if (f.field_a != 0 &&
             var5 != 0) {
-            this.a(param1, bk.field_a, this, param0, f.field_a, -17, oa.field_j);
+            this.a(param1, bk.field_a, this, param0, f.field_a, -17, PacketBuffer.field_j);
           }
           if (tg.field_d != 0) {
             if (this.b(ol.field_b, tg.field_d, this, param1, -30386, nk.field_c, param0)) {
@@ -502,7 +502,7 @@ class UiWidget extends IntrusiveNode {
           }
           if (b.field_k == 0 &&
             hi.field_g != 0) {
-            this.a(param0, oa.field_j, this, -1, bk.field_a, param1);
+            this.a(param0, PacketBuffer.field_j, this, -1, bk.field_a, param1);
             var6 = b.field_i;
             if (var6 != null) {
               if (var6.field_m instanceof s) {

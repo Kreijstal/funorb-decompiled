@@ -207,14 +207,14 @@ final class mh {
             }
             var7 = null;
             if (kk.field_b != null) {
-              if (null == oa.field_m) {
-                oa.field_m = new we[MouseInputHandler.field_a.field_s.length];
+              if (null == PacketBuffer.field_m) {
+                PacketBuffer.field_m = new we[MouseInputHandler.field_a.field_s.length];
               }
-              if (oa.field_m[param5] == null) {
-                oa.field_m[param5] = new we(MouseInputHandler.field_a.field_s[param5], 12000, 0);
+              if (PacketBuffer.field_m[param5] == null) {
+                PacketBuffer.field_m[param5] = new we(MouseInputHandler.field_a.field_s[param5], 12000, 0);
                 MouseInputHandler.field_a.field_s[param5] = null;
               }
-              var7 = new ak(param5, kk.field_b, oa.field_m[param5], 2097152);
+              var7 = new ak(param5, kk.field_b, PacketBuffer.field_m[param5], 2097152);
             }
             var8 = we.field_j.a(param5, param3, 24108, (ak) (var6), (ak) (var7));
             if (param1) {

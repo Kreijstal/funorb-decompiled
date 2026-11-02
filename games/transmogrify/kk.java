@@ -83,7 +83,7 @@ abstract class kk {
         field_g = null;
     }
 
-    abstract void a(byte param0, oa param1);
+    abstract void a(byte param0, PacketBuffer param1);
 
     static {
         field_e = "Music: ";

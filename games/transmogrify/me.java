@@ -136,7 +136,7 @@ abstract class me extends ca implements fb {
         try {
           ne.field_b = param6;
           c.field_b = param0;
-          nf.field_i = param3;
+          WordLanguage.field_i = param3;
           MouseInputHandler.field_a = param8;
           if (param2 <= 37) {
             PlatformTaskDispatcher var10 = (PlatformTaskDispatcher) null;

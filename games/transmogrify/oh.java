@@ -8,11 +8,11 @@ final class oh extends IntrusiveNode {
     int[] field_g;
     static int field_j;
 
-    final static boolean a(byte param0, oa param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        oa var4 = null;
+        PacketBuffer var4 = null;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -22,8 +22,8 @@ final class oh extends IntrusiveNode {
         try {
           var2_int = param1.d((byte) 101);
           if (param0 > -20) {
-            var4 = (oa) null;
-            oh.a((byte) 95, (oa) null);
+            var4 = (PacketBuffer) null;
+            oh.a((byte) 95, (PacketBuffer) null);
           }
           stackIn_5_0 = (var2_int != 1) ? 0 : 1;
           var3 = stackIn_5_0;

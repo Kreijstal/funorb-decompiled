@@ -4,7 +4,7 @@
 final class dk {
     private uh field_e;
     static boolean field_b;
-    private oa field_l;
+    private PacketBuffer field_l;
     private pj field_f;
     static int field_h;
     private java.math.BigInteger field_g;
@@ -254,7 +254,7 @@ final class dk {
               stackIn_9_0 = this.field_d[param0];
               return stackIn_9_0;
             }
-            this.field_l.field_h = 6 + 72 * param0;
+            this.field_l.position = 6 + 72 * param0;
             var6_int = this.field_l.c((byte) -112);
             var7 = this.field_l.c((byte) -108);
             var13 = new byte[64];
@@ -309,7 +309,7 @@ final class dk {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        oa var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -327,11 +327,11 @@ final class dk {
         if (this.field_f.field_m) {
           return false;
         }
-        var10 = new oa(this.field_f.e(256));
-        var10.field_h = 5;
+        var10 = new PacketBuffer(this.field_f.e(256));
+        var10.position = 5;
         var3 = var10.d((byte) 30);
-        var10.field_h = var10.field_h + var3 * 72;
-        var13 = new byte[var10.field_g.length - var10.field_h];
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
         var10.a(var13.length, 2, var13, 0);
@@ -349,7 +349,7 @@ final class dk {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = n.a(var10.field_g, -5 + (-var13.length + var10.field_h), -5705, 5);
+        var15 = n.a(var10.payload, -5 + (-var13.length + var10.position), -5705, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

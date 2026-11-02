@@ -3,7 +3,7 @@
  */
 final class kd implements WidgetListener {
     static String field_d;
-    static oa field_c;
+    static PacketBuffer field_c;
     static int field_a;
     static long[] field_b;
 
@@ -179,13 +179,13 @@ final class kd implements WidgetListener {
           }
           boolean decompiledFrameRemainder0 = true;
           IntrusiveNode.field_d.a(var17.toString(), 250, 333 + param1, 255, -1);
-          var7Lifetime1 = ni.a((byte) -111);
-          if (n.field_a != 10 && (!mg.field_d ||
-            2 != n.field_a)) {
+          var7Lifetime1 = ni.scoreSubmittedWord((byte) -111);
+          if (n.submittedWordCount != 10 && (!mg.field_d ||
+            2 != n.submittedWordCount)) {
             if (var7Lifetime1 >= 0 &&
               re.field_A >= 6) {
               if (mg.field_d &&
-                n.field_a == 0 &&
+                n.submittedWordCount == 0 &&
                 var7Lifetime1 > 0) {
                 var8_int = 128 + (int)(Math.sin(3.141592653589793 * (double)dc.field_a / 50.0) * 64.0);
                 ImageProducerRasterBuffer.a(param1 + 376, 264, (byte) 98, 164, 13, jk.field_x.a(true) - 10, pj.field_x, var8_int);
@@ -241,7 +241,7 @@ final class kd implements WidgetListener {
             od.submissionRack.a(true, dc.field_a, 3, il.field_c, param1);
             si.newRack.a(true, dc.field_a, 3, wc.field_a, param1);
           }
-          if (0 == n.field_a) {
+          if (0 == n.submittedWordCount) {
             var8Lifetime1 = null;
             if (re.field_A == 1) {
               var8Lifetime1 = tb.field_b[0];
@@ -262,33 +262,33 @@ final class kd implements WidgetListener {
           if (null != sg.field_d) {
             sg.field_d.draw(dc.field_a, param1, 1, 0);
           }
-          if (n.field_a > 0) {
+          if (n.submittedWordCount > 0) {
             var8_intLifetime1 = eg.field_b % 58;
             for (var9Lifetime1 = 0; ImageProducerRasterBuffer.field_i.length > var9Lifetime1; var9Lifetime1++) {
               var10Lifetime1 = -var9Lifetime1 + var8_intLifetime1 >> 3;
               var11 = (ImageProducerRasterBuffer.field_i[var9Lifetime1] + 10 * (eg.field_b / 58)) % 187;
               var12 = var11 + 442;
-              var13 = (n.field_a - 1) * 12 + vl.field_G[var9Lifetime1];
+              var13 = (n.submittedWordCount - 1) * 12 + vl.field_G[var9Lifetime1];
               if (var10Lifetime1 >= 0 &&
                 var10Lifetime1 < 5) {
                 hf.field_d[cc.field_f[var9Lifetime1] * 5 + var10Lifetime1].c(var12, var13 + param1);
               }
             }
           }
-          for (var8_intLifetime2 = 0; n.field_a > var8_intLifetime2; var8_intLifetime2++) {
+          for (var8_intLifetime2 = 0; n.submittedWordCount > var8_intLifetime2; var8_intLifetime2++) {
             hk.field_a.a(var8_intLifetime2 + 1 + ". ", 464, 53 + (12 * var8_intLifetime2 + param1), 16711680, -1);
-            hk.field_a.b(IterableNodeHashTable.field_g[var8_intLifetime2].toString(), 464, param1 + (12 * var8_intLifetime2 + 53), 16711680, -1);
-            hk.field_a.a(Integer.toString(IterableNodeHashTable.field_a[var8_intLifetime2]), 627, param1 + 12 * var8_intLifetime2 + 53, 16711680, -1);
+            hk.field_a.b(IterableNodeHashTable.usedWords[var8_intLifetime2].toString(), 464, param1 + (12 * var8_intLifetime2 + 53), 16711680, -1);
+            hk.field_a.a(Integer.toString(IterableNodeHashTable.wordScores[var8_intLifetime2]), 627, param1 + 12 * var8_intLifetime2 + 53, 16711680, -1);
           }
           hk.field_a.b(sg.varietyBonusLabel, 464, param1 + 173, 16711680, -1);
           hk.field_a.a(Integer.toString(GameKeyHandler.field_c), 627, 173 + param1, 16711680, -1);
-          if (n.field_a == 10) {
+          if (n.submittedWordCount == 10) {
             hk.field_a.b(ub.timeBonusLabel, 464, 185 + param1, 16711680, -1);
             hk.field_a.a(Integer.toString(wk.field_d), 627, 185 + param1, 16711680, -1);
           }
           hk.field_a.b(ve.field_D, 464, 197 + param1, 16711680, -1);
-          hk.field_a.a(Integer.toString(eh.field_a), 627, 197 + param1, 16711680, -1);
-          if (ad.field_e) {
+          hk.field_a.a(Integer.toString(eh.totalScore), 627, 197 + param1, 16711680, -1);
+          if (WordDictionary.field_e) {
             dk.a(136, mk.field_B, -28018, 180, param1 + 88, 280);
             IntrusiveNode.field_d.a(he.skipRoundPrompt, 190, param1 + 93, 260, 80, 0, -1, 1, 0, IntrusiveNode.field_d.field_y + 3);
             stackIn_103_0 = 65280;

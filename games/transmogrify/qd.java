@@ -10,11 +10,11 @@ final class qd {
     static int[] field_a;
     static String field_c;
 
-    final void a(oa param0, int param1, byte[] param2) {
+    final void a(PacketBuffer param0, int param1, byte[] param2) {
         try {
           try {
-            if (param0.field_g[param0.field_h] != 31 ||
-              param0.field_g[1 + param0.field_h] != -117) {
+            if (param0.payload[param0.position] != 31 ||
+              param0.payload[1 + param0.position] != -117) {
               throw new RuntimeException("");
             }
             if (param1 >= -106) {
@@ -24,7 +24,7 @@ final class qd {
               this.field_b = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_b.setInput(param0.field_g, param0.field_h + 10, param0.field_g.length - 10 + (-param0.field_h - 8));
+              this.field_b.setInput(param0.payload, param0.position + 10, param0.payload.length - 10 + (-param0.position - 8));
               this.field_b.inflate(param2);
             } catch (Exception exception) {
               this.field_b.reset();

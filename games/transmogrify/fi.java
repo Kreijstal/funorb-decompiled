@@ -435,21 +435,21 @@ abstract class fi extends UiWidget implements pb {
         }
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean unlockAchievement(int param0, int param1, int param2) {
         nc.field_t = nc.field_t + param1;
         ud.field_b = ud.field_b + (param2 - 255);
         if (mg.field_d) {
           return false;
         }
         int var3 = 1 << param2;
-        if (param0 != (var3 & rh.field_n)) {
+        if (param0 != (var3 & rh.unlockedAchievementMask)) {
           return false;
         }
-        rh.field_n = rh.field_n | var3;
+        rh.unlockedAchievementMask = rh.unlockedAchievementMask | var3;
         hc.field_u = hc.field_u | var3;
         oj.field_u.a(new pi(param2), -99);
         if (IntrusiveDeque.b((byte) 78)) {
-          rh.field_n = rh.field_n | var3;
+          rh.unlockedAchievementMask = rh.unlockedAchievementMask | var3;
         }
         if (dk.field_b) {
           return true;

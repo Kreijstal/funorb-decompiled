@@ -418,7 +418,7 @@ final class ej extends PcmStream {
           }
           var7 = new sf(ci.field_f, param0);
           ci.field_f.b((UiWidget) (var7), (byte) -71);
-          if (!oa.f((byte) 105)) {
+          if (!PacketBuffer.f((byte) 105)) {
             rh.field_v = of.field_d;
             q.field_h = null;
             c.field_d = param3;

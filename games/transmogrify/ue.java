@@ -227,7 +227,7 @@ abstract class ue {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (nf.field_l.field_h >= param0) {
+          if (WordLanguage.field_l.position >= param0) {
             return true;
           }
           if (null == nk.field_b) {
@@ -236,16 +236,16 @@ abstract class ue {
           try {
             var2_int = nk.field_b.a((byte) -125);
             if (var2_int > 0) {
-              if (param0 - nf.field_l.field_h < var2_int) {
-                var2_int = -nf.field_l.field_h + param0;
+              if (param0 - WordLanguage.field_l.position < var2_int) {
+                var2_int = -WordLanguage.field_l.position + param0;
               }
-              nk.field_b.a(nf.field_l.field_h, var2_int, nf.field_l.field_g, 5768);
+              nk.field_b.a(WordLanguage.field_l.position, var2_int, WordLanguage.field_l.payload, 5768);
               wi.field_q = lk.a(param1 ^ 0);
-              nf.field_l.field_h = nf.field_l.field_h + var2_int;
-              if (param0 > nf.field_l.field_h) {
+              WordLanguage.field_l.position = WordLanguage.field_l.position + var2_int;
+              if (param0 > WordLanguage.field_l.position) {
                 return false;
               }
-              nf.field_l.field_h = 0;
+              WordLanguage.field_l.position = 0;
               return true;
             }
             if (param1 != 0) {

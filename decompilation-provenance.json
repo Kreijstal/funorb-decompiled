@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "faa6d117084c568bd9d39988182d22f1769d14a933f457095f67da827eb4807d",
       "sources": {
         "files": 299,
-        "sha256": "54284f04db8331a2cfc8ac73cdf4ebb9459dd8f998e6fb81e08d68a7b8af8f52"
+        "sha256": "c6e335498e9c22cc82fdb79af45d0878c187f057413321a43c2eb048aa237074"
       },
       "dictionary": {
         "path": "decompilation/transmogrify-naming.json",
-        "sha256": "6fe9402c1b154dd5e80a94abb82c1b8fd603167a1546172861573a53dad36a2c"
+        "sha256": "6cdcd483553c2a769a8c2bd52ce22da245bb0201a482be70c0b623976344f80b"
       },
       "readingGuide": {
         "path": "games/transmogrify/README.md",
-        "sha256": "9a5d14f5664065205cb256ac7892579697055444eda30622230034ccbd06f292"
+        "sha256": "1ccd071ed0d698e8818982ad144c676a792d84796817ada0b833fb40cff444a5"
       },
-      "rulesSha256": "006ea92cd615e88b881c8e502d01c6015058f4fe73a1ec6f09a1b54ee2f44c5e",
+      "rulesSha256": "a6db4e51fb0a70003c23b9b1da77c0e5081e588356fbe7aa2de0e73a9c283020",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12501,7 +12501,7 @@
         },
         "publishedSources": {
           "files": 299,
-          "sha256": "54284f04db8331a2cfc8ac73cdf4ebb9459dd8f998e6fb81e08d68a7b8af8f52"
+          "sha256": "c6e335498e9c22cc82fdb79af45d0878c187f057413321a43c2eb048aa237074"
         }
       },
       "vertigo2": {

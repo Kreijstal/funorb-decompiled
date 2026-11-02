@@ -54,7 +54,7 @@ final class el {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        oa var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -71,7 +71,7 @@ final class el {
         int var13Lifetime1Lifetime1;
         var16 = Transmogrify.field_A ? 1 : 0;
         try {
-          var17 = new oa(lk.a(-110, param0));
+          var17 = new PacketBuffer(lk.a(-110, param0));
           var4 = var17.d((byte) 85);
           if (var4 >= 5 &&
             var4 <= 7) {

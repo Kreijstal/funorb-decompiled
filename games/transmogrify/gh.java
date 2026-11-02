@@ -16,7 +16,7 @@ final class gh extends IntrusiveNode {
           pc.a(1);
           return;
         }
-        hj var2 = nf.field_l;
+        hj var2 = WordLanguage.field_l;
         var2.c((byte) -126);
         if (param0 == 0) {
           var2.c((byte) -108);

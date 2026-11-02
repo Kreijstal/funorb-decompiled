@@ -6,7 +6,7 @@ import java.io.*;
 final class qb implements Runnable {
     private PlatformTask field_d;
     static long field_k;
-    private oa field_h;
+    private PacketBuffer field_h;
     private DataInputStream field_g;
     private PlatformTask field_e;
     private PlatformTask field_j;
@@ -115,7 +115,7 @@ final class qb implements Runnable {
             var3.write(uk.a(14122, var5));
             this.field_g = new DataInputStream(var4.getInputStream());
           }
-          this.field_h.field_h = 0;
+          this.field_h.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IOException) (Object) decompiledCaughtException;
@@ -156,7 +156,7 @@ final class qb implements Runnable {
         return false;
     }
 
-    final oa b(int param0) {
+    final PacketBuffer b(int param0) {
         int var2 = 68 / ((param0 - 56) / 56);
         if (this.field_c == 3) {
           return this.field_h;
@@ -174,16 +174,16 @@ final class qb implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = Transmogrify.field_A ? 1 : 0;
           try {
-            while (this.field_h.field_h < this.field_h.field_g.length) {
-              var1_int = this.field_g.read(this.field_h.field_g, this.field_h.field_h, this.field_h.field_g.length - this.field_h.field_h);
+            while (this.field_h.position < this.field_h.payload.length) {
+              var1_int = this.field_g.read(this.field_h.payload, this.field_h.position, this.field_h.payload.length - this.field_h.position);
               if (var1_int >= 0) {
-                this.field_h.field_h = this.field_h.field_h + var1_int;
+                this.field_h.position = this.field_h.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_h.field_g.length == this.field_h.field_h) {
-              throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.field_g.length + " " + this.field_b));
+            if (this.field_h.payload.length == this.field_h.position) {
+              throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.payload.length + " " + this.field_b));
             }
             var1 = this;
             synchronized (var1) {
@@ -212,13 +212,13 @@ final class qb implements Runnable {
         try {
           this.field_b = param1;
           this.field_i = param0;
-          this.field_h = new oa(param2);
+          this.field_h = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "qb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static void a(int param0, int param1, oa param2, int param3, int param4) {
+    final static void a(int param0, int param1, PacketBuffer param2, int param3, int param4) {
         try {
           param2.f(6389, 12);
           param2.c(17, -159688920);

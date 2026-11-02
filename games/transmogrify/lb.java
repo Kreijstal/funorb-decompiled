@@ -98,7 +98,7 @@ final class lb {
           field_g = (int[][]) null;
         }
         if (0 == var1.length()) {
-          var1 = nf.field_q;
+          var1 = WordLanguage.field_q;
         }
         return var1;
     }

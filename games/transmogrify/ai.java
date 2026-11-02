@@ -20,7 +20,7 @@ final class ai {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          oa var2 = null;
+          PacketBuffer var2 = null;
           if (oh.field_h.field_p >= 4) {
             if (oh.field_h.field_k == -1) {
               return 3;
@@ -32,7 +32,7 @@ final class ai {
           }
           try {
             if (0 == cl.field_A) {
-              wj.field_j = MouseInputHandler.field_a.a(60, nf.field_i, c.field_b);
+              wj.field_j = MouseInputHandler.field_a.a(60, WordLanguage.field_i, c.field_b);
               cl.field_A = cl.field_A + 1;
             }
             if (cl.field_A == 1) {
@@ -46,11 +46,11 @@ final class ai {
             }
             if (cl.field_A == param0) {
               re.field_y = new BufferedSocket((java.net.Socket) (wj.field_j.field_g), MouseInputHandler.field_a);
-              var2 = new oa(13);
+              var2 = new PacketBuffer(13);
               qb.a(116, of.field_c, var2, uh.field_f, tl.field_c);
               var2.f(param0 + 6387, 15);
               var2.a(-109, dk.field_h);
-              re.field_y.a((byte) 9, var2.field_g, 13, 0);
+              re.field_y.a((byte) 9, var2.payload, 13, 0);
               cl.field_A = cl.field_A + 1;
               ob.field_G = 30000L + lk.a(param0 ^ 2);
             }

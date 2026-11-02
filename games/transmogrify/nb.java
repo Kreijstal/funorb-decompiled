@@ -15,8 +15,8 @@ final class nb {
           var6 = ff.field_D;
           hj var3 = var6;
           var6.a(false, param0);
-          var6.field_h = var6.field_h + 1;
-          var4 = var6.field_h;
+          var6.position = var6.position + 1;
+          var4 = var6.position;
           var6.f(6389, 1);
           if (null != param1.field_k) {
             var6.f(6389, param1.field_k.length);
@@ -29,9 +29,9 @@ final class nb {
             gh var5 = (gh) null;
             nb.a(-41, (gh) null, 68);
           }
-          var6.field_h = var6.field_h - 4;
+          var6.position = var6.position - 4;
           param1.field_j = var6.c((byte) -121);
-          var6.a((byte) -42, -var4 + var6.field_h);
+          var6.a((byte) -42, -var4 + var6.position);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "nb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

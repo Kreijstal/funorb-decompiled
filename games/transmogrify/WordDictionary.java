@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ad {
+final class WordDictionary {
     String[][] field_c;
     private byte[][] field_a;
     private byte[][] field_g;
@@ -74,7 +74,7 @@ final class ad {
         }
     }
 
-    final boolean a(byte param0, char[] param1) {
+    final boolean containsWord(byte param0, char[] param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -148,7 +148,7 @@ final class ad {
         return var6;
     }
 
-    final void a(oa param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         byte[] array$2 = null;
         byte[] array$1 = null;
         byte[] array$0 = null;
@@ -175,8 +175,8 @@ final class ad {
             array$2 = new byte[1 + var5];
             this.field_h[var3_int] = array$2;
             this.field_h[var3_int][0] = (byte)var4_int;
-            ji.a(param0.field_g, param0.field_h, this.field_h[var3_int], 1, var5);
-            param0.field_h = param0.field_h + var5;
+            ji.a(param0.payload, param0.position, this.field_h[var3_int], 1, var5);
+            param0.position = param0.position + var5;
           }
           this.field_g = new byte[param0.i(17783)][];
           for (var3_intLifetime1 = 0; this.field_g.length > var3_intLifetime1; var3_intLifetime1++) {
@@ -185,8 +185,8 @@ final class ad {
             array$1 = new byte[1 + var5Lifetime1];
             this.field_g[var3_intLifetime1] = array$1;
             this.field_g[var3_intLifetime1][0] = (byte)var4_intLifetime1;
-            ji.a(param0.field_g, param0.field_h, this.field_g[var3_intLifetime1], 1, var5Lifetime1);
-            param0.field_h = param0.field_h + var5Lifetime1;
+            ji.a(param0.payload, param0.position, this.field_g[var3_intLifetime1], 1, var5Lifetime1);
+            param0.position = param0.position + var5Lifetime1;
           }
           var3_intLifetime2 = 0;
           if (param1 != 1) {
@@ -214,7 +214,7 @@ final class ad {
         }
     }
 
-    ad(int param0, int param1) {
+    WordDictionary(int param0, int param1) {
         this.field_a = new byte[257][];
         this.field_d = param0;
         this.field_c = new String[param1][2];
@@ -249,8 +249,8 @@ final class ad {
             stackIn_7_0 = 0;
             return stackIn_7_0;
           }
-          am.field_q.field_g = param3[param1];
-          am.field_q.field_h = 1;
+          am.field_q.payload = param3[param1];
+          am.field_q.position = 1;
           var5_int = 255 & param2;
           var6 = -1;
           var7 = -1;

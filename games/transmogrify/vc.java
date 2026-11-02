@@ -69,18 +69,18 @@ final class vc extends rg implements ie {
           return null;
         }
         if (param0 == 4) {
-          sh.a((byte) 123, this.field_l + (-this.field_P + oa.field_j), bk.field_a);
+          sh.a((byte) 123, this.field_l + (-this.field_P + PacketBuffer.field_j), bk.field_a);
           return this.field_j;
         }
         this.field_Q = (wa) null;
-        sh.a((byte) 123, this.field_l + (-this.field_P + oa.field_j), bk.field_a);
+        sh.a((byte) 123, this.field_l + (-this.field_P + PacketBuffer.field_j), bk.field_a);
         return this.field_j;
     }
 
     final void a(int param0, byte param1, UiWidget param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_P = -param3 + (oa.field_j - this.field_p);
+          this.field_P = -param3 + (PacketBuffer.field_j - this.field_p);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "vc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

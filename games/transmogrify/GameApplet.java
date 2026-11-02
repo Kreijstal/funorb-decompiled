@@ -181,8 +181,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             gd.field_k.getParent().remove((java.awt.Component) ((Object) gd.field_k));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (nf.field_e != null) {
-            var2 = nf.field_e;
+          if (WordLanguage.field_e != null) {
+            var2 = WordLanguage.field_e;
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -454,7 +454,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             gd.field_k.setSize(fk.field_E, mk.field_x);
             gd.field_k.setVisible(true);
             boolean decompiledSharedTail0 = (null != aj.field_t &&
-              nf.field_e == null);
+              WordLanguage.field_e == null);
             if (!decompiledSharedTail0) {
               gd.field_k.setLocation(gl.field_D, uc.field_a);
               decompiledSharedTail0 = (Transmogrify.field_A);

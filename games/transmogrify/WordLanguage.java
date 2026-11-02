@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-final class nf {
-    private ad field_f;
+final class WordLanguage {
+    private WordDictionary dictionary;
     String field_d;
     String field_h;
     static String field_q;
@@ -22,9 +22,9 @@ final class nf {
     String field_b;
     static int field_k;
 
-    final char a(int param0, char param1) {
+    final char toUpperCase(int param0, char param1) {
         if (param0 != 0) {
-          this.a(89, '\f');
+          this.toUpperCase(89, '\f');
         }
         return Character.toUpperCase(param1);
     }
@@ -36,11 +36,11 @@ final class nf {
         field_l = null;
         field_m = null;
         if (param0 != -41) {
-          nf.a((byte) -93);
+          WordLanguage.a((byte) -93);
         }
     }
 
-    final boolean a(int param0, LetterTile[] param1) {
+    final boolean isValidWord(int param0, LetterTile[] param1) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -68,7 +68,7 @@ final class nf {
           for (var5 = 0; var3_int > var5; var5++) {
             var4[var5] = param1[var5].letter;
           }
-          stackIn_10_0 = this.field_f.a((byte) 109, var4);
+          stackIn_10_0 = this.dictionary.containsWord((byte) 109, var4);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,10 +100,10 @@ final class nf {
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param0 != 92) {
-            this.field_f = (ad) null;
+            this.dictionary = (WordDictionary) null;
           }
           scanLoop1: while (true) {
-            this.field_f.a(param1, o.field_o, false, 3670);
+            this.dictionary.a(param1, o.field_o, false, 3670);
             var3_int = 0;
             for (var4 = 0; 256 > var4; var4++) {
               ic.field_c[var4] = 0;
@@ -140,7 +140,7 @@ final class nf {
         }
     }
 
-    nf(ci param0, ci param1, ad param2) {
+    WordLanguage(ci param0, ci param1, WordDictionary param2) {
         int var12_int = 0;
         int var18 = 0;
         int stackIn_39_0 = 0;
@@ -181,7 +181,7 @@ final class nf {
         var26 = null;
         this.field_p = new int[512];
         try {
-          this.field_f = param2;
+          this.dictionary = param2;
           this.field_o = param2.field_d;
           var4_int = 0;
           var5 = null;
@@ -245,7 +245,7 @@ final class nf {
                       System.out.println("Multiple letter values found for" + (char) var19);
                     }
                     this.field_p[var19] = var15;
-                    var20 = this.a(0, (char) var19);
+                    var20 = this.toUpperCase(0, (char) var19);
                     if (va.field_j >= 2 &&
                       var20 != var19 &&
                       this.field_p[var20] != 0) {

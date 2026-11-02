@@ -24,7 +24,7 @@ final class id {
         hj var8 = null;
         rk var9 = null;
         var7 = Transmogrify.field_A ? 1 : 0;
-        var8 = nf.field_l;
+        var8 = WordLanguage.field_l;
         var3 = var8.d((byte) 95);
         kd.field_a = 127 & var3;
         stackIn_3_0 = ((128 & var3) != 0);

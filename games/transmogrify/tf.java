@@ -338,7 +338,7 @@ final class tf {
             var4Lifetime3++;
           }
           if (q.field_a != 2) {
-            bk.field_c.a(tl.a(196077633, oa.field_j, bk.field_a), 0, (byte) -104, param1);
+            bk.field_c.a(tl.a(196077633, PacketBuffer.field_j, bk.field_a), 0, (byte) -104, param1);
           } else {
             bk.field_c.a(-1, -1, (byte) 124, param1);
           }

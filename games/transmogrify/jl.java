@@ -70,7 +70,7 @@ final class jl extends IntrusiveNode {
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var9 = nf.field_l;
+          var9 = WordLanguage.field_l;
           var2 = var9.d((byte) 78);
           var3 = var9.d((byte) 106);
           if (var2 == 0) {
@@ -79,7 +79,7 @@ final class jl extends IntrusiveNode {
               pc.a(1);
               return;
             }
-            var5_int = -var9.field_h + tg.field_a;
+            var5_int = -var9.position + tg.field_a;
             var11 = var4_ref_oi.field_m;
             var10 = var11;
             var6 = var10;

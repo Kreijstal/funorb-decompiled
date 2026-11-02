@@ -34,7 +34,7 @@ final class gl extends fi {
         }
     }
 
-    final static void a(byte param0, java.math.BigInteger param1, java.math.BigInteger param2, byte[] param3, oa param4, int param5, int param6) {
+    final static void a(byte param0, java.math.BigInteger param1, java.math.BigInteger param2, byte[] param3, PacketBuffer param4, int param5, int param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -67,18 +67,18 @@ final class gl extends fi {
             var8[var9] = i.field_a.nextInt();
           }
           if (pg.field_b == null ||
-            !(var7_int <= pg.field_b.field_g.length)) {
-            pg.field_b = new oa(var7_int);
+            !(var7_int <= pg.field_b.payload.length)) {
+            pg.field_b = new PacketBuffer(var7_int);
           }
-          pg.field_b.field_h = 0;
+          pg.field_b.position = 0;
           pg.field_b.a((byte) -10, param3, param5, param6);
           pg.field_b.h(-30190, var7_int);
           pg.field_b.a(var13, 111);
           if (kd.field_c == null ||
-            !(kd.field_c.field_g.length >= 100)) {
-            kd.field_c = new oa(100);
+            !(kd.field_c.payload.length >= 100)) {
+            kd.field_c = new PacketBuffer(100);
           }
-          kd.field_c.field_h = 0;
+          kd.field_c.position = 0;
           kd.field_c.f(6389, 10);
           var11 = 0;
           var9Lifetime1 = var11;
@@ -88,8 +88,8 @@ final class gl extends fi {
           }
           kd.field_c.c(param5, -159688920);
           kd.field_c.a(param2, -119, param1);
-          param4.a((byte) -29, kd.field_c.field_g, kd.field_c.field_h, 0);
-          param4.a((byte) -108, pg.field_b.field_g, pg.field_b.field_h, 0);
+          param4.a((byte) -29, kd.field_c.payload, kd.field_c.position, 0);
+          param4.a((byte) -108, pg.field_b.payload, pg.field_b.position, 0);
           if (param0 >= -116) {
             field_B = (pg) null;
           }

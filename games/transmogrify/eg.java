@@ -72,7 +72,7 @@ final class eg {
           if (rd.field_f == -1 &&
             el.field_d == -1) {
             el.field_d = bk.field_a;
-            rd.field_f = oa.field_j;
+            rd.field_f = PacketBuffer.field_j;
           }
           boolean decompiledFrameRemainder0 = true;
           da.field_y = da.field_y + 1;

@@ -207,11 +207,11 @@ class lj extends UiWidget {
             if (this.field_s == b.field_k) {
               return;
             }
-            if (this.b(param3, param0, param1 + 11, oa.field_j, bk.field_a) &&
+            if (this.b(param3, param0, param1 + 11, PacketBuffer.field_j, bk.field_a) &&
               0 == b.field_k) {
-              this.a((byte) -105, -param0 + bk.field_a, this.field_s, -param3 + oa.field_j);
+              this.a((byte) -105, -param0 + bk.field_a, this.field_s, -param3 + PacketBuffer.field_j);
             }
-            this.a(param0, oa.field_j, param2, -1, bk.field_a, param3);
+            this.a(param0, PacketBuffer.field_j, param2, -1, bk.field_a, param3);
           }
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "lj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

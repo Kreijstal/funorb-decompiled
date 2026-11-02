@@ -34,12 +34,12 @@ final class gk {
           } else {
             try {
               nk.field_b = new BufferedSocket((java.net.Socket) (fk.field_F.field_g), l.field_b);
-              ff.field_D.field_h = 0;
-              var2_ref_hj = nf.field_l;
-              var2_ref_hj.field_h = 0;
+              ff.field_D.position = 0;
+              var2_ref_hj = WordLanguage.field_l;
+              var2_ref_hj.position = 0;
               stackIn_10_0 = (param0) ? -2 : -1;
               bd.field_t = stackIn_10_0;
-              nf.field_k = stackIn_10_0;
+              WordLanguage.field_k = stackIn_10_0;
               FullscreenFocusCanvas.field_a = stackIn_10_0;
               lj.field_z = jk.field_y;
               qb.a(124, pi.field_h, ff.field_D, dh.field_x, ua.field_c);

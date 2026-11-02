@@ -161,7 +161,7 @@ final class ia extends IntrusiveNode {
         try {
           hf.field_j = hf.field_j + 1;
           gh.field_l = gh.field_l + 1;
-          SecondaryNodeDeque.field_g = eh.field_a;
+          SecondaryNodeDeque.field_g = eh.totalScore;
           nc.field_t = nc.field_t + jk.field_B;
           vh.field_n = vh.field_n + 1;
           hg.a(95);
@@ -179,16 +179,16 @@ final class ia extends IntrusiveNode {
           if (param0 < 22) {
             field_l = (String) null;
           }
-          if ((n.field_a != 0 ||
+          if ((n.submittedWordCount != 0 ||
             !(6 > re.field_A)) &&
-            (!(n.field_a >= 2) ||
+            (!(n.submittedWordCount >= 2) ||
             !mg.field_d &&
-            !(n.field_a >= 10))) {
+            !(n.submittedWordCount >= 10))) {
             wk.field_c = wk.field_c + 1;
           }
           eg.field_b = eg.field_b + 1;
           if (!mg.field_d ||
-            n.field_a != 2) {
+            n.submittedWordCount != 2) {
             dc.field_a = dc.field_a + 1;
           }
           g.field_z = g.field_z - 1;
@@ -204,12 +204,12 @@ final class ia extends IntrusiveNode {
             return;
           }
           var2 = d.field_e;
-          if (n.field_a < 3) {
+          if (n.submittedWordCount < 3) {
             var3 = bd.field_u[1];
           } else {
-            if (n.field_a >= 6) {
-              if (n.field_a >= 9) {
-                if (n.field_a >= 10) {
+            if (n.submittedWordCount >= 6) {
+              if (n.submittedWordCount >= 9) {
+                if (n.submittedWordCount >= 10) {
                   var3 = bd.field_u[6];
                 } else {
                   var3 = bd.field_u[4];
@@ -233,7 +233,7 @@ final class ia extends IntrusiveNode {
           if (re.field_A < 6) {
             boolean decompiledFrameRemainder1 = true;
             if (0 <= jl.field_j) {
-              if (-1 + n.field_a != jl.field_j &&
+              if (-1 + n.submittedWordCount != jl.field_j &&
                 !hd.field_a) {
                 if (!(o.field_i <= 0)) {
                   o.field_i = o.field_i - 10;
@@ -300,7 +300,7 @@ final class ia extends IntrusiveNode {
                 }
                 break;
               }
-              if (0 == n.field_a) {
+              if (0 == n.submittedWordCount) {
                 if (dc.field_a < 50) {
                   var4Lifetime2 = 0;
                 } else {
@@ -316,8 +316,8 @@ final class ia extends IntrusiveNode {
               return;
             }
             if (2 == re.field_A) {
-              if (n.field_a != 10 && (!mg.field_d ||
-                2 != n.field_a)) {
+              if (n.submittedWordCount != 10 && (!mg.field_d ||
+                2 != n.submittedWordCount)) {
                 var4Lifetime3 = 1;
                 var16 = od.submissionRack.tiles;
                 var6Lifetime3 = 0;
@@ -340,7 +340,7 @@ final class ia extends IntrusiveNode {
                   }
                   break;
                 }
-                if (n.field_a == 0) {
+                if (n.submittedWordCount == 0) {
                   if (dc.field_a < 50) {
                     var4Lifetime3 = 0;
                   } else {
@@ -419,7 +419,7 @@ final class ia extends IntrusiveNode {
                   }
                   break;
                 }
-                if (n.field_a == 0) {
+                if (n.submittedWordCount == 0) {
                   if (dc.field_a < 50) {
                     var4Lifetime4 = 0;
                   } else {
@@ -451,13 +451,13 @@ final class ia extends IntrusiveNode {
             } else {
               wk.carryoverRack.clear(true);
               si.newRack.clear(true);
-              if (n.field_a != 10 && (!mg.field_d ||
-                2 != n.field_a)) {
+              if (n.submittedWordCount != 10 && (!mg.field_d ||
+                2 != n.submittedWordCount)) {
                 var18 = od.submissionRack.tiles;
                 for (var5 = 0; var5 < var18.length; var5++) {
                   var19 = var18[var5];
                   if (var19 != null) {
-                    var19.field_x = false;
+                    var19.doublesWordScore = false;
                     var19.field_l = var19.field_l + 1;
                     if (var19.carryoverFlag < 3) {
                       var19.carryoverFlag = var19.carryoverFlag + 1;
@@ -466,13 +466,13 @@ final class ia extends IntrusiveNode {
                 }
                 var31 = new char[8];
                 if (mg.field_d &&
-                  n.field_a == 1 &&
+                  n.submittedWordCount == 1 &&
                   null != MouseInputHandler.field_c.field_n) {
                   for (var5Lifetime2 = 0; var5Lifetime2 < MouseInputHandler.field_c.field_n.length(); var5Lifetime2++) {
                     si.newRack.tiles[var5Lifetime2] = NodeHashTableIterator.a(si.newRack, var5Lifetime2, MouseInputHandler.field_c, (byte) 105, MouseInputHandler.field_c.field_n.charAt(var5Lifetime2));
                     stackIn_157_0 = si.newRack.tiles[var5Lifetime2];
                     stackIn_158_1 = (var5Lifetime2 == 1);
-                    stackIn_157_0.field_x = stackIn_158_1;
+                    stackIn_157_0.doublesWordScore = stackIn_158_1;
                     dupTemp$1 = si.newRack.tiles[var5Lifetime2];
                     dupTemp$1.destinationY = 247 - wl.field_K.field_m;
                     si.newRack.tiles[var5Lifetime2].y = 247 - wl.field_K.field_m;
@@ -484,7 +484,7 @@ final class ia extends IntrusiveNode {
                     si.newRack.tiles[var6Lifetime4] = NodeHashTableIterator.a(si.newRack, var6Lifetime4, MouseInputHandler.field_c, (byte) 30, var31[var6Lifetime4]);
                     stackIn_151_0 = si.newRack.tiles[var6Lifetime4];
                     stackIn_152_1 = (var5Lifetime2 == var6Lifetime4);
-                    stackIn_151_0.field_x = stackIn_152_1;
+                    stackIn_151_0.doublesWordScore = stackIn_152_1;
                     dupTemp$2 = si.newRack.tiles[var6Lifetime4];
                     dupTemp$2.destinationY = 247 - wl.field_K.field_m;
                     si.newRack.tiles[var6Lifetime4].y = 247 - wl.field_K.field_m;
@@ -513,34 +513,34 @@ final class ia extends IntrusiveNode {
           }
           scanLoop5: while (true) {
             if (!pc.b(-122)) {
-              if (ad.field_e) {
-                a.field_S.a(-127, kk.a(336, ol.field_b, nk.field_c), kk.a(336, oa.field_j, bk.field_a));
+              if (WordDictionary.field_e) {
+                a.field_S.a(-127, kk.a(336, ol.field_b, nk.field_c), kk.a(336, PacketBuffer.field_j, bk.field_a));
                 if (a.field_S.f(-9112)) {
                   if (0 == a.field_S.field_d) {
-                    dc.a(-22991, true);
+                    dc.submitWord(-22991, true);
                   }
                   if (a.field_S.field_d == 1) {
-                    ad.field_e = false;
+                    WordDictionary.field_e = false;
                   }
                 }
               }
               if (tg.field_d == 1 &&
-                !ad.field_e) {
+                !WordDictionary.field_e) {
                 qf.field_e = qf.field_e ^ 5 << bc.field_b;
                 hf.field_j = hf.field_j + ol.field_b;
                 vh.field_n = vh.field_n + ol.field_b;
                 nc.field_t = nc.field_t + nk.field_c;
                 bc.field_b = bc.field_b ^ 5 << bc.field_b;
                 ud.field_b = ud.field_b - nk.field_c;
-                if (oa.field_j >= 264 &&
-                  oa.field_j < 428 &&
+                if (PacketBuffer.field_j >= 264 &&
+                  PacketBuffer.field_j < 428 &&
                   bk.field_a >= 376 &&
                   bk.field_a < 407) {
-                  dc.a(-22991, true);
+                  dc.submitWord(-22991, true);
                   return;
                 }
-                if (134 <= oa.field_j &&
-                  oa.field_j < 242 &&
+                if (134 <= PacketBuffer.field_j &&
+                  PacketBuffer.field_j < 242 &&
                   bk.field_a >= 376 &&
                   407 > bk.field_a) {
                   vk.a((byte) 85, FullscreenFocusCanvas.field_d[0]);
@@ -550,29 +550,29 @@ final class ia extends IntrusiveNode {
                 }
                 if (bk.field_a >= 114 &&
                   bk.field_a < 114 + wl.field_K.field_m &&
-                  oa.field_j >= 34) {
-                  var4Lifetime1 = (-34 + oa.field_j) / wl.field_K.field_n;
+                  PacketBuffer.field_j >= 34) {
+                  var4Lifetime1 = (-34 + PacketBuffer.field_j) / wl.field_K.field_n;
                   if (!(var4Lifetime1 >= od.submissionRack.tiles.length)) {
-                    rk.field_p = -(-(var4Lifetime1 * wl.field_K.field_n) - 34 + oa.field_j);
+                    rk.field_p = -(-(var4Lifetime1 * wl.field_K.field_n) - 34 + PacketBuffer.field_j);
                     sg.field_d = od.submissionRack.tiles[var4Lifetime1];
                     ek.field_e = 114 - bk.field_a;
                   }
                 } else if (bk.field_a >= 190 &&
                   bk.field_a < 190 + wl.field_K.field_m &&
-                  oa.field_j >= 34) {
-                  var4Lifetime1 = (-34 + oa.field_j) / wl.field_K.field_n;
+                  PacketBuffer.field_j >= 34) {
+                  var4Lifetime1 = (-34 + PacketBuffer.field_j) / wl.field_K.field_n;
                   if (!(var4Lifetime1 >= wk.carryoverRack.tiles.length)) {
-                    rk.field_p = -(oa.field_j - (34 + wl.field_K.field_n * var4Lifetime1));
+                    rk.field_p = -(PacketBuffer.field_j - (34 + wl.field_K.field_n * var4Lifetime1));
                     sg.field_d = wk.carryoverRack.tiles[var4Lifetime1];
                     ek.field_e = -bk.field_a + 190;
                   }
                 } else {
                   if (bk.field_a >= 247 &&
                     247 + wl.field_K.field_m > bk.field_a &&
-                    161 <= oa.field_j) {
-                    var4Lifetime1 = (-161 + oa.field_j) / wl.field_K.field_n;
+                    161 <= PacketBuffer.field_j) {
+                    var4Lifetime1 = (-161 + PacketBuffer.field_j) / wl.field_K.field_n;
                     if (var4Lifetime1 < si.newRack.tiles.length) {
-                      rk.field_p = -(-(var4Lifetime1 * wl.field_K.field_n) + (oa.field_j - 161));
+                      rk.field_p = -(-(var4Lifetime1 * wl.field_K.field_n) + (PacketBuffer.field_j - 161));
                       sg.field_d = si.newRack.tiles[var4Lifetime1];
                       ek.field_e = 247 - bk.field_a;
                     }
@@ -635,42 +635,42 @@ final class ia extends IntrusiveNode {
               }
               return;
             }
-            qf.field_e = qf.field_e ^ 1 << eh.field_a;
-            bc.field_b = bc.field_b ^ 1 << eh.field_a;
+            qf.field_e = qf.field_e ^ 1 << eh.totalScore;
+            bc.field_b = bc.field_b ^ 1 << eh.totalScore;
             ud.field_b = ud.field_b - gh.field_l;
             jk.field_B = jk.field_B - 1;
             if (ch.field_d == 13) {
-              if (ad.field_e) {
-                ad.field_e = false;
+              if (WordDictionary.field_e) {
+                WordDictionary.field_e = false;
                 continue;
               }
               stackIn_216_0 = (mg.field_d) ? 7 : 1;
               qf.field_d = stackIn_216_0;
               return;
             }
-            if (n.field_a == 10) {
+            if (n.submittedWordCount == 10) {
               continue;
             }
             if (mg.field_d &&
-              n.field_a == 2) {
+              n.submittedWordCount == 2) {
               continue;
             }
-            if (ad.field_e) {
+            if (WordDictionary.field_e) {
               a.field_S.b(false);
               if (!a.field_S.f(-9112)) {
                 continue;
               }
               if (0 == a.field_S.field_d) {
-                dc.a(-22991, false);
+                dc.submitWord(-22991, false);
               }
               if (1 != a.field_S.field_d) {
                 continue;
               }
-              ad.field_e = false;
+              WordDictionary.field_e = false;
               continue;
             }
             if (84 == ch.field_d) {
-              dc.a(-22991, false);
+              dc.submitWord(-22991, false);
               continue;
             }
             if (va.field_j >= 2 &&
@@ -693,7 +693,7 @@ final class ia extends IntrusiveNode {
             if (i.a(sg.field_n, 160) &&
               sg.field_n != 32 &&
               od.submissionRack.tiles[11] == null) {
-              sg.field_n = MouseInputHandler.field_c.a(0, sg.field_n);
+              sg.field_n = MouseInputHandler.field_c.toUpperCase(0, sg.field_n);
               if (0 != SessionGameApplet.field_l) {
                 SessionGameApplet.field_l = sg.field_n & 255;
               }
@@ -713,7 +713,7 @@ final class ia extends IntrusiveNode {
               continue;
             }
             if ((98 != ch.field_d ||
-              !(n.field_a > 0)) &&
+              !(n.submittedWordCount > 0)) &&
               99 != ch.field_d) {
               continue;
             }
@@ -767,7 +767,7 @@ final class ia extends IntrusiveNode {
             if (ch.field_d != 98) {
               continue;
             }
-            var27 = IterableNodeHashTable.field_g[n.field_a - 1].toString();
+            var27 = IterableNodeHashTable.usedWords[n.submittedWordCount - 1].toString();
             for (var5Lifetime1Lifetime1 = 0; var27.length() > var5Lifetime1Lifetime1; var5Lifetime1Lifetime1++) {
               var6Lifetime1 = var27.charAt(var5Lifetime1Lifetime1);
               var7Lifetime1 = null;

@@ -192,12 +192,12 @@ class bj extends kb {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, oa param2, byte param3, oa param4) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, PacketBuffer param2, byte param3, PacketBuffer param4) {
         try {
           if (param3 >= -100) {
             field_X = (String) null;
           }
-          gl.a((byte) -126, param1, param0, param4.field_g, param2, param4.field_h, 0);
+          gl.a((byte) -126, param1, param0, param4.payload, param2, param4.position, 0);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "bj.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

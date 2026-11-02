@@ -21,7 +21,7 @@ class ik extends a implements df {
         String var7;
         String var8;
         var5 = Transmogrify.field_A ? 1 : 0;
-        var6 = "(" + bd.field_t + " " + nf.field_k + " " + FullscreenFocusCanvas.field_a + ") " + ca.field_e;
+        var6 = "(" + bd.field_t + " " + WordLanguage.field_k + " " + FullscreenFocusCanvas.field_a + ") " + ca.field_e;
         var1 = var6;
         if (param0 != 48) {
           field_cb = (tf) null;
@@ -30,7 +30,7 @@ class ik extends a implements df {
           var1 = var6 + ":";
           for (var2 = 0; var2 < tg.field_a; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & nf.field_l.field_g[var2];
+            var3 = 255 & WordLanguage.field_l.payload[var2];
             var4 = var3 >> 4;
             if (10 > var4) {
               var4 += 48;
@@ -125,7 +125,7 @@ class ik extends a implements df {
             var6.a(ta.field_b, 17, param2 + 5);
           }
           if (~param1 == param2) {
-            var6.a(ad.field_f, 7, param2 + 5);
+            var6.a(WordDictionary.field_f, 7, param2 + 5);
           } else {
             if (param1 != 4) {
               if (6 != param1) {

@@ -61,7 +61,7 @@ final class ne {
           var1Lifetime2 = 60 % ((-44 - param0) / 35);
           return;
         }
-        if (n.field_a >= 10) {
+        if (n.submittedWordCount >= 10) {
           hi.field_a = 0;
           var1Lifetime3 = 60 % ((-44 - param0) / 35);
           return;
@@ -79,8 +79,8 @@ final class ne {
           return;
         }
         try {
-          var5.field_h = var5.field_h + 1;
-          var4 = var5.field_h;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.f(6389, 1);
           var5.f(6389, param1.field_h);
           var5.f(param0 + 6382, param1.field_o);
@@ -89,7 +89,7 @@ final class ne {
           var5.a(-128, param1.field_p);
           var5.a(param0 - 108, param1.field_g);
           var5.d(var4, -1323322296);
-          var5.a((byte) -42, var5.field_h - var4);
+          var5.a((byte) -42, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "ne.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

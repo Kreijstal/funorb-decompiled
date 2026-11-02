@@ -95,7 +95,7 @@ public final class Transmogrify extends SessionGameApplet {
               if (kb.field_n != null &&
                 kb.field_n.field_i) {
                 hc.field_u = hc.field_u & ~kb.field_n.field_k;
-                rh.field_n = rh.field_n | kb.field_n.field_k;
+                rh.unlockedAchievementMask = rh.unlockedAchievementMask | kb.field_n.field_k;
                 kb.field_n = null;
                 cg.b((byte) -27);
                 qd.a(-117);
@@ -201,7 +201,7 @@ public final class Transmogrify extends SessionGameApplet {
           if (param0 != 72) {
             field_D = -63;
           }
-          stackIn_3_0 = nf.field_l.g(12248);
+          stackIn_3_0 = WordLanguage.field_l.g(12248);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,11 +225,11 @@ public final class Transmogrify extends SessionGameApplet {
           var1 = ff.field_D;
           while (cg.g(-5591)) {
             var1.a(false, 8);
-            fieldTemp$0 = var1.field_h + 1;
-            var1.field_h = var1.field_h + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             lc.a((byte) 65, var1);
-            ff.field_D.a((byte) -42, var1.field_h - var2);
+            ff.field_D.a((byte) -42, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -336,7 +336,7 @@ public final class Transmogrify extends SessionGameApplet {
               } else {
                 ej.field_l[be.field_q].c((byte) 122);
                 if (oh.field_j > 2 &&
-                  n.field_a < 10) {
+                  n.submittedWordCount < 10) {
                   wk.field_c = wk.field_c + 1;
                   dc.field_a = dc.field_a + 1;
                 }
@@ -438,7 +438,7 @@ public final class Transmogrify extends SessionGameApplet {
                 }
                 if (be.field_q == 5 &&
                   IntrusiveDeque.b((byte) 99)) {
-                  rh.field_n = 0;
+                  rh.unlockedAchievementMask = 0;
                   hc.field_u = 0;
                   mc.field_c.g(-1);
                   SecondaryNodeDeque.field_g = 0;
@@ -451,7 +451,7 @@ public final class Transmogrify extends SessionGameApplet {
               }
               eg.field_b = eg.field_b + 1;
               if (oh.field_j > 2 &&
-                10 > n.field_a) {
+                10 > n.submittedWordCount) {
                 wk.field_c = wk.field_c + 1;
                 dc.field_a = dc.field_a + 1;
               }
@@ -650,9 +650,9 @@ public final class Transmogrify extends SessionGameApplet {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5_int = 0;
-        ad[] var5 = null;
+        WordDictionary[] var5 = null;
         int var6_int = 0;
-        nf var6 = null;
+        WordLanguage var6 = null;
         LetterTile var7 = null;
         int var7_int = 0;
         LetterTile var8 = null;
@@ -661,8 +661,8 @@ public final class Transmogrify extends SessionGameApplet {
         ti var12 = null;
         ti[] var13 = null;
         ti var14 = null;
-        ad[] var15 = null;
-        ad[] var16 = null;
+        WordDictionary[] var15 = null;
+        WordDictionary[] var16 = null;
         LetterTile var17 = null;
         LetterTile var18 = null;
         byte[] var21 = null;
@@ -994,7 +994,7 @@ public final class Transmogrify extends SessionGameApplet {
           }
           incrementValue$0 = var4Lifetime4;
           var4Lifetime4--;
-          var16 = new ad[incrementValue$0];
+          var16 = new WordDictionary[incrementValue$0];
           var5 = var16;
           for (var6_intLifetime1 = var15.length - 1; var6_intLifetime1 >= 0; var6_intLifetime1--) {
             if (var15[var6_intLifetime1] != null) {
@@ -1003,9 +1003,9 @@ public final class Transmogrify extends SessionGameApplet {
               var5[incrementValue$2] = var15[var6_intLifetime1];
             }
           }
-          we.field_l = new nf[var16.length];
+          we.field_l = new WordLanguage[var16.length];
           for (var6_intLifetime2 = 0; var6_intLifetime2 < we.field_l.length; var6_intLifetime2++) {
-            we.field_l[var6_intLifetime2] = new nf(oi.field_g, kk.field_a, var16[var6_intLifetime2]);
+            we.field_l[var6_intLifetime2] = new WordLanguage(oi.field_g, kk.field_a, var16[var6_intLifetime2]);
             if (we.field_l[var6_intLifetime2].field_j.equals(hi.field_d)) {
               am.field_n = var6_intLifetime2;
             }
@@ -1025,7 +1025,7 @@ public final class Transmogrify extends SessionGameApplet {
           var7.destinationX = 1000;
           var9 = var7;
           var9.x = 1000;
-          var7.field_x = true;
+          var7.doublesWordScore = true;
           ob.a(1, 2, var18, 0);
           oi.field_g = null;
           l.field_a = null;
@@ -1156,7 +1156,7 @@ public final class Transmogrify extends SessionGameApplet {
           sb.a();
           mh.a(0);
           gb.a(param0 - 5);
-          oa.b((byte) -99);
+          PacketBuffer.b((byte) -99);
           lk.a((byte) -124);
           bc.a(122);
           n.a(false);
@@ -1176,7 +1176,7 @@ public final class Transmogrify extends SessionGameApplet {
           mg.a((byte) -28);
           bl.b(116);
           vg.a((byte) -60);
-          nf.a((byte) -41);
+          WordLanguage.a((byte) -41);
           gk.a(9);
           IntrusiveNode.a(false);
           lc.e(-122);
@@ -1194,7 +1194,7 @@ public final class Transmogrify extends SessionGameApplet {
           el.a((byte) 99);
           qd.c(69);
           ih.a((byte) -46);
-          ad.a(1);
+          WordDictionary.a(1);
           lb.a((byte) 103);
           il.a((byte) -24);
           da.i(param0 ^ param0);

@@ -54,11 +54,11 @@ final class ua {
         var5 = Transmogrify.field_A ? 1 : 0;
         try {
           var1_int = 12;
-          if (oa.field_j >= 34 &&
-            34 + 12 * wl.field_K.field_n > oa.field_j &&
+          if (PacketBuffer.field_j >= 34 &&
+            34 + 12 * wl.field_K.field_n > PacketBuffer.field_j &&
             114 <= bk.field_a &&
             wl.field_K.field_m + 114 > bk.field_a) {
-            var1_int = (-34 + oa.field_j) / wl.field_K.field_n;
+            var1_int = (-34 + PacketBuffer.field_j) / wl.field_K.field_n;
           }
           if (od.submissionRack.tiles[11] != null) {
             var1_int = 12;
@@ -133,7 +133,7 @@ final class ua {
             }
           }
           if (sg.field_d != null) {
-            sg.field_d.x = oa.field_j + rk.field_p;
+            sg.field_d.x = PacketBuffer.field_j + rk.field_p;
             sg.field_d.y = bk.field_a + ek.field_e;
             if (sg.field_d.x != sg.field_d.destinationX ||
               sg.field_d.y != sg.field_d.destinationY) {
@@ -233,7 +233,7 @@ final class ua {
         }
     }
 
-    final static void a(int param0, PlatformTaskDispatcher param1, int param2, oa param3) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, PacketBuffer param3) {
         try {
           int var5 = 0;
           int var11_int = 0;

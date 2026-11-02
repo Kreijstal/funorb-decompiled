@@ -56,8 +56,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (!ue.a(1, 0)) {
             return false;
           }
-          tg.field_a = nf.field_l.d((byte) 34);
-          nf.field_l.field_h = 0;
+          tg.field_a = WordLanguage.field_l.d((byte) 34);
+          WordLanguage.field_l.position = 0;
         }
         if (tg.field_a != -2) {
           return ue.a(tg.field_a, param0 ^ 0);
@@ -65,8 +65,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         if (!ue.a(2, 0)) {
           return false;
         }
-        tg.field_a = nf.field_l.a((byte) -85);
-        nf.field_l.field_h = 0;
+        tg.field_a = WordLanguage.field_l.a((byte) -85);
+        WordLanguage.field_l.position = 0;
         return ue.a(tg.field_a, param0 ^ 0);
     }
 

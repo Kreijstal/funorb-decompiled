@@ -24,7 +24,7 @@ final class ac extends kk {
         field_n = null;
     }
 
-    final void a(byte param0, oa param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 >= -50) {
             ac.a((byte) -2);
