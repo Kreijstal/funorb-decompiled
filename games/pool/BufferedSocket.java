@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class vb implements Runnable {
+final class BufferedSocket implements Runnable {
     private InputStream field_l;
     private int field_i;
     static String field_c;
     static int field_f;
     private java.net.Socket field_n;
-    private le field_d;
+    private AsyncRequest field_d;
     private int field_a;
     private boolean field_e;
     static of field_m;
@@ -18,10 +18,10 @@ final class vb implements Runnable {
     private boolean field_h;
     static nb field_b;
     private OutputStream field_g;
-    private sj field_o;
+    private PlatformTaskDispatcher field_o;
     static int[] field_p;
 
-    vb(java.net.Socket param0, sj param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -79,7 +79,7 @@ final class vb implements Runnable {
           return 0;
         }
         if (param0 != 14528) {
-          vb.a(false);
+          BufferedSocket.a(false);
           return this.field_l.read();
         }
         return this.field_l.read();
@@ -335,7 +335,7 @@ final class vb implements Runnable {
         try {
           if (param0 != -6584) {
             var3 = (String) null;
-            vb.a(false, (String) null, (byte) 126, (nf) null, -39, (String) null, (String) null);
+            BufferedSocket.a(false, (String) null, (byte) 126, (nf) null, -39, (String) null, (String) null);
           }
           dupTemp$1 = new or(0, (or) null);
           param1.field_q = dupTemp$1;
@@ -405,7 +405,7 @@ final class vb implements Runnable {
         }
     }
 
-    private vb(java.net.Socket param0, sj param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_e = false;
         this.field_i = 0;
         this.field_a = 0;

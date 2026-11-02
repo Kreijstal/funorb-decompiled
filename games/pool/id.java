@@ -99,7 +99,7 @@ abstract class id {
         ug.field_u = hj.field_l;
         PoolMatchController.field_X = 0;
         rj.field_f = 0;
-        li.field_d = 0;
+        IsaacCipher.field_d = 0;
         jc.field_j = new ia(2);
         jc.field_j.a(param1, -1, ho.a((byte) -84, wn.field_i, gg.field_f), true);
     }

@@ -8,7 +8,7 @@ class PacketBuffer extends IntrusiveNode {
     static String field_m;
     static int[] field_p;
     static String field_r;
-    static le field_u;
+    static AsyncRequest field_u;
     int position;
     static vh field_s;
     static String field_w;

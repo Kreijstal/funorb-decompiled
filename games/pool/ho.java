@@ -8,8 +8,8 @@ final class ho extends IntrusiveNode {
     static String[] field_u;
     int field_o;
     byte[][][] field_w;
-    le[] field_n;
-    le[] field_p;
+    AsyncRequest[] field_n;
+    AsyncRequest[] field_p;
     static int[] field_l;
     int[] field_r;
     static int[] field_s;

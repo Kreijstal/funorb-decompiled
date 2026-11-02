@@ -79,7 +79,7 @@ final class el extends ob {
           }
           regionExit1: {
             if (fe.a(var15, -13671, var6)) {
-              li.field_f[var6].e(var7, var8);
+              IsaacCipher.field_f[var6].e(var7, var8);
             } else {
               if (var2 != 0) {
                 break regionExit1;
@@ -119,7 +119,7 @@ final class el extends ob {
           }
           ((an) (Object) stackIn_46_0).d(stackIn_47_1, 225, sa.field_h.field_C + 240, 13412966, -1);
           if (var7Lifetime1 != 0) {
-            li.field_f[var6Lifetime1].c(85, 225);
+            IsaacCipher.field_f[var6Lifetime1].c(85, 225);
           } else {
             tf.a(-17104, var6Lifetime1).c(85, 225);
           }

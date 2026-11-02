@@ -6,7 +6,7 @@ import java.util.*;
 final class oq extends PacketBuffer {
     static java.util.zip.CRC32 field_B;
     static String field_C;
-    private li field_A;
+    private IsaacCipher field_A;
     private int field_y;
     static String field_D;
     static vh field_z;
@@ -123,7 +123,7 @@ final class oq extends PacketBuffer {
           return;
         }
         try {
-          this.field_A = new li(param1);
+          this.field_A = new IsaacCipher(param1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "oq.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

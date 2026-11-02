@@ -249,7 +249,7 @@ final class ga extends sl implements sc {
           if (param0 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (ql.a(param0, -90)) {
+          if (MouseHandler.a(param0, -90)) {
             stackIn_10_0 = (int)(((long)param2.nextInt() & 4294967295L) * (long)param0 >> 32);
             return stackIn_10_0;
           }

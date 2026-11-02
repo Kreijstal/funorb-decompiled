@@ -113,7 +113,7 @@ final class s {
         }
     }
 
-    final static dj[] a(byte param0, sj param1) {
+    final static dj[] a(byte param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         dj[] stackIn_3_0 = null;
         dj[] stackIn_10_0 = null;
@@ -127,7 +127,7 @@ final class s {
         dj[] var4 = null;
         dj var6 = null;
         int var7 = 0;
-        le var8 = null;
+        AsyncRequest var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Pool.field_O;

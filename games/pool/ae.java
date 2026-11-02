@@ -170,7 +170,7 @@ final class ae {
             var6 = var12.field_z / 2;
             var12.e();
             de.field_d.b(nr.a(new String[]{sa.field_o}, -1, ul.field_l), var6, 40, 16777215, -1);
-            so.field_h.b(nr.a(new String[]{sa.field_o}, -1, vb.field_c), var6, 60, 16777215, -1);
+            so.field_h.b(nr.a(new String[]{sa.field_o}, -1, BufferedSocket.field_c), var6, 60, 16777215, -1);
             de.field_d.b(nr.a(new String[]{pd.field_e}, -1, up.field_w), var6, 110, 16777215, -1);
             so.field_h.b(nr.a(new String[]{pd.field_e}, -1, cr.field_t), var6, 130, 16777215, -1);
             de.field_d.b(mp.field_X, var6, 180, 16777215, -1);
@@ -208,7 +208,7 @@ final class ae {
             var5 = de.field_d.a(var14, jc.field_h);
             var6Lifetime1 = de.field_d.b(var14, jc.field_h, de.field_d.field_C + de.field_d.field_w);
             var7Lifetime1 = se.field_h + (-var5 + jc.field_h) / 2;
-            var8 = rf.field_c + (-var6Lifetime1 + li.field_e) / 2;
+            var8 = rf.field_c + (-var6Lifetime1 + IsaacCipher.field_e) / 2;
             var7Lifetime1 -= 3;
             var5 += 6;
             if (0 > var7Lifetime1) {
@@ -252,7 +252,7 @@ final class ae {
             vn.field_j.c();
             var9 = new dd(vn.field_j.field_w, vn.field_j.field_y);
             var9.e();
-            de.field_d.a(var14, se.field_h, rf.field_c, jc.field_h, li.field_e, 16777215, -1, 1, 1, de.field_d.field_C + de.field_d.field_w);
+            de.field_d.a(var14, se.field_h, rf.field_c, jc.field_h, IsaacCipher.field_e, 16777215, -1, 1, 1, de.field_d.field_C + de.field_d.field_w);
             hd.a(1, 3, var9.field_y, var9, param0 + 6, var9.field_w, 0, 0);
             vn.field_j.e();
             var9.c(0, 0);

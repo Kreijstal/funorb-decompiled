@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wp implements si {
-    static ql field_g;
+    static MouseHandler field_g;
     static String field_h;
     static String[] field_f;
     static String field_b;
@@ -257,7 +257,7 @@ final class wp implements si {
         try {
           var4 = (ea) (rc.field_c.c((byte) -82));
           if (param2 <= 27) {
-            field_g = (ql) null;
+            field_g = (MouseHandler) null;
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var4))) {
@@ -287,7 +287,7 @@ final class wp implements si {
         }
     }
 
-    final static od a(int param0, sj param1, byte param2, int param3, int param4, int param5) {
+    final static od a(int param0, PlatformTaskDispatcher param1, byte param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         od var7 = null;
@@ -352,7 +352,7 @@ final class wp implements si {
     static {
         field_h = "Members";
         field_b = "Return to Main Menu";
-        field_g = new ql();
+        field_g = new MouseHandler();
         field_c = 50;
         field_e = "Type your email address again to make sure it's correct";
     }

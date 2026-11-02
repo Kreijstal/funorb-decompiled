@@ -314,7 +314,7 @@ final class rn implements Runnable {
           mm.field_g = new vh(0L, f.field_e, ol.field_b);
           mn.field_e = new vh(0L, f.field_e, n.field_T);
           l.field_f = new vh(0L, sd.field_Q, ml.field_f);
-          vb.field_m = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
+          BufferedSocket.field_m = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
           field_f = new vh(0L, mg.field_c, fc.field_a.toUpperCase());
           field_f.field_pb = tq.field_p;
           stackIn_8_0 = null;
@@ -342,7 +342,7 @@ final class rn implements Runnable {
           }
           pk.field_a.a(-117, mn.field_e);
           pk.field_a.a(104, l.field_f);
-          pk.field_a.a(-127, vb.field_m);
+          pk.field_a.a(-127, BufferedSocket.field_m);
           if (tq.field_p) {
             oi.field_n.a(-97, field_f);
           }
@@ -624,8 +624,8 @@ final class rn implements Runnable {
         field_f = null;
     }
 
-    rn(sj param0) {
-        le var2 = null;
+    rn(PlatformTaskDispatcher param0) {
+        AsyncRequest var2 = null;
         this.field_c = new wo();
         this.field_j = false;
         this.field_e = 0;

@@ -182,8 +182,8 @@ final class sf extends rg {
           vd.field_n = vd.field_n + (param1.readUnsignedByte(-75) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(-61);
           vd.field_n = vd.field_n + (var2_intLifetime2 >> 1);
-          vb.field_f = (var2_intLifetime2 & 1) << 16;
-          vb.field_f = vb.field_f + param1.readUnsignedShort(-1034);
+          BufferedSocket.field_f = (var2_intLifetime2 & 1) << 16;
+          BufferedSocket.field_f = BufferedSocket.field_f + param1.readUnsignedShort(-1034);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

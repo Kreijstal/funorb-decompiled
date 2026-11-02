@@ -30,13 +30,13 @@ final class ne extends ig {
           if (this.field_p instanceof sc) {
             var3 = ((sc) ((Object) this.field_p)).a(83);
             if (var3 != null &&
-              var3.c(-31873) != kr.field_e) {
+              var3.c(-31873) != ProxySocketConnector.field_e) {
               stackIn_6_0 = gp.field_d;
               return stackIn_6_0;
             }
           }
           if (param0.equals(this.field_p.field_m)) {
-            stackIn_10_0 = kr.field_e;
+            stackIn_10_0 = ProxySocketConnector.field_e;
           } else {
             stackIn_10_0 = gp.field_d;
           }
@@ -86,7 +86,7 @@ final class ne extends ig {
           if (this.field_p instanceof sc) {
             var3 = ((sc) ((Object) this.field_p)).a(-11);
             if (var3 != null) {
-              if (var3.c(-31873) == kr.field_e &&
+              if (var3.c(-31873) == ProxySocketConnector.field_e &&
                 !param0.equals(this.field_p.field_m)) {
                 stackIn_10_0 = rk.field_i;
                 return stackIn_10_0;

@@ -12,9 +12,9 @@ final class hh {
     final static vh a(byte param0) {
         if (param0 != 1) {
           field_a = 112;
-          return vb.field_m.field_Rb;
+          return BufferedSocket.field_m.field_Rb;
         }
-        return vb.field_m.field_Rb;
+        return BufferedSocket.field_m.field_Rb;
     }
 
     public static void a(int param0) {

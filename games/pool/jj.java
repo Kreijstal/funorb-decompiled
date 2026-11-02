@@ -112,7 +112,7 @@ final class jj extends fm implements tb {
             var4 = ll.field_a[var3];
             if (var4 >= 0) {
               if (un.field_f.field_h == var4) {
-                var5 = bg.field_d;
+                var5 = SocketConnector.field_d;
               } else {
                 var5 = hd.field_H;
               }
@@ -159,7 +159,7 @@ final class jj extends fm implements tb {
     final void a(ei param0, int param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_O.field_I = this.field_N.a(param1 - 997).c(-31873) == kr.field_e ? true : false;
+          this.field_O.field_I = this.field_N.a(param1 - 997).c(-31873) == ProxySocketConnector.field_e ? true : false;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "jj.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -176,7 +176,7 @@ final class jj extends fm implements tb {
     }
 
     public final void a(boolean param0, int param1, int param2, fe param3, int param4) {
-        if (this.field_N.a(-41).c(-31873) != kr.field_e) {
+        if (this.field_N.a(-41).c(-31873) != ProxySocketConnector.field_e) {
           return;
         }
         try {

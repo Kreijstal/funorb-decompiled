@@ -45,7 +45,7 @@ final class mf extends tm {
           }
           for (var3_int = 1; this.field_a.length > var3_int; var3_int++) {
             this.field_a[var3_int].a(8, 8, 8, 4);
-            li.a(this.field_a[var3_int], 0);
+            IsaacCipher.a(this.field_a[var3_int], 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

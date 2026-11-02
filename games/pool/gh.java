@@ -103,7 +103,7 @@ final class gh extends vc {
           to.field_l = param0.a("space_respot_the_white", true, "");
           bh.field_a = param0.a("", "space_ball_pot", (byte) 125);
           pq.field_L = param0.a("", "space_cue_hard", (byte) 126);
-          li.field_l = param0.a("", "space_cue_soft", (byte) 126);
+          IsaacCipher.field_l = param0.a("", "space_cue_soft", (byte) 126);
           param0.a("", "cueball_rolling_loop", (byte) 125);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "gh.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -336,7 +336,7 @@ final class gh extends vc {
                 kp.a(100, pq.field_L, param3, param1);
               } else {
                 if (var6 == 8) {
-                  kp.a(100, li.field_l, param3, param1);
+                  kp.a(100, IsaacCipher.field_l, param3, param1);
                 } else {
                   if (var6 == 6) {
                     kp.a(100, to.field_l, param3, param1);
@@ -998,13 +998,13 @@ final class gh extends vc {
         int var4 = -109 / ((-47 - param0) / 45);
         if (param2 != 9) {
         } else {
-          if (null != vb.field_b) {
+          if (null != BufferedSocket.field_b) {
             if (!param1) {
-              vb.field_b.c(4096);
+              BufferedSocket.field_b.c(4096);
             } else {
-              vb.field_b.c(64);
+              BufferedSocket.field_b.c(64);
             }
-            vb.field_b = null;
+            BufferedSocket.field_b = null;
           }
         }
     }

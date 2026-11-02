@@ -12,7 +12,7 @@ final class dq {
     static dd field_k;
     static String field_b;
     static String field_g;
-    static vb field_h;
+    static BufferedSocket field_h;
 
     public static void a(byte param0) {
         field_k = null;

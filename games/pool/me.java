@@ -139,7 +139,7 @@ final class me extends ig {
           if (!this.field_m) {
             stackIn_13_0 = gp.field_d;
           } else {
-            stackIn_13_0 = kr.field_e;
+            stackIn_13_0 = ProxySocketConnector.field_e;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -6,7 +6,7 @@ final class je {
     static String field_a;
     static String field_b;
 
-    final static void a(sj param0, int param1, int param2, int param3, String param4, byte param5, int param6, int param7, int param8) {
+    final static void a(PlatformTaskDispatcher param0, int param1, int param2, int param3, String param4, byte param5, int param6, int param7, int param8) {
         try {
           na.field_a = param6;
           nr.field_X = param4;

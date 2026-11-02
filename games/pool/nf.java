@@ -556,10 +556,10 @@ final class nf extends ch implements jb, tb, jn {
         } catch (NumberFormatException numberFormatException) {
         }
         if (param0 >= 94) {
-          return vb.a(this.field_W.field_G, this.field_X.field_m, (byte) 114, this, var2, this.field_cb.field_m, this.field_bb.field_m);
+          return BufferedSocket.a(this.field_W.field_G, this.field_X.field_m, (byte) 114, this, var2, this.field_cb.field_m, this.field_bb.field_m);
         }
         nf.g((byte) -63);
-        return vb.a(this.field_W.field_G, this.field_X.field_m, (byte) 114, this, var2, this.field_cb.field_m, this.field_bb.field_m);
+        return BufferedSocket.a(this.field_W.field_G, this.field_X.field_m, (byte) 114, this, var2, this.field_cb.field_m, this.field_bb.field_m);
     }
 
     public final void a(String param0, int param1) {

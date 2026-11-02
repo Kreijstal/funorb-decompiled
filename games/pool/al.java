@@ -168,7 +168,7 @@ final class al {
         if ((um.field_c & var8.field_s) != 0) {
           if (var4_ref.field_P != -1) {
             if (var4_ref.field_Q != -1) {
-              this.a(var4_ref.field_Q, (li) null, (byte) -118, var4_ref.field_P, 0);
+              this.a(var4_ref.field_Q, (IsaacCipher) null, (byte) -118, var4_ref.field_P, 0);
             } else {
               this.n(-16739);
             }
@@ -224,7 +224,7 @@ final class al {
         return false;
     }
 
-    final void a(int param0, li param1, byte param2, int param3, int param4) {
+    final void a(int param0, IsaacCipher param1, byte param2, int param3, int param4) {
         try {
           this.a(param0, param3, param1, -30896, param4, 8192);
           int var6_int = 99 / ((param2 + 26) / 53);
@@ -393,7 +393,7 @@ final class al {
     }
 
     private final void n(int param0) {
-        this.a(50, (li) null);
+        this.a(50, (IsaacCipher) null);
         if (param0 != -16739) {
           this.field_p = 125;
         }
@@ -586,7 +586,7 @@ final class al {
         return this.f((byte) 116);
     }
 
-    private final void a(int param0, int param1, li param2, int param3, int param4, int param5) {
+    private final void a(int param0, int param1, IsaacCipher param2, int param3, int param4, int param5) {
         int var13 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -1202,7 +1202,7 @@ final class al {
         var4.field_n = aj.a(-aj.a(var14, false, var21), false, var22);
         var4.field_b = aj.a(aj.a(var13, false, var21), false, var22);
         var4.field_K = aj.a(aj.a(var14, false, var19) - aj.a(var13, false, var20), false, var22);
-        pq.field_i = vb.a(-6584, this.field_l[0]);
+        pq.field_i = BufferedSocket.a(-6584, this.field_l[0]);
     }
 
     final static void l(int param0) {
@@ -1340,7 +1340,7 @@ final class al {
         int var2;
         int var3;
         qe var4;
-        li var6;
+        IsaacCipher var6;
         int var7;
         int var8;
         int var9;
@@ -1363,7 +1363,7 @@ final class al {
         if (var4.field_M < 0) {
           var4.field_M = ga.a(512, true, ea.field_r);
         }
-        var6 = new li(new int[]{var4.field_M});
+        var6 = new IsaacCipher(new int[]{var4.field_M});
         var7 = 1;
         var8 = 1;
         var9 = 1;
@@ -1824,7 +1824,7 @@ final class al {
         return false;
     }
 
-    private final void a(int param0, li param1) {
+    private final void a(int param0, IsaacCipher param1) {
         qe var3 = null;
         qe var4 = null;
         Object var5 = null;

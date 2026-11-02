@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class kr extends bg {
+final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_f;
     static na field_e;
     static int field_h;
@@ -14,7 +14,7 @@ final class kr extends bg {
         field_e = null;
         if (param0 != 15296) {
           String var2 = (String) null;
-          kr.a((byte) -15, 68L, (String) null);
+          ProxySocketConnector.a((byte) -15, 68L, (String) null);
         }
     }
 
@@ -61,7 +61,7 @@ final class kr extends bg {
             if (param0 == -6589) {
               return null;
             }
-            kr.a(false);
+            ProxySocketConnector.a(false);
             stackIn_23_0 = null;
             return (java.net.Socket) (stackIn_23_0);
           }
@@ -140,7 +140,7 @@ final class kr extends bg {
             var6.write(("CONNECT " + this.field_c + ":" + this.field_a + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           }
           if (param1 != 25) {
-            kr.c(-94);
+            ProxySocketConnector.c(-94);
           }
           boolean decompiledFrameRemainder0 = true;
           var6.flush();
@@ -209,7 +209,7 @@ final class kr extends bg {
         }
     }
 
-    kr() {
+    ProxySocketConnector() {
         this.field_f = java.net.ProxySelector.getDefault();
     }
 
@@ -312,7 +312,7 @@ final class kr extends bg {
           }
         }
         if (var7 != null) {
-          throw kr.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+          throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
         }
         return this.b(5101);
     }

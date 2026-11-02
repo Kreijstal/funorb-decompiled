@@ -4,7 +4,7 @@
 import java.util.*;
 
 class fe extends ei {
-    static sj field_M;
+    static PlatformTaskDispatcher field_M;
     boolean field_G;
     private boolean field_F;
     static boolean field_J;

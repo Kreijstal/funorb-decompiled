@@ -140,7 +140,7 @@ final class nn {
             return (id) null;
           }
           try {
-            stackIn_3_0 = (id) (Class.forName("po").newInstance());
+            stackIn_3_0 = (id) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

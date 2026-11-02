@@ -42,9 +42,9 @@ final class fd extends kk {
         int var5 = 0;
         var5 = Pool.field_O;
         try {
-          li.field_d = li.field_d + 65536;
-          while (ng.a(hj.field_f, param1 - 65, li.field_d) >= 65536) {
-            li.field_d = li.field_d - hj.field_f;
+          IsaacCipher.field_d = IsaacCipher.field_d + 65536;
+          while (ng.a(hj.field_f, param1 - 65, IsaacCipher.field_d) >= 65536) {
+            IsaacCipher.field_d = IsaacCipher.field_d - hj.field_f;
             PoolMatchController.field_X = PoolMatchController.field_X + 1;
           }
           var2_int = -1;

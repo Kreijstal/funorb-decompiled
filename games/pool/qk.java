@@ -1626,7 +1626,7 @@ final class qk {
                 }
                 var2 = cm.a("time_trial_failed", (byte) 62);
                 if (var2 != null) {
-                  ql.field_b = a.a(var2, 124);
+                  MouseHandler.field_b = a.a(var2, 124);
                 }
                 var2 = cm.a("timer_seconds", (byte) 64);
                 if (var2 != null) {
@@ -1706,7 +1706,7 @@ final class qk {
                 }
                 var2 = cm.a("keycode_default_down2", (byte) 106);
                 if (var2 != null) {
-                  kr.field_h = 255 & var2[0];
+                  ProxySocketConnector.field_h = 255 & var2[0];
                 }
                 var2 = cm.a("keycode_default_left1", (byte) 17);
                 if (null != var2) {

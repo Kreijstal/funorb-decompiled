@@ -150,7 +150,7 @@ final class ck extends mh {
               var22.c(var9, var11 - (var22.field_A >> 1), 256);
               return;
             }
-            if (kr.field_e != var6) {
+            if (ProxySocketConnector.field_e != var6) {
               return;
             }
             var23 = bo.field_a[1];
@@ -218,7 +218,7 @@ final class ck extends mh {
               var28.c(var9Lifetime1, var11Lifetime1 - (var28.field_A >> 1), 256);
               return;
             }
-            if (kr.field_e != var6) {
+            if (ProxySocketConnector.field_e != var6) {
               return;
             }
             var29 = bo.field_a[1];
@@ -288,7 +288,7 @@ final class ck extends mh {
             var33.c(var9Lifetime2, var11Lifetime2 - (var33.field_A >> 1), 256);
             return;
           }
-          if (kr.field_e != var6Lifetime1) {
+          if (ProxySocketConnector.field_e != var6Lifetime1) {
             return;
           }
           var34 = bo.field_a[1];

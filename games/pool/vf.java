@@ -908,7 +908,7 @@ final class vf extends vc {
     final void d(boolean param0) {
         pi.a();
         oo.field_w = null;
-        vb.field_p = null;
+        BufferedSocket.field_p = null;
         p.field_c = null;
         if (!param0) {
           return;
@@ -933,7 +933,7 @@ final class vf extends vc {
           oo.field_w = ta.a(new int[]{0, var6[0], 128, var6[1], 256, var6[2]}, param1 ^ 21919);
           pi.c();
           this.a(86, param0.field_l.length);
-          vb.field_p = new int[65536];
+          BufferedSocket.field_p = new int[65536];
           we.field_g = new int[65536];
           p.field_c = new int[65536];
         } catch (RuntimeException runtimeException) {
@@ -1075,12 +1075,12 @@ final class vf extends vc {
           for (var4 = 0; var4 < 256; var4++) {
             incrementValue$0 = var3;
             var3++;
-            vb.field_p[incrementValue$0] = pi.a(var4 << 6, var2_int << 6, qa.field_r << 7, oo.field_w, 128, 6);
+            BufferedSocket.field_p[incrementValue$0] = pi.a(var4 << 6, var2_int << 6, qa.field_r << 7, oo.field_w, 128, 6);
           }
         }
         if (var1 >= 256) {
-          var2 = vb.field_p;
-          vb.field_p = we.field_g;
+          var2 = BufferedSocket.field_p;
+          BufferedSocket.field_p = we.field_g;
           we.field_g = p.field_c;
           p.field_c = var2;
           var1 = 32;

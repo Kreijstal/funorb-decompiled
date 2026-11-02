@@ -58,15 +58,15 @@ class bp {
     void a() {
     }
 
-    final static bp a(sj param0, java.awt.Component param1, int param2, int param3) {
+    final static bp a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
-          pg var4 = null;
+          JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
-          pg var5 = null;
-          pg stackIn_10_0 = null;
+          JavaSoundAudioOutput var5 = null;
+          JavaSoundAudioOutput stackIn_10_0 = null;
           int stackIn_10_1 = 0;
           int stackIn_11_2 = 0;
-          pg stackIn_21_0 = null;
+          JavaSoundAudioOutput stackIn_21_0 = null;
           Throwable decompiledCaughtException = null;
           if (field_h == 0) {
             throw new IllegalStateException();
@@ -77,7 +77,7 @@ class bp {
               param3 = 256;
             }
             try {
-              var5 = new pg();
+              var5 = new JavaSoundAudioOutput();
               var4 = var5;
               stackIn_10_0 = var4;
               stackIn_10_1 = 256;

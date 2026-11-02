@@ -253,7 +253,7 @@ final class nj {
         return 1;
     }
 
-    final static java.awt.Frame a(int param0, sj param1, int param2, boolean param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, PlatformTaskDispatcher param1, int param2, boolean param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_10_0 = null;
         Object stackIn_36_0 = null;
@@ -267,14 +267,14 @@ final class nj {
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        sj var10 = null;
+        PlatformTaskDispatcher var10 = null;
         dj[] var11 = null;
-        le var12 = null;
+        AsyncRequest var12 = null;
         var9 = Pool.field_O;
         try {
           if (param3) {
-            var10 = (sj) null;
-            nj.a(-1, (sj) null, -62, true, 71, -112);
+            var10 = (PlatformTaskDispatcher) null;
+            nj.a(-1, (PlatformTaskDispatcher) null, -62, true, 71, -112);
           }
           if (!param1.a((byte) 126)) {
             return null;

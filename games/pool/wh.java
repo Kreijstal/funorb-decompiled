@@ -5,7 +5,7 @@ final class wh {
     private fg field_d;
     static String field_i;
     private di field_h;
-    static sj field_c;
+    static PlatformTaskDispatcher field_c;
     static int field_b;
     static int field_f;
     static int[] field_j;

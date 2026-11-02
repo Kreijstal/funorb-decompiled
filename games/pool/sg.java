@@ -116,8 +116,8 @@ final class sg extends ob {
           return 260;
         }
         if (param0 != 6) {
-          sj var4 = (sj) null;
-          sg.a((java.awt.Component) null, (vk) null, -11, (sj) null, -109, true);
+          PlatformTaskDispatcher var4 = (PlatformTaskDispatcher) null;
+          sg.a((java.awt.Component) null, (vk) null, -11, (PlatformTaskDispatcher) null, -109, true);
         }
         return 390;
     }
@@ -132,8 +132,8 @@ final class sg extends ob {
         int var6 = 0;
         dd[] var1 = new dd[wf.field_d];
         if (param0 != 152) {
-          sj var7 = (sj) null;
-          sg.a((java.awt.Component) null, (vk) null, -111, (sj) null, -54, true);
+          PlatformTaskDispatcher var7 = (PlatformTaskDispatcher) null;
+          sg.a((java.awt.Component) null, (vk) null, -111, (PlatformTaskDispatcher) null, -54, true);
         }
         for (var2 = 0; var2 < wf.field_d; var2++) {
           var3 = pd.field_a[var2] * rc.field_f[var2];
@@ -185,12 +185,12 @@ final class sg extends ob {
         return 36;
     }
 
-    final static void a(java.awt.Component param0, vk param1, int param2, sj param3, int param4, boolean param5) {
+    final static void a(java.awt.Component param0, vk param1, int param2, PlatformTaskDispatcher param3, int param4, boolean param5) {
         try {
           nq.a(param1, param3, param0, param2, false, 1024, param5, param2);
           if (param4 != 10282) {
-            sj var7 = (sj) null;
-            sg.a((java.awt.Component) null, (vk) null, 11, (sj) null, -77, false);
+            PlatformTaskDispatcher var7 = (PlatformTaskDispatcher) null;
+            sg.a((java.awt.Component) null, (vk) null, 11, (PlatformTaskDispatcher) null, -77, false);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "sg.HB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

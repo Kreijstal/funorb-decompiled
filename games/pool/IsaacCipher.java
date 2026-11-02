@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class li {
+final class IsaacCipher {
     private int field_m;
     private int field_i;
     private int field_c;
@@ -24,7 +24,7 @@ final class li {
         field_b = null;
         if (param0 >= 0) {
           al var2 = (al) null;
-          li.a(57, (al) null);
+          IsaacCipher.a(57, (al) null);
         }
     }
 
@@ -36,7 +36,7 @@ final class li {
         int var3 = 2147483647 - (int)(4294967296L % (long)param1);
         if (param0 != 23165) {
           al var5 = (al) null;
-          li.a(73, (al) null);
+          IsaacCipher.a(73, (al) null);
         }
         do {
           var4 = this.a((byte) 7);
@@ -319,7 +319,7 @@ final class li {
         }
     }
 
-    li(int[] param0) {
+    IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
           this.field_j = new int[256];

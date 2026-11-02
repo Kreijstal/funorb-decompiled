@@ -20,7 +20,7 @@ abstract class qo extends rg {
         if (param0 != -82) {
           return;
         }
-        bg.field_d = param1;
+        SocketConnector.field_d = param1;
         hd.field_H = param3;
     }
 

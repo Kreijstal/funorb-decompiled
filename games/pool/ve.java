@@ -558,7 +558,7 @@ final class ve extends op {
               fe.field_L[var23Lifetime2] = -2147483648;
             } else {
               ch.field_M[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
-              li.field_h[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
+              IsaacCipher.field_h[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
               if (var29Lifetime1 > var8) {
                 var8 = var29Lifetime1;
               }

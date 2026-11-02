@@ -146,7 +146,7 @@ final class t {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (!ql.a(param0 - 6709)) {
+          if (!MouseHandler.a(param0 - 6709)) {
             if (ne.field_u != null &&
               ne.field_u.field_e) {
               tq.d((byte) -124);

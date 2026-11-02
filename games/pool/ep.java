@@ -806,7 +806,7 @@ abstract class ep extends GameApplet {
             al.m(4);
           }
           if (null == oh.field_c) {
-            oh.field_c = vb.b(105);
+            oh.field_c = BufferedSocket.b(105);
             u.field_a = sq.g(108);
           }
           wj.a(rg.field_r, u.field_a, false, oh.field_c);

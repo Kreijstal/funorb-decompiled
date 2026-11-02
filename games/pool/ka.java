@@ -36,7 +36,7 @@ final class ka extends ig {
           }
           if (var3_int > 0 &&
             var3_int <= 130) {
-            return kr.field_e;
+            return ProxySocketConnector.field_e;
           }
           stackIn_9_0 = gp.field_d;
           return stackIn_9_0;

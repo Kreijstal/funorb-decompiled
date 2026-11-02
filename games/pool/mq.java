@@ -3,11 +3,11 @@
  */
 final class mq implements Runnable {
     volatile bp[] field_e;
-    sj field_i;
+    PlatformTaskDispatcher field_i;
     volatile boolean field_h;
     static String field_b;
     static int field_f;
-    static le field_c;
+    static AsyncRequest field_c;
     static dd field_a;
     static String field_g;
     volatile boolean field_d;

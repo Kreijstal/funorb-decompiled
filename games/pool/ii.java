@@ -68,10 +68,10 @@ final class ii {
         }
     }
 
-    final static bg a(int param0, String param1, int param2) {
-        kr var3 = null;
+    final static SocketConnector a(int param0, String param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        kr stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -80,11 +80,11 @@ final class ii {
           if (param0 < 97) {
             ii.a(66);
           }
-          var3 = new kr();
-          ((bg) ((Object) var3)).field_a = param2;
-          ((bg) ((Object) var3)).field_c = param1;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_a = param2;
+          ((SocketConnector) ((Object) var3)).field_c = param1;
           stackIn_3_0 = var3;
-          return (bg) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

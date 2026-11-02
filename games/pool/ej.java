@@ -4,17 +4,17 @@
 import java.io.*;
 
 final class ej implements Runnable {
-    private le field_f;
-    private sj field_b;
+    private AsyncRequest field_f;
+    private PlatformTaskDispatcher field_b;
     private java.net.URL field_i;
     private int field_e;
     static oq field_j;
-    private le field_a;
+    private AsyncRequest field_a;
     private PacketBuffer field_d;
     static String field_c;
     private DataInputStream field_h;
     static int field_g;
-    private le field_k;
+    private AsyncRequest field_k;
     static boolean field_l;
 
     final synchronized boolean a(byte param0) {
@@ -550,11 +550,11 @@ final class ej implements Runnable {
             var12 = param4.field_u[var9];
             if (param0) {
               var13 = ch.field_M[var10];
-              var14 = li.field_h[var10];
+              var14 = IsaacCipher.field_h[var10];
               var15 = ch.field_M[var11] - var13;
               var16 = -var13 + ch.field_M[var12];
-              var17 = -var14 + li.field_h[var11];
-              var18 = li.field_h[var12] - var14;
+              var17 = -var14 + IsaacCipher.field_h[var11];
+              var18 = IsaacCipher.field_h[var12] - var14;
             }
             if (!param0 ||
               !(var15 * var18 - var16 * var17 >= 0)) {
@@ -667,7 +667,7 @@ final class ej implements Runnable {
         }
     }
 
-    ej(sj param0, java.net.URL param1, int param2) {
+    ej(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

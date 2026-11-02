@@ -408,8 +408,8 @@ final class fj extends sq {
     final int[] a(int param0, byte param1) {
         int var4 = 0;
         int var5 = Pool.field_O;
-        li var6 = new li(new int[]{1024 + param0});
-        li var3 = var6;
+        IsaacCipher var6 = new IsaacCipher(new int[]{1024 + param0});
+        IsaacCipher var3 = var6;
         for (var4 = 0; var4 < 7; var4++) {
           up.field_M[var4] = var4 + 2;
           dj.field_a[var4] = var6.a(23165, 2048);

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sj implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     private Object field_j;
     private Object field_p;
     private static int field_r;
@@ -17,11 +17,11 @@ final class sj implements Runnable {
     private dc field_m;
     private static String field_d;
     private static volatile long field_h;
-    private le field_c;
+    private AsyncRequest field_c;
     java.awt.EventQueue field_a;
     private boolean field_u;
     v field_x;
-    private le field_l;
+    private AsyncRequest field_l;
     static String field_w;
     v field_e;
     private boolean field_i;
@@ -29,9 +29,9 @@ final class sj implements Runnable {
     private ce field_f;
     v[] field_n;
 
-    final le a(boolean param0, byte param1, java.awt.Component param2) {
+    final AsyncRequest a(boolean param0, byte param1, java.awt.Component param2) {
         if (param1 != 106) {
-          return (le) null;
+          return (AsyncRequest) null;
         }
         return this.a(15, !param0 ? 0 : 1, false, param2, 0);
     }
@@ -75,7 +75,7 @@ final class sj implements Runnable {
             return null;
           }
           var9 = (String) null;
-          sj.a((String) null, -124, false, (String) null);
+          PlatformTaskDispatcher.a((String) null, -124, false, (String) null);
           return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -84,7 +84,7 @@ final class sj implements Runnable {
         }
     }
 
-    final le a(int param0, int param1, Runnable param2) {
+    final AsyncRequest a(int param0, int param1, Runnable param2) {
         if (param0 < 27) {
           field_h = -9L;
         }
@@ -109,7 +109,7 @@ final class sj implements Runnable {
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
           String var8 = null;
-          le var9 = null;
+          AsyncRequest var9 = null;
           String var10 = null;
           Object[] var11 = null;
           java.awt.Component var12 = null;
@@ -203,7 +203,7 @@ final class sj implements Runnable {
                   case 16:
                   default:
                     if (!this.field_k) {
-                      throw sj.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 21:
@@ -223,7 +223,7 @@ final class sj implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref2 = sj.a((String) (var9.field_g), field_r, false, "");
+                        var3_ref2 = PlatformTaskDispatcher.a((String) (var9.field_g), field_r, false, "");
                         var9.field_e = var3_ref2;
                         break;
                       case 16:
@@ -257,21 +257,21 @@ final class sj implements Runnable {
                           Class.forName("vg").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_p, new Object[]{var11[0], var11[1], new Integer(var9.field_a), new Integer(var9.field_b), var11[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw sj.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_w.startsWith("win")) {
-                              throw sj.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var8 = (String) (var9.field_g);
                             if (!var8.startsWith("http://") &&
                               !var8.startsWith("https://")) {
-                              throw sj.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var5 < var8.length(); var5++) {
                               if (var4_ref_String.indexOf((int) var8.charAt(var5)) == -1) {
-                                throw sj.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
@@ -280,12 +280,12 @@ final class sj implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter2;
                             var3_ref3 = (Exception) (Object) decompiledCaughtException;
                             var9.field_e = var3_ref3;
-                            throw sj.<RuntimeException>$cfr$sneakyThrow(var3_ref3);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref3);
                           }
                         }
                         break;
                       case 12:
-                        var3_ref2 = sj.a((String) (var9.field_g), field_r, false, field_d);
+                        var3_ref2 = PlatformTaskDispatcher.a((String) (var9.field_g), field_r, false, field_d);
                         var9.field_e = var3_ref2;
                         break;
                       case 7:
@@ -341,18 +341,18 @@ final class sj implements Runnable {
         }
     }
 
-    final le a(Class param0, String param1, byte param2) {
+    final AsyncRequest a(Class param0, String param1, byte param2) {
         if (param2 != -88) {
-          return (le) null;
+          return (AsyncRequest) null;
         }
         return this.a(9, 0, false, new Object[]{param0, param1}, 0);
     }
 
-    private final le a(int param0, int param1, boolean param2, Object param3, int param4) {
-        le var6 = null;
+    private final AsyncRequest a(int param0, int param1, boolean param2, Object param3, int param4) {
+        AsyncRequest var6 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
-        var6 = new le();
+        var6 = new AsyncRequest();
         var6.field_d = param0;
         var6.field_g = param3;
         var6.field_b = param4;
@@ -374,21 +374,21 @@ final class sj implements Runnable {
         return var6;
     }
 
-    final le a(java.awt.Frame param0, boolean param1) {
+    final AsyncRequest a(java.awt.Frame param0, boolean param1) {
         if (param1) {
-          this.field_l = (le) null;
+          this.field_l = (AsyncRequest) null;
         }
         return this.a(7, 0, false, param0, 0);
     }
 
-    final le a(int param0) {
+    final AsyncRequest a(int param0) {
         if (param0 < 83) {
-          return (le) null;
+          return (AsyncRequest) null;
         }
         return this.a(5, 0, false, (Object) null, 0);
     }
 
-    final le a(int param0, int param1, int param2, int param3, byte param4) {
+    final AsyncRequest a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 != 85) {
           this.a(false);
         }
@@ -408,14 +408,14 @@ final class sj implements Runnable {
         return this.field_f != null ? true : false;
     }
 
-    final le a(byte param0, Class param1, Class[] param2, String param3) {
+    final AsyncRequest a(byte param0, Class param1, Class[] param2, String param3) {
         if (param0 < 12) {
           this.field_b = (v) null;
         }
         return this.a(8, 0, false, new Object[]{param1, param3, param2}, 0);
     }
 
-    final le a(String param0, int param1, int param2) {
+    final AsyncRequest a(String param0, int param1, int param2) {
         if (param2 != 0) {
           java.awt.Component var5 = (java.awt.Component) null;
           this.a(true, (byte) -21, (java.awt.Component) null);
@@ -423,7 +423,7 @@ final class sj implements Runnable {
         return this.a(param1, param0, false, (byte) -123);
     }
 
-    private final le a(int param0, String param1, boolean param2, byte param3) {
+    private final AsyncRequest a(int param0, String param1, boolean param2, byte param3) {
         if (param3 > -104) {
           this.field_k = false;
         }
@@ -494,14 +494,14 @@ final class sj implements Runnable {
         }
     }
 
-    final le a(java.net.URL param0, int param1) {
+    final AsyncRequest a(java.net.URL param0, int param1) {
         if (param1 != 1) {
           field_h = -125L;
         }
         return this.a(4, 0, false, param0, 0);
     }
 
-    sj(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;
@@ -630,9 +630,9 @@ final class sj implements Runnable {
         this.field_s.start();
     }
 
-    final le a(java.awt.Component param0, int param1, int param2, int param3) {
+    final AsyncRequest a(java.awt.Component param0, int param1, int param2, int param3) {
         if (param2 >= -54) {
-          return (le) null;
+          return (AsyncRequest) null;
         }
         java.awt.Point var5 = param0.getLocationOnScreen();
         return this.a(14, param1 + var5.x, false, (Object) null, param3 + var5.y);

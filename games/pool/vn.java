@@ -13,7 +13,7 @@ final class vn {
     static int[] field_h;
     static String[] field_a;
 
-    final static void a(byte param0, int param1, sj param2, PacketBuffer param3) {
+    final static void a(byte param0, int param1, PlatformTaskDispatcher param2, PacketBuffer param3) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -57,9 +57,9 @@ final class vn {
             var19.field_o = param3.readInt(true);
             var19.field_w = new byte[var19.field_t][][];
             var19.field_r = new int[var19.field_t];
-            var19.field_p = new le[var19.field_t];
+            var19.field_p = new AsyncRequest[var19.field_t];
             var19.field_m = new int[var19.field_t];
-            var19.field_n = new le[var19.field_t];
+            var19.field_n = new AsyncRequest[var19.field_t];
             var5 = 57 % ((param0 + 62) / 55);
             var19.field_q = new int[var19.field_t];
             for (var6 = 0; var6 < var19.field_t; var6++) {
@@ -200,7 +200,7 @@ final class vn {
         field_g = null;
         if (!param0) {
           PacketBuffer var2 = (PacketBuffer) null;
-          vn.a((byte) -54, -128, (sj) null, (PacketBuffer) null);
+          vn.a((byte) -54, -128, (PlatformTaskDispatcher) null, (PacketBuffer) null);
         }
     }
 

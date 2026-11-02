@@ -388,10 +388,10 @@ final class rl {
           return 45L;
         }
         long var1 = System.currentTimeMillis();
-        if (var1 < kr.field_g) {
-          ri.field_S = ri.field_S + (-var1 + kr.field_g);
+        if (var1 < ProxySocketConnector.field_g) {
+          ri.field_S = ri.field_S + (-var1 + ProxySocketConnector.field_g);
         }
-        kr.field_g = var1;
+        ProxySocketConnector.field_g = var1;
         return var1 + ri.field_S;
     }
 

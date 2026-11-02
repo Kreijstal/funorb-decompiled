@@ -117,7 +117,7 @@ final class lc extends fe {
           if (var9 == gp.field_d) {
             var15 = bo.field_a[2];
             var15.c(-(var15.field_z >> 1) + var5, var6 - (var15.field_A >> 1), 256);
-          } else if (var9 == kr.field_e) {
+          } else if (var9 == ProxySocketConnector.field_e) {
             var14 = bo.field_a[1];
             var14.c(-(var14.field_z >> 1) + var5, -(var14.field_A >> 1) + var6, 256);
           }

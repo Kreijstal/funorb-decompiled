@@ -4,7 +4,7 @@
 final class lg extends am {
     static String field_v;
     static String field_y;
-    static sj field_s;
+    static PlatformTaskDispatcher field_s;
     private pf field_t;
     static int field_x;
     static String field_w;

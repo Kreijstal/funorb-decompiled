@@ -110,7 +110,7 @@ final class lm extends tm {
         if (hn.field_b != 2) {
           wn.field_g.field_nb = ff.field_j;
         } else {
-          wn.field_g.field_nb = li.field_g;
+          wn.field_g.field_nb = IsaacCipher.field_g;
         }
         if (param3 != 4) {
           return;

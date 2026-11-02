@@ -14,7 +14,7 @@ final class nd implements fp {
     static int field_j;
     static int field_m;
     static int field_l;
-    static sj field_a;
+    static PlatformTaskDispatcher field_a;
     static String field_b;
     private lr field_h;
     static vh field_c;

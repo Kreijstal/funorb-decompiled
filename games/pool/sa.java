@@ -74,7 +74,7 @@ final class sa {
             tl.field_J = vk.field_V;
           } else {
             try {
-              jd.field_c = new vb((java.net.Socket) (PacketBuffer.field_u.field_e), nd.field_a);
+              jd.field_c = new BufferedSocket((java.net.Socket) (PacketBuffer.field_u.field_e), nd.field_a);
               var4 = kn.field_e;
               var5 = var4;
               ej.field_j.position = 0;

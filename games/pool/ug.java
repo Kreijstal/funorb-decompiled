@@ -7,7 +7,7 @@ final class ug extends no {
     static ml field_v;
     static vh field_x;
     static int field_u;
-    private vb field_w;
+    private BufferedSocket field_w;
 
     private final void f(int param0) {
         try {
@@ -53,7 +53,7 @@ final class ug extends no {
         }
         this.field_a = -1;
         if (param0 >= -4) {
-          this.field_w = (vb) null;
+          this.field_w = (BufferedSocket) null;
         }
         this.field_e = this.field_e + 1;
         this.field_w = null;
@@ -286,7 +286,7 @@ final class ug extends no {
               }
               this.field_w = null;
             }
-            this.field_w = (vb) (param2);
+            this.field_w = (BufferedSocket) (param2);
             this.f(-55);
             this.a((byte) 72, param1);
             this.field_p.position = 0;
@@ -585,7 +585,7 @@ final class ug extends no {
           this.field_w.c(-102);
         }
         if (param0 >= -24) {
-          this.field_w = (vb) null;
+          this.field_w = (BufferedSocket) null;
         }
     }
 
@@ -712,7 +712,7 @@ final class ug extends no {
               }
             }
             if (2 == rl.field_e) {
-              dq.field_h = new vb((java.net.Socket) (mq.field_c.field_e), fe.field_M);
+              dq.field_h = new BufferedSocket((java.net.Socket) (mq.field_c.field_e), fe.field_M);
               var2 = new PacketBuffer(13);
               fm.a(var2, true, ci.field_k, om.field_v, ei.field_B);
               var2.a(15, false);

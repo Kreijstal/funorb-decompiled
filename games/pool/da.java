@@ -69,13 +69,13 @@ final class da {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               sf.b((byte) 125, var15);
               if (0 == var6_intLifetime1) {
-                var3.field_t = vb.field_f;
+                var3.field_t = BufferedSocket.field_f;
                 var3.field_w = vd.field_n;
                 var3.field_y = wi.field_a;
                 var3.field_x = jj.field_F;
-                rq.a(vd.field_n, var6_intLifetime1, true, vb.field_f, wi.field_a, jj.field_F);
+                rq.a(vd.field_n, var6_intLifetime1, true, BufferedSocket.field_f, wi.field_a, jj.field_F);
               } else {
-                rq.a(vd.field_n, var6_intLifetime1, true, vb.field_f, wi.field_a, jj.field_F);
+                rq.a(vd.field_n, var6_intLifetime1, true, BufferedSocket.field_f, wi.field_a, jj.field_F);
               }
             }
             sp.a(true, var5);

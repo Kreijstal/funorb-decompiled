@@ -2786,7 +2786,7 @@ final class PoolMatchController {
             stackIn_29_0 = -1;
           }
           if (!vj.field_c[hm.field_j] &&
-            !vj.field_c[kr.field_h]) {
+            !vj.field_c[ProxySocketConnector.field_h]) {
             stackIn_36_1 = 0;
           } else {
             stackIn_36_1 = 1;
@@ -3823,7 +3823,7 @@ final class PoolMatchController {
                       if (this.field_I.field_m) {
                         var7_ref_StringLifetime2 = bc.field_a + "<br>" + lh.b(this.field_o, (byte) -80);
                       } else {
-                        var7_ref_StringLifetime2 = ql.field_b;
+                        var7_ref_StringLifetime2 = MouseHandler.field_b;
                       }
                     } else {
                       if ((sk.field_d & this.field_L) == 0) {
@@ -7008,7 +7008,7 @@ final class PoolMatchController {
             }
             if ((decompiledFrameRemainder46) &&
               (decompiledFrameRemainder45)) {
-              li.a(2243, this.field_I);
+              IsaacCipher.a(2243, this.field_I);
               if (var8 == 0) {
                 return;
               }
@@ -7836,7 +7836,7 @@ final class PoolMatchController {
             (hm.field_e & param0.field_s) != 0) {
             if (this.field_I.field_f instanceof af) {
               gj.a(true, 0, ph.field_a, c.field_a);
-              this.field_I.a(9437184, (li) null, (byte) -114, 9437184, 8);
+              this.field_I.a(9437184, (IsaacCipher) null, (byte) -114, 9437184, 8);
               param0.field_s = param0.field_s & ~hm.field_e;
               if (this.field_I.d((byte) 105)) {
                 param0.field_s = param0.field_s | um.field_c;
@@ -7844,7 +7844,7 @@ final class PoolMatchController {
             }
             if (this.field_I.field_f instanceof fj) {
               gj.a(true, 0, ph.field_a, cr.field_q);
-              this.field_I.a(9437184, (li) null, (byte) -108, 9437184, 9);
+              this.field_I.a(9437184, (IsaacCipher) null, (byte) -108, 9437184, 9);
               param0.field_s = param0.field_s & ~hm.field_e;
               if (this.field_I.d((byte) 127)) {
                 param0.field_s = param0.field_s | um.field_c;

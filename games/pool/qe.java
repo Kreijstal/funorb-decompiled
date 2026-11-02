@@ -404,7 +404,7 @@ final class qe extends IntrusiveNode {
                 var4 = 1;
                 var5 = 1;
               }
-              li.field_b = cf.a(var2 * var5, false, var2 * var4);
+              IsaacCipher.field_b = cf.a(var2 * var5, false, var2 * var4);
               return;
             }
             var3 = -var3 + 120;
@@ -455,7 +455,7 @@ final class qe extends IntrusiveNode {
           var4 = 1;
           var5 = 1;
         }
-        li.field_b = cf.a(var2 * var5, false, var2 * var4);
+        IsaacCipher.field_b = cf.a(var2 * var5, false, var2 * var4);
     }
 
     final byte c(byte param0, PacketBuffer param1) {

@@ -102,7 +102,7 @@ final class ua extends ig {
             }
           }
           if (this.field_q) {
-            stackIn_16_0 = kr.field_e;
+            stackIn_16_0 = ProxySocketConnector.field_e;
           } else {
             stackIn_16_0 = gp.field_d;
           }

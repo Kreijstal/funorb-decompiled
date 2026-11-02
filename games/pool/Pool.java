@@ -454,7 +454,7 @@ public final class Pool extends ep {
               var4_intLifetime1 = 8;
             }
           }
-          li.field_f[var3.field_l].c(8, var4_intLifetime1, 32, 32);
+          IsaacCipher.field_f[var3.field_l].c(8, var4_intLifetime1, 32, 32);
           mc.field_e.d(md.field_a[var3.field_l], 48, var4_intLifetime1 + mc.field_e.field_C, 4, 1);
         }
         if (bj.c(1)) {
@@ -524,7 +524,7 @@ public final class Pool extends ep {
         ClientException.a(param0 ^ -28);
         GameApplet.g((byte) -77);
         ej.a(true);
-        ql.a((byte) -109);
+        MouseHandler.a((byte) -109);
         id.a((byte) 35);
         qh.a();
         di.e(0);
@@ -550,7 +550,7 @@ public final class Pool extends ep {
         rn.b(10);
         qd.a((byte) 84);
         ir.a((byte) -42);
-        vb.a(true);
+        BufferedSocket.a(true);
         s.a(-1);
         d.a((byte) -110);
         ek.a((byte) -107);
@@ -596,7 +596,7 @@ public final class Pool extends ep {
         oq.c(true);
         mm.c(-13569);
         or.a(false);
-        li.a(param0 ^ 81);
+        IsaacCipher.a(param0 ^ 81);
         pq.b((byte) -66);
         bf.c((byte) 77);
         dl.b(false);
@@ -749,7 +749,7 @@ public final class Pool extends ep {
         sf.e(param0 - 89);
         ap.c((byte) -111);
         fg.a((byte) 0);
-        bg.a(param0 + 16885);
+        SocketConnector.a(param0 + 16885);
         lo.c(param0 + 149);
         hk.c((byte) 122);
         jf.c(2);
@@ -797,7 +797,7 @@ public final class Pool extends ep {
         kk.f(1);
         hj.a((byte) -103);
         fd.i(param0 ^ -28);
-        kr.c(15296);
+        ProxySocketConnector.c(15296);
         on.a();
         sk.a(param0 ^ -27);
         hb.a(0);

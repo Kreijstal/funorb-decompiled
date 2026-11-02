@@ -205,7 +205,7 @@ final class kn {
             }
           }
         } else {
-          kr.a((byte) -75, this.field_l, this.field_m);
+          ProxySocketConnector.a((byte) -75, this.field_l, this.field_m);
         }
         if (param1 >= 57) {
           return true;

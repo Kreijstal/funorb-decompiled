@@ -115,15 +115,15 @@ final class mk {
         var54 = null;
         var41 = Pool.field_O;
         try {
-          stackIn_3_0 = vb.field_m;
+          stackIn_3_0 = BufferedSocket.field_m;
           stackIn_3_1 = param3;
-          stackIn_4_2 = (pf.field_c == vb.field_m);
+          stackIn_4_2 = (pf.field_c == BufferedSocket.field_m);
           var7_int = ((of) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, 2, (byte) -112, 2 * (ad.field_x + 2), (8 + 4 * ad.field_x) * param6) ? 1 : 0;
           if (param1 != 0) {
             var42 = (vh) null;
             mk.a((vh) null, 35, (vh) null, 120, (byte[]) null, 54, 24, (vh) null, 88, -75);
           }
-          var8 = vb.field_m.field_Rb.field_T;
+          var8 = BufferedSocket.field_m.field_Rb.field_T;
           var9 = rl.a((byte) -120);
           var11 = null;
           var12 = (kh) (var8.c((byte) -127));
@@ -294,7 +294,7 @@ final class mk {
             var12.field_Cc.field_Db = 0;
             var30 = var12.field_Cc;
             var30.field_gb = 0;
-            var12.field_gb = vb.field_m.field_Rb.field_gb;
+            var12.field_gb = BufferedSocket.field_m.field_Rb.field_gb;
             var31 = 0;
             var32 = var12.field_Ob;
             if (!var12.f(-14144)) {
@@ -481,7 +481,7 @@ final class mk {
               var12.field_Cb = -var12.field_Db + var31;
             }
             if (var13 != 0) {
-              vb.field_m.field_Rb.a((vh) (var11), 2, var12, param1 - 79);
+              BufferedSocket.field_m.field_Rb.a((vh) (var11), 2, var12, param1 - 79);
             }
             for (var34_intLifetime2 = 0; dr.field_c > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Ub[var34_intLifetime2].field_W) {

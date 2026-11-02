@@ -127,7 +127,7 @@ final class uh extends ig {
             return stackIn_9_0;
           }
           if (!this.a(-31894, param0)) {
-            return kr.field_e;
+            return ProxySocketConnector.field_e;
           }
           stackIn_13_0 = gp.field_d;
           return stackIn_13_0;

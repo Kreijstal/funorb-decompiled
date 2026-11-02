@@ -180,7 +180,7 @@ final class jp extends ch implements jn, tb {
             this.field_U = (fe) null;
           }
           var4 = var3.c(-31873);
-          stackIn_8_0 = (var4 == kr.field_e);
+          stackIn_8_0 = (var4 == ProxySocketConnector.field_e);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

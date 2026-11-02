@@ -284,7 +284,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 123, "mu_game_is_full");
                 if (var2 != null) {
-                  ql.field_a = a.a(var2, -56);
+                  MouseHandler.field_a = a.a(var2, -56);
                 }
                 var2 = gg.a((byte) 106, "mu_game_has_started");
                 if (var2 != null) {
@@ -804,7 +804,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 97, "esc_cancelprivatemessage");
                 if (null != var2) {
-                  li.field_g = a.a(var2, -32);
+                  IsaacCipher.field_g = a.a(var2, -32);
                 }
                 var2 = gg.a((byte) 125, "esc_cancelthisline");
                 if (null != var2) {
@@ -884,7 +884,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 94, "gameopt_cannotbecombined2");
                 if (null != var2) {
-                  bg.field_b = a.a(var2, -49);
+                  SocketConnector.field_b = a.a(var2, -49);
                 }
                 var2 = gg.a((byte) 98, "gameopt_playernotmember");
                 if (var2 != null) {
@@ -1046,7 +1046,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -39, "rule_1_0");
                 if (null != var2) {
-                  ql.field_c = a.a(var2, param1 ^ -21098);
+                  MouseHandler.field_c = a.a(var2, param1 ^ -21098);
                 }
                 var2 = gg.a((byte) 98, "rule_1_1");
                 if (var2 != null) {
@@ -2807,7 +2807,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) 100, "mb_full_access_2");
                 if (var2 != null) {
-                  vb.field_c = a.a(var2, -17);
+                  BufferedSocket.field_c = a.a(var2, -17);
                 }
                 var2 = gg.a((byte) 94, "mb_achievement_count_1");
                 if (var2 != null) {

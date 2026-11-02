@@ -169,9 +169,9 @@ final class cf {
           wk.field_T = pf.a("", (byte) 123, "menu_main_frame_pocket_right", param1);
           od.field_a = lb.a(param1, -45, "", "title_corner_ball8");
           cl.field_k = lb.a(param1, param0 ^ 101, "", "title_corner_ball9");
-          li.field_f = aj.a(0, "", param1, "achievements");
-          for (var2_intLifetime2 = 0; li.field_f.length > var2_intLifetime2; var2_intLifetime2++) {
-            ig.a(li.field_f[var2_intLifetime2], (byte) -12);
+          IsaacCipher.field_f = aj.a(0, "", param1, "achievements");
+          for (var2_intLifetime2 = 0; IsaacCipher.field_f.length > var2_intLifetime2; var2_intLifetime2++) {
+            ig.a(IsaacCipher.field_f[var2_intLifetime2], (byte) -12);
           }
           te.field_n = lb.a(param1, 99, "", "achievement_highlight_hover");
           td.field_g = lb.a(param1, 109, "", "achievement_highlight_selected");

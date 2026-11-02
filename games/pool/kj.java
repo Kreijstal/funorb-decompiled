@@ -222,11 +222,11 @@ final class kj {
             }
             var21 = stackIn_38_0;
             var22 = ch.field_M[var15Lifetime1];
-            var23 = li.field_h[var15Lifetime1];
+            var23 = IsaacCipher.field_h[var15Lifetime1];
             var24 = ch.field_M[var16];
-            var25 = li.field_h[var16];
+            var25 = IsaacCipher.field_h[var16];
             var26 = ch.field_M[var17];
-            var27 = li.field_h[var17];
+            var27 = IsaacCipher.field_h[var17];
             if (var19 == var18 &&
               var19 == var20) {
               var28 = var54[var18];

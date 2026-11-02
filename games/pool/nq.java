@@ -70,7 +70,7 @@ final class nq {
           }
           if (param0 > -42) {
             var6 = (java.awt.Component) null;
-            nq.a((vk) null, (sj) null, (java.awt.Component) null, -58, true, 17, true, -29);
+            nq.a((vk) null, (PlatformTaskDispatcher) null, (java.awt.Component) null, -58, true, 17, true, -29);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -318,7 +318,7 @@ final class nq {
         }
     }
 
-    final static void a(vk param0, sj param1, java.awt.Component param2, int param3, boolean param4, int param5, boolean param6, int param7) {
+    final static void a(vk param0, PlatformTaskDispatcher param1, java.awt.Component param2, int param3, boolean param4, int param5, boolean param6, int param7) {
         try {
           bp.a(param7, param6, 10);
           ib.field_s = bp.a(param1, param2, 0, param3);

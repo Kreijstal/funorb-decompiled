@@ -10,7 +10,7 @@ final class cb {
     static int field_g;
     static String[] field_b;
 
-    final static void a(Object param0, sj param1, int param2) {
+    final static void a(Object param0, PlatformTaskDispatcher param1, int param2) {
         int var3_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

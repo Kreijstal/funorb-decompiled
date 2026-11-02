@@ -10,7 +10,7 @@ final class jd {
     static String field_f;
     static String field_e;
     static int field_d;
-    static vb field_c;
+    static BufferedSocket field_c;
     int field_g;
 
     final static String a(int param0, String param1, int param2) {

@@ -258,8 +258,8 @@ final class ac extends tm {
           }
           this.field_a[1].a(8, 8, 8, 4);
           this.field_a[8].a(8, 8, 8, 4);
-          li.a(this.field_a[1], 0);
-          li.a(this.field_a[8], 0);
+          IsaacCipher.a(this.field_a[1], 0);
+          IsaacCipher.a(this.field_a[8], 0);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ac.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

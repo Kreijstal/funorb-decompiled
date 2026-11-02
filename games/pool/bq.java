@@ -19,7 +19,7 @@ final class bq extends IntrusiveNode {
           ej.field_g = param5;
           se.field_h = param0;
           rf.field_c = param8;
-          li.field_e = param2;
+          IsaacCipher.field_e = param2;
           vn.field_j = param1;
           if (param7 != -1) {
             field_n = (dd) null;

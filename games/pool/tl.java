@@ -1013,7 +1013,7 @@ final class tl extends ob {
                     }
                   }
                   if (var23 != 0) {
-                    var21 = bg.field_b + (String) (var22);
+                    var21 = SocketConnector.field_b + (String) (var22);
                   } else {
                     var21 = nr.a(new String[]{(String) (var22)}, ~param2, ka.field_t);
                   }
