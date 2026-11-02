@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jj {
-    uf field_a;
+    IntrusiveNode field_a;
     static String field_e;
     static fa field_c;
     static int field_f;
     static String field_d;
-    private uf field_b;
+    private IntrusiveNode field_b;
 
-    final uf c(byte param0) {
+    final IntrusiveNode c(byte param0) {
         int var2 = 31 % ((param0 - 36) / 56);
-        uf var3 = this.field_a.field_a;
+        IntrusiveNode var3 = this.field_a.field_a;
         if (this.field_a == var3) {
           this.field_b = null;
           return null;
@@ -20,8 +20,8 @@ final class jj {
         return var3;
     }
 
-    final uf d(byte param0) {
-        uf var2 = this.field_a.field_d;
+    final IntrusiveNode d(byte param0) {
+        IntrusiveNode var2 = this.field_a.field_d;
         if (var2 != this.field_a) {
           var2.b((byte) 12);
           int var3 = -85 / ((param0 + 37) / 50);
@@ -57,8 +57,8 @@ final class jj {
     }
 
     final void c(int param0) {
-        uf var5 = null;
-        uf var4 = null;
+        IntrusiveNode var5 = null;
+        IntrusiveNode var4 = null;
         int var3 = Terraphoenix.field_V;
         if (param0 != 21480) {
           this.d(-102);
@@ -93,7 +93,7 @@ final class jj {
           if (param2 != 18) {
             field_d = (String) null;
           }
-          if (!vh.a(param3, param1, param0, true)) {
+          if (!DualLinkNode.a(param3, param1, param0, true)) {
             return null;
           }
           stackIn_6_0 = km.a(param2 + 97);
@@ -112,9 +112,9 @@ final class jj {
         }
     }
 
-    final uf e(byte param0) {
-        uf var2 = null;
-        uf var2Lifetime1;
+    final IntrusiveNode e(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != -119) {
           this.b((byte) -7);
           var2 = this.field_b;
@@ -134,8 +134,8 @@ final class jj {
         return null;
     }
 
-    final uf b(int param0) {
-        uf var2 = this.field_b;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_b;
         if (var2 == this.field_a) {
           this.field_b = null;
           return null;
@@ -149,9 +149,9 @@ final class jj {
         return var2;
     }
 
-    final uf d(int param0) {
-        uf var2 = null;
-        uf var2Lifetime1;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 9272) {
           field_f = 56;
           var2 = this.field_a.field_d;
@@ -171,7 +171,7 @@ final class jj {
         return var2Lifetime1;
     }
 
-    final void a(uf param0, byte param1) {
+    final void a(IntrusiveNode param0, byte param1) {
         try {
           if (param0.field_a != null) {
             param0.b((byte) 12);
@@ -188,9 +188,9 @@ final class jj {
         }
     }
 
-    final uf b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         int var2 = -86 % ((53 - param0) / 47);
-        uf var3 = this.field_a.field_a;
+        IntrusiveNode var3 = this.field_a.field_a;
         if (this.field_a != var3) {
           var3.b((byte) 12);
           return var3;
@@ -198,7 +198,7 @@ final class jj {
         return null;
     }
 
-    final void a(uf param0, int param1) {
+    final void a(IntrusiveNode param0, int param1) {
         if (null != param0.field_a) {
           param0.b((byte) 12);
         }
@@ -216,7 +216,7 @@ final class jj {
     }
 
     public jj() {
-        this.field_a = new uf();
+        this.field_a = new IntrusiveNode();
         this.field_a.field_d = this.field_a;
         this.field_a.field_a = this.field_a;
     }

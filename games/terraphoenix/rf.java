@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rf extends vh {
+abstract class rf extends DualLinkNode {
     volatile boolean field_A;
     boolean field_x;
     static oa field_w;

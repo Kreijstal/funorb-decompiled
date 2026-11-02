@@ -16,8 +16,8 @@ final class sd {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -3864) {
-          ci[] var2 = (ci[]) null;
-          sd.a(true, (ci[]) null);
+          Sprite[] var2 = (Sprite[]) null;
+          sd.a(true, (Sprite[]) null);
         }
         field_f = null;
         field_d = null;
@@ -64,7 +64,7 @@ final class sd {
         return stackIn_8_0;
     }
 
-    final static void a(boolean param0, ci[] param1) {
+    final static void a(boolean param0, Sprite[] param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -97,8 +97,8 @@ final class sd {
     final void a(int param0, boolean param1, int param2, int param3) {
         this.field_j = 0;
         if (param3 != -85) {
-          dh var6 = (dh) null;
-          sd.a((byte) -10, (he) null, (dh) null, 107);
+          PacketBuffer var6 = (PacketBuffer) null;
+          sd.a((byte) -10, (PlatformTaskDispatcher) null, (PacketBuffer) null, 107);
         }
         this.field_c = param1 ? true : false;
         if (!this.field_c) {
@@ -170,7 +170,7 @@ final class sd {
         }
     }
 
-    final static void a(byte param0, he param1, dh param2, int param3) {
+    final static void a(byte param0, PlatformTaskDispatcher param1, PacketBuffer param2, int param3) {
         try {
           int var11_int = 0;
           int var12_int = 0;

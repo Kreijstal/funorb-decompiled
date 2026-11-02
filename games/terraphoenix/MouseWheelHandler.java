@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii extends jb implements java.awt.event.MouseWheelListener {
+final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.MouseWheelListener {
     private int field_f;
 
     final synchronized int a(int param0) {
@@ -21,7 +21,7 @@ final class ii extends jb implements java.awt.event.MouseWheelListener {
         param0.consume();
     }
 
-    ii() {
+    MouseWheelHandler() {
         this.field_f = 0;
     }
 

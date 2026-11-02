@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-final class tf implements Runnable {
+final class BufferedSocket implements Runnable {
     private int field_e;
-    private he field_h;
+    private PlatformTaskDispatcher field_h;
     private java.net.Socket field_a;
     private InputStream field_b;
     private boolean field_l;
@@ -82,7 +82,7 @@ final class tf implements Runnable {
         return this.field_b.available();
     }
 
-    tf(java.net.Socket param0, he param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -264,10 +264,10 @@ final class tf implements Runnable {
         if (param3 + param0 <= ef.field_j) {
           return false;
         }
-        if (jb.field_b < param2) {
+        if (MouseWheelInput.field_b < param2) {
           return false;
         }
-        if (param2 + param5 <= jb.field_b) {
+        if (param2 + param5 <= MouseWheelInput.field_b) {
           return false;
         }
         if (param4) {
@@ -277,7 +277,7 @@ final class tf implements Runnable {
         return true;
     }
 
-    private tf(java.net.Socket param0, he param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_e = 0;
         this.field_g = false;
         this.field_l = false;

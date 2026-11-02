@@ -147,14 +147,14 @@ final class dd extends eb {
         int var9;
         int var10;
         int var11;
-        ci var15;
-        ci var16;
-        ci var17;
-        ci var18;
-        ci var19;
-        ci var20;
-        ci var21;
-        ci var22;
+        Sprite var15;
+        Sprite var16;
+        Sprite var17;
+        Sprite var18;
+        Sprite var19;
+        Sprite var20;
+        Sprite var21;
+        Sprite var22;
         int var6Lifetime1;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -177,18 +177,18 @@ final class dd extends eb {
             var9 = var16.field_q << 1;
             var10 = var16.field_u << 1;
             if (ld.field_c == null) {
-              ld.field_c = new ci(var9, var10);
+              ld.field_c = new Sprite(var9, var10);
               il.a(1, ld.field_c);
             } else {
               if (var9 > ld.field_c.field_r) {
-                ld.field_c = new ci(var9, var10);
+                ld.field_c = new Sprite(var9, var10);
                 il.a(1, ld.field_c);
               } else {
                 if (var10 <= ld.field_c.field_t) {
                   il.a(1, ld.field_c);
                   l.a();
                 } else {
-                  ld.field_c = new ci(var9, var10);
+                  ld.field_c = new Sprite(var9, var10);
                   il.a(1, ld.field_c);
                 }
               }
@@ -220,7 +220,7 @@ final class dd extends eb {
             il.a(1, ld.field_c);
             l.a();
           } else {
-            ld.field_c = new ci(var9Lifetime3, var10Lifetime3);
+            ld.field_c = new Sprite(var9Lifetime3, var10Lifetime3);
             il.a(1, ld.field_c);
           }
           var15.b(112, 144, var15.field_q << 4, var15.field_u << 4, -this.field_P << 10, 4096);
@@ -236,18 +236,18 @@ final class dd extends eb {
           var9Lifetime1 = var20.field_q << 1;
           var10Lifetime1 = var20.field_u << 1;
           if (ld.field_c == null) {
-            ld.field_c = new ci(var9Lifetime1, var10Lifetime1);
+            ld.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
             il.a(1, ld.field_c);
           } else {
             if (var9Lifetime1 > ld.field_c.field_r) {
-              ld.field_c = new ci(var9Lifetime1, var10Lifetime1);
+              ld.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
               il.a(1, ld.field_c);
             } else {
               if (var10Lifetime1 <= ld.field_c.field_t) {
                 il.a(1, ld.field_c);
                 l.a();
               } else {
-                ld.field_c = new ci(var9Lifetime1, var10Lifetime1);
+                ld.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
                 il.a(1, ld.field_c);
               }
             }
@@ -274,7 +274,7 @@ final class dd extends eb {
         var9Lifetime2 = var19.field_q << 1;
         var10Lifetime2 = var19.field_u << 1;
         if (ld.field_c == null) {
-          ld.field_c = new ci(var9Lifetime2, var10Lifetime2);
+          ld.field_c = new Sprite(var9Lifetime2, var10Lifetime2);
           il.a(1, ld.field_c);
         } else {
           if (var9Lifetime2 <= ld.field_c.field_r &&
@@ -282,7 +282,7 @@ final class dd extends eb {
             il.a(1, ld.field_c);
             l.a();
           } else {
-            ld.field_c = new ci(var9Lifetime2, var10Lifetime2);
+            ld.field_c = new Sprite(var9Lifetime2, var10Lifetime2);
             il.a(1, ld.field_c);
           }
         }

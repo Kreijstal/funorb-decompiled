@@ -55,8 +55,8 @@ final class mg extends di {
         field_m = null;
         field_p = null;
         if (param0 != -27) {
-          ci[] var2 = (ci[]) null;
-          mg.a(33, -128, (ci[]) null, -11, 74, -27, 87, 16, 114, (ci[]) null, 20, 25, (pk) null, 41, (ci[]) null);
+          Sprite[] var2 = (Sprite[]) null;
+          mg.a(33, -128, (Sprite[]) null, -11, 74, -27, 87, 16, 114, (Sprite[]) null, 20, 25, (pk) null, 41, (Sprite[]) null);
         }
     }
 
@@ -110,7 +110,7 @@ final class mg extends di {
         }
     }
 
-    final static void a(int param0, int param1, ci[] param2, int param3, int param4, int param5, int param6, int param7, int param8, ci[] param9, int param10, int param11, pk param12, int param13, ci[] param14) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, int param5, int param6, int param7, int param8, Sprite[] param9, int param10, int param11, pk param12, int param13, Sprite[] param14) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

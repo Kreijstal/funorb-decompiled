@@ -15,7 +15,7 @@ final class ag {
 
     final static void a(int param0) {
         if (param0 == 8468) {
-          dh.g((byte) -124);
+          PacketBuffer.g((byte) -124);
           qi.field_b = true;
           dj.field_d = true;
           jl.field_I.b(false);
@@ -23,7 +23,7 @@ final class ag {
           return;
         }
         ag.a((byte) -118);
-        dh.g((byte) -124);
+        PacketBuffer.g((byte) -124);
         qi.field_b = true;
         dj.field_d = true;
         jl.field_I.b(false);

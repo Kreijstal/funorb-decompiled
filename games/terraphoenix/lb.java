@@ -72,7 +72,7 @@ final class lb {
               cd.a(param1, 13162, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
-            dh.a(param1, true);
+            PacketBuffer.a(param1, true);
           } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) ((Object) runtimeException), "lb.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }

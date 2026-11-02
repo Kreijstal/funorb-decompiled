@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ck extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class DelegatingCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static bm field_a;
     static String field_c;
     static int[] field_f;
@@ -15,13 +15,13 @@ final class ck extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final void a(he param0, int param1) {
+    final void a(PlatformTaskDispatcher param0, int param1) {
         try {
           if (param1 != 4) {
             java.awt.Frame var4 = (java.awt.Frame) null;
-            ck.a((he) null, -11, (java.awt.Frame) null);
+            DelegatingCanvas.a((PlatformTaskDispatcher) null, -11, (java.awt.Frame) null);
           }
-          ck.a(param0, 103, this.field_e);
+          DelegatingCanvas.a(param0, 103, this.field_e);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "ck.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -50,7 +50,7 @@ final class ck extends java.awt.Canvas implements java.awt.event.FocusListener {
     final static java.awt.Container b(int param0) {
         if (param0 <= 112) {
           java.awt.Frame var2 = (java.awt.Frame) null;
-          ck.a((he) null, 73, (java.awt.Frame) null);
+          DelegatingCanvas.a((PlatformTaskDispatcher) null, 73, (java.awt.Frame) null);
           if (null != al.field_W) {
             return (java.awt.Container) ((Object) al.field_W);
           }
@@ -78,10 +78,10 @@ final class ck extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    ck() {
+    DelegatingCanvas() {
     }
 
-    final static void a(he param0, int param1, java.awt.Frame param2) {
+    final static void a(PlatformTaskDispatcher param0, int param1, java.awt.Frame param2) {
         mf var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;

@@ -3,7 +3,7 @@
  */
 final class qe {
     static volatile int field_l;
-    static ci field_k;
+    static Sprite field_k;
     static String field_h;
     private int field_b;
     private int[] field_a;
@@ -232,7 +232,7 @@ final class qe {
           var10.k(-1694261224);
           qk.field_l = ig.a(-25831, var10);
           cm.field_b = new ee[var3];
-          vh.field_j = new int[var3][];
+          DualLinkNode.field_j = new int[var3][];
           if (param0 != -28664) {
             return;
           }
@@ -247,7 +247,7 @@ final class qe {
             var5.a(true, 6, 6, 1, 6);
             var5.c((byte) 41);
             var6 = new int[]{var5.field_K + var5.field_r >> 1, var5.field_a + var5.field_M >> 1, var5.field_t + var5.field_v >> 1};
-            vh.field_j[var9] = var6;
+            DualLinkNode.field_j[var9] = var6;
             var5.a(true, -var6[2], -var6[0], -var6[1]);
             var9++;
           }

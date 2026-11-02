@@ -156,7 +156,7 @@ final class re {
             return true;
           }
           if (param1 != 0) {
-            var6 = oj.field_s;
+            var6 = SpriteState.field_s;
             var2 = var6;
             var3 = 0;
             while (var3 < var6.length) {
@@ -190,7 +190,7 @@ final class re {
         this.field_s = 0;
         this.field_j = "";
         this.field_j = uh.field_L[param0];
-        this.field_k = of.field_h[param0];
+        this.field_k = ImageProducerRasterBuffer.field_h[param0];
         this.field_e = i.field_b[param0];
         this.field_i = da.field_i[param0];
         var2 = param0;

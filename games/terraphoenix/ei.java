@@ -60,7 +60,7 @@ abstract class ei extends kh {
         try {
           uj.field_d = uj.field_d + 65536;
           while (65536 <= li.a(uj.field_d, -117, ke.field_e)) {
-            el.field_e = el.field_e + 1;
+            ClientException.field_e = ClientException.field_e + 1;
             uj.field_d = uj.field_d - ke.field_e;
           }
           if (param0 > -100) {
@@ -130,8 +130,8 @@ abstract class ei extends kh {
             }
             if (var4 == 0 &&
               ke.field_c < vi.field_p &&
-              jb.field_b > var3 &&
-              ig.field_a.field_t + var3 > jb.field_b) {
+              MouseWheelInput.field_b > var3 &&
+              ig.field_a.field_t + var3 > MouseWheelInput.field_b) {
               if (ef.field_j > 269 - ig.field_a.field_r &&
                 269 > ef.field_j) {
                 vi.field_p = ke.field_c;
@@ -145,7 +145,7 @@ abstract class ei extends kh {
           if (!param1) {
             return 0;
           }
-          si.field_ob.a(kk.a(10472, ef.field_j, jb.field_b), 127, kk.a(10472, mm.field_c, lm.field_c));
+          si.field_ob.a(kk.a(10472, ef.field_j, MouseWheelInput.field_b), 127, kk.a(10472, mm.field_c, lm.field_c));
           if (si.field_ob.c((byte) -121)) {
             if (0 == si.field_ob.field_h) {
               stackIn_61_0 = 3;
@@ -235,8 +235,8 @@ abstract class ei extends kh {
         while (var7 < var4) {
           if (var8 >= l.field_d &&
             var8 < l.field_c) {
-            L5: {
-              L6: {
+            regionExit1: {
+              regionExit2: {
                 var9 = (var6 - var5) * var7 / var4 + var5;
                 var10 = 0;
                 var11 = this.field_p;
@@ -246,7 +246,7 @@ abstract class ei extends kh {
                     if (var12 <= 462) {
                       if (var12 < 420) {
                         if (var7 > 20) {
-                          break L5;
+                          break regionExit1;
                         }
                         var12 = var11;
                         var11 -= 21;
@@ -266,7 +266,7 @@ abstract class ei extends kh {
                           var13++;
                           var11++;
                         }
-                        break L6;
+                        break regionExit2;
                       }
                       var13Lifetime2 = (-var12 + 462) * var9 / 42;
                       var13Lifetime2 = var13Lifetime2 | (var13Lifetime2 << 16 | var13Lifetime2 << 8);
@@ -276,7 +276,7 @@ abstract class ei extends kh {
                   }
                 }
                 if (var7 > 20) {
-                  break L5;
+                  break regionExit1;
                 }
                 var12 = var11;
                 var11 -= 21;
@@ -498,7 +498,7 @@ abstract class ei extends kh {
         try {
           uj.field_d = uj.field_d + 65536;
           while (65536 <= li.a(uj.field_d, -117, ke.field_e)) {
-            el.field_e = el.field_e + 1;
+            ClientException.field_e = ClientException.field_e + 1;
             uj.field_d = uj.field_d - ke.field_e;
           }
           if (param0 > -100) {
@@ -568,8 +568,8 @@ abstract class ei extends kh {
             }
             if (var4 == 0 &&
               ke.field_c < vi.field_p &&
-              jb.field_b > var3 &&
-              ig.field_a.field_t + var3 > jb.field_b) {
+              MouseWheelInput.field_b > var3 &&
+              ig.field_a.field_t + var3 > MouseWheelInput.field_b) {
               if (ef.field_j > 269 - ig.field_a.field_r &&
                 269 > ef.field_j) {
                 vi.field_p = ke.field_c;
@@ -583,7 +583,7 @@ abstract class ei extends kh {
           if (!param1) {
             return 0;
           }
-          si.field_ob.a(kk.a(10472, ef.field_j, jb.field_b), 127, kk.a(10472, mm.field_c, lm.field_c));
+          si.field_ob.a(kk.a(10472, ef.field_j, MouseWheelInput.field_b), 127, kk.a(10472, mm.field_c, lm.field_c));
           if (si.field_ob.c((byte) -121)) {
             if (0 == si.field_ob.field_h) {
               stackIn_61_0 = 3;

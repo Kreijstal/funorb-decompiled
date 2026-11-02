@@ -355,7 +355,7 @@ final class ee {
           var6.field_Lb = var4_ref_StringLifetime1;
           var6.b((byte) 12);
           var7 = (q) (sb.field_h.d(9272));
-          L9: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7 != null) {
               stackOut_48_0 = ji.a((byte) -19, var6, var7);
@@ -370,7 +370,7 @@ final class ee {
             }
             if (decompiledFrameRemainder0) {
               if (null == var7) {
-                break L9;
+                break scanLoop1;
               }
               stackIn_56_0 = 119;
             }

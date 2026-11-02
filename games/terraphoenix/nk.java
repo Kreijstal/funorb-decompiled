@@ -76,7 +76,7 @@ class nk {
         }
     }
 
-    final static nk a(he param0, java.awt.Component param1, int param2, int param3) {
+    final static nk a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           ul var4 = null;
           Throwable var4_ref = null;
@@ -176,7 +176,7 @@ class nk {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -209,7 +209,7 @@ class nk {
                       var12.field_h = var12.field_h + var13;
                     }
                     if (var4 >= this.field_l) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.c();
                     if (var14Lifetime2 != null) {

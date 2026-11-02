@@ -3,8 +3,8 @@
  */
 final class s {
     static o field_c;
-    static ci field_a;
-    static ci field_b;
+    static Sprite field_a;
+    static Sprite field_b;
     private static String field_z;
 
     public static void a(byte param0) {
@@ -17,6 +17,6 @@ final class s {
     static {
         field_z = "s.A(";
         field_c = new o();
-        field_a = new ci(270, 70);
+        field_a = new Sprite(270, 70);
     }
 }

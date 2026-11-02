@@ -3,13 +3,13 @@
  */
 final class ve {
     static boolean field_c;
-    static ci field_a;
+    static Sprite field_a;
     static int field_b;
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 0) {
-          field_a = (ci) null;
+          field_a = (Sprite) null;
         }
     }
 
@@ -104,7 +104,7 @@ final class ve {
         }
     }
 
-    final static void a(ci param0, int param1, int param2, int param3, int param4) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4) {
         int var16 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;

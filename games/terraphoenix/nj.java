@@ -6,7 +6,7 @@ final class nj extends ke {
     private java.nio.ByteBuffer field_h;
     static fa field_i;
     static String field_k;
-    static he field_l;
+    static PlatformTaskDispatcher field_l;
 
     final void a(byte[] param0, boolean param1) {
         try {

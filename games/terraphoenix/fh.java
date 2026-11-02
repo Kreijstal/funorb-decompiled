@@ -5,7 +5,7 @@ final class fh {
     cj field_q;
     int field_m;
     int field_u;
-    static ci field_c;
+    static Sprite field_c;
     static boolean field_g;
     int field_v;
     private boolean field_j;
@@ -16,7 +16,7 @@ final class fh {
     static boolean field_f;
     pk field_b;
     cj field_i;
-    static ci field_s;
+    static Sprite field_s;
     private int field_w;
     int field_o;
     int field_p;
@@ -152,12 +152,12 @@ final class fh {
         f discarded$0 = null;
         sk discarded$1 = null;
         hf var8 = null;
-        ci[] var9 = null;
-        ci[] var10 = null;
-        ci dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         hf var11 = null;
         hf var12 = null;
-        ci var13 = null;
+        Sprite var13 = null;
         hf var14 = null;
         hf var19 = null;
         int var15 = Terraphoenix.field_V;
@@ -182,7 +182,7 @@ final class fh {
         var4.a(0, 3).b(15658734, true).a(hl.a((byte) 94, 8947848, 7829367, 10066329), (byte) 45);
         var4.a(1, 3).a(hl.a((byte) 18, 11184810, 13421772, 10066329), (byte) 45);
         var4.a(3, 3).a(hl.a((byte) 115, 8947848, 10066329, 7829367), (byte) 45).b(80, 1).c(2, 1);
-        ci[] var5 = new ci[9];
+        Sprite[] var5 = new Sprite[9];
         sg var16 = new sg(32, 32);
         sg var18 = var16;
         for (var7_int = 0; var7_int < var18.field_z.length; var7_int++) {
@@ -192,7 +192,7 @@ final class fh {
           return;
         }
         try {
-          var5[4] = (ci) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a(4, 3).a(-47, true).a(var5, (byte) 45);
           var4.a(5, 3).a(al.a(0, 0, 0, 65793, (byte) -123), (byte) 45).a(-82, true).b(-1, true);
           this.field_n = (cj) ((Object) var4);
@@ -210,10 +210,10 @@ final class fh {
           var8.a(0, 3).a(hl.a((byte) -81, 15658734, 10066329, 7829367), (byte) 45).b(1118481, true).a(-19426, -1);
           var8.a(4, 3).a(-86, true).a(var5, (byte) 45);
           this.field_i = (cj) ((Object) var8);
-          var9 = new ci[9];
-          var9[4] = new ci(2, 1);
-          var10 = new ci[9];
-          var10[4] = new ci(1, 2);
+          var9 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10 = new Sprite[9];
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_z = new int[]{6710886, 7829367};
           var10[4].field_z = new int[]{6710886, 7829367};
@@ -221,7 +221,7 @@ final class fh {
           var12 = new hf();
           var11.a(-26108, 0, var9);
           var12.a(-26108, 0, var10);
-          var13 = new ci(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new hf(var4, true);
           var14.a(0, var13.d());
@@ -300,6 +300,6 @@ final class fh {
         field_x = "Logging in...";
         field_f = false;
         field_l = "5000pts";
-        field_s = new ci(453, 361);
+        field_s = new Sprite(453, 361);
     }
 }

@@ -9,7 +9,7 @@ final class qi {
     static boolean field_b;
     private java.math.BigInteger field_g;
     static boolean field_f;
-    private dh field_h;
+    private PacketBuffer field_h;
     private wh field_a;
 
     qi(h param0, wh param1) {
@@ -43,7 +43,7 @@ final class qi {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        dh var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -61,11 +61,11 @@ final class qi {
         if (this.field_d.field_A) {
           return false;
         }
-        var10 = new dh(this.field_d.b(param0));
-        var10.field_k = 5;
+        var10 = new PacketBuffer(this.field_d.b(param0));
+        var10.position = 5;
         var3 = var10.a(-16384);
-        var10.field_k = var10.field_k + var3 * 72;
-        var13 = new byte[var10.field_i.length - var10.field_k];
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
         var10.a(var13.length, 0, 90, var13);
@@ -80,7 +80,7 @@ final class qi {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = tg.a(var10.field_i, var10.field_k - var13.length - 5, 5, 8);
+        var15 = tg.a(var10.payload, var10.position - var13.length - 5, 5, 8);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[1 + var7] != var15[var7]) {
             throw new RuntimeException();
@@ -129,7 +129,7 @@ final class qi {
               stackIn_9_0 = this.field_c[param1];
               return stackIn_9_0;
             }
-            this.field_h.field_k = param1 * 72 + 6;
+            this.field_h.position = param1 * 72 + 6;
             var6_int = this.field_h.f((byte) -107);
             var7 = this.field_h.f((byte) -107);
             var13 = new byte[64];

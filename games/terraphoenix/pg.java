@@ -159,7 +159,7 @@ final class pg {
           }
           if (var2 == 7) {
             this.field_c[2] = 20;
-            this.field_d = vh.field_n;
+            this.field_d = DualLinkNode.field_n;
             this.field_g[2] = 0;
             this.field_c[1] = 20;
             this.field_a[2] = 40;

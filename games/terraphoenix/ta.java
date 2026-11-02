@@ -46,13 +46,13 @@ final class ta {
             return stackIn_5_0;
           }
           if (pe.field_a == k.field_b &&
-            param1.equals(vh.field_l)) {
+            param1.equals(DualLinkNode.field_l)) {
             pe.field_a = og.field_a;
             stackIn_9_0 = h.field_c;
             return stackIn_9_0;
           }
           h.field_c = null;
-          vh.field_l = param1;
+          DualLinkNode.field_l = param1;
           pe.field_a = ua.field_d;
           stackIn_11_0 = null;
           return (pd) (stackIn_11_0);

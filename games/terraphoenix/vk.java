@@ -5,7 +5,7 @@ final class vk {
     static String field_a;
     static int field_c;
     static java.security.SecureRandom field_b;
-    static ci field_d;
+    static Sprite field_d;
 
     final static void a(int param0) {
         int var2 = 0;
@@ -17,7 +17,7 @@ final class vk {
             if (null != a.field_b &&
               a.field_b.field_d) {
               ga.b((byte) 82);
-              cl.field_J.a((gl) (new hi(cl.field_J, ql.field_e)), (byte) -1);
+              cl.field_J.a((gl) (new hi(cl.field_J, ProxySocketConnector.field_e)), (byte) -1);
             }
             return;
           }

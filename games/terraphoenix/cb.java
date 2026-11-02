@@ -67,7 +67,7 @@ final class cb extends jc {
             ((eb) (this.field_F)).field_A) &&
             this.field_j == 1) {
             var5_int = -param2 + (ef.field_j - this.field_A);
-            var6 = -param1 + (jb.field_b - this.field_K);
+            var6 = -param1 + (MouseWheelInput.field_b - this.field_K);
             if (var5_int != this.field_w ||
               this.field_u != var6) {
               this.field_w = var5_int;
@@ -150,7 +150,7 @@ final class cb extends jc {
             return true;
           }
           this.field_K = param6 + (-this.field_u - param2);
-          oj.field_w = this;
+          SpriteState.field_w = this;
           this.field_A = -param3 + (param1 - this.field_w);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -167,7 +167,7 @@ final class cb extends jc {
         }
     }
 
-    final static boolean a(dh param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

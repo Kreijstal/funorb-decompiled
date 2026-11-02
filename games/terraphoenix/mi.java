@@ -37,7 +37,7 @@ final class mi extends nb {
         }
     }
 
-    final void a(byte param0, dh param1) {
+    final void a(byte param0, PacketBuffer param1) {
         param1.b(this.field_k, -89);
         if (param0 != -2) {
           return;

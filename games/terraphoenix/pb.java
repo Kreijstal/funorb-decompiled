@@ -6,15 +6,15 @@ final class pb {
     static String field_c;
     static int field_b;
 
-    final static ci[] a(int param0, boolean param1, int param2, fa param3) {
+    final static Sprite[] a(int param0, boolean param1, int param2, fa param3) {
         RuntimeException var4 = null;
-        ci[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vh.a(param0, param2, param3, true)) {
+          if (!DualLinkNode.a(param0, param2, param3, true)) {
             return null;
           }
           if (param1) {
@@ -44,12 +44,12 @@ final class pb {
           return (String) null;
         }
         if (pe.field_a == ua.field_d) {
-          return vh.field_l;
+          return DualLinkNode.field_l;
         }
         if (vc.field_a.a(param0 ^ 78)) {
           return ol.field_Hb;
         }
-        return vh.field_l;
+        return DualLinkNode.field_l;
     }
 
     public static void a(int param0) {

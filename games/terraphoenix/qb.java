@@ -4,7 +4,7 @@
 final class qb {
     static bg field_c;
     static jj field_a;
-    static ci[] field_f;
+    static Sprite[] field_f;
     static String field_d;
     static fd field_b;
     static rj field_h;
@@ -132,10 +132,10 @@ final class qb {
           }
           var4 = var15.a(-16384);
           if (var4 != 0) {
-            eh.field_k[0] = kj.field_f;
+            GameApplet.field_k[0] = kj.field_f;
             var5 = var3.field_k;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              eh.field_k[var6_int] = var13.e(param0 - 1);
+              GameApplet.field_k[var6_int] = var13.e(param0 - 1);
             }
             le.a(var4, var5, false);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -154,12 +154,12 @@ final class qb {
             var10 = 0;
             while (var8 > var9) {
               var11 = pf.field_b[var9];
-              var6[0][var10] = eh.field_k[var11];
+              var6[0][var10] = GameApplet.field_k[var11];
               var19[0][4 * var10] = a.field_c[var11];
               var19[0][var10 * 4 + 1] = oa.field_a[var11];
               var19[0][2 + var10 * 4] = oa.field_c[var11];
               var19[0][3 + 4 * var10] = dd.field_L[var11];
-              if (me.a(122, eh.field_k[var11]) &&
+              if (me.a(122, GameApplet.field_k[var11]) &&
                 dd.field_L[var11] + oa.field_a[var11] + oa.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -172,12 +172,12 @@ final class qb {
             var10Lifetime1 = var14;
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = pf.field_b[var9Lifetime1 + var5];
-              var6[1][var14] = eh.field_k[var11Lifetime1];
+              var6[1][var14] = GameApplet.field_k[var11Lifetime1];
               var19[1][4 * var14] = a.field_c[var11Lifetime1];
               var19[1][1 + var14 * 4] = oa.field_a[var11Lifetime1];
               var19[1][2 + var14 * 4] = oa.field_c[var11Lifetime1];
               var19[1][3 + var14 * 4] = dd.field_L[var11Lifetime1];
-              if (me.a(-88, eh.field_k[var11Lifetime1]) &&
+              if (me.a(-88, GameApplet.field_k[var11Lifetime1]) &&
                 0 == oa.field_c[var11Lifetime1] + (oa.field_a[var11Lifetime1] + dd.field_L[var11Lifetime1])) {
                 var6[1][var14] = null;
                 var14--;

@@ -122,7 +122,7 @@ final class im {
           }
           if (var2 >= 128 &&
             var2 < 160) {
-            var3 = oj.field_s[var2 - 128];
+            var3 = SpriteState.field_s[var2 - 128];
             if (0 == var3) {
               var3 = 63;
             }
@@ -135,7 +135,7 @@ final class im {
         }
         if (var2 >= 128 &&
           var2 < 160) {
-          var3Lifetime1 = oj.field_s[var2 - 128];
+          var3Lifetime1 = SpriteState.field_s[var2 - 128];
           if (0 == var3Lifetime1) {
             var3Lifetime1 = 63;
           }

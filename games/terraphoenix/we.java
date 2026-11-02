@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class we extends uf {
+abstract class we extends IntrusiveNode {
     int field_h;
 
     abstract int a(vg param0);

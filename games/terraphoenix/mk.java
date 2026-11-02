@@ -97,13 +97,13 @@ final class mk {
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
           if ((null != this.field_i) &&
-            (decompiledFrameRemainder5 = (uf.field_c != -1))) {
-            var3 = this.field_i.field_f[uf.field_c][vf.field_a];
+            (decompiledFrameRemainder5 = (IntrusiveNode.field_c != -1))) {
+            var3 = this.field_i.field_f[IntrusiveNode.field_c][vf.field_a];
             if (this.field_a != 0) {
               if (var3 == null) {
-                this.field_i.field_f[uf.field_c][vf.field_a] = new dl(uf.field_c, vf.field_a, 0, this.field_i);
+                this.field_i.field_f[IntrusiveNode.field_c][vf.field_a] = new dl(IntrusiveNode.field_c, vf.field_a, 0, this.field_i);
               }
-              var3 = this.field_i.field_f[uf.field_c][vf.field_a];
+              var3 = this.field_i.field_f[IntrusiveNode.field_c][vf.field_a];
             }
             if (tg.field_l > 0 &&
               var3 != null) {
@@ -127,7 +127,7 @@ final class mk {
                 if (var3.field_r >= tg.field_l) {
                   break;
                 }
-                var3.field_C = new dl(uf.field_c, vf.field_a, 1 + var3.field_r, this.field_i);
+                var3.field_C = new dl(IntrusiveNode.field_c, vf.field_a, 1 + var3.field_r, this.field_i);
                 var3.field_C.field_c = var3;
                 var3 = var3.field_C;
                 if (var5 != 0) {
@@ -157,7 +157,7 @@ final class mk {
                 boolean decompiledFrameRemainder0 = true;
                 if (this.field_g == 1) {
                   if (var3 == null) {
-                    this.field_i.field_f[uf.field_c][vf.field_a] = new dl(uf.field_c, vf.field_a, 0, this.field_i);
+                    this.field_i.field_f[IntrusiveNode.field_c][vf.field_a] = new dl(IntrusiveNode.field_c, vf.field_a, 0, this.field_i);
                     decompiledFrameRemainder0 = (var5 != 0);
                   }
                   if (decompiledFrameRemainder0) {
@@ -168,7 +168,7 @@ final class mk {
                           continue;
                         }
                       } else {
-                        var3.field_C = new dl(uf.field_c, vf.field_a, 1 + var3.field_r, this.field_i);
+                        var3.field_C = new dl(IntrusiveNode.field_c, vf.field_a, 1 + var3.field_r, this.field_i);
                       }
                       break;
                     }
@@ -192,7 +192,7 @@ final class mk {
                           break;
                         }
                       }
-                      this.field_i.field_f[uf.field_c][vf.field_a] = null;
+                      this.field_i.field_f[IntrusiveNode.field_c][vf.field_a] = null;
                     }
                     break;
                   }
@@ -265,7 +265,7 @@ final class mk {
 
     final void a(byte param0) {
         Object var2 = null;
-        byte[] var2_array = of.field_k[this.field_c];
+        byte[] var2_array = ImageProducerRasterBuffer.field_k[this.field_c];
         if (var2_array == null) {
           this.field_i = new dk(16, 16);
           this.field_i.field_l = this;
@@ -281,15 +281,15 @@ final class mk {
         dl var2 = null;
         int var3 = 0;
         var3 = Terraphoenix.field_V;
-        var2 = this.field_i.field_f[uf.field_c][vf.field_a];
+        var2 = this.field_i.field_f[IntrusiveNode.field_c][vf.field_a];
         if (param0 <= 121) {
           mk.d((byte) 89);
         }
         if (0 != this.field_a) {
           if (var2 == null) {
-            this.field_i.field_f[uf.field_c][vf.field_a] = new dl(uf.field_c, vf.field_a, 0, this.field_i);
+            this.field_i.field_f[IntrusiveNode.field_c][vf.field_a] = new dl(IntrusiveNode.field_c, vf.field_a, 0, this.field_i);
           }
-          var2 = this.field_i.field_f[uf.field_c][vf.field_a];
+          var2 = this.field_i.field_f[IntrusiveNode.field_c][vf.field_a];
         }
         boolean decompiledFrameRemainder0 = true;
         boolean decompiledFrameCompleted0 = true;
@@ -315,7 +315,7 @@ final class mk {
             if (tg.field_l <= var2.field_r) {
               break;
             }
-            var2.field_C = new dl(uf.field_c, vf.field_a, 1 + var2.field_r, this.field_i);
+            var2.field_C = new dl(IntrusiveNode.field_c, vf.field_a, 1 + var2.field_r, this.field_i);
             var2.field_C.field_c = var2;
             var2 = var2.field_C;
             if (var3 != 0) {
@@ -363,7 +363,7 @@ final class mk {
         j.field_R = 256;
         String var2 = ph.field_n[this.field_c] + ".lev";
         byte[] var3 = this.field_i.a(true);
-        of.field_k[wf.a(var2, true)] = var3;
+        ImageProducerRasterBuffer.field_k[wf.a(var2, true)] = var3;
         fg.field_c = "MAP SAVED";
         j.field_R = 256;
         if (param0 != -13859) {
@@ -375,7 +375,7 @@ final class mk {
         if (param0 != -1) {
           field_f = (String) null;
         }
-        return -vi.field_o + ql.field_g;
+        return -vi.field_o + ProxySocketConnector.field_g;
     }
 
     private final void a(boolean param0, String param1, int param2, int param3, int param4) {
@@ -530,7 +530,7 @@ final class mk {
           var3Lifetime1 += 20;
           this.a(false, "a/s - change mode", var3Lifetime1, 16777215, var2Lifetime1);
         }
-        L6: {
+        regionExit1: {
           if (2 == this.field_a) {
             var2Lifetime2 = 616;
             var3Lifetime2 = 36;
@@ -562,7 +562,7 @@ final class mk {
               stackIn_37_0 = this.field_n;
               stackIn_37_1 = var6;
               if (var7 != 0) {
-                break L6;
+                break regionExit1;
               }
               if (stackIn_37_0 == stackIn_37_1) {
                 l.e(var2Lifetime2, var3Lifetime2, var4, var5, 65280);
@@ -578,11 +578,11 @@ final class mk {
           var3Lifetime2 += 14;
           this.a(false, "o / p - change view level", var3Lifetime2, 16777215, var2Lifetime2);
           var3Lifetime2 += 14;
-          if (dh.field_j) {
+          if (PacketBuffer.field_j) {
             this.a(false, "q - view current level", var3Lifetime2, 65535, var2Lifetime2);
           }
           var3Lifetime2 += 14;
-          if (!dh.field_j) {
+          if (!PacketBuffer.field_j) {
             this.a(false, "q - view below", var3Lifetime2, 16776960, var2Lifetime2);
           }
           var3Lifetime2 += 14;
@@ -594,11 +594,11 @@ final class mk {
             this.a(false, "w - turn on walls", var3Lifetime2, 16776960, var2Lifetime2);
           }
           var3Lifetime2 += 14;
-          if (jb.field_a) {
+          if (MouseWheelInput.field_a) {
             this.a(false, "e - hide objects", var3Lifetime2, 65535, var2Lifetime2);
           }
           var3Lifetime2 += 14;
-          if (!jb.field_a) {
+          if (!MouseWheelInput.field_a) {
             this.a(false, "e - show objects", var3Lifetime2, 16776960, var2Lifetime2);
           }
           var3Lifetime2 += 14;

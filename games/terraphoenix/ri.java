@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ri extends te {
+final class ri extends RasterBuffer {
     private java.awt.Component field_h;
 
     final void a(int param0, int param1, byte param2, java.awt.Component param3) {

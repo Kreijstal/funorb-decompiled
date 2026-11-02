@@ -5,7 +5,7 @@ abstract class ld {
     static int field_d;
     static int[] field_a;
     static int field_e;
-    static ci field_c;
+    static Sprite field_c;
     static int[] field_h;
     static boolean field_b;
     em[] field_f;

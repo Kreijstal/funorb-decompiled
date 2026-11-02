@@ -43,7 +43,7 @@ final class ga {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          dh var2 = null;
+          PacketBuffer var2 = null;
           if (4 <= jg.field_kb.field_i) {
             if (jg.field_kb.field_l == -1) {
               return 3;
@@ -68,12 +68,12 @@ final class ga {
               }
             }
             if (hm.field_N == 2) {
-              gi.field_l = new tf((java.net.Socket) (bj.field_c.field_e), mc.field_b);
-              var2 = new dh(13);
+              gi.field_l = new BufferedSocket((java.net.Socket) (bj.field_c.field_e), mc.field_b);
+              var2 = new PacketBuffer(13);
               ej.a(ng.field_y, -25563, var2, tj.field_wb, ai.field_c);
               var2.i(15, -121);
               var2.e(rf.field_v, 8959);
-              gi.field_l.a(13, 0, (byte) -97, var2.field_i);
+              gi.field_l.a(13, 0, (byte) -97, var2.payload);
               hm.field_N = hm.field_N + 1;
               t.field_b = 30000L + ll.a(1000);
             }
@@ -246,7 +246,7 @@ final class ga {
     final static void d(int param0) {
         int var1 = mk.a(-1);
         int var2 = mc.a(55);
-        ck.field_a.a(var1 + (nb.field_e << 1), vi.field_o - nb.field_e, var2 + (eb.field_D << 1), 0, -eb.field_D + jh.field_m);
+        DelegatingCanvas.field_a.a(var1 + (nb.field_e << 1), vi.field_o - nb.field_e, var2 + (eb.field_D << 1), 0, -eb.field_D + jh.field_m);
         if (param0 != -6513) {
           field_p = (String) null;
         }
@@ -316,7 +316,7 @@ final class ga {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vh.a(param3, param1, param2, true)) {
+          if (!DualLinkNode.a(param3, param1, param2, true)) {
             stackIn_2_0 = null;
             return (bg[]) (stackIn_2_0);
           }
@@ -403,7 +403,7 @@ final class ga {
         if (param0 != -1426) {
           this.field_h = 55;
         }
-        L4: while (param1 < og.field_f.b(var3Lifetime2)) {
+        scanLoop1: while (param1 < og.field_f.b(var3Lifetime2)) {
           if (var4 > 1) {
             var3Lifetime2 = mm.a(this.field_n.charAt(0), 0);
             var5 = 1;
@@ -426,12 +426,12 @@ final class ga {
               var3Lifetime2 = "@ " + var3Lifetime2;
             }
             var4--;
-            continue L4;
+            continue scanLoop1;
           }
           break;
         }
         var4Lifetime1 = 20;
-        L12: while (param1 < og.field_f.b(var3Lifetime2)) {
+        scanLoop2: while (param1 < og.field_f.b(var3Lifetime2)) {
           if (var4Lifetime1 > 0) {
             var3Lifetime2 = this.field_n.charAt(0) + ".";
             var5Lifetime1 = 0;
@@ -451,10 +451,10 @@ final class ga {
             }
             var4Lifetime1--;
             if (this.field_h != 3) {
-              continue L12;
+              continue scanLoop2;
             }
             var3Lifetime2 = "@ " + var3Lifetime2;
-            continue L12;
+            continue scanLoop2;
           }
           break;
         }
@@ -484,7 +484,7 @@ final class ga {
           return wj.field_d + this.field_n + " " + this.field_z;
         }
         if (this.field_h == 3) {
-          return cf.field_c + this.field_n + " " + this.field_z;
+          return GameKeyHandler.field_c + this.field_n + " " + this.field_z;
         }
         return this.field_n + " " + this.field_z;
     }

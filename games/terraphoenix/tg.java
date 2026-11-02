@@ -3,7 +3,7 @@
  */
 final class tg {
     private byte[] field_b;
-    static ci field_e;
+    static Sprite field_e;
     private int field_i;
     static boolean[] field_c;
     private long[] field_g;

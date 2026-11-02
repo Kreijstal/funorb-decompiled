@@ -131,7 +131,7 @@ final class hi extends ei implements n {
           if (u.field_d == param1) {
             var3 = ra.field_h;
           } else {
-            if (ql.field_e != param1) {
+            if (ProxySocketConnector.field_e != param1) {
               if (param1 == gi.field_r) {
                 this.field_n = this.field_n + 30;
                 var3 = va.field_a;
@@ -152,7 +152,7 @@ final class hi extends ei implements n {
           var4.field_w = 0;
           var4.field_l = (cj) ((Object) new fd(ra.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) 95, var4);
-          this.field_X = this.a(false, te.field_e, (sc) (this));
+          this.field_X = this.a(false, RasterBuffer.field_e, (sc) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

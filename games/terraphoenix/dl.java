@@ -397,7 +397,7 @@ final class dl {
 
     final void a(boolean param0) {
         if (-1 != this.field_b) {
-          this.field_b = ck.field_f[this.field_b];
+          this.field_b = DelegatingCanvas.field_f[this.field_b];
         }
         if (this.field_j >= 0) {
           this.field_j = hb.field_h[this.field_j];
@@ -437,7 +437,7 @@ final class dl {
         return ((dl) (var5)).a(true, (byte) -14, param3, param0);
     }
 
-    private final void a(int param0, int param1, ci param2, int param3, int param4) {
+    private final void a(int param0, int param1, Sprite param2, int param3, int param4) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -557,7 +557,7 @@ final class dl {
         int stackIn_339_0 = 0;
         int stackIn_435_1 = 0;
         int stackIn_435_2 = 0;
-        ci stackIn_435_3 = null;
+        Sprite stackIn_435_3 = null;
         int stackIn_435_4 = 0;
         Object stackIn_437_0;
         Object stackIn_438_0;
@@ -566,7 +566,7 @@ final class dl {
         Object stackIn_443_0;
         int stackIn_443_1;
         int stackIn_443_2;
-        ci stackIn_443_3;
+        Sprite stackIn_443_3;
         int stackIn_443_4;
         Object stackIn_444_0;
         int stackIn_444_5;
@@ -574,7 +574,7 @@ final class dl {
         Object stackIn_450_0;
         int stackIn_450_1;
         int stackIn_450_2;
-        ci stackIn_450_3;
+        Sprite stackIn_450_3;
         int stackIn_450_4;
         Object stackIn_451_0;
         int stackIn_451_5;
@@ -582,7 +582,7 @@ final class dl {
         Object stackIn_456_0;
         int stackIn_456_1;
         int stackIn_456_2;
-        ci stackIn_456_3;
+        Sprite stackIn_456_3;
         int stackIn_456_4;
         Object stackIn_457_0;
         int stackIn_457_5;
@@ -622,7 +622,7 @@ final class dl {
             return stackIn_3_0;
           }
           if (null == u.field_a) {
-            u.field_a = new ci(128, 160);
+            u.field_a = new Sprite(128, 160);
           }
           var7_int = 0;
           if (this.field_s.field_i != null) {
@@ -671,7 +671,7 @@ final class dl {
               stackIn_44_0 = param1;
               return stackIn_44_0;
             }
-            if (!dh.field_j &&
+            if (!PacketBuffer.field_j &&
               tg.field_l != this.field_r) {
               if (this.field_C != null) {
                 param1 = this.field_C.a(param0, param1, param2, param3, (byte) 125, param5);
@@ -697,7 +697,7 @@ final class dl {
                 }
                 if (var11_int < 0) {
                   if (var9 != null) {
-                    ((ci) (var9)).a();
+                    ((Sprite) (var9)).a();
                     l.a(32, 124, 16777215);
                     l.a(64, 108, 16777215);
                     l.a(64, 139, 16777215);
@@ -725,7 +725,7 @@ final class dl {
                     var12 = 0;
                   }
                   if (var9 != null) {
-                    ((ci) (var9)).a();
+                    ((Sprite) (var9)).a();
                     aj.field_a[var11_int].b(32, 108, var12);
                     k.field_f.a(0);
                   } else {
@@ -790,7 +790,7 @@ final class dl {
                   if (var9 == null) {
                     aj.field_a[var11_intLifetime3].b(-32 + param0, var8 - 16, var12Lifetime1);
                   } else {
-                    ((ci) (var9)).a();
+                    ((Sprite) (var9)).a();
                     aj.field_a[var11_intLifetime3].b(32, 108, var12Lifetime1);
                     k.field_f.a(0);
                   }
@@ -800,7 +800,7 @@ final class dl {
                   }
                 } else {
                   if (var9 != null) {
-                    ((ci) (var9)).a();
+                    ((Sprite) (var9)).a();
                     l.a(32, 124, 16777215);
                     l.a(64, 108, 16777215);
                     l.a(64, 139, 16777215);
@@ -887,26 +887,26 @@ final class dl {
             }
             if (var9 != null) {
               u.field_a.a();
-              ((ci) (var9)).d(0, 0);
+              ((Sprite) (var9)).d(0, 0);
               if (this.field_s.field_i != null &&
                 this.field_s.field_i.field_L > 0) {
-                c.a((byte) -86, u.field_a, 16777215);
-                c.a((byte) -86, u.field_a, 16744576);
-                c.a((byte) -86, u.field_a, 16728128);
-                c.a((byte) -86, u.field_a, 8388608);
-                c.a((byte) -86, u.field_a, 4194304);
+                NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
+                NodeHashTableIterator.a((byte) -86, u.field_a, 16744576);
+                NodeHashTableIterator.a((byte) -86, u.field_a, 16728128);
+                NodeHashTableIterator.a((byte) -86, u.field_a, 8388608);
+                NodeHashTableIterator.a((byte) -86, u.field_a, 4194304);
               } else {
-                c.a((byte) -86, u.field_a, 16777215);
-                c.a((byte) -86, u.field_a, 8454016);
-                c.a((byte) -86, u.field_a, 4259648);
-                c.a((byte) -86, u.field_a, 32768);
-                c.a((byte) -86, u.field_a, 16384);
+                NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
+                NodeHashTableIterator.a((byte) -86, u.field_a, 8454016);
+                NodeHashTableIterator.a((byte) -86, u.field_a, 4259648);
+                NodeHashTableIterator.a((byte) -86, u.field_a, 32768);
+                NodeHashTableIterator.a((byte) -86, u.field_a, 16384);
               }
-              ((ci) (var9)).b(0, 0, 0);
+              ((Sprite) (var9)).b(0, 0, 0);
               k.field_f.a(0);
               hb.field_n = var8 - 124;
               ug.field_b = param0 - 64;
-              ((ci) (var9)).b(param0 - 64, -124 + var8);
+              ((Sprite) (var9)).b(param0 - 64, -124 + var8);
             }
             stackIn_205_0 = param1;
             return stackIn_205_0;
@@ -929,7 +929,7 @@ final class dl {
             stackIn_215_0 = param1;
             return stackIn_215_0;
           }
-          if (!dh.field_j &&
+          if (!PacketBuffer.field_j &&
             this.field_r != tg.field_l) {
             if (null == this.field_h) {
             }
@@ -944,7 +944,7 @@ final class dl {
             stackIn_229_0 = (this.field_u) ? 0 : 1;
             var10Lifetime1 = stackIn_229_0;
           }
-          L64: {
+          regionExit1: {
             if (var10Lifetime1 != 0) {
               if (!this.field_z &&
                 !this.field_a &&
@@ -952,7 +952,7 @@ final class dl {
                 if (!this.field_d) {
                   if (0 > this.field_b) {
                     if (var9Lifetime1 != null) {
-                      ((ci) (var9Lifetime1)).a();
+                      ((Sprite) (var9Lifetime1)).a();
                       l.a(32, 124, 16777215);
                       l.a(64, 108, 16777215);
                       l.a(64, 139, 16777215);
@@ -970,7 +970,7 @@ final class dl {
                         this.a(-32 + param0, var8Lifetime1 - 16, ji.field_j[this.field_q], param4 + 17210, 128);
                       }
                     } else {
-                      ((ci) (var9Lifetime1)).a();
+                      ((Sprite) (var9Lifetime1)).a();
                       this.a(32, 108, aj.field_a[this.field_b], 17335, var11_intLifetime1);
                       if (-1 != this.field_q) {
                         this.a(param0 - 32, var8Lifetime1 - 16, ji.field_j[this.field_q], param4 ^ 17354, 128);
@@ -1006,7 +1006,7 @@ final class dl {
                       if (var9Lifetime1 == null) {
                         this.a(-32 + param0, -64 + var8Lifetime1, dm.field_a[var11_intLifetime1 + this.field_g], 17335, 64);
                       } else {
-                        ((ci) (var9Lifetime1)).a();
+                        ((Sprite) (var9Lifetime1)).a();
                         this.a(32, 60, dm.field_a[this.field_g + var11_intLifetime1], param4 ^ 17354, 64);
                         k.field_f.a(0);
                       }
@@ -1015,7 +1015,7 @@ final class dl {
                       }
                     } else {
                       if (var9Lifetime1 != null) {
-                        ((ci) (var9Lifetime1)).a();
+                        ((Sprite) (var9Lifetime1)).a();
                         this.a(32, 60, dm.field_a[this.field_g], 17335, 64);
                         k.field_f.a(param4 - 125);
                       } else {
@@ -1029,7 +1029,7 @@ final class dl {
                   if (this.field_k >= 0) {
                     if (this.field_k % 4 != 0) {
                       if (var9Lifetime1 != null) {
-                        ((ci) (var9Lifetime1)).a();
+                        ((Sprite) (var9Lifetime1)).a();
                         bk.field_a[this.field_k].c(32, 60, 128);
                         k.field_f.a(0);
                       } else {
@@ -1062,7 +1062,7 @@ final class dl {
                       if (var9Lifetime1 == null) {
                         bk.field_a[var11_intLifetime1 + this.field_k].c(-32 + param0, var8Lifetime1 - 64, 128);
                       } else {
-                        ((ci) (var9Lifetime1)).a();
+                        ((Sprite) (var9Lifetime1)).a();
                         bk.field_a[var11_intLifetime1 + this.field_k].c(32, 60, 128);
                         k.field_f.a(0);
                       }
@@ -1105,11 +1105,11 @@ final class dl {
                     }
                   }
                 }
-                if (((this.field_A == uf.field_c)) &&
+                if (((this.field_A == IntrusiveNode.field_c)) &&
                   (this.field_n == vf.field_a)) {
-                  break L64;
+                  break regionExit1;
                 }
-                break L64;
+                break regionExit1;
               }
               this.field_a = true;
               if (this.field_b < 0) {
@@ -1117,7 +1117,7 @@ final class dl {
                   vc.field_f.c("N", param0 - 12, var8Lifetime1, 16711680, -1);
                 }
                 if (var9Lifetime1 != null) {
-                  ((ci) (var9Lifetime1)).a();
+                  ((Sprite) (var9Lifetime1)).a();
                   l.a(32, 124, 16777215);
                   l.a(64, 108, 16777215);
                   l.a(64, 139, 16777215);
@@ -1133,7 +1133,7 @@ final class dl {
                   var11_intLifetime1Lifetime1 -= 64;
                 }
                 if (var9Lifetime1 != null) {
-                  ((ci) (var9Lifetime1)).a();
+                  ((Sprite) (var9Lifetime1)).a();
                   aj.field_a[this.field_b].c(32, 108, var11_intLifetime1Lifetime1);
                   if (this.field_q != -1) {
                     ji.field_j[this.field_q].b(32, 108);
@@ -1149,11 +1149,11 @@ final class dl {
                   this.field_s.field_i.a(param0 - 32, var8Lifetime1 - 16, this.field_r, aj.field_a[this.field_b], false, param4 + 28019);
                 }
               }
-              if (uf.field_c == this.field_A &&
+              if (IntrusiveNode.field_c == this.field_A &&
                 this.field_n == vf.field_a) {
               }
               if (this.field_s.field_l != null &&
-                this.field_A == uf.field_c &&
+                this.field_A == IntrusiveNode.field_c &&
                 vf.field_a == this.field_n) {
                 var11_intLifetime1Lifetime2 = 32768;
                 if (this.field_r == tg.field_l) {
@@ -1167,7 +1167,7 @@ final class dl {
                     if (var9Lifetime1 == null) {
                       dm.field_a[this.field_g].c(param0 - 32, var8Lifetime1 - 64, 200);
                     } else {
-                      ((ci) (var9Lifetime1)).a();
+                      ((Sprite) (var9Lifetime1)).a();
                       dm.field_a[this.field_g].c(32, 60, 200);
                       k.field_f.a(0);
                     }
@@ -1198,7 +1198,7 @@ final class dl {
                     if (var9Lifetime1 == null) {
                       dm.field_a[this.field_g + var11_intLifetime1Lifetime3].c(-32 + param0, var8Lifetime1 - 64, 200);
                     } else {
-                      ((ci) (var9Lifetime1)).a();
+                      ((Sprite) (var9Lifetime1)).a();
                       dm.field_a[this.field_g + var11_intLifetime1Lifetime3].c(32, 60, 200);
                       k.field_f.a(0);
                     }
@@ -1210,7 +1210,7 @@ final class dl {
                 if (this.field_k >= 0) {
                   if (0 != this.field_k % 4) {
                     if (var9Lifetime1 != null) {
-                      ((ci) (var9Lifetime1)).a();
+                      ((Sprite) (var9Lifetime1)).a();
                       bk.field_a[this.field_k].c(32, 60, 256);
                       k.field_f.a(0);
                     } else {
@@ -1241,7 +1241,7 @@ final class dl {
                       }
                     }
                     if (var9Lifetime1 != null) {
-                      ((ci) (var9Lifetime1)).a();
+                      ((Sprite) (var9Lifetime1)).a();
                       bk.field_a[var11_intLifetime1Lifetime3 + this.field_k].c(32, 60, 256);
                       k.field_f.a(0);
                     } else {
@@ -1262,7 +1262,7 @@ final class dl {
             }
           }
           if (this.field_j >= 0 &&
-            jb.field_a) {
+            MouseWheelInput.field_a) {
             if (!this.field_z &&
               null == this.field_s.field_l) {
               if (this.field_j == 7) {
@@ -1287,7 +1287,7 @@ final class dl {
                   }
                   this.a(stackIn_456_1, stackIn_456_2, stackIn_456_3, stackIn_456_4, stackIn_457_5);
                 } else {
-                  ((ci) (var9Lifetime1)).a();
+                  ((Sprite) (var9Lifetime1)).a();
                   stackIn_450_0 = this;
                   stackIn_450_1 = 32;
                   stackIn_450_2 = 12;
@@ -1330,7 +1330,7 @@ final class dl {
                 }
                 this.a(stackIn_443_1, stackIn_443_2, stackIn_443_3, stackIn_443_4, stackIn_444_5);
               } else {
-                ((ci) (var9Lifetime1)).a();
+                ((Sprite) (var9Lifetime1)).a();
                 stackIn_435_1 = 32;
                 stackIn_435_2 = 60;
                 stackIn_435_3 = kg.field_r[this.field_j];
@@ -1354,7 +1354,7 @@ final class dl {
             } else {
               if (this.field_j != 7) {
                 if (var9Lifetime1 != null) {
-                  ((ci) (var9Lifetime1)).a();
+                  ((Sprite) (var9Lifetime1)).a();
                   kg.field_r[this.field_j].b(32, 60);
                   k.field_f.a(0);
                 } else {
@@ -1362,7 +1362,7 @@ final class dl {
                 }
               } else {
                 if (var9Lifetime1 != null) {
-                  ((ci) (var9Lifetime1)).a();
+                  ((Sprite) (var9Lifetime1)).a();
                   se.field_c[(this.field_n * 3 + this.field_A) % se.field_c.length].b(32, 12);
                   k.field_f.a(0);
                 } else {
@@ -1435,7 +1435,7 @@ final class dl {
                 if (var9Lifetime1 == null) {
                   this.a(param0 - ((bg) (var11Lifetime1)).field_f / 2, -((bg) (var11Lifetime1)).field_i + var8Lifetime1 + 15, ((bg) (var11Lifetime1)).b(), 17335, 0);
                 } else {
-                  ((ci) (var9Lifetime1)).a();
+                  ((Sprite) (var9Lifetime1)).a();
                   this.a(-(((bg) (var11Lifetime1)).field_f / 2) + 64, 15 + (124 - ((bg) (var11Lifetime1)).field_i), ((bg) (var11Lifetime1)).b(), 17335, 0);
                   k.field_f.a(0);
                 }
@@ -1445,7 +1445,7 @@ final class dl {
                 if (var9Lifetime1 == null) {
                   ((bg) (var11Lifetime1)).b(-(((bg) (var11Lifetime1)).field_f / 2) + param0, 15 + var8Lifetime1 - ((bg) (var11Lifetime1)).field_i, this.field_t);
                 } else {
-                  ((ci) (var9Lifetime1)).a();
+                  ((Sprite) (var9Lifetime1)).a();
                   ((bg) (var11Lifetime1)).b(64 - ((bg) (var11Lifetime1)).field_f / 2, 15 + (124 - ((bg) (var11Lifetime1)).field_i), this.field_t);
                   k.field_f.a(0);
                 }
@@ -1457,26 +1457,26 @@ final class dl {
           }
           if (var9Lifetime1 != null) {
             u.field_a.a();
-            ((ci) (var9Lifetime1)).d(0, 0);
+            ((Sprite) (var9Lifetime1)).d(0, 0);
             if (null != this.field_s.field_i &&
               this.field_s.field_i.field_L > 0) {
-              c.a((byte) -86, u.field_a, 16777215);
-              c.a((byte) -86, u.field_a, 16744576);
-              c.a((byte) -86, u.field_a, 16728128);
-              c.a((byte) -86, u.field_a, 8388608);
-              c.a((byte) -86, u.field_a, 4194304);
+              NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
+              NodeHashTableIterator.a((byte) -86, u.field_a, 16744576);
+              NodeHashTableIterator.a((byte) -86, u.field_a, 16728128);
+              NodeHashTableIterator.a((byte) -86, u.field_a, 8388608);
+              NodeHashTableIterator.a((byte) -86, u.field_a, 4194304);
             } else {
-              c.a((byte) -86, u.field_a, 16777215);
-              c.a((byte) -86, u.field_a, 8454016);
-              c.a((byte) -86, u.field_a, 4259648);
-              c.a((byte) -86, u.field_a, 32768);
-              c.a((byte) -86, u.field_a, 16384);
+              NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
+              NodeHashTableIterator.a((byte) -86, u.field_a, 8454016);
+              NodeHashTableIterator.a((byte) -86, u.field_a, 4259648);
+              NodeHashTableIterator.a((byte) -86, u.field_a, 32768);
+              NodeHashTableIterator.a((byte) -86, u.field_a, 16384);
             }
-            ((ci) (var9Lifetime1)).b(0, 0, 0);
+            ((Sprite) (var9Lifetime1)).b(0, 0, 0);
             k.field_f.a(param4 ^ 125);
             hb.field_n = var8Lifetime1 - 124;
             ug.field_b = -64 + param0;
-            ((ci) (var9Lifetime1)).b(param0 - 64, var8Lifetime1 - 124);
+            ((Sprite) (var9Lifetime1)).b(param0 - 64, var8Lifetime1 - 124);
           }
           stackIn_521_0 = param1;
           return stackIn_521_0;

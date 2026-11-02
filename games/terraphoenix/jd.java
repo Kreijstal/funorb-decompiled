@@ -48,14 +48,14 @@ final class jd extends vc {
           return 1;
         }
         var4 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           this.field_k = this.field_k + param1;
           var4++;
           stackIn_6_0 = 10;
           do {
             if (stackIn_6_0 > var4 &&
               this.field_n > this.field_k) {
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_6_0 = $cfr$lcmp(this.field_k, this.field_n);
           } while (var5 != 0);
@@ -69,7 +69,7 @@ final class jd extends vc {
     }
 
     final static void a(boolean param0, int param1) {
-        uf var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         cc var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -163,49 +163,49 @@ final class jd extends vc {
         int var4;
         int var4Lifetime1;
         if (param1 < -21) {
-          uf.field_f.b(param3, param0);
+          IntrusiveNode.field_f.b(param3, param0);
           if (!param2) {
             return;
           }
-          var4 = 2 * (el.field_e % uf.field_f.field_r);
-          if (var4 >= uf.field_f.field_r) {
-            var4 = uf.field_f.field_r - var4 + uf.field_f.field_r;
+          var4 = 2 * (ClientException.field_e % IntrusiveNode.field_f.field_r);
+          if (var4 >= IntrusiveNode.field_f.field_r) {
+            var4 = IntrusiveNode.field_f.field_r - var4 + IntrusiveNode.field_f.field_r;
           }
           if (var4 < 10) {
             var4 = 10;
             if ((Terraphoenix.field_V != 0) &&
-              (var4 > -40 + uf.field_f.field_r)) {
-              var4 = -40 + uf.field_f.field_r;
+              (var4 > -40 + IntrusiveNode.field_f.field_r)) {
+              var4 = -40 + IntrusiveNode.field_f.field_r;
             }
           } else {
-            if (var4 > -40 + uf.field_f.field_r) {
-              var4 = -40 + uf.field_f.field_r;
+            if (var4 > -40 + IntrusiveNode.field_f.field_r) {
+              var4 = -40 + IntrusiveNode.field_f.field_r;
             }
           }
-          lm.a(param3, 30, uf.field_f, 0, (byte) 126, param0, var4, 0, 80);
+          lm.a(param3, 30, IntrusiveNode.field_f, 0, (byte) 126, param0, var4, 0, 80);
           return;
         }
         jd.a(false, -74);
-        uf.field_f.b(param3, param0);
+        IntrusiveNode.field_f.b(param3, param0);
         if (!param2) {
           return;
         }
-        var4Lifetime1 = 2 * (el.field_e % uf.field_f.field_r);
-        if (var4Lifetime1 >= uf.field_f.field_r) {
-          var4Lifetime1 = uf.field_f.field_r - var4Lifetime1 + uf.field_f.field_r;
+        var4Lifetime1 = 2 * (ClientException.field_e % IntrusiveNode.field_f.field_r);
+        if (var4Lifetime1 >= IntrusiveNode.field_f.field_r) {
+          var4Lifetime1 = IntrusiveNode.field_f.field_r - var4Lifetime1 + IntrusiveNode.field_f.field_r;
         }
         if (var4Lifetime1 < 10) {
           var4Lifetime1 = 10;
           if ((Terraphoenix.field_V != 0) &&
-            (var4Lifetime1 > -40 + uf.field_f.field_r)) {
-            var4Lifetime1 = -40 + uf.field_f.field_r;
+            (var4Lifetime1 > -40 + IntrusiveNode.field_f.field_r)) {
+            var4Lifetime1 = -40 + IntrusiveNode.field_f.field_r;
           }
         } else {
-          if (var4Lifetime1 > -40 + uf.field_f.field_r) {
-            var4Lifetime1 = -40 + uf.field_f.field_r;
+          if (var4Lifetime1 > -40 + IntrusiveNode.field_f.field_r) {
+            var4Lifetime1 = -40 + IntrusiveNode.field_f.field_r;
           }
         }
-        lm.a(param3, 30, uf.field_f, 0, (byte) 126, param0, var4Lifetime1, 0, 80);
+        lm.a(param3, 30, IntrusiveNode.field_f, 0, (byte) 126, param0, var4Lifetime1, 0, 80);
     }
 
     final void b(int param0) {
@@ -253,14 +253,14 @@ final class jd extends vc {
             je.field_a[var2_int] = 0;
             var2_int++;
           } while (var5 == 0);
-          L4: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder1 = true;
             if (var2_int < am.field_J) {
               stackIn_11_0 = ra.field_i[var2_int].field_l;
               stackIn_11_1 = param0.field_l;
               if (var5 != 0) {
                 if (stackIn_11_0 <= stackIn_11_1) {
-                  break L4;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder1 = false;
               }
@@ -275,7 +275,7 @@ final class jd extends vc {
             }
             if ((decompiledFrameRemainder1) &&
               (param1 <= -93)) {
-              break L4;
+              break scanLoop1;
             }
             field_i = (String) null;
             break;
@@ -348,49 +348,49 @@ final class jd extends vc {
         int var4;
         int var4Lifetime1;
         if (param1 < -21) {
-          uf.field_f.b(param3, param0);
+          IntrusiveNode.field_f.b(param3, param0);
           if (!param2) {
             return;
           }
-          var4 = 2 * (el.field_e % uf.field_f.field_r);
-          if (var4 >= uf.field_f.field_r) {
-            var4 = uf.field_f.field_r - var4 + uf.field_f.field_r;
+          var4 = 2 * (ClientException.field_e % IntrusiveNode.field_f.field_r);
+          if (var4 >= IntrusiveNode.field_f.field_r) {
+            var4 = IntrusiveNode.field_f.field_r - var4 + IntrusiveNode.field_f.field_r;
           }
           if (var4 < 10) {
             var4 = 10;
             if ((Terraphoenix.field_V != 0) &&
-              (var4 > -40 + uf.field_f.field_r)) {
-              var4 = -40 + uf.field_f.field_r;
+              (var4 > -40 + IntrusiveNode.field_f.field_r)) {
+              var4 = -40 + IntrusiveNode.field_f.field_r;
             }
           } else {
-            if (var4 > -40 + uf.field_f.field_r) {
-              var4 = -40 + uf.field_f.field_r;
+            if (var4 > -40 + IntrusiveNode.field_f.field_r) {
+              var4 = -40 + IntrusiveNode.field_f.field_r;
             }
           }
-          lm.a(param3, 30, uf.field_f, 0, (byte) 126, param0, var4, 0, 80);
+          lm.a(param3, 30, IntrusiveNode.field_f, 0, (byte) 126, param0, var4, 0, 80);
           return;
         }
         jd.a(false, -74);
-        uf.field_f.b(param3, param0);
+        IntrusiveNode.field_f.b(param3, param0);
         if (!param2) {
           return;
         }
-        var4Lifetime1 = 2 * (el.field_e % uf.field_f.field_r);
-        if (var4Lifetime1 >= uf.field_f.field_r) {
-          var4Lifetime1 = uf.field_f.field_r - var4Lifetime1 + uf.field_f.field_r;
+        var4Lifetime1 = 2 * (ClientException.field_e % IntrusiveNode.field_f.field_r);
+        if (var4Lifetime1 >= IntrusiveNode.field_f.field_r) {
+          var4Lifetime1 = IntrusiveNode.field_f.field_r - var4Lifetime1 + IntrusiveNode.field_f.field_r;
         }
         if (var4Lifetime1 < 10) {
           var4Lifetime1 = 10;
           if ((Terraphoenix.field_V != 0) &&
-            (var4Lifetime1 > -40 + uf.field_f.field_r)) {
-            var4Lifetime1 = -40 + uf.field_f.field_r;
+            (var4Lifetime1 > -40 + IntrusiveNode.field_f.field_r)) {
+            var4Lifetime1 = -40 + IntrusiveNode.field_f.field_r;
           }
         } else {
-          if (var4Lifetime1 > -40 + uf.field_f.field_r) {
-            var4Lifetime1 = -40 + uf.field_f.field_r;
+          if (var4Lifetime1 > -40 + IntrusiveNode.field_f.field_r) {
+            var4Lifetime1 = -40 + IntrusiveNode.field_f.field_r;
           }
         }
-        lm.a(param3, 30, uf.field_f, 0, (byte) 126, param0, var4Lifetime1, 0, 80);
+        lm.a(param3, 30, IntrusiveNode.field_f, 0, (byte) 126, param0, var4Lifetime1, 0, 80);
     }
 
     private static int $cfr$lcmp(long left, long right) {

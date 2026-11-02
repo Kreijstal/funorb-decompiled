@@ -4,14 +4,14 @@
 import java.io.*;
 
 final class kg extends h {
-    private tf field_p;
+    private BufferedSocket field_p;
     static boolean field_q;
-    static ci[] field_r;
+    static Sprite[] field_r;
 
     private final void a(int param0, boolean param1) {
         try {
           IOException iOException = null;
-          dh stackIn_5_0 = null;
+          PacketBuffer stackIn_5_0 = null;
           int stackIn_6_1 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
@@ -19,16 +19,16 @@ final class kg extends h {
             return;
           }
           try {
-            this.field_e.field_k = 0;
+            this.field_e.position = 0;
             stackIn_5_0 = this.field_e;
             if (param1) {
               stackIn_6_1 = 2;
             } else {
               stackIn_6_1 = 3;
             }
-            ((dh) (Object) stackIn_5_0).i(stackIn_6_1, param0 - 99);
+            ((PacketBuffer) (Object) stackIn_5_0).i(stackIn_6_1, param0 - 99);
             this.field_e.b((long)param0, -2108648176);
-            this.field_p.a(this.field_e.field_i.length, 0, (byte) -97, this.field_e.field_i);
+            this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -73,11 +73,11 @@ final class kg extends h {
               }
               this.field_p = null;
             }
-            this.field_p = (tf) (param1);
+            this.field_p = (BufferedSocket) (param1);
             this.d(false);
             this.a(0, param2);
             this.field_k = null;
-            this.field_o.field_k = 0;
+            this.field_o.position = 0;
             while (true) {
               var4_ref = (nh) (this.field_m.a((byte) -66));
               if (var4_ref != null) {
@@ -96,11 +96,11 @@ final class kg extends h {
             }
             if (this.field_n != 0) {
               try {
-                this.field_e.field_k = 0;
+                this.field_e.position = 0;
                 this.field_e.i(4, -90);
                 this.field_e.i((int) this.field_n, 68);
                 this.field_e.e(0, 8959);
-                this.field_p.a(this.field_e.field_i.length, 0, (byte) -97, this.field_e.field_i);
+                this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -142,7 +142,7 @@ final class kg extends h {
 
     final void a(int param0) {
         if (param0 > -94) {
-          field_r = (ci[]) null;
+          field_r = (Sprite[]) null;
         }
         if (null != this.field_p) {
           this.field_p.a((byte) -126);
@@ -161,11 +161,11 @@ final class kg extends h {
             this.b(-29);
           }
           try {
-            this.field_e.field_k = 0;
+            this.field_e.position = 0;
             this.field_e.i(6, -108);
             this.field_e.a(3, (byte) -89);
             this.field_e.h(-1564407352, 0);
-            this.field_p.a(this.field_e.field_i.length, 0, (byte) -97, this.field_e.field_i);
+            this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -256,19 +256,19 @@ final class kg extends h {
             this.field_p.c(10509);
             var2 = (nh) (this.field_b.c(8192));
             while (var2 != null) {
-              this.field_e.field_k = 0;
+              this.field_e.position = 0;
               this.field_e.i(1, -115);
               this.field_e.b(var2.field_m, -2108648176);
-              this.field_p.a(this.field_e.field_i.length, 0, (byte) -97, this.field_e.field_i);
+              this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               this.field_m.a(11152, var2);
               var2 = (nh) (this.field_b.a(6273));
             }
             var2Lifetime1 = (nh) (this.field_a.c(8192));
             while (var2Lifetime1 != null) {
-              this.field_e.field_k = 0;
+              this.field_e.position = 0;
               this.field_e.i(0, -124);
               this.field_e.b(var2Lifetime1.field_m, -2108648176);
-              this.field_p.a(this.field_e.field_i.length, 0, (byte) -97, this.field_e.field_i);
+              this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               this.field_g.a(11152, var2Lifetime1);
               var2Lifetime1 = (nh) (this.field_a.a(6273));
             }
@@ -288,23 +288,23 @@ final class kg extends h {
                   var4 = 10;
                 }
                 if (var4 <= 0) {
-                  var5 = this.field_k.field_H.field_i.length - this.field_k.field_G;
+                  var5 = this.field_k.field_H.payload.length - this.field_k.field_G;
                   var6 = -this.field_k.field_F + 512;
-                  if (var6 > var5 - this.field_k.field_H.field_k) {
-                    var6 = var5 - this.field_k.field_H.field_k;
+                  if (var6 > var5 - this.field_k.field_H.position) {
+                    var6 = var5 - this.field_k.field_H.position;
                   }
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_p.a(this.field_k.field_H.field_i, var6, this.field_k.field_H.field_k, (byte) 117);
+                  this.field_p.a(this.field_k.field_H.payload, var6, this.field_k.field_H.position, (byte) 117);
                   if (this.field_n != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_k.field_H.field_i[var7 + this.field_k.field_H.field_k] = (byte)sl.a((int) this.field_k.field_H.field_i[var7 + this.field_k.field_H.field_k], (int) this.field_n);
+                      this.field_k.field_H.payload[var7 + this.field_k.field_H.position] = (byte)sl.a((int) this.field_k.field_H.payload[var7 + this.field_k.field_H.position], (int) this.field_n);
                     }
                   }
                   this.field_k.field_F = this.field_k.field_F + var6;
-                  this.field_k.field_H.field_k = this.field_k.field_H.field_k + var6;
-                  if (this.field_k.field_H.field_k != var5) {
+                  this.field_k.field_H.position = this.field_k.field_H.position + var6;
+                  if (this.field_k.field_H.position != var5) {
                     if (512 == this.field_k.field_F) {
                       this.field_k.field_F = 0;
                     }
@@ -314,30 +314,30 @@ final class kg extends h {
                     this.field_k = null;
                   }
                 } else {
-                  var5 = -this.field_o.field_k + var4;
+                  var5 = -this.field_o.position + var4;
                   if (var5 > var3_int) {
                     var5 = var3_int;
                   }
-                  this.field_p.a(this.field_o.field_i, var5, this.field_o.field_k, (byte) 101);
+                  this.field_p.a(this.field_o.payload, var5, this.field_o.position, (byte) 101);
                   if (this.field_n != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_o.field_i[this.field_o.field_k + var6] = (byte)sl.a((int) this.field_o.field_i[this.field_o.field_k + var6], (int) this.field_n);
+                      this.field_o.payload[this.field_o.position + var6] = (byte)sl.a((int) this.field_o.payload[this.field_o.position + var6], (int) this.field_n);
                     }
                   }
-                  this.field_o.field_k = this.field_o.field_k + var5;
-                  if (var4 <= this.field_o.field_k) {
+                  this.field_o.position = this.field_o.position + var5;
+                  if (var4 <= this.field_o.position) {
                     if (this.field_k != null) {
                       if (this.field_k.field_F != 0) {
                         throw new IOException();
                       }
-                      if (-1 != this.field_o.field_i[0]) {
+                      if (-1 != this.field_o.payload[0]) {
                         this.field_k = null;
                       } else {
-                        this.field_o.field_k = 0;
+                        this.field_o.position = 0;
                         this.field_k.field_F = 1;
                       }
                     } else {
-                      this.field_o.field_k = 0;
+                      this.field_o.position = 0;
                       var6 = this.field_o.a(-16384);
                       var7 = this.field_o.f((byte) -107);
                       var8 = this.field_o.a(-16384);
@@ -376,11 +376,11 @@ final class kg extends h {
                       stackIn_59_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_59_0;
                       this.field_k = var14_ref;
-                      this.field_k.field_H = new dh(this.field_k.field_G + (var15 + var9));
+                      this.field_k.field_H = new PacketBuffer(this.field_k.field_G + (var15 + var9));
                       this.field_k.field_H.i(var10, 89);
                       this.field_k.field_H.e(var9, 8959);
                       this.field_k.field_F = 10;
-                      this.field_o.field_k = 0;
+                      this.field_o.position = 0;
                     }
                   }
                 }
@@ -391,7 +391,7 @@ final class kg extends h {
             if (param0) {
               return true;
             }
-            field_r = (ci[]) null;
+            field_r = (Sprite[]) null;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

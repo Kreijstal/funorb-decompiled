@@ -23,7 +23,7 @@ final class oe {
         }
         mb var5 = new mb();
         if (var4 != null) {
-          var5.a(new dh(var4), param0);
+          var5.a(new PacketBuffer(var4), param0);
         }
         if (!param0) {
           field_a = (String) null;

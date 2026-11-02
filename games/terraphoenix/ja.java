@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends uf {
+final class ja extends IntrusiveNode {
     int field_o;
     static String field_h;
     static int field_j;
@@ -39,7 +39,7 @@ final class ja extends uf {
             return true;
           }
           var2_int = -42 % ((param1 - 27) / 40);
-          var7 = c.field_a;
+          var7 = NodeHashTableIterator.field_a;
           var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
@@ -138,7 +138,7 @@ final class ja extends uf {
             rb.field_d[var5 - 2] = ak.field_g;
             f.field_a[-2 + var5] = 0;
             pj.field_l[0] = 4;
-            rb.field_d[var5 - 1] = te.field_e;
+            rb.field_d[var5 - 1] = RasterBuffer.field_e;
             f.field_a[var5 - 1] = 1;
             pj.field_l[1] = 5;
           } else if (pe.field_e == 1) {
@@ -154,13 +154,13 @@ final class ja extends uf {
               rb.field_d[var6] = kh.field_F[var6];
             }
             rb.field_d[-2 + var5] = "";
-            rb.field_d[var5 - 1] = te.field_e;
+            rb.field_d[var5 - 1] = RasterBuffer.field_e;
             f.field_a[-1 + var5] = 0;
             pj.field_l[0] = 5;
           } else if (2 != pe.field_e) {
             if (3 == pe.field_e) {
               if (nj.field_l.field_v) {
-                var4 = af.a(tc.field_d, da.field_h, -3, kh.field_F, ch.field_c);
+                var4 = af.a(SecondaryNodeDeque.field_d, da.field_h, -3, kh.field_F, ch.field_c);
               } else {
                 var4 = af.a(ra.field_h, da.field_h, -3, kh.field_F, ch.field_c);
               }
@@ -175,7 +175,7 @@ final class ja extends uf {
                 rb.field_d[var6] = kh.field_F[var6];
               }
               rb.field_d[var5 - 2] = "";
-              rb.field_d[-1 + var5] = te.field_e;
+              rb.field_d[-1 + var5] = RasterBuffer.field_e;
               f.field_a[var5 - 1] = 0;
               pj.field_l[0] = 5;
             } else if (pe.field_e == 4) {
@@ -191,7 +191,7 @@ final class ja extends uf {
                 rb.field_d[var6] = kh.field_F[var6];
               }
               rb.field_d[var5 - 2] = "";
-              rb.field_d[-1 + var5] = te.field_e;
+              rb.field_d[-1 + var5] = RasterBuffer.field_e;
               f.field_a[-1 + var5] = 0;
               pj.field_l[0] = 5;
             } else {
@@ -213,7 +213,7 @@ final class ja extends uf {
               rb.field_d[-2 + var5] = mk.field_h;
               f.field_a[var5 - 2] = 0;
               pj.field_l[0] = 3;
-              rb.field_d[-1 + var5] = te.field_e;
+              rb.field_d[-1 + var5] = RasterBuffer.field_e;
               f.field_a[var5 - 1] = 1;
               pj.field_l[1] = 5;
             }
@@ -275,7 +275,7 @@ final class ja extends uf {
             f.field_a[3] = 1;
             rb.field_d[5] = "";
             pj.field_l[1] = 2;
-            rb.field_d[4] = ql.field_h;
+            rb.field_d[4] = ProxySocketConnector.field_h;
             rb.field_d[3] = q.field_Ob;
             rb.field_d[2] = ga.field_l;
             pj.field_l[0] = 5;
@@ -335,7 +335,7 @@ final class ja extends uf {
             }
           }
           vi.field_o = nd.field_r - (var4Lifetime1 >> 1);
-          ql.field_g = -(var4Lifetime1 >> 1) + (var4Lifetime1 + nd.field_r);
+          ProxySocketConnector.field_g = -(var4Lifetime1 >> 1) + (var4Lifetime1 + nd.field_r);
           ak.field_e = (dc.field_b + hi.field_ab << 1) * ai.field_i.field_g;
           for (var5Lifetime2 = 0; var5Lifetime2 < rb.field_d.length; var5Lifetime2++) {
             stackIn_112_0 = ak.field_e;
@@ -370,7 +370,7 @@ final class ja extends uf {
           if (pe.field_e == 2) {
             ai.field_i.a(-1, param1, -1, -85);
           } else {
-            ai.field_i.a(0, param1, bb.a(-93, jb.field_b, ef.field_j), -85);
+            ai.field_i.a(0, param1, bb.a(-93, MouseWheelInput.field_b, ef.field_j), -85);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

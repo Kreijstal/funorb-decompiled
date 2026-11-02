@@ -525,14 +525,14 @@ final class bg extends td {
         }
     }
 
-    final ci b() {
+    final Sprite b() {
         int var3 = 0;
         int var1 = this.field_k * this.field_c;
         int[] var2 = new int[var1];
         for (var3 = 0; var3 < var1; var3++) {
           var2[var3] = this.field_m[this.field_l[var3] & 255];
         }
-        return new ci(this.field_f, this.field_i, this.field_g, this.field_d, this.field_k, this.field_c, var2);
+        return new Sprite(this.field_f, this.field_i, this.field_g, this.field_d, this.field_k, this.field_c, var2);
     }
 
     final void b(int param0, int param1) {

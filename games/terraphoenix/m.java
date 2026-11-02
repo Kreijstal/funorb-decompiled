@@ -8,7 +8,7 @@ final class m {
     static String field_e;
     static String field_a;
     static String field_b;
-    static ci field_g;
+    static Sprite field_g;
     private int field_c;
 
     final static int a(int param0) {
@@ -95,7 +95,7 @@ final class m {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (he.field_o.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_o.startsWith("win") &&
               ue.a(param2, 0)) {
               return;
             }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jb {
+abstract class MouseWheelInput {
     static int field_b;
     static java.awt.Frame field_e;
     static String field_c;
@@ -36,13 +36,13 @@ abstract class jb {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final static ck a(int param0, int param1, int param2, int param3, byte param4, he param5) {
+    final static DelegatingCanvas a(int param0, int param1, int param2, int param3, byte param4, PlatformTaskDispatcher param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        ck var7 = null;
+        DelegatingCanvas var7 = null;
         java.awt.Frame var8 = null;
-        ck stackIn_5_0 = null;
-        ck stackIn_7_0 = null;
+        DelegatingCanvas stackIn_5_0 = null;
+        DelegatingCanvas stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -53,9 +53,9 @@ abstract class jb {
           if (var8 == null) {
             return null;
           }
-          var7 = new ck();
+          var7 = new DelegatingCanvas();
           if (param4 <= 82) {
-            stackIn_5_0 = (ck) null;
+            stackIn_5_0 = (DelegatingCanvas) null;
             return stackIn_5_0;
           }
           var7.field_e = var8;

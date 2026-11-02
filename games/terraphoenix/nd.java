@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd extends uf {
+final class nd extends IntrusiveNode {
     String[][] field_p;
     static int field_k;
     boolean field_m;
@@ -116,7 +116,7 @@ final class nd extends uf {
           var21Lifetime2 = ob.field_b;
           var22Lifetime2 = ob.field_c;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var23Lifetime2 < param0.field_m) {
               var24Lifetime1 = param0.field_D[var23Lifetime2];
@@ -131,7 +131,7 @@ final class nd extends uf {
                 if (stackIn_62_0 < stackIn_62_1) {
                   stackIn_71_0 = ~ph.field_m.length;
                   stackIn_71_1 = ~var18;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -219,7 +219,7 @@ final class nd extends uf {
                   stackIn_71_0 = ~ph.field_m.length;
                   stackIn_71_1 = ~var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_71_0 >= stackIn_71_1) {
                     break;

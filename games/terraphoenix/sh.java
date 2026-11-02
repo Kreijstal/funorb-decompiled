@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sh extends uf {
+final class sh extends IntrusiveNode {
     static String field_x;
     static String field_q;
     int field_i;
@@ -40,7 +40,7 @@ final class sh extends uf {
 
     final static void a(byte param0, int param1, int param2) {
         ll.field_a = param1;
-        tf.field_k = param2;
+        BufferedSocket.field_k = param2;
         if (param0 > -110) {
           sh.c(-18);
         }

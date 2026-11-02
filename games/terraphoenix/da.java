@@ -5,7 +5,7 @@ final class da {
     private il field_j;
     static int field_d;
     static boolean field_f;
-    static he field_g;
+    static PlatformTaskDispatcher field_g;
     static String[] field_i;
     static pk field_h;
     static int field_b;

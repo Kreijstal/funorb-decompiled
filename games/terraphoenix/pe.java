@@ -9,7 +9,7 @@ final class pe {
     static og field_a;
     static int field_e;
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, he param7, int param8) {
+    final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, PlatformTaskDispatcher param7, int param8) {
         try {
           rf.field_v = param0;
           mc.field_b = param7;

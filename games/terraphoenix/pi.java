@@ -250,7 +250,7 @@ final class pi {
         return field_f;
     }
 
-    final void a(dh param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_q = new fj();
@@ -259,7 +259,7 @@ final class pi {
         this.field_e.a(param0);
         int var2 = param0.a(-16384);
         if (var2 != 0) {
-          param0.field_k = param0.field_k - 1;
+          param0.position = param0.position - 1;
           this.field_d = new fj();
           this.field_d.a(param0);
           this.field_x = new fj();
@@ -267,7 +267,7 @@ final class pi {
         }
         var2 = param0.a(-16384);
         if (var2 != 0) {
-          param0.field_k = param0.field_k - 1;
+          param0.position = param0.position - 1;
           this.field_m = new fj();
           this.field_m.a(param0);
           this.field_y = new fj();
@@ -275,7 +275,7 @@ final class pi {
         }
         var2 = param0.a(-16384);
         if (var2 != 0) {
-          param0.field_k = param0.field_k - 1;
+          param0.position = param0.position - 1;
           this.field_b = new fj();
           this.field_b.a(param0);
           this.field_j = new fj();

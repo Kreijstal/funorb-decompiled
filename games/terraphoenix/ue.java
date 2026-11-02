@@ -95,7 +95,7 @@ final class ue {
         var4 = Terraphoenix.field_V;
         try {
           try {
-            if (!he.field_o.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_o.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

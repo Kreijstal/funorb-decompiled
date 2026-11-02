@@ -219,7 +219,7 @@ final class ph extends di {
         }
     }
 
-    final static java.awt.Frame a(he param0, int param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_26_0 = null;
         Object stackIn_37_0 = null;
@@ -241,7 +241,7 @@ final class ph extends di {
             return null;
           }
           if (0 == param5) {
-            var10 = of.a(param0, param4 - 5);
+            var10 = ImageProducerRasterBuffer.a(param0, param4 - 5);
             var6 = var10;
             if (var6 == null) {
               return null;
@@ -277,7 +277,7 @@ final class ph extends di {
             stackIn_39_0 = var7;
             return stackIn_39_0;
           }
-          ck.a(param0, 112, var7);
+          DelegatingCanvas.a(param0, 112, var7);
           stackIn_37_0 = null;
           return (java.awt.Frame) (stackIn_37_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -339,7 +339,7 @@ final class ph extends di {
 
     final static void a(int param0, bm param1, int param2, int param3) {
         try {
-          ck.field_a = param1;
+          DelegatingCanvas.field_a = param1;
           nb.field_e = param0;
           if (param3 != -1) {
             field_t = (int[]) null;
@@ -391,7 +391,7 @@ final class ph extends di {
           }
           var6 = -107 / ((param1 - 26) / 56);
           if (this.c(param0, -1)) {
-            stackIn_16_0 = mj.field_a;
+            stackIn_16_0 = SocketConnector.field_a;
             return stackIn_16_0;
           }
           if (var7.length() <= 0) {
@@ -403,7 +403,7 @@ final class ph extends di {
             return stackIn_21_0;
           }
           if (a.a(var5, -19, var7)) {
-            stackIn_25_0 = tc.field_b;
+            stackIn_25_0 = SecondaryNodeDeque.field_b;
             return stackIn_25_0;
           }
           if (!oh.a((byte) -85, var7, var5)) {

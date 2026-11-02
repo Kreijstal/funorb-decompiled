@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fa {
-    static ci field_d;
+    static Sprite field_d;
     private Object[][] field_g;
     private boolean field_j;
     private int field_h;
@@ -223,12 +223,12 @@ final class fa {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        dh var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        dh var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        dh var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -281,8 +281,8 @@ final class fa {
             var35 = ei.a(this.field_k[param3], true, false);
             var25 = var35;
             var9 = var25;
-            var26 = new dh(var35);
-            var26.a(-14328, param2, 5, var26.field_i.length);
+            var26 = new PacketBuffer(var35);
+            var26.a(-14328, param2, 5, var26.payload.length);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -311,10 +311,10 @@ final class fa {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * var12 * var5_int;
-              var32 = new dh(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
               var15 = 0;
-              var32.field_k = var11;
+              var32.position = var11;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
@@ -334,7 +334,7 @@ final class fa {
                 return true;
               }
               var44 = new byte[var14];
-              var32.field_k = var11;
+              var32.position = var11;
               var14Lifetime1 = 0;
               var17 = 0;
               for (var18 = 0; var12 > var18; var18++) {
@@ -359,11 +359,11 @@ final class fa {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * var12 * var5_int;
-              var29 = new dh(var43);
+              var29 = new PacketBuffer(var43);
               var38 = new int[var5_int];
               var30 = var38;
               var14_ref_int__ = var30;
-              var29.field_k = var11;
+              var29.position = var11;
               for (var15 = 0; var15 < var12; var15++) {
                 var16 = 0;
                 for (var17 = 0; var5_int > var17; var17++) {
@@ -379,7 +379,7 @@ final class fa {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var29.field_k = var11;
+              var29.position = var11;
               var16 = 0;
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
@@ -825,9 +825,9 @@ final class fa {
         return false;
     }
 
-    final static ci[] f(int param0, int param1) {
-        ci[] var3 = new ci[9];
-        ci[] var2 = var3;
+    final static Sprite[] f(int param0, int param1) {
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         var3[param1] = nb.a(64, param0, 119);
         return var2;
     }

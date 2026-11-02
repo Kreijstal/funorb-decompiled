@@ -65,7 +65,7 @@ final class uk {
               var5 = var7;
               var8.a(var4_int, 0, 90, var10);
             }
-            var8.field_k = var8.field_k + 4;
+            var8.position = var8.position + 4;
             if (!var8.c(0)) {
               gb.g(-17464);
               return;

@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vb {
-    private vh field_d;
+    private DualLinkNode field_d;
     static int field_i;
     static String field_c;
     static String field_e;
     private long field_b;
-    private vh[] field_h;
+    private DualLinkNode[] field_h;
     static String[] field_f;
     private int field_g;
     static String field_a;
 
-    final vh c(byte param0) {
-        vh var2 = null;
-        vh var3 = null;
+    final DualLinkNode c(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var3 = null;
         int var4 = Terraphoenix.field_V;
-        vh var2Lifetime1;
-        vh var3Lifetime1;
+        DualLinkNode var2Lifetime1;
+        DualLinkNode var3Lifetime1;
         if (this.field_d == null) {
           return null;
         }
         if (param0 >= -9) {
-          this.a(true, (vh) null, -18L);
+          this.a(true, (DualLinkNode) null, -18L);
           var2 = this.field_h[(int)(this.field_b & (long)(-1 + this.field_g))];
           while (var2 != this.field_d) {
             if (~this.field_d.field_m == ~this.field_b) {
@@ -50,7 +50,7 @@ final class vb {
 
     final static String b(byte param0) {
         if (uh.field_H < 2) {
-          return c.field_i;
+          return NodeHashTableIterator.field_i;
         }
         if (param0 != -27) {
           vb.a(-69);
@@ -89,11 +89,11 @@ final class vb {
         return i.field_a.a(true);
     }
 
-    final vh a(int param0, long param1) {
-        vh var5 = null;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var5 = null;
         int var6 = Terraphoenix.field_V;
         this.field_b = param1;
-        vh var4 = this.field_h[(int)((long)(this.field_g - 1) & param1)];
+        DualLinkNode var4 = this.field_h[(int)((long)(this.field_g - 1) & param1)];
         this.field_d = var4.field_o;
         while (var4 != this.field_d) {
           if (~param1 == ~this.field_d.field_m) {
@@ -112,8 +112,8 @@ final class vb {
         return null;
     }
 
-    final void a(boolean param0, vh param1, long param2) {
-        vh var5 = null;
+    final void a(boolean param0, DualLinkNode param1, long param2) {
+        DualLinkNode var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -407,12 +407,12 @@ final class vb {
 
     vb(int param0) {
         int var2 = 0;
-        vh dupTemp$0 = null;
-        vh var3 = null;
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
         this.field_g = param0;
-        this.field_h = new vh[param0];
+        this.field_h = new DualLinkNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new vh();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_h[var2] = dupTemp$0;
           var3.field_i = var3;

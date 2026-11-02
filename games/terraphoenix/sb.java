@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb extends uf {
-    static ci field_p;
+final class sb extends IntrusiveNode {
+    static Sprite field_p;
     static int field_j;
     static String field_k;
     static String field_n;
@@ -40,7 +40,7 @@ final class sb extends uf {
             return null;
           }
           var2 = new qj(param1, ha.field_s, hj.field_K, field_m, rf.field_p, wb.field_a, qc.field_b);
-          mj.a((byte) 95);
+          SocketConnector.a((byte) 95);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

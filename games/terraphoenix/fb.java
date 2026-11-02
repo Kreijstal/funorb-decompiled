@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb extends uf {
+final class fb extends IntrusiveNode {
     static long field_i;
     int field_q;
     int field_l;
@@ -73,7 +73,7 @@ final class fb extends uf {
         return var2Lifetime1;
     }
 
-    final static void a(int param0, dh param1) {
+    final static void a(int param0, PacketBuffer param1) {
         hb.field_j = param1.i(-25578) << 5;
         int var2_int = param1.a(-16384);
         lb.field_d = var2_int << 18 & 1835008;

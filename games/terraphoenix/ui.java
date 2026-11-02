@@ -9,7 +9,7 @@ final class ui {
     boolean field_c;
     static r field_f;
 
-    final static String a(int param0, dh param1, int param2) {
+    final static String a(int param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -31,8 +31,8 @@ final class ui {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param1.field_k = param1.field_k + bd.field_m.a(-112, var3_int, 0, param1.field_k, var4, param1.field_i);
-            var5 = tc.a((byte) -114, var4, var3_int, 0);
+            param1.position = param1.position + bd.field_m.a(-112, var3_int, 0, param1.position, var4, param1.payload);
+            var5 = SecondaryNodeDeque.a((byte) -114, var4, var3_int, 0);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

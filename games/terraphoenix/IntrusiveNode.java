@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uf {
+class IntrusiveNode {
     static int field_e;
     static int field_b;
-    static ci field_f;
+    static Sprite field_f;
     static int field_c;
     long field_g;
-    uf field_a;
-    uf field_d;
+    IntrusiveNode field_a;
+    IntrusiveNode field_d;
 
     public static void b(int param0) {
         field_f = null;
         if (param0 == 71) {
           return;
         }
-        uf.b(75);
+        IntrusiveNode.b(75);
     }
 
     final boolean a(byte param0) {
         if (param0 <= -21) {
           return null != this.field_a ? true : false;
         }
-        uf.a(55, -98);
+        IntrusiveNode.a(55, -98);
         if (null == this.field_a) {
           return false;
         }
@@ -30,7 +30,7 @@ class uf {
     }
 
     final static void a(int param0, int param1) {
-        uf var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         eg var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -44,7 +44,7 @@ class uf {
           }
           var2 = vc.field_g.d(param0 ^ 30032);
           if (param0 != 20840) {
-            field_f = (ci) null;
+            field_f = (Sprite) null;
           }
           while (var2 != null) {
             eb.a(param1, (byte) 125);

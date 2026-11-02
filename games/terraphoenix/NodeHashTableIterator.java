@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-final class c implements Iterator {
-    private ce field_h;
+final class NodeHashTableIterator implements Iterator {
+    private IterableNodeHashTable field_h;
     static String field_b;
-    private uf field_g;
+    private IntrusiveNode field_g;
     static String field_c;
-    private uf field_e;
+    private IntrusiveNode field_e;
     static String field_i;
     private int field_f;
     static String field_d;
     static char[] field_a;
 
-    final static void a(byte param0, ci param1, int param2) {
+    final static void a(byte param0, Sprite param1, int param2) {
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
@@ -88,7 +88,7 @@ final class c implements Iterator {
           }
           if (param0 != -86) {
             var8 = (java.applet.Applet) null;
-            c.a((byte) 118, (java.applet.Applet) null);
+            NodeHashTableIterator.a((byte) 118, (java.applet.Applet) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ final class c implements Iterator {
         field_a = null;
         field_i = null;
         if (param0 != 1) {
-          c.b(125);
+          NodeHashTableIterator.b(125);
         }
         field_d = null;
     }
@@ -145,7 +145,7 @@ final class c implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        uf var1;
+        IntrusiveNode var1;
         int var2;
         var2 = Terraphoenix.field_V;
         if (this.field_h.field_a[-1 + this.field_f] != this.field_e) {
@@ -217,7 +217,7 @@ final class c implements Iterator {
         this.field_g = null;
     }
 
-    c(ce param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_g = null;
         try {
           this.field_h = param0;
@@ -234,7 +234,7 @@ final class c implements Iterator {
         }
         boolean decompiledFrameRemainder0 = true;
         if (20 <= uh.field_H &&
-          wf.a(31996) && (!(0 < db.field_b) ||
+          wf.a(31996) && (!(0 < MouseInputHandler.field_b) ||
           mi.a((byte) -95))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;

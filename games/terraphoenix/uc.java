@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends dh {
+final class uc extends PacketBuffer {
     static rh field_n;
     private int field_o;
     static rh field_p;
@@ -31,14 +31,14 @@ final class uc extends dh {
         while (param1 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((ai.field_a[var4] & this.field_i[incrementValue$0]) << param1 - var4);
+          var5 = var5 + ((ai.field_a[var4] & this.payload[incrementValue$0]) << param1 - var4);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (param1 != var4) {
-          var5 = var5 + (this.field_i[var3] >> -param1 + var4 & ai.field_a[param1]);
+          var5 = var5 + (this.payload[var3] >> -param1 + var4 & ai.field_a[param1]);
         } else {
-          var5 = var5 + (ai.field_a[var4] & this.field_i[var3]);
+          var5 = var5 + (ai.field_a[var4] & this.payload[var3]);
         }
         return var5;
     }
@@ -61,7 +61,7 @@ final class uc extends dh {
           String var4 = (String) null;
           uc.b(-83, (String) null);
         }
-        mj.a((byte) 113);
+        SocketConnector.a((byte) 113);
         return var1;
     }
 
@@ -76,14 +76,14 @@ final class uc extends dh {
         if (param0 != -1694261224) {
           return;
         }
-        this.field_o = this.field_k * 8;
+        this.field_o = this.position * 8;
     }
 
-    final static ci[] l(int param0) {
+    final static Sprite[] l(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        ci[] var1;
+        Sprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -97,7 +97,7 @@ final class uc extends dh {
         byte[] var21;
         int[] var22;
         var8 = Terraphoenix.field_V;
-        var1 = new ci[kf.field_b];
+        var1 = new Sprite[kf.field_b];
         for (var2 = param0; var2 < kf.field_b; var2++) {
           var3 = rf.field_p[var2] * sb.field_m[var2];
           var21 = qc.field_b[var2];
@@ -107,7 +107,7 @@ final class uc extends dh {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = wb.field_a[dg.a(255, (int) var21[var6])];
             }
-            var1[var2] = new ci(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], var22);
+            var1[var2] = new Sprite(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], var22);
           } else {
             var16 = ug.field_c[var2];
             var12 = var16;
@@ -119,10 +119,10 @@ final class uc extends dh {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = ei.b(wb.field_a[dg.a((int) var21[var7], 255)], dg.a((int) var16[var7], 255) << 24);
             }
-            var1[var2] = (ci) ((Object) new sg(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], var17));
+            var1[var2] = (Sprite) ((Object) new sg(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], var17));
           }
         }
-        mj.a((byte) 95);
+        SocketConnector.a((byte) 95);
         return var1;
     }
 
@@ -147,9 +147,9 @@ final class uc extends dh {
         var6 = Terraphoenix.field_V;
         try {
           for (var5_int = param0; var5_int < param2; var5_int++) {
-            fieldTemp$0 = this.field_k;
-            this.field_k = this.field_k + 1;
-            param1[param3 + var5_int] = (byte)(this.field_i[fieldTemp$0] - this.field_m.a(112));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param1[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_m.a(112));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,13 +181,13 @@ final class uc extends dh {
         if (param0 != -17410) {
           return;
         }
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_i[fieldTemp$0] = (byte)(param1 + this.field_m.a(65));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_m.a(65));
     }
 
     final void n(int param0) {
-        this.field_k = (this.field_o + 7) / param0;
+        this.position = (this.field_o + 7) / param0;
     }
 
     uc(byte[] param0) {
@@ -202,9 +202,9 @@ final class uc extends dh {
         if (param0) {
           return 72;
         }
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        return this.field_i[fieldTemp$0] - this.field_m.a(116) & 255;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0] - this.field_m.a(116) & 255;
     }
 
     static {

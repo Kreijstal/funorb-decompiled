@@ -45,16 +45,16 @@ final class rj {
             return false;
           }
           var2_long = ll.a(param0 ^ -1491051318);
-          if (eh.field_d != 0 &&
+          if (GameApplet.field_d != 0 &&
             fg.field_d < 0) {
             var4_ref_ra = (ra) (am.field_F.d(9272));
             if (var4_ref_ra != null &&
               var4_ref_ra.field_o < var2_long) {
               var4_ref_ra.b((byte) 12);
               qh.field_d = var4_ref_ra.field_k.length;
-              mk.field_j.field_k = 0;
+              mk.field_j.position = 0;
               for (var5_int = 0; var5_int < qh.field_d; var5_int++) {
-                mk.field_j.field_i[var5_int] = var4_ref_ra.field_k[var5_int];
+                mk.field_j.payload[var5_int] = var4_ref_ra.field_k[var5_int];
               }
               wc.field_r = wf.field_n;
               wf.field_n = uc.field_r;
@@ -68,18 +68,18 @@ final class rj {
           }
           while (true) {
             if (fg.field_d < 0) {
-              mk.field_j.field_k = 0;
+              mk.field_j.position = 0;
               if (!vc.a(-125, 1)) {
                 return false;
               }
               fg.field_d = mk.field_j.a(false);
-              mk.field_j.field_k = 0;
+              mk.field_j.position = 0;
               qh.field_d = param1[fg.field_d];
             }
             if (!cm.b((byte) -43)) {
               return false;
             }
-            if (eh.field_d == 0) {
+            if (GameApplet.field_d == 0) {
               wc.field_r = wf.field_n;
               wf.field_n = uc.field_r;
               uc.field_r = qk.field_b;
@@ -87,7 +87,7 @@ final class rj {
               fg.field_d = -1;
               return true;
             }
-            var4 = eh.field_d;
+            var4 = GameApplet.field_d;
             if (tb.field_u != 0.0) {
               var4 = (int)((double)var4 + j.field_H.nextGaussian() * tb.field_u);
               if (var4 < 0) {
@@ -96,7 +96,7 @@ final class rj {
             }
             var5 = new ra(var2_long + (long)var4, fg.field_d, new byte[qh.field_d]);
             for (var6 = 0; qh.field_d > var6; var6++) {
-              var5.field_k[var6] = mk.field_j.field_i[var6];
+              var5.field_k[var6] = mk.field_j.payload[var6];
             }
             am.field_F.a(var5, param0 ^ 1491066943);
             fg.field_d = -1;
@@ -146,7 +146,7 @@ final class rj {
               gb.g(-17464);
               return;
             }
-            var5 = qh.field_d - var10.field_k;
+            var5 = qh.field_d - var10.position;
             var12 = var4.field_i;
             var11 = var12;
             var6 = var11;

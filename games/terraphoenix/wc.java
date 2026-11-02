@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class wc extends vh {
+abstract class wc extends DualLinkNode {
     static int field_r;
     int field_q;
     static int field_s;
@@ -192,7 +192,7 @@ abstract class wc extends vh {
                 p.field_a[var4_intLifetime1].field_e = p.field_a[var4_intLifetime1].field_a;
               }
             }
-            L24: {
+            regionExit1: {
               var8Lifetime1 = 0;
               if (p.field_a[var4_intLifetime1].field_b != 1 &&
                 p.field_a[var4_intLifetime1].field_b != 2 &&
@@ -210,22 +210,22 @@ abstract class wc extends vh {
                 if (var9Lifetime1 == 4) {
                   var9Lifetime1 = dd.field_M;
                 }
-                L29: {
+                regionExit2: {
                   if (fd.field_o) {
-                    L30: {
+                    regionExit3: {
                       if (var5Lifetime1 != 0) {
                         if (p.field_a[var4_intLifetime1].field_d == param0.field_q) {
                           stackIn_98_0 = null;
                           stackIn_98_1 = param0.field_q;
                           if (stackIn_98_0 != stackIn_98_1) {
-                            break L30;
+                            break regionExit3;
                           }
                         }
                         if (var9Lifetime1 != 4 &&
                           7 != var9Lifetime1 &&
                           var9Lifetime1 != 8) {
                           rh.field_b[var9Lifetime1].d(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e, 128);
-                          break L29;
+                          break regionExit2;
                         }
                       }
                     }
@@ -237,7 +237,7 @@ abstract class wc extends vh {
                   l.a(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 16, 16777215);
                   l.a(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 17, 255);
                 }
-                break L24;
+                break regionExit1;
               }
               for (var9Lifetime1Lifetime1 = 0; var9Lifetime1Lifetime1 < 12; var9Lifetime1Lifetime1++) {
                 if (null != param0.field_C[var9Lifetime1Lifetime1] &&
@@ -261,7 +261,7 @@ abstract class wc extends vh {
                 if (var5Lifetime1 != 0 && (param0.field_q == null ||
                   !param0.field_h.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d))) {
                   rh.field_b[p.field_a[var4_intLifetime1].field_b].d(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e, 128);
-                  break L24;
+                  break regionExit1;
                 }
                 rh.field_b[p.field_a[var4_intLifetime1].field_b].b(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e);
                 if (param0.field_q != null &&
@@ -325,7 +325,7 @@ abstract class wc extends vh {
             if (p.field_a[var4_intLifetime1].field_b == 0 &&
               p.field_a[var4_intLifetime1].field_d != null &&
               p.field_a[var4_intLifetime1].field_d.field_Z != null &&
-              ce.field_e) {
+              IterableNodeHashTable.field_e) {
               var9Lifetime3 = 16777215;
               if (!fd.field_o &&
                 p.field_a[var4_intLifetime1].field_d != param0.field_q) {
@@ -339,7 +339,7 @@ abstract class wc extends vh {
             }
             if (6 == p.field_a[var4_intLifetime1].field_b &&
               p.field_a[var4_intLifetime1].field_d != null &&
-              ce.field_e) {
+              IterableNodeHashTable.field_e) {
               var9Lifetime4 = 255;
               og.field_f.c(ig.field_c, 16 + p.field_a[var4_intLifetime1].field_f, 16 + (p.field_a[var4_intLifetime1].field_e + 6 - 1), 0, -1);
               og.field_f.c(ig.field_c, p.field_a[var4_intLifetime1].field_f + 16, 6 + p.field_a[var4_intLifetime1].field_e + 17, 0, -1);

@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-final class ji extends uf {
+final class ji extends IntrusiveNode {
     static int field_k;
-    static ci[] field_j;
+    static Sprite[] field_j;
     int field_i;
     int field_h;
 
@@ -93,7 +93,7 @@ final class ji extends uf {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, String param5, long param6, he param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, String param5, long param6, PlatformTaskDispatcher param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -173,7 +173,7 @@ final class ji extends uf {
             param1.setCharAt(var5, param0);
           }
           if (param2 != 110) {
-            field_j = (ci[]) null;
+            field_j = (Sprite[]) null;
           }
           stackIn_7_0 = (StringBuilder) (param1);
           return stackIn_7_0;

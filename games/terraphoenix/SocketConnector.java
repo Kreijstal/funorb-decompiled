@@ -3,22 +3,22 @@
  */
 import java.io.*;
 
-abstract class mj {
+abstract class SocketConnector {
     static String field_a;
     static String field_c;
-    int field_b;
-    String field_d;
+    int port;
+    String host;
 
     abstract java.net.Socket b(boolean param0) throws IOException;
 
-    final static ci[] a(fa param0, int param1, int param2, boolean param3) {
+    final static Sprite[] a(fa param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (vh.a(param1, param2, param0, param3)) {
+          if (DualLinkNode.a(param1, param2, param0, param3)) {
             return uc.l(0);
           }
           return null;
@@ -50,10 +50,10 @@ abstract class mj {
 
     final java.net.Socket a(boolean param0) throws IOException {
         if (param0) {
-          return new java.net.Socket(this.field_d, this.field_b);
+          return new java.net.Socket(this.host, this.port);
         }
-        mj.a(28);
-        return new java.net.Socket(this.field_d, this.field_b);
+        SocketConnector.a(28);
+        return new java.net.Socket(this.host, this.port);
     }
 
     public static void a(int param0) {

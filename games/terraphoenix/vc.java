@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class vc {
-    static ci field_e;
+    static Sprite field_e;
     static jj field_d;
     static jj field_g;
     static String field_b;
@@ -50,7 +50,7 @@ abstract class vc {
           if (param0 > -97) {
             field_b = (String) null;
           }
-          if (mk.field_j.field_k >= param1) {
+          if (mk.field_j.position >= param1) {
             return true;
           }
           if (null == ig.field_e) {
@@ -59,22 +59,22 @@ abstract class vc {
           try {
             var2_int = ig.field_e.a(0);
             if (var2_int > 0) {
-              if (param1 - mk.field_j.field_k < var2_int) {
-                var2_int = param1 - mk.field_j.field_k;
+              if (param1 - mk.field_j.position < var2_int) {
+                var2_int = param1 - mk.field_j.position;
               }
-              ig.field_e.a(mk.field_j.field_i, var2_int, mk.field_j.field_k, (byte) 114);
+              ig.field_e.a(mk.field_j.payload, var2_int, mk.field_j.position, (byte) 114);
               dm.field_c = ll.a(1000);
-              mk.field_j.field_k = mk.field_j.field_k + var2_int;
-              if (param1 > mk.field_j.field_k) {
+              mk.field_j.position = mk.field_j.position + var2_int;
+              if (param1 > mk.field_j.position) {
                 return false;
               }
-              mk.field_j.field_k = 0;
+              mk.field_j.position = 0;
               return true;
             }
             if (0 > var2_int) {
               gb.g(-17464);
             } else {
-              if (30000L >= ce.b(1)) {
+              if (30000L >= IterableNodeHashTable.b(1)) {
                 return false;
               }
               gb.g(-17464);
@@ -93,10 +93,10 @@ abstract class vc {
     }
 
     final static void a(boolean param0) {
-        ci var2 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = Terraphoenix.field_V;
-        ci var1 = new ci(540, 140);
+        Sprite var1 = new Sprite(540, 140);
         il.a(1, var1);
         ob.b();
         l.a();

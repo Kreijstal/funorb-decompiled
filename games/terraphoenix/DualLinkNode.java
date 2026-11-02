@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vh extends uf {
+class DualLinkNode extends IntrusiveNode {
     static String field_n;
     static bg[] field_k;
     static int[][] field_j;
     long field_m;
-    vh field_i;
+    DualLinkNode field_i;
     static String field_l;
-    vh field_o;
+    DualLinkNode field_o;
     static String field_h;
 
     final static boolean a(int param0, int param1, fa param2, boolean param3) {
@@ -85,7 +85,7 @@ class vh extends uf {
         field_h = null;
     }
 
-    protected vh() {
+    protected DualLinkNode() {
     }
 
     static {

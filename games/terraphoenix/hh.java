@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hh extends uf {
+final class hh extends IntrusiveNode {
     static String field_l;
     static String field_p;
     int field_h;
@@ -10,7 +10,7 @@ final class hh extends uf {
     int field_n;
     int field_o;
     int field_i;
-    static ci field_m;
+    static Sprite field_m;
     static String field_k;
 
     public static void a(int param0) {

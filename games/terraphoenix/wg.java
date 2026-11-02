@@ -10,8 +10,8 @@ final class wg {
     static String field_k;
     float field_c;
     private int field_i;
-    static ci field_f;
-    static ci[] field_l;
+    static Sprite field_f;
+    static Sprite[] field_l;
     static String field_g;
     static String[] field_h;
 

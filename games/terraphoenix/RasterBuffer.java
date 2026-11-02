@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class te {
+abstract class RasterBuffer {
     int field_b;
     static String field_e;
     int field_f;
@@ -43,9 +43,9 @@ abstract class te {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((dh) ((Object) var5)).a(-16384);
+            var6 = ((PacketBuffer) ((Object) var5)).a(-16384);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((dh) ((Object) var5)).f((byte) -107);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).f((byte) -107);
             }
             var15 = (ok) (vc.field_g.d(9272));
             if (var15 == null) {
@@ -96,7 +96,7 @@ abstract class te {
           } catch (InterruptedException interruptedException) {
           }
           if (param1 != 0) {
-            te.b((byte) -85);
+            RasterBuffer.b((byte) -85);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -246,7 +246,7 @@ abstract class te {
           var16Lifetime1 = -param3 + var13;
           if (param0 != 99) {
             var24 = (CharSequence) null;
-            te.a((CharSequence) null, false);
+            RasterBuffer.a((CharSequence) null, false);
           }
           var18Lifetime1 = var16Lifetime1 * var16Lifetime1 + var14;
           var17Lifetime1 = var18Lifetime1 - var15Lifetime1;

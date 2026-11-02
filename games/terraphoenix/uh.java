@@ -169,7 +169,7 @@ final class uh extends gb implements pa, n {
           }
           var8 = gb.field_D;
           var9 = vk.a(false, dg.a(false));
-          if (var9 == te.field_g) {
+          if (var9 == RasterBuffer.field_g) {
             var8 = ed.field_b;
           } else {
             if (gf.field_u == var9) {

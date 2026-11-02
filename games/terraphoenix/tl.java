@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class tl extends uf {
+final class tl extends IntrusiveNode {
     private static byte[] field_D;
     private static float[] field_n;
     private static boolean[] field_p;
@@ -347,7 +347,7 @@ final class tl extends uf {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        dh var2 = new dh(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_A = var2.f((byte) -107);
         this.field_w = var2.f((byte) -107);
         this.field_x = var2.f((byte) -107);

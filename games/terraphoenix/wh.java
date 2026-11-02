@@ -5,7 +5,7 @@ final class wh implements Runnable {
     static String field_a;
     static String field_g;
     private hl field_c;
-    static ci field_e;
+    static Sprite field_e;
     private boolean field_f;
     int field_b;
     private Thread field_d;
@@ -62,7 +62,7 @@ final class wh implements Runnable {
             }
           }
           if (param2 != 2) {
-            field_e = (ci) null;
+            field_e = (Sprite) null;
           }
           var4.field_G = param0.a(-18342, param1);
           var4.field_A = false;
@@ -214,14 +214,14 @@ final class wh implements Runnable {
           if (mh.field_b != null) {
             try {
               mh.field_b.a(false, 0L);
-              mh.field_b.a(-1, 24, mk.field_j.field_i, mk.field_j.field_k);
+              mh.field_b.a(-1, 24, mk.field_j.payload, mk.field_j.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1_ref_Exception = (Exception) (Object) decompiledCaughtException;
             }
           }
           var1 = -15 % ((param0 - 58) / 35);
-          mk.field_j.field_k = mk.field_j.field_k + 24;
+          mk.field_j.position = mk.field_j.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -272,7 +272,7 @@ final class wh implements Runnable {
         }
     }
 
-    wh(he param0) {
+    wh(PlatformTaskDispatcher param0) {
         mf var2 = null;
         this.field_c = new hl();
         this.field_f = false;

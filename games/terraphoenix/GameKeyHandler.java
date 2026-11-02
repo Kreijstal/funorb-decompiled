@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_b;
     static String field_c;
     static vg field_a;
@@ -98,7 +98,7 @@ final class cf implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void a(he param0, boolean param1, Object param2) {
+    final static void a(PlatformTaskDispatcher param0, boolean param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

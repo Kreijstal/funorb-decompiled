@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class of extends te implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static String[] field_h;
     static String field_n;
     static int[] field_m;
@@ -125,7 +125,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
         field_m = null;
     }
 
-    final static ef[] a(he param0, int param1) {
+    final static ef[] a(PlatformTaskDispatcher param0, int param1) {
         int var5 = 0;
         ef[] stackIn_3_0 = null;
         ef[] stackIn_9_0 = null;
@@ -193,7 +193,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
         return this.field_j == param0;
     }
 
-    of() {
+    ImageProducerRasterBuffer() {
     }
 
     static {

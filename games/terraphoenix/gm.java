@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gm {
-    static eh field_f;
+    static GameApplet field_f;
     byte[] field_g;
     static kf field_j;
     int field_d;

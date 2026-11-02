@@ -104,7 +104,7 @@ final class ha extends di {
         }
     }
 
-    final static void a(int param0, uf param1, uf param2) {
+    final static void a(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (null != param2.field_a) {
             param2.b((byte) 12);

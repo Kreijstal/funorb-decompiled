@@ -32,9 +32,9 @@ final class va {
     final static boolean b(int param0) {
         if (param0 != 41108) {
           field_g = (String) null;
-          return ql.a(dg.a(false), -15);
+          return ProxySocketConnector.a(dg.a(false), -15);
         }
-        return ql.a(dg.a(false), -15);
+        return ProxySocketConnector.a(dg.a(false), -15);
     }
 
     final static fa a(int param0, int param1) {
@@ -45,7 +45,7 @@ final class va {
         return jg.a(30, 1, false, false, param0, true);
     }
 
-    final static void a(int param0, int param1, int param2, ci param3, pk param4, int param5, int param6, int param7, boolean param8, int param9, int param10) {
+    final static void a(int param0, int param1, int param2, Sprite param3, pk param4, int param5, int param6, int param7, boolean param8, int param9, int param10) {
         nl.field_a = param9;
         lm.field_b = param7;
         if (param8) {

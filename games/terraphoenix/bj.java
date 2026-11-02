@@ -6,10 +6,10 @@ final class bj {
     static jg field_f;
     static String field_b;
     static int[] field_d;
-    static ci field_g;
+    static Sprite field_g;
     static String field_a;
     static String field_h;
-    static ci field_e;
+    static Sprite field_e;
 
     final static String a(CharSequence[] param0, byte param1) {
         int var2_int = 0;

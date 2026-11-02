@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa extends uf {
+final class aa extends IntrusiveNode {
     int field_o;
-    static ci field_j;
+    static Sprite field_j;
     int field_h;
     int field_n;
     int[] field_p;
@@ -18,7 +18,7 @@ final class aa extends uf {
         field_j = null;
         field_r = null;
         if (!param0) {
-          field_j = (ci) null;
+          field_j = (Sprite) null;
           field_k = null;
           return;
         }

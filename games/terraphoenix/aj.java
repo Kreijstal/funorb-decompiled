@@ -3,7 +3,7 @@
  */
 final class aj {
     static String field_c;
-    static ci[] field_a;
+    static Sprite[] field_a;
     static fa field_b;
 
     final static pd a(int param0, byte param1, String param2) {
@@ -41,7 +41,7 @@ final class aj {
         fh.field_a = param3;
         jm.field_b = param2;
         if (param1 != -19605) {
-          field_a = (ci[]) null;
+          field_a = (Sprite[]) null;
           lm.field_d = param0;
           return;
         }

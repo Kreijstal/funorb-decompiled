@@ -8,7 +8,7 @@ final class se {
     int field_g;
     int field_e;
     int field_i;
-    static ci[] field_c;
+    static Sprite[] field_c;
     int field_a;
     r field_d;
     int field_f;

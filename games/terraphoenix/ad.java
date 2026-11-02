@@ -32,16 +32,16 @@ final class ad {
     int field_z;
     private int field_p;
 
-    final static jb c(int param0) {
+    final static MouseWheelInput c(int param0) {
         try {
           Throwable var1 = null;
-          jb stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != -3109) {
               ad.b((byte) -71);
             }
-            stackIn_3_0 = (jb) (Class.forName("ii").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -691,7 +691,7 @@ final class ad {
           var5 = 1;
           var4 = 1;
         }
-        ld.field_a = jb.a(var5 * var2, var2 * var4, 0);
+        ld.field_a = MouseWheelInput.a(var5 * var2, var2 * var4, 0);
     }
 
     final void a(boolean param0) {
@@ -1344,7 +1344,7 @@ final class ad {
                         this.field_C = 3;
                         this.field_r = 4;
                         if (og.field_d > 0) {
-                          this.field_r = ql.field_i;
+                          this.field_r = ProxySocketConnector.field_i;
                           this.field_C = ld.field_e;
                         }
                         if (!param0) {

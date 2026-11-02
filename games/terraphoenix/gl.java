@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class gl extends uf {
+class gl extends IntrusiveNode {
     cj field_l;
     static String field_t;
     int field_j;
@@ -301,26 +301,26 @@ class gl extends uf {
           return param0;
         }
         if (vj.field_P == 0) {
-          L9: {
+          regionExit1: {
             if (ma.field_I != 0) {
               if (this.a(false, mm.field_c, param2, param1, ma.field_I, this, lm.field_c)) {
                 param0 = false;
                 if (var7 == 0) {
-                  break L9;
+                  break regionExit1;
                 }
               }
               if (var5 != 0) {
                 this.e(-23);
                 if (oh.field_f == 0 &&
                   0 != ab.field_k) {
-                  this.a(79, ef.field_j, param2, param1, jb.field_b, this);
-                  var8 = oj.field_w;
+                  this.a(79, ef.field_j, param2, param1, MouseWheelInput.field_b, this);
+                  var8 = SpriteState.field_w;
                   if (var8 != null) {
                     if (!(var8.field_r instanceof fe)) {
-                      oj.field_w = null;
+                      SpriteState.field_w = null;
                     } else {
                       ((fe) (var8.field_r)).a((hj) null, var8, 98);
-                      oj.field_w = null;
+                      SpriteState.field_w = null;
                     }
                   }
                   if (var7 != 0 &&
@@ -344,13 +344,13 @@ class gl extends uf {
             b.a((byte) 16, this.f(105));
             return param0;
           }
-          this.a(79, ef.field_j, param2, param1, jb.field_b, this);
-          var9 = oj.field_w;
+          this.a(79, ef.field_j, param2, param1, MouseWheelInput.field_b, this);
+          var9 = SpriteState.field_w;
           if (var9 != null) {
             if (var9.field_r instanceof fe) {
               ((fe) (var9.field_r)).a((hj) null, var9, 98);
             }
-            oj.field_w = null;
+            SpriteState.field_w = null;
           }
           if (var7 != 0 &&
             var5 != 0 &&
@@ -362,7 +362,7 @@ class gl extends uf {
           return param0;
         }
         if (var5 != 0) {
-          this.a(this, param1, vj.field_P, ef.field_j, param2, jb.field_b, (byte) 37);
+          this.a(this, param1, vj.field_P, ef.field_j, param2, MouseWheelInput.field_b, (byte) 37);
           if (ma.field_I != 0) {
             if (this.a(false, mm.field_c, param2, param1, ma.field_I, this, lm.field_c)) {
               param0 = false;
@@ -383,13 +383,13 @@ class gl extends uf {
             b.a((byte) 16, this.f(105));
             return param0;
           }
-          this.a(79, ef.field_j, param2, param1, jb.field_b, this);
-          var12 = oj.field_w;
+          this.a(79, ef.field_j, param2, param1, MouseWheelInput.field_b, this);
+          var12 = SpriteState.field_w;
           if (var12 != null) {
             if (var12.field_r instanceof fe) {
               ((fe) (var12.field_r)).a((hj) null, var12, 98);
             }
-            oj.field_w = null;
+            SpriteState.field_w = null;
           }
           if (var7 != 0 &&
             ma.field_I != 0) {
@@ -415,13 +415,13 @@ class gl extends uf {
           b.a((byte) 16, this.f(105));
           return param0;
         }
-        this.a(79, ef.field_j, param2, param1, jb.field_b, this);
-        var11 = oj.field_w;
+        this.a(79, ef.field_j, param2, param1, MouseWheelInput.field_b, this);
+        var11 = SpriteState.field_w;
         if (var11 != null) {
           if (var11.field_r instanceof fe) {
             ((fe) (var11.field_r)).a((hj) null, var11, 98);
           }
-          oj.field_w = null;
+          SpriteState.field_w = null;
         }
         if (var7 != 0 &&
           var5 != 0 &&
@@ -457,7 +457,7 @@ class gl extends uf {
           if (param3 < 25) {
             return;
           }
-          var5_int = this.a(param2, param1, false, jb.field_b, ef.field_j) ? 1 : 0;
+          var5_int = this.a(param2, param1, false, MouseWheelInput.field_b, ef.field_j) ? 1 : 0;
           stackIn_4_0 = var5_int;
           if (this.field_s) {
             stackIn_5_1 = 0;

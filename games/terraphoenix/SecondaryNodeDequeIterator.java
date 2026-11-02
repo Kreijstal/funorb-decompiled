@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class ne implements Iterator {
-    private vh field_a;
-    private tc field_d;
-    private vh field_c;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkNode field_a;
+    private SecondaryNodeDeque field_d;
+    private DualLinkNode field_c;
     static String field_b;
     static int field_e;
 
@@ -28,9 +28,9 @@ final class ne implements Iterator {
           var1 = null;
           this.field_a = null;
         } else {
-          this.field_a = ((vh) (var1)).field_o;
+          this.field_a = ((DualLinkNode) (var1)).field_o;
         }
-        this.field_c = (vh) (var1);
+        this.field_c = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -39,7 +39,7 @@ final class ne implements Iterator {
         field_b = null;
     }
 
-    ne(tc param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_c = null;
         try {
           this.field_d = param0;

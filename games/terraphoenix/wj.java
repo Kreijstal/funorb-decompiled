@@ -28,7 +28,7 @@ final class wj {
           var2 = (bk.c(-25704)) ? 0 : 1;
         } else {
           if (null == ab.field_b) {
-            a.field_b = jb.a(480, 640, 0, 0, (byte) 112, nj.field_l);
+            a.field_b = MouseWheelInput.a(480, 640, 0, 0, (byte) 112, nj.field_l);
           } else {
             a.field_b = ab.field_b.b(0);
             ig.a(2, 12);
@@ -88,11 +88,11 @@ final class wj {
             if (va.field_e == mh.field_a) {
               if (param0) {
                 var10 = (String) null;
-                am.field_K = nh.a(oj.field_y, false, -95, param2, (String) null);
+                am.field_K = nh.a(SpriteState.field_y, false, -95, param2, (String) null);
               } else {
                 am.field_K = ji.a(-1, param3, false, param2);
               }
-              di.field_l.field_k = 0;
+              di.field_l.position = 0;
               di.field_l.i(14, 28);
               di.field_l.i(am.field_K.c(0).field_c, -115);
               bc.a(-1, 0);
@@ -104,7 +104,7 @@ final class wj {
             if (mh.field_a == s.field_c &&
               vc.a(-113, 1)) {
               var6_int = mk.field_j.a(-16384);
-              mk.field_j.field_k = 0;
+              mk.field_j.position = 0;
               if (0 != var6_int) {
                 qk.field_b = var6_int;
                 mh.field_a = vf.field_c;
@@ -116,7 +116,7 @@ final class wj {
             if (mh.field_a == cb.field_J &&
               vc.a(-110, 8)) {
               kd.field_c = mk.field_j.h((byte) 78);
-              mk.field_j.field_k = 0;
+              mk.field_j.position = 0;
               gj.a(param0, param4, 1, am.field_K, param5);
               mh.field_a = af.field_b;
             }
@@ -126,7 +126,7 @@ final class wj {
               var6_intLifetime1 = mk.field_j.a(param1 - 45782);
               og.field_e = null;
               qk.field_b = var6_intLifetime1;
-              mk.field_j.field_k = 0;
+              mk.field_j.position = 0;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
@@ -148,7 +148,7 @@ final class wj {
             }
             if (gb.field_B == mh.field_a &&
               cm.b((byte) -61)) {
-              oj.field_y = mk.field_j.h((byte) 78);
+              SpriteState.field_y = mk.field_j.h((byte) 78);
               mm.field_e = mk.field_j.a(-16384);
               mk.field_j.a(param1 ^ -19754);
               me.field_o = mk.field_j.i(param1 - 54976);
@@ -178,14 +178,14 @@ final class wj {
               kj.field_f = mk.field_j.e(-1);
               var11 = (CharSequence) ((Object) kj.field_f);
               jj.field_e = hm.a((byte) 2, var11);
-              db.field_b = mk.field_j.a(-16384);
+              MouseInputHandler.field_b = mk.field_j.a(-16384);
               mh.field_a = od.field_g;
               if (am.field_K.c(0) != rj.field_a) {
                 if (am.field_K.c(param1 ^ 29398) == hf.field_s) {
                   gf.field_u.a(dg.a(false), (byte) 117);
                 }
               } else {
-                te.field_g.a(dg.a(false), (byte) 117);
+                RasterBuffer.field_g.a(dg.a(false), (byte) 117);
               }
               vj.field_Q = false;
               if (var6 != null) {
@@ -201,7 +201,7 @@ final class wj {
                 }
               } else {
                 try {
-                  cd.a(dg.a(false), "zap", new Object[]{hi.a(oj.field_y, param1 - 41780)}, 10056);
+                  cd.a(dg.a(false), "zap", new Object[]{hi.a(SpriteState.field_y, param1 - 41780)}, 10056);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -237,7 +237,7 @@ final class wj {
             }
             if (null == ig.field_e) {
               if (vj.field_Q) {
-                if (30000L >= ce.b(1)) {
+                if (30000L >= IterableNodeHashTable.b(1)) {
                   bh.field_d = cl.field_I;
                 } else {
                   bh.field_d = qk.field_f;

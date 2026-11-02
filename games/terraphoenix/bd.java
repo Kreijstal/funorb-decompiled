@@ -5,11 +5,11 @@ import java.io.*;
 
 final class bd {
     private int field_h;
-    ci[] field_b;
+    Sprite[] field_b;
     private int field_e;
     private int field_l;
     static String[] field_f;
-    ci field_c;
+    Sprite field_c;
     static int field_d;
     private boolean field_i;
     static sa field_m;
@@ -133,7 +133,7 @@ final class bd {
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
-          he stackIn_13_0;
+          PlatformTaskDispatcher stackIn_13_0;
           java.net.URL stackIn_13_1;
           java.net.URL stackIn_13_2;
           java.net.URL stackIn_13_3;
@@ -187,7 +187,7 @@ final class bd {
               stackIn_14_2 = null;
               stackIn_14_5 = "" + pf.field_c;
             }
-            var5 = ((he) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(he.field_j).append("&v2=").append(he.field_d).append("&e=").append(var11).toString()), -71);
+            var5 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_j).append("&v2=").append(PlatformTaskDispatcher.field_d).append("&e=").append(var11).toString()), -71);
             while (var5.field_d == 0) {
               gi.a((byte) -122, 1L);
             }
@@ -254,7 +254,7 @@ final class bd {
         }
     }
 
-    final bd a(ci[] param0, byte param1) {
+    final bd a(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
         bd stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;

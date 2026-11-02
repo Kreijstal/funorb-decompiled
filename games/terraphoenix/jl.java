@@ -121,7 +121,7 @@ final class jl extends jc {
           }
           for (var2 = 1; var2 < rd.field_t; var2++) {
             for (var3 = rd.field_t - 1; var2 <= var3; var3--) {
-              if (tc.a(false, p.field_a[var3].field_a, 320, 240, p.field_a[var3].field_g) > tc.a(false, p.field_a[-1 + var3].field_a, 320, 240, p.field_a[-1 + var3].field_g)) {
+              if (SecondaryNodeDeque.a(false, p.field_a[var3].field_a, 320, 240, p.field_a[var3].field_g) > SecondaryNodeDeque.a(false, p.field_a[-1 + var3].field_a, 320, 240, p.field_a[-1 + var3].field_g)) {
                 var5 = p.field_a[var3];
                 var1 = var5;
                 p.field_a[var3] = p.field_a[var3 - 1];
@@ -137,7 +137,7 @@ final class jl extends jc {
         }
     }
 
-    final static void a(ci[] param0, int param1, int param2, int param3, byte param4, int param5) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3, byte param4, int param5) {
         int var22 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -329,7 +329,7 @@ final class jl extends jc {
         if (param1 >= -106) {
           jl.g((byte) -79);
         }
-        ci var6 = new ci(this.field_F.field_p, this.field_F.field_n);
+        Sprite var6 = new Sprite(this.field_F.field_p, this.field_F.field_n);
         il.a(1, var6);
         this.field_F.a(0, -128, param2, 0);
         ij.a(false);

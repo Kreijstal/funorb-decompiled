@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oi extends gb implements n {
-    static ci field_J;
+    static Sprite field_J;
     private eb[] field_K;
     private int[] field_L;
     private pk field_I;
@@ -157,7 +157,7 @@ final class oi extends gb implements n {
     }
 
     static {
-        field_J = new ci(128, 160);
+        field_J = new Sprite(128, 160);
         field_H = new java.awt.Color(10040319);
         field_M = new String[]{"Capture objective", "The alien with this icon is holding the data you need. Kill it at all costs.", "Once dead, the alien will drop the equipment on the floor. Send a soldier to pick it up by clicking on it's square.", "After the equipment is in your possession, get your whole remaining squad to the flashing areas of the map to complete your objective."};
     }

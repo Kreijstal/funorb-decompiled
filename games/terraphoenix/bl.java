@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bl {
-    static ci[] field_b;
+    static Sprite[] field_b;
     static boolean field_e;
     static int field_f;
     static fa field_a;
@@ -128,7 +128,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 124, "lowwalls");
                 if (var2 != null) {
-                  vh.field_h = ll.a(0, var2);
+                  DualLinkNode.field_h = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 99, "coverterr");
                 if (var2 != null) {
@@ -244,7 +244,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 100, "canpressundo");
                 if (var2 != null) {
-                  mj.field_c = ll.a(0, var2);
+                  SocketConnector.field_c = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 115, "efficency");
                 if (null != var2) {
@@ -276,7 +276,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 122, "yes");
                 if (null != var2) {
-                  el.field_c = ll.a(0, var2);
+                  ClientException.field_c = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 78, "no");
                 if (null != var2) {
@@ -412,7 +412,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 109, "pressltoreload");
                 if (var2 != null) {
-                  ql.field_f = ll.a(0, var2);
+                  ProxySocketConnector.field_f = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 84, "closemap");
                 if (var2 != null) {
@@ -428,11 +428,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 119, "selectsprint");
                 if (null != var2) {
-                  db.field_a = ll.a(0, var2);
+                  MouseInputHandler.field_a = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 92, "togglescematic");
                 if (var2 != null) {
-                  of.field_i = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_i = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 120, "movetolevel");
                 if (var2 != null) {
@@ -452,7 +452,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 99, "select");
                 if (var2 != null) {
-                  ne.field_b = ll.a(param0 - 96, var2);
+                  SecondaryNodeDequeIterator.field_b = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 125, "recruitnew");
                 if (null != var2) {
@@ -464,7 +464,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 97, "build");
                 if (null != var2) {
-                  c.field_b = ll.a(0, var2);
+                  NodeHashTableIterator.field_b = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 102, "remove");
                 if (var2 != null) {
@@ -552,7 +552,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 117, "armourcolon");
                 if (null != var2) {
-                  of.field_n = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_n = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 71, "damagecolon");
                 if (var2 != null) {
@@ -784,87 +784,87 @@ final class bl {
                 }
                 var2 = il.a((byte) 104, "weaponresearchnames,0");
                 if (var2 != null) {
-                  of.field_h[0] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[0] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 119, "weaponresearchnames,1");
                 if (var2 != null) {
-                  of.field_h[1] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[1] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 71, "weaponresearchnames,2");
                 if (var2 != null) {
-                  of.field_h[2] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 125, "weaponresearchnames,3");
                 if (null != var2) {
-                  of.field_h[3] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[3] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 92, "weaponresearchnames,4");
                 if (var2 != null) {
-                  of.field_h[4] = ll.a(param0 - 96, var2);
+                  ImageProducerRasterBuffer.field_h[4] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 80, "weaponresearchnames,5");
                 if (null != var2) {
-                  of.field_h[5] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[5] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 127, "weaponresearchnames,6");
                 if (var2 != null) {
-                  of.field_h[6] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[6] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 91, "weaponresearchnames,7");
                 if (null != var2) {
-                  of.field_h[7] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[7] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 100, "weaponresearchnames,8");
                 if (null != var2) {
-                  of.field_h[8] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[8] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 88, "weaponresearchnames,9");
                 if (var2 != null) {
-                  of.field_h[9] = ll.a(sl.a((int) param0, 96), var2);
+                  ImageProducerRasterBuffer.field_h[9] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 122, "weaponresearchnames,10");
                 if (var2 != null) {
-                  of.field_h[10] = ll.a(param0 - 96, var2);
+                  ImageProducerRasterBuffer.field_h[10] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 81, "weaponresearchnames,11");
                 if (null != var2) {
-                  of.field_h[11] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[11] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 88, "weaponresearchnames,12");
                 if (null != var2) {
-                  of.field_h[12] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[12] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 101, "weaponresearchnames,13");
                 if (var2 != null) {
-                  of.field_h[13] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[13] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 75, "weaponresearchnames,14");
                 if (var2 != null) {
-                  of.field_h[14] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[14] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 105, "weaponresearchnames,15");
                 if (null != var2) {
-                  of.field_h[15] = ll.a(param0 - 96, var2);
+                  ImageProducerRasterBuffer.field_h[15] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 99, "weaponresearchnames,16");
                 if (var2 != null) {
-                  of.field_h[16] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[16] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 125, "weaponresearchnames,17");
                 if (var2 != null) {
-                  of.field_h[17] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[17] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 71, "weaponresearchnames,18");
                 if (var2 != null) {
-                  of.field_h[18] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[18] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 95, "weaponresearchnames,19");
                 if (null != var2) {
-                  of.field_h[19] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[19] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 94, "weaponresearchnames,20");
                 if (null != var2) {
-                  of.field_h[20] = ll.a(0, var2);
+                  ImageProducerRasterBuffer.field_h[20] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 97, "weapondescriptions,0");
                 if (var2 != null) {
@@ -1414,7 +1414,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 86, "captain");
                 if (null != var2) {
-                  cf.field_c = ll.a(param0 ^ 96, var2);
+                  GameKeyHandler.field_c = ll.a(param0 ^ 96, var2);
                 }
                 var2 = il.a((byte) 82, "benefits_in,0");
                 if (null != var2) {
@@ -1474,7 +1474,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 94, "_6000pts");
                 if (null != var2) {
-                  c.field_c = ll.a(0, var2);
+                  NodeHashTableIterator.field_c = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 106, "_10000pts");
                 if (var2 != null) {
@@ -1514,7 +1514,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 120, "Soldier");
                 if (null != var2) {
-                  vh.field_n = ll.a(0, var2);
+                  DualLinkNode.field_n = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 116, "Turret");
                 if (var2 != null) {
@@ -2196,7 +2196,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 102, "finalscore");
                 if (var2 != null) {
-                  jb.field_c = ll.a(param0 ^ 96, var2);
+                  MouseWheelInput.field_c = ll.a(param0 ^ 96, var2);
                 }
                 var2 = il.a((byte) 115, "hardmodeunlocked");
                 if (var2 != null) {
@@ -2232,7 +2232,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 122, "act4");
                 if (var2 != null) {
-                  ce.field_d = ll.a(0, var2);
+                  IterableNodeHashTable.field_d = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 98, "act3");
                 if (null != var2) {
@@ -2874,11 +2874,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 104, "keycode_COMMA");
                 if (null != var2) {
-                  uf.field_b = var2[0] & 255;
+                  IntrusiveNode.field_b = var2[0] & 255;
                 }
                 var2 = il.a((byte) 91, "keycode_FULLSTOP");
                 if (null != var2) {
-                  ne.field_e = 255 & var2[0];
+                  SecondaryNodeDequeIterator.field_e = 255 & var2[0];
                 }
                 nj.field_i = null;
             }
@@ -2906,8 +2906,8 @@ final class bl {
                   throw qk.a((Throwable) ((Object) stackIn_2491_0), ((StringBuilder) (Object) stackIn_2491_1).append(stackIn_2492_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2500_0 = (!eh.field_j);
-                  eh.field_j = stackIn_2500_0;
+                  stackIn_2500_0 = (!GameApplet.field_j);
+                  GameApplet.field_j = stackIn_2500_0;
                 }
             }
         }

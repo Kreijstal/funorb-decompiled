@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ic extends fd {
-    private ci[] field_y;
+    private Sprite[] field_y;
     private int field_w;
     private int field_u;
     static jj field_s;
-    static ci field_t;
+    static Sprite field_t;
     static String[] field_x;
     private int field_v;
 

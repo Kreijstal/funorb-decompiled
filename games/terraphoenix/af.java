@@ -73,9 +73,9 @@ abstract class af implements rc {
           var8Lifetime1 = bk.a((byte) 92, var6Lifetime1) >> 8;
           var9Lifetime1 = im.a(var6Lifetime1, true) >> 8;
           if (-1 != ef.field_j &&
-            jb.field_b != -1) {
+            MouseWheelInput.field_b != -1) {
             var9Lifetime1 = -128;
-            var8Lifetime1 = 240 - jb.field_b;
+            var8Lifetime1 = 240 - MouseWheelInput.field_b;
             var7Lifetime1 = -320 + ef.field_j;
           }
           if (param0 != -2766) {
@@ -103,7 +103,7 @@ abstract class af implements rc {
             var17 = cm.field_b[var16];
             ad.a(var16, -6);
             for (var18 = 0; 3 > var18; var18++) {
-              ld.field_a[var18] = ld.field_a[var18] + vh.field_j[var15][var18];
+              ld.field_a[var18] = ld.field_a[var18] + DualLinkNode.field_j[var15][var18];
             }
             nd.a(var17, true, ik.field_c, 37, false, ld.field_a, false);
             lm.a(var17, var13Lifetime1, var7Lifetime1, var12Lifetime1, var9Lifetime1, 0, var8Lifetime1, var14);

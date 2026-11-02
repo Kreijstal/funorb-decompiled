@@ -27,7 +27,7 @@ class vj extends eb {
           this.field_N = null;
           if (this.field_s) {
             var5_int = -this.field_w - param2 + ef.field_j;
-            var6 = jb.field_b - param1 - this.field_u;
+            var6 = MouseWheelInput.field_b - param1 - this.field_u;
             this.field_N = this.a(2, var5_int, var6);
           }
           return;

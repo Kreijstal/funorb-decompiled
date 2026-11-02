@@ -92,7 +92,7 @@ final class fc {
     final static void a(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
-          ci var3 = null;
+          Sprite var3 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -102,8 +102,8 @@ final class fc {
           try {
             try {
               if (param1 != 100) {
-                var3 = (ci) null;
-                fc.a(-76, (ci) null, -49, -91, 0);
+                var3 = (Sprite) null;
+                fc.a(-76, (Sprite) null, -49, -91, 0);
               }
               var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
               param0.getAppletContext().showDocument(bb.a((byte) 112, var2, param0), "_top");
@@ -132,7 +132,7 @@ final class fc {
         }
     }
 
-    final static void a(int param0, ci param1, int param2, int param3, int param4) {
+    final static void a(int param0, Sprite param1, int param2, int param3, int param4) {
         int var16 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
@@ -331,7 +331,7 @@ final class fc {
           if (param0 != 43) {
             field_h = (String) null;
           }
-          jb.field_b = ch.field_d;
+          MouseWheelInput.field_b = ch.field_d;
           ja.field_l = sj.field_c;
           sj.field_c = false;
           ma.field_I = sh.field_z;

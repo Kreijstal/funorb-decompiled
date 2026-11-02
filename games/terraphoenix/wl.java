@@ -286,7 +286,7 @@ final class wl extends lj {
             var6 = (String) null;
             wl.a((java.net.URL) null, (String) null, (String) null, true, -103);
           }
-          if (!vh.a(param1, param3, param2, true)) {
+          if (!DualLinkNode.a(param1, param3, param2, true)) {
             return null;
           }
           stackIn_6_0 = fm.a(param0.b(param1, 127, param3), 38);

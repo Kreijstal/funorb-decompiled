@@ -37,7 +37,7 @@ final class km {
           km.a((byte) 11);
         }
         bg var1 = new bg(ah.field_A, sb.field_j, ha.field_s[0], hj.field_K[0], sb.field_m[0], rf.field_p[0], qc.field_b[0], wb.field_a);
-        mj.a((byte) 79);
+        SocketConnector.a((byte) 79);
         return var1;
     }
 
@@ -72,7 +72,7 @@ final class km {
         int var15 = 0;
         int var16 = 0;
         byte[] var17 = null;
-        dh var18 = null;
+        PacketBuffer var18 = null;
         byte[] var22 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -89,7 +89,7 @@ final class km {
         int var13Lifetime1Lifetime1;
         var16 = Terraphoenix.field_V;
         try {
-          var18 = new dh(qg.a(-1, param1));
+          var18 = new PacketBuffer(qg.a(-1, param1));
           var4 = var18.a(-16384);
           if (5 <= var4 &&
             var4 <= 7) {

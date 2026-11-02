@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ua {
-    static ci field_b;
+    static Sprite field_b;
     private int field_a;
     private ak field_i;
     private int field_h;
@@ -66,7 +66,7 @@ final class ua {
                 this.field_i.a(-1, 6, ad.field_m, 0);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param4 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -82,7 +82,7 @@ final class ua {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = (ad.field_m[3] & 255) + ((-16777216 & ad.field_m[0] << 24) + ((255 & ad.field_m[1]) << 16)) + (65280 & ad.field_m[2] << 8);
                         var13 = ad.field_m[9] & 255;
@@ -98,7 +98,7 @@ final class ua {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var12 = (255 & ad.field_m[3]) + (ad.field_m[2] << 8 & 65280);
                         var11 = ((255 & ad.field_m[0]) << 8) + (255 & ad.field_m[1]);

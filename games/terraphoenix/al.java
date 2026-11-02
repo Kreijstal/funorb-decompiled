@@ -19,7 +19,7 @@ abstract class al extends ei {
         return super.i(61);
     }
 
-    final static ci[] a(int param0, int param1, int param2, int param3, byte param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 == -123) {
           return oh.a(param2, 1, 1, 3, param1, 1, 1, param0, param3);
         }

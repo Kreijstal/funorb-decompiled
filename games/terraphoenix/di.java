@@ -3,7 +3,7 @@
  */
 abstract class di extends af implements pa {
     static String[] field_h;
-    static ci field_k;
+    static Sprite field_k;
     private ej field_j;
     static fa field_i;
     static int field_e;
@@ -15,7 +15,7 @@ abstract class di extends af implements pa {
         if (param0 != -25177) {
           return (vg) null;
         }
-        return cf.field_a;
+        return GameKeyHandler.field_a;
     }
 
     abstract String a(String param0, int param1);
@@ -115,7 +115,7 @@ abstract class di extends af implements pa {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         ja.c((byte) -120);
         if (param2 != 16105) {
-          field_k = (ci) null;
+          field_k = (Sprite) null;
         }
         l.i(param4, param1, param0, param3);
     }

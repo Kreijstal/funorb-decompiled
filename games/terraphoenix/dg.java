@@ -3,7 +3,7 @@
  */
 final class dg {
     static byte[][] field_e;
-    static ci field_a;
+    static Sprite field_a;
     static boolean field_d;
     static im field_c;
     static boolean field_b;
@@ -83,11 +83,11 @@ final class dg {
           }
           while (b.a((byte) -102)) {
             var1.k(-17410, 8);
-            fieldTemp$0 = var1.field_k + 1;
-            var1.field_k = var1.field_k + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            ql.a(-124, var1);
-            di.field_l.j(var1.field_k - var2, -119);
+            ProxySocketConnector.a(-124, var1);
+            di.field_l.j(var1.position - var2, -119);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

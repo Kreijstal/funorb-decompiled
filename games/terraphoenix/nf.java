@@ -5,11 +5,11 @@ final class nf implements Runnable {
     static String field_a;
     static int field_h;
     static boolean field_c;
-    he field_e;
+    PlatformTaskDispatcher field_e;
     volatile boolean field_b;
     static int[] field_f;
     volatile nk[] field_d;
-    static ci[] field_g;
+    static Sprite[] field_g;
     volatile boolean field_i;
 
     public final void run() {
@@ -35,7 +35,7 @@ final class nf implements Runnable {
               }
               gi.a((byte) -68, 10L);
               var5 = (Object) null;
-              cf.a(this.field_e, false, (Object) null);
+              GameKeyHandler.a(this.field_e, false, (Object) null);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

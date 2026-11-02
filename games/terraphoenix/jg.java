@@ -4,10 +4,10 @@
 import java.io.*;
 
 final class jg extends al {
-    static ci field_ib;
+    static Sprite field_ib;
     static h field_kb;
     static String[] field_jb;
-    static ci field_hb;
+    static Sprite field_hb;
     static int field_gb;
 
     final static fa a(int param0, int param1, boolean param2, boolean param3, int param4, boolean param5) {
@@ -88,6 +88,6 @@ final class jg extends al {
 
     static {
         field_jb = new String[]{"", "", "We believe that we could modify the alien's armoured suits to fit our soldiers and provide them with much better protection against the aliens' weapons.", "By implanting a shield module within a suit of battle armour a much better form of protection could be created to keep our soldiers alive."};
-        field_ib = new ci(540, 140);
+        field_ib = new Sprite(540, 140);
     }
 }

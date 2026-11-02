@@ -48,7 +48,7 @@ final class vg extends lj {
         return;
     }
 
-    private final void a(uf param0, we param1) {
+    private final void a(IntrusiveNode param0, we param1) {
         while (true) {
           if (param0 == this.field_o.field_a) {
             ha.a(127, param0, param1);
@@ -82,7 +82,7 @@ final class vg extends lj {
     private final void a(we param0) {
         param0.b((byte) 12);
         param0.a();
-        uf var2 = this.field_o.field_a.field_d;
+        IntrusiveNode var2 = this.field_o.field_a.field_d;
         if (var2 == this.field_o.field_a) {
           this.field_l = -1;
         } else {
@@ -91,7 +91,7 @@ final class vg extends lj {
     }
 
     final synchronized void a(lj param0) {
-        this.field_m.a((uf) (param0), (byte) 0);
+        this.field_m.a((IntrusiveNode) (param0), (byte) 0);
     }
 
     final int d() {

@@ -3,17 +3,17 @@
  */
 class g extends wa {
     private int field_U;
-    ci[] field_eb;
-    ci[] field_V;
+    Sprite[] field_eb;
+    Sprite[] field_V;
     int field_pb;
-    private ci[] field_sb;
+    private Sprite[] field_sb;
     private int field_J;
     static int field_cb;
     private int field_db;
     private int field_jb;
     private int field_F;
     int field_ib;
-    private ci field_fb;
+    private Sprite field_fb;
     private boolean field_Z;
     private int field_Cb;
     private String field_K;
@@ -23,17 +23,17 @@ class g extends wa {
     private int field_Q;
     private int field_A;
     int field_R;
-    private ci field_y;
+    private Sprite field_y;
     private jj field_L;
     private int field_v;
     int field_x;
-    private ci field_xb;
+    private Sprite field_xb;
     private int field_O;
     int field_W;
     static String field_qb;
     private int field_P;
     boolean field_z;
-    ci[] field_X;
+    Sprite[] field_X;
     private boolean field_Ab;
     boolean field_zb;
     private int field_wb;
@@ -47,11 +47,11 @@ class g extends wa {
     private int field_M;
     private pk field_S;
     private boolean field_T;
-    ci field_ob;
-    private ci field_w;
+    Sprite field_ob;
+    private Sprite field_w;
     boolean field_kb;
     private int field_H;
-    private ci[] field_yb;
+    private Sprite[] field_yb;
     static boolean field_tb;
     private int field_bb;
     private int field_Y;
@@ -156,7 +156,7 @@ class g extends wa {
         if (oh.field_f == 0) {
           this.field_N = 0;
         }
-        stackIn_35_1 = (!gi.field_w) && (ef.field_j >= l.field_b) && (l.field_f > ef.field_j) && (jb.field_b >= l.field_d) && (l.field_c > jb.field_b);
+        stackIn_35_1 = (!gi.field_w) && (ef.field_j >= l.field_b) && (l.field_f > ef.field_j) && (MouseWheelInput.field_b >= l.field_d) && (l.field_c > MouseWheelInput.field_b);
         this.field_D = stackIn_35_1;
         stackIn_40_1 = (this.field_D) && (this.field_N == oh.field_f) && (param4);
         this.field_Z = stackIn_40_1;
@@ -176,7 +176,7 @@ class g extends wa {
         l.c(var8, var9, var10, var11);
         if (this.field_N != 0 &&
           this.field_kb) {
-          this.field_ib = jb.field_b - (this.field_Y + param0);
+          this.field_ib = MouseWheelInput.field_b - (this.field_Y + param0);
           this.field_R = -this.field_Q + (ef.field_j - param5);
           if (this.field_R < 0) {
             this.field_R = 0;
@@ -203,7 +203,7 @@ class g extends wa {
             this.field_L = new jj();
           }
           if (param1 != -14951) {
-            this.field_w = (ci) null;
+            this.field_w = (Sprite) null;
           }
           this.field_L.a(param0, -16611);
         } catch (RuntimeException runtimeException) {
@@ -216,7 +216,7 @@ class g extends wa {
         mm.field_b = !param1 ? true : false;
         this.a(0, l.field_j, (byte) -8, l.field_k, true, 0);
         if (param0 >= -7) {
-          this.field_ob = (ci) null;
+          this.field_ob = (Sprite) null;
         }
     }
 
@@ -371,8 +371,8 @@ class g extends wa {
         int var13;
         int var14;
         int var15;
-        ci[] var16;
-        ci var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;

@@ -134,7 +134,7 @@ final class pd {
             }
             var2 = 1;
           }
-          ai.field_i.a(bb.a(-88, jb.field_b, ef.field_j), 127, bb.a(-110, lm.field_c, mm.field_c));
+          ai.field_i.a(bb.a(-88, MouseWheelInput.field_b, ef.field_j), 127, bb.a(-110, lm.field_c, mm.field_c));
           if (ai.field_i.c((byte) -118)) {
             var1_int = 1;
           }

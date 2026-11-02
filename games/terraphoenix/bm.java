@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bm {
-    private ci[] field_a;
+    private Sprite[] field_a;
     static String field_b;
     static String field_c;
 
@@ -112,7 +112,7 @@ final class bm {
         return new dc(param0);
     }
 
-    bm(ci[] param0) {
+    bm(Sprite[] param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

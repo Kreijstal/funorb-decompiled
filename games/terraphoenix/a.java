@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class a {
-    static db field_d;
-    static ck field_b;
+    static MouseInputHandler field_d;
+    static DelegatingCanvas field_b;
     static String field_a;
     static int[] field_c;
     static String field_e;
@@ -16,7 +16,7 @@ final class a {
     }
 
     final static void a(int param0, int param1) {
-        c.field_i = th.field_c[param0];
+        NodeHashTableIterator.field_i = th.field_c[param0];
         si.field_hb = jc.field_C[param0];
         qb.field_e = dk.field_h[param0];
         int var2 = 48 % ((-54 - param1) / 46);
@@ -80,7 +80,7 @@ final class a {
     }
 
     static {
-        field_d = new db();
+        field_d = new MouseInputHandler();
         field_a = "Passwords can only contain letters and numbers";
         field_e = "Instructions";
     }

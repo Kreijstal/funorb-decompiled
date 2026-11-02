@@ -70,7 +70,7 @@ final class dk {
             var16 = param0;
             var17 = param2;
             var19 = 1;
-            L5: while (true) {
+            scanLoop1: while (true) {
               if (var19 <= var11) {
                 var12 = param1 + var8_int * var19 / var11;
                 var13 = var19 * var9 / var11 + param0;
@@ -78,7 +78,7 @@ final class dk {
                 var18 = this.a(122, var13, var14, var12);
                 stackIn_159_0 = ~var19;
                 if (var21 != 0) {
-                  break L5;
+                  break scanLoop1;
                 }
                 if (stackIn_159_0 != ~var11 &&
                   null != var18 &&
@@ -328,11 +328,11 @@ final class dk {
         var21 = Terraphoenix.field_V;
         try {
           var8_int = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (var8_int < this.field_b) {
               stackIn_13_0 = 0;
               if (var21 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var9 = stackIn_13_0;
               while (this.field_e > var9) {
@@ -340,7 +340,7 @@ final class dk {
                 var9++;
               }
               var8_int++;
-              continue L0;
+              continue scanLoop1;
             }
             var8_int = param1;
             stackIn_13_0 = param1;
@@ -371,7 +371,7 @@ final class dk {
                 decompiledFrameRemainder0 = (var21 == 0);
                 if (decompiledFrameRemainder0) {
                   var16 = stackIn_144_0;
-                  L11: while (true) {
+                  scanLoop2: while (true) {
                     stackIn_39_0 = ~var9;
                     stackIn_39_1 = ~var16;
                     if (stackIn_39_0 <= stackIn_39_1) {
@@ -473,7 +473,7 @@ final class dk {
                         var17++;
                       }
                       var16++;
-                      continue L11;
+                      continue scanLoop2;
                     }
                     break;
                   }
@@ -496,7 +496,7 @@ final class dk {
               var15 = null;
               var19 = param3;
               var20 = param5;
-              L30: while (true) {
+              scanLoop3: while (true) {
                 if (~param1 == ~var19 &&
                   var20 == param4) {
                   stackIn_191_0 = var15;
@@ -506,7 +506,7 @@ final class dk {
                 var18 = this.field_d[var19][var20];
                 var16 = 0;
                 var12 = -1;
-                L32: while (true) {
+                scanLoop4: while (true) {
                   stackIn_153_0 = ~var12;
                   stackIn_153_1 = -2;
                   do {
@@ -532,7 +532,7 @@ final class dk {
                           var13++;
                         }
                         var12++;
-                        continue L32;
+                        continue scanLoop4;
                       }
                     } else {
                       if (null != var15) {
@@ -548,7 +548,7 @@ final class dk {
                       stackIn_185_0 = ~var16;
                     }
                     if (stackIn_185_0 != -1) {
-                      continue L30;
+                      continue scanLoop3;
                     }
                     stackIn_153_0 = ~var17;
                     stackIn_153_1 = -1;
@@ -556,7 +556,7 @@ final class dk {
                   break;
                 }
                 if (stackIn_153_0 != stackIn_153_1) {
-                  continue L30;
+                  continue scanLoop3;
                 }
                 break;
               }
@@ -609,7 +609,7 @@ final class dk {
                   le.field_q == null) {
                   sj.field_b = -(var5 * 32) + 32 * var4;
                   vf.field_a = -1;
-                  uf.field_c = -1;
+                  IntrusiveNode.field_c = -1;
                   lg.field_c = var4 * 16 + var5 * 16;
                 }
                 hl.field_a = true;
@@ -899,17 +899,17 @@ final class dk {
               param2.field_U = var6;
               var35 = (double)(var12 - 100 * var28);
               var37 = 0;
-              L51: while (true) {
+              scanLoop1: while (true) {
                 var37++;
                 if (var37 < 10000) {
                   var38 = this.a(param0 - 9965, var27, var28, var26);
-                  L54: while (true) {
+                  scanLoop2: while (true) {
                     if (null == var38) {
                       var28--;
                       var35 = var35 + 100.0;
                       var38 = this.a(-75, var27, var28, var26);
                       if (var41 != 0) {
-                        break L54;
+                        break scanLoop2;
                       }
                       if (var41 == 0) {
                         continue;
@@ -985,13 +985,13 @@ final class dk {
                   if (var26 > 0 &&
                     var26 < (this.field_b - 1)) {
                     var38Lifetime1 = this.a(102, var27, var28, var26);
-                    L71: while (true) {
+                    scanLoop3: while (true) {
                       if (null == var38Lifetime1) {
                         var28--;
                         var35 = var35 + 100.0;
                         var38Lifetime1 = this.a(param0 ^ 10011, var27, var28, var26);
                         if (var41 != 0) {
-                          break L71;
+                          break scanLoop3;
                         }
                         if (var41 == 0) {
                           continue;
@@ -1000,11 +1000,11 @@ final class dk {
                       var19 = var19 + var31;
                       break;
                     }
-                    L74: while (true) {
+                    scanLoop4: while (true) {
                       if (null != var38Lifetime1.field_C) {
                         stackIn_366_0 = $cfr$dcmpg(100.0, var35);
                         if (var41 != 0) {
-                          break L74;
+                          break scanLoop4;
                         }
                         if (stackIn_366_0 < 0) {
                           var35 = var35 - 100.0;
@@ -1047,7 +1047,7 @@ final class dk {
                     if (var27 > 0 &&
                       var27 < -1 + this.field_e) {
                       var38Lifetime1Lifetime1 = this.a(-56, var27, var28, var26);
-                      L82: while (true) {
+                      scanLoop5: while (true) {
                         boolean decompiledFrameRemainder1 = true;
                         if (var38Lifetime1Lifetime1 == null) {
                           var35 = var35 + 100.0;
@@ -1063,7 +1063,7 @@ final class dk {
                           while (null != var38Lifetime1Lifetime1.field_C) {
                             stackIn_446_0 = $cfr$dcmpl(var35, 100.0);
                             if (var41 != 0) {
-                              break L82;
+                              break scanLoop5;
                             }
                             if (stackIn_446_0 <= 0) {
                               break;
@@ -1104,9 +1104,9 @@ final class dk {
                         return true;
                       }
                       if (var41 == 0) {
-                        continue L51;
+                        continue scanLoop1;
                       }
-                      break L51;
+                      break scanLoop1;
                     }
                     return false;
                   }
@@ -1194,12 +1194,12 @@ final class dk {
         int var7Lifetime1Lifetime2;
         var16 = Terraphoenix.field_V;
         try {
-          L0: while (true) {
+          scanLoop1: while (true) {
             var2_int = 1;
             var3 = 0;
             var4 = 0;
             var5 = 0;
-            L1: while (true) {
+            scanLoop2: while (true) {
               stackIn_3_0 = this.field_b;
               stackIn_3_1 = var5;
               do {
@@ -1239,7 +1239,7 @@ final class dk {
                       var6++;
                     }
                     var5++;
-                    continue L1;
+                    continue scanLoop2;
                   }
                 } else {
                   stackIn_43_0 = var2_int;
@@ -1487,7 +1487,7 @@ final class dk {
                   stackIn_416_0 = var2_int;
                 }
                 if (stackIn_416_0 == 0) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 stackIn_3_0 = param0;
                 stackIn_3_1 = 1;
@@ -1716,12 +1716,12 @@ final class dk {
         int var7Lifetime1;
         var9 = Terraphoenix.field_V;
         try {
-          L0: while (true) {
+          scanLoop1: while (true) {
             var2_int = 1;
             var3 = 0;
             var4 = 0;
             var5 = 0;
-            L1: while (true) {
+            scanLoop2: while (true) {
               stackIn_3_0 = this.field_b;
               stackIn_3_1 = var5;
               do {
@@ -1761,7 +1761,7 @@ final class dk {
                       var6++;
                     }
                     var5++;
-                    continue L1;
+                    continue scanLoop2;
                   }
                 } else {
                   stackIn_43_0 = var2_int;
@@ -1773,11 +1773,11 @@ final class dk {
                   if (var5 >= 16) {
                     var6Lifetime1 = 5;
                     var7Lifetime1 = 8;
-                    var8 = of.field_k[wf.a("City" + ((int)((double)var6Lifetime1 * Math.random()) + 1), true)];
+                    var8 = ImageProducerRasterBuffer.field_k[wf.a("City" + ((int)((double)var6Lifetime1 * Math.random()) + 1), true)];
                     if (var5 >= 32) {
-                      var8 = of.field_k[wf.a("City" + (1 + (int)((double)var7Lifetime1 * Math.random())), true)];
+                      var8 = ImageProducerRasterBuffer.field_k[wf.a("City" + (1 + (int)((double)var7Lifetime1 * Math.random())), true)];
                       if (100.0 * Math.random() < 90.0) {
-                        var8 = of.field_k[wf.a("City" + (6 + (int)(3.0 * Math.random())), true)];
+                        var8 = ImageProducerRasterBuffer.field_k[wf.a("City" + (6 + (int)(3.0 * Math.random())), true)];
                       }
                     }
                     if (null != var8) {
@@ -1786,7 +1786,7 @@ final class dk {
                   }
                 }
                 if (var2_int == 0) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 stackOut_54_0 = param0;
                 stackIn_3_0 = stackOut_54_0;
@@ -1924,11 +1924,11 @@ final class dk {
             boolean decompiledFrameCompleted0 = true;
             if (~param6 != ~param5) {
               var14_int = 0;
-              L6: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_b > var14_int) {
                   stackIn_41_0 = 0;
                   if (var23 != 0) {
-                    break L6;
+                    break scanLoop1;
                   }
                   var15 = stackIn_41_0;
                   while (var15 < this.field_e) {
@@ -1936,7 +1936,7 @@ final class dk {
                     var15++;
                   }
                   var14_int++;
-                  continue L6;
+                  continue scanLoop1;
                 }
                 var14_int = param8;
                 stackIn_41_0 = param8;
@@ -1958,7 +1958,7 @@ final class dk {
                   break;
                 }
                 var21 = stackIn_179_0;
-                L14: while (true) {
+                scanLoop2: while (true) {
                   stackIn_47_0 = ~var15Lifetime2;
                   stackIn_47_1 = ~var21;
                   if (stackIn_47_0 <= stackIn_47_1) {
@@ -2084,7 +2084,7 @@ final class dk {
                       var22++;
                     }
                     var21++;
-                    continue L14;
+                    continue scanLoop2;
                   }
                   break;
                 }
@@ -2140,11 +2140,11 @@ final class dk {
         var4 = Terraphoenix.field_V;
         try {
           var2_int = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (this.field_b > var2_int) {
               stackIn_13_0 = 0;
               if (var4 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var3 = stackIn_13_0;
               while (this.field_e > var3) {
@@ -2152,7 +2152,7 @@ final class dk {
                 var3++;
               }
               var2_int++;
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_13_0 = -7 / ((param0 - 28) / 46);
             break;
@@ -2303,7 +2303,7 @@ final class dk {
           var6 = param3[var5_int++];
           var7 = param3[var5_int++];
           var8 = param0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             stackIn_5_0 = ~var8;
             stackIn_5_1 = ~(param0 + var6);
             if (stackIn_5_0 > stackIn_5_1) {
@@ -2311,7 +2311,7 @@ final class dk {
                 return;
               }
               var9 = param2;
-              L4: while (true) {
+              scanLoop2: while (true) {
                 stackIn_9_0 = ~var9;
                 stackIn_9_1 = ~(var7 + param2);
                 if (stackIn_9_0 > stackIn_9_1) {
@@ -2389,12 +2389,12 @@ final class dk {
                     }
                   }
                   var9++;
-                  continue L4;
+                  continue scanLoop2;
                 }
                 break;
               }
               var8++;
-              continue L0;
+              continue scanLoop1;
             }
             break;
           }
@@ -2530,7 +2530,7 @@ final class dk {
             return stackIn_3_0;
           }
           var8_int = 0;
-          L0: while (this.field_b > var8_int) {
+          scanLoop1: while (this.field_b > var8_int) {
             var9_int = 0;
             while (true) {
               if (this.field_e > var9_int) {
@@ -2545,7 +2545,7 @@ final class dk {
               break;
             }
             if (var22 == 0) {
-              continue L0;
+              continue scanLoop1;
             }
             break;
           }
@@ -2584,7 +2584,7 @@ final class dk {
                   decompiledFrameRemainder0 = (var22 == 0);
                   if (decompiledFrameRemainder0) {
                     var17 = stackIn_167_0;
-                    L13: while (true) {
+                    scanLoop2: while (true) {
                       stackIn_55_0 = var17;
                       stackIn_55_1 = var11;
                       if (stackIn_55_0 <= stackIn_55_1) {
@@ -2685,7 +2685,7 @@ final class dk {
                           var18++;
                         }
                         var17++;
-                        continue L13;
+                        continue scanLoop2;
                       }
                       break;
                     }
@@ -2717,7 +2717,7 @@ final class dk {
                 var16 = null;
                 var20 = param5;
                 var21 = param4;
-                L37: while (true) {
+                scanLoop3: while (true) {
                   if (var20 == param2 &&
                     var21 == param0) {
                     stackIn_228_0 = var16;
@@ -2727,7 +2727,7 @@ final class dk {
                   var18Lifetime1 = 0;
                   var17Lifetime1 = 0;
                   stackIn_189_0 = -1;
-                  L39: while (true) {
+                  scanLoop4: while (true) {
                     var14Lifetime1 = stackIn_189_0;
                     while (true) {
                       stackIn_191_0 = -2;
@@ -2766,14 +2766,14 @@ final class dk {
                         stackIn_222_0 = ~var17Lifetime1;
                       }
                       if (stackIn_222_0 != -1) {
-                        continue L37;
+                        continue scanLoop3;
                       }
                       stackIn_189_0 = var18Lifetime1;
                       if (var22 != 0) {
-                        continue L39;
+                        continue scanLoop4;
                       }
                       if (stackIn_189_0 != 0) {
-                        continue L37;
+                        continue scanLoop3;
                       }
                       stackIn_226_0 = null;
                       return (ue) (stackIn_226_0);
@@ -2899,16 +2899,16 @@ final class dk {
             l.f(0, 0, 128, 160, 0);
             k.field_f.a(0);
           }
-          uf.field_c = -1;
+          IntrusiveNode.field_c = -1;
           vf.field_a = -1;
           var11 = var7;
-          L4: while (true) {
+          scanLoop1: while (true) {
             if (var8 >= var11) {
               var5 += 32;
               var6 += 16;
               stackIn_189_0 = var9;
               if (var17 != 0) {
-                break L4;
+                break scanLoop1;
               }
               var12 = stackIn_189_0;
               while (var10 >= var12) {
@@ -2916,7 +2916,7 @@ final class dk {
                 var6 += 16;
                 stackIn_184_0 = var5;
                 stackIn_184_1 = -32;
-                L10: {
+                regionExit2: {
                   boolean decompiledFrameCompleted7 = true;
                   boolean decompiledFrameCompleted6 = true;
                   boolean decompiledFrameCompleted4 = true;
@@ -2940,7 +2940,7 @@ final class dk {
                         } else {
                           wi.a((byte) -80, this.field_i, var5, var6);
                         }
-                        if (uf.field_c != var11) {
+                        if (IntrusiveNode.field_c != var11) {
                           decompiledFrameCompleted7 = false;
                           break;
                         }
@@ -2954,7 +2954,7 @@ final class dk {
                         }
                         var13 = 0;
                         while (!(eg.field_p < var13)) {
-                          var14 = this.a(-124, vf.field_a, var13, uf.field_c);
+                          var14 = this.a(-124, vf.field_a, var13, IntrusiveNode.field_c);
                           stackIn_89_0 = var14;
                           if (stackIn_89_0 != null) {
                             var15 = hb.field_p[0];
@@ -2978,7 +2978,7 @@ final class dk {
                               var15 = hb.field_p[1];
                             }
                             if (hb.field_p[1] == var15) {
-                              ve.a((ci) (var15), -5353, var6 + 144 * var13, var6 - var13 * 48, -24 + var5);
+                              ve.a((Sprite) (var15), -5353, var6 + 144 * var13, var6 - var13 * 48, -24 + var5);
                             }
                           } else {
                             var15 = hb.field_p[0];
@@ -2988,7 +2988,7 @@ final class dk {
                               var15 = hb.field_p[1];
                             }
                             if (hb.field_p[1] == var15) {
-                              ve.a((ci) (var15), -5353, var6 + 144 * var13, var6 - 48 * var13, var5 - 24);
+                              ve.a((Sprite) (var15), -5353, var6 + 144 * var13, var6 - 48 * var13, var5 - 24);
                             }
                             var16 = null;
                             if (!param1) {
@@ -2997,37 +2997,37 @@ final class dk {
                               k.field_f.a(0);
                             } else {
                               var16 = oi.field_J;
-                              ((ci) (var16)).a();
+                              ((Sprite) (var16)).a();
                               l.f(0, 0, 128, 160, 0);
                             }
                             if (null != var16) {
-                              ((ci) (var16)).a();
+                              ((Sprite) (var16)).a();
                               l.a(32, 124, 16777215);
                               l.a(64, 108, 16777215);
                               l.a(64, 139, 16777215);
                               l.a(95, 124, 16777215);
                               k.field_f.a(0);
                               u.field_a.a();
-                              ((ci) (var16)).d(0, 0);
+                              ((Sprite) (var16)).d(0, 0);
                               if (this.field_i != null &&
                                 0 < this.field_i.field_L) {
-                                c.a((byte) -86, u.field_a, 16777215);
-                                c.a((byte) -86, u.field_a, 16744576);
-                                c.a((byte) -86, u.field_a, 16728128);
-                                c.a((byte) -86, u.field_a, 8388608);
-                                c.a((byte) -86, u.field_a, 4194304);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 16744576);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 16728128);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 8388608);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 4194304);
                               } else {
-                                c.a((byte) -86, u.field_a, 16777215);
-                                c.a((byte) -86, u.field_a, 8454016);
-                                c.a((byte) -86, u.field_a, 4259648);
-                                c.a((byte) -86, u.field_a, 32768);
-                                c.a((byte) -86, u.field_a, 16384);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 8454016);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 4259648);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 32768);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 16384);
                               }
-                              ((ci) (var16)).b(0, 0, 0);
+                              ((Sprite) (var16)).b(0, 0, 0);
                               k.field_f.a(0);
                               ug.field_b = -64 + var5;
                               hb.field_n = -(48 * eg.field_p) + (-124 + var6);
-                              ((ci) (var16)).b(-64 + var5, -124 + var6);
+                              ((Sprite) (var16)).b(-64 + var5, -124 + var6);
                             }
                           }
                           var13++;
@@ -3046,7 +3046,7 @@ final class dk {
                           param1 &&
                           !this.field_i.field_w) {
                           vf.field_a = var12;
-                          uf.field_c = var11;
+                          IntrusiveNode.field_c = var11;
                           cm.field_d = eg.field_p;
                         }
                       }
@@ -3061,8 +3061,8 @@ final class dk {
                           var13Lifetime2 + (var6 + 8) >= this.field_l.field_d) {
                           cm.field_d = 0;
                           vf.field_a = var12;
-                          uf.field_c = var11;
-                          if (~var11 == ~uf.field_c &&
+                          IntrusiveNode.field_c = var11;
+                          if (~var11 == ~IntrusiveNode.field_c &&
                             ~vf.field_a == ~var12 &&
                             param1) {
                             l.a(var5 << 4, var6 << 4, 384, 255, bj.field_d);
@@ -3080,10 +3080,10 @@ final class dk {
                           stackIn_104_3 = var4;
                           stackIn_104_4 = var6;
                           stackIn_104_5 = 125;
-                          stackIn_105_6 = (var11 == uf.field_c) && (~vf.field_a == ~var12) && (param1);
+                          stackIn_105_6 = (var11 == IntrusiveNode.field_c) && (~vf.field_a == ~var12) && (param1);
                           var3_int = ((dl) (Object) stackIn_104_0).a(stackIn_104_1, stackIn_104_2, (gi[]) (stackIn_104_3), stackIn_104_4, (byte) stackIn_104_5, stackIn_105_6);
                         }
-                        if (uf.field_c != var11) {
+                        if (IntrusiveNode.field_c != var11) {
                           decompiledFrameCompleted3 = false;
                           break;
                         }
@@ -3097,7 +3097,7 @@ final class dk {
                         }
                         var13Lifetime2 = 0;
                         while (!(eg.field_p < var13Lifetime2)) {
-                          var14Lifetime2 = this.a(-124, vf.field_a, var13Lifetime2, uf.field_c);
+                          var14Lifetime2 = this.a(-124, vf.field_a, var13Lifetime2, IntrusiveNode.field_c);
                           stackIn_89_0Lifetime2 = var14Lifetime2;
                           if (stackIn_89_0Lifetime2 != null) {
                             var15Lifetime2 = hb.field_p[0];
@@ -3121,7 +3121,7 @@ final class dk {
                               var15Lifetime2 = hb.field_p[1];
                             }
                             if (hb.field_p[1] == var15Lifetime2) {
-                              ve.a((ci) (var15Lifetime2), -5353, var6 + 144 * var13Lifetime2, var6 - var13Lifetime2 * 48, -24 + var5);
+                              ve.a((Sprite) (var15Lifetime2), -5353, var6 + 144 * var13Lifetime2, var6 - var13Lifetime2 * 48, -24 + var5);
                             }
                           } else {
                             var15Lifetime2 = hb.field_p[0];
@@ -3131,7 +3131,7 @@ final class dk {
                               var15Lifetime2 = hb.field_p[1];
                             }
                             if (hb.field_p[1] == var15Lifetime2) {
-                              ve.a((ci) (var15Lifetime2), -5353, var6 + 144 * var13Lifetime2, var6 - 48 * var13Lifetime2, var5 - 24);
+                              ve.a((Sprite) (var15Lifetime2), -5353, var6 + 144 * var13Lifetime2, var6 - 48 * var13Lifetime2, var5 - 24);
                             }
                             var16Lifetime2 = null;
                             if (!param1) {
@@ -3140,37 +3140,37 @@ final class dk {
                               k.field_f.a(0);
                             } else {
                               var16Lifetime2 = oi.field_J;
-                              ((ci) (var16Lifetime2)).a();
+                              ((Sprite) (var16Lifetime2)).a();
                               l.f(0, 0, 128, 160, 0);
                             }
                             if (null != var16Lifetime2) {
-                              ((ci) (var16Lifetime2)).a();
+                              ((Sprite) (var16Lifetime2)).a();
                               l.a(32, 124, 16777215);
                               l.a(64, 108, 16777215);
                               l.a(64, 139, 16777215);
                               l.a(95, 124, 16777215);
                               k.field_f.a(0);
                               u.field_a.a();
-                              ((ci) (var16Lifetime2)).d(0, 0);
+                              ((Sprite) (var16Lifetime2)).d(0, 0);
                               if (this.field_i != null &&
                                 0 < this.field_i.field_L) {
-                                c.a((byte) -86, u.field_a, 16777215);
-                                c.a((byte) -86, u.field_a, 16744576);
-                                c.a((byte) -86, u.field_a, 16728128);
-                                c.a((byte) -86, u.field_a, 8388608);
-                                c.a((byte) -86, u.field_a, 4194304);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 16744576);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 16728128);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 8388608);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 4194304);
                               } else {
-                                c.a((byte) -86, u.field_a, 16777215);
-                                c.a((byte) -86, u.field_a, 8454016);
-                                c.a((byte) -86, u.field_a, 4259648);
-                                c.a((byte) -86, u.field_a, 32768);
-                                c.a((byte) -86, u.field_a, 16384);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 8454016);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 4259648);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 32768);
+                                NodeHashTableIterator.a((byte) -86, u.field_a, 16384);
                               }
-                              ((ci) (var16Lifetime2)).b(0, 0, 0);
+                              ((Sprite) (var16Lifetime2)).b(0, 0, 0);
                               k.field_f.a(0);
                               ug.field_b = -64 + var5;
                               hb.field_n = -(48 * eg.field_p) + (-124 + var6);
-                              ((ci) (var16Lifetime2)).b(-64 + var5, -124 + var6);
+                              ((Sprite) (var16Lifetime2)).b(-64 + var5, -124 + var6);
                             }
                           }
                           var13Lifetime2++;
@@ -3188,7 +3188,7 @@ final class dk {
                     (decompiledFrameCompleted2) &&
                     (decompiledFrameCompleted1) &&
                     (decompiledFrameCompleted0)) {
-                    while (uf.field_c == var11) {
+                    while (IntrusiveNode.field_c == var11) {
                       if (~vf.field_a != ~var12) {
                         break;
                       }
@@ -3197,7 +3197,7 @@ final class dk {
                       }
                       var13Lifetime1 = 0;
                       while (!(eg.field_p < var13Lifetime1)) {
-                        var14Lifetime1 = this.a(-124, vf.field_a, var13Lifetime1, uf.field_c);
+                        var14Lifetime1 = this.a(-124, vf.field_a, var13Lifetime1, IntrusiveNode.field_c);
                         stackIn_89_0Lifetime1 = var14Lifetime1;
                         if (stackIn_89_0Lifetime1 != null) {
                           var15Lifetime1 = hb.field_p[0];
@@ -3221,7 +3221,7 @@ final class dk {
                             var15Lifetime1 = hb.field_p[1];
                           }
                           if (hb.field_p[1] == var15Lifetime1) {
-                            ve.a((ci) (var15Lifetime1), -5353, var6 + 144 * var13Lifetime1, var6 - var13Lifetime1 * 48, -24 + var5);
+                            ve.a((Sprite) (var15Lifetime1), -5353, var6 + 144 * var13Lifetime1, var6 - var13Lifetime1 * 48, -24 + var5);
                           }
                         } else {
                           var15Lifetime1 = hb.field_p[0];
@@ -3231,7 +3231,7 @@ final class dk {
                             var15Lifetime1 = hb.field_p[1];
                           }
                           if (hb.field_p[1] == var15Lifetime1) {
-                            ve.a((ci) (var15Lifetime1), -5353, var6 + 144 * var13Lifetime1, var6 - 48 * var13Lifetime1, var5 - 24);
+                            ve.a((Sprite) (var15Lifetime1), -5353, var6 + 144 * var13Lifetime1, var6 - 48 * var13Lifetime1, var5 - 24);
                           }
                           var16Lifetime1 = null;
                           if (!param1) {
@@ -3240,37 +3240,37 @@ final class dk {
                             k.field_f.a(0);
                           } else {
                             var16Lifetime1 = oi.field_J;
-                            ((ci) (var16Lifetime1)).a();
+                            ((Sprite) (var16Lifetime1)).a();
                             l.f(0, 0, 128, 160, 0);
                           }
                           if (null != var16Lifetime1) {
-                            ((ci) (var16Lifetime1)).a();
+                            ((Sprite) (var16Lifetime1)).a();
                             l.a(32, 124, 16777215);
                             l.a(64, 108, 16777215);
                             l.a(64, 139, 16777215);
                             l.a(95, 124, 16777215);
                             k.field_f.a(0);
                             u.field_a.a();
-                            ((ci) (var16Lifetime1)).d(0, 0);
+                            ((Sprite) (var16Lifetime1)).d(0, 0);
                             if (this.field_i != null &&
                               0 < this.field_i.field_L) {
-                              c.a((byte) -86, u.field_a, 16777215);
-                              c.a((byte) -86, u.field_a, 16744576);
-                              c.a((byte) -86, u.field_a, 16728128);
-                              c.a((byte) -86, u.field_a, 8388608);
-                              c.a((byte) -86, u.field_a, 4194304);
+                              NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
+                              NodeHashTableIterator.a((byte) -86, u.field_a, 16744576);
+                              NodeHashTableIterator.a((byte) -86, u.field_a, 16728128);
+                              NodeHashTableIterator.a((byte) -86, u.field_a, 8388608);
+                              NodeHashTableIterator.a((byte) -86, u.field_a, 4194304);
                             } else {
-                              c.a((byte) -86, u.field_a, 16777215);
-                              c.a((byte) -86, u.field_a, 8454016);
-                              c.a((byte) -86, u.field_a, 4259648);
-                              c.a((byte) -86, u.field_a, 32768);
-                              c.a((byte) -86, u.field_a, 16384);
+                              NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
+                              NodeHashTableIterator.a((byte) -86, u.field_a, 8454016);
+                              NodeHashTableIterator.a((byte) -86, u.field_a, 4259648);
+                              NodeHashTableIterator.a((byte) -86, u.field_a, 32768);
+                              NodeHashTableIterator.a((byte) -86, u.field_a, 16384);
                             }
-                            ((ci) (var16Lifetime1)).b(0, 0, 0);
+                            ((Sprite) (var16Lifetime1)).b(0, 0, 0);
                             k.field_f.a(0);
                             ug.field_b = -64 + var5;
                             hb.field_n = -(48 * eg.field_p) + (-124 + var6);
-                            ((ci) (var16Lifetime1)).b(-64 + var5, -124 + var6);
+                            ((Sprite) (var16Lifetime1)).b(-64 + var5, -124 + var6);
                           }
                         }
                         var13Lifetime1++;
@@ -3286,7 +3286,7 @@ final class dk {
               stackIn_184_1Lifetime1 = 1 + (-var9 + var10) << 4;
               var6 = stackIn_184_0Lifetime1 - stackIn_184_1Lifetime1;
               var11++;
-              continue L4;
+              continue scanLoop1;
             }
             if (null != u.field_a) {
               u.field_a.b(ug.field_b, hb.field_n);
@@ -3356,7 +3356,7 @@ final class dk {
           l.e(-1 + var4_int, var5 - 1, 2 + this.field_b * 5, 2 + 5 * this.field_e, 6645093);
           l.f(var4_int, var5, this.field_b * 5, this.field_e * 5, 0);
           vf.field_a = -1;
-          uf.field_c = -1;
+          IntrusiveNode.field_c = -1;
           var8 = 5597743;
           var9 = 6473014;
           var10 = 11067278;
@@ -3400,7 +3400,7 @@ final class dk {
             og.field_f.b(cg.field_I, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             l.f(var6, var7 - 11, 12, 12, var15);
-            og.field_f.b(vh.field_h, var6, var7, 16777215, -1);
+            og.field_f.b(DualLinkNode.field_h, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             l.f(var6, -11 + var7, 12, 12, var14);
             og.field_f.b(gh.field_O, var6, var7, 16777215, -1);
@@ -3595,7 +3595,7 @@ final class dk {
                         this.field_i.field_y < (5 + var6Lifetime1) &&
                         var7Lifetime1 <= this.field_i.field_j &&
                         5 + var7Lifetime1 > this.field_i.field_j) {
-                        uf.field_c = var17;
+                        IntrusiveNode.field_c = var17;
                         vf.field_a = var18;
                       }
                       if (var20.field_a ||
@@ -3909,12 +3909,12 @@ final class dk {
         var22 = Terraphoenix.field_V;
         this.field_k = 0;
         try {
-          L0: {
+          regionExit1: {
             this.field_m = 0;
             this.field_i = param0;
             sj.field_b = 0;
             lg.field_c = 0;
-            eh.field_m = false;
+            GameApplet.field_m = false;
             jh.field_n = 0;
             var2_int = 0;
             var3 = 0;
@@ -3927,11 +3927,11 @@ final class dk {
               var2_int = 4;
               var5 = 1;
               if (!mb.b(0, 77)) {
-                break L0;
+                break regionExit1;
               }
               this.field_a = 2;
               if (var22 == 0) {
-                break L0;
+                break regionExit1;
               }
             }
             var6 = param0.field_G.field_Bb;
@@ -3952,7 +3952,7 @@ final class dk {
                 this.field_b = 40;
                 this.field_e = 40;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 1:
                 this.field_k = 2;
@@ -3960,7 +3960,7 @@ final class dk {
                 this.field_b = 64;
                 this.field_a = 2;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 2:
                 var2_int = 4;
@@ -3969,7 +3969,7 @@ final class dk {
                 this.field_e = 64;
                 this.field_b = 64;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 3:
                 this.field_b = 64;
@@ -3983,7 +3983,7 @@ final class dk {
                 this.field_k = stackIn_74_1;
                 var2_int = 4;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 4:
                 var3 = 10;
@@ -3992,7 +3992,7 @@ final class dk {
                 this.field_e = 64;
                 this.field_b = 64;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 5:
                 if (param0.field_G.field_ub != 1) {
@@ -4006,7 +4006,7 @@ final class dk {
                 this.field_b = 64;
                 this.field_e = 64;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 6:
                 var4 = 2;
@@ -4015,7 +4015,7 @@ final class dk {
                 this.field_b = 64;
                 this.field_e = 64;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 7:
                 this.field_a = 2;
@@ -4024,7 +4024,7 @@ final class dk {
                 this.field_b = 64;
                 var4 = 2;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 8:
                 this.field_b = 64;
@@ -4033,7 +4033,7 @@ final class dk {
                   this.field_a = 1;
                   var4 = 3;
                   if (var22 == 0) {
-                    break L0;
+                    break regionExit1;
                   }
                 }
                 this.field_k = 6;
@@ -4041,7 +4041,7 @@ final class dk {
                 this.field_e = 62;
                 this.field_a = 4;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 9:
                 var4 = 4;
@@ -4055,7 +4055,7 @@ final class dk {
                 this.field_k = stackIn_96_1;
                 this.field_e = 64;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 10:
                 this.field_b = 64;
@@ -4066,13 +4066,13 @@ final class dk {
                   this.field_a = 1;
                   this.field_b = 62;
                   if (var22 == 0) {
-                    break L0;
+                    break regionExit1;
                   }
                 }
                 this.field_a = 4;
                 var4 = 3;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 11:
                 this.field_e = 64;
@@ -4080,7 +4080,7 @@ final class dk {
                 this.field_b = 64;
                 this.field_a = 2;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 12:
                 this.field_b = 38;
@@ -4088,12 +4088,12 @@ final class dk {
                 this.field_k = 8;
                 this.field_a = 4;
                 if (var22 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               case 13:
                 break;
               default:
-                break L0;
+                break regionExit1;
             }
             this.field_k = 9;
             this.field_e = 62;
@@ -4104,11 +4104,11 @@ final class dk {
           this.field_g = new int[this.field_b][this.field_e];
           this.field_f = new dl[this.field_b][this.field_e];
           var6 = 0;
-          L26: while (true) {
+          scanLoop2: while (true) {
             if (var6 < this.field_b) {
               stackIn_124_0 = 0;
               if (var22 != 0) {
-                break L26;
+                break scanLoop2;
               }
               var7 = stackIn_124_0;
               while (var7 < this.field_e) {
@@ -4123,7 +4123,7 @@ final class dk {
           }
           if (stackIn_124_0 != this.field_k ||
             var4 != 0) {
-            L33: {
+            regionExit3: {
               if (this.field_k == 6 ||
                 9 == this.field_k) {
                 var6 = (int)(Math.random() * 3.0) - 1;
@@ -4156,7 +4156,7 @@ final class dk {
                   var6 = 0;
                 }
                 var13 = -2;
-                L34: while (true) {
+                scanLoop4: while (true) {
                   stackIn_161_0 = var13;
                   stackIn_161_1 = 2;
                   if (stackIn_161_0 <= stackIn_161_1) {
@@ -4164,48 +4164,48 @@ final class dk {
                     if (var22 == 0) {
                       var14 = stackIn_257_0;
                       while (var14 <= 2) {
-                        var10_ref_byte__ = of.field_k[wf.a("AB-Corridors", true)];
+                        var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Corridors", true)];
                         var15 = (int)(6.0 * Math.random());
                         stackIn_161_0 = -2;
                         stackIn_161_1 = ~var15;
                         if (stackIn_161_0 == stackIn_161_1) {
-                          var10_ref_byte__ = of.field_k[wf.a("AB-Room0", true)];
+                          var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Room0", true)];
                         }
                         if (var15 == 2) {
-                          var10_ref_byte__ = of.field_k[wf.a("AB-Room1", true)];
+                          var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Room1", true)];
                         }
                         if (var15 == 3) {
-                          var10_ref_byte__ = of.field_k[wf.a("AB-Room2", true)];
+                          var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Room2", true)];
                         }
                         if (var15 == 4) {
-                          var10_ref_byte__ = of.field_k[wf.a("AB-Room3", true)];
+                          var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Room3", true)];
                         }
                         if (var15 == 5) {
-                          var10_ref_byte__ = of.field_k[wf.a("AB-Room4", true)];
+                          var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Room4", true)];
                         }
                         if (~var6 == ~var13 &&
                           ~var14 == ~var7 &&
                           6 == this.field_k) {
-                          var10_ref_byte__ = of.field_k[wf.a("AB-CommandCenter", true)];
+                          var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-CommandCenter", true)];
                         }
                         if (~var13 == ~var8 &&
                           ~var14 == ~var9) {
-                          var10_ref_byte__ = of.field_k[wf.a("AB-Entrance", true)];
+                          var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Entrance", true)];
                         }
                         if (~var13 == ~var6 &&
                           ~var14 == ~var7 &&
                           this.field_k == 9) {
-                          var10_ref_byte__ = of.field_k[wf.a("AB-Reactor", true)];
+                          var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Reactor", true)];
                         }
                         if (var13 == 2 &&
                           var14 == 2 &&
                           this.field_k == 9) {
-                          var10_ref_byte__ = of.field_k[wf.a("AB-Hangerdoor", true)];
+                          var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Hangerdoor", true)];
                         }
                         if (var13 == 2 &&
                           var14 == 2 &&
                           this.field_k == 6) {
-                          var10_ref_byte__ = of.field_k[wf.a("AB-Maindoor", true)];
+                          var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Maindoor", true)];
                         }
                         var11 = this.field_b / 2 + 12 * var13;
                         var12 = this.field_b / 2 + var14 * 12;
@@ -4240,9 +4240,9 @@ final class dk {
                       if (stackIn_268_0 < stackIn_268_1) {
                         stackIn_279_0 = -35;
                         stackIn_279_1 = ~this.field_f[1][var13].field_j;
-                        break L33;
+                        break regionExit3;
                       }
-                      break L34;
+                      break scanLoop4;
                     }
                     if (stackIn_268_0 != stackIn_268_1) {
                       this.field_f[var13][2].field_k = -1;
@@ -4254,12 +4254,12 @@ final class dk {
                     stackIn_268_0 = var13;
                     stackIn_268_1 = this.field_e;
                     if (stackIn_268_0 >= stackIn_268_1) {
-                      break L34;
+                      break scanLoop4;
                     }
                     stackIn_279_0 = -35;
                     stackIn_279_1 = ~this.field_f[1][var13].field_j;
                     if (var22 != 0) {
-                      break L33;
+                      break regionExit3;
                     }
                     if (stackIn_279_0 != stackIn_279_1) {
                       this.field_f[2][var13].field_g = -1;
@@ -4291,36 +4291,36 @@ final class dk {
                 }
                 var14 = stackIn_328_0;
                 while (var14 <= 1) {
-                  var10_ref_byte__ = of.field_k[wf.a("AB-Corridors", true)];
+                  var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Corridors", true)];
                   var15 = (int)(6.0 * Math.random());
                   stackIn_282_0 = ~var15;
                   stackIn_282_1 = -2;
                   if (stackIn_282_0 == stackIn_282_1) {
-                    var10_ref_byte__ = of.field_k[wf.a("AB-Room0", true)];
+                    var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Room0", true)];
                   }
                   if (var15 == 2) {
-                    var10_ref_byte__ = of.field_k[wf.a("AB-Room1", true)];
+                    var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Room1", true)];
                   }
                   if (3 == var15) {
-                    var10_ref_byte__ = of.field_k[wf.a("AB-Room2", true)];
+                    var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Room2", true)];
                   }
                   if (4 == var15) {
-                    var10_ref_byte__ = of.field_k[wf.a("AB-Room3", true)];
+                    var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Room3", true)];
                   }
                   if (var15 == 5) {
-                    var10_ref_byte__ = of.field_k[wf.a("AB-Room4", true)];
+                    var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Room4", true)];
                   }
                   if (var13 == var8 &&
                     ~var9 == ~var14) {
-                    var10_ref_byte__ = of.field_k[wf.a("AB-Hanger", true)];
+                    var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Hanger", true)];
                   }
                   if (var13 == var6 &&
                     var7 == var14) {
-                    var10_ref_byte__ = of.field_k[wf.a("AB-Entrance", true)];
+                    var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Entrance", true)];
                   }
                   if (var13 == 1 &&
                     var14 == 1) {
-                    var10_ref_byte__ = of.field_k[wf.a("AB-Maindoor", true)];
+                    var10_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("AB-Maindoor", true)];
                   }
                   if (8 == this.field_k &&
                     ~var13 == ~var8 &&
@@ -4338,7 +4338,7 @@ final class dk {
               stackIn_328_0 = this.field_k;
             }
             if (stackIn_328_0 == 7) {
-              var6_ref_byte__ = of.field_k[wf.a("MissileBase", true)];
+              var6_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("MissileBase", true)];
               var7 = this.field_b / 2;
               var8 = this.field_e / 2;
               this.a(var7 - var6_ref_byte__[0] / 2, (byte) 104, -(var6_ref_byte__[1] / 2) + var8, var6_ref_byte__);
@@ -4446,7 +4446,7 @@ final class dk {
               stackIn_387_0 = -2;
             }
             if (stackIn_387_0 == ~this.field_k) {
-              var6_ref_byte__ = of.field_k[wf.a("Tutorial", true)];
+              var6_ref_byte__ = ImageProducerRasterBuffer.field_k[wf.a("Tutorial", true)];
               this.a(0, (byte) 104, 0, var6_ref_byte__);
             }
           }
@@ -4474,7 +4474,7 @@ final class dk {
             var9 = 1;
             var11 = 3;
           }
-          L110: while (true) {
+          scanLoop5: while (true) {
             var13 = 0;
             while (true) {
               stackIn_405_0 = this.field_b;
@@ -4516,44 +4516,44 @@ final class dk {
               if (var12 != 0 &&
                 var6 != 0) {
                 var12 = 0;
-                var13_ref = of.field_k[wf.a("Hanger", true)];
+                var13_ref = ImageProducerRasterBuffer.field_k[wf.a("Hanger", true)];
                 var6 = 0;
                 if (param0.field_G.field_Bb == 3) {
-                  var13_ref = of.field_k[wf.a("AlienHanger", true)];
+                  var13_ref = ImageProducerRasterBuffer.field_k[wf.a("AlienHanger", true)];
                 }
               }
               if (var12 != 0 &&
                 var8 != 0) {
                 var8 = 0;
-                var13_ref = of.field_k[wf.a("ResearchBase", true)];
+                var13_ref = ImageProducerRasterBuffer.field_k[wf.a("ResearchBase", true)];
                 var12 = 0;
               }
               if (var12 != 0 &&
                 var9 != 0) {
-                var13_ref = of.field_k[wf.a("FactoryBase", true)];
+                var13_ref = ImageProducerRasterBuffer.field_k[wf.a("FactoryBase", true)];
                 var9 = 0;
                 var12 = 0;
                 if (param0.field_G.field_Bb == 3) {
-                  var13_ref = of.field_k[wf.a("AlienFactoryBase", true)];
+                  var13_ref = ImageProducerRasterBuffer.field_k[wf.a("AlienFactoryBase", true)];
                 }
               }
               if (var12 != 0 &&
                 var7 != 0) {
                 var12 = 0;
-                var13_ref = of.field_k[wf.a("Helepad", true)];
+                var13_ref = ImageProducerRasterBuffer.field_k[wf.a("Helepad", true)];
                 var7 = 0;
               }
               if (var12 != 0 &&
                 var10 > 0) {
                 var12 = 0;
                 var10--;
-                var13_ref = of.field_k[wf.a("Barracks", true)];
+                var13_ref = ImageProducerRasterBuffer.field_k[wf.a("Barracks", true)];
               }
               if (var12 != 0 &&
                 var11 > 0) {
                 var11--;
                 var12 = 0;
-                var13_ref = of.field_k[wf.a("FuelDump", true)];
+                var13_ref = ImageProducerRasterBuffer.field_k[wf.a("FuelDump", true)];
               }
               boolean decompiledFrameRemainder1 = true;
               var14 = 0;
@@ -4566,30 +4566,30 @@ final class dk {
                     var14 = 1;
                     var12 = 0;
                     if (var4 == 1) {
-                      var13_ref = of.field_k[wf.a("UFO-Transport", true)];
+                      var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Transport", true)];
                     }
                     if (var4 == 2) {
-                      var13_ref = of.field_k[wf.a("UFO-Invader", true)];
+                      var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Invader", true)];
                     }
                     if (var4 == 3) {
-                      var13_ref = of.field_k[wf.a("UFO-Dominator", true)];
+                      var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Dominator", true)];
                     }
                     if (3 >= var4) {
                       var4 = 0;
                     }
                     if (5 == var4) {
-                      var13_ref = of.field_k[wf.a("UFO-Transport", true)];
+                      var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Transport", true)];
                       var4 = 1;
                     }
                     if (4 == var4) {
                       var4 = 5;
-                      var13_ref = of.field_k[wf.a("UFO-Transport", true)];
+                      var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Transport", true)];
                     }
                   }
                   if (var13_ref != null) {
                     var17 = 0;
                     var18 = 0;
-                    L139: while (true) {
+                    scanLoop6: while (true) {
                       var18++;
                       if (var18 > 10) {
                         var17++;
@@ -4611,10 +4611,10 @@ final class dk {
                             }
                           }
                           if ((((byte[]) (var13_ref))[0] + 1) > this.field_f[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
-                            continue L139;
+                            continue scanLoop6;
                           }
                           if (var22 == 0) {
-                            break L139;
+                            break scanLoop6;
                           }
                           var17 = this.field_b / 2;
                         }
@@ -4635,7 +4635,7 @@ final class dk {
                           }
                         }
                         if ((((byte[]) (var13_ref))[0] + 1) > this.field_f[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
-                          continue L139;
+                          continue scanLoop6;
                         }
                       } while (var22 != 0);
                       break;
@@ -4643,7 +4643,7 @@ final class dk {
                     this.a(-(((byte[]) (var13_ref))[0] / 2) + var15, (byte) 104, -(((byte[]) (var13_ref))[1] / 2) + var16, (byte[]) (var13_ref));
                   }
                   if (var12 == 0) {
-                    continue L110;
+                    continue scanLoop5;
                   }
                   stackIn_478_0 = 1;
                   stackIn_478_1 = this.field_k;
@@ -4655,7 +4655,7 @@ final class dk {
                   if (var13_ref != null) {
                     var17 = 0;
                     var18 = 0;
-                    L150: while (true) {
+                    scanLoop7: while (true) {
                       var18++;
                       if (var18 > 10) {
                         var17++;
@@ -4677,10 +4677,10 @@ final class dk {
                             }
                           }
                           if ((((byte[]) (var13_ref))[0] + 1) > this.field_f[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
-                            continue L150;
+                            continue scanLoop7;
                           }
                           if (var22 == 0) {
-                            break L150;
+                            break scanLoop7;
                           }
                           var17 = this.field_b / 2;
                         }
@@ -4701,7 +4701,7 @@ final class dk {
                           }
                         }
                         if ((((byte[]) (var13_ref))[0] + 1) > this.field_f[((byte[]) (var13_ref))[0] / 2 + var15][var16 + ((byte[]) (var13_ref))[1] / 2].field_x) {
-                          continue L150;
+                          continue scanLoop7;
                         }
                       } while (var22 != 0);
                       break;
@@ -4709,7 +4709,7 @@ final class dk {
                     this.a(-(((byte[]) (var13_ref))[0] / 2) + var15, (byte) 104, -(((byte[]) (var13_ref))[1] / 2) + var16, (byte[]) (var13_ref));
                   }
                   if (var12 == 0) {
-                    continue L110;
+                    continue scanLoop5;
                   }
                   stackIn_478_0 = 1;
                   stackIn_478_1 = this.field_k;
@@ -4722,26 +4722,26 @@ final class dk {
                   var14 = 1;
                   var12 = 0;
                   if (var4 == 1) {
-                    var13_ref = of.field_k[wf.a("UFO-Transport", true)];
+                    var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Transport", true)];
                   }
                   if (var4 == 2) {
-                    var13_ref = of.field_k[wf.a("UFO-Invader", true)];
+                    var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Invader", true)];
                   }
                   if (var4 == 3) {
-                    var13_ref = of.field_k[wf.a("UFO-Dominator", true)];
+                    var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Dominator", true)];
                   }
                   if (3 >= var4) {
                     var4 = 0;
                   }
                   if (5 == var4) {
-                    var13_ref = of.field_k[wf.a("UFO-Transport", true)];
+                    var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Transport", true)];
                     var4 = 1;
                   }
                   if (4 != var4) {
                     continue;
                   }
                   var4 = 5;
-                  var13_ref = of.field_k[wf.a("UFO-Transport", true)];
+                  var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Transport", true)];
                 }
               }
               if (stackIn_478_0 != stackIn_478_1) {
@@ -4810,15 +4810,15 @@ final class dk {
                   stackIn_563_1 = 1;
                 }
                 if (stackIn_563_0 == stackIn_563_1) {
-                  var13_ref = of.field_k[wf.a("UFO-Transport", true)];
+                  var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Transport", true)];
                   this.a(this.field_b / 2 - ((byte[]) (var13_ref))[0] / 2, (byte) 104, this.field_e / 2 - ((byte[]) (var13_ref))[1] / 2, (byte[]) (var13_ref));
                 }
                 if (var4 == 2) {
-                  var13_ref = of.field_k[wf.a("UFO-Invader", true)];
+                  var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Invader", true)];
                   this.a(this.field_b / 2 - ((byte[]) (var13_ref))[0] / 2, (byte) 104, this.field_e / 2 - ((byte[]) (var13_ref))[1] / 2, (byte[]) (var13_ref));
                 }
                 if (3 == var4) {
-                  var13_ref = of.field_k[wf.a("UFO-Dominator", true)];
+                  var13_ref = ImageProducerRasterBuffer.field_k[wf.a("UFO-Dominator", true)];
                   this.a(this.field_b / 2 - ((byte[]) (var13_ref))[0] / 2, (byte) 104, this.field_e / 2 - ((byte[]) (var13_ref))[1] / 2, (byte[]) (var13_ref));
                 }
                 var13 = 0;

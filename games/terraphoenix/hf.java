@@ -9,8 +9,8 @@ final class hf extends fd {
     static String field_z;
     static String field_u;
     static boolean field_x;
-    static ci field_y;
-    static ci[] field_w;
+    static Sprite field_y;
+    static Sprite[] field_w;
     static boolean field_t;
 
     public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
@@ -102,7 +102,7 @@ final class hf extends fd {
         }
     }
 
-    final void a(int param0, int param1, ci[] param2) {
+    final void a(int param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         if (param0 != -26108) {
           return;
@@ -126,7 +126,7 @@ final class hf extends fd {
         return var2;
     }
 
-    final void a(int param0, ci param1) {
+    final void a(int param0, Sprite param1) {
         int var4 = 0;
         bd[] var3 = null;
         bd var5 = null;
@@ -210,7 +210,7 @@ final class hf extends fd {
         int var1 = 40 / ((-66 - param0) / 44);
     }
 
-    final void a(ci[] param0, byte param1) {
+    final void a(Sprite[] param0, byte param1) {
         int var4 = 0;
         bd[] var3 = null;
         int var5 = 0;

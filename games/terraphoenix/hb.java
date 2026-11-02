@@ -4,12 +4,12 @@
 class hb extends nb {
     static int[] field_h;
     static int field_j;
-    static ci field_m;
+    static Sprite field_m;
     static String field_o;
     static int field_l;
     private String field_q;
     private long field_k;
-    static ci[] field_p;
+    static Sprite[] field_p;
     static int field_i;
     static int field_n;
 
@@ -114,13 +114,13 @@ class hb extends nb {
         return hf.field_s;
     }
 
-    final void a(byte param0, dh param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           param1.a(this.field_k, 76);
           param1.a(-97, this.field_q);
           if (param0 != -2) {
-            dh var4 = (dh) null;
-            this.a((byte) -36, (dh) null);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a((byte) -36, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

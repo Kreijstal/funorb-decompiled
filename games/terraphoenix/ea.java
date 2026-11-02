@@ -90,9 +90,9 @@ final class ea implements cj {
         return true;
     }
 
-    final static void a(java.math.BigInteger param0, dh param1, int param2, java.math.BigInteger param3, dh param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, int param2, java.math.BigInteger param3, PacketBuffer param4) {
         try {
-          ia.a(param2, param4, (byte) -75, param3, param0, param1.field_k, param1.field_i);
+          ia.a(param2, param4, (byte) -75, param3, param0, param1.position, param1.payload);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -111,7 +111,7 @@ final class ea implements cj {
             field_j = true;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            jb.field_d[var1_intLifetime1] = 0L;
+            MouseWheelInput.field_d[var1_intLifetime1] = 0L;
           }
           bb.field_d = 0;
         } catch (RuntimeException runtimeException) {

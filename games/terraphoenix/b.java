@@ -162,10 +162,10 @@ final class b {
         var3 = Terraphoenix.field_V;
         try {
           ga.field_j = ga.field_j + 1;
-          if (tf.field_k == -1 &&
+          if (BufferedSocket.field_k == -1 &&
             -1 == ll.field_a) {
-            tf.field_k = ef.field_j;
-            ll.field_a = jb.field_b;
+            BufferedSocket.field_k = ef.field_j;
+            ll.field_a = MouseWheelInput.field_b;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null) {
@@ -200,7 +200,7 @@ final class b {
             } else {
               uj.field_c = false;
             }
-            ea.field_m = tf.field_k;
+            ea.field_m = BufferedSocket.field_k;
             lb.field_b = ll.field_a;
           }
           if (!uj.field_c &&
@@ -208,17 +208,17 @@ final class b {
             ja.field_l) {
             ga.field_j = 0;
             lb.field_b = ll.field_a;
-            ea.field_m = tf.field_k;
+            ea.field_m = BufferedSocket.field_k;
           }
           cc.field_j = param1;
           ll.field_a = -1;
           var2_intLifetime1 = 92 / ((param0 + 28) / 44);
           if (uj.field_c &&
-            ga.field_j == dh.field_l) {
+            ga.field_j == PacketBuffer.field_l) {
             ga.field_j = 0;
             uj.field_c = false;
           }
-          tf.field_k = -1;
+          BufferedSocket.field_k = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -279,8 +279,8 @@ final class b {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        dh var17 = null;
-        dh var18 = null;
+        PacketBuffer var17 = null;
+        PacketBuffer var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
@@ -292,9 +292,9 @@ final class b {
         int var4Lifetime5;
         var15 = Terraphoenix.field_V;
         try {
-          var17 = new dh(param0);
+          var17 = new PacketBuffer(param0);
           var18 = var17;
-          var18.field_k = -2 + param0.length;
+          var18.position = -2 + param0.length;
           kf.field_b = var18.i(-25578);
           ug.field_c = new byte[kf.field_b][];
           sb.field_m = new int[kf.field_b];
@@ -303,7 +303,7 @@ final class b {
           aa.field_k = new boolean[kf.field_b];
           qc.field_b = new byte[kf.field_b][];
           rf.field_p = new int[kf.field_b];
-          var18.field_k = param0.length + (-7 - kf.field_b * 8);
+          var18.position = param0.length + (-7 - kf.field_b * 8);
           ah.field_A = var18.i(-25578);
           sb.field_j = var18.i(-25578);
           if (param1 > -58) {
@@ -323,7 +323,7 @@ final class b {
           for (var4Lifetime3 = 0; var4Lifetime3 < kf.field_b; var4Lifetime3++) {
             rf.field_p[var4Lifetime3] = var18.i(-25578);
           }
-          var18.field_k = -((-1 + var3) * 3) + (-7 + param0.length) - kf.field_b * 8;
+          var18.position = -((-1 + var3) * 3) + (-7 + param0.length) - kf.field_b * 8;
           wb.field_a = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
             wb.field_a[var4Lifetime4] = var18.d((byte) -113);
@@ -331,7 +331,7 @@ final class b {
               wb.field_a[var4Lifetime4] = 1;
             }
           }
-          var18.field_k = 0;
+          var18.position = 0;
           for (var4Lifetime5 = 0; kf.field_b > var4Lifetime5; var4Lifetime5++) {
             var5 = sb.field_m[var4Lifetime5];
             var6 = rf.field_p[var4Lifetime5];

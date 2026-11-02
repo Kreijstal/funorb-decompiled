@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ig {
-    static ci field_a;
+    static Sprite field_a;
     static String field_c;
     static String field_b;
-    static tf field_e;
+    static BufferedSocket field_e;
     static String field_d;
 
     final static dj[] a(int param0, uc param1) {
@@ -155,12 +155,12 @@ final class ig {
         }
     }
 
-    final static ci[] a(fa param0, int param1, String param2, String param3) {
+    final static Sprite[] a(fa param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         uc var6 = null;
-        ci[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

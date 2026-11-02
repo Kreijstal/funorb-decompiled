@@ -98,7 +98,7 @@ final class bb {
 
     final static void a(fa param0, int param1, int param2, vg param3) {
         try {
-          uf.field_e = uc.j((byte) -127) * param2 / 1000;
+          IntrusiveNode.field_e = uc.j((byte) -127) * param2 / 1000;
           ee.a((byte) 51, param0);
           qe.a(-28664, param0);
           if (param1 >= -60) {
@@ -107,7 +107,7 @@ final class bb {
           ik.a(param0, (byte) 100);
           cg.f((byte) -75);
           vc.a(true);
-          kf.field_f = 0 - uf.field_e;
+          kf.field_f = 0 - IntrusiveNode.field_e;
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "bb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

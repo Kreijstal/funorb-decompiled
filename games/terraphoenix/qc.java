@@ -8,7 +8,7 @@ final class qc {
     static int field_c;
     static jj field_a;
     static java.util.zip.CRC32 field_d;
-    static ci[] field_f;
+    static Sprite[] field_f;
     static String field_e;
 
     final static boolean a(byte param0) {
@@ -151,8 +151,8 @@ final class qc {
         try {
           var6 = di.field_l;
           var6.k(-17410, param0);
-          var6.field_k = var6.field_k + 1;
-          var4 = var6.field_k;
+          var6.position = var6.position + 1;
+          var4 = var6.position;
           var6.i(1, -125);
           var6.i(param1.field_o, -18);
           var6.i(param1.field_l, -99);
@@ -162,7 +162,7 @@ final class qc {
           var6.e(param1.field_j, 8959);
           int var5 = 5 / ((param2 - 34) / 34);
           var6.d(var4, 8600);
-          var6.j(var6.field_k - var4, -119);
+          var6.j(var6.position - var4, -119);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "qc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

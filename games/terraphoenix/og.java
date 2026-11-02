@@ -8,7 +8,7 @@ final class og {
     static og field_a;
     static String field_b;
     static ud field_f;
-    static ci[] field_c;
+    static Sprite[] field_c;
     static String field_g;
     static String field_e;
 

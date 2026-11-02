@@ -8,7 +8,7 @@ final class d extends jc {
     private jj field_A;
     static bg[] field_N;
     static int[] field_L;
-    static he field_K;
+    static PlatformTaskDispatcher field_K;
     static String field_J;
     static nk field_I;
 
@@ -136,7 +136,7 @@ final class d extends jc {
         }
         try {
           var3 = (kh) (param0);
-          this.field_A.a((uf) (var3), (byte) 0);
+          this.field_A.a((IntrusiveNode) (var3), (byte) 0);
           var3.field_J = true;
           var3.a((byte) 14, (gl) (this));
         } catch (RuntimeException runtimeException) {

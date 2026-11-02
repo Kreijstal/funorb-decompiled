@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qd extends uf {
+final class qd extends IntrusiveNode {
     static int field_l;
     static String field_j;
     static String[] field_h;
@@ -29,8 +29,8 @@ final class qd extends uf {
         try {
           var5 = di.field_l;
           var5.k(-17410, param0);
-          var5.field_k = var5.field_k + 1;
-          var4 = var5.field_k;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.i(1, -95);
           var5.i(param2.field_l, -110);
           var5.a((byte) -107, param2.field_s);
@@ -42,7 +42,7 @@ final class qd extends uf {
             qd.$cfr$intArgs$a$e9dea5688aa5(-69, -70);
           }
           var5.d(var4, 8600);
-          var5.j(var5.field_k - var4, -119);
+          var5.j(var5.position - var4, -119);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "qd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -60,8 +60,8 @@ final class qd extends uf {
         if (param0 <= 15) {
           return;
         }
-        if (eh.field_g[param1] != null) {
-          gb.field_E.a(eh.field_g[param1], 100, ua.field_e * pe.field_f[param1] / 128);
+        if (GameApplet.field_g[param1] != null) {
+          gb.field_E.a(GameApplet.field_g[param1], 100, ua.field_e * pe.field_f[param1] / 128);
         }
     }
 
@@ -254,7 +254,7 @@ final class qd extends uf {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        dh var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         gm var40 = null;
         byte[] var41 = null;
@@ -340,8 +340,8 @@ final class qd extends uf {
           this.field_n = new gg[128];
           this.field_r = new byte[128];
           this.field_m = new byte[128];
-          var38 = new dh(param0);
-          for (var3 = 0; var38.field_i[var3 + var38.field_k] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
@@ -349,11 +349,11 @@ final class qd extends uf {
           for (var5 = 0; var3 > var5; var5++) {
             var4[var5] = var38.f(2);
           }
-          var38.field_k = var38.field_k + 1;
+          var38.position = var38.position + 1;
           var3++;
-          var5Lifetime1 = var38.field_k;
-          var38.field_k = var38.field_k + var3;
-          for (var6 = 0; var38.field_i[var38.field_k + var6] != 0; var6++) {
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var38.position + var6] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
@@ -361,11 +361,11 @@ final class qd extends uf {
           for (var8 = 0; var8 < var6; var8++) {
             var7[var8] = var38.f(2);
           }
-          var38.field_k = var38.field_k + 1;
+          var38.position = var38.position + 1;
           var6++;
-          var8Lifetime1 = var38.field_k;
-          var38.field_k = var38.field_k + var6;
-          for (var9 = 0; var38.field_i[var9 + var38.field_k] != 0; var9++) {
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var9 + var38.position] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
@@ -374,7 +374,7 @@ final class qd extends uf {
             var10[var11_int] = var38.f(2);
           }
           var9++;
-          var38.field_k = var38.field_k + 1;
+          var38.position = var38.position + 1;
           var53 = new byte[var9];
           var39 = var53;
           var11 = var39;
@@ -431,7 +431,7 @@ final class qd extends uf {
           }
           var47 = stackIn_42_0;
           var16 = var47;
-          for (var17 = 0; var38.field_i[var38.field_k + var17] != 0; var17++) {
+          for (var17 = 0; var38.payload[var38.position + var17] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
@@ -440,7 +440,7 @@ final class qd extends uf {
             var18[var19] = var38.f(2);
           }
           var17++;
-          var38.field_k = var38.field_k + 1;
+          var38.position = var38.position + 1;
           var19Lifetime1 = 0;
           for (var20 = 0; 128 > var20; var20++) {
             var19Lifetime1 = var19Lifetime1 + var38.a(-16384);
@@ -480,7 +480,7 @@ final class qd extends uf {
                 }
                 incrementValue$6 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = var38.field_i[incrementValue$6] - 1;
+                var23Lifetime1 = var38.payload[incrementValue$6] - 1;
               }
               this.field_m[var24] = (byte)var23Lifetime1;
               var20Lifetime3--;
@@ -499,7 +499,7 @@ final class qd extends uf {
                 }
                 incrementValue$4 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = var38.field_i[incrementValue$4] + 16 << 2;
+                var24Lifetime1 = var38.payload[incrementValue$4] + 16 << 2;
               }
               var20Lifetime4--;
               this.field_r[var25_int] = (byte)var24Lifetime1;
@@ -729,8 +729,8 @@ final class qd extends uf {
         if (param0 <= 15) {
           return;
         }
-        if (eh.field_g[param1] != null) {
-          gb.field_E.a(eh.field_g[param1], 100, ua.field_e * pe.field_f[param1] / 128);
+        if (GameApplet.field_g[param1] != null) {
+          gb.field_E.a(GameApplet.field_g[param1], 100, ua.field_e * pe.field_f[param1] / 128);
         }
     }
 }

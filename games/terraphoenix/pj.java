@@ -155,12 +155,12 @@ final class pj {
         field_a = null;
     }
 
-    final ck b(int param0) {
+    final DelegatingCanvas b(int param0) {
         this.field_m = ja.field_j;
         this.field_e = wc.field_p;
         this.field_j.a(9887, this.field_p, this.field_u);
         ai.field_h = false;
-        ck var2 = jb.a(this.field_p, this.field_u, param0, 0, (byte) 109, nj.field_l);
+        DelegatingCanvas var2 = MouseWheelInput.a(this.field_p, this.field_u, param0, 0, (byte) 109, nj.field_l);
         if (var2 == null) {
           this.a(param0 + 97);
         }

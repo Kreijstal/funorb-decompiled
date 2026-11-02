@@ -7,7 +7,7 @@ final class lm {
     static bg field_g;
     static int[] field_a;
     static int field_c;
-    static ci field_e;
+    static Sprite field_e;
     static int field_b;
 
     public static void a(boolean param0) {
@@ -220,7 +220,7 @@ final class lm {
         }
     }
 
-    final static void a(int param0, int param1, ci param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, Sprite param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
         int var9_int = param6 + param2.field_p + param0 - param7;
         int var10 = param6 + param0 + (param2.field_p + param1);
         int var11 = (param2.field_t >> 1) + param2.field_v + param5;

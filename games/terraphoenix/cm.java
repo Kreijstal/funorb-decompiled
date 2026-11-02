@@ -40,7 +40,7 @@ final class cm {
             return false;
           }
           qh.field_d = mk.field_j.a(-16384);
-          mk.field_j.field_k = 0;
+          mk.field_j.position = 0;
         }
         if (qh.field_d != -2) {
           return vc.a(-122, qh.field_d);
@@ -49,7 +49,7 @@ final class cm {
           return false;
         }
         qh.field_d = mk.field_j.i(-25578);
-        mk.field_j.field_k = 0;
+        mk.field_j.position = 0;
         return vc.a(-122, qh.field_d);
     }
 

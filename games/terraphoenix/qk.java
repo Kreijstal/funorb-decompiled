@@ -5,11 +5,11 @@ final class qk {
     static pk field_e;
     static pk field_a;
     static int field_b;
-    private tc field_d;
+    private SecondaryNodeDeque field_d;
     static String field_g;
     static int field_i;
     static dj[] field_l;
-    private ce field_c;
+    private IterableNodeHashTable field_c;
     static String field_k;
     static String field_f;
     private int field_h;
@@ -125,13 +125,13 @@ final class qk {
         }
     }
 
-    final static el a(Throwable param0, String param1) {
-        el var2 = null;
-        if (param0 instanceof el) {
-          var2 = (el) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_b = var2.field_b + ' ' + param1;
         } else {
-          var2 = new el(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }
@@ -142,7 +142,7 @@ final class qk {
         int var7 = Terraphoenix.field_V;
         try {
           if (param3 >= -97) {
-            this.field_c = (ce) null;
+            this.field_c = (IterableNodeHashTable) null;
           }
           if (this.field_j < param2) {
             throw new IllegalStateException();

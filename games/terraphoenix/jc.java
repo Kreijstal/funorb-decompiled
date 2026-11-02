@@ -6,10 +6,10 @@ import java.util.*;
 abstract class jc extends gl implements sf {
     static String field_E;
     gl field_F;
-    static ci[] field_G;
+    static Sprite[] field_G;
     static String field_B;
     static int field_D;
-    static dh field_z;
+    static PacketBuffer field_z;
     static String[] field_C;
 
     String f(int param0) {
@@ -241,7 +241,7 @@ abstract class jc extends gl implements sf {
 
     final void e(int param0) {
         if (param0 >= 0) {
-          field_G = (ci[]) null;
+          field_G = (Sprite[]) null;
         }
         if (this.field_F != null) {
           this.field_F.e(-87);

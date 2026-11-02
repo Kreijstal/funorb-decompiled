@@ -11,7 +11,7 @@ final class qg {
         int var5_int = 0;
         byte[] var5 = null;
         byte[] var6 = null;
-        dh var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -24,7 +24,7 @@ final class qg {
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         try {
-          var9 = new dh(param1);
+          var9 = new PacketBuffer(param1);
           var3 = var9.a(-16384);
           var4 = var9.f((byte) -107);
           if (0 <= var4 && (eg.field_h == 0 ||
@@ -109,8 +109,8 @@ final class qg {
           return var2_ref_byte__Lifetime2;
         }
         if (null != ol.field_Kb) {
-          for (var2 = 0; tc.field_c.length > var2; var2++) {
-            if (param1 == tc.field_c[var2] &&
+          for (var2 = 0; SecondaryNodeDeque.field_c.length > var2; var2++) {
+            if (param1 == SecondaryNodeDeque.field_c[var2] &&
               ba.field_g[var2] > 0) {
               dupTemp$8 = ba.field_g[var2] - 1;
               arrayValue$9 = ol.field_Kb[var2];
@@ -182,7 +182,7 @@ final class qg {
         }
     }
 
-    final static void a(ci param0, int param1, byte param2, int param3, int param4, int param5) {
+    final static void a(Sprite param0, int param1, byte param2, int param3, int param4, int param5) {
         int var17 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;

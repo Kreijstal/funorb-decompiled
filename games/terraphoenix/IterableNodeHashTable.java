@@ -3,23 +3,23 @@
  */
 import java.util.*;
 
-final class ce implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static String field_d;
     static boolean field_e;
-    private uf field_b;
+    private IntrusiveNode field_b;
     int field_c;
-    uf[] field_a;
+    IntrusiveNode[] field_a;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new c(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final static ci[] a(String param0, byte param1, String param2, fa param3) {
+    final static Sprite[] a(String param0, byte param1, String param2, fa param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         fa var6 = null;
-        ci[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -31,11 +31,11 @@ final class ce implements Iterable {
         try {
           if (param1 > -70) {
             var6 = (fa) null;
-            ce.a((String) null, (byte) 73, (String) null, (fa) null);
+            IterableNodeHashTable.a((String) null, (byte) 73, (String) null, (fa) null);
           }
           var4_int = param3.c(-1, param2);
           var5 = param3.a(-103, var4_int, param0);
-          stackIn_3_0 = mj.a(param3, var4_int, var5, true);
+          stackIn_3_0 = SocketConnector.a(param3, var4_int, var5, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,15 +73,15 @@ final class ce implements Iterable {
 
     public static void a(int param0) {
         if (param0 != -1) {
-          ce.b(-112);
+          IterableNodeHashTable.b(-112);
           field_d = null;
           return;
         }
         field_d = null;
     }
 
-    final void a(uf param0, byte param1, long param2) {
-        uf var5 = null;
+    final void a(IntrusiveNode param0, byte param1, long param2) {
+        IntrusiveNode var5 = null;
         RuntimeException var5_ref = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -100,7 +100,7 @@ final class ce implements Iterable {
           if (param1 <= -49) {
             return;
           }
-          ce.a(-9);
+          IterableNodeHashTable.a(-9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,10 +116,10 @@ final class ce implements Iterable {
         }
     }
 
-    final uf a(long param0, byte param1) {
-        uf var5 = null;
+    final IntrusiveNode a(long param0, byte param1) {
+        IntrusiveNode var5 = null;
         int var6 = Terraphoenix.field_V;
-        uf var4 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];
+        IntrusiveNode var4 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];
         this.field_b = var4.field_d;
         while (var4 != this.field_b) {
           if (param0 == this.field_b.field_g) {
@@ -131,12 +131,12 @@ final class ce implements Iterable {
         }
         this.field_b = null;
         if (param1 != -21) {
-          return (uf) null;
+          return (IntrusiveNode) null;
         }
         return null;
     }
 
-    private ce() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 

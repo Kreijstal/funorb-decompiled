@@ -39,7 +39,7 @@ abstract class kh extends gb {
           return;
         }
         if (hf.field_y == null) {
-          hf.field_y = new ci(this.field_p, this.field_n);
+          hf.field_y = new Sprite(this.field_p, this.field_n);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
             l.a();
@@ -59,7 +59,7 @@ abstract class kh extends gb {
           return;
         }
         if (this.field_p > hf.field_y.field_r) {
-          hf.field_y = new ci(this.field_p, this.field_n);
+          hf.field_y = new Sprite(this.field_p, this.field_n);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
             l.a();
@@ -79,7 +79,7 @@ abstract class kh extends gb {
           return;
         }
         if (this.field_n > hf.field_y.field_t) {
-          hf.field_y = new ci(this.field_p, this.field_n);
+          hf.field_y = new Sprite(this.field_p, this.field_n);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
             l.a();

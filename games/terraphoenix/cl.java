@@ -51,8 +51,8 @@ final class cl extends gb implements jf, n {
         field_I = null;
         field_J = null;
         if (param0 <= 110) {
-          ci var2 = (ci) null;
-          cl.a(-65, 31, (byte) -36, (ci) null, -121, -18);
+          Sprite var2 = (Sprite) null;
+          cl.a(-65, 31, (byte) -36, (Sprite) null, -121, -18);
         }
     }
 
@@ -95,8 +95,8 @@ final class cl extends gb implements jf, n {
 
     final static eg a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         if (param7 != 43) {
-          ci var9 = (ci) null;
-          cl.a(-72, 87, (byte) 30, (ci) null, -31, 97);
+          Sprite var9 = (Sprite) null;
+          cl.a(-72, 87, (byte) 30, (Sprite) null, -31, 97);
         }
         eg var8 = new eg(param3, param6, param1, param4, param2, param5);
         ic.field_s.a(var8, -16611);
@@ -146,7 +146,7 @@ final class cl extends gb implements jf, n {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, ci param3, int param4, int param5) {
+    final static void a(int param0, int param1, byte param2, Sprite param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;

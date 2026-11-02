@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gf extends eh {
+abstract class gf extends GameApplet {
     private boolean field_r;
     private int field_A;
     private long field_t;
@@ -11,7 +11,7 @@ abstract class gf extends eh {
     private boolean field_s;
     static kf field_u;
     private boolean field_q;
-    static ci field_p;
+    static Sprite field_p;
     private int field_v;
     String field_w;
     static int field_C;
@@ -95,7 +95,7 @@ abstract class gf extends eh {
             o.b(3, (byte) -74);
           }
           if (tg.field_c[3]) {
-            uf.a(20840, 4);
+            IntrusiveNode.a(20840, 4);
           }
           if (tg.field_c[4]) {
             jh.b(5, -31890);
@@ -175,7 +175,7 @@ abstract class gf extends eh {
           int var4 = 0;
           int var5 = 0;
           Exception var6 = null;
-          dh var7 = null;
+          PacketBuffer var7 = null;
           String var8 = null;
           int var9 = 0;
           String var10 = null;
@@ -192,8 +192,8 @@ abstract class gf extends eh {
           if (var4 == 1) {
             var5 = fg.a(fm.a(-32218), 41, qh.a(true));
             if (var5 != -1) {
-              fl.a(bh.field_d, false, te.field_a, var5);
-              te.field_a = null;
+              fl.a(bh.field_d, false, RasterBuffer.field_a, var5);
+              RasterBuffer.field_a = null;
               bh.field_d = null;
             }
             var12 = rd.b((byte) 92);
@@ -204,8 +204,8 @@ abstract class gf extends eh {
           if (var4 == 2) {
             var5Lifetime1 = gi.a(this.field_o, le.a(false), cm.a(-125), 3, ab.b(-27737), vl.b(3), pb.a((byte) -47));
             if (var5Lifetime1 != -1) {
-              bi.a(var5Lifetime1, bh.field_d, te.field_a, -14);
-              te.field_a = null;
+              bi.a(var5Lifetime1, bh.field_d, RasterBuffer.field_a, -14);
+              RasterBuffer.field_a = null;
               bh.field_d = null;
             }
           }
@@ -221,7 +221,7 @@ abstract class gf extends eh {
               var5Lifetime2 = wj.a(false, 29398, le.a(false), pb.a((byte) -47), this.field_o, this.field_r);
               if (var5Lifetime2 != -1) {
                 if (0 == var5Lifetime2) {
-                  pf.field_c = oj.field_y;
+                  pf.field_c = SpriteState.field_y;
                   kj.a((byte) 95);
                   ei.field_R = false;
                   q.field_Jb = 10;
@@ -277,7 +277,7 @@ abstract class gf extends eh {
                   var10 = (String) null;
                   si.a((String) null, 3);
                 } else {
-                  var8 = tc.a((byte) -114, var7.field_i, var7.field_k, 0);
+                  var8 = SecondaryNodeDeque.a((byte) -114, var7.payload, var7.position, 0);
                   si.a(var8, 3);
                 }
                 fm.field_b = null;
@@ -324,15 +324,15 @@ abstract class gf extends eh {
         var5 = Terraphoenix.field_V;
         if (null != ab.field_b) {
           if (a.field_b == null) {
-            var6 = ck.b(113);
+            var6 = DelegatingCanvas.b(113);
             var4 = var6.getSize();
             ab.field_b.a((byte) 63, var4.width, var4.height);
           }
           ab.field_b.a((byte) 92);
         }
-        tc.b(1);
+        SecondaryNodeDeque.b(1);
         fc.b(43);
-        if (!c.b(-107) &&
+        if (!NodeHashTableIterator.b(-107) &&
           q.field_Jb != 11) {
           vk.a(-8177);
         }
@@ -500,7 +500,7 @@ abstract class gf extends eh {
         if (uh.field_H == 11) {
           if (bi.field_b != null && (!bi.field_b.a(0) ||
             !bi.field_b.b((byte) -128))) {
-            vh.a(qc.a(qb.field_e, bi.field_b, si.field_hb, (byte) 123), (byte) 66, 0.0f);
+            DualLinkNode.a(qc.a(qb.field_e, bi.field_b, si.field_hb, (byte) 123), (byte) 66, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -517,7 +517,7 @@ abstract class gf extends eh {
           if (null != ph.field_v) {
             stackIn_134_0 = (!ph.field_v.a(0)) ? 0 : 1;
             var3Lifetime2 = stackIn_134_0;
-            vh.a(ph.field_v.field_e, (byte) -128, ph.field_v.field_c);
+            DualLinkNode.a(ph.field_v.field_e, (byte) -128, ph.field_v.field_c);
           }
           if (var3Lifetime2 != 0) {
             uh.field_H = 20;
@@ -583,11 +583,11 @@ abstract class gf extends eh {
             return;
           }
           if (1 == var2) {
-            jb.a((byte) -127);
+            MouseWheelInput.a((byte) -127);
           } else {
             if (2 != var2) {
               if (var2 == 3) {
-                te.a((byte) 67);
+                RasterBuffer.a((byte) 67);
               } else {
                 if (4 != var2) {
                   if (var2 != 5) {
@@ -787,7 +787,7 @@ abstract class gf extends eh {
         } else {
           if (10 <= uh.field_H) {
             if (!sl.a((byte) -126)) {
-              dh.g(97);
+              PacketBuffer.g(97);
             } else {
               if (q.field_Jb == 0) {
                 discarded$3 = this.a(false, false, -91);

@@ -23,8 +23,8 @@ final class mh {
           var7 = di.field_l;
           var8 = var7;
           var8.k(-17410, param1);
-          var8.field_k = var8.field_k + 1;
-          var4 = var8.field_k;
+          var8.position = var8.position + 1;
+          var4 = var8.position;
           var8.i(1, -22);
           var8.h(-1564407352, param0.field_s);
           var8.h(-1564407352, param0.field_h);
@@ -38,7 +38,7 @@ final class mh {
             var7.e(param0.field_r[var5], 8959);
           }
           var8.d(var4, 8600);
-          var8.j(-var4 + var8.field_k, -119);
+          var8.j(-var4 + var8.position, -119);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -72,9 +72,9 @@ final class mh {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ci var6 = null;
-        ci var7 = null;
-        ci var8 = null;
+        Sprite var6 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
         int var3Lifetime1;
         var4 = Terraphoenix.field_V;
         try {

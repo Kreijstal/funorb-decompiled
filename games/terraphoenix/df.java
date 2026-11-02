@@ -17,7 +17,7 @@ final class df extends eb {
           for (var2_int = param0; var2_int < pb.field_b; var2_int++) {
             pf.field_b[var2_int + param1] = var2_int;
           }
-          re.a(pb.field_b + param1, (byte) -117, el.field_d, bd.field_a, false, param1, param1 + param1);
+          re.a(pb.field_b + param1, (byte) -117, ClientException.field_d, bd.field_a, false, param1, param1 + param1);
           if (pb.field_b > param1) {
             pb.field_b = param1;
           }

@@ -472,7 +472,7 @@ class gb extends gl implements sf {
           while (var4 != null) {
             if (var4.d(-126)) {
               var5 = new k(this.field_C);
-              var5.a((byte) -113, (uf) (var4));
+              var5.a((byte) -113, (IntrusiveNode) (var4));
               var6 = (gl) (var5.c(23));
               while (var6 != null) {
                 if (!var6.a((byte) 52, param0)) {

@@ -18,7 +18,7 @@ final class nl {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vh.a(param4, param3, param1, true)) {
+          if (!DualLinkNode.a(param4, param3, param1, true)) {
             stackIn_2_0 = null;
             return (qj) (stackIn_2_0);
           }
@@ -104,30 +104,30 @@ final class nl {
           l.e(0, 74, 640, 406, 16777215);
           aa.field_j.b(120, 76);
           if (ef.field_j >= 120 &&
-            jb.field_b >= 76 &&
+            MouseWheelInput.field_b >= 76 &&
             220 >= ef.field_j) {
-            if (jb.field_b > 104) {
+            if (MouseWheelInput.field_b > 104) {
               if (!rf.field_B[7].field_d) {
                 return;
               }
               wh.field_e.b(20, 76);
               if (ef.field_j >= 20 &&
-                jb.field_b >= 76 &&
+                MouseWheelInput.field_b >= 76 &&
                 120 >= ef.field_j &&
-                jb.field_b <= 104) {
+                MouseWheelInput.field_b <= 104) {
                 l.d(20, 76, 100, 28, 16777215, 128);
               }
               qh.field_b.b(520, 76);
               if (ef.field_j < 520) {
                 return;
               }
-              if (jb.field_b < 76) {
+              if (MouseWheelInput.field_b < 76) {
                 return;
               }
               if (ef.field_j > 620) {
                 return;
               }
-              if (jb.field_b > 104) {
+              if (MouseWheelInput.field_b > 104) {
                 return;
               }
               if (ef.field_j < 0) {
@@ -143,20 +143,20 @@ final class nl {
           }
           wh.field_e.b(20, 76);
           if (ef.field_j >= 20 &&
-            jb.field_b >= 76 &&
+            MouseWheelInput.field_b >= 76 &&
             120 >= ef.field_j) {
-            if (jb.field_b > 104) {
+            if (MouseWheelInput.field_b > 104) {
               qh.field_b.b(520, 76);
               if (ef.field_j < 520) {
                 return;
               }
-              if (jb.field_b < 76) {
+              if (MouseWheelInput.field_b < 76) {
                 return;
               }
               if (ef.field_j > 620) {
                 return;
               }
-              if (jb.field_b > 104) {
+              if (MouseWheelInput.field_b > 104) {
                 return;
               }
               if (ef.field_j < 0) {
@@ -169,9 +169,9 @@ final class nl {
           }
           qh.field_b.b(520, 76);
           if (ef.field_j >= 520 &&
-            jb.field_b >= 76 &&
+            MouseWheelInput.field_b >= 76 &&
             ef.field_j <= 620 &&
-            jb.field_b <= 104 &&
+            MouseWheelInput.field_b <= 104 &&
             ef.field_j >= 0) {
             l.d(520, 76, 100, 28, 16777215, 128);
             return;
@@ -186,36 +186,36 @@ final class nl {
           if (rf.field_B[7].field_d) {
             wh.field_e.b(20, 76);
             if (ef.field_j >= 20 &&
-              jb.field_b >= 76 &&
+              MouseWheelInput.field_b >= 76 &&
               120 >= ef.field_j &&
-              jb.field_b <= 104) {
+              MouseWheelInput.field_b <= 104) {
               l.d(20, 76, 100, 28, 16777215, 128);
             }
             qh.field_b.b(520, 76);
             if (ef.field_j >= 520 &&
-              jb.field_b >= 76 &&
+              MouseWheelInput.field_b >= 76 &&
               ef.field_j <= 620 &&
-              jb.field_b <= 104 &&
+              MouseWheelInput.field_b <= 104 &&
               ef.field_j >= 0) {
               l.d(520, 76, 100, 28, 16777215, 128);
             }
           }
           return;
         }
-        if (jb.field_b < 76) {
+        if (MouseWheelInput.field_b < 76) {
           if (rf.field_B[7].field_d) {
             wh.field_e.b(20, 76);
             if (ef.field_j >= 20 &&
-              jb.field_b >= 76 &&
+              MouseWheelInput.field_b >= 76 &&
               120 >= ef.field_j &&
-              jb.field_b <= 104) {
+              MouseWheelInput.field_b <= 104) {
               l.d(20, 76, 100, 28, 16777215, 128);
             }
             qh.field_b.b(520, 76);
             if (ef.field_j >= 520 &&
-              jb.field_b >= 76 &&
+              MouseWheelInput.field_b >= 76 &&
               ef.field_j <= 620 &&
-              jb.field_b <= 104 &&
+              MouseWheelInput.field_b <= 104 &&
               ef.field_j >= 0) {
               l.d(520, 76, 100, 28, 16777215, 128);
             }
@@ -223,20 +223,20 @@ final class nl {
           return;
         }
         if (220 >= ef.field_j) {
-          if (jb.field_b > 104) {
+          if (MouseWheelInput.field_b > 104) {
             if (rf.field_B[7].field_d) {
               wh.field_e.b(20, 76);
               if (ef.field_j >= 20 &&
-                jb.field_b >= 76 &&
+                MouseWheelInput.field_b >= 76 &&
                 120 >= ef.field_j &&
-                jb.field_b <= 104) {
+                MouseWheelInput.field_b <= 104) {
                 l.d(20, 76, 100, 28, 16777215, 128);
               }
               qh.field_b.b(520, 76);
               if (ef.field_j >= 520 &&
-                jb.field_b >= 76 &&
+                MouseWheelInput.field_b >= 76 &&
                 ef.field_j <= 620 &&
-                jb.field_b <= 104 &&
+                MouseWheelInput.field_b <= 104 &&
                 ef.field_j >= 0) {
                 l.d(520, 76, 100, 28, 16777215, 128);
               }
@@ -250,14 +250,14 @@ final class nl {
         }
         wh.field_e.b(20, 76);
         if (ef.field_j >= 20 &&
-          jb.field_b >= 76 &&
+          MouseWheelInput.field_b >= 76 &&
           120 >= ef.field_j) {
-          if (jb.field_b > 104) {
+          if (MouseWheelInput.field_b > 104) {
             qh.field_b.b(520, 76);
             if (ef.field_j >= 520 &&
-              jb.field_b >= 76 &&
+              MouseWheelInput.field_b >= 76 &&
               ef.field_j <= 620 &&
-              jb.field_b <= 104 &&
+              MouseWheelInput.field_b <= 104 &&
               ef.field_j >= 0) {
               l.d(520, 76, 100, 28, 16777215, 128);
             }
@@ -269,13 +269,13 @@ final class nl {
         if (ef.field_j < 520) {
           return;
         }
-        if (jb.field_b < 76) {
+        if (MouseWheelInput.field_b < 76) {
           return;
         }
         if (ef.field_j > 620) {
           return;
         }
-        if (jb.field_b > 104) {
+        if (MouseWheelInput.field_b > 104) {
           return;
         }
         if (ef.field_j < 0) {

@@ -5,7 +5,7 @@ abstract class ke {
     static int field_f;
     static int field_e;
     static int field_c;
-    static ci field_b;
+    static Sprite field_b;
     static fa field_d;
     static String field_g;
     static bg[] field_a;

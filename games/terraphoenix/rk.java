@@ -7,7 +7,7 @@ final class rk {
     static bg[] field_e;
     static int field_c;
     int[] field_d;
-    static ci[] field_f;
+    static Sprite[] field_f;
 
     final static void a(java.applet.Applet param0, boolean param1) {
         if (!param1) {

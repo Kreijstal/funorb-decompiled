@@ -13,7 +13,7 @@ final class qa {
 
     final static int a(byte param0) {
         int var1 = -38 % ((-67 - param0) / 41);
-        return tc.field_e;
+        return SecondaryNodeDeque.field_e;
     }
 
     static {

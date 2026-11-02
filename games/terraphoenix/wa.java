@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wa extends vh {
+class wa extends DualLinkNode {
     static String field_q;
     static int field_s;
     static volatile int field_p;
@@ -17,7 +17,7 @@ class wa extends vh {
         }
     }
 
-    final static void a(ci param0, byte param1, String param2) {
+    final static void a(Sprite param0, byte param1, String param2) {
         try {
           fa.field_d = param0;
           if (param1 < 19) {
@@ -29,7 +29,7 @@ class wa extends vh {
         }
     }
 
-    final static void a(ci param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var17 = 0;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
@@ -44,7 +44,7 @@ class wa extends vh {
         int var16 = 0;
         int var18 = 0;
         int var19 = 0;
-        ci var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
@@ -137,7 +137,7 @@ class wa extends vh {
           var3 = new char[var2_int];
           if (param0 != -117) {
             var6 = (String) null;
-            wa.a((ci) null, (byte) 117, (String) null);
+            wa.a((Sprite) null, (byte) 117, (String) null);
           }
           for (var4 = 0; var4 < var2_int; var4++) {
             var3[-1 + (var2_int - var4)] = param1.charAt(var4);

@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-final class tc implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static String field_b;
-    vh field_a;
+    DualLinkNode field_a;
     static o field_f;
     static int field_e;
     static String field_d;
     static int[] field_c;
 
-    private tc() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ne(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     public static void a(int param0) {
@@ -29,11 +29,11 @@ final class tc implements Iterable {
         field_d = null;
     }
 
-    final vh c(int param0) {
+    final DualLinkNode c(int param0) {
         if (param0 != 0) {
           this.c(117);
         }
-        vh var2 = this.field_a.field_o;
+        DualLinkNode var2 = this.field_a.field_o;
         if (this.field_a == var2) {
           return null;
         }
@@ -72,7 +72,7 @@ final class tc implements Iterable {
             d.field_M = u.field_g;
           }
           if (param0 != 1) {
-            tc.a(122);
+            SecondaryNodeDeque.a(122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +82,7 @@ final class tc implements Iterable {
         }
     }
 
-    final void a(vh param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
           if (param0.field_i != null) {
             param0.c((byte) 13);
@@ -129,7 +129,7 @@ final class tc implements Iterable {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = oj.field_s[var7 - 128];
+                var8 = SpriteState.field_s[var7 - 128];
                 if (0 == var8) {
                   var8 = 63;
                 }

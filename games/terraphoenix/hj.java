@@ -53,7 +53,7 @@ final class hj extends jc {
 
     final void a(int param0, int param1, int param2, int param3, int param4, gl param5) {
         super.a(59, param1, param2, param3, param4, param5);
-        cb var7 = oj.field_w;
+        cb var7 = SpriteState.field_w;
         if (param0 <= 36) {
           return;
         }
@@ -64,12 +64,12 @@ final class hj extends jc {
             }
             if (this.field_r instanceof fe) {
               ((fe) (this.field_r)).a(this, var7, 121);
-              oj.field_w = null;
+              SpriteState.field_w = null;
               return;
             }
             if (var7.field_r instanceof fe) {
               ((fe) (var7.field_r)).a(this, var7, 118);
-              oj.field_w = null;
+              SpriteState.field_w = null;
               return;
             }
           }

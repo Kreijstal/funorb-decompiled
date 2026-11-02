@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bk {
-    static ci[] field_a;
+    static Sprite[] field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, ci[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -61,7 +61,7 @@ final class bk {
         var3 = Terraphoenix.field_V;
         try {
           if (param0 != 23196) {
-            field_a = (ci[]) null;
+            field_a = (Sprite[]) null;
           }
           var1_int = 0;
           for (var2 = 0; 9 > var2; var2++) {
@@ -85,7 +85,7 @@ final class bk {
     final static void b(int param0) {
         Terraphoenix.field_O = 0;
         if (param0 <= 9) {
-          field_a = (ci[]) null;
+          field_a = (Sprite[]) null;
         }
     }
 
@@ -181,7 +181,7 @@ final class bk {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 6144) {
-          field_a = (ci[]) null;
+          field_a = (Sprite[]) null;
         }
     }
 

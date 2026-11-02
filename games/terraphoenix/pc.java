@@ -5,7 +5,7 @@ import java.io.*;
 
 final class pc {
     static boolean[][] field_b;
-    static ci field_d;
+    static Sprite field_d;
     static bg field_e;
     static long field_a;
     int field_f;
@@ -19,7 +19,7 @@ final class pc {
         return -var3 + (var3 + param2) / param1;
     }
 
-    final static void a(ci param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         try {
           vi.field_h = param0;
           if (param1 != 40) {
@@ -31,7 +31,7 @@ final class pc {
     }
 
     final static String a(Throwable param0, int param1) throws IOException {
-        el var14 = null;
+        ClientException var14 = null;
         String var25 = null;
         String var20 = null;
         String var21 = null;
@@ -75,10 +75,10 @@ final class pc {
         int var9Lifetime1;
         int var10Lifetime1;
         int var12Lifetime1;
-        if (!(param0 instanceof el)) {
+        if (!(param0 instanceof ClientException)) {
           var2 = "";
         } else {
-          var14 = (el) ((Object) param0);
+          var14 = (ClientException) ((Object) param0);
           param0 = var14.field_a;
           var2 = var14.field_b + " | ";
           var11 = var2;

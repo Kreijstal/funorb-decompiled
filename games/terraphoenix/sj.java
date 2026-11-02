@@ -4,7 +4,7 @@
 final class sj {
     static fa field_f;
     static int field_b;
-    static ci[] field_e;
+    static Sprite[] field_e;
     static lg[] field_a;
     static volatile boolean field_c;
     static int[] field_g;
@@ -27,7 +27,7 @@ final class sj {
 
     final static void a(boolean param0, byte param1, boolean param2, String param3) {
         try {
-          dh.g((byte) -124);
+          PacketBuffer.g((byte) -124);
           jl.field_I.b(false);
           mb.field_s = new uh(ol.field_Hb, (String) null, qi.field_b, param2, param0);
           bj.field_f = new jg(jl.field_I, mb.field_s);
@@ -79,7 +79,7 @@ final class sj {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$b1efba5c64a3(boolean param0, int param1, boolean param2, String param3) {
         try {
-          dh.g((byte) -124);
+          PacketBuffer.g((byte) -124);
           jl.field_I.b(false);
           mb.field_s = new uh(ol.field_Hb, (String) null, qi.field_b, param2, param0);
           bj.field_f = new jg(jl.field_I, mb.field_s);

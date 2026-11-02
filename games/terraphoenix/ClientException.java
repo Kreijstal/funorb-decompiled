@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class el extends RuntimeException {
+final class ClientException extends RuntimeException {
     static int field_e;
     static String field_c;
     static int field_d;
@@ -17,7 +17,7 @@ final class el extends RuntimeException {
         field_c = null;
     }
 
-    el(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_b = param1;
         this.field_a = param0;
     }

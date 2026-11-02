@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mb extends vh {
+final class mb extends DualLinkNode {
     private int[] field_v;
     int[] field_r;
     private String[] field_t;
@@ -47,7 +47,7 @@ final class mb extends vh {
         return (Terraphoenix.field_O & 1 << param0) != 0 ? true : false;
     }
 
-    final static void a(int param0, pk param1, int param2, int param3, ci[] param4, int param5, ci[] param6, byte param7, int param8, int param9, int param10, int param11, int param12, ci[] param13, int param14, int param15, pk param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, pk param1, int param2, int param3, Sprite[] param4, int param5, Sprite[] param6, byte param7, int param8, int param9, int param10, int param11, int param12, Sprite[] param13, int param14, int param15, pk param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -105,7 +105,7 @@ final class mb extends vh {
         }
     }
 
-    final void a(dh param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -162,7 +162,7 @@ final class mb extends vh {
         return var2.toString();
     }
 
-    private final void a(dh param0, byte param1, int param2) {
+    private final void a(PacketBuffer param0, byte param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;

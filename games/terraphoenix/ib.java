@@ -3,7 +3,7 @@
  */
 final class ib extends ej implements v {
     static String field_ab;
-    static ci field_Y;
+    static Sprite field_Y;
     private rc field_db;
     private int field_Z;
     static String field_X;
@@ -32,7 +32,7 @@ final class ib extends ej implements v {
           return null;
         }
         if (param0 > 70) {
-          sh.a((byte) -122, jb.field_b, -this.field_Z + this.field_p + ef.field_j);
+          sh.a((byte) -122, MouseWheelInput.field_b, -this.field_Z + this.field_p + ef.field_j);
           return this.field_x;
         }
         return (String) null;

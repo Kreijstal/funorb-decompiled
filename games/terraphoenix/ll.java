@@ -17,7 +17,7 @@ final class ll {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_4_0 = tc.a((byte) -114, param1, param1.length, 0);
+            stackIn_4_0 = SecondaryNodeDeque.a((byte) -114, param1, param1.length, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -39,11 +39,11 @@ final class ll {
     final static void a(byte param0, boolean param1) {
         vi.field_q = 0;
         vi.field_p = ke.field_c;
-        el.field_e = 0;
+        ClientException.field_e = 0;
         uj.field_d = 0;
         si.field_ob = new sd(2);
         if (param0 == 49) {
-          si.field_ob.a(-1, param1, kk.a(param0 + 10423, ef.field_j, jb.field_b), param0 - 134);
+          si.field_ob.a(-1, param1, kk.a(param0 + 10423, ef.field_j, MouseWheelInput.field_b), param0 - 134);
           return;
         }
     }

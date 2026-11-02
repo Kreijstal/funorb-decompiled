@@ -70,11 +70,11 @@ class eb extends gl {
           }
           if (this.field_j != 0 &&
             this.field_j != oh.field_f) {
-            if (this.a(param2, param1, false, jb.field_b, ef.field_j) &&
+            if (this.a(param2, param1, false, MouseWheelInput.field_b, ef.field_j) &&
               oh.field_f == 0) {
-              this.a(jb.field_b - param1, this.field_j, (byte) -2, ef.field_j - param2);
+              this.a(MouseWheelInput.field_b - param1, this.field_j, (byte) -2, ef.field_j - param2);
             }
-            this.a(110, ef.field_j, param1, param2, jb.field_b, param0);
+            this.a(110, ef.field_j, param1, param2, MouseWheelInput.field_b, param0);
           }
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "eb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

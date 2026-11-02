@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cc extends uf {
+final class cc extends IntrusiveNode {
     static String field_l;
     byte[] field_h;
-    static ci[] field_i;
+    static Sprite[] field_i;
     int field_k;
     static String field_j;
 

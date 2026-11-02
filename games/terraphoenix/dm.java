@@ -3,7 +3,7 @@
  */
 final class dm {
     static int[] field_b;
-    static ci[] field_a;
+    static Sprite[] field_a;
     static int field_g;
     static long field_f;
     static fa field_d;

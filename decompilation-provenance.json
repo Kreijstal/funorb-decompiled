@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "terraphoenix": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/terraphoenix"
+      },
+      "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
+      "sources": {
+        "files": 311,
+        "sha256": "378dbba74bf8c2141e99ec5055489980209abf69eb477655a2f29b3a68707e39"
+      },
+      "dictionary": {
+        "path": "decompilation/terraphoenix-naming.json",
+        "sha256": "2be829ac60dc755cada2601a243e4370a5d7096d41335b7f1d49724833d27093"
+      },
+      "readingGuide": {
+        "path": "games/terraphoenix/README.md",
+        "sha256": "bb718a808b9dbb9b820b04e940da01f085e127c1fde03b2f8589f09a1a97bde0"
+      },
+      "rulesSha256": "4bfad416e600b2526952d4ecb424b44a468edadacdf82c7769118551fe3f5735",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12198,6 +12222,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 311,
+          "sha256": "378dbba74bf8c2141e99ec5055489980209abf69eb477655a2f29b3a68707e39"
         }
       },
       "tetralink": {

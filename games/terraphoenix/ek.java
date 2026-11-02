@@ -22,7 +22,7 @@ final class ek {
         field_h = (int[][]) null;
     }
 
-    final void a(dh param0, fj param1) {
+    final void a(PacketBuffer param0, fj param1) {
         int var3;
         int var4;
         int var5;

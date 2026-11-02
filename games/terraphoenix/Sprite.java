@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ci extends oj {
+class Sprite extends SpriteState {
     int[] field_z;
 
     private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
@@ -127,7 +127,7 @@ class ci extends oj {
           if (var5 <= 0) {
             return;
           }
-          ci.a(l.field_i, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(l.field_i, this.field_z, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -174,9 +174,9 @@ class ci extends oj {
             return;
           }
           if (param2 == 256) {
-            ci.a(0, 0, 0, l.field_i, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, l.field_i, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            ci.a(0, 0, 0, l.field_i, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, l.field_i, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -204,10 +204,10 @@ class ci extends oj {
         }
     }
 
-    final ci e() {
+    final Sprite e() {
         int var2 = 0;
         int var3 = 0;
-        ci var1 = new ci(this.field_r, this.field_t);
+        Sprite var1 = new Sprite(this.field_r, this.field_t);
         var1.field_q = this.field_q;
         var1.field_u = this.field_u;
         var1.field_p = this.field_q - this.field_r - this.field_p;
@@ -449,7 +449,7 @@ class ci extends oj {
           if (var6 <= 0) {
             return;
           }
-          ci.b(l.field_i, this.field_z, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.b(l.field_i, this.field_z, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -519,7 +519,7 @@ class ci extends oj {
           if (var6 <= 0) {
             return;
           }
-          ci.b(l.field_i, this.field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          Sprite.b(l.field_i, this.field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -600,15 +600,15 @@ class ci extends oj {
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            ci.a(0, 0, 0, var8, this.field_z, l.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            Sprite.a(0, 0, 0, var8, this.field_z, l.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            ci.a(0, 0, 0, var8, this.field_z, l.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            Sprite.a(0, 0, 0, var8, this.field_z, l.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
     }
 
-    ci(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_q = param0;
         this.field_u = param1;
         this.field_p = param2;
@@ -685,7 +685,7 @@ class ci extends oj {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          ci.a(l.field_i, this.field_z, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          Sprite.a(l.field_i, this.field_z, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -811,9 +811,9 @@ class ci extends oj {
         }
     }
 
-    final ci d() {
+    final Sprite d() {
         int var3 = 0;
-        ci var1 = new ci(this.field_r, this.field_t);
+        Sprite var1 = new Sprite(this.field_r, this.field_t);
         var1.field_q = this.field_q;
         var1.field_u = this.field_u;
         var1.field_p = this.field_p;
@@ -940,7 +940,7 @@ class ci extends oj {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          ci.a(l.field_i, this.field_z, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.a(l.field_i, this.field_z, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -1582,7 +1582,7 @@ class ci extends oj {
           if (var5 <= 0) {
             return;
           }
-          ci.a(0, l.field_i, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, l.field_i, this.field_z, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1604,12 +1604,12 @@ class ci extends oj {
         int var4Lifetime2;
         int var5Lifetime1;
         var1 = this.field_t - 1;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var1 >= 0) {
             var2 = var1 * this.field_r;
             for (var3 = 0; var3 < this.field_r; var3++) {
               if (this.field_z[var2 + var3] != 0) {
-                break L1;
+                break scanLoop1;
               }
             }
             var1--;
@@ -1618,12 +1618,12 @@ class ci extends oj {
           break;
         }
         var2Lifetime1 = 0;
-        L4: while (true) {
+        scanLoop2: while (true) {
           if (var2Lifetime1 < var1) {
             var3Lifetime1 = var2Lifetime1 * this.field_r;
             for (var4 = 0; var4 < this.field_r; var4++) {
               if (this.field_z[var3Lifetime1 + var4] != 0) {
-                break L4;
+                break scanLoop2;
               }
             }
             var2Lifetime1++;
@@ -1632,11 +1632,11 @@ class ci extends oj {
           break;
         }
         var3Lifetime2 = this.field_r - 1;
-        L7: while (true) {
+        scanLoop3: while (true) {
           if (var3Lifetime2 >= 0) {
             for (var4Lifetime1 = var2Lifetime1; var4Lifetime1 <= var1; var4Lifetime1++) {
               if (this.field_z[var4Lifetime1 * this.field_r + var3Lifetime2] != 0) {
-                break L7;
+                break scanLoop3;
               }
             }
             var3Lifetime2--;
@@ -1645,11 +1645,11 @@ class ci extends oj {
           break;
         }
         var4Lifetime2 = 0;
-        L10: while (true) {
+        scanLoop4: while (true) {
           if (var4Lifetime2 < var3Lifetime2) {
             for (var5 = var2Lifetime1; var5 <= var1; var5++) {
               if (this.field_z[var5 * this.field_r + var4Lifetime2] != 0) {
-                break L10;
+                break scanLoop4;
               }
             }
             var4Lifetime2++;
@@ -2135,12 +2135,12 @@ class ci extends oj {
           if (var5 <= 0) {
             return;
           }
-          ci.a(l.field_i, this.field_z, var4, var3, var6, var5, var7, var8);
+          Sprite.a(l.field_i, this.field_z, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    ci(int param0, int param1) {
+    Sprite(int param0, int param1) {
         this.field_z = new int[param0 * param1];
         this.field_q = param0;
         this.field_r = param0;
@@ -2218,12 +2218,12 @@ class ci extends oj {
           if (var6 <= 0) {
             return;
           }
-          ci.b(l.field_i, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(l.field_i, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    ci(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;
@@ -2408,7 +2408,7 @@ class ci extends oj {
           if (var6 <= 0) {
             return;
           }
-          ci.a(l.field_i, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(l.field_i, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2454,7 +2454,7 @@ class ci extends oj {
           if (var6 <= 0) {
             return;
           }
-          ci.c(l.field_i, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.c(l.field_i, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2593,6 +2593,6 @@ class ci extends oj {
         int var4 = param0 + (this.field_r >> 1) > l.field_f ? l.field_f - param0 << 1 : this.field_r;
         int var5 = param1 < l.field_d ? l.field_d - param1 << 1 : 0;
         int var6 = param1 + (this.field_t >> 1) > l.field_c ? l.field_c - param1 << 1 : this.field_t;
-        ci.a(this.field_z, var5 * this.field_r + var3, (param1 + (var5 >> 1)) * l.field_k + (param0 + (var3 >> 1)), (this.field_r << 1) - (var4 - var3) + (this.field_r & 1), l.field_k - (var4 - var3 >> 1), this.field_r, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.field_z, var5 * this.field_r + var3, (param1 + (var5 >> 1)) * l.field_k + (param0 + (var3 >> 1)), (this.field_r << 1) - (var4 - var3) + (this.field_r & 1), l.field_k - (var4 - var3 >> 1), this.field_r, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 }

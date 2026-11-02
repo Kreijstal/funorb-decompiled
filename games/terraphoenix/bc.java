@@ -23,20 +23,20 @@ final class bc {
           Throwable decompiledCaughtException = null;
           if (null != ig.field_e && (param0 < 0 ||
             od.field_g == mh.field_a)) {
-            if (di.field_l.field_k == 0 &&
+            if (di.field_l.position == 0 &&
               ll.a(1000) > (10000L + bl.field_h)) {
               di.field_l.k(-17410, param0);
             }
-            if (di.field_l.field_k > 0) {
+            if (di.field_l.position > 0) {
               try {
-                ig.field_e.a(di.field_l.field_k, 0, (byte) -97, di.field_l.field_i);
+                ig.field_e.a(di.field_l.position, 0, (byte) -97, di.field_l.payload);
                 bl.field_h = ll.a(param1 ^ 1000);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 gb.g(-17464);
               }
-              di.field_l.field_k = 0;
+              di.field_l.position = 0;
             }
             if (param1 == 0) {
               return;
@@ -44,7 +44,7 @@ final class bc {
             bc.a(true);
             return;
           }
-          di.field_l.field_k = 0;
+          di.field_l.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

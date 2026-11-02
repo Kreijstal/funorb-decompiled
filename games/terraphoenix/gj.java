@@ -53,23 +53,23 @@ final class gj {
           ab.field_g[0] = j.field_H.nextInt();
           ab.field_g[param2] = j.field_H.nextInt();
           ab.field_g[3] = (int)kd.field_c;
-          nc.field_c.field_k = 0;
+          nc.field_c.position = 0;
           ab.field_g[2] = (int)(kd.field_c >> 32);
           nc.field_c.e(ab.field_g[0], param2 ^ 8958);
           nc.field_c.e(ab.field_g[1], 8959);
           nc.field_c.e(ab.field_g[2], 8959);
           nc.field_c.e(ab.field_g[3], 8959);
-          eh.a(9371, nc.field_c);
+          GameApplet.a(9371, nc.field_c);
           nc.field_c.h(-1564407352, param1);
           param3.a((byte) -2, nc.field_c);
-          di.field_l.field_k = 0;
+          di.field_l.position = 0;
           if (!param0) {
             di.field_l.i(16, 18);
           } else {
             di.field_l.i(18, param2 ^ 16);
           }
-          di.field_l.field_k = di.field_l.field_k + 2;
-          var5_int = di.field_l.field_k;
+          di.field_l.position = di.field_l.position + 2;
+          var5_int = di.field_l.position;
           di.field_l.e(nd.field_i, 8959);
           di.field_l.a(pc.field_a, 21);
           var6 = 0;
@@ -95,7 +95,7 @@ final class gj {
             di.field_l.b(og.field_e, -108);
           }
           ea.a(ga.field_o, nc.field_c, 0, dj.field_c, di.field_l);
-          di.field_l.g(-var5_int + di.field_l.field_k, -20125);
+          di.field_l.g(-var5_int + di.field_l.position, -20125);
           bc.a(-1, param2 - 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

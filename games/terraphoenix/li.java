@@ -30,7 +30,7 @@ final class li {
           if (var6 == null) {
             ej.field_S = 2;
           } else {
-            if (te.a((CharSequence) ((Object) var6), true)) {
+            if (RasterBuffer.a((CharSequence) ((Object) var6), true)) {
               ej.field_S = ta.a((CharSequence) ((Object) var6), -121);
             } else {
               ej.field_S = 2;
@@ -38,13 +38,13 @@ final class li {
           }
           me.field_k = param4;
           da.field_b = param2;
-          dh.field_h = param3;
+          PacketBuffer.field_h = param3;
           if (param0 != 22957) {
             field_a = true;
           }
-          wg.field_l = new ci[param1.length];
+          wg.field_l = new Sprite[param1.length];
           for (var7 = 0; param1.length > var7; var7++) {
-            wg.field_l[var7] = new ci(317, 34);
+            wg.field_l[var7] = new Sprite(317, 34);
           }
           vi.field_j = param1;
           return;

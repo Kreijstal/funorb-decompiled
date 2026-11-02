@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qh implements cj {
-    static ci field_b;
+    static Sprite field_b;
     static int[] field_c;
     private int field_f;
     static int field_d;

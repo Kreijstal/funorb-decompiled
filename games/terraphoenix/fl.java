@@ -94,14 +94,14 @@ final class fl {
             stackIn_11_1 = !(wf.field_q >= 13);
             h.field_c = ia.a(stackIn_10_0, stackIn_11_1);
             var6 = (String[]) null;
-            eh.a(-32202, (String[]) null);
+            GameApplet.a(-32202, (String[]) null);
           } else {
             if (param3 < 100) {
               h.field_c = aj.a(param3, (byte) -21, param0);
             } else {
               if (param3 <= 105) {
                 var7 = param2;
-                eh.a(-32202, var7);
+                GameApplet.a(-32202, var7);
                 h.field_c = ib.a(true, param2);
               } else {
                 h.field_c = aj.a(param3, (byte) -21, param0);

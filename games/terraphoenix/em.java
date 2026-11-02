@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class em {
-    static ci field_c;
+    static Sprite field_c;
     int field_a;
     int field_e;
     static String field_b;
@@ -38,7 +38,7 @@ final class em {
 
     final int b(int param0) {
         if (param0 != -1) {
-          field_c = (ci) null;
+          field_c = (Sprite) null;
           if (null == this.field_d) {
             return 0;
           }
@@ -60,7 +60,7 @@ final class em {
         field_c = null;
         field_b = null;
         if (param0 >= -118) {
-          field_c = (ci) null;
+          field_c = (Sprite) null;
         }
     }
 

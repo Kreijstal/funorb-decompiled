@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-public abstract class eh extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String[] field_k;
     static boolean field_m;
     static rh field_f;
     boolean field_i;
-    static ci field_b;
+    static Sprite field_b;
     static gg[] field_g;
     static int field_d;
     public static boolean field_j;
@@ -57,7 +57,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
             !qi.field_f) {
             il.field_e = true;
             if (bh.field_f &&
-              ll.a(1000) - oj.field_x > 1000L) {
+              ll.a(1000) - SpriteState.field_x > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < hd.field_i) {
@@ -210,11 +210,11 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (null != he.field_j) {
-                var1 = he.field_j.toLowerCase();
+              if (null != PlatformTaskDispatcher.field_j) {
+                var1 = PlatformTaskDispatcher.field_j.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = he.field_d;
+                  var2 = PlatformTaskDispatcher.field_d;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -246,7 +246,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (te.a((CharSequence) ((Object) var4), true) &&
+                      if (RasterBuffer.a((CharSequence) ((Object) var4), true) &&
                         !(10 <= ta.a((CharSequence) ((Object) var4), 121))) {
                         this.a("wrongjava", true);
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -256,8 +256,8 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (null != he.field_d))) {
-                stackIn_68_0 = he.field_d.startsWith("1.");
+                (decompiledFrameRemainder2 = (null != PlatformTaskDispatcher.field_d))) {
+                stackIn_68_0 = PlatformTaskDispatcher.field_d.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -266,8 +266,8 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (he.field_d.length() > var1_int) {
-                    var3 = he.field_d.charAt(var1_int);
+                  if (PlatformTaskDispatcher.field_d.length() > var1_int) {
+                    var3 = PlatformTaskDispatcher.field_d.charAt(var1_int);
                     stackIn_84_0 = 48;
                     stackIn_84_1 = var3;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -294,7 +294,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
                 if (null != le.field_r) {
                   var1 = le.field_r;
                 }
-                var2_ref = he.field_x;
+                var2_ref = PlatformTaskDispatcher.field_x;
                 if (null != var2_ref) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -326,7 +326,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
                   do {
                     if (!(var3 < bb.field_d)) {
                       this.b(0);
-                      cf.a(nj.field_l, false, ae.field_G);
+                      GameKeyHandler.a(nj.field_l, false, ae.field_G);
                       break;
                     }
                     this.e(8028);
@@ -507,17 +507,17 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
         java.awt.Insets var6 = null;
         try {
           var2_long = ll.a(param0 + 1000);
-          var4 = bb.field_f[ck.field_b];
-          bb.field_f[ck.field_b] = var2_long;
+          var4 = bb.field_f[DelegatingCanvas.field_b];
+          bb.field_f[DelegatingCanvas.field_b] = var2_long;
           if (var4 != 0L &&
             var4 < var2_long) {
             var6_int = (int)(var2_long - var4);
             gl.field_k = ((var6_int >> 1) + 32000) / var6_int;
           }
           if (param0 != 0) {
-            eh.a(108, (dh) null);
+            GameApplet.a(108, (PacketBuffer) null);
           }
-          ck.field_b = ck.field_b + 1 & 31;
+          DelegatingCanvas.field_b = DelegatingCanvas.field_b + 1 & 31;
           fieldTemp$1 = q.field_Db;
           q.field_Db = q.field_Db + 1;
           if (50 < fieldTemp$1) {
@@ -526,7 +526,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
             ae.field_G.setSize(ja.field_j, wc.field_p);
             ae.field_G.setVisible(true);
             if (null != al.field_W &&
-              jb.field_e == null) {
+              MouseWheelInput.field_e == null) {
               var6 = al.field_W.getInsets();
               ae.field_G.setLocation(var6.left + ng.field_v, uh.field_P + var6.top);
               if (Terraphoenix.field_V != 0) {
@@ -553,8 +553,8 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
         Object var6 = null;
         try {
           var2_long = ll.a(1000);
-          var4 = jb.field_d[o.field_b];
-          jb.field_d[o.field_b] = var2_long;
+          var4 = MouseWheelInput.field_d[o.field_b];
+          MouseWheelInput.field_d[o.field_b] = var2_long;
           if (var4 != 0L &&
             var2_long <= var4) {
           }
@@ -630,7 +630,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
             ae.field_G.getParent().remove((java.awt.Component) ((Object) ae.field_G));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (jb.field_e == null) {
+          if (MouseWheelInput.field_e == null) {
             if (al.field_W != null) {
               var2 = al.field_W;
               decompiledFrameRemainder0 = (var4 != 0);
@@ -640,17 +640,17 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
                 var2 = gm.field_f;
                 if (var4 != 0) {
                   var2 = le.field_r;
-                  var2 = jb.field_e;
+                  var2 = MouseWheelInput.field_e;
                 }
               } else {
                 var2 = le.field_r;
                 if (var4 != 0) {
-                  var2 = jb.field_e;
+                  var2 = MouseWheelInput.field_e;
                 }
               }
             }
           } else {
-            var2 = jb.field_e;
+            var2 = MouseWheelInput.field_e;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           ae.field_G = (java.awt.Canvas) ((Object) new jm((java.awt.Component) (this)));
@@ -675,7 +675,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
           wb.field_d = true;
           il.field_e = true;
           ai.field_h = false;
-          oj.field_x = ll.a(1000);
+          SpriteState.field_x = ll.a(1000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -750,7 +750,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
 
     final void a(int param0, int param1, int param2, int param3, int param4, String param5, int param6) {
         try {
-          he dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_26_0 = null;
           StringBuilder stackIn_26_1 = null;
           String stackIn_27_2 = null;
@@ -783,7 +783,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
               uh.field_P = 0;
               ve.field_b = param3;
               td.field_b = dg.a(false);
-              dupTemp$0 = new he(param2, param5, param0, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param2, param5, param0, true);
               nj.field_l = dupTemp$0;
               d.field_K = dupTemp$0;
               var8 = nj.field_l.a((Runnable) (this), (byte) -21, 1);
@@ -851,7 +851,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
     public final void windowIconified(java.awt.event.WindowEvent param0) {
     }
 
-    final static void a(int param0, dh param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
           RuntimeException runtimeException = null;
           byte[] var2 = null;
@@ -878,13 +878,13 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
                 mh.field_b.a(false, 0L);
                 mh.field_b.a(var2, param0 - 2766);
                 var3_int = 0;
-                L5: while (true) {
+                scanLoop1: while (true) {
                   if (var3_int < 24) {
                     stackOut_9_0 = var2[var3_int];
                     stackIn_17_0 = stackOut_9_0;
                     stackIn_10_0 = stackOut_9_0;
                     if (var5 != 0) {
-                      break L5;
+                      break scanLoop1;
                     }
                     if (stackIn_10_0 == 0) {
                       var3_int++;
@@ -941,7 +941,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected eh() {
+    protected GameApplet() {
         this.field_i = false;
     }
 
@@ -959,7 +959,7 @@ public abstract class eh extends java.applet.Applet implements Runnable, java.aw
             rd.field_s.field_N.a(-11678, param1);
           }
           if (param0 != -32202) {
-            eh.a(-61, (String[]) null);
+            GameApplet.a(-61, (String[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lj extends uf {
+abstract class lj extends IntrusiveNode {
     volatile boolean field_j;
     lj field_h;
     int field_k;

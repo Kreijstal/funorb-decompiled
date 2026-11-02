@@ -17,7 +17,7 @@ final class kj implements cj {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        ci var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param2 + param1.field_w;
           var7 = param1.field_u + param0;
@@ -60,7 +60,7 @@ final class kj implements cj {
             nb.field_b.l(54);
             return;
           }
-          var1 = db.field_b;
+          var1 = MouseInputHandler.field_b;
           if (var1 > 0) {
             if (var1 != 1) {
               m.field_e = ij.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
@@ -79,7 +79,7 @@ final class kj implements cj {
         if (qi.field_b) {
           nb.field_b.l(54);
         } else {
-          var1 = db.field_b;
+          var1 = MouseInputHandler.field_b;
           if (var1 > 0) {
             if (var1 != 1) {
               m.field_e = ij.a(new String[]{Integer.toString(var1)}, -1, na.field_X);

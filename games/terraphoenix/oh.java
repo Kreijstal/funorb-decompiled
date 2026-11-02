@@ -199,7 +199,7 @@ final class oh {
         field_b = null;
     }
 
-    final static ci[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_13_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_26_0 = 0;
@@ -207,11 +207,11 @@ final class oh {
         int stackIn_36_0 = 0;
         int stackIn_47_0 = 0;
         int var9 = 0;
-        ci[] var10 = null;
-        ci[] var11_ref_ci__ = null;
+        Sprite[] var10 = null;
+        Sprite[] var11_ref_ci__ = null;
         int var11 = 0;
         int var12 = 0;
-        ci var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var11Lifetime1;
@@ -222,17 +222,17 @@ final class oh {
         var15 = Terraphoenix.field_V;
         var9 = param1 + (param6 + param5);
         if (param2 != 1) {
-          return (ci[]) null;
+          return (Sprite[]) null;
         }
-        var10 = new ci[]{new ci(var9, var9), new ci(param3, var9), new ci(var9, var9), new ci(var9, param3), new ci(64, 64), new ci(var9, param3), new ci(var9, var9), new ci(param3, var9), new ci(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9), new Sprite(var9, param3), new Sprite(64, 64), new Sprite(var9, param3), new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9)};
         var11_ref_ci__ = var10;
         var12 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var12 < var11_ref_ci__.length) {
             var13 = var11_ref_ci__[var12];
             stackIn_13_0 = 0;
             if (var15 != 0) {
-              break L0;
+              break scanLoop1;
             }
             var14 = stackIn_13_0;
             while (var13.field_z.length > var14) {
@@ -240,17 +240,17 @@ final class oh {
               var14++;
             }
             var12++;
-            continue L0;
+            continue scanLoop1;
           }
           stackIn_13_0 = 0;
           break;
         }
         var11 = stackIn_13_0;
-        L6: while (true) {
+        scanLoop2: while (true) {
           if (param6 > var11) {
             stackIn_24_0 = 0;
             if (var15 != 0) {
-              break L6;
+              break scanLoop2;
             }
             var12Lifetime1 = stackIn_24_0;
             while (var9 > var12Lifetime1) {
@@ -261,7 +261,7 @@ final class oh {
               var12Lifetime1++;
             }
             var11++;
-            continue L6;
+            continue scanLoop2;
           }
           stackIn_24_0 = 0;
           break;
@@ -292,11 +292,11 @@ final class oh {
             stackIn_36_0 = 0;
           }
           var11Lifetime1 = stackIn_36_0;
-          L19: while (true) {
+          scanLoop3: while (true) {
             if (param3 > var11Lifetime1) {
               stackIn_47_0 = 0;
               if (var15 != 0) {
-                break L19;
+                break scanLoop3;
               }
               var12Lifetime2Lifetime1 = stackIn_47_0;
               while (var12Lifetime2Lifetime1 < param6) {
@@ -307,13 +307,13 @@ final class oh {
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
-              continue L19;
+              continue scanLoop3;
             }
             stackIn_47_0 = 0;
             break;
           }
           var11Lifetime1 = stackIn_47_0;
-          L25: while (var11Lifetime1 < param3 >> 1) {
+          scanLoop4: while (var11Lifetime1 < param3 >> 1) {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (param5 > var12Lifetime2Lifetime2) {
@@ -331,7 +331,7 @@ final class oh {
               break;
             }
             if (var15 == 0) {
-              continue L25;
+              continue scanLoop4;
             }
             break;
           }

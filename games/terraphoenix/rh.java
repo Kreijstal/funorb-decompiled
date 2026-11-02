@@ -3,7 +3,7 @@
  */
 final class rh {
     static boolean field_d;
-    static ci[] field_b;
+    static Sprite[] field_b;
     static int field_c;
     int field_a;
     int field_e;
@@ -11,7 +11,7 @@ final class rh {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 33) {
-          field_b = (ci[]) null;
+          field_b = (Sprite[]) null;
         }
     }
 

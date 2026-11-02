@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hm extends gl {
-    private ci[] field_D;
+    private Sprite[] field_D;
     private int field_E;
     private int field_K;
     static String field_G;
@@ -13,21 +13,21 @@ final class hm extends gl {
     static int field_N;
     private int field_B;
     static String field_H;
-    private ci field_z;
-    private ci field_C;
+    private Sprite field_z;
+    private Sprite field_C;
     int field_M;
     static String field_J;
     boolean field_P;
-    private ci field_I;
+    private Sprite field_I;
 
-    private final ci a(int param0) {
+    private final Sprite a(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Terraphoenix.field_V;
         int var2 = this.field_n >> 1;
-        ci var3 = new ci(var2, this.field_n);
+        Sprite var3 = new Sprite(var2, this.field_n);
         il.a(1, var3);
         for (var4 = param0; var4 < this.field_n; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -45,7 +45,7 @@ final class hm extends gl {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        ci discarded$0 = null;
+        Sprite discarded$0 = null;
         if (param2 != 0) {
           return;
         }
@@ -70,7 +70,7 @@ final class hm extends gl {
         }
     }
 
-    private final ci b(int param0, int param1, int param2) {
+    private final Sprite b(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -79,14 +79,14 @@ final class hm extends gl {
         int var11 = 0;
         int var12 = 0;
         int var13 = Terraphoenix.field_V;
-        ci var14 = new ci(2 * this.field_K, this.field_n);
+        Sprite var14 = new Sprite(2 * this.field_K, this.field_n);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         il.a(1, var14);
         int var5 = this.field_n >> 1;
         if (param1 != -27888) {
-          return (ci) null;
+          return (Sprite) null;
         }
         for (var6 = 0; this.field_n > var6; var6++) {
           var7 = (var6 >> 1) * (this.field_K * 2 - 1) % (this.field_K * 2);
@@ -107,7 +107,7 @@ final class hm extends gl {
         return var14;
     }
 
-    private final void a(ci param0, int param1, int param2, int param3) {
+    private final void a(Sprite param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -249,8 +249,8 @@ final class hm extends gl {
         this.field_Q = param0;
         this.field_B = param2;
         if (param1 != -7062047) {
-          ci var5 = (ci) null;
-          this.a((ci) null, 79, -24, 37);
+          Sprite var5 = (Sprite) null;
+          this.a((Sprite) null, 79, -24, 37);
         }
         this.field_E = 8355711 & param0 >> 1;
         this.field_F = param2 >> 1 & 8355711;
@@ -299,11 +299,11 @@ final class hm extends gl {
     }
 
     private final void e(byte param0) {
-        this.field_D = new ci[]{this.b(this.field_B, -27888, this.field_Q), this.b(this.field_F, -27888, this.field_E)};
+        this.field_D = new Sprite[]{this.b(this.field_B, -27888, this.field_Q), this.b(this.field_F, -27888, this.field_E)};
         int var2 = -120 % ((12 - param0) / 40);
         this.field_C = this.a(0);
         this.field_z = this.field_C.e();
-        this.field_I = new ci(this.field_n >> 1, this.field_n);
+        this.field_I = new Sprite(this.field_n >> 1, this.field_n);
     }
 
     hm(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

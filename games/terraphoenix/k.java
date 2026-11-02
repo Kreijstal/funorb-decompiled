@@ -6,14 +6,14 @@ final class k {
     static String field_a;
     static og field_b;
     static int[] field_e;
-    private uf field_g;
+    private IntrusiveNode field_g;
     private jj field_c;
-    static te field_f;
+    static RasterBuffer field_f;
 
-    final uf c(int param0) {
-        uf var2 = this.field_g;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_g;
         if (param0 < 1) {
-          return (uf) null;
+          return (IntrusiveNode) null;
         }
         if (var2 == this.field_c.field_a) {
           this.field_g = null;
@@ -87,12 +87,12 @@ final class k {
         field_f = null;
     }
 
-    final uf a(byte param0, uf param1) {
+    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        uf var4 = null;
+        IntrusiveNode var4 = null;
         Object stackIn_6_0 = null;
-        uf stackIn_8_0 = null;
+        IntrusiveNode stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -107,7 +107,7 @@ final class k {
           if (var4 == this.field_c.field_a) {
             this.field_g = null;
             stackIn_6_0 = null;
-            return (uf) (stackIn_6_0);
+            return (IntrusiveNode) (stackIn_6_0);
           }
           this.field_g = var4.field_d;
           stackIn_8_0 = var4;
@@ -142,8 +142,8 @@ final class k {
         return qb.field_b;
     }
 
-    final uf b(int param0) {
-        uf var2 = this.field_c.field_a.field_a;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_c.field_a.field_a;
         if (var2 == this.field_c.field_a) {
           this.field_g = null;
           return null;
@@ -157,19 +157,19 @@ final class k {
         return var2;
     }
 
-    final uf a(int param0, uf param1) {
-        uf var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        uf stackIn_2_0 = null;
+        IntrusiveNode stackIn_2_0 = null;
         Object stackIn_8_0 = null;
-        uf stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 22) {
-            stackIn_2_0 = (uf) null;
+            stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
           if (param1 == null) {
@@ -184,7 +184,7 @@ final class k {
           }
           this.field_g = null;
           stackIn_8_0 = null;
-          return (uf) (stackIn_8_0);
+          return (IntrusiveNode) (stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -199,8 +199,8 @@ final class k {
         }
     }
 
-    final uf a(byte param0) {
-        uf var2 = this.field_c.field_a.field_d;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_c.field_a.field_d;
         if (param0 != -13) {
           field_b = (og) null;
           if (this.field_c.field_a != var2) {
@@ -226,9 +226,9 @@ final class k {
         }
     }
 
-    final uf d(int param0) {
-        uf var2 = null;
-        uf var2Lifetime1;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 > -78) {
           field_a = (String) null;
           var2 = this.field_g;

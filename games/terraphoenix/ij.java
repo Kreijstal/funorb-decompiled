@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ij {
-    static ci field_b;
+    static Sprite field_b;
     static String field_e;
     static String field_c;
     static String[] field_a;
@@ -66,13 +66,13 @@ final class ij {
           }
           var4 = var3_int;
           var5 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             var6_int = param2.indexOf("<%", var5);
             stackIn_6_0 = ~var6_int;
-            L2: while (true) {
+            scanLoop2: while (true) {
               if (stackIn_6_0 > -1) {
                 if (var11 == 0) {
-                  break L2;
+                  break scanLoop2;
                 }
               } else {
                 var5 = 2 + var6_int;
@@ -82,7 +82,7 @@ final class ij {
                 stackIn_6_0 = stackOut_13_0 ? 1 : 0;
                 stackIn_14_0 = stackOut_13_0;
                 if (var11 != 0) {
-                  continue L2;
+                  continue scanLoop2;
                 }
                 if (stackIn_14_0) {
                   var5++;
@@ -91,9 +91,9 @@ final class ij {
                 break;
               }
               var7_ref_String = param2.substring(var6_int + 2, var5);
-              if (!te.a((CharSequence) ((Object) var7_ref_String), true) &&
+              if (!RasterBuffer.a((CharSequence) ((Object) var7_ref_String), true) &&
                 var11 == 0) {
-                continue L1;
+                continue scanLoop1;
               }
               if (var3_int > var5 &&
                 param2.charAt(var5) == 62) {
@@ -102,7 +102,7 @@ final class ij {
                 var4 = var4 + (var6_int - var5 + args[var8].length());
               }
               if (var11 == 0) {
-                continue L1;
+                continue scanLoop1;
               }
               break;
             }
@@ -111,13 +111,13 @@ final class ij {
           var6 = new StringBuilder(var4);
           var5Lifetime1 = 0;
           var7 = 0;
-          L10: while (true) {
+          scanLoop3: while (true) {
             var8Lifetime1 = param2.indexOf("<%", var5Lifetime1);
             stackIn_34_0 = -1;
-            L11: while (true) {
+            scanLoop4: while (true) {
               if (stackIn_34_0 < ~var8Lifetime1) {
                 if (var11 == 0) {
-                  break L11;
+                  break scanLoop4;
                 }
               } else {
                 var5Lifetime1 = var8Lifetime1 + 2;
@@ -127,7 +127,7 @@ final class ij {
                 stackIn_34_0 = stackOut_41_0 ? 1 : 0;
                 stackIn_42_0 = stackOut_41_0;
                 if (var11 != 0) {
-                  continue L11;
+                  continue scanLoop4;
                 }
                 if (stackIn_42_0) {
                   var5Lifetime1++;
@@ -136,9 +136,9 @@ final class ij {
                 break;
               }
               var9 = param2.substring(var8Lifetime1 + 2, var5Lifetime1);
-              if (!te.a((CharSequence) ((Object) var9), true) &&
+              if (!RasterBuffer.a((CharSequence) ((Object) var9), true) &&
                 var11 == 0) {
-                continue L10;
+                continue scanLoop3;
               }
               if (var5Lifetime1 < var3_int &&
                 param2.charAt(var5Lifetime1) == 62) {
@@ -149,7 +149,7 @@ final class ij {
                 var7 = var5Lifetime1;
               }
               if (var11 == 0) {
-                continue L10;
+                continue scanLoop3;
               }
               break;
             }
@@ -1786,11 +1786,11 @@ final class ij {
                 }
                 var2 = bc.a("create_alert_passcontainsemail", false);
                 if (null != var2) {
-                  mj.field_a = ll.a(0, var2);
+                  SocketConnector.field_a = ll.a(0, var2);
                 }
                 var2 = bc.a("create_alert_passcontainsname_partial", false);
                 if (null != var2) {
-                  tc.field_b = ll.a(0, var2);
+                  SecondaryNodeDeque.field_b = ll.a(0, var2);
                 }
                 var2 = bc.a("create_alert_checkname", false);
                 if (null != var2) {
@@ -2102,7 +2102,7 @@ final class ij {
                 }
                 var2 = bc.a("login_createaccount", false);
                 if (null != var2) {
-                  ck.field_c = ll.a(0, var2);
+                  DelegatingCanvas.field_c = ll.a(0, var2);
                 }
                 var2 = bc.a("tohighscores", false);
                 if (null != var2) {
@@ -2130,7 +2130,7 @@ final class ij {
                 }
                 var2 = bc.a("optionsmenu_notpaused", false);
                 if (null != var2) {
-                  c.field_d = ll.a(param0 ^ 3, var2);
+                  NodeHashTableIterator.field_d = ll.a(param0 ^ 3, var2);
                 }
                 var2 = bc.a("menu", false);
                 if (null != var2) {
@@ -2432,7 +2432,7 @@ final class ij {
                 }
                 var2 = bc.a("achieved", false);
                 if (null != var2) {
-                  cf.field_b = ll.a(0, var2);
+                  GameKeyHandler.field_b = ll.a(0, var2);
                 }
                 var2 = bc.a("orbpoints", false);
                 if (var2 != null) {
@@ -2828,7 +2828,7 @@ final class ij {
                 }
                 var2 = bc.a("fs_accept_aftercancel", false);
                 if (null != var2) {
-                  ql.field_h = ll.a(0, var2);
+                  ProxySocketConnector.field_h = ll.a(0, var2);
                 }
                 var2 = bc.a("fs_accept_countdown_sing", false);
                 if (var2 != null) {
@@ -2844,7 +2844,7 @@ final class ij {
                 }
                 var2 = bc.a("fs_button_close", false);
                 if (var2 != null) {
-                  te.field_e = ll.a(0, var2);
+                  RasterBuffer.field_e = ll.a(0, var2);
                 }
                 var2 = bc.a("fs_button_members", false);
                 if (null != var2) {
@@ -2852,7 +2852,7 @@ final class ij {
                 }
                 var2 = bc.a("fs_unavailable", false);
                 if (null != var2) {
-                  tc.field_d = ll.a(0, var2);
+                  SecondaryNodeDeque.field_d = ll.a(0, var2);
                 }
                 var2 = bc.a("fs_unavailable_try_signed_applet", false);
                 if (var2 != null) {
@@ -3209,7 +3209,7 @@ final class ij {
                   }
                   throw qk.a((Throwable) ((Object) stackIn_2604_0), ((StringBuilder) (Object) stackIn_2604_1).append(stackIn_2605_2).append(')').toString());
                 }
-                if (eh.field_j) {
+                if (GameApplet.field_j) {
                   var3++;
                   Terraphoenix.field_V = var3;
                 }

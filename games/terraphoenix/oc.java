@@ -16,7 +16,7 @@ final class oc {
         if (var3 == null) {
           return null;
         }
-        return new oc(new dh(var3));
+        return new oc(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -59,14 +59,14 @@ final class oc {
         return var3;
     }
 
-    private oc(dh param0) {
+    private oc(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new pi[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.a(-16384);
           if (var3 != 0) {
-            param0.field_k = param0.field_k - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new pi();
             this.field_b[var2].a(param0);
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pk extends vh {
+abstract class pk extends DualLinkNode {
     private int[] field_A;
     private int[] field_L;
     private static StringBuilder field_K;

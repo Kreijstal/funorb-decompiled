@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class oj extends vh {
+abstract class SpriteState extends DualLinkNode {
     static long field_y;
     int field_t;
     int field_p;
@@ -38,7 +38,7 @@ abstract class oj extends vh {
 
     public static void d(byte param0) {
         if (param0 > -47) {
-          oj.d((byte) -67);
+          SpriteState.d((byte) -67);
           field_w = null;
           field_s = null;
           return;
@@ -49,7 +49,7 @@ abstract class oj extends vh {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    oj() {
+    SpriteState() {
     }
 
     static {

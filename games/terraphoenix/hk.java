@@ -172,7 +172,7 @@ final class hk {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            dh.a(param2, true);
+            PacketBuffer.a(param2, true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

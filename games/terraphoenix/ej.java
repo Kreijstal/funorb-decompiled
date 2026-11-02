@@ -127,7 +127,7 @@ class ej extends eb {
         ((pa) (this.field_r)).a(this, false);
     }
 
-    final static void a(int param0, int param1, dh param2, int param3, int param4) {
+    final static void a(int param0, int param1, PacketBuffer param2, int param3, int param4) {
         java.awt.Canvas var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -252,8 +252,8 @@ class ej extends eb {
           var3 = this.field_T < this.field_K ? this.field_K : this.field_T;
           return this.field_o.substring(var2, var3);
         }
-        dh var4 = (dh) null;
-        ej.a(-116, -28, (dh) null, 31, 71);
+        PacketBuffer var4 = (PacketBuffer) null;
+        ej.a(-116, -28, (PacketBuffer) null, 31, 71);
         var3Lifetime1 = this.field_T < this.field_K ? this.field_K : this.field_T;
         return this.field_o.substring(var2, var3Lifetime1);
     }
@@ -344,7 +344,7 @@ class ej extends eb {
           }
           if (this.field_l instanceof w) {
             var7 = (w) ((Object) this.field_l);
-            var6 = var7.a(ef.field_j, -3477, jb.field_b, (gl) (this), param1, param2);
+            var6 = var7.a(ef.field_j, -3477, MouseWheelInput.field_b, (gl) (this), param1, param2);
             if (var6 != -1) {
               if (this.field_O &&
                 var6 < this.field_L &&
@@ -490,7 +490,7 @@ class ej extends eb {
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, param6) &&
             this.field_l instanceof w) {
-            var8_int = ((w) ((Object) this.field_l)).a(ef.field_j, -3477, jb.field_b, (gl) (this), param2, param3);
+            var8_int = ((w) ((Object) this.field_l)).a(ef.field_j, -3477, MouseWheelInput.field_b, (gl) (this), param2, param3);
             stackIn_5_1 = 19;
             if (var8_int != -1) {
               stackIn_6_2 = var8_int;

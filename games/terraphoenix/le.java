@@ -36,7 +36,7 @@ final class le extends di {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!te.a(var4, true)) {
+          if (!RasterBuffer.a(var4, true)) {
             stackIn_3_0 = qf.field_d;
             return stackIn_3_0;
           }
@@ -168,7 +168,7 @@ final class le extends di {
           }
           bd.field_a = 2147483647;
           hm.field_L = 2147483647;
-          el.field_d = -2147483648;
+          ClientException.field_d = -2147483648;
           pb.field_b = 0;
           ok.field_j = -2147483648;
           return;
@@ -198,7 +198,7 @@ final class le extends di {
           }
           bd.field_a = 2147483647;
           hm.field_L = 2147483647;
-          el.field_d = -2147483648;
+          ClientException.field_d = -2147483648;
           pb.field_b = 0;
           ok.field_j = -2147483648;
           return;
@@ -237,7 +237,7 @@ final class le extends di {
         }
         bd.field_a = 2147483647;
         hm.field_L = 2147483647;
-        el.field_d = -2147483648;
+        ClientException.field_d = -2147483648;
         pb.field_b = 0;
         ok.field_j = -2147483648;
     }
@@ -349,8 +349,8 @@ final class le extends di {
             mh.field_a = ba.field_b;
           } else {
             try {
-              ig.field_e = new tf((java.net.Socket) (bd.field_k.field_e), da.field_g);
-              di.field_l.field_k = 0;
+              ig.field_e = new BufferedSocket((java.net.Socket) (bd.field_k.field_e), da.field_g);
+              di.field_l.position = 0;
               var4 = mk.field_j;
               var5 = var4;
               mh.field_a = va.field_e;
@@ -358,7 +358,7 @@ final class le extends di {
               wc.field_r = stackIn_12_0;
               wf.field_n = stackIn_12_0;
               uc.field_r = stackIn_12_0;
-              var5.field_k = 0;
+              var5.position = 0;
               ej.a(gi.field_v, -25563, di.field_l, ij.field_d, hb.field_i);
               bc.a(-1, 0);
             } catch (java.io.IOException decompiledCaughtParameter0) {
