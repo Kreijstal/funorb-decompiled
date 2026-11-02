@@ -68,12 +68,12 @@ final class id {
         }
     }
 
-    final ae a(boolean param0, int[] param1, int param2) {
-        ae discarded$1 = null;
+    final PcmSample a(boolean param0, int[] param1, int param2) {
+        PcmSample discarded$1 = null;
         RuntimeException var4 = null;
         int[] var5 = null;
-        ae stackIn_3_0 = null;
-        ae stackIn_7_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -154,12 +154,12 @@ final class id {
         field_g = null;
     }
 
-    final ae a(int[] param0, int param1, int param2) {
-        ae discarded$1 = null;
+    final PcmSample a(int[] param0, int param1, int param2) {
+        PcmSample discarded$1 = null;
         RuntimeException var4 = null;
         int[] var5 = null;
-        ae stackIn_3_0 = null;
-        ae stackIn_6_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_6_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -192,21 +192,21 @@ final class id {
         }
     }
 
-    private final ae a(int[] param0, int param1, int param2, int param3) {
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        ae var8 = null;
+        PcmSample var8 = null;
         hp var9 = null;
-        ae var10 = null;
-        ae stackIn_5_0 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_5_0 = null;
         Object stackIn_9_0 = null;
-        ae stackIn_17_0 = null;
+        PcmSample stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ae var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param3 >>> 12 | (param3 & 1342181375) << 4) ^ param2;
           var5_int = var5_int | param3 << 16;
@@ -214,7 +214,7 @@ final class id {
             this.field_e = (jl) null;
           }
           var6 = (long)var5_int;
-          var8 = (ae) (this.field_c.a(var6, (byte) 64));
+          var8 = (PcmSample) (this.field_c.a(var6, (byte) 64));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -222,7 +222,7 @@ final class id {
           if (param0 != null &&
             param0[0] <= 0) {
             stackIn_9_0 = null;
-            return (ae) (stackIn_9_0);
+            return (PcmSample) (stackIn_9_0);
           }
           var9 = hp.a(this.field_b, param3, param2);
           if (var9 == null) {
@@ -232,7 +232,7 @@ final class id {
           var8Lifetime1 = var10;
           this.field_c.a(var8Lifetime1, var6, false);
           if (param0 != null) {
-            param0[0] = param0[0] - var10.field_s.length;
+            param0[0] = param0[0] - var10.samples.length;
           }
           stackIn_17_0 = var8Lifetime1;
           return stackIn_17_0;
@@ -293,20 +293,20 @@ final class id {
         }
     }
 
-    private final ae b(int[] param0, int param1, int param2, int param3) {
+    private final PcmSample b(int[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        ae var8 = null;
+        PcmSample var8 = null;
         vh var9 = null;
-        ae stackIn_5_0 = null;
+        PcmSample stackIn_5_0 = null;
         Object stackIn_9_0 = null;
-        ae stackIn_20_0 = null;
+        PcmSample stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ae var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param1 >>> 12 | (-1879044097 & param1) << 4) ^ param3;
           var5_int = var5_int | param1 << 16;
@@ -314,7 +314,7 @@ final class id {
             field_a = 53L;
           }
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (ae) (this.field_c.a(var6, (byte) 64));
+          var8 = (PcmSample) (this.field_c.a(var6, (byte) 64));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -322,7 +322,7 @@ final class id {
           if (param0 != null &&
             param0[0] <= 0) {
             stackIn_9_0 = null;
-            return (ae) (stackIn_9_0);
+            return (PcmSample) (stackIn_9_0);
           }
           var9 = (vh) (this.field_e.a(var6, (byte) 64));
           if (var9 == null) {

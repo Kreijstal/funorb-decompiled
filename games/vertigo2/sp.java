@@ -50,7 +50,7 @@ abstract class sp extends nm {
         }
     }
 
-    final static gg a(ra param0, int param1) {
+    final static gg a(SamplePlaybackStream param0, int param1) {
         gg var2 = null;
         RuntimeException var2_ref = null;
         gg stackIn_2_0 = null;

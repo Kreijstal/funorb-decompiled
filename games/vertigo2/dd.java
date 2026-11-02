@@ -47,7 +47,7 @@ class dd {
         int var9;
         Object var10;
         PcmStream var11;
-        dr var12;
+        AbstractAudioSample var12;
         int var13;
         PcmStream var14;
         int var15_int;
@@ -89,7 +89,7 @@ class dd {
                   var14 = var11;
                   var14Lifetime1 = var11;
                   while (var11 != null) {
-                    var12 = var11.field_n;
+                    var12 = var11.sample;
                     if (var12 != null &&
                       var12.field_n > var8_int) {
                       var5 = var5 | 1 << var7_int;
@@ -380,8 +380,8 @@ class dd {
 
     private final static void b(PcmStream param0) {
         param0.field_p = false;
-        if (param0.field_n != null) {
-          param0.field_n.field_n = 0;
+        if (param0.sample != null) {
+          param0.sample.field_n = 0;
         }
         PcmStream var1 = param0.c();
         while (var1 != null) {

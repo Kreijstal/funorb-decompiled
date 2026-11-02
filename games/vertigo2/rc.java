@@ -357,9 +357,9 @@ final class rc {
         }
     }
 
-    final static fp b(int param0) {
+    final static PcmStreamMixer b(int param0) {
         if (param0 < 106) {
-          return (fp) null;
+          return (PcmStreamMixer) null;
         }
         return MouseWheelInput.field_g;
     }

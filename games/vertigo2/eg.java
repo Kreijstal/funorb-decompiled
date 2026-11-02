@@ -421,7 +421,7 @@ final class eg extends tk {
         this.field_l = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
-    final static void a(int param0, ra param1) {
+    final static void a(int param0, SamplePlaybackStream param1) {
         if (param0 <= 76) {
           return;
         }

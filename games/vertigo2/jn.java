@@ -126,7 +126,7 @@ final class jn {
           dd.a(param0, param4, 10);
           ri.field_r = dd.a(param7, param2, 0, param3);
           mh.field_d = dd.a(param7, param2, 1, param1);
-          MouseWheelInput.field_g = new fp();
+          MouseWheelInput.field_g = new PcmStreamMixer();
           wp.field_a = param1 * 1000 / param0;
           mh.field_d.a(MouseWheelInput.field_g);
           qc.field_v = param6;

@@ -7,7 +7,7 @@ final class rq extends PcmStream {
     static String field_A;
     IntrusiveDeque field_w;
     static int field_B;
-    fp field_z;
+    PcmStreamMixer field_z;
     static UiPanel field_t;
     static int field_u;
     static String field_v;
@@ -179,9 +179,9 @@ final class rq extends PcmStream {
             param2.field_o = 1048575 & var4_int * param1 + param2.field_o;
             if (param1 >= var5) {
               if (0 == this.field_s.field_H[param2.field_q]) {
-                param2.field_J = ra.a(param2.field_z, param2.field_J.g(), param2.field_J.h(), param2.field_J.e());
+                param2.field_J = SamplePlaybackStream.a(param2.field_z, param2.field_J.g(), param2.field_J.h(), param2.field_J.e());
               } else {
-                param2.field_J = ra.a(param2.field_z, param2.field_J.g(), 0, param2.field_J.e());
+                param2.field_J = SamplePlaybackStream.a(param2.field_z, param2.field_J.g(), 0, param2.field_J.e());
                 stackIn_6_0 = this.field_s;
                 stackIn_6_1 = (pe) (param2);
                 stackIn_6_2 = 92;
@@ -237,7 +237,7 @@ final class rq extends PcmStream {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ra var11 = null;
+        SamplePlaybackStream var11 = null;
         int var12 = 0;
         Archive var13 = null;
         var12 = Vertigo2.field_L ? 1 : 0;
@@ -262,7 +262,7 @@ final class rq extends PcmStream {
               }
               var11 = param4.field_J;
               if (this.field_s.field_H[param4.field_q] != 0) {
-                param4.field_J = ra.a(param4.field_z, var11.g(), 0, var11.e());
+                param4.field_J = SamplePlaybackStream.a(param4.field_z, var11.g(), 0, var11.e());
                 stackIn_12_0 = this.field_s;
                 stackIn_12_1 = (pe) (param4);
                 stackIn_12_2 = 87;
@@ -270,7 +270,7 @@ final class rq extends PcmStream {
                 ((db) (Object) stackIn_12_0).a(stackIn_12_1, (byte) stackIn_12_2, stackIn_13_3);
                 param4.field_J.b(var9, var11.h());
               } else {
-                param4.field_J = ra.a(param4.field_z, var11.g(), var11.h(), var11.e());
+                param4.field_J = SamplePlaybackStream.a(param4.field_z, var11.g(), var11.h(), var11.e());
               }
               if (0 > param4.field_K.field_n[param4.field_B]) {
                 param4.field_J.i(-1);
@@ -502,7 +502,7 @@ final class rq extends PcmStream {
 
     rq(db param0) {
         this.field_w = new IntrusiveDeque();
-        this.field_z = new fp();
+        this.field_z = new PcmStreamMixer();
         try {
           this.field_s = param0;
         } catch (RuntimeException runtimeException) {

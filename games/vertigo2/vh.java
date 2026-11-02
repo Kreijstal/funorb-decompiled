@@ -92,7 +92,7 @@ final class vh extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final ae b() {
+    final PcmSample b() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -124,7 +124,7 @@ final class vh extends IntrusiveNode {
           }
         }
         this.field_t = null;
-        return new ae(this.field_y, var1, this.field_n, this.field_I, this.field_O);
+        return new PcmSample(this.field_y, var1, this.field_n, this.field_I, this.field_O);
     }
 
     final static int a(int param0) {
@@ -554,7 +554,7 @@ final class vh extends IntrusiveNode {
         field_D = null;
     }
 
-    final ae a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -604,7 +604,7 @@ final class vh extends IntrusiveNode {
         this.field_t = null;
         var12 = this.field_T;
         this.field_T = null;
-        return new ae(this.field_y, var12, this.field_n, this.field_I, this.field_O);
+        return new PcmSample(this.field_y, var12, this.field_n, this.field_I, this.field_O);
     }
 
     private final static void a(byte[] param0, int param1) {

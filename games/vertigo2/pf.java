@@ -4,7 +4,7 @@
 final class pf {
     static int field_a;
 
-    final static gg a(byte param0, ae param1, int param2) {
+    final static gg a(byte param0, PcmSample param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         gg stackIn_1_0 = null;
@@ -14,7 +14,7 @@ final class pf {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 65 / ((-27 - param0) / 52);
-          stackIn_1_0 = sp.a(ra.a(param1, 100, param2), -124);
+          stackIn_1_0 = sp.a(SamplePlaybackStream.a(param1, 100, param2), -124);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gg extends IntrusiveNode {
-    ra field_r;
+    SamplePlaybackStream field_r;
     int field_p;
     static UiPanel field_o;
     static int[] field_n;
@@ -66,7 +66,7 @@ final class gg extends IntrusiveNode {
         }
     }
 
-    gg(ra param0, IntrusiveNode param1) {
+    gg(SamplePlaybackStream param0, IntrusiveNode param1) {
         try {
           this.field_r = param0;
           this.field_p = param0.h();

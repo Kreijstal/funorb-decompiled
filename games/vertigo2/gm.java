@@ -73,10 +73,10 @@ final class gm {
     }
 
     final static void a(int param0, byte param1) {
-        ae[] var3 = null;
-        ae[] var2 = null;
-        ae[] var3Lifetime1;
-        ae[] var2Lifetime1;
+        PcmSample[] var3 = null;
+        PcmSample[] var2 = null;
+        PcmSample[] var3Lifetime1;
+        PcmSample[] var2Lifetime1;
         if (param1 != -55) {
           gm.a(58, (byte) -65);
           var3 = on.field_b[param0];

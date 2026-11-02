@@ -52,7 +52,7 @@ final class t implements Runnable {
     public static void a(boolean param0) {
         if (param0) {
           Archive var2 = (Archive) null;
-          t.a((fp) null, 44, 108, (Archive) null);
+          t.a((PcmStreamMixer) null, 44, 108, (Archive) null);
         }
         field_n = null;
         field_m = null;
@@ -126,7 +126,7 @@ final class t implements Runnable {
           }
           if (param0 > -8) {
             Archive var4 = (Archive) null;
-            t.a((fp) null, 6, 3, (Archive) null);
+            t.a((PcmStreamMixer) null, 6, 3, (Archive) null);
           }
           try {
             this.field_h.join();
@@ -185,7 +185,7 @@ final class t implements Runnable {
         }
     }
 
-    final static void a(fp param0, int param1, int param2, Archive param3) {
+    final static void a(PcmStreamMixer param0, int param1, int param2, Archive param3) {
         try {
           sq.field_e = param2 * IterableNodeHashTable.b(true) / 1000;
           hi.a(param3, 56);

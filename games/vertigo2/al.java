@@ -8,7 +8,7 @@ final class al extends IntrusiveNode {
     byte[] field_q;
     private int[] field_u;
     static int[] field_s;
-    ae[] field_r;
+    PcmSample[] field_r;
     short[] field_n;
     static int[] field_x;
     gl[] field_v;
@@ -72,7 +72,7 @@ final class al extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_r[var8] = (ae) (var7);
+                  this.field_r[var8] = (PcmSample) (var7);
                   this.field_u[var8] = 0;
                 }
               }
@@ -248,7 +248,7 @@ final class al extends IntrusiveNode {
           this.field_u = new int[128];
           this.field_q = new byte[128];
           this.field_p = new byte[128];
-          this.field_r = new ae[128];
+          this.field_r = new PcmSample[128];
           this.field_B = new byte[128];
           this.field_n = new short[128];
           this.field_v = new gl[128];

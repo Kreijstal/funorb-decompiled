@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class on {
-    static ae[][] field_b;
+    static PcmSample[][] field_b;
     static int[] field_e;
     static String field_d;
     static fc field_a;
@@ -85,7 +85,7 @@ final class on {
 
     public static void a(boolean param0) {
         field_e = null;
-        field_b = (ae[][]) null;
+        field_b = (PcmSample[][]) null;
         if (param0) {
           field_a = null;
           field_d = null;
@@ -136,7 +136,7 @@ final class on {
 
     static {
         field_d = "Hide lobby chat";
-        field_b = new ae[30][1];
+        field_b = new PcmSample[30][1];
         field_a = new fc(4096, 4096, 4096, false, true, false, false, 0, 0);
         field_c = 0;
     }

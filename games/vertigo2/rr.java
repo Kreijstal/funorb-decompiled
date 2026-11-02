@@ -7,7 +7,7 @@ final class rr extends TextureOperator {
     static boolean field_C;
     static short[] field_D;
     static String field_y;
-    static ra[] field_B;
+    static SamplePlaybackStream[] field_B;
 
     public rr() {
         super(1, false);
@@ -220,7 +220,7 @@ final class rr extends TextureOperator {
         field_D = new short[4096];
         field_y = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_C = true;
-        field_B = new ra[3];
+        field_B = new SamplePlaybackStream[3];
         field_z = new boolean[field_B.length];
     }
 }

@@ -20,9 +20,9 @@ final class pe extends IntrusiveNode {
     int field_s;
     int field_B;
     static String field_L;
-    ae field_z;
+    PcmSample field_z;
     int field_I;
-    ra field_J;
+    SamplePlaybackStream field_J;
     int field_E;
     int field_w;
     int field_D;

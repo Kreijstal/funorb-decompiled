@@ -505,7 +505,7 @@ public final class Vertigo2 extends GameShell {
             return;
           }
           on.field_b[2][0] = hp.a(DualLinkNode.field_s, "", "v_deflate").a();
-          on.field_b[3] = new ae[2];
+          on.field_b[3] = new PcmSample[2];
           on.field_b[3][0] = hp.a(DualLinkNode.field_s, "", "v_teleport").a();
           on.field_b[3][1] = hp.a(DualLinkNode.field_s, "", "v_teleport_2").a();
           on.field_b[5][0] = vh.a(mj.field_b, "", "whee").b();
@@ -513,7 +513,7 @@ public final class Vertigo2 extends GameShell {
           on.field_b[7][0] = vh.a(mj.field_b, "", "v_extra_life").b();
           on.field_b[8][0] = hp.a(DualLinkNode.field_s, "", "v_paint_collect").a();
           this.loadSoundEffectVariants(1, "v_brush", 4, 9);
-          on.field_b[10] = new ae[4];
+          on.field_b[10] = new PcmSample[4];
           on.field_b[10][0] = hp.a(DualLinkNode.field_s, "", "v_rocket_pack_start").a();
           on.field_b[10][1] = hp.a(DualLinkNode.field_s, "", "v_rocket_pack_end").a();
           on.field_b[10][2] = hp.a(DualLinkNode.field_s, "", "v_rocket_pack_ready").a();
@@ -532,22 +532,22 @@ public final class Vertigo2 extends GameShell {
           on.field_b[22][0] = hp.a(DualLinkNode.field_s, "", "v_teleporter_loop").a();
           on.field_b[23][0] = hp.a(DualLinkNode.field_s, "", "v_fan_loop").a();
           on.field_b[24][0] = hp.a(DualLinkNode.field_s, "", "v_spikes").a();
-          on.field_b[25] = new ae[3];
+          on.field_b[25] = new PcmSample[3];
           on.field_b[25][0] = vh.a(mj.field_b, "", "v_hmm_easy").b();
           on.field_b[25][1] = vh.a(mj.field_b, "", "v_yeah").b();
           on.field_b[25][2] = vh.a(mj.field_b, "", "v_phew").b();
           on.field_b[26][0] = hp.a(DualLinkNode.field_s, "", "v_paint_runout").a();
-          on.field_b[27] = new ae[3];
+          on.field_b[27] = new PcmSample[3];
           on.field_b[27][0] = vh.a(mj.field_b, "", "v_near_edge_1").b();
           on.field_b[27][1] = vh.a(mj.field_b, "", "v_near_edge_2").b();
           on.field_b[27][2] = vh.a(mj.field_b, "", "v_near_edge_3").b();
           on.field_b[28][0] = hp.a(DualLinkNode.field_s, "", "v_last_block").a();
           on.field_b[29][0] = hp.a(DualLinkNode.field_s, "", "v_level_select").a();
-          rr.field_B[0] = ra.a(on.field_b[23][0], 100, 96);
-          rr.field_B[1] = ra.a(on.field_b[22][0], 100, 96);
+          rr.field_B[0] = SamplePlaybackStream.a(on.field_b[23][0], 100, 96);
+          rr.field_B[1] = SamplePlaybackStream.a(on.field_b[22][0], 100, 96);
           rr.field_B[0].i(-1);
           rr.field_B[1].i(-1);
-          rr.field_B[2] = ra.a(on.field_b[10][3], 100, 96);
+          rr.field_B[2] = SamplePlaybackStream.a(on.field_b[10][3], 100, 96);
           rr.field_B[2].i(-1);
           op.field_d = si.a(le.field_f, "", "vertigo2_theme");
           up.field_B[0] = si.a(le.field_f, "", "vertigo2_level_1");
@@ -1427,7 +1427,7 @@ public final class Vertigo2 extends GameShell {
     }
 
     private final void loadSoundEffectVariants(int param0, String param1, int param2, int param3) {
-        ae[] array$1 = null;
+        PcmSample[] array$1 = null;
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -1437,7 +1437,7 @@ public final class Vertigo2 extends GameShell {
         RuntimeException var5 = null;
         var6 = field_L ? 1 : 0;
         try {
-          array$1 = new ae[param0 + param2];
+          array$1 = new PcmSample[param0 + param2];
           on.field_b[param3] = array$1;
           on.field_b[param3][0] = hp.a(DualLinkNode.field_s, "", param1).a();
           for (var5_int = 1; param2 >= var5_int; var5_int++) {

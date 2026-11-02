@@ -765,7 +765,7 @@ final class db extends PcmStream {
         boolean stackIn_20_3;
         pe var5;
         int var6_int;
-        ae var6;
+        PcmSample var6;
         pe var7;
         pe var8;
         int var9;
@@ -818,7 +818,7 @@ final class db extends PcmStream {
         var7.field_v = 0;
         var7.field_D = 0;
         if (0 != this.field_H[param0]) {
-          var7.field_J = ra.a(var6, this.a((byte) -81, var7), 0, this.a(var7, 32));
+          var7.field_J = SamplePlaybackStream.a(var6, this.a((byte) -81, var7), 0, this.a(var7, 32));
           stackIn_19_1 = var7;
           stackIn_19_2 = 124;
           if (var11.field_n[param3] >= 0) {
@@ -830,7 +830,7 @@ final class db extends PcmStream {
           }
           this.a(stackIn_19_1, (byte) stackIn_19_2, stackIn_20_3);
         } else {
-          var7.field_J = ra.a(var6, this.a((byte) -127, var7), this.a(var7, (byte) 93), this.a(var7, param1 ^ 31391));
+          var7.field_J = SamplePlaybackStream.a(var6, this.a((byte) -127, var7), this.a(var7, (byte) 93), this.a(var7, param1 ^ 31391));
         }
         if (0 > var11.field_n[param3]) {
           var7.field_J.i(-1);
@@ -1113,7 +1113,7 @@ final class db extends PcmStream {
           if (param1 < 55) {
             this.field_V = false;
           }
-          var4_int = param0.field_z.field_s.length;
+          var4_int = param0.field_z.samples.length;
           if (param2 &&
             param0.field_z.field_p) {
             var6 = var4_int + (var4_int - param0.field_z.field_o);

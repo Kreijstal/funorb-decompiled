@@ -4,7 +4,7 @@
 abstract class MouseWheelInput {
     static int field_h;
     static String field_f;
-    static fp field_g;
+    static PcmStreamMixer field_g;
     static UiPanel field_k;
     static String field_j;
     static String field_i;

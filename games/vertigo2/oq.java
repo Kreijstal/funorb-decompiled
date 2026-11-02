@@ -5,7 +5,7 @@ final class oq extends qc {
     static String field_H;
     static byte[] field_G;
     private Object field_J;
-    static fp field_E;
+    static PcmStreamMixer field_E;
     static int[] field_F;
     static String field_D;
     static int field_I;
@@ -94,7 +94,7 @@ final class oq extends qc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 23) {
-            field_E = (fp) null;
+            field_E = (PcmStreamMixer) null;
           }
           stackIn_3_0 = lr.a(param0.length, 0, param0, 1039685793);
           return stackIn_3_0;

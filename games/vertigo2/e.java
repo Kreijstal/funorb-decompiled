@@ -288,7 +288,7 @@ final class e {
         return this;
     }
 
-    final static gg a(ae param0, boolean param1) {
+    final static gg a(PcmSample param0, boolean param1) {
         RuntimeException var2 = null;
         gg stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -299,7 +299,7 @@ final class e {
           if (param1) {
             e.a(true, (byte) 4);
           }
-          stackIn_3_0 = sp.a(ra.a(param0, 100, 96), -93);
+          stackIn_3_0 = sp.a(SamplePlaybackStream.a(param0, 100, 96), -93);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,9 +6,9 @@ final class hp {
     private int field_b;
     private int field_c;
 
-    final ae a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new ae(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
     final static hp a(Archive param0, String param1, String param2) {
