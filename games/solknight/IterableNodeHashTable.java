@@ -1,0 +1,229 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class IterableNodeHashTable implements Iterable {
+    static String field_a;
+    static String field_c;
+    static Sprite[] field_g;
+    private IntrusiveNode field_d;
+    IntrusiveNode[] buckets;
+    static Sprite[] field_f;
+    static int field_h;
+    int field_e;
+    static String field_i;
+
+    public static void a(int param0) {
+        if (param0 != 7903) {
+          return;
+        }
+        field_f = null;
+        field_g = null;
+        field_i = null;
+        field_c = null;
+        field_a = null;
+    }
+
+    public final Iterator iterator() {
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
+    }
+
+    final IntrusiveNode get(long key, int obfuscationGuard) {
+        IntrusiveNode var5 = null;
+        int var6 = SolKnight.field_L ? 1 : 0;
+        IntrusiveNode var4 = this.buckets[(int)((long)(this.field_e - 1) & key)];
+        this.field_d = var4.previous;
+        if (obfuscationGuard >= -83) {
+          IterableNodeHashTable.a(-1);
+        }
+        while (var4 != this.field_d) {
+          if (~this.field_d.key == ~key) {
+            var5 = this.field_d;
+            this.field_d = this.field_d.previous;
+            return var5;
+          }
+          this.field_d = this.field_d.previous;
+        }
+        this.field_d = null;
+        return null;
+    }
+
+    final static int a(int param0, int param1) {
+        if (param1 <= 125) {
+          field_f = (Sprite[]) null;
+        }
+        param0 = (param0 & 1431655765) + ((-1431655766 & param0) >>> 1);
+        param0 = (858993459 & param0) + ((-858993458 & param0) >>> 2);
+        param0 = 252645135 & (param0 >>> 4) + param0;
+        param0 = param0 + (param0 >>> 8);
+        param0 = param0 + (param0 >>> 16);
+        return 255 & param0;
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+        RuntimeException decompiledCaughtException = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        var12 = SolKnight.field_L ? 1 : 0;
+        try {
+          if (param1 < SoftwareRasterizer.field_b) {
+            param4 = param4 - (SoftwareRasterizer.field_b - param1);
+            param1 = SoftwareRasterizer.field_b;
+          }
+          if (SoftwareRasterizer.field_k < param4 + param1) {
+            param4 = SoftwareRasterizer.field_k - param1;
+          }
+          if (SoftwareRasterizer.field_l > param2) {
+            param0 = param0 - (-param2 + SoftwareRasterizer.field_l);
+            param2 = SoftwareRasterizer.field_l;
+          }
+          if (SoftwareRasterizer.field_e < param2 + param0) {
+            param0 = -param2 + SoftwareRasterizer.field_e;
+          }
+          if (param4 > 0 &&
+            param0 > 0) {
+            if (!param5) {
+              return;
+            }
+            var6_int = param1 + param2 * SoftwareRasterizer.field_a;
+            var7 = -param4 + SoftwareRasterizer.field_a;
+            for (param2 = -param0; param2 < 0; param2++) {
+              for (param1 = -param4; param1 < 0; param1++) {
+                var8 = SoftwareRasterizer.field_f[var6_int];
+                if (param3 < (255 & var8 >> 8) &&
+                  (16711680 & var8) >> 16 <= (255 & var8 >> 8)) {
+                  var9 = ((16711680 & var8) >> 15) - 60;
+                  if (255 < var9) {
+                    var9 = 255;
+                  }
+                  var10 = var8 & 65280;
+                  var10 = 65280 & (var10 >> 1) - (var10 >> 5);
+                  var11 = var8 >> 3 & 31;
+                  SoftwareRasterizer.field_f[var6_int] = ProxySocketConnector.a(var11, ProxySocketConnector.a(var10, var9 << 16));
+                }
+                var6_int++;
+              }
+              var6_int = var6_int + var7;
+            }
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw fc.a((Throwable) ((Object) var6), "ii.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    private IterableNodeHashTable() throws Throwable {
+        throw new Error();
+    }
+
+    final void put(int obfuscationGuard, long key, IntrusiveNode node) {
+        IntrusiveNode var5 = null;
+        try {
+          if (null != node.next) {
+            node.unlink(10);
+          }
+          var5 = this.buckets[(int)(key & (long)(-1 + this.field_e))];
+          node.previous = var5;
+          node.next = var5.next;
+          node.next.previous = node;
+          node.key = key;
+          if (obfuscationGuard != -858993458) {
+            field_g = (Sprite[]) null;
+          }
+          node.previous.next = node;
+        } catch (RuntimeException runtimeException) {
+          throw fc.a((Throwable) ((Object) runtimeException), "ii.C(" + obfuscationGuard + ',' + key + ',' + (node != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static java.awt.Frame a(boolean param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
+        int var8 = 0;
+        java.awt.Frame stackIn_3_0 = null;
+        Object stackIn_36_0 = null;
+        Object stackIn_40_0 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_44_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        uj[] var6 = null;
+        RuntimeException var6_ref = null;
+        int var7_int = 0;
+        java.awt.Frame var7 = null;
+        int var9 = 0;
+        uj[] var10 = null;
+        PlatformTask var11 = null;
+        var9 = SolKnight.field_L ? 1 : 0;
+        try {
+          if (!param0) {
+            stackIn_3_0 = (java.awt.Frame) null;
+            return stackIn_3_0;
+          }
+          if (!param2.b((byte) 98)) {
+            return null;
+          }
+          if (param4 == 0) {
+            var10 = dc.a((byte) 124, param2);
+            var6 = var10;
+            if (var6 == null) {
+              return null;
+            }
+            var7_int = 0;
+            for (var8 = 0; var8 < var10.length; var8++) {
+              if (param5 == var10[var8].field_c &&
+                param3 == var10[var8].field_d && ((param1 == 0 ||
+                param1 == var10[var8].field_a) &&
+                (var7_int == 0 ||
+                !(var10[var8].field_e <= param4)))) {
+                param4 = var10[var8].field_e;
+                var7_int = 1;
+              }
+            }
+            if (var7_int == 0) {
+              return null;
+            }
+          }
+          var11 = param2.a(param5, param3, param4, (byte) -106, param1);
+          while (0 == var11.field_c) {
+            i.a((byte) 89, 10L);
+          }
+          var7 = (java.awt.Frame) (var11.field_e);
+          if (var7 == null) {
+            stackIn_36_0 = null;
+            return (java.awt.Frame) (stackIn_36_0);
+          }
+          if (var11.field_c != 2) {
+            return var7;
+          }
+          de.a(param2, var7, (byte) 119);
+          stackIn_40_0 = null;
+          return (java.awt.Frame) (stackIn_40_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6_ref = decompiledCaughtException;
+          stackIn_43_0 = var6_ref;
+          stackIn_43_1 = new StringBuilder().append("ii.F(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_44_2 = "null";
+          } else {
+            stackIn_44_2 = "{...}";
+          }
+          throw fc.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    static {
+        field_a = "Mega Power";
+        field_c = "This entry doesn't match";
+        field_i = "Aiming: Mouse";
+    }
+}

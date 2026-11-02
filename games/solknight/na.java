@@ -4,14 +4,14 @@
 import java.io.*;
 
 final class na implements Runnable {
-    private gb field_g;
-    private nj field_a;
-    private dl field_h;
-    private nj field_f;
+    private PacketBuffer field_g;
+    private PlatformTask field_a;
+    private PlatformTaskDispatcher field_h;
+    private PlatformTask field_f;
     private int field_c;
     static boolean field_b;
     private java.net.URL field_e;
-    private nj field_i;
+    private PlatformTask field_i;
     private DataInputStream field_d;
     static String[] field_j;
 
@@ -25,16 +25,16 @@ final class na implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = SolKnight.field_L ? 1 : 0;
           try {
-            while (this.field_g.field_m < this.field_g.field_l.length) {
-              var1_int = this.field_d.read(this.field_g.field_l, this.field_g.field_m, this.field_g.field_l.length - this.field_g.field_m);
+            while (this.field_g.position < this.field_g.payload.length) {
+              var1_int = this.field_d.read(this.field_g.payload, this.field_g.position, this.field_g.payload.length - this.field_g.position);
               if (var1_int >= 0) {
-                this.field_g.field_m = this.field_g.field_m + var1_int;
+                this.field_g.position = this.field_g.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_g.field_l.length == this.field_g.field_m) {
-              throw na.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.field_l.length + " " + this.field_e));
+            if (this.field_g.payload.length == this.field_g.position) {
+              throw na.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_e));
             }
             var1 = this;
             synchronized (var1) {
@@ -59,7 +59,7 @@ final class na implements Runnable {
         }
     }
 
-    final gb a(boolean param0) {
+    final PacketBuffer a(boolean param0) {
         if (this.field_c == 3) {
           return this.field_g;
         }
@@ -202,11 +202,11 @@ final class na implements Runnable {
         }
     }
 
-    na(dl param0, java.net.URL param1, int param2) {
+    na(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_h = param0;
           this.field_e = param1;
-          this.field_g = new gb(param2);
+          this.field_g = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -261,7 +261,7 @@ final class na implements Runnable {
               var3.write(wb.a(65, var5));
               this.field_d = new DataInputStream(var4.getInputStream());
             }
-            this.field_g.field_m = 0;
+            this.field_g.position = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;

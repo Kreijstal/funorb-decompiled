@@ -4,7 +4,7 @@
 final class qb extends vg implements wj {
     private oe field_Y;
     static int[] field_ab;
-    static da field_cb;
+    static Archive field_cb;
     private int field_Z;
     static wb field_L;
     static String field_X;
@@ -69,7 +69,7 @@ final class qb extends vg implements wj {
           if (param0 <= 14) {
             this.a(-32);
           }
-          ja.a(ad.field_m, gb.field_j + this.field_t - this.field_Z, (byte) -41);
+          ja.a(BufferedSocket.field_m, PacketBuffer.field_j + this.field_t - this.field_Z, (byte) -41);
           return this.field_z;
         }
         return null;
@@ -79,10 +79,10 @@ final class qb extends vg implements wj {
         super(param0, param1, param2);
     }
 
-    final void a(int param0, int param1, int param2, rc param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_Z = -this.field_m + gb.field_j - param0;
+          this.field_Z = -this.field_m + PacketBuffer.field_j - param0;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "qb.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -156,16 +156,16 @@ final class qb extends vg implements wj {
                     if (0 == var18) {
                       if (var17 >= 0 &&
                         var17 < hk.field_i) {
-                        wd.a(0, var16Lifetime2 + var17, var18, param3, param7);
+                        ArchiveSource.a(0, var16Lifetime2 + var17, var18, param3, param7);
                       }
                     } else {
                       if (var18 + var17 >= hk.field_i) {
                         var18 = hk.field_i + (-var17 - 1);
                       }
                       if (var17 >= 0) {
-                        wd.a(0, var17 + var16Lifetime2, var18, param3, param7);
+                        ArchiveSource.a(0, var17 + var16Lifetime2, var18, param3, param7);
                       } else {
-                        wd.a(0, var16Lifetime2, var17 + var18, param3, param7);
+                        ArchiveSource.a(0, var16Lifetime2, var17 + var18, param3, param7);
                       }
                     }
                   }
@@ -174,7 +174,7 @@ final class qb extends vg implements wj {
                     return;
                   }
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + mi.field_a;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_a;
                   var10 = var10 + var12;
                 }
               } else if (param8 >= 0) {
@@ -190,16 +190,16 @@ final class qb extends vg implements wj {
                     if (0 == var18) {
                       if (var17 >= 0 &&
                         var17 < hk.field_i) {
-                        wd.a(0, var16Lifetime2 + var17, var18, param3, param7);
+                        ArchiveSource.a(0, var16Lifetime2 + var17, var18, param3, param7);
                       }
                     } else {
                       if (var18 + var17 >= hk.field_i) {
                         var18 = hk.field_i + (-var17 - 1);
                       }
                       if (var17 >= 0) {
-                        wd.a(0, var17 + var16Lifetime2, var18, param3, param7);
+                        ArchiveSource.a(0, var17 + var16Lifetime2, var18, param3, param7);
                       } else {
-                        wd.a(0, var16Lifetime2, var17 + var18, param3, param7);
+                        ArchiveSource.a(0, var16Lifetime2, var17 + var18, param3, param7);
                       }
                     }
                   }
@@ -208,7 +208,7 @@ final class qb extends vg implements wj {
                     return;
                   }
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + mi.field_a;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_a;
                   var10 = var10 + var12;
                 }
               } else {
@@ -278,14 +278,14 @@ final class qb extends vg implements wj {
                     var17Lifetime1 = -1 + hk.field_i - var16Lifetime1;
                   }
                   if (0 <= var16Lifetime1) {
-                    wd.a(0, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param3, param7);
+                    ArchiveSource.a(0, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param3, param7);
                   } else {
-                    wd.a(0, var15Lifetime1, var17Lifetime1 + var16Lifetime1, param3, param7);
+                    ArchiveSource.a(0, var15Lifetime1, var17Lifetime1 + var16Lifetime1, param3, param7);
                   }
                 } else {
                   if (0 <= var16Lifetime1 &&
                     hk.field_i > var16Lifetime1) {
-                    wd.a(0, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param3, param7);
+                    ArchiveSource.a(0, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param3, param7);
                   }
                 }
               }
@@ -295,7 +295,7 @@ final class qb extends vg implements wj {
               }
               var10 = var10 + var12;
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + mi.field_a;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_a;
             }
             return;
           }

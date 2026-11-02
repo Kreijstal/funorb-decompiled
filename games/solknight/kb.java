@@ -4,7 +4,7 @@
 final class kb {
     static String[] field_c;
     static String field_e;
-    static mg field_f;
+    static BitmapFont field_f;
     static hi field_d;
     static String[] field_a;
     static int field_b;
@@ -26,22 +26,22 @@ final class kb {
         if (param0 >= -5) {
           return;
         }
-        dh.field_j.d(param1, param3);
+        GameApplet.field_j.d(param1, param3);
         if (!param2) {
           return;
         }
-        var4 = wd.field_a % dh.field_j.field_p * 2;
-        if (var4 >= dh.field_j.field_p) {
-          var4 = -var4 - (-dh.field_j.field_p - dh.field_j.field_p);
+        var4 = ArchiveSource.field_a % GameApplet.field_j.field_p * 2;
+        if (var4 >= GameApplet.field_j.field_p) {
+          var4 = -var4 - (-GameApplet.field_j.field_p - GameApplet.field_j.field_p);
         }
         if (var4 < 10) {
           var4 = 10;
         } else {
-          if (var4 > -40 + dh.field_j.field_p) {
-            var4 = dh.field_j.field_p - 40;
+          if (var4 > -40 + GameApplet.field_j.field_p) {
+            var4 = GameApplet.field_j.field_p - 40;
           }
         }
-        gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
+        gd.a(param1, GameApplet.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
     }
 
     public static void a(byte param0) {
@@ -90,7 +90,7 @@ final class kb {
         te.field_I[6] = h.field_f;
         te.field_I[12] = vb.field_f;
         te.field_I[14] = k.field_a;
-        te.field_I[17] = rc.field_s;
+        te.field_I[17] = UiWidget.field_s;
         te.field_I[10] = gf.field_X[2];
         te.field_I[18] = ah.field_g;
         if (param0 < -101) {
@@ -107,7 +107,7 @@ final class kb {
         if (param0 != 80) {
           return false;
         }
-        if (rc.field_o == this) {
+        if (UiWidget.field_o == this) {
           return true;
         }
         if (dk.field_h == this) {

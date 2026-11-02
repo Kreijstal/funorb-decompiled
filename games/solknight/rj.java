@@ -73,7 +73,7 @@ abstract class rj {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        ha.field_g = param4;
+        ArchiveIndex.field_g = param4;
         ph.field_k = param1;
         uc.field_i = param3;
         if (param2 <= 76) {

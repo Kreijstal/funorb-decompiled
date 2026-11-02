@@ -7,7 +7,7 @@ final class fi {
     private long[] field_h;
     private long[] field_b;
     static String field_j;
-    static o[] field_a;
+    static Sprite[] field_a;
     private byte[] field_e;
     private long[] field_i;
     private long[] field_k;
@@ -84,7 +84,7 @@ final class fi {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_h[var3Lifetime1] = ke.a(this.field_h[var3Lifetime1], ie.field_c[var4][fi.a(255, (int)(this.field_b[fi.a(7, var3Lifetime1 - var4)] >>> var5))]);
+              this.field_h[var3Lifetime1] = ke.a(this.field_h[var3Lifetime1], MenuScreen.field_c[var4][fi.a(255, (int)(this.field_b[fi.a(7, var3Lifetime1 - var4)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -92,14 +92,14 @@ final class fi {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_b[var3Lifetime1Lifetime1] = this.field_h[var3Lifetime1Lifetime1];
           }
-          this.field_b[0] = ke.a(this.field_b[0], ie.field_g[var2Lifetime2]);
+          this.field_b[0] = ke.a(this.field_b[0], MenuScreen.field_g[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_h[var3Lifetime1Lifetime2] = this.field_b[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_h[var3Lifetime1Lifetime2] = ke.a(this.field_h[var3Lifetime1Lifetime2], ie.field_c[var7][fi.a(255, (int)(this.field_i[fi.a(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1))]);
+              this.field_h[var3Lifetime1Lifetime2] = ke.a(this.field_h[var3Lifetime1Lifetime2], MenuScreen.field_c[var7][fi.a(255, (int)(this.field_i[fi.a(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -120,7 +120,7 @@ final class fi {
         field_a = null;
         field_j = null;
         if (param0 != -18120) {
-          field_a = (o[]) null;
+          field_a = (Sprite[]) null;
         }
     }
 
@@ -131,7 +131,7 @@ final class fi {
         if (gf.field_Z == ma.field_o) {
           return lf.field_e;
         }
-        return ec.field_j;
+        return DualLinkNode.field_j;
     }
 
     final void b(byte param0) {
@@ -186,7 +186,7 @@ final class fi {
             var8 = 255 & param1[var5_int] << var6 | (param1[var5_int + 1] & 255) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_g[this.field_c] = (byte)qk.a((int) this.field_g[this.field_c], var8 >>> var7);
+              this.field_g[this.field_c] = (byte)ProxySocketConnector.a((int) this.field_g[this.field_c], var8 >>> var7);
               this.field_c = this.field_c + 1;
               this.field_f = this.field_f + (8 - var7);
               if (this.field_f == 512) {
@@ -206,7 +206,7 @@ final class fi {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param1[var5_int] << var6;
-            this.field_g[this.field_c] = (byte)qk.a((int) this.field_g[this.field_c], var8Lifetime1 >>> var7);
+            this.field_g[this.field_c] = (byte)ProxySocketConnector.a((int) this.field_g[this.field_c], var8Lifetime1 >>> var7);
           }
           if (param0 + (long)var7 >= 8L) {
             this.field_f = this.field_f + (8 - var7);
@@ -237,7 +237,7 @@ final class fi {
         }
     }
 
-    final static o[] b(int param0) {
+    final static Sprite[] b(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -245,9 +245,9 @@ final class fi {
         int var6 = 0;
         int var7 = SolKnight.field_L ? 1 : 0;
         if (param0 != 255) {
-          return (o[]) null;
+          return (Sprite[]) null;
         }
-        o[] var1 = new o[nb.field_c];
+        Sprite[] var1 = new Sprite[nb.field_c];
         for (var2 = 0; nb.field_c > var2; var2++) {
           var3 = uj.field_b[var2] * sa.field_l[var2];
           var4 = jc.field_c[var2];
@@ -255,7 +255,7 @@ final class fi {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = ig.field_H[fi.a((int) var4[var6], 255)];
           }
-          var1[var2] = new o(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var5);
+          var1[var2] = new Sprite(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var5);
         }
         og.a((byte) -97);
         return var1;
@@ -288,7 +288,7 @@ final class fi {
         byte[] var9 = null;
         var8 = SolKnight.field_L ? 1 : 0;
         try {
-          this.field_g[this.field_c] = (byte)qk.a((int) this.field_g[this.field_c], 128 >>> fi.a(7, this.field_f));
+          this.field_g[this.field_c] = (byte)ProxySocketConnector.a((int) this.field_g[this.field_c], 128 >>> fi.a(7, this.field_f));
           this.field_c = this.field_c + 1;
           if (param2 < 106) {
             var9 = (byte[]) null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bl extends gg {
+final class bl extends IntrusiveNode {
     int field_h;
     static String field_m;
     static boolean field_p;
@@ -106,14 +106,14 @@ final class bl extends gg {
         int var2Lifetime1;
         if (!param0) {
           for (var2 = 0; nb.field_c > var2; var2++) {
-            var1[var2] = new od(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], jc.field_c[var2], ig.field_H);
+            var1[var2] = new od(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], jc.field_c[var2], ig.field_H);
           }
           og.a((byte) -97);
           return var1;
         }
         bl.b(false);
         for (var2Lifetime1 = 0; nb.field_c > var2Lifetime1; var2Lifetime1++) {
-          var1[var2Lifetime1] = new od(kl.field_a, we.field_e, ph.field_h[var2Lifetime1], qf.field_d[var2Lifetime1], sa.field_l[var2Lifetime1], uj.field_b[var2Lifetime1], jc.field_c[var2Lifetime1], ig.field_H);
+          var1[var2Lifetime1] = new od(MouseInputHandler.field_a, we.field_e, ph.field_h[var2Lifetime1], qf.field_d[var2Lifetime1], sa.field_l[var2Lifetime1], uj.field_b[var2Lifetime1], jc.field_c[var2Lifetime1], ig.field_H);
         }
         og.a((byte) -97);
         return var1;

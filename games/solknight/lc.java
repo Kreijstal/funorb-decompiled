@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc extends gg {
+final class lc extends IntrusiveNode {
     int field_o;
     static jh field_m;
     int field_q;
@@ -9,10 +9,10 @@ final class lc extends gg {
     int field_i;
     int field_n;
     static int field_h;
-    static gb field_k;
+    static PacketBuffer field_k;
     static volatile long field_s;
     int field_j;
-    static nc field_t;
+    static IntrusiveDeque field_t;
     static boolean field_u;
     static int field_p;
     int field_r;
@@ -30,7 +30,7 @@ final class lc extends gg {
         try {
           for (var2_int = param0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!ec.a((char) var3, false) &&
+            if (!DualLinkNode.a((char) var3, false) &&
               !gh.a((char) var3, (byte) -124)) {
               return true;
             }
@@ -66,15 +66,15 @@ final class lc extends gg {
           field_m = null;
           return;
         }
-        da var2 = (da) null;
-        lc.a((da) null, 54, (String) null, (String) null, (da) null);
+        Archive var2 = (Archive) null;
+        lc.a((Archive) null, 54, (String) null, (String) null, (Archive) null);
         field_t = null;
         field_l = null;
         field_k = null;
         field_m = null;
     }
 
-    final static hd a(da param0, int param1, String param2, String param3, da param4) {
+    final static hd a(Archive param0, int param1, String param2, String param3, Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -129,7 +129,7 @@ final class lc extends gg {
         }
     }
 
-    final static void a(int param0, int param1, String param2, le param3, mg param4) {
+    final static void a(int param0, int param1, String param2, le param3, BitmapFont param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -217,8 +217,8 @@ final class lc extends gg {
           if (param0 == 2767) {
             return;
           }
-          mg var4 = (mg) null;
-          lc.a(14, 1, (String) null, (le) null, (mg) null);
+          BitmapFont var4 = (BitmapFont) null;
+          lc.a(14, 1, (String) null, (le) null, (BitmapFont) null);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -233,6 +233,6 @@ final class lc extends gg {
     static {
         field_s = 0L;
         field_h = 2621440;
-        field_t = new nc();
+        field_t = new IntrusiveDeque();
     }
 }

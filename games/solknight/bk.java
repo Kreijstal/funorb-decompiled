@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class bk {
-    static nj field_a;
+    static PlatformTask field_a;
 
     final static int a(int param0, CharSequence param1) {
         int var4 = 0;
@@ -87,7 +87,7 @@ final class bk {
         field_a = null;
     }
 
-    final static int a(byte param0, String param1, mg param2, int param3, String[] param4) {
+    final static int a(byte param0, String param1, BitmapFont param2, int param3, String[] param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -185,10 +185,10 @@ final class bk {
 
     final static String a(int param0) {
         if (param0 != 0) {
-          field_a = (nj) null;
-          return te.field_N.h(param0 + 109);
+          field_a = (PlatformTask) null;
+          return te.field_N.readString(param0 + 109);
         }
-        return te.field_N.h(param0 + 109);
+        return te.field_N.readString(param0 + 109);
     }
 
     static {

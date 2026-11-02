@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class vf extends pd {
+final class vf extends RasterBuffer {
     private java.awt.Component field_i;
 
     public vf() {

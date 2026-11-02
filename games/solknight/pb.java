@@ -6,7 +6,7 @@ final class pb implements j {
     static int field_b;
     static int[] field_a;
 
-    final static void a(da param0, int param1) {
+    final static void a(Archive param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var5_int = 0;
@@ -26,20 +26,20 @@ final class pb implements j {
         try {
           var8 = new jd(param0.a(4, "logo.fo3d", ""));
           var10 = var8;
-          var3 = var10.j(255);
+          var3 = var10.readUnsignedByte(255);
           var10.d((byte) -83);
           vc.field_f = ml.a(22795, var10);
-          wk.field_d = new uh[var3];
+          DelegatingCanvas.field_d = new uh[var3];
           bg.field_v = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            wk.field_d[var4] = ab.a(var8, -14945);
+            DelegatingCanvas.field_d[var4] = ab.a(var8, -14945);
           }
           var5_int = -69 % ((param1 + 46) / 41);
           var10.m(0);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {
-            var5 = wk.field_d[var9];
+            var5 = DelegatingCanvas.field_d[var9];
             var5.a(8292, 1, 6, 6, 6);
             var5.b(32767);
             var6 = new int[]{var5.field_Q + var5.field_E >> 1, var5.field_m + var5.field_t >> 1, var5.field_G + var5.field_N >> 1};
@@ -62,7 +62,7 @@ final class pb implements j {
         }
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -70,7 +70,7 @@ final class pb implements j {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        o var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param3 + param4.field_m;
           if (param0 <= 113) {
@@ -78,7 +78,7 @@ final class pb implements j {
           }
           var7 = param4.field_j + param1;
           pl.a(true, param4.field_x, param4.field_t, var7, var6_int);
-          var8 = gb.field_k[1];
+          var8 = PacketBuffer.field_k[1];
           if (param4 instanceof pj &&
             ((pj) (param4)).field_F) {
             var8.a((-var8.field_q + param4.field_t >> 1) + 1 + var6_int, (param4.field_x - var8.field_r >> 1) + (1 + var7), 256);
@@ -128,7 +128,7 @@ final class pb implements j {
         }
     }
 
-    final static void a(dl param0, Object param1, byte param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, byte param2) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;

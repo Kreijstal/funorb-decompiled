@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class ib extends gg {
+final class ib extends IntrusiveNode {
     static Random field_i;
     int[] field_n;
     int field_m;
     boolean field_k;
     static boolean field_o;
     static int field_h;
-    static dh field_l;
+    static GameApplet field_l;
     static int field_j;
 
     public static void a(int param0) {
@@ -20,9 +20,9 @@ final class ib extends gg {
         }
     }
 
-    final static o a(int param0, boolean param1, int param2) {
+    final static Sprite a(int param0, boolean param1, int param2) {
         int var5 = SolKnight.field_L ? 1 : 0;
-        o var3 = new o(param0, param0);
+        Sprite var3 = new Sprite(param0, param0);
         int var4 = 0;
         if (!param1) {
           field_j = -85;

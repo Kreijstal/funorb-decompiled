@@ -3,26 +3,26 @@
  */
 final class qd {
     static String field_a;
-    static o[] field_e;
+    static Sprite[] field_e;
     private int field_c;
-    static o[] field_f;
-    private gg field_h;
-    private gg[] field_g;
+    static Sprite[] field_f;
+    private IntrusiveNode field_h;
+    private IntrusiveNode[] field_g;
     static int field_d;
-    private gg field_b;
+    private IntrusiveNode field_b;
     private int field_i;
 
-    final gg c(byte param0) {
+    final IntrusiveNode c(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        gg var4;
-        gg var5;
-        gg var9;
-        gg var12;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var9;
+        IntrusiveNode var12;
         var3 = SolKnight.field_L ? 1 : 0;
         if (param0 < 49) {
-          return (gg) null;
+          return (IntrusiveNode) null;
         }
         if (0 >= this.field_c) {
           do {
@@ -31,15 +31,15 @@ final class qd {
             }
             fieldTemp$1 = this.field_c;
             this.field_c = this.field_c + 1;
-            var4 = this.field_g[fieldTemp$1].field_d;
+            var4 = this.field_g[fieldTemp$1].previous;
             var5 = var4;
           } while (var4 == this.field_g[this.field_c - 1]);
-          this.field_h = var5.field_d;
+          this.field_h = var5.previous;
           return var5;
         }
         if (this.field_g[this.field_c - 1] != this.field_h) {
           var12 = this.field_h;
-          this.field_h = var12.field_d;
+          this.field_h = var12.previous;
           return var12;
         }
         do {
@@ -48,25 +48,25 @@ final class qd {
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          var4 = this.field_g[fieldTemp$0].field_d;
+          var4 = this.field_g[fieldTemp$0].previous;
           var9 = var4;
         } while (var4 == this.field_g[this.field_c - 1]);
-        this.field_h = var9.field_d;
+        this.field_h = var9.previous;
         return var9;
     }
 
-    final gg a(boolean param0, long param1) {
-        gg var5 = null;
+    final IntrusiveNode a(boolean param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = SolKnight.field_L ? 1 : 0;
-        gg var4 = this.field_g[(int)((long)(this.field_i - 1) & param1)];
-        this.field_b = var4.field_d;
+        IntrusiveNode var4 = this.field_g[(int)((long)(this.field_i - 1) & param1)];
+        this.field_b = var4.previous;
         while (var4 != this.field_b) {
-          if (~this.field_b.field_g == ~param1) {
+          if (~this.field_b.key == ~param1) {
             var5 = this.field_b;
-            this.field_b = this.field_b.field_d;
+            this.field_b = this.field_b.previous;
             return var5;
           }
-          this.field_b = this.field_b.field_d;
+          this.field_b = this.field_b.previous;
         }
         this.field_b = null;
         if (param0) {
@@ -76,7 +76,7 @@ final class qd {
         return null;
     }
 
-    final gg b(int param0) {
+    final IntrusiveNode b(int param0) {
         this.field_c = param0;
         return this.c((byte) 107);
     }
@@ -98,23 +98,23 @@ final class qd {
         field_e = null;
     }
 
-    final void a(byte param0, gg param1, long param2) {
-        gg var5 = null;
+    final void a(byte param0, IntrusiveNode param1, long param2) {
+        IntrusiveNode var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          if (param1.field_a != null) {
-            param1.c(10);
+          if (param1.next != null) {
+            param1.unlink(10);
           }
           var5 = this.field_g[(int)(param2 & (long)(this.field_i - 1))];
-          param1.field_d = var5;
-          param1.field_a = var5.field_a;
-          param1.field_a.field_d = param1;
-          param1.field_d.field_a = param1;
-          param1.field_g = param2;
+          param1.previous = var5;
+          param1.next = var5.next;
+          param1.next.previous = param1;
+          param1.previous.next = param1;
+          param1.key = param2;
           if (param0 <= 22) {
             field_d = -118;
           }
@@ -138,15 +138,15 @@ final class qd {
           if (!bf.c(79, 1)) {
             return false;
           }
-          te.field_O = te.field_N.j(255);
-          te.field_N.field_m = 0;
+          te.field_O = te.field_N.readUnsignedByte(255);
+          te.field_N.position = 0;
         }
         if (te.field_O == -2) {
           if (!bf.c(36, 2)) {
             return false;
           }
-          te.field_O = te.field_N.i(-22);
-          te.field_N.field_m = 0;
+          te.field_O = te.field_N.readUnsignedShort(-22);
+          te.field_N.position = 0;
         }
         if (param0 <= 124) {
           qd.a(-104);
@@ -157,17 +157,17 @@ final class qd {
 
     qd(int param0) {
         int var2 = 0;
-        gg dupTemp$1 = null;
-        gg var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_c = 0;
-        this.field_g = new gg[param0];
+        this.field_g = new IntrusiveNode[param0];
         this.field_i = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new gg();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_g[var2] = dupTemp$1;
-          var3.field_a = var3;
-          var3.field_d = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

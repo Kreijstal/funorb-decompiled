@@ -72,23 +72,23 @@ final class rg {
         }
     }
 
-    final static ug a(String param0, int param1, int param2) {
-        qk var3 = null;
+    final static SocketConnector a(String param0, int param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        qk stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new qk();
-          ((ug) ((Object) var3)).field_b = param1;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_b = param1;
           if (param2 != 2525) {
             rg.a(-91);
           }
-          ((ug) ((Object) var3)).field_c = param0;
+          ((SocketConnector) ((Object) var3)).field_c = param0;
           stackIn_3_0 = var3;
-          return (ug) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -103,7 +103,7 @@ final class rg {
         }
     }
 
-    final static void a(o[] param0, int param1) {
+    final static void a(Sprite[] param0, int param1) {
         try {
           int var2_int = 39 / ((param1 - 51) / 37);
           jb.field_d = param0;
@@ -134,7 +134,7 @@ final class rg {
         if (gf.field_Z == ma.field_o) {
           return te.field_K;
         }
-        if (gb.field_i == gf.field_Z) {
+        if (PacketBuffer.field_i == gf.field_Z) {
           return uh.field_r;
         }
         if (!td.field_h.a(false)) {

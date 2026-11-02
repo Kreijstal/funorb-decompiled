@@ -64,7 +64,7 @@ final class hh extends pj {
         return this.field_K;
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, rc param6) {
+    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;

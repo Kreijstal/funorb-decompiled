@@ -31,7 +31,7 @@ final class ta {
           var2_int = -28 % ((57 - param0) / 48);
           ri.a(be.field_I, param1, true, kg.field_c, (byte) -81, bb.field_G, 0);
           for (var3 = 0; kg.field_c > var3; var3++) {
-            pd.field_e[param1 + var3] = var3;
+            RasterBuffer.field_e[param1 + var3] = var3;
           }
           ri.a(dc.field_o, param1 + param1, false, param1 + kg.field_c, (byte) -81, bi.field_e, param1);
           if (param1 >= kg.field_c) {
@@ -46,10 +46,10 @@ final class ta {
         }
     }
 
-    final static void a(boolean param0, int param1, o[] param2, int param3, int param4, mg param5, int param6, int param7, int param8, o[] param9, int param10, int param11, mg param12, int param13, boolean param14) {
+    final static void a(boolean param0, int param1, Sprite[] param2, int param3, int param4, BitmapFont param5, int param6, int param7, int param8, Sprite[] param9, int param10, int param11, BitmapFont param12, int param13, boolean param14) {
         try {
-          o[] var16 = (o[]) null;
-          pk.a(param1, 0, param4, param12, param7, rj.field_c, 480, pb.field_b, param13, param9, param3, (byte) -111, (o[]) null, hc.field_d, param8, param11, param6, param5, 0, param10, param2);
+          Sprite[] var16 = (Sprite[]) null;
+          pk.a(param1, 0, param4, param12, param7, rj.field_c, 480, pb.field_b, param13, param9, param3, (byte) -111, (Sprite[]) null, hc.field_d, param8, param11, param6, param5, 0, param10, param2);
           if (param0) {
             ta.b((byte) 72);
           }

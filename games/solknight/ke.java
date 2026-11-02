@@ -5,11 +5,11 @@ final class ke extends si {
     static int field_I;
     private int field_P;
     static int field_J;
-    static o field_K;
-    private mg field_M;
+    static Sprite field_K;
+    private BitmapFont field_M;
     static String[] field_O;
     static int field_N;
-    static mg field_H;
+    static BitmapFont field_H;
     private int field_S;
     private String field_Q;
     private boolean field_L;
@@ -49,7 +49,7 @@ final class ke extends si {
           String stackIn_14_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (dl.field_t.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_t.startsWith("win") &&
               sj.a(97, param2)) {
               return;
             }
@@ -112,7 +112,7 @@ final class ke extends si {
         try {
           ua.field_L = ua.field_L + 65536;
           while (sb.a(ua.field_L, uc.field_b, 1513551664) >= 65536) {
-            wd.field_a = wd.field_a + 1;
+            ArchiveSource.field_a = ArchiveSource.field_a + 1;
             ua.field_L = ua.field_L - uc.field_b;
           }
           var2_int = -1;
@@ -167,14 +167,14 @@ final class ke extends si {
             if (hg.field_F != 0 &&
               s.field_gb > var3 &&
               s.field_gb < kj.field_S.field_t + var3) {
-              if (db.field_o > 269 - kj.field_S.field_p &&
-                db.field_o < 269) {
+              if (SpriteState.field_o > 269 - kj.field_S.field_p &&
+                SpriteState.field_o < 269) {
                 var4 = 1;
                 ti.field_e = uc.field_c;
                 fh.field_g = false;
               }
-              if (db.field_o > 586 &&
-                kj.field_S.field_p + 586 > db.field_o) {
+              if (SpriteState.field_o > 586 &&
+                kj.field_S.field_p + 586 > SpriteState.field_o) {
                 var4 = 1;
                 ti.field_e = uc.field_c;
                 fh.field_g = true;
@@ -182,14 +182,14 @@ final class ke extends si {
             }
             if (var4 == 0 &&
               uc.field_e < ti.field_e &&
-              var3 < ad.field_m &&
-              ad.field_m < var3 + kj.field_S.field_t) {
-              if (gb.field_j > 269 - kj.field_S.field_p &&
-                gb.field_j < 269) {
+              var3 < BufferedSocket.field_m &&
+              BufferedSocket.field_m < var3 + kj.field_S.field_t) {
+              if (PacketBuffer.field_j > 269 - kj.field_S.field_p &&
+                PacketBuffer.field_j < 269) {
                 ti.field_e = uc.field_e;
               }
-              if (586 < gb.field_j &&
-                kj.field_S.field_p + 586 > gb.field_j) {
+              if (586 < PacketBuffer.field_j &&
+                kj.field_S.field_p + 586 > PacketBuffer.field_j) {
                 ti.field_e = uc.field_e;
               }
             }
@@ -197,29 +197,29 @@ final class ke extends si {
           if (!param0) {
             return 0;
           }
-          qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
-          if (qh.field_b.d((byte) -8)) {
-            if (qh.field_b.field_f == 0) {
+          GameKeyHandler.field_b.a(-117, BufferedSocket.a(BufferedSocket.field_m, PacketBuffer.field_j, 0), BufferedSocket.a(s.field_gb, SpriteState.field_o, 0));
+          if (GameKeyHandler.field_b.d((byte) -8)) {
+            if (GameKeyHandler.field_b.field_f == 0) {
               stackIn_62_0 = 3;
               return stackIn_62_0;
             }
-            if (qh.field_b.field_f == 1) {
+            if (GameKeyHandler.field_b.field_f == 1) {
               stackIn_65_0 = 2;
               return stackIn_65_0;
             }
           }
           while (true) {
-            if (!wk.a((byte) -56)) {
+            if (!DelegatingCanvas.a((byte) -56)) {
               stackIn_81_0 = 0;
               return stackIn_81_0;
             }
-            qh.field_b.a(0, false);
-            if (qh.field_b.d((byte) -33)) {
-              if (qh.field_b.field_f == 0) {
+            GameKeyHandler.field_b.a(0, false);
+            if (GameKeyHandler.field_b.d((byte) -33)) {
+              if (GameKeyHandler.field_b.field_f == 0) {
                 stackIn_72_0 = 3;
                 return stackIn_72_0;
               }
-              if (qh.field_b.field_f == 1) {
+              if (GameKeyHandler.field_b.field_f == 1) {
                 stackIn_75_0 = 1;
                 return stackIn_75_0;
               }
@@ -269,7 +269,7 @@ final class ke extends si {
         return -var3 + (param0 + var3) / param2;
     }
 
-    ke(int param0, int param1, int param2, int param3, rc param4, boolean param5, int param6, int param7, mg param8, int param9, String param10) {
+    ke(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (j) null, (dg) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

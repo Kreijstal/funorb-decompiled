@@ -6,7 +6,7 @@ final class qa extends a {
     static int field_k;
     static java.math.BigInteger field_p;
     private boolean field_l;
-    static dl field_n;
+    static PlatformTaskDispatcher field_n;
     private String field_j;
     static String[] field_o;
     static String field_r;
@@ -47,11 +47,11 @@ final class qa extends a {
             return stackIn_3_0;
           }
           if (this.a(param0, (byte) -124) == rg.field_f) {
-            stackIn_7_0 = wd.field_b;
+            stackIn_7_0 = ArchiveSource.field_b;
             return stackIn_7_0;
           }
           if (param1) {
-            field_n = (dl) null;
+            field_n = (PlatformTaskDispatcher) null;
           }
           stackIn_11_0 = dc.field_l;
           return stackIn_11_0;
@@ -101,7 +101,7 @@ final class qa extends a {
           if (!param0.equals(this.field_j)) {
             var3 = tg.a(param0, -44);
             if (!var3.a(false)) {
-              stackIn_9_0 = db.field_u;
+              stackIn_9_0 = SpriteState.field_u;
               return stackIn_9_0;
             }
             this.field_j = param0;

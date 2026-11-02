@@ -4,7 +4,7 @@
 abstract class a extends wf implements pi {
     private vg field_f;
     static wg field_h;
-    static o field_e;
+    static Sprite field_e;
     static String field_g;
     static int[] field_d;
     static int field_i;
@@ -26,7 +26,7 @@ abstract class a extends wf implements pi {
         }
         try {
           pe.field_m = param1;
-          jl.field_e = param2;
+          SecondaryNodeDequeIterator.field_e = param2;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "a.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -45,7 +45,7 @@ abstract class a extends wf implements pi {
 
     public final boolean a(int param0) {
         if (param0 < 82) {
-          field_e = (o) null;
+          field_e = (Sprite) null;
           if (this.field_f.field_i != null) {
             return this.field_f.field_i.length() == 0 ? true : false;
           }
@@ -86,7 +86,7 @@ abstract class a extends wf implements pi {
         }
     }
 
-    final static String a(gb param0, int param1, boolean param2) {
+    final static String a(PacketBuffer param0, int param1, boolean param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -105,7 +105,7 @@ abstract class a extends wf implements pi {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.field_m = param0.field_m + v.field_g.a(0, param0.field_m, 4, var4, var3_int, param0.field_l);
+            param0.position = param0.position + v.field_g.a(0, param0.position, 4, var4, var3_int, param0.payload);
             var5 = vd.a(var4, 0, var3_int, 160);
             stackIn_3_0 = var5;
             return stackIn_3_0;

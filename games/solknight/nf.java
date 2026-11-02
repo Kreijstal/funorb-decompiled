@@ -18,7 +18,7 @@ final class nf extends ld implements ka {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        rc var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (te.field_L == param1) {
@@ -28,7 +28,7 @@ final class nf extends ld implements ka {
               var3 = ak.field_c;
               this.field_x = this.field_x + 10;
               if (pe.a((byte) -108)) {
-                var3 = nc.field_b;
+                var3 = IntrusiveDeque.field_b;
                 this.field_x = this.field_x + 20;
               }
             } else {
@@ -38,7 +38,7 @@ final class nf extends ld implements ka {
               }
             }
           }
-          var4 = new rc((String) (var3), (dg) null);
+          var4 = new UiWidget((String) (var3), (dg) null);
           var4.field_j = 50;
           var4.field_m = 0;
           var4.field_t = this.field_t;
@@ -81,7 +81,7 @@ final class nf extends ld implements ka {
         }
     }
 
-    final static void a(da param0, int param1, da param2) {
+    final static void a(Archive param0, int param1, Archive param2) {
         kc.field_Q = param2;
         if (param1 >= -57) {
           return;
@@ -135,12 +135,12 @@ final class nf extends ld implements ka {
           var8 = new jk(u.field_b, param4);
           var7 = var8;
           u.field_b.b(var8, -113);
-          if (rb.a(-1)) {
+          if (Asteroid.a(-1)) {
             var8.h((byte) -63);
             return true;
           }
           lf.field_e = param5;
-          ug.field_d = param2;
+          SocketConnector.field_d = param2;
           ma.field_o = gf.field_Z;
           og.field_b = param1;
           te.field_K = param3;

@@ -20,31 +20,31 @@ final class g {
         field_e = null;
         field_k = null;
         if (param0 != -6960) {
-          dl var2 = (dl) null;
-          g.a(107, 48, (dl) null, 12, (byte) 17, 41);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          g.a(107, 48, (PlatformTaskDispatcher) null, 12, (byte) 17, 41);
         }
     }
 
-    final static jg a(int param0, int param1, dl param2, int param3, byte param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, PlatformTaskDispatcher param2, int param3, byte param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        jg var7 = null;
+        FullscreenFocusCanvas var7 = null;
         String var8 = null;
         java.awt.Frame var9 = null;
         Object stackIn_2_0 = null;
-        jg stackIn_6_0 = null;
+        FullscreenFocusCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = ii.a(true, param5, param2, param0, param1, param3);
+          var9 = IterableNodeHashTable.a(true, param5, param2, param0, param1, param3);
           var6 = var9;
           if (var9 == null) {
             stackIn_2_0 = null;
-            return (jg) (stackIn_2_0);
+            return (FullscreenFocusCanvas) (stackIn_2_0);
           }
-          var7 = new jg();
+          var7 = new FullscreenFocusCanvas();
           var7.field_c = var9;
           var7.field_c.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param3, param0);

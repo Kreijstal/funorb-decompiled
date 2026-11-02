@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ga extends ki implements ge, ka {
+final class ga extends WidgetContainer implements ge, ka {
     static boolean field_G;
     static String field_H;
     private pj field_J;
     private pj field_I;
     ua field_F;
-    static nc field_E;
+    static IntrusiveDeque field_E;
     private qb field_K;
 
     public static void h(int param0) {
@@ -40,7 +40,7 @@ final class ga extends ki implements ge, ka {
         }
     }
 
-    final boolean a(char param0, byte param1, int param2, rc param3) {
+    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -81,7 +81,7 @@ final class ga extends ki implements ge, ka {
         super(0, 0, 496, 0, (j) null);
         this.field_K = new qb("", (dg) null, 12);
         af var1 = new af(jh.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, ua.field_G.field_F, -1, 2147483647, true);
-        rc var2 = new rc(cd.field_a, var1, (dg) null);
+        UiWidget var2 = new UiWidget(cd.field_a, var1, (dg) null);
         this.field_J = new pj(mf.field_x, (dg) null);
         this.field_I = new pj(nf.field_X, (dg) null);
         this.field_K.field_z = ql.field_u;
@@ -124,7 +124,7 @@ final class ga extends ki implements ge, ka {
         }
     }
 
-    private final int a(int param0, int param1, String param2, rc param3, int param4, String param5) {
+    private final int a(int param0, int param1, String param2, UiWidget param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -201,7 +201,7 @@ final class ga extends ki implements ge, ka {
         }
     }
 
-    final void a(int param0, int param1, int param2, rc param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_J.field_B = this.e((byte) -119);
@@ -217,7 +217,7 @@ final class ga extends ki implements ge, ka {
           rj.field_c = param3;
           return;
         }
-        field_E = (nc) null;
+        field_E = (IntrusiveDeque) null;
         pb.field_b = param0;
         hc.field_d = param1;
         rj.field_c = param3;
@@ -267,7 +267,7 @@ final class ga extends ki implements ge, ka {
         }
     }
 
-    private final int a(byte param0, int param1, String param2, int param3, rc param4, int param5, String param6) {
+    private final int a(byte param0, int param1, String param2, int param3, UiWidget param4, int param5, String param6) {
         RuntimeException var8 = null;
         pk var9 = null;
         ke var10 = null;
@@ -320,6 +320,6 @@ final class ga extends ki implements ge, ka {
     static {
         field_H = "Log in";
         field_G = false;
-        field_E = new nc();
+        field_E = new IntrusiveDeque();
     }
 }

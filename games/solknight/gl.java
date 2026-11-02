@@ -63,7 +63,7 @@ final class gl {
               }
             }
           }
-          if (var2 != ec.field_h) {
+          if (var2 != DualLinkNode.field_h) {
             this.field_i.a(false, var2, var3);
           } else {
             if (cf.field_d != var3) {
@@ -71,7 +71,7 @@ final class gl {
             }
           }
           if (this.field_h > 0) {
-            ib.field_j = (this.field_h - ec.field_h) / 2;
+            ib.field_j = (this.field_h - DualLinkNode.field_h) / 2;
           }
         }
     }
@@ -98,14 +98,14 @@ final class gl {
           }
           return;
         }
-        if (ec.field_h < this.field_h) {
-          ib.field_j = (this.field_h - ec.field_h) / 2;
+        if (DualLinkNode.field_h < this.field_h) {
+          ib.field_j = (this.field_h - DualLinkNode.field_h) / 2;
         } else {
           if (this.field_h > 0) {
             ib.field_j = 0;
           }
         }
-        if (this.field_c == ec.field_h &&
+        if (this.field_c == DualLinkNode.field_h &&
           cf.field_d == this.field_k) {
           return;
         }
@@ -203,12 +203,12 @@ final class gl {
         this.field_i.a(param0, this.field_p, this.field_t);
     }
 
-    final jg b(boolean param0) {
+    final FullscreenFocusCanvas b(boolean param0) {
         this.field_t = cf.field_d;
-        this.field_p = ec.field_h;
+        this.field_p = DualLinkNode.field_h;
         this.field_i.a(param0, this.field_n, this.field_d);
         jd.field_p = false;
-        jg var2 = g.a(this.field_d, 0, wh.field_c, this.field_n, (byte) -81, 0);
+        FullscreenFocusCanvas var2 = g.a(this.field_d, 0, wh.field_c, this.field_n, (byte) -81, 0);
         if (var2 == null) {
           this.a(false);
         }
@@ -216,16 +216,16 @@ final class gl {
     }
 
     final static void a(byte param0) {
-        o var1 = null;
-        o var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = SolKnight.field_L ? 1 : 0;
         try {
-          var1 = new o(540, 140);
+          var1 = new Sprite(540, 140);
           cl.a(-104, var1);
           hk.a();
-          mi.a();
-          ad.field_h = 0;
+          SoftwareRasterizer.a();
+          BufferedSocket.field_h = 0;
           ee.g(101);
           var2 = var1.c();
           var3 = 0;
@@ -235,7 +235,7 @@ final class gl {
           }
           while (var3 < 15) {
             var2.d(-2, -2, 16777215);
-            mi.d(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
             var3++;
           }
           tg.field_I.a();
@@ -274,7 +274,7 @@ final class gl {
           if (param2 <= 92) {
             field_g = (java.util.zip.CRC32) null;
           }
-          stackIn_3_0 = ki.a(-27129, param1, param0, 0);
+          stackIn_3_0 = WidgetContainer.a(-27129, param1, param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

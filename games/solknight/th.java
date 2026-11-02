@@ -5,7 +5,7 @@ final class th extends si {
     static int field_I;
     static int field_J;
     static int field_K;
-    static o field_H;
+    static Sprite field_H;
     static String field_L;
 
     final static void a(byte param0, java.awt.Canvas param1) {
@@ -41,7 +41,7 @@ final class th extends si {
         }
     }
 
-    final void a(int param0, int param1, rc param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         bc var7 = null;
         try {
           super.a(param0, param1 ^ param1, param2, param3, param4, param5);
@@ -66,7 +66,7 @@ final class th extends si {
         }
     }
 
-    private th(int param0, int param1, int param2, int param3, j param4, dg param5, rc param6) {
+    private th(int param0, int param1, int param2, int param3, j param4, dg param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_G = param6;

@@ -17,7 +17,7 @@ final class mb {
         RuntimeException var5_ref = null;
         var6 = SolKnight.field_L ? 1 : 0;
         try {
-          var5 = (sd) (r.field_b.a((byte) 51));
+          var5 = (sd) (IsaacRandom.field_b.a((byte) 51));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5 == null))) {
             stackIn_12_0 = ~var5.field_o;
@@ -27,7 +27,7 @@ final class mb {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var5 = (sd) (r.field_b.b(-123));
+              var5 = (sd) (IsaacRandom.field_b.b(-123));
               continue;
             }
             break;
@@ -43,7 +43,7 @@ final class mb {
           if (stackIn_12_0 <= stackIn_12_1) {
             field_b = (ff) null;
           }
-          r.field_b.a(var5, -7044);
+          IsaacRandom.field_b.a(var5, -7044);
           fi.a(var5, param4, -24045);
           stackIn_16_0 = var5;
           return stackIn_16_0;
@@ -56,7 +56,7 @@ final class mb {
 
     final static void a(boolean param0, int param1, int param2) {
         try {
-          ug.a((byte) -76, bf.field_b[param1], qc.field_l[param1] * param2 >> 9);
+          SocketConnector.a((byte) -76, bf.field_b[param1], qc.field_l[param1] * param2 >> 9);
           if (!param0) {
             field_b = (ff) null;
           }
@@ -151,7 +151,7 @@ final class mb {
           var21Lifetime2 = hk.field_f;
           var22Lifetime2 = hk.field_e;
           var23Lifetime2 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var23Lifetime2 < param0.field_y) {
               var24Lifetime1 = param0.field_n[var23Lifetime2];
@@ -166,7 +166,7 @@ final class mb {
                 if (stackIn_56_0 > stackIn_56_1) {
                   stackIn_65_0 = ~var18;
                   stackIn_65_1 = ~mh.field_a.length;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -254,7 +254,7 @@ final class mb {
                   stackIn_65_0 = ~var18;
                   stackIn_65_1 = ~mh.field_a.length;
                   if (var30 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                   if (stackIn_65_0 <= stackIn_65_1) {
                     break;
@@ -301,15 +301,15 @@ final class mb {
         }
     }
 
-    final static o[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        o[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < 4) {
             mb.b(-114);
           }
-          stackIn_4_0 = ug.a(param0, -8591, 1, param3, param1);
+          stackIn_4_0 = SocketConnector.a(param0, -8591, 1, param3, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

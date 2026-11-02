@@ -4,7 +4,7 @@
 final class kh {
     static sd field_c;
     static String field_e;
-    static nc field_a;
+    static IntrusiveDeque field_a;
     static String field_b;
     static int field_d;
 
@@ -20,7 +20,7 @@ final class kh {
 
     final static void a(int param0) {
         qa.field_o = null;
-        jg.field_d = false;
+        FullscreenFocusCanvas.field_d = false;
         qc.field_h = null;
         ak.field_b = null;
         i.field_I = null;
@@ -33,6 +33,6 @@ final class kh {
         field_c = null;
         field_e = "EARTH<br>SAVED";
         field_b = "Connection lost - attempting to reconnect";
-        field_a = new nc();
+        field_a = new IntrusiveDeque();
     }
 }

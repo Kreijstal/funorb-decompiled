@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ja {
-    static o field_a;
+    static Sprite field_a;
 
     final static void b(int param0) {
         ud var1 = null;
@@ -23,16 +23,16 @@ final class ja {
             vg.field_M = 200;
             var1 = (ud) (uc.field_j.a((byte) 51));
             while (var1 != null) {
-              if (!var1.field_m.a(false)) {
-                var1.c(param0 ^ 194);
+              if (!var1.field_m.isLinked(false)) {
+                var1.unlink(param0 ^ 194);
               }
               var1 = (ud) (uc.field_j.b(-105));
             }
             if (null != la.field_j) {
               var1Lifetime1 = (ud) (la.field_j.a((byte) 51));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_m.a(false)) {
-                  var1Lifetime1.c(10);
+                if (!var1Lifetime1.field_m.isLinked(false)) {
+                  var1Lifetime1.unlink(10);
                 }
                 var1Lifetime1 = (ud) (la.field_j.b(-46));
               }

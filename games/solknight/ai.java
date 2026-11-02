@@ -6,17 +6,17 @@ import java.io.*;
 final class ai {
     static String field_d;
     static hi field_a;
-    static da field_b;
+    static Archive field_b;
     static String field_c;
 
-    final static void a(int param0, mg param1, int param2, int param3, int param4, int param5, int param6, int param7, o param8, int param9, int param10) {
+    final static void a(int param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, int param7, Sprite param8, int param9, int param10) {
         try {
           jj.field_db = param4;
           gf.field_T = param2;
           ja.field_a = param8;
           aj.field_p = param10;
           cl.field_o = param7;
-          ii.field_h = param3;
+          IterableNodeHashTable.field_h = param3;
           if (param6 >= -115) {
             field_d = (String) null;
           }
@@ -51,15 +51,15 @@ final class ai {
             ef.field_e = wc.field_f;
           } else {
             try {
-              lf.field_d = new ad((java.net.Socket) (bk.field_a.field_e), qa.field_n);
-              id.field_c.field_m = 0;
+              lf.field_d = new BufferedSocket((java.net.Socket) (bk.field_a.field_e), qa.field_n);
+              id.field_c.position = 0;
               var4 = te.field_N;
               var5 = var4;
               stackIn_11_0 = (param0) ? -2 : -1;
               nf.field_U = stackIn_11_0;
-              kl.field_b = stackIn_11_0;
-              jg.field_e = stackIn_11_0;
-              var5.field_m = 0;
+              MouseInputHandler.field_b = stackIn_11_0;
+              FullscreenFocusCanvas.field_e = stackIn_11_0;
+              var5.position = 0;
               ef.field_e = qc.field_i;
               si.a(jj.field_s, (byte) 22, jh.field_f, ci.field_jb, id.field_c);
               qf.a(param1 + 37, -1);
@@ -95,10 +95,10 @@ final class ai {
         if (param2) {
           var4++;
         }
-        return ad.field_c[var4];
+        return BufferedSocket.field_c[var4];
     }
 
-    final static void a(o[] param0, byte param1, int param2, int param3) {
+    final static void a(Sprite[] param0, byte param1, int param2, int param3) {
         try {
           int var4_int = 86 % ((param1 + 27) / 54);
           he.field_c = new hi(param0);
@@ -145,6 +145,6 @@ final class ai {
         if (param2) {
           var4++;
         }
-        return ad.field_c[var4];
+        return BufferedSocket.field_c[var4];
     }
 }

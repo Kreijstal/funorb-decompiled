@@ -4,7 +4,7 @@
 final class uk extends a {
     private vg field_j;
     private vg field_l;
-    static o field_k;
+    static Sprite field_k;
 
     final String a(String param0, boolean param1) {
         RuntimeException var3 = null;
@@ -54,7 +54,7 @@ final class uk extends a {
             return stackIn_18_0;
           }
           if (var7.length() <= 0) {
-            stackIn_33_0 = ik.field_a;
+            stackIn_33_0 = SecondaryNodeDeque.field_a;
             return stackIn_33_0;
           }
           if (ne.a(var5, false, var7)) {
@@ -132,10 +132,10 @@ final class uk extends a {
 
     final static boolean h(int param0) {
         if (param0 == 250) {
-          return 250 < ad.field_h ? true : false;
+          return 250 < BufferedSocket.field_h ? true : false;
         }
         uk.i(78);
-        return 250 < ad.field_h ? true : false;
+        return 250 < BufferedSocket.field_h ? true : false;
     }
 
     uk(vg param0, vg param1, vg param2) {
@@ -154,9 +154,9 @@ final class uk extends a {
           return 94;
         }
         if (param1 >= 4096) {
-          return 6144 <= param1 ? -db.field_m[8192 - param1] : -db.field_m[param1 - 4096];
+          return 6144 <= param1 ? -SpriteState.field_m[8192 - param1] : -SpriteState.field_m[param1 - 4096];
         }
-        return 2048 <= param1 ? db.field_m[4096 - param1] : db.field_m[param1];
+        return 2048 <= param1 ? SpriteState.field_m[4096 - param1] : SpriteState.field_m[param1];
     }
 
     private final boolean a(byte param0, String param1) {
@@ -174,7 +174,7 @@ final class uk extends a {
           var8 = this.field_l.field_i.toLowerCase();
           var4 = param1.toLowerCase();
           if (param0 < 3) {
-            field_k = (o) null;
+            field_k = (Sprite) null;
           }
           if (var8.length() > 0 &&
             var4.length() > 0) {

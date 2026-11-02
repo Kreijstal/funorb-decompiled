@@ -3,7 +3,7 @@
  */
 final class ak {
     static String field_c;
-    static o[] field_e;
+    static Sprite[] field_e;
     static String[] field_b;
     static String[] field_d;
     static int field_a;
@@ -21,9 +21,9 @@ final class ak {
         RuntimeException var6_ref = null;
         var8 = SolKnight.field_L ? 1 : 0;
         try {
-          n.field_c = param5.getParameter("overxgames");
-          if (n.field_c == null) {
-            n.field_c = "0";
+          NodeHashTableIterator.field_c = param5.getParameter("overxgames");
+          if (NodeHashTableIterator.field_c == null) {
+            NodeHashTableIterator.field_c = "0";
           }
           sf.field_b = param5.getParameter("overxachievements");
           if (sf.field_b == null) {
@@ -33,21 +33,21 @@ final class ak {
           if (var6 == null) {
             uf.field_q = 2;
           } else {
-            if (!ec.a(30418, (CharSequence) ((Object) var6))) {
+            if (!DualLinkNode.a(30418, (CharSequence) ((Object) var6))) {
               uf.field_q = 2;
             } else {
               uf.field_q = il.a((CharSequence) ((Object) var6), 6054);
             }
           }
-          rb.field_f = param1;
+          Asteroid.field_f = param1;
           id.field_a = param0;
           ea.field_o = param4;
-          qd.field_e = new o[param2.length];
+          qd.field_e = new Sprite[param2.length];
           if (!param3) {
             field_d = (String[]) null;
           }
           for (var7 = 0; param2.length > var7; var7++) {
-            qd.field_e[var7] = new o(317, 34);
+            qd.field_e[var7] = new Sprite(317, 34);
           }
           ba.field_s = param2;
           return;
@@ -113,10 +113,10 @@ final class ak {
           if (!lh.field_o.a(2, "commonui")) {
             return 40;
           }
-          if (!wk.field_c.c((byte) -121)) {
+          if (!DelegatingCanvas.field_c.c((byte) -121)) {
             return 50;
           }
-          if (!wk.field_c.a(2, "commonui")) {
+          if (!DelegatingCanvas.field_c.a(2, "commonui")) {
             return 60;
           }
           if (!jk.field_ub.c((byte) -121)) {
@@ -143,10 +143,10 @@ final class ak {
           if (!lh.field_o.a(2, "commonui")) {
             return 57;
           }
-          if (!wk.field_c.c((byte) -121)) {
+          if (!DelegatingCanvas.field_c.c((byte) -121)) {
             return 71;
           }
-          if (!wk.field_c.a(2, "commonui")) {
+          if (!DelegatingCanvas.field_c.a(2, "commonui")) {
             return 80;
           }
           if (!jk.field_ub.c((byte) -121)) {

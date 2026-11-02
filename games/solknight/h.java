@@ -3,9 +3,9 @@
  */
 final class h {
     static String field_f;
-    static o[] field_d;
+    static Sprite[] field_d;
     static pc field_a;
-    static o field_b;
+    static Sprite field_b;
     static String field_e;
     static String field_c;
     static int field_g;
@@ -45,23 +45,23 @@ final class h {
 
     final static void a(byte param0) {
         ab.field_s[3] = new int[]{5};
-        vd.field_d[3] = new ie(3);
+        vd.screens[3] = new MenuScreen(3);
         fj.a(37, new int[]{8, 9, 10, 5}, 468, (byte) 15, 0, 2, 30);
-        vd.field_d[2] = new ie(2);
+        vd.screens[2] = new MenuScreen(2);
         int var1 = 113 % ((7 - param0) / 60);
         if (ob.field_l <= 0) {
           return;
         }
         if (md.a((byte) -124, wh.field_c)) {
           fj.a(32, new int[]{1, 12, 13, 4, 3, 7}, 288, (byte) -127, 149, 1, 50);
-          vd.field_d[1] = new ie(1);
+          vd.screens[1] = new MenuScreen(1);
           return;
         }
     }
 
     final static void a(int param0, boolean param1) {
         if (!param1) {
-          field_b = (o) null;
+          field_b = (Sprite) null;
           he.field_b = param0;
           return;
         }

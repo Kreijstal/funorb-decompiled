@@ -3,7 +3,7 @@
  */
 final class aj {
     j field_h;
-    mg field_k;
+    BitmapFont field_k;
     static int[] field_o;
     int field_e;
     static byte[] field_t;
@@ -28,7 +28,7 @@ final class aj {
         if (param4 != 1) {
           return;
         }
-        mi.a(param6, param0, param2, param5, param3, param1);
+        SoftwareRasterizer.a(param6, param0, param2, param5, param3, param1);
     }
 
     private final void a(int param0, String param1, int param2, int param3) {
@@ -59,7 +59,7 @@ final class aj {
           if (var7 == -1) {
             var7 = this.field_k.field_s + this.field_k.field_F;
           }
-          var8 = mi.field_a >> 2;
+          var8 = SoftwareRasterizer.field_a >> 2;
           var9 = this.field_k.b(param1);
           var10 = this.field_k.field_F + this.field_k.field_s;
           var11 = 1;
@@ -85,18 +85,18 @@ final class aj {
             }
           }
           var12 = param2;
-          if (var5_int + (var9 + var12) > mi.field_a) {
-            var12 = -var9 + mi.field_a - var5_int;
+          if (var5_int + (var9 + var12) > SoftwareRasterizer.field_a) {
+            var12 = -var9 + SoftwareRasterizer.field_a - var5_int;
           }
           if (param3 != 5101) {
             field_m = (int[]) null;
           }
           var13Lifetime1 = -this.field_k.field_m + param0 + 32;
-          if (mi.field_d < var13Lifetime1 - (-var10 - var6)) {
+          if (SoftwareRasterizer.field_d < var13Lifetime1 - (-var10 - var6)) {
             var13Lifetime1 = -var6 + (param0 - var10);
           }
-          mi.g(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_b);
-          mi.b(1 + var12, 1 + var13Lifetime1, var5_int + (var9 - 2), -2 + (var6 + var10), this.field_n);
+          SoftwareRasterizer.g(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_b);
+          SoftwareRasterizer.b(1 + var12, 1 + var13Lifetime1, var5_int + (var9 - 2), -2 + (var6 + var10), this.field_n);
           this.field_k.a(param1, var12 + this.field_j, this.field_e + var13Lifetime1, var9, var10, this.field_l, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,18 +127,18 @@ final class aj {
           var5_int = this.field_k.b(param2);
           var6 = this.field_k.field_m + this.field_k.field_s;
           var7 = param3;
-          if (mi.field_a < var7 + (var5_int + 6)) {
-            var7 = -6 - var5_int + mi.field_a;
+          if (SoftwareRasterizer.field_a < var7 + (var5_int + 6)) {
+            var7 = -6 - var5_int + SoftwareRasterizer.field_a;
           }
           var8 = -this.field_k.field_m + (param1 + 32);
-          if (var8 + (var6 + 6) > mi.field_d) {
-            var8 = -var6 + mi.field_d - 6;
+          if (var8 + (var6 + 6) > SoftwareRasterizer.field_d) {
+            var8 = -var6 + SoftwareRasterizer.field_d - 6;
           }
           if (param0 > -99) {
             return;
           }
-          mi.g(var7, var8, 6 + var5_int, var6 + 6, this.field_l);
-          mi.b(var7 + 1, 1 + var8, var5_int + 4, 4 + var6, this.field_n);
+          SoftwareRasterizer.g(var7, var8, 6 + var5_int, var6 + 6, this.field_l);
+          SoftwareRasterizer.b(var7 + 1, 1 + var8, var5_int + 4, 4 + var6, this.field_n);
           this.field_k.c(param2, var7 + 3, this.field_k.field_m + var8 + 3, this.field_l, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,27 +186,27 @@ final class aj {
 
     final void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = 126 % ((param0 - 40) / 51);
-        mi.e(param3, param1, param5, param2, param4);
+        SoftwareRasterizer.e(param3, param1, param5, param2, param4);
     }
 
-    final void a(int param0, mg param1) {
+    final void a(int param0, BitmapFont param1) {
         af var18 = null;
         ql var4 = null;
-        o[] var5 = null;
-        ui var17 = null;
-        ui var19 = null;
+        Sprite[] var5 = null;
+        ArgbSprite var17 = null;
+        ArgbSprite var19 = null;
         int var7_int = 0;
         ql var6 = null;
         ql var7 = null;
         we discarded$0 = null;
         sj discarded$1 = null;
         ql var8 = null;
-        o[] var9 = null;
-        o[] var10 = null;
-        o dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         ql var11 = null;
         ql var12 = null;
-        o var13 = null;
+        Sprite var13 = null;
         ql var14 = null;
         ql var20 = null;
         int var15 = SolKnight.field_L ? 1 : 0;
@@ -236,13 +236,13 @@ final class aj {
           var4.a((byte) -80, 0).d(-126, 15658734).a(mb.a(8947848, 10066329, 120, 7829367), (byte) 119);
           var4.a((byte) -68, 1).a(mb.a(11184810, 10066329, 114, 13421772), (byte) 119);
           var4.a((byte) -39, 3).a(mb.a(8947848, 7829367, 93, 10066329), (byte) 119).b(1, -119).a(1, (byte) 85);
-          var5 = new o[9];
-          var17 = new ui(32, 32);
+          var5 = new Sprite[9];
+          var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var7_int = 0; var7_int < var19.field_v.length; var7_int++) {
             var17.field_v[var7_int] = 1077952576;
           }
-          var5[4] = (o) ((Object) var19);
+          var5[4] = (Sprite) ((Object) var19);
           var4.a((byte) -85, 4).a(0, true).a(var5, (byte) 119);
           var4.a((byte) -38, 5).a(je.a(0, (byte) -124, 65793, 0, 0), (byte) 119).a(0, true).d(-123, -1);
           this.field_i = (j) ((Object) var4);
@@ -250,8 +250,8 @@ final class aj {
           var6.field_g = 0;
           var7 = new ql(var4, true);
           var7.field_g = 0;
-          var7.a((byte) -94, ha.a(8947848, 118));
-          var7.a((byte) -80, 1).a(ha.a(11184810, -96), (byte) 119).d(-128, 2236962);
+          var7.a((byte) -94, ArchiveIndex.a(8947848, 118));
+          var7.a((byte) -80, 1).a(ArchiveIndex.a(11184810, -96), (byte) 119).d(-128, 2236962);
           this.field_r = (j) ((Object) new td(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new we(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new sj(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
@@ -260,10 +260,10 @@ final class aj {
           var8.a((byte) -56, 0).a(mb.a(15658734, 7829367, 126, 10066329), (byte) 119).d(-120, 1118481).a(-1, 256);
           var8.a((byte) -85, 4).a(0, true).a(var5, (byte) 119);
           this.field_h = (j) ((Object) var8);
-          var9 = new o[9];
-          var9[4] = new o(2, 1);
-          var10 = new o[9];
-          var10[4] = new o(1, 2);
+          var9 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10 = new Sprite[9];
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_v = new int[]{6710886, 7829367};
           var10[4].field_v = new int[]{6710886, 7829367};
@@ -271,7 +271,7 @@ final class aj {
           var12 = new ql();
           var11.a((byte) -60, 0, var9);
           var12.a((byte) -60, 0, var10);
-          var13 = new o(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_v = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new ql(var4, true);
           var14.a((byte) 103, var13.c());

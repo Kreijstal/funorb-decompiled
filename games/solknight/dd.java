@@ -4,7 +4,7 @@
 final class dd {
     static String[] field_d;
     static int field_b;
-    static o[] field_c;
+    static Sprite[] field_c;
     static String field_a;
 
     public static void b(boolean param0) {
@@ -38,26 +38,26 @@ final class dd {
             var7 = (String) null;
             dd.a((byte) -90, (String) null, -21);
           }
-          var2 = var9.j(255);
+          var2 = var9.readUnsignedByte(255);
           if (0 == var2) {
             var3_ref_wi = (wi) (bc.field_J.a((byte) 51));
             if (var3_ref_wi == null) {
               je.a(!param0);
               return;
             }
-            var4_int = var9.j(255);
+            var4_int = var9.readUnsignedByte(255);
             if (var4_int != 0) {
               var13 = new byte[var4_int];
               var9.a(var4_int, 0, -122, var13);
             } else {
               var5 = null;
             }
-            var9.field_m = var9.field_m + 4;
+            var9.position = var9.position + 4;
             if (!var9.k(4)) {
               je.a(false);
               return;
             }
-            var3_ref_wi.c(10);
+            var3_ref_wi.unlink(10);
             return;
           }
           if (var2 != 1) {
@@ -65,7 +65,7 @@ final class dd {
             je.a(false);
             return;
           }
-          var3 = var9.e(true);
+          var3 = var9.readInt(true);
           var4 = (ob) (he.field_d.a((byte) 51));
           while (var4 != null) {
             if (var3 != var4.field_i) {
@@ -78,7 +78,7 @@ final class dd {
             je.a(false);
             return;
           }
-          var4.c(10);
+          var4.unlink(10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,7 +104,7 @@ final class dd {
                 param1 = ah.field_h;
               }
               param2 = 2;
-              ve.field_a.a(25, me.field_h);
+              ClientException.field_a.a(25, me.field_h);
             }
             var4 = 1;
             if (10 == param2) {
@@ -125,7 +125,7 @@ final class dd {
               if (k.field_b) {
                 return;
               }
-              ve.field_a.i(68);
+              ClientException.field_a.i(68);
             }
           }
         } catch (RuntimeException runtimeException) {

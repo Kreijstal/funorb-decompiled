@@ -5,10 +5,10 @@ final class v {
     static String field_a;
     static mc field_g;
     private int field_e;
-    private ik field_c;
+    private SecondaryNodeDeque field_c;
     static int field_d;
     private int field_b;
-    private ii field_f;
+    private IterableNodeHashTable field_f;
 
     final static int a(int param0, CharSequence param1, int param2, boolean param3) {
         int var8 = 0;
@@ -116,11 +116,11 @@ final class v {
             this.a(var6, (byte) 126);
           }
           var6_ref = new tk(param1, param0);
-          this.field_f.a(-858993458, param3, var6_ref);
+          this.field_f.put(-858993458, param3, var6_ref);
           this.field_c.a(-114, var6_ref);
-          ((pe) ((Object) var6_ref)).field_l = 0L;
+          ((pe) ((Object) var6_ref)).secondaryKey = 0L;
           if (param2 < 126) {
-            this.field_f = (ii) null;
+            this.field_f = (IterableNodeHashTable) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,8 +147,8 @@ final class v {
         try {
           var3_int = -7 / ((68 - param1) / 53);
           if (param0 != null) {
-            param0.c(10);
-            param0.a(97);
+            param0.unlink(10);
+            param0.unlinkSecondary(97);
             this.field_e = this.field_e + param0.field_o;
           }
           return;
@@ -183,20 +183,20 @@ final class v {
 
     private final void a(byte param0, long param1) {
         int var4 = -115 / ((-83 - param0) / 41);
-        pe var5 = (pe) (this.field_f.a(param1, -85));
+        pe var5 = (pe) (this.field_f.get(param1, -85));
         this.a(var5, (byte) -95);
     }
 
     final Object a(int param0, long param1) {
         tk var6 = null;
-        pe var7 = (pe) (this.field_f.a(param1, param0 ^ -90));
+        pe var7 = (pe) (this.field_f.get(param1, param0 ^ -90));
         if (var7 == null) {
           return null;
         }
         Object var5 = var7.h(31476);
         if (var5 == null) {
-          var7.c(10);
-          var7.a(97);
+          var7.unlink(10);
+          var7.unlinkSecondary(97);
           this.field_e = this.field_e + var7.field_o;
           return null;
         }
@@ -205,21 +205,21 @@ final class v {
         }
         if (!var7.g(param0 ^ 113)) {
           this.field_c.a(-109, var7);
-          var7.field_l = 0L;
+          var7.secondaryKey = 0L;
         } else {
           var6 = new tk(var5, var7.field_o);
-          this.field_f.a(-858993458, var7.field_g, var6);
+          this.field_f.put(-858993458, var7.key, var6);
           this.field_c.a(param0 - 110, var6);
-          ((pe) ((Object) var6)).field_l = 0L;
-          var7.c(10);
-          var7.a(97);
+          ((pe) ((Object) var6)).secondaryKey = 0L;
+          var7.unlink(10);
+          var7.unlinkSecondary(97);
         }
         return var5;
     }
 
-    final static void a(int param0, String param1, o param2) {
+    final static void a(int param0, String param1, Sprite param2) {
         try {
-          qk.field_n = param1;
+          ProxySocketConnector.field_n = param1;
           va.field_g = param2;
           if (param0 != -98) {
             field_g = (mc) null;
@@ -232,8 +232,8 @@ final class v {
     final void a(int param0, Object param1, long param2) {
         try {
           if (param0 < 67) {
-            o var6 = (o) null;
-            v.a(-25, (String) null, (o) null);
+            Sprite var6 = (Sprite) null;
+            v.a(-25, (String) null, (Sprite) null);
           }
           this.a(1, param1, 127, param2);
         } catch (RuntimeException runtimeException) {

@@ -18,16 +18,16 @@ final class mc {
           return uf.field_r;
         }
         if (!lh.field_o.c((byte) -121)) {
-          return r.field_e;
+          return IsaacRandom.field_e;
         }
         if (!lh.field_o.a(2, "commonui")) {
           return vb.field_i + " - " + lh.field_o.d(-1, "commonui") + "%";
         }
-        if (!wk.field_c.c((byte) -121)) {
+        if (!DelegatingCanvas.field_c.c((byte) -121)) {
           return ri.field_d;
         }
-        if (!wk.field_c.a(2, "commonui")) {
-          return qb.field_bb + " - " + wk.field_c.d(-1, "commonui") + "%";
+        if (!DelegatingCanvas.field_c.a(2, "commonui")) {
+          return qb.field_bb + " - " + DelegatingCanvas.field_c.d(-1, "commonui") + "%";
         }
         if (!jk.field_ub.c((byte) -121)) {
           return bg.field_t;
@@ -90,7 +90,7 @@ final class mc {
           }
           param4 = param4 + param0;
           var8 = param1;
-          L3: while (true) {
+          scanLoop1: while (true) {
             var9 = param5[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -104,7 +104,7 @@ final class mc {
               param0++;
               param3[incrementValue$1] = (byte)(~var10);
               if (param4 <= param0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -120,7 +120,7 @@ final class mc {
               param0++;
               param3[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param4 <= param0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -136,7 +136,7 @@ final class mc {
               param0++;
               param3[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param4 <= param0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -152,7 +152,7 @@ final class mc {
               param0++;
               param3[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param0 >= param4) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -168,7 +168,7 @@ final class mc {
               param0++;
               param3[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param0 >= param4) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -200,7 +200,7 @@ final class mc {
               param0++;
               param3[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param4 <= param0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -216,7 +216,7 @@ final class mc {
               param0++;
               param3[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param4 <= param0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -279,7 +279,7 @@ final class mc {
             return (ia) (stackIn_10_0);
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = jg.a(var6, -2);
+          var2 = FullscreenFocusCanvas.a(var6, -2);
           if (var2 == null) {
             stackIn_13_0 = null;
             return (ia) (stackIn_13_0);
@@ -290,7 +290,7 @@ final class mc {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_ib);
-            var4 = jg.a(var7, param1 ^ -105);
+            var4 = FullscreenFocusCanvas.a(var7, param1 ^ -105);
             if (!var4.equals(var2)) {
               var3 = (ia) (ok.field_a.a((byte) -9));
               continue;

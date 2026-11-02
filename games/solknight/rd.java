@@ -22,32 +22,32 @@ final class rd {
         if (param0 == -30) {
           if (4096 > param1) {
             if (param1 >= 2048) {
-              stackIn_19_0 = -db.field_m[param1 - 2048];
+              stackIn_19_0 = -SpriteState.field_m[param1 - 2048];
             } else {
-              stackIn_19_0 = db.field_m[2048 - param1];
+              stackIn_19_0 = SpriteState.field_m[2048 - param1];
             }
             return stackIn_19_0;
           }
           if (6144 > param1) {
-            stackIn_15_0 = -db.field_m[-param1 + 6144];
+            stackIn_15_0 = -SpriteState.field_m[-param1 + 6144];
           } else {
-            stackIn_15_0 = db.field_m[-6144 + param1];
+            stackIn_15_0 = SpriteState.field_m[-6144 + param1];
           }
           return stackIn_15_0;
         }
         field_b = (qf) null;
         if (4096 > param1) {
           if (param1 >= 2048) {
-            stackIn_9_0 = -db.field_m[param1 - 2048];
+            stackIn_9_0 = -SpriteState.field_m[param1 - 2048];
           } else {
-            stackIn_9_0 = db.field_m[2048 - param1];
+            stackIn_9_0 = SpriteState.field_m[2048 - param1];
           }
           return stackIn_9_0;
         }
         if (6144 > param1) {
-          stackIn_5_0 = -db.field_m[-param1 + 6144];
+          stackIn_5_0 = -SpriteState.field_m[-param1 + 6144];
         } else {
-          stackIn_5_0 = db.field_m[-6144 + param1];
+          stackIn_5_0 = SpriteState.field_m[-6144 + param1];
         }
         return stackIn_5_0;
     }

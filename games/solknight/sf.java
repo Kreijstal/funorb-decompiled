@@ -31,7 +31,7 @@ final class sf {
         return 97 == this.field_a ? true : false;
     }
 
-    final static o b(int param0) {
+    final static Sprite b(int param0) {
         int var4_int = 0;
         int var5 = SolKnight.field_L ? 1 : 0;
         int var1 = sa.field_l[0] * uj.field_b[0];
@@ -40,7 +40,7 @@ final class sf {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = ig.field_H[fi.a(255, (int) var2[var4_int])];
         }
-        o var4 = new o(kl.field_a, we.field_e, ph.field_h[param0], qf.field_d[0], sa.field_l[0], uj.field_b[0], var3);
+        Sprite var4 = new Sprite(MouseInputHandler.field_a, we.field_e, ph.field_h[param0], qf.field_d[0], sa.field_l[0], uj.field_b[0], var3);
         og.a((byte) -97);
         return var4;
     }
@@ -55,8 +55,8 @@ final class sf {
         if (param0 > -109) {
           return (Boolean) null;
         }
-        Boolean var1 = n.field_b;
-        n.field_b = null;
+        Boolean var1 = NodeHashTableIterator.field_b;
+        NodeHashTableIterator.field_b = null;
         return var1;
     }
 
@@ -159,7 +159,7 @@ final class sf {
         if (this.field_l != 0 &&
           wb.field_c != 0) {
           if (0 >= this.field_h) {
-            this.field_h = dh.field_i;
+            this.field_h = GameApplet.field_i;
             this.field_e = this.field_l;
           }
           this.field_h = this.field_h - 1;
@@ -244,7 +244,7 @@ final class sf {
         if (param1) {
           sf.b(32);
         }
-        pd.field_e[kg.field_c] = kg.field_c;
+        RasterBuffer.field_e[kg.field_c] = kg.field_c;
         qg.field_c[kg.field_c] = param0;
         if (param0 > be.field_I) {
           dc.field_o = param0;

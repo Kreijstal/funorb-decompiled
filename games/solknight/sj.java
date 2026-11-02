@@ -7,13 +7,13 @@ final class sj implements j {
     private int field_c;
     private int field_b;
     private int field_g;
-    private mg field_e;
+    private BitmapFont field_e;
     private int field_f;
     private int field_h;
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         int var10 = 0;
-        rc stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -27,23 +27,23 @@ final class sj implements j {
         var11 = SolKnight.field_L ? 1 : 0;
         try {
           if (param4 instanceof hh) {
-            stackIn_4_0 = (rc) (param4);
+            stackIn_4_0 = (UiWidget) (param4);
           } else {
             stackIn_4_0 = null;
           }
           var12 = (hh) (stackIn_4_0);
           if (var12 == null) {
           }
-          mi.b(param3 + param4.field_m, param4.field_j + param1, param4.field_t, param4.field_x, this.field_c);
+          SoftwareRasterizer.b(param3 + param4.field_m, param4.field_j + param1, param4.field_t, param4.field_x, this.field_c);
           var7 = -(var12.field_I * 2) + param4.field_t;
           if (param0 < 113) {
-            this.field_e = (mg) null;
+            this.field_e = (BitmapFont) null;
           }
           var8 = param3 + param4.field_m + var12.field_I;
           var9 = param1 + param4.field_j + var12.field_L;
-          mi.e(var8, var9, var8 + var7, var9, this.field_g);
+          SoftwareRasterizer.e(var8, var9, var8 + var7, var9, this.field_g);
           for (var10 = var12.i(-85) - 1; var10 >= 0; var10--) {
-            mi.e(var8 + var12.b(var10, -96) * var7 / var12.a(-3), var9, this.field_b, this.field_f);
+            SoftwareRasterizer.e(var8 + var12.b(var10, -96) * var7 / var12.a(-3), var9, this.field_b, this.field_f);
           }
           if (this.field_e == null) {
             return;
@@ -140,7 +140,7 @@ final class sj implements j {
         var5 = SolKnight.field_L ? 1 : 0;
         try {
           try {
-            if (!dl.field_t.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_t.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&
@@ -175,7 +175,7 @@ final class sj implements j {
         }
     }
 
-    sj(mg param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    sj(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_a = param2;
           this.field_f = param6;

@@ -24,10 +24,10 @@ final class ah {
           wc.field_a = param1;
           var2 = (ud) (uc.field_j.a((byte) 51));
           while (var2 != null) {
-            if (var2.field_m.a(false)) {
+            if (var2.field_m.isLinked(false)) {
               var2.field_h.h(wc.field_a * var2.field_l + 128 >> 8);
             } else {
-              var2.c(10);
+              var2.unlink(10);
             }
             var2 = (ud) (uc.field_j.b(-78));
           }
@@ -37,8 +37,8 @@ final class ah {
           if (la.field_j != null) {
             var2Lifetime1 = (ud) (la.field_j.a((byte) 51));
             while (var2Lifetime1 != null) {
-              if (!var2Lifetime1.field_m.a(false)) {
-                var2Lifetime1.c(10);
+              if (!var2Lifetime1.field_m.isLinked(false)) {
+                var2Lifetime1.unlink(10);
               } else {
                 var2Lifetime1.field_h.h(wc.field_a * var2Lifetime1.field_l + 128 >> 8);
               }
@@ -54,7 +54,7 @@ final class ah {
         }
     }
 
-    final static void a(o param0, boolean param1) {
+    final static void a(Sprite param0, boolean param1) {
         try {
           if (param1) {
             field_i = (int[]) null;
@@ -75,8 +75,8 @@ final class ah {
         field_h = null;
         field_j = null;
         if (!param0) {
-          o var2 = (o) null;
-          ah.a((o) null, false);
+          Sprite var2 = (Sprite) null;
+          ah.a((Sprite) null, false);
         }
     }
 
@@ -88,7 +88,7 @@ final class ah {
         int var6;
         int var4Lifetime1;
         var6 = SolKnight.field_L ? 1 : 0;
-        var2 = -wd.field_c + 320;
+        var2 = -ArchiveSource.field_c + 320;
         var3 = -si.field_E + (-ea.field_p[kb.field_b] + 720);
         if (param0) {
           var4 = kd.field_b[kb.field_b];
@@ -106,7 +106,7 @@ final class ah {
           }
           of.field_d.c(-var4 + var2, var3 - var4 + k.field_c, 2 * var4, var4 * 2);
           if (k.field_c > 10) {
-            ad.field_b.a(rg.field_a, 320, 240, 16711680, -1);
+            BufferedSocket.field_b.a(rg.field_a, 320, 240, 16711680, -1);
           }
           if (param1 == 7) {
             return;
@@ -193,7 +193,7 @@ final class ah {
             if (var5 > 7) {
               var5 = 7;
             }
-            td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-wd.field_c + rj.field_b));
+            td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + rj.field_b));
             if (param1 != 7) {
               ah.b(true);
             }
@@ -255,7 +255,7 @@ final class ah {
         if (var5 > 7) {
           var5 = 7;
         }
-        td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-wd.field_c + rj.field_b));
+        td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + rj.field_b));
         if (param1 == 7) {
           return;
         }
@@ -273,8 +273,8 @@ final class ah {
           var7 = id.field_c;
           var8 = var7;
           var8.e(param1, -2147483648);
-          var8.field_m = var8.field_m + 1;
-          var4 = var8.field_m;
+          var8.position = var8.position + 1;
+          var4 = var8.position;
           var8.c(-118, 1);
           var8.a(true, param2.field_u);
           var8.a(true, param2.field_m);
@@ -288,7 +288,7 @@ final class ah {
             var7.b(param2.field_r[var5], false);
           }
           var8.b(true, var4);
-          var8.b(1, -var4 + var8.field_m);
+          var8.b(1, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "ah.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -323,11 +323,11 @@ final class ah {
         if (lk.field_e <= 0) {
           return;
         }
-        if (oa.field_n) {
+        if (ImageProducerRasterBuffer.field_n) {
           return;
         }
         if (bi.field_b == null) {
-          bi.field_b = tk.a(bi.field_i, 15, new int[]{100 * ud.field_k / qh.field_a[7] + 101 * lk.field_e}, 65520, 3, lc.field_h, (byte) -115, ic.field_t, lk.field_e);
+          bi.field_b = tk.a(bi.field_i, 15, new int[]{100 * ud.field_k / GameKeyHandler.field_a[7] + 101 * lk.field_e}, 65520, 3, lc.field_h, (byte) -115, ic.field_t, lk.field_e);
           return;
         }
     }

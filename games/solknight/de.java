@@ -4,8 +4,8 @@
 final class de {
     final static int a(int param0) {
         if (param0 >= -102) {
-          da var2 = (da) null;
-          de.a(92, -99, 46, (da) null);
+          Archive var2 = (Archive) null;
+          de.a(92, -99, 46, (Archive) null);
           return cf.field_e;
         }
         return cf.field_e;
@@ -47,8 +47,8 @@ final class de {
         }
     }
 
-    final static void a(dl param0, java.awt.Frame param1, byte param2) {
-        nj var3 = null;
+    final static void a(PlatformTaskDispatcher param0, java.awt.Frame param1, byte param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -96,10 +96,10 @@ final class de {
         }
     }
 
-    final static o[] a(int param0, int param1, int param2, da param3) {
+    final static Sprite[] a(int param0, int param1, int param2, Archive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        o[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -107,7 +107,7 @@ final class de {
         try {
           if (!l.a(param2 + 17097, param1, param0, param3)) {
             stackIn_2_0 = null;
-            return (o[]) (stackIn_2_0);
+            return (Sprite[]) (stackIn_2_0);
           }
           if (param2 != -17042) {
             de.a(9);

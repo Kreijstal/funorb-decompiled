@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kf extends ki {
+abstract class kf extends WidgetContainer {
     private int field_I;
     static String field_D;
-    static rb[] field_G;
+    static Asteroid[] field_G;
     private i field_E;
     static String field_F;
     boolean field_J;
@@ -46,11 +46,11 @@ abstract class kf extends ki {
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         fl.b((byte) 91);
         if (param0 == 97) {
-          mi.d(param1, param2, param3, param4);
+          SoftwareRasterizer.d(param1, param2, param3, param4);
           return;
         }
-        field_G = (rb[]) null;
-        mi.d(param1, param2, param3, param4);
+        field_G = (Asteroid[]) null;
+        SoftwareRasterizer.d(param1, param2, param3, param4);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -150,12 +150,12 @@ abstract class kf extends ki {
         return !this.field_J ? 0 : this.field_E.d((byte) 109) == this ? 256 : 0;
     }
 
-    final rc d(byte param0) {
-        rc var2 = super.d(param0);
+    final UiWidget d(byte param0) {
+        UiWidget var2 = super.d(param0);
         if (var2 != null) {
           return var2;
         }
-        return (rc) (this);
+        return (UiWidget) (this);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -171,9 +171,9 @@ abstract class kf extends ki {
           return;
         }
         if (jj.field_x == null) {
-          jj.field_x = new o(this.field_t, this.field_x);
+          jj.field_x = new Sprite(this.field_t, this.field_x);
           cl.a(-100, jj.field_x);
-          mi.a();
+          SoftwareRasterizer.a();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
           mf.e(4096);
@@ -181,9 +181,9 @@ abstract class kf extends ki {
           return;
         }
         if (jj.field_x.field_p < this.field_t) {
-          jj.field_x = new o(this.field_t, this.field_x);
+          jj.field_x = new Sprite(this.field_t, this.field_x);
           cl.a(-100, jj.field_x);
-          mi.a();
+          SoftwareRasterizer.a();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
           mf.e(4096);
@@ -191,9 +191,9 @@ abstract class kf extends ki {
           return;
         }
         if (jj.field_x.field_t < this.field_x) {
-          jj.field_x = new o(this.field_t, this.field_x);
+          jj.field_x = new Sprite(this.field_t, this.field_x);
           cl.a(-100, jj.field_x);
-          mi.a();
+          SoftwareRasterizer.a();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
           mf.e(4096);
@@ -201,7 +201,7 @@ abstract class kf extends ki {
           return;
         }
         cl.a(-100, jj.field_x);
-        mi.a();
+        SoftwareRasterizer.a();
         this.a(param3, (byte) 94, 0);
         super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
         mf.e(4096);

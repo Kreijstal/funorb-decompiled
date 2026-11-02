@@ -6,7 +6,7 @@ final class cd {
     static String field_c;
     static int[] field_b;
 
-    final static ol a(da param0, int param1, int param2, boolean param3, da param4) {
+    final static ol a(Archive param0, int param1, int param2, boolean param3, Archive param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         ol stackIn_6_0 = null;
@@ -51,8 +51,8 @@ final class cd {
         field_a = null;
         field_b = null;
         if (param0 != 8192) {
-          da var2 = (da) null;
-          cd.a((da) null, 73, -128, false, (da) null);
+          Archive var2 = (Archive) null;
+          cd.a((Archive) null, 73, -128, false, (Archive) null);
         }
     }
 

@@ -8,12 +8,12 @@ final class bf {
     static String field_m;
     static String field_i;
     static int field_a;
-    o field_k;
+    Sprite field_k;
     private int field_g;
     private boolean field_c;
     private int field_l;
     private int field_d;
-    o[] field_j;
+    Sprite[] field_j;
     static sh[] field_b;
     private int field_h;
     private int field_n;
@@ -50,7 +50,7 @@ final class bf {
           int var2_int = 0;
           IOException var2 = null;
           Throwable decompiledCaughtException = null;
-          if (te.field_N.field_m >= param1) {
+          if (te.field_N.position >= param1) {
             return true;
           }
           if (lf.field_d == null) {
@@ -66,22 +66,22 @@ final class bf {
                 je.a(false);
                 return false;
               }
-              if (30000L >= dh.b(-1)) {
+              if (30000L >= GameApplet.b(-1)) {
                 return false;
               }
               je.a(false);
               return false;
             }
-            if (param1 - te.field_N.field_m < var2_int) {
-              var2_int = param1 - te.field_N.field_m;
+            if (param1 - te.field_N.position < var2_int) {
+              var2_int = param1 - te.field_N.position;
             }
-            lf.field_d.a((byte) 59, te.field_N.field_m, var2_int, te.field_N.field_l);
+            lf.field_d.a((byte) 59, te.field_N.position, var2_int, te.field_N.payload);
             md.field_y = je.a(1);
-            te.field_N.field_m = te.field_N.field_m + var2_int;
-            if (te.field_N.field_m < param1) {
+            te.field_N.position = te.field_N.position + var2_int;
+            if (te.field_N.position < param1) {
               return false;
             }
-            te.field_N.field_m = 0;
+            te.field_N.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,7 +96,7 @@ final class bf {
         }
     }
 
-    final void a(bf param0, int param1, rc param2, int param3, int param4, ql param5) {
+    final void a(bf param0, int param1, UiWidget param2, int param3, int param4, ql param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -173,7 +173,7 @@ final class bf {
         if (param0 > -34) {
           return -84;
         }
-        return -pk.field_ab + dh.field_h;
+        return -pk.field_ab + GameApplet.field_h;
     }
 
     final bf d(int param0, int param1) {
@@ -186,8 +186,8 @@ final class bf {
         return this;
     }
 
-    final void a(int param0, int param1, int param2, ql param3, rc param4) {
-        mg stackIn_18_0 = null;
+    final void a(int param0, int param1, int param2, ql param3, UiWidget param4) {
+        BitmapFont stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;
         int stackIn_21_2;
@@ -258,7 +258,7 @@ final class bf {
             } else {
               stackIn_25_8 = 256;
             }
-            ((mg) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param3.field_g, param3.field_b, param3.field_f);
+            ((BitmapFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param3.field_g, param3.field_b, param3.field_f);
           }
           if (param0 > 45) {
             return;
@@ -285,7 +285,7 @@ final class bf {
         }
     }
 
-    final bf a(o[] param0, byte param1) {
+    final bf a(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -356,8 +356,8 @@ final class bf {
           param0.field_h = this.field_h;
           param0.field_d = this.field_d;
           if (param1 != 2) {
-            rc var4 = (rc) null;
-            this.a(-90, 43, 73, (ql) null, (rc) null);
+            UiWidget var4 = (UiWidget) null;
+            this.a(-90, 43, 73, (ql) null, (UiWidget) null);
           }
           param0.field_l = this.field_l;
           param0.field_g = this.field_g;

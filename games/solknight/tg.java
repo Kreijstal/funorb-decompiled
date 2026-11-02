@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tg extends pj {
-    static o field_J;
-    static o field_I;
+    static Sprite field_J;
+    static Sprite field_I;
     static String field_K;
 
     public static void a(int param0) {
@@ -128,8 +128,8 @@ final class tg extends pj {
     }
 
     static {
-        field_J = new o(540, 140);
-        field_I = new o(270, 70);
+        field_J = new Sprite(540, 140);
+        field_I = new Sprite(270, 70);
         field_K = "Unfortunately your configuration doesn't support fullscreen mode.";
     }
 }

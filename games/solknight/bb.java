@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb extends ki implements pi, ka {
+final class bb extends WidgetContainer implements pi, ka {
     private boolean field_H;
     static fg field_I;
     private vg field_L;
@@ -26,7 +26,7 @@ final class bb extends ki implements pi, ka {
             this.field_K = (String) null;
           }
           if (this.field_O == param0) {
-            this.field_L.a(-1463, (rc) (this));
+            this.field_L.a(-1463, (UiWidget) (this));
           }
           if (param0 == this.field_L) {
             this.k(-1525);
@@ -89,7 +89,7 @@ final class bb extends ki implements pi, ka {
                 break;
               }
               var7_ref_String = param0.substring(var6_int + 2, var5);
-              if (!ec.a(30418, (CharSequence) ((Object) var7_ref_String))) {
+              if (!DualLinkNode.a(30418, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -122,7 +122,7 @@ final class bb extends ki implements pi, ka {
               break;
             }
             var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!ec.a(30418, (CharSequence) ((Object) var9))) {
+            if (!DualLinkNode.a(30418, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {
@@ -177,7 +177,7 @@ final class bb extends ki implements pi, ka {
         RuntimeException decompiledCaughtException = null;
         gh var6 = null;
         RuntimeException var6_ref = null;
-        mg var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         fg var9 = null;
         ke var12 = null;
@@ -211,10 +211,10 @@ final class bb extends ki implements pi, ka {
             }
             this.field_D = new pj(stackIn_19_3, (dg) null);
             if (this.field_J) {
-              this.field_M = new pj(wk.field_g, (dg) (this));
+              this.field_M = new pj(DelegatingCanvas.field_g, (dg) (this));
             }
           } else {
-            this.field_N = new pj(gg.field_c, (dg) null);
+            this.field_N = new pj(IntrusiveNode.field_c, (dg) null);
             this.field_D = new pj(ph.field_e, (dg) null);
             this.field_O.field_B = false;
           }
@@ -233,7 +233,7 @@ final class bb extends ki implements pi, ka {
             this.field_M.field_z = id.field_b;
           }
           if (this.field_E) {
-            this.field_D.field_z = hb.field_j;
+            this.field_D.field_z = BufferedCacheFile.field_j;
           } else {
             if (!this.field_H) {
               this.field_D.field_w = (j) ((Object) new ri());
@@ -250,7 +250,7 @@ final class bb extends ki implements pi, ka {
           var8 = hh.field_J;
           var9 = lf.a((byte) 120, ia.g(116));
           if (sk.field_p == var9) {
-            var8 = rc.field_y;
+            var8 = UiWidget.field_y;
           } else {
             if (field_I == var9) {
               var8 = kf.field_H;
@@ -259,12 +259,12 @@ final class bb extends ki implements pi, ka {
           dupTemp$0 = new ke(10, this.field_j, this.field_t - 20, 25, this.field_O, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(dupTemp$0, 5411);
-          this.field_j = this.field_j + (((rc) ((Object) var12)).field_x + 5);
+          this.field_j = this.field_j + (((UiWidget) ((Object) var12)).field_x + 5);
           dupTemp$1 = new ke(10, this.field_j, this.field_t - 20, 25, this.field_L, false, 80, 3, var7, 16777215, ld.field_O);
           var13 = dupTemp$1;
           this.a(dupTemp$1, 5411);
           this.field_N.field_n = (dg) (this);
-          this.field_j = this.field_j + (5 + ((rc) ((Object) var13)).field_x);
+          this.field_j = this.field_j + (5 + ((UiWidget) ((Object) var13)).field_x);
           if (this.field_M != null) {
             this.field_M.field_n = (dg) (this);
           }
@@ -376,7 +376,7 @@ final class bb extends ki implements pi, ka {
         }
     }
 
-    final boolean a(char param0, byte param1, int param2, rc param3) {
+    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -418,7 +418,7 @@ final class bb extends ki implements pi, ka {
           ua.field_G.a(this.field_K, this.field_m + (param2 + 20), 15 + (this.field_j + param0), -40 + this.field_t, this.field_x, 16777215, -1, 1, 0, ua.field_G.field_F);
         }
         if (null != this.field_M) {
-          mi.b(10 + param2, param0 + 134, this.field_t - 20, 4210752);
+          SoftwareRasterizer.b(10 + param2, param0 + 134, this.field_t - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

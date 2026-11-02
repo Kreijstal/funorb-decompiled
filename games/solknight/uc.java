@@ -6,10 +6,10 @@ final class uc {
     static int field_f;
     static int field_c;
     static int field_e;
-    static nc field_j;
+    static IntrusiveDeque field_j;
     static String field_d;
-    static mg field_g;
-    static nc field_a;
+    static BitmapFont field_g;
+    static IntrusiveDeque field_a;
     static int field_i;
     static String[] field_h;
     static String field_k;
@@ -44,7 +44,7 @@ final class uc {
           var3_int = 0;
           var4 = th.field_J;
           while (vc.field_d.length > var3_int) {
-            var5 = oa.field_l[var3_int];
+            var5 = ImageProducerRasterBuffer.field_l[var3_int];
             if (var5 >= 0) {
               var6 = fa.a(vc.field_d[var3_int], true, (byte) 99);
               var4 = var4 + vg.field_N;
@@ -98,7 +98,7 @@ final class uc {
           var3_int = param1.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = jg.a(param1, -2);
+            var4 = FullscreenFocusCanvas.a(param1, -2);
             if (var4 != null &&
               1 <= var4.length()) {
               if (!ck.a(var4.charAt(0), true) &&
@@ -157,9 +157,9 @@ final class uc {
 
     static {
         pg.a(50, 1);
-        field_j = new nc();
+        field_j = new IntrusiveDeque();
         field_d = "Passwords must be between 5 and 20 letters and numbers";
-        field_a = new nc();
+        field_a = new IntrusiveDeque();
         field_k = "Player names can be up to 12 letters, numbers and underscores";
         field_h = new String[]{"Defender of Humanity", "Warrior of the Void", "Heavenly Guardian", "Astral Avenger", "Rock Crusher", "Lord of the System", "Earth's Last Hope", "Revenge of the Rock Scum"};
     }

@@ -3,8 +3,8 @@
  */
 final class hl {
     static int[] field_a;
-    private ec field_b;
-    private ec field_c;
+    private DualLinkNode field_b;
+    private DualLinkNode field_c;
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (param1 != 24574) {
@@ -17,16 +17,16 @@ final class hl {
 
     final int a(int param0) {
         int var2;
-        ec var3;
+        DualLinkNode var3;
         int var4;
-        ec var3Lifetime1;
+        DualLinkNode var3Lifetime1;
         var4 = SolKnight.field_L ? 1 : 0;
         var2 = 0;
         if (param0 == -29749) {
-          var3 = this.field_b.field_i;
+          var3 = this.field_b.secondaryPrevious;
           while (var3 != this.field_b) {
             var2++;
-            var3 = var3.field_i;
+            var3 = var3.secondaryPrevious;
             if (var4 == 0) {
               continue;
             }
@@ -35,10 +35,10 @@ final class hl {
           return var2;
         }
         this.c(127);
-        var3Lifetime1 = this.field_b.field_i;
+        var3Lifetime1 = this.field_b.secondaryPrevious;
         while (var3Lifetime1 != this.field_b) {
           var2++;
-          var3Lifetime1 = var3Lifetime1.field_i;
+          var3Lifetime1 = var3Lifetime1.secondaryPrevious;
           if (var4 == 0) {
             continue;
           }
@@ -47,30 +47,30 @@ final class hl {
         return var2;
     }
 
-    final ec c(int param0) {
+    final DualLinkNode c(int param0) {
         if (param0 != 0) {
-          return (ec) null;
+          return (DualLinkNode) null;
         }
-        ec var2 = this.field_b.field_i;
+        DualLinkNode var2 = this.field_b.secondaryPrevious;
         if (var2 != this.field_b) {
-          var2.a(97);
+          var2.unlinkSecondary(97);
           return var2;
         }
         return null;
     }
 
-    final void a(ec param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         try {
-          if (param0.field_k != null) {
-            param0.a(97);
+          if (param0.secondaryNext != null) {
+            param0.unlinkSecondary(97);
           }
-          param0.field_i = this.field_b;
-          param0.field_k = this.field_b.field_k;
-          param0.field_k.field_i = param0;
+          param0.secondaryPrevious = this.field_b;
+          param0.secondaryNext = this.field_b.secondaryNext;
+          param0.secondaryNext.secondaryPrevious = param0;
           if (param1 != 0) {
             field_a = (int[]) null;
           }
-          param0.field_i.field_k = param0;
+          param0.secondaryPrevious.secondaryNext = param0;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "hl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -127,27 +127,27 @@ final class hl {
         return stackIn_13_0;
     }
 
-    final ec d(int param0) {
-        ec var2 = this.field_b.field_i;
+    final DualLinkNode d(int param0) {
+        DualLinkNode var2 = this.field_b.secondaryPrevious;
         if (var2 == this.field_b) {
           this.field_c = null;
           return null;
         }
-        this.field_c = var2.field_i;
+        this.field_c = var2.secondaryPrevious;
         if (param0 > 113) {
           return var2;
         }
-        return (ec) null;
+        return (DualLinkNode) null;
     }
 
-    final ec b(int param0) {
-        ec var2 = null;
-        ec var2Lifetime1;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != -1) {
           field_a = (int[]) null;
           var2 = this.field_c;
           if (this.field_b != var2) {
-            this.field_c = var2.field_i;
+            this.field_c = var2.secondaryPrevious;
             return var2;
           }
           this.field_c = null;
@@ -155,7 +155,7 @@ final class hl {
         }
         var2Lifetime1 = this.field_c;
         if (this.field_b != var2Lifetime1) {
-          this.field_c = var2Lifetime1.field_i;
+          this.field_c = var2Lifetime1.secondaryPrevious;
           return var2Lifetime1;
         }
         this.field_c = null;
@@ -163,9 +163,9 @@ final class hl {
     }
 
     public hl() {
-        this.field_b = new ec();
-        this.field_b.field_k = this.field_b;
-        this.field_b.field_i = this.field_b;
+        this.field_b = new DualLinkNode();
+        this.field_b.secondaryNext = this.field_b;
+        this.field_b.secondaryPrevious = this.field_b;
     }
 
     static {

@@ -4,12 +4,12 @@
 final class rh {
     String field_a;
     static int field_i;
-    static o field_g;
+    static Sprite field_g;
     static boolean field_f;
     int field_c;
     static int field_e;
     String field_h;
-    da field_d;
+    Archive field_d;
     String field_b;
 
     public static void b(int param0) {

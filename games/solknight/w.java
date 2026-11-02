@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class w {
-    static nc field_a;
+    static IntrusiveDeque field_a;
     static String[] field_c;
-    static o[] field_b;
+    static Sprite[] field_b;
     static String field_d;
 
     final static Object a(byte[] param0, byte param1, boolean param2) {
@@ -69,22 +69,22 @@ final class w {
         var17 = SolKnight.field_L ? 1 : 0;
         if (param0 < param13) {
           if (param13 < param15) {
-            hf.a(param9, param5, param7, param8, param0, param12, 1517200784, param11, param15, param4, param1, param2, mi.field_f, param10, param3, param14, param13);
+            hf.a(param9, param5, param7, param8, param0, param12, 1517200784, param11, param15, param4, param1, param2, SoftwareRasterizer.field_f, param10, param3, param14, param13);
           } else {
             if (param0 >= param15) {
-              hf.a(param1, param2, param8, param12, param15, param7, 1517200784, param3, param13, param9, param4, param10, mi.field_f, param5, param14, param11, param0);
+              hf.a(param1, param2, param8, param12, param15, param7, 1517200784, param3, param13, param9, param4, param10, SoftwareRasterizer.field_f, param5, param14, param11, param0);
             } else {
-              hf.a(param9, param5, param7, param12, param0, param8, 1517200784, param14, param13, param1, param4, param10, mi.field_f, param2, param3, param11, param15);
+              hf.a(param9, param5, param7, param12, param0, param8, 1517200784, param14, param13, param1, param4, param10, SoftwareRasterizer.field_f, param2, param3, param11, param15);
             }
           }
         } else {
           if (param15 > param0) {
-            hf.a(param4, param10, param12, param8, param13, param7, 1517200784, param3, param15, param9, param1, param2, mi.field_f, param5, param11, param14, param0);
+            hf.a(param4, param10, param12, param8, param13, param7, 1517200784, param3, param15, param9, param1, param2, SoftwareRasterizer.field_f, param5, param11, param14, param0);
           } else {
             if (param13 < param15) {
-              hf.a(param4, param10, param12, param7, param13, param8, 1517200784, param14, param0, param1, param9, param5, mi.field_f, param2, param11, param3, param15);
+              hf.a(param4, param10, param12, param7, param13, param8, 1517200784, param14, param0, param1, param9, param5, SoftwareRasterizer.field_f, param2, param11, param3, param15);
             } else {
-              hf.a(param1, param2, param8, param7, param15, param12, 1517200784, param11, param0, param4, param9, param5, mi.field_f, param10, param14, param3, param13);
+              hf.a(param1, param2, param8, param7, param15, param12, 1517200784, param11, param0, param4, param9, param5, SoftwareRasterizer.field_f, param10, param14, param3, param13);
             }
           }
         }
@@ -95,7 +95,7 @@ final class w {
     }
 
     static {
-        field_a = new nc();
+        field_a = new IntrusiveDeque();
         field_c = new String[16];
         field_d = "VICTORY<br>BONUS";
     }

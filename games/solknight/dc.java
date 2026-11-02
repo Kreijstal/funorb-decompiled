@@ -3,12 +3,12 @@
  */
 final class dc extends a {
     static wb field_k;
-    static o field_n;
+    static Sprite field_n;
     static String field_l;
     static String field_m;
     static int field_o;
     static String field_p;
-    static o field_j;
+    static Sprite field_j;
     static java.awt.Canvas field_q;
 
     final static void d(byte param0) {
@@ -45,7 +45,7 @@ final class dc extends a {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (null != wd.a(param0, -112)) ? 0 : 1;
+          stackIn_3_0 = (null != ArchiveSource.a(param0, -112)) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (param1 > -109) {
             field_m = (String) null;
@@ -73,7 +73,7 @@ final class dc extends a {
         super(param0);
     }
 
-    final static uj[] a(byte param0, dl param1) {
+    final static uj[] a(byte param0, PlatformTaskDispatcher param1) {
         uj[] stackIn_4_0 = null;
         uj[] stackIn_11_0 = null;
         uj[] stackIn_16_0 = null;
@@ -87,7 +87,7 @@ final class dc extends a {
         int var5 = 0;
         uj var6 = null;
         int var7 = 0;
-        nj var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         int var5Lifetime1;
@@ -150,7 +150,7 @@ final class dc extends a {
 
     final String a(String param0, boolean param1) {
         RuntimeException var3 = null;
-        dl var4 = null;
+        PlatformTaskDispatcher var4 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -159,8 +159,8 @@ final class dc extends a {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            var4 = (dl) null;
-            dc.a((byte) -32, (dl) null);
+            var4 = (PlatformTaskDispatcher) null;
+            dc.a((byte) -32, (PlatformTaskDispatcher) null);
           }
           if (this.a(param0, (byte) -112) != rg.field_f) {
             stackIn_6_0 = (String) (field_l);

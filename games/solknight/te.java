@@ -36,7 +36,7 @@ final class te extends si {
           this.field_G.a(param0 + this.field_j, param1, param2 + this.field_m, 0);
           return;
         }
-        o var6 = new o(this.field_G.field_t, this.field_G.field_x);
+        Sprite var6 = new Sprite(this.field_G.field_t, this.field_G.field_x);
         cl.a(-119, var6);
         this.field_G.a(0, param1, 0, param3);
         mf.e(4096);
@@ -65,7 +65,7 @@ final class te extends si {
         this.field_H = 256;
     }
 
-    te(rc param0) {
+    te(UiWidget param0) {
         super(param0.field_m, param0.field_j, param0.field_t, param0.field_x, (j) null, (dg) null);
         try {
           param0.b(this.field_x, this.field_t, 0, 0, 0);

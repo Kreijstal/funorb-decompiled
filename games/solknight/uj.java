@@ -18,14 +18,14 @@ final class uj {
             uj.a(-106);
           }
           pc.field_b.a(param1, param2, param0, 125);
-          mi.a();
+          SoftwareRasterizer.a();
           uf.a(false, true);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "uj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, o[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -105,69 +105,69 @@ final class uj {
               var19 = param1 * var8 / (var9 + var8) + param4;
               var18 = param1 * var8 / (var9 + var8) + param4;
             }
-            mi.b(SolKnight.field_E);
+            SoftwareRasterizer.b(SolKnight.field_E);
             if (param3[0] != null) {
-              mi.d(param2, param4, var16, var18);
+              SoftwareRasterizer.d(param2, param4, var16, var18);
               param3[0].d(param2, param4);
-              mi.a(SolKnight.field_E);
+              SoftwareRasterizer.a(SolKnight.field_E);
             }
             if (param3[param5] != null) {
-              mi.d(var17, param4, var10, var18);
+              SoftwareRasterizer.d(var17, param4, var10, var18);
               param3[2].d(var13, param4);
-              mi.a(SolKnight.field_E);
+              SoftwareRasterizer.a(SolKnight.field_E);
             }
             if (null != param3[6]) {
-              mi.d(param2, var19, var16, var11);
+              SoftwareRasterizer.d(param2, var19, var16, var11);
               param3[6].d(param2, var15);
-              mi.a(SolKnight.field_E);
+              SoftwareRasterizer.a(SolKnight.field_E);
             }
             if (null != param3[8]) {
-              mi.d(var17, var19, var10, var11);
+              SoftwareRasterizer.d(var17, var19, var10, var11);
               param3[8].d(var13, var15);
-              mi.a(SolKnight.field_E);
+              SoftwareRasterizer.a(SolKnight.field_E);
             }
             if (null != param3[1] &&
               param3[1].field_q != 0) {
-              mi.d(var16, param4, var17, var18);
+              SoftwareRasterizer.d(var16, param4, var17, var18);
               for (var20 = var12; var13 > var20; var20 = var20 + param3[1].field_q) {
                 param3[1].d(var20, param4);
               }
-              mi.a(SolKnight.field_E);
+              SoftwareRasterizer.a(SolKnight.field_E);
             }
             if (null != param3[7] &&
               0 != param3[7].field_q) {
-              mi.d(var16, var19, var17, var11);
+              SoftwareRasterizer.d(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param3[7].field_q) {
                 param3[7].d(var20Lifetime1, var15);
               }
-              mi.a(SolKnight.field_E);
+              SoftwareRasterizer.a(SolKnight.field_E);
             }
             if (param3[3] != null &&
               param3[3].field_r != 0) {
-              mi.d(param2, var18, var16, var19);
+              SoftwareRasterizer.d(param2, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param3[3].field_r) {
                 param3[3].d(param2, var20Lifetime2);
               }
-              mi.a(SolKnight.field_E);
+              SoftwareRasterizer.a(SolKnight.field_E);
             }
             if (param3[5] != null &&
               param3[5].field_r != 0) {
-              mi.d(var17, var18, var10, var19);
+              SoftwareRasterizer.d(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param3[5].field_r) {
                 param3[5].d(var13, var20Lifetime3);
               }
-              mi.a(SolKnight.field_E);
+              SoftwareRasterizer.a(SolKnight.field_E);
             }
             if (param3[4] != null &&
               0 != param3[4].field_q &&
               0 != param3[4].field_r) {
-              mi.d(var16, var18, var17, var19);
+              SoftwareRasterizer.d(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param3[4].field_r) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param3[4].field_q) {
                   param3[4].d(var21, var20Lifetime4);
                 }
               }
-              mi.a(SolKnight.field_E);
+              SoftwareRasterizer.a(SolKnight.field_E);
               return;
             }
             return;

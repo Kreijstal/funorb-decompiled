@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sa extends gg {
+final class sa extends IntrusiveNode {
     static int field_i;
     byte[] field_k;
     long field_h;
-    static nc field_n;
+    static IntrusiveDeque field_n;
     static int field_o;
     int field_j;
     static int field_m;
@@ -85,6 +85,6 @@ final class sa extends gg {
 
     static {
         field_i = 5;
-        field_n = new nc();
+        field_n = new IntrusiveDeque();
     }
 }

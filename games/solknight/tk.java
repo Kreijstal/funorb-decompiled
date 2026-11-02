@@ -4,7 +4,7 @@
 final class tk extends pe {
     static String field_q;
     private Object field_s;
-    static hb[] field_p;
+    static BufferedCacheFile[] field_p;
     static int[] field_r;
 
     final static void a(byte param0, String param1) {

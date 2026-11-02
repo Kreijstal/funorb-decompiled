@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kc extends pj {
-    static da field_Q;
+    static Archive field_Q;
     static int field_O;
     private oe field_J;
     static wh field_I;
@@ -12,7 +12,7 @@ final class kc extends pj {
     static long field_P;
     static String field_M;
 
-    final void a(int param0, int param1, int param2, rc param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.field_N = this.field_N + 1;
           super.a(param0, param1, param2, param3);
@@ -21,7 +21,7 @@ final class kc extends pj {
         }
     }
 
-    final boolean a(int param0, rc param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -56,10 +56,10 @@ final class kc extends pj {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        o var15 = null;
-        o var16 = null;
-        o var13 = null;
-        o var12 = null;
+        Sprite var15 = null;
+        Sprite var16 = null;
+        Sprite var13 = null;
+        Sprite var12 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = SolKnight.field_L ? 1 : 0;
@@ -73,11 +73,11 @@ final class kc extends pj {
         int var6 = (this.field_x >> 1) + param0 + this.field_j;
         qf var8 = this.field_J.b(param3 ^ -9362);
         if (hg.field_E == var8) {
-          var15 = gb.field_k[0];
+          var15 = PacketBuffer.field_k[0];
           var9 = var15.field_q << 1;
           var10 = var15.field_r << 1;
           if (null == pk.field_Y) {
-            pk.field_Y = new o(var9, var10);
+            pk.field_Y = new Sprite(var9, var10);
             cl.a(-116, pk.field_Y);
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
@@ -85,7 +85,7 @@ final class kc extends pj {
             return;
           }
           if (var9 > pk.field_Y.field_p) {
-            pk.field_Y = new o(var9, var10);
+            pk.field_Y = new Sprite(var9, var10);
             cl.a(-116, pk.field_Y);
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
@@ -94,25 +94,25 @@ final class kc extends pj {
           }
           if (pk.field_Y.field_t >= var10) {
             cl.a(-97, pk.field_Y);
-            mi.a();
+            SoftwareRasterizer.a();
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
             pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
           }
-          pk.field_Y = new o(var9, var10);
+          pk.field_Y = new Sprite(var9, var10);
           cl.a(-116, pk.field_Y);
           var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
           mf.e(param3 + 4096);
           pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
           return;
         }
-        if (db.field_u == var8) {
-          var16 = gb.field_k[0];
+        if (SpriteState.field_u == var8) {
+          var16 = PacketBuffer.field_k[0];
           var9Lifetime1 = var16.field_q << 1;
           var10Lifetime1 = var16.field_r << 1;
           if (null == pk.field_Y) {
-            pk.field_Y = new o(var9Lifetime1, var10Lifetime1);
+            pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
             cl.a(-116, pk.field_Y);
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
@@ -120,7 +120,7 @@ final class kc extends pj {
             return;
           }
           if (var9Lifetime1 > pk.field_Y.field_p) {
-            pk.field_Y = new o(var9Lifetime1, var10Lifetime1);
+            pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
             cl.a(-116, pk.field_Y);
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
@@ -129,13 +129,13 @@ final class kc extends pj {
           }
           if (pk.field_Y.field_t >= var10Lifetime1) {
             cl.a(-97, pk.field_Y);
-            mi.a();
+            SoftwareRasterizer.a();
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
             pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
           }
-          pk.field_Y = new o(var9Lifetime1, var10Lifetime1);
+          pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
           cl.a(-116, pk.field_Y);
           var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
           mf.e(param3 + 4096);
@@ -143,12 +143,12 @@ final class kc extends pj {
           return;
         }
         if (var8 == rg.field_f) {
-          var13 = gb.field_k[2];
+          var13 = PacketBuffer.field_k[2];
           var13.a(var5 - (var13.field_p >> 1), -(var13.field_t >> 1) + var6, 256);
           return;
         }
         if (var8 == ph.field_g) {
-          var12 = gb.field_k[1];
+          var12 = PacketBuffer.field_k[1];
           var12.a(-(var12.field_p >> 1) + var5, -(var12.field_t >> 1) + var6, 256);
           return;
         }

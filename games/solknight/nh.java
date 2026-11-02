@@ -6,31 +6,31 @@ final class nh {
         String var4 = null;
         String var4Lifetime1;
         if (!param1) {
-          mi.a();
+          SoftwareRasterizer.a();
           if (param0 >= -28) {
             var4 = (String) null;
-            nh.a((da) null, (String) null, 2, (String) null);
+            nh.a((Archive) null, (String) null, 2, (String) null);
             uf.a(false, param1);
             return;
           }
           uf.a(false, param1);
           return;
         }
-        mi.a(0, 0, mi.field_a, mi.field_d, 0, 192);
+        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, 192);
         if (param0 >= -28) {
           var4Lifetime1 = (String) null;
-          nh.a((da) null, (String) null, 2, (String) null);
+          nh.a((Archive) null, (String) null, 2, (String) null);
           uf.a(false, param1);
           return;
         }
         uf.a(false, param1);
     }
 
-    final static o[] a(da param0, String param1, int param2, String param3) {
+    final static Sprite[] a(Archive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        o[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

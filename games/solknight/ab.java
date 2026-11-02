@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class ab extends dh {
+abstract class ab extends GameApplet {
     static String field_q;
     private int field_C;
     static int[] field_A;
@@ -42,7 +42,7 @@ abstract class ab extends dh {
         if (!bb.h(42)) {
           if (kj.field_R >= 10) {
             if (!uk.h(250)) {
-              rb.c(-27347);
+              Asteroid.c(-27347);
             } else {
               if (0 == fj.field_i) {
                 discarded$6 = this.a(false, false, 121);
@@ -129,28 +129,28 @@ abstract class ab extends dh {
         }
     }
 
-    final static da a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
+    final static Archive a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
-          lg var8 = null;
-          da stackIn_16_0 = null;
+          CachedArchiveSource var8 = null;
+          Archive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
             var7 = null;
-            if (null != n.field_a.field_c) {
-              hc.field_c = new hb(n.field_a.field_c, 5200, 0);
-              n.field_a.field_c = null;
-              var6 = new bi(255, hc.field_c, new hb(n.field_a.field_s, 12000, 0), 2097152);
+            if (null != NodeHashTableIterator.field_a.field_c) {
+              hc.field_c = new BufferedCacheFile(NodeHashTableIterator.field_a.field_c, 5200, 0);
+              NodeHashTableIterator.field_a.field_c = null;
+              var6 = new bi(255, hc.field_c, new BufferedCacheFile(NodeHashTableIterator.field_a.field_s, 12000, 0), 2097152);
             }
             if (hc.field_c != null) {
               if (null == tk.field_p) {
-                tk.field_p = new hb[n.field_a.field_v.length];
+                tk.field_p = new BufferedCacheFile[NodeHashTableIterator.field_a.field_v.length];
               }
               if (tk.field_p[param1] == null) {
-                tk.field_p[param1] = new hb(n.field_a.field_v[param1], 12000, 0);
-                n.field_a.field_v[param1] = null;
+                tk.field_p[param1] = new BufferedCacheFile(NodeHashTableIterator.field_a.field_v[param1], 12000, 0);
+                NodeHashTableIterator.field_a.field_v[param1] = null;
               }
               var7 = new bi(param1, hc.field_c, tk.field_p[param1], 2097152);
             }
@@ -161,7 +161,7 @@ abstract class ab extends dh {
             if (param0 != 2097152) {
               field_A = (int[]) null;
             }
-            stackIn_16_0 = new da(var8, param4, param2);
+            stackIn_16_0 = new Archive(var8, param4, param2);
             return stackIn_16_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,19 +186,19 @@ abstract class ab extends dh {
             gh.a(2, 9543);
           }
           if (ef.field_c[2]) {
-            jg.a(3, (byte) -100);
+            FullscreenFocusCanvas.a(3, (byte) -100);
           }
           if (ef.field_c[3]) {
             hi.a(4, -5887);
           }
           if (ef.field_c[4]) {
-            ik.a(5, 18897);
+            SecondaryNodeDeque.a(5, 18897);
           }
           if (ef.field_c[5]) {
             ci.a((byte) -77, 6);
           }
           if (ef.field_c[6]) {
-            db.b(36951, 7);
+            SpriteState.b(36951, 7);
           }
           if (ef.field_c[8]) {
             ff.a((byte) -89);
@@ -220,13 +220,13 @@ abstract class ab extends dh {
           if (var2 == 0) {
             return;
           }
-          L1: {
+          regionExit1: {
             switch (var2) {
               case 3:
-                db.f(0);
+                SpriteState.f(0);
                 break;
               case 4:
-                oa.c(1811357826);
+                ImageProducerRasterBuffer.c(1811357826);
                 break;
               case 6:
                 td.a(-126);
@@ -235,7 +235,7 @@ abstract class ab extends dh {
                 af.a(wh.field_c, te.field_N, (byte) -110, te.field_O);
                 break;
               case 16:
-                ki.a(-106);
+                WidgetContainer.a(-106);
                 break;
               default:
                 if (var2 != 11 &&
@@ -243,17 +243,17 @@ abstract class ab extends dh {
                   switch (var2) {
                     case 13:
                       li.d(117);
-                      break L1;
+                      break regionExit1;
                     case 17:
                       this.l(-73);
-                      break L1;
+                      break regionExit1;
                     case 18:
                       u.a(2);
-                      break L1;
+                      break regionExit1;
                     default:
                       hi.a((Throwable) null, "MGS1: " + oc.a(false), 1);
                       je.a(false);
-                      break L1;
+                      break regionExit1;
                   }
                 }
                 stackIn_32_0 = 112;
@@ -284,7 +284,7 @@ abstract class ab extends dh {
         je.a(!param0);
     }
 
-    final static String a(da param0, String param1, String param2, String param3, boolean param4) {
+    final static String a(Archive param0, String param1, String param2, String param3, boolean param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -353,7 +353,7 @@ abstract class ab extends dh {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          gb var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = SolKnight.field_L ? 1 : 0;
@@ -374,7 +374,7 @@ abstract class ab extends dh {
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = gl.a(fi.a((byte) 84), 140, rg.a(0), ta.a((byte) -23), this.field_r, sg.b(-1), lc.b(false));
+            var5_intLifetime1 = gl.a(fi.a((byte) 84), 140, rg.a(0), ta.a((byte) -23), this.field_r, RandomAccessCacheFile.b(-1), lc.b(false));
             if (-1 != var5_intLifetime1) {
               ff.a(var5_intLifetime1, -114, ke.field_O, md.field_v);
               ke.field_O = null;
@@ -426,7 +426,7 @@ abstract class ab extends dh {
             gd.a(-1, ia.g(-48));
           }
           if (var4 == 9) {
-            ki.a(ia.g(-92), -1);
+            WidgetContainer.a(ia.g(-92), -1);
           }
           if (var4 == 10) {
             id.field_c.e(17, -2147483648);
@@ -448,11 +448,11 @@ abstract class ab extends dh {
               if (wi.field_j.a((byte) -106)) {
                 var12 = wi.field_j.a(true);
                 if (var12 != null) {
-                  var7 = vd.a(var12.field_l, 0, var12.field_m, 160);
-                  dh.a(var7, false);
+                  var7 = vd.a(var12.payload, 0, var12.position, 160);
+                  GameApplet.a(var7, false);
                 } else {
                   var9 = (String) null;
-                  dh.a((String) null, false);
+                  GameApplet.a((String) null, false);
                 }
                 wi.field_j = null;
               }
@@ -461,7 +461,7 @@ abstract class ab extends dh {
               var5 = (Exception) (Object) decompiledCaughtException;
               hi.a((Throwable) ((Object) var5), "S1", 1);
               var10 = (String) null;
-              dh.a((String) null, false);
+              GameApplet.a((String) null, false);
               wi.field_j = null;
             }
           }
@@ -501,7 +501,7 @@ abstract class ab extends dh {
         aa.a((byte) 30, vd.field_b);
         ff.a(this.field_z, wh.field_c, param1, (byte) 110, this.field_C, this.field_m, this.field_y, 5000, this.field_x, this.field_n, param5, 5000, vd.field_b, this.field_w);
         sk.a(-11400, this.field_C, this.field_y, wh.field_c, this.field_m, this.field_z, param5, vd.field_b, this.field_x);
-        da.a(0);
+        Archive.a(0);
         ah.field_d = ld.j(0);
         th.a((byte) -63, dc.field_q);
         if (!param4) {
@@ -625,7 +625,7 @@ abstract class ab extends dh {
         var5 = SolKnight.field_L ? 1 : 0;
         if (null != fc.field_l) {
           if (null == dj.field_k) {
-            var6 = qh.a((byte) 60);
+            var6 = GameKeyHandler.a((byte) 60);
             var4 = var6.getSize();
             fc.field_l.a(var4.height, var4.width, param0 ^ 25192);
           }
@@ -643,7 +643,7 @@ abstract class ab extends dh {
         if (wf.c((byte) -63)) {
           var3 = 1200 * l.a((byte) 99);
           if (this.field_B ||
-            !(var3 >= wk.b(param0 ^ -3)) &&
+            !(var3 >= DelegatingCanvas.b(param0 ^ -3)) &&
             !(de.a(-122) <= var3)) {
             this.field_B = false;
             je.a(false);
@@ -697,7 +697,7 @@ abstract class ab extends dh {
                 if (bf.field_e != 4) {
                   if (bf.field_e != 2) {
                     if (5 == bf.field_e) {
-                      dd.a((byte) -115, jl.field_c, 5);
+                      dd.a((byte) -115, SecondaryNodeDequeIterator.field_c, 5);
                     } else {
                       dd.a((byte) 57, cd.field_c, 256);
                     }
@@ -735,13 +735,13 @@ abstract class ab extends dh {
         }
         if (kj.field_R == 1) {
           if (vd.field_b != 0) {
-            af.field_c = r.a(og.field_c, 82);
+            af.field_c = IsaacRandom.a(og.field_c, 82);
           }
           lh.field_o = pj.a(vd.field_c, (byte) -30, 1, false, true);
-          wk.field_c = pj.a(ef.field_g, (byte) -126, 1, false, true);
+          DelegatingCanvas.field_c = pj.a(ef.field_g, (byte) -126, 1, false, true);
           jk.field_ub = pj.a(aj.field_u, (byte) 52, 1, false, true);
           pl.field_d = lh.field_o;
-          ai.field_b = wk.field_c;
+          ai.field_b = DelegatingCanvas.field_c;
           kj.field_R = 2;
         }
         if (kj.field_R == 2) {
@@ -762,13 +762,13 @@ abstract class ab extends dh {
           }
         }
         if (3 == kj.field_R &&
-          pj.a(wk.field_c, -16925, lh.field_o, jk.field_ub) &&
+          pj.a(DelegatingCanvas.field_c, -16925, lh.field_o, jk.field_ub) &&
           td.a(-3, jk.field_ub)) {
-          cb.b(32);
+          ProxyAuthenticationRequiredException.b(32);
           kg.a(-15617);
           pe.field_m = te.field_J;
           kk.field_c = false;
-          d.a(wk.field_c, cl.field_m, (byte) -110, jk.field_ub, lh.field_o);
+          d.a(DelegatingCanvas.field_c, cl.field_m, (byte) -110, jk.field_ub, lh.field_o);
           if (bl.field_p ||
             null != s.field_hb) {
             stackIn_101_0 = !(bl.field_p);
@@ -777,14 +777,14 @@ abstract class ab extends dh {
             hf.a(stackIn_101_0, stackIn_103_1, stackIn_104_2, s.field_hb);
           }
           if (ml.field_g) {
-            qk.f(4);
+            ProxySocketConnector.f(4);
           }
           if (ce.field_c == null) {
             ce.field_c = rh.a(0);
-            qh.field_c = jk.i((byte) 123);
+            GameKeyHandler.field_c = jk.i((byte) 123);
           }
-          r.a(jk.field_ub, qh.field_c, param0 ^ -4, ce.field_c);
-          wk.field_c = null;
+          IsaacRandom.a(jk.field_ub, GameKeyHandler.field_c, param0 ^ -4, ce.field_c);
+          DelegatingCanvas.field_c = null;
           jk.field_ub = null;
           lh.field_o = null;
           de.a((java.applet.Applet) (this), param0 + 3);
@@ -796,7 +796,7 @@ abstract class ab extends dh {
         }
         if (10 == kj.field_R) {
           if (vd.field_b != 0) {
-            wc.field_b = r.a(bl.field_k, 117);
+            wc.field_b = IsaacRandom.a(bl.field_k, 117);
           }
           kj.field_R = 11;
         }
@@ -804,16 +804,16 @@ abstract class ab extends dh {
         if (kj.field_R == 11) {
           if (null != wc.field_b && (!wc.field_b.c((byte) -121) ||
             !wc.field_b.b(true))) {
-            a.a((byte) 102, ve.a(uf.field_r, wa.field_a, wc.field_b, (byte) -94), 0.0f);
+            a.a((byte) 102, ClientException.a(uf.field_r, wa.field_a, wc.field_b, (byte) -94), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
-            pd.field_c = true;
+            RasterBuffer.field_c = true;
             kj.field_R = 12;
           }
         }
         if (12 == kj.field_R &&
-          !pd.field_c) {
+          !RasterBuffer.field_c) {
           kj.field_R = 13;
         }
         if (kj.field_R == 13) {
@@ -829,12 +829,12 @@ abstract class ab extends dh {
         }
         if (!param1 &&
           jd.field_p) {
-          nc.a((byte) 86, dc.field_q);
+          IntrusiveDeque.a((byte) 86, dc.field_q);
           this.a(true);
           th.a((byte) -69, dc.field_q);
         }
         if (ef.field_c[8]) {
-          wd.b(param0 + 11);
+          ArchiveSource.b(param0 + 11);
         }
     }
 
@@ -961,7 +961,7 @@ abstract class ab extends dh {
     }
 
     private final void l(int param0) {
-        int var2 = te.field_N.j(255);
+        int var2 = te.field_N.readUnsignedByte(255);
         int var3 = 0 != (1 & var2) ? 1 : 0;
         if (param0 >= -10) {
           field_u = false;
@@ -969,7 +969,7 @@ abstract class ab extends dh {
         int var4 = te.field_O - 1;
         byte[] var5 = new byte[var4];
         te.field_N.b(70, var4, 0, var5);
-        ke.a((byte) -122, ia.g(-107), da.a(true, var5), var3 != 0);
+        ke.a((byte) -122, ia.g(-107), Archive.a(true, var5), var3 != 0);
     }
 
     static {

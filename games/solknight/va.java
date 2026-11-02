@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class va {
-    static nc field_f;
-    static o field_g;
+    static IntrusiveDeque field_f;
+    static Sprite field_g;
     hl field_m;
     hl field_i;
     hl field_d;
     hl field_k;
     long field_b;
     int field_j;
-    gb field_e;
+    PacketBuffer field_e;
     byte field_n;
     volatile int field_c;
-    gb field_h;
+    PacketBuffer field_h;
     volatile int field_l;
     ic field_a;
 
@@ -30,7 +30,7 @@ abstract class va {
 
     final static String a(boolean param0) {
         if (!param0) {
-          field_g = (o) null;
+          field_g = (Sprite) null;
           if (ab.field_u) {
             return null;
           }
@@ -63,7 +63,7 @@ abstract class va {
         ic var8;
         var6 = (long)param2 + ((long)param0 << 32);
         var8 = new ic();
-        var8.field_l = var6;
+        var8.secondaryKey = var6;
         stackIn_2_0 = var8;
         stackIn_3_1 = (!param1) ? false : true;
         stackIn_2_0.field_r = stackIn_3_1;
@@ -88,7 +88,7 @@ abstract class va {
     public static void b(byte param0) {
         field_g = null;
         if (param0 != 0) {
-          field_g = (o) null;
+          field_g = (Sprite) null;
           field_f = null;
           return;
         }
@@ -123,11 +123,11 @@ abstract class va {
         this.field_i = new hl();
         this.field_d = new hl();
         this.field_k = new hl();
-        this.field_e = new gb(6);
+        this.field_e = new PacketBuffer(6);
         this.field_n = (byte) 0;
         this.field_l = 0;
         this.field_c = 0;
-        this.field_h = new gb(10);
+        this.field_h = new PacketBuffer(10);
     }
 
     static {

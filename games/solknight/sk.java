@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sk extends ec {
+abstract class sk extends DualLinkNode {
     boolean field_r;
     boolean field_q;
     static int field_o;
-    static mg field_n;
+    static BitmapFont field_n;
     volatile boolean field_m;
     static fg field_p;
 
-    final static hd a(byte param0, da param1, int param2, int param3, da param4) {
+    final static hd a(byte param0, Archive param1, int param2, int param3, Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         hd stackIn_4_0 = null;
@@ -46,19 +46,19 @@ abstract class sk extends ec {
         }
     }
 
-    final static void a(int param0, int param1, int param2, dl param3, int param4, int param5, int param6, int param7, String param8) {
+    final static void a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5, int param6, int param7, String param8) {
         try {
           ue.field_a = param2;
-          qk.field_o = param8;
+          ProxySocketConnector.field_o = param8;
           vc.field_e = param4;
-          n.field_a = param3;
+          NodeHashTableIterator.field_a = param3;
           hj.field_x = param5;
           sa.field_o = param7;
           if (param0 != -11400) {
             field_o = 5;
           }
           q.field_a = param6;
-          nc.field_a = param1;
+          IntrusiveDeque.field_a = param1;
           il.field_c = (va) ((Object) new ea());
           pf.field_d = new ae(param3);
           d.field_b = new ne(il.field_c, pf.field_d);

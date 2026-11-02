@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jh {
-    private ec[] field_d;
+    private DualLinkNode[] field_d;
     private long field_e;
     private int field_a;
-    static mg field_g;
-    private ec field_c;
-    static o field_b;
+    static BitmapFont field_g;
+    private DualLinkNode field_c;
+    static Sprite field_b;
     static int field_f;
 
     final static void a(int param0) {
@@ -17,8 +17,8 @@ final class jh {
         int var3 = 0;
         int var4 = SolKnight.field_L ? 1 : 0;
         try {
-          wb.field_a = ad.field_b.b(te.field_I[12]);
-          var1_int = ad.field_b.b(te.field_I[13]);
+          wb.field_a = BufferedSocket.field_b.b(te.field_I[12]);
+          var1_int = BufferedSocket.field_b.b(te.field_I[13]);
           if (!(var1_int <= wb.field_a)) {
             wb.field_a = var1_int;
           }
@@ -32,17 +32,17 @@ final class jh {
           fj.a(37, new int[]{2, 5}, 498, (byte) -127, 400, 7, 260);
           fj.a(28, new int[]{15, 16}, 446, (byte) 98, 200, 8, 194);
           fj.a(28, new int[]{19, 5}, 288, (byte) -128, 400, 9, 50);
-          for (var2_int = 0; gg.field_f.length > var2_int; var2_int++) {
-            gg.field_f[var2_int] = false;
+          for (var2_int = 0; IntrusiveNode.field_f.length > var2_int; var2_int++) {
+            IntrusiveNode.field_f[var2_int] = false;
           }
           if (param0 != -1) {
-            field_b = (o) null;
+            field_b = (Sprite) null;
           }
-          gg.field_f[1] = true;
-          var2 = gg.field_f;
+          IntrusiveNode.field_f[1] = true;
+          var2 = IntrusiveNode.field_f;
           var2[0] = true;
-          var3 = ad.field_b.field_s + (ad.field_b.field_m + 4);
-          ah.field_i[8] = ad.field_b.field_s + dd.field_b - (-ad.field_b.field_F - var3);
+          var3 = BufferedSocket.field_b.field_s + (BufferedSocket.field_b.field_m + 4);
+          ah.field_i[8] = BufferedSocket.field_b.field_s + dd.field_b - (-BufferedSocket.field_b.field_F - var3);
           si.field_F[8] = 37 + var3 * 2;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "jh.H(" + param0 + ')');
@@ -63,18 +63,18 @@ final class jh {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        gb var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new gb(param0);
+          var9 = new PacketBuffer(param0);
           if (param1 != 6) {
-            field_b = (o) null;
+            field_b = (Sprite) null;
           }
-          var3 = var9.j(param1 + 249);
-          var4 = var9.e(true);
+          var3 = var9.readUnsignedByte(param1 + 249);
+          var4 = var9.readInt(true);
           if (var4 >= 0 && (0 == jb.field_f ||
             !(var4 > jb.field_f))) {
             if (var3 == 0) {
@@ -85,7 +85,7 @@ final class jh {
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }
-            var5 = var9.e(true);
+            var5 = var9.readInt(true);
             if (var5 >= 0 && (jb.field_f == 0 ||
               !(jb.field_f < var5))) {
               var13 = new byte[var5];
@@ -119,23 +119,23 @@ final class jh {
         }
     }
 
-    final ec a(byte param0) {
-        ec var3 = null;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var3 = null;
         int var4 = SolKnight.field_L ? 1 : 0;
         if (param0 != -9) {
-          return (ec) null;
+          return (DualLinkNode) null;
         }
         if (this.field_c == null) {
           return null;
         }
-        ec var2 = this.field_d[(int)(this.field_e & (long)(-1 + this.field_a))];
+        DualLinkNode var2 = this.field_d[(int)(this.field_e & (long)(-1 + this.field_a))];
         while (this.field_c != var2) {
-          if (this.field_c.field_l == this.field_e) {
+          if (this.field_c.secondaryKey == this.field_e) {
             var3 = this.field_c;
-            this.field_c = this.field_c.field_i;
+            this.field_c = this.field_c.secondaryPrevious;
             return var3;
           }
-          this.field_c = this.field_c.field_i;
+          this.field_c = this.field_c.secondaryPrevious;
         }
         this.field_c = null;
         return null;
@@ -148,7 +148,7 @@ final class jh {
           } catch (Throwable throwable) {
           }
           if (param1 <= 44) {
-            field_g = (mg) null;
+            field_g = (BitmapFont) null;
             return;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -158,72 +158,72 @@ final class jh {
         }
     }
 
-    final ec a(long param0, boolean param1) {
-        ec var4;
-        ec var5;
+    final DualLinkNode a(long param0, boolean param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
-        ec var4Lifetime1;
-        ec var5Lifetime1;
+        DualLinkNode var4Lifetime1;
+        DualLinkNode var5Lifetime1;
         var6 = SolKnight.field_L ? 1 : 0;
         this.field_e = param0;
         if (param1) {
           var4 = this.field_d[(int)(param0 & (long)(-1 + this.field_a))];
-          this.field_c = var4.field_i;
+          this.field_c = var4.secondaryPrevious;
           while (true) {
             if (var4 == this.field_c) {
               this.field_c = null;
               return null;
             }
-            if (this.field_c.field_l != param0) {
-              this.field_c = this.field_c.field_i;
+            if (this.field_c.secondaryKey != param0) {
+              this.field_c = this.field_c.secondaryPrevious;
               continue;
             }
             break;
           }
           var5 = this.field_c;
-          this.field_c = this.field_c.field_i;
+          this.field_c = this.field_c.secondaryPrevious;
           return var5;
         }
         jh.a(-76, -128);
         var4Lifetime1 = this.field_d[(int)(param0 & (long)(-1 + this.field_a))];
-        this.field_c = var4Lifetime1.field_i;
+        this.field_c = var4Lifetime1.secondaryPrevious;
         while (true) {
           if (var4Lifetime1 == this.field_c) {
             this.field_c = null;
             return null;
           }
-          if (this.field_c.field_l != param0) {
-            this.field_c = this.field_c.field_i;
+          if (this.field_c.secondaryKey != param0) {
+            this.field_c = this.field_c.secondaryPrevious;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_c;
-        this.field_c = this.field_c.field_i;
+        this.field_c = this.field_c.secondaryPrevious;
         return var5Lifetime1;
     }
 
-    final void a(long param0, byte param1, ec param2) {
-        ec var5 = null;
-        ec var6 = null;
+    final void a(long param0, byte param1, DualLinkNode param2) {
+        DualLinkNode var5 = null;
+        DualLinkNode var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          if (param2.field_k != null) {
-            param2.a(97);
+          if (param2.secondaryNext != null) {
+            param2.unlinkSecondary(97);
           }
           var5 = this.field_d[(int)(param0 & (long)(-1 + this.field_a))];
-          param2.field_k = var5.field_k;
-          param2.field_i = var5;
-          param2.field_k.field_i = param2;
-          param2.field_l = param0;
-          param2.field_i.field_k = param2;
+          param2.secondaryNext = var5.secondaryNext;
+          param2.secondaryPrevious = var5;
+          param2.secondaryNext.secondaryPrevious = param2;
+          param2.secondaryKey = param0;
+          param2.secondaryPrevious.secondaryNext = param2;
           if (param1 != -109) {
-            var6 = (ec) null;
-            this.a(-128L, (byte) -79, (ec) null);
+            var6 = (DualLinkNode) null;
+            this.a(-128L, (byte) -79, (DualLinkNode) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -247,16 +247,16 @@ final class jh {
         synchronized (var1) {
           wb.field_c = u.field_d;
           if (param0 != 406) {
-            field_g = (mg) null;
+            field_g = (BitmapFont) null;
           }
           cf.field_e = cf.field_e + 1;
-          gb.field_j = le.field_f;
-          ad.field_m = c.field_J;
+          PacketBuffer.field_j = le.field_f;
+          BufferedSocket.field_m = c.field_J;
           ne.field_d = pe.field_n;
           pe.field_n = false;
           hg.field_F = SolKnight.field_G;
-          db.field_o = ug.field_a;
-          s.field_gb = wd.field_d;
+          SpriteState.field_o = SocketConnector.field_a;
+          s.field_gb = ArchiveSource.field_d;
           SolKnight.field_G = 0;
         }
     }
@@ -269,16 +269,16 @@ final class jh {
 
     jh(int param0) {
         int var2 = 0;
-        ec dupTemp$0 = null;
-        ec var3 = null;
-        this.field_d = new ec[param0];
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
+        this.field_d = new DualLinkNode[param0];
         this.field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new ec();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_d[var2] = dupTemp$0;
-          var3.field_i = var3;
-          var3.field_k = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 
@@ -292,7 +292,7 @@ final class jh {
         int var5Lifetime1;
         var6 = SolKnight.field_L ? 1 : 0;
         var2 = 0;
-        var3 = ad.field_h;
+        var3 = BufferedSocket.field_h;
         if (param0 != 126) {
           return;
         }

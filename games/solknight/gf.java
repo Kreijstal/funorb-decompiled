@@ -6,7 +6,7 @@ abstract class gf extends ld {
     private wh field_U;
     private int field_db;
     private int field_W;
-    private rc field_S;
+    private UiWidget field_S;
     private te field_V;
     static int field_T;
     private int field_eb;
@@ -14,7 +14,7 @@ abstract class gf extends ld {
     static String[] field_X;
     private int field_bb;
     static long field_Y;
-    static o[] field_fb;
+    static Sprite[] field_fb;
     static s field_cb;
 
     final boolean e(byte param0) {
@@ -25,7 +25,7 @@ abstract class gf extends ld {
         return super.e((byte) 124);
     }
 
-    boolean a(char param0, byte param1, int param2, rc param3) {
+    boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -60,7 +60,7 @@ abstract class gf extends ld {
         }
     }
 
-    gf(i param0, rc param1, int param2, int param3, int param4) {
+    gf(i param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_t + 12, 12 + param2 + param1.field_x);
         try {
           this.field_eb = param2;
@@ -81,9 +81,9 @@ abstract class gf extends ld {
         field_fb = null;
     }
 
-    private final void b(rc param0, int param1) {
+    private final void b(UiWidget param0, int param1) {
         if (this.field_V != null) {
-          this.field_V.c(10);
+          this.field_V.unlink(10);
         }
         if (param0 == null) {
           this.field_V = new te();
@@ -107,7 +107,7 @@ abstract class gf extends ld {
           super.e(param0);
           return;
         }
-        if (this.field_U != oa.field_j) {
+        if (this.field_U != ImageProducerRasterBuffer.field_j) {
           this.b(this.field_S.field_t + 12, -2038584927, this.field_eb + 12 + this.field_S.field_x);
           this.b(this.field_S, -16777);
         } else {
@@ -121,7 +121,7 @@ abstract class gf extends ld {
         super.e(param0);
     }
 
-    void c(int param0, rc param1) {
+    void c(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -162,7 +162,7 @@ abstract class gf extends ld {
           return;
         }
         if (param0 == 7107) {
-          this.field_U = oa.field_j;
+          this.field_U = ImageProducerRasterBuffer.field_j;
           this.field_bb = 0;
           this.b(this.field_S, param0 ^ -23116);
           this.field_V.field_H = 0;
@@ -177,13 +177,13 @@ abstract class gf extends ld {
         int fieldTemp$2 = 0;
         int var3 = SolKnight.field_L ? 1 : 0;
         if (param0 != 1784) {
-          rc var4 = (rc) null;
-          this.a('ﾴ', (byte) -22, -26, (rc) null);
+          UiWidget var4 = (UiWidget) null;
+          this.a('ﾴ', (byte) -22, -26, (UiWidget) null);
           if (this.field_U == null) {
             return super.h(param0 + 0);
           }
           if (this.field_U != ah.field_j) {
-            if (this.field_U != oa.field_j) {
+            if (this.field_U != ImageProducerRasterBuffer.field_j) {
               return super.h(param0 + 0);
             }
             fieldTemp$0 = this.field_bb + 1;
@@ -212,7 +212,7 @@ abstract class gf extends ld {
           return super.h(param0 + 0);
         }
         if (this.field_U != ah.field_j) {
-          if (this.field_U != oa.field_j) {
+          if (this.field_U != ImageProducerRasterBuffer.field_j) {
             return super.h(param0 + 0);
           }
           fieldTemp$2 = this.field_bb + 1;

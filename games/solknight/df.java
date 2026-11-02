@@ -8,10 +8,10 @@ final class df extends a {
     final static void a(int param0, boolean param1) {
         we.field_h = 0;
         ua.field_L = 0;
-        wd.field_a = 0;
+        ArchiveSource.field_a = 0;
         ti.field_e = uc.field_e;
-        qh.field_b = new sf(2);
-        qh.field_b.a(param1, -1, ad.a(ad.field_m, gb.field_j, param0), param0 + 121);
+        GameKeyHandler.field_b = new sf(2);
+        GameKeyHandler.field_b.a(param1, -1, BufferedSocket.a(BufferedSocket.field_m, PacketBuffer.field_j, param0), param0 + 121);
     }
 
     final String a(String param0, boolean param1) {
@@ -40,7 +40,7 @@ final class df extends a {
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_j)) {
-            var4 = gb.a(param0, (byte) 122);
+            var4 = PacketBuffer.a(param0, (byte) 122);
             if (var4 == null) {
               return null;
             }
@@ -101,18 +101,18 @@ final class df extends a {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          if (!rc.a(111, var5)) {
+          if (!UiWidget.a(111, var5)) {
             stackIn_2_0 = rg.field_f;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_j)) {
-            var3 = gb.a(param0, (byte) 100);
+            var3 = PacketBuffer.a(param0, (byte) 100);
             if (var3 != null &&
               var3.field_d == null) {
               this.field_j = param0;
               this.field_k = var3.field_c;
             } else {
-              stackIn_8_0 = db.field_u;
+              stackIn_8_0 = SpriteState.field_u;
               return stackIn_8_0;
             }
           }

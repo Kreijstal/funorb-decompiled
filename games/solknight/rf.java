@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rf extends ki implements re, ka, ge {
+final class rf extends WidgetContainer implements re, ka, ge {
     private tg field_L;
     private kj field_J;
     static String field_E;
@@ -46,8 +46,8 @@ final class rf extends ki implements re, ka, ge {
     private final boolean f(boolean param0) {
         int discarded$0 = 0;
         if (param0) {
-          rc var3 = (rc) null;
-          discarded$0 = this.a((String) null, -93, (byte) 14, (rc) null, -14);
+          UiWidget var3 = (UiWidget) null;
+          discarded$0 = this.a((String) null, -93, (byte) 14, (UiWidget) null, -14);
           if (!this.a((wj) (this.field_P), (byte) 114)) {
             return false;
           }
@@ -89,7 +89,7 @@ final class rf extends ki implements re, ka, ge {
         return false;
     }
 
-    private final int a(int param0, int param1, rc param2, String param3, String param4, int param5) {
+    private final int a(int param0, int param1, UiWidget param2, String param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -193,11 +193,11 @@ final class rf extends ki implements re, ka, ge {
         this.field_R = new pj(qg.field_b, (dg) null);
         this.field_D = new pj(mf.field_F, (dg) null);
         this.field_P.field_z = ql.field_u;
-        this.field_I.field_z = qh.field_d;
+        this.field_I.field_z = GameKeyHandler.field_d;
         this.field_M.field_z = pj.field_G;
         this.field_O.field_z = kj.field_K;
         this.field_K.field_z = wi.field_k;
-        this.field_S.field_z = oa.field_i;
+        this.field_S.field_z = ImageProducerRasterBuffer.field_i;
         this.field_L.field_z = wi.field_h;
         this.field_P.a(new df(this.field_P), false);
         this.field_I.a(new dc(this.field_I), false);
@@ -224,7 +224,7 @@ final class rf extends ki implements re, ka, ge {
         var3 = var3 + this.a(ld.field_O, var3, (byte) 44, this.field_O, 170);
         var3 = var3 + (this.a(var3, 35, this.field_K, uc.field_d, pk.field_X, 170) + 5);
         var3 = var3 + (this.a(var3, 35, this.field_P, uc.field_k, eb.field_a, 170) + 5);
-        var3 = var3 + this.a(var3, this.field_S, 170, cb.field_b, true);
+        var3 = var3 + this.a(var3, this.field_S, 170, ProxyAuthenticationRequiredException.field_b, true);
         ke var4 = new ke(46, var3, -90 + this.field_t, 25, this.field_L, true, this.field_t - 120, 5, jh.field_g, 11579568, h.field_e);
         this.a(var4, 5411);
         var3 = var3 + var4.field_x;
@@ -289,10 +289,10 @@ final class rf extends ki implements re, ka, ge {
         return nf.a(var2, this.field_L.field_F, this.field_I.field_i, this.field_P.field_i, this, this.field_O.field_i, (byte) 118);
     }
 
-    private final int a(byte param0, int param1, int param2, int param3, String param4, String param5, rc param6) {
+    private final int a(byte param0, int param1, int param2, int param3, String param4, String param5, UiWidget param6) {
         RuntimeException var8 = null;
         pk var9 = null;
-        rc var10 = null;
+        UiWidget var10 = null;
         ke var11 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -310,8 +310,8 @@ final class rf extends ki implements re, ka, ge {
           var9.field_n = (dg) (this);
           this.a(var9, param0 + 5320);
           if (param0 != 91) {
-            var10 = (rc) null;
-            this.a('|', (byte) -62, -94, (rc) null);
+            var10 = (UiWidget) null;
+            this.a('|', (byte) -62, -94, (UiWidget) null);
           }
           stackIn_3_0 = var11.field_x + var9.field_x;
           return stackIn_3_0;
@@ -341,11 +341,11 @@ final class rf extends ki implements re, ka, ge {
         }
     }
 
-    private final int a(String param0, int param1, byte param2, rc param3, int param4) {
+    private final int a(String param0, int param1, byte param2, UiWidget param3, int param4) {
         int discarded$1 = 0;
         ke var6 = null;
         RuntimeException var6_ref = null;
-        rc var7 = null;
+        UiWidget var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -355,8 +355,8 @@ final class rf extends ki implements re, ka, ge {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 29) {
-            var7 = (rc) null;
-            discarded$1 = this.a((String) null, 47, (byte) 87, (rc) null, -94);
+            var7 = (UiWidget) null;
+            discarded$1 = this.a((String) null, 47, (byte) 87, (UiWidget) null, -94);
           }
           var6 = new ke(20, param1, 120 + param4, 25, param3, false, 120, 3, ua.field_G, 16777215, param0);
           this.a(var6, 5411);
@@ -423,7 +423,7 @@ final class rf extends ki implements re, ka, ge {
         }
     }
 
-    private final int a(int param0, rc param1, int param2, String param3, boolean param4) {
+    private final int a(int param0, UiWidget param1, int param2, String param3, boolean param4) {
         RuntimeException var6 = null;
         kc var7 = null;
         ke var8 = null;
@@ -467,7 +467,7 @@ final class rf extends ki implements re, ka, ge {
         }
     }
 
-    final boolean a(char param0, byte param1, int param2, rc param3) {
+    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -547,7 +547,7 @@ final class rf extends ki implements re, ka, ge {
         }
     }
 
-    final void a(int param0, int param1, int param2, rc param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_R.field_B = this.f(false);
@@ -563,8 +563,8 @@ final class rf extends ki implements re, ka, ge {
           var3 = this.field_P;
           var4 = param1;
           if (!param0) {
-            rc var5 = (rc) null;
-            this.a('`', (byte) -72, -5, (rc) null);
+            UiWidget var5 = (UiWidget) null;
+            this.a('`', (byte) -72, -5, (UiWidget) null);
           }
           ((vg) ((Object) var3)).a(109, false, var4);
         } catch (RuntimeException runtimeException) {

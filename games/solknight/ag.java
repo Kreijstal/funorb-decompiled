@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ag extends gg {
+abstract class ag extends IntrusiveNode {
     int field_h;
 
     abstract void a();

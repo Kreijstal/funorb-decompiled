@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends gg {
+final class sd extends IntrusiveNode {
     static int[] field_j;
     int field_k;
     int field_o;

@@ -8,7 +8,7 @@ class ci extends gf implements ka {
     static String[] field_gb;
     private boolean field_lb;
     static int field_ib;
-    private mg field_nb;
+    private BitmapFont field_nb;
     private boolean field_rb;
     static int[] field_pb;
     private c field_kb;
@@ -45,81 +45,81 @@ class ci extends gf implements ka {
           }
           var5_int = param3 + param0;
           var6 = param1 + param2;
-          if (mi.field_b < param3) {
+          if (SoftwareRasterizer.field_b < param3) {
             stackIn_6_0 = param3;
           } else {
-            stackIn_6_0 = mi.field_b;
+            stackIn_6_0 = SoftwareRasterizer.field_b;
           }
           var7 = stackIn_6_0;
-          if (param1 <= mi.field_l) {
-            stackIn_9_0 = mi.field_l;
+          if (param1 <= SoftwareRasterizer.field_l) {
+            stackIn_9_0 = SoftwareRasterizer.field_l;
           } else {
             stackIn_9_0 = param1;
           }
           var8 = stackIn_9_0;
-          if (var5_int >= mi.field_k) {
-            stackIn_12_0 = mi.field_k;
+          if (var5_int >= SoftwareRasterizer.field_k) {
+            stackIn_12_0 = SoftwareRasterizer.field_k;
           } else {
             stackIn_12_0 = var5_int;
           }
           var9 = stackIn_12_0;
-          if (var6 < mi.field_e) {
+          if (var6 < SoftwareRasterizer.field_e) {
             stackIn_15_0 = var6;
           } else {
-            stackIn_15_0 = mi.field_e;
+            stackIn_15_0 = SoftwareRasterizer.field_e;
           }
           var10 = stackIn_15_0;
-          if (param3 >= mi.field_b &&
-            mi.field_k > param3) {
-            var11 = param3 + mi.field_a * var8;
+          if (param3 >= SoftwareRasterizer.field_b &&
+            SoftwareRasterizer.field_k > param3) {
+            var11 = param3 + SoftwareRasterizer.field_a * var8;
             var12 = -var8 + var10 + 1 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              mi.field_f[var11] = 16777215;
-              var11 = var11 + mi.field_a * 2;
+              SoftwareRasterizer.field_f[var11] = 16777215;
+              var11 = var11 + SoftwareRasterizer.field_a * 2;
             }
           }
-          if (mi.field_l <= param1 &&
-            var6 < mi.field_e) {
-            var11Lifetime1 = var7 + mi.field_a * param1;
+          if (SoftwareRasterizer.field_l <= param1 &&
+            var6 < SoftwareRasterizer.field_e) {
+            var11Lifetime1 = var7 + SoftwareRasterizer.field_a * param1;
             var12Lifetime1 = 1 + var9 - var7 >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              mi.field_f[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_f[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (var5_int >= mi.field_b &&
-            var5_int < mi.field_k) {
-            var11Lifetime2 = var5_int + mi.field_a * (var8 + (1 & -param3 + var5_int));
+          if (var5_int >= SoftwareRasterizer.field_b &&
+            var5_int < SoftwareRasterizer.field_k) {
+            var11Lifetime2 = var5_int + SoftwareRasterizer.field_a * (var8 + (1 & -param3 + var5_int));
             var12Lifetime2 = 1 - (-var10 + var8) >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              mi.field_f[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + 2 * mi.field_a;
+              SoftwareRasterizer.field_f[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + 2 * SoftwareRasterizer.field_a;
             }
           }
-          if (mi.field_l <= param1) {
-            if (mi.field_e <= var6) {
+          if (SoftwareRasterizer.field_l <= param1) {
+            if (SoftwareRasterizer.field_e <= var6) {
               return;
             }
-            var11Lifetime3 = (1 & var6 - param1) + (var7 + var6 * mi.field_a);
+            var11Lifetime3 = (1 & var6 - param1) + (var7 + var6 * SoftwareRasterizer.field_a);
             var12Lifetime3 = var9 + (1 - var7) >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 break;
               }
-              mi.field_f[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_f[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -135,7 +135,7 @@ class ci extends gf implements ka {
         this.field_kb.a((byte) -128, 4210752, 2121792);
         lj var2 = new lj(this, this.field_nb, pc.field_a);
         if (param0 <= 118) {
-          this.field_nb = (mg) null;
+          this.field_nb = (BitmapFont) null;
         }
         var2.a(15, kf.field_F, 1);
         this.c(-3399, var2);
@@ -159,7 +159,7 @@ class ci extends gf implements ka {
           fj.a((byte) 85);
         } else {
           if (this.field_rb) {
-            ie.b(-102);
+            MenuScreen.b(-102);
           }
         }
         if (!param0) {
@@ -168,7 +168,7 @@ class ci extends gf implements ka {
         }
     }
 
-    ci(i param0, mg param1, String param2, boolean param3, boolean param4) {
+    ci(i param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new lj((ci) null, param1, param2), 77, 10, 10);
         try {
           this.field_lb = false;
@@ -215,7 +215,7 @@ class ci extends gf implements ka {
         }
     }
 
-    final static void a(byte[] param0, int param1, int param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5, gb param6) {
+    final static void a(byte[] param0, int param1, int param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5, PacketBuffer param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -248,18 +248,18 @@ class ci extends gf implements ka {
             var8[var9] = f.field_e.nextInt();
           }
           if (lc.field_k == null ||
-            !(var7_int <= lc.field_k.field_l.length)) {
-            lc.field_k = new gb(var7_int);
+            !(var7_int <= lc.field_k.payload.length)) {
+            lc.field_k = new PacketBuffer(var7_int);
           }
-          lc.field_k.field_m = 0;
+          lc.field_k.position = 0;
           lc.field_k.a(param2, param1, param0, param4);
           lc.field_k.b((byte) -65, var7_int);
           lc.field_k.a((byte) 97, var13);
           if (null == ee.field_h ||
-            !(ee.field_h.field_l.length >= 100)) {
-            ee.field_h = new gb(100);
+            !(ee.field_h.payload.length >= 100)) {
+            ee.field_h = new PacketBuffer(100);
           }
-          ee.field_h.field_m = 0;
+          ee.field_h.position = 0;
           ee.field_h.c(19, 10);
           var11 = 0;
           var9Lifetime1 = var11;
@@ -269,8 +269,8 @@ class ci extends gf implements ka {
           }
           ee.field_h.a(true, param1);
           ee.field_h.a(param5, 59769888, param3);
-          param6.a(8, ee.field_h.field_m, ee.field_h.field_l, 0);
-          param6.a(param2 ^ 0, lc.field_k.field_m, lc.field_k.field_l, 0);
+          param6.a(8, ee.field_h.position, ee.field_h.payload, 0);
+          param6.a(param2 ^ 0, lc.field_k.position, lc.field_k.payload, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -304,12 +304,12 @@ class ci extends gf implements ka {
         }
     }
 
-    final static void a(da param0, boolean param1, da param2, da param3) {
+    final static void a(Archive param0, boolean param1, Archive param2, Archive param3) {
         int var11_int = 0;
-        da stackIn_3_0 = null;
+        Archive stackIn_3_0 = null;
         String stackIn_3_1 = null;
         boolean stackIn_4_2 = false;
-        da stackIn_6_0 = null;
+        Archive stackIn_6_0 = null;
         String stackIn_6_1 = null;
         boolean stackIn_7_2 = false;
         RuntimeException stackIn_22_0 = null;
@@ -327,41 +327,41 @@ class ci extends gf implements ka {
         int var8 = 0;
         int var9 = 0;
         od[] var10 = null;
-        o var11 = null;
-        o var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var13 = 0;
-        da var14 = null;
+        Archive var14 = null;
         od[] var15 = null;
-        o var16 = null;
+        Sprite var16 = null;
         int[][] var17 = null;
-        o var18 = null;
-        o var19 = null;
+        Sprite var18 = null;
+        Sprite var19 = null;
         int[][] var20 = null;
         int var8Lifetime1;
         int var9Lifetime1;
         var13 = SolKnight.field_L ? 1 : 0;
         try {
-          fi.field_a = ik.a(param3, -18362, "frame_top", "commonui");
-          qk.field_l = ik.a(param3, -18362, "frame_bottom", "commonui");
-          fa.field_b = rb.a("jagex_logo_grey", "commonui", param3, (byte) -125);
-          vk.field_i = ik.a(param3, -18362, "button", "commonui");
-          gb.field_k = nh.a(param3, "validation", 0, "commonui");
-          stackIn_3_0 = (da) (param0);
+          fi.field_a = SecondaryNodeDeque.a(param3, -18362, "frame_top", "commonui");
+          ProxySocketConnector.field_l = SecondaryNodeDeque.a(param3, -18362, "frame_bottom", "commonui");
+          fa.field_b = Asteroid.a("jagex_logo_grey", "commonui", param3, (byte) -125);
+          vk.field_i = SecondaryNodeDeque.a(param3, -18362, "button", "commonui");
+          PacketBuffer.field_k = nh.a(param3, "validation", 0, "commonui");
+          stackIn_3_0 = (Archive) (param0);
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param1);
-          jh.field_g = (mg) ((Object) si.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "arezzo12", param3));
-          stackIn_6_0 = (da) (param0);
+          jh.field_g = (BitmapFont) ((Object) si.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "arezzo12", param3));
+          stackIn_6_0 = (Archive) (param0);
           stackIn_6_1 = "commonui";
           stackIn_7_2 = !(param1);
-          ua.field_G = (mg) ((Object) si.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
-          uc.field_g = (mg) ((Object) si.a(param0, "commonui", true, "arezzo14bold", param3));
-          var18 = new o(param2.a(4, "button.gif", ""), (java.awt.Component) ((Object) dc.field_q));
-          ve.a(param3, -97, "dropdown", "commonui");
+          ua.field_G = (BitmapFont) ((Object) si.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
+          uc.field_g = (BitmapFont) ((Object) si.a(param0, "commonui", true, "arezzo14bold", param3));
+          var18 = new Sprite(param2.a(4, "button.gif", ""), (java.awt.Component) ((Object) dc.field_q));
+          ClientException.a(param3, -97, "dropdown", "commonui");
           var5 = dj.a(8108, "screen_options", param3, "commonui");
           md.field_s = new od[4];
-          r.field_i = new od[4];
-          jl.field_g = new od[4];
-          var6 = new od[][]{md.field_s, r.field_i, jl.field_g};
+          IsaacRandom.field_i = new od[4];
+          SecondaryNodeDequeIterator.field_g = new od[4];
+          var6 = new od[][]{md.field_s, IsaacRandom.field_i, SecondaryNodeDequeIterator.field_g};
           var20 = new int[4][];
           var17 = var20;
           var7 = var17;
@@ -381,25 +381,25 @@ class ci extends gf implements ka {
             }
           }
           if (param1) {
-            var14 = (da) null;
-            ci.a((da) null, false, (da) null, (da) null);
+            var14 = (Archive) null;
+            ci.a((Archive) null, false, (Archive) null, (Archive) null);
           }
           var9Lifetime1 = var18.field_t;
           fl.b((byte) 91);
           var18.a();
-          mi.c(0, 0, mi.field_a, mi.field_d);
-          var16 = new o(var9Lifetime1, var9Lifetime1);
+          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
+          var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.a();
           var18.c(0, 0);
-          var11 = new o(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.a();
           var18.c(var9Lifetime1 - var18.field_p, 0);
-          var12 = new o(-(var9Lifetime1 * 2) + var18.field_p, var9Lifetime1);
+          var12 = new Sprite(-(var9Lifetime1 * 2) + var18.field_p, var9Lifetime1);
           var12.a();
           var18.c(-var9Lifetime1, 0);
           mf.e(4096);
-          vk.field_i = new o[]{var16, var12, var11};
+          vk.field_i = new Sprite[]{var16, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -427,7 +427,7 @@ class ci extends gf implements ka {
         }
     }
 
-    final boolean a(char param0, byte param1, int param2, rc param3) {
+    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
@@ -458,7 +458,7 @@ class ci extends gf implements ka {
     }
 
     final static void a(byte param0, int param1) {
-        gg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ob var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -528,7 +528,7 @@ class ci extends gf implements ka {
           ed.field_a[0] = ib.field_i.nextInt();
           ed.field_a[1] = ib.field_i.nextInt();
           ed.field_a[2] = (int)(i.field_H >> 32);
-          ic.field_z.field_m = 0;
+          ic.field_z.position = 0;
           ed.field_a[3] = (int)i.field_H;
           ic.field_z.b(ed.field_a[0], false);
           ic.field_z.b(ed.field_a[1], false);
@@ -537,16 +537,16 @@ class ci extends gf implements ka {
           vh.a(ic.field_z, 107);
           ic.field_z.a(true, param2);
           param3.a(-12518, ic.field_z);
-          id.field_c.field_m = 0;
+          id.field_c.position = 0;
           if (param1) {
             id.field_c.c(param0 ^ -25840, 18);
           } else {
             id.field_c.c(param0 ^ 25812, 16);
           }
-          id.field_c.field_m = id.field_c.field_m + 2;
-          var5_int = id.field_c.field_m;
+          id.field_c.position = id.field_c.position + 2;
+          var5_int = id.field_c.position;
           id.field_c.b(al.field_n, false);
-          id.field_c.a(wk.field_b, (byte) 63);
+          id.field_c.a(DelegatingCanvas.field_b, (byte) 63);
           var6 = 0;
           if (cl.field_m) {
             var6 = var6 | 1;
@@ -572,8 +572,8 @@ class ci extends gf implements ka {
           if (null != ri.field_a) {
             id.field_c.b(param0 ^ 1955918408, ri.field_a);
           }
-          al.a(ic.field_z, id.field_c, (byte) 110, nc.field_d, qa.field_p);
-          id.field_c.a(id.field_c.field_m - var5_int, true);
+          al.a(ic.field_z, id.field_c, (byte) 110, IntrusiveDeque.field_d, qa.field_p);
+          id.field_c.a(id.field_c.position - var5_int, true);
           qf.a(0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -622,14 +622,14 @@ class ci extends gf implements ka {
             var6.a(17, ph.field_e, 1);
           } else {
             if (param1 == 256) {
-              var6.a(0, gg.field_c, (dg) (this));
+              var6.a(0, IntrusiveNode.field_c, (dg) (this));
             } else {
               stackIn_13_0 = var6;
               stackIn_13_1 = -1;
               if (!this.field_ob) {
                 stackIn_14_2 = u.field_e;
               } else {
-                stackIn_14_2 = gg.field_c;
+                stackIn_14_2 = IntrusiveNode.field_c;
               }
               ((lj) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_14_2, 1);
             }
@@ -643,7 +643,7 @@ class ci extends gf implements ka {
                   var6.a(0, gh.field_r, (dg) (this));
                 }
               } else {
-                var6.a(9, ik.field_d, 1);
+                var6.a(9, SecondaryNodeDeque.field_d, 1);
               }
             }
           } else {

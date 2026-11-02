@@ -7,15 +7,15 @@ final class s extends gf {
     static java.applet.Applet field_jb;
     static String field_hb;
 
-    s(i param0, rc param1) {
+    s(i param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
-    final void c(int param0, rc param1) {
+    final void c(int param0, UiWidget param1) {
         try {
           if (param0 != -3399) {
-            rc var4 = (rc) null;
-            this.c(-9, (rc) null);
+            UiWidget var4 = (UiWidget) null;
+            this.c(-9, (UiWidget) null);
           }
           super.c(param0 + 0, param1);
         } catch (RuntimeException runtimeException) {
@@ -34,8 +34,8 @@ final class s extends gf {
 
     final static String o(int param0) {
         String var1 = "";
-        if (ve.field_a != null) {
-          var1 = ve.field_a.j(-19569);
+        if (ClientException.field_a != null) {
+          var1 = ClientException.field_a.j(-19569);
         }
         int var2 = -90 % ((param0 - 58) / 51);
         if (var1.length() == 0) {

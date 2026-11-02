@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vd {
-    static ie[] field_d;
+    static MenuScreen[] screens;
     private static String field_e;
     static String field_a;
     static int field_b;
@@ -53,41 +53,41 @@ final class vd {
         var7 = SolKnight.field_L ? 1 : 0;
         var8 = te.field_N;
         var2 = var8;
-        var3 = var8.j(255);
+        var3 = var8.readUnsignedByte(255);
         stackIn_3_0 = ((var3 & 128) != 0);
         ml.field_e = stackIn_3_0;
-        qk.field_m = 127 & var3;
-        th.field_I = var8.j(255);
-        q.field_b = var8.a(10526);
-        if (qk.field_m != 2) {
+        ProxySocketConnector.field_m = 127 & var3;
+        th.field_I = var8.readUnsignedByte(255);
+        q.field_b = var8.readLong(10526);
+        if (ProxySocketConnector.field_m != 2) {
           ah.field_c = 0;
           hc.field_b = 0;
         } else {
-          hc.field_b = var8.i(-127);
-          ah.field_c = var8.b(false);
+          hc.field_b = var8.readUnsignedShort(-127);
+          ah.field_c = var8.readUnsignedMedium(false);
         }
-        stackIn_9_0 = (var8.j(255) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        field_e = var8.h(40);
+        field_e = var8.readString(40);
         if (var4 != 0) {
-          field_a = var8.h(112);
+          field_a = var8.readString(112);
         } else {
           field_a = field_e;
         }
-        if (1 == qk.field_m) {
-          var8.i(-117);
-          var8.h(27);
+        if (1 == ProxySocketConnector.field_m) {
+          var8.readUnsignedShort(-117);
+          var8.readString(27);
         } else {
-          if (4 == qk.field_m) {
-            var8.i(-117);
-            var8.h(27);
+          if (4 == ProxySocketConnector.field_m) {
+            var8.readUnsignedShort(-117);
+            var8.readString(27);
           }
         }
         if (!param1) {
           ek.field_a = a.a(var8, 80, false);
           qe.field_G = null;
         } else {
-          var5 = var8.i(12);
+          var5 = var8.readUnsignedShort(12);
           try {
             var9 = bf.field_f.a((byte) -109, var5);
             ek.field_a = var9.a((byte) 100);
@@ -169,11 +169,11 @@ final class vd {
         if (param0 <= 9) {
           field_e = (String) null;
         }
-        field_d = null;
+        screens = null;
         field_a = null;
     }
 
     static {
-        field_d = new ie[10];
+        screens = new MenuScreen[10];
     }
 }

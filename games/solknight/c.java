@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class c extends rc {
-    private o field_A;
-    private o[] field_S;
+final class c extends UiWidget {
+    private Sprite field_A;
+    private Sprite[] field_S;
     private int field_O;
     static rl[] field_M;
     int field_R;
@@ -11,16 +11,16 @@ final class c extends rc {
     private int field_F;
     private int field_K;
     static String field_E;
-    private o field_G;
+    private Sprite field_G;
     private int field_N;
-    private o field_P;
+    private Sprite field_P;
     static volatile int field_J;
     boolean field_B;
     static int field_H;
     private int field_D;
     static String field_L;
 
-    private final o b(int param0, int param1, int param2) {
+    private final Sprite b(int param0, int param1, int param2) {
         int var6 = 0;
         int var5;
         int var7;
@@ -30,14 +30,14 @@ final class c extends rc {
         int var11;
         int var12;
         int var13;
-        o var14;
+        Sprite var14;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         var13 = SolKnight.field_L ? 1 : 0;
-        var14 = new o(2 * this.field_N, this.field_x);
+        var14 = new Sprite(2 * this.field_N, this.field_x);
         cl.a(-112, var14);
         var5 = this.field_x >> 1;
         for (var6 = 0; this.field_x > var6; var6++) {
@@ -52,18 +52,18 @@ final class c extends rc {
             stackIn_7_0 = var8 | var9;
           }
           var12 = stackIn_7_0;
-          mi.b(var7, var6, this.field_N, var12);
+          SoftwareRasterizer.b(var7, var6, this.field_N, var12);
           var9Lifetime1 = param2 & 65280;
           var8Lifetime1 = param2 & 16711935;
-          mi.b(var7 - 2 * this.field_N, var6, this.field_N, var12);
+          SoftwareRasterizer.b(var7 - 2 * this.field_N, var6, this.field_N, var12);
           if (var11 >= 256) {
             stackIn_10_0 = var9Lifetime1 | var8Lifetime1;
           } else {
             stackIn_10_0 = (var9Lifetime1 * var11 & 16711680 | var11 * var8Lifetime1 & -16711936) >>> 8;
           }
           var12Lifetime1 = stackIn_10_0;
-          mi.b(this.field_N + var7, var6, this.field_N, var12Lifetime1);
-          mi.b(var7 - this.field_N, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.b(this.field_N + var7, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.b(var7 - this.field_N, var6, this.field_N, var12Lifetime1);
         }
         if (param1 != 16711935) {
           this.field_O = 56;
@@ -85,13 +85,13 @@ final class c extends rc {
         if (param0 != -277997311) {
           field_H = -117;
         }
-        this.field_S = new o[]{this.b(this.field_O, param0 + 294709246, this.field_K), this.b(this.field_I, param0 ^ -275703298, this.field_F)};
+        this.field_S = new Sprite[]{this.b(this.field_O, param0 + 294709246, this.field_K), this.b(this.field_I, param0 ^ -275703298, this.field_F)};
         this.field_P = this.a((byte) -119);
         this.field_A = this.field_P.b();
-        this.field_G = new o(this.field_x >> 1, this.field_x);
+        this.field_G = new Sprite(this.field_x >> 1, this.field_x);
     }
 
-    final void a(int param0, int param1, int param2, rc param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -137,9 +137,9 @@ final class c extends rc {
         }
     }
 
-    private final void a(int param0, int param1, o param2, int param3) {
+    private final void a(int param0, int param1, Sprite param2, int param3) {
         int var6 = 0;
-        o discarded$0 = null;
+        Sprite discarded$0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -159,7 +159,7 @@ final class c extends rc {
             discarded$0 = this.a((byte) 120);
           }
           mf.e(4096);
-          if (mi.field_b <= this.field_P.field_p + param3) {
+          if (SoftwareRasterizer.field_b <= this.field_P.field_p + param3) {
             cl.a(param0 ^ -100, this.field_G);
             param2.d(-this.field_D, 0);
             param2.d(-this.field_D + 2 * this.field_N, 0);
@@ -167,7 +167,7 @@ final class c extends rc {
             mf.e(param0 ^ 4096);
             this.field_G.d(param3, param1);
           }
-          if (mi.field_k >= -this.field_P.field_p + var5_int) {
+          if (SoftwareRasterizer.field_k >= -this.field_P.field_p + var5_int) {
             cl.a(param0 - 119, this.field_G);
             for (var7 = this.field_D + (-this.field_P.field_p + this.field_t); var7 > 2 * this.field_N; var7 = var7 - this.field_N * 2) {
             }
@@ -225,7 +225,7 @@ final class c extends rc {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (gb.a(param1, 126)) {
+          if (PacketBuffer.a(param1, 126)) {
             return true;
           }
           var6 = hh.field_N;
@@ -236,7 +236,7 @@ final class c extends rc {
               return true;
             }
           }
-          var2Lifetime1 = qk.field_k;
+          var2Lifetime1 = ProxySocketConnector.field_k;
           for (var3Lifetime1 = 0; var2Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (var4Lifetime1 == param1) {
@@ -260,7 +260,7 @@ final class c extends rc {
         this.b(param3, param2, param0, 0, param1);
     }
 
-    private final o a(byte param0) {
+    private final Sprite a(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -268,9 +268,9 @@ final class c extends rc {
         int var9 = SolKnight.field_L ? 1 : 0;
         int var2 = this.field_x >> 1;
         if (param0 != -119) {
-          return (o) null;
+          return (Sprite) null;
         }
-        o var3 = new o(var2, this.field_x);
+        Sprite var3 = new Sprite(var2, this.field_x);
         cl.a(-98, var3);
         for (var4 = 0; this.field_x > var4; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -280,7 +280,7 @@ final class c extends rc {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
             }
-            mi.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.a(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         mf.e(4096);

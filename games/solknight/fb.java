@@ -24,7 +24,7 @@ final class fb {
           if (param0 != 12239) {
             field_b = (int[]) null;
           }
-          gb.field_i = da.field_d;
+          PacketBuffer.field_i = Archive.field_d;
           if (param2 != 255) {
             if (param2 < 100) {
               a.field_h = mh.a(param2, true, param3);
@@ -36,7 +36,7 @@ final class fb {
             }
             var4 = param1;
             kf.a(1, var4);
-            a.field_h = wk.a((byte) 17, param1);
+            a.field_h = DelegatingCanvas.a((byte) 17, param1);
             return;
           }
           stackIn_12_0 = false;

@@ -7,7 +7,7 @@ final class l {
     static int field_c;
     static int[] field_a;
 
-    final static boolean a(int param0, int param1, int param2, da param3) {
+    final static boolean a(int param0, int param1, int param2, Archive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

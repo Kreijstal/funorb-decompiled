@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wg {
-    static da field_g;
+    static Archive field_g;
     String field_d;
     boolean field_c;
     String[] field_a;
@@ -157,7 +157,7 @@ final class wg {
         }
     }
 
-    final static od a(byte param0, da param1, int param2, int param3) {
+    final static od a(byte param0, Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         od stackIn_6_0 = null;
@@ -194,7 +194,7 @@ final class wg {
           return false;
         }
         if (param1 <= -104) {
-          if (gb.a(param0, 121)) {
+          if (PacketBuffer.a(param0, 121)) {
             return true;
           }
           if (param0 != 45 &&
@@ -206,7 +206,7 @@ final class wg {
           return true;
         }
         field_e = 70;
-        if (gb.a(param0, 121)) {
+        if (PacketBuffer.a(param0, 121)) {
           return true;
         }
         if (param0 == 45) {

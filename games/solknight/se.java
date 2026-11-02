@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends ej {
+final class se extends PcmStream {
     private mf field_u;
     private mf field_r;
     private mf field_v;
@@ -590,7 +590,7 @@ final class se extends ej {
               }
             }
           }
-          if (!gj.field_u) {
+          if (!PcmPlayerService.field_u) {
             stackIn_32_0 = param2;
           } else {
             stackIn_32_0 = param2 << 1;
@@ -612,7 +612,7 @@ final class se extends ej {
                 }
                 this.field_r.a(this.field_w, 0, param2);
                 this.field_v.a(this.field_t, 0, param2);
-                if (gj.field_u) {
+                if (PcmPlayerService.field_u) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
                   stackIn_47_0 = localTemp$0;
@@ -638,7 +638,7 @@ final class se extends ej {
               this.field_t = new int[var6];
             }
             this.field_u.a(this.field_w, 0, param2);
-            if (!gj.field_u) {
+            if (!PcmPlayerService.field_u) {
               stackIn_61_0 = param1;
             } else {
               localTemp$1 = param1 << 1;
@@ -680,11 +680,11 @@ final class se extends ej {
         }
     }
 
-    final ej b() {
+    final PcmStream b() {
         return null;
     }
 
-    final ej a() {
+    final PcmStream a() {
         return null;
     }
 

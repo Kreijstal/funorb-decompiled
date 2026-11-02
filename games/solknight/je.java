@@ -15,7 +15,7 @@ final class je {
         }
     }
 
-    final static void a(o[] param0, int param1, int param2, int param3, byte param4) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3, byte param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -37,14 +37,14 @@ final class je {
             var7 = param0[1].field_q;
             param0[0].d(param1, param2);
             param0[2].d(-var6 + param1 + param3, param2);
-            mi.b(ql.field_q);
-            mi.d(var5_int + param1, param2, param1 + param3 - var6, param0[1].field_r + param2);
+            SoftwareRasterizer.b(ql.field_q);
+            SoftwareRasterizer.d(var5_int + param1, param2, param1 + param3 - var6, param0[1].field_r + param2);
             var8 = param1 + var5_int;
             var9 = param1 + (param3 - var6);
             for (param1 = var8; var9 > param1; param1 = param1 + var7) {
               param0[1].d(param1, param2);
             }
-            mi.a(ql.field_q);
+            SoftwareRasterizer.a(ql.field_q);
             var10 = -88 % ((-22 - param4) / 53);
             return;
           }
@@ -63,7 +63,7 @@ final class je {
         }
     }
 
-    final static o[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = -125 % ((param1 - 30) / 35);
         return md.a(param2, param3, param0, param4, 1, -1, 1, 3, 1);
     }

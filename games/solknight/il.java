@@ -37,8 +37,8 @@ class il extends aa {
 
     wb a(int param0) {
         if (param0 <= 30) {
-          gb var3 = (gb) null;
-          this.a(-115, (gb) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a(-115, (PacketBuffer) null);
           return qb.field_L;
         }
         return qb.field_L;
@@ -52,13 +52,13 @@ class il extends aa {
         return lh.field_l;
     }
 
-    final void a(int param0, gb param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.a(this.field_a, (byte) 89);
           param1.a(111, this.field_b);
           if (param0 != -12518) {
-            gb var4 = (gb) null;
-            this.a(-37, (gb) null);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a(-37, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "il.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

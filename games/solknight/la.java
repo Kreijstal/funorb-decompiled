@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la extends gg {
+final class la extends IntrusiveNode {
     static af field_i;
     static String field_m;
-    static nc field_j;
+    static IntrusiveDeque field_j;
     static boolean field_n;
     int field_h;
     static ff field_l;
@@ -176,16 +176,16 @@ final class la extends gg {
             }
             if (param3) {
               var10.setColor(java.awt.Color.black);
-              var10.fillRect(0, 0, ec.field_h, cf.field_d);
+              var10.fillRect(0, 0, DualLinkNode.field_h, cf.field_d);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (rc.field_r == null) {
-                rc.field_r = dc.field_q.createImage(304, 34);
+              if (UiWidget.field_r == null) {
+                UiWidget.field_r = dc.field_q.createImage(304, 34);
               }
-              var11 = rc.field_r.getGraphics();
+              var11 = UiWidget.field_r.getGraphics();
               var11.setColor(param1);
               var11.drawRect(0, 0, 303, 33);
               var11.fillRect(2, 2, param0 * 3, 30);
@@ -199,11 +199,11 @@ final class la extends gg {
               var11.setFont(ce.field_f);
               var11.setColor(java.awt.Color.white);
               var11.drawString(param4, (304 - param4.length() * 6) / 2, 22);
-              var10.drawImage(rc.field_r, ec.field_h / 2 - 152, -18 + cf.field_d / 2, (java.awt.image.ImageObserver) null);
+              var10.drawImage(UiWidget.field_r, DualLinkNode.field_h / 2 - 152, -18 + cf.field_d / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = ec.field_h / 2 - 152;
+              var7 = DualLinkNode.field_h / 2 - 152;
               var8 = -18 + cf.field_d / 2;
               var10.setColor(param1);
               var10.drawRect(var7, var8, 303, 33);
@@ -220,7 +220,7 @@ final class la extends gg {
             }
             var10.setFont(ce.field_f);
             var10.setColor(java.awt.Color.white);
-            var10.drawString(ba.field_o, ec.field_h / 2 - ba.field_o.length() * 6 / 2, -26 + cf.field_d / 2);
+            var10.drawString(ba.field_o, DualLinkNode.field_h / 2 - ba.field_o.length() * 6 / 2, -26 + cf.field_d / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -251,8 +251,8 @@ final class la extends gg {
     final static void a(int param0, int param1, bl param2) {
         jd var5 = id.field_c;
         var5.e(param1, -2147483648);
-        var5.field_m = var5.field_m + 1;
-        int var4 = var5.field_m;
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
         var5.c(20, 1);
         var5.c(31, param2.field_n);
         var5.c(param0 ^ -104, param2.field_j);
@@ -265,7 +265,7 @@ final class la extends gg {
           var5.b(param2.field_o, false);
           var5.b(param2.field_l, false);
           var5.b(true, var4);
-          var5.b(1, -var4 + var5.field_m);
+          var5.b(1, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "la.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -288,7 +288,7 @@ final class la extends gg {
         this.field_h = param0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, mg param4, hi param5, int param6, int param7, int param8, int param9, int param10, int param11, mg param12, int param13, int param14, int param15, hi param16, int param17, hi param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, hi param5, int param6, int param7, int param8, int param9, int param10, int param11, BitmapFont param12, int param13, int param14, int param15, hi param16, int param17, hi param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -305,8 +305,8 @@ final class la extends gg {
         try {
           lj.a(param14, (byte) 127, param12, param4);
           rj.a(param17, param10, (byte) 106, param19, param0);
-          qk.a(param1, param3, -102);
-          ug.a(param18, param8, param20, param6, (byte) 117, param5);
+          ProxySocketConnector.a(param1, param3, -102);
+          SocketConnector.a(param18, param8, param20, param6, (byte) 117, param5);
           if (param11 > -89) {
             return;
           }

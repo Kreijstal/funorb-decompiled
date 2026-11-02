@@ -5,7 +5,7 @@ final class gh extends af {
     static String field_r;
     private int field_q;
     private int field_s;
-    private o[] field_t;
+    private Sprite[] field_t;
     private int field_p;
 
     public static void d(int param0) {
@@ -36,7 +36,7 @@ final class gh extends af {
         return false;
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -97,10 +97,10 @@ final class gh extends af {
         RuntimeException decompiledCaughtException = null;
         var3 = SolKnight.field_L ? 1 : 0;
         try {
-          var4 = (m) (gg.field_b.a((byte) 51));
+          var4 = (m) (IntrusiveNode.field_b.a((byte) 51));
           while (var4 != null) {
             l.a(param0, param1 ^ -9489, var4);
-            var4 = (m) (gg.field_b.b(-121));
+            var4 = (m) (IntrusiveNode.field_b.b(-121));
           }
           if (param1 == 9543) {
             return;

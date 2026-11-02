@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sl extends gg {
+final class sl extends IntrusiveNode {
     private static int[] field_j;
     private static nk[] field_p;
     private static int field_L;
@@ -39,7 +39,7 @@ final class sl extends gg {
     private static float[] field_k;
     private int field_H;
 
-    final static sl a(da param0, int param1, int param2) {
+    final static sl a(Archive param0, int param1, int param2) {
         try {
           sl var4_ref = null;
           if (!sl.a(param0)) {
@@ -87,7 +87,7 @@ final class sl extends gg {
         return var1;
     }
 
-    private final static boolean a(da param0) {
+    private final static boolean a(Archive param0) {
         byte[] var1 = null;
         if (!field_s) {
           var1 = param0.b(0, 12257, 0);
@@ -343,16 +343,16 @@ final class sl extends gg {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        gb var2 = new gb(param0);
-        this.field_y = var2.e(true);
-        this.field_q = var2.e(true);
-        this.field_i = var2.e(true);
-        this.field_r = var2.e(true);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_y = var2.readInt(true);
+        this.field_q = var2.readInt(true);
+        this.field_i = var2.readInt(true);
+        this.field_r = var2.readInt(true);
         if (this.field_r < 0) {
           this.field_r = ~this.field_r;
           this.field_M = true;
         }
-        int var3 = var2.e(true);
+        int var3 = var2.readInt(true);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -360,7 +360,7 @@ final class sl extends gg {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.j(255);
+            var6_int = var2.readUnsignedByte(255);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
@@ -377,7 +377,7 @@ final class sl extends gg {
         return var0;
     }
 
-    final static sl a(da param0, String param1, String param2) {
+    final static sl a(Archive param0, String param1, String param2) {
         try {
           sl var4_ref = null;
           if (!sl.a(param0)) {

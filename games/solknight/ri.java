@@ -7,7 +7,7 @@ final class ri implements j {
     static String field_d;
     static String field_a;
     private int field_c;
-    private mg field_e;
+    private BitmapFont field_e;
 
     final static boolean a(int param0, int param1) {
         if (param0 != -6873) {
@@ -24,7 +24,7 @@ final class ri implements j {
         }
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -118,7 +118,7 @@ final class ri implements j {
             var9 = param0;
             var10 = param5;
             for (var11 = param6; var11 < param3; var11++) {
-              var12 = pd.field_e[var11];
+              var12 = RasterBuffer.field_e[var11];
               if (!param2) {
                 stackIn_24_0 = l.field_a[var12];
               } else {
@@ -126,13 +126,13 @@ final class ri implements j {
               }
               var13 = stackIn_24_0;
               if (var13 > var7_int) {
-                pd.field_e[var11] = pd.field_e[var8];
+                RasterBuffer.field_e[var11] = RasterBuffer.field_e[var8];
                 if (var13 < var9) {
                   var9 = var13;
                 }
                 incrementValue$0 = var8;
                 var8++;
-                pd.field_e[incrementValue$0] = var12;
+                RasterBuffer.field_e[incrementValue$0] = var12;
               } else {
                 if (var10 < var13) {
                   var10 = var13;
@@ -145,11 +145,11 @@ final class ri implements j {
           }
           for (var7_intLifetime1 = -1 + param3; param6 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param6; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = pd.field_e[var8Lifetime1];
-              var10Lifetime1 = pd.field_e[1 + var8Lifetime1];
-              if (ec.a(var9Lifetime1, -66, param2, var10Lifetime1)) {
-                pd.field_e[var8Lifetime1] = var10Lifetime1;
-                pd.field_e[1 + var8Lifetime1] = var9Lifetime1;
+              var9Lifetime1 = RasterBuffer.field_e[var8Lifetime1];
+              var10Lifetime1 = RasterBuffer.field_e[1 + var8Lifetime1];
+              if (DualLinkNode.a(var9Lifetime1, -66, param2, var10Lifetime1)) {
+                RasterBuffer.field_e[var8Lifetime1] = var10Lifetime1;
+                RasterBuffer.field_e[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }
@@ -167,7 +167,7 @@ final class ri implements j {
         this.field_c = 1;
     }
 
-    ri(mg param0, int param1, int param2) {
+    ri(BitmapFont param0, int param1, int param2) {
         try {
           this.field_e = param0;
           this.field_b = param1;

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eb {
-    static da field_b;
+    static Archive field_b;
     static String[] field_d;
     static String field_a;
     static String field_c;
 
     public static void a(byte param0) {
         if (param0 != 113) {
-          o var2 = (o) null;
-          eb.a(false, (o) null, 11);
+          Sprite var2 = (Sprite) null;
+          eb.a(false, (Sprite) null, 11);
         }
         field_a = null;
         field_d = null;
@@ -18,14 +18,14 @@ final class eb {
         field_b = null;
     }
 
-    final static o a(boolean param0, o param1, int param2) {
+    final static Sprite a(boolean param0, Sprite param1, int param2) {
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
-        o stackIn_14_0 = null;
+        Sprite stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -38,14 +38,14 @@ final class eb {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        o var11 = null;
+        Sprite var11 = null;
         int var8Lifetime1;
         int var9Lifetime1;
         int var9Lifetime2;
         var10 = SolKnight.field_L ? 1 : 0;
         try {
           param1.d();
-          var11 = new o(param1.field_p, param1.field_t / 3);
+          var11 = new Sprite(param1.field_p, param1.field_t / 3);
           var4 = 0;
           var5 = 0;
           var6 = param1.field_v;

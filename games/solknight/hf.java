@@ -11,7 +11,7 @@ final class hf {
     String field_e;
     static int[] field_b;
     private String field_h;
-    static o[] field_c;
+    static Sprite[] field_c;
     int field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int[] param12, int param13, int param14, int param15, int param16) {
@@ -211,7 +211,7 @@ final class hf {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         var37 < hk.field_i) {
-                        da.a(var38, 26, param12, 0, 0, 0, var25, var36Lifetime2 + var37, var29, var21);
+                        Archive.a(var38, 26, param12, 0, 0, 0, var25, var36Lifetime2 + var37, var29, var21);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
@@ -221,9 +221,9 @@ final class hf {
                         var38 = -1 + (-var37 + hk.field_i);
                       }
                       if (var37 < 0) {
-                        da.a(var37 + var38, param6 ^ 1517200866, param12, var40, var41, var39, -(var37 * var40) + var25, var36Lifetime2, -(var41 * var37) + var29, -(var39 * var37) + var21);
+                        Archive.a(var37 + var38, param6 ^ 1517200866, param12, var40, var41, var39, -(var37 * var40) + var25, var36Lifetime2, -(var41 * var37) + var29, -(var39 * var37) + var21);
                       } else {
-                        da.a(var38, 88, param12, var40, var41, var39, var25, var37 + var36Lifetime2, var29, var21);
+                        Archive.a(var38, 88, param12, var40, var41, var39, var25, var37 + var36Lifetime2, var29, var21);
                       }
                     }
                   }
@@ -234,7 +234,7 @@ final class hf {
                   var22 = var22 + var24;
                   var30 = var30 + var32;
                   var25 = var25 + var27;
-                  var36Lifetime2 = var36Lifetime2 + mi.field_a;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_a;
                   var21 = var21 + var23;
                   var17_int = var17_int + var19;
                   var26 = var26 + var28;
@@ -279,7 +279,7 @@ final class hf {
               }
             }
             if (param6 != 1517200784) {
-              field_c = (o[]) null;
+              field_c = (Sprite[]) null;
             }
             if (param4 < 0) {
               param4 = -param4;
@@ -306,14 +306,14 @@ final class hf {
                     var37Lifetime1 = hk.field_i - var36Lifetime1 - 1;
                   }
                   if (var36Lifetime1 >= 0) {
-                    da.a(var37Lifetime1, param6 ^ 1517200837, param12, var39Lifetime1, var40Lifetime1, var38Lifetime1, var25, var36Lifetime1 + var35Lifetime1, var29, var21);
+                    Archive.a(var37Lifetime1, param6 ^ 1517200837, param12, var39Lifetime1, var40Lifetime1, var38Lifetime1, var25, var36Lifetime1 + var35Lifetime1, var29, var21);
                   } else {
-                    da.a(var37Lifetime1 + var36Lifetime1, 112, param12, var39Lifetime1, var40Lifetime1, var38Lifetime1, -(var36Lifetime1 * var39Lifetime1) + var25, var35Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, -(var38Lifetime1 * var36Lifetime1) + var21);
+                    Archive.a(var37Lifetime1 + var36Lifetime1, 112, param12, var39Lifetime1, var40Lifetime1, var38Lifetime1, -(var36Lifetime1 * var39Lifetime1) + var25, var35Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, -(var38Lifetime1 * var36Lifetime1) + var21);
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < hk.field_i) {
-                    da.a(var37Lifetime1, param6 - 1517200669, param12, 0, 0, 0, var25, var36Lifetime1 + var35Lifetime1, var29, var21);
+                    Archive.a(var37Lifetime1, param6 - 1517200669, param12, 0, 0, 0, var25, var36Lifetime1 + var35Lifetime1, var29, var21);
                   }
                 }
               }
@@ -326,7 +326,7 @@ final class hf {
               var18 = var18 + var20;
               var17_int = var17_int + var19;
               var26 = var26 + var28;
-              var35Lifetime1 = var35Lifetime1 + mi.field_a;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_a;
               var22 = var22 + var24;
               var25 = var25 + var27;
               var30 = var30 + var32;
@@ -359,11 +359,11 @@ final class hf {
     final int a(int param0) {
         if (!this.field_k && (this.field_i != 2 ||
           this.field_d <= 0)) {
-          if (~this.field_f == ~nc.field_f) {
+          if (~this.field_f == ~IntrusiveDeque.field_f) {
             return 1;
           }
           if (lh.field_p == 2 &&
-            ad.a((byte) -105, this.field_h)) {
+            BufferedSocket.a((byte) -105, this.field_h)) {
             return 1;
           }
           if (param0 == 1910696752) {
@@ -379,12 +379,12 @@ final class hf {
         try {
           k.a((byte) -35);
           u.field_b.j(param1 ^ 17073);
-          ve.field_a = new bb(me.field_h, (String) null, k.field_b, param0, param2);
+          ClientException.field_a = new bb(me.field_h, (String) null, k.field_b, param0, param2);
           if (param1 != 17072) {
             String var5 = (String) null;
             hf.a(false, -42, false, (String) null);
           }
-          gf.field_cb = new s(u.field_b, ve.field_a);
+          gf.field_cb = new s(u.field_b, ClientException.field_a);
           u.field_b.b(gf.field_cb, param1 ^ 17105);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "hf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -403,7 +403,7 @@ final class hf {
           this.field_g = null;
         }
         this.field_h = vd.field_a;
-        this.field_i = qk.field_m;
+        this.field_i = ProxySocketConnector.field_m;
         this.field_f = q.field_b;
     }
 

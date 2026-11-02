@@ -4,7 +4,7 @@
 final class cj {
     static long field_c;
     static String field_b;
-    static nc field_a;
+    static IntrusiveDeque field_a;
 
     public static void b(int param0) {
         field_a = null;
@@ -31,7 +31,7 @@ final class cj {
           var1_int = 75 / ((param0 - 8) / 49);
           u.field_b.a(-1, th.field_K, true, ee.field_l);
           u.field_b.c(false);
-          while (wk.a((byte) -56)) {
+          while (DelegatingCanvas.a((byte) -56)) {
             u.field_b.a(el.field_n, ta.field_d, (byte) -48);
           }
           if (he.field_b != -1) {
@@ -44,7 +44,7 @@ final class cj {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (gf.field_Z == gb.field_i) {
+          if (gf.field_Z == PacketBuffer.field_i) {
             stackIn_13_0 = 1;
             return stackIn_13_0;
           }
@@ -67,6 +67,6 @@ final class cj {
 
     static {
         field_b = "Accept";
-        field_a = new nc();
+        field_a = new IntrusiveDeque();
     }
 }

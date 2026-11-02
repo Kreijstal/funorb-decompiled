@@ -5,7 +5,7 @@ import java.io.*;
 
 final class qf {
     static String field_f;
-    static ad field_a;
+    static BufferedSocket field_a;
     static String field_g;
     static long field_b;
     static long[] field_c;
@@ -36,24 +36,24 @@ final class qf {
           Throwable decompiledCaughtException = null;
           if (null != lf.field_d && (0 > param1 ||
             ef.field_e == jj.field_Y)) {
-            if (param0 == id.field_c.field_m &&
+            if (param0 == id.field_c.position &&
               je.a(1) > gf.field_Y + 10000L) {
               id.field_c.e(param1, -2147483648);
             }
-            if (id.field_c.field_m > 0) {
+            if (id.field_c.position > 0) {
               try {
-                lf.field_d.a(-28748, 0, id.field_c.field_m, id.field_c.field_l);
+                lf.field_d.a(-28748, 0, id.field_c.position, id.field_c.payload);
                 gf.field_Y = je.a(1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 je.a(false);
               }
-              id.field_c.field_m = 0;
+              id.field_c.position = 0;
             }
             return;
           }
-          id.field_c.field_m = 0;
+          id.field_c.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

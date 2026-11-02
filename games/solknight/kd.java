@@ -3,7 +3,7 @@
  */
 final class kd {
     static int[] field_b;
-    static int field_a;
+    static int currentScreenIndex;
     static int field_c;
 
     public static void a(byte param0) {
@@ -34,7 +34,7 @@ final class kd {
           if (param1 == 101) {
             return;
           }
-          field_a = -108;
+          currentScreenIndex = -108;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

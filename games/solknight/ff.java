@@ -12,7 +12,7 @@ final class ff {
     static String field_d;
 
     final static void b(int param0) {
-        ph.field_f = ec.b(false);
+        ph.field_f = DualLinkNode.b(false);
         u.field_b = new i();
         hl.a(true, 24574, true);
         if (param0 != -13408) {
@@ -39,7 +39,7 @@ final class ff {
             var6 = (String) null;
             ff.a(4, 59, (String[]) null, (String) null);
           }
-          ma.field_o = da.field_d;
+          ma.field_o = Archive.field_d;
           if (255 != param0) {
             if (param0 < 100) {
               vb.field_j = mh.a(param0, true, param3);
@@ -49,7 +49,7 @@ final class ff {
               vb.field_j = mh.a(param0, true, param3);
               return;
             }
-            vb.field_j = wk.a((byte) 17, param2);
+            vb.field_j = DelegatingCanvas.a((byte) 17, param2);
             return;
           }
           stackIn_11_0 = false;
@@ -78,7 +78,7 @@ final class ff {
 
     final static void a(byte param0) {
         int var1 = 107 / ((param0 - 10) / 41);
-        ga.field_E = new nc();
+        ga.field_E = new IntrusiveDeque();
     }
 
     public final String toString() {
@@ -90,7 +90,7 @@ final class ff {
         this.field_a = param0;
     }
 
-    final static void a(int param0, dl param1, boolean param2, byte param3, int param4, int param5, int param6, int param7, String param8, boolean param9, int param10, int param11, int param12, long param13) {
+    final static void a(int param0, PlatformTaskDispatcher param1, boolean param2, byte param3, int param4, int param5, int param6, int param7, String param8, boolean param9, int param10, int param11, int param12, long param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -114,14 +114,14 @@ final class ff {
             ci.field_jb = param10;
             al.field_n = param4;
             jj.field_s = param0;
-            ki.field_C = param5;
+            WidgetContainer.field_C = param5;
             jh.field_f = param12;
-            wk.field_b = param13;
+            DelegatingCanvas.field_b = param13;
             if (qa.field_n.field_b == null) {
               return;
             }
             try {
-              pj.field_D = new hb(qa.field_n.field_b, 64, 0);
+              pj.field_D = new BufferedCacheFile(qa.field_n.field_b, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

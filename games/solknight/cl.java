@@ -24,7 +24,7 @@ final class cl extends a {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          if (!ec.a(30418, var5)) {
+          if (!DualLinkNode.a(30418, var5)) {
             stackIn_3_0 = rg.field_f;
             return stackIn_3_0;
           }
@@ -62,8 +62,8 @@ final class cl extends a {
           field_l = null;
           return;
         }
-        o var2 = (o) null;
-        cl.a(16, (o) null);
+        Sprite var2 = (Sprite) null;
+        cl.a(16, (Sprite) null);
         field_j = null;
         field_k = null;
         field_l = null;
@@ -83,7 +83,7 @@ final class cl extends a {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(param0, (byte) -116) == rg.field_f) {
-            stackIn_3_0 = qh.field_e;
+            stackIn_3_0 = GameKeyHandler.field_e;
             return stackIn_3_0;
           }
           if (!param1) {
@@ -112,13 +112,13 @@ final class cl extends a {
         return (fg[]) null;
     }
 
-    final static void a(int param0, o param1) {
+    final static void a(int param0, Sprite param1) {
         try {
           fl.b((byte) 91);
           if (param0 > -91) {
             cl.e((byte) 101);
           }
-          mi.a(param1.field_v, param1.field_q, param1.field_r);
+          SoftwareRasterizer.a(param1.field_v, param1.field_q, param1.field_r);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "cl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

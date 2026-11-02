@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class pj extends rc {
+class pj extends UiWidget {
     static int field_H;
     boolean field_F;
     static String field_G;
@@ -11,7 +11,7 @@ class pj extends rc {
     static int field_A;
     private boolean field_E;
     private boolean field_C;
-    static hb field_D;
+    static BufferedCacheFile field_D;
 
     final boolean b(boolean param0) {
         if (!param0) {
@@ -24,9 +24,9 @@ class pj extends rc {
         this(param0, ph.field_f.field_i, param1);
     }
 
-    boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, rc param6) {
+    boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
-        da var9 = null;
+        Archive var9 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -45,8 +45,8 @@ class pj extends rc {
             return true;
           }
           if (param2) {
-            var9 = (da) null;
-            pj.a(-9, (da) null);
+            var9 = (Archive) null;
+            pj.a(-9, (Archive) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,7 +63,7 @@ class pj extends rc {
         }
     }
 
-    boolean a(char param0, byte param1, int param2, rc param3) {
+    boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -92,9 +92,9 @@ class pj extends rc {
         }
     }
 
-    final static boolean a(da param0, int param1, da param2, da param3) {
+    final static boolean a(Archive param0, int param1, Archive param2, Archive param3) {
         RuntimeException var4 = null;
-        da var5 = null;
+        Archive var5 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -105,8 +105,8 @@ class pj extends rc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -16925) {
-            var5 = (da) null;
-            pj.a(-17, (da) null);
+            var5 = (Archive) null;
+            pj.a(-17, (Archive) null);
           }
           if (!param2.c((byte) -121)) {
             return false;
@@ -149,7 +149,7 @@ class pj extends rc {
         }
     }
 
-    final void a(int param0, int param1, rc param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           if (null != this.field_n &&
             this.field_n instanceof oj) {
@@ -182,7 +182,7 @@ class pj extends rc {
           this.field_E = false;
           if (null != this.field_n &&
             this.field_n instanceof p) {
-            ((p) (this.field_n)).a(true, (rc) (this), this.field_E);
+            ((p) (this.field_n)).a(true, (UiWidget) (this), this.field_E);
           }
         }
         if (param0 != 0) {
@@ -243,7 +243,7 @@ class pj extends rc {
         }
     }
 
-    boolean a(int param0, rc param1) {
+    boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -260,7 +260,7 @@ class pj extends rc {
           this.field_E = true;
           if (this.field_n != null &&
             this.field_n instanceof p) {
-            ((p) (this.field_n)).a(true, (rc) (this), this.field_E);
+            ((p) (this.field_n)).a(true, (UiWidget) (this), this.field_E);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -336,43 +336,43 @@ class pj extends rc {
         }
     }
 
-    final static da a(int param0, byte param1, int param2, boolean param3, boolean param4) {
+    final static Archive a(int param0, byte param1, int param2, boolean param3, boolean param4) {
         int var5 = 10 / ((-74 - param1) / 37);
         return ab.a(2097152, param0, param2, false, param4, param3);
     }
 
-    final static void a(int param0, da param1) {
-        o var2 = null;
+    final static void a(int param0, Archive param1) {
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new o(param1.a(4, "final_frame.jpg", ""), (java.awt.Component) ((Object) dc.field_q));
+          var2 = new Sprite(param1.a(4, "final_frame.jpg", ""), (java.awt.Component) ((Object) dc.field_q));
           var3 = var2.field_p;
           var4 = var2.field_t;
           fl.b((byte) 91);
-          gg.field_e = new o(var3, var4 * param0 / 4);
-          gg.field_e.a();
+          IntrusiveNode.field_e = new Sprite(var3, var4 * param0 / 4);
+          IntrusiveNode.field_e.a();
           var2.c(0, 0);
-          ql.field_p = new o(var3, -gg.field_e.field_t + var4);
+          ql.field_p = new Sprite(var3, -IntrusiveNode.field_e.field_t + var4);
           ql.field_p.a();
-          var2.c(0, -gg.field_e.field_t);
-          ql.field_p.field_n = gg.field_e.field_t;
+          var2.c(0, -IntrusiveNode.field_e.field_t);
+          ql.field_p.field_n = IntrusiveNode.field_e.field_t;
           mf.e(4096);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "pj.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    void a(int param0, int param1, int param2, rc param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_u != 0 &&
             wb.field_c != this.field_u) {
-            if (this.a(ad.field_m, gb.field_j, param0, param2, -107) &&
+            if (this.a(BufferedSocket.field_m, PacketBuffer.field_j, param0, param2, -107) &&
               wb.field_c == 0) {
-              this.a(true, gb.field_j - param0, this.field_u, -param2 + ad.field_m);
+              this.a(true, PacketBuffer.field_j - param0, this.field_u, -param2 + BufferedSocket.field_m);
             }
-            this.a(ad.field_m, 0, param3, param2, gb.field_j, param0);
+            this.a(BufferedSocket.field_m, 0, param3, param2, PacketBuffer.field_j, param0);
           }
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "pj.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

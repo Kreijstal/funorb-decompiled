@@ -7,15 +7,15 @@ class uf extends af {
     static String field_r;
     static int field_p;
 
-    uf(mg param0, int param1) {
+    uf(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_F, -1, 2147483647, false);
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
         try {
           if (param0 < 113) {
-            rc var7 = (rc) null;
-            this.a((byte) 62, -71, true, -109, (rc) null);
+            UiWidget var7 = (UiWidget) null;
+            this.a((byte) 62, -71, true, -109, (UiWidget) null);
           }
           if (param2) {
             pl.a(true, param4.field_x, param4.field_t, param4.field_j + param1, param3 + param4.field_m);
@@ -35,22 +35,22 @@ class uf extends af {
         var9 = SolKnight.field_L ? 1 : 0;
         if (param6 >= param7) {
           if (param0 > param6) {
-            qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
+            qb.a(param7, param0, param5, param2, param1, param3, 48, SoftwareRasterizer.field_f, param6);
           } else {
             if (param7 >= param0) {
-              qb.a(param0, param6, param3, param2, param5, param1, 95, mi.field_f, param7);
+              qb.a(param0, param6, param3, param2, param5, param1, 95, SoftwareRasterizer.field_f, param7);
             } else {
-              qb.a(param7, param6, param1, param2, param5, param3, 75, mi.field_f, param0);
+              qb.a(param7, param6, param1, param2, param5, param3, 75, SoftwareRasterizer.field_f, param0);
             }
           }
         } else {
           if (param0 > param7) {
-            qb.a(param6, param0, param3, param2, param1, param5, 98, mi.field_f, param7);
+            qb.a(param6, param0, param3, param2, param1, param5, 98, SoftwareRasterizer.field_f, param7);
           } else {
             if (param0 > param6) {
-              qb.a(param6, param7, param1, param2, param3, param5, 38, mi.field_f, param0);
+              qb.a(param6, param7, param1, param2, param3, param5, 38, SoftwareRasterizer.field_f, param0);
             } else {
-              qb.a(param0, param7, param5, param2, param3, param1, 73, mi.field_f, param6);
+              qb.a(param0, param7, param5, param2, param3, param1, 73, SoftwareRasterizer.field_f, param6);
             }
           }
         }
@@ -67,7 +67,7 @@ class uf extends af {
         ff[] var5;
         int var3Lifetime1;
         var4 = SolKnight.field_L ? 1 : 0;
-        var5 = qh.a(-89);
+        var5 = GameKeyHandler.a(-89);
         var2 = var5;
         if (param1 == -121) {
           for (var3 = 0; var5.length > var3; var3++) {
@@ -185,23 +185,23 @@ class uf extends af {
           if (null != pj.field_D) {
             try {
               pj.field_D.a(0L, (byte) 45);
-              pj.field_D.a(te.field_N.field_l, -20291, 24, te.field_N.field_m);
+              pj.field_D.a(te.field_N.payload, -20291, 24, te.field_N.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               if (param0 == 31911) {
-                te.field_N.field_m = te.field_N.field_m + 24;
+                te.field_N.position = te.field_N.position + 24;
                 return;
               }
               field_q = -95;
-              te.field_N.field_m = te.field_N.field_m + 24;
+              te.field_N.position = te.field_N.position + 24;
               return;
             }
           }
           if (param0 != 31911) {
             field_q = -95;
           }
-          te.field_N.field_m = te.field_N.field_m + 24;
+          te.field_N.position = te.field_N.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

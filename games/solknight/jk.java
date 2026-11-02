@@ -5,10 +5,10 @@ final class jk extends ci implements ka {
     private boolean field_tb;
     private rf field_vb;
     private boolean field_wb;
-    static da field_ub;
+    static Archive field_ub;
 
     jk(i param0, rf param1) {
-        super(param0, uc.field_g, rc.field_p, false, false);
+        super(param0, uc.field_g, UiWidget.field_p, false, false);
         try {
           this.field_vb = param1;
         } catch (RuntimeException runtimeException) {
@@ -19,7 +19,7 @@ final class jk extends ci implements ka {
     public static void n(int param0) {
         field_ub = null;
         if (param0 != 6) {
-          field_ub = (da) null;
+          field_ub = (Archive) null;
         }
     }
 
@@ -81,7 +81,7 @@ final class jk extends ci implements ka {
             }
             if (3 != param2.field_b) {
               if (6 == param2.field_b) {
-                var5.a(9, ik.field_d, 1);
+                var5.a(9, SecondaryNodeDeque.field_d, 1);
               }
             } else {
               var5.a(7, qd.field_a, 1);
@@ -131,7 +131,7 @@ final class jk extends ci implements ka {
           if (this.field_tb) {
             return super.h(1784);
           }
-          var2 = r.b(83);
+          var2 = IsaacRandom.b(83);
           if (var2 != null) {
             this.a(false, (byte) 97, var2);
             return super.h(1784);
@@ -144,7 +144,7 @@ final class jk extends ci implements ka {
         if (this.field_tb) {
           return super.h(1784);
         }
-        var2Lifetime1 = r.b(83);
+        var2Lifetime1 = IsaacRandom.b(83);
         if (var2Lifetime1 != null) {
           this.a(false, (byte) 97, var2Lifetime1);
           return super.h(1784);
@@ -154,7 +154,7 @@ final class jk extends ci implements ka {
 
     final static int i(byte param0) {
         if (param0 < 112) {
-          field_ub = (da) null;
+          field_ub = (Archive) null;
           return ak.field_a;
         }
         return ak.field_a;

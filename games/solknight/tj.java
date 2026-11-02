@@ -11,7 +11,7 @@ final class tj {
     private int[][][] field_h;
     private static float field_c;
 
-    final void a(gb param0, vi param1) {
+    final void a(PacketBuffer param0, vi param1) {
         int var3;
         int var4;
         int var5;
@@ -20,17 +20,17 @@ final class tj {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.j(255);
+        var3 = param0.readUnsignedByte(255);
         this.field_e[0] = var3 >> 4;
         this.field_e[1] = var3 & 15;
         if (var3 != 0) {
-          this.field_g[0] = param0.i(-121);
-          this.field_g[1] = param0.i(-124);
-          var4 = param0.j(255);
+          this.field_g[0] = param0.readUnsignedShort(-121);
+          this.field_g[1] = param0.readUnsignedShort(-124);
+          var4 = param0.readUnsignedByte(255);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_e[var5]; var6++) {
-              this.field_d[var5][0][var6] = param0.i(119);
-              this.field_h[var5][0][var6] = param0.i(12);
+              this.field_d[var5][0][var6] = param0.readUnsignedShort(119);
+              this.field_h[var5][0][var6] = param0.readUnsignedShort(12);
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
@@ -41,8 +41,8 @@ final class tj {
                 this.field_d[var5Lifetime1][1][var7] = this.field_d[var5Lifetime1][0][var7];
                 this.field_h[var5Lifetime1][1][var7] = this.field_h[var5Lifetime1][0][var7];
               } else {
-                this.field_d[var5Lifetime1][1][var7] = param0.i(36);
-                this.field_h[var5Lifetime1][1][var7] = param0.i(-103);
+                this.field_d[var5Lifetime1][1][var7] = param0.readUnsignedShort(36);
+                this.field_h[var5Lifetime1][1][var7] = param0.readUnsignedShort(-103);
               }
               var7++;
             }

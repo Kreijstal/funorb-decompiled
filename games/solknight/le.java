@@ -8,7 +8,7 @@ final class le {
     static volatile int field_f;
     int[] field_c;
     int field_e;
-    static o[] field_d;
+    static Sprite[] field_d;
 
     final static void a(int param0, String param1, String param2) {
         RuntimeException var3 = null;
@@ -22,8 +22,8 @@ final class le {
           if (null != ah.field_e) {
             ah.field_e.f(true);
           }
-          ve.field_a = new bb(param1, param2, false, true, true);
-          gf.field_cb.c(-3399, ve.field_a);
+          ClientException.field_a = new bb(param1, param2, false, true, true);
+          gf.field_cb.c(-3399, ClientException.field_a);
           if (param0 <= -11) {
             return;
           }
@@ -86,7 +86,7 @@ final class le {
         if (!param1) {
           return this.field_c.length - 1;
         }
-        field_d = (o[]) null;
+        field_d = (Sprite[]) null;
         return this.field_c.length - 1;
     }
 
@@ -108,17 +108,17 @@ final class le {
     }
 
     final static void b(int param0) {
-        m var1 = (m) (gg.field_b.a((byte) 51));
+        m var1 = (m) (IntrusiveNode.field_b.a((byte) 51));
         if (var1 == null) {
           je.a(false);
           return;
         }
         jd var2 = te.field_N;
-        var2.e(true);
-        var2.e(true);
-        var2.e(true);
-        var2.e(true);
-        var1.c(10);
+        var2.readInt(true);
+        var2.readInt(true);
+        var2.readInt(true);
+        var2.readInt(true);
+        var1.unlink(10);
         if (param0 == 873698625) {
           return;
         }

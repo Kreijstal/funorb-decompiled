@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ua extends ki implements ka {
+final class ua extends WidgetContainer implements ka {
     static String[] field_M;
     private ge field_K;
     static String field_E;
-    static o[] field_F;
+    static Sprite[] field_F;
     private pj[] field_J;
     static mf field_I;
     static int field_L;
     static int field_N;
-    static mg field_G;
+    static BitmapFont field_G;
     static int field_H;
     private String[] field_D;
 
     final static int a(int param0, byte param1) {
         int var3 = SolKnight.field_L ? 1 : 0;
         qf.field_a = null;
-        ug.field_f = 0;
+        SocketConnector.field_f = 0;
         if (param1 != -86) {
           field_L = -67;
         }
-        ik.field_b = null;
+        SecondaryNodeDeque.field_b = null;
         int var2 = ue.field_a;
         ue.field_a = vc.field_e;
         if (param0 == 51) {
@@ -49,7 +49,7 @@ final class ua extends ki implements ka {
         return -1;
     }
 
-    final boolean a(char param0, byte param1, int param2, rc param3) {
+    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -99,7 +99,7 @@ final class ua extends ki implements ka {
         if (param0 > -92) {
           ua.a((byte) 57);
         }
-        hc.a(lf.field_e, false, ug.field_d, true);
+        hc.a(lf.field_e, false, SocketConnector.field_d, true);
         ga.field_G = true;
     }
 
@@ -108,7 +108,7 @@ final class ua extends ki implements ka {
         if (param1 != 0) {
           return;
         }
-        mg var5 = field_G;
+        BitmapFont var5 = field_G;
         if (this.field_D != null) {
           var5.a(nb.field_d, param2 + this.field_m, this.field_j + param0, this.field_t, 20, 16777215, -1, 0, 0, var5.field_s + var5.field_F);
         }
@@ -139,8 +139,8 @@ final class ua extends ki implements ka {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        gb var16 = null;
-        gb var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -152,10 +152,10 @@ final class ua extends ki implements ka {
         int var4Lifetime5;
         var15 = SolKnight.field_L ? 1 : 0;
         try {
-          var16 = new gb(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_m = -2 + param1.length;
-          nb.field_c = var17.i(39);
+          var17.position = -2 + param1.length;
+          nb.field_c = var17.readUnsignedShort(39);
           qf.field_d = new int[nb.field_c];
           rg.field_e = new boolean[nb.field_c];
           ph.field_h = new int[nb.field_c];
@@ -163,31 +163,31 @@ final class ua extends ki implements ka {
           sa.field_l = new int[nb.field_c];
           jc.field_c = new byte[nb.field_c][];
           uf.field_s = new byte[nb.field_c][];
-          var17.field_m = -(nb.field_c * 8) + param1.length - 7;
-          kl.field_a = var17.i(param0 ^ -8);
-          we.field_e = var17.i(28);
-          var3 = 1 + (255 & var17.j(255));
+          var17.position = -(nb.field_c * 8) + param1.length - 7;
+          MouseInputHandler.field_a = var17.readUnsignedShort(param0 ^ -8);
+          we.field_e = var17.readUnsignedShort(28);
+          var3 = 1 + (255 & var17.readUnsignedByte(255));
           for (var4 = 0; nb.field_c > var4; var4++) {
-            ph.field_h[var4] = var16.i(-116);
+            ph.field_h[var4] = var16.readUnsignedShort(-116);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < nb.field_c; var4Lifetime1++) {
-            qf.field_d[var4Lifetime1] = var17.i(-110);
+            qf.field_d[var4Lifetime1] = var17.readUnsignedShort(-110);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < nb.field_c; var4Lifetime2++) {
-            sa.field_l[var4Lifetime2] = var17.i(11);
+            sa.field_l[var4Lifetime2] = var17.readUnsignedShort(11);
           }
           for (var4Lifetime3 = 0; nb.field_c > var4Lifetime3; var4Lifetime3++) {
-            uj.field_b[var4Lifetime3] = var17.i(param0 + 40);
+            uj.field_b[var4Lifetime3] = var17.readUnsignedShort(param0 + 40);
           }
-          var17.field_m = param1.length + (-7 - 8 * nb.field_c + 3 - 3 * var3);
+          var17.position = param1.length + (-7 - 8 * nb.field_c + 3 - 3 * var3);
           ig.field_H = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            ig.field_H[var4Lifetime4] = var17.b(false);
+            ig.field_H[var4Lifetime4] = var17.readUnsignedMedium(false);
             if (ig.field_H[var4Lifetime4] == 0) {
               ig.field_H[var4Lifetime4] = 1;
             }
           }
-          var17.field_m = 0;
+          var17.position = 0;
           for (var4Lifetime5 = param0; var4Lifetime5 < nb.field_c; var4Lifetime5++) {
             var5 = sa.field_l[var4Lifetime5];
             var6 = uj.field_b[var4Lifetime5];
@@ -201,14 +201,14 @@ final class ua extends ki implements ka {
             var9 = var19;
             uf.field_s[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.j(255);
+            var11 = var17.readUnsignedByte(255);
             if (0 == (var11 & 1)) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.a((byte) -14);
+                var8[var12] = var17.readByte((byte) -14);
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$1 = var17.a((byte) -14);
+                  dupTemp$1 = var17.readByte((byte) -14);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_29_0 = var10;
@@ -223,13 +223,13 @@ final class ua extends ki implements ka {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var12 + var13 * var5] = var17.a((byte) -14);
+                  var8[var12 + var13 * var5] = var17.readByte((byte) -14);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var17.a((byte) -14);
+                    dupTemp$0 = var17.readByte((byte) -14);
                     var9[var12 + var13 * var5] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_44_0 = var10;
@@ -331,9 +331,9 @@ final class ua extends ki implements ka {
 
     final static mb h(int param0) {
         if (param0 != 0) {
-          field_F = (o[]) null;
+          field_F = (Sprite[]) null;
         }
-        return new mb(sg.b(-1), he.a(71));
+        return new mb(RandomAccessCacheFile.b(-1), he.a(71));
     }
 
     ua(ge param0) {

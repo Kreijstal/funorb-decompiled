@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class di extends gg {
+final class di extends IntrusiveNode {
     static String[] field_j;
     int field_o;
     static kb field_l;
     int[] field_p;
     int[] field_r;
     int field_h;
-    nj[] field_k;
+    PlatformTask[] field_k;
     int[] field_m;
     byte[][][] field_q;
-    nj[] field_s;
+    PlatformTask[] field_s;
     static ff field_i;
     private static long[] field_n;
 

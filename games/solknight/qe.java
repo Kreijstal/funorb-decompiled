@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends ki implements re, ka {
+final class qe extends WidgetContainer implements re, ka {
     private pj field_H;
     static int[] field_G;
     static String field_F;
@@ -111,7 +111,7 @@ final class qe extends ki implements re, ka {
         }
     }
 
-    final boolean a(char param0, byte param1, int param2, rc param3) {
+    final boolean a(char param0, byte param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -177,8 +177,8 @@ final class qe extends ki implements re, ka {
 
     private final String e(boolean param0) {
         if (!param0) {
-          rc var3 = (rc) null;
-          this.a('￘', (byte) -57, -43, (rc) null);
+          UiWidget var3 = (UiWidget) null;
+          this.a('￘', (byte) -57, -43, (UiWidget) null);
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";

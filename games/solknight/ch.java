@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ch {
-    static da field_a;
+    static Archive field_a;
     static int field_b;
 
     final static void a(java.awt.Component param0, int param1) {

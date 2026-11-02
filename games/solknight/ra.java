@@ -6,12 +6,12 @@ final class ra {
     private fe[] field_a;
     private int field_b;
 
-    final static ra a(da param0, int param1, int param2) {
+    final static ra a(Archive param0, int param1, int param2) {
         byte[] var3 = param0.b(param1, 12257, param2);
         if (var3 == null) {
           return null;
         }
-        return new ra(new gb(var3));
+        return new ra(new PacketBuffer(var3));
     }
 
     private final byte[] a() {
@@ -59,27 +59,27 @@ final class ra {
         return new sh(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
-    final static ra a(da param0, String param1, String param2) {
+    final static ra a(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(4, param1, param2);
         if (var3 == null) {
           return null;
         }
-        return new ra(new gb(var3));
+        return new ra(new PacketBuffer(var3));
     }
 
-    private ra(gb param0) {
+    private ra(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new fe[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.j(255);
+          var3 = param0.readUnsignedByte(255);
           if (var3 != 0) {
-            param0.field_m = param0.field_m - 1;
+            param0.position = param0.position - 1;
             this.field_a[var2] = new fe();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_c = param0.i(59);
-        this.field_b = param0.i(-113);
+        this.field_c = param0.readUnsignedShort(59);
+        this.field_b = param0.readUnsignedShort(-113);
     }
 }

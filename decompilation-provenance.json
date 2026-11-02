@@ -11010,6 +11010,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "solknight": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/solknight"
+      },
+      "inputTreeSha256": "ae5b664ddf5bd1b4183b790eaf00a0a79094cc42c115d74a46be3e1fd330195e",
+      "sources": {
+        "files": 294,
+        "sha256": "d5a8e1e8980cfe6eb0349ce591fd73840d744cb455ccbd6dfcb5fbc0f67d8b6d"
+      },
+      "dictionary": {
+        "path": "decompilation/solknight-naming.json",
+        "sha256": "370ef12dcb85f1a8cb0664252c48dcf99d5d352038e1bd5111f927d0cea34fec"
+      },
+      "readingGuide": {
+        "path": "games/solknight/README.md",
+        "sha256": "a841535010106a72a8fb977030919ba5fb3e7cf9434a982d475aa87bd5790fd0"
+      },
+      "rulesSha256": "b45e2c487fa37d4b84e48ca9cc5a466d1a2ad7c0e3b61b22a9673befd6f48acd",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12520,6 +12544,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 294,
+          "sha256": "d5a8e1e8980cfe6eb0349ce591fd73840d744cb455ccbd6dfcb5fbc0f67d8b6d"
         }
       },
       "starcannon": {

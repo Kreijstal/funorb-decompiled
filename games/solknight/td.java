@@ -15,9 +15,9 @@ final class td implements j {
     private int field_a;
     private int field_c;
     private int field_d;
-    private mg field_g;
+    private BitmapFont field_g;
     private int field_k;
-    static o[] field_e;
+    static Sprite[] field_e;
     private int field_b;
 
     final static void a(int param0) {
@@ -34,7 +34,7 @@ final class td implements j {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        da var13 = null;
+        Archive var13 = null;
         jd var14 = null;
         int var15 = 0;
         jd var16 = null;
@@ -47,7 +47,7 @@ final class td implements j {
         try {
           var14 = te.field_N;
           var16 = var14;
-          var2 = var16.j(255);
+          var2 = var16.readUnsignedByte(255);
           var3 = (dj) (sa.field_n.a((byte) 51));
           while (var3 != null) {
             if (var3.field_i != var2) {
@@ -60,12 +60,12 @@ final class td implements j {
             je.a(false);
             return;
           }
-          var4 = var16.j(255);
+          var4 = var16.readUnsignedByte(255);
           if (0 != var4) {
             var5 = var3.field_h;
             cg.field_a[0] = ne.field_g;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              cg.field_a[var6_int] = var14.h(20);
+              cg.field_a[var6_int] = var14.readString(20);
             }
             ld.c(var5, var4, 42);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -83,7 +83,7 @@ final class td implements j {
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
-              var11 = pd.field_e[var9];
+              var11 = RasterBuffer.field_e[var9];
               var6[0][var10] = cg.field_a[var11];
               var20[0][var10 * 4] = qg.field_c[var11];
               var20[0][var10 * 4 + 1] = eh.field_a[var11];
@@ -101,7 +101,7 @@ final class td implements j {
             var15 = 0;
             var10Lifetime1 = var15;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = pd.field_e[var9Lifetime1 + var5];
+              var11Lifetime1 = RasterBuffer.field_e[var9Lifetime1 + var5];
               var6[1][var15] = cg.field_a[var11Lifetime1];
               var20[1][4 * var15] = qg.field_c[var11Lifetime1];
               var20[1][1 + 4 * var15] = eh.field_a[var11Lifetime1];
@@ -117,11 +117,11 @@ final class td implements j {
             }
           }
           if (param0 > -125) {
-            var13 = (da) null;
-            td.a(25, (da) null);
-            var3.c(10);
+            var13 = (Archive) null;
+            td.a(25, (Archive) null);
+            var3.unlink(10);
           } else {
-            var3.c(10);
+            var3.unlink(10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -135,8 +135,8 @@ final class td implements j {
         return param0 | param1;
     }
 
-    public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
-        rc stackIn_3_0 = null;
+    public final void a(byte param0, int param1, boolean param2, int param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -149,7 +149,7 @@ final class td implements j {
         tg var11 = null;
         try {
           if (param4 instanceof tg) {
-            stackIn_3_0 = (rc) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }
@@ -158,20 +158,20 @@ final class td implements j {
             param2 = param2 & var11.field_B;
           }
           var7 = 5592405;
-          mi.b(param4.field_m + param3, param4.field_j + param1, param4.field_t, param4.field_x, this.field_f);
+          SoftwareRasterizer.b(param4.field_m + param3, param4.field_j + param1, param4.field_t, param4.field_x, this.field_f);
           if (param2) {
             var7 = 16777215;
           }
           var8 = this.field_c + (param3 + param4.field_m);
           var9 = param1 - (-param4.field_j - this.field_o);
-          mi.d(var8, var9, this.field_k, this.field_j, 5592405);
-          mi.b(var8, var9, this.field_k, this.field_j, var7);
+          SoftwareRasterizer.d(var8, var9, this.field_k, this.field_j, 5592405);
+          SoftwareRasterizer.b(var8, var9, this.field_k, this.field_j, var7);
           if (param0 <= 113) {
-            field_e = (o[]) null;
+            field_e = (Sprite[]) null;
           }
           if (var11.field_F) {
-            mi.e(var8, var9, this.field_k + var8, var9 + this.field_j, 1);
-            mi.e(this.field_k + var8, var9, var8, this.field_j + var9, 1);
+            SoftwareRasterizer.e(var8, var9, this.field_k + var8, var9 + this.field_j, 1);
+            SoftwareRasterizer.e(this.field_k + var8, var9, var8, this.field_j + var9, 1);
           }
           if (null != this.field_g) {
             var10 = this.field_k + this.field_c + this.field_p;
@@ -192,7 +192,7 @@ final class td implements j {
         }
     }
 
-    final static boolean a(int param0, da param1) {
+    final static boolean a(int param0, Archive param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -229,7 +229,7 @@ final class td implements j {
         field_e = null;
     }
 
-    td(mg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    td(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_d = 1;
         this.field_b = 1;
         try {
