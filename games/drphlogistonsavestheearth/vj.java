@@ -220,7 +220,7 @@ final class vj {
             stackIn_35_0 = var11_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param3 != null);
-            throw ie.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(th.a(var9, (byte) 127, var9.length)).append(" ").append(th.a(var9, (byte) 125, -2 + var9.length)).append(" ").append(this.field_b.field_j[param2]).append(" ").append(this.field_b.field_p).toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(th.a(var9, (byte) 127, var9.length)).append(" ").append(th.a(var9, (byte) 125, -2 + var9.length)).append(" ").append(this.field_b.field_j[param2]).append(" ").append(this.field_b.field_p).toString());
           }
           if (this.field_c) {
             this.field_h[param2] = null;
@@ -346,7 +346,7 @@ final class vj {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
         }
     }
 
@@ -381,7 +381,7 @@ final class vj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -444,7 +444,7 @@ final class vj {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ie.a((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -480,7 +480,7 @@ final class vj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -563,7 +563,7 @@ final class vj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -690,7 +690,7 @@ final class vj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -765,7 +765,7 @@ final class vj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -802,7 +802,7 @@ final class vj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -839,7 +839,7 @@ final class vj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -868,7 +868,7 @@ final class vj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -926,7 +926,7 @@ final class vj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -952,7 +952,7 @@ final class vj {
           }
           try {
             if (hf.field_C == 0) {
-              tc.field_e = oi.field_e.a(g.field_r, j.field_ib, 35);
+              tc.field_e = oi.field_e.a(g.field_r, LevelSession.field_ib, 35);
               hf.field_C = hf.field_C + 1;
             }
             if (hf.field_C == 1) {
@@ -967,7 +967,7 @@ final class vj {
             if (hf.field_C == 2) {
               ea.field_a = new qe((java.net.Socket) (tc.field_e.field_g), oi.field_e);
               var3 = new od(13);
-              q.a(tb.field_a, gi.field_c, 26800, pk.field_q, var3);
+              q.a(tb.field_a, IntrusiveNode.field_c, 26800, pk.field_q, var3);
               var3.c(15, (byte) -92);
               var3.a(mi.field_j, (byte) 107);
               ea.field_a.a(13, -30537, var3.field_h, 0);
@@ -1025,7 +1025,7 @@ final class vj {
           this.field_c = param1 ? true : false;
           this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -61,7 +61,7 @@ final class ik {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class ik {
         if (200 < vb.field_n) {
           var5 = (250 - vb.field_n << 8) / 50;
         }
-        aj.a(bb.field_f, (byte) 91);
+        MouseInput.a(bb.field_f, (byte) 91);
         uc.b();
         wj.c();
         ah.g((byte) -104);
@@ -309,7 +309,7 @@ final class ik {
                 this.field_g.a(6, 0, 18017, ma.field_yb);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param4 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -325,7 +325,7 @@ final class ik {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var10 = (16711680 & ma.field_yb[6] << 16) + ((ma.field_yb[7] & 255) << 8) + (255 & ma.field_yb[8]);
                         var12 = (ma.field_yb[5] & 255) + (65280 & ma.field_yb[4] << 8);
@@ -341,7 +341,7 @@ final class ik {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var10 = (ma.field_yb[6] & 255) + (((255 & ma.field_yb[4]) << 16) + ((ma.field_yb[5] & 255) << 8));
                         var13 = 255 & ma.field_yb[7];
@@ -432,7 +432,7 @@ final class ik {
             } else {
               stackIn_77_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -451,7 +451,7 @@ final class ik {
           this.field_g = param2;
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ik.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ik.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -478,7 +478,7 @@ final class ik {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

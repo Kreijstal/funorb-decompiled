@@ -17,7 +17,7 @@ final class sg {
           hg.a(param1, -1, "");
           bf.a(63, param1);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "sg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "sg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

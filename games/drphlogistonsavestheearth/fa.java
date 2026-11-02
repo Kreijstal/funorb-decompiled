@@ -40,7 +40,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
           param3.prepareImage(this.field_h, (java.awt.image.ImageObserver) (this));
           this.a(119);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "fa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "fa.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fa.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
           param0.setColorModel(this.field_i);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "fa.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fa.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
             this.isConsumer((java.awt.image.ImageConsumer) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -361,7 +361,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
         }
     }
 

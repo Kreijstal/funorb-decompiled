@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am extends ic {
+final class am extends PcmStream {
     static int field_p;
     static od field_n;
     private ug field_s;
@@ -15,7 +15,7 @@ final class am extends ic {
         return 0;
     }
 
-    final ic c() {
+    final PcmStream c() {
         cc var1;
         int var2;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -25,12 +25,12 @@ final class am extends ic {
             return null;
           }
           if (var1.field_D != null) {
-            return (ic) ((Object) var1.field_D);
+            return (PcmStream) ((Object) var1.field_D);
           }
         }
     }
 
-    final ic a() {
+    final PcmStream a() {
         cc var1 = (cc) (this.field_q.h(-11151));
         if (var1 == null) {
           return null;
@@ -38,7 +38,7 @@ final class am extends ic {
         if (var1.field_D == null) {
           return this.c();
         }
-        return (ic) ((Object) var1.field_D);
+        return (PcmStream) ((Object) var1.field_D);
     }
 
     final static void a(int param0, int param1, int param2, nh[] param3, int param4, int param5) {
@@ -202,7 +202,7 @@ final class am extends ic {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class am extends ic {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ag var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
@@ -267,9 +267,9 @@ final class am extends ic {
               }
               var11 = param2.field_D;
               if (this.field_s.field_E[param2.field_u] == 0) {
-                param2.field_D = ag.b(param2.field_C, var11.j(), var11.e(), var11.h());
+                param2.field_D = PcmSampleStream.b(param2.field_C, var11.j(), var11.e(), var11.h());
               } else {
-                param2.field_D = ag.b(param2.field_C, var11.j(), 0, var11.h());
+                param2.field_D = PcmSampleStream.b(param2.field_C, var11.j(), 0, var11.h());
                 stackIn_13_0 = this.field_s;
                 stackIn_13_1 = (cc) (param2);
                 stackIn_14_2 = !(param2.field_o.field_p[param2.field_F] >= 0);
@@ -305,7 +305,7 @@ final class am extends ic {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -328,13 +328,13 @@ final class am extends ic {
             param1.field_i = param2 * var4_int + param1.field_i & 1048575;
             if (var5 <= param2) {
               if (this.field_s.field_E[param1.field_u] != 0) {
-                param1.field_D = ag.b(param1.field_C, param1.field_D.j(), 0, param1.field_D.h());
+                param1.field_D = PcmSampleStream.b(param1.field_C, param1.field_D.j(), 0, param1.field_D.h());
                 stackIn_9_0 = this.field_s;
                 stackIn_9_1 = (cc) (param1);
                 stackIn_10_2 = !(0 <= param1.field_o.field_p[param1.field_F]);
                 ((ug) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2, (byte) -102);
               } else {
-                param1.field_D = ag.b(param1.field_C, param1.field_D.j(), param1.field_D.e(), param1.field_D.h());
+                param1.field_D = PcmSampleStream.b(param1.field_C, param1.field_D.j(), param1.field_D.e(), param1.field_D.h());
               }
               if (0 > param1.field_o.field_p[param1.field_F]) {
                 param1.field_D.f(-1);
@@ -357,7 +357,7 @@ final class am extends ic {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -403,7 +403,7 @@ final class am extends ic {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -464,7 +464,7 @@ final class am extends ic {
         try {
           this.field_s = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "am.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "am.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

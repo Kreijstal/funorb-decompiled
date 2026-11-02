@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ai extends uh {
+final class ai extends DualLinkNode {
     static String field_v;
     int[] field_D;
     private int[] field_E;
@@ -125,7 +125,7 @@ final class ai extends uh {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class ai extends uh {
         int var2 = 83 % ((-66 - param0) / 46);
         if (this.field_D != null) {
           for (var3 = 0; this.field_D.length > var3; var3++) {
-            this.field_D[var3] = li.a(this.field_D[var3], 32768);
+            this.field_D[var3] = GameAppletShell.a(this.field_D[var3], 32768);
           }
         }
     }
@@ -193,7 +193,7 @@ final class ai extends uh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

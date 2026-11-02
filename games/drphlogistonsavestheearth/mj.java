@@ -8,7 +8,7 @@ class mj extends l {
     static String field_t;
 
     mj(int param0) {
-        this(uh.field_i, param0);
+        this(DualLinkNode.field_i, param0);
     }
 
     final static String a(byte param0, byte[] param1) {
@@ -33,7 +33,7 @@ class mj extends l {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -59,7 +59,7 @@ class mj extends l {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            aj.a(param2.field_w, param4 + param2.field_o, param2.field_m + param3, param2.field_k, 60);
+            MouseInput.a(param2.field_w, param4 + param2.field_o, param2.field_m + param3, param2.field_k, 60);
           }
           super.a(param0, 127, param2, param3, param4);
           if (param1 >= 94) {
@@ -77,7 +77,7 @@ class mj extends l {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

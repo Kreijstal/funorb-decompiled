@@ -121,11 +121,11 @@ class lk extends u {
             qa.field_J[var4Lifetime3] = var17.j(-788751192);
           }
           var17.field_j = -(3 * var3) + (3 + (-7 + param0.length) - bd.field_M * 8);
-          aj.field_a = new int[var3];
+          MouseInput.field_a = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            aj.field_a[var4Lifetime4] = var17.g(-1);
-            if (aj.field_a[var4Lifetime4] == 0) {
-              aj.field_a[var4Lifetime4] = 1;
+            MouseInput.field_a[var4Lifetime4] = var17.g(-1);
+            if (MouseInput.field_a[var4Lifetime4] == 0) {
+              MouseInput.field_a[var4Lifetime4] = 1;
             }
           }
           var17.field_j = 0;
@@ -199,7 +199,7 @@ class lk extends u {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ class lk extends u {
           param0.a(this.field_g, (byte) 127);
           param0.b(1, this.field_h);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "lk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "lk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -220,7 +220,7 @@ class lk extends u {
           this.field_g = param0;
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "lk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "lk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

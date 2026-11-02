@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class f extends gi {
+final class f extends IntrusiveNode {
     boolean field_l;
     int field_j;
     static String field_m;
@@ -70,7 +70,7 @@ final class f extends gi {
               tl.field_O = i.field_b;
             }
             if (i.field_b == tl.field_O &&
-              jd.a(1, 5929)) {
+              LoginMenuScreen.a(1, 5929)) {
               var7 = dh.field_N.l(31760);
               if (var7 == 0) {
                 tl.field_O = bd.field_T;
@@ -82,7 +82,7 @@ final class f extends gi {
               dh.field_N.field_j = 0;
             }
             if (tl.field_O == bd.field_T &&
-              jd.a(8, 5929)) {
+              LoginMenuScreen.a(8, 5929)) {
               s.field_c = dh.field_N.a((byte) -53);
               dh.field_N.field_j = 0;
               le.a(dl.field_H, param5, param0, param2, 16);
@@ -90,7 +90,7 @@ final class f extends gi {
             }
             boolean decompiledFrameRemainder0 = true;
             if (tl.field_O == uf.field_c &&
-              jd.a(1, 5929)) {
+              LoginMenuScreen.a(1, 5929)) {
               var7Lifetime1 = dh.field_N.l(31760);
               dh.field_N.field_j = 0;
               cj.field_i = null;
@@ -115,7 +115,7 @@ final class f extends gi {
               }
             }
             if (sg.field_d == tl.field_O &&
-              li.d(-29427)) {
+              GameAppletShell.d(-29427)) {
               ld.field_b = dh.field_N.a((byte) -53);
               nj.field_j = dh.field_N.l(31760);
               dh.field_N.l(31760);
@@ -157,7 +157,7 @@ final class f extends gi {
               }
               dk.field_b = false;
               if (var7_ref_String != null) {
-                aj.a(nb.a(113), 110, var7_ref_String);
+                MouseInput.a(nb.a(113), 110, var7_ref_String);
               }
               if (hb.field_g <= 0 &&
                 !ka.field_r) {
@@ -187,7 +187,7 @@ final class f extends gi {
               return stackIn_75_0;
             }
             if (tl.field_O == tf.field_qb &&
-              li.d(-29427)) {
+              GameAppletShell.d(-29427)) {
               eg.a((byte) 126);
               if (t.field_b == 7 &&
                 !dk.field_b) {
@@ -237,7 +237,7 @@ final class f extends gi {
             } else {
               stackIn_105_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param5).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

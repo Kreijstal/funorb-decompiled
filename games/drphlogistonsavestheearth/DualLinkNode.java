@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uh extends gi {
-    long field_t;
-    uh field_p;
+class DualLinkNode extends IntrusiveNode {
+    long secondaryKey;
+    DualLinkNode secondaryNext;
     static nh field_r;
     private static int[] field_o;
     static rf field_i;
@@ -14,7 +14,7 @@ class uh extends gi {
     static String field_q;
     static int field_m;
     static int[] field_h;
-    uh field_n;
+    DualLinkNode secondaryPrevious;
 
     final static nh[] a(byte param0, int param1) {
         if (param0 != 121) {
@@ -27,7 +27,7 @@ class uh extends gi {
     }
 
     final static he e(int param0) {
-        he var1 = new he(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], a.field_e[0], aj.field_a);
+        he var1 = new he(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], a.field_e[0], MouseInput.field_a);
         oc.a((byte) -21);
         if (param0 != 7786) {
           return (he) null;
@@ -35,24 +35,24 @@ class uh extends gi {
         return var1;
     }
 
-    final void f(int param0) {
-        if (this.field_n == null) {
+    final void unlinkSecondary(int obfuscationGuard) {
+        if (this.secondaryPrevious == null) {
           return;
         }
-        this.field_n.field_p = this.field_p;
-        this.field_p.field_n = this.field_n;
-        this.field_p = null;
-        if (param0 != 64) {
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryNext = null;
+        if (obfuscationGuard != 64) {
           field_o = (int[]) null;
         }
-        this.field_n = null;
+        this.secondaryPrevious = null;
     }
 
     public static void d(int param0) {
         field_s = null;
         field_o = null;
         if (param0 != -24338) {
-          uh.a((byte) -37, -122);
+          DualLinkNode.a((byte) -37, -122);
         }
         field_l = null;
         field_q = null;
@@ -63,7 +63,7 @@ class uh extends gi {
         field_r = null;
     }
 
-    protected uh() {
+    protected DualLinkNode() {
     }
 
     static {
@@ -84,7 +84,7 @@ class uh extends gi {
           field_o[var0Lifetime1] = 131072 * var0Lifetime1;
         }
         for (var0Lifetime2 = 128; var0Lifetime2 < 256; var0Lifetime2++) {
-          field_o[var0Lifetime2] = li.a(512 * (-128 + var0Lifetime2), 16711680);
+          field_o[var0Lifetime2] = GameAppletShell.a(512 * (-128 + var0Lifetime2), 16711680);
         }
         field_m = 0;
         field_q = "Skip";

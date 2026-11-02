@@ -100,7 +100,7 @@ final class ie extends l {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -110,10 +110,10 @@ final class ie extends l {
 
     final static int a(boolean param0) {
         if (!param0) {
-          return -si.field_B + li.field_k;
+          return -si.field_B + GameAppletShell.field_k;
         }
         ie.a(9, -41, 98, 108, (byte) 5, 25, 90, -7, -48, -35, 72, 76, -77, -54, -7, 93);
-        return -si.field_B + li.field_k;
+        return -si.field_B + GameAppletShell.field_k;
     }
 
     public static void c(int param0) {
@@ -131,13 +131,13 @@ final class ie extends l {
         field_u = null;
     }
 
-    final static gl a(Throwable param0, String param1) {
-        gl var2 = null;
-        if (!(param0 instanceof gl)) {
-          var2 = new gl(param0, param1);
+    final static ClientException wrapClientException(Throwable cause, String context) {
+        ClientException var2 = null;
+        if (!(cause instanceof ClientException)) {
+          var2 = new ClientException(cause, context);
         } else {
-          var2 = (gl) ((Object) param0);
-          var2.field_d = var2.field_d + ' ' + param1;
+          var2 = (ClientException) ((Object) cause);
+          var2.context = var2.context + ' ' + context;
         }
         return var2;
     }

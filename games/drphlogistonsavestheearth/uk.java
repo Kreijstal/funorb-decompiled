@@ -49,7 +49,7 @@ final class uk implements cg {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.l(31760) << (rk.a(var7, 3) << 8));
             }
             var4.field_i = true;
-            var4.a(param0 + 14939);
+            var4.unlink(param0 + 14939);
           } else {
             if (var2 == 1) {
               var4_int = var9.f(param0 + 33464);
@@ -66,7 +66,7 @@ final class uk implements cg {
                 eg.a((byte) 126);
                 return;
               }
-              var5_ref_nl.a(-16175);
+              var5_ref_nl.unlink(-16175);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -81,7 +81,7 @@ final class uk implements cg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "uk.B(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "uk.B(" + param0 + ')');
         }
     }
 
@@ -152,14 +152,14 @@ final class uk implements cg {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public uk() {
         this.field_d = 1;
         this.field_a = 1;
-        this.field_c = uh.field_i;
+        this.field_c = DualLinkNode.field_i;
     }
 
     uk(rf param0, int param1, int param2) {
@@ -168,7 +168,7 @@ final class uk implements cg {
           this.field_d = param1;
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

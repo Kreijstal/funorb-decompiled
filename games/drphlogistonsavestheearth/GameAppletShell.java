@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class li extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_d;
     static nh field_i;
     boolean field_c;
@@ -25,7 +25,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "li.GA(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "li.GA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
         try {
           sf.field_j = 0L;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "li.start()");
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "li.start()");
         }
     }
 
@@ -85,7 +85,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "li.NA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "li.NA(" + param0 + ')');
         }
     }
 
@@ -246,7 +246,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw ie.a((Throwable) (var1), "li.run()");
+            throw ie.wrapClientException((Throwable) (var1), "li.run()");
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -263,7 +263,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           int var1_int = 127 % ((param0 + 31) / 32);
           ck.a(0, 5, 1, true);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "li.DA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "li.DA(" + param0 + ')');
         }
     }
 
@@ -287,7 +287,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "li.getDocumentBase()");
+          throw ie.wrapClientException((Throwable) ((Object) var1), "li.getDocumentBase()");
         }
     }
 
@@ -337,7 +337,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -347,14 +347,14 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (gf.field_C == -1) {
-            if (!jd.a(1, param0 + 35356)) {
+            if (!LoginMenuScreen.a(1, param0 + 35356)) {
               return false;
             }
             gf.field_C = dh.field_N.l(31760);
             dh.field_N.field_j = 0;
           }
           if (-2 == gf.field_C) {
-            if (!jd.a(2, 5929)) {
+            if (!LoginMenuScreen.a(2, 5929)) {
               return false;
             }
             gf.field_C = dh.field_N.j(-788751192);
@@ -363,12 +363,12 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           if (param0 != -29427) {
             field_h = (od) null;
           }
-          stackIn_18_0 = jd.a(gf.field_C, 5929);
+          stackIn_18_0 = LoginMenuScreen.a(gf.field_C, 5929);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "li.OA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "li.OA(" + param0 + ')');
         }
     }
 
@@ -409,7 +409,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -426,7 +426,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "li.stop()");
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "li.stop()");
         }
     }
 
@@ -491,7 +491,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -564,7 +564,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "li.V(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "li.V(" + param0 + ')');
         }
     }
 
@@ -593,7 +593,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -655,7 +655,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "li.HA(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "li.HA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -722,7 +722,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (var2), "li.FA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) (var2), "li.FA(" + param0 + ')');
         }
     }
 
@@ -746,7 +746,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
             field_k = 117;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "li.U(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "li.U(" + param0 + ')');
         }
     }
 
@@ -769,7 +769,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -814,7 +814,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -852,7 +852,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "li.IA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "li.IA(" + param0 + ')');
         }
     }
 
@@ -867,11 +867,11 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           n.field_h = null;
           this.a(0, false);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "li.destroy()");
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "li.destroy()");
         }
     }
 
-    protected li() {
+    protected GameAppletShell() {
         this.field_c = false;
     }
 
@@ -909,7 +909,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
               }
               fg.field_h = param6;
               kj.field_a = param6;
-              j.field_K = nb.a(-84);
+              LevelSession.field_K = nb.a(-84);
               dupTemp$0 = new bl(param3, param5, param1, true);
               sb.field_d = dupTemp$0;
               n.field_h = dupTemp$0;
@@ -940,7 +940,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
             } else {
               stackIn_25_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -970,7 +970,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "li.getAppletContext()");
+          throw ie.wrapClientException((Throwable) ((Object) var1), "li.getAppletContext()");
         }
     }
 
@@ -1009,7 +1009,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -1047,7 +1047,7 @@ public abstract class li extends java.applet.Applet implements Runnable, java.aw
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

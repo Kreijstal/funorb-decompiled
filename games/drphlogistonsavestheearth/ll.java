@@ -8,9 +8,9 @@ final class ll extends lk {
     final db b(byte param0) {
         if (param0 != -98) {
           this.b((byte) -62);
-          return j.field_V;
+          return LevelSession.field_V;
         }
-        return j.field_V;
+        return LevelSession.field_V;
     }
 
     public static void d(byte param0) {

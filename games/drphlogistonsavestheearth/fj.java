@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj extends gi {
+final class fj extends IntrusiveNode {
     int field_h;
     static volatile int field_j;
     static String[] field_i;
@@ -34,7 +34,7 @@ final class fj extends gi {
           a.a(wj.field_c / 2, wj.field_k / 2, (byte) 101);
           fa.a(false, param3.field_L + param3.field_S, param1.field_L, param1.field_S + param1.field_L, param3.field_L);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "fj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class fj extends gi {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -4,38 +4,38 @@
 final class vd {
     static String field_e;
     static String field_a;
-    gi field_c;
+    IntrusiveNode field_c;
     static String field_d;
-    private gi field_h;
+    private IntrusiveNode field_h;
     static int[] field_b;
     static int field_f;
     static he[] field_g;
 
-    final void a(int param0, gi param1) {
+    final void a(int param0, IntrusiveNode param1) {
         try {
-          if (param1.field_b != null) {
-            param1.a(-16175);
+          if (param1.previous != null) {
+            param1.unlink(-16175);
           }
           if (param0 < 16) {
             field_b = (int[]) null;
           }
-          param1.field_b = this.field_c;
-          param1.field_e = this.field_c.field_e;
-          param1.field_b.field_e = param1;
-          param1.field_e.field_b = param1;
+          param1.previous = this.field_c;
+          param1.next = this.field_c.next;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "vd.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "vd.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void g(int param0) {
-        gi var2;
+        IntrusiveNode var2;
         int var3;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         while (true) {
-          var2 = this.field_c.field_e;
+          var2 = this.field_c.next;
           if (this.field_c != var2) {
-            var2.a(-16175);
+            var2.unlink(-16175);
             continue;
           }
           break;
@@ -61,17 +61,17 @@ final class vd {
         return qf.field_c;
     }
 
-    final gi h(int param0) {
-        gi var2 = this.field_c.field_e;
+    final IntrusiveNode h(int param0) {
+        IntrusiveNode var2 = this.field_c.next;
         if (var2 == this.field_c) {
           this.field_h = null;
           return null;
         }
         if (param0 != -11151) {
-          gi var3 = (gi) null;
-          this.a((gi) null, 53);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a((IntrusiveNode) null, 53);
         }
-        this.field_h = var2.field_e;
+        this.field_h = var2.next;
         return var2;
     }
 
@@ -86,38 +86,38 @@ final class vd {
         field_e = null;
     }
 
-    final gi a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         int var3 = 63 / ((-55 - param0) / 48);
-        gi var2 = this.field_c.field_b;
+        IntrusiveNode var2 = this.field_c.previous;
         if (var2 == this.field_c) {
           return null;
         }
-        var2.a(-16175);
+        var2.unlink(-16175);
         return var2;
     }
 
-    final gi e(int param0) {
-        gi var2 = this.field_h;
+    final IntrusiveNode e(int param0) {
+        IntrusiveNode var2 = this.field_h;
         if (this.field_c == var2) {
           this.field_h = null;
           return null;
         }
         if (param0 != 0) {
-          gi var3 = (gi) null;
-          this.a((gi) null, 20);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a((IntrusiveNode) null, 20);
         }
-        this.field_h = var2.field_e;
+        this.field_h = var2.next;
         return var2;
     }
 
-    final gi d(int param0) {
-        gi var2 = this.field_c.field_e;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_c.next;
         if (this.field_c == var2) {
           return null;
         }
-        var2.a(-16175);
+        var2.unlink(-16175);
         if (param0 != 180479896) {
-          this.field_c = (gi) null;
+          this.field_c = (IntrusiveNode) null;
         }
         return var2;
     }
@@ -131,20 +131,20 @@ final class vd {
         a.field_i = param3;
     }
 
-    final void a(gi param0, int param1) {
+    final void a(IntrusiveNode param0, int param1) {
         try {
           if (param1 != 255) {
             vd.b((byte) 99);
           }
-          if (null != param0.field_b) {
-            param0.a(-16175);
+          if (null != param0.previous) {
+            param0.unlink(-16175);
           }
-          param0.field_b = this.field_c.field_b;
-          param0.field_e = this.field_c;
-          param0.field_b.field_e = param0;
-          param0.field_e.field_b = param0;
+          param0.previous = this.field_c.previous;
+          param0.next = this.field_c;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "vd.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "vd.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -152,19 +152,19 @@ final class vd {
         if (param0 != 30430) {
           field_d = (String) null;
         }
-        return this.field_c.field_e == this.field_c ? true : false;
+        return this.field_c.next == this.field_c ? true : false;
     }
 
-    final gi b(int param0) {
+    final IntrusiveNode b(int param0) {
         if (param0 != 2850) {
           field_g = (he[]) null;
         }
-        gi var2 = this.field_c.field_b;
+        IntrusiveNode var2 = this.field_c.previous;
         if (this.field_c == var2) {
           this.field_h = null;
           return null;
         }
-        this.field_h = var2.field_b;
+        this.field_h = var2.previous;
         return var2;
     }
 
@@ -197,7 +197,7 @@ final class vd {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {
-              var10[var6] = aj.field_a[rk.a(255, (int) var21[var6])];
+              var10[var6] = MouseInput.field_a[rk.a(255, (int) var21[var6])];
             }
             var1[var2] = new nh(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var22);
           } else {
@@ -209,7 +209,7 @@ final class vd {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = li.a(rk.a(255, (int) var15[var7]) << 24, aj.field_a[rk.a((int) var21[var7], 255)]);
+              var6_ref_int__[var7] = GameAppletShell.a(rk.a(255, (int) var15[var7]) << 24, MouseInput.field_a[rk.a((int) var21[var7], 255)]);
             }
             var1[var2] = (nh) ((Object) new pg(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var17));
           }
@@ -219,19 +219,19 @@ final class vd {
     }
 
     public vd() {
-        this.field_c = new gi();
-        this.field_c.field_b = this.field_c;
-        this.field_c.field_e = this.field_c;
+        this.field_c = new IntrusiveNode();
+        this.field_c.previous = this.field_c;
+        this.field_c.next = this.field_c;
     }
 
-    final gi c(int param0) {
+    final IntrusiveNode c(int param0) {
         int var2 = -110 % ((param0 + 42) / 40);
-        gi var3 = this.field_h;
+        IntrusiveNode var3 = this.field_h;
         if (this.field_c == var3) {
           this.field_h = null;
           return null;
         }
-        this.field_h = var3.field_b;
+        this.field_h = var3.previous;
         return var3;
     }
 
@@ -267,7 +267,7 @@ final class vd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

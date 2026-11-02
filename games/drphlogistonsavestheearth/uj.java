@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uj extends gi {
+final class uj extends IntrusiveNode {
     static rf field_i;
     static ge field_h;
     static qe field_j;
@@ -72,7 +72,7 @@ final class uj extends gi {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -83,8 +83,8 @@ final class uj extends gi {
         ea.field_a = null;
         hf.field_C = 0;
         tc.field_e = null;
-        var2 = j.field_ib;
-        j.field_ib = vc.field_e;
+        var2 = LevelSession.field_ib;
+        LevelSession.field_ib = vc.field_e;
         p.field_a.field_c = p.field_a.field_c + 1;
         vc.field_e = var2;
         if (param1 == 51) {

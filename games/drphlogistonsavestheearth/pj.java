@@ -8,7 +8,7 @@ class pj extends vg implements ba {
     static boolean field_H;
     vd field_I;
     static he[] field_z;
-    static aj field_G;
+    static MouseInput field_G;
     static int field_E;
     static boolean field_C;
     static he[][] field_B;
@@ -61,7 +61,7 @@ class pj extends vg implements ba {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ class pj extends vg implements ba {
           var5 = new rh(this.field_I);
           var6 = (vg) (var5.c(-1));
           while (var6 != null) {
-            if (var6.c(-1387)) {
+            if (var6.isLinked(-1387)) {
               var6.a(param0, this.field_o + param1, param2 + this.field_m, (byte) -128);
               var6 = (vg) (var5.a((byte) -119));
               continue;
@@ -122,7 +122,7 @@ class pj extends vg implements ba {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ class pj extends vg implements ba {
           }
           var8 = (vg) (var7.c(-1));
           while (var8 != null) {
-            if (var8.c(-1387)) {
+            if (var8.isLinked(-1387)) {
               var8.a(param0 + this.field_o, this.field_m + param1, param2, param3, param4, param5);
               var8 = (vg) (var7.a((byte) -98));
               continue;
@@ -211,7 +211,7 @@ class pj extends vg implements ba {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ class pj extends vg implements ba {
           var8 = new rh(this.field_I);
           var9 = (vg) (var8.c(-1));
           while (var9 != null) {
-            if (var9.c(-1387)) {
+            if (var9.isLinked(-1387)) {
               if (var9.a(param0, param1, param2, (byte) 117, param4, this.field_o + param5, this.field_m + param6)) {
                 return true;
               }
@@ -252,7 +252,7 @@ class pj extends vg implements ba {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -364,7 +364,7 @@ class pj extends vg implements ba {
             tl.field_O = eg.field_h;
           }
           if (tl.field_O == eg.field_h &&
-            jd.a(1, param4 ^ 5929)) {
+            LoginMenuScreen.a(1, param4 ^ 5929)) {
             var9Lifetime1 = dh.field_N.l(31760);
             dh.field_N.field_j = 0;
             if (100 <= var9Lifetime1 &&
@@ -381,7 +381,7 @@ class pj extends vg implements ba {
                 return stackIn_31_0;
               }
               if (var9Lifetime1 == 99) {
-                jd.a(ab.a(39), 5929);
+                LoginMenuScreen.a(ab.a(39), 5929);
                 oe.field_a = new Boolean(eb.a(dh.field_N, param4 + 126));
                 dh.field_N.field_j = 0;
               } else {
@@ -393,10 +393,10 @@ class pj extends vg implements ba {
           }
           if (tl.field_O == kc.field_n) {
             var9Lifetime2 = 2;
-            if (jd.a(var9Lifetime2, 5929)) {
+            if (LoginMenuScreen.a(var9Lifetime2, 5929)) {
               var10Lifetime1 = dh.field_N.j(-788751192);
               dh.field_N.field_j = 0;
-              if (jd.a(var10Lifetime1, 5929)) {
+              if (LoginMenuScreen.a(var10Lifetime1, 5929)) {
                 var11 = td.field_m.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   td.field_m[var12] = dh.field_N.e(-75);
@@ -409,13 +409,13 @@ class pj extends vg implements ba {
             }
           }
           if (dl.field_L == tl.field_O &&
-            li.d(-29427)) {
+            GameAppletShell.d(-29427)) {
             if (t.field_b != 255) {
               cc.field_p = dh.field_N.b((byte) -63);
             } else {
               var9_ref_String = dh.field_N.i(715718304);
               if (var9_ref_String != null) {
-                aj.a(nb.a(-113), param4 + 77, var9_ref_String);
+                MouseInput.a(nb.a(-113), param4 + 77, var9_ref_String);
               }
             }
             eg.a((byte) 126);
@@ -463,7 +463,7 @@ class pj extends vg implements ba {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -484,7 +484,7 @@ class pj extends vg implements ba {
           var8 = new rh(this.field_I);
           var9 = (vg) (var8.c(-1));
           while (var9 != null) {
-            if (var9.c(-1387)) {
+            if (var9.isLinked(-1387)) {
               if (var9.a(true) &&
                 var9.a(param0, param1, (byte) 95, param3, param4, param5, param6)) {
                 return true;
@@ -505,7 +505,7 @@ class pj extends vg implements ba {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -535,7 +535,7 @@ class pj extends vg implements ba {
             field_E = -118;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "pj.SA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "pj.SA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -558,7 +558,7 @@ class pj extends vg implements ba {
             field_z = (he[]) null;
           }
           while (var9 != null) {
-            if (var9.c(-1387)) {
+            if (var9.isLinked(-1387)) {
               if (var9.a(true) &&
                 var9.a(param0, param1, param2, 72)) {
                 return true;
@@ -588,7 +588,7 @@ class pj extends vg implements ba {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -629,7 +629,7 @@ class pj extends vg implements ba {
           while (var4 != null) {
             if (var4.a(true)) {
               var5 = new rh(this.field_I);
-              var5.a((gi) (var4), (byte) -98);
+              var5.a((IntrusiveNode) (var4), (byte) -98);
               var6 = (vg) (var5.a((byte) -107));
               while (var6 != null) {
                 if (!var6.a(false, param0)) {
@@ -652,7 +652,7 @@ class pj extends vg implements ba {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -700,7 +700,7 @@ class pj extends vg implements ba {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -763,7 +763,7 @@ class pj extends vg implements ba {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -813,7 +813,7 @@ class pj extends vg implements ba {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -821,7 +821,7 @@ class pj extends vg implements ba {
         field_A = new String[16];
         field_H = true;
         field_B = new he[3][];
-        field_G = new aj();
+        field_G = new MouseInput();
         field_D = new qb();
     }
 }

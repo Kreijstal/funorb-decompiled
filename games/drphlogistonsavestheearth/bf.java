@@ -5,7 +5,7 @@ import java.util.*;
 
 final class bf {
     private int field_B;
-    private ag field_q;
+    private PcmSampleStream field_q;
     private he[] field_F;
     private nh field_f;
     private int field_G;
@@ -199,7 +199,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.F(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.F(" + param0 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "bf.G(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "bf.G(" + param0 + ')');
         }
     }
 
@@ -292,7 +292,7 @@ final class bf {
           }
           this.field_A = false;
           var5 = this.field_Q;
-          L11: switch ((var6 == 0
+          regionExit1: switch ((var6 == 0
             || var5 == 17
             || var5 == 40
             ) ? var5 : -1) {
@@ -308,7 +308,7 @@ final class bf {
                 this.field_L[var5].a(-var3 + (int)this.field_N + this.field_t + hi.a(var3 * 2, 4, this.field_T), var3 / 2, var4, 112, 1, (int)this.field_o + hi.a(2 * var3, 4, this.field_T) - var3);
                 var5++;
                 if (var6 != 0) {
-                  break L11;
+                  break regionExit1;
                 }
               }
               if (var6 == 0) {
@@ -402,7 +402,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2_ref), "bf.Q(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2_ref), "bf.Q(" + param0 + ')');
         }
     }
 
@@ -463,7 +463,7 @@ final class bf {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -485,7 +485,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.W(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.W(" + param0 + ')');
         }
     }
 
@@ -505,7 +505,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.C(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.C(" + param0 + ')');
         }
     }
 
@@ -525,7 +525,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.H(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.H(" + param0 + ')');
         }
     }
 
@@ -556,7 +556,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.B(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.B(" + param0 + ')');
         }
     }
 
@@ -574,7 +574,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.A(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.A(" + param0 + ')');
         }
     }
 
@@ -598,7 +598,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.D(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.D(" + param0 + ')');
         }
     }
 
@@ -614,7 +614,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.L(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.L(" + param0 + ')');
         }
     }
 
@@ -707,7 +707,7 @@ final class bf {
             (decompiledFrameRemainder0)) {
             if (this.field_c <= 0 &&
               this.field_U <= 0 &&
-              Math.random() < (double)(sd.field_a.field_q + 1) / 100.0) {
+              Math.random() < (double)(sd.field_a.levelNumber + 1) / 100.0) {
               this.field_c = this.b((byte) -119, this.field_Q);
               this.field_U = 5 + hi.a(8, 4, this.field_T);
             }
@@ -741,14 +741,14 @@ final class bf {
             (decompiledFrameRemainder1)) {
             if (this.field_c < 0 &&
               0 >= this.field_U &&
-              Math.random() < (double)(sd.field_a.field_q + 1) / 100.0) {
+              Math.random() < (double)(sd.field_a.levelNumber + 1) / 100.0) {
               this.field_c = this.b((byte) -127, this.field_Q);
-              this.field_U = sd.field_a.field_q + 1;
+              this.field_U = sd.field_a.levelNumber + 1;
             }
             this.field_c = this.field_c - 1;
             if (0 > this.field_c &&
               0 < this.field_U &&
-              0 == this.field_V % (10 - sd.field_a.field_q)) {
+              0 == this.field_V % (10 - sd.field_a.levelNumber)) {
               this.field_U = this.field_U - 1;
               this.e(63);
             }
@@ -989,7 +989,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.J(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.J(" + param0 + ')');
         }
     }
 
@@ -1107,7 +1107,7 @@ final class bf {
                 boolean decompiledFrameRemainder3 = true;
                 if (var11Lifetime1 < 128) {
                   var12 = (int)(Math.pow((double)var11Lifetime1, 1.5) / 8.0);
-                  var10_ref_int__[var11Lifetime1] = li.a(li.a(var8_int * var12 >> 8 << 8, var7 * var12 >> 8 << 16), var9_int * var12 >> 8);
+                  var10_ref_int__[var11Lifetime1] = GameAppletShell.a(GameAppletShell.a(var8_int * var12 >> 8 << 8, var7 * var12 >> 8 << 16), var9_int * var12 >> 8);
                   var11Lifetime1++;
                   if (var13 == 0) {
                     continue;
@@ -1222,7 +1222,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2_ref), "bf.V(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2_ref), "bf.V(" + param0 + ')');
         }
     }
 
@@ -1234,14 +1234,14 @@ final class bf {
             return;
           }
           if (this.field_q != null) {
-            gi.a(this.field_q, 3408);
+            IntrusiveNode.a(this.field_q, 3408);
             this.field_q.i(-1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.O(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.O(" + param0 + ')');
         }
     }
 
@@ -1283,7 +1283,7 @@ final class bf {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1481,7 +1481,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.AA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.AA(" + param0 + ')');
         }
     }
 
@@ -1590,7 +1590,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.R(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.R(" + param0 + ')');
         }
     }
 
@@ -1609,7 +1609,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var3), "bf.BA(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var3), "bf.BA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1639,7 +1639,7 @@ final class bf {
           if (param0 != 63) {
             this.k(45);
           }
-          L1: {
+          regionExit1: {
             boolean decompiledFrameRemainder6 = true;
             boolean decompiledFrameRemainder5 = true;
             boolean decompiledFrameRemainder4 = true;
@@ -1658,7 +1658,7 @@ final class bf {
             if (var23 == 47) {
               var8 = var8 * -1.0;
               if (var24 == 0) {
-                break L1;
+                break regionExit1;
               }
             } else {
               if ((var23 != 0) &&
@@ -1681,19 +1681,19 @@ final class bf {
                     (decompiledFrameRemainder5 = (var23 != 42 ||
                     var24 != 0))) &&
                     (decompiledFrameRemainder6 = (var23 != 63))) {
-                    L14: {
-                      L15: {
+                    regionExit2: {
+                      regionExit3: {
                         if (var23 != 15 && (var23 != 38 ||
                           var24 != 0)) {
                           switch (var23) {
                             case 40:
-                              break L15;
+                              break regionExit3;
                             case 45:
-                              break L14;
+                              break regionExit2;
                             case 44:
-                              break L14;
+                              break regionExit2;
                             default:
-                              break L1;
+                              break regionExit1;
                           }
                         }
                         var8 = sd.field_a.field_N - this.field_o;
@@ -1703,7 +1703,7 @@ final class bf {
                         var8 = ji.a(65535, var21) * 15.0;
                         var10 = pj.a(var21, param0 ^ 32831) * 15.0;
                         if (var24 == 0) {
-                          break L1;
+                          break regionExit1;
                         }
                       }
                       var10 = 0.0;
@@ -1711,7 +1711,7 @@ final class bf {
                       this.field_b = new gf(var12, var4, var6, 0.0, 0.0, (double)am.field_p + sd.field_a.field_N, sd.field_a.field_D + (double)ri.field_q);
                       sd.field_a.a(24, this.field_b);
                       if (var24 == 0) {
-                        break L1;
+                        break regionExit1;
                       }
                     }
                     if (sd.field_a.field_fb < 0) {
@@ -1748,7 +1748,7 @@ final class bf {
               var6 = var6 - 23.0;
               var4 = var4 - 39.0;
               if (var24 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder6) &&
@@ -1762,7 +1762,7 @@ final class bf {
               var10 = (1.0 + Math.random()) * 2.0;
               var6 = var6 - 23.0;
               if (var24 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder6) &&
@@ -1773,7 +1773,7 @@ final class bf {
               var8 = -1.0 + (-0.5 + Math.random());
               var10 = Math.random() - 0.5 + -5.0;
               if (var24 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder6) &&
@@ -1790,7 +1790,7 @@ final class bf {
               var10 = 0.0;
               this.field_G = (int)(aa.field_c[this.field_Q] - 128.0);
               if (var24 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder6) &&
@@ -1801,7 +1801,7 @@ final class bf {
               var4 = var4 + (double)(hi.a(100, 4, this.field_T) - 50);
               this.field_G = (int)(aa.field_c[this.field_Q] - 128.0);
               if (var24 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder6) &&
@@ -1826,18 +1826,18 @@ final class bf {
               var10 = var10 * 5.0;
               if (this.field_Q != 13) {
                 if (this.field_Q != 62) {
-                  break L1;
+                  break regionExit1;
                 }
                 var4 = var4 + 12.0 * var8;
                 var4 = var4 + 15.0;
                 var6 = var6 + 12.0 * var10;
                 if (var24 == 0) {
-                  break L1;
+                  break regionExit1;
                 }
               }
               var10 = var10 - 2.0;
               if (var24 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if (0 == this.field_J &&
@@ -1872,7 +1872,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.M(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.M(" + param0 + ')');
         }
     }
 
@@ -1967,7 +1967,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var3), "bf.N(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var3), "bf.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1999,7 +1999,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var3), "bf.U(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var3), "bf.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2061,7 +2061,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.S(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.S(" + param0 + ')');
         }
     }
 
@@ -2080,7 +2080,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var3), "bf.I(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var3), "bf.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2101,7 +2101,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.DA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.DA(" + param0 + ')');
         }
     }
 
@@ -2111,7 +2111,7 @@ final class bf {
             field_h = (bg) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "bf.E(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "bf.E(" + param0 + ')');
         }
     }
 
@@ -2158,7 +2158,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.T(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.T(" + param0 + ')');
         }
     }
 
@@ -2309,7 +2309,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "bf.P(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "bf.P(" + param0 + ')');
         }
     }
 
@@ -2419,7 +2419,7 @@ final class bf {
           }
           if (ac.field_j[this.field_Q] != -1 &&
             nl.field_r[ac.field_j[this.field_Q]] != null) {
-            this.field_q = ag.a(nl.field_r[ac.field_j[this.field_Q]], 256, 64);
+            this.field_q = PcmSampleStream.a(nl.field_r[ac.field_j[this.field_Q]], 256, 64);
             this.field_q.f(-1);
             this.field_q.c(0, nl.field_r[ac.field_j[this.field_Q]].field_i.length);
           }
@@ -2428,7 +2428,7 @@ final class bf {
           this.field_e = 0;
           this.field_N = (double)param4;
           var10 = this.field_Q;
-          L14: switch ((var11 == 0
+          regionExit1: switch ((var11 == 0
             || var10 == 0
             || var10 == 5
             || var10 == 8
@@ -2463,7 +2463,7 @@ final class bf {
                 this.field_L[var10] = new ck();
                 var10++;
                 if (var11 != 0) {
-                  break L14;
+                  break regionExit1;
                 }
               }
               if (var11 == 0) {
@@ -2522,7 +2522,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var7_ref), "bf.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var7_ref), "bf.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -74,7 +74,7 @@ final class hb implements cg {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -118,18 +118,18 @@ final class hb implements cg {
           for (var9 = 0; 4 > var9; var9++) {
             var8[var9] = wb.field_c.nextInt();
           }
-          if (null == li.field_h ||
-            !(var7_int <= li.field_h.field_h.length)) {
-            li.field_h = new od(var7_int);
+          if (null == GameAppletShell.field_h ||
+            !(var7_int <= GameAppletShell.field_h.field_h.length)) {
+            GameAppletShell.field_h = new od(var7_int);
           }
-          li.field_h.field_j = 0;
-          li.field_h.a(param4, param5, 29211, param0);
-          li.field_h.a((byte) -39, var7_int);
+          GameAppletShell.field_h.field_j = 0;
+          GameAppletShell.field_h.a(param4, param5, 29211, param0);
+          GameAppletShell.field_h.a((byte) -39, var7_int);
           if (param3 > -25) {
             var11 = (java.awt.Canvas) null;
             hb.a(120, (java.awt.Canvas) null);
           }
-          li.field_h.a(var14, 7221);
+          GameAppletShell.field_h.a(var14, 7221);
           if (null == hm.field_e ||
             !(hm.field_e.field_h.length >= 100)) {
             hm.field_e = new od(100);
@@ -145,7 +145,7 @@ final class hb implements cg {
           hm.field_e.c(param4, -17402);
           hm.field_e.a(param2, param1, 0);
           param6.a(hm.field_e.field_j, 0, 29211, hm.field_e.field_h);
-          param6.a(li.field_h.field_j, 0, 29211, li.field_h.field_h);
+          param6.a(GameAppletShell.field_h.field_j, 0, 29211, GameAppletShell.field_h.field_h);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -175,7 +175,7 @@ final class hb implements cg {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class hb implements cg {
             sc.field_e.a((java.awt.Component) ((Object) param1), (byte) 12);
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "hb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "hb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -236,7 +236,7 @@ final class hb implements cg {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class hb implements cg {
           this.field_k = param7;
           this.field_p = param9;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

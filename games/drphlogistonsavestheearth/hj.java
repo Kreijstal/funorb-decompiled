@@ -44,7 +44,7 @@ abstract class hj {
             field_g = (ok) null;
           }
           if (param1) {
-            stackIn_6_0 = sl.field_o.b(param2);
+            stackIn_6_0 = GameClientShell.field_o.b(param2);
             return stackIn_6_0;
           }
           stackIn_4_0 = k.field_H.b(param2);
@@ -59,7 +59,7 @@ abstract class hj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ abstract class hj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

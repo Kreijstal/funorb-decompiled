@@ -35,7 +35,7 @@ final class eb {
         try {
           ng.field_c.a((byte) -125, (vg) (fb.field_e));
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "eb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "eb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class eb {
           }
           vi.field_c = ck.a(0, 5, 1, true);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "eb.B(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "eb.B(" + param0 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class eb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class eb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 

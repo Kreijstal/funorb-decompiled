@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class j {
+final class LevelSession {
     private boolean field_U;
     boolean field_F;
     static db field_V;
@@ -22,10 +22,10 @@ final class j {
     private int field_o;
     int field_A;
     private gf[] field_v;
-    private ag field_M;
+    private PcmSampleStream field_M;
     double field_j;
     int field_H;
-    int field_q;
+    int levelNumber;
     private ib[] field_d;
     int field_T;
     private gf[] field_m;
@@ -61,7 +61,7 @@ final class j {
     int field_X;
     private ck[] field_h;
     private boolean field_eb;
-    private ag field_z;
+    private PcmSampleStream field_z;
     int field_fb;
     private boolean field_y;
     int field_J;
@@ -99,7 +99,7 @@ final class j {
         }
         boolean decompiledFrameRemainder5 = true;
         var9 = (int)stackIn_5_0;
-        var11 = this.field_q;
+        var11 = this.levelNumber;
         if (0 != var11) {
           if ((var11 != 1 ||
             var16 != 0) &&
@@ -396,7 +396,7 @@ final class j {
         field_db = null;
         field_V = null;
         if (param0 != 24342) {
-          j.h(-24);
+          LevelSession.h(-24);
         }
         field_Y = null;
         field_K = null;
@@ -445,7 +445,7 @@ final class j {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -518,7 +518,7 @@ final class j {
         this.field_Z = 0;
         this.field_ab = false;
         this.field_u = 0;
-        gi.field_f = 0;
+        IntrusiveNode.field_f = 0;
         this.field_S = 0;
         hl.field_d = false;
         cj.field_b = 0;
@@ -536,10 +536,10 @@ final class j {
         while (var2 < 160) {
           if (var3 == 0) {
             if (null != this.field_d[var2]) {
-              bc.field_f = bc.field_f | 1 << this.field_q;
+              bc.field_f = bc.field_f | 1 << this.levelNumber;
               if (this.field_d[var2].a((byte) -127)) {
                 this.field_d[var2] = null;
-                nf.field_u = nf.field_u | 1 << this.field_q;
+                nf.field_u = nf.field_u | 1 << this.levelNumber;
               }
             }
             var2++;
@@ -563,7 +563,7 @@ final class j {
           }
           this.field_B[var6_int] = var7;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "j.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "j.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -663,7 +663,7 @@ final class j {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -680,18 +680,18 @@ final class j {
         }
         this.field_w = this.field_w - 1;
         this.a(255, 0);
-        gi.a(this.field_M, param0 ^ -6799);
-        if (this.field_q >= 0) {
-          fc.field_a = fc.field_a | 1 << this.field_q;
-          gi.field_f = gi.field_f | 1 << this.field_q;
+        IntrusiveNode.a(this.field_M, param0 ^ -6799);
+        if (this.levelNumber >= 0) {
+          fc.field_a = fc.field_a | 1 << this.levelNumber;
+          IntrusiveNode.field_f = IntrusiveNode.field_f | 1 << this.levelNumber;
         }
         this.field_fb = 225;
-        L2: while (true) {
+        scanLoop1: while (true) {
           if (this.field_L > 1) {
             this.field_d[this.f(qk.a(param0, -6111))] = new ib(this.field_N, this.field_D, 7, true, false);
             this.field_L = this.field_L - 1;
             if (var5 != 0) {
-              break L2;
+              break scanLoop1;
             }
             if (var5 == 0) {
               continue;
@@ -701,7 +701,7 @@ final class j {
             this.field_d[this.f(0)] = new ib(this.field_N, this.field_D, 1, true, false);
             this.field_A = this.field_A - 1;
             if (var5 != 0) {
-              break L2;
+              break scanLoop1;
             }
             if (var5 == 0) {
               continue;
@@ -719,10 +719,10 @@ final class j {
         if (this.field_w <= 0) {
           tc.field_i = false;
           var3 = 0;
-          L10: while (true) {
+          scanLoop2: while (true) {
             if (var3 < this.field_n.length) {
               if (var5 != 0) {
-                break L10;
+                break scanLoop2;
               }
               if (this.field_n[var3] != null &&
                 !this.field_n[var3].field_s) {
@@ -793,11 +793,11 @@ final class j {
         var6 = var4 - (int)(pj.a(var2, param0 + 35407) * 27.0);
         var7 = -(int)(27.0 * ji.a(65535, var2)) + var5;
         var8 = -1;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var8 <= 1) {
             stackIn_11_0 = -1;
             if (var17 != 0) {
-              break L0;
+              break scanLoop1;
             }
             var9 = stackIn_11_0;
             while (var9 <= 1) {
@@ -805,7 +805,7 @@ final class j {
               var9++;
             }
             var8++;
-            continue L0;
+            continue scanLoop1;
           }
           wj.b(89, 464, 3, 16711680);
           var8 = this.field_H;
@@ -885,11 +885,11 @@ final class j {
         var6Lifetime1 = -(int)(27.0 * pj.a(var13, 32768)) + var4Lifetime1;
         var7Lifetime1 = -(int)(ji.a(param0 + 68174, var13) * 27.0) + var5Lifetime1;
         var15_int = -1;
-        L19: while (true) {
+        scanLoop2: while (true) {
           if (var15_int <= 1) {
             stackIn_52_0 = -1;
             if (var17 != 0) {
-              break L19;
+              break scanLoop2;
             }
             var16 = stackIn_52_0;
             while (var16 <= 1) {
@@ -897,14 +897,14 @@ final class j {
               var16++;
             }
             var15_int++;
-            continue L19;
+            continue scanLoop2;
           }
           wj.b(89, 464, 3, 16711680);
           stackIn_52_0 = this.field_F ? 1 : 0;
           break;
         }
         if (stackIn_52_0 != 0) {
-          ji.field_d.b("lvl: " + Integer.toString(this.field_q) + "; fps: " + pc.field_a, 112, 32, 65280, 65280);
+          ji.field_d.b("lvl: " + Integer.toString(this.levelNumber) + "; fps: " + pc.field_a, 112, 32, 65280, 65280);
           ji.field_d.a("Bonus: " + this.field_R, 630, 32, 16777215, 16777215);
           var15 = Runtime.getRuntime();
           var16Lifetime1 = (int)(var15.totalMemory() - var15.freeMemory()) >> 20;
@@ -1013,7 +1013,7 @@ final class j {
           return;
         }
         var3 = 0;
-        L5: while (true) {
+        scanLoop1: while (true) {
           if (var3 < this.field_h.length) {
             this.field_h[var3].c(param0 + 5650);
             stackIn_36_0 = ~this.field_u;
@@ -1024,7 +1024,7 @@ final class j {
                 var3++;
                 return;
               }
-              break L5;
+              break scanLoop1;
             }
             if (stackIn_36_0 < stackIn_36_1) {
               stackIn_16_0 = (int)((double)am.field_l + this.field_N) << 4;
@@ -1038,9 +1038,9 @@ final class j {
               }
               stackIn_19_3 = stackIn_16_3 / stackIn_17_4;
               if (50 >= this.field_u) {
-                stackIn_20_4 = uh.field_j;
+                stackIn_20_4 = DualLinkNode.field_j;
               } else {
-                stackIn_20_4 = uh.field_l;
+                stackIn_20_4 = DualLinkNode.field_l;
               }
               wj.a(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_19_3, stackIn_20_4);
             }
@@ -1048,10 +1048,10 @@ final class j {
             continue;
           }
           if (!this.field_eb) {
-            break L5;
+            break scanLoop1;
           }
           if (null == this.field_k) {
-            break L5;
+            break scanLoop1;
           }
           var3 = 0;
           while (var3 < this.field_k.length) {
@@ -1136,7 +1136,7 @@ final class j {
               }
               this.a(this.field_gb, 0);
               this.field_d[var2] = null;
-              bg.field_k = bg.field_k | 1 << this.field_q;
+              bg.field_k = bg.field_k | 1 << this.levelNumber;
               ah.a(nl.field_r[70], e.a(118, (int)this.field_N), -1321705304);
             }
             var2++;
@@ -1171,7 +1171,7 @@ final class j {
         if (qe.field_a == -150) {
           System.gc();
         }
-        if (~ab.field_b != ~this.field_q) {
+        if (~ab.field_b != ~this.levelNumber) {
           this.c((byte) 111);
         }
         if (null != this.field_I.h(-11151)) {
@@ -1235,7 +1235,7 @@ final class j {
             this.field_Z = this.field_Z - 1;
             if (this.n(115)) {
               this.field_J = this.field_J + 1;
-              this.field_l.setSeed((long)(this.field_J + (this.field_q << 16)));
+              this.field_l.setSeed((long)(this.field_J + (this.levelNumber << 16)));
               if (var4 == 0) {
                 return;
               }
@@ -1279,8 +1279,8 @@ final class j {
               }
             }
             this.field_J = this.field_J + 1;
-            this.field_l.setSeed((long)(this.field_J + (this.field_q << 16)));
-            var2_intLifetime1 = this.field_q;
+            this.field_l.setSeed((long)(this.field_J + (this.levelNumber << 16)));
+            var2_intLifetime1 = this.levelNumber;
             if (var2_intLifetime1 == 2 &&
               var4 == 0) {
               if (this.field_J % 298 != 0) {
@@ -1396,48 +1396,48 @@ final class j {
 
     private final void o(int param0) {
         int var2;
-        if ((lh.field_m >> this.field_q & 1) == 0 &&
+        if ((lh.field_m >> this.levelNumber & 1) == 0 &&
           this.field_w > 0) {
           this.a(4, 251, (byte) -95);
         }
-        if (0 == (gi.field_f >> this.field_q & 1)) {
+        if (0 == (IntrusiveNode.field_f >> this.levelNumber & 1)) {
           this.a(5, 250, (byte) -116);
         }
-        if (0 == (1 & fc.field_a >> this.field_q)) {
+        if (0 == (1 & fc.field_a >> this.levelNumber)) {
           this.a(6, 249, (byte) -99);
         }
         var2 = 125 / ((param0 - 82) / 34);
-        if ((1 & bc.field_f >> this.field_q) != 0 &&
-          0 == (nf.field_u >> this.field_q & 1) &&
+        if ((1 & bc.field_f >> this.levelNumber) != 0 &&
+          0 == (nf.field_u >> this.levelNumber & 1) &&
           this.field_w > 0) {
           this.a(7, 248, (byte) -125);
         }
-        if ((bc.field_f >> this.field_q & 1) != 0 &&
-          0 == (1 & bg.field_k >> this.field_q) &&
+        if ((bc.field_f >> this.levelNumber & 1) != 0 &&
+          0 == (1 & bg.field_k >> this.levelNumber) &&
           this.field_w > 0) {
           this.a(8, 247, (byte) -90);
         }
-        if ((1 & cj.field_b >> this.field_q) == 0 &&
+        if ((1 & cj.field_b >> this.levelNumber) == 0 &&
           0 < this.field_w) {
           this.a(9, 246, (byte) -99);
         }
-        if (2 == this.field_q &&
+        if (2 == this.levelNumber &&
           this.field_w > 0) {
           this.a(10, 245, (byte) -123);
         }
-        if (this.field_q == 5 &&
+        if (this.levelNumber == 5 &&
           this.field_w > 0) {
           this.a(11, 244, (byte) -81);
         }
-        if (8 == this.field_q &&
+        if (8 == this.levelNumber &&
           this.field_w > 0) {
           this.a(12, 243, (byte) -94);
           if (hc.field_G == 2) {
             this.a(14, 241, (byte) -112);
           }
         }
-        if (0 == (dg.field_c >> this.field_q & 1) &&
-          2 >= this.field_q && this.field_w > 0) {
+        if (0 == (dg.field_c >> this.levelNumber & 1) &&
+          2 >= this.levelNumber && this.field_w > 0) {
           this.a(13, 242, (byte) -96);
         }
     }
@@ -1484,9 +1484,9 @@ final class j {
           this.A(-84);
         }
         if (this.field_fb < 0) {
-          if (this.field_q >= 0 &&
+          if (this.levelNumber >= 0 &&
             param0 < this.field_gb) {
-            gi.field_f = gi.field_f | 1 << this.field_q;
+            IntrusiveNode.field_f = IntrusiveNode.field_f | 1 << this.levelNumber;
           }
           this.field_y = true;
           this.field_gb = param0;
@@ -1592,7 +1592,7 @@ final class j {
         if (!param0) {
           return;
         }
-        var5 = uf.field_d + (this.field_q / 3 + 1) + "-" + (this.field_q % 3 + 1);
+        var5 = uf.field_d + (this.levelNumber / 3 + 1) + "-" + (this.levelNumber % 3 + 1);
         cb.field_b.b(var5, 320, cb.field_b.field_E + (var4 + 45), 16777215, 0);
         return;
     }
@@ -1624,12 +1624,12 @@ final class j {
           this.field_O) {
           pa.field_c = this.field_J;
           ah.field_J = ib.field_t;
-          L5: while (true) {
+          scanLoop1: while (true) {
             ib.field_t = (ib.field_t + 1) % 4;
-            stackIn_15_0 = nc.field_J[this.field_q][ib.field_t];
+            stackIn_15_0 = nc.field_J[this.levelNumber][ib.field_t];
             do {
               if (!stackIn_15_0) {
-                continue L5;
+                continue scanLoop1;
               }
               stackIn_15_0 = true;
             } while (var3 != 0);
@@ -1645,7 +1645,7 @@ final class j {
         boolean decompiledFrameRemainder3 = true;
         if (ck.field_f[em.field_e] &&
           0 != ib.field_t) {
-          if (!nc.field_J[this.field_q][0]) {
+          if (!nc.field_J[this.levelNumber][0]) {
             this.field_Z = 50;
             if (var3 != 0) {
               pa.field_c = this.field_J;
@@ -1667,7 +1667,7 @@ final class j {
               2 == ib.field_t) &&
               (decompiledFrameRemainder3 = !(!ck.field_f[lf.field_c])) &&
               (decompiledFrameRemainder3 = (ib.field_t != 3))) {
-              if (nc.field_J[this.field_q][3]) {
+              if (nc.field_J[this.levelNumber][3]) {
                 pa.field_c = this.field_J;
                 ah.field_J = ib.field_t;
                 ib.field_t = 3;
@@ -1681,7 +1681,7 @@ final class j {
               decompiledFrameRemainder3 = (var3 != 0);
             }
             if (decompiledFrameRemainder3) {
-              if (!nc.field_J[this.field_q][2]) {
+              if (!nc.field_J[this.levelNumber][2]) {
                 this.field_Z = 50;
                 if (var3 != 0) {
                   pa.field_c = this.field_J;
@@ -1695,7 +1695,7 @@ final class j {
               }
               s.field_e = true;
               if (var3 != 0) {
-                if (nc.field_J[this.field_q][1]) {
+                if (nc.field_J[this.levelNumber][1]) {
                   pa.field_c = this.field_J;
                   ah.field_J = ib.field_t;
                   ib.field_t = 1;
@@ -1707,7 +1707,7 @@ final class j {
               }
             }
           } else {
-            if (nc.field_J[this.field_q][1]) {
+            if (nc.field_J[this.levelNumber][1]) {
               pa.field_c = this.field_J;
               ah.field_J = ib.field_t;
               ib.field_t = 1;
@@ -1765,7 +1765,7 @@ final class j {
           }
         }
         if (0 == this.field_u) {
-          gi.a(this.field_M, 3408);
+          IntrusiveNode.a(this.field_M, 3408);
           this.field_M.i(-1);
         }
         boolean decompiledFrameRemainder1 = true;
@@ -2171,49 +2171,49 @@ final class j {
             }
             if (ck.field_f[2]) {
               this.field_ab = true;
-              this.field_q = 0;
+              this.levelNumber = 0;
               this.field_W = true;
               this.H(1);
             }
             if (ck.field_f[3]) {
               this.field_W = true;
-              this.field_q = 1;
+              this.levelNumber = 1;
               this.field_ab = true;
               this.H(1);
             }
             if (ck.field_f[4]) {
               this.field_ab = true;
               this.field_W = true;
-              this.field_q = 2;
+              this.levelNumber = 2;
               this.H(1);
             }
             if (ck.field_f[5]) {
-              this.field_q = 3;
+              this.levelNumber = 3;
               this.field_ab = true;
               this.field_W = true;
               this.H(1);
             }
             if (ck.field_f[6]) {
               this.field_ab = true;
-              this.field_q = 4;
+              this.levelNumber = 4;
               this.field_W = true;
               this.H(param0 ^ 214);
             }
             if (ck.field_f[7]) {
               this.field_ab = true;
               this.field_W = true;
-              this.field_q = 5;
+              this.levelNumber = 5;
               this.H(1);
             }
             if (ck.field_f[8]) {
               this.field_ab = true;
-              this.field_q = 6;
+              this.levelNumber = 6;
               this.field_W = true;
               this.H(param0 ^ 214);
             }
             if (ck.field_f[9]) {
               this.field_W = true;
-              this.field_q = 7;
+              this.levelNumber = 7;
               this.field_ab = true;
               this.H(1);
             }
@@ -2236,11 +2236,11 @@ final class j {
         if (param0 != -1) {
           this.v(-22);
         }
-        if (this.field_q == 0 ||
-          this.field_q == 3) {
+        if (this.levelNumber == 0 ||
+          this.levelNumber == 3) {
           var2 = 1;
           var3 = 0;
-          L11: while (true) {
+          scanLoop1: while (true) {
             if (si.field_C.length > var3) {
               var2 = var2 != 0 & si.field_C[var3] ? 1 : 0;
               var3++;
@@ -2274,17 +2274,17 @@ final class j {
               el.field_tb = el.field_tb + 1;
             }
             if (5 == el.field_tb &&
-              this.field_q == 0) {
+              this.levelNumber == 0) {
               we.field_f = we.field_f + 1;
               if (var4 == 0) {
-                break L11;
+                break scanLoop1;
               }
             }
             if (el.field_tb != 6 ||
-              this.field_q != 3) {
+              this.levelNumber != 3) {
               we.field_f = 0;
               if (var4 == 0) {
-                break L11;
+                break scanLoop1;
               }
             }
             we.field_f = we.field_f + 1;
@@ -2329,7 +2329,7 @@ final class j {
           }
         }
         var2Lifetime1 = 0;
-        L5: while (true) {
+        scanLoop1: while (true) {
           if (var2Lifetime1 < 1400) {
             var3_ref_gf = this.field_m[var2Lifetime1];
             stackIn_57_0 = null;
@@ -2341,7 +2341,7 @@ final class j {
                   this.field_v[var2Lifetime1] = null;
                 }
                 var2Lifetime1++;
-                break L5;
+                break scanLoop1;
               }
             }
             if (stackIn_57_0 != stackIn_57_1) {
@@ -2435,16 +2435,16 @@ final class j {
         boolean stackOut_14_0;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = null;
-        if (0 == this.field_q) {
+        if (0 == this.levelNumber) {
           var2 = oi.field_f;
         }
         if (param0 <= 109) {
           return;
         }
-        if (1 == this.field_q) {
+        if (1 == this.levelNumber) {
           var2 = sg.field_e;
         }
-        if (2 == this.field_q) {
+        if (2 == this.levelNumber) {
           var2 = uk.field_h;
         }
         if (var2 == null) {
@@ -2470,7 +2470,7 @@ final class j {
           bc.field_d.c();
           wj.f(0, 0, bc.field_d.field_y, bc.field_d.field_w, 0);
           lb.field_C.a(124);
-          stackIn_20_0 = this.field_q;
+          stackIn_20_0 = this.levelNumber;
         }
         ab.field_b = stackIn_20_0;
         return;
@@ -2492,7 +2492,7 @@ final class j {
           }
           this.field_v[this.h((byte) -111)] = param1;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "j.RA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "j.RA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2533,7 +2533,7 @@ final class j {
         }
         if (decompiledFrameRemainder0) {
           if (gm.field_J == 0) {
-            gf.field_D = Math.max(1 + sd.field_a.field_q, gf.field_D);
+            gf.field_D = Math.max(1 + sd.field_a.levelNumber, gf.field_D);
             var4 = new nl(0, -1 + gf.field_D, 0, 0, 0, 0);
             if (oh.a(param0 - 1)) {
               dl.field_M.a(var4, param0 + 254);
@@ -2634,7 +2634,7 @@ final class j {
         int var3 = 0;
         boolean decompiledFrameCompleted0 = true;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var2 = this.field_q;
+        var2 = this.levelNumber;
         if (var2 == 2) {
           var2 = 0;
           while (var2 < 64) {
@@ -2657,7 +2657,7 @@ final class j {
         if (param0 <= 111) {
           this.b(true);
         }
-        int var8 = this.field_q <= 5 ? 430 : 334;
+        int var8 = this.levelNumber <= 5 ? 430 : 334;
         if ((double)var8 < param1) {
           param1 = (double)(-of.field_x.field_c + var8);
         }
@@ -2738,7 +2738,7 @@ final class j {
         double var11Lifetime1;
         double var13Lifetime1;
         var19 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (3 == this.field_q) {
+        if (3 == this.levelNumber) {
           return;
         }
         var4 = this.field_G.field_h.length;
@@ -2766,9 +2766,9 @@ final class j {
                     var2 = -this.field_G.field_h[this.field_J + var8] + 430;
                   } else {
                     var2 = 330;
-                    if (3 == this.field_q ||
-                      this.field_q == 4 ||
-                      5 == this.field_q) {
+                    if (3 == this.levelNumber ||
+                      this.levelNumber == 4 ||
+                      5 == this.levelNumber) {
                       var2 = 0;
                     }
                   }
@@ -2887,7 +2887,7 @@ final class j {
         boolean decompiledFrameRemainder3 = true;
         boolean decompiledFrameRemainder2 = true;
         var5 = (double)ri.field_q + this.field_D;
-        lh.field_m = lh.field_m | 1 << this.field_q;
+        lh.field_m = lh.field_m | 1 << this.levelNumber;
         var3 = this.field_N + (double)am.field_p;
         var13_int = param0;
         if (((19 != var13_int ||
@@ -2940,8 +2940,8 @@ final class j {
           var7 = 10.0;
           var9 = 0.0;
         }
-        L13: {
-          L14: {
+        regionExit1: {
+          regionExit2: {
             boolean decompiledFrameCompleted0 = true;
             var32 = param0;
             if (var32 == 19 &&
@@ -2960,7 +2960,7 @@ final class j {
                   this.field_m[this.g((byte) 119)] = new gf(param0, var3, var5, var7, var9, 800.0, this.field_D);
                   this.field_S = 0;
                   {
-                    break L13;
+                    break regionExit1;
                   }
                 case 2:
                   var11 = 2.0 * (-0.5 + Math.random()) + 0.5;
@@ -2968,7 +2968,7 @@ final class j {
                   this.field_m[this.g((byte) 119)] = new gf(param0, var3 - 10.0, 6.0 + var5, var7, var9 - var11, 800.0, this.field_D);
                   this.field_S = 0;
                   {
-                    break L14;
+                    break regionExit2;
                   }
                 case 3:
                   var11 = (Math.random() - 0.5) * 1.0 + 1.0;
@@ -2977,7 +2977,7 @@ final class j {
                   this.field_m[this.g((byte) 119)] = new gf(param0, -10.0 + var3, 6.0 + var5, var7, var9 + var11, 800.0, this.field_D);
                   this.field_S = 0;
                   {
-                    break L14;
+                    break regionExit2;
                   }
                 case 4:
                   var11 = 0.5 + (Math.random() - 0.5) * 1.0;
@@ -2986,7 +2986,7 @@ final class j {
                   this.field_m[this.g((byte) 119)] = new gf(param0, -10.0 + var3, var5 + 6.0, var7, var9 + var11, 800.0, this.field_D);
                   this.field_S = 0;
                   {
-                    break L14;
+                    break regionExit2;
                   }
                 case 5:
                   var11 = 0.5 + 2.0 * (Math.random() - 0.5);
@@ -2995,7 +2995,7 @@ final class j {
                   this.field_m[this.g((byte) 119)] = new gf(24, var3 - 10.0, var5 + 6.0, var7 + 2.0, var9 + var11, 800.0, this.field_D);
                   this.field_S = 0;
                   {
-                    break L14;
+                    break regionExit2;
                   }
                 case 6:
                   var11 = 1.0 + 1.5 * (-0.5 + Math.random());
@@ -3004,7 +3004,7 @@ final class j {
                   this.field_m[this.g((byte) 119)] = new gf(24, var3 - 10.0, var5 + 6.0, 2.0 + var7, var9 + var11, 800.0, this.field_D);
                   this.field_S = 0;
                   {
-                    break L14;
+                    break regionExit2;
                   }
                 case 7:
                   var11 = 2.0 * (-0.5 + Math.random()) + 0.5;
@@ -3013,7 +3013,7 @@ final class j {
                   this.field_m[this.g((byte) 119)] = new gf(24, var3 - 10.0, var5 + 6.0, 2.0 + var7, var9 + var11, 800.0, this.field_D);
                   this.field_S = 0;
                   {
-                    break L14;
+                    break regionExit2;
                   }
                 case 8:
                   var11 = 0.5 + 2.5 * (-0.5 + Math.random());
@@ -3022,7 +3022,7 @@ final class j {
                   this.field_m[this.g((byte) 119)] = new gf(25, var3 - 10.0, var5 + 3.0, 5.0 + var7, var11 + var9, 800.0, this.field_D);
                   this.field_S = 0;
                   {
-                    break L14;
+                    break regionExit2;
                   }
                 default:
                   break;
@@ -3036,7 +3036,7 @@ final class j {
               } else {
                 this.field_S = this.field_S - 3;
               }
-              break L14;
+              break regionExit2;
             } else if (var32 != 21 ||
               var38 != 0) {
               if (28 == var32 &&
@@ -3141,7 +3141,7 @@ final class j {
               if (23 == var32 &&
                 var38 == 0) {
                 this.field_m[this.g((byte) 119)] = new gf(param0, var3, var5, var7, var9, 800.0, this.field_D, this.field_u);
-                break L14;
+                break regionExit2;
               } else {
                 if (var32 != 22) {
                   decompiledFrameRemainder0 = (var32 != 20);
@@ -3153,7 +3153,7 @@ final class j {
                 this.field_m[this.g((byte) 119)] = new gf(22, var3, var5, var7, var9, 800.0, this.field_D);
                 this.field_S = this.field_S - 1;
                 if (var38 == 0) {
-                  break L14;
+                  break regionExit2;
                 }
               }
               if (decompiledFrameRemainder1) {
@@ -3170,13 +3170,13 @@ final class j {
                 }
                 if ((decompiledFrameCompleted0) &&
                   (var38 == 0)) {
-                  break L14;
+                  break regionExit2;
                 }
               }
               if (decompiledFrameCompleted0) {
                 this.field_m[this.g((byte) 119)] = new gf(param0, var3, var5, var7, var9, 800.0, this.field_D);
                 this.field_S = this.field_S - 1;
-                break L13;
+                break regionExit1;
               }
             }
             if (decompiledFrameCompleted0) {
@@ -3269,7 +3269,7 @@ final class j {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -3324,8 +3324,8 @@ final class j {
         int var5 = 0;
         int var2Lifetime1;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (this.field_q != 0 &&
-          this.field_q != 1) {
+        if (this.levelNumber != 0 &&
+          this.levelNumber != 1) {
           return;
         }
         var2 = 0;
@@ -3438,7 +3438,7 @@ final class j {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3506,7 +3506,7 @@ final class j {
         }
         if (decompiledNaturalLoopExit0) {
           stackIn_7_0 = -3;
-          stackIn_7_1 = ~this.field_q;
+          stackIn_7_1 = ~this.levelNumber;
         }
         boolean decompiledFrameRemainder0 = true;
         if (stackIn_7_0 == stackIn_7_1 &&
@@ -3515,7 +3515,7 @@ final class j {
           DrPhlogistonSavesTheEarth.field_K = 255;
           var2 = 0;
           var3 = 0;
-          L6: while (true) {
+          scanLoop1: while (true) {
             ib.field_a = hi.a(640, 4, this.field_l);
             var3++;
             ch.field_y = hi.a(75, param0 + 4, this.field_l);
@@ -3523,7 +3523,7 @@ final class j {
             do {
               if (var3 < 100 &&
                 var2 == 0) {
-                continue L6;
+                continue scanLoop1;
               }
             } while (var4 != 0);
             break;
@@ -3596,7 +3596,7 @@ final class j {
         int var5Lifetime2;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = 0;
-        L3: while (true) {
+        scanLoop1: while (true) {
           if (1400 > var2) {
             var10 = this.field_m[var2];
             var12 = var10;
@@ -3649,7 +3649,7 @@ final class j {
                       stackIn_39_0 = var4;
                       stackIn_40_1 = !(param0);
                       if (((bf) (Object) stackIn_39_0).a(stackIn_40_1)) {
-                        dg.field_c = dg.field_c | 1 << this.field_q;
+                        dg.field_c = dg.field_c | 1 << this.levelNumber;
                       }
                     }
                     if (var12.field_I == 23) {
@@ -3684,7 +3684,7 @@ final class j {
               var3 = var13;
               stackIn_124_0 = var13;
               if (var9 != 0) {
-                break L3;
+                break scanLoop1;
               }
               if (stackIn_124_0 != null &&
                 ne.a(var13.field_g, (int)var13.field_i, (int)var13.field_m, le.field_c, (int)this.field_N, (int)this.field_D)) {
@@ -3812,7 +3812,7 @@ final class j {
         if (sd.field_e != 2) {
           return;
         }
-        stackIn_5_0 = (2 == this.field_q) ? 381 : 305;
+        stackIn_5_0 = (2 == this.levelNumber) ? 381 : 305;
         var3 = stackIn_5_0;
         var4 = 0;
         while (var4 < 20) {
@@ -3998,7 +3998,7 @@ final class j {
                 var3.field_Q != 8 &&
                 var3.field_Q != 9 &&
                 var3.field_Q != 10) {
-                cj.field_b = cj.field_b | 1 << this.field_q;
+                cj.field_b = cj.field_b | 1 << this.levelNumber;
               }
               var4 = var3.field_Q;
               if (wh.field_x[var4] < 0) {
@@ -4045,7 +4045,7 @@ final class j {
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = this.field_G.field_c.length;
         var3 = -50;
-        var4_int = this.field_q;
+        var4_int = this.levelNumber;
         if (6 == var4_int &&
           var7 == 0 ||
           (7 == var4_int ||
@@ -4071,7 +4071,7 @@ final class j {
               }
               if (var6 != null &&
                 ((bf) (var6)).field_Q == 38) {
-                ((bf) (var6)).field_H = ((bf) (var6)).field_H * (1 + this.field_q);
+                ((bf) (var6)).field_H = ((bf) (var6)).field_H * (1 + this.levelNumber);
               }
             }
             var5++;
@@ -4089,7 +4089,7 @@ final class j {
         boolean decompiledFrameRemainder0 = true;
         if (oh.a(param0 ^ 31578) && (0 != ej.field_h ||
           sd.field_a.field_H != 0 ||
-          sd.field_a.field_q != 0)) {
+          sd.field_a.levelNumber != 0)) {
           stackIn_9_0 = true;
           decompiledFrameRemainder0 = false;
         }
@@ -4115,8 +4115,8 @@ final class j {
         if (param0 != 1) {
           field_ib = -60;
         }
-        if (this.field_q != 0) {
-          if ((3 == this.field_q) &&
+        if (this.levelNumber != 0) {
+          if ((3 == this.levelNumber) &&
             (!(gm.field_J > 0)) &&
             (!(ol.field_i.length <= el.field_tb))) {
             cb.field_b.a(ol.field_i[el.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
@@ -4163,11 +4163,11 @@ final class j {
         if (param0 >= 0) {
           this.a(36, -16, 69, 83, -103);
         }
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (2 > var2) {
             stackIn_12_0 = 0;
             if (var4 != 0) {
-              break L1;
+              break scanLoop1;
             }
             var3 = stackIn_12_0;
             while (var3 < 20) {
@@ -4175,7 +4175,7 @@ final class j {
               var3++;
             }
             var2++;
-            continue L1;
+            continue scanLoop1;
           }
           stackIn_12_0 = 0;
           break;
@@ -4195,7 +4195,7 @@ final class j {
         return;
     }
 
-    j(int param0) {
+    LevelSession(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -4258,13 +4258,13 @@ final class j {
           i.field_c[var2] = hi.a(430, 4, this.field_l);
           var2++;
         } while (var4 == 0);
-        L3: while (true) {
+        scanLoop1: while (true) {
           if (var2 < 2) {
             tc.field_f[var2] = (double)(hi.a(640, 4, this.field_l) - 100);
             vj.field_f[var2] = (double)(-hi.a(1720, 4, this.field_l));
             stackIn_16_0 = 0;
             if (var4 != 0) {
-              break L3;
+              break scanLoop1;
             }
             var3 = stackIn_16_0;
             while (true) {
@@ -4281,7 +4281,7 @@ final class j {
               break;
             }
             var2++;
-            continue L3;
+            continue scanLoop1;
           }
           stackIn_16_0 = 0;
           break;
@@ -4294,11 +4294,11 @@ final class j {
             this.field_g = 15132;
             qe.field_a = -150;
             this.field_f = 0;
-            this.field_q = -1 + param0;
-            this.field_M = ag.a(nl.field_r[5], 256, dg.field_e * 24 / 80);
+            this.levelNumber = -1 + param0;
+            this.field_M = PcmSampleStream.a(nl.field_r[5], 256, dg.field_e * 24 / 80);
             this.field_M.c(0, nl.field_r[5].field_i.length);
             this.field_M.f(-1);
-            this.field_z = ag.a(nl.field_r[7], 256, 48);
+            this.field_z = PcmSampleStream.a(nl.field_r[7], 256, 48);
             break;
           }
           wa.field_Q[var2] = hi.a(1280, 4, this.field_l);

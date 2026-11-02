@@ -21,7 +21,7 @@ final class s {
             s.c((byte) -39);
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "s.A(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "s.A(" + param0 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class s {
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           var1 = new nh(540, 140);
-          aj.a(var1, (byte) 127);
+          MouseInput.a(var1, (byte) 127);
           uc.b();
           wj.c();
           vb.field_n = 0;
@@ -60,7 +60,7 @@ final class s {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "s.B(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "s.B(" + param0 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class s {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "s.D(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "s.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -200,7 +200,7 @@ final class s {
           var21Lifetime2 = uc.field_i;
           var22Lifetime2 = uc.field_c;
           var23Lifetime2 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (param5.field_q > var23Lifetime2) {
               var24Lifetime1 = param5.field_J[var23Lifetime2];
@@ -214,14 +214,14 @@ final class s {
               if (var31 != 0) {
                 if (stackIn_63_0 < stackIn_63_1) {
                   stackIn_72_0 = var18;
-                  stackIn_72_1 = jd.field_L.length;
-                  break L1;
+                  stackIn_72_1 = LoginMenuScreen.field_L.length;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (stackIn_63_0 < stackIn_63_1) {
-                  aj.field_b[var23Lifetime2] = -2147483648;
+                  MouseInput.field_b[var23Lifetime2] = -2147483648;
                 } else {
                   fa.field_j[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
                   gf.field_p[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
@@ -231,12 +231,12 @@ final class s {
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }
-                  aj.field_b[var23Lifetime2] = var29Lifetime1;
+                  MouseInput.field_b[var23Lifetime2] = var29Lifetime1;
                 }
                 if (param2) {
                   jc.field_h[var23Lifetime2] = var27Lifetime1 >> b.field_m;
                   wd.field_b[var23Lifetime2] = var28Lifetime1 >> b.field_m;
-                  gl.field_g[var23Lifetime2] = var29Lifetime1;
+                  ClientException.field_g[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -301,9 +301,9 @@ final class s {
                     break;
                   }
                   stackIn_72_0 = var18;
-                  stackIn_72_1 = jd.field_L.length;
+                  stackIn_72_1 = LoginMenuScreen.field_L.length;
                   if (var31 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                   if (stackIn_72_0 >= stackIn_72_1) {
                     break;
@@ -311,7 +311,7 @@ final class s {
                   var19 = param5.field_k[var18];
                   var20 = param5.field_B[var18];
                   var21Lifetime2 = param5.field_E[var18];
-                  jd.field_L[var18] = var15 * var21Lifetime2 + var12 * var20 + var19 * var9 >> 16;
+                  LoginMenuScreen.field_L[var18] = var15 * var21Lifetime2 + var12 * var20 + var19 * var9 >> 16;
                   k.field_I[var18] = var13 * var20 + (var19 * var10 + var21Lifetime2 * var16) >> 16;
                   dd.field_k[var18] = var14 * var20 + (var11 * var19 + var17 * var21Lifetime2) >> 16;
                   var18++;
@@ -346,7 +346,7 @@ final class s {
           } else {
             stackIn_86_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(param6).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -363,7 +363,7 @@ final class s {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "s.F(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "s.F(" + param0 + ')');
         }
     }
 
@@ -374,7 +374,7 @@ final class s {
         hg.field_ob[11] = hj.field_a;
         hg.field_ob[18] = vi.field_d;
         hg.field_ob[6] = rk.field_c;
-        hg.field_ob[17] = uh.field_q;
+        hg.field_ob[17] = DualLinkNode.field_q;
         hg.field_ob[3] = q.field_d;
         hg.field_ob[10] = sh.field_d;
         hg.field_ob[7] = hd.field_L;
@@ -417,7 +417,7 @@ final class s {
           field_d[2] = hb.field_m;
           field_d[1] = n.field_f;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "s.E(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "s.E(" + param0 + ')');
         }
     }
 

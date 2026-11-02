@@ -50,7 +50,7 @@ final class tf extends ca {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class tf extends ca {
         int var8Lifetime1;
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var1_int = jd.field_N;
+          var1_int = LoginMenuScreen.field_N;
           var2 = 0;
           if (re.field_g == 2) {
             var3_long = -aa.field_d + la.a(false);
@@ -168,7 +168,7 @@ final class tf extends ca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "tf.C(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "tf.C(" + param0 + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class tf extends ca {
           this.field_fb.field_E = true;
           this.b(this.field_fb, (byte) 61);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "tf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "tf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -201,21 +201,21 @@ final class tf extends ca {
         this.field_fb.field_E = false;
     }
 
-    final static void a(gi param0, int param1, gi param2) {
+    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         try {
-          if (null != param0.field_b) {
-            param0.a(param1 ^ -32364);
+          if (null != param0.previous) {
+            param0.unlink(param1 ^ -32364);
           }
           if (param1 != 16709) {
-            gi var4 = (gi) null;
-            tf.a((gi) null, 103, (gi) null);
+            IntrusiveNode var4 = (IntrusiveNode) null;
+            tf.a((IntrusiveNode) null, 103, (IntrusiveNode) null);
           }
-          param0.field_b = param2.field_b;
-          param0.field_e = param2;
-          param0.field_b.field_e = param0;
-          param0.field_e.field_b = param0;
+          param0.previous = param2.previous;
+          param0.next = param2;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "tf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "tf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -271,7 +271,7 @@ final class tf extends ca {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

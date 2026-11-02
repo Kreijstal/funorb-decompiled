@@ -32,9 +32,9 @@ final class we {
           if (param0) {
             field_a = (char[]) null;
           }
-          od.a(-1630758008, ag.b(param1, 100, 96));
+          od.a(-1630758008, PcmSampleStream.b(param1, 100, 96));
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "we.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "we.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class we {
           oe.field_d = param2;
           rh.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "we.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "we.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

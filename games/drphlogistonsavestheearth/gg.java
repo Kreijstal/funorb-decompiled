@@ -52,8 +52,8 @@ final class gg {
           if (param0 != 1000) {
             return;
           }
-          gl.field_e = param1;
-          if (null != gl.field_e &&
+          ClientException.field_e = param1;
+          if (null != ClientException.field_e &&
             param1.length < 3) {
             throw new IllegalArgumentException("");
           }
@@ -68,7 +68,7 @@ final class gg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class gg {
         var7 = 255 & param3;
         for (var8 = 0; var8 < 255; var8++) {
           var9 = (int)(Math.pow((double)var8, 1.5) / 16.0);
-          this.field_q[var8] = li.a(li.a(var9 * var6 >> 8 << 8, var5 * var9 >> 8 << 16), var9 * var7 >> 8);
+          this.field_q[var8] = GameAppletShell.a(GameAppletShell.a(var9 * var6 >> 8 << 8, var5 * var9 >> 8 << 16), var9 * var7 >> 8);
         }
         if (param2) {
           wj.a(this.field_a << 4, this.field_j << 4, 2 * this.field_c << 4, 254, this.field_q);

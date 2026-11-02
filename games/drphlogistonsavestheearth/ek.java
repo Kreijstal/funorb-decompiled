@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ek extends gi {
+final class ek extends IntrusiveNode {
     int field_j;
     int field_k;
     static int field_h;
@@ -110,7 +110,7 @@ final class ek extends gi {
             ek.a(41, false, 105);
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ek.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ek.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

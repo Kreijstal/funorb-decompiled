@@ -68,7 +68,7 @@ abstract class gb {
         }
         var8.field_y = param4 ? true : false;
         var8.field_N = param2;
-        var8.field_t = var6;
+        var8.secondaryKey = var6;
         if (param4) {
           if (!(this.c((byte) -115) < 20)) {
             throw new RuntimeException();
@@ -124,14 +124,14 @@ abstract class gb {
             var8 = qb.a("@", (byte) 127, "%40", var7);
             var9 = qb.a("&", (byte) 127, "%26", var8);
             var10 = qb.a("#", (byte) 127, "%23", var9);
-            if (j.field_K == null) {
+            if (LevelSession.field_K == null) {
               return;
             }
             stackIn_13_0 = n.field_h;
             stackIn_13_1 = 107;
             stackIn_13_2 = null;
             stackIn_13_3 = null;
-            stackIn_13_4 = j.field_K.getCodeBase();
+            stackIn_13_4 = LevelSession.field_K.getCodeBase();
             stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(vb.field_o).append("&u=");
             if (null == bi.field_J) {
               stackIn_14_2 = null;

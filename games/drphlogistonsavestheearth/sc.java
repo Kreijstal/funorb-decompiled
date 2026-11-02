@@ -74,27 +74,27 @@ final class sc {
           }
           if (param1 != 5000) {
             if (30000 == param1 &&
-              uh.field_m > 0) {
-              fieldTemp$25 = uh.field_m - 1;
-              uh.field_m = uh.field_m - 1;
+              DualLinkNode.field_m > 0) {
+              fieldTemp$25 = DualLinkNode.field_m - 1;
+              DualLinkNode.field_m = DualLinkNode.field_m - 1;
               var2_ref_byte__Lifetime4 = sj.field_c[fieldTemp$25];
-              sj.field_c[uh.field_m] = null;
+              sj.field_c[DualLinkNode.field_m] = null;
               return var2_ref_byte__Lifetime4;
             }
             if (param0 != -16705) {
               field_b = (String[]) null;
             }
-            if (null == gi.field_a) {
+            if (null == IntrusiveNode.field_a) {
               return new byte[param1];
             }
             for (var2 = 0; mf.field_E.length > var2; var2++) {
               if (param1 == mf.field_E[var2] &&
                 eb.field_b[var2] > 0) {
                 dupTemp$26 = eb.field_b[var2] - 1;
-                arrayValue$27 = gi.field_a[var2];
+                arrayValue$27 = IntrusiveNode.field_a[var2];
                 eb.field_b[var2] = dupTemp$26;
                 var3 = arrayValue$27[dupTemp$26];
-                gi.field_a[var2][eb.field_b[var2]] = null;
+                IntrusiveNode.field_a[var2][eb.field_b[var2]] = null;
                 return var3;
               }
             }
@@ -111,58 +111,58 @@ final class sc {
             if (param0 != -16705) {
               field_b = (String[]) null;
             }
-            if (null == gi.field_a) {
+            if (null == IntrusiveNode.field_a) {
               return new byte[param1];
             }
             for (var2Lifetime5 = 0; mf.field_E.length > var2Lifetime5; var2Lifetime5++) {
               if (param1 == mf.field_E[var2Lifetime5] &&
                 eb.field_b[var2Lifetime5] > 0) {
                 dupTemp$23 = eb.field_b[var2Lifetime5] - 1;
-                arrayValue$24 = gi.field_a[var2Lifetime5];
+                arrayValue$24 = IntrusiveNode.field_a[var2Lifetime5];
                 eb.field_b[var2Lifetime5] = dupTemp$23;
                 var3Lifetime5 = arrayValue$24[dupTemp$23];
-                gi.field_a[var2Lifetime5][eb.field_b[var2Lifetime5]] = null;
+                IntrusiveNode.field_a[var2Lifetime5][eb.field_b[var2Lifetime5]] = null;
                 return var3Lifetime5;
               }
             }
             return new byte[param1];
           }
-          if (uh.field_m > 0) {
-            fieldTemp$22 = uh.field_m - 1;
-            uh.field_m = uh.field_m - 1;
+          if (DualLinkNode.field_m > 0) {
+            fieldTemp$22 = DualLinkNode.field_m - 1;
+            DualLinkNode.field_m = DualLinkNode.field_m - 1;
             var2_ref_byte__Lifetime6 = sj.field_c[fieldTemp$22];
-            sj.field_c[uh.field_m] = null;
+            sj.field_c[DualLinkNode.field_m] = null;
             return var2_ref_byte__Lifetime6;
           }
           if (param0 == -16705) {
-            if (null == gi.field_a) {
+            if (null == IntrusiveNode.field_a) {
               return new byte[param1];
             }
             for (var2Lifetime6 = 0; mf.field_E.length > var2Lifetime6; var2Lifetime6++) {
               if (param1 == mf.field_E[var2Lifetime6] &&
                 eb.field_b[var2Lifetime6] > 0) {
                 dupTemp$18 = eb.field_b[var2Lifetime6] - 1;
-                arrayValue$19 = gi.field_a[var2Lifetime6];
+                arrayValue$19 = IntrusiveNode.field_a[var2Lifetime6];
                 eb.field_b[var2Lifetime6] = dupTemp$18;
                 var3Lifetime6 = arrayValue$19[dupTemp$18];
-                gi.field_a[var2Lifetime6][eb.field_b[var2Lifetime6]] = null;
+                IntrusiveNode.field_a[var2Lifetime6][eb.field_b[var2Lifetime6]] = null;
                 return var3Lifetime6;
               }
             }
             return new byte[param1];
           }
           field_b = (String[]) null;
-          if (null == gi.field_a) {
+          if (null == IntrusiveNode.field_a) {
             return new byte[param1];
           }
           for (var2Lifetime7 = 0; mf.field_E.length > var2Lifetime7; var2Lifetime7++) {
             if (param1 == mf.field_E[var2Lifetime7] &&
               eb.field_b[var2Lifetime7] > 0) {
               dupTemp$20 = eb.field_b[var2Lifetime7] - 1;
-              arrayValue$21 = gi.field_a[var2Lifetime7];
+              arrayValue$21 = IntrusiveNode.field_a[var2Lifetime7];
               eb.field_b[var2Lifetime7] = dupTemp$20;
               var3Lifetime7 = arrayValue$21[dupTemp$20];
-              gi.field_a[var2Lifetime7][eb.field_b[var2Lifetime7]] = null;
+              IntrusiveNode.field_a[var2Lifetime7][eb.field_b[var2Lifetime7]] = null;
               return var3Lifetime7;
             }
           }
@@ -170,23 +170,23 @@ final class sc {
         }
         if (param1 != 5000) {
           if (30000 == param1 &&
-            uh.field_m > 0) {
-            fieldTemp$2 = uh.field_m - 1;
-            uh.field_m = uh.field_m - 1;
+            DualLinkNode.field_m > 0) {
+            fieldTemp$2 = DualLinkNode.field_m - 1;
+            DualLinkNode.field_m = DualLinkNode.field_m - 1;
             var2_ref_byte__Lifetime1 = sj.field_c[fieldTemp$2];
-            sj.field_c[uh.field_m] = null;
+            sj.field_c[DualLinkNode.field_m] = null;
             return var2_ref_byte__Lifetime1;
           }
           if (param0 == -16705) {
-            if (null != gi.field_a) {
+            if (null != IntrusiveNode.field_a) {
               for (var2Lifetime1 = 0; mf.field_E.length > var2Lifetime1; var2Lifetime1++) {
                 if (param1 == mf.field_E[var2Lifetime1] &&
                   eb.field_b[var2Lifetime1] > 0) {
                   dupTemp$3 = eb.field_b[var2Lifetime1] - 1;
-                  arrayValue$4 = gi.field_a[var2Lifetime1];
+                  arrayValue$4 = IntrusiveNode.field_a[var2Lifetime1];
                   eb.field_b[var2Lifetime1] = dupTemp$3;
                   var3Lifetime1 = arrayValue$4[dupTemp$3];
-                  gi.field_a[var2Lifetime1][eb.field_b[var2Lifetime1]] = null;
+                  IntrusiveNode.field_a[var2Lifetime1][eb.field_b[var2Lifetime1]] = null;
                   return var3Lifetime1;
                 }
               }
@@ -194,15 +194,15 @@ final class sc {
             return new byte[param1];
           }
           field_b = (String[]) null;
-          if (null != gi.field_a) {
+          if (null != IntrusiveNode.field_a) {
             for (var2Lifetime1Lifetime1 = 0; mf.field_E.length > var2Lifetime1Lifetime1; var2Lifetime1Lifetime1++) {
               if (param1 == mf.field_E[var2Lifetime1Lifetime1] &&
                 eb.field_b[var2Lifetime1Lifetime1] > 0) {
                 dupTemp$5 = eb.field_b[var2Lifetime1Lifetime1] - 1;
-                arrayValue$6 = gi.field_a[var2Lifetime1Lifetime1];
+                arrayValue$6 = IntrusiveNode.field_a[var2Lifetime1Lifetime1];
                 eb.field_b[var2Lifetime1Lifetime1] = dupTemp$5;
                 var3Lifetime1Lifetime1 = arrayValue$6[dupTemp$5];
-                gi.field_a[var2Lifetime1Lifetime1][eb.field_b[var2Lifetime1Lifetime1]] = null;
+                IntrusiveNode.field_a[var2Lifetime1Lifetime1][eb.field_b[var2Lifetime1Lifetime1]] = null;
                 return var3Lifetime1Lifetime1;
               }
             }
@@ -218,15 +218,15 @@ final class sc {
         }
         if (30000 != param1) {
           if (param0 == -16705) {
-            if (null != gi.field_a) {
+            if (null != IntrusiveNode.field_a) {
               for (var2Lifetime2 = 0; mf.field_E.length > var2Lifetime2; var2Lifetime2++) {
                 if (param1 == mf.field_E[var2Lifetime2] &&
                   eb.field_b[var2Lifetime2] > 0) {
                   dupTemp$13 = eb.field_b[var2Lifetime2] - 1;
-                  arrayValue$14 = gi.field_a[var2Lifetime2];
+                  arrayValue$14 = IntrusiveNode.field_a[var2Lifetime2];
                   eb.field_b[var2Lifetime2] = dupTemp$13;
                   var3Lifetime2 = arrayValue$14[dupTemp$13];
-                  gi.field_a[var2Lifetime2][eb.field_b[var2Lifetime2]] = null;
+                  IntrusiveNode.field_a[var2Lifetime2][eb.field_b[var2Lifetime2]] = null;
                   return var3Lifetime2;
                 }
               }
@@ -234,38 +234,38 @@ final class sc {
             return new byte[param1];
           }
           field_b = (String[]) null;
-          if (null != gi.field_a) {
+          if (null != IntrusiveNode.field_a) {
             for (var2Lifetime2Lifetime1 = 0; mf.field_E.length > var2Lifetime2Lifetime1; var2Lifetime2Lifetime1++) {
               if (param1 == mf.field_E[var2Lifetime2Lifetime1] &&
                 eb.field_b[var2Lifetime2Lifetime1] > 0) {
                 dupTemp$15 = eb.field_b[var2Lifetime2Lifetime1] - 1;
-                arrayValue$16 = gi.field_a[var2Lifetime2Lifetime1];
+                arrayValue$16 = IntrusiveNode.field_a[var2Lifetime2Lifetime1];
                 eb.field_b[var2Lifetime2Lifetime1] = dupTemp$15;
                 var3Lifetime2Lifetime1 = arrayValue$16[dupTemp$15];
-                gi.field_a[var2Lifetime2Lifetime1][eb.field_b[var2Lifetime2Lifetime1]] = null;
+                IntrusiveNode.field_a[var2Lifetime2Lifetime1][eb.field_b[var2Lifetime2Lifetime1]] = null;
                 return var3Lifetime2Lifetime1;
               }
             }
           }
           return new byte[param1];
         }
-        if (uh.field_m > 0) {
-          fieldTemp$8 = uh.field_m - 1;
-          uh.field_m = uh.field_m - 1;
+        if (DualLinkNode.field_m > 0) {
+          fieldTemp$8 = DualLinkNode.field_m - 1;
+          DualLinkNode.field_m = DualLinkNode.field_m - 1;
           var2_ref_byte__Lifetime3 = sj.field_c[fieldTemp$8];
-          sj.field_c[uh.field_m] = null;
+          sj.field_c[DualLinkNode.field_m] = null;
           return var2_ref_byte__Lifetime3;
         }
         if (param0 == -16705) {
-          if (null != gi.field_a) {
+          if (null != IntrusiveNode.field_a) {
             for (var2Lifetime3 = 0; mf.field_E.length > var2Lifetime3; var2Lifetime3++) {
               if (param1 == mf.field_E[var2Lifetime3] &&
                 eb.field_b[var2Lifetime3] > 0) {
                 dupTemp$9 = eb.field_b[var2Lifetime3] - 1;
-                arrayValue$10 = gi.field_a[var2Lifetime3];
+                arrayValue$10 = IntrusiveNode.field_a[var2Lifetime3];
                 eb.field_b[var2Lifetime3] = dupTemp$9;
                 var3Lifetime3 = arrayValue$10[dupTemp$9];
-                gi.field_a[var2Lifetime3][eb.field_b[var2Lifetime3]] = null;
+                IntrusiveNode.field_a[var2Lifetime3][eb.field_b[var2Lifetime3]] = null;
                 return var3Lifetime3;
               }
             }
@@ -273,15 +273,15 @@ final class sc {
           return new byte[param1];
         }
         field_b = (String[]) null;
-        if (null != gi.field_a) {
+        if (null != IntrusiveNode.field_a) {
           for (var2Lifetime4 = 0; mf.field_E.length > var2Lifetime4; var2Lifetime4++) {
             if (param1 == mf.field_E[var2Lifetime4] &&
               eb.field_b[var2Lifetime4] > 0) {
               dupTemp$11 = eb.field_b[var2Lifetime4] - 1;
-              arrayValue$12 = gi.field_a[var2Lifetime4];
+              arrayValue$12 = IntrusiveNode.field_a[var2Lifetime4];
               eb.field_b[var2Lifetime4] = dupTemp$11;
               var3Lifetime4 = arrayValue$12[dupTemp$11];
-              gi.field_a[var2Lifetime4][eb.field_b[var2Lifetime4]] = null;
+              IntrusiveNode.field_a[var2Lifetime4][eb.field_b[var2Lifetime4]] = null;
               return var3Lifetime4;
             }
           }
@@ -320,7 +320,7 @@ final class sc {
             sc.a(-73, -118);
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "sc.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "sc.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

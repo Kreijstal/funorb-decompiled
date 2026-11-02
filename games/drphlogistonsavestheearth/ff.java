@@ -44,7 +44,7 @@ final class ff extends pj implements ke {
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = param0 + this.field_o;
         int var6 = this.field_m + param3;
-        uh.field_i.a(qk.field_a, var5 + 20, 20 + var6, -40 + this.field_w, this.field_k - 50, 16777215, -1, 1, 0, uh.field_i.field_x);
+        DualLinkNode.field_i.a(qk.field_a, var5 + 20, 20 + var6, -40 + this.field_w, this.field_k - 50, 16777215, -1, 1, 0, DualLinkNode.field_i.field_x);
         super.a(param0, param1, param2, param3);
     }
 
@@ -83,7 +83,7 @@ final class ff extends pj implements ke {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class ff extends pj implements ke {
             var5 = (java.applet.Applet) null;
             ff.a(-48, (String) null, (java.applet.Applet) null);
           }
-          var6 = uh.field_h;
+          var6 = DualLinkNode.field_h;
           var1 = var6;
           var2 = 0;
           var3 = var6.length;
@@ -120,7 +120,7 @@ final class ff extends pj implements ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1_ref), "ff.B(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1_ref), "ff.B(" + param0 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class ff extends pj implements ke {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class ff extends pj implements ke {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

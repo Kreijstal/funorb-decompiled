@@ -62,7 +62,7 @@ abstract class ca extends bd {
         String var11;
         int var12;
         int var13;
-        gl var14;
+        ClientException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -88,11 +88,11 @@ abstract class ca extends bd {
         String var2Lifetime3Lifetime12;
         String var11Lifetime3Lifetime1;
         var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (param0 instanceof gl) {
-          var14 = (gl) ((Object) param0);
-          var2 = var14.field_d + " | ";
+        if (param0 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param0);
+          var2 = var14.context + " | ";
           var11 = var2;
-          param0 = var14.field_a;
+          param0 = var14.cause;
         } else {
           var2 = "";
         }

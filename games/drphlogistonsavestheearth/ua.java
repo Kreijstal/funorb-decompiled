@@ -9,19 +9,19 @@ final class ua extends java.awt.Canvas {
     static nh field_c;
 
     final static int a(int param0, int param1, int param2) {
-        if (uh.field_r == null) {
+        if (DualLinkNode.field_r == null) {
           return -1;
         }
         if (param2 >= ka.field_o &&
-          param2 < ka.field_o + uh.field_r.field_y &&
+          param2 < ka.field_o + DualLinkNode.field_r.field_y &&
           tb.field_c <= param0 &&
-          uh.field_r.field_w + tb.field_c > param0) {
+          DualLinkNode.field_r.field_w + tb.field_c > param0) {
           return 0;
         }
         if (param2 >= ch.field_A &&
-          param2 < ch.field_A + uh.field_r.field_y &&
+          param2 < ch.field_A + DualLinkNode.field_r.field_y &&
           param0 >= v.field_N &&
-          v.field_N + uh.field_r.field_w > param0) {
+          v.field_N + DualLinkNode.field_r.field_w > param0) {
           return 1;
         }
         if (param1 != -13412) {
@@ -34,7 +34,7 @@ final class ua extends java.awt.Canvas {
         try {
           this.field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ua.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ua.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class ua extends java.awt.Canvas {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class ua extends java.awt.Canvas {
         try {
           this.field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ua.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ua.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class ua extends java.awt.Canvas {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -3,7 +3,7 @@
  */
 final class td {
     static int[] field_g;
-    private ag field_b;
+    private PcmSampleStream field_b;
     static boolean field_f;
     boolean field_j;
     private int field_k;
@@ -131,7 +131,7 @@ final class td {
           this.field_b = null;
         } else {
           var8Lifetime1 = e.a(104, param1);
-          this.field_b = ag.a(nl.field_r[param3], 100, dk.field_a[this.field_n], var8Lifetime1);
+          this.field_b = PcmSampleStream.a(nl.field_r[param3], 100, dk.field_a[this.field_n], var8Lifetime1);
           od.a(-1630758008, this.field_b);
         }
     }

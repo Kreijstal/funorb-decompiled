@@ -21,7 +21,7 @@ final class c {
           var2 = tk.a(param1, "jagex logo2.packvorbis", "");
           var2.c();
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "c.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "c.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

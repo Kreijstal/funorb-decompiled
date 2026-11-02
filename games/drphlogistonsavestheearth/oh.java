@@ -27,7 +27,7 @@ final class oh {
         if (param0 != 26500) {
           oh.a(true);
         }
-        gl.field_c = param2;
+        ClientException.field_c = param2;
         oc.field_B = param1;
     }
 
@@ -82,7 +82,7 @@ final class oh {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

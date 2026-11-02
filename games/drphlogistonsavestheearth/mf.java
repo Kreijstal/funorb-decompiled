@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mf extends uh {
+abstract class mf extends DualLinkNode {
     int field_C;
     int field_y;
     int field_v;
@@ -65,15 +65,15 @@ abstract class mf extends uh {
           sd.field_a.a(255, 0);
           sd.field_a.field_N = (double)(-am.field_l);
           sd.field_a.field_D = 190.0;
-          sd.field_a.field_q = sd.field_a.field_q + 1;
+          sd.field_a.levelNumber = sd.field_a.levelNumber + 1;
           sd.field_a.field_j = 0.0;
           sd.field_a.field_c = 0.0;
-          if (!nc.field_J[sd.field_a.field_q][ib.field_t]) {
+          if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
             ib.field_t = 0;
           }
           sd.field_a.field_T = 0;
           sd.field_a.field_R = 0;
-          var1 = sd.field_a.field_q;
+          var1 = sd.field_a.levelNumber;
           if (var1 != 0 &&
             var1 != 3 &&
             var1 != 6) {
@@ -84,7 +84,7 @@ abstract class mf extends uh {
             r.field_d = 6;
           }
           sd.field_a.field_X = 0;
-          var1 = sd.field_a.field_q;
+          var1 = sd.field_a.levelNumber;
           switch (var1) {
             case 0:
               sc.a(-1, true, ki.field_c);
@@ -101,7 +101,7 @@ abstract class mf extends uh {
                 break;
               }
               sc.a(param0 + 8371, true, le.field_e);
-              if (sd.field_a.field_q >= 3) {
+              if (sd.field_a.levelNumber >= 3) {
                 if (oh.a(param0 ^ -8372)) {
                   sd.field_a.d((byte) 69);
                 } else {
@@ -110,14 +110,14 @@ abstract class mf extends uh {
                   }
                 }
               }
-              if (!nc.field_J[sd.field_a.field_q][ib.field_t]) {
+              if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                 ib.field_t = 0;
               }
-              if (bi.field_K.length <= sd.field_a.field_q) {
+              if (bi.field_K.length <= sd.field_a.levelNumber) {
                 sc.a(param0 ^ 8371, false, ml.field_l);
                 sd.field_a.d((byte) 98);
               } else {
-                sd.field_a.field_G = bi.field_K[sd.field_a.field_q];
+                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
               }
               qe.field_a = -150;
               sd.field_a.field_J = 0;
@@ -137,48 +137,48 @@ abstract class mf extends uh {
               break;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (sd.field_a.field_q >= 3) {
+          if (sd.field_a.levelNumber >= 3) {
             if (oh.a(param0 ^ -8372)) {
               sd.field_a.d((byte) 69);
-              if (!nc.field_J[sd.field_a.field_q][ib.field_t]) {
+              if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                 ib.field_t = 0;
               }
-              if (bi.field_K.length <= sd.field_a.field_q) {
+              if (bi.field_K.length <= sd.field_a.levelNumber) {
                 sc.a(param0 ^ 8371, false, ml.field_l);
                 sd.field_a.d((byte) 98);
               } else {
-                sd.field_a.field_G = bi.field_K[sd.field_a.field_q];
+                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
               }
               decompiledFrameRemainder0 = false;
             }
             else {
               if (0 >= hb.field_g) {
                 sd.field_a.d((byte) 69);
-                if (!nc.field_J[sd.field_a.field_q][ib.field_t]) {
+                if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                   ib.field_t = 0;
                 }
-                if (bi.field_K.length <= sd.field_a.field_q) {
+                if (bi.field_K.length <= sd.field_a.levelNumber) {
                   sc.a(param0 ^ 8371, false, ml.field_l);
                   sd.field_a.d((byte) 98);
                 } else {
-                  sd.field_a.field_G = bi.field_K[sd.field_a.field_q];
+                  sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
                 }
                 decompiledFrameRemainder0 = false;
               }
             }
           }
           if (decompiledFrameRemainder0) {
-            if (!nc.field_J[sd.field_a.field_q][ib.field_t]) {
+            if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
               ib.field_t = 0;
-              if (bi.field_K.length <= sd.field_a.field_q) {
+              if (bi.field_K.length <= sd.field_a.levelNumber) {
                 sc.a(param0 ^ 8371, false, ml.field_l);
                 sd.field_a.d((byte) 98);
               } else {
-                sd.field_a.field_G = bi.field_K[sd.field_a.field_q];
+                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
               }
             } else {
-              if (bi.field_K.length > sd.field_a.field_q) {
-                sd.field_a.field_G = bi.field_K[sd.field_a.field_q];
+              if (bi.field_K.length > sd.field_a.levelNumber) {
+                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
               } else {
                 sc.a(param0 ^ 8371, false, ml.field_l);
                 sd.field_a.d((byte) 98);
@@ -191,15 +191,15 @@ abstract class mf extends uh {
           sd.field_a.a(255, 0);
           sd.field_a.field_N = (double)(-am.field_l);
           sd.field_a.field_D = 190.0;
-          sd.field_a.field_q = sd.field_a.field_q + 1;
+          sd.field_a.levelNumber = sd.field_a.levelNumber + 1;
           sd.field_a.field_j = 0.0;
           sd.field_a.field_c = 0.0;
-          if (!nc.field_J[sd.field_a.field_q][ib.field_t]) {
+          if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
             ib.field_t = 0;
           }
           sd.field_a.field_T = 0;
           sd.field_a.field_R = 0;
-          var1 = sd.field_a.field_q;
+          var1 = sd.field_a.levelNumber;
           if (var1 != 0 &&
             var1 != 3 &&
             var1 != 6) {
@@ -210,24 +210,24 @@ abstract class mf extends uh {
             r.field_d = 6;
           }
           sd.field_a.field_X = 0;
-          var1 = sd.field_a.field_q;
+          var1 = sd.field_a.levelNumber;
           switch (var1) {
             case 0:
               sc.a(-1, true, ki.field_c);
               break;
             case 3:
               sc.a(-1, true, hi.field_l);
-              if (sd.field_a.field_q >= 3) {
+              if (sd.field_a.levelNumber >= 3) {
                 if (oh.a(param0 ^ -8372)) {
                   sd.field_a.d((byte) 69);
-                  if (!nc.field_J[sd.field_a.field_q][ib.field_t]) {
+                  if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                     ib.field_t = 0;
                   }
-                  if (bi.field_K.length <= sd.field_a.field_q) {
+                  if (bi.field_K.length <= sd.field_a.levelNumber) {
                     sc.a(param0 ^ 8371, false, ml.field_l);
                     sd.field_a.d((byte) 98);
                   } else {
-                    sd.field_a.field_G = bi.field_K[sd.field_a.field_q];
+                    sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
                   }
                   qe.field_a = -150;
                   sd.field_a.field_J = 0;
@@ -236,14 +236,14 @@ abstract class mf extends uh {
                 }
                 if (0 >= hb.field_g) {
                   sd.field_a.d((byte) 69);
-                  if (!nc.field_J[sd.field_a.field_q][ib.field_t]) {
+                  if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                     ib.field_t = 0;
                   }
-                  if (bi.field_K.length <= sd.field_a.field_q) {
+                  if (bi.field_K.length <= sd.field_a.levelNumber) {
                     sc.a(param0 ^ 8371, false, ml.field_l);
                     sd.field_a.d((byte) 98);
                   } else {
-                    sd.field_a.field_G = bi.field_K[sd.field_a.field_q];
+                    sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
                   }
                   qe.field_a = -150;
                   sd.field_a.field_J = 0;
@@ -251,21 +251,21 @@ abstract class mf extends uh {
                   return;
                 }
               }
-              if (!nc.field_J[sd.field_a.field_q][ib.field_t]) {
+              if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                 ib.field_t = 0;
-                if (bi.field_K.length <= sd.field_a.field_q) {
+                if (bi.field_K.length <= sd.field_a.levelNumber) {
                   sc.a(param0 ^ 8371, false, ml.field_l);
                   sd.field_a.d((byte) 98);
                 } else {
-                  sd.field_a.field_G = bi.field_K[sd.field_a.field_q];
+                  sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
                 }
                 qe.field_a = -150;
                 sd.field_a.field_J = 0;
                 sd.field_a.s(86);
                 return;
               }
-              if (bi.field_K.length > sd.field_a.field_q) {
-                sd.field_a.field_G = bi.field_K[sd.field_a.field_q];
+              if (bi.field_K.length > sd.field_a.levelNumber) {
+                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
                 qe.field_a = -150;
                 sd.field_a.field_J = 0;
                 sd.field_a.s(86);
@@ -286,7 +286,7 @@ abstract class mf extends uh {
                 break;
               }
               sc.a(param0 + 8371, true, le.field_e);
-              if (sd.field_a.field_q >= 3) {
+              if (sd.field_a.levelNumber >= 3) {
                 if (oh.a(param0 ^ -8372)) {
                   sd.field_a.d((byte) 69);
                 } else {
@@ -295,14 +295,14 @@ abstract class mf extends uh {
                   }
                 }
               }
-              if (!nc.field_J[sd.field_a.field_q][ib.field_t]) {
+              if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                 ib.field_t = 0;
               }
-              if (bi.field_K.length <= sd.field_a.field_q) {
+              if (bi.field_K.length <= sd.field_a.levelNumber) {
                 sc.a(param0 ^ 8371, false, ml.field_l);
                 sd.field_a.d((byte) 98);
               } else {
-                sd.field_a.field_G = bi.field_K[sd.field_a.field_q];
+                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
               }
               qe.field_a = -150;
               sd.field_a.field_J = 0;
@@ -321,7 +321,7 @@ abstract class mf extends uh {
               sc.a(-1, true, ki.field_c);
               break;
           }
-          if (sd.field_a.field_q >= 3) {
+          if (sd.field_a.levelNumber >= 3) {
             if (oh.a(param0 ^ -8372)) {
               sd.field_a.d((byte) 69);
             } else {
@@ -330,11 +330,11 @@ abstract class mf extends uh {
               }
             }
           }
-          if (!nc.field_J[sd.field_a.field_q][ib.field_t]) {
+          if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
             ib.field_t = 0;
           }
-          if (bi.field_K.length > sd.field_a.field_q) {
-            sd.field_a.field_G = bi.field_K[sd.field_a.field_q];
+          if (bi.field_K.length > sd.field_a.levelNumber) {
+            sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
           } else {
             sc.a(param0 ^ 8371, false, ml.field_l);
             sd.field_a.d((byte) 98);

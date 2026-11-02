@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends gi {
+final class bg extends IntrusiveNode {
     int field_m;
     static he[] field_t;
     int field_i;
@@ -84,7 +84,7 @@ final class bg extends gi {
             r.field_b = qk.a("benefits", ce.field_a, "button", true);
             eg.field_d = qk.a("benefits", ce.field_a, "signup_text", true);
             nj.field_f = qk.a("benefits", ce.field_a, "menu_text", true);
-            uh.field_r = qk.a("benefits", ce.field_a, "button_frame", true);
+            DualLinkNode.field_r = qk.a("benefits", ce.field_a, "button_frame", true);
             sc.field_c = qk.a("benefits", ce.field_a, "arrow", true);
             md.field_a = (rf) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 125, "large_font"));
             sc.field_f = (rf) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 64, "small_font"));
@@ -121,11 +121,11 @@ final class bg extends gi {
             fk.a(2 * wj.field_c / 3, wj.field_k, 0, 64, (byte) 104, 0);
             wj.a(var28, var2, var3);
             wj.a(ha.field_d);
-            ch.field_A = (r.field_b.field_y - uh.field_r.field_y) / 2 + 434;
-            ka.field_o = 231 + (-uh.field_r.field_y + r.field_b.field_y) / 2;
+            ch.field_A = (r.field_b.field_y - DualLinkNode.field_r.field_y) / 2 + 434;
+            ka.field_o = 231 + (-DualLinkNode.field_r.field_y + r.field_b.field_y) / 2;
             ce.field_a = null;
-            v.field_N = 390 + (r.field_b.field_w - uh.field_r.field_w) / 2;
-            tb.field_c = 390 + (r.field_b.field_w - uh.field_r.field_w) / 2;
+            v.field_N = 390 + (r.field_b.field_w - DualLinkNode.field_r.field_w) / 2;
+            tb.field_c = 390 + (r.field_b.field_w - DualLinkNode.field_r.field_w) / 2;
           }
           if (null == hf.field_D) {
             return;
@@ -139,7 +139,7 @@ final class bg extends gi {
             var14 = a.a(5044, rg.field_d, new String[]{ka.field_p[gd.field_a]});
             var5 = md.field_a.b(var14, ca.field_db);
             var6Lifetime1 = md.field_a.a(var14, ca.field_db, md.field_a.field_S + md.field_a.field_x);
-            var7Lifetime1 = (ca.field_db - var5) / 2 + fe.field_a;
+            var7Lifetime1 = (ca.field_db - var5) / 2 + KeyboardInput.field_a;
             var5 += 6;
             var7Lifetime1 -= 3;
             var8 = ph.field_e + (-var6Lifetime1 + af.field_d) / 2;
@@ -148,7 +148,7 @@ final class bg extends gi {
               var5 = var5 + 2 * var9_int;
               var7Lifetime1 = var7Lifetime1 + var9_int;
               hf.field_z.field_z = hf.field_z.field_z + var9_int * 2;
-              fe.field_a = fe.field_a + var9_int;
+              KeyboardInput.field_a = KeyboardInput.field_a + var9_int;
               hd.field_B = hd.field_B - var9_int;
               hf.field_z.field_D = hf.field_z.field_D + var9_int;
             }
@@ -159,7 +159,7 @@ final class bg extends gi {
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
               hf.field_z.field_D = hf.field_z.field_D + var9_intLifetime1;
               hf.field_z.field_z = hf.field_z.field_z + var9_intLifetime1 * 2;
-              fe.field_a = fe.field_a + var9_intLifetime1;
+              KeyboardInput.field_a = KeyboardInput.field_a + var9_intLifetime1;
               var5 = var5 + var9_intLifetime1 * 2;
               hd.field_B = hd.field_B - var9_intLifetime1;
             }
@@ -184,7 +184,7 @@ final class bg extends gi {
             hf.field_z.b();
             var9 = new nh(hf.field_z.field_z, hf.field_z.field_C);
             var9.c();
-            md.field_a.a(var14, fe.field_a, ph.field_e, ca.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
+            md.field_a.a(var14, KeyboardInput.field_a, ph.field_e, ca.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
             p.a(var9.field_z, 3, 0, var9.field_C, 1, 0, 0, var9);
             hf.field_z.c();
             var9.d(0, 0);
@@ -249,7 +249,7 @@ final class bg extends gi {
             qa.field_L.d(0, 0);
           }
           if (r.field_b != null &&
-            null != uh.field_r) {
+            null != DualLinkNode.field_r) {
             r.field_b.d(231, 390);
             var1 = eg.field_d;
             if (lb.field_w.field_f == 0) {
@@ -279,7 +279,7 @@ final class bg extends gi {
             qj.a(stackIn_58_0, tb.field_c, ka.field_o, true);
           }
           if (null != r.field_b &&
-            uh.field_r != null) {
+            DualLinkNode.field_r != null) {
             r.field_b.d(434, 390);
             nj.field_f.d(0, 0);
             if (lb.field_w.field_f == 1) {
@@ -323,7 +323,7 @@ final class bg extends gi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1_ref), "bg.D(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1_ref), "bg.D(" + param0 + ')');
         }
     }
 
@@ -371,7 +371,7 @@ final class bg extends gi {
           this.field_i = 65535 & fieldTemp$0;
           this.field_h = param5;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "bg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "bg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -44,7 +44,7 @@ final class mk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "mk.A(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "mk.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class mk {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

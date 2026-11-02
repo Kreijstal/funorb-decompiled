@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ic extends gi {
+abstract class PcmStream extends IntrusiveNode {
     int field_k;
     me field_i;
-    ic field_j;
+    PcmStream field_j;
     volatile boolean field_h;
 
     abstract int d();
@@ -15,9 +15,9 @@ abstract class ic extends gi {
 
     abstract void b(int[] param0, int param1, int param2);
 
-    abstract ic a();
+    abstract PcmStream a();
 
-    abstract ic c();
+    abstract PcmStream c();
 
     abstract void d(int param0);
 
@@ -29,7 +29,7 @@ abstract class ic extends gi {
         }
     }
 
-    protected ic() {
+    protected PcmStream() {
         this.field_h = true;
     }
 }

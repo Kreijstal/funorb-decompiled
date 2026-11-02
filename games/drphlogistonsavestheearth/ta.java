@@ -53,7 +53,7 @@ final class ta {
               eg.a((byte) 126);
               return;
             }
-            var8.a(-16175);
+            var8.unlink(-16175);
           } else {
             if (var2 == 1) {
               var3 = var9.h(51);
@@ -66,7 +66,7 @@ final class ta {
                 break;
               }
               if (var4_ref_jl != null) {
-                var4_ref_jl.a(-16175);
+                var4_ref_jl.unlink(-16175);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -86,7 +86,7 @@ final class ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "ta.A(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "ta.A(" + param0 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class ta {
         byte[] var2 = a.field_e[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = aj.field_a[rk.a((int) var2[var4_int], 255)];
+          var3[var4_int] = MouseInput.field_a[rk.a((int) var2[var4_int], 255)];
         }
         nh var4 = new nh(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], var3);
         oc.a((byte) -21);
@@ -324,7 +324,7 @@ final class ta {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -346,7 +346,7 @@ final class ta {
           }
           this.a((byte) -105);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

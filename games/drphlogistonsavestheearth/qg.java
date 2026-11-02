@@ -31,7 +31,7 @@ final class qg extends kl implements ud {
         try {
           this.field_X = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "qg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "qg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class qg extends kl implements ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "qg.B(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "qg.B(" + param0 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class qg extends kl implements ud {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -160,9 +160,9 @@ final class qg extends kl implements ud {
             vj var5 = (vj) null;
             qg.a((String) null, (String) null, 112, (String) null, (vj) null);
           }
-          nc.a(j.field_Y, param0, (byte) 77);
+          nc.a(LevelSession.field_Y, param0, (byte) 77);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "qg.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "qg.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class qg extends kl implements ud {
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = jd.field_N;
+          var4 = LoginMenuScreen.field_N;
           while (var3_int < sg.field_f.length) {
             var5 = lg.field_a[var3_int];
             if (0 > var5) {
@@ -205,7 +205,7 @@ final class qg extends kl implements ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var3), "qg.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var3), "qg.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -242,10 +242,10 @@ final class qg extends kl implements ud {
           if (param1 <= 51) {
             field_W = (he[]) null;
           }
-          j.field_e = var2_intLifetime2 << 16 & 65536;
-          j.field_e = j.field_e + param0.j(-788751192);
+          LevelSession.field_e = var2_intLifetime2 << 16 & 65536;
+          LevelSession.field_e = LevelSession.field_e + param0.j(-788751192);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "qg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "qg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class qg extends kl implements ud {
             this.a((qi) null, (byte) -8);
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "qg.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "qg.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class qg extends kl implements ud {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -412,7 +412,7 @@ final class qg extends kl implements ud {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 

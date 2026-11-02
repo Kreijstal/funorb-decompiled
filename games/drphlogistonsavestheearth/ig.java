@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig extends gi {
+final class ig extends IntrusiveNode {
     static String field_o;
     short[] field_p;
     int field_l;
@@ -89,7 +89,7 @@ final class ig extends gi {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -646,7 +646,7 @@ final class ig extends gi {
           } else {
             stackIn_208_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
         }
     }
 

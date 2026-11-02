@@ -20,14 +20,14 @@ final class ia {
             vb.field_k = 200;
             var1 = (ml) (ff.field_O.h(-11151));
             while (var1 != null) {
-              if (!var1.field_o.c(-1387)) {
-                var1.a(-16175);
+              if (!var1.field_o.isLinked(-1387)) {
+                var1.unlink(-16175);
               }
               var1 = (ml) (ff.field_O.e(0));
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ia.D(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ia.D(" + param0 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class ia {
         try {
           di.field_d = param3;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

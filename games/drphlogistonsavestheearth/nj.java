@@ -54,7 +54,7 @@ final class nj {
             var8 = param1[var5_int] << var6 & 255 | (param1[var5_int + 1] & 255) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_k[this.field_g] = (byte)li.a((int) this.field_k[this.field_g], var8 >>> var7);
+              this.field_k[this.field_g] = (byte)GameAppletShell.a((int) this.field_k[this.field_g], var8 >>> var7);
               this.field_g = this.field_g + 1;
               this.field_b = this.field_b + (8 - var7);
               if (512 == this.field_b) {
@@ -75,7 +75,7 @@ final class nj {
           }
           if (param2 > 0L) {
             var8Lifetime1 = 255 & param1[var5_int] << var6;
-            this.field_k[this.field_g] = (byte)li.a((int) this.field_k[this.field_g], var8Lifetime1 >>> var7);
+            this.field_k[this.field_g] = (byte)GameAppletShell.a((int) this.field_k[this.field_g], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -104,7 +104,7 @@ final class nj {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class nj {
           RuntimeException var2_ref2 = null;
           var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           try {
-            if (aj.field_c) {
+            if (MouseInput.field_c) {
               return true;
             }
             try {
@@ -158,7 +158,7 @@ final class nj {
             } else {
               stackIn_24_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -181,7 +181,7 @@ final class nj {
         int var8 = 0;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          this.field_k[this.field_g] = (byte)li.a((int) this.field_k[this.field_g], 128 >>> rk.a(7, this.field_b));
+          this.field_k[this.field_g] = (byte)GameAppletShell.a((int) this.field_k[this.field_g], 128 >>> rk.a(7, this.field_b));
           this.field_g = this.field_g + 1;
           if (param1 > -94) {
             return;
@@ -228,7 +228,7 @@ final class nj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class nj {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

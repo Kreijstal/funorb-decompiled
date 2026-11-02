@@ -32,12 +32,12 @@ final class ib {
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 > 6) {
-          aj.a(true);
+          MouseInput.a(true);
           wj.d(param4, param0, param3, param1);
           return;
         }
         ib.a(108, -87, (byte) 42, 13, 35);
-        aj.a(true);
+        MouseInput.a(true);
         wj.d(param4, param0, param3, param1);
     }
 
@@ -343,7 +343,7 @@ final class ib {
           }
           var9 = 1;
         }
-        if (sd.field_a.field_A < 3 * (sd.field_a.field_q + 1) + 1 >> 1) {
+        if (sd.field_a.field_A < 3 * (sd.field_a.levelNumber + 1) + 1 >> 1) {
           this.field_g = 1;
         } else {
           if (var8 >= 4) {

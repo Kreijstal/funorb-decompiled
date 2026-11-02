@@ -43,7 +43,7 @@ final class hd extends vg {
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
-        aj.a(var14, (byte) 54);
+        MouseInput.a(var14, (byte) 54);
         int var5 = this.field_k >> 1;
         if (param1 != 43) {
           this.field_I = 26;
@@ -240,7 +240,7 @@ final class hd extends vg {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param3).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -277,7 +277,7 @@ final class hd extends vg {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ final class hd extends vg {
         int var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         int var2 = this.field_k >> 1;
         nh var3 = new nh(var2, this.field_k);
-        aj.a(var3, (byte) 85);
+        MouseInput.a(var3, (byte) 85);
         for (var4 = 0; this.field_k > var4; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
             var6 = (double)var5 * (double)var5 / (double)((-var4 + this.field_k) * var4);
@@ -325,7 +325,7 @@ final class hd extends vg {
           var4 = a.field_e[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = aj.field_a[rk.a(255, (int) var4[var6])];
+            var5[var6] = MouseInput.field_a[rk.a(255, (int) var4[var6])];
           }
           var1[var2] = new nh(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var5);
         }
@@ -365,7 +365,7 @@ final class hd extends vg {
           }
           cl.d((byte) -67);
           if (this.field_C.field_y + param1 >= wj.field_g) {
-            aj.a(this.field_F, (byte) 84);
+            MouseInput.a(this.field_F, (byte) 84);
             param2.d(-this.field_z, 0);
             param2.d(2 * this.field_J - this.field_z, 0);
             this.field_H.c(0, 0);
@@ -373,7 +373,7 @@ final class hd extends vg {
             this.field_F.d(param1, param3);
           }
           if (-this.field_C.field_y + var5_int <= wj.field_b) {
-            aj.a(this.field_F, (byte) 63);
+            MouseInput.a(this.field_F, (byte) 63);
             for (var7 = this.field_z + (-this.field_C.field_y + this.field_w); this.field_J * 2 < var7; var7 = var7 - 2 * this.field_J) {
             }
             param2.d(-var7, 0);
@@ -394,7 +394,7 @@ final class hd extends vg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 

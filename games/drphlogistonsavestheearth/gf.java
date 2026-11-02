@@ -61,7 +61,7 @@ final class gf {
         if (-1 == this.field_I) {
           return true;
         }
-        L0: {
+        regionExit1: {
           this.field_m = this.field_m + this.field_z;
           this.field_F = param1;
           this.field_d = param2;
@@ -140,7 +140,7 @@ final class gf {
                                 this.field_j[7].a(this.field_u + (int)this.field_m - 1, 3, 12288, -85, 1, this.field_q + (int)this.field_i - 4);
                                 this.field_j[8].a(this.field_u + (int)this.field_m, 5, 5242880, -109, 1, -5 + ((int)this.field_i + this.field_q));
                                 this.field_j[9].a((int)this.field_m + (this.field_u + 1), 3, 12288, param0 - 16623, 1, this.field_q + ((int)this.field_i - 6));
-                                break L0;
+                                break regionExit1;
                               }
                               if (var20 == 20) {
                                 this.field_j[0].a((int)this.field_m, 5, 8947848, param0 - 16408, 0, this.field_q + (int)this.field_i);
@@ -152,7 +152,7 @@ final class gf {
                                 } else {
                                   if (23 != var20) {
                                     if (28 != var20) {
-                                      break L0;
+                                      break regionExit1;
                                     }
                                     this.field_a = this.field_a - 51;
                                     stackIn_87_0 = !(this.field_a > 0);
@@ -182,7 +182,7 @@ final class gf {
                               }
                             }
                           }
-                          break L0;
+                          break regionExit1;
                         }
                       }
                       this.field_a = this.field_a - 2;
@@ -198,7 +198,7 @@ final class gf {
                   this.field_j[1].a(2 + (this.field_u + (int)this.field_m), 7, 12288, -48, 1, this.field_q + (int)this.field_i);
                   this.field_j[2].a((int)this.field_m + this.field_u, 7, 6291456, param0 ^ -16455, 1, this.field_q + (int)this.field_i + 2);
                   this.field_j[3].a(-2 + (this.field_u + (int)this.field_m), 7, 12288, 122, 1, 2 + this.field_q + (int)this.field_i);
-                  break L0;
+                  break regionExit1;
                 }
                 var14 = Math.atan2(this.field_c, this.field_z);
                 var16 = Math.atan2(sd.field_a.field_N - this.field_i, -this.field_m + sd.field_a.field_D);
@@ -430,7 +430,7 @@ final class gf {
         this.field_F = param6;
         if (ej.field_g[this.field_I] != -1) {
           var15 = e.a(127, (int)param1);
-          th.a(-27610, uh.field_s[this.field_I], var15, nl.field_r[ej.field_g[this.field_I]]);
+          th.a(-27610, DualLinkNode.field_s[this.field_I], var15, nl.field_r[ej.field_g[this.field_I]]);
         }
         var15Lifetime1 = this.field_I;
         if (var15Lifetime1 != 5 &&

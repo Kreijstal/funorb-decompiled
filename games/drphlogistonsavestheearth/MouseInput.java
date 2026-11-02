@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInput implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static int[] field_b;
     static boolean field_e;
     static int[] field_a;
@@ -43,7 +43,7 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var5), "aj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var5), "aj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -115,11 +115,11 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             }
             pb.a(true, "document.cookie=\"" + var5Lifetime6 + "\"", param0);
             if (param1 <= 6) {
-              aj.a(true);
+              MouseInput.a(true);
             }
             ti.a((byte) -101, param0);
           } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "aj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ie.wrapClientException((Throwable) ((Object) runtimeException), "aj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -152,7 +152,7 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             lk.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "aj.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "aj.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -238,7 +238,7 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -248,7 +248,7 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             param0.consume();
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "aj.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "aj.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -261,7 +261,7 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             lk.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "aj.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "aj.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -311,19 +311,19 @@ final class aj implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final static void a(nh param0, byte param1) {
         try {
-          aj.a(true);
+          MouseInput.a(true);
           wj.a(param0.field_B, param0.field_z, param0.field_C);
           if (param1 < 46) {
             field_d = -91;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "aj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "aj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

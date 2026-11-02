@@ -43,7 +43,7 @@ final class jk extends si {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class jk extends si {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -105,12 +105,12 @@ final class jk extends si {
     final static void a(int param0, String param1) {
         try {
           jk.b((byte) 71, param1);
-          nc.a(j.field_Y, false, (byte) 92);
+          nc.a(LevelSession.field_Y, false, (byte) 92);
           if (param0 != 1) {
             jk.j(-66);
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "jk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "jk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class jk extends si {
         try {
           this.field_z = param6;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "jk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "jk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -321,7 +321,7 @@ final class jk extends si {
             mi.field_g = new int[2];
             lg.field_a[1] = 0;
             sg.field_f[1] = wk.field_h;
-            sg.field_f[4] = sl.field_B;
+            sg.field_f[4] = GameClientShell.field_B;
             sg.field_f[2] = ph.field_d;
             lg.field_a[3] = 1;
             sg.field_f[3] = ff.field_K;
@@ -383,7 +383,7 @@ final class jk extends si {
               }
             }
           }
-          li.field_k = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + ji.field_f;
+          GameAppletShell.field_k = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + ji.field_f;
           si.field_B = ji.field_f - (var3_intLifetime1 >> 1);
           vi.field_e = wg.field_k.field_e * (ig.field_h + wa.field_N << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < sg.field_f.length; var4Lifetime2++) {
@@ -395,13 +395,13 @@ final class jk extends si {
             }
             vi.field_e = stackIn_113_0 + stackIn_114_1;
           }
-          jd.field_N = sa.field_f - (vi.field_e >> 1);
+          LoginMenuScreen.field_N = sa.field_f - (vi.field_e >> 1);
           if (param0 != 49) {
             return;
           }
           cj.field_f = new int[sg.field_f.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = jd.field_N;
+          var5Lifetime3 = LoginMenuScreen.field_N;
           while (var4Lifetime3 < sg.field_f.length) {
             var6Lifetime1 = lg.field_a[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
@@ -428,7 +428,7 @@ final class jk extends si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var3), "jk.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var3), "jk.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -495,7 +495,7 @@ final class jk extends si {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -509,7 +509,7 @@ final class jk extends si {
           int var2_int = -65 % ((-30 - param0) / 62);
           cj.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "jk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "jk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

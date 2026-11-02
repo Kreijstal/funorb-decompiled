@@ -77,7 +77,7 @@ final class dh extends si {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class dh extends si {
             var15.field_l = true;
             var15.field_j = var16[0];
             var15.field_k = var3;
-            var15.a(-16175);
+            var15.unlink(-16175);
             return;
           }
           if (1 == var2) {
@@ -146,7 +146,7 @@ final class dh extends si {
               eg.a((byte) 126);
               return;
             }
-            var11.a(-16175);
+            var11.unlink(-16175);
           } else {
             if (var2 == 2) {
               var13 = (f) (ql.field_i.h(-11151));
@@ -157,7 +157,7 @@ final class dh extends si {
               var13.field_k = lk.c((byte) 8);
               var13.field_l = true;
               var13.field_j = var13.field_k[0];
-              var13.a(-16175);
+              var13.unlink(-16175);
             } else {
               gb.a((Throwable) null, "A1: " + al.a(-99), 10);
               eg.a((byte) 126);
@@ -167,7 +167,7 @@ final class dh extends si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "dh.E(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "dh.E(" + param0 + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class dh extends si {
           gm.a((byte) 32, oe.field_d, rh.field_d, kl.field_S);
           DrPhlogistonSavesTheEarth.a(0, -118, param1, 0);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "dh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

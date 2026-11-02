@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class jd extends pj implements ke {
+final class LoginMenuScreen extends pj implements ke {
     private hf[] field_K;
     static int field_P;
     private fh field_R;
@@ -1093,7 +1093,7 @@ final class jd extends pj implements ke {
                 }
                 var2 = wg.a("logging_in", 0);
                 if (var2 != null) {
-                  j.field_Y = mj.a((byte) 93, var2);
+                  LevelSession.field_Y = mj.a((byte) 93, var2);
                 }
                 var2 = wg.a("reconnect", 0);
                 if (var2 != null) {
@@ -1461,7 +1461,7 @@ final class jd extends pj implements ke {
                 }
                 var2 = wg.a("create_optin_news", 0);
                 if (null != var2) {
-                  li.field_d = mj.a((byte) -99, var2);
+                  GameAppletShell.field_d = mj.a((byte) -99, var2);
                 }
                 var2 = wg.a("create_agreeterms", param0 ^ 7);
                 if (var2 != null) {
@@ -1857,7 +1857,7 @@ final class jd extends pj implements ke {
                 }
                 var2 = wg.a("unpacking_soundeffects", 0);
                 if (var2 != null) {
-                  sl.field_s = mj.a((byte) 62, var2);
+                  GameClientShell.field_s = mj.a((byte) 62, var2);
                 }
                 var2 = wg.a("unpacking_music", 0);
                 if (var2 != null) {
@@ -1999,7 +1999,7 @@ final class jd extends pj implements ke {
                 }
                 var2 = wg.a("skip", 0);
                 if (var2 != null) {
-                  uh.field_q = mj.a((byte) 111, var2);
+                  DualLinkNode.field_q = mj.a((byte) 111, var2);
                 }
                 var2 = wg.a("skiptutorial", 0);
                 if (null != var2) {
@@ -2067,7 +2067,7 @@ final class jd extends pj implements ke {
                 }
                 var2 = wg.a("returntogame", 0);
                 if (var2 != null) {
-                  fe.field_b = mj.a((byte) -122, var2);
+                  KeyboardInput.field_b = mj.a((byte) -122, var2);
                 }
                 var2 = wg.a("endgameresign", param0 - 7);
                 if (var2 != null) {
@@ -2663,7 +2663,7 @@ final class jd extends pj implements ke {
                 }
                 var2 = wg.a("fs_accept_aftercancel", 0);
                 if (var2 != null) {
-                  sl.field_B = mj.a((byte) -111, var2);
+                  GameClientShell.field_B = mj.a((byte) -111, var2);
                 }
                 var2 = wg.a("fs_accept_countdown_sing", 0);
                 if (null != var2) {
@@ -2827,7 +2827,7 @@ final class jd extends pj implements ke {
                 }
                 var2 = wg.a("createtouse", 0);
                 if (var2 != null) {
-                  gl.field_f = mj.a((byte) 44, var2);
+                  ClientException.field_f = mj.a((byte) 44, var2);
                 }
                 var2 = wg.a("achievementsoffline", 0);
                 if (var2 != null) {
@@ -3046,12 +3046,12 @@ final class jd extends pj implements ke {
                   } else {
                     stackIn_2594_2 = "{...}";
                   }
-                  throw ie.a((Throwable) ((Object) stackIn_2593_0), ((StringBuilder) (Object) stackIn_2593_1).append(stackIn_2594_2).append(')').toString());
+                  throw ie.wrapClientException((Throwable) ((Object) stackIn_2593_0), ((StringBuilder) (Object) stackIn_2593_1).append(stackIn_2594_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = li.field_g;
+                  var4 = GameAppletShell.field_g;
                   var4++;
-                  li.field_g = var4;
+                  GameAppletShell.field_g = var4;
                 }
             }
         }
@@ -3059,7 +3059,7 @@ final class jd extends pj implements ke {
         decompiledBody.run();
     }
 
-    jd(fh param0) {
+    LoginMenuScreen(fh param0) {
         super(0, 0, 0, 0, (cg) null);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -3079,7 +3079,7 @@ final class jd extends pj implements ke {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -3097,7 +3097,7 @@ final class jd extends pj implements ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "jd.F(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "jd.F(" + param0 + ')');
         }
     }
 
@@ -3108,7 +3108,7 @@ final class jd extends pj implements ke {
           mi.field_d = ph.field_f[param1];
           dh.field_J = tg.field_c[param1];
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "jd.E(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "jd.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3130,7 +3130,7 @@ final class jd extends pj implements ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "jd.B(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "jd.B(" + param0 + ')');
         }
     }
 
@@ -3181,7 +3181,7 @@ final class jd extends pj implements ke {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -3194,7 +3194,7 @@ final class jd extends pj implements ke {
           if (param1 != 0) {
             return;
           }
-          var5 = uh.field_i;
+          var5 = DualLinkNode.field_i;
           if (this.field_J != null) {
             var5.a(ch.field_t, param0 + this.field_o, this.field_m + param3, this.field_w, 20, 16777215, -1, 0, 0, var5.field_S + var5.field_x);
           }
@@ -3202,7 +3202,7 @@ final class jd extends pj implements ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "jd.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "jd.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3250,7 +3250,7 @@ final class jd extends pj implements ke {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw ie.a((Throwable) ((Object) var2), "jd.A(" + param0 + ',' + param1 + ')');
+            throw ie.wrapClientException((Throwable) ((Object) var2), "jd.A(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -3286,7 +3286,7 @@ final class jd extends pj implements ke {
               }
               break;
             }
-            var4 = new uk(uh.field_i, 0, 1);
+            var4 = new uk(DualLinkNode.field_i, 0, 1);
             this.field_K = new hf[1 + var3_int];
             var5 = 0;
             do {
@@ -3321,7 +3321,7 @@ final class jd extends pj implements ke {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -3359,7 +3359,7 @@ final class jd extends pj implements ke {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
         }
     }
 

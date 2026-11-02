@@ -3,22 +3,22 @@
  */
 final class hl {
     static boolean field_d;
-    private uh field_g;
-    private uh field_a;
+    private DualLinkNode field_g;
+    private DualLinkNode field_a;
     static vd field_c;
     static int field_f;
     static String field_e;
     static boolean field_b;
 
-    final uh d(int param0) {
+    final DualLinkNode d(int param0) {
         if (param0 != 5518) {
-          return (uh) null;
+          return (DualLinkNode) null;
         }
-        uh var2 = this.field_g.field_p;
+        DualLinkNode var2 = this.field_g.secondaryNext;
         if (var2 == this.field_g) {
           return null;
         }
-        var2.f(64);
+        var2.unlinkSecondary(64);
         return var2;
     }
 
@@ -75,7 +75,7 @@ final class hl {
               var2 = var2 + pd.field_b;
             }
             if (0 <= var4) {
-              sl.field_o.c(var6, var8, ae.field_kb + var2, var5, -1);
+              GameClientShell.field_o.c(var6, var8, ae.field_kb + var2, var5, -1);
               var2 = var2 + (pa.field_a + (mf.field_F + pd.field_b));
             } else {
               k.field_H.c(var6, var8, var2 + cd.field_b, var5, -1);
@@ -86,7 +86,7 @@ final class hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "hl.A(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "hl.A(" + param0 + ')');
         }
     }
 
@@ -109,17 +109,17 @@ final class hl {
           var6.d(var4, (byte) 48);
           var6.b(var6.field_j - var4, (byte) 87);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "hl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "hl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final int b(int param0) {
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         int var2 = 0;
-        uh var3 = this.field_g.field_p;
+        DualLinkNode var3 = this.field_g.secondaryNext;
         while (var3 != this.field_g) {
           var2++;
-          var3 = var3.field_p;
+          var3 = var3.secondaryNext;
         }
         if (param0 != 1423132065) {
           this.b(-11);
@@ -127,31 +127,31 @@ final class hl {
         return var2;
     }
 
-    final uh c(int param0) {
-        uh var2 = this.field_a;
+    final DualLinkNode c(int param0) {
+        DualLinkNode var2 = this.field_a;
         if (var2 == this.field_g) {
           this.field_a = null;
           return null;
         }
-        this.field_a = var2.field_p;
+        this.field_a = var2.secondaryNext;
         int var3 = -60 / ((-21 - param0) / 62);
         return var2;
     }
 
-    final void a(uh param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param0.field_n != null) {
-            param0.f(64);
+          if (param0.secondaryPrevious != null) {
+            param0.unlinkSecondary(64);
           }
-          param0.field_n = this.field_g.field_n;
-          param0.field_p = this.field_g;
-          param0.field_n.field_p = param0;
-          param0.field_p.field_n = param0;
+          param0.secondaryPrevious = this.field_g.secondaryPrevious;
+          param0.secondaryNext = this.field_g;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
           if (param1 != 0) {
             field_b = true;
           }
@@ -166,14 +166,14 @@ final class hl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public hl() {
-        this.field_g = new uh();
-        this.field_g.field_p = this.field_g;
-        this.field_g.field_n = this.field_g;
+        this.field_g = new DualLinkNode();
+        this.field_g.secondaryNext = this.field_g;
+        this.field_g.secondaryPrevious = this.field_g;
     }
 
     public static void e(int param0) {
@@ -184,8 +184,8 @@ final class hl {
         field_e = null;
     }
 
-    final uh a(boolean param0) {
-        uh var2 = this.field_g.field_p;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2 = this.field_g.secondaryNext;
         if (!param0) {
           field_c = (vd) null;
         }
@@ -193,7 +193,7 @@ final class hl {
           this.field_a = null;
           return null;
         }
-        this.field_a = var2.field_p;
+        this.field_a = var2.secondaryNext;
         return var2;
     }
 

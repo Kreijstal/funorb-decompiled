@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wh extends uh {
+abstract class wh extends DualLinkNode {
     static int[] field_x;
     static boolean[] field_v;
     static he[] field_u;
@@ -20,7 +20,7 @@ abstract class wh extends uh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "wh.I(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "wh.I(" + param0 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ abstract class wh extends uh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "wh.H(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "wh.H(" + param0 + ')');
         }
     }
 
@@ -130,11 +130,11 @@ abstract class wh extends uh {
               }
               if (!stackIn_11_0 ||
                 !(-(var16 * var15) + var14 * var17 >= 0)) {
-                var12Lifetime1 = aj.field_b[var9];
+                var12Lifetime1 = MouseInput.field_b[var9];
                 if (-2147483648 != var12Lifetime1) {
-                  var13Lifetime1 = aj.field_b[var10];
+                  var13Lifetime1 = MouseInput.field_b[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = aj.field_b[var11];
+                    var14 = MouseInput.field_b[var11];
                     if (var14 != -2147483648) {
                       var15 = var12Lifetime1 + (var13Lifetime1 + var14 - var6);
                       if (var7 >= 0) {
@@ -164,7 +164,7 @@ abstract class wh extends uh {
                         if (param3.field_G > 0 &&
                           param3.field_O != null) {
                           dupTemp$0 = param3.field_O[var8];
-                          uh.field_h[dupTemp$0] = uh.field_h[dupTemp$0] + 1;
+                          DualLinkNode.field_h[dupTemp$0] = DualLinkNode.field_h[dupTemp$0] + 1;
                         }
                         eg.field_i = eg.field_i + 1;
                         break;
@@ -188,9 +188,9 @@ abstract class wh extends uh {
             null != param3.field_O) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(var9Lifetime1 >= uh.field_h.length)) {
-              var10Lifetime1 = uh.field_h[var9Lifetime1];
-              uh.field_h[var9Lifetime1] = var8Lifetime1;
+            while (!(var9Lifetime1 >= DualLinkNode.field_h.length)) {
+              var10Lifetime1 = DualLinkNode.field_h[var9Lifetime1];
+              DualLinkNode.field_h[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {
@@ -209,7 +209,7 @@ abstract class wh extends uh {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ abstract class wh extends uh {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -276,7 +276,7 @@ abstract class wh extends uh {
             field_x = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "wh.G(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "wh.G(" + param0 + ')');
         }
     }
 
@@ -286,7 +286,7 @@ abstract class wh extends uh {
         try {
           this.field_w = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "wh.<init>(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "wh.<init>(" + param0 + ')');
         }
     }
 
@@ -330,7 +330,7 @@ abstract class wh extends uh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 

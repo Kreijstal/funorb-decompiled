@@ -38,7 +38,7 @@ final class oj {
         int var2Lifetime4;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param0 > 123) {
-          L4: {
+          regionExit1: {
             if ((param1 <= 0 ||
               param1 >= 128) &&
               (160 > param1 ||
@@ -152,7 +152,7 @@ final class oj {
                   }
                 }
               }
-              break L4;
+              break regionExit1;
             }
             var2 = (byte)param1;
           }
@@ -626,7 +626,7 @@ final class oj {
             return null;
           }
           if (param4 == 15619) {
-            stackIn_7_0 = sl.a((byte) -83, param3.a(param0, param1, (byte) 35));
+            stackIn_7_0 = GameClientShell.a((byte) -83, param3.a(param0, param1, (byte) 35));
             return stackIn_7_0;
           }
           stackIn_5_0 = (jb) null;
@@ -647,7 +647,7 @@ final class oj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 

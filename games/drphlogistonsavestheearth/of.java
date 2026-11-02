@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class of extends uh {
+class of extends DualLinkNode {
     static he field_x;
     static int[] field_w;
     static int field_v;

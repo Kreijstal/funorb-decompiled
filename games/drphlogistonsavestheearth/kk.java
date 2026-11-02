@@ -53,7 +53,7 @@ final class kk {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ie.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class kk {
           rk.field_d = cl.a("commonui", param1, -120, "button");
           ja.field_n = ea.a("validation", "commonui", 0, param1);
           u.field_d = (rf) ((Object) qg.a(param2, "arezzo12", "commonui", param1, 126));
-          uh.field_i = (rf) ((Object) qg.a(param2, "arezzo14", "commonui", param1, -100));
+          DualLinkNode.field_i = (rf) ((Object) qg.a(param2, "arezzo14", "commonui", param1, -100));
           wi.field_e = (rf) ((Object) qg.a(param2, "arezzo14bold", "commonui", param1, 106));
           var18 = new nh(param3.a("button.gif", "", 24874), (java.awt.Component) ((Object) n.field_g));
           eh.a("commonui", (byte) -45, param1, "dropdown");
@@ -121,7 +121,7 @@ final class kk {
             }
           }
           var9Lifetime1 = var18.field_w;
-          aj.a(true);
+          MouseInput.a(true);
           var18.c();
           var11Lifetime1 = 101 % ((22 - param0) / 61);
           wj.e(0, 0, wj.field_k, wj.field_c);
@@ -138,7 +138,7 @@ final class kk {
           cl.d((byte) -73);
           rk.field_d = new nh[]{var16, var13, var12};
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "kk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "kk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

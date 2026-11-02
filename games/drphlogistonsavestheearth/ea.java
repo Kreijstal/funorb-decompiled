@@ -14,7 +14,7 @@ final class ea {
           var2 = new nh(param1.a("final_frame.jpg", "", 24874), (java.awt.Component) ((Object) n.field_g));
           var3 = var2.field_y;
           var4 = var2.field_w;
-          aj.a(true);
+          MouseInput.a(true);
           ji.field_b = new nh(var3, 3 * var4 / 4);
           ji.field_b.c();
           var2.a(param0, 0);
@@ -24,7 +24,7 @@ final class ea {
           vb.field_s.field_v = ji.field_b.field_w;
           cl.d((byte) -99);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ea.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ea.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class ea {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class ea {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

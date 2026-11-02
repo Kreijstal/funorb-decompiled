@@ -62,8 +62,8 @@ final class sf {
         var6.field_p = 0;
         ch var7 = new ch(var4, true);
         var7.field_p = 0;
-        var7.a(0, uh.a((byte) 121, 8947848));
-        var7.a((byte) 65, 1).a(uh.a((byte) 121, 11184810), -87).b(256, 2236962);
+        var7.a(0, DualLinkNode.a((byte) 121, 8947848));
+        var7.a((byte) 65, 1).a(DualLinkNode.a((byte) 121, 11184810), -87).b(256, 2236962);
         this.field_h = (cg) ((Object) new hb(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
         lg discarded$0 = new lg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         fm discarded$1 = new fm(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
@@ -101,7 +101,7 @@ final class sf {
           var19 = new ch(var4, true);
           var19.a(-32680, var13);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "sf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "sf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class sf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -234,7 +234,7 @@ final class sf {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -380,7 +380,7 @@ final class sf {
               }
             }
             var4_ref_vb.field_r = true;
-            var4_ref_vb.a(param0 - 16171);
+            var4_ref_vb.unlink(param0 - 16171);
             return;
           }
           if (1 == var2) {
@@ -399,7 +399,7 @@ final class sf {
               return;
             }
             var6.field_n = var4;
-            var6.a(-16175);
+            var6.unlink(-16175);
             return;
           }
           gb.a((Throwable) null, "HS1: " + al.a(-71), param0 + 14);
@@ -408,7 +408,7 @@ final class sf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "sf.A(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "sf.A(" + param0 + ')');
         }
     }
 
@@ -450,7 +450,7 @@ final class sf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

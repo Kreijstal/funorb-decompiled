@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cc extends gi {
+final class cc extends IntrusiveNode {
     static String field_p;
     int field_F;
     int field_A;
@@ -21,7 +21,7 @@ final class cc extends gi {
     int field_m;
     int field_i;
     int field_l;
-    ag field_D;
+    PcmSampleStream field_D;
     ig field_o;
     int field_s;
     int field_v;
@@ -50,7 +50,7 @@ final class cc extends gi {
             return stackIn_2_0;
           }
           if (fl.a(param3, param2, param0, (byte) -98)) {
-            return uh.e(7786);
+            return DualLinkNode.e(7786);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,7 +63,7 @@ final class cc extends gi {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 

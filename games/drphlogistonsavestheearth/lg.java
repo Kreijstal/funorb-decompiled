@@ -38,7 +38,7 @@ final class lg implements cg {
             }
             return;
           }
-          hg.field_S.a(jd.field_P, fl.field_f, true, 0);
+          hg.field_S.a(LoginMenuScreen.field_P, fl.field_f, true, 0);
           hg.field_S.b(false);
           while (th.a(-109)) {
             hg.field_S.a(di.field_c, sj.field_g, 121);
@@ -51,7 +51,7 @@ final class lg implements cg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "lg.B(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "lg.B(" + param0 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class lg implements cg {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class lg implements cg {
           this.field_c = param6;
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "lg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "lg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

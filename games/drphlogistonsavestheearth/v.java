@@ -10,7 +10,7 @@ final class v extends pj implements ra, ke, fh {
     private nc field_T;
     private qa field_Z;
     static String field_U;
-    jd field_V;
+    LoginMenuScreen field_V;
     private qg field_P;
     static he[] field_W;
     private hf field_R;
@@ -34,7 +34,7 @@ final class v extends pj implements ra, ke, fh {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new dh(20, param4, param1 + 120, 25, param2, false, 120, 3, uh.field_i, 16777215, param0);
+          var10 = new dh(20, param4, param1 + 120, 25, param2, false, 120, 3, DualLinkNode.field_i, 16777215, param0);
           if (param3 > -74) {
             this.field_Q = (qg) null;
           }
@@ -66,7 +66,7 @@ final class v extends pj implements ra, ke, fh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class v extends pj implements ra, ke, fh {
           var4 = param0;
           ((kl) ((Object) var3)).a(false, var4, param1 ^ -19116);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "v.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "v.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class v extends pj implements ra, ke, fh {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new dh(20, param4, param0 + 120, 25, param1, false, 120, 3, uh.field_i, param3, param2);
+          var6 = new dh(20, param4, param0 + 120, 25, param1, false, 120, 3, DualLinkNode.field_i, param3, param2);
           this.b(var6, (byte) 127);
           stackIn_1_0 = var6.field_k;
           return stackIn_1_0;
@@ -116,7 +116,7 @@ final class v extends pj implements ra, ke, fh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class v extends pj implements ra, ke, fh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class v extends pj implements ra, ke, fh {
           }
           this.field_R.field_E = this.g((byte) 72);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "v.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "v.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class v extends pj implements ra, ke, fh {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -253,7 +253,7 @@ final class v extends pj implements ra, ke, fh {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -306,7 +306,7 @@ final class v extends pj implements ra, ke, fh {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new dh(20, param1, 120 + param3, 25, param0, false, 120, 3, uh.field_i, 16777215, param4);
+          var9 = new dh(20, param1, 120 + param3, 25, param0, false, 120, 3, DualLinkNode.field_i, 16777215, param4);
           this.b(var9, (byte) 62);
           if (param2 >= -25) {
             var8 = (String) null;
@@ -333,7 +333,7 @@ final class v extends pj implements ra, ke, fh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -356,7 +356,7 @@ final class v extends pj implements ra, ke, fh {
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           if (param1 > -90) {
-            this.field_V = (jd) null;
+            this.field_V = (LoginMenuScreen) null;
           }
           if (0 == param0) {
             nd.a(-1, "terms.ws");
@@ -381,7 +381,7 @@ final class v extends pj implements ra, ke, fh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -433,7 +433,7 @@ final class v extends pj implements ra, ke, fh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -490,10 +490,10 @@ final class v extends pj implements ra, ke, fh {
         var3 = var3 + (this.a(var3, this.field_ab, cf.field_a, 170, (byte) -105, ob.field_d) + 5);
         var3 = var3 + (this.a(var3, this.field_K, hj.field_h, 170, (byte) -83, vh.field_b) + 5);
         var3 = var3 + this.a(this.field_Q, var3, (byte) -77, 170, ri.field_c);
-        dh var4 = new dh(46, var3, -90 + this.field_w, 25, this.field_T, true, -120 + this.field_w, 5, u.field_d, 11579568, li.field_d);
+        dh var4 = new dh(46, var3, -90 + this.field_w, 25, this.field_T, true, -120 + this.field_w, 5, u.field_d, 11579568, GameAppletShell.field_d);
         this.b(var4, (byte) 105);
         var3 = var3 + var4.field_k;
-        l var5 = new l(uh.field_i, 0, 0, 0, 0, 16777215, -1, 0, 0, uh.field_i.field_x, -1, 2147483647, true);
+        l var5 = new l(DualLinkNode.field_i, 0, 0, 0, 0, 16777215, -1, 0, 0, DualLinkNode.field_i.field_x, -1, 2147483647, true);
         this.field_Z = new qa(var2, var5);
         this.field_Z.field_v = "";
         this.field_Z.a(we.field_d, 0, -64);
@@ -510,7 +510,7 @@ final class v extends pj implements ra, ke, fh {
         this.field_R.field_u = (fd) (this);
         this.b(this.field_R, (byte) 105);
         this.b(this.field_L, (byte) 39);
-        this.field_V = new jd((fh) (this));
+        this.field_V = new LoginMenuScreen((fh) (this));
         this.field_V.a(this.field_K.field_m + 20, 150, this.field_K.field_o + this.field_K.field_w + 60, 16535, -60 - this.field_K.field_w + (this.field_w - this.field_K.field_o));
         this.b(this.field_V, (byte) 118);
         this.a(0, var6 + (55 + var3), 0, 16535, 496);

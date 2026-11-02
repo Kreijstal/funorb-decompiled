@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class tk extends gi {
+final class tk extends IntrusiveNode {
     private boolean field_p;
     private static int field_J;
     static jh[] field_B;

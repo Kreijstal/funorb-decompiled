@@ -32,7 +32,7 @@ final class ci extends qa {
           this.field_Y = param1;
           this.a(param3, param5, param2, 16535, param4);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class ci extends qa {
         try {
           super.a(param0, param1, param2, (byte) -128);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ci.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ci.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -130,17 +130,17 @@ final class ci extends qa {
           var12 = var21.field_C << 1;
           if (null == this.field_Z) {
             this.field_Z = new nh(var11, var12);
-            aj.a(this.field_Z, (byte) 85);
+            MouseInput.a(this.field_Z, (byte) 85);
           } else {
             if (this.field_Z.field_y < var11) {
               this.field_Z = new nh(var11, var12);
-              aj.a(this.field_Z, (byte) 85);
+              MouseInput.a(this.field_Z, (byte) 85);
             } else {
               if (this.field_Z.field_w < var12) {
                 this.field_Z = new nh(var11, var12);
-                aj.a(this.field_Z, (byte) 85);
+                MouseInput.a(this.field_Z, (byte) 85);
               } else {
-                aj.a(this.field_Z, (byte) 83);
+                MouseInput.a(this.field_Z, (byte) 83);
                 wj.c();
               }
             }
@@ -180,18 +180,18 @@ final class ci extends qa {
           var12Lifetime1 = var26.field_C << 1;
           if (null == this.field_Z) {
             this.field_Z = new nh(var11Lifetime1, var12Lifetime1);
-            aj.a(this.field_Z, (byte) 85);
+            MouseInput.a(this.field_Z, (byte) 85);
           } else {
             if (this.field_Z.field_y < var11Lifetime1) {
               this.field_Z = new nh(var11Lifetime1, var12Lifetime1);
-              aj.a(this.field_Z, (byte) 85);
+              MouseInput.a(this.field_Z, (byte) 85);
             } else {
               if (this.field_Z.field_w >= var12Lifetime1) {
-                aj.a(this.field_Z, (byte) 83);
+                MouseInput.a(this.field_Z, (byte) 83);
                 wj.c();
               } else {
                 this.field_Z = new nh(var11Lifetime1, var12Lifetime1);
-                aj.a(this.field_Z, (byte) 85);
+                MouseInput.a(this.field_Z, (byte) 85);
               }
             }
           }
@@ -233,15 +233,15 @@ final class ci extends qa {
           if (null != this.field_Z &&
             this.field_Z.field_y >= var11Lifetime2) {
             if (this.field_Z.field_w >= var12Lifetime2) {
-              aj.a(this.field_Z, (byte) 83);
+              MouseInput.a(this.field_Z, (byte) 83);
               wj.c();
             } else {
               this.field_Z = new nh(var11Lifetime2, var12Lifetime2);
-              aj.a(this.field_Z, (byte) 85);
+              MouseInput.a(this.field_Z, (byte) 85);
             }
           } else {
             this.field_Z = new nh(var11Lifetime2, var12Lifetime2);
-            aj.a(this.field_Z, (byte) 85);
+            MouseInput.a(this.field_Z, (byte) 85);
           }
           var36.b(112, 144, var36.field_z << 4, var36.field_C << 4, -this.field_X << 10, 4096);
           cl.d((byte) -94);
@@ -276,17 +276,17 @@ final class ci extends qa {
         var12Lifetime3 = var31.field_C << 1;
         if (null == this.field_Z) {
           this.field_Z = new nh(var11Lifetime3, var12Lifetime3);
-          aj.a(this.field_Z, (byte) 85);
+          MouseInput.a(this.field_Z, (byte) 85);
         } else {
           if (this.field_Z.field_y < var11Lifetime3) {
             this.field_Z = new nh(var11Lifetime3, var12Lifetime3);
-            aj.a(this.field_Z, (byte) 85);
+            MouseInput.a(this.field_Z, (byte) 85);
           } else {
             if (this.field_Z.field_w < var12Lifetime3) {
               this.field_Z = new nh(var11Lifetime3, var12Lifetime3);
-              aj.a(this.field_Z, (byte) 85);
+              MouseInput.a(this.field_Z, (byte) 85);
             } else {
-              aj.a(this.field_Z, (byte) 83);
+              MouseInput.a(this.field_Z, (byte) 83);
               wj.c();
             }
           }
@@ -317,7 +317,7 @@ final class ci extends qa {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

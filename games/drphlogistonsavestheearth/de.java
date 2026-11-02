@@ -40,7 +40,7 @@ final class de extends wd {
     final void a(boolean param0) {
         lb discarded$0 = null;
         lb discarded$1 = null;
-        gi var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -55,7 +55,7 @@ final class de extends wd {
         }
         var2 = this.field_n.h(-11151);
         while (var2 != null) {
-          var3 = (int)var2.field_g;
+          var3 = (int)var2.key;
           if (var3 >= 0 &&
             var3 < this.field_g.field_m &&
             0 != this.field_g.field_k[var3]) {
@@ -66,12 +66,12 @@ final class de extends wd {
               discarded$1 = this.a(65, var3, 2);
             }
             if (this.field_m[var3] == 1) {
-              var2.a(-16175);
+              var2.unlink(-16175);
             }
             var2 = this.field_n.e(0);
             continue;
           }
-          var2.a(-16175);
+          var2.unlink(-16175);
           var2 = this.field_n.e(0);
         }
     }
@@ -118,7 +118,7 @@ final class de extends wd {
           return null;
         }
         byte[] var4 = var3.i(13095);
-        var3.a(-16175);
+        var3.unlink(-16175);
         return var4;
     }
 
@@ -129,14 +129,14 @@ final class de extends wd {
         lb discarded$0 = null;
         int var2_int;
         lb var2;
-        gi var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        gi var6;
-        gi var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        gi var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (null != this.field_A) {
@@ -147,30 +147,30 @@ final class de extends wd {
             var2_int = 1;
             var3 = this.field_A.h(param0 ^ -11248);
             while (var3 != null) {
-              var4 = (int)var3.field_g;
+              var4 = (int)var3.key;
               if (this.field_m[var4] == 0) {
                 discarded$3 = this.a(65, var4, 1);
               }
               if (this.field_m[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.a(-16175);
+                var3.unlink(-16175);
               }
               var3 = this.field_A.e(param0 - 97);
             }
-            L10: while (true) {
+            scanLoop1: while (true) {
               if (this.field_w < this.field_g.field_k.length) {
                 if (this.field_g.field_k[this.field_w] != 0) {
                   if (this.field_s.field_e >= 250) {
                     var2_int = 0;
-                    break L10;
+                    break scanLoop1;
                   }
                   if (this.field_m[this.field_w] == 0) {
                     discarded$2 = this.a(65, this.field_w, 1);
                   }
                   if (this.field_m[this.field_w] == 0) {
-                    var6 = new gi();
-                    var6.field_g = (long)this.field_w;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_w;
                     var2_int = 0;
                     this.field_A.a(var6, 255);
                   }
@@ -191,30 +191,30 @@ final class de extends wd {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_A.h(-11151);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_g;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_m[var4Lifetime1] != 1) {
                   discarded$1 = this.a(65, var4Lifetime1, 2);
                 }
                 if (this.field_m[var4Lifetime1] == 1) {
-                  var3Lifetime1.a(-16175);
+                  var3Lifetime1.unlink(-16175);
                 } else {
                   var2_intLifetime1 = 0;
                 }
                 var3Lifetime1 = this.field_A.e(0);
               }
-              L3: while (true) {
+              scanLoop2: while (true) {
                 if (this.field_g.field_k.length > this.field_w) {
                   if (this.field_g.field_k[this.field_w] != 0) {
                     if (this.field_k.c(20)) {
                       var2_intLifetime1 = 0;
-                      break L3;
+                      break scanLoop2;
                     }
                     if (this.field_m[this.field_w] != 1) {
                       discarded$0 = this.a(65, this.field_w, 2);
                     }
                     if (1 != this.field_m[this.field_w]) {
-                      var7 = new gi();
-                      var7.field_g = (long)this.field_w;
+                      var7 = new IntrusiveNode();
+                      var7.key = (long)this.field_w;
                       var2_intLifetime1 = 0;
                       this.field_A.a(var7, 255);
                     }
@@ -247,7 +247,7 @@ final class de extends wd {
                 if (!var2.field_y) {
                   throw new RuntimeException();
                 }
-                var2.a(-16175);
+                var2.unlink(-16175);
               } else {
                 var2.field_E = true;
               }
@@ -284,7 +284,7 @@ final class de extends wd {
           param2 == 0 &&
           !var12.field_y &&
           var12.field_u) {
-          var12.a(-16175);
+          var12.unlink(-16175);
           var4 = null;
         }
         if (var4 == null) {
@@ -320,7 +320,7 @@ final class de extends wd {
               var4 = this.field_s.a(this.field_j, param1, 7);
             }
           }
-          this.field_v.a((gi) (var4), (long)param1, -1);
+          this.field_v.a((IntrusiveNode) (var4), (long)param1, -1);
         }
         if (((lb) (var4)).field_u) {
           return null;
@@ -364,7 +364,7 @@ final class de extends wd {
                 this.field_m[param1] = (byte) 1;
               }
               if (!((lb) (var4)).field_y) {
-                ((lb) (var4)).a(-16175);
+                ((lb) (var4)).unlink(-16175);
               }
               stackIn_89_0 = var4;
               return (lb) (stackIn_89_0);
@@ -374,13 +374,13 @@ final class de extends wd {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_m[param1] = (byte)-1;
-            ((lb) (var4)).a(-16175);
+            ((lb) (var4)).unlink(-16175);
             if (((lb) (var4)).field_y) {
               if (this.field_k.a(true)) {
                 return null;
               }
               var4 = this.field_k.a(this.field_i, param0 + 11194, (byte) 2, param1, true);
-              this.field_v.a((gi) (var4), (long)param1, -1);
+              this.field_v.a((IntrusiveNode) (var4), (long)param1, -1);
             }
             return null;
           }
@@ -413,13 +413,13 @@ final class de extends wd {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_k.b((byte) 122);
-          ((lb) (var4)).a(param0 - 16240);
+          ((lb) (var4)).unlink(param0 - 16240);
           if (((lb) (var4)).field_y) {
             if (this.field_k.a(true)) {
               return null;
             }
             var4 = this.field_k.a(this.field_i, 11259, (byte) 2, param1, true);
-            this.field_v.a((gi) (var4), (long)param1, -1);
+            this.field_v.a((IntrusiveNode) (var4), (long)param1, -1);
           }
           return null;
         }
@@ -432,7 +432,7 @@ final class de extends wd {
           }
         }
         if (!((lb) (var4)).field_y) {
-          ((lb) (var4)).a(param0 - 16240);
+          ((lb) (var4)).unlink(param0 - 16240);
         }
         return (lb) (var4);
     }
@@ -602,7 +602,7 @@ final class de extends wd {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

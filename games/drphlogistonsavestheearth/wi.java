@@ -56,7 +56,7 @@ final class wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "wi.C(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "wi.C(" + param0 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class wi {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -151,9 +151,9 @@ final class wi {
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5, bl param6, int param7, int param8) {
         try {
           oi.field_e = param6;
-          j.field_ib = param0;
+          LevelSession.field_ib = param0;
           tb.field_a = param1;
-          gi.field_c = param7;
+          IntrusiveNode.field_c = param7;
           mi.field_j = param3;
           g.field_r = param4;
           vc.field_e = param5;
@@ -165,7 +165,7 @@ final class wi {
           pd.field_d = new n(param6);
           fl.field_a = new df(p.field_a, pd.field_d);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "wi.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "wi.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class wi {
           var7_int = param2;
           param0 = param0 + param4;
           var8 = param3;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param1[var8];
             if (0 <= var9) {
               var7_int++;
@@ -230,7 +230,7 @@ final class wi {
               param4++;
               param5[incrementValue$1] = (byte)(~var10);
               if (param0 <= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -246,7 +246,7 @@ final class wi {
               param4++;
               param5[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param0 <= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -262,7 +262,7 @@ final class wi {
               param4++;
               param5[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param4 >= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -278,7 +278,7 @@ final class wi {
               param4++;
               param5[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param0 <= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -310,7 +310,7 @@ final class wi {
               param4++;
               param5[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param0 <= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -326,7 +326,7 @@ final class wi {
               param4++;
               param5[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param0 <= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -342,7 +342,7 @@ final class wi {
               param4++;
               param5[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param0 <= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -368,7 +368,7 @@ final class wi {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
