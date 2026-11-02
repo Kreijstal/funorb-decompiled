@@ -215,14 +215,14 @@ final class fu extends dg {
         int var4 = 0;
         int var5 = 0;
         int var7_int = 0;
-        wda var7 = null;
-        nv var8 = null;
+        Locomotor var7 = null;
+        Behaviour var8 = null;
         int var9 = 0;
         Object var10 = null;
         w var10_ref = null;
-        vna var11 = null;
+        IntrusiveDeque var11 = null;
         uja var12 = null;
-        vna var13 = null;
+        IntrusiveDeque var13 = null;
         uja var14 = null;
         int var4Lifetime1;
         var10 = null;
@@ -293,13 +293,13 @@ final class fu extends dg {
             var11 = var3_ref.field_u;
             var12 = new uja(var11);
             var7_int = 0;
-            var8 = (nv) (var12.a(true));
+            var8 = (Behaviour) (var12.a(true));
             while (var8 != null) {
               if (var8 instanceof fra &&
                 ((fra) (var8)).field_o > 0) {
                 var7_int = 1;
               }
-              var8 = (nv) (var12.a(-1));
+              var8 = (Behaviour) (var12.a(-1));
             }
             if (var7_int != 0 &&
               null == this.field_r) {
@@ -314,14 +314,14 @@ final class fu extends dg {
           if (0 == this.field_u) {
             var13 = var3_ref.field_B;
             var14 = new uja(var13);
-            var7 = (wda) (var14.a(true));
+            var7 = (Locomotor) (var14.a(true));
             while (var7 != null) {
               if (var7 instanceof ro &&
                 ((ro) (var7)).d(false) != this.field_s) {
                 var10_ref.a(new fm(3, this.b((byte) 68), this.c((byte) 124), this.e((byte) -111)), -58);
                 this.field_s = ((ro) (var7)).d(false);
               }
-              var7 = (wda) (var14.a(param0 + 0));
+              var7 = (Locomotor) (var14.a(param0 + 0));
             }
             return;
           }

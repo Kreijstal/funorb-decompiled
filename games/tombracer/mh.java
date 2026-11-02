@@ -84,7 +84,7 @@ final class mh extends kna {
             var7_ref_fsa.b(437453352, -327680, -this.field_l / 4);
             var7_ref_fsa.h(3, 0);
             var8 = new eq(param2, param0);
-            var7_ref_fsa.a((byte) 83, (nv) (var8));
+            var7_ref_fsa.a((byte) 83, (Behaviour) (var8));
             var9 = new ro(param2, param0);
             var9.a(param1 ^ 40, new gea(new int[][]{new int[]{0, 0}}));
             var7_ref_fsa.a(var9, 0);
@@ -97,7 +97,7 @@ final class mh extends kna {
             var11.b(437453352, -327680, this.field_l / 4);
             var11.h(3, 0);
             var12 = new eq(param2, param0);
-            var11.a((byte) 83, (nv) (var12));
+            var11.a((byte) 83, (Behaviour) (var12));
             var13 = new ro(param2, param0);
             var13.a(87, new gea(new int[][]{new int[]{0, 0}}));
             var11.a(var13, param1 ^ 3);
@@ -189,7 +189,7 @@ final class mh extends kna {
         this.b(-67, this.field_H * 2097152, 2097152 * this.field_J);
     }
 
-    mh(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    mh(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

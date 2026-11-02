@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tga {
-    static ha field_a;
+    static GraphicsToolkit field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         gb.a(-29711);
@@ -15,7 +15,7 @@ final class tga {
     public static void a(int param0) {
         field_a = null;
         if (param0 < 40) {
-          field_a = (ha) null;
+          field_a = (GraphicsToolkit) null;
         }
     }
 

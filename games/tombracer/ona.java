@@ -38,7 +38,7 @@ final class ona extends kna {
           var9.a((byte) -3, 6);
           var9.b((byte) 17, false);
           var9.g(param1 ^ 126, 2);
-          var9.a((byte) 83, (nv) (new eq(param2, param0)));
+          var9.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new ri(param2, param0);
           var5.a((byte) -35, 8 * this.field_G);
           var6 = 2048;
@@ -134,7 +134,7 @@ final class ona extends kna {
         return false;
     }
 
-    ona(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    ona(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         this.field_G = 4;
         try {

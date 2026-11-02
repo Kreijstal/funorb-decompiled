@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bs extends IntrusiveNode {
+abstract class GameEvent extends IntrusiveNode {
     static boolean field_g;
     static float[][] field_f;
     static String field_h;
@@ -19,7 +19,7 @@ abstract class bs extends IntrusiveNode {
 
     abstract int a(byte param0);
 
-    abstract void a(int param0, byte param1, dt param2);
+    abstract void a(int param0, byte param1, PlayerSimulation param2);
 
     abstract int b(byte param0);
 
@@ -32,17 +32,17 @@ abstract class bs extends IntrusiveNode {
           var3 = (long)param2 << 16;
           return (int)(var3 / (long)param0);
         }
-        bs.a(-69);
+        GameEvent.a(-69);
         var3Lifetime1 = (long)param2 << 16;
         return (int)(var3Lifetime1 / (long)param0);
     }
 
-    bs(int param0, BitPacketBuffer param1) {
+    GameEvent(int param0, BitPacketBuffer param1) {
     }
 
-    abstract boolean a(boolean param0, bs param1);
+    abstract boolean a(boolean param0, GameEvent param1);
 
-    abstract void a(dt param0, int param1, int param2, int param3);
+    abstract void a(PlayerSimulation param0, int param1, int param2, int param3);
 
     public static void a(int param0) {
         field_h = null;

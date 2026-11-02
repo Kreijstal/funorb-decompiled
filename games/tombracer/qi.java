@@ -141,7 +141,7 @@ final class qi extends hn {
           var5 = new lpa(param2, false);
           var5.b(-5, 2);
           var5.a(1, (byte) 71);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (ce) (var6.a(17, 81));
           var7.b(4, (byte) 23);
@@ -311,7 +311,7 @@ final class qi extends hn {
         return var2Lifetime3;
     }
 
-    qi(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    qi(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -339,7 +339,7 @@ final class qi extends hn {
           var4.b((byte) -11, 2097152, 2097152);
           var5 = new lpa(param0, param1);
           var5.b(-5, 0);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (ce) (var6.a(17, 87));
           var7.b(4, (byte) 23);

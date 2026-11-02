@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sfa extends ha {
+final class sfa extends GraphicsToolkit {
     private int field_j;
     private ija field_T;
     private int field_m;
@@ -1537,7 +1537,7 @@ final class sfa extends ha {
         }
     }
 
-    final da a(qla param0, jpa[] param1, boolean param2) {
+    final GameFont a(qla param0, jpa[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -1554,14 +1554,14 @@ final class sfa extends ha {
         }
         if (!param2) {
           if (var6 == 0) {
-            return (da) ((Object) new sn(this, param0, param1, var4, var5));
+            return (GameFont) ((Object) new sn(this, param0, param1, var4, var5));
           }
           throw new IllegalArgumentException("");
         }
         if (var6 == 0) {
-          return (da) ((Object) new le(this, param0, param1, var4, var5));
+          return (GameFont) ((Object) new le(this, param0, param1, var4, var5));
         }
-        return (da) ((Object) new nu(this, param0, param1, var4, var5));
+        return (GameFont) ((Object) new nu(this, param0, param1, var4, var5));
     }
 
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {

@@ -17,49 +17,49 @@ final class nw extends ci {
 
     final static void a(boolean param0, int param1, jea param2) {
         lja var10 = null;
-        iu var11 = null;
+        Sprite var11 = null;
         String var12 = null;
         lja var13 = null;
-        iu var14 = null;
+        Sprite var14 = null;
         String var15 = null;
         lja var16 = null;
-        iu var17 = null;
+        Sprite var17 = null;
         String var18 = null;
         lja var19 = null;
-        iu var20 = null;
+        Sprite var20 = null;
         String var21 = null;
         lja var22 = null;
-        iu var23 = null;
+        Sprite var23 = null;
         String var24 = null;
         lja var25 = null;
-        iu var26 = null;
+        Sprite var26 = null;
         String var27 = null;
         lja var28 = null;
         String var30 = null;
         lja var31 = null;
-        iu var32 = null;
+        Sprite var32 = null;
         String var33 = null;
         lja var34 = null;
-        iu var35 = null;
+        Sprite var35 = null;
         String var36 = null;
         lja var37 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        iu var29 = null;
-        iu var29Lifetime1;
-        iu var29Lifetime2;
-        iu var29Lifetime3;
-        iu var29Lifetime4;
-        iu var29Lifetime5;
-        iu var29Lifetime6;
-        iu var29Lifetime7;
-        iu var29Lifetime1Lifetime1;
-        iu var29Lifetime1Lifetime2;
-        iu var29Lifetime1Lifetime3;
-        iu var29Lifetime1Lifetime4;
-        iu var29Lifetime1Lifetime5;
+        Sprite var29 = null;
+        Sprite var29Lifetime1;
+        Sprite var29Lifetime2;
+        Sprite var29Lifetime3;
+        Sprite var29Lifetime4;
+        Sprite var29Lifetime5;
+        Sprite var29Lifetime6;
+        Sprite var29Lifetime7;
+        Sprite var29Lifetime1Lifetime1;
+        Sprite var29Lifetime1Lifetime2;
+        Sprite var29Lifetime1Lifetime3;
+        Sprite var29Lifetime1Lifetime4;
+        Sprite var29Lifetime1Lifetime5;
         if (param0) {
           return;
         }
@@ -428,13 +428,13 @@ final class nw extends ci {
         this.c(-94);
     }
 
-    final static ha a(int param0, int param1, d param2, int param3, cn param4, java.awt.Canvas param5) {
+    final static GraphicsToolkit a(int param0, int param1, d param2, int param3, cn param4, java.awt.Canvas param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         java.awt.Dimension var8 = null;
         jea var9 = null;
-        ha stackIn_5_0 = null;
+        GraphicsToolkit stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -455,7 +455,7 @@ final class nw extends ci {
             var9 = (jea) null;
             nw.a(false, -120, (jea) null);
           }
-          stackIn_5_0 = ha.a(param2, var7, param4, param3, var6_int, param0, param5, -17441);
+          stackIn_5_0 = GraphicsToolkit.a(param2, var7, param4, param3, var6_int, param0, param5, -17441);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

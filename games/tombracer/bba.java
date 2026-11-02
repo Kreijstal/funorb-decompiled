@@ -5,7 +5,7 @@ final class bba {
     static int[] field_a;
     static int[] field_c;
     private int field_b;
-    private vna field_e;
+    private IntrusiveDeque field_e;
     static fga field_d;
 
     final int a(boolean param0) {
@@ -28,7 +28,7 @@ final class bba {
         throw new Error();
     }
 
-    final static void a(String[] args, String[] param1, boolean param2, int param3, byte[] param4, String[] param5, int param6, int param7, iu[][] param8, int[] param9, String[][] param10, cn param11, byte[] param12, cn param13, cn param14, iu[][] param15, int[] param16, int param17, hja[] param18, String[][] param19) {
+    final static void a(String[] args, String[] param1, boolean param2, int param3, byte[] param4, String[] param5, int param6, int param7, Sprite[][] param8, int[] param9, String[][] param10, cn param11, byte[] param12, cn param13, cn param14, Sprite[][] param15, int[] param16, int param17, hja[] param18, String[][] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -71,7 +71,7 @@ final class bba {
           ck.a(param3, param19, param17, param8, param1, args, param4, param5, param10, param7, param14, 25447, param12, param15, param9);
           iea.a(param2, param14, 2, param13);
           wta.A(12);
-          csa.a(false);
+          RoomComponent.a(false);
           gpa.a(83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -172,10 +172,10 @@ final class bba {
         }
     }
 
-    final boolean a(csa param0, boolean param1, boolean param2) {
+    final boolean a(RoomComponent param0, boolean param1, boolean param2) {
         uja var4 = null;
         RuntimeException var4_ref = null;
-        csa var5 = null;
+        RoomComponent var5 = null;
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -184,7 +184,7 @@ final class bba {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           var4 = new uja(this.field_e);
-          var5 = (csa) (var4.a(param2));
+          var5 = (RoomComponent) (var4.a(param2));
           while (var5 != null) {
             if (var5 == param0) {
               return true;
@@ -193,7 +193,7 @@ final class bba {
               var5.a(true, 0, param0)) {
               return true;
             }
-            var5 = (csa) (var4.a(-1));
+            var5 = (RoomComponent) (var4.a(-1));
           }
           if (param2) {
             return false;

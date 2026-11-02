@@ -193,7 +193,7 @@ final class ira extends osa {
           hb.field_t.a((byte) 114);
           if (mpa.field_X) {
             qv.field_o = null;
-            sua.field_H = new vna();
+            sua.field_H = new IntrusiveDeque();
             var11 = rb.field_o;
             var9 = var11;
             var6 = var9;

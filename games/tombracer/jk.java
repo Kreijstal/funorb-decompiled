@@ -9,8 +9,8 @@ final class jk extends IntrusiveNode {
     byte[] field_f;
     static jea field_g;
 
-    final static vna a(byte param0) {
-        vna var1 = new vna();
+    final static IntrusiveDeque a(byte param0) {
+        IntrusiveDeque var1 = new IntrusiveDeque();
         if (param0 != 122) {
           jk.a((byte) 64);
         }

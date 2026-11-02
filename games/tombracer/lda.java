@@ -33,7 +33,7 @@ final class lda extends kna {
         super(param0, param1);
     }
 
-    lda(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    lda(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
           this.field_H = param2.b((byte) 44, 4);
@@ -87,7 +87,7 @@ final class lda extends kna {
           }
           var5 = new lpa(param2, param0);
           var5.b(-5, this.field_H);
-          var13.a((byte) 83, (nv) (var5));
+          var13.a((byte) 83, (Behaviour) (var5));
           var6 = new Trap(param2, param0);
           var7 = new Trap(param2, param0);
           if (this.field_m == 46) {
@@ -106,13 +106,13 @@ final class lda extends kna {
           var8 = new eq(param2, param0);
           var8.a(true, -45);
           var8.a(-28592, true);
-          var6.a((byte) 83, (nv) (var8));
+          var6.a((byte) 83, (Behaviour) (var8));
           var7.b((byte) 17, false);
           var7.h(param1, 0);
           var9 = new eq(param2, param0);
           var9.a(true, -128);
           var9.a(-28592, true);
-          var7.a((byte) 83, (nv) (var9));
+          var7.a((byte) 83, (Behaviour) (var9));
           var13.a(-107, var6);
           var13.a(param1 ^ -61, var7);
           var10 = rm.field_a;

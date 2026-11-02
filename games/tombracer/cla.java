@@ -7,7 +7,7 @@ final class cla extends DualLinkNode {
     int field_p;
     static int[] field_n;
     static int[] field_m;
-    private cka field_l;
+    private OpenGlToolkit field_l;
 
     final static boolean a(int param0, int param1) {
         if (param0 == 9181) {
@@ -49,7 +49,7 @@ final class cla extends DualLinkNode {
         return this.field_k;
     }
 
-    cla(cka param0, int param1, int param2) {
+    cla(OpenGlToolkit param0, int param1, int param2) {
         try {
           this.field_l = param0;
           this.field_p = param2 * param1;

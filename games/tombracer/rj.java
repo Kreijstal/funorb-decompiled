@@ -263,9 +263,9 @@ class rj extends ae {
         this.field_r = afa.field_c.field_v;
     }
 
-    final static iu[] a(cn param0, int param1, int param2, byte param3) {
+    final static Sprite[] a(cn param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
-        iu[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

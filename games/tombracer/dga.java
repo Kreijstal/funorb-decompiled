@@ -28,7 +28,7 @@ final class dga {
         }
     }
 
-    final static cua a(int param0, cka param1, fca[] param2) {
+    final static cua a(int param0, OpenGlToolkit param1, fca[] param2) {
         int var3_int = 0;
         cua stackIn_3_0 = null;
         Object stackIn_27_0 = null;

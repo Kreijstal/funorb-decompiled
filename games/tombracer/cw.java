@@ -3,7 +3,7 @@
  */
 final class cw {
     private int field_o;
-    private cka field_t;
+    private OpenGlToolkit field_t;
     private int field_q;
     private cb field_e;
     private boolean field_a;
@@ -11,7 +11,7 @@ final class cw {
     private int field_k;
     private cb field_i;
     private cb field_d;
-    private vna field_j;
+    private IntrusiveDeque field_j;
     private boolean field_c;
     private kba field_l;
     private boolean field_h;
@@ -195,7 +195,7 @@ final class cw {
           this.field_k = param0;
           this.field_g = param2;
           var6 = this.field_j.f(-80);
-          while (this.field_j.field_e != var6) {
+          while (this.field_j.sentinel != var6) {
             ((oga) (var6)).a(this.field_g, (byte) -71, this.field_k);
             var6 = var6.next;
           }
@@ -400,7 +400,7 @@ final class cw {
         this.field_d = null;
         if (!this.field_j.d((byte) 14)) {
           var2 = this.field_j.f(-80);
-          while (this.field_j.field_e != var2) {
+          while (this.field_j.sentinel != var2) {
             ((oga) (var2)).d((byte) -35);
             var2 = var2.next;
           }
@@ -412,7 +412,7 @@ final class cw {
         }
     }
 
-    cw(cka param0) {
+    cw(OpenGlToolkit param0) {
         cb dupTemp$2 = null;
         cb dupTemp$3 = null;
         RuntimeException runtimeException = null;
@@ -424,7 +424,7 @@ final class cw {
         this.field_k = 1;
         this.field_q = 0;
         this.field_o = 0;
-        this.field_j = new vna();
+        this.field_j = new IntrusiveDeque();
         this.field_c = true;
         this.field_h = true;
         this.field_u = false;

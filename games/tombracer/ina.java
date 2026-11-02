@@ -4,7 +4,7 @@
 final class ina {
     private int field_e;
     private lt[] field_h;
-    static vna field_d;
+    static IntrusiveDeque field_d;
     String field_b;
     private int field_f;
     static int field_a;
@@ -12,7 +12,7 @@ final class ina {
     float field_i;
     static jpa[] field_c;
 
-    final static void a(ha param0, int param1) {
+    final static void a(GraphicsToolkit param0, int param1) {
         ka dupTemp$0 = null;
         ka dupTemp$1 = null;
         ka dupTemp$2 = null;
@@ -250,6 +250,6 @@ final class ina {
     }
 
     static {
-        field_d = new vna();
+        field_d = new IntrusiveDeque();
     }
 }

@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class qr extends ae implements tpa {
     ae field_x;
-    static da field_v;
+    static GameFont field_v;
     static String[] field_u;
     static ft field_w;
 
@@ -61,7 +61,7 @@ abstract class qr extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            field_v = (da) null;
+            field_v = (GameFont) null;
           }
           stackIn_6_0 = (null != this.field_x) && (this.field_x.a(param0, false));
           return stackIn_6_0;
@@ -126,10 +126,10 @@ abstract class qr extends ae implements tpa {
     }
 
     final static void a(boolean param0, int[] param1, hja[] param2, cn param3, cn param4) {
-        iu[] dupTemp$0 = null;
-        iu[] dupTemp$1 = null;
-        iu[] dupTemp$2 = null;
-        iu[] dupTemp$3 = null;
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         hja[] var5 = null;
         hja[] var6 = null;
         int[] var6_array = null;
@@ -157,12 +157,12 @@ abstract class qr extends ae implements tpa {
         jea var9 = null;
         jea var10 = null;
         jea var11 = null;
-        iu[] var12 = null;
-        iu[] var13 = null;
-        iu[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         jea var15 = null;
-        iu[] var16 = null;
-        iu[] var17 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
@@ -170,14 +170,14 @@ abstract class qr extends ae implements tpa {
         try {
           var20 = tw.a((byte) -69, "crowns", "lobby", param4);
           var5 = var20;
-          csa.field_n = var20.length;
+          RoomComponent.field_n = var20.length;
           if (param2 != null) {
-            var6 = new hja[param2.length + csa.field_n];
-            for (var7_int = 0; var7_int < csa.field_n; var7_int++) {
+            var6 = new hja[param2.length + RoomComponent.field_n];
+            for (var7_int = 0; var7_int < RoomComponent.field_n; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
             for (var7_intLifetime3 = 0; param2.length > var7_intLifetime3; var7_intLifetime3++) {
-              var6[csa.field_n + var7_intLifetime3] = param2[var7_intLifetime3];
+              var6[RoomComponent.field_n + var7_intLifetime3] = param2[var7_intLifetime3];
             }
             var5 = var6;
           }
@@ -187,17 +187,17 @@ abstract class qr extends ae implements tpa {
           var24 = var19;
           var22 = var24;
           var6_array = var22;
-          for (var7_intLifetime1 = 0; var7_intLifetime1 < csa.field_n; var7_intLifetime1++) {
+          for (var7_intLifetime1 = 0; var7_intLifetime1 < RoomComponent.field_n; var7_intLifetime1++) {
             var23[var7_intLifetime1] = 10;
           }
           if (param2 != null) {
             if (param1 == null) {
               for (var7_intLifetime2 = 0; param2.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[csa.field_n + var7_intLifetime2] = param2[var7_intLifetime2].field_f;
+                var6_array[RoomComponent.field_n + var7_intLifetime2] = param2[var7_intLifetime2].field_f;
               }
             } else {
               for (var7_intLifetime2 = 0; param2.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[var7_intLifetime2 + csa.field_n] = param1[var7_intLifetime2];
+                var6_array[var7_intLifetime2 + RoomComponent.field_n] = param1[var7_intLifetime2];
               }
             }
           }
@@ -451,7 +451,7 @@ abstract class qr extends ae implements tpa {
         if (!param0) {
           return null;
         }
-        field_v = (da) null;
+        field_v = (GameFont) null;
         return null;
     }
 
@@ -550,7 +550,7 @@ abstract class qr extends ae implements tpa {
 
     final static boolean d(int param0, int param1, int param2) {
         if (param2 != 32) {
-          field_v = (da) null;
+          field_v = (GameFont) null;
         }
         return 0 != (param0 & 32) ? true : false;
     }

@@ -3,7 +3,7 @@
  */
 final class cua {
     static String[] field_b;
-    private cka field_a;
+    private OpenGlToolkit field_a;
     long field_c;
 
     public static void a(int param0) {
@@ -100,7 +100,7 @@ final class cua {
         super.finalize();
     }
 
-    cua(cka param0, long param1, fca[] param2) {
+    cua(OpenGlToolkit param0, long param1, fca[] param2) {
         try {
           this.field_c = param1;
           this.field_a = param0;

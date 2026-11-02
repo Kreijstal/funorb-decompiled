@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class iu extends wca {
-    int[] field_r;
+class Sprite extends SpriteState {
+    int[] pixels;
 
     final void c() {
-        bea.a(this.field_r, this.field_m, this.field_q);
+        bea.a(this.pixels, this.field_m, this.field_q);
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -80,7 +80,7 @@ class iu extends wca {
           if (var5 <= 0) {
             return;
           }
-          iu.a(bea.field_l, this.field_r, var4, var3, var6, var5, var7, var8);
+          Sprite.a(bea.field_l, this.pixels, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -126,7 +126,7 @@ class iu extends wca {
           if (var6 <= 0) {
             return;
           }
-          iu.b(bea.field_l, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(bea.field_l, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -155,16 +155,16 @@ class iu extends wca {
         }
     }
 
-    final iu a() {
+    final Sprite a() {
         int var3 = 0;
-        iu var1 = new iu(this.field_m, this.field_q);
+        Sprite var1 = new Sprite(this.field_m, this.field_q);
         var1.field_n = this.field_n;
         var1.field_k = this.field_k;
         var1.field_o = this.field_o;
         var1.field_p = this.field_p;
-        int var2 = this.field_r.length;
+        int var2 = this.pixels.length;
         for (var3 = 0; var3 < var2; var3++) {
-          var1.field_r[var3] = this.field_r[var3];
+          var1.pixels[var3] = this.pixels[var3];
         }
         return var1;
     }
@@ -253,9 +253,9 @@ class iu extends wca {
             return;
           }
           if (param2 == 256) {
-            iu.a(0, 0, 0, bea.field_l, this.field_r, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, bea.field_l, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            iu.a(0, 0, 0, bea.field_l, this.field_r, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, bea.field_l, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -302,7 +302,7 @@ class iu extends wca {
           if (var6 <= 0) {
             return;
           }
-          iu.b(bea.field_l, this.field_r, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.b(bea.field_l, this.pixels, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -338,7 +338,7 @@ class iu extends wca {
             var11 = 0;
             var7 = 0;
           } else {
-            var7 = this.field_r[var6];
+            var7 = this.pixels[var6];
             if (var7 == 0) {
               stackIn_5_0 = 0;
             } else {
@@ -350,7 +350,7 @@ class iu extends wca {
             var12 = 0;
             var8 = 0;
           } else {
-            var8 = this.field_r[var6 + 1];
+            var8 = this.pixels[var6 + 1];
             if (var8 == 0) {
               stackIn_11_0 = 0;
             } else {
@@ -369,7 +369,7 @@ class iu extends wca {
             var13 = 0;
             var9 = 0;
           } else {
-            var9 = this.field_r[var6 + this.field_m];
+            var9 = this.pixels[var6 + this.field_m];
             if (var9 == 0) {
               stackIn_19_0 = 0;
             } else {
@@ -381,7 +381,7 @@ class iu extends wca {
             var14 = 0;
             var10 = 0;
           } else {
-            var10 = this.field_r[var6 + this.field_m + 1];
+            var10 = this.pixels[var6 + this.field_m + 1];
             if (var10 == 0) {
               stackIn_25_0 = 0;
             } else {
@@ -462,7 +462,7 @@ class iu extends wca {
           if (var5 <= 0) {
             return;
           }
-          iu.a(0, bea.field_l, this.field_r, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, bea.field_l, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -480,10 +480,10 @@ class iu extends wca {
           for (var4 = this.field_q - 1; var4 >= 0; var4--) {
             incrementValue$0 = var2;
             var2++;
-            var1[incrementValue$0] = this.field_r[var3 + var4 * this.field_m];
+            var1[incrementValue$0] = this.pixels[var3 + var4 * this.field_m];
           }
         }
-        this.field_r = var1;
+        this.pixels = var1;
         var3Lifetime1 = this.field_p;
         this.field_p = this.field_o;
         this.field_o = this.field_k - this.field_q - var3Lifetime1;
@@ -635,19 +635,19 @@ class iu extends wca {
           if (var5 <= 0) {
             return;
           }
-          iu.a(bea.field_l, this.field_r, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(bea.field_l, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    iu(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_n = param0;
         this.field_k = param1;
         this.field_o = param2;
         this.field_p = param3;
         this.field_m = param4;
         this.field_q = param5;
-        this.field_r = param6;
+        this.pixels = param6;
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
@@ -703,7 +703,7 @@ class iu extends wca {
         int var4 = param0 + (this.field_m >> 1) > bea.field_d ? bea.field_d - param0 << 1 : this.field_m;
         int var5 = param1 < bea.field_h ? bea.field_h - param1 << 1 : 0;
         int var6 = param1 + (this.field_q >> 1) > bea.field_k ? bea.field_k - param1 << 1 : this.field_q;
-        iu.a(this.field_r, var5 * this.field_m + var3, (param1 + (var5 >> 1)) * bea.field_g + (param0 + (var3 >> 1)), (this.field_m << 1) - (var4 - var3) + (this.field_m & 1), bea.field_g - (var4 - var3 >> 1), this.field_m, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.pixels, var5 * this.field_m + var3, (param1 + (var5 >> 1)) * bea.field_g + (param0 + (var3 >> 1)), (this.field_m << 1) - (var4 - var3) + (this.field_m & 1), bea.field_g - (var4 - var3 >> 1), this.field_m, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1121,8 +1121,8 @@ class iu extends wca {
         return;
     }
 
-    iu(int param0, int param1) {
-        this.field_r = new int[param0 * param1];
+    Sprite(int param0, int param1) {
+        this.pixels = new int[param0 * param1];
         this.field_n = param0;
         this.field_m = param0;
         this.field_k = param1;
@@ -1172,22 +1172,22 @@ class iu extends wca {
           if (var6 <= 0) {
             return;
           }
-          iu.a(bea.field_l, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(bea.field_l, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    final iu d() {
+    final Sprite d() {
         int var2 = 0;
         int var3 = 0;
-        iu var1 = new iu(this.field_m, this.field_q);
+        Sprite var1 = new Sprite(this.field_m, this.field_q);
         var1.field_n = this.field_n;
         var1.field_k = this.field_k;
         var1.field_o = this.field_n - this.field_m - this.field_o;
         var1.field_p = this.field_p;
         for (var2 = 0; var2 < this.field_q; var2++) {
           for (var3 = 0; var3 < this.field_m; var3++) {
-            var1.field_r[var2 * this.field_m + var3] = this.field_r[var2 * this.field_m + this.field_m - 1 - var3];
+            var1.pixels[var2 * this.field_m + var3] = this.pixels[var2 * this.field_m + this.field_m - 1 - var3];
           }
         }
         return var1;
@@ -1285,7 +1285,7 @@ class iu extends wca {
         }
     }
 
-    iu(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;
@@ -1302,8 +1302,8 @@ class iu extends wca {
           this.field_k = this.field_q;
           this.field_o = 0;
           this.field_p = 0;
-          this.field_r = new int[this.field_m * this.field_q];
-          var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.field_m, this.field_q, this.field_r, 0, this.field_m);
+          this.pixels = new int[this.field_m * this.field_q];
+          var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.field_m, this.field_q, this.pixels, 0, this.field_m);
           var5.grabPixels();
         } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

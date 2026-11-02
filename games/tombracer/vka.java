@@ -42,7 +42,7 @@ final class vka extends kna {
           }
           var4.b((byte) -11, this.field_k, this.field_l);
           this.field_F = new im(param2, param0);
-          var4.a((byte) 83, (nv) (this.field_F));
+          var4.a((byte) 83, (Behaviour) (this.field_F));
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -129,7 +129,7 @@ final class vka extends kna {
         field_I = (long[][]) null;
     }
 
-    vka(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    vka(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         this.field_G = new f(1, 1);
         try {

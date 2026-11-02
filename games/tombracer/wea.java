@@ -50,7 +50,7 @@ final class wea implements dv {
         }
     }
 
-    final Room a(int param0, int param1, int param2, dt param3) {
+    final Room a(int param0, int param1, int param2, PlayerSimulation param3) {
         RuntimeException var5 = null;
         Room stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

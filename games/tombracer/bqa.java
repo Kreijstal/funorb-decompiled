@@ -24,7 +24,7 @@ final class bqa implements bo {
             !param0.a(this.field_h, 54) ||
             param2.field_k.a(false, this.field_h, this.field_c)) {
             this.a(param2.field_k, (byte) -98);
-            var7 = param2.field_k.field_H[this.field_h];
+            var7 = param2.field_k.players[this.field_h];
             Player var4 = var7;
             for (var5 = 0; 3 > var5; var5++) {
               var7.a(true, var5, this.field_d[var5]);
@@ -101,12 +101,12 @@ final class bqa implements bo {
         return 0 != (param1 & 540800) ? true : false;
     }
 
-    private final void a(ff param0, byte param1) {
+    private final void a(MatchState param0, byte param1) {
         if (param1 >= -75) {
           return;
         }
         try {
-          param0.a(this.field_c, this.field_h, 1, this.field_b, this.field_a);
+          param0.resyncPlayerToRoom(this.field_c, this.field_h, 1, this.field_b, this.field_a);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bqa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

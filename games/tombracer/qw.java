@@ -20,20 +20,20 @@ final class qw extends IntrusiveNode {
         int var1 = 0;
         int var1Lifetime1;
         if (param0 == 256) {
-          if (224 <= ff.field_w) {
+          if (224 <= MatchState.field_w) {
             cf.a(256, -116);
           } else {
-            var1 = ff.field_w % 32;
-            cf.a(ff.field_w - (-32 + var1), -127);
+            var1 = MatchState.field_w % 32;
+            cf.a(MatchState.field_w - (-32 + var1), -127);
           }
           return;
         }
         qw.a(false);
-        if (224 <= ff.field_w) {
+        if (224 <= MatchState.field_w) {
           cf.a(256, -116);
         } else {
-          var1Lifetime1 = ff.field_w % 32;
-          cf.a(ff.field_w - (-32 + var1Lifetime1), -127);
+          var1Lifetime1 = MatchState.field_w % 32;
+          cf.a(MatchState.field_w - (-32 + var1Lifetime1), -127);
         }
     }
 

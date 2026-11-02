@@ -13,7 +13,7 @@ final class pca {
     private int field_g;
     private tqa field_i;
     int field_h;
-    static iu[] field_k;
+    static Sprite[] field_k;
     private int[] field_d;
 
     final tqa a(int param0) {
@@ -67,7 +67,7 @@ final class pca {
 
     final static boolean b(int param0, int param1, int param2) {
         if (param1 < 5) {
-          field_k = (iu[]) null;
+          field_k = (Sprite[]) null;
         }
         return 0 != (param2 & 16) ? true : false;
     }
@@ -125,7 +125,7 @@ final class pca {
 
     public static void c(int param0) {
         if (param0 != 8) {
-          field_k = (iu[]) null;
+          field_k = (Sprite[]) null;
         }
         field_a = null;
         field_k = null;

@@ -3,7 +3,7 @@
  */
 final class te {
     static int field_b;
-    private vna field_a;
+    private IntrusiveDeque field_a;
 
     final void a(int param0) {
         if (param0 != -10430) {
@@ -45,9 +45,9 @@ final class te {
         }
     }
 
-    final void a(int param0, vna param1) {
+    final void a(int param0, IntrusiveDeque param1) {
         int var4 = 0;
-        vna var5 = null;
+        IntrusiveDeque var5 = null;
         kua var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -57,8 +57,8 @@ final class te {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 23436) {
-            var5 = (vna) null;
-            this.a(71, (vna) null);
+            var5 = (IntrusiveDeque) null;
+            this.a(71, (IntrusiveDeque) null);
           }
           var6 = (kua) (param1.f(-80));
           while (var6 != null) {
@@ -114,7 +114,7 @@ final class te {
     }
 
     te() {
-        this.field_a = new vna();
+        this.field_a = new IntrusiveDeque();
     }
 
     static {

@@ -8,10 +8,10 @@ final class f {
     static BitSet field_e;
     static int field_b;
     private cva[] field_d;
-    private csa[] field_f;
+    private RoomComponent[] field_f;
     private int field_a;
 
-    final void a(csa param0, boolean param1) {
+    final void a(RoomComponent param0, boolean param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         cva var4 = null;
@@ -25,7 +25,7 @@ final class f {
           if (null == this.field_d) {
             return;
           }
-          this.field_f = new csa[this.field_d.length];
+          this.field_f = new RoomComponent[this.field_d.length];
           if (param1) {
             return;
           }
@@ -59,7 +59,7 @@ final class f {
         int var2 = 0;
         int var3_int = 0;
         int var5 = 0;
-        csa[] var3 = null;
+        RoomComponent[] var3 = null;
         int var4 = 0;
         int var2Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -81,7 +81,7 @@ final class f {
           }
           break;
         }
-        var3 = new csa[-var2 + this.field_f.length];
+        var3 = new RoomComponent[-var2 + this.field_f.length];
         var2Lifetime1 = 0;
         var4 = 0;
         while (this.field_f.length > var4) {
@@ -100,19 +100,19 @@ final class f {
     }
 
     final lj[] a(byte param0) {
-        csa[] stackIn_6_0 = null;
+        RoomComponent[] stackIn_6_0 = null;
         Object stackIn_11_0 = null;
-        csa[] stackIn_22_0 = null;
+        RoomComponent[] stackIn_22_0 = null;
         Object stackIn_27_0 = null;
-        csa[] stackOut_5_0;
-        csa[] stackOut_21_0;
+        RoomComponent[] stackOut_5_0;
+        RoomComponent[] stackOut_21_0;
         int var2 = 0;
         int var3_int = 0;
         lj[] var3 = null;
-        csa var4_ref_csa = null;
+        RoomComponent var4_ref_csa = null;
         int var4 = 0;
         lj var5 = null;
-        csa var5_ref = null;
+        RoomComponent var5_ref = null;
         lj var6 = null;
         int var7 = 0;
         lj[] var3Lifetime1;
@@ -558,7 +558,7 @@ final class f {
 
     f(int param0, int param1) {
         this.field_a = param0;
-        this.field_f = new csa[]{};
+        this.field_f = new RoomComponent[]{};
     }
 
     f(int param0, int param1, int param2, BitPacketBuffer param3) {
@@ -581,7 +581,7 @@ final class f {
         try {
           this.field_a = param0;
           var5_int = param3.b((byte) 44, iia.d(param0, 22972));
-          this.field_f = new csa[var5_int];
+          this.field_f = new RoomComponent[var5_int];
           this.field_d = new cva[var5_int];
           var6 = 0;
           while (var6 < var5_int) {
@@ -619,7 +619,7 @@ final class f {
         }
     }
 
-    final void a(BitPacketBuffer param0, int param1, csa param2) {
+    final void a(BitPacketBuffer param0, int param1, RoomComponent param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;

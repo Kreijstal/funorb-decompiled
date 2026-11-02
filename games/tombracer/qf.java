@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qf extends PacketBuffer {
-    static da field_j;
+    static GameFont field_j;
     static String field_l;
     static nh[] field_k;
     static int field_i;

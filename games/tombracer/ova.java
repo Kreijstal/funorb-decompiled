@@ -29,9 +29,9 @@ final class ova extends me {
           tp.a(200, (byte) -85, var3, 5242880, 2, 160, 240);
           oka.a("Room Completed", var2, eda.field_f, -1, var3 + 40, 320, 0);
           var4 = 240;
-          var5 = this.field_g.field_G[0].field_b[0];
+          var5 = this.field_g.simulations[0].rooms[0];
           var4 += 20;
-          oka.a("Total Time: " + dea.a(this.field_g.field_G[0].field_c, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
+          oka.a("Total Time: " + dea.a(this.field_g.simulations[0].tick, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
           var4 += 20;
           oka.a("Deaths: " + var5.v(0), var2, kn.field_p, -1, var4, 320, 0);
           return;

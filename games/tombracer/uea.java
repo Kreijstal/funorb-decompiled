@@ -30,7 +30,7 @@ final class uea extends kna {
         this.b(param0 + 174, 2097152, 2097152);
     }
 
-    uea(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    uea(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -147,7 +147,7 @@ final class uea extends kna {
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.a((byte) -3, 5);
           var5 = new eq(param2, param0);
-          var9.a((byte) 83, (nv) (var5));
+          var9.a((byte) 83, (Behaviour) (var5));
           var9.b((byte) 17, false);
           var9.a(1, (byte) -12, false);
           var9.h(3, param1 - 3);

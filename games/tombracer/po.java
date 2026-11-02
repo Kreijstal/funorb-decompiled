@@ -28,7 +28,7 @@ final class po extends bja {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           var5 = param4[param1];
-          csa.a(param0, 2097152, param1, param4);
+          RoomComponent.a(param0, 2097152, param1, param4);
           var6 = param2;
           if (param3 != -65) {
             stackIn_3_0 = 30;
@@ -36,11 +36,11 @@ final class po extends bja {
           }
           for (var7 = param2; param0 > var7; var7++) {
             if (param4[var7].field_e.b((byte) -98) <= var5.field_e.b((byte) -105)) {
-              csa.a(var6, 2097152, var7, param4);
+              RoomComponent.a(var6, 2097152, var7, param4);
               var6++;
             }
           }
-          csa.a(param0, param3 ^ -2097217, var6, param4);
+          RoomComponent.a(param0, param3 ^ -2097217, var6, param4);
           stackIn_10_0 = var6;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

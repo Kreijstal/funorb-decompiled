@@ -11,7 +11,7 @@ abstract class kl implements wia {
     int field_i;
     static il field_b;
     private int field_f;
-    cka field_h;
+    OpenGlToolkit field_h;
     static fpa field_a;
 
     public static void c(int param0) {
@@ -40,7 +40,7 @@ abstract class kl implements wia {
         if (param0 == 9729) {
           return false;
         }
-        this.field_h = (cka) null;
+        this.field_h = (OpenGlToolkit) null;
         return false;
     }
 
@@ -71,7 +71,7 @@ abstract class kl implements wia {
             this.a((byte) 127, var3);
           }
         } else {
-          this.field_h = (cka) null;
+          this.field_h = (OpenGlToolkit) null;
           stackIn_13_0 = (this.field_d) ? 0 : 1;
           stackIn_16_1 = (param0) ? 0 : 1;
           if (stackIn_13_0 != stackIn_16_1) {
@@ -124,7 +124,7 @@ abstract class kl implements wia {
         super.finalize();
     }
 
-    kl(cka param0, int param1, int param2, int param3, boolean param4) {
+    kl(OpenGlToolkit param0, int param1, int param2, int param3, boolean param4) {
         this.field_g = false;
         try {
           this.field_h = param0;

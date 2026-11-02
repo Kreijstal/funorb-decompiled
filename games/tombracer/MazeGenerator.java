@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class loa {
-    IsaacCipher field_a;
+abstract class MazeGenerator {
+    IsaacCipher random;
 
     final void a(int param0, byte param1, hj param2, int param3, int param4, int param5) {
         try {
@@ -10,7 +10,7 @@ abstract class loa {
           param2.a(param0, 0, 0, param3);
           param2.a(param4, 0, param1 + 42, param5);
           if (param1 != -42) {
-            this.field_a = (IsaacCipher) null;
+            this.random = (IsaacCipher) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "loa.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -155,7 +155,7 @@ abstract class loa {
         var8[0] = 0;
         if (param1 == -2352) {
           for (var4 = 1; param0 > var4; var4++) {
-            var5 = this.field_a.a(var4 + 1, param1 + 2352);
+            var5 = this.random.a(var4 + 1, param1 + 2352);
             for (var6 = var4; var5 < var6; var6--) {
               var3[var6] = var3[var6 - 1];
             }
@@ -163,9 +163,9 @@ abstract class loa {
           }
           return var3;
         }
-        this.field_a = (IsaacCipher) null;
+        this.random = (IsaacCipher) null;
         for (var4Lifetime1 = 1; param0 > var4Lifetime1; var4Lifetime1++) {
-          var5Lifetime1 = this.field_a.a(var4Lifetime1 + 1, param1 + 2352);
+          var5Lifetime1 = this.random.a(var4Lifetime1 + 1, param1 + 2352);
           for (var6Lifetime1 = var4Lifetime1; var5Lifetime1 < var6Lifetime1; var6Lifetime1--) {
             var3[var6Lifetime1] = var3[var6Lifetime1 - 1];
           }
@@ -196,9 +196,9 @@ abstract class loa {
         pka.field_b = param3;
     }
 
-    loa(IsaacCipher param0) {
+    MazeGenerator(IsaacCipher param0) {
         try {
-          this.field_a = param0;
+          this.random = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "loa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

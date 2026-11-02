@@ -506,7 +506,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (stackIn_82_0 < stackIn_82_1) {
                     break;
                   }
-                  da.field_c = true;
+                  GameFont.field_c = true;
                   break;
                 }
               }
@@ -586,7 +586,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (kua.field_j == this &&
             !tla.field_b) {
             bsa.field_k = true;
-            if (da.field_c &&
+            if (GameFont.field_c &&
               -lt.field_b + bva.b((byte) -107) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {

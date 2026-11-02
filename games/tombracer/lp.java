@@ -46,13 +46,13 @@ final class lp {
         }
     }
 
-    final static vna a(byte param0, String param1) {
-        vna stackIn_18_0 = null;
+    final static IntrusiveDeque a(byte param0, String param1) {
+        IntrusiveDeque stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vna var2 = null;
+        IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
         in var3 = null;
         int var4 = 0;
@@ -62,7 +62,7 @@ final class lp {
           if (param0 != 48) {
             field_h = (ko) null;
           }
-          var2 = new vna();
+          var2 = new IntrusiveDeque();
           var3 = new in(param1);
           while (!var3.a(0)) {
             var4 = var3.b(21098);

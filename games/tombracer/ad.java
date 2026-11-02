@@ -134,7 +134,7 @@ final class ad extends IntrusiveNode {
         int var3 = 0;
         String var4 = null;
         int var5 = -38 / ((32 - param0) / 33);
-        ha var8 = tga.field_a;
+        GraphicsToolkit var8 = tga.field_a;
         int var4_int = this.field_k;
         int var6 = this.field_g;
         nh[] var7 = dr.field_a;

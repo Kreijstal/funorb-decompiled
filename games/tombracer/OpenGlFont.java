@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eg extends da {
+final class OpenGlFont extends GameFont {
     private boolean field_g;
     private qk field_d;
-    private cka field_e;
+    private OpenGlToolkit field_e;
     private tla field_f;
 
     final void fa(char param0, int param1, int param2, int param3, boolean param4) {
@@ -71,7 +71,7 @@ final class eg extends da {
         }
     }
 
-    eg(cka param0, qla param1, jpa[] param2, boolean param3) {
+    OpenGlFont(OpenGlToolkit param0, qla param1, jpa[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

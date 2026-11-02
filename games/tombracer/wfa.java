@@ -85,7 +85,7 @@ final class wfa extends kna {
           var5 = new rea(param2, param0);
           var5.a(50, 8, param1 ^ 2, 25, 6);
           var5.b((byte) 72, true);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (dc) (var6.a(11, 114));
           var4.a(var5, (byte) 124, var7);
@@ -149,7 +149,7 @@ final class wfa extends kna {
         return false;
     }
 
-    wfa(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    wfa(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

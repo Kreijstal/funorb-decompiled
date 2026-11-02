@@ -161,27 +161,27 @@ final class rg extends qr {
           tk.field_a[15] = qr.field_u;
           tk.field_a[7] = fpa.field_b;
           tk.field_a[4] = or.field_m;
-          vna.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
+          IntrusiveDeque.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
           up.field_h[0] = new String[]{daa.field_f, ioa.field_o, mr.field_H, uc.field_K, pba.field_c, hsa.field_c};
-          vna.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
+          IntrusiveDeque.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
           up.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
-          vna.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
+          IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
           up.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
-          vna.field_d[3] = new String[]{eua.field_Ab, rua.field_hb, Player.field_s};
-          vna.field_d[4] = new String[]{uqa.field_t, fv.field_b, lda.field_G};
+          IntrusiveDeque.field_d[3] = new String[]{eua.field_Ab, rua.field_hb, Player.field_s};
+          IntrusiveDeque.field_d[4] = new String[]{uqa.field_t, fv.field_b, lda.field_G};
           up.field_h[3] = new String[]{sba.field_o, vk.field_a, koa.field_d};
           up.field_h[4] = new String[]{at.field_R, gn.field_y, tr.field_d};
-          vna.field_d[5] = new String[]{er.field_J, td.field_u, kva.field_r};
+          IntrusiveDeque.field_d[5] = new String[]{er.field_J, td.field_u, kva.field_r};
           up.field_h[5] = new String[]{gu.field_k, hn.field_G, du.field_b};
-          vna.field_d[6] = new String[]{uqa.field_v, bn.field_o, rl.field_s};
+          IntrusiveDeque.field_d[6] = new String[]{uqa.field_v, bn.field_o, rl.field_s};
           up.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
-          vna.field_d[7] = new String[]{rh.field_q, tu.field_d};
-          vna.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
+          IntrusiveDeque.field_d[7] = new String[]{rh.field_q, tu.field_d};
+          IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
           up.field_h[7] = new String[]{km.field_n, ld.field_d};
-          vna.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
+          IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
           up.field_h[8] = new String[]{hv.field_o, wfa.field_G, ClientException.field_e};
           up.field_h[9] = new String[]{qna.field_a, wv.field_h, kna.field_D};
-          vna.field_d[10] = new String[]{kd.field_z, qba.field_d, sta.field_H};
+          IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, sta.field_H};
           up.field_h[10] = new String[]{vm.field_a, ir.field_c, fb.field_b};
           return;
         }
@@ -213,27 +213,27 @@ final class rg extends qr {
         tk.field_a[15] = qr.field_u;
         tk.field_a[7] = fpa.field_b;
         tk.field_a[4] = or.field_m;
-        vna.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
+        IntrusiveDeque.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
         up.field_h[0] = new String[]{daa.field_f, ioa.field_o, mr.field_H, uc.field_K, pba.field_c, hsa.field_c};
-        vna.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
+        IntrusiveDeque.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
         up.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
-        vna.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
+        IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
         up.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
-        vna.field_d[3] = new String[]{eua.field_Ab, rua.field_hb, Player.field_s};
-        vna.field_d[4] = new String[]{uqa.field_t, fv.field_b, lda.field_G};
+        IntrusiveDeque.field_d[3] = new String[]{eua.field_Ab, rua.field_hb, Player.field_s};
+        IntrusiveDeque.field_d[4] = new String[]{uqa.field_t, fv.field_b, lda.field_G};
         up.field_h[3] = new String[]{sba.field_o, vk.field_a, koa.field_d};
         up.field_h[4] = new String[]{at.field_R, gn.field_y, tr.field_d};
-        vna.field_d[5] = new String[]{er.field_J, td.field_u, kva.field_r};
+        IntrusiveDeque.field_d[5] = new String[]{er.field_J, td.field_u, kva.field_r};
         up.field_h[5] = new String[]{gu.field_k, hn.field_G, du.field_b};
-        vna.field_d[6] = new String[]{uqa.field_v, bn.field_o, rl.field_s};
+        IntrusiveDeque.field_d[6] = new String[]{uqa.field_v, bn.field_o, rl.field_s};
         up.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
-        vna.field_d[7] = new String[]{rh.field_q, tu.field_d};
-        vna.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
+        IntrusiveDeque.field_d[7] = new String[]{rh.field_q, tu.field_d};
+        IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
         up.field_h[7] = new String[]{km.field_n, ld.field_d};
-        vna.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
+        IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
         up.field_h[8] = new String[]{hv.field_o, wfa.field_G, ClientException.field_e};
         up.field_h[9] = new String[]{qna.field_a, wv.field_h, kna.field_D};
-        vna.field_d[10] = new String[]{kd.field_z, qba.field_d, sta.field_H};
+        IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, sta.field_H};
         up.field_h[10] = new String[]{vm.field_a, ir.field_c, fb.field_b};
     }
 
@@ -243,7 +243,7 @@ final class rg extends qr {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        iu var6 = null;
+        Sprite var6 = null;
         if (param3 != 0) {
           return;
         }
@@ -254,7 +254,7 @@ final class rg extends qr {
           return;
         }
         if (this.field_y != 256) {
-          var6 = new iu(this.field_x.field_m, this.field_x.field_p);
+          var6 = new Sprite(this.field_x.field_m, this.field_x.field_p);
           nm.a(var6, (byte) 110);
           this.field_x.a(param2, 0, 0, param3);
           pfa.a(1);

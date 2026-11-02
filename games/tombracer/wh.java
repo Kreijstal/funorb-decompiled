@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wh extends nv implements ut {
+final class wh extends Behaviour implements ut {
     static nh field_y;
     private int field_n;
     private boolean field_D;

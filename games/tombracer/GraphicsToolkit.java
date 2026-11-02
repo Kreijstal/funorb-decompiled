@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ha {
+abstract class GraphicsToolkit {
     static boolean field_b;
     d field_c;
     int field_a;
@@ -74,18 +74,18 @@ abstract class ha {
         this.aa(param1, param3, param2, param5, param0, 1);
     }
 
-    abstract da a(qla param0, jpa[] param1, boolean param2);
+    abstract GameFont a(qla param0, jpa[] param1, boolean param2);
 
     abstract void HA(int param0, int param1, int param2, int param3, int[] param4);
 
-    final synchronized static ha a(d param0, int param1, cn param2, int param3, int param4, int param5, java.awt.Canvas param6, int param7) {
+    final synchronized static GraphicsToolkit a(d param0, int param1, cn param2, int param3, int param4, int param5, java.awt.Canvas param6, int param7) {
         RuntimeException var8 = null;
-        ha stackIn_2_0 = null;
-        ha stackIn_6_0 = null;
-        ha stackIn_10_0 = null;
-        ha stackIn_13_0 = null;
-        ha stackIn_16_0 = null;
-        ha stackIn_19_0 = null;
+        GraphicsToolkit stackIn_2_0 = null;
+        GraphicsToolkit stackIn_6_0 = null;
+        GraphicsToolkit stackIn_10_0 = null;
+        GraphicsToolkit stackIn_13_0 = null;
+        GraphicsToolkit stackIn_16_0 = null;
+        GraphicsToolkit stackIn_19_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -118,7 +118,7 @@ abstract class ha {
           if (param7 == -17441) {
             throw new IllegalArgumentException("UM");
           }
-          stackIn_19_0 = (ha) null;
+          stackIn_19_0 = (GraphicsToolkit) null;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,7 +199,7 @@ abstract class ha {
         this.za(param4, param0, param2, param3, 1);
     }
 
-    ha(d param0) {
+    GraphicsToolkit(d param0) {
         int var2_int = 0;
         int var3 = 0;
         try {

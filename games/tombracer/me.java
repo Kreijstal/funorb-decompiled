@@ -5,7 +5,7 @@ abstract class me extends IntrusiveNode {
     boolean field_h;
     qh field_i;
     static String field_f;
-    ff field_g;
+    MatchState field_g;
 
     abstract boolean a(int param0, char param1, byte param2);
 

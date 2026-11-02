@@ -10,7 +10,7 @@ final class jja extends nh {
     private boolean field_b;
     private int field_g;
     private qk field_f;
-    private cka field_c;
+    private OpenGlToolkit field_c;
     private int field_m;
     static String field_k;
     static String field_l;
@@ -322,7 +322,7 @@ final class jja extends nh {
         return this.field_a.field_s;
     }
 
-    jja(cka param0, int param1, int param2, int[] param3, int param4, int param5) {
+    jja(OpenGlToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
         this.field_e = 0;
         this.field_h = 0;
         this.field_g = 0;

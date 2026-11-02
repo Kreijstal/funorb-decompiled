@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fva extends loa {
+final class fva extends MazeGenerator {
     static int[] field_c;
     static String field_b;
 

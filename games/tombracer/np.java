@@ -48,7 +48,7 @@ final class np extends ka {
     private float[] field_n;
     private short[] field_q;
     private boolean field_gb;
-    private cka field_R;
+    private OpenGlToolkit field_R;
     private pm[] field_r;
     private int field_lb;
     private afa field_w;
@@ -2328,7 +2328,7 @@ final class np extends ka {
 
     private final void b(byte param0) {
         int var14 = 0;
-        cka stackIn_7_0 = null;
+        OpenGlToolkit stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         boolean stackIn_11_0 = false;
         int stackIn_21_0 = 0;
@@ -2355,7 +2355,7 @@ final class np extends ka {
             this.field_R.u(28630);
             stackIn_7_0 = this.field_R;
             stackIn_8_1 = !(this.field_s);
-            ((cka) (Object) stackIn_7_0).a(stackIn_8_1, false);
+            ((OpenGlToolkit) (Object) stackIn_7_0).a(stackIn_8_1, false);
             this.field_R.a(param0 ^ -35, false);
             this.field_R.a((tj) null, this.field_R.field_Rb, (tj) null, -114, this.field_R.field_Bc);
             var3 = 0;
@@ -3244,10 +3244,10 @@ final class np extends ka {
     private final void a(boolean param0) {
         int stackIn_16_1 = 0;
         boolean stackIn_17_2 = false;
-        cka stackIn_24_0 = null;
+        OpenGlToolkit stackIn_24_0 = null;
         int stackIn_24_1 = 0;
         boolean stackIn_25_2 = false;
-        cka stackIn_37_0 = null;
+        OpenGlToolkit stackIn_37_0 = null;
         int stackIn_37_1 = 0;
         boolean stackIn_38_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -3277,7 +3277,7 @@ final class np extends ka {
               stackIn_24_0 = this.field_R;
               stackIn_24_1 = 96;
               stackIn_25_2 = (this.field_F != null);
-              ((cka) (Object) stackIn_24_0).a(stackIn_24_1, stackIn_25_2);
+              ((OpenGlToolkit) (Object) stackIn_24_0).a(stackIn_24_1, stackIn_25_2);
               this.field_R.a(this.field_kb, this.field_ab, this.field_F, -120, this.field_g);
               var2_int = -1 + this.field_p.length;
               var3 = 0;
@@ -3294,7 +3294,7 @@ final class np extends ka {
                 stackIn_37_0 = this.field_R;
                 stackIn_37_1 = 70;
                 stackIn_38_2 = (null != this.field_F);
-                ((cka) (Object) stackIn_37_0).a((byte) stackIn_37_1, stackIn_38_2, var6);
+                ((OpenGlToolkit) (Object) stackIn_37_0).a((byte) stackIn_37_1, stackIn_38_2, var6);
                 this.field_R.a(3 * var4, 4, -513, this.field_w.field_a, 3 * (var5 - var4));
                 var3++;
               }
@@ -4227,7 +4227,7 @@ final class np extends ka {
         }
     }
 
-    np(cka param0) {
+    np(OpenGlToolkit param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -4263,7 +4263,7 @@ final class np extends ka {
         }
     }
 
-    np(cka param0, oc param1, int param2, int param3, int param4, int param5) {
+    np(OpenGlToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
         int fieldTemp$0 = 0;
         short dupTemp$1 = 0;
         short dupTemp$2 = 0;
@@ -4867,13 +4867,13 @@ final class np extends ka {
                             break;
                           case 1:
                             var41 = (float)param1.field_x[var19_int] / 1024.0f;
-                            loa.a(var39_int, dia.field_p, var41, param1.field_p[var32_int], param1.field_I[var32_int], 86, var38_ref_float__, var40, var36, var37_int, param1.field_b[var32_int], var35);
+                            MazeGenerator.a(var39_int, dia.field_p, var41, param1.field_p[var32_int], param1.field_I[var32_int], 86, var38_ref_float__, var40, var36, var37_int, param1.field_b[var32_int], var35);
                             var23 = dia.field_p[1];
                             var22 = dia.field_p[0];
-                            loa.a(var39_int, dia.field_p, var41, param1.field_p[var33_int], param1.field_I[var33_int], -68, var38_ref_float__, var40, var36, var37_int, param1.field_b[var33_int], var35);
+                            MazeGenerator.a(var39_int, dia.field_p, var41, param1.field_p[var33_int], param1.field_I[var33_int], -68, var38_ref_float__, var40, var36, var37_int, param1.field_b[var33_int], var35);
                             var25 = dia.field_p[1];
                             var24 = dia.field_p[0];
-                            loa.a(var39_int, dia.field_p, var41, param1.field_p[var34], param1.field_I[var34], 113, var38_ref_float__, var40, var36, var37_int, param1.field_b[var34], var35);
+                            MazeGenerator.a(var39_int, dia.field_p, var41, param1.field_p[var34], param1.field_I[var34], 113, var38_ref_float__, var40, var36, var37_int, param1.field_b[var34], var35);
                             var26 = dia.field_p[0];
                             var27 = dia.field_p[1];
                             var42 = var41 / 2.0f;

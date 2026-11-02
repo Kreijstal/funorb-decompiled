@@ -87,7 +87,7 @@ final class ln extends kna {
         return new mg(new int[]{15, 10, 10, 15, 10, 5, 10, 5, 15, 5, 10, 10});
     }
 
-    ln(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    ln(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
           this.field_G = param2.b((byte) 44, 4);
@@ -131,7 +131,7 @@ final class ln extends kna {
           var4.b((byte) -11, this.field_k, this.field_l);
           var5 = new lpa(param2, false);
           var5.b(-5, this.field_G);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           if (param1 != 3) {
             this.t(49);

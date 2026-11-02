@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rea extends nv {
+final class rea extends Behaviour {
     private int field_s;
     private int field_q;
     private boolean field_u;

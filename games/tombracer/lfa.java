@@ -173,8 +173,8 @@ final class lfa extends dg {
         int var5;
         Object var6;
         w var6_ref;
-        vna var7;
-        vna var8;
+        IntrusiveDeque var7;
+        IntrusiveDeque var8;
         var6 = null;
         var6_ref = (w) (this.a(110).field_G);
         if (var6_ref == null) {

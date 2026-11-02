@@ -5,7 +5,7 @@ final class bra extends ofa implements tsa {
     static String[] field_M;
     private rj field_N;
     private rj field_L;
-    static iu field_O;
+    static Sprite field_O;
 
     private final void f(int param0) {
         if (param0 != -25050) {

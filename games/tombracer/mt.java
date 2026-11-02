@@ -42,7 +42,7 @@ abstract class mt {
         }
     }
 
-    abstract tu a(ff param0, int param1);
+    abstract tu a(MatchState param0, int param1);
 
     static {
     }

@@ -51,7 +51,7 @@ final class gba extends IntrusiveNode {
         }
     }
 
-    final static Room a(int param0, boolean param1, g param2, int param3, dt param4) {
+    final static Room a(int param0, boolean param1, g param2, int param3, PlayerSimulation param4) {
         Room var5 = null;
         Exception var5_ref = null;
         RuntimeException var5_ref2 = null;

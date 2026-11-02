@@ -79,7 +79,7 @@ abstract class jg {
 
     final static int a(byte param0) {
         int var1 = 16 / ((73 - param0) / 52);
-        return ff.field_w;
+        return MatchState.field_w;
     }
 
     public static void b(byte param0) {

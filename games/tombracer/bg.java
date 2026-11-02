@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends wda {
+final class bg extends Locomotor {
     private int field_q;
     static String field_p;
-    static iu field_s;
+    static Sprite field_s;
     private boolean field_u;
     private int field_v;
     static int field_t;

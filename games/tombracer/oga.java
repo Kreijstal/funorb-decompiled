@@ -3,7 +3,7 @@
  */
 abstract class oga extends IntrusiveNode {
     boolean field_h;
-    cka field_g;
+    OpenGlToolkit field_g;
     static long field_f;
 
     abstract void a(rt param0, int param1, byte param2, rt param3);
@@ -57,7 +57,7 @@ abstract class oga extends IntrusiveNode {
         return 1;
     }
 
-    oga(cka param0) {
+    oga(OpenGlToolkit param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {

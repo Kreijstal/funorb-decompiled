@@ -7,7 +7,7 @@ final class uca {
     static IsaacCipher field_c;
     static int field_a;
     static int field_d;
-    static iu[] field_f;
+    static Sprite[] field_f;
 
     final static String a(String param0, byte param1, int param2) {
         String stackIn_3_0 = null;

@@ -4,7 +4,7 @@
 final class uma {
     static String field_a;
     static boolean field_c;
-    static vna field_b;
+    static IntrusiveDeque field_b;
 
     final static int a(int param0, BitPacketBuffer param1, int param2) {
         RuntimeException var3 = null;
@@ -15,7 +15,7 @@ final class uma {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -26803) {
-            field_b = (vna) null;
+            field_b = (IntrusiveDeque) null;
           }
           stackIn_3_0 = (param1.b((byte) 44, param0) ^ 1 << -1 + param0) - (1 << -1 + param0);
           return stackIn_3_0;

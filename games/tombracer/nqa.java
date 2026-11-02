@@ -3,7 +3,7 @@
  */
 abstract class nqa {
     ft field_e;
-    cta field_d;
+    Direct3DToolkit field_d;
     una field_b;
     boolean field_c;
     hs field_a;
@@ -18,7 +18,7 @@ abstract class nqa {
 
     abstract jagdx.IDirect3DBaseTexture c(int param0);
 
-    nqa(cta param0, ft param1, una param2, boolean param3, int param4) {
+    nqa(Direct3DToolkit param0, ft param1, una param2, boolean param3, int param4) {
         this.field_a = aw.field_G;
         this.field_b = param2;
         this.field_d = param0;

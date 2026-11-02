@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vi {
-    private vna field_b;
+    private IntrusiveDeque field_b;
     static int field_a;
 
     final void a(int param0) {
@@ -17,7 +17,7 @@ final class vi {
 
     final tt a(boolean param0) {
         if (!param0) {
-          this.field_b = (vna) null;
+          this.field_b = (IntrusiveDeque) null;
           if (!this.field_b.d((byte) 14)) {
             return (tt) (this.field_b.c(-113));
           }
@@ -93,7 +93,7 @@ final class vi {
     }
 
     vi() {
-        this.field_b = new vna();
+        this.field_b = new IntrusiveDeque();
     }
 
     static {

@@ -240,7 +240,7 @@ class l extends cg {
         }
     }
 
-    final static ha a(int param0, int param1, java.awt.Canvas param2, d param3, int param4) {
+    final static GraphicsToolkit a(int param0, int param1, java.awt.Canvas param2, d param3, int param4) {
         RuntimeException var5 = null;
         sfa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -254,7 +254,7 @@ class l extends cg {
             l.c(-1);
           }
           stackIn_3_0 = new sfa(param2, param3, param4, param0);
-          return (ha) ((Object) stackIn_3_0);
+          return (GraphicsToolkit) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

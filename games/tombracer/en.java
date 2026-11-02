@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class en extends cg {
-    private vna field_l;
-    private vna field_m;
+    private IntrusiveDeque field_l;
+    private IntrusiveDeque field_m;
     private int field_k;
     private int field_j;
 
@@ -30,9 +30,9 @@ final class en extends cg {
 
     private final void a(IntrusiveNode param0, jva param1) {
         while (true) {
-          if (param0 == this.field_m.field_e) {
+          if (param0 == this.field_m.sentinel) {
             ln.a(param0, param1, (byte) -102);
-            this.field_j = ((jva) (this.field_m.field_e.next)).field_f;
+            this.field_j = ((jva) (this.field_m.sentinel.next)).field_f;
             return;
           }
           if (((jva) (param0)).field_f <= param1.field_f) {
@@ -42,7 +42,7 @@ final class en extends cg {
           break;
         }
         ln.a(param0, param1, (byte) -102);
-        this.field_j = ((jva) (this.field_m.field_e.next)).field_f;
+        this.field_j = ((jva) (this.field_m.sentinel.next)).field_f;
         return;
     }
 
@@ -144,8 +144,8 @@ final class en extends cg {
     private final void a(jva param0) {
         param0.unlink(54);
         param0.a();
-        IntrusiveNode var2 = this.field_m.field_e.next;
-        if (var2 == this.field_m.field_e) {
+        IntrusiveNode var2 = this.field_m.sentinel.next;
+        if (var2 == this.field_m.sentinel) {
           this.field_j = -1;
         } else {
           this.field_j = ((jva) (var2)).field_f;
@@ -153,7 +153,7 @@ final class en extends cg {
     }
 
     final synchronized void a(cg param0) {
-        this.field_l.a((byte) 110, (IntrusiveNode) (param0));
+        this.field_l.addFirst((byte) 110, (IntrusiveNode) (param0));
     }
 
     final cg b() {
@@ -161,8 +161,8 @@ final class en extends cg {
     }
 
     public en() {
-        this.field_l = new vna();
-        this.field_m = new vna();
+        this.field_l = new IntrusiveDeque();
+        this.field_m = new IntrusiveDeque();
         this.field_j = -1;
         this.field_k = 0;
     }

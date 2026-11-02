@@ -34,7 +34,7 @@ final class df extends lea {
           var4 = super.a(param0, 3, param2);
           var5 = new ef(param2, param0);
           var5.a(ci.a(4, -1), 5);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var4.l(param1, 146366800);
           var6 = rm.field_a;
           var7 = (kga) (var6.a(12, 104));
@@ -60,7 +60,7 @@ final class df extends lea {
         super(param0, param1);
     }
 
-    df(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    df(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

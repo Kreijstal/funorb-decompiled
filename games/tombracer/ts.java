@@ -13,11 +13,11 @@ final class ts {
     final void c(boolean param0) {
         boolean stackIn_17_1 = false;
         int stackIn_20_1 = 0;
-        dt stackIn_20_2 = null;
+        PlayerSimulation stackIn_20_2 = null;
         boolean stackIn_21_3 = false;
         boolean stackIn_24_1 = false;
         int var3;
-        dt var4;
+        PlayerSimulation var4;
         var3 = TombRacer.field_G ? 1 : 0;
         if (!param0) {
           return;
@@ -37,7 +37,7 @@ final class ts {
           stackIn_20_1 = -1;
           stackIn_20_2 = var4;
           stackIn_21_3 = !(param0);
-          stackIn_24_1 = (stackIn_20_1 == ~((dt) (Object) stackIn_20_2).b(stackIn_21_3, 5));
+          stackIn_24_1 = (stackIn_20_1 == ~((PlayerSimulation) (Object) stackIn_20_2).b(stackIn_21_3, 5));
           this.a(stackIn_24_1, (byte) 25);
         } else {
           if (this.field_f != null &&
@@ -98,7 +98,7 @@ final class ts {
         this.field_d = null;
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, da param5, int param6) {
+    final static void a(int param0, int param1, int param2, String param3, int param4, GameFont param5, int param6) {
         try {
           if (param1 >= -11) {
             field_b = -58;
@@ -121,9 +121,9 @@ final class ts {
         }
     }
 
-    private final dt a(byte param0) {
+    private final PlayerSimulation a(byte param0) {
         if (param0 != -115) {
-          return (dt) null;
+          return (PlayerSimulation) null;
         }
         return this.field_c.a(-1553494544);
     }
@@ -140,7 +140,7 @@ final class ts {
         if (param1 != 25) {
           this.c(false);
         }
-        this.field_f[0].a((byte) 83, (nv) (var5));
+        this.field_f[0].a((byte) 83, (Behaviour) (var5));
         this.field_f[0].c(437453352, false);
         this.field_c.a(this.field_f[0], (byte) 32);
         if (param0) {
@@ -299,7 +299,7 @@ final class ts {
           var14 = new th(this.field_c, true);
           var14.b(param2 ^ 5, param3);
           var14.a(param0, param1, 19072);
-          this.field_e[var11Lifetime1].a((byte) 83, (nv) (var14));
+          this.field_e[var11Lifetime1].a((byte) 83, (Behaviour) (var14));
           this.field_c.a(this.field_e[var11Lifetime1], (byte) 32);
         }
     }
@@ -343,7 +343,7 @@ final class ts {
         int stackIn_17_0 = 0;
         int var3;
         int var4;
-        csa var5;
+        RoomComponent var5;
         int var6;
         int var7;
         int var8;
@@ -398,7 +398,7 @@ final class ts {
     }
 
     private final void b(boolean param0) {
-        dt discarded$0 = null;
+        PlayerSimulation discarded$0 = null;
         int var3 = 0;
         Trap var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;

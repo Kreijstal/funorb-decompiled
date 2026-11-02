@@ -9,7 +9,7 @@ final class cfa implements dv {
     static jea field_c;
     private boolean field_e;
     w field_g;
-    private ff field_j;
+    private MatchState field_j;
     private int field_d;
     static long field_b;
 
@@ -19,7 +19,7 @@ final class cfa implements dv {
           return;
         }
         if (-1 == param0) {
-          this.field_j.field_H[this.field_h].b(18202625, -1);
+          this.field_j.players[this.field_h].b(18202625, -1);
         } else {
           var3 = 63;
           if (3 == this.field_i[param0]) {
@@ -39,7 +39,7 @@ final class cfa implements dv {
           if (this.field_g != null) {
             this.field_g.a(new fm(var3, 0, 0, 0), -58);
           }
-          this.field_j.field_H[this.field_h].b(18202625, this.field_i[param0]);
+          this.field_j.players[this.field_h].b(18202625, this.field_i[param0]);
           this.field_i[param0] = -1;
           this.field_f = this.field_f + 1;
         }
@@ -263,7 +263,7 @@ final class cfa implements dv {
         this.field_f = 0;
     }
 
-    cfa(ff param0) {
+    cfa(MatchState param0) {
         this.field_h = -1;
         this.field_f = 0;
         try {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dja extends nv implements ut {
+final class dja extends Behaviour implements ut {
     static jea field_p;
     private jma field_n;
     static int field_r;

@@ -31,7 +31,7 @@ abstract class ob extends IntrusiveNode {
 
     abstract void a(byte param0, float param1);
 
-    final static void a(ha param0, int param1) {
+    final static void a(GraphicsToolkit param0, int param1) {
         int[] var13 = null;
         int[] var12 = null;
         int[] var3 = null;
@@ -80,7 +80,7 @@ abstract class ob extends IntrusiveNode {
           id.field_h = ak.a(param0, tba.field_f, -70);
           lva.field_m = ak.a(param0, ng.field_f, -77);
           su.a(ds.field_g, param0, (byte) 126);
-          za.field_g = su.a(jga.field_b, param0, (byte) -50);
+          za.field_g = su.a(TextResourceLoader.field_b, param0, (byte) -50);
           bca.field_d = su.a(sla.field_a, param0, (byte) -38);
           rm.field_c = su.a(gv.field_s, param0, (byte) 126);
           uda.field_r = su.a(aa.field_a, param0, (byte) 125);
@@ -120,7 +120,7 @@ abstract class ob extends IntrusiveNode {
           su.a(aw.field_F, param0, (byte) -2);
           gca.field_a = su.a(rp.field_f, param0, (byte) 126);
           ng.field_b = ak.a(param0, qka.field_o, param1 - 17309);
-          vna.field_c = su.a(ko.field_j, param0, (byte) -95);
+          IntrusiveDeque.field_c = su.a(ko.field_j, param0, (byte) -95);
           tka.field_p = su.a(ht.field_Db, param0, (byte) 27);
           Projectile.field_n = su.a(oea.field_j, param0, (byte) -37);
           wh.field_y = su.a(cn.field_h, param0, (byte) 127);

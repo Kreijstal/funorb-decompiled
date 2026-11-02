@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends nv {
+final class hi extends Behaviour {
     private int field_s;
     static String field_p;
     private int field_r;
@@ -63,14 +63,14 @@ final class hi extends nv {
         return 1;
     }
 
-    final static iu[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, int param8) {
         int var14 = 0;
         int var9;
-        iu[] var10;
-        iu[] var11_ref_iu__;
+        Sprite[] var10;
+        Sprite[] var11_ref_iu__;
         int var11;
         int var12;
-        iu var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -81,49 +81,49 @@ final class hi extends nv {
         int var12Lifetime4;
         var15 = TombRacer.field_G ? 1 : 0;
         var9 = param1 + (param5 + param3);
-        var10 = new iu[]{new iu(var9, var9), new iu(param6, var9), new iu(var9, var9), new iu(var9, param6), new iu(64, 64), new iu(var9, param6), new iu(var9, var9), new iu(param6, var9), new iu(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9), new Sprite(var9, param6), new Sprite(64, 64), new Sprite(var9, param6), new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9)};
         if (!param7) {
           hi.c(-100);
         }
         var11_ref_iu__ = var10;
         for (var12 = 0; var11_ref_iu__.length > var12; var12++) {
           var13 = var11_ref_iu__[var12];
-          for (var14 = 0; var14 < var13.field_r.length; var14++) {
-            var13.field_r[var14] = param2;
+          for (var14 = 0; var14 < var13.pixels.length; var14++) {
+            var13.pixels[var14] = param2;
           }
         }
         for (var11 = 0; var11 < param5; var11++) {
           for (var12Lifetime1 = 0; var9 > var12Lifetime1; var12Lifetime1++) {
-            var10[6].field_r[(-var11 + var9 - 1) * var9 + var12Lifetime1] = param8;
-            var10[8].field_r[var9 * (-1 + (-var11 + var9)) + var12Lifetime1] = param8;
-            var10[2].field_r[var12Lifetime1 * var9 + var9 - 1 - var11] = param8;
-            var10[8].field_r[var12Lifetime1 * var9 + var9 + (-1 - var11)] = param8;
+            var10[6].pixels[(-var11 + var9 - 1) * var9 + var12Lifetime1] = param8;
+            var10[8].pixels[var9 * (-1 + (-var11 + var9)) + var12Lifetime1] = param8;
+            var10[2].pixels[var12Lifetime1 * var9 + var9 - 1 - var11] = param8;
+            var10[8].pixels[var12Lifetime1 * var9 + var9 + (-1 - var11)] = param8;
           }
         }
         for (var11Lifetime1 = 0; var11Lifetime1 < param5; var11Lifetime1++) {
           for (var12Lifetime2 = 0; var12Lifetime2 < var9; var12Lifetime2++) {
-            var10[0].field_r[var9 * var11Lifetime1 + var12Lifetime2] = param4;
-            var10[0].field_r[var12Lifetime2 * var9 + var11Lifetime1] = param4;
+            var10[0].pixels[var9 * var11Lifetime1 + var12Lifetime2] = param4;
+            var10[0].pixels[var12Lifetime2 * var9 + var11Lifetime1] = param4;
             if (-var11Lifetime1 + var9 > var12Lifetime2) {
-              var10[2].field_r[var9 * var11Lifetime1 + var12Lifetime2] = param4;
-              var10[6].field_r[var9 * var12Lifetime2 + var11Lifetime1] = param4;
+              var10[2].pixels[var9 * var11Lifetime1 + var12Lifetime2] = param4;
+              var10[6].pixels[var9 * var12Lifetime2 + var11Lifetime1] = param4;
             }
           }
         }
         for (var11Lifetime2 = 0; var11Lifetime2 < param6; var11Lifetime2++) {
           for (var12Lifetime3 = 0; param5 > var12Lifetime3; var12Lifetime3++) {
-            var10[7].field_r[param6 * (-var12Lifetime3 + (var9 - 1)) + var11Lifetime2] = param8;
-            var10[5].field_r[-1 + var9 - (var12Lifetime3 - var11Lifetime2 * var9)] = param8;
-            var10[1].field_r[param6 * var12Lifetime3 + var11Lifetime2] = param4;
-            var10[3].field_r[var9 * var11Lifetime2 + var12Lifetime3] = param4;
+            var10[7].pixels[param6 * (-var12Lifetime3 + (var9 - 1)) + var11Lifetime2] = param8;
+            var10[5].pixels[-1 + var9 - (var12Lifetime3 - var11Lifetime2 * var9)] = param8;
+            var10[1].pixels[param6 * var12Lifetime3 + var11Lifetime2] = param4;
+            var10[3].pixels[var9 * var11Lifetime2 + var12Lifetime3] = param4;
           }
         }
         for (var11Lifetime3 = 0; var11Lifetime3 < param6 >> 1; var11Lifetime3++) {
           for (var12Lifetime4 = 0; param1 > var12Lifetime4; var12Lifetime4++) {
-            var10[1].field_r[param6 * (-1 - var12Lifetime4 + var9) + var11Lifetime3] = param0;
-            var10[3].field_r[var11Lifetime3 * var9 - (var12Lifetime4 - var9 + 1)] = param0;
-            var10[7].field_r[param6 * var12Lifetime4 + var11Lifetime3] = param0;
-            var10[5].field_r[var9 * var11Lifetime3 + var12Lifetime4] = param0;
+            var10[1].pixels[param6 * (-1 - var12Lifetime4 + var9) + var11Lifetime3] = param0;
+            var10[3].pixels[var11Lifetime3 * var9 - (var12Lifetime4 - var9 + 1)] = param0;
+            var10[7].pixels[param6 * var12Lifetime4 + var11Lifetime3] = param0;
+            var10[5].pixels[var9 * var11Lifetime3 + var12Lifetime4] = param0;
           }
         }
         return var10;

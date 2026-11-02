@@ -4,7 +4,7 @@
 final class DelegatingCanvas extends java.awt.Canvas {
     static String field_b;
     private java.awt.Component field_a;
-    static ha field_c;
+    static GraphicsToolkit field_c;
 
     public final void paint(java.awt.Graphics param0) {
         try {

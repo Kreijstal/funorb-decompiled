@@ -189,7 +189,7 @@ final class fga implements sia {
           int var2_int = 0;
           RuntimeException var2 = null;
           int var3_int = 0;
-          ha var3 = null;
+          GraphicsToolkit var3 = null;
           int var4 = 0;
           int var5 = 0;
           int var6_int = 0;

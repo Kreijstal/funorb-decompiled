@@ -140,7 +140,7 @@ final class cf implements bo {
         if (param1 > -100) {
           field_c = (String) null;
         }
-        ff.field_w = param0;
+        MatchState.field_w = param0;
         if (null != fq.field_e) {
           fq.field_e.a(param0, -83);
         }
@@ -179,15 +179,15 @@ final class cf implements bo {
     }
 
     final void a(qh param0, int param1) {
-        ff var8 = null;
+        MatchState var8 = null;
         int var4 = 0;
         Player var5 = null;
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
         try {
           var8 = param0.field_k;
-          for (var4 = param1; var8.field_H.length > var4; var4++) {
-            var5 = var8.field_H[var4];
+          for (var4 = param1; var8.players.length > var4; var4++) {
+            var5 = var8.players[var4];
             for (var6 = 0; 3 > var6; var6++) {
               var5.a(true, var6, this.field_i[var4][var6]);
             }

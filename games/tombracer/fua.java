@@ -9,7 +9,7 @@ final class fua implements isa {
     static af field_a;
     private rla field_d;
     static boolean field_g;
-    static iu[] field_f;
+    static Sprite[] field_f;
 
     final static boolean a(int param0, int param1, int param2) {
         if (param0 <= 88) {

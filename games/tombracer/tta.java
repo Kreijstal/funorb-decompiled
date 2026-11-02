@@ -29,7 +29,7 @@ final class tta extends lea {
           var4.a((byte) -3, 1);
           var5 = new ue(param2, param0);
           var5.a(0, false);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kga) (var6.a(12, param1 + 94));
           var7.b((byte) 123, param1);
@@ -50,7 +50,7 @@ final class tta extends lea {
         }
     }
 
-    tta(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    tta(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

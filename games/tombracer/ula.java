@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ula extends nv {
+final class ula extends Behaviour {
     static String field_t;
     private int field_s;
     private int field_r;

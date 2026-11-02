@@ -84,7 +84,7 @@ abstract class gn extends b {
         return false;
     }
 
-    final static iu[] b(int param0, int param1, int param2, int param3) {
+    final static Sprite[] b(int param0, int param1, int param2, int param3) {
         if (param1 == 1) {
           return ura.a(param2, param0, false, 1, param3);
         }
@@ -116,7 +116,7 @@ abstract class gn extends b {
           return;
         }
         if (fta.field_a == null) {
-          fta.field_a = new iu(this.field_m, this.field_p);
+          fta.field_a = new Sprite(this.field_m, this.field_p);
           nm.a(fta.field_a, (byte) 118);
           bea.a();
           this.a(0, (byte) -67, 0);
@@ -126,7 +126,7 @@ abstract class gn extends b {
           return;
         }
         if (fta.field_a.field_m < this.field_m) {
-          fta.field_a = new iu(this.field_m, this.field_p);
+          fta.field_a = new Sprite(this.field_m, this.field_p);
           nm.a(fta.field_a, (byte) 118);
           bea.a();
           this.a(0, (byte) -67, 0);
@@ -144,7 +144,7 @@ abstract class gn extends b {
           fta.field_a.c(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
         }
-        fta.field_a = new iu(this.field_m, this.field_p);
+        fta.field_a = new Sprite(this.field_m, this.field_p);
         nm.a(fta.field_a, (byte) 118);
         bea.a();
         this.a(0, (byte) -67, 0);

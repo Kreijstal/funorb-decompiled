@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bha extends wda {
+final class bha extends Locomotor {
     private int field_t;
     static String field_q;
     static String field_x;

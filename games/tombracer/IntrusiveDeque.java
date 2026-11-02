@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vna {
+final class IntrusiveDeque {
     static nh field_c;
     static su field_a;
     static String[][] field_d;
-    IntrusiveNode field_e;
-    private IntrusiveNode field_b;
+    IntrusiveNode sentinel;
+    private IntrusiveNode cursor;
 
     final IntrusiveNode a(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
@@ -22,21 +22,21 @@ final class vna {
           if (param1 != null) {
             var3 = param1;
             if (TombRacer.field_G) {
-              var3 = this.field_e.next;
+              var3 = this.sentinel.next;
             }
           } else {
-            var3 = this.field_e.next;
+            var3 = this.sentinel.next;
           }
           if (param0 != -13854) {
             stackIn_5_0 = (IntrusiveNode) null;
             return stackIn_5_0;
           }
-          if (this.field_e != var3) {
-            this.field_b = var3.next;
+          if (this.sentinel != var3) {
+            this.cursor = var3.next;
             stackIn_10_0 = var3;
             return stackIn_10_0;
           }
-          this.field_b = null;
+          this.cursor = null;
           stackIn_8_0 = null;
           return (IntrusiveNode) (stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -53,7 +53,7 @@ final class vna {
         }
     }
 
-    final void a(byte param0, IntrusiveNode param1) {
+    final void addFirst(byte param0, IntrusiveNode param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -63,8 +63,8 @@ final class vna {
           if (null != param1.previous) {
             param1.unlink(47);
           }
-          param1.next = this.field_e.next;
-          param1.previous = this.field_e;
+          param1.next = this.sentinel.next;
+          param1.previous = this.sentinel;
           if (param0 < 87) {
             this.f(54);
           }
@@ -85,7 +85,7 @@ final class vna {
         }
     }
 
-    final IntrusiveNode c(byte param0) {
+    final IntrusiveNode pollLast(byte param0) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         IntrusiveNode stackIn_2_0 = null;
@@ -93,12 +93,12 @@ final class vna {
         IntrusiveNode stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.previous;
+          var2 = this.sentinel.previous;
           if (param0 != 22) {
             stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
-          if (var2 == this.field_e) {
+          if (var2 == this.sentinel) {
             stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);
           }
@@ -129,7 +129,7 @@ final class vna {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        vna var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         mu var7 = null;
@@ -150,7 +150,7 @@ final class vna {
         var19 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 > -114) {
-            vna.a(false, -16, -77);
+            IntrusiveDeque.a(false, -16, -77);
           }
           stackIn_7_0 = dn.field_b.field_vb;
           stackIn_7_1 = 2;
@@ -164,7 +164,7 @@ final class vna {
           var4 = dn.field_b.field_tb.field_J;
           var5 = null;
           if (ae.field_g != 2) {
-            is.field_yb.field_r = dt.field_n;
+            is.field_yb.field_r = PlayerSimulation.field_n;
             dqa.field_e.field_X = false;
             if (ae.field_g != 1) {
               dn.field_b.field_vb.field_vb.field_r = nl.field_c;
@@ -323,9 +323,9 @@ final class vna {
         IntrusiveNode stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_b;
-          if (this.field_e == var2) {
-            this.field_b = null;
+          var2 = this.cursor;
+          if (this.sentinel == var2) {
+            this.cursor = null;
             stackIn_2_0 = null;
             return (IntrusiveNode) (stackIn_2_0);
           }
@@ -333,7 +333,7 @@ final class vna {
             stackIn_5_0 = (IntrusiveNode) null;
             return stackIn_5_0;
           }
-          this.field_b = var2.previous;
+          this.cursor = var2.previous;
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -358,8 +358,8 @@ final class vna {
             return stackIn_3_0;
           }
           var2_int = 0;
-          var3 = this.field_e.next;
-          while (var3 != this.field_e) {
+          var3 = this.sentinel.next;
+          while (var3 != this.sentinel) {
             var2_int++;
             var3 = var3.next;
             if (var4 == 0) {
@@ -384,7 +384,7 @@ final class vna {
           if (param0 != 14) {
             field_a = (su) null;
           }
-          stackIn_7_0 = (this.field_e == this.field_e.next);
+          stackIn_7_0 = (this.sentinel == this.sentinel.next);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -401,9 +401,9 @@ final class vna {
         IntrusiveNode stackIn_6_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.next;
+          var2 = this.sentinel.next;
           var3 = -30 % ((-37 - param0) / 59);
-          if (this.field_e == var2) {
+          if (this.sentinel == var2) {
             stackIn_4_0 = null;
             return (IntrusiveNode) (stackIn_4_0);
           }
@@ -425,13 +425,13 @@ final class vna {
         RuntimeException var3 = null;
         try {
           if (param0 >= -45) {
-            vna.a(true, 11, -23);
+            IntrusiveDeque.a(true, 11, -23);
           }
           if (null != param1.previous) {
             param1.unlink(111);
           }
-          param1.next = this.field_e;
-          param1.previous = this.field_e.previous;
+          param1.next = this.sentinel;
+          param1.previous = this.sentinel.previous;
           param1.previous.next = param1;
           param1.next.previous = param1;
           return;
@@ -457,17 +457,17 @@ final class vna {
         IntrusiveNode stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.next;
+          var2 = this.sentinel.next;
           if (param0 != -80) {
             stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
-          if (this.field_e != var2) {
-            this.field_b = var2.next;
+          if (this.sentinel != var2) {
+            this.cursor = var2.next;
             stackIn_7_0 = var2;
             return stackIn_7_0;
           }
-          this.field_b = null;
+          this.cursor = null;
           stackIn_5_0 = null;
           return (IntrusiveNode) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -503,9 +503,9 @@ final class vna {
         IntrusiveNode stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.previous;
-          if (this.field_e == var2) {
-            this.field_b = null;
+          var2 = this.sentinel.previous;
+          if (this.sentinel == var2) {
+            this.cursor = null;
             stackIn_4_0 = null;
             return (IntrusiveNode) (stackIn_4_0);
           }
@@ -513,7 +513,7 @@ final class vna {
             stackIn_7_0 = (IntrusiveNode) null;
             return stackIn_7_0;
           }
-          this.field_b = var2.previous;
+          this.cursor = var2.previous;
           stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -531,8 +531,8 @@ final class vna {
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           while (true) {
-            var2 = this.field_e.next;
-            if (this.field_e != var2) {
+            var2 = this.sentinel.next;
+            if (this.sentinel != var2) {
               var2.unlink(param0 ^ 119);
               if (var3 != 0) {
                 return;
@@ -544,7 +544,7 @@ final class vna {
           if (param0 != 8) {
             this.a(-64);
           }
-          this.field_b = null;
+          this.cursor = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -560,16 +560,16 @@ final class vna {
         IntrusiveNode stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_b;
-          if (var2 == this.field_e) {
-            this.field_b = null;
+          var2 = this.cursor;
+          if (var2 == this.sentinel) {
+            this.cursor = null;
             stackIn_4_0 = null;
             return (IntrusiveNode) (stackIn_4_0);
           }
           if (param0 < 106) {
-            this.field_b = (IntrusiveNode) null;
+            this.cursor = (IntrusiveNode) null;
           }
-          this.field_b = var2.next;
+          this.cursor = var2.next;
           stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -579,11 +579,11 @@ final class vna {
         }
     }
 
-    public vna() {
-        this.field_e = new IntrusiveNode();
+    public IntrusiveDeque() {
+        this.sentinel = new IntrusiveNode();
         try {
-          this.field_e.previous = this.field_e;
-          this.field_e.next = this.field_e;
+          this.sentinel.previous = this.sentinel;
+          this.sentinel.next = this.sentinel;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vna.<init>()");
         }

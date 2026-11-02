@@ -13,7 +13,7 @@ final class wm {
         if (param1 > param0) {
           return 0;
         }
-        return bs.a(param0, -28970, param1);
+        return GameEvent.a(param0, -28970, param1);
     }
 
     public static void a(byte param0) {

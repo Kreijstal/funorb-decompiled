@@ -51,7 +51,7 @@ class lba extends fi {
         }
     }
 
-    final static void a(int param0, int param1, cn param2, boolean param3, iu[][] param4, int[] param5, String[][] param6, cn param7, int[] param8, String[] param9, hja[] param10, String[][] param11, String[] param12, iu[][] param13, cn param14, int param15, int param16, byte[] param17, byte[] param18) {
+    final static void a(int param0, int param1, cn param2, boolean param3, Sprite[][] param4, int[] param5, String[][] param6, cn param7, int[] param8, String[] param9, hja[] param10, String[][] param11, String[] param12, Sprite[][] param13, cn param14, int param15, int param16, byte[] param17, byte[] param18) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -236,15 +236,15 @@ class lba extends fi {
           return;
         }
         IsaacCipher var3 = (IsaacCipher) null;
-        lba.a((byte) 11, (IsaacCipher) null, 6);
+        lba.createMazeGenerator((byte) 11, (IsaacCipher) null, 6);
         this.field_m = 0;
         this.field_i = 0;
     }
 
-    final static loa a(byte param0, IsaacCipher param1, int param2) {
+    final static MazeGenerator createMazeGenerator(byte param0, IsaacCipher param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
-        loa stackIn_3_0 = null;
+        MazeGenerator stackIn_3_0 = null;
         fva stackIn_12_0 = null;
         jra stackIn_14_0 = null;
         rja stackIn_16_0 = null;
@@ -257,27 +257,27 @@ class lba extends fi {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 27) {
-            stackIn_3_0 = (loa) null;
+            stackIn_3_0 = (MazeGenerator) null;
             return stackIn_3_0;
           }
           var3_int = param2;
           if (var3_int == 0) {
             stackIn_12_0 = new fva(param1);
-            return (loa) ((Object) stackIn_12_0);
+            return (MazeGenerator) ((Object) stackIn_12_0);
           }
           if (var3_int == 1) {
             stackIn_14_0 = new jra(param1);
-            return (loa) ((Object) stackIn_14_0);
+            return (MazeGenerator) ((Object) stackIn_14_0);
           }
           if (2 == var3_int) {
             stackIn_16_0 = new rja(param1);
-            return (loa) ((Object) stackIn_16_0);
+            return (MazeGenerator) ((Object) stackIn_16_0);
           }
           if (var3_int != 3) {
             throw new IllegalStateException("Unrecognised maze gen type: " + param2);
           }
           stackIn_18_0 = new tna(param1);
-          return (loa) ((Object) stackIn_18_0);
+          return (MazeGenerator) ((Object) stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pd extends nv {
+abstract class pd extends Behaviour {
     private boolean field_n;
     private boolean field_o;
     private int field_q;

@@ -3,7 +3,7 @@
  */
 final class dm implements eja {
     jagdx.IDirect3DIndexBuffer field_d;
-    private cta field_a;
+    private Direct3DToolkit field_a;
     private int field_f;
     private boolean field_e;
     private una field_g;
@@ -101,7 +101,7 @@ final class dm implements eja {
         this.field_f = 0;
     }
 
-    dm(cta param0, una param1, boolean param2) {
+    dm(Direct3DToolkit param0, una param1, boolean param2) {
         this.field_b = false;
         this.field_a = param0;
         this.field_e = param2 ? true : false;

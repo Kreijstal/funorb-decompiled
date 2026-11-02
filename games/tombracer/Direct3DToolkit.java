@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class cta extends eo {
+public final class Direct3DToolkit extends eo {
     private int field_Xc;
     private gua field_kd;
     jagdx.PixelBuffer field_Nc;
@@ -85,7 +85,7 @@ public final class cta extends eo {
         return 5;
     }
 
-    private cta(int param0, int param1, java.awt.Canvas param2, jaclib.peer.sha param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, gua param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, cn param10, int param11) {
+    private Direct3DToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.sha param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, gua param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, cn param10, int param11) {
         super(param2, param6, param9, param10, param11, 0);
         jagdx.GeometryBuffer discarded$0 = null;
         boolean stackIn_4_1 = false;
@@ -189,7 +189,7 @@ public final class cta extends eo {
           this.a(true, (una) null, (ft) null);
         }
         var4 = new jagdx.D3DDISPLAYMODE();
-        stackIn_6_0 = (jagdx.ah.a(this.field_dd.a(this.field_Xc, var4), (byte) -82)) && (jagdx.ah.a(this.field_dd.CheckDeviceFormat(this.field_Xc, this.field_id, var4.Format, 0, 3, cta.a(param2, -128, param1)), (byte) -103));
+        stackIn_6_0 = (jagdx.ah.a(this.field_dd.a(this.field_Xc, var4), (byte) -82)) && (jagdx.ah.a(this.field_dd.CheckDeviceFormat(this.field_Xc, this.field_id, var4.Format, 0, 3, Direct3DToolkit.a(param2, -128, param1)), (byte) -103));
         return stackIn_6_0;
     }
 
@@ -323,7 +323,7 @@ public final class cta extends eo {
 
     final void a(eja param0, int param1, int param2, int param3, iw param4, int param5, int param6) {
         this.field_jd.SetIndices(((dm) (param0)).field_d);
-        this.field_jd.DrawIndexedPrimitive(cta.a(109, param4), 0, param2, param5, param3, param6);
+        this.field_jd.DrawIndexedPrimitive(Direct3DToolkit.a(109, param4), 0, param2, param5, param3, param6);
         if (param1 != -19394) {
           this.field_jd = (jagdx.IDirect3DDevice) null;
         }
@@ -357,7 +357,7 @@ public final class cta extends eo {
           return false;
         }
         var4 = new jagdx.D3DDISPLAYMODE();
-        stackIn_6_0 = (jagdx.ah.a(this.field_dd.a(this.field_Xc, var4), (byte) -125)) && (jagdx.ah.a(this.field_dd.CheckDeviceFormat(this.field_Xc, this.field_id, var4.Format, 0, 4, cta.a(param2, param1 - 127, param0)), (byte) -92));
+        stackIn_6_0 = (jagdx.ah.a(this.field_dd.a(this.field_Xc, var4), (byte) -125)) && (jagdx.ah.a(this.field_dd.CheckDeviceFormat(this.field_Xc, this.field_id, var4.Format, 0, 4, Direct3DToolkit.a(param2, param1 - 127, param0)), (byte) -92));
         return stackIn_6_0;
     }
 
@@ -569,7 +569,7 @@ public final class cta extends eo {
         if (param2) {
           var6 = var6 | 16;
         }
-        this.field_jd.SetTextureStageState(this.field_Cc, var5, cta.a(param0, 117) | var6);
+        this.field_jd.SetTextureStageState(this.field_Cc, var5, Direct3DToolkit.a(param0, 117) | var6);
     }
 
     final eja a(int param0, boolean param1) {
@@ -599,7 +599,7 @@ public final class cta extends eo {
         if (param4) {
           var7 = var7 | 16;
         }
-        this.field_jd.SetTextureStageState(this.field_Cc, var6, var7 | cta.a(param0, 121));
+        this.field_jd.SetTextureStageState(this.field_Cc, var6, var7 | Direct3DToolkit.a(param0, 121));
     }
 
     final void i(int param0) {
@@ -618,13 +618,13 @@ public final class cta extends eo {
         }
         if (!param0) {
           jagdx.D3DPRESENT_PARAMETERS var3 = (jagdx.D3DPRESENT_PARAMETERS) null;
-          cta.a(-16, (jagdx.IDirect3D) null, -7, 73, (jagdx.D3DPRESENT_PARAMETERS) null, -9);
+          Direct3DToolkit.a(-16, (jagdx.IDirect3D) null, -7, 73, (jagdx.D3DPRESENT_PARAMETERS) null, -9);
         }
         throw new IllegalArgumentException();
     }
 
-    final static ha createToolkit(java.awt.Canvas param0, d param1, cn param2, Integer param3) {
-        cta stackIn_37_0 = null;
+    final static GraphicsToolkit createToolkit(java.awt.Canvas param0, d param1, cn param2, Integer param3) {
+        Direct3DToolkit stackIn_37_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
         int var5_int = 0;
@@ -639,7 +639,7 @@ public final class cta extends eo {
         jagdx.IDirect3DDevice var12_ref = null;
         gua var13 = null;
         jagdx.eva var14 = null;
-        cta var15 = null;
+        Direct3DToolkit var15 = null;
         var4 = null;
         try {
           var5_int = 0;
@@ -685,7 +685,7 @@ public final class cta extends eo {
             throw new RuntimeException("");
           }
           var10 = new jagdx.D3DPRESENT_PARAMETERS(param0);
-          if (!cta.a(-30, var8, param3.intValue(), var6, var10, var5_int)) {
+          if (!Direct3DToolkit.a(-30, var8, param3.intValue(), var6, var10, var5_int)) {
             throw new RuntimeException("");
           }
           var10.PresentationInterval = -2147483648;
@@ -704,16 +704,16 @@ public final class cta extends eo {
             var12_ref = var8.a(var5_int, var6, param0, 32 | var11, var10);
           }
           var13 = new gua(var12_ref.b(0), var12_ref.b());
-          var15 = new cta(var5_int, var6, param0, var7, var8, var12_ref, var13, var10, var9, param1, param2, param3.intValue());
+          var15 = new Direct3DToolkit(var5_int, var6, param0, var7, var8, var12_ref, var13, var10, var9, param1, param2, param3.intValue());
           var4 = var15;
           var15.K(-107);
           stackIn_37_0 = var15;
-          return (ha) ((Object) stackIn_37_0);
+          return (GraphicsToolkit) ((Object) stackIn_37_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5 = (RuntimeException) (Object) decompiledCaughtException;
           if (var4 != null) {
-            ((cta) (var4)).k();
+            ((Direct3DToolkit) (var4)).k();
           }
           throw var5;
         }
@@ -734,7 +734,7 @@ public final class cta extends eo {
         var3.a(true);
         this.field_ad.BackBufferWidth = 0;
         this.field_ad.BackBufferHeight = 0;
-        if (cta.a(param0 + 2005530607, this.field_dd, this.field_Gc, this.field_id, this.field_ad, this.field_Xc)) {
+        if (Direct3DToolkit.a(param0 + 2005530607, this.field_dd, this.field_Gc, this.field_id, this.field_ad, this.field_Xc)) {
           var4 = this.field_jd.Reset(this.field_ad);
           if (jagdx.ah.a(var4, (byte) 123)) {
             var3.a((byte) -17, this.field_jd.b(0), this.field_jd.b());
@@ -771,7 +771,7 @@ public final class cta extends eo {
         if (param0 != -3485) {
           this.f(-69);
         }
-        int var2 = this.field_Qc[this.field_Cc] ? cta.a(this.field_mc[this.field_Cc], 0) : 1;
+        int var2 = this.field_Qc[this.field_Cc] ? Direct3DToolkit.a(this.field_mc[this.field_Cc], 0) : 1;
         this.field_jd.SetTextureStageState(this.field_Cc, 1, var2);
     }
 
@@ -820,7 +820,7 @@ public final class cta extends eo {
           return 0;
         }
         var3 = (ura) null;
-        cta.a(22, (ura) null);
+        Direct3DToolkit.a(22, (ura) null);
         return 0;
     }
 
@@ -984,7 +984,7 @@ public final class cta extends eo {
         if (param3 != 0) {
           return;
         }
-        this.field_jd.DrawPrimitive(cta.a(113, param1), param2, param0);
+        this.field_jd.DrawPrimitive(Direct3DToolkit.a(113, param1), param2, param0);
     }
 
     final void a(byte param0, nqa param1) {
@@ -1008,7 +1008,7 @@ public final class cta extends eo {
             stackIn_16_1 = this.field_Cc;
             stackIn_16_2 = 7;
             if (param1.field_c) {
-              stackIn_17_3 = cta.a(true, param1.field_a);
+              stackIn_17_3 = Direct3DToolkit.a(true, param1.field_a);
             } else {
               stackIn_17_3 = 0;
             }
@@ -1016,7 +1016,7 @@ public final class cta extends eo {
             this.field_Yc[this.field_Cc] = param1.field_c;
           }
         } else {
-          var4 = cta.a(true, param1.field_a);
+          var4 = Direct3DToolkit.a(true, param1.field_a);
           this.field_jd.SetSamplerState(this.field_Cc, 6, var4);
           this.field_jd.SetSamplerState(this.field_Cc, 5, var4);
           this.field_Rc[this.field_Cc] = param1.field_a;
@@ -1029,7 +1029,7 @@ public final class cta extends eo {
             if (!param1.field_c) {
               stackIn_12_3 = 0;
             } else {
-              stackIn_12_3 = cta.a(true, param1.field_a);
+              stackIn_12_3 = Direct3DToolkit.a(true, param1.field_a);
             }
             ((jagdx.IDirect3DDevice) (Object) stackIn_11_0).SetSamplerState(stackIn_11_1, stackIn_11_2, stackIn_12_3);
             this.field_Yc[this.field_Cc] = param1.field_c;
@@ -1083,7 +1083,7 @@ public final class cta extends eo {
           } else {
             this.field_jd.SetTransform(16 + this.field_Cc, this.field_hc[this.field_Cc].a(field_hd, (byte) -37));
           }
-          var2 = cta.a(-51, this.field_v[this.field_Cc]);
+          var2 = Direct3DToolkit.a(-51, this.field_v[this.field_Cc]);
           if (this.field_gd[this.field_Cc] != var2) {
             this.field_jd.SetTextureStageState(this.field_Cc, 24, var2);
             this.field_gd[this.field_Cc] = var2;
@@ -1094,7 +1094,7 @@ public final class cta extends eo {
         }
         if (param0 != 0) {
           var3 = (ica) null;
-          cta.a((ica) null, -59);
+          Direct3DToolkit.a((ica) null, -59);
         }
     }
 
@@ -1116,7 +1116,7 @@ public final class cta extends eo {
     }
 
     final void u(byte param0) {
-        int var2 = this.field_Qc[this.field_Cc] ? cta.a(this.field_db[this.field_Cc], param0 ^ -23) : 1;
+        int var2 = this.field_Qc[this.field_Cc] ? Direct3DToolkit.a(this.field_db[this.field_Cc], param0 ^ -23) : 1;
         if (param0 != -23) {
           return;
         }

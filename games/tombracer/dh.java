@@ -214,7 +214,7 @@ final class dh {
         field_e = null;
     }
 
-    final static int a(da param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, String param12) {
+    final static int a(GameFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, String param12) {
         RuntimeException var13 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

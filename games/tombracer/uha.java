@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uha extends wda {
+final class uha extends Locomotor {
     private int field_r;
     private boolean field_p;
     private boolean field_t;
@@ -228,7 +228,7 @@ final class uha extends wda {
           var10_int = (var10_int + 7) / 8;
           tqa.field_e = new byte[var10_int];
           if (null == param8.field_J) {
-            param8.field_J = new vna();
+            param8.field_J = new IntrusiveDeque();
           }
           uma.field_b = param8.field_J;
           uma.field_b.d(param2 ^ -59);
@@ -238,13 +238,13 @@ final class uha extends wda {
           bha.field_z = -1;
           ProxySocketConnector.field_f = -1;
           if (param3.field_J == null) {
-            param3.field_J = new vna();
+            param3.field_J = new IntrusiveDeque();
           }
           asa.field_j = param3.field_J;
           asa.field_j.d(8);
           jb.field_K = new af(param7);
           if (param0.field_J == null) {
-            param0.field_J = new vna();
+            param0.field_J = new IntrusiveDeque();
           }
           qha.field_g = param0.field_J;
           qha.field_g.d(8);

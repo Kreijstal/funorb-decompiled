@@ -5,12 +5,12 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
     private int field_n;
     private Room field_m;
     private int field_p;
-    static vna field_f;
+    static IntrusiveDeque field_f;
     static mp field_h;
     static String field_j;
     static int field_l;
     private int field_r;
-    private vna field_k;
+    private IntrusiveDeque field_k;
     private int field_g;
     private int field_q;
     static jea field_s;
@@ -196,7 +196,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         try {
           param1.field_u.a((ffa) (this), (byte) 105);
           if (param0 > -74) {
-            this.field_k = (vna) null;
+            this.field_k = (IntrusiveDeque) null;
           }
           this.field_p = param1.m((byte) -86) / 2 - (this.field_p - param1.m((byte) -86) / 2);
           param1.field_u.b((ffa) (this), 7073);
@@ -425,7 +425,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
 
     public final int e(byte param0) {
         if (param0 > -86) {
-          field_f = (vna) null;
+          field_f = (IntrusiveDeque) null;
           return 0;
         }
         return 0;
@@ -717,7 +717,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         int var3_int = 0;
         RuntimeException var3 = null;
         dg var5 = null;
-        this.field_k = new vna();
+        this.field_k = new IntrusiveDeque();
         this.field_o = new bca();
         this.field_i = false;
         try {

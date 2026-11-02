@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sea extends nv {
+final class sea extends Behaviour {
     static String field_q;
     static String field_o;
     private aia[] field_n;

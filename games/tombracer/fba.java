@@ -104,8 +104,8 @@ final class fba {
           }
           if (param0 != 30000) {
             if (null != osa.field_r) {
-              for (var2 = 0; cka.field_Mc.length > var2; var2++) {
-                if (param0 == cka.field_Mc[var2] &&
+              for (var2 = 0; OpenGlToolkit.field_Mc.length > var2; var2++) {
+                if (param0 == OpenGlToolkit.field_Mc[var2] &&
                   IsaacCipher.field_b[var2] > 0) {
                   dupTemp$4 = IsaacCipher.field_b[var2] - 1;
                   arrayValue$5 = osa.field_r[var2];
@@ -127,8 +127,8 @@ final class fba {
             return var2_ref_byte__Lifetime5;
           }
           if (null != osa.field_r) {
-            for (var2Lifetime4 = 0; cka.field_Mc.length > var2Lifetime4; var2Lifetime4++) {
-              if (param0 == cka.field_Mc[var2Lifetime4] &&
+            for (var2Lifetime4 = 0; OpenGlToolkit.field_Mc.length > var2Lifetime4; var2Lifetime4++) {
+              if (param0 == OpenGlToolkit.field_Mc[var2Lifetime4] &&
                 IsaacCipher.field_b[var2Lifetime4] > 0) {
                 dupTemp$8 = IsaacCipher.field_b[var2Lifetime4] - 1;
                 arrayValue$9 = osa.field_r[var2Lifetime4];
@@ -164,8 +164,8 @@ final class fba {
           if (null == osa.field_r) {
             return new byte[param0];
           }
-          for (var2Lifetime1 = 0; cka.field_Mc.length > var2Lifetime1; var2Lifetime1++) {
-            if (param0 == cka.field_Mc[var2Lifetime1] &&
+          for (var2Lifetime1 = 0; OpenGlToolkit.field_Mc.length > var2Lifetime1; var2Lifetime1++) {
+            if (param0 == OpenGlToolkit.field_Mc[var2Lifetime1] &&
               IsaacCipher.field_b[var2Lifetime1] > 0) {
               dupTemp$19 = IsaacCipher.field_b[var2Lifetime1] - 1;
               arrayValue$20 = osa.field_r[var2Lifetime1];
@@ -188,8 +188,8 @@ final class fba {
           if (null == osa.field_r) {
             return new byte[param0];
           }
-          for (var2Lifetime2 = 0; cka.field_Mc.length > var2Lifetime2; var2Lifetime2++) {
-            if (param0 == cka.field_Mc[var2Lifetime2] &&
+          for (var2Lifetime2 = 0; OpenGlToolkit.field_Mc.length > var2Lifetime2; var2Lifetime2++) {
+            if (param0 == OpenGlToolkit.field_Mc[var2Lifetime2] &&
               IsaacCipher.field_b[var2Lifetime2] > 0) {
               dupTemp$10 = IsaacCipher.field_b[var2Lifetime2] - 1;
               arrayValue$11 = osa.field_r[var2Lifetime2];
@@ -212,8 +212,8 @@ final class fba {
         if (null == osa.field_r) {
           return new byte[param0];
         }
-        for (var2Lifetime3 = 0; cka.field_Mc.length > var2Lifetime3; var2Lifetime3++) {
-          if (param0 == cka.field_Mc[var2Lifetime3] &&
+        for (var2Lifetime3 = 0; OpenGlToolkit.field_Mc.length > var2Lifetime3; var2Lifetime3++) {
+          if (param0 == OpenGlToolkit.field_Mc[var2Lifetime3] &&
             IsaacCipher.field_b[var2Lifetime3] > 0) {
             dupTemp$12 = IsaacCipher.field_b[var2Lifetime3] - 1;
             arrayValue$13 = osa.field_r[var2Lifetime3];

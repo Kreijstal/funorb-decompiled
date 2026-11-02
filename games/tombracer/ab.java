@@ -184,15 +184,15 @@ final class ab extends qra {
         if (param0 > -50) {
           this.b(-64, false);
         }
-        while (this.field_c.field_H.length > var17) {
-          var9Lifetime1 = -(this.field_c.field_H.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
+        while (this.field_c.players.length > var17) {
+          var9Lifetime1 = -(this.field_c.players.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
           var10 = -200 + var7;
           SocketConnector.a(this.field_h.a(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
           if (!this.field_c.b((byte) 90, var17)) {
             var11 = cs.field_b;
             var12 = 8947848;
           } else {
-            var13 = this.field_c.field_H[var17].z(115);
+            var13 = this.field_c.players[var17].z(115);
             if (var13 == -1) {
               var14 = this.field_c.field_c.field_b[var17];
               var15 = this.field_o.b((byte) 50);

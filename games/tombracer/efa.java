@@ -3,7 +3,7 @@
  */
 final class efa extends b implements mia, tsa {
     private so field_z;
-    static iu[][] field_w;
+    static Sprite[][] field_w;
     static int field_y;
     laa field_x;
     private rj field_B;
@@ -99,9 +99,9 @@ final class efa extends b implements mia, tsa {
     }
 
     public static void c(boolean param0) {
-        field_w = (iu[][]) null;
+        field_w = (Sprite[][]) null;
         if (!param0) {
-          field_w = (iu[][]) null;
+          field_w = (Sprite[][]) null;
         }
     }
 

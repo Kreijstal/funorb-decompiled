@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nga extends ci {
-    static iu[] field_n;
+    static Sprite[] field_n;
     static String field_q;
     static int field_p;
     static String field_o;

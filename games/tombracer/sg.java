@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sg extends nv {
+final class sg extends Behaviour {
     private boolean field_r;
     private boolean field_v;
     private boolean field_t;

@@ -43,7 +43,7 @@ final class ps extends ra {
         return true;
     }
 
-    ps(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    ps(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
           this.field_M = param2.b((byte) 44, 4);
@@ -95,7 +95,7 @@ final class ps extends ra {
             stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = this.a((byte) -104, param2, param0);
           var4.a(var6, 0);
           var7 = rm.field_a;

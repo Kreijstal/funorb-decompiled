@@ -10,7 +10,7 @@ final class fla extends IntrusiveNode {
     private int field_g;
     vb field_i;
     int field_h;
-    static vna field_f;
+    static IntrusiveDeque field_f;
 
     final void a(w param0, byte param1) {
         try {
@@ -79,7 +79,7 @@ final class fla extends IntrusiveNode {
     public static void a(int param0) {
         field_f = null;
         if (param0 != 0) {
-          field_f = (vna) null;
+          field_f = (IntrusiveDeque) null;
         }
     }
 

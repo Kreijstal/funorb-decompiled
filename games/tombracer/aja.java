@@ -21,7 +21,7 @@ final class aja extends lea {
           var4 = super.a(param0, param1, param2);
           var5 = new ue(param2, param0);
           var5.a(2, false);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kga) (var6.a(12, 125));
           var7.b((byte) 123, 1);
@@ -42,7 +42,7 @@ final class aja extends lea {
         }
     }
 
-    aja(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    aja(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -91,7 +91,7 @@ final class aja extends lea {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        vna var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         pha var18_ref = null;

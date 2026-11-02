@@ -92,7 +92,7 @@ final class jn extends we {
         var15 = TombRacer.field_G ? 1 : 0;
         SocketConnector.a(sea.field_q.toUpperCase(), 1, qr.field_v, 2497287, -1, 160, 1, param1 - 20, 0, -1, (byte) 60, 320);
         ua.a(4, qr.field_v, rka.a(td.field_r, true), 600, -1, param1 + 72, 11288327);
-        var16 = vna.field_d[td.field_r];
+        var16 = IntrusiveDeque.field_d[td.field_r];
         var4 = var16;
         var5 = up.field_h[td.field_r];
         ura.a(-10985);
@@ -150,7 +150,7 @@ final class jn extends we {
               }
               hp.a(var11Lifetime2, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], wma.a(no.field_u[td.field_r][var8], 12166, no.field_m[td.field_r][var8]), -1918106173, var7 + no.field_k[td.field_r][var8], -50 + var9);
             }
-            var11Lifetime2Lifetime1 = kn.field_p.a((aa) null, var10, 15, 0, var7, fm.a(false, -1), wca.field_l, 0, fm.a(false, 65793), var5[var8], (byte) 99, 640, 0, id.field_h, var9, 0);
+            var11Lifetime2Lifetime1 = kn.field_p.a((aa) null, var10, 15, 0, var7, fm.a(false, -1), SpriteState.field_l, 0, fm.a(false, 65793), var5[var8], (byte) 99, 640, 0, id.field_h, var9, 0);
             if (td.field_r > 0) {
               var11Lifetime2Lifetime1 = Math.max(var11Lifetime2Lifetime1, 3);
             }

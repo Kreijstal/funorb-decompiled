@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ila {
-    private vna field_d;
+    private IntrusiveDeque field_d;
     private boolean field_e;
     private boolean field_c;
-    private vna field_b;
+    private IntrusiveDeque field_b;
     private gqa field_a;
 
     final void d(boolean param0) {
@@ -25,7 +25,7 @@ final class ila {
 
     final boolean b(int param0) {
         if (param0 != 4782) {
-          this.field_d = (vna) null;
+          this.field_d = (IntrusiveDeque) null;
         }
         return this.field_e;
     }
@@ -291,7 +291,7 @@ final class ila {
                 }
               }
               stackIn_54_0 = (0 != (var7 & 16));
-              ha.field_b = stackIn_54_0;
+              GraphicsToolkit.field_b = stackIn_54_0;
               if (q.field_r) {
                 vc.field_q.h(255);
                 vc.field_q.h(255);
@@ -519,7 +519,7 @@ final class ila {
         this.g(0);
         this.c(false);
         if (param0 >= -57) {
-          this.field_b = (vna) null;
+          this.field_b = (IntrusiveDeque) null;
         }
     }
 
@@ -559,8 +559,8 @@ final class ila {
     ila() {
         this.field_e = false;
         this.field_c = false;
-        this.field_d = new vna();
-        this.field_b = new vna();
+        this.field_d = new IntrusiveDeque();
+        this.field_b = new IntrusiveDeque();
     }
 
     static {

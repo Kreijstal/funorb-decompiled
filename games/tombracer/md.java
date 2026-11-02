@@ -58,7 +58,7 @@ final class md extends kna {
           var4.b((byte) 17, false);
           var4.a(1, (byte) -12, true);
           var5 = new eq(param2, param0);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (boa) (var6.a(7, 103));
           var7.b(125, 0);
@@ -108,7 +108,7 @@ final class md extends kna {
         super(param0, param1);
     }
 
-    md(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    md(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

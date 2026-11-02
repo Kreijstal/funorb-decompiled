@@ -50,7 +50,7 @@ final class ima {
             String var4 = (String) null;
             ima.a(0.6509141325950623f, (String) null, 54);
           }
-          cka.field_jc = param0;
+          OpenGlToolkit.field_jc = param0;
           ura.field_b = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ima.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

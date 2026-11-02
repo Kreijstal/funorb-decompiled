@@ -7,7 +7,7 @@ final class iqa {
     long field_f;
     java.awt.Canvas field_a;
     private soa field_e;
-    ha field_d;
+    GraphicsToolkit field_d;
     static String field_g;
 
     final soa a(byte param0) {
@@ -57,7 +57,7 @@ final class iqa {
         iqa.a(114, -54, -16, -30, -116);
     }
 
-    iqa(ha param0, ei param1, java.awt.Canvas param2) {
+    iqa(GraphicsToolkit param0, ei param1, java.awt.Canvas param2) {
         try {
           this.field_a = param2;
           this.field_d = param0;

@@ -47,7 +47,7 @@ final class ki extends dg {
         }
     }
 
-    final static wda readLocomotor(BitPacketBuffer param0, byte param1, Room param2, boolean param3) {
+    final static Locomotor readLocomotor(BitPacketBuffer param0, byte param1, Room param2, boolean param3) {
         wi stackIn_26_0 = null;
         bg stackIn_28_0 = null;
         nj stackIn_30_0 = null;
@@ -87,73 +87,73 @@ final class ki extends dg {
           var6 = var4_int;
           if (var6 == 0) {
             stackIn_26_0 = new wi(param2, param0, param3);
-            return (wda) ((Object) stackIn_26_0);
+            return (Locomotor) ((Object) stackIn_26_0);
           }
           if (var6 == 1) {
             stackIn_28_0 = new bg(param2, param0, param3);
-            return (wda) ((Object) stackIn_28_0);
+            return (Locomotor) ((Object) stackIn_28_0);
           }
           if (var6 == 2) {
             stackIn_30_0 = new nj(param2, param0, param3);
-            return (wda) ((Object) stackIn_30_0);
+            return (Locomotor) ((Object) stackIn_30_0);
           }
           if (3 == var6) {
             stackIn_32_0 = new bha(param2, param0, param3);
-            return (wda) ((Object) stackIn_32_0);
+            return (Locomotor) ((Object) stackIn_32_0);
           }
           if (4 == var6) {
             stackIn_34_0 = new ws(param2, param0, param3);
-            return (wda) ((Object) stackIn_34_0);
+            return (Locomotor) ((Object) stackIn_34_0);
           }
           if (5 == var6) {
             stackIn_36_0 = new ro(param2, param0, param3);
-            return (wda) ((Object) stackIn_36_0);
+            return (Locomotor) ((Object) stackIn_36_0);
           }
           if (var6 == 6) {
             stackIn_38_0 = new spa(param2, param0, param3);
-            return (wda) ((Object) stackIn_38_0);
+            return (Locomotor) ((Object) stackIn_38_0);
           }
           if (var6 == 7) {
             stackIn_40_0 = new pt(param2, param0, param3);
-            return (wda) ((Object) stackIn_40_0);
+            return (Locomotor) ((Object) stackIn_40_0);
           }
           if (var6 == 8) {
             stackIn_42_0 = new uqa(param2, param0, param3);
-            return (wda) ((Object) stackIn_42_0);
+            return (Locomotor) ((Object) stackIn_42_0);
           }
           if (var6 == 9) {
             stackIn_44_0 = new uha(param2, param0, param3);
-            return (wda) ((Object) stackIn_44_0);
+            return (Locomotor) ((Object) stackIn_44_0);
           }
           if (10 == var6) {
             stackIn_46_0 = new sa(param2, param0, param3);
-            return (wda) ((Object) stackIn_46_0);
+            return (Locomotor) ((Object) stackIn_46_0);
           }
           if (11 == var6) {
             stackIn_48_0 = new ira(param2, param0, param3);
-            return (wda) ((Object) stackIn_48_0);
+            return (Locomotor) ((Object) stackIn_48_0);
           }
           if (var6 == 12) {
             stackIn_50_0 = new rsa(param2, param0, param3);
-            return (wda) ((Object) stackIn_50_0);
+            return (Locomotor) ((Object) stackIn_50_0);
           }
           if (var6 == 13) {
             stackIn_52_0 = new oqa(param2, param0, param3);
-            return (wda) ((Object) stackIn_52_0);
+            return (Locomotor) ((Object) stackIn_52_0);
           }
           if (var6 == 14) {
             stackIn_54_0 = new hia(param2, param0, param3);
-            return (wda) ((Object) stackIn_54_0);
+            return (Locomotor) ((Object) stackIn_54_0);
           }
           if (15 == var6) {
             stackIn_56_0 = new lo(param2, param0, param3);
-            return (wda) ((Object) stackIn_56_0);
+            return (Locomotor) ((Object) stackIn_56_0);
           }
           if (var6 != 16) {
             throw new IllegalStateException("Unrecognised locomotor type: " + var4_int);
           }
           stackIn_58_0 = new ri(param2, param0, param3);
-          return (wda) ((Object) stackIn_58_0);
+          return (Locomotor) ((Object) stackIn_58_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

@@ -6,7 +6,7 @@ final class kn {
     int field_m;
     isa field_u;
     int field_b;
-    static da field_p;
+    static GameFont field_p;
     static ur field_j;
     int field_a;
     int field_l;
@@ -218,7 +218,7 @@ final class kn {
     final void a(il param0, boolean param1) {
         vpa var17 = null;
         vga var4 = null;
-        iu[] var5 = null;
+        Sprite[] var5 = null;
         mea var16 = null;
         mea var18 = null;
         int var7_int = 0;
@@ -227,12 +227,12 @@ final class kn {
         bsa discarded$0 = null;
         cj discarded$1 = null;
         vga var8 = null;
-        iu[] var9 = null;
-        iu[] var10 = null;
-        iu dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         vga var11 = null;
         vga var12 = null;
-        iu var13 = null;
+        Sprite var13 = null;
         vga var14 = null;
         vga var19 = null;
         int var15 = TombRacer.field_G ? 1 : 0;
@@ -258,13 +258,13 @@ final class kn {
           var4.a(0, (byte) 41).b(15658734, -2147483648).a(2, gn.b(8947848, 1, 10066329, 7829367));
           var4.a(1, (byte) 98).a(2, gn.b(11184810, 1, 10066329, 13421772));
           var4.a(3, (byte) 42).a(2, gn.b(8947848, 1, 7829367, 10066329)).c(-1, 1).a(1, 1);
-          var5 = new iu[9];
+          var5 = new Sprite[9];
           var16 = new mea(32, 32);
           var18 = var16;
-          for (var7_int = 0; var7_int < var18.field_r.length; var7_int++) {
-            var16.field_r[var7_int] = 1077952576;
+          for (var7_int = 0; var7_int < var18.pixels.length; var7_int++) {
+            var16.pixels[var7_int] = 1077952576;
           }
-          var5[4] = (iu) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a(4, (byte) 127).a(-2, true).a(2, var5);
           var4.a(5, (byte) 107).a(2, jsa.b(65793, 2, 0, 0, 0)).a(-2, true).b(-1, -2147483648);
           this.field_u = (isa) ((Object) var4);
@@ -282,22 +282,22 @@ final class kn {
           var8.a(0, (byte) 65).a(2, gn.b(15658734, 1, 7829367, 10066329)).b(1118481, -2147483648).a((byte) 7, -1);
           var8.a(4, (byte) 87).a(-2, true).a(2, var5);
           this.field_e = (isa) ((Object) var8);
-          var9 = new iu[9];
-          var10 = new iu[9];
-          var9[4] = new iu(2, 1);
-          var10[4] = new iu(1, 2);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
-          dupTemp$2.field_r = new int[]{6710886, 7829367};
-          var10[4].field_r = new int[]{6710886, 7829367};
+          dupTemp$2.pixels = new int[]{6710886, 7829367};
+          var10[4].pixels = new int[]{6710886, 7829367};
           var11 = new vga();
           var12 = new vga();
           var11.a(0, 0, var9);
           var12.a(0, 0, var10);
           this.field_r = (isa) ((Object) var12);
           this.field_h = (isa) ((Object) var4);
-          var13 = new iu(7, 4);
+          var13 = new Sprite(7, 4);
           this.field_m = 10;
-          var13.field_r = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new vga(var4, param1);
           var14.a(var13.a(), (byte) -107);
           var13.b();

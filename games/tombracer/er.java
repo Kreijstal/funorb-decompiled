@@ -72,7 +72,7 @@ final class er extends fqa {
         return false;
     }
 
-    er(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    er(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -91,12 +91,12 @@ final class er extends fqa {
           var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.h(param1, 0);
-          var4.a((byte) 83, (nv) (new eq(param2, param0)));
+          var4.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new wh(param2, param0);
           var5.a((byte) -8, new mg(new int[]{}));
           var5.b(0, 636);
           this.a(var5, (byte) -107);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (boa) (var6.a(7, 82));
           var7.b(119, 16);

@@ -13,7 +13,7 @@ final class ufa {
     private static int[] field_f;
     static String field_u;
     boolean field_l;
-    private vna field_i;
+    private IntrusiveDeque field_i;
     private BitSet field_s;
     int field_k;
     static int[] field_t;
@@ -217,7 +217,7 @@ final class ufa {
         this.field_l = false;
         this.field_a = false;
         this.field_o = new BitSet(255);
-        this.field_i = new vna();
+        this.field_i = new IntrusiveDeque();
         this.field_n = new int[9];
         this.field_s = new BitSet(13);
         this.field_m = new BitSet(9);

@@ -7,7 +7,7 @@ final class ta extends jea {
     private jea field_wb;
     private jea field_tb;
 
-    ta(long param0, iu param1, iu param2, int param3, jea param4, String param5) {
+    ta(long param0, Sprite param1, Sprite param2, int param3, jea param4, String param5) {
         this(param0, (jea) null, param4, param5);
         try {
           this.field_wb.field_bb = param3;
@@ -107,7 +107,7 @@ final class ta extends jea {
         this.b((byte) 123, param3);
     }
 
-    final static void a(iu[][] param0, String[][] param1, int[] param2, int param3, cn param4, int param5, hja[] param6, byte[] param7, byte[] param8, String[][] param9, String[] param10, cn param11, byte param12, int[] param13, iu[][] param14, cn param15, boolean param16) {
+    final static void a(Sprite[][] param0, String[][] param1, int[] param2, int param3, cn param4, int param5, hja[] param6, byte[] param7, byte[] param8, String[][] param9, String[] param10, cn param11, byte param12, int[] param13, Sprite[][] param14, cn param15, boolean param16) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

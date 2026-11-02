@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cja {
-    private vna field_a;
+    private IntrusiveDeque field_a;
 
     final void a(byte param0) {
         no var2 = (no) (this.field_a.f(-80));
@@ -253,7 +253,7 @@ final class cja {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 <= 5) {
-            this.field_a = (vna) null;
+            this.field_a = (IntrusiveDeque) null;
           }
           var7 = param1;
           var3 = var7;
@@ -296,7 +296,7 @@ final class cja {
     }
 
     cja() {
-        this.field_a = new vna();
+        this.field_a = new IntrusiveDeque();
     }
 
     static {

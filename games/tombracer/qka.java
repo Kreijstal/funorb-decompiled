@@ -183,8 +183,8 @@ final class qka extends qra {
             var9 = -var8 + var6;
             var10 = -(var5 * var9) + koa.b(0);
             var11 = var4 * var22 + (var3 - (var4 >> 1) * (-1 + var6));
-            this.field_c.field_H[var22].n((byte) -120).a(-1, var11, 800, 0, var10);
-            vna.field_c.a(var11 - (vna.field_c.a() >> 1) + 1, var10 - 8);
+            this.field_c.players[var22].n((byte) -120).a(-1, var11, 800, 0, var10);
+            IntrusiveDeque.field_c.a(var11 - (IntrusiveDeque.field_c.a() >> 1) + 1, var10 - 8);
             if (var8 == 0) {
               sta.field_y[-1 + sta.field_y.length].a(-(sta.field_y[sta.field_y.length - 1].a() >> 1) + var11 - 1, var10 - 12);
             }
@@ -261,7 +261,7 @@ final class qka extends qra {
             var24 = dea.a(this.field_c.c((byte) 115, this.field_h.field_x), (byte) -8);
             oka.a(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
             oka.a(lc.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
-            var13 = this.field_h.field_k.field_G[this.field_h.field_x].field_g.v(74);
+            var13 = this.field_h.field_k.simulations[this.field_h.field_x].player.v(74);
             oka.a(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
           } else {
             var23 = dea.a(this.field_c.c((byte) 115, this.field_h.field_x), (byte) -8);
@@ -272,7 +272,7 @@ final class qka extends qra {
             bca.field_d.a(var3 - 110, 60 + var4);
             ts.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.d() + (var3 - 110) + 5, kn.field_p, 2431750);
             oka.a(lc.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
-            var14 = this.field_h.field_k.field_G[this.field_h.field_x].field_g.v(110);
+            var14 = this.field_h.field_k.simulations[this.field_h.field_x].player.v(110);
             oka.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
             if (pt.field_p != null &&
               pt.field_p.field_p != null &&
@@ -352,8 +352,8 @@ final class qka extends qra {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = TombRacer.field_G ? 1 : 0;
-        for (var3 = 0; var3 < this.field_c.field_H.length; var3++) {
-          var4_ref_hf = (hf) (this.field_c.field_H[var3].n((byte) -67));
+        for (var3 = 0; var3 < this.field_c.players.length; var3++) {
+          var4_ref_hf = (hf) (this.field_c.players[var3].n((byte) -67));
           if (!this.field_q) {
             stackIn_5_0 = var4_ref_hf;
             stackIn_5_1 = 26;

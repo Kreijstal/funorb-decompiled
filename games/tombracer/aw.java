@@ -67,7 +67,7 @@ final class aw extends kna {
         return 7;
     }
 
-    aw(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    aw(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -165,12 +165,12 @@ final class aw extends kna {
           var11.a(1, (byte) -12, true);
           var5 = new eq(param2, param0);
           var5.a(-28592, true);
-          var11.a((byte) 83, (nv) (var5));
+          var11.a((byte) 83, (Behaviour) (var5));
           var6 = new Trap(param2, param0);
           var6.b((byte) -11, this.field_k, this.field_l);
           var6.a((byte) -3, 0);
           var7 = new mc(param2, param0);
-          var6.a((byte) 83, (nv) (var7));
+          var6.a((byte) 83, (Behaviour) (var7));
           var11.a(-98, var6);
           var8 = rm.field_a;
           if (this.field_m != 19) {

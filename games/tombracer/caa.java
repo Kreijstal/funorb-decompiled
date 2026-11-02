@@ -14,7 +14,7 @@ final class caa implements Runnable {
     private java.net.URL field_b;
     private PlatformTaskDispatcher field_g;
 
-    final static void a(ff param0, Room param1, int param2) {
+    final static void a(MatchState param0, Room param1, int param2) {
         if (param2 <= 90) {
           caa.a(-49, -51, -30, 34, 111, -46);
         }

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends ha implements e {
+final class oa extends GraphicsToolkit implements e {
     private boolean field_s;
     long field_nativeid;
     private ya field_p;
-    private vna field_o;
+    private IntrusiveDeque field_o;
     private gda field_i;
     private int field_k;
     private ji field_r;
@@ -29,7 +29,7 @@ final class oa extends ha implements e {
         Throwable var5 = null;
         this.field_nativeid = 0L;
         this.field_s = false;
-        this.field_o = new vna();
+        this.field_o = new IntrusiveDeque();
         this.field_k = 4096;
         this.field_n = 4096;
         this.field_r = new ji(4);
@@ -116,7 +116,7 @@ final class oa extends ha implements e {
 
     final native void T(int param0, int param1, int param2, int param3);
 
-    final da a(qla param0, jpa[] param1, boolean param2) {
+    final GameFont a(qla param0, jpa[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -133,12 +133,12 @@ final class oa extends ha implements e {
         }
         if (!param2) {
           if (var6 == 0) {
-            return (da) ((Object) new n(this, this.field_p, param0, param1, (nh[]) null));
+            return (GameFont) ((Object) new n(this, this.field_p, param0, param1, (nh[]) null));
           }
           throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
         }
         if (var6 == 0) {
-          return (da) ((Object) new h(this, this.field_p, param0, param1, (nh[]) null));
+          return (GameFont) ((Object) new h(this, this.field_p, param0, param1, (nh[]) null));
         }
         throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
     }

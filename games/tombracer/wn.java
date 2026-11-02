@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wn extends nv {
+final class wn extends Behaviour {
     static String field_n;
     private int field_o;
 

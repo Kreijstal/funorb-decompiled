@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oh extends nv {
+final class oh extends Behaviour {
     private int field_r;
     static int field_o;
     private int field_s;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class lga extends rj {
-    private vna field_D;
+    private IntrusiveDeque field_D;
     static int[][] field_z;
     static cn field_B;
     private bm field_A;
@@ -179,7 +179,7 @@ class lga extends rj {
         var25 = null;
         var16 = TombRacer.field_G ? 1 : 0;
         if (param0 == 18758) {
-          this.field_D = new vna();
+          this.field_D = new IntrusiveDeque();
           var2 = 0;
           var30 = (oaa) ((Object) this.field_r);
           var27 = var30.a((ae) (this), 14157);
@@ -223,7 +223,7 @@ class lga extends rj {
           }
         }
         this.a((byte) -56, -23, 29, 43, 2);
-        this.field_D = new vna();
+        this.field_D = new IntrusiveDeque();
         var2Lifetime1 = 0;
         var17_ref = (oaa) ((Object) this.field_r);
         var3 = var17_ref;

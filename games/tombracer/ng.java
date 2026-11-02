@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ng {
-    iu[] field_i;
+    Sprite[] field_i;
     private int field_j;
     private int field_a;
     static nh[] field_b;
     private int field_d;
-    iu field_c;
+    Sprite field_c;
     private int field_l;
     static nh[] field_k;
     private boolean field_g;
@@ -55,8 +55,8 @@ final class ng {
           this.field_d = param1;
           return this;
         }
-        iu[] var4 = (iu[]) null;
-        this.a(-11, (iu[]) null);
+        Sprite[] var4 = (Sprite[]) null;
+        this.a(-11, (Sprite[]) null);
         this.field_d = param1;
         return this;
     }
@@ -259,7 +259,7 @@ final class ng {
         return this;
     }
 
-    final ng a(int param0, iu[] param1) {
+    final ng a(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         ng stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;

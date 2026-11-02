@@ -256,8 +256,8 @@ final class kga extends dg {
         qpa.a(275, se.field_s, 6, 40, 440, 124, 200);
         qpa.a(335, jta.field_z, 9, 40, 440, 125, 200);
         if (param0 < 97) {
-          cka var2 = (cka) null;
-          kga.a((cka) null, -2);
+          OpenGlToolkit var2 = (OpenGlToolkit) null;
+          kga.a((OpenGlToolkit) null, -2);
         }
     }
 
@@ -296,7 +296,7 @@ final class kga extends dg {
         }
     }
 
-    final static void a(cka param0, int param1) {
+    final static void a(OpenGlToolkit param0, int param1) {
         ama var7 = null;
         byte[] var19 = null;
         dca var9 = null;
@@ -333,8 +333,8 @@ final class kga extends dg {
     final void b(byte param0, int param1) {
         this.field_t = param1;
         if (param0 <= 73) {
-          cka var4 = (cka) null;
-          kga.a((cka) null, 79);
+          OpenGlToolkit var4 = (OpenGlToolkit) null;
+          kga.a((OpenGlToolkit) null, 79);
         }
     }
 

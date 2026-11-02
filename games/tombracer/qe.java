@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class qe {
-    cka field_a;
+    OpenGlToolkit field_a;
     static String field_b;
 
     abstract void a(int param0, int param1, kl param2);
@@ -14,7 +14,7 @@ abstract class qe {
         }
     }
 
-    qe(cka param0) {
+    qe(OpenGlToolkit param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

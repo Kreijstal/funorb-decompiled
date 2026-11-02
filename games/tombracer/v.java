@@ -9,7 +9,7 @@ final class v {
     static String field_j;
     private int field_e;
     private int field_d;
-    private vna field_h;
+    private IntrusiveDeque field_h;
     private boolean field_f;
     private int[] field_b;
     private vi field_c;
@@ -131,7 +131,7 @@ final class v {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          var4 = new cf(param1.field_k.field_H.length);
+          var4 = new cf(param1.field_k.players.length);
           this.a(var4, 126, param0);
           var4.a(param1, param2 - 93);
           if (param2 != 93) {
@@ -183,7 +183,7 @@ final class v {
         tt var4 = null;
         Room var5_ref_la = null;
         int var7 = 0;
-        ff var8 = null;
+        MatchState var8 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           var8 = param0.field_k;
@@ -216,7 +216,7 @@ final class v {
           }
           var4 = this.d(-16);
           while (var4 != null) {
-            for (var5 = 0; var8.field_H.length > var5; var5++) {
+            for (var5 = 0; var8.players.length > var5; var5++) {
               if (this.field_d != var5 &&
                 var4.a(false, var5)) {
                 for (var6 = 0; var6 < 8; var6++) {
@@ -234,11 +234,11 @@ final class v {
             var4 = this.d(param1 - 17);
           }
           if (!param0.d((byte) 106)) {
-            if (var8.field_G[this.field_d].b(param1 - 1)) {
+            if (var8.simulations[this.field_d].b(param1 - 1)) {
               this.a(var8, (byte) -73);
               return;
             }
-            if (var8.field_G[this.field_d].e(-31170)) {
+            if (var8.simulations[this.field_d].e(-31170)) {
               this.a(var8, (byte) -73);
               return;
             }
@@ -324,7 +324,7 @@ final class v {
         bqa var4 = null;
         try {
           if (!param0) {
-            this.field_h = (vna) null;
+            this.field_h = (IntrusiveDeque) null;
           }
           var4 = new bqa();
           this.a(var4, -53, param1);
@@ -423,7 +423,7 @@ final class v {
         }
     }
 
-    private final void a(ff param0, byte param1) {
+    private final void a(MatchState param0, byte param1) {
         Room var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
@@ -440,9 +440,9 @@ final class v {
     private final void a(qh param0, BitPacketBuffer param1, boolean param2) {
         uj var4 = null;
         try {
-          var4 = new uj(param0.field_k.field_H.length);
+          var4 = new uj(param0.field_k.players.length);
           if (param2) {
-            this.field_h = (vna) null;
+            this.field_h = (IntrusiveDeque) null;
           }
           this.a(var4, 117, param1);
           var4.a(param0, this, (byte) 119);
@@ -658,7 +658,7 @@ final class v {
 
     v(int param0, int param1) {
         this.field_a = new bka();
-        this.field_h = new vna();
+        this.field_h = new IntrusiveDeque();
         this.field_d = param0;
         this.field_e = param1;
         this.field_c = new vi();

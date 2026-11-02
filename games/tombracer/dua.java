@@ -49,10 +49,10 @@ final class dua extends me {
         String var17;
         int var18;
         int var19;
-        dt var20;
+        PlayerSimulation var20;
         Room var21;
         Room var22;
-        dt var23;
+        PlayerSimulation var23;
         Room var24;
         Room var25;
         int var3Lifetime1;
@@ -131,14 +131,14 @@ final class dua extends me {
           var12Lifetime3 = var19;
           while (this.field_g.field_P > var19) {
             var13Lifetime3 = this.field_g.field_c.field_e[var19];
-            var25 = this.field_g.field_H[var13Lifetime3].f((byte) 113);
+            var25 = this.field_g.players[var13Lifetime3].f((byte) 113);
             if (var25.c(72) >= var6 &&
               var25.c(-87) < var7) {
               var15 = 16;
               var16Lifetime3 = var9Lifetime3 - var4 * this.field_g.i(1, var13Lifetime3);
-              var16Lifetime3 = var16Lifetime3 + var4 * this.field_g.field_H[var13Lifetime3].f(false) / var25.s(-113);
-              var15 = var15 + var3 * this.field_g.field_H[var13Lifetime3].w(63) / var25.m((byte) -86);
-              this.field_g.field_H[var13Lifetime3].n((byte) -111).a(var15, 124, var16Lifetime3);
+              var16Lifetime3 = var16Lifetime3 + var4 * this.field_g.players[var13Lifetime3].f(false) / var25.s(-113);
+              var15 = var15 + var3 * this.field_g.players[var13Lifetime3].w(63) / var25.m((byte) -86);
+              this.field_g.players[var13Lifetime3].n((byte) -111).a(var15, 124, var16Lifetime3);
             }
             var19++;
           }
@@ -196,14 +196,14 @@ final class dua extends me {
         var12Lifetime2 = var19Lifetime1;
         while (this.field_g.field_P > var19Lifetime1) {
           var13Lifetime2 = this.field_g.field_c.field_e[var19Lifetime1];
-          var22 = this.field_g.field_H[var13Lifetime2].f((byte) 113);
+          var22 = this.field_g.players[var13Lifetime2].f((byte) 113);
           if (var22.c(72) >= var6Lifetime1 &&
             var22.c(-87) < var7Lifetime1) {
             var15Lifetime1 = 16;
             var16Lifetime2 = var9Lifetime2 - var4Lifetime1 * this.field_g.i(1, var13Lifetime2);
-            var16Lifetime2 = var16Lifetime2 + var4Lifetime1 * this.field_g.field_H[var13Lifetime2].f(false) / var22.s(-113);
-            var15Lifetime1 = var15Lifetime1 + var3Lifetime1 * this.field_g.field_H[var13Lifetime2].w(63) / var22.m((byte) -86);
-            this.field_g.field_H[var13Lifetime2].n((byte) -111).a(var15Lifetime1, 124, var16Lifetime2);
+            var16Lifetime2 = var16Lifetime2 + var4Lifetime1 * this.field_g.players[var13Lifetime2].f(false) / var22.s(-113);
+            var15Lifetime1 = var15Lifetime1 + var3Lifetime1 * this.field_g.players[var13Lifetime2].w(63) / var22.m((byte) -86);
+            this.field_g.players[var13Lifetime2].n((byte) -111).a(var15Lifetime1, 124, var16Lifetime2);
           }
           var19Lifetime1++;
         }

@@ -3,7 +3,7 @@
  */
 final class tca extends ra {
     static String field_M;
-    static vna field_N;
+    static IntrusiveDeque field_N;
 
     final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
@@ -26,7 +26,7 @@ final class tca extends ra {
           var9.a((byte) -3, 20);
           var9.b((byte) 17, true);
           var5 = new eq(param2, param0);
-          var9.a((byte) 83, (nv) (var5));
+          var9.a((byte) 83, (Behaviour) (var5));
           var6 = this.a((byte) 124, param2, param0);
           var9.a(var6, param1 ^ 3);
           var7 = rm.field_a;
@@ -82,7 +82,7 @@ final class tca extends ra {
         super(param0, param1);
     }
 
-    tca(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    tca(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -120,7 +120,7 @@ final class tca extends ra {
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-          field_N = (vna) null;
+          field_N = (IntrusiveDeque) null;
           return false;
         }
         return false;
@@ -132,6 +132,6 @@ final class tca extends ra {
 
     static {
         field_M = "To server list";
-        field_N = new vna();
+        field_N = new IntrusiveDeque();
     }
 }

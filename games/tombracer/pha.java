@@ -115,7 +115,7 @@ final class pha extends jea {
         }
     }
 
-    final static ib readSpawner(BitPacketBuffer param0, Room param1, int param2) {
+    final static Spawner readSpawner(BitPacketBuffer param0, Room param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -136,7 +136,7 @@ final class pha extends jea {
             throw new IllegalStateException("Unrecognised spawner type: " + var3_int);
           }
           stackIn_5_0 = new vja(param1, param0);
-          return (ib) ((Object) stackIn_5_0);
+          return (Spawner) ((Object) stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

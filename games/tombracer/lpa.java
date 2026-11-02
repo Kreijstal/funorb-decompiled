@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class lpa extends nv {
+final class lpa extends Behaviour {
     private int field_t;
     private int field_u;
     private int field_q;

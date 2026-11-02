@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri extends wda {
+final class ri extends Locomotor {
     private int field_r;
     static int field_q;
     private int field_p;
@@ -478,7 +478,7 @@ final class ri extends wda {
         }
     }
 
-    final static nh a(ha param0, byte param1, byte[] param2) {
+    final static nh a(GraphicsToolkit param0, byte param1, byte[] param2) {
         java.awt.Canvas var3 = null;
         InterruptedException var3_ref = null;
         RuntimeException var3_ref2 = null;

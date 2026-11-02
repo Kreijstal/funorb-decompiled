@@ -20,7 +20,7 @@ final class mga extends IntrusiveNode {
         field_f = null;
     }
 
-    final static qk a(int param0, int param1, int[] param2, int param3, boolean param4, int param5, boolean param6, cka param7) {
+    final static qk a(int param0, int param1, int[] param2, int param3, boolean param4, int param5, boolean param6, OpenGlToolkit param7) {
         RuntimeException var8 = null;
         qk stackIn_2_0 = null;
         qk stackIn_9_0 = null;

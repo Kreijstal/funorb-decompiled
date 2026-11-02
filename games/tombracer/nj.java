@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class nj extends wda {
+final class nj extends Locomotor {
     static lqa field_t;
     static iw field_r;
     static String field_q;
-    private wda[] field_u;
+    private Locomotor[] field_u;
     private int field_s;
     static oc[] field_p;
     static String field_o;
@@ -68,10 +68,10 @@ final class nj extends wda {
         super(param0, param1, param2);
         int var4_int = 0;
         int var5 = 0;
-        wda var6 = null;
+        Locomotor var6 = null;
         try {
           var4_int = param1.b((byte) 44, 2);
-          this.field_u = new wda[var4_int];
+          this.field_u = new Locomotor[var4_int];
           for (var5 = 0; var4_int > var5; var5++) {
             var6 = ki.readLocomotor(param1, (byte) -118, param0, param2);
             this.field_u[var5] = var6;
@@ -93,7 +93,7 @@ final class nj extends wda {
     final int a(int param0, int param1) {
         param1 = fs.a((byte) 63, param1, this.field_s);
         if (param0 != 0) {
-          this.field_u = (wda[]) null;
+          this.field_u = (Locomotor[]) null;
         }
         return param1;
     }
@@ -112,14 +112,14 @@ final class nj extends wda {
 
     final void c(byte param0) {
         int var3 = 0;
-        wda var4 = null;
+        Locomotor var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
         super.c((byte) -121);
         if (param0 >= -116) {
           field_r = (iw) null;
         }
-        wda[] var6 = this.field_u;
-        wda[] var2 = var6;
+        Locomotor[] var6 = this.field_u;
+        Locomotor[] var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
           var4.c((byte) -124);
@@ -168,10 +168,10 @@ final class nj extends wda {
 
     final void a(int param0, Trap param1) {
         int var4 = 0;
-        wda[] var3 = null;
-        wda var5 = null;
+        Locomotor[] var3 = null;
+        Locomotor var5 = null;
         int var6 = 0;
-        wda[] var7 = null;
+        Locomotor[] var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

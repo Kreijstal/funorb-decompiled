@@ -17,15 +17,15 @@ final class Player implements fo, gma, ffa, jfa, t {
     private Room field_J;
     private int velocityY;
     private int field_Q;
-    private vna field_fb;
-    static vna field_I;
+    private IntrusiveDeque field_fb;
+    static IntrusiveDeque field_I;
     private int x;
     private int field_A;
     private int field_K;
     private roa field_i;
     private int field_h;
     private int field_t;
-    private vna field_v;
+    private IntrusiveDeque field_v;
     private boolean field_q;
     private int field_X;
     private boolean[] field_C;
@@ -35,7 +35,7 @@ final class Player implements fo, gma, ffa, jfa, t {
     private boolean field_l;
     private int field_Y;
     private boolean field_Z;
-    static iu field_W;
+    static Sprite field_W;
     private int[] field_P;
     private int field_N;
     private int field_f;
@@ -1100,51 +1100,51 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    final static iu[] c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static Sprite[] c(int param0, int param1, int param2, int param3, int param4, int param5) {
         int[] var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
-        iu var9 = null;
-        iu var10 = null;
-        iu var11 = null;
-        iu var12 = null;
-        iu var13 = null;
+        Sprite var9 = null;
+        Sprite var10 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
+        Sprite var13 = null;
         Object var14 = null;
-        iu[] stackIn_2_0 = null;
-        iu[] stackIn_8_0 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 >= -110) {
-            stackIn_2_0 = (iu[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           var6 = bea.field_l;
           var7 = bea.field_g;
           var8 = bea.field_a;
-          var9 = new iu(param2, -(param2 * 2) + param0);
+          var9 = new Sprite(param2, -(param2 * 2) + param0);
           var9.c();
           bea.b(0, 0, param2, -(param2 * 2) + param0, param3, param5);
-          var10 = new iu(param2, param2);
+          var10 = new Sprite(param2, param2);
           var10.c();
           bea.e(0, 0, param2, param2, param3);
-          var11 = new iu(16, param2);
+          var11 = new Sprite(16, param2);
           var11.c();
           bea.e(0, 0, 16, param2, param3);
-          var12 = new iu(param2, param2);
+          var12 = new Sprite(param2, param2);
           var12.c();
           bea.e(0, 0, param2, param2, param5);
-          var13 = new iu(16, param2);
+          var13 = new Sprite(16, param2);
           var13.c();
           bea.e(0, 0, 16, param2, param5);
           var14 = null;
           if (param1 > 0) {
-            var14 = new iu(16, 16);
-            ((iu) (var14)).c();
+            var14 = new Sprite(16, 16);
+            ((Sprite) (var14)).c();
             bea.e(0, 0, 16, 16, param1);
           }
           bea.a(var6, var7, var8);
-          stackIn_8_0 = new iu[]{var10, var11, var10, var9, (iu) (var14), var9, var12, var13, var12};
+          stackIn_8_0 = new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1256,7 +1256,7 @@ final class Player implements fo, gma, ffa, jfa, t {
             var3.a(0, false);
           }
           var3.a(true, (byte) 2);
-          var2.a((byte) 83, (nv) (var3));
+          var2.a((byte) 83, (Behaviour) (var3));
           var2.c(437453352, true);
           var2.e(true, param0 ^ 30447);
           this.field_J.a(var2, (byte) 32);
@@ -2521,7 +2521,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.field_fb = (vna) null;
+            this.field_fb = (IntrusiveDeque) null;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3857,17 +3857,17 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    final dt C(int param0) {
+    final PlayerSimulation C(int param0) {
         RuntimeException var2 = null;
-        dt stackIn_2_0 = null;
-        dt stackIn_4_0 = null;
+        PlayerSimulation stackIn_2_0 = null;
+        PlayerSimulation stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1) {
             stackIn_4_0 = this.field_J.a(-1553494544);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (dt) null;
+          stackIn_2_0 = (PlayerSimulation) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3993,9 +3993,9 @@ final class Player implements fo, gma, ffa, jfa, t {
 
     Player(int param0) {
         this.field_G = 1572864;
-        this.field_fb = new vna();
+        this.field_fb = new IntrusiveDeque();
         this.field_C = new boolean[6];
-        this.field_v = new vna();
+        this.field_v = new IntrusiveDeque();
         this.field_N = 65536;
         this.field_x = new int[3];
         this.field_P = new int[3];
@@ -4019,7 +4019,7 @@ final class Player implements fo, gma, ffa, jfa, t {
 
     static {
         field_p = new fta();
-        field_I = new vna();
+        field_I = new IntrusiveDeque();
         field_U = new String[]{"Banging drums", "Shooting rival", "Uncompressing orchestra", "Performing dramatic piece", "Plotting route to treasure", "Found mum's diary", "Found the Ark", "Escaping mountain fortress", "Ordering MacGuffin", "Getting bored of hieroglyphs...", "Ordering stair lift", "Filling pits with snakes", "Filling pits with lava", "Ordering fragile rope bridges", "Setting dart shooters to kill", "Disregarding historical research", "Pacifying volcano god", "Killing time", "Leaving idols in tomb"};
         field_s = "Bobby-George Totems";
     }

@@ -78,14 +78,14 @@ final class gea {
           var5 = bea.field_g;
           var6 = bea.field_a;
           var16 = bea.field_l;
-          gfa.field_j = new iu(10, 14);
+          gfa.field_j = new Sprite(10, 14);
           gfa.field_j.c();
           for (var8 = 2; var8 < 7; var8++) {
             bea.f(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           bea.a(var16, var5, var6);
           cia.field_g = qla.a(true, uka.field_M, oka.field_w, var4, tg.field_c);
-          rua.field_gb.field_J = new vna();
+          rua.field_gb.field_J = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

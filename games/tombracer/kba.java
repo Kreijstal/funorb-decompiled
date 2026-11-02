@@ -7,7 +7,7 @@ final class kba extends DualLinkNode implements wia {
     private int field_m;
     static os field_u;
     static int field_s;
-    private cka field_p;
+    private OpenGlToolkit field_p;
     static String field_k;
     int field_l;
     private int field_t;
@@ -84,7 +84,7 @@ final class kba extends DualLinkNode implements wia {
         return cm.field_a.length;
     }
 
-    kba(cka param0, int param1, int param2, int param3) {
+    kba(OpenGlToolkit param0, int param1, int param2, int param3) {
         this.field_q = -1;
         this.field_r = -1;
         try {
@@ -102,7 +102,7 @@ final class kba extends DualLinkNode implements wia {
         }
     }
 
-    kba(cka param0, int param1, int param2, int param3, int param4) {
+    kba(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
         this.field_q = -1;
         this.field_r = -1;
         try {

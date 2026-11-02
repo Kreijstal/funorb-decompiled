@@ -415,7 +415,7 @@ final class uv extends oga {
         return stackIn_18_0;
     }
 
-    uv(cka param0) {
+    uv(OpenGlToolkit param0) {
         super(param0);
     }
 

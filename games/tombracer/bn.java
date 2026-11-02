@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bn extends nv {
+final class bn extends Behaviour {
     static String field_o;
     private boolean field_q;
     private boolean field_s;

@@ -99,7 +99,7 @@ abstract class hn extends kna {
           var5.a(this.a(false, param2, (byte) -114), 2);
           var5.b(true, this.A(-1));
           var5.a(false, this.B(123));
-          var6.a((byte) 83, (nv) (var5));
+          var6.a((byte) 83, (Behaviour) (var5));
           stackIn_4_0 = var6;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,7 +118,7 @@ abstract class hn extends kna {
 
     abstract Trap a(Room param0, boolean param1, boolean param2);
 
-    hn(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    hn(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_9_0 = null;
@@ -211,12 +211,12 @@ abstract class hn extends kna {
             var11 = new ue(param1, param0);
             var11.a(0, false);
             var6 = var11;
-            var9.a((byte) 83, (nv) (var11));
+            var9.a((byte) 83, (Behaviour) (var11));
           } else {
             var10 = new ue(param1, param0);
             var10.a(1, false);
             var6 = var10;
-            var9.a((byte) 83, (nv) (var10));
+            var9.a((byte) 83, (Behaviour) (var10));
           }
           var12 = rm.field_a;
           var8 = var12.a(var6, var9, -102);
@@ -409,7 +409,7 @@ abstract class hn extends kna {
           vs.field_R.field_w = Player.c(vs.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);
           rra.field_e.a(-10 + vs.field_R.field_G, -24 + vs.field_R.field_t - 12, -23776, 5, 5);
           Trap.field_q.a(80, 24, -23776, -5 + (vs.field_R.field_t - 24), (-80 + vs.field_R.field_G) / 2);
-          da.a(false);
+          GameFont.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

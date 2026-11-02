@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ca extends da {
+final class ca extends GameFont {
     private eo field_g;
     private gf field_f;
     private qm field_d;

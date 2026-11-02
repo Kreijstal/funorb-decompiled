@@ -3,8 +3,8 @@
  */
 final class fta {
     static fpa field_c;
-    static iu field_b;
-    static iu field_a;
+    static Sprite field_b;
+    static Sprite field_a;
 
     final static int c(int param0) {
         if (param0 > -86) {

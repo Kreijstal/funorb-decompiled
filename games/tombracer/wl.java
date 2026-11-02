@@ -5,7 +5,7 @@ final class wl extends IntrusiveNode {
     static String field_h;
     static dk[][] field_f;
     static int[] field_i;
-    ha field_g;
+    GraphicsToolkit field_g;
     ssa field_j;
 
     public static void a(byte param0) {
@@ -17,7 +17,7 @@ final class wl extends IntrusiveNode {
         }
     }
 
-    wl(ha param0, ssa param1) {
+    wl(GraphicsToolkit param0, ssa param1) {
         try {
           this.field_g = param0;
           this.field_j = param1;

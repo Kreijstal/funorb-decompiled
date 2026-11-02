@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ska extends nv implements mra {
+final class ska extends Behaviour implements mra {
     private boolean field_t;
     private mg field_n;
     private boolean field_o;

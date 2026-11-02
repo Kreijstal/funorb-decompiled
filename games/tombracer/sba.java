@@ -54,7 +54,7 @@ final class sba extends ci {
           field_n = (String) null;
         }
         hja var1 = new hja(ika.field_a, kba.field_s, ak.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], ck.field_c[0], mga.field_g);
-        loa.a((byte) 127);
+        MazeGenerator.a((byte) 127);
         return var1;
     }
 

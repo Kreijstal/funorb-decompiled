@@ -4,7 +4,7 @@
 final class vsa extends dg {
     private faa[][] field_q;
     private int field_p;
-    static vna field_m;
+    static IntrusiveDeque field_m;
     private int field_r;
     private int field_s;
     private int field_n;
@@ -152,7 +152,7 @@ final class vsa extends dg {
         try {
           super.a(param0, 85);
           if (param1 <= 82) {
-            field_m = (vna) null;
+            field_m = (IntrusiveDeque) null;
           }
           this.field_q = (faa[][]) null;
         } catch (RuntimeException runtimeException) {
@@ -678,7 +678,7 @@ final class vsa extends dg {
           }
           param1.field_t = 0;
           if (param0 > -86) {
-            field_m = (vna) null;
+            field_m = (IntrusiveDeque) null;
           }
           param1.field_T = 0;
           param1.field_O = 0;
@@ -689,6 +689,6 @@ final class vsa extends dg {
     }
 
     static {
-        field_m = new vna();
+        field_m = new IntrusiveDeque();
     }
 }

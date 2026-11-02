@@ -4,9 +4,9 @@
 final class pta implements fo {
     static String field_g;
     private Room field_e;
-    vna field_b;
+    IntrusiveDeque field_b;
     private c field_f;
-    private vna field_c;
+    private IntrusiveDeque field_c;
     static String field_d;
     private boolean field_a;
 
@@ -260,8 +260,8 @@ final class pta implements fo {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        this.field_b = new vna();
-        this.field_c = new vna();
+        this.field_b = new IntrusiveDeque();
+        this.field_c = new IntrusiveDeque();
         try {
           this.field_e = param0;
           this.field_f = param1;

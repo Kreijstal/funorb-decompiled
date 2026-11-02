@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pfa {
-    private vna field_f;
+    private IntrusiveDeque field_f;
     private int field_h;
     private bua field_c;
     static ura field_i;
@@ -2311,7 +2311,7 @@ final class pfa {
         bd var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var1 = (bd) (gg.field_e.c((byte) 22));
+          var1 = (bd) (gg.field_e.pollLast((byte) 22));
           if (param0 != 1) {
             field_a = (String) null;
           }
@@ -2338,7 +2338,7 @@ final class pfa {
           this.field_j = jw.field_z[param1] << 16;
           this.field_e = hq.field_b[param1] << 16;
           this.field_g = false;
-          this.field_f = new vna();
+          this.field_f = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pfa.<init>(" + param0 + ',' + param1 + ')');
         }

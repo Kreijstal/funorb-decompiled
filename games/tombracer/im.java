@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class im extends nv {
+final class im extends Behaviour {
     static int field_n;
     static int[] field_o;
     private koa field_p;

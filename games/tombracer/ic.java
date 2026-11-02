@@ -6,7 +6,7 @@ final class ic extends mt {
     static long field_b;
     static int[] field_c;
 
-    final tu a(ff param0, int param1) {
+    final tu a(MatchState param0, int param1) {
         RuntimeException var3 = null;
         tu stackIn_2_0 = null;
         wg stackIn_4_0 = null;

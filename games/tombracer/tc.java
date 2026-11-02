@@ -7,7 +7,7 @@ class tc extends lu {
     static af field_d;
     static String field_f;
 
-    final static ka[] a(oc[] param0, int param1, ha param2) {
+    final static ka[] a(oc[] param0, int param1, GraphicsToolkit param2) {
         int var4 = 0;
         ka[] var3 = null;
         RuntimeException var3_ref = null;

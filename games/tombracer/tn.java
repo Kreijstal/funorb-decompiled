@@ -134,7 +134,7 @@ final class tn extends IntrusiveNode {
         if (!vc.field_p.a(0)) {
           return th.field_u + " - " + vc.field_p.a(true) + "%";
         }
-        return dt.field_n;
+        return PlayerSimulation.field_n;
     }
 
     tn(byte[] param0) {

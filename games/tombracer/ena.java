@@ -26,7 +26,7 @@ final class ena extends DualLinkNode {
         int var12 = 0;
         PacketBuffer var15 = null;
         PacketBuffer var18 = null;
-        vna var19 = null;
+        IntrusiveDeque var19 = null;
         int[] var28 = null;
         byte[] var29 = null;
         int[] var30 = null;
@@ -67,7 +67,7 @@ final class ena extends DualLinkNode {
         if (var2 == 0) {
           return false;
         }
-        var19 = new vna();
+        var19 = new IntrusiveDeque();
         var5_ref_Object = dk.field_c;
         synchronized (var5_ref_Object) {
           var6 = dk.field_c.a((byte) -117, this.field_k);

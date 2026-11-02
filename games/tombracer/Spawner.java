@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ib implements noa {
+abstract class Spawner implements noa {
     Room field_a;
 
     abstract void a(byte param0, ui param1, boolean param2, ui param3);
@@ -21,7 +21,7 @@ abstract class ib implements noa {
 
     abstract int a(boolean param0);
 
-    ib(Room param0, BitPacketBuffer param1) {
+    Spawner(Room param0, BitPacketBuffer param1) {
         this(param0);
     }
 
@@ -29,7 +29,7 @@ abstract class ib implements noa {
 
     abstract void a(int param0, int param1, int param2, int param3);
 
-    private ib(Room param0) {
+    private Spawner(Room param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

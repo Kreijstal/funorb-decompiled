@@ -70,9 +70,9 @@ final class fp {
         dna.field_F = jpa.a(param2, "", "bg_slab");
         bp.field_p = jpa.b(param2, "", "inset_frame");
         tba.field_f = jpa.b(param2, "", "keys");
-        wca.field_l = new int[tba.field_f.length];
-        for (var5_int = 0; wca.field_l.length > var5_int; var5_int++) {
-          wca.field_l[var5_int] = 12;
+        SpriteState.field_l = new int[tba.field_f.length];
+        for (var5_int = 0; SpriteState.field_l.length > var5_int; var5_int++) {
+          SpriteState.field_l[var5_int] = 12;
         }
         jpa var5 = tba.field_f[9];
         int var6 = var5.field_i;
@@ -184,7 +184,7 @@ final class fp {
         bha.field_C = jpa.a(param2, "", "tombname_frame");
         mna.field_c = jpa.b(param2, "", "blackframe");
         fm.field_h = jpa.a(param2, "", "sandblock");
-        jga.field_b = jpa.a(param2, "", "medal_gold");
+        TextResourceLoader.field_b = jpa.a(param2, "", "medal_gold");
         sla.field_a = jpa.a(param2, "", "medal_silver");
         if (param3 != 17) {
           return;
@@ -206,7 +206,7 @@ final class fp {
           param1++;
           var16_ref.a(incrementValue$8, (byte) 47, param0);
           nia.a(oma.field_G, "basic", "orbcoin", -121);
-          ff.field_p = nia.a(param2, "", "lobby_game_logo", -119);
+          MatchState.field_p = nia.a(param2, "", "lobby_game_logo", -119);
           bp.field_m = uka.a(param2, "", 5, "lobby_icons");
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

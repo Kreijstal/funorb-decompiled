@@ -6,7 +6,7 @@ final class sna {
     private boolean field_m;
     private int field_g;
     private boolean field_j;
-    private vna field_c;
+    private IntrusiveDeque field_c;
     private boolean field_d;
     private boolean field_h;
     private boolean field_b;
@@ -28,7 +28,7 @@ final class sna {
         int var9;
         Player var10;
         var9 = TombRacer.field_G ? 1 : 0;
-        var10 = this.field_l.field_k.field_H[this.field_l.field_x];
+        var10 = this.field_l.field_k.players[this.field_l.field_x];
         var3 = var10.f((byte) -106);
         var4 = this.field_l.field_k.i(1, this.field_l.field_x);
         if (param0 != 9981) {
@@ -170,7 +170,7 @@ final class sna {
         this.field_a = 0;
         this.field_k = false;
         this.field_e = 0;
-        this.field_c = new vna();
+        this.field_c = new IntrusiveDeque();
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {

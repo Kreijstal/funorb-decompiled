@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jga extends eta {
+final class TextResourceLoader extends eta {
     static jpa field_b;
 
-    final static void a(byte param0, cn param1) {
+    final static void loadStrings(byte param0, cn param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2620_0;
             StringBuilder stackIn_2620_1;
@@ -177,7 +177,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) -82, "mu_x_declined_invite");
                 if (null != var2) {
-                  wda.field_m = jaa.a((byte) 60, var2);
+                  Locomotor.field_m = jaa.a((byte) 60, var2);
                 }
                 var2 = dn.a((byte) -17, "mu_x_withdrew_request");
                 if (var2 != null) {
@@ -273,7 +273,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) -104, "mu_gamelist_options");
                 if (null != var2) {
-                  ff.field_N = jaa.a((byte) 35, var2);
+                  MatchState.field_N = jaa.a((byte) 35, var2);
                 }
                 var2 = dn.a((byte) -100, "mu_gamelist_elapsed_time");
                 if (null != var2) {
@@ -585,7 +585,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) 112, "status_concluded");
                 if (var2 != null) {
-                  wda.field_l = jaa.a((byte) 85, var2);
+                  Locomotor.field_l = jaa.a((byte) 85, var2);
                 }
                 var2 = dn.a((byte) -97, "status_spectate");
                 if (null != var2) {
@@ -1695,7 +1695,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) -112, "ignorelistfull");
                 if (null != var2) {
-                  bs.field_h = jaa.a((byte) 88, var2);
+                  GameEvent.field_h = jaa.a((byte) 88, var2);
                 }
                 var2 = dn.a((byte) -43, "ignorelistdupe");
                 if (var2 != null) {
@@ -2021,7 +2021,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) 105, "on");
                 if (var2 != null) {
-                  nv.field_h = jaa.a((byte) 106, var2);
+                  Behaviour.field_h = jaa.a((byte) 106, var2);
                 }
                 var2 = dn.a((byte) -31, "off");
                 if (var2 != null) {
@@ -2811,7 +2811,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) 120, "pleasewait_dotdotdot");
                 if (var2 != null) {
-                  dt.field_n = jaa.a((byte) 27, var2);
+                  PlayerSimulation.field_n = jaa.a((byte) 27, var2);
                 }
                 var2 = dn.a((byte) -40, "serviceunavailable");
                 if (null != var2) {

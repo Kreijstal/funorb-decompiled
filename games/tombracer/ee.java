@@ -12,7 +12,7 @@ final class ee implements isa {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        iu var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param0.field_i + param1;
           var7 = param3 + param0.field_n;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class cka extends ha {
+final class OpenGlToolkit extends GraphicsToolkit {
     static int[] field_Mc;
     private long field_dd;
     static jea field_fd;
@@ -32,7 +32,7 @@ final class cka extends ha {
     mq field_zc;
     jaclib.memory.heap.NativeHeap field_md;
     int field_Oc;
-    private vna field_qb;
+    private IntrusiveDeque field_qb;
     private ks field_Qb;
     private int field_A;
     private ks[] field_M;
@@ -45,17 +45,17 @@ final class cka extends ha {
     private ks field_t;
     private int field_x;
     private ji field_Wc;
-    private vna field_Lc;
+    private IntrusiveDeque field_Lc;
     int field_jb;
     int field_mb;
     private int field_rc;
     private int field_Tb;
-    private vna field_pd;
-    private vna field_K;
-    private vna field_cc;
-    private vna field_Vb;
-    private vna field_Fc;
-    private vna field_rb;
+    private IntrusiveDeque field_pd;
+    private IntrusiveDeque field_K;
+    private IntrusiveDeque field_cc;
+    private IntrusiveDeque field_Vb;
+    private IntrusiveDeque field_Fc;
+    private IntrusiveDeque field_rb;
     private boolean field_lb;
     private long field_Lb;
     private boolean field_d;
@@ -449,7 +449,7 @@ final class cka extends ha {
           }
           this.field_y = this.field_y & -2;
           if (!param0) {
-            this.field_Vb = (vna) null;
+            this.field_Vb = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1410,9 +1410,9 @@ final class cka extends ha {
         }
     }
 
-    final da a(qla param0, jpa[] param1, boolean param2) {
+    final GameFont a(qla param0, jpa[] param1, boolean param2) {
         RuntimeException var4 = null;
-        eg stackIn_1_0 = null;
+        OpenGlFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -1420,8 +1420,8 @@ final class cka extends ha {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new eg(this, param0, param1, param2);
-          return (da) ((Object) stackIn_1_0);
+          stackIn_1_0 = new OpenGlFont(this, param0, param1, param2);
+          return (GameFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -1454,7 +1454,7 @@ final class cka extends ha {
 
     final synchronized void a(byte param0, long param1) {
         if (param0 != -105) {
-          this.field_Lc = (vna) null;
+          this.field_Lc = (IntrusiveDeque) null;
         }
         IntrusiveNode var4 = new IntrusiveNode();
         var4.key = param1;
@@ -1683,7 +1683,7 @@ final class cka extends ha {
         }
     }
 
-    cka(java.awt.Canvas param0, d param1, int param2) {
+    OpenGlToolkit(java.awt.Canvas param0, d param1, int param2) {
         super(param1);
         long dupTemp$0 = 0L;
         int var9 = 0;
@@ -1723,7 +1723,7 @@ final class cka extends ha {
         this.field_fc = new oba();
         this.field_mc = new oba();
         this.field_Ob = false;
-        this.field_qb = new vna();
+        this.field_qb = new IntrusiveDeque();
         this.field_A = -1;
         this.field_ub = new ks[4];
         this.field_Zc = -1;
@@ -1732,13 +1732,13 @@ final class cka extends ha {
         this.field_kd = new ks[4];
         this.field_F = new vj();
         this.field_Wc = new ji(16);
-        this.field_Lc = new vna();
-        this.field_pd = new vna();
-        this.field_K = new vna();
-        this.field_cc = new vna();
-        this.field_Vb = new vna();
-        this.field_Fc = new vna();
-        this.field_rb = new vna();
+        this.field_Lc = new IntrusiveDeque();
+        this.field_pd = new IntrusiveDeque();
+        this.field_K = new IntrusiveDeque();
+        this.field_cc = new IntrusiveDeque();
+        this.field_Vb = new IntrusiveDeque();
+        this.field_Fc = new IntrusiveDeque();
+        this.field_rb = new IntrusiveDeque();
         this.field_jd = new oba();
         this.field_j = new oba();
         this.field_Tc = new oba();

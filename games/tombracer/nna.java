@@ -70,7 +70,7 @@ final class nna {
             return stackIn_13_0;
           }
           if (100 <= tba.field_k) {
-            stackIn_17_0 = bs.field_h;
+            stackIn_17_0 = GameEvent.field_h;
             return stackIn_17_0;
           }
           if (dda.a(false, param1)) {

@@ -8,7 +8,7 @@ final class op extends ofa implements tsa {
     private rj field_M;
     private long field_P;
 
-    final static void a(cn param0, int param1, int[] param2, byte[] param3, cn param4, String[][] param5, int param6, iu[][] param7, boolean param8, int param9, String[][] param10, cn param11, byte[] param12, String[] param13, iu[][] param14) {
+    final static void a(cn param0, int param1, int[] param2, byte[] param3, cn param4, String[][] param5, int param6, Sprite[][] param7, boolean param8, int param9, String[][] param10, cn param11, byte[] param12, String[] param13, Sprite[][] param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -285,7 +285,7 @@ final class op extends ofa implements tsa {
           var3 = var4;
           lua.a(param0, 0, var4, 0, param2);
           if (param1 <= 104) {
-            op.a((cn) null, 63, (int[]) null, (byte[]) null, (cn) null, (String[][]) null, 112, (iu[][]) null, true, 103, (String[][]) null, (cn) null, (byte[]) null, (String[]) null, (iu[][]) null);
+            op.a((cn) null, 63, (int[]) null, (byte[]) null, (cn) null, (String[][]) null, 112, (Sprite[][]) null, true, 103, (String[][]) null, (cn) null, (byte[]) null, (String[]) null, (Sprite[][]) null);
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;

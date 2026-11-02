@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cu extends nv {
+final class cu extends Behaviour {
     private int field_r;
     private kpa field_w;
     private int field_s;

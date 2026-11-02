@@ -7,7 +7,7 @@ final class aj extends IntrusiveNode {
     int[] field_m;
     byte[][][] field_g;
     int[] field_h;
-    static iu field_l;
+    static Sprite field_l;
     AsyncRequest[] field_k;
     int field_f;
     int field_n;
@@ -15,7 +15,7 @@ final class aj extends IntrusiveNode {
 
     public static void a(int param0) {
         if (param0 != -11061) {
-          field_l = (iu) null;
+          field_l = (Sprite) null;
           field_l = null;
           return;
         }

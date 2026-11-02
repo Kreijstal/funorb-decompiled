@@ -4,13 +4,13 @@
 class jea extends um {
     int field_t;
     int field_ab;
-    iu field_R;
-    iu[] field_C;
+    Sprite field_R;
+    Sprite[] field_C;
     boolean field_eb;
     int field_P;
     boolean field_L;
-    vna field_J;
-    iu field_B;
+    IntrusiveDeque field_J;
+    Sprite field_B;
     int field_hb;
     il field_H;
     boolean field_cb;
@@ -20,12 +20,12 @@ class jea extends um {
     private boolean field_Q;
     boolean field_F;
     int field_ob;
-    iu field_rb;
+    Sprite field_rb;
     int field_N;
-    iu field_lb;
+    Sprite field_lb;
     int field_ib;
-    iu[] field_n;
-    iu[] field_db;
+    Sprite[] field_n;
+    Sprite[] field_db;
     int field_A;
     int field_z;
     int field_x;
@@ -36,7 +36,7 @@ class jea extends um {
     int field_O;
     int field_q;
     int field_V;
-    iu[] field_w;
+    Sprite[] field_w;
     int field_qb;
     int field_K;
     int field_gb;
@@ -48,7 +48,7 @@ class jea extends um {
     int field_fb;
     int field_s;
     int field_S;
-    iu field_U;
+    Sprite field_U;
     boolean field_X;
     private int field_Y;
     boolean field_Z;
@@ -56,7 +56,7 @@ class jea extends um {
     int field_y;
     private int field_jb;
     int field_T;
-    iu[] field_M;
+    Sprite[] field_M;
     static String field_nb;
     private int field_kb;
     private int field_mb;
@@ -71,7 +71,7 @@ class jea extends um {
     final void b(int param0, jea param1) {
         try {
           if (null == this.field_J) {
-            this.field_J = new vna();
+            this.field_J = new IntrusiveDeque();
           }
           if (param0 >= -121) {
             this.a(33, true, 32, -78, -54, -31);
@@ -503,8 +503,8 @@ class jea extends um {
         int var13;
         int var14;
         int var15;
-        iu[] var16;
-        iu var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;

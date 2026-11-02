@@ -282,7 +282,7 @@ final class gw extends kna {
         super(param0, param1);
     }
 
-    gw(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    gw(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

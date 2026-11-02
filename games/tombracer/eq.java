@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eq extends nv {
+final class eq extends Behaviour {
     static ola field_n;
     static int field_r;
     private boolean field_u;

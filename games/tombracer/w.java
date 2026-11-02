@@ -6,8 +6,8 @@ final class w extends sqa {
     int[] field_i;
     int field_c;
     int field_h;
-    private vna field_g;
-    static iu[] field_f;
+    private IntrusiveDeque field_g;
+    static Sprite[] field_f;
     static String field_d;
 
     private final void a(boolean param0) {
@@ -20,7 +20,7 @@ final class w extends sqa {
           }
           return;
         }
-        this.field_g = (vna) null;
+        this.field_g = (IntrusiveDeque) null;
         for (var2Lifetime1 = 0; this.field_i.length > var2Lifetime1; var2Lifetime1++) {
           this.field_i[var2Lifetime1] = 0;
         }
@@ -31,7 +31,7 @@ final class w extends sqa {
         int var3 = TombRacer.field_G ? 1 : 0;
         fla var4Lifetime1;
         if (param0 >= -118) {
-          this.field_g = (vna) null;
+          this.field_g = (IntrusiveDeque) null;
         } else {
           var4 = (fla) (this.field_g.f(-80));
           while (var4 != null) {
@@ -51,7 +51,7 @@ final class w extends sqa {
         this.a(true);
     }
 
-    final static int a(PacketBuffer param0, int param1, vna param2) {
+    final static int a(PacketBuffer param0, int param1, IntrusiveDeque param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -233,7 +233,7 @@ final class w extends sqa {
 
     final void a(int param0, int param1, int param2) {
         if (param1 < 9) {
-          this.field_g = (vna) null;
+          this.field_g = (IntrusiveDeque) null;
         }
     }
 
@@ -248,7 +248,7 @@ final class w extends sqa {
 
     private final boolean a(int param0, int param1) {
         if (param0 > -89) {
-          this.field_g = (vna) null;
+          this.field_g = (IntrusiveDeque) null;
           if (param1 == 85) {
             return true;
           }
@@ -280,7 +280,7 @@ final class w extends sqa {
 
     public static void a(int param0) {
         if (param0 > -26) {
-          field_f = (iu[]) null;
+          field_f = (Sprite[]) null;
           field_d = null;
           field_f = null;
           return;
@@ -329,7 +329,7 @@ final class w extends sqa {
 
     public w() {
         this.field_i = new int[98];
-        this.field_g = new vna();
+        this.field_g = new IntrusiveDeque();
     }
 
     static {

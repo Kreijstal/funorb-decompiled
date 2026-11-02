@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gfa extends bs {
+final class gfa extends GameEvent {
     static ur field_l;
     private int field_n;
     private int field_k;
-    static iu field_j;
+    static Sprite field_j;
     static String field_i;
     static String field_m;
 
@@ -65,13 +65,13 @@ final class gfa extends bs {
 
     final int a(byte param0) {
         if (param0 != -28) {
-          field_j = (iu) null;
+          field_j = (Sprite) null;
           return this.field_k;
         }
         return this.field_k;
     }
 
-    final boolean a(boolean param0, bs param1) {
+    final boolean a(boolean param0, GameEvent param1) {
         RuntimeException var3 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -80,7 +80,7 @@ final class gfa extends bs {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            field_j = (iu) null;
+            field_j = (Sprite) null;
           }
           if (!(param1 instanceof gfa)) {
             return false;
@@ -101,7 +101,7 @@ final class gfa extends bs {
         }
     }
 
-    final void a(dt param0, int param1, int param2, int param3) {
+    final void a(PlayerSimulation param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -109,7 +109,7 @@ final class gfa extends bs {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 110) {
-            field_j = (iu) null;
+            field_j = (Sprite) null;
           }
           if (this.a(false)) {
             param0.a(this.field_n, param3, -121, param2);
@@ -131,7 +131,7 @@ final class gfa extends bs {
         }
     }
 
-    final void a(int param0, byte param1, dt param2) {
+    final void a(int param0, byte param1, PlayerSimulation param2) {
         try {
           if (this.a(false)) {
             param2.a((byte) -97, this.field_n, param0);

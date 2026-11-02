@@ -525,7 +525,7 @@ final class sw extends jea {
           this.field_Cb.field_r = this.field_wb.toString();
           this.field_Eb.field_r = "";
           this.field_Eb.field_sb = "|";
-          this.field_J = new vna();
+          this.field_J = new IntrusiveDeque();
           this.b(-122, this.field_xb);
           this.b(-122, this.field_Cb);
           this.b(-123, this.field_Eb);

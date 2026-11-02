@@ -12,7 +12,7 @@ final class hp {
     }
 
     final static float a(float param0, float param1, byte param2, float param3, int param4) {
-        float[] var6 = bs.field_f[param4];
+        float[] var6 = GameEvent.field_f[param4];
         float[] var5 = var6;
         if (param2 == 26) {
           return var6[0] * param3 + var6[1] * param1 + var6[2] * param0;

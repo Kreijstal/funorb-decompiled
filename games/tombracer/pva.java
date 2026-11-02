@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pva {
-    private cka field_b;
+    private OpenGlToolkit field_b;
     int field_a;
 
     protected final void finalize() throws Throwable {
@@ -10,7 +10,7 @@ final class pva {
         super.finalize();
     }
 
-    pva(cka param0, int param1, int param2) {
+    pva(OpenGlToolkit param0, int param1, int param2) {
         try {
           this.field_a = param2;
           this.field_b = param0;

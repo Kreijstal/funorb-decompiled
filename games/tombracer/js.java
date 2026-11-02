@@ -19,8 +19,8 @@ final class js extends dr {
     private dla field_k;
     private int field_m;
     private boolean field_r;
-    private vna field_f;
-    private vna field_b;
+    private IntrusiveDeque field_f;
+    private IntrusiveDeque field_b;
     private boolean field_w;
     private boolean field_v;
     private long field_c;
@@ -260,7 +260,7 @@ final class js extends dr {
         }
         this.field_r = true;
         if (null == this.field_f) {
-          this.field_f = new vna();
+          this.field_f = new IntrusiveDeque();
         }
         if (param0 != 115) {
           js.b((byte) 13);
@@ -540,14 +540,14 @@ final class js extends dr {
         RuntimeException var10 = null;
         this.field_p = new ji(16);
         this.field_m = 0;
-        this.field_b = new vna();
+        this.field_b = new IntrusiveDeque();
         this.field_c = 0L;
         try {
           this.field_h = param1;
           this.field_j = param0;
           if (this.field_h != null) {
             this.field_w = true;
-            this.field_f = new vna();
+            this.field_f = new IntrusiveDeque();
           } else {
             this.field_w = false;
           }

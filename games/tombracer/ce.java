@@ -409,11 +409,11 @@ final class ce extends dg {
         double var9 = 0.0;
         double var11 = 0.0;
         double var13 = 0.0;
-        vna var15 = null;
+        IntrusiveDeque var15 = null;
         uja var16 = null;
         int var17 = 0;
         Object var18 = null;
-        wda var18_ref = null;
+        Locomotor var18_ref = null;
         int var19 = 0;
         var4 = null;
         var5 = null;
@@ -475,7 +475,7 @@ final class ce extends dg {
             var15 = var5_ref.field_B;
             var16 = new uja(var15);
             var17 = 0;
-            var18_ref = (wda) (var16.a(true));
+            var18_ref = (Locomotor) (var16.a(true));
             while (var18_ref != null) {
               if (var18_ref instanceof ro) {
                 if (((ro) (var18_ref)).d(false) != this.field_y) {
@@ -496,7 +496,7 @@ final class ce extends dg {
                   var17 = 1;
                 }
               }
-              var18_ref = (wda) (var16.a(-1));
+              var18_ref = (Locomotor) (var16.a(-1));
             }
             if (var17 == 0 &&
               this.field_v != null) {

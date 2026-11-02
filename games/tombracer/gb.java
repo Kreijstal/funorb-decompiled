@@ -8,7 +8,7 @@ final class gb {
         bd var1 = null;
         bd var1Lifetime1;
         if (param0 == -29711) {
-          var1 = (bd) (vt.field_a.c((byte) 22));
+          var1 = (bd) (vt.field_a.pollLast((byte) 22));
           if (var1 == null) {
             var1 = new bd();
           }
@@ -16,9 +16,9 @@ final class gb {
           gg.field_e.b((byte) -111, var1);
           return;
         }
-        ha var2 = (ha) null;
-        gb.a((oc) null, -85, (ha) null);
-        var1Lifetime1 = (bd) (vt.field_a.c((byte) 22));
+        GraphicsToolkit var2 = (GraphicsToolkit) null;
+        gb.a((oc) null, -85, (GraphicsToolkit) null);
+        var1Lifetime1 = (bd) (vt.field_a.pollLast((byte) 22));
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new bd();
         }
@@ -30,7 +30,7 @@ final class gb {
         throw new IllegalStateException();
     }
 
-    final static ka a(oc param0, int param1, ha param2) {
+    final static ka a(oc param0, int param1, GraphicsToolkit param2) {
         RuntimeException var3 = null;
         ka stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

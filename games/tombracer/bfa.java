@@ -4,7 +4,7 @@
 final class bfa {
     static il field_c;
     Object field_d;
-    static iu field_e;
+    static Sprite field_e;
     boolean field_a;
     static String field_b;
 

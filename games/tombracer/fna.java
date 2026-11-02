@@ -105,7 +105,7 @@ final class fna {
         int stackIn_78_0 = 0;
         nh stackIn_89_0 = null;
         int var5;
-        da var6;
+        GameFont var6;
         int var7;
         int var8;
         int var9;
@@ -130,10 +130,10 @@ final class fna {
         String var22;
         int var24;
         nh[] var25;
-        ha var26;
+        GraphicsToolkit var26;
         kia var27;
         nh[] var28;
-        ha var29;
+        GraphicsToolkit var29;
         nh var30;
         int var18Lifetime1;
         int var19Lifetime1;

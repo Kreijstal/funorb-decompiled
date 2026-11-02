@@ -22,7 +22,7 @@ final class wo extends vo implements va {
         return this.field_e;
     }
 
-    wo(cka param0, int param1, byte[] param2, int param3, boolean param4) {
+    wo(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
         super(param0, 34962, param2, param3, param4);
         try {
           this.field_j = param1;

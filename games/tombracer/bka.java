@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bka {
-    private vna field_a;
+    private IntrusiveDeque field_a;
 
     final void a(byte param0, int param1) {
         if (param0 < -112) {
           this.field_a.b((byte) -69, new al(param1));
           return;
         }
-        this.field_a = (vna) null;
+        this.field_a = (IntrusiveDeque) null;
         this.field_a.b((byte) -69, new al(param1));
     }
 
@@ -36,7 +36,7 @@ final class bka {
     final void c(int param0) {
         this.field_a.d(8);
         if (param0 > -63) {
-          this.field_a = (vna) null;
+          this.field_a = (IntrusiveDeque) null;
         }
     }
 
@@ -48,7 +48,7 @@ final class bka {
     }
 
     public bka() {
-        this.field_a = new vna();
+        this.field_a = new IntrusiveDeque();
     }
 
     static {

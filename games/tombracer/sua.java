@@ -4,7 +4,7 @@
 final class sua extends kna {
     private int field_F;
     static double field_J;
-    static vna field_H;
+    static IntrusiveDeque field_H;
     static int field_L;
     static fta field_G;
     static jea field_K;
@@ -92,7 +92,7 @@ final class sua extends kna {
           var8.a((byte) -3, 6);
           var8.b((byte) 17, false);
           var8.g(param1 ^ 109, 2);
-          var8.a((byte) 83, (nv) (new eq(param2, param0)));
+          var8.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new spa(param2, param0);
           var5.a((byte) -124, this.field_F * 8);
           var8.a(var5, 0);
@@ -116,7 +116,7 @@ final class sua extends kna {
         }
     }
 
-    sua(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    sua(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         this.field_F = 4;
         try {
@@ -128,7 +128,7 @@ final class sua extends kna {
 
     final boolean z(int param0) {
         if (param0 != 0) {
-          field_H = (vna) null;
+          field_H = (IntrusiveDeque) null;
           return false;
         }
         return false;
@@ -249,7 +249,7 @@ final class sua extends kna {
 
     static {
         field_J = 0.0;
-        field_H = new vna();
+        field_H = new IntrusiveDeque();
         field_G = new fta();
     }
 }

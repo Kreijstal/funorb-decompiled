@@ -105,7 +105,7 @@ final class cpa extends qe {
         }
     }
 
-    final static fca a(int param0, cka param1, int param2, String param3) {
+    final static fca a(int param0, OpenGlToolkit param1, int param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         String var7 = null;
@@ -121,7 +121,7 @@ final class cpa extends qe {
         try {
           if (param0 != 64) {
             var7 = (String) null;
-            cpa.a(-65, (cka) null, -121, (String) null);
+            cpa.a(-65, (OpenGlToolkit) null, -121, (String) null);
           }
           var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param2);
           jaggl.OpenGL.glShaderSourceARB(var4_long, param3);
@@ -199,7 +199,7 @@ final class cpa extends qe {
         }
     }
 
-    cpa(cka param0) {
+    cpa(OpenGlToolkit param0) {
         super(param0);
         int var14 = 0;
         int var15 = 0;

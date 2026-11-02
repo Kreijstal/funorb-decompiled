@@ -87,7 +87,7 @@ abstract class fqa extends kna {
         }
     }
 
-    fqa(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    fqa(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
           this.field_G = new f(this.B(31609), 0, param0.field_E, param2);

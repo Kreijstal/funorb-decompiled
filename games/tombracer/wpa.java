@@ -5,10 +5,10 @@ final class wpa extends ge {
     static String field_K;
     static String field_J;
 
-    final static void a(ha param0, int param1) {
+    final static void a(GraphicsToolkit param0, int param1) {
         try {
           kn.field_p = param0.a(kv.field_a, rc.field_b, true);
-          eda.field_f = param0.a(ds.field_n, ff.field_j, true);
+          eda.field_f = param0.a(ds.field_n, MatchState.field_j, true);
           if (param1 > -66) {
             field_K = (String) null;
           }
@@ -27,22 +27,22 @@ final class wpa extends ge {
         return false;
     }
 
-    final static iu[] a(byte param0, iu param1) {
-        iu[] var2 = null;
+    final static Sprite[] a(byte param0, Sprite param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        iu[] var3 = null;
-        iu[] stackIn_2_0 = null;
-        iu[] stackIn_4_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -57) {
-            stackIn_2_0 = (iu[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          var3 = new iu[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = param1;
           stackIn_4_0 = var2;
@@ -93,7 +93,7 @@ final class wpa extends ge {
           var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.h(param1, 0);
-          var9.a((byte) 83, (nv) (new eq(param2, param0)));
+          var9.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new ska(param2, param0);
           var6 = ci.a(0, -1);
           var6.a(91, true);
@@ -105,7 +105,7 @@ final class wpa extends ge {
           }
           var5.a(var6, (byte) 66);
           this.a((byte) 43, var5, param2);
-          var9.a((byte) 83, (nv) (var5));
+          var9.a((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (boa) (var7.a(7, 86));
           var8.b(127, 12);
@@ -198,7 +198,7 @@ final class wpa extends ge {
         super(param0, param1);
     }
 
-    wpa(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    wpa(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

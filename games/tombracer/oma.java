@@ -15,7 +15,7 @@ final class oma extends kna {
         return true;
     }
 
-    oma(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    oma(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
@@ -166,7 +166,7 @@ final class oma extends kna {
           if (param1 != 3) {
             this.s(48);
           }
-          var9.a((byte) 83, (nv) (var5));
+          var9.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kva) (var6.a(10, 111));
           var8 = this.field_F;

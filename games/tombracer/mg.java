@@ -10,7 +10,7 @@ final class mg {
     private boolean field_j;
     static String field_k;
     private boolean field_d;
-    static vna field_b;
+    static IntrusiveDeque field_b;
     static int[] field_g;
     private boolean field_a;
     static int[] field_e;
@@ -218,7 +218,7 @@ final class mg {
         field_h = new int[1];
         field_k = "Room: <%0>/<%1>";
         field_g = new int[2];
-        field_b = new vna();
+        field_b = new IntrusiveDeque();
         field_e = new int[8192];
     }
 }

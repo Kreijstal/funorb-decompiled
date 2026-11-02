@@ -41,7 +41,7 @@ final class fq {
           }
           var2_int = -71 / ((5 - param1) / 35);
           var3 = new hea(param0, ak.field_p, pg.field_C, mq.field_b, iga.field_m, ck.field_c);
-          loa.a((byte) 123);
+          MazeGenerator.a((byte) 123);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

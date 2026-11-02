@@ -122,14 +122,14 @@ final class fja extends qra {
             }
           }
           var5_int = 0;
-          for (var6 = 0; var6 < this.field_c.field_H.length; var6++) {
+          for (var6 = 0; var6 < this.field_c.players.length; var6++) {
             if (!this.field_c.f((byte) -81, var6)) {
               var5_int++;
             }
           }
           if (var5_int == 2) {
             var6Lifetime2 = 0;
-            for (var7_int = 0; this.field_c.field_H.length > var7_int; var7_int++) {
+            for (var7_int = 0; this.field_c.players.length > var7_int; var7_int++) {
               if (!this.field_c.f((byte) -85, var7_int) &&
                 var3 != var7_int) {
                 var6Lifetime2 = var7_int;
@@ -174,7 +174,7 @@ final class fja extends qra {
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             qa.a(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
-            kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, fm.a(false, 0), wca.field_l, 1, fm.a(false, 11903361), tp.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
+            kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, fm.a(false, 0), SpriteState.field_l, 1, fm.a(false, 11903361), tp.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
           }
           if (!param1) {
             return;
@@ -211,7 +211,7 @@ final class fja extends qra {
             }
             if (var3 >= 0 &&
               this.field_h.f(-12963, var3)) {
-              var16 = this.field_h.field_k.field_H[var3];
+              var16 = this.field_h.field_k.players[var3];
               var5 = var16.f((byte) 87);
               var6Lifetime1Lifetime2 = var5.q((byte) -82);
               if (this.field_c.field_K != 3) {
@@ -278,7 +278,7 @@ final class fja extends qra {
         boolean stackIn_14_0 = false;
         boolean stackIn_23_1 = false;
         dl var5;
-        dt var6;
+        PlayerSimulation var6;
         if (rda.d(20125)) {
           if (param2 == 28) {
             this.a(-1, (byte) -109);
@@ -332,12 +332,12 @@ final class fja extends qra {
             }
           } else {
             if (param2 == 22) {
-              var6.field_g.a(1, (byte) 113);
+              var6.player.a(1, (byte) 113);
               this.field_h.l((byte) -38);
             }
           }
           if (param2 == 41) {
-            var6.b((byte) 114);
+            var6.dumpState((byte) 114);
           }
         }
         if (param1 == 25) {
@@ -396,14 +396,14 @@ final class fja extends qra {
         var5 = TombRacer.field_G ? 1 : 0;
         if (!this.field_h.c(false) &&
           this.field_c.b(0)) {
-          if (this.field_c.field_G[0].e(-31170)) {
+          if (this.field_c.simulations[0].e(-31170)) {
             this.a(0, -2);
           } else {
             if (this.field_c.field_L > 1) {
               var7 = new int[this.field_c.field_k][3];
               for (var3 = 0; var3 < this.field_c.field_k; var3++) {
                 for (var4 = 0; 3 > var4; var4++) {
-                  var7[var3][var4] = this.field_c.field_H[var3].c(196608, var4);
+                  var7[var3][var4] = this.field_c.players[var3].c(196608, var4);
                 }
               }
               this.field_h.a((byte) 101, var7, this.field_h.field_x);
@@ -719,7 +719,7 @@ final class fja extends qra {
         this.field_o = true;
         this.field_m = false;
         try {
-          var3_int = this.field_h.field_k.field_H.length;
+          var3_int = this.field_h.field_k.players.length;
           this.field_n = new qa[var3_int];
           for (var4 = 0; var4 < var3_int; var4++) {
             this.field_n[var4] = new qa(this.field_h, var4);

@@ -6,9 +6,9 @@ import java.util.*;
 class tu extends eha {
     static String field_e;
     static volatile int field_h;
-    private vna field_c;
+    private IntrusiveDeque field_c;
     static float field_g;
-    ff field_f;
+    MatchState field_f;
     static String field_d;
 
     private final boolean a(Room param0, byte param1, int param2) {
@@ -20,7 +20,7 @@ class tu extends eha {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 47) {
-            this.field_c = (vna) null;
+            this.field_c = (IntrusiveDeque) null;
           }
           stackIn_6_0 = (!this.field_f.b(param2, 0)) && (kq.a(-44, param0.q((byte) -82)).field_d);
           return stackIn_6_0;
@@ -243,7 +243,7 @@ class tu extends eha {
             } else {
               li.b(var4_int, (byte) 116);
             }
-            ff.d(param0 ^ -2, var4_int);
+            MatchState.d(param0 ^ -2, var4_int);
             var5 = param2.n(16);
             var6 = var5;
             for (var7 = 0; var7 < var6.length; var7++) {
@@ -317,7 +317,7 @@ class tu extends eha {
           var4_int = var4_int * 2;
           var5 = param1.p((byte) 83);
           if (param2) {
-            this.field_f = (ff) null;
+            this.field_f = (MatchState) null;
           }
           var6 = 50;
           var7 = 0;
@@ -384,10 +384,10 @@ class tu extends eha {
         }
     }
 
-    tu(ff param0) {
+    tu(MatchState param0) {
         try {
           this.field_f = param0;
-          this.field_c = new vna();
+          this.field_c = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

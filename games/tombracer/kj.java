@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends nv implements ut {
+final class kj extends Behaviour implements ut {
     private boolean field_s;
     private boolean field_r;
     private int field_u;

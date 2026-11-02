@@ -11,12 +11,12 @@ final class tba extends IntrusiveNode {
     int field_h;
     static String field_g;
 
-    final static iu[] a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
-        iu var20 = null;
-        iu var21 = null;
-        iu var22 = null;
-        iu var18 = null;
-        iu var19 = null;
+    final static Sprite[] a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
+        Sprite var20 = null;
+        Sprite var21 = null;
+        Sprite var22 = null;
+        Sprite var18 = null;
+        Sprite var19 = null;
         int var7 = 0;
         int var8 = 0;
         Object var10 = null;
@@ -30,7 +30,7 @@ final class tba extends IntrusiveNode {
         if (param0 < -62) {
           var7 = bea.field_g;
           var8 = bea.field_a;
-          var20 = new iu(16, param2);
+          var20 = new Sprite(16, param2);
           var20.c();
           bea.b(0, 0, 16, param2, param3, param4);
           var10 = null;
@@ -56,12 +56,12 @@ final class tba extends IntrusiveNode {
             bea.c(15, 4, 1, 0);
           }
           bea.a(var16, var7, var8);
-          return new iu[]{null, null, null, (iu) (var10), var20, (iu) (var11), null, null, null};
+          return new Sprite[]{null, null, null, (Sprite) (var10), var20, (Sprite) (var11), null, null, null};
         }
         tba.a((byte) -71);
         var7Lifetime1 = bea.field_g;
         var8Lifetime1 = bea.field_a;
-        iu var17 = new iu(16, param2);
+        Sprite var17 = new Sprite(16, param2);
         var17.c();
         bea.b(0, 0, 16, param2, param3, param4);
         var10 = null;
@@ -87,7 +87,7 @@ final class tba extends IntrusiveNode {
           bea.c(15, 4, 1, 0);
         }
         bea.a(var16, var7Lifetime1, var8Lifetime1);
-        return new iu[]{null, null, null, (iu) (var10), var17, (iu) (var11), null, null, null};
+        return new Sprite[]{null, null, null, (Sprite) (var10), var17, (Sprite) (var11), null, null, null};
     }
 
     final static ClientException a(Throwable param0, String param1) {

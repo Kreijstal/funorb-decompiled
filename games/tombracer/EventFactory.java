@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EventFactory {
-    final static bs readEvent(int param0, BitPacketBuffer param1, int param2) {
+    final static GameEvent readEvent(int param0, BitPacketBuffer param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        bs stackIn_2_0 = null;
+        GameEvent stackIn_2_0 = null;
         gfa stackIn_5_0 = null;
         Object stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -15,18 +15,18 @@ final class EventFactory {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -8) {
-            stackIn_2_0 = (bs) null;
+            stackIn_2_0 = (GameEvent) null;
             return stackIn_2_0;
           }
           var3_int = param1.b((byte) 44, 4);
           var4 = var3_int;
           if (var4 == 0) {
             stackIn_5_0 = new gfa(param2, param1);
-            return (bs) ((Object) stackIn_5_0);
+            return (GameEvent) ((Object) stackIn_5_0);
           }
           System.out.println("Event type unrecognised: " + var3_int);
           stackIn_7_0 = null;
-          return (bs) (stackIn_7_0);
+          return (GameEvent) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

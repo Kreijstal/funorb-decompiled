@@ -96,7 +96,7 @@ final class di {
                 } else {
                   if (mla.field_a < pna.field_q) {
                     if (mla.field_a == 0) {
-                      csa.a(false);
+                      RoomComponent.a(false);
                     }
                     mla.field_a = mla.field_a + 1;
                   }
@@ -156,7 +156,7 @@ final class di {
         iqa var9 = null;
         int var10 = 0;
         int var11 = 0;
-        ha var12 = null;
+        GraphicsToolkit var12 = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           var3 = null;

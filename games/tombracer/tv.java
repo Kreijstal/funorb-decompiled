@@ -8,7 +8,7 @@ final class tv extends jea {
     static String field_xb;
     static nh field_wb;
 
-    tv(long param0, jea param1, jea param2, jea param3, iu param4, String param5) {
+    tv(long param0, jea param1, jea param2, jea param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

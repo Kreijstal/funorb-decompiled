@@ -105,12 +105,12 @@ final class nia extends ci {
         return var3;
     }
 
-    final static iu a(cn param0, String param1, String param2, int param3) {
+    final static Sprite a(cn param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        iu stackIn_1_0 = null;
+        Sprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

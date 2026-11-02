@@ -4239,13 +4239,13 @@ final class ww extends ka {
                   }
                 } else {
                   var32 = (float)param1.field_x[var17Lifetime1] / 1024.0f;
-                  loa.a(var30, var75, var32, this.field_T[var23], this.field_rb[var23], 65, var76, var31, var27, var28, this.field_xb[var23], var26);
+                  MazeGenerator.a(var30, var75, var32, this.field_T[var23], this.field_rb[var23], 65, var76, var31, var27, var28, this.field_xb[var23], var26);
                   var19[0] = var75[0];
                   var20[0] = var75[1];
-                  loa.a(var30, var75, var32, this.field_T[var24], this.field_rb[var24], 64, var76, var31, var27, var28, this.field_xb[var24], var26);
+                  MazeGenerator.a(var30, var75, var32, this.field_T[var24], this.field_rb[var24], 64, var76, var31, var27, var28, this.field_xb[var24], var26);
                   var19[1] = var75[0];
                   var20[1] = var75[1];
-                  loa.a(var30, var75, var32, this.field_T[var25], this.field_rb[var25], 76, var76, var31, var27, var28, this.field_xb[var25], var26);
+                  MazeGenerator.a(var30, var75, var32, this.field_T[var25], this.field_rb[var25], 76, var76, var31, var27, var28, this.field_xb[var25], var26);
                   var19[2] = var75[0];
                   var20[2] = var75[1];
                   var33 = var32 / 2.0f;

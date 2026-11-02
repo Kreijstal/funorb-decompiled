@@ -25,7 +25,7 @@ final class jh extends ge {
         return false;
     }
 
-    jh(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    jh(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -142,13 +142,13 @@ final class jh extends ge {
           var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.h(param1, 0);
-          var9.a((byte) 83, (nv) (new eq(param2, param0)));
+          var9.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new ska(param2, param0);
           var6 = ci.a(2, param1 ^ -4);
           var6.a(-43, true);
           var5.a(var6, (byte) 73);
           this.a((byte) 43, var5, param2);
-          var9.a((byte) 83, (nv) (var5));
+          var9.a((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (boa) (var7.a(7, 100));
           var8.b(param1 + 111, 11);

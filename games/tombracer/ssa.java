@@ -6,7 +6,7 @@ import java.io.*;
 final class ssa {
     private iea field_c;
     private int[] field_a;
-    private ha field_b;
+    private GraphicsToolkit field_b;
     static String field_d;
     static jea field_g;
     private iea field_f;
@@ -277,7 +277,7 @@ final class ssa {
         }
     }
 
-    ssa(ha param0) {
+    ssa(GraphicsToolkit param0) {
         this.field_e = null;
         this.field_a = new int[4];
         try {

@@ -75,7 +75,7 @@ abstract class lea extends kna {
         return false;
     }
 
-    lea(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    lea(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

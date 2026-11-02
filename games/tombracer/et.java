@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class et extends cg {
-    vna field_l;
+    IntrusiveDeque field_l;
     private l field_k;
     en field_m;
     static long field_j;
@@ -345,7 +345,7 @@ final class et extends cg {
     }
 
     et(l param0) {
-        this.field_l = new vna();
+        this.field_l = new IntrusiveDeque();
         this.field_m = new en();
         try {
           this.field_k = param0;

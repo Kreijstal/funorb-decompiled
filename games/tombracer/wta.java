@@ -101,7 +101,7 @@ final class wta extends kna {
           var6 = new rea(param2, param0);
           var6.a(25, 12, 1, 25, 12);
           var6.b((byte) 127, true);
-          var9.a((byte) 83, (nv) (var6));
+          var9.a((byte) 83, (Behaviour) (var6));
           var7 = rm.field_a;
           var8 = (dc) (var7.a(11, param1 ^ 116));
           var9.a(var6, (byte) 124, var8);
@@ -143,7 +143,7 @@ final class wta extends kna {
         field_H = null;
     }
 
-    wta(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    wta(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

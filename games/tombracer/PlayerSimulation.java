@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dt {
+final class PlayerSimulation {
     private boolean field_h;
     private int[] field_j;
     private int field_e;
-    Player field_g;
+    Player player;
     eha field_i;
     private boolean field_a;
-    Room[] field_b;
+    Room[] rooms;
     private int field_l;
     private boolean field_k;
-    int field_c;
+    int tick;
     static String field_n;
     private boolean field_f;
     private int field_m;
@@ -32,10 +32,10 @@ final class dt {
             return stackIn_2_0;
           }
           var3_int = param1.c(115);
-          if (var3_int >= this.field_b.length - 1) {
+          if (var3_int >= this.rooms.length - 1) {
             return null;
           }
-          stackIn_6_0 = this.field_b[1 + var3_int];
+          stackIn_6_0 = this.rooms[1 + var3_int];
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,7 +53,7 @@ final class dt {
 
     private final boolean c(int param0, int param1) {
         if (param1 != -1) {
-          this.field_b = (Room[]) null;
+          this.rooms = (Room[]) null;
           return -1 != this.field_j[param0] ? true : false;
         }
         return -1 != this.field_j[param0] ? true : false;
@@ -103,13 +103,13 @@ final class dt {
           if (this.c(param0, -1)) {
             return true;
           }
-          stackIn_6_0 = !(!this.field_b[this.field_g.r(param1 ^ -10957)].b(param0, (byte) -44));
+          stackIn_6_0 = !(!this.rooms[this.player.r(param1 ^ -10957)].b(param0, (byte) -44));
           return stackIn_6_0;
         }
         if (this.c(param0, -1)) {
           stackIn_12_0 = true;
         } else {
-          if (this.field_b[this.field_g.r(param1 ^ -10957)].b(param0, (byte) -44)) {
+          if (this.rooms[this.player.r(param1 ^ -10957)].b(param0, (byte) -44)) {
             return true;
           }
           stackIn_12_0 = false;
@@ -124,7 +124,7 @@ final class dt {
         if (!param0) {
           return -119;
         }
-        return this.field_g.f((byte) -88).field_a;
+        return this.player.f((byte) -88).field_a;
     }
 
     final int l(int param0) {
@@ -175,7 +175,7 @@ final class dt {
         try {
           var5 = this.m(9262);
           if (var5 != null) {
-            var5.a(15, param0, param1, param0.f((byte) -96), this.field_c, param3);
+            var5.a(15, param0, param1, param0.f((byte) -96), this.tick, param3);
           }
           if (param2 != 1) {
             this.d(18, 84);
@@ -197,7 +197,7 @@ final class dt {
 
     public static void n(int param0) {
         if (param0 != 0) {
-          dt.n(-118);
+          PlayerSimulation.n(-118);
           field_n = null;
           return;
         }
@@ -242,31 +242,31 @@ final class dt {
           if (this.field_a) {
             return;
           }
-          this.field_f = this.field_g.d((byte) -95, 3);
+          this.field_f = this.player.d((byte) -95, 3);
           this.field_h = false;
-          this.field_g.f((byte) -64).d(param1, 0);
+          this.player.f((byte) -64).d(param1, 0);
           if (this.field_a) {
             return;
           }
-          this.field_c = this.field_c + 1;
+          this.tick = this.tick + 1;
           return;
         }
         if (this.field_a) {
           return;
         }
-        this.field_f = this.field_g.d((byte) -95, 3);
+        this.field_f = this.player.d((byte) -95, 3);
         this.field_h = false;
-        this.field_g.f((byte) -64).d(param1, 0);
+        this.player.f((byte) -64).d(param1, 0);
         if (this.field_a) {
           return;
         }
-        this.field_c = this.field_c + 1;
+        this.tick = this.tick + 1;
     }
 
     final void a(int param0, int param1, int param2) {
         this.field_j[param0] = param1;
         if (param2 >= -28) {
-          this.field_g = (Player) null;
+          this.player = (Player) null;
         }
     }
 
@@ -281,13 +281,13 @@ final class dt {
         if (param0 == -1) {
           var2.g(58);
           var3 = this.a((byte) 104, var2);
-          if (this.field_g.l(false) &&
+          if (this.player.l(false) &&
             var3 == null) {
             var3 = this.a(param0 - 114);
           }
           var7 = this.m(param0 + 9263);
           if (var7 != null) {
-            var7.a(this.field_g, var2, false);
+            var7.a(this.player, var2, false);
           }
           if (var3 == null) {
             this.a(89, true);
@@ -300,13 +300,13 @@ final class dt {
         this.a((Room) null, -52);
         var2.g(58);
         var3Lifetime1 = this.a((byte) 104, var2);
-        if (this.field_g.l(false) &&
+        if (this.player.l(false) &&
           var3Lifetime1 == null) {
           var3Lifetime1 = this.a(param0 - 114);
         }
         var6 = this.m(param0 + 9263);
         if (var6 != null) {
-          var6.a(this.field_g, var2, false);
+          var6.a(this.player, var2, false);
         }
         if (var3Lifetime1 == null) {
           this.a(89, true);
@@ -330,7 +330,7 @@ final class dt {
         RuntimeException var3_ref = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var7 = this.field_b;
+          var7 = this.rooms;
           var3 = var7;
           if (param1 != -1) {
             discarded$1 = this.e(41, -81);
@@ -369,7 +369,7 @@ final class dt {
             return;
           }
           if (var3 != null) {
-            var3.a(15, param0, 0, param0.f((byte) -118), this.field_c, 2);
+            var3.a(15, param0, 0, param0.f((byte) -118), this.tick, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -386,15 +386,15 @@ final class dt {
         }
     }
 
-    final void b(byte param0) {
-        System.out.println("DUMPING STATE on tick " + this.field_c);
-        System.out.println("Player: " + this.field_g.toString());
+    final void dumpState(byte param0) {
+        System.out.println("DUMPING STATE on tick " + this.tick);
+        System.out.println("Player: " + this.player.toString());
         if (param0 != 114) {
           this.field_k = false;
-          this.field_g.f((byte) 65).d(true);
+          this.player.f((byte) 65).dumpDebug(true);
           return;
         }
-        this.field_g.f((byte) 65).d(true);
+        this.player.f((byte) 65).dumpDebug(true);
     }
 
     final boolean k(int param0) {
@@ -421,36 +421,36 @@ final class dt {
     final Room a(int param0) {
         if (param0 >= -22) {
           this.b(-15);
-          return this.field_b[0];
+          return this.rooms[0];
         }
-        return this.field_b[0];
+        return this.rooms[0];
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         if (param2 >= -86) {
           iq var6 = (iq) null;
           this.a((iq) null, 103);
-          this.field_b[param3].b(false, param1, param0);
+          this.rooms[param3].b(false, param1, param0);
           return;
         }
-        this.field_b[param3].b(false, param1, param0);
+        this.rooms[param3].b(false, param1, param0);
     }
 
     final void a(byte param0, int param1, int param2) {
         if (param0 > -11) {
           this.a(96, 125);
-          this.field_b[param2].c(-22490, param1);
+          this.rooms[param2].c(-22490, param1);
           return;
         }
-        this.field_b[param2].c(-22490, param1);
+        this.rooms[param2].c(-22490, param1);
     }
 
     final int b(boolean param0, int param1) {
         if (param0) {
           this.a((byte) 29, -34, 71);
-          return iia.d(this.e(param1, 0), this.field_b[this.field_g.r(-101)].a(-121, param1), 2);
+          return iia.d(this.e(param1, 0), this.rooms[this.player.r(-101)].a(-121, param1), 2);
         }
-        return iia.d(this.e(param1, 0), this.field_b[this.field_g.r(-101)].a(-121, param1), 2);
+        return iia.d(this.e(param1, 0), this.rooms[this.player.r(-101)].a(-121, param1), 2);
     }
 
     final boolean h(int param0) {
@@ -463,12 +463,12 @@ final class dt {
 
     final Room a(byte param0) {
         int var2 = -127 / ((param0 - 64) / 59);
-        return this.field_b[this.field_g.r(-108)];
+        return this.rooms[this.player.r(-108)];
     }
 
     final int f(int param0) {
         int var2 = -97 % ((34 - param0) / 56);
-        return this.field_b.length;
+        return this.rooms.length;
     }
 
     final void a(int param0, int param1, Room param2) {
@@ -477,7 +477,7 @@ final class dt {
           if (param0 != -28088) {
             this.d(41);
           }
-          this.field_b[param1] = param2;
+          this.rooms[param1] = param2;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dt.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -499,10 +499,10 @@ final class dt {
         if (!param0) {
           return (Room) null;
         }
-        return this.field_b[param1];
+        return this.rooms[param1];
     }
 
-    dt(eha param0, Player param1, int param2, int param3) {
+    PlayerSimulation(eha param0, Player param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -514,11 +514,11 @@ final class dt {
         this.field_j = new int[9];
         try {
           this.field_e = param2;
-          this.field_g = param1;
+          this.player = param1;
           this.field_d = param3;
           this.field_i = param0;
           this.field_m = this.field_d + this.field_e;
-          this.field_b = new Room[this.field_m];
+          this.rooms = new Room[this.field_m];
           for (var5_int = 0; var5_int < this.field_j.length; var5_int++) {
             this.field_j[var5_int] = -1;
           }

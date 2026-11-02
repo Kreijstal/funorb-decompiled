@@ -37,7 +37,7 @@ final class gu extends me {
         SecondaryNodeDequeIterator.a(192, var6, 3145728, this.field_n, (byte) 47, var7 - 16, this.field_m - this.field_n / 2);
         tp.a(-(this.field_n / 2) + this.field_m, (byte) -85, var7 - 16, 5242880, 2, var6, this.field_n);
         oka.a(wj.field_b, 16777215, kn.field_p, -1, var7 + 4, this.field_m, 0);
-        for (var9 = 0; var9 < this.field_g.field_H.length; var9++) {
+        for (var9 = 0; var9 < this.field_g.players.length; var9++) {
           var10 = this.field_g.field_e.field_b[var9];
           if (var10 != -1) {
             if (var10 == var2) {
@@ -45,8 +45,8 @@ final class gu extends me {
             } else {
               var11 = var4;
             }
-            var12 = this.field_g.field_H[var10].e(false);
-            var13 = this.field_g.field_H[var10].j(false);
+            var12 = this.field_g.players[var10].e(false);
+            var13 = this.field_g.players[var10].j(false);
             var14 = var13 + var12;
             oka.a(rka.a(1 + var9, 114) + "  " + this.field_i.a(var10, false) + "  " + rja.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, kn.field_p, -1, var8 + var9 * var5, this.field_m, 0);
           }

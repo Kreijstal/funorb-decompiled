@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tl extends nv implements ut {
+final class tl extends Behaviour implements ut {
     static String field_p;
     private jma field_s;
     static int field_r;

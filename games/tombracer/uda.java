@@ -4,7 +4,7 @@
 final class uda extends qra {
     static nh field_r;
     private daa field_m;
-    private vna field_n;
+    private IntrusiveDeque field_n;
     static String field_w;
     static String field_o;
     static int field_q;
@@ -183,7 +183,7 @@ final class uda extends qra {
         try {
           this.field_m = new daa(this.field_c);
           this.field_m.field_b = new w();
-          this.field_n = new vna();
+          this.field_n = new IntrusiveDeque();
           for (var3_int = 0; var3_int < 13; var3_int++) {
             var4 = aaa.a(false);
             var5 = koa.b(0);
@@ -204,7 +204,7 @@ final class uda extends qra {
             }
             this.field_n.b((byte) -104, var8);
           }
-          var3_intLifetime1 = param0.field_k.field_H.length;
+          var3_intLifetime1 = param0.field_k.players.length;
           this.field_t = new rp[var3_intLifetime1];
           this.field_y = false;
           return;

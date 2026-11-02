@@ -184,12 +184,12 @@ final class av {
         int var5_int;
         int var6;
         int var7;
-        vna var8;
+        IntrusiveDeque var8;
         int[][] var9;
         int[][] var10;
         int var4Lifetime1;
         var6 = TombRacer.field_G ? 1 : 0;
-        var8 = new vna();
+        var8 = new IntrusiveDeque();
         for (var3_int = 0; this.field_f.field_f > var3_int; var3_int++) {
           for (var4 = 0; this.field_f.field_a > var4; var4++) {
             var5_int = 0;

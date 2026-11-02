@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends IntrusiveNode {
-    private int field_h;
-    private int field_k;
+final class PendingEvent extends IntrusiveNode {
+    private int room;
+    private int duration;
     private int field_l;
-    private int field_f;
-    private bs field_g;
-    private int field_j;
-    private int field_i;
+    private int instigator;
+    private GameEvent field_g;
+    private int start;
+    private int course;
 
     final boolean a(int param0, int param1) {
         if (this.b(120)) {
-          if (param0 > this.field_h) {
+          if (param0 > this.room) {
             return true;
           }
           if (param1 != 3) {
@@ -34,7 +34,7 @@ final class pi extends IntrusiveNode {
         }
         if (param1 != -1) {
           this.a(-125, -75, 17);
-          if (this.field_k <= 0) {
+          if (this.duration <= 0) {
             return false;
           }
           if (param0 >= this.field_l) {
@@ -42,7 +42,7 @@ final class pi extends IntrusiveNode {
           }
           return false;
         }
-        if (this.field_k <= 0) {
+        if (this.duration <= 0) {
           return false;
         }
         if (param0 >= this.field_l) {
@@ -54,21 +54,21 @@ final class pi extends IntrusiveNode {
     private final int a(boolean param0) {
         if (param0) {
           this.c(40, 38);
-          return this.field_j;
+          return this.start;
         }
-        return this.field_j;
+        return this.start;
     }
 
-    pi(bs param0, int param1, int param2, int param3, int param4, int param5) {
+    PendingEvent(GameEvent param0, int param1, int param2, int param3, int param4, int param5) {
         this(param0, param1, param2, param3, param4);
         try {
-          this.field_h = param5;
+          this.room = param5;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final boolean a(pi param0, int param1) {
+    final boolean a(PendingEvent param0, int param1) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -84,16 +84,16 @@ final class pi extends IntrusiveNode {
           if (!this.field_g.a(false, param0.field_g)) {
             return false;
           }
-          if (this.field_i != param0.field_i) {
+          if (this.course != param0.course) {
             return false;
           }
           if (this.b(120) &&
-            param0.field_h != this.field_h) {
+            param0.room != this.room) {
             return false;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_k != param1 &&
-            param0.field_k != 0) {
+          if (this.duration != param1 &&
+            param0.duration != 0) {
             var3_int = this.a(false);
             var4 = param0.a(false);
             var5 = this.c(-30481);
@@ -102,11 +102,11 @@ final class pi extends IntrusiveNode {
               var6 >= var3_int) {
               var7 = iia.d(var5, var6, 2);
               var8 = et.b(var4, var3_int, param1 ^ -120);
-              if (this.field_k < param0.field_k) {
-                this.field_f = param0.field_f;
+              if (this.duration < param0.duration) {
+                this.instigator = param0.instigator;
               }
-              this.field_j = var8;
-              this.field_k = var7 - var8;
+              this.start = var8;
+              this.duration = var7 - var8;
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -114,12 +114,12 @@ final class pi extends IntrusiveNode {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (this.field_k == 0) {
-              this.field_k = 0;
+            if (this.duration == 0) {
+              this.duration = 0;
               return true;
             }
-            this.field_f = param0.field_f;
-            this.field_k = 0;
+            this.instigator = param0.instigator;
+            this.duration = 0;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,10 +140,10 @@ final class pi extends IntrusiveNode {
         if (param1 < 95) {
           return false;
         }
-        if (this.field_j > param0) {
+        if (this.start > param0) {
           return false;
         }
-        if (0 == this.field_k) {
+        if (0 == this.duration) {
           return true;
         }
         if (param0 >= this.field_l) {
@@ -152,24 +152,24 @@ final class pi extends IntrusiveNode {
         return true;
     }
 
-    final void a(dt param0, int param1) {
+    final void a(PlayerSimulation param0, int param1) {
         int discarded$0 = 0;
         try {
           if (param1 > -52) {
             discarded$0 = this.c(22);
           }
-          this.field_g.a(this.field_h, (byte) 102, param0);
+          this.field_g.a(this.room, (byte) 102, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(dt param0, int param1, int param2) {
+    final void a(PlayerSimulation param0, int param1, int param2) {
         try {
           if (param2 != 0) {
             this.toString();
           }
-          this.field_g.a(param0, 113, this.field_h, param1);
+          this.field_g.a(param0, 113, this.room, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -179,7 +179,7 @@ final class pi extends IntrusiveNode {
         if (param0 != 3) {
           return -84;
         }
-        return this.field_i;
+        return this.course;
     }
 
     private final void a(BitPacketBuffer param0, int param1) {
@@ -189,13 +189,13 @@ final class pi extends IntrusiveNode {
             this.a(3, -70, 47);
           }
           this.field_g = EventFactory.readEvent(-90, param0, 26);
-          this.field_f = param0.b((byte) 44, 3);
-          this.field_i = param0.b((byte) 44, 3);
-          this.field_j = param0.b((byte) 44, 32);
-          this.field_k = param0.b((byte) 44, 8);
-          this.field_l = this.field_j + 50 * this.field_k;
+          this.instigator = param0.b((byte) 44, 3);
+          this.course = param0.b((byte) 44, 3);
+          this.start = param0.b((byte) 44, 32);
+          this.duration = param0.b((byte) 44, 8);
+          this.field_l = this.start + 50 * this.duration;
           if (this.b(122)) {
-            this.field_h = param0.b((byte) 44, 5);
+            this.room = param0.b((byte) 44, 5);
           }
           param0.i((byte) 98);
         } catch (RuntimeException runtimeException) {
@@ -212,11 +212,11 @@ final class pi extends IntrusiveNode {
 
     final int b(int param0, int param1) {
         if (param1 <= -15) {
-          return param0 - this.field_j;
+          return param0 - this.start;
         }
-        dt var4 = (dt) null;
-        this.a((dt) null, -69);
-        return param0 - this.field_j;
+        PlayerSimulation var4 = (PlayerSimulation) null;
+        this.a((PlayerSimulation) null, -69);
+        return param0 - this.start;
     }
 
     private final int c(int param0) {
@@ -228,28 +228,28 @@ final class pi extends IntrusiveNode {
 
     public final String toString() {
         String var1 = "PendingEvent";
-        var1 = var1 + "(instigator: " + this.field_f + ", course:" + this.field_i;
+        var1 = var1 + "(instigator: " + this.instigator + ", course:" + this.course;
         if (this.b(121)) {
-          var1 = var1 + ", room:" + this.field_h;
+          var1 = var1 + ", room:" + this.room;
         }
-        var1 = var1 + ", start:" + this.field_j + ", duration:" + this.field_k + ")";
+        var1 = var1 + ", start:" + this.start + ", duration:" + this.duration + ")";
         return var1;
     }
 
-    private pi(bs param0, int param1, int param2, int param3, int param4) {
+    private PendingEvent(GameEvent param0, int param1, int param2, int param3, int param4) {
         try {
           this.field_l = param4 * 50 + param3;
           this.field_g = param0;
-          this.field_j = param3;
-          this.field_k = param4;
-          this.field_i = param2;
-          this.field_f = param1;
+          this.start = param3;
+          this.duration = param4;
+          this.course = param2;
+          this.instigator = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    pi(BitPacketBuffer param0) {
+    PendingEvent(BitPacketBuffer param0) {
         try {
           this.a(param0, -124);
         } catch (RuntimeException runtimeException) {
@@ -269,12 +269,12 @@ final class pi extends IntrusiveNode {
             this.c(123, -124);
           }
           this.field_g.a(param0, -5);
-          param0.a((byte) -32, this.field_f, 3);
-          param0.a((byte) -2, this.field_i, 3);
-          param0.a((byte) -128, this.field_j, 32);
-          param0.a((byte) 95, this.field_k, 8);
+          param0.a((byte) -32, this.instigator, 3);
+          param0.a((byte) -2, this.course, 3);
+          param0.a((byte) -128, this.start, 32);
+          param0.a((byte) 95, this.duration, 8);
           if (this.b(122)) {
-            param0.a((byte) -125, this.field_h, 5);
+            param0.a((byte) -125, this.room, 5);
             param0.k(-1826190686);
           } else {
             param0.k(-1826190686);

@@ -44,9 +44,9 @@ final class mha extends rj {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        iu var15 = null;
-        iu var16 = null;
-        iu var13 = null;
+        Sprite var15 = null;
+        Sprite var16 = null;
+        Sprite var13 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = TombRacer.field_G ? 1 : 0;
@@ -64,7 +64,7 @@ final class mha extends rj {
           var9 = var15.field_n << 1;
           var10 = var15.field_k << 1;
           if (null == aj.field_l) {
-            aj.field_l = new iu(var9, var10);
+            aj.field_l = new Sprite(var9, var10);
             nm.a(aj.field_l, (byte) 108);
             var15.a(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
@@ -72,7 +72,7 @@ final class mha extends rj {
             return;
           }
           if (aj.field_l.field_m < var9) {
-            aj.field_l = new iu(var9, var10);
+            aj.field_l = new Sprite(var9, var10);
             nm.a(aj.field_l, (byte) 108);
             var15.a(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
@@ -80,7 +80,7 @@ final class mha extends rj {
             return;
           }
           if (var10 > aj.field_l.field_q) {
-            aj.field_l = new iu(var9, var10);
+            aj.field_l = new Sprite(var9, var10);
             nm.a(aj.field_l, (byte) 108);
             var15.a(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
@@ -99,7 +99,7 @@ final class mha extends rj {
           var9Lifetime1 = var16.field_n << 1;
           var10Lifetime1 = var16.field_k << 1;
           if (null == aj.field_l) {
-            aj.field_l = new iu(var9Lifetime1, var10Lifetime1);
+            aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
             nm.a(aj.field_l, (byte) 108);
             var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
@@ -107,7 +107,7 @@ final class mha extends rj {
             return;
           }
           if (aj.field_l.field_m < var9Lifetime1) {
-            aj.field_l = new iu(var9Lifetime1, var10Lifetime1);
+            aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
             nm.a(aj.field_l, (byte) 108);
             var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
@@ -115,7 +115,7 @@ final class mha extends rj {
             return;
           }
           if (var10Lifetime1 > aj.field_l.field_q) {
-            aj.field_l = new iu(var9Lifetime1, var10Lifetime1);
+            aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
             nm.a(aj.field_l, (byte) 108);
             var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
@@ -137,7 +137,7 @@ final class mha extends rj {
         if (uh.field_k != var8) {
           return;
         }
-        iu var12 = pq.field_b[1];
+        Sprite var12 = pq.field_b[1];
         var12.a(var5 - (var12.field_m >> 1), -(var12.field_q >> 1) + var6, 256);
     }
 

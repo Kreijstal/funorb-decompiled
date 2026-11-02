@@ -38,9 +38,9 @@ final class jq extends ob {
         var2.d(var2.position - var3, (byte) -102);
     }
 
-    final static qk a(byte[] param0, int param1, byte param2, int param3, cka param4, int param5, boolean param6, int param7) {
+    final static qk a(byte[] param0, int param1, byte param2, int param3, OpenGlToolkit param4, int param5, boolean param6, int param7) {
         RuntimeException var8 = null;
-        cka var9 = null;
+        OpenGlToolkit var9 = null;
         qk stackIn_8_0 = null;
         qk stackIn_10_0 = null;
         qk stackIn_12_0 = null;
@@ -52,8 +52,8 @@ final class jq extends ob {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 52) {
-            var9 = (cka) null;
-            jq.a((byte[]) null, 99, (byte) 8, -3, (cka) null, -12, false, 23);
+            var9 = (OpenGlToolkit) null;
+            jq.a((byte[]) null, 99, (byte) 8, -3, (OpenGlToolkit) null, -12, false, 23);
           }
           if (!param4.field_Gb && (!cla.a(9181, param5) ||
             !cla.a(9181, param7))) {

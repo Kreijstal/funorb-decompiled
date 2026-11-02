@@ -41,7 +41,7 @@ final class ava {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        vna var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         pha var12 = null;
@@ -200,7 +200,7 @@ final class ava {
                 var20 = "<img=" + (-1 + var12.field_Ab) + ">" + var33;
               }
             } else {
-              var20 = "<img=" + (csa.field_n + var12.field_Ab - 4) + ">" + var33;
+              var20 = "<img=" + (RoomComponent.field_n + var12.field_Ab - 4) + ">" + var33;
             }
             var12.field_Nb.field_r = var20;
             if (!var12.f(162)) {

@@ -10,7 +10,7 @@ final class pe extends tfa implements gf {
     final static String[] a(PacketBuffer param0, byte param1) {
         int var4 = 0;
         int var5 = 0;
-        vna var6 = null;
+        IntrusiveDeque var6 = null;
         String[] stackIn_3_0 = null;
         PacketBuffer stackIn_6_0 = null;
         String[] stackIn_13_0 = null;
@@ -23,7 +23,7 @@ final class pe extends tfa implements gf {
         String[] var3 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          var6 = new vna();
+          var6 = new IntrusiveDeque();
           if (param1 < 32) {
             stackIn_3_0 = (String[]) null;
             return stackIn_3_0;

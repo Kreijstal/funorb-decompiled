@@ -6,7 +6,7 @@ final class tp extends ge {
     static String field_J;
     static nh field_K;
 
-    final static Room a(int param0, boolean param1, dt param2, int param3, byte param4) {
+    final static Room a(int param0, boolean param1, PlayerSimulation param2, int param3, byte param4) {
         Object var5 = null;
         g var5_ref = null;
         RuntimeException var5_ref2 = null;
@@ -160,11 +160,11 @@ final class tp extends ge {
           var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.h(param1, 0);
-          var4.a((byte) 83, (nv) (new eq(param2, param0)));
+          var4.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new ov(param2, param0);
           var5.a(new up(6, 10), true);
           this.a((byte) 43, var5, param2);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (boa) (var6.a(7, param1 ^ 77));
           var7.b(113, 15);
@@ -185,7 +185,7 @@ final class tp extends ge {
         }
     }
 
-    tp(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    tp(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

@@ -183,7 +183,7 @@ final class gq extends uta {
 
     final boolean a(String param0, byte param1) {
         try {
-          vna var3 = null;
+          IntrusiveDeque var3 = null;
           jj var3_ref = null;
           RuntimeException var3_ref2 = null;
           cr var4 = null;
@@ -255,7 +255,7 @@ final class gq extends uta {
         }
     }
 
-    gq(vna param0, il param1, PlatformTaskDispatcher param2) {
+    gq(IntrusiveDeque param0, il param1, PlatformTaskDispatcher param2) {
         super(param1, param2);
         int incrementValue$1 = 0;
         RuntimeException runtimeException = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kna extends csa {
+abstract class kna extends RoomComponent {
     private Trap field_A;
     static String field_E;
     static String field_C;
@@ -18,7 +18,7 @@ abstract class kna extends csa {
         }
     }
 
-    kna(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    kna(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -32,7 +32,7 @@ abstract class kna extends csa {
 
     final void a(boolean param0, boolean param1, Room param2, int param3, int param4, int param5, Trap param6) {
         int var9 = 0;
-        csa stackIn_14_0;
+        RoomComponent stackIn_14_0;
         boolean stackIn_14_1;
         boolean stackIn_14_2;
         Room stackIn_14_3;
@@ -48,7 +48,7 @@ abstract class kna extends csa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
         mka var10 = null;
-        csa var11 = null;
+        RoomComponent var11 = null;
         int var12 = 0;
         Trap var13 = null;
         var12 = TombRacer.field_G ? 1 : 0;
@@ -81,7 +81,7 @@ abstract class kna extends csa {
               stackIn_14_5 = param4;
               stackIn_14_6 = var10;
               stackIn_15_7 = !(param1);
-              ((csa) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5 + ((mka) (Object) stackIn_14_6).a(stackIn_15_7), param5, var13);
+              ((RoomComponent) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5 + ((mka) (Object) stackIn_14_6).a(stackIn_15_7), param5, var13);
             }
           }
           if (param6 == null) {

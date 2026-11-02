@@ -28,7 +28,7 @@ final class fv {
         int var3 = 0;
         nh var4 = null;
         int var2 = this.field_h.b((byte) -75).a(param0 ^ 28, this.field_f);
-        ha var3_ref_ha = tga.field_a;
+        GraphicsToolkit var3_ref_ha = tga.field_a;
         int var4_int = this.field_g;
         int var5 = this.field_c;
         int var6 = this.field_j;

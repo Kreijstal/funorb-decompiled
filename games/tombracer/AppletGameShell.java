@@ -680,7 +680,7 @@ abstract class AppletGameShell extends GameApplet {
             nja.field_J.b(-79)) {
             if (nja.field_J.a("", 108)) {
               if (nja.field_J.c("", -127)) {
-                jga.a((byte) -45, nja.field_J);
+                TextResourceLoader.loadStrings((byte) -45, nja.field_J);
                 nja.field_J = null;
                 ea.a(-33);
               }

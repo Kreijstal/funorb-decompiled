@@ -134,7 +134,7 @@ final class hm extends tfa implements gf {
         tv.field_wb = null;
         sta.field_y = null;
         bm.field_f = null;
-        vna.field_c = null;
+        IntrusiveDeque.field_c = null;
         wh.field_y = null;
         Room.field_j = null;
         lm.field_m = null;

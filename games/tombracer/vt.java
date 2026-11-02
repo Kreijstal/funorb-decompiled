@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vt {
-    static vna field_a;
+    static IntrusiveDeque field_a;
     private static String field_z;
 
     public static void a(byte param0) {
@@ -18,6 +18,6 @@ final class vt {
 
     static {
         field_z = "vt.A(";
-        field_a = new vna();
+        field_a = new IntrusiveDeque();
     }
 }

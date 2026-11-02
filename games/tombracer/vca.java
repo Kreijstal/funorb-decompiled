@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vca implements bo {
-    private pi field_a;
+    private PendingEvent field_a;
     static int[] field_c;
     static jea field_e;
     static ur field_d;
     static String field_b;
 
-    final pi a(byte param0) {
+    final PendingEvent a(byte param0) {
         if (param0 <= 71) {
           field_d = (ur) null;
           return this.field_a;
@@ -22,7 +22,7 @@ final class vca implements bo {
 
     public final void a(BitPacketBuffer param0, byte param1) {
         try {
-          this.field_a = new pi(param0);
+          this.field_a = new PendingEvent(param0);
           if (param1 != -19) {
             field_e = (jea) null;
           }

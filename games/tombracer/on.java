@@ -33,10 +33,10 @@ final class on {
         this.field_c = true;
     }
 
-    final static ha a(java.awt.Canvas param0, d param1, int param2, byte param3) {
+    final static GraphicsToolkit a(java.awt.Canvas param0, d param1, int param2, byte param3) {
         RuntimeException var4 = null;
-        ha stackIn_2_0 = null;
-        cka stackIn_4_0 = null;
+        GraphicsToolkit stackIn_2_0 = null;
+        OpenGlToolkit stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -45,10 +45,10 @@ final class on {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 < -76) {
-            stackIn_4_0 = new cka(param0, param1, param2);
-            return (ha) ((Object) stackIn_4_0);
+            stackIn_4_0 = new OpenGlToolkit(param0, param1, param2);
+            return (GraphicsToolkit) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (ha) null;
+          stackIn_2_0 = (GraphicsToolkit) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

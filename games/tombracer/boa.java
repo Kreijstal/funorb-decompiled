@@ -177,17 +177,17 @@ final class boa extends dg {
         Trap var3;
         int var4;
         int var7_int;
-        nv var7;
-        nv var8_ref_nv;
+        Behaviour var7;
+        Behaviour var8_ref_nv;
         int var8;
         pc var9;
         int var10;
         w var11;
-        vna var12;
+        IntrusiveDeque var12;
         uja var13;
-        vna var14;
+        IntrusiveDeque var14;
         uja var15;
-        vna var16;
+        IntrusiveDeque var16;
         uja var17;
         int var8Lifetime1;
         pc var9Lifetime1;
@@ -220,12 +220,12 @@ final class boa extends dg {
           var12 = var3.field_u;
           var13 = new uja(var12);
           var7_int = 0;
-          var8_ref_nv = (nv) (var13.a(true));
+          var8_ref_nv = (Behaviour) (var13.a(true));
           while (var8_ref_nv != null) {
             if (var8_ref_nv instanceof ska) {
               var7_int = var7_int != 0 | ((ska) (var8_ref_nv)).g((byte) -68) ? 1 : 0;
             }
-            var8_ref_nv = (nv) (var13.a(-1));
+            var8_ref_nv = (Behaviour) (var13.a(-1));
           }
           boolean decompiledFrameRemainder0 = true;
           if (var7_int != 0 && (this.field_x == null ||
@@ -248,7 +248,7 @@ final class boa extends dg {
         if (16 == this.field_v) {
           var14 = var3.field_u;
           var15 = new uja(var14);
-          var7 = (nv) (var15.a(true));
+          var7 = (Behaviour) (var15.a(true));
           while (var7 != null) {
             if (var7 instanceof ov) {
               if (((ov) (var7)).b(-98)) {
@@ -265,7 +265,7 @@ final class boa extends dg {
                 if (this.field_w != null &&
                   var8 == this.field_m &&
                   this.field_w.isLinked((byte) 91)) {
-                  var7 = (nv) (var15.a(-1));
+                  var7 = (Behaviour) (var15.a(-1));
                   continue;
                 }
                 if (this.field_m < var8) {
@@ -281,31 +281,31 @@ final class boa extends dg {
                 if (null != this.field_w) {
                   this.field_w.a(-94, var11);
                   this.field_w = null;
-                  var7 = (nv) (var15.a(-1));
+                  var7 = (Behaviour) (var15.a(-1));
                   continue;
                 }
               }
             }
-            var7 = (nv) (var15.a(-1));
+            var7 = (Behaviour) (var15.a(-1));
           }
         }
         if (this.field_v == 15) {
           var16 = var3.field_u;
           var17 = new uja(var16);
-          var7 = (nv) (var17.a(true));
+          var7 = (Behaviour) (var17.a(true));
           while (var7 != null) {
             if (!(var7 instanceof ov)) {
-              var7 = (nv) (var17.a(-1));
+              var7 = (Behaviour) (var17.a(-1));
               continue;
             }
             if (!((ov) (var7)).b(-19)) {
               if (this.field_u == null) {
-                var7 = (nv) (var17.a(-1));
+                var7 = (Behaviour) (var17.a(-1));
                 continue;
               }
               this.field_u.a(param0 - 100, var11);
               this.field_u = null;
-              var7 = (nv) (var17.a(-1));
+              var7 = (Behaviour) (var17.a(-1));
               continue;
             }
             var8Lifetime1 = 1;
@@ -333,7 +333,7 @@ final class boa extends dg {
               }
               this.field_u = var11.a(new fm(39 + this.field_p - 1, this.b((byte) 87), this.c((byte) 127), this.e((byte) -111)), -58);
             }
-            var7 = (nv) (var17.a(-1));
+            var7 = (Behaviour) (var17.a(-1));
           }
         }
         if (var3.j(param0) &&

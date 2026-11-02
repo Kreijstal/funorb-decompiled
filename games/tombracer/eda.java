@@ -4,7 +4,7 @@
 final class eda {
     int field_a;
     int field_b;
-    static da field_f;
+    static GameFont field_f;
     static int field_e;
     int field_c;
     int field_d;

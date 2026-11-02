@@ -5,7 +5,7 @@ final class usa extends vw {
     private jagdx.IDirect3DVertexShader field_f;
     private static float[] field_d;
     private hk field_g;
-    private cta field_e;
+    private Direct3DToolkit field_e;
 
     final void a(int param0) {
         this.field_e.a((jagdx.IDirect3DVertexShader) null, -1);
@@ -177,7 +177,7 @@ final class usa extends vw {
         }
     }
 
-    usa(cta param0, cn param1, hk param2) {
+    usa(Direct3DToolkit param0, cn param1, hk param2) {
         super(param0);
         this.field_g = param2;
         this.field_e = param0;

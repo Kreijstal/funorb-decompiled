@@ -181,8 +181,8 @@ final class vba extends we {
     private final boolean a(boolean param0, int param1) {
         int discarded$0 = 0;
         if (param0) {
-          da var4 = (da) null;
-          discarded$0 = this.a((String) null, (qla) null, -5, -61, -30, (da) null, 39, -50, -125);
+          GameFont var4 = (GameFont) null;
+          discarded$0 = this.a((String) null, (qla) null, -5, -61, -30, (GameFont) null, 39, -50, -125);
         }
         return vaa.a(rb.field_o, param1, -101);
     }
@@ -214,7 +214,7 @@ final class vba extends we {
         int var3;
         int var4;
         int var5;
-        ha var6_ref_ha;
+        GraphicsToolkit var6_ref_ha;
         int var6;
         int var7;
         int var8_int;
@@ -269,7 +269,7 @@ final class vba extends we {
         return -30 + koa.b(param1 ^ 30);
     }
 
-    private final int a(String param0, qla param1, int param2, int param3, int param4, da param5, int param6, int param7, int param8) {
+    private final int a(String param0, qla param1, int param2, int param3, int param4, GameFont param5, int param6, int param7, int param8) {
         int var12 = 0;
         String[] var10 = null;
         RuntimeException var10_ref = null;

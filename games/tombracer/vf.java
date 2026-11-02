@@ -10,7 +10,7 @@ final class vf {
     static int field_f;
     static java.util.zip.CRC32 field_g;
     static String field_c;
-    private vna field_j;
+    private IntrusiveDeque field_j;
     static int field_d;
     static int[] field_b;
     static String field_h;
@@ -234,7 +234,7 @@ final class vf {
     }
 
     vf(uw param0) {
-        this.field_j = new vna();
+        this.field_j = new IntrusiveDeque();
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {

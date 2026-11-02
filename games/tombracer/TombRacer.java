@@ -221,7 +221,7 @@ public final class TombRacer extends rfa implements ls {
         cq.a(-90);
         GameKeyHandler.a(127);
         pba.a(4096);
-        vna.b((byte) 91);
+        IntrusiveDeque.b((byte) 91);
         bea.d();
         gda.a(27316);
         ssa.d(-98);
@@ -291,7 +291,7 @@ public final class TombRacer extends rfa implements ls {
         kk.a((byte) 120);
         kra.a(param0 ^ 1916);
         ega.a(2);
-        ff.f(0);
+        MatchState.f(0);
         vea.a(63);
         qda.c((byte) 0);
         fma.a((byte) -127);
@@ -360,7 +360,7 @@ public final class TombRacer extends rfa implements ls {
         wu.a((byte) 91);
         gva.a(param0 ^ -14342);
         rn.a((byte) -114);
-        dt.n(param0 ^ param0);
+        PlayerSimulation.n(param0 ^ param0);
         dva.a((byte) 53);
         aq.b(-116);
         wd.a(3);
@@ -439,7 +439,7 @@ public final class TombRacer extends rfa implements ls {
         vv.d(-127);
         rd.d(-128);
         ct.a((byte) -121);
-        csa.j((byte) -107);
+        RoomComponent.j((byte) -107);
         gfa.b(104);
         fm.d(-124);
         sqa.b((byte) -128);
@@ -507,7 +507,7 @@ public final class TombRacer extends rfa implements ls {
         qu.a(72);
         kr.a();
         aj.a(-11061);
-        wca.f(0);
+        SpriteState.f(0);
         eoa.b();
         aqa.a((byte) -59);
         wua.a((byte) -36);
@@ -524,7 +524,7 @@ public final class TombRacer extends rfa implements ls {
         gp.a(-117);
         wq.b(true);
         jia.a((byte) 31);
-        bs.a(param0 ^ -3601);
+        GameEvent.a(param0 ^ -3601);
         aga.a((byte) -113);
         pca.c(param0 + 3674);
         baa.a(param0 + 3786);
@@ -560,8 +560,8 @@ public final class TombRacer extends rfa implements ls {
         lva.d((byte) -123);
         uq.b(param0 + 3747);
         wg.a(true);
-        nv.j(18416);
-        wda.d(param0 + 15738);
+        Behaviour.j(18416);
+        Locomotor.d(param0 + 15738);
         bca.b(3);
         ir.a((byte) 104);
         gpa.a(false);
@@ -689,7 +689,7 @@ public final class TombRacer extends rfa implements ls {
         bf.a(true);
         pna.e(110);
         tw.b(122);
-        cka.t(7312);
+        OpenGlToolkit.t(7312);
         hsa.b(param0 ^ -3693);
         uua.a((byte) -120);
         uv.f(0);
@@ -873,7 +873,7 @@ public final class TombRacer extends rfa implements ls {
         eta.a(29574);
         wka.c(-31068);
         ooa.d(119);
-        jga.a((byte) -3);
+        TextResourceLoader.a((byte) -3);
         pua.a((byte) -115);
         hq.b(-6682);
         pr.a(28122);

@@ -14,7 +14,7 @@ final class tqa implements fo {
     private int field_a;
     private Room field_f;
     private int field_d;
-    private vna field_p;
+    private IntrusiveDeque field_p;
     private int field_l;
     private pca[] field_j;
     private int field_n;
@@ -451,7 +451,7 @@ final class tqa implements fo {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         this.a(param3, param0, -110, param5, param1, param4, param2, 1);
         if (!param6) {
-          this.field_p = (vna) null;
+          this.field_p = (IntrusiveDeque) null;
         }
     }
 
@@ -534,7 +534,7 @@ final class tqa implements fo {
     }
 
     tqa(Room param0, int param1) {
-        this.field_p = new vna();
+        this.field_p = new IntrusiveDeque();
         try {
           this.a(param1, param0, 107);
         } catch (RuntimeException runtimeException) {

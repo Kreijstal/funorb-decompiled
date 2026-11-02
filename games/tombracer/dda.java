@@ -3,9 +3,9 @@
  */
 final class dda extends IntrusiveNode {
     static int[] field_f;
-    private bs field_g;
+    private GameEvent field_g;
 
-    final bs a(byte param0) {
+    final GameEvent a(byte param0) {
         if (param0 != -125) {
           dda.a(112);
         }
@@ -19,7 +19,7 @@ final class dda extends IntrusiveNode {
         }
     }
 
-    dda(Player param0, bs param1) {
+    dda(Player param0, GameEvent param1) {
         try {
           this.field_g = param1;
           param0.C(-1);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sn extends da {
+final class sn extends GameFont {
     private sfa field_g;
     private byte[][] field_e;
     private int[] field_f;

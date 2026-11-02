@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vd extends nv {
+final class vd extends Behaviour {
     static int field_p;
     private Trap field_r;
     private int field_v;
@@ -291,7 +291,7 @@ final class vd extends nv {
         int var9;
         int var10;
         Object var11;
-        loa var12_ref_loa;
+        MazeGenerator var12_ref_loa;
         int var12;
         int[][] var13_ref_int____;
         int var13;
@@ -353,7 +353,7 @@ final class vd extends nv {
         var10 = 0;
         var11 = null;
         while (var9 == 0) {
-          var12_ref_loa = lba.a((byte) 27, var3, this.field_s);
+          var12_ref_loa = lba.createMazeGenerator((byte) 27, var3, this.field_s);
           this.field_z = var12_ref_loa.a(var5, var6, var4, -122, var8);
           this.field_z.a(1 + var7, 0, 0, var6);
           this.field_z.a(0, 0, 0, var6);

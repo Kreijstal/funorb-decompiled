@@ -5,7 +5,7 @@ final class nba {
     static int field_b;
     static int[] field_a;
 
-    final static void a(ff param0, Room param1, byte param2) {
+    final static void a(MatchState param0, Room param1, byte param2) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_10_0 = null;
@@ -57,7 +57,7 @@ final class nba {
           ov.field_p = param2;
           gg.field_b.b(kva.field_n);
           tva.field_d = param1;
-          tva.field_d.a((byte) 100, ff.field_w);
+          tva.field_d.a((byte) 100, MatchState.field_w);
           ipa.field_P.b(tva.field_d);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nba.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');

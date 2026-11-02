@@ -5,7 +5,7 @@ final class al extends IntrusiveNode {
     static boolean field_j;
     static double field_h;
     int field_i;
-    static vna field_g;
+    static IntrusiveDeque field_g;
     static su field_f;
 
     public static void a(byte param0) {
@@ -69,7 +69,7 @@ final class al extends IntrusiveNode {
 
     static {
         field_h = 0.0;
-        field_g = new vna();
+        field_g = new IntrusiveDeque();
         field_f = new su(12, 0, 1, 0);
     }
 }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class da {
+abstract class GameFont {
     static boolean field_c;
     private qla field_a;
-    private ha field_b;
+    private GraphicsToolkit field_b;
 
     abstract void fa(char param0, int param1, int param2, int param3, boolean param4);
 
@@ -30,7 +30,7 @@ abstract class da {
         if (param2 < 106) {
           this.field_a = (qla) null;
         }
-        cka.field_ab = 0;
+        OpenGlToolkit.field_ab = 0;
         lra.field_g = param0;
         v.field_k = param0;
         moa.field_a = 0;
@@ -47,7 +47,7 @@ abstract class da {
         vw.field_b.a(io.field_a + 42, 18, -23776, 0, -2 + (rra.field_e.field_G - (io.field_a + 40)));
         bsa.field_j.a(rra.field_e.field_G, 2, (byte) 127, 0, io.field_a, -20 + rra.field_e.field_t, 20);
         if (param0) {
-          da.a(false);
+          GameFont.a(false);
         }
     }
 
@@ -238,7 +238,7 @@ abstract class da {
                   } else {
                     this.a(true, param11, ska.field_q[var22Lifetime1]);
                     this.a(false, param1, param5, param0, param3, param7, ska.field_q[var22Lifetime1], param8, var20);
-                    cka.field_ab = 0;
+                    OpenGlToolkit.field_ab = 0;
                   }
                 }
               }
@@ -310,7 +310,7 @@ abstract class da {
             }
           }
           if (var4_int > 0) {
-            cka.field_ab = (param1 - this.field_a.a(param2, (byte) -121) << 8) / var4_int;
+            OpenGlToolkit.field_ab = (param1 - this.field_a.a(param2, (byte) -121) << 8) / var4_int;
           }
           if (!param0) {
             this.field_a = (qla) null;
@@ -443,8 +443,8 @@ abstract class da {
                   param1 = param1 + this.field_a.a(var11, -6773, (char) var14);
                 }
                 if (32 == var14) {
-                  if (cka.field_ab > 0) {
-                    moa.field_a = moa.field_a + cka.field_ab;
+                  if (OpenGlToolkit.field_ab > 0) {
+                    moa.field_a = moa.field_a + OpenGlToolkit.field_ab;
                     param1 = param1 + (moa.field_a >> 8);
                     moa.field_a = moa.field_a & 255;
                   }
@@ -583,7 +583,7 @@ abstract class da {
         }
     }
 
-    da(ha param0, qla param1) {
+    GameFont(GraphicsToolkit param0, qla param1) {
         try {
           this.field_a = param1;
           this.field_b = param0;

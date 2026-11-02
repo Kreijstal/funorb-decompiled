@@ -374,7 +374,7 @@ final class ppa {
         }
     }
 
-    final static void a(Room param0, int param1, ff param2) {
+    final static void a(Room param0, int param1, MatchState param2) {
         if (vpa.a(112) ||
           param2.k(-25319)) {
           return;

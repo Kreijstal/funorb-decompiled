@@ -80,7 +80,7 @@ abstract class ra extends kna {
 
     abstract boolean A(int param0);
 
-    ra(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    ra(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         RuntimeException var5 = null;
         boolean stackIn_5_1 = false;

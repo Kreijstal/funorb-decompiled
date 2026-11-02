@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fra extends nv {
+final class fra extends Behaviour {
     static nh field_q;
     static float field_p;
     static char[] field_n;

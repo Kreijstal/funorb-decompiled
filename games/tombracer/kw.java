@@ -100,7 +100,7 @@ final class kw extends qe {
         this.field_g.b((byte) 89);
     }
 
-    kw(cka param0, aaa param1) {
+    kw(OpenGlToolkit param0, aaa param1) {
         super(param0);
         try {
           this.field_c = param1;

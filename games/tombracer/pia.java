@@ -8,11 +8,11 @@ final class pia extends nqa implements gf {
     boolean field_j;
     private int field_i;
 
-    pia(cta param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
+    pia(Direct3DToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
         super(null, null, null, false, param2 * param1);
         int var11 = 0;
         Object stackIn_3_0;
-        cta stackIn_3_1;
+        Direct3DToolkit stackIn_3_1;
         ft stackIn_3_2;
         una stackIn_3_3;
         int stackIn_4_4 = 0;
@@ -23,7 +23,7 @@ final class pia extends nqa implements gf {
         int stackIn_4_4Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
-        stackIn_3_1 = (cta) (param0);
+        stackIn_3_1 = (Direct3DToolkit) (param0);
         stackIn_3_2 = gpa.field_a;
         stackIn_3_3 = una.field_g;
         if (param3) {
@@ -100,7 +100,7 @@ final class pia extends nqa implements gf {
         super.a(param0, param1);
     }
 
-    pia(cta param0, ft param1, una param2, int param3, int param4) {
+    pia(Direct3DToolkit param0, ft param1, una param2, int param3, int param4) {
         super(param0, param1, param2, false, param4 * param3);
         if (!this.field_d.field_Tc) {
           this.field_h = lla.a(false, param3);
@@ -109,13 +109,13 @@ final class pia extends nqa implements gf {
           this.field_h = param3;
           this.field_i = param4;
         }
-        this.field_f = this.field_d.field_jd.a(param3, param4, 1, 0, cta.a(this.field_e, -128, this.field_b), 1);
+        this.field_f = this.field_d.field_jd.a(param3, param4, 1, 0, Direct3DToolkit.a(this.field_e, -128, this.field_b), 1);
     }
 
-    pia(cta param0, ft param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+    pia(Direct3DToolkit param0, ft param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(null, null, null, false, param2 * param3);
         Object stackIn_3_0;
-        cta stackIn_3_1;
+        Direct3DToolkit stackIn_3_1;
         ft stackIn_3_2;
         una stackIn_3_3;
         int stackIn_4_4 = 0;
@@ -127,7 +127,7 @@ final class pia extends nqa implements gf {
         int stackIn_4_4Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
-        stackIn_3_1 = (cta) (param0);
+        stackIn_3_1 = (Direct3DToolkit) (param0);
         stackIn_3_2 = (ft) (param1);
         stackIn_3_3 = una.field_g;
         if (param4) {
@@ -148,9 +148,9 @@ final class pia extends nqa implements gf {
           this.field_h = param2;
         }
         if (param4) {
-          this.field_f = this.field_d.field_jd.a(this.field_h, this.field_i, 0, 1024, cta.a(this.field_e, -128, una.field_g), 1);
+          this.field_f = this.field_d.field_jd.a(this.field_h, this.field_i, 0, 1024, Direct3DToolkit.a(this.field_e, -128, una.field_g), 1);
         } else {
-          this.field_f = this.field_d.field_jd.a(this.field_h, this.field_i, 1, 0, cta.a(this.field_e, -128, una.field_g), 1);
+          this.field_f = this.field_d.field_jd.a(this.field_h, this.field_i, 1, 0, Direct3DToolkit.a(this.field_e, -128, una.field_g), 1);
         }
         var13 = this.field_d.field_Nc;
         var10 = this.field_f.LockRect(0, 0, 0, param2, param3, 0, var13);

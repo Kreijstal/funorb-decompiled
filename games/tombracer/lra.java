@@ -21,7 +21,7 @@ final class lra extends ora implements va {
         }
     }
 
-    lra(cka param0, int param1, byte[] param2, int param3) {
+    lra(OpenGlToolkit param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
         try {
           this.field_h = param1;

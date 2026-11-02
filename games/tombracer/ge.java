@@ -44,7 +44,7 @@ abstract class ge extends kna {
 
     abstract boolean B(int param0);
 
-    ge(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    ge(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
           if (!this.A(-1)) {
@@ -76,7 +76,7 @@ abstract class ge extends kna {
         super(param0, param1);
     }
 
-    final void a(Trap param0, int param1, nv param2, int param3) {
+    final void a(Trap param0, int param1, Behaviour param2, int param3) {
         mfa var5 = null;
         gaa var6 = null;
         try {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eia extends nv implements ut {
+final class eia extends Behaviour implements ut {
     private int field_v;
     private int field_n;
     private int field_w;

@@ -3,7 +3,7 @@
  */
 final class fca {
     static String field_d;
-    private cka field_c;
+    private OpenGlToolkit field_c;
     static int[] field_b;
     long field_a;
 
@@ -26,7 +26,7 @@ final class fca {
         field_b = null;
     }
 
-    fca(cka param0, long param1, int param2) {
+    fca(OpenGlToolkit param0, long param1, int param2) {
         try {
           this.field_c = param0;
           this.field_a = param1;

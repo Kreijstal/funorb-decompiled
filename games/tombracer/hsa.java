@@ -5,7 +5,7 @@ final class hsa {
     private dd field_d;
     private d field_b;
     static int field_a;
-    private cka field_e;
+    private OpenGlToolkit field_e;
     static String field_c;
 
     final void c(int param0) {
@@ -27,7 +27,7 @@ final class hsa {
         int stackIn_9_0 = 0;
         rt stackIn_17_0;
         rt stackIn_17_1;
-        cka stackIn_17_2;
+        OpenGlToolkit stackIn_17_2;
         int stackIn_17_3;
         int stackIn_17_4;
         int stackIn_17_5;
@@ -37,7 +37,7 @@ final class hsa {
         boolean stackIn_18_7 = false;
         rt stackIn_23_0;
         rt stackIn_23_1;
-        cka stackIn_23_2;
+        OpenGlToolkit stackIn_23_2;
         int stackIn_23_3;
         int stackIn_23_4;
         int stackIn_23_5;
@@ -47,7 +47,7 @@ final class hsa {
         boolean stackIn_24_7 = false;
         rt stackIn_28_0;
         rt stackIn_28_1;
-        cka stackIn_28_2;
+        OpenGlToolkit stackIn_28_2;
         int stackIn_28_3;
         int stackIn_28_4;
         int stackIn_28_5;
@@ -57,7 +57,7 @@ final class hsa {
         boolean stackIn_29_7 = false;
         rt stackIn_34_0;
         rt stackIn_34_1;
-        cka stackIn_34_2;
+        OpenGlToolkit stackIn_34_2;
         int stackIn_34_3;
         int stackIn_34_4;
         int stackIn_34_5;
@@ -67,7 +67,7 @@ final class hsa {
         boolean stackIn_35_7 = false;
         rt stackIn_38_0;
         rt stackIn_38_1;
-        cka stackIn_38_2;
+        OpenGlToolkit stackIn_38_2;
         int stackIn_38_3;
         int stackIn_38_4;
         int stackIn_38_5;
@@ -78,7 +78,7 @@ final class hsa {
         int stackIn_49_0 = 0;
         rt stackIn_56_0;
         rt stackIn_56_1;
-        cka stackIn_56_2;
+        OpenGlToolkit stackIn_56_2;
         int stackIn_56_3;
         int stackIn_56_4;
         int stackIn_56_5;
@@ -88,7 +88,7 @@ final class hsa {
         boolean stackIn_57_7 = false;
         rt stackIn_61_0;
         rt stackIn_61_1;
-        cka stackIn_61_2;
+        OpenGlToolkit stackIn_61_2;
         int stackIn_61_3;
         int stackIn_61_4;
         int stackIn_61_5;
@@ -98,7 +98,7 @@ final class hsa {
         boolean stackIn_62_7;
         rt stackIn_71_0;
         rt stackIn_71_1;
-        cka stackIn_71_2;
+        OpenGlToolkit stackIn_71_2;
         int stackIn_71_3;
         int stackIn_71_4;
         int stackIn_71_5;
@@ -381,7 +381,7 @@ final class hsa {
     final void a(int param0) {
         this.field_d.c((byte) -118);
         if (param0 != 10659) {
-          this.field_e = (cka) null;
+          this.field_e = (OpenGlToolkit) null;
         }
     }
 
@@ -390,7 +390,7 @@ final class hsa {
         field_c = null;
     }
 
-    hsa(cka param0, d param1) {
+    hsa(OpenGlToolkit param0, d param1) {
         this.field_d = new dd(256);
         try {
           this.field_b = param1;

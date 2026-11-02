@@ -69,7 +69,7 @@ final class rd extends wv {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        da var6 = null;
+        GameFont var6 = null;
         int var7 = 0;
         int var8 = 0;
         String var9 = null;

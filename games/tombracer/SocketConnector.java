@@ -15,7 +15,7 @@ abstract class SocketConnector {
         return new java.net.Socket(this.host, this.port);
     }
 
-    final static int a(String param0, int param1, da param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, byte param10, int param11) {
+    final static int a(String param0, int param1, GameFont param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, byte param10, int param11) {
         RuntimeException var12 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

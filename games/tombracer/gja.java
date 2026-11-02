@@ -691,13 +691,13 @@ final class gja extends ka {
                           break;
                         case 1:
                           var41 = (float)param1.field_x[var19] / 1024.0f;
-                          loa.a(var39, rn.field_a, var41, param1.field_p[var32_int], param1.field_I[var32_int], -126, var38, var40, var36, var37_int, param1.field_b[var32_int], var35);
+                          MazeGenerator.a(var39, rn.field_a, var41, param1.field_p[var32_int], param1.field_I[var32_int], -126, var38, var40, var36, var37_int, param1.field_b[var32_int], var35);
                           var22_float = rn.field_a[0];
                           var23 = rn.field_a[1];
-                          loa.a(var39, rn.field_a, var41, param1.field_p[var33_int], param1.field_I[var33_int], 72, var38, var40, var36, var37_int, param1.field_b[var33_int], var35);
+                          MazeGenerator.a(var39, rn.field_a, var41, param1.field_p[var33_int], param1.field_I[var33_int], 72, var38, var40, var36, var37_int, param1.field_b[var33_int], var35);
                           var24 = rn.field_a[0];
                           var25 = rn.field_a[1];
-                          loa.a(var39, rn.field_a, var41, param1.field_p[var34], param1.field_I[var34], -108, var38, var40, var36, var37_int, param1.field_b[var34], var35);
+                          MazeGenerator.a(var39, rn.field_a, var41, param1.field_p[var34], param1.field_I[var34], -108, var38, var40, var36, var37_int, param1.field_b[var34], var35);
                           var27 = rn.field_a[1];
                           var26 = rn.field_a[0];
                           var42 = var41 / 2.0f;

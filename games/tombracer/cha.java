@@ -72,7 +72,7 @@ abstract class cha {
         }
     }
 
-    final static void a(int param0, int param1, ha param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, GraphicsToolkit param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           param2.KA(param0, param4, param0 + param3, param3 + param4);
           param2.za(param0 + param3, param3 + param4, param3, param6, param7);

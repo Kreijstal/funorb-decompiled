@@ -81,7 +81,7 @@ final class sra implements eb {
 
     final static String[][] a(byte param0, PacketBuffer param1) {
         int var5 = 0;
-        vna var2 = null;
+        IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
         String[][] var3 = null;
         int var4 = 0;
@@ -93,7 +93,7 @@ final class sra implements eb {
         RuntimeException decompiledCaughtException = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var2 = new vna();
+          var2 = new IntrusiveDeque();
           while (param1.position < param1.payload.length) {
             var2.b((byte) -72, new gba(pe.a(param1, (byte) 73)));
           }
@@ -138,13 +138,13 @@ final class sra implements eb {
         var4 = TombRacer.field_G ? 1 : 0;
         var2 = 5 / ((55 - param0) / 58);
         if (this.field_e != null) {
-          csa.a(1048576, new kra(this.field_e.a("", (byte) 113, "huffman")));
+          RoomComponent.a(1048576, new kra(this.field_e.a("", (byte) 113, "huffman")));
           this.field_e = null;
           ea.a(-33);
           return;
         }
         if (this.field_d != null) {
-          wca.a(-18035);
+          SpriteState.a(-18035);
           this.a(30, (byte) 47, uba.field_g[0]);
           gda.a(this.field_d, 17572);
           uo.b((byte) -125);
@@ -354,14 +354,14 @@ final class sra implements eb {
 
     private final void d(int param0) {
         int var4 = 0;
-        iu[] array$0 = null;
+        Sprite[] array$0 = null;
         int var5 = 0;
         int incrementValue$1 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
-        iu[][] var2 = new iu[haa.field_C.length][];
+        Sprite[][] var2 = new Sprite[haa.field_C.length][];
         int var3 = 0;
         for (var4 = 0; haa.field_C.length > var4; var4++) {
-          array$0 = new iu[haa.field_C[var4].length];
+          array$0 = new Sprite[haa.field_C[var4].length];
           var2[var4] = array$0;
           for (var5 = 0; var5 < haa.field_C[var4].length; var5++) {
             incrementValue$1 = var3;
@@ -377,7 +377,7 @@ final class sra implements eb {
           op.a(this.field_s, 10, ws.field_o, fr.field_b, oma.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
           cq.field_d = qw.field_f;
           tda.a(200, (byte) -71);
-          fta.field_b = ff.field_p;
+          fta.field_b = MatchState.field_p;
         }
     }
 

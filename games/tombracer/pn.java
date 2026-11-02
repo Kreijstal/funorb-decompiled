@@ -45,11 +45,11 @@ final class pn extends or {
         field_o = null;
     }
 
-    final static iu[] i(int param0) {
+    final static Sprite[] i(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        iu[] var1;
+        Sprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -64,9 +64,9 @@ final class pn extends or {
         int[] var22;
         var8 = TombRacer.field_G ? 1 : 0;
         if (param0 < 71) {
-          return (iu[]) null;
+          return (Sprite[]) null;
         }
-        var1 = new iu[fa.field_b];
+        var1 = new Sprite[fa.field_b];
         for (var2 = 0; var2 < fa.field_b; var2++) {
           var3 = mq.field_b[var2] * iga.field_m[var2];
           var21 = ck.field_c[var2];
@@ -76,7 +76,7 @@ final class pn extends or {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = mga.field_g[sea.c(255, (int) var21[var6])];
             }
-            var1[var2] = new iu(ika.field_a, kba.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var22);
+            var1[var2] = new Sprite(ika.field_a, kba.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var22);
           } else {
             var15 = pb.field_l[var2];
             var11 = var15;
@@ -88,10 +88,10 @@ final class pn extends or {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = fh.a(sea.c(-16777216, var15[var7] << 24), mga.field_g[sea.c(255, (int) var21[var7])]);
             }
-            var1[var2] = (iu) ((Object) new mea(ika.field_a, kba.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var17));
+            var1[var2] = (Sprite) ((Object) new mea(ika.field_a, kba.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var17));
           }
         }
-        loa.a((byte) 2);
+        MazeGenerator.a((byte) 2);
         return var1;
     }
 

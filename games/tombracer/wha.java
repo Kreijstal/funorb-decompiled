@@ -41,7 +41,7 @@ final class wha extends kna {
           var9.a((byte) -3, 6);
           var9.b((byte) 17, false);
           var9.g(119, 2);
-          var9.a((byte) 83, (nv) (new eq(param2, param0)));
+          var9.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new hia(param2, param0);
           stackIn_3_0 = (34 != this.r(12)) ? 0 : 1;
           var6 = stackIn_3_0;
@@ -81,7 +81,7 @@ final class wha extends kna {
         }
     }
 
-    wha(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    wha(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         this.field_F = 131072;
         try {

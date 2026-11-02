@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ov extends nv implements mra {
+final class ov extends Behaviour implements mra {
     private pc field_s;
     private up field_r;
     private mg field_n;

@@ -138,7 +138,7 @@ final class ed {
             if (var5.field_p != lna.field_a) {
               throw new jj(var5.field_h);
             }
-            var4.field_i = new vna();
+            var4.field_i = new IntrusiveDeque();
             while (true) {
               if (param0.a((byte) 127)) {
                 throw new jj(var4.field_h);

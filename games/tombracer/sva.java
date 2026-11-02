@@ -4,7 +4,7 @@
 final class sva implements ev {
     private ob[] field_a;
     static int field_d;
-    private vna field_b;
+    private IntrusiveDeque field_b;
     private Room field_c;
 
     public final void a(int param0) {
@@ -73,7 +73,7 @@ final class sva implements ev {
             var12 = (uh) (this.field_b.f(-80));
             while (var12 != null) {
               if (!var12.c(param1 - 1459836712)) {
-                var12.a((byte) 100, this.field_c.a(-1553494544).field_c);
+                var12.a((byte) 100, this.field_c.a(-1553494544).tick);
               } else {
                 var12.unlink(57);
               }
@@ -111,7 +111,7 @@ final class sva implements ev {
             tga.field_a.a(0, (ob[]) null);
           }
           if (param0 != -16188) {
-            this.field_b = (vna) null;
+            this.field_b = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,7 +128,7 @@ final class sva implements ev {
         }
     }
 
-    final static iu[] a(int param0, int param1, int param2) {
+    final static Sprite[] a(int param0, int param1, int param2) {
         if (param2 != 4) {
           sva.a(17, 31, 46);
         }
@@ -276,7 +276,7 @@ final class sva implements ev {
 
     sva(Room param0) {
         this.field_a = new ob[4];
-        this.field_b = new vna();
+        this.field_b = new IntrusiveDeque();
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

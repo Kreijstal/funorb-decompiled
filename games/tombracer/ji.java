@@ -179,7 +179,7 @@ final class ji {
         if (param0 != 16) {
           return;
         }
-        cka.field_fd.a(438, -4 + (-120 + bea.field_a), -23776, 0, 202 + var1 + 438 * var3 / var2);
+        OpenGlToolkit.field_fd.a(438, -4 + (-120 + bea.field_a), -23776, 0, 202 + var1 + 438 * var3 / var2);
     }
 
     static {

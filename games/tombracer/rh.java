@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends nv implements ut {
+final class rh extends Behaviour implements ut {
     static String field_o;
     static String field_q;
     static boolean field_s;

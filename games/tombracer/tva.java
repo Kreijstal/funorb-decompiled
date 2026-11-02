@@ -5,7 +5,7 @@ final class tva extends qe {
     static String field_c;
     static sq field_d;
 
-    tva(cka param0) {
+    tva(OpenGlToolkit param0) {
         super(param0);
     }
 

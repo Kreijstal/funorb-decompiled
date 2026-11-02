@@ -3,7 +3,7 @@
  */
 final class uua {
     ku field_h;
-    private cka field_b;
+    private OpenGlToolkit field_b;
     private aaa field_d;
     private qe[] field_c;
     private int field_g;
@@ -276,7 +276,7 @@ final class uua {
         field_a = null;
     }
 
-    uua(cka param0) {
+    uua(OpenGlToolkit param0) {
         ku dupTemp$1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

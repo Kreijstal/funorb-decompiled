@@ -37,7 +37,7 @@ final class jc extends ra {
           stackIn_55_1 = 65;
           stackIn_56_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (ifa.field_n == null);
           ((jea) (Object) stackIn_55_0).c(stackIn_55_1, stackIn_56_2);
-          stackIn_62_0 = cka.field_fd;
+          stackIn_62_0 = OpenGlToolkit.field_fd;
           stackIn_62_1 = -67;
           stackIn_63_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (null == ifa.field_n);
           ((jea) (Object) stackIn_62_0).c(stackIn_62_1, stackIn_63_2);
@@ -51,7 +51,7 @@ final class jc extends ra {
           stackIn_7_1 = 65;
           stackIn_8_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (ifa.field_n == null);
           ((jea) (Object) stackIn_7_0).c(stackIn_7_1, stackIn_8_2);
-          stackIn_14_0 = cka.field_fd;
+          stackIn_14_0 = OpenGlToolkit.field_fd;
           stackIn_14_1 = -67;
           stackIn_15_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (null == ifa.field_n);
           ((jea) (Object) stackIn_14_0).c(stackIn_14_1, stackIn_15_2);
@@ -124,7 +124,7 @@ final class jc extends ra {
         this.a((byte) 113, new mka[]{new mka(0, 0, 2097152, 0, 40)});
     }
 
-    jc(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    jc(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -211,7 +211,7 @@ final class jc extends ra {
           var4.a((byte) -3, 0);
           var4.b((byte) 17, true);
           var4.g(119, 2);
-          var4.a((byte) 83, (nv) (new eq(param2, param0)));
+          var4.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = this.a((byte) -60, param2, param0);
           var4.a(var5, 0);
           var6 = rm.field_a;

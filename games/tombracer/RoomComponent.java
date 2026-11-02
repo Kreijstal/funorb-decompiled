@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
+abstract class RoomComponent extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
     int field_m;
     private int field_q;
     int field_k;
@@ -9,7 +9,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
     mka[] field_t;
     private boolean field_v;
     private int field_h;
-    private csa field_u;
+    private RoomComponent field_u;
     bca field_z;
     int field_l;
     static int field_n;
@@ -26,15 +26,15 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
 
     public final int e(byte param0) {
         if (param0 >= -86) {
-          csa var3 = (csa) null;
-          this.a((csa) null, -115, (byte) -23);
+          RoomComponent var3 = (RoomComponent) null;
+          this.a((RoomComponent) null, -115, (byte) -23);
         }
         return this.g((byte) 115);
     }
 
     final void a(boolean param0, int param1) {
         int var3;
-        csa var4;
+        RoomComponent var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (!this.b(param0, param1)) {
@@ -56,7 +56,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
 
     final void c(boolean param0) {
         int var2 = 0;
-        csa var3;
+        RoomComponent var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         this.w(-124);
@@ -73,8 +73,8 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
 
     private final mka a(int param0, int param1) {
         if (param1 != 8192) {
-          csa var4 = (csa) null;
-          this.a(false, -41, (csa) null);
+          RoomComponent var4 = (RoomComponent) null;
+          this.a(false, -41, (RoomComponent) null);
         }
         return this.field_t[param0];
     }
@@ -164,7 +164,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
 
     final void a(boolean param0, int param1, ui param2, ui param3) {
         int var5_int = 0;
-        csa var6 = null;
+        RoomComponent var6 = null;
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -223,10 +223,10 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         return stackIn_10_0;
     }
 
-    final boolean a(boolean param0, int param1, csa param2) {
+    final boolean a(boolean param0, int param1, RoomComponent param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        csa var5 = null;
+        RoomComponent var5 = null;
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -263,7 +263,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
 
     public final int c(int param0) {
         if (param0 > -11) {
-          this.field_u = (csa) null;
+          this.field_u = (RoomComponent) null;
         }
         return this.field_l;
     }
@@ -314,7 +314,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         field_i = null;
         if (param0 != -107) {
           g[] var2 = (g[]) null;
-          csa.a(104, -8, 16, (g[]) null);
+          RoomComponent.a(104, -8, 16, (g[]) null);
         }
         field_y = null;
     }
@@ -366,11 +366,11 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         }
     }
 
-    final csa a(int param0, boolean param1, boolean param2) {
+    final RoomComponent a(int param0, boolean param1, boolean param2) {
         int var4 = 0;
-        csa var5;
+        RoomComponent var5;
         int var7;
-        csa var6;
+        RoomComponent var6;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param1 &&
           param0 == this.field_s.a((byte) 111)) {
@@ -395,7 +395,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         return null;
     }
 
-    final csa a(int param0, boolean param1, int param2) {
+    final RoomComponent a(int param0, boolean param1, int param2) {
         if (param2 != 20) {
           Trap var5 = (Trap) null;
           this.a(true, false, (Room) null, 109, -103, 35, (Trap) null);
@@ -414,7 +414,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         this.field_p = param1;
     }
 
-    csa(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    RoomComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         this(param0, param1);
         int var5_int = 0;
         boolean stackIn_16_1 = false;
@@ -428,7 +428,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        csa var6 = null;
+        RoomComponent var6 = null;
         try {
           this.field_u = param3;
           if (param3 == null) {
@@ -533,7 +533,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         }
     }
 
-    final void a(csa param0, int param1, byte param2) {
+    final void a(RoomComponent param0, int param1, byte param2) {
         try {
           this.field_q = param1;
           if (param2 != -52) {
@@ -672,7 +672,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         try {
           nma.field_m = param1;
           if (param0 != 1048576) {
-            csa.a(true);
+            RoomComponent.a(true);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "csa.QA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -681,7 +681,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
 
     private final void d(boolean param0) {
         int var2 = 0;
-        csa var3;
+        RoomComponent var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         this.field_f = MouseInputHandler.a((byte) 106, -this.g(-25787) >> 2);
@@ -756,7 +756,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         return var2;
     }
 
-    final csa o(byte param0) {
+    final RoomComponent o(byte param0) {
         boolean discarded$0 = false;
         if (param0 >= -17) {
           discarded$0 = this.p((byte) 101);
@@ -785,7 +785,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        csa var4 = null;
+        RoomComponent var4 = null;
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
@@ -858,7 +858,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
 
     abstract void a(boolean param0, boolean param1, Room param2, int param3, int param4, int param5, Trap param6);
 
-    csa(Room param0, int param1) {
+    RoomComponent(Room param0, int param1) {
         this.field_t = new mka[]{};
         this.field_z = new bca();
         this.field_x = true;

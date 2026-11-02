@@ -47,7 +47,7 @@ final class iea {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        vna var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         mu var6 = null;
         int var7 = 0;

@@ -84,8 +84,8 @@ abstract class rfa extends AppletGameShell implements sia {
     public static void w(int param0) {
         field_C = null;
         if (param0 < 105) {
-          iu[] var2 = (iu[]) null;
-          rfa.a((iu[]) null, 100);
+          Sprite[] var2 = (Sprite[]) null;
+          rfa.a((Sprite[]) null, 100);
         }
         field_B = null;
     }
@@ -218,13 +218,13 @@ abstract class rfa extends AppletGameShell implements sia {
         return true;
     }
 
-    final static iu[] a(iu[] param0, int param1) {
+    final static Sprite[] a(Sprite[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        iu var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
-        iu[] stackIn_3_0 = null;
-        iu[] stackIn_7_0 = null;
+        Sprite[] stackIn_3_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -233,7 +233,7 @@ abstract class rfa extends AppletGameShell implements sia {
         try {
           var2_int = 0;
           if (param1 < 111) {
-            stackIn_3_0 = (iu[]) null;
+            stackIn_3_0 = (Sprite[]) null;
             return stackIn_3_0;
           }
           while (param0.length > var2_int) {
@@ -244,7 +244,7 @@ abstract class rfa extends AppletGameShell implements sia {
             param0[var2_int].field_k = param0[var2_int].field_q;
             var2_int++;
           }
-          stackIn_7_0 = (iu[]) (param0);
+          stackIn_7_0 = (Sprite[]) (param0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

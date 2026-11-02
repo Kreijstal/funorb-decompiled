@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vja extends ib {
+final class vja extends Spawner {
     private Trap field_c;
     static String field_b;
 

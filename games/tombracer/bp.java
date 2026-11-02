@@ -4,7 +4,7 @@
 final class bp extends qra {
     private int field_n;
     static String field_o;
-    static iu[] field_m;
+    static Sprite[] field_m;
     static jpa[] field_p;
 
     final boolean e(int param0) {
@@ -34,7 +34,7 @@ final class bp extends qra {
         }
         var3 = this.field_h.l(100);
         var4 = 160;
-        var5 = 80 + this.field_c.field_H.length * 20;
+        var5 = 80 + this.field_c.players.length * 20;
         var6 = 16776960;
         var7 = 11184810;
         SecondaryNodeDequeIterator.a(192, var5, 3145728, 340, (byte) 39, var4, 150);
@@ -44,8 +44,8 @@ final class bp extends qra {
         var8 += 40;
         oka.a(nsa.field_f + ":", 16777215, kn.field_p, -1, var8, 320, 0);
         var8 += 20;
-        for (var9 = 0; var9 < this.field_c.field_H.length; var9++) {
-          if (this.field_c.field_H[var9] != null) {
+        for (var9 = 0; var9 < this.field_c.players.length; var9++) {
+          if (this.field_c.players[var9] != null) {
             if (var3 == var9) {
               var10 = var6;
             } else {

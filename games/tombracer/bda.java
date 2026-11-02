@@ -23,7 +23,7 @@ final class bda extends ci {
         return var3;
     }
 
-    final static nv readBehaviour(boolean param0, byte param1, Room param2, BitPacketBuffer param3) {
+    final static Behaviour readBehaviour(boolean param0, byte param1, Room param2, BitPacketBuffer param3) {
         fra stackIn_51_0 = null;
         hi stackIn_53_0 = null;
         rea stackIn_55_0 = null;
@@ -77,142 +77,142 @@ final class bda extends ci {
           var6_int = var4_int;
           if (var6_int == 0) {
             stackIn_51_0 = new fra(param2, param3, param0);
-            return (nv) ((Object) stackIn_51_0);
+            return (Behaviour) ((Object) stackIn_51_0);
           }
           if (var6_int == 1) {
             stackIn_53_0 = new hi(param2, param3, param0);
-            return (nv) ((Object) stackIn_53_0);
+            return (Behaviour) ((Object) stackIn_53_0);
           }
           if (var6_int == 2) {
             stackIn_55_0 = new rea(param2, param3, param0);
-            return (nv) ((Object) stackIn_55_0);
+            return (Behaviour) ((Object) stackIn_55_0);
           }
           if (var6_int == 3) {
             stackIn_57_0 = new ana(param2, param3, param0);
-            return (nv) ((Object) stackIn_57_0);
+            return (Behaviour) ((Object) stackIn_57_0);
           }
           if (var6_int == 4) {
             stackIn_59_0 = new ov(param2, param3, param0);
-            return (nv) ((Object) stackIn_59_0);
+            return (Behaviour) ((Object) stackIn_59_0);
           }
           if (var6_int == 18) {
             stackIn_61_0 = new eia(param2, param3, param0);
-            return (nv) ((Object) stackIn_61_0);
+            return (Behaviour) ((Object) stackIn_61_0);
           }
           if (var6_int == 7) {
             stackIn_63_0 = new rl(param2, param3, param0);
-            return (nv) ((Object) stackIn_63_0);
+            return (Behaviour) ((Object) stackIn_63_0);
           }
           if (var6_int == 5) {
             stackIn_65_0 = new ef(param2, param3, param0);
-            return (nv) ((Object) stackIn_65_0);
+            return (Behaviour) ((Object) stackIn_65_0);
           }
           if (var6_int == 6) {
             stackIn_67_0 = new ok(param2, param3, param0);
-            return (nv) ((Object) stackIn_67_0);
+            return (Behaviour) ((Object) stackIn_67_0);
           }
           if (var6_int == 13) {
             stackIn_69_0 = new rb(param2, param3, param0);
-            return (nv) ((Object) stackIn_69_0);
+            return (Behaviour) ((Object) stackIn_69_0);
           }
           if (var6_int == 8) {
             stackIn_71_0 = new mo(param2, param3, param0);
-            return (nv) ((Object) stackIn_71_0);
+            return (Behaviour) ((Object) stackIn_71_0);
           }
           if (var6_int == 9) {
             stackIn_73_0 = new lpa(param2, param3, param0);
-            return (nv) ((Object) stackIn_73_0);
+            return (Behaviour) ((Object) stackIn_73_0);
           }
           if (var6_int == 10) {
             if (7 <= param2.field_E) {
               stackIn_76_0 = new sg(param2, param3, param0);
-              return (nv) ((Object) stackIn_76_0);
+              return (Behaviour) ((Object) stackIn_76_0);
             }
             var6 = new eq(param2, param0);
             stackIn_78_0 = var6;
-            return (nv) ((Object) stackIn_78_0);
+            return (Behaviour) ((Object) stackIn_78_0);
           }
           if (var6_int == 17) {
             stackIn_80_0 = new dja(param2, param3, param0);
-            return (nv) ((Object) stackIn_80_0);
+            return (Behaviour) ((Object) stackIn_80_0);
           }
           if (11 == var6_int) {
             stackIn_82_0 = new vd(param2, param3, param0);
-            return (nv) ((Object) stackIn_82_0);
+            return (Behaviour) ((Object) stackIn_82_0);
           }
           if (var6_int == 12) {
             stackIn_84_0 = new eq(param2, param3, param0);
-            return (nv) ((Object) stackIn_84_0);
+            return (Behaviour) ((Object) stackIn_84_0);
           }
           if (var6_int == 14) {
             stackIn_86_0 = new wn(param2, param3, param0);
-            return (nv) ((Object) stackIn_86_0);
+            return (Behaviour) ((Object) stackIn_86_0);
           }
           if (var6_int == 15) {
             stackIn_88_0 = new sea(param2, param3, param0);
-            return (nv) ((Object) stackIn_88_0);
+            return (Behaviour) ((Object) stackIn_88_0);
           }
           if (var6_int == 16) {
             stackIn_90_0 = new wma(param2, param3, param0);
-            return (nv) ((Object) stackIn_90_0);
+            return (Behaviour) ((Object) stackIn_90_0);
           }
           if (var6_int == 19) {
             stackIn_92_0 = new rh(param2, param3, param0);
-            return (nv) ((Object) stackIn_92_0);
+            return (Behaviour) ((Object) stackIn_92_0);
           }
           if (var6_int == 20) {
             stackIn_94_0 = new ska(param2, param3, param0);
-            return (nv) ((Object) stackIn_94_0);
+            return (Behaviour) ((Object) stackIn_94_0);
           }
           if (21 == var6_int) {
             stackIn_96_0 = new tl(param2, param3, param0);
-            return (nv) ((Object) stackIn_96_0);
+            return (Behaviour) ((Object) stackIn_96_0);
           }
           if (var6_int == 22) {
             stackIn_98_0 = new kj(param2, param3, param0);
-            return (nv) ((Object) stackIn_98_0);
+            return (Behaviour) ((Object) stackIn_98_0);
           }
           if (23 == var6_int) {
             stackIn_100_0 = new oh(param2, param3, param0);
-            return (nv) ((Object) stackIn_100_0);
+            return (Behaviour) ((Object) stackIn_100_0);
           }
           if (var6_int == 24) {
             stackIn_102_0 = new cu(param2, param3, param0);
-            return (nv) ((Object) stackIn_102_0);
+            return (Behaviour) ((Object) stackIn_102_0);
           }
           if (var6_int == 25) {
             stackIn_104_0 = new ue(param2, param3, param0);
-            return (nv) ((Object) stackIn_104_0);
+            return (Behaviour) ((Object) stackIn_104_0);
           }
           if (var6_int == 26) {
             stackIn_106_0 = new th(param2, param3, param0);
-            return (nv) ((Object) stackIn_106_0);
+            return (Behaviour) ((Object) stackIn_106_0);
           }
           if (27 == var6_int) {
             stackIn_108_0 = new bn(param2, param3, param0);
-            return (nv) ((Object) stackIn_108_0);
+            return (Behaviour) ((Object) stackIn_108_0);
           }
           if (var6_int == 28) {
             stackIn_110_0 = new im(param2, param3, param0);
-            return (nv) ((Object) stackIn_110_0);
+            return (Behaviour) ((Object) stackIn_110_0);
           }
           if (var6_int == 29) {
             stackIn_112_0 = new mc(param2, param3, param0);
-            return (nv) ((Object) stackIn_112_0);
+            return (Behaviour) ((Object) stackIn_112_0);
           }
           if (var6_int == 30) {
             stackIn_114_0 = new wh(param2, param3, param0);
-            return (nv) ((Object) stackIn_114_0);
+            return (Behaviour) ((Object) stackIn_114_0);
           }
           if (var6_int == 31) {
             stackIn_116_0 = new ula(param2, param3, param0);
-            return (nv) ((Object) stackIn_116_0);
+            return (Behaviour) ((Object) stackIn_116_0);
           }
           if (32 != var6_int) {
             throw new IllegalStateException("Unrecognised behaviour type: " + var4_int);
           }
           stackIn_118_0 = new sm(param2, param3, param0);
-          return (nv) ((Object) stackIn_118_0);
+          return (Behaviour) ((Object) stackIn_118_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

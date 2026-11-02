@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
+abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
     boolean field_f;
     static String field_h;
     Trap field_g;
@@ -203,7 +203,7 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
         return (ew) ((Object) this.field_g.r(0));
     }
 
-    nv(Room param0, BitPacketBuffer param1, boolean param2) {
+    Behaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         this(param0, param2);
         try {
           this.field_f = param1.b((byte) 44, 1) == 1 ? true : false;
@@ -378,9 +378,9 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
         }
     }
 
-    final dt i(int param0) {
+    final PlayerSimulation i(int param0) {
         if (param0 != 12340) {
-          return (dt) null;
+          return (PlayerSimulation) null;
         }
         return this.field_g.x(param0 + 3130);
     }
@@ -460,7 +460,7 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
         }
     }
 
-    nv(Room param0, boolean param1) {
+    Behaviour(Room param0, boolean param1) {
         this.field_f = true;
         this.field_i = false;
         this.field_k = false;

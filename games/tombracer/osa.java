@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class osa extends wda {
+abstract class osa extends Locomotor {
     static byte[][][] field_r;
     static String field_p;
     private int field_q;

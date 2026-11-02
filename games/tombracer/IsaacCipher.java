@@ -269,7 +269,7 @@ final class IsaacCipher {
             ql.field_k = new BitPacketBuffer(param7);
             q.field_r = param9;
             SocketConnector.field_c = param0;
-            csa.field_g = param11;
+            RoomComponent.field_g = param11;
             nn.field_b = param3;
             du.field_h = param13;
             vh.field_g = param12;

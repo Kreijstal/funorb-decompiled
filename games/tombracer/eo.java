@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-abstract class eo extends ha {
-    private vna field_ic;
+abstract class eo extends GraphicsToolkit {
+    private IntrusiveDeque field_ic;
     cn field_I;
     Object field_Ub;
     static fta field_w;
@@ -1937,7 +1937,7 @@ abstract class eo extends ha {
         Throwable decompiledCaughtException = null;
         Throwable var7 = null;
         RuntimeException var7_ref = null;
-        this.field_ic = new vna();
+        this.field_ic = new IntrusiveDeque();
         this.field_gb = true;
         this.field_q = new asa();
         this.field_bb = new asa();
@@ -2264,7 +2264,7 @@ abstract class eo extends ha {
         return this.field_ac;
     }
 
-    final da a(qla param0, jpa[] param1, boolean param2) {
+    final GameFont a(qla param0, jpa[] param1, boolean param2) {
         RuntimeException var4 = null;
         ca stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -2275,7 +2275,7 @@ abstract class eo extends ha {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = new ca(this, param0, param1, param2);
-          return (da) ((Object) stackIn_1_0);
+          return (GameFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

@@ -6,7 +6,7 @@ abstract class vo {
     private int field_g;
     static boolean field_b;
     int field_e;
-    cka field_h;
+    OpenGlToolkit field_h;
     private int field_d;
     private boolean field_c;
     static int field_f;
@@ -44,7 +44,7 @@ abstract class vo {
 
     abstract void d(int param0);
 
-    vo(cka param0, int param1, byte[] param2, int param3, boolean param4) {
+    vo(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
         this.field_c = false;
         try {
           this.field_h = param0;

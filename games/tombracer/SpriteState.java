@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wca extends DualLinkNode {
+abstract class SpriteState extends DualLinkNode {
     int field_q;
     int field_p;
     static int[] field_l;
@@ -12,7 +12,7 @@ abstract class wca extends DualLinkNode {
 
     public static void f(int param0) {
         if (param0 != 0) {
-          wca.a(18);
+          SpriteState.a(18);
           field_l = null;
           return;
         }
@@ -30,7 +30,7 @@ abstract class wca extends DualLinkNode {
         dea.field_a = (mb) ((Object) new gva());
     }
 
-    final static void a(int param0, iu[] param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, Sprite[] param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -79,7 +79,7 @@ abstract class wca extends DualLinkNode {
         }
     }
 
-    wca() {
+    SpriteState() {
     }
 
     static {

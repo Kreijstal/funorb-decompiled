@@ -88,7 +88,7 @@ final class upa extends IntrusiveNode {
           stackIn_6_1 = param1 + 80;
           stackIn_7_2 = (param0) && (!uv.field_o);
           ((jea) (Object) stackIn_6_0).b(stackIn_6_1, stackIn_7_2);
-          stackIn_10_0 = cka.field_fd;
+          stackIn_10_0 = OpenGlToolkit.field_fd;
           stackIn_10_1 = 72;
           stackIn_11_2 = (param0) && (!uv.field_o);
           ((jea) (Object) stackIn_10_0).b(stackIn_10_1, stackIn_11_2);

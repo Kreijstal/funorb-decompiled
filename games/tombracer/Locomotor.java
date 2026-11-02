@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wda extends IntrusiveNode implements lj, noa, gr {
+abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
     private Room field_f;
     boolean field_k;
     private gpa field_g;
@@ -141,7 +141,7 @@ abstract class wda extends IntrusiveNode implements lj, noa, gr {
         field_l = null;
         field_m = null;
         if (param0 != 12072) {
-          wda.d(-112);
+          Locomotor.d(-112);
         }
     }
 
@@ -153,7 +153,7 @@ abstract class wda extends IntrusiveNode implements lj, noa, gr {
         return ji.a(param0, 122, 4);
     }
 
-    wda(Room param0, BitPacketBuffer param1, boolean param2) {
+    Locomotor(Room param0, BitPacketBuffer param1, boolean param2) {
         this(param0, param2);
         RuntimeException var4 = null;
         boolean stackIn_4_1 = false;
@@ -228,7 +228,7 @@ abstract class wda extends IntrusiveNode implements lj, noa, gr {
 
     public final gpa n(int param0) {
         if (param0 != 31974) {
-          wda.d(-9);
+          Locomotor.d(-9);
           return this.field_h;
         }
         return this.field_h;
@@ -268,7 +268,7 @@ abstract class wda extends IntrusiveNode implements lj, noa, gr {
         return this.field_n.M(0);
     }
 
-    wda(Room param0, boolean param1) {
+    Locomotor(Room param0, boolean param1) {
         this.field_k = true;
         this.field_i = false;
         this.field_j = false;

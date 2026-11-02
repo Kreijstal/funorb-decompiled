@@ -16,7 +16,7 @@ final class uc extends hn {
         }
     }
 
-    uc(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    uc(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -80,7 +80,7 @@ final class uc extends hn {
           var10.b(false, 11468);
           var10.a(1, (byte) -12, true);
           var5 = new eq(param2, param1);
-          var10.a((byte) 83, (nv) (var5));
+          var10.a((byte) 83, (Behaviour) (var5));
           var10.d(25, -1);
           var6 = new cu(param2, param1);
           var6.b((byte) 0, true);
@@ -88,7 +88,7 @@ final class uc extends hn {
           var7 = var6.j((byte) -112);
           var7.a(false, 67);
           var7.a(0, -17075, true);
-          var10.a((byte) 83, (nv) (var6));
+          var10.a((byte) 83, (Behaviour) (var6));
           if (param0 != 5) {
             field_L = true;
           }

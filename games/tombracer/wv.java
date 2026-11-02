@@ -10,7 +10,7 @@ abstract class wv extends dfa {
     int field_n;
     ko field_k;
     int field_f;
-    static vna field_l;
+    static IntrusiveDeque field_l;
     static String field_h;
     boolean field_o;
 
@@ -843,7 +843,7 @@ abstract class wv extends dfa {
               if (param0 == 31) {
                 stackIn_16_0 = new StringBuilder().append(var3).append(" ");
                 if (!ara.field_wb) {
-                  stackIn_17_1 = nv.field_h.toLowerCase();
+                  stackIn_17_1 = Behaviour.field_h.toLowerCase();
                 } else {
                   stackIn_17_1 = ra.field_H.toLowerCase();
                 }
@@ -853,14 +853,14 @@ abstract class wv extends dfa {
                   if (rsa.field_s) {
                     stackIn_24_1 = ra.field_H.toLowerCase();
                   } else {
-                    stackIn_24_1 = nv.field_h.toLowerCase();
+                    stackIn_24_1 = Behaviour.field_h.toLowerCase();
                   }
                   var3 = ((StringBuilder) (Object) stackIn_23_0).append(stackIn_24_1).toString();
                   stackIn_30_0 = new StringBuilder().append(var3).append(" ");
                   if (jc.field_M) {
                     stackIn_31_1 = ra.field_H.toLowerCase();
                   } else {
-                    stackIn_31_1 = nv.field_h.toLowerCase();
+                    stackIn_31_1 = Behaviour.field_h.toLowerCase();
                   }
                   var3 = ((StringBuilder) (Object) stackIn_30_0).append(stackIn_31_1).toString();
                 }
@@ -870,7 +870,7 @@ abstract class wv extends dfa {
               if (rsa.field_s) {
                 stackIn_24_1 = ra.field_H.toLowerCase();
               } else {
-                stackIn_24_1 = nv.field_h.toLowerCase();
+                stackIn_24_1 = Behaviour.field_h.toLowerCase();
               }
               var3 = ((StringBuilder) (Object) stackIn_23_0).append(stackIn_24_1).toString();
               if (var4 != 0) {
@@ -878,7 +878,7 @@ abstract class wv extends dfa {
                 if (jc.field_M) {
                   stackIn_31_1 = ra.field_H.toLowerCase();
                 } else {
-                  stackIn_31_1 = nv.field_h.toLowerCase();
+                  stackIn_31_1 = Behaviour.field_h.toLowerCase();
                 }
                 var3 = ((StringBuilder) (Object) stackIn_30_0).append(stackIn_31_1).toString();
               }
@@ -888,7 +888,7 @@ abstract class wv extends dfa {
             if (jc.field_M) {
               stackIn_31_1 = ra.field_H.toLowerCase();
             } else {
-              stackIn_31_1 = nv.field_h.toLowerCase();
+              stackIn_31_1 = Behaviour.field_h.toLowerCase();
             }
             var3 = ((StringBuilder) (Object) stackIn_30_0).append(stackIn_31_1).toString();
           }

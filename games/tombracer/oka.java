@@ -10,7 +10,7 @@ final class oka extends wv {
     static jea field_w;
     private int field_s;
     private int field_t;
-    private vna field_q;
+    private IntrusiveDeque field_q;
     static jea[] field_y;
     static String[] field_A;
 
@@ -226,7 +226,7 @@ final class oka extends wv {
         this.field_t = 0;
         this.field_r = this.e(-18796);
         this.field_x = new pfa(0, this.field_v);
-        this.field_q = new vna();
+        this.field_q = new IntrusiveDeque();
         this.field_q.b((byte) -118, new cc(0, 1, 2));
         this.field_q.b((byte) -54, new cc(0, 2, 6));
         this.field_q.b((byte) -115, new cc(1, 3, 4));
@@ -258,7 +258,7 @@ final class oka extends wv {
         return koa.b(0) - 25;
     }
 
-    final static void a(String param0, int param1, da param2, int param3, int param4, int param5, int param6) {
+    final static void a(String param0, int param1, GameFont param2, int param3, int param4, int param5, int param6) {
         try {
           param2.a(fm.a(false, param6), param3, param5, fm.a(false, param1), param4, param0);
         } catch (RuntimeException runtimeException) {

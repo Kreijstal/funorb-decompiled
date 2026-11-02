@@ -44,7 +44,7 @@ final class lg extends dna {
         }
     }
 
-    lg(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    lg(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -93,7 +93,7 @@ final class lg extends dna {
           var7 = new eq(param2, param0);
           var7.b((byte) -114, true);
           var7.a(8, (byte) -22);
-          var12.a((byte) 83, (nv) (var7));
+          var12.a((byte) 83, (Behaviour) (var7));
           var8 = new cu(param2, param0);
           var8.b(0, 5, param1 - 3);
           var8.a(0, 0, 36, 0);
@@ -102,7 +102,7 @@ final class lg extends dna {
           var9.a(0, -17075, true);
           var9.a(param1, -17075, true);
           var9.a(2, param1 ^ -17074, true);
-          var12.a((byte) 83, (nv) (var8));
+          var12.a((byte) 83, (Behaviour) (var8));
           var10 = rm.field_a;
           var11 = (aka) (var10.a(18, 98));
           var11.b(param1 + 87, 0);

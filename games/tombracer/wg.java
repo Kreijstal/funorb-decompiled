@@ -79,7 +79,7 @@ final class wg extends tu {
         field_l = null;
     }
 
-    wg(ff param0) {
+    wg(MatchState param0) {
         super(param0);
     }
 

@@ -10,7 +10,7 @@ final class cqa extends vw {
     private boolean field_e;
     private jagdx.IDirect3DVertexShader field_k;
     private jagdx.IDirect3DVertexShader field_m;
-    private cta field_i;
+    private Direct3DToolkit field_i;
     private static float[] field_h;
     private static float[] field_f;
     private boolean field_d;
@@ -128,7 +128,7 @@ final class cqa extends vw {
         this.a(true, -11);
     }
 
-    cqa(cta param0, cn param1) {
+    cqa(Direct3DToolkit param0, cn param1) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;

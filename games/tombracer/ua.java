@@ -15,7 +15,7 @@ final class ua implements bo {
         }
     }
 
-    final static void a(int param0, da param1, String param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, GameFont param1, String param2, int param3, int param4, int param5, int param6) {
         try {
           param1.a(12199, param5, param2, fm.a(false, param4), fm.a(false, param6), param3);
           if (param0 != 4) {
@@ -155,7 +155,7 @@ final class ua implements bo {
             return stackIn_27_0;
           }
           if (8 == param0) {
-            stackIn_30_0 = gl.$cfr$intArgs$a$53ce4ab4c593(125, wda.field_m, new String[]{param1});
+            stackIn_30_0 = gl.$cfr$intArgs$a$53ce4ab4c593(125, Locomotor.field_m, new String[]{param1});
             return stackIn_30_0;
           }
           if (11 == param0) {

@@ -88,7 +88,7 @@ final class rda extends ci {
           }
           var4 = qda.field_i;
           nfa.a(param1, param0 ^ -8901);
-          loa.a(una.field_b, false, 0, 0, hba.field_b);
+          MazeGenerator.a(una.field_b, false, 0, 0, hba.field_b);
           if (null != this.field_p) {
             for (var5 = 0; var5 < this.field_p.length; var5++) {
               var6 = this.field_p[var5];

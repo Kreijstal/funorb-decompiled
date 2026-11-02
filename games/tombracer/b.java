@@ -5,7 +5,7 @@ import java.util.*;
 
 class b extends ae implements tpa {
     static String field_v;
-    vna field_u;
+    IntrusiveDeque field_u;
 
     final boolean a(ae param0, byte param1) {
         RuntimeException var3 = null;
@@ -452,7 +452,7 @@ class b extends ae implements tpa {
 
     b(int param0, int param1, int param2, int param3, isa param4) {
         super(param0, param1, param2, param3, param4, (qc) null);
-        this.field_u = new vna();
+        this.field_u = new IntrusiveDeque();
     }
 
     final boolean a(int param0, int param1, int param2, int param3, ae param4, int param5, int param6) {
@@ -597,7 +597,7 @@ class b extends ae implements tpa {
         try {
           var5 = new uja(this.field_u);
           if (param3 != 23241) {
-            this.field_u = (vna) null;
+            this.field_u = (IntrusiveDeque) null;
           }
           var6 = (ae) (var5.a(true));
           while (var6 != null) {

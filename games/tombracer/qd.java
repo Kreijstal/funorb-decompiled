@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qd {
-    static vna field_a;
+    static IntrusiveDeque field_a;
 
     final static int a(byte param0) {
         if (param0 < 9) {
@@ -13,7 +13,7 @@ final class qd {
 
     public static void a(int param0) {
         if (param0 != 22442) {
-          field_a = (vna) null;
+          field_a = (IntrusiveDeque) null;
           field_a = null;
           return;
         }
@@ -21,6 +21,6 @@ final class qd {
     }
 
     static {
-        field_a = new vna();
+        field_a = new IntrusiveDeque();
     }
 }

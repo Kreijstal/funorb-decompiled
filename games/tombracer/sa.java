@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sa extends wda {
+final class sa extends Locomotor {
     private boolean field_o;
     private int field_p;
     private int field_q;

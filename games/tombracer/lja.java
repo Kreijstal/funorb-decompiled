@@ -222,15 +222,15 @@ final class lja {
           return true;
         }
         if (param0 == 11) {
-          loa.a(this.field_b, param2, (byte) 108, 0);
+          MazeGenerator.a(this.field_b, param2, (byte) 108, 0);
           return true;
         }
         if (param0 == 12) {
-          loa.a(this.field_b, param2, (byte) 108, 1);
+          MazeGenerator.a(this.field_b, param2, (byte) 108, 1);
           return true;
         }
         if (param0 == 13) {
-          loa.a(this.field_b, param2, (byte) 108, 2);
+          MazeGenerator.a(this.field_b, param2, (byte) 108, 2);
           return true;
         }
         if (param0 == 14) {

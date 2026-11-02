@@ -31,12 +31,12 @@ final class dta {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        ff var9 = null;
+        MatchState var9 = null;
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
         Player var12 = null;
-        dt var13 = null;
+        PlayerSimulation var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -53,7 +53,7 @@ final class dta {
         int var27_int = 0;
         String var27 = null;
         double var28_double = 0.0;
-        da var28 = null;
+        GameFont var28 = null;
         int var28_int = 0;
         int var29 = 0;
         int var30 = 0;
@@ -65,11 +65,11 @@ final class dta {
         int var34_int = 0;
         Trap[] var35 = null;
         int var35_int = 0;
-        da var36 = null;
+        GameFont var36 = null;
         int var37 = 0;
         Object var38_ref = null;
         int var38 = 0;
-        nv var38_ref_nv = null;
+        Behaviour var38_ref_nv = null;
         int var39 = 0;
         int var40 = 0;
         String var41 = null;
@@ -79,7 +79,7 @@ final class dta {
         String var27Lifetime2;
         String var27Lifetime3;
         String var27Lifetime4;
-        da var28Lifetime1;
+        GameFont var28Lifetime1;
         int var10Lifetime1;
         int var17Lifetime1;
         int var17Lifetime2;
@@ -116,9 +116,9 @@ final class dta {
             var10 = -94 / ((51 - param3) / 40);
             var9 = param4.field_k;
             var11 = param4.l(107);
-            var12 = var9.field_H[param2];
-            var13 = var9.field_G[param2];
-            var14 = var13.field_c;
+            var12 = var9.players[param2];
+            var13 = var9.simulations[param2];
+            var14 = var13.tick;
             var15 = var9.field_c.field_b[param2];
             stackIn_12_0 = (var11 != param2) ? 0 : 1;
             var16 = stackIn_12_0;
@@ -294,13 +294,13 @@ final class dta {
                   if (var30Lifetime3 == 0 ||
                     var31Lifetime2 == 0) {
                     var37 = 0;
-                    var38_ref_nv = (nv) (var35[var36_int].field_u.f(-80));
+                    var38_ref_nv = (Behaviour) (var35[var36_int].field_u.f(-80));
                     while (var38_ref_nv != null) {
                       if (var38_ref_nv instanceof sea) {
                         var30Lifetime3 = 1;
                       } else {
                         if (!(var38_ref_nv instanceof eq)) {
-                          var38_ref_nv = (nv) (var35[var36_int].field_u.e(121));
+                          var38_ref_nv = (Behaviour) (var35[var36_int].field_u.e(121));
                           continue;
                         }
                         var37 = 1;
@@ -335,20 +335,20 @@ final class dta {
                   var38 = 0;
                 }
                 if (var30Lifetime3 != 0) {
-                  var39 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), wca.field_l, var38, fm.a(false, 11903361), aca.field_g, (byte) 124, 48, 0, id.field_h, param0, 2);
+                  var39 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), SpriteState.field_l, var38, fm.a(false, 11903361), aca.field_g, (byte) 124, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39;
                 }
                 if (var32Lifetime1 != 0) {
-                  var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), wca.field_l, var38, fm.a(false, 11903361), hda.field_h, (byte) 72, 48, 0, id.field_h, param0, 2);
+                  var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), SpriteState.field_l, var38, fm.a(false, 11903361), hda.field_h, (byte) 72, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime1;
                 } else {
                   if (var31Lifetime2 != 0) {
-                    var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), wca.field_l, var38, fm.a(false, 11903361), qja.field_k, (byte) -106, 48, 0, id.field_h, param0, 2);
+                    var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), SpriteState.field_l, var38, fm.a(false, 11903361), qja.field_k, (byte) -106, 48, 0, id.field_h, param0, 2);
                     param6 = param6 - var39Lifetime1 * var37Lifetime1;
                   }
                 }
                 if (var33 != 0) {
-                  var39Lifetime2 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), wca.field_l, var38, fm.a(false, 11903361), bb.field_l, (byte) 107, 48, 0, id.field_h, param0, 2);
+                  var39Lifetime2 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, fm.a(false, 0), SpriteState.field_l, var38, fm.a(false, 11903361), bb.field_l, (byte) 107, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime2;
                 }
               }

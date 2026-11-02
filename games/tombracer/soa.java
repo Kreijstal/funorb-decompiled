@@ -9,8 +9,8 @@ final class soa {
     private int[] field_a;
 
     final void a(byte param0, iqa param1) {
-        ha var5 = null;
-        ha var3 = null;
+        GraphicsToolkit var5 = null;
+        GraphicsToolkit var3 = null;
         try {
           var5 = param1.field_d;
           var3 = var5;
@@ -25,7 +25,7 @@ final class soa {
     }
 
     final void a(int param0, iqa param1) {
-        ha var3 = null;
+        GraphicsToolkit var3 = null;
         try {
           var3 = param1.field_d;
           var3.K(this.field_d);

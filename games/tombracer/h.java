@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends da implements e {
+final class h extends GameFont implements e {
     long field_nativeid;
 
     protected final void finalize() {

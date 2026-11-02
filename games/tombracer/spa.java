@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class spa extends wda {
+final class spa extends Locomotor {
     private int field_p;
     static jea field_o;
 

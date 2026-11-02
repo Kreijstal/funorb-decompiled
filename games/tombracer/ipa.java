@@ -131,7 +131,7 @@ final class ipa extends ra {
         }
     }
 
-    ipa(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    ipa(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         this.field_Q = 4;
         try {
@@ -178,7 +178,7 @@ final class ipa extends ra {
           var8.a((byte) -3, 6);
           var8.b((byte) 17, false);
           var8.g(126, 2);
-          var8.a((byte) 83, (nv) (new eq(param2, param0)));
+          var8.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = this.a((byte) -41, param2, param0);
           var5.a(true, -606738686);
           var5.b(4, true);

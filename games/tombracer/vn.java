@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vn {
-    static vna field_a;
+    static IntrusiveDeque field_a;
     static String field_c;
     static jw field_b;
 

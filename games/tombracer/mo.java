@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mo extends nv {
+final class mo extends Behaviour {
     private int field_n;
     private int field_q;
     private boolean field_s;

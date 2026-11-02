@@ -93,7 +93,7 @@ final class cr {
         }
     }
 
-    cr(vna param0) {
+    cr(IntrusiveDeque param0) {
         int incrementValue$2 = 0;
         int var2_int = 0;
         mi var3 = null;

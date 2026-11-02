@@ -3,12 +3,12 @@
  */
 final class nn {
     static int field_b;
-    static vna field_a;
+    static IntrusiveDeque field_a;
     static int field_c;
 
     public static void a(byte param0) {
         if (param0 < 8) {
-          field_a = (vna) null;
+          field_a = (IntrusiveDeque) null;
           field_a = null;
           return;
         }
@@ -132,6 +132,6 @@ final class nn {
 
     static {
         field_c = 3;
-        field_a = new vna();
+        field_a = new IntrusiveDeque();
     }
 }

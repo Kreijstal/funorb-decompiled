@@ -9,11 +9,11 @@ final class rk extends ae {
     private int field_G;
     static String field_F;
     private int field_x;
-    private iu field_z;
+    private Sprite field_z;
     int field_B;
-    private iu field_E;
-    private iu field_A;
-    private iu[] field_w;
+    private Sprite field_E;
+    private Sprite field_A;
+    private Sprite[] field_w;
     private int field_v;
 
     final void a(boolean param0, int param1, int param2) {
@@ -35,7 +35,7 @@ final class rk extends ae {
     }
 
     final void a(int param0, int param1, ae param2, int param3) {
-        iu discarded$1 = null;
+        Sprite discarded$1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -67,17 +67,17 @@ final class rk extends ae {
         }
     }
 
-    private final iu a(byte param0) {
+    private final Sprite a(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = TombRacer.field_G ? 1 : 0;
         int var2 = this.field_p >> 1;
-        iu var3 = new iu(var2, this.field_p);
+        Sprite var3 = new Sprite(var2, this.field_p);
         nm.a(var3, (byte) 93);
         if (param0 <= 66) {
-          this.field_z = (iu) null;
+          this.field_z = (Sprite) null;
         }
         for (var4 = 0; var4 < this.field_p; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -100,13 +100,13 @@ final class rk extends ae {
     }
 
     private final void g(byte param0) {
-        this.field_w = new iu[]{this.c(-69, this.field_C, this.field_x), this.c(91, this.field_v, this.field_G)};
+        this.field_w = new Sprite[]{this.c(-69, this.field_C, this.field_x), this.c(91, this.field_v, this.field_G)};
         if (param0 != 12) {
           this.field_y = 10;
         }
         this.field_A = this.a((byte) 78);
         this.field_z = this.field_A.d();
-        this.field_E = new iu(this.field_p >> 1, this.field_p);
+        this.field_E = new Sprite(this.field_p >> 1, this.field_p);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -145,7 +145,7 @@ final class rk extends ae {
         return param1;
     }
 
-    private final iu c(int param0, int param1, int param2) {
+    private final Sprite c(int param0, int param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -155,7 +155,7 @@ final class rk extends ae {
         int var13 = 0;
         int var14 = TombRacer.field_G ? 1 : 0;
         int var4 = 29 % ((28 - param0) / 61);
-        iu var5 = new iu(2 * this.field_u, this.field_p);
+        Sprite var5 = new Sprite(2 * this.field_u, this.field_p);
         int var9Lifetime1;
         int var10Lifetime1;
         int var13Lifetime1;
@@ -180,7 +180,7 @@ final class rk extends ae {
         return var5;
     }
 
-    private final void a(int param0, iu param1, int param2, int param3) {
+    private final void a(int param0, Sprite param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

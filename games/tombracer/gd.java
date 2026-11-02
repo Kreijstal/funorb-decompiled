@@ -25,7 +25,7 @@ final class gd extends lea {
           var4.a((byte) -3, 2);
           var5 = new ue(param2, param0);
           var5.a(3, false);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kga) (var6.a(12, param1 ^ 117));
           var7.b((byte) 98, 2);
@@ -61,7 +61,7 @@ final class gd extends lea {
         field_G = null;
     }
 
-    gd(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    gd(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

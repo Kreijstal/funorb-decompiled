@@ -57,7 +57,7 @@ final class kt extends kna {
           var8.a((byte) -3, 6);
           var8.b((byte) 17, false);
           var8.g(126, 2);
-          var8.a((byte) 83, (nv) (new eq(param2, param0)));
+          var8.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new pt(param2, param0);
           var5.a(8 * this.field_G, (byte) 127);
           var8.a(var5, 0);
@@ -96,7 +96,7 @@ final class kt extends kna {
         return 7;
     }
 
-    kt(Room param0, int param1, BitPacketBuffer param2, csa param3) {
+    kt(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         this.field_G = 4;
         try {

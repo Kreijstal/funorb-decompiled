@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class ff implements dv {
+final class MatchState implements dv {
     int field_k;
-    dt[] field_G;
+    PlayerSimulation[] simulations;
     int field_E;
-    Player[] field_H;
+    Player[] players;
     wd[] field_y;
     private int field_r;
     private mt field_d;
@@ -44,15 +44,15 @@ final class ff implements dv {
     private boolean field_M;
     private int field_m;
     private int field_a;
-    static iu field_p;
+    static Sprite field_p;
     int field_t;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        Room var6 = this.field_G[param1].a(true, param0);
+    final void resyncPlayerToRoom(int param0, int param1, int param2, int param3, int param4) {
+        Room var6 = this.simulations[param1].a(true, param0);
         if (var6 == null) {
           throw new IllegalStateException("Could not resync player to room: " + param1 + ", " + param0);
         }
-        this.field_G[param1].field_c = param3;
+        this.simulations[param1].tick = param3;
         var6.a((byte) 88, param4);
         var6.i((byte) -65);
         if (param2 != 1) {
@@ -62,7 +62,7 @@ final class ff implements dv {
 
     final void b(boolean param0, int param1, int param2) {
         this.field_s = false;
-        dt var4 = this.field_G[param2];
+        PlayerSimulation var4 = this.simulations[param2];
         if (!param0) {
           return;
         }
@@ -97,13 +97,13 @@ final class ff implements dv {
         field_N = null;
         field_p = null;
         if (param0 != 0) {
-          ff.h(88);
+          MatchState.h(88);
         }
         field_j = null;
     }
 
     final boolean a(boolean param0, int param1, int param2) {
-        Player var4 = this.field_H[param1];
+        Player var4 = this.players[param1];
         if (param0) {
           return false;
         }
@@ -138,9 +138,9 @@ final class ff implements dv {
             return;
           }
           var3_int = param1.c(91);
-          for (var4 = 0; var4 < this.field_G.length; var4++) {
-            if (this.field_G[var4] != null) {
-              var5 = this.field_G[var4].a(param0, var3_int);
+          for (var4 = 0; var4 < this.simulations.length; var4++) {
+            if (this.simulations[var4] != null) {
+              var5 = this.simulations[var4].a(param0, var3_int);
               if (var5 != null) {
                 param1.a(var5, (byte) 126);
               }
@@ -185,7 +185,7 @@ final class ff implements dv {
           if (param1 <= 62) {
             this.d(-118);
           }
-          for (var3_int = 0; this.field_H.length > var3_int; var3_int++) {
+          for (var3_int = 0; this.players.length > var3_int; var3_int++) {
             if (faa.a(param0, 109, this.field_l[var3_int])) {
               stackIn_8_0 = var3_int;
               return stackIn_8_0;
@@ -226,7 +226,7 @@ final class ff implements dv {
         }
         var2 = -1;
         var3 = -1;
-        for (var4 = 0; var4 < this.field_H.length; var4++) {
+        for (var4 = 0; var4 < this.players.length; var4++) {
           var5 = this.field_v[var4];
           if (-1 == var3 ||
             var5 > var2) {
@@ -246,8 +246,8 @@ final class ff implements dv {
         if (param1 <= 45) {
           return;
         }
-        for (var3 = 0; this.field_H.length > var3; var3++) {
-          this.field_G[var3].d(119, param0);
+        for (var3 = 0; this.players.length > var3; var3++) {
+          this.simulations[var3].d(119, param0);
         }
     }
 
@@ -255,7 +255,7 @@ final class ff implements dv {
         if (param0 != 0) {
           this.field_A = -127;
         }
-        return this.field_H[param1].f((byte) 106);
+        return this.players[param1].f((byte) 106);
     }
 
     final void d(byte param0, int param1) {
@@ -274,7 +274,7 @@ final class ff implements dv {
     private final void n(int param0, int param1) {
         this.field_q[param1] = true;
         if (param0 < 29) {
-          this.a(-104, 79, -8, 3, -72);
+          this.resyncPlayerToRoom(-104, 79, -8, 3, -72);
         }
     }
 
@@ -343,7 +343,7 @@ final class ff implements dv {
     final boolean b(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
-        for (var2 = param0; var2 < this.field_H.length; var2++) {
+        for (var2 = param0; var2 < this.players.length; var2++) {
           if (!this.field_q[var2]) {
             return false;
           }
@@ -375,7 +375,7 @@ final class ff implements dv {
         if (param0 >= -56) {
           this.c((byte) 52);
         }
-        stackIn_6_0 = (!this.f((byte) -102, param1)) && (this.field_G[param1].e(-31170));
+        stackIn_6_0 = (!this.f((byte) -102, param1)) && (this.simulations[param1].e(-31170));
         return stackIn_6_0;
     }
 
@@ -416,7 +416,7 @@ final class ff implements dv {
         if (!param0) {
           return (dda) null;
         }
-        return this.field_G[param1].m(9262).a(104);
+        return this.simulations[param1].m(9262).a(104);
     }
 
     final void m(int param0, int param1) {
@@ -459,7 +459,7 @@ final class ff implements dv {
         if (param0 != 1) {
           this.a(21, (byte) 42);
         }
-        return this.field_H[param1].f((byte) 87).c(-79);
+        return this.players[param1].f((byte) 87).c(-79);
     }
 
     final boolean l(int param0, int param1) {
@@ -475,9 +475,9 @@ final class ff implements dv {
         int var4 = 16 % ((54 - param0) / 35);
         tu var7 = this.field_d.a(this, -25077);
         tu var3 = var7;
-        this.field_G[param1] = new dt(var7, this.field_H[param1], this.field_O, this.field_a);
-        for (var5 = 0; this.field_G[param1].l(-106) > var5; var5++) {
-          this.field_G[param1].a(-28088, var5, this.field_u[this.field_A].a(1024, var5, this.field_C, this.field_G[param1]));
+        this.simulations[param1] = new PlayerSimulation(var7, this.players[param1], this.field_O, this.field_a);
+        for (var5 = 0; this.simulations[param1].l(-106) > var5; var5++) {
+          this.simulations[param1].a(-28088, var5, this.field_u[this.field_A].a(1024, var5, this.field_C, this.simulations[param1]));
         }
     }
 
@@ -486,7 +486,7 @@ final class ff implements dv {
         if (param0 != 90) {
           this.field_m = 124;
         }
-        stackIn_6_0 = (!this.f((byte) -91, param1)) && (this.field_G[param1].b(param0 - 90));
+        stackIn_6_0 = (!this.f((byte) -91, param1)) && (this.simulations[param1].b(param0 - 90));
         return stackIn_6_0;
     }
 
@@ -526,23 +526,23 @@ final class ff implements dv {
         if (param0 != 0) {
           this.field_a = 20;
         }
-        return dna.b(this.field_G[param1].a(true), 255);
+        return dna.b(this.simulations[param1].a(true), 255);
     }
 
-    final dt f(int param0, int param1) {
+    final PlayerSimulation f(int param0, int param1) {
         if (param0 < param1) {
           return null;
         }
-        return this.field_G[param0];
+        return this.simulations[param0];
     }
 
-    final void a(byte param0, pi param1) {
-        dt var3 = null;
+    final void a(byte param0, PendingEvent param1) {
+        PlayerSimulation var3 = null;
         try {
           if (param0 <= 14) {
             this.b((byte) -115);
           }
-          var3 = this.field_G[param1.a(3)];
+          var3 = this.simulations[param1.a(3)];
           var3.m(9262).a(var3, param1, false);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ff.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -553,7 +553,7 @@ final class ff implements dv {
         if (param0 != 115) {
           this.e(-62, 55);
         }
-        return this.field_G[param1].field_c;
+        return this.simulations[param1].tick;
     }
 
     final boolean d(int param0) {
@@ -570,12 +570,12 @@ final class ff implements dv {
         int var2Lifetime1;
         int var2Lifetime2;
         var4 = TombRacer.field_G ? 1 : 0;
-        for (var2 = 0; var2 < this.field_G.length; var2++) {
-          this.field_H[var2].t((byte) 126);
+        for (var2 = 0; var2 < this.simulations.length; var2++) {
+          this.players[var2].t((byte) 126);
           this.a((byte) -36, var2);
         }
-        for (var2Lifetime1 = 0; var2Lifetime1 < this.field_G.length; var2Lifetime1++) {
-          var3 = this.field_G[var2Lifetime1].a(-88);
+        for (var2Lifetime1 = 0; var2Lifetime1 < this.simulations.length; var2Lifetime1++) {
+          var3 = this.simulations[var2Lifetime1].a(-88);
           if (var3 != null) {
             var3.i((byte) -89);
           }
@@ -612,7 +612,7 @@ final class ff implements dv {
         return stackIn_7_0;
     }
 
-    ff(String[] param0, int param1, int param2, int param3, int param4, int param5, int param6, BitSet[] param7, boolean[] param8, mt param9, ou param10) {
+    MatchState(String[] param0, int param1, int param2, int param3, int param4, int param5, int param6, BitSet[] param7, boolean[] param8, mt param9, ou param10) {
         int var13 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -663,11 +663,11 @@ final class ff implements dv {
           this.field_C = this.field_f;
           this.field_P = this.field_k;
           this.field_v = new int[this.field_P];
-          this.field_H = new Player[this.field_P];
+          this.players = new Player[this.field_P];
           this.field_y = new wd[this.field_P];
-          for (var12_intLifetime2 = 0; this.field_H.length > var12_intLifetime2; var12_intLifetime2++) {
-            this.field_H[var12_intLifetime2] = new Player(var12_intLifetime2);
-            this.field_y[var12_intLifetime2] = new wd(this.field_H[var12_intLifetime2]);
+          for (var12_intLifetime2 = 0; this.players.length > var12_intLifetime2; var12_intLifetime2++) {
+            this.players[var12_intLifetime2] = new Player(var12_intLifetime2);
+            this.field_y[var12_intLifetime2] = new wd(this.players[var12_intLifetime2]);
           }
           var12_intLifetime3 = this.field_K;
           if (var12_intLifetime3 == 0) {
@@ -685,8 +685,8 @@ final class ff implements dv {
               }
             }
           }
-          this.field_G = new dt[this.field_k];
-          this.field_q = new boolean[this.field_H.length];
+          this.simulations = new PlayerSimulation[this.field_k];
+          this.field_q = new boolean[this.players.length];
           this.field_o = -1;
           this.field_c = new kqa(this);
           this.field_e = new sma(this);

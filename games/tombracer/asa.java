@@ -10,7 +10,7 @@ final class asa extends gda {
     float field_l;
     float field_h;
     float field_o;
-    static vna field_j;
+    static IntrusiveDeque field_j;
     float field_i;
     float field_p;
     float field_f;
@@ -175,7 +175,7 @@ final class asa extends gda {
           this.field_e = param3;
           return;
         }
-        field_j = (vna) null;
+        field_j = (IntrusiveDeque) null;
         this.field_l = 0.0f;
         this.field_k = 0.0f;
         this.field_i = param2;
@@ -653,7 +653,7 @@ final class asa extends gda {
           rua.field_gb.field_J.d(8);
           rua.field_gb.b(-125, kga.field_n);
           if (param0 >= -20) {
-            field_j = (vna) null;
+            field_j = (IntrusiveDeque) null;
           }
           vo.field_b = true;
         } catch (RuntimeException runtimeException) {

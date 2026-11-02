@@ -21,8 +21,8 @@ final class ea extends IntrusiveNode implements bo {
             eia.field_r[var1_int] = 0L;
           }
           if (param0 != -33) {
-            cka var3 = (cka) null;
-            ea.a(70, -25, (String) null, (cka) null);
+            OpenGlToolkit var3 = (OpenGlToolkit) null;
+            ea.a(70, -25, (String) null, (OpenGlToolkit) null);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             bv.field_xb[var1_intLifetime1] = 0L;
@@ -135,7 +135,7 @@ final class ea extends IntrusiveNode implements bo {
         }
     }
 
-    final static pva a(int param0, int param1, String param2, cka param3) {
+    final static pva a(int param0, int param1, String param2, OpenGlToolkit param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         pva stackIn_2_0 = null;

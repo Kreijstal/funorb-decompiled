@@ -5,7 +5,7 @@ final class pq implements os {
     static int field_f;
     static int[] field_e;
     static jea field_g;
-    static iu[] field_b;
+    static Sprite[] field_b;
     static nh field_a;
     static String field_d;
     static jea field_c;
