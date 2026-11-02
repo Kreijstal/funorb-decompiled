@@ -68,7 +68,7 @@ final class kk extends rqa {
           var5_int = param1.c(3) - param0.c(3);
           if (var5_int > 0) {
             for (var6_int = 0; var5_int > var6_int; var6_int++) {
-              param0.b(-10258, (ksa) ((Object) param3.a((byte) 6)));
+              param0.b(-10258, (IntrusiveNode) ((Object) param3.a((byte) 6)));
             }
           } else {
             if (var5_int < 0) {

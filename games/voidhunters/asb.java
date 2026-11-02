@@ -670,7 +670,7 @@ final class asb {
                   }
                   for (var24 = 0; var7 > var24; var24++) {
                     if (mia.field_a[var24]) {
-                      var25_ref = "</col>" + hva.field_c[var24] + "<col=A00000>";
+                      var25_ref = "</col>" + ClientException.field_c[var24] + "<col=A00000>";
                       var22 = var25_ref;
                       var21 = var22;
                       var22 = var25_ref;
@@ -1353,12 +1353,12 @@ final class asb {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        ds var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        ds var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        ds var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -1408,8 +1408,8 @@ final class asb {
             var35 = ffb.a(true, this.field_i[param2], true);
             var25 = var35;
             var9 = var25;
-            var26 = new ds(var35);
-            var26.a(5, param3, var26.field_h.length, false);
+            var26 = new PacketBuffer(var35);
+            var26.a(5, param3, var26.payload.length, false);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -1437,10 +1437,10 @@ final class asb {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var12 * var5_int * 4;
-              var32 = new ds(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
               var15 = 0;
-              var32.field_e = var11;
+              var32.position = var11;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
@@ -1460,7 +1460,7 @@ final class asb {
                 return true;
               }
               var44 = new byte[var14];
-              var32.field_e = var11;
+              var32.position = var11;
               var14Lifetime1 = 0;
               var17 = 0;
               for (var18 = 0; var12 > var18; var18++) {
@@ -1485,8 +1485,8 @@ final class asb {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * (var12 * var5_int);
-              var29 = new ds(var43);
-              var29.field_e = var11;
+              var29 = new PacketBuffer(var43);
+              var29.position = var11;
               var38 = new int[var5_int];
               var30 = var38;
               var14_ref_int__ = var30;
@@ -1505,7 +1505,7 @@ final class asb {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var29.field_e = var11;
+              var29.position = var11;
               var16 = 0;
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;

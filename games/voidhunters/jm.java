@@ -22,7 +22,7 @@ final class jm extends rqa {
           us.field_d.a(var2, (long)param0, (byte) -117);
           return var2;
         }
-        var2.a(param0, new ds(var3), (byte) 11);
+        var2.a(param0, new PacketBuffer(var3), (byte) 11);
         us.field_d.a(var2, (long)param0, (byte) -117);
         return var2;
     }

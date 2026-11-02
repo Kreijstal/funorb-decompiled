@@ -15,7 +15,7 @@ final class jsa {
             if (!sab.e((byte) -118)) {
               throw new RuntimeException("");
             }
-            if (!gpb.a("jagdx", (byte) 114)) {
+            if (!RasterBuffer.a("jagdx", (byte) 114)) {
               throw new RuntimeException("");
             }
             var5 = Class.forName("nla");

@@ -369,7 +369,7 @@ final class pe implements ntb, utb {
                     var17 = var15Lifetime2 - var10_ref_uwa.field_g;
                     var18 = -var10_ref_uwa.field_f + var16Lifetime1;
                     var19 = ecb.a(var18, (byte) -77, var17);
-                    var20 = rrb.a(22433, var19 - var10_ref_uwa.field_b);
+                    var20 = GameKeyHandler.a(22433, var19 - var10_ref_uwa.field_b);
                     if (Math.abs(var20) < var10_ref_uwa.field_i) {
                       var14_intLifetime2 = 1;
                     } else {
@@ -383,7 +383,7 @@ final class pe implements ntb, utb {
                           var17Lifetime1 = var15Lifetime2Lifetime1 - var10_ref_uwa.field_g;
                           var18Lifetime1 = var16Lifetime1Lifetime1 - var10_ref_uwa.field_f;
                           var19Lifetime1 = ecb.a(var18Lifetime1, (byte) -77, var17Lifetime1);
-                          var20 = rrb.a(22433, -var10_ref_uwa.field_b + var19Lifetime1);
+                          var20 = GameKeyHandler.a(22433, -var10_ref_uwa.field_b + var19Lifetime1);
                           if (Math.abs(var20) < var10_ref_uwa.field_i) {
                             var14_intLifetime2 = 1;
                           }
@@ -591,7 +591,7 @@ final class pe implements ntb, utb {
                   var25 = var13.i((byte) -112).field_o[var12.field_e];
                   var20Lifetime1 = var25.field_a + var12.field_b.field_b;
                   if (param0.field_k.field_a != null) {
-                    var20Lifetime1 = rrb.a(22433, var20Lifetime1 + 4096);
+                    var20Lifetime1 = GameKeyHandler.a(22433, var20Lifetime1 + 4096);
                   }
                   param0.a(var20Lifetime1, -95);
                   var10.h(98);
@@ -1179,7 +1179,7 @@ final class pe implements ntb, utb {
             param6.a(param6.e(false) * var15 * 4, param6.d(false), param6.g((byte) 124), (byte) -121, param6.e(false) * (var14 * 4));
             param6.field_f = 180 * param6.field_f >> 8;
             param6.field_h = param6.field_h * 180 >> 8;
-            var20 = rrb.a(22433, -param6.e(0) + var19);
+            var20 = GameKeyHandler.a(22433, -param6.e(0) + var19);
             param6.field_n = (var20 << 12) / var17;
             if (Math.abs(param6.field_n) > Math.abs(var20) << 8) {
               param6.field_n = var20 << 4;
@@ -2305,11 +2305,11 @@ final class pe implements ntb, utb {
         int var5;
         var4 = dpa.field_p;
         var4.h(24335, param0);
-        var4.field_e = var4.field_e + 1;
-        var5 = var4.field_e;
+        var4.position = var4.position + 1;
+        var5 = var4.position;
         var4.c(0, 7);
         var4.a(param1, 105);
-        var4.e(var4.field_e - var5, -129);
+        var4.e(var4.position - var5, -129);
         if (param2 >= -120) {
           field_d = (String) null;
         }
@@ -4012,7 +4012,7 @@ final class pe implements ntb, utb {
           var18 = 1;
           var19_ref_crb__ = var9;
           var20_int = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var19_ref_crb__.length > var20_int) {
               var21_ref_crb = var19_ref_crb__[var20_int];
               if (var21_ref_crb != null) {
@@ -4022,7 +4022,7 @@ final class pe implements ntb, utb {
                 var25 = ar.a(var23, (byte) 126, var24);
                 if (var22_int > var25) {
                   var18 = 0;
-                  break L2;
+                  break scanLoop1;
                 }
               }
               var20_int++;
@@ -5320,7 +5320,7 @@ final class pe implements ntb, utb {
         var17 = VoidHunters.field_G;
         try {
           var3_ref = (tj) (this.field_x.d(0));
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (null == var3_ref) {
               var4 = -67 % ((-34 - param1) / 52);
               return;
@@ -5429,7 +5429,7 @@ final class pe implements ntb, utb {
                   wgb.field_i.d((byte) -68);
                   this.a((byte) 108, var3_ref, var13Lifetime3 != 0);
                   var3_ref = (tj) (this.field_x.a((byte) 46));
-                  continue L0;
+                  continue scanLoop1;
                 }
                 var19_ref = (nbb) (wgb.field_i);
                 var24 = var19_ref;
@@ -5769,7 +5769,7 @@ final class pe implements ntb, utb {
             var12_ref_lsb = var10_ref_ml.i((byte) -112).field_o[var9.field_e];
             var13 = var12_ref_lsb.field_a + var9.field_b.field_b;
             if (null != param3.field_k.field_a) {
-              var13 = rrb.a(22433, var13 + 4096);
+              var13 = GameKeyHandler.a(22433, var13 + 4096);
             }
             param3.a(var13, -86);
             var14 = var22.b(38) * fc.a(param3.e(0), (byte) -99) - var22.c((byte) 100) * eu.a(param3.e(0), 125) >> 16;
@@ -7397,7 +7397,7 @@ final class pe implements ntb, utb {
                 var15 = 1;
                 var24 = this.field_k;
                 var17 = 0;
-                L7: while (true) {
+                scanLoop1: while (true) {
                   if (var24.length > var17) {
                     var18_ref_sg = var24[var17];
                     if (var18_ref_sg != null) {
@@ -7411,7 +7411,7 @@ final class pe implements ntb, utb {
                       }
                       if (var21 < var22) {
                         var15 = 0;
-                        break L7;
+                        break scanLoop1;
                       }
                     }
                     var17++;
@@ -7431,7 +7431,7 @@ final class pe implements ntb, utb {
                 var16_ref_crb__ = this.field_e.c(0);
                 var17_ref_crb__ = var16_ref_crb__;
                 var18 = 0;
-                L11: while (true) {
+                scanLoop2: while (true) {
                   if (var18 < var17_ref_crb__.length) {
                     var19 = var17_ref_crb__[var18];
                     if (null != var19) {
@@ -7440,7 +7440,7 @@ final class pe implements ntb, utb {
                       var22Lifetime1 = ar.a(var20Lifetime1, (byte) 125, var21Lifetime1);
                       if (51200 + var19.field_k.i((byte) -112).field_l > var22Lifetime1) {
                         var15 = 0;
-                        break L11;
+                        break scanLoop2;
                       }
                     }
                     var18++;
@@ -8209,7 +8209,7 @@ final class pe implements ntb, utb {
         try {
           var20 = this.field_k;
           var11 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var11 < var20.length) {
               var12 = var20[var11];
               if (null != var12 &&
@@ -8236,13 +8236,13 @@ final class pe implements ntb, utb {
                     }
                   }
                   if (!pqa.a(8, 11284)) {
-                    break L1;
+                    break scanLoop1;
                   }
                   var15 = "Dragging debris=" + Integer.toString(var12.x(param4 - 116));
                   var16 = param3.a(var12.d(false), (byte) 126);
                   var17Lifetime1 = param3.b(true, var12.g((byte) 125) - 16384);
                   cka.a(-1, var15, 16711935, var17Lifetime1, var16 - (kga.a(-9, var15) >> 1), param4 + 4247);
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var11++;

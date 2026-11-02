@@ -12,15 +12,15 @@ final class rkb extends rqa {
         int var4_int = 0;
         try {
           param2.h(24335, param3);
-          param2.field_e = param2.field_e + 1;
+          param2.position = param2.position + 1;
           if (param0 != 0) {
             field_o = -13;
           }
-          var4_int = param2.field_e;
+          var4_int = param2.position;
           param2.q(-127);
           param1.b(param2, -112);
           param2.r(32712);
-          param2.e(param2.field_e - var4_int, -129);
+          param2.e(param2.position - var4_int, -129);
         } catch (RuntimeException runtimeException) {
           throw rta.a((Throwable) ((Object) runtimeException), "rkb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

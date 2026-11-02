@@ -16,7 +16,7 @@ final class cfa extends oib {
         return bta.field_r;
     }
 
-    final void a(ds param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           param0.b((byte) 0, this.field_f);
           param0.a((byte) -53, this.field_d);

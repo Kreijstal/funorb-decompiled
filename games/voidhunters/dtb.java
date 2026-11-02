@@ -107,7 +107,7 @@ final class dtb implements dja {
           if (12 <= var3_int) {
             return false;
           }
-          if (fg.a(param0, 70) &&
+          if (MouseWheelInput.a(param0, 70) &&
             var3_int == 0) {
             return false;
           }

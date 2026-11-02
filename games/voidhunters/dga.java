@@ -602,7 +602,7 @@ final class dga {
                 }
                 var2 = ms.b("status_private", 23100);
                 if (var2 != null) {
-                  fg.field_a = qpa.a((byte) -125, var2);
+                  MouseWheelInput.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = ms.b("status_full", 23100);
                 if (var2 != null) {
@@ -924,7 +924,7 @@ final class dga {
                 }
                 var2 = ms.b("ra_explanation", 23100);
                 if (var2 != null) {
-                  fh.field_j = qpa.a((byte) -125, var2);
+                  DualLinkNode.field_j = qpa.a((byte) -125, var2);
                 }
                 var2 = ms.b("rule_pillar_0", 23100);
                 if (var2 != null) {
@@ -2066,7 +2066,7 @@ final class dga {
                 }
                 var2 = ms.b("offerdraw", 23100);
                 if (null != var2) {
-                  ds.field_f = qpa.a((byte) -125, var2);
+                  PacketBuffer.field_f = qpa.a((byte) -125, var2);
                 }
                 var2 = ms.b("canceldraw", 23100);
                 if (var2 != null) {
@@ -3042,7 +3042,7 @@ final class dga {
                   }
                   throw rta.a((Throwable) ((Object) stackIn_2596_0), ((StringBuilder) (Object) stackIn_2596_1).append(stackIn_2597_2).append(')').toString());
                 }
-                if (wi.field_g) {
+                if (GameApplet.field_g) {
                   var3++;
                   VoidHunters.field_G = var3;
                 }

@@ -157,7 +157,7 @@ final class sna extends le {
           if (vqa.field_g.field_m.field_f != 0) {
             ifa.field_g[8] = ema.field_q;
           } else {
-            ifa.field_g[8] = ds.field_f;
+            ifa.field_g[8] = PacketBuffer.field_f;
           }
         }
         if (param0 != -19057) {
@@ -170,7 +170,7 @@ final class sna extends le {
         this.field_i = 32768;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;

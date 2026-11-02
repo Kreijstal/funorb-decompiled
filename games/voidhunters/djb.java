@@ -191,12 +191,12 @@ final class djb extends qc {
               var8_int <= 0) {
               var9 = var5;
               var10_int = 0;
-              L5: while (true) {
+              scanLoop1: while (true) {
                 if (0 <= var9) {
                   stackIn_25_0 = ua.field_o;
                   stackIn_25_1 = var4[var9].field_e;
                   if (var11 != 0) {
-                    break L5;
+                    break scanLoop1;
                   }
                   if (stackIn_25_0 == stackIn_25_1) {
                     var10_int++;

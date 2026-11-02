@@ -53,11 +53,11 @@ final class hka extends uj {
         }
         try {
           aha.field_o = new llb(0L, sdb.field_p, kpb.field_r);
-          rrb.field_b = new llb(0L, qsa.field_d, mab.field_e);
+          GameKeyHandler.field_b = new llb(0L, qsa.field_d, mab.field_e);
           nf.field_c = new llb(0L, iga.field_o);
           ci.field_c.b(-561, rtb.field_h);
           ci.field_c.b(-561, aha.field_o);
-          ci.field_c.b(-561, rrb.field_b);
+          ci.field_c.b(-561, GameKeyHandler.field_b);
           ci.field_c.b(-561, re.field_n);
           ci.field_c.b(-561, nf.field_c);
           re.field_n.field_xb.field_xb.a(18445, qc.field_q);

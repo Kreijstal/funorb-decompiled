@@ -755,7 +755,7 @@ final class lbb implements ntb {
           var7_int = 0;
           var9 = -90 % ((-72 - param1) / 52);
           var8 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var8 < param3.field_c.length) {
               var10 = param3.a(var8, (byte) 59);
               if (var10.field_a) {
@@ -764,7 +764,7 @@ final class lbb implements ntb {
                 if (var11 == 0 &&
                   param2 > var12) {
                   var7_int = 1;
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var8++;

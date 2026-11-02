@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class le extends ksa {
+abstract class le extends IntrusiveNode {
     int field_h;
     rt field_d;
     boolean field_g;
@@ -87,8 +87,8 @@ abstract class le extends ksa {
 
     int a(int param0) {
         if (param0 != -1) {
-          ds var3 = (ds) null;
-          this.a(97, 76, (ds) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a(97, 76, (PacketBuffer) null);
           return -1;
         }
         return -1;
@@ -112,8 +112,8 @@ abstract class le extends ksa {
         if (param0 == 255) {
           throw new IllegalStateException("This operation does not have a colour output");
         }
-        ds var4 = (ds) null;
-        this.a(-96, -51, (ds) null);
+        PacketBuffer var4 = (PacketBuffer) null;
+        this.a(-96, -51, (PacketBuffer) null);
         throw new IllegalStateException("This operation does not have a colour output");
     }
 
@@ -164,7 +164,7 @@ abstract class le extends ksa {
         this.field_g = param1 ? true : false;
     }
 
-    void a(int param0, int param1, ds param2) {
+    void a(int param0, int param1, PacketBuffer param2) {
         try {
           if (param1 > -60) {
             this.field_g = false;

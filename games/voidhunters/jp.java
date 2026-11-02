@@ -775,8 +775,8 @@ final class jp extends pf {
         hua var7;
         hua var8;
         hua var9;
-        ksa var10;
-        ksa var11;
+        IntrusiveNode var10;
+        IntrusiveNode var11;
         hua var12;
         var4 = VoidHunters.field_G;
         var2 = 0;
@@ -1034,7 +1034,7 @@ final class jp extends pf {
     }
 
     final synchronized void a(long param0, int param1) {
-        ksa var4 = new ksa();
+        IntrusiveNode var4 = new IntrusiveNode();
         var4.field_b = param0;
         if (param1 != 0) {
           return;
@@ -1459,7 +1459,7 @@ final class jp extends pf {
     }
 
     final synchronized void a(int param0, byte param1) {
-        ksa var3 = new ksa();
+        IntrusiveNode var3 = new IntrusiveNode();
         var3.field_b = (long)param0;
         if (param1 <= 94) {
           return;

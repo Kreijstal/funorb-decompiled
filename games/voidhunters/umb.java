@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class umb extends ksa implements ntb {
+final class umb extends IntrusiveNode implements ntb {
     static llb field_d;
     int field_g;
     boolean field_e;

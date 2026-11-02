@@ -88,7 +88,7 @@ final class grb extends le {
         this.field_k = 1;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_10_1 = false;

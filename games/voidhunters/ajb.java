@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ajb extends ksa {
+final class ajb extends IntrusiveNode {
     int[] field_k;
     int field_j;
     int field_h;

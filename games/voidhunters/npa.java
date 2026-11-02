@@ -99,11 +99,11 @@ final class npa implements dja {
             field_c = 0.9397013753078566;
           }
           var9.h(param0 ^ 24405, param2);
-          var9.field_e = var9.field_e + 1;
-          var5 = var9.field_e;
+          var9.position = var9.position + 1;
+          var5 = var9.position;
           var9.c(param0 - 90, 1);
           var9.a(true, param1);
-          var9.e(var9.field_e - var5, -129);
+          var9.e(var9.position - var5, -129);
           stackIn_19_0 = null;
           return (String) (stackIn_19_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

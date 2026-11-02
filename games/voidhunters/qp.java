@@ -43,7 +43,7 @@ final class qp {
         StringBuilder stackIn_168_1 = null;
         String stackIn_169_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ds var3 = null;
+        PacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -68,7 +68,7 @@ final class qp {
         int stackIn_137_1Lifetime1;
         var16 = VoidHunters.field_G;
         try {
-          var3 = new ds(rob.a(0, param1));
+          var3 = new PacketBuffer(rob.a(0, param1));
           var4 = var3.e((byte) -87);
           if (var4 >= 5 &&
             7 >= var4) {

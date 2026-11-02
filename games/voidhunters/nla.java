@@ -138,7 +138,7 @@ public final class nla extends pf {
           if (jagdx.hea.a(param4.a(param3, var14), (byte) 118)) {
             return false;
           }
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param1 >= 0) {
               if (param1 != 1) {
                 var8 = 0 + param1;
@@ -152,7 +152,7 @@ public final class nla extends pf {
                         param4.CheckDeviceMultiSampleType(param3, param5, field_Pc[var10], true, var8) == 0)) {
                         var6 = field_Pc[var11];
                         var7 = field_Xc[var10];
-                        break L2;
+                        break scanLoop1;
                       }
                     }
                   }

@@ -6,7 +6,7 @@ import java.io.*;
 final class bi implements Runnable {
     private mob field_f;
     private mob field_c;
-    private ds field_h;
+    private PacketBuffer field_h;
     static String field_g;
     private mob field_b;
     private java.net.URL field_i;
@@ -73,7 +73,7 @@ final class bi implements Runnable {
               var3.write(hi.a(var5, 126));
               this.field_d = new DataInputStream(var4.getInputStream());
             }
-            this.field_h.field_e = 0;
+            this.field_h.position = 0;
             decompiledRegionSelector0 = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,16 +155,16 @@ final class bi implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = VoidHunters.field_G;
           try {
-            while (this.field_h.field_h.length > this.field_h.field_e) {
-              var1_int = this.field_d.read(this.field_h.field_h, this.field_h.field_e, this.field_h.field_h.length - this.field_h.field_e);
+            while (this.field_h.payload.length > this.field_h.position) {
+              var1_int = this.field_d.read(this.field_h.payload, this.field_h.position, this.field_h.payload.length - this.field_h.position);
               if (var1_int >= 0) {
-                this.field_h.field_e = this.field_h.field_e + var1_int;
+                this.field_h.position = this.field_h.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_h.field_e == this.field_h.field_h.length) {
-              throw bi.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.field_h.length + " " + this.field_i));
+            if (this.field_h.position == this.field_h.payload.length) {
+              throw bi.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.payload.length + " " + this.field_i));
             }
             var1 = this;
             synchronized (var1) {
@@ -189,7 +189,7 @@ final class bi implements Runnable {
         }
     }
 
-    final ds a(int param0) {
+    final PacketBuffer a(int param0) {
         int var2 = 118 % ((param0 + 32) / 54);
         if (this.field_a == 3) {
           return this.field_h;
@@ -201,7 +201,7 @@ final class bi implements Runnable {
         try {
           this.field_e = param0;
           this.field_i = param1;
-          this.field_h = new ds(param2);
+          this.field_h = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw rta.a((Throwable) ((Object) runtimeException), "bi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

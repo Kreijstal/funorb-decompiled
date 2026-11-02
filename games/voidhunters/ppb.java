@@ -59,11 +59,11 @@ final class ppb {
         }
     }
 
-    final static rb a(String param0, int param1, byte param2) {
-        aqb var3 = null;
+    final static SocketConnector a(String param0, int param1, byte param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        aqb stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -73,11 +73,11 @@ final class ppb {
             var4 = (String) null;
             ppb.a((String) null, 112, (byte) 96);
           }
-          var3 = new aqb();
-          ((rb) ((Object) var3)).field_b = param1;
-          ((rb) ((Object) var3)).field_a = param0;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_b = param1;
+          ((SocketConnector) ((Object) var3)).field_a = param0;
           stackIn_3_0 = var3;
-          return (rb) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

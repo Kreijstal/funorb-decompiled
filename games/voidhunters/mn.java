@@ -42,12 +42,12 @@ final class mn {
                 tg.a(101, var5, var4_int);
               }
               var6 = jia.a(var4_int, (byte) 19);
-              vh.field_c[var4_int].field_tb = pmb.field_o[var6];
+              IterableNodeHashTable.field_c[var4_int].field_tb = pmb.field_o[var6];
               lob.field_c[var4_int].field_R = fqb.field_o[var6];
             }
           }
           if (nlb.field_o.field_o != 0) {
-            crb.field_v = new bwa(nlb.field_o.field_M, nlb.field_o.field_u, nlb.field_o.field_hb, nlb.field_o.field_G, param2, fh.field_g, lo.field_b, kn.field_p, qc.field_q, urb.field_o, iga.field_o, (String) null, 0L);
+            crb.field_v = new bwa(nlb.field_o.field_M, nlb.field_o.field_u, nlb.field_o.field_hb, nlb.field_o.field_G, param2, DualLinkNode.field_g, lo.field_b, kn.field_p, qc.field_q, urb.field_o, iga.field_o, (String) null, 0L);
           }
           var9 = aq.b(nna.field_w, qs.field_c, param1, -123);
           if (var9 != null) {

@@ -50,7 +50,7 @@ final class ova {
           if (param1) {
             System.out.println("updating datasender, total " + this.field_c.length);
           }
-          var4_int = param0.field_h.length - param0.field_e;
+          var4_int = param0.payload.length - param0.position;
           if (param2 <= 121) {
             this.field_e = 8;
           }
@@ -62,8 +62,8 @@ final class ova {
             return;
           }
           param0.h(24335, this.field_e);
-          param0.field_e = param0.field_e + 2;
-          var6 = param0.field_e;
+          param0.position = param0.position + 2;
+          var6 = param0.position;
           param0.d(this.field_c.length, 332614536);
           param0.d(this.field_b, 332614536);
           if (var5 > this.field_c.length - this.field_b) {
@@ -71,7 +71,7 @@ final class ova {
           }
           param0.a(var5, true);
           param0.a(this.field_b, this.field_c, -1, var5);
-          param0.a(param0.field_e - var6, -124);
+          param0.a(param0.position - var6, -124);
           this.field_b = this.field_b + var5;
           if (this.field_b >= this.field_c.length) {
             this.field_c = null;

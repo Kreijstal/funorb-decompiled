@@ -39,7 +39,7 @@ final class bta extends rqa {
     }
 
     final static void a(int param0, int param1) {
-        ksa var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ea var4 = null;
         RuntimeException decompiledCaughtException = null;

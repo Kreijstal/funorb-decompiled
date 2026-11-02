@@ -194,7 +194,7 @@ final class jlb extends le {
         this.field_v[this.field_s] = 4096;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_27_0 = null;

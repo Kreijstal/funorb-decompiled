@@ -86,7 +86,7 @@ final class hc {
         return hc.a(var4);
     }
 
-    final void a(ds param0, rpb param1) {
+    final void a(PacketBuffer param0, rpb param1) {
         int var3;
         int var4;
         int var5;

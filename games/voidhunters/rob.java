@@ -13,7 +13,7 @@ final class rob extends rqa {
         byte[] var5_ref_byte__ = null;
         int var5 = 0;
         byte[] var6 = null;
-        ds var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -26,7 +26,7 @@ final class rob extends rqa {
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         try {
-          var9 = new ds(param1);
+          var9 = new PacketBuffer(param1);
           var3 = var9.e((byte) -93);
           var4 = var9.h(38);
           if (var4 >= param0 && (ph.field_o == 0 ||

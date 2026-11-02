@@ -75,7 +75,7 @@ final class tma extends rqa {
           } else {
             var6 = null;
           }
-          var10.field_e = var10.field_e + 4;
+          var10.position = var10.position + 4;
           if (!var10.c(-2780)) {
             ifb.l(-126);
             return;

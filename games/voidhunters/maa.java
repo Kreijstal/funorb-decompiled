@@ -22,7 +22,7 @@ final class maa extends rqa {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 400;
-          var6 = rrb.a((byte) 122, 0, param2, var5_int, param3);
+          var6 = GameKeyHandler.a((byte) 122, 0, param2, var5_int, param3);
           if (param1 > -123) {
             field_o = 42;
           }

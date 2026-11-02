@@ -7,7 +7,7 @@ final class gia extends le {
     static eab field_k;
     static String field_j;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;

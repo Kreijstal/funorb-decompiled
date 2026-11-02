@@ -7,7 +7,7 @@ final class il extends le {
     private int field_k;
     private int field_j;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_17_0 = null;

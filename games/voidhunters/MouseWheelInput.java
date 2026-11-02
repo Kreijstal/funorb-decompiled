@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fg {
+abstract class MouseWheelInput {
     static String field_a;
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -21,7 +21,7 @@ abstract class fg {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -25692) {
-          fg.a(4);
+          MouseWheelInput.a(4);
         }
     }
 

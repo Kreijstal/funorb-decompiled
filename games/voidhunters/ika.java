@@ -102,7 +102,7 @@ final class ika extends rna implements ntb {
         }
     }
 
-    final static dib a(int param0, ds param1) {
+    final static dib a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         dib stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -167,8 +167,8 @@ final class ika extends rna implements ntb {
     final static void a(int param0, boolean param1) {
         apb.a((byte) 116);
         if (param0 != -356) {
-          ds var3 = (ds) null;
-          ika.a(-32, (ds) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          ika.a(-32, (PacketBuffer) null);
         }
     }
 

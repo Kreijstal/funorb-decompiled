@@ -51,14 +51,14 @@ final class ci implements dja {
             return false;
           }
           vja.field_a = qga.field_b.e((byte) -126);
-          qga.field_b.field_e = 0;
+          qga.field_b.position = 0;
         }
         if (param0 <= 9) {
           ci.b((byte) -116);
           if (vja.field_a == -2) {
             if (boa.a(2, 30000)) {
               vja.field_a = qga.field_b.e(1869);
-              qga.field_b.field_e = 0;
+              qga.field_b.position = 0;
               return boa.a(vja.field_a, 30000);
             }
             return false;
@@ -68,7 +68,7 @@ final class ci implements dja {
         if (vja.field_a == -2) {
           if (boa.a(2, 30000)) {
             vja.field_a = qga.field_b.e(1869);
-            qga.field_b.field_e = 0;
+            qga.field_b.position = 0;
             return boa.a(vja.field_a, 30000);
           }
           return false;

@@ -35,7 +35,7 @@ final class sk extends rqa {
         super(param0, param1, param2);
     }
 
-    final static le a(ds param0, byte param1) {
+    final static le a(PacketBuffer param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

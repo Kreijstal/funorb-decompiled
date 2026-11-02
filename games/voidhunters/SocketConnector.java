@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class rb {
+abstract class SocketConnector {
     static ij field_c;
     int field_b;
     String field_a;
@@ -12,7 +12,7 @@ abstract class rb {
         if (param0 == -6070) {
           return 0 != (2048 & param2) ? true : false;
         }
-        rb.a(-47, -38, 120);
+        SocketConnector.a(-47, -38, 120);
         return 0 != (2048 & param2) ? true : false;
     }
 
@@ -26,7 +26,7 @@ abstract class rb {
 
     public static void a(byte param0) {
         if (param0 >= -71) {
-          rb.a(-112, -32, -122);
+          SocketConnector.a(-112, -32, -122);
           field_c = null;
           return;
         }

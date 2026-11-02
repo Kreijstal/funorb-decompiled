@@ -262,7 +262,7 @@ final class ida extends mc {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_e;
+            var4 = param0.position;
             param0.d(var18.field_d, 332614536);
             for (var5 = 0; var5 < var18.field_i; var5++) {
               if (var18.field_k[var5] == 0) {

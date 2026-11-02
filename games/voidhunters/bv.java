@@ -697,11 +697,11 @@ final class bv {
               var18 = param3.a(0, noa.field_q);
               vl.field_o = -1;
               var19_int = 0;
-              L8: while (true) {
+              scanLoop1: while (true) {
                 if (11 > var19_int) {
                   stackIn_41_0 = var19_int;
                   if (var43 != 0) {
-                    break L8;
+                    break scanLoop1;
                   }
                   if (stackIn_41_0 != 4 &&
                     lu.field_f[var19_int] > 0) {
@@ -785,8 +785,8 @@ final class bv {
                         if (!stackIn_101_0) {
                           var25 = var24.c(118);
                           if (var25 != 0) {
-                            var26_int = rrb.a(22433, var24.g((byte) -127) - var24.c(-61));
-                            var27 = rrb.a(22433, var24.g((byte) -127) + var24.c(-118));
+                            var26_int = GameKeyHandler.a(22433, var24.g((byte) -127) - var24.c(-61));
+                            var27 = GameKeyHandler.a(22433, var24.g((byte) -127) + var24.c(-118));
                             var28 = var24.a(var24.i((byte) -112), (byte) -69);
                             var29 = var24.a(125, var24.i((byte) -112));
                             var30 = 8;
@@ -803,7 +803,7 @@ final class bv {
                             var41 = 11142145;
                             var42 = hlb.a(lu.field_f[1], 255) >>> 2;
                             if (!var24.field_c.a(-26772, var18, var17, var24.i((byte) -112), var24)) {
-                              if (ds.field_g != 0) {
+                              if (PacketBuffer.field_g != 0) {
                                 var41 = 16712705;
                               }
                             } else {

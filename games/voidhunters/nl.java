@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nl extends ksa {
+final class nl extends IntrusiveNode {
     ana field_d;
     boolean field_h;
     boolean field_g;

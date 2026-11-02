@@ -74,51 +74,51 @@ final class joa {
           return -1;
         }
         if (Math.abs(param0) <= Math.abs(param3)) {
-          L3: {
-            L4: {
+          regionExit1: {
+            regionExit2: {
               var12 = param6 + (param1 * var11 >> param4);
               if (0 > param3) {
                 if (var12 < param3) {
-                  break L4;
+                  break regionExit2;
                 }
                 if (var12 > 0) {
-                  break L4;
+                  break regionExit2;
                 }
               } else {
                 if (0 > var12) {
-                  break L4;
+                  break regionExit2;
                 }
                 if (var12 > param3) {
-                  break L4;
+                  break regionExit2;
                 }
               }
               stackIn_40_0 = var11;
-              break L3;
+              break regionExit1;
             }
             stackIn_40_0 = -1;
           }
           return stackIn_40_0;
         }
-        L6: {
-          L7: {
+        regionExit3: {
+          regionExit4: {
             var12Lifetime1 = param2 + (var11 * param5 >> param4);
             if (param0 >= 0) {
               if (var12Lifetime1 < 0) {
-                break L7;
+                break regionExit4;
               }
               if (param0 < var12Lifetime1) {
-                break L7;
+                break regionExit4;
               }
             } else {
               if (param0 > var12Lifetime1) {
-                break L7;
+                break regionExit4;
               }
               if (var12Lifetime1 > 0) {
-                break L7;
+                break regionExit4;
               }
             }
             stackIn_30_0 = var11;
-            break L6;
+            break regionExit3;
           }
           stackIn_30_0 = -1;
         }

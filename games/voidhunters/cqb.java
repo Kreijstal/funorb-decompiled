@@ -312,10 +312,10 @@ final class cqb extends wm implements ntb {
         if (param4 != -54) {
           return;
         }
-        if (rb.field_c == null) {
+        if (SocketConnector.field_c == null) {
           return;
         }
-        rb.field_c.b(-10258, new pd(param3, param2, param0, param1));
+        SocketConnector.field_c.b(-10258, new pd(param3, param2, param0, param1));
     }
 
     static {

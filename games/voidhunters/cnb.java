@@ -50,10 +50,10 @@ final class cnb extends rqa {
     final static int a(int param0, dj param1, dj param2, int param3, int param4, String param5, boolean param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
-        ds stackIn_17_0 = null;
+        PacketBuffer stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         String stackIn_18_2 = null;
-        ds stackIn_20_0 = null;
+        PacketBuffer stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         String stackIn_21_2 = null;
         int stackIn_34_0 = 0;
@@ -102,9 +102,9 @@ final class cnb extends rqa {
           }
           if (tc.field_c == wd.field_p) {
             ehb.field_f = null;
-            dpa.field_p.field_e = 0;
+            dpa.field_p.position = 0;
             if (param5 == null) {
-              ss.field_p.field_e = 0;
+              ss.field_p.position = 0;
               ss.field_p.d(jeb.field_b.nextInt(), 332614536);
               ss.field_p.d(jeb.field_b.nextInt(), param4 + 332614536);
               stackIn_17_0 = ss.field_p;
@@ -114,7 +114,7 @@ final class cnb extends rqa {
               } else {
                 stackIn_18_2 = var14;
               }
-              ((ds) (Object) stackIn_17_0).b((byte) stackIn_17_1, stackIn_18_2);
+              ((PacketBuffer) (Object) stackIn_17_0).b((byte) stackIn_17_1, stackIn_18_2);
               stackIn_20_0 = ss.field_p;
               stackIn_20_1 = 0;
               if (!param2.a(true)) {
@@ -122,18 +122,18 @@ final class cnb extends rqa {
               } else {
                 stackIn_21_2 = var8;
               }
-              ((ds) (Object) stackIn_20_0).b((byte) stackIn_20_1, stackIn_21_2);
+              ((PacketBuffer) (Object) stackIn_20_0).b((byte) stackIn_20_1, stackIn_21_2);
               dpa.field_p.c(0, 16);
-              dpa.field_p.field_e = dpa.field_p.field_e + 1;
-              var9 = dpa.field_p.field_e;
+              dpa.field_p.position = dpa.field_p.position + 1;
+              var9 = dpa.field_p.position;
               ufa.a(dpa.field_p, (byte) -105, jnb.field_p, bib.field_g, ss.field_p);
-              dpa.field_p.e(-var9 + dpa.field_p.field_e, -129);
+              dpa.field_p.e(-var9 + dpa.field_p.position, -129);
             } else {
               var9 = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              ss.field_p.field_e = 0;
+              ss.field_p.position = 0;
               ss.field_p.d(jeb.field_b.nextInt(), 332614536);
               ss.field_p.d(jeb.field_b.nextInt(), param4 ^ 332614536);
               ss.field_p.b((byte) 0, var14);
@@ -144,15 +144,15 @@ final class cnb extends rqa {
               ss.field_p.c(param4 + 0, param0);
               ss.field_p.c(0, var9);
               dpa.field_p.c(param4 + 0, 18);
-              dpa.field_p.field_e = dpa.field_p.field_e + 2;
-              var10 = dpa.field_p.field_e;
+              dpa.field_p.position = dpa.field_p.position + 2;
+              var10 = dpa.field_p.position;
               var11_ref_StringLifetime4 = kh.a(-6465, vpa.b((byte) -114));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
               dpa.field_p.a(true, var11_ref_StringLifetime4);
               ufa.a(dpa.field_p, (byte) -108, jnb.field_p, bib.field_g, ss.field_p);
-              dpa.field_p.a(dpa.field_p.field_e - var10, -124);
+              dpa.field_p.a(dpa.field_p.position - var10, -124);
             }
             lnb.b(-1, 113);
             tc.field_c = bs.field_d;
@@ -160,7 +160,7 @@ final class cnb extends rqa {
           if (tc.field_c == bs.field_d &&
             boa.a(1, 30000)) {
             var9Lifetime1 = qga.field_b.e((byte) -124);
-            qga.field_b.field_e = 0;
+            qga.field_b.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               tc.field_c = ct.field_a;
@@ -181,7 +181,7 @@ final class cnb extends rqa {
               } else {
                 boa.a(wmb.a(param4 + 24655), 30000);
                 ehb.field_f = new Boolean(cb.a(param4 - 2, qga.field_b));
-                qga.field_b.field_e = 0;
+                qga.field_b.position = 0;
               }
             }
           }
@@ -189,7 +189,7 @@ final class cnb extends rqa {
             var9Lifetime2 = 2;
             if (boa.a(var9Lifetime2, param4 ^ 30000)) {
               var10Lifetime1 = qga.field_b.e(1869);
-              qga.field_b.field_e = 0;
+              qga.field_b.position = 0;
               if (boa.a(var10Lifetime1, param4 + 30000)) {
                 var11 = gob.field_a.length;
                 for (var12 = 0; var12 < var11; var12++) {

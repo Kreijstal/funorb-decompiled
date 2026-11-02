@@ -41,12 +41,12 @@ final class qdb implements ntb {
         int var16Lifetime2;
         var18 = VoidHunters.field_G;
         try {
-          var12 = ksa.a(31123, lua.field_c, hab.field_i, param5);
-          var13 = ksa.a(31123, lua.field_c, hab.field_i, param7);
-          var14 = ksa.a(param2 ^ 31123, ob.field_j, mt.field_o, param4);
-          var15 = ksa.a(31123, ob.field_j, mt.field_o, param0);
-          var8_int = ksa.a(31123, lua.field_c, hab.field_i, param5 + param1);
-          var9 = ksa.a(31123, lua.field_c, hab.field_i, param7 - param1);
+          var12 = IntrusiveNode.a(31123, lua.field_c, hab.field_i, param5);
+          var13 = IntrusiveNode.a(31123, lua.field_c, hab.field_i, param7);
+          var14 = IntrusiveNode.a(param2 ^ 31123, ob.field_j, mt.field_o, param4);
+          var15 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param0);
+          var8_int = IntrusiveNode.a(31123, lua.field_c, hab.field_i, param5 + param1);
+          var9 = IntrusiveNode.a(31123, lua.field_c, hab.field_i, param7 - param1);
           for (var16 = var12; var16 < var8_int; var16++) {
             ww.a(param6, var15, rba.field_b[var16], (byte) 75, var14);
           }
@@ -56,8 +56,8 @@ final class qdb implements ntb {
           for (var16Lifetime1 = var13; var16Lifetime1 > var9; var16Lifetime1--) {
             ww.a(param6, var15, rba.field_b[var16Lifetime1], (byte) 75, var14);
           }
-          var10 = ksa.a(31123, ob.field_j, mt.field_o, param1 + param4);
-          var11 = ksa.a(31123, ob.field_j, mt.field_o, -param1 + param0);
+          var10 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param1 + param4);
+          var11 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, -param1 + param0);
           for (var16Lifetime2 = var8_int; var16Lifetime2 <= var9; var16Lifetime2++) {
             var22 = rba.field_b[var16Lifetime2];
             ww.a(param6, var10, var22, (byte) 75, var14);

@@ -17,8 +17,8 @@ final class va extends rqa {
           var8 = dpa.field_p;
           faa var6 = var8;
           var8.h(24335, param3);
-          var8.field_e = var8.field_e + 1;
-          var7 = var8.field_e;
+          var8.position = var8.position + 1;
+          var7 = var8.position;
           var8.c(0, param4);
           if (param4 == 2) {
             var8.a(true, param5);
@@ -31,7 +31,7 @@ final class va extends rqa {
           } else {
             mla.a(param0, var8, -113);
           }
-          var8.e(-var7 + var8.field_e, -129);
+          var8.e(-var7 + var8.position, -129);
         } catch (RuntimeException runtimeException) {
           throw rta.a((Throwable) ((Object) runtimeException), "va.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

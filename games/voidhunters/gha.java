@@ -4,7 +4,7 @@
 final class gha extends rqa {
     static ri field_r;
     static int field_o;
-    static rrb field_q;
+    static GameKeyHandler field_q;
     static llb field_p;
 
     gha(String param0, Class[] param1, String param2) {
@@ -133,6 +133,6 @@ final class gha extends rqa {
     static {
         field_o = 0;
         field_r = new ri(1, 2, 2, 0);
-        field_q = new rrb();
+        field_q = new GameKeyHandler();
     }
 }

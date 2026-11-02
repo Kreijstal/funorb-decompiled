@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class du extends gpb {
+final class du extends RasterBuffer {
     private java.awt.Canvas field_i;
     private java.awt.Shape field_j;
     private java.awt.Rectangle field_g;

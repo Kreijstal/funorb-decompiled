@@ -295,7 +295,7 @@ final class wlb extends rqa {
                 this.caughtException = null;
             }
             void runPartition0() {
-                stateLoop: while (true) {
+                scanLoop1: while (true) {
                     switch (statePc) {
                         case 0: {
                             var16 = null;
@@ -326,7 +326,7 @@ final class wlb extends rqa {
                             var60 = null;
                             var14 = VoidHunters.field_G;
                             statePc = 1;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                         case 1: {
                             try {
@@ -411,13 +411,13 @@ final class wlb extends rqa {
                                 hab.field_g[25].field_c = new qjb(7);
                                 if (param0 == 64) {
                                     statePc = 3;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 2. */
                                     {
                                         wlb.e((byte) 124);
                                         statePc = 3;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 }
                             } catch (Throwable stateCaught_1) {
@@ -426,7 +426,7 @@ final class wlb extends rqa {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                                 }
                                 caughtException = stateCaught_1;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         case 3: {
@@ -462,21 +462,21 @@ final class wlb extends rqa {
                                 hab.field_g[47].field_q = 0;
                                 var1_int = 0;
                                 statePc = 4;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } catch (Throwable stateCaught_3) {
                                 statePc = (stateCaught_3 instanceof RuntimeException ? 34 : -1);
                                 if (statePc == -1) {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_3);
                                 }
                                 caughtException = stateCaught_3;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         case 4: {
                             try {
                                 if (hab.field_g.length <= var1_int) {
                                     statePc = 9;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 5. */
                                     {
@@ -486,13 +486,13 @@ final class wlb extends rqa {
                                                 hab.field_g[var1_int].a(1, 89, true);
                                                 hab.field_g[var1_int].a(8, param0 - 1, false);
                                                 statePc = 8;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         } else {
                                             /* Inlined CFG state: 6. */
                                             {
                                                 statePc = 8;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -503,21 +503,21 @@ final class wlb extends rqa {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
                                 }
                                 caughtException = stateCaught_4;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         case 8: {
                             try {
                                 var1_int++;
                                 statePc = 4;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } catch (Throwable stateCaught_8) {
                                 statePc = (stateCaught_8 instanceof RuntimeException ? 34 : -1);
                                 if (statePc == -1) {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_8);
                                 }
                                 caughtException = stateCaught_8;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         default: return;
@@ -525,7 +525,7 @@ final class wlb extends rqa {
                 }
             }
             void runPartition1() {
-                stateLoop: while (true) {
+                scanLoop1: while (true) {
                     switch (statePc) {
                         case 9: {
                             try {
@@ -904,14 +904,14 @@ final class wlb extends rqa {
                                 var7_ref_int__ = var61;
                                 var8 = 0;
                                 statePc = 10;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } catch (Throwable stateCaught_9) {
                                 statePc = (stateCaught_9 instanceof RuntimeException ? 34 : -1);
                                 if (statePc == -1) {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
                                 }
                                 caughtException = stateCaught_9;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         case 10: {
@@ -941,7 +941,7 @@ final class wlb extends rqa {
                                         var4 = 0;
                                         var5 = 0;
                                         statePc = 13;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 } else {
                                     /* Inlined CFG state: 11. */
@@ -953,7 +953,7 @@ final class wlb extends rqa {
                                         var7_ref_int__[var8 + 1] = (int)var12;
                                         var8 += 2;
                                         statePc = 10;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 }
                             } catch (Throwable stateCaught_10) {
@@ -962,7 +962,7 @@ final class wlb extends rqa {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
                                 }
                                 caughtException = stateCaught_10;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         default: return;
@@ -970,7 +970,7 @@ final class wlb extends rqa {
                 }
             }
             void runPartition2() {
-                stateLoop: while (true) {
+                scanLoop1: while (true) {
                     switch (statePc) {
                         case 13: {
                             try {
@@ -980,7 +980,7 @@ final class wlb extends rqa {
                                         kg.field_p = new int[var4];
                                         feb.field_b = new int[var4];
                                         statePc = 35;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 } else {
                                     /* Inlined CFG state: 14. */
@@ -990,13 +990,13 @@ final class wlb extends rqa {
                                             {
                                                 gn.field_m = gn.field_m + 1;
                                                 statePc = 17;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         } else {
                                             /* Inlined CFG state: 15. */
                                             {
                                                 statePc = 17;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -1007,7 +1007,7 @@ final class wlb extends rqa {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_13);
                                 }
                                 caughtException = stateCaught_13;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         case 17: {
@@ -1017,14 +1017,14 @@ final class wlb extends rqa {
                                 } else {
                                     statePc = 18;
                                 }
-                                continue stateLoop;
+                                continue scanLoop1;
                             } catch (Throwable stateCaught_17) {
                                 statePc = (stateCaught_17 instanceof RuntimeException ? 34 : -1);
                                 if (statePc == -1) {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_17);
                                 }
                                 caughtException = stateCaught_17;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         case 18: {
@@ -1034,13 +1034,13 @@ final class wlb extends rqa {
                                     {
                                         oea.field_o = oea.field_o + 1;
                                         statePc = 21;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 } else {
                                     /* Inlined CFG state: 19. */
                                     {
                                         statePc = 21;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 }
                             } catch (Throwable stateCaught_18) {
@@ -1049,7 +1049,7 @@ final class wlb extends rqa {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_18);
                                 }
                                 caughtException = stateCaught_18;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         case 21: {
@@ -1063,7 +1063,7 @@ final class wlb extends rqa {
                                         var15 = 0;
                                         var7 = var15;
                                         statePc = 26;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 } else {
                                     /* Inlined CFG state: 22. */
@@ -1074,13 +1074,13 @@ final class wlb extends rqa {
                                             {
                                                 var4 = var7;
                                                 statePc = 31;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         } else {
                                             /* Inlined CFG state: 23. */
                                             {
                                                 statePc = 31;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -1091,14 +1091,14 @@ final class wlb extends rqa {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
                                 }
                                 caughtException = stateCaught_21;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         case 26: {
                             try {
                                 if (var15 >= var79.length) {
                                     statePc = 31;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 27. */
                                     {
@@ -1108,13 +1108,13 @@ final class wlb extends rqa {
                                             {
                                                 var4 = var8;
                                                 statePc = 30;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         } else {
                                             /* Inlined CFG state: 28. */
                                             {
                                                 statePc = 30;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -1125,35 +1125,35 @@ final class wlb extends rqa {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_26);
                                 }
                                 caughtException = stateCaught_26;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         case 30: {
                             try {
                                 var15++;
                                 statePc = 26;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } catch (Throwable stateCaught_30) {
                                 statePc = (stateCaught_30 instanceof RuntimeException ? 34 : -1);
                                 if (statePc == -1) {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_30);
                                 }
                                 caughtException = stateCaught_30;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         case 31: {
                             try {
                                 var5++;
                                 statePc = 13;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } catch (Throwable stateCaught_31) {
                                 statePc = (stateCaught_31 instanceof RuntimeException ? 34 : -1);
                                 if (statePc == -1) {
                                     throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_31);
                                 }
                                 caughtException = stateCaught_31;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                         case 34: {

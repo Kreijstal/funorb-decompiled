@@ -5,9 +5,9 @@ import java.util.*;
 
 final class vga {
     static int field_b;
-    private fh field_c;
+    private DualLinkNode field_c;
     static int field_d;
-    private fh field_a;
+    private DualLinkNode field_a;
 
     final static String a(long param0, int param1) {
         int var3 = 0;
@@ -56,7 +56,7 @@ final class vga {
     final int c(int param0) {
         int var4 = VoidHunters.field_G;
         int var2 = param0;
-        fh var3 = this.field_c.field_e;
+        DualLinkNode var3 = this.field_c.field_e;
         while (var3 != this.field_c) {
           var2++;
           var3 = var3.field_e;
@@ -66,8 +66,8 @@ final class vga {
 
     final static void a(int param0, byte param1, String param2, long param3, int param4, boolean param5) {
         dpa.field_p.h(24335, param4);
-        dpa.field_p.field_e = dpa.field_p.field_e + 1;
-        int var7_int = dpa.field_p.field_e;
+        dpa.field_p.position = dpa.field_p.position + 1;
+        int var7_int = dpa.field_p.position;
         dpa.field_p.a(param3, 108);
         dpa.field_p.a(true, param2);
         if (param1 >= -94) {
@@ -76,14 +76,14 @@ final class vga {
         try {
           dpa.field_p.c(0, param0);
           dpa.field_p.c(0, !param5 ? 0 : 1);
-          dpa.field_p.e(-var7_int + dpa.field_p.field_e, -129);
+          dpa.field_p.e(-var7_int + dpa.field_p.position, -129);
         } catch (RuntimeException runtimeException) {
           throw rta.a((Throwable) ((Object) runtimeException), "vga.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final fh a(byte param0) {
-        fh var2 = this.field_c.field_e;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_c.field_e;
         if (this.field_c == var2) {
           this.field_a = null;
           return null;
@@ -96,7 +96,7 @@ final class vga {
         return var2;
     }
 
-    final void a(fh param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         if (param1 != -22) {
           return;
         }
@@ -113,8 +113,8 @@ final class vga {
         }
     }
 
-    final fh b(int param0) {
-        fh var2 = this.field_c.field_d;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = this.field_c.field_d;
         if (var2 == this.field_c) {
           return null;
         }
@@ -135,9 +135,9 @@ final class vga {
         return 1900 + new Date().getYear();
     }
 
-    final fh a(int param0) {
-        fh var2 = null;
-        fh var2Lifetime1;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != 1900) {
           vga.a(-33L, 30);
           var2 = this.field_a;
@@ -157,8 +157,8 @@ final class vga {
         return var2Lifetime1;
     }
 
-    final fh b(byte param0) {
-        fh var2 = this.field_c.field_e;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = this.field_c.field_e;
         if (this.field_c != var2) {
           var2.d((byte) -35);
           int var3 = 25 % ((param0 + 18) / 58);
@@ -167,7 +167,7 @@ final class vga {
         return null;
     }
 
-    final void a(fh param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         if (param0.field_d != null) {
           param0.d((byte) -35);
         }
@@ -185,7 +185,7 @@ final class vga {
     }
 
     public vga() {
-        this.field_c = new fh();
+        this.field_c = new DualLinkNode();
         this.field_c.field_d = this.field_c;
         this.field_c.field_e = this.field_c;
     }

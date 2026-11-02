@@ -114,7 +114,7 @@ final class cm extends le {
               var25 = hob.field_d;
               var23 = -var8 + hob.field_d;
             }
-            L4: {
+            regionExit1: {
               if (var11 == 0) {
                 var48Lifetime1 = var20;
                 var26_int = var9;
@@ -170,7 +170,7 @@ final class cm extends le {
                       }
                     }
                     var9 = var26_int;
-                    break L4;
+                    break regionExit1;
                   }
                   var28++;
                   var26_int++;
@@ -263,7 +263,7 @@ final class cm extends le {
         this.field_o = 1024;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;

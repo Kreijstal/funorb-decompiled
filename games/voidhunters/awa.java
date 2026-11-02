@@ -6,7 +6,7 @@ final class awa extends rqa {
     static String[][] field_o;
     static int field_q;
 
-    final static void a(int param0, mm param1, boolean param2, ds param3) {
+    final static void a(int param0, mm param1, boolean param2, PacketBuffer param3) {
         int var9 = 0;
         mm stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
@@ -79,10 +79,10 @@ final class awa extends rqa {
             param1.field_Ub = param3.h(53);
           }
           param1.field_Nb = param3.k(255);
-          var8 = param3.field_e;
+          var8 = param3.position;
           param1.field_Vb = param3.a(-1);
           if (var6 != 0) {
-            param3.field_e = var8;
+            param3.position = var8;
             param1.field_Ib = new String[param1.field_zb];
             for (var9 = 0; var9 < param1.field_zb; var9++) {
               param1.field_Ib[var9] = param3.a(-1);

@@ -21,12 +21,12 @@ final class rl extends rqa {
           }
           if (wo.field_o &&
             lqa.field_o.field_zb >= lqa.field_o.field_Fb) {
-            fh.field_f.field_y = false;
+            DualLinkNode.field_f.field_y = false;
             tja.field_a.field_xb.field_R = ukb.field_q;
             igb.a(tja.field_a.field_wb, (byte) -93);
           } else {
             tja.field_a.field_xb.field_R = null;
-            fh.field_f.field_y = true;
+            DualLinkNode.field_f.field_y = true;
             bm.a(param6, (byte) 1, tja.field_a, param4, param5);
           }
         } else {
@@ -59,12 +59,12 @@ final class rl extends rqa {
               }
               if (wo.field_o &&
                 lqa.field_o.field_zb >= lqa.field_o.field_Fb) {
-                fh.field_f.field_y = false;
+                DualLinkNode.field_f.field_y = false;
                 tja.field_a.field_xb.field_R = ukb.field_q;
                 igb.a(tja.field_a.field_wb, (byte) -93);
               } else {
                 tja.field_a.field_xb.field_R = null;
-                fh.field_f.field_y = true;
+                DualLinkNode.field_f.field_y = true;
                 bm.a(param6, (byte) 1, tja.field_a, param4, param5);
               }
             } else {
@@ -83,12 +83,12 @@ final class rl extends rqa {
               }
               if (wo.field_o &&
                 lqa.field_o.field_zb >= lqa.field_o.field_Fb) {
-                fh.field_f.field_y = false;
+                DualLinkNode.field_f.field_y = false;
                 tja.field_a.field_xb.field_R = ukb.field_q;
                 igb.a(tja.field_a.field_wb, (byte) -93);
               } else {
                 tja.field_a.field_xb.field_R = null;
-                fh.field_f.field_y = true;
+                DualLinkNode.field_f.field_y = true;
                 bm.a(param6, (byte) 1, tja.field_a, param4, param5);
               }
             }
@@ -122,12 +122,12 @@ final class rl extends rqa {
               }
               if (wo.field_o &&
                 lqa.field_o.field_zb >= lqa.field_o.field_Fb) {
-                fh.field_f.field_y = false;
+                DualLinkNode.field_f.field_y = false;
                 tja.field_a.field_xb.field_R = ukb.field_q;
                 igb.a(tja.field_a.field_wb, (byte) -93);
               } else {
                 tja.field_a.field_xb.field_R = null;
-                fh.field_f.field_y = true;
+                DualLinkNode.field_f.field_y = true;
                 bm.a(param6, (byte) 1, tja.field_a, param4, param5);
               }
             } else {
@@ -146,15 +146,15 @@ final class rl extends rqa {
               }
               if (!wo.field_o) {
                 tja.field_a.field_xb.field_R = null;
-                fh.field_f.field_y = true;
+                DualLinkNode.field_f.field_y = true;
                 bm.a(param6, (byte) 1, tja.field_a, param4, param5);
               } else {
                 if (lqa.field_o.field_zb < lqa.field_o.field_Fb) {
                   tja.field_a.field_xb.field_R = null;
-                  fh.field_f.field_y = true;
+                  DualLinkNode.field_f.field_y = true;
                   bm.a(param6, (byte) 1, tja.field_a, param4, param5);
                 } else {
-                  fh.field_f.field_y = false;
+                  DualLinkNode.field_f.field_y = false;
                   tja.field_a.field_xb.field_R = ukb.field_q;
                   igb.a(tja.field_a.field_wb, (byte) -93);
                 }

@@ -400,7 +400,7 @@ final class qfa extends ha {
               var3.a(0.0f, 1059949744);
               var3.a(0.0f, 1059949744);
             }
-            this.field_z = this.a(var3.field_h, 20, var3.field_e, false, (byte) 121);
+            this.field_z = this.a(var3.payload, 20, var3.position, false, (byte) 121);
             discarded$0 = new od(this.field_z, 5126, 3, 0);
             discarded$1 = new od(this.field_z, 5126, 2, 12);
             this.field_Ec.a(8, this);
@@ -583,7 +583,7 @@ final class qfa extends ha {
         tob var3 = null;
         nv var3_ref = null;
         RuntimeException var3_ref2 = null;
-        fh var4 = null;
+        DualLinkNode var4 = null;
         int var6 = 0;
         nv var7 = null;
         nv var8 = null;
@@ -615,7 +615,7 @@ final class qfa extends ha {
               }
               this.field_Ic.a((long)(this.field_qc.d() << 16 | this.field_qc.a()), var9, (byte) -120);
             }
-            this.field_E.a((fh) (var3), (byte) -22);
+            this.field_E.a((DualLinkNode) (var3), (byte) -22);
             this.field_c.setPbuffer(var3.f(-128));
           } else {
             if (this.field_jb == null) {
@@ -645,7 +645,7 @@ final class qfa extends ha {
                 }
                 this.field_Ic.a((long)(this.field_qc.d() << 16 | this.field_qc.a()), var7, (byte) -124);
               }
-              this.field_E.a((fh) (var3_ref), (byte) -22);
+              this.field_E.a((DualLinkNode) (var3_ref), (byte) -22);
               this.field_jb.a(8, var3_ref, (byte) -20);
             }
             this.field_jb.a(0, (byte) -126, this.field_qc.field_f);
@@ -1083,7 +1083,7 @@ final class qfa extends ha {
         if (param0 != 18) {
           this.field_Fc = -96;
         }
-        ksa var4 = new ksa();
+        IntrusiveNode var4 = new IntrusiveNode();
         var4.field_b = param1;
         this.field_zb.b(-10258, var4);
     }
@@ -1116,7 +1116,7 @@ final class qfa extends ha {
         java.awt.Canvas var2 = null;
         Long var3 = null;
         int var4 = VoidHunters.field_G;
-        ksa var1 = this.field_D.d(0);
+        IntrusiveNode var1 = this.field_D.d(0);
         while (var1 != null) {
           ((gpa) (var1)).a(false);
           var1 = this.field_D.a((byte) 25);
@@ -1797,10 +1797,10 @@ final class qfa extends ha {
         try {
           this.field_ib = param0;
           this.field_Kc = param2;
-          if (!gpb.a("jaclib", (byte) 114)) {
+          if (!RasterBuffer.a("jaclib", (byte) 114)) {
             throw new RuntimeException("");
           }
-          if (!gpb.a("jaggl", (byte) 114)) {
+          if (!RasterBuffer.a("jaggl", (byte) 114)) {
             throw new RuntimeException("");
           }
           try {
@@ -1953,7 +1953,7 @@ final class qfa extends ha {
     }
 
     final synchronized void g(int param0, int param1) {
-        ksa var3 = new ksa();
+        IntrusiveNode var3 = new IntrusiveNode();
         int var4 = -64 % ((60 - param1) / 52);
         var3.field_b = (long)param0;
         this.field_Cc.b(-10258, var3);
@@ -2632,8 +2632,8 @@ final class qfa extends ha {
         hua var7;
         hua var8;
         hua var9;
-        ksa var10;
-        ksa var11;
+        IntrusiveNode var10;
+        IntrusiveNode var11;
         hua var12;
         var4 = VoidHunters.field_G;
         param0 = param0 & 2147483647;
@@ -2667,7 +2667,7 @@ final class qfa extends ha {
           var2 = 0;
         }
         boolean decompiledFrameCompleted0 = true;
-        L4: {
+        regionExit1: {
           if (var2 <= 0) {
             do {
               if (this.field_hc.b(114)) {
@@ -2682,7 +2682,7 @@ final class qfa extends ha {
             if (decompiledFrameCompleted0) {
               jaggl.OpenGL.glDeleteFramebuffersEXT(var2, cm.field_j, 0);
               var2 = 0;
-              break L4;
+              break regionExit1;
             }
           }
           if (decompiledFrameCompleted0) {

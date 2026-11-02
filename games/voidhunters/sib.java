@@ -62,7 +62,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
         }
     }
 
-    final static String a(int param0, ds param1, byte param2) {
+    final static String a(int param0, PacketBuffer param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4_int = 0;
@@ -83,7 +83,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
               var4_int = param0;
             }
             var5 = new byte[var4_int];
-            param1.field_e = param1.field_e + eob.field_o.a(0, param1.field_h, var5, var4_int, 0, param1.field_e);
+            param1.position = param1.position + eob.field_o.a(0, param1.payload, var5, var4_int, 0, param1.position);
             var6 = tja.a(0, 0, var4_int, var5);
             stackIn_4_0 = var6;
             return stackIn_4_0;

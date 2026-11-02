@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class hob extends ksa {
+final class hob extends IntrusiveNode {
     int field_j;
     static String field_l;
     static String field_e;
@@ -16,11 +16,11 @@ final class hob extends ksa {
 
     final static tv[] a(ij param0, int param1) {
         int var4 = 0;
-        ksa[] var2 = null;
+        IntrusiveNode[] var2 = null;
         RuntimeException var2_ref = null;
         tv[] var3 = null;
         int var5 = 0;
-        ksa[] var6 = null;
+        IntrusiveNode[] var6 = null;
         tv[] stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

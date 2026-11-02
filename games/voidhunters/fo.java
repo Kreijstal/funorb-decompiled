@@ -61,7 +61,7 @@ final class fo {
                 this.field_b.a(6, 0, (byte) -117, hbb.field_N);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param3) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -77,7 +77,7 @@ final class fo {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = ((hbb.field_N[0] & 255) << 8) + (255 & hbb.field_N[1]);
                         var10 = (255 & hbb.field_N[6]) + ((hbb.field_N[4] << 16 & 16711680) + (hbb.field_N[5] << 8 & 65280));
@@ -93,7 +93,7 @@ final class fo {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = hbb.field_N[9] & 255;
                         var12 = (255 & hbb.field_N[5]) + (hbb.field_N[4] << 8 & 65280);

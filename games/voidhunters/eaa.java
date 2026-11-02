@@ -48,8 +48,8 @@ final class eaa extends rqa {
           return;
         }
         try {
-          var6.field_e = var6.field_e + 1;
-          var7 = var6.field_e;
+          var6.position = var6.position + 1;
+          var7 = var6.position;
           var6.c(0, 4);
           var6.c(0, param4);
           var8 = param3;
@@ -58,7 +58,7 @@ final class eaa extends rqa {
           }
           var6.c(0, var8);
           var6.a(0, param2, -1, param2.length);
-          var6.e(var6.field_e - var7, -129);
+          var6.e(var6.position - var7, -129);
         } catch (RuntimeException runtimeException) {
           throw rta.a((Throwable) ((Object) runtimeException), "eaa.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jtb extends fh {
+abstract class jtb extends DualLinkNode {
     boolean field_k;
     volatile boolean field_n;
     boolean field_l;

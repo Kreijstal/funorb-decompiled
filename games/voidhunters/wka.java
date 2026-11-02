@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wka extends ksa {
+abstract class wka extends IntrusiveNode {
     int field_d;
 
     abstract void a();

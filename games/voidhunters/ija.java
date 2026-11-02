@@ -14,9 +14,9 @@ abstract class ija {
     abstract void a(int param0, int param1);
 
     final static void a(int param0) {
-        fh var2 = null;
+        DualLinkNode var2 = null;
         int var3 = VoidHunters.field_G;
-        fh var2Lifetime1;
+        DualLinkNode var2Lifetime1;
         try {
           vob.field_p = 0;
           mq.field_k = 0;

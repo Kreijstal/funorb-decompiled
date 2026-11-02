@@ -118,15 +118,15 @@ final class ga extends fnb {
         jtb discarded$0 = null;
         int var2_int;
         jtb var2;
-        ksa var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        ksa var6;
-        ksa var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
         jtb var2Lifetime1;
-        ksa var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder2 = true;
@@ -150,18 +150,18 @@ final class ga extends fnb {
               }
               var3 = this.field_i.a((byte) 80);
             }
-            L15: while (true) {
+            scanLoop1: while (true) {
               if (this.field_t.field_j.length > this.field_h) {
                 if (0 != this.field_t.field_j[this.field_h]) {
                   if (this.field_f.field_e >= 250) {
                     var2_int = 0;
-                    break L15;
+                    break scanLoop1;
                   }
                   if (this.field_d[this.field_h] == 0) {
                     discarded$2 = this.a(1, -26489, this.field_h);
                   }
                   if (this.field_d[this.field_h] == 0) {
-                    var6 = new ksa();
+                    var6 = new IntrusiveNode();
                     var6.field_b = (long)this.field_h;
                     var2_int = 0;
                     this.field_i.b(-10258, var6);
@@ -194,18 +194,18 @@ final class ga extends fnb {
                 }
                 var3Lifetime1 = this.field_i.a((byte) 121);
               }
-              L5: while (true) {
+              scanLoop2: while (true) {
                 if (this.field_h < this.field_t.field_j.length) {
                   if (this.field_t.field_j[this.field_h] != 0) {
                     if (this.field_g.b((byte) 32)) {
                       var2_intLifetime1 = 0;
-                      break L5;
+                      break scanLoop2;
                     }
                     if (this.field_d[this.field_h] != 1) {
                       discarded$0 = this.a(2, -26489, this.field_h);
                     }
                     if (1 != this.field_d[this.field_h]) {
-                      var7 = new ksa();
+                      var7 = new IntrusiveNode();
                       var7.field_b = (long)this.field_h;
                       this.field_i.b(-10258, var7);
                       var2_intLifetime1 = 0;
@@ -312,7 +312,7 @@ final class ga extends fnb {
     final void c(int param0) {
         jtb discarded$0 = null;
         jtb discarded$1 = null;
-        ksa var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = VoidHunters.field_G;
@@ -416,7 +416,7 @@ final class ga extends fnb {
               var4 = this.field_g.a(true, -21, param2, (byte) 2, this.field_p);
             }
           }
-          this.field_u.a((long)param2, (ksa) (var4), (byte) -119);
+          this.field_u.a((long)param2, (IntrusiveNode) (var4), (byte) -119);
         }
         if (((jtb) (var4)).field_n) {
           return null;
@@ -475,7 +475,7 @@ final class ga extends fnb {
               return null;
             }
             var4 = this.field_g.a(true, -21, param2, (byte) 2, this.field_p);
-            this.field_u.a((long)param2, (ksa) (var4), (byte) -127);
+            this.field_u.a((long)param2, (IntrusiveNode) (var4), (byte) -127);
             return null;
           }
         }
@@ -513,7 +513,7 @@ final class ga extends fnb {
               return null;
             }
             var4 = this.field_g.a(true, -21, param2, (byte) 2, this.field_p);
-            this.field_u.a((long)param2, (ksa) (var4), (byte) -118);
+            this.field_u.a((long)param2, (IntrusiveNode) (var4), (byte) -118);
           }
           return null;
         }

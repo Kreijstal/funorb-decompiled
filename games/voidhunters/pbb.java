@@ -76,7 +76,7 @@ final class pbb implements wwa {
           if (!sab.e((byte) 121)) {
             throw new RuntimeException("");
           }
-          if (!gpb.a("jaggl", (byte) 114)) {
+          if (!RasterBuffer.a("jaggl", (byte) 114)) {
             throw new RuntimeException("");
           }
           var9 = new jaggl.OpenGL();

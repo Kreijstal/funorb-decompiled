@@ -169,10 +169,10 @@ final class sab extends rqa {
 
     final static boolean e(byte param0) {
         int var1 = 26 % ((-51 - param0) / 45);
-        if (!gpb.a("jaclib", (byte) 114)) {
+        if (!RasterBuffer.a("jaclib", (byte) 114)) {
           return false;
         }
-        return gpb.a("hw3d", (byte) 114);
+        return RasterBuffer.a("hw3d", (byte) 114);
     }
 
     final static boolean[] a(boolean[] param0, int param1, boolean[] param2) {

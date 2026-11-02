@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class ana extends ksa {
+final class ana extends IntrusiveNode {
     static int field_f;
     fga field_e;
     int field_d;
-    ksa field_g;
+    IntrusiveNode field_g;
 
     final static byte[] a(File param0, byte param1) {
         RuntimeException var2 = null;
@@ -89,7 +89,7 @@ final class ana extends ksa {
         }
     }
 
-    ana(fga param0, ksa param1) {
+    ana(fga param0, IntrusiveNode param1) {
         try {
           this.field_e = param0;
           this.field_d = param0.f();

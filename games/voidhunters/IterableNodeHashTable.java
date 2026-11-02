@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class vh implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static llb[] field_c;
-    fh field_a;
-    private fh field_b;
+    DualLinkNode field_a;
+    private DualLinkNode field_b;
 
     final void a(byte param0) {
         int var3 = VoidHunters.field_G;
@@ -19,11 +19,11 @@ final class vh implements Iterable {
         this.a(-59);
     }
 
-    private final fh a(fh param0, int param1) {
-        fh var3 = null;
+    private final DualLinkNode a(DualLinkNode param0, int param1) {
+        DualLinkNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
-        fh stackIn_9_0 = null;
+        DualLinkNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -44,7 +44,7 @@ final class vh implements Iterable {
           }
           this.field_b = null;
           stackIn_7_0 = null;
-          return (fh) (stackIn_7_0);
+          return (DualLinkNode) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -59,14 +59,14 @@ final class vh implements Iterable {
         }
     }
 
-    final fh a(boolean param0) {
+    final DualLinkNode a(boolean param0) {
         if (param0) {
-          return (fh) null;
+          return (DualLinkNode) null;
         }
-        return this.a((fh) null, -113);
+        return this.a((DualLinkNode) null, -113);
     }
 
-    final void a(int param0, fh param1) {
+    final void a(int param0, DualLinkNode param1) {
         if (param0 != -17569) {
           return;
         }
@@ -83,10 +83,10 @@ final class vh implements Iterable {
         }
     }
 
-    final fh b(int param0) {
-        fh var2 = this.field_b;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = this.field_b;
         if (param0 != 8063) {
-          return (fh) null;
+          return (DualLinkNode) null;
         }
         if (var2 != this.field_a) {
           this.field_b = var2.field_e;
@@ -99,24 +99,24 @@ final class vh implements Iterable {
     public static void b(boolean param0) {
         field_c = null;
         if (!param0) {
-          vh.b(true);
+          IterableNodeHashTable.b(true);
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new jn(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    vh() {
-        this.field_a = new fh();
+    IterableNodeHashTable() {
+        this.field_a = new DualLinkNode();
         this.field_a.field_e = this.field_a;
         this.field_a.field_d = this.field_a;
     }
 
-    final fh a(int param0) {
-        fh var2 = this.field_a.field_e;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_a.field_e;
         if (param0 != -7481) {
-          this.field_b = (fh) null;
+          this.field_b = (DualLinkNode) null;
           if (var2 != this.field_a) {
             var2.d((byte) -35);
             return var2;

@@ -10,8 +10,8 @@ final class aeb {
         try {
           var5 = dpa.field_p;
           var5.h(24335, param0);
-          var5.field_e = var5.field_e + 1;
-          var4 = var5.field_e;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.c(0, 1);
           var5.c(0, param2.field_f);
           var5.b(param2.field_g, 120);
@@ -23,7 +23,7 @@ final class aeb {
           if (param1 != -21584) {
             aeb.a(47, -32);
           }
-          var5.e(var5.field_e - var4, -129);
+          var5.e(var5.position - var4, -129);
         } catch (RuntimeException runtimeException) {
           throw rta.a((Throwable) ((Object) runtimeException), "aeb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

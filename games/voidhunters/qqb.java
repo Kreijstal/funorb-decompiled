@@ -251,13 +251,13 @@ final class qqb implements ntb {
           }
           var8Lifetime2 = 0;
           var9 = 0;
-          L6: while (true) {
+          scanLoop1: while (true) {
             if (var14.length > var9) {
               if (var14[var9] == var6) {
                 var8Lifetime2++;
                 if (var8Lifetime2 >= 2) {
                   js.field_o = 2;
-                  break L6;
+                  break scanLoop1;
                 }
               }
               var9++;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kob extends ksa {
+final class kob extends IntrusiveNode {
     byte[] field_f;
     static String field_e;
     boolean field_d;

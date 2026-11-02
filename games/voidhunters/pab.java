@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pab extends fh {
+final class pab extends DualLinkNode {
     static kka[] field_k;
     static int field_m;
     byte[] field_l;

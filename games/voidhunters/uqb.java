@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uqb extends ksa implements ntb {
+class uqb extends IntrusiveNode implements ntb {
     boolean field_f;
     static int field_h;
     int field_e;

@@ -57,7 +57,7 @@ final class boa implements ntb {
 
     final static boolean a(int param0, int param1) {
         try {
-          if (qga.field_b.field_e >= param0) {
+          if (qga.field_b.position >= param0) {
             return true;
           }
           if (param1 != 30000) {
@@ -68,16 +68,16 @@ final class boa implements ntb {
           }
           int var2_int = ov.field_o.c(0);
           if (var2_int > 0) {
-            if (var2_int > -qga.field_b.field_e + param0) {
-              var2_int = param0 - qga.field_b.field_e;
+            if (var2_int > -qga.field_b.position + param0) {
+              var2_int = param0 - qga.field_b.position;
             }
-            ov.field_o.a(param1 ^ -30026, qga.field_b.field_e, var2_int, qga.field_b.field_h);
+            ov.field_o.a(param1 ^ -30026, qga.field_b.position, var2_int, qga.field_b.payload);
             cbb.field_q = wt.a(false);
-            qga.field_b.field_e = qga.field_b.field_e + var2_int;
-            if (param0 > qga.field_b.field_e) {
+            qga.field_b.position = qga.field_b.position + var2_int;
+            if (param0 > qga.field_b.position) {
               return false;
             }
-            qga.field_b.field_e = 0;
+            qga.field_b.position = 0;
             return true;
           }
           try {

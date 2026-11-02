@@ -65,7 +65,7 @@ final class ogb extends rqa {
               ifb.l(-128);
               return;
             }
-            var5 = -var9.field_e + vja.field_a;
+            var5 = -var9.position + vja.field_a;
             var11 = var4.field_d;
             var10 = var11;
             var6 = var10;

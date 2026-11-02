@@ -45,7 +45,7 @@ final class tmb extends rqa {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          bk.field_w.field_e = 0;
+          bk.field_w.position = 0;
           if (param1 >= -5) {
             var3 = (tv) null;
             tmb.a((tv) null, (byte) 16);
@@ -57,7 +57,7 @@ final class tmb extends rqa {
             ((utb) ((Object) param0)).a(bk.field_w, (byte) -116);
           }
           bk.field_w.r(32712);
-          stackIn_6_0 = psb.a(bk.field_w.field_h, bk.field_w.field_e, 0);
+          stackIn_6_0 = psb.a(bk.field_w.payload, bk.field_w.position, 0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

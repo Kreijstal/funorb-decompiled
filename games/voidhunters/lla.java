@@ -8,7 +8,7 @@ final class lla {
     static int field_h;
     static int field_e;
     private java.util.zip.Inflater field_j;
-    ds field_f;
+    PacketBuffer field_f;
     private java.util.zip.Deflater field_i;
     private java.util.zip.CRC32 field_a;
     private int field_d;
@@ -16,7 +16,7 @@ final class lla {
     private int field_c;
 
     final byte[] a(int param0, byte[] param1) {
-        ds var3 = null;
+        PacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         byte[] var5 = null;
@@ -26,10 +26,10 @@ final class lla {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ds(param1);
-          var3.field_e = -4 + param1.length;
+          var3 = new PacketBuffer(param1);
+          var3.position = -4 + param1.length;
           var4 = var3.i(11468);
-          var3.field_e = param0;
+          var3.position = param0;
           var5 = new byte[var4];
           this.a(20773, var5, var3);
           stackIn_1_0 = var5;
@@ -52,18 +52,18 @@ final class lla {
         this(-1, 1000000, 1000000);
     }
 
-    final void a(int param0, byte[] param1, ds param2) {
+    final void a(int param0, byte[] param1, PacketBuffer param2) {
         try {
           try {
-            if (param2.field_h[param2.field_e] != 31 ||
-              -117 != param2.field_h[param2.field_e + 1]) {
+            if (param2.payload[param2.position] != 31 ||
+              -117 != param2.payload[param2.position + 1]) {
               throw new RuntimeException("");
             }
             if (this.field_j == null) {
               this.field_j = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_j.setInput(param2.field_h, param2.field_e + 10, -10 - (param2.field_e + 8) + param2.field_h.length);
+              this.field_j.setInput(param2.payload, param2.position + 10, -10 - (param2.position + 8) + param2.payload.length);
               if (param0 != 20773) {
                 field_e = 59;
               }
@@ -100,31 +100,31 @@ final class lla {
           if (null == this.field_f) {
             this.field_i = new java.util.zip.Deflater(this.field_c, true);
             this.field_a = new java.util.zip.CRC32();
-            this.field_f = new ds(this.field_g);
+            this.field_f = new PacketBuffer(this.field_g);
             this.field_f.a(0, pb.field_f, -1, pb.field_f.length);
           } else {
-            this.field_f.field_e = pb.field_f.length;
+            this.field_f.position = pb.field_f.length;
           }
           this.field_a.update(param2, param1, param3);
           this.field_i.setInput(param2, param1, param3);
           this.field_i.finish();
           var5_int = 1;
           while (true) {
-            var6 = this.field_f.field_h.length - this.field_f.field_e;
+            var6 = this.field_f.payload.length - this.field_f.position;
             if (var6 < 8) {
-              var10 = new byte[this.field_d + this.field_f.field_h.length];
+              var10 = new byte[this.field_d + this.field_f.payload.length];
               var9 = var10;
               var7 = var9;
-              cua.a(this.field_f.field_h, 0, var10, 0, this.field_f.field_e);
+              cua.a(this.field_f.payload, 0, var10, 0, this.field_f.position);
               var6 = var6 + this.field_d;
-              this.field_f.field_h = var7;
+              this.field_f.payload = var7;
               if (var5_int != 0) {
                 var5_int = 0;
                 System.out.println("[blue]Warning: GZIP deflate buffer required expanding[/blue]");
               }
             }
             if (!this.field_i.finished()) {
-              this.field_f.field_e = this.field_f.field_e + this.field_i.deflate(this.field_f.field_h, this.field_f.field_e, var6);
+              this.field_f.position = this.field_f.position + this.field_i.deflate(this.field_f.payload, this.field_f.position, var6);
               continue;
             }
             break;

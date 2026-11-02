@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class hq extends gpb implements java.awt.image.ImageProducer {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer {
     private java.awt.image.ColorModel field_h;
     static String field_i;
     private java.awt.Image field_j;
@@ -59,7 +59,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
           if (vsa.field_r != null) {
             try {
               vsa.field_r.a(0, 0L);
-              vsa.field_r.a(24, qga.field_b.field_e, (byte) -88, qga.field_b.field_h);
+              vsa.field_r.a(24, qga.field_b.position, (byte) -88, qga.field_b.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
@@ -68,7 +68,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
           if (param0 < 53) {
             return;
           }
-          qga.field_b.field_e = qga.field_b.field_e + 24;
+          qga.field_b.position = qga.field_b.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -144,7 +144,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
         }
     }
 
-    hq() {
+    ImageProducerRasterBuffer() {
     }
 
     static {

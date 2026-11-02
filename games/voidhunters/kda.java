@@ -167,7 +167,7 @@ final class kda {
                 var13 = new bhb(-var10 + param0.field_g, bk.field_w);
                 var14 = new lla();
                 var14.a(84, 0, var13.field_d, var13.field_d.length);
-                var20 = wi.a((byte) 10, var14.field_f);
+                var20 = GameApplet.a((byte) 10, var14.field_f);
                 this.field_j.a(var20, 0);
               }
             }
@@ -646,7 +646,7 @@ final class kda {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ksa var6 = null;
+        IntrusiveNode var6 = null;
         umb var7 = null;
         int var8 = 0;
         int var9 = 0;

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends fh {
+final class pi extends DualLinkNode {
     int[] field_n;
     private String[] field_k;
     private int[][] field_l;
     private int[] field_m;
 
-    private final void a(ds param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -102,7 +102,7 @@ final class pi extends fh {
         }
     }
 
-    final void a(ds param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;

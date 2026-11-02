@@ -8,7 +8,7 @@ final class olb extends le {
     private int field_m;
     private int field_j;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_19_0 = null;

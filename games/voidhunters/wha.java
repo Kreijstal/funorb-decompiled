@@ -15,7 +15,7 @@ final class wha implements dja {
         if (param0 != 29012) {
           field_a = 71;
         }
-        wga.field_a = new lwa(fh.field_g, lo.field_b, kn.field_p, qc.field_q, urb.field_o, iga.field_o);
+        wga.field_a = new lwa(DualLinkNode.field_g, lo.field_b, kn.field_p, qc.field_q, urb.field_o, iga.field_o);
     }
 
     final static void a(int param0, boolean param1, int param2) {

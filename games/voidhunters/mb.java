@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mb extends ds {
+final class mb extends PacketBuffer {
     static String[] field_k;
     static boolean field_i;
     static int field_j;
@@ -17,28 +17,28 @@ final class mb extends ds {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3 = jaclib.memory.Stream.floatToRawIntBits(param0);
-        int fieldTemp$0 = this.field_e;
-        this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$0] = (byte)(var3 >> 24);
-        int fieldTemp$1 = this.field_e;
-        this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$1] = (byte)(var3 >> 16);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(var3 >> 24);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(var3 >> 16);
         if (param1 == 1724347896) {
-          fieldTemp$2 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$2] = (byte)(var3 >> 8);
-          fieldTemp$3 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$3] = (byte)var3;
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(var3 >> 8);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)var3;
           return;
         }
         field_i = false;
-        int fieldTemp$4 = this.field_e;
-        this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$4] = (byte)(var3 >> 8);
-        int fieldTemp$5 = this.field_e;
-        this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$5] = (byte)var3;
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(var3 >> 8);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)var3;
     }
 
     mb(int param0) {
@@ -50,19 +50,19 @@ final class mb extends ds {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3 = jaclib.memory.Stream.floatToRawIntBits(param0);
-        int fieldTemp$0 = this.field_e;
-        this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$0] = (byte)var3;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)var3;
         if (param1 == 1059949744) {
-          fieldTemp$1 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$1] = (byte)(var3 >> 8);
-          fieldTemp$2 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$2] = (byte)(var3 >> 16);
-          fieldTemp$3 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$3] = (byte)(var3 >> 24);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(var3 >> 8);
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(var3 >> 16);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)(var3 >> 24);
           return;
         }
     }

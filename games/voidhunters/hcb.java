@@ -14,7 +14,7 @@ final class hcb extends rqa {
     }
 
     final static void b(boolean param0) {
-        rb.field_c = new ij();
+        SocketConnector.field_c = new ij();
         if (param0) {
           field_q = (String) null;
         }

@@ -5,12 +5,12 @@ final class wc {
     private ij field_c;
     static String field_d;
     static dja field_a;
-    private ksa field_b;
+    private IntrusiveNode field_b;
 
-    final ksa a(byte param0) {
-        ksa var2 = this.field_b;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_b;
         if (param0 != 108) {
-          return (ksa) null;
+          return (IntrusiveNode) null;
         }
         if (var2 != this.field_c.field_a) {
           this.field_b = var2.field_a;
@@ -20,11 +20,11 @@ final class wc {
         return null;
     }
 
-    final ksa b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         if (param0 <= 61) {
-          return (ksa) null;
+          return (IntrusiveNode) null;
         }
-        ksa var2 = this.field_c.field_a.field_a;
+        IntrusiveNode var2 = this.field_c.field_a.field_a;
         if (this.field_c.field_a != var2) {
           this.field_b = var2.field_a;
           return var2;
@@ -33,8 +33,8 @@ final class wc {
         return null;
     }
 
-    final ksa c(int param0) {
-        ksa var2 = this.field_c.field_a.field_c;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_c.field_a.field_c;
         if (param0 != 570) {
           this.field_c = (ij) null;
           if (var2 == this.field_c.field_a) {
@@ -52,12 +52,12 @@ final class wc {
         return var2;
     }
 
-    final ksa a(int param0) {
-        ksa var2 = null;
-        ksa var2Lifetime1;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 19072) {
-          ksa var3 = (ksa) null;
-          this.a((ksa) null, 109);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a((IntrusiveNode) null, 109);
           var2 = this.field_b;
           if (this.field_c.field_a != var2) {
             this.field_b = var2.field_c;
@@ -75,11 +75,11 @@ final class wc {
         return null;
     }
 
-    final ksa a(byte param0, ksa param1) {
-        ksa var3 = null;
+    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        ksa stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -96,7 +96,7 @@ final class wc {
           if (var3 == this.field_c.field_a) {
             this.field_b = null;
             stackIn_8_0 = null;
-            return (ksa) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
           this.field_b = var3.field_a;
           stackIn_10_0 = var3;
@@ -126,11 +126,11 @@ final class wc {
         field_a = null;
     }
 
-    final ksa a(ksa param0, int param1) {
-        ksa var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
-        ksa stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -144,7 +144,7 @@ final class wc {
           if (var3 == this.field_c.field_a) {
             this.field_b = null;
             stackIn_5_0 = null;
-            return (ksa) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
           this.field_b = var3.field_c;
           if (param1 != -28791) {

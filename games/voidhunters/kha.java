@@ -123,7 +123,7 @@ final class kha {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4) {
-        ksa var6;
+        IntrusiveNode var6;
         int var7;
         var7 = VoidHunters.field_G;
         if (param4 != -5214) {
@@ -364,7 +364,7 @@ final class kha {
     }
 
     final void a(boolean param0) {
-        ksa var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = VoidHunters.field_G;
         this.field_s = null;
         this.field_l = null;

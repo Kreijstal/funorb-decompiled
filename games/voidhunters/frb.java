@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class frb extends rqa {
-    final static eu a(ds param0, byte param1) {
+    final static eu a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         eu stackIn_1_0 = null;
@@ -30,8 +30,8 @@ final class frb extends rqa {
 
     final static String a(int param0, int param1) {
         if (param1 <= 73) {
-          ds var3 = (ds) null;
-          frb.a((ds) null, (byte) -91);
+          PacketBuffer var3 = (PacketBuffer) null;
+          frb.a((PacketBuffer) null, (byte) -91);
           if (vqa.field_g != null) {
             return Integer.toString(vqa.field_g.field_m.b(1).field_f.field_a[param0]);
           }
@@ -45,7 +45,7 @@ final class frb extends rqa {
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        ds var4 = null;
+        PacketBuffer var4 = null;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -53,8 +53,8 @@ final class frb extends rqa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -119) {
-            var4 = (ds) null;
-            frb.a((ds) null, (byte) -82);
+            var4 = (PacketBuffer) null;
+            frb.a((PacketBuffer) null, (byte) -82);
           }
           stackIn_3_0 = new nc(frb.a(100, 96));
           return stackIn_3_0;

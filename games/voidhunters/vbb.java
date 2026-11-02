@@ -133,10 +133,10 @@ final class vbb extends rqa {
           if (param2 >= lua.field_c &&
             param2 <= hab.field_i) {
             var57 = rba.field_b[param2];
-            var40 = ksa.a(param0 ^ 2051537426, ob.field_j, mt.field_o, -param5 + param6);
-            var41 = ksa.a(31123, ob.field_j, mt.field_o, param5 + param6);
-            var42 = ksa.a(31123, ob.field_j, mt.field_o, param6 - var11);
-            var43 = ksa.a(param0 ^ 2051537426, ob.field_j, mt.field_o, param6 + var11);
+            var40 = IntrusiveNode.a(param0 ^ 2051537426, ob.field_j, mt.field_o, -param5 + param6);
+            var41 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param5 + param6);
+            var42 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param6 - var11);
+            var43 = IntrusiveNode.a(param0 ^ 2051537426, ob.field_j, mt.field_o, param6 + var11);
             ww.a(param1, var42, var57, (byte) 75, var40);
             ww.a(param4, var43, var57, (byte) 75, var42);
             ww.a(param1, var41, var57, (byte) 75, var43);
@@ -198,8 +198,8 @@ final class vbb extends rqa {
             if (var40Lifetime1 > hab.field_i) {
               continue;
             }
-            var42Lifetime1 = ksa.a(31123, ob.field_j, mt.field_o, var8_int + param6);
-            var43Lifetime1 = ksa.a(31123, ob.field_j, mt.field_o, param6 - var8_int);
+            var42Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, var8_int + param6);
+            var43Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param6 - var8_int);
             if (var39 == 0) {
               if (var40Lifetime1 >= lua.field_c) {
                 ww.a(param1, var42Lifetime1, rba.field_b[var40Lifetime1], (byte) 75, var43Lifetime1);
@@ -210,8 +210,8 @@ final class vbb extends rqa {
               ww.a(param1, var42Lifetime1, rba.field_b[var41Lifetime1], (byte) 75, var43Lifetime1);
               continue;
             }
-            var44 = ksa.a(param0 - 2051475950, ob.field_j, mt.field_o, var10 + param6);
-            var45 = ksa.a(31123, ob.field_j, mt.field_o, param6 - var10);
+            var44 = IntrusiveNode.a(param0 - 2051475950, ob.field_j, mt.field_o, var10 + param6);
+            var45 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param6 - var10);
             if (var40Lifetime1 >= lua.field_c) {
               var58 = rba.field_b[var40Lifetime1];
               ww.a(param1, var45, var58, (byte) 75, var43Lifetime1);

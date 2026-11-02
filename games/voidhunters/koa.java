@@ -7,10 +7,10 @@ final class koa extends le {
     private int field_j;
     static String field_k;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
-        ds var6 = null;
+        PacketBuffer var6 = null;
         boolean stackIn_13_1 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -20,8 +20,8 @@ final class koa extends le {
         var5 = VoidHunters.field_G;
         try {
           if (param1 >= -60) {
-            var6 = (ds) null;
-            this.a(61, -46, (ds) null);
+            var6 = (PacketBuffer) null;
+            this.a(61, -46, (PacketBuffer) null);
           }
           var4_int = param0;
           if (var4_int == 0) {

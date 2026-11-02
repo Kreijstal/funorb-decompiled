@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fsb extends ksa {
+abstract class fsb extends IntrusiveNode {
     private float field_g;
     private int field_i;
     private int field_d;

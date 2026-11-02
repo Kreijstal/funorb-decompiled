@@ -91,11 +91,11 @@ final class gn extends kva implements eb {
 
     final static ntb[] a(int param0, ij param1) {
         int var4 = 0;
-        ksa[] var2 = null;
+        IntrusiveNode[] var2 = null;
         RuntimeException var2_ref = null;
         ntb[] var3 = null;
         int var5 = 0;
-        ksa[] var6 = null;
+        IntrusiveNode[] var6 = null;
         Object stackIn_3_0 = null;
         ntb[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;

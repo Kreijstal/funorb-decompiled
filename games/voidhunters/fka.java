@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fka extends ksa {
+final class fka extends IntrusiveNode {
     int field_e;
     ml field_d;
     ml field_f;
@@ -124,23 +124,23 @@ final class fka extends ksa {
                   mia.field_a[var11] = false;
                 }
                 var10 = 0;
-                L11: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11Lifetime2 = 0;
                     var12 = 0;
                     while (true) {
                       if (var12 >= ncb.field_a.length) {
                         if (var11Lifetime2 != 0) {
-                          break L11;
+                          break scanLoop1;
                         }
                         var10++;
-                        continue L11;
+                        continue scanLoop1;
                       }
                       var24 = ncb.field_a[var12];
                       var22 = var24;
                       var13_ref_int__ = var22;
                       var14 = 0;
-                      L15: while (true) {
+                      scanLoop2: while (true) {
                         if (var24.length <= var14) {
                           var11Lifetime2 = 1;
                           var14 = -1;
@@ -156,7 +156,7 @@ final class fka extends ksa {
                           var16 = var13_ref_int__[var14 + 1];
                           if (-1 != var15) {
                             if ((255 & lqa.field_o.field_Pb[var15]) != var16) {
-                              break L15;
+                              break scanLoop2;
                             }
                           } else {
                             if (var10 == 0) {
@@ -166,7 +166,7 @@ final class fka extends ksa {
                             }
                             var17_int = stackIn_38_0;
                             if (var17_int != var16) {
-                              break L15;
+                              break scanLoop2;
                             }
                           }
                           var14 += 2;
@@ -212,14 +212,14 @@ final class fka extends ksa {
                         var11Lifetime1 = 1;
                       }
                     }
-                    L30: {
+                    regionExit3: {
                       if (tab.field_p != null) {
                         if (tab.field_p[var16Lifetime1] == null) {
                           if (((null != hia.field_o)) &&
                             ((hia.field_o[var16Lifetime1] != null))) {
                             var15Lifetime1 = var15Lifetime1 | hia.field_o[var16Lifetime1][var17_intLifetime1];
                           }
-                          break L30;
+                          break regionExit3;
                         }
                         var18_intLifetime1 = tab.field_p[var16Lifetime1][var17_intLifetime1];
                         if (var14Lifetime1 < var18_intLifetime1) {
@@ -239,29 +239,29 @@ final class fka extends ksa {
                   var16Lifetime1Lifetime1 = 0;
                   var17 = rga.field_f.field_wb.field_lb;
                   var18_ref = (jk) (var17.d(0));
-                  L23: while (true) {
+                  scanLoop4: while (true) {
                     if (var18_ref != null) {
                       if (!var18_ref.i(56)) {
                         if (var11Lifetime1 != 0 &&
                           !var18_ref.field_Lb) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L23;
+                          break scanLoop4;
                         }
                         if (var18_ref.field_Gb < var13) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L23;
+                          break scanLoop4;
                         }
                         if (var18_ref.field_Bb < var14Lifetime1) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L23;
+                          break scanLoop4;
                         }
                         if ((var15Lifetime1 & ~var18_ref.field_Ab) > 0) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L23;
+                          break scanLoop4;
                         }
                         if (var12Lifetime1 != 0) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L23;
+                          break scanLoop4;
                         }
                       }
                       var18_ref = (jk) (var17.a((byte) 98));
@@ -293,7 +293,7 @@ final class fka extends ksa {
                   var12Lifetime2 = 0;
                   for (var13Lifetime1 = 0; ocb.field_l > var13Lifetime1; var13Lifetime1++) {
                     if (mia.field_a[var13Lifetime1]) {
-                      var23 = "<col=A00000>" + hva.field_c[var13Lifetime1] + "</col>";
+                      var23 = "<col=A00000>" + ClientException.field_c[var13Lifetime1] + "</col>";
                       if (var11_ref == null) {
                         var11_ref = var23;
                       } else {

@@ -11,7 +11,7 @@ final class fwa {
     private java.math.BigInteger field_b;
     private ona field_j;
     private km field_d;
-    private ds field_c;
+    private PacketBuffer field_c;
 
     public static void b(int param0) {
         field_a = null;
@@ -29,7 +29,7 @@ final class fwa {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        ds var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -47,11 +47,11 @@ final class fwa {
         if (this.field_d.field_n) {
           return false;
         }
-        var10 = new ds(this.field_d.a(-94));
-        var10.field_e = 5;
+        var10 = new PacketBuffer(this.field_d.a(-94));
+        var10.position = 5;
         var3 = var10.e((byte) -108);
-        var10.field_e = var10.field_e + 72 * var3;
-        var13 = new byte[var10.field_h.length - var10.field_e];
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
         var10.a(0, var4, (byte) -59, var13.length);
@@ -66,7 +66,7 @@ final class fwa {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = fqb.a((byte) 25, -var13.length + (var10.field_e - 5), var10.field_h, 5);
+        var15 = fqb.a((byte) 25, -var13.length + (var10.position - 5), var10.payload, 5);
         if (!param0) {
           return true;
         }
@@ -129,7 +129,7 @@ final class fwa {
               stackIn_8_0 = this.field_f[param0];
               return stackIn_8_0;
             }
-            this.field_c.field_e = 6 + 72 * param0;
+            this.field_c.position = 6 + 72 * param0;
             var6_int = this.field_c.h(param1 ^ 20);
             var7 = this.field_c.h(47);
             var13 = new byte[64];

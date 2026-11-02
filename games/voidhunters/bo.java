@@ -42,7 +42,7 @@ final class bo extends rqa {
 
     final static void a(byte param0, tv param1) {
         try {
-          bk.field_w.field_e = 0;
+          bk.field_w.position = 0;
           bk.field_w.q(-77);
           param1.b(bk.field_w, -117);
           bk.field_w.r(32712);

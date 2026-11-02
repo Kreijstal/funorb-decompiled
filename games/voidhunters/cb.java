@@ -36,7 +36,7 @@ final class cb extends rqa {
         }
     }
 
-    final static boolean a(int param0, ds param1) {
+    final static boolean a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

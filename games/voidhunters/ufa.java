@@ -43,12 +43,12 @@ final class ufa extends rqa {
         }
     }
 
-    final static void a(ds param0, byte param1, java.math.BigInteger param2, java.math.BigInteger param3, ds param4) {
+    final static void a(PacketBuffer param0, byte param1, java.math.BigInteger param2, java.math.BigInteger param3, PacketBuffer param4) {
         if (param1 >= -95) {
           return;
         }
         try {
-          fab.a(0, param4.field_e, param0, param4.field_h, param3, (byte) 47, param2);
+          fab.a(0, param4.position, param0, param4.payload, param3, (byte) 47, param2);
         } catch (RuntimeException runtimeException) {
           throw rta.a((Throwable) ((Object) runtimeException), "ufa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

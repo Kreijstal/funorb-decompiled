@@ -121,11 +121,11 @@ final class oma implements ntb, mfa {
         try {
           nc.b(0);
           param1.f((byte) -50);
-          var3_int = param1.field_e;
+          var3_int = param1.position;
           param1.p(-23497);
           this.a(param1, false);
           param1.f((byte) -47);
-          var4 = k.a((byte) -69, param1.field_e, param1.field_h, var3_int);
+          var4 = k.a((byte) -69, param1.position, param1.payload, var3_int);
           var5 = param1.h(97);
           if (var5 == var4) {
             nkb.a(false, "cg readstate: Hmm, it seems correct");

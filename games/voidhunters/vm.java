@@ -18,8 +18,8 @@ final class vm extends le {
         this.field_j = ihb.a((byte) 36, this.field_l);
         this.d(30866);
         if (param0 > -35) {
-          ds var3 = (ds) null;
-          this.a(-21, 74, (ds) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a(-21, 74, (PacketBuffer) null);
         }
     }
 
@@ -51,7 +51,7 @@ final class vm extends le {
         }
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int dupTemp$0 = 0;
         int var4_int = 0;
         int var5 = 0;

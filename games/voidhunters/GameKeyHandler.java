@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rrb implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int field_a;
     static llb field_b;
 
@@ -160,7 +160,7 @@ final class rrb implements java.awt.event.KeyListener, java.awt.event.FocusListe
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 23) {
-            rrb.a(115);
+            GameKeyHandler.a(115);
           }
           if (!li.field_i) {
             stackIn_6_0 = ita.a(param2, 7988).b(param4, param3);
@@ -210,7 +210,7 @@ final class rrb implements java.awt.event.KeyListener, java.awt.event.FocusListe
 
     public static void a(int param0) {
         if (param0 >= -1) {
-          rrb.b(-72);
+          GameKeyHandler.b(-72);
           field_b = null;
           return;
         }

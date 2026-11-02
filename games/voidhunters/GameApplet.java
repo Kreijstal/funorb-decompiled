@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class wi extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     boolean field_c;
     public static boolean field_g;
     public static boolean field_i;
@@ -159,7 +159,7 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
 
     abstract void a(boolean param0);
 
-    final static byte[] a(byte param0, ds param1) {
+    final static byte[] a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -169,12 +169,12 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.field_e;
+          var2_int = param1.position;
           var3 = new byte[var2_int];
           if (param0 <= 4) {
-            wi.a((byte) -89, (ds) null);
+            GameApplet.a((byte) -89, (PacketBuffer) null);
           }
-          cua.a(param1.field_h, 0, var3, 0, var2_int);
+          cua.a(param1.payload, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -267,7 +267,7 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected wi() {
+    protected GameApplet() {
         this.field_c = false;
     }
 
@@ -316,7 +316,7 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
             var2 = uf.field_E;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          igb.field_a = (java.awt.Canvas) ((Object) new pc((java.awt.Component) (this)));
+          igb.field_a = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) igb.field_a));
           igb.field_a.setSize(rda.field_p, fua.field_p);
           igb.field_a.setVisible(true);
@@ -372,7 +372,7 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
               exception = (Exception) (Object) decompiledCaughtException;
             }
             if (param1 != 0) {
-              wi.a((byte) -85, (ds) null);
+              GameApplet.a((byte) -85, (PacketBuffer) null);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

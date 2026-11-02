@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tob extends fh {
+final class tob extends DualLinkNode {
     static String field_l;
     static dja field_o;
     private long field_n;

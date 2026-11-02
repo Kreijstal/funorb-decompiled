@@ -73,7 +73,7 @@ final class mla extends rqa {
         field_s = null;
     }
 
-    final static int a(String param0, ds param1, int param2) {
+    final static int a(String param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -91,12 +91,12 @@ final class mla extends rqa {
             stackIn_2_0 = 66;
             return stackIn_2_0;
           }
-          var3_int = param1.field_e;
+          var3_int = param1.position;
           var5 = (CharSequence) ((Object) param0);
           var4 = hi.a(var5, 96);
           param1.b((byte) 124, var4.length);
-          param1.field_e = param1.field_e + eob.field_o.b(var4.length, var4, param1.field_h, 104, param1.field_e, 0);
-          stackIn_4_0 = -var3_int + param1.field_e;
+          param1.position = param1.position + eob.field_o.b(var4.length, var4, param1.payload, 104, param1.position, 0);
+          stackIn_4_0 = -var3_int + param1.position;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

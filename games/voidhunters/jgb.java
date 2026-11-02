@@ -43,7 +43,7 @@ final class jgb extends rqa {
         if (param0 > -53) {
           field_o = (String) null;
         }
-        dc.a(htb.field_w, -20149, lo.field_b, fh.field_g, qc.field_q);
+        dc.a(htb.field_w, -20149, lo.field_b, DualLinkNode.field_g, qc.field_q);
     }
 
     jgb(String param0, Class[] param1, String param2) {

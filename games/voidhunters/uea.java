@@ -31,7 +31,7 @@ final class uea extends bob {
         }
     }
 
-    final static uma a(ds param0, int param1) {
+    final static uma a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         uma stackIn_1_0 = null;

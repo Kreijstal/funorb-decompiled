@@ -102,7 +102,7 @@ final class vrb extends rqa {
           nkb.field_r = param7;
           hqb.field_k = param9;
           ieb.field_o = param14;
-          hva.field_c = param10;
+          ClientException.field_c = param10;
           ea.field_k = param13;
           awa.field_o = param5;
           gm.field_M = param0;
@@ -119,15 +119,15 @@ final class vrb extends rqa {
           uka.field_p[1] = uh.field_o;
           uka.field_p[0] = uob.field_f;
           uka.field_p[4] = ikb.field_o;
-          fh.field_f = new llb(0L, (llb) null);
+          DualLinkNode.field_f = new llb(0L, (llb) null);
           me.field_q = new llb(0L, sdb.field_p, kpb.field_r);
           epa.field_o = new llb(0L, qsa.field_d, k.field_p);
           tja.field_a = new soa(0L, new llb(0L, (llb) null), htb.field_w, cab.field_o);
-          fh.field_f.b(-561, me.field_q);
+          DualLinkNode.field_f.b(-561, me.field_q);
           if (ll.field_o) {
-            fh.field_f.b(param1 - 10792, epa.field_o);
+            DualLinkNode.field_f.b(param1 - 10792, epa.field_o);
           }
-          fh.field_f.b(param1 - 10792, tja.field_a);
+          DualLinkNode.field_f.b(param1 - 10792, tja.field_a);
           tja.field_a.field_xb.a(param1 + 8214, qc.field_q);
           var23 = tja.field_a.field_xb;
           var24 = var23;
@@ -181,7 +181,7 @@ final class vrb extends rqa {
           nbb.field_y.field_F = 1;
           nbb.field_y.field_B = 0;
           ss.field_o = new llb(0L, hnb.field_X, tia.field_K.toUpperCase());
-          dd.field_o = new llb(0L, fh.field_g);
+          dd.field_o = new llb(0L, DualLinkNode.field_g);
           dd.field_o.b(-561, nbb.field_y);
           dd.field_o.b(-561, ss.field_o);
           wo.field_p = new llb(0L, htb.field_w);
@@ -195,11 +195,11 @@ final class vrb extends rqa {
           rsa.field_o = new llb(0L, (llb) null);
           ukb.field_o = new llb(0L, qc.field_q);
           ukb.field_o.field_F = 1;
-          jn.field_a = new llb(0L, sdb.field_p, kpb.field_r);
+          NodeHashTableIterator.field_a = new llb(0L, sdb.field_p, kpb.field_r);
           vqb.field_o = new llb(0L, qsa.field_d, k.field_p);
           rga.field_f = new soa(0L, new llb(0L, (llb) null), htb.field_w, cab.field_o);
           rsa.field_o.b(-561, ukb.field_o);
-          rsa.field_o.b(-561, jn.field_a);
+          rsa.field_o.b(-561, NodeHashTableIterator.field_a);
           if (ll.field_o) {
             rsa.field_o.b(-561, vqb.field_o);
           }
@@ -207,7 +207,7 @@ final class vrb extends rqa {
           nt.field_q = new llb(0L, vj.field_q, tua.field_b.toUpperCase());
           rob.field_q = new llb(0L, pa.field_a);
           gt.field_o = new llb(0L, as.field_c);
-          aqb.field_e = new llb(0L, bv.field_b, mr.field_J.toUpperCase());
+          ProxySocketConnector.field_e = new llb(0L, bv.field_b, mr.field_J.toUpperCase());
           ceb.field_o = new llb[4 + param12];
           inb.field_q = new cna[4 + param12][];
           ceb.field_o[0] = new llb(0L, gjb.field_p, tm.field_p);
@@ -236,7 +236,7 @@ final class vrb extends rqa {
             }
           }
           for (var17_intLifetime3 = 0; param12 > var17_intLifetime3; var17_intLifetime3++) {
-            ceb.field_o[var17_intLifetime3 + 4] = new llb(0L, gjb.field_p, hva.field_c[var17_intLifetime3]);
+            ceb.field_o[var17_intLifetime3 + 4] = new llb(0L, gjb.field_p, ClientException.field_c[var17_intLifetime3]);
             array$2 = new cna[dla.a(255, (int) gm.field_M[var17_intLifetime3]) + 1];
             inb.field_q[var17_intLifetime3 + 4] = array$2;
             inb.field_q[var17_intLifetime3 + 4][0] = new cna(0L, tia.field_M, (llb) null, iga.field_o, (phb) null, mpb.field_k);
@@ -285,7 +285,7 @@ final class vrb extends rqa {
           vva.field_r = new llb(0L, (llb) null);
           vva.field_r.b(-561, rob.field_q);
           vva.field_r.b(-561, gt.field_o);
-          gt.field_o.b(-561, aqb.field_e);
+          gt.field_o.b(-561, ProxySocketConnector.field_e);
           for (var18Lifetime2 = 0; 4 + param12 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(ieb.field_o.length < 2)) && (var18Lifetime2 != 3 ||

@@ -689,7 +689,7 @@ final class aib implements ntb, ofa, utb {
           }
           var2Lifetime38 = dqb.a((byte) -87, "option_state_free");
           if (null != var2Lifetime38) {
-            fh.field_h = qpa.a((byte) -125, var2Lifetime38);
+            DualLinkNode.field_h = qpa.a((byte) -125, var2Lifetime38);
           }
           var2Lifetime39 = dqb.a((byte) -126, "option_state_new");
           if (var2Lifetime39 != null) {
@@ -825,7 +825,7 @@ final class aib implements ntb, ofa, utb {
           }
           var2Lifetime72 = dqb.a((byte) -101, "keycode_self_destruct_activate");
           if (var2Lifetime72 != null) {
-            rrb.field_a = var2Lifetime72[0] & 255;
+            GameKeyHandler.field_a = var2Lifetime72[0] & 255;
           }
           var2Lifetime73 = dqb.a((byte) -100, "keycode_spawn_enemy");
           if (var2Lifetime73 != null) {
@@ -1341,7 +1341,7 @@ final class aib implements ntb, ofa, utb {
           }
           var2Lifetime201 = dqb.a((byte) -100, "ORDER_SELF_DESTRUCT_UNPREPARE_TOGGLE");
           if (var2Lifetime201 != null) {
-            jn.field_c = qpa.a((byte) -125, var2Lifetime201);
+            NodeHashTableIterator.field_c = qpa.a((byte) -125, var2Lifetime201);
           }
           var2Lifetime202 = dqb.a((byte) -63, "mission_options");
           if (var2Lifetime202 != null) {

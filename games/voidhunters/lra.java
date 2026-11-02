@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lra extends fh {
+final class lra extends DualLinkNode {
     private le field_m;
     static String field_o;
     private int[] field_n;
@@ -481,7 +481,7 @@ final class lra extends fh {
         }
     }
 
-    lra(ds param0) {
+    lra(PacketBuffer param0) {
         int[] array$2 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;

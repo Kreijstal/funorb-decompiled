@@ -409,7 +409,7 @@ abstract class qc implements kd {
 
     boolean a(int param0, char param1, int param2) {
         llb discarded$0 = null;
-        ksa stackIn_18_1 = null;
+        IntrusiveNode stackIn_18_1 = null;
         llb var5;
         int var6;
         String var7;

@@ -5,13 +5,13 @@ final class ehb {
     static Boolean field_f;
     static int field_g;
     static int field_e;
-    private fh field_b;
+    private DualLinkNode field_b;
     private vga field_c;
     private gnb field_d;
     private int field_a;
 
-    final void a(long param0, byte param1, fh param2) {
-        fh var5 = null;
+    final void a(long param0, byte param1, DualLinkNode param2) {
+        DualLinkNode var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -50,9 +50,9 @@ final class ehb {
         }
     }
 
-    final fh a(long param0, int param1) {
+    final DualLinkNode a(long param0, int param1) {
         int var5 = 0;
-        fh var4 = (fh) (this.field_d.a(param0, 117));
+        DualLinkNode var4 = (DualLinkNode) (this.field_d.a(param0, 117));
         int var5Lifetime1;
         if (var4 == null) {
           var5 = -104 % ((-26 - param1) / 38);
@@ -72,7 +72,7 @@ final class ehb {
 
     ehb(int param0) {
         int var2 = 0;
-        this.field_b = new fh();
+        this.field_b = new DualLinkNode();
         this.field_c = new vga();
         this.field_a = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {

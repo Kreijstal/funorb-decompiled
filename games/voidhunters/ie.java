@@ -109,17 +109,17 @@ final class ie extends rqa {
           if (param0 != 13) {
             return;
           }
-          var2 = ((ds) ((Object) var1)).e((byte) -114);
+          var2 = ((PacketBuffer) ((Object) var1)).e((byte) -114);
           if (var2 != 0 &&
             var2 != 1 &&
             var2 != 2 &&
             var2 != 3 &&
             4 != var2) {
             if (var2 == 5) {
-              var3_long = ((ds) ((Object) var1)).k(param0 + 242);
-              var18 = ((ds) ((Object) var1)).a(-1);
-              var17 = ((ds) ((Object) var1)).a(-1);
-              var19 = ((ds) ((Object) var1)).a(-1);
+              var3_long = ((PacketBuffer) ((Object) var1)).k(param0 + 242);
+              var18 = ((PacketBuffer) ((Object) var1)).a(-1);
+              var17 = ((PacketBuffer) ((Object) var1)).a(-1);
+              var19 = ((PacketBuffer) ((Object) var1)).a(-1);
               var20 = pdb.a((byte) 80, var3_long);
               var8_ref_jk = var20;
               stackIn_12_0 = (var17.equals("")) ? 0 : 1;
@@ -132,21 +132,21 @@ final class ie extends rqa {
                 var8_ref_jk = new jk(var18, var19, var3_long);
                 oha.field_o.a(var8_ref_jk, (byte) -86, var3_long);
               }
-              var8_ref_jk.field_Kb = wt.a(false) - (long)((ds) ((Object) var1)).h(77);
-              var8_ref_jk.field_Gb = ((ds) ((Object) var1)).e(1869);
-              var10 = ((ds) ((Object) var1)).l(param0 ^ 11425);
+              var8_ref_jk.field_Kb = wt.a(false) - (long)((PacketBuffer) ((Object) var1)).h(77);
+              var8_ref_jk.field_Gb = ((PacketBuffer) ((Object) var1)).e(1869);
+              var10 = ((PacketBuffer) ((Object) var1)).l(param0 ^ 11425);
               stackIn_18_0 = var8_ref_jk;
               stackIn_19_1 = (0 != (var10 & 1));
               stackIn_18_0.field_Lb = stackIn_19_1;
               var8_ref_jk.field_Bb = var10 >> 1;
-              var8_ref_jk.field_vb = ((ds) ((Object) var1)).e((byte) -120);
-              var8_ref_jk.field_Ab = ((ds) ((Object) var1)).e((byte) -113);
+              var8_ref_jk.field_vb = ((PacketBuffer) ((Object) var1)).e((byte) -120);
+              var8_ref_jk.field_Ab = ((PacketBuffer) ((Object) var1)).e((byte) -113);
               mnb.a(var8_ref_jk, true);
               return;
             }
             if (var2 == 6) {
-              var3_longLifetime1 = ((ds) ((Object) var1)).k(255);
-              var5 = ((ds) ((Object) var1)).e((byte) -120);
+              var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).k(255);
+              var5 = ((PacketBuffer) ((Object) var1)).e((byte) -120);
               var29 = pdb.a((byte) 80, var3_longLifetime1);
               if (var29 == null) {
                 return;
@@ -175,7 +175,7 @@ final class ie extends rqa {
               return;
             }
             if (var2 == 8) {
-              var3 = ((ds) ((Object) var1)).e(1869);
+              var3 = ((PacketBuffer) ((Object) var1)).e(1869);
               var4_ref_mm = (mm) (ks.field_r.a(-1, (long)var3));
               if (var4_ref_mm == null) {
                 var4_ref_mm = new mm(ocb.field_l);
@@ -186,8 +186,8 @@ final class ie extends rqa {
               return;
             }
             if (var2 == 9) {
-              var3Lifetime4 = ((ds) ((Object) var1)).e(1869);
-              var4 = ((ds) ((Object) var1)).e((byte) -127);
+              var3Lifetime4 = ((PacketBuffer) ((Object) var1)).e(1869);
+              var4 = ((PacketBuffer) ((Object) var1)).e((byte) -127);
               var30 = (mm) (ks.field_r.a(-1, (long)var3Lifetime4));
               if (var30 != null) {
                 if (var4 != 0) {
@@ -212,8 +212,8 @@ final class ie extends rqa {
             if (var2 != 11 &&
               var2 != 12) {
               if (13 == var2) {
-                var3Lifetime5 = ((ds) ((Object) var1)).e(1869);
-                var4Lifetime1 = ((ds) ((Object) var1)).e((byte) -97);
+                var3Lifetime5 = ((PacketBuffer) ((Object) var1)).e(1869);
+                var4Lifetime1 = ((PacketBuffer) ((Object) var1)).e((byte) -97);
                 var27_ref = (mm) (ks.field_r.a(-1, (long)var3Lifetime5));
                 if (var27_ref != null) {
                   var13 = var27_ref;
@@ -233,29 +233,29 @@ final class ie extends rqa {
                 if (var2 != 15 &&
                   var2 != 17) {
                   if (var2 == 18) {
-                    var3_longLifetime2 = ((ds) ((Object) var1)).k(255);
-                    var25 = ((ds) ((Object) var1)).a(-1);
-                    var26 = ((ds) ((Object) var1)).a(param0 ^ -14);
+                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).k(255);
+                    var25 = ((PacketBuffer) ((Object) var1)).a(-1);
+                    var26 = ((PacketBuffer) ((Object) var1)).a(param0 ^ -14);
                     var7 = pjb.a(var3_longLifetime2, true);
                     if (var7 == null) {
                       var7 = new jk(var25, var26, var3_longLifetime2);
                       icb.field_p.a(var7, (byte) -76, var3_longLifetime2);
                       lqa.field_o.field_zb = lqa.field_o.field_zb + 1;
                     }
-                    var7.field_Gb = ((ds) ((Object) var1)).e(1869);
-                    var8 = ((ds) ((Object) var1)).l(11436);
+                    var7.field_Gb = ((PacketBuffer) ((Object) var1)).e(1869);
+                    var8 = ((PacketBuffer) ((Object) var1)).l(11436);
                     stackIn_84_0 = var7;
                     stackIn_85_1 = ((1 & var8) != 0);
                     stackIn_84_0.field_Lb = stackIn_85_1;
                     var7.field_Bb = var8 >> 1;
-                    var7.field_vb = ((ds) ((Object) var1)).e((byte) -103);
-                    var7.field_Ab = ((ds) ((Object) var1)).e((byte) -111);
+                    var7.field_vb = ((PacketBuffer) ((Object) var1)).e((byte) -103);
+                    var7.field_Ab = ((PacketBuffer) ((Object) var1)).e((byte) -111);
                     mea.field_e.b(-10258, var7);
                     return;
                   }
                   if (var2 == 19) {
-                    var3_longLifetime2 = ((ds) ((Object) var1)).k(255);
-                    var5Lifetime1 = ((ds) ((Object) var1)).e((byte) -120);
+                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).k(255);
+                    var5Lifetime1 = ((PacketBuffer) ((Object) var1)).e((byte) -120);
                     var24 = pjb.a(var3_longLifetime2, true);
                     if (var24 != null) {
                       if (var5Lifetime1 != 0) {
@@ -274,7 +274,7 @@ final class ie extends rqa {
                     return;
                   }
                   if (21 == var2) {
-                    var3Lifetime5 = ((ds) ((Object) var1)).e(param0 ^ 1856);
+                    var3Lifetime5 = ((PacketBuffer) ((Object) var1)).e(param0 ^ 1856);
                     if (var3Lifetime5 == 0) {
                       qga.field_a = 0L;
                       return;
@@ -283,20 +283,20 @@ final class ie extends rqa {
                     return;
                   }
                   if (var2 == 22) {
-                    tg.field_q = ((ds) ((Object) var1)).e(param0 + 1856);
-                    cla.field_b = ((ds) ((Object) var1)).l(11436);
+                    tg.field_q = ((PacketBuffer) ((Object) var1)).e(param0 + 1856);
+                    cla.field_b = ((PacketBuffer) ((Object) var1)).l(11436);
                     return;
                   }
                   if (var2 == 23) {
-                    wqa.field_a = ((ds) ((Object) var1)).k(param0 ^ 242);
+                    wqa.field_a = ((PacketBuffer) ((Object) var1)).k(param0 ^ 242);
                     return;
                   }
                   gna.a((Throwable) null, "L1: " + hm.e(-13514), 0);
                   ifb.l(-123);
                   return;
                 }
-                var3_longLifetime2 = ((ds) ((Object) var1)).k(255);
-                var5Lifetime1Lifetime1 = ((ds) ((Object) var1)).e((byte) -89);
+                var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).k(255);
+                var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).e((byte) -89);
                 var12 = pdb.a((byte) 80, var3_longLifetime2);
                 var23 = var12;
                 if (var12 == null) {
@@ -317,7 +317,7 @@ final class ie extends rqa {
                 mnb.a(var23, true);
                 return;
               }
-              var3_longLifetime2Lifetime1 = ((ds) ((Object) var1)).k(255);
+              var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).k(255);
               var22 = pdb.a((byte) 80, var3_longLifetime2Lifetime1);
               if (var22 != null) {
                 if (var2 != 14) {
@@ -332,7 +332,7 @@ final class ie extends rqa {
               }
               return;
             }
-            var3Lifetime6 = ((ds) ((Object) var1)).e(1869);
+            var3Lifetime6 = ((PacketBuffer) ((Object) var1)).e(1869);
             var14 = (mm) (ks.field_r.a(-1, (long)var3Lifetime6));
             var28 = var14;
             if (var14 != null) {
@@ -371,7 +371,7 @@ final class ie extends rqa {
           if (var2 != 4) {
             lqa.field_o = null;
           } else {
-            var3Lifetime1 = ((ds) ((Object) var1)).e(1869);
+            var3Lifetime1 = ((PacketBuffer) ((Object) var1)).e(1869);
             lqa.field_o = new mm(ocb.field_l);
             lqa.field_o.a((long)var3Lifetime1, (byte) 83);
             awa.a(-123, lqa.field_o, false, var1);
@@ -391,12 +391,12 @@ final class ie extends rqa {
           }
           ii.field_h = true;
           for (var3Lifetime2 = 0; ce.field_o.length > var3Lifetime2; var3Lifetime2++) {
-            ce.field_o[var3Lifetime2] = ((ds) ((Object) var1)).d((byte) -114);
+            ce.field_o[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).d((byte) -114);
           }
-          imb.field_a = ((ds) ((Object) var1)).e((byte) -113);
-          qd.field_d = ((ds) ((Object) var1)).e((byte) -95);
+          imb.field_a = ((PacketBuffer) ((Object) var1)).e((byte) -113);
+          qd.field_d = ((PacketBuffer) ((Object) var1)).e((byte) -95);
           for (var3Lifetime3 = 0; var3Lifetime3 < nkb.field_p.length; var3Lifetime3++) {
-            nkb.field_p[var3Lifetime3] = ((ds) ((Object) var1)).d((byte) -114);
+            nkb.field_p[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).d((byte) -114);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

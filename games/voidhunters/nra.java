@@ -193,7 +193,7 @@ final class nra implements dja {
           tq.field_o[24] = lbb.field_c;
           tq.field_o[1] = dfa.field_c;
           tq.field_o[19] = kja.field_G;
-          tq.field_o[57] = hq.field_i;
+          tq.field_o[57] = ImageProducerRasterBuffer.field_i;
           tq.field_o[26] = mqa.field_p;
           tq.field_o[49] = fj.field_c;
           tq.field_o[53] = eca.field_d;
@@ -281,7 +281,7 @@ final class nra implements dja {
           hr.field_o[8] = igb.field_b + " " + ti.field_i;
           hr.field_o[4] = ppb.field_d;
           hr.field_o[5] = ri.field_b;
-          hr.field_o[0] = fh.field_h;
+          hr.field_o[0] = DualLinkNode.field_h;
           hr.field_o[3] = igb.field_b;
           hr.field_o[6] = ptb.field_f + " " + ti.field_i;
           hr.field_o[7] = fla.field_o + " " + ti.field_i;

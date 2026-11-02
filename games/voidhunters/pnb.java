@@ -4,8 +4,8 @@
 import java.util.*;
 
 final class pnb implements Iterator {
-    private ksa field_d;
-    private ksa field_a;
+    private IntrusiveNode field_d;
+    private IntrusiveNode field_a;
     private nga field_b;
     private int field_c;
 
@@ -30,7 +30,7 @@ final class pnb implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        ksa var1;
+        IntrusiveNode var1;
         int var2;
         var2 = VoidHunters.field_G;
         if (this.field_b.field_h[this.field_c - 1] != this.field_d) {
@@ -59,7 +59,7 @@ final class pnb implements Iterator {
           this.field_c = 1;
           return;
         }
-        this.field_a = (ksa) null;
+        this.field_a = (IntrusiveNode) null;
         this.field_d = this.field_b.field_h[0].field_c;
         this.field_a = null;
         this.field_c = 1;

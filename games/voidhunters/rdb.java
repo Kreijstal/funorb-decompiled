@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rdb extends ksa implements ntb {
+final class rdb extends IntrusiveNode implements ntb {
     private int field_e;
     private int field_g;
     private int field_d;

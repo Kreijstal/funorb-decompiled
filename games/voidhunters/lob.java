@@ -150,11 +150,11 @@ final class lob implements dja {
           var6Lifetime1.field_Ab = (String) (var3Lifetime1);
           var6Lifetime1.b(-3846);
           var7_ref = (vu) (mr.field_M.d(0));
-          L17: while (true) {
+          scanLoop1: while (true) {
             if (var7_ref != null) {
               stackIn_66_0 = var7_ref;
               if (var9 != 0) {
-                break L17;
+                break scanLoop1;
               }
               if (qob.a(stackIn_66_0, 7569, var6Lifetime1)) {
                 var7_ref = (vu) (mr.field_M.a((byte) 78));

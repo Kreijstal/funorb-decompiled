@@ -45,8 +45,8 @@ final class rha implements ntb {
             }
             return;
           }
-          param4 = ksa.a(31123, lua.field_c, hab.field_i, param4);
-          param3 = ksa.a(31123, lua.field_c, hab.field_i, param3);
+          param4 = IntrusiveNode.a(31123, lua.field_c, hab.field_i, param4);
+          param3 = IntrusiveNode.a(31123, lua.field_c, hab.field_i, param3);
           sk.a(-105, param4, param1, param3, param2);
         }
         if (param0 <= -18) {

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ihb extends ksa {
+final class ihb extends IntrusiveNode {
     int field_d;
     int field_e;
 

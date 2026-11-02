@@ -48,7 +48,7 @@ final class jwa extends le {
         this.b(param0, -121);
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -107,14 +107,14 @@ final class jwa extends le {
           var2_int = 0;
           var3 = param1.length();
           while (var2_int < var3) {
-            if (fg.a(param1.charAt(var2_int), 120)) {
+            if (MouseWheelInput.a(param1.charAt(var2_int), 120)) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (fg.a(param1.charAt(var3 - 1), 116)) {
+            if (MouseWheelInput.a(param1.charAt(var3 - 1), 116)) {
               var3--;
               continue;
             }

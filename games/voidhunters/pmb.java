@@ -80,7 +80,7 @@ final class pmb extends rqa {
         return -1;
     }
 
-    final static cp a(int param0, ds param1) {
+    final static cp a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         cp stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

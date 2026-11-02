@@ -240,7 +240,7 @@ class dqa extends shb implements nea {
           nfa.field_e[0] = jeb.field_b.nextInt();
           nfa.field_e[1] = jeb.field_b.nextInt();
           nfa.field_e[2] = (int)(iqb.field_p >> 32);
-          ss.field_p.field_e = 0;
+          ss.field_p.position = 0;
           nfa.field_e[3] = (int)iqb.field_p;
           ss.field_p.d(nfa.field_e[0], 332614536);
           ss.field_p.d(nfa.field_e[1], 332614536);
@@ -249,14 +249,14 @@ class dqa extends shb implements nea {
           nq.a((byte) -91, ss.field_p);
           ss.field_p.a(param4, true);
           param3.a(ss.field_p, -26216);
-          dpa.field_p.field_e = 0;
+          dpa.field_p.position = 0;
           if (!param2) {
             dpa.field_p.c(0, 16);
           } else {
             dpa.field_p.c(0, 18);
           }
-          dpa.field_p.field_e = dpa.field_p.field_e + 2;
-          var5_int = dpa.field_p.field_e;
+          dpa.field_p.position = dpa.field_p.position + 2;
+          var5_int = dpa.field_p.position;
           dpa.field_p.d(fk.field_c, 332614536);
           dpa.field_p.a(rda.field_o, 90);
           var6 = 0;
@@ -285,7 +285,7 @@ class dqa extends shb implements nea {
             dpa.field_p.b((byte) 0, vda.field_o);
           }
           ufa.a(dpa.field_p, (byte) -126, jnb.field_p, bib.field_g, ss.field_p);
-          dpa.field_p.a(dpa.field_p.field_e - var5_int, -125);
+          dpa.field_p.a(dpa.field_p.position - var5_int, -125);
           lnb.b(-1, 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

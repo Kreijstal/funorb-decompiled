@@ -56,14 +56,14 @@ final class ukb extends rqa {
           }
           var5 = dpa.field_p;
           var5.h(24335, param1);
-          var5.field_e = var5.field_e + 1;
-          var4 = var5.field_e;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.c(0, 0);
           var5.a(true, param0);
           if (param2 != 9602) {
             field_p = (String) null;
           }
-          var5.e(-var4 + var5.field_e, -129);
+          var5.e(-var4 + var5.position, -129);
           stackIn_32_0 = null;
           return (String) (stackIn_32_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

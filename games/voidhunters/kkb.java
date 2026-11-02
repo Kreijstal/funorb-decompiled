@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kkb extends rqa {
-    static fg field_o;
+    static MouseWheelInput field_o;
     static int field_p;
 
     kkb(String param0, Class[] param1, String param2) {

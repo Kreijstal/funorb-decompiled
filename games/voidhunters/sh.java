@@ -50,17 +50,17 @@ final class sh {
           if (param0 != 20824) {
             field_a = (byte[][]) null;
           }
-          if (null == rb.field_c) {
+          if (null == SocketConnector.field_c) {
             return;
           }
-          var1 = (pd) (rb.field_c.d(0));
+          var1 = (pd) (SocketConnector.field_c.d(0));
           while (var1 != null) {
             fieldTemp$0 = var1.field_d;
             var1.field_d = var1.field_d - 1;
             if (fieldTemp$0 == 0) {
               var1.b(param0 ^ -24158);
             }
-            var1 = (pd) (rb.field_c.a((byte) 12));
+            var1 = (pd) (SocketConnector.field_c.a((byte) 12));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

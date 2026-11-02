@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class r extends fh {
+abstract class r extends DualLinkNode {
     static String field_m;
     static double field_l;
     static int field_k;

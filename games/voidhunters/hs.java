@@ -49,8 +49,8 @@ final class hs extends rqa {
         try {
           var5 = dpa.field_p;
           var5.h(param1 + 24334, param2);
-          var5.field_e = var5.field_e + 1;
-          var4 = var5.field_e;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.c(0, param1);
           var5.c(param1 ^ 1, param0.field_e);
           var5.c(0, param0.field_g);
@@ -59,7 +59,7 @@ final class hs extends rqa {
           var5.d(param0.field_l, param1 ^ 332614537);
           var5.d(param0.field_f, 332614536);
           var5.g(param1 ^ 1594, var4);
-          var5.e(var5.field_e - var4, param1 - 130);
+          var5.e(var5.position - var4, param1 - 130);
         } catch (RuntimeException runtimeException) {
           throw rta.a((Throwable) ((Object) runtimeException), "hs.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

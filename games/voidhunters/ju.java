@@ -88,7 +88,7 @@ final class ju extends rqa {
                 var11 = (String) null;
                 qva.field_j = sia.a(96, sta.field_p, (String) null, false, param5);
               }
-              dpa.field_p.field_e = 0;
+              dpa.field_p.position = 0;
               dpa.field_p.c(param3 ^ 13, 14);
               dpa.field_p.c(0, qva.field_j.a((byte) 56).field_a);
               lnb.b(-1, 117);
@@ -104,12 +104,12 @@ final class ju extends rqa {
               } else {
                 tc.field_c = ida.field_w;
               }
-              qga.field_b.field_e = 0;
+              qga.field_b.position = 0;
             }
             if (ida.field_w == tc.field_c &&
               boa.a(8, param3 ^ 30013)) {
               iqb.field_p = qga.field_b.k(255);
-              qga.field_b.field_e = 0;
+              qga.field_b.position = 0;
               dqa.a(-87, param0, param4, qva.field_j, param1);
               tc.field_c = of.field_a;
             }
@@ -118,7 +118,7 @@ final class ju extends rqa {
               boa.a(1, 30000)) {
               var6_intLifetime1 = qga.field_b.e((byte) -110);
               ow.field_a = var6_intLifetime1;
-              qga.field_b.field_e = 0;
+              qga.field_b.position = 0;
               vda.field_o = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -149,7 +149,7 @@ final class ju extends rqa {
               var12 = qga.field_b.m(0);
               var7 = qga.field_b.e((byte) -106);
               if ((var7 & 1) != 0) {
-                hq.d((byte) 111);
+                ImageProducerRasterBuffer.d((byte) 111);
               }
               if (!param4) {
                 stackIn_39_0 = ((8 & var7) != 0);

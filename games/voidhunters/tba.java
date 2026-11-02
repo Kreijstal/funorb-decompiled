@@ -65,11 +65,11 @@ final class tba extends rqa {
           }
           var5 = dpa.field_p;
           var5.h(param0 ^ 24333, param2);
-          var5.field_e = var5.field_e + 1;
-          var4 = var5.field_e;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.c(0, param0);
           var5.a(true, param1);
-          var5.e(var5.field_e - var4, -129);
+          var5.e(var5.position - var4, -129);
           stackIn_23_0 = null;
           return (String) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

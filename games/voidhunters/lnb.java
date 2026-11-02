@@ -106,7 +106,7 @@ final class lnb extends le {
         return var17;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -151,24 +151,24 @@ final class lnb extends le {
             if (param1 < 110) {
               return;
             }
-            if (dpa.field_p.field_e == 0 &&
+            if (dpa.field_p.position == 0 &&
               (10000L + bgb.field_o) < wt.a(false)) {
               dpa.field_p.h(24335, param0);
             }
-            if (0 < dpa.field_p.field_e) {
+            if (0 < dpa.field_p.position) {
               try {
-                ov.field_o.a(0, dpa.field_p.field_h, dpa.field_p.field_e, 0);
+                ov.field_o.a(0, dpa.field_p.payload, dpa.field_p.position, 0);
                 bgb.field_o = wt.a(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 ifb.l(-122);
               }
-              dpa.field_p.field_e = 0;
+              dpa.field_p.position = 0;
             }
             return;
           }
-          dpa.field_p.field_e = 0;
+          dpa.field_p.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

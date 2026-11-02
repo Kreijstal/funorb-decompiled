@@ -65,9 +65,9 @@ final class fb extends rqa {
             var9 = var10;
             var4 = var9;
             var5 = var13;
-            var6 = ((ds) ((Object) var5)).e((byte) -89);
+            var6 = ((PacketBuffer) ((Object) var5)).e((byte) -89);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((ds) ((Object) var5)).h(92);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).h(92);
             }
             var14 = (iea) (klb.field_q.d(0));
             if (var14 != null) {

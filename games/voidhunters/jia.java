@@ -46,7 +46,7 @@ final class jia extends rqa {
               if (var12 < 5) {
                 ul.field_b[var12].a(var6_int, -100, var8, var13, var7Lifetime1);
                 hpa.field_o[var12].a(param3, -110, -param3 + var9, 0, var7Lifetime1);
-                vh.field_c[var12].a(var9, -27, param0, param4, -param4 + (var7Lifetime1 - param4));
+                IterableNodeHashTable.field_c[var12].a(var9, -27, param0, param4, -param4 + (var7Lifetime1 - param4));
                 lob.field_c[var12].a(var10, 127, -var10 + (-param3 + var8), param4, var7Lifetime1 - (param4 + param4));
               } else {
                 nlb.field_o.a(var6_int, -120, var8, var13, var7Lifetime1);

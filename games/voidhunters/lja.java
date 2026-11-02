@@ -165,7 +165,7 @@ final class lja implements ntb {
             var17 = -var12_int + param0;
             var18 = param3 - var13;
             var19 = ecb.a(var18, (byte) -77, var17);
-            var20 = rrb.a(22433, var19 - param4);
+            var20 = GameKeyHandler.a(22433, var19 - param4);
             if (Math.abs(var20) > 256) {
               return;
             }
@@ -185,7 +185,7 @@ final class lja implements ntb {
             var22.field_f = param10.field_f;
             qba.a(20382, var15, 12, var16, 50);
             var22.a(var16, param4, var15, joa.field_a, 1948934248);
-            param10.a(var16, rrb.a(22433, param4 + 4096), var15, joa.field_a, 1948934248);
+            param10.a(var16, GameKeyHandler.a(22433, param4 + 4096), var15, joa.field_a, 1948934248);
             this.field_e = var22.field_l;
             this.field_g = pca.field_i[0].d((byte) 64);
             this.field_h = this.field_a;
@@ -344,7 +344,7 @@ final class lja implements ntb {
               var17.a(-var31, (int)var21, (int)var23, (byte) -123, -var30);
             }
             if (this.field_a > this.field_h) {
-              this.field_a = this.field_a - ds.field_d;
+              this.field_a = this.field_a - PacketBuffer.field_d;
               if (this.field_h > this.field_a) {
                 this.field_a = this.field_h;
               }

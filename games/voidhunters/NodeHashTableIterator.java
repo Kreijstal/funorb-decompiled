@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class jn implements Iterator {
-    private vh field_e;
+final class NodeHashTableIterator implements Iterator {
+    private IterableNodeHashTable field_e;
     static llb field_a;
-    private fh field_b;
+    private DualLinkNode field_b;
     static String field_c;
-    private fh field_d;
+    private DualLinkNode field_d;
 
     final static void a(int param0) {
         spb.a((byte) -95);
@@ -16,7 +16,7 @@ final class jn implements Iterator {
           kl.a(igb.field_a, param0 ^ 92);
         }
         if (param0 != 1) {
-          jn.a(121);
+          NodeHashTableIterator.a(121);
           nmb.d(-87);
           nf.b(14194);
           oga.a(16928);
@@ -70,13 +70,13 @@ final class jn implements Iterator {
           this.field_d = null;
           var1 = null;
         } else {
-          this.field_d = ((fh) (var1)).field_e;
+          this.field_d = ((DualLinkNode) (var1)).field_e;
         }
-        this.field_b = (fh) (var1);
+        this.field_b = (DualLinkNode) (var1);
         return var1;
     }
 
-    jn(vh param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_b = null;
         try {
           this.field_e = param0;

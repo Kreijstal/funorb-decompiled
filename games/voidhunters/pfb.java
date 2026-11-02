@@ -4,7 +4,7 @@
 final class pfb {
     static String field_a;
     private int field_e;
-    private vh field_b;
+    private IterableNodeHashTable field_b;
     private nga field_c;
     private int field_d;
 
@@ -273,7 +273,7 @@ final class pfb {
 
     private pfb(int param0, int param1) {
         int var3;
-        this.field_b = new vh();
+        this.field_b = new IterableNodeHashTable();
         this.field_d = param0;
         this.field_e = param0;
         var3 = 1;

@@ -29,9 +29,9 @@ final class kib extends uj {
     final int a(int param0) {
         if (param0 != -1) {
           this.b((byte) -66);
-          return rrb.field_a;
+          return GameKeyHandler.field_a;
         }
-        return rrb.field_a;
+        return GameKeyHandler.field_a;
     }
 
     final boolean c(byte param0) {

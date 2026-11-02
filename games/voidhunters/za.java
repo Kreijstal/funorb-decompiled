@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class za extends ksa {
+abstract class za extends IntrusiveNode {
     static int field_d;
     private static String field_z;
 

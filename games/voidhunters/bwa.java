@@ -171,7 +171,7 @@ final class bwa extends llb {
             this.field_Bb.field_Y = 11184810;
             this.field_Bb.field_F = 1;
             this.field_Ab.b(-561, this.field_Bb);
-            this.field_vb = new llb(0L, param8, fh.field_j);
+            this.field_vb = new llb(0L, param8, DualLinkNode.field_j);
             this.field_vb.field_Y = 11184810;
             this.field_vb.field_F = 1;
             this.field_Ab.b(-561, this.field_vb);
@@ -181,7 +181,7 @@ final class bwa extends llb {
             this.field_Eb.field_s = "|";
             if (!(nfa.field_d < 5) ||
               !(go.field_p < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_8_0 = this;
                 stackIn_8_1 = null;
                 stackIn_8_2 = null;
@@ -196,7 +196,7 @@ final class bwa extends llb {
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
                     stackIn_9_5 = po.field_p;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_9_0Lifetime1 = this;

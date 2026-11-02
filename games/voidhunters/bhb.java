@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bhb extends ksa implements tv {
+final class bhb extends IntrusiveNode implements tv {
     byte[] field_d;
     static String field_e;
     static int field_f;
@@ -15,7 +15,7 @@ final class bhb extends ksa implements tv {
         }
         faa var2 = new faa(this.field_d.length - 4);
         var2.a(4, this.field_d, -1, -4 + this.field_d.length);
-        var2.field_e = param0;
+        var2.position = param0;
         tja var3 = (tja) (gva.field_a.a((byte) -128));
         var2.p(-23497);
         if (!(var3 instanceof utb)) {
@@ -46,7 +46,7 @@ final class bhb extends ksa implements tv {
     }
 
     bhb(int param0, faa param1) {
-        this(param0, param1.field_h, param1.field_e);
+        this(param0, param1.payload, param1.position);
     }
 
     public static void a(int param0) {

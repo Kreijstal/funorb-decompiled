@@ -22,7 +22,7 @@ final class um {
         return null;
     }
 
-    final void a(ds param0, int param1, boolean param2) {
+    final void a(PacketBuffer param0, int param1, boolean param2) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;

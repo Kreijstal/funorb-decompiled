@@ -57,11 +57,11 @@ final class iab implements nka {
             iab.a(76);
           }
           var5.h(24335, param0);
-          var5.field_e = var5.field_e + 1;
-          var6 = var5.field_e;
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           var5.c(param3 ^ -76, 3);
           var5.a(true, param2);
-          var5.e(var5.field_e - var6, param3 - 53);
+          var5.e(var5.position - var6, param3 - 53);
           stackIn_14_0 = null;
           return (String) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

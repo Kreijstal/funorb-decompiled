@@ -347,7 +347,7 @@ final class aoa implements ntb {
                   var20 != 10 &&
                   var8 >> 3 <= var19_ref_ml.field_c.a((byte) 24).j(127)) {
                   var21 = var19_ref_ml.g((byte) -127);
-                  var22 = rrb.a(param1 + 22506, var15 - var21);
+                  var22 = GameKeyHandler.a(param1 + 22506, var15 - var21);
                   if (var17 > Math.abs(var22)) {
                     var17 = Math.abs(var22);
                     var16 = var22;
@@ -365,7 +365,7 @@ final class aoa implements ntb {
               if (0 != this.field_e &&
                 this.field_d != 0) {
                 var16 = ecb.a(this.field_d, (byte) -77, this.field_e);
-                this.field_f = rrb.a(22433, var16 - param0.e(param1 ^ -73)) << 8;
+                this.field_f = GameKeyHandler.a(22433, var16 - param0.e(param1 ^ -73)) << 8;
               }
             }
             if (cab.field_p > var14) {
@@ -426,10 +426,10 @@ final class aoa implements ntb {
               var15Lifetime1 != 0) {
               var17Lifetime1 = ecb.a(var15Lifetime1, (byte) -77, var14Lifetime1);
               var18Lifetime1 = param0.e(0);
-              var19Lifetime1 = rrb.a(22433, var17Lifetime1 - var18Lifetime1);
-              var20Lifetime1 = rrb.a(22433, -4096 - (var18Lifetime1 - var17Lifetime1));
-              var21Lifetime1 = rrb.a(22433, 2048 - (var18Lifetime1 - var17Lifetime1));
-              var22Lifetime1 = rrb.a(param1 + 22506, var17Lifetime1 - var18Lifetime1 - 2048);
+              var19Lifetime1 = GameKeyHandler.a(22433, var17Lifetime1 - var18Lifetime1);
+              var20Lifetime1 = GameKeyHandler.a(22433, -4096 - (var18Lifetime1 - var17Lifetime1));
+              var21Lifetime1 = GameKeyHandler.a(22433, 2048 - (var18Lifetime1 - var17Lifetime1));
+              var22Lifetime1 = GameKeyHandler.a(param1 + 22506, var17Lifetime1 - var18Lifetime1 - 2048);
               if (Math.abs(var19Lifetime1) < var13Lifetime1) {
                 var9 = var9 | 1;
               }

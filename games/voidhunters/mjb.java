@@ -356,8 +356,8 @@ final class mjb extends aja {
     final static void a(byte param0, int param1) {
         faa var2 = dpa.field_p;
         var2.h(24335, param1);
-        var2.field_e = var2.field_e + 1;
-        int var3 = var2.field_e;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         if (param0 <= 93) {
           field_c = (dja) null;
         }
@@ -366,7 +366,7 @@ final class mjb extends aja {
         var2.c(0, imb.field_a);
         var2.c(0, qd.field_d);
         var2.a(0, nkb.field_p, -1, nkb.field_p.length);
-        var2.e(-var3 + var2.field_e, -129);
+        var2.e(-var3 + var2.position, -129);
     }
 
     final void a(int param0, int param1, int param2, int param3) {

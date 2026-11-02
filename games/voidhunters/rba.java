@@ -185,16 +185,16 @@ final class rba implements ntb {
         }
     }
 
-    final static gpb a(int param0, boolean param1, java.awt.Canvas param2, int param3) {
+    final static RasterBuffer a(int param0, boolean param1, java.awt.Canvas param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          gpb var5 = null;
-          hq var5_ref = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
           java.awt.Canvas var6 = null;
-          gpb stackIn_3_0 = null;
-          hq stackIn_5_0 = null;
+          RasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -206,17 +206,17 @@ final class rba implements ntb {
                 var6 = (java.awt.Canvas) null;
                 rba.a(102, true, (java.awt.Canvas) null, -4);
               }
-              var5 = (gpb) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(4904, param0, param3, param2);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new hq();
-              ((gpb) ((Object) var5_ref)).a(4904, param0, param3, param2);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(4904, param0, param3, param2);
               stackIn_5_0 = var5_ref;
-              return (gpb) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

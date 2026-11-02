@@ -17,25 +17,25 @@ final class bh implements dja {
         int var4Lifetime1;
         var2.h(24335, param0);
         if (param1) {
-          var2.field_e = var2.field_e + 1;
-          var3 = var2.field_e;
+          var2.position = var2.position + 1;
+          var3 = var2.position;
           var2.c(0, 5);
           var2.c(0, lqa.field_o.field_Fb);
           var4 = lqa.field_o.field_Cb + (lqa.field_o.field_Bb << 6);
           var2.c(0, var4);
           var2.a(0, lqa.field_o.field_Pb, -1, lqa.field_o.field_Pb.length);
-          var2.e(-var3 + var2.field_e, -129);
+          var2.e(-var3 + var2.position, -129);
           return;
         }
         bh.a(-30, true);
-        var2.field_e = var2.field_e + 1;
-        var3Lifetime1 = var2.field_e;
+        var2.position = var2.position + 1;
+        var3Lifetime1 = var2.position;
         var2.c(0, 5);
         var2.c(0, lqa.field_o.field_Fb);
         var4Lifetime1 = lqa.field_o.field_Cb + (lqa.field_o.field_Bb << 6);
         var2.c(0, var4Lifetime1);
         var2.a(0, lqa.field_o.field_Pb, -1, lqa.field_o.field_Pb.length);
-        var2.e(-var3Lifetime1 + var2.field_e, -129);
+        var2.e(-var3Lifetime1 + var2.position, -129);
     }
 
     final static apb[] a(faa param0, byte param1) {

@@ -36,15 +36,15 @@ final class moa extends le {
           if (this.field_k == 0) {
             var5 = 0;
             var6 = 0;
-            L9: while (true) {
+            scanLoop1: while (true) {
               if (var6 < this.field_m) {
                 if (var4 >= this.field_j[var6] &&
                   var4 < this.field_j[1 + var6]) {
                   if (var4 >= this.field_i[var6]) {
-                    break L9;
+                    break scanLoop1;
                   }
                   var5 = 4096;
-                  break L9;
+                  break scanLoop1;
                 }
                 var6++;
                 continue;
@@ -76,15 +76,15 @@ final class moa extends le {
               }
               var11 = 0;
               var9Lifetime1 = var11;
-              L6: while (true) {
+              scanLoop2: while (true) {
                 if (var11 < this.field_m) {
                   if (var6Lifetime1 >= this.field_j[var11] &&
                     this.field_j[var11 + 1] > var6Lifetime1) {
                     if (this.field_i[var11] <= var6Lifetime1) {
-                      break L6;
+                      break scanLoop2;
                     }
                     var7 = 4096;
-                    break L6;
+                    break scanLoop2;
                   }
                   var11++;
                   continue;
@@ -130,7 +130,7 @@ final class moa extends le {
         }
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -138,7 +138,7 @@ final class moa extends le {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        ds var6 = null;
+        PacketBuffer var6 = null;
         var5 = VoidHunters.field_G;
         try {
           var4_int = param0;
@@ -154,8 +154,8 @@ final class moa extends le {
             }
           }
           if (param1 > -60) {
-            var6 = (ds) null;
-            this.a(61, -61, (ds) null);
+            var6 = (PacketBuffer) null;
+            this.a(61, -61, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -8,7 +8,7 @@ final class vn extends le {
     private int field_l;
     private int field_j;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -16,7 +16,7 @@ final class vn extends le {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        ds var6 = null;
+        PacketBuffer var6 = null;
         var5 = VoidHunters.field_G;
         try {
           var4_int = param0;
@@ -32,8 +32,8 @@ final class vn extends le {
             }
           }
           if (param1 >= -60) {
-            var6 = (ds) null;
-            this.a(-122, -52, (ds) null);
+            var6 = (PacketBuffer) null;
+            this.a(-122, -52, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

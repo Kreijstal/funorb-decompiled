@@ -42,9 +42,9 @@ final class rhb extends rqa {
               var4_ref_c.field_e < var2_long) {
               var4_ref_c.b(-3846);
               vja.field_a = var4_ref_c.field_f.length;
-              qga.field_b.field_e = 0;
+              qga.field_b.position = 0;
               for (var5_int = 0; var5_int < vja.field_a; var5_int++) {
-                qga.field_b.field_h[var5_int] = var4_ref_c.field_f[var5_int];
+                qga.field_b.payload[var5_int] = var4_ref_c.field_f[var5_int];
               }
               iq.field_a = foa.field_o;
               foa.field_o = fd.field_r;
@@ -55,12 +55,12 @@ final class rhb extends rqa {
           }
           while (true) {
             if (0 > kcb.field_p) {
-              qga.field_b.field_e = 0;
+              qga.field_b.position = 0;
               if (!boa.a(1, 30000)) {
                 return false;
               }
               kcb.field_p = qga.field_b.o(255);
-              qga.field_b.field_e = 0;
+              qga.field_b.position = 0;
               vja.field_a = param1[kcb.field_p];
             }
             if (!ci.b((byte) 51)) {
@@ -83,7 +83,7 @@ final class rhb extends rqa {
             }
             var5 = new c((long)var4 + var2_long, kcb.field_p, new byte[vja.field_a]);
             for (var6 = 0; var6 < vja.field_a; var6++) {
-              var5.field_f[var6] = qga.field_b.field_h[var6];
+              var5.field_f[var6] = qga.field_b.payload[var6];
             }
             mlb.field_q.b(param0 ^ -10258, var5);
             kcb.field_p = -1;

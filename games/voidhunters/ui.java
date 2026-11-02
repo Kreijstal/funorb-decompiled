@@ -29,17 +29,17 @@ final class ui extends rqa {
                 var4 = 0;
               }
             }
-            if (dpa.field_p.field_e > 0) {
-              var14 = new byte[dpa.field_p.field_e];
+            if (dpa.field_p.position > 0) {
+              var14 = new byte[dpa.field_p.position];
               var11 = var14;
               var8 = var11;
               var17 = var8;
               for (var6 = 0; var6 < var14.length; var6++) {
-                var8[var6] = dpa.field_p.field_h[var6];
+                var8[var6] = dpa.field_p.payload[var6];
               }
-              var6_ref_c = new c((long)var4 + var2_long, dpa.field_p.field_e, var17);
+              var6_ref_c = new c((long)var4 + var2_long, dpa.field_p.position, var17);
               bfa.field_o.b(param1 ^ 22878, var6_ref_c);
-              dpa.field_p.field_e = 0;
+              dpa.field_p.position = 0;
             }
             var9 = (c) (bfa.field_o.d(0));
             var13 = var9;
@@ -49,10 +49,10 @@ final class ui extends rqa {
               var10 = 0;
               var6Lifetime1 = var10;
               while (var13.field_d > var10) {
-                dpa.field_p.field_h[var10] = var9.field_f[var10];
+                dpa.field_p.payload[var10] = var9.field_f[var10];
                 var10++;
               }
-              dpa.field_p.field_e = var13.field_d;
+              dpa.field_p.position = var13.field_d;
             }
           }
           if (param1 != -29008) {

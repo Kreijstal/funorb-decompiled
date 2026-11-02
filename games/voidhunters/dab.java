@@ -191,8 +191,8 @@ final class dab extends wm implements ntb {
           var2.q(-83);
           param1.b(var2, param0 + 30119);
           var2.r(param0 ^ -2514);
-          var3 = new byte[var2.field_e];
-          cua.a(var2.field_h, 0, var3, 0, var2.field_e);
+          var3 = new byte[var2.position];
+          cua.a(var2.payload, 0, var3, 0, var2.position);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

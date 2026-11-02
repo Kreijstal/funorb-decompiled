@@ -4,7 +4,7 @@
 final class bt {
     static String field_b;
     private int field_c;
-    static ds field_a;
+    static PacketBuffer field_a;
 
     final void b(int param0) {
         jaggl.OpenGL.glEndList();
@@ -44,7 +44,7 @@ final class bt {
     final void a(int param0, int param1) {
         jaggl.OpenGL.glNewList(this.field_c + param1, 4864);
         if (param0 >= -79) {
-          field_a = (ds) null;
+          field_a = (PacketBuffer) null;
         }
     }
 

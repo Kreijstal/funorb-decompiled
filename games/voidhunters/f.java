@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class f extends ksa {
+abstract class f extends IntrusiveNode {
     f field_d;
     volatile boolean field_e;
     int field_f;

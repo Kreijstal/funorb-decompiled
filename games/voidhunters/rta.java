@@ -48,13 +48,13 @@ final class rta extends rqa {
         field_o = null;
     }
 
-    final static hva a(Throwable param0, String param1) {
-        hva var2 = null;
-        if (param0 instanceof hva) {
-          var2 = (hva) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_a = var2.field_a + ' ' + param1;
         } else {
-          var2 = new hva(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }

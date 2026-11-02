@@ -63,13 +63,13 @@ final class raa extends rqa {
         RuntimeException decompiledCaughtException = null;
         var3 = VoidHunters.field_G;
         try {
-          if (null == rb.field_c) {
+          if (null == SocketConnector.field_c) {
             return;
           }
-          var2 = (pd) (rb.field_c.d(0));
+          var2 = (pd) (SocketConnector.field_c.d(0));
           while (var2 != null) {
             sn.a(var2.field_e, (byte) 83, var2.field_h, var2.field_f, var2.field_i, 16711935, param1);
-            var2 = (pd) (rb.field_c.a((byte) 108));
+            var2 = (pd) (SocketConnector.field_c.a((byte) 108));
           }
           if (param0 == -99) {
             return;

@@ -50,7 +50,7 @@ final class hqb {
         if (17 != param1) {
           return false;
         }
-        crb.field_v = new bwa(this.field_b.field_M, this.field_b.field_u, this.field_b.field_hb, this.field_b.field_G, param2, fh.field_g, lo.field_b, kn.field_p, qc.field_q, urb.field_o, iga.field_o, this.field_a, this.field_d);
+        crb.field_v = new bwa(this.field_b.field_M, this.field_b.field_u, this.field_b.field_hb, this.field_b.field_G, param2, DualLinkNode.field_g, lo.field_b, kn.field_p, qc.field_q, urb.field_o, iga.field_o, this.field_a, this.field_d);
         return true;
     }
 
@@ -269,12 +269,12 @@ final class hqb {
             var4 = jwa.a(false, param2);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!fg.a(var4.charAt(0), 56) &&
-                !fg.a(var4.charAt(var4.length() - 1), param1 ^ 79)) {
+              if (!MouseWheelInput.a(var4.charAt(0), 56) &&
+                !MouseWheelInput.a(var4.charAt(var4.length() - 1), param1 ^ 79)) {
                 var5 = 0;
                 for (var6 = 0; var6 < param2.length(); var6++) {
                   var7 = param2.charAt(var6);
-                  if (fg.a((char) var7, 45)) {
+                  if (MouseWheelInput.a((char) var7, 45)) {
                     var5++;
                   } else {
                     var5 = 0;

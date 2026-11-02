@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class shb extends ksa {
+class shb extends IntrusiveNode {
     int field_i;
     String field_p;
     static byte[] field_o;

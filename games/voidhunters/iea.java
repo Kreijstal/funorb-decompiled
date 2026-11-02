@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iea extends ksa {
+final class iea extends IntrusiveNode {
     static int field_d;
 
     private iea() throws Throwable {

@@ -79,8 +79,8 @@ final class ep extends rqa {
           var19 = var16 * (1 + var6_int);
           if (lua.field_c <= param1 &&
             hab.field_i >= param1) {
-            var21 = ksa.a(31123, ob.field_j, mt.field_o, param3 + param5);
-            var22 = ksa.a(31123, ob.field_j, mt.field_o, -param3 + param5);
+            var21 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param3 + param5);
+            var22 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, -param3 + param5);
             ww.a(param2, var21, rba.field_b[param1], (byte) 75, var22);
           }
           var20 = (var7 - 1) * var15;
@@ -120,8 +120,8 @@ final class ep extends rqa {
             if (hab.field_i < var21Lifetime1) {
               continue;
             }
-            var23 = ksa.a(31123, ob.field_j, mt.field_o, param5 + var6_int);
-            var24 = ksa.a(31123, ob.field_j, mt.field_o, -var6_int + param5);
+            var23 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param5 + var6_int);
+            var24 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, -var6_int + param5);
             if (lua.field_c <= var21Lifetime1) {
               ww.a(param2, var23, rba.field_b[var21Lifetime1], (byte) 75, var24);
             }

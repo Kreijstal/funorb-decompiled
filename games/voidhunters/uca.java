@@ -376,7 +376,7 @@ final class uca {
             var4 = new boa();
             var4.field_c = var5;
             bo.a((byte) 103, var4);
-            this.field_M = ksa.a((byte) -6).field_h.length;
+            this.field_M = IntrusiveNode.a((byte) -6).payload.length;
             if (this.field_M <= 192) {
               this.field_d = 0;
               if (es.field_b == null) {
@@ -473,7 +473,7 @@ final class uca {
         try {
           if (!param4) {
             if (1 == pba.field_o &&
-              ds.field_g == 1) {
+              PacketBuffer.field_g == 1) {
               if (this.field_p == -1 &&
                 param1) {
                 this.field_p = param0.field_l;
@@ -485,7 +485,7 @@ final class uca {
           } else {
             if (param0.field_l == 8 &&
               param2.r((byte) -91)) {
-              kwa.a(jn.field_c, param3 - 208);
+              kwa.a(NodeHashTableIterator.field_c, param3 - 208);
             } else {
               kwa.a(tq.field_o[param0.field_l], -51);
             }
@@ -645,7 +645,7 @@ final class uca {
             }
             nkb.a(false, "Done");
           }
-          L10: {
+          regionExit1: {
             if (param3) {
               var7 = 0;
               if (!li.field_i) {
@@ -705,8 +705,8 @@ final class uca {
                 }
                 var25 = var9_ref_sg__;
                 var13Lifetime3 = 0;
-                L12: while (true) {
-                  L21: {
+                scanLoop2: while (true) {
+                  regionExit3: {
                     if (var13Lifetime3 < var25.length) {
                       var26Lifetime1 = var25[var13Lifetime3];
                       if (var26Lifetime1 != null &&
@@ -719,22 +719,22 @@ final class uca {
                         stackIn_85_0 = (!this.a(255, var15Lifetime4, var17Lifetime2, (byte) -126, var16Lifetime2)) ? 0 : 1;
                         var7 = stackIn_85_0;
                         if (var7 != 0) {
-                          break L21;
+                          break regionExit3;
                         }
                       }
                       var13Lifetime3++;
                       continue;
                     }
                   }
-                  L25: {
-                    L26: {
+                  regionExit4: {
+                    regionExit5: {
                       if (var11_ref_rba__ != null) {
                         if (var7 != 0) {
                           if (var10_ref_it__ == null) {
                             break;
                           }
                           if (li.field_i) {
-                            break L26;
+                            break regionExit5;
                           }
                           bia.a((byte) 124);
                           if ((var7 == 0)) {
@@ -745,7 +745,7 @@ final class uca {
                               ll.field_p.a(0, 0);
                             }
                           }
-                          break L25;
+                          break regionExit4;
                         }
                         var12_ref_rba__Lifetime1 = var11_ref_rba__;
                         for (var13Lifetime3 = 0; var13Lifetime3 < var12_ref_rba__Lifetime1.length; var13Lifetime3++) {
@@ -780,7 +780,7 @@ final class uca {
                             stackIn_131_0 = (!this.a(var30.field_i, var15Lifetime4, var18, (byte) -101, var16Lifetime2Lifetime1)) ? 0 : 1;
                             var7 = stackIn_131_0;
                             if (var7 != 0) {
-                              break L12;
+                              break scanLoop2;
                             }
                           }
                         }
@@ -796,7 +796,7 @@ final class uca {
                             ll.field_p.a(0, 0);
                           }
                         }
-                        break L25;
+                        break regionExit4;
                       }
                     }
                     cw.field_o.a(true);
@@ -819,7 +819,7 @@ final class uca {
                       ga.a(128, false, var14Lifetime3, var15Lifetime4, 1, 1, 16777215);
                     }
                   }
-                  break L10;
+                  break regionExit1;
                 }
               }
               if (li.field_i) {
@@ -1274,7 +1274,7 @@ final class uca {
                   kwa.a(var5, -23);
                   param1 = true;
                   if (pba.field_o == 1 &&
-                    ds.field_g == 1) {
+                    PacketBuffer.field_g == 1) {
                     if (-1 == this.field_C) {
                       this.field_C = var4_int;
                       break;
@@ -1301,7 +1301,7 @@ final class uca {
                       param1 = true;
                       kwa.a(var14, -24);
                       if (pba.field_o == 1 &&
-                        ds.field_g == 1) {
+                        PacketBuffer.field_g == 1) {
                         this.field_p = var13;
                         break;
                       }
@@ -3651,7 +3651,7 @@ final class uca {
         if (this.field_L >= 0 &&
           this.field_N &&
           oq.field_E < lgb.field_o &&
-          oq.field_E < aqb.field_f) {
+          oq.field_E < ProxySocketConnector.field_f) {
           if (var10 == null &&
             !var9.field_g.a(this.a((byte) 107), var9.field_e, -14368)) {
             return;
@@ -3975,7 +3975,7 @@ final class uca {
                 var28 = 0;
                 var29_ref_nbb__ = var24;
                 var30_int = 0;
-                L7: while (true) {
+                scanLoop1: while (true) {
                   if (var29_ref_nbb__.length > var30_int) {
                     var31 = var29_ref_nbb__[var30_int];
                     if (var31 != null &&
@@ -3986,7 +3986,7 @@ final class uca {
                       var34 = ar.a(var32, (byte) 125, var33);
                       if (var34 < gs.field_c) {
                         var27 = 1;
-                        break L7;
+                        break scanLoop1;
                       }
                     }
                     var30_int++;
@@ -4143,12 +4143,12 @@ final class uca {
             var5 = lqb.field_o[var3_intLifetime1][-1 + lqb.field_o[var3_intLifetime1].length];
             var22 = wqb.field_c[var3_intLifetime1];
             stackIn_33_0 = (var3_intLifetime1 != this.field_C) ? 0 : 1;
-            L11: {
+            regionExit1: {
               var7 = stackIn_33_0;
               var8 = 11184810;
               if (this.field_C != -1) {
                 if (var7 == 0) {
-                  break L11;
+                  break regionExit1;
                 }
                 var8 = 16777215;
               }
@@ -4888,8 +4888,8 @@ final class uca {
             return true;
           }
           var13Lifetime1 = ecb.a(var9, (byte) -77, var8_int);
-          var14Lifetime1 = rrb.a(22433, -2048 + var13Lifetime1);
-          var15Lifetime1 = rrb.a(22433, 2048 + var13Lifetime1);
+          var14Lifetime1 = GameKeyHandler.a(22433, -2048 + var13Lifetime1);
+          var15Lifetime1 = GameKeyHandler.a(22433, 2048 + var13Lifetime1);
           if (param3) {
             var49 = (lw) null;
             this.a((lw) null, (byte) 103, -86, false);
@@ -5055,7 +5055,7 @@ final class uca {
                 var17 = var8.b(true, var24.g((byte) 124)) + var7;
                 stackIn_12_0 = (var24.o((byte) -117) == this.field_L);
                 var18 = qpb.a(stackIn_12_0, var24.q((byte) 95), param1 ^ 13894143);
-                fg.a(var18, var17, var16, -119);
+                MouseWheelInput.a(var18, var17, var16, -119);
               }
             }
             var25 = this.field_m.a((byte) 33).c(true);
@@ -5064,7 +5064,7 @@ final class uca {
               var15 = var8.a(var27.d(116), (byte) 115) + var6;
               var16Lifetime1 = var7 + var8.b(true, var27.e((byte) -107));
               var17Lifetime1 = 16776960;
-              fg.a(var17Lifetime1, var16Lifetime1, var15, -110);
+              MouseWheelInput.a(var17Lifetime1, var16Lifetime1, var15, -110);
               var27 = (tj) (var25.a((byte) 118));
             }
             var14 = this.field_m.a((byte) 65).a(true);
@@ -5075,7 +5075,7 @@ final class uca {
                 var18Lifetime1 = var6 + var8.a(var17_ref_crb.d(false), (byte) 119);
                 var19 = var7 + var8.b(true, var17_ref_crb.g((byte) -24));
                 var20 = 7829367;
-                fg.a(var20, var19, var18Lifetime1, 82);
+                MouseWheelInput.a(var20, var19, var18Lifetime1, 82);
               }
             }
             var15Lifetime1 = var8.a(eoa.field_a.a(true, 0), (byte) 115);
@@ -5387,7 +5387,7 @@ final class uca {
         }
         if (this.field_p != -1) {
           if (pba.field_o != 1 ||
-            ds.field_g != 1 ||
+            PacketBuffer.field_g != 1 ||
             param0) {
             if (!(this.field_p >= pca.field_i.length) &&
               !pca.field_i[this.field_p].a(false)) {
@@ -5529,7 +5529,7 @@ final class uca {
           if (!param2) {
             this.field_X = true;
           } else {
-            if ((ds.field_g & 1) == 0 &&
+            if ((PacketBuffer.field_g & 1) == 0 &&
               !si.field_o[84]) {
               this.field_G = false;
               this.field_X = false;
@@ -5645,7 +5645,7 @@ final class uca {
         int var13 = 0;
         int var14 = 0;
         int var15 = VoidHunters.field_G;
-        int var5 = rrb.a(22433, -(param2 / 2) + param0);
+        int var5 = GameKeyHandler.a(22433, -(param2 / 2) + param0);
         int var6 = 64;
         int var7 = var6 << 1;
         int[] var17 = new int[var7 + (var6 << 1)];
@@ -5662,7 +5662,7 @@ final class uca {
         int var9 = param1 / 8;
         for (var10 = 0; var6 > var10; var10++) {
           var11 = var10 << 1;
-          var12 = rrb.a(param3 + 22551, param2 * (-1 + (var6 - var10)) / var6 + var5);
+          var12 = GameKeyHandler.a(param3 + 22551, param2 * (-1 + (var6 - var10)) / var6 + var5);
           var13 = this.field_t + (fc.a(var12, (byte) -99) * var9 >> 16);
           var14 = this.field_I + (var9 * eu.a(var12, 69) >> 16);
           var17[var11] = var13;
@@ -5670,7 +5670,7 @@ final class uca {
         }
         for (var10Lifetime1 = 0; var6 > var10Lifetime1; var10Lifetime1++) {
           var11Lifetime1 = (var10Lifetime1 << 1) + var7;
-          var12Lifetime1 = rrb.a(22433, var5 + var10Lifetime1 * param2 / var6);
+          var12Lifetime1 = GameKeyHandler.a(22433, var5 + var10Lifetime1 * param2 / var6);
           var13Lifetime1 = this.field_t + (param1 * fc.a(var12Lifetime1, (byte) -106) >> 16);
           var14Lifetime1 = this.field_I + (param1 * eu.a(var12Lifetime1, param3 + 188) >> 16);
           var17[var11Lifetime1] = var13Lifetime1;
@@ -5947,7 +5947,7 @@ final class uca {
           var7 = eoa.field_a.a(0, param0);
           var8 = param4.field_k.b(param3 ^ 126, param3);
           var9 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var9 < var8) {
               var10 = lcb.field_q[var9];
               if (!var10.k((byte) 59)) {
@@ -5960,14 +5960,14 @@ final class uca {
                   var16 = var6_int - var13;
                   var17 = var7 - var14;
                   var18 = ecb.a(var17, (byte) -77, var16);
-                  var19 = rrb.a(param3 + 22433, var18 - var15);
+                  var19 = GameKeyHandler.a(param3 + 22433, var18 - var15);
                   if (var11 >= Math.abs(var19)) {
                     param2 = 2;
                     if (!sn.field_Y) {
-                      break L2;
+                      break scanLoop1;
                     }
-                    if ((1 & ds.field_g) != 0) {
-                      break L2;
+                    if ((1 & PacketBuffer.field_g) != 0) {
+                      break scanLoop1;
                     }
                     var20 = eoa.field_a.a(var13, (byte) 113);
                     var21 = eoa.field_a.b(true, var14);
@@ -6313,15 +6313,15 @@ final class uca {
                   var13 = param2 - var10;
                   var14 = param3 - var11;
                   var15 = ecb.a(var14, (byte) -77, var13);
-                  var16 = rrb.a(22433, -var12 + var15);
+                  var16 = GameKeyHandler.a(22433, -var12 + var15);
                   var17 = eoa.field_a.a(var10, (byte) 122);
                   var18 = eoa.field_a.b(true, var11);
                   if (Math.abs(var16) <= var8) {
                     c.a(eoa.field_a.b(true, param3), eoa.field_a.a(param2, (byte) 124), var17, var18, -16777216, 16711680);
                   }
                   var19 = 16777215;
-                  var20 = rrb.a(22433, var12 - var8);
-                  var21 = rrb.a(22433, var12 + var8);
+                  var20 = GameKeyHandler.a(22433, var12 - var8);
+                  var21 = GameKeyHandler.a(22433, var12 + var8);
                   var22 = var7.field_c.a((byte) 24).j(123) << 3;
                   var23 = var10 + (fc.a(var20, (byte) 44) >> 8) * (var22 >> 8);
                   var24 = (var22 >> 8) * (eu.a(var20, 70) >> 8) + var11;
@@ -7368,7 +7368,7 @@ final class uca {
           var8_int = 1;
           var9 = param2.g(-92);
           var10 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var10 < param6.length) {
               var11_ref_sg = param6[var10];
               if (var11_ref_sg != null &&
@@ -7379,7 +7379,7 @@ final class uca {
                 var14 = ar.a(var12_int, (byte) 109, var13);
                 if (var14 < cab.field_p + var9) {
                   var8_int = 0;
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var10++;
@@ -7898,7 +7898,7 @@ final class uca {
         String var4 = null;
         if (ssa.b(2) &&
           pba.field_o == 1 &&
-          2 == ds.field_g) {
+          2 == PacketBuffer.field_g) {
           var2_int = this.f(30);
           if (-1 != var2_int) {
             this.field_H = 13 + var2_int;
@@ -8238,7 +8238,7 @@ final class uca {
         int var9 = -41 / ((param1 - 48) / 45);
         if (var8 > param3 / 8 &&
           var8 < param3 &&
-          param0 / 2 > Math.abs(rrb.a(22433, -param2 + var7))) {
+          param0 / 2 > Math.abs(GameKeyHandler.a(22433, -param2 + var7))) {
           return true;
         }
         return false;
@@ -8455,7 +8455,7 @@ final class uca {
             stackIn_38_0 = 0;
           }
           var6 = stackIn_38_0;
-          if (ds.field_g == 1 &&
+          if (PacketBuffer.field_g == 1 &&
             !param1 &&
             var6 != 0 &&
             0 == di.field_p &&
@@ -8471,9 +8471,9 @@ final class uca {
             stackIn_52_0 = -13;
             return stackIn_52_0;
           }
-          if ((ds.field_g == 4 ||
+          if ((PacketBuffer.field_g == 4 ||
             1 == di.field_p &&
-            1 == ds.field_g &&
+            1 == PacketBuffer.field_g &&
             var6 != 0) && !param1) {
             this.field_C = -1;
             this.field_p = -1;

@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ij {
-    ksa field_a;
-    private ksa field_b;
+    IntrusiveNode field_a;
+    private IntrusiveNode field_b;
 
-    final ksa a(boolean param0) {
-        ksa var2 = this.field_a.field_c;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = this.field_a.field_c;
         if (this.field_a == var2) {
           return null;
         }
@@ -14,16 +14,16 @@ final class ij {
           var2.b(-3846);
           return var2;
         }
-        return (ksa) null;
+        return (IntrusiveNode) null;
     }
 
-    final ksa[] f(int param0) {
+    final IntrusiveNode[] f(int param0) {
         int var3 = 0;
-        ksa var4 = null;
+        IntrusiveNode var4 = null;
         int incrementValue$0 = 0;
         int var5 = VoidHunters.field_G;
-        ksa[] var6 = new ksa[this.c(3)];
-        ksa[] var2 = var6;
+        IntrusiveNode[] var6 = new IntrusiveNode[this.c(3)];
+        IntrusiveNode[] var2 = var6;
         if (param0 == -4872) {
           var3 = 0;
           var4 = this.field_a.field_c;
@@ -35,14 +35,14 @@ final class ij {
           }
           return var2;
         }
-        return (ksa[]) null;
+        return (IntrusiveNode[]) null;
     }
 
-    final ksa a(int param0, ksa param1) {
-        ksa var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        ksa stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -59,7 +59,7 @@ final class ij {
           if (var3 == this.field_a) {
             this.field_b = null;
             stackIn_8_0 = null;
-            return (ksa) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
           this.field_b = var3.field_c;
           stackIn_10_0 = var3;
@@ -78,12 +78,12 @@ final class ij {
         }
     }
 
-    final ksa c(byte param0) {
-        ksa var2 = null;
-        ksa var2Lifetime1;
+    final IntrusiveNode c(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 >= -102) {
-          ksa var3 = (ksa) null;
-          this.a((ksa) null, (byte) -49);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a((IntrusiveNode) null, (byte) -49);
           var2 = this.field_a.field_a;
           if (this.field_a != var2) {
             var2.b(-3846);
@@ -99,7 +99,7 @@ final class ij {
         return null;
     }
 
-    final void b(int param0, ksa param1) {
+    final void b(int param0, IntrusiveNode param1) {
         try {
           if (param0 != -10258) {
             this.e(-27);
@@ -117,7 +117,7 @@ final class ij {
     }
 
     final void e(int param0) {
-        ksa var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = VoidHunters.field_G;
         while (true) {
           var2 = this.field_a.field_c;
@@ -130,7 +130,7 @@ final class ij {
           this.field_b = null;
           return;
         }
-        this.field_a = (ksa) null;
+        this.field_a = (IntrusiveNode) null;
         this.field_b = null;
     }
 
@@ -139,7 +139,7 @@ final class ij {
         return this.field_a.field_c == this.field_a ? true : false;
     }
 
-    final void a(ksa param0, byte param1) {
+    final void a(IntrusiveNode param0, byte param1) {
         if (null != param0.field_a) {
           param0.b(-3846);
         }
@@ -156,11 +156,11 @@ final class ij {
         }
     }
 
-    final ksa a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 <= 6) {
-          return (ksa) null;
+          return (IntrusiveNode) null;
         }
-        ksa var2 = this.field_b;
+        IntrusiveNode var2 = this.field_b;
         if (var2 != this.field_a) {
           this.field_b = var2.field_c;
           return var2;
@@ -259,11 +259,11 @@ final class ij {
         }
     }
 
-    final ksa d(int param0) {
-        ksa var2 = null;
-        ksa var2Lifetime1;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 0) {
-          this.field_a = (ksa) null;
+          this.field_a = (IntrusiveNode) null;
           var2 = this.field_a.field_c;
           if (var2 == this.field_a) {
             this.field_b = null;
@@ -281,9 +281,9 @@ final class ij {
         return var2Lifetime1;
     }
 
-    final ksa a(int param0) {
-        ksa var2 = null;
-        ksa var2Lifetime1;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != -1155566844) {
           this.b(-8);
           var2 = this.field_b;
@@ -303,8 +303,8 @@ final class ij {
         return var2Lifetime1;
     }
 
-    final ksa b(byte param0) {
-        ksa var2 = this.field_a.field_a;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_a.field_a;
         if (param0 < 115) {
           this.f(-72);
           if (var2 != this.field_a) {
@@ -323,16 +323,16 @@ final class ij {
     }
 
     public ij() {
-        this.field_a = new ksa();
+        this.field_a = new IntrusiveNode();
         this.field_a.field_c = this.field_a;
         this.field_a.field_a = this.field_a;
     }
 
     final int c(int param0) {
         int var2 = 0;
-        ksa var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = VoidHunters.field_G;
-        ksa var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         int var2Lifetime1;
         if (param0 == 3) {
           var2 = 0;
@@ -343,7 +343,7 @@ final class ij {
           }
           return var2;
         }
-        this.field_a = (ksa) null;
+        this.field_a = (IntrusiveNode) null;
         var2Lifetime1 = 0;
         var3Lifetime1 = this.field_a.field_c;
         while (var3Lifetime1 != this.field_a) {

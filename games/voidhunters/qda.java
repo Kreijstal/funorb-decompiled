@@ -250,7 +250,7 @@ final class qda {
         return field_f;
     }
 
-    final void a(ds param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_o = new rpb();
@@ -259,7 +259,7 @@ final class qda {
         this.field_c.b(param0);
         int var2 = param0.e((byte) -87);
         if (var2 != 0) {
-          param0.field_e = param0.field_e - 1;
+          param0.position = param0.position - 1;
           this.field_y = new rpb();
           this.field_y.b(param0);
           this.field_b = new rpb();
@@ -267,7 +267,7 @@ final class qda {
         }
         var2 = param0.e((byte) -106);
         if (var2 != 0) {
-          param0.field_e = param0.field_e - 1;
+          param0.position = param0.position - 1;
           this.field_j = new rpb();
           this.field_j.b(param0);
           this.field_w = new rpb();
@@ -275,7 +275,7 @@ final class qda {
         }
         var2 = param0.e((byte) -98);
         if (var2 != 0) {
-          param0.field_e = param0.field_e - 1;
+          param0.position = param0.position - 1;
           this.field_e = new rpb();
           this.field_e.b(param0);
           this.field_a = new rpb();

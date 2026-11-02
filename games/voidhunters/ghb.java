@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ghb extends ksa {
+final class ghb extends IntrusiveNode {
     byte[] field_d;
 
-    final static fg c(byte param0) {
+    final static MouseWheelInput c(byte param0) {
         try {
           Throwable var1 = null;
-          fg stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != -127) {
               ghb.c((byte) 73);
             }
-            stackIn_3_0 = (fg) (Class.forName("an").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

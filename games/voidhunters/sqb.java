@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sqb extends fh {
+abstract class sqb extends DualLinkNode {
     int field_p;
     static phb[] field_o;
     int field_l;

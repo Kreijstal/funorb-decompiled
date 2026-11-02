@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "voidhunters": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/voidhunters"
+      },
+      "inputTreeSha256": "edb5cead5405f544aad442e989958b12eb4352744ef4e2311bc767342c35118c",
+      "sources": {
+        "files": 1570,
+        "sha256": "c60ffc9254cfea790d7fa1772eb16ab1d01b3cfad1d746326fd37ac1454117a4"
+      },
+      "dictionary": {
+        "path": "decompilation/voidhunters-naming.json",
+        "sha256": "22563f06cdf67f0748b282b83bfca2ffcfd36df8c425b21feca496ff7d2204f4"
+      },
+      "readingGuide": {
+        "path": "games/voidhunters/README.md",
+        "sha256": "f1c722fb53cb09e90a8d7f2017fb6fa6c75224ab5121dcf4131c6a07ad20a34f"
+      },
+      "rulesSha256": "4792ff75ef3a120a6ad741e6820a4e48367dfc9aa1c72b81ccebbaf7f924adc3",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12612,6 +12636,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 1570,
+          "sha256": "c60ffc9254cfea790d7fa1772eb16ab1d01b3cfad1d746326fd37ac1454117a4"
         }
       },
       "wizardrun": {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class no extends fh {
+abstract class no extends DualLinkNode {
     int field_H;
     private int[] field_t;
     private int[] field_y;

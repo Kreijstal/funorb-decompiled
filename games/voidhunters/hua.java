@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hua extends ksa {
+final class hua extends IntrusiveNode {
     int field_d;
 
     hua(int param0) {

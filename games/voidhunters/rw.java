@@ -229,7 +229,7 @@ final class rw extends le {
         this.field_p = new byte[512];
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int dupTemp$0 = 0;
         boolean stackIn_15_1 = false;
         RuntimeException stackIn_31_0 = null;
@@ -316,7 +316,7 @@ final class rw extends le {
         int var16;
         int var17;
         int var18;
-        ds var19;
+        PacketBuffer var19;
         int var8Lifetime1;
         int var9Lifetime1;
         int var14Lifetime1;
@@ -331,8 +331,8 @@ final class rw extends le {
         }
         param3 = param3 & 4095;
         if (param6 != -34) {
-          var19 = (ds) null;
-          this.a(77, -92, (ds) null);
+          var19 = (PacketBuffer) null;
+          this.a(77, -92, (PacketBuffer) null);
         }
         var12 = var12 & 255;
         var11 = param3 - 4096;
@@ -419,8 +419,8 @@ final class rw extends le {
           this.a(1, param0, var5);
         }
         if (!param1) {
-          ds var4 = (ds) null;
-          this.a(-38, 6, (ds) null);
+          PacketBuffer var4 = (PacketBuffer) null;
+          this.a(-38, 6, (PacketBuffer) null);
         }
         return var5;
     }

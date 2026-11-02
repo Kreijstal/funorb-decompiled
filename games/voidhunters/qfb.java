@@ -46,11 +46,11 @@ final class qfb extends rqa {
           var1 = dpa.field_p;
           while (apb.a(57)) {
             var1.h(param0 + 24327, 8);
-            fieldTemp$0 = var1.field_e + 1;
-            var1.field_e = var1.field_e + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ida.a(var1, (byte) 127);
-            dpa.field_p.e(var1.field_e - var2, -129);
+            dpa.field_p.e(var1.position - var2, -129);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

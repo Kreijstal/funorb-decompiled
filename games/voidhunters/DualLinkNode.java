@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fh extends ksa {
+class DualLinkNode extends IntrusiveNode {
     static String field_h;
-    fh field_d;
+    DualLinkNode field_d;
     static llb field_f;
-    fh field_e;
+    DualLinkNode field_e;
     long field_i;
     static String field_j;
     static llb field_g;
@@ -50,7 +50,7 @@ class fh extends ksa {
           this.field_d = null;
           return;
         }
-        this.field_d = (fh) null;
+        this.field_d = (DualLinkNode) null;
         this.field_d.field_e = this.field_e;
         this.field_e.field_d = this.field_d;
         this.field_e = null;
@@ -69,7 +69,7 @@ class fh extends ksa {
         field_h = null;
     }
 
-    protected fh() {
+    protected DualLinkNode() {
     }
 
     static {

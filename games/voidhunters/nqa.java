@@ -7,10 +7,10 @@ final class nqa {
     static volatile boolean field_a;
 
     final static Object a(ij param0, int param1) {
-        ksa var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         Object stackIn_6_0 = null;
-        ksa stackIn_14_0 = null;
+        IntrusiveNode stackIn_14_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;

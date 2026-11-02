@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ss extends rqa {
-    static ds field_p;
+    static PacketBuffer field_p;
     static llb field_o;
 
     ss(String param0, Class[] param1, String param2) {
@@ -57,6 +57,6 @@ final class ss extends rqa {
     }
 
     static {
-        field_p = new ds(256);
+        field_p = new PacketBuffer(256);
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ub extends ksa implements tv {
+abstract class ub extends IntrusiveNode implements tv {
     static String field_g;
     static int[] field_f;
     static String[] field_d;

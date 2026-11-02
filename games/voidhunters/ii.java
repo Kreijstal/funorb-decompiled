@@ -39,7 +39,7 @@ final class ii implements d {
     }
 
     private final lra b(int param0, int param1) {
-        fh var3 = this.field_f.a((long)param1, 77);
+        DualLinkNode var3 = this.field_f.a((long)param1, 77);
         if (param0 != -2) {
           this.a(-32, (byte) 119);
         }
@@ -50,7 +50,7 @@ final class ii implements d {
         if (var4 == null) {
           return null;
         }
-        lra var5 = new lra(new ds(var4));
+        lra var5 = new lra(new PacketBuffer(var4));
         this.field_f.a((long)param1, (byte) -22, var5);
         return var5;
     }
@@ -109,7 +109,7 @@ final class ii implements d {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
-        ds var7 = null;
+        PacketBuffer var7 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
@@ -133,7 +133,7 @@ final class ii implements d {
         try {
           this.field_e = param2;
           this.field_c = param1;
-          var7 = new ds(param0.a(0, 0, (byte) 13));
+          var7 = new PacketBuffer(param0.a(0, 0, (byte) 13));
           this.field_i = var7.e(1869);
           this.field_b = new opa[this.field_i];
           for (var5 = 0; var5 < this.field_i; var5++) {

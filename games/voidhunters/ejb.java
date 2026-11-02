@@ -98,7 +98,7 @@ final class ejb extends rqa {
                   var20 = var27.e((byte) -114);
                   var21 = dda.field_d[var20].field_a;
                   var22 = var27.k(255);
-                  var24 = var27.field_e;
+                  var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = dda.field_d[var20].field_b;
@@ -116,7 +116,7 @@ final class ejb extends rqa {
                     var9[1][var13] = null;
                     var34[1][var13] = var22;
                     var13++;
-                    var27.field_e = var24;
+                    var27.position = var24;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$1 = var16;
                       var16++;
@@ -130,7 +130,7 @@ final class ejb extends rqa {
                     var9[2][var14] = dda.field_d[var20].field_b;
                     var34[2][var14] = var22;
                     var14++;
-                    var27.field_e = var24;
+                    var27.position = var24;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$2 = var17;
                       var17++;

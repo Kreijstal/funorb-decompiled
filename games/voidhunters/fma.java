@@ -76,7 +76,7 @@ final class fma extends mfb {
         lw.field_i = new llb(0L, (llb) null);
         if (ll.field_o) {
           lw.field_i.b(-561, nna.field_v);
-          lw.field_i.b(param0 ^ -9108, fh.field_f);
+          lw.field_i.b(param0 ^ -9108, DualLinkNode.field_f);
           lc.field_b = new bs(bib.field_e, lw.field_i);
           tb.field_a = new llb(0L, (llb) null);
           tb.field_a.b(param0 ^ -9108, lc.field_b.field_a);
@@ -88,7 +88,7 @@ final class fma extends mfb {
           }
           return;
         }
-        lw.field_i.b(param0 ^ -9108, fh.field_f);
+        lw.field_i.b(param0 ^ -9108, DualLinkNode.field_f);
         lc.field_b = new bs(bib.field_e, lw.field_i);
         tb.field_a = new llb(0L, (llb) null);
         tb.field_a.b(param0 ^ -9108, lc.field_b.field_a);

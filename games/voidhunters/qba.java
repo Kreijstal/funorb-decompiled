@@ -9,7 +9,7 @@ final class qba extends le {
         fnb.a(param4, param3, param1, false, param2, 256);
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;

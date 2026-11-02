@@ -317,7 +317,7 @@ final class ug extends rqa {
         System.out.println("set_grappling_hook_spring_constant(" + uua.field_o + ")");
         System.out.println("set_grappling_hook_max_extension8_force(" + nra.field_b + ")");
         System.out.println("set_grappling_hook_cooldown(" + oq.field_t + ")");
-        System.out.println("set_grappling_hook_rope_change_rate(" + ds.field_d + ")");
+        System.out.println("set_grappling_hook_rope_change_rate(" + PacketBuffer.field_d + ")");
         System.out.println("set_grappling_hook_rope_break_length(" + bhb.field_i + ")");
         System.out.println("set_missiles_cooldown(" + oq.field_m + ")");
         System.out.println("set_missiles_explosion_power(" + gib.field_a + ")");

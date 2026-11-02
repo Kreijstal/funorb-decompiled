@@ -7,10 +7,10 @@ abstract class ona {
     vga field_d;
     vga field_c;
     vga field_f;
-    ds field_e;
+    PacketBuffer field_e;
     int field_m;
     long field_h;
-    ds field_i;
+    PacketBuffer field_i;
     byte field_j;
     volatile int field_k;
     volatile int field_g;
@@ -91,11 +91,11 @@ abstract class ona {
         this.field_d = new vga();
         this.field_c = new vga();
         this.field_f = new vga();
-        this.field_e = new ds(6);
+        this.field_e = new PacketBuffer(6);
         this.field_j = (byte) 0;
         this.field_g = 0;
         this.field_k = 0;
-        this.field_i = new ds(10);
+        this.field_i = new PacketBuffer(10);
     }
 
     static {

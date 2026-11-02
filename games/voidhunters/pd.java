@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pd extends ksa {
+final class pd extends IntrusiveNode {
     int field_e;
     int field_f;
     int field_i;

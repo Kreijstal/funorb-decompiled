@@ -1822,7 +1822,7 @@ final class ml implements ntb, utb {
               var9 = param1.field_p - var5;
               var10 = fc.a(param1.e(0), (byte) -119) >> 8;
               var11 = eu.a(param1.e(0), 114) >> 8;
-              var12 = rrb.a(22433, -2048 + param1.e(0));
+              var12 = GameKeyHandler.a(22433, -2048 + param1.e(0));
               var13 = fc.a(var12, (byte) -78) >> 8;
               var14 = eu.a(var12, 96) >> 8;
               var15 = var10 * var7 + var8 * var11;
@@ -1911,7 +1911,7 @@ final class ml implements ntb, utb {
               if (param1 == this.field_f[var6_int]) {
                 var7 = param1.field_b;
                 if (null != param1.field_a) {
-                  var7 = rrb.a(22433, var7 + 4096);
+                  var7 = GameKeyHandler.a(22433, var7 + 4096);
                 }
                 param1.a(param2, -19625, param4);
                 var8 = new nbb(param1, param0);
@@ -2268,9 +2268,9 @@ final class ml implements ntb, utb {
           this.field_i > 0) {
           var3 = 0;
           if (param1 > 0) {
-            var3Lifetime1 = Math.abs(rrb.a(22433, this.field_q - (-this.c(124) + this.field_p)));
+            var3Lifetime1 = Math.abs(GameKeyHandler.a(22433, this.field_q - (-this.c(124) + this.field_p)));
           } else {
-            var3Lifetime1 = Math.abs(rrb.a(22433, this.field_q - (this.c(-116) + this.field_p)));
+            var3Lifetime1 = Math.abs(GameKeyHandler.a(22433, this.field_q - (this.c(-116) + this.field_p)));
           }
           var4 = this.b((byte) 103);
           if (lrb.field_e == 1) {
@@ -2286,7 +2286,7 @@ final class ml implements ntb, utb {
           if (param1 < 0) {
             var5 = -var5;
           }
-          this.field_p = rrb.a(22433, var5 + this.field_p);
+          this.field_p = GameKeyHandler.a(22433, var5 + this.field_p);
           param1 = param1 - var5;
         }
         if (param0 <= -68) {
@@ -2360,7 +2360,7 @@ final class ml implements ntb, utb {
           return;
         }
         if (this.a(true)) {
-          var2Lifetime1 = rrb.a(22433, this.field_q - this.field_p);
+          var2Lifetime1 = GameKeyHandler.a(22433, this.field_q - this.field_p);
           discarded$0 = this.c((byte) -105, var2Lifetime1);
         }
     }
@@ -2405,7 +2405,7 @@ final class ml implements ntb, utb {
           var15 = param1.field_k;
           var16 = var13.field_a + var12.field_b;
           if (null != var15.field_a) {
-            var16 = rrb.a(22433, var16 + 4096);
+            var16 = GameKeyHandler.a(22433, var16 + 4096);
           }
           var17 = var15.b(-10) * fc.a(var10, (byte) -89) - var15.c((byte) 100) * eu.a(var10, 49) >> 16;
           var18 = var15.b(124) * eu.a(var10, param3 ^ -120) + var15.c((byte) 100) * fc.a(var10, (byte) -72) >> 16;
@@ -3515,9 +3515,9 @@ final class ml implements ntb, utb {
         if (param4 != 21750) {
           this.field_k = (lja) null;
         }
-        var8 = Math.abs(rrb.a(param4 + 683, this.field_q + (-this.c(127) - this.field_p)));
+        var8 = Math.abs(GameKeyHandler.a(param4 + 683, this.field_q + (-this.c(127) - this.field_p)));
         param2 = param2 + var8;
-        var9 = Math.abs(rrb.a(param4 + 683, this.field_q + (this.c(param4 ^ 21639) - this.field_p)));
+        var9 = Math.abs(GameKeyHandler.a(param4 + 683, this.field_q + (this.c(param4 ^ 21639) - this.field_p)));
         if (param2 >= 8192) {
           param2 = 8191;
         }
@@ -3553,10 +3553,10 @@ final class ml implements ntb, utb {
           var14 = param3 - var12Lifetime1;
           var15 = ecb.a(var14, (byte) -77, var13);
           if (this.d(-77)) {
-            var16 = rrb.a(param4 ^ 855, rrb.a(22433, -this.field_p + this.field_b) + this.field_q);
-            var7 = rrb.a(22433, var15 - var16);
+            var16 = GameKeyHandler.a(param4 ^ 855, GameKeyHandler.a(22433, -this.field_p + this.field_b) + this.field_q);
+            var7 = GameKeyHandler.a(22433, var15 - var16);
           } else {
-            var7 = rrb.a(22433, -this.field_b + var15);
+            var7 = GameKeyHandler.a(22433, -this.field_b + var15);
           }
           var16Lifetime1 = var7;
           if (0 < var16Lifetime1) {
@@ -3800,7 +3800,7 @@ final class ml implements ntb, utb {
           } else {
             stackIn_4_3 = this.field_p;
           }
-          this.field_b = rrb.a(stackIn_3_1, stackIn_3_2 + stackIn_4_3);
+          this.field_b = GameKeyHandler.a(stackIn_3_1, stackIn_3_2 + stackIn_4_3);
           var40 = this.i((byte) -112);
           var42 = var40;
           var11 = (long)var42.field_b;
@@ -3920,7 +3920,7 @@ final class ml implements ntb, utb {
             var13.field_h = param5.field_h;
             var13.field_f = param5.field_f;
           }
-          var13.a(this.field_n, rrb.a(22433, -100 + (var11 + hob.a(param0, 200, 118))), this.field_r, var12, 1948934248);
+          var13.a(this.field_n, GameKeyHandler.a(22433, -100 + (var11 + hob.a(param0, 200, 118))), this.field_r, var12, 1948934248);
           param1.a(var13, (byte) 50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4362,7 +4362,7 @@ final class ml implements ntb, utb {
         if (param0 != -127) {
           this.field_g = (int[]) null;
         }
-        return rrb.a(22433, this.field_b - this.field_p + this.field_q);
+        return GameKeyHandler.a(22433, this.field_b - this.field_p + this.field_q);
     }
 
     final int b(boolean param0) {
@@ -4450,7 +4450,7 @@ final class ml implements ntb, utb {
             }
             var15 = ecb.a(var13, (byte) -77, var12);
             var16 = param2.e(false) * var9 / var14;
-            param2.a(this.field_n, rrb.a(22433, -100 + (var15 + hob.a(var10, 200, 123))), this.field_r, var16, 1948934248);
+            param2.a(this.field_n, GameKeyHandler.a(22433, -100 + (var15 + hob.a(var10, 200, 123))), this.field_r, var16, 1948934248);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4504,7 +4504,7 @@ final class ml implements ntb, utb {
           }
           var5_int = param2.field_o[param3].field_a;
           if (null != param0.field_a) {
-            var5_int = rrb.a(22433, 4096 + var5_int);
+            var5_int = GameKeyHandler.a(22433, 4096 + var5_int);
           }
           param0.c(var5_int, param2.field_o[param3].field_b, 56, param2.field_o[param3].field_c);
         } catch (RuntimeException runtimeException) {

@@ -202,7 +202,7 @@ final class dla {
           var14 = var5;
           var8 = var14;
           var9 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var14.length > var9) {
               var10_ref_sg = var14[var9];
               if (var10_ref_sg != null &&
@@ -210,15 +210,15 @@ final class dla {
                 var6 = mjb.b(param0 ^ 21957, var10_ref_sg.q((byte) 102));
                 if (1 == var10_ref_sg.field_k.k(0)) {
                   var7_int = 0;
-                  break L3;
+                  break scanLoop1;
                 }
                 if (var10_ref_sg.field_k.k(0) == 2) {
                   var7_int = 0;
-                  break L3;
+                  break scanLoop1;
                 }
                 stackIn_16_0 = 1;
                 var7_int = stackIn_16_0;
-                break L3;
+                break scanLoop1;
               }
               var9++;
               continue;

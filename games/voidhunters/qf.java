@@ -38,7 +38,7 @@ final class qf extends rqa {
     }
 
     final static void a(int param0, byte param1) {
-        ksa var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         dnb var4 = null;
         RuntimeException decompiledCaughtException = null;

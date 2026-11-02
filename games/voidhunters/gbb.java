@@ -120,7 +120,7 @@ final class gbb extends rqa {
         return var4 != 0;
     }
 
-    final static void a(fh param0, fh param1, byte param2) {
+    final static void a(DualLinkNode param0, DualLinkNode param1, byte param2) {
         try {
           if (null != param0.field_d) {
             param0.d((byte) -35);

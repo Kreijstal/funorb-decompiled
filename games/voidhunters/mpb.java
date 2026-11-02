@@ -381,7 +381,7 @@ final class mpb extends mea {
             if (this.field_j == null) {
               this.field_j = new rpa(this.field_d);
             }
-            L5: while (true) {
+            scanLoop1: while (true) {
               if (var6Lifetime1 <= 256 &&
                 var7 <= 256) {
                 var6Lifetime1 = var4;
@@ -393,7 +393,7 @@ final class mpb extends mea {
                     stackIn_30_0 = ~var7;
                     stackIn_30_1 = -257;
                     if (stackIn_30_0 >= stackIn_30_1) {
-                      break L5;
+                      break scanLoop1;
                     }
                   }
                   incrementValue$0 = var8;

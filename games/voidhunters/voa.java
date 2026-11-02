@@ -26,7 +26,7 @@ final class voa {
           }
           var6 = new pi();
           if (var4 != null) {
-            var6.a(new ds(var4), -1);
+            var6.a(new PacketBuffer(var4), -1);
           }
           if (param0 >= 32768) {
             var6.e((byte) 97);
@@ -42,7 +42,7 @@ final class voa {
         }
         var5 = new pi();
         if (var4Lifetime1 != null) {
-          var5.a(new ds(var4Lifetime1), -1);
+          var5.a(new PacketBuffer(var4Lifetime1), -1);
         }
         if (param0 >= 32768) {
           var5.e((byte) 97);

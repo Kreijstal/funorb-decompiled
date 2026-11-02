@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mv extends ksa {
+final class mv extends IntrusiveNode {
     int field_d;
     int[] field_h;
     int field_i;

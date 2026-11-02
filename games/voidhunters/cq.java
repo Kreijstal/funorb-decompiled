@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cq extends ksa implements ntb {
+final class cq extends IntrusiveNode implements ntb {
     int field_f;
     int field_d;
     int field_g;

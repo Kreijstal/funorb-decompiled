@@ -151,7 +151,7 @@ final class wl extends rqa {
           var21Lifetime2 = bfb.field_f;
           var22Lifetime2 = bfb.field_j;
           var23Lifetime2 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var23Lifetime2 < param0.field_J) {
               var24Lifetime1 = param0.field_r[var23Lifetime2];
               var25Lifetime1 = param0.field_o[var23Lifetime2];
@@ -234,7 +234,7 @@ final class wl extends rqa {
                   stackIn_65_0 = ~bva.field_b.length;
                   stackIn_65_1 = ~var18;
                   if (var30 != 0) {
-                    break L3;
+                    break scanLoop1;
                   }
                   if (stackIn_65_0 >= stackIn_65_1) {
                     break;

@@ -77,7 +77,7 @@ final class seb extends rqa {
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
-        ss.field_p.field_e = 0;
+        ss.field_p.position = 0;
         ss.field_p.c(0, 12);
         ss.field_p.d(jeb.field_b.nextInt(), 332614536);
         ss.field_p.d(jeb.field_b.nextInt(), 332614536);
@@ -86,11 +86,11 @@ final class seb extends rqa {
         ss.field_p.a(param3, true);
         ss.field_p.a(jnb.field_p, bib.field_g, param0 + 16711680);
         dpa.field_p.h(param0 ^ 24335, 18);
-        int fieldTemp$0 = dpa.field_p.field_e + 1;
-        dpa.field_p.field_e = dpa.field_p.field_e + 1;
+        int fieldTemp$0 = dpa.field_p.position + 1;
+        dpa.field_p.position = dpa.field_p.position + 1;
         int var4 = fieldTemp$0;
-        dpa.field_p.a(0, ss.field_p.field_h, -1, ss.field_p.field_e);
-        dpa.field_p.e(-var4 + dpa.field_p.field_e, -129);
+        dpa.field_p.a(0, ss.field_p.payload, -1, ss.field_p.position);
+        dpa.field_p.e(-var4 + dpa.field_p.position, -129);
     }
 
     seb(String param0, Class[] param1, String param2) {

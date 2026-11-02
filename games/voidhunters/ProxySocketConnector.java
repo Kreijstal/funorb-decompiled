@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class aqb extends rb {
+final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_d;
     static llb field_e;
     static int field_f;
@@ -117,7 +117,7 @@ final class aqb extends rb {
         if (var7 == null) {
           return this.a(false);
         }
-        throw aqb.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
     }
 
     private final java.net.Socket a(String param0, String param1, byte param2, int param3) throws IOException {
@@ -143,7 +143,7 @@ final class aqb extends rb {
         var12 = VoidHunters.field_G;
         try {
           if (param2 != -109) {
-            aqb.b(false);
+            ProxySocketConnector.b(false);
           }
           var13 = new java.net.Socket(param1, param3);
           var13.setSoTimeout(10000);
@@ -214,7 +214,7 @@ final class aqb extends rb {
         }
     }
 
-    aqb() {
+    ProxySocketConnector() {
         this.field_d = java.net.ProxySelector.getDefault();
     }
 

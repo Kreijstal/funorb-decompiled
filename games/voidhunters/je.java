@@ -37,16 +37,16 @@ final class je {
             var4 = jwa.a(false, param1);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (fg.a(var4.charAt(0), 104)) {
+              if (MouseWheelInput.a(var4.charAt(0), 104)) {
                 return false;
               }
-              if (fg.a(var4.charAt(var4.length() - 1), 26)) {
+              if (MouseWheelInput.a(var4.charAt(var4.length() - 1), 26)) {
                 return false;
               }
               var5 = 0;
               for (var6 = 0; param1.length() > var6; var6++) {
                 var7 = param1.charAt(var6);
-                if (!fg.a((char) var7, 46)) {
+                if (!MouseWheelInput.a((char) var7, 46)) {
                   var5 = 0;
                 } else {
                   var5++;

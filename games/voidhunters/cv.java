@@ -61,11 +61,11 @@ final class cv {
         var10 = param0.field_F;
         var11 = var10;
         var12 = param0.field_k + 1;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var3 > 0) {
             while (true) {
               if (var10 == 0) {
-                break L0;
+                break scanLoop1;
               }
               if (var3 != 1) {
                 var8[var9] = (byte)var2;
@@ -78,7 +78,7 @@ final class cv {
             }
             if (var10 == 0) {
               var3 = 1;
-              break L0;
+              break scanLoop1;
             }
             var8[var9] = (byte)var2;
             var9++;
@@ -99,11 +99,11 @@ final class cv {
                 var7 = var7 >> 8;
                 var4++;
                 if (var4 == var12) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 if (var1 != var5) {
                   var5 = var1;
-                  continue L0;
+                  continue scanLoop1;
                 }
                 var3 = 3;
                 var7 = var15Lifetime1[var7];
@@ -111,11 +111,11 @@ final class cv {
                 var7 = var7 >> 8;
                 var4++;
                 if (var4 == var12) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 if (var1 != var5) {
                   var5 = var1;
-                  continue L0;
+                  continue scanLoop1;
                 }
                 var7 = var15Lifetime1[var7];
                 var1 = (byte)var7;
@@ -126,17 +126,17 @@ final class cv {
                 var5 = (byte)var7;
                 var7 = var7 >> 8;
                 var4++;
-                continue L0;
+                continue scanLoop1;
               }
               if (var10 == 0) {
                 var3 = 1;
-                break L0;
+                break scanLoop1;
               }
             } else {
               var5 = var1;
               if (var10 == 0) {
                 var3 = 1;
-                break L0;
+                break scanLoop1;
               }
             }
             var8[var9] = (byte)var2;

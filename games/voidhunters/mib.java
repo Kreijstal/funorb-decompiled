@@ -222,7 +222,7 @@ final class mib implements ntb {
           var5 = null;
           var6 = null;
           var7 = (uqb) (var3_ref_wc.c(570));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var7 != null) {
               var8 = (uqb) (var4.c(570));
               while (var8 != null) {
@@ -230,7 +230,7 @@ final class mib implements ntb {
                   !var7.a((byte) -51, var8)) {
                   var5 = var7;
                   var6 = var8;
-                  break L2;
+                  break scanLoop1;
                 }
                 var8 = (uqb) (var4.a(19072));
               }

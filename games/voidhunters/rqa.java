@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rqa extends fh {
+abstract class rqa extends DualLinkNode {
     String field_l;
     String field_k;
     Class[] field_n;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ara extends ksa implements ntb {
+class ara extends IntrusiveNode implements ntb {
     int field_f;
     int field_e;
     int field_d;

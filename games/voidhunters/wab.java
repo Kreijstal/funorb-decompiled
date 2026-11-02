@@ -27,8 +27,8 @@ final class wab extends rqa {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ds var16 = null;
-        ds var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -40,9 +40,9 @@ final class wab extends rqa {
         int var4Lifetime5;
         var15 = VoidHunters.field_G;
         try {
-          var16 = new ds(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_e = -2 + param1.length;
+          var17.position = -2 + param1.length;
           mma.field_a = var17.e(1869);
           hla.field_a = new int[mma.field_a];
           hja.field_o = new byte[mma.field_a][];
@@ -51,7 +51,7 @@ final class wab extends rqa {
           so.field_f = new int[mma.field_a];
           nhb.field_o = new int[mma.field_a];
           iib.field_e = new int[mma.field_a];
-          var17.field_e = -(mma.field_a * 8) - 7 + param1.length;
+          var17.position = -(mma.field_a * 8) - 7 + param1.length;
           fbb.field_i = var17.e(1869);
           sg.field_H = var17.e(1869);
           var3 = (255 & var17.e((byte) -110)) + 1;
@@ -67,7 +67,7 @@ final class wab extends rqa {
           for (var4Lifetime3 = 0; var4Lifetime3 < mma.field_a; var4Lifetime3++) {
             hla.field_a[var4Lifetime3] = var17.e(1869);
           }
-          var17.field_e = -7 + param1.length - 8 * mma.field_a - (-1 + var3) * 3;
+          var17.position = -7 + param1.length - 8 * mma.field_a - (-1 + var3) * 3;
           rlb.field_d = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
             rlb.field_d[var4Lifetime4] = var17.c((byte) -87);
@@ -75,7 +75,7 @@ final class wab extends rqa {
               rlb.field_d[var4Lifetime4] = 1;
             }
           }
-          var17.field_e = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; mma.field_a > var4Lifetime5; var4Lifetime5++) {
             var5 = nhb.field_o[var4Lifetime5];
             var6 = hla.field_a[var4Lifetime5];

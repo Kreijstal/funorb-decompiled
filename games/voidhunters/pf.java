@@ -1238,7 +1238,7 @@ abstract class pf extends ha {
     abstract eb a(int param0, byte[] param1, kb param2, int param3, int param4, int param5, boolean param6, int param7);
 
     void o() {
-        ksa var1 = null;
+        IntrusiveNode var1 = null;
         Enumeration var1_ref = null;
         java.awt.Canvas var2 = null;
         int var3 = VoidHunters.field_G;
@@ -1385,7 +1385,7 @@ abstract class pf extends ha {
         this.field_C = this.a(false, 3);
         this.field_C.a(28, 140, 126);
         var2 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (4 > var2) {
             var3 = this.field_C.a(true, (byte) 119);
             if (var3 != null) {
@@ -1465,7 +1465,7 @@ abstract class pf extends ha {
               }
               var4.b();
               if (this.field_C.b(-20836)) {
-                break L1;
+                break scanLoop1;
               }
             }
             var2++;
@@ -1707,7 +1707,7 @@ abstract class pf extends ha {
         this.field_P = this.a(false, param0 - 3093);
         this.field_P.a(12, param0, 86);
         var2 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var2 < 4) {
             var3 = this.field_P.a(true, (byte) 52);
             if (var3 != null) {
@@ -1731,7 +1731,7 @@ abstract class pf extends ha {
               }
               var4.b();
               if (this.field_P.b(param0 ^ -23932)) {
-                break L1;
+                break scanLoop1;
               }
             }
             var2++;

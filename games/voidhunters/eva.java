@@ -14,7 +14,7 @@ final class eva extends rqa {
     }
 
     final static String a(boolean param0, Throwable param1) throws IOException {
-        hva var14 = null;
+        ClientException var14 = null;
         StringWriter var21 = null;
         PrintWriter var20 = null;
         String var22 = null;
@@ -65,10 +65,10 @@ final class eva extends rqa {
         int var9Lifetime1;
         int var10Lifetime1;
         int var12Lifetime1;
-        if (!(param1 instanceof hva)) {
+        if (!(param1 instanceof ClientException)) {
           var2 = "";
         } else {
-          var14 = (hva) ((Object) param1);
+          var14 = (ClientException) ((Object) param1);
           param1 = var14.field_b;
           var2 = var14.field_a + " | ";
           var11 = var2;

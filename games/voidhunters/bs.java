@@ -37,7 +37,7 @@ final class bs {
           this.field_a.a(param3, param4, var6, var7, 60, param2, param0);
           rtb.field_h.a(0, 120, ci.field_c.field_hb, 0, nna.field_w);
           aha.field_o.a(0, -25, ci.field_c.field_hb - rba.field_a - 84, 2 + nna.field_w, 18);
-          rrb.field_b.a(-2 + (ci.field_c.field_hb - rba.field_a) - 80, 120, rba.field_a + 82, nna.field_w + 2, 18);
+          GameKeyHandler.field_b.a(-2 + (ci.field_c.field_hb - rba.field_a) - 80, 120, rba.field_a + 82, nna.field_w + 2, 18);
           re.field_n.a(0, nna.field_w + 22, 20, rba.field_a, -2 + ci.field_c.field_G - (nna.field_w + 20), ci.field_c.field_hb, 0, 2);
           vra.field_b.a(2, 20, rba.field_a, (byte) 63);
           return;

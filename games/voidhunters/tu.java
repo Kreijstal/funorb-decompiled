@@ -5,7 +5,7 @@ final class tu {
     static jra field_b;
     static int field_d;
     static char[] field_c;
-    static wi field_a;
+    static GameApplet field_a;
 
     public static void a(byte param0) {
         field_b = null;

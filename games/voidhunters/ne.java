@@ -608,7 +608,7 @@ final class ne extends ka {
           if (toa.a(-8636, param2, param5)) {
             discarded$1 = new od((uq) null, 5126, 3, 0);
           }
-          if (rb.a(-6070, param5, param2)) {
+          if (SocketConnector.a(-6070, param5, param2)) {
             discarded$2 = new od((uq) null, 5121, 4, 0);
           }
           if (dwa.a(param2, param5, false)) {

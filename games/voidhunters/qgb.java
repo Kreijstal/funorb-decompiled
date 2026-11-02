@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qgb extends ksa {
+final class qgb extends IntrusiveNode {
     kla field_d;
     ha field_e;
 

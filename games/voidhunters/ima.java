@@ -138,7 +138,7 @@ final class ima {
         int stackIn_54_1 = 0;
         int stackIn_67_0 = 0;
         int stackIn_68_1 = 0;
-        ds var1;
+        PacketBuffer var1;
         int var2;
         ima[] var3;
         int var4;
@@ -164,14 +164,14 @@ final class ima {
         int var7_intLifetime4;
         int var8Lifetime1;
         int var8Lifetime2;
-        var1 = new ds(param0);
-        var1.field_e = param0.length - 2;
+        var1 = new PacketBuffer(param0);
+        var1.position = param0.length - 2;
         var2 = var1.e(1869);
         var3 = new ima[var2];
         for (var4 = 0; var4 < var2; var4++) {
           var3[var4] = new ima();
         }
-        var1.field_e = param0.length - 7 - var2 * 8;
+        var1.position = param0.length - 7 - var2 * 8;
         var4Lifetime1 = var1.e(1869);
         var5 = var1.e(1869);
         var6 = (var1.e((byte) -125) & 255) + 1;
@@ -192,7 +192,7 @@ final class ima {
           var8_ref_ima.field_i = var4Lifetime1 - var8_ref_ima.field_f - var8_ref_ima.field_c;
           var8_ref_ima.field_d = var5 - var8_ref_ima.field_e - var8_ref_ima.field_g;
         }
-        var1.field_e = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
+        var1.position = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
         var17 = new int[var6];
         var16 = var17;
         var7 = var16;
@@ -205,7 +205,7 @@ final class ima {
         for (var8Lifetime1 = 0; var8Lifetime1 < var2; var8Lifetime1++) {
           var3[var8Lifetime1].field_b = var7;
         }
-        var1.field_e = 0;
+        var1.position = 0;
         for (var8Lifetime2 = 0; var8Lifetime2 < var2; var8Lifetime2++) {
           var9 = var3[var8Lifetime2];
           var10 = var9.field_f * var9.field_e;

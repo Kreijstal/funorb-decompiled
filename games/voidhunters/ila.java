@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ila extends ksa {
+final class ila extends IntrusiveNode {
     String field_d;
 
     final static void c(byte param0) {

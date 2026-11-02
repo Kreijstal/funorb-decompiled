@@ -45,7 +45,7 @@ final class ok implements dja {
           lkb.a(stackIn_4_0, (byte) -106);
           hra.field_o.a(0, -92, -2 + rga.field_g.field_G - 40, 0, rga.field_g.field_hb);
           ukb.field_o.a(0, -11, rsa.field_o.field_hb, 0, nna.field_w);
-          stackIn_6_0 = jn.field_a;
+          stackIn_6_0 = NodeHashTableIterator.field_a;
           stackIn_6_1 = 0;
           stackIn_6_2 = param0 + 25;
           stackIn_6_3 = rsa.field_o.field_hb;
@@ -78,7 +78,7 @@ final class ok implements dja {
           if (40 < var4) {
             var4 = 40;
           }
-          aqb.field_e.a(5, param0 + 19, -5 + (-5 + gt.field_o.field_hb), 5, var4);
+          ProxySocketConnector.field_e.a(5, param0 + 19, -5 + (-5 + gt.field_o.field_hb), 5, var4);
           var5 = 5 + (var4 + 2);
           for (var6 = 0; ocb.field_l + 4 > var6; var6++) {
             if ((1 != var6 ||
@@ -164,7 +164,7 @@ final class ok implements dja {
           sfa.field_d.a(0, 124, jfb.field_o.field_hb, 0, 24);
           neb.field_o.a(0, 124, jfb.field_o.field_hb, 24, -24 + jfb.field_o.field_G);
           neb.field_o.field_gb = uwa.a(11579568, neb.field_o.field_G, 1, 8421504, 92, 3);
-          fh.field_f.a(5, 124, neb.field_o.field_hb - 10, 5, -2 + (-24 + neb.field_o.field_G) - 10);
+          DualLinkNode.field_f.a(5, 124, neb.field_o.field_hb - 10, 5, -2 + (-24 + neb.field_o.field_G) - 10);
           rlb.field_a.a((neb.field_o.field_hb - 80) / 2, 24, 80, -29 + neb.field_o.field_G, 24);
           irb.a(0);
           return;

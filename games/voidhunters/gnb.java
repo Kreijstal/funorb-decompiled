@@ -7,18 +7,18 @@ final class gnb {
     static String field_f;
     private int field_d;
     private int field_g;
-    private ksa field_b;
-    private ksa field_e;
+    private IntrusiveNode field_b;
+    private IntrusiveNode field_e;
     static int field_a;
-    private ksa[] field_c;
+    private IntrusiveNode[] field_c;
 
-    final ksa b(int param0) {
+    final IntrusiveNode b(int param0) {
         int fieldTemp$0 = 0;
-        ksa var2;
+        IntrusiveNode var2;
         int var3;
         var3 = VoidHunters.field_G;
         if (param0 > -42) {
-          this.field_b = (ksa) null;
+          this.field_b = (IntrusiveNode) null;
         }
         if (this.field_g > 0 &&
           this.field_e != this.field_c[this.field_g - 1]) {
@@ -38,8 +38,8 @@ final class gnb {
         return var2;
     }
 
-    final void a(long param0, ksa param1, byte param2) {
-        ksa var5 = null;
+    final void a(long param0, IntrusiveNode param1, byte param2) {
+        IntrusiveNode var5 = null;
         if (null != param1.field_a) {
           param1.b(-3846);
         }
@@ -182,13 +182,13 @@ final class gnb {
         }
     }
 
-    final ksa a(long param0, int param1) {
-        ksa var5 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
         int var6 = VoidHunters.field_G;
         if (param1 <= 96) {
           field_f = (String) null;
         }
-        ksa var4 = this.field_c[(int)(param0 & (long)(this.field_d - 1))];
+        IntrusiveNode var4 = this.field_c[(int)(param0 & (long)(this.field_d - 1))];
         this.field_b = var4.field_c;
         while (var4 != this.field_b) {
           if (this.field_b.field_b == param0) {
@@ -204,8 +204,8 @@ final class gnb {
 
     final void a(byte param0) {
         int var2 = 0;
-        ksa var3 = null;
-        ksa var4 = null;
+        IntrusiveNode var3 = null;
+        IntrusiveNode var4 = null;
         int var5 = VoidHunters.field_G;
         if (param0 != -103) {
           this.a((byte) -13);
@@ -242,13 +242,13 @@ final class gnb {
 
     gnb(int param0) {
         int var2 = 0;
-        ksa dupTemp$0 = null;
-        ksa var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_g = 0;
         this.field_d = param0;
-        this.field_c = new ksa[param0];
+        this.field_c = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new ksa();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_c[var2] = dupTemp$0;
           var3.field_c = var3;
@@ -256,7 +256,7 @@ final class gnb {
         }
     }
 
-    final ksa c(byte param0) {
+    final IntrusiveNode c(byte param0) {
         this.field_g = 0;
         int var2 = -14 % ((85 - param0) / 35);
         return this.b(-58);

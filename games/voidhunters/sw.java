@@ -108,7 +108,7 @@ final class sw {
                       decompiledFrameRemainder0 = false;
                     }
                     else {
-                      L10: {
+                      regionExit1: {
                         if (var19.equals("lt")) {
                           var17 = var17 + this.a(60, (byte) 37);
                           if (null != this.field_g &&
@@ -160,10 +160,10 @@ final class sw {
                                     } else {
                                       if (!var19.equals("reg")) {
                                         if (!var19.startsWith("img=")) {
-                                          break L10;
+                                          break regionExit1;
                                         }
                                         if (null == param1) {
-                                          break L10;
+                                          break regionExit1;
                                         }
                                         try {
                                           var20_int = lob.a(123, (CharSequence) ((Object) var19.substring(4)));
@@ -176,7 +176,7 @@ final class sw {
                                           decompiledRegionSelector0 = 0;
                                         }
                                         if (decompiledRegionSelector0 == 0) {
-                                          break L10;
+                                          break regionExit1;
                                         }
                                       }
                                       var17 = var17 + this.a(174, (byte) 56);
@@ -190,7 +190,7 @@ final class sw {
                                 }
                               }
                             }
-                            break L10;
+                            break regionExit1;
                           }
                           var17 = var17 + this.a(62, (byte) 76);
                           if (this.field_g != null &&
@@ -719,7 +719,7 @@ final class sw {
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ds var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -739,7 +739,7 @@ final class sw {
         int var9Lifetime2;
         var12 = VoidHunters.field_G;
         try {
-          var2 = new ds(param0);
+          var2 = new PacketBuffer(param0);
           var3 = var2.e((byte) -102);
           if (0 != var3) {
             throw new RuntimeException("");
@@ -770,14 +770,14 @@ final class sw {
             }
             var7 = new byte[256][];
             var8_int = 0;
-            L11: while (true) {
+            scanLoop1: while (true) {
               if (256 > var8_int) {
                 array$0 = new byte[var5[var8_int]];
                 var7[var8_int] = array$0;
                 var9 = 0;
                 stackIn_35_0 = 0;
                 if (var12 != 0) {
-                  break L11;
+                  break scanLoop1;
                 }
                 var10 = stackIn_35_0;
                 while (var7[var8_int].length > var10) {
@@ -793,14 +793,14 @@ final class sw {
             }
             var8 = new byte[stackIn_35_0][];
             var9Lifetime1 = 0;
-            L17: while (true) {
+            scanLoop2: while (true) {
               if (var9Lifetime1 < 256) {
                 array$1 = new byte[var5[var9Lifetime1]];
                 var8[var9Lifetime1] = array$1;
                 var10Lifetime1 = 0;
                 stackIn_47_0 = 0;
                 if (var12 != 0) {
-                  break L17;
+                  break scanLoop2;
                 }
                 var11 = stackIn_47_0;
                 while (var8[var9Lifetime1].length > var11) {

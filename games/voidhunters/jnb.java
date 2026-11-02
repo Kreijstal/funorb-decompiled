@@ -19,7 +19,7 @@ final class jnb extends rqa {
         return stackIn_6_0;
     }
 
-    final static void a(eab param0, int param1, ds param2, boolean param3) {
+    final static void a(eab param0, int param1, PacketBuffer param2, boolean param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -44,7 +44,7 @@ final class jnb extends rqa {
           Class[] var12 = null;
           int var13 = 0;
           int var14 = 0;
-          ds var15 = null;
+          PacketBuffer var15 = null;
           String var16 = null;
           String var17 = null;
           int var18 = 0;
@@ -57,8 +57,8 @@ final class jnb extends rqa {
           var14 = VoidHunters.field_G;
           try {
             if (param3) {
-              var15 = (ds) null;
-              jnb.a((eab) null, 59, (ds) null, false);
+              var15 = (PacketBuffer) null;
+              jnb.a((eab) null, 59, (PacketBuffer) null, false);
             }
             var19 = new mv();
             var19.field_i = param2.e((byte) -90);

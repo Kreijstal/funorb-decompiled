@@ -20,7 +20,7 @@ final class web extends rqa {
           var2.q(-122);
           var1.b(var2, -110);
           var2.r(32712);
-          asb.a(var2.field_e, "missions.dat", var2.field_h, -107, "");
+          asb.a(var2.position, "missions.dat", var2.payload, -107, "");
           nkb.a(false, "Saved out mission list");
           return;
         }
@@ -32,7 +32,7 @@ final class web extends rqa {
         var2Lifetime1.q(-122);
         var1Lifetime1.b(var2Lifetime1, -110);
         var2Lifetime1.r(32712);
-        asb.a(var2Lifetime1.field_e, "missions.dat", var2Lifetime1.field_h, -107, "");
+        asb.a(var2Lifetime1.position, "missions.dat", var2Lifetime1.payload, -107, "");
         nkb.a(false, "Saved out mission list");
     }
 

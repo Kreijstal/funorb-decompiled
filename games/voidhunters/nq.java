@@ -98,7 +98,7 @@ final class nq extends rqa {
         }
     }
 
-    final static void a(byte param0, ds param1) {
+    final static void a(byte param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;

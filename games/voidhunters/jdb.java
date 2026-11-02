@@ -12,8 +12,8 @@ final class jdb implements dja {
     public static void a(boolean param0) {
         field_a = null;
         if (param0) {
-          ds var2 = (ds) null;
-          jdb.a(-105, (byte) 0, 18, (ds) null, 3);
+          PacketBuffer var2 = (PacketBuffer) null;
+          jdb.a(-105, (byte) 0, 18, (PacketBuffer) null, 3);
         }
     }
 
@@ -40,7 +40,7 @@ final class jdb implements dja {
         int var24 = 0;
         int var25 = 0;
         int var28 = 0;
-        ds var29 = null;
+        PacketBuffer var29 = null;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -61,8 +61,8 @@ final class jdb implements dja {
             throw new IllegalArgumentException("");
           }
           if (param2 != 29175) {
-            var29 = (ds) null;
-            jdb.a(-98, (byte) 61, -25, (ds) null, -48);
+            var29 = (PacketBuffer) null;
+            jdb.a(-98, (byte) 61, -25, (PacketBuffer) null, -48);
           }
           var8_int = 0;
           stackIn_14_0 = (param7 >= param6) ? param6 : param7;
@@ -132,7 +132,7 @@ final class jdb implements dja {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, ds param3, int param4) {
+    final static void a(int param0, byte param1, int param2, PacketBuffer param3, int param4) {
         try {
           if (param1 != -48) {
             field_a = (String) null;

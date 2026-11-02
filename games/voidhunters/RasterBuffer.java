@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gpb extends ksa {
+abstract class RasterBuffer extends IntrusiveNode {
     int field_d;
     int[] field_f;
     int field_e;
@@ -37,7 +37,7 @@ abstract class gpb extends ksa {
         }
     }
 
-    gpb() {
+    RasterBuffer() {
     }
 
     static {

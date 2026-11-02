@@ -96,7 +96,7 @@ abstract class vq extends dqa implements lca {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          ds var2 = null;
+          PacketBuffer var2 = null;
           if (ff.field_o.field_g >= 4) {
             if (ff.field_o.field_k == -1) {
               return 3;
@@ -125,11 +125,11 @@ abstract class vq extends dqa implements lca {
             }
             if (gob.field_c == 2) {
               eu.field_h = new lpb((java.net.Socket) (ija.field_b.field_d), gia.field_k);
-              var2 = new ds(13);
+              var2 = new PacketBuffer(13);
               jdb.a(nia.field_p, (byte) -48, wlb.field_o, var2, qfa.field_Ib);
               var2.c(0, 15);
               var2.d(ea.field_d, 332614536);
-              eu.field_h.a(0, var2.field_h, 13, 0);
+              eu.field_h.a(0, var2.payload, 13, 0);
               gob.field_c = gob.field_c + 1;
               ldb.field_r = 30000L + wt.a(false);
             }

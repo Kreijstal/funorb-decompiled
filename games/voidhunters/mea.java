@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mea extends ksa {
+abstract class mea extends IntrusiveNode {
     boolean field_f;
     static ij field_e;
     qfa field_d;

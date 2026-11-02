@@ -61,10 +61,10 @@ final class bp extends rqa {
           if (param2 >= lua.field_c &&
             hab.field_i >= param2) {
             var39 = rba.field_b[param2];
-            var16 = ksa.a(31123, ob.field_j, mt.field_o, param0 - param1);
-            var17 = ksa.a(31123, ob.field_j, mt.field_o, param1 + param0);
-            var18 = ksa.a(31123, ob.field_j, mt.field_o, -var8 + param0);
-            var19 = ksa.a(31123, ob.field_j, mt.field_o, param0 + var8);
+            var16 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param0 - param1);
+            var17 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param1 + param0);
+            var18 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, -var8 + param0);
+            var19 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param0 + var8);
             ww.a(param4, var18, var39, (byte) 75, var16);
             ww.a(param5, var19, var39, (byte) 75, var18);
             ww.a(param4, var17, var39, (byte) 75, var19);
@@ -94,10 +94,10 @@ final class bp extends rqa {
                 var15 <= hab.field_i) {
                 if (var9 < var8) {
                   var17Lifetime1 = dw.field_a[var9];
-                  var18Lifetime1 = ksa.a(31123, ob.field_j, mt.field_o, param0 + var7_int);
-                  var19Lifetime1 = ksa.a(31123, ob.field_j, mt.field_o, param0 - var7_int);
-                  var20 = ksa.a(31123, ob.field_j, mt.field_o, var17Lifetime1 + param0);
-                  var21 = ksa.a(31123, ob.field_j, mt.field_o, -var17Lifetime1 + param0);
+                  var18Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param0 + var7_int);
+                  var19Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param0 - var7_int);
+                  var20 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, var17Lifetime1 + param0);
+                  var21 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, -var17Lifetime1 + param0);
                   if (var16Lifetime1 <= hab.field_i) {
                     var40 = rba.field_b[var16Lifetime1];
                     ww.a(param4, var21, var40, (byte) 75, var19Lifetime1);
@@ -111,8 +111,8 @@ final class bp extends rqa {
                     ww.a(param4, var18Lifetime1, var41, (byte) 75, var20);
                   }
                 } else {
-                  var17Lifetime1 = ksa.a(31123, ob.field_j, mt.field_o, param0 + var7_int);
-                  var18Lifetime1 = ksa.a(31123, ob.field_j, mt.field_o, param0 - var7_int);
+                  var17Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param0 + var7_int);
+                  var18Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param0 - var7_int);
                   if (hab.field_i >= var16Lifetime1) {
                     ww.a(param4, var17Lifetime1, rba.field_b[var16Lifetime1], (byte) 75, var18Lifetime1);
                   }
@@ -138,8 +138,8 @@ final class bp extends rqa {
             if (var18Lifetime1Lifetime1 > mt.field_o) {
               continue;
             }
-            var17Lifetime1Lifetime1 = ksa.a(31123, ob.field_j, mt.field_o, var17Lifetime1Lifetime1);
-            var18Lifetime1Lifetime1 = ksa.a(31123, ob.field_j, mt.field_o, var18Lifetime1Lifetime1);
+            var17Lifetime1Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, var17Lifetime1Lifetime1);
+            var18Lifetime1Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, var18Lifetime1Lifetime1);
             if (var8 <= var7_int) {
               if (var16Lifetime1Lifetime1 <= hab.field_i) {
                 ww.a(param4, var17Lifetime1Lifetime1, rba.field_b[var16Lifetime1Lifetime1], (byte) 75, var18Lifetime1Lifetime1);
@@ -156,8 +156,8 @@ final class bp extends rqa {
               stackIn_42_0 = dw.field_a[var7_int];
             }
             var19Lifetime1Lifetime1 = stackIn_42_0;
-            var20Lifetime1 = ksa.a(31123, ob.field_j, mt.field_o, var19Lifetime1Lifetime1 + param0);
-            var21Lifetime1 = ksa.a(31123, ob.field_j, mt.field_o, -var19Lifetime1Lifetime1 + param0);
+            var20Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, var19Lifetime1Lifetime1 + param0);
+            var21Lifetime1 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, -var19Lifetime1Lifetime1 + param0);
             if (var16Lifetime1Lifetime1 <= hab.field_i) {
               var42 = rba.field_b[var16Lifetime1Lifetime1];
               ww.a(param4, var21Lifetime1, var42, (byte) 75, var18Lifetime1Lifetime1);
@@ -216,7 +216,7 @@ final class bp extends rqa {
         lc.field_b.a(0, -83, -40 + (tb.field_a.field_G - 2), 0, tb.field_a.field_hb);
         nna.field_v.a(0, -17, lw.field_i.field_hb, 0, nna.field_w);
         int var1 = nna.field_w + 2;
-        fh.field_f.a(0, -26, lw.field_i.field_hb, ll.field_o ? var1 : 0, lw.field_i.field_G - (ll.field_o ? var1 : 0));
+        DualLinkNode.field_f.a(0, -26, lw.field_i.field_hb, ll.field_o ? var1 : 0, lw.field_i.field_G - (ll.field_o ? var1 : 0));
         irb.a(0);
         gmb.field_c.a(0, 124, tb.field_a.field_hb, -40 + tb.field_a.field_G, 40);
         qpb.field_w.a(0, -65, bqa.field_d.field_hb, 0, 30);

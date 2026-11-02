@@ -401,7 +401,7 @@ public final class VoidHunters extends ms {
         int var3Lifetime1;
         int var3Lifetime2;
         var6 = field_G;
-        aqb.field_f = ria.a(32);
+        ProxySocketConnector.field_f = ria.a(32);
         lgb.field_o = gia.d(-2);
         ji.e(200);
         if (psb.field_b != null &&
@@ -643,7 +643,7 @@ public final class VoidHunters extends ms {
         this.f(false);
         fwa.field_g = new coa();
         fwa.field_g.a((byte) -65);
-        hjb.field_o = rrb.b(-89);
+        hjb.field_o = GameKeyHandler.b(-89);
         qcb.field_o = tc.field_b;
         ncb.field_a = sbb.field_o;
         if (ef.field_E) {
@@ -701,7 +701,7 @@ public final class VoidHunters extends ms {
         if (this.field_B > 0) {
           this.field_B = this.field_B - 1;
         }
-        L6: {
+        regionExit1: {
           if (var2 != 0) {
             if (wqa.a(false, oab.field_o)) {
               if (4 != this.field_C) {
@@ -766,7 +766,7 @@ public final class VoidHunters extends ms {
                         break;
                       default:
                         this.a(var6, -19653, var5);
-                        break L6;
+                        break regionExit1;
                       case 3:
                         var6.field_a[4] = 255;
                         break;
@@ -864,14 +864,14 @@ public final class VoidHunters extends ms {
         tua.a(114);
         coa.a(true);
         boa.a(0);
-        rrb.a(-106);
+        GameKeyHandler.a(-106);
         ms.d(false);
-        hva.a(127);
+        ClientException.a(127);
         bi.b(-19766);
-        fg.a(-25692);
+        MouseWheelInput.a(-25692);
         dma.b();
         asb.a((byte) 112);
-        ds.j(-38);
+        PacketBuffer.j(-38);
         wt.a(-101);
         tc.a((byte) 40);
         kia.a(3553);
@@ -1025,7 +1025,7 @@ public final class VoidHunters extends ms {
         cna.h(1);
         bs.a((byte) 42);
         ooa.h(126);
-        fh.d(-31049);
+        DualLinkNode.d(-31049);
         qc.a((byte) 78);
         ffb.a(-106);
         kw.g((byte) 124);
@@ -1093,7 +1093,7 @@ public final class VoidHunters extends ms {
         pfb.a(118);
         bbb.a(0);
         jw.a(false);
-        rb.a((byte) -109);
+        SocketConnector.a((byte) -109);
         ndb.a(91);
         qdb.a((byte) -125);
         odb.a(true);
@@ -1130,7 +1130,7 @@ public final class VoidHunters extends ms {
         vq.i((byte) -81);
         sha.f(1);
         nga.b((byte) -126);
-        vh.b(!param0 ? true : false);
+        IterableNodeHashTable.b(!param0 ? true : false);
         al.a(true);
         rlb.a(-120);
         fbb.a(param0);
@@ -1170,7 +1170,7 @@ public final class VoidHunters extends ms {
         ri.a(41);
         ska.e(5697);
         bna.a(!param0 ? true : false);
-        aqb.b(true);
+        ProxySocketConnector.b(true);
         gab.a(15325);
         pja.d(-1);
         wv.d(65280);
@@ -1200,12 +1200,12 @@ public final class VoidHunters extends ms {
         hk.d(-1210841460);
         oqb.e((byte) -123);
         hc.a();
-        jn.a((byte) -101);
+        NodeHashTableIterator.a((byte) -101);
         lia.a(97);
         uva.a();
         woa.a(-16777216);
         cs.a((byte) 111);
-        hq.c((byte) -128);
+        ImageProducerRasterBuffer.c((byte) -128);
         r.e((byte) -123);
         ct.a((byte) -96);
         mb.f((byte) -122);
@@ -1856,7 +1856,7 @@ public final class VoidHunters extends ms {
         if (null != psb.field_b) {
           cqb.b((byte) 86);
         }
-        jn.a(1);
+        NodeHashTableIterator.a(1);
         if (param0 >= -102) {
           VoidHunters.b(63, 91);
         }
@@ -2373,7 +2373,7 @@ public final class VoidHunters extends ms {
             wna.field_e = true;
           } else {
             if (ffa.a(false)) {
-              ksa.a((phb[]) null, 8, 0, (phb[]) null, (phb[]) null, 8555923, 0, 15658751, 15658751, dsb.field_p, dma.field_j / 2, 0, 0, -14109, dma.field_g / 2);
+              IntrusiveNode.a((phb[]) null, 8, 0, (phb[]) null, (phb[]) null, 8555923, 0, 15658751, 15658751, dsb.field_p, dma.field_j / 2, 0, 0, -14109, dma.field_g / 2);
               var4_int = 16;
               var5_intLifetime2 = var4_int + eba.a(0);
               var6 = var4_int + geb.a(-22954);

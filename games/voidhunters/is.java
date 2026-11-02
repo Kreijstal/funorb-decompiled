@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class is extends fh {
+abstract class is extends DualLinkNode {
     int field_k;
 
     abstract Object a(int param0);
@@ -27,20 +27,20 @@ abstract class is extends fh {
           if (param4 != 20408) {
             is.a(62, 42, -59, 39, 23, 69, 36);
           }
-          var11 = ksa.a(31123, lua.field_c, hab.field_i, param5);
-          var12 = ksa.a(31123, lua.field_c, hab.field_i, param6);
-          var13 = ksa.a(param4 + 10715, ob.field_j, mt.field_o, param2);
-          var14 = ksa.a(31123, ob.field_j, mt.field_o, param0);
-          var7_int = ksa.a(31123, lua.field_c, hab.field_i, param5 + param3);
-          var8 = ksa.a(31123, lua.field_c, hab.field_i, -param3 + param6);
+          var11 = IntrusiveNode.a(31123, lua.field_c, hab.field_i, param5);
+          var12 = IntrusiveNode.a(31123, lua.field_c, hab.field_i, param6);
+          var13 = IntrusiveNode.a(param4 + 10715, ob.field_j, mt.field_o, param2);
+          var14 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param0);
+          var7_int = IntrusiveNode.a(31123, lua.field_c, hab.field_i, param5 + param3);
+          var8 = IntrusiveNode.a(31123, lua.field_c, hab.field_i, -param3 + param6);
           for (var15 = var11; var15 < var7_int; var15++) {
             ww.a(param1, var14, rba.field_b[var15], (byte) 75, var13);
           }
           for (var15Lifetime1 = var12; var8 < var15Lifetime1; var15Lifetime1--) {
             ww.a(param1, var14, rba.field_b[var15Lifetime1], (byte) 75, var13);
           }
-          var9 = ksa.a(31123, ob.field_j, mt.field_o, param3 + param2);
-          var10 = ksa.a(31123, ob.field_j, mt.field_o, -param3 + param0);
+          var9 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, param3 + param2);
+          var10 = IntrusiveNode.a(31123, ob.field_j, mt.field_o, -param3 + param0);
           for (var15Lifetime2 = var7_int; var8 >= var15Lifetime2; var15Lifetime2++) {
             var21 = rba.field_b[var15Lifetime2];
             ww.a(param1, var9, var21, (byte) 75, var13);

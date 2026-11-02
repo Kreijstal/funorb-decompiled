@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fkb extends ksa {
+final class fkb extends IntrusiveNode {
     int field_k;
     static tjb field_m;
     int field_v;

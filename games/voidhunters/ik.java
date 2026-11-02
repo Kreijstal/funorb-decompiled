@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ik extends ksa {
+final class ik extends IntrusiveNode {
     int field_h;
     int field_d;
     int field_e;
@@ -38,7 +38,7 @@ final class ik extends ksa {
         var2[189] = upb.field_a;
         var2[40] = gda.field_d;
         var2[25] = bnb.field_o;
-        var2[203] = ds.field_d;
+        var2[203] = PacketBuffer.field_d;
         var2[89] = r.field_k;
         var2[178] = ge.field_c;
         var2[100] = jga.field_a;

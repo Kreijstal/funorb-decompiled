@@ -84,7 +84,7 @@ final class fr implements dja {
           stackIn_18_0 = 16711935;
           stackIn_18_1 = (lta) (param0);
           stackIn_19_2 = !(param2);
-          fg.a(stackIn_18_0, ((lta) (Object) stackIn_18_1).b(stackIn_19_2, 0), param0.a(0, (byte) 122), 80);
+          MouseWheelInput.a(stackIn_18_0, ((lta) (Object) stackIn_18_1).b(stackIn_19_2, 0), param0.a(0, (byte) 122), 80);
           for (var5 = 0; var5 < var18.length; var5 += 2) {
             var6 = var18[var5];
             var7 = var14[var5 + 1];
@@ -97,7 +97,7 @@ final class fr implements dja {
             var7Lifetime1 = var4_array[var5Lifetime1 + 1];
             var8Lifetime1 = param0.a(var6Lifetime1, (byte) 120);
             var9Lifetime1 = param0.b(true, var7Lifetime1);
-            fg.a(16777215, var9Lifetime1, var8Lifetime1, 63);
+            MouseWheelInput.a(16777215, var9Lifetime1, var8Lifetime1, 63);
             if (au.field_c != 2) {
               cka.a(1, "" + (var5Lifetime1 >> 1), 16777215, var9Lifetime1, var8Lifetime1, 4266);
             }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wj extends rqa {
-    static swa field_q;
+    static MouseInputHandler field_q;
     static int field_p;
     static int field_o;
 
@@ -44,7 +44,7 @@ final class wj extends rqa {
 
     static {
         field_p = 1;
-        field_q = new swa();
+        field_q = new MouseInputHandler();
         field_o = 5;
     }
 }

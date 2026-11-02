@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fca extends ksa {
+final class fca extends IntrusiveNode {
     private static float[] field_K;
     private int field_x;
     private static float[] field_D;
@@ -213,7 +213,7 @@ final class fca extends ksa {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        ds var2 = new ds(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_J = var2.h(124);
         this.field_B = var2.h(70);
         this.field_w = var2.h(29);

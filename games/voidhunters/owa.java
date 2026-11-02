@@ -9,7 +9,7 @@ final class owa extends le {
     private int[][] field_n;
     private int field_m;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;

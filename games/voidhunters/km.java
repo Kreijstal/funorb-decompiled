@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class km extends jtb {
-    ds field_p;
+    PacketBuffer field_p;
     int field_r;
     static int field_o;
     byte field_q;
@@ -20,11 +20,11 @@ final class km extends jtb {
         if (this.field_n) {
           throw new RuntimeException();
         }
-        if (this.field_p.field_e < this.field_p.field_h.length - this.field_q) {
+        if (this.field_p.position < this.field_p.payload.length - this.field_q) {
           throw new RuntimeException();
         }
         var2 = 9 / ((17 - param0) / 58);
-        return this.field_p.field_h;
+        return this.field_p.payload;
     }
 
     final static void e(int param0) {
@@ -118,7 +118,7 @@ final class km extends jtb {
         if (param0 != -4) {
           return -96;
         }
-        return this.field_p.field_e * 100 / (this.field_p.field_h.length - this.field_q);
+        return this.field_p.position * 100 / (this.field_p.payload.length - this.field_q);
     }
 
     static {

@@ -4,7 +4,7 @@
 final class bb extends rqa {
     static String field_o;
 
-    final static void a(ds param0, boolean param1) {
+    final static void a(PacketBuffer param0, boolean param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;

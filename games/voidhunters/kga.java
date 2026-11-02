@@ -125,7 +125,7 @@ final class kga extends rqa {
           uda.field_b = param1[119];
           oq.field_t = param1[202];
           dcb.field_d = param1[17];
-          ds.field_d = param1[203];
+          PacketBuffer.field_d = param1[203];
           dcb.field_f = param1[4];
           hw.field_b = param1[9];
           ioa.field_p = param1[73];

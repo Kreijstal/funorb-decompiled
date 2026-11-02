@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uva extends ksa {
+final class uva extends IntrusiveNode {
     private int field_e;
     int field_d;
     boolean field_h;

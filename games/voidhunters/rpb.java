@@ -22,7 +22,7 @@ final class rpb {
         this.field_c = 0;
     }
 
-    final void a(ds param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_g = param0.e((byte) -113);
         this.field_f = new int[this.field_g];
@@ -52,7 +52,7 @@ final class rpb {
         return this.field_b - this.field_h >> 15;
     }
 
-    final void b(ds param0) {
+    final void b(PacketBuffer param0) {
         this.field_e = param0.e((byte) -110);
         this.field_i = param0.h(19);
         this.field_j = param0.h(63);

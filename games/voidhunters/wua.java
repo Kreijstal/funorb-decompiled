@@ -6,7 +6,7 @@ final class wua extends le {
     static int field_k;
     private int field_i;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;

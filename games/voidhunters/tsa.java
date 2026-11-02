@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tsa extends ksa {
+final class tsa extends IntrusiveNode {
     String field_d;
     int field_e;
     static int field_h;

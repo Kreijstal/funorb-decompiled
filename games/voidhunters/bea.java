@@ -777,7 +777,7 @@ final class bea implements ntb {
                 if (var7 instanceof nbb) {
                   var13 = new nbb();
                   var7.b((byte) 67, var13);
-                  var13.a(rrb.a(22433, var13.e(0) + 4096), -93);
+                  var13.a(GameKeyHandler.a(22433, var13.e(0) + 4096), -93);
                   var13.a(-var13.field_d, -var13.field_e, (byte) -112);
                   param0.field_g.a(var13, (byte) 53);
                   var5 = (anb[]) (ija.a(var13, (Object[]) (var5), 0, ebb.field_a));
@@ -786,7 +786,7 @@ final class bea implements ntb {
                 var12 = new sg();
                 var7.b((byte) 66, var12);
                 var12.field_k.g(0);
-                var12.a(rrb.a(22433, 4096 + var12.e(0)), -29);
+                var12.a(GameKeyHandler.a(22433, 4096 + var12.e(0)), -29);
                 var12.a(-var12.field_d, -var12.field_e, (byte) 45);
                 var9 = mjb.b(21957, var12.q((byte) 64));
                 var12.h(17704, var9);
@@ -2006,11 +2006,11 @@ final class bea implements ntb {
               var10_ref_int__ = ncb.field_a[var9];
               var11 = 0;
               var12 = 0;
-              L18: while (true) {
+              scanLoop1: while (true) {
                 if (var10_ref_int__.length <= var12) {
                   if (var11 == 0 &&
                     param3 != ocb.field_l) {
-                    break L18;
+                    break scanLoop1;
                   }
                   for (var12 = 0; var10_ref_int__.length > var12; var12 += 2) {
                     var13_int = var10_ref_int__[var12];
@@ -2023,7 +2023,7 @@ final class bea implements ntb {
                     }
                   }
                   var8_int = 0;
-                  break L18;
+                  break scanLoop1;
                 }
                 var13_intLifetime1 = var10_ref_int__[var12];
                 var14 = var10_ref_int__[1 + var12];
@@ -2033,15 +2033,15 @@ final class bea implements ntb {
                     var11 = 1;
                   } else {
                     if (param3 <= var13_intLifetime1) {
-                      break L18;
+                      break scanLoop1;
                     }
                     if ((255 & tib.field_i[var13_intLifetime1]) != var14) {
-                      break L18;
+                      break scanLoop1;
                     }
                   }
                 } else {
                   if (var14 != ieb.field_o[param7]) {
-                    break L18;
+                    break scanLoop1;
                   }
                 }
                 var12 += 2;
@@ -2674,7 +2674,7 @@ final class bea implements ntb {
             var25 = new int[2];
             var48 = new int[2];
             var27 = 0;
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (var27 < var7.length) {
                 var28_int = var7[var27];
                 var29_int = var7[var27 + 1];
@@ -2684,7 +2684,7 @@ final class bea implements ntb {
                 if (-1 != var32) {
                   if (var24 == 2) {
                     var24++;
-                    break L3;
+                    break scanLoop1;
                   }
                   var25[var24] = var27 >> 1;
                   var48[var24] = var32;

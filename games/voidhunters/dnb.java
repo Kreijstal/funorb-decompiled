@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dnb extends ksa {
+final class dnb extends IntrusiveNode {
     int field_d;
     byte[] field_e;
 
     final static tja c(byte param0) {
-        bk.field_w.field_e = 0;
+        bk.field_w.position = 0;
         if (param0 != -39) {
           return (tja) null;
         }

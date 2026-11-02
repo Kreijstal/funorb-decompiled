@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pha extends rqa {
-    static ds field_o;
+    static PacketBuffer field_o;
     static String field_p;
     static String field_q;
     static String[] field_r;

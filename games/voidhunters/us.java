@@ -28,7 +28,7 @@ class us extends oib {
         }
     }
 
-    final void a(ds param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           if (param1 != -26216) {
             field_f = 54;

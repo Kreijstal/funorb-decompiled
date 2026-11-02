@@ -365,7 +365,7 @@ final class oa extends ha implements e {
         this.field_i = new gnb(4);
         this.field_h = false;
         try {
-          if (!gpb.a("sw3d", (byte) 114)) {
+          if (!RasterBuffer.a("sw3d", (byte) 114)) {
             throw new RuntimeException("");
           }
           pq.b((byte) -76);

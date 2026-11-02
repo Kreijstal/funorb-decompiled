@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class faa extends ds {
+final class faa extends PacketBuffer {
     private int field_k;
     private int field_i;
     private dq field_j;
@@ -14,21 +14,21 @@ final class faa extends ds {
         param1 = param1 & uta.field_q[param2];
         while (this.field_k < param2) {
           param2 = param2 - this.field_k;
-          fieldTemp$1 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$1] = (byte)(this.field_h[fieldTemp$1] + (param1 >>> param2));
-          this.field_h[this.field_e] = (byte) 0;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(this.payload[fieldTemp$1] + (param1 >>> param2));
+          this.payload[this.position] = (byte) 0;
           this.field_k = 8;
         }
         if (this.field_k == param2) {
-          fieldTemp$0 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$0] = (byte)(this.field_h[fieldTemp$0] + param1);
-          this.field_h[this.field_e] = (byte) 0;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte)(this.payload[fieldTemp$0] + param1);
+          this.payload[this.position] = (byte) 0;
           this.field_k = 8;
         } else {
           this.field_k = this.field_k - param2;
-          this.field_h[this.field_e] = (byte)(this.field_h[this.field_e] + (param1 << this.field_k));
+          this.payload[this.position] = (byte)(this.payload[this.position] + (param1 << this.field_k));
         }
         if (param0 == -632) {
           return;
@@ -37,7 +37,7 @@ final class faa extends ds {
     }
 
     final void f(byte param0) {
-        this.field_e = (this.field_i + 7) / 8;
+        this.position = (this.field_i + 7) / 8;
         if (param0 > -31) {
           this.field_j = (dq) null;
         }
@@ -46,14 +46,14 @@ final class faa extends ds {
     final int o(int param0) {
         int fieldTemp$0 = 0;
         if (param0 == 255) {
-          fieldTemp$0 = this.field_e;
-          this.field_e = this.field_e + 1;
-          return 255 & this.field_h[fieldTemp$0] - this.field_j.a((byte) -41);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return 255 & this.payload[fieldTemp$0] - this.field_j.a((byte) -41);
         }
         this.f((byte) -108);
-        int fieldTemp$1 = this.field_e;
-        this.field_e = this.field_e + 1;
-        return 255 & this.field_h[fieldTemp$1] - this.field_j.a((byte) -41);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$1] - this.field_j.a((byte) -41);
     }
 
     final static vab a(byte param0, qfa param1, int param2, String param3) {
@@ -115,14 +115,14 @@ final class faa extends ds {
         while (var4 < param1) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.field_h[incrementValue$0] & uta.field_q[var4]) << param1 - var4);
+          var5 = var5 + ((this.payload[incrementValue$0] & uta.field_q[var4]) << param1 - var4);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (param1 != var4) {
-          var5 = var5 + (this.field_h[var3] >> -param1 + var4 & uta.field_q[param1]);
+          var5 = var5 + (this.payload[var3] >> -param1 + var4 & uta.field_q[param1]);
         } else {
-          var5 = var5 + (this.field_h[var3] & uta.field_q[var4]);
+          var5 = var5 + (this.payload[var3] & uta.field_q[var4]);
         }
         return var5;
     }
@@ -134,15 +134,15 @@ final class faa extends ds {
     final void h(int param0, int param1) {
         int fieldTemp$0 = 0;
         if (param0 == 24335) {
-          fieldTemp$0 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$0] = (byte)(param1 + this.field_j.a((byte) -41));
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte)(param1 + this.field_j.a((byte) -41));
           return;
         }
         this.field_j = (dq) null;
-        int fieldTemp$1 = this.field_e;
-        this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$1] = (byte)(param1 + this.field_j.a((byte) -41));
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 + this.field_j.a((byte) -41));
     }
 
     faa(int param0) {
@@ -151,7 +151,7 @@ final class faa extends ds {
 
     final void r(int param0) {
         if (this.field_k < 8) {
-          this.field_e = this.field_e + 1;
+          this.position = this.position + 1;
           this.field_k = 8;
         }
         if (param0 == 32712) {
@@ -172,14 +172,14 @@ final class faa extends ds {
     }
 
     final void p(int param0) {
-        this.field_i = 8 * this.field_e;
+        this.field_i = 8 * this.position;
         if (param0 != -23497) {
           this.r(-90);
         }
     }
 
     final void q(int param0) {
-        this.field_h[this.field_e] = (byte) 0;
+        this.payload[this.position] = (byte) 0;
         if (param0 > -66) {
           return;
         }
@@ -201,9 +201,9 @@ final class faa extends ds {
             this.o(39);
           }
           for (var5_int = 0; param0 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_e;
-            this.field_e = this.field_e + 1;
-            param3[var5_int + param1] = (byte)(this.field_h[fieldTemp$0] - this.field_j.a((byte) -41));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_j.a((byte) -41));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

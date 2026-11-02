@@ -25,7 +25,7 @@ final class ts {
           }
           qs.field_a = nlb.field_p;
           ro.field_a = 0;
-          ds.field_g = tda.field_K;
+          PacketBuffer.field_g = tda.field_K;
         }
     }
 

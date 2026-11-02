@@ -388,7 +388,7 @@ final class me extends pja {
                   if (var12.field_Xb) {
                     var12.field_Mb.field_R = wt.field_c;
                   } else {
-                    var12.field_Mb.field_R = fg.field_a;
+                    var12.field_Mb.field_R = MouseWheelInput.field_a;
                   }
                   decompiledFrameRemainder1 = false;
                 }
@@ -578,9 +578,9 @@ final class me extends pja {
                   var35 = null;
                 }
                 if (var35 != null) {
-                  lob.field_a = hva.field_c[var34_intLifetime2] + " - " + (String) (var35);
+                  lob.field_a = ClientException.field_c[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  lob.field_a = hva.field_c[var34_intLifetime2];
+                  lob.field_a = ClientException.field_c[var34_intLifetime2];
                 }
               }
             }

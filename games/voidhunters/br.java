@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class br extends ksa {
+final class br extends IntrusiveNode {
     int field_e;
     static lkb field_f;
     int[] field_d;

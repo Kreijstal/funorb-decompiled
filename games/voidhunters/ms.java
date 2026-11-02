@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ms extends wi {
+abstract class ms extends GameApplet {
     private boolean field_x;
     private int field_r;
     static int[] field_A;
@@ -529,7 +529,7 @@ abstract class ms extends wi {
         lja.field_f = param2;
         ru.field_p = param1;
         this.k(-92);
-        rrb.a((byte) 101);
+        GameKeyHandler.a((byte) 101);
     }
 
     final void a(boolean param0, int param1, int param2) {
@@ -557,7 +557,7 @@ abstract class ms extends wi {
           if (var2 == 0) {
             return;
           }
-          L1: {
+          regionExit1: {
             switch (var2) {
               case 1:
                 je.a((byte) 113);
@@ -574,17 +574,17 @@ abstract class ms extends wi {
                   switch (var2) {
                     case 13:
                       lob.a(true);
-                      break L1;
+                      break regionExit1;
                     case 17:
                       this.j(3);
-                      break L1;
+                      break regionExit1;
                     case 18:
                       g.e(-96);
-                      break L1;
+                      break regionExit1;
                     default:
                       gna.a((Throwable) null, "MGS1: " + hm.e(-13514), 0);
                       ifb.l(-123);
-                      break L1;
+                      break regionExit1;
                   }
                 }
                 stackIn_31_0 = 47;
@@ -662,7 +662,7 @@ abstract class ms extends wi {
           int var5 = 0;
           int var6_int = 0;
           Exception var6 = null;
-          ds var7 = null;
+          PacketBuffer var7 = null;
           String var8 = null;
           int var9 = 0;
           String var10 = null;
@@ -760,7 +760,7 @@ abstract class ms extends wi {
               if (tk.field_p.c(104)) {
                 var7 = tk.field_p.a(43);
                 if (var7 != null) {
-                  var8 = tja.a(0, 0, var7.field_e, var7.field_h);
+                  var8 = tja.a(0, 0, var7.position, var7.payload);
                   ls.a(var8, (byte) 122);
                 } else {
                   var10 = (String) null;
