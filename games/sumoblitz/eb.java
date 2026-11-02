@@ -38,7 +38,7 @@ final class eb {
 
     final void a(byte param0) {
         int var2;
-        ms var3;
+        IntrusiveNode var3;
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
         var2 = -61 / ((param0 - 13) / 45);
@@ -49,7 +49,7 @@ final class eb {
         var3 = this.field_e.b(86);
         while (this.field_e.field_e != var3) {
           ((ve) (var3)).c(50);
-          var3 = var3.field_b;
+          var3 = var3.next;
         }
     }
 

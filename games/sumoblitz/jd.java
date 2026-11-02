@@ -292,9 +292,9 @@ final class jd extends ag {
     final static int a(lj param0, int param1, lj param2, int param3, boolean param4, int param5, String param6) {
         int var12 = 0;
         int stackIn_8_0 = 0;
-        fs stackIn_13_0 = null;
+        PacketBuffer stackIn_13_0 = null;
         String stackIn_14_1 = null;
-        fs stackIn_16_0 = null;
+        PacketBuffer stackIn_16_0 = null;
         String stackIn_17_1 = null;
         int stackIn_37_0 = 0;
         int stackIn_48_0 = 0;
@@ -341,13 +341,13 @@ final class jd extends ag {
           }
           if (kw.field_c == gg.field_t) {
             aw.field_j = null;
-            as.field_v.field_p = 0;
+            as.field_v.position = 0;
             if (param6 != null) {
               var9 = 0;
               if (param4) {
                 var9 = var9 | 1;
               }
-              sd.field_e.field_p = 0;
+              sd.field_e.position = 0;
               sd.field_e.e(48, fd.field_d.nextInt());
               sd.field_e.e(48, fd.field_d.nextInt());
               sd.field_e.b(var15, (byte) -108);
@@ -358,17 +358,17 @@ final class jd extends ag {
               sd.field_e.b((byte) 50, param1);
               sd.field_e.b((byte) 50, var9);
               as.field_v.b((byte) 114, 18);
-              as.field_v.field_p = as.field_v.field_p + 2;
-              var10 = as.field_v.field_p;
+              as.field_v.position = as.field_v.position + 2;
+              var10 = as.field_v.position;
               var11_ref_String = dv.a(-94, ra.c(2));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               as.field_v.a(var11_ref_String, (byte) -115);
               ks.a(gh.field_a, oh.field_c, false, as.field_v, sd.field_e);
-              as.field_v.a(0, as.field_v.field_p - var10);
+              as.field_v.a(0, as.field_v.position - var10);
             } else {
-              sd.field_e.field_p = 0;
+              sd.field_e.position = 0;
               sd.field_e.e(48, fd.field_d.nextInt());
               sd.field_e.e(48, fd.field_d.nextInt());
               stackIn_13_0 = sd.field_e;
@@ -377,19 +377,19 @@ final class jd extends ag {
               } else {
                 stackIn_14_1 = var15;
               }
-              ((fs) (Object) stackIn_13_0).b(stackIn_14_1, (byte) 120);
+              ((PacketBuffer) (Object) stackIn_13_0).b(stackIn_14_1, (byte) 120);
               stackIn_16_0 = sd.field_e;
               if (!param2.a(91)) {
                 stackIn_17_1 = "";
               } else {
                 stackIn_17_1 = var8;
               }
-              ((fs) (Object) stackIn_16_0).b(stackIn_17_1, (byte) 101);
+              ((PacketBuffer) (Object) stackIn_16_0).b(stackIn_17_1, (byte) 101);
               as.field_v.b((byte) 108, 16);
-              as.field_v.field_p = as.field_v.field_p + 1;
-              var9 = as.field_v.field_p;
+              as.field_v.position = as.field_v.position + 1;
+              var9 = as.field_v.position;
               ks.a(gh.field_a, oh.field_c, false, as.field_v, sd.field_e);
-              as.field_v.c(as.field_v.field_p - var9, -13745);
+              as.field_v.c(as.field_v.position - var9, -13745);
             }
             gt.a(0, -1);
             kw.field_c = vf.field_c;
@@ -397,7 +397,7 @@ final class jd extends ag {
           if (kw.field_c == vf.field_c &&
             ju.b(-1, 1)) {
             var9Lifetime1 = ig.field_a.e(-31302);
-            ig.field_a.field_p = 0;
+            ig.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               kw.field_c = oi.field_a;
@@ -405,7 +405,7 @@ final class jd extends ag {
             } else {
               if (var9Lifetime1 == 248) {
                 bw.a(false, ra.c(2));
-                ns.field_c = qk.field_R;
+                MouseWheelInput.field_c = qk.field_R;
                 kk.a((byte) -116);
                 sr.field_g = false;
                 stackIn_37_0 = var9Lifetime1;
@@ -418,7 +418,7 @@ final class jd extends ag {
               } else {
                 ju.b(-1, br.b(-105));
                 aw.field_j = new Boolean(of.a(ig.field_a, 115));
-                ig.field_a.field_p = 0;
+                ig.field_a.position = 0;
               }
             }
           }
@@ -426,7 +426,7 @@ final class jd extends ag {
             var9Lifetime2 = 2;
             if (ju.b(-1, var9Lifetime2)) {
               var10Lifetime1 = ig.field_a.a(255);
-              ig.field_a.field_p = 0;
+              ig.field_a.position = 0;
               if (ju.b(-1, var10Lifetime1)) {
                 var11 = mn.field_g.length;
                 for (var12 = 0; var11 > var12; var12++) {
@@ -442,7 +442,7 @@ final class jd extends ag {
           if (fm.field_b == kw.field_c &&
             lt.a((byte) 119)) {
             if (iw.field_a != 255) {
-              ns.field_c = ig.field_a.d(-1);
+              MouseWheelInput.field_c = ig.field_a.d(-1);
             } else {
               var9_ref_String = ig.field_a.g((byte) 80);
               if (var9_ref_String != null) {
@@ -457,9 +457,9 @@ final class jd extends ag {
           if (qk.field_O == null) {
             if (sr.field_g) {
               if (30000L < uc.b(26560)) {
-                ns.field_c = ar.field_F;
+                MouseWheelInput.field_c = ar.field_F;
               } else {
-                ns.field_c = nd.field_G;
+                MouseWheelInput.field_c = nd.field_G;
               }
               sr.field_g = false;
               stackIn_65_0 = 249;

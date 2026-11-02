@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh extends ms {
+final class lh extends IntrusiveNode {
     static il field_n;
     byte[] field_m;
     static ri field_k;
@@ -54,7 +54,7 @@ final class lh extends ms {
           var4 = var3;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
-            var7 = fh.a(var6, -1);
+            var7 = ImageProducerRasterBuffer.a(var6, -1);
             if (var7 != null) {
               stackIn_17_0 = var7;
               return stackIn_17_0;

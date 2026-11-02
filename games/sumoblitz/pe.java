@@ -65,7 +65,7 @@ final class pe extends sp implements ai {
               this.field_C[var5].a(103, 0, 16 * var5 + 20, 15, 80);
               this.a(this.field_C[var5], 64);
             }
-            this.field_C[var3_int] = new wp(dt.field_h, (qm) (this));
+            this.field_C[var3_int] = new wp(BufferedSocket.field_h, (qm) (this));
             this.field_C[var3_int].field_w = (mh) ((Object) var4);
             this.field_C[var3_int].a(126, 0, 20 + 16 * var3_int + 16, 15, 100);
             this.a(this.field_C[var3_int], 89);
@@ -200,23 +200,23 @@ final class pe extends sp implements ai {
 
     final static void a(ki param0, ki param1, int param2, ki param3) {
         ci.field_g = ri.b(param3, "", "fontalpha");
-        g.field_a = gd.a(param1, (byte) -79, "font", "");
+        SocketConnector.field_a = gd.a(param1, (byte) -79, "font", "");
         mn.field_b = ri.b(param3, "", "fontglow");
-        hu.field_c = g.field_a;
+        hu.field_c = SocketConnector.field_a;
         wj.field_i = ri.b(param3, "", "smallfontalpha");
         qr.field_a = gd.a(param1, (byte) -39, "smallfont", "");
         au.field_j = ri.b(param3, "", "glowfontalpha");
         sv.field_a = qr.field_a;
         ld.field_F = ri.b(param3, "", "boldfontalpha");
         ma.field_b = gd.a(param1, (byte) -36, "boldfont", "");
-        nw.field_f = ri.b(param3, "", "boldglowfontalpha");
+        ProxySocketConnector.field_f = ri.b(param3, "", "boldglowfontalpha");
         sq.field_b = ma.field_b;
         field_F = ri.b(param3, "", "menu_frame");
         rh.field_q = ri.b(param3, "", "tooltip_kit");
         hi.field_b = ri.b(param3, "", "achievements");
         gk.field_N = ri.a(param0, "basic", "unachieved");
         ud.field_p = ri.a(param0, "basic", "locked");
-        ms.field_d = ri.a(param3, "", "titleimage");
+        IntrusiveNode.field_d = ri.a(param3, "", "titleimage");
         rc.field_i = ri.a(param3, "", "lock");
         hc.field_b = ri.a(param3, "", "heart");
         oi.field_d = ri.a(param3, "", "skull");
@@ -233,7 +233,7 @@ final class pe extends sp implements ai {
           gq.field_o = ri.b(param3, "", "chargebar_vertical");
           cb.field_e = ri.a(param3, "", "congratulations");
           ve.field_k = ri.a(param3, "", "mouse");
-          dt.field_n = ri.a(param3, "", "keyboard");
+          BufferedSocket.field_n = ri.a(param3, "", "keyboard");
           rl.field_l = ri.b(param3, "", "player");
           kk.field_e = ri.b(param3, "", "mook");
           ks.field_w = ri.b(param3, "", "fast");
@@ -265,7 +265,7 @@ final class pe extends sp implements ai {
           wf.field_a = ri.a(param3, "", "driftinglight_snow");
           ml.field_p = ri.a(param3, "", "driftinglight_rough");
           th.field_C = ri.a(param3, "", "shockwave");
-          os.field_b = ri.b(param3, "", "lightningrod");
+          MouseInputHandler.field_b = ri.b(param3, "", "lightningrod");
           sd.field_a = ri.b(param3, "", "lightningrod_lowgraphics");
           hp.field_n = ri.b(param3, "", "electricity");
           ni.field_h = ri.b(param3, "", "electricity_flip");
@@ -297,7 +297,7 @@ final class pe extends sp implements ai {
         }
         vn var5 = kw.field_b;
         if (this.field_B != null) {
-          var5.a(ia.field_a, param0 + this.field_r, this.field_v + param1, this.field_q, 20, 16777215, -1, 0, 0, var5.field_I + var5.field_s);
+          var5.a(NodeHashTableIterator.field_a, param0 + this.field_r, this.field_v + param1, this.field_q, 20, 16777215, -1, 0, 0, var5.field_I + var5.field_s);
         }
         if (param2 > -35) {
           this.a(120, -19, (byte) -32, 10);

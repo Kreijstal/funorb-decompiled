@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class s extends ms {
+final class s extends IntrusiveNode {
     static hr[] field_n;
     static int field_o;
     int field_l;

@@ -4,7 +4,7 @@
 final class wk extends na {
     private nq field_g;
     private String field_e;
-    static os field_h;
+    static MouseInputHandler field_h;
     static String field_f;
     private boolean field_i;
 
@@ -39,7 +39,7 @@ final class wk extends na {
             return stackIn_4_0;
           }
           if (this.a((byte) 26, param1) != qr.field_e) {
-            stackIn_9_0 = nw.field_h;
+            stackIn_9_0 = ProxySocketConnector.field_h;
             return stackIn_9_0;
           }
           stackIn_7_0 = oj.field_b;
@@ -74,7 +74,7 @@ final class wk extends na {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_e)) {
-            var3 = ov.a(param0 ^ 27, param1);
+            var3 = RasterBuffer.a(param0 ^ 27, param1);
             if (!var3.a(true)) {
               stackIn_7_0 = kt.field_a;
               return stackIn_7_0;
@@ -111,6 +111,6 @@ final class wk extends na {
     }
 
     static {
-        field_h = new os();
+        field_h = new MouseInputHandler();
     }
 }

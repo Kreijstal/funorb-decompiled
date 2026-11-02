@@ -5,7 +5,7 @@ final class fv extends rw {
     static float[] field_v;
     static mi field_y;
     int field_x;
-    fs field_w;
+    PacketBuffer field_w;
     byte field_z;
 
     public static void d(byte param0) {
@@ -22,7 +22,7 @@ final class fv extends rw {
           return 0;
         }
         if (param0 == -1) {
-          return 100 * this.field_w.field_p / (-this.field_z + this.field_w.field_n.length);
+          return 100 * this.field_w.position / (-this.field_z + this.field_w.payload.length);
         }
         return 50;
     }
@@ -92,8 +92,8 @@ final class fv extends rw {
         if (this.field_u) {
           throw new RuntimeException();
         }
-        if (-this.field_z + this.field_w.field_n.length <= this.field_w.field_p) {
-          return this.field_w.field_n;
+        if (-this.field_z + this.field_w.payload.length <= this.field_w.position) {
+          return this.field_w.payload;
         }
         throw new RuntimeException();
     }

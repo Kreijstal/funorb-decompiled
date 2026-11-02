@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wh extends pj {
+final class wh extends DualLinkNode {
     int field_v;
     private fr field_u;
     private long field_t;

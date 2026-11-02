@@ -100,7 +100,7 @@ class ar extends wp {
             } else {
               var6 = null;
             }
-            var11.field_p = var11.field_p + 4;
+            var11.position = var11.position + 4;
             if (!var11.e((byte) -9)) {
               kk.a((byte) -127);
               return;
@@ -126,7 +126,7 @@ class ar extends wp {
               var5_ref_db.b(false);
               return;
             }
-            ms.a("A1: " + di.b((byte) -9), (Throwable) null, 0);
+            IntrusiveNode.a("A1: " + di.b((byte) -9), (Throwable) null, 0);
             kk.a((byte) -128);
           }
           return;
@@ -198,7 +198,7 @@ class ar extends wp {
             if (var10 != null) {
               ((s) (var10)).field_r = var15;
             }
-            this.field_H.a((ms) (var15), (byte) 39);
+            this.field_H.a((IntrusiveNode) (var15), (byte) 39);
             var10 = var15;
           }
         }

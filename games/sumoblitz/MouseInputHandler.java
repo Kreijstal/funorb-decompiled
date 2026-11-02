@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class os implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static ri[] field_b;
     static String field_a;
 
@@ -58,7 +58,7 @@ final class os implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (null != wk.field_h) {
             ht.field_h = 0;
             kl.field_C = -1;
-            hl.field_b = -1;
+            SecondaryNodeDeque.field_b = -1;
             ki.field_i = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -104,7 +104,7 @@ final class os implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           ht.field_h = 0;
           kl.field_C = param0.getX();
-          hl.field_b = param0.getY();
+          SecondaryNodeDeque.field_b = param0.getY();
           ki.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -208,7 +208,7 @@ final class os implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           ht.field_h = 0;
           kl.field_C = param0.getX();
-          hl.field_b = param0.getY();
+          SecondaryNodeDeque.field_b = param0.getY();
           ki.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -237,7 +237,7 @@ final class os implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           ht.field_h = 0;
           kl.field_C = param0.getX();
-          hl.field_b = param0.getY();
+          SecondaryNodeDeque.field_b = param0.getY();
           ki.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

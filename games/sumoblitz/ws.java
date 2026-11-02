@@ -90,7 +90,7 @@ final class ws {
     }
 
     final static String a(byte param0, Throwable param1) throws IOException {
-        su var14 = null;
+        ClientException var14 = null;
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
@@ -112,10 +112,10 @@ final class ws {
         String var11Lifetime6;
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
-        if (!(param1 instanceof su)) {
+        if (!(param1 instanceof ClientException)) {
           var2 = "";
         } else {
-          var14 = (su) ((Object) param1);
+          var14 = (ClientException) ((Object) param1);
           var2 = var14.field_a + " | ";
           var11 = var2;
           var2 = var11;

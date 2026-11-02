@@ -22,7 +22,7 @@ final class jq {
 
     final static void a(int param0, wb param1) {
         try {
-          kc.j(82);
+          GameApplet.j(82);
           lk.a(param1.field_C, param1.field_z, param1.field_w);
           if (param0 != 7161) {
             jq.a(-84, -69);

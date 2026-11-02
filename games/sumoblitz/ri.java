@@ -19,7 +19,7 @@ final class ri {
         int stackIn_54_1 = 0;
         int stackIn_67_0 = 0;
         int stackIn_68_1 = 0;
-        fs var1;
+        PacketBuffer var1;
         int var2;
         ri[] var3;
         int var4;
@@ -45,14 +45,14 @@ final class ri {
         int var7_intLifetime4;
         int var8Lifetime1;
         int var8Lifetime2;
-        var1 = new fs(param0);
-        var1.field_p = param0.length - 2;
+        var1 = new PacketBuffer(param0);
+        var1.position = param0.length - 2;
         var2 = var1.a(255);
         var3 = new ri[var2];
         for (var4 = 0; var4 < var2; var4++) {
           var3[var4] = new ri();
         }
-        var1.field_p = param0.length - 7 - var2 * 8;
+        var1.position = param0.length - 7 - var2 * 8;
         var4Lifetime1 = var1.a(255);
         var5 = var1.a(255);
         var6 = (var1.e(-31302) & 255) + 1;
@@ -73,7 +73,7 @@ final class ri {
           var8_ref_ri.field_b = var4Lifetime1 - var8_ref_ri.field_h - var8_ref_ri.field_c;
           var8_ref_ri.field_f = var5 - var8_ref_ri.field_i - var8_ref_ri.field_d;
         }
-        var1.field_p = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
+        var1.position = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
         var17 = new int[var6];
         var16 = var17;
         var7 = var16;
@@ -86,7 +86,7 @@ final class ri {
         for (var8Lifetime1 = 0; var8Lifetime1 < var2; var8Lifetime1++) {
           var3[var8Lifetime1].field_g = var7;
         }
-        var1.field_p = 0;
+        var1.position = 0;
         for (var8Lifetime2 = 0; var8Lifetime2 < var2; var8Lifetime2++) {
           var9 = var3[var8Lifetime2];
           var10 = var9.field_h * var9.field_i;

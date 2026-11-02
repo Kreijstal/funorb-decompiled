@@ -24,7 +24,7 @@ final class gk {
     int[] field_M;
     short[] field_e;
     int[] field_J;
-    static wi field_O;
+    static PlatformTaskDispatcher field_O;
     static ri field_N;
     private boolean field_d;
     short[] field_h;
@@ -44,7 +44,7 @@ final class gk {
     short field_c;
     int field_T;
     short[] field_r;
-    static wi field_u;
+    static PlatformTaskDispatcher field_u;
     short[] field_K;
     short[] field_R;
     short field_D;

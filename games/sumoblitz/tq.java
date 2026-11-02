@@ -80,7 +80,7 @@ final class tq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (oc.field_e <= in.field_z) {
-            hb.a(param1, -1);
+            GameKeyHandler.a(param1, -1);
             oc.field_e = (int)((double)oc.field_e + 1.5 * (double)oc.field_e);
           }
           if (param0 == -106) {

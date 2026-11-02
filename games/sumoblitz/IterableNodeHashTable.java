@@ -3,45 +3,45 @@
  */
 import java.util.*;
 
-final class um implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     int field_d;
-    ms[] field_c;
-    private ms field_b;
-    private ms field_a;
+    IntrusiveNode[] field_c;
+    private IntrusiveNode field_b;
+    private IntrusiveNode field_a;
     private int field_e;
 
     final static void b(int param0) {
-        if (null != vv.field_b) {
-          vv.field_b.field_g = false;
+        if (null != SecondaryNodeDequeIterator.field_b) {
+          SecondaryNodeDequeIterator.field_b.field_g = false;
         }
         jl.a(25, param0);
     }
 
-    final ms c(int param0) {
+    final IntrusiveNode c(int param0) {
         this.field_e = 0;
         if (param0 != -1) {
-          this.field_c = (ms[]) null;
+          this.field_c = (IntrusiveNode[]) null;
           return this.a(param0 + 0);
         }
         return this.a(param0 + 0);
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ia(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final ms a(int param0, long param1) {
-        ms var5 = null;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
-        ms var4 = this.field_c[(int)(param1 & (long)(-1 + this.field_d))];
-        this.field_a = var4.field_b;
+        IntrusiveNode var4 = this.field_c[(int)(param1 & (long)(-1 + this.field_d))];
+        this.field_a = var4.next;
         while (var4 != this.field_a) {
-          if (~param1 == ~this.field_a.field_h) {
+          if (~param1 == ~this.field_a.key) {
             var5 = this.field_a;
-            this.field_a = this.field_a.field_b;
+            this.field_a = this.field_a.next;
             return var5;
           }
-          this.field_a = this.field_a.field_b;
+          this.field_a = this.field_a.next;
         }
         this.field_a = null;
         if (param0 == 575) {
@@ -51,37 +51,37 @@ final class um implements Iterable {
         return null;
     }
 
-    final void a(int param0, ms param1, long param2) {
-        ms var5 = null;
+    final void a(int param0, IntrusiveNode param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param1.field_g != null) {
+          if (param1.previous != null) {
             param1.b(false);
           }
           if (param0 != -20657) {
             this.field_d = -114;
           }
           var5 = this.field_c[(int)((long)(this.field_d - 1) & param2)];
-          param1.field_g = var5.field_g;
-          param1.field_b = var5;
-          param1.field_g.field_b = param1;
-          param1.field_h = param2;
-          param1.field_b.field_g = param1;
+          param1.previous = var5.previous;
+          param1.next = var5;
+          param1.previous.next = param1;
+          param1.key = param2;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "um.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final ms a(int param0) {
+    final IntrusiveNode a(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        ms var4;
-        ms var5;
-        ms var6;
-        ms var9;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var6;
+        IntrusiveNode var9;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (param0 != -1) {
-          return (ms) null;
+          return (IntrusiveNode) null;
         }
         if (this.field_e <= 0) {
           do {
@@ -90,15 +90,15 @@ final class um implements Iterable {
             }
             fieldTemp$1 = this.field_e;
             this.field_e = this.field_e + 1;
-            var4 = this.field_c[fieldTemp$1].field_b;
+            var4 = this.field_c[fieldTemp$1].next;
             var5 = var4;
           } while (var4 == this.field_c[-1 + this.field_e]);
-          this.field_b = var5.field_b;
+          this.field_b = var5.next;
           return var5;
         }
         if (this.field_b != this.field_c[-1 + this.field_e]) {
           var9 = this.field_b;
-          this.field_b = var9.field_b;
+          this.field_b = var9.next;
           return var9;
         }
         do {
@@ -107,10 +107,10 @@ final class um implements Iterable {
           }
           fieldTemp$0 = this.field_e;
           this.field_e = this.field_e + 1;
-          var4 = this.field_c[fieldTemp$0].field_b;
+          var4 = this.field_c[fieldTemp$0].next;
           var6 = var4;
         } while (var4 == this.field_c[-1 + this.field_e]);
-        this.field_b = var6.field_b;
+        this.field_b = var6.next;
         return var6;
     }
 
@@ -118,7 +118,7 @@ final class um implements Iterable {
         java.awt.Graphics var4 = null;
         if (param3 <= 123) {
           java.awt.Canvas var5 = (java.awt.Canvas) null;
-          um.a(-16, -25, (java.awt.Canvas) null, (byte) 50);
+          IterableNodeHashTable.a(-16, -25, (java.awt.Canvas) null, (byte) 50);
         }
         try {
           var4 = param2.getGraphics();
@@ -129,19 +129,19 @@ final class um implements Iterable {
         }
     }
 
-    um(int param0) {
+    IterableNodeHashTable(int param0) {
         int var2 = 0;
-        ms dupTemp$1 = null;
-        ms var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_e = 0;
-        this.field_c = new ms[param0];
+        this.field_c = new IntrusiveNode[param0];
         this.field_d = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new ms();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_c[var2] = dupTemp$1;
-          var3.field_g = var3;
-          var3.field_b = var3;
+          var3.previous = var3;
+          var3.next = var3;
         }
     }
 

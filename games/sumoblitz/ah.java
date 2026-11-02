@@ -330,13 +330,13 @@ class ah {
             var9 = kt.a((byte) -99, var5, (float)this.field_s);
             var6 = var9;
             var2 = var6;
-            this.field_q.a((ms) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var9[0] << 8, (int)var9[1] << 8, this.field_Q, 0, this.e((byte) -5) >> 8)), (byte) 39);
+            this.field_q.a((IntrusiveNode) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var9[0] << 8, (int)var9[1] << 8, this.field_Q, 0, this.e((byte) -5) >> 8)), (byte) 39);
             var10 = kt.a((byte) -16, var2, (float)(this.field_s + 2.0943951023931953));
             var7 = var10;
             var2Lifetime1 = var7;
-            this.field_q.a((ms) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var10[0] << 8, (int)var10[1] << 8, this.field_Q, 1, this.e((byte) -5) >> 8)), (byte) 39);
+            this.field_q.a((IntrusiveNode) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var10[0] << 8, (int)var10[1] << 8, this.field_Q, 1, this.e((byte) -5) >> 8)), (byte) 39);
             var13 = kt.a((byte) -43, var2Lifetime1, (float)(4.1887902047863905 + this.field_s));
-            this.field_q.a((ms) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var13[0] << 8, (int)var13[1] << 8, this.field_Q, 2, this.e((byte) -5) >> 8)), (byte) 39);
+            this.field_q.a((IntrusiveNode) (new aj(100, this.field_C, this.field_z, this.a(0), this.field_s, Math.random() / 100.0, (int)var13[0] << 8, (int)var13[1] << 8, this.field_Q, 2, this.e((byte) -5) >> 8)), (byte) 39);
           }
         }
         if (!this.g(73)) {
@@ -379,9 +379,9 @@ class ah {
             this.b(677397768);
           }
           if (this.field_k % 2 != 0) {
-            this.field_q.a((ms) (new eq(50, this.field_C + (fi.a(2048, he.field_o, (byte) -96) - 1024) >> 8, -1024 + (this.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.a(0), this.field_M + 1, true)), (byte) 39);
+            this.field_q.a((IntrusiveNode) (new eq(50, this.field_C + (fi.a(2048, he.field_o, (byte) -96) - 1024) >> 8, -1024 + (this.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.a(0), this.field_M + 1, true)), (byte) 39);
           } else {
-            this.field_q.a((ms) (new eq(50, -1024 + this.field_C + fi.a(2048, he.field_o, (byte) -96) >> 8, -1024 + (this.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.a(0), 1 + this.field_M, false)), (byte) 39);
+            this.field_q.a((IntrusiveNode) (new eq(50, -1024 + this.field_C + fi.a(2048, he.field_o, (byte) -96) >> 8, -1024 + (this.field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.a(0), 1 + this.field_M, false)), (byte) 39);
           }
         }
         var4 = (nt) (this.field_q.b(118));

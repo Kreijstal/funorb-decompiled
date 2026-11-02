@@ -82,7 +82,7 @@ class ff extends en {
               var13 = var14;
               var11 = var13;
               var8Lifetime2 = var11;
-              param3.a((ms) (new vi(128, param0, param2, param4, (int)var14[0] << 8, (int)var14[1] << 8, 0)), (byte) 39);
+              param3.a((IntrusiveNode) (new vi(128, param0, param2, param4, (int)var14[0] << 8, (int)var14[1] << 8, 0)), (byte) 39);
               var7++;
               continue;
             }
@@ -98,7 +98,7 @@ class ff extends en {
             dupTemp$0 = kt.a((byte) -126, var8Lifetime1, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7Lifetime1) + 0.0));
             var12 = dupTemp$0;
             var8Lifetime1Lifetime1 = dupTemp$0;
-            param3.a((ms) (new vi(128, param0, param2, param4, (int)var12[0] << 8, (int)var12[1] << 8, 1)), (byte) 39);
+            param3.a((IntrusiveNode) (new vi(128, param0, param2, param4, (int)var12[0] << 8, (int)var12[1] << 8, 1)), (byte) 39);
             var7Lifetime1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -178,9 +178,9 @@ class ff extends en {
           rc.field_l[9] = eb.field_b.b(0, "accelerator_pad_4");
           rc.field_l[11] = eb.field_b.b(0, "attractor_pulse_loop");
           rc.field_l[12] = eb.field_b.b(0, "repeller_pulse_loop");
-          fh.field_n[0] = mf.a(rc.field_l[4], 100, 96);
-          fh.field_n[1] = mf.a(rc.field_l[11], 100, 96);
-          fh.field_n[2] = mf.a(rc.field_l[12], 100, 96);
+          ImageProducerRasterBuffer.field_n[0] = mf.a(rc.field_l[4], 100, 96);
+          ImageProducerRasterBuffer.field_n[1] = mf.a(rc.field_l[11], 100, 96);
+          ImageProducerRasterBuffer.field_n[2] = mf.a(rc.field_l[12], 100, 96);
           rc.field_l[17] = eb.field_b.b(0, "menu_mouseover");
           rc.field_l[18] = eb.field_b.b(0, "multiplier_upgrade");
           rc.field_l[19] = eb.field_b.b(0, "npc_bomb_charge_and_explode1");

@@ -16,7 +16,7 @@ final class uc {
         return -jt.field_x + wq.a(param0 - 26634);
     }
 
-    final static boolean a(byte param0, wi param1) {
+    final static boolean a(byte param0, PlatformTaskDispatcher param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;

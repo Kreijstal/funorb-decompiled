@@ -39,7 +39,7 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final void a(boolean param0, wi param1) {
+    final void a(boolean param0, PlatformTaskDispatcher param1) {
         try {
           wj.a(this.field_b, param1, param0);
         } catch (RuntimeException runtimeException) {

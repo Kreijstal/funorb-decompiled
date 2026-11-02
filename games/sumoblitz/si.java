@@ -160,7 +160,7 @@ final class si extends nn {
         try {
           za.field_l[param5] = param2;
           nj.field_d[param5] = param6;
-          pj.field_k[param5] = param0;
+          DualLinkNode.field_k[param5] = param0;
           rh.field_s[param5] = param1;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "si.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');

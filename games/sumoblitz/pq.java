@@ -102,7 +102,7 @@ final class pq extends pk {
             lk.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
-        su.a((byte) -94);
+        ClientException.a((byte) -94);
         return var3;
     }
 
@@ -138,7 +138,7 @@ final class pq extends pk {
           lk.f(-this.field_H + var7, var6, this.field_H, var12Lifetime1);
         }
         var6Lifetime1 = 21 % ((param1 + 50) / 32);
-        su.a((byte) 44);
+        ClientException.a((byte) 44);
         return var14;
     }
 
@@ -162,13 +162,13 @@ final class pq extends pk {
           if (param2 != 256) {
             this.field_J = true;
           }
-          su.a((byte) -51);
+          ClientException.a((byte) -51);
           if (param3 + this.field_M.field_x >= lk.field_k) {
             jq.a(param2 + 6905, this.field_E);
             param0.a(-this.field_A, 0);
             param0.a(this.field_H * 2 - this.field_A, 0);
             this.field_G.d(0, 0);
-            su.a((byte) -105);
+            ClientException.a((byte) -105);
             this.field_E.a(param3, param1);
           }
           if (lk.field_j >= -this.field_M.field_x + var5_int) {
@@ -178,7 +178,7 @@ final class pq extends pk {
             param0.a(-var7, 0);
             param0.a(2 * this.field_H - var7, 0);
             this.field_M.d(0, 0);
-            su.a((byte) 106);
+            ClientException.a((byte) 106);
             this.field_E.a(var5_int - this.field_M.field_x, param1);
             return;
           }
@@ -241,7 +241,7 @@ final class pq extends pk {
         if (this.field_I < 65536) {
           kw.a(var6 + this.field_p, var6, 1, var5 + (this.field_I * this.field_q >> 16), this.field_q + var5);
           this.a(this.field_z[1], var6, 256, var5);
-          su.a((byte) -110);
+          ClientException.a((byte) -110);
         }
     }
 

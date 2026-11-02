@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fn extends kc {
+abstract class fn extends GameApplet {
     private int field_r;
     private int field_w;
     private int field_E;
@@ -19,22 +19,22 @@ abstract class fn extends kc {
     private boolean field_B;
 
     private final void p(int param0) {
-        ov.field_e[1] = 16;
-        ov.field_e[13] = -1;
-        ov.field_e[16] = -1;
-        ov.field_e[4] = -1;
-        ov.field_e[9] = param0;
-        ov.field_e[6] = -2;
-        ov.field_e[12] = -1;
-        ov.field_e[10] = -1;
-        ov.field_e[11] = -1;
-        ov.field_e[5] = -1;
-        ov.field_e[17] = -1;
-        ov.field_e[18] = 1;
-        ov.field_e[3] = -1;
-        ov.field_e[7] = -1;
-        ov.field_e[2] = -2;
-        ov.field_e[8] = -2;
+        RasterBuffer.field_e[1] = 16;
+        RasterBuffer.field_e[13] = -1;
+        RasterBuffer.field_e[16] = -1;
+        RasterBuffer.field_e[4] = -1;
+        RasterBuffer.field_e[9] = param0;
+        RasterBuffer.field_e[6] = -2;
+        RasterBuffer.field_e[12] = -1;
+        RasterBuffer.field_e[10] = -1;
+        RasterBuffer.field_e[11] = -1;
+        RasterBuffer.field_e[5] = -1;
+        RasterBuffer.field_e[17] = -1;
+        RasterBuffer.field_e[18] = 1;
+        RasterBuffer.field_e[3] = -1;
+        RasterBuffer.field_e[7] = -1;
+        RasterBuffer.field_e[2] = -2;
+        RasterBuffer.field_e[8] = -2;
     }
 
     private final void d(byte param0) {
@@ -58,13 +58,13 @@ abstract class fn extends kc {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        if (vv.field_b != null) {
+        if (SecondaryNodeDequeIterator.field_b != null) {
           if (null == gk.field_o) {
             var6 = km.c(false);
             var4 = var6.getSize();
-            vv.field_b.a(var4.height, var4.width, (byte) -123);
+            SecondaryNodeDequeIterator.field_b.a(var4.height, var4.width, (byte) -123);
           }
-          vv.field_b.d(2);
+          SecondaryNodeDequeIterator.field_b.d(2);
         }
         c.a((byte) 124);
         au.d(123);
@@ -101,7 +101,7 @@ abstract class fn extends kc {
             gr.field_l == 0 &&
             11 == jv.field_a &&
             !en.a(-23517)) {
-            ov.b(2);
+            RasterBuffer.b(2);
           }
           if (gr.field_l != -1 &&
             0 != gr.field_l) {
@@ -298,14 +298,14 @@ abstract class fn extends kc {
             this.a("reconnect", 21253);
           }
           we.a((byte) 63);
-          rj.a((byte) 114, var2, ns.field_c);
+          rj.a((byte) 114, var2, MouseWheelInput.field_c);
           ts.field_d = true;
           sj.field_a = 15000L + wq.a(-50);
           return var2;
         }
         if (jv.field_a == 11 &&
           gr.field_l == 0) {
-          ov.b(2);
+          RasterBuffer.b(2);
         }
         return var2;
     }
@@ -387,7 +387,7 @@ abstract class fn extends kc {
                                 bq.a(8192);
                                 return;
                               }
-                              ms.a("MGS1: " + di.b((byte) -22), (Throwable) null, 0);
+                              IntrusiveNode.a("MGS1: " + di.b((byte) -22), (Throwable) null, 0);
                               kk.a((byte) -128);
                               return;
                             }
@@ -417,7 +417,7 @@ abstract class fn extends kc {
           }
           return;
         }
-        ms.a("MGS2: " + di.b((byte) 86), (Throwable) null, 0);
+        IntrusiveNode.a("MGS2: " + di.b((byte) 86), (Throwable) null, 0);
         kk.a((byte) -112);
         return;
     }
@@ -580,7 +580,7 @@ abstract class fn extends kc {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
-            ms.a((String) null, (Throwable) ((Object) var6_ref), param1 ^ 0);
+            IntrusiveNode.a((String) null, (Throwable) ((Object) var6_ref), param1 ^ 0);
             this.a("crash", 21253);
           }
           return;
@@ -609,7 +609,7 @@ abstract class fn extends kc {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          fs var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Sumoblitz.field_L ? 1 : 0;
@@ -623,8 +623,8 @@ abstract class fn extends kc {
           if (var4 == 1) {
             var5_int = tn.a(ht.c(true), 0, qt.a((byte) 21));
             if (var5_int != -1) {
-              jv.a(var5_int, mn.field_g, ns.field_c, true);
-              ns.field_c = null;
+              jv.a(var5_int, mn.field_g, MouseWheelInput.field_c, true);
+              MouseWheelInput.field_c = null;
               mn.field_g = null;
             }
             var11 = li.c(82);
@@ -635,8 +635,8 @@ abstract class fn extends kc {
           if (var4 == 2) {
             var5_intLifetime1 = rs.a(oj.b(-98), gi.c((byte) -2), eu.a((byte) -97), of.c(-86), this.field_w, 119, rw.c((byte) -109));
             if (var5_intLifetime1 != -1) {
-              Sumoblitz.a(mn.field_g, param0 ^ 16984, var5_intLifetime1, ns.field_c);
-              ns.field_c = null;
+              Sumoblitz.a(mn.field_g, param0 ^ 16984, var5_intLifetime1, MouseWheelInput.field_c);
+              MouseWheelInput.field_c = null;
               mn.field_g = null;
             }
           }
@@ -653,12 +653,12 @@ abstract class fn extends kc {
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 == 0) {
                   km.field_k = lb.field_a;
-                  ov.b(2);
+                  RasterBuffer.b(2);
                   jv.field_a = 10;
-                  ms.field_a = false;
+                  IntrusiveNode.field_a = false;
                 } else {
-                  rj.a((byte) -118, var5_intLifetime2, ns.field_c);
-                  ns.field_c = null;
+                  rj.a((byte) -118, var5_intLifetime2, MouseWheelInput.field_c);
+                  MouseWheelInput.field_c = null;
                 }
               }
             }
@@ -667,7 +667,7 @@ abstract class fn extends kc {
             if (qn.field_a) {
               gt.a(-1540, ra.c(param0 ^ 16983));
             } else {
-              ms.field_a = true;
+              IntrusiveNode.field_a = true;
               jv.field_a = 10;
             }
           }
@@ -698,27 +698,27 @@ abstract class fn extends kc {
           }
           if (var4 == 13) {
             try {
-              if (null == ms.field_e) {
-                ms.field_e = new cc(lt.field_m, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (null == IntrusiveNode.field_e) {
+                IntrusiveNode.field_e = new cc(lt.field_m, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (ms.field_e.a((byte) -110)) {
-                var12 = ms.field_e.b((byte) 126);
+              if (IntrusiveNode.field_e.a((byte) -110)) {
+                var12 = IntrusiveNode.field_e.b((byte) 126);
                 if (var12 != null) {
-                  var7 = sd.a(var12.field_n, 0, var12.field_p, 26564);
+                  var7 = sd.a(var12.payload, 0, var12.position, 26564);
                   ha.a((byte) 115, var7);
                 } else {
                   var9 = (String) null;
                   ha.a((byte) 122, (String) null);
                 }
-                ms.field_e = null;
+                IntrusiveNode.field_e = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              ms.a("S1", (Throwable) ((Object) var5), 0);
+              IntrusiveNode.a("S1", (Throwable) ((Object) var5), 0);
               var10 = (String) null;
               ha.a((byte) 111, (String) null);
-              ms.field_e = null;
+              IntrusiveNode.field_e = null;
             }
           }
           if (15 == var4) {
@@ -767,7 +767,7 @@ abstract class fn extends kc {
         dk.field_c = this.field_v;
         jq.a(dk.field_c, 13586);
         tm.a(param0, (byte) 84, lt.field_m, 5000, this.field_E, param1, this.field_C, this.field_r, 5000, this.field_D, this.field_q, this.field_x, dk.field_c, this.field_y);
-        fs.a(lt.field_m, this.field_r, this.field_E, this.field_D, (byte) -56, this.field_C, this.field_x, param1, dk.field_c);
+        PacketBuffer.a(lt.field_m, this.field_r, this.field_E, this.field_D, (byte) -56, this.field_C, this.field_x, param1, dk.field_c);
         rp.a(false);
         as.field_w = dk.a((byte) -126);
         int var10 = -116 / ((2 - param2) / 36);

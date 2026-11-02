@@ -55,7 +55,7 @@ final class gi extends bq {
     }
 
     final static String c(byte param0) {
-        if (nw.field_e == ad.field_p) {
+        if (ProxySocketConnector.field_e == ad.field_p) {
           return vr.field_G;
         }
         if (vm.field_c == ad.field_p) {

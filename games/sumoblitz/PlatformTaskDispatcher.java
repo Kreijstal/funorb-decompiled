@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class wi implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     private static int field_j;
     java.awt.EventQueue field_g;
     private static volatile long field_c;
@@ -42,7 +42,7 @@ final class wi implements Runnable {
           String var9 = null;
           if (!param1) {
             var9 = (String) null;
-            wi.a((String) null, true, (String) null, 127);
+            PlatformTaskDispatcher.a((String) null, true, (String) null, 127);
           }
           if (param3 != 33) {
             if (34 == param3) {
@@ -255,7 +255,7 @@ final class wi implements Runnable {
                   case 16:
                   default:
                     if (!this.field_f) {
-                      throw wi.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 6:
@@ -269,7 +269,7 @@ final class wi implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref = wi.a("", true, (String) (var8.field_a), field_j);
+                        var3_ref = PlatformTaskDispatcher.a("", true, (String) (var8.field_a), field_j);
                         var8.field_d = var3_ref;
                         break;
                       case 16:
@@ -303,21 +303,21 @@ final class wi implements Runnable {
                           Class.forName("cg").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_v, new Object[]{var15[0], var15[1], new Integer(var8.field_g), new Integer(var8.field_e), var15[2]});
                         } else {
                           if (16 != var2_int) {
-                            throw wi.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_o.startsWith("win")) {
-                              throw wi.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var16_ref = (String) (var8.field_a);
                             if (!var16_ref.startsWith("http://") &&
                               !var16_ref.startsWith("https://")) {
-                              throw wi.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var16_ref.length() > var5; var5++) {
                               if (var4_ref_String.indexOf((int) var16_ref.charAt(var5)) == -1) {
-                                throw wi.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var16_ref + "\"");
@@ -326,12 +326,12 @@ final class wi implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref2 = (Exception) (Object) decompiledCaughtException;
                             var8.field_d = var3_ref2;
-                            throw wi.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
                           }
                         }
                         break;
                       case 12:
-                        var3_ref = wi.a(field_p, true, (String) (var8.field_a), field_j);
+                        var3_ref = PlatformTaskDispatcher.a(field_p, true, (String) (var8.field_a), field_j);
                         var8.field_d = var3_ref;
                         break;
                       case 7:
@@ -516,7 +516,7 @@ final class wi implements Runnable {
         return this.a((Object) null, param1 + (param2 << 16), param4 + (param3 << 16), false, 6);
     }
 
-    wi(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         int var8 = 0;
         Exception exception = null;

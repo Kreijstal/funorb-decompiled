@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class za extends ms {
+abstract class za extends IntrusiveNode {
     static int field_k;
     static int[] field_l;
 

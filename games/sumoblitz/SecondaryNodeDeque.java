@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-final class hl implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static ki field_d;
-    pj field_c;
+    DualLinkNode field_c;
     static volatile int field_b;
     static boolean field_e;
-    private pj field_a;
+    private DualLinkNode field_a;
 
-    final pj b(byte param0) {
-        pj var2 = null;
-        pj var2Lifetime1;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != -61) {
-          hl.a(102);
+          SecondaryNodeDeque.a(102);
           var2 = this.field_c.field_m;
           if (var2 != this.field_c) {
             var2.c(param0 - 5045);
@@ -30,18 +30,18 @@ final class hl implements Iterable {
         return null;
     }
 
-    private final pj a(pj param0, int param1) {
-        pj var3 = null;
+    private final DualLinkNode a(DualLinkNode param0, int param1) {
+        DualLinkNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        pj stackIn_10_0 = null;
+        DualLinkNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1) {
-            hl.a(-51);
+            SecondaryNodeDeque.a(-51);
           }
           if (param0 == null) {
             var3 = this.field_c.field_m;
@@ -51,7 +51,7 @@ final class hl implements Iterable {
           if (var3 == this.field_c) {
             this.field_a = null;
             stackIn_8_0 = null;
-            return (pj) (stackIn_8_0);
+            return (DualLinkNode) (stackIn_8_0);
           }
           this.field_a = var3.field_m;
           stackIn_10_0 = var3;
@@ -71,25 +71,25 @@ final class hl implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new vv(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     public static void a(int param0) {
         field_d = null;
         if (param0 >= -59) {
-          hl.a(-11);
+          SecondaryNodeDeque.a(-11);
         }
     }
 
-    final pj b(int param0) {
+    final DualLinkNode b(int param0) {
         if (param0 != -1) {
-          return (pj) null;
+          return (DualLinkNode) null;
         }
-        return this.a((pj) null, param0 + 0);
+        return this.a((DualLinkNode) null, param0 + 0);
     }
 
-    final pj a(byte param0) {
-        pj var2 = this.field_a;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_a;
         if (this.field_c == var2) {
           this.field_a = null;
           return null;
@@ -98,16 +98,16 @@ final class hl implements Iterable {
           this.field_a = var2.field_m;
           return var2;
         }
-        return (pj) null;
+        return (DualLinkNode) null;
     }
 
-    hl() {
-        this.field_c = new pj();
+    SecondaryNodeDeque() {
+        this.field_c = new DualLinkNode();
         this.field_c.field_o = this.field_c;
         this.field_c.field_m = this.field_c;
     }
 
-    final void a(pj param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         if (param0.field_o != null) {
           param0.c(-5106);
         }

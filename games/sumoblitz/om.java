@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om extends ms {
+final class om extends IntrusiveNode {
     private wc[] field_o;
     static String field_n;
     static boolean field_l;

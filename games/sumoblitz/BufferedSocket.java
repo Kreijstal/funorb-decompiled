@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class dt implements Runnable {
+final class BufferedSocket implements Runnable {
     static ri field_n;
     private byte[] field_e;
     static jr field_p;
@@ -14,7 +14,7 @@ final class dt implements Runnable {
     private OutputStream field_k;
     static String[] field_i;
     static String field_h;
-    private wi field_g;
+    private PlatformTaskDispatcher field_g;
     private int field_a;
     static boolean field_f;
     private java.net.Socket field_m;
@@ -117,7 +117,7 @@ final class dt implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            ms.a((String) null, (Throwable) ((Object) var1_ref), 0);
+            IntrusiveNode.a((String) null, (Throwable) ((Object) var1_ref), 0);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -149,7 +149,7 @@ final class dt implements Runnable {
             return;
           }
           if (param0 >= -36) {
-            this.field_g = (wi) null;
+            this.field_g = (PlatformTaskDispatcher) null;
           }
           synchronized (this) {
             this.field_l = true;
@@ -237,11 +237,11 @@ final class dt implements Runnable {
         }
     }
 
-    dt(java.net.Socket param0, wi param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
-    private dt(java.net.Socket param0, wi param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_c = 0;
         this.field_l = false;
         this.field_b = false;
@@ -261,7 +261,7 @@ final class dt implements Runnable {
 
     public static void d(int param0) {
         if (param0 <= 19) {
-          dt.d(-53);
+          BufferedSocket.d(-53);
         }
         field_i = null;
         field_h = null;

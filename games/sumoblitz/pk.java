@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class pk extends ms {
+class pk extends IntrusiveNode {
     String field_t;
     boolean field_k;
     int field_q;
@@ -263,7 +263,7 @@ class pk extends ms {
           }
           return;
         }
-        ah.field_g = kc.c(-5204);
+        ah.field_g = GameApplet.c(-5204);
         if (null != ah.field_g) {
           pd.a(ah.field_g, 6, 5412);
           if (param0 >= -15) {
@@ -381,7 +381,7 @@ class pk extends ms {
             }
           }
         } else {
-          L0: {
+          regionExit1: {
             if (param2) {
               if (0 != pn.field_r &&
                 var5 != 0) {
@@ -553,10 +553,10 @@ class pk extends ms {
                 param2 = false;
               }
               if (ar.field_G != 0) {
-                break L0;
+                break regionExit1;
               }
               if (ml.field_l == 0) {
-                break L0;
+                break regionExit1;
               }
               this.a(this, false, param1, pi.field_e, ko.field_p, param0);
               var14 = gt.field_gb;
@@ -592,7 +592,7 @@ class pk extends ms {
                 return param2;
               }
               if (var7 == 0) {
-                break L0;
+                break regionExit1;
               }
             }
             if (var5 != 0) {

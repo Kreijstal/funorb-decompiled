@@ -113,7 +113,7 @@ final class ea {
         try {
           ro.b(246);
           vm.field_c = hm.field_a;
-          nw.field_e = hm.field_a;
+          ProxySocketConnector.field_e = hm.field_a;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

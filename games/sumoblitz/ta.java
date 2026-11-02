@@ -131,7 +131,7 @@ final class ta {
                       decompiledFrameRemainder0 = false;
                     }
                     else {
-                      L9: {
+                      regionExit1: {
                         if (!var19.equals("lt")) {
                           if (var19.equals("gt")) {
                             var17 = var17 + this.a(62, (byte) -53);
@@ -155,10 +155,10 @@ final class ta {
                                     if (!var19.equals("copy")) {
                                       if (!var19.equals("reg")) {
                                         if (!var19.startsWith("img=")) {
-                                          break L9;
+                                          break regionExit1;
                                         }
                                         if (param4 == null) {
-                                          break L9;
+                                          break regionExit1;
                                         }
                                         try {
                                           var20_int = no.a((byte) -128, (CharSequence) ((Object) var19.substring(4)));
@@ -171,7 +171,7 @@ final class ta {
                                           decompiledRegionSelector0 = 0;
                                         }
                                         if (decompiledRegionSelector0 == 0) {
-                                          break L9;
+                                          break regionExit1;
                                         }
                                       }
                                       var17 = var17 + this.a(174, (byte) -53);
@@ -214,7 +214,7 @@ final class ta {
                               var12 = 160;
                             }
                           }
-                          break L9;
+                          break regionExit1;
                         }
                         var17 = var17 + this.a(60, (byte) -53);
                         if (this.field_j != null &&
@@ -712,7 +712,7 @@ final class ta {
         StringBuilder stackIn_82_1 = null;
         String stackIn_83_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fs var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -734,7 +734,7 @@ final class ta {
         int var9Lifetime2;
         var12 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2 = new fs(param0);
+          var2 = new PacketBuffer(param0);
           var3 = var2.e(-31302);
           if (var3 != 0) {
             throw new RuntimeException("");
@@ -769,14 +769,14 @@ final class ta {
             }
             var7 = new byte[256][];
             var8_int = 0;
-            L10: while (true) {
+            scanLoop1: while (true) {
               if (var8_int < 256) {
                 array$0 = new byte[var5[var8_int]];
                 var7[var8_int] = array$0;
                 var9 = 0;
                 stackIn_36_0 = 0;
                 if (var12 != 0) {
-                  break L10;
+                  break scanLoop1;
                 }
                 var10 = stackIn_36_0;
                 while (var10 < var7[var8_int].length) {
@@ -792,14 +792,14 @@ final class ta {
             }
             var8 = new byte[stackIn_36_0][];
             var9Lifetime1 = 0;
-            L16: while (true) {
+            scanLoop2: while (true) {
               if (var9Lifetime1 < 256) {
                 array$1 = new byte[var5[var9Lifetime1]];
                 var8[var9Lifetime1] = array$1;
                 var10Lifetime1 = 0;
                 stackIn_48_0 = 0;
                 if (var12 != 0) {
-                  break L16;
+                  break scanLoop2;
                 }
                 var11 = stackIn_48_0;
                 while (var8[var9Lifetime1].length > var11) {

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fw extends ms {
+final class fw extends IntrusiveNode {
     ha field_k;
     static wb[] field_m;
     pm field_l;

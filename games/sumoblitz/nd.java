@@ -134,13 +134,13 @@ final class nd extends ao {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        fs var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new fs(param1);
+          var9 = new PacketBuffer(param1);
           var3 = var9.e(-31302);
           var4 = var9.c(true);
           if (0 <= var4 && (bn.field_R == 0 ||
@@ -226,11 +226,11 @@ final class nd extends ao {
             kw.field_c = lr.field_b;
           } else {
             try {
-              qk.field_O = new dt((java.net.Socket) (tm.field_a.field_d), jt.field_t);
+              qk.field_O = new BufferedSocket((java.net.Socket) (tm.field_a.field_d), jt.field_t);
               var4 = ig.field_a;
               var5 = var4;
-              as.field_v.field_p = 0;
-              var5.field_p = 0;
+              as.field_v.position = 0;
+              var5.position = 0;
               li.field_r = param1 ? -2 : -1;
               vb.field_I = param1 ? -2 : -1;
               ur.field_Q = param1 ? -2 : -1;

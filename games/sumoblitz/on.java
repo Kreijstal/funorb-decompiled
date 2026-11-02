@@ -173,12 +173,12 @@ final class on extends aw {
     }
 
     final synchronized void a(int param0, long param1) {
-        ms var4 = new ms();
+        IntrusiveNode var4 = new IntrusiveNode();
         if (param0 != 33984) {
           int[] var5 = (int[]) null;
           this.SA(-105, -54, 124, -38, (int[]) null, -85, -29);
         }
-        var4.field_h = param1;
+        var4.key = param1;
         this.field_Fc.a(var4, (byte) 39);
     }
 
@@ -209,8 +209,8 @@ final class on extends aw {
         ge var7;
         ge var8;
         ge var9;
-        ms var10;
-        ms var11;
+        IntrusiveNode var10;
+        IntrusiveNode var11;
         ge var12;
         var4 = Sumoblitz.field_L ? 1 : 0;
         param0 = param0 & 2147483647;
@@ -219,7 +219,7 @@ final class on extends aw {
           var5 = (ge) (this.field_Gc.c(9));
           incrementValue$5 = var2;
           var2++;
-          gw.field_A[incrementValue$5] = (int)var5.field_h;
+          gw.field_A[incrementValue$5] = (int)var5.key;
           this.field_o = this.field_o - var5.field_m;
           if (var2 != 1000) {
             continue;
@@ -235,7 +235,7 @@ final class on extends aw {
           var6 = (ge) (this.field_Zc.c(9));
           incrementValue$4 = var2;
           var2++;
-          gw.field_A[incrementValue$4] = (int)var6.field_h;
+          gw.field_A[incrementValue$4] = (int)var6.key;
           this.field_Cb = this.field_Cb - var6.field_m;
           if (var2 != 1000) {
             continue;
@@ -275,7 +275,7 @@ final class on extends aw {
             var8 = (ge) (this.field_Vc.c(9));
             incrementValue$3 = var2;
             var2++;
-            gw.field_A[incrementValue$3] = (int)var8.field_h;
+            gw.field_A[incrementValue$3] = (int)var8.key;
             this.field_pc = this.field_pc - var8.field_m;
             if (var2 != 1000) {
               continue;
@@ -290,7 +290,7 @@ final class on extends aw {
             var8 = (ge) (this.field_Vc.c(9));
             incrementValue$2 = var2;
             var2++;
-            gw.field_A[incrementValue$2] = (int)var8.field_h;
+            gw.field_A[incrementValue$2] = (int)var8.key;
             this.field_pc = this.field_pc - var8.field_m;
             if (var2 != 1000) {
               continue;
@@ -302,19 +302,19 @@ final class on extends aw {
         if (var2 <= 0) {
           while (!this.field_Kc.a((byte) -88)) {
             var9 = (ge) (this.field_Kc.c(9));
-            jaggl.OpenGL.glDeleteLists((int)var9.field_h, var9.field_m);
+            jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_m);
           }
           while (!this.field_Pc.a((byte) -68)) {
             var10 = this.field_Pc.c(9);
-            jaggl.OpenGL.glDeleteProgramARB((int)var10.field_h);
+            jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
           }
           while (!this.field_Fc.a((byte) -95)) {
             var11 = this.field_Fc.c(9);
-            jaggl.OpenGL.glDeleteObjectARB(var11.field_h);
+            jaggl.OpenGL.glDeleteObjectARB(var11.key);
           }
           while (!this.field_Kc.a((byte) -68)) {
             var12 = (ge) (this.field_Kc.c(9));
-            jaggl.OpenGL.glDeleteLists((int)var12.field_h, var12.field_m);
+            jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_m);
           }
           if (!(this.h(64) <= 100663296) &&
             !(wq.a(-117) <= 60000L + this.field_Cc)) {
@@ -326,19 +326,19 @@ final class on extends aw {
           var2 = 0;
           while (!this.field_Kc.a((byte) -88)) {
             var9 = (ge) (this.field_Kc.c(9));
-            jaggl.OpenGL.glDeleteLists((int)var9.field_h, var9.field_m);
+            jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_m);
           }
           while (!this.field_Pc.a((byte) -68)) {
             var10 = this.field_Pc.c(9);
-            jaggl.OpenGL.glDeleteProgramARB((int)var10.field_h);
+            jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
           }
           while (!this.field_Fc.a((byte) -95)) {
             var11 = this.field_Fc.c(9);
-            jaggl.OpenGL.glDeleteObjectARB(var11.field_h);
+            jaggl.OpenGL.glDeleteObjectARB(var11.key);
           }
           while (!this.field_Kc.a((byte) -68)) {
             var12 = (ge) (this.field_Kc.c(9));
-            jaggl.OpenGL.glDeleteLists((int)var12.field_h, var12.field_m);
+            jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_m);
           }
           if (!(this.h(64) <= 100663296) &&
             !(wq.a(-117) <= 60000L + this.field_Cc)) {
@@ -1003,8 +1003,8 @@ final class on extends aw {
 
     final synchronized void a(byte param0, int param1, int param2) {
         ge var4 = new ge(param1);
-        var4.field_h = (long)param2;
-        this.field_Gc.a((ms) (var4), (byte) 39);
+        var4.key = (long)param2;
+        this.field_Gc.a((IntrusiveNode) (var4), (byte) 39);
         if (param0 != -99) {
           this.GA(-33);
         }
@@ -1143,8 +1143,8 @@ final class on extends aw {
     }
 
     final synchronized void a(int param0, byte param1) {
-        ms var3 = new ms();
-        var3.field_h = (long)param0;
+        IntrusiveNode var3 = new IntrusiveNode();
+        var3.key = (long)param0;
         if (param1 != -96) {
           this.b((byte) -39);
         }
@@ -1253,8 +1253,8 @@ final class on extends aw {
           return;
         }
         ge var4 = new ge(param0);
-        var4.field_h = (long)param1;
-        this.field_Zc.a((ms) (var4), (byte) 39);
+        var4.key = (long)param1;
+        this.field_Zc.a((IntrusiveNode) (var4), (byte) 39);
     }
 
     final void x(int param0) {

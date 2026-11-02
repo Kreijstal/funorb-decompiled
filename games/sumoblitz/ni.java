@@ -1169,7 +1169,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("invalidpass", (byte) -23);
                 if (null != var2) {
-                  ov.field_g = uu.a(param0 - 7, var2);
+                  RasterBuffer.field_g = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("retry", (byte) -23);
                 if (var2 != null) {
@@ -1189,7 +1189,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("connectionrestored", (byte) -23);
                 if (var2 != null) {
-                  fh.field_j = uu.a(0, var2);
+                  ImageProducerRasterBuffer.field_j = uu.a(0, var2);
                 }
                 var2 = rc.a("warning_ifyouquit", (byte) -23);
                 if (null != var2) {
@@ -1353,7 +1353,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("creatingyouraccount", (byte) -23);
                 if (var2 != null) {
-                  su.field_c = uu.a(0, var2);
+                  ClientException.field_c = uu.a(0, var2);
                 }
                 var2 = rc.a("create_youmustaccept", (byte) -23);
                 if (var2 != null) {
@@ -1440,7 +1440,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_createanaccount", (byte) -23);
                 if (null != var2) {
-                  ms.field_i = uu.a(param0 ^ 7, var2);
+                  IntrusiveNode.field_i = uu.a(param0 ^ 7, var2);
                 }
                 var2 = rc.a("create_username", (byte) -23);
                 if (var2 != null) {
@@ -1496,11 +1496,11 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_suggestions", (byte) -23);
                 if (null != var2) {
-                  ia.field_a = uu.a(0, var2);
+                  NodeHashTableIterator.field_a = uu.a(0, var2);
                 }
                 var2 = rc.a("create_more_suggestions", (byte) -23);
                 if (var2 != null) {
-                  dt.field_h = uu.a(0, var2);
+                  BufferedSocket.field_h = uu.a(0, var2);
                 }
                 var2 = rc.a("create_select_alternative", (byte) -23);
                 if (null != var2) {
@@ -1708,7 +1708,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("create_emailvalid", (byte) -23);
                 if (var2 != null) {
-                  nw.field_h = uu.a(0, var2);
+                  ProxySocketConnector.field_h = uu.a(0, var2);
                 }
                 var2 = rc.a("create_account_success", (byte) -23);
                 if (null != var2) {
@@ -1908,7 +1908,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("unpacking_music", (byte) -23);
                 if (null != var2) {
-                  su.field_d = uu.a(param0 - 7, var2);
+                  ClientException.field_d = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("unpacking_levels", (byte) -23);
                 if (null != var2) {
@@ -1956,7 +1956,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("highscores", (byte) -23);
                 if (var2 != null) {
-                  os.field_a = uu.a(0, var2);
+                  MouseInputHandler.field_a = uu.a(0, var2);
                 }
                 var2 = rc.a("rankings", (byte) -23);
                 if (var2 != null) {
@@ -1980,7 +1980,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("quit", (byte) -23);
                 if (var2 != null) {
-                  ov.field_d = uu.a(0, var2);
+                  RasterBuffer.field_d = uu.a(0, var2);
                 }
                 var2 = rc.a("login_createaccount", (byte) -23);
                 if (var2 != null) {
@@ -2522,27 +2522,27 @@ final class ni extends rq {
                 }
                 var2 = rc.a("quickchat_shortcut_help,0", (byte) -23);
                 if (null != var2) {
-                  ms.field_j[0] = uu.a(0, var2);
+                  IntrusiveNode.field_j[0] = uu.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,1", (byte) -23);
                 if (null != var2) {
-                  ms.field_j[1] = uu.a(0, var2);
+                  IntrusiveNode.field_j[1] = uu.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,2", (byte) -23);
                 if (var2 != null) {
-                  ms.field_j[2] = uu.a(0, var2);
+                  IntrusiveNode.field_j[2] = uu.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,3", (byte) -23);
                 if (null != var2) {
-                  ms.field_j[3] = uu.a(jg.a(param0, 7), var2);
+                  IntrusiveNode.field_j[3] = uu.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,4", (byte) -23);
                 if (null != var2) {
-                  ms.field_j[4] = uu.a(0, var2);
+                  IntrusiveNode.field_j[4] = uu.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,5", (byte) -23);
                 if (null != var2) {
-                  ms.field_j[5] = uu.a(0, var2);
+                  IntrusiveNode.field_j[5] = uu.a(0, var2);
                 }
                 var2 = rc.a("quickchat_shortcut_keys,0", (byte) -23);
                 if (var2 != null) {
@@ -2722,7 +2722,7 @@ final class ni extends rq {
                 }
                 var2 = rc.a("fs_nonmember", (byte) -23);
                 if (var2 != null) {
-                  ms.field_c = uu.a(0, var2);
+                  IntrusiveNode.field_c = uu.a(0, var2);
                 }
                 var2 = rc.a("fs_button_close", (byte) -23);
                 if (null != var2) {
@@ -2826,11 +2826,11 @@ final class ni extends rq {
                 }
                 var2 = rc.a("rating_mode_long_name,0", (byte) -23);
                 if (null != var2) {
-                  ia.field_c[0] = uu.a(jg.a(param0, 7), var2);
+                  NodeHashTableIterator.field_c[0] = uu.a(jg.a(param0, 7), var2);
                 }
                 var2 = rc.a("rating_mode_long_name,1", (byte) -23);
                 if (var2 != null) {
-                  ia.field_c[1] = uu.a(param0 - 7, var2);
+                  NodeHashTableIterator.field_c[1] = uu.a(param0 - 7, var2);
                 }
                 var2 = rc.a("graphics_config_fixed_size", (byte) -23);
                 if (var2 != null) {
@@ -3096,8 +3096,8 @@ final class ni extends rq {
                   throw qo.a((Throwable) ((Object) stackIn_2612_0), ((StringBuilder) (Object) stackIn_2612_1).append(stackIn_2613_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2621_0 = (!kc.field_o);
-                  kc.field_o = stackIn_2621_0;
+                  stackIn_2621_0 = (!GameApplet.field_o);
+                  GameApplet.field_o = stackIn_2621_0;
                 }
             }
         }

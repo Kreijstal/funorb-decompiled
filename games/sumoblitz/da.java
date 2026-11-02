@@ -109,7 +109,7 @@ abstract class da {
               mn.field_i = mn.field_i & -16777216 | 16777215 & ea.a((byte) -73, var6, 16);
             } else {
               if (param0.equals("/col")) {
-                mn.field_i = 16777215 & fs.field_l | -16777216 & mn.field_i;
+                mn.field_i = 16777215 & PacketBuffer.field_l | -16777216 & mn.field_i;
               }
             }
             if (!param0.startsWith("argb=")) {
@@ -130,7 +130,7 @@ abstract class da {
                                 if (!param0.equals("shad")) {
                                   if (!param0.equals("/shad")) {
                                     if (param0.equals("br")) {
-                                      this.a(fs.field_l, jv.field_b, 60);
+                                      this.a(PacketBuffer.field_l, jv.field_b, 60);
                                     }
                                   } else {
                                     jj.field_b = jv.field_b;
@@ -161,7 +161,7 @@ abstract class da {
                   vo.field_I = -16777216 & mn.field_i | ea.a((byte) -73, var8, 16);
                 }
               } else {
-                mn.field_i = fs.field_l;
+                mn.field_i = PacketBuffer.field_l;
               }
             } else {
               var7 = (CharSequence) ((Object) param0.substring(5));
@@ -541,7 +541,7 @@ abstract class da {
           return;
         }
         try {
-          kc.j(70);
+          GameApplet.j(70);
           var17.d();
           lk.g(0, 0, lk.field_b, lk.field_c);
           var15 = new wb(var9, var9);
@@ -554,7 +554,7 @@ abstract class da {
           var12 = new wb(-(2 * var9) + var17.field_x, var9);
           var12.d();
           var17.c(-var9, 0);
-          su.a((byte) -73);
+          ClientException.a((byte) -73);
           jp.field_j = new wb[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "da.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -577,7 +577,7 @@ abstract class da {
 
     private final void a(int param0, int param1, int param2) {
         lb.field_b = 0;
-        fs.field_l = param0;
+        PacketBuffer.field_l = param0;
         mn.field_i = param0;
         if (param1 == -1) {
           param1 = 0;

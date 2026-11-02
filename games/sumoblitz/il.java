@@ -36,7 +36,7 @@ final class il {
             if (param1 < 0) {
               field_b = (hr) null;
             }
-            var5 = g.a((byte) -126, var3);
+            var5 = SocketConnector.a((byte) -126, var3);
             if (var5 == null) {
               stackIn_14_0 = lh.a(var4, -1);
               return stackIn_14_0;

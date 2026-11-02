@@ -16,11 +16,11 @@ final class qi {
           var1 = as.field_v;
           while (gd.b((byte) 125)) {
             var1.g(8, param0 ^ 0);
-            fieldTemp$0 = var1.field_p + 1;
-            var1.field_p = var1.field_p + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             sd.a(var1, param0 + 119);
-            as.field_v.c(var1.field_p - var2, -13745);
+            as.field_v.c(var1.position - var2, -13745);
           }
           if (param0 == 8) {
             return;

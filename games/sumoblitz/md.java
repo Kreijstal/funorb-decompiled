@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class md extends ms {
+abstract class md extends IntrusiveNode {
     int field_k;
 
     abstract void a();

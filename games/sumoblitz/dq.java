@@ -232,7 +232,7 @@ class dq extends dp {
         this.field_fb = -2147483648;
         this.field_y = false;
         try {
-          this.field_h = param0;
+          this.key = param0;
           this.a(param1, (byte) -128);
           if (param6 != null) {
             this.field_F = param6;

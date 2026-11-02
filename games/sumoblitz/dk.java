@@ -17,16 +17,16 @@ final class dk {
         return (540800 & param0) != 0 ? true : false;
     }
 
-    final static ns a(byte param0) {
+    final static MouseWheelInput a(byte param0) {
         try {
           Throwable var1 = null;
-          ns stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 > -125) {
               field_c = -74;
             }
-            stackIn_3_0 = (ns) (Class.forName("gp").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

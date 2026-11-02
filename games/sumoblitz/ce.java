@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ce extends ms {
+abstract class ce extends IntrusiveNode {
     int field_n;
     static js field_o;
     static ki field_q;

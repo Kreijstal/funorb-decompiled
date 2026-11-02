@@ -7,7 +7,7 @@ final class qk extends hf implements ai {
     private long field_W;
     private wp field_Q;
     private pk field_S;
-    static dt field_O;
+    static BufferedSocket field_O;
     static String field_R;
     static int field_U;
     static ri[] field_V;

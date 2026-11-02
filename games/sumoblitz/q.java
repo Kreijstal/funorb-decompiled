@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class q extends ms {
+final class q extends IntrusiveNode {
     private static float[] field_E;
     private float[] field_P;
     private static int[] field_Q;
@@ -253,7 +253,7 @@ final class q extends ms {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        fs var2 = new fs(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_H = var2.c(true);
         this.field_B = var2.c(true);
         this.field_r = var2.c(true);

@@ -390,7 +390,7 @@ final class cp {
     }
 
     final void b(byte param0) {
-        su.a((byte) -59);
+        ClientException.a((byte) -59);
         if (param0 >= -63) {
           byte[] var3 = (byte[]) null;
           cp.a((byte[]) null, 126);

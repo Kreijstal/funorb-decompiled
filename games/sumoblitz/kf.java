@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends pj implements ft {
+final class kf extends DualLinkNode implements ft {
     int field_x;
     static ah field_u;
     static ki field_v;
@@ -70,10 +70,10 @@ final class kf extends pj implements ft {
         int var2 = 0;
         int var4 = 0;
         int var5 = 0;
-        fs var6 = null;
+        PacketBuffer var6 = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var6 = new fs(ah.field_g);
+          var6 = new PacketBuffer(ah.field_g);
           var2 = var6.e(-31302);
           if (var2 < 1) {
             return;
@@ -186,8 +186,8 @@ final class kf extends pj implements ft {
           this.field_x = param3;
           this.field_A = param2;
           this.field_D = param1;
-          jaggl.OpenGL.glGenRenderbuffersEXT(1, pj.field_q, 0);
-          this.field_y = pj.field_q[0];
+          jaggl.OpenGL.glGenRenderbuffersEXT(1, DualLinkNode.field_q, 0);
+          this.field_y = DualLinkNode.field_q[0];
           jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_y);
           jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_D, this.field_A, this.field_x);
           this.field_s = this.field_A * (this.field_x * this.field_C.d(this.field_D, -72));

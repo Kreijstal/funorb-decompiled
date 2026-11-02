@@ -33,7 +33,7 @@ final class an {
 
     final static void a(int param0, byte param1, hg param2) {
         try {
-          hi.field_f.a((ms) (param2), (byte) 39);
+          hi.field_f.a((IntrusiveNode) (param2), (byte) 39);
           pm.a(param0, 1, param2);
           if (param1 <= 5) {
             field_f = (hr) null;

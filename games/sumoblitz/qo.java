@@ -7,13 +7,13 @@ final class qo {
     static dk field_a;
     private static String field_z;
 
-    final static su a(Throwable param0, String param1) {
-        su var2 = null;
-        if (param0 instanceof su) {
-          var2 = (su) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_a = var2.field_a + ' ' + param1;
         } else {
-          var2 = new su(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }

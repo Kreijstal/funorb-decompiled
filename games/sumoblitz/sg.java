@@ -52,7 +52,7 @@ final class sg {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        fs var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -71,7 +71,7 @@ final class sg {
           if (param1 != -56) {
             return;
           }
-          var17 = new fs(nd.a(-1, param0));
+          var17 = new PacketBuffer(nd.a(-1, param0));
           var4 = var17.e(param1 ^ 31346);
           if (var4 >= 5 &&
             var4 <= 7) {

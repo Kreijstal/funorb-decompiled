@@ -67,7 +67,7 @@ final class sb {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, fs param4) {
+    final static void a(int param0, int param1, int param2, int param3, PacketBuffer param4) {
         try {
           param4.b((byte) 122, 12);
           param4.b(-42, 17);
@@ -105,13 +105,13 @@ final class sb {
         wc[] var4 = null;
         vl[] var5 = null;
         int var6 = 0;
-        fs var6_ref_fs = null;
+        PacketBuffer var6_ref_fs = null;
         Exception var7 = null;
         wc[] var7_array = null;
         wc[] var8 = null;
-        fs var10 = null;
+        PacketBuffer var10 = null;
         int var11 = 0;
-        fs var14 = null;
+        PacketBuffer var14 = null;
         wc[] var16 = null;
         int[] var23 = null;
         int[] var24 = null;
@@ -123,8 +123,8 @@ final class sb {
           cb.field_a = new wc[41];
           var4 = new wc[41];
           for (var5_int = 0; var23.length > var5_int; var5_int++) {
-            var6_ref_fs = new fs(param1.a((byte) 94, var23[var5_int], var2_int));
-            var6_ref_fs.field_p = var6_ref_fs.field_p + 1;
+            var6_ref_fs = new PacketBuffer(param1.a((byte) 94, var23[var5_int], var2_int));
+            var6_ref_fs.position = var6_ref_fs.position + 1;
             var4[var5_int] = wr.a(true, var6_ref_fs, false);
             cb.field_a[var4[var5_int].field_a] = var4[var5_int];
           }
@@ -133,8 +133,8 @@ final class sb {
           var5 = new vl[var24.length];
           dr.field_S = new vl[25];
           for (var6 = 0; var24.length > var6; var6++) {
-            var14 = new fs(param1.a((byte) 98, var24[var6], var2_int));
-            var14.field_p = var14.field_p + 1;
+            var14 = new PacketBuffer(param1.a((byte) 98, var24[var6], var2_int));
+            var14.position = var14.position + 1;
             var5[var6] = pi.a(var14, true, 102);
             if (25 > var5[var6].field_e) {
               dr.field_S[var5[var6].field_e] = var5[var6];
@@ -157,8 +157,8 @@ final class sb {
               var7_array = var16;
               var8 = new wc[var25.length];
               for (var9 = 0; var9 < var25.length; var9++) {
-                var10 = new fs(param1.a((byte) 106, var25[var9], var2_int));
-                var10.field_p = var10.field_p + 1;
+                var10 = new PacketBuffer(param1.a((byte) 106, var25[var9], var2_int));
+                var10.position = var10.position + 1;
                 var7_array[var9] = wr.a(true, var10, false);
                 var8[var16[var9].field_a] = var16[var9];
               }

@@ -209,7 +209,7 @@ final class ou extends na {
           sr.field_d = true;
           cl.field_s = param1;
           if (0 == cl.field_s) {
-            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ms.field_c);
+            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.field_c);
             var4 = 3 + var3_int;
             bf.field_c = new String[var4];
             eb.field_a = new int[var4];
@@ -228,7 +228,7 @@ final class ou extends na {
             eb.field_a[-1 + var4] = 1;
             jo.field_b[1] = 5;
           } else if (cl.field_s == 1) {
-            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, ms.field_c);
+            var3_int = wo.a(mb.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.field_c);
             var4 = var3_int + 2;
             eb.field_a = new int[var4];
             bf.field_c = new String[var4];

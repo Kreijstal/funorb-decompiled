@@ -7,20 +7,20 @@ class jb extends se {
     static int field_e;
     static int field_h;
 
-    final void a(fs param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.a(false, this.field_g);
           param0.a(this.field_f, 27);
           if (param1 > -107) {
-            fs var4 = (fs) null;
-            this.a((fs) null, (byte) -83);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, (byte) -83);
           }
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "jb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static String a(fs param0, int param1, int param2) {
+    final static String a(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -40,7 +40,7 @@ class jb extends se {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.field_p = param0.field_p + ga.field_g.a(0, param0.field_p, var4, 116, var3_int, param0.field_n);
+            param0.position = param0.position + ga.field_g.a(0, param0.position, var4, 116, var3_int, param0.payload);
             var5 = sd.a(var4, 0, var3_int, 26564);
             if (param2 == -14832) {
               stackIn_7_0 = var5;
@@ -158,9 +158,9 @@ class jb extends se {
                 var10 = (String) null;
                 kb.field_d = ds.a(lb.field_a, false, (String) null, param5, false);
               } else {
-                kb.field_d = os.a(false, param0, param5, (byte) -94);
+                kb.field_d = MouseInputHandler.a(false, param0, param5, (byte) -94);
               }
-              as.field_v.field_p = 0;
+              as.field_v.position = 0;
               as.field_v.b((byte) 42, 14);
               as.field_v.b((byte) 96, kb.field_d.a((byte) 126).field_c);
               gt.a(0, -1);
@@ -176,12 +176,12 @@ class jb extends se {
               } else {
                 kw.field_c = sc.field_q;
               }
-              ig.field_a.field_p = 0;
+              ig.field_a.position = 0;
             }
             if (kw.field_c == sc.field_q &&
               ju.b(-1, 8)) {
               oc.field_g = ig.field_a.a((byte) 127);
-              ig.field_a.field_p = 0;
+              ig.field_a.position = 0;
               fb.a(param3, param1, -12793, param4, kb.field_d);
               kw.field_c = jj.field_f;
             }
@@ -190,7 +190,7 @@ class jb extends se {
               ju.b(-1, 1)) {
               var6_intLifetime1 = ig.field_a.e(-31302);
               iw.field_a = var6_intLifetime1;
-              ig.field_a.field_p = 0;
+              ig.field_a.position = 0;
               rp.field_b = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -295,7 +295,7 @@ class jb extends se {
               if (7 == iw.field_a) {
                 iw.field_a = 3;
               }
-              ns.field_c = ig.field_a.d(-1);
+              MouseWheelInput.field_c = ig.field_a.d(-1);
               sr.field_g = false;
               stackIn_83_0 = iw.field_a;
               return stackIn_83_0;
@@ -303,9 +303,9 @@ class jb extends se {
             if (qk.field_O == null) {
               if (sr.field_g) {
                 if (uc.b(26560) <= 30000L) {
-                  ns.field_c = nd.field_G;
+                  MouseWheelInput.field_c = nd.field_G;
                 } else {
-                  ns.field_c = ar.field_F;
+                  MouseWheelInput.field_c = ar.field_F;
                 }
                 sr.field_g = false;
                 stackIn_94_0 = 3;

@@ -4,7 +4,7 @@
 final class qc {
     private int field_d;
     static bs field_e;
-    static fs field_c;
+    static PacketBuffer field_c;
     private boolean field_f;
     private int field_b;
     static int field_a;
@@ -72,8 +72,8 @@ final class qc {
         try {
           var10 = sr.field_j[2 * this.field_d + 1];
           var3_int -= 10;
-          gt.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, g.field_a.field_i, param1 - 4312, var10, (aa) null, 1, 0);
-          bq.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, g.field_a.field_i, -8787, var10, (aa) null, 1, 0);
+          gt.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, param1 - 4312, var10, (aa) null, 1, 0);
+          bq.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (hr[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, -8787, var10, (aa) null, 1, 0);
           if (this.field_b <= 0) {
             var4 += 115;
             var3_int -= 50;

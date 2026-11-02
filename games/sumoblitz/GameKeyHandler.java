@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static id field_a;
 
     public final void keyTyped(java.awt.event.KeyEvent param0) {
@@ -117,7 +117,7 @@ final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           var6 = 1;
           var7 = fi.a(5, he.field_o, (byte) -96);
-          bj.field_b.a((ms) (new tl(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
+          bj.field_b.a((IntrusiveNode) (new tl(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "hb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -171,7 +171,7 @@ final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListen
     public static void a(int param0) {
         field_a = null;
         if (param0 != -2851) {
-          hb.a(-38);
+          GameKeyHandler.a(-38);
         }
     }
 

@@ -167,7 +167,7 @@ final class ad extends za {
           if (!lf.b(-251)) {
             lk.b();
             kd.a(240, 320, 256);
-            um.a(0, 0, param1, (byte) 125);
+            IterableNodeHashTable.a(0, 0, param1, (byte) 125);
             return;
           }
           if (0 != jv.field_a) {
@@ -175,7 +175,7 @@ final class ad extends za {
             return;
           }
           jv.a(false, (byte) -71, param2);
-          um.a(0, 0, param1, (byte) 125);
+          IterableNodeHashTable.a(0, 0, param1, (byte) 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

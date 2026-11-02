@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class tl extends ms {
+final class tl extends IntrusiveNode {
     static int field_t;
     int field_n;
     private int field_w;
@@ -195,9 +195,9 @@ final class tl extends ms {
         if (1 == this.field_m && (this.field_w != 0 ||
           this.field_p != 0)) {
           if (0 == this.field_u % 2) {
-            this.field_r.a((ms) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1024 + (this.field_o + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.d((byte) 105), 1 + this.field_n, true)), (byte) 39);
+            this.field_r.a((IntrusiveNode) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, -1024 + (this.field_o + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.d((byte) 105), 1 + this.field_n, true)), (byte) 39);
           } else {
-            this.field_r.a((ms) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.field_o - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, this.d((byte) 65), 1 + this.field_n, false)), (byte) 39);
+            this.field_r.a((IntrusiveNode) (new eq(50, -1024 + (this.field_x + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.field_o - (-fi.a(2048, he.field_o, (byte) -96) + 1024) >> 8, this.d((byte) 65), 1 + this.field_n, false)), (byte) 39);
           }
         }
         if (param0 != -31255) {

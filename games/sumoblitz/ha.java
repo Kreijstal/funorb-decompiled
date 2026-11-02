@@ -121,18 +121,18 @@ abstract class ha {
 
     abstract boolean a();
 
-    final static void a(int param0, ms param1, ms param2) {
-        if (null != param2.field_g) {
+    final static void a(int param0, IntrusiveNode param1, IntrusiveNode param2) {
+        if (null != param2.previous) {
           param2.b(false);
         }
         if (param0 != -2) {
           return;
         }
         try {
-          param2.field_g = param1.field_g;
-          param2.field_b = param1;
-          param2.field_g.field_b = param2;
-          param2.field_b.field_g = param2;
+          param2.previous = param1.previous;
+          param2.next = param1;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "ha.AG(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -199,11 +199,11 @@ abstract class ha {
     abstract void U(int param0, int param1, int param2, int param3, int param4);
 
     final void a(byte param0) {
-        fs.field_o[this.field_a] = false;
+        PacketBuffer.field_o[this.field_a] = false;
         this.d();
         if (param0 >= -11) {
-          ms var3 = (ms) null;
-          ha.a(-61, (ms) null, (ms) null);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          ha.a(-61, (IntrusiveNode) null, (IntrusiveNode) null);
         }
     }
 
@@ -255,8 +255,8 @@ abstract class ha {
           this.field_h = param0;
           var2_int = -1;
           for (var3 = 0; 8 > var3; var3++) {
-            if (!fs.field_o[var3]) {
-              fs.field_o[var3] = true;
+            if (!PacketBuffer.field_o[var3]) {
+              PacketBuffer.field_o[var3] = true;
               var2_int = var3;
               break;
             }

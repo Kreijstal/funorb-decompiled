@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub extends ms {
+final class ub extends IntrusiveNode {
     byte[] field_k;
     int field_l;
     long field_m;

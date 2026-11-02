@@ -50,7 +50,7 @@ final class kq extends hf implements ai {
         super(param0, 200, 130);
         pk var2 = null;
         try {
-          var2 = new pk(ms.field_c, (qm) null);
+          var2 = new pk(IntrusiveNode.field_c, (qm) null);
           var2.field_r = 0;
           var2.field_v = 50;
           var2.field_p = 80;

@@ -44,13 +44,13 @@ abstract class rg extends sp {
           this.b(113, 0, 0);
           if (param2 < -35) {
             super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);
-            su.a((byte) 114);
+            ClientException.a((byte) 114);
             uw.field_a.a(param0 + this.field_r, param1 + this.field_v, this.field_B);
             return;
           }
           this.f(-77);
           super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);
-          su.a((byte) 114);
+          ClientException.a((byte) 114);
           uw.field_a.a(param0 + this.field_r, param1 + this.field_v, this.field_B);
           return;
         }
@@ -61,13 +61,13 @@ abstract class rg extends sp {
           this.b(113, 0, 0);
           if (param2 < -35) {
             super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);
-            su.a((byte) 114);
+            ClientException.a((byte) 114);
             uw.field_a.a(param0 + this.field_r, param1 + this.field_v, this.field_B);
             return;
           }
           this.f(-77);
           super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);
-          su.a((byte) 114);
+          ClientException.a((byte) 114);
           uw.field_a.a(param0 + this.field_r, param1 + this.field_v, this.field_B);
           return;
         }
@@ -78,13 +78,13 @@ abstract class rg extends sp {
           this.b(113, 0, 0);
           if (param2 < -35) {
             super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);
-            su.a((byte) 114);
+            ClientException.a((byte) 114);
             uw.field_a.a(param0 + this.field_r, param1 + this.field_v, this.field_B);
             return;
           }
           this.f(-77);
           super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);
-          su.a((byte) 114);
+          ClientException.a((byte) 114);
           uw.field_a.a(param0 + this.field_r, param1 + this.field_v, this.field_B);
           return;
         }
@@ -93,13 +93,13 @@ abstract class rg extends sp {
         this.b(113, 0, 0);
         if (param2 < -35) {
           super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);
-          su.a((byte) 114);
+          ClientException.a((byte) 114);
           uw.field_a.a(param0 + this.field_r, param1 + this.field_v, this.field_B);
           return;
         }
         this.f(-77);
         super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);
-        su.a((byte) 114);
+        ClientException.a((byte) 114);
         uw.field_a.a(param0 + this.field_r, param1 + this.field_v, this.field_B);
     }
 

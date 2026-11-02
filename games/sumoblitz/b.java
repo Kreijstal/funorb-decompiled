@@ -174,9 +174,9 @@ final class b {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((fs) ((Object) var5)).e(param0 - 1218);
+            var6 = ((PacketBuffer) ((Object) var5)).e(param0 - 1218);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((fs) ((Object) var5)).c(true);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).c(true);
             }
             var16_ref = (eg) (wr.field_E.b(-120));
             if (var16_ref == null) {
@@ -201,7 +201,7 @@ final class b {
               var14.field_k = var14.field_m[0];
               var14.b(false);
             } else {
-              ms.a("A1: " + di.b((byte) 110), (Throwable) null, 0);
+              IntrusiveNode.a("A1: " + di.b((byte) 110), (Throwable) null, 0);
               kk.a((byte) -120);
             }
           } else {

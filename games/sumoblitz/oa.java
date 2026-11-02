@@ -90,7 +90,7 @@ final class oa extends ha implements e {
 
     final za c(int param0) {
         ya var2 = new ya(this, param0);
-        this.field_o.a((ms) (var2), (byte) 39);
+        this.field_o.a((IntrusiveNode) (var2), (byte) 39);
         return (za) ((Object) var2);
     }
 

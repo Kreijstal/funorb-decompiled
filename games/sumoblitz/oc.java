@@ -201,7 +201,7 @@ final class oc extends rq {
         if (!(param5 >= qu.field_k)) {
           ab.field_c = param5;
         }
-        if (!(kc.field_l >= param5)) {
+        if (!(GameApplet.field_l >= param5)) {
           field_f = param5;
         }
         jf.field_f[se.field_d] = param1;

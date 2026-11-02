@@ -29,7 +29,7 @@ final class ld extends sp implements ai {
         this.field_B.a(114, 0, 0, var2, this.field_q);
         this.field_J = new mc(0, 0, 0, 0, new tm(), this.field_B, (mh) null);
         if (var4 != 0) {
-          this.field_J.a(1332, true, hb.a((byte) 35));
+          this.field_J.a(1332, true, GameKeyHandler.a((byte) 35));
         }
         this.field_J.a(-126, 0, this.field_M, this.field_p - this.field_M, this.field_q);
         this.field_A = true;

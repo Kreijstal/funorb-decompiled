@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class vv implements Iterator {
-    private pj field_e;
-    private pj field_c;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkNode field_e;
+    private DualLinkNode field_c;
     static hr[] field_a;
-    private hl field_d;
+    private SecondaryNodeDeque field_d;
     static ul field_b;
 
     public final Object next() {
@@ -16,9 +16,9 @@ final class vv implements Iterator {
           var1 = null;
           this.field_c = null;
         } else {
-          this.field_c = ((pj) (var1)).field_m;
+          this.field_c = ((DualLinkNode) (var1)).field_m;
         }
-        this.field_e = (pj) (var1);
+        this.field_e = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -51,7 +51,7 @@ final class vv implements Iterator {
             ws.field_b = param1;
           }
           if (param0 != -1203350004) {
-            vv.a(86);
+            SecondaryNodeDequeIterator.a(86);
           }
           if (ts.field_c != param2) {
             if (ws.field_b != param2) {
@@ -75,7 +75,7 @@ final class vv implements Iterator {
         }
     }
 
-    vv(hl param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_e = null;
         try {
           this.field_d = param0;

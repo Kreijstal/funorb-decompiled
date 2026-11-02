@@ -755,7 +755,7 @@ abstract class aw extends ha {
     }
 
     void d() {
-        ms var1 = null;
+        IntrusiveNode var1 = null;
         Enumeration var1_ref = null;
         java.awt.Canvas var2 = null;
         int var3 = Sumoblitz.field_L ? 1 : 0;
@@ -828,7 +828,7 @@ abstract class aw extends ha {
 
     final za c(int param0) {
         he var2 = new he(param0);
-        this.field_lb.a((ms) (var2), (byte) 39);
+        this.field_lb.a((IntrusiveNode) (var2), (byte) 39);
         return (za) ((Object) var2);
     }
 
@@ -969,7 +969,7 @@ abstract class aw extends ha {
         this.field_x = this.a((byte) 51, false);
         this.field_x.a(28, (byte) -35, 140);
         var2 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (4 > var2) {
             var3 = this.field_x.a(7454, true);
             if (var3 != null) {
@@ -1049,7 +1049,7 @@ abstract class aw extends ha {
               }
               var4.a();
               if (this.field_x.a(22957)) {
-                break L1;
+                break scanLoop1;
               }
             }
             var2++;
@@ -1112,7 +1112,7 @@ abstract class aw extends ha {
         this.field_Qb = this.a((byte) 51, false);
         this.field_Qb.a(12, (byte) -35, 3096);
         var2 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (4 > var2) {
             var3 = this.field_Qb.a(7454, true);
             if (var3 != null) {
@@ -1136,7 +1136,7 @@ abstract class aw extends ha {
               }
               var4.a();
               if (this.field_Qb.a(22957)) {
-                break L1;
+                break scanLoop1;
               }
             }
             var2++;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class nt extends ms {
+class nt extends IntrusiveNode {
     int field_q;
     static String field_l;
     int field_o;

@@ -24,7 +24,7 @@ public final class Sumoblitz extends fn {
         RuntimeException var4 = null;
         var5 = field_L ? 1 : 0;
         try {
-          nw.field_e = st.field_z;
+          ProxySocketConnector.field_e = st.field_z;
           if (255 != param2) {
             if (param2 >= 100 &&
               param2 <= 105) {
@@ -207,7 +207,7 @@ public final class Sumoblitz extends fn {
           var2.a(177, 128, 9);
           var3 = new ud(var2, new bs());
           aa.a(lt.field_m, true, var3, (byte) -125, 48000, (java.awt.Component) ((Object) qn.field_f));
-          dt.field_f = false;
+          BufferedSocket.field_f = false;
           qc.field_e = var2;
           this.a(true, true, (byte) 60, true, false);
           return;
@@ -257,7 +257,7 @@ public final class Sumoblitz extends fn {
               od.a(-62, var2);
               return;
             }
-            if (!su.a(param0 ^ 0)) {
+            if (!ClientException.a(param0 ^ 0)) {
               pe.a(param0 ^ 20, 100.0f, fl.field_s);
               od.a(-88, var2);
               return;
@@ -435,7 +435,7 @@ public final class Sumoblitz extends fn {
           jg.field_a = true;
           kf.field_v = wd.a(4, (byte) 125);
           dq.field_Z = wd.a(5, (byte) 125);
-          hl.field_d = wd.a(6, (byte) 125);
+          SecondaryNodeDeque.field_d = wd.a(6, (byte) 125);
           er.field_c = wd.a(7, (byte) 125);
           gg.field_r = wd.a(8, (byte) 125);
           be.field_s = wd.a(9, (byte) 125);
@@ -501,9 +501,9 @@ public final class Sumoblitz extends fn {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledSharedTail0 = !(sa.field_j);
           if (!decompiledSharedTail0) {
-            if (!su.a(0)) {
+            if (!ClientException.a(0)) {
               ou.d((byte) -112);
-              decompiledFrameRemainder0 = !(!su.a(0));
+              decompiledFrameRemainder0 = !(!ClientException.a(0));
               if (decompiledFrameRemainder0) {
                 oq.a(-24233);
                 ad.c(0);
@@ -590,7 +590,7 @@ public final class Sumoblitz extends fn {
             } while (var4 == 0);
           }
           do {
-            if (!vs.a(ov.field_e, -126)) {
+            if (!vs.a(RasterBuffer.field_e, -126)) {
               gt.a(0, 0);
               break;
             }
@@ -673,7 +673,7 @@ public final class Sumoblitz extends fn {
           var11 = field_L ? 1 : 0;
           try {
             cl.e(-69);
-            if (null != hl.field_d) {
+            if (null != SecondaryNodeDeque.field_d) {
               if (pi.field_c.b((byte) 127) &&
                 pi.field_c.a("basic", 100)) {
                 if (!pi.field_c.a("arialbold14", 100)) {
@@ -688,8 +688,8 @@ public final class Sumoblitz extends fn {
                   }
                   if (vb.field_J.b((byte) 127) &&
                     vb.field_J.a("arial13", 100)) {
-                    if (hl.field_d.b((byte) 127) &&
-                      hl.field_d.a(true)) {
+                    if (SecondaryNodeDeque.field_d.b((byte) 127) &&
+                      SecondaryNodeDeque.field_d.a(true)) {
                       if (er.field_c.b((byte) 127) &&
                         er.field_c.a(param1)) {
                         if (gg.field_r.b((byte) 127) &&
@@ -716,7 +716,7 @@ public final class Sumoblitz extends fn {
                                       decompiledFrameRemainder6 = (var11 != 0);
                                     }
                                     if (decompiledFrameRemainder6) {
-                                      if (!su.a(0)) {
+                                      if (!ClientException.a(0)) {
                                         pe.a(20, 100.0f, fl.field_s);
                                         od.a(-117, var3);
                                         decompiledFrameRemainder6 = (var11 != 0);
@@ -875,14 +875,14 @@ public final class Sumoblitz extends fn {
                                   if (!param0) {
                                     return false;
                                   }
-                                  eb.field_b = new og(hl.field_d, er.field_c);
-                                  ff.a((byte) -62, hl.field_d);
+                                  eb.field_b = new og(SecondaryNodeDeque.field_d, er.field_c);
+                                  ff.a((byte) -62, SecondaryNodeDeque.field_d);
                                   oq.a(-24233);
-                                  hl.field_d = null;
+                                  SecondaryNodeDeque.field_d = null;
                                   ls.b(0);
                                   return false;
                                 }
-                                pe.a(20, 60.0f, nw.a(nm.field_n, (byte) 85, 0, ik.field_d, b.field_f));
+                                pe.a(20, 60.0f, ProxySocketConnector.a(nm.field_n, (byte) 85, 0, ik.field_d, b.field_f));
                                 return false;
                               }
                               pe.a(20, 55.0f, pt.a("", dq.field_Z, ce.field_l, true, ow.field_a));
@@ -894,13 +894,13 @@ public final class Sumoblitz extends fn {
                           pe.a(20, 40.0f, pt.a("", be.field_s, ve.field_l, true, gt.field_hb));
                           return false;
                         }
-                        pe.a(20, 30.0f, nw.a(jf.field_a, (byte) 85, 0, gg.field_r, sg.field_i));
+                        pe.a(20, 30.0f, ProxySocketConnector.a(jf.field_a, (byte) 85, 0, gg.field_r, sg.field_i));
                         return false;
                       }
                       pe.a(20, 20.0f, pt.a("", er.field_c, fn.field_A, true, hq.field_a));
                       return false;
                     }
-                    pe.a(20, 10.0f, pt.a("", hl.field_d, fn.field_A, true, hq.field_a));
+                    pe.a(20, 10.0f, pt.a("", SecondaryNodeDeque.field_d, fn.field_A, true, hq.field_a));
                     return false;
                   }
                   pe.a(20, 5.0f, pt.a("arial13", vb.field_J, ce.field_l, true, ow.field_a));
@@ -927,7 +927,7 @@ public final class Sumoblitz extends fn {
                   decompiledFrameRemainder5 = (var11 != 0);
                 }
                 if (decompiledFrameRemainder5) {
-                  if (!su.a(0)) {
+                  if (!ClientException.a(0)) {
                     pe.a(20, 100.0f, fl.field_s);
                     od.a(-68, var3);
                     decompiledFrameRemainder5 = (var11 != 0);
@@ -1079,7 +1079,7 @@ public final class Sumoblitz extends fn {
             }
             if (null != be.field_s) {
               boolean decompiledFrameRemainder3 = true;
-              pe.a(20, 75.0f, su.field_d);
+              pe.a(20, 75.0f, ClientException.field_d);
               var3 = hk.b(-103);
               lk.b();
               if (in.g(-98)) {
@@ -1092,7 +1092,7 @@ public final class Sumoblitz extends fn {
                   decompiledFrameRemainder3 = (var11 != 0);
                 }
                 if (decompiledFrameRemainder3) {
-                  if (!su.a(0)) {
+                  if (!ClientException.a(0)) {
                     pe.a(20, 100.0f, fl.field_s);
                     od.a(-111, var3);
                     decompiledFrameRemainder3 = (var11 != 0);
@@ -1266,7 +1266,7 @@ public final class Sumoblitz extends fn {
                   decompiledFrameRemainder1 = (var11 != 0);
                 }
                 if (decompiledFrameRemainder1) {
-                  if (!su.a(0)) {
+                  if (!ClientException.a(0)) {
                     pe.a(20, 100.0f, fl.field_s);
                     od.a(-52, var3);
                     decompiledFrameRemainder1 = (var11 != 0);
@@ -1468,7 +1468,7 @@ public final class Sumoblitz extends fn {
                 decompiledFrameRemainder0 = (var11 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (!su.a(0)) {
+                if (!ClientException.a(0)) {
                   pe.a(20, 100.0f, fl.field_s);
                   od.a(-110, var3);
                   decompiledFrameRemainder0 = (var11 != 0);
@@ -1634,11 +1634,11 @@ public final class Sumoblitz extends fn {
         RuntimeException var2 = null;
         try {
           Sumoblitz.s(0);
-          kc.b((byte) -19);
+          GameApplet.b((byte) -19);
           ge.a(6334);
           jn.c((byte) 117);
           ha.e(0);
-          fs.c(-22);
+          PacketBuffer.c(-22);
           wq.a(false);
           oi.a(param0);
           ik.b(-1);
@@ -1647,13 +1647,13 @@ public final class Sumoblitz extends fn {
           rn.a(13921);
           ma.a(20283);
           bi.a((byte) 84);
-          hb.a(-2851);
+          GameKeyHandler.a(-2851);
           wv.a(true);
           fn.k(119);
-          su.b((byte) -18);
+          ClientException.b((byte) -18);
           cc.a(126);
-          os.a(8);
-          ns.a((byte) -75);
+          MouseInputHandler.a(8);
+          MouseWheelInput.a((byte) -75);
           lk.a();
           ki.a((byte) 35);
           wf.a(116);
@@ -1668,7 +1668,7 @@ public final class Sumoblitz extends fn {
           uc.a(-1);
           vs.a((byte) -68);
           uw.c((byte) 96);
-          ov.a((byte) 41);
+          RasterBuffer.a((byte) 41);
           mn.a((byte) 17);
           cq.a(true);
           og.a(false);
@@ -1679,8 +1679,8 @@ public final class Sumoblitz extends fn {
           gd.a(!param0);
           ti.a(87);
           rj.a(2);
-          dt.d(68);
-          ms.b((byte) 80);
+          BufferedSocket.d(68);
+          IntrusiveNode.b((byte) 80);
           ta.a(false);
           bs.f(-95);
           te.b(6406);
@@ -1745,7 +1745,7 @@ public final class Sumoblitz extends fn {
           aa.a(!param0);
           sb.a(true);
           mu.a(-109);
-          pj.d(37);
+          DualLinkNode.d(37);
           ee.a(1600);
           sr.c(100);
           wo.a(92);
@@ -1804,10 +1804,10 @@ public final class Sumoblitz extends fn {
           un.a(true);
           ow.a((byte) 123);
           sv.a(1284);
-          g.a(85);
+          SocketConnector.a(85);
           hh.a(127);
           fd.c(121);
-          fh.d(-48);
+          ImageProducerRasterBuffer.d(-48);
           qg.a();
           qe.a(0);
           np.a((byte) -58);
@@ -1879,10 +1879,10 @@ public final class Sumoblitz extends fn {
           we.e(!param0);
           si.b(17);
           ts.a(-13252);
-          hl.a(-103);
+          SecondaryNodeDeque.a(-103);
           jt.d((byte) 54);
           av.f(24);
-          nw.b(1183);
+          ProxySocketConnector.b(1183);
           re.a();
           k.a(28322);
           kn.b(-1);
@@ -1943,8 +1943,8 @@ public final class Sumoblitz extends fn {
           ua.a((byte) 13);
           ju.a(param0);
           fq.a(123);
-          ia.a(1);
-          vv.a(-95);
+          NodeHashTableIterator.a(1);
+          SecondaryNodeDequeIterator.a(-95);
           lu.b(!param0);
           ph.a(1882049616);
           qj.a((byte) -70);
@@ -2050,8 +2050,8 @@ public final class Sumoblitz extends fn {
           if (param2 > -67) {
             return;
           }
-          L1: {
-            L2: {
+          regionExit1: {
+            regionExit2: {
               var3_int = 0;
               var4 = param1;
               if (var4 == 1) {
@@ -2067,11 +2067,11 @@ public final class Sumoblitz extends fn {
                   var5 != 0)) {
                   switch (var4) {
                     case 4:
-                      break L2;
+                      break regionExit2;
                     case 6:
-                      break L1;
+                      break regionExit1;
                     case 5:
-                      break L1;
+                      break regionExit1;
                     default:
                       return;
                     case 0:

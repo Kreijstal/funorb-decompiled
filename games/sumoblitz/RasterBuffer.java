@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ov {
+abstract class RasterBuffer {
     int field_h;
     static String field_g;
     int[] field_c;
@@ -51,7 +51,7 @@ abstract class ov {
           if (param0 == 2) {
             return;
           }
-          ov.a(-6, -112);
+          RasterBuffer.a(-6, -112);
           return;
         }
         var1 = jk.field_c;
@@ -68,7 +68,7 @@ abstract class ov {
         if (param0 == 2) {
           return;
         }
-        ov.a(-6, -112);
+        RasterBuffer.a(-6, -112);
         return;
     }
 
@@ -107,7 +107,7 @@ abstract class ov {
         lk.a(this.field_c, this.field_h, this.field_b);
         if (param0 != -1) {
           String var3 = (String) null;
-          ov.a(111, (String) null);
+          RasterBuffer.a(111, (String) null);
         }
     }
 

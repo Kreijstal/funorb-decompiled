@@ -18,7 +18,7 @@ final class sr {
     final int b(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
-        fs var6 = null;
+        PacketBuffer var6 = null;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -27,8 +27,8 @@ final class sr {
         try {
           var5_int = this.field_h.read(param0, param3, param2);
           if (param1 != 2) {
-            var6 = (fs) null;
-            sr.a((java.math.BigInteger) null, 49, (byte[]) null, (java.math.BigInteger) null, (byte) 29, (fs) null, 22);
+            var6 = (PacketBuffer) null;
+            sr.a((java.math.BigInteger) null, 49, (byte[]) null, (java.math.BigInteger) null, (byte) 29, (PacketBuffer) null, 22);
           }
           if (var5_int > 0) {
             this.field_e = this.field_e + (long)var5_int;
@@ -90,7 +90,7 @@ final class sr {
         int var4 = -27 / ((-13 - param0) / 49);
     }
 
-    final static void a(java.math.BigInteger param0, int param1, byte[] param2, java.math.BigInteger param3, byte param4, fs param5, int param6) {
+    final static void a(java.math.BigInteger param0, int param1, byte[] param2, java.math.BigInteger param3, byte param4, PacketBuffer param5, int param6) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -123,18 +123,18 @@ final class sr {
             var8[var9] = gf.field_b.nextInt();
           }
           if (qc.field_c == null ||
-            !(var7_int <= qc.field_c.field_n.length)) {
-            qc.field_c = new fs(var7_int);
+            !(var7_int <= qc.field_c.payload.length)) {
+            qc.field_c = new PacketBuffer(var7_int);
           }
-          qc.field_c.field_p = 0;
+          qc.field_c.position = 0;
           qc.field_c.a(param2, (byte) -123, param1, param6);
           qc.field_c.a((byte) -3, var7_int);
           qc.field_c.a(var13, 104);
           if (sv.field_c == null ||
-            !(100 <= sv.field_c.field_n.length)) {
-            sv.field_c = new fs(100);
+            !(100 <= sv.field_c.payload.length)) {
+            sv.field_c = new PacketBuffer(100);
           }
-          sv.field_c.field_p = 0;
+          sv.field_c.position = 0;
           sv.field_c.b((byte) 25, 10);
           var11 = 0;
           var9Lifetime1 = var11;
@@ -144,11 +144,11 @@ final class sr {
           }
           sv.field_c.b(125, param1);
           sv.field_c.a((byte) 123, param0, param3);
-          param5.a(sv.field_c.field_n, (byte) -123, sv.field_c.field_p, 0);
+          param5.a(sv.field_c.payload, (byte) -123, sv.field_c.position, 0);
           if (param4 > -6) {
             return;
           }
-          param5.a(qc.field_c.field_n, (byte) -123, qc.field_c.field_p, 0);
+          param5.a(qc.field_c.payload, (byte) -123, qc.field_c.position, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -188,15 +188,15 @@ final class sr {
           this.field_h = null;
         }
         if (param0 != 0) {
-          fs var3 = (fs) null;
-          sr.a((java.math.BigInteger) null, 53, (byte[]) null, (java.math.BigInteger) null, (byte) 2, (fs) null, 24);
+          PacketBuffer var3 = (PacketBuffer) null;
+          sr.a((java.math.BigInteger) null, 53, (byte[]) null, (java.math.BigInteger) null, (byte) 2, (PacketBuffer) null, 24);
         }
     }
 
     final long a(int param0) throws IOException {
         if (param0 <= 34) {
-          fs var3 = (fs) null;
-          sr.a((java.math.BigInteger) null, -30, (byte[]) null, (java.math.BigInteger) null, (byte) -2, (fs) null, -103);
+          PacketBuffer var3 = (PacketBuffer) null;
+          sr.a((java.math.BigInteger) null, -30, (byte[]) null, (java.math.BigInteger) null, (byte) -2, (PacketBuffer) null, -103);
         }
         return this.field_h.length();
     }

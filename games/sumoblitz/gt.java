@@ -85,7 +85,7 @@ class gt extends ur implements ai {
             stackIn_7_0 = qq.field_R.a(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = ns.field_a.a(param1);
+          stackIn_5_0 = MouseWheelInput.field_a.a(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,7 +148,7 @@ class gt extends ur implements ai {
         lc var2 = null;
         this.field_ib.b(2121792, 4210752, 55);
         if (!param0) {
-          var2 = new lc(this, this.field_jb, fh.field_j);
+          var2 = new lc(this, this.field_jb, ImageProducerRasterBuffer.field_j);
           var2.a(id.field_m, 15, true);
           this.b((byte) -121, var2);
           return;
@@ -225,24 +225,24 @@ class gt extends ur implements ai {
           Throwable decompiledCaughtException = null;
           if (qk.field_O != null && (0 > param1 ||
             ga.field_j == kw.field_c)) {
-            if (as.field_v.field_p == 0 &&
+            if (as.field_v.position == 0 &&
               (rj.field_a + 10000L) < wq.a(param0 - 14)) {
               as.field_v.g(param1, 8);
             }
-            if (as.field_v.field_p > param0) {
+            if (as.field_v.position > param0) {
               try {
-                qk.field_O.a(0, -2, as.field_v.field_n, as.field_v.field_p);
+                qk.field_O.a(0, -2, as.field_v.payload, as.field_v.position);
                 rj.field_a = wq.a(-21);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 kk.a((byte) -115);
               }
-              as.field_v.field_p = 0;
+              as.field_v.position = 0;
             }
             return;
           }
-          as.field_v.field_p = 0;
+          as.field_v.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -381,7 +381,7 @@ class gt extends ur implements ai {
             stackIn_7_0 = qq.field_R.a(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = ns.field_a.a(param1);
+          stackIn_5_0 = MouseWheelInput.field_a.a(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

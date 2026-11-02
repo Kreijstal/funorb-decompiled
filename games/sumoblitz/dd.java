@@ -20,7 +20,7 @@ final class dd extends hf implements ai {
         if (null != gk.field_o) {
           return this.field_T;
         }
-        if (vv.field_b != null && vv.field_b.field_g &&
+        if (SecondaryNodeDequeIterator.field_b != null && SecondaryNodeDequeIterator.field_b.field_g &&
           null != this.field_Y) {
           return this.field_Y;
         }
@@ -96,9 +96,9 @@ final class dd extends hf implements ai {
                     this.field_Z[var3] = null;
                   }
                 }
-                if (null != vv.field_b &&
+                if (null != SecondaryNodeDequeIterator.field_b &&
                   this.field_Z[var2_int] != null &&
-                  !vv.field_b.a(this.field_Z[var2_int].field_g, (byte) -54, this.field_Z[var2_int].field_a)) {
+                  !SecondaryNodeDequeIterator.field_b.a(this.field_Z[var2_int].field_g, (byte) -54, this.field_Z[var2_int].field_a)) {
                   this.field_Z[var2_int] = null;
                 }
               }
@@ -130,8 +130,8 @@ final class dd extends hf implements ai {
           stackIn_40_1 = !(vs.b((byte) 9));
           this.field_W = stackIn_40_1;
           if (var2_intLifetime1 == 0) {
-            if (vv.field_b != null) {
-              stackIn_48_0 = (vv.field_b.f(-1)) ? 1 : 0;
+            if (SecondaryNodeDequeIterator.field_b != null) {
+              stackIn_48_0 = (SecondaryNodeDequeIterator.field_b.f(-1)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }
@@ -186,8 +186,8 @@ final class dd extends hf implements ai {
             for (var7_int = 0; var7_int < this.field_Z.length; var7_int++) {
               var8 = this.field_Z[var7_int];
               if (null != gk.field_o &&
-                var8.field_a == vv.field_b.field_s &&
-                var8.field_g == vv.field_b.field_c) {
+                var8.field_a == SecondaryNodeDequeIterator.field_b.field_s &&
+                var8.field_g == SecondaryNodeDequeIterator.field_b.field_c) {
                 var6_int = var7_int;
               }
               var5_ref_String__[var7_int] = var8.field_a + "<times>" + var8.field_g;
@@ -560,8 +560,8 @@ final class dd extends hf implements ai {
               if (null != this.field_ab) {
                 var4 = this.field_ab.g(param1 - 126);
                 var5 = this.field_Z[var4];
-                if (var5.field_a == vv.field_b.field_s &&
-                  vv.field_b.field_c == var5.field_g) {
+                if (var5.field_a == SecondaryNodeDequeIterator.field_b.field_s &&
+                  SecondaryNodeDequeIterator.field_b.field_c == var5.field_g) {
                   this.e(true);
                   return;
                 }
@@ -597,14 +597,14 @@ final class dd extends hf implements ai {
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_O == this.field_X) {
           ib.d(1);
-          um.b(0);
+          IterableNodeHashTable.b(0);
         } else {
           if (this.field_Y != this.field_O) {
             if (this.field_O == this.field_T &&
               null != this.field_ab) {
               var2 = this.field_ab.g(96);
               if (0 <= var2) {
-                vv.field_b.b(this.field_Z[var2].field_g, this.field_Z[var2].field_a, 67);
+                SecondaryNodeDequeIterator.field_b.b(this.field_Z[var2].field_g, this.field_Z[var2].field_a, 67);
               }
               rj.a(true, false);
               this.field_E.a((byte) 108, new qk(this.field_E));

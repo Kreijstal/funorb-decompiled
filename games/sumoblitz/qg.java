@@ -250,7 +250,7 @@ final class qg {
         field_v = null;
     }
 
-    final void a(fs param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_j = new vj();
@@ -259,7 +259,7 @@ final class qg {
         this.field_o.a(param0);
         int var2 = param0.e(-31302);
         if (var2 != 0) {
-          param0.field_p = param0.field_p - 1;
+          param0.position = param0.position - 1;
           this.field_m = new vj();
           this.field_m.a(param0);
           this.field_q = new vj();
@@ -267,7 +267,7 @@ final class qg {
         }
         var2 = param0.e(-31302);
         if (var2 != 0) {
-          param0.field_p = param0.field_p - 1;
+          param0.position = param0.position - 1;
           this.field_g = new vj();
           this.field_g.a(param0);
           this.field_r = new vj();
@@ -275,7 +275,7 @@ final class qg {
         }
         var2 = param0.e(-31302);
         if (var2 != 0) {
-          param0.field_p = param0.field_p - 1;
+          param0.position = param0.position - 1;
           this.field_y = new vj();
           this.field_y.a(param0);
           this.field_f = new vj();

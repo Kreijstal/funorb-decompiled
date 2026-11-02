@@ -5,17 +5,17 @@ final class ro {
     static vq field_a;
     static int field_c;
     static int field_d;
-    private pj field_e;
-    private pj field_b;
+    private DualLinkNode field_e;
+    private DualLinkNode field_b;
 
-    final pj d(int param0) {
-        pj var2 = this.field_b;
+    final DualLinkNode d(int param0) {
+        DualLinkNode var2 = this.field_b;
         if (var2 == this.field_e) {
           this.field_b = null;
           return null;
         }
         if (param0 != -2) {
-          return (pj) null;
+          return (DualLinkNode) null;
         }
         this.field_b = var2.field_m;
         return var2;
@@ -27,7 +27,7 @@ final class ro {
           return 62;
         }
         int var2 = 0;
-        pj var3 = this.field_e.field_m;
+        DualLinkNode var3 = this.field_e.field_m;
         while (var3 != this.field_e) {
           var2++;
           var3 = var3.field_m;
@@ -35,7 +35,7 @@ final class ro {
         return var2;
     }
 
-    final static void a(byte param0, fs param1, wi param2, int param3) {
+    final static void a(byte param0, PacketBuffer param1, PlatformTaskDispatcher param2, int param3) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -156,7 +156,7 @@ final class ro {
                 var5.field_k[var6] = -5;
               }
             }
-            qr.field_c.a((ms) (var5), (byte) 39);
+            qr.field_c.a((IntrusiveNode) (var5), (byte) 39);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -260,7 +260,7 @@ final class ro {
         return -1;
     }
 
-    final void a(pj param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
           if (param0.field_o != null) {
             param0.c(-5106);
@@ -277,10 +277,10 @@ final class ro {
         }
     }
 
-    final pj a(int param0) {
-        pj var2 = this.field_e.field_m;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_e.field_m;
         if (param0 < 8) {
-          this.field_e = (pj) null;
+          this.field_e = (DualLinkNode) null;
         }
         if (this.field_e == var2) {
           this.field_b = null;
@@ -290,7 +290,7 @@ final class ro {
         return var2;
     }
 
-    final void a(pj param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         try {
           if (param0.field_o != null) {
             param0.c(-5106);
@@ -307,11 +307,11 @@ final class ro {
         }
     }
 
-    final pj b(byte param0) {
+    final DualLinkNode b(byte param0) {
         if (param0 != 72) {
-          return (pj) null;
+          return (DualLinkNode) null;
         }
-        pj var2 = this.field_e.field_m;
+        DualLinkNode var2 = this.field_e.field_m;
         if (var2 == this.field_e) {
           return null;
         }
@@ -359,11 +359,11 @@ final class ro {
         }
     }
 
-    final pj c(byte param0) {
+    final DualLinkNode c(byte param0) {
         if (param0 != 126) {
-          this.field_e = (pj) null;
+          this.field_e = (DualLinkNode) null;
         }
-        pj var2 = this.field_e.field_o;
+        DualLinkNode var2 = this.field_e.field_o;
         if (var2 == this.field_e) {
           return null;
         }
@@ -372,7 +372,7 @@ final class ro {
     }
 
     public ro() {
-        this.field_e = new pj();
+        this.field_e = new DualLinkNode();
         this.field_e.field_o = this.field_e;
         this.field_e.field_m = this.field_e;
     }

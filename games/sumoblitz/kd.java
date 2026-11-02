@@ -64,7 +64,7 @@ final class kd {
         if (256 > var5) {
           lk.b(0, 0, lk.field_b, lk.field_c, 0, 256 - var5);
         }
-        su.a((byte) -69);
+        ClientException.a((byte) -69);
         if (td.field_u >= 150) {
           kh.field_a.a(var3 + 15, 10 + var4, var5);
           var6 = td.field_u - 125;

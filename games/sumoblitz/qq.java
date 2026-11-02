@@ -69,7 +69,7 @@ final class qq extends dh implements op {
             qq.b(-31, 81, 66);
           }
           var2 = new dj(param1, param1);
-          jf.field_c.a((ms) (var2), (byte) 39);
+          jf.field_c.a((IntrusiveNode) (var2), (byte) 39);
           sj.field_c.b(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;

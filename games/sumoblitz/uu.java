@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uu extends ms {
+final class uu extends IntrusiveNode {
     mf field_z;
     int field_D;
     int field_y;

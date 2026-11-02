@@ -14,8 +14,8 @@ final class pm {
         try {
           var5 = as.field_v;
           var5.g(param0, 8);
-          var5.field_p = var5.field_p + 1;
-          var4 = var5.field_p;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.b((byte) 39, param1);
           var5.b((byte) 99, param2.field_u);
           var5.b((byte) 63, param2.field_q);
@@ -24,7 +24,7 @@ final class pm {
           var5.e(48, param2.field_n);
           var5.e(48, param2.field_p);
           var5.a(var4, false);
-          var5.c(var5.field_p - var4, -13745);
+          var5.c(var5.position - var4, -13745);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "pm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

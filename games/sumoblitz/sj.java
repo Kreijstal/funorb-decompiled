@@ -102,7 +102,7 @@ final class sj {
               if (var4 != nj.field_a.field_g) {
                 stackIn_48_0 = vp.field_e;
               } else {
-                stackIn_48_0 = fs.field_k;
+                stackIn_48_0 = PacketBuffer.field_k;
               }
               var9 = stackIn_48_0;
               if (var9 != null) {
@@ -111,10 +111,10 @@ final class sj {
               var1_int = var1_int + ag.field_b;
             }
             if (var4 < 0) {
-              qq.field_R.b(var6, var8Lifetime1, var1_int + ia.field_d, var5, -1);
+              qq.field_R.b(var6, var8Lifetime1, var1_int + NodeHashTableIterator.field_d, var5, -1);
               var1_int = var1_int + fn.field_t;
             } else {
-              ns.field_a.b(var6, var8Lifetime1, var1_int + dl.field_f, var5, -1);
+              MouseWheelInput.field_a.b(var6, var8Lifetime1, var1_int + dl.field_f, var5, -1);
               var1_int = var1_int + (qc.field_a + (ag.field_b + ga.field_h));
             }
           }
@@ -378,7 +378,7 @@ final class sj {
         RuntimeException decompiledCaughtException = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!g.a(param0, 0, param2)) {
+          if (!SocketConnector.a(param0, 0, param2)) {
             return false;
           }
           var3_int = 0;

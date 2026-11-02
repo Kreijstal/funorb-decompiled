@@ -40,7 +40,7 @@ class du {
         }
     }
 
-    final static du a(wi param0, java.awt.Component param1, int param2, int param3) {
+    final static du a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           et var4 = null;
           Throwable var4_ref = null;
@@ -189,7 +189,7 @@ class du {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -222,7 +222,7 @@ class du {
                       var12.field_k = var12.field_k + var13;
                     }
                     if (var4 >= this.field_g) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.a();
                     if (var14Lifetime2 != null) {

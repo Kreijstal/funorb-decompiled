@@ -18,7 +18,7 @@ final class hw {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1, int param2, byte param3, boolean param4, ud param5, wi param6, int param7) {
+    final static void a(java.awt.Component param0, int param1, int param2, byte param3, boolean param4, ud param5, PlatformTaskDispatcher param6, int param7) {
         try {
           du.a(param1, param4, 10);
           wd.field_f = du.a(param6, param0, 0, param2);
@@ -28,8 +28,8 @@ final class hw {
           iv.field_a.a(sj.field_c);
           qr.field_b = param5;
           if (param3 <= 103) {
-            wi var9 = (wi) null;
-            hw.a((java.awt.Component) null, -65, -27, (byte) 49, true, (ud) null, (wi) null, -58);
+            PlatformTaskDispatcher var9 = (PlatformTaskDispatcher) null;
+            hw.a((java.awt.Component) null, -65, -27, (byte) 49, true, (ud) null, (PlatformTaskDispatcher) null, -58);
           }
           qr.field_b.a((byte) -43, tt.field_l);
           wd.field_f.a(qr.field_b);

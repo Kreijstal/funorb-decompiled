@@ -19,7 +19,7 @@ final class tm implements mh {
         }
     }
 
-    final static void a(boolean param0, byte param1, wi param2, int param3, int param4, int param5, int param6, int param7, int param8, String param9, boolean param10, int param11, int param12, long param13) {
+    final static void a(boolean param0, byte param1, PlatformTaskDispatcher param2, int param3, int param4, int param5, int param6, int param7, int param8, String param9, boolean param10, int param11, int param12, long param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -84,7 +84,7 @@ final class tm implements mh {
 
     final static int a(int param0, int param1) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
-        dt.field_p = null;
+        BufferedSocket.field_p = null;
         tj.field_n = null;
         cd.field_d = 0;
         int var2 = ie.field_x;

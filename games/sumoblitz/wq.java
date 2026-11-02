@@ -103,7 +103,7 @@ final class wq {
           mr.field_b = new gk[var3];
           kh.field_c = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            mr.field_b[var4] = fh.a(var8, -16736);
+            mr.field_b[var4] = ImageProducerRasterBuffer.a(var8, -16736);
           }
           if (param0) {
             wq.a(-93);

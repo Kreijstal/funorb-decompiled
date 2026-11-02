@@ -109,7 +109,7 @@ final class th extends sp implements ca, ai {
           }
           kh.field_e = kh.field_e | var3_int;
           wj.field_e = wj.field_e | var3_int;
-          pl.field_v.a((ms) (new ge(param2)), (byte) 39);
+          pl.field_v.a((IntrusiveNode) (new ge(param2)), (byte) 39);
           if (gj.a((byte) -84, 10) >= 5) {
             fb.field_a = fb.field_a + iw.field_b;
           } else {
@@ -120,7 +120,7 @@ final class th extends sp implements ca, ai {
           } else {
             kn.field_b = kn.field_b - te.field_c;
           }
-          ia.a(param2, (byte) -82);
+          NodeHashTableIterator.a(param2, (byte) -82);
           if (param0 != 24753) {
             return;
           }
@@ -150,7 +150,7 @@ final class th extends sp implements ca, ai {
             }
           }
           if (!f.field_w) {
-            pn.field_q.a((ms) (new hg(param2, param1, ha.field_f, fb.field_a, ts.field_a, kn.field_b)), (byte) 39);
+            pn.field_q.a((IntrusiveNode) (new hg(param2, param1, ha.field_f, fb.field_a, ts.field_a, kn.field_b)), (byte) 39);
           }
           boolean decompiledFrameRemainder0 = true;
           if (3 != param2) {

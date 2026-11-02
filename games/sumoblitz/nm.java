@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class nm extends ms {
+final class nm extends IntrusiveNode {
     private int field_A;
     int field_m;
     private boolean field_z;
@@ -28,7 +28,7 @@ final class nm extends ms {
           field_n = null;
           field_u = null;
           if (param0 != 1432625512) {
-            nm.a((fs) null, (byte) -50);
+            nm.a((PacketBuffer) null, (byte) -50);
           }
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "nm.B(" + param0 + ')');
@@ -237,8 +237,8 @@ final class nm extends ms {
             (decompiledFrameRemainder2)) {
             var3_int = -param0.field_C + this.field_B;
             var4 = -param0.field_z + this.field_r;
-            param0.field_E = (int)((double)param0.field_E + 0.00016 * (double)ov.a(-63, var3_int) * Math.pow((double)var3_int, 2.0) / (double)param0.field_o);
-            param0.field_A = (int)((double)param0.field_A + (double)ov.a(-69, var4) * 0.00016 * Math.pow((double)var4, 2.0) / (double)param0.field_o);
+            param0.field_E = (int)((double)param0.field_E + 0.00016 * (double)RasterBuffer.a(-63, var3_int) * Math.pow((double)var3_int, 2.0) / (double)param0.field_o);
+            param0.field_A = (int)((double)param0.field_A + (double)RasterBuffer.a(-69, var4) * 0.00016 * Math.pow((double)var4, 2.0) / (double)param0.field_o);
             param0.field_D = true;
             tq.a(-111, fi.a(4, he.field_o, (byte) -96) + 6, false);
             decompiledFrameRemainder7 = (var17 != 0);
@@ -315,8 +315,8 @@ final class nm extends ms {
             (decompiledFrameCompleted0)) {
             var3_intLifetime2 = this.field_q - param0.field_C;
             var4Lifetime2 = -param0.field_z + this.field_l;
-            param0.field_E = (int)((double)param0.field_E + (double)ov.a(param1 ^ -16777002, var3_intLifetime2) * 0.000035 * Math.pow((double)var3_intLifetime2, 2.0) / (double)param0.field_o);
-            param0.field_A = (int)((double)param0.field_A + (double)ov.a(-115, var4Lifetime2) * 0.000035 * Math.pow((double)var4Lifetime2, 2.0) / (double)param0.field_o);
+            param0.field_E = (int)((double)param0.field_E + (double)RasterBuffer.a(param1 ^ -16777002, var3_intLifetime2) * 0.000035 * Math.pow((double)var3_intLifetime2, 2.0) / (double)param0.field_o);
+            param0.field_A = (int)((double)param0.field_A + (double)RasterBuffer.a(-115, var4Lifetime2) * 0.000035 * Math.pow((double)var4Lifetime2, 2.0) / (double)param0.field_o);
             this.field_z = true;
             tq.a(-119, 1, true);
             decompiledFrameRemainder7 = (var17 != 0);
@@ -325,8 +325,8 @@ final class nm extends ms {
             (decompiledFrameCompleted0)) {
             var4Lifetime1 = this.field_l - param0.field_z;
             var3_intLifetime1 = -param0.field_C + this.field_q;
-            param0.field_E = (int)((double)param0.field_E - (double)ov.a(-56, var3_intLifetime1) * 0.000035 * Math.pow((double)var3_intLifetime1, 2.0) / (double)param0.field_o);
-            param0.field_A = (int)((double)param0.field_A - 0.000035 * (double)ov.a(-52, var4Lifetime1) * Math.pow((double)var4Lifetime1, 2.0) / (double)param0.field_o);
+            param0.field_E = (int)((double)param0.field_E - (double)RasterBuffer.a(-56, var3_intLifetime1) * 0.000035 * Math.pow((double)var3_intLifetime1, 2.0) / (double)param0.field_o);
+            param0.field_A = (int)((double)param0.field_A - 0.000035 * (double)RasterBuffer.a(-52, var4Lifetime1) * Math.pow((double)var4Lifetime1, 2.0) / (double)param0.field_o);
             this.field_z = true;
             tq.a(-123, 2, true);
           }
@@ -585,12 +585,12 @@ final class nm extends ms {
           if (stackIn_40_0 == -6 &&
             this.field_p % 50 == 0 &&
             ul.field_f == 0) {
-            this.field_w.a((ms) (new be(this.field_q >> 8, this.field_l >> 8, 16745472, true)), (byte) 39);
+            this.field_w.a((IntrusiveNode) (new be(this.field_q >> 8, this.field_l >> 8, 16745472, true)), (byte) 39);
           }
           if (this.field_y == 4 &&
             0 == this.field_p % 50 &&
             ul.field_f == 0) {
-            this.field_w.a((ms) (new be(this.field_q >> 8, this.field_l >> 8, 1090047, false)), (byte) 39);
+            this.field_w.a((IntrusiveNode) (new be(this.field_q >> 8, this.field_l >> 8, 1090047, false)), (byte) 39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -600,7 +600,7 @@ final class nm extends ms {
         }
     }
 
-    final static void a(fs param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

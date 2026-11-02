@@ -6,7 +6,7 @@ final class qn {
     static String[] field_b;
     private wb[] field_c;
     static boolean[] field_d;
-    static wi field_e;
+    static PlatformTaskDispatcher field_e;
     static String field_h;
     static boolean field_a;
     static int field_g;

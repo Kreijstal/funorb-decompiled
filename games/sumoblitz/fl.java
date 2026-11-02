@@ -111,7 +111,7 @@ final class fl extends gm {
             }
           }
           this.field_t.a(param1, this, param4, -66, param0);
-          su.a((byte) -70);
+          ClientException.a((byte) -70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

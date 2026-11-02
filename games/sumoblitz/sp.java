@@ -129,7 +129,7 @@ class sp extends pk implements ug {
           while (var4_ref_pk != null) {
             if (var4_ref_pk.d(-1)) {
               var5 = new cb(this.field_y);
-              var5.a((byte) -70, (ms) (var4_ref_pk));
+              var5.a((byte) -70, (IntrusiveNode) (var4_ref_pk));
               var6 = (pk) (var5.c((byte) 87));
               while (var6 != null) {
                 if (var6.a(param1, (byte) 61)) {
@@ -381,7 +381,7 @@ class sp extends pk implements ug {
 
     final void a(pk param0, int param1) {
         try {
-          this.field_y.a((ms) (param0), (byte) 39);
+          this.field_y.a((IntrusiveNode) (param0), (byte) 39);
           if (param1 <= 59) {
             field_x = (int[]) null;
           }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pj extends ms {
+class DualLinkNode extends IntrusiveNode {
     static ts field_n;
-    pj field_m;
-    pj field_o;
+    DualLinkNode field_m;
+    DualLinkNode field_o;
     static int[] field_k;
     static int[] field_q;
     static long field_p;
@@ -37,7 +37,7 @@ class pj extends ms {
         field_q = null;
     }
 
-    protected pj() {
+    protected DualLinkNode() {
     }
 
     static {

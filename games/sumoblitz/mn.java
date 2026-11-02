@@ -93,8 +93,8 @@ final class mn {
         pl var5 = as.field_v;
         pl var3 = var5;
         var5.g(param2, 8);
-        var5.field_p = var5.field_p + 1;
-        int var4 = var5.field_p;
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
         if (param1 > -5) {
           return;
         }
@@ -107,9 +107,9 @@ final class mn {
             var5.b((byte) 52, 0);
           }
           var5.a(var4, false);
-          var5.field_p = var5.field_p - 4;
+          var5.position = var5.position - 4;
           param0.field_m = var5.c(true);
-          var5.c(-var4 + var5.field_p, -13745);
+          var5.c(-var4 + var5.position, -13745);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "mn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class su extends RuntimeException {
+final class ClientException extends RuntimeException {
     static String field_d;
     String field_a;
     static String field_c;
@@ -47,7 +47,7 @@ final class su extends RuntimeException {
             }
           }
           if (param3 > -113) {
-            su.b((byte) -11);
+            ClientException.b((byte) -11);
           }
           stackIn_19_0 = new qj(param1, var4_long, param0);
           return stackIn_19_0;
@@ -74,7 +74,7 @@ final class su extends RuntimeException {
     final static boolean a(int param0) {
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
-          su.a(6, (on) null, (byte[]) null, -63);
+          ClientException.a(6, (on) null, (byte[]) null, -63);
           if (!nt.field_r) {
             return vs.b((byte) 9) ? true : false;
           }
@@ -97,7 +97,7 @@ final class su extends RuntimeException {
         lk.a(var1.field_v, var1.field_t, var1.field_m);
         lk.d(var1.field_s, var1.field_r, var1.field_u, var1.field_p);
         var1.field_v = null;
-        ko.field_m.a((ms) (var1), (byte) 39);
+        ko.field_m.a((IntrusiveNode) (var1), (byte) 39);
         int var2 = -37 / ((param0 - 1) / 38);
     }
 
@@ -109,7 +109,7 @@ final class su extends RuntimeException {
         field_d = null;
     }
 
-    su(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_a = param1;
         this.field_b = param0;
     }

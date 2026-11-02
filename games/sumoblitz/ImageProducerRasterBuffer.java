@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fh extends ov implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static String field_j;
     static int field_k;
     static mf[] field_n;
@@ -122,7 +122,7 @@ final class fh extends ov implements java.awt.image.ImageProducer, java.awt.imag
           if (param1 == -1) {
             return null;
           }
-          fh.c(40);
+          ImageProducerRasterBuffer.c(40);
           stackIn_27_0 = null;
           return (dk) (stackIn_27_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -292,7 +292,7 @@ final class fh extends ov implements java.awt.image.ImageProducer, java.awt.imag
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    fh() {
+    ImageProducerRasterBuffer() {
     }
 
     static {

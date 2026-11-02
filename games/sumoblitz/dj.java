@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dj extends ms {
+final class dj extends IntrusiveNode {
     mf field_q;
     static String field_o;
     static String[] field_r;
     static hr field_l;
     static int field_n;
-    ms field_k;
+    IntrusiveNode field_k;
     int field_p;
     static Object field_m;
 
@@ -36,7 +36,7 @@ final class dj extends ms {
         field_r = null;
     }
 
-    dj(mf param0, ms param1) {
+    dj(mf param0, IntrusiveNode param1) {
         try {
           this.field_q = param0;
           this.field_p = param0.g();

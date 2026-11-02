@@ -3,24 +3,24 @@
  */
 import java.util.*;
 
-final class ia implements Iterator {
-    private um field_e;
+final class NodeHashTableIterator implements Iterator {
+    private IterableNodeHashTable field_e;
     static String[] field_c;
-    private ms field_b;
+    private IntrusiveNode field_b;
     static int field_d;
     private int field_f;
     static String field_a;
-    private ms field_g;
+    private IntrusiveNode field_g;
 
     public final Object next() {
         int fieldTemp$0 = 0;
         int var2;
-        ms var3;
-        ms var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_b != this.field_e.field_c[this.field_f - 1]) {
           var4 = this.field_b;
-          this.field_b = var4.field_b;
+          this.field_b = var4.next;
           this.field_g = var4;
           return var4;
         }
@@ -30,10 +30,10 @@ final class ia implements Iterator {
           }
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          var3 = this.field_e.field_c[fieldTemp$0].field_b;
+          var3 = this.field_e.field_c[fieldTemp$0].next;
         } while (var3 == this.field_e.field_c[this.field_f - 1]);
         this.field_g = var3;
-        this.field_b = var3.field_b;
+        this.field_b = var3.next;
         return var3;
     }
 
@@ -55,8 +55,8 @@ final class ia implements Iterator {
         while (this.field_e.field_d > this.field_f) {
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          if (this.field_e.field_c[fieldTemp$0].field_b != this.field_e.field_c[-1 + this.field_f]) {
-            this.field_b = this.field_e.field_c[this.field_f - 1].field_b;
+          if (this.field_e.field_c[fieldTemp$0].next != this.field_e.field_c[-1 + this.field_f]) {
+            this.field_b = this.field_e.field_c[this.field_f - 1].next;
             return true;
           }
           this.field_b = this.field_e.field_c[-1 + this.field_f];
@@ -75,7 +75,7 @@ final class ia implements Iterator {
 
     private final void b(int param0) {
         this.field_f = 1;
-        this.field_b = this.field_e.field_c[0].field_b;
+        this.field_b = this.field_e.field_c[0].next;
         if (param0 > 4) {
           this.field_g = null;
           return;
@@ -84,7 +84,7 @@ final class ia implements Iterator {
         this.field_g = null;
     }
 
-    ia(um param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_g = null;
         try {
           this.field_e = param0;

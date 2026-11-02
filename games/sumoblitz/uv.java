@@ -59,7 +59,7 @@ final class uv extends gm {
             var10 = var12;
             var7Lifetime2 = var10;
             var8 = new vt(24, param3, param1, param0, (int)var13[0] << 8, (int)var13[1] << 8, 0);
-            param4.a((ms) (var8), (byte) 39);
+            param4.a((IntrusiveNode) (var8), (byte) 39);
             var6_int++;
           }
           for (var6_intLifetime1 = 0; var6_intLifetime1 < 8; var6_intLifetime1++) {
@@ -68,7 +68,7 @@ final class uv extends gm {
             var11 = dupTemp$2;
             var7Lifetime1Lifetime1 = dupTemp$2;
             var8Lifetime1 = new vt(24, param3, param1, param0, (int)var11[0] << 8, (int)var11[1] << 8, 1);
-            param4.a((ms) (var8Lifetime1), (byte) 39);
+            param4.a((IntrusiveNode) (var8Lifetime1), (byte) 39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -34,7 +34,7 @@ abstract class pt {
         field_c = null;
     }
 
-    final static void a(pj param0, int param1, pj param2) {
+    final static void a(DualLinkNode param0, int param1, DualLinkNode param2) {
         if (null != param2.field_o) {
           param2.c(-5106);
         }
@@ -80,7 +80,7 @@ abstract class pt {
               kk.a((byte) -127);
               return;
             }
-            var5_int = gu.field_d - var10.field_p;
+            var5_int = gu.field_d - var10.position;
             var12 = var4_ref_qv.field_m;
             var11 = var12;
             var6 = var11;
@@ -111,7 +111,7 @@ abstract class pt {
             kk.a((byte) -114);
             return;
           }
-          ms.a("LR1: " + di.b((byte) 126), (Throwable) null, 0);
+          IntrusiveNode.a("LR1: " + di.b((byte) 126), (Throwable) null, 0);
           kk.a((byte) -119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

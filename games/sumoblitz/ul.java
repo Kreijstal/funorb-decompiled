@@ -60,7 +60,7 @@ final class ul {
         }
     }
 
-    final static cd[] a(byte param0, wi param1) {
+    final static cd[] a(byte param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         cd[] stackIn_5_0 = null;
         cd[] stackIn_12_0 = null;

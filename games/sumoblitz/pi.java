@@ -31,7 +31,7 @@ final class pi {
         }
     }
 
-    final static vl a(fs param0, boolean param1, int param2) {
+    final static vl a(PacketBuffer param0, boolean param1, int param2) {
         int var8 = 0;
         vl stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
@@ -53,7 +53,7 @@ final class pi {
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (!param1) {
-            param0.field_p = 0;
+            param0.position = 0;
           }
           var3_int = param0.e(-31302);
           var4 = 0;
@@ -81,7 +81,7 @@ final class pi {
               var13.field_s = var7;
               var7++;
             }
-            var5.a((ms) (var13), (byte) 39);
+            var5.a((IntrusiveNode) (var13), (byte) 39);
           }
           stackIn_17_0 = new vl(var5, var4);
           return stackIn_17_0;

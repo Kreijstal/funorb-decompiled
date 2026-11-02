@@ -6,7 +6,7 @@ final class rn {
 
     final static void a(String param0, int param1, int param2, int param3, int param4) {
         try {
-          ig.field_b.a((ms) (new to(param0, param3, param1, param2)), (byte) 39);
+          ig.field_b.a((IntrusiveNode) (new to(param0, param3, param1, param2)), (byte) 39);
           if (param4 != 28807) {
             rn.a(16);
           }

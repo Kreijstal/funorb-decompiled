@@ -14,31 +14,31 @@ final class er {
 
     final static void a(boolean param0) {
         ha var2 = nq.field_h.a(-117);
-        bq.field_c = var2.a(g.field_a, ci.field_g, true);
+        bq.field_c = var2.a(SocketConnector.field_a, ci.field_g, true);
         gt.field_db = var2.a(hu.field_c, mn.field_b, true);
         uq.field_a = var2.a(qr.field_a, wj.field_i, true);
         qv.field_k = var2.a(sv.field_a, au.field_j, true);
         hc.field_e = var2.a(ma.field_b, ld.field_F, true);
-        be.field_t = var2.a(sq.field_b, nw.field_f, true);
+        be.field_t = var2.a(sq.field_b, ProxySocketConnector.field_f, true);
         up.field_c = aj.a(pe.field_F, var2, 28513);
         hf.field_H = aj.a(rh.field_q, var2, 28513);
         qw.field_a = aj.a(hi.field_b, var2, 28513);
         pi.field_d = hf.a(var2, gk.field_N, (byte) -11);
         uj.field_a = hf.a(var2, ud.field_p, (byte) -11);
-        ns.field_b = hf.a(var2, ms.field_d, (byte) -11);
+        MouseWheelInput.field_b = hf.a(var2, IntrusiveNode.field_d, (byte) -11);
         jt.field_y = hf.a(var2, rc.field_i, (byte) -11);
         il.field_b = hf.a(var2, hc.field_b, (byte) -11);
         ti.field_b = hf.a(var2, oi.field_d, (byte) -11);
         vm.field_a = aj.a(tk.field_c, var2, 28513);
         to.field_s = aj.a(jj.field_c, var2, 28513);
         mu.field_B = aj.a(rw.field_r, var2, 28513);
-        vv.field_a = aj.a(ok.field_d, var2, 28513);
+        SecondaryNodeDequeIterator.field_a = aj.a(ok.field_d, var2, 28513);
         jn.field_c = aj.a(hh.field_a, var2, 28513);
         ok.field_j = aj.a(sk.field_c, var2, 28513);
         pr.field_k = aj.a(gq.field_o, var2, 28513);
         lu.field_e = hf.a(var2, cb.field_e, (byte) -11);
         to.field_m = hf.a(var2, ve.field_k, (byte) -11);
-        bt.field_e = hf.a(var2, dt.field_n, (byte) -11);
+        bt.field_e = hf.a(var2, BufferedSocket.field_n, (byte) -11);
         ht.field_e = aj.a(rl.field_l, var2, 28513);
         dc.field_ab = aj.a(kk.field_e, var2, 28513);
         hv.field_d = aj.a(ks.field_w, var2, 28513);
@@ -72,7 +72,7 @@ final class er {
           wm.field_a = hf.a(var2, wf.field_a, (byte) -11);
           si.field_d = hf.a(var2, ml.field_p, (byte) -11);
           kw.field_a = hf.a(var2, th.field_C, (byte) -11);
-          ju.field_p = aj.a(os.field_b, var2, 28513);
+          ju.field_p = aj.a(MouseInputHandler.field_b, var2, 28513);
           ml.field_w = aj.a(sd.field_a, var2, 28513);
           ok.field_f = aj.a(hp.field_n, var2, 28513);
           ff.field_k = aj.a(ni.field_h, var2, 28513);
@@ -121,7 +121,7 @@ final class er {
         wm.field_a = hf.a(var2, wf.field_a, (byte) -11);
         si.field_d = hf.a(var2, ml.field_p, (byte) -11);
         kw.field_a = hf.a(var2, th.field_C, (byte) -11);
-        ju.field_p = aj.a(os.field_b, var2, 28513);
+        ju.field_p = aj.a(MouseInputHandler.field_b, var2, 28513);
         ml.field_w = aj.a(sd.field_a, var2, 28513);
         ok.field_f = aj.a(hp.field_n, var2, 28513);
         ff.field_k = aj.a(ni.field_h, var2, 28513);

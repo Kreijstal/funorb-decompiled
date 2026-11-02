@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pd extends ms {
+final class pd extends IntrusiveNode {
     static hv field_m;
     int field_o;
     int field_k;
@@ -59,7 +59,7 @@ final class pd extends ms {
             pd.a((byte[]) null, 48, 96);
           }
           var3 = new db(param0);
-          jj.field_a.a((ms) (var3), (byte) 39);
+          jj.field_a.a((IntrusiveNode) (var3), (byte) 39);
           mn.a(var3, param2 - 5530, param1);
           stackIn_3_0 = var3;
           return stackIn_3_0;

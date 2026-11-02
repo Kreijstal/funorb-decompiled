@@ -5,14 +5,14 @@ final class ph {
     static ri[] field_a;
     static qu field_b;
     static String field_d;
-    private pj field_e;
+    private DualLinkNode field_e;
     private ro field_g;
     private int field_f;
     static String field_h;
     private te field_c;
 
-    final pj a(byte param0, long param1) {
-        pj var4 = (pj) (this.field_c.a(param0 ^ -60, param1));
+    final DualLinkNode a(byte param0, long param1) {
+        DualLinkNode var4 = (DualLinkNode) (this.field_c.a(param0 ^ -60, param1));
         if (param0 != -88) {
           this.a((byte) -122, 80L);
         }
@@ -22,8 +22,8 @@ final class ph {
         return var4;
     }
 
-    final void a(long param0, pj param1, int param2) {
-        pj var5 = null;
+    final void a(long param0, DualLinkNode param1, int param2) {
+        DualLinkNode var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -416,7 +416,7 @@ final class ph {
 
     ph(int param0) {
         int var2 = 0;
-        this.field_e = new pj();
+        this.field_e = new DualLinkNode();
         this.field_g = new ro();
         this.field_f = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {

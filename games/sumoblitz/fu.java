@@ -176,11 +176,11 @@ final class fu extends wp {
           if (pe.field_E != null) {
             try {
               pe.field_E.a(-7564, 0L);
-              pe.field_E.a(ig.field_a.field_n, 24, (byte) -41, ig.field_a.field_p);
+              pe.field_E.a(ig.field_a.payload, 24, (byte) -41, ig.field_a.position);
             } catch (Exception exception) {
             }
           }
-          ig.field_a.field_p = ig.field_a.field_p + param0;
+          ig.field_a.position = ig.field_a.position + param0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

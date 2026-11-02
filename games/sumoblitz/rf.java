@@ -34,23 +34,23 @@ final class rf extends Exception {
         field_b = null;
     }
 
-    final static g a(String param0, int param1, boolean param2) {
-        nw var3 = null;
+    final static SocketConnector a(String param0, int param1, boolean param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        nw stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new nw();
+          var3 = new ProxySocketConnector();
           if (!param2) {
             field_b = (String[]) null;
           }
-          ((g) ((Object) var3)).field_b = param0;
-          ((g) ((Object) var3)).field_d = param1;
+          ((SocketConnector) ((Object) var3)).field_b = param0;
+          ((SocketConnector) ((Object) var3)).field_d = param1;
           stackIn_3_0 = var3;
-          return (g) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

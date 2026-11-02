@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class nw extends g {
+final class ProxySocketConnector extends SocketConnector {
     static String field_h;
     static mm field_e;
     private java.net.ProxySelector field_g;
@@ -12,7 +12,7 @@ final class nw extends g {
 
     final static float a(int param0, float param1, float param2, float param3) {
         if (param0 != 1050) {
-          nw.b(-23);
+          ProxySocketConnector.b(-23);
         }
         return (param2 - param1) * param3 + param1;
     }
@@ -44,7 +44,7 @@ final class nw extends g {
         var12 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param3 != 105) {
-            nw.b(109);
+            ProxySocketConnector.b(109);
           }
           var13 = new java.net.Socket(param2, param1);
           var13.setSoTimeout(10000);
@@ -127,7 +127,7 @@ final class nw extends g {
         field_h = null;
         if (param0 != 1183) {
           String var2 = (String) null;
-          nw.a((String) null, (byte) 106, 118, (ki) null, (String) null);
+          ProxySocketConnector.a((String) null, (byte) 106, 118, (ki) null, (String) null);
         }
     }
 
@@ -318,7 +318,7 @@ final class nw extends g {
         if (var7 == null) {
           return this.a((byte) 119);
         }
-        throw nw.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
     }
 
     final static String a(String param0, byte param1, int param2, ki param3, String param4) {
@@ -369,7 +369,7 @@ final class nw extends g {
         }
     }
 
-    nw() {
+    ProxySocketConnector() {
         this.field_g = java.net.ProxySelector.getDefault();
     }
 

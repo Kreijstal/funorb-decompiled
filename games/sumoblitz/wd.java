@@ -3,7 +3,7 @@
  */
 final class wd extends se {
     private String field_i;
-    static hb field_e;
+    static GameKeyHandler field_e;
     private String field_g;
     static ki field_j;
     static String field_h;
@@ -13,17 +13,17 @@ final class wd extends se {
         if (param1 == 125) {
           return ng.a(1, -74, true, param0, false, false);
         }
-        field_e = (hb) null;
+        field_e = (GameKeyHandler) null;
         return ng.a(1, -74, true, param0, false, false);
     }
 
-    final void a(fs param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.b(this.field_i, (byte) -105);
           param0.a(this.field_g, 46);
           if (param1 >= -107) {
-            fs var4 = (fs) null;
-            this.a((fs) null, (byte) 29);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, (byte) 29);
           }
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "wd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -90,7 +90,7 @@ final class wd extends se {
     }
 
     static {
-        field_e = new hb();
+        field_e = new GameKeyHandler();
         field_h = "Continue";
     }
 }

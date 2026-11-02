@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rj {
-    private fs field_d;
+    private PacketBuffer field_d;
     static ri field_f;
     private am[] field_e;
     static long field_a;
@@ -22,8 +22,8 @@ final class rj {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (ct.field_x > 0) {
-            if (vv.field_b != null) {
-              gk.field_o = vv.field_b.g(109);
+            if (SecondaryNodeDequeIterator.field_b != null) {
+              gk.field_o = SecondaryNodeDequeIterator.field_b.g(109);
               jl.a(25, 2);
               if (var3 != 0) {
                 gk.field_o = pb.a(640, 8089, 0, 480, lt.field_m, 0);
@@ -57,8 +57,8 @@ final class rj {
               var2_int = 0;
             }
           }
-          if (vv.field_b == null &&
-            dt.field_f) {
+          if (SecondaryNodeDequeIterator.field_b == null &&
+            BufferedSocket.field_f) {
             ou.a(param0, var2_int, (byte) -28);
           }
           if (param1) {
@@ -100,7 +100,7 @@ final class rj {
 
     final am a(boolean param0, int param1, wl param2, boolean param3, wl param4) {
         am stackIn_12_0 = null;
-        fs stackIn_19_0 = null;
+        PacketBuffer stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         am stackIn_21_0 = null;
         RuntimeException stackIn_25_0 = null;
@@ -124,14 +124,14 @@ final class rj {
               stackIn_12_0 = this.field_e[param1];
               return stackIn_12_0;
             }
-            this.field_d.field_p = 72 * param1 + 6;
+            this.field_d.position = 72 * param1 + 6;
             if (param0) {
               rj.a((ki) null, 4);
             }
             var6_int = this.field_d.c(true);
             stackIn_19_0 = this.field_d;
             stackIn_20_1 = !(param0);
-            var7 = ((fs) (Object) stackIn_19_0).c(stackIn_20_1);
+            var7 = ((PacketBuffer) (Object) stackIn_19_0).c(stackIn_20_1);
             var8 = new byte[64];
             this.field_d.a(var8, 64, 0, (byte) -99);
             var9 = new am(param1, param4, param2, this.field_b, this.field_h, var6_int, var8, var7, param3);
@@ -164,7 +164,7 @@ final class rj {
         int stackIn_33_0 = 0;
         int stackIn_33_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        fs var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         byte[] var4 = null;
@@ -189,11 +189,11 @@ final class rj {
           if (this.field_g.field_u) {
             return false;
           }
-          var2 = new fs(this.field_g.d(false));
-          var2.field_p = 5;
+          var2 = new PacketBuffer(this.field_g.d(false));
+          var2.position = 5;
           var3 = var2.e(-31302);
-          var2.field_p = var2.field_p + var3 * 72;
-          var4 = new byte[var2.field_n.length - var2.field_p];
+          var2.position = var2.position + var3 * 72;
+          var4 = new byte[var2.payload.length - var2.position];
           var2.a(var4, var4.length, 0, (byte) -92);
           if (this.field_i != null &&
             null != this.field_j) {
@@ -209,7 +209,7 @@ final class rj {
           if (var5.length != 65) {
             throw new RuntimeException();
           }
-          var6_array = gn.a(var2.field_n, (byte) -120, 5, -5 + (var2.field_p - var4.length));
+          var6_array = gn.a(var2.payload, (byte) -120, 5, -5 + (var2.position - var4.length));
           var7 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var7 >= 64))) {
@@ -1133,27 +1133,27 @@ final class rj {
           }
           var2Lifetime144 = ke.a((byte) 116, "deathMessages,0");
           if (null != var2Lifetime144) {
-            ms.field_f[0] = uu.a(param1 + 5, var2Lifetime144);
+            IntrusiveNode.field_f[0] = uu.a(param1 + 5, var2Lifetime144);
           }
           var2Lifetime145 = ke.a((byte) 89, "deathMessages,1");
           if (var2Lifetime145 != null) {
-            ms.field_f[1] = uu.a(param1 + 5, var2Lifetime145);
+            IntrusiveNode.field_f[1] = uu.a(param1 + 5, var2Lifetime145);
           }
           var2Lifetime146 = ke.a((byte) 121, "deathMessages,2");
           if (null != var2Lifetime146) {
-            ms.field_f[2] = uu.a(param1 + 5, var2Lifetime146);
+            IntrusiveNode.field_f[2] = uu.a(param1 + 5, var2Lifetime146);
           }
           var2Lifetime147 = ke.a((byte) 101, "deathMessages,3");
           if (null != var2Lifetime147) {
-            ms.field_f[3] = uu.a(0, var2Lifetime147);
+            IntrusiveNode.field_f[3] = uu.a(0, var2Lifetime147);
           }
           var2Lifetime148 = ke.a((byte) 106, "deathMessages,4");
           if (null != var2Lifetime148) {
-            ms.field_f[4] = uu.a(0, var2Lifetime148);
+            IntrusiveNode.field_f[4] = uu.a(0, var2Lifetime148);
           }
           var2Lifetime149 = ke.a((byte) 90, "deathMessages,5");
           if (null != var2Lifetime149) {
-            ms.field_f[5] = uu.a(0, var2Lifetime149);
+            IntrusiveNode.field_f[5] = uu.a(0, var2Lifetime149);
           }
           var2Lifetime150 = ke.a((byte) 109, "warningWave");
           if (null != var2Lifetime150) {
@@ -1560,7 +1560,7 @@ final class rj {
           }
           throw qo.a((Throwable) ((Object) stackIn_870_0), ((StringBuilder) (Object) stackIn_870_1).append(stackIn_871_2).append(',').append(param1).append(')').toString());
         }
-        if (kc.field_o) {
+        if (GameApplet.field_o) {
           Sumoblitz.field_L = (var3 == 0);
         }
     }
@@ -1584,10 +1584,10 @@ final class rj {
               if (!pg.field_a) {
                 param2 = ih.field_b;
                 if (Sumoblitz.field_L) {
-                  param2 = ov.field_g;
+                  param2 = RasterBuffer.field_g;
                 }
               } else {
-                param2 = ov.field_g;
+                param2 = RasterBuffer.field_g;
               }
               no.field_a.a(-3499, ac.field_F);
             }

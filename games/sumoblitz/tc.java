@@ -185,7 +185,7 @@ final class tc extends na {
           bi.field_c = 0;
           ew.field_e = 0;
           b.field_c = false;
-          hl.field_e = false;
+          SecondaryNodeDeque.field_e = false;
           vb.field_E = false;
           nq.field_i = 0;
           return;

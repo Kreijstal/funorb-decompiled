@@ -13,8 +13,8 @@ abstract class gd {
     ro field_g;
     long field_e;
     int field_c;
-    fs field_n;
-    fs field_b;
+    PacketBuffer field_n;
+    PacketBuffer field_b;
     volatile int field_d;
     volatile int field_j;
     byte field_m;
@@ -85,12 +85,12 @@ abstract class gd {
           if (!(this.d(-2115911413) < 20)) {
             throw new RuntimeException();
           }
-          this.field_l.a((pj) (var8), (byte) -118);
+          this.field_l.a((DualLinkNode) (var8), (byte) -118);
         } else {
           if (!(this.a((byte) -120) < 20)) {
             throw new RuntimeException();
           }
-          this.field_f.a((pj) (var8), (byte) -107);
+          this.field_f.a((DualLinkNode) (var8), (byte) -107);
         }
         return var8;
     }
@@ -135,7 +135,7 @@ abstract class gd {
               var12 = var13;
               var10 = var12;
               var8Lifetime2 = var10;
-              param2.a((ms) (new as(64, ((int)var13[0] << 11) + param4, ((int)var13[1] << 11) + param1, param5, -(int)var13[0] << 8, -(int)var13[1] << 8, 0)), (byte) 39);
+              param2.a((IntrusiveNode) (new as(64, ((int)var13[0] << 11) + param4, ((int)var13[1] << 11) + param1, param5, -(int)var13[0] << 8, -(int)var13[1] << 8, 0)), (byte) 39);
               var7++;
               continue;
             }
@@ -151,7 +151,7 @@ abstract class gd {
             dupTemp$0 = kt.a((byte) -20, var8Lifetime1, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7Lifetime1) + 0.0));
             var11 = dupTemp$0;
             var8Lifetime1Lifetime1 = dupTemp$0;
-            param2.a((ms) (new as(64, param4 + ((int)var11[0] << 11), ((int)var11[1] << 11) + param1, param5, -(int)var11[0] << 8, -(int)var11[1] << 8, 1)), (byte) 39);
+            param2.a((IntrusiveNode) (new as(64, param4 + ((int)var11[0] << 11), ((int)var11[1] << 11) + param1, param5, -(int)var11[0] << 8, -(int)var11[1] << 8, 1)), (byte) 39);
             var7Lifetime1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -223,13 +223,13 @@ abstract class gd {
         lh var2Lifetime1;
         if (param0 == -82) {
           var2 = new lh();
-          no.field_d.a((ms) (var2), (byte) 39);
+          no.field_d.a((IntrusiveNode) (var2), (byte) 39);
           jg.b(param0 + 11126, param1);
           return var2;
         }
         field_k = (long[]) null;
         var2Lifetime1 = new lh();
-        no.field_d.a((ms) (var2Lifetime1), (byte) 39);
+        no.field_d.a((IntrusiveNode) (var2Lifetime1), (byte) 39);
         jg.b(param0 + 11126, param1);
         return var2Lifetime1;
     }
@@ -247,7 +247,7 @@ abstract class gd {
         if (param0 < -82) {
           return this.field_f.a((byte) 2) + this.field_g.a((byte) 2);
         }
-        this.field_n = (fs) null;
+        this.field_n = (PacketBuffer) null;
         return this.field_f.a((byte) 2) + this.field_g.a((byte) 2);
     }
 
@@ -272,11 +272,11 @@ abstract class gd {
         this.field_h = new ro();
         this.field_f = new ro();
         this.field_g = new ro();
-        this.field_n = new fs(6);
+        this.field_n = new PacketBuffer(6);
         this.field_d = 0;
         this.field_j = 0;
         this.field_m = (byte) 0;
-        this.field_b = new fs(10);
+        this.field_b = new PacketBuffer(10);
     }
 
     static {

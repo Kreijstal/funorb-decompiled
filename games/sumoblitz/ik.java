@@ -328,10 +328,10 @@ final class ik {
     }
 
     ik(int param0, int param1, d param2) {
-        this(kd.a((byte) -123, param0), vo.b(param1, -1), param2, lt.field_m, ms.b(-16754));
+        this(kd.a((byte) -123, param0), vo.b(param1, -1), param2, lt.field_m, IntrusiveNode.b(-16754));
     }
 
-    private ik(ki param0, ki param1, d param2, wi param3, nj[] param4) {
+    private ik(ki param0, ki param1, d param2, PlatformTaskDispatcher param3, nj[] param4) {
         this.field_b = false;
         try {
           ha.field_g = param1;

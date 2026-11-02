@@ -74,11 +74,11 @@ final class ki {
         if (param0 <= 80) {
           ki.b(62);
         }
-        if (nw.field_e == hm.field_a) {
+        if (ProxySocketConnector.field_e == hm.field_a) {
           throw new IllegalStateException();
         }
-        if (st.field_z == nw.field_e) {
-          nw.field_e = hm.field_a;
+        if (st.field_z == ProxySocketConnector.field_e) {
+          ProxySocketConnector.field_e = hm.field_a;
           return eg.field_l;
         }
         return null;
@@ -452,12 +452,12 @@ final class ki {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        fs var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        fs var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        fs var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -507,8 +507,8 @@ final class ki {
             var35 = ab.a(true, this.field_d[param3], 0);
             var25 = var35;
             var9 = var25;
-            var26 = new fs(var35);
-            var26.a(var26.field_n.length, (byte) 127, 5, param1);
+            var26 = new PacketBuffer(var35);
+            var26.a(var26.payload.length, (byte) 127, 5, param1);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -539,9 +539,9 @@ final class ki {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * (var12 * var5_int);
-              var32 = new fs(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
-              var32.field_p = var11;
+              var32.position = var11;
               var15 = 0;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
@@ -563,7 +563,7 @@ final class ki {
               }
               var44 = new byte[var14];
               var14Lifetime1 = 0;
-              var32.field_p = var11;
+              var32.position = var11;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
@@ -587,11 +587,11 @@ final class ki {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * (var12 * var5_int);
-              var29 = new fs(var43);
+              var29 = new PacketBuffer(var43);
               var38 = new int[var5_int];
               var30 = var38;
               var14_ref_int__ = var30;
-              var29.field_p = var11;
+              var29.position = var11;
               for (var15 = 0; var15 < var12; var15++) {
                 var16 = 0;
                 for (var17 = 0; var17 < var5_int; var17++) {
@@ -607,7 +607,7 @@ final class ki {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var29.field_p = var11;
+              var29.position = var11;
               var16 = 0;
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;

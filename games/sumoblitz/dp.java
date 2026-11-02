@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class dp extends pj {
+class dp extends DualLinkNode {
     dp() {
     }
 

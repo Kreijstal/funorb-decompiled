@@ -48,7 +48,7 @@ abstract class qt {
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
-        return new lj(gi.c((byte) -2), kc.a(param0 - 3));
+        return new lj(gi.c((byte) -2), GameApplet.a(param0 - 3));
     }
 
     final void b(byte param0) {

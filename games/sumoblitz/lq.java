@@ -37,7 +37,7 @@ final class lq {
           var6 = new wb(param0.a("", "final_frame.jpg", -1), (java.awt.Component) ((Object) qn.field_f));
           var3 = var6.field_x;
           var4 = var6.field_u;
-          kc.j(103);
+          GameApplet.j(103);
           if (param1 >= -62) {
             ki var5 = (ki) null;
             lq.a(-58, (String) null, (String) null, (ki) null);
@@ -49,7 +49,7 @@ final class lq {
           mq.field_a.d();
           var6.c(0, -kh.field_a.field_u);
           mq.field_a.field_A = kh.field_a.field_u;
-          su.a((byte) 71);
+          ClientException.a((byte) 71);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "lq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

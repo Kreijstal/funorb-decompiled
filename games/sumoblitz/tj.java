@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tj extends ms {
-    static dt field_n;
+final class tj extends IntrusiveNode {
+    static BufferedSocket field_n;
     static String field_k;
     static String field_l;
     byte[] field_m;

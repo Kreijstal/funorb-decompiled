@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lt extends ms {
+final class lt extends IntrusiveNode {
     int field_n;
     int field_k;
     int field_o;
     int field_q;
     int field_l;
-    static wi field_m;
+    static PlatformTaskDispatcher field_m;
     int field_p;
 
     final static boolean a(byte param0) {
@@ -18,14 +18,14 @@ final class lt extends ms {
               return false;
             }
             gu.field_d = ig.field_a.e(-31302);
-            ig.field_a.field_p = 0;
+            ig.field_a.position = 0;
           }
           if (gu.field_d == -2) {
             if (!ju.b(-1, 2)) {
               return false;
             }
             gu.field_d = ig.field_a.a(255);
-            ig.field_a.field_p = 0;
+            ig.field_a.position = 0;
           }
           return ju.b(-1, gu.field_d);
         }
@@ -34,14 +34,14 @@ final class lt extends ms {
             return false;
           }
           gu.field_d = ig.field_a.e(-31302);
-          ig.field_a.field_p = 0;
+          ig.field_a.position = 0;
         }
         if (gu.field_d == -2) {
           if (!ju.b(-1, 2)) {
             return false;
           }
           gu.field_d = ig.field_a.a(255);
-          ig.field_a.field_p = 0;
+          ig.field_a.position = 0;
         }
         return ju.b(-1, gu.field_d);
     }
@@ -49,14 +49,14 @@ final class lt extends ms {
     final static void c(byte param0) {
         lf.a(0, (byte) -58);
         if (param0 != 53) {
-          field_m = (wi) null;
+          field_m = (PlatformTaskDispatcher) null;
         }
     }
 
     public static void a(int param0) {
         field_m = null;
         if (param0 != 1) {
-          field_m = (wi) null;
+          field_m = (PlatformTaskDispatcher) null;
         }
     }
 

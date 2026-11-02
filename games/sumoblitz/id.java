@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id extends ms {
+final class id extends IntrusiveNode {
     int field_k;
     int[] field_q;
     int field_n;

@@ -55,7 +55,7 @@ final class vs {
         if (param0 != 9) {
           vs.a((byte) 108);
         }
-        return ms.field_a;
+        return IntrusiveNode.field_a;
     }
 
     final static boolean a(int[] param0, int param1) {
@@ -87,9 +87,9 @@ final class vs {
               var2_long > var5_ref_ub.field_m) {
               var5_ref_ub.b(false);
               gu.field_d = var5_ref_ub.field_k.length;
-              ig.field_a.field_p = 0;
+              ig.field_a.position = 0;
               for (var6_int = 0; var6_int < gu.field_d; var6_int++) {
-                ig.field_a.field_n[var6_int] = var5_ref_ub.field_k[var6_int];
+                ig.field_a.payload[var6_int] = var5_ref_ub.field_k[var6_int];
               }
               li.field_r = vb.field_I;
               vb.field_I = ur.field_Q;
@@ -114,12 +114,12 @@ final class vs {
         try {
           while (true) {
             if (stackIn_17_0 < 0) {
-              ig.field_a.field_p = 0;
+              ig.field_a.position = 0;
               if (!ju.b(-1, 1)) {
                 return false;
               }
               lq.field_b = ig.field_a.i(255);
-              ig.field_a.field_p = 0;
+              ig.field_a.position = 0;
               gu.field_d = param0[lq.field_b];
             }
             if (!lt.a((byte) 119)) {
@@ -142,9 +142,9 @@ final class vs {
             }
             var6 = new ub((long)var5 + var2_long, lq.field_b, new byte[gu.field_d]);
             for (var7 = 0; gu.field_d > var7; var7++) {
-              var6.field_k[var7] = ig.field_a.field_n[var7];
+              var6.field_k[var7] = ig.field_a.payload[var7];
             }
-            un.field_b.a((ms) (var6), (byte) 39);
+            un.field_b.a((IntrusiveNode) (var6), (byte) 39);
             lq.field_b = -1;
             stackIn_17_0 = lq.field_b;
           }

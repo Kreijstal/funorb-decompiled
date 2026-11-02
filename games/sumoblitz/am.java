@@ -114,7 +114,7 @@ final class am extends rb {
     final void b(int param0) {
         rw discarded$0 = null;
         rw discarded$1 = null;
-        ms var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
@@ -129,7 +129,7 @@ final class am extends rb {
         }
         var2 = this.field_s.b(-72);
         while (var2 != null) {
-          var3 = (int)var2.field_h;
+          var3 = (int)var2.key;
           if (var3 >= 0) {
             if (this.field_x.field_d > var3) {
               if (this.field_x.field_m[var3] == 0) {
@@ -217,7 +217,7 @@ final class am extends rb {
               var4 = this.field_r.a(this.field_u, true, param0, (byte) -87, (byte) 2);
             }
           }
-          this.field_k.a((ms) (var4), param2 ^ -30562, (long)param0);
+          this.field_k.a((IntrusiveNode) (var4), param2 ^ -30562, (long)param0);
         }
         if (((rw) (var4)).field_u) {
           return null;
@@ -277,7 +277,7 @@ final class am extends rb {
                 return null;
               }
               var4 = this.field_r.a(this.field_u, true, param0, (byte) 78, (byte) 2);
-              this.field_k.a((ms) (var4), -1, (long)param0);
+              this.field_k.a((IntrusiveNode) (var4), -1, (long)param0);
             }
             return null;
           }
@@ -314,7 +314,7 @@ final class am extends rb {
           if (((rw) (var4)).field_t &&
             !this.field_r.a(param2 - 30435)) {
             var4 = this.field_r.a(this.field_u, true, param0, (byte) -69, (byte) 2);
-            this.field_k.a((ms) (var4), -1, (long)param0);
+            this.field_k.a((IntrusiveNode) (var4), -1, (long)param0);
           }
           return null;
         }
@@ -372,14 +372,14 @@ final class am extends rb {
         rw discarded$2 = null;
         int var2_int;
         rw var2;
-        ms var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        ms var6;
-        ms var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        ms var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = Sumoblitz.field_L ? 1 : 0;
         if (null != this.field_n) {
@@ -390,7 +390,7 @@ final class am extends rb {
             var2_int = 1;
             var3 = this.field_n.b(122);
             while (var3 != null) {
-              var4 = (int)var3.field_h;
+              var4 = (int)var3.key;
               if (this.field_p[var4] == 0) {
                 discarded$1 = this.a(var4, 1, 30561);
               }
@@ -401,19 +401,19 @@ final class am extends rb {
               }
               var3 = this.field_n.d((byte) 18);
             }
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (this.field_g < this.field_x.field_m.length) {
                 if (this.field_x.field_m[this.field_g] != 0) {
                   if (250 <= this.field_q.field_e) {
                     var2_int = 0;
-                    break L3;
+                    break scanLoop1;
                   }
                   if (this.field_p[this.field_g] == 0) {
                     discarded$0 = this.a(this.field_g, 1, 30561);
                   }
                   if (0 == this.field_p[this.field_g]) {
-                    var7 = new ms();
-                    var7.field_h = (long)this.field_g;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_g;
                     this.field_n.a(var7, (byte) 39);
                     var2_int = 0;
                   }
@@ -434,7 +434,7 @@ final class am extends rb {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_n.b(89);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_h;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_p[var4Lifetime1] != 1) {
                   discarded$3 = this.a(var4Lifetime1, 2, 30561);
                 }
@@ -445,19 +445,19 @@ final class am extends rb {
                 }
                 var3Lifetime1 = this.field_n.d((byte) 18);
               }
-              L10: while (true) {
+              scanLoop2: while (true) {
                 if (this.field_x.field_m.length > this.field_g) {
                   if (this.field_x.field_m[this.field_g] != 0) {
                     if (this.field_r.b(true)) {
                       var2_intLifetime1 = 0;
-                      break L10;
+                      break scanLoop2;
                     }
                     if (this.field_p[this.field_g] != 1) {
                       discarded$2 = this.a(this.field_g, 2, 30561);
                     }
                     if (this.field_p[this.field_g] != 1) {
-                      var6 = new ms();
-                      var6.field_h = (long)this.field_g;
+                      var6 = new IntrusiveNode();
+                      var6.key = (long)this.field_g;
                       var2_intLifetime1 = 0;
                       this.field_n.a(var6, (byte) 39);
                     }

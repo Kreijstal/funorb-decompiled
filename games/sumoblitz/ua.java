@@ -148,13 +148,13 @@ abstract class ua implements ot {
     }
 
     final static void f(int param0) {
-        if (null == vv.field_b) {
+        if (null == SecondaryNodeDequeIterator.field_b) {
           throw new IllegalStateException("NGR");
         }
         if (param0 != -5812) {
           field_n = (tg) null;
         }
-        vv.field_b.field_g = true;
+        SecondaryNodeDequeIterator.field_b.field_g = true;
         jl.a(param0 + 5837, 1);
     }
 

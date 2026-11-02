@@ -80,7 +80,7 @@ final class re {
         field_f = (int[][]) null;
     }
 
-    final void a(fs param0, vj param1) {
+    final void a(PacketBuffer param0, vj param1) {
         int var3;
         int var4;
         int var5;

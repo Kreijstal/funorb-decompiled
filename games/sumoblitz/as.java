@@ -9,7 +9,7 @@ final class as extends nt {
     static int[] field_y;
     static pl field_v;
     private int field_u;
-    static ns field_w;
+    static MouseWheelInput field_w;
 
     final static void f(int param0) {
         ct var1 = null;

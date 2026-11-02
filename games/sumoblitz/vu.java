@@ -90,7 +90,7 @@ final class vu extends ab {
           var18 = (float)(-var16) + var15;
           var19 = 1.0f - var18;
           var17 = var17 & var14;
-          var20 = fs.a((byte) 124, var18);
+          var20 = PacketBuffer.a((byte) 124, var18);
           var16 = var16 & var14;
           var21 = this.field_f[var16];
           var22 = this.field_f[var17];
@@ -101,7 +101,7 @@ final class vu extends ab {
             var27 = var24 - (float)var25;
             var28 = 1.0f - var27;
             var26 = var26 & var13;
-            var29 = fs.a((byte) 124, var27);
+            var29 = PacketBuffer.a((byte) 124, var27);
             var25 = var25 & var13;
             var30 = this.field_f[var21 + var25];
             var31 = this.field_f[var21 + var26];
@@ -113,12 +113,12 @@ final class vu extends ab {
               var37 = var36 + 1;
               var38 = (float)(-var36) + var35;
               var39 = -var38 + 1.0f;
-              var40 = fs.a((byte) 124, var38);
+              var40 = PacketBuffer.a((byte) 124, var38);
               var37 = var37 & var12_int;
               var36 = var36 & var12_int;
               incrementValue$1 = param1;
               param1++;
-              param7[incrementValue$1] = param9 * nw.a(1050, nw.a(1050, nw.a(jg.a(param6, 1051), an.a(var28, var19, eb.a(7, this.field_f[var30 + var36]), var39, 2), an.a(var28, var19, eb.a(7, this.field_f[var37 + var30]), var38, jg.a(param6, 3)), var40), nw.a(1050, an.a(var27, var19, eb.a(7, this.field_f[var31 + var36]), var39, param6 + 1), an.a(var27, var19, eb.a(7, this.field_f[var37 + var31]), var38, 2), var40), var29), nw.a(1050, nw.a(1050, an.a(var28, var18, eb.a(7, this.field_f[var32 + var36]), var39, 2), an.a(var28, var18, eb.a(this.field_f[var32 + var37], 7), var38, param6 + 1), var40), nw.a(1050, an.a(var27, var18, eb.a(this.field_f[var36 + var33], 7), var39, 2), an.a(var27, var18, eb.a(7, this.field_f[var33 + var37]), var38, 2), var40), var29), var20);
+              param7[incrementValue$1] = param9 * ProxySocketConnector.a(1050, ProxySocketConnector.a(1050, ProxySocketConnector.a(jg.a(param6, 1051), an.a(var28, var19, eb.a(7, this.field_f[var30 + var36]), var39, 2), an.a(var28, var19, eb.a(7, this.field_f[var37 + var30]), var38, jg.a(param6, 3)), var40), ProxySocketConnector.a(1050, an.a(var27, var19, eb.a(7, this.field_f[var31 + var36]), var39, param6 + 1), an.a(var27, var19, eb.a(7, this.field_f[var37 + var31]), var38, 2), var40), var29), ProxySocketConnector.a(1050, ProxySocketConnector.a(1050, an.a(var28, var18, eb.a(7, this.field_f[var32 + var36]), var39, 2), an.a(var28, var18, eb.a(this.field_f[var32 + var37], 7), var38, param6 + 1), var40), ProxySocketConnector.a(1050, an.a(var27, var18, eb.a(this.field_f[var36 + var33], 7), var39, 2), an.a(var27, var18, eb.a(7, this.field_f[var33 + var37]), var38, 2), var40), var29), var20);
             }
           }
           return;

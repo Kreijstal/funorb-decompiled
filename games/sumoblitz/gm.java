@@ -390,7 +390,7 @@ class gm implements mh, de {
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             kw.a(param4.field_p + (param4.field_v + param2), param2 + param4.field_v, 1, param4.field_r + param1, param4.field_r + param1 + param4.field_q);
             ks.field_x.a(this.field_b, var10, false, var10, var12, var11);
-            su.a((byte) 116);
+            ClientException.a((byte) 116);
           }
           if (param0 != 1) {
             var13 = (pk) null;
@@ -525,7 +525,7 @@ class gm implements mh, de {
               var15 = stackIn_19_0;
               ks.field_x.a(this.field_l >>> 24, param2 + 3, var13.field_a, this.field_l, this.a(-3, param4, var14, param0), var15 - var14, param4.field_n + (this.field_a + param4.field_v + param5) + var13.field_d);
             }
-            su.a((byte) 86);
+            ClientException.a((byte) 86);
             return;
           }
           return;
@@ -638,7 +638,7 @@ class gm implements mh, de {
           } else {
             this.field_e.a(this.a(true, param0), this.a(-3, param0, param7, param1), this.a(param3, (byte) -122, param0, param4), var9_int, var10, param2, param5, this.field_f, this.field_c, this.field_j);
           }
-          su.a((byte) 63);
+          ClientException.a((byte) 63);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

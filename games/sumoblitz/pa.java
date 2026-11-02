@@ -44,7 +44,7 @@ final class pa {
           } else {
             var2 = new ui();
             var2.field_k = param0;
-            field_b.a((ms) (var2), (byte) 39);
+            field_b.a((IntrusiveNode) (var2), (byte) 39);
           }
           return;
         }
@@ -54,7 +54,7 @@ final class pa {
         } else {
           var2Lifetime1 = new ui();
           var2Lifetime1.field_k = param0;
-          field_b.a((ms) (var2Lifetime1), (byte) 39);
+          field_b.a((IntrusiveNode) (var2Lifetime1), (byte) 39);
         }
     }
 

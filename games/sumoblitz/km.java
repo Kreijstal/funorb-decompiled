@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km extends ms {
+final class km extends IntrusiveNode {
     int field_l;
     static lh field_o;
     int field_n;
@@ -26,8 +26,8 @@ final class km extends ms {
           var8 = as.field_v;
           var9 = var8;
           var9.g(param1, 8);
-          var9.field_p = var9.field_p + 1;
-          var4 = var9.field_p;
+          var9.position = var9.position + 1;
+          var4 = var9.position;
           var9.b((byte) 55, 1);
           int var5 = 104 / ((30 - param0) / 34);
           var9.b(-77, param2.field_r);
@@ -42,7 +42,7 @@ final class km extends ms {
             var8.e(48, param2.field_q[var6]);
           }
           var9.a(var4, false);
-          var9.c(var9.field_p - var4, -13745);
+          var9.c(var9.position - var4, -13745);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "km.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

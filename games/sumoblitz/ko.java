@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ko extends ms {
+abstract class ko extends IntrusiveNode {
     private int field_k;
     private int field_o;
     private float field_l;
@@ -12,7 +12,7 @@ abstract class ko extends ms {
     static int field_p;
 
     final static void a(int param0, int param1) {
-        ms var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         hg var4 = null;
         RuntimeException decompiledCaughtException = null;

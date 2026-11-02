@@ -31,7 +31,7 @@ final class bb extends ak {
         RuntimeException decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          wo.a(up.field_c, 490, -20 - ns.field_b.c() / 2 + 290, param0 << 24, 3, param1, ns.field_b.c() + 100, -5, 1, true);
+          wo.a(up.field_c, 490, -20 - MouseWheelInput.field_b.c() / 2 + 290, param0 << 24, 3, param1, MouseWheelInput.field_b.c() + 100, -5, 1, true);
           be.field_t.a(bw.field_c, 5023231 | param0 << 24, -1, 60, 320, 0);
           hc.field_e.a(bw.field_c, -1, -1, 60, 320, 0);
           gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (hr[]) null, 75, -1, 0, 0, param2 - 6432, wh.field_r, (aa) null, 1, 0);
@@ -46,7 +46,7 @@ final class bb extends ak {
             if (var5 == this.field_k) {
               stackIn_6_0 = jn.field_c;
             } else {
-              stackIn_6_0 = vv.field_a;
+              stackIn_6_0 = SecondaryNodeDequeIterator.field_a;
             }
             var8 = stackIn_6_0;
             wo.a(var8, 170, var7, 0, 1, var6_ref_ha, 131, 185, 1, true);

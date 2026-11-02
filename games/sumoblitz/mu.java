@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mu extends pj {
+abstract class mu extends DualLinkNode {
     int field_z;
     static int[] field_y;
     int field_A;

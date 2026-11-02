@@ -56,7 +56,7 @@ final class uo extends rq {
         int var2Lifetime4;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (param0) {
-          L4: {
+          regionExit1: {
             if ((param1 <= 0 ||
               param1 >= 128) &&
               (param1 < 160 ||
@@ -170,7 +170,7 @@ final class uo extends rq {
                   }
                 }
               }
-              break L4;
+              break regionExit1;
             }
             var2 = (byte)param1;
           }

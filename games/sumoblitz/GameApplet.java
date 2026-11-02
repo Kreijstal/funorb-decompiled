@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class kc extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     boolean field_d;
     static int field_l;
     static float[] field_e;
@@ -190,14 +190,14 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
         RuntimeException var1_ref = null;
         try {
           if (param0 < 40) {
-            kc.provideLoaderApplet((java.applet.Applet) null);
+            GameApplet.provideLoaderApplet((java.applet.Applet) null);
           }
           var1 = (rl) (ko.field_m.b((byte) -127));
           if (var1 == null) {
             var1 = new rl();
           }
           var1.a(lk.field_b, lk.field_c, lk.field_a, lk.field_j, (byte) -94, lk.field_i, lk.field_k, lk.field_e);
-          te.field_g.a((ms) (var1), (byte) 39);
+          te.field_g.a((IntrusiveNode) (var1), (byte) 39);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -318,7 +318,7 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
 
     final void a(int param0, int param1, byte param2, int param3, int param4, String param5, int param6) {
         try {
-          wi dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_25_0 = null;
           StringBuilder stackIn_25_1 = null;
           String stackIn_26_2 = null;
@@ -351,7 +351,7 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
               wq.field_b = param1;
               lw.field_b = param1;
               ct.field_z = ra.c(2);
-              dupTemp$0 = new wi(param0, param5, param6, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
               lt.field_m = dupTemp$0;
               gk.field_O = dupTemp$0;
               var8 = lt.field_m.a(true, (Runnable) (this), 1);
@@ -367,7 +367,7 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              ms.a((String) null, var8_ref, 0);
+              IntrusiveNode.a((String) null, var8_ref, 0);
               this.a("crash", 21253);
             }
             return;
@@ -664,7 +664,7 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
     }
 
     final static byte[] c(int param0) {
-        fs var1 = null;
+        PacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -678,7 +678,7 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
             stackIn_3_0 = (byte[]) null;
             return stackIn_3_0;
           }
-          var1 = new fs(30000);
+          var1 = new PacketBuffer(30000);
           var1.b((byte) 117, 3);
           var1.b((byte) 90, bl.field_e);
           var1.b((byte) 46, ki.field_f);
@@ -771,7 +771,7 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
     public final void windowActivated(java.awt.event.WindowEvent param0) {
     }
 
-    protected kc() {
+    protected GameApplet() {
         this.field_d = false;
     }
 
@@ -797,11 +797,11 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (wi.field_u != null) {
-                var1 = wi.field_u.toLowerCase();
+              if (PlatformTaskDispatcher.field_u != null) {
+                var1 = PlatformTaskDispatcher.field_u.toLowerCase();
                 if (-1 != ((String) (var1)).indexOf("sun") ||
                   -1 != ((String) (var1)).indexOf("apple")) {
-                  var2 = wi.field_q;
+                  var2 = PlatformTaskDispatcher.field_q;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -843,8 +843,8 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (null != wi.field_q))) {
-                stackIn_68_0 = wi.field_q.startsWith("1.");
+                (decompiledFrameRemainder2 = (null != PlatformTaskDispatcher.field_q))) {
+                stackIn_68_0 = PlatformTaskDispatcher.field_q.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -853,8 +853,8 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (var1_int < wi.field_q.length()) {
-                    var3 = wi.field_q.charAt(var1_int);
+                  if (var1_int < PlatformTaskDispatcher.field_q.length()) {
+                    var3 = PlatformTaskDispatcher.field_q.charAt(var1_int);
                     stackIn_84_0 = 48;
                     stackIn_84_1 = var3;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -881,7 +881,7 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
                 if (qj.field_c != null) {
                   var1 = qj.field_c;
                 }
-                var2_ref = wi.field_e;
+                var2_ref = PlatformTaskDispatcher.field_e;
                 if (null != var2_ref) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -906,7 +906,7 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    vt.field_t = jl.field_a.b(4007, pj.field_p);
+                    vt.field_t = jl.field_a.b(4007, DualLinkNode.field_p);
                     stackIn_105_0 = 0;
                   }
                   var3 = stackIn_105_0;
@@ -924,7 +924,7 @@ public abstract class kc extends java.applet.Applet implements Runnable, java.aw
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              ms.a((String) null, (Throwable) (var1), 0);
+              IntrusiveNode.a((String) null, (Throwable) (var1), 0);
               this.a("crash", 21253);
             }
             this.a(true, -99);

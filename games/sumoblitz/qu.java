@@ -98,7 +98,7 @@ final class qu {
           }
           var3 = nf.a(this.field_c[lg.field_c % 500], (byte) -118, 480, this.field_g[lg.field_c % 500]);
           var4_intLifetime1 = 0;
-          L11: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (var4_intLifetime1 < 480) {
               var2.a(var3[var4_intLifetime1] - 16777216, param0 + 23, var4_intLifetime1, 640, 0);
@@ -126,7 +126,7 @@ final class qu {
               (ul.field_f == 1)) {
               this.a(24, var2);
               if (var9 == 0) {
-                break L11;
+                break scanLoop1;
               }
             }
             this.b(-109, var2);
@@ -166,7 +166,7 @@ final class qu {
           var3_int = 0;
           var4 = (lg.field_c >> 1) % ok.field_f.length;
           var5 = 32;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var5 < 608) {
               ok.field_f[0].a(var5, 5, 1, var3_int << 24, 1);
@@ -181,7 +181,7 @@ final class qu {
                   var4++;
                   stackIn_23_0 = ~ok.field_f.length;
                   stackIn_23_1 = ~var4;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -207,7 +207,7 @@ final class qu {
                 stackIn_23_0 = ~ok.field_f.length;
                 stackIn_23_1 = ~var4;
                 if (var6 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
                 if (stackIn_23_0 == stackIn_23_1) {
                   var4 = 0;
@@ -402,12 +402,12 @@ final class qu {
             return;
           }
           var4 = (nm) (var3.b((byte) -80));
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (var4 != null) {
               var4.a(1048149637);
               stackIn_20_0 = 0;
               if (var7 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var5 = stackIn_20_0;
               while (var5 < aa.field_a.length) {
@@ -420,7 +420,7 @@ final class qu {
                 var5++;
               }
               var4 = (nm) (var3.b(0));
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_20_0 = var2_int;
             break;
@@ -737,7 +737,7 @@ final class qu {
                     rn.a(ee.field_a[3], var2.field_C >> 8, var2.field_z >> 8, 16711680, 28807);
                   }
                 } else {
-                  hl.field_e = true;
+                  SecondaryNodeDeque.field_e = true;
                   rn.a(ee.field_a[0] + "+", var2.field_C >> 8, var2.field_z >> 8, 32780, 28807);
                 }
                 vb.field_E = true;
@@ -779,10 +779,10 @@ final class qu {
           if (ku.field_j < 2) {
             return;
           }
-          L4: {
-            L5: {
-              L6: {
-                L7: {
+          regionExit1: {
+            regionExit2: {
+              regionExit3: {
+                regionExit4: {
                   boolean decompiledFrameRemainder0 = true;
                   var2_int = tg.field_a;
                   if (var2_int != 13 && (var2_int != 35 ||
@@ -795,16 +795,16 @@ final class qu {
                     if (decompiledFrameRemainder0) {
                       switch (var2_int) {
                         case 12:
-                          break L7;
+                          break regionExit4;
                         case 11:
-                          break L6;
+                          break regionExit3;
                         case 10:
-                          break L5;
+                          break regionExit2;
                         default:
                           return;
                         case 9:
                           if (var3 == 0) {
-                            break L4;
+                            break regionExit1;
                           }
                           break;
                       }
@@ -873,7 +873,7 @@ final class qu {
           if (param0 != -120) {
             this.a(109, (ha) null);
           }
-          hb.field_a = null;
+          GameKeyHandler.field_a = null;
           ig.field_b.e(116);
           in.field_z = 0;
           f.field_w = false;
@@ -1162,7 +1162,7 @@ final class qu {
                 if (wn.a(field_l, var3_ref.field_m, -105, var3_ref.field_C, ua.field_d, var3_ref.field_z)) {
                   ro.a(var3_ref, (byte) 113);
                   if (ul.field_f == 0) {
-                    rc.field_m.a((ms) (new fi(ua.field_d, field_l, -1)), (byte) 39);
+                    rc.field_m.a((IntrusiveNode) (new fi(ua.field_d, field_l, -1)), (byte) 39);
                   }
                   gn.a(30, true);
                 }
@@ -1174,7 +1174,7 @@ final class qu {
             }
             if (fa.field_b == 30 &&
               0 == ul.field_f) {
-              rc.field_m.a((ms) (new gb(ua.field_d, field_l, -1)), (byte) 39);
+              rc.field_m.a((IntrusiveNode) (new gb(ua.field_d, field_l, -1)), (byte) 39);
             }
             if (30 == fa.field_b) {
               gn.a(32, true);
@@ -1330,7 +1330,7 @@ final class qu {
                   th.b(24753, 251, 4);
                 }
                 if (nq.field_i == 5 &&
-                  !hl.field_e) {
+                  !SecondaryNodeDeque.field_e) {
                   th.b(24753, 250, 5);
                 }
                 if (nq.field_i == 5 &&
@@ -1456,7 +1456,7 @@ final class qu {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ig.field_b.a((ms) (new to(param2, param1)), (byte) 39);
+          ig.field_b.a((IntrusiveNode) (new to(param2, param1)), (byte) 39);
           if (param0 != 231) {
             this.c(-6);
           }
@@ -1574,7 +1574,7 @@ final class qu {
               stackIn_29_7 = 0;
             }
             var9 = new gw(stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_29_7, (double)var4, var5, var7, var8);
-            ni.field_e.a((ms) (var9), (byte) 39);
+            ni.field_e.a((IntrusiveNode) (var9), (byte) 39);
           }
           if (lg.field_c % 200 == 0 &&
             ni.field_e != null) {
@@ -1625,7 +1625,7 @@ final class qu {
               stackIn_52_7 = 0;
             }
             var9Lifetime1 = new gw(stackIn_51_2, stackIn_51_3, stackIn_51_4, stackIn_51_5, stackIn_51_6, stackIn_52_7, (double)var4Lifetime1, var5Lifetime1, var7Lifetime1, var8Lifetime1);
-            ni.field_e.a((ms) (var9Lifetime1), (byte) 39);
+            ni.field_e.a((IntrusiveNode) (var9Lifetime1), (byte) 39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1641,21 +1641,21 @@ final class qu {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 54 / ((-65 - param0) / 47);
-          if (null == hb.field_a &&
+          if (null == GameKeyHandler.field_a &&
             0 < te.field_c &&
             !f.field_w) {
             boolean decompiledSharedTail0 = !(!gt.field_bb);
             if (!decompiledSharedTail0) {
-              hb.field_a = new id(0, 65535, ha.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
+              GameKeyHandler.field_a = new id(0, 65535, ha.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
               decompiledSharedTail0 = (Sumoblitz.field_L);
             }
             if (decompiledSharedTail0) {
-              hb.field_a = new id(1, 65534, ha.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
+              GameKeyHandler.field_a = new id(1, 65534, ha.field_f, fb.field_a, ts.field_a, kn.field_b, new int[]{te.field_c, iw.field_b});
             }
             if (!vs.b((byte) 9)) {
-              kp.a(3, hb.field_a, 79);
+              kp.a(3, GameKeyHandler.field_a, 79);
             }
-            hb.field_a = null;
+            GameKeyHandler.field_a = null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1816,7 +1816,7 @@ final class qu {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          hb.field_a = null;
+          GameKeyHandler.field_a = null;
           ig.field_b.e(119);
           wj.field_e = 0;
           in.field_z = 0;

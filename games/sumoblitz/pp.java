@@ -6,7 +6,7 @@ final class pp implements Runnable {
     volatile boolean field_b;
     static String field_f;
     static String[] field_e;
-    wi field_g;
+    PlatformTaskDispatcher field_g;
     volatile boolean field_a;
     static gm field_d;
     static int field_h;
@@ -164,7 +164,7 @@ final class pp implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var5 = (String) null;
-            ms.a((String) null, (Throwable) ((Object) var1), 0);
+            IntrusiveNode.a((String) null, (Throwable) ((Object) var1), 0);
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {

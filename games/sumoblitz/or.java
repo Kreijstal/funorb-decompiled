@@ -50,7 +50,7 @@ final class or extends bp implements ru {
               return true;
             }
           }
-          var2Lifetime1 = fs.field_m;
+          var2Lifetime1 = PacketBuffer.field_m;
           for (var3Lifetime1 = 0; var2Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (param1 == var4Lifetime1) {

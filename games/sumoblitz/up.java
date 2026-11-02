@@ -98,7 +98,7 @@ final class up {
           var21Lifetime2 = nk.field_e;
           var22Lifetime2 = nk.field_b;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var23Lifetime2 < param4.field_D) {
               var24Lifetime1 = param4.field_Q[var23Lifetime2];
@@ -112,7 +112,7 @@ final class up {
               if (var30 != 0) {
                 if (stackIn_62_0 < stackIn_62_1) {
                   stackIn_71_0 = var18;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -194,7 +194,7 @@ final class up {
                   }
                   stackIn_71_0 = var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_71_0 >= of.field_t.length) {
                     break;

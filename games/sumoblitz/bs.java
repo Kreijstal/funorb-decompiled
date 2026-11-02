@@ -309,9 +309,9 @@ final class bs extends hj {
             var7 = new int[]{param4};
           }
           var8 = (tj) (param1.field_l.a(52));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var8 != null) {
-              var9 = (int)var8.field_h;
+              var9 = (int)var8.key;
               var10 = (td) (this.field_p.a(param2 ^ -119, (long)var9));
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
@@ -336,7 +336,7 @@ final class bs extends hj {
               }
             } else {
               if (var6_int == 0) {
-                break L2;
+                break scanLoop1;
               }
             }
             param1.a();
@@ -713,13 +713,13 @@ final class bs extends hj {
         while (true) {
           stackIn_7_0 = ~var3;
           stackIn_7_1 = ~this.field_C;
-          L5: {
+          regionExit1: {
             if (stackIn_7_0 == stackIn_7_1) {
-              L8: while (true) {
+              scanLoop2: while (true) {
                 stackIn_29_0 = ~var3;
                 stackIn_29_1 = ~this.field_v.field_c[var2];
                 if (var7 != 0) {
-                  break L5;
+                  break regionExit1;
                 }
                 if (stackIn_29_0 == stackIn_29_1) {
                   this.field_v.b(var2);
@@ -731,7 +731,7 @@ final class bs extends hj {
                     this.field_v.c(var2);
                     if (!this.field_v.d() &&
                       var7 == 0) {
-                      break L8;
+                      break scanLoop2;
                     }
                     if (this.field_I != null) {
                       this.a(this.field_M, this.field_I, 107);
@@ -741,7 +741,7 @@ final class bs extends hj {
                     if (this.field_M &&
                       var3 != 0) {
                       this.field_v.b(var4);
-                      break L8;
+                      break scanLoop2;
                     }
                     this.a(true, true);
                     this.field_v.e();
@@ -881,7 +881,7 @@ final class bs extends hj {
           }
           this.field_P[param2][var7.field_q] = var7;
         }
-        this.field_s.field_t.a((ms) (var7), (byte) 39);
+        this.field_s.field_t.a((IntrusiveNode) (var7), (byte) 39);
         this.field_t[param2][param3] = var7;
         return;
     }

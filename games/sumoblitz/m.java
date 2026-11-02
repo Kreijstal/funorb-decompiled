@@ -7,7 +7,7 @@ final class m extends hf {
     private String field_U;
     private boolean field_P;
     private pq field_Q;
-    static ov field_R;
+    static RasterBuffer field_R;
     static String field_V;
     static String field_T;
     private boolean field_S;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qv extends ms {
+final class qv extends IntrusiveNode {
     static String field_l;
     static String field_o;
     int[] field_m;
@@ -19,7 +19,7 @@ final class qv extends ms {
     }
 
     final static void a(int param0, int param1) {
-        mf var2 = fh.field_n[param0];
+        mf var2 = ImageProducerRasterBuffer.field_n[param0];
         if (param1 != 4) {
           CharSequence var3 = (CharSequence) null;
           qv.a(false, -82, (CharSequence) null);

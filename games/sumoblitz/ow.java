@@ -58,7 +58,7 @@ final class ow {
           var7_int = 0;
           var9 = -35 / ((52 - param3) / 59);
           var8 = param1;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var10 = param5[var8];
             if (var10 < 0) {
               var7_int = this.field_c[var7_int];
@@ -72,7 +72,7 @@ final class ow {
               param0++;
               param2[incrementValue$1] = (byte)(~var11);
               if (param4 <= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -88,7 +88,7 @@ final class ow {
               param0++;
               param2[incrementValue$3] = (byte)(~var11Lifetime1);
               if (param0 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -104,7 +104,7 @@ final class ow {
               param0++;
               param2[incrementValue$5] = (byte)(~var11Lifetime2);
               if (param0 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -120,7 +120,7 @@ final class ow {
               param0++;
               param2[incrementValue$7] = (byte)(~var11Lifetime3);
               if (param0 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -136,7 +136,7 @@ final class ow {
               param0++;
               param2[incrementValue$9] = (byte)(~var11Lifetime4);
               if (param0 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -168,7 +168,7 @@ final class ow {
               param0++;
               param2[incrementValue$13] = (byte)(~var11Lifetime6);
               if (param4 <= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -184,7 +184,7 @@ final class ow {
               param0++;
               param2[incrementValue$15] = (byte)(~var11Lifetime7);
               if (param0 >= param4) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -218,7 +218,7 @@ final class ow {
         throw new Error();
     }
 
-    final static void a(int param0, ki param1, wi param2) {
+    final static void a(int param0, ki param1, PlatformTaskDispatcher param2) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;

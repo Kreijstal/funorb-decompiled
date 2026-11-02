@@ -226,7 +226,7 @@ final class au extends bq {
           ht.field_h = ht.field_h + 1;
           ar.field_G = b.field_a;
           ko.field_p = kl.field_C;
-          pi.field_e = hl.field_b;
+          pi.field_e = SecondaryNodeDeque.field_b;
           sl.field_d = ki.field_i;
           ki.field_i = false;
           hk.field_c = kb.field_i;

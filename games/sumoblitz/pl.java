@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pl extends fs {
+final class pl extends PacketBuffer {
     static int field_u;
     static String field_s;
     private int field_w;
@@ -13,9 +13,9 @@ final class pl extends fs {
     static String field_q;
 
     final void g(int param0, int param1) {
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_n[fieldTemp$0] = (byte)(param0 + this.field_t.a(jg.a(param1, 264)));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 + this.field_t.a(jg.a(param1, 264)));
         if (param1 != 8) {
           this.i((byte) 39);
         }
@@ -37,14 +37,14 @@ final class pl extends fs {
           while (var4 < param0) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((this.field_n[incrementValue$0] & am.field_z[var4]) << param0 - var4);
+            var5 = var5 + ((this.payload[incrementValue$0] & am.field_z[var4]) << param0 - var4);
             param0 = param0 - var4;
             var4 = 8;
           }
           if (var4 == param0) {
-            var5 = var5 + (am.field_z[var4] & this.field_n[var3]);
+            var5 = var5 + (am.field_z[var4] & this.payload[var3]);
           } else {
-            var5 = var5 + (this.field_n[var3] >> var4 - param0 & am.field_z[param0]);
+            var5 = var5 + (this.payload[var3] >> var4 - param0 & am.field_z[param0]);
           }
           return var5;
         }
@@ -63,9 +63,9 @@ final class pl extends fs {
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           for (var5_int = param1; param3 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_p;
-            this.field_p = this.field_p + 1;
-            param0[var5_int + param2] = (byte)(this.field_n[fieldTemp$0] - this.field_t.a(256));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param0[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_t.a(256));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,14 +84,14 @@ final class pl extends fs {
 
     final void i(byte param0) {
         int var2 = -18 / ((-28 - param0) / 59);
-        this.field_w = 8 * this.field_p;
+        this.field_w = 8 * this.position;
     }
 
     final void h(byte param0) {
         if (param0 != -63) {
           return;
         }
-        this.field_p = (this.field_w + 7) / 8;
+        this.position = (this.field_w + 7) / 8;
     }
 
     final static void a(java.awt.Component param0, int param1) {
@@ -141,14 +141,14 @@ final class pl extends fs {
     final int i(int param0) {
         int fieldTemp$0 = 0;
         if (param0 == 255) {
-          fieldTemp$0 = this.field_p;
-          this.field_p = this.field_p + 1;
-          return this.field_n[fieldTemp$0] - this.field_t.a(256) & 255;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return this.payload[fieldTemp$0] - this.field_t.a(256) & 255;
         }
         this.field_w = 51;
-        int fieldTemp$1 = this.field_p;
-        this.field_p = this.field_p + 1;
-        return this.field_n[fieldTemp$1] - this.field_t.a(256) & 255;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$1] - this.field_t.a(256) & 255;
     }
 
     static {

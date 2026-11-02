@@ -92,7 +92,7 @@ final class rs {
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           try {
-            if (!wi.field_o.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_o.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

@@ -49,7 +49,7 @@ final class qr {
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          vk.a(qu.field_k, kc.field_l, (byte) -107, se.field_d, param1, 0, true);
+          vk.a(qu.field_k, GameApplet.field_l, (byte) -107, se.field_d, param1, 0, true);
           if (param0 != 13136) {
             field_d = (int[]) null;
           }

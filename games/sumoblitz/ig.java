@@ -38,7 +38,7 @@ final class ig {
           var4 = 26 / ((67 - param0) / 42);
           for (var5 = 0; var5 < var2.length; var5++) {
             if (var2[var5] != null &&
-              var2[var5].field_F == g.field_c) {
+              var2[var5].field_F == SocketConnector.field_c) {
               var6 = var2[var5];
               var7 = var6.field_C;
               var8 = var6.field_z;
@@ -48,7 +48,7 @@ final class ig {
               oc.a(uj.a(var9, var7, var10, (byte) 84, var8), false);
             }
           }
-          g.field_c = g.field_c + 1;
+          SocketConnector.field_c = SocketConnector.field_c + 1;
           if (var3 != 0) {
             return false;
           }

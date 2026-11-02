@@ -46,7 +46,7 @@ abstract class se {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
-          if (nw.field_e != ad.field_p) {
+          if (ProxySocketConnector.field_e != ad.field_p) {
             stackIn_24_0 = -1;
             return stackIn_24_0;
           }
@@ -137,7 +137,7 @@ abstract class se {
         }
     }
 
-    abstract void a(fs param0, byte param1);
+    abstract void a(PacketBuffer param0, byte param1);
 
     final static boolean a(int param0, int param1, int param2) {
         int var3 = -24 % ((-63 - param0) / 40);

@@ -122,7 +122,7 @@ final class ti implements Runnable {
         try {
           var3_ref = this.field_d;
           synchronized (var3_ref) {
-            this.field_d.a((pj) (param0), (byte) -120);
+            this.field_d.a((DualLinkNode) (param0), (byte) -120);
             this.field_e = this.field_e + 1;
             this.field_d.notifyAll();
           }
@@ -219,7 +219,7 @@ final class ti implements Runnable {
         }
     }
 
-    ti(wi param0) {
+    ti(PlatformTaskDispatcher param0) {
         jr var2 = null;
         this.field_d = new ro();
         this.field_c = false;
@@ -285,7 +285,7 @@ final class ti implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              ms.a((String) null, (Throwable) ((Object) var2_ref), 0);
+              IntrusiveNode.a((String) null, (Throwable) ((Object) var2_ref), 0);
               var7.field_u = false;
             }
           }

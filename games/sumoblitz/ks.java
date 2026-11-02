@@ -31,19 +31,19 @@ final class ks extends ff {
           field_x = null;
           return;
         }
-        fs var2 = (fs) null;
-        ks.a((java.math.BigInteger) null, (java.math.BigInteger) null, true, (fs) null, (fs) null);
+        PacketBuffer var2 = (PacketBuffer) null;
+        ks.a((java.math.BigInteger) null, (java.math.BigInteger) null, true, (PacketBuffer) null, (PacketBuffer) null);
         field_t = null;
         field_u = null;
         field_x = null;
     }
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, boolean param2, fs param3, fs param4) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, boolean param2, PacketBuffer param3, PacketBuffer param4) {
         if (param2) {
           return;
         }
         try {
-          sr.a(param0, param4.field_p, param4.field_n, param1, (byte) -29, param3, 0);
+          sr.a(param0, param4.position, param4.payload, param1, (byte) -29, param3, 0);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "ks.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

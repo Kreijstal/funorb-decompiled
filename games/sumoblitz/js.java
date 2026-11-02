@@ -226,7 +226,7 @@ final class js extends sp implements ca, ai, oe {
               fieldTemp$0 = jb.field_e;
               jb.field_e = jb.field_e + 1;
               var5.field_kb = fieldTemp$0;
-              mu.field_t.a((ms) (var5), (byte) 39);
+              mu.field_t.a((IntrusiveNode) (var5), (byte) 39);
             }
             var5.field_jb = var4_ref_String;
             return;
@@ -245,7 +245,7 @@ final class js extends sp implements ca, ai, oe {
               return;
             }
             if (var2 != 4) {
-              ms.a("F1: " + di.b((byte) 104), (Throwable) null, 0);
+              IntrusiveNode.a("F1: " + di.b((byte) 104), (Throwable) null, 0);
               kk.a((byte) -112);
               if (param0 <= 71) {
                 field_G = (ts) null;
@@ -282,7 +282,7 @@ final class js extends sp implements ca, ai, oe {
             fieldTemp$1 = hi.field_h;
             hi.field_h = hi.field_h + 1;
             var6_ref.field_kb = fieldTemp$1;
-            pc.field_d.a((ms) (var6_ref), (byte) 39);
+            pc.field_d.a((IntrusiveNode) (var6_ref), (byte) 39);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -291,13 +291,13 @@ final class js extends sp implements ca, ai, oe {
           var6_ref.field_gb = (String) (var3Lifetime1);
           var6_ref.b(false);
           var7_ref = (cn) (pc.field_d.b(-104));
-          L16: while (true) {
+          scanLoop1: while (true) {
             if (null != var7_ref) {
-              stackOut_52_0 = hb.a(var6_ref, 0, var7_ref);
+              stackOut_52_0 = GameKeyHandler.a(var6_ref, 0, var7_ref);
               stackIn_63_0 = stackOut_52_0 ? 1 : 0;
               stackIn_53_0 = stackOut_52_0;
               if (var8 != 0) {
-                break L16;
+                break scanLoop1;
               }
               if (stackIn_53_0) {
                 var7_ref = (cn) (pc.field_d.d((byte) 18));
@@ -305,7 +305,7 @@ final class js extends sp implements ca, ai, oe {
               }
             }
             if (null == var7_ref) {
-              pc.field_d.a((ms) (var6_ref), (byte) 39);
+              pc.field_d.a((IntrusiveNode) (var6_ref), (byte) 39);
               if (var8 == 0) {
                 return;
               }

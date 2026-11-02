@@ -3,7 +3,7 @@
  */
 final class sh {
     private static byte[] field_a;
-    private fs field_i;
+    private PacketBuffer field_i;
     int field_d;
     private int[] field_h;
     int[] field_c;
@@ -13,7 +13,7 @@ final class sh {
     private long field_b;
 
     final void a() {
-        this.field_i.field_p = -1;
+        this.field_i.position = -1;
     }
 
     final int f() {
@@ -24,8 +24,8 @@ final class sh {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
-        this.field_i.field_n = param0;
-        this.field_i.field_p = 10;
+        this.field_i.payload = param0;
+        this.field_i.position = 10;
         int var2 = this.field_i.a(255);
         this.field_d = this.field_i.a(255);
         this.field_e = 500000;
@@ -35,10 +35,10 @@ final class sh {
           var4 = this.field_i.c(true);
           var5 = this.field_i.c(true);
           if (var4 == 1297379947) {
-            this.field_h[var3] = this.field_i.field_p;
+            this.field_h[var3] = this.field_i.position;
             var3++;
           }
-          this.field_i.field_p = this.field_i.field_p + var5;
+          this.field_i.position = this.field_i.position + var5;
         }
         this.field_b = 0L;
         this.field_g = new int[var2];
@@ -71,11 +71,11 @@ final class sh {
     }
 
     final void b(int param0) {
-        this.field_i.field_p = this.field_g[param0];
+        this.field_i.position = this.field_g[param0];
     }
 
     final void e() {
-        this.field_i.field_n = null;
+        this.field_i.payload = null;
         this.field_h = null;
         this.field_g = null;
         this.field_c = null;
@@ -89,9 +89,9 @@ final class sh {
         for (var4 = 0; var4 < var3; var4++) {
           this.field_c[var4] = 0;
           this.field_f[var4] = 0;
-          this.field_i.field_p = this.field_h[var4];
+          this.field_i.position = this.field_h[var4];
           this.a(var4);
-          this.field_g[var4] = this.field_i.field_p;
+          this.field_g[var4] = this.field_i.position;
         }
     }
 
@@ -99,13 +99,13 @@ final class sh {
         int var2;
         int var3;
         int var4;
-        var2 = this.field_i.field_n[this.field_i.field_p];
+        var2 = this.field_i.payload[this.field_i.position];
         if (var2 >= 0) {
           var2 = this.field_f[param0];
         } else {
           var2 = var2 & 255;
           this.field_f[param0] = var2;
-          this.field_i.field_p = this.field_i.field_p + 1;
+          this.field_i.position = this.field_i.position + 1;
         }
         if (var2 != 240 &&
           var2 != 247) {
@@ -114,17 +114,17 @@ final class sh {
         var3 = this.field_i.f((byte) 93);
         if (var2 == 247 &&
           var3 > 0) {
-          var4 = this.field_i.field_n[this.field_i.field_p] & 255;
+          var4 = this.field_i.payload[this.field_i.position] & 255;
           if (!(var4 < 241) &&
             !(var4 > 243) || (var4 == 246 ||
             var4 == 248) || !(var4 < 250) &&
             !(var4 > 252) || var4 == 254) {
-            this.field_i.field_p = this.field_i.field_p + 1;
+            this.field_i.position = this.field_i.position + 1;
             this.field_f[param0] = var4;
             return this.a(param0, var4);
           }
         }
-        this.field_i.field_p = this.field_i.field_p + var3;
+        this.field_i.position = this.field_i.position + var3;
         return 0;
     }
 
@@ -149,7 +149,7 @@ final class sh {
           var3 = this.field_i.e(-31302);
           var4 = this.field_i.f((byte) 105);
           if (var3 == 47) {
-            this.field_i.field_p = this.field_i.field_p + var4;
+            this.field_i.position = this.field_i.position + var4;
             return 1;
           }
           if (var3 == 81) {
@@ -158,10 +158,10 @@ final class sh {
             var6 = this.field_c[param0];
             this.field_b = this.field_b + (long)var6 * (long)(this.field_e - var5);
             this.field_e = var5;
-            this.field_i.field_p = this.field_i.field_p + var4;
+            this.field_i.position = this.field_i.position + var4;
             return 2;
           }
-          this.field_i.field_p = this.field_i.field_p + var4;
+          this.field_i.position = this.field_i.position + var4;
           return 3;
         }
         var3Lifetime1 = field_a[param1 - 128];
@@ -200,19 +200,19 @@ final class sh {
     }
 
     final boolean c() {
-        return this.field_i.field_n != null;
+        return this.field_i.payload != null;
     }
 
     sh() {
-        this.field_i = new fs((byte[]) null);
+        this.field_i = new PacketBuffer((byte[]) null);
     }
 
     final void c(int param0) {
-        this.field_g[param0] = this.field_i.field_p;
+        this.field_g[param0] = this.field_i.position;
     }
 
     sh(byte[] param0) {
-        this.field_i = new fs((byte[]) null);
+        this.field_i = new PacketBuffer((byte[]) null);
         this.a(param0);
     }
 

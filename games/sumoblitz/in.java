@@ -83,13 +83,13 @@ final class in extends ie {
         jq.a(7161, var6);
         if (param2 < -35) {
           this.field_y.a(0, 0, (byte) -55, param3);
-          su.a((byte) 108);
+          ClientException.a((byte) 108);
           var6.a(this.field_r + param0, param1 + this.field_v, this.field_A);
           return;
         }
         field_C = (String) null;
         this.field_y.a(0, 0, (byte) -55, param3);
-        su.a((byte) 108);
+        ClientException.a((byte) 108);
         var6.a(this.field_r + param0, param1 + this.field_v, this.field_A);
     }
 

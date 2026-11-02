@@ -160,7 +160,7 @@ final class cv extends sp implements pw, ai {
             }
             this.field_N = new wp(stackIn_19_3, (qm) null);
             if (this.field_M) {
-              this.field_D = new wp(ms.field_i, (qm) (this));
+              this.field_D = new wp(IntrusiveNode.field_i, (qm) (this));
             }
           } else {
             this.field_A = new wp(ii.field_b, (qm) null);

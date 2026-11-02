@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oq extends pj {
+final class oq extends DualLinkNode {
     int[] field_u;
     static String field_r;
     private int[][] field_t;
     private int[] field_s;
     private String[] field_v;
 
-    final void a(fs param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -18,11 +18,11 @@ final class oq extends pj {
         RuntimeException var3 = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          L1: while (true) {
+          scanLoop1: while (true) {
             var3_int = param0.e(-31302);
             if (0 == var3_int) {
               if (var4 == 0) {
-                break L1;
+                break scanLoop1;
               }
             } else {
               this.a(param0, var3_int, (byte) 111);
@@ -77,12 +77,12 @@ final class oq extends pj {
         var10 = new wb[]{new wb(var9, var9), new wb(param8, var9), new wb(var9, var9), new wb(var9, param8), new wb(64, 64), new wb(var9, param8), new wb(var9, var9), new wb(param8, var9), new wb(var9, var9)};
         var11_ref_wb__ = var10;
         var12 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var11_ref_wb__.length > var12) {
             var13_ref_wb = var11_ref_wb__[var12];
             stackIn_11_0 = 0;
             if (var15 != 0) {
-              break L0;
+              break scanLoop1;
             }
             var14 = stackIn_11_0;
             while (var13_ref_wb.field_C.length > var14) {
@@ -90,17 +90,17 @@ final class oq extends pj {
               var14++;
             }
             var12++;
-            continue L0;
+            continue scanLoop1;
           }
           stackIn_11_0 = 0;
           break;
         }
         var11 = stackIn_11_0;
-        L6: while (true) {
+        scanLoop2: while (true) {
           if (var11 < param3) {
             stackIn_22_0 = 0;
             if (var15 != 0) {
-              break L6;
+              break scanLoop2;
             }
             var12Lifetime1 = stackIn_22_0;
             while (var9 > var12Lifetime1) {
@@ -111,7 +111,7 @@ final class oq extends pj {
               var12Lifetime1++;
             }
             var11++;
-            continue L6;
+            continue scanLoop2;
           }
           stackIn_22_0 = 0;
           break;
@@ -143,11 +143,11 @@ final class oq extends pj {
             stackIn_35_0 = 0;
           }
           var12Lifetime2Lifetime1 = stackIn_35_0;
-          L19: while (true) {
+          scanLoop3: while (true) {
             if (var12Lifetime2Lifetime1 < param8) {
               stackIn_46_0 = 0;
               if (var15 != 0) {
-                break L19;
+                break scanLoop3;
               }
               var13 = stackIn_46_0;
               while (param3 > var13) {
@@ -158,13 +158,13 @@ final class oq extends pj {
                 var13++;
               }
               var12Lifetime2Lifetime1++;
-              continue L19;
+              continue scanLoop3;
             }
             stackIn_46_0 = 0;
             break;
           }
           var12Lifetime2Lifetime2 = stackIn_46_0;
-          L25: while (var12Lifetime2Lifetime2 < param8 >> 1) {
+          scanLoop4: while (var12Lifetime2Lifetime2 < param8 >> 1) {
             var13Lifetime1 = 0;
             while (true) {
               if (var13Lifetime1 < param4) {
@@ -182,7 +182,7 @@ final class oq extends pj {
               break;
             }
             if (var15 == 0) {
-              continue L25;
+              continue scanLoop4;
             }
             break;
           }
@@ -231,7 +231,7 @@ final class oq extends pj {
         field_r = null;
     }
 
-    private final void a(fs param0, int param1, byte param2) {
+    private final void a(PacketBuffer param0, int param1, byte param2) {
         int[] array$0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;

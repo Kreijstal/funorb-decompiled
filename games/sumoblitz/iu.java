@@ -72,7 +72,7 @@ final class iu implements mh {
           lc.field_A = false;
           rd.a(-1, -69);
           vm.field_c = hm.field_a;
-          nw.field_e = hm.field_a;
+          ProxySocketConnector.field_e = hm.field_a;
           return;
         }
         iu.a((byte) -85);
@@ -80,7 +80,7 @@ final class iu implements mh {
         lc.field_A = false;
         rd.a(-1, -69);
         vm.field_c = hm.field_a;
-        nw.field_e = hm.field_a;
+        ProxySocketConnector.field_e = hm.field_a;
     }
 
     final static void a(int param0, km param1, int param2) {

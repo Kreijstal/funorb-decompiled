@@ -1297,7 +1297,7 @@ final class qa extends ha {
         var7 = 0;
         var8 = param1;
         var9 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var9 < param4) {
             for (var10 = 0; var10 < param3; var10++) {
               incrementValue$4 = var8;
@@ -1306,7 +1306,7 @@ final class qa extends ha {
               if (var11 != 0 &&
                 var11 != 255) {
                 var7 = 1;
-                break L1;
+                break scanLoop1;
               }
             }
             var9++;

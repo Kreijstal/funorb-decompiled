@@ -173,7 +173,7 @@ final class ue extends gm {
                   var20 = var28.e(-31302);
                   var21 = jh.field_B[var20].field_c;
                   var22 = var28.a((byte) 113);
-                  var24 = var28.field_p;
+                  var24 = var28.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
                     var9[0][var12] = jh.field_B[var20].field_a;
@@ -190,7 +190,7 @@ final class ue extends gm {
                     var8[1][var13] = qv.field_o;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var28.field_p = var24;
+                    var28.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
@@ -204,7 +204,7 @@ final class ue extends gm {
                     var8[2][var14] = var21;
                     var9[2][var14] = jh.field_B[var20].field_a;
                     var10[2][var14] = var22;
-                    var28.field_p = var24;
+                    var28.position = var24;
                     var14++;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
@@ -238,7 +238,7 @@ final class ue extends gm {
             var6.b(false);
             return;
           }
-          ms.a("HS1: " + di.b((byte) -124), (Throwable) null, 0);
+          IntrusiveNode.a("HS1: " + di.b((byte) -124), (Throwable) null, 0);
           kk.a((byte) -121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

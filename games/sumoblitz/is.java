@@ -35,7 +35,7 @@ final class is {
           }
           var3 = new oq();
           if (var4 != null) {
-            var3.a(new fs(var4), true);
+            var3.a(new PacketBuffer(var4), true);
           }
           if (param1 >= ~param0) {
             var3.e(param1 ^ 32885);

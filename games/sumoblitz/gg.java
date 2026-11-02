@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gg extends pj {
+final class gg extends DualLinkNode {
     byte[] field_s;
     static ki field_r;
     static qr field_t;

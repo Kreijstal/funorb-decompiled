@@ -33,12 +33,12 @@ final class wj extends rq {
         field_h = null;
         field_i = null;
         if (param0 != 79) {
-          wi var2 = (wi) null;
-          wj.a((java.awt.Frame) null, (wi) null, false);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          wj.a((java.awt.Frame) null, (PlatformTaskDispatcher) null, false);
         }
     }
 
-    final static void a(java.awt.Frame param0, wi param1, boolean param2) {
+    final static void a(java.awt.Frame param0, PlatformTaskDispatcher param1, boolean param2) {
         jr var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;

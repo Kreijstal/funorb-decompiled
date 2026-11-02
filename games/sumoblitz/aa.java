@@ -21,7 +21,7 @@ abstract class aa {
         }
     }
 
-    final static void a(wi param0, boolean param1, ud param2, byte param3, int param4, java.awt.Component param5) {
+    final static void a(PlatformTaskDispatcher param0, boolean param1, ud param2, byte param3, int param4, java.awt.Component param5) {
         if (param3 > -104) {
           return;
         }

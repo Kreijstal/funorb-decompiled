@@ -247,7 +247,7 @@ final class tn extends jb {
             }
           }
         }
-        kc.field_l = param1;
+        GameApplet.field_l = param1;
         ab.field_c = 2147483647;
         oc.field_f = -2147483648;
         qu.field_k = 2147483647;

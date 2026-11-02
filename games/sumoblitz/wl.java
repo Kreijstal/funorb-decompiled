@@ -65,7 +65,7 @@ final class wl {
                 this.field_e.a(to.field_t, 6, (byte) -50, 0);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param2 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -81,7 +81,7 @@ final class wl {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var10 = (255 & to.field_t[6]) + (16711680 & to.field_t[4] << 16) + ((to.field_t[5] & 255) << 8);
                         var13 = to.field_t[7] & 255;
@@ -97,7 +97,7 @@ final class wl {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = to.field_t[9] & 255;
                         var10 = ((255 & to.field_t[7]) << 8) + (((to.field_t[6] & 255) << 16) + (255 & to.field_t[8]));

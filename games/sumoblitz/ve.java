@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ve extends ms {
+abstract class ve extends IntrusiveNode {
     private boolean field_n;
     static String field_l;
     fr field_m;

@@ -3,17 +3,17 @@
  */
 import java.io.*;
 
-class ms {
+class IntrusiveNode {
     static String field_c;
     static cc field_e;
-    ms field_b;
+    IntrusiveNode next;
     static ri field_d;
-    ms field_g;
+    IntrusiveNode previous;
     static String field_i;
     static String[] field_j;
     static boolean field_a;
     static String[] field_f;
-    long field_h;
+    long key;
 
     public static void b(byte param0) {
         field_i = null;
@@ -28,24 +28,24 @@ class ms {
     }
 
     final void b(boolean param0) {
-        if (null == this.field_g) {
+        if (null == this.previous) {
           return;
         }
-        this.field_g.field_b = this.field_b;
-        this.field_b.field_g = this.field_g;
+        this.previous.next = this.next;
+        this.next.previous = this.previous;
         if (!param0) {
-          this.field_g = null;
-          this.field_b = null;
+          this.previous = null;
+          this.next = null;
           return;
         }
         this.b(false);
-        this.field_g = null;
-        this.field_b = null;
+        this.previous = null;
+        this.next = null;
     }
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
-          wi stackIn_14_0;
+          PlatformTaskDispatcher stackIn_14_0;
           int stackIn_14_1;
           java.net.URL stackIn_14_2;
           java.net.URL stackIn_14_3;
@@ -102,7 +102,7 @@ class ms {
               stackIn_15_3 = null;
               stackIn_15_6 = "" + km.field_k;
             }
-            var4 = ((wi) (Object) stackIn_14_0).a((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(wi.field_u).append("&v2=").append(wi.field_q).append("&e=").append(var10).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_q).append("&e=").append(var10).toString()));
             while (var4.field_c == 0) {
               tg.a(1L, (byte) 73);
             }
@@ -125,12 +125,12 @@ class ms {
     final boolean a(boolean param0) {
         if (param0) {
           field_i = (String) null;
-          if (null != this.field_g) {
+          if (null != this.previous) {
             return true;
           }
           return false;
         }
-        if (null != this.field_g) {
+        if (null != this.previous) {
           return true;
         }
         return false;
@@ -144,7 +144,7 @@ class ms {
           return uo.field_e;
         }
         Throwable var2 = (Throwable) null;
-        ms.a((String) null, (Throwable) null, 74);
+        IntrusiveNode.a((String) null, (Throwable) null, 74);
         return uo.field_e;
     }
 

@@ -145,7 +145,7 @@ public final class ir extends aw {
           if (jagdx.gv.a(param0.a(param2, var13), -1)) {
             return false;
           }
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param3 >= 0) {
               if (param3 != 1) {
                 var8 = 0 + param3;
@@ -159,7 +159,7 @@ public final class ir extends aw {
                         param0.CheckDeviceMultiSampleType(param2, param1, field_Zc[var10], true, var8) == 0)) {
                         var7 = field_Fc[var10];
                         var6 = field_Zc[var11];
-                        break L2;
+                        break scanLoop1;
                       }
                     }
                   }

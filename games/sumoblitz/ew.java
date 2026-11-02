@@ -8,7 +8,7 @@ final class ew extends na {
     final static eg a(byte param0, int param1) {
         int var3 = 115 % ((param0 - 30) / 47);
         eg var2 = new eg();
-        wr.field_E.a((ms) (var2), (byte) 39);
+        wr.field_E.a((IntrusiveNode) (var2), (byte) 39);
         ou.a(127, param1);
         return var2;
     }
@@ -28,7 +28,7 @@ final class ew extends na {
             return stackIn_2_0;
           }
           if (param0 == 0) {
-            stackIn_7_0 = nw.field_h;
+            stackIn_7_0 = ProxySocketConnector.field_h;
             return stackIn_7_0;
           }
           stackIn_5_0 = (String) null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rw extends pj {
+abstract class rw extends DualLinkNode {
     boolean field_s;
     volatile boolean field_u;
     boolean field_t;
@@ -11,7 +11,7 @@ abstract class rw extends pj {
         if (param0 > -81) {
           return (String) null;
         }
-        if (nw.field_e == ad.field_p) {
+        if (ProxySocketConnector.field_e == ad.field_p) {
           return bi.field_d;
         }
         return kh.field_d;
@@ -54,7 +54,7 @@ abstract class rw extends pj {
           }
           eh.field_b.d();
           var1.b(0, 0);
-          su.a((byte) 76);
+          ClientException.a((byte) 76);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "rw.B(" + param0 + ')');
         }

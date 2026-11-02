@@ -60,7 +60,7 @@ final class cl extends nt {
         fn.field_u[16] = vp.field_b;
         fn.field_u[1] = ll.field_c;
         fn.field_u[5] = rf.field_c;
-        fn.field_u[11] = ov.field_d;
+        fn.field_u[11] = RasterBuffer.field_d;
         fn.field_u[14] = kf.field_t;
         fn.field_u[6] = rf.field_c;
         fn.field_u[12] = ff.field_n;
@@ -70,7 +70,7 @@ final class cl extends nt {
         int var1 = 56 % ((param0 + 26) / 42);
         fn.field_u[15] = go.field_o;
         fn.field_u[4] = ki.field_j;
-        fn.field_u[2] = os.field_a;
+        fn.field_u[2] = MouseInputHandler.field_a;
         fn.field_u[13] = gu.field_h;
         fn.field_u[21] = hd.field_I;
         fn.field_u[25] = ea.field_b;
@@ -83,7 +83,7 @@ final class cl extends nt {
         fn.field_u[28] = ss.field_a;
         fn.field_u[19] = dn.field_b;
         fn.field_u[22] = td.field_l;
-        dt.field_i = new String[]{mn.field_k, bc.field_b};
+        BufferedSocket.field_i = new String[]{mn.field_k, bc.field_b};
         fn.field_u[33] = mm.field_d;
         fn.field_u[26] = lh.field_p;
         fn.field_u[9] = dj.field_r[1];
@@ -163,8 +163,8 @@ final class cl extends nt {
     final static void a(byte param0, lt param1, int param2) {
         pl var5 = as.field_v;
         var5.g(param2, param0 ^ -105);
-        var5.field_p = var5.field_p + 1;
-        int var4 = var5.field_p;
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
         var5.b((byte) 84, 1);
         var5.b((byte) 103, param1.field_k);
         if (param0 != -97) {
@@ -177,7 +177,7 @@ final class cl extends nt {
           var5.e(48, param1.field_q);
           var5.e(48, param1.field_l);
           var5.a(var4, false);
-          var5.c(var5.field_p - var4, param0 - 13648);
+          var5.c(var5.position - var4, param0 - 13648);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "cl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -9,7 +9,7 @@ final class uk extends gt implements ai {
     private js field_mb;
 
     uk(dg param0, js param1) {
-        super(param0, tq.field_a, su.field_c, false, false);
+        super(param0, tq.field_a, ClientException.field_c, false, false);
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {

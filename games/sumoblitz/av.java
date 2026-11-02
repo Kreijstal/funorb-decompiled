@@ -8,7 +8,7 @@ final class av extends jt {
     static il field_B;
     static int[] field_C;
 
-    final static void a(fs param0, boolean param1) {
+    final static void a(PacketBuffer param0, boolean param1) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;

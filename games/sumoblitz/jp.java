@@ -308,7 +308,7 @@ final class jp extends ak {
         RuntimeException decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          wo.a(up.field_c, 490, -20 + (-(ns.field_b.c() / 2) + 290), param0 << 24, 3, param1, 100 + ns.field_b.c(), -5, 1, true);
+          wo.a(up.field_c, 490, -20 + (-(MouseWheelInput.field_b.c() / 2) + 290), param0 << 24, 3, param1, 100 + MouseWheelInput.field_b.c(), -5, 1, true);
           be.field_t.a(cm.field_b, 5023231 | param0 << 24, -1, 55, 320, 0);
           hc.field_e.a(cm.field_b, -1, -1, 55, 320, 0);
           if (param2 != -2355) {
@@ -328,7 +328,7 @@ final class jp extends ak {
             if (this.field_i == var5) {
               stackIn_8_0 = jn.field_c;
             } else {
-              stackIn_8_0 = vv.field_a;
+              stackIn_8_0 = SecondaryNodeDequeIterator.field_a;
             }
             var8 = stackIn_8_0;
             wo.a(var8, 170, var7, 0, 1, var6_ref_ha, 131, 185, 1, true);

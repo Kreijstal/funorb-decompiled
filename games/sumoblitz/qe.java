@@ -19,7 +19,7 @@ final class qe {
         var10.field_r = param5;
         var10.field_m = param0 ? true : false;
         var10.c(-8);
-        vv.a(-1203350004, param6, param7);
+        SecondaryNodeDequeIterator.a(-1203350004, param6, param7);
         for (var11 = 0; var11 < param7; var11++) {
           var10.a(param4 - 32792, var11, var15[var11]);
         }

@@ -528,7 +528,7 @@ abstract class bp implements ed {
     }
 
     final static void a(int param0, int param1) {
-        pj.field_p = 1000000000L / (long)param0;
+        DualLinkNode.field_p = 1000000000L / (long)param0;
         if (param1 != 26175) {
           bp.a(92, -56);
         }

@@ -20,21 +20,21 @@ final class al extends hj {
         }
     }
 
-    private final void a(ms param0, md param1) {
+    private final void a(IntrusiveNode param0, md param1) {
         while (true) {
           if (param0 == this.field_o.field_e) {
             ha.a(-2, param0, param1);
-            this.field_r = ((md) (this.field_o.field_e.field_b)).field_k;
+            this.field_r = ((md) (this.field_o.field_e.next)).field_k;
             return;
           }
           if (((md) (param0)).field_k <= param1.field_k) {
-            param0 = param0.field_b;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         ha.a(-2, param0, param1);
-        this.field_r = ((md) (this.field_o.field_e.field_b)).field_k;
+        this.field_r = ((md) (this.field_o.field_e.next)).field_k;
         return;
     }
 
@@ -70,7 +70,7 @@ final class al extends hj {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_k = var7;
-              this.a(var5.field_b, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_k = 0;
               this.a(var5);
@@ -107,7 +107,7 @@ final class al extends hj {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_k = var5;
-              this.a(var3.field_b, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_k = 0;
               this.a(var3);
@@ -132,7 +132,7 @@ final class al extends hj {
     private final void a(md param0) {
         param0.b(false);
         param0.a();
-        ms var2 = this.field_o.field_e.field_b;
+        IntrusiveNode var2 = this.field_o.field_e.next;
         if (var2 == this.field_o.field_e) {
           this.field_r = -1;
         } else {

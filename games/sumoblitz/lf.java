@@ -59,7 +59,7 @@ final class lf extends ka {
         RuntimeException var1_ref = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5 = fh.field_n;
+          var5 = ImageProducerRasterBuffer.field_n;
           var1 = var5;
           for (var2 = 0; var2 < var5.length; var2++) {
             var3 = var5[var2];

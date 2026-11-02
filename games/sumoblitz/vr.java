@@ -62,7 +62,7 @@ final class vr extends wp {
             kv.field_a = new wb(var9, var10);
             jq.a(7161, kv.field_a);
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
-            su.a((byte) 126);
+            ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (param2 >= -35) {
               var12 = (pk) null;
@@ -74,7 +74,7 @@ final class vr extends wp {
             kv.field_a = new wb(var9, var10);
             jq.a(7161, kv.field_a);
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
-            su.a((byte) 126);
+            ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (param2 >= -35) {
               var12Lifetime4 = (pk) null;
@@ -86,7 +86,7 @@ final class vr extends wp {
             jq.a(7161, kv.field_a);
             lk.b();
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
-            su.a((byte) 126);
+            ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (param2 >= -35) {
               var12Lifetime5 = (pk) null;
@@ -97,7 +97,7 @@ final class vr extends wp {
           kv.field_a = new wb(var9, var10);
           jq.a(7161, kv.field_a);
           var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
-          su.a((byte) 126);
+          ClientException.a((byte) 126);
           kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
           if (param2 >= -35) {
             var12Lifetime6 = (pk) null;
@@ -113,7 +113,7 @@ final class vr extends wp {
             kv.field_a = new wb(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
-            su.a((byte) 126);
+            ClientException.a((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (param2 >= -35) {
               var12Lifetime1 = (pk) null;
@@ -125,7 +125,7 @@ final class vr extends wp {
             kv.field_a = new wb(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
-            su.a((byte) 126);
+            ClientException.a((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (param2 >= -35) {
               var12Lifetime1Lifetime1 = (pk) null;
@@ -137,7 +137,7 @@ final class vr extends wp {
             kv.field_a = new wb(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
             var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
-            su.a((byte) 126);
+            ClientException.a((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (param2 < -35) {
               return;
@@ -149,7 +149,7 @@ final class vr extends wp {
           jq.a(7161, kv.field_a);
           lk.b();
           var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
-          su.a((byte) 126);
+          ClientException.a((byte) 126);
           kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
           if (param2 < -35) {
             return;

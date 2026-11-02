@@ -66,7 +66,7 @@ final class fo extends sp implements ai {
 
     public fo() {
         super(0, 0, 476, 225, (mh) null);
-        this.field_B = new wp(ms.field_i, (qm) null);
+        this.field_B = new wp(IntrusiveNode.field_i, (qm) null);
         this.field_A = new wp(jc.field_e, (qm) null);
         this.field_C = new wp(tm.field_b, (qm) null);
         ue var1 = new ue();

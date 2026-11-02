@@ -106,11 +106,11 @@ final class ib extends rq {
         }
         gk.field_o.a(false, lt.field_m);
         gk.field_o = null;
-        if (vv.field_b == null) {
+        if (SecondaryNodeDequeIterator.field_b == null) {
           qn.field_f.requestFocus();
           return;
         }
-        vv.field_b.e(2);
+        SecondaryNodeDequeIterator.field_b.e(2);
         qn.field_f.requestFocus();
     }
 

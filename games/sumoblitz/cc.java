@@ -7,12 +7,12 @@ final class cc implements Runnable {
     private jr field_c;
     private DataInputStream field_h;
     private java.net.URL field_a;
-    private fs field_d;
+    private PacketBuffer field_d;
     private int field_g;
     private jr field_f;
     private jr field_e;
     static int field_j;
-    private wi field_b;
+    private PlatformTaskDispatcher field_b;
     static ck field_i;
 
     protected final void finalize() {
@@ -108,7 +108,7 @@ final class cc implements Runnable {
             var4.write(mb.a(var6, (byte) 32));
             this.field_h = new DataInputStream(var5.getInputStream());
           }
-          this.field_d.field_p = 0;
+          this.field_d.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (IOException) (Object) decompiledCaughtException;
@@ -150,16 +150,16 @@ final class cc implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = Sumoblitz.field_L ? 1 : 0;
           try {
-            while (this.field_d.field_p < this.field_d.field_n.length) {
-              var1_int = this.field_h.read(this.field_d.field_n, this.field_d.field_p, -this.field_d.field_p + this.field_d.field_n.length);
+            while (this.field_d.position < this.field_d.payload.length) {
+              var1_int = this.field_h.read(this.field_d.payload, this.field_d.position, -this.field_d.position + this.field_d.payload.length);
               if (var1_int >= 0) {
-                this.field_d.field_p = this.field_d.field_p + var1_int;
+                this.field_d.position = this.field_d.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_d.field_n.length == this.field_d.field_p) {
-              throw cc.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.field_n.length + " " + this.field_a));
+            if (this.field_d.payload.length == this.field_d.position) {
+              throw cc.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.payload.length + " " + this.field_a));
             }
             var1 = this;
             synchronized (var1) {
@@ -184,7 +184,7 @@ final class cc implements Runnable {
         }
     }
 
-    final fs b(byte param0) {
+    final PacketBuffer b(byte param0) {
         if (3 == this.field_g) {
           return this.field_d;
         }
@@ -195,11 +195,11 @@ final class cc implements Runnable {
         return null;
     }
 
-    cc(wi param0, java.net.URL param1, int param2) {
+    cc(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_b = param0;
           this.field_a = param1;
-          this.field_d = new fs(param2);
+          this.field_d = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw qo.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
