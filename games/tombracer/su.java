@@ -22,7 +22,7 @@ final class su {
         }
     }
 
-    final static nh a(jpa param0, ha param1, byte param2) {
+    final static nh a(jpa param0, GraphicsToolkit param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         nh stackIn_4_0 = null;

@@ -6,7 +6,7 @@ final class bla extends lea {
     static int[] field_H;
     static af field_G;
 
-    bla(la param0, int param1) {
+    bla(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -47,27 +47,27 @@ final class bla extends lea {
         field_G = null;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         ue var5 = null;
         mfa var6 = null;
         kga var7 = null;
-        fsa stackIn_2_0 = null;
-        fsa stackIn_4_0 = null;
+        Trap stackIn_2_0 = null;
+        Trap stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            stackIn_2_0 = (fsa) null;
+            stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
           var4 = super.a(param0, param1 + 0, param2);
           var5 = new ue(param2, param0);
           var5.a(1, false);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kga) (var6.a(12, 93));
           var7.b((byte) 112, 0);
@@ -96,7 +96,7 @@ final class bla extends lea {
         return param2 - (1 << param1 - 1);
     }
 
-    bla(la param0, int param1, kh param2, csa param3) {
+    bla(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

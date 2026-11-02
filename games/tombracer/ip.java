@@ -23,7 +23,7 @@ abstract class ip {
     abstract void a(int param0);
 
     final static void a(upa param0, int param1, int param2) {
-        kh var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = ql.field_k;
           var3.k(param1, -2988);

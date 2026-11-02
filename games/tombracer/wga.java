@@ -17,7 +17,7 @@ final class wga implements bo {
     }
 
     final static void a(boolean param0, int param1) {
-        kh var2 = ql.field_k;
+        BitPacketBuffer var2 = ql.field_k;
         if (param0) {
           var2.k(param1, -2988);
           var2.i(2, 0);
@@ -27,7 +27,7 @@ final class wga implements bo {
         }
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           param0.h((byte) 125);
           if (param1 != -19) {
@@ -49,7 +49,7 @@ final class wga implements bo {
         field_a = null;
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         try {
           param1.i(8);
           param1.a((byte) 31, this.field_b, 5);

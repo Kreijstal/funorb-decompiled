@@ -14,9 +14,9 @@ abstract class qda {
     vj field_c;
     vj field_k;
     long field_j;
-    uia field_o;
+    PacketBuffer field_o;
     int field_p;
-    uia field_h;
+    PacketBuffer field_h;
     volatile int field_n;
     volatile int field_a;
     byte field_d;
@@ -61,10 +61,10 @@ abstract class qda {
             uca.a(param0, var4, (byte) 93);
             var4 = (toa) (vsa.field_m.e(113));
           }
-          var5 = (ik) (hca.field_I.f(param1 ^ 91));
+          var5 = (ik) (Player.field_I.f(param1 ^ 91));
           while (var5 != null) {
             fna.a(param0, -23814, var5);
-            var5 = (ik) (hca.field_I.e(121));
+            var5 = (ik) (Player.field_I.e(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,7 +84,7 @@ abstract class qda {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          uia var2 = null;
+          PacketBuffer var2 = null;
           if (4 <= wg.field_l.field_a) {
             if (wg.field_l.field_n == -1) {
               return 3;
@@ -112,12 +112,12 @@ abstract class qda {
               }
             }
             if (cma.field_m == 2) {
-              jia.field_a = new jqa((java.net.Socket) (bga.field_c.field_f), oi.field_a);
-              var2 = new uia(13);
+              jia.field_a = new BufferedSocket((java.net.Socket) (bga.field_c.field_f), oi.field_a);
+              var2 = new PacketBuffer(13);
               ea.a((byte) 107, pu.field_b, var2, wk.field_n, joa.field_a);
               var2.i(15, 0);
               var2.a(wea.field_a, (byte) 117);
-              jia.field_a.a(var2.field_g, 0, 13, 106);
+              jia.field_a.a(var2.payload, 0, 13, 106);
               cma.field_m = cma.field_m + 1;
               pm.field_n = 30000L + bva.b((byte) -107);
             }
@@ -168,7 +168,7 @@ abstract class qda {
 
     final boolean b(int param0) {
         if (param0 != -21) {
-          this.field_o = (uia) null;
+          this.field_o = (PacketBuffer) null;
         }
         return this.a((byte) 78) >= 20 ? true : false;
     }
@@ -220,7 +220,7 @@ abstract class qda {
     final qqa a(int param0, boolean param1, int param2, int param3, byte param4) {
         long var6 = ((long)param2 << 32) + (long)param0;
         qqa var8 = new qqa();
-        var8.field_j = var6;
+        var8.secondaryKey = var6;
         if (param3 != -21) {
           return (qqa) null;
         }
@@ -281,11 +281,11 @@ abstract class qda {
         this.field_m = new vj();
         this.field_c = new vj();
         this.field_k = new vj();
-        this.field_o = new uia(6);
+        this.field_o = new PacketBuffer(6);
         this.field_a = 0;
         this.field_n = 0;
         this.field_d = (byte) 0;
-        this.field_h = new uia(10);
+        this.field_h = new PacketBuffer(10);
     }
 
     static {

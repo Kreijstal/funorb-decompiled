@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oea extends vg {
+final class oea extends IntrusiveNode {
     static volatile boolean field_k;
     fo field_h;
     static jpa field_j;

@@ -11,7 +11,7 @@ final class ck {
         RuntimeException var9 = null;
         try {
           if (param6 <= 65) {
-            ck.a(-121, (String[][]) null, -66, (iu[][]) null, (String[]) null, (String[]) null, (byte[]) null, (String[]) null, (String[][]) null, -31, (cn) null, 29, (byte[]) null, (iu[][]) null, (int[]) null);
+            ck.a(-121, (String[][]) null, -66, (Sprite[][]) null, (String[]) null, (String[]) null, (byte[]) null, (String[]) null, (String[][]) null, -31, (cn) null, 29, (byte[]) null, (Sprite[][]) null, (int[]) null);
           }
           if ((-(param8 / 2) + param0) >= (-(param3 / 2) + param2) &&
             param0 + (param8 + 1) / 2 <= (param3 + 1) / 2 + param2 &&
@@ -27,7 +27,7 @@ final class ck {
         }
     }
 
-    final static void a(int param0, String[][] param1, int param2, iu[][] param3, String[] param4, String[] param5, byte[] param6, String[] param7, String[][] param8, int param9, cn param10, int param11, byte[] param12, iu[][] param13, int[] param14) {
+    final static void a(int param0, String[][] param1, int param2, Sprite[][] param3, String[] param4, String[] param5, byte[] param6, String[] param7, String[][] param8, int param9, cn param10, int param11, byte[] param12, Sprite[][] param13, int[] param14) {
         tv[] array$0 = null;
         tv[] array$1 = null;
         tv[] array$2 = null;
@@ -38,7 +38,7 @@ final class ck {
         jea stackIn_9_0 = null;
         jea stackIn_9_1 = null;
         String stackIn_9_4 = null;
-        iu stackIn_61_0 = null;
+        Sprite stackIn_61_0 = null;
         String stackIn_68_0 = null;
         int stackIn_71_0 = 0;
         Object stackIn_78_0 = null;
@@ -75,7 +75,7 @@ final class ck {
         int var17_int = 0;
         Object var17 = null;
         int var18 = 0;
-        iu var19_ref_iu = null;
+        Sprite var19_ref_iu = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -105,11 +105,11 @@ final class ck {
           gv.field_w[0] = kda.field_cd;
           gv.field_w[2] = un.field_q;
           gv.field_w[3] = pta.field_d;
-          gv.field_w[4] = uia.field_f;
+          gv.field_w[4] = PacketBuffer.field_f;
           gv.field_w[1] = cha.field_b;
           rra.field_e = new jea(0L, (jea) null);
           uh.field_h = new jea(0L, ooa.field_f, ija.field_i);
-          vw.field_b = new jea(0L, hma.field_b, dl.field_m);
+          vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, dl.field_m);
           bsa.field_j = new iv(0L, new jea(0L, (jea) null), rfa.field_C, fe.field_F);
           rra.field_e.b(-126, uh.field_h);
           if (rca.field_p) {
@@ -129,8 +129,8 @@ final class ck {
           iia.field_r = new jea(0L, cs.field_a, ria.field_r);
           spa.field_o = new jea(0L, cs.field_a, du.field_a);
           l.field_K = new jea(0L, cs.field_a, qo.field_i);
-          aw.field_I = new jea(0L, cs.field_a, ff.field_N);
-          cq.field_e = new jea(0L, hma.field_b, ra.field_G);
+          aw.field_I = new jea(0L, cs.field_a, MatchState.field_N);
+          cq.field_e = new jea(0L, SecondaryNodeDeque.field_b, ra.field_G);
           nsa.field_i = new iv(0L, new jea(0L, (jea) null), rfa.field_C, fe.field_F);
           uq.field_c = new jea(0L, hg.field_g, iw.field_b.toUpperCase());
           uq.field_c.field_X = rca.field_p;
@@ -148,9 +148,9 @@ final class ck {
             stackIn_9_4 = bua.field_c;
           }
           pq.field_c = new jea(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
-          cka.field_fd = new jea(0L, (jea) null);
-          cka.field_fd.b(-126, ap.field_a);
-          cka.field_fd.b(param11 ^ -25371, db.field_s);
+          OpenGlToolkit.field_fd = new jea(0L, (jea) null);
+          OpenGlToolkit.field_fd.b(-126, ap.field_a);
+          OpenGlToolkit.field_fd.b(param11 ^ -25371, db.field_s);
           db.field_s.b(-124, gta.field_b);
           db.field_s.b(-126, iia.field_r);
           db.field_s.b(-127, spa.field_o);
@@ -161,9 +161,9 @@ final class ck {
           db.field_s.b(-128, cq.field_e);
           db.field_s.b(-122, nsa.field_i);
           if (rca.field_p) {
-            cka.field_fd.b(-124, uq.field_c);
+            OpenGlToolkit.field_fd.b(-124, uq.field_c);
           }
-          cka.field_fd.b(-124, pq.field_c);
+          OpenGlToolkit.field_fd.b(-124, pq.field_c);
           rv.field_c = new jea(0L, kua.field_i);
           rv.field_c.field_bb = 0;
           rv.field_c.field_z = 1;
@@ -180,7 +180,7 @@ final class ck {
           cea.field_a = new jea(0L, kua.field_i);
           cea.field_a.field_z = 1;
           uaa.field_b = new jea(0L, ooa.field_f, ija.field_i);
-          lda.field_F = new jea(0L, hma.field_b, dl.field_m);
+          lda.field_F = new jea(0L, SecondaryNodeDeque.field_b, dl.field_m);
           tn.field_n = new iv(0L, new jea(0L, (jea) null), rfa.field_C, fe.field_F);
           lk.field_l.b(param11 ^ -25371, cea.field_a);
           lk.field_l.b(-124, uaa.field_b);
@@ -197,7 +197,7 @@ final class ck {
           rb.field_p[0] = new jea(0L, una.field_j, fj.field_a);
           bf.field_b[0] = new tv[6];
           var17_int = 0;
-          L6: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var17_int < 5) {
               bf.field_b[0][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, dja.field_p, w.field_f[var17_int], gv.field_w[var17_int]);
@@ -211,21 +211,21 @@ final class ck {
                 rb.field_p[1] = new jea(0L, una.field_j, mi.field_j);
                 array$0 = new tv[1 + sg.field_u.length];
                 bf.field_b[1] = array$0;
-                bf.field_b[1][0] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (iu) null, aa.field_b);
+                bf.field_b[1][0] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, aa.field_b);
               }
             }
             if (decompiledFrameRemainder0) {
               var17_int = 0;
               while (!(var17_int >= sg.field_u.length)) {
-                bf.field_b[1][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (iu) null, Integer.toString(sg.field_u[var17_int]));
+                bf.field_b[1][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, Integer.toString(sg.field_u[var17_int]));
                 var17_int++;
                 if (var21 != 0) {
-                  break L6;
+                  break scanLoop1;
                 }
               }
             }
             rb.field_p[2] = new jea(0L, una.field_j, nb.field_a);
-            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (jea) null, dja.field_p, (iu) null, aa.field_b), new tv(0L, qja.field_j, (jea) null, dja.field_p, pca.field_k[0], ifa.field_s), new tv(0L, qja.field_j, (jea) null, dja.field_p, pca.field_k[1], rpa.field_g)};
+            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (jea) null, dja.field_p, pca.field_k[0], ifa.field_s), new tv(0L, qja.field_j, (jea) null, dja.field_p, pca.field_k[1], rpa.field_g)};
             break;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -233,10 +233,10 @@ final class ck {
             rb.field_p[3] = new jea(0L, una.field_j, k.field_z);
             array$1 = new tv[1 + ws.field_r];
             bf.field_b[3] = array$1;
-            bf.field_b[3][0] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (iu) null, aa.field_b);
+            bf.field_b[3][0] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, aa.field_b);
             var17_int = 0;
             while (!(ws.field_r <= var17_int)) {
-              bf.field_b[3][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (iu) null, rda.field_m[var17_int]);
+              bf.field_b[3][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, rda.field_m[var17_int]);
               var17_int++;
               if (var21 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -247,12 +247,12 @@ final class ck {
           if (decompiledFrameCompleted0) {
             var17_int = 0;
           }
-          L16: while (true) {
+          scanLoop2: while (true) {
             if (var17_int < param0) {
               rb.field_p[var17_int + 4] = new jea(0L, una.field_j, kma.field_e[var17_int]);
               array$2 = new tv[1 + sea.c((int) oo.field_n[var17_int], 255)];
               bf.field_b[4 + var17_int] = array$2;
-              bf.field_b[var17_int + 4][0] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (iu) null, aa.field_b);
+              bf.field_b[var17_int + 4][0] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (Sprite) null, aa.field_b);
               stackIn_71_0 = 0;
               if (var21 == 0) {
                 var18 = stackIn_71_0;
@@ -293,7 +293,7 @@ final class ck {
             var17_int = 0;
             while (var17_int < (param0 + 4)) {
               if (var21 != 0) {
-                break L16;
+                break scanLoop2;
               }
               stackIn_78_0Lifetime1 = null;
               if (stackIn_78_0Lifetime1 != rb.field_p[var17_int]) {
@@ -353,7 +353,7 @@ final class ck {
           dka.field_b.b(-125, hw.field_a);
           dka.field_b.b(-123, dl.field_t);
           vca.field_e = new jea(0L, oba.field_f, eu.field_b.toUpperCase());
-          fsa.field_q = new jea(0L, dp.field_i, ej.field_b.toUpperCase());
+          Trap.field_q = new jea(0L, dp.field_i, ej.field_b.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -69,7 +69,7 @@ final class rd extends wv {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        da var6 = null;
+        GameFont var6 = null;
         int var7 = 0;
         int var8 = 0;
         String var9 = null;
@@ -82,7 +82,7 @@ final class rd extends wv {
           var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
           var8 = 3 * var7;
           var9 = aaa.field_e;
-          be.a(var9, 1, var6, 2431750, var7, var8, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
+          SocketConnector.a(var9, 1, var6, 2431750, var7, var8, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
           return;
         }
     }

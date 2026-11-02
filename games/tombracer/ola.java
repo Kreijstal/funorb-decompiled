@@ -12,9 +12,9 @@ final class ola extends jea {
     private int field_wb;
     private int field_vb;
     private jea field_ub;
-    private iu[] field_Cb;
+    private Sprite[] field_Cb;
     private int field_Hb;
-    static uia field_Bb;
+    static PacketBuffer field_Bb;
     private jea field_Ab;
     static ka[] field_Ib;
     private int field_xb;
@@ -30,7 +30,7 @@ final class ola extends jea {
         int var8Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
         if (this.field_zb == 0) {
-          this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_ub, (iu) null, ns.field_c);
+          this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_ub, (Sprite) null, ns.field_c);
           this.field_Db[this.field_zb].field_bb = 1;
           this.b(-128, this.field_Db[this.field_zb]);
           this.field_Fb[this.field_zb] = -1;
@@ -68,7 +68,7 @@ final class ola extends jea {
         return true;
     }
 
-    ola(jea param0, iu[] param1, jea param2, jea param3, int param4, int param5, int param6, int param7, int param8) {
+    ola(jea param0, Sprite[] param1, jea param2, jea param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Db = new tv[256];
         this.field_Fb = new int[256];
@@ -140,7 +140,7 @@ final class ola extends jea {
     }
 
     final void a(byte param0, int param1, String param2) {
-        this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_Ab, (iu) null, param2);
+        this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_Ab, (Sprite) null, param2);
         this.field_Db[this.field_zb].field_C = this.field_Cb;
         if (param0 > -63) {
           return;
@@ -156,12 +156,12 @@ final class ola extends jea {
         }
     }
 
-    final void a(iu param0, int param1, String param2, boolean param3) {
+    final void a(Sprite param0, int param1, String param2, boolean param3) {
         try {
           this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_Ab, param0, param2);
           this.field_Db[this.field_zb].field_C = this.field_Cb;
           if (param3) {
-            this.field_Cb = (iu[]) null;
+            this.field_Cb = (Sprite[]) null;
           }
           this.field_Db[this.field_zb].field_eb = true;
           this.field_Db[this.field_zb].field_bb = 1;

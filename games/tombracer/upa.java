@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class upa extends vg {
+final class upa extends IntrusiveNode {
     int[][] field_m;
     int field_j;
     int field_g;
@@ -53,7 +53,7 @@ final class upa extends vg {
         boolean stackIn_65_2 = false;
         tga.a(-21953, -640 + bea.field_g >> 1, 640 + bea.field_g >> 1, 0, bea.field_a);
         if (mla.field_a <= 0) {
-          if (gt.field_a > param1) {
+          if (GameKeyHandler.field_a > param1) {
             if (null != fta.field_b) {
               fta.field_b.d(nra.field_c.field_qb, 0);
             }
@@ -88,11 +88,11 @@ final class upa extends vg {
           stackIn_6_1 = param1 + 80;
           stackIn_7_2 = (param0) && (!uv.field_o);
           ((jea) (Object) stackIn_6_0).b(stackIn_6_1, stackIn_7_2);
-          stackIn_10_0 = cka.field_fd;
+          stackIn_10_0 = OpenGlToolkit.field_fd;
           stackIn_10_1 = 72;
           stackIn_11_2 = (param0) && (!uv.field_o);
           ((jea) (Object) stackIn_10_0).b(stackIn_10_1, stackIn_11_2);
-          if (gt.field_a > param1) {
+          if (GameKeyHandler.field_a > param1) {
             if (null != fta.field_b) {
               fta.field_b.d(nra.field_c.field_qb, 0);
             }

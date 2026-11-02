@@ -13,7 +13,7 @@ final class dc extends dg {
     private boolean field_u;
     private fla field_s;
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         try {
           super.a(120, param1, param2);
           this.field_q = param2.b((byte) 44, 4);
@@ -34,7 +34,7 @@ final class dc extends dg {
         return super.e((byte) -108) + (this.field_r << 16);
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) 85, param1);
           int var3_int = -96 / ((param0 + 8) / 40);
@@ -44,7 +44,7 @@ final class dc extends dg {
         }
     }
 
-    dc(int param0, la param1, kh param2) {
+    dc(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_n = 160;
     }
@@ -337,7 +337,7 @@ final class dc extends dg {
         int var3;
         int var6;
         int var7;
-        fsa var8;
+        Trap var8;
         w var9;
         Object var16;
         Object var17;
@@ -346,14 +346,14 @@ final class dc extends dg {
         int stackIn_85_0 = 0;
         int stackIn_118_0 = 0;
         int stackIn_149_0 = 0;
-        fsa var10;
+        Trap var10;
         w var11;
-        fsa var12;
+        Trap var12;
         w var13;
-        fsa var14;
+        Trap var14;
         w var15;
         w var17_ref;
-        fsa var18;
+        Trap var18;
         int var6Lifetime1;
         int var6Lifetime2;
         int var6Lifetime3;
@@ -386,7 +386,7 @@ final class dc extends dg {
             if (var13 == null) {
               return;
             }
-            var12 = (fsa) (this.field_h);
+            var12 = (Trap) (this.field_h);
             if (var12.d(param0 + 51, false)) {
               stackIn_85_0 = (var3 != 0) ? 1 : 0;
             } else {
@@ -434,7 +434,7 @@ final class dc extends dg {
             if (var9 == null) {
               return;
             }
-            var8 = (fsa) (this.field_h);
+            var8 = (Trap) (this.field_h);
             if (var8.d(param0 + 51, false)) {
               stackIn_16_0 = (var3 != 0) ? 1 : 0;
             } else {
@@ -482,7 +482,7 @@ final class dc extends dg {
             if (var11 == null) {
               return;
             }
-            var10 = (fsa) (this.field_h);
+            var10 = (Trap) (this.field_h);
             if (var10.d(param0 + 51, false)) {
               stackIn_51_0 = (var3 != 0) ? 1 : 0;
             } else {
@@ -526,7 +526,7 @@ final class dc extends dg {
             if (var15 == null) {
               return;
             }
-            var14 = (fsa) (this.field_h);
+            var14 = (Trap) (this.field_h);
             if (var14.d(param0 + 51, false)) {
               stackIn_118_0 = (var3 != 0) ? 1 : 0;
             } else {
@@ -569,7 +569,7 @@ final class dc extends dg {
         if (var17_ref == null) {
           return;
         }
-        var18 = (fsa) (this.field_h);
+        var18 = (Trap) (this.field_h);
         if (var18.d(param0 + 51, false)) {
           stackIn_149_0 = (var3 == 0) ? 0 : 1;
         } else {

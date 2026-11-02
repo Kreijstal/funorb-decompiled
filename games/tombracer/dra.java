@@ -16,7 +16,7 @@ final class dra {
     final static void a(boolean param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        kh var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -28,11 +28,11 @@ final class dra {
           var1 = ql.field_k;
           while (sea.l(10371)) {
             var1.k(8, -2988);
-            fieldTemp$0 = var1.field_h + 1;
-            var1.field_h = var1.field_h + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             hk.a(true, var1);
-            ql.field_k.d(var1.field_h - var2, (byte) -17);
+            ql.field_k.d(var1.position - var2, (byte) -17);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

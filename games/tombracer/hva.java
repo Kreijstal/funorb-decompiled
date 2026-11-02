@@ -69,7 +69,7 @@ final class hva {
         return this.field_a[param0] * 2;
     }
 
-    final void a(uia param0, co param1) {
+    final void a(PacketBuffer param0, co param1) {
         int var3;
         int var4;
         int var5;

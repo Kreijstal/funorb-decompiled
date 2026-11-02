@@ -43,7 +43,7 @@ final class qp extends we {
         int var10_int = 0;
         RuntimeException var10 = null;
         String var11 = null;
-        da var12 = null;
+        GameFont var12 = null;
         String var13 = null;
         String var13Lifetime1;
         String var13Lifetime2;
@@ -252,7 +252,7 @@ final class qp extends we {
         var5 = null;
         var6 = this.field_w;
         if (0 == var6) {
-          var7 = dt.field_n;
+          var7 = PlayerSimulation.field_n;
           if (var7 != null) {
             oka.a(var7.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
             return;

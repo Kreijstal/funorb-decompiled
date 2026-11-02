@@ -30,8 +30,8 @@ final class mca {
     }
 
     final static void a(kb param0, int param1, int param2) {
-        kh var7 = null;
-        kh var8 = null;
+        BitPacketBuffer var7 = null;
+        BitPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -39,8 +39,8 @@ final class mca {
           var7 = ql.field_k;
           var8 = var7;
           var8.k(param2, -2988);
-          var8.field_h = var8.field_h + 1;
-          var4 = var8.field_h;
+          var8.position = var8.position + 1;
+          var4 = var8.position;
           var8.i(1, 0);
           var8.f(-1477662136, param0.field_l);
           var8.f(-1477662136, param0.field_f);
@@ -54,7 +54,7 @@ final class mca {
             var7.a(param0.field_o[var5], (byte) 96);
           }
           var8.g(var4, 64);
-          var8.d(-var4 + var8.field_h, (byte) 72);
+          var8.d(-var4 + var8.position, (byte) 72);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mca.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

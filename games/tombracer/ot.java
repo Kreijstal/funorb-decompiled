@@ -43,23 +43,23 @@ final class ot extends lba {
         ot.b((byte) 20);
     }
 
-    final static iu a(int param0, int param1, cn param2, boolean param3) {
+    final static Sprite a(int param0, int param1, cn param2, boolean param3) {
         RuntimeException var4 = null;
-        iu stackIn_5_0 = null;
-        iu stackIn_7_0 = null;
+        Sprite stackIn_5_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!jna.a(false, param1, param0, param2)) {
+          if (!GameApplet.a(false, param1, param0, param2)) {
             return null;
           }
           if (param3) {
             stackIn_7_0 = je.a((byte) 69);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (iu) null;
+          stackIn_5_0 = (Sprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

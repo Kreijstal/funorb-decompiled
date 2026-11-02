@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class c extends vg implements fo {
+abstract class c extends IntrusiveNode implements fo {
     static int[] field_g;
     static java.math.BigInteger field_f;
     static String field_h;
@@ -16,7 +16,7 @@ abstract class c extends vg implements fo {
 
     abstract boolean h(int param0);
 
-    final static boolean[] a(int param0, boolean[] param1, byte param2, kh param3) {
+    final static boolean[] a(int param0, boolean[] param1, byte param2, BitPacketBuffer param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -82,7 +82,7 @@ abstract class c extends vg implements fo {
 
     abstract void a(int param0, byte param1, int param2, int param3);
 
-    abstract void a(la param0, int param1);
+    abstract void a(Room param0, int param1);
 
     abstract void a(int param0, boolean param1);
 

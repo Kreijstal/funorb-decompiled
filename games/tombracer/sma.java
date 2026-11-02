@@ -9,7 +9,7 @@ final class sma {
     int[] field_b;
     static en field_c;
     private int[] field_f;
-    private ff field_a;
+    private MatchState field_a;
 
     private final void a(byte param0) {
         int var2 = 0;
@@ -159,15 +159,15 @@ final class sma {
         int var2;
         int var3;
         int var4;
-        hca[] var5;
-        hca var7;
+        Player[] var5;
+        Player var7;
         int var8;
         int var9;
         int var2Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
-        this.field_b = new int[this.field_a.field_H.length];
-        this.field_f = new int[this.field_a.field_H.length];
-        for (var2 = 0; this.field_a.field_H.length > var2; var2++) {
+        this.field_b = new int[this.field_a.players.length];
+        this.field_f = new int[this.field_a.players.length];
+        for (var2 = 0; this.field_a.players.length > var2; var2++) {
           this.field_b[var2] = -1;
           this.field_f[var2] = -1;
         }
@@ -177,7 +177,7 @@ final class sma {
         for (var2Lifetime1 = 0; this.field_f.length > var2Lifetime1; var2Lifetime1++) {
           var3 = -1;
           var4 = 0;
-          var5 = this.field_a.field_H;
+          var5 = this.field_a.players;
           for (var6 = 0; var5.length > var6; var6++) {
             var7 = var5[var6];
             if (!this.field_a.f((byte) -83, var7.A(0)) &&
@@ -199,7 +199,7 @@ final class sma {
         }
     }
 
-    sma(ff param0) {
+    sma(MatchState param0) {
         try {
           this.field_a = param0;
           this.a((byte) -54);

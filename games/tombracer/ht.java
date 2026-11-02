@@ -185,14 +185,14 @@ final class ht extends jea {
         if (param0 != 0) {
           this.field_Cb = (String[]) null;
         }
-        return (int)this.e(0);
+        return (int)this.getSecondaryKey(0);
     }
 
     final boolean g(int param0) {
         if (param0 != 0) {
           return false;
         }
-        return !this.d(param0 ^ 0) ? true : false;
+        return !this.isSecondaryLinked(param0 ^ 0) ? true : false;
     }
 
     final static int[] d(int param0, boolean param1) {

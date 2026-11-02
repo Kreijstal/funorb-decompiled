@@ -12,7 +12,7 @@ final class ek extends nqa implements lv {
         return (jagdx.IDirect3DBaseTexture) ((Object) this.field_f);
     }
 
-    ek(cta param0, ft param1, int param2, int param3, int param4, byte[] param5) {
+    ek(Direct3DToolkit param0, ft param1, int param2, int param3, int param4, byte[] param5) {
         super(param0, param1, una.field_g, false, param2 * param3 * param4);
         int var14 = 0;
         int var8;
@@ -25,7 +25,7 @@ final class ek extends nqa implements lv {
         this.field_h = param3;
         this.field_i = param4;
         this.field_g = param2;
-        this.field_f = this.field_d.field_jd.a(param2, param3, param4, 1, 0, cta.a(param1, -128, this.field_b), 1);
+        this.field_f = this.field_d.field_jd.a(param2, param3, param4, 1, 0, Direct3DToolkit.a(param1, -128, this.field_b), 1);
         var15 = this.field_d.field_Nc;
         var8 = this.field_f.LockBox(0, 0, 0, 0, param2, param3, param4, 0, var15);
         if (jagdx.ah.a(var8, (byte) -86)) {

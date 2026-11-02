@@ -4,7 +4,7 @@
 final class vha {
     static int field_b;
     static pma field_c;
-    static iu field_a;
+    static Sprite field_a;
 
     final static void a(int param0, byte param1, boolean param2, int param3) {
         int var4;
@@ -39,7 +39,7 @@ final class vha {
             decompiledFrameRemainder0 = false;
           }
           else {
-            la.l(2097152);
+            Room.l(2097152);
             param2 = false;
           }
         }
@@ -83,6 +83,6 @@ final class vha {
 
     static {
         field_b = 0;
-        field_a = new iu(540, 140);
+        field_a = new Sprite(540, 140);
     }
 }

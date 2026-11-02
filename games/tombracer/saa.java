@@ -2,24 +2,24 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class saa extends kna {
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
-        kh var5 = null;
-        fsa stackIn_3_0 = null;
+        BitPacketBuffer var5 = null;
+        Trap stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            var5 = (kh) null;
-            this.a(true, (kh) null);
+            var5 = (BitPacketBuffer) null;
+            this.a(true, (BitPacketBuffer) null);
           }
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.l(1, 146366800);
-          var4.a((byte) 83, (nv) (new sea(param2, false)));
+          var4.a((byte) 83, (Behaviour) (new sea(param2, false)));
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,7 +44,7 @@ final class saa extends kna {
         return false;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -63,11 +63,11 @@ final class saa extends kna {
         super.q(param0);
     }
 
-    saa(la param0, int param1, kh param2, csa param3) {
+    saa(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
-    saa(la param0, int param1) {
+    saa(Room param0, int param1) {
         super(param0, param1);
     }
 

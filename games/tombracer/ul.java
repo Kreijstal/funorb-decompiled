@@ -21,12 +21,12 @@ final class ul extends nqa implements na {
         super.a(param0, param1);
     }
 
-    ul(cta param0, int param1, boolean param2, int[][] param3) {
+    ul(Direct3DToolkit param0, int param1, boolean param2, int[][] param3) {
         super(null, null, null, false, param1 * (param1 * 6));
         int var6 = 0;
         int var9 = 0;
         Object stackIn_3_0;
-        cta stackIn_3_1;
+        Direct3DToolkit stackIn_3_1;
         ft stackIn_3_2;
         una stackIn_3_3;
         int stackIn_4_4 = 0;
@@ -38,7 +38,7 @@ final class ul extends nqa implements na {
         int stackIn_4_4Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
-        stackIn_3_1 = (cta) (param0);
+        stackIn_3_1 = (Direct3DToolkit) (param0);
         stackIn_3_2 = gpa.field_a;
         stackIn_3_3 = una.field_g;
         if (param2) {

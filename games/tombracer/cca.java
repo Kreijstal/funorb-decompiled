@@ -9,18 +9,18 @@ final class cca extends rva {
     private boolean field_B;
     static long field_z;
 
-    final static iu[] a(int param0, cn param1, int param2, int param3) {
+    final static Sprite[] a(int param0, cn param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        iu[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!jna.a(false, param0, param3, param1)) {
+          if (!GameApplet.a(false, param0, param3, param1)) {
             stackIn_2_0 = null;
-            return (iu[]) (stackIn_2_0);
+            return (Sprite[]) (stackIn_2_0);
           }
           if (param2 > -7) {
             field_z = 29L;
@@ -765,16 +765,16 @@ final class cca extends rva {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         cn var7;
         if (param5 < pka.field_b) {
-          gt.a(param1, param5, param3, param2, 10, param0);
+          GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
         } else {
           if (ss.field_c < param1) {
-            gt.a(param1, param5, param3, param2, 10, param0);
+            GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
           } else {
             if (param3 < gca.field_d) {
-              gt.a(param1, param5, param3, param2, 10, param0);
+              GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
             } else {
               if (hc.field_h < param0) {
-                gt.a(param1, param5, param3, param2, 10, param0);
+                GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
               } else {
                 caa.a(param2, param1, param5, param3, param0, param4 ^ 936441872);
               }

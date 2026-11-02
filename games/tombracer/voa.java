@@ -119,7 +119,7 @@ final class voa extends ci {
         return var12;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         boolean discarded$0 = false;
         int var4_int = 0;
         int var5 = 0;
@@ -212,7 +212,7 @@ final class voa extends ci {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        kh var28 = null;
+        BitPacketBuffer var28 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
@@ -275,7 +275,7 @@ final class voa extends ci {
                   var20 = var28.h(255);
                   var21 = bj.field_s[var20].field_a;
                   var22 = var28.b(290646880);
-                  var24 = var28.field_h;
+                  var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = bj.field_s[var20].field_c;
@@ -292,7 +292,7 @@ final class voa extends ci {
                     var8[1][var13] = fna.field_k;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var28.field_h = var24;
+                    var28.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
@@ -307,7 +307,7 @@ final class voa extends ci {
                     var9[2][var14] = bj.field_s[var20].field_c;
                     var10[2][var14] = var22;
                     var14++;
-                    var28.field_h = var24;
+                    var28.position = var24;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
@@ -318,7 +318,7 @@ final class voa extends ci {
               }
             }
             var4.field_h = true;
-            var4.p(125);
+            var4.unlink(125);
             return;
           }
           if (var2 == 1) {
@@ -337,7 +337,7 @@ final class voa extends ci {
               return;
             }
             var6_ref_kb.field_h = var4_long;
-            var6_ref_kb.p(39);
+            var6_ref_kb.unlink(39);
             return;
           }
           ssa.a("HS1: " + kk.a(32), (byte) 121, (Throwable) null);
@@ -369,7 +369,7 @@ final class voa extends ci {
         int var11;
         var11 = TombRacer.field_G ? 1 : 0;
         if (!param1 && (bea.field_g != ob.field_i ||
-          jqa.field_g != bea.field_a) && (bea.field_a == gn.field_C.field_e &&
+          BufferedSocket.field_g != bea.field_a) && (bea.field_a == gn.field_C.field_e &&
           gn.field_C.field_f == bea.field_g)) {
           if (null != uu.field_a) {
             hn.c(false, 2);
@@ -392,7 +392,7 @@ final class voa extends ci {
         }
         dl.field_t.field_x = tka.field_q.field_x;
         dl.field_t.field_z = 1;
-        if (0 < gt.field_a) {
+        if (0 < GameKeyHandler.field_a) {
           vu.a((byte) 1, param5, param1, param6);
         }
         if (0 < fp.field_e) {
@@ -401,7 +401,7 @@ final class voa extends ci {
         if (tla.field_e &&
           uu.field_a.field_Mb >= uu.field_a.field_Jb) {
           rra.field_e.field_X = false;
-          bsa.field_j.field_vb.field_r = ml.field_c;
+          bsa.field_j.field_vb.field_r = RandomAccessFileHandle.field_c;
           vsa.a(-116, bsa.field_j.field_tb);
         } else {
           rra.field_e.field_X = true;

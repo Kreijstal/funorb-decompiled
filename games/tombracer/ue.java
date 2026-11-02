@@ -59,11 +59,11 @@ final class ue extends pd {
         return this.field_u;
     }
 
-    ue(la param0, boolean param1) {
+    ue(Room param0, boolean param1) {
         super(param0, param1);
     }
 
-    ue(la param0, kh param1, boolean param2) {
+    ue(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_u = param1.b((byte) 44, 6);
@@ -72,7 +72,7 @@ final class ue extends pd {
         }
     }
 
-    final boolean a(int param0, hca param1) {
+    final boolean a(int param0, Player param1) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -164,7 +164,7 @@ final class ue extends pd {
         return 25;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -128, this.field_u, 6);

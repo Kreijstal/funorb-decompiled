@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dda extends vg {
+final class dda extends IntrusiveNode {
     static int[] field_f;
-    private bs field_g;
+    private GameEvent field_g;
 
-    final bs a(byte param0) {
+    final GameEvent a(byte param0) {
         if (param0 != -125) {
           dda.a(112);
         }
@@ -19,7 +19,7 @@ final class dda extends vg {
         }
     }
 
-    dda(hca param0, bs param1) {
+    dda(Player param0, GameEvent param1) {
         try {
           this.field_g = param1;
           param0.C(-1);

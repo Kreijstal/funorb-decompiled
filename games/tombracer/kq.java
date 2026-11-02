@@ -40,7 +40,7 @@ final class kq {
         field_a = null;
     }
 
-    final static void a(int param0, fia param1, byte param2, uia param3) {
+    final static void a(int param0, PlatformTaskDispatcher param1, byte param2, PacketBuffer param3) {
         try {
           int var11_int = 0;
           int var12_int = 0;
@@ -81,10 +81,10 @@ final class kq {
             var18.field_f = param3.h(255);
             var18.field_n = param3.e(-12);
             var18.field_i = new int[var18.field_f];
-            var18.field_k = new naa[var18.field_f];
+            var18.field_k = new AsyncRequest[var18.field_f];
             var18.field_g = new byte[var18.field_f][][];
             var18.field_h = new int[var18.field_f];
-            var18.field_j = new naa[var18.field_f];
+            var18.field_j = new AsyncRequest[var18.field_f];
             var18.field_m = new int[var18.field_f];
             var5 = 0;
             if (param2 != 72) {

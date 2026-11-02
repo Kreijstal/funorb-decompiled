@@ -16,7 +16,7 @@ final class hoa extends kl {
         this.field_o = -1;
     }
 
-    hoa(cka param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
+    hoa(OpenGlToolkit param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
         super(param0, 34067, param1, 6 * param2 * param2, param3);
         int var7_int = 0;
         this.field_q = -1;

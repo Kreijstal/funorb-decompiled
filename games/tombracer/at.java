@@ -220,7 +220,7 @@ final class at extends ofa implements tsa {
             }
             this.field_ab = new rla(var5_ref_String__, var6_int, 150);
             this.field_ab.a((byte) -31, 126, 18, this.field_V.field_i + this.field_T.field_i, -19 + (this.field_V.field_p + (this.field_V.field_n + this.field_T.field_n)));
-            this.field_u.a((byte) 126, (vg) (this.field_ab));
+            this.field_u.addFirst((byte) 126, (IntrusiveNode) (this.field_ab));
           }
           this.field_Z = this.a((qc) (this), po.field_i, 30815);
           var5Lifetime1 = this.field_Z.field_m / 2 + this.field_Z.field_i;

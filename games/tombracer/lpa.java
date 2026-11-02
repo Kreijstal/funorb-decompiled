@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class lpa extends nv {
+final class lpa extends Behaviour {
     private int field_t;
     private int field_u;
     private int field_q;
@@ -15,7 +15,7 @@ final class lpa extends nv {
     static boolean field_w;
     static int field_o;
 
-    lpa(la param0, boolean param1) {
+    lpa(Room param0, boolean param1) {
         super(param0, param1);
         this.field_u = -1;
         try {
@@ -45,8 +45,8 @@ final class lpa extends nv {
         if (param0 >= 63) {
           return this.field_u <= 0 ? true : false;
         }
-        fsa var3 = (fsa) null;
-        this.a(false, (fsa) null);
+        Trap var3 = (Trap) null;
+        this.a(false, (Trap) null);
         return this.field_u <= 0 ? true : false;
     }
 
@@ -58,7 +58,7 @@ final class lpa extends nv {
         return param0;
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           param1.b((byte) 91, 3);
@@ -85,7 +85,7 @@ final class lpa extends nv {
         return 9;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 36, this.field_n, 8);
@@ -102,7 +102,7 @@ final class lpa extends nv {
         return this.field_u != -1 ? true : false;
     }
 
-    lpa(la param0, kh param1, boolean param2) {
+    lpa(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_u = -1;
         try {

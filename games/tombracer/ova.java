@@ -21,17 +21,17 @@ final class ova extends me {
     final void b(byte param0) {
         int var3 = 0;
         int var4 = 0;
-        la var5 = null;
+        Room var5 = null;
         int var2 = 16777215;
         if (param0 < -13) {
           var3 = 160;
-          rba.a(192, 160, 3145728, 240, (byte) 22, var3, 200);
+          SecondaryNodeDequeIterator.a(192, 160, 3145728, 240, (byte) 22, var3, 200);
           tp.a(200, (byte) -85, var3, 5242880, 2, 160, 240);
           oka.a("Room Completed", var2, eda.field_f, -1, var3 + 40, 320, 0);
           var4 = 240;
-          var5 = this.field_g.field_G[0].field_b[0];
+          var5 = this.field_g.simulations[0].rooms[0];
           var4 += 20;
-          oka.a("Total Time: " + dea.a(this.field_g.field_G[0].field_c, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
+          oka.a("Total Time: " + dea.a(this.field_g.simulations[0].tick, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
           var4 += 20;
           oka.a("Deaths: " + var5.v(0), var2, kn.field_p, -1, var4, 320, 0);
           return;
@@ -87,7 +87,7 @@ final class ova extends me {
         try {
           qi.field_K[0] = lpa.field_p.nextInt();
           qi.field_K[1] = lpa.field_p.nextInt();
-          jg.field_a.field_h = 0;
+          jg.field_a.position = 0;
           qi.field_K[3] = (int)ra.field_L;
           qi.field_K[2] = (int)(ra.field_L >> 32);
           jg.field_a.a(qi.field_K[0], (byte) 80);
@@ -100,15 +100,15 @@ final class ova extends me {
           ni.a(jg.field_a, (byte) 77);
           jg.field_a.f(-1477662136, param2);
           param3.a(jg.field_a, false);
-          ql.field_k.field_h = 0;
+          ql.field_k.position = 0;
           if (!param1) {
             ql.field_k.i(16, 0);
           } else {
             ql.field_k.i(18, 0);
           }
-          ql.field_k.field_h = ql.field_k.field_h + 2;
-          var5_int = ql.field_k.field_h;
-          ql.field_k.a(lr.field_c, (byte) 125);
+          ql.field_k.position = ql.field_k.position + 2;
+          var5_int = ql.field_k.position;
+          ql.field_k.a(ClientException.field_c, (byte) 125);
           ql.field_k.a(1736565456, du.field_h);
           var6 = 0;
           if (ft.field_a) {
@@ -133,7 +133,7 @@ final class ova extends me {
             ql.field_k.a(ji.field_d, (byte) 0);
           }
           bna.a(oca.field_a, false, c.field_f, ql.field_k, jg.field_a);
-          ql.field_k.b(ql.field_k.field_h - var5_int, (byte) 114);
+          ql.field_k.b(ql.field_k.position - var5_int, (byte) 114);
           bl.a(-1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

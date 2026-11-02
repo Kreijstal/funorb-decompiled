@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wna extends ci {
-    static hua field_n;
+    static MouseInputHandler field_n;
     private int[][] field_o;
     private int[] field_m;
 
@@ -87,7 +87,7 @@ final class wna extends ci {
         return;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -197,7 +197,7 @@ final class wna extends ci {
               this.field_o[7][3] = 1140;
               this.field_o[7][1] = 1686;
               if (param1 != -6333) {
-                field_n = (hua) null;
+                field_n = (MouseInputHandler) null;
               }
               return;
             }
@@ -232,7 +232,7 @@ final class wna extends ci {
               this.field_o[6][2] = 0;
               this.field_o[6][0] = 4096;
               if (param1 != -6333) {
-                field_n = (hua) null;
+                field_n = (MouseInputHandler) null;
               }
               return;
             }
@@ -263,7 +263,7 @@ final class wna extends ci {
               this.field_o[5][3] = 4096;
               this.field_o[5][2] = 4096;
               if (param1 != -6333) {
-                field_n = (hua) null;
+                field_n = (MouseInputHandler) null;
               }
               return;
             }
@@ -360,7 +360,7 @@ final class wna extends ci {
         if (param1 == -6333) {
           return;
         }
-        field_n = (hua) null;
+        field_n = (MouseInputHandler) null;
     }
 
     final static boolean c(int param0) {
@@ -478,6 +478,6 @@ final class wna extends ci {
     }
 
     static {
-        field_n = new hua();
+        field_n = new MouseInputHandler();
     }
 }

@@ -32,7 +32,7 @@ final class ak extends ela {
         }
     }
 
-    final static nh[] a(ha param0, jpa[] param1, int param2) {
+    final static nh[] a(GraphicsToolkit param0, jpa[] param1, int param2) {
         int var4 = 0;
         nh[] var3 = null;
         RuntimeException var3_ref = null;

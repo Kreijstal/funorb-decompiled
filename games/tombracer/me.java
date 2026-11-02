@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class me extends vg {
+abstract class me extends IntrusiveNode {
     boolean field_h;
     qh field_i;
     static String field_f;
-    ff field_g;
+    MatchState field_g;
 
     abstract boolean a(int param0, char param1, byte param2);
 
@@ -45,7 +45,7 @@ abstract class me extends vg {
         }
     }
 
-    final static short[] a(byte param0, int param1, kh param2, short[] param3) {
+    final static short[] a(byte param0, int param1, BitPacketBuffer param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

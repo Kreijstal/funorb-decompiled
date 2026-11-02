@@ -7,13 +7,13 @@ final class nm extends vo implements sca {
     static jpa field_i;
     static String field_j;
 
-    final static void a(iu param0, byte param1) {
+    final static void a(Sprite param0, byte param1) {
         gb.a(-29711);
         if (param1 < 88) {
           return;
         }
         try {
-          bea.a(param0.field_r, param0.field_n, param0.field_k);
+          bea.a(param0.pixels, param0.field_n, param0.field_k);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -21,8 +21,8 @@ final class nm extends vo implements sca {
 
     public final long b(int param0) {
         if (param0 != 19135) {
-          iu var3 = (iu) null;
-          nm.a((iu) null, (byte) -94);
+          Sprite var3 = (Sprite) null;
+          nm.a((Sprite) null, (byte) -94);
           return 0L;
         }
         return 0L;
@@ -47,7 +47,7 @@ final class nm extends vo implements sca {
         }
     }
 
-    nm(cka param0, int param1, byte[] param2, int param3, boolean param4) {
+    nm(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
         super(param0, 34963, param2, param3, param4);
         try {
           this.field_k = param1;

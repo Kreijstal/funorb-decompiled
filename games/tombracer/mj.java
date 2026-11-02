@@ -26,7 +26,7 @@ final class mj extends fqa {
         return false;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -48,29 +48,29 @@ final class mj extends fqa {
         return false;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         sm var5 = null;
         jma var6 = null;
         mfa var7 = null;
         cv var8 = null;
-        fsa var9 = null;
-        fsa stackIn_1_0 = null;
+        Trap var9 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new fsa(param2, param0);
+          var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.h(3, param1 ^ param1);
-          var9.a((byte) 83, (nv) (new eq(param2, param0)));
+          var9.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new sm(param2, param0);
           var5.b(0, 1);
           this.a(var5, (byte) -101);
           var6 = var5.k((byte) -98);
           var6.b(1, 106);
-          var9.a((byte) 83, (nv) (var5));
+          var9.a((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (cv) (var7.a(9, param1 + 103));
           var8.b(3, (byte) -112);
@@ -125,11 +125,11 @@ final class mj extends fqa {
         return 7;
     }
 
-    mj(la param0, int param1, kh param2, csa param3) {
+    mj(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
-    mj(la param0, int param1) {
+    mj(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -188,7 +188,7 @@ final class mj extends fqa {
           incrementValue$7 = param4;
           param4++;
           var7.a(incrementValue$7, (byte) 47, param1);
-          ff.field_j = jpa.b(param3, "", "font_med");
+          MatchState.field_j = jpa.b(param3, "", "font_med");
           incrementValue$8 = param4;
           param4++;
           var7.a(incrementValue$8, (byte) 47, param1);
@@ -202,7 +202,7 @@ final class mj extends fqa {
         if (param0 != 2097152) {
           field_M = (String) null;
           if (fna.field_h == 13) {
-            la.l(param0 + 0);
+            Room.l(param0 + 0);
             return true;
           }
           if (fna.field_h == 102) {
@@ -218,7 +218,7 @@ final class mj extends fqa {
           return false;
         }
         if (fna.field_h == 13) {
-          la.l(param0 + 0);
+          Room.l(param0 + 0);
           return true;
         }
         if (fna.field_h == 102) {

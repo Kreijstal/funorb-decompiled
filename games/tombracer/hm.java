@@ -20,7 +20,7 @@ final class hm extends tfa implements gf {
           this.field_k = param3;
           this.field_l = param4;
           this.field_j.a(true, (iva) (this));
-          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(108), param3, param4, 0, waa.a(this.field_f, 1383), lr.a(this.field_a, 5126), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(108), param3, param4, 0, waa.a(this.field_f, 1383), ClientException.a(this.field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -126,7 +126,7 @@ final class hm extends tfa implements gf {
         uda.field_r = null;
         uua.field_a = null;
         nm.field_l = null;
-        ep.field_n = null;
+        Projectile.field_n = null;
         int var1 = 60 / ((-20 - param0) / 45);
         mc.field_r = null;
         cb.field_i = null;
@@ -134,9 +134,9 @@ final class hm extends tfa implements gf {
         tv.field_wb = null;
         sta.field_y = null;
         bm.field_f = null;
-        vna.field_c = null;
+        IntrusiveDeque.field_c = null;
         wh.field_y = null;
-        la.field_j = null;
+        Room.field_j = null;
         lm.field_m = null;
         po.field_l = null;
         pq.field_a = null;
@@ -146,7 +146,7 @@ final class hm extends tfa implements gf {
         ng.field_b = null;
         em.field_h = null;
         qf.field_k = null;
-        la.field_p = (nh[][]) null;
+        Room.field_p = (nh[][]) null;
         dn.field_d = null;
         ng.field_k = null;
         ega.field_e = null;

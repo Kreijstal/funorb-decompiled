@@ -40,7 +40,7 @@ final class tr {
         }
         var3Lifetime1 = new wua();
         if (var4 != null) {
-          var3Lifetime1.a(new uia(var4), (byte) 113);
+          var3Lifetime1.a(new PacketBuffer(var4), (byte) 113);
         }
         if (32768 <= param1) {
           var3Lifetime1.a(100);

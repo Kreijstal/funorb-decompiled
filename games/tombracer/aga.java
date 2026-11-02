@@ -131,7 +131,7 @@ final class aga {
         }
     }
 
-    private final void a(int param0, int param1, ha param2, int param3, int param4, int param5, int param6) {
+    private final void a(int param0, int param1, GraphicsToolkit param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_c = param2.a(param5, param1, param0, param3, param6, 1.0f);
           if (param4 != 512) {
@@ -237,7 +237,7 @@ final class aga {
         this.b((byte) 87);
     }
 
-    aga(ha param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    aga(GraphicsToolkit param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9_int = 0;
         int var10 = 0;
         try {

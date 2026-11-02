@@ -45,7 +45,7 @@ abstract class dna extends kna {
         return qla.field_f;
     }
 
-    dna(la param0, int param1) {
+    dna(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -57,7 +57,7 @@ abstract class dna extends kna {
         return 255 & param0;
     }
 
-    dna(la param0, int param1, kh param2, csa param3) {
+    dna(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

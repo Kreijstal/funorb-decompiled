@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class osa extends wda {
+abstract class osa extends Locomotor {
     static byte[][][] field_r;
     static String field_p;
     private int field_q;
@@ -25,7 +25,7 @@ abstract class osa extends wda {
         this.field_o = -this.field_o;
     }
 
-    osa(la param0, kh param1, boolean param2) {
+    osa(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -66,7 +66,7 @@ abstract class osa extends wda {
         }
     }
 
-    void a(kh param0, byte param1) {
+    void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -120);
           if (param1 >= -78) {

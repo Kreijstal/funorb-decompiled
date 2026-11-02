@@ -4,28 +4,28 @@
 final class bia extends fqa {
     static u[] field_J;
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         eia var5 = null;
         jma var6 = null;
         int var7 = 0;
         mfa var8 = null;
         cv var9 = null;
-        fsa var10 = null;
-        fsa stackIn_1_0 = null;
+        Trap var10 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new fsa(param2, param0);
+          var10 = new Trap(param2, param0);
           var10.b((byte) -11, this.field_k, this.field_l);
           var10.h(3, param1 ^ param1);
           var10.a(1, (byte) -12, false);
           var10.e(false, param1 + 112);
           var10.b((byte) 17, false);
           var10.a((byte) -3, 6);
-          var10.a((byte) 83, (nv) (new eq(param2, param0)));
+          var10.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new eia(param2, param0);
           var5.a(true, 3, (byte) -122);
           var5.a(true, 4, -81);
@@ -34,7 +34,7 @@ final class bia extends fqa {
           var6 = var5.k((byte) -101);
           var7 = 25;
           var6.a(var7, 0, 0, 0, 5, 0);
-          var10.a((byte) 83, (nv) (var5));
+          var10.a((byte) 83, (Behaviour) (var5));
           var8 = rm.field_a;
           var9 = (cv) (var8.a(9, 123));
           var9.b(1, (byte) -112);
@@ -63,7 +63,7 @@ final class bia extends fqa {
         return false;
     }
 
-    bia(la param0, int param1, kh param2, csa param3) {
+    bia(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -115,7 +115,7 @@ final class bia extends fqa {
         return false;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -125,8 +125,8 @@ final class bia extends fqa {
 
     final int t(int param0) {
         if (param0 != 8) {
-          la var3 = (la) null;
-          this.a(false, -105, (la) null);
+          Room var3 = (Room) null;
+          this.a(false, -105, (Room) null);
           return 7;
         }
         return 7;
@@ -159,7 +159,7 @@ final class bia extends fqa {
         this.b(-117, 4194304, 4194304);
     }
 
-    bia(la param0, int param1) {
+    bia(Room param0, int param1) {
         super(param0, param1);
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea extends vg implements bo {
+final class ea extends IntrusiveNode implements bo {
     static String[] field_k;
     static int field_j;
     private int[] field_g;
@@ -21,8 +21,8 @@ final class ea extends vg implements bo {
             eia.field_r[var1_int] = 0L;
           }
           if (param0 != -33) {
-            cka var3 = (cka) null;
-            ea.a(70, -25, (String) null, (cka) null);
+            OpenGlToolkit var3 = (OpenGlToolkit) null;
+            ea.a(70, -25, (String) null, (OpenGlToolkit) null);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             bv.field_xb[var1_intLifetime1] = 0L;
@@ -63,7 +63,7 @@ final class ea extends vg implements bo {
         this.field_h = param1;
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -101,7 +101,7 @@ final class ea extends vg implements bo {
         }
     }
 
-    final static void a(byte param0, int param1, uia param2, int param3, int param4) {
+    final static void a(byte param0, int param1, PacketBuffer param2, int param3, int param4) {
         try {
           param2.i(12, 0);
           param2.f(-1477662136, 17);
@@ -135,7 +135,7 @@ final class ea extends vg implements bo {
         }
     }
 
-    final static pva a(int param0, int param1, String param2, cka param3) {
+    final static pva a(int param0, int param1, String param2, OpenGlToolkit param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         pva stackIn_2_0 = null;
@@ -184,7 +184,7 @@ final class ea extends vg implements bo {
         }
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -225,8 +225,8 @@ final class ea extends vg implements bo {
     final void a(int param0, int param1, int param2) {
         this.field_g[param1] = param2;
         if (param0 != 17) {
-          kh var5 = (kh) null;
-          this.a((kh) null, (byte) 24);
+          BitPacketBuffer var5 = (BitPacketBuffer) null;
+          this.a((BitPacketBuffer) null, (byte) 24);
         }
     }
 

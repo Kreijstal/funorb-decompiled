@@ -3,7 +3,7 @@
  */
 final class jta extends qr {
     static int[] field_z;
-    private vna field_y;
+    private IntrusiveDeque field_y;
 
     public static void c(boolean param0) {
         if (param0) {
@@ -24,7 +24,7 @@ final class jta extends qr {
         if (param0 < -105) {
           while (var3 != null) {
             if (var3.a(127)) {
-              var3.p(71);
+              var3.unlink(71);
             }
             var3 = (gn) (var2.a(-1));
           }
@@ -32,7 +32,7 @@ final class jta extends qr {
           this.g((byte) 58);
           while (var3 != null) {
             if (var3.a(127)) {
-              var3.p(71);
+              var3.unlink(71);
             }
             var3 = (gn) (var2.a(-1));
           }
@@ -98,7 +98,7 @@ final class jta extends qr {
         if (param0 == -1) {
           while (var3 != null) {
             if (var3.a((byte) -115)) {
-              var3.p(param0 ^ -111);
+              var3.unlink(param0 ^ -111);
             }
             var3 = (gn) (var2.a(-1));
           }
@@ -106,7 +106,7 @@ final class jta extends qr {
           this.d(true);
           while (var3 != null) {
             if (var3.a((byte) -115)) {
-              var3.p(param0 ^ -111);
+              var3.unlink(param0 ^ -111);
             }
             var3 = (gn) (var2.a(-1));
           }
@@ -275,7 +275,7 @@ final class jta extends qr {
         }
         try {
           var3 = (gn) (param0);
-          this.field_y.a((byte) 125, (vg) (var3));
+          this.field_y.addFirst((byte) 125, (IntrusiveNode) (var3));
           var3.field_B = true;
           var3.a((ae) (this), false);
         } catch (RuntimeException runtimeException) {
@@ -310,7 +310,7 @@ final class jta extends qr {
           }
           return var2;
         }
-        this.field_y = (vna) null;
+        this.field_y = (IntrusiveDeque) null;
         var2Lifetime1 = -1;
         var3Lifetime1 = this.a((byte) -87);
         if (var3Lifetime1 != null) {
@@ -321,7 +321,7 @@ final class jta extends qr {
 
     public jta() {
         super(0, 0, bb.field_m, qba.field_a, (isa) null, (qc) null);
-        this.field_y = new vna();
+        this.field_y = new IntrusiveDeque();
     }
 
     final int e(int param0) {

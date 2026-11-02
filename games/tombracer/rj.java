@@ -197,7 +197,7 @@ class rj extends ae {
         int var6 = 0;
         cn var7 = null;
         mm var10 = null;
-        kh var11 = null;
+        BitPacketBuffer var11 = null;
         byte[] var15 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
@@ -220,9 +220,9 @@ class rj extends ae {
               var15 = new byte[var4];
               var11.a(var15, 0, -115, var4);
             }
-            var11.field_h = var11.field_h + 4;
+            var11.position = var11.position + 4;
             if (var11.a((byte) 114)) {
-              var10.p(95);
+              var10.unlink(95);
               return;
             }
             dea.a(60);
@@ -243,7 +243,7 @@ class rj extends ae {
             break;
           }
           if (var4_ref_sda != null) {
-            var4_ref_sda.p(24);
+            var4_ref_sda.unlink(24);
             return;
           }
           dea.a(60);
@@ -263,15 +263,15 @@ class rj extends ae {
         this.field_r = afa.field_c.field_v;
     }
 
-    final static iu[] a(cn param0, int param1, int param2, byte param3) {
+    final static Sprite[] a(cn param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
-        iu[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!jna.a(false, param1, param2, param0)) {
+          if (!GameApplet.a(false, param1, param2, param0)) {
             return null;
           }
           if (param3 != -82) {

@@ -13,7 +13,7 @@ final class ufa {
     private static int[] field_f;
     static String field_u;
     boolean field_l;
-    private vna field_i;
+    private IntrusiveDeque field_i;
     private BitSet field_s;
     int field_k;
     static int[] field_t;
@@ -70,7 +70,7 @@ final class ufa {
         return this.field_m.get(param1);
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -160,7 +160,7 @@ final class ufa {
         }
     }
 
-    final void a(int param0, kh param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -217,7 +217,7 @@ final class ufa {
         this.field_l = false;
         this.field_a = false;
         this.field_o = new BitSet(255);
-        this.field_i = new vna();
+        this.field_i = new IntrusiveDeque();
         this.field_n = new int[9];
         this.field_s = new BitSet(13);
         this.field_m = new BitSet(9);

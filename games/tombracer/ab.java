@@ -139,7 +139,7 @@ final class ab extends qra {
         int var8Lifetime1;
         int var9Lifetime1;
         var16 = TombRacer.field_G ? 1 : 0;
-        la.field_j.a(0, 0);
+        Room.field_j.a(0, 0);
         var3 = 0;
         var4 = this.field_o.g(-1);
         if (!this.field_h.d((byte) 63) &&
@@ -156,14 +156,14 @@ final class ab extends qra {
           var9 = (koa.b(0) >> 1) - (gg.field_f.c() >> 1);
           gg.field_f.a(var8, var9);
           if (var3 == 0) {
-            be.a(gl.$cfr$intArgs$a$53ce4ab4c593(83, cba.field_c, new String[]{this.field_h.j(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
+            SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(83, cba.field_c, new String[]{this.field_h.j(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
           } else {
-            be.a(us.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.a());
+            SocketConnector.a(us.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.a());
             var10 = (-this.field_o.c(-1) + 750) / 50 + 1;
             if (var10 < 0) {
               var10 = 0;
             }
-            be.a(gl.$cfr$intArgs$a$53ce4ab4c593(108, tla.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, gg.field_f.a());
+            SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(108, tla.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, gg.field_f.a());
           }
           for (var10 = 0; this.field_q > var10; var10++) {
             for (var11_int = 0; var11_int < this.field_s; var11_int++) {
@@ -184,15 +184,15 @@ final class ab extends qra {
         if (param0 > -50) {
           this.b(-64, false);
         }
-        while (this.field_c.field_H.length > var17) {
-          var9Lifetime1 = -(this.field_c.field_H.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
+        while (this.field_c.players.length > var17) {
+          var9Lifetime1 = -(this.field_c.players.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
           var10 = -200 + var7;
-          be.a(this.field_h.a(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
+          SocketConnector.a(this.field_h.a(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
           if (!this.field_c.b((byte) 90, var17)) {
             var11 = cs.field_b;
             var12 = 8947848;
           } else {
-            var13 = this.field_c.field_H[var17].z(115);
+            var13 = this.field_c.players[var17].z(115);
             if (var13 == -1) {
               var14 = this.field_c.field_c.field_b[var17];
               var15 = this.field_o.b((byte) 50);
@@ -213,7 +213,7 @@ final class ab extends qra {
               var11 = sla.field_b[var13];
             }
           }
-          be.a(var11.toUpperCase(), 1, kn.field_p, var12, 0, 32, 1, 32 + var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
+          SocketConnector.a(var11.toUpperCase(), 1, kn.field_p, var12, 0, 32, 1, 32 + var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
           var17++;
         }
         se.f((byte) -6);

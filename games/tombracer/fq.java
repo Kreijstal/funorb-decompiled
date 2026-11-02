@@ -41,7 +41,7 @@ final class fq {
           }
           var2_int = -71 / ((5 - param1) / 35);
           var3 = new hea(param0, ak.field_p, pg.field_C, mq.field_b, iga.field_m, ck.field_c);
-          loa.a((byte) 123);
+          MazeGenerator.a((byte) 123);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -72,7 +72,7 @@ final class fq {
         tia.field_b = jd.a(1, var3);
     }
 
-    final void a(kh param0, int param1) {
+    final void a(BitPacketBuffer param0, int param1) {
         try {
           if (param1 != 23) {
             this.a(-16);
@@ -105,7 +105,7 @@ final class fq {
         this.field_b = 10;
     }
 
-    fq(int param0, kh param1) {
+    fq(int param0, BitPacketBuffer param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_18_0 = null;

@@ -12,7 +12,7 @@ final class uga extends kl {
         jaggl.OpenGL.glTexParameteri(this.field_e, 10242, !param1 ? 33071 : 10497);
     }
 
-    uga(cka param0, int param1, int param2, byte[] param3, int param4) {
+    uga(OpenGlToolkit param0, int param1, int param2, byte[] param3, int param4) {
         super(param0, 3552, param1, param2, false);
         try {
           this.field_l = param2;

@@ -85,19 +85,19 @@ final class mp {
           }
           var2 = (vb) (tna.field_e.f(param0 ^ -78));
           while (null != var2) {
-            stackIn_23_0 = var2.field_h.l((byte) 122);
+            stackIn_23_0 = var2.field_h.isLinked((byte) 122);
             if (var3 != 0) {
               while (true) {
                 if (stackIn_23_0) {
                   var2.field_f.e(var2.field_g * ot.field_v + 128 >> 8);
                 }
-                var2.p(param0 + 2);
+                var2.unlink(param0 + 2);
                 var2 = (vb) (db.field_f.e(113));
                 return;
               }
             }
             if (!stackIn_23_0) {
-              var2.p(78);
+              var2.unlink(78);
             }
             if (stackIn_23_0 ||
               var3 != 0) {
@@ -115,11 +115,11 @@ final class mp {
               if (var3 != 0) {
                 return;
               }
-              stackIn_23_0Lifetime1 = var2Lifetime1.field_h.l((byte) 44);
+              stackIn_23_0Lifetime1 = var2Lifetime1.field_h.isLinked((byte) 44);
               if (stackIn_23_0Lifetime1) {
                 var2Lifetime1.field_f.e(var2Lifetime1.field_g * ot.field_v + 128 >> 8);
               } else {
-                var2Lifetime1.p(param0 + 2);
+                var2Lifetime1.unlink(param0 + 2);
               }
               var2Lifetime1 = (vb) (db.field_f.e(113));
             }
@@ -173,12 +173,12 @@ final class mp {
         StringBuilder stackIn_78_1 = null;
         String stackIn_79_2 = null;
         RuntimeException decompiledCaughtException = null;
-        iu var12 = null;
+        Sprite var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        iu[] var16 = null;
+        Sprite[] var16 = null;
         jea var17 = null;
         int var18 = 0;
         String var19 = null;
@@ -199,21 +199,21 @@ final class mp {
           bma.field_t[param6] = 16764000;
           pm.field_a[4] = 16711935;
           bma.field_t[1] = 6356832;
-          var12 = new iu(4, 4);
-          var13 = var12.field_r;
-          var14 = var12.field_r;
-          var15 = var12.field_r;
-          var12.field_r[15] = 7368816;
+          var12 = new Sprite(4, 4);
+          var13 = var12.pixels;
+          var14 = var12.pixels;
+          var15 = var12.pixels;
+          var12.pixels[15] = 7368816;
           var13[2] = 7368816;
           var15[8] = 7368816;
           var14[5] = 7368816;
-          var16 = new iu[9];
+          var16 = new Sprite[9];
           var16[4] = var12;
           era.field_e = new jea(0L, param0);
           v.field_i = new jea(0L, param9);
           era.field_e.b(-128, v.field_i);
           var17 = new jea(0L, (jea) null);
-          var17.field_J = new vna();
+          var17.field_J = new IntrusiveDeque();
           ne.field_d = new iv(0L, var17, param3, param4);
           v.field_i.b(-126, ne.field_d);
           sua.field_K = new jea(0L, param1);
@@ -243,7 +243,7 @@ final class mp {
                     var19 = dna.field_H;
                   }
                 } else {
-                  var19 = kh.field_p;
+                  var19 = BitPacketBuffer.field_p;
                 }
               } else {
                 if (!kq.field_c) {

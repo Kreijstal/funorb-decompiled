@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dg extends vg implements fo, noa {
+abstract class dg extends IntrusiveNode implements fo, noa {
     private int field_l;
     gr field_k;
     private int field_i;
@@ -104,7 +104,7 @@ abstract class dg extends vg implements fo, noa {
         int var6;
         int var7;
         int var8;
-        la var9;
+        Room var9;
         int var4Lifetime1;
         int var4Lifetime2;
         int var5Lifetime1;
@@ -130,13 +130,13 @@ abstract class dg extends vg implements fo, noa {
         int var8Lifetime2Lifetime1;
         int var8Lifetime3Lifetime1;
         int var8Lifetime3Lifetime2;
-        la var9Lifetime1;
-        la var9Lifetime2;
-        la var9Lifetime3;
-        la var9Lifetime4;
-        la var9Lifetime2Lifetime1;
-        la var9Lifetime3Lifetime1;
-        la var9Lifetime3Lifetime2;
+        Room var9Lifetime1;
+        Room var9Lifetime2;
+        Room var9Lifetime3;
+        Room var9Lifetime4;
+        Room var9Lifetime2Lifetime1;
+        Room var9Lifetime3Lifetime1;
+        Room var9Lifetime3Lifetime2;
         int var7Lifetime2Lifetime2;
         int var8Lifetime2Lifetime2;
         if (this.field_h == null) {
@@ -253,7 +253,7 @@ abstract class dg extends vg implements fo, noa {
         } else {
           if (this.field_h.h(param0 + 31070)) {
             var5Lifetime2 = 1;
-            sharedTailExit_0: {
+            regionExit1: {
               if (this.field_k != null) {
                 if (var5Lifetime2 != 0) {
                   var5Lifetime2 = 1;
@@ -264,7 +264,7 @@ abstract class dg extends vg implements fo, noa {
                     stackIn_121_0 = 1;
                     var6Lifetime2 = stackIn_121_0;
                   }
-                  break sharedTailExit_0;
+                  break regionExit1;
                 }
                 if (!this.field_k.a(param0 ^ 12575)) {
                   var5Lifetime2 = 1;
@@ -343,11 +343,11 @@ abstract class dg extends vg implements fo, noa {
         if (this.field_k != null) {
           if (var5Lifetime3 != 0) {
             var5Lifetime3 = 1;
-            sharedTailExit_1: {
+            regionExit2: {
               if (var5Lifetime3 != 0) {
                 if (var4Lifetime2 != 0) {
                   var6Lifetime3 = 1;
-                  break sharedTailExit_1;
+                  break regionExit2;
                 }
                 stackIn_246_0 = 0;
               } else {
@@ -392,11 +392,11 @@ abstract class dg extends vg implements fo, noa {
           }
           if (!this.field_k.a(param0 ^ 12575)) {
             var5Lifetime3 = 1;
-            sharedTailExit_2: {
+            regionExit3: {
               if (var5Lifetime3 != 0) {
                 if (var4Lifetime2 != 0) {
                   var6Lifetime3Lifetime1 = 1;
-                  break sharedTailExit_2;
+                  break regionExit3;
                 }
                 stackIn_293_0 = 0;
               } else {
@@ -468,7 +468,7 @@ abstract class dg extends vg implements fo, noa {
           }
           var5Lifetime3 = 0;
         }
-        sharedTailExit_3: {
+        regionExit4: {
           if (var5Lifetime3 != 0) {
             if (var4Lifetime2 != 0) {
               var6Lifetime4 = 1;
@@ -489,7 +489,7 @@ abstract class dg extends vg implements fo, noa {
               }
               var9Lifetime4.b(var2, var8Lifetime4, var7Lifetime4, this.field_h.e(9648), -119, this.field_h.d(3), var3);
               this.field_j = false;
-              break sharedTailExit_3;
+              break regionExit4;
             }
             stackIn_362_0 = 0;
           } else {
@@ -524,7 +524,7 @@ abstract class dg extends vg implements fo, noa {
         return -1;
     }
 
-    void a(byte param0, kh param1) {
+    void a(byte param0, BitPacketBuffer param1) {
         try {
           if (0 < this.field_f) {
             param1.a((byte) 12, 1, 1);
@@ -635,13 +635,13 @@ abstract class dg extends vg implements fo, noa {
               return;
             }
             var3 = null;
-            if (this.field_h instanceof fsa) {
-              var3 = (fsa) (this.field_h);
+            if (this.field_h instanceof Trap) {
+              var3 = (Trap) (this.field_h);
             }
             var4 = (this.field_f << 16) + this.field_h.g((byte) 115);
             this.a(param1, this.field_h.e(9648), this.field_h.d(3), var4, (byte) 46);
             if (var3 != null) {
-              ((fsa) (var3)).a(param1, -10425);
+              ((Trap) (var3)).a(param1, -10425);
             }
           }
           if (param0 <= 103) {
@@ -675,7 +675,7 @@ abstract class dg extends vg implements fo, noa {
         int var3 = -51 % ((param0 - 7) / 36);
     }
 
-    dg(int param0, la param1, kh param2) {
+    dg(int param0, Room param1, BitPacketBuffer param2) {
         this(param0);
         try {
           this.a(125, param1, param2);
@@ -690,7 +690,7 @@ abstract class dg extends vg implements fo, noa {
         }
     }
 
-    final la a(int param0) {
+    final Room a(int param0) {
         if (param0 < 12) {
           this.a((byte) -118);
           if (this.field_h != null) {
@@ -737,7 +737,7 @@ abstract class dg extends vg implements fo, noa {
         }
     }
 
-    void a(int param0, la param1, kh param2) {
+    void a(int param0, Room param1, BitPacketBuffer param2) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

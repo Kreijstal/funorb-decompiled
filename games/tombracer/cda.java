@@ -22,7 +22,7 @@ abstract class cda extends dg {
         field_u = null;
     }
 
-    cda(int param0, la param1, kh param2) {
+    cda(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_r = true;
     }
@@ -68,7 +68,7 @@ abstract class cda extends dg {
         int var4;
         int var5;
         int var6;
-        fsa var7;
+        Trap var7;
         int var8;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -80,12 +80,12 @@ abstract class cda extends dg {
         var4 = 0;
         var5 = 0;
         var6 = 0;
-        if (!(this.field_h instanceof fsa)) {
+        if (!(this.field_h instanceof Trap)) {
           var4Lifetime1 = this.field_h.d(3);
           var5Lifetime1 = this.field_h.e(9648);
           var6Lifetime1 = this.field_h.g(-25787);
         } else {
-          var7 = (fsa) (this.field_h);
+          var7 = (Trap) (this.field_h);
           var4Lifetime1 = var7.s(25745);
           var5Lifetime1 = var7.e(false);
           var6Lifetime1 = var7.q((byte) -80);

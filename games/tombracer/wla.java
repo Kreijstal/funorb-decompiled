@@ -165,7 +165,7 @@ final class wla extends jea {
             this.field_xb.field_sb = "|";
             if (!(rja.field_e < 5) ||
               !(ld.field_e < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_7_0 = this;
                 stackIn_7_1 = null;
                 stackIn_7_2 = null;
@@ -180,7 +180,7 @@ final class wla extends jea {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = pl.field_c;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;
@@ -299,7 +299,7 @@ final class wla extends jea {
             var28[2].a(var16Lifetime2, var17Lifetime5, -23776, var21, 26 + (2 * var16Lifetime2 + 13));
             var22 = var21;
             this.field_wb.a(var19 + 26, 10 + (var17Lifetime5 + var22), -23776, 24, 0);
-            this.field_wb.field_w = hca.c(this.field_wb.field_t, 2105376, 3, 11579568, -125, 8421504);
+            this.field_wb.field_w = Player.c(this.field_wb.field_t, 2105376, 3, 11579568, -125, 8421504);
             var23 = 13 + (13 + var19);
             var24 = 10 + var17Lifetime5 + (var22 + 24);
             var25 = bt.a((byte) -8, var23, param2, param0);
@@ -317,7 +317,7 @@ final class wla extends jea {
           this.field_Bb.a(var15_int, di.field_a * var17Lifetime1, -23776, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * di.field_a;
           this.field_wb.a(26 + var15_int, var16Lifetime1 + 10, -23776, 24, 0);
-          this.field_wb.field_w = hca.c(this.field_wb.field_t, 2105376, 3, 11579568, -121, 8421504);
+          this.field_wb.field_w = Player.c(this.field_wb.field_t, 2105376, 3, 11579568, -121, 8421504);
           var18Lifetime1 = 13 + var15_int + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = bt.a((byte) -8, var18Lifetime1, param2, param0);

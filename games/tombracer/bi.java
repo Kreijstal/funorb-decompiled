@@ -11,15 +11,15 @@ final class bi {
         field_a = null;
         field_b = null;
         if (param0) {
-          ha var2 = (ha) null;
-          bi.a((ha) null, 112);
+          GraphicsToolkit var2 = (GraphicsToolkit) null;
+          bi.a((GraphicsToolkit) null, 112);
           field_d = null;
           return;
         }
         field_d = null;
     }
 
-    final static void a(ha param0, int param1) {
+    final static void a(GraphicsToolkit param0, int param1) {
         ssa var2 = null;
         jea var3 = null;
         try {

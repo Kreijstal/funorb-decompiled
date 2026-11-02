@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lo extends wda {
+final class lo extends Locomotor {
     private gea field_q;
     static String field_o;
     private mg field_s;
@@ -13,12 +13,12 @@ final class lo extends wda {
     final void b(byte param0) {
         int var3 = 0;
         int var4 = 0;
-        fsa var5 = null;
+        Trap var5 = null;
         int var6 = 0;
-        fsa var5Lifetime1;
-        fsa var5Lifetime2;
-        fsa var5Lifetime3;
-        fsa var5Lifetime4;
+        Trap var5Lifetime1;
+        Trap var5Lifetime2;
+        Trap var5Lifetime3;
+        Trap var5Lifetime4;
         int var3Lifetime1;
         int var3Lifetime2;
         int var4Lifetime1;
@@ -155,7 +155,7 @@ final class lo extends wda {
         this.field_n.n(this.field_u, -112);
     }
 
-    lo(la param0, kh param1, boolean param2) {
+    lo(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_s = new mg();
         this.field_u = 0;
@@ -176,11 +176,11 @@ final class lo extends wda {
         }
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           if (param1 > -78) {
-            kh var4 = (kh) null;
-            this.a((kh) null, (byte) 17);
+            BitPacketBuffer var4 = (BitPacketBuffer) null;
+            this.a((BitPacketBuffer) null, (byte) 17);
           }
           super.a(param0, (byte) -110);
           this.field_q.a(param0, 0);
@@ -268,8 +268,8 @@ final class lo extends wda {
 
     final void b(int param0) {
         if (param0 != 1) {
-          kh var3 = (kh) null;
-          this.a((kh) null, (byte) 116);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a((BitPacketBuffer) null, (byte) 116);
         }
     }
 

@@ -200,7 +200,7 @@ final class mr extends b implements tma, tsa, mia {
         var3 = var3 + this.a(this.field_z, var3, 170, (byte) 74, em.field_f);
         var3 = var3 + (this.a(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
         var3 = var3 + this.a(this.field_E, var3, 170, (byte) 59, rta.field_j);
-        var3 = var3 + (this.a(gea.field_c, gt.field_d, this.field_C, -3, 170, var3) + 5);
+        var3 = var3 + (this.a(gea.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
         var3 = var3 + (this.a(rea.field_r, za.field_f, this.field_G, -3, 170, var3) + 5);
         var3 = var3 + this.a(this.field_I, var3, (byte) 99, iqa.field_g, 170);
         jsa var4 = new jsa(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, eka.field_o, 11579568, jja.field_l);

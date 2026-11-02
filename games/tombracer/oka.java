@@ -10,7 +10,7 @@ final class oka extends wv {
     static jea field_w;
     private int field_s;
     private int field_t;
-    private vna field_q;
+    private IntrusiveDeque field_q;
     static jea[] field_y;
     static String[] field_A;
 
@@ -137,7 +137,7 @@ final class oka extends wv {
         int var7Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         super.a(param0, param1);
-        if (hb.field_t == rba.field_a) {
+        if (hb.field_t == SecondaryNodeDequeIterator.field_a) {
           return;
         }
         ik.field_h.a(this.field_t, this.field_r);
@@ -184,7 +184,7 @@ final class oka extends wv {
         var4Lifetime1 = 260;
         var7 = this.field_r - (100 - koa.b(param0 + 28));
         kq.field_a.a(var6 - (kq.field_a.a() >> 1), -(kq.field_a.c() >> 1) + var7);
-        be.a(vj.field_d[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
+        SocketConnector.a(vj.field_d[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
         if (rd.b(false) && (vpa.a(62) ||
           mq.field_e.field_a ||
           var3 != 0)) {
@@ -204,7 +204,7 @@ final class oka extends wv {
               var8 = tc.field_f;
             }
           }
-          be.a(var8, 1, kn.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
+          SocketConnector.a(var8, 1, kn.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
         }
         if (eq.c(0)) {
           oka.a("Unlock: Key 2-9", 16777215, kn.field_p, -1, this.field_r + koa.b(param0 + 28) - 100, -100 + aaa.a(false), -1);
@@ -226,7 +226,7 @@ final class oka extends wv {
         this.field_t = 0;
         this.field_r = this.e(-18796);
         this.field_x = new pfa(0, this.field_v);
-        this.field_q = new vna();
+        this.field_q = new IntrusiveDeque();
         this.field_q.b((byte) -118, new cc(0, 1, 2));
         this.field_q.b((byte) -54, new cc(0, 2, 6));
         this.field_q.b((byte) -115, new cc(1, 3, 4));
@@ -258,7 +258,7 @@ final class oka extends wv {
         return koa.b(0) - 25;
     }
 
-    final static void a(String param0, int param1, da param2, int param3, int param4, int param5, int param6) {
+    final static void a(String param0, int param1, GameFont param2, int param3, int param4, int param5, int param6) {
         try {
           param2.a(fm.a(false, param6), param3, param5, fm.a(false, param1), param4, param0);
         } catch (RuntimeException runtimeException) {

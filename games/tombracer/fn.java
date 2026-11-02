@@ -7,14 +7,14 @@ final class fn extends vw {
     private hk field_d;
 
     final static void a(int param0, long param1, int param2) {
-        kh var4 = ql.field_k;
+        BitPacketBuffer var4 = ql.field_k;
         var4.k(param0, -2988);
-        var4.field_h = var4.field_h + 1;
+        var4.position = var4.position + 1;
         int var6 = -78 % ((-78 - param2) / 40);
-        int var5 = var4.field_h;
+        int var5 = var4.position;
         var4.i(7, 0);
         var4.a(1736565456, param1);
-        var4.d(var4.field_h - var5, (byte) 11);
+        var4.d(var4.position - var5, (byte) 11);
     }
 
     fn(eo param0, hk param1) {

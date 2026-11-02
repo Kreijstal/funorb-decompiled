@@ -3,7 +3,7 @@
  */
 final class cua {
     static String[] field_b;
-    private cka field_a;
+    private OpenGlToolkit field_a;
     long field_c;
 
     public static void a(int param0) {
@@ -14,8 +14,8 @@ final class cua {
     }
 
     final static void a(int param0, int param1, int param2) {
-        kh var4 = null;
-        kh var4Lifetime1;
+        BitPacketBuffer var4 = null;
+        BitPacketBuffer var4Lifetime1;
         if (param1 != 3) {
           return;
         }
@@ -53,7 +53,7 @@ final class cua {
         RuntimeException decompiledCaughtException = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          param0.p(17);
+          param0.unlink(17);
           var2 = (ht) (asa.field_j.f(-80));
           while (var2 != null) {
             if (var2.a(param0, 71)) {
@@ -100,7 +100,7 @@ final class cua {
         super.finalize();
     }
 
-    cua(cka param0, long param1, fca[] param2) {
+    cua(OpenGlToolkit param0, long param1, fca[] param2) {
         try {
           this.field_c = param1;
           this.field_a = param0;

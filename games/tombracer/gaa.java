@@ -124,7 +124,7 @@ final class gaa extends dg {
         int var6;
         int var7;
         int var8;
-        la var9;
+        Room var9;
         aga var10;
         aga var11;
         aga var12;
@@ -373,11 +373,11 @@ final class gaa extends dg {
         }
     }
 
-    gaa(int param0, la param1, kh param2) {
+    gaa(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) -65, param1);
           int var3_int = 46 / ((param0 + 8) / 40);
@@ -401,7 +401,7 @@ final class gaa extends dg {
         }
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         super.a(127, param1, param2);
         if (!(param1.field_E >= 18)) {
           return;

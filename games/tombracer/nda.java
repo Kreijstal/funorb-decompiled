@@ -211,7 +211,7 @@ final class nda {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.p(113);
+          var9.unlink(113);
           this.field_a.a(var6, 121, var8Lifetime1);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;

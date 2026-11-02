@@ -80,7 +80,7 @@ final class eqa implements os {
             var5 = 1;
           }
           if (gda.a(var5, -20011) == 2) {
-            loa.a(var5, param2, (byte) 108, 1);
+            MazeGenerator.a(var5, param2, (byte) 108, 1);
           }
           opa.a(bta.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
           ufa.a(true);

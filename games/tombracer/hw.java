@@ -19,7 +19,7 @@ final class hw {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        kh var9 = null;
+        BitPacketBuffer var9 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -34,10 +34,10 @@ final class hw {
           if (param0 != -111) {
             return;
           }
-          var9.field_h = var9.field_h + param1;
-          var5 = var9.field_h;
+          var9.position = var9.position + param1;
+          var5 = var9.position;
           param3.a(200, var9);
-          var6 = -var5 + var9.field_h;
+          var6 = -var5 + var9.position;
           var7 = param1;
           if (0 == var7) {
             return;

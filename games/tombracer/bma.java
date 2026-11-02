@@ -30,7 +30,7 @@ final class bma extends ci {
           dea.a(60);
           return;
         }
-        kh var2 = vc.field_q;
+        BitPacketBuffer var2 = vc.field_q;
         if (param0 < 23) {
           field_t = (int[]) null;
         }
@@ -38,10 +38,10 @@ final class bma extends ci {
         var2.e(-118);
         var2.e(112);
         var2.e(-29);
-        var1.p(71);
+        var1.unlink(71);
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -138,7 +138,7 @@ final class bma extends ci {
         for (var5 = 0; var5 < this.field_n; var5++) {
           if (var5 > 0) {
             var6 = this.field_E;
-            var7 = (jqa.a(4096, var10, -100) - 2048) * this.field_C >> 12;
+            var7 = (BufferedSocket.a(4096, var10, -100) - 2048) * this.field_C >> 12;
             var6 = var6 + (var4 * var7 >> 12);
             this.field_u[var5] = var6 + this.field_u[var5 - 1];
           }
@@ -146,11 +146,11 @@ final class bma extends ci {
           for (var6Lifetime1 = 0; this.field_o > var6Lifetime1; var6Lifetime1++) {
             if (var6Lifetime1 > 0) {
               var7Lifetime1 = this.field_r;
-              var8 = (-2048 + jqa.a(4096, var10, -93)) * this.field_D >> 12;
+              var8 = (-2048 + BufferedSocket.a(4096, var10, -93)) * this.field_D >> 12;
               var7Lifetime1 = var7Lifetime1 + (var3 * var8 >> 12);
               this.field_y[var5][var6Lifetime1] = this.field_y[var5][var6Lifetime1 - 1] + var7Lifetime1;
             }
-            this.field_B[var5][var6Lifetime1] = this.field_x > 0 ? -jqa.a(this.field_x, var10, -120) + 4096 : 4096;
+            this.field_B[var5][var6Lifetime1] = this.field_x > 0 ? -BufferedSocket.a(this.field_x, var10, -120) + 4096 : 4096;
           }
           this.field_y[var5][this.field_o] = 4096;
         }

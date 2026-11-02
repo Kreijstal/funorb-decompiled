@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wi extends wda {
+final class wi extends Locomotor {
     private int field_p;
     private int field_r;
     private boolean field_q;
@@ -51,7 +51,7 @@ final class wi extends wda {
         int var9Lifetime2Lifetime1;
         var2 = this.field_p + this.field_n.q((byte) -80);
         if (0 >= this.field_r) {
-          var3 = hua.a((byte) 100, var2 >> 2);
+          var3 = MouseInputHandler.a((byte) 100, var2 >> 2);
           var6 = -112 % ((param0 + 69) / 42);
           var4 = bua.a(0, var2 >> 2);
           var5 = doa.a(2, this.field_t, var3);
@@ -150,7 +150,7 @@ final class wi extends wda {
           return;
         }
         if (this.field_o + this.field_t <= this.field_r) {
-          var3Lifetime1 = hua.a((byte) 100, var2 >> 2);
+          var3Lifetime1 = MouseInputHandler.a((byte) 100, var2 >> 2);
           var6Lifetime1 = -112 % ((param0 + 69) / 42);
           var4Lifetime1 = bua.a(0, var2 >> 2);
           var5Lifetime1 = doa.a(2, this.field_t, var3Lifetime1);
@@ -249,7 +249,7 @@ final class wi extends wda {
           return;
         }
         this.field_t = this.field_r - this.field_o;
-        var3Lifetime2 = hua.a((byte) 100, var2 >> 2);
+        var3Lifetime2 = MouseInputHandler.a((byte) 100, var2 >> 2);
         var6Lifetime2 = -112 % ((param0 + 69) / 42);
         var4Lifetime2 = bua.a(0, var2 >> 2);
         var5Lifetime2 = doa.a(2, this.field_t, var3Lifetime2);
@@ -372,7 +372,7 @@ final class wi extends wda {
         this.field_p = param1;
     }
 
-    wi(la param0, int param1, int param2, int param3, boolean param4) {
+    wi(Room param0, int param1, int param2, int param3, boolean param4) {
         super(param0, param4);
         try {
           this.field_p = param2;
@@ -422,7 +422,7 @@ final class wi extends wda {
         this.field_t = param0;
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -117);
           param0.a((byte) 75, this.b(0, this.field_t), 8);
@@ -437,7 +437,7 @@ final class wi extends wda {
         }
     }
 
-    wi(la param0, kh param1, boolean param2) {
+    wi(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_13_0 = null;
@@ -483,7 +483,7 @@ final class wi extends wda {
         }
     }
 
-    wi(la param0, boolean param1) {
+    wi(Room param0, boolean param1) {
         this(param0, 131072, 0, 0, param1);
     }
 

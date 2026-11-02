@@ -4,7 +4,7 @@
 final class uda extends qra {
     static nh field_r;
     private daa field_m;
-    private vna field_n;
+    private IntrusiveDeque field_n;
     static String field_w;
     static String field_o;
     static int field_q;
@@ -65,16 +65,16 @@ final class uda extends qra {
         int var11;
         int var7Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
-        la.field_j.a(0, 0);
+        Room.field_j.a(0, 0);
         var3 = aaa.a(false) / 2;
         var4 = koa.b(0) / 2;
         stackIn_3_0 = (this.i(-1)) ? 0 : 1;
         var5 = stackIn_3_0;
         ik.field_h.a(0, 0);
-        be.a(gta.field_a.toUpperCase(), 1, qr.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
+        SocketConnector.a(gta.field_a.toUpperCase(), 1, qr.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
         if (-1 == this.field_u &&
           var5 != 0) {
-          be.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, koa.b(0) - 48, var3 - 256, -1, (byte) 60, 512);
+          SocketConnector.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, koa.b(0) - 48, var3 - 256, -1, (byte) 60, 512);
         }
         var6_ref_ad = (ad) (this.field_n.f(-80));
         while (var6_ref_ad != null) {
@@ -98,7 +98,7 @@ final class uda extends qra {
           } else {
             bsa.field_i.a(-(bsa.field_i.a() >> 1) + var8, -(bsa.field_i.c() >> 1) + var9, 0, 1627389951, 1);
           }
-          be.a(this.field_h.a(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
+          SocketConnector.a(this.field_h.a(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
           var11++;
         }
         se.f((byte) -6);
@@ -183,7 +183,7 @@ final class uda extends qra {
         try {
           this.field_m = new daa(this.field_c);
           this.field_m.field_b = new w();
-          this.field_n = new vna();
+          this.field_n = new IntrusiveDeque();
           for (var3_int = 0; var3_int < 13; var3_int++) {
             var4 = aaa.a(false);
             var5 = koa.b(0);
@@ -204,7 +204,7 @@ final class uda extends qra {
             }
             this.field_n.b((byte) -104, var8);
           }
-          var3_intLifetime1 = param0.field_k.field_H.length;
+          var3_intLifetime1 = param0.field_k.players.length;
           this.field_t = new rp[var3_intLifetime1];
           this.field_y = false;
           return;
@@ -235,7 +235,7 @@ final class uda extends qra {
         var4.a(param2, false, param1, 5, true);
         int var5 = var4.c((byte) 114);
         var4.a(param1 + 107, var5, param2, 0, 0);
-        jha var6 = ab.a(param1 ^ -41, gl.$cfr$intArgs$a$53ce4ab4c593(82, coa.field_n, new String[]{this.field_c.e(param0, 23807), la.field_m[param2]}));
+        jha var6 = ab.a(param1 ^ -41, gl.$cfr$intArgs$a$53ce4ab4c593(82, coa.field_n, new String[]{this.field_c.e(param0, 23807), Room.field_m[param2]}));
         iqa.field_c.a(0, var6);
     }
 

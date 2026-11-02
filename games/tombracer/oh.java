@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oh extends nv {
+final class oh extends Behaviour {
     private int field_r;
     static int field_o;
     private int field_s;
@@ -11,7 +11,7 @@ final class oh extends nv {
     private int field_u;
     private int field_t;
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -128, this.field_t >> 16, 10);
@@ -54,7 +54,7 @@ final class oh extends nv {
         return 23;
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           this.field_n = fda.field_a;
@@ -78,7 +78,7 @@ final class oh extends nv {
         return bsa.field_j.field_tb;
     }
 
-    oh(la param0, kh param1, boolean param2) {
+    oh(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_r = 0;
         this.field_p = 50;
@@ -97,13 +97,13 @@ final class oh extends nv {
     }
 
     final void k(int param0) {
-        hca var9 = null;
+        Player var9 = null;
         hr var10 = null;
-        hca var11 = null;
+        Player var11 = null;
         hr var12 = null;
         hr var14 = null;
         hr var13 = null;
-        hca var15 = null;
+        Player var15 = null;
         hr var16 = null;
         hr var20 = null;
         hr var18 = null;
@@ -239,7 +239,7 @@ final class oh extends nv {
           return;
         }
         var2Lifetime1 = var2Lifetime1 * var2Lifetime1;
-        hca var21 = this.m((byte) 19);
+        Player var21 = this.m((byte) 19);
         var4Lifetime2 = this.field_g.d(3) - var21.d(param0 ^ 5417) >> 16;
         var5Lifetime2 = this.field_g.e(9648) - var21.e(9648) >> 16;
         var6Lifetime2 = var4Lifetime2 * var4Lifetime2 + var5Lifetime2 * var5Lifetime2;

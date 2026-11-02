@@ -14,7 +14,7 @@ abstract class uta implements sia {
     static nh field_d;
     static String field_e;
     private jea field_i;
-    private vna field_s;
+    private IntrusiveDeque field_s;
     private int field_h;
     private boolean field_j;
     private int field_c;
@@ -37,10 +37,10 @@ abstract class uta implements sia {
           var3 = (gka) (this.field_s.f(-80));
           if (var3 == null ||
             !param1.equals(var3.field_h)) {
-            this.field_s.a((byte) 88, (vg) (new gka(param1)));
+            this.field_s.addFirst((byte) 88, (IntrusiveNode) (new gka(param1)));
           }
           if (this.field_s.a((byte) -16) > 30) {
-            this.field_s.c((byte) 22);
+            this.field_s.pollLast((byte) 22);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,7 +63,7 @@ abstract class uta implements sia {
         String[] var5 = null;
         String[] var6 = null;
         String var8 = null;
-        vna var9 = null;
+        IntrusiveDeque var9 = null;
         gka var10 = null;
         int var11 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -107,18 +107,18 @@ abstract class uta implements sia {
         }
     }
 
-    private final vna a(int param0, boolean param1, String param2) {
+    private final IntrusiveDeque a(int param0, boolean param1, String param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
-        vna stackIn_25_0 = null;
-        vna stackIn_27_0 = null;
+        IntrusiveDeque stackIn_25_0 = null;
+        IntrusiveDeque stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vna var4 = null;
+        IntrusiveDeque var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         String var6 = null;
@@ -128,8 +128,8 @@ abstract class uta implements sia {
         int var7Lifetime1;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          var4 = new vna();
-          L0: while (param2 != null) {
+          var4 = new IntrusiveDeque();
+          scanLoop1: while (param2 != null) {
             boolean decompiledFrameRemainder0 = true;
             var5 = this.field_m.b(param2);
             var6 = param2;
@@ -151,7 +151,7 @@ abstract class uta implements sia {
                 var9 = param2.substring(0, var7);
                 param2 = param2.substring(var7 + 1);
                 var4.b((byte) -128, new gka(var9));
-                continue L0;
+                continue scanLoop1;
               }
               var5 = this.field_m.b(param2);
               var7Lifetime1 = param2.length() - 1;
@@ -173,7 +173,7 @@ abstract class uta implements sia {
             stackIn_27_0 = var4;
             return stackIn_27_0;
           }
-          stackIn_25_0 = (vna) null;
+          stackIn_25_0 = (IntrusiveDeque) null;
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -344,7 +344,7 @@ abstract class uta implements sia {
     }
 
     public boolean a(byte param0, char param1, int param2) {
-        vg stackIn_19_1 = null;
+        IntrusiveNode stackIn_19_1 = null;
         jea var5;
         int var6;
         String var7;
@@ -363,8 +363,8 @@ abstract class uta implements sia {
           if (param2 != 98) {
             if (99 == param2) {
               if (this.field_g != null &&
-                this.field_s.field_e != this.field_g.field_e) {
-                this.field_g = (gka) (this.field_g.field_e);
+                this.field_s.sentinel != this.field_g.previous) {
+                this.field_g = (gka) (this.field_g.previous);
                 this.field_o.a((byte) 74, this.field_g.field_h);
               }
             } else {
@@ -376,9 +376,9 @@ abstract class uta implements sia {
             }
           } else {
             if (this.field_g == null ||
-              this.field_g.field_a != this.field_s.field_e) {
+              this.field_g.next != this.field_s.sentinel) {
               if (null != this.field_g) {
-                stackIn_19_1 = this.field_g.field_a;
+                stackIn_19_1 = this.field_g.next;
               } else {
                 stackIn_19_1 = this.field_s.f(-80);
               }
@@ -538,7 +538,7 @@ abstract class uta implements sia {
         }
     }
 
-    uta(il param0, fia param1) {
+    uta(il param0, PlatformTaskDispatcher param1) {
         int var3_int = 0;
         jea var4 = null;
         jea var5 = null;
@@ -553,7 +553,7 @@ abstract class uta implements sia {
         jea var14 = null;
         jea var15 = null;
         this.field_t = "# ";
-        this.field_s = new vna();
+        this.field_s = new IntrusiveDeque();
         this.field_j = false;
         this.field_h = 0;
         this.field_b = null;
@@ -575,9 +575,9 @@ abstract class uta implements sia {
           this.field_i.a(mma.field_a, 200, -23776, -200, 0);
           var13 = new oj(0L, var8, var8, var9, var10);
           var14 = new jea();
-          var14.field_J = new vna();
+          var14.field_J = new IntrusiveDeque();
           this.field_a = new iv(0L, var14, var6, var13);
-          this.field_a.field_tb.field_J = new vna();
+          this.field_a.field_tb.field_J = new IntrusiveDeque();
           this.field_a.a(this.field_i.field_G - 10, 0, (byte) 127, 5, 15, -var3_int + 185, 5);
           this.field_i.b(-128, this.field_a);
           var15 = new jea();

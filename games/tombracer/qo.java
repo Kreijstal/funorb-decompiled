@@ -33,7 +33,7 @@ final class qo extends rra {
         int var5 = param2 * this.field_g >> 12;
         int var6 = this.field_j * param0 >> 12;
         int var8 = this.field_f * param0 >> 12;
-        be.a(var4, this.field_c, (byte) 71, var8, var5, var6);
+        SocketConnector.a(var4, this.field_c, (byte) 71, var8, var5, var6);
     }
 
     qo(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

@@ -4,9 +4,9 @@
 final class kqa {
     private int[] field_c;
     int[] field_b;
-    static fia field_a;
+    static PlatformTaskDispatcher field_a;
     int[] field_e;
-    private ff field_d;
+    private MatchState field_d;
 
     final void a(int param0) {
         int var5 = 0;
@@ -25,13 +25,13 @@ final class kqa {
         int var4Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         var2 = -103 % ((-35 - param0) / 39);
-        for (var3 = 0; var3 < this.field_d.field_H.length; var3++) {
+        for (var3 = 0; var3 < this.field_d.players.length; var3++) {
           stackIn_4_0 = this.field_c;
           stackIn_4_1 = var3;
-          if (this.field_d.field_G[var3].b(0)) {
+          if (this.field_d.simulations[var3].b(0)) {
             stackIn_5_2 = -999;
           } else {
-            stackIn_5_2 = this.field_d.field_G[var3].b(false) + this.field_d.field_H[var3].i((byte) -72);
+            stackIn_5_2 = this.field_d.simulations[var3].b(false) + this.field_d.players[var3].i((byte) -72);
           }
           stackIn_4_0[stackIn_4_1] = stackIn_5_2;
           if (this.field_d.f((byte) -99, var3)) {
@@ -48,7 +48,7 @@ final class kqa {
               var8 = 1;
             } else {
               if (this.field_c[var6] == this.field_c[var7] &&
-                this.field_d.field_G[var7].field_c < this.field_d.field_G[var6].field_c) {
+                this.field_d.simulations[var7].tick < this.field_d.simulations[var6].tick) {
                 var8 = 1;
               }
             }
@@ -85,7 +85,7 @@ final class kqa {
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 18916) {
-            field_a = (fia) null;
+            field_a = (PlatformTaskDispatcher) null;
           }
           var1 = (vb) (tna.field_e.f(-80));
           while (var1 != null) {
@@ -101,7 +101,7 @@ final class kqa {
         }
     }
 
-    kqa(ff param0) {
+    kqa(MatchState param0) {
         try {
           this.field_d = param0;
           this.a(false);
@@ -113,7 +113,7 @@ final class kqa {
     final void a(boolean param0) {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
-        int var2 = this.field_d.field_H.length;
+        int var2 = this.field_d.players.length;
         if (param0) {
           kqa.b(110);
         }

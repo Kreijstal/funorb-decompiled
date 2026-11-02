@@ -156,7 +156,7 @@ final class gq extends uta {
           }
           while (var4 < this.field_v.length) {
             if (this.field_v[var4].field_l.startsWith(param1)) {
-              this.field_v[var4].c(-7975);
+              this.field_v[var4].unlinkSecondary(-7975);
               var3.a(this.field_v[var4], (byte) -78);
             }
             var4++;
@@ -183,7 +183,7 @@ final class gq extends uta {
 
     final boolean a(String param0, byte param1) {
         try {
-          vna var3 = null;
+          IntrusiveDeque var3 = null;
           jj var3_ref = null;
           RuntimeException var3_ref2 = null;
           cr var4 = null;
@@ -255,7 +255,7 @@ final class gq extends uta {
         }
     }
 
-    gq(vna param0, il param1, fia param2) {
+    gq(IntrusiveDeque param0, il param1, PlatformTaskDispatcher param2) {
         super(param1, param2);
         int incrementValue$1 = 0;
         RuntimeException runtimeException = null;

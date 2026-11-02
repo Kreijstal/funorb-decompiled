@@ -14,7 +14,7 @@ final class co {
     int field_i;
     private int field_b;
 
-    final void a(uia param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_f = param0.h(255);
         this.field_d = new int[this.field_f];
@@ -25,7 +25,7 @@ final class co {
         }
     }
 
-    final void b(uia param0) {
+    final void b(PacketBuffer param0) {
         this.field_a = param0.h(255);
         this.field_e = param0.e(119);
         this.field_i = param0.e(110);

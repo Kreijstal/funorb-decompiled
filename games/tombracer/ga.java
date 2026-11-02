@@ -25,7 +25,7 @@ final class ga extends kna {
         super.q(param0);
     }
 
-    ga(la param0, int param1) {
+    ga(Room param0, int param1) {
         super(param0, param1);
         this.field_M = 131072;
         this.field_J = 524288;
@@ -33,7 +33,7 @@ final class ga extends kna {
         this.field_O = 65536;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         eq var5 = null;
         wi var6 = null;
@@ -44,14 +44,14 @@ final class ga extends kna {
         jma var11 = null;
         mfa var12 = null;
         lma var13 = null;
-        fsa var14 = null;
-        fsa stackIn_7_0 = null;
+        Trap var14 = null;
+        Trap stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var14 = new fsa(param2, param0);
+          var14 = new Trap(param2, param0);
           var14.b((byte) -11, this.field_k, this.field_l);
           var14.h(3, 0);
           var14.a(1, (byte) -12, true);
@@ -59,7 +59,7 @@ final class ga extends kna {
           var14.a((byte) -3, 20);
           var14.b((byte) 17, true);
           var5 = new eq(param2, param0);
-          var14.a((byte) 83, (nv) (var5));
+          var14.a((byte) 83, (Behaviour) (var5));
           var6 = new wi(param2, param0);
           var6.c(this.field_J, 26621);
           var14.a(var6, 0);
@@ -86,7 +86,7 @@ final class ga extends kna {
           var11 = this.field_G.k((byte) -91);
           var11.b(0, 55);
           var11.h(param1 - 2).a(9, new lj[]{(lj) ((Object) var6), (lj) ((Object) var7)});
-          var14.a((byte) 83, (nv) (this.field_G));
+          var14.a((byte) 83, (Behaviour) (this.field_G));
           var12 = rm.field_a;
           var13 = (lma) (var12.a(15, 93));
           var14.a((gr) null, (byte) 124, var13);
@@ -106,7 +106,7 @@ final class ga extends kna {
         }
     }
 
-    ga(la param0, int param1, kh param2, csa param3) {
+    ga(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         RuntimeException var5 = null;
         boolean stackIn_4_1 = false;
@@ -168,9 +168,9 @@ final class ga extends kna {
         return hb.field_t instanceof qh;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         RuntimeException var3 = null;
-        kh stackIn_2_0 = null;
+        BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -183,14 +183,14 @@ final class ga extends kna {
           param1.a((byte) -127, wma.a((byte) 8, 4, this.field_J), 8);
           param1.a((byte) -4, wma.a((byte) 8, 2, this.field_M), 4);
           param1.a((byte) -17, wma.a((byte) 8, 4, this.field_I), 8);
-          stackIn_2_0 = (kh) (param1);
+          stackIn_2_0 = (BitPacketBuffer) (param1);
           stackIn_2_1 = -127;
           if (this.field_N) {
             stackIn_3_2 = 1;
           } else {
             stackIn_3_2 = 0;
           }
-          ((kh) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
           if (!this.field_N) {
             param1.a((byte) -33, this.field_L, 4);
           }
@@ -223,8 +223,8 @@ final class ga extends kna {
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-          la var3 = (la) null;
-          this.a(false, -124, (la) null);
+          Room var3 = (Room) null;
+          this.a(false, -124, (Room) null);
           return true;
         }
         return true;

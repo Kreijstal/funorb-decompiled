@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends vg implements fo, ffa, gma, noa, qn {
+final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
     private int field_n;
-    private la field_m;
+    private Room field_m;
     private int field_p;
-    static vna field_f;
+    static IntrusiveDeque field_f;
     static mp field_h;
     static String field_j;
     static int field_l;
     private int field_r;
-    private vna field_k;
+    private IntrusiveDeque field_k;
     private int field_g;
     private int field_q;
     static jea field_s;
@@ -137,14 +137,14 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
 
     public final void f(int param0) {
         if (param0 != -4366) {
-          ep var3 = (ep) null;
-          this.a((up) null, (ep) null, 117);
+          Projectile var3 = (Projectile) null;
+          this.a((up) null, (Projectile) null, 117);
         }
     }
 
     public final boolean b(boolean param0) {
         if (!param0) {
-          this.field_m = (la) null;
+          this.field_m = (Room) null;
           return false;
         }
         return false;
@@ -184,7 +184,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
         return stackIn_6_0;
     }
 
-    final void a(int param0, la param1) {
+    final void a(int param0, Room param1) {
         int var4 = 0;
         dg var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -196,7 +196,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
         try {
           param1.field_u.a((ffa) (this), (byte) 105);
           if (param0 > -74) {
-            this.field_k = (vna) null;
+            this.field_k = (IntrusiveDeque) null;
           }
           this.field_p = param1.m((byte) -86) / 2 - (this.field_p - param1.m((byte) -86) / 2);
           param1.field_u.b((ffa) (this), 7073);
@@ -220,7 +220,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
         }
     }
 
-    public final int a(up param0, ep param1, int param2) {
+    public final int a(up param0, Projectile param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -385,7 +385,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         dg var5 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
@@ -425,7 +425,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
 
     public final int e(byte param0) {
         if (param0 > -86) {
-          field_f = (vna) null;
+          field_f = (IntrusiveDeque) null;
           return 0;
         }
         return 0;
@@ -549,7 +549,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
         return this.field_p;
     }
 
-    public final la f(byte param0) {
+    public final Room f(byte param0) {
         int var2 = 110 / ((param0 - 0) / 61);
         return this.field_m;
     }
@@ -705,7 +705,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
         return this.field_p;
     }
 
-    db(la param0, kh param1) {
+    db(Room param0, BitPacketBuffer param1) {
         int var4 = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -717,7 +717,7 @@ final class db extends vg implements fo, ffa, gma, noa, qn {
         int var3_int = 0;
         RuntimeException var3 = null;
         dg var5 = null;
-        this.field_k = new vna();
+        this.field_k = new IntrusiveDeque();
         this.field_o = new bca();
         this.field_i = false;
         try {

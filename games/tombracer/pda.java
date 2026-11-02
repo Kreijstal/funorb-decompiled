@@ -3,7 +3,7 @@
  */
 final class pda {
     static byte[] field_b;
-    static iu[][] field_d;
+    static Sprite[][] field_d;
     static int field_c;
     static String field_a;
 
@@ -27,7 +27,7 @@ final class pda {
     public static void a(byte param0) {
         field_a = null;
         int var1 = 42 % ((param0 + 68) / 42);
-        field_d = (iu[][]) null;
+        field_d = (Sprite[][]) null;
         field_b = null;
     }
 

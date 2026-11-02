@@ -30,7 +30,7 @@ final class ig {
           if (fua.field_a != null) {
             var3 = (pha) (fua.field_a.b(-91));
             while (var3 != null) {
-              var3.c(-7975);
+              var3.unlinkSecondary(-7975);
               var3 = (pha) (fua.field_a.a((byte) -112));
             }
             fua.field_a = null;
@@ -40,16 +40,16 @@ final class ig {
         }
     }
 
-    final static void a(int param0, od param1, od param2) {
+    final static void a(int param0, DualLinkNode param1, DualLinkNode param2) {
         try {
-          if (null != param1.field_f) {
-            param1.c(-7975);
+          if (null != param1.secondaryPrevious) {
+            param1.unlinkSecondary(-7975);
           }
           int var3_int = -105 % ((-33 - param0) / 48);
-          param1.field_g = param2.field_g;
-          param1.field_f = param2;
-          param1.field_f.field_g = param1;
-          param1.field_g.field_f = param1;
+          param1.secondaryNext = param2.secondaryNext;
+          param1.secondaryPrevious = param2;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

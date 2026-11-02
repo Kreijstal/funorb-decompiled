@@ -7,7 +7,7 @@ final class vda extends ci {
     private int field_p;
     private int field_o;
     static String field_n;
-    static iu[] field_m;
+    static Sprite[] field_m;
 
     final int[][] b(int param0, int param1) {
         int var11 = 0;
@@ -61,7 +61,7 @@ final class vda extends ci {
         return var3;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -72,7 +72,7 @@ final class vda extends ci {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 107) {
-            field_m = (iu[]) null;
+            field_m = (Sprite[]) null;
           }
           var4_int = param2;
           if (var4_int != 0) {

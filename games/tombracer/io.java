@@ -5,7 +5,7 @@ final class io {
     static String field_b;
     static int field_a;
     static iw field_c;
-    static vna field_d;
+    static IntrusiveDeque field_d;
 
     final static byte a(int param0, char param1) {
         int var2;
@@ -385,6 +385,6 @@ final class io {
     static {
         field_a = 15;
         field_c = new iw();
-        field_d = new vna();
+        field_d = new IntrusiveDeque();
     }
 }

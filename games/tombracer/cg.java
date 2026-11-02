@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cg extends vg {
+abstract class cg extends IntrusiveNode {
     volatile boolean field_f;
     int field_h;
     ud field_i;

@@ -13,7 +13,7 @@ final class pca {
     private int field_g;
     private tqa field_i;
     int field_h;
-    static iu[] field_k;
+    static Sprite[] field_k;
     private int[] field_d;
 
     final tqa a(int param0) {
@@ -67,7 +67,7 @@ final class pca {
 
     final static boolean b(int param0, int param1, int param2) {
         if (param1 < 5) {
-          field_k = (iu[]) null;
+          field_k = (Sprite[]) null;
         }
         return 0 != (param2 & 16) ? true : false;
     }
@@ -125,7 +125,7 @@ final class pca {
 
     public static void c(int param0) {
         if (param0 != 8) {
-          field_k = (iu[]) null;
+          field_k = (Sprite[]) null;
         }
         field_a = null;
         field_k = null;
@@ -145,7 +145,7 @@ final class pca {
         return this.field_g > 0 ? true : false;
     }
 
-    final void a(kh param0, int param1) {
+    final void a(BitPacketBuffer param0, int param1) {
         if (param1 > -75) {
           return;
         }
@@ -187,9 +187,9 @@ final class pca {
         return stackIn_6_0;
     }
 
-    final la d(int param0) {
+    final Room d(int param0) {
         if (param0 != 0) {
-          return (la) null;
+          return (Room) null;
         }
         return this.field_i.b(0);
     }
@@ -276,7 +276,7 @@ final class pca {
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 255; var5Lifetime1++) {
             var6 = -var5Lifetime1 + 255;
-            var7 = jqa.a(var6, var4, -110);
+            var7 = BufferedSocket.a(var6, var4, -110);
             var8 = var11[var7];
             var3[var7] = var11[var6];
             var3[-var5Lifetime1 + 511] = (byte) var8;
@@ -288,7 +288,7 @@ final class pca {
         return var2.field_k;
     }
 
-    final void a(byte param0, la param1, kh param2) {
+    final void a(byte param0, Room param1, BitPacketBuffer param2) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

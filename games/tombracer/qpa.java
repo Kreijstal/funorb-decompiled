@@ -13,7 +13,7 @@ final class qpa implements bo {
         }
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         try {
           param1.i(this.field_a, param0 - 200);
           if (param0 != 200) {
@@ -30,7 +30,7 @@ final class qpa implements bo {
         int var3 = 28 % ((-35 - param1) / 61);
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           this.field_a = param0.h(255);
           if (param1 != -19) {
@@ -44,8 +44,8 @@ final class qpa implements bo {
 
     final void a(int param0, int param1) {
         if (param0 != 7) {
-          kh var4 = (kh) null;
-          this.a((kh) null, (byte) -41);
+          BitPacketBuffer var4 = (BitPacketBuffer) null;
+          this.a((BitPacketBuffer) null, (byte) -41);
           this.field_c = param1;
           return;
         }

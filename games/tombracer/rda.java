@@ -9,7 +9,7 @@ final class rda extends ci {
     private rra[] field_p;
     static int field_o;
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         boolean stackIn_20_1 = false;
         RuntimeException stackIn_24_0 = null;
@@ -31,7 +31,7 @@ final class rda extends ci {
               var5 = param1.h(255);
               var6 = var5;
               if (0 == var6) {
-                this.field_p[var4_int] = (rra) ((Object) od.a(0, param1));
+                this.field_p[var4_int] = (rra) ((Object) DualLinkNode.a(0, param1));
               } else {
                 if (var6 == 1) {
                   this.field_p[var4_int] = (rra) ((Object) lga.a(param1, (byte) -88));
@@ -88,7 +88,7 @@ final class rda extends ci {
           }
           var4 = qda.field_i;
           nfa.a(param1, param0 ^ -8901);
-          loa.a(una.field_b, false, 0, 0, hba.field_b);
+          MazeGenerator.a(una.field_b, false, 0, 0, hba.field_b);
           if (null != this.field_p) {
             for (var5 = 0; var5 < this.field_p.length; var5++) {
               var6 = this.field_p[var5];
@@ -145,8 +145,8 @@ final class rda extends ci {
             return;
           }
           try {
-            if (null != ep.field_k) {
-              ep.field_k.a((byte) 118);
+            if (null != Projectile.field_k) {
+              Projectile.field_k.a((byte) 118);
             }
             if (null != wka.field_c) {
               try {

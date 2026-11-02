@@ -14,21 +14,21 @@ final class fv {
     static String field_b;
 
     final static void a(byte param0, int param1, long param2) {
-        kh var4 = ql.field_k;
+        BitPacketBuffer var4 = ql.field_k;
         var4.k(param1, -2988);
-        var4.field_h = var4.field_h + 1;
-        int var5 = var4.field_h;
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
         var4.i(6, 0);
         var4.a(1736565456, param2);
         int var6 = -3 % ((param0 - 18) / 52);
-        var4.d(-var5 + var4.field_h, (byte) -111);
+        var4.d(-var5 + var4.position, (byte) -111);
     }
 
     final void a(int param0) {
         int var3 = 0;
         nh var4 = null;
         int var2 = this.field_h.b((byte) -75).a(param0 ^ 28, this.field_f);
-        ha var3_ref_ha = tga.field_a;
+        GraphicsToolkit var3_ref_ha = tga.field_a;
         int var4_int = this.field_g;
         int var5 = this.field_c;
         int var6 = this.field_j;

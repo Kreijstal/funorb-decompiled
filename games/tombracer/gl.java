@@ -213,7 +213,7 @@ final class gl extends qe {
         this.field_a.e(0, !param0 ? true : false);
     }
 
-    gl(cka param0, aaa param1) {
+    gl(OpenGlToolkit param0, aaa param1) {
         super(param0);
         try {
           this.field_c = param1;

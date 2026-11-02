@@ -12,7 +12,7 @@ interface gma {
 
     public abstract int d(int param0);
 
-    public abstract la f(byte param0);
+    public abstract Room f(byte param0);
 
     public abstract boolean h(int param0);
 

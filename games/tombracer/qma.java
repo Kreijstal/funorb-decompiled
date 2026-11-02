@@ -62,7 +62,7 @@ class qma implements d {
     }
 
     private final km a(int param0, int param1) {
-        od var3 = this.field_e.a(param1 + param1, (long)param0);
+        DualLinkNode var3 = this.field_e.a(param1 + param1, (long)param0);
         if (var3 != null) {
           return (km) (var3);
         }
@@ -70,7 +70,7 @@ class qma implements d {
         if (var4 == null) {
           return null;
         }
-        km var5 = new km(new uia(var4));
+        km var5 = new km(new PacketBuffer(var4));
         this.field_e.a(var5, (byte) 96, (long)param0);
         return var5;
     }
@@ -109,7 +109,7 @@ class qma implements d {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
-        uia var7 = null;
+        PacketBuffer var7 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
@@ -133,7 +133,7 @@ class qma implements d {
         try {
           this.field_d = param2;
           this.field_g = param1;
-          var7 = new uia(param0.a(false, 0, 0));
+          var7 = new PacketBuffer(param0.a(false, 0, 0));
           this.field_a = var7.d(123);
           this.field_b = new dw[this.field_a];
           for (var5 = 0; var5 < this.field_a; var5++) {

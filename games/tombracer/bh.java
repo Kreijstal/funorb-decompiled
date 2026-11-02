@@ -43,9 +43,9 @@ final class bh extends ela {
         int stackIn_36_0 = 0;
         int stackIn_71_0 = 0;
         int stackIn_80_0 = 0;
-        iu[] stackIn_82_0 = null;
+        Sprite[] stackIn_82_0 = null;
         int stackIn_83_1 = 0;
-        iu[] stackIn_90_0 = null;
+        Sprite[] stackIn_90_0 = null;
         int stackIn_91_1 = 0;
         String stackIn_151_0 = null;
         String stackIn_160_0 = null;
@@ -53,7 +53,7 @@ final class bh extends ela {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        vna var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         ht var12 = null;
@@ -87,7 +87,7 @@ final class bh extends ela {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        iu var42 = null;
+        Sprite var42 = null;
         jea var43 = null;
         jea var44 = null;
         jea var45 = null;
@@ -96,14 +96,14 @@ final class bh extends ela {
         jea var48 = null;
         jea var49 = null;
         Object var50 = null;
-        iu var50_ref = null;
+        Sprite var50_ref = null;
         Object var51 = null;
-        iu var51_ref = null;
+        Sprite var51_ref = null;
         Object var52 = null;
-        iu var52_ref = null;
+        Sprite var52_ref = null;
         Object var53 = null;
-        iu var53_ref = null;
-        iu var54 = null;
+        Sprite var53_ref = null;
+        Sprite var54 = null;
         int var14Lifetime1;
         int var33_intLifetime1;
         int var34_intLifetime1;
@@ -308,7 +308,7 @@ final class bh extends ela {
               boolean decompiledFrameRemainder1 = true;
               if (var12.field_ec) {
                 if (var12.field_Kb >= 0) {
-                  var12.field_Vb.field_r = wda.field_l;
+                  var12.field_Vb.field_r = Locomotor.field_l;
                 } else {
                   if (var12.field_Yb && (var12.field_Bb ||
                     var12.field_gc)) {
@@ -474,7 +474,7 @@ final class bh extends ela {
                 var31 = var31 + di.field_a;
               }
             }
-            var33 = qb.a(var32, param1 + 8793, var12.field_Ib);
+            var33 = ProxySocketConnector.a(var32, param1 + 8793, var12.field_Ib);
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Rb.field_H.a(var33, var12.field_G - mna.field_d - mna.field_d);
               var12.field_Rb.field_r = var33;

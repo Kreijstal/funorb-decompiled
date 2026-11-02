@@ -64,7 +64,7 @@ final class ma extends qe {
         }
     }
 
-    ma(cka param0) {
+    ma(OpenGlToolkit param0) {
         super(param0);
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;

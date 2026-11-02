@@ -4,7 +4,7 @@
 final class ho {
     private static boolean field_b;
     private static int field_c;
-    private static vna field_a;
+    private static IntrusiveDeque field_a;
 
     final synchronized static void a(int param0) {
         field_c = field_c - 1;
@@ -43,7 +43,7 @@ final class ho {
           var1 = (rw) (field_a.c(-113));
           if (var1 != null) {
             var1.field_f.w(true);
-            var1.p(120);
+            var1.unlink(120);
             continue;
           }
           break;
@@ -58,6 +58,6 @@ final class ho {
     static {
         field_c = 0;
         field_b = false;
-        field_a = new vna();
+        field_a = new IntrusiveDeque();
     }
 }

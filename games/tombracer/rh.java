@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends nv implements ut {
+final class rh extends Behaviour implements ut {
     static String field_o;
     static String field_q;
     static boolean field_s;
@@ -18,7 +18,7 @@ final class rh extends nv implements ut {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_p.a(this.h((byte) 113), (byte) 82, param1);
@@ -27,7 +27,7 @@ final class rh extends nv implements ut {
         }
     }
 
-    rh(la param0, boolean param1) {
+    rh(Room param0, boolean param1) {
         super(param0, param1);
         try {
           this.field_p = new jma(15);
@@ -52,8 +52,8 @@ final class rh extends nv implements ut {
     }
 
     final static void b(int param0, int param1) {
-        kh var2 = null;
-        kh var2Lifetime1;
+        BitPacketBuffer var2 = null;
+        BitPacketBuffer var2Lifetime1;
         if (param1 <= -98) {
           var2 = ql.field_k;
           var2.k(param0, -2988);
@@ -86,7 +86,7 @@ final class rh extends nv implements ut {
         return this.field_p.a(122, param0);
     }
 
-    rh(la param0, kh param1, boolean param2) {
+    rh(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_p = new jma(15, param0, param1);

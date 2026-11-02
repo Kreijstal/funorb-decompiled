@@ -10,7 +10,7 @@ abstract class wv extends dfa {
     int field_n;
     ko field_k;
     int field_f;
-    static vna field_l;
+    static IntrusiveDeque field_l;
     static String field_h;
     boolean field_o;
 
@@ -136,7 +136,7 @@ abstract class wv extends dfa {
               if (this.field_k.e(94) &&
                 tk.a(-22636) < uha.e((byte) 87)) {
                 var6 = 1;
-                lka.a((byte) -117);
+                EventFactory.a((byte) -117);
               }
               if (var6 == 0) {
                 return;
@@ -283,7 +283,7 @@ abstract class wv extends dfa {
             return;
           }
           var4_int = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (this.field_k.field_i > var4_int) {
               if (var5 == 0) {
                 stackIn_11_0 = this.field_m[var4_int];
@@ -301,13 +301,13 @@ abstract class wv extends dfa {
                 this.c(34);
               }
               if (!param1) {
-                break L1;
+                break scanLoop1;
               }
               if (rpa.field_d) {
-                break L1;
+                break scanLoop1;
               }
               if (vda.field_q) {
-                break L1;
+                break scanLoop1;
               }
               this.field_k.a(this.b(lba.field_p, true, jm.field_m), 71, this.b(sta.field_B, true, jba.field_j));
             }
@@ -322,10 +322,10 @@ abstract class wv extends dfa {
               8 != this.field_c) {
               return;
             }
-            if (rba.field_a != null &&
-              null != rba.field_a.field_k &&
-              rba.field_a.field_k.a(param2 ^ 15283, rba.field_a.l(param2 ^ 15336)) != null) {
-              var4 = (w) (rba.field_a.field_k.a(0, rba.field_a.l(param2 ^ 15326)).field_G);
+            if (SecondaryNodeDequeIterator.field_a != null &&
+              null != SecondaryNodeDequeIterator.field_a.field_k &&
+              SecondaryNodeDequeIterator.field_a.field_k.a(param2 ^ 15283, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15336)) != null) {
+              var4 = (w) (SecondaryNodeDequeIterator.field_a.field_k.a(0, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15326)).field_G);
               if (var4 != null) {
                 var4.a(108, true);
               }
@@ -475,10 +475,10 @@ abstract class wv extends dfa {
             }
             if (35 == var7 &&
               var8 == 0) {
-              if (rba.field_a != null &&
-                null != rba.field_a.field_k &&
-                rba.field_a.field_D &&
-                !rba.field_a.d((byte) 90)) {
+              if (SecondaryNodeDequeIterator.field_a != null &&
+                null != SecondaryNodeDequeIterator.field_a.field_k &&
+                SecondaryNodeDequeIterator.field_a.field_D &&
+                !SecondaryNodeDequeIterator.field_a.d((byte) 90)) {
                 ql.field_k.k(65, -2988);
                 ira.a(param1, -1, (byte) 105);
                 return true;
@@ -486,9 +486,9 @@ abstract class wv extends dfa {
               return true;
             }
             if (var7 == 33) {
-              if (null != rba.field_a) {
-                rba.field_a.b(param1, true, 0);
-                r.a(0, rba.field_a.d((byte) 86));
+              if (null != SecondaryNodeDequeIterator.field_a) {
+                SecondaryNodeDequeIterator.field_a.b(param1, true, 0);
+                r.a(0, SecondaryNodeDequeIterator.field_a.d((byte) 86));
               }
               return true;
             }
@@ -526,20 +526,20 @@ abstract class wv extends dfa {
                 return true;
               }
               if (var7 == 16) {
-                rba.field_a.b(param1, true, 0);
+                SecondaryNodeDequeIterator.field_a.b(param1, true, 0);
                 return true;
               }
               if (41 == var7 &&
                 var8 == 0) {
-                var4_int = rba.field_a.m(-1);
-                var5 = rba.field_a.h(0, 9);
-                var6 = rba.field_a.field_k.field_K;
+                var4_int = SecondaryNodeDequeIterator.field_a.m(-1);
+                var5 = SecondaryNodeDequeIterator.field_a.h(0, 9);
+                var6 = SecondaryNodeDequeIterator.field_a.field_k.field_K;
                 bja.a(var4_int, (byte) 101, var6);
-                rba.field_a.b(var5, 50, 0);
-                rba.field_a.j((byte) -49);
-                rba.field_a.c(125);
+                SecondaryNodeDequeIterator.field_a.b(var5, 50, 0);
+                SecondaryNodeDequeIterator.field_a.j((byte) -49);
+                SecondaryNodeDequeIterator.field_a.c(125);
                 if (3 == var6) {
-                  rba.field_a.e((byte) 110);
+                  SecondaryNodeDequeIterator.field_a.e((byte) 110);
                 }
                 return true;
               }
@@ -611,15 +611,15 @@ abstract class wv extends dfa {
                 return true;
               }
               if (var7 == 36) {
-                fsa.a(0, baa.field_e);
+                Trap.a(0, baa.field_e);
                 return true;
               }
               if (37 == var7) {
-                fsa.a(0, tia.field_d);
+                Trap.a(0, tia.field_d);
                 return true;
               }
               if (var7 == 38) {
-                fsa.a(0, kva.field_s);
+                Trap.a(0, kva.field_s);
                 return true;
               }
               if (var7 == 39 &&
@@ -843,7 +843,7 @@ abstract class wv extends dfa {
               if (param0 == 31) {
                 stackIn_16_0 = new StringBuilder().append(var3).append(" ");
                 if (!ara.field_wb) {
-                  stackIn_17_1 = nv.field_h.toLowerCase();
+                  stackIn_17_1 = Behaviour.field_h.toLowerCase();
                 } else {
                   stackIn_17_1 = ra.field_H.toLowerCase();
                 }
@@ -853,14 +853,14 @@ abstract class wv extends dfa {
                   if (rsa.field_s) {
                     stackIn_24_1 = ra.field_H.toLowerCase();
                   } else {
-                    stackIn_24_1 = nv.field_h.toLowerCase();
+                    stackIn_24_1 = Behaviour.field_h.toLowerCase();
                   }
                   var3 = ((StringBuilder) (Object) stackIn_23_0).append(stackIn_24_1).toString();
                   stackIn_30_0 = new StringBuilder().append(var3).append(" ");
                   if (jc.field_M) {
                     stackIn_31_1 = ra.field_H.toLowerCase();
                   } else {
-                    stackIn_31_1 = nv.field_h.toLowerCase();
+                    stackIn_31_1 = Behaviour.field_h.toLowerCase();
                   }
                   var3 = ((StringBuilder) (Object) stackIn_30_0).append(stackIn_31_1).toString();
                 }
@@ -870,7 +870,7 @@ abstract class wv extends dfa {
               if (rsa.field_s) {
                 stackIn_24_1 = ra.field_H.toLowerCase();
               } else {
-                stackIn_24_1 = nv.field_h.toLowerCase();
+                stackIn_24_1 = Behaviour.field_h.toLowerCase();
               }
               var3 = ((StringBuilder) (Object) stackIn_23_0).append(stackIn_24_1).toString();
               if (var4 != 0) {
@@ -878,7 +878,7 @@ abstract class wv extends dfa {
                 if (jc.field_M) {
                   stackIn_31_1 = ra.field_H.toLowerCase();
                 } else {
-                  stackIn_31_1 = nv.field_h.toLowerCase();
+                  stackIn_31_1 = Behaviour.field_h.toLowerCase();
                 }
                 var3 = ((StringBuilder) (Object) stackIn_30_0).append(stackIn_31_1).toString();
               }
@@ -888,7 +888,7 @@ abstract class wv extends dfa {
             if (jc.field_M) {
               stackIn_31_1 = ra.field_H.toLowerCase();
             } else {
-              stackIn_31_1 = nv.field_h.toLowerCase();
+              stackIn_31_1 = Behaviour.field_h.toLowerCase();
             }
             var3 = ((StringBuilder) (Object) stackIn_30_0).append(stackIn_31_1).toString();
           }
@@ -1083,7 +1083,7 @@ abstract class wv extends dfa {
           var7 = 0;
           var8 = null;
           var9 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder1 = true;
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
@@ -1157,7 +1157,7 @@ abstract class wv extends dfa {
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameCompleted0) &&
               (var6 == null)) {
-              break L1;
+              break scanLoop1;
             }
             oh.a((byte) -91, new fna[]{this.field_m[((int[]) (var6))[0]], this.field_m[((int[]) (var6))[1]], this.field_m[((int[]) (var6))[2]]});
             break;

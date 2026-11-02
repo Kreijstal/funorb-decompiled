@@ -59,7 +59,7 @@ final class kva extends dg {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        kh var5 = null;
+        BitPacketBuffer var5 = null;
         ka stackIn_15_0 = null;
         ka stackIn_23_0 = null;
         ka stackIn_25_0 = null;
@@ -72,8 +72,8 @@ final class kva extends dg {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 < 90) {
-            var5 = (kh) null;
-            this.a((byte) -47, (kh) null);
+            var5 = (BitPacketBuffer) null;
+            this.a((byte) -47, (BitPacketBuffer) null);
           }
           var3_int = this.field_v;
           if (var3_int != 0 &&
@@ -143,11 +143,11 @@ final class kva extends dg {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        kh var4 = null;
+        BitPacketBuffer var4 = null;
         try {
           if (param1 != 44) {
-            var4 = (kh) null;
-            this.a((byte) -87, (kh) null);
+            var4 = (BitPacketBuffer) null;
+            this.a((byte) -87, (BitPacketBuffer) null);
           }
           var3_int = param0.field_j;
           if (var3_int != 0) {
@@ -219,7 +219,7 @@ final class kva extends dg {
         }
     }
 
-    kva(int param0, la param1, kh param2) {
+    kva(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
@@ -263,7 +263,7 @@ final class kva extends dg {
         dpa var27;
         dpa var28;
         dpa var29;
-        la var30;
+        Room var30;
         dpa var31;
         var26 = TombRacer.field_G ? 1 : 0;
         var30 = this.a(113);
@@ -517,7 +517,7 @@ final class kva extends dg {
         return 0;
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           int var3_int = -114 % ((param0 + 8) / 40);
           super.a((byte) -68, param1);
@@ -679,7 +679,7 @@ final class kva extends dg {
         }
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

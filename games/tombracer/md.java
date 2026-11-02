@@ -4,7 +4,7 @@
 final class md extends kna {
     static efa field_F;
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         if (param0) {
           return;
         }
@@ -37,19 +37,19 @@ final class md extends kna {
         return false;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         eq var5 = null;
         mfa var6 = null;
         boa var7 = null;
-        fsa stackIn_1_0 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.a((byte) -3, 4);
           var4.h(param1, param1 ^ 3);
@@ -58,7 +58,7 @@ final class md extends kna {
           var4.b((byte) 17, false);
           var4.a(1, (byte) -12, true);
           var5 = new eq(param2, param0);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (boa) (var6.a(7, 103));
           var7.b(125, 0);
@@ -104,11 +104,11 @@ final class md extends kna {
         field_F = null;
     }
 
-    md(la param0, int param1) {
+    md(Room param0, int param1) {
         super(param0, param1);
     }
 
-    md(la param0, int param1, kh param2, csa param3) {
+    md(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

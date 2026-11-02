@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sfa extends ha {
+final class sfa extends GraphicsToolkit {
     private int field_j;
     private ija field_T;
     private int field_m;
@@ -258,7 +258,7 @@ final class sfa extends ha {
         float[] array$0 = null;
         ija var6 = (ija) (this.field_G.a((byte) -112, (long)param0.hashCode()));
         if (var6 != null) {
-          var6.p(30);
+          var6.unlink(30);
           var7 = tfa.a(param2, param1, param0, 0);
           this.field_G.a((long)param0.hashCode(), 116, var7);
           if (this.field_t == param0 &&
@@ -1537,7 +1537,7 @@ final class sfa extends ha {
         }
     }
 
-    final da a(qla param0, jpa[] param1, boolean param2) {
+    final GameFont a(qla param0, jpa[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -1554,14 +1554,14 @@ final class sfa extends ha {
         }
         if (!param2) {
           if (var6 == 0) {
-            return (da) ((Object) new sn(this, param0, param1, var4, var5));
+            return (GameFont) ((Object) new sn(this, param0, param1, var4, var5));
           }
           throw new IllegalArgumentException("");
         }
         if (var6 == 0) {
-          return (da) ((Object) new le(this, param0, param1, var4, var5));
+          return (GameFont) ((Object) new le(this, param0, param1, var4, var5));
         }
-        return (da) ((Object) new nu(this, param0, param1, var4, var5));
+        return (GameFont) ((Object) new nu(this, param0, param1, var4, var5));
     }
 
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
@@ -3133,7 +3133,7 @@ final class sfa extends ha {
         var7 = 0;
         var8 = param1;
         var9 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var9 < param4) {
             for (var10 = 0; var10 < param3; var10++) {
               incrementValue$4 = var8;
@@ -3142,7 +3142,7 @@ final class sfa extends ha {
               if (var11 != 0 &&
                 var11 != 255) {
                 var7 = 1;
-                break L1;
+                break scanLoop1;
               }
             }
             var9++;

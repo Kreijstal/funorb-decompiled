@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ob extends vg {
+abstract class ob extends IntrusiveNode {
     float field_j;
     static int field_i;
     int field_h;
@@ -31,7 +31,7 @@ abstract class ob extends vg {
 
     abstract void a(byte param0, float param1);
 
-    final static void a(ha param0, int param1) {
+    final static void a(GraphicsToolkit param0, int param1) {
         int[] var13 = null;
         int[] var12 = null;
         int[] var3 = null;
@@ -47,13 +47,13 @@ abstract class ob extends vg {
         int var2_intLifetime1;
         int var2_intLifetime2;
         tp.field_K = su.a(rva.field_v, param0, (byte) 127);
-        la.field_p = new nh[6][];
+        Room.field_p = new nh[6][];
         if (param1 != 17186) {
           return;
         }
         try {
           for (var2_int = 0; var2_int < 6; var2_int++) {
-            la.field_p[var2_int] = ak.a(param0, eta.field_a[var2_int], -82);
+            Room.field_p[var2_int] = ak.a(param0, eta.field_a[var2_int], -82);
           }
           ng.field_k = new nh[6];
           em.field_h = new nh[6];
@@ -70,7 +70,7 @@ abstract class ob extends vg {
           po.field_l = su.a(wd.field_c, param0, (byte) 25);
           lh.field_b = su.a(lha.field_l, param0, (byte) 127);
           vua.field_A = su.a(wj.field_a, param0, (byte) 126);
-          dn.field_d = ak.a(param0, qb.field_e, -100);
+          dn.field_d = ak.a(param0, ProxySocketConnector.field_e, -100);
           ufa.field_r = ak.a(param0, via.field_a, param1 ^ -17261);
           bm.field_f = ak.a(param0, gda.field_d, -112);
           ega.field_e = su.a(nm.field_i, param0, (byte) 126);
@@ -80,7 +80,7 @@ abstract class ob extends vg {
           id.field_h = ak.a(param0, tba.field_f, -70);
           lva.field_m = ak.a(param0, ng.field_f, -77);
           su.a(ds.field_g, param0, (byte) 126);
-          za.field_g = su.a(jga.field_b, param0, (byte) -50);
+          za.field_g = su.a(TextResourceLoader.field_b, param0, (byte) -50);
           bca.field_d = su.a(sla.field_a, param0, (byte) -38);
           rm.field_c = su.a(gv.field_s, param0, (byte) 126);
           uda.field_r = su.a(aa.field_a, param0, (byte) 125);
@@ -120,15 +120,15 @@ abstract class ob extends vg {
           su.a(aw.field_F, param0, (byte) -2);
           gca.field_a = su.a(rp.field_f, param0, (byte) 126);
           ng.field_b = ak.a(param0, qka.field_o, param1 - 17309);
-          vna.field_c = su.a(ko.field_j, param0, (byte) -95);
+          IntrusiveDeque.field_c = su.a(ko.field_j, param0, (byte) -95);
           tka.field_p = su.a(ht.field_Db, param0, (byte) 27);
-          ep.field_n = su.a(oea.field_j, param0, (byte) -37);
+          Projectile.field_n = su.a(oea.field_j, param0, (byte) -37);
           wh.field_y = su.a(cn.field_h, param0, (byte) 127);
           haa.field_z = su.a(re.field_a, param0, (byte) 126);
           aq.field_a = ak.a(param0, mna.field_c, -55);
           mc.field_r = su.a(fm.field_h, param0, (byte) 127);
           dp.field_d = ri.a(param0, (byte) -105, haa.field_A.field_f);
-          la.field_j = ri.a(param0, (byte) -104, du.field_c.field_f);
+          Room.field_j = ri.a(param0, (byte) -104, du.field_c.field_f);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ob.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

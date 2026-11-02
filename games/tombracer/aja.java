@@ -6,13 +6,13 @@ final class aja extends lea {
     static int field_H;
     static String field_I;
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         ue var5 = null;
         mfa var6 = null;
         kga var7 = null;
-        fsa stackIn_1_0 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -21,7 +21,7 @@ final class aja extends lea {
           var4 = super.a(param0, param1, param2);
           var5 = new ue(param2, param0);
           var5.a(2, false);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kga) (var6.a(12, 125));
           var7.b((byte) 123, 1);
@@ -42,7 +42,7 @@ final class aja extends lea {
         }
     }
 
-    aja(la param0, int param1, kh param2, csa param3) {
+    aja(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -91,7 +91,7 @@ final class aja extends lea {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        vna var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         pha var18_ref = null;
@@ -128,7 +128,7 @@ final class aja extends lea {
               var9 = (2 + dka.field_b.field_G) / 2;
               pk.field_z.a(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
               if (uu.field_a.field_Mb >= uu.field_a.field_Jb) {
-                pk.field_z.field_r = ml.field_c.toUpperCase();
+                pk.field_z.field_r = RandomAccessFileHandle.field_c.toUpperCase();
                 pk.field_z.field_X = false;
                 if (var19 != 0) {
                   pk.field_z.field_r = eu.field_b.toUpperCase();
@@ -175,12 +175,12 @@ final class aja extends lea {
                   sda.field_f[var11] = false;
                   var11++;
                 } while (var19 == 0);
-                L17: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11 = 0;
                     stackIn_66_0 = 0;
                     if (var19 != 0) {
-                      break L17;
+                      break scanLoop1;
                     }
                     var12 = stackIn_66_0;
                     while (true) {
@@ -193,7 +193,7 @@ final class aja extends lea {
                         var13_ref_int__ = var20;
                         stackIn_62_0 = 0;
                         var14 = stackIn_62_0;
-                        L24: while (true) {
+                        scanLoop2: while (true) {
                           if (var25.length > var14) {
                             var15 = var25[var14];
                             var16 = var20[1 + var14];
@@ -208,11 +208,11 @@ final class aja extends lea {
                               var17_int = stackIn_47_0;
                               if (~var17_int != ~var16 &&
                                 var19 == 0) {
-                                break L24;
+                                break scanLoop2;
                               }
                             } else {
                               if (~var16 != ~(255 & uu.field_a.field_ac[var15])) {
-                                break L24;
+                                break scanLoop2;
                               }
                             }
                             var14 += 2;
@@ -367,14 +367,14 @@ final class aja extends lea {
                 }
                 var17 = tn.field_n.field_tb.field_J;
                 var18_ref = (pha) (var17.f(param1 - 79));
-                L54: while (true) {
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
                     stackOut_126_0 = var18_ref.f(162);
                     stackIn_145_0 = stackOut_126_0 ? 1 : 0;
                     stackIn_127_0 = stackOut_126_0;
                     if (var19 != 0) {
-                      break L54;
+                      break scanLoop3;
                     }
                     if (!stackIn_127_0 ||
                       var19 != 0) {
@@ -424,12 +424,12 @@ final class aja extends lea {
                   hw.field_a.field_X = false;
                   if (hw.field_a.field_pb) {
                     if (rm.field_e.field_a.field_wb != 0) {
-                      qda.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(126, sta.field_A, new String[]{kh.field_p});
+                      qda.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(126, sta.field_A, new String[]{BitPacketBuffer.field_p});
                       if (var19 != 0) {
-                        qda.field_b = kh.field_o;
+                        qda.field_b = BitPacketBuffer.field_o;
                       }
                     } else {
-                      qda.field_b = kh.field_o;
+                      qda.field_b = BitPacketBuffer.field_o;
                     }
                   }
                 }
@@ -454,7 +454,7 @@ final class aja extends lea {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(97, he.field_b, new String[]{Integer.toString(var9)});
+              var8.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(97, DelegatingCanvas.field_b, new String[]{Integer.toString(var9)});
             }
             cea.field_a.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(106, tra.field_A, new String[]{Integer.toString(uu.field_a.field_Mb), Integer.toString(uu.field_a.field_Jb)});
           }
@@ -484,7 +484,7 @@ final class aja extends lea {
             if (pk.field_z.field_y != 0) {
               tla.field_e = true;
             }
-            if (fsa.field_q.field_y != 0) {
+            if (Trap.field_q.field_y != 0) {
               tla.field_e = false;
             }
             cm.a(param2, uu.field_a, param1 ^ 21289, false);
@@ -505,7 +505,7 @@ final class aja extends lea {
         field_G = null;
     }
 
-    aja(la param0, int param1) {
+    aja(Room param0, int param1) {
         super(param0, param1);
     }
 

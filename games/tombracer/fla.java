@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fla extends vg {
+final class fla extends IntrusiveNode {
     private int field_j;
     private int field_m;
     private int field_l;
@@ -10,7 +10,7 @@ final class fla extends vg {
     private int field_g;
     vb field_i;
     int field_h;
-    static vna field_f;
+    static IntrusiveDeque field_f;
 
     final void a(w param0, byte param1) {
         try {
@@ -20,7 +20,7 @@ final class fla extends vg {
           if (!(0 >= param0.field_i[this.field_l])) {
             param0.field_i[this.field_l] = param0.field_i[this.field_l] - 1;
           }
-          this.p(25);
+          this.unlink(25);
           rs.a(this, -110);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fla.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -57,7 +57,7 @@ final class fla extends vg {
             this.a(-91, param1);
             return;
           }
-          if (this.field_i.l((byte) 103)) {
+          if (this.field_i.isLinked((byte) 103)) {
             return;
           }
           this.a(-91, param1);
@@ -79,7 +79,7 @@ final class fla extends vg {
     public static void a(int param0) {
         field_f = null;
         if (param0 != 0) {
-          field_f = (vna) null;
+          field_f = (IntrusiveDeque) null;
         }
     }
 
@@ -115,7 +115,7 @@ final class fla extends vg {
           if (!(0 >= param1.field_i[this.field_l])) {
             param1.field_i[this.field_l] = param1.field_i[this.field_l] - 1;
           }
-          this.p(18);
+          this.unlink(18);
           rs.a(this, -77);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fla.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

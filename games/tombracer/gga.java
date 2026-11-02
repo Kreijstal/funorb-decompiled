@@ -119,7 +119,7 @@ final class gga extends ofa implements tsa {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          hca.field_W.c(15 + var3, 10 + var4, var5 * var7Lifetime1 >> 8);
+          Player.field_W.c(15 + var3, 10 + var4, var5 * var7Lifetime1 >> 8);
         }
     }
 
@@ -187,7 +187,7 @@ final class gga extends ofa implements tsa {
           var4.field_i = 0;
           var4.field_r = (isa) ((Object) new vpa(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, -1);
-          this.field_N = this.a(kh.field_j, (qc) (this), -93);
+          this.field_N = this.a(BitPacketBuffer.field_j, (qc) (this), -93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

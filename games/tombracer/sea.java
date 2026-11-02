@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sea extends nv {
+final class sea extends Behaviour {
     static String field_q;
     static String field_o;
     private aia[] field_n;
@@ -72,7 +72,7 @@ final class sea extends nv {
         }
     }
 
-    final int a(int param0, ep param1, up param2) {
+    final int a(int param0, Projectile param1, up param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
@@ -116,7 +116,7 @@ final class sea extends nv {
         return this.field_n[param1];
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           this.d(param0);
@@ -216,7 +216,7 @@ final class sea extends nv {
         }
     }
 
-    sea(la param0, boolean param1) {
+    sea(Room param0, boolean param1) {
         super(param0, param1);
     }
 
@@ -263,7 +263,7 @@ final class sea extends nv {
     final int c(int param0) {
         if (param0 != 3) {
           up var3 = (up) null;
-          this.a(-115, (ep) null, (up) null);
+          this.a(-115, (Projectile) null, (up) null);
         }
         return this.field_n.length;
     }
@@ -404,7 +404,7 @@ final class sea extends nv {
         return param0 & param1;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -420,7 +420,7 @@ final class sea extends nv {
         return true;
     }
 
-    sea(la param0, kh param1, boolean param2) {
+    sea(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
     }
 

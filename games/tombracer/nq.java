@@ -10,24 +10,24 @@ final class nq extends cda {
         }
     }
 
-    nq(int param0, la param1, kh param2) {
+    nq(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         try {
           super.a(124, param1, param2);
           this.field_w = param2.b((byte) 44, 4);
           if (param0 < 119) {
-            kh var5 = (kh) null;
-            this.a((byte) -7, (kh) null);
+            BitPacketBuffer var5 = (BitPacketBuffer) null;
+            this.a((byte) -7, (BitPacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nq.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) 44, param1);
           int var3_int = 113 / ((param0 + 8) / 40);

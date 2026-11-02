@@ -39,7 +39,7 @@ final class lva extends ci {
         }
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int dupTemp$0 = 0;
         boolean stackIn_16_1 = false;
         RuntimeException stackIn_31_0 = null;
@@ -128,7 +128,7 @@ final class lva extends ci {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        uia var20 = null;
+        PacketBuffer var20 = null;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
           var5 = sj.field_b[param2] * this.field_w;
@@ -220,8 +220,8 @@ final class lva extends ci {
             }
           }
           if (param1 != -1) {
-            var20 = (uia) null;
-            this.a((byte) 111, (uia) null, 5);
+            var20 = (PacketBuffer) null;
+            this.a((byte) 111, (PacketBuffer) null, 5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

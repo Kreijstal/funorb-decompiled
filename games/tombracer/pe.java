@@ -7,12 +7,12 @@ final class pe extends tfa implements gf {
     private int field_l;
     private int field_n;
 
-    final static String[] a(uia param0, byte param1) {
+    final static String[] a(PacketBuffer param0, byte param1) {
         int var4 = 0;
         int var5 = 0;
-        vna var6 = null;
+        IntrusiveDeque var6 = null;
         String[] stackIn_3_0 = null;
-        uia stackIn_6_0 = null;
+        PacketBuffer stackIn_6_0 = null;
         String[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -23,19 +23,19 @@ final class pe extends tfa implements gf {
         String[] var3 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          var6 = new vna();
+          var6 = new IntrusiveDeque();
           if (param1 < 32) {
             stackIn_3_0 = (String[]) null;
             return stackIn_3_0;
           }
-          stackIn_6_0 = (uia) (param0);
-          while (stackIn_6_0.field_h < param0.field_g.length) {
+          stackIn_6_0 = (PacketBuffer) (param0);
+          while (stackIn_6_0.position < param0.payload.length) {
             var3_int = w.a(param0, -58, var6);
             if (!qqa.a(param0, mga.field_j, var3_int, true)) {
-              stackIn_6_0 = (uia) (param0);
+              stackIn_6_0 = (PacketBuffer) (param0);
               continue;
             }
-            param0.field_h = param0.field_h + (mga.field_j.length - 1);
+            param0.position = param0.position + (mga.field_j.length - 1);
             break;
           }
           var3 = new String[var6.a((byte) -16)];
@@ -64,7 +64,7 @@ final class pe extends tfa implements gf {
           this.field_l = param3;
           this.field_n = param4;
           this.field_j.a(true, (iva) (this));
-          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(78), param3, param4, 0, waa.a(this.field_f, 1383), lr.a(this.field_a, 5126), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(78), param3, param4, 0, waa.a(this.field_f, 1383), ClientException.a(this.field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

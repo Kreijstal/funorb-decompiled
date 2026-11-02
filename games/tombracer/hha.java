@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class hha extends od {
+abstract class hha extends DualLinkNode {
     volatile boolean field_m;
     boolean field_l;
     boolean field_k;

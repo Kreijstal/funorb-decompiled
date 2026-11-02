@@ -16,7 +16,7 @@ final class ni {
         }
     }
 
-    final static void a(uia param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;

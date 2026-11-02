@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eia extends nv implements ut {
+final class eia extends Behaviour implements ut {
     private int field_v;
     private int field_n;
     private int field_w;
@@ -13,7 +13,7 @@ final class eia extends nv implements ut {
     static String field_o;
     private int field_p;
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         super.a(param0, param1);
         this.field_q.a(this.h((byte) 116), (byte) 111, param1);
         param1.a((byte) 42, this.field_w, 8);
@@ -45,8 +45,8 @@ final class eia extends nv implements ut {
 
     final int a(int param0, int param1) {
         if (param1 > -48) {
-          fsa var4 = (fsa) null;
-          this.a(false, (fsa) null);
+          Trap var4 = (Trap) null;
+          this.a(false, (Trap) null);
         }
         param0 = fs.a((byte) 87, param0, this.field_s);
         param0 = fs.a((byte) 82, param0, this.field_p);
@@ -66,8 +66,8 @@ final class eia extends nv implements ut {
         super.g(param0 ^ 0);
         this.field_q.a((byte) 48, this.h((byte) 110));
         if (param0 != -2) {
-          kh var3 = (kh) null;
-          this.a(false, (kh) null);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a(false, (BitPacketBuffer) null);
         }
     }
 
@@ -106,7 +106,7 @@ final class eia extends nv implements ut {
         return true;
     }
 
-    eia(la param0, kh param1, boolean param2) {
+    eia(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         int var8 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -201,7 +201,7 @@ final class eia extends nv implements ut {
         }
     }
 
-    final int a(int param0, ep param1, up param2) {
+    final int a(int param0, Projectile param1, up param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -291,7 +291,7 @@ final class eia extends nv implements ut {
     public final int j(byte param0) {
         if (param0 != -108) {
           up var3 = (up) null;
-          this.a(-122, (ep) null, (up) null);
+          this.a(-122, (Projectile) null, (up) null);
         }
         return this.field_s;
     }
@@ -319,7 +319,7 @@ final class eia extends nv implements ut {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -379,7 +379,7 @@ final class eia extends nv implements ut {
         }
     }
 
-    eia(la param0, boolean param1) {
+    eia(Room param0, boolean param1) {
         super(param0, param1);
         this.field_s = 0;
         try {

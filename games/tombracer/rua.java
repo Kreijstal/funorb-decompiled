@@ -167,12 +167,12 @@ final class rua extends ij implements tsa {
         }
     }
 
-    final static ha a(boolean param0, d param1, cn param2, java.awt.Canvas param3, int param4) {
+    final static GraphicsToolkit a(boolean param0, d param1, cn param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
         kda var8 = null;
         jaggl.OpenGL var9 = null;
-        ha stackIn_8_0 = null;
+        GraphicsToolkit stackIn_8_0 = null;
         kda stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -195,13 +195,13 @@ final class rua extends ij implements tsa {
             throw new RuntimeException("");
           }
           if (!param0) {
-            stackIn_8_0 = (ha) null;
+            stackIn_8_0 = (GraphicsToolkit) null;
             return stackIn_8_0;
           }
           var8 = new kda(var9, param3, var6, param1, param2, param4);
           var8.K(-74);
           stackIn_10_0 = var8;
-          return (ha) ((Object) stackIn_10_0);
+          return (GraphicsToolkit) ((Object) stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

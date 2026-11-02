@@ -24,7 +24,7 @@ abstract class lu {
             al.field_h = param1;
             if (oh.field_o == 0 &&
               0 < param0) {
-              jla.field_z = new vna();
+              jla.field_z = new IntrusiveDeque();
             } else {
               if (param0 == 0) {
                 jla.field_z = null;
@@ -39,7 +39,7 @@ abstract class lu {
               }
             } else {
               if (0 < param0) {
-                jla.field_z = new vna();
+                jla.field_z = new IntrusiveDeque();
               } else {
                 if (param0 == 0) {
                   jla.field_z = null;
@@ -49,12 +49,12 @@ abstract class lu {
           }
         } else {
           if (param3 > 0) {
-            vn.field_a = new vna();
+            vn.field_a = new IntrusiveDeque();
             ga.field_H = param3;
             al.field_h = param1;
             if (oh.field_o == 0 &&
               0 < param0) {
-              jla.field_z = new vna();
+              jla.field_z = new IntrusiveDeque();
             } else {
               if (param0 == 0) {
                 jla.field_z = null;
@@ -72,7 +72,7 @@ abstract class lu {
               }
             } else {
               if (0 < param0) {
-                jla.field_z = new vna();
+                jla.field_z = new IntrusiveDeque();
               } else {
                 if (param0 == 0) {
                   jla.field_z = null;
@@ -85,7 +85,7 @@ abstract class lu {
         oh.field_o = param0;
     }
 
-    abstract void a(uia param0, boolean param1);
+    abstract void a(PacketBuffer param0, boolean param1);
 
     static {
         field_c = "<%0> has resigned.";

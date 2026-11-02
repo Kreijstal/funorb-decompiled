@@ -274,7 +274,7 @@ final class kra {
           var7_int = 0;
           param2 = param2 + param4;
           var8 = param0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             var9 = param3[var8];
             if (0 <= var9) {
               var7_int++;
@@ -288,7 +288,7 @@ final class kra {
               param4++;
               param5[incrementValue$1] = (byte)(~var10);
               if (param2 <= param4) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -304,7 +304,7 @@ final class kra {
               param4++;
               param5[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param4 >= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -320,7 +320,7 @@ final class kra {
               param4++;
               param5[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param4 >= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -336,7 +336,7 @@ final class kra {
               param4++;
               param5[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param4 >= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -352,7 +352,7 @@ final class kra {
               param4++;
               param5[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param4 >= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -368,7 +368,7 @@ final class kra {
               param4++;
               param5[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param4 >= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -400,7 +400,7 @@ final class kra {
               param4++;
               param5[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param4 >= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }

@@ -13,21 +13,21 @@ final class jf extends ela {
         super(param0, param1, param2);
     }
 
-    final static iu a(int param0, int param1, int param2) {
+    final static Sprite a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
-        iu var6 = new iu(param2, param2);
-        iu var3 = var6;
+        Sprite var6 = new Sprite(param2, param2);
+        Sprite var3 = var6;
         int var4Lifetime1;
         if (param1 > 36) {
-          for (var4 = 0; var3.field_r.length > var4; var4++) {
-            var6.field_r[var4] = param0;
+          for (var4 = 0; var3.pixels.length > var4; var4++) {
+            var6.pixels[var4] = param0;
           }
           return var3;
         }
         jf.a(44, 69, 69);
-        for (var4Lifetime1 = 0; var3.field_r.length > var4Lifetime1; var4Lifetime1++) {
-          var6.field_r[var4Lifetime1] = param0;
+        for (var4Lifetime1 = 0; var3.pixels.length > var4Lifetime1; var4Lifetime1++) {
+          var6.pixels[var4Lifetime1] = param0;
         }
         return var3;
     }

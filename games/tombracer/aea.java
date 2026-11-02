@@ -4,11 +4,11 @@
 final class aea extends hn {
     private int field_K;
 
-    aea(la param0, int param1) {
+    aea(Room param0, int param1) {
         super(param0, param1);
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -125, this.field_K, 4);
@@ -96,8 +96,8 @@ final class aea extends hn {
 
     final boolean D(int param0) {
         if (param0 != 0) {
-          la var3 = (la) null;
-          this.a((la) null, false, false);
+          Room var3 = (Room) null;
+          this.a((Room) null, false, false);
           return true;
         }
         return true;
@@ -111,7 +111,7 @@ final class aea extends hn {
         return true;
     }
 
-    aea(la param0, int param1, kh param2, csa param3) {
+    aea(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
           this.field_K = param2.b((byte) 44, 4);
@@ -120,23 +120,23 @@ final class aea extends hn {
         }
     }
 
-    final fsa a(la param0, boolean param1, boolean param2) {
-        fsa var4 = null;
+    final Trap a(Room param0, boolean param1, boolean param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         lpa var5 = null;
         mfa var6 = null;
         ce var7 = null;
-        fsa stackIn_1_0 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param0, param2);
+          var4 = new Trap(param0, param2);
           var4.b((byte) -11, 2097152, 2097152);
           var5 = new lpa(param0, param1);
           var5.b(-5, this.field_K);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (ce) (var6.a(17, 102));
           var7.b(0, (byte) 23);
@@ -157,9 +157,9 @@ final class aea extends hn {
         }
     }
 
-    final fsa a(int param0, boolean param1, la param2) {
+    final Trap a(int param0, boolean param1, Room param2) {
         RuntimeException var4 = null;
-        fsa stackIn_3_0 = null;
+        Trap stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -168,7 +168,7 @@ final class aea extends hn {
           if (param0 == 5) {
             return null;
           }
-          stackIn_3_0 = (fsa) null;
+          stackIn_3_0 = (Trap) null;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

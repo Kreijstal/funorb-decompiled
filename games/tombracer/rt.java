@@ -145,7 +145,7 @@ class rt extends kl {
         this.field_l = -71;
     }
 
-    rt(cka param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
+    rt(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
         super(param0, param1, param2, param4 * param3, param5);
         int stackIn_13_0 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -233,7 +233,7 @@ class rt extends kl {
         }
     }
 
-    rt(cka param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
+    rt(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
         super(param0, param1, param2, param3 * param4, param5);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_9_0 = null;
@@ -281,7 +281,7 @@ class rt extends kl {
         }
     }
 
-    rt(cka param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
+    rt(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
         super(param0, param1, param2, param4 * param3, param5);
         int stackIn_13_0 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -367,7 +367,7 @@ class rt extends kl {
         }
     }
 
-    rt(cka param0, int param1, int param2, int param3, int param4) {
+    rt(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
         super(param0, param1, param2, param3 * param4, false);
         this.field_q = -1;
         this.field_m = -1;

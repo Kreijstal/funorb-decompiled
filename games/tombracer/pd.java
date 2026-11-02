@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pd extends nv {
+abstract class pd extends Behaviour {
     private boolean field_n;
     private boolean field_o;
     private int field_q;
     private int field_r;
     static int[] field_p;
 
-    void a(boolean param0, kh param1) {
+    void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -128, this.field_q / 50, 8);
@@ -32,13 +32,13 @@ abstract class pd extends nv {
           param0 = fs.a((byte) 37, param0, this.field_r);
           return param0;
         }
-        hca var4 = (hca) null;
-        this.a(-22, (hca) null);
+        Player var4 = (Player) null;
+        this.a(-22, (Player) null);
         param0 = fs.a((byte) 37, param0, this.field_r);
         return param0;
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -58,18 +58,18 @@ abstract class pd extends nv {
         }
     }
 
-    abstract boolean a(int param0, hca param1);
+    abstract boolean a(int param0, Player param1);
 
     final void k(int param0) {
-        hca var3;
-        hca var4;
-        hca var5;
-        hca var6;
-        hca var7;
-        hca var8;
-        hca var9;
-        hca var10;
-        hca var3Lifetime1;
+        Player var3;
+        Player var4;
+        Player var5;
+        Player var6;
+        Player var7;
+        Player var8;
+        Player var9;
+        Player var10;
+        Player var3Lifetime1;
         if (param0 != 5418) {
           this.field_r = -20;
           if (!this.field_o) {
@@ -280,7 +280,7 @@ abstract class pd extends nv {
         }
     }
 
-    pd(la param0, boolean param1) {
+    pd(Room param0, boolean param1) {
         super(param0, param1);
         this.field_o = false;
         this.field_n = false;
@@ -298,7 +298,7 @@ abstract class pd extends nv {
         field_p = null;
     }
 
-    pd(la param0, kh param1, boolean param2) {
+    pd(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_o = false;
         this.field_n = false;
@@ -311,8 +311,8 @@ abstract class pd extends nv {
     }
 
     final static void a(byte param0, int param1) {
-        kh var2 = null;
-        kh var2Lifetime1;
+        BitPacketBuffer var2 = null;
+        BitPacketBuffer var2Lifetime1;
         if (param0 == 34) {
           var2 = ql.field_k;
           var2.k(param1, param0 - 3022);

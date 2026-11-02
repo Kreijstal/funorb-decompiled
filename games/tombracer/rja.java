@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rja extends loa {
+final class rja extends MazeGenerator {
     static String field_c;
     static String field_b;
     static int field_e;
-    private vna field_d;
+    private IntrusiveDeque field_d;
 
     private final void a(hj param0, int param1, int param2, int param3) {
         RuntimeException stackIn_17_0 = null;
@@ -31,7 +31,7 @@ final class rja extends loa {
             if (this.field_d.d((byte) 14)) {
               return;
             }
-            var6 = this.field_a.a(this.field_d.a((byte) -16), 0);
+            var6 = this.random.a(this.field_d.a((byte) -16), 0);
             var7 = 0;
             var5 = (oda) (this.field_d.f(-80));
             while (var6 != var7) {
@@ -56,7 +56,7 @@ final class rja extends loa {
                 0 == param0.b((byte) -5, var14, var13)) {
                 this.a(var10, (byte) -42, param0, var9, var14, var13);
                 this.a(param3 + 0, param0, var9, var10);
-                var5.p(param3 ^ 30);
+                var5.unlink(param3 ^ 30);
                 var11 = 1;
               }
               var12++;
@@ -107,7 +107,7 @@ final class rja extends loa {
         }
     }
 
-    rja(qea param0) {
+    rja(IsaacCipher param0) {
         super(param0);
     }
 
@@ -135,7 +135,7 @@ final class rja extends loa {
     }
 
     final void a(int param0, int param1, hj param2, int param3) {
-        this.field_d = new vna();
+        this.field_d = new IntrusiveDeque();
         if (param1 < 73) {
           return;
         }

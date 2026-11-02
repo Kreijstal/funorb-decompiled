@@ -100,8 +100,8 @@ final class pk extends we {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, String param5) {
-        da var11 = null;
-        da var12 = null;
+        GameFont var11 = null;
+        GameFont var12 = null;
         String var8 = null;
         String var10 = null;
         try {
@@ -232,7 +232,7 @@ final class pk extends we {
         var5Lifetime1 = null;
         var6Lifetime1 = this.field_E;
         if (var6Lifetime1 == 0) {
-          var5Lifetime1 = dt.field_n;
+          var5Lifetime1 = PlayerSimulation.field_n;
         } else {
           if (var6Lifetime1 == 1) {
             var5Lifetime1 = kt.field_H;

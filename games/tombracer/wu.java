@@ -21,7 +21,7 @@ final class wu implements mfa {
         }
     }
 
-    public final dg a(la param0, kh param1, boolean param2) {
+    public final dg a(Room param0, BitPacketBuffer param1, boolean param2) {
         ria stackIn_41_0 = null;
         ioa stackIn_43_0 = null;
         am stackIn_45_0 = null;
@@ -162,7 +162,7 @@ final class wu implements mfa {
         }
     }
 
-    public final void a(int param0, kh param1, dg param2) {
+    public final void a(int param0, BitPacketBuffer param1, dg param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -227,12 +227,12 @@ final class wu implements mfa {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        kh var5 = null;
+        BitPacketBuffer var5 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 < 73) {
-            var5 = (kh) null;
-            this.a((la) null, (kh) null, false);
+            var5 = (BitPacketBuffer) null;
+            this.a((Room) null, (BitPacketBuffer) null, false);
           }
           var3_int = param0;
           if (var3_int == 1) {
@@ -388,7 +388,7 @@ final class wu implements mfa {
           boolean decompiledFrameRemainder0 = true;
           var4_int = 0;
           if (!(param1 instanceof db)) {
-            if (param1 instanceof fsa) {
+            if (param1 instanceof Trap) {
               if (param0 instanceof sea) {
                 var4_int = 13;
               } else {
@@ -401,7 +401,7 @@ final class wu implements mfa {
                     if (!(param0 instanceof pd)) {
                       if (!(param0 instanceof mra)) {
                         if (param0 instanceof eq &&
-                          ((fsa) (param1)).d(true)) {
+                          ((Trap) (param1)).d(true)) {
                           var4_int = 16;
                         } else {
                           if (!(param0 instanceof rh) &&

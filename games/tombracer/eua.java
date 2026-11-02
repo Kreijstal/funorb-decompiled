@@ -40,7 +40,7 @@ final class eua extends jea {
         }
         if (null != this.field_Eb) {
           this.field_Eb.a(param0);
-          this.field_Eb.p(1);
+          this.field_Eb.unlink(1);
         }
         this.field_Eb = null;
         this.field_tb = -1;
@@ -136,7 +136,7 @@ final class eua extends jea {
               -1 == this.field_ub[var13]) {
               var14 = gfa.field_j;
             }
-            this.field_Gb[var13] = new tv(0L, param2, (jea) null, param3, (iu) (var14), param6[var13]);
+            this.field_Gb[var13] = new tv(0L, param2, (jea) null, param3, (Sprite) (var14), param6[var13]);
             this.b(-123, this.field_Gb[var13]);
             var15 = var17.b(param6[var13]);
             if (this.field_vb < var15) {
@@ -222,7 +222,7 @@ final class eua extends jea {
                 var6 = 1;
               }
               if (gda.a(var6, -20011) == 2) {
-                loa.a(var6, param0, (byte) 108, 1);
+                MazeGenerator.a(var6, param0, (byte) 108, 1);
               }
               var8 = (String) null;
               opa.a(bta.field_q, (String) null, param1, 32371, wp.field_a, var5);

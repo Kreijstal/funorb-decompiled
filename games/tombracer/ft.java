@@ -122,19 +122,19 @@ final class ft {
           var21Lifetime1 = param2[0] - param3[0];
           var22Lifetime1 = -param3[1] + param2[1];
           var23Lifetime1 = -param3[2] + param2[2];
-          var9 = param3[5] * var23Lifetime1 + (param3[3] * var21Lifetime1 + param3[4] * var22Lifetime1) >> -hma.field_a + 16;
-          var10 = param3[8] * var23Lifetime1 + (param3[6] * var21Lifetime1 + param3[7] * var22Lifetime1) >> 16 - hma.field_a;
+          var9 = param3[5] * var23Lifetime1 + (param3[3] * var21Lifetime1 + param3[4] * var22Lifetime1) >> -SecondaryNodeDeque.field_a + 16;
+          var10 = param3[8] * var23Lifetime1 + (param3[6] * var21Lifetime1 + param3[7] * var22Lifetime1) >> 16 - SecondaryNodeDeque.field_a;
           var11 = param3[10] * var22Lifetime1 + var21Lifetime1 * param3[9] + var23Lifetime1 * param3[11] >> 16;
           var21Lifetime2 = uoa.field_f;
           var22Lifetime2 = uoa.field_g;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param0.field_I > var23Lifetime2) {
               var24Lifetime1 = param0.field_l[var23Lifetime2];
               var25Lifetime1 = param0.field_h[var23Lifetime2];
               var26Lifetime1 = param0.field_t[var23Lifetime2];
-              var27Lifetime1 = var9 + (var24Lifetime1 * var12 + var15 * var25Lifetime1 + var18 * var26Lifetime1 >> -hma.field_a + 16);
-              var28Lifetime1 = var10 + (var13 * var24Lifetime1 - (-(var16 * var25Lifetime1) - var19 * var26Lifetime1) >> 16 - hma.field_a);
+              var27Lifetime1 = var9 + (var24Lifetime1 * var12 + var15 * var25Lifetime1 + var18 * var26Lifetime1 >> -SecondaryNodeDeque.field_a + 16);
+              var28Lifetime1 = var10 + (var13 * var24Lifetime1 - (-(var16 * var25Lifetime1) - var19 * var26Lifetime1) >> 16 - SecondaryNodeDeque.field_a);
               var29Lifetime1 = (var25Lifetime1 * var17 + (var24Lifetime1 * var14 + var20 * var26Lifetime1) >> 16) + var11;
               stackIn_69_0 = ~var29Lifetime1;
               stackIn_69_1 = -51;
@@ -153,8 +153,8 @@ final class ft {
                   wp.field_c[var23Lifetime2] = var29Lifetime1;
                 }
                 if (param6) {
-                  bma.field_p[var23Lifetime2] = var27Lifetime1 >> hma.field_a;
-                  ipa.field_M[var23Lifetime2] = var28Lifetime1 >> hma.field_a;
+                  bma.field_p[var23Lifetime2] = var27Lifetime1 >> SecondaryNodeDeque.field_a;
+                  ipa.field_M[var23Lifetime2] = var28Lifetime1 >> SecondaryNodeDeque.field_a;
                   iia.field_v[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -182,7 +182,7 @@ final class ft {
                   var25Lifetime1 = param0.field_G[var23Lifetime2];
                   var26Lifetime1 = param0.field_J[var23Lifetime2];
                   fva.field_c[var23Lifetime2] = var9 + (var25Lifetime1 * var15 + var24Lifetime1 * var12 + var18 * var26Lifetime1 >> 16);
-                  hma.field_f[var23Lifetime2] = (var25Lifetime1 * var16 + var13 * var24Lifetime1 + var26Lifetime1 * var19 >> 16) + var10;
+                  SecondaryNodeDeque.field_f[var23Lifetime2] = (var25Lifetime1 * var16 + var13 * var24Lifetime1 + var26Lifetime1 * var19 >> 16) + var10;
                   gv.field_q[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + (var25Lifetime1 * var17 + var14 * var24Lifetime1) >> 16);
                   var24Lifetime1 = param0.field_E[var23Lifetime2];
                   var25Lifetime1 = param0.field_v[var23Lifetime2];
@@ -211,7 +211,7 @@ final class ft {
                   stackIn_69_0 = ~ada.field_y.length;
                   stackIn_69_1 = ~var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_69_0 >= stackIn_69_1) {
                     break;
@@ -268,7 +268,7 @@ final class ft {
           if (~vga.field_n.a((byte) -16) > param1) {
             vga.field_n.b((byte) -90, param0);
           }
-          param0.c(param1 ^ 8174);
+          param0.unlinkSecondary(param1 ^ 8174);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

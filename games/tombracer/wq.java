@@ -164,7 +164,7 @@ final class wq implements ms {
         }
     }
 
-    final static int a(String param0, uia param1, int param2) {
+    final static int a(String param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -177,12 +177,12 @@ final class wq implements ms {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param1.field_h;
+          var3_int = param1.position;
           var5 = (CharSequence) ((Object) param0);
           var4 = us.a(var5, false);
           param1.c(var4.length, (byte) 111);
-          param1.field_h = param1.field_h + nma.field_m.a((byte) -109, param1.field_g, param2, param1.field_h, var4.length, var4);
-          stackIn_1_0 = param1.field_h - var3_int;
+          param1.position = param1.position + nma.field_m.a((byte) -109, param1.payload, param2, param1.position, var4.length, var4);
+          stackIn_1_0 = param1.position - var3_int;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

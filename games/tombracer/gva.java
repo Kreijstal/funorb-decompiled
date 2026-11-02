@@ -82,7 +82,7 @@ final class gva implements mb {
           if (param1 != -27) {
             return;
           }
-          L1: {
+          regionExit1: {
             boolean decompiledFrameRemainder5 = true;
             boolean decompiledFrameRemainder4 = true;
             boolean decompiledFrameRemainder3 = true;
@@ -108,7 +108,7 @@ final class gva implements mb {
                 var29 == 0) {
                 var25_ref_ka = wma.a(4, 12166, 7);
                 gqa.a(dfa.a(-(param2.f((byte) -127) >> 2), 2048, -81), -83584144, var6, var5, var25_ref_ka, -393216 + var7);
-                break L1;
+                break regionExit1;
               } else if (var26 != 14 ||
                 var29 != 0) {
                 if (9 == var26 &&
@@ -122,20 +122,20 @@ final class gva implements mb {
                     if ((var26 != 15)) {
                       if (var26 == 16) {
                         if (var10 == 0) {
-                          break L1;
+                          break regionExit1;
                         }
                         var19 = ufa.field_r[1];
                         var20 = var16 * 512 * var12 / (var19.d() * var10);
                         var19.a((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, -61), 0, var18, 1);
                         if (var29 == 0) {
-                          break L1;
+                          break regionExit1;
                         }
                       }
                       var23 = ufa.field_d;
                     }
                   }
                 }
-                break L1;
+                break regionExit1;
               }
               var24Lifetime1 = null;
               if (var22 >= 33) {
@@ -148,7 +148,7 @@ final class gva implements mb {
                 var24_ref = koa.field_b[5];
               }
               gqa.a(dfa.a(-(param2.f((byte) -127) >> 2), 2048, 69), -83584144, var6, var5, var24_ref, var7);
-              break L1;
+              break regionExit1;
             }
             if ((decompiledFrameRemainder5) &&
               (decompiledFrameRemainder4) &&
@@ -164,7 +164,7 @@ final class gva implements mb {
               var28.a(-1, 10, 30, var26Lifetime2);
               gqa.a(dfa.a(-(param2.f((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
               if (var29 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder5) &&
@@ -173,13 +173,13 @@ final class gva implements mb {
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
               if (var10 == 0) {
-                break L1;
+                break regionExit1;
               }
-              var19 = la.field_p[1][0];
+              var19 = Room.field_p[1][0];
               var20 = var16 * 8192 * var12 / (var19.d() * var10);
               var19.a((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 76), 0, var18, 1);
               if (var29 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder5) &&
@@ -187,49 +187,49 @@ final class gva implements mb {
               (decompiledFrameRemainder3) &&
               (decompiledFrameRemainder2)) {
               if (0 == var10) {
-                break L1;
+                break regionExit1;
               }
-              var19 = la.field_p[2][0];
+              var19 = Room.field_p[2][0];
               var20 = var16 * (8192 * var12) / (var19.d() * var10);
               var19.a((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 83), 0, var18, 1);
               if (var29 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder5) &&
               (decompiledFrameRemainder4) &&
               (decompiledFrameRemainder3)) {
               if (var10 == 0) {
-                break L1;
+                break regionExit1;
               }
-              var19 = la.field_p[3][0];
+              var19 = Room.field_p[3][0];
               var20 = var12 * 8192 * var16 / (var10 * var19.d());
               var19.a((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, -97), 0, var18, 1);
               if (var29 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder5) &&
               (decompiledFrameRemainder4)) {
               if (0 == var10) {
-                break L1;
+                break regionExit1;
               }
-              var19Lifetime2 = la.field_p[4][0];
+              var19Lifetime2 = Room.field_p[4][0];
               var20Lifetime2 = var12 * 8192 * var16 / (var19Lifetime2.d() * var10);
               var19Lifetime2.a((float)var8, (float)var9, var20Lifetime2, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 126), 2, var17, 2);
               if (var29 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if (decompiledFrameRemainder5) {
               if (var10 == 0) {
-                break L1;
+                break regionExit1;
               }
-              var19Lifetime1 = la.field_p[5][0];
+              var19Lifetime1 = Room.field_p[5][0];
               var20Lifetime1 = var16 * (8192 * var12) / (var10 * var19Lifetime1.d());
               var19Lifetime1.a((float)var8, (float)var9, var20Lifetime1, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 95), 0, var18, 1);
               if (var29 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             var26_ref_ka = wma.a(3, 12166, 7);
@@ -304,10 +304,10 @@ final class gva implements mb {
         }
     }
 
-    public final void a(iq param0, boolean param1, ep param2) {
-        ep stackIn_36_0 = null;
+    public final void a(iq param0, boolean param1, Projectile param2) {
+        Projectile stackIn_36_0 = null;
         boolean stackIn_37_1 = false;
-        ep stackIn_46_0 = null;
+        Projectile stackIn_46_0 = null;
         boolean stackIn_47_1 = false;
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
@@ -362,9 +362,9 @@ final class gva implements mb {
               }
               var13 = wma.a(var11, 12166, 7).a((byte) 1, 526343, true);
               var13.O(var10 << 2, 512, var10 << 2);
-              stackIn_36_0 = (ep) (param2);
+              stackIn_36_0 = (Projectile) (param2);
               stackIn_37_1 = !(param1);
-              gqa.a(dfa.a(-(((ep) (Object) stackIn_36_0).f(stackIn_37_1) >> 2), 2048, -56), -83584144, var6, var5, var13, var7 + (255 & var6 * 883 + var5 * 233));
+              gqa.a(dfa.a(-(((Projectile) (Object) stackIn_36_0).f(stackIn_37_1) >> 2), 2048, -56), -83584144, var6, var5, var13, var7 + (255 & var6 * 883 + var5 * 233));
               if (var15 == 0) {
                 return;
               }
@@ -374,9 +374,9 @@ final class gva implements mb {
                 return;
               }
             case 0:
-              stackIn_46_0 = (ep) (param2);
+              stackIn_46_0 = (Projectile) (param2);
               stackIn_47_1 = !(param1);
-              gqa.a(dfa.a(-(((ep) (Object) stackIn_46_0).f(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, wma.a(1, 12166, 7), var7);
+              gqa.a(dfa.a(-(((Projectile) (Object) stackIn_46_0).f(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, wma.a(1, 12166, 7), var7);
               if (var15 == 0) {
                 return;
               }
@@ -469,7 +469,7 @@ final class gva implements mb {
             if (var12 != 0) {
               var13++;
             }
-            L6: {
+            regionExit1: {
               switch (var13) {
                 case 3:
                   var14 = 0;
@@ -504,10 +504,10 @@ final class gva implements mb {
                     param2.a(var8, 0, var14, (byte) 73);
                   }
                   if (var19 == 0) {
-                    break L6;
+                    break regionExit1;
                   }
                 default:
-                  break L6;
+                  break regionExit1;
                 case 2:
                   var14Lifetime2 = 1;
                   if (var9 == 0 ||
@@ -614,7 +614,7 @@ final class gva implements mb {
         }
     }
 
-    public final void a(int param0, la param1) {
+    public final void a(int param0, Room param1) {
         RuntimeException runtimeException = null;
         tqa var3 = null;
         int var4 = 0;
@@ -752,7 +752,7 @@ final class gva implements mb {
             var11 = var4_int >> 16;
             var12 = 8 + era.field_g.c(var10, var11);
             var13 = 8 + era.field_g.a(var10, var11, 0);
-            rba.a(var9 / 2, var13, 0, var12, (byte) 114, var7 - var13 / 2, var6 - var12 / 2);
+            SecondaryNodeDequeIterator.a(var9 / 2, var13, 0, var12, (byte) 114, var7 - var13 / 2, var6 - var12 / 2);
             dh.a(kn.field_p, var9, 1, 0, var6 - var11 / 2, var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
           }
           return;
@@ -830,7 +830,7 @@ final class gva implements mb {
         }
     }
 
-    private final void a(la param0, int param1, int param2, int param3, int param4, int param5) {
+    private final void a(Room param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         tqa var7 = null;
         int var8 = 0;
@@ -851,7 +851,7 @@ final class gva implements mb {
             return;
           }
           var8 = param4;
-          L0: while (true) {
+          scanLoop1: while (true) {
             stackIn_5_0 = ~param1;
             if (stackIn_5_0 <= ~var8) {
               if (var11 != 0) {
@@ -869,7 +869,7 @@ final class gva implements mb {
                 var9++;
               }
               var8++;
-              continue L0;
+              continue scanLoop1;
             }
             break;
           }

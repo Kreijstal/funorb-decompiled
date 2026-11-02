@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aia extends vg {
+final class aia extends IntrusiveNode {
     private int field_i;
     private int field_w;
     private int field_g;
@@ -34,7 +34,7 @@ final class aia extends vg {
         return this.field_r;
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4, fsa param5, la param6) {
+    final void a(int param0, int param1, int param2, int param3, byte param4, Trap param5, Room param6) {
         RuntimeException stackIn_79_0 = null;
         StringBuilder stackIn_79_1 = null;
         String stackIn_80_2 = null;
@@ -50,7 +50,7 @@ final class aia extends vg {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        qea var17 = null;
+        IsaacCipher var17 = null;
         int var12Lifetime1;
         int var12Lifetime2;
         int var13Lifetime1;
@@ -213,7 +213,7 @@ final class aia extends vg {
         this.field_f = sw.a(this.field_f, 6);
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, hca param4) {
+    final void a(int param0, boolean param1, int param2, int param3, Player param4) {
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_29_0 = null;
@@ -284,7 +284,7 @@ final class aia extends vg {
 
     final static int e(int param0) {
         if (null == baa.field_d.field_i) {
-          kh.a(true, ska.field_r, kva.field_s);
+          BitPacketBuffer.a(true, ska.field_r, kva.field_s);
           return 4;
         }
         if (kra.field_a == baa.field_d.field_i.field_b) {
@@ -328,8 +328,8 @@ final class aia extends vg {
 
     final void a(int param0, int param1, int param2, boolean param3) {
         if (!param3) {
-          la var6 = (la) null;
-          this.a(-51, -111, -16, -86, (byte) -10, (fsa) null, (la) null);
+          Room var6 = (Room) null;
+          this.a(-51, -111, -16, -86, (byte) -10, (Trap) null, (Room) null);
         }
         this.field_p = 0;
         if (0 == this.field_i) {
@@ -390,7 +390,7 @@ final class aia extends vg {
         }
     }
 
-    private final boolean a(int param0, hca param1, int param2, int param3) {
+    private final boolean a(int param0, Player param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -417,7 +417,7 @@ final class aia extends vg {
         }
     }
 
-    private final void a(la param0, int param1) {
+    private final void a(Room param0, int param1) {
         try {
           if (param1 > -72) {
             this.g(-8);
@@ -437,8 +437,8 @@ final class aia extends vg {
 
     final boolean b(int param0) {
         if (param0 != 180) {
-          hca var3 = (hca) null;
-          this.a(79, false, 55, 0, (hca) null);
+          Player var3 = (Player) null;
+          this.a(79, false, 55, 0, (Player) null);
         }
         return 0 < this.field_k ? true : false;
     }

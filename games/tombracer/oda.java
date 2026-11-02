@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oda extends vg {
+final class oda extends IntrusiveNode {
     int field_f;
     int field_g;
     static String field_h;

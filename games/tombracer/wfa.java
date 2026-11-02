@@ -21,7 +21,7 @@ final class wfa extends kna {
         return 7;
     }
 
-    wfa(la param0, int param1) {
+    wfa(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -47,12 +47,12 @@ final class wfa extends kna {
         return false;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           if (param0) {
-            kh var4 = (kh) null;
-            this.a(true, (kh) null);
+            BitPacketBuffer var4 = (BitPacketBuffer) null;
+            this.a(true, (BitPacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wfa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -64,19 +64,19 @@ final class wfa extends kna {
         this.b(117, 4194304, 4194304);
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         rea var5 = null;
         mfa var6 = null;
         dc var7 = null;
-        fsa stackIn_1_0 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.a((byte) -3, 20);
           var4.h(param1, param1 ^ 3);
@@ -85,7 +85,7 @@ final class wfa extends kna {
           var5 = new rea(param2, param0);
           var5.a(50, 8, param1 ^ 2, 25, 6);
           var5.b((byte) 72, true);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (dc) (var6.a(11, 114));
           var4.a(var5, (byte) 124, var7);
@@ -105,10 +105,10 @@ final class wfa extends kna {
         }
     }
 
-    final static boolean a(boolean param0, int param1, kh param2) {
+    final static boolean a(boolean param0, int param1, BitPacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        kh stackIn_2_0 = null;
+        BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
         boolean stackIn_4_0 = false;
@@ -117,14 +117,14 @@ final class wfa extends kna {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = (kh) (param2);
+          stackIn_2_0 = (BitPacketBuffer) (param2);
           stackIn_2_1 = -128;
           if (param0) {
             stackIn_3_2 = 1;
           } else {
             stackIn_3_2 = 0;
           }
-          ((kh) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
           var3_int = -96 % ((param1 - 62) / 35);
           stackIn_4_0 = param0;
           return stackIn_4_0;
@@ -149,7 +149,7 @@ final class wfa extends kna {
         return false;
     }
 
-    wfa(la param0, int param1, kh param2, csa param3) {
+    wfa(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

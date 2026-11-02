@@ -21,12 +21,12 @@ final class dba implements bo {
         field_g = null;
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           param0.h((byte) 118);
           if (param1 != -19) {
-            kh var4 = (kh) null;
-            this.a((kh) null, (byte) 29);
+            BitPacketBuffer var4 = (BitPacketBuffer) null;
+            this.a((BitPacketBuffer) null, (byte) 29);
           }
           this.field_h = param0.b((byte) 44, 4);
           this.field_f = param0.b((byte) 44, 8);
@@ -45,7 +45,7 @@ final class dba implements bo {
           if (param1 < 84) {
             field_c = (String) null;
           }
-          ala.a((byte) -30, ura.field_b, rca.field_l, cka.field_jc);
+          ala.a((byte) -30, ura.field_b, rca.field_l, OpenGlToolkit.field_jc);
           fga.a(0, false, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dba.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -88,7 +88,7 @@ final class dba implements bo {
         return stackIn_14_0 | kaa.a(param0, param2, false) | var3Lifetime1 != 0;
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         try {
           param1.i(8);
           param1.a((byte) 3, this.field_h, 4);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends nv {
+final class th extends Behaviour {
     private boolean field_t;
     private int field_r;
     private int field_q;
@@ -30,7 +30,7 @@ final class th extends nv {
         field_s = null;
     }
 
-    th(la param0, kh param1, boolean param2) {
+    th(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_r = 2;
         this.field_q = 2;
@@ -201,7 +201,7 @@ final class th extends nv {
               }
               if (!(var22 > 262144) ||
                 !this.b(true).a(1, this.field_v, this.e(param0 ^ 5420), (byte) 60)) {
-                var8 = bs.a(var12, param0 ^ -25604, var22);
+                var8 = GameEvent.a(var12, param0 ^ -25604, var22);
                 var8 = -gqa.a(var8, (byte) 24, -var9 + var10) + var10;
                 var8 = za.$cfr$intArgs$a$c604db63f465(var9, 113, var10, var8);
                 stackIn_56_0 = var18;
@@ -234,7 +234,7 @@ final class th extends nv {
         return stackIn_7_0;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -128, this.field_q, 2);
@@ -250,7 +250,7 @@ final class th extends nv {
         this.field_q = param1;
     }
 
-    th(la param0, boolean param1) {
+    th(Room param0, boolean param1) {
         super(param0, param1);
         this.field_r = 2;
         this.field_q = 2;

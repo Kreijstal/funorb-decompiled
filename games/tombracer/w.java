@@ -6,8 +6,8 @@ final class w extends sqa {
     int[] field_i;
     int field_c;
     int field_h;
-    private vna field_g;
-    static iu[] field_f;
+    private IntrusiveDeque field_g;
+    static Sprite[] field_f;
     static String field_d;
 
     private final void a(boolean param0) {
@@ -20,7 +20,7 @@ final class w extends sqa {
           }
           return;
         }
-        this.field_g = (vna) null;
+        this.field_g = (IntrusiveDeque) null;
         for (var2Lifetime1 = 0; this.field_i.length > var2Lifetime1; var2Lifetime1++) {
           this.field_i[var2Lifetime1] = 0;
         }
@@ -31,7 +31,7 @@ final class w extends sqa {
         int var3 = TombRacer.field_G ? 1 : 0;
         fla var4Lifetime1;
         if (param0 >= -118) {
-          this.field_g = (vna) null;
+          this.field_g = (IntrusiveDeque) null;
         } else {
           var4 = (fla) (this.field_g.f(-80));
           while (var4 != null) {
@@ -51,7 +51,7 @@ final class w extends sqa {
         this.a(true);
     }
 
-    final static int a(uia param0, int param1, vna param2) {
+    final static int a(PacketBuffer param0, int param1, IntrusiveDeque param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -75,7 +75,7 @@ final class w extends sqa {
           var4 = 0;
           var5 = -1;
           while (true) {
-            if (param0.field_h < param0.field_g.length) {
+            if (param0.position < param0.payload.length) {
               var5 = param0.h(255);
               if ((~var5 != ~dia.field_q ||
                 var4 != 0) &&
@@ -87,7 +87,7 @@ final class w extends sqa {
                 }
                 boolean decompiledFrameRemainder0 = true;
                 if (var4 != 0) {
-                  if (param0.field_g.length == param0.field_h + 1) {
+                  if (param0.payload.length == param0.position + 1) {
                     throw new RuntimeException("Unterminated quote!");
                   }
                   var6 = param0.c((byte) 52);
@@ -96,13 +96,13 @@ final class w extends sqa {
                     if (uqa.field_w == var6) {
                       discarded$0 = var8.append((char)var6);
                     } else {
-                      param0.field_h = param0.field_h - 1;
+                      param0.position = param0.position - 1;
                       discarded$1 = var8.append((char)var5);
                     }
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    param0.field_h = param0.field_h - 1;
+                    param0.position = param0.position - 1;
                   }
                 }
                 stackIn_26_0 = (var4 != 0) ? 0 : 1;
@@ -233,7 +233,7 @@ final class w extends sqa {
 
     final void a(int param0, int param1, int param2) {
         if (param1 < 9) {
-          this.field_g = (vna) null;
+          this.field_g = (IntrusiveDeque) null;
         }
     }
 
@@ -248,7 +248,7 @@ final class w extends sqa {
 
     private final boolean a(int param0, int param1) {
         if (param0 > -89) {
-          this.field_g = (vna) null;
+          this.field_g = (IntrusiveDeque) null;
           if (param1 == 85) {
             return true;
           }
@@ -280,7 +280,7 @@ final class w extends sqa {
 
     public static void a(int param0) {
         if (param0 > -26) {
-          field_f = (iu[]) null;
+          field_f = (Sprite[]) null;
           field_d = null;
           field_f = null;
           return;
@@ -307,7 +307,7 @@ final class w extends sqa {
         fla var6Lifetime1;
         while (var5 != null) {
           this.a(var5, -58);
-          var5.p(15);
+          var5.unlink(15);
           var5 = (fm) (this.field_b.e(124));
         }
         if (param0 < 75) {
@@ -329,7 +329,7 @@ final class w extends sqa {
 
     public w() {
         this.field_i = new int[98];
-        this.field_g = new vna();
+        this.field_g = new IntrusiveDeque();
     }
 
     static {

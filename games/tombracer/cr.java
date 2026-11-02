@@ -93,7 +93,7 @@ final class cr {
         }
     }
 
-    cr(vna param0) {
+    cr(IntrusiveDeque param0) {
         int incrementValue$2 = 0;
         int var2_int = 0;
         mi var3 = null;
@@ -108,7 +108,7 @@ final class cr {
           var2_int = 0;
           var3 = (mi) (param0.f(-80));
           while (var3 != null) {
-            var3.p(67);
+            var3.unlink(67);
             incrementValue$2 = var2_int;
             var2_int++;
             this.field_a[incrementValue$2] = var3;

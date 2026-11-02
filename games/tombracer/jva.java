@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jva extends vg {
+abstract class jva extends IntrusiveNode {
     int field_f;
 
     abstract int a(en param0);

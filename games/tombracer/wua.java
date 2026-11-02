@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wua extends od {
+final class wua extends DualLinkNode {
     static int field_n;
     private int[] field_k;
     static apa field_o;
@@ -32,7 +32,7 @@ final class wua extends od {
         }
     }
 
-    final void a(uia param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -65,7 +65,7 @@ final class wua extends od {
         }
     }
 
-    private final void a(uia param0, int param1, byte param2) {
+    private final void a(PacketBuffer param0, int param1, byte param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;

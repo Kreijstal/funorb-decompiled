@@ -81,7 +81,7 @@ final class go extends ci {
         return var17;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         if (param0 != 107) {
           return;
         }

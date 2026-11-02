@@ -216,7 +216,7 @@ final class ce extends dg {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        la var17 = null;
+        Room var17 = null;
         var16 = TombRacer.field_G ? 1 : 0;
         try {
           var17 = this.a(18);
@@ -402,18 +402,18 @@ final class ce extends dg {
         Object var4 = null;
         w var4_ref = null;
         Object var5 = null;
-        fsa var5_ref = null;
+        Trap var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
         double var11 = 0.0;
         double var13 = 0.0;
-        vna var15 = null;
+        IntrusiveDeque var15 = null;
         uja var16 = null;
         int var17 = 0;
         Object var18 = null;
-        wda var18_ref = null;
+        Locomotor var18_ref = null;
         int var19 = 0;
         var4 = null;
         var5 = null;
@@ -445,7 +445,7 @@ final class ce extends dg {
           if (param0 != -1) {
             this.field_t = (fla) null;
           }
-          var5_ref = (fsa) (this.field_h);
+          var5_ref = (Trap) (this.field_h);
           var6 = 1;
           var7 = this.b((byte) 84) - var4_ref.field_h >> 16;
           var8 = this.c((byte) 126) - var4_ref.field_c >> 16;
@@ -475,7 +475,7 @@ final class ce extends dg {
             var15 = var5_ref.field_B;
             var16 = new uja(var15);
             var17 = 0;
-            var18_ref = (wda) (var16.a(true));
+            var18_ref = (Locomotor) (var16.a(true));
             while (var18_ref != null) {
               if (var18_ref instanceof ro) {
                 if (((ro) (var18_ref)).d(false) != this.field_y) {
@@ -496,7 +496,7 @@ final class ce extends dg {
                   var17 = 1;
                 }
               }
-              var18_ref = (wda) (var16.a(-1));
+              var18_ref = (Locomotor) (var16.a(-1));
             }
             if (var17 == 0 &&
               this.field_v != null) {
@@ -527,7 +527,7 @@ final class ce extends dg {
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -720,7 +720,7 @@ final class ce extends dg {
         }
     }
 
-    ce(int param0, la param1, kh param2) {
+    ce(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_p = false;
         this.field_t = null;
@@ -765,7 +765,7 @@ final class ce extends dg {
         }
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

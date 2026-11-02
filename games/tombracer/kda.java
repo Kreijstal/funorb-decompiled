@@ -4,17 +4,17 @@
 final class kda extends eo {
     static String field_gd;
     static boolean field_pd;
-    private vna field_bd;
+    private IntrusiveDeque field_bd;
     static int field_hd;
     private jaggl.OpenGL field_Mc;
     static String field_cd;
     static char field_td;
-    private vna field_dd;
-    private vna field_Rc;
-    private vna field_Oc;
-    private vna field_ad;
-    private vna field_nd;
-    private vna field_kd;
+    private IntrusiveDeque field_dd;
+    private IntrusiveDeque field_Rc;
+    private IntrusiveDeque field_Oc;
+    private IntrusiveDeque field_ad;
+    private IntrusiveDeque field_nd;
+    private IntrusiveDeque field_kd;
     private boolean field_rd;
     private boolean field_ld;
     jaggl.MapBuffer field_Qc;
@@ -114,7 +114,7 @@ final class kda extends eo {
           var10 = param0.b(param1 ^ 13611);
           var11 = (sf) (param0);
           var11.c(-3);
-          jaggl.OpenGL.glDrawElements(var8_int, var9, lr.a(var10, 5126), var11.b(true) + (long)(param3 * var10.field_e));
+          jaggl.OpenGL.glDrawElements(var8_int, var9, ClientException.a(var10, 5126), var11.b(true) + (long)(param3 * var10.field_e));
           if (param1 != -19394) {
             this.N(76);
           }
@@ -181,7 +181,7 @@ final class kda extends eo {
 
     final qm c(int param0, boolean param1) {
         if (param0 != 6) {
-          this.field_dd = (vna) null;
+          this.field_dd = (IntrusiveDeque) null;
         }
         return (qm) ((Object) new og(this, param1));
     }
@@ -575,7 +575,7 @@ final class kda extends eo {
           field_cd = (String) null;
         }
         jaggl.OpenGL.glMatrixMode(5890);
-        if (od.field_h == this.field_v[this.field_Cc]) {
+        if (DualLinkNode.field_h == this.field_v[this.field_Cc]) {
           jaggl.OpenGL.glLoadIdentity();
         } else {
           jaggl.OpenGL.glLoadMatrixf(this.field_hc[this.field_Cc].a(jba.field_k, (byte) -37), 0);
@@ -584,11 +584,11 @@ final class kda extends eo {
     }
 
     final synchronized void a(long param0, int param1) {
-        vg var4 = new vg();
+        IntrusiveNode var4 = new IntrusiveNode();
         if (param1 != -6115) {
-          this.field_ad = (vna) null;
+          this.field_ad = (IntrusiveDeque) null;
         }
-        var4.field_d = param0;
+        var4.key = param0;
         this.field_kd.b((byte) -65, var4);
     }
 
@@ -761,15 +761,15 @@ final class kda extends eo {
         al var7;
         al var8;
         al var9;
-        vg var10;
-        vg var11;
+        IntrusiveNode var10;
+        IntrusiveNode var11;
         al var12;
         al var9Lifetime1;
-        vg var10Lifetime1;
-        vg var11Lifetime1;
+        IntrusiveNode var10Lifetime1;
+        IntrusiveNode var11Lifetime1;
         al var12Lifetime1;
         al var9Lifetime2;
-        vg var10Lifetime2;
+        IntrusiveNode var10Lifetime2;
         var4 = TombRacer.field_G ? 1 : 0;
         param0 = param0 & 2147483647;
         var2 = 0;
@@ -777,12 +777,12 @@ final class kda extends eo {
           var5 = (al) (this.field_dd.c(61));
           incrementValue$5 = var2;
           var2++;
-          csa.field_i[incrementValue$5] = (int)var5.field_d;
+          RoomComponent.field_i[incrementValue$5] = (int)var5.key;
           this.field_X = this.field_X - var5.field_i;
           if (var2 != 1000) {
             continue;
           }
-          jaggl.OpenGL.glDeleteBuffersARB(var2, csa.field_i, 0);
+          jaggl.OpenGL.glDeleteBuffersARB(var2, RoomComponent.field_i, 0);
           var2 = 0;
         }
         if (var2 <= 0) {
@@ -790,27 +790,27 @@ final class kda extends eo {
             var6 = (al) (this.field_Rc.c(-96));
             incrementValue$1 = var2;
             var2++;
-            csa.field_i[incrementValue$1] = (int)var6.field_d;
+            RoomComponent.field_i[incrementValue$1] = (int)var6.key;
             this.field_Xb = this.field_Xb - var6.field_i;
             if (var2 != 1000) {
               continue;
             }
-            jaggl.OpenGL.glDeleteTextures(var2, csa.field_i, 0);
+            jaggl.OpenGL.glDeleteTextures(var2, RoomComponent.field_i, 0);
             var2 = 0;
           }
         } else {
-          jaggl.OpenGL.glDeleteBuffersARB(var2, csa.field_i, 0);
+          jaggl.OpenGL.glDeleteBuffersARB(var2, RoomComponent.field_i, 0);
           var2 = 0;
           while (!this.field_Rc.d((byte) 14)) {
             var6 = (al) (this.field_Rc.c(-96));
             incrementValue$0 = var2;
             var2++;
-            csa.field_i[incrementValue$0] = (int)var6.field_d;
+            RoomComponent.field_i[incrementValue$0] = (int)var6.key;
             this.field_Xb = this.field_Xb - var6.field_i;
             if (var2 != 1000) {
               continue;
             }
-            jaggl.OpenGL.glDeleteTextures(var2, csa.field_i, 0);
+            jaggl.OpenGL.glDeleteTextures(var2, RoomComponent.field_i, 0);
             var2 = 0;
           }
         }
@@ -818,17 +818,17 @@ final class kda extends eo {
         boolean decompiledFrameRemainder0 = true;
         boolean decompiledFrameRemainder1 = true;
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteTextures(var2, csa.field_i, 0);
+          jaggl.OpenGL.glDeleteTextures(var2, RoomComponent.field_i, 0);
           var2 = 0;
           while (!this.field_Oc.d((byte) 14)) {
             var7 = (al) (this.field_Oc.c(62));
             incrementValue$2 = var2;
             var2++;
-            csa.field_i[incrementValue$2] = var7.field_i;
+            RoomComponent.field_i[incrementValue$2] = var7.field_i;
             if (var2 != 1000) {
               continue;
             }
-            jaggl.OpenGL.glDeleteFramebuffersEXT(var2, csa.field_i, 0);
+            jaggl.OpenGL.glDeleteFramebuffersEXT(var2, RoomComponent.field_i, 0);
             var2 = 0;
           }
         } else {
@@ -836,28 +836,28 @@ final class kda extends eo {
             var7 = (al) (this.field_Oc.c(62));
             incrementValue$3 = var2;
             var2++;
-            csa.field_i[incrementValue$3] = var7.field_i;
+            RoomComponent.field_i[incrementValue$3] = var7.field_i;
             if (var2 == 1000) {
-              jaggl.OpenGL.glDeleteFramebuffersEXT(var2, csa.field_i, 0);
+              jaggl.OpenGL.glDeleteFramebuffersEXT(var2, RoomComponent.field_i, 0);
               var2 = 0;
               decompiledFrameRemainder1 = false;
             }
             else {
               while (!this.field_bd.d((byte) 14)) {
                 var9 = (al) (this.field_bd.c(-101));
-                jaggl.OpenGL.glDeleteLists((int)var9.field_d, var9.field_i);
+                jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_i);
               }
               while (!this.field_nd.d((byte) 14)) {
                 var10 = this.field_nd.c(-120);
-                jaggl.OpenGL.glDeleteProgramARB((int)var10.field_d);
+                jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
               }
               while (!this.field_kd.d((byte) 14)) {
                 var11 = this.field_kd.c(61);
-                jaggl.OpenGL.glDeleteObjectARB(var11.field_d);
+                jaggl.OpenGL.glDeleteObjectARB(var11.key);
               }
               while (!this.field_bd.d((byte) 14)) {
                 var12 = (al) (this.field_bd.c(-99));
-                jaggl.OpenGL.glDeleteLists((int)var12.field_d, var12.field_i);
+                jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_i);
               }
               if ((!(this.Q(10) <= 100663296)) &&
                 (!(bva.b((byte) -107) <= this.field_Xc + 60000L))) {
@@ -871,33 +871,33 @@ final class kda extends eo {
         if ((decompiledFrameRemainder2) &&
           (decompiledFrameRemainder1)) {
           if (0 < var2) {
-            jaggl.OpenGL.glDeleteFramebuffersEXT(var2, csa.field_i, 0);
+            jaggl.OpenGL.glDeleteFramebuffersEXT(var2, RoomComponent.field_i, 0);
             var2 = 0;
           }
           while (!this.field_ad.d((byte) 14)) {
             var8 = (al) (this.field_ad.c(30));
             incrementValue$4 = var2;
             var2++;
-            csa.field_i[incrementValue$4] = (int)var8.field_d;
+            RoomComponent.field_i[incrementValue$4] = (int)var8.key;
             this.field_Fb = this.field_Fb - var8.field_i;
             stackIn_33_0 = 1000;
             stackIn_33_1 = var2;
             if (stackIn_33_0 != stackIn_33_1) {
               continue;
             }
-            jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, csa.field_i, 0);
+            jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, RoomComponent.field_i, 0);
             var2 = 0;
           }
           if (var2 > 0) {
-            jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, csa.field_i, 0);
+            jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, RoomComponent.field_i, 0);
             var2 = 0;
             while (!this.field_bd.d((byte) 14)) {
               var9Lifetime2 = (al) (this.field_bd.c(-101));
-              jaggl.OpenGL.glDeleteLists((int)var9Lifetime2.field_d, var9Lifetime2.field_i);
+              jaggl.OpenGL.glDeleteLists((int)var9Lifetime2.key, var9Lifetime2.field_i);
             }
             while (!this.field_nd.d((byte) 14)) {
               var10Lifetime2 = this.field_nd.c(-120);
-              jaggl.OpenGL.glDeleteProgramARB((int)var10Lifetime2.field_d);
+              jaggl.OpenGL.glDeleteProgramARB((int)var10Lifetime2.key);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -906,21 +906,21 @@ final class kda extends eo {
           (decompiledFrameRemainder0)) {
           while (!this.field_bd.d((byte) 14)) {
             var9Lifetime1 = (al) (this.field_bd.c(-101));
-            jaggl.OpenGL.glDeleteLists((int)var9Lifetime1.field_d, var9Lifetime1.field_i);
+            jaggl.OpenGL.glDeleteLists((int)var9Lifetime1.key, var9Lifetime1.field_i);
           }
           while (!this.field_nd.d((byte) 14)) {
             var10Lifetime1 = this.field_nd.c(-120);
-            jaggl.OpenGL.glDeleteProgramARB((int)var10Lifetime1.field_d);
+            jaggl.OpenGL.glDeleteProgramARB((int)var10Lifetime1.key);
           }
         }
         if (decompiledFrameRemainder2) {
           while (!this.field_kd.d((byte) 14)) {
             var11Lifetime1 = this.field_kd.c(61);
-            jaggl.OpenGL.glDeleteObjectARB(var11Lifetime1.field_d);
+            jaggl.OpenGL.glDeleteObjectARB(var11Lifetime1.key);
           }
           while (!this.field_bd.d((byte) 14)) {
             var12Lifetime1 = (al) (this.field_bd.c(-99));
-            jaggl.OpenGL.glDeleteLists((int)var12Lifetime1.field_d, var12Lifetime1.field_i);
+            jaggl.OpenGL.glDeleteLists((int)var12Lifetime1.key, var12Lifetime1.field_i);
           }
           if (!(this.Q(10) <= 100663296) &&
             !(bva.b((byte) -107) <= this.field_Xc + 60000L)) {
@@ -979,7 +979,7 @@ final class kda extends eo {
 
     final float c(byte param0) {
         if (param0 >= -39) {
-          this.field_Oc = (vna) null;
+          this.field_Oc = (IntrusiveDeque) null;
         }
         return 0.0f;
     }
@@ -1268,8 +1268,8 @@ final class kda extends eo {
     }
 
     final synchronized void b(int param0, byte param1) {
-        vg var3 = new vg();
-        var3.field_d = (long)param0;
+        IntrusiveNode var3 = new IntrusiveNode();
+        var3.key = (long)param0;
         if (param1 != 18) {
           return;
         }
@@ -1468,13 +1468,13 @@ final class kda extends eo {
         var28 = null;
         var29 = null;
         var30 = null;
-        this.field_bd = new vna();
-        this.field_dd = new vna();
-        this.field_Rc = new vna();
-        this.field_Oc = new vna();
-        this.field_ad = new vna();
-        this.field_nd = new vna();
-        this.field_kd = new vna();
+        this.field_bd = new IntrusiveDeque();
+        this.field_dd = new IntrusiveDeque();
+        this.field_Rc = new IntrusiveDeque();
+        this.field_Oc = new IntrusiveDeque();
+        this.field_ad = new IntrusiveDeque();
+        this.field_nd = new IntrusiveDeque();
+        this.field_kd = new IntrusiveDeque();
         this.field_id = new og[16];
         this.field_Qc = new jaggl.MapBuffer();
         this.field_Tc = new jaggl.MapBuffer();
@@ -1662,7 +1662,7 @@ final class kda extends eo {
 
     final synchronized void a(int param0, int param1, byte param2) {
         al var4 = new al(param0);
-        var4.field_d = (long)param1;
+        var4.key = (long)param1;
         if (param2 <= 41) {
           return;
         }
@@ -1812,7 +1812,7 @@ final class kda extends eo {
           return;
         }
         al var4 = new al(param1);
-        var4.field_d = (long)param0;
+        var4.key = (long)param0;
         this.field_Rc.b((byte) -67, var4);
     }
 

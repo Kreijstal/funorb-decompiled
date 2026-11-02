@@ -3,7 +3,7 @@
  */
 final class bw {
     static int[] field_b;
-    static iu field_a;
+    static Sprite field_a;
 
     final static Object a(int param0, byte[] param1, boolean param2) {
         ie var3 = null;
@@ -62,6 +62,6 @@ final class bw {
 
     static {
         field_b = new int[8192];
-        field_a = new iu(270, 70);
+        field_a = new Sprite(270, 70);
     }
 }

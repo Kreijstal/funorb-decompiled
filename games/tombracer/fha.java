@@ -10,7 +10,7 @@ final class fha {
     }
 
     final static void a(boolean param0, cn param1, cn param2, cn param3) {
-        iu var17 = null;
+        Sprite var17 = null;
         hja[] var5 = null;
         hja[][] var6 = null;
         int[][] var19 = null;
@@ -18,10 +18,10 @@ final class fha {
         int[][] var7 = null;
         hja[] var14 = null;
         int var11_int = 0;
-        iu var15 = null;
-        iu var18 = null;
-        iu var11 = null;
-        iu var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = TombRacer.field_G ? 1 : 0;
@@ -39,7 +39,7 @@ final class fha {
           eka.field_o = (il) ((Object) oo.a(param2, param1, false, "commonui", "arezzo12"));
           mj.field_J = (il) ((Object) oo.a(param2, param1, false, "commonui", "arezzo14"));
           ft.field_c = (il) ((Object) oo.a(param2, param1, false, "commonui", "arezzo14bold"));
-          var17 = new iu(param3.a("button.gif", (byte) 118, ""), (java.awt.Component) ((Object) nma.field_l));
+          var17 = new Sprite(param3.a("button.gif", (byte) 118, ""), (java.awt.Component) ((Object) nma.field_l));
           uv.a("dropdown", param2, "commonui", 8864);
           var5 = tw.a((byte) 127, "screen_options", "commonui", param2);
           ita.field_e = new hja[4];
@@ -68,18 +68,18 @@ final class fha {
           gb.a(-29711);
           var17.c();
           bea.a(0, 0, bea.field_g, bea.field_a);
-          var15 = new iu(var9Lifetime1, var9Lifetime1);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.c();
           var17.d(0, 0);
-          var11 = new iu(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.c();
           var17.d(var9Lifetime1 - var17.field_m, 0);
-          var12 = new iu(var17.field_m - var9Lifetime1 * 2, var9Lifetime1);
+          var12 = new Sprite(var17.field_m - var9Lifetime1 * 2, var9Lifetime1);
           var12.c();
           var17.d(-var9Lifetime1, 0);
           pfa.a(1);
-          nga.field_n = new iu[]{var15, var12, var11};
+          nga.field_n = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fha.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

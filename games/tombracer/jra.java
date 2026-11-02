@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jra extends loa {
+final class jra extends MazeGenerator {
     static String field_b;
     static String[] field_c;
 
-    jra(qea param0) {
+    jra(IsaacCipher param0) {
         super(param0);
     }
 
@@ -32,7 +32,7 @@ final class jra extends loa {
             jra.a(78);
           }
           while (var5_intLifetime1 < -2 + param2.field_a) {
-            var6Lifetime1 = 1 + this.field_a.a(param2.field_f - 2, 0);
+            var6Lifetime1 = 1 + this.random.a(param2.field_f - 2, 0);
             param2.a(var5_intLifetime1, 0, 0, var6Lifetime1);
             var5_intLifetime1 += 2;
           }

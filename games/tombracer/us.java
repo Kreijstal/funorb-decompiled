@@ -321,10 +321,10 @@ final class us {
 
     final static void a(int param0, jea param1, jea param2) {
         if (param1.field_J == null) {
-          param1.field_J = new vna();
+          param1.field_J = new IntrusiveDeque();
         }
         if (null == param2.field_J) {
-          param2.field_J = new vna();
+          param2.field_J = new IntrusiveDeque();
         }
         if (hia.field_s == null) {
           hia.field_s = new af(64);

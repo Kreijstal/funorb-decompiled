@@ -26,7 +26,7 @@ final class aaa {
         return mma.field_a;
     }
 
-    aaa(cka param0) {
+    aaa(OpenGlToolkit param0) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;

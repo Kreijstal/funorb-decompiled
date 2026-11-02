@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mm extends vg {
+final class mm extends IntrusiveNode {
     static boolean field_g;
     static String field_f;
 

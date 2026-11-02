@@ -54,7 +54,7 @@ final class sba extends ci {
           field_n = (String) null;
         }
         hja var1 = new hja(ika.field_a, kba.field_s, ak.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], ck.field_c[0], mga.field_g);
-        loa.a((byte) 127);
+        MazeGenerator.a((byte) 127);
         return var1;
     }
 
@@ -62,7 +62,7 @@ final class sba extends ci {
         super(1, false);
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

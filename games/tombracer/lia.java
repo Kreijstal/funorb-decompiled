@@ -8,7 +8,7 @@ final class lia implements qm {
     private boolean field_f;
     private int field_b;
     private byte field_d;
-    private cta field_c;
+    private Direct3DToolkit field_c;
 
     final int b(int param0) {
         if (param0 != -7339) {
@@ -122,7 +122,7 @@ final class lia implements qm {
         return false;
     }
 
-    lia(cta param0, boolean param1) {
+    lia(Direct3DToolkit param0, boolean param1) {
         this.field_g = false;
         this.field_f = param1 ? true : false;
         this.field_c = param0;

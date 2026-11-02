@@ -222,15 +222,15 @@ final class lja {
           return true;
         }
         if (param0 == 11) {
-          loa.a(this.field_b, param2, (byte) 108, 0);
+          MazeGenerator.a(this.field_b, param2, (byte) 108, 0);
           return true;
         }
         if (param0 == 12) {
-          loa.a(this.field_b, param2, (byte) 108, 1);
+          MazeGenerator.a(this.field_b, param2, (byte) 108, 1);
           return true;
         }
         if (param0 == 13) {
-          loa.a(this.field_b, param2, (byte) 108, 2);
+          MazeGenerator.a(this.field_b, param2, (byte) 108, 2);
           return true;
         }
         if (param0 == 14) {
@@ -273,7 +273,7 @@ final class lja {
             var7 = this.b(-13);
             var4 = var7;
             var5 = wp.a(127, this.field_i);
-            var6 = qaa.a(2180, this.field_i) ? 1 : 0;
+            var6 = MouseWheelInput.a(2180, this.field_i) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_f.a((byte) -64, 4, gl.$cfr$intArgs$a$53ce4ab4c593(92, ao.field_m, new String[]{var7}));

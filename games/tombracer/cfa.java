@@ -9,7 +9,7 @@ final class cfa implements dv {
     static jea field_c;
     private boolean field_e;
     w field_g;
-    private ff field_j;
+    private MatchState field_j;
     private int field_d;
     static long field_b;
 
@@ -19,7 +19,7 @@ final class cfa implements dv {
           return;
         }
         if (-1 == param0) {
-          this.field_j.field_H[this.field_h].b(18202625, -1);
+          this.field_j.players[this.field_h].b(18202625, -1);
         } else {
           var3 = 63;
           if (3 == this.field_i[param0]) {
@@ -39,7 +39,7 @@ final class cfa implements dv {
           if (this.field_g != null) {
             this.field_g.a(new fm(var3, 0, 0, 0), -58);
           }
-          this.field_j.field_H[this.field_h].b(18202625, this.field_i[param0]);
+          this.field_j.players[this.field_h].b(18202625, this.field_i[param0]);
           this.field_i[param0] = -1;
           this.field_f = this.field_f + 1;
         }
@@ -237,7 +237,7 @@ final class cfa implements dv {
         return this.field_h;
     }
 
-    public final void a(kh param0, boolean param1) {
+    public final void a(BitPacketBuffer param0, boolean param1) {
         try {
           this.field_i = fa.a(0, param0, 8, this.field_i);
           this.field_d = param0.b((byte) 44, 3);
@@ -263,7 +263,7 @@ final class cfa implements dv {
         this.field_f = 0;
     }
 
-    cfa(ff param0) {
+    cfa(MatchState param0) {
         this.field_h = -1;
         this.field_f = 0;
         try {
@@ -275,13 +275,13 @@ final class cfa implements dv {
 
     final void b(int param0) {
         int var4 = 0;
-        qea var2;
+        IsaacCipher var2;
         boolean[] var3;
         int var5;
         int var6;
-        kh var7;
+        BitPacketBuffer var7;
         var6 = TombRacer.field_G ? 1 : 0;
-        var2 = new qea(new int[]{this.field_j.field_C});
+        var2 = new IsaacCipher(new int[]{this.field_j.field_C});
         this.field_i = new int[3];
         var3 = new boolean[7];
         for (var4 = 0; this.field_i.length > var4; var4++) {
@@ -299,8 +299,8 @@ final class cfa implements dv {
         if (param0 == 28624) {
           return;
         }
-        var7 = (kh) null;
-        this.a((kh) null, false);
+        var7 = (BitPacketBuffer) null;
+        this.a((BitPacketBuffer) null, false);
     }
 
     final void a(byte param0) {

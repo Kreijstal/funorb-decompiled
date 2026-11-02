@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class spa extends wda {
+final class spa extends Locomotor {
     private int field_p;
     static jea field_o;
 
@@ -13,7 +13,7 @@ final class spa extends wda {
         return param1;
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -109);
           if (param1 >= -78) {
@@ -34,7 +34,7 @@ final class spa extends wda {
         this.field_p = param1;
     }
 
-    spa(la param0, kh param1, boolean param2) {
+    spa(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_p = bla.a(true, 12, param1.b((byte) 44, 12));
@@ -43,7 +43,7 @@ final class spa extends wda {
         }
     }
 
-    spa(la param0, boolean param1) {
+    spa(Room param0, boolean param1) {
         super(param0, param1);
         try {
           this.field_p = 16;

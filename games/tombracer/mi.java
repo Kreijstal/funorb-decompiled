@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends vg {
-    vna field_i;
+final class mi extends IntrusiveNode {
+    IntrusiveDeque field_i;
     static String field_n;
     static int[] field_l;
     static int field_k;
@@ -43,7 +43,7 @@ final class mi extends vg {
           for (var3 = 0; cna.field_b.length > var3; var3++) {
             var4 = f.field_c[var3];
             if (var4 < 0) {
-              var5 = cka.field_H;
+              var5 = OpenGlToolkit.field_H;
             } else {
               if (lp.field_h.field_h == var4) {
                 var5 = fv.field_a;

@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class qr extends ae implements tpa {
     ae field_x;
-    static da field_v;
+    static GameFont field_v;
     static String[] field_u;
     static ft field_w;
 
@@ -61,7 +61,7 @@ abstract class qr extends ae implements tpa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            field_v = (da) null;
+            field_v = (GameFont) null;
           }
           stackIn_6_0 = (null != this.field_x) && (this.field_x.a(param0, false));
           return stackIn_6_0;
@@ -126,10 +126,10 @@ abstract class qr extends ae implements tpa {
     }
 
     final static void a(boolean param0, int[] param1, hja[] param2, cn param3, cn param4) {
-        iu[] dupTemp$0 = null;
-        iu[] dupTemp$1 = null;
-        iu[] dupTemp$2 = null;
-        iu[] dupTemp$3 = null;
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         hja[] var5 = null;
         hja[] var6 = null;
         int[] var6_array = null;
@@ -157,12 +157,12 @@ abstract class qr extends ae implements tpa {
         jea var9 = null;
         jea var10 = null;
         jea var11 = null;
-        iu[] var12 = null;
-        iu[] var13 = null;
-        iu[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         jea var15 = null;
-        iu[] var16 = null;
-        iu[] var17 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
@@ -170,14 +170,14 @@ abstract class qr extends ae implements tpa {
         try {
           var20 = tw.a((byte) -69, "crowns", "lobby", param4);
           var5 = var20;
-          csa.field_n = var20.length;
+          RoomComponent.field_n = var20.length;
           if (param2 != null) {
-            var6 = new hja[param2.length + csa.field_n];
-            for (var7_int = 0; var7_int < csa.field_n; var7_int++) {
+            var6 = new hja[param2.length + RoomComponent.field_n];
+            for (var7_int = 0; var7_int < RoomComponent.field_n; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
             for (var7_intLifetime3 = 0; param2.length > var7_intLifetime3; var7_intLifetime3++) {
-              var6[csa.field_n + var7_intLifetime3] = param2[var7_intLifetime3];
+              var6[RoomComponent.field_n + var7_intLifetime3] = param2[var7_intLifetime3];
             }
             var5 = var6;
           }
@@ -187,17 +187,17 @@ abstract class qr extends ae implements tpa {
           var24 = var19;
           var22 = var24;
           var6_array = var22;
-          for (var7_intLifetime1 = 0; var7_intLifetime1 < csa.field_n; var7_intLifetime1++) {
+          for (var7_intLifetime1 = 0; var7_intLifetime1 < RoomComponent.field_n; var7_intLifetime1++) {
             var23[var7_intLifetime1] = 10;
           }
           if (param2 != null) {
             if (param1 == null) {
               for (var7_intLifetime2 = 0; param2.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[csa.field_n + var7_intLifetime2] = param2[var7_intLifetime2].field_f;
+                var6_array[RoomComponent.field_n + var7_intLifetime2] = param2[var7_intLifetime2].field_f;
               }
             } else {
               for (var7_intLifetime2 = 0; param2.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[var7_intLifetime2 + csa.field_n] = param1[var7_intLifetime2];
+                var6_array[var7_intLifetime2 + RoomComponent.field_n] = param1[var7_intLifetime2];
               }
             }
           }
@@ -231,7 +231,7 @@ abstract class qr extends ae implements tpa {
           joa.field_d = new jea(0L, (jea) null);
           joa.field_d.field_w = tba.a(-74, false, 120, 8421504, 4210752, false);
           ji.field_g = new jea(0L, (jea) null);
-          ji.field_g.field_w = hca.c(114, 1, 3, 6316128, -111, 6316128);
+          ji.field_g.field_w = Player.c(114, 1, 3, 6316128, -111, 6316128);
           lw.field_a = new jea(0L, (jea) null);
           lw.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "popup"), 113);
           var12 = rfa.a(uka.a(param4, "lobby", 5, "popup_mouseover"), 122);
@@ -250,9 +250,9 @@ abstract class qr extends ae implements tpa {
           cs.field_a = new jea(0L, var10);
           cs.field_a.field_x = 2;
           cs.field_a.field_w = tba.a(-116, false, 30, 3815994, 2039583, false);
-          hma.field_b = new jea(0L, var10);
-          hma.field_b.field_x = 2;
-          hma.field_b.field_w = tba.a(-104, true, 30, 3815994, 2039583, false);
+          SecondaryNodeDeque.field_b = new jea(0L, var10);
+          SecondaryNodeDeque.field_b.field_x = 2;
+          SecondaryNodeDeque.field_b.field_w = tba.a(-104, true, 30, 3815994, 2039583, false);
           kua.field_i = new jea(0L, (jea) null);
           kua.field_i.field_ib = 13421772;
           kua.field_i.field_P = di.field_a;
@@ -297,9 +297,9 @@ abstract class qr extends ae implements tpa {
           up.field_a.field_C = rfa.a(uka.a(param4, "lobby", 5, "tab_mouseover"), 113);
           up.field_a.field_n = var14;
           js.field_d = new jea(0L, (jea) null);
-          js.field_d.field_w = hca.c(206, -1, 3, 1856141, -113, 1127256);
+          js.field_d.field_w = Player.c(206, -1, 3, 1856141, -113, 1127256);
           cfa.field_c = new jea(0L, (jea) null);
-          cfa.field_c.field_w = hca.c(290, -1, 3, 11579568, -120, 6052956);
+          cfa.field_c.field_w = Player.c(290, -1, 3, 11579568, -120, 6052956);
           hg.field_g = new jea(0L, var15);
           hg.field_g.field_W = 1;
           hg.field_g.field_v = 1;
@@ -360,11 +360,11 @@ abstract class qr extends ae implements tpa {
           dn.field_a.field_db = dupTemp$3;
           var17 = uka.a(param4, "lobby", 5, "checkbox");
           kt.field_F = new ta(0L, var17[1], var17[0], 1, dja.field_p, (String) null);
-          lr.field_b = new jea(0L, (jea) null);
-          lr.field_b.field_w = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion", 115));
-          lr.field_b.field_C = wpa.a((byte) -60, nia.a(param4, "lobby", "slideregion_mouseover", 75));
-          lr.field_b.field_db = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion_mouseheld", 123));
-          lr.field_b.field_M = wpa.a((byte) -87, nia.a(param4, "lobby", "slideregion_disabled", 106));
+          ClientException.field_b = new jea(0L, (jea) null);
+          ClientException.field_b.field_w = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion", 115));
+          ClientException.field_b.field_C = wpa.a((byte) -60, nia.a(param4, "lobby", "slideregion_mouseover", 75));
+          ClientException.field_b.field_db = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion_mouseheld", 123));
+          ClientException.field_b.field_M = wpa.a((byte) -87, nia.a(param4, "lobby", "slideregion_disabled", 106));
           ie.field_h = new jea(0L, (jea) null);
           ie.field_h.field_w = rfa.a(uka.a(param4, "lobby", 5, "dragbar"), 122);
           ie.field_h.field_C = rfa.a(uka.a(param4, "lobby", 5, "dragbar_mouseover"), 121);
@@ -375,12 +375,12 @@ abstract class qr extends ae implements tpa {
           pk.field_s.field_rb = nia.a(param4, "lobby", "upbutton_mouseover", -87);
           pk.field_s.field_U = nia.a(param4, "lobby", "upbutton_mouseheld", 71);
           pk.field_s.field_B = nia.a(param4, "lobby", "upbutton_disabled", 71);
-          jqa.field_b = new jea(0L, (jea) null);
-          jqa.field_b.field_R = nia.a(param4, "lobby", "downbutton", 119);
-          jqa.field_b.field_rb = nia.a(param4, "lobby", "downbutton_mouseover", -73);
-          jqa.field_b.field_U = nia.a(param4, "lobby", "downbutton_mouseheld", 56);
-          jqa.field_b.field_B = nia.a(param4, "lobby", "downbutton_disabled", 113);
-          fe.field_F = new oj(0L, pk.field_s, jqa.field_b, lr.field_b, ie.field_h);
+          BufferedSocket.field_b = new jea(0L, (jea) null);
+          BufferedSocket.field_b.field_R = nia.a(param4, "lobby", "downbutton", 119);
+          BufferedSocket.field_b.field_rb = nia.a(param4, "lobby", "downbutton_mouseover", -73);
+          BufferedSocket.field_b.field_U = nia.a(param4, "lobby", "downbutton_mouseheld", 56);
+          BufferedSocket.field_b.field_B = nia.a(param4, "lobby", "downbutton_disabled", 113);
+          fe.field_F = new oj(0L, pk.field_s, BufferedSocket.field_b, ClientException.field_b, ie.field_h);
           aaa.field_d = new hla(0L, (jea) null, rfa.field_C, fe.field_F, jk.field_g, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -451,7 +451,7 @@ abstract class qr extends ae implements tpa {
         if (!param0) {
           return null;
         }
-        field_v = (da) null;
+        field_v = (GameFont) null;
         return null;
     }
 
@@ -550,7 +550,7 @@ abstract class qr extends ae implements tpa {
 
     final static boolean d(int param0, int param1, int param2) {
         if (param2 != 32) {
-          field_v = (da) null;
+          field_v = (GameFont) null;
         }
         return 0 != (param0 & 32) ? true : false;
     }

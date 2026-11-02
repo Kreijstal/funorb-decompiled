@@ -12,7 +12,7 @@ final class lp {
     static ko field_h;
     static int field_g;
 
-    final void a(int param0, int param1, uia param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -46,13 +46,13 @@ final class lp {
         }
     }
 
-    final static vna a(byte param0, String param1) {
-        vna stackIn_18_0 = null;
+    final static IntrusiveDeque a(byte param0, String param1) {
+        IntrusiveDeque stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vna var2 = null;
+        IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
         in var3 = null;
         int var4 = 0;
@@ -62,7 +62,7 @@ final class lp {
           if (param0 != 48) {
             field_h = (ko) null;
           }
-          var2 = new vna();
+          var2 = new IntrusiveDeque();
           var3 = new in(param1);
           while (!var3.a(0)) {
             var4 = var3.b(21098);
@@ -104,7 +104,7 @@ final class lp {
         }
     }
 
-    private final void a(uia param0, int param1, byte param2, int param3) {
+    private final void a(PacketBuffer param0, int param1, byte param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

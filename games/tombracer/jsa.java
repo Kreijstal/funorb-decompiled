@@ -98,7 +98,7 @@ final class jsa extends qr {
         }
     }
 
-    final static iu[] b(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] b(int param0, int param1, int param2, int param3, int param4) {
         if (param1 == 2) {
           return hi.a(param0, 1, param3, 1, param4, 1, 3, true, param2);
         }

@@ -31,13 +31,13 @@ final class jc extends ra {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         ji.a(16);
-        if (qb.field_f < 0) {
+        if (ProxySocketConnector.field_f < 0) {
           lva.field_t.field_r = null;
           stackIn_55_0 = nra.field_a;
           stackIn_55_1 = 65;
           stackIn_56_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (ifa.field_n == null);
           ((jea) (Object) stackIn_55_0).c(stackIn_55_1, stackIn_56_2);
-          stackIn_62_0 = cka.field_fd;
+          stackIn_62_0 = OpenGlToolkit.field_fd;
           stackIn_62_1 = -67;
           stackIn_63_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (null == ifa.field_n);
           ((jea) (Object) stackIn_62_0).c(stackIn_62_1, stackIn_63_2);
@@ -46,12 +46,12 @@ final class jc extends ra {
           stackIn_68_2 = (param0) && (!param2) && (uv.field_o);
           ((jea) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
         } else {
-          lva.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(89, tla.field_d, new String[]{Integer.toString(qb.field_f)});
+          lva.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(89, tla.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
           stackIn_7_0 = nra.field_a;
           stackIn_7_1 = 65;
           stackIn_8_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (ifa.field_n == null);
           ((jea) (Object) stackIn_7_0).c(stackIn_7_1, stackIn_8_2);
-          stackIn_14_0 = cka.field_fd;
+          stackIn_14_0 = OpenGlToolkit.field_fd;
           stackIn_14_1 = -67;
           stackIn_15_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (null == ifa.field_n);
           ((jea) (Object) stackIn_14_0).c(stackIn_14_1, stackIn_15_2);
@@ -98,7 +98,7 @@ final class jc extends ra {
         }
     }
 
-    jc(la param0, int param1) {
+    jc(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -124,7 +124,7 @@ final class jc extends ra {
         this.a((byte) 113, new mka[]{new mka(0, 0, 2097152, 0, 40)});
     }
 
-    jc(la param0, int param1, kh param2, csa param3) {
+    jc(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -192,26 +192,26 @@ final class jc extends ra {
         return 7;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         ro var5 = null;
         mfa var6 = null;
         nq var7 = null;
-        fsa stackIn_1_0 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.h(param1, 0);
           var4.a(1, (byte) -12, true);
           var4.a((byte) -3, 0);
           var4.b((byte) 17, true);
           var4.g(119, 2);
-          var4.a((byte) 83, (nv) (new eq(param2, param0)));
+          var4.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = this.a((byte) -60, param2, param0);
           var4.a(var5, 0);
           var6 = rm.field_a;
@@ -321,7 +321,7 @@ final class jc extends ra {
         return stackIn_18_0;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {

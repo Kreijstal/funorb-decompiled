@@ -76,7 +76,7 @@ final class fja extends qra {
         int var4_int;
         String var4;
         int var5_int;
-        la var5;
+        Room var5;
         int var6;
         int[][] var6_ref_int____;
         int var7_int;
@@ -89,7 +89,7 @@ final class fja extends qra {
         int var13;
         int var14;
         int[][] var15;
-        hca var16;
+        Player var16;
         String var17;
         String var18;
         int[][] var19;
@@ -122,14 +122,14 @@ final class fja extends qra {
             }
           }
           var5_int = 0;
-          for (var6 = 0; var6 < this.field_c.field_H.length; var6++) {
+          for (var6 = 0; var6 < this.field_c.players.length; var6++) {
             if (!this.field_c.f((byte) -81, var6)) {
               var5_int++;
             }
           }
           if (var5_int == 2) {
             var6Lifetime2 = 0;
-            for (var7_int = 0; this.field_c.field_H.length > var7_int; var7_int++) {
+            for (var7_int = 0; this.field_c.players.length > var7_int; var7_int++) {
               if (!this.field_c.f((byte) -85, var7_int) &&
                 var3 != var7_int) {
                 var6Lifetime2 = var7_int;
@@ -169,12 +169,12 @@ final class fja extends qra {
             var6Lifetime1 = 256;
             var7_intLifetime1 = 64;
             qa.a(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, aq.field_a, var5_intLifetime1);
-            be.a(dpa.field_c, 0, qr.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
-            be.a(voa.field_q + ": " + this.field_h.j(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
+            SocketConnector.a(dpa.field_c, 0, qr.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
+            SocketConnector.a(voa.field_q + ": " + this.field_h.j(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             qa.a(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
-            kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, fm.a(false, 0), wca.field_l, 1, fm.a(false, 11903361), tp.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
+            kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, fm.a(false, 0), SpriteState.field_l, 1, fm.a(false, 11903361), tp.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
           }
           if (!param1) {
             return;
@@ -186,7 +186,7 @@ final class fja extends qra {
             if (50 >= this.field_q) {
               var4 = jh.field_J;
             } else {
-              var4 = hua.field_b.toUpperCase();
+              var4 = MouseInputHandler.field_b.toUpperCase();
             }
             var5_intLifetime1Lifetime1 = 40 + ds.field_n.a(var4, (byte) 41);
             var6Lifetime1Lifetime1 = aaa.a(false) / 2;
@@ -211,7 +211,7 @@ final class fja extends qra {
             }
             if (var3 >= 0 &&
               this.field_h.f(-12963, var3)) {
-              var16 = this.field_h.field_k.field_H[var3];
+              var16 = this.field_h.field_k.players[var3];
               var5 = var16.f((byte) 87);
               var6Lifetime1Lifetime2 = var5.q((byte) -82);
               if (this.field_c.field_K != 3) {
@@ -278,7 +278,7 @@ final class fja extends qra {
         boolean stackIn_14_0 = false;
         boolean stackIn_23_1 = false;
         dl var5;
-        dt var6;
+        PlayerSimulation var6;
         if (rda.d(20125)) {
           if (param2 == 28) {
             this.a(-1, (byte) -109);
@@ -332,12 +332,12 @@ final class fja extends qra {
             }
           } else {
             if (param2 == 22) {
-              var6.field_g.a(1, (byte) 113);
+              var6.player.a(1, (byte) 113);
               this.field_h.l((byte) -38);
             }
           }
           if (param2 == 41) {
-            var6.b((byte) 114);
+            var6.dumpState((byte) 114);
           }
         }
         if (param1 == 25) {
@@ -396,14 +396,14 @@ final class fja extends qra {
         var5 = TombRacer.field_G ? 1 : 0;
         if (!this.field_h.c(false) &&
           this.field_c.b(0)) {
-          if (this.field_c.field_G[0].e(-31170)) {
+          if (this.field_c.simulations[0].e(-31170)) {
             this.a(0, -2);
           } else {
             if (this.field_c.field_L > 1) {
               var7 = new int[this.field_c.field_k][3];
               for (var3 = 0; var3 < this.field_c.field_k; var3++) {
                 for (var4 = 0; 3 > var4; var4++) {
-                  var7[var3][var4] = this.field_c.field_H[var3].c(196608, var4);
+                  var7[var3][var4] = this.field_c.players[var3].c(196608, var4);
                 }
               }
               this.field_h.a((byte) 101, var7, this.field_h.field_x);
@@ -455,9 +455,9 @@ final class fja extends qra {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
-        uia stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         String stackIn_15_1 = null;
-        uia stackIn_17_0 = null;
+        PacketBuffer stackIn_17_0 = null;
         String stackIn_18_1 = null;
         int stackIn_33_0 = 0;
         int stackIn_46_0 = 0;
@@ -508,11 +508,11 @@ final class fja extends qra {
             return stackIn_8_0;
           }
           if (km.field_p == sua.field_G) {
-            ql.field_k.field_h = 0;
+            ql.field_k.position = 0;
             kia.field_b = null;
             if (param1 != null) {
               var9 = 0;
-              jg.field_a.field_h = 0;
+              jg.field_a.position = 0;
               if (param2) {
                 var9 = var9 | 1;
               }
@@ -526,17 +526,17 @@ final class fja extends qra {
               jg.field_a.i(param3, 0);
               jg.field_a.i(var9, 0);
               ql.field_k.i(18, 0);
-              ql.field_k.field_h = ql.field_k.field_h + 2;
-              var10 = ql.field_k.field_h;
+              ql.field_k.position = ql.field_k.position + 2;
+              var10 = ql.field_k.position;
               var11_ref_StringLifetime4 = qla.a(0, di.a(62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
               ql.field_k.a(var11_ref_StringLifetime4, false);
               bna.a(oca.field_a, false, c.field_f, ql.field_k, jg.field_a);
-              ql.field_k.b(ql.field_k.field_h - var10, (byte) -35);
+              ql.field_k.b(ql.field_k.position - var10, (byte) -35);
             } else {
-              jg.field_a.field_h = 0;
+              jg.field_a.position = 0;
               jg.field_a.a(lpa.field_p.nextInt(), (byte) -106);
               jg.field_a.a(lpa.field_p.nextInt(), (byte) 92);
               stackIn_14_0 = jg.field_a;
@@ -545,27 +545,27 @@ final class fja extends qra {
               } else {
                 stackIn_15_1 = var14;
               }
-              ((uia) (Object) stackIn_14_0).a(stackIn_15_1, (byte) 0);
+              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_15_1, (byte) 0);
               stackIn_17_0 = jg.field_a;
               if (param0.a((byte) 29)) {
                 stackIn_18_1 = var8;
               } else {
                 stackIn_18_1 = "";
               }
-              ((uia) (Object) stackIn_17_0).a(stackIn_18_1, (byte) 0);
+              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_18_1, (byte) 0);
               ql.field_k.i(16, 0);
-              ql.field_k.field_h = ql.field_k.field_h + 1;
-              var9 = ql.field_k.field_h;
+              ql.field_k.position = ql.field_k.position + 1;
+              var9 = ql.field_k.position;
               bna.a(oca.field_a, false, c.field_f, ql.field_k, jg.field_a);
-              ql.field_k.d(ql.field_k.field_h - var9, (byte) -115);
+              ql.field_k.d(ql.field_k.position - var9, (byte) -115);
             }
             bl.a(-1, -1);
-            km.field_p = hca.field_p;
+            km.field_p = Player.field_p;
           }
-          if (hca.field_p == km.field_p &&
+          if (Player.field_p == km.field_p &&
             ama.a(1, -1)) {
             var9Lifetime1 = vc.field_q.h(255);
-            vc.field_q.field_h = 0;
+            vc.field_q.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               km.field_p = ne.field_c;
@@ -582,7 +582,7 @@ final class fja extends qra {
               if (99 == var9Lifetime1) {
                 ama.a(bha.f(1), -1);
                 kia.field_b = new Boolean(di.a(vc.field_q, (byte) 107));
-                vc.field_q.field_h = 0;
+                vc.field_q.position = 0;
               } else {
                 oka.field_z = var9Lifetime1;
                 km.field_p = pe.field_m;
@@ -594,7 +594,7 @@ final class fja extends qra {
             var9Lifetime2 = 2;
             if (ama.a(var9Lifetime2, -1)) {
               var10Lifetime1 = vc.field_q.d(124);
-              vc.field_q.field_h = 0;
+              vc.field_q.position = 0;
               if (ama.a(var10Lifetime1, -1)) {
                 var11 = dja.field_s.length;
                 for (var12 = 0; var11 > var12; var12++) {
@@ -719,7 +719,7 @@ final class fja extends qra {
         this.field_o = true;
         this.field_m = false;
         try {
-          var3_int = this.field_h.field_k.field_H.length;
+          var3_int = this.field_h.field_k.players.length;
           this.field_n = new qa[var3_int];
           for (var4 = 0; var4 < var3_int; var4++) {
             this.field_n[var4] = new qa(this.field_h, var4);

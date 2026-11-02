@@ -65,7 +65,7 @@ final class doa {
         bia.a((byte) 93, 1600);
     }
 
-    final void a(int param0, cka param1) {
+    final void a(int param0, OpenGlToolkit param1) {
         tj discarded$0 = null;
         tj discarded$3 = null;
         tj discarded$4 = null;
@@ -74,8 +74,8 @@ final class doa {
           discarded$0 = new tj(this.field_a, 5126, 2, 0);
           discarded$3 = new tj(this.field_a, 5126, 3, 8);
           if (param0 != 22091) {
-            cka var4 = (cka) null;
-            this.a(19, (cka) null);
+            OpenGlToolkit var4 = (OpenGlToolkit) null;
+            this.a(19, (OpenGlToolkit) null);
           }
           discarded$4 = new tj(this.field_a, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {

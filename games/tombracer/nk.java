@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends vg {
+final class nk extends IntrusiveNode {
     int field_j;
     int[] field_h;
     private boolean[] field_g;
@@ -60,15 +60,15 @@ final class nk extends vg {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        uia var7 = null;
-        uia var8 = null;
+        PacketBuffer var7 = null;
+        PacketBuffer var8 = null;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
         int var4Lifetime4;
         try {
           this.field_l = param0;
-          var7 = new uia(param1);
+          var7 = new PacketBuffer(param1);
           var8 = var7;
           this.field_j = var8.h(255);
           this.field_h = new int[this.field_j];

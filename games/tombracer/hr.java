@@ -115,12 +115,12 @@ final class hr extends c implements fo {
         return this.field_B;
     }
 
-    final static iu[] a(String param0, cn param1, String param2, int param3) {
+    final static Sprite[] a(String param0, cn param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         jg var6 = null;
-        iu[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -334,7 +334,7 @@ final class hr extends c implements fo {
         this.field_p = param1;
     }
 
-    final void a(la param0, int param1) {
+    final void a(Room param0, int param1) {
         this.field_B = param0.a(this.field_B, (byte) 71);
         if (param1 >= -16) {
           return;

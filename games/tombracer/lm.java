@@ -29,9 +29,9 @@ final class lm extends ci {
         field_o = null;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
-        uia var5 = null;
+        PacketBuffer var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -43,8 +43,8 @@ final class lm extends ci {
             this.a(param1.a(param0 ^ -32661), (byte) -55);
           }
           if (param0 != 107) {
-            var5 = (uia) null;
-            this.a((byte) -48, (uia) null, 9);
+            var5 = (PacketBuffer) null;
+            this.a((byte) -48, (PacketBuffer) null, 9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -88,8 +88,8 @@ final class lm extends ci {
     private final void a(int param0, byte param1) {
         this.field_n = (param0 & 16711680) >> 12;
         if (param1 != -55) {
-          uia var4 = (uia) null;
-          this.a((byte) 12, (uia) null, 20);
+          PacketBuffer var4 = (PacketBuffer) null;
+          this.a((byte) 12, (PacketBuffer) null, 20);
         }
         this.field_s = 4080 & param0 << 4;
         this.field_q = (65280 & param0) >> 4;

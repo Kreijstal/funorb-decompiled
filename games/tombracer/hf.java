@@ -8,7 +8,7 @@ final class hf implements ac, gs {
     private int field_h;
     private int field_j;
     private bua field_c;
-    static uia field_d;
+    static PacketBuffer field_d;
     private boolean field_m;
     static jea field_a;
     int field_k;
@@ -16,7 +16,7 @@ final class hf implements ac, gs {
     private int field_f;
     private int field_i;
     static int field_b;
-    private hca field_p;
+    private Player field_p;
     private bua field_n;
 
     public final void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -114,12 +114,12 @@ final class hf implements ac, gs {
         if (-17825792 > param2) {
           return;
         }
-        L0: {
-          L1: {
-            L2: {
-              L3: {
-                L4: {
-                  L5: {
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
+              regionExit4: {
+                regionExit5: {
+                  regionExit6: {
                     var5 = dfa.a(-this.field_p.g(-25787) >> 2, 2048, -115);
                     var6 = 0;
                     var7 = this.field_f;
@@ -127,57 +127,57 @@ final class hf implements ac, gs {
                       case 32:
                         break;
                       case 33:
-                        break L5;
+                        break regionExit6;
                       case 26:
-                        break L4;
+                        break regionExit5;
                       case 2:
-                        break L3;
+                        break regionExit4;
                       default:
-                        break L1;
+                        break regionExit2;
                       case 36:
                         if (var16 == 0) {
-                          break L2;
+                          break regionExit3;
                         }
                       case 3:
                         var6 = 2883584;
                         if (var16 == 0) {
-                          break L0;
+                          break regionExit1;
                         }
                         break;
                     }
                     var6 = 1835008;
                     if (var16 == 0) {
-                      break L0;
+                      break regionExit1;
                     }
                   }
                   var6 = 1835008;
                   if (var16 == 0) {
-                    break L0;
+                    break regionExit1;
                   }
                 }
                 var7 = this.field_p.H(0);
                 if (var7 == 6) {
                   var6 = 1835008;
                   if (var16 == 0) {
-                    break L0;
+                    break regionExit1;
                   }
                 }
                 if (var7 != 2) {
-                  break L0;
+                  break regionExit1;
                 }
                 var6 = 1835008;
                 if (var16 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               }
               var6 = 1835008;
               if (var16 == 0) {
-                break L0;
+                break regionExit1;
               }
             }
             var6 = 2359296;
             if (var16 == 0) {
-              break L0;
+              break regionExit1;
             }
           }
           var6 = -262144;
@@ -413,7 +413,7 @@ final class hf implements ac, gs {
         float var5;
         int var6;
         int var7;
-        la var8;
+        Room var8;
         w var9;
         int var10;
         int var11;
@@ -879,7 +879,7 @@ final class hf implements ac, gs {
         return stackIn_7_0;
     }
 
-    hf(hca param0, int param1) {
+    hf(Player param0, int param1) {
         aga var3 = null;
         this.field_o = false;
         this.field_h = 0;
@@ -897,7 +897,7 @@ final class hf implements ac, gs {
         }
     }
 
-    public final void a(int param0, la param1) {
+    public final void a(int param0, Room param1) {
         sva var5 = null;
         if (param1 == null) {
           return;

@@ -199,7 +199,7 @@ final class jw extends b implements cd, tsa {
                   eo.q(83);
                 } else {
                   if (!this.field_w) {
-                    jga.b(50);
+                    TextResourceLoader.b(50);
                   } else {
                     gqa.a((byte) 62);
                   }

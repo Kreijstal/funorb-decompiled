@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qf extends uia {
-    static da field_j;
+final class qf extends PacketBuffer {
+    static GameFont field_j;
     static String field_l;
     static nh[] field_k;
     static int field_i;
@@ -11,28 +11,28 @@ final class qf extends uia {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)var3;
-        int fieldTemp$1 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$1] = (byte)(var3 >> 8);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)var3;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(var3 >> 8);
         if (param0 == 114) {
-          fieldTemp$2 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$2] = (byte)(var3 >> 16);
-          fieldTemp$3 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$3] = (byte)(var3 >> 24);
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(var3 >> 16);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)(var3 >> 24);
           return;
         }
         field_k = (nh[]) null;
-        int fieldTemp$4 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$4] = (byte)(var3 >> 16);
-        int fieldTemp$5 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$5] = (byte)(var3 >> 24);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(var3 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(var3 >> 24);
     }
 
     final static String a(int param0, String param1, String param2, String param3) {
@@ -70,31 +70,31 @@ final class qf extends uia {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)(var3 >> 24);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(var3 >> 24);
         if (param0 == 17133) {
-          fieldTemp$1 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$1] = (byte)(var3 >> 16);
-          fieldTemp$2 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$2] = (byte)(var3 >> 8);
-          fieldTemp$3 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$3] = (byte)var3;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(var3 >> 16);
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(var3 >> 8);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)var3;
           return;
         }
         field_l = (String) null;
-        int fieldTemp$4 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$4] = (byte)(var3 >> 16);
-        int fieldTemp$5 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$5] = (byte)(var3 >> 8);
-        int fieldTemp$6 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$6] = (byte)var3;
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(var3 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(var3 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)var3;
     }
 
     static {

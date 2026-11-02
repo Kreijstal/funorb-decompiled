@@ -174,7 +174,7 @@ final class a implements e {
         this.UA(this.field_nativeid, ((i) (param0)).field_nativeid, ((ja) (param1)).field_nativeid, param2, param3);
     }
 
-    private final native void HA(long param0, ha param1, int param2, int param3);
+    private final native void HA(long param0, GraphicsToolkit param1, int param2, int param3);
 
     a(oa param0, int param1, int param2) {
         this.field_e = param0;

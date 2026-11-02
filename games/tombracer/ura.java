@@ -59,16 +59,16 @@ final class ura {
         }
     }
 
-    final static iu[] a(int param0, int param1, boolean param2, int param3, int param4) {
-        iu[] var6 = new iu[9];
-        iu[] var5 = var6;
-        iu dupTemp$0 = jf.a(param0, 48, param3);
+    final static Sprite[] a(int param0, int param1, boolean param2, int param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = jf.a(param0, 48, param3);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        iu dupTemp$1 = jf.a(param4, 110, param3);
+        Sprite dupTemp$1 = jf.a(param4, 110, param3);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;

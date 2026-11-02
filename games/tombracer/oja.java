@@ -6,7 +6,7 @@ final class oja extends vw {
     private jagdx.IDirect3DPixelShader field_g;
     private static float[] field_h;
     private boolean field_d;
-    private cta field_i;
+    private Direct3DToolkit field_i;
     private boolean field_j;
     private jagdx.IDirect3DVertexShader field_e;
 
@@ -37,7 +37,7 @@ final class oja extends vw {
         }
     }
 
-    oja(cta param0, cn param1, hk param2) {
+    oja(Direct3DToolkit param0, cn param1, hk param2) {
         super(param0);
         boolean stackIn_9_1 = false;
         this.field_f = param2;

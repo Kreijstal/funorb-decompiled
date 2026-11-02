@@ -30,7 +30,7 @@ final class mf {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           uoa.b();
-          hma.field_a = 11;
+          SecondaryNodeDeque.field_a = 11;
           gta.field_g = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2_double = 15.0;

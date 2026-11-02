@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class za extends vg {
+abstract class za extends IntrusiveNode {
     static String field_f;
     static nh field_g;
 

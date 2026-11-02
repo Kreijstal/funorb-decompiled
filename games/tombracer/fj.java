@@ -29,8 +29,8 @@ final class fj {
         String stackIn_69_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
-        hca var9 = null;
-        la var10 = null;
+        Player var9 = null;
+        Room var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -59,8 +59,8 @@ final class fj {
         int var35 = 0;
         int var36 = 0;
         int var37 = 0;
-        ff var38 = null;
-        ff var39 = null;
+        MatchState var38 = null;
+        MatchState var39 = null;
         var16 = null;
         var37 = TombRacer.field_G ? 1 : 0;
         try {
@@ -75,7 +75,7 @@ final class fj {
           if (var39.b((byte) 90, param0)) {
             return;
           }
-          var9 = var38.field_H[param0];
+          var9 = var38.players[param0];
           var10 = var9.f((byte) 73);
           var11 = -param1 + param2;
           var12 = param4 - param3;
@@ -206,7 +206,7 @@ final class fj {
               iga.field_o.a(109);
               return;
             }
-            rba.a(var31 * 255 >> 8, param4, 0, param2, (byte) 25, param3, param1);
+            SecondaryNodeDequeIterator.a(var31 * 255 >> 8, param4, 0, param2, (byte) 25, param3, param1);
           }
           iga.field_o.a(109);
           return;
@@ -224,14 +224,14 @@ final class fj {
         }
     }
 
-    final static iu[] c(int param0) {
+    final static Sprite[] c(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
-        iu[] var1 = new iu[fa.field_b];
+        Sprite[] var1 = new Sprite[fa.field_b];
         if (param0 != 1500) {
           field_c = (wla) null;
         }
@@ -242,9 +242,9 @@ final class fj {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = mga.field_g[sea.c(255, (int) var4[var6])];
           }
-          var1[var2] = new iu(ika.field_a, kba.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var5);
+          var1[var2] = new Sprite(ika.field_a, kba.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var5);
         }
-        loa.a((byte) -50);
+        MazeGenerator.a((byte) -50);
         return var1;
     }
 

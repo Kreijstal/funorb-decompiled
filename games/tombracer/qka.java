@@ -170,7 +170,7 @@ final class qka extends qra {
         String var24 = null;
         var21 = TombRacer.field_G ? 1 : 0;
         ura.a(-10985);
-        la.field_j.a(0, 0);
+        Room.field_j.a(0, 0);
         if (this.field_h.field_D) {
           var3 = aaa.a(false) >> 1;
           var4 = (aaa.a(false) >> 1) / 3 + 37;
@@ -183,8 +183,8 @@ final class qka extends qra {
             var9 = -var8 + var6;
             var10 = -(var5 * var9) + koa.b(0);
             var11 = var4 * var22 + (var3 - (var4 >> 1) * (-1 + var6));
-            this.field_c.field_H[var22].n((byte) -120).a(-1, var11, 800, 0, var10);
-            vna.field_c.a(var11 - (vna.field_c.a() >> 1) + 1, var10 - 8);
+            this.field_c.players[var22].n((byte) -120).a(-1, var11, 800, 0, var10);
+            IntrusiveDeque.field_c.a(var11 - (IntrusiveDeque.field_c.a() >> 1) + 1, var10 - 8);
             if (var8 == 0) {
               sta.field_y[-1 + sta.field_y.length].a(-(sta.field_y[sta.field_y.length - 1].a() >> 1) + var11 - 1, var10 - 12);
             }
@@ -200,12 +200,12 @@ final class qka extends qra {
             if (!this.field_c.f((byte) -102, var22)) {
               var13 = 7829367;
               if (-2 != this.field_c.field_z) {
-                be.a(gl.$cfr$intArgs$a$53ce4ab4c593(93, ga.field_K.toUpperCase(), new String[]{Integer.toString(this.field_c.field_v[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
+                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(93, ga.field_K.toUpperCase(), new String[]{Integer.toString(this.field_c.field_v[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               } else {
-                be.a(paa.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
+                SocketConnector.a(paa.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               }
               if (this.field_c.g(69, var22)) {
-                be.a(w.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
+                SocketConnector.a(w.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
               }
             } else {
               oka.a(id.field_i.toUpperCase(), 11141120, kn.field_p, -1, var10 - 190, var11, 0);
@@ -229,7 +229,7 @@ final class qka extends qra {
           } else {
             var10_ref_String = vj.field_d[var9].toUpperCase();
           }
-          be.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
+          SocketConnector.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
           oka.a(this.field_h.a(this.field_h.field_x, false).toUpperCase(), wga.field_a[this.field_h.field_x], eda.field_f, -1, -15 + var4, var3, -1);
           if (this.field_c.field_z < 0) {
             oka.a(wpa.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
@@ -261,7 +261,7 @@ final class qka extends qra {
             var24 = dea.a(this.field_c.c((byte) 115, this.field_h.field_x), (byte) -8);
             oka.a(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
             oka.a(lc.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
-            var13 = this.field_h.field_k.field_G[this.field_h.field_x].field_g.v(74);
+            var13 = this.field_h.field_k.simulations[this.field_h.field_x].player.v(74);
             oka.a(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
           } else {
             var23 = dea.a(this.field_c.c((byte) 115, this.field_h.field_x), (byte) -8);
@@ -272,7 +272,7 @@ final class qka extends qra {
             bca.field_d.a(var3 - 110, 60 + var4);
             ts.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.d() + (var3 - 110) + 5, kn.field_p, 2431750);
             oka.a(lc.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
-            var14 = this.field_h.field_k.field_G[this.field_h.field_x].field_g.v(110);
+            var14 = this.field_h.field_k.simulations[this.field_h.field_x].player.v(110);
             oka.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
             if (pt.field_p != null &&
               pt.field_p.field_p != null &&
@@ -295,7 +295,7 @@ final class qka extends qra {
               }
               if (var18 != null) {
                 var16 = var14 - var17;
-                be.a(gl.$cfr$intArgs$a$53ce4ab4c593(121, qw.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + qu.a(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
+                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(121, qw.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + qu.a(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
               }
             }
           }
@@ -352,8 +352,8 @@ final class qka extends qra {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = TombRacer.field_G ? 1 : 0;
-        for (var3 = 0; var3 < this.field_c.field_H.length; var3++) {
-          var4_ref_hf = (hf) (this.field_c.field_H[var3].n((byte) -67));
+        for (var3 = 0; var3 < this.field_c.players.length; var3++) {
+          var4_ref_hf = (hf) (this.field_c.players[var3].n((byte) -67));
           if (!this.field_q) {
             stackIn_5_0 = var4_ref_hf;
             stackIn_5_1 = 26;

@@ -213,7 +213,7 @@ final class sq extends cg {
               }
             }
           }
-          if (!kta.field_h) {
+          if (!AudioOutput.field_h) {
             stackIn_35_0 = param2;
           } else {
             stackIn_35_0 = param2 << 1;
@@ -235,7 +235,7 @@ final class sq extends cg {
                 }
                 this.field_y.b(this.field_t, 0, param2);
                 this.field_l.b(this.field_o, 0, param2);
-                if (!kta.field_h) {
+                if (!AudioOutput.field_h) {
                   stackIn_49_0 = param1;
                 } else {
                   localTemp$0 = param1 << 1;
@@ -263,7 +263,7 @@ final class sq extends cg {
               this.field_o = new int[var6];
             }
             this.field_k.b(this.field_t, 0, param2);
-            if (kta.field_h) {
+            if (AudioOutput.field_h) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_65_0 = localTemp$1;

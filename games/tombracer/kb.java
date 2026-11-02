@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends vg {
+final class kb extends IntrusiveNode {
     int field_j;
     int field_l;
     long field_h;
@@ -35,7 +35,7 @@ final class kb extends vg {
           return rl.field_t[param0];
         }
         if (var5 == 4) {
-          return jna.field_j[param0];
+          return GameApplet.field_j[param0];
         }
         if (5 == var5) {
           return gca.field_g[param0];

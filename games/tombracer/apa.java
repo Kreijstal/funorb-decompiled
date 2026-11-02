@@ -4,7 +4,7 @@
 final class apa {
     static long field_a;
     static String field_b;
-    private iu[] field_d;
+    private Sprite[] field_d;
     static ada field_c;
 
     public static void a(byte param0) {

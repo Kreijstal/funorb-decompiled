@@ -4,7 +4,7 @@
 public class dxVertexLayout extends mna {
     jagdx.IDirect3DVertexDeclaration field_e;
 
-    dxVertexLayout(cta param0, ne[] param1) {
+    dxVertexLayout(Direct3DToolkit param0, ne[] param1) {
         int var5 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;

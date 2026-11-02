@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oi {
-    static fia field_a;
+    static PlatformTaskDispatcher field_a;
     static int field_b;
 
     final static void a(long param0, int param1, int param2, String param3, int param4) {

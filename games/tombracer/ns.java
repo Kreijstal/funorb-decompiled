@@ -53,7 +53,7 @@ final class ns extends qe {
         }
     }
 
-    ns(cka param0, aaa param1) {
+    ns(OpenGlToolkit param0, aaa param1) {
         super(param0);
         int var6 = 0;
         int var9 = 0;

@@ -4,7 +4,7 @@
 final class sua extends kna {
     private int field_F;
     static double field_J;
-    static vna field_H;
+    static IntrusiveDeque field_H;
     static int field_L;
     static fta field_G;
     static jea field_K;
@@ -23,7 +23,7 @@ final class sua extends kna {
         field_H = null;
     }
 
-    final void a(la param0, int param1) {
+    final void a(Room param0, int param1) {
         try {
           super.a(param0, param1);
           this.field_F = -this.field_F;
@@ -64,7 +64,7 @@ final class sua extends kna {
         return true;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -38, dqa.a(!param0 ? true : false, this.field_F, 5), 5);
@@ -73,26 +73,26 @@ final class sua extends kna {
         }
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         spa var5 = null;
         mfa var6 = null;
         nq var7 = null;
-        fsa var8 = null;
-        fsa stackIn_1_0 = null;
+        Trap var8 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new fsa(param2, param0);
+          var8 = new Trap(param2, param0);
           var8.b((byte) -11, this.field_k, this.field_l);
           var8.h(param1, 0);
           var8.a(1, (byte) -12, true);
           var8.a((byte) -3, 6);
           var8.b((byte) 17, false);
           var8.g(param1 ^ 109, 2);
-          var8.a((byte) 83, (nv) (new eq(param2, param0)));
+          var8.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new spa(param2, param0);
           var5.a((byte) -124, this.field_F * 8);
           var8.a(var5, 0);
@@ -116,7 +116,7 @@ final class sua extends kna {
         }
     }
 
-    sua(la param0, int param1, kh param2, csa param3) {
+    sua(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         this.field_F = 4;
         try {
@@ -128,7 +128,7 @@ final class sua extends kna {
 
     final boolean z(int param0) {
         if (param0 != 0) {
-          field_H = (vna) null;
+          field_H = (IntrusiveDeque) null;
           return false;
         }
         return false;
@@ -148,13 +148,13 @@ final class sua extends kna {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        uia var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new uia(param0);
+          var9 = new PacketBuffer(param0);
           var3 = var9.h(255);
           var4 = var9.e(124);
           if (param1 > -99) {
@@ -206,8 +206,8 @@ final class sua extends kna {
 
     final int t(int param0) {
         if (param0 != 8) {
-          la var3 = (la) null;
-          this.a((la) null, -35);
+          Room var3 = (Room) null;
+          this.a((Room) null, -35);
           return 7;
         }
         return 7;
@@ -220,7 +220,7 @@ final class sua extends kna {
         return false;
     }
 
-    sua(la param0, int param1) {
+    sua(Room param0, int param1) {
         super(param0, param1);
         this.field_F = 4;
     }
@@ -249,7 +249,7 @@ final class sua extends kna {
 
     static {
         field_J = 0.0;
-        field_H = new vna();
+        field_H = new IntrusiveDeque();
         field_G = new fta();
     }
 }

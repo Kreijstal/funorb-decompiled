@@ -39,9 +39,9 @@ final class ub {
     }
 
     final static void b(int param0) {
-        od var1 = null;
+        DualLinkNode var1 = null;
         int var2 = TombRacer.field_G ? 1 : 0;
-        od var1Lifetime1;
+        DualLinkNode var1Lifetime1;
         try {
           ol.field_b = null;
           ii.field_a = 0;
@@ -50,12 +50,12 @@ final class ub {
           wv.field_l.d(8);
           var1 = hia.field_s.b(16);
           while (var1 != null) {
-            var1.c(-7975);
+            var1.unlinkSecondary(-7975);
             var1 = hia.field_s.a((byte) -112);
           }
           var1Lifetime1 = bla.field_G.b(param0 - 120);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.c(-7975);
+            var1Lifetime1.unlinkSecondary(-7975);
             var1Lifetime1 = bla.field_G.a((byte) -112);
           }
           ae.field_g = 0;

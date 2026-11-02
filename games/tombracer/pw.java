@@ -102,7 +102,7 @@ final class pw extends fqa {
         return false;
     }
 
-    pw(la param0, int param1, kh param2, csa param3) {
+    pw(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         this.field_L = 2;
         try {
@@ -148,13 +148,13 @@ final class pw extends fqa {
         return 5;
     }
 
-    pw(la param0, int param1) {
+    pw(Room param0, int param1) {
         super(param0, param1);
         this.field_L = 2;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa stackIn_20_0 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -166,10 +166,10 @@ final class pw extends fqa {
         cv var7 = null;
         int var8 = 0;
         int var9 = 0;
-        fsa var10 = null;
+        Trap var10 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          var10 = new fsa(param2, param0);
+          var10 = new Trap(param2, param0);
           var5_int = this.field_m;
           if (var5_int == 54) {
             this.field_k = 2097152;
@@ -182,7 +182,7 @@ final class pw extends fqa {
           var5 = new dja(param2, param0);
           var5.a(this.field_L, true);
           this.a(var5, (byte) -94);
-          var10.a((byte) 83, (nv) (var5));
+          var10.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (cv) (var6.a(9, param1 ^ 113));
           if (param1 != 3) {
@@ -223,9 +223,9 @@ final class pw extends fqa {
         }
     }
 
-    final static ha a(int param0, java.awt.Canvas param1, int param2, byte param3, d param4) {
+    final static GraphicsToolkit a(int param0, java.awt.Canvas param1, int param2, byte param3, d param4) {
         RuntimeException var5 = null;
-        ha stackIn_2_0 = null;
+        GraphicsToolkit stackIn_2_0 = null;
         oa stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -236,9 +236,9 @@ final class pw extends fqa {
         try {
           if (param3 == -62) {
             stackIn_4_0 = new oa(param1, param4, param2, param0);
-            return (ha) ((Object) stackIn_4_0);
+            return (GraphicsToolkit) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (ha) null;
+          stackIn_2_0 = (GraphicsToolkit) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -275,7 +275,7 @@ final class pw extends fqa {
         return true;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -125, this.field_L, 4);

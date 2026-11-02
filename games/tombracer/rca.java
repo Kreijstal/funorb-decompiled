@@ -103,7 +103,7 @@ final class rca extends me {
           var3 = koa.b(0) - kq.field_a.c() >> 1;
           if (this.field_m.c(16) == 0) {
             var6 = gv.field_v;
-            var7 = la.field_m[this.field_m.a(-13939)];
+            var7 = Room.field_m[this.field_m.a(-13939)];
             oka.a(var6.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             ura.a(-10985);
             hp.a(1024, 0, 0, this.field_o.b((byte) 74), -1918106173, 300, 320);
@@ -126,7 +126,7 @@ final class rca extends me {
         var3Lifetime1 = koa.b(0) - kq.field_a.c() >> 1;
         if (this.field_m.c(16) == 0) {
           var8 = gv.field_v;
-          var9 = la.field_m[this.field_m.a(-13939)];
+          var9 = Room.field_m[this.field_m.a(-13939)];
           oka.a(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
           ura.a(-10985);
           hp.a(1024, 0, 0, this.field_o.b((byte) 74), -1918106173, 300, 320);

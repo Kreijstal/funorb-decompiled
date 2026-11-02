@@ -82,7 +82,7 @@ final class je extends haa {
         return false;
     }
 
-    final static iu a(byte param0) {
+    final static Sprite a(byte param0) {
         int var4_int = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
         int var1 = mq.field_b[0] * iga.field_m[0];
@@ -92,10 +92,10 @@ final class je extends haa {
           var3[var4_int] = mga.field_g[sea.c(255, (int) var2[var4_int])];
         }
         if (param0 != 69) {
-          return (iu) null;
+          return (Sprite) null;
         }
-        iu var4 = new iu(ika.field_a, kba.field_s, ak.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], var3);
-        loa.a((byte) 113);
+        Sprite var4 = new Sprite(ika.field_a, kba.field_s, ak.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], var3);
+        MazeGenerator.a((byte) 113);
         return var4;
     }
 

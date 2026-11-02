@@ -13,27 +13,27 @@ final class ow extends wv {
         if (param0 <= 78) {
           this.field_r = (dea) null;
         }
-        if (null == rba.field_a) {
+        if (null == SecondaryNodeDequeIterator.field_a) {
           return;
         }
         if (!vpa.a(54)) {
-          if (!rba.field_a.field_D) {
+          if (!SecondaryNodeDequeIterator.field_a.field_D) {
             this.a(22174, uja.field_e);
           } else {
-            if (!rba.field_a.d((byte) 100)) {
+            if (!SecondaryNodeDequeIterator.field_a.d((byte) 100)) {
               this.a(22174, mi.field_l);
             } else {
               this.a(22174, sja.field_h);
             }
           }
         } else {
-          if (!rba.field_a.field_D) {
+          if (!SecondaryNodeDequeIterator.field_a.field_D) {
             this.a(22174, ma.field_f);
           } else {
-            if (!rba.field_a.d((byte) 68)) {
+            if (!SecondaryNodeDequeIterator.field_a.d((byte) 68)) {
               this.a(22174, hi.field_q);
             } else {
-              this.a(22174, sk.field_f);
+              this.a(22174, IterableNodeHashTable.field_f);
             }
           }
         }
@@ -188,20 +188,20 @@ final class ow extends wv {
         int var5 = TombRacer.field_G ? 1 : 0;
         super.a(param0, param1, param2);
         this.field_r.a((byte) -120, param0, !param1 ? true : false);
-        if (rba.field_a == null) {
+        if (SecondaryNodeDequeIterator.field_a == null) {
           return;
         }
-        if (rba.field_a.field_k == null) {
+        if (SecondaryNodeDequeIterator.field_a.field_k == null) {
           return;
         }
-        if (!rba.field_a.field_D) {
+        if (!SecondaryNodeDequeIterator.field_a.field_D) {
           return;
         }
-        if (rba.field_a.d((byte) 92)) {
+        if (SecondaryNodeDequeIterator.field_a.d((byte) 92)) {
           return;
         }
-        int var4 = rba.field_a.field_k.field_b;
-        if (1 == (1 & var4 >> rba.field_a.field_x)) {
+        int var4 = SecondaryNodeDequeIterator.field_a.field_k.field_b;
+        if (1 == (1 & var4 >> SecondaryNodeDequeIterator.field_a.field_x)) {
           this.field_m[1].field_e = pc.field_g.toUpperCase();
           return;
         }

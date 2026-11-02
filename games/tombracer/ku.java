@@ -76,7 +76,7 @@ final class ku extends qe {
         }
     }
 
-    ku(cka param0) {
+    ku(OpenGlToolkit param0) {
         super(param0);
         int stackIn_5_0 = 0;
         int stackIn_8_1 = 0;
@@ -144,15 +144,15 @@ final class ku extends qe {
     }
 
     final void a(boolean param0) {
-        cka stackIn_5_0 = null;
+        OpenGlToolkit stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         boolean stackIn_6_2 = false;
-        cka stackIn_8_0 = null;
+        OpenGlToolkit stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
-        cka stackIn_12_0 = null;
+        OpenGlToolkit stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         boolean stackIn_13_2 = false;
-        cka stackIn_19_0 = null;
+        OpenGlToolkit stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         boolean stackIn_20_2 = false;
         if (this.field_i) {
@@ -164,10 +164,10 @@ final class ku extends qe {
         stackIn_5_0 = this.field_a;
         stackIn_5_1 = 1;
         stackIn_6_2 = (param0) ? false : true;
-        ((cka) (Object) stackIn_5_0).e(stackIn_5_1, stackIn_6_2);
+        ((OpenGlToolkit) (Object) stackIn_5_0).e(stackIn_5_1, stackIn_6_2);
         stackIn_8_0 = this.field_a;
         stackIn_9_1 = (param0) ? false : true;
-        ((cka) (Object) stackIn_8_0).a(stackIn_9_1, (kl) null);
+        ((OpenGlToolkit) (Object) stackIn_8_0).a(stackIn_9_1, (kl) null);
         if (!param0) {
           this.field_a.b(8448, 8960, 8448);
           this.field_a.c(0, 0, 5890, 768);
@@ -176,7 +176,7 @@ final class ku extends qe {
           stackIn_19_0 = this.field_a;
           stackIn_19_1 = 0;
           stackIn_20_2 = (param0) ? false : true;
-          ((cka) (Object) stackIn_19_0).e(stackIn_19_1, stackIn_20_2);
+          ((OpenGlToolkit) (Object) stackIn_19_0).e(stackIn_19_1, stackIn_20_2);
         } else {
           field_j = (int[]) null;
           this.field_a.b(8448, 8960, 8448);
@@ -186,7 +186,7 @@ final class ku extends qe {
           stackIn_12_0 = this.field_a;
           stackIn_12_1 = 0;
           stackIn_13_2 = (param0) ? false : true;
-          ((cka) (Object) stackIn_12_0).e(stackIn_12_1, stackIn_13_2);
+          ((OpenGlToolkit) (Object) stackIn_12_0).e(stackIn_12_1, stackIn_13_2);
         }
         if (!this.field_c) {
           return;

@@ -20,8 +20,8 @@ final class bk extends ci {
 
     final void b(byte param0) {
         if (param0 != 116) {
-          uia var3 = (uia) null;
-          this.a((byte) 61, (uia) null, -62);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((byte) 61, (PacketBuffer) null, -62);
         }
         tka.b((byte) 115);
     }
@@ -35,7 +35,7 @@ final class bk extends ci {
         this.field_n = 0;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -132,12 +132,12 @@ final class bk extends ci {
             if (this.field_q <= 0) {
               stackIn_8_0 = this.field_r;
             } else {
-              stackIn_8_0 = this.field_r + jqa.a(this.field_q, var6, -102) - var4;
+              stackIn_8_0 = this.field_r + BufferedSocket.a(this.field_q, var6, -102) - var4;
             }
             var8 = stackIn_8_0;
             var8 = var8 >> 4 & 255;
-            var9 = jqa.a(ns.field_g, var6, 44);
-            var10 = jqa.a(qda.field_i, var6, -127);
+            var9 = BufferedSocket.a(ns.field_g, var6, 44);
+            var10 = BufferedSocket.a(qda.field_i, var6, -127);
             var11 = (this.field_o * lm.field_r[var8] >> 12) + var9;
             var12 = var10 + (ou.field_e[var8] * this.field_o >> 12);
             var13 = var12 - var10;
@@ -173,7 +173,7 @@ final class bk extends ci {
               var18 = -var10 + var12;
               var19 = -var17Lifetime2 / 2;
               var20 = 2048 / var17Lifetime2;
-              var21 = -(jqa.a(4096, var6, -85) >> 2) + 1024;
+              var21 = -(BufferedSocket.a(4096, var6, -85) >> 2) + 1024;
               stackIn_29_0 = (var12 > var10) ? 1 : -1;
               var22 = stackIn_29_0;
               if (var18 < 0) {

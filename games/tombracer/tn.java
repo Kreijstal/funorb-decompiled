@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends vg {
+final class tn extends IntrusiveNode {
     byte[] field_j;
     byte[] field_l;
     int field_i;
@@ -123,7 +123,7 @@ final class tn extends vg {
           return q.field_o + " - " + tk.field_b.a("commonui", true) + "%";
         }
         if (!hm.field_n.b(-99)) {
-          return hua.field_a;
+          return MouseInputHandler.field_a;
         }
         if (!hm.field_n.c("commonui", -128)) {
           return vja.field_b + " - " + hm.field_n.a("commonui", true) + "%";
@@ -134,7 +134,7 @@ final class tn extends vg {
         if (!vc.field_p.a(0)) {
           return th.field_u + " - " + vc.field_p.a(true) + "%";
         }
-        return dt.field_n;
+        return PlayerSimulation.field_n;
     }
 
     tn(byte[] param0) {
@@ -190,7 +190,7 @@ final class tn extends vg {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        uia var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         bq var40 = null;
         byte[] var41 = null;
@@ -274,8 +274,8 @@ final class tn extends vg {
           this.field_f = new byte[128];
           this.field_m = new bq[128];
           this.field_g = new short[128];
-          var38 = new uia(param0);
-          for (var3 = 0; var38.field_g[var3 + var38.field_h] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
@@ -283,11 +283,11 @@ final class tn extends vg {
           for (var5 = 0; var5 < var3; var5++) {
             var4[var5] = var38.c((byte) 49);
           }
-          var38.field_h = var38.field_h + 1;
+          var38.position = var38.position + 1;
           var3++;
-          var5Lifetime1 = var38.field_h;
-          var38.field_h = var38.field_h + var3;
-          for (var6 = 0; var38.field_g[var38.field_h + var6] != 0; var6++) {
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var38.position + var6] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
@@ -296,10 +296,10 @@ final class tn extends vg {
             var7[var8] = var38.c((byte) 63);
           }
           var6++;
-          var38.field_h = var38.field_h + 1;
-          var8Lifetime1 = var38.field_h;
-          var38.field_h = var38.field_h + var6;
-          for (var9 = 0; 0 != var38.field_g[var9 + var38.field_h]; var9++) {
+          var38.position = var38.position + 1;
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; 0 != var38.payload[var9 + var38.position]; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
@@ -308,7 +308,7 @@ final class tn extends vg {
             var10[var11_int] = var38.c((byte) 124);
           }
           var9++;
-          var38.field_h = var38.field_h + 1;
+          var38.position = var38.position + 1;
           var53 = new byte[var9];
           var39 = var53;
           var11 = var39;
@@ -366,7 +366,7 @@ final class tn extends vg {
           var58 = stackIn_42_0;
           var47 = var58;
           var16 = var47;
-          for (var17 = 0; var38.field_g[var17 + var38.field_h] != 0; var17++) {
+          for (var17 = 0; var38.payload[var17 + var38.position] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
@@ -374,7 +374,7 @@ final class tn extends vg {
           for (var19 = 0; var19 < var17; var19++) {
             var18[var19] = var38.c((byte) 86);
           }
-          var38.field_h = var38.field_h + 1;
+          var38.position = var38.position + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
@@ -410,7 +410,7 @@ final class tn extends vg {
               if (var20Lifetime3 == 0) {
                 incrementValue$5 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = -1 + var38.field_g[incrementValue$5];
+                var23Lifetime1 = -1 + var38.payload[incrementValue$5];
                 if (var21Lifetime1 >= var55.length) {
                   var20Lifetime3 = -1;
                 } else {
@@ -429,7 +429,7 @@ final class tn extends vg {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = var38.field_g[incrementValue$3] + 16 << 2;
+                var24Lifetime1 = var38.payload[incrementValue$3] + 16 << 2;
                 if (var21Lifetime2 >= var56.length) {
                   var20Lifetime4 = -1;
                 } else {

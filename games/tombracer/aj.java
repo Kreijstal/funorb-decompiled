@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj extends vg {
+final class aj extends IntrusiveNode {
     int[] field_i;
-    naa[] field_j;
+    AsyncRequest[] field_j;
     int[] field_m;
     byte[][][] field_g;
     int[] field_h;
-    static iu field_l;
-    naa[] field_k;
+    static Sprite field_l;
+    AsyncRequest[] field_k;
     int field_f;
     int field_n;
     private static String field_z;
 
     public static void a(int param0) {
         if (param0 != -11061) {
-          field_l = (iu) null;
+          field_l = (Sprite) null;
           field_l = null;
           return;
         }

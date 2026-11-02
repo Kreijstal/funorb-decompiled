@@ -29,7 +29,7 @@ final class qi extends hn {
         field_K = null;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -121,13 +121,13 @@ final class qi extends hn {
         }
     }
 
-    final fsa a(int param0, boolean param1, la param2) {
-        fsa var4 = null;
+    final Trap a(int param0, boolean param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         lpa var5 = null;
         mfa var6 = null;
         ce var7 = null;
-        fsa stackIn_3_0 = null;
+        Trap stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -136,12 +136,12 @@ final class qi extends hn {
           if (param0 != 5) {
             field_O = (ka) null;
           }
-          var4 = new fsa(param2, param1);
+          var4 = new Trap(param2, param1);
           var4.b((byte) -11, 2097152, 2097152);
           var5 = new lpa(param2, false);
           var5.b(-5, 2);
           var5.a(1, (byte) 71);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (ce) (var6.a(17, 81));
           var7.b(4, (byte) 23);
@@ -164,7 +164,7 @@ final class qi extends hn {
 
     final static String a(int param0, Throwable param1) throws IOException {
         String var2;
-        lr var3;
+        ClientException var3;
         StringWriter var3_ref;
         PrintWriter var4;
         String var5;
@@ -195,10 +195,10 @@ final class qi extends hn {
         String var11Lifetime6Lifetime1;
         String var11Lifetime6Lifetime2;
         var13 = TombRacer.field_G ? 1 : 0;
-        if (param1 instanceof lr) {
-          var3 = (lr) ((Object) param1);
-          var2 = var3.field_d + " | ";
-          param1 = var3.field_a;
+        if (param1 instanceof ClientException) {
+          var3 = (ClientException) ((Object) param1);
+          var2 = var3.context + " | ";
+          param1 = var3.cause;
           if (var13 != 0) {
             var2 = "";
             var11 = var2;
@@ -311,35 +311,35 @@ final class qi extends hn {
         return var2Lifetime3;
     }
 
-    qi(la param0, int param1, kh param2, csa param3) {
+    qi(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
     final boolean C(int param0) {
         if (param0 != 1) {
-          this.a(99, false, (la) null);
+          this.a(99, false, (Room) null);
           return true;
         }
         return true;
     }
 
-    final fsa a(la param0, boolean param1, boolean param2) {
-        fsa var4 = null;
+    final Trap a(Room param0, boolean param1, boolean param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         lpa var5 = null;
         mfa var6 = null;
         ce var7 = null;
-        fsa stackIn_1_0 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param0, param2);
+          var4 = new Trap(param0, param2);
           var4.b((byte) -11, 2097152, 2097152);
           var5 = new lpa(param0, param1);
           var5.b(-5, 0);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (ce) (var6.a(17, 87));
           var7.b(4, (byte) 23);
@@ -360,7 +360,7 @@ final class qi extends hn {
         }
     }
 
-    qi(la param0, int param1) {
+    qi(Room param0, int param1) {
         super(param0, param1);
     }
 

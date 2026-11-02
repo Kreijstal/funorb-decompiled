@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class lga extends rj {
-    private vna field_D;
+    private IntrusiveDeque field_D;
     static int[][] field_z;
     static cn field_B;
     private bm field_A;
@@ -179,7 +179,7 @@ class lga extends rj {
         var25 = null;
         var16 = TombRacer.field_G ? 1 : 0;
         if (param0 == 18758) {
-          this.field_D = new vna();
+          this.field_D = new IntrusiveDeque();
           var2 = 0;
           var30 = (oaa) ((Object) this.field_r);
           var27 = var30.a((ae) (this), 14157);
@@ -223,7 +223,7 @@ class lga extends rj {
           }
         }
         this.a((byte) -56, -23, 29, 43, 2);
-        this.field_D = new vna();
+        this.field_D = new IntrusiveDeque();
         var2Lifetime1 = 0;
         var17_ref = (oaa) ((Object) this.field_r);
         var3 = var17_ref;
@@ -318,7 +318,7 @@ class lga extends rj {
         }
     }
 
-    final static nma a(uia param0, byte param1) {
+    final static nma a(PacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         nma stackIn_2_0 = null;
         nma stackIn_4_0 = null;
@@ -452,7 +452,7 @@ class lga extends rj {
         RuntimeException var1_ref = null;
         int var3 = 0;
         int var4 = 0;
-        uia var5 = null;
+        PacketBuffer var5 = null;
         int[] var6 = null;
         int[] var8 = null;
         int var10 = 0;
@@ -471,8 +471,8 @@ class lga extends rj {
             rla.field_D = cna.a(4, 128);
           }
           if (param0) {
-            var5 = (uia) null;
-            lga.a((uia) null, (byte) 82);
+            var5 = (PacketBuffer) null;
+            lga.a((PacketBuffer) null, (byte) 82);
           }
           if (!rla.field_D.field_g) {
             return false;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ci extends vg {
+abstract class ci extends IntrusiveNode {
     fk field_h;
     boolean field_g;
     static int field_k;
@@ -33,7 +33,7 @@ abstract class ci extends vg {
         return this.field_j[param0].c(1, param2);
     }
 
-    void a(byte param0, uia param1, int param2) {
+    void a(byte param0, PacketBuffer param1, int param2) {
         try {
           if (param0 != 107) {
             this.c(1, -94);
@@ -142,7 +142,7 @@ abstract class ci extends vg {
             return (kg) (stackIn_2_0);
           }
           var2 = new kg(param0, ak.field_p, pg.field_C, mq.field_b, iga.field_m, mga.field_g, ck.field_c);
-          loa.a((byte) -70);
+          MazeGenerator.a((byte) -70);
           var3 = -23 % ((-28 - param1) / 37);
           stackIn_4_0 = var2;
           return stackIn_4_0;

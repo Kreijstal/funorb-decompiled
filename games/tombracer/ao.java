@@ -4,7 +4,7 @@
 final class ao extends dg {
     static String field_m;
 
-    ao(int param0, la param1, kh param2) {
+    ao(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 

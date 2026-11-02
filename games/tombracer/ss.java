@@ -48,11 +48,11 @@ final class ss implements Runnable {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7.field_p = var7.field_o.a((int)var7.field_j, -114);
+                  var7.field_p = var7.field_o.a((int)var7.secondaryKey, -114);
                   var7.field_m = false;
                 }
               } else {
-                var7.field_o.a((int)var7.field_j, var7.field_p, var7.field_p.length, (byte) 124);
+                var7.field_o.a((int)var7.secondaryKey, var7.field_p, var7.field_p.length, (byte) 124);
                 var7.field_m = false;
               }
               if (decompiledFrameRemainder0) {
@@ -127,7 +127,7 @@ final class ss implements Runnable {
           synchronized (var5) {
             var6 = (sga) (this.field_d.b((byte) 38));
             while (var6 != null) {
-              if ((long)param2 == var6.field_j &&
+              if ((long)param2 == var6.secondaryKey &&
                 var6.field_o == param1 &&
                 var6.field_q == 2) {
                 var4.field_m = false;
@@ -172,7 +172,7 @@ final class ss implements Runnable {
         try {
           var4 = new sga();
           var4.field_o = param2;
-          var4.field_j = (long)param1;
+          var4.secondaryKey = (long)param1;
           var4.field_q = 3;
           var4.field_l = false;
           this.a(-42, var4);
@@ -239,7 +239,7 @@ final class ss implements Runnable {
           var5 = new sga();
           var5.field_p = param3;
           var5.field_q = 2;
-          var5.field_j = (long)param1;
+          var5.secondaryKey = (long)param1;
           var5.field_o = param2;
           stackIn_2_0 = var5;
           stackIn_3_1 = (param0);
@@ -267,8 +267,8 @@ final class ss implements Runnable {
         }
     }
 
-    ss(fia param0) {
-        naa var2 = null;
+    ss(PlatformTaskDispatcher param0) {
+        AsyncRequest var2 = null;
         this.field_d = new vj();
         this.field_b = 0;
         this.field_e = false;

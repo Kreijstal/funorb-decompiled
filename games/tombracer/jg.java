@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class jg {
-    static uia field_a;
+    static PacketBuffer field_a;
 
     final static boolean a(int param0, String param1, String param2) {
         RuntimeException var3 = null;
@@ -79,7 +79,7 @@ abstract class jg {
 
     final static int a(byte param0) {
         int var1 = 16 / ((73 - param0) / 52);
-        return ff.field_w;
+        return MatchState.field_w;
     }
 
     public static void b(byte param0) {
@@ -90,6 +90,6 @@ abstract class jg {
     }
 
     static {
-        field_a = new uia(256);
+        field_a = new PacketBuffer(256);
     }
 }

@@ -166,7 +166,7 @@ final class qla {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           try {
-            if (!fia.field_j.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_j.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&
@@ -474,15 +474,15 @@ final class qla {
             stackIn_164_0 = 60;
             stackIn_164_1 = var16;
             if (var21 == 0) {
-              L4: {
+              regionExit1: {
                 if (stackIn_164_0 == stackIn_164_1) {
                   var11 = var15;
                 } else {
                   if (var11 != -1) {
                     if (var16 != 62) {
-                      break L4;
+                      break regionExit1;
                     }
-                    L9: {
+                    regionExit2: {
                       var18 = var11;
                       var19 = param0.substring(var11 + 1, var15);
                       var11 = -1;
@@ -517,10 +517,10 @@ final class qla {
                                     } else {
                                       if (!var19.equals("reg")) {
                                         if (!var19.startsWith("img=")) {
-                                          break L9;
+                                          break regionExit2;
                                         }
                                         if (null == param3) {
-                                          break L9;
+                                          break regionExit2;
                                         }
                                         try {
                                           var20_int = jb.a((CharSequence) ((Object) var19.substring(4)), (byte) 70);
@@ -533,7 +533,7 @@ final class qla {
                                           decompiledRegionSelector0 = 0;
                                         }
                                         if (decompiledRegionSelector0 == 0) {
-                                          break L9;
+                                          break regionExit2;
                                         }
                                       }
                                       var17 = var17 + this.a(255, 174);
@@ -577,7 +577,7 @@ final class qla {
                           }
                           var12 = 60;
                         }
-                        break L9;
+                        break regionExit2;
                       }
                       param2[var13] = param0.substring(var7, 1 + var15);
                       var13++;
@@ -589,7 +589,7 @@ final class qla {
                       var7 = 1 + var15;
                       var6_int = 0;
                       var12 = -1;
-                      break L4;
+                      break regionExit1;
                     }
                     var16 = -1;
                   } else {
@@ -1047,7 +1047,7 @@ final class qla {
         StringBuilder stackIn_79_1 = null;
         String stackIn_80_2 = null;
         RuntimeException decompiledCaughtException = null;
-        uia var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -1069,7 +1069,7 @@ final class qla {
         int var9Lifetime2;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          var2 = new uia(param0);
+          var2 = new PacketBuffer(param0);
           var3 = var2.h(255);
           if (var3 != 0) {
             throw new RuntimeException("");
@@ -1104,14 +1104,14 @@ final class qla {
             }
             var7 = new byte[256][];
             var8_int = 0;
-            L10: while (true) {
+            scanLoop1: while (true) {
               if (var8_int < 256) {
                 array$0 = new byte[var5[var8_int]];
                 var7[var8_int] = array$0;
                 var9 = 0;
                 stackIn_36_0 = 0;
                 if (var12 != 0) {
-                  break L10;
+                  break scanLoop1;
                 }
                 var10 = stackIn_36_0;
                 while (var7[var8_int].length > var10) {
@@ -1127,14 +1127,14 @@ final class qla {
             }
             var8 = new byte[stackIn_36_0][];
             var9Lifetime1 = 0;
-            L16: while (true) {
+            scanLoop2: while (true) {
               if (var9Lifetime1 < 256) {
                 array$1 = new byte[var5[var9Lifetime1]];
                 var8[var9Lifetime1] = array$1;
                 var10Lifetime1 = 0;
                 stackIn_48_0 = 0;
                 if (var12 != 0) {
-                  break L16;
+                  break scanLoop2;
                 }
                 var11 = stackIn_48_0;
                 while (var8[var9Lifetime1].length > var11) {

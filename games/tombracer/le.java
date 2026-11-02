@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class le extends da {
+final class le extends GameFont {
     private int[] field_d;
     private sfa field_g;
     private int[] field_i;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wma extends nv {
-    private ib field_q;
+final class wma extends Behaviour {
+    private Spawner field_q;
     private int field_r;
     private int field_p;
-    static vna field_n;
+    static IntrusiveDeque field_n;
     private mg field_o;
 
     final static ka a(int param0, int param1, int param2) {
@@ -36,10 +36,10 @@ final class wma extends nv {
         if (param1 == 12) {
           return;
         }
-        field_n = (vna) null;
+        field_n = (IntrusiveDeque) null;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_o.a(15637, param1);
@@ -58,7 +58,7 @@ final class wma extends nv {
         return this.field_q.a(param2, -65, param1);
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           this.field_r = this.field_p;
@@ -81,7 +81,7 @@ final class wma extends nv {
 
     final boolean p(byte param0) {
         if (param0 != 120) {
-          this.field_q = (ib) null;
+          this.field_q = (Spawner) null;
           return true;
         }
         return true;
@@ -143,12 +143,12 @@ final class wma extends nv {
         return param0;
     }
 
-    wma(la param0, kh param1, boolean param2) {
+    wma(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_p = 0;
         try {
           this.field_o = new mg(param0.field_E, param1);
-          this.field_q = pha.a(param1, param0, 162);
+          this.field_q = pha.readSpawner(param1, param0, 162);
           this.field_p = param1.b((byte) 44, 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -159,7 +159,7 @@ final class wma extends nv {
         if (param0 == 8) {
           return param2 >> -param1 + 16;
         }
-        field_n = (vna) null;
+        field_n = (IntrusiveDeque) null;
         return param2 >> -param1 + 16;
     }
 
@@ -193,6 +193,6 @@ final class wma extends nv {
     }
 
     static {
-        field_n = new vna();
+        field_n = new IntrusiveDeque();
     }
 }

@@ -81,7 +81,7 @@ final class vu extends vw {
         int var10Lifetime1;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          dga.a(gt.field_a, 199);
+          dga.a(GameKeyHandler.field_a, 199);
           if (null != ifa.field_n) {
             pk.field_z.field_t = 0;
             var15 = pk.field_z;

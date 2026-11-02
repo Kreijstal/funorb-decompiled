@@ -26,7 +26,7 @@ final class uka extends ra {
         int var5Lifetime1;
         int var6Lifetime1;
         if (param1 < -76) {
-          var3 = vna.a(param2, param0, -117);
+          var3 = IntrusiveDeque.a(param2, param0, -117);
           if (var3 != null) {
             hka.field_b.a((byte) -22, false);
             var4 = hka.field_b;
@@ -42,7 +42,7 @@ final class uka extends ra {
         }
         String var7 = (String) null;
         uka.a((cn) null, (String) null, -33, (String) null);
-        var3Lifetime1 = vna.a(param2, param0, -117);
+        var3Lifetime1 = IntrusiveDeque.a(param2, param0, -117);
         if (var3Lifetime1 != null) {
           hka.field_b.a((byte) -22, false);
           var4Lifetime1 = hka.field_b;
@@ -56,7 +56,7 @@ final class uka extends ra {
         iea.a(param2, (byte) -56, param0);
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -64,11 +64,11 @@ final class uka extends ra {
         }
     }
 
-    final static iu[] a(cn param0, String param1, int param2, String param3) {
+    final static Sprite[] a(cn param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        iu[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -140,7 +140,7 @@ final class uka extends ra {
         }
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         fra var5 = null;
         up var6 = null;
@@ -148,14 +148,14 @@ final class uka extends ra {
         ro var8 = null;
         mfa var9 = null;
         fu var10 = null;
-        fsa var11 = null;
-        fsa stackIn_1_0 = null;
+        Trap var11 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new fsa(param2, param0);
+          var11 = new Trap(param2, param0);
           var11.b((byte) -11, this.field_k, this.field_l);
           var11.h(param1, 0);
           var11.a(3, (byte) -12, true);
@@ -167,9 +167,9 @@ final class uka extends ra {
           var6 = new up(0, 10);
           var6.b(1, 14);
           var5.a(true, var6);
-          var11.a((byte) 83, (nv) (var5));
+          var11.a((byte) 83, (Behaviour) (var5));
           var7 = new eq(param2, param0);
-          var11.a((byte) 83, (nv) (var7));
+          var11.a((byte) 83, (Behaviour) (var7));
           var8 = this.a((byte) -30, param2, param0);
           var11.a(var8, 0);
           var9 = rm.field_a;
@@ -217,11 +217,11 @@ final class uka extends ra {
         return false;
     }
 
-    uka(la param0, int param1, kh param2, csa param3) {
+    uka(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
-    uka(la param0, int param1) {
+    uka(Room param0, int param1) {
         super(param0, param1);
     }
 

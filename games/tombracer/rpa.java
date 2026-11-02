@@ -51,7 +51,7 @@ final class rpa extends qe {
         }
     }
 
-    rpa(cka param0, aaa param1) {
+    rpa(OpenGlToolkit param0, aaa param1) {
         super(param0);
         fca var5 = null;
         fca var4 = null;
@@ -186,14 +186,14 @@ final class rpa extends qe {
     }
 
     final void a(boolean param0) {
-        cka stackIn_5_0 = null;
+        OpenGlToolkit stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
-        cka stackIn_8_0 = null;
+        OpenGlToolkit stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         boolean stackIn_9_2 = false;
-        cka stackIn_15_0 = null;
+        OpenGlToolkit stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
-        cka stackIn_18_0 = null;
+        OpenGlToolkit stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         boolean stackIn_19_2 = false;
         if (!param0) {
@@ -201,11 +201,11 @@ final class rpa extends qe {
             this.field_a.e(1, true);
             stackIn_5_0 = this.field_a;
             stackIn_6_1 = (param0) ? false : true;
-            ((cka) (Object) stackIn_5_0).a(stackIn_6_1, (kl) null);
+            ((OpenGlToolkit) (Object) stackIn_5_0).a(stackIn_6_1, (kl) null);
             stackIn_8_0 = this.field_a;
             stackIn_8_1 = 0;
             stackIn_9_2 = (param0) ? false : true;
-            ((cka) (Object) stackIn_8_0).e(stackIn_8_1, stackIn_9_2);
+            ((OpenGlToolkit) (Object) stackIn_8_0).e(stackIn_8_1, stackIn_9_2);
             this.field_a.a(true, (kl) null);
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             this.field_h = false;
@@ -216,11 +216,11 @@ final class rpa extends qe {
             this.field_a.e(1, true);
             stackIn_15_0 = this.field_a;
             stackIn_16_1 = (param0) ? false : true;
-            ((cka) (Object) stackIn_15_0).a(stackIn_16_1, (kl) null);
+            ((OpenGlToolkit) (Object) stackIn_15_0).a(stackIn_16_1, (kl) null);
             stackIn_18_0 = this.field_a;
             stackIn_18_1 = 0;
             stackIn_19_2 = (param0) ? false : true;
-            ((cka) (Object) stackIn_18_0).e(stackIn_18_1, stackIn_19_2);
+            ((OpenGlToolkit) (Object) stackIn_18_0).e(stackIn_18_1, stackIn_19_2);
             this.field_a.a(true, (kl) null);
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             this.field_h = false;

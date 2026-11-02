@@ -242,7 +242,7 @@ final class ppa {
                 }
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param1) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -258,7 +258,7 @@ final class ppa {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var12 = (255 & wfa.field_F[3]) + ((255 & wfa.field_F[2]) << 8);
                         var11 = (65280 & wfa.field_F[0] << 8) + (wfa.field_F[1] & 255);
@@ -274,7 +274,7 @@ final class ppa {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var12 = ((255 & wfa.field_F[4]) << 8) + (255 & wfa.field_F[5]);
                         var11 = (wfa.field_F[0] << 24 & -16777216) + ((255 & wfa.field_F[1]) << 16) - (-((255 & wfa.field_F[2]) << 8) - (255 & wfa.field_F[3]));
@@ -374,7 +374,7 @@ final class ppa {
         }
     }
 
-    final static void a(la param0, int param1, ff param2) {
+    final static void a(Room param0, int param1, MatchState param2) {
         if (vpa.a(112) ||
           param2.k(-25319)) {
           return;

@@ -41,7 +41,7 @@ final class jb extends fqa {
           if (param1 != 70) {
             field_J = (String) null;
           }
-          stackIn_3_0 = fsa.a(57, 10, true, param0);
+          stackIn_3_0 = Trap.a(57, 10, true, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,28 +57,28 @@ final class jb extends fqa {
         }
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         eia var5 = null;
         jma var6 = null;
         int var7 = 0;
         mfa var8 = null;
         cv var9 = null;
-        fsa var10 = null;
-        fsa stackIn_1_0 = null;
+        Trap var10 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new fsa(param2, param0);
+          var10 = new Trap(param2, param0);
           var10.b((byte) -11, this.field_k, this.field_l);
           var10.h(param1, param1 ^ 3);
           var10.a(1, (byte) -12, false);
           var10.e(false, 124);
           var10.b((byte) 17, false);
           var10.a((byte) -3, 6);
-          var10.a((byte) 83, (nv) (new eq(param2, param0)));
+          var10.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new eia(param2, param0);
           var5.a(true, 2, (byte) -122);
           var5.a(10, 1, 5, -2029);
@@ -86,7 +86,7 @@ final class jb extends fqa {
           var6 = var5.k((byte) -69);
           var7 = 25;
           var6.a(var7, 0, 0, 0, param1 ^ 6, 0);
-          var10.a((byte) 83, (nv) (var5));
+          var10.a((byte) 83, (Behaviour) (var5));
           var8 = rm.field_a;
           var9 = (cv) (var8.a(9, 97));
           var9.b(1, (byte) -112);
@@ -114,7 +114,7 @@ final class jb extends fqa {
         return false;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -147,11 +147,11 @@ final class jb extends fqa {
         return false;
     }
 
-    jb(la param0, int param1) {
+    jb(Room param0, int param1) {
         super(param0, param1);
     }
 
-    jb(la param0, int param1, kh param2, csa param3) {
+    jb(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

@@ -477,7 +477,7 @@ final class ww extends ka {
             }
           }
         }
-        L12: {
+        regionExit1: {
           if (var2 == 4) {
             if (var10Lifetime3 < 0 ||
               var11Lifetime3 < 0 ||
@@ -503,7 +503,7 @@ final class ww extends ka {
                 this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
                 this.field_w.a((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var9Lifetime1, (float)this.field_yb[3], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
               }
-              break L12;
+              break regionExit1;
             }
             if (this.field_Fb[param0] != -1) {
               this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
@@ -2840,7 +2840,7 @@ final class ww extends ka {
             }
           }
         }
-        L12: {
+        regionExit1: {
           if (var2 == 4) {
             if (var10Lifetime3 < 0 ||
               var11Lifetime3 < 0 ||
@@ -2866,7 +2866,7 @@ final class ww extends ka {
                 this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
                 this.field_w.b((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var9Lifetime1, (float)this.field_yb[3], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
               }
-              break L12;
+              break regionExit1;
             }
             if (this.field_Fb[param0] != -1) {
               this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
@@ -3621,7 +3621,7 @@ final class ww extends ka {
           if (var10 == -1) {
             var9 = 2;
           }
-          L9: {
+          regionExit1: {
             if (var11 != -1) {
               var12 = this.field_ob[var8] & 65535;
               if (var9 == 0) {
@@ -3658,7 +3658,7 @@ final class ww extends ka {
                 var16 = stackIn_84_0;
                 var14 = this.d((var5 >> 2) + (var16 * var15 >> 18));
                 this.field_Fb[var8] = var14 << 24 | this.a(var12, (short) var11, var14);
-                break L9;
+                break regionExit1;
               }
               if (var9 == 1) {
                 var20 = this.field_I[var8];
@@ -3668,7 +3668,7 @@ final class ww extends ka {
                 var16 = this.d((var5 >> 2) + (var15 * var14 >> 18));
                 this.field_t[var8] = var16 << 24 | this.a(var12, (short) var11, var16);
                 this.field_Fb[var8] = -1;
-                break L9;
+                break regionExit1;
               }
             } else {
               switch (var9) {
@@ -3709,7 +3709,7 @@ final class ww extends ka {
                   var18 = stackIn_49_0;
                   var16 = (var5 >> 1) + (var18 * var17 >> 17);
                   this.field_Fb[var8] = var16 << 17 | ds.c(-127, var14, var16);
-                  break L9;
+                  break regionExit1;
                 case 1:
                   var12 = this.field_ob[var8] & 65535;
                   var13_int = (var12 & 127) * this.field_Db >> 7;
@@ -3721,11 +3721,11 @@ final class ww extends ka {
                   var18 = (var5 >> 1) + (var17 * var16 >> 17);
                   this.field_t[var8] = var18 << 17 | ds.c(-127, var14, var18);
                   this.field_Fb[var8] = -1;
-                  break L9;
+                  break regionExit1;
                 case 3:
                   this.field_t[var8] = 128;
                   this.field_Fb[var8] = -1;
-                  break L9;
+                  break regionExit1;
                 default:
                   break;
               }
@@ -4239,13 +4239,13 @@ final class ww extends ka {
                   }
                 } else {
                   var32 = (float)param1.field_x[var17Lifetime1] / 1024.0f;
-                  loa.a(var30, var75, var32, this.field_T[var23], this.field_rb[var23], 65, var76, var31, var27, var28, this.field_xb[var23], var26);
+                  MazeGenerator.a(var30, var75, var32, this.field_T[var23], this.field_rb[var23], 65, var76, var31, var27, var28, this.field_xb[var23], var26);
                   var19[0] = var75[0];
                   var20[0] = var75[1];
-                  loa.a(var30, var75, var32, this.field_T[var24], this.field_rb[var24], 64, var76, var31, var27, var28, this.field_xb[var24], var26);
+                  MazeGenerator.a(var30, var75, var32, this.field_T[var24], this.field_rb[var24], 64, var76, var31, var27, var28, this.field_xb[var24], var26);
                   var19[1] = var75[0];
                   var20[1] = var75[1];
-                  loa.a(var30, var75, var32, this.field_T[var25], this.field_rb[var25], 76, var76, var31, var27, var28, this.field_xb[var25], var26);
+                  MazeGenerator.a(var30, var75, var32, this.field_T[var25], this.field_rb[var25], 76, var76, var31, var27, var28, this.field_xb[var25], var26);
                   var19[2] = var75[0];
                   var20[2] = var75[1];
                   var33 = var32 / 2.0f;

@@ -6,7 +6,7 @@ abstract class qra {
     private boolean field_b;
     static String field_g;
     static float field_d;
-    ff field_c;
+    MatchState field_c;
     private boolean field_i;
     qh field_h;
     static d field_l;
@@ -32,7 +32,7 @@ abstract class qra {
 
     abstract boolean e(int param0);
 
-    final static void a(la param0, int param1, ff param2) {
+    final static void a(Room param0, int param1, MatchState param2) {
         if (param1 != 100) {
           field_e = (int[]) null;
         }

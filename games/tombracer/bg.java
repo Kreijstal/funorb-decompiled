@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends wda {
+final class bg extends Locomotor {
     private int field_q;
     static String field_p;
-    static iu field_s;
+    static Sprite field_s;
     private boolean field_u;
     private int field_v;
     static int field_t;
@@ -23,7 +23,7 @@ final class bg extends wda {
         int var11;
         int var12;
         int var13;
-        hca var14;
+        Player var14;
         int var8Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
@@ -96,7 +96,7 @@ final class bg extends wda {
             var5 = 1;
           }
           var8Lifetime2 = qva.a((byte) -73, var5, var4);
-          var9Lifetime2 = hua.a((byte) 107, var8Lifetime2 >> 2);
+          var9Lifetime2 = MouseInputHandler.a((byte) 107, var8Lifetime2 >> 2);
           var10Lifetime2 = bua.a(0, var8Lifetime2 >> 2);
           var11Lifetime2 = doa.a(2, this.field_v, var9Lifetime2);
           var12 = doa.a(2, this.field_v, var10Lifetime2);
@@ -174,7 +174,7 @@ final class bg extends wda {
           this.field_n.a((byte) -120, var10Lifetime1, var11Lifetime1);
         } else {
           var8Lifetime1 = qva.a((byte) -73, var5, var4);
-          var9Lifetime1 = hua.a((byte) 107, var8Lifetime1 >> 2);
+          var9Lifetime1 = MouseInputHandler.a((byte) 107, var8Lifetime1 >> 2);
           var10Lifetime1 = bua.a(0, var8Lifetime1 >> 2);
           var11Lifetime1 = doa.a(2, this.field_v, var9Lifetime1);
           var12Lifetime1 = doa.a(2, this.field_v, var10Lifetime1);
@@ -188,7 +188,7 @@ final class bg extends wda {
         int var3 = 108 / ((param0 + 57) / 33);
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         if (param1 >= -78) {
           return;
         }
@@ -202,7 +202,7 @@ final class bg extends wda {
         }
     }
 
-    bg(la param0, boolean param1) {
+    bg(Room param0, boolean param1) {
         super(param0, param1);
         this.field_r = true;
         this.field_o = new ir();
@@ -214,7 +214,7 @@ final class bg extends wda {
         }
     }
 
-    bg(la param0, kh param1, boolean param2) {
+    bg(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_13_0 = null;
@@ -290,7 +290,7 @@ final class bg extends wda {
         field_p = null;
     }
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         try {
           super.a(66, param1);
           if (param0 <= 35) {

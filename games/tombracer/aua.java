@@ -6,9 +6,9 @@ final class aua extends mt {
     static String field_c;
     static int field_b;
 
-    final tu a(ff param0, int param1) {
+    final tu a(MatchState param0, int param1) {
         RuntimeException var3 = null;
-        ff var4 = null;
+        MatchState var4 = null;
         tu stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -16,8 +16,8 @@ final class aua extends mt {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -25077) {
-            var4 = (ff) null;
-            this.a((ff) null, 53);
+            var4 = (MatchState) null;
+            this.a((MatchState) null, 53);
           }
           stackIn_3_0 = new tu(param0);
           return stackIn_3_0;

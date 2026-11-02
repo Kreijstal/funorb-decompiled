@@ -5,27 +5,27 @@ final class uja {
     static int[] field_e;
     static int[] field_c;
     static fma field_a;
-    private vna field_b;
-    private vg field_d;
+    private IntrusiveDeque field_b;
+    private IntrusiveNode field_d;
 
-    final vg a(boolean param0) {
-        vg var2 = this.field_b.field_e.field_a;
-        if (this.field_b.field_e == var2) {
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = this.field_b.sentinel.next;
+        if (this.field_b.sentinel == var2) {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_a;
+        this.field_d = var2.next;
         if (param0) {
           return var2;
         }
-        return (vg) null;
+        return (IntrusiveNode) null;
     }
 
-    final vg a(vg param0, byte param1) {
-        vg var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, byte param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        vg stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -34,17 +34,17 @@ final class uja {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_b.field_e.field_e;
+            var3 = this.field_b.sentinel.previous;
           }
           if (param1 != -11) {
-            this.field_b = (vna) null;
+            this.field_b = (IntrusiveDeque) null;
           }
-          if (var3 == this.field_b.field_e) {
+          if (var3 == this.field_b.sentinel) {
             this.field_d = null;
             stackIn_8_0 = null;
-            return (vg) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
-          this.field_d = var3.field_e;
+          this.field_d = var3.previous;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,17 +61,17 @@ final class uja {
         }
     }
 
-    final vg a(int param0) {
-        vg var2 = this.field_d;
-        if (var2 == this.field_b.field_e) {
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_d;
+        if (var2 == this.field_b.sentinel) {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_a;
+        this.field_d = var2.next;
         if (param0 == -1) {
           return var2;
         }
-        return (vg) null;
+        return (IntrusiveNode) null;
     }
 
     public static void b(int param0) {
@@ -83,43 +83,43 @@ final class uja {
         }
     }
 
-    final vg a(byte param0) {
-        vg var2 = this.field_b.field_e.field_e;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_b.sentinel.previous;
         if (param0 < 37) {
           this.a((byte) -78);
-          if (this.field_b.field_e == var2) {
+          if (this.field_b.sentinel == var2) {
             this.field_d = null;
             return null;
           }
-          this.field_d = var2.field_e;
+          this.field_d = var2.previous;
           return var2;
         }
-        if (this.field_b.field_e == var2) {
+        if (this.field_b.sentinel == var2) {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_e;
+        this.field_d = var2.previous;
         return var2;
     }
 
-    final vg c(int param0) {
-        vg var2 = this.field_d;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_d;
         if (param0 < 28) {
-          return (vg) null;
+          return (IntrusiveNode) null;
         }
-        if (var2 == this.field_b.field_e) {
+        if (var2 == this.field_b.sentinel) {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_e;
+        this.field_d = var2.previous;
         return var2;
     }
 
-    final static ssa a(byte param0, ha param1) {
+    final static ssa a(byte param0, GraphicsToolkit param1) {
         wl var2 = null;
         RuntimeException var2_ref = null;
         ssa var3 = null;
-        ha var4 = null;
+        GraphicsToolkit var4 = null;
         ssa stackIn_3_0 = null;
         ssa stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -127,7 +127,7 @@ final class uja {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (he.field_c == param1) {
+          if (DelegatingCanvas.field_c == param1) {
             stackIn_3_0 = sda.field_g;
             return stackIn_3_0;
           }
@@ -137,16 +137,16 @@ final class uja {
             var3 = var2.field_j;
           } else {
             if (var2 != null) {
-              var2.p(68);
+              var2.unlink(68);
             }
             var3 = new ssa(param1);
             hla.field_ub.a((long)param1.field_a, 109, new wl(param1, var3));
           }
           if (param0 != 65) {
-            var4 = (ha) null;
-            uja.a((byte) -102, (ha) null);
+            var4 = (GraphicsToolkit) null;
+            uja.a((byte) -102, (GraphicsToolkit) null);
           }
-          he.field_c = param1;
+          DelegatingCanvas.field_c = param1;
           sda.field_g = var3;
           stackIn_14_0 = var3;
           return stackIn_14_0;
@@ -364,12 +364,12 @@ final class uja {
         return var19Lifetime1;
     }
 
-    final vg a(int param0, vg param1) {
-        vg var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_6_0 = null;
-        vg stackIn_9_0 = null;
-        vg stackIn_11_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
+        IntrusiveNode stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -378,18 +378,18 @@ final class uja {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_b.field_e.field_a;
+            var3 = this.field_b.sentinel.next;
           }
-          if (this.field_b.field_e == var3) {
+          if (this.field_b.sentinel == var3) {
             this.field_d = null;
             stackIn_6_0 = null;
-            return (vg) (stackIn_6_0);
+            return (IntrusiveNode) (stackIn_6_0);
           }
           if (param0 != 0) {
-            stackIn_9_0 = (vg) null;
+            stackIn_9_0 = (IntrusiveNode) null;
             return stackIn_9_0;
           }
-          this.field_d = var3.field_a;
+          this.field_d = var3.next;
           stackIn_11_0 = var3;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -406,7 +406,7 @@ final class uja {
         }
     }
 
-    uja(vna param0) {
+    uja(IntrusiveDeque param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

@@ -13,9 +13,9 @@ final class ef extends pd {
         }
     }
 
-    final boolean a(int param0, hca param1) {
+    final boolean a(int param0, Player param1) {
         RuntimeException var3 = null;
-        hca var4 = null;
+        Player var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -26,8 +26,8 @@ final class ef extends pd {
           if (param0 < -114) {
             return true;
           }
-          var4 = (hca) null;
-          this.a(66, (hca) null);
+          var4 = (Player) null;
+          this.a(66, (Player) null);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,7 +43,7 @@ final class ef extends pd {
         }
     }
 
-    ef(la param0, boolean param1) {
+    ef(Room param0, boolean param1) {
         super(param0, param1);
         try {
           this.field_t = ci.a(4, -1);
@@ -52,7 +52,7 @@ final class ef extends pd {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           if (param0) {
             field_s = 2.416393518447876f;
@@ -83,7 +83,7 @@ final class ef extends pd {
         }
     }
 
-    ef(la param0, kh param1, boolean param2) {
+    ef(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_t = jl.a(param0, true, param1);

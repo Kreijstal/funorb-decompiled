@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bn extends nv {
+final class bn extends Behaviour {
     static String field_o;
     private boolean field_q;
     private boolean field_s;
@@ -61,7 +61,7 @@ final class bn extends nv {
         var10 = var5 >> 17;
         var11 = et.b(var10, var9, -1);
         var12 = this.o((byte) 46).a(8192, 0);
-        var13 = hua.a((byte) 98, var12 >> 2);
+        var13 = MouseInputHandler.a((byte) 98, var12 >> 2);
         var14 = bua.a(0, var12 >> 2);
         var16 = this.field_g.P(0);
         if (this.field_q) {
@@ -139,7 +139,7 @@ final class bn extends nv {
         return 27;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 72, this.field_q ? 1 : 0, 1);
@@ -157,7 +157,7 @@ final class bn extends nv {
         return true;
     }
 
-    bn(la param0, kh param1, boolean param2) {
+    bn(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_r = 2;
         this.field_q = true;

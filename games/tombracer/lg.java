@@ -44,7 +44,7 @@ final class lg extends dna {
         }
     }
 
-    lg(la param0, int param1, kh param2, csa param3) {
+    lg(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -60,7 +60,7 @@ final class lg extends dna {
         this.b(-71, 2097152, 2097152);
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         bg var5 = null;
         pt var6 = null;
@@ -69,14 +69,14 @@ final class lg extends dna {
         kpa var9 = null;
         mfa var10 = null;
         aka var11 = null;
-        fsa var12 = null;
-        fsa stackIn_1_0 = null;
+        Trap var12 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var12 = new fsa(param2, param0);
+          var12 = new Trap(param2, param0);
           var12.b((byte) -11, this.field_k, this.field_l);
           var12.h(2, 0);
           var12.a(2, (byte) -12, true);
@@ -93,7 +93,7 @@ final class lg extends dna {
           var7 = new eq(param2, param0);
           var7.b((byte) -114, true);
           var7.a(8, (byte) -22);
-          var12.a((byte) 83, (nv) (var7));
+          var12.a((byte) 83, (Behaviour) (var7));
           var8 = new cu(param2, param0);
           var8.b(0, 5, param1 - 3);
           var8.a(0, 0, 36, 0);
@@ -102,7 +102,7 @@ final class lg extends dna {
           var9.a(0, -17075, true);
           var9.a(param1, -17075, true);
           var9.a(2, param1 ^ -17074, true);
-          var12.a((byte) 83, (nv) (var8));
+          var12.a((byte) 83, (Behaviour) (var8));
           var10 = rm.field_a;
           var11 = (aka) (var10.a(18, 98));
           var11.b(param1 + 87, 0);
@@ -124,11 +124,11 @@ final class lg extends dna {
         }
     }
 
-    lg(la param0, int param1) {
+    lg(Room param0, int param1) {
         super(param0, param1);
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {

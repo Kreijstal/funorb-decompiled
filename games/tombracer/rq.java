@@ -29,7 +29,7 @@ final class rq {
     rq(byte[] param0, nk param1) {
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
-        uia var4 = null;
+        PacketBuffer var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -39,21 +39,21 @@ final class rq {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        uia var14 = null;
+        PacketBuffer var14 = null;
         int var9Lifetime1;
         this.field_f = null;
         this.field_i = 0;
         this.field_f = param1;
         try {
-          var14 = new uia(param0);
-          var4 = new uia(param0);
+          var14 = new PacketBuffer(param0);
+          var4 = new PacketBuffer(param0);
           var14.h(255);
-          var14.field_h = var14.field_h + 2;
+          var14.position = var14.position + 2;
           var5 = var14.h(255);
           var6 = 0;
           var7 = -1;
           var8 = -1;
-          var4.field_h = var14.field_h + var5;
+          var4.position = var14.position + var5;
           for (var9 = 0; var9 < var5; var9++) {
             var10 = this.field_f.field_h[var9];
             if (var10 == 0) {
@@ -111,7 +111,7 @@ final class rq {
               var6++;
             }
           }
-          if (var4.field_h != param0.length) {
+          if (var4.position != param0.length) {
             throw new RuntimeException();
           }
           this.field_i = var6;

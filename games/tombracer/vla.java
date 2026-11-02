@@ -74,8 +74,8 @@ final class vla extends ci {
         int[] var28 = null;
         int var14 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
-          uia var15 = (uia) null;
-          this.a((byte) 85, (uia) null, -36);
+          PacketBuffer var15 = (PacketBuffer) null;
+          this.a((byte) 85, (PacketBuffer) null, -36);
         }
         int[] var16 = this.field_i.a((byte) -128, param1);
         int[] var3 = var16;
@@ -96,7 +96,7 @@ final class vla extends ci {
         return var3;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_13_0 = null;

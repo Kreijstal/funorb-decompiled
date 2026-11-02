@@ -2,29 +2,29 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ih extends ge {
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         ov var5 = null;
         up var6 = null;
         mfa var7 = null;
         boa var8 = null;
-        fsa var9 = null;
-        fsa stackIn_1_0 = null;
+        Trap var9 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new fsa(param2, param0);
+          var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.h(param1, 0);
-          var9.a((byte) 83, (nv) (new eq(param2, param0)));
+          var9.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = new ov(param2, param0);
           var6 = new up(1, 10);
           var6.b(1, 13);
           var5.a(var6, true);
           this.a((byte) 43, var5, param2);
-          var9.a((byte) 83, (nv) (var5));
+          var9.a((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (boa) (var7.a(7, 100));
           var8.b(114, 16);
@@ -46,11 +46,11 @@ final class ih extends ge {
         }
     }
 
-    ih(la param0, int param1) {
+    ih(Room param0, int param1) {
         super(param0, param1);
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -112,7 +112,7 @@ final class ih extends ge {
         return true;
     }
 
-    ih(la param0, int param1, kh param2, csa param3) {
+    ih(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -126,7 +126,7 @@ final class ih extends ge {
 
     final static mi[] a(byte param0, String param1) {
         int incrementValue$1 = 0;
-        vna var2 = null;
+        IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
         mi[] var3 = null;
         int var4 = 0;

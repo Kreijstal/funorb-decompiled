@@ -8,7 +8,7 @@ final class wea implements dv {
     static gqa[] field_d;
     private boolean[] field_b;
 
-    public final void a(kh param0, boolean param1) {
+    public final void a(BitPacketBuffer param0, boolean param1) {
         this.field_b = c.a(8, this.field_b, (byte) -84, param0);
         if (param1) {
           return;
@@ -42,7 +42,7 @@ final class wea implements dv {
         this.field_e[param0] = param1;
     }
 
-    final static void a(int param0, int param1, sq param2, boolean param3, java.awt.Component param4, fia param5) {
+    final static void a(int param0, int param1, sq param2, boolean param3, java.awt.Component param4, PlatformTaskDispatcher param5) {
         try {
           nba.a(param5, param2, param1, param0, param0, param4, -45, param3);
         } catch (RuntimeException runtimeException) {
@@ -50,9 +50,9 @@ final class wea implements dv {
         }
     }
 
-    final la a(int param0, int param1, int param2, dt param3) {
+    final Room a(int param0, int param1, int param2, PlayerSimulation param3) {
         RuntimeException var5 = null;
-        la stackIn_3_0 = null;
+        Room stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

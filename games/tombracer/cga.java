@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cga extends vg {
+final class cga extends IntrusiveNode {
     static jea field_g;
     int field_m;
     int field_j;

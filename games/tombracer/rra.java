@@ -35,13 +35,13 @@ abstract class rra {
           if (fua.field_b != null) {
             try {
               fua.field_b.a((byte) 27, 0L);
-              fua.field_b.a(vc.field_q.field_g, vc.field_q.field_h, (byte) -17, 24);
+              fua.field_b.a(vc.field_q.payload, vc.field_q.position, (byte) -17, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (Exception) (Object) decompiledCaughtException;
             }
           }
-          vc.field_q.field_h = vc.field_q.field_h + 24;
+          vc.field_q.position = vc.field_q.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

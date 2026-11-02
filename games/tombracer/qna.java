@@ -78,7 +78,7 @@ final class qna {
             mba.field_g[-2 + var4] = ae.field_k;
             bla.field_H[-2 + var4] = 0;
             hb.field_w[0] = 4;
-            mba.field_g[var4 - 1] = kh.field_j;
+            mba.field_g[var4 - 1] = BitPacketBuffer.field_j;
             bla.field_H[-1 + var4] = 1;
             hb.field_w[1] = 5;
           } else if (mq.field_a == 1) {
@@ -94,7 +94,7 @@ final class qna {
               mba.field_g[var5] = lra.field_c[var5];
             }
             mba.field_g[var4 - 2] = "";
-            mba.field_g[-1 + var4] = kh.field_j;
+            mba.field_g[-1 + var4] = BitPacketBuffer.field_j;
             bla.field_H[-1 + var4] = 0;
             hb.field_w[0] = 5;
           } else if (mq.field_a != 2) {
@@ -115,7 +115,7 @@ final class qna {
                 mba.field_g[var5] = lra.field_c[var5];
               }
               mba.field_g[var4 - 2] = "";
-              mba.field_g[var4 - 1] = kh.field_j;
+              mba.field_g[var4 - 1] = BitPacketBuffer.field_j;
               bla.field_H[-1 + var4] = 0;
               hb.field_w[0] = 5;
             } else if (4 == mq.field_a) {
@@ -131,7 +131,7 @@ final class qna {
                 mba.field_g[var5] = lra.field_c[var5];
               }
               mba.field_g[-2 + var4] = "";
-              mba.field_g[-1 + var4] = kh.field_j;
+              mba.field_g[-1 + var4] = BitPacketBuffer.field_j;
               bla.field_H[-1 + var4] = 0;
               hb.field_w[0] = 5;
             } else {
@@ -153,7 +153,7 @@ final class qna {
               mba.field_g[-2 + var4] = sqa.field_a;
               bla.field_H[var4 - 2] = 0;
               hb.field_w[0] = 3;
-              mba.field_g[var4 - 1] = kh.field_j;
+              mba.field_g[var4 - 1] = BitPacketBuffer.field_j;
               bla.field_H[var4 - 1] = 1;
               hb.field_w[1] = 5;
             }

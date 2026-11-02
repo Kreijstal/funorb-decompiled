@@ -5,7 +5,7 @@ final class mv {
     private int field_b;
     private int field_h;
     private int field_e;
-    private vna field_g;
+    private IntrusiveDeque field_g;
     private tba[] field_f;
     static int field_i;
     private int field_c;
@@ -47,13 +47,13 @@ final class mv {
             var5Lifetime2 = (tba) (this.field_g.b(3));
             var4 = new tba(param1, var5Lifetime2.field_j);
             this.field_f[var5Lifetime2.field_h] = null;
-            var5Lifetime2.p(69);
+            var5Lifetime2.unlink(69);
           }
           this.field_f[param1] = var4;
         } else {
           this.field_d = false;
         }
-        this.field_g.a((byte) 103, (vg) (var4));
+        this.field_g.addFirst((byte) 103, (IntrusiveNode) (var4));
         return this.field_a[var4.field_j];
     }
 
@@ -87,7 +87,7 @@ final class mv {
     mv(int param0, int param1, int param2) {
         this.field_h = -1;
         this.field_c = 0;
-        this.field_g = new vna();
+        this.field_g = new IntrusiveDeque();
         this.field_d = false;
         this.field_e = param0;
         this.field_b = param1;

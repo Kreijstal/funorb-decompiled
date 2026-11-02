@@ -40,7 +40,7 @@ final class nc {
           this.field_c.a(29166, var6, (long)param1);
           return var6;
         }
-        var6.a(new uia(var4), -26706);
+        var6.a(new PacketBuffer(var4), -26706);
         if (param1 >= 32768) {
           var6.a(10211);
         }

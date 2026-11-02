@@ -3,37 +3,37 @@
  */
 final class nja extends fqa {
     static int field_L;
-    static iu[] field_K;
+    static Sprite[] field_K;
     static cn field_J;
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-          field_K = (iu[]) null;
+          field_K = (Sprite[]) null;
           return false;
         }
         return false;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         rh var5 = null;
-        fsa stackIn_2_0 = null;
-        fsa stackIn_4_0 = null;
+        Trap stackIn_2_0 = null;
+        Trap stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           if (param1 != 3) {
-            stackIn_2_0 = (fsa) null;
+            stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
           var4.b((byte) -11, this.field_k, this.field_l);
           var5 = new rh(param2, param0);
           this.a(var5, (byte) -92);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,11 +73,11 @@ final class nja extends fqa {
         return false;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           if (param0) {
-            field_K = (iu[]) null;
+            field_K = (Sprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nja.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -98,19 +98,19 @@ final class nja extends fqa {
         return true;
     }
 
-    nja(la param0, int param1) {
+    nja(Room param0, int param1) {
         super(param0, param1);
     }
 
     final boolean z(int param0) {
         if (param0 != 0) {
-          field_K = (iu[]) null;
+          field_K = (Sprite[]) null;
           return false;
         }
         return false;
     }
 
-    nja(la param0, int param1, kh param2, csa param3) {
+    nja(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

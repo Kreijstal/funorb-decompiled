@@ -5,7 +5,7 @@ final class cm implements bo {
     private int field_b;
     static qg[] field_a;
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           this.field_b = param0.h(255);
           if (param1 != -19) {
@@ -23,7 +23,7 @@ final class cm implements bo {
         }
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         if (param0 != 200) {
           return;
         }
@@ -387,7 +387,7 @@ final class cm implements bo {
                     var10 = 1;
                   }
                   if (var16 > 0 &&
-                    qb.field_f < var16) {
+                    ProxySocketConnector.field_f < var16) {
                     var12 = 1;
                   }
                 }
@@ -537,7 +537,7 @@ final class cm implements bo {
                       }
                     }
                     if (var12 != 0) {
-                      var31 = gl.$cfr$intArgs$a$53ce4ab4c593(106, kp.field_f, new String[]{Integer.toString(qb.field_f), Integer.toString(hp.field_a[var7][var9])});
+                      var31 = gl.$cfr$intArgs$a$53ce4ab4c593(106, kp.field_f, new String[]{Integer.toString(ProxySocketConnector.field_f), Integer.toString(hp.field_a[var7][var9])});
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -553,10 +553,10 @@ final class cm implements bo {
                     if (var14 != 0) {
                       var22 = ova.field_j;
                       if (var15 > 0 &&
-                        null != kh.field_l &&
-                        var15 <= kh.field_l.length &&
-                        null != kh.field_l[var15 - 1]) {
-                        var22 = kh.field_l[var15 - 1][0];
+                        null != BitPacketBuffer.field_l &&
+                        var15 <= BitPacketBuffer.field_l.length &&
+                        null != BitPacketBuffer.field_l[var15 - 1]) {
+                        var22 = BitPacketBuffer.field_l[var15 - 1][0];
                       }
                       if (var21 != null) {
                         var21 = (String) (var21) + "<br>" + (String) (var22);

@@ -3,7 +3,7 @@
  */
 final class qha extends ou {
     static int field_f;
-    static vna field_g;
+    static IntrusiveDeque field_g;
 
     qha(int param0) {
         super(-1 + aq.a(-5640) + aq.a(-5640), param0);
@@ -11,7 +11,7 @@ final class qha extends ou {
 
     public static void c(byte param0) {
         if (param0 >= -84) {
-          field_g = (vna) null;
+          field_g = (IntrusiveDeque) null;
           field_g = null;
           return;
         }
@@ -39,7 +39,7 @@ final class qha extends ou {
         var12 = TombRacer.field_G ? 1 : 0;
         var2 = new wea(this.field_a);
         var3 = aq.a(-5640);
-        var4 = ml.a(57);
+        var4 = RandomAccessFileHandle.a(57);
         var5 = 0;
         var6 = 0;
         var7 = 1;
@@ -101,7 +101,7 @@ final class qha extends ou {
           param1 = false;
         }
         upa.a(param1, param0);
-        if (!bs.field_g) {
+        if (!GameEvent.field_g) {
           ea.a(param1, -16838);
           return;
         }

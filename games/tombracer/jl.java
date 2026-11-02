@@ -48,10 +48,10 @@ final class jl {
         bl.field_a.b(40, param1);
     }
 
-    final static roa a(la param0, boolean param1, kh param2) {
+    final static roa a(Room param0, boolean param1, BitPacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        kh var4 = null;
+        BitPacketBuffer var4 = null;
         roa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -61,8 +61,8 @@ final class jl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            var4 = (kh) null;
-            jl.a((la) null, false, (kh) null);
+            var4 = (BitPacketBuffer) null;
+            jl.a((Room) null, false, (BitPacketBuffer) null);
           }
           var3_int = param2.b((byte) 44, 5);
           stackIn_3_0 = ci.a(var3_int, -1);

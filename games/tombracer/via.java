@@ -64,7 +64,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final void a(byte param0, fia param1) {
+    final void a(byte param0, PlatformTaskDispatcher param1) {
         try {
           vf.a(31637, param1, this.field_d);
           if (param0 != -34) {

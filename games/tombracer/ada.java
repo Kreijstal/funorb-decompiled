@@ -40,7 +40,7 @@ final class ada extends rva implements tsa {
 
     ada(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (isa) null);
-        this.field_x = new fe(new hga(10000536), ha.field_b, 0, 0, 140, 25);
+        this.field_x = new fe(new hga(10000536), GraphicsToolkit.field_b, 0, 0, 140, 25);
         this.field_x.a((byte) 111, new uba());
         this.field_B = new rj(aua.field_d, (qc) (this));
         this.field_w = new ae[]{(ae) ((Object) this.field_x), (ae) ((Object) this.field_B)};

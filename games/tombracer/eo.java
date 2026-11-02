@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-abstract class eo extends ha {
-    private vna field_ic;
+abstract class eo extends GraphicsToolkit {
+    private IntrusiveDeque field_ic;
     cn field_I;
     Object field_Ub;
     static fta field_w;
@@ -293,7 +293,7 @@ abstract class eo extends ha {
     }
 
     void k() {
-        vg var1 = null;
+        IntrusiveNode var1 = null;
         Enumeration var1_ref = null;
         java.awt.Canvas var2 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
@@ -1478,8 +1478,8 @@ abstract class eo extends ha {
     }
 
     final void p(byte param0) {
-        if (od.field_h != this.field_v[this.field_Cc]) {
-          this.field_v[this.field_Cc] = od.field_h;
+        if (DualLinkNode.field_h != this.field_v[this.field_Cc]) {
+          this.field_v[this.field_Cc] = DualLinkNode.field_h;
           this.field_hc[this.field_Cc].a();
           this.u(0);
         }
@@ -1518,7 +1518,7 @@ abstract class eo extends ha {
         this.field_xb = this.c(6, false);
         this.field_xb.a(param0, 28, true);
         var2 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var2 < 4) {
             var3 = this.field_xb.a(param0 - 15870, true);
             if (var3 != null) {
@@ -1598,7 +1598,7 @@ abstract class eo extends ha {
               }
               var4.a();
               if (this.field_xb.a(true)) {
-                break L1;
+                break scanLoop1;
               }
             }
             var2++;
@@ -1765,7 +1765,7 @@ abstract class eo extends ha {
         while (var2 < this.field_Vb) {
           this.field_db[var2] = iw.field_c;
           this.field_mc[var2] = iw.field_c;
-          this.field_v[var2] = od.field_h;
+          this.field_v[var2] = DualLinkNode.field_h;
           this.field_hc[var2] = new asa();
           var2++;
         }
@@ -1834,7 +1834,7 @@ abstract class eo extends ha {
           this.field_B = -1.9750553369522095f;
         }
         var2 = 0;
-        L2: while (true) {
+        scanLoop1: while (true) {
           if (var2 < 4) {
             var3 = this.field_hb.a(-15730, true);
             if (var3 != null) {
@@ -1858,7 +1858,7 @@ abstract class eo extends ha {
               }
               var4.a();
               if (this.field_hb.a(true)) {
-                break L2;
+                break scanLoop1;
               }
             }
             var2++;
@@ -1937,7 +1937,7 @@ abstract class eo extends ha {
         Throwable decompiledCaughtException = null;
         Throwable var7 = null;
         RuntimeException var7_ref = null;
-        this.field_ic = new vna();
+        this.field_ic = new IntrusiveDeque();
         this.field_gb = true;
         this.field_q = new asa();
         this.field_bb = new asa();
@@ -2264,7 +2264,7 @@ abstract class eo extends ha {
         return this.field_ac;
     }
 
-    final da a(qla param0, jpa[] param1, boolean param2) {
+    final GameFont a(qla param0, jpa[] param1, boolean param2) {
         RuntimeException var4 = null;
         ca stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -2275,7 +2275,7 @@ abstract class eo extends ha {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = new ca(this, param0, param1, param2);
-          return (da) ((Object) stackIn_1_0);
+          return (GameFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

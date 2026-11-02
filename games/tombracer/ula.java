@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ula extends nv {
+final class ula extends Behaviour {
     static String field_t;
     private int field_s;
     private int field_r;
@@ -64,7 +64,7 @@ final class ula extends nv {
         return false;
     }
 
-    final int a(int param0, ep param1, up param2) {
+    final int a(int param0, Projectile param1, up param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -115,7 +115,7 @@ final class ula extends nv {
         return 31;
     }
 
-    ula(la param0, kh param1, boolean param2) {
+    ula(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_x = new kpa(6, param0.field_E, param1);
@@ -130,7 +130,7 @@ final class ula extends nv {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -183,7 +183,7 @@ final class ula extends nv {
         this.c(false);
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_x.a(param1, (byte) -118);

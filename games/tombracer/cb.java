@@ -8,7 +8,7 @@ final class cb implements ks {
     private int field_c;
     private int field_g;
     static nh[] field_i;
-    private cka field_f;
+    private OpenGlToolkit field_f;
     private int field_d;
     private wia[] field_h;
 
@@ -230,7 +230,7 @@ final class cb implements ks {
         field_i = null;
     }
 
-    cb(cka param0) {
+    cb(OpenGlToolkit param0) {
         this.field_a = -1;
         this.field_h = new wia[9];
         this.field_d = 0;

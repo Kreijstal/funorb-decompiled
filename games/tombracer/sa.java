@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sa extends wda {
+final class sa extends Locomotor {
     private boolean field_o;
     private int field_p;
     private int field_q;
@@ -129,14 +129,14 @@ final class sa extends wda {
           int[] var3 = (int[]) null;
           sa.a((jea) null, (jea) null, (jea) null, (int[]) null, true);
         }
-        if ((gt.field_a > 0 || fp.field_e > 0) &&
+        if ((GameKeyHandler.field_a > 0 || fp.field_e > 0) &&
           tla.field_e) {
           bea.d(0, 0, bea.field_g, era.field_e.field_A);
           hf.field_a.b(85, param0);
         }
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         super.a(param0, (byte) -85);
         param0.a((byte) 2, dqa.a(true, this.field_p >> 16, 12), 12);
         param0.a((byte) -126, dqa.a(true, this.field_q >> 16, 12), 12);
@@ -180,7 +180,7 @@ final class sa extends wda {
         var7 = tia.a(var6, var4, -29543) - tia.a(-256, 0, -29543);
         for (var7 = var7 * -1; var7 < 0; var7 += 8192) {
         }
-        L2: {
+        regionExit1: {
           var8 = var7 - this.field_n.g(-25787);
           if (0 < this.field_s) {
             while (var8 < -4096) {
@@ -198,7 +198,7 @@ final class sa extends wda {
                 var8 = -this.field_s;
                 this.field_n.c(false, var8);
               }
-              break L2;
+              break regionExit1;
             }
           }
           this.field_n.c(false, var8);
@@ -212,7 +212,7 @@ final class sa extends wda {
         }
     }
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         try {
           if (param0 <= 35) {
             sa.a(true, 47, true, -59, (byte) -121);
@@ -223,7 +223,7 @@ final class sa extends wda {
         }
     }
 
-    sa(la param0, kh param1, boolean param2) {
+    sa(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;

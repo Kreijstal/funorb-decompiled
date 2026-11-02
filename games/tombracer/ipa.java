@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ipa extends ra {
-    static kta field_P;
+    static AudioOutput field_P;
     static String field_N;
     static String field_O;
     static int[] field_M;
@@ -52,7 +52,7 @@ final class ipa extends ra {
             var2.c(-97);
             if (var2.field_h <= 0) {
               bca.a(var2.field_i, (byte) -42);
-              var2.p(25);
+              var2.unlink(25);
             }
             var2 = (fla) (nl.field_f.e(107));
           }
@@ -131,7 +131,7 @@ final class ipa extends ra {
         }
     }
 
-    ipa(la param0, int param1, kh param2, csa param3) {
+    ipa(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         this.field_Q = 4;
         try {
@@ -159,26 +159,26 @@ final class ipa extends ra {
         }
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         ro var5 = null;
         mfa var6 = null;
         nq var7 = null;
-        fsa var8 = null;
-        fsa stackIn_1_0 = null;
+        Trap var8 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new fsa(param2, param0);
+          var8 = new Trap(param2, param0);
           var8.b((byte) -11, this.field_k, this.field_l);
           var8.h(param1, 0);
           var8.a(1, (byte) -12, true);
           var8.a((byte) -3, 6);
           var8.b((byte) 17, false);
           var8.g(126, 2);
-          var8.a((byte) 83, (nv) (new eq(param2, param0)));
+          var8.a((byte) 83, (Behaviour) (new eq(param2, param0)));
           var5 = this.a((byte) -41, param2, param0);
           var5.a(true, -606738686);
           var5.b(4, true);
@@ -204,7 +204,7 @@ final class ipa extends ra {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -19, this.field_Q, 4);
@@ -221,7 +221,7 @@ final class ipa extends ra {
         return 7;
     }
 
-    ipa(la param0, int param1) {
+    ipa(Room param0, int param1) {
         super(param0, param1);
         this.field_Q = 4;
     }

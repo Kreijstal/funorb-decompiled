@@ -10,7 +10,7 @@ final class mg {
     private boolean field_j;
     static String field_k;
     private boolean field_d;
-    static vna field_b;
+    static IntrusiveDeque field_b;
     static int[] field_g;
     private boolean field_a;
     static int[] field_e;
@@ -27,7 +27,7 @@ final class mg {
         this.field_c = param1;
     }
 
-    final void a(int param0, kh param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
@@ -36,8 +36,8 @@ final class mg {
             param1.a((byte) -25, this.field_i[var3_int], 12);
           }
           if (param0 != 15637) {
-            kh var5 = (kh) null;
-            this.a(-109, (kh) null);
+            BitPacketBuffer var5 = (BitPacketBuffer) null;
+            this.a(-109, (BitPacketBuffer) null);
           }
           param1.a((byte) -36, this.field_c, 12);
         } catch (RuntimeException runtimeException) {
@@ -114,7 +114,7 @@ final class mg {
         if (param0 != -94) {
           mg.a(44);
         }
-        return jna.a(param0 + 104, this.field_i);
+        return GameApplet.a(param0 + 104, this.field_i);
     }
 
     final void a(boolean param0, int param1) {
@@ -131,7 +131,7 @@ final class mg {
           this.field_l = 38;
         }
         if (param1 > 0) {
-          param1 = param1 % jna.a(10, this.field_i);
+          param1 = param1 % GameApplet.a(10, this.field_i);
           var3 = 0;
           while (param1 > 0) {
             this.d(0);
@@ -186,7 +186,7 @@ final class mg {
         }
     }
 
-    mg(int param0, kh param1) {
+    mg(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         this.field_f = -1;
@@ -218,7 +218,7 @@ final class mg {
         field_h = new int[1];
         field_k = "Room: <%0>/<%1>";
         field_g = new int[2];
-        field_b = new vna();
+        field_b = new IntrusiveDeque();
         field_e = new int[8192];
     }
 }

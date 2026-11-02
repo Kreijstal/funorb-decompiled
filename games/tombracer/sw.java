@@ -7,11 +7,11 @@ final class sw extends jea {
     private int field_Gb;
     private int field_ub;
     private int field_yb;
-    private naa field_Db;
+    private AsyncRequest field_Db;
     jea field_Cb;
     private int field_Ab;
     static String field_Fb;
-    private fia field_Bb;
+    private PlatformTaskDispatcher field_Bb;
     private jea field_Eb;
     private StringBuilder field_wb;
     private long field_Hb;
@@ -168,7 +168,7 @@ final class sw extends jea {
         try {
           this.field_Ab = param0;
           if (param1 != 1) {
-            this.field_Db = (naa) null;
+            this.field_Db = (AsyncRequest) null;
           }
           this.field_ub = param0;
         } catch (RuntimeException runtimeException) {
@@ -345,7 +345,7 @@ final class sw extends jea {
         }
     }
 
-    final void a(fia param0, byte param1) {
+    final void a(PlatformTaskDispatcher param0, byte param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -525,7 +525,7 @@ final class sw extends jea {
           this.field_Cb.field_r = this.field_wb.toString();
           this.field_Eb.field_r = "";
           this.field_Eb.field_sb = "|";
-          this.field_J = new vna();
+          this.field_J = new IntrusiveDeque();
           this.b(-122, this.field_xb);
           this.b(-122, this.field_Cb);
           this.b(-123, this.field_Eb);
@@ -810,7 +810,7 @@ final class sw extends jea {
           koa.field_b = null;
           int var1_int = -56 % ((6 - param0) / 33);
           mh.field_F = null;
-          jna.field_j = null;
+          GameApplet.field_j = null;
           jma.field_a = null;
           qi.field_O = null;
           System.gc();

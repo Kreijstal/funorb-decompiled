@@ -5,7 +5,7 @@ final class td extends vpa {
     private int field_t;
     private int field_p;
     private int field_s;
-    private iu[] field_o;
+    private Sprite[] field_o;
     static int field_r;
     static String field_n;
     static String field_q;
@@ -81,7 +81,7 @@ final class td extends vpa {
           if (param2 != 16777215) {
             return;
           }
-          wca.a(var7, this.field_o, (param0.field_p - this.field_o[0].field_k >> 1) + (param0.field_n + param3), 20278, param1 + param0.field_i, param0.field_m);
+          SpriteState.a(var7, this.field_o, (param0.field_p - this.field_o[0].field_k >> 1) + (param0.field_n + param3), 20278, param1 + param0.field_i, param0.field_m);
           stackIn_18_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_18_0;
           this.field_e.a(param0.field_o, param0.field_i + param1, param0.field_n + (param3 - 2), param0.field_m, param0.field_p, var8, -1, 1, 1, this.field_e.field_w);

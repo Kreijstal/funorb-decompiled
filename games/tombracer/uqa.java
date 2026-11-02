@@ -51,7 +51,7 @@ final class uqa extends osa {
               var5 = 1;
             }
             var8 = qva.a((byte) -41, var5 << 16, var4 << 16);
-            var9 = hua.a((byte) 110, var8 >> 2);
+            var9 = MouseInputHandler.a((byte) 110, var8 >> 2);
             var10 = bua.a(0, var8 >> 2);
             var11 = gqa.a(var9, (byte) 24, this.field_u >> 8) << 8;
             var12 = gqa.a(var10, (byte) 24, this.field_u >> 8) << 8;
@@ -66,7 +66,7 @@ final class uqa extends osa {
             var5 = 1;
           }
           var8Lifetime3 = qva.a((byte) -41, var5 << 16, var4 << 16);
-          var9Lifetime3 = hua.a((byte) 110, var8Lifetime3 >> 2);
+          var9Lifetime3 = MouseInputHandler.a((byte) 110, var8Lifetime3 >> 2);
           var10Lifetime3 = bua.a(0, var8Lifetime3 >> 2);
           var11Lifetime3 = gqa.a(var9Lifetime3, (byte) 24, this.field_u >> 8) << 8;
           var12Lifetime3 = gqa.a(var10Lifetime3, (byte) 24, this.field_u >> 8) << 8;
@@ -81,7 +81,7 @@ final class uqa extends osa {
             var5 = 1;
           }
           var8Lifetime1 = qva.a((byte) -41, var5 << 16, var4 << 16);
-          var9Lifetime1 = hua.a((byte) 110, var8Lifetime1 >> 2);
+          var9Lifetime1 = MouseInputHandler.a((byte) 110, var8Lifetime1 >> 2);
           var10Lifetime1 = bua.a(0, var8Lifetime1 >> 2);
           var11Lifetime1 = gqa.a(var9Lifetime1, (byte) 24, this.field_u >> 8) << 8;
           var12Lifetime1 = gqa.a(var10Lifetime1, (byte) 24, this.field_u >> 8) << 8;
@@ -96,7 +96,7 @@ final class uqa extends osa {
           var5 = 1;
         }
         var8Lifetime2 = qva.a((byte) -41, var5 << 16, var4 << 16);
-        var9Lifetime2 = hua.a((byte) 110, var8Lifetime2 >> 2);
+        var9Lifetime2 = MouseInputHandler.a((byte) 110, var8Lifetime2 >> 2);
         var10Lifetime2 = bua.a(0, var8Lifetime2 >> 2);
         var11Lifetime2 = gqa.a(var9Lifetime2, (byte) 24, this.field_u >> 8) << 8;
         var12Lifetime2 = gqa.a(var10Lifetime2, (byte) 24, this.field_u >> 8) << 8;
@@ -116,19 +116,19 @@ final class uqa extends osa {
         return param1;
     }
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         try {
           super.a(114, param1);
           if (param0 < 35) {
-            fsa var4 = (fsa) null;
-            this.a(73, (fsa) null);
+            Trap var4 = (Trap) null;
+            this.a(73, (Trap) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uqa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    uqa(la param0, kh param1, boolean param2) {
+    uqa(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_u = param1.b((byte) 44, 10) << 16;
@@ -146,7 +146,7 @@ final class uqa extends osa {
         return 8;
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -88);
           if (param1 > -78) {

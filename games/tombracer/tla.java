@@ -32,7 +32,7 @@ final class tla {
         int var2 = -28 / ((-44 - param0) / 48);
     }
 
-    tla(cka param0, int param1) {
+    tla(OpenGlToolkit param0, int param1) {
         try {
           this.field_i = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {

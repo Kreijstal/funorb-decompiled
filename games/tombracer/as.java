@@ -175,7 +175,7 @@ final class as extends qe {
         }
     }
 
-    as(cka param0, aaa param1) {
+    as(OpenGlToolkit param0, aaa param1) {
         super(param0);
         fca var5 = null;
         fca var4 = null;

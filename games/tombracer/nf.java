@@ -24,10 +24,10 @@ final class nf {
     final static void a(byte param0) {
         if (param0 != 5) {
           field_j = (String) null;
-          al.field_g = new vna();
+          al.field_g = new IntrusiveDeque();
           return;
         }
-        al.field_g = new vna();
+        al.field_g = new IntrusiveDeque();
     }
 
     private final boolean c(int param0) {
@@ -198,8 +198,8 @@ final class nf {
                 stackIn_18_0 = this;
                 stackIn_18_3 = -param5 + var16;
               }
-              this.field_g = bs.a(stackIn_17_1, stackIn_17_2, stackIn_18_3);
-              this.field_h = bs.a(var12, -28970, param2);
+              this.field_g = GameEvent.a(stackIn_17_1, stackIn_17_2, stackIn_18_3);
+              this.field_h = GameEvent.a(var12, -28970, param2);
             }
           }
           this.field_e = true;
@@ -237,8 +237,8 @@ final class nf {
                 stackIn_35_0 = this;
                 stackIn_35_3 = -param5 + var16;
               }
-              this.field_g = bs.a(stackIn_34_1, stackIn_34_2, stackIn_35_3);
-              this.field_h = bs.a(var12, -28970, param2);
+              this.field_g = GameEvent.a(stackIn_34_1, stackIn_34_2, stackIn_35_3);
+              this.field_h = GameEvent.a(var12, -28970, param2);
             }
           }
           this.field_e = true;
@@ -263,8 +263,8 @@ final class nf {
         } else {
           stackIn_51_3 = -param4 + var14;
         }
-        this.field_k = bs.a(stackIn_50_1, stackIn_50_2, stackIn_51_3);
-        this.field_l = bs.a(var11, -28970, param2);
+        this.field_k = GameEvent.a(stackIn_50_1, stackIn_50_2, stackIn_51_3);
+        this.field_l = GameEvent.a(var11, -28970, param2);
         if (var12 <= 0) {
           this.field_g = 2147483647;
           this.field_h = 0;
@@ -300,8 +300,8 @@ final class nf {
               stackIn_56_0 = this;
               stackIn_56_3 = -param5 + var16;
             }
-            this.field_g = bs.a(stackIn_55_1, stackIn_55_2, stackIn_56_3);
-            this.field_h = bs.a(var12, -28970, param2);
+            this.field_g = GameEvent.a(stackIn_55_1, stackIn_55_2, stackIn_56_3);
+            this.field_h = GameEvent.a(var12, -28970, param2);
             this.field_e = true;
             this.field_d = false;
             while (!this.field_d) {

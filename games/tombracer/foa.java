@@ -42,7 +42,7 @@ final class foa implements bo {
         return 0 != (2048 & param0) ? true : false;
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         param1.i(8);
         param1.a((byte) -128, 1 + this.field_c, 32);
         if (param0 != 200) {
@@ -55,7 +55,7 @@ final class foa implements bo {
         }
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           param0.h((byte) -62);
           this.field_c = param0.b((byte) 44, 32) - 1;
@@ -77,7 +77,7 @@ final class foa implements bo {
           return 73;
         }
         if (io.a(param4, param3, (byte) -122, param7, param1, param2, param0, param6, param9)) {
-          return jqa.a(-(param7 / 2) + param2, 1, -(param0 / 2) + param3, param3 + (1 + param0) / 2, param2 + (param7 + 1) / 2, param8, param1 - param6 / 2, (param4 + 1) / 2 + param9, (1 + param6) / 2 + param1, param9 - param4 / 2);
+          return BufferedSocket.a(-(param7 / 2) + param2, 1, -(param0 / 2) + param3, param3 + (1 + param0) / 2, param2 + (param7 + 1) / 2, param8, param1 - param6 / 2, (param4 + 1) / 2 + param9, (1 + param6) / 2 + param1, param9 - param4 / 2);
         }
         return 0;
     }

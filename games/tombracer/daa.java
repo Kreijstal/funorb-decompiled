@@ -4,7 +4,7 @@
 final class daa {
     static String field_f;
     static lqa field_d;
-    private ff field_a;
+    private MatchState field_a;
     static String field_c;
     w field_b;
     private boolean field_e;
@@ -28,8 +28,8 @@ final class daa {
         }
         if (this.field_a.a(-112)) {
           this.field_e = true;
-          for (var5 = 0; var5 < this.field_a.field_H.length; var5++) {
-            for (var6 = 0; var6 < this.field_a.field_H.length; var6++) {
+          for (var5 = 0; var5 < this.field_a.players.length; var5++) {
+            for (var6 = 0; var6 < this.field_a.players.length; var6++) {
               if (~var5 == ~var6) {
                 this.field_a.field_D.a(var5, (byte) -52, this.field_a.field_y[var5].b(80));
               } else {
@@ -59,7 +59,7 @@ final class daa {
         }
     }
 
-    daa(ff param0) {
+    daa(MatchState param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

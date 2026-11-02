@@ -37,7 +37,7 @@ final class gpa {
         this.field_d = param0;
     }
 
-    final static ata a(int param0, uia param1) {
+    final static ata a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         ata stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

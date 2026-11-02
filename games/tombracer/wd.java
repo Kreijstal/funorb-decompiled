@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wd implements dv {
-    private hca field_d;
+    private Player field_d;
     static jpa field_c;
     static String field_a;
     private int field_b;
@@ -51,7 +51,7 @@ final class wd implements dv {
         }
     }
 
-    final static void a(byte param0, int param1, boolean param2, la param3, fsa param4, boolean param5) {
+    final static void a(byte param0, int param1, boolean param2, Room param3, Trap param4, boolean param5) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -74,7 +74,7 @@ final class wd implements dv {
               if (var6_int == 2) {
                 param4.a((byte) -3, 10);
                 param4.h(3, 0);
-                param4.a((byte) 83, (nv) (new eq(param3, param5)));
+                param4.a((byte) 83, (Behaviour) (new eq(param3, param5)));
                 param4.e(true, 117);
                 param4.g(119, 1);
                 param4.a(1, (byte) -12, true);
@@ -87,7 +87,7 @@ final class wd implements dv {
                   var8 = new eq(param3, param5);
                   param4.a(3, (byte) -12, true);
                   var8.b((byte) -107, true);
-                  param4.a((byte) 83, (nv) (var8));
+                  param4.a((byte) 83, (Behaviour) (var8));
                   param4.a(new wi(param3, 131072, 0, 0, param5), 0);
                   param4.b((byte) 17, false);
                   param4.b(false, 11468);
@@ -96,14 +96,14 @@ final class wd implements dv {
                     if (var6_int == 5) {
                       param4.a((byte) -3, 10);
                       param4.h(3, 0);
-                      param4.a((byte) 83, (nv) (new eq(param3, param5)));
-                      param4.a((byte) 83, (nv) (new ov(param3, param5)));
+                      param4.a((byte) 83, (Behaviour) (new eq(param3, param5)));
+                      param4.a((byte) 83, (Behaviour) (new ov(param3, param5)));
                       param4.a(new pt(param3, param5), 0);
                     } else {
                       if (var6_int == 6) {
                         param4.a((byte) -3, 20);
                         param4.h(3, 0);
-                        param4.a((byte) 83, (nv) (new rea(param3, param5)));
+                        param4.a((byte) 83, (Behaviour) (new rea(param3, param5)));
                         var9 = new bg(param3, param5);
                         param4.a(var9, 0);
                         var9.c(124, 0);
@@ -112,7 +112,7 @@ final class wd implements dv {
                           param4.a((byte) -3, 2);
                           var10 = new ue(param3, param5);
                           var10.a(0, false);
-                          param4.a((byte) 83, (nv) (var10));
+                          param4.a((byte) 83, (Behaviour) (var10));
                           param4.b(false, 11468);
                           param4.b((byte) 17, false);
                         }
@@ -121,10 +121,10 @@ final class wd implements dv {
                   } else {
                     param4.a((byte) -3, 10);
                     param4.h(3, 0);
-                    param4.a((byte) 83, (nv) (new eq(param3, param5)));
+                    param4.a((byte) 83, (Behaviour) (new eq(param3, param5)));
                     var6 = new ska(param3, param5);
                     var6.a(ci.a(2, -1), (byte) 100);
-                    param4.a((byte) 83, (nv) (var6));
+                    param4.a((byte) 83, (Behaviour) (var6));
                     param4.a(new spa(param3, param5), 0);
                   }
                 }
@@ -132,11 +132,11 @@ final class wd implements dv {
             } else {
               param4.a((byte) -3, 10);
               param4.h(3, 0);
-              param4.a((byte) 83, (nv) (new eq(param3, param5)));
+              param4.a((byte) 83, (Behaviour) (new eq(param3, param5)));
               param4.b((byte) 17, true);
             }
           } else {
-            param4.a((byte) 83, (nv) (new mo(param3, param5)));
+            param4.a((byte) 83, (Behaviour) (new mo(param3, param5)));
           }
           if (param0 > -85) {
             field_c = (jpa) null;
@@ -289,11 +289,11 @@ final class wd implements dv {
         }
     }
 
-    public final void a(kh param0, boolean param1) {
+    public final void a(BitPacketBuffer param0, boolean param1) {
         try {
           this.field_b = uma.a(5, param0, -26803);
           if (param1) {
-            this.field_d = (hca) null;
+            this.field_d = (Player) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -340,7 +340,7 @@ final class wd implements dv {
         }
     }
 
-    final void a(int param0, hca param1) {
+    final void a(int param0, Player param1) {
         if (param0 != 11008) {
           return;
         }
@@ -379,7 +379,7 @@ final class wd implements dv {
         this.field_d.n((byte) -82).a(26, 0, true);
     }
 
-    wd(hca param0) {
+    wd(Player param0) {
         try {
           this.field_d = param0;
           this.field_b = -1;

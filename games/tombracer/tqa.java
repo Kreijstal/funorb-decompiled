@@ -12,9 +12,9 @@ final class tqa implements fo {
     static int field_g;
     static String field_k;
     private int field_a;
-    private la field_f;
+    private Room field_f;
     private int field_d;
-    private vna field_p;
+    private IntrusiveDeque field_p;
     private int field_l;
     private pca[] field_j;
     private int field_n;
@@ -36,7 +36,7 @@ final class tqa implements fo {
         ej.field_a.b(-42, 0, 0);
     }
 
-    private final void a(int param0, la param1, int param2, int param3, int param4) {
+    private final void a(int param0, Room param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -89,7 +89,7 @@ final class tqa implements fo {
         }
     }
 
-    final void a(byte param0, kh param1, la param2) {
+    final void a(byte param0, BitPacketBuffer param1, Room param2) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -106,7 +106,7 @@ final class tqa implements fo {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 25) {
-            this.field_f = (la) null;
+            this.field_f = (Room) null;
           }
           this.field_p.d(8);
           if (param2.field_E > 8) {
@@ -326,7 +326,7 @@ final class tqa implements fo {
         return false;
     }
 
-    final la b(int param0) {
+    final Room b(int param0) {
         if (param0 != 0) {
           field_g = -85;
         }
@@ -416,7 +416,7 @@ final class tqa implements fo {
         int var15;
         pca var18;
         int var19;
-        la var20;
+        Room var20;
         var19 = TombRacer.field_G ? 1 : 0;
         var9 = -1 + this.field_m;
         var10 = param6 / 2;
@@ -430,8 +430,8 @@ final class tqa implements fo {
         var14 = et.b(this.a(-var9 + var10 + param0, false), -1 + this.field_d, 124);
         var15 = et.b(this.a(var11 + (param3 - var9), false), this.field_n - 1, 101);
         if (param2 > -104) {
-          var20 = (la) null;
-          this.a((byte) -39, (kh) null, (la) null);
+          var20 = (Room) null;
+          this.a((byte) -39, (BitPacketBuffer) null, (Room) null);
         }
         for (var16 = var12; var14 >= var16; var16++) {
           for (var17 = var13; var17 <= var15; var17++) {
@@ -451,11 +451,11 @@ final class tqa implements fo {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         this.a(param3, param0, -110, param5, param1, param4, param2, 1);
         if (!param6) {
-          this.field_p = (vna) null;
+          this.field_p = (IntrusiveDeque) null;
         }
     }
 
-    final void a(int param0, la param1, int param2) {
+    final void a(int param0, Room param1, int param2) {
         try {
           this.a(param0, param1, param1.m((byte) -86), param1.s(-125), 0);
           int var4_int = 17 / ((-78 - param2) / 43);
@@ -481,7 +481,7 @@ final class tqa implements fo {
         lk var5 = (lk) (this.field_p.f(-80));
         while (var5 != null) {
           if (!var5.a(param0, false)) {
-            var5.p(56);
+            var5.unlink(56);
           }
           var5 = (lk) (this.field_p.e(126));
         }
@@ -490,7 +490,7 @@ final class tqa implements fo {
         }
     }
 
-    final void a(int param0, kh param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -533,8 +533,8 @@ final class tqa implements fo {
         return this.field_j[this.a((byte) 31, param2, param1)];
     }
 
-    tqa(la param0, int param1) {
-        this.field_p = new vna();
+    tqa(Room param0, int param1) {
+        this.field_p = new IntrusiveDeque();
         try {
           this.a(param1, param0, 107);
         } catch (RuntimeException runtimeException) {

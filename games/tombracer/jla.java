@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jla extends rj {
-    static vna field_z;
+    static IntrusiveDeque field_z;
     static String field_B;
 
     jla(String param0, qc param1, boolean param2) {

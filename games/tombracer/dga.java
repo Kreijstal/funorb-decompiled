@@ -5,7 +5,7 @@ final class dga {
     static String field_a;
     static String field_b;
 
-    final static void a(uia param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         kc.field_b = param0.d(123) << 5;
         int var2_int = param0.h(255);
         kc.field_b = kc.field_b + (var2_int >> 3);
@@ -28,7 +28,7 @@ final class dga {
         }
     }
 
-    final static cua a(int param0, cka param1, fca[] param2) {
+    final static cua a(int param0, OpenGlToolkit param1, fca[] param2) {
         int var3_int = 0;
         cua stackIn_3_0 = null;
         Object stackIn_27_0 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mea extends iu {
+final class mea extends Sprite {
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
@@ -71,7 +71,7 @@ final class mea extends iu {
           var5 <= 0) {
           return;
         }
-        mea.c(bea.field_l, this.field_r, 0, var4, var3, var6, var5, var7, var8);
+        mea.c(bea.field_l, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -167,7 +167,7 @@ final class mea extends iu {
             var17 = 0;
             var18 = 0;
             for (var19 = 0; var19 < 4; var19++) {
-              stackIn_20_0 = this.field_r;
+              stackIn_20_0 = this.pixels;
               stackIn_20_1 = var10 + (var19 & 1);
               if ((var19 & 2) != 0) {
                 stackIn_21_2 = 0;
@@ -321,7 +321,7 @@ final class mea extends iu {
           var6 <= 0) {
           return;
         }
-        mea.b(0, 0, 0, bea.field_l, this.field_r, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        mea.b(0, 0, 0, bea.field_l, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     mea(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
@@ -369,7 +369,7 @@ final class mea extends iu {
           var6 <= 0) {
           return;
         }
-        mea.c(bea.field_l, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
+        mea.c(bea.field_l, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void c(int param0, int param1, int param2) {
@@ -413,7 +413,7 @@ final class mea extends iu {
           var6 <= 0) {
           return;
         }
-        mea.d(bea.field_l, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
+        mea.d(bea.field_l, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void b(int param0, int param1) {
@@ -457,6 +457,6 @@ final class mea extends iu {
           var5 <= 0) {
           return;
         }
-        mea.c(bea.field_l, this.field_r, 0, var4, var3, var6, var5, var7, var8);
+        mea.c(bea.field_l, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 }

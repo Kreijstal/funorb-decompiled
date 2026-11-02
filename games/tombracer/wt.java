@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wt {
-    static iu[] field_c;
+    static Sprite[] field_c;
     static String field_b;
     static fpa field_d;
     static int field_a;

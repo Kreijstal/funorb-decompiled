@@ -8,7 +8,7 @@ final class g {
     int field_h;
     static String field_i;
     boolean field_d;
-    kh field_c;
+    BitPacketBuffer field_c;
     String field_b;
     fq field_e;
 

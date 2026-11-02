@@ -10,7 +10,7 @@ abstract class ra extends kna {
     private int field_J;
     private boolean field_I;
 
-    final void a(la param0, int param1) {
+    final void a(Room param0, int param1) {
         try {
           super.a(param0, param1);
           this.field_K.a(true);
@@ -32,14 +32,14 @@ abstract class ra extends kna {
         field_H = null;
     }
 
-    ra(la param0, int param1) {
+    ra(Room param0, int param1) {
         super(param0, param1);
         this.field_K = new gea();
         this.field_J = 131072;
         this.field_I = true;
     }
 
-    final ro a(byte param0, la param1, boolean param2) {
+    final ro a(byte param0, Room param1, boolean param2) {
         ro var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -80,7 +80,7 @@ abstract class ra extends kna {
 
     abstract boolean A(int param0);
 
-    ra(la param0, int param1, kh param2, csa param3) {
+    ra(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         RuntimeException var5 = null;
         boolean stackIn_5_1 = false;
@@ -140,9 +140,9 @@ abstract class ra extends kna {
         return fna.field_k;
     }
 
-    void a(boolean param0, kh param1) {
+    void a(boolean param0, BitPacketBuffer param1) {
         RuntimeException var3 = null;
-        kh stackIn_3_0 = null;
+        BitPacketBuffer stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_4_2 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -153,14 +153,14 @@ abstract class ra extends kna {
           super.a(param0, param1);
           this.field_K.a(param1, 0);
           if (this.A(64)) {
-            stackIn_3_0 = (kh) (param1);
+            stackIn_3_0 = (BitPacketBuffer) (param1);
             stackIn_3_1 = 118;
             if (this.field_I) {
               stackIn_4_2 = 1;
             } else {
               stackIn_4_2 = 0;
             }
-            ((kh) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_4_2, 1);
+            ((BitPacketBuffer) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_4_2, 1);
           }
           if (param0) {
             this.field_J = -18;

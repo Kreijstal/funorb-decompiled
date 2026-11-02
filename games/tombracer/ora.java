@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ora {
-    private cka field_a;
+    private OpenGlToolkit field_a;
     jaclib.memory.Buffer field_b;
 
     final void a(byte[] param0, int param1) {
@@ -13,7 +13,7 @@ class ora {
         this.field_b.a(param0, 0, 0, param1);
     }
 
-    ora(cka param0, byte[] param1, int param2) {
+    ora(OpenGlToolkit param0, byte[] param1, int param2) {
         this.field_a = param0;
         this.field_b = (jaclib.memory.Buffer) ((Object) this.field_a.field_md.a(param2, false));
         if (param1 != null) {

@@ -3,7 +3,7 @@
  */
 abstract class sqa {
     static String field_a;
-    vna field_b;
+    IntrusiveDeque field_b;
 
     final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
@@ -97,7 +97,7 @@ abstract class sqa {
     }
 
     protected sqa() {
-        this.field_b = new vna();
+        this.field_b = new IntrusiveDeque();
     }
 
     final void c(byte param0) {

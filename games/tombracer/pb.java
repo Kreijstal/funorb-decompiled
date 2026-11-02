@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pb extends od {
+abstract class pb extends DualLinkNode {
     int field_m;
     static int field_k;
     static byte[][] field_l;

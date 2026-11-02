@@ -13,13 +13,13 @@ final class tta extends lea {
         gda.field_c = 0;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         ue var5 = null;
         mfa var6 = null;
         kga var7 = null;
-        fsa stackIn_1_0 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -29,7 +29,7 @@ final class tta extends lea {
           var4.a((byte) -3, 1);
           var5 = new ue(param2, param0);
           var5.a(0, false);
-          var4.a((byte) 83, (nv) (var5));
+          var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kga) (var6.a(12, param1 + 94));
           var7.b((byte) 123, param1);
@@ -50,11 +50,11 @@ final class tta extends lea {
         }
     }
 
-    tta(la param0, int param1, kh param2, csa param3) {
+    tta(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 
-    tta(la param0, int param1) {
+    tta(Room param0, int param1) {
         super(param0, param1);
     }
 

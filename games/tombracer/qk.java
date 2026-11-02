@@ -9,7 +9,7 @@ final class qk extends rt {
     int field_s;
     float field_r;
 
-    qk(cka param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
+    qk(OpenGlToolkit param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
         super(param0, param1, 6408, param2, param3, param4, param5, param6, param7, true);
         try {
           if (this.field_e != 34037) {
@@ -26,7 +26,7 @@ final class qk extends rt {
         }
     }
 
-    qk(cka param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
+    qk(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
         super(param0, param1, param2, param3, param4, param5, param6, param7, true);
         try {
           this.field_s = param4;
@@ -43,7 +43,7 @@ final class qk extends rt {
         }
     }
 
-    qk(cka param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
+    qk(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
         super(param0, 3553, param1, param4, param5);
         try {
           this.field_t = param2;
@@ -65,7 +65,7 @@ final class qk extends rt {
         }
     }
 
-    qk(cka param0, int param1, int param2, int param3, int param4, int[] param5) {
+    qk(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, 3553, 6408, param3, param4);
         try {
           this.field_s = param2;
@@ -79,7 +79,7 @@ final class qk extends rt {
         }
     }
 
-    final static void a(int param0, ha param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, GraphicsToolkit param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           if (param3 < 34) {
             qk.h(-73);

@@ -139,7 +139,7 @@ final class oo extends dg {
         int var14;
         int var15;
         int var16;
-        la var17;
+        Room var17;
         var16 = TombRacer.field_G ? 1 : 0;
         if (param0 != -3440) {
           this.field_r = (lca[][]) null;
@@ -417,7 +417,7 @@ final class oo extends dg {
         }
     }
 
-    oo(int param0, la param1, kh param2) {
+    oo(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_u = 20;
     }
@@ -443,8 +443,8 @@ final class oo extends dg {
     final void d(int param0) {
         w var2;
         int var3_int;
-        fsa var3;
-        hca var4;
+        Trap var3;
+        Player var4;
         ac var5;
         int var6;
         w var7;
@@ -469,7 +469,7 @@ final class oo extends dg {
             var7.a(new fm(23, this.field_s[var3_int].b((byte) -83), this.field_s[var3_int].c((byte) 122), this.field_s[var3_int].e((byte) -107)), param0 - 57);
           }
         }
-        var3 = (fsa) (this.field_h);
+        var3 = (Trap) (this.field_h);
         if (var3 == null) {
           return;
         }

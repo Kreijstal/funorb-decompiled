@@ -8,7 +8,7 @@ final class fk {
     private int field_c;
     private int field_e;
     static int field_b;
-    private vna field_h;
+    private IntrusiveDeque field_h;
     private int[][][] field_a;
     static String field_j;
     private int field_i;
@@ -62,13 +62,13 @@ final class fk {
             var5Lifetime2 = (dq) (this.field_h.b(3));
             var4 = new dq(param0, var5Lifetime2.field_g);
             this.field_k[var5Lifetime2.field_i] = null;
-            var5Lifetime2.p(63);
+            var5Lifetime2.unlink(63);
           }
           this.field_k[param0] = var4;
         } else {
           this.field_f = false;
         }
-        this.field_h.a((byte) 116, (vg) (var4));
+        this.field_h.addFirst((byte) 116, (IntrusiveNode) (var4));
         return this.field_a[var4.field_g];
     }
 
@@ -145,7 +145,7 @@ final class fk {
     fk(int param0, int param1, int param2) {
         this.field_g = 0;
         this.field_i = -1;
-        this.field_h = new vna();
+        this.field_h = new IntrusiveDeque();
         this.field_f = false;
         this.field_c = param1;
         this.field_e = param0;

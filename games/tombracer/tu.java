@@ -6,12 +6,12 @@ import java.util.*;
 class tu extends eha {
     static String field_e;
     static volatile int field_h;
-    private vna field_c;
+    private IntrusiveDeque field_c;
     static float field_g;
-    ff field_f;
+    MatchState field_f;
     static String field_d;
 
-    private final boolean a(la param0, byte param1, int param2) {
+    private final boolean a(Room param0, byte param1, int param2) {
         RuntimeException var4 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -20,7 +20,7 @@ class tu extends eha {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 47) {
-            this.field_c = (vna) null;
+            this.field_c = (IntrusiveDeque) null;
           }
           stackIn_6_0 = (!this.field_f.b(param2, 0)) && (kq.a(-44, param0.q((byte) -82)).field_d);
           return stackIn_6_0;
@@ -38,7 +38,7 @@ class tu extends eha {
         }
     }
 
-    void a(int param0, hca param1, int param2, la param3, int param4, int param5) {
+    void a(int param0, Player param1, int param2, Room param3, int param4, int param5) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -51,7 +51,7 @@ class tu extends eha {
         Object var9 = null;
         String var9_ref = null;
         jha var10 = null;
-        la var11 = null;
+        Room var11 = null;
         try {
           if (ab.field_n != null) {
             ab.field_n.field_y.a((byte) -105, 77, -1);
@@ -75,8 +75,8 @@ class tu extends eha {
             iqa.field_c.a(3, param0 - 15, var10);
           }
           if (param0 != 15) {
-            var11 = (la) null;
-            this.a(77, (hca) null, 88, (la) null, -63, 81);
+            var11 = (Room) null;
+            this.a(77, (Player) null, 88, (Room) null, -63, 81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +99,7 @@ class tu extends eha {
         }
     }
 
-    final void a(int param0, int param1, hca param2, fsa param3) {
+    final void a(int param0, int param1, Player param2, Trap param3) {
         int var5_int = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -161,10 +161,10 @@ class tu extends eha {
         field_d = null;
     }
 
-    final void a(int param0, la param1) {
+    final void a(int param0, Room param1) {
         if (param0 <= 12) {
-          la var4 = (la) null;
-          this.a((hca) null, (la) null, false);
+          Room var4 = (Room) null;
+          this.a((Player) null, (Room) null, false);
         }
         if (null != ab.field_n) {
           ab.field_n.field_y.a((byte) -105, 256, -1);
@@ -179,9 +179,9 @@ class tu extends eha {
         }
     }
 
-    final void a(fsa param0, int param1) {
+    final void a(Trap param0, int param1) {
         int var3_int = 0;
-        hca var4 = null;
+        Player var4 = null;
         int var5 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -216,7 +216,7 @@ class tu extends eha {
         }
     }
 
-    void a(int param0, hca param1, la param2) {
+    void a(int param0, Player param1, Room param2) {
         int var7 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -226,11 +226,11 @@ class tu extends eha {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        fsa[] var5 = null;
-        fsa[] var6 = null;
-        fsa var8 = null;
+        Trap[] var5 = null;
+        Trap[] var6 = null;
+        Trap var8 = null;
         int var9 = 0;
-        la var10 = null;
+        Room var10 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           if (!this.field_f.k(-25319) &&
@@ -239,11 +239,11 @@ class tu extends eha {
             var4_int = param2.u(-2).A(param0 + 2);
             if (param2.j(0) &&
               !this.field_f.j(param0 - 1876)) {
-              qb.a(var4_int, 5);
+              ProxySocketConnector.a(var4_int, 5);
             } else {
               li.b(var4_int, (byte) 116);
             }
-            ff.d(param0 ^ -2, var4_int);
+            MatchState.d(param0 ^ -2, var4_int);
             var5 = param2.n(16);
             var6 = var5;
             for (var7 = 0; var7 < var6.length; var7++) {
@@ -257,8 +257,8 @@ class tu extends eha {
             }
           }
           if (param0 != -2) {
-            var10 = (la) null;
-            this.a(84, (hca) null, 71, (la) null, -32, -21);
+            var10 = (Room) null;
+            this.a(84, (Player) null, 71, (Room) null, -32, -21);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -289,7 +289,7 @@ class tu extends eha {
         return (qw) (this.field_c.c(73));
     }
 
-    void a(hca param0, la param1, boolean param2) {
+    void a(Player param0, Room param1, boolean param2) {
         jha dupTemp$0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -317,7 +317,7 @@ class tu extends eha {
           var4_int = var4_int * 2;
           var5 = param1.p((byte) 83);
           if (param2) {
-            this.field_f = (ff) null;
+            this.field_f = (MatchState) null;
           }
           var6 = 50;
           var7 = 0;
@@ -384,10 +384,10 @@ class tu extends eha {
         }
     }
 
-    tu(ff param0) {
+    tu(MatchState param0) {
         try {
           this.field_f = param0;
-          this.field_c = new vna();
+          this.field_c = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

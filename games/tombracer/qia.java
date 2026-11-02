@@ -371,7 +371,7 @@ final class qia extends cg {
         int var2Lifetime1;
         if (param0 == 0) {
           this.e(0);
-          this.p(84);
+          this.unlink(84);
           return;
         }
         if (this.field_n != 0) {
@@ -431,7 +431,7 @@ final class qia extends cg {
         this.field_x = 0;
         this.field_q = 0;
         this.field_k = 0;
-        this.p(114);
+        this.unlink(114);
     }
 
     final cg b() {
@@ -532,7 +532,7 @@ final class qia extends cg {
           this.field_m = 0;
           this.field_n = 0;
           this.field_k = 0;
-          this.p(5);
+          this.unlink(5);
           return true;
         }
         if (this.field_k >= var1) {
@@ -850,12 +850,12 @@ final class qia extends cg {
           if (this.field_x <= 0) {
             if (this.field_p == -256 &&
               (this.field_u & 255) == 0) {
-              if (kta.field_h) {
+              if (AudioOutput.field_h) {
                 return qia.b(0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_n, this.field_m, 0, param3, param2, this);
               }
               return qia.b(((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_k, 0, param3, param2, this);
             }
-            if (kta.field_h) {
+            if (AudioOutput.field_h) {
               return qia.b(0, 0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_n, this.field_m, 0, param3, param2, this, this.field_p, param4);
             }
             return qia.a(0, 0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_k, 0, param3, param2, this, this.field_p, param4);
@@ -867,13 +867,13 @@ final class qia extends cg {
           this.field_x = this.field_x + param1;
           if (this.field_p == -256 &&
             (this.field_u & 255) == 0) {
-            if (!kta.field_h) {
+            if (!AudioOutput.field_h) {
               param1 = qia.a(((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_k, this.field_r, 0, var6, param2, this);
             } else {
               param1 = qia.b(0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_n, this.field_m, this.field_l, this.field_w, 0, var6, param2, this);
             }
           } else {
-            if (!kta.field_h) {
+            if (!AudioOutput.field_h) {
               param1 = qia.d(0, 0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_k, this.field_r, 0, var6, param2, this, this.field_p, param4);
             } else {
               param1 = qia.b(0, 0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_n, this.field_m, this.field_l, this.field_w, 0, var6, param2, this, this.field_p, param4);
@@ -934,12 +934,12 @@ final class qia extends cg {
           if (this.field_x <= 0) {
             if (this.field_p == 256 &&
               (this.field_u & 255) == 0) {
-              if (kta.field_h) {
+              if (AudioOutput.field_h) {
                 return qia.a(0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_n, this.field_m, 0, param3, param2, this);
               }
               return qia.a(((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_k, 0, param3, param2, this);
             }
-            if (kta.field_h) {
+            if (AudioOutput.field_h) {
               return qia.c(0, 0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_n, this.field_m, 0, param3, param2, this, this.field_p, param4);
             }
             return qia.b(0, 0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_k, 0, param3, param2, this, this.field_p, param4);
@@ -951,13 +951,13 @@ final class qia extends cg {
           this.field_x = this.field_x + param1;
           if (this.field_p == 256 &&
             (this.field_u & 255) == 0) {
-            if (!kta.field_h) {
+            if (!AudioOutput.field_h) {
               param1 = qia.b(((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_k, this.field_r, 0, var6, param2, this);
             } else {
               param1 = qia.a(0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_n, this.field_m, this.field_l, this.field_w, 0, var6, param2, this);
             }
           } else {
-            if (!kta.field_h) {
+            if (!AudioOutput.field_h) {
               param1 = qia.a(0, 0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_k, this.field_r, 0, var6, param2, this, this.field_p, param4);
             } else {
               param1 = qia.a(0, 0, ((u) (this.field_i)).field_i, param0, this.field_u, param1, this.field_n, this.field_m, this.field_l, this.field_w, 0, var6, param2, this, this.field_p, param4);
@@ -1053,7 +1053,7 @@ final class qia extends cg {
           return null;
         }
         if (param0.field_i.length != 0) {
-          return new qia(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * kta.field_d)), param2 << 6, param3 << 6);
+          return new qia(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * AudioOutput.field_d)), param2 << 6, param3 << 6);
         }
         return null;
     }
@@ -1314,7 +1314,7 @@ final class qia extends cg {
               this.field_m = 0;
               this.field_n = 0;
               this.field_k = 0;
-              this.p(92);
+              this.unlink(92);
               param0 = this.field_x;
             }
             this.field_x = 0;
@@ -1332,7 +1332,7 @@ final class qia extends cg {
         if (this.field_u < 0) {
           if (this.field_p <= 0) {
             this.i();
-            this.p(52);
+            this.unlink(52);
             return;
           }
           this.field_u = 0;
@@ -1340,7 +1340,7 @@ final class qia extends cg {
         if (this.field_u >= var5) {
           if (this.field_p >= 0) {
             this.i();
-            this.p(39);
+            this.unlink(39);
             return;
           }
           this.field_u = var5 - 1;
@@ -1453,7 +1453,7 @@ final class qia extends cg {
           if (this.field_u >= var5) {
             this.field_u = var5;
             this.i();
-            this.p(30);
+            this.unlink(30);
           }
           return;
         }
@@ -1462,7 +1462,7 @@ final class qia extends cg {
         }
         this.field_u = -1;
         this.i();
-        this.p(21);
+        this.unlink(21);
     }
 
     final synchronized void b(int[] param0, int param1, int param2) {
@@ -1497,7 +1497,7 @@ final class qia extends cg {
         if (this.field_u < 0) {
           if (this.field_p <= 0) {
             this.i();
-            this.p(17);
+            this.unlink(17);
             return;
           }
           this.field_u = 0;
@@ -1505,7 +1505,7 @@ final class qia extends cg {
         if (this.field_u >= var7) {
           if (this.field_p >= 0) {
             this.i();
-            this.p(27);
+            this.unlink(27);
             return;
           }
           this.field_u = var7 - 1;
@@ -1632,7 +1632,7 @@ final class qia extends cg {
           if (this.field_u >= var7) {
             this.field_u = var7;
             this.i();
-            this.p(37);
+            this.unlink(37);
           }
           return;
         }
@@ -1642,7 +1642,7 @@ final class qia extends cg {
         }
         this.field_u = -1;
         this.i();
-        this.p(8);
+        this.unlink(8);
         return;
     }
 

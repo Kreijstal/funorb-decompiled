@@ -4,14 +4,14 @@
 final class mka {
     private int field_c;
     private int field_d;
-    private csa field_e;
-    private csa field_g;
+    private RoomComponent field_e;
+    private RoomComponent field_g;
     static jea field_b;
     private ir field_a;
     private ir field_h;
     private int field_f;
 
-    final void a(int param0, byte param1, la param2, int param3) {
+    final void a(int param0, byte param1, Room param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -43,7 +43,7 @@ final class mka {
         }
     }
 
-    final void a(csa param0, int param1) {
+    final void a(RoomComponent param0, int param1) {
         try {
           this.field_e = param0;
           param0.a(this.field_g, this.field_d, (byte) -52);
@@ -74,13 +74,13 @@ final class mka {
         if (~param1 != ~msa.field_a) {
           return;
         }
-        if (null == rba.field_a) {
+        if (null == SecondaryNodeDequeIterator.field_a) {
           return;
         }
         v.b(param0, 0);
     }
 
-    final void a(int param0, int param1, csa param2) {
+    final void a(int param0, int param1, RoomComponent param2) {
         try {
           this.field_g = param2;
           int var4_int = 19 / ((param0 - 76) / 46);
@@ -111,7 +111,7 @@ final class mka {
         return this.field_c;
     }
 
-    final csa a(int param0) {
+    final RoomComponent a(int param0) {
         int var2 = 89 % ((28 - param0) / 54);
         return this.field_e;
     }

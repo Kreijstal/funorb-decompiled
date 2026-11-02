@@ -68,7 +68,7 @@ final class o extends ora implements sca {
         return this.field_c;
     }
 
-    o(cka param0, int param1, byte[] param2, int param3) {
+    o(OpenGlToolkit param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
         try {
           this.field_c = param1;

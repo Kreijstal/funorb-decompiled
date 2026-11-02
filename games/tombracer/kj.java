@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends nv implements ut {
+final class kj extends Behaviour implements ut {
     private boolean field_s;
     private boolean field_r;
     private int field_u;
@@ -37,7 +37,7 @@ final class kj extends nv implements ut {
         return this.field_u / 2 >= var3 ? true : false;
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -95,7 +95,7 @@ final class kj extends nv implements ut {
         int var5Lifetime1;
         int var6Lifetime1;
         var2 = var2 * var2;
-        hca var3 = this.m((byte) 19);
+        Player var3 = this.m((byte) 19);
         if (!param0) {
           var4 = this.field_g.d(3) - var3.d(3) >> 16;
           var5 = this.field_g.e(9648) - var3.e(9648) >> 16;
@@ -109,7 +109,7 @@ final class kj extends nv implements ut {
         return var6Lifetime1 < var2 ? true : false;
     }
 
-    kj(la param0, kh param1, boolean param2) {
+    kj(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_4_1 = false;
         boolean stackIn_9_1 = false;
@@ -201,14 +201,14 @@ final class kj extends nv implements ut {
         int var2;
         int var4;
         int var5;
-        hca var6;
-        hca var7;
-        hca var8;
-        hca var9;
-        hca var10;
-        hca var11;
-        hca var12;
-        hca var13;
+        Player var6;
+        Player var7;
+        Player var8;
+        Player var9;
+        Player var10;
+        Player var11;
+        Player var12;
+        Player var13;
         var2 = 1;
         if (param0 == 5418) {
           if (var2 != 0) {
@@ -453,7 +453,7 @@ final class kj extends nv implements ut {
         return 0;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -126, this.field_s ? 1 : 0, 1);

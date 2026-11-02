@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cla extends od {
+final class cla extends DualLinkNode {
     static String field_o;
     private long field_k;
     int field_p;
     static int[] field_n;
     static int[] field_m;
-    private cka field_l;
+    private OpenGlToolkit field_l;
 
     final static boolean a(int param0, int param1) {
         if (param0 == 9181) {
@@ -49,7 +49,7 @@ final class cla extends od {
         return this.field_k;
     }
 
-    cla(cka param0, int param1, int param2) {
+    cla(OpenGlToolkit param0, int param1, int param2) {
         try {
           this.field_l = param0;
           this.field_p = param2 * param1;
@@ -65,7 +65,7 @@ final class cla extends od {
             return false;
           }
           uca.field_d = vc.field_q.h(255);
-          vc.field_q.field_h = 0;
+          vc.field_q.position = 0;
         }
         if (param0 != 0) {
           return true;
@@ -77,7 +77,7 @@ final class cla extends od {
           return false;
         }
         uca.field_d = vc.field_q.d(125);
-        vc.field_q.field_h = 0;
+        vc.field_q.position = 0;
         return ama.a(uca.field_d, -1);
     }
 

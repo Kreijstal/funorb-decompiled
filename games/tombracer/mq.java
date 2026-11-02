@@ -6,7 +6,7 @@ final class mq {
     static int field_a;
     static int[] field_b;
     static ufa field_e;
-    private cka field_c;
+    private OpenGlToolkit field_c;
     private cua field_f;
 
     final boolean a(byte param0) {
@@ -122,7 +122,7 @@ final class mq {
         field_d = null;
     }
 
-    mq(cka param0) {
+    mq(OpenGlToolkit param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

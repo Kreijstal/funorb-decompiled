@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class br extends od {
+final class br extends DualLinkNode {
     char[] field_k;
     int[] field_l;
     static long field_p;
@@ -10,7 +10,7 @@ final class br extends od {
     boolean field_m;
     String field_n;
 
-    private final void a(int param0, int param1, uia param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         char[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
@@ -26,7 +26,7 @@ final class br extends od {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        uia var8 = null;
+        PacketBuffer var8 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (1 != param0) {
@@ -73,8 +73,8 @@ final class br extends od {
             this.field_n = param2.e((byte) -76);
           }
           if (param1 > -67) {
-            var8 = (uia) null;
-            this.a((uia) null, -82);
+            var8 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, -82);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -114,10 +114,10 @@ final class br extends od {
         }
     }
 
-    final void a(uia param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
-        uia var5 = null;
+        PacketBuffer var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -126,8 +126,8 @@ final class br extends od {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != -26706) {
-            var5 = (uia) null;
-            this.a((uia) null, -59);
+            var5 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, -59);
           }
           while (true) {
             var3_int = param0.h(255);

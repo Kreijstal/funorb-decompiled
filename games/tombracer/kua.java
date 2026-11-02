@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kua extends vg implements fo {
-    private hca field_h;
+final class kua extends IntrusiveNode implements fo {
+    private Player field_h;
     private int field_g;
     private int field_l;
     private int field_k;
     private int field_f;
-    static jna field_j;
+    static GameApplet field_j;
     static jea field_i;
 
     final int f(byte param0) {
@@ -19,7 +19,7 @@ final class kua extends vg implements fo {
         return 1;
     }
 
-    final void a(la param0, byte param1) {
+    final void a(Room param0, byte param1) {
         try {
           int var3_int = -11 % ((param1 - 39) / 46);
           this.field_l = param0.a(this.field_l, (byte) 71);
@@ -43,7 +43,7 @@ final class kua extends vg implements fo {
           var3.field_e = param2.field_e;
           var3.field_b = param2.field_b;
           if (param0 != 21938) {
-            field_j = (jna) null;
+            field_j = (GameApplet) null;
           }
           var3.field_h = param2.field_h;
           var3.field_c = param2.field_c;
@@ -85,7 +85,7 @@ final class kua extends vg implements fo {
 
     public final int e(byte param0) {
         if (param0 >= -86) {
-          this.field_h = (hca) null;
+          this.field_h = (Player) null;
           return this.field_f;
         }
         return this.field_f;
@@ -122,7 +122,7 @@ final class kua extends vg implements fo {
         return this.field_g;
     }
 
-    kua(hca param0, int param1, int param2, int param3, int param4) {
+    kua(Player param0, int param1, int param2, int param3, int param4) {
         try {
           this.field_l = param1;
           this.field_f = param3;

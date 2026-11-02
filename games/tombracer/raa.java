@@ -3469,7 +3469,7 @@ final class raa extends pf {
           }
           if (param2 == 1) {
             var14Lifetime2 = -var9;
-            L29: while (true) {
+            scanLoop1: while (true) {
               if (var14Lifetime2 >= 0) {
                 return;
               }
@@ -3482,7 +3482,7 @@ final class raa extends pf {
                       var7 = var7 + var11;
                       var8 = var8 + var12;
                       var14Lifetime2++;
-                      continue L29;
+                      continue scanLoop1;
                     }
                     incrementValue$17 = var8;
                     var8++;

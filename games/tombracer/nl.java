@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nl {
-    static vna field_f;
+    static IntrusiveDeque field_f;
     static String field_c;
     private String field_a;
     static int field_d;
@@ -130,7 +130,7 @@ final class nl {
 
     final static wv a(int param0, byte param1) {
         if (param1 != 50) {
-          field_f = (vna) null;
+          field_f = (IntrusiveDeque) null;
         }
         return uw.field_g[param0];
     }
@@ -174,7 +174,7 @@ final class nl {
     static {
         field_d = 5;
         field_c = "Loading...";
-        field_f = new vna();
+        field_f = new IntrusiveDeque();
         field_e = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
         field_b = false;
     }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tna extends loa {
+final class tna extends MazeGenerator {
     static String field_d;
     static ph[] field_c;
-    static vna field_e;
+    static IntrusiveDeque field_e;
     static String field_b;
     static int field_f;
 
@@ -85,7 +85,7 @@ final class tna extends loa {
         }
     }
 
-    tna(qea param0) {
+    tna(IsaacCipher param0) {
         super(param0);
     }
 
@@ -125,26 +125,26 @@ final class tna extends loa {
         try {
           if (param1 >= 5 &&
             5 <= param4) {
-            var7_int = (this.field_a.a(param1 / 2 - 1, 0) + param5) * 2 + param2;
-            var8 = param0 - (-(2 * this.field_a.a(-1 + param4 / 2, 0)) - 2);
+            var7_int = (this.random.a(param1 / 2 - 1, 0) + param5) * 2 + param2;
+            var8 = param0 - (-(2 * this.random.a(-1 + param4 / 2, 0)) - 2);
             for (var9 = param2 + 1; var9 < param1 + param2 - 1; var9++) {
               param3.a(var8, 1, param5 ^ 1, var9);
             }
             for (var9Lifetime1 = param0 + 1; -1 + param4 + param0 > var9Lifetime1; var9Lifetime1++) {
               param3.a(var9Lifetime1, 1, param5 ^ 1, var7_int);
             }
-            var9Lifetime2 = this.field_a.a(4, param5 ^ 1);
+            var9Lifetime2 = this.random.a(4, param5 ^ 1);
             if (var9Lifetime2 != 0) {
-              param3.a(param0 + 2 * (this.field_a.a(var8 - param0, 0) / 2) + 1, 0, 0, var7_int);
+              param3.a(param0 + 2 * (this.random.a(var8 - param0, 0) / 2) + 1, 0, 0, var7_int);
             }
             if (1 != var9Lifetime2) {
-              param3.a(var8, 0, 0, param2 + (this.field_a.a(-param2 + var7_int, param5 ^ 1) / 2 * 2 + 1));
+              param3.a(var8, 0, 0, param2 + (this.random.a(-param2 + var7_int, param5 ^ 1) / 2 * 2 + 1));
             }
             if (2 != var9Lifetime2) {
-              param3.a(2 * (this.field_a.a(-1 + (param0 + param4 - var8), 0) / 2) + var8 + 1, 0, 0, var7_int);
+              param3.a(2 * (this.random.a(-1 + (param0 + param4 - var8), 0) / 2) + var8 + 1, 0, 0, var7_int);
             }
             if (var9Lifetime2 != 3) {
-              param3.a(var8, 0, 0, 1 + this.field_a.a(-1 + param2 + (param1 - var7_int), 0) / 2 * 2 + var7_int);
+              param3.a(var8, 0, 0, 1 + this.random.a(-1 + param2 + (param1 - var7_int), 0) / 2 * 2 + var7_int);
             }
             this.a(param0, -param2 + (var7_int + 1), param2, param3, var8 + 1 - param0, 1);
             this.a(param0, param2 + param1 - var7_int, var7_int, param3, var8 + (1 - param0), 1);
@@ -169,7 +169,7 @@ final class tna extends loa {
 
     static {
         field_d = "You have completed the free content of Tomb Racer, to play a further 5 worlds become a member at FunOrb.com.";
-        field_e = new vna();
+        field_e = new IntrusiveDeque();
         field_b = "Connecting to<br>friend server...";
     }
 }

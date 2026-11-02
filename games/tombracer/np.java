@@ -48,7 +48,7 @@ final class np extends ka {
     private float[] field_n;
     private short[] field_q;
     private boolean field_gb;
-    private cka field_R;
+    private OpenGlToolkit field_R;
     private pm[] field_r;
     private int field_lb;
     private afa field_w;
@@ -336,12 +336,12 @@ final class np extends ka {
           var13 = this.field_e[1 + param5];
           var14 = 0;
           var15 = var12_int;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var15 < var13) {
               var16 = this.field_q[var15];
               stackIn_18_0 = var16;
               if (var17 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_18_0 == 0) {
                 var14 = var15;
@@ -672,7 +672,7 @@ final class np extends ka {
               param5.field_kb = null;
             }
           }
-          L41: {
+          regionExit1: {
             boolean decompiledFrameCompleted5 = true;
             if (!cra.a(this.field_u, -17, param1)) {
               param5.field_O = this.field_O;
@@ -681,17 +681,17 @@ final class np extends ka {
               param5.field_cb = this.field_cb;
               param5.field_E = this.field_E;
               if (var13 == 0) {
-                break L41;
+                break regionExit1;
               }
             }
-            L43: {
+            regionExit2: {
               if (param4.field_E != null &&
                 param4.field_E.length >= this.field_L) {
                 param5.field_Y = param4.field_Y;
                 param5.field_E = param4.field_E;
                 param5.field_cb = param4.field_cb;
                 if (var13 == 0) {
-                  break L43;
+                  break regionExit2;
                 }
               }
               var11Lifetime3 = this.field_L;
@@ -792,12 +792,12 @@ final class np extends ka {
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted4 = true;
-          L59: {
+          regionExit3: {
             if (!hh.a(param1, (byte) 5, this.field_u)) {
               param5.field_n = this.field_n;
               param5.field_y = this.field_y;
               if (var13 == 0) {
-                break L59;
+                break regionExit3;
               }
             }
             if (null == param4.field_n ||
@@ -852,14 +852,14 @@ final class np extends ka {
           }
           boolean decompiledFrameCompleted3 = true;
           if (qp.a(param1, (byte) -71, this.field_u)) {
-            L70: {
+            regionExit4: {
               if (param4.field_H != null &&
                 param4.field_H.length >= this.field_W) {
                 param5.field_z = param4.field_z;
                 param5.field_H = param4.field_H;
                 param5.field_hb = param4.field_hb;
                 if (var13 == 0) {
-                  break L70;
+                  break regionExit4;
                 }
               }
               var11Lifetime5 = this.field_W;
@@ -925,13 +925,13 @@ final class np extends ka {
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
-          L79: {
+          regionExit5: {
             boolean decompiledFrameCompleted2 = true;
-            L81: {
+            regionExit6: {
               if (!aca.a(param1, 32768, this.field_u)) {
                 param5.field_I = this.field_I;
                 if (var13 == 0) {
-                  break L81;
+                  break regionExit6;
                 }
               }
               if (null == param4.field_I ||
@@ -960,7 +960,7 @@ final class np extends ka {
               (!qba.a(this.field_u, 480, param1))) {
               param5.field_f = this.field_f;
               if (var13 == 0) {
-                break L79;
+                break regionExit5;
               }
             }
             if (null != param4.field_f &&
@@ -977,7 +977,7 @@ final class np extends ka {
               }
               if ((decompiledFrameCompleted1) &&
                 (var13 == 0)) {
-                break L79;
+                break regionExit5;
               }
             }
             if (decompiledFrameCompleted1) {
@@ -1056,8 +1056,8 @@ final class np extends ka {
         int var4Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if ((this.field_ib * 6) <= this.field_R.field_cb.field_g.length) {
-            this.field_R.field_cb.field_h = 0;
+          if ((this.field_ib * 6) <= this.field_R.field_cb.payload.length) {
+            this.field_R.field_cb.position = 0;
             if (var5 != 0) {
               this.field_R.field_cb = new qf((this.field_ib + 100) * 6);
             }
@@ -1096,24 +1096,24 @@ final class np extends ka {
               }
             }
           }
-          if (0 != var3.field_h) {
+          if (0 != var3.position) {
             if (param0 > 0) {
               this.I(68, (int[]) null, -92, 111, -30, false, -95, (int[]) null);
             }
             if (param1) {
               if (null == this.field_jb) {
-                this.field_jb = this.field_R.a(-81, var3.field_h, 5123, true, var3.field_g);
+                this.field_jb = this.field_R.a(-81, var3.position, 5123, true, var3.payload);
                 if (var5 != 0) {
-                  this.field_jb.a(var3.field_h, -11783, var3.field_g, 5123);
+                  this.field_jb.a(var3.position, -11783, var3.payload, 5123);
                 }
               } else {
-                this.field_jb.a(var3.field_h, -11783, var3.field_g, 5123);
+                this.field_jb.a(var3.position, -11783, var3.payload, 5123);
               }
               this.field_w.field_a = this.field_jb;
             }
             if (!param1 ||
               var5 != 0) {
-              this.field_w.field_a = this.field_R.a(-56, var3.field_h, 5123, false, var3.field_g);
+              this.field_w.field_a = this.field_R.a(-56, var3.position, 5123, false, var3.payload);
             }
             if (!param1) {
               this.field_gb = true;
@@ -1148,7 +1148,7 @@ final class np extends ka {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           var5_int = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var5_int < this.field_W) {
               var6_int = 65535 & this.field_X[var5_int];
               var7_int = (var6_int & 65466) >> 10;
@@ -1164,7 +1164,7 @@ final class np extends ka {
                   var5_int++;
                   return;
                 }
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_23_0 != stackIn_23_1) {
                 var7_int = var7_int + ((param0 - var7_int) * param3 >> 7);
@@ -1180,7 +1180,7 @@ final class np extends ka {
               continue;
             }
             if (this.field_r == null) {
-              break L2;
+              break scanLoop1;
             }
             var5_int = 0;
             while (true) {
@@ -1580,15 +1580,15 @@ final class np extends ka {
             param4 = param4 << 4;
             param3 = param3 << 4;
             var10 = 0;
-            L1: while (var9_int > var10) {
+            scanLoop1: while (var9_int > var10) {
               var11 = param1[var10];
-              L3: while (this.field_d.length > var11) {
+              scanLoop2: while (this.field_d.length > var11) {
                 var12 = this.field_d[var11];
                 var13 = 0;
                 while (var12.length > var13) {
                   var14_int = var12[var13];
                   if (var47 != 0) {
-                    continue L3;
+                    continue scanLoop2;
                   }
                   if (this.field_db == null ||
                     (param6 & this.field_db[var14_int]) != 0 ||
@@ -1603,7 +1603,7 @@ final class np extends ka {
               }
               var10++;
               if (var47 == 0) {
-                continue L1;
+                continue scanLoop1;
               }
               return;
             }
@@ -1993,7 +1993,7 @@ final class np extends ka {
           }
           if (null == param7) {
             var10 = 0;
-            L11: while (true) {
+            scanLoop3: while (true) {
               boolean decompiledFrameRemainder3 = true;
               if (var9_int > var10) {
                 var11 = param1[var10];
@@ -2002,7 +2002,7 @@ final class np extends ka {
                 if (var47 != 0) {
                   if (stackIn_101_0 > stackIn_101_1) {
                     var11 = param1[var10];
-                    break L11;
+                    break scanLoop3;
                   }
                   decompiledFrameRemainder3 = false;
                 }
@@ -2064,7 +2064,7 @@ final class np extends ka {
                   }
                   var11 = param1[var10];
                   if (var47 != 0) {
-                    break L11;
+                    break scanLoop3;
                   }
                   if (var11 < this.field_d.length) {
                     var12 = this.field_d[var11];
@@ -2328,7 +2328,7 @@ final class np extends ka {
 
     private final void b(byte param0) {
         int var14 = 0;
-        cka stackIn_7_0 = null;
+        OpenGlToolkit stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         boolean stackIn_11_0 = false;
         int stackIn_21_0 = 0;
@@ -2355,7 +2355,7 @@ final class np extends ka {
             this.field_R.u(28630);
             stackIn_7_0 = this.field_R;
             stackIn_8_1 = !(this.field_s);
-            ((cka) (Object) stackIn_7_0).a(stackIn_8_1, false);
+            ((OpenGlToolkit) (Object) stackIn_7_0).a(stackIn_8_1, false);
             this.field_R.a(param0 ^ -35, false);
             this.field_R.a((tj) null, this.field_R.field_Rb, (tj) null, -114, this.field_R.field_Bc);
             var3 = 0;
@@ -2796,13 +2796,13 @@ final class np extends ka {
           if (var7 == 0) {
             return;
           }
-          if (this.field_R.field_cb.field_g.length < (this.field_L * var7)) {
+          if (this.field_R.field_cb.payload.length < (this.field_L * var7)) {
             this.field_R.field_cb = new qf((this.field_L + 100) * var7);
             if (var35 != 0) {
-              this.field_R.field_cb.field_h = 0;
+              this.field_R.field_cb.position = 0;
             }
           } else {
-            this.field_R.field_cb.field_h = 0;
+            this.field_R.field_cb.position = 0;
           }
           boolean decompiledFrameCompleted7 = true;
           boolean decompiledFrameCompleted6 = true;
@@ -2832,7 +2832,7 @@ final class np extends ka {
                     stackIn_79_1 = ~var20;
                     if (stackIn_79_0 != stackIn_79_1 ||
                       var35 != 0) {
-                      var12.field_h = var7 * var20;
+                      var12.position = var7 * var20;
                       var12.a((byte) -35, var14_int);
                       var12.a((byte) -35, var15_int);
                       var12.a((byte) -35, var16_int);
@@ -2876,7 +2876,7 @@ final class np extends ka {
                   stackIn_95_1Lifetime1 = var20Lifetime2;
                   if (stackIn_95_0Lifetime1 != stackIn_95_1Lifetime1 ||
                     var35 != 0) {
-                    var12.field_h = var20Lifetime2 * var7;
+                    var12.position = var20Lifetime2 * var7;
                     var12.a(var14_intLifetime2, (byte) -72);
                     var12.a(var15_intLifetime1, (byte) -13);
                     var12.a(var16_intLifetime1, (byte) 81);
@@ -2901,11 +2901,11 @@ final class np extends ka {
               var13_intLifetime1 = 0;
               while (this.field_W > var13_intLifetime1) {
                 var14_intLifetime1 = this.a(-2117016184, (int) this.field_X[var13_intLifetime1], this.field_o[var13_intLifetime1], this.field_I[var13_intLifetime1], (int) this.field_B);
-                var12.field_h = var9 + var7 * this.field_H[var13_intLifetime1];
+                var12.position = var9 + var7 * this.field_H[var13_intLifetime1];
                 var12.a(var14_intLifetime1, (byte) 92);
-                var12.field_h = var7 * this.field_z[var13_intLifetime1] + var9;
+                var12.position = var7 * this.field_z[var13_intLifetime1] + var9;
                 var12.a(var14_intLifetime1, (byte) 91);
-                var12.field_h = var9 + this.field_hb[var13_intLifetime1] * var7;
+                var12.position = var9 + this.field_hb[var13_intLifetime1] * var7;
                 var12.a(var14_intLifetime1, (byte) 113);
                 var13_intLifetime1++;
                 if (var35 != 0) {
@@ -2976,7 +2976,7 @@ final class np extends ka {
                   }
                 }
                 var27 = (int)(var19_float * var22);
-                var12.field_h = var9 + var23 * var7;
+                var12.position = var9 + var23 * var7;
                 if (0 > var27) {
                   var27 = 0;
                 } else {
@@ -3027,7 +3027,7 @@ final class np extends ka {
                 } else {
                   var27Lifetime1 = 0;
                 }
-                var12.field_h = var23Lifetime1 * var7 + var9;
+                var12.position = var23Lifetime1 * var7 + var9;
                 var12.i(var25Lifetime1, param0 + 0);
                 var12.i(var26Lifetime1, param0 ^ 0);
                 var12.i(var27Lifetime1, 0);
@@ -3065,7 +3065,7 @@ final class np extends ka {
                     var27Lifetime2 = 255;
                   }
                 }
-                var12.field_h = var9 + var7 * var23Lifetime2;
+                var12.position = var9 + var7 * var23Lifetime2;
                 var12.i(var25Lifetime2, 0);
                 var12.i(var26Lifetime2, 0);
                 var12.i(var27Lifetime2, 0);
@@ -3079,7 +3079,7 @@ final class np extends ka {
           }
           boolean decompiledFrameCompleted3 = true;
           boolean decompiledFrameCompleted2 = true;
-          L69: {
+          regionExit1: {
             if (stackIn_215_0 != 0) {
               if (null != this.field_i) {
                 var13Lifetime1 = this.field_i.field_d;
@@ -3099,7 +3099,7 @@ final class np extends ka {
                 var16Lifetime1 = this.field_O;
               }
               var17 = 3.0f / (float)this.field_h;
-              var12.field_h = var10;
+              var12.position = var10;
               var18Lifetime1 = 3.0f / (float)(this.field_h + this.field_h / 2);
               if (!this.field_R.field_O) {
                 var19Lifetime1 = 0;
@@ -3120,12 +3120,12 @@ final class np extends ka {
                     var12.a((byte) 114, (float)var14Lifetime1[var19Lifetime1] * var18Lifetime1);
                     var12.a((byte) 114, (float)var15Lifetime1[var19Lifetime1] * var18Lifetime1);
                   }
-                  var12.field_h = var12.field_h + (-12 + var7);
+                  var12.position = var12.position + (-12 + var7);
                   var19Lifetime1++;
                 }
                 if ((decompiledFrameCompleted3) &&
                   (var35 == 0)) {
-                  break L69;
+                  break regionExit1;
                 }
               }
               if (decompiledFrameCompleted3) {
@@ -3147,7 +3147,7 @@ final class np extends ka {
                     var12.a(17133, (float)var14Lifetime1[var19Lifetime1Lifetime1] * var18Lifetime1);
                     var12.a(17133, (float)var15Lifetime1[var19Lifetime1Lifetime1] * var18Lifetime1);
                   }
-                  var12.field_h = var12.field_h + (-12 + var7);
+                  var12.position = var12.position + (-12 + var7);
                   var19Lifetime1Lifetime1++;
                 }
               }
@@ -3161,13 +3161,13 @@ final class np extends ka {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
           if (stackIn_244_0 != 0) {
-            var12.field_h = var11;
+            var12.position = var11;
             if (this.field_R.field_O) {
               var13_intLifetime2 = 0;
               while (this.field_L > var13_intLifetime2) {
                 var12.a(17133, this.field_n[var13_intLifetime2]);
                 var12.a(17133, this.field_y[var13_intLifetime2]);
-                var12.field_h = var12.field_h + (var7 - 8);
+                var12.position = var12.position + (var7 - 8);
                 var13_intLifetime2++;
                 if (var35 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -3184,7 +3184,7 @@ final class np extends ka {
               while (this.field_L > var13_intLifetime2Lifetime1) {
                 var12.a((byte) 114, this.field_n[var13_intLifetime2Lifetime1]);
                 var12.a((byte) 114, this.field_y[var13_intLifetime2Lifetime1]);
-                var12.field_h = var12.field_h + (-8 + var7);
+                var12.position = var12.position + (-8 + var7);
                 var13_intLifetime2Lifetime1++;
                 if (var35 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -3195,23 +3195,23 @@ final class np extends ka {
           }
           if ((decompiledFrameCompleted1) &&
             (decompiledFrameCompleted0)) {
-            var12.field_h = this.field_L * var7;
+            var12.position = this.field_L * var7;
           }
           if (param1) {
             boolean decompiledSharedTail0 = (this.field_Q == null);
             if (!decompiledSharedTail0) {
-              this.field_Q.a(var7, var12.field_h, (byte) -112, var12.field_g);
+              this.field_Q.a(var7, var12.position, (byte) -112, var12.payload);
               decompiledSharedTail0 = (var35 != 0);
             }
             if (decompiledSharedTail0) {
-              this.field_Q = this.field_R.a(var12.field_h, var12.field_g, var7, true, (byte) 117);
+              this.field_Q = this.field_R.a(var12.position, var12.payload, var7, true, (byte) 117);
             }
             this.field_Z = (byte) 0;
             var13_ref = this.field_Q;
           }
           if (!param1 ||
             var35 != 0) {
-            var13_ref = this.field_R.a(var12.field_h, var12.field_g, var7, false, (byte) 99);
+            var13_ref = this.field_R.a(var12.position, var12.payload, var7, false, (byte) 99);
             this.field_gb = true;
           }
           if (var5 != 0) {
@@ -3244,10 +3244,10 @@ final class np extends ka {
     private final void a(boolean param0) {
         int stackIn_16_1 = 0;
         boolean stackIn_17_2 = false;
-        cka stackIn_24_0 = null;
+        OpenGlToolkit stackIn_24_0 = null;
         int stackIn_24_1 = 0;
         boolean stackIn_25_2 = false;
-        cka stackIn_37_0 = null;
+        OpenGlToolkit stackIn_37_0 = null;
         int stackIn_37_1 = 0;
         boolean stackIn_38_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -3277,7 +3277,7 @@ final class np extends ka {
               stackIn_24_0 = this.field_R;
               stackIn_24_1 = 96;
               stackIn_25_2 = (this.field_F != null);
-              ((cka) (Object) stackIn_24_0).a(stackIn_24_1, stackIn_25_2);
+              ((OpenGlToolkit) (Object) stackIn_24_0).a(stackIn_24_1, stackIn_25_2);
               this.field_R.a(this.field_kb, this.field_ab, this.field_F, -120, this.field_g);
               var2_int = -1 + this.field_p.length;
               var3 = 0;
@@ -3294,7 +3294,7 @@ final class np extends ka {
                 stackIn_37_0 = this.field_R;
                 stackIn_37_1 = 70;
                 stackIn_38_2 = (null != this.field_F);
-                ((cka) (Object) stackIn_37_0).a((byte) stackIn_37_1, stackIn_38_2, var6);
+                ((OpenGlToolkit) (Object) stackIn_37_0).a((byte) stackIn_37_1, stackIn_38_2, var6);
                 this.field_R.a(3 * var4, 4, -513, this.field_w.field_a, 3 * (var5 - var4));
                 var3++;
               }
@@ -3598,7 +3598,7 @@ final class np extends ka {
             if (param0 == 7) {
               if (null != this.field_j) {
                 var9 = 0;
-                L26: while (true) {
+                scanLoop1: while (true) {
                   stackIn_185_0 = ~var8_int;
                   stackIn_185_1 = ~var9;
                   if (stackIn_185_0 < stackIn_185_1) {
@@ -3652,7 +3652,7 @@ final class np extends ka {
                       }
                     }
                     var9++;
-                    continue L26;
+                    continue scanLoop1;
                   }
                   break;
                 }
@@ -3981,7 +3981,7 @@ final class np extends ka {
         var2 = TombRacer.field_G ? 1 : 0;
         try {
           var1_int = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var1_int < this.field_N) {
               this.field_P[var1_int] = this.field_P[var1_int] + 7 >> 4;
               this.field_K[var1_int] = this.field_K[var1_int] + 7 >> 4;
@@ -3992,7 +3992,7 @@ final class np extends ka {
               }
             } else {
               if (null == this.field_g) {
-                break L1;
+                break scanLoop1;
               }
             }
             this.field_g.field_d = null;
@@ -4227,7 +4227,7 @@ final class np extends ka {
         }
     }
 
-    np(cka param0) {
+    np(OpenGlToolkit param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -4263,7 +4263,7 @@ final class np extends ka {
         }
     }
 
-    np(cka param0, oc param1, int param2, int param3, int param4, int param5) {
+    np(OpenGlToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
         int fieldTemp$0 = 0;
         short dupTemp$1 = 0;
         short dupTemp$2 = 0;
@@ -4643,7 +4643,7 @@ final class np extends ka {
             var14_ref = qqa.a(var8, param1, this.field_W, (byte) -6);
             var15 = new uo[param1.field_o];
             var16 = 0;
-            L47: while (true) {
+            scanLoop1: while (true) {
               if (var16 < param1.field_o) {
                 var17 = param1.field_a[var16];
                 var18 = param1.field_t[var16];
@@ -4658,7 +4658,7 @@ final class np extends ka {
                 var27_int = var22_int * var23_int - var25_int * var20;
                 stackIn_196_0 = var20 * var24_int - var21 * var23_int;
                 if (var63 != 0) {
-                  break L47;
+                  break scanLoop1;
                 }
                 var28 = stackIn_196_0;
                 while (true) {
@@ -4726,7 +4726,7 @@ final class np extends ka {
               break;
             }
             var16 = stackIn_196_0;
-            L60: while (true) {
+            scanLoop2: while (true) {
               if (var16 < this.field_W) {
                 var17 = var8[var16];
                 var18 = param1.field_A[var17] & 65535;
@@ -4867,13 +4867,13 @@ final class np extends ka {
                             break;
                           case 1:
                             var41 = (float)param1.field_x[var19_int] / 1024.0f;
-                            loa.a(var39_int, dia.field_p, var41, param1.field_p[var32_int], param1.field_I[var32_int], 86, var38_ref_float__, var40, var36, var37_int, param1.field_b[var32_int], var35);
+                            MazeGenerator.a(var39_int, dia.field_p, var41, param1.field_p[var32_int], param1.field_I[var32_int], 86, var38_ref_float__, var40, var36, var37_int, param1.field_b[var32_int], var35);
                             var23 = dia.field_p[1];
                             var22 = dia.field_p[0];
-                            loa.a(var39_int, dia.field_p, var41, param1.field_p[var33_int], param1.field_I[var33_int], -68, var38_ref_float__, var40, var36, var37_int, param1.field_b[var33_int], var35);
+                            MazeGenerator.a(var39_int, dia.field_p, var41, param1.field_p[var33_int], param1.field_I[var33_int], -68, var38_ref_float__, var40, var36, var37_int, param1.field_b[var33_int], var35);
                             var25 = dia.field_p[1];
                             var24 = dia.field_p[0];
-                            loa.a(var39_int, dia.field_p, var41, param1.field_p[var34], param1.field_I[var34], 113, var38_ref_float__, var40, var36, var37_int, param1.field_b[var34], var35);
+                            MazeGenerator.a(var39_int, dia.field_p, var41, param1.field_p[var34], param1.field_I[var34], 113, var38_ref_float__, var40, var36, var37_int, param1.field_b[var34], var35);
                             var26 = dia.field_p[0];
                             var27 = dia.field_p[1];
                             var42 = var41 / 2.0f;
@@ -5009,7 +5009,7 @@ final class np extends ka {
                 var16 = 0;
                 var17 = -10000;
                 var18 = 0;
-                L97: while (true) {
+                scanLoop3: while (true) {
                   if (this.field_ib > var18) {
                     var19_int = this.field_I[var18];
                     stackIn_332_0 = ~var19_int;
@@ -5019,9 +5019,9 @@ final class np extends ka {
                         var19_int = this.field_I[var18];
                         stackIn_356_0 = ~var19_int;
                         stackIn_356_1 = ~var17;
-                        break L60;
+                        break scanLoop2;
                       }
-                      break L97;
+                      break scanLoop3;
                     }
                     if (stackIn_332_0 != stackIn_332_1) {
                       var17 = var19_int;
@@ -5044,7 +5044,7 @@ final class np extends ka {
                     stackIn_356_0 = ~var19_int;
                     stackIn_356_1 = ~var17;
                     if (var63 != 0) {
-                      break L60;
+                      break scanLoop2;
                     }
                     if (stackIn_356_0 != stackIn_356_1) {
                       incrementValue$5 = var16;

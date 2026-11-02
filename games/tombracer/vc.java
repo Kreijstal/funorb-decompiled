@@ -5,7 +5,7 @@ final class vc extends ci {
     static StringBuilder field_n;
     private int field_r;
     static String field_o;
-    static kh field_q;
+    static BitPacketBuffer field_q;
     static cn field_p;
     private int field_m;
     static String field_s;
@@ -23,7 +23,7 @@ final class vc extends ci {
         field_n = (StringBuilder) null;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -92,8 +92,8 @@ final class vc extends ci {
             return var3;
           }
           for (var4 = 0; ns.field_g > var4; var4++) {
-            L10: {
-              L11: {
+            regionExit1: {
+              regionExit2: {
                 var5 = ht.field_Fb[var4];
                 var6 = sj.field_b[param1];
                 var7 = var5 * this.field_r >> 12;
@@ -107,16 +107,16 @@ final class vc extends ci {
                     var7 -= 4;
                   }
                   if (1 != var7) {
-                    break L11;
+                    break regionExit2;
                   }
                   if (var9 < this.field_m) {
                     var13[var4] = 0;
-                    break L10;
+                    break regionExit1;
                   }
                 }
                 if (var9 >= this.field_m) {
                   var13[var4] = 4096;
-                  break L10;
+                  break regionExit1;
                 }
                 for (var7 = var7 - var8; var7 < 0; var7 += 4) {
                 }
@@ -125,7 +125,7 @@ final class vc extends ci {
                 }
                 if (var7 <= 0) {
                   var13[var4] = 4096;
-                  break L10;
+                  break regionExit1;
                 }
               }
               var13[var4] = 0;
@@ -137,8 +137,8 @@ final class vc extends ci {
           return var3;
         }
         for (var4Lifetime1 = 0; ns.field_g > var4Lifetime1; var4Lifetime1++) {
-          L1: {
-            L2: {
+          regionExit3: {
+            regionExit4: {
               var5Lifetime1 = ht.field_Fb[var4Lifetime1];
               var6Lifetime1 = sj.field_b[param1];
               var7Lifetime1 = var5Lifetime1 * this.field_r >> 12;
@@ -152,11 +152,11 @@ final class vc extends ci {
                   var7Lifetime1 -= 4;
                 }
                 if (1 != var7Lifetime1) {
-                  break L2;
+                  break regionExit4;
                 }
                 if (var9Lifetime1 < this.field_m) {
                   var13[var4Lifetime1] = 0;
-                  break L1;
+                  break regionExit3;
                 }
               }
               if (var9Lifetime1 < this.field_m) {
@@ -166,11 +166,11 @@ final class vc extends ci {
                   var7Lifetime1 -= 4;
                 }
                 if (var7Lifetime1 > 0) {
-                  break L2;
+                  break regionExit4;
                 }
               }
               var13[var4Lifetime1] = 4096;
-              break L1;
+              break regionExit3;
             }
             var13[var4Lifetime1] = 0;
           }

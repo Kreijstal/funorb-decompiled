@@ -12,13 +12,13 @@ final class sc extends cg {
           return;
         }
         param0 = param0 - this.field_l;
-        this.field_j.field_a = this.field_a;
+        this.field_j.next = this.next;
         this.field_l = 0;
-        this.field_j.field_e = this.field_e;
-        this.field_e.field_a = (vg) ((Object) this.field_j);
-        this.field_a.field_e = (vg) ((Object) this.field_j);
-        this.field_e = null;
-        this.field_a = null;
+        this.field_j.previous = this.previous;
+        this.previous.next = (IntrusiveNode) ((Object) this.field_j);
+        this.next.previous = (IntrusiveNode) ((Object) this.field_j);
+        this.previous = null;
+        this.next = null;
         if (param0 <= 0) {
           return;
         }
@@ -39,12 +39,12 @@ final class sc extends cg {
           param2 = param2 - this.field_l;
           param1 = param1 + this.field_l;
           this.field_l = 0;
-          this.field_j.field_a = this.field_a;
-          this.field_j.field_e = this.field_e;
-          this.field_e.field_a = (vg) ((Object) this.field_j);
-          this.field_a.field_e = (vg) ((Object) this.field_j);
-          this.field_a = null;
-          this.field_e = null;
+          this.field_j.next = this.next;
+          this.field_j.previous = this.previous;
+          this.previous.next = (IntrusiveNode) ((Object) this.field_j);
+          this.next.previous = (IntrusiveNode) ((Object) this.field_j);
+          this.next = null;
+          this.previous = null;
           if (param2 <= 0) {
             return;
           }

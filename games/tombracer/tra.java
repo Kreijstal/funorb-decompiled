@@ -184,7 +184,7 @@ class tra extends rj {
         }
     }
 
-    final static void a(int param0, nh[] param1, byte param2, int param3, ha param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void a(int param0, nh[] param1, byte param2, int param3, GraphicsToolkit param4, int param5, int param6, int param7, int param8, int param9) {
         int stackIn_14_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_22_0 = 0;
@@ -741,14 +741,14 @@ class tra extends rj {
             return stackIn_3_0;
           }
           var2_int = -1 + this.field_I;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (0 < var2_int) {
               stackOut_6_0 = this.field_o.charAt(var2_int - 1);
               stackIn_14_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
               stackIn_14_1 = 32;
               if (var3 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_7_0 != stackIn_14_1) {
                 var2_int--;
@@ -889,17 +889,17 @@ class tra extends rj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          boolean decompiledSharedTail0 = !(ff.field_w <= 32);
+          boolean decompiledSharedTail0 = !(MatchState.field_w <= 32);
           if (!decompiledSharedTail0) {
             cf.a(0, param0 + 8);
             decompiledSharedTail0 = (TombRacer.field_G);
           }
           if (decompiledSharedTail0) {
-            var1_int = ff.field_w % 32;
+            var1_int = MatchState.field_w % 32;
             if (0 == var1_int) {
               var1_int = 32;
             }
-            cf.a(-var1_int + ff.field_w, param0 - 1);
+            cf.a(-var1_int + MatchState.field_w, param0 - 1);
           }
           if (param0 != -113) {
             tra.g(-73);
@@ -991,11 +991,11 @@ class tra extends rj {
           }
           var3 = 99 / ((param0 - 37) / 56);
           var4 = 1 + this.field_I;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var2_int > var4) {
               stackIn_14_0 = ~this.field_o.charAt(-1 + var4);
               if (var5 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_14_0 != -33) {
                 var4++;

@@ -12,7 +12,7 @@ final class fw {
         byte[] var3 = tq.field_g.a(param1, 0, param0);
         var2 = new lp();
         if (var3 != null) {
-          var2.a(-1, param0, new uia(var3));
+          var2.a(-1, param0, new PacketBuffer(var3));
         }
         wha.field_J.a(29166, var2, (long)param0);
         return var2;

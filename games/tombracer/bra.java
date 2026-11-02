@@ -5,7 +5,7 @@ final class bra extends ofa implements tsa {
     static String[] field_M;
     private rj field_N;
     private rj field_L;
-    static iu field_O;
+    static Sprite field_O;
 
     private final void f(int param0) {
         if (param0 != -25050) {
@@ -117,7 +117,7 @@ final class bra extends ofa implements tsa {
           if (vpa.a(94)) {
             this.field_L = this.a(ae.field_k, (byte) 91, (qc) (this));
           }
-          this.field_N = this.a(kh.field_j, (byte) 54, (qc) (this));
+          this.field_N = this.a(BitPacketBuffer.field_j, (byte) 54, (qc) (this));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bra.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

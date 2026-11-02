@@ -152,7 +152,7 @@ final class sv extends wv {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!jna.a(false, param4, param1, param2)) {
+          if (!GameApplet.a(false, param4, param1, param2)) {
             stackIn_2_0 = null;
             return (kg) (stackIn_2_0);
           }

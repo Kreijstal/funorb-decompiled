@@ -4,7 +4,7 @@
 final class pea {
     static fp field_c;
     static String field_f;
-    private od field_d;
+    private DualLinkNode field_d;
     private ji field_e;
     private vj field_a;
     private int field_b;
@@ -21,11 +21,11 @@ final class pea {
         field_c = null;
     }
 
-    final od a(int param0, long param1) {
+    final DualLinkNode a(int param0, long param1) {
         if (param0 != 0) {
-          return (od) null;
+          return (DualLinkNode) null;
         }
-        od var4 = (od) (this.field_e.a((byte) -104, param1));
+        DualLinkNode var4 = (DualLinkNode) (this.field_e.a((byte) -104, param1));
         if (var4 == null) {
           return var4;
         }
@@ -64,8 +64,8 @@ final class pea {
         }
     }
 
-    final void a(od param0, byte param1, long param2) {
-        od var5 = null;
+    final void a(DualLinkNode param0, byte param1, long param2) {
+        DualLinkNode var5 = null;
         if (param1 <= 6) {
           return;
         }
@@ -74,12 +74,12 @@ final class pea {
             this.field_b = this.field_b - 1;
           } else {
             var5 = this.field_a.c((byte) 127);
-            var5.p(36);
-            var5.c(-7975);
+            var5.unlink(36);
+            var5.unlinkSecondary(-7975);
             if (this.field_d == var5) {
               var5 = this.field_a.c((byte) 124);
-              var5.p(75);
-              var5.c(-7975);
+              var5.unlink(75);
+              var5.unlinkSecondary(-7975);
             }
           }
           this.field_e.a(param2, 126, param0);
@@ -91,7 +91,7 @@ final class pea {
 
     pea(int param0) {
         int var2 = 0;
-        this.field_d = new od();
+        this.field_d = new DualLinkNode();
         this.field_a = new vj();
         this.field_b = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {

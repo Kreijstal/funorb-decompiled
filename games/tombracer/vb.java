@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vb extends vg {
+final class vb extends IntrusiveNode {
     int field_g;
     qia field_f;
-    vg field_h;
+    IntrusiveNode field_h;
     static int field_i;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8) {
@@ -213,7 +213,7 @@ final class vb extends vg {
         this.field_f.a(128 + param1 * ot.field_v >> 8, param0);
     }
 
-    vb(qia param0, vg param1) {
+    vb(qia param0, IntrusiveNode param1) {
         try {
           this.field_f = param0;
           this.field_g = param0.l();

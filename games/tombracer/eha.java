@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class eha {
-    private vna field_a;
-    private vna field_b;
+    private IntrusiveDeque field_a;
+    private IntrusiveDeque field_b;
 
-    final void a(bs param0, hca param1, boolean param2) {
+    final void a(GameEvent param0, Player param1, boolean param2) {
         try {
           this.field_b.b((byte) -96, new dda(param1, param0));
           if (!param2) {
-            la var5 = (la) null;
-            this.a(-124, (la) null);
+            Room var5 = (Room) null;
+            this.a(-124, (Room) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "eha.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -56,11 +56,11 @@ abstract class eha {
         }
     }
 
-    abstract void a(int param0, int param1, hca param2, fsa param3);
+    abstract void a(int param0, int param1, Player param2, Trap param3);
 
-    abstract void a(fsa param0, int param1);
+    abstract void a(Trap param0, int param1);
 
-    final void a(dt param0, int param1, int param2) {
+    final void a(PlayerSimulation param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -68,7 +68,7 @@ abstract class eha {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 52) {
-            this.field_a = (vna) null;
+            this.field_a = (IntrusiveDeque) null;
           }
           if (!param0.h(126)) {
             return;
@@ -98,14 +98,14 @@ abstract class eha {
         }
     }
 
-    abstract void a(int param0, la param1);
+    abstract void a(int param0, Room param1);
 
-    abstract void a(int param0, hca param1, la param2);
+    abstract void a(int param0, Player param1, Room param2);
 
-    final void a(dt param0, pi param1, boolean param2) {
+    final void a(PlayerSimulation param0, PendingEvent param1, boolean param2) {
         int var5 = 0;
-        fsa var6 = null;
-        pi var7 = null;
+        Trap var6 = null;
+        PendingEvent var7 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -116,18 +116,18 @@ abstract class eha {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2) {
-            var6 = (fsa) null;
-            this.a(-16, -102, (hca) null, (fsa) null);
+            var6 = (Trap) null;
+            this.a(-16, -102, (Player) null, (Trap) null);
           }
-          if (param1.a(param0.field_g.r(-108), 3)) {
+          if (param1.a(param0.player.r(-108), 3)) {
             return;
           }
-          var7 = (pi) (this.field_a.f(-80));
+          var7 = (PendingEvent) (this.field_a.f(-80));
           while (var7 != null) {
             if (var7.a(param1, 0)) {
               return;
             }
-            var7 = (pi) (this.field_a.e(107));
+            var7 = (PendingEvent) (this.field_a.e(107));
           }
           this.field_a.b((byte) -82, param1);
           return;
@@ -158,7 +158,7 @@ abstract class eha {
         this.field_b.d(8);
     }
 
-    abstract void a(int param0, hca param1, int param2, la param3, int param4, int param5);
+    abstract void a(int param0, Player param1, int param2, Room param3, int param4, int param5);
 
     final dda a(int param0) {
         if (param0 < 99) {
@@ -167,19 +167,19 @@ abstract class eha {
         return (dda) (this.field_b.c(23));
     }
 
-    abstract void a(hca param0, la param1, boolean param2);
+    abstract void a(Player param0, Room param1, boolean param2);
 
     protected eha() {
-        this.field_b = new vna();
-        this.field_a = new vna();
+        this.field_b = new IntrusiveDeque();
+        this.field_a = new IntrusiveDeque();
     }
 
-    private final void a(byte param0, dt param1) {
+    private final void a(byte param0, PlayerSimulation param1) {
         int var3_int = 0;
         int var4 = 0;
-        pi var5 = null;
+        PendingEvent var5 = null;
         int var6 = 0;
-        fsa var7 = null;
+        Trap var7 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -187,13 +187,13 @@ abstract class eha {
         RuntimeException var3 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = param1.field_c;
-          var4 = param1.field_g.r(-102);
+          var3_int = param1.tick;
+          var4 = param1.player.r(-102);
           if (param0 != -27) {
-            var7 = (fsa) null;
-            this.a(84, 86, (hca) null, (fsa) null);
+            var7 = (Trap) null;
+            this.a(84, 86, (Player) null, (Trap) null);
           }
-          var5 = (pi) (this.field_a.f(param0 - 53));
+          var5 = (PendingEvent) (this.field_a.f(param0 - 53));
           while (var5 != null) {
             if (!var5.a(var3_int, -1, var4)) {
               if (var5.c(var3_int, 113)) {
@@ -201,9 +201,9 @@ abstract class eha {
               }
             } else {
               var5.a(param1, -102);
-              var5.p(40);
+              var5.unlink(40);
             }
-            var5 = (pi) (this.field_a.e(122));
+            var5 = (PendingEvent) (this.field_a.e(122));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

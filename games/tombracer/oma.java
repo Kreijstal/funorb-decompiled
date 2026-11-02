@@ -15,7 +15,7 @@ final class oma extends kna {
         return true;
     }
 
-    oma(la param0, int param1, kh param2, csa param3) {
+    oma(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
@@ -62,7 +62,7 @@ final class oma extends kna {
         super.q(param0);
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 24, this.field_F, 2);
@@ -98,7 +98,7 @@ final class oma extends kna {
         field_G = null;
     }
 
-    oma(la param0, int param1) {
+    oma(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -147,26 +147,26 @@ final class oma extends kna {
         return false;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         mo var5 = null;
         mfa var6 = null;
         kva var7 = null;
         int var8 = 0;
-        fsa var9 = null;
-        fsa stackIn_9_0 = null;
+        Trap var9 = null;
+        Trap stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var9 = new fsa(param2, param0);
+          var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var5 = new mo(param2, param0);
           if (param1 != 3) {
             this.s(48);
           }
-          var9.a((byte) 83, (nv) (var5));
+          var9.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (kva) (var6.a(10, 111));
           var8 = this.field_F;

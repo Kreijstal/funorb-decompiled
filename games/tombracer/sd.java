@@ -6,7 +6,7 @@ final class sd extends lga {
     private nua field_I;
     static String field_J;
     private int field_F;
-    private iu field_H;
+    private Sprite field_H;
     static int field_G;
     private String field_E;
 
@@ -93,8 +93,8 @@ final class sd extends lga {
         int var13;
         String var17;
         Object var18;
-        iu var19;
-        iu var20;
+        Sprite var19;
+        Sprite var20;
         Object var22;
         Object var27;
         Object var31;
@@ -106,31 +106,31 @@ final class sd extends lga {
         String var5;
         int var11;
         int var12;
-        iu var16;
-        iu var21;
-        iu var23;
-        iu var24;
-        iu var25;
+        Sprite var16;
+        Sprite var21;
+        Sprite var23;
+        Sprite var24;
+        Sprite var25;
         String var26;
-        iu var28;
-        iu var29;
-        iu var30;
-        iu var32;
-        iu var33;
-        iu var34;
+        Sprite var28;
+        Sprite var29;
+        Sprite var30;
+        Sprite var32;
+        Sprite var33;
+        Sprite var34;
         String var35;
-        iu var37;
-        iu var38;
-        iu var39;
-        iu var41;
-        iu var42;
-        iu var43;
-        iu var45;
-        iu var46;
-        iu var47;
-        iu var51;
-        iu var52;
-        iu var53;
+        Sprite var37;
+        Sprite var38;
+        Sprite var39;
+        Sprite var41;
+        Sprite var42;
+        Sprite var43;
+        Sprite var45;
+        Sprite var46;
+        Sprite var47;
+        Sprite var51;
+        Sprite var52;
+        Sprite var53;
         oaa var55;
         oaa var56;
         oaa var57;
@@ -214,7 +214,7 @@ final class sd extends lga {
               nm.a(this.field_H, (byte) 120);
               bea.a();
             } else {
-              this.field_H = new iu(var11, var12);
+              this.field_H = new Sprite(var11, var12);
               nm.a(this.field_H, (byte) 121);
             }
             var21.a(112, 144, var21.field_n << 4, var21.field_k << 4, -this.field_F << 10, 4096);
@@ -245,18 +245,18 @@ final class sd extends lga {
           var11Lifetime5 = var25.field_n << 1;
           var12Lifetime5 = var25.field_k << 1;
           if (this.field_H == null) {
-            this.field_H = new iu(var11Lifetime5, var12Lifetime5);
+            this.field_H = new Sprite(var11Lifetime5, var12Lifetime5);
             nm.a(this.field_H, (byte) 121);
           } else {
             if (this.field_H.field_m < var11Lifetime5) {
-              this.field_H = new iu(var11Lifetime5, var12Lifetime5);
+              this.field_H = new Sprite(var11Lifetime5, var12Lifetime5);
               nm.a(this.field_H, (byte) 121);
             } else {
               if (var12Lifetime5 <= this.field_H.field_q) {
                 nm.a(this.field_H, (byte) 120);
                 bea.a();
               } else {
-                this.field_H = new iu(var11Lifetime5, var12Lifetime5);
+                this.field_H = new Sprite(var11Lifetime5, var12Lifetime5);
                 nm.a(this.field_H, (byte) 121);
               }
             }
@@ -299,7 +299,7 @@ final class sd extends lga {
               nm.a(this.field_H, (byte) 120);
               bea.a();
             } else {
-              this.field_H = new iu(var11Lifetime1, var12Lifetime1);
+              this.field_H = new Sprite(var11Lifetime1, var12Lifetime1);
               nm.a(this.field_H, (byte) 121);
             }
             var30.a(112, 144, var30.field_n << 4, var30.field_k << 4, -this.field_F << 10, 4096);
@@ -330,18 +330,18 @@ final class sd extends lga {
           var11Lifetime1Lifetime1 = var34.field_n << 1;
           var12Lifetime1Lifetime1 = var34.field_k << 1;
           if (this.field_H == null) {
-            this.field_H = new iu(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+            this.field_H = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
             nm.a(this.field_H, (byte) 121);
           } else {
             if (this.field_H.field_m < var11Lifetime1Lifetime1) {
-              this.field_H = new iu(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+              this.field_H = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               nm.a(this.field_H, (byte) 121);
             } else {
               if (var12Lifetime1Lifetime1 <= this.field_H.field_q) {
                 nm.a(this.field_H, (byte) 120);
                 bea.a();
               } else {
-                this.field_H = new iu(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+                this.field_H = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
                 nm.a(this.field_H, (byte) 121);
               }
             }
@@ -382,7 +382,7 @@ final class sd extends lga {
               nm.a(this.field_H, (byte) 120);
               bea.a();
             } else {
-              this.field_H = new iu(var11Lifetime2, var12Lifetime2);
+              this.field_H = new Sprite(var11Lifetime2, var12Lifetime2);
               nm.a(this.field_H, (byte) 121);
             }
             var53.a(112, 144, var53.field_n << 4, var53.field_k << 4, -this.field_F << 10, 4096);
@@ -416,18 +416,18 @@ final class sd extends lga {
           var11Lifetime2Lifetime1 = var47.field_n << 1;
           var12Lifetime2Lifetime1 = var47.field_k << 1;
           if (this.field_H == null) {
-            this.field_H = new iu(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
+            this.field_H = new Sprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
             nm.a(this.field_H, (byte) 121);
           } else {
             if (this.field_H.field_m < var11Lifetime2Lifetime1) {
-              this.field_H = new iu(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
+              this.field_H = new Sprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
               nm.a(this.field_H, (byte) 121);
             } else {
               if (var12Lifetime2Lifetime1 <= this.field_H.field_q) {
                 nm.a(this.field_H, (byte) 120);
                 bea.a();
               } else {
-                this.field_H = new iu(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
+                this.field_H = new Sprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
                 nm.a(this.field_H, (byte) 121);
               }
             }
@@ -470,7 +470,7 @@ final class sd extends lga {
             nm.a(this.field_H, (byte) 120);
             bea.a();
           } else {
-            this.field_H = new iu(var11Lifetime3, var12Lifetime3);
+            this.field_H = new Sprite(var11Lifetime3, var12Lifetime3);
             nm.a(this.field_H, (byte) 121);
           }
           var39.a(112, 144, var39.field_n << 4, var39.field_k << 4, -this.field_F << 10, 4096);
@@ -501,15 +501,15 @@ final class sd extends lga {
         var11Lifetime4 = var43.field_n << 1;
         var12Lifetime4 = var43.field_k << 1;
         if (this.field_H == null) {
-          this.field_H = new iu(var11Lifetime4, var12Lifetime4);
+          this.field_H = new Sprite(var11Lifetime4, var12Lifetime4);
           nm.a(this.field_H, (byte) 121);
         } else {
           if (this.field_H.field_m < var11Lifetime4) {
-            this.field_H = new iu(var11Lifetime4, var12Lifetime4);
+            this.field_H = new Sprite(var11Lifetime4, var12Lifetime4);
             nm.a(this.field_H, (byte) 121);
           } else {
             if (var12Lifetime4 > this.field_H.field_q) {
-              this.field_H = new iu(var11Lifetime4, var12Lifetime4);
+              this.field_H = new Sprite(var11Lifetime4, var12Lifetime4);
               nm.a(this.field_H, (byte) 121);
             } else {
               nm.a(this.field_H, (byte) 120);

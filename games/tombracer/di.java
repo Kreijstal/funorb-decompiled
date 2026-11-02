@@ -76,8 +76,8 @@ final class di {
           if (mla.field_a > 0) {
             mla.field_a = mla.field_a - 1;
           } else {
-            if (gt.field_a > 0) {
-              gt.field_a = gt.field_a - 1;
+            if (GameKeyHandler.field_a > 0) {
+              GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
             } else {
               if (fp.field_e > 0) {
                 fp.field_e = fp.field_e - 1;
@@ -88,15 +88,15 @@ final class di {
           if (null == uu.field_a) {
             if (ifa.field_n == null) {
               tla.field_e = false;
-              if (0 < gt.field_a) {
-                gt.field_a = gt.field_a - 1;
+              if (0 < GameKeyHandler.field_a) {
+                GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
               } else {
                 if (0 < fp.field_e) {
                   fp.field_e = fp.field_e - 1;
                 } else {
                   if (mla.field_a < pna.field_q) {
                     if (mla.field_a == 0) {
-                      csa.a(false);
+                      RoomComponent.a(false);
                     }
                     mla.field_a = mla.field_a + 1;
                   }
@@ -107,11 +107,11 @@ final class di {
                 mla.field_a = mla.field_a - 1;
               } else {
                 if (fp.field_e <= 0) {
-                  if (pna.field_q > gt.field_a) {
-                    if (gt.field_a == 0) {
+                  if (pna.field_q > GameKeyHandler.field_a) {
+                    if (GameKeyHandler.field_a == 0) {
                       iw.a((byte) -64, true);
                     }
-                    gt.field_a = gt.field_a + 1;
+                    GameKeyHandler.field_a = GameKeyHandler.field_a + 1;
                   }
                 } else {
                   fp.field_e = fp.field_e - 1;
@@ -122,8 +122,8 @@ final class di {
             if (0 < mla.field_a) {
               mla.field_a = mla.field_a - 1;
             } else {
-              if (gt.field_a > 0) {
-                gt.field_a = gt.field_a - 1;
+              if (GameKeyHandler.field_a > 0) {
+                GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
               } else {
                 if (fp.field_e < pna.field_q) {
                   if (0 == fp.field_e) {
@@ -156,7 +156,7 @@ final class di {
         iqa var9 = null;
         int var10 = 0;
         int var11 = 0;
-        ha var12 = null;
+        GraphicsToolkit var12 = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           var3 = null;
@@ -406,7 +406,7 @@ final class di {
         }
     }
 
-    private di(cn param0, cn param1, d param2, fia param3, ei[] param4) {
+    private di(cn param0, cn param1, d param2, PlatformTaskDispatcher param3, ei[] param4) {
         this.field_e = false;
         try {
           this.field_c = param2;
@@ -419,7 +419,7 @@ final class di {
         }
     }
 
-    final static boolean a(uia param0, byte param1) {
+    final static boolean a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

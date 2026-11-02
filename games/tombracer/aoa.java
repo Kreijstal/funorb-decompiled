@@ -5,7 +5,7 @@ final class aoa implements bo {
     private ufa field_a;
     static apa field_b;
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         if (param0 != 200) {
           return;
         }
@@ -51,7 +51,7 @@ final class aoa implements bo {
         return this.field_a;
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           this.field_a = new ufa();
           this.field_a.a(param0, (byte) 122);

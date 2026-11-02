@@ -4,23 +4,23 @@
 final class ve extends kna {
     static boolean field_F;
 
-    ve(la param0, int param1) {
+    ve(Room param0, int param1) {
         super(param0, param1);
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         mfa var5 = null;
         am var6 = null;
         gaa var7 = null;
-        fsa stackIn_1_0 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.a((byte) -3, 5);
           var5 = rm.field_a;
@@ -49,7 +49,7 @@ final class ve extends kna {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           if (param0) {
@@ -82,8 +82,8 @@ final class ve extends kna {
 
     final boolean z(int param0) {
         if (param0 != 0) {
-          kh var3 = (kh) null;
-          this.a(true, (kh) null);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a(true, (BitPacketBuffer) null);
           return false;
         }
         return false;
@@ -91,8 +91,8 @@ final class ve extends kna {
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-          la var3 = (la) null;
-          this.a(true, 119, (la) null);
+          Room var3 = (Room) null;
+          this.a(true, 119, (Room) null);
           return true;
         }
         return true;
@@ -100,14 +100,14 @@ final class ve extends kna {
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-          la var3 = (la) null;
-          this.a(false, -64, (la) null);
+          Room var3 = (Room) null;
+          this.a(false, -64, (Room) null);
           return false;
         }
         return false;
     }
 
-    ve(la param0, int param1, kh param2, csa param3) {
+    ve(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
     }
 

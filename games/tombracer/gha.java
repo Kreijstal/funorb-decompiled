@@ -12,7 +12,7 @@ final class gha implements pp {
         return (52 & param1) != 0 ? true : false;
     }
 
-    final static mva[] a(mva[] param0, int param1, int param2, int param3, os param4, kh param5) {
+    final static mva[] a(mva[] param0, int param1, int param2, int param3, os param4, BitPacketBuffer param5) {
         mva[] stackIn_3_0 = null;
         mva[] stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
@@ -28,7 +28,7 @@ final class gha implements pp {
         int var7 = 0;
         int var8 = 0;
         mva var9 = null;
-        kh var10 = null;
+        BitPacketBuffer var10 = null;
         int var11 = 0;
         var11 = TombRacer.field_G ? 1 : 0;
         try {

@@ -5,7 +5,7 @@ final class pq implements os {
     static int field_f;
     static int[] field_e;
     static jea field_g;
-    static iu[] field_b;
+    static Sprite[] field_b;
     static nh field_a;
     static String field_d;
     static jea field_c;
@@ -25,14 +25,14 @@ final class pq implements os {
     }
 
     final static void a(byte[] param0, boolean param1, int param2, int param3, int param4, int param5) {
-        kh var10 = null;
+        BitPacketBuffer var10 = null;
         int var7 = 0;
         int var8 = 0;
         try {
           var10 = ql.field_k;
           var10.k(param5, -2988);
-          var10.field_h = var10.field_h + 1;
-          var7 = var10.field_h;
+          var10.position = var10.position + 1;
+          var7 = var10.position;
           var10.i(4, 0);
           var10.i(param4, 0);
           var8 = param2;
@@ -42,7 +42,7 @@ final class pq implements os {
           int var9 = -69 / ((-65 - param3) / 34);
           var10.i(var8, 0);
           var10.a(0, param0, param0.length, 91);
-          var10.d(-var7 + var10.field_h, (byte) -1);
+          var10.d(-var7 + var10.position, (byte) -1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

@@ -11,16 +11,16 @@ final class opa extends qra {
     static mi[] field_n;
 
     final static void a(int param0, String param1, int param2, int param3, String param4, int param5) {
-        kh var8 = null;
+        BitPacketBuffer var8 = null;
         int var7 = 0;
         try {
           var8 = ql.field_k;
           var8.k(param2, param3 - 35359);
-          var8.field_h = var8.field_h + 1;
+          var8.position = var8.position + 1;
           if (param3 != 32371) {
             field_n = (mi[]) null;
           }
-          var7 = var8.field_h;
+          var7 = var8.position;
           var8.i(param0, 0);
           if (param0 == 2) {
             var8.a(param4, false);
@@ -30,7 +30,7 @@ final class opa extends qra {
           } else {
             var8.f(-1477662136, param5);
           }
-          var8.d(-var7 + var8.field_h, (byte) 10);
+          var8.d(-var7 + var8.position, (byte) 10);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "opa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -243,7 +243,7 @@ final class opa extends qra {
           this.field_s = false;
         }
         ura.a(-10985);
-        la.field_j.a(0, 0);
+        Room.field_j.a(0, 0);
         ik.field_h.a(0, 0);
         ng.field_b[1].a(50, -10);
         var3 = -250 + aaa.a(false);
@@ -327,7 +327,7 @@ final class opa extends qra {
             var20_ref_StringLifetime8 = "0" + var30;
           }
           ts.a(-1, -29, var13 + 14, var20_ref_StringLifetime8.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
-          var21_int = this.field_c.field_H[var8Lifetime2].z(-104);
+          var21_int = this.field_c.players[var8Lifetime2].z(-104);
           var22 = 0;
           if (var21_int >= 0 &&
             2 == bta.field_n[var21_int] &&
@@ -405,7 +405,7 @@ final class opa extends qra {
           var10Lifetime1Lifetime1 = wga.field_a[var8Lifetime3];
           gca.field_a.a(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
           tga.field_a.la();
-          this.field_c.field_H[var8Lifetime3].n((byte) -42).a(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
+          this.field_c.players[var8Lifetime3].n((byte) -42).a(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
           oka.a(this.field_c.field_l[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, kn.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
           if (!this.field_p &&
             var7Lifetime2 >= var8Lifetime3 * 50 + efa.field_y &&
@@ -420,7 +420,7 @@ final class opa extends qra {
               stackIn_154_1 = this.field_r[var8Lifetime3].field_u;
             }
             var40 = ((StringBuilder) (Object) stackIn_153_0).append(Integer.toString(stackIn_154_1 + this.field_r[var8Lifetime3].field_v)).toString();
-            var14 = this.field_c.field_H[var8Lifetime3].z(-124);
+            var14 = this.field_c.players[var8Lifetime3].z(-124);
             if (var11Lifetime1Lifetime1 != 0) {
               if (this.field_r[var8Lifetime3].field_u > 0) {
                 stackIn_162_0 = (var14 < 0) ? 0 : 1;
@@ -467,7 +467,7 @@ final class opa extends qra {
               stackIn_129_1 = 0;
             }
             var37 = ((StringBuilder) (Object) stackIn_128_0).append(Integer.toString(stackIn_129_1 + this.field_r[var8Lifetime3].field_n)).toString();
-            var14 = this.field_c.field_H[var8Lifetime3].z(39);
+            var14 = this.field_c.players[var8Lifetime3].z(39);
             if (var11Lifetime1Lifetime1 != 0) {
               if (this.field_r[var8Lifetime3].field_z > 0) {
                 stackIn_137_0 = (var14 >= 0) ? 1 : 0;
@@ -519,7 +519,7 @@ final class opa extends qra {
                 stackIn_104_1 = this.field_r[var8Lifetime3].field_f;
               }
               var34 = ((StringBuilder) (Object) stackIn_103_0).append(Integer.toString(stackIn_104_1 + this.field_r[var8Lifetime3].field_a)).toString();
-              var14 = this.field_c.field_H[var8Lifetime3].z(-113);
+              var14 = this.field_c.players[var8Lifetime3].z(-113);
               if (var11Lifetime1Lifetime1 != 0) {
                 if (0 < this.field_r[var8Lifetime3].field_f) {
                   stackIn_112_0 = (var14 >= 0) ? 1 : 0;
@@ -681,10 +681,10 @@ final class opa extends qra {
         double var21Lifetime1;
         double var21Lifetime2;
         try {
-          var4_int = this.field_c.field_H.length;
+          var4_int = this.field_c.players.length;
           this.field_r = new gsa[var4_int];
           for (var5_int = 0; var4_int > var5_int; var5_int++) {
-            this.field_r[var5_int] = new gsa(this.field_c.field_H[var5_int], param2[var5_int]);
+            this.field_r[var5_int] = new gsa(this.field_c.players[var5_int], param2[var5_int]);
           }
           er.b(1, 0);
           this.field_s = false;
@@ -822,12 +822,12 @@ final class opa extends qra {
         if (param0 != 80) {
           this.b(76, true);
         }
-        for (var3 = 0; var3 < this.field_c.field_H.length; var3++) {
+        for (var3 = 0; var3 < this.field_c.players.length; var3++) {
           if (!this.field_q) {
-            this.field_c.field_H[var3].n((byte) -98).a(26, 4, true);
+            this.field_c.players[var3].n((byte) -98).a(26, 4, true);
           }
-          this.field_c.field_H[var3].n((byte) -127).a(param0 + 21383);
-          this.field_c.field_H[var3].n((byte) -54).f(-4366);
+          this.field_c.players[var3].n((byte) -127).a(param0 + 21383);
+          this.field_c.players[var3].n((byte) -54).f(-4366);
         }
         this.field_q = true;
         if (param1) {

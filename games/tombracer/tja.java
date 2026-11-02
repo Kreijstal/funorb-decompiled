@@ -3,7 +3,7 @@
  */
 final class tja extends pb {
     static String field_p;
-    static qaa field_q;
+    static MouseWheelInput field_q;
     private Object field_o;
 
     public static void a(boolean param0) {

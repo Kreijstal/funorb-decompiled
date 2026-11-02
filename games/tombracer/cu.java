@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cu extends nv {
+final class cu extends Behaviour {
     private int field_r;
     private kpa field_w;
     private int field_s;
@@ -22,7 +22,7 @@ final class cu extends nv {
         return this.field_w;
     }
 
-    private final fsa b(int param0) {
+    private final Trap b(int param0) {
         int var2 = -100 / ((48 - param0) / 57);
         if (this.field_n) {
           return this.field_g;
@@ -31,8 +31,8 @@ final class cu extends nv {
     }
 
     private final void g(byte param0) {
-        fsa var2 = null;
-        fsa var2Lifetime1;
+        Trap var2 = null;
+        Trap var2Lifetime1;
         if (param0 > 54) {
           var2 = this.b(123);
           var2.c(2, (byte) 9);
@@ -102,7 +102,7 @@ final class cu extends nv {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
@@ -187,7 +187,7 @@ final class cu extends nv {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (jna.a(param0, param1, param3, param2)) {
+          if (GameApplet.a(param0, param1, param3, param2)) {
             return sba.d((byte) 120);
           }
           return null;
@@ -232,7 +232,7 @@ final class cu extends nv {
         this.field_q = -100;
     }
 
-    final int a(int param0, ep param1, up param2) {
+    final int a(int param0, Projectile param1, up param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -267,7 +267,7 @@ final class cu extends nv {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -127, !this.field_n ? 0 : 1, 1);
@@ -283,7 +283,7 @@ final class cu extends nv {
         }
     }
 
-    cu(la param0, boolean param1) {
+    cu(Room param0, boolean param1) {
         super(param0, param1);
         try {
           this.field_u = 0;
@@ -364,7 +364,7 @@ final class cu extends nv {
         }
     }
 
-    cu(la param0, kh param1, boolean param2) {
+    cu(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_n = param1.b((byte) 44, 1) == 1 ? true : false;

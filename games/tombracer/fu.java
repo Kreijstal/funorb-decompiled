@@ -24,14 +24,14 @@ final class fu extends dg {
         }
     }
 
-    fu(int param0, la param1, kh param2) {
+    fu(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_v = null;
         this.field_n = true;
         this.field_r = null;
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -149,7 +149,7 @@ final class fu extends dg {
         }
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         iq var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -211,18 +211,18 @@ final class fu extends dg {
         RuntimeException var2 = null;
         Object var3 = null;
         int var3_int = 0;
-        fsa var3_ref = null;
+        Trap var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var7_int = 0;
-        wda var7 = null;
-        nv var8 = null;
+        Locomotor var7 = null;
+        Behaviour var8 = null;
         int var9 = 0;
         Object var10 = null;
         w var10_ref = null;
-        vna var11 = null;
+        IntrusiveDeque var11 = null;
         uja var12 = null;
-        vna var13 = null;
+        IntrusiveDeque var13 = null;
         uja var14 = null;
         int var4Lifetime1;
         var10 = null;
@@ -262,7 +262,7 @@ final class fu extends dg {
           if (var10_ref == null) {
             return;
           }
-          var3_ref = (fsa) (this.field_h);
+          var3_ref = (Trap) (this.field_h);
           if (!var3_ref.d(50, false)) {
             stackIn_28_0 = (this.field_u == 1) ? 1 : 0;
           } else {
@@ -271,7 +271,7 @@ final class fu extends dg {
           {
             var4Lifetime1 = stackIn_28_0;
             if (var4Lifetime1 != 0 && (null == this.field_v ||
-              !this.field_v.l((byte) -101))) {
+              !this.field_v.isLinked((byte) -101))) {
               if (this.field_u == 0) {
                 this.field_v = var10_ref.a(new fm(10, this.b((byte) -90), this.c((byte) 103), this.e((byte) -103)), param0 - 57);
               } else if (this.field_u != 1) {
@@ -293,13 +293,13 @@ final class fu extends dg {
             var11 = var3_ref.field_u;
             var12 = new uja(var11);
             var7_int = 0;
-            var8 = (nv) (var12.a(true));
+            var8 = (Behaviour) (var12.a(true));
             while (var8 != null) {
               if (var8 instanceof fra &&
                 ((fra) (var8)).field_o > 0) {
                 var7_int = 1;
               }
-              var8 = (nv) (var12.a(-1));
+              var8 = (Behaviour) (var12.a(-1));
             }
             if (var7_int != 0 &&
               null == this.field_r) {
@@ -314,14 +314,14 @@ final class fu extends dg {
           if (0 == this.field_u) {
             var13 = var3_ref.field_B;
             var14 = new uja(var13);
-            var7 = (wda) (var14.a(true));
+            var7 = (Locomotor) (var14.a(true));
             while (var7 != null) {
               if (var7 instanceof ro &&
                 ((ro) (var7)).d(false) != this.field_s) {
                 var10_ref.a(new fm(3, this.b((byte) 68), this.c((byte) 124), this.e((byte) -111)), -58);
                 this.field_s = ((ro) (var7)).d(false);
               }
-              var7 = (wda) (var14.a(param0 + 0));
+              var7 = (Locomotor) (var14.a(param0 + 0));
             }
             return;
           }

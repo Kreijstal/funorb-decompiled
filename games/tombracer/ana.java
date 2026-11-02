@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ana extends nv {
+final class ana extends Behaviour {
     static caa field_o;
     private int field_n;
-    private iu field_r;
+    private Sprite field_r;
     private int field_q;
     private int field_p;
 
@@ -38,7 +38,7 @@ final class ana extends nv {
         return param0;
     }
 
-    final int a(int param0, ep param1, up param2) {
+    final int a(int param0, Projectile param1, up param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
@@ -75,7 +75,7 @@ final class ana extends nv {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           this.b(0);
@@ -106,7 +106,7 @@ final class ana extends nv {
         int var21;
         var21 = TombRacer.field_G ? 1 : 0;
         if (param4 <= 79) {
-          this.field_r = (iu) null;
+          this.field_r = (Sprite) null;
         }
         if (2 != param3) {
           return 0;
@@ -137,7 +137,7 @@ final class ana extends nv {
                 var14 != var19) {
                 var7 = var7 + var16;
               } else {
-                var20 = jqa.a(var9 >> 16, 1, 8 * var17, var17 * 8 + 8, var11 >> 16, 0, 8 * var19, var10 >> 16, 8 + var19 * 8, var8 >> 16);
+                var20 = BufferedSocket.a(var9 >> 16, 1, 8 * var17, var17 * 8 + 8, var11 >> 16, 0, 8 * var19, var10 >> 16, 8 + var19 * 8, var8 >> 16);
                 var7 = var7 + var20;
               }
             }
@@ -155,7 +155,7 @@ final class ana extends nv {
         return 3;
     }
 
-    ana(la param0, kh param1, boolean param2) {
+    ana(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -238,13 +238,13 @@ final class ana extends nv {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 59, this.field_n >> 16, 10);
           if (param0) {
-            kh var4 = (kh) null;
-            this.a(true, (kh) null);
+            BitPacketBuffer var4 = (BitPacketBuffer) null;
+            this.a(true, (BitPacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ana.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -286,11 +286,11 @@ final class ana extends nv {
         int var3_int = 0;
         int[] var2;
         int var4;
-        kh var5;
+        BitPacketBuffer var5;
         int[] var6;
         int[] var7;
         int[] var8;
-        hca var3;
+        Player var3;
         int[] var6Lifetime1;
         int[] var6Lifetime1Lifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -300,13 +300,13 @@ final class ana extends nv {
         if (!this.field_f) {
           return;
         }
-        var8 = this.field_r.field_r;
+        var8 = this.field_r.pixels;
         var7 = var8;
         var6 = var7;
         var2 = var6;
         if (param0 != 5418) {
-          var5 = (kh) null;
-          this.a(true, (kh) null);
+          var5 = (BitPacketBuffer) null;
+          this.a(true, (BitPacketBuffer) null);
         }
         for (var3_int = -1 + var8.length; var3_int >= 0; var3_int--) {
           if (var8[var3_int] < this.field_p) {
@@ -405,7 +405,7 @@ final class ana extends nv {
         if (var2 >= 32 &&
           var3 >= 32 &&
           var2 < 1024 && var3 < 1024) {
-          this.field_r = new iu(var2 / 8, var3 / 8);
+          this.field_r = new Sprite(var2 / 8, var3 / 8);
           stackIn_12_1 = -117;
           if (!this.field_f) {
             stackIn_13_2 = 0;
@@ -416,7 +416,7 @@ final class ana extends nv {
         }
     }
 
-    ana(la param0, boolean param1) {
+    ana(Room param0, boolean param1) {
         super(param0, param1);
         this.field_q = 240;
         this.field_n = 2621440;
@@ -431,7 +431,7 @@ final class ana extends nv {
         if (this.b(true).o((byte) -82)) {
           param1 = param1 / 2;
         }
-        int[] var6 = this.field_r.field_r;
+        int[] var6 = this.field_r.pixels;
         int[] var3 = var6;
         int var4 = -1 + var6.length;
         if (param0 >= -93) {

@@ -229,7 +229,7 @@ final class jo extends rva implements tsa {
           oea.field_i = pq.field_g;
           wi.field_s = new jea((long)param1, param4);
           lra.field_e = new jea(0L, param0);
-          ep.field_r = new jea(0L, (jea) null);
+          Projectile.field_r = new jea(0L, (jea) null);
           dh.field_e = new jea(0L, param3);
           pq.field_g = new jea(0L, param2);
           pq.field_g.field_H = lpa.field_s;
@@ -239,10 +239,10 @@ final class jo extends rva implements tsa {
           lra.field_d = new jea(0L, bn.field_t, fw.field_a);
           qpa.field_b = new jea(0L, bn.field_t);
           wi.field_s.b(param1 ^ -122, lra.field_e);
-          wi.field_s.b(-123, ep.field_r);
-          ep.field_r.b(-123, dh.field_e);
-          ep.field_r.b(-126, lra.field_d);
-          ep.field_r.b(-125, qpa.field_b);
+          wi.field_s.b(-123, Projectile.field_r);
+          Projectile.field_r.b(-123, dh.field_e);
+          Projectile.field_r.b(-126, lra.field_d);
+          Projectile.field_r.b(-125, qpa.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -692,7 +692,7 @@ final class jo extends rva implements tsa {
         this.e(param0 ^ -111);
     }
 
-    final static an a(kh param0, boolean param1) {
+    final static an a(BitPacketBuffer param0, boolean param1) {
         int var7 = 0;
         an stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;

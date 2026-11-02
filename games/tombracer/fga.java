@@ -118,7 +118,7 @@ final class fga implements sia {
 
     private final void a(byte param0, boolean param1, int param2) {
         int var4_int = 0;
-        kh stackIn_3_0 = null;
+        BitPacketBuffer stackIn_3_0 = null;
         int stackIn_4_1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -131,7 +131,7 @@ final class fga implements sia {
           } else {
             stackIn_4_1 = 1;
           }
-          ((kh) (Object) stackIn_3_0).i(stackIn_4_1, 0);
+          ((BitPacketBuffer) (Object) stackIn_3_0).i(stackIn_4_1, 0);
           var4_int = -5 % ((param0 + 45) / 58);
           this.d(32415);
           return;
@@ -189,7 +189,7 @@ final class fga implements sia {
           int var2_int = 0;
           RuntimeException var2 = null;
           int var3_int = 0;
-          ha var3 = null;
+          GraphicsToolkit var3 = null;
           int var4 = 0;
           int var5 = 0;
           int var6_int = 0;
@@ -287,7 +287,7 @@ final class fga implements sia {
               }
               break;
             }
-            ts.a(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + ml.a(param0 + 86), 10, kn.field_p, 16777215);
+            ts.a(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + RandomAccessFileHandle.a(param0 + 86), 10, kn.field_p, 16777215);
             try {
               var3.e(param0 - 1);
             } catch (qva decompiledCaughtParameter0) {
@@ -357,11 +357,11 @@ final class fga implements sia {
             }
             var4_int = 0;
             var5 = 0;
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (var5 < aq.a(-5640)) {
                 stackIn_45_0 = var4_int;
                 if (var7 != 0) {
-                  break L3;
+                  break scanLoop1;
                 }
                 if (stackIn_45_0 < 10) {
                   var6 = ak.a(var5, (byte) 125);
@@ -388,11 +388,11 @@ final class fga implements sia {
             var4_int++;
           } while (var7 == 0);
           var5Lifetime1 = 0;
-          L10: while (true) {
+          scanLoop2: while (true) {
             if (var5Lifetime1 < aq.a(param0 - 5568)) {
               stackIn_32_0 = 30;
               if (var7 != 0) {
-                break L10;
+                break scanLoop2;
               }
               if (stackIn_32_0 > var4_int) {
                 var6Lifetime1 = ak.a(var5Lifetime1, (byte) 111);

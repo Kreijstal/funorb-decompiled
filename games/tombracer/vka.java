@@ -27,22 +27,22 @@ final class vka extends kna {
         return true;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
-        fsa stackIn_3_0 = null;
+        Trap stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           if (param1 != 3) {
             this.s(88);
           }
           var4.b((byte) -11, this.field_k, this.field_l);
           this.field_F = new im(param2, param0);
-          var4.a((byte) 83, (nv) (this.field_F));
+          var4.a((byte) 83, (Behaviour) (this.field_F));
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,7 +59,7 @@ final class vka extends kna {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         super.a(param0, param1);
         if (param0) {
           return;
@@ -96,13 +96,13 @@ final class vka extends kna {
         lj[] var2 = var4;
         if (var4.length >= 1) {
           var3 = var4[0];
-          if (var3 instanceof fsa) {
+          if (var3 instanceof Trap) {
             this.field_F.g((byte) 99).a(9, new lj[]{var3});
           }
         }
     }
 
-    vka(la param0, int param1) {
+    vka(Room param0, int param1) {
         super(param0, param1);
         this.field_G = new f(1, 1);
     }
@@ -129,7 +129,7 @@ final class vka extends kna {
         field_I = (long[][]) null;
     }
 
-    vka(la param0, int param1, kh param2, csa param3) {
+    vka(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         this.field_G = new f(1, 1);
         try {

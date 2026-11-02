@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mc extends nv {
+final class mc extends Behaviour {
     static nh field_r;
     private int field_p;
     private int field_n;
@@ -36,7 +36,7 @@ final class mc extends nv {
           this.a(65, 57, (pc) null, 85);
           var2 = dfa.a(2048 + var2, 8192, -34);
           if (var2 != this.field_v) {
-            this.field_t = hua.a((byte) 99, var2 >> 2);
+            this.field_t = MouseInputHandler.a((byte) 99, var2 >> 2);
             this.field_p = bua.a(0, var2 >> 2);
             this.field_v = var2;
             return;
@@ -47,7 +47,7 @@ final class mc extends nv {
         if (var2 == this.field_v) {
           return;
         }
-        this.field_t = hua.a((byte) 99, var2 >> 2);
+        this.field_t = MouseInputHandler.a((byte) 99, var2 >> 2);
         this.field_p = bua.a(0, var2 >> 2);
         this.field_v = var2;
     }
@@ -87,7 +87,7 @@ final class mc extends nv {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -95,13 +95,13 @@ final class mc extends nv {
         }
     }
 
-    mc(la param0, boolean param1) {
+    mc(Room param0, boolean param1) {
         super(param0, param1);
         this.field_v = -1;
         this.field_u = new pc();
     }
 
-    mc(la param0, kh param1, boolean param2) {
+    mc(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_v = -1;
         this.field_u = new pc();
@@ -174,7 +174,7 @@ final class mc extends nv {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        la var16 = null;
+        Room var16 = null;
         try {
           if (param2 != this.field_o) {
             stackIn_3_0 = 0;
@@ -202,7 +202,7 @@ final class mc extends nv {
           var9 = dfa.a(this.field_v + 2048, 8192, -71);
           var10 = cf.a(8192, -16390, var8, var9);
           var11 = dfa.a(2 * var10 + var8 + 4096, 8192, 126);
-          var12 = hua.a((byte) 99, var11 >> 2);
+          var12 = MouseInputHandler.a((byte) 99, var11 >> 2);
           var13 = bua.a(0, var11 >> 2);
           var14 = param2.field_b - gqa.a(param2.field_b, (byte) 24, this.field_w);
           var15 = var14 >> 8;
@@ -232,7 +232,7 @@ final class mc extends nv {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(true, param1);
           param1.a(param0, 120);

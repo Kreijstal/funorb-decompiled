@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cja {
-    private vna field_a;
+    private IntrusiveDeque field_a;
 
     final void a(byte param0) {
         no var2 = (no) (this.field_a.f(-80));
@@ -67,11 +67,11 @@ final class cja {
               var10_ref_int__ = var17;
               var11 = 0;
               var12 = 0;
-              L18: while (true) {
+              scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
                     param5 != fk.field_b) {
-                    break L18;
+                    break scanLoop1;
                   }
                   var8_int = 0;
                   for (var12 = 0; var19.length > var12; var12 += 2) {
@@ -84,13 +84,13 @@ final class cja {
                       }
                     }
                   }
-                  break L18;
+                  break scanLoop1;
                 }
                 var13_intLifetime1 = var19[var12];
                 var14 = var10_ref_int__[var12 + 1];
                 if (var13_intLifetime1 == -1) {
                   if (sg.field_u[param6] != var14) {
-                    break L18;
+                    break scanLoop1;
                   }
                 } else {
                   if (var13_intLifetime1 == param5 &&
@@ -98,10 +98,10 @@ final class cja {
                     var11 = 1;
                   } else {
                     if (var13_intLifetime1 >= param5) {
-                      break L18;
+                      break scanLoop1;
                     }
                     if (var14 != (tba.field_m[var13_intLifetime1] & 255)) {
-                      break L18;
+                      break scanLoop1;
                     }
                   }
                 }
@@ -253,13 +253,13 @@ final class cja {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 <= 5) {
-            this.field_a = (vna) null;
+            this.field_a = (IntrusiveDeque) null;
           }
           var7 = param1;
           var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            this.field_a.b((byte) -104, new no(rba.field_a, var5));
+            this.field_a.b((byte) -104, new no(SecondaryNodeDequeIterator.field_a, var5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -281,7 +281,7 @@ final class cja {
           !dma.field_l.a(param0 - 60)) {
           return;
         }
-        qh var2 = rba.field_a;
+        qh var2 = SecondaryNodeDequeIterator.field_a;
         if (var2 == null) {
           return;
         }
@@ -296,7 +296,7 @@ final class cja {
     }
 
     cja() {
-        this.field_a = new vna();
+        this.field_a = new IntrusiveDeque();
     }
 
     static {

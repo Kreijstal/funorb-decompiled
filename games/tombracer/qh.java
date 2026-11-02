@@ -5,11 +5,11 @@ import java.util.*;
 
 final class qh extends dfa implements rqa {
     private int[] field_y;
-    ff field_k;
+    MatchState field_k;
     private v field_z;
     static jea field_F;
     int field_x;
-    private vna field_f;
+    private IntrusiveDeque field_f;
     static jpa field_q;
     private boolean[][] field_v;
     private boolean[] field_u;
@@ -36,33 +36,33 @@ final class qh extends dfa implements rqa {
         int var3 = 0;
         int var7 = 0;
         int var2;
-        hca var4;
+        Player var4;
         ag var5;
         w var6;
-        la var8;
+        Room var8;
         int var9;
         var9 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_k.field_H.length;
+        var2 = this.field_k.players.length;
         this.field_g = new w[var2];
         if (param0 >= -45) {
           return;
         }
         for (var3 = 0; var2 > var3; var3++) {
-          var4 = this.field_k.field_H[var3];
+          var4 = this.field_k.players[var3];
           if (var4 != null) {
             var4.a(-27496, new hf(var4, var3));
             this.field_k.field_y[var3].a(11008, var4);
             var5 = new ag();
             var5.a(var4, -1);
-            this.field_k.field_G[var3].a(var5, -1);
+            this.field_k.simulations[var3].a(var5, -1);
             var6 = new w();
             this.field_g[var3] = var6;
             if (var3 != this.l(103) ||
               this.f((byte) 33)) {
               var6.a(true, 0);
             }
-            for (var7 = 0; this.field_k.field_G[var3].field_b.length > var7; var7++) {
-              var8 = this.field_k.field_G[var3].field_b[var7];
+            for (var7 = 0; this.field_k.simulations[var3].rooms.length > var7; var7++) {
+              var8 = this.field_k.simulations[var3].rooms[var7];
               if (var8 != null) {
                 var8.j((byte) 106).a(-28265, new sva(var8));
                 var8.a(4855, var6);
@@ -150,7 +150,7 @@ final class qh extends dfa implements rqa {
           return;
         }
         if (!this.field_D) {
-          this.b(this.field_k.field_H[0].v(param2 - 15179), param2 + 7821);
+          this.b(this.field_k.players[0].v(param2 - 15179), param2 + 7821);
           this.a(this.field_k.field_g[0], 5, this.field_k.field_F[0]);
           var4 = uca.field_c.a(7, param2 - 15283);
           qa.field_b = qa.field_b + var4;
@@ -169,7 +169,7 @@ final class qh extends dfa implements rqa {
               if (this.field_p) {
                 return;
               }
-              kq.a(this.field_k.field_H[this.field_x].r((byte) -125), this.field_E, (byte) 114);
+              kq.a(this.field_k.players[this.field_x].r((byte) -125), this.field_E, (byte) 114);
               this.field_p = true;
             }
           }
@@ -185,7 +185,7 @@ final class qh extends dfa implements rqa {
         if (null != this.field_z) {
           this.field_z.a(true);
         }
-        for (var2 = 0; var2 < this.field_k.field_H.length; var2++) {
+        for (var2 = 0; var2 < this.field_k.players.length; var2++) {
           this.field_C[var2].a(false);
         }
         if (param0 != -1) {
@@ -329,9 +329,9 @@ final class qh extends dfa implements rqa {
         int var14_int = 0;
         RuntimeException var14 = null;
         Object var15 = null;
-        hca var17 = null;
+        Player var17 = null;
         this.field_s = false;
-        this.field_f = new vna();
+        this.field_f = new IntrusiveDeque();
         this.field_A = false;
         this.field_t = false;
         this.field_r = -1;
@@ -355,20 +355,20 @@ final class qh extends dfa implements rqa {
             this.field_y[var15_int] = 5;
           }
           this.field_B = new int[var14_int];
-          if (ff.h(1)) {
+          if (MatchState.h(1)) {
             if (!this.field_D) {
               var15 = new ic();
             } else {
               var15 = new aua();
             }
-            this.field_k = new ff(param2, param1, param5, param6, param7, param8, this.field_E, param10, param11, (mt) (var15), param12);
+            this.field_k = new MatchState(param2, param1, param5, param6, param7, param8, this.field_E, param10, param11, (mt) (var15), param12);
             if (!param0) {
               this.field_k.c((byte) -89);
             }
             this.field_C = new kq[var14_int];
             this.field_k.field_x = null;
             for (var16 = 0; var16 < var14_int; var16++) {
-              var17 = this.field_k.field_H[var16];
+              var17 = this.field_k.players[var16];
               if (var17 != null) {
                 this.field_C[var16] = new kq();
               }
@@ -400,7 +400,7 @@ final class qh extends dfa implements rqa {
           bh.field_o = 17825;
           lra.field_f = 2023746978L;
           nb.field_c = 22238L;
-          cka.field_Z = 22238;
+          OpenGlToolkit.field_Z = 22238;
           if (!this.field_D &&
             3 != param8 &&
             this.field_E >= 0 &&
@@ -457,7 +457,7 @@ final class qh extends dfa implements rqa {
     }
 
     final void k(byte param0) {
-        hca var2 = this.field_k.field_H[0];
+        Player var2 = this.field_k.players[0];
         if (param0 != -25) {
           this.field_w = true;
         }
@@ -466,7 +466,7 @@ final class qh extends dfa implements rqa {
         this.c(param0 ^ 102);
     }
 
-    final void b(int param0, kh param1) {
+    final void b(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -535,7 +535,7 @@ final class qh extends dfa implements rqa {
 
     final void c(int param0) {
         int var2;
-        la var3;
+        Room var3;
         int var4;
         int var2Lifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -543,7 +543,7 @@ final class qh extends dfa implements rqa {
         this.a(6, new fja(this, this.field_z));
         for (var2 = 0; this.field_u.length > var2; var2++) {
           this.field_u[var2] = false;
-          var3 = this.field_k.field_H[var2].f((byte) -73);
+          var3 = this.field_k.players[var2].f((byte) -73);
           if (var3 != null) {
             var3.i((byte) -75);
           }
@@ -570,7 +570,7 @@ final class qh extends dfa implements rqa {
         field_q = null;
     }
 
-    final void a(int param0, kh param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         int var4 = 0;
         int var5 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -600,7 +600,7 @@ final class qh extends dfa implements rqa {
                 var10 = new int[this.field_k.field_k][3];
                 for (var4 = 0; this.field_k.field_k > var4; var4++) {
                   for (var5 = 0; 3 > var5; var5++) {
-                    var10[var4][var5] = this.field_k.field_H[var4].c(196608, var5);
+                    var10[var4][var5] = this.field_k.players[var4].c(196608, var5);
                   }
                 }
                 this.a(var10, -9);
@@ -639,7 +639,7 @@ final class qh extends dfa implements rqa {
         jha var4;
         String var6;
         var5 = TombRacer.field_G ? 1 : 0;
-        for (var3 = 0; var3 < this.field_k.field_H.length; var3++) {
+        for (var3 = 0; var3 < this.field_k.players.length; var3++) {
           if (!this.field_k.l(param1 ^ -28, var3) &&
             (1 << var3 & param0) > 0) {
             this.field_k.d((byte) -95, var3);
@@ -663,13 +663,13 @@ final class qh extends dfa implements rqa {
     }
 
     final void b(boolean param0, boolean param1, int param2) {
-        hca var4 = null;
+        Player var4 = null;
         if (this.field_s) {
           return;
         }
         if (!this.field_D &&
           this.field_x == 0) {
-          var4 = this.field_k.field_H[this.field_x];
+          var4 = this.field_k.players[this.field_x];
           if (!var4.C(-1).j(0)) {
             ppa.a(var4.f((byte) -127), 64, this.field_k);
           }
@@ -731,9 +731,9 @@ final class qh extends dfa implements rqa {
         while (var4 == 0) {
           this.field_h = param0 + this.l(param1 - 17096);
           if (0 > this.l(107)) {
-            this.field_h = this.field_k.field_H.length - 1;
+            this.field_h = this.field_k.players.length - 1;
           }
-          if (this.l(114) >= this.field_k.field_H.length) {
+          if (this.l(114) >= this.field_k.players.length) {
             this.field_h = 0;
           }
           if (this.field_k.f((byte) -111, this.l(127))) {
@@ -764,7 +764,7 @@ final class qh extends dfa implements rqa {
         if (param0 != 5) {
           return;
         }
-        while (this.field_k.field_H.length > var3) {
+        while (this.field_k.players.length > var3) {
           if (!this.field_k.f((byte) -93, var3) &&
             (param1 & 1 << var3) > 0) {
             this.field_k.m(param0 ^ 4, var3);
@@ -796,7 +796,7 @@ final class qh extends dfa implements rqa {
         var8_int = var5;
         var9 = uca.field_c.a(param1, 0);
         bh.field_o = bh.field_o + var8_int * var9;
-        cka.field_Z = cka.field_Z + var9;
+        OpenGlToolkit.field_Z = OpenGlToolkit.field_Z + var9;
         var8 = var6;
         var10_int = uca.field_c.a(5, 0);
         et.field_j = et.field_j + var8 * (long)var10_int;
@@ -808,9 +808,9 @@ final class qh extends dfa implements rqa {
         var9Lifetime1 = var5;
         if (var8_intLifetime1 != var9Lifetime1) {
           if (uca.field_c.a(2, 0) == 0) {
-            nta.field_h = nta.field_h - cka.field_Z * (-var9Lifetime1 + var8_intLifetime1);
+            nta.field_h = nta.field_h - OpenGlToolkit.field_Z * (-var9Lifetime1 + var8_intLifetime1);
           } else {
-            qa.field_b = qa.field_b + cka.field_Z * (var8_intLifetime1 - var9Lifetime1);
+            qa.field_b = qa.field_b + OpenGlToolkit.field_Z * (var8_intLifetime1 - var9Lifetime1);
           }
         }
         var8Lifetime1 = param2;
@@ -829,7 +829,7 @@ final class qh extends dfa implements rqa {
 
     private final void b(boolean param0, int param1, int param2) {
         dda var4;
-        pi var5;
+        PendingEvent var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
         this.field_k.b(true, param2, param1);
@@ -844,12 +844,12 @@ final class qh extends dfa implements rqa {
         if (!this.field_D) {
           var4 = this.field_k.a(true, param1);
           while (var4 != null) {
-            var5 = new pi(var4.a((byte) -125), param1, param1, 50 + this.field_k.field_G[param1].field_c, var4.a((byte) -125).a((byte) -28), this.field_k.i(1, param1));
+            var5 = new PendingEvent(var4.a((byte) -125), param1, param1, 50 + this.field_k.simulations[param1].tick, var4.a((byte) -125).a((byte) -28), this.field_k.i(1, param1));
             this.field_k.a((byte) 96, var5);
             var4 = this.field_k.a(true, param1);
           }
         } else {
-          this.field_k.field_G[param1].field_i.b(-113);
+          this.field_k.simulations[param1].field_i.b(-113);
         }
     }
 
@@ -905,7 +905,7 @@ final class qh extends dfa implements rqa {
         return this.field_l instanceof fja;
     }
 
-    final boolean a(int param0, int param1, kh param2) {
+    final boolean a(int param0, int param1, BitPacketBuffer param2) {
         RuntimeException var4 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -1089,7 +1089,7 @@ final class qh extends dfa implements rqa {
     private final void a(boolean param0, int param1) {
         int var4 = 0;
         int var3;
-        hca var5;
+        Player var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
         var3 = 0;
@@ -1120,7 +1120,7 @@ final class qh extends dfa implements rqa {
         if (this.field_y[8] > 0) {
           if (this.f(0)) {
             if (!this.d((byte) 92) &&
-              this.field_k.field_H[param1].s((byte) 85)) {
+              this.field_k.players[param1].s((byte) 85)) {
               var3 = var3 | 256;
             }
           } else {
@@ -1128,13 +1128,13 @@ final class qh extends dfa implements rqa {
           }
         }
         if (param0) {
-          this.field_f = (vna) null;
+          this.field_f = (IntrusiveDeque) null;
         }
         var3 = lf.a(var3, 4);
         if (null == this.field_C) {
           this.field_C = new kq[this.field_k.field_k];
           for (var4 = 0; var4 < this.field_k.field_k; var4++) {
-            var5 = this.field_k.field_H[var4];
+            var5 = this.field_k.players[var4];
             if (var5 != null) {
               this.field_C[var4] = new kq();
             }
@@ -1179,7 +1179,7 @@ final class qh extends dfa implements rqa {
           if (param0 != -19805) {
             this.field_i = 76;
           }
-          param1.p(42);
+          param1.unlink(42);
           if (param1 instanceof dl) {
             this.field_t = false;
           }
@@ -1209,9 +1209,9 @@ final class qh extends dfa implements rqa {
           var4 = this.field_D ? 1 : 0;
           if (!wka.field_d &&
             var4 == 0 &&
-            rba.field_a != null &&
-            !rba.field_a.f((byte) 33) &&
-            rba.field_a == hb.field_t) {
+            SecondaryNodeDequeIterator.field_a != null &&
+            !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
+            SecondaryNodeDequeIterator.field_a == hb.field_t) {
             var5 = uca.field_c.a(8, 0);
             if (0 != var5) {
               if (1 != var5) {
@@ -1282,7 +1282,7 @@ final class qh extends dfa implements rqa {
         return true;
     }
 
-    private final String a(hca param0, byte param1, int param2) {
+    private final String a(Player param0, byte param1, int param2) {
         String dupTemp$1 = null;
         String[] var4 = null;
         RuntimeException var4_ref = null;
@@ -1341,10 +1341,10 @@ final class qh extends dfa implements rqa {
         }
         if (!this.field_k.field_h) {
           if (!this.d((byte) 80) &&
-            this.field_k.field_G[this.field_x].k(-19271)) {
+            this.field_k.simulations[this.field_x].k(-19271)) {
             this.g((byte) -36);
           }
-          for (var2 = 0; var2 < this.field_k.field_H.length; var2++) {
+          for (var2 = 0; var2 < this.field_k.players.length; var2++) {
             var3 = this.field_C[var2];
             if (var3.b(-123)) {
               this.b(false, var2, var3.a((byte) -54));
@@ -1366,7 +1366,7 @@ final class qh extends dfa implements rqa {
               }
               break;
             }
-            var5 = (tu) (this.field_k.field_G[var2].m(9262));
+            var5 = (tu) (this.field_k.simulations[var2].m(9262));
             var6 = var5.b((byte) 121);
             while (var6 != null) {
               if (iqa.field_c.b(4782)) {
@@ -1485,11 +1485,11 @@ final class qh extends dfa implements rqa {
         if (param0 != this.field_j) {
           var3 = -this.field_j + param0;
           if (!wka.field_d &&
-            null != rba.field_a &&
-            rba.field_a.field_x >= 0 &&
-            !rba.field_a.field_D &&
-            !rba.field_a.f((byte) 33) &&
-            hb.field_t == rba.field_a) {
+            null != SecondaryNodeDequeIterator.field_a &&
+            SecondaryNodeDequeIterator.field_a.field_x >= 0 &&
+            !SecondaryNodeDequeIterator.field_a.field_D &&
+            !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
+            hb.field_t == SecondaryNodeDequeIterator.field_a) {
             var4 = uca.field_c.a(3, 0);
             if (0 != var4) {
               if (var4 == 1) {
@@ -1508,9 +1508,9 @@ final class qh extends dfa implements rqa {
           var3 = stackIn_4_0;
           if (!wka.field_d &&
             var3 == 0 &&
-            rba.field_a != null &&
-            !rba.field_a.f((byte) 33) &&
-            hb.field_t == rba.field_a) {
+            SecondaryNodeDequeIterator.field_a != null &&
+            !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
+            hb.field_t == SecondaryNodeDequeIterator.field_a) {
             var4 = uca.field_c.a(8, 0);
             if (0 != var4) {
               if (var4 != 1) {
@@ -1598,8 +1598,8 @@ final class qh extends dfa implements rqa {
 
     final String j(int param0, int param1) {
         if (param1 != 9) {
-          kh var4 = (kh) null;
-          this.b(-82, (kh) null);
+          BitPacketBuffer var4 = (BitPacketBuffer) null;
+          this.b(-82, (BitPacketBuffer) null);
         }
         return this.field_k.e(param0, 23807);
     }

@@ -50,7 +50,7 @@ final class kc {
 
     final static String a(String param0, int param1, boolean param2, String param3) {
         RuntimeException var4 = null;
-        kh var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         mu var7 = null;
         CharSequence var8 = null;
@@ -81,16 +81,16 @@ final class kc {
             stackIn_12_0 = gl.$cfr$intArgs$a$53ce4ab4c593(119, uqa.field_A, new String[]{param3});
             return stackIn_12_0;
           }
-          var7.p(105);
-          var7.c(-7975);
+          var7.unlink(105);
+          var7.unlinkSecondary(-7975);
           tba.field_k = tba.field_k - 1;
           var5 = ql.field_k;
           var5.k(param1, -2988);
-          var5.field_h = var5.field_h + 1;
-          var6 = var5.field_h;
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           var5.i(3, 0);
           var5.a(param0, param2);
-          var5.d(-var6 + var5.field_h, (byte) 117);
+          var5.d(-var6 + var5.position, (byte) 117);
           stackIn_14_0 = null;
           return (String) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

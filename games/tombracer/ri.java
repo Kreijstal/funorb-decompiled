@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri extends wda {
+final class ri extends Locomotor {
     private int field_r;
     static int field_q;
     private int field_p;
@@ -44,7 +44,7 @@ final class ri extends wda {
         int stackIn_11_0 = 0;
         mu stackIn_55_0 = null;
         RuntimeException decompiledCaughtException = null;
-        kh var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;
@@ -164,13 +164,13 @@ final class ri extends wda {
           var6Lifetime1.field_vb = var5Lifetime1;
           var6Lifetime1.field_Cb = (String) (var3Lifetime1);
           var6Lifetime1.field_tb = var4_ref_StringLifetime1;
-          var6Lifetime1.p(70);
+          var6Lifetime1.unlink(70);
           var7 = (mu) (fla.field_f.f(-80));
-          L9: while (true) {
+          scanLoop1: while (true) {
             if (null != var7) {
               stackIn_55_0 = var7;
               if (var9 != 0) {
-                break L9;
+                break scanLoop1;
               }
               if (ol.a(stackIn_55_0, true, var6Lifetime1)) {
                 var7 = (mu) (fla.field_f.e(param0 - 14058));
@@ -257,7 +257,7 @@ final class ri extends wda {
         }
     }
 
-    ri(la param0, kh param1, boolean param2) {
+    ri(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -366,7 +366,7 @@ final class ri extends wda {
         }
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -428,14 +428,14 @@ final class ri extends wda {
           this.field_r = -this.field_r;
           this.field_o = -this.field_o;
           if (param0 >= -116) {
-            this.a((kh) null, (byte) -85);
+            this.a((BitPacketBuffer) null, (byte) -85);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ri.L(" + param0 + ')');
         }
     }
 
-    ri(la param0, boolean param1) {
+    ri(Room param0, boolean param1) {
         super(param0, param1);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -478,7 +478,7 @@ final class ri extends wda {
         }
     }
 
-    final static nh a(ha param0, byte param1, byte[] param2) {
+    final static nh a(GraphicsToolkit param0, byte param1, byte[] param2) {
         java.awt.Canvas var3 = null;
         InterruptedException var3_ref = null;
         RuntimeException var3_ref2 = null;

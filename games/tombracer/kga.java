@@ -212,7 +212,7 @@ final class kga extends dg {
         field_q = null;
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -256,12 +256,12 @@ final class kga extends dg {
         qpa.a(275, se.field_s, 6, 40, 440, 124, 200);
         qpa.a(335, jta.field_z, 9, 40, 440, 125, 200);
         if (param0 < 97) {
-          cka var2 = (cka) null;
-          kga.a((cka) null, -2);
+          OpenGlToolkit var2 = (OpenGlToolkit) null;
+          kga.a((OpenGlToolkit) null, -2);
         }
     }
 
-    kga(int param0, la param1, kh param2) {
+    kga(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_m = 0;
         this.field_p = 0;
@@ -281,12 +281,12 @@ final class kga extends dg {
         if (this.field_t != 2) {
           this.field_p = this.field_p + 32;
           this.field_m = this.field_m + 96;
-          this.field_r = 524288 + hua.a((byte) 119, dfa.a(this.field_p, 2048, -122)) * 8;
+          this.field_r = 524288 + MouseInputHandler.a((byte) 119, dfa.a(this.field_p, 2048, -122)) * 8;
           return;
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) -58, param1);
           param1.a((byte) 61, this.field_t, 4);
@@ -296,7 +296,7 @@ final class kga extends dg {
         }
     }
 
-    final static void a(cka param0, int param1) {
+    final static void a(OpenGlToolkit param0, int param1) {
         ama var7 = null;
         byte[] var19 = null;
         dca var9 = null;
@@ -333,8 +333,8 @@ final class kga extends dg {
     final void b(byte param0, int param1) {
         this.field_t = param1;
         if (param0 <= 73) {
-          cka var4 = (cka) null;
-          kga.a((cka) null, 79);
+          OpenGlToolkit var4 = (OpenGlToolkit) null;
+          kga.a((OpenGlToolkit) null, 79);
         }
     }
 

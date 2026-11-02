@@ -16,8 +16,8 @@ final class pqa extends dg {
         if (mla.field_a > 0) {
           mla.field_a = mla.field_a - 1;
           if (param0 >= mla.field_a) {
-            if (gt.field_a > 0) {
-              dga.a(gt.field_a, 199);
+            if (GameKeyHandler.field_a > 0) {
+              dga.a(GameKeyHandler.field_a, 199);
             }
             if (fp.field_e > 0) {
               dga.a(fp.field_e, 199);
@@ -25,27 +25,27 @@ final class pqa extends dg {
             return;
           }
           ji.a(16);
-          if (gt.field_a <= 0) {
+          if (GameKeyHandler.field_a <= 0) {
             if (fp.field_e > 0) {
               dga.a(fp.field_e, 199);
             }
             return;
           }
-          dga.a(gt.field_a, 199);
+          dga.a(GameKeyHandler.field_a, 199);
         } else {
-          if (0 < gt.field_a) {
-            gt.field_a = gt.field_a - 1;
+          if (0 < GameKeyHandler.field_a) {
+            GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
             if (param0 >= mla.field_a) {
-              if (gt.field_a > 0) {
-                dga.a(gt.field_a, 199);
+              if (GameKeyHandler.field_a > 0) {
+                dga.a(GameKeyHandler.field_a, 199);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
               ji.a(16);
-              decompiledFrameRemainder0 = !(gt.field_a <= 0);
+              decompiledFrameRemainder0 = !(GameKeyHandler.field_a <= 0);
               if (decompiledFrameRemainder0) {
-                dga.a(gt.field_a, 199);
+                dga.a(GameKeyHandler.field_a, 199);
                 if (fp.field_e > 0) {
                   dga.a(fp.field_e, 199);
                 }
@@ -60,8 +60,8 @@ final class pqa extends dg {
             if (param0 < mla.field_a) {
               ji.a(16);
             }
-            if (gt.field_a > 0) {
-              dga.a(gt.field_a, 199);
+            if (GameKeyHandler.field_a > 0) {
+              dga.a(GameKeyHandler.field_a, 199);
             }
           }
         }
@@ -79,7 +79,7 @@ final class pqa extends dg {
         }
     }
 
-    pqa(int param0, la param1, kh param2) {
+    pqa(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_q = 0;
         this.field_o = 0;
@@ -100,7 +100,7 @@ final class pqa extends dg {
     }
 
     final void d(int param0) {
-        la var11 = null;
+        Room var11 = null;
         hr var12 = null;
         hr var16 = null;
         hr var14 = null;
@@ -129,7 +129,7 @@ final class pqa extends dg {
         if (this.field_n.k((byte) -74).b((byte) 120)) {
           this.field_q = var2;
           var11 = this.a(param0 + 44);
-          la var4 = var11;
+          Room var4 = var11;
           var5 = var11.a(this.b((byte) 42), this.c((byte) 118) + 2097152, (byte) 100, this.e((byte) -92) + 8 << 16);
           var5.a(false, 32, 12, 4, 10 + uca.field_c.a(10, param0 + 1));
           var6 = 262144 + uca.field_c.a(262144, 0);
@@ -171,7 +171,7 @@ final class pqa extends dg {
           return;
         }
         this.field_q = var3;
-        la var18 = this.a(param0 + 44);
+        Room var18 = this.a(param0 + 44);
         var5Lifetime1 = var18.a(this.b((byte) 42), this.c((byte) 118) + 2097152, (byte) 100, this.e((byte) -92) + 8 << 16);
         var5Lifetime1.a(false, 32, 12, 4, 10 + uca.field_c.a(10, param0 + 1));
         var6Lifetime1 = 262144 + uca.field_c.a(262144, 0);
@@ -247,7 +247,7 @@ final class pqa extends dg {
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           int var3_int = -121 / ((param0 + 8) / 40);
           super.a((byte) -64, param1);
@@ -256,7 +256,7 @@ final class pqa extends dg {
         }
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         try {
           super.a(124, param1, param2);
           if (param0 < 119) {

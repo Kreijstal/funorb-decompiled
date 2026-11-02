@@ -59,7 +59,7 @@ final class am extends dg {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        qea var9 = null;
+        IsaacCipher var9 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
@@ -134,7 +134,7 @@ final class am extends dg {
         }
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         super.a(124, param1, param2);
         if (param0 < 119) {
           this.field_m = 77;
@@ -149,7 +149,7 @@ final class am extends dg {
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           int var3_int = -114 % ((-8 - param0) / 40);
           super.a((byte) -105, param1);
@@ -159,7 +159,7 @@ final class am extends dg {
         }
     }
 
-    am(int param0, la param1, kh param2) {
+    am(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 

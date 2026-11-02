@@ -3,7 +3,7 @@
  */
 final class vga extends vpa {
     private ng[] field_o;
-    static vna field_n;
+    static IntrusiveDeque field_n;
     static boolean field_q;
     private ng field_p;
 
@@ -50,7 +50,7 @@ final class vga extends vpa {
         }
     }
 
-    final void a(int param0, iu[] param1) {
+    final void a(int param0, Sprite[] param1) {
         int var4 = 0;
         ng[] var3 = null;
         ng var5 = null;
@@ -91,7 +91,7 @@ final class vga extends vpa {
         }
     }
 
-    final void a(iu param0, byte param1) {
+    final void a(Sprite param0, byte param1) {
         int var4 = 0;
         ng[] var3 = null;
         int var5 = 0;
@@ -136,7 +136,7 @@ final class vga extends vpa {
         }
     }
 
-    final void a(int param0, int param1, iu[] param2) {
+    final void a(int param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         try {
           if (param0 != 0) {
@@ -255,14 +255,14 @@ final class vga extends vpa {
         ng var5 = null;
         ng var6 = null;
         int var7 = 0;
-        iu[] var8 = null;
+        Sprite[] var8 = null;
         ng var6Lifetime1;
         ng var6Lifetime2;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != -16) {
-            var8 = (iu[]) null;
-            this.a(-72, (iu[]) null);
+            var8 = (Sprite[]) null;
+            this.a(-72, (Sprite[]) null);
           }
           super.a(param1, param0 - 64);
           if (param2) {
@@ -314,6 +314,6 @@ final class vga extends vpa {
     }
 
     static {
-        field_n = new vna();
+        field_n = new IntrusiveDeque();
     }
 }

@@ -42,7 +42,7 @@ final class no extends me {
             this.field_l = koa.b(0) - 10 - this.field_t * (var3 / 2) / 20;
             if (this.field_l > koa.b(0) + 10) {
               this.field_h = true;
-              this.p(94);
+              this.unlink(94);
             }
             return;
           }
@@ -50,18 +50,18 @@ final class no extends me {
             this.field_l = -10 + (koa.b(0) - var3 / 2);
             if (this.field_l > koa.b(0) + 10) {
               this.field_h = true;
-              this.p(94);
+              this.unlink(94);
             }
             return;
           }
           this.field_l = this.field_l + 10;
           if (this.field_l > koa.b(0) + 10) {
             this.field_h = true;
-            this.p(94);
+            this.unlink(94);
           }
           return;
         }
-        if (null == rba.field_a) {
+        if (null == SecondaryNodeDequeIterator.field_a) {
           this.field_t = this.field_t + 1;
           if (param0 >= -107) {
             return;
@@ -73,7 +73,7 @@ final class no extends me {
             this.field_l = koa.b(0) - 10 - this.field_t * (var3Lifetime1 / 2) / 20;
             if (this.field_l > koa.b(0) + 10) {
               this.field_h = true;
-              this.p(94);
+              this.unlink(94);
             }
             return;
           }
@@ -81,19 +81,19 @@ final class no extends me {
             this.field_l = -10 + (koa.b(0) - var3Lifetime1 / 2);
             if (this.field_l > koa.b(0) + 10) {
               this.field_h = true;
-              this.p(94);
+              this.unlink(94);
             }
             return;
           }
           this.field_l = this.field_l + 10;
           if (this.field_l > koa.b(0) + 10) {
             this.field_h = true;
-            this.p(94);
+            this.unlink(94);
           }
           return;
         }
-        if (null != rba.field_a.field_g) {
-          rba.field_a.field_g[rba.field_a.l(92)].a(new fm(93, 0, 0, 0), -58);
+        if (null != SecondaryNodeDequeIterator.field_a.field_g) {
+          SecondaryNodeDequeIterator.field_a.field_g[SecondaryNodeDequeIterator.field_a.l(92)].a(new fm(93, 0, 0, 0), -58);
           this.field_t = this.field_t + 1;
           if (param0 >= -107) {
             return;
@@ -105,7 +105,7 @@ final class no extends me {
             this.field_l = koa.b(0) - 10 - this.field_t * (var3Lifetime2 / 2) / 20;
             if (this.field_l > koa.b(0) + 10) {
               this.field_h = true;
-              this.p(94);
+              this.unlink(94);
             }
             return;
           }
@@ -115,7 +115,7 @@ final class no extends me {
             this.field_l = -10 + (koa.b(0) - var3Lifetime2 / 2);
             if (this.field_l > koa.b(0) + 10) {
               this.field_h = true;
-              this.p(94);
+              this.unlink(94);
             }
             return;
           }
@@ -123,7 +123,7 @@ final class no extends me {
             return;
           }
           this.field_h = true;
-          this.p(94);
+          this.unlink(94);
           return;
         }
         this.field_t = this.field_t + 1;
@@ -140,7 +140,7 @@ final class no extends me {
               return;
             }
             this.field_h = true;
-            this.p(94);
+            this.unlink(94);
             return;
           }
           this.field_l = -10 + (koa.b(0) - var3Lifetime3 / 2);
@@ -148,13 +148,13 @@ final class no extends me {
             return;
           }
           this.field_h = true;
-          this.p(94);
+          this.unlink(94);
           return;
         }
         this.field_l = koa.b(0) - 10 - this.field_t * (var3Lifetime3 / 2) / 20;
         if (this.field_l > koa.b(0) + 10) {
           this.field_h = true;
-          this.p(94);
+          this.unlink(94);
           return;
         }
     }
@@ -204,7 +204,7 @@ final class no extends me {
             var2 = var2 + var4;
           }
           qa.a(var3, var2, (byte) 70, var6, aq.field_a, var7);
-          be.a(var18, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13);
+          SocketConnector.a(var18, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13);
           lva.field_m[this.field_n].a(var8 + var6, var7 + (-32 + var3) / 2, 32, 32);
           return;
         }
@@ -222,7 +222,7 @@ final class no extends me {
           var2 = var2 + var4;
         }
         qa.a(var3, var2, (byte) 70, var6, aq.field_a, var7);
-        be.a(var17, 1, eda.field_f, 16777215, 30, var12Lifetime1, 1, var10Lifetime1 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13Lifetime1);
+        SocketConnector.a(var17, 1, eda.field_f, 16777215, 30, var12Lifetime1, 1, var10Lifetime1 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13Lifetime1);
         lva.field_m[this.field_n].a(var8 + var6, var7 + (-32 + var3) / 2, 32, 32);
     }
 

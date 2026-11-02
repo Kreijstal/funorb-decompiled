@@ -6,9 +6,9 @@ final class gg {
     boolean field_a;
     eja field_c;
     eja field_d;
-    static kta field_b;
+    static AudioOutput field_b;
     static nh field_f;
-    static vna field_e;
+    static IntrusiveDeque field_e;
 
     final void a(int param0) {
         if (this.field_d != null) {
@@ -57,6 +57,6 @@ final class gg {
     }
 
     static {
-        field_e = new vna();
+        field_e = new IntrusiveDeque();
     }
 }

@@ -19,7 +19,7 @@ final class iv extends jea {
         toa var5_ref_toa = null;
         int[] var6 = null;
         int var8 = 0;
-        kh var10 = null;
+        BitPacketBuffer var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         var8 = TombRacer.field_G ? 1 : 0;
@@ -28,12 +28,12 @@ final class iv extends jea {
           var2 = var10.h(255);
           var3 = var10.h(param0 + 255);
           if (var2 == param0) {
-            var4 = (ik) (hca.field_I.f(param0 ^ -80));
+            var4 = (ik) (Player.field_I.f(param0 ^ -80));
             if (var4 == null) {
               dea.a(60);
               return;
             }
-            var5 = -var10.field_h + uca.field_d;
+            var5 = -var10.position + uca.field_d;
             var12 = var4.field_i;
             var11 = var12;
             var6 = var11;
@@ -43,7 +43,7 @@ final class iv extends jea {
             for (var7 = 0; var5 > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.h(255) << sea.c(768, var7 << 8));
             }
-            var4.p(param0 + 79);
+            var4.unlink(param0 + 79);
             return;
           }
           if (var2 == 1) {
@@ -58,7 +58,7 @@ final class iv extends jea {
               break;
             }
             if (var5_ref_toa != null) {
-              var5_ref_toa.p(103);
+              var5_ref_toa.unlink(103);
               return;
             }
             dea.a(60);

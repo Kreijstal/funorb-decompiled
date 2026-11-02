@@ -3,7 +3,7 @@
  */
 final class nea {
     static tba field_a;
-    static fia field_c;
+    static PlatformTaskDispatcher field_c;
     static String field_b;
     private static String field_z;
 

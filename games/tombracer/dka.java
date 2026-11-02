@@ -7,16 +7,16 @@ final class dka {
     static String field_c;
     static String field_d;
 
-    final static qaa a(byte param0) {
+    final static MouseWheelInput a(byte param0) {
         try {
           Throwable var1 = null;
-          qaa stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 > -61) {
-            return (qaa) null;
+            return (MouseWheelInput) null;
           }
           try {
-            stackIn_3_0 = (qaa) (Class.forName("hfa").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

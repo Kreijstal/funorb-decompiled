@@ -97,7 +97,7 @@ final class pla {
         if (param0 != -1) {
           field_b = (String) null;
         }
-        return new goa(hha.a(false), nd.b((byte) -107));
+        return new goa(hha.a(false), NodeHashTableIterator.b((byte) -107));
     }
 
     final int a(int param0, int param1) {

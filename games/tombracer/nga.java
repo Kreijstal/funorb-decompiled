@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nga extends ci {
-    static iu[] field_n;
+    static Sprite[] field_n;
     static String field_q;
     static int field_p;
     static String field_o;
@@ -14,7 +14,7 @@ final class nga extends ci {
         this.field_m = param0;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fra extends nv {
+final class fra extends Behaviour {
     static nh field_q;
     static float field_p;
     static char[] field_n;
@@ -15,7 +15,7 @@ final class fra extends nv {
         }
     }
 
-    fra(la param0, boolean param1) {
+    fra(Room param0, boolean param1) {
         super(param0, param1);
         this.field_o = 0;
         try {
@@ -25,7 +25,7 @@ final class fra extends nv {
         }
     }
 
-    fra(la param0, kh param1, boolean param2) {
+    fra(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_o = 0;
         try {
@@ -61,7 +61,7 @@ final class fra extends nv {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_r.a(param1, (byte) 125);
@@ -70,7 +70,7 @@ final class fra extends nv {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           this.field_r.a(this.e(6), 2348);

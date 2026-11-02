@@ -70,7 +70,7 @@ final class esa {
         }
     }
 
-    final void a(kh param0, int param1, byte param2) {
+    final void a(BitPacketBuffer param0, int param1, byte param2) {
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;

@@ -135,7 +135,7 @@ final class ama extends lba {
           int var2_int = 0;
           IOException var2 = null;
           Throwable decompiledCaughtException = null;
-          if (vc.field_q.field_h >= param0) {
+          if (vc.field_q.position >= param0) {
             return true;
           }
           if (oba.field_e == null) {
@@ -154,16 +154,16 @@ final class ama extends lba {
               dea.a(60);
               return false;
             }
-            if (var2_int > -vc.field_q.field_h + param0) {
-              var2_int = -vc.field_q.field_h + param0;
+            if (var2_int > -vc.field_q.position + param0) {
+              var2_int = -vc.field_q.position + param0;
             }
-            oba.field_e.a(param1 + 1, vc.field_q.field_h, vc.field_q.field_g, var2_int);
+            oba.field_e.a(param1 + 1, vc.field_q.position, vc.field_q.payload, var2_int);
             ue.field_s = bva.b((byte) -107);
-            vc.field_q.field_h = vc.field_q.field_h + var2_int;
-            if (param0 > vc.field_q.field_h) {
+            vc.field_q.position = vc.field_q.position + var2_int;
+            if (param0 > vc.field_q.position) {
               return false;
             }
-            vc.field_q.field_h = 0;
+            vc.field_q.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

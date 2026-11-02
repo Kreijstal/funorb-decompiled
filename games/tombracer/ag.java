@@ -144,7 +144,7 @@ final class ag implements iq {
         }
     }
 
-    final static void a(int param0, iu[] param1, int param2, int param3, int param4) {
+    final static void a(int param0, Sprite[] param1, int param2, int param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
