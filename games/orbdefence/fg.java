@@ -82,7 +82,7 @@ class fg extends jc {
           h.field_H = param1 * 1000 / param2;
           wf.field_b.a(vb.field_f);
           ml.field_c = param6;
-          ml.field_c.b(ij.field_g, 106);
+          ml.field_c.b(ImageProducerRasterBuffer.field_g, 106);
           if (!param5) {
             field_u = -24;
           }
@@ -131,8 +131,8 @@ class fg extends jc {
           }
           if (decompiledFrameRemainder0) {
             if (!bm.field_e) {
-              if (sd.field_g >= gk.field_b) {
-                stackIn_17_0 = (gk.field_b + df.field_i > sd.field_g) ? 1 : 0;
+              if (sd.field_g >= MouseInputListener.field_b) {
+                stackIn_17_0 = (MouseInputListener.field_b + df.field_i > sd.field_g) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -144,12 +144,12 @@ class fg extends jc {
               sd.field_g = 0;
             } else {
               if (bm.field_e) {
-                sd.field_g = gk.field_b;
+                sd.field_g = MouseInputListener.field_b;
               } else {
                 if (var2_int == 0) {
                   sd.field_g = 0;
                 } else {
-                  sd.field_g = gk.field_b;
+                  sd.field_g = MouseInputListener.field_b;
                 }
               }
             }
@@ -164,7 +164,7 @@ class fg extends jc {
             sl.field_ab = lm.field_a;
           }
           if (!bm.field_e &&
-            gk.field_b > sd.field_g &&
+            MouseInputListener.field_b > sd.field_g &&
             kd.field_d) {
             sd.field_g = 0;
             sl.field_ab = lm.field_a;

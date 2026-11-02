@@ -80,7 +80,7 @@ final class fm {
             ul.a(rh.field_e);
             var11 = new hj(4 + field_b.field_o, 4 + field_b.field_k);
             var11.d();
-            field_b.d(2, 2, pl.field_d);
+            field_b.d(2, 2, NodeHashTableIterator.field_d);
             ve.a(2, var11.field_k, var11, var11.field_o, 1, 0, (byte) 91, 0);
             field_b = var11;
             oh.field_a = field_b.b();
@@ -89,8 +89,8 @@ final class fm {
             var12.d();
             lj.field_m.c(t.a(-415993727, new String[]{lf.field_c}, qj.field_a), var6, 40, 16777215, -1);
             rc.field_a.c(t.a(param0 ^ -415993744, new String[]{lf.field_c}, ud.field_p), var6, 60, 16777215, -1);
-            lj.field_m.c(t.a(-415993727, new String[]{pl.field_a}, ea.field_g), var6, 110, 16777215, -1);
-            rc.field_a.c(t.a(-415993727, new String[]{pl.field_a}, qb.field_b), var6, 130, 16777215, -1);
+            lj.field_m.c(t.a(-415993727, new String[]{NodeHashTableIterator.field_a}, FullscreenFocusCanvas.field_g), var6, 110, 16777215, -1);
+            rc.field_a.c(t.a(-415993727, new String[]{NodeHashTableIterator.field_a}, qb.field_b), var6, 130, 16777215, -1);
             lj.field_m.c(tg.field_d, var6, 180, 16777215, -1);
             rc.field_a.c(mm.field_E, var6, 200, 16777215, -1);
             ve.a(3, var12.field_k, var12, var12.field_o, 1, 0, (byte) 98, 0);
@@ -98,7 +98,7 @@ final class fm {
             var12.c(18 - nl.field_e.field_p, -nl.field_e.field_u + 241);
             for (var7 = 0; tb.field_c.length > var7; var7++) {
               il.field_e[var7].d();
-              rc.field_a.a(tb.field_c[var7], 3, 3, il.field_e[var7].field_o - 6, il.field_e[var7].field_k - 6, pl.field_d, -1, 1, 1, rc.field_a.field_B + rc.field_a.field_H);
+              rc.field_a.a(tb.field_c[var7], 3, 3, il.field_e[var7].field_o - 6, il.field_e[var7].field_k - 6, NodeHashTableIterator.field_d, -1, 1, 1, rc.field_a.field_B + rc.field_a.field_H);
               ve.a(3, il.field_e[var7].field_k, il.field_e[var7], il.field_e[var7].field_o, 1, 0, (byte) 61, 0);
             }
             tb.field_c = null;
@@ -174,11 +174,11 @@ final class fm {
             ve.a(3, var9.field_t, var9, var9.field_s, 1, 0, (byte) 88, 0);
             pf.field_b.d();
             var9.c(0, 0);
-            qe.field_b = new hj(640, 480);
-            qe.field_b.d();
+            DualLinkDeque.field_b = new hj(640, 480);
+            DualLinkDeque.field_b.d();
             pf.field_b.a(qb.field_c + (pf.field_b.field_s >> 1), (pf.field_b.field_t >> 1) + ld.field_a, ba.field_c, 4096);
             pf.field_b = null;
-            qe.field_b.a();
+            DualLinkDeque.field_b.a();
             ul.a(var29, var2Lifetime1, var3Lifetime1);
             ul.b(rh.field_e);
           }
@@ -228,8 +228,8 @@ final class fm {
             nl.field_e.c(0, 0);
           }
           hc.field_l.c(0, 0);
-          if (null != qe.field_b) {
-            qe.field_b.c(0, 0);
+          if (null != DualLinkDeque.field_b) {
+            DualLinkDeque.field_b.c(0, 0);
           }
           if (param0 != 241) {
             field_b = (hj) null;
@@ -263,7 +263,7 @@ final class fm {
             stackIn_55_0 = 8;
             stackIn_55_1 = ua.field_c;
             stackIn_56_2 = (wj.field_k.field_h == 0);
-            fh.$cfr$intArgs$a$a1440e9a5aa4(stackIn_55_0, stackIn_55_1, stackIn_56_2, gb.field_d);
+            RasterBuffer.$cfr$intArgs$a$a1440e9a5aa4(stackIn_55_0, stackIn_55_1, stackIn_56_2, gb.field_d);
           }
           if (null != rl.field_a &&
             bl.field_n != null) {
@@ -275,7 +275,7 @@ final class fm {
             stackIn_64_0 = 8;
             stackIn_64_1 = ug.field_q;
             stackIn_65_2 = (wj.field_k.field_h == 1);
-            fh.$cfr$intArgs$a$a1440e9a5aa4(stackIn_64_0, stackIn_64_1, stackIn_65_2, ce.field_a);
+            RasterBuffer.$cfr$intArgs$a$a1440e9a5aa4(stackIn_64_0, stackIn_64_1, stackIn_65_2, ce.field_a);
           }
           if (null != field_b) {
             var1_int = 357 - field_b.field_t / 2;

@@ -67,14 +67,14 @@ abstract class kj extends pj implements c {
     final static void i(int param0) {
         int var1 = 0;
         int var1Lifetime1;
-        if (ij.field_g <= 32) {
+        if (ImageProducerRasterBuffer.field_g <= 32) {
           ia.b(0, -23235);
         } else {
-          var1 = ij.field_g % 32;
+          var1 = ImageProducerRasterBuffer.field_g % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          ia.b(ij.field_g - var1, -23235);
+          ia.b(ImageProducerRasterBuffer.field_g - var1, -23235);
         }
         var1Lifetime1 = 2 / ((param0 - 56) / 41);
     }
@@ -140,7 +140,7 @@ abstract class kj extends pj implements c {
     }
 
     final static void j(int param0) {
-        o.d(-1);
+        DualLinkNode.d(-1);
         il.a(param0, 0);
     }
 
@@ -188,7 +188,7 @@ abstract class kj extends pj implements c {
           }
           var5_int = param1;
           if (var5_int == 80) {
-            if (ek.field_a[81]) {
+            if (IterableNodeHashTable.field_a[81]) {
               stackIn_10_0 = this.a((byte) -110, param2);
             } else {
               stackIn_10_0 = this.b(8740, param2);

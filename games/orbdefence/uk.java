@@ -40,7 +40,7 @@ final class uk {
             if (param0) {
               uk.a((byte) -20);
             }
-            var5 = gk.a(var3, (byte) -127);
+            var5 = MouseInputListener.a(var3, (byte) -127);
             if (var5 == null) {
               stackIn_14_0 = sg.a(-1326, var4);
               return stackIn_14_0;

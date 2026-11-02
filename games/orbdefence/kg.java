@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg extends ca {
+final class kg extends IntrusiveNode {
     static String field_g;
     static ge field_h;
     static pc field_j;
@@ -31,7 +31,7 @@ final class kg extends ca {
           im.field_a[param5] = param0;
           vb.field_g[param5] = param1;
           wd.field_o[param5] = param6;
-          ek.field_e[param5] = param2;
+          IterableNodeHashTable.field_e[param5] = param2;
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "kg.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }

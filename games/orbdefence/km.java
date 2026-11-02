@@ -4,7 +4,7 @@
 final class km {
     private im field_c;
     static String field_b;
-    private ca field_a;
+    private IntrusiveNode field_a;
 
     final static boolean a(boolean param0) {
         if (param0) {
@@ -21,8 +21,8 @@ final class km {
         }
     }
 
-    final ca b(boolean param0) {
-        ca var2 = this.field_a;
+    final IntrusiveNode b(boolean param0) {
+        IntrusiveNode var2 = this.field_a;
         if (this.field_c.field_d == var2) {
           this.field_a = null;
           return null;
@@ -31,15 +31,15 @@ final class km {
         if (param0) {
           return var2;
         }
-        return (ca) null;
+        return (IntrusiveNode) null;
     }
 
-    final ca b(ca param0, byte param1) {
-        ca var3 = null;
+    final IntrusiveNode b(IntrusiveNode param0, byte param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
-        ca stackIn_8_0 = null;
-        ca stackIn_10_0 = null;
+        IntrusiveNode stackIn_8_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -53,14 +53,14 @@ final class km {
           if (this.field_c.field_d == var3) {
             this.field_a = null;
             stackIn_5_0 = null;
-            return (ca) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
           this.field_a = var3.field_c;
           if (param1 <= -114) {
             stackIn_10_0 = var3;
             return stackIn_10_0;
           }
-          stackIn_8_0 = (ca) null;
+          stackIn_8_0 = (IntrusiveNode) null;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,11 +85,11 @@ final class km {
         }
     }
 
-    final ca a(byte param0) {
-        ca var2 = null;
-        ca var2Lifetime1;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 >= -69) {
-          this.field_a = (ca) null;
+          this.field_a = (IntrusiveNode) null;
           var2 = this.field_a;
           if (this.field_c.field_d != var2) {
             this.field_a = var2.field_c;
@@ -184,8 +184,8 @@ final class km {
         }
     }
 
-    final ca d(int param0) {
-        ca var2 = this.field_c.field_d.field_e;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_c.field_d.field_e;
         if (param0 != 27935) {
           this.field_c = (im) null;
           if (this.field_c.field_d != var2) {
@@ -210,11 +210,11 @@ final class km {
         }
     }
 
-    final ca a(ca param0, byte param1) {
-        ca var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, byte param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        ca stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -231,7 +231,7 @@ final class km {
           if (this.field_c.field_d == var3) {
             this.field_a = null;
             stackIn_8_0 = null;
-            return (ca) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
           this.field_a = var3.field_e;
           stackIn_10_0 = var3;
@@ -258,8 +258,8 @@ final class km {
         }
     }
 
-    final ca c(int param0) {
-        ca var2 = this.field_c.field_d.field_c;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_c.field_d.field_c;
         if (var2 == this.field_c.field_d) {
           this.field_a = null;
           return null;

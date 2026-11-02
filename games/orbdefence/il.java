@@ -3,14 +3,14 @@
  */
 final class il {
     static nk field_f;
-    private o field_b;
+    private DualLinkNode field_b;
     static String field_d;
     static boolean field_a;
     static hj[] field_e;
-    private o field_c;
+    private DualLinkNode field_c;
 
-    final o b(int param0) {
-        o var2 = this.field_c;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = this.field_c;
         if (var2 == this.field_b) {
           this.field_c = null;
           return null;
@@ -19,12 +19,12 @@ final class il {
         if (param0 == 0) {
           return var2;
         }
-        return (o) null;
+        return (DualLinkNode) null;
     }
 
     final int a(byte param0) {
         int var2 = 0;
-        o var3 = null;
+        DualLinkNode var3 = null;
         int var4 = OrbDefence.field_D ? 1 : 0;
         if (param0 == -4) {
           var2 = 0;
@@ -38,9 +38,9 @@ final class il {
         return -79;
     }
 
-    final void a(int param0, o param1) {
+    final void a(int param0, DualLinkNode param1) {
         RuntimeException var3 = null;
-        o var4 = null;
+        DualLinkNode var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -56,8 +56,8 @@ final class il {
           if (param0 < -39) {
             return;
           }
-          var4 = (o) null;
-          this.a(-33, (o) null);
+          var4 = (DualLinkNode) null;
+          this.a(-33, (DualLinkNode) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,9 +89,9 @@ final class il {
         }
     }
 
-    final o c(int param0) {
-        o var2 = null;
-        o var2Lifetime1;
+    final DualLinkNode c(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != 30664) {
           this.b(40);
           var2 = this.field_b.field_f;
@@ -110,17 +110,17 @@ final class il {
     }
 
     public il() {
-        this.field_b = new o();
+        this.field_b = new DualLinkNode();
         this.field_b.field_g = this.field_b;
         this.field_b.field_f = this.field_b;
     }
 
-    final o b(byte param0) {
-        o var2 = null;
-        o var2Lifetime1;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != 46) {
-          o var3 = (o) null;
-          this.a(49, (o) null);
+          DualLinkNode var3 = (DualLinkNode) null;
+          this.a(49, (DualLinkNode) null);
           var2 = this.field_b.field_f;
           if (var2 != this.field_b) {
             this.field_c = var2.field_f;

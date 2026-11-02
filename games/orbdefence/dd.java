@@ -235,7 +235,7 @@ final class dd extends kj {
           }
           this.field_C = -param3 + (-this.field_s + param5);
           this.field_F = -param6 + param4 - this.field_n;
-          al.field_c = this;
+          DelegatingCanvas.field_c = this;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

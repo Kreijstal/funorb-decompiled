@@ -62,22 +62,22 @@ final class ce {
 
     final static boolean a(int param0) {
         int var1 = 105 / ((52 - param0) / 61);
-        if (tf.field_c == -1) {
+        if (GameAppletShell.field_c == -1) {
           if (!va.a(true, 1)) {
             return false;
           }
-          tf.field_c = cd.field_t.b((byte) 90);
+          GameAppletShell.field_c = cd.field_t.b((byte) 90);
           cd.field_t.field_i = 0;
         }
-        if (tf.field_c == -2) {
+        if (GameAppletShell.field_c == -2) {
           if (va.a(true, 2)) {
-            tf.field_c = cd.field_t.j(98203176);
+            GameAppletShell.field_c = cd.field_t.j(98203176);
             cd.field_t.field_i = 0;
-            return va.a(true, tf.field_c);
+            return va.a(true, GameAppletShell.field_c);
           }
           return false;
         }
-        return va.a(true, tf.field_c);
+        return va.a(true, GameAppletShell.field_c);
     }
 
     static {

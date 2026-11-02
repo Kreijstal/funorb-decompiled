@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hc extends ca {
+final class hc extends IntrusiveNode {
     static int field_j;
     static hj field_i;
     static int field_f;
@@ -32,7 +32,7 @@ final class hc extends ca {
             hc.a((byte) -33, true, (String) null, -40, (java.awt.Color) null);
           }
           try {
-            var10 = tf.field_f.getGraphics();
+            var10 = GameAppletShell.field_f.getGraphics();
             if (null == e.field_a) {
               e.field_a = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -45,7 +45,7 @@ final class hc extends ca {
             }
             try {
               if (gj.field_f == null) {
-                gj.field_f = tf.field_f.createImage(304, 34);
+                gj.field_f = GameAppletShell.field_f.createImage(304, 34);
               }
               var11 = gj.field_f.getGraphics();
               var11.setColor(param4);
@@ -83,7 +83,7 @@ final class hc extends ca {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            tf.field_f.repaint();
+            GameAppletShell.field_f.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

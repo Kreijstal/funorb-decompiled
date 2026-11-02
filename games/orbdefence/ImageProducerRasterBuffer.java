@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ij extends fh implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ImageConsumer field_i;
     static byte[] field_h;
     static int field_g;
@@ -17,7 +17,7 @@ final class ij extends fh implements java.awt.image.ImageProducer, java.awt.imag
         var3 = OrbDefence.field_D ? 1 : 0;
         try {
           if (param0 != -34) {
-            ij.a((byte) -53, 0);
+            ImageProducerRasterBuffer.a((byte) -53, 0);
           }
           var4 = (mj) (nd.field_b.b((byte) -77));
           while (var4 != null) {
@@ -131,7 +131,7 @@ final class ij extends fh implements java.awt.image.ImageProducer, java.awt.imag
 
     public static void b(byte param0) {
         if (param0 <= 49) {
-          ij.b(87);
+          ImageProducerRasterBuffer.b(87);
           field_h = null;
           return;
         }
@@ -203,7 +203,7 @@ final class ij extends fh implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    ij() {
+    ImageProducerRasterBuffer() {
     }
 
     static {

@@ -252,11 +252,11 @@ final class ja {
           if (param0 < 3) {
             return -6 + wd.field_o[this.field_a];
           }
-          return -6 + (wd.field_o[this.field_a] + ek.field_e[this.field_a]);
+          return -6 + (wd.field_o[this.field_a] + IterableNodeHashTable.field_e[this.field_a]);
         }
         if (2 == this.field_a &&
           n.b((byte) 108)) {
-          return -6 + (ek.field_e[this.field_a] * param0 + wd.field_o[this.field_a]);
+          return -6 + (IterableNodeHashTable.field_e[this.field_a] * param0 + wd.field_o[this.field_a]);
         }
         if (this.field_a == 3) {
           return wd.field_o[this.field_a] - 32;
@@ -292,12 +292,12 @@ final class ja {
               return 415;
             }
           }
-          return wd.field_o[this.field_a] + param0 * ek.field_e[this.field_a];
+          return wd.field_o[this.field_a] + param0 * IterableNodeHashTable.field_e[this.field_a];
         }
         if (vh.field_q[this.field_a].length <= 1) {
-          return -4 + (ek.field_e[this.field_a] * param0 + 430);
+          return -4 + (IterableNodeHashTable.field_e[this.field_a] * param0 + 430);
         }
-        return 382 - (-((ek.field_e[this.field_a] + 12) * param0) + 4);
+        return 382 - (-((IterableNodeHashTable.field_e[this.field_a] + 12) * param0) + 4);
     }
 
     private final int a(int param0, byte param1) {
@@ -371,7 +371,7 @@ final class ja {
                 continue;
               }
               rh.a((byte) -74, -1, false);
-              gk.a(mh.field_a[44], (byte) -11);
+              MouseInputListener.a(mh.field_a[44], (byte) -11);
               stackIn_32_0 = (tc.field_b > 0) ? 0 : 7;
               bk.field_e = stackIn_32_0;
               continue;
@@ -522,19 +522,19 @@ final class ja {
         var9 = OrbDefence.field_D ? 1 : 0;
         var4 = vh.field_q[this.field_a][param0];
         if (this.field_f.a((byte) -1)) {
-          gk.a(mh.field_a[0], (byte) -11);
+          MouseInputListener.a(mh.field_a[0], (byte) -11);
           if ((var9 != 0) &&
             (~this.field_g != ~var4)) {
             this.field_g = var4;
-            gk.a(mh.field_a[30], (byte) -11);
+            MouseInputListener.a(mh.field_a[30], (byte) -11);
           }
         } else {
           if (~this.field_g != ~var4) {
             this.field_g = var4;
-            gk.a(mh.field_a[30], (byte) -11);
+            MouseInputListener.a(mh.field_a[30], (byte) -11);
           }
         }
-        L2: {
+        regionExit1: {
           boolean decompiledFrameRemainder3 = true;
           boolean decompiledFrameRemainder22 = true;
           boolean decompiledFrameRemainder21 = true;
@@ -595,7 +595,7 @@ final class ja {
               (decompiledFrameRemainder22 = (var6 != 18 ||
               var9 != 0))) {
               if (var6 != 11) {
-                break L2;
+                break regionExit1;
               }
               decompiledFrameRemainder3 = (var9 != 0);
             }
@@ -622,12 +622,12 @@ final class ja {
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             rh.a((byte) -115, 8, param2);
             bk.field_e = this.field_a;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -651,26 +651,26 @@ final class ja {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             boolean decompiledFrameRemainder1 = true;
             if (var4 == 22) {
               decompiledFrameRemainder1 = (0 == (lb.field_g & 8));
               if ((decompiledFrameRemainder1) &&
                 (var9 == 0)) {
-                break L2;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder1) && ((23 == var4 ||
               var4 == 24) && 0 == (lb.field_g & 4194304))) {
-              break L2;
+              break regionExit1;
             }
             if (var4 >= 20 &&
               0 >= tc.field_b &&
               var9 == 0) {
-              break L2;
+              break regionExit1;
             }
-            gk.a(mh.field_a[44], (byte) -11);
+            MouseInputListener.a(mh.field_a[44], (byte) -11);
             kj.field_x = null;
             mm.field_A = null;
             il.field_f = new nk(-19 + var4);
@@ -678,7 +678,7 @@ final class ja {
             stackIn_76_0 = (0 < tc.field_b) ? 0 : 7;
             bk.field_e = stackIn_76_0;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -701,9 +701,9 @@ final class ja {
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
-            gk.a(mh.field_a[44], (byte) -11);
+            MouseInputListener.a(mh.field_a[44], (byte) -11);
             kj.field_x = null;
             mm.field_A = null;
             il.field_f = new nk(0);
@@ -711,7 +711,7 @@ final class ja {
             stackIn_81_0 = (tc.field_b > 0) ? 0 : 7;
             bk.field_e = stackIn_81_0;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -733,12 +733,12 @@ final class ja {
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             stackIn_86_0 = !(df.field_f);
             df.field_f = stackIn_86_0;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -759,14 +759,14 @@ final class ja {
             (decompiledFrameRemainder7) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
-            gk.a(mh.field_a[44], (byte) -11);
+            MouseInputListener.a(mh.field_a[44], (byte) -11);
             rh.a((byte) -24, -1, param2);
             stackIn_91_0 = (tc.field_b <= 0) ? 7 : 0;
             bk.field_e = stackIn_91_0;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -791,17 +791,17 @@ final class ja {
             }
             bl.field_p = var5;
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             if (bk.field_e != 7) {
               rh.a((byte) -128, 0, param2);
               if (var9 == 0) {
-                break L2;
+                break regionExit1;
               }
             }
             rh.a((byte) 118, 7, param2);
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -820,14 +820,14 @@ final class ja {
             (decompiledFrameRemainder9) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             rh.a((byte) 114, 7, param2);
             dm.field_f = 0;
             lb.field_g = 0;
             pe.field_b.a(false);
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -845,12 +845,12 @@ final class ja {
             (decompiledFrameRemainder10) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             rh.a((byte) 110, 4, param2);
             bk.field_e = this.field_a;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -867,13 +867,13 @@ final class ja {
             (decompiledFrameRemainder11) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             na.field_a = 0;
             rh.a((byte) 127, 3, param2);
             bk.field_e = this.field_a;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -889,11 +889,11 @@ final class ja {
             (decompiledFrameRemainder12) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             rh.a((byte) -80, bk.field_e, param2);
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -908,11 +908,11 @@ final class ja {
             (decompiledFrameRemainder13) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             rh.a((byte) -45, 2, param2);
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -927,22 +927,22 @@ final class ja {
             (decompiledFrameRemainder3)) {
             if (this.field_f.c(-119)) {
               ce.a(0, (byte) -127);
-              gk.a(mh.field_a[0], (byte) -11);
+              MouseInputListener.a(mh.field_a[0], (byte) -11);
             }
             if (this.field_f.b(false)) {
               ce.a(256, (byte) -119);
-              gk.a(mh.field_a[0], (byte) -11);
+              MouseInputListener.a(mh.field_a[0], (byte) -11);
             }
             if (this.field_f.e(106)) {
               id.a(74);
-              gk.a(mh.field_a[0], (byte) -11);
+              MouseInputListener.a(mh.field_a[0], (byte) -11);
             }
             if (this.field_f.b((byte) 127)) {
-              ph.b(!param1);
-              gk.a(mh.field_a[0], (byte) -11);
+              NetworkGameClient.b(!param1);
+              MouseInputListener.a(mh.field_a[0], (byte) -11);
             }
             if (!this.field_f.c((byte) 126)) {
-              break L2;
+              break regionExit1;
             }
             var6Lifetime3 = aa.field_c + 128 + 9;
             var7 = (-var6Lifetime3 + this.c(-29187, param0) + this.d(-118, param0) >> 1) + (aa.field_c + 8);
@@ -968,11 +968,11 @@ final class ja {
               }
             }
             if (0 >= this.field_j) {
-              gk.a(mh.field_a[0], (byte) -11);
+              MouseInputListener.a(mh.field_a[0], (byte) -11);
               this.field_j = 25;
             }
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -994,10 +994,10 @@ final class ja {
               kj.i(117);
             }
             if (this.field_f.b((byte) 125)) {
-              gk.b(2);
+              MouseInputListener.b(2);
             }
             if (!this.field_f.c((byte) -21)) {
-              break L2;
+              break regionExit1;
             }
             var6Lifetime2 = 9 + (aa.field_c + 128);
             var7Lifetime1 = 8 + (-var6Lifetime2 + (this.c(-29187, param0) + this.d(-95, param0)) >> 1) + aa.field_c;
@@ -1019,7 +1019,7 @@ final class ja {
               ia.b(0, -23235);
             }
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -1031,18 +1031,18 @@ final class ja {
             (decompiledFrameRemainder16) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             if (null == mg.field_k) {
               var6Lifetime1 = param2 ? 1 : 0;
               ud.a(8, bk.field_d, var6Lifetime1 != 0, ob.field_I.field_B + ob.field_I.field_E, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
               if (var9 == 0) {
-                break L2;
+                break regionExit1;
               }
             }
             lb.a(true);
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -1057,10 +1057,10 @@ final class ja {
             }
             bl.field_p = 12;
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             boolean decompiledFrameRemainder0 = true;
-            gk.a(mh.field_a[45], (byte) -11);
+            MouseInputListener.a(mh.field_a[45], (byte) -11);
             if (!n.b((byte) 73)) {
               il.field_f.c(-1);
               kj.field_x = null;
@@ -1092,7 +1092,7 @@ final class ja {
             stackIn_182_0 = (tc.field_b > 0) ? 0 : 7;
             bk.field_e = stackIn_182_0;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -1102,11 +1102,11 @@ final class ja {
             (decompiledFrameRemainder18) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             dm.field_e = 0;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -1115,11 +1115,11 @@ final class ja {
             (decompiledFrameRemainder19) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             dm.field_e = 1;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
@@ -1127,67 +1127,67 @@ final class ja {
             (decompiledFrameRemainder20) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             dm.field_e = 2;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
             (decompiledFrameRemainder21) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             if (this.field_a == 4 ||
               2 == this.field_a ||
               this.field_a == 8) {
               pi.a(this.field_a, 19741, this.field_a);
               if (var9 == 0) {
-                break L2;
+                break regionExit1;
               }
             }
             if (6 != this.field_a) {
-              break L2;
+              break regionExit1;
             }
             stackIn_204_0 = (dm.field_f == 0) ? 2 : 5;
             pi.a(stackIn_204_0, 19741, 6);
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder22) &&
             (decompiledFrameRemainder3)) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             if (!this.e(param0, -114)) {
-              break L2;
+              break regionExit1;
             }
             na.field_a = na.field_a - 1;
             if (this.e(param0, -44)) {
-              break L2;
+              break regionExit1;
             }
             this.field_f.field_h = 2;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if (decompiledFrameRemainder3) {
             if (!this.field_f.a((byte) -1)) {
-              break L2;
+              break regionExit1;
             }
             if (!this.e(param0, 126)) {
-              break L2;
+              break regionExit1;
             }
             na.field_a = na.field_a + 1;
             if (this.e(param0, 125)) {
-              break L2;
+              break regionExit1;
             }
             this.field_f.field_h = 0;
             if (var9 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if (this.field_f.a((byte) -1)) {
@@ -1391,7 +1391,7 @@ final class ja {
         }
         if ((decompiledFrameRemainder2) &&
           (decompiledFrameRemainder1)) {
-          kj.field_x = fh.a(stackIn_51_0, stackIn_51_1, n.field_a, 10, (byte) -38);
+          kj.field_x = RasterBuffer.a(stackIn_51_0, stackIn_51_1, n.field_a, 10, (byte) -38);
         }
         if (decompiledFrameRemainder2) {
           boolean decompiledFrameRemainder0 = true;
@@ -1675,7 +1675,7 @@ final class ja {
               }
             }
             if (decompiledFrameRemainder0) {
-              al.field_d.a(var5 + (cc.field_t.a(var8.toLowerCase()) + 8), var4 - 4);
+              DelegatingCanvas.field_d.a(var5 + (cc.field_t.a(var8.toLowerCase()) + 8), var4 - 4);
               if (var11 == 16759807) {
                 var16 = 2;
                 if (var7 == 22) {
@@ -1747,7 +1747,7 @@ final class ja {
             break;
           }
           if (stackIn_99_0 != stackIn_99_1) {
-            stackIn_102_0 = ij.field_g;
+            stackIn_102_0 = ImageProducerRasterBuffer.field_g;
           } else {
             stackIn_102_0 = ck.field_f;
           }
@@ -2423,7 +2423,7 @@ final class ja {
           var4 = im.field_a[this.field_a];
           var5 = wd.field_o[this.field_a] - 24;
           var6 = vb.field_g[this.field_a] - im.field_a[this.field_a];
-          var7 = 48 + vh.field_q[this.field_a].length * ek.field_e[this.field_a] - 16;
+          var7 = 48 + vh.field_q[this.field_a].length * IterableNodeHashTable.field_e[this.field_a] - 16;
           var2 = 0;
           var8 = lc.field_o * 255 / 100;
           ul.g(var2 + var4, var2 + var5, -(var2 * 2) + var6, -(2 * var2) + var7, var3, var8);
@@ -2456,7 +2456,7 @@ final class ja {
           var3Lifetime2 = im.field_a[this.field_a];
           var4Lifetime1 = wd.field_o[this.field_a] - 24;
           var5Lifetime1 = -im.field_a[this.field_a] + vb.field_g[this.field_a];
-          var6Lifetime1 = 48 + vh.field_q[this.field_a].length * ek.field_e[this.field_a];
+          var6Lifetime1 = 48 + vh.field_q[this.field_a].length * IterableNodeHashTable.field_e[this.field_a];
           var7Lifetime1 = 0;
           var8Lifetime1 = lc.field_o * 255 / 100;
           ul.g(var3Lifetime2 + var7Lifetime1, var4Lifetime1 + var7Lifetime1, -(var7Lifetime1 * 2) + var5Lifetime1, var6Lifetime1 - 2 * var7Lifetime1, var2Lifetime4, var8Lifetime1);
@@ -2516,7 +2516,7 @@ final class ja {
                     il.field_f.field_i = wf.field_c.field_e[0].field_d;
                     var2Lifetime1 = ob.field_I.field_H + 160;
                     var3Lifetime1 = ob.field_I.field_B + (ob.field_I.field_E + 4);
-                    ob.field_I.c(fh.field_b, 320, var2Lifetime1, 16777215, -1);
+                    ob.field_I.c(RasterBuffer.field_b, 320, var2Lifetime1, 16777215, -1);
                     stackIn_36_0 = ob.field_I;
                     stackIn_36_1 = -113;
                     stackIn_36_2 = false;
@@ -2683,7 +2683,7 @@ final class ja {
                     var10[var20_int]) {
                     var21_ref_hj = me.field_n;
                   } else {
-                    var21_ref_hj = al.field_d;
+                    var21_ref_hj = DelegatingCanvas.field_d;
                   }
                 }
               }
@@ -2842,9 +2842,9 @@ final class ja {
             if (tc.field_b <= 0 &&
               var10[var17]) {
               me.field_n.c(256, var23Lifetime1);
-              al.field_d.c(256, var23Lifetime1);
+              DelegatingCanvas.field_d.c(256, var23Lifetime1);
             } else {
-              al.field_d.c(256, var23Lifetime1);
+              DelegatingCanvas.field_d.c(256, var23Lifetime1);
             }
           }
         } else {
@@ -2852,10 +2852,10 @@ final class ja {
             var10[var17]) {
             me.field_n.c(256, var23Lifetime1);
             if (var24 != 0) {
-              al.field_d.c(256, var23Lifetime1);
+              DelegatingCanvas.field_d.c(256, var23Lifetime1);
             }
           } else {
-            al.field_d.c(256, var23Lifetime1);
+            DelegatingCanvas.field_d.c(256, var23Lifetime1);
           }
         }
         var23Lifetime1 = var23Lifetime1 + ob.field_I.field_H;

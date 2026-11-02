@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class KeyboardListener implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static hj[] field_d;
     static int field_a;
     static int[] field_c;
@@ -63,7 +63,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var2_int >= 0) {
               gl.field_i[wg.field_p] = ~var2_int;
               wg.field_p = 1 + wg.field_p & 127;
-              if (al.field_b == wg.field_p) {
+              if (DelegatingCanvas.field_b == wg.field_p) {
                 wg.field_p = -1;
               }
             }
@@ -110,7 +110,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var2_int >= 0) {
               gl.field_i[wg.field_p] = var2_int;
               wg.field_p = wg.field_p + 1 & 127;
-              if (al.field_b == wg.field_p) {
+              if (DelegatingCanvas.field_b == wg.field_p) {
                 wg.field_p = -1;
               }
             }
@@ -187,7 +187,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     final static int[] b(int param0) {
         if (param0 != 8) {
-          qh.a(122);
+          KeyboardListener.a(122);
           return new int[8];
         }
         return new int[8];

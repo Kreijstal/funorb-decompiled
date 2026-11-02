@@ -538,7 +538,7 @@ final class a extends ge {
           jl.field_d = param3;
         }
         if (am.field_e > param3) {
-          qh.field_a = param3;
+          KeyboardListener.field_a = param3;
         }
         vl.field_g[rc.field_d] = param5;
         th.field_f[rc.field_d] = param1;
@@ -553,8 +553,8 @@ final class a extends ge {
           jl.field_d = var7;
         }
         rc.field_d = rc.field_d + 1;
-        if (qh.field_a > var7) {
-          qh.field_a = var7;
+        if (KeyboardListener.field_a > var7) {
+          KeyboardListener.field_a = var7;
         }
     }
 

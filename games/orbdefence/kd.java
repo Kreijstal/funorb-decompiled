@@ -78,10 +78,10 @@ final class kd {
         int var11Lifetime1Lifetime1Lifetime1;
         int var12Lifetime2Lifetime1Lifetime1;
         var19 = OrbDefence.field_D ? 1 : 0;
-        var5 = (param2 - 320) / ol.field_e;
-        var6 = (param0 - 240) / ol.field_e;
-        var7 = 1 + (var5 + 640 / ol.field_e);
-        var8 = var6 + 480 / ol.field_e + 1;
+        var5 = (param2 - 320) / DualLinkDequeIterator.field_e;
+        var6 = (param0 - 240) / DualLinkDequeIterator.field_e;
+        var7 = 1 + (var5 + 640 / DualLinkDequeIterator.field_e);
+        var8 = var6 + 480 / DualLinkDequeIterator.field_e + 1;
         if (var5 < 0) {
           var5 = 0;
         }
@@ -100,8 +100,8 @@ final class kd {
           var10 = var10 + this.field_c;
           for (var12 = var5; var12 <= var7; var12++) {
             boolean decompiledFrameRemainder0 = true;
-            var13 = -param2 + (var12 * ol.field_e + 320 - ol.field_a);
-            var14 = ol.field_e * var11 + 240 - ol.field_a - param0;
+            var13 = -param2 + (var12 * DualLinkDequeIterator.field_e + 320 - DualLinkDequeIterator.field_a);
+            var14 = DualLinkDequeIterator.field_e * var11 + 240 - DualLinkDequeIterator.field_a - param0;
             if (null == mf.field_b) {
               var15_int = 0;
               if (this.field_o[var9] == 0) {
@@ -122,7 +122,7 @@ final class kd {
               if (this.field_o[var9] == 6) {
                 var15_int = 16776960;
               }
-              ul.h(var13, var14, ol.field_e, ol.field_e, var15_int);
+              ul.h(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e, var15_int);
             } else {
               if (!param3 &&
                 0 < this.field_a[var9]) {
@@ -133,7 +133,7 @@ final class kd {
                   } else {
                     var15_int = -var15_int + 50 >> 1;
                   }
-                  ul.d(var13 - ol.field_e, -ol.field_e + var14, ol.field_d, ol.field_d, 16711935, var15_int << 1);
+                  ul.d(var13 - DualLinkDequeIterator.field_e, -DualLinkDequeIterator.field_e + var14, DualLinkDequeIterator.field_d, DualLinkDequeIterator.field_d, 16711935, var15_int << 1);
                 }
               }
               if (0 != this.field_o[var9] ||
@@ -142,13 +142,13 @@ final class kd {
                   this.field_o[var9] != 3 &&
                   !param3) {
                   if (192 < this.field_g[var9]) {
-                    mf.field_b[27].b(var13, var14, ol.field_e, ol.field_e);
+                    mf.field_b[27].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
                   } else {
                     if (this.field_j[var9] < mf.field_b.length) {
-                      mf.field_b[this.field_j[var9]].b(var13, var14, ol.field_e, ol.field_e);
+                      mf.field_b[this.field_j[var9]].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
                     }
                     if (!(this.field_g[var9] <= 0)) {
-                      mf.field_b[27].d(var13, var14, ol.field_e, ol.field_e, 64 + this.field_g[var9]);
+                      mf.field_b[27].d(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e, 64 + this.field_g[var9]);
                     }
                   }
                   decompiledFrameRemainder0 = false;
@@ -157,7 +157,7 @@ final class kd {
                   if (this.field_o[var9] == 3 &&
                     !param3) {
                     if (!(bc.field_q.length <= this.field_j[var9])) {
-                      bc.field_q[this.field_j[var9]].b(var13, var14, ol.field_e, ol.field_e);
+                      bc.field_q[this.field_j[var9]].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
                     }
                     decompiledFrameRemainder0 = false;
                   }
@@ -165,7 +165,7 @@ final class kd {
                     if (this.field_o[var9] == 4 &&
                       param3 &&
                       this.field_j[var9] < bc.field_q.length) {
-                      bc.field_q[this.field_j[var9]].b(var13, var14, ol.field_e, ol.field_e);
+                      bc.field_q[this.field_j[var9]].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
                     }
                   }
                 }
@@ -179,8 +179,8 @@ final class kd {
           for (var9Lifetime1 = 0; var9Lifetime1 < this.field_s.length; var9Lifetime1++) {
             var13Lifetime1 = this.field_s[var9Lifetime1] % this.field_c;
             var14Lifetime1 = this.field_s[var9Lifetime1] / this.field_c;
-            var12Lifetime2 = ol.field_e * var14Lifetime1 + (240 - param0);
-            var11Lifetime1 = 320 + (ol.field_e * var13Lifetime1 - param2);
+            var12Lifetime2 = DualLinkDequeIterator.field_e * var14Lifetime1 + (240 - param0);
+            var11Lifetime1 = 320 + (DualLinkDequeIterator.field_e * var13Lifetime1 - param2);
             var15 = -Math.abs(Math.sin(0.1 * (double)da.field_b + (double)var9Lifetime1));
             ul.i(var11Lifetime1, (int)(var15 * 5.0 + (double)var12Lifetime2), 16, 16742399, 64);
             ul.i(var11Lifetime1, (int)((double)var12Lifetime2 + var15 * 4.0), 15, 16751103, 96);
@@ -198,8 +198,8 @@ final class kd {
             var10Lifetime1 = var10Lifetime1 + this.field_c;
             for (var13Lifetime1Lifetime1 = var5; var7 >= var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
               if (this.field_j[var9Lifetime1Lifetime1] == 85) {
-                var12Lifetime2Lifetime1 = -(ol.field_e / 2) + 240 + (var14Lifetime1Lifetime1 * ol.field_e + (-param0 - 12));
-                var11Lifetime1Lifetime1 = -(ol.field_e / 2) + 320 + (var13Lifetime1Lifetime1 * ol.field_e - param2) + 4;
+                var12Lifetime2Lifetime1 = -(DualLinkDequeIterator.field_e / 2) + 240 + (var14Lifetime1Lifetime1 * DualLinkDequeIterator.field_e + (-param0 - 12));
+                var11Lifetime1Lifetime1 = -(DualLinkDequeIterator.field_e / 2) + 320 + (var13Lifetime1Lifetime1 * DualLinkDequeIterator.field_e - param2) + 4;
                 var15Lifetime1 = -Math.abs(Math.sin(0.1 * (double)da.field_b + (double)var9Lifetime1Lifetime1));
                 ul.i(var11Lifetime1Lifetime1, (int)((double)var12Lifetime2Lifetime1 + var15Lifetime1 * 5.0), 16, 7799039, 64);
                 ul.i(var11Lifetime1Lifetime1, (int)(var15Lifetime1 * 4.0 + (double)var12Lifetime2Lifetime1), 15, 10027263, 96);
@@ -210,8 +210,8 @@ final class kd {
                 ul.f(var11Lifetime1Lifetime1, (int)((double)var12Lifetime2Lifetime1 + var15Lifetime1 * 3.0), 5, 12255487);
                 ul.f(var11Lifetime1Lifetime1, (int)((double)var12Lifetime2Lifetime1 + 4.0 * var15Lifetime1), 4, 10027263);
                 ul.f(var11Lifetime1Lifetime1, (int)(5.0 * var15Lifetime1 + (double)var12Lifetime2Lifetime1), 3, 7799039);
-                var12Lifetime2Lifetime1Lifetime1 = -param0 + (-(ol.field_e >> 1) + 240 + var14Lifetime1Lifetime1 * ol.field_e);
-                var11Lifetime1Lifetime1Lifetime1 = 320 + (ol.field_e * var13Lifetime1Lifetime1 - (ol.field_e >> 1)) - param2;
+                var12Lifetime2Lifetime1Lifetime1 = -param0 + (-(DualLinkDequeIterator.field_e >> 1) + 240 + var14Lifetime1Lifetime1 * DualLinkDequeIterator.field_e);
+                var11Lifetime1Lifetime1Lifetime1 = 320 + (DualLinkDequeIterator.field_e * var13Lifetime1Lifetime1 - (DualLinkDequeIterator.field_e >> 1)) - param2;
                 var17 = (long)(100 * da.field_b);
                 hg.field_ab.c(var11Lifetime1Lifetime1Lifetime1 - (hg.field_ab.field_s / 2 - 4), var12Lifetime2Lifetime1Lifetime1 - 64 - (int)(8.0 + 8.0 * Math.sin((double)var14Lifetime1Lifetime1 + ((double)var13Lifetime1Lifetime1 + (double)var17 * 0.001))));
               }

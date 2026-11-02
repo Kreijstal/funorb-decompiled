@@ -106,7 +106,7 @@ final class cf {
           }
           param5 = param5 + param3;
           var8 = param0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             var9 = param4[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -120,7 +120,7 @@ final class cf {
               param3++;
               param1[incrementValue$1] = (byte)(~var10);
               if (param3 >= param5) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -136,7 +136,7 @@ final class cf {
               param3++;
               param1[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param5 <= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -152,7 +152,7 @@ final class cf {
               param3++;
               param1[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param5 <= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -168,7 +168,7 @@ final class cf {
               param3++;
               param1[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param5 <= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -184,7 +184,7 @@ final class cf {
               param3++;
               param1[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param5 <= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -216,7 +216,7 @@ final class cf {
               param3++;
               param1[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param3 >= param5) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -232,7 +232,7 @@ final class cf {
               param3++;
               param1[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param5 <= param3) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }

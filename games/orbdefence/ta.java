@@ -546,11 +546,11 @@ class ta extends pj implements c {
             }
             var21 = stackIn_40_0;
             var22 = a.field_t[var15Lifetime1];
-            var23 = ph.field_x[var15Lifetime1];
+            var23 = NetworkGameClient.field_x[var15Lifetime1];
             var24 = a.field_t[var16];
-            var25 = ph.field_x[var16];
+            var25 = NetworkGameClient.field_x[var16];
             var26 = a.field_t[var17];
-            var27 = ph.field_x[var17];
+            var27 = NetworkGameClient.field_x[var17];
             if (var18 == var19 &&
               var19 == var20) {
               var28 = var54[var18];
@@ -696,7 +696,7 @@ class ta extends pj implements c {
           }
           var6 = param1;
           if (var6 == 80) {
-            if (!ek.field_a[81]) {
+            if (!IterableNodeHashTable.field_a[81]) {
               stackIn_15_0 = this.b(param2, false);
             } else {
               stackIn_15_0 = this.a(param2, false);

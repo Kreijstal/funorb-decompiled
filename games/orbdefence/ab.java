@@ -87,18 +87,18 @@ final class ab implements td {
             ji.field_c = ji.field_c + 1;
             if (wg.field_p < 0) {
               for (var3 = 0; 112 > var3; var3++) {
-                ek.field_a[var3] = false;
+                IterableNodeHashTable.field_a[var3] = false;
               }
-              wg.field_p = al.field_b;
+              wg.field_p = DelegatingCanvas.field_b;
             } else {
-              while (al.field_b != wg.field_p) {
-                var3 = gl.field_i[al.field_b];
-                al.field_b = al.field_b + 1 & 127;
+              while (DelegatingCanvas.field_b != wg.field_p) {
+                var3 = gl.field_i[DelegatingCanvas.field_b];
+                DelegatingCanvas.field_b = DelegatingCanvas.field_b + 1 & 127;
                 if (0 <= var3) {
-                  ek.field_a[var3] = true;
+                  IterableNodeHashTable.field_a[var3] = true;
                   continue;
                 }
-                ek.field_a[~var3] = false;
+                IterableNodeHashTable.field_a[~var3] = false;
               }
             }
             pk.field_H = uf.field_a;

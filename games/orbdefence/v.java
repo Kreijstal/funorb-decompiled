@@ -10,7 +10,7 @@ final class v extends di {
     private final void a(rk param0) {
         param0.b(57);
         param0.a();
-        ca var2 = this.field_l.field_d.field_e;
+        IntrusiveNode var2 = this.field_l.field_d.field_e;
         if (var2 == this.field_l.field_d) {
           this.field_k = -1;
         } else {
@@ -84,7 +84,7 @@ final class v extends di {
         return (di) (this.field_m.d(853));
     }
 
-    private final void a(ca param0, rk param1) {
+    private final void a(IntrusiveNode param0, rk param1) {
         while (true) {
           if (param0 == this.field_l.field_d) {
             vk.$cfr$intArgs$a$0b89e0d19fbb(param1, -65, param0);

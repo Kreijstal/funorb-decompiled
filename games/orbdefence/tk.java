@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tk extends o {
+abstract class tk extends DualLinkNode {
     static String field_l;
     int field_p;
     int field_k;

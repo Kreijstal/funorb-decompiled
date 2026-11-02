@@ -85,7 +85,7 @@ final class lm {
                 }
                 var2 = t.a(15136, "error_js5crc");
                 if (null != var2) {
-                  o.field_i = bk.a(var2, -12465);
+                  DualLinkNode.field_i = bk.a(var2, -12465);
                 }
                 var2 = t.a(15136, "error_js5io");
                 if (var2 != null) {
@@ -97,7 +97,7 @@ final class lm {
                 }
                 var2 = t.a(15136, "error_js5connect");
                 if (null != var2) {
-                  pl.field_h = bk.a(var2, -12465);
+                  NodeHashTableIterator.field_h = bk.a(var2, -12465);
                 }
                 var2 = t.a(15136, "login_gameupdated");
                 if (null != var2) {
@@ -1622,7 +1622,7 @@ final class lm {
                 }
                 var2 = t.a(param0 + 15020, "create_alert_namechars");
                 if (null != var2) {
-                  pl.field_i = bk.a(var2, param0 - 12581);
+                  NodeHashTableIterator.field_i = bk.a(var2, param0 - 12581);
                 }
                 var2 = t.a(15136, "create_alert_nameleadingspace");
                 if (null != var2) {
@@ -1650,7 +1650,7 @@ final class lm {
                 }
                 var2 = t.a(15136, "create_alert_passcontainsemail");
                 if (null != var2) {
-                  pl.field_f = bk.a(var2, -12465);
+                  NodeHashTableIterator.field_f = bk.a(var2, -12465);
                 }
                 var2 = t.a(15136, "create_alert_passcontainsname_partial");
                 if (null != var2) {
@@ -1878,7 +1878,7 @@ final class lm {
                 }
                 var2 = t.a(15136, "unpacking_graphics");
                 if (var2 != null) {
-                  ek.field_c = bk.a(var2, -12465);
+                  IterableNodeHashTable.field_c = bk.a(var2, -12465);
                 }
                 var2 = t.a(param0 + 15020, "unpacking_models");
                 if (var2 != null) {
@@ -2760,7 +2760,7 @@ final class lm {
                 }
                 var2 = t.a(param0 ^ 15188, "mb_achievement_count_1");
                 if (null != var2) {
-                  ea.field_g = bk.a(var2, param0 - 12581);
+                  FullscreenFocusCanvas.field_g = bk.a(var2, param0 - 12581);
                 }
                 var2 = t.a(param0 + 15020, "mb_achievement_count_2");
                 if (null != var2) {
@@ -2872,7 +2872,7 @@ final class lm {
                 }
                 var2 = t.a(15136, "mustlogin1");
                 if (null != var2) {
-                  fh.field_b = bk.a(var2, -12465);
+                  RasterBuffer.field_b = bk.a(var2, -12465);
                 }
                 var2 = t.a(15136, "mustlogin2,1");
                 if (var2 != null) {
@@ -3078,8 +3078,8 @@ final class lm {
                   throw dd.a((Throwable) ((Object) stackIn_2616_0), ((StringBuilder) (Object) stackIn_2616_1).append(stackIn_2617_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2625_0 = (!tf.field_e);
-                  tf.field_e = stackIn_2625_0;
+                  stackIn_2625_0 = (!GameAppletShell.field_e);
+                  GameAppletShell.field_e = stackIn_2625_0;
                 }
             }
         }
@@ -3106,14 +3106,14 @@ final class lm {
           if (param0 >= -97) {
             field_f = (kc) null;
           }
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (ec.field_K > var2) {
               var3 = wh.field_b[var2] * m.field_a[var2];
               var4 = fl.field_a[var2];
               var5 = new int[var3];
               stackIn_15_0 = 0;
               if (var7 != 0) {
-                break L1;
+                break scanLoop1;
               }
               var6 = stackIn_15_0;
               while (var3 > var6) {
@@ -3122,7 +3122,7 @@ final class lm {
               }
               var1[var2] = new hj(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var5);
               var2++;
-              continue L1;
+              continue scanLoop1;
             }
             stackIn_15_0 = -125;
             break;
@@ -3145,7 +3145,7 @@ final class lm {
           if (param0 != 32018) {
             field_e = (tl) null;
           }
-          stackIn_4_0 = new ee(qh.a(-60), hi.h(2));
+          stackIn_4_0 = new ee(KeyboardListener.a(-60), hi.h(2));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

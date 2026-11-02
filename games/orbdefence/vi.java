@@ -529,7 +529,7 @@ class vi extends s {
               if (param1 != 96) {
                 if (param1 == 97) {
                   if (this.field_N < this.field_l.length()) {
-                    if (!ek.field_a[82]) {
+                    if (!IterableNodeHashTable.field_a[82]) {
                       stackIn_66_1 = this.field_N + 1;
                     } else {
                       stackIn_66_1 = this.b((byte) -123);
@@ -550,17 +550,17 @@ class vi extends s {
                     this.j(param3 - 8108);
                     return true;
                   }
-                  if (ek.field_a[82] &&
+                  if (IterableNodeHashTable.field_a[82] &&
                     param1 == 65) {
                     this.k(param3 - 89);
                     return true;
                   }
-                  if (ek.field_a[82] &&
+                  if (IterableNodeHashTable.field_a[82] &&
                     param1 == 66) {
                     this.f((byte) 64);
                     return true;
                   }
-                  if (ek.field_a[82] &&
+                  if (IterableNodeHashTable.field_a[82] &&
                     param1 == 67) {
                     this.o(0);
                     return true;
@@ -568,7 +568,7 @@ class vi extends s {
                 }
               } else {
                 if (this.field_N > 0) {
-                  if (ek.field_a[82]) {
+                  if (IterableNodeHashTable.field_a[82]) {
                     stackIn_36_1 = this.l(-1);
                   } else {
                     stackIn_36_1 = -1 + this.field_N;
@@ -932,7 +932,7 @@ class vi extends s {
         if (param1 != 1242) {
           return;
         }
-        if (!ek.field_a[81]) {
+        if (!IterableNodeHashTable.field_a[81]) {
           this.field_L = this.field_N;
         }
     }

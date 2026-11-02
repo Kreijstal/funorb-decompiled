@@ -40,7 +40,7 @@ final class og {
             return 2;
           }
           var2 = -57 / ((53 - param0) / 43);
-          if (~ea.field_h == ~this.field_m) {
+          if (~FullscreenFocusCanvas.field_h == ~this.field_m) {
             return 1;
           }
           if (ob.field_H != 2) {
@@ -52,7 +52,7 @@ final class og {
           return 1;
         }
         var2Lifetime1 = -57 / ((53 - param0) / 43);
-        if (~ea.field_h == ~this.field_m) {
+        if (~FullscreenFocusCanvas.field_h == ~this.field_m) {
           return 1;
         }
         if (ob.field_H != 2) {
@@ -71,7 +71,7 @@ final class og {
         this.field_d = wb.field_d;
         this.field_c = pc.field_X;
         this.field_h = vk.field_v;
-        this.field_m = tf.field_l;
+        this.field_m = GameAppletShell.field_l;
         if (!param0) {
           this.field_i = null;
         } else {

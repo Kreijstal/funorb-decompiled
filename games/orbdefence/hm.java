@@ -41,11 +41,11 @@ final class hm extends ta implements ai {
 
     final static ki a(int param0, boolean param1, boolean param2, int param3, int param4) {
         if (param0 == 48) {
-          return al.a(param1, 5200, param3, param4, param2, false);
+          return DelegatingCanvas.a(param1, 5200, param3, param4, param2, false);
         }
         String var6 = (String) null;
         hm.$cfr$intArgs$a$e5d4dced95c1((String) null, 56, false, true);
-        return al.a(param1, 5200, param3, param4, param2, false);
+        return DelegatingCanvas.a(param1, 5200, param3, param4, param2, false);
     }
 
     final static void a(String param0, byte param1, boolean param2, boolean param3) {

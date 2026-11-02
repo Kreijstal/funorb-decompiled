@@ -22,9 +22,9 @@ final class sj extends jc {
         }
         var6 = "(" + lh.field_c + " " + fe.field_b + " " + ce.field_d + ") " + ab.field_l;
         var1 = var6;
-        if (0 < tf.field_c) {
+        if (0 < GameAppletShell.field_c) {
           var1 = var6 + ":";
-          for (var2 = 0; tf.field_c > var2; var2++) {
+          for (var2 = 0; GameAppletShell.field_c > var2; var2++) {
             var7 = var1 + ' ';
             var3 = 255 & cd.field_t.field_j[var2];
             var4 = var3 >> 4;

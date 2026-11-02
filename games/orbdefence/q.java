@@ -63,8 +63,8 @@ final class q {
           if (gg.field_Q > 0) {
             fieldTemp$22 = gg.field_Q - 1;
             gg.field_Q = gg.field_Q - 1;
-            var2_ref_byte__ = qh.field_b[fieldTemp$22];
-            qh.field_b[gg.field_Q] = null;
+            var2_ref_byte__ = KeyboardListener.field_b[fieldTemp$22];
+            KeyboardListener.field_b[gg.field_Q] = null;
             return var2_ref_byte__;
           }
           var2 = 25 % ((param1 + 16) / 48);

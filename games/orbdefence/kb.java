@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class kb extends ca {
+final class kb extends IntrusiveNode {
     private int field_A;
     private pd field_E;
     int field_C;
@@ -280,12 +280,12 @@ final class kb extends ca {
                 s.field_y.a(0L, -1);
                 s.field_y.a(var2, 4);
                 var3_int = 0;
-                L5: while (true) {
+                scanLoop1: while (true) {
                   if (var3_int < 24) {
                     stackIn_18_0 = -1;
                     stackIn_18_1 = ~var2[var3_int];
                     if (var5 != 0) {
-                      break L5;
+                      break scanLoop1;
                     }
                     if (stackIn_18_0 == stackIn_18_1 ||
                       var5 != 0) {
@@ -447,11 +447,11 @@ final class kb extends ca {
           if (-param1.field_h + param1.field_o <= 0) {
             boolean decompiledSharedTail0 = !(param1.field_n);
             if (!decompiledSharedTail0) {
-              ea.a(53, mh.field_a[54], (int)(96.0 * param1.field_v));
+              FullscreenFocusCanvas.a(53, mh.field_a[54], (int)(96.0 * param1.field_v));
               decompiledSharedTail0 = (var10 != 0);
             }
             if (decompiledSharedTail0) {
-              ea.a(11, mh.field_a[(int)(Math.random() * 5.0) + 49], (int)(96.0 * param1.field_v));
+              FullscreenFocusCanvas.a(11, mh.field_a[(int)(Math.random() * 5.0) + 49], (int)(96.0 * param1.field_v));
             }
             param1.field_h = param1.field_h - param1.field_o;
             param1.field_o = 0;
@@ -594,10 +594,10 @@ final class kb extends ca {
           var5 = -param2 + 240;
           var6 = this.field_k;
           while (this.field_B != var6) {
-            var7 = var4_int + (int)((float)ol.field_e * this.field_r[var6].field_e);
-            var8 = (int)(this.field_r[var6].field_d * (float)ol.field_e) + var5;
-            var9 = var4_int + this.field_r[var6].field_b * ol.field_e;
-            var10 = var5 + ol.field_e * this.field_r[var6].field_g;
+            var7 = var4_int + (int)((float)DualLinkDequeIterator.field_e * this.field_r[var6].field_e);
+            var8 = (int)(this.field_r[var6].field_d * (float)DualLinkDequeIterator.field_e) + var5;
+            var9 = var4_int + this.field_r[var6].field_b * DualLinkDequeIterator.field_e;
+            var10 = var5 + DualLinkDequeIterator.field_e * this.field_r[var6].field_g;
             var11 = (-this.field_y + this.field_r[var6].field_c) * 4;
             ul.f(var7 - 1, var8, -1 + var9, var10, 11176191, var11);
             ul.f(var7 + 1, var8, 1 + var9, var10, 11176191, var11);
@@ -637,12 +637,12 @@ final class kb extends ca {
             return;
           }
           this.field_y = this.field_y + 1;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (this.field_B != this.field_k) {
               stackIn_13_0 = ~this.field_y;
               stackIn_13_1 = ~this.field_r[this.field_k].field_c;
               if (var8 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_13_0 < stackIn_13_1) {
                 this.field_k = (this.field_k + 1) % this.field_r.length;
@@ -877,18 +877,18 @@ final class kb extends ca {
             this.b((byte) -4);
           }
           boolean decompiledFrameRemainder1 = true;
-          var4_int = 320 - param0 + this.field_g * ol.field_e;
-          var5 = 240 + (-param1 + this.field_h * ol.field_e);
+          var4_int = 320 - param0 + this.field_g * DualLinkDequeIterator.field_e;
+          var5 = 240 + (-param1 + this.field_h * DualLinkDequeIterator.field_e);
           this.field_u = 320.0 / (double)(320 + Math.abs(-320 + var4_int));
           if (this.field_z) {
-            var6 = 320 + (ol.field_e * this.field_x - param0);
-            var7 = 240 - param1 + ol.field_e * this.field_A;
+            var6 = 320 + (DualLinkDequeIterator.field_e * this.field_x - param0);
+            var7 = 240 - param1 + DualLinkDequeIterator.field_e * this.field_A;
             var10 = this.field_C;
             if (var10 == 1 &&
               var15 == 0) {
               if (!(this.field_t <= (this.field_n - 20))) {
-                var10 = ol.field_e / 2 + var4_int;
-                var11 = -8 + (var5 + ol.field_e / 2);
+                var10 = DualLinkDequeIterator.field_e / 2 + var4_int;
+                var11 = -8 + (var5 + DualLinkDequeIterator.field_e / 2);
                 ul.f(var6 - 1, var7, -1 + var10, var11, 11176191, -(10 * (this.field_n - this.field_t)) + 200);
                 ul.f(var6 + 1, var7, 1 + var10, var11, 11176191, -(10 * (-this.field_t + this.field_n)) + 200);
                 ul.f(var6, -1 + var7, var10, var11 - 1, 11176191, 200 - (-this.field_t + this.field_n) * 10);
@@ -900,8 +900,8 @@ final class kb extends ca {
               decompiledFrameRemainder1 = (var10 == 4);
             }
             if (decompiledFrameRemainder1) {
-              var9 = -12 + (ol.field_e + var5);
-              var8 = var4_int + ol.field_e;
+              var9 = -12 + (DualLinkDequeIterator.field_e + var5);
+              var8 = var4_int + DualLinkDequeIterator.field_e;
               boolean decompiledSharedTail0 = (!(5 >= this.field_t) ||
                 this.field_E == null ||
                 !(-this.field_E.field_h + this.field_E.field_o > 0));
@@ -929,8 +929,8 @@ final class kb extends ca {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_C != 0) {
             if (this.field_C == 1) {
-              var5 = var5 + ol.field_e / 2;
-              var4_int = var4_int + ol.field_e / 2;
+              var5 = var5 + DualLinkDequeIterator.field_e / 2;
+              var4_int = var4_int + DualLinkDequeIterator.field_e / 2;
               hf.field_g[this.field_C * 7 + 0].a(var4_int, -5 + var5, 0, 1950);
               var6Lifetime1 = 32;
               if (this.field_F == 0) {
@@ -954,8 +954,8 @@ final class kb extends ca {
             }
             if (decompiledFrameRemainder0) {
               if (2 == this.field_C) {
-                var4_int = var4_int + ol.field_e / 2;
-                var5 = var5 + ol.field_e / 2;
+                var4_int = var4_int + DualLinkDequeIterator.field_e / 2;
+                var5 = var5 + DualLinkDequeIterator.field_e / 2;
                 hf.field_g[0 + 7 * this.field_C].a(var4_int, var5 - 5, 0, 1950);
                 var6Lifetime1 = 32;
                 if (this.field_F == 0) {
@@ -986,8 +986,8 @@ final class kb extends ca {
                       (decompiledFrameRemainder0 = (this.field_s.field_C != -1))) {
                       var6Lifetime1 = var4_int;
                       var7Lifetime1 = -10 + var5;
-                      var8Lifetime1 = 320 + this.field_s.field_g * ol.field_e - param0;
-                      var9Lifetime1 = -10 + (-param1 + (this.field_s.field_h * ol.field_e + 240));
+                      var8Lifetime1 = 320 + this.field_s.field_g * DualLinkDequeIterator.field_e - param0;
+                      var9Lifetime1 = -10 + (-param1 + (this.field_s.field_h * DualLinkDequeIterator.field_e + 240));
                       var10Lifetime1 = 200 * this.field_j / 100;
                       if (this.field_s.field_t > -10) {
                         var10Lifetime1 = 20 * -this.field_s.field_t;
@@ -1039,8 +1039,8 @@ final class kb extends ca {
                     }
                     if ((decompiledFrameRemainder0) &&
                       (decompiledFrameRemainder0 = (4 == this.field_C))) {
-                      var4_int = var4_int + ol.field_e;
-                      var5 = var5 + ol.field_e;
+                      var4_int = var4_int + DualLinkDequeIterator.field_e;
+                      var5 = var5 + DualLinkDequeIterator.field_e;
                       hf.field_g[0 + this.field_C * 7].a(var4_int, var5 - 5, 0, 2600);
                       var6Lifetime1 = 32;
                       if (this.field_F == 0) {
@@ -1065,8 +1065,8 @@ final class kb extends ca {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  var4_int = var4_int + ol.field_e / 2;
-                  var5 = var5 + ol.field_e / 2;
+                  var4_int = var4_int + DualLinkDequeIterator.field_e / 2;
+                  var5 = var5 + DualLinkDequeIterator.field_e / 2;
                   var6Lifetime1 = 1950;
                   hf.field_g[7 * this.field_C + 0].a(var4_int, -5 + var5, 0, var6Lifetime1);
                   var7_ref_hj = hf.field_g[2 + this.field_F + this.field_C * 7];
@@ -1139,10 +1139,10 @@ final class kb extends ca {
               }
               var7Lifetime2 = 4;
               ul.i(var4_int, var5, var7Lifetime2, var6Lifetime2Lifetime5, 128);
-              if (ol.field_e >> 2 > 2) {
+              if (DualLinkDequeIterator.field_e >> 2 > 2) {
                 ul.i(var4_int, var5, -1 + var7Lifetime2, var6Lifetime2Lifetime5, 128);
               }
-              if (ol.field_e >> 2 > 3) {
+              if (DualLinkDequeIterator.field_e >> 2 > 3) {
                 ul.i(var4_int, var5, -2 + var7Lifetime2, var6Lifetime2Lifetime5, 128);
               }
               ul.g(var4_int, var5, var7Lifetime2, 0);
@@ -1238,7 +1238,7 @@ final class kb extends ca {
               this.field_v = 200;
             }
           }
-          L3: {
+          regionExit1: {
             this.field_v = 200;
             if (6 == this.field_C &&
               null != this.field_s) {
@@ -1300,7 +1300,7 @@ final class kb extends ca {
                 do {
                   if (var4 == var6) {
                     this.field_f.a(3, this.field_g, (byte) -38, this.field_h);
-                    ea.a(113, mh.field_a[59], (int)(96.0 * this.field_u));
+                    FullscreenFocusCanvas.a(113, mh.field_a[59], (int)(96.0 * this.field_u));
                     this.d(9);
                     this.field_C = -1;
                     break;
@@ -1316,7 +1316,7 @@ final class kb extends ca {
                   stackIn_236_0 = stackOut_61_0;
                   stackIn_62_0 = stackOut_61_0;
                   if (var10 != 0) {
-                    break L3;
+                    break regionExit1;
                   }
                   if (stackIn_62_0 != this &&
                     var8_ref_kb.field_s == this.field_s) {
@@ -1666,7 +1666,7 @@ final class kb extends ca {
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameRemainder1 = true;
-              ea.a(46, mh.field_a[var4], (int)(this.field_u * 96.0));
+              FullscreenFocusCanvas.a(46, mh.field_a[var4], (int)(this.field_u * 96.0));
               this.field_v = this.field_v - 1;
               this.field_z = true;
               this.field_q = (int)(Math.atan2((double)(this.field_g - ((pd) (var2)).field_u), (double)(-((pd) (var2)).field_z + this.field_h)) * 65536.0 / 6.283185307179586);
@@ -1870,7 +1870,7 @@ final class kb extends ca {
           }
           var12 = 1;
           boolean decompiledNaturalLoopExit0 = false;
-          L2: while (!(decompiledNaturalLoopExit0 = (param2 < var12))) {
+          scanLoop1: while (!(decompiledNaturalLoopExit0 = (param2 < var12))) {
             var10 = this.field_h + var12 * var8 / param2;
             var9 = var7_int * var12 / param2 + this.field_g;
             stackOut_13_0 = this.field_f.field_f.a(var9, true, var10);
@@ -1906,7 +1906,7 @@ final class kb extends ca {
                   param3++;
                 }
                 var12++;
-                continue L2;
+                continue scanLoop1;
               }
               stackIn_49_0 = param3;
               return stackIn_49_0;

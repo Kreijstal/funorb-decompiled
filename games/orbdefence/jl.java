@@ -13,7 +13,7 @@ abstract class jl {
         if (param0 <= 25) {
           field_e = (String) null;
         }
-        return new ba[]{rc.field_m, fb.field_i, ia.field_a, cj.field_a, aj.field_a, tl.field_c, hd.field_q, gl.field_j, id.field_a, jd.field_d, ol.field_f, ue.field_G, nd.field_e, bd.field_q};
+        return new ba[]{rc.field_m, fb.field_i, ia.field_a, cj.field_a, aj.field_a, tl.field_c, hd.field_q, gl.field_j, id.field_a, jd.field_d, DualLinkDequeIterator.field_f, ue.field_G, nd.field_e, bd.field_q};
     }
 
     abstract int b(int param0, int param1);

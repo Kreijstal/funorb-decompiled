@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj extends ca {
+final class mj extends IntrusiveNode {
     static java.applet.Applet field_j;
     static pe field_i;
     int field_g;

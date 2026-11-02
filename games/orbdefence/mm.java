@@ -59,7 +59,7 @@ final class mm extends kj {
         dd var7 = null;
         try {
           super.a(param0, param1, (byte) -120, param3, param4, param5);
-          var7 = al.field_c;
+          var7 = DelegatingCanvas.field_c;
           if (param2 > -91) {
             field_E = (String) null;
           }
@@ -70,11 +70,11 @@ final class mm extends kj {
                 return;
               }
               ((wk) (var7.field_h)).a(47, var7, this);
-              al.field_c = null;
+              DelegatingCanvas.field_c = null;
               return;
             }
             ((wk) (this.field_h)).a(22, var7, this);
-            al.field_c = null;
+            DelegatingCanvas.field_c = null;
             return;
           }
         } catch (RuntimeException runtimeException) {

@@ -28,7 +28,7 @@ final class p {
           if (param0 != 13863) {
             field_a = -63L;
           }
-          stackIn_3_0 = fh.a(param2, var5, (byte) -86, var4_int);
+          stackIn_3_0 = RasterBuffer.a(param2, var5, (byte) -86, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

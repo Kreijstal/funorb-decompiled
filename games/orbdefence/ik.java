@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ik extends ca {
+final class ik extends IntrusiveNode {
     rc[] field_f;
     byte[] field_k;
     private int[] field_i;
@@ -93,7 +93,7 @@ final class ik extends ca {
 
     final static void a(byte param0, int param1) {
         int var2_int = 0;
-        ca var2 = null;
+        IntrusiveNode var2 = null;
         ef var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;

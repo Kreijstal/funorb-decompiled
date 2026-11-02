@@ -64,12 +64,12 @@ final class gl {
             aa.field_c = var1;
             var2 = cc.field_t.field_E - (-cc.field_t.field_B - 4);
             wd.field_o[6] = var2 + cc.field_t.field_B + (200 + cc.field_t.field_H);
-            ek.field_e[6] = 2 * var2 + 30;
+            IterableNodeHashTable.field_e[6] = 2 * var2 + 30;
             return true;
           }
           var2Lifetime3 = cc.field_t.field_E - (-cc.field_t.field_B - 4);
           wd.field_o[6] = var2Lifetime3 + cc.field_t.field_B + (200 + cc.field_t.field_H);
-          ek.field_e[6] = 2 * var2Lifetime3 + 30;
+          IterableNodeHashTable.field_e[6] = 2 * var2Lifetime3 + 30;
           return true;
         }
         aa.field_c = cc.field_t.a(jg.field_n[12]);
@@ -77,13 +77,13 @@ final class gl {
         if (var1Lifetime1 <= aa.field_c) {
           var2Lifetime1 = cc.field_t.field_E - (-cc.field_t.field_B - 4);
           wd.field_o[6] = var2Lifetime1 + cc.field_t.field_B + (200 + cc.field_t.field_H);
-          ek.field_e[6] = 2 * var2Lifetime1 + 30;
+          IterableNodeHashTable.field_e[6] = 2 * var2Lifetime1 + 30;
           return true;
         }
         aa.field_c = var1Lifetime1;
         var2Lifetime2 = cc.field_t.field_E - (-cc.field_t.field_B - 4);
         wd.field_o[6] = var2Lifetime2 + cc.field_t.field_B + (200 + cc.field_t.field_H);
-        ek.field_e[6] = 2 * var2Lifetime2 + 30;
+        IterableNodeHashTable.field_e[6] = 2 * var2Lifetime2 + 30;
         return true;
     }
 

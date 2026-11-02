@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends ca {
+final class ud extends IntrusiveNode {
     static int field_j;
     int[] field_n;
     int field_k;

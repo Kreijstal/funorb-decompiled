@@ -112,7 +112,7 @@ final class eh {
                 this.field_b.a(false, bi.field_c, 6, 0);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param4) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -128,7 +128,7 @@ final class eh {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var10 = (255 & bi.field_c[6]) + (((255 & bi.field_c[4]) << 16) + (65280 & bi.field_c[5] << 8));
                         var13 = 255 & bi.field_c[7];
@@ -144,7 +144,7 @@ final class eh {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var10 = ((255 & bi.field_c[6]) << 16) + (65280 & bi.field_c[7] << 8) + (255 & bi.field_c[8]);
                         var12 = ((bi.field_c[4] & 255) << 8) + (bi.field_c[5] & 255);

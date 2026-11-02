@@ -57,8 +57,8 @@ final class uj implements Runnable {
 
     final static void c(byte param0) {
         lb.a(true);
-        if (null != tf.field_f) {
-          hl.a(tf.field_f, 106);
+        if (null != GameAppletShell.field_f) {
+          hl.a(GameAppletShell.field_f, 106);
         }
         fd.b(-82);
         km.b(-100);
@@ -152,9 +152,9 @@ final class uj implements Runnable {
             if (var5_ref_hc != null &&
               var5_ref_hc.field_h < var3) {
               var5_ref_hc.b(57);
-              tf.field_c = var5_ref_hc.field_m.length;
+              GameAppletShell.field_c = var5_ref_hc.field_m.length;
               cd.field_t.field_i = 0;
-              for (var6_int = 0; var6_int < tf.field_c; var6_int++) {
+              for (var6_int = 0; var6_int < GameAppletShell.field_c; var6_int++) {
                 cd.field_t.field_j[var6_int] = var5_ref_hc.field_m[var6_int];
               }
               lh.field_c = fe.field_b;
@@ -172,7 +172,7 @@ final class uj implements Runnable {
               }
               vb.field_i = cd.field_t.o(-75);
               cd.field_t.field_i = 0;
-              tf.field_c = param0[vb.field_i];
+              GameAppletShell.field_c = param0[vb.field_i];
             }
             if (!ce.a(-106)) {
               return false;
@@ -192,8 +192,8 @@ final class uj implements Runnable {
                 var5 = 0;
               }
             }
-            var6 = new hc(var3 + (long)var5, vb.field_i, new byte[tf.field_c]);
-            for (var7 = 0; var7 < tf.field_c; var7++) {
+            var6 = new hc(var3 + (long)var5, vb.field_i, new byte[GameAppletShell.field_c]);
+            for (var7 = 0; var7 < GameAppletShell.field_c; var7++) {
               var6.field_m[var7] = cd.field_t.field_j[var7];
             }
             t.field_q.a(-97, var6);

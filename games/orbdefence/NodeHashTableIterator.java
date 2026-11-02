@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class pl implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     static String field_a;
     static String field_i;
     static String field_h;
-    private ca field_c;
+    private IntrusiveNode field_c;
     static int field_d;
-    private ca field_g;
-    private ek field_e;
+    private IntrusiveNode field_g;
+    private IterableNodeHashTable field_e;
     private int field_b;
     static String field_f;
 
     public final boolean hasNext() {
-        ca[] fieldTemp$0 = null;
+        IntrusiveNode[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
         int var2;
         var2 = OrbDefence.field_D ? 1 : 0;
@@ -36,11 +36,11 @@ final class pl implements Iterator {
     }
 
     public final Object next() {
-        ca[] fieldTemp$0 = null;
+        IntrusiveNode[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
         int var2;
-        ca var3;
-        ca var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = OrbDefence.field_D ? 1 : 0;
         if (this.field_e.field_b[this.field_b - 1] != this.field_c) {
           var4 = this.field_c;
@@ -67,7 +67,7 @@ final class pl implements Iterator {
         this.field_c = this.field_e.field_b[0].field_e;
         this.field_g = null;
         if (param0 != 103) {
-          this.field_e = (ek) null;
+          this.field_e = (IterableNodeHashTable) null;
           return;
         }
     }
@@ -80,12 +80,12 @@ final class pl implements Iterator {
           field_h = null;
           return;
         }
-        pl.a(-5);
+        NodeHashTableIterator.a(-5);
         field_a = null;
         field_h = null;
     }
 
-    pl(ek param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_g = null;
         try {
           this.field_e = param0;

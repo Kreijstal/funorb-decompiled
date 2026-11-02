@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fh {
+abstract class RasterBuffer {
     static String field_b;
     int field_f;
     java.awt.Image field_a;
@@ -95,7 +95,7 @@ abstract class fh {
           var10.n(9471);
           cg.field_c = mc.a(12, var10);
           if (param1 != -237) {
-            fh.a((byte) -39);
+            RasterBuffer.a((byte) -39);
           }
           tc.field_a = new wd[var3];
           ne.field_a = new int[var3][];
@@ -136,7 +136,7 @@ abstract class fh {
         bl.field_n.c(param3, param1);
         if (param0 != 8) {
           ki var5 = (ki) null;
-          fh.a((ki) null, 88);
+          RasterBuffer.a((ki) null, 88);
         }
         if (param2) {
           var4 = 2 * (le.field_c % bl.field_n.field_o);
@@ -170,7 +170,7 @@ abstract class fh {
         try {
           if (param2 > -74) {
             var5 = (ki) null;
-            fh.a((ki) null, -76, (byte) -18, -119);
+            RasterBuffer.a((ki) null, -76, (byte) -18, -119);
           }
           if (pk.a(-128, param3, param0, param1)) {
             stackIn_6_0 = lm.a(-127);
@@ -203,7 +203,7 @@ abstract class fh {
         bl.field_n.c(param3, param1);
         if (param0 != 8) {
           ki var5 = (ki) null;
-          fh.a((ki) null, 88);
+          RasterBuffer.a((ki) null, 88);
         }
         if (param2) {
           var4 = 2 * (le.field_c % bl.field_n.field_o);

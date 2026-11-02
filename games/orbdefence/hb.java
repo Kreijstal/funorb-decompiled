@@ -16,7 +16,7 @@ final class hb {
         } else {
           if (null != ne.field_b) {
             mg.field_k = ne.field_b.c(126);
-            fh.a(17489, 2);
+            RasterBuffer.a(17489, 2);
           } else {
             mg.field_k = wd.a(480, (byte) 109, 0, 0, wc.field_c, 640);
           }
@@ -28,7 +28,7 @@ final class hb {
           }
         }
         if (null == ne.field_b &&
-          fh.field_c) {
+          RasterBuffer.field_c) {
           gb.a(true, var2, param0);
         }
         if (param1 > -119) {
@@ -65,7 +65,7 @@ final class hb {
               th.a(113);
               return;
             }
-            var5 = tf.field_c - var9.field_i;
+            var5 = GameAppletShell.field_c - var9.field_i;
             var11 = var4.field_g;
             var10 = var11;
             var6 = var10;

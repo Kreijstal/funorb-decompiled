@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aj {
-    static tf field_b;
+    static GameAppletShell field_b;
     static ba field_a;
     static int field_c;
     private static String field_z;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends ca {
+final class dc extends IntrusiveNode {
     static volatile long field_j;
     boolean field_g;
     int[] field_f;

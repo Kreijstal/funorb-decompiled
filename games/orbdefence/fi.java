@@ -65,7 +65,7 @@ final class fi implements td {
           }
           for (var4 = 0; param1.length() > var4; var4++) {
             if (!vg.a(param1.charAt(var4), -22118)) {
-              stackIn_9_0 = pl.field_i;
+              stackIn_9_0 = NodeHashTableIterator.field_i;
               return stackIn_9_0;
             }
           }

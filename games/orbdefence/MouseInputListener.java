@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputListener implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static int field_b;
     static hj field_a;
 
@@ -136,7 +136,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             nl.field_d = 0;
             bl.field_g = -1;
             ic.field_g = -1;
-            tf.field_m = true;
+            GameAppletShell.field_m = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,7 +165,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -11) {
-            gk.a(-96);
+            MouseInputListener.a(-96);
           }
           stackIn_3_0 = ik.a(bb.a(param0, 100, 96), -129);
           return stackIn_3_0;
@@ -186,7 +186,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public static void a(int param0) {
         if (param0 != 8) {
           String var2 = (String) null;
-          gk.a((String) null, (byte) -107);
+          MouseInputListener.a((String) null, (byte) -107);
         }
         field_a = null;
     }
@@ -196,9 +196,9 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         if (param0 != 2) {
           return;
         }
-        if (ij.field_g < 224) {
-          var1 = ij.field_g % 32;
-          ia.b(32 + ij.field_g - var1, -23235);
+        if (ImageProducerRasterBuffer.field_g < 224) {
+          var1 = ImageProducerRasterBuffer.field_g % 32;
+          ia.b(32 + ImageProducerRasterBuffer.field_g - var1, -23235);
         } else {
           ia.b(256, -23235);
         }
@@ -225,7 +225,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             nl.field_d = 0;
             bl.field_g = param0.getX();
             ic.field_g = param0.getY();
-            tf.field_m = true;
+            GameAppletShell.field_m = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -272,7 +272,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             if (0 != (4 & var2_int)) {
               sd.field_c = sd.field_c | 4;
             }
-            tf.field_m = true;
+            GameAppletShell.field_m = true;
           }
           if (param0.isPopupTrigger()) {
             param0.consume();
@@ -303,7 +303,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (nk.field_q != null) {
             nl.field_d = 0;
             db.field_f = 0;
-            tf.field_m = true;
+            GameAppletShell.field_m = true;
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
               sd.field_c = sd.field_c & -2;
@@ -344,7 +344,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             nl.field_d = 0;
             bl.field_g = param0.getX();
             ic.field_g = param0.getY();
-            tf.field_m = true;
+            GameAppletShell.field_m = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -367,7 +367,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             nl.field_d = 0;
             bl.field_g = param0.getX();
             ic.field_g = param0.getY();
-            tf.field_m = true;
+            GameAppletShell.field_m = true;
           }
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "gk.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');

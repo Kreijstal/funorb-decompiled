@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gj extends ca {
+final class gj extends IntrusiveNode {
     static java.awt.Image field_f;
     long[][] field_p;
     int field_o;

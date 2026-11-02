@@ -22,7 +22,7 @@ final class fe {
     final static void a(int param0, int param1, pf param2, pf param3, int param4, int param5) {
         try {
           gj.field_g = param3;
-          ol.field_b = param1;
+          DualLinkDequeIterator.field_b = param1;
           mj.field_f = param4;
           gg.field_N = param0;
           lc.field_v = param2;
@@ -72,7 +72,7 @@ final class fe {
           for (var2_int = 0; rc.field_d > var2_int; var2_int++) {
             bc.field_o[var2_int + param0] = var2_int;
           }
-          dm.a(param0 + param0, qh.field_a, false, jl.field_d, param0 + rc.field_d, param0, -116);
+          dm.a(param0 + param0, KeyboardListener.field_a, false, jl.field_d, param0 + rc.field_d, param0, -116);
           if (rc.field_d <= param0) {
             return;
           }

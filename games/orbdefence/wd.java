@@ -195,13 +195,13 @@ final class wd {
         }
     }
 
-    final static ea a(int param0, byte param1, int param2, int param3, be param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, byte param1, int param2, int param3, be param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        ea var7 = null;
+        FullscreenFocusCanvas var7 = null;
         be var8 = null;
         java.awt.Frame var9 = null;
-        ea stackIn_6_0 = null;
+        FullscreenFocusCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -216,7 +216,7 @@ final class wd {
           if (var9 == null) {
             return null;
           }
-          var7 = new ea();
+          var7 = new FullscreenFocusCanvas();
           var7.field_c = var9;
           var7.field_c.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param5, param0);

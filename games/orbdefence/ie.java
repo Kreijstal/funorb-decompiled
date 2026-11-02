@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ie extends o {
+class ie extends DualLinkNode {
     final static boolean a(int param0, int param1, String param2, String param3, rf param4, boolean param5, String param6) {
         RuntimeException var7 = null;
         ig var8 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kc extends o {
+abstract class kc extends DualLinkNode {
     private static StringBuilder field_w;
     private byte[] field_k;
     int field_H;

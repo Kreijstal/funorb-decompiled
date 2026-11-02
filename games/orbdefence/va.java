@@ -373,7 +373,7 @@ final class va {
           }
           var2Lifetime13 = jk.a(1, "boltstxt");
           if (var2Lifetime13 != null) {
-            ca.field_a = bk.a(var2Lifetime13, -12465);
+            IntrusiveNode.field_a = bk.a(var2Lifetime13, -12465);
           }
           var2Lifetime14 = jk.a(1, "barriertxt1");
           if (var2Lifetime14 != null) {
@@ -1076,7 +1076,7 @@ final class va {
           }
           throw dd.a((Throwable) ((Object) stackIn_664_0), ((StringBuilder) (Object) stackIn_664_1).append(stackIn_665_2).append(',').append(param1).append(')').toString());
         }
-        if (tf.field_e) {
+        if (GameAppletShell.field_e) {
           OrbDefence.field_D = (var3 == 0);
         }
     }

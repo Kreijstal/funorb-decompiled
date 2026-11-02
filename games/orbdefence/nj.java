@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class nj extends ca {
+final class nj extends IntrusiveNode {
     private static float[] field_t;
     private static float[] field_C;
     private static float[] field_B;

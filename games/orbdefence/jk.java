@@ -25,13 +25,13 @@ final class jk {
     private int field_m;
     private int field_o;
 
-    final ea c(int param0) {
+    final FullscreenFocusCanvas c(int param0) {
         this.field_a = th.field_e;
         this.field_h = bd.field_k;
         this.field_q.a((byte) 14, this.field_c, this.field_f);
         int var2 = -96 / ((-34 - param0) / 57);
         vc.field_a = false;
-        ea var3 = wd.a(this.field_c, (byte) 77, 0, 0, wc.field_c, this.field_f);
+        FullscreenFocusCanvas var3 = wd.a(this.field_c, (byte) 77, 0, 0, wc.field_c, this.field_f);
         if (var3 == null) {
           this.c((byte) -91);
         }
@@ -277,9 +277,9 @@ final class jk {
               uk.field_b.d(-var10 + uk.field_b.field_i, -2);
             }
             bh.a(-1, -1);
-            dh.field_bb = ea.field_f;
+            dh.field_bb = FullscreenFocusCanvas.field_f;
           }
-          if (dh.field_bb == ea.field_f &&
+          if (dh.field_bb == FullscreenFocusCanvas.field_f &&
             va.a(true, 1)) {
             var9Lifetime1 = cd.field_t.b((byte) 90);
             cd.field_t.field_i = 0;
@@ -292,12 +292,12 @@ final class jk {
                 wl.a(uj.b((byte) -120), (byte) 54);
                 kk.field_Y = ob.field_C;
                 th.a(param6 + 23856);
-                ea.field_a = false;
+                FullscreenFocusCanvas.field_a = false;
                 stackIn_36_0 = var9Lifetime1;
                 return stackIn_36_0;
               }
               if (var9Lifetime1 != 99) {
-                tf.field_c = -1;
+                GameAppletShell.field_c = -1;
                 dh.field_bb = nk.field_w;
                 ab.field_l = var9Lifetime1;
               } else {
@@ -318,7 +318,7 @@ final class jk {
                   vd.field_e[var12] = cd.field_t.f(gi.a(param6, -23760));
                 }
                 th.a(108);
-                ea.field_a = false;
+                FullscreenFocusCanvas.field_a = false;
                 stackIn_44_0 = 100 + var11;
                 return stackIn_44_0;
               }
@@ -335,25 +335,25 @@ final class jk {
               kk.field_Y = cd.field_t.g(2);
             }
             th.a(126);
-            ea.field_a = false;
+            FullscreenFocusCanvas.field_a = false;
             stackIn_54_0 = ab.field_l;
             return stackIn_54_0;
           }
           if (null == p.field_d) {
-            if (ea.field_a) {
+            if (FullscreenFocusCanvas.field_a) {
               if (30000L < ed.b(-1)) {
                 kk.field_Y = ee.field_c;
               } else {
                 kk.field_Y = dj.field_j;
               }
-              ea.field_a = false;
+              FullscreenFocusCanvas.field_a = false;
               stackIn_62_0 = 249;
               return stackIn_62_0;
             }
             var9Lifetime3 = eg.field_v;
             eg.field_v = sj.field_x;
             sj.field_x = var9Lifetime3;
-            ea.field_a = true;
+            FullscreenFocusCanvas.field_a = true;
           }
           stackIn_65_0 = -1;
           return stackIn_65_0;

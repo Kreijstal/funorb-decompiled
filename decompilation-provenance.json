@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "orbdefence": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/orbdefence"
+      },
+      "inputTreeSha256": "e3bfc367b5ea5a23b2e1c054741add7fe4ad7d766d2894095f8b176fff61de16",
+      "sources": {
+        "files": 311,
+        "sha256": "d06c581b72176c1ea66e496a8de22983689bfe2c4c0e7d9cda0fd5e24adcf44d"
+      },
+      "dictionary": {
+        "path": "decompilation/orbdefence-naming.json",
+        "sha256": "4fcd6656216913dc89da3ce28fc5a8a7c0f1696da899c2573d16cab06e61b01f"
+      },
+      "readingGuide": {
+        "path": "games/orbdefence/README.md",
+        "sha256": "3e8b0176280fe15c113a59802f7db381e43d675d052e95cac869d6fc86876ed9"
+      },
+      "rulesSha256": "a68ef607bb5dd8df1c93c5fbfa7c9b00b21dd8dd9cf95ea935b13cf18280ac35",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11761,6 +11785,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 311,
+          "sha256": "d06c581b72176c1ea66e496a8de22983689bfe2c4c0e7d9cda0fd5e24adcf44d"
         }
       },
       "pixelate": {

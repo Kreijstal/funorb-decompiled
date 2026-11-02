@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class al extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static hj field_d;
     static dd field_c;
     static int field_b;
@@ -273,7 +273,7 @@ final class al extends java.awt.Canvas {
         }
     }
 
-    al(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

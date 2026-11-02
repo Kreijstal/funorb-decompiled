@@ -205,7 +205,7 @@ final class tl {
           !(ql.field_c.length >= param0)) {
           ql.field_c = new boolean[param0 * 2];
         }
-        qh.field_a = 2147483647;
+        KeyboardListener.field_a = 2147483647;
         jl.field_d = -2147483648;
         am.field_e = 2147483647;
         hc.field_j = -2147483648;

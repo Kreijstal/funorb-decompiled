@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class qe implements Iterable {
+final class DualLinkDeque implements Iterable {
     static hj field_c;
     static hj field_b;
-    o field_a;
+    DualLinkNode field_a;
 
     public static void a(boolean param0) {
         field_c = null;
@@ -18,16 +18,16 @@ final class qe implements Iterable {
 
     final static boolean b(int param0) {
         if (param0 != 14388) {
-          qe.b(106);
+          DualLinkDeque.b(106);
           return vh.field_j;
         }
         return vh.field_j;
     }
 
-    final void a(o param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         try {
           if (param1 != 21693) {
-            qe.b(92);
+            DualLinkDeque.b(92);
           }
           if (param0.field_g != null) {
             param0.c(-1);
@@ -42,12 +42,12 @@ final class qe implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ol(this));
+        return (Iterator) ((Object) new DualLinkDequeIterator(this));
     }
 
-    final o a(int param0) {
+    final DualLinkNode a(int param0) {
         int var2 = 13 % ((21 - param0) / 47);
-        o var3 = this.field_a.field_f;
+        DualLinkNode var3 = this.field_a.field_f;
         if (this.field_a != var3) {
           var3.c(-1);
           return var3;
@@ -55,7 +55,7 @@ final class qe implements Iterable {
         return null;
     }
 
-    private qe() throws Throwable {
+    private DualLinkDeque() throws Throwable {
         throw new Error();
     }
 

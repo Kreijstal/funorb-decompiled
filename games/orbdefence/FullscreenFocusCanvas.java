@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_g;
     static tl field_f;
     static long field_h;
@@ -21,7 +21,7 @@ final class ea extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           if (param1 > -85) {
             dl var4 = (dl) null;
-            ea.a(7, (dl) null, 115);
+            FullscreenFocusCanvas.a(7, (dl) null, 115);
           }
           tj.a(param0, this.field_c, -23144);
         } catch (RuntimeException runtimeException) {
@@ -71,7 +71,7 @@ final class ea extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    ea() {
+    FullscreenFocusCanvas() {
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {

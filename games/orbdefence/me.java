@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class me extends ca {
+final class me extends IntrusiveNode {
     static hj field_f;
     private double field_l;
     static ki field_g;
@@ -135,9 +135,9 @@ final class me extends ca {
         int var11;
         var11 = OrbDefence.field_D ? 1 : 0;
         var6 = -106 % ((param2 - 12) / 60);
-        var4 = (int)(320.0 + ((double)ol.field_e * this.field_o - (double)param0));
-        var5 = (int)((double)ol.field_e * this.field_h - (double)param1 + 240.0);
-        ol.field_e = 8;
+        var4 = (int)(320.0 + ((double)DualLinkDequeIterator.field_e * this.field_o - (double)param0));
+        var5 = (int)((double)DualLinkDequeIterator.field_e * this.field_h - (double)param1 + 240.0);
+        DualLinkDequeIterator.field_e = 8;
         var7_int = this.field_m;
         if (var7_int != 0) {
           if (var7_int != 1) {
@@ -145,7 +145,7 @@ final class me extends ca {
               if (var7_int != 2) {
                 if (var7_int != 3) {
                   if (var7_int == 5) {
-                    var7 = (double)ol.field_e;
+                    var7 = (double)DualLinkDequeIterator.field_e;
                     var9 = this.field_j * 1;
                     if (this.field_j >= 25) {
                       var9 = (-this.field_j + 50) / 2;
@@ -155,7 +155,7 @@ final class me extends ca {
                     if (6 != var7_int) {
                       if (var7_int != 7) {
                         if (var7_int == 8) {
-                          var7 = (double)ol.field_e * 0.75;
+                          var7 = (double)DualLinkDequeIterator.field_e * 0.75;
                           var9 = 25 * this.field_j;
                           if (this.field_j >= 10) {
                             var9 = -(this.field_j * 25) + 500;
@@ -165,7 +165,7 @@ final class me extends ca {
                           ul.i(var4, var5, (int)(0.5 * var7), 16777215, var9);
                         } else {
                           if (var7_int == 9) {
-                            var7 = (double)ol.field_e * 2.0;
+                            var7 = (double)DualLinkDequeIterator.field_e * 2.0;
                             var9 = 5 * this.field_j;
                             if (this.field_j >= 10) {
                               var9 = (20 - this.field_j) * 5;
@@ -176,7 +176,7 @@ final class me extends ca {
                           }
                         }
                       } else {
-                        var7 = (double)ol.field_e * 0.5;
+                        var7 = (double)DualLinkDequeIterator.field_e * 0.5;
                         var9 = 25 * this.field_j;
                         if (this.field_j >= 10) {
                           var9 = -(this.field_j * 25) + 500;
@@ -186,7 +186,7 @@ final class me extends ca {
                         ul.i(var4, var5, (int)(0.5 * var7), 16777215, var9);
                       }
                     } else {
-                      var7 = (double)ol.field_e * 0.5;
+                      var7 = (double)DualLinkDequeIterator.field_e * 0.5;
                       var9 = 50 * this.field_j;
                       if (5 <= this.field_j) {
                         var9 = (10 - this.field_j) * 10;
@@ -199,13 +199,13 @@ final class me extends ca {
                 }
               } else {
                 if (this.field_j > 0) {
-                  var7 = 0.1 * (double)ol.field_e;
+                  var7 = 0.1 * (double)DualLinkDequeIterator.field_e;
                   var9 = 16777215 - this.field_j * 328192;
                   var10 = 255 - this.field_j * 5;
                   ul.i(var4, var5, (int)var7, var9, var10);
                   ul.i(var4, var5, (int)(-1.0 + var7), var9, var10);
                 } else {
-                  var7 = 0.1 * (double)ol.field_e;
+                  var7 = 0.1 * (double)DualLinkDequeIterator.field_e;
                   var9 = 16777215;
                   var10 = 255;
                   ul.i(var4, var5, (int)var7, var9, var10);
@@ -213,7 +213,7 @@ final class me extends ca {
                 }
               }
             } else {
-              var7 = (double)ol.field_e;
+              var7 = (double)DualLinkDequeIterator.field_e;
               var9 = 16 * this.field_j / 25;
               if (var9 >= 16) {
                 var9 = 15;
@@ -221,7 +221,7 @@ final class me extends ca {
               gd.field_b[var9].e((int)((double)var4 - var7), (int)(-var7 + (double)var5), (int)(2.0 * var7), (int)(var7 * 2.0), 64);
             }
           } else {
-            var7 = (double)(2 * ol.field_e);
+            var7 = (double)(2 * DualLinkDequeIterator.field_e);
             var9 = this.field_j * 16 / 50;
             if (var9 >= 16) {
               var9 = 15;

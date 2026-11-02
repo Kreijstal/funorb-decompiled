@@ -521,13 +521,13 @@ final class rf extends ta implements ff, ai, bf {
           if (0 != param1) {
             if (1 != param1) {
               if (param1 == 2) {
-                ol.a("conduct.ws", 1);
+                DualLinkDequeIterator.a("conduct.ws", 1);
               }
             } else {
-              ol.a("privacy.ws", 1);
+              DualLinkDequeIterator.a("privacy.ws", 1);
             }
           } else {
-            ol.a("terms.ws", 1);
+            DualLinkDequeIterator.a("terms.ws", 1);
           }
           if (param2 == 101) {
             return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends ca {
+final class oj extends IntrusiveNode {
     private int field_i;
     private int field_n;
     private int field_h;
@@ -236,8 +236,8 @@ final class oj extends ca {
 
     oj(int param0, int param1, lb param2, int param3) {
         try {
-          this.field_k = param1 * ol.field_e << 4;
-          this.field_f = ol.field_e * param0 << 4;
+          this.field_k = param1 * DualLinkDequeIterator.field_e << 4;
+          this.field_f = DualLinkDequeIterator.field_e * param0 << 4;
           this.field_l = (int)(-80.0 + Math.random() * 161.0);
           this.field_h = (int)(Math.random() * 161.0 - 80.0);
           this.field_i = 1;
@@ -263,8 +263,8 @@ final class oj extends ca {
 
     oj(int param0, int param1, lb param2, int param3, int param4) {
         try {
-          this.field_k = param1 * ol.field_e << 4;
-          this.field_f = param0 * ol.field_e << 4;
+          this.field_k = param1 * DualLinkDequeIterator.field_e << 4;
+          this.field_f = param0 * DualLinkDequeIterator.field_e << 4;
           this.field_l = (int)(-80.0 + Math.random() * 161.0);
           this.field_h = (int)(-80.0 + Math.random() * 161.0);
           this.field_g = -param3;

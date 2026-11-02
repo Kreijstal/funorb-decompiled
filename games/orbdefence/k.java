@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class k {
-    private o field_c;
-    private o[] field_b;
+    private DualLinkNode field_c;
+    private DualLinkNode[] field_b;
     static String field_e;
     static String field_a;
     private long field_f;
     private int field_d;
 
-    final void a(int param0, o param1, long param2) {
-        o var5 = null;
+    final void a(int param0, DualLinkNode param1, long param2) {
+        DualLinkNode var5 = null;
         try {
           if (param1.field_g != null) {
             param1.c(-1);
@@ -67,12 +67,12 @@ final class k {
         k.a((byte) -75);
     }
 
-    final o c(byte param0) {
-        o var2 = null;
-        o var3 = null;
+    final DualLinkNode c(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var3 = null;
         int var4 = OrbDefence.field_D ? 1 : 0;
-        o var2Lifetime1;
-        o var3Lifetime1;
+        DualLinkNode var2Lifetime1;
+        DualLinkNode var3Lifetime1;
         if (null == this.field_c) {
           return null;
         }
@@ -103,12 +103,12 @@ final class k {
         return null;
     }
 
-    final o a(byte param0, long param1) {
-        o var5 = null;
+    final DualLinkNode a(byte param0, long param1) {
+        DualLinkNode var5 = null;
         int var6 = OrbDefence.field_D ? 1 : 0;
-        o var5Lifetime1;
+        DualLinkNode var5Lifetime1;
         this.field_f = param1;
-        o var4 = this.field_b[(int)(param1 & (long)(-1 + this.field_d))];
+        DualLinkNode var4 = this.field_b[(int)(param1 & (long)(-1 + this.field_d))];
         this.field_c = var4.field_f;
         if (param0 > 97) {
           while (this.field_c != var4) {
@@ -137,12 +137,12 @@ final class k {
 
     k(int param0) {
         int var2 = 0;
-        o dupTemp$1 = null;
-        o var3;
-        this.field_b = new o[param0];
+        DualLinkNode dupTemp$1 = null;
+        DualLinkNode var3;
+        this.field_b = new DualLinkNode[param0];
         this.field_d = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new o();
+          dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_b[var2] = dupTemp$1;
           var3.field_g = var3;
