@@ -4,7 +4,7 @@
 final class oba extends gda {
     float field_j;
     float field_p;
-    static jqa field_e;
+    static BufferedSocket field_e;
     float field_h;
     float field_o;
     float field_k;
@@ -19,20 +19,20 @@ final class oba extends gda {
     float field_s;
 
     final float[] e(int param0) {
-        gt.field_c[10] = this.field_q;
-        gt.field_c[14] = this.field_o;
-        gt.field_c[12] = this.field_m;
-        gt.field_c[8] = this.field_s;
-        gt.field_c[4] = this.field_k;
-        gt.field_c[5] = this.field_r;
-        gt.field_c[0] = this.field_l;
-        gt.field_c[9] = this.field_g;
-        gt.field_c[2] = this.field_j;
-        gt.field_c[13] = this.field_p;
+        GameKeyHandler.field_c[10] = this.field_q;
+        GameKeyHandler.field_c[14] = this.field_o;
+        GameKeyHandler.field_c[12] = this.field_m;
+        GameKeyHandler.field_c[8] = this.field_s;
+        GameKeyHandler.field_c[4] = this.field_k;
+        GameKeyHandler.field_c[5] = this.field_r;
+        GameKeyHandler.field_c[0] = this.field_l;
+        GameKeyHandler.field_c[9] = this.field_g;
+        GameKeyHandler.field_c[2] = this.field_j;
+        GameKeyHandler.field_c[13] = this.field_p;
         int var2 = 108 / ((param0 - 0) / 43);
-        gt.field_c[1] = this.field_i;
-        gt.field_c[6] = this.field_h;
-        return gt.field_c;
+        GameKeyHandler.field_c[1] = this.field_i;
+        GameKeyHandler.field_c[6] = this.field_h;
+        return GameKeyHandler.field_c;
     }
 
     final static boolean c(int param0, int param1, int param2) {
@@ -244,29 +244,29 @@ final class oba extends gda {
     }
 
     final float[] b(byte param0) {
-        gt.field_c[12] = 0.0f;
-        gt.field_c[9] = this.field_g;
-        gt.field_c[2] = this.field_j;
-        gt.field_c[14] = 0.0f;
-        gt.field_c[8] = this.field_s;
-        gt.field_c[4] = this.field_k;
-        gt.field_c[13] = 0.0f;
+        GameKeyHandler.field_c[12] = 0.0f;
+        GameKeyHandler.field_c[9] = this.field_g;
+        GameKeyHandler.field_c[2] = this.field_j;
+        GameKeyHandler.field_c[14] = 0.0f;
+        GameKeyHandler.field_c[8] = this.field_s;
+        GameKeyHandler.field_c[4] = this.field_k;
+        GameKeyHandler.field_c[13] = 0.0f;
         if (param0 == 57) {
-          gt.field_c[1] = this.field_i;
-          gt.field_c[10] = this.field_q;
-          gt.field_c[0] = this.field_l;
-          gt.field_c[5] = this.field_r;
-          gt.field_c[6] = this.field_h;
-          return gt.field_c;
+          GameKeyHandler.field_c[1] = this.field_i;
+          GameKeyHandler.field_c[10] = this.field_q;
+          GameKeyHandler.field_c[0] = this.field_l;
+          GameKeyHandler.field_c[5] = this.field_r;
+          GameKeyHandler.field_c[6] = this.field_h;
+          return GameKeyHandler.field_c;
         }
         gda var3 = (gda) null;
         this.a((gda) null, 114);
-        gt.field_c[1] = this.field_i;
-        gt.field_c[10] = this.field_q;
-        gt.field_c[0] = this.field_l;
-        gt.field_c[5] = this.field_r;
-        gt.field_c[6] = this.field_h;
-        return gt.field_c;
+        GameKeyHandler.field_c[1] = this.field_i;
+        GameKeyHandler.field_c[10] = this.field_q;
+        GameKeyHandler.field_c[0] = this.field_l;
+        GameKeyHandler.field_c[5] = this.field_r;
+        GameKeyHandler.field_c[6] = this.field_h;
+        return GameKeyHandler.field_c;
     }
 
     final void a(gda param0, int param1) {

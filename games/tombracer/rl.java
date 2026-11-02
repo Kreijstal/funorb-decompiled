@@ -9,7 +9,7 @@ final class rl extends pd {
     static boolean[][] field_u;
     static int field_w;
 
-    rl(la param0, kh param1, boolean param2) {
+    rl(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_x = new wf(param0, param1);
@@ -20,8 +20,8 @@ final class rl extends pd {
 
     final int a(boolean param0) {
         if (param0) {
-          kh var3 = (kh) null;
-          this.a(false, (kh) null);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a(false, (BitPacketBuffer) null);
           return 7;
         }
         return 7;
@@ -34,7 +34,7 @@ final class rl extends pd {
         this.field_x = this.field_x.e(-1);
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_x.a(-29928, param1);
@@ -109,7 +109,7 @@ final class rl extends pd {
         }
     }
 
-    final boolean a(int param0, hca param1) {
+    final boolean a(int param0, Player param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

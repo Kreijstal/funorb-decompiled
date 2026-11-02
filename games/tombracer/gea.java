@@ -139,7 +139,7 @@ final class gea {
         }
     }
 
-    gea(int param0, kh param1) {
+    gea(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         ir discarded$0 = new ir();
@@ -158,7 +158,7 @@ final class gea {
         }
     }
 
-    final void a(kh param0, int param1) {
+    final void a(BitPacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {

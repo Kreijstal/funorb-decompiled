@@ -35,7 +35,7 @@ final class rea extends nv {
         return this.field_n == 2 ? true : false;
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -67,7 +67,7 @@ final class rea extends nv {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 116, this.field_v, 8);
@@ -82,7 +82,7 @@ final class rea extends nv {
         }
     }
 
-    rea(la param0, boolean param1) {
+    rea(Room param0, boolean param1) {
         super(param0, param1);
         this.field_u = false;
         this.field_p = false;
@@ -160,7 +160,7 @@ final class rea extends nv {
         return this.field_n == 3 ? true : false;
     }
 
-    rea(la param0, kh param1, boolean param2) {
+    rea(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_8_1 = false;
         boolean stackIn_12_1 = false;
@@ -232,9 +232,9 @@ final class rea extends nv {
         int var4;
         int var5;
         int var6_int;
-        la var6;
+        Room var6;
         int var7;
-        hca var8;
+        Player var8;
         var7 = TombRacer.field_G ? 1 : 0;
         var8 = this.field_g.H(param0 - 5537);
         var3 = this.field_p ? 1 : 0;

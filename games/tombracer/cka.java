@@ -874,7 +874,7 @@ final class cka extends ha {
               var3.a((byte) 114, 0.0f);
               var3.a((byte) 114, 0.0f);
             }
-            this.field_X = this.a(var3.field_h, var3.field_g, 20, false, (byte) 108);
+            this.field_X = this.a(var3.position, var3.payload, 20, false, (byte) 108);
             this.field_Bc = new tj(this.field_X, 5126, 3, 0);
             this.field_Rb = new tj(this.field_X, 5126, 2, 12);
             this.field_Ec.a(22091, this);
@@ -2774,7 +2774,7 @@ final class cka extends ha {
         kba var3 = null;
         cla var3_ref = null;
         RuntimeException var3_ref2 = null;
-        od var4 = null;
+        DualLinkNode var4 = null;
         int var6 = 0;
         cla var7 = null;
         cla var8 = null;
@@ -2801,8 +2801,8 @@ final class cka extends ha {
                   var4 = this.field_F.b(-125);
                   if (var4 != null) {
                     var10 = (kba) (var4);
-                    var10.c(-7975);
-                    var10.p(125);
+                    var10.unlinkSecondary(-7975);
+                    var10.unlink(125);
                     var10.g(77);
                     this.field_rc = this.field_rc - var10.field_o;
                     continue;
@@ -2828,8 +2828,8 @@ final class cka extends ha {
                 var4 = this.field_F.b(-119);
                 if (var4 != null) {
                   var8 = (cla) (var4);
-                  var8.c(-7975);
-                  var8.p(21);
+                  var8.unlinkSecondary(-7975);
+                  var8.unlink(21);
                   this.field_l.releasePbuffer(var8.a((byte) 101));
                   this.field_rc = this.field_rc - var8.field_p;
                   continue;

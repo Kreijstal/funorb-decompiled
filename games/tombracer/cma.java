@@ -23,10 +23,10 @@ final class cma extends ci {
         this.field_n = 409;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var5 = 0;
         int var6 = 0;
-        uia var7 = null;
+        PacketBuffer var7 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -36,8 +36,8 @@ final class cma extends ci {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 107) {
-            var7 = (uia) null;
-            this.a((byte) -33, (uia) null, 70);
+            var7 = (PacketBuffer) null;
+            this.a((byte) -33, (PacketBuffer) null, 70);
           }
           var5 = param2;
           if (var5 == 0) {

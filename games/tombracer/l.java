@@ -180,7 +180,7 @@ class l extends cg {
           if (param1.field_t < 0) {
             return true;
           }
-          param1.p(70);
+          param1.unlink(70);
           if (param1.field_z > 0 &&
             this.field_n[param1.field_k][param1.field_z] == param1) {
             this.field_n[param1.field_k][param1.field_z] = null;
@@ -660,7 +660,7 @@ class l extends cg {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           if (this.field_w.g()) {
-            var4_int = this.field_w.field_e * this.field_H / kta.field_d;
+            var4_int = this.field_w.field_e * this.field_H / AudioOutput.field_d;
             while (true) {
               var5 = (long)var4_int * (long)param2 + this.field_E;
               if (this.field_B - var5 >= 0L) {
@@ -721,7 +721,7 @@ class l extends cg {
             if (stackIn_16_0 < 0 ||
               param1 == var3.field_k) {
               if (null != var3.field_x) {
-                var3.field_x.d(kta.field_d / 100);
+                var3.field_x.d(AudioOutput.field_d / 100);
                 if (var3.field_x.m()) {
                   this.field_v.field_m.a(var3.field_x);
                 }
@@ -730,7 +730,7 @@ class l extends cg {
               if (var3.field_t < 0) {
                 this.field_I[var3.field_k][var3.field_m] = null;
               }
-              var3.p(100);
+              var3.unlink(100);
             }
             var3 = (rta) (this.field_v.field_l.e(118));
             continue;
@@ -754,7 +754,7 @@ class l extends cg {
         boolean decompiledFrameCompleted0 = true;
         var6 = TombRacer.field_G ? 1 : 0;
         if (this.field_w.g()) {
-          var2 = this.field_H * this.field_w.field_e / kta.field_d;
+          var2 = this.field_H * this.field_w.field_e / AudioOutput.field_d;
           while (true) {
             var3 = this.field_E + (long)var2 * (long)param0;
             if (-var3 + this.field_B >= 0L) {
@@ -817,7 +817,7 @@ class l extends cg {
             var7 = Math.sin((double)(511 & param1.field_p) * 0.01227184630308513);
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)((double)(256 * param1.field_n.field_j) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)kta.field_d + 0.5);
+          var5Lifetime1 = (int)((double)(256 * param1.field_n.field_j) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)AudioOutput.field_d + 0.5);
           stackIn_13_0 = (var5Lifetime1 < 1) ? 1 : var5Lifetime1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -915,11 +915,11 @@ class l extends cg {
         int var11 = 0;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          param0.field_B = kta.field_d / 100;
+          param0.field_B = AudioOutput.field_d / 100;
           if (param0.field_t >= 0 && (null == param0.field_x ||
             param0.field_x.e())) {
             param0.a(5806);
-            param0.p(39);
+            param0.unlink(39);
             if (param0.field_z > 0 &&
               param0 == this.field_n[param0.field_k][param0.field_z]) {
               this.field_n[param0.field_k][param0.field_z] = null;
@@ -1045,7 +1045,7 @@ class l extends cg {
           }
           param0.a(param3 ^ 5800);
           if (param0.field_t >= 0) {
-            param0.p(69);
+            param0.unlink(69);
             if (param0.field_z > 0 &&
               param0 == this.field_n[param0.field_k][param0.field_z]) {
               this.field_n[param0.field_k][param0.field_z] = null;

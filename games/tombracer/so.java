@@ -58,16 +58,16 @@ final class so extends tra implements mk {
             bga.field_b = 200;
             var1 = (vb) (tna.field_e.f(-80));
             while (var1 != null) {
-              if (!var1.field_h.l((byte) -101)) {
-                var1.p(21);
+              if (!var1.field_h.isLinked((byte) -101)) {
+                var1.unlink(21);
               }
               var1 = (vb) (tna.field_e.e(110));
             }
             if (db.field_f != null) {
               var1Lifetime1 = (vb) (db.field_f.f(param0 ^ 16378));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_h.l((byte) -91)) {
-                  var1Lifetime1.p(param0 + 16389);
+                if (!var1Lifetime1.field_h.isLinked((byte) -91)) {
+                  var1Lifetime1.unlink(param0 + 16389);
                 }
                 var1Lifetime1 = (vb) (db.field_f.e(118));
               }

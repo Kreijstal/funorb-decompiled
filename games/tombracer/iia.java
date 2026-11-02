@@ -69,13 +69,13 @@ final class iia extends ci {
           if (this.field_m <= 0) {
             stackIn_4_0 = 4096;
           } else {
-            stackIn_4_0 = 4096 - jqa.a(this.field_m, param6, 66);
+            stackIn_4_0 = 4096 - BufferedSocket.a(this.field_m, param6, 66);
           }
           var8_int = stackIn_4_0;
           var9 = this.field_u * this.field_o >> 12;
           stackIn_6_0 = this.field_o;
           if (var9 > 0) {
-            stackIn_7_1 = jqa.a(var9, param6, 83);
+            stackIn_7_1 = BufferedSocket.a(var9, param6, 83);
           } else {
             stackIn_7_1 = 0;
           }
@@ -253,7 +253,7 @@ final class iia extends ci {
         return param1;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -425,8 +425,8 @@ final class iia extends ci {
           var20 = var47;
           var21 = new Random((long)this.field_x);
           while (true) {
-            var23 = var14 + jqa.a(-var14 + var15, var21, 126);
-            var24 = var16 + jqa.a(-var16 + var17, var21, 96);
+            var23 = var14 + BufferedSocket.a(-var14 + var15, var21, 126);
+            var24 = var16 + BufferedSocket.a(-var16 + var17, var21, 96);
             var25 = var8 + var23;
             if (ns.field_g < var25) {
               var25 = ns.field_g;
@@ -533,7 +533,7 @@ final class iia extends ci {
             var12 = var13;
             var7 = var6;
             var13 = 0;
-            var6 = jqa.a(ns.field_g, var21, 71);
+            var6 = BufferedSocket.a(ns.field_g, var21, 71);
             var5 = var6 - var7;
             var8 = 0;
             var28Lifetime1 = var5;

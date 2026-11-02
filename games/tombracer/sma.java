@@ -159,8 +159,8 @@ final class sma {
         int var2;
         int var3;
         int var4;
-        hca[] var5;
-        hca var7;
+        Player[] var5;
+        Player var7;
         int var8;
         int var9;
         int var2Lifetime1;

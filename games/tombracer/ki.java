@@ -7,7 +7,7 @@ final class ki extends dg {
     static String field_p;
     private int field_m;
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         try {
           super.a(127, param1, param2);
           if (param0 <= 119) {
@@ -19,7 +19,7 @@ final class ki extends dg {
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) 115, param1);
           int var3_int = 44 / ((param0 + 8) / 40);
@@ -47,7 +47,7 @@ final class ki extends dg {
         }
     }
 
-    final static wda a(kh param0, byte param1, la param2, boolean param3) {
+    final static wda readLocomotor(BitPacketBuffer param0, byte param1, Room param2, boolean param3) {
         wi stackIn_26_0 = null;
         bg stackIn_28_0 = null;
         nj stackIn_30_0 = null;
@@ -182,7 +182,7 @@ final class ki extends dg {
         }
     }
 
-    ki(int param0, la param1, kh param2) {
+    ki(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 

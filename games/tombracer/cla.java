@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cla extends od {
+final class cla extends DualLinkNode {
     static String field_o;
     private long field_k;
     int field_p;
@@ -65,7 +65,7 @@ final class cla extends od {
             return false;
           }
           uca.field_d = vc.field_q.h(255);
-          vc.field_q.field_h = 0;
+          vc.field_q.position = 0;
         }
         if (param0 != 0) {
           return true;
@@ -77,7 +77,7 @@ final class cla extends od {
           return false;
         }
         uca.field_d = vc.field_q.d(125);
-        vc.field_q.field_h = 0;
+        vc.field_q.position = 0;
         return ama.a(uca.field_d, -1);
     }
 

@@ -38,7 +38,7 @@ final class rf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        kh var5 = null;
+        BitPacketBuffer var5 = null;
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param1);
@@ -74,11 +74,11 @@ final class rf {
           }
           var5 = ql.field_k;
           var5.k(param2, -2988);
-          var5.field_h = var5.field_h + 1;
-          var4 = var5.field_h;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.i(0, 0);
           var5.a(param1, false);
-          var5.d(var5.field_h - var4, (byte) 40);
+          var5.d(var5.position - var4, (byte) 40);
           stackIn_30_0 = null;
           return (String) (stackIn_30_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

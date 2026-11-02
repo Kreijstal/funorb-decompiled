@@ -17,7 +17,7 @@ abstract class fqa extends kna {
 
     abstract boolean r(byte param0);
 
-    void a(boolean param0, kh param1) {
+    void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_G.a(param1, 115, this.o((byte) -39));
@@ -78,7 +78,7 @@ abstract class fqa extends kna {
         return true;
     }
 
-    fqa(la param0, int param1) {
+    fqa(Room param0, int param1) {
         super(param0, param1);
         try {
           this.field_G = new f(this.B(31609), 0);
@@ -87,7 +87,7 @@ abstract class fqa extends kna {
         }
     }
 
-    fqa(la param0, int param1, kh param2, csa param3) {
+    fqa(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
         try {
           this.field_G = new f(this.B(31609), 0, param0.field_E, param2);

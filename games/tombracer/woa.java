@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class woa extends od {
+final class woa extends DualLinkNode {
     byte[] field_k;
     static String field_l;
 

@@ -1077,7 +1077,7 @@ public final class cta extends eo {
         int var2;
         ica var3;
         if (null == this.field_Vc &&
-          od.field_h != this.field_v[this.field_Cc]) {
+          DualLinkNode.field_h != this.field_v[this.field_Cc]) {
           if (pfa.field_i == this.field_v[this.field_Cc]) {
             this.field_jd.SetTransform(16 + this.field_Cc, this.field_hc[this.field_Cc].a((byte) -114, field_hd));
           } else {

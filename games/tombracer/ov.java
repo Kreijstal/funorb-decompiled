@@ -39,7 +39,7 @@ final class ov extends nv implements mra {
         int var7;
         int var8;
         int var9_int;
-        la var9;
+        Room var9;
         int var10;
         pc var11;
         int var12;
@@ -174,7 +174,7 @@ final class ov extends nv implements mra {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           if (param0) {
@@ -370,7 +370,7 @@ final class ov extends nv implements mra {
         }
     }
 
-    ov(la param0, kh param1, boolean param2) {
+    ov(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;
@@ -462,7 +462,7 @@ final class ov extends nv implements mra {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           this.field_r.a(this.e(6), 2348);
@@ -476,13 +476,13 @@ final class ov extends nv implements mra {
 
     final boolean p(byte param0) {
         if (param0 != 120) {
-          fsa var3 = (fsa) null;
-          this.a(true, (fsa) null);
+          Trap var3 = (Trap) null;
+          this.a(true, (Trap) null);
         }
         return false;
     }
 
-    ov(la param0, boolean param1) {
+    ov(Room param0, boolean param1) {
         super(param0, param1);
         this.field_s = new pc();
         this.field_o = 0;

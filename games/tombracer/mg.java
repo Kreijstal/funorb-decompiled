@@ -27,7 +27,7 @@ final class mg {
         this.field_c = param1;
     }
 
-    final void a(int param0, kh param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
@@ -36,8 +36,8 @@ final class mg {
             param1.a((byte) -25, this.field_i[var3_int], 12);
           }
           if (param0 != 15637) {
-            kh var5 = (kh) null;
-            this.a(-109, (kh) null);
+            BitPacketBuffer var5 = (BitPacketBuffer) null;
+            this.a(-109, (BitPacketBuffer) null);
           }
           param1.a((byte) -36, this.field_c, 12);
         } catch (RuntimeException runtimeException) {
@@ -186,7 +186,7 @@ final class mg {
         }
     }
 
-    mg(int param0, kh param1) {
+    mg(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         this.field_f = -1;

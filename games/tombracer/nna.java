@@ -38,7 +38,7 @@ final class nna {
     final static String a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        kh var5 = null;
+        BitPacketBuffer var5 = null;
         CharSequence var6 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -79,11 +79,11 @@ final class nna {
           }
           var5 = ql.field_k;
           var5.k(param2, -2988);
-          var5.field_h = var5.field_h + 1;
-          var4 = var5.field_h;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.i(2, 0);
           var5.a(param1, false);
-          var5.d(-var4 + var5.field_h, (byte) -104);
+          var5.d(-var4 + var5.position, (byte) -104);
           stackIn_22_0 = null;
           return (String) (stackIn_22_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

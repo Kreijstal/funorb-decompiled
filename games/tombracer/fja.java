@@ -76,7 +76,7 @@ final class fja extends qra {
         int var4_int;
         String var4;
         int var5_int;
-        la var5;
+        Room var5;
         int var6;
         int[][] var6_ref_int____;
         int var7_int;
@@ -89,7 +89,7 @@ final class fja extends qra {
         int var13;
         int var14;
         int[][] var15;
-        hca var16;
+        Player var16;
         String var17;
         String var18;
         int[][] var19;
@@ -455,9 +455,9 @@ final class fja extends qra {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
-        uia stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         String stackIn_15_1 = null;
-        uia stackIn_17_0 = null;
+        PacketBuffer stackIn_17_0 = null;
         String stackIn_18_1 = null;
         int stackIn_33_0 = 0;
         int stackIn_46_0 = 0;
@@ -508,11 +508,11 @@ final class fja extends qra {
             return stackIn_8_0;
           }
           if (km.field_p == sua.field_G) {
-            ql.field_k.field_h = 0;
+            ql.field_k.position = 0;
             kia.field_b = null;
             if (param1 != null) {
               var9 = 0;
-              jg.field_a.field_h = 0;
+              jg.field_a.position = 0;
               if (param2) {
                 var9 = var9 | 1;
               }
@@ -526,17 +526,17 @@ final class fja extends qra {
               jg.field_a.i(param3, 0);
               jg.field_a.i(var9, 0);
               ql.field_k.i(18, 0);
-              ql.field_k.field_h = ql.field_k.field_h + 2;
-              var10 = ql.field_k.field_h;
+              ql.field_k.position = ql.field_k.position + 2;
+              var10 = ql.field_k.position;
               var11_ref_StringLifetime4 = qla.a(0, di.a(62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
               ql.field_k.a(var11_ref_StringLifetime4, false);
               bna.a(oca.field_a, false, c.field_f, ql.field_k, jg.field_a);
-              ql.field_k.b(ql.field_k.field_h - var10, (byte) -35);
+              ql.field_k.b(ql.field_k.position - var10, (byte) -35);
             } else {
-              jg.field_a.field_h = 0;
+              jg.field_a.position = 0;
               jg.field_a.a(lpa.field_p.nextInt(), (byte) -106);
               jg.field_a.a(lpa.field_p.nextInt(), (byte) 92);
               stackIn_14_0 = jg.field_a;
@@ -545,27 +545,27 @@ final class fja extends qra {
               } else {
                 stackIn_15_1 = var14;
               }
-              ((uia) (Object) stackIn_14_0).a(stackIn_15_1, (byte) 0);
+              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_15_1, (byte) 0);
               stackIn_17_0 = jg.field_a;
               if (param0.a((byte) 29)) {
                 stackIn_18_1 = var8;
               } else {
                 stackIn_18_1 = "";
               }
-              ((uia) (Object) stackIn_17_0).a(stackIn_18_1, (byte) 0);
+              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_18_1, (byte) 0);
               ql.field_k.i(16, 0);
-              ql.field_k.field_h = ql.field_k.field_h + 1;
-              var9 = ql.field_k.field_h;
+              ql.field_k.position = ql.field_k.position + 1;
+              var9 = ql.field_k.position;
               bna.a(oca.field_a, false, c.field_f, ql.field_k, jg.field_a);
-              ql.field_k.d(ql.field_k.field_h - var9, (byte) -115);
+              ql.field_k.d(ql.field_k.position - var9, (byte) -115);
             }
             bl.a(-1, -1);
-            km.field_p = hca.field_p;
+            km.field_p = Player.field_p;
           }
-          if (hca.field_p == km.field_p &&
+          if (Player.field_p == km.field_p &&
             ama.a(1, -1)) {
             var9Lifetime1 = vc.field_q.h(255);
-            vc.field_q.field_h = 0;
+            vc.field_q.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               km.field_p = ne.field_c;
@@ -582,7 +582,7 @@ final class fja extends qra {
               if (99 == var9Lifetime1) {
                 ama.a(bha.f(1), -1);
                 kia.field_b = new Boolean(di.a(vc.field_q, (byte) 107));
-                vc.field_q.field_h = 0;
+                vc.field_q.position = 0;
               } else {
                 oka.field_z = var9Lifetime1;
                 km.field_p = pe.field_m;
@@ -594,7 +594,7 @@ final class fja extends qra {
             var9Lifetime2 = 2;
             if (ama.a(var9Lifetime2, -1)) {
               var10Lifetime1 = vc.field_q.d(124);
-              vc.field_q.field_h = 0;
+              vc.field_q.position = 0;
               if (ama.a(var10Lifetime1, -1)) {
                 var11 = dja.field_s.length;
                 for (var12 = 0; var11 > var12; var12++) {

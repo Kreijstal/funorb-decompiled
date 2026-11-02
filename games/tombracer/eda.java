@@ -26,36 +26,36 @@ final class eda {
         if (param0 == 0) {
           var3 = baa.field_e;
           var2 = ska.field_r;
-          kh.a(param1, var2, var3);
+          BitPacketBuffer.a(param1, var2, var3);
           return;
         }
         if (param0 == 1) {
           var3Lifetime1 = tia.field_d;
           var2Lifetime1 = ska.field_r;
-          kh.a(param1, var2Lifetime1, var3Lifetime1);
+          BitPacketBuffer.a(param1, var2Lifetime1, var3Lifetime1);
           return;
         }
         if (param0 == 4) {
           var3Lifetime2 = kva.field_s;
           var2Lifetime2 = ska.field_r;
-          kh.a(param1, var2Lifetime2, var3Lifetime2);
+          BitPacketBuffer.a(param1, var2Lifetime2, var3Lifetime2);
           return;
         }
         if (2 == param0) {
           var2Lifetime3 = vk.field_d;
           var3Lifetime3 = baa.field_e;
-          kh.a(param1, var2Lifetime3, var3Lifetime3);
+          BitPacketBuffer.a(param1, var2Lifetime3, var3Lifetime3);
           return;
         }
         if (param0 != 3) {
           var3Lifetime4 = kva.field_s;
           var2Lifetime4 = vk.field_d;
-          kh.a(param1, var2Lifetime4, var3Lifetime4);
+          BitPacketBuffer.a(param1, var2Lifetime4, var3Lifetime4);
           return;
         }
         var2Lifetime5 = vk.field_d;
         var3Lifetime5 = tia.field_d;
-        kh.a(param1, var2Lifetime5, var3Lifetime5);
+        BitPacketBuffer.a(param1, var2Lifetime5, var3Lifetime5);
     }
 
     public static void a(int param0) {

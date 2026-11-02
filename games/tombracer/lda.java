@@ -29,11 +29,11 @@ final class lda extends kna {
         return true;
     }
 
-    lda(la param0, int param1) {
+    lda(Room param0, int param1) {
         super(param0, param1);
     }
 
-    lda(la param0, int param1, kh param2, csa param3) {
+    lda(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
         try {
           this.field_H = param2.b((byte) 44, 4);
@@ -50,7 +50,7 @@ final class lda extends kna {
         return false;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -125, this.field_H, 4);
@@ -59,26 +59,26 @@ final class lda extends kna {
         }
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         lpa var5 = null;
-        fsa var6 = null;
-        fsa var7 = null;
+        Trap var6 = null;
+        Trap var7 = null;
         eq var8 = null;
         eq var9 = null;
         mfa var10 = null;
         vsa var11 = null;
         int var12 = 0;
-        fsa var13 = null;
-        fsa stackIn_8_0 = null;
+        Trap var13 = null;
+        Trap stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          var13 = new fsa(param2, param0);
+          var13 = new Trap(param2, param0);
           var4 = var13;
           if (this.field_m != 46) {
             var13.b((byte) -11, this.field_k, 4194304);
@@ -88,8 +88,8 @@ final class lda extends kna {
           var5 = new lpa(param2, param0);
           var5.b(-5, this.field_H);
           var13.a((byte) 83, (nv) (var5));
-          var6 = new fsa(param2, param0);
-          var7 = new fsa(param2, param0);
+          var6 = new Trap(param2, param0);
+          var7 = new Trap(param2, param0);
           if (this.field_m == 46) {
             var6.b((byte) -11, 524288, this.field_l);
             var6.b(437453352, -1835008, 0);

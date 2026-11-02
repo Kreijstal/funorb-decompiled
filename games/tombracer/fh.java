@@ -21,7 +21,7 @@ final class fh implements fo {
     private boolean field_q;
 
     final static void b(int param0, int param1) {
-        kh var2 = ql.field_k;
+        BitPacketBuffer var2 = ql.field_k;
         var2.k(param0, -2988);
         var2.i(1, param1 + 22243);
         if (param1 == -22243) {

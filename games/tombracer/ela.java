@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ela extends od {
+abstract class ela extends DualLinkNode {
     String field_l;
     String field_k;
     Class[] field_n;

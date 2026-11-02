@@ -3,7 +3,7 @@
  */
 final class bga implements bo {
     private taa field_a;
-    static naa field_c;
+    static AsyncRequest field_c;
     static int field_b;
     static boolean field_d;
 
@@ -27,7 +27,7 @@ final class bga implements bo {
         }
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         if (param0 != 200) {
           return;
         }
@@ -38,7 +38,7 @@ final class bga implements bo {
         }
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           this.field_a = hka.a(0, param0);
           if (param1 != -19) {

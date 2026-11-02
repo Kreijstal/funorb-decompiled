@@ -182,13 +182,13 @@ final class pi extends IntrusiveNode {
         return this.field_i;
     }
 
-    private final void a(kh param0, int param1) {
+    private final void a(BitPacketBuffer param0, int param1) {
         try {
           param0.h((byte) 112);
           if (param1 > -108) {
             this.a(3, -70, 47);
           }
-          this.field_g = lka.a(-90, param0, 26);
+          this.field_g = EventFactory.readEvent(-90, param0, 26);
           this.field_f = param0.b((byte) 44, 3);
           this.field_i = param0.b((byte) 44, 3);
           this.field_j = param0.b((byte) 44, 32);
@@ -249,7 +249,7 @@ final class pi extends IntrusiveNode {
         }
     }
 
-    pi(kh param0) {
+    pi(BitPacketBuffer param0) {
         try {
           this.a(param0, -124);
         } catch (RuntimeException runtimeException) {
@@ -257,7 +257,7 @@ final class pi extends IntrusiveNode {
         }
     }
 
-    final void b(kh param0, int param1) {
+    final void b(BitPacketBuffer param0, int param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

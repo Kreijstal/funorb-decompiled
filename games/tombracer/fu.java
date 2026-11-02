@@ -24,14 +24,14 @@ final class fu extends dg {
         }
     }
 
-    fu(int param0, la param1, kh param2) {
+    fu(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_v = null;
         this.field_n = true;
         this.field_r = null;
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -149,7 +149,7 @@ final class fu extends dg {
         }
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         iq var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -211,7 +211,7 @@ final class fu extends dg {
         RuntimeException var2 = null;
         Object var3 = null;
         int var3_int = 0;
-        fsa var3_ref = null;
+        Trap var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var7_int = 0;
@@ -262,7 +262,7 @@ final class fu extends dg {
           if (var10_ref == null) {
             return;
           }
-          var3_ref = (fsa) (this.field_h);
+          var3_ref = (Trap) (this.field_h);
           if (!var3_ref.d(50, false)) {
             stackIn_28_0 = (this.field_u == 1) ? 1 : 0;
           } else {
@@ -271,7 +271,7 @@ final class fu extends dg {
           {
             var4Lifetime1 = stackIn_28_0;
             if (var4Lifetime1 != 0 && (null == this.field_v ||
-              !this.field_v.l((byte) -101))) {
+              !this.field_v.isLinked((byte) -101))) {
               if (this.field_u == 0) {
                 this.field_v = var10_ref.a(new fm(10, this.b((byte) -90), this.c((byte) 103), this.e((byte) -103)), param0 - 57);
               } else if (this.field_u != 1) {

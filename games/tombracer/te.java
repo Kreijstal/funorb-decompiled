@@ -80,7 +80,7 @@ final class te {
         }
     }
 
-    final void a(la param0, int param1) {
+    final void a(Room param0, int param1) {
         int var4 = 0;
         kua var5 = null;
         RuntimeException stackIn_9_0 = null;

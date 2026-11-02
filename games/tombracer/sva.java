@@ -5,7 +5,7 @@ final class sva implements ev {
     private ob[] field_a;
     static int field_d;
     private vna field_b;
-    private la field_c;
+    private Room field_c;
 
     public final void a(int param0) {
         if (param0 != 13113) {
@@ -75,7 +75,7 @@ final class sva implements ev {
               if (!var12.c(param1 - 1459836712)) {
                 var12.a((byte) 100, this.field_c.a(-1553494544).field_c);
               } else {
-                var12.p(57);
+                var12.unlink(57);
               }
               var12 = (uh) (this.field_b.e(116));
             }
@@ -138,7 +138,7 @@ final class sva implements ev {
     final void b(byte param0, uh param1) {
         try {
           int var3_int = 86 % ((-52 - param0) / 48);
-          param1.p(66);
+          param1.unlink(66);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sva.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -274,7 +274,7 @@ final class sva implements ev {
         }
     }
 
-    sva(la param0) {
+    sva(Room param0) {
         this.field_a = new ob[4];
         this.field_b = new vna();
         try {

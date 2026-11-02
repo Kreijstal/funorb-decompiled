@@ -4,19 +4,19 @@
 import java.io.*;
 import java.util.*;
 
-final class jqa implements Runnable {
+final class BufferedSocket implements Runnable {
     private boolean field_a;
     private int field_k;
     private int field_d;
     private java.net.Socket field_e;
     static jea field_b;
     private InputStream field_h;
-    private fia field_i;
+    private PlatformTaskDispatcher field_i;
     private OutputStream field_l;
     private byte[] field_c;
     static int field_g;
     private boolean field_f;
-    private naa field_j;
+    private AsyncRequest field_j;
     private int field_m;
 
     protected final void finalize() {
@@ -89,7 +89,7 @@ final class jqa implements Runnable {
         }
         if (param0 != -2147483648) {
           Random var3 = (Random) null;
-          jqa.a(-72, (Random) null, -100);
+          BufferedSocket.a(-72, (Random) null, -100);
         }
         return this.field_h.read();
     }
@@ -110,7 +110,7 @@ final class jqa implements Runnable {
         return (var10 >> param5) * (var11 >> param5);
     }
 
-    jqa(java.net.Socket param0, fia param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -344,7 +344,7 @@ final class jqa implements Runnable {
         }
     }
 
-    private jqa(java.net.Socket param0, fia param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_k = 0;
         this.field_a = false;
         this.field_f = false;

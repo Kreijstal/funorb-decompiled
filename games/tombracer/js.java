@@ -34,7 +34,7 @@ final class js extends dr {
         if (param1 != -39) {
           return (byte[]) null;
         }
-        var3.p(param1 + 124);
+        var3.unlink(param1 + 124);
         return var4;
     }
 
@@ -70,7 +70,7 @@ final class js extends dr {
               if (this.field_n[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.p(116);
+                var3.unlink(116);
               }
               var3 = this.field_f.e(124);
             }
@@ -114,7 +114,7 @@ final class js extends dr {
                 if (this.field_n[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.p(41);
+                  var3Lifetime1.unlink(41);
                 }
                 var3Lifetime1 = this.field_f.e(116);
               }
@@ -161,7 +161,7 @@ final class js extends dr {
                 if (!var2.field_l) {
                   throw new RuntimeException();
                 }
-                var2.p(46);
+                var2.unlink(46);
               }
             }
             var2 = (hha) (this.field_p.c(20806));
@@ -184,7 +184,7 @@ final class js extends dr {
           if (param0 != ed.field_a) {
             for (var3_int = 0; var3_int < 256; var3_int++) {
               var4 = (int)(Math.pow((double)var3_int / 255.0, param0) * 255.0);
-              sk.field_c[var3_int] = var4 <= 255 ? var4 : 255;
+              IterableNodeHashTable.field_c[var3_int] = var4 <= 255 ? var4 : 255;
             }
             ed.field_a = param0;
           }
@@ -219,13 +219,13 @@ final class js extends dr {
         while (var2 != null) {
           var3 = (int)var2.key;
           if (0 > var3) {
-            var2.p(91);
+            var2.unlink(91);
           } else {
             if (this.field_k.field_l <= var3) {
-              var2.p(91);
+              var2.unlink(91);
             } else {
               if (this.field_k.field_c[var3] == 0) {
-                var2.p(91);
+                var2.unlink(91);
               } else {
                 if (this.field_n[var3] == 0) {
                   discarded$0 = this.a(1, 124, var3);
@@ -234,7 +234,7 @@ final class js extends dr {
                   discarded$1 = this.a(2, param0 + 28590, var3);
                 }
                 if (1 == this.field_n[var3]) {
-                  var2.p(71);
+                  var2.unlink(71);
                 }
               }
             }
@@ -371,7 +371,7 @@ final class js extends dr {
           param0 == 0 &&
           !var13.field_l &&
           var13.field_m) {
-          var13.p(12);
+          var13.unlink(12);
           var4 = null;
         }
         if (var4 == null) {
@@ -446,7 +446,7 @@ final class js extends dr {
                 this.field_n[param2] = (byte) 1;
               }
               if (!((hha) (var4)).field_l) {
-                ((hha) (var4)).p(70);
+                ((hha) (var4)).unlink(70);
               }
               stackIn_58_0 = var4;
               return (hha) (stackIn_58_0);
@@ -456,7 +456,7 @@ final class js extends dr {
             decompiledCaughtException = decompiledCaughtParameter1;
             var7_ref = (Exception) (Object) decompiledCaughtException;
             this.field_n[param2] = (byte)-1;
-            ((hha) (var4)).p(53);
+            ((hha) (var4)).unlink(53);
             if (!((hha) (var4)).field_l) {
               return null;
             }
@@ -499,7 +499,7 @@ final class js extends dr {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_u.e(-1);
-          ((hha) (var4)).p(82);
+          ((hha) (var4)).unlink(82);
           if (!((hha) (var4)).field_l) {
             return null;
           }
@@ -518,7 +518,7 @@ final class js extends dr {
           }
         }
         if (!((hha) (var4)).field_l) {
-          ((hha) (var4)).p(125);
+          ((hha) (var4)).unlink(125);
         }
         return (hha) (var4);
     }

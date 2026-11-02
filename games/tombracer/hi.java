@@ -12,7 +12,7 @@ final class hi extends nv {
     final void k(int param0) {
         int var5 = 0;
         ffa[] var3;
-        fsa var4;
+        Trap var4;
         ffa var6;
         int var7;
         npa var8;
@@ -137,7 +137,7 @@ final class hi extends nv {
         this.field_s = -this.field_s;
     }
 
-    hi(la param0, kh param1, boolean param2) {
+    hi(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_s = bla.a(true, 4, param1.b((byte) 44, 4)) << 16;
@@ -149,13 +149,13 @@ final class hi extends nv {
 
     final boolean p(byte param0) {
         if (param0 != 120) {
-          kh var3 = (kh) null;
-          this.a(false, (kh) null);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a(false, (BitPacketBuffer) null);
         }
         return true;
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           param1.b((byte) 60, 3);
@@ -165,7 +165,7 @@ final class hi extends nv {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -125, dqa.a(true, this.field_s >> 16, 4), 4);

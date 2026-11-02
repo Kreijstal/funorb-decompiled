@@ -234,12 +234,12 @@ final class oc {
         String stackIn_188_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        uia var4 = null;
-        uia var5 = null;
-        uia var6 = null;
-        uia var7 = null;
-        uia var8 = null;
-        uia var9 = null;
+        PacketBuffer var4 = null;
+        PacketBuffer var5 = null;
+        PacketBuffer var6 = null;
+        PacketBuffer var7 = null;
+        PacketBuffer var8 = null;
+        PacketBuffer var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -295,8 +295,8 @@ final class oc {
         int var62 = 0;
         int var63 = 0;
         int var64 = 0;
-        uia var65 = null;
-        uia var66 = null;
+        PacketBuffer var65 = null;
+        PacketBuffer var66 = null;
         int var28Lifetime1;
         int var29Lifetime1;
         int var54Lifetime1;
@@ -320,15 +320,15 @@ final class oc {
         int var60Lifetime1Lifetime1;
         var64 = TombRacer.field_G ? 1 : 0;
         try {
-          var65 = new uia(param0);
+          var65 = new PacketBuffer(param0);
           var66 = var65;
-          var4 = new uia(param0);
-          var5 = new uia(param0);
-          var6 = new uia(param0);
-          var7 = new uia(param0);
-          var8 = new uia(param0);
-          var9 = new uia(param0);
-          var66.field_h = param0.length - 23;
+          var4 = new PacketBuffer(param0);
+          var5 = new PacketBuffer(param0);
+          var6 = new PacketBuffer(param0);
+          var7 = new PacketBuffer(param0);
+          var8 = new PacketBuffer(param0);
+          var9 = new PacketBuffer(param0);
+          var66.position = param0.length - 23;
           this.field_E = var66.d(123);
           this.field_o = var66.d(123);
           this.field_F = var66.h(255);
@@ -342,9 +342,9 @@ final class oc {
           stackIn_13_0 = (8 != (var10 & 8)) ? 0 : 1;
           var14 = stackIn_13_0;
           if (var14 != 0) {
-            var66.field_h = var66.field_h - 7;
+            var66.position = var66.position - 7;
             this.field_w = var66.h(255);
-            var66.field_h = var66.field_h + 6;
+            var66.position = var66.position + 6;
           }
           var15 = var66.h(param1 ^ 255);
           var16 = var66.h(255);
@@ -361,7 +361,7 @@ final class oc {
           var27 = 0;
           if (0 < this.field_F) {
             this.field_u = new byte[this.field_F];
-            var66.field_h = 0;
+            var66.position = 0;
             for (var28 = 0; this.field_F > var28; var28++) {
               dupTemp$0 = var65.c((byte) 52);
               this.field_u[var28] = dupTemp$0;
@@ -484,15 +484,15 @@ final class oc {
           if (var17 == 1) {
             this.field_D = new int[this.field_o];
           }
-          var66.field_h = var29Lifetime1;
+          var66.position = var29Lifetime1;
           this.field_b = new int[this.field_E];
           if (var19 == 1) {
             this.field_l = new int[this.field_E];
           }
-          var4.field_h = var40;
-          var5.field_h = var41;
-          var6.field_h = var42;
-          var7.field_h = var34;
+          var4.position = var40;
+          var5.position = var41;
+          var6.position = var42;
+          var7.position = var34;
           var51 = 0;
           var52 = 0;
           var53 = 0;
@@ -520,13 +520,13 @@ final class oc {
               this.field_l[var54] = var7.h(kha.b(param1, 255));
             }
           }
-          var66.field_h = var39;
-          var4.field_h = var30;
-          var5.field_h = var32;
-          var6.field_h = var35;
-          var7.field_h = var33;
-          var8.field_h = var37;
-          var9.field_h = var38;
+          var66.position = var39;
+          var4.position = var30;
+          var5.position = var32;
+          var6.position = var35;
+          var7.position = var33;
+          var8.position = var37;
+          var9.position = var38;
           for (var54Lifetime1 = 0; var54Lifetime1 < this.field_o; var54Lifetime1++) {
             this.field_A[var54Lifetime1] = (short)var66.d(127);
             if (var11 != 0) {
@@ -552,9 +552,9 @@ final class oc {
               }
             }
           }
-          var66.field_h = var36;
+          var66.position = var36;
           this.field_L = -1;
-          var4.field_h = var31;
+          var4.position = var31;
           var54Lifetime2 = 0;
           var55Lifetime1 = 0;
           var56Lifetime1 = 0;
@@ -617,16 +617,16 @@ final class oc {
               }
             }
           }
-          var66.field_h = var43;
+          var66.position = var43;
           if (param1 != 0) {
             this.field_e = (rga[]) null;
           }
           this.field_L = this.field_L + 1;
-          var4.field_h = var44;
-          var5.field_h = var46;
-          var6.field_h = var47;
-          var7.field_h = var48;
-          var8.field_h = var49;
+          var4.position = var44;
+          var5.position = var46;
+          var6.position = var47;
+          var7.position = var48;
+          var8.position = var49;
           for (var58Lifetime2 = 0; var58Lifetime2 < this.field_F; var58Lifetime2++) {
             var59Lifetime1 = this.field_u[var58Lifetime2] & 255;
             if (var59Lifetime1 == 0) {
@@ -700,7 +700,7 @@ final class oc {
               this.field_d[var58Lifetime2] = var8.c((byte) 32);
             }
           }
-          var66.field_h = var50;
+          var66.position = var50;
           if (var12 != 0) {
             var58Lifetime3 = var66.h(255);
             if (0 < var58Lifetime3) {
@@ -827,11 +827,11 @@ final class oc {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        uia var5 = null;
-        uia var6 = null;
-        uia var7 = null;
-        uia var8 = null;
-        uia var9 = null;
+        PacketBuffer var5 = null;
+        PacketBuffer var6 = null;
+        PacketBuffer var7 = null;
+        PacketBuffer var8 = null;
+        PacketBuffer var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -882,12 +882,12 @@ final class oc {
         try {
           var3_int = 0;
           var4 = 0;
-          var5 = new uia(param1);
-          var6 = new uia(param1);
-          var7 = new uia(param1);
-          var8 = new uia(param1);
-          var9 = new uia(param1);
-          var5.field_h = -18 + param1.length;
+          var5 = new PacketBuffer(param1);
+          var6 = new PacketBuffer(param1);
+          var7 = new PacketBuffer(param1);
+          var8 = new PacketBuffer(param1);
+          var9 = new PacketBuffer(param1);
+          var5.position = -18 + param1.length;
           this.field_E = var5.d(param0 - 5349);
           this.field_o = var5.d(124);
           this.field_F = var5.h(255);
@@ -957,7 +957,7 @@ final class oc {
           }
           this.field_J = new short[this.field_o];
           this.field_A = new short[this.field_o];
-          var5.field_h = var20;
+          var5.position = var20;
           if (var14 == 1) {
             this.field_l = new int[this.field_E];
           }
@@ -970,10 +970,10 @@ final class oc {
           if (var12 == 1) {
             this.field_n = new byte[this.field_o];
           }
-          var6.field_h = var30;
-          var7.field_h = var31;
-          var8.field_h = var32;
-          var9.field_h = var25;
+          var6.position = var30;
+          var7.position = var31;
+          var8.position = var32;
+          var9.position = var25;
           var33 = 0;
           var34 = 0;
           var35 = 0;
@@ -1001,11 +1001,11 @@ final class oc {
               this.field_l[var36] = var9.h(255);
             }
           }
-          var5.field_h = var28;
-          var6.field_h = var24;
-          var7.field_h = var22;
-          var8.field_h = var26;
-          var9.field_h = var23;
+          var5.position = var28;
+          var6.position = var24;
+          var7.position = var22;
+          var8.position = var26;
+          var9.position = var23;
           for (var36Lifetime1 = 0; this.field_o > var36Lifetime1; var36Lifetime1++) {
             this.field_A[var36Lifetime1] = (short)var5.d(param0 - 5352);
             if (var10 == 1) {
@@ -1039,8 +1039,8 @@ final class oc {
             }
           }
           this.field_L = -1;
-          var5.field_h = var27;
-          var6.field_h = var21;
+          var5.position = var27;
+          var6.position = var21;
           var36Lifetime2 = 0;
           var37Lifetime2 = 0;
           var38Lifetime1 = 0;
@@ -1103,7 +1103,7 @@ final class oc {
               }
             }
           }
-          var5.field_h = var29;
+          var5.position = var29;
           this.field_L = this.field_L + 1;
           var40Lifetime2 = 0;
           if (param0 != 5474) {

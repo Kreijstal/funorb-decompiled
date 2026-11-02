@@ -8,7 +8,7 @@ final class fca {
     long field_a;
 
     final static void a(boolean param0, int param1) {
-        nd.a(-1, param0);
+        NodeHashTableIterator.a(-1, param0);
         tc.a(param0, 0);
         if (param1 != 7) {
           fca.a(-109);

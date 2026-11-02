@@ -17,7 +17,7 @@ final class mh extends kna {
         return false;
     }
 
-    mh(la param0, int param1) {
+    mh(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -29,14 +29,14 @@ final class mh extends kna {
         int var1 = -58 % ((param0 + 22) / 62);
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         int var6_int = 0;
         Object var17 = null;
         Object var18 = null;
         int var19 = 0;
-        fsa var20 = null;
+        Trap var20 = null;
         Object var21 = null;
-        fsa stackIn_23_0 = null;
+        Trap stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -44,12 +44,12 @@ final class mh extends kna {
         RuntimeException var4 = null;
         int var5 = 0;
         mfa var6 = null;
-        fsa var7_ref_fsa = null;
+        Trap var7_ref_fsa = null;
         int var7 = 0;
         eq var8 = null;
         ro var9 = null;
         ro var10 = null;
-        fsa var11 = null;
+        Trap var11 = null;
         eq var12 = null;
         ro var13 = null;
         ro var14 = null;
@@ -63,7 +63,7 @@ final class mh extends kna {
         var21 = null;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
-          var20 = new fsa(param2, param0);
+          var20 = new Trap(param2, param0);
           var20.b((byte) -11, this.field_k, this.field_l);
           var6_int = this.field_m;
           if (var6_int != 44 &&
@@ -79,7 +79,7 @@ final class mh extends kna {
           }
           var6 = rm.field_a;
           if (var5 != 0) {
-            var7_ref_fsa = new fsa(param2, param0);
+            var7_ref_fsa = new Trap(param2, param0);
             var7_ref_fsa.b((byte) -11, this.field_k / 3, this.field_l / 2);
             var7_ref_fsa.b(437453352, -327680, -this.field_l / 4);
             var7_ref_fsa.h(3, 0);
@@ -92,7 +92,7 @@ final class mh extends kna {
             var10.a(param1 ^ 14, new gea(new int[][]{new int[]{262144 + -this.field_l / 2, 0}}));
             var10.a(true, false);
             var7_ref_fsa.a(var10, 0);
-            var11 = new fsa(param2, param0);
+            var11 = new Trap(param2, param0);
             var11.b((byte) -11, this.field_k / 3, this.field_l / 2);
             var11.b(437453352, -327680, this.field_l / 4);
             var11.h(3, 0);
@@ -189,7 +189,7 @@ final class mh extends kna {
         this.b(-67, this.field_H * 2097152, 2097152 * this.field_J);
     }
 
-    mh(la param0, int param1, kh param2, csa param3) {
+    mh(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -208,7 +208,7 @@ final class mh extends kna {
         return 7;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {

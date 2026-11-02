@@ -595,7 +595,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTextBagsOLoot", (byte) 103);
                 if (var2 != null) {
-                  kh.field_m = jaa.a((byte) 39, var2);
+                  BitPacketBuffer.field_m = jaa.a((byte) 39, var2);
                 }
                 var2 = mt.a("instructionTitleIcons", (byte) 114);
                 if (null != var2) {
@@ -655,7 +655,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTitleBobbyGeorgeTotems", (byte) 114);
                 if (var2 != null) {
-                  hca.field_s = jaa.a((byte) 59, var2);
+                  Player.field_s = jaa.a((byte) 59, var2);
                 }
                 var2 = mt.a("instructionTextBobbyGeorgeTotems", (byte) 103);
                 if (null != var2) {
@@ -699,7 +699,7 @@ final class pfa {
                 }
                 var2 = mt.a("instructionTextCauldronsOfGreenSoup", (byte) 112);
                 if (var2 != null) {
-                  lr.field_e = jaa.a((byte) 43, var2);
+                  ClientException.field_e = jaa.a((byte) 43, var2);
                 }
                 var2 = mt.a("instructionTitleSkeletons", (byte) 113);
                 if (null != var2) {
@@ -929,79 +929,79 @@ final class pfa {
                 }
                 var2 = mt.a("waitingStrings,0", (byte) 108);
                 if (var2 != null) {
-                  hca.field_U[0] = jaa.a((byte) 69, var2);
+                  Player.field_U[0] = jaa.a((byte) 69, var2);
                 }
                 var2 = mt.a("waitingStrings,1", (byte) 117);
                 if (null != var2) {
-                  hca.field_U[1] = jaa.a((byte) 94, var2);
+                  Player.field_U[1] = jaa.a((byte) 94, var2);
                 }
                 var2 = mt.a("waitingStrings,2", (byte) 124);
                 if (null != var2) {
-                  hca.field_U[2] = jaa.a((byte) 117, var2);
+                  Player.field_U[2] = jaa.a((byte) 117, var2);
                 }
                 var2 = mt.a("waitingStrings,3", (byte) 107);
                 if (var2 != null) {
-                  hca.field_U[3] = jaa.a((byte) 118, var2);
+                  Player.field_U[3] = jaa.a((byte) 118, var2);
                 }
                 var2 = mt.a("waitingStrings,4", (byte) 114);
                 if (var2 != null) {
-                  hca.field_U[4] = jaa.a((byte) 40, var2);
+                  Player.field_U[4] = jaa.a((byte) 40, var2);
                 }
                 var2 = mt.a("waitingStrings,5", (byte) 117);
                 if (var2 != null) {
-                  hca.field_U[5] = jaa.a((byte) 53, var2);
+                  Player.field_U[5] = jaa.a((byte) 53, var2);
                 }
                 var2 = mt.a("waitingStrings,6", (byte) 107);
                 if (var2 != null) {
-                  hca.field_U[6] = jaa.a((byte) 87, var2);
+                  Player.field_U[6] = jaa.a((byte) 87, var2);
                 }
                 var2 = mt.a("waitingStrings,7", (byte) 105);
                 if (var2 != null) {
-                  hca.field_U[7] = jaa.a((byte) 127, var2);
+                  Player.field_U[7] = jaa.a((byte) 127, var2);
                 }
                 var2 = mt.a("waitingStrings,8", (byte) 112);
                 if (var2 != null) {
-                  hca.field_U[8] = jaa.a((byte) 101, var2);
+                  Player.field_U[8] = jaa.a((byte) 101, var2);
                 }
                 var2 = mt.a("waitingStrings,9", (byte) 110);
                 if (null != var2) {
-                  hca.field_U[9] = jaa.a((byte) 55, var2);
+                  Player.field_U[9] = jaa.a((byte) 55, var2);
                 }
                 var2 = mt.a("waitingStrings,10", (byte) 126);
                 if (null != var2) {
-                  hca.field_U[10] = jaa.a((byte) 96, var2);
+                  Player.field_U[10] = jaa.a((byte) 96, var2);
                 }
                 var2 = mt.a("waitingStrings,11", (byte) 103);
                 if (var2 != null) {
-                  hca.field_U[11] = jaa.a((byte) 100, var2);
+                  Player.field_U[11] = jaa.a((byte) 100, var2);
                 }
                 var2 = mt.a("waitingStrings,12", (byte) 122);
                 if (null != var2) {
-                  hca.field_U[12] = jaa.a((byte) 116, var2);
+                  Player.field_U[12] = jaa.a((byte) 116, var2);
                 }
                 var2 = mt.a("waitingStrings,13", (byte) 110);
                 if (var2 != null) {
-                  hca.field_U[13] = jaa.a((byte) 40, var2);
+                  Player.field_U[13] = jaa.a((byte) 40, var2);
                 }
                 var2 = mt.a("waitingStrings,14", (byte) 100);
                 if (var2 != null) {
-                  hca.field_U[14] = jaa.a((byte) 57, var2);
+                  Player.field_U[14] = jaa.a((byte) 57, var2);
                 }
                 var2 = mt.a("waitingStrings,15", (byte) 104);
                 if (var2 != null) {
-                  hca.field_U[15] = jaa.a((byte) 84, var2);
+                  Player.field_U[15] = jaa.a((byte) 84, var2);
                 }
                 var2 = mt.a("waitingStrings,16", (byte) 107);
                 if (var2 != null) {
-                  hca.field_U[16] = jaa.a((byte) 57, var2);
+                  Player.field_U[16] = jaa.a((byte) 57, var2);
                 }
                 var2 = mt.a("waitingStrings,17", (byte) 102);
                 if (null != var2) {
-                  hca.field_U[17] = jaa.a((byte) 82, var2);
+                  Player.field_U[17] = jaa.a((byte) 82, var2);
                 }
                 var2 = mt.a("waitingStrings,18", (byte) 117);
                 if (var2 != null) {
-                  hca.field_U[18] = jaa.a((byte) 91, var2);
+                  Player.field_U[18] = jaa.a((byte) 91, var2);
                 }
                 var2 = mt.a("unpackingStrings,0", (byte) 108);
                 if (null != var2) {
@@ -2205,7 +2205,7 @@ final class pfa {
               this.field_e <= var2.field_k + var3) {
               this.field_j = var2.field_g;
               this.field_e = var2.field_k;
-              var2.p(10);
+              var2.unlink(10);
             }
             decompiledSharedTail0 = (TombRacer.field_G);
           }

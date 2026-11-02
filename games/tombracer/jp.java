@@ -16,10 +16,10 @@ abstract class jp extends ota {
           bra.field_O = new iu(var3, var4 * 3 / 4);
           bra.field_O.c();
           var2.d(0, 0);
-          hca.field_W = new iu(var3, -bra.field_O.field_q + var4);
-          hca.field_W.c();
+          Player.field_W = new iu(var3, -bra.field_O.field_q + var4);
+          Player.field_W.c();
           var2.d(0, -bra.field_O.field_q);
-          hca.field_W.field_p = bra.field_O.field_q;
+          Player.field_W.field_p = bra.field_O.field_q;
           pfa.a(1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

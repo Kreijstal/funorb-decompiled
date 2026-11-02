@@ -3,12 +3,12 @@
  */
 final class aj extends IntrusiveNode {
     int[] field_i;
-    naa[] field_j;
+    AsyncRequest[] field_j;
     int[] field_m;
     byte[][][] field_g;
     int[] field_h;
     static iu field_l;
-    naa[] field_k;
+    AsyncRequest[] field_k;
     int field_f;
     int field_n;
     private static String field_z;

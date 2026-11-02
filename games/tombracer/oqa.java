@@ -69,7 +69,7 @@ final class oqa extends osa {
         return;
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -125);
           if (param1 > -78) {
@@ -100,7 +100,7 @@ final class oqa extends osa {
         return cua.field_b[var4];
     }
 
-    oqa(la param0, kh param1, boolean param2) {
+    oqa(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_u = 1024;
         try {

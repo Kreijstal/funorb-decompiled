@@ -5,9 +5,9 @@ final class bna extends IntrusiveNode {
     boolean field_g;
     int[] field_f;
 
-    final static void a(java.math.BigInteger param0, boolean param1, java.math.BigInteger param2, uia param3, uia param4) {
+    final static void a(java.math.BigInteger param0, boolean param1, java.math.BigInteger param2, PacketBuffer param3, PacketBuffer param4) {
         try {
-          uu.a(param4.field_h, (byte) -81, param4.field_g, param2, param3, param0, 0);
+          uu.a(param4.position, (byte) -81, param4.payload, param2, param3, param0, 0);
           if (param1) {
             bna.a((byte) 109);
           }
@@ -32,7 +32,7 @@ final class bna extends IntrusiveNode {
               if (var1.field_xb == 0) {
                 var1.field_Lb = 0;
                 if (var1.f(param0 ^ 168)) {
-                  var1.p(19);
+                  var1.unlink(19);
                 }
               }
             }
@@ -48,7 +48,7 @@ final class bna extends IntrusiveNode {
               if (var1_ref.field_zb == 0) {
                 var1_ref.field_Ib = 0;
                 if (var1_ref.g(0)) {
-                  var1_ref.p(59);
+                  var1_ref.unlink(59);
                 }
               }
             }
@@ -64,7 +64,7 @@ final class bna extends IntrusiveNode {
               }
               var1Lifetime1.field_Lb = 0;
               if (var1Lifetime1.f(162)) {
-                var1Lifetime1.p(72);
+                var1Lifetime1.unlink(72);
               }
             }
             var1Lifetime1 = (pha) (qha.field_g.e(param0 + 101));

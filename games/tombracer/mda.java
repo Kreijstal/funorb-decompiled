@@ -3,7 +3,7 @@
  */
 final class mda extends c implements fo, ffa, gma {
     private int field_i;
-    private la field_q;
+    private Room field_q;
     private int field_n;
     static jea field_v;
     private int field_k;
@@ -48,7 +48,7 @@ final class mda extends c implements fo, ffa, gma {
         return this.field_o;
     }
 
-    private final void a(int param0, int param1, int param2, la param3, int param4, int param5) {
+    private final void a(int param0, int param1, int param2, Room param3, int param4, int param5) {
         try {
           this.field_o = false;
           this.field_q = param3;
@@ -117,7 +117,7 @@ final class mda extends c implements fo, ffa, gma {
         }
     }
 
-    final void a(la param0, int param1) {
+    final void a(Room param0, int param1) {
         try {
           this.field_p = param0.a(this.field_p, (byte) 71);
           if (param1 >= -16) {
@@ -271,7 +271,7 @@ final class mda extends c implements fo, ffa, gma {
         }
     }
 
-    public final int a(up param0, ep param1, int param2) {
+    public final int a(up param0, Projectile param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
@@ -284,7 +284,7 @@ final class mda extends c implements fo, ffa, gma {
         try {
           var4_int = param1.i(-1);
           if (param2 >= -97) {
-            this.field_q = (la) null;
+            this.field_q = (Room) null;
           }
           stackIn_3_0 = this.a(param0, var4_int, param1.d(3), 0, param1.e(9648), var4_int);
           return stackIn_3_0;
@@ -334,8 +334,8 @@ final class mda extends c implements fo, ffa, gma {
           this.field_p = param0;
           return;
         }
-        ep var6 = (ep) null;
-        this.a((up) null, (ep) null, -22);
+        Projectile var6 = (Projectile) null;
+        this.a((up) null, (Projectile) null, -22);
         this.field_j = param2;
         this.field_p = param0;
     }
@@ -610,12 +610,12 @@ final class mda extends c implements fo, ffa, gma {
         this.field_r = this.field_j;
     }
 
-    public final la f(byte param0) {
+    public final Room f(byte param0) {
         int var2 = 38 / ((param0 - 0) / 61);
         return this.field_q;
     }
 
-    final void a(la param0, int param1, int param2, int param3, int param4, int param5) {
+    final void a(Room param0, int param1, int param2, int param3, int param4, int param5) {
         IsaacCipher var7 = null;
         int var8 = 0;
         try {
@@ -687,9 +687,9 @@ final class mda extends c implements fo, ffa, gma {
 
     final void a(int param0, boolean param1) {
         float var3;
-        hca var5;
-        hca var6;
-        hca var7;
+        Player var5;
+        Player var6;
+        Player var7;
         float var3Lifetime1;
         float var3Lifetime2;
         if (this.field_o) {
@@ -764,7 +764,7 @@ final class mda extends c implements fo, ffa, gma {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            this.field_q = (la) null;
+            this.field_q = (Room) null;
           }
           stackIn_3_0 = this.a(param0, (byte) 61);
           return stackIn_3_0;
@@ -839,7 +839,7 @@ final class mda extends c implements fo, ffa, gma {
             return stackIn_2_0;
           }
           if (param3 != 0) {
-            this.field_q = (la) null;
+            this.field_q = (Room) null;
           }
           stackIn_6_0 = this.a(param0, -6);
           return stackIn_6_0;

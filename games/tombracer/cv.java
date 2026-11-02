@@ -21,7 +21,7 @@ final class cv extends dg {
         this.field_q = param0;
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         try {
           super.a(124, param1, param2);
           this.field_q = param2.b((byte) 44, 4);
@@ -79,7 +79,7 @@ final class cv extends dg {
         this.field_n = false;
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) 59, param1);
           param1.a((byte) 59, this.field_q, 4);
@@ -672,7 +672,7 @@ final class cv extends dg {
         return;
     }
 
-    cv(int param0, la param1, kh param2) {
+    cv(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_n = false;
     }

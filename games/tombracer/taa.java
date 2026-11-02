@@ -6,7 +6,7 @@ final class taa extends IntrusiveNode {
     private int field_h;
     static nc field_g;
 
-    final void a(uia param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           if (param1 != 32654) {
             taa.a((byte) -36);

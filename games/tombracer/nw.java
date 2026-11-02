@@ -346,7 +346,7 @@ final class nw extends ci {
         return var3;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int dupTemp$0 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -414,7 +414,7 @@ final class nw extends ci {
         this.field_v = new short[512];
         if (this.field_r > 0) {
           for (var3 = 0; 512 > var3; var3++) {
-            this.field_v[var3] = (short)jqa.a(this.field_r, var5, 86);
+            this.field_v[var3] = (short)BufferedSocket.a(this.field_r, var5, 86);
           }
         }
         var3Lifetime1 = -16 / ((param0 + 54) / 37);

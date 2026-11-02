@@ -85,19 +85,19 @@ final class mp {
           }
           var2 = (vb) (tna.field_e.f(param0 ^ -78));
           while (null != var2) {
-            stackIn_23_0 = var2.field_h.l((byte) 122);
+            stackIn_23_0 = var2.field_h.isLinked((byte) 122);
             if (var3 != 0) {
               while (true) {
                 if (stackIn_23_0) {
                   var2.field_f.e(var2.field_g * ot.field_v + 128 >> 8);
                 }
-                var2.p(param0 + 2);
+                var2.unlink(param0 + 2);
                 var2 = (vb) (db.field_f.e(113));
                 return;
               }
             }
             if (!stackIn_23_0) {
-              var2.p(78);
+              var2.unlink(78);
             }
             if (stackIn_23_0 ||
               var3 != 0) {
@@ -115,11 +115,11 @@ final class mp {
               if (var3 != 0) {
                 return;
               }
-              stackIn_23_0Lifetime1 = var2Lifetime1.field_h.l((byte) 44);
+              stackIn_23_0Lifetime1 = var2Lifetime1.field_h.isLinked((byte) 44);
               if (stackIn_23_0Lifetime1) {
                 var2Lifetime1.field_f.e(var2Lifetime1.field_g * ot.field_v + 128 >> 8);
               } else {
-                var2Lifetime1.p(param0 + 2);
+                var2Lifetime1.unlink(param0 + 2);
               }
               var2Lifetime1 = (vb) (db.field_f.e(113));
             }
@@ -243,7 +243,7 @@ final class mp {
                     var19 = dna.field_H;
                   }
                 } else {
-                  var19 = kh.field_p;
+                  var19 = BitPacketBuffer.field_p;
                 }
               } else {
                 if (!kq.field_c) {

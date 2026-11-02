@@ -30,7 +30,7 @@ final class eba extends pb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < -19) {
-            stackIn_4_0 = fsa.a(57, param2, true, param0);
+            stackIn_4_0 = Trap.a(57, param2, true, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = 56;

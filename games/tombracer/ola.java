@@ -14,7 +14,7 @@ final class ola extends jea {
     private jea field_ub;
     private iu[] field_Cb;
     private int field_Hb;
-    static uia field_Bb;
+    static PacketBuffer field_Bb;
     private jea field_Ab;
     static ka[] field_Ib;
     private int field_xb;

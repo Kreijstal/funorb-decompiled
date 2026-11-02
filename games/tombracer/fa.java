@@ -40,7 +40,7 @@ final class fa {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 > -110) {
-            fa.a(119, (kh) null, -102, (int[]) null);
+            fa.a(119, (BitPacketBuffer) null, -102, (int[]) null);
           }
           var1 = null;
           var2 = null;
@@ -60,7 +60,7 @@ final class fa {
             }
             if (vo.field_b) {
               gu.a(0, true, (String) null, (String) (var2), (String) null, 2);
-              la.l(2097152);
+              Room.l(2097152);
             }
           }
           if (null == var2 &&
@@ -178,7 +178,7 @@ final class fa {
         }
     }
 
-    final static int[] a(int param0, kh param1, int param2, int[] param3) {
+    final static int[] a(int param0, BitPacketBuffer param1, int param2, int[] param3) {
         Object stackIn_5_0 = null;
         int[] stackIn_28_0 = null;
         RuntimeException stackIn_32_0 = null;

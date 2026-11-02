@@ -14,7 +14,7 @@ final class ssa {
 
     final static void a(String param0, byte param1, Throwable param2) {
         try {
-          fia stackIn_16_0;
+          PlatformTaskDispatcher stackIn_16_0;
           java.net.URL stackIn_16_1;
           java.net.URL stackIn_16_2;
           java.net.URL stackIn_16_3;
@@ -25,7 +25,7 @@ final class ssa {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          naa var4 = null;
+          AsyncRequest var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -69,7 +69,7 @@ final class ssa {
               stackIn_17_2 = null;
               stackIn_17_5 = "" + ic.field_b;
             }
-            var4 = ((fia) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(fia.field_e).append("&v2=").append(fia.field_v).append("&e=").append(var10).toString()), 122);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var10).toString()), 122);
             while (var4.field_b == 0) {
               vja.a(0, 1L);
             }
@@ -130,7 +130,7 @@ final class ssa {
         this.field_f = var3;
     }
 
-    final static byte[] a(uia param0, int param1, boolean param2) throws Exception {
+    final static byte[] a(PacketBuffer param0, int param1, boolean param2) throws Exception {
         int var10_int = 0;
         int[] array$0 = null;
         Object stackIn_5_0 = null;
@@ -158,8 +158,8 @@ final class ssa {
         int var17 = 0;
         int[] var19 = null;
         int[] var20 = null;
-        uia var21 = null;
-        uia var22 = null;
+        PacketBuffer var21 = null;
+        PacketBuffer var22 = null;
         byte[] var24 = null;
         int[] var25 = null;
         byte[] var27 = null;
@@ -178,7 +178,7 @@ final class ssa {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
           }
-          var5 = param0.field_h;
+          var5 = param0.position;
           var6 = var5 + var3_int;
           var7 = param0.d(126);
           if (2 < var7) {
@@ -214,14 +214,14 @@ final class ssa {
             var10 = new int[var9][];
             var11 = 0;
             while (var11 < var9) {
-              var12 = param0.field_h;
+              var12 = param0.position;
               do {
                 var13_int = param0.h(255);
               } while (var13_int >= 128);
-              array$0 = new int[31 + (-var12 + param0.field_h) * 7 >> 5];
+              array$0 = new int[31 + (-var12 + param0.position) * 7 >> 5];
               ((Object[]) (var10))[var11] = array$0;
               var13 = array$0;
-              param0.field_h = var12;
+              param0.position = var12;
               var14 = 0;
               var15 = 0;
               while (true) {
@@ -241,13 +241,13 @@ final class ssa {
             }
           }
           var10 = null;
-          if (param0.field_h < var6) {
+          if (param0.position < var6) {
             var11 = param0.h(255);
             if (var11 > 0) {
               var32 = new byte[var11];
               param0.a(var32, 0, -101, var11);
             }
-            var12 = var6 - param0.field_h;
+            var12 = var6 - param0.position;
             if (0 < var12) {
               var27 = new byte[var12];
               var24 = var27;
@@ -255,8 +255,8 @@ final class ssa {
               param0.a(var27, 0, -93, var12);
             }
           }
-          if (param0.field_h > var6) {
-            throw ssa.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: data overrun: start=" + var5 + " length=" + var3_int + " end=" + var6 + " overranto=" + param0.field_h));
+          if (param0.position > var6) {
+            throw ssa.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: data overrun: start=" + var5 + " length=" + var3_int + " end=" + var6 + " overranto=" + param0.position));
           }
           if (param2) {
             System.out.println("Loading funorbprofile local: achievements=" + wg.a(0, var28));

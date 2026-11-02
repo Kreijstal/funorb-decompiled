@@ -5,10 +5,10 @@ final class dt {
     private boolean field_h;
     private int[] field_j;
     private int field_e;
-    hca field_g;
+    Player field_g;
     eha field_i;
     private boolean field_a;
-    la[] field_b;
+    Room[] field_b;
     private int field_l;
     private boolean field_k;
     int field_c;
@@ -17,18 +17,18 @@ final class dt {
     private int field_m;
     private int field_d;
 
-    private final la a(byte param0, la param1) {
+    private final Room a(byte param0, Room param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        la stackIn_2_0 = null;
-        la stackIn_6_0 = null;
+        Room stackIn_2_0 = null;
+        Room stackIn_6_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 68) {
-            stackIn_2_0 = (la) null;
+            stackIn_2_0 = (Room) null;
             return stackIn_2_0;
           }
           var3_int = param1.c(115);
@@ -53,7 +53,7 @@ final class dt {
 
     private final boolean c(int param0, int param1) {
         if (param1 != -1) {
-          this.field_b = (la[]) null;
+          this.field_b = (Room[]) null;
           return -1 != this.field_j[param0] ? true : false;
         }
         return -1 != this.field_j[param0] ? true : false;
@@ -63,7 +63,7 @@ final class dt {
         int var3 = -110 % ((param0 - 73) / 33);
     }
 
-    final void a(la param0, int param1) {
+    final void a(Room param0, int param1) {
         eha var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -165,7 +165,7 @@ final class dt {
         }
     }
 
-    final void a(hca param0, int param1, int param2, int param3) {
+    final void a(Player param0, int param1, int param2, int param3) {
         eha var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -235,10 +235,10 @@ final class dt {
     }
 
     final void a(int param0, int param1) {
-        la discarded$2 = null;
+        Room discarded$2 = null;
         if (param0 != -1) {
-          la var4 = (la) null;
-          discarded$2 = this.a((byte) -105, (la) null);
+          Room var4 = (Room) null;
+          discarded$2 = this.a((byte) -105, (Room) null);
           if (this.field_a) {
             return;
           }
@@ -266,17 +266,17 @@ final class dt {
     final void a(int param0, int param1, int param2) {
         this.field_j[param0] = param1;
         if (param2 >= -28) {
-          this.field_g = (hca) null;
+          this.field_g = (Player) null;
         }
     }
 
     final void c(int param0) {
-        la var2;
-        la var3;
-        la var5;
+        Room var2;
+        Room var3;
+        Room var5;
         eha var6;
         eha var7;
-        la var3Lifetime1;
+        Room var3Lifetime1;
         var2 = this.a((byte) 123);
         if (param0 == -1) {
           var2.g(58);
@@ -296,8 +296,8 @@ final class dt {
           }
           return;
         }
-        var5 = (la) null;
-        this.a((la) null, -52);
+        var5 = (Room) null;
+        this.a((Room) null, -52);
         var2.g(58);
         var3Lifetime1 = this.a((byte) 104, var2);
         if (this.field_g.l(false) &&
@@ -319,10 +319,10 @@ final class dt {
     final void a(iq param0, int param1) {
         int discarded$1 = 0;
         int var4 = 0;
-        la[] var3 = null;
-        la var5 = null;
+        Room[] var3 = null;
+        Room var5 = null;
         int var6 = 0;
-        la[] var7 = null;
+        Room[] var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -356,7 +356,7 @@ final class dt {
         }
     }
 
-    final void a(hca param0, int param1) {
+    final void a(Player param0, int param1) {
         eha var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -418,7 +418,7 @@ final class dt {
         return this.field_j[param0];
     }
 
-    final la a(int param0) {
+    final Room a(int param0) {
         if (param0 >= -22) {
           this.b(-15);
           return this.field_b[0];
@@ -461,7 +461,7 @@ final class dt {
         return !this.field_a ? true : false;
     }
 
-    final la a(byte param0) {
+    final Room a(byte param0) {
         int var2 = -127 / ((param0 - 64) / 59);
         return this.field_b[this.field_g.r(-108)];
     }
@@ -471,7 +471,7 @@ final class dt {
         return this.field_b.length;
     }
 
-    final void a(int param0, int param1, la param2) {
+    final void a(int param0, int param1, Room param2) {
         try {
           param2.a(param1, false);
           if (param0 != -28088) {
@@ -495,14 +495,14 @@ final class dt {
         this.field_j[param0] = param1;
     }
 
-    final la a(boolean param0, int param1) {
+    final Room a(boolean param0, int param1) {
         if (!param0) {
-          return (la) null;
+          return (Room) null;
         }
         return this.field_b[param1];
     }
 
-    dt(eha param0, hca param1, int param2, int param3) {
+    dt(eha param0, Player param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -518,7 +518,7 @@ final class dt {
           this.field_d = param3;
           this.field_i = param0;
           this.field_m = this.field_d + this.field_e;
-          this.field_b = new la[this.field_m];
+          this.field_b = new Room[this.field_m];
           for (var5_int = 0; var5_int < this.field_j.length; var5_int++) {
             this.field_j[var5_int] = -1;
           }

@@ -6,7 +6,7 @@ final class vl extends IntrusiveNode {
     private int field_h;
     private int field_g;
 
-    vl(int param0, fsa param1) {
+    vl(int param0, Trap param1) {
         try {
           this.field_f = param0;
           this.field_g = param1.f((byte) -72).c(121);

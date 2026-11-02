@@ -53,8 +53,8 @@ final class aw extends kna {
 
     final boolean z(int param0) {
         if (param0 != 0) {
-          uia var3 = (uia) null;
-          aw.a((uia) null, -27);
+          PacketBuffer var3 = (PacketBuffer) null;
+          aw.a((PacketBuffer) null, -27);
           return false;
         }
         return false;
@@ -67,11 +67,11 @@ final class aw extends kna {
         return 7;
     }
 
-    aw(la param0, int param1, kh param2, csa param3) {
+    aw(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 
-    final static ci a(uia param0, int param1) {
+    final static ci a(PacketBuffer param0, int param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -112,11 +112,11 @@ final class aw extends kna {
         }
     }
 
-    aw(la param0, int param1) {
+    aw(Room param0, int param1) {
         super(param0, param1);
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -131,26 +131,26 @@ final class aw extends kna {
         return true;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         eq var5 = null;
-        fsa var6 = null;
+        Trap var6 = null;
         mc var7 = null;
         mfa var8 = null;
         int var10 = 0;
-        fsa var11 = null;
+        Trap var11 = null;
         nq var12 = null;
         nq var13 = null;
         boa var14 = null;
-        fsa stackIn_8_0 = null;
+        Trap stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var11 = new fsa(param2, param0);
+          var11 = new Trap(param2, param0);
           var4 = var11;
           var11.b((byte) -11, this.field_k, this.field_l);
           var11.a((byte) -3, 4);
@@ -166,7 +166,7 @@ final class aw extends kna {
           var5 = new eq(param2, param0);
           var5.a(-28592, true);
           var11.a((byte) 83, (nv) (var5));
-          var6 = new fsa(param2, param0);
+          var6 = new Trap(param2, param0);
           var6.b((byte) -11, this.field_k, this.field_l);
           var6.a((byte) -3, 0);
           var7 = new mc(param2, param0);

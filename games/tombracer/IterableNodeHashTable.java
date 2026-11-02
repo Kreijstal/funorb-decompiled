@@ -3,32 +3,32 @@
  */
 import java.util.*;
 
-final class sk implements Iterable {
-    IntrusiveNode[] field_e;
+final class IterableNodeHashTable implements Iterable {
+    IntrusiveNode[] buckets;
     static int[] field_f;
     private IntrusiveNode field_d;
     private IntrusiveNode field_a;
-    int field_g;
+    int bucketCount;
     static int[] field_c;
     private int field_b;
 
     public static void b(int param0) {
         field_c = null;
         if (param0 != 33) {
-          sk.b(99);
+          IterableNodeHashTable.b(99);
         }
         field_f = null;
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new nd(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final void a(IntrusiveNode param0, byte param1, long param2) {
+    final void put(IntrusiveNode param0, byte param1, long param2) {
         if (param0.previous != null) {
-          param0.p(92);
+          param0.unlink(92);
         }
-        IntrusiveNode var5 = this.field_e[(int)(param2 & (long)(-1 + this.field_g))];
+        IntrusiveNode var5 = this.buckets[(int)(param2 & (long)(-1 + this.bucketCount))];
         param0.previous = var5.previous;
         if (param1 < 98) {
           return;
@@ -43,7 +43,7 @@ final class sk implements Iterable {
         }
     }
 
-    final void a(int param0) {
+    final void clear(int param0) {
         int var2;
         IntrusiveNode var3;
         IntrusiveNode var4;
@@ -51,16 +51,16 @@ final class sk implements Iterable {
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = param0;
         while (true) {
-          if (var2 >= this.field_g) {
+          if (var2 >= this.bucketCount) {
             this.field_d = null;
             this.field_a = null;
             return;
           }
-          var3 = this.field_e[var2];
+          var3 = this.buckets[var2];
           while (true) {
             var4 = var3.next;
             if (var3 != var4) {
-              var4.p(92);
+              var4.unlink(92);
               continue;
             }
             break;
@@ -69,60 +69,60 @@ final class sk implements Iterable {
         }
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode first(byte param0) {
         if (param0 != 35) {
           this.field_d = (IntrusiveNode) null;
         }
         this.field_b = 0;
-        return this.a((byte) 55);
+        return this.next((byte) 55);
     }
 
-    sk(int param0) {
+    IterableNodeHashTable(int param0) {
         int var2 = 0;
         IntrusiveNode dupTemp$0 = null;
         IntrusiveNode var3 = null;
         this.field_b = 0;
-        this.field_e = new IntrusiveNode[param0];
-        this.field_g = param0;
+        this.buckets = new IntrusiveNode[param0];
+        this.bucketCount = param0;
         for (var2 = 0; var2 < param0; var2++) {
           dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
-          this.field_e[var2] = dupTemp$0;
+          this.buckets[var2] = dupTemp$0;
           var3.previous = var3;
           var3.next = var3;
         }
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode next(byte param0) {
         int fieldTemp$0 = 0;
         IntrusiveNode var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != 55) {
-          this.a(100L, true);
+          this.get(100L, true);
         }
         if (this.field_b > 0 &&
-          this.field_e[this.field_b - 1] != this.field_a) {
+          this.buckets[this.field_b - 1] != this.field_a) {
           var2 = this.field_a;
           this.field_a = var2.next;
           return var2;
         }
         do {
-          if (this.field_b >= this.field_g) {
+          if (this.field_b >= this.bucketCount) {
             return null;
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          var2 = this.field_e[fieldTemp$0].next;
-        } while (this.field_e[-1 + this.field_b] == var2);
+          var2 = this.buckets[fieldTemp$0].next;
+        } while (this.buckets[-1 + this.field_b] == var2);
         this.field_a = var2.next;
         return var2;
     }
 
-    final IntrusiveNode a(long param0, boolean param1) {
+    final IntrusiveNode get(long param0, boolean param1) {
         IntrusiveNode var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
-        IntrusiveNode var4 = this.field_e[(int)((long)(-1 + this.field_g) & param0)];
+        IntrusiveNode var4 = this.buckets[(int)((long)(-1 + this.bucketCount) & param0)];
         this.field_d = var4.next;
         while (var4 != this.field_d) {
           if (param0 == this.field_d.key) {

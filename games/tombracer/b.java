@@ -309,7 +309,7 @@ class b extends ae implements tpa {
           }
           var9 = (ae) (var8.a(true));
           while (var9 != null) {
-            if (var9.l((byte) -114)) {
+            if (var9.isLinked((byte) -114)) {
               if (!var9.a(121, param1 + this.field_i, this.field_n + param2, param3, param4, param5, param6)) {
                 var9 = (ae) (var8.a(-1));
                 continue;
@@ -373,7 +373,7 @@ class b extends ae implements tpa {
           var7 = new uja(this.field_u);
           var8 = (ae) (var7.a(true));
           while (var8 != null) {
-            if (var8.l((byte) -107)) {
+            if (var8.isLinked((byte) -107)) {
               var8.a((byte) 59, param1, param2, this.field_i + param3, param4 + this.field_n, param5);
               var8 = (ae) (var7.a(-1));
               continue;
@@ -472,7 +472,7 @@ class b extends ae implements tpa {
           }
           var9 = (ae) (var8.a(true));
           while (var9 != null) {
-            if (var9.l((byte) 30)) {
+            if (var9.isLinked((byte) 30)) {
               if (var9.b((byte) -34) &&
                 var9.a(param0, param1, param2, param3, param4, param5, -1)) {
                 return true;
@@ -516,7 +516,7 @@ class b extends ae implements tpa {
           }
           var8 = (ae) (var5.a(param3));
           while (var8 != null) {
-            if (var8.l((byte) 35)) {
+            if (var8.isLinked((byte) 35)) {
               if (var8.b((byte) -34) &&
                 var8.a(param0, param1, param2, true)) {
                 return true;
@@ -644,7 +644,7 @@ class b extends ae implements tpa {
           var5 = new uja(this.field_u);
           var6 = (ae) (var5.a(true));
           while (var6 != null) {
-            if (var6.l((byte) 70)) {
+            if (var6.isLinked((byte) 70)) {
               var6.a(this.field_i + param0, 2097152, param2, param3 + this.field_n);
               var6 = (ae) (var5.a(-1));
               continue;

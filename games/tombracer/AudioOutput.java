@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kta {
+class AudioOutput {
     private long field_n;
     private static ch field_p;
     static boolean field_h;
@@ -55,7 +55,7 @@ class kta {
         if (this.field_i != null &&
           this.field_r <= 0) {
           this.field_r = this.field_r + (field_d >> 4);
-          kta.a(this.field_i);
+          AudioOutput.a(this.field_i);
           this.a(this.field_i, this.field_i.d());
           var4 = 0;
           var5 = 255;
@@ -151,15 +151,15 @@ class kta {
         return this.field_s;
     }
 
-    final static kta a(fia param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
-          bu var4 = null;
+          JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
-          bu var5 = null;
-          bu stackIn_10_0 = null;
+          JavaSoundAudioOutput var5 = null;
+          JavaSoundAudioOutput stackIn_10_0 = null;
           int stackIn_10_1 = 0;
           int stackIn_11_2 = 0;
-          bu stackIn_21_0 = null;
+          JavaSoundAudioOutput stackIn_21_0 = null;
           Throwable decompiledCaughtException = null;
           if (field_d == 0) {
             throw new IllegalStateException();
@@ -170,7 +170,7 @@ class kta {
               param3 = 256;
             }
             try {
-              var5 = new bu();
+              var5 = new JavaSoundAudioOutput();
               var4 = var5;
               stackIn_10_0 = var4;
               stackIn_10_1 = 256;
@@ -179,14 +179,14 @@ class kta {
               } else {
                 stackIn_11_2 = 2;
               }
-              ((kta) ((Object) stackIn_10_0)).field_j = new int[stackIn_10_1 * stackIn_11_2];
-              ((kta) ((Object) var4)).field_t = param3;
-              ((kta) ((Object) var4)).a(param1);
-              ((kta) ((Object) var4)).field_s = (param3 & -1024) + 1024;
-              if (((kta) ((Object) var4)).field_s > 16384) {
-                ((kta) ((Object) var4)).field_s = 16384;
+              ((AudioOutput) ((Object) stackIn_10_0)).field_j = new int[stackIn_10_1 * stackIn_11_2];
+              ((AudioOutput) ((Object) var4)).field_t = param3;
+              ((AudioOutput) ((Object) var4)).a(param1);
+              ((AudioOutput) ((Object) var4)).field_s = (param3 & -1024) + 1024;
+              if (((AudioOutput) ((Object) var4)).field_s > 16384) {
+                ((AudioOutput) ((Object) var4)).field_s = 16384;
               }
-              ((kta) ((Object) var4)).a(((kta) ((Object) var4)).field_s);
+              ((AudioOutput) ((Object) var4)).a(((AudioOutput) ((Object) var4)).field_s);
               if (field_q > 0 &&
                 field_p == null) {
                 field_p = new ch();
@@ -197,14 +197,14 @@ class kta {
                 if (field_p.field_c[param2] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_p.field_c[param2] = (kta) ((Object) var5);
+                field_p.field_c[param2] = (AudioOutput) ((Object) var5);
               }
               stackIn_21_0 = var4;
-              return (kta) ((Object) stackIn_21_0);
+              return (AudioOutput) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              return new kta();
+              return new AudioOutput();
             }
           }
           throw new IllegalArgumentException();
@@ -329,7 +329,7 @@ class kta {
         }
         cg var1 = param0.b();
         while (var1 != null) {
-          kta.a(var1);
+          AudioOutput.a(var1);
           var1 = param0.c();
         }
     }
@@ -401,7 +401,7 @@ class kta {
     void f() throws Exception {
     }
 
-    kta() {
+    AudioOutput() {
         this.field_l = 32;
         this.field_g = false;
         this.field_n = bva.b((byte) -107);

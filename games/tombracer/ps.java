@@ -43,7 +43,7 @@ final class ps extends ra {
         return true;
     }
 
-    ps(la param0, int param1, kh param2, csa param3) {
+    ps(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
         try {
           this.field_M = param2.b((byte) 44, 4);
@@ -60,7 +60,7 @@ final class ps extends ra {
         return true;
     }
 
-    ps(la param0, int param1) {
+    ps(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -72,27 +72,27 @@ final class ps extends ra {
         return 3;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         lpa var5 = null;
         ro var6 = null;
         mfa var7 = null;
         ce var8 = null;
-        fsa stackIn_2_0 = null;
-        fsa stackIn_4_0 = null;
+        Trap stackIn_2_0 = null;
+        Trap stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var5 = new lpa(param2, false);
           var5.b(-5, this.field_M);
           var5.a((byte) -24, true);
           if (param1 != 3) {
-            stackIn_2_0 = (fsa) null;
+            stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
           var4.a((byte) 83, (nv) (var5));
@@ -118,7 +118,7 @@ final class ps extends ra {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 84, this.field_M, 4);

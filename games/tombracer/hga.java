@@ -83,7 +83,7 @@ class hga extends vpa {
         int var14Lifetime1;
         var26 = TombRacer.field_G ? 1 : 0;
         try {
-          var27 = sra.a((byte) 43, new uia(param1));
+          var27 = sra.a((byte) 43, new PacketBuffer(param1));
           var31 = var27;
           var3 = -1;
           var4 = -1;

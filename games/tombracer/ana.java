@@ -38,7 +38,7 @@ final class ana extends nv {
         return param0;
     }
 
-    final int a(int param0, ep param1, up param2) {
+    final int a(int param0, Projectile param1, up param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
@@ -75,7 +75,7 @@ final class ana extends nv {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           this.b(0);
@@ -137,7 +137,7 @@ final class ana extends nv {
                 var14 != var19) {
                 var7 = var7 + var16;
               } else {
-                var20 = jqa.a(var9 >> 16, 1, 8 * var17, var17 * 8 + 8, var11 >> 16, 0, 8 * var19, var10 >> 16, 8 + var19 * 8, var8 >> 16);
+                var20 = BufferedSocket.a(var9 >> 16, 1, 8 * var17, var17 * 8 + 8, var11 >> 16, 0, 8 * var19, var10 >> 16, 8 + var19 * 8, var8 >> 16);
                 var7 = var7 + var20;
               }
             }
@@ -155,7 +155,7 @@ final class ana extends nv {
         return 3;
     }
 
-    ana(la param0, kh param1, boolean param2) {
+    ana(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -238,13 +238,13 @@ final class ana extends nv {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 59, this.field_n >> 16, 10);
           if (param0) {
-            kh var4 = (kh) null;
-            this.a(true, (kh) null);
+            BitPacketBuffer var4 = (BitPacketBuffer) null;
+            this.a(true, (BitPacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ana.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -286,11 +286,11 @@ final class ana extends nv {
         int var3_int = 0;
         int[] var2;
         int var4;
-        kh var5;
+        BitPacketBuffer var5;
         int[] var6;
         int[] var7;
         int[] var8;
-        hca var3;
+        Player var3;
         int[] var6Lifetime1;
         int[] var6Lifetime1Lifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -305,8 +305,8 @@ final class ana extends nv {
         var6 = var7;
         var2 = var6;
         if (param0 != 5418) {
-          var5 = (kh) null;
-          this.a(true, (kh) null);
+          var5 = (BitPacketBuffer) null;
+          this.a(true, (BitPacketBuffer) null);
         }
         for (var3_int = -1 + var8.length; var3_int >= 0; var3_int--) {
           if (var8[var3_int] < this.field_p) {
@@ -416,7 +416,7 @@ final class ana extends nv {
         }
     }
 
-    ana(la param0, boolean param1) {
+    ana(Room param0, boolean param1) {
         super(param0, param1);
         this.field_q = 240;
         this.field_n = 2621440;

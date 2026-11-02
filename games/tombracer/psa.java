@@ -9,7 +9,7 @@ final class psa extends l {
     private mp field_R;
 
     final synchronized void a(int param0, int param1, byte param2, int param3) {
-        int var5 = param3 * kta.field_d / 1000;
+        int var5 = param3 * AudioOutput.field_d / 1000;
         if (param2 != -4) {
           return;
         }

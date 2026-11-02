@@ -3,11 +3,11 @@
  */
 final class vd extends nv {
     static int field_p;
-    private fsa field_r;
+    private Trap field_r;
     private int field_v;
-    private fsa field_A;
+    private Trap field_A;
     private int field_s;
-    private fsa field_o;
+    private Trap field_o;
     private int field_q;
     private int field_y;
     private boolean field_u;
@@ -89,7 +89,7 @@ final class vd extends nv {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -143,7 +143,7 @@ final class vd extends nv {
         return var2;
     }
 
-    final void a(fsa param0, byte param1) {
+    final void a(Trap param0, byte param1) {
         try {
           this.field_r = param0;
           int var3_int = -100 % ((param1 + 10) / 56);
@@ -152,7 +152,7 @@ final class vd extends nv {
         }
     }
 
-    final void a(fsa param0, int param1) {
+    final void a(Trap param0, int param1) {
         if (param1 != 2) {
           return;
         }
@@ -304,10 +304,10 @@ final class vd extends nv {
         int var22;
         av var23;
         int[][] var24;
-        la var25;
-        kh var26;
-        kh var27;
-        kh var28;
+        Room var25;
+        BitPacketBuffer var26;
+        BitPacketBuffer var27;
+        BitPacketBuffer var28;
         int[][] var31;
         int[][] var36;
         int[][] var37;
@@ -392,7 +392,7 @@ final class vd extends nv {
         var17 = null;
         if (this.field_r != null &&
           !this.field_r.J(90)) {
-          var26 = new kh(30000);
+          var26 = new BitPacketBuffer(30000);
           var15 = var26;
           var26.i(8);
           this.field_r.a(var26, 125);
@@ -400,7 +400,7 @@ final class vd extends nv {
         }
         if (null != this.field_A &&
           !this.field_A.J(51)) {
-          var27 = new kh(30000);
+          var27 = new BitPacketBuffer(30000);
           var16 = var27;
           var27.i(8);
           this.field_A.a(var27, 84);
@@ -408,7 +408,7 @@ final class vd extends nv {
         }
         if (null != this.field_o &&
           !this.field_o.J(73)) {
-          var28 = new kh(30000);
+          var28 = new BitPacketBuffer(30000);
           var17 = var28;
           var28.i(8);
           this.field_o.a(var28, -112);
@@ -417,9 +417,9 @@ final class vd extends nv {
         for (var18 = 0; this.field_z.field_f > var18; var18++) {
           for (var19 = 0; this.field_z.field_a > var19; var19++) {
             if (this.field_z.b((byte) -5, var19, var18) > 0) {
-              this.a(var18, var13, var19, -58, (kh) (var15), var12);
+              this.a(var18, var13, var19, -58, (BitPacketBuffer) (var15), var12);
             } else {
-              this.a(var18, var13, var19, -44, (kh) (var16), var12);
+              this.a(var18, var13, var19, -44, (BitPacketBuffer) (var16), var12);
             }
           }
         }
@@ -447,23 +447,23 @@ final class vd extends nv {
             }
           }
           for (var20Lifetime1 = 0; this.field_v > var20Lifetime1; var20Lifetime1++) {
-            this.a(var37[var20Lifetime1][0], var13, var37[var20Lifetime1][1], -113, (kh) (var17), var12);
+            this.a(var37[var20Lifetime1][0], var13, var37[var20Lifetime1][1], -113, (BitPacketBuffer) (var17), var12);
           }
         }
         var25.field_E = var14;
         return;
     }
 
-    vd(la param0, boolean param1) {
+    vd(Room param0, boolean param1) {
         super(param0, param1);
         this.field_u = false;
         this.field_t = 2097152;
         try {
-          this.field_r = new fsa(param0, false);
+          this.field_r = new Trap(param0, false);
           wd.a((byte) -98, 1, true, param0, this.field_r, false);
           this.field_r.b(false, 11468);
-          this.field_A = new fsa(param0, false);
-          this.field_o = new fsa(param0, false);
+          this.field_A = new Trap(param0, false);
+          this.field_o = new Trap(param0, false);
           this.d(true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -541,19 +541,19 @@ final class vd extends nv {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, kh param4, int param5) {
-        fsa var8 = null;
+    private final void a(int param0, int param1, int param2, int param3, BitPacketBuffer param4, int param5) {
+        Trap var8 = null;
         if (param4 == null) {
           return;
         }
-        la var7 = this.b(true);
-        param4.field_h = 0;
+        Room var7 = this.b(true);
+        param4.position = 0;
         if (param3 >= -41) {
           return;
         }
         try {
           param4.h((byte) 123);
-          var8 = new fsa(var7, param4, true);
+          var8 = new Trap(var7, param4, true);
           param4.i((byte) 98);
           var8.d((byte) -97, true);
           var8.m(1, param5 + this.field_t * param0);
@@ -564,7 +564,7 @@ final class vd extends nv {
         }
     }
 
-    vd(la param0, kh param1, boolean param2) {
+    vd(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_6_1 = false;
         RuntimeException stackIn_20_0 = null;
@@ -593,19 +593,19 @@ final class vd extends nv {
           }
           this.field_o = null;
           if (this.field_u) {
-            this.field_r = new fsa(param0, false);
+            this.field_r = new Trap(param0, false);
             wd.a((byte) -120, 1, true, param0, this.field_r, false);
-            this.field_A = new fsa(param0, false);
+            this.field_A = new Trap(param0, false);
           } else {
-            this.field_r = new fsa(param0, param1, false);
-            this.field_A = new fsa(param0, param1, false);
+            this.field_r = new Trap(param0, param1, false);
+            this.field_A = new Trap(param0, param1, false);
             if (this.field_v > 0 &&
               14 <= param0.field_E) {
-              this.field_o = new fsa(param0, param1, false);
+              this.field_o = new Trap(param0, param1, false);
             }
           }
           if (this.field_o == null) {
-            this.field_o = new fsa(param0, false);
+            this.field_o = new Trap(param0, false);
             wd.a((byte) -93, 7, true, param0, this.field_o, false);
             this.d(true);
           } else {
@@ -641,11 +641,11 @@ final class vd extends nv {
         this.field_A.c((byte) 59, false);
         this.field_A.b((byte) -11, this.field_t, this.field_t);
         if (!param0) {
-          this.field_o = (fsa) null;
+          this.field_o = (Trap) null;
         }
     }
 
-    final void a(byte param0, fsa param1) {
+    final void a(byte param0, Trap param1) {
         if (param0 > -115) {
           return;
         }
@@ -667,8 +667,8 @@ final class vd extends nv {
         super.h(param0);
     }
 
-    final void a(boolean param0, kh param1) {
-        kh stackIn_2_0 = null;
+    final void a(boolean param0, BitPacketBuffer param1) {
+        BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -680,14 +680,14 @@ final class vd extends nv {
           super.a(param0, param1);
           param1.a((byte) -41, this.field_s, 2);
           param1.a((byte) 42, this.field_t >> 16, 10);
-          stackIn_2_0 = (kh) (param1);
+          stackIn_2_0 = (BitPacketBuffer) (param1);
           stackIn_2_1 = 125;
           if (!this.field_u) {
             stackIn_3_2 = 0;
           } else {
             stackIn_3_2 = 1;
           }
-          ((kh) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
           param1.a((byte) -128, this.field_x, 7);
           param1.a((byte) 113, this.field_q, 7);
           param1.a((byte) -127, this.field_v, 3);
@@ -717,7 +717,7 @@ final class vd extends nv {
     final void b(byte param0, boolean param1) {
         this.field_u = param1 ? true : false;
         if (param0 < 60) {
-          this.field_A = (fsa) null;
+          this.field_A = (Trap) null;
         }
     }
 
@@ -738,7 +738,7 @@ final class vd extends nv {
 
     final int a(int param0, int param1) {
         if (param1 >= -48) {
-          this.field_A = (fsa) null;
+          this.field_A = (Trap) null;
         }
         return param0;
     }
@@ -747,7 +747,7 @@ final class vd extends nv {
         super.n((byte) 105);
         this.c(127);
         if (param0 <= 68) {
-          this.field_r = (fsa) null;
+          this.field_r = (Trap) null;
         }
     }
 

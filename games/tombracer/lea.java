@@ -12,16 +12,16 @@ abstract class lea extends kna {
         return false;
     }
 
-    fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
-        fsa stackIn_3_0 = null;
+        Trap stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.h(0, 0);
           var4.a(0, (byte) -12, true);
@@ -55,7 +55,7 @@ abstract class lea extends kna {
         return 7;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -75,7 +75,7 @@ abstract class lea extends kna {
         return false;
     }
 
-    lea(la param0, int param1, kh param2, csa param3) {
+    lea(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -99,7 +99,7 @@ abstract class lea extends kna {
         return false;
     }
 
-    lea(la param0, int param1) {
+    lea(Room param0, int param1) {
         super(param0, param1);
     }
 

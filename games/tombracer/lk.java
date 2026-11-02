@@ -10,7 +10,7 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
     private int field_n;
     private boolean field_f;
     private int field_j;
-    private la field_i;
+    private Room field_i;
     private int field_k;
     static jea field_l;
 
@@ -28,7 +28,7 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
         return this.field_m.a(param0, 14530);
     }
 
-    final void a(la param0, byte param1) {
+    final void a(Room param0, byte param1) {
         iq var4 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_8_0 = null;
@@ -110,11 +110,11 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
 
     public final void f(int param0) {
         if (param0 != -4366) {
-          this.field_i = (la) null;
+          this.field_i = (Room) null;
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           if (param0 >= -125) {
             this.field_n = -37;
@@ -195,7 +195,7 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
         return this.field_p;
     }
 
-    lk(la param0, kh param1) {
+    lk(Room param0, BitPacketBuffer param1) {
         try {
           this.field_i = param0;
           this.field_j = param1.b((byte) 44, 8);

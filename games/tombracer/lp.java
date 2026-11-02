@@ -12,7 +12,7 @@ final class lp {
     static ko field_h;
     static int field_g;
 
-    final void a(int param0, int param1, uia param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -104,7 +104,7 @@ final class lp {
         }
     }
 
-    private final void a(uia param0, int param1, byte param2, int param3) {
+    private final void a(PacketBuffer param0, int param1, byte param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

@@ -101,7 +101,7 @@ final class en extends cg {
     }
 
     final synchronized void b(cg param0) {
-        param0.p(80);
+        param0.unlink(80);
     }
 
     final synchronized void a(int param0) {
@@ -142,7 +142,7 @@ final class en extends cg {
     }
 
     private final void a(jva param0) {
-        param0.p(54);
+        param0.unlink(54);
         param0.a();
         IntrusiveNode var2 = this.field_m.field_e.next;
         if (var2 == this.field_m.field_e) {

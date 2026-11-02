@@ -166,7 +166,7 @@ final class qla {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           try {
-            if (!fia.field_j.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_j.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&
@@ -1047,7 +1047,7 @@ final class qla {
         StringBuilder stackIn_79_1 = null;
         String stackIn_80_2 = null;
         RuntimeException decompiledCaughtException = null;
-        uia var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -1069,7 +1069,7 @@ final class qla {
         int var9Lifetime2;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          var2 = new uia(param0);
+          var2 = new PacketBuffer(param0);
           var3 = var2.h(255);
           if (var3 != 0) {
             throw new RuntimeException("");

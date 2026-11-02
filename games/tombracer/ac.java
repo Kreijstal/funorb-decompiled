@@ -10,7 +10,7 @@ interface ac extends fo {
 
     public abstract void a(int param0, int param1);
 
-    public abstract void a(int param0, la param1);
+    public abstract void a(int param0, Room param1);
 
     public abstract boolean a(byte param0);
 

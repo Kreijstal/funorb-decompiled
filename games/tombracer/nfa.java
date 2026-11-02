@@ -5,7 +5,7 @@ final class nfa extends ci {
     private int field_o;
     private int field_m;
     static os field_q;
-    static gt field_n;
+    static GameKeyHandler field_n;
     static boolean field_p;
 
     final static void a(cn param0, String param1, boolean param2, int param3, cn param4, cn param5) {
@@ -395,7 +395,7 @@ final class nfa extends ci {
           }
         }
         if (param1 != -1) {
-          field_n = (gt) null;
+          field_n = (GameKeyHandler) null;
         }
         return var17;
     }
@@ -460,7 +460,7 @@ final class nfa extends ci {
         this.field_m = 4;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -498,7 +498,7 @@ final class nfa extends ci {
 
     static {
         field_q = (os) ((Object) new pq());
-        field_n = new gt();
+        field_n = new GameKeyHandler();
         field_p = false;
     }
 }

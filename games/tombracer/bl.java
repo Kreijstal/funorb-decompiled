@@ -81,24 +81,24 @@ final class bl {
           Throwable decompiledCaughtException = null;
           if (oba.field_e != null && (param0 < 0 ||
             uga.field_n == km.field_p)) {
-            if (param1 == ~ql.field_k.field_h &&
+            if (param1 == ~ql.field_k.position &&
               mha.field_D + 10000L < bva.b((byte) -107)) {
               ql.field_k.k(param0, -2988);
             }
-            if (ql.field_k.field_h > 0) {
+            if (ql.field_k.position > 0) {
               try {
-                oba.field_e.a(ql.field_k.field_g, 0, ql.field_k.field_h, param1 + 119);
+                oba.field_e.a(ql.field_k.payload, 0, ql.field_k.position, param1 + 119);
                 mha.field_D = bva.b((byte) -107);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 dea.a(60);
               }
-              ql.field_k.field_h = 0;
+              ql.field_k.position = 0;
             }
             return;
           }
-          ql.field_k.field_h = 0;
+          ql.field_k.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

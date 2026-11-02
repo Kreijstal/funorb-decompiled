@@ -63,7 +63,7 @@ final class joa {
         this(-1, 1000000, 1000000);
     }
 
-    final void a(byte param0, byte[] param1, uia param2) {
+    final void a(byte param0, byte[] param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -74,13 +74,13 @@ final class joa {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param2.field_g[param2.field_h] == 31 &&
-              -117 == param2.field_g[1 + param2.field_h]) {
+            if (param2.payload[param2.position] == 31 &&
+              -117 == param2.payload[1 + param2.position]) {
               if (null == this.field_b) {
                 this.field_b = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_b.setInput(param2.field_g, param2.field_h + 10, param2.field_g.length - (10 + (param2.field_h + 8)));
+                this.field_b.setInput(param2.payload, param2.position + 10, param2.payload.length - (10 + (param2.position + 8)));
                 this.field_b.inflate(param1);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,28 +125,28 @@ final class joa {
           long dupTemp$1 = 0L;
           int var2 = 0;
           IOException var3 = null;
-          kh var4 = null;
+          BitPacketBuffer var4 = null;
           int stackIn_10_0 = 0;
           Throwable decompiledCaughtException = null;
-          if (la.field_R == null) {
-            la.field_R = kqa.field_a.a(-24818, rsa.field_x, nn.field_b);
+          if (Room.field_R == null) {
+            Room.field_R = kqa.field_a.a(-24818, rsa.field_x, nn.field_b);
           }
           var2 = -67 % ((param1 - 67) / 35);
-          if (0 == la.field_R.field_b) {
+          if (0 == Room.field_R.field_b) {
             return false;
           }
           dupTemp$1 = bva.b((byte) -107);
           mha.field_D = dupTemp$1;
           ue.field_s = dupTemp$1;
-          if (la.field_R.field_b != 1) {
+          if (Room.field_R.field_b != 1) {
             km.field_p = af.field_g;
           } else {
             try {
-              oba.field_e = new jqa((java.net.Socket) (la.field_R.field_f), kqa.field_a);
-              ql.field_k.field_h = 0;
+              oba.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.field_f), kqa.field_a);
+              ql.field_k.position = 0;
               var4 = vc.field_q;
               km.field_p = sua.field_G;
-              var4.field_h = 0;
+              var4.position = 0;
               stackIn_10_0 = (!param0) ? -1 : -2;
               vua.field_B = stackIn_10_0;
               hla.field_xb = stackIn_10_0;
@@ -157,11 +157,11 @@ final class joa {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;
               km.field_p = af.field_g;
-              la.field_R = null;
+              Room.field_R = null;
               return true;
             }
           }
-          la.field_R = null;
+          Room.field_R = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

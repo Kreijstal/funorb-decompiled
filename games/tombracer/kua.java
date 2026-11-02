@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kua extends IntrusiveNode implements fo {
-    private hca field_h;
+    private Player field_h;
     private int field_g;
     private int field_l;
     private int field_k;
@@ -19,7 +19,7 @@ final class kua extends IntrusiveNode implements fo {
         return 1;
     }
 
-    final void a(la param0, byte param1) {
+    final void a(Room param0, byte param1) {
         try {
           int var3_int = -11 % ((param1 - 39) / 46);
           this.field_l = param0.a(this.field_l, (byte) 71);
@@ -85,7 +85,7 @@ final class kua extends IntrusiveNode implements fo {
 
     public final int e(byte param0) {
         if (param0 >= -86) {
-          this.field_h = (hca) null;
+          this.field_h = (Player) null;
           return this.field_f;
         }
         return this.field_f;
@@ -122,7 +122,7 @@ final class kua extends IntrusiveNode implements fo {
         return this.field_g;
     }
 
-    kua(hca param0, int param1, int param2, int param3, int param4) {
+    kua(Player param0, int param1, int param2, int param3, int param4) {
         try {
           this.field_l = param1;
           this.field_f = param3;

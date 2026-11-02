@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kh extends uia {
+final class BitPacketBuffer extends PacketBuffer {
     static String[][] field_l;
     private int field_i;
     private IsaacCipher field_n;
@@ -11,7 +11,7 @@ final class kh extends uia {
     private int field_k;
     static String field_o;
 
-    kh(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 
@@ -19,13 +19,13 @@ final class kh extends uia {
         int fieldTemp$0 = 0;
         if (param0 >= -25) {
           this.field_i = 127;
-          fieldTemp$0 = this.field_h;
-          this.field_h = this.field_h + 1;
-          return 255 & this.field_g[fieldTemp$0] - this.field_n.b(104);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return 255 & this.payload[fieldTemp$0] - this.field_n.b(104);
         }
-        int fieldTemp$1 = this.field_h;
-        this.field_h = this.field_h + 1;
-        return 255 & this.field_g[fieldTemp$1] - this.field_n.b(104);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$1] - this.field_n.b(104);
     }
 
     final void a(byte param0, int param1, int param2) {
@@ -38,36 +38,36 @@ final class kh extends uia {
         param1 = param1 & fca.field_b[param2];
         while (this.field_k < param2) {
           param2 = param2 - this.field_k;
-          fieldTemp$1 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$1] = (byte)(this.field_g[fieldTemp$1] + (param1 >>> param2));
-          this.field_g[this.field_h] = (byte) 0;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(this.payload[fieldTemp$1] + (param1 >>> param2));
+          this.payload[this.position] = (byte) 0;
           this.field_k = 8;
         }
         if (this.field_k != param2) {
           this.field_k = this.field_k - param2;
-          this.field_g[this.field_h] = (byte)(this.field_g[this.field_h] + (param1 << this.field_k));
+          this.payload[this.position] = (byte)(this.payload[this.position] + (param1 << this.field_k));
           return;
         }
-        fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)(this.field_g[fieldTemp$0] + param1);
-        this.field_g[this.field_h] = (byte) 0;
+        fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.payload[fieldTemp$0] + param1);
+        this.payload[this.position] = (byte) 0;
         this.field_k = 8;
         return;
     }
 
-    kh(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 
     final void h(byte param0) {
-        this.field_i = this.field_h * 8;
+        this.field_i = this.position * 8;
         int var2 = -117 % ((61 - param0) / 49);
     }
 
     final void i(int param0) {
-        this.field_g[this.field_h] = (byte) 0;
+        this.payload[this.position] = (byte) 0;
         this.field_k = param0;
     }
 
@@ -94,14 +94,14 @@ final class kh extends uia {
           while (var4 < param1) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((fca.field_b[var4] & this.field_g[incrementValue$0]) << -var4 + param1);
+            var5 = var5 + ((fca.field_b[var4] & this.payload[incrementValue$0]) << -var4 + param1);
             param1 = param1 - var4;
             var4 = 8;
           }
           if (var4 == param1) {
-            var5 = var5 + (fca.field_b[var4] & this.field_g[var3]);
+            var5 = var5 + (fca.field_b[var4] & this.payload[var3]);
           } else {
-            var5 = var5 + (this.field_g[var3] >> -param1 + var4 & fca.field_b[param1]);
+            var5 = var5 + (this.payload[var3] >> -param1 + var4 & fca.field_b[param1]);
           }
           return var5;
         }
@@ -109,20 +109,20 @@ final class kh extends uia {
         while (var4 < param1) {
           incrementValue$1 = var3;
           var3++;
-          var5 = var5 + ((fca.field_b[var4] & this.field_g[incrementValue$1]) << -var4 + param1);
+          var5 = var5 + ((fca.field_b[var4] & this.payload[incrementValue$1]) << -var4 + param1);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (var4 == param1) {
-          var5 = var5 + (fca.field_b[var4] & this.field_g[var3]);
+          var5 = var5 + (fca.field_b[var4] & this.payload[var3]);
         } else {
-          var5 = var5 + (this.field_g[var3] >> -param1 + var4 & fca.field_b[param1]);
+          var5 = var5 + (this.payload[var3] >> -param1 + var4 & fca.field_b[param1]);
         }
         return var5;
     }
 
     final void i(byte param0) {
-        this.field_h = (this.field_i + 7) / 8;
+        this.position = (this.field_i + 7) / 8;
         if (param0 == 98) {
           return;
         }
@@ -146,90 +146,90 @@ final class kh extends uia {
         if (param1 == 4) {
           var3 = this.field_k;
           if (var3 == 4) {
-            fieldTemp$0 = this.field_h;
-            this.field_h = this.field_h + 1;
-            this.field_g[fieldTemp$0] = (byte)(this.field_g[fieldTemp$0] + param0);
-            this.field_g[this.field_h] = (byte) 0;
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$0] = (byte)(this.payload[fieldTemp$0] + param0);
+            this.payload[this.position] = (byte) 0;
             this.field_k = 8;
             return;
           }
           if (var3 == 3) {
-            fieldTemp$1 = this.field_h;
-            this.field_h = this.field_h + 1;
-            this.field_g[fieldTemp$1] = (byte)(this.field_g[fieldTemp$1] + (param0 >>> 1));
-            this.field_g[this.field_h] = (byte)(param0 << 7);
+            fieldTemp$1 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$1] = (byte)(this.payload[fieldTemp$1] + (param0 >>> 1));
+            this.payload[this.position] = (byte)(param0 << 7);
             this.field_k = 7;
             return;
           }
           if (var3 == 2) {
-            fieldTemp$4 = this.field_h;
-            this.field_h = this.field_h + 1;
-            this.field_g[fieldTemp$4] = (byte)(this.field_g[fieldTemp$4] + (param0 >>> 2));
-            this.field_g[this.field_h] = (byte)(param0 << 6);
+            fieldTemp$4 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$4] = (byte)(this.payload[fieldTemp$4] + (param0 >>> 2));
+            this.payload[this.position] = (byte)(param0 << 6);
             this.field_k = 6;
             return;
           }
           if (var3 == 1) {
-            fieldTemp$2 = this.field_h;
-            this.field_h = this.field_h + 1;
-            this.field_g[fieldTemp$2] = (byte)(this.field_g[fieldTemp$2] + (param0 >>> 3));
-            this.field_g[this.field_h] = (byte)(param0 << 5);
+            fieldTemp$2 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$2] = (byte)(this.payload[fieldTemp$2] + (param0 >>> 3));
+            this.payload[this.position] = (byte)(param0 << 5);
             this.field_k = 5;
             return;
           }
           if (var3 != 0) {
             this.field_k = this.field_k - 4;
-            this.field_g[this.field_h] = (byte)(this.field_g[this.field_h] + (param0 << this.field_k));
+            this.payload[this.position] = (byte)(this.payload[this.position] + (param0 << this.field_k));
             return;
           }
-          fieldTemp$3 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$3] = (byte)(param0 << 4);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)(param0 << 4);
           this.field_k = 4;
           return;
         }
         field_p = (String) null;
         var3Lifetime1 = this.field_k;
         if (var3Lifetime1 == 4) {
-          fieldTemp$5 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$5] = (byte)(this.field_g[fieldTemp$5] + param0);
-          this.field_g[this.field_h] = (byte) 0;
+          fieldTemp$5 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$5] = (byte)(this.payload[fieldTemp$5] + param0);
+          this.payload[this.position] = (byte) 0;
           this.field_k = 8;
           return;
         }
         if (var3Lifetime1 == 3) {
-          fieldTemp$6 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$6] = (byte)(this.field_g[fieldTemp$6] + (param0 >>> 1));
-          this.field_g[this.field_h] = (byte)(param0 << 7);
+          fieldTemp$6 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$6] = (byte)(this.payload[fieldTemp$6] + (param0 >>> 1));
+          this.payload[this.position] = (byte)(param0 << 7);
           this.field_k = 7;
           return;
         }
         if (var3Lifetime1 == 2) {
-          fieldTemp$9 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$9] = (byte)(this.field_g[fieldTemp$9] + (param0 >>> 2));
-          this.field_g[this.field_h] = (byte)(param0 << 6);
+          fieldTemp$9 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$9] = (byte)(this.payload[fieldTemp$9] + (param0 >>> 2));
+          this.payload[this.position] = (byte)(param0 << 6);
           this.field_k = 6;
           return;
         }
         if (var3Lifetime1 == 1) {
-          fieldTemp$7 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_g[fieldTemp$7] = (byte)(this.field_g[fieldTemp$7] + (param0 >>> 3));
-          this.field_g[this.field_h] = (byte)(param0 << 5);
+          fieldTemp$7 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$7] = (byte)(this.payload[fieldTemp$7] + (param0 >>> 3));
+          this.payload[this.position] = (byte)(param0 << 5);
           this.field_k = 5;
           return;
         }
         if (var3Lifetime1 != 0) {
           this.field_k = this.field_k - 4;
-          this.field_g[this.field_h] = (byte)(this.field_g[this.field_h] + (param0 << this.field_k));
+          this.payload[this.position] = (byte)(this.payload[this.position] + (param0 << this.field_k));
           return;
         }
-        fieldTemp$8 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$8] = (byte)(param0 << 4);
+        fieldTemp$8 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$8] = (byte)(param0 << 4);
         this.field_k = 4;
         return;
     }
@@ -249,9 +249,9 @@ final class kh extends uia {
           var5_int = 0;
           var6 = 80 / ((70 - param1) / 50);
           while (var5_int < param3) {
-            fieldTemp$0 = this.field_h;
-            this.field_h = this.field_h + 1;
-            param2[param0 + var5_int] = (byte)(this.field_g[fieldTemp$0] - this.field_n.b(120));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[param0 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_n.b(120));
             var5_int++;
           }
           return;
@@ -281,15 +281,15 @@ final class kh extends uia {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 == qla.field_f &&
-            la.field_k == param1) {
+            Room.field_k == param1) {
             return;
           }
           if (!param0) {
             return;
           }
           qla.field_f = param2;
-          la.field_k = param1;
-          if (ska.field_r == la.field_k) {
+          Room.field_k = param1;
+          if (ska.field_r == Room.field_k) {
             if (qla.field_f == baa.field_e) {
               baa.field_d.a(0, new ei[]{(ei) ((Object) kra.field_a)});
             } else {
@@ -342,9 +342,9 @@ final class kh extends uia {
         if (param1 != -2988) {
           return;
         }
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)(this.field_n.b(104) + param0);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_n.b(104) + param0);
     }
 
     public static void g(byte param0) {
@@ -362,7 +362,7 @@ final class kh extends uia {
     final void k(int param0) {
         if (8 > this.field_k) {
           this.field_k = 8;
-          this.field_h = this.field_h + 1;
+          this.position = this.position + 1;
           if (param0 == -1826190686) {
             return;
           }

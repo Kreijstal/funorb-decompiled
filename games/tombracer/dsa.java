@@ -4,7 +4,7 @@
 final class dsa {
     static String field_d;
     static int field_b;
-    static fia field_c;
+    static PlatformTaskDispatcher field_c;
     static String[] field_a;
 
     final static vb a(int param0) {

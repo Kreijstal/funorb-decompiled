@@ -91,7 +91,7 @@ final class qv extends ci {
         return var9;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_16_0 = null;

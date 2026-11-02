@@ -5,7 +5,7 @@ final class wn extends nv {
     static String field_n;
     private int field_o;
 
-    wn(la param0, kh param1, boolean param2) {
+    wn(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_o = param1.b((byte) 44, 4);
@@ -25,7 +25,7 @@ final class wn extends nv {
         int var2;
         int var3;
         int var4;
-        fsa stackIn_6_0 = null;
+        Trap stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         boolean stackIn_7_2 = false;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -39,7 +39,7 @@ final class wn extends nv {
             stackIn_6_0 = this.field_g;
             stackIn_6_1 = 17;
             stackIn_7_2 = (this.field_g.z((byte) 90)) ? false : true;
-            ((fsa) (Object) stackIn_6_0).b((byte) stackIn_6_1, stackIn_7_2);
+            ((Trap) (Object) stackIn_6_0).b((byte) stackIn_6_1, stackIn_7_2);
           }
         }
     }
@@ -51,7 +51,7 @@ final class wn extends nv {
         return 14;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -125, this.field_o, 4);
@@ -60,11 +60,11 @@ final class wn extends nv {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           if (!param0) {
-            fsa var4 = (fsa) null;
-            this.a(true, (fsa) null);
+            Trap var4 = (Trap) null;
+            this.a(true, (Trap) null);
           }
           super.a(param0, param1);
           this.field_f = false;

@@ -4,17 +4,17 @@
 import java.io.*;
 
 final class caa implements Runnable {
-    private naa field_d;
-    private naa field_c;
+    private AsyncRequest field_d;
+    private AsyncRequest field_c;
     private DataInputStream field_a;
-    private uia field_h;
+    private PacketBuffer field_h;
     private int field_f;
     static int field_i;
-    private naa field_e;
+    private AsyncRequest field_e;
     private java.net.URL field_b;
-    private fia field_g;
+    private PlatformTaskDispatcher field_g;
 
-    final static void a(ff param0, la param1, int param2) {
+    final static void a(ff param0, Room param1, int param2) {
         if (param2 <= 90) {
           caa.a(-49, -51, -30, 34, 111, -46);
         }
@@ -99,7 +99,7 @@ final class caa implements Runnable {
             var3.write(us.a(var5, param0));
             this.field_a = new DataInputStream(var4.getInputStream());
           }
-          this.field_h.field_h = 0;
+          this.field_h.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IOException) (Object) decompiledCaughtException;
@@ -148,7 +148,7 @@ final class caa implements Runnable {
         bh.field_p = true;
         bja.a(pl.a((byte) 64), (byte) 126, 3);
         int var1 = 72 / ((param0 - 55) / 46);
-        rba.field_a.e((byte) 106);
+        SecondaryNodeDequeIterator.field_a.e((byte) 106);
     }
 
     protected final void finalize() {
@@ -211,16 +211,16 @@ final class caa implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = TombRacer.field_G ? 1 : 0;
           try {
-            while (this.field_h.field_g.length > this.field_h.field_h) {
-              var1_int = this.field_a.read(this.field_h.field_g, this.field_h.field_h, -this.field_h.field_h + this.field_h.field_g.length);
+            while (this.field_h.payload.length > this.field_h.position) {
+              var1_int = this.field_a.read(this.field_h.payload, this.field_h.position, -this.field_h.position + this.field_h.payload.length);
               if (var1_int >= 0) {
-                this.field_h.field_h = this.field_h.field_h + var1_int;
+                this.field_h.position = this.field_h.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_h.field_g.length == this.field_h.field_h) {
-              throw caa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.field_g.length + " " + this.field_b));
+            if (this.field_h.payload.length == this.field_h.position) {
+              throw caa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.payload.length + " " + this.field_b));
             }
             var1 = this;
             synchronized (var1) {
@@ -245,7 +245,7 @@ final class caa implements Runnable {
         }
     }
 
-    final uia b(byte param0) {
+    final PacketBuffer b(byte param0) {
         if (param0 >= -115) {
           this.b((byte) 71);
           if (this.field_f == 3) {
@@ -259,11 +259,11 @@ final class caa implements Runnable {
         return null;
     }
 
-    caa(fia param0, java.net.URL param1, int param2) {
+    caa(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_b = param1;
           this.field_g = param0;
-          this.field_h = new uia(param2);
+          this.field_h = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "caa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

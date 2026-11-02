@@ -3,35 +3,35 @@
  */
 import java.io.*;
 
-final class fia implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     private Object field_i;
     boolean field_c;
     private static int field_d;
-    ml field_x;
+    RandomAccessFileHandle field_x;
     private Thread field_m;
     private static volatile long field_o;
-    ml[] field_h;
-    private naa field_l;
+    RandomAccessFileHandle[] field_h;
+    private AsyncRequest field_l;
     private boolean field_f;
     private static String field_s;
     static String field_j;
     private Object field_t;
-    ml field_n;
+    RandomAccessFileHandle field_n;
     java.awt.EventQueue field_r;
     private sp field_w;
     private qj field_g;
     static java.lang.reflect.Method field_b;
     private static String field_u;
-    ml field_q;
+    RandomAccessFileHandle field_q;
     static String field_v;
     boolean field_p;
     static String field_e;
-    private naa field_k;
+    private AsyncRequest field_k;
     private static String field_a;
 
-    final naa a(java.net.URL param0, int param1) {
+    final AsyncRequest a(java.net.URL param0, int param1) {
         if (param1 < 69) {
-          return (naa) null;
+          return (AsyncRequest) null;
         }
         return this.a(0, 0, (byte) 104, param0, 4);
     }
@@ -47,13 +47,13 @@ final class fia implements Runnable {
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
           wra var3_ref = null;
-          ml var3_ref2 = null;
+          RandomAccessFileHandle var3_ref2 = null;
           int var3_int = 0;
           Exception var3_ref3 = null;
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
-          naa var8 = null;
+          AsyncRequest var8 = null;
           Object[] var9 = null;
           java.awt.datatransfer.Clipboard var10 = null;
           String var11 = null;
@@ -136,7 +136,7 @@ final class fia implements Runnable {
                   case 16:
                   default:
                     if (!this.field_c) {
-                      throw fia.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 5:
@@ -147,7 +147,7 @@ final class fia implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref2 = fia.a(-20529, field_d, (String) (var8.field_c), field_u);
+                        var3_ref2 = PlatformTaskDispatcher.a(-20529, field_d, (String) (var8.field_c), field_u);
                         var8.field_f = var3_ref2;
                         break;
                       case 16:
@@ -181,21 +181,21 @@ final class fia implements Runnable {
                           Class.forName("kfa").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_t, new Object[]{var13[0], var13[1], new Integer(var8.field_e), new Integer(var8.field_d), var13[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw fia.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_j.startsWith("win")) {
-                              throw fia.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var14 = (String) (var8.field_c);
                             if (!var14.startsWith("http://") &&
                               !var14.startsWith("https://")) {
-                              throw fia.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var5 < var14.length(); var5++) {
                               if (var4_ref_String.indexOf((int) var14.charAt(var5)) == -1) {
-                                throw fia.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var14 + "\"");
@@ -204,12 +204,12 @@ final class fia implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter2;
                             var3_ref3 = (Exception) (Object) decompiledCaughtException;
                             var8.field_f = var3_ref3;
-                            throw fia.<RuntimeException>$cfr$sneakyThrow(var3_ref3);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref3);
                           }
                         }
                         break;
                       case 13:
-                        var3_ref2 = fia.a(-20529, field_d, (String) (var8.field_c), "");
+                        var3_ref2 = PlatformTaskDispatcher.a(-20529, field_d, (String) (var8.field_c), "");
                         var8.field_f = var3_ref2;
                         break;
                       case 7:
@@ -286,7 +286,7 @@ final class fia implements Runnable {
         }
     }
 
-    final naa a(int param0, String param1, int param2) {
+    final AsyncRequest a(int param0, String param1, int param2) {
         if (param0 != -24818) {
           java.awt.datatransfer.Transferable var5 = (java.awt.datatransfer.Transferable) null;
           this.a((byte) 92, (java.awt.datatransfer.Transferable) null);
@@ -294,23 +294,23 @@ final class fia implements Runnable {
         return this.a(param0 + 24819, param1, false, param2);
     }
 
-    final naa a(int param0, String param1, Class param2) {
+    final AsyncRequest a(int param0, String param1, Class param2) {
         if (param0 != 10355) {
           String var5 = (String) null;
-          fia.a(-73, 85, (String) null, (String) null);
+          PlatformTaskDispatcher.a(-73, 85, (String) null, (String) null);
         }
         return this.a(0, 0, (byte) 104, new Object[]{param2, param1}, 9);
     }
 
-    private final naa a(int param0, String param1, boolean param2, int param3) {
+    private final AsyncRequest a(int param0, String param1, boolean param2, int param3) {
         if (param0 != 1) {
           String var6 = (String) null;
-          fia.a(-120, 43, (String) null, (String) null);
+          PlatformTaskDispatcher.a(-120, 43, (String) null, (String) null);
         }
         return this.a(param3, 0, (byte) 104, param1, param2 ? 22 : 1);
     }
 
-    final naa a(int param0, Class[] param1, String param2, Class param3) {
+    final AsyncRequest a(int param0, Class[] param1, String param2, Class param3) {
         if (param0 != 26868) {
           this.field_i = (Object) null;
         }
@@ -397,15 +397,15 @@ final class fia implements Runnable {
         }
     }
 
-    private final static ml a(int param0, int param1, String param2, String param3) {
+    private final static RandomAccessFileHandle a(int param0, int param1, String param2, String param3) {
         try {
           int var6 = 0;
-          ml stackIn_15_0 = null;
+          RandomAccessFileHandle stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           String var7 = null;
-          ml var8 = null;
+          RandomAccessFileHandle var8 = null;
           Exception var8_ref = null;
           if (33 != param1) {
             if (param1 == 34) {
@@ -418,14 +418,14 @@ final class fia implements Runnable {
           }
           var5 = new String[]{"c:/rscache/", "/rscache/", field_a, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
           if (param0 != -20529) {
-            return (ml) null;
+            return (RandomAccessFileHandle) null;
           }
           for (var6 = 0; var6 < var5.length; var6++) {
             var7 = var5[var6];
             if (!(var7.length() > 0) ||
               new File(var7).exists()) {
               try {
-                var8 = new ml(new File(var7, var4), "rw", 10000L);
+                var8 = new RandomAccessFileHandle(new File(var7, var4), "rw", 10000L);
                 stackIn_15_0 = var8;
                 return stackIn_15_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -442,28 +442,28 @@ final class fia implements Runnable {
         }
     }
 
-    final naa a(int param0) {
+    final AsyncRequest a(int param0) {
         if (param0 > -87) {
-          return (naa) null;
+          return (AsyncRequest) null;
         }
         return this.a(0, 0, (byte) 104, (Object) null, 5);
     }
 
-    final naa a(java.awt.Frame param0, int param1) {
+    final AsyncRequest a(java.awt.Frame param0, int param1) {
         if (param1 != 18885) {
-          return (naa) null;
+          return (AsyncRequest) null;
         }
         return this.a(0, 0, (byte) 104, param0, 7);
     }
 
-    private final naa a(int param0, int param1, byte param2, Object param3, int param4) {
-        naa var6 = null;
+    private final AsyncRequest a(int param0, int param1, byte param2, Object param3, int param4) {
+        AsyncRequest var6 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         if (param2 != 104) {
-          return (naa) null;
+          return (AsyncRequest) null;
         }
-        var6 = new naa();
+        var6 = new AsyncRequest();
         var6.field_e = param0;
         var6.field_d = param1;
         var6.field_a = param4;
@@ -482,16 +482,16 @@ final class fia implements Runnable {
         return var6;
     }
 
-    final naa a(int param0, int param1, int param2, byte param3, int param4) {
+    final AsyncRequest a(int param0, int param1, int param2, byte param3, int param4) {
         if (param3 != 66) {
-          return (naa) null;
+          return (AsyncRequest) null;
         }
         return this.a(param2 + (param4 << 16), param1 + (param0 << 16), (byte) 104, (Object) null, 6);
     }
 
-    final naa a(Runnable param0, int param1, int param2) {
+    final AsyncRequest a(Runnable param0, int param1, int param2) {
         if (param1 != 425) {
-          this.field_h = (ml[]) null;
+          this.field_h = (RandomAccessFileHandle[]) null;
         }
         return this.a(param2, 0, (byte) 104, param0, 2);
     }
@@ -515,21 +515,21 @@ final class fia implements Runnable {
         }
     }
 
-    final naa a(byte param0, java.awt.datatransfer.Transferable param1) {
+    final AsyncRequest a(byte param0, java.awt.datatransfer.Transferable param1) {
         if (param0 <= 56) {
           this.a(96);
         }
         return this.a(0, 0, (byte) 104, param1, 19);
     }
 
-    final naa b(int param0) {
+    final AsyncRequest b(int param0) {
         if (param0 <= 104) {
-          return (naa) null;
+          return (AsyncRequest) null;
         }
         return this.a(0, 0, (byte) 104, (Object) null, 18);
     }
 
-    fia(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         int var8 = 0;
         Exception exception = null;
@@ -620,12 +620,12 @@ final class fia implements Runnable {
         }
         iba.a(field_d, -70, field_u);
         if (this.field_c) {
-          this.field_x = new ml(iba.a((String) null, "random.dat", 0, field_d), "rw", 25L);
-          this.field_n = new ml(iba.a("main_file_cache.dat2", (byte) -71), "rw", 314572800L);
-          this.field_q = new ml(iba.a("main_file_cache.idx255", (byte) -123), "rw", 1048576L);
-          this.field_h = new ml[param2];
+          this.field_x = new RandomAccessFileHandle(iba.a((String) null, "random.dat", 0, field_d), "rw", 25L);
+          this.field_n = new RandomAccessFileHandle(iba.a("main_file_cache.dat2", (byte) -71), "rw", 314572800L);
+          this.field_q = new RandomAccessFileHandle(iba.a("main_file_cache.idx255", (byte) -123), "rw", 1048576L);
+          this.field_h = new RandomAccessFileHandle[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_h[var5_int] = new ml(iba.a("main_file_cache.idx" + var5_int, (byte) -108), "rw", 1048576L);
+            this.field_h[var5_int] = new RandomAccessFileHandle(iba.a("main_file_cache.idx" + var5_int, (byte) -108), "rw", 1048576L);
           }
           if (this.field_p) {
             try {

@@ -212,7 +212,7 @@ final class kga extends dg {
         field_q = null;
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -261,7 +261,7 @@ final class kga extends dg {
         }
     }
 
-    kga(int param0, la param1, kh param2) {
+    kga(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_m = 0;
         this.field_p = 0;
@@ -286,7 +286,7 @@ final class kga extends dg {
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) -58, param1);
           param1.a((byte) 61, this.field_t, 4);

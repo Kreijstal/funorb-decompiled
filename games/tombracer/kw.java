@@ -113,7 +113,7 @@ final class kw extends qe {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        kh var3 = ql.field_k;
+        BitPacketBuffer var3 = ql.field_k;
         var3.k(param0, -2988);
         var3.i(3, 0);
         var3.i(10, 0);

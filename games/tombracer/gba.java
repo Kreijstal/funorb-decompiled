@@ -51,12 +51,12 @@ final class gba extends IntrusiveNode {
         }
     }
 
-    final static la a(int param0, boolean param1, g param2, int param3, dt param4) {
-        la var5 = null;
+    final static Room a(int param0, boolean param1, g param2, int param3, dt param4) {
+        Room var5 = null;
         Exception var5_ref = null;
         RuntimeException var5_ref2 = null;
-        la stackIn_3_0 = null;
-        la stackIn_5_0 = null;
+        Room stackIn_3_0 = null;
+        Room stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -65,7 +65,7 @@ final class gba extends IntrusiveNode {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var5 = new la(param4, param2.field_f, param2.field_c, param0, param1);
+            var5 = new Room(param4, param2.field_f, param2.field_c, param0, param1);
             var5.a((byte) 46, param2.field_e);
             if (param3 != 21789) {
               field_f = (int[]) null;

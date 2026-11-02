@@ -5,7 +5,7 @@ final class vc extends ci {
     static StringBuilder field_n;
     private int field_r;
     static String field_o;
-    static kh field_q;
+    static BitPacketBuffer field_q;
     static cn field_p;
     private int field_m;
     static String field_s;
@@ -23,7 +23,7 @@ final class vc extends ci {
         field_n = (StringBuilder) null;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;

@@ -6,7 +6,7 @@ import java.io.*;
 final class ph {
     private long field_d;
     private int field_a;
-    private ml field_b;
+    private RandomAccessFileHandle field_b;
     static float[] field_c;
     static String field_k;
     private long field_i;
@@ -169,7 +169,7 @@ final class ph {
             if (this.field_e.length >= param3) {
               if (param3 <= 0) {
                 if (param2 != -17) {
-                  this.field_b = (ml) null;
+                  this.field_b = (RandomAccessFileHandle) null;
                 }
                 return;
               }
@@ -388,7 +388,7 @@ final class ph {
         }
     }
 
-    ph(ml param0, int param1, int param2) throws IOException {
+    ph(RandomAccessFileHandle param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_m = -1L;
         this.field_l = -1L;

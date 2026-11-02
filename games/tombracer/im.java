@@ -47,7 +47,7 @@ final class im extends nv {
         }
     }
 
-    im(la param0, kh param1, boolean param2) {
+    im(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_p = new koa(1, 1, param0.field_E, param1);
@@ -112,7 +112,7 @@ final class im extends nv {
         return 28;
     }
 
-    im(la param0, boolean param1) {
+    im(Room param0, boolean param1) {
         super(param0, param1);
         try {
           this.field_p = new koa(1, 1);
@@ -127,13 +127,13 @@ final class im extends nv {
           this.field_p.a(this.h((byte) 112), 8);
           return;
         }
-        kh var3 = (kh) null;
-        this.a(false, (kh) null);
+        BitPacketBuffer var3 = (BitPacketBuffer) null;
+        this.a(false, (BitPacketBuffer) null);
         super.g(param0 ^ 0);
         this.field_p.a(this.h((byte) 112), 8);
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           param1.b((byte) -126, 3);
@@ -169,7 +169,7 @@ final class im extends nv {
         return this.field_p;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_p.a(30489, this.h((byte) 122), param1);
@@ -244,7 +244,7 @@ final class im extends nv {
         int var9;
         int var10;
         int var11;
-        la var12;
+        Room var12;
         ffa[] var13;
         ffa[] var14;
         ffa var16;
@@ -270,8 +270,8 @@ final class im extends nv {
           return;
         }
         var3 = null;
-        if (var27[0] instanceof fsa) {
-          var3 = (fsa) (var27[0]);
+        if (var27[0] instanceof Trap) {
+          var3 = (Trap) (var27[0]);
         }
         if (var3 == null) {
           return;
@@ -283,10 +283,10 @@ final class im extends nv {
         var5 = this.field_g.e(9648);
         var6 = this.field_g.c(-119);
         var7 = this.field_g.a((byte) 55);
-        var8 = ((fsa) (var3)).d(3);
-        var9 = ((fsa) (var3)).e(param0 ^ 12442);
-        var10 = ((fsa) (var3)).c(param0 - 5510);
-        var11 = ((fsa) (var3)).a((byte) 55);
+        var8 = ((Trap) (var3)).d(3);
+        var9 = ((Trap) (var3)).e(param0 ^ 12442);
+        var10 = ((Trap) (var3)).c(param0 - 5510);
+        var11 = ((Trap) (var3)).a((byte) 55);
         var12 = this.b(true);
         var13 = var12.field_u.b(var5, -1, var4, var6, var7);
         var14 = var13;

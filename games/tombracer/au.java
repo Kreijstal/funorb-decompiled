@@ -59,14 +59,14 @@ final class au extends aa {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        kh var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
         bna var12 = null;
         cga var13 = null;
-        kh var14 = null;
+        BitPacketBuffer var14 = null;
         bna var15 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
@@ -78,9 +78,9 @@ final class au extends aa {
             var10 = var11;
             var4 = var10;
             var5 = var14;
-            var6 = ((uia) ((Object) var5)).h(255);
+            var6 = ((PacketBuffer) ((Object) var5)).h(255);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((uia) ((Object) var5)).e(99);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).e(99);
             }
             var12 = (bna) (tca.field_N.f(-80));
             if (var12 == null) {
@@ -89,7 +89,7 @@ final class au extends aa {
             }
             var12.field_f = var3;
             var12.field_g = true;
-            var12.p(83);
+            var12.unlink(83);
           } else {
             if (var2 == 1) {
               var13 = (cga) (aba.field_a.f(-80));
@@ -97,7 +97,7 @@ final class au extends aa {
                 dea.a(60);
                 return;
               }
-              var13.p(35);
+              var13.unlink(35);
             } else {
               if (var2 != 2) {
                 ssa.a("A1: " + kk.a(32), (byte) 116, (Throwable) null);
@@ -110,7 +110,7 @@ final class au extends aa {
                 }
                 var15.field_f = fqa.e(true);
                 var15.field_g = true;
-                var15.p(42);
+                var15.unlink(42);
               }
             }
           }

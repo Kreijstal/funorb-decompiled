@@ -6,13 +6,13 @@ final class aja extends lea {
     static int field_H;
     static String field_I;
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         ue var5 = null;
         mfa var6 = null;
         kga var7 = null;
-        fsa stackIn_1_0 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -42,7 +42,7 @@ final class aja extends lea {
         }
     }
 
-    aja(la param0, int param1, kh param2, csa param3) {
+    aja(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -128,7 +128,7 @@ final class aja extends lea {
               var9 = (2 + dka.field_b.field_G) / 2;
               pk.field_z.a(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
               if (uu.field_a.field_Mb >= uu.field_a.field_Jb) {
-                pk.field_z.field_r = ml.field_c.toUpperCase();
+                pk.field_z.field_r = RandomAccessFileHandle.field_c.toUpperCase();
                 pk.field_z.field_X = false;
                 if (var19 != 0) {
                   pk.field_z.field_r = eu.field_b.toUpperCase();
@@ -424,12 +424,12 @@ final class aja extends lea {
                   hw.field_a.field_X = false;
                   if (hw.field_a.field_pb) {
                     if (rm.field_e.field_a.field_wb != 0) {
-                      qda.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(126, sta.field_A, new String[]{kh.field_p});
+                      qda.field_b = gl.$cfr$intArgs$a$53ce4ab4c593(126, sta.field_A, new String[]{BitPacketBuffer.field_p});
                       if (var19 != 0) {
-                        qda.field_b = kh.field_o;
+                        qda.field_b = BitPacketBuffer.field_o;
                       }
                     } else {
-                      qda.field_b = kh.field_o;
+                      qda.field_b = BitPacketBuffer.field_o;
                     }
                   }
                 }
@@ -484,7 +484,7 @@ final class aja extends lea {
             if (pk.field_z.field_y != 0) {
               tla.field_e = true;
             }
-            if (fsa.field_q.field_y != 0) {
+            if (Trap.field_q.field_y != 0) {
               tla.field_e = false;
             }
             cm.a(param2, uu.field_a, param1 ^ 21289, false);
@@ -505,7 +505,7 @@ final class aja extends lea {
         field_G = null;
     }
 
-    aja(la param0, int param1) {
+    aja(Room param0, int param1) {
         super(param0, param1);
     }
 

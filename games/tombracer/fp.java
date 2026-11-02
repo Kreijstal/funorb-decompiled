@@ -343,7 +343,7 @@ final class fp {
           return;
         }
         int var2 = aq.a(-5640);
-        int var3 = jqa.a(2147483647, new Random(), 45);
+        int var3 = BufferedSocket.a(2147483647, new Random(), 45);
         cs.field_c = new qh(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{wla.field_ub > 0 ? true : false}, new qha(var3));
         cs.field_c.k((byte) -25);
         wka.field_d = true;

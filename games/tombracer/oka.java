@@ -137,7 +137,7 @@ final class oka extends wv {
         int var7Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         super.a(param0, param1);
-        if (hb.field_t == rba.field_a) {
+        if (hb.field_t == SecondaryNodeDequeIterator.field_a) {
           return;
         }
         ik.field_h.a(this.field_t, this.field_r);

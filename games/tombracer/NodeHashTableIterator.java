@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class nd implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     private int field_b;
     private IntrusiveNode field_d;
     private IntrusiveNode field_a;
-    private sk field_c;
+    private IterableNodeHashTable field_c;
 
     final static boolean b(byte param0) {
         if (param0 > -88) {
@@ -20,44 +20,44 @@ final class nd implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = TombRacer.field_G ? 1 : 0;
-        if (this.field_c.field_e[-1 + this.field_b] != this.field_a) {
+        if (this.field_c.buckets[-1 + this.field_b] != this.field_a) {
           return true;
         }
         while (true) {
-          if (this.field_c.field_g <= this.field_b) {
+          if (this.field_c.bucketCount <= this.field_b) {
             return false;
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          if (this.field_c.field_e[fieldTemp$0].next == this.field_c.field_e[this.field_b - 1]) {
-            this.field_a = this.field_c.field_e[-1 + this.field_b];
+          if (this.field_c.buckets[fieldTemp$0].next == this.field_c.buckets[this.field_b - 1]) {
+            this.field_a = this.field_c.buckets[-1 + this.field_b];
             continue;
           }
           break;
         }
-        this.field_a = this.field_c.field_e[-1 + this.field_b].next;
+        this.field_a = this.field_c.buckets[-1 + this.field_b].next;
         return true;
     }
 
     private final void a(boolean param0) {
         this.field_d = null;
         if (param0) {
-          this.field_a = this.field_c.field_e[0].next;
+          this.field_a = this.field_c.buckets[0].next;
           this.field_b = 1;
           return;
         }
         this.field_b = -88;
-        this.field_a = this.field_c.field_e[0].next;
+        this.field_a = this.field_c.buckets[0].next;
         this.field_b = 1;
     }
 
     final static void a(byte param0) {
         if (param0 != 55) {
-          nd.a((byte) -67);
-          gt.a((byte) 46);
+          NodeHashTableIterator.a((byte) -67);
+          GameKeyHandler.a((byte) 46);
           return;
         }
-        gt.a((byte) 46);
+        GameKeyHandler.a((byte) 46);
     }
 
     final static void a(String param0, int param1) {
@@ -86,7 +86,7 @@ final class nd implements Iterator {
         if (this.field_d == null) {
           throw new IllegalStateException();
         }
-        this.field_d.p(105);
+        this.field_d.unlink(105);
         this.field_d = null;
     }
 
@@ -104,26 +104,26 @@ final class nd implements Iterator {
         IntrusiveNode var3;
         IntrusiveNode var4;
         var2 = TombRacer.field_G ? 1 : 0;
-        if (this.field_a != this.field_c.field_e[this.field_b - 1]) {
+        if (this.field_a != this.field_c.buckets[this.field_b - 1]) {
           var4 = this.field_a;
           this.field_d = var4;
           this.field_a = var4.next;
           return var4;
         }
         do {
-          if (this.field_b >= this.field_c.field_g) {
+          if (this.field_b >= this.field_c.bucketCount) {
             return null;
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          var3 = this.field_c.field_e[fieldTemp$0].next;
-        } while (var3 == this.field_c.field_e[-1 + this.field_b]);
+          var3 = this.field_c.buckets[fieldTemp$0].next;
+        } while (var3 == this.field_c.buckets[-1 + this.field_b]);
         this.field_a = var3.next;
         this.field_d = var3;
         return var3;
     }
 
-    nd(sk param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_d = null;
         try {
           this.field_c = param0;

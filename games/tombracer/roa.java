@@ -44,7 +44,7 @@ final class roa {
         return this.field_d;
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         boolean discarded$0 = false;
         try {
           param0.a((byte) -127, this.field_r, 5);
@@ -126,9 +126,9 @@ final class roa {
         return ci.a(this.field_r, -1);
     }
 
-    final boolean a(int param0, int param1, gma param2, int param3, int param4, la param5, int param6, int param7, int param8, boolean param9) {
+    final boolean a(int param0, int param1, gma param2, int param3, int param4, Room param5, int param6, int param7, int param8, boolean param9) {
         int var16 = 0;
-        ep stackIn_31_0 = null;
+        Projectile stackIn_31_0 = null;
         boolean stackIn_32_1 = false;
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
@@ -148,7 +148,7 @@ final class roa {
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        ep var23 = null;
+        Projectile var23 = null;
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
@@ -203,7 +203,7 @@ final class roa {
               if (this.field_c) {
                 stackIn_31_0 = var23;
                 stackIn_32_1 = !(param9);
-                ((ep) (Object) stackIn_31_0).a(stackIn_32_1, true);
+                ((Projectile) (Object) stackIn_31_0).a(stackIn_32_1, true);
               }
               if (this.field_j) {
                 var23.c(true, true);

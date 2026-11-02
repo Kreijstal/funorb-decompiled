@@ -561,7 +561,7 @@ final class f {
         this.field_f = new csa[]{};
     }
 
-    f(int param0, int param1, int param2, kh param3) {
+    f(int param0, int param1, int param2, BitPacketBuffer param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -619,7 +619,7 @@ final class f {
         }
     }
 
-    final void a(kh param0, int param1, csa param2) {
+    final void a(BitPacketBuffer param0, int param1, csa param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;

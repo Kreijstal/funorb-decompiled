@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int field_a;
     static String field_d;
     static float[] field_c;
@@ -20,7 +20,7 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
         try {
           var6_int = rp.a(hc.field_h, param4 - 16236, gca.field_d, param2);
           if (param4 != 10) {
-            gt.a((byte) 101);
+            GameKeyHandler.a((byte) 101);
           }
           var7 = rp.a(hc.field_h, param4 ^ -16236, gca.field_d, param5);
           var8 = rp.a(ss.field_c, param4 - 16236, pka.field_b, param1);
@@ -192,7 +192,7 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
         field_c = null;
         field_d = null;
         if (param0 != 127) {
-          gt.a((byte) 34);
+          GameKeyHandler.a((byte) 34);
         }
     }
 

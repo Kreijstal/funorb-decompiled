@@ -11,7 +11,7 @@ final class mka {
     private ir field_h;
     private int field_f;
 
-    final void a(int param0, byte param1, la param2, int param3) {
+    final void a(int param0, byte param1, Room param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -74,7 +74,7 @@ final class mka {
         if (~param1 != ~msa.field_a) {
           return;
         }
-        if (null == rba.field_a) {
+        if (null == SecondaryNodeDequeIterator.field_a) {
           return;
         }
         v.b(param0, 0);

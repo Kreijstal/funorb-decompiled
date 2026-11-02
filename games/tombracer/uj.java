@@ -10,13 +10,13 @@ final class uj implements bo {
     private int[] field_b;
     static int[] field_d;
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != -19) {
-            kh var5 = (kh) null;
-            this.a(-28, (kh) null);
+            BitPacketBuffer var5 = (BitPacketBuffer) null;
+            this.a(-28, (BitPacketBuffer) null);
           }
           param0.h((byte) -89);
           for (var3_int = 0; var3_int < this.field_c; var3_int++) {
@@ -104,7 +104,7 @@ final class uj implements bo {
         field_d = null;
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;

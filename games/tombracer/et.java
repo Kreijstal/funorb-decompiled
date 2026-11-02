@@ -115,10 +115,10 @@ final class et extends cg {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param1, (304 - param1.length() * 6) / 2 + var7, var8 + 22);
             }
-            if (hma.field_e != null) {
+            if (SecondaryNodeDeque.field_e != null) {
               var9.setFont(laa.field_y);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(hma.field_e, mma.field_a / 2 - 6 * hma.field_e.length() / 2, qf.field_i / 2 - 26);
+              var9.drawString(SecondaryNodeDeque.field_e, mma.field_a / 2 - 6 * SecondaryNodeDeque.field_e.length() / 2, qf.field_i / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -165,7 +165,7 @@ final class et extends cg {
         try {
           if ((4 & this.field_k.field_M[param2.field_k]) != 0 &&
             0 > param2.field_t) {
-            var4_int = this.field_k.field_u[param2.field_k] / kta.field_d;
+            var4_int = this.field_k.field_u[param2.field_k] / AudioOutput.field_d;
             var5 = (1048575 + (var4_int - param2.field_r)) / var4_int;
             param2.field_r = 1048575 & var4_int * param1 + param2.field_r;
             if (var5 <= param1) {
@@ -226,7 +226,7 @@ final class et extends cg {
         try {
           if ((4 & this.field_k.field_M[param3.field_k]) != 0 &&
             param3.field_t < 0) {
-            var7_int = this.field_k.field_u[param3.field_k] / kta.field_d;
+            var7_int = this.field_k.field_u[param3.field_k] / AudioOutput.field_d;
             while (true) {
               var8 = (var7_int + (1048575 - param3.field_r)) / var7_int;
               if (param4 < var8) {
@@ -237,7 +237,7 @@ final class et extends cg {
               param4 = param4 - var8;
               param3.field_r = param3.field_r + (var8 * var7_int - 1048576);
               param1 = param1 + var8;
-              var9 = kta.field_d / 100;
+              var9 = AudioOutput.field_d / 100;
               var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;
@@ -337,7 +337,7 @@ final class et extends cg {
     }
 
     final static void a(int param0, int param1, int param2) {
-        kh var3 = ql.field_k;
+        BitPacketBuffer var3 = ql.field_k;
         var3.k(param0, -2988);
         var3.i(3, 0);
         var3.i(9, param1 ^ param1);

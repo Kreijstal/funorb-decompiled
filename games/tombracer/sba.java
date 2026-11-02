@@ -62,7 +62,7 @@ final class sba extends ci {
         super(1, false);
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

@@ -5,10 +5,10 @@ final class qw extends IntrusiveNode {
     static hea field_f;
     static String field_g;
     static d field_j;
-    private hca field_h;
+    private Player field_h;
     private int field_i;
 
-    final hca b(int param0) {
+    final Player b(int param0) {
         if (param0 != -14065) {
           qw.a(-124);
           return this.field_h;
@@ -53,7 +53,7 @@ final class qw extends IntrusiveNode {
         return this.field_i;
     }
 
-    qw(hca param0, la param1, int param2, int param3, int param4) {
+    qw(Player param0, Room param1, int param2, int param3, int param4) {
         try {
           this.field_i = param3;
           this.field_h = param0;
@@ -68,7 +68,7 @@ final class qw extends IntrusiveNode {
           if (param1 != msa.field_a) {
             return;
           }
-          if (null != rba.field_a) {
+          if (null != SecondaryNodeDequeIterator.field_a) {
             v.b(15, 0);
             return;
           }
@@ -77,7 +77,7 @@ final class qw extends IntrusiveNode {
         if (param1 != msa.field_a) {
           return;
         }
-        if (null != rba.field_a) {
+        if (null != SecondaryNodeDequeIterator.field_a) {
           v.b(15, 0);
           return;
         }

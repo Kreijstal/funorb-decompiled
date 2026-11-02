@@ -237,7 +237,7 @@ final class cfa implements dv {
         return this.field_h;
     }
 
-    public final void a(kh param0, boolean param1) {
+    public final void a(BitPacketBuffer param0, boolean param1) {
         try {
           this.field_i = fa.a(0, param0, 8, this.field_i);
           this.field_d = param0.b((byte) 44, 3);
@@ -279,7 +279,7 @@ final class cfa implements dv {
         boolean[] var3;
         int var5;
         int var6;
-        kh var7;
+        BitPacketBuffer var7;
         var6 = TombRacer.field_G ? 1 : 0;
         var2 = new IsaacCipher(new int[]{this.field_j.field_C});
         this.field_i = new int[3];
@@ -299,8 +299,8 @@ final class cfa implements dv {
         if (param0 == 28624) {
           return;
         }
-        var7 = (kh) null;
-        this.a((kh) null, false);
+        var7 = (BitPacketBuffer) null;
+        this.a((BitPacketBuffer) null, false);
     }
 
     final void a(byte param0) {

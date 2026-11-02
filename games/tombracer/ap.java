@@ -14,7 +14,7 @@ final class ap implements bo {
         }
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           param0.h((byte) 124);
           this.field_b = param0.b((byte) 44, 4);
@@ -27,7 +27,7 @@ final class ap implements bo {
         }
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         try {
           param1.i(8);
           if (param0 != 200) {

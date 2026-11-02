@@ -118,11 +118,11 @@ final class gh extends nh {
         this.field_c.a(1, false, lja.field_j);
     }
 
-    final static void a(kh param0, byte param1) {
+    final static void a(BitPacketBuffer param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
-        kh var5 = null;
+        BitPacketBuffer var5 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -143,8 +143,8 @@ final class gh extends nh {
           }
           param0.i((byte) 98);
           if (param1 >= -41) {
-            var5 = (kh) null;
-            gh.a((kh) null, (byte) 109);
+            var5 = (BitPacketBuffer) null;
+            gh.a((BitPacketBuffer) null, (byte) 109);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

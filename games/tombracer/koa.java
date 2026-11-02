@@ -66,7 +66,7 @@ final class koa {
         }
     }
 
-    final void a(int param0, ew param1, kh param2) {
+    final void a(int param0, ew param1, BitPacketBuffer param2) {
         int var4_int = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
         try {
@@ -142,7 +142,7 @@ final class koa {
         this.field_f = new lj[]{};
     }
 
-    koa(int param0, int param1, int param2, kh param3) {
+    koa(int param0, int param1, int param2, BitPacketBuffer param3) {
         int var6 = 0;
         int var5_int = 0;
         dha[] stackIn_6_0;

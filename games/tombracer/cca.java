@@ -765,16 +765,16 @@ final class cca extends rva {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         cn var7;
         if (param5 < pka.field_b) {
-          gt.a(param1, param5, param3, param2, 10, param0);
+          GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
         } else {
           if (ss.field_c < param1) {
-            gt.a(param1, param5, param3, param2, 10, param0);
+            GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
           } else {
             if (param3 < gca.field_d) {
-              gt.a(param1, param5, param3, param2, 10, param0);
+              GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
             } else {
               if (hc.field_h < param0) {
-                gt.a(param1, param5, param3, param2, 10, param0);
+                GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
               } else {
                 caa.a(param2, param1, param5, param3, param0, param4 ^ 936441872);
               }

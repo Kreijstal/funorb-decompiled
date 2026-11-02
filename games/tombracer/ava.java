@@ -343,10 +343,10 @@ final class ava {
                         var25_int = b.a(~var12.field_Eb & var8, (byte) -107);
                         var24Lifetime2 = gh.field_f;
                         if (0 < var25_int &&
-                          null != kh.field_l &&
-                          kh.field_l.length >= var25_int &&
-                          null != kh.field_l[-1 + var25_int]) {
-                          var24Lifetime2 = kh.field_l[var25_int - 1][1];
+                          null != BitPacketBuffer.field_l &&
+                          BitPacketBuffer.field_l.length >= var25_int &&
+                          null != BitPacketBuffer.field_l[-1 + var25_int]) {
+                          var24Lifetime2 = BitPacketBuffer.field_l[var25_int - 1][1];
                         }
                       }
                     } else {
@@ -365,10 +365,10 @@ final class ava {
                         var25_int = b.a(~var12.field_Eb & var8, (byte) -125);
                         var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(86, wha.field_I, new String[]{var20});
                         if (var25_int > 0 &&
-                          null != kh.field_l &&
-                          var25_int <= kh.field_l.length &&
-                          null != kh.field_l[-1 + var25_int]) {
-                          var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(121, kh.field_l[var25_int - 1][2], new String[]{var20});
+                          null != BitPacketBuffer.field_l &&
+                          var25_int <= BitPacketBuffer.field_l.length &&
+                          null != BitPacketBuffer.field_l[-1 + var25_int]) {
+                          var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(121, BitPacketBuffer.field_l[var25_int - 1][2], new String[]{var20});
                         }
                       }
                     } else {

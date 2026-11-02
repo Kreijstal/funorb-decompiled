@@ -1254,7 +1254,7 @@ final class gja extends ka {
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kh var2 = null;
+        BitPacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -1263,7 +1263,7 @@ final class gja extends ka {
         int var7 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          var2 = new kh(param0.a("logo.fo3d", (byte) 126, ""));
+          var2 = new BitPacketBuffer(param0.a("logo.fo3d", (byte) 126, ""));
           var3 = var2.h(255);
           var2.h((byte) 119);
           ej.field_d = uea.a(var2, (byte) 8);

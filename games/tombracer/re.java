@@ -14,7 +14,7 @@ final class re {
     final static void a(int param0) {
         int var2 = 0;
         int var3 = 0;
-        jqa.field_g = bea.field_a;
+        BufferedSocket.field_g = bea.field_a;
         ob.field_i = bea.field_g;
         ji.a(16);
         oca.field_b.a(0, 0, 20, nra.field_a.field_G, -2 + (-40 + nra.field_a.field_t));

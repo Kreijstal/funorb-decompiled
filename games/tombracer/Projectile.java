@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ep extends c implements fo, ffa, t {
+final class Projectile extends c implements fo, ffa, t {
     private int field_j;
     private boolean field_p;
-    private int field_u;
+    private int x;
     private int field_w;
     private boolean field_l;
-    private int field_s;
+    private int velocityX;
     private boolean field_F;
     private boolean field_C;
     private int field_x;
     private int field_J;
-    private int field_y;
+    private int velocityY;
     private int field_E;
     private int field_i;
     static ss field_k;
-    private la field_z;
-    private int field_H;
-    private int field_K;
+    private Room field_z;
+    private int angle;
+    private int y;
     private up field_t;
     private boolean field_B;
     private int field_G;
     static nh field_n;
     static jea field_r;
-    private int field_v;
+    private int endSize;
     private int field_o;
     private int field_I;
     private on field_q;
@@ -45,7 +45,7 @@ final class ep extends c implements fo, ffa, t {
 
     public final int e(byte param0) {
         if (param0 > -86) {
-          this.field_z = (la) null;
+          this.field_z = (Room) null;
           return this.field_G;
         }
         return this.field_G;
@@ -62,7 +62,7 @@ final class ep extends c implements fo, ffa, t {
 
     final int k(int param0) {
         int var2 = -72 / ((param0 + 24) / 39);
-        return this.field_s;
+        return this.velocityX;
     }
 
     public final boolean j(byte param0) {
@@ -75,20 +75,20 @@ final class ep extends c implements fo, ffa, t {
 
     private final void a(int param0, int param1, byte param2) {
         if (param2 > 17) {
-          this.field_u = param0;
-          this.field_K = param1;
+          this.x = param0;
+          this.y = param1;
           return;
         }
         this.a(65, (byte) -64, 122, false);
-        this.field_u = param0;
-        this.field_K = param1;
+        this.x = param0;
+        this.y = param1;
     }
 
-    final void a(la param0, int param1) {
+    final void a(Room param0, int param1) {
         try {
-          this.field_u = param0.a(this.field_u, (byte) 71);
-          this.field_s = -this.field_s;
-          this.field_H = dfa.a(-this.field_H, 8192, 105);
+          this.x = param0.a(this.x, (byte) 71);
+          this.velocityX = -this.velocityX;
+          this.angle = dfa.a(-this.angle, 8192, 105);
           if (param1 >= -16) {
             this.field_I = 44;
           }
@@ -98,9 +98,9 @@ final class ep extends c implements fo, ffa, t {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        this.field_K = param2;
+        this.y = param2;
         this.field_G = param3;
-        this.field_u = param0;
+        this.x = param0;
         if (param1 != -78) {
           this.a(53);
         }
@@ -116,21 +116,21 @@ final class ep extends c implements fo, ffa, t {
 
     private final void b(boolean param0, boolean param1) {
         if (param0) {
-          this.field_z.a(this.field_K, this.field_u, this.field_m, this.field_G, (byte) 6);
+          this.field_z.a(this.y, this.x, this.field_m, this.field_G, (byte) 6);
           if (this.field_B) {
-            if (this.field_s != 0) {
-              this.field_s = 0;
+            if (this.velocityX != 0) {
+              this.velocityX = 0;
               this.field_B = false;
               this.field_J = this.field_J * 2;
-              this.field_y = 0;
+              this.velocityY = 0;
               this.field_C = false;
               return;
             }
-            if (this.field_y != 0) {
-              this.field_s = 0;
+            if (this.velocityY != 0) {
+              this.velocityX = 0;
               this.field_B = false;
               this.field_J = this.field_J * 2;
-              this.field_y = 0;
+              this.velocityY = 0;
               this.field_C = false;
               return;
             }
@@ -151,7 +151,7 @@ final class ep extends c implements fo, ffa, t {
           return;
         }
         this.field_o = -115;
-        this.field_z.a(this.field_K, this.field_u, this.field_m, this.field_G, (byte) 6);
+        this.field_z.a(this.y, this.x, this.field_m, this.field_G, (byte) 6);
         if (!this.field_B) {
           this.h((byte) 32);
           if (!param1) {
@@ -163,19 +163,19 @@ final class ep extends c implements fo, ffa, t {
             this.a(true, 0);
           }
         } else {
-          if (this.field_s != 0) {
-            this.field_s = 0;
+          if (this.velocityX != 0) {
+            this.velocityX = 0;
             this.field_B = false;
             this.field_J = this.field_J * 2;
-            this.field_y = 0;
+            this.velocityY = 0;
             this.field_C = false;
             return;
           }
-          if (this.field_y != 0) {
-            this.field_s = 0;
+          if (this.velocityY != 0) {
+            this.velocityX = 0;
             this.field_B = false;
             this.field_J = this.field_J * 2;
-            this.field_y = 0;
+            this.velocityY = 0;
             this.field_C = false;
             return;
           }
@@ -218,31 +218,31 @@ final class ep extends c implements fo, ffa, t {
         var5 = 0;
         if (param3) {
           var6 = 0;
-          var7 = this.field_u;
+          var7 = this.x;
           if (0 <= param0) {
             if (param0 > 0) {
               var6 = 1;
-              this.field_u = this.field_u + param0;
+              this.x = this.x + param0;
             }
           } else {
             var6 = 1;
-            this.field_u = this.field_u + param0;
+            this.x = this.x + param0;
           }
-          var8 = this.field_K;
+          var8 = this.y;
           if (var6 != 0 &&
             this.c(0, param0, 98)) {
             var5 = 1;
             this.b(true, false);
-            this.field_s = -this.field_s;
-            this.field_u = var7;
+            this.velocityX = -this.velocityX;
+            this.x = var7;
           }
           var6Lifetime2 = 0;
           if (param2 < 0) {
             var6Lifetime2 = 1;
-            this.field_K = this.field_K + param2;
+            this.y = this.y + param2;
           } else {
             if (0 < param2) {
-              this.field_K = this.field_K + param2;
+              this.y = this.y + param2;
               var6Lifetime2 = 1;
               if (var6Lifetime2 == 0) {
                 if (param1 >= -51) {
@@ -257,7 +257,7 @@ final class ep extends c implements fo, ffa, t {
                   return;
                 }
                 if (this.field_t.field_j == 3) {
-                  this.field_z.a(-40, this.field_K, th.field_o, 2 * this.field_o, 2 * this.field_o, this.field_u);
+                  this.field_z.a(-40, this.y, th.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
                 }
                 var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
                 if (var6Lifetime2 <= 0) {
@@ -269,8 +269,8 @@ final class ep extends c implements fo, ffa, t {
               if (this.c(param2, 0, 111)) {
                 var5 = 1;
                 this.b(true, false);
-                this.field_y = -this.field_y;
-                this.field_K = var8;
+                this.velocityY = -this.velocityY;
+                this.y = var8;
               }
               if (param1 < -51) {
                 if (var5 != 0) {
@@ -281,7 +281,7 @@ final class ep extends c implements fo, ffa, t {
                   return;
                 }
                 if (this.field_t.field_j == 3) {
-                  this.field_z.a(-40, this.field_K, th.field_o, 2 * this.field_o, 2 * this.field_o, this.field_u);
+                  this.field_z.a(-40, this.y, th.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
                 }
                 var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
                 if (var6Lifetime2 <= 0) {
@@ -300,7 +300,7 @@ final class ep extends c implements fo, ffa, t {
                 return;
               }
               if (this.field_t.field_j == 3) {
-                this.field_z.a(-40, this.field_K, th.field_o, 2 * this.field_o, 2 * this.field_o, this.field_u);
+                this.field_z.a(-40, this.y, th.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
               }
               var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
               if (var6Lifetime2 <= 0) {
@@ -324,7 +324,7 @@ final class ep extends c implements fo, ffa, t {
                 return;
               }
               if (this.field_t.field_j == 3) {
-                this.field_z.a(-40, this.field_K, th.field_o, 2 * this.field_o, 2 * this.field_o, this.field_u);
+                this.field_z.a(-40, this.y, th.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
               }
               var6Lifetime2 = this.field_z.a(this, -16164, this.field_t);
               if (var6Lifetime2 <= 0) {
@@ -335,8 +335,8 @@ final class ep extends c implements fo, ffa, t {
             }
             var5 = 1;
             this.b(true, false);
-            this.field_y = -this.field_y;
-            this.field_K = var8;
+            this.velocityY = -this.velocityY;
+            this.y = var8;
           }
         }
         if (param1 >= -51) {
@@ -351,7 +351,7 @@ final class ep extends c implements fo, ffa, t {
           return;
         }
         if (this.field_t.field_j == 3) {
-          this.field_z.a(-40, this.field_K, th.field_o, 2 * this.field_o, 2 * this.field_o, this.field_u);
+          this.field_z.a(-40, this.y, th.field_o, 2 * this.field_o, 2 * this.field_o, this.x);
         }
         var6Lifetime1 = this.field_z.a(this, -16164, this.field_t);
         if (var6Lifetime1 <= 0) {
@@ -377,13 +377,13 @@ final class ep extends c implements fo, ffa, t {
           }
           if (var3 != 3) {
             if (var3 == 0) {
-              var2 = qva.a((byte) -35, this.field_y, this.field_s) + 4096;
-              this.field_z.b(false).a(this.field_K, (byte) -83, 5, this.field_G, 3, var2, 10, 262144, this.field_u, 16, 8);
+              var2 = qva.a((byte) -35, this.velocityY, this.velocityX) + 4096;
+              this.field_z.b(false).a(this.y, (byte) -83, 5, this.field_G, 3, var2, 10, 262144, this.x, 16, 8);
               return;
             }
             return;
           }
-          this.field_z.b(false).a(this.field_K, (byte) -121, 4, this.field_G, 1, 0, 20, 0, this.field_u, this.field_o >> 18, this.field_o >> 17);
+          this.field_z.b(false).a(this.y, (byte) -121, 4, this.field_G, 1, 0, 20, 0, this.x, this.field_o >> 18, this.field_o >> 17);
           return;
         }
         var3Lifetime1 = this.field_t.field_j;
@@ -397,11 +397,11 @@ final class ep extends c implements fo, ffa, t {
           if (var3Lifetime1 != 0) {
             return;
           }
-          var2Lifetime1 = qva.a((byte) -35, this.field_y, this.field_s) + 4096;
-          this.field_z.b(false).a(this.field_K, (byte) -83, 5, this.field_G, 3, var2Lifetime1, 10, 262144, this.field_u, 16, 8);
+          var2Lifetime1 = qva.a((byte) -35, this.velocityY, this.velocityX) + 4096;
+          this.field_z.b(false).a(this.y, (byte) -83, 5, this.field_G, 3, var2Lifetime1, 10, 262144, this.x, 16, 8);
           return;
         }
-        this.field_z.b(false).a(this.field_K, (byte) -121, 4, this.field_G, 1, 0, 20, 0, this.field_u, this.field_o >> 18, this.field_o >> 17);
+        this.field_z.b(false).a(this.y, (byte) -121, 4, this.field_G, 1, 0, 20, 0, this.x, this.field_o >> 18, this.field_o >> 17);
     }
 
     private final int b(int param0, up param1) {
@@ -425,16 +425,16 @@ final class ep extends c implements fo, ffa, t {
           if (this.field_t.field_j == 4 &&
             5 == param1.field_j) {
             this.a(false, 0);
-            this.field_z.b(30097, 1048576, 1, this.field_K, this.field_u);
+            this.field_z.b(30097, 1048576, 1, this.y, this.x);
             stackIn_32_0 = 0;
             return stackIn_32_0;
           }
           if (this.field_t.field_j == 3 && (param1.field_j == 4 ||
             param1.field_j == 5)) {
             this.a(false, 0);
-            this.field_z.b(false).c(this.field_u, 93, this.field_y, this.field_G, this.field_s, this.field_K);
+            this.field_z.b(false).c(this.x, 93, this.velocityY, this.field_G, this.velocityX, this.y);
             if (5 == param1.field_j) {
-              this.field_z.b(30097, 1048576, 0, this.field_K, this.field_u);
+              this.field_z.b(30097, 1048576, 0, this.y, this.x);
             }
             stackIn_30_0 = 0;
             return stackIn_30_0;
@@ -514,21 +514,21 @@ final class ep extends c implements fo, ffa, t {
     public final int d(int param0) {
         if (param0 != 3) {
           this.field_F = true;
-          return this.field_u;
+          return this.x;
         }
-        return this.field_u;
+        return this.x;
     }
 
     final int f(boolean param0) {
         if (!param0) {
           this.a(42, (byte) 84);
-          return this.field_H;
+          return this.angle;
         }
-        return this.field_H;
+        return this.angle;
     }
 
     public final String toString() {
-        return "Projectile (x=" + this.field_u + ", y=" + this.field_K + ", vx=" + this.field_s + ", vy=" + this.field_y + ", " + "angle=" + this.field_H + ", endSize=" + this.field_v + ")";
+        return "Projectile (x=" + this.x + ", y=" + this.y + ", vx=" + this.velocityX + ", vy=" + this.velocityY + ", " + "angle=" + this.angle + ", endSize=" + this.endSize + ")";
     }
 
     final void c(boolean param0, boolean param1) {
@@ -563,21 +563,21 @@ final class ep extends c implements fo, ffa, t {
           if (param1) {
             if (0 > param0) {
               var5 = 1;
-              this.field_u = this.field_u + param0;
+              this.x = this.x + param0;
             } else {
               if (0 < param0) {
                 var5 = 1;
-                this.field_u = this.field_u + param0;
+                this.x = this.x + param0;
               }
             }
             if (0 > param2) {
-              this.field_K = this.field_K + param2;
+              this.y = this.y + param2;
               var5 = 1;
               var6 = 0;
               if (param1 ||
                 this.field_t.field_j != 0) {
                 if (this.field_t.field_j == 3) {
-                  this.field_z.a(param3 - 31, this.field_K, th.field_o, 2 * this.field_o, this.field_o * 2, this.field_u);
+                  this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
                 }
                 var7 = this.field_z.a(this, -16164, this.field_t);
                 if (var7 > 0) {
@@ -593,7 +593,7 @@ final class ep extends c implements fo, ffa, t {
               return;
             }
             if (param2 > 0) {
-              this.field_K = this.field_K + param2;
+              this.y = this.y + param2;
               var5 = 1;
             }
           }
@@ -608,7 +608,7 @@ final class ep extends c implements fo, ffa, t {
             return;
           }
           if (this.field_t.field_j == 3) {
-            this.field_z.a(param3 - 31, this.field_K, th.field_o, 2 * this.field_o, this.field_o * 2, this.field_u);
+            this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
           }
           var7 = this.field_z.a(this, -16164, this.field_t);
           if (var7 <= 0) {
@@ -626,20 +626,20 @@ final class ep extends c implements fo, ffa, t {
           if (param1) {
             if (0 > param0) {
               var5 = 1;
-              this.field_u = this.field_u + param0;
+              this.x = this.x + param0;
             } else {
               if (0 < param0) {
                 var5 = 1;
-                this.field_u = this.field_u + param0;
+                this.x = this.x + param0;
               }
             }
             if (0 > param2) {
-              this.field_K = this.field_K + param2;
+              this.y = this.y + param2;
               var5 = 1;
               var6 = 0;
               if (param1) {
                 if (this.field_t.field_j == 3) {
-                  this.field_z.a(param3 - 31, this.field_K, th.field_o, 2 * this.field_o, this.field_o * 2, this.field_u);
+                  this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
                 }
                 var7 = this.field_z.a(this, -16164, this.field_t);
                 if (var7 > 0) {
@@ -655,7 +655,7 @@ final class ep extends c implements fo, ffa, t {
               }
               if (this.field_t.field_j != 0) {
                 if (this.field_t.field_j == 3) {
-                  this.field_z.a(param3 - 31, this.field_K, th.field_o, 2 * this.field_o, this.field_o * 2, this.field_u);
+                  this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
                 }
                 var7 = this.field_z.a(this, -16164, this.field_t);
                 if (var7 > 0) {
@@ -671,14 +671,14 @@ final class ep extends c implements fo, ffa, t {
               return;
             }
             if (param2 > 0) {
-              this.field_K = this.field_K + param2;
+              this.y = this.y + param2;
               var5 = 1;
             }
           }
           var6 = 0;
           if (param1) {
             if (this.field_t.field_j == 3) {
-              this.field_z.a(param3 - 31, this.field_K, th.field_o, 2 * this.field_o, this.field_o * 2, this.field_u);
+              this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
             }
             var7 = this.field_z.a(this, -16164, this.field_t);
             if (var7 > 0) {
@@ -688,7 +688,7 @@ final class ep extends c implements fo, ffa, t {
           } else {
             if (this.field_t.field_j != 0) {
               if (this.field_t.field_j == 3) {
-                this.field_z.a(param3 - 31, this.field_K, th.field_o, 2 * this.field_o, this.field_o * 2, this.field_u);
+                this.field_z.a(param3 - 31, this.y, th.field_o, 2 * this.field_o, this.field_o * 2, this.x);
               }
               var7 = this.field_z.a(this, -16164, this.field_t);
               if (var7 > 0) {
@@ -714,7 +714,7 @@ final class ep extends c implements fo, ffa, t {
         if (!param0) {
           return (c) null;
         }
-        return (c) ((Object) new ep());
+        return (c) ((Object) new Projectile());
     }
 
     public final int a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
@@ -748,21 +748,21 @@ final class ep extends c implements fo, ffa, t {
         if (param0 != 9648) {
           return -95;
         }
-        return this.field_K;
+        return this.y;
     }
 
     private final boolean f(byte param0) {
         if (param0 >= -114) {
           this.c(false, false);
-          if (!(this.field_t.field_g instanceof hca)) {
-            return this.field_t.field_c instanceof hca ? true : false;
+          if (!(this.field_t.field_g instanceof Player)) {
+            return this.field_t.field_c instanceof Player ? true : false;
           }
           return true;
         }
-        if (this.field_t.field_g instanceof hca) {
+        if (this.field_t.field_g instanceof Player) {
           return true;
         }
-        if (!(this.field_t.field_c instanceof hca)) {
+        if (!(this.field_t.field_c instanceof Player)) {
           return false;
         }
         return true;
@@ -774,7 +774,7 @@ final class ep extends c implements fo, ffa, t {
             if (this.field_t.field_j == 5) {
             }
           } else {
-            if (this.field_z.b(param1 ^ 30097, 1048576, 0, this.field_K, this.field_u)) {
+            if (this.field_z.b(param1 ^ 30097, 1048576, 0, this.y, this.x)) {
               this.h((byte) 100);
             }
           }
@@ -801,17 +801,17 @@ final class ep extends c implements fo, ffa, t {
           field_r = null;
           return;
         }
-        ep.j(-85);
+        Projectile.j(-85);
         field_n = null;
         field_k = null;
         field_r = null;
     }
 
     final void b(int param0, int param1, byte param2) {
-        this.field_s = param0;
-        this.field_y = param1;
+        this.velocityX = param0;
+        this.velocityY = param1;
         int var4 = 118 / ((-51 - param2) / 40);
-        this.field_H = qva.a((byte) -29, param1, param0);
+        this.angle = qva.a((byte) -29, param1, param0);
     }
 
     final void b(int param0, boolean param1) {
@@ -834,24 +834,24 @@ final class ep extends c implements fo, ffa, t {
         this.field_z.field_u.b((ffa) (this), param2 + 7071);
     }
 
-    final void a(int param0, la param1, int param2, int param3, int param4, int param5) {
+    final void a(int param0, Room param1, int param2, int param3, int param4, int param5) {
         try {
-          this.field_y = 0;
+          this.velocityY = 0;
           this.field_E = param4;
           this.field_l = false;
           this.field_J = param0 * 2;
-          this.field_H = 0;
+          this.angle = 0;
           int var7_int = -121 / ((-17 - param3) / 49);
           this.field_p = false;
           this.field_B = false;
-          this.field_v = 2 * param2;
+          this.endSize = 2 * param2;
           this.field_C = false;
           this.field_j = param5;
           this.field_w = 0;
           this.field_F = false;
           this.field_z = param1;
           this.field_i = -1;
-          this.field_s = 0;
+          this.velocityX = 0;
           this.field_x = 0;
           this.field_o = this.field_J;
           this.field_t = null;
@@ -865,16 +865,16 @@ final class ep extends c implements fo, ffa, t {
     final int b(boolean param0) {
         if (param0) {
           this.field_i = -106;
-          return this.field_y;
+          return this.velocityY;
         }
-        return this.field_y;
+        return this.velocityY;
     }
 
     final void a(int param0, up param1) {
         try {
           this.field_t = param1;
           if (param0 > -122) {
-            this.field_u = -12;
+            this.x = -12;
           }
           this.field_I = 5;
         } catch (RuntimeException runtimeException) {
@@ -884,7 +884,7 @@ final class ep extends c implements fo, ffa, t {
 
     public final boolean a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param0 < 68) {
-          this.field_s = -53;
+          this.velocityX = -53;
           return false;
         }
         return false;
@@ -892,7 +892,7 @@ final class ep extends c implements fo, ffa, t {
 
     public final int b(byte param0) {
         int var2 = 40 % ((-23 - param0) / 53);
-        return this.field_u;
+        return this.x;
     }
 
     final void a(boolean param0, boolean param1) {
@@ -913,9 +913,9 @@ final class ep extends c implements fo, ffa, t {
           var4 = 1;
         }
         if (!this.field_p) {
-          return this.field_z.a((ffa) (this), this.field_J, 2, var4, this.field_K, this.field_u, false, this.field_t.field_g, this.field_J);
+          return this.field_z.a((ffa) (this), this.field_J, 2, var4, this.y, this.x, false, this.field_t.field_g, this.field_J);
         }
-        return this.field_z.a((ffa) (this), this.field_t.field_g, var4, this.field_J, param0 / 4, 12, this.field_J, this.field_u, 1, param1 / 4, this.field_K, 0, false) != 0 ? true : false;
+        return this.field_z.a((ffa) (this), this.field_t.field_g, var4, this.field_J, param0 / 4, 12, this.field_J, this.x, 1, param1 / 4, this.y, 0, false) != 0 ? true : false;
     }
 
     final int i(int param0) {
@@ -980,7 +980,7 @@ final class ep extends c implements fo, ffa, t {
         if (param0 != 7) {
           return;
         }
-        this.field_H = param2;
+        this.angle = param2;
     }
 
     public final boolean a(int param0, gma param1) {
@@ -993,7 +993,7 @@ final class ep extends c implements fo, ffa, t {
           if (param0 <= -77) {
             return false;
           }
-          this.field_v = 120;
+          this.endSize = 120;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1028,7 +1028,7 @@ final class ep extends c implements fo, ffa, t {
         if (param1) {
           if (this.f((byte) -118)) {
             var3 = 1;
-            this.field_H = this.field_H + this.field_w;
+            this.angle = this.angle + this.field_w;
             if (var3 != 0) {
               this.field_x = this.field_x + 1;
               if (this.field_x >= this.field_j) {
@@ -1044,13 +1044,13 @@ final class ep extends c implements fo, ffa, t {
                 this.field_z.field_u.b((ffa) (this), 7073);
               }
               if (!this.field_B ||
-                this.field_s != 0 ||
-                this.field_y != 0) {
-                this.field_o = this.field_x * (-this.field_J + this.field_v) / this.field_j + this.field_J;
+                this.velocityX != 0 ||
+                this.velocityY != 0) {
+                this.field_o = this.field_x * (-this.field_J + this.endSize) / this.field_j + this.field_J;
               }
               if (var3 != 0 &&
                 this.field_i != -1) {
-                var8 = this.field_z.a(this.field_u, this.field_K, (byte) 100, this.field_G);
+                var8 = this.field_z.a(this.x, this.y, (byte) 100, this.field_G);
                 var5 = 131072;
                 var6 = -(var5 / 2) + uca.field_c.a(var5, 0);
                 var7 = uca.field_c.a(var5, ~param0) - var5 / 2;
@@ -1060,19 +1060,19 @@ final class ep extends c implements fo, ffa, t {
               }
             } else {
               if (this.field_C) {
-                this.a(this.field_s, (byte) -127, this.field_y, var3 != 0);
+                this.a(this.velocityX, (byte) -127, this.velocityY, var3 != 0);
               } else {
-                this.a(this.field_s, var3 != 0, this.field_y, ~param0);
+                this.a(this.velocityX, var3 != 0, this.velocityY, ~param0);
               }
               if (this.field_F) {
                 if (!this.field_B ||
-                  this.field_s != 0 ||
-                  this.field_y != 0) {
-                  this.field_o = this.field_x * (-this.field_J + this.field_v) / this.field_j + this.field_J;
+                  this.velocityX != 0 ||
+                  this.velocityY != 0) {
+                  this.field_o = this.field_x * (-this.field_J + this.endSize) / this.field_j + this.field_J;
                 }
                 if (var3 != 0 &&
                   this.field_i != -1) {
-                  var10 = this.field_z.a(this.field_u, this.field_K, (byte) 100, this.field_G);
+                  var10 = this.field_z.a(this.x, this.y, (byte) 100, this.field_G);
                   var5 = 131072;
                   var6 = -(var5 / 2) + uca.field_c.a(var5, 0);
                   var7 = uca.field_c.a(var5, ~param0) - var5 / 2;
@@ -1084,13 +1084,13 @@ final class ep extends c implements fo, ffa, t {
                 this.field_z.field_u.a((ffa) (this), -66);
                 this.field_z.field_u.b((ffa) (this), 7073);
                 if (!this.field_B ||
-                  this.field_s != 0 ||
-                  this.field_y != 0) {
-                  this.field_o = this.field_x * (-this.field_J + this.field_v) / this.field_j + this.field_J;
+                  this.velocityX != 0 ||
+                  this.velocityY != 0) {
+                  this.field_o = this.field_x * (-this.field_J + this.endSize) / this.field_j + this.field_J;
                 }
                 if (var3 != 0 &&
                   this.field_i != -1) {
-                  var12 = this.field_z.a(this.field_u, this.field_K, (byte) 100, this.field_G);
+                  var12 = this.field_z.a(this.x, this.y, (byte) 100, this.field_G);
                   var5 = 131072;
                   var6 = -(var5 / 2) + uca.field_c.a(var5, 0);
                   var7 = uca.field_c.a(var5, ~param0) - var5 / 2;
@@ -1100,16 +1100,16 @@ final class ep extends c implements fo, ffa, t {
                 }
               }
             }
-            if (this.field_u < 0) {
+            if (this.x < 0) {
               this.field_F = true;
             } else {
-              if (this.field_K < 0) {
+              if (this.y < 0) {
                 this.field_F = true;
               } else {
-                if (this.field_u >= this.field_z.m((byte) -86)) {
+                if (this.x >= this.field_z.m((byte) -86)) {
                   this.field_F = true;
                 } else {
-                  if (this.field_K >= this.field_z.s(-121)) {
+                  if (this.y >= this.field_z.s(-121)) {
                     this.field_F = true;
                   }
                 }
@@ -1125,7 +1125,7 @@ final class ep extends c implements fo, ffa, t {
           stackIn_81_0 = 1;
         }
         var3Lifetime1 = stackIn_81_0;
-        this.field_H = this.field_H + this.field_w;
+        this.angle = this.angle + this.field_w;
         if (var3Lifetime1 != 0) {
           this.field_x = this.field_x + 1;
           if (this.field_x >= this.field_j) {
@@ -1137,9 +1137,9 @@ final class ep extends c implements fo, ffa, t {
         }
         if (!this.field_F) {
           if (this.field_C) {
-            this.a(this.field_s, (byte) -127, this.field_y, var3Lifetime1 != 0);
+            this.a(this.velocityX, (byte) -127, this.velocityY, var3Lifetime1 != 0);
           } else {
-            this.a(this.field_s, var3Lifetime1 != 0, this.field_y, ~param0);
+            this.a(this.velocityX, var3Lifetime1 != 0, this.velocityY, ~param0);
           }
         }
         if (!this.field_F) {
@@ -1147,17 +1147,17 @@ final class ep extends c implements fo, ffa, t {
           this.field_z.field_u.b((ffa) (this), 7073);
         }
         if (!this.field_B ||
-          this.field_s != 0 ||
-          this.field_y != 0) {
-          this.field_o = this.field_x * (-this.field_J + this.field_v) / this.field_j + this.field_J;
+          this.velocityX != 0 ||
+          this.velocityY != 0) {
+          this.field_o = this.field_x * (-this.field_J + this.endSize) / this.field_j + this.field_J;
         }
         boolean decompiledFrameRemainder0 = true;
         if (var3Lifetime1 != 0) {
           if (this.field_i == -1) {
-            if (this.field_u >= 0 &&
-              this.field_K >= 0 &&
-              this.field_u < this.field_z.m((byte) -86)) {
-              if (!(this.field_K < this.field_z.s(-121))) {
+            if (this.x >= 0 &&
+              this.y >= 0 &&
+              this.x < this.field_z.m((byte) -86)) {
+              if (!(this.y < this.field_z.s(-121))) {
                 this.field_F = true;
                 if (param0 != -1) {
                   this.field_t = (up) null;
@@ -1170,7 +1170,7 @@ final class ep extends c implements fo, ffa, t {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var13 = this.field_z.a(this.field_u, this.field_K, (byte) 100, this.field_G);
+            var13 = this.field_z.a(this.x, this.y, (byte) 100, this.field_G);
             var5Lifetime1 = 131072;
             var6Lifetime1 = -(var5Lifetime1 / 2) + uca.field_c.a(var5Lifetime1, 0);
             var7Lifetime1 = uca.field_c.a(var5Lifetime1, ~param0) - var5Lifetime1 / 2;
@@ -1180,16 +1180,16 @@ final class ep extends c implements fo, ffa, t {
           }
         }
         if (decompiledFrameRemainder0) {
-          if (this.field_u < 0) {
+          if (this.x < 0) {
             this.field_F = true;
           } else {
-            if (this.field_K < 0) {
+            if (this.y < 0) {
               this.field_F = true;
             } else {
-              if (this.field_u >= this.field_z.m((byte) -86)) {
+              if (this.x >= this.field_z.m((byte) -86)) {
                 this.field_F = true;
               } else {
-                if (this.field_K >= this.field_z.s(-121)) {
+                if (this.y >= this.field_z.s(-121)) {
                   this.field_F = true;
                 }
               }
@@ -1231,9 +1231,9 @@ final class ep extends c implements fo, ffa, t {
     public final int c(byte param0) {
         if (param0 <= 91) {
           this.field_q = (on) null;
-          return this.field_K;
+          return this.y;
         }
-        return this.field_K;
+        return this.y;
     }
 
     public final int a(up param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1250,7 +1250,7 @@ final class ep extends c implements fo, ffa, t {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          if (!io.a(param1, this.field_K, (byte) -90, param5, this.field_u, param4, this.field_o, this.field_o, param2)) {
+          if (!io.a(param1, this.y, (byte) -90, param5, this.x, param4, this.field_o, this.field_o, param2)) {
             stackIn_6_0 = 0;
             return stackIn_6_0;
           }
@@ -1273,7 +1273,7 @@ final class ep extends c implements fo, ffa, t {
         }
     }
 
-    public final int a(up param0, ep param1, int param2) {
+    public final int a(up param0, Projectile param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -1286,7 +1286,7 @@ final class ep extends c implements fo, ffa, t {
           if (param2 >= -97) {
             this.field_B = false;
           }
-          stackIn_3_0 = this.a(param0, param1.field_o, param1.field_u, 0, param1.field_K, param1.field_o);
+          stackIn_3_0 = this.a(param0, param1.field_o, param1.x, 0, param1.y, param1.field_o);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1336,7 +1336,7 @@ final class ep extends c implements fo, ffa, t {
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
-          if (eha.a(this.field_o, param1, this.field_K, this.field_o, param2, this.field_u, 2) >= 0) {
+          if (eha.a(this.field_o, param1, this.y, this.field_o, param2, this.x, 2) >= 0) {
             stackIn_7_0 = this.b(115, param0);
             return stackIn_7_0;
           }
@@ -1363,20 +1363,20 @@ final class ep extends c implements fo, ffa, t {
     }
 
     final int a(int param0, byte param1) {
-        param0 = fs.a((byte) 88, param0, this.field_u);
-        param0 = fs.a((byte) 30, param0, this.field_K);
+        param0 = fs.a((byte) 88, param0, this.x);
+        param0 = fs.a((byte) 30, param0, this.y);
         if (param1 == -39) {
-          param0 = fs.a((byte) 32, param0, this.field_s);
-          param0 = fs.a((byte) 120, param0, this.field_y);
-          param0 = fs.a((byte) 58, param0, this.field_v);
-          param0 = fs.a((byte) 85, param0, this.field_H);
+          param0 = fs.a((byte) 32, param0, this.velocityX);
+          param0 = fs.a((byte) 120, param0, this.velocityY);
+          param0 = fs.a((byte) 58, param0, this.endSize);
+          param0 = fs.a((byte) 85, param0, this.angle);
           return param0;
         }
         boolean discarded$0 = this.f((byte) 2);
-        param0 = fs.a((byte) 32, param0, this.field_s);
-        param0 = fs.a((byte) 120, param0, this.field_y);
-        param0 = fs.a((byte) 58, param0, this.field_v);
-        param0 = fs.a((byte) 85, param0, this.field_H);
+        param0 = fs.a((byte) 32, param0, this.velocityX);
+        param0 = fs.a((byte) 120, param0, this.velocityY);
+        param0 = fs.a((byte) 58, param0, this.endSize);
+        param0 = fs.a((byte) 85, param0, this.angle);
         return param0;
     }
 
@@ -1432,11 +1432,11 @@ final class ep extends c implements fo, ffa, t {
 
     private final void g(byte param0) {
         if (param0 != -99) {
-          this.field_y = 18;
+          this.velocityY = 18;
         }
     }
 
-    ep() {
+    Projectile() {
         this.field_i = -1;
         this.field_q = new on();
         int fieldTemp$0 = sd.field_G;

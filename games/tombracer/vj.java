@@ -5,21 +5,21 @@ import java.io.*;
 
 final class vj {
     static String field_c;
-    private od field_e;
+    private DualLinkNode field_e;
     static String[] field_d;
     static int[] field_a;
-    private od field_b;
+    private DualLinkNode field_b;
 
-    final void a(int param0, od param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
-          if (null != param1.field_f) {
-            param1.c(-7975);
+          if (null != param1.secondaryPrevious) {
+            param1.unlinkSecondary(-7975);
           }
           int var3_int = 69 % ((6 - param0) / 57);
-          param1.field_f = this.field_e;
-          param1.field_g = this.field_e.field_g;
-          param1.field_f.field_g = param1;
-          param1.field_g.field_f = param1;
+          param1.secondaryPrevious = this.field_e;
+          param1.secondaryNext = this.field_e.secondaryNext;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -28,78 +28,78 @@ final class vj {
     final int a(byte param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
         int var2 = 0;
-        od var3 = this.field_e.field_g;
+        DualLinkNode var3 = this.field_e.secondaryNext;
         while (this.field_e != var3) {
           var2++;
-          var3 = var3.field_g;
+          var3 = var3.secondaryNext;
         }
         if (param0 < -23) {
           return var2;
         }
-        this.field_e = (od) null;
+        this.field_e = (DualLinkNode) null;
         return var2;
     }
 
-    final od b(byte param0) {
+    final DualLinkNode b(byte param0) {
         if (param0 != 38) {
-          return (od) null;
+          return (DualLinkNode) null;
         }
-        od var2 = this.field_e.field_g;
+        DualLinkNode var2 = this.field_e.secondaryNext;
         if (this.field_e == var2) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_g;
+        this.field_b = var2.secondaryNext;
         return var2;
     }
 
-    final od c(byte param0) {
-        od var2 = null;
-        od var2Lifetime1;
+    final DualLinkNode c(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 <= 110) {
           field_d = (String[]) null;
-          var2 = this.field_e.field_g;
+          var2 = this.field_e.secondaryNext;
           if (this.field_e != var2) {
-            var2.c(-7975);
+            var2.unlinkSecondary(-7975);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_e.field_g;
+        var2Lifetime1 = this.field_e.secondaryNext;
         if (this.field_e != var2Lifetime1) {
-          var2Lifetime1.c(-7975);
+          var2Lifetime1.unlinkSecondary(-7975);
           return var2Lifetime1;
         }
         return null;
     }
 
-    final od b(int param0) {
-        od var2 = this.field_e.field_f;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = this.field_e.secondaryPrevious;
         if (this.field_e == var2) {
           return null;
         }
         if (param0 <= -111) {
-          var2.c(-7975);
+          var2.unlinkSecondary(-7975);
           return var2;
         }
         field_a = (int[]) null;
-        var2.c(-7975);
+        var2.unlinkSecondary(-7975);
         return var2;
     }
 
-    final void a(od param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
-          if (param0.field_f != null) {
-            param0.c(-7975);
+          if (param0.secondaryPrevious != null) {
+            param0.unlinkSecondary(-7975);
           }
-          param0.field_g = this.field_e;
-          param0.field_f = this.field_e.field_f;
-          param0.field_f.field_g = param0;
+          param0.secondaryNext = this.field_e;
+          param0.secondaryPrevious = this.field_e.secondaryPrevious;
+          param0.secondaryPrevious.secondaryNext = param0;
           if (param1 >= -74) {
-            od var4 = (od) null;
-            this.a(116, (od) null);
+            DualLinkNode var4 = (DualLinkNode) null;
+            this.a(116, (DualLinkNode) null);
           }
-          param0.field_g.field_f = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -157,14 +157,14 @@ final class vj {
     }
 
     public vj() {
-        this.field_e = new od();
-        this.field_e.field_f = this.field_e;
-        this.field_e.field_g = this.field_e;
+        this.field_e = new DualLinkNode();
+        this.field_e.secondaryPrevious = this.field_e;
+        this.field_e.secondaryNext = this.field_e;
     }
 
-    final od c(int param0) {
-        od var2 = null;
-        od var2Lifetime1;
+    final DualLinkNode c(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != 28) {
           vj.a(76);
           var2 = this.field_b;
@@ -172,7 +172,7 @@ final class vj {
             this.field_b = null;
             return null;
           }
-          this.field_b = var2.field_g;
+          this.field_b = var2.secondaryNext;
           return var2;
         }
         var2Lifetime1 = this.field_b;
@@ -180,7 +180,7 @@ final class vj {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2Lifetime1.field_g;
+        this.field_b = var2Lifetime1.secondaryNext;
         return var2Lifetime1;
     }
 

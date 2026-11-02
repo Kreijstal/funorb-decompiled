@@ -120,7 +120,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     final static void a(int param0, int param1) {
         if (msa.field_a == param0 &&
-          rba.field_a != null) {
+          SecondaryNodeDequeIterator.field_a != null) {
           if (fna.field_j == null) {
             return;
           }

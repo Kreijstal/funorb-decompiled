@@ -41,8 +41,8 @@ final class nj extends wda {
 
     final void b(int param0) {
         if (param0 != 1) {
-          fsa var3 = (fsa) null;
-          this.a(32, (fsa) null);
+          Trap var3 = (Trap) null;
+          this.a(32, (Trap) null);
         }
     }
 
@@ -64,7 +64,7 @@ final class nj extends wda {
         }
     }
 
-    nj(la param0, kh param1, boolean param2) {
+    nj(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         int var4_int = 0;
         int var5 = 0;
@@ -73,7 +73,7 @@ final class nj extends wda {
           var4_int = param1.b((byte) 44, 2);
           this.field_u = new wda[var4_int];
           for (var5 = 0; var4_int > var5; var5++) {
-            var6 = ki.a(param1, (byte) -118, param0, param2);
+            var6 = ki.readLocomotor(param1, (byte) -118, param0, param2);
             this.field_u[var5] = var6;
           }
           this.field_s = param1.b((byte) 44, 2);
@@ -126,7 +126,7 @@ final class nj extends wda {
         }
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
@@ -166,7 +166,7 @@ final class nj extends wda {
         }
     }
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         int var4 = 0;
         wda[] var3 = null;
         wda var5 = null;

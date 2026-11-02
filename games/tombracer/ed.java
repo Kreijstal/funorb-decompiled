@@ -4,7 +4,7 @@
 final class ed {
     static double field_a;
 
-    final static void a(int param0, ht param1, boolean param2, uia param3) {
+    final static void a(int param0, ht param1, boolean param2, PacketBuffer param3) {
         int var8 = 0;
         ht stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
@@ -75,10 +75,10 @@ final class ed {
             param1.field_Kb = -1;
           }
           param1.field_Ab = param3.b(290646880);
-          var7 = param3.field_h;
+          var7 = param3.position;
           param1.field_tb = param3.e((byte) -76);
           if (var6 != 0) {
-            param3.field_h = var7;
+            param3.position = var7;
             param1.field_Cb = new String[param1.field_Mb];
             for (var8 = 0; var8 < param1.field_Mb; var8++) {
               param1.field_Cb[var8] = param3.e((byte) -76);

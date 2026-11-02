@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ts {
-    private la field_c;
+    private Room field_c;
     static int field_b;
-    private fsa[] field_d;
+    private Trap[] field_d;
     private boolean field_a;
-    private fsa[] field_e;
-    private fsa[] field_f;
+    private Trap[] field_e;
+    private Trap[] field_f;
     static String field_g;
 
     final void c(boolean param0) {
@@ -76,10 +76,10 @@ final class ts {
 
     private final void a(boolean param0) {
         int var3 = 0;
-        fsa[] var2;
-        fsa var4;
+        Trap[] var2;
+        Trap var4;
         int var5;
-        fsa[] var6;
+        Trap[] var6;
         var5 = TombRacer.field_G ? 1 : 0;
         if (null == this.field_d) {
           return;
@@ -134,8 +134,8 @@ final class ts {
         }
         int var3 = this.field_c.m((byte) -86) >> 16;
         int var4 = this.field_c.s(param1 ^ -107) >> 16;
-        this.field_f = new fsa[1];
-        this.field_f[0] = new fsa(this.field_c, var3 / 2, var4 / 2, var3 + 32, var4 + 32, 0, true);
+        this.field_f = new Trap[1];
+        this.field_f[0] = new Trap(this.field_c, var3 / 2, var4 / 2, var3 + 32, var4 + 32, 0, true);
         ana var5 = new ana(this.field_c, true);
         if (param1 != 25) {
           this.c(false);
@@ -149,7 +149,7 @@ final class ts {
     }
 
     private final void a(int param0, int param1, byte param2, int param3) {
-        la stackIn_14_0;
+        Room stackIn_14_0;
         Object stackIn_14_1;
         int stackIn_14_2;
         int stackIn_14_3;
@@ -159,7 +159,7 @@ final class ts {
         int stackIn_26_1 = 0;
         int stackIn_26_2 = 0;
         int stackIn_27_3;
-        la stackIn_34_0;
+        Room stackIn_34_0;
         Object stackIn_34_1;
         int stackIn_34_2;
         int stackIn_34_3;
@@ -189,12 +189,12 @@ final class ts {
         var5 = this.field_c.m((byte) -86);
         var6 = this.field_c.s(param2 ^ -29);
         if (param2 != -127) {
-          this.field_d = (fsa[]) null;
+          this.field_d = (Trap[]) null;
         }
         if (param3 != 0 &&
           param3 != 2) {
           var10 = 32;
-          this.field_e = new fsa[(var6 >> 16) / 32];
+          this.field_e = new Trap[(var6 >> 16) / 32];
           var9 = var5 >> 16;
           var7 = var9 / 2;
           var8 = 16;
@@ -213,7 +213,7 @@ final class ts {
               } else {
                 stackIn_35_6 = -(32 * var11) + (var9 - 16);
               }
-              if (((la) (Object) stackIn_34_0).a((ffa) (stackIn_34_1), stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_35_6 << 16, false, (gma) null, 2097152)) {
+              if (((Room) (Object) stackIn_34_0).a((ffa) (stackIn_34_1), stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_35_6 << 16, false, (gma) null, 2097152)) {
                 continue;
               }
               var12 = 1;
@@ -242,7 +242,7 @@ final class ts {
           var9 = 32;
           var10 = var6 >> 16;
           var7 = 16;
-          this.field_e = new fsa[(var5 >> 16) / 32];
+          this.field_e = new Trap[(var5 >> 16) / 32];
           var8 = var10 / 2;
           var11 = 0;
           var12 = 0;
@@ -258,7 +258,7 @@ final class ts {
               } else {
                 stackIn_15_5 = var11 * 32 + 16;
               }
-              if (((la) (Object) stackIn_14_0).a((ffa) (stackIn_14_1), stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5 << 16, 16 + 32 * var13 << 16, false, (gma) null, 2097152)) {
+              if (((Room) (Object) stackIn_14_0).a((ffa) (stackIn_14_1), stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5 << 16, 16 + 32 * var13 << 16, false, (gma) null, 2097152)) {
                 continue;
               }
               var12 = 1;
@@ -295,7 +295,7 @@ final class ts {
             var13Lifetime1 = var8;
             var12Lifetime1 = var11Lifetime1 * 32 + var7;
           }
-          this.field_e[var11Lifetime1] = new fsa(this.field_c, var12Lifetime1, var13Lifetime1, var9, var10, 0, true);
+          this.field_e[var11Lifetime1] = new Trap(this.field_c, var12Lifetime1, var13Lifetime1, var9, var10, 0, true);
           var14 = new th(this.field_c, true);
           var14.b(param2 ^ 5, param3);
           var14.a(param0, param1, 19072);
@@ -321,7 +321,7 @@ final class ts {
 
     private final void a(int param0) {
         int var3 = 0;
-        fsa var4 = null;
+        Trap var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
         if (this.field_e == null) {
           return;
@@ -329,8 +329,8 @@ final class ts {
         if (param0 > -72) {
           this.c(true);
         }
-        fsa[] var6 = this.field_e;
-        fsa[] var2 = var6;
+        Trap[] var6 = this.field_e;
+        Trap[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           this.field_c.a(var4, 2);
@@ -360,7 +360,7 @@ final class ts {
         }
         var3 = this.field_c.m((byte) -86);
         var4 = this.field_c.s(125);
-        this.field_d = new fsa[param1];
+        this.field_d = new Trap[param1];
         var5 = vha.field_c.a(this.field_c, (byte) 118);
         var6 = var5.c(-41);
         var7 = var5.a((byte) 55);
@@ -387,8 +387,8 @@ final class ts {
                 continue;
               }
               var5.a(1434528720, var13, var12);
-              var5.a(true, true, this.field_c, 0, 0, -1, (fsa) null);
-              this.field_d[var10] = (fsa) (var5.u(kha.b((int) param0, -24)));
+              var5.a(true, true, this.field_c, 0, 0, -1, (Trap) null);
+              this.field_d[var10] = (Trap) (var5.u(kha.b((int) param0, -24)));
               continue;
             }
             break;
@@ -400,13 +400,13 @@ final class ts {
     private final void b(boolean param0) {
         dt discarded$0 = null;
         int var3 = 0;
-        fsa var4 = null;
+        Trap var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
         if (null == this.field_f) {
           return;
         }
-        fsa[] var6 = this.field_f;
-        fsa[] var2 = var6;
+        Trap[] var6 = this.field_f;
+        Trap[] var2 = var6;
         if (param0) {
           discarded$0 = this.a((byte) 106);
         }
@@ -515,7 +515,7 @@ final class ts {
         }
     }
 
-    ts(la param0) {
+    ts(Room param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

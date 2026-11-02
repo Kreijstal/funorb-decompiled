@@ -9,7 +9,7 @@ final class fma {
     static iw field_f;
     private ss field_c;
     private qda field_h;
-    private uia field_g;
+    private PacketBuffer field_g;
     private js[] field_i;
 
     public static void a(byte param0) {
@@ -25,7 +25,7 @@ final class fma {
         int var7;
         int var8;
         byte[] var9;
-        uia var10;
+        PacketBuffer var10;
         byte[] var11;
         byte[] var13;
         byte[] var14;
@@ -58,12 +58,12 @@ final class fma {
         if (this.field_b.field_m) {
           return false;
         }
-        var10 = new uia(this.field_b.b((byte) -126));
+        var10 = new PacketBuffer(this.field_b.b((byte) -126));
         if (!param0) {
-          var10.field_h = 5;
+          var10.position = 5;
           var3 = var10.h(255);
-          var10.field_h = var10.field_h + 72 * var3;
-          var13 = new byte[-var10.field_h + var10.field_g.length];
+          var10.position = var10.position + 72 * var3;
+          var13 = new byte[-var10.position + var10.payload.length];
           var11 = var13;
           var4 = var11;
           var10.a(var4, 0, -116, var13.length);
@@ -75,7 +75,7 @@ final class fma {
               if (var5.length != 65) {
                 throw new RuntimeException();
               }
-              var23 = fja.a(-5 + (var10.field_h - var13.length), var10.field_g, 5, 8);
+              var23 = fja.a(-5 + (var10.position - var13.length), var10.payload, 5, 8);
               for (var7 = 0; var7 < 64; var7++) {
                 if (var23[var7] != var5[var7 + 1]) {
                   throw new RuntimeException();
@@ -92,7 +92,7 @@ final class fma {
           if (var5.length != 65) {
             throw new RuntimeException();
           }
-          var24 = fja.a(-5 + (var10.field_h - var13.length), var10.field_g, 5, 8);
+          var24 = fja.a(-5 + (var10.position - var13.length), var10.payload, 5, 8);
           for (var7Lifetime3 = 0; var7Lifetime3 < 64; var7Lifetime3++) {
             if (var24[var7Lifetime3] != var5[var7Lifetime3 + 1]) {
               throw new RuntimeException();
@@ -102,11 +102,11 @@ final class fma {
           this.field_g = var10;
           return true;
         }
-        this.field_g = (uia) null;
-        var10.field_h = 5;
+        this.field_g = (PacketBuffer) null;
+        var10.position = 5;
         var3Lifetime1 = var10.h(255);
-        var10.field_h = var10.field_h + 72 * var3Lifetime1;
-        var13Lifetime1 = new byte[-var10.field_h + var10.field_g.length];
+        var10.position = var10.position + 72 * var3Lifetime1;
+        var13Lifetime1 = new byte[-var10.position + var10.payload.length];
         var11Lifetime1 = var13Lifetime1;
         var4Lifetime1 = var11Lifetime1;
         var10.a(var4Lifetime1, 0, -116, var13Lifetime1.length);
@@ -115,7 +115,7 @@ final class fma {
           if (var5Lifetime1.length != 65) {
             throw new RuntimeException();
           }
-          var14 = fja.a(-5 + (var10.field_h - var13Lifetime1.length), var10.field_g, 5, 8);
+          var14 = fja.a(-5 + (var10.position - var13Lifetime1.length), var10.payload, 5, 8);
           var9 = var14;
           for (var7Lifetime1 = 0; var7Lifetime1 < 64; var7Lifetime1++) {
             if (var14[var7Lifetime1] != var5Lifetime1[var7Lifetime1 + 1]) {
@@ -136,7 +136,7 @@ final class fma {
         if (var5Lifetime2.length != 65) {
           throw new RuntimeException();
         }
-        var22 = fja.a(-5 + (var10.field_h - var13Lifetime1.length), var10.field_g, 5, 8);
+        var22 = fja.a(-5 + (var10.position - var13Lifetime1.length), var10.payload, 5, 8);
         for (var7Lifetime2 = 0; var7Lifetime2 < 64; var7Lifetime2++) {
           if (var22[var7Lifetime2] != var5Lifetime2[var7Lifetime2 + 1]) {
             throw new RuntimeException();
@@ -174,7 +174,7 @@ final class fma {
             if (param4 <= 42) {
               fma.a((byte) -48);
             }
-            this.field_g.field_h = param1 * 72 + 6;
+            this.field_g.position = param1 * 72 + 6;
             var6_int = this.field_g.e(121);
             var7 = this.field_g.e(-88);
             var13 = new byte[64];

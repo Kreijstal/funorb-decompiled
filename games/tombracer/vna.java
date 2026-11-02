@@ -61,7 +61,7 @@ final class vna {
         RuntimeException var3 = null;
         try {
           if (null != param1.previous) {
-            param1.p(47);
+            param1.unlink(47);
           }
           param1.next = this.field_e.next;
           param1.previous = this.field_e;
@@ -102,7 +102,7 @@ final class vna {
             stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);
           }
-          var2.p(2);
+          var2.unlink(2);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -407,7 +407,7 @@ final class vna {
             stackIn_4_0 = null;
             return (IntrusiveNode) (stackIn_4_0);
           }
-          var2.p(64);
+          var2.unlink(64);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -428,7 +428,7 @@ final class vna {
             vna.a(true, 11, -23);
           }
           if (null != param1.previous) {
-            param1.p(111);
+            param1.unlink(111);
           }
           param1.next = this.field_e;
           param1.previous = this.field_e.previous;
@@ -533,7 +533,7 @@ final class vna {
           while (true) {
             var2 = this.field_e.next;
             if (this.field_e != var2) {
-              var2.p(param0 ^ 119);
+              var2.unlink(param0 ^ 119);
               if (var3 != 0) {
                 return;
               }

@@ -11,7 +11,7 @@ final class vma {
         if (var3 == null) {
           return null;
         }
-        return new vma(new uia(var3));
+        return new vma(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -59,14 +59,14 @@ final class vma {
         return new u(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
-    private vma(uia param0) {
+    private vma(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new fka[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.h(255);
           if (var3 != 0) {
-            param0.field_h = param0.field_h - 1;
+            param0.position = param0.position - 1;
             this.field_a[var2] = new fka();
             this.field_a[var2].a(param0);
           }

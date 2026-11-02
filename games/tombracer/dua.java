@@ -50,11 +50,11 @@ final class dua extends me {
         int var18;
         int var19;
         dt var20;
-        la var21;
-        la var22;
+        Room var21;
+        Room var22;
         dt var23;
-        la var24;
-        la var25;
+        Room var24;
+        Room var25;
         int var3Lifetime1;
         int var4Lifetime1;
         int var6Lifetime1;

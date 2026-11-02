@@ -22,7 +22,7 @@ abstract class lc extends ofa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != this.field_P) {
-            this.field_P.p(83);
+            this.field_P.unlink(83);
           }
           if (param1 == null) {
             this.field_P = new rg();

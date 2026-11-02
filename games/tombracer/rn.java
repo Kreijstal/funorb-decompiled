@@ -5,7 +5,7 @@ final class rn implements pma {
     static int field_b;
     static float[] field_a;
 
-    public final csa a(kh param0, int param1, la param2) {
+    public final csa a(BitPacketBuffer param0, int param1, Room param2) {
         RuntimeException var4 = null;
         csa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -114,7 +114,7 @@ final class rn implements pma {
         field_a = null;
     }
 
-    private final csa a(int param0, la param1, int param2) {
+    private final csa a(int param0, Room param1, int param2) {
         csa stackIn_3_0 = null;
         si stackIn_102_0 = null;
         saa stackIn_104_0 = null;
@@ -460,7 +460,7 @@ final class rn implements pma {
         }
     }
 
-    public final csa a(kh param0, la param1, byte param2, csa param3) {
+    public final csa a(BitPacketBuffer param0, Room param1, byte param2, csa param3) {
         si stackIn_102_0 = null;
         saa stackIn_104_0 = null;
         oma stackIn_106_0 = null;
@@ -829,7 +829,7 @@ final class rn implements pma {
         return oea.field_i != null ? true : false;
     }
 
-    public final csa a(la param0, byte param1) {
+    public final csa a(Room param0, byte param1) {
         RuntimeException var3 = null;
         csa stackIn_2_0 = null;
         csa stackIn_4_0 = null;
@@ -858,7 +858,7 @@ final class rn implements pma {
         }
     }
 
-    public final void a(csa param0, int param1, kh param2) {
+    public final void a(csa param0, int param1, BitPacketBuffer param2) {
         try {
           param2.a((byte) -127, param0.r(12), 10);
           param0.a(false, param2);

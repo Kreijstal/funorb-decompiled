@@ -49,7 +49,7 @@ final class kha {
         }
     }
 
-    final static java.awt.Frame a(fia param0, int param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_7_0 = null;
@@ -68,7 +68,7 @@ final class kha {
         java.awt.Frame var7 = null;
         int var9 = 0;
         dh[] var10 = null;
-        naa var11 = null;
+        AsyncRequest var11 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           if (!param0.a((byte) 69)) {

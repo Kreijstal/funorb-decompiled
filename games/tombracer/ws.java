@@ -15,7 +15,7 @@ final class ws extends wda {
     }
 
     final void b(byte param0) {
-        hca var3 = null;
+        Player var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var2 = 72 % ((-69 - param0) / 42);
@@ -43,7 +43,7 @@ final class ws extends wda {
         }
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           if (param1 >= -78) {
             this.b((byte) 11);
@@ -62,7 +62,7 @@ final class ws extends wda {
         }
     }
 
-    ws(la param0, kh param1, boolean param2) {
+    ws(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_p = param1.b((byte) 44, 1) == 1 ? true : false;

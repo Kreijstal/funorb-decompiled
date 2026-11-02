@@ -40,7 +40,7 @@ final class eua extends jea {
         }
         if (null != this.field_Eb) {
           this.field_Eb.a(param0);
-          this.field_Eb.p(1);
+          this.field_Eb.unlink(1);
         }
         this.field_Eb = null;
         this.field_tb = -1;

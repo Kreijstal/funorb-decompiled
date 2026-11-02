@@ -3,7 +3,7 @@
  */
 final class qqa extends hha {
     static String field_p;
-    uia field_r;
+    PacketBuffer field_r;
     static boolean[] field_n;
     int field_s;
     static String field_o;
@@ -15,8 +15,8 @@ final class qqa extends hha {
           return (byte[]) null;
         }
         if (!this.field_m &&
-          this.field_r.field_h >= -this.field_q + this.field_r.field_g.length) {
-          return this.field_r.field_g;
+          this.field_r.position >= -this.field_q + this.field_r.payload.length) {
+          return this.field_r.payload;
         }
         throw new RuntimeException();
     }
@@ -26,12 +26,12 @@ final class qqa extends hha {
           return 0;
         }
         if (param0 <= -7) {
-          return 100 * this.field_r.field_h / (-this.field_q + this.field_r.field_g.length);
+          return 100 * this.field_r.position / (-this.field_q + this.field_r.payload.length);
         }
         return -52;
     }
 
-    final static boolean a(uia param0, char[] param1, int param2, boolean param3) {
+    final static boolean a(PacketBuffer param0, char[] param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -48,27 +48,27 @@ final class qqa extends hha {
           if (param2 != param1[0]) {
             return false;
           }
-          var4_int = param0.field_h;
+          var4_int = param0.position;
           var5 = 1;
           if (!param3) {
             field_n = (boolean[]) null;
           }
           scanLoop1: while (true) {
             if (param1.length > var5) {
-              stackIn_16_0 = param0.field_g.length;
+              stackIn_16_0 = param0.payload.length;
               if (var6 != 0) {
                 break scanLoop1;
               }
-              if (stackIn_16_0 != param0.field_h &&
+              if (stackIn_16_0 != param0.position &&
                 param0.c((byte) 106) == param1[var5]) {
                 var5++;
                 continue;
               } else {
-                param0.field_h = var4_int;
+                param0.position = var4_int;
                 return false;
               }
             }
-            param0.field_h = var4_int;
+            param0.position = var4_int;
             stackIn_16_0 = 1;
             break;
           }

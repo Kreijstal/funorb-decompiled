@@ -108,7 +108,7 @@ final class cr {
           var2_int = 0;
           var3 = (mi) (param0.f(-80));
           while (var3 != null) {
-            var3.p(67);
+            var3.unlink(67);
             incrementValue$2 = var2_int;
             var2_int++;
             this.field_a[incrementValue$2] = var3;

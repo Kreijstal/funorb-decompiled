@@ -26,7 +26,7 @@ final class ro extends wda {
         }
     }
 
-    ro(la param0, kh param1, boolean param2) {
+    ro(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         gea stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
@@ -301,7 +301,7 @@ final class ro extends wda {
         return param1;
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -91);
           if (param1 >= -78) {
@@ -330,7 +330,7 @@ final class ro extends wda {
         }
     }
 
-    ro(la param0, boolean param1) {
+    ro(Room param0, boolean param1) {
         super(param0, param1);
         this.field_s = false;
         try {

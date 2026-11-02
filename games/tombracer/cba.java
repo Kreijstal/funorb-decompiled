@@ -23,7 +23,7 @@ final class cba {
         }
     }
 
-    final static qo a(int param0, uia param1) {
+    final static qo a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         qo stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

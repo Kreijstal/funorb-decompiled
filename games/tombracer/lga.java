@@ -318,7 +318,7 @@ class lga extends rj {
         }
     }
 
-    final static nma a(uia param0, byte param1) {
+    final static nma a(PacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         nma stackIn_2_0 = null;
         nma stackIn_4_0 = null;
@@ -452,7 +452,7 @@ class lga extends rj {
         RuntimeException var1_ref = null;
         int var3 = 0;
         int var4 = 0;
-        uia var5 = null;
+        PacketBuffer var5 = null;
         int[] var6 = null;
         int[] var8 = null;
         int var10 = 0;
@@ -471,8 +471,8 @@ class lga extends rj {
             rla.field_D = cna.a(4, 128);
           }
           if (param0) {
-            var5 = (uia) null;
-            lga.a((uia) null, (byte) 82);
+            var5 = (PacketBuffer) null;
+            lga.a((PacketBuffer) null, (byte) 82);
           }
           if (!rla.field_D.field_g) {
             return false;

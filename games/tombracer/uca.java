@@ -23,7 +23,7 @@ final class uca {
         int var6 = 0;
         mu var7 = null;
         mu var8 = null;
-        kh var9 = null;
+        BitPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
@@ -53,16 +53,16 @@ final class uca {
             }
             break;
           }
-          var8.p(19);
-          var8.c(-7975);
+          var8.unlink(19);
+          var8.unlinkSecondary(-7975);
           ii.field_a = ii.field_a - 1;
           var9 = ql.field_k;
           var9.k(param2, param1 - 3090);
-          var9.field_h = var9.field_h + 1;
-          var5 = var9.field_h;
+          var9.position = var9.position + 1;
+          var5 = var9.position;
           var9.i(1, 0);
           var9.a(param0, false);
-          var9.d(var9.field_h - var5, (byte) -113);
+          var9.d(var9.position - var5, (byte) -113);
           stackIn_18_0 = null;
           return (String) (stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -86,16 +86,16 @@ final class uca {
     }
 
     final static void a(int param0, toa param1, byte param2) {
-        kh var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = ql.field_k;
           var5.k(param0, -2988);
-          var5.field_h = var5.field_h + 1;
+          var5.position = var5.position + 1;
           if (param2 != 93) {
             field_a = 32;
           }
-          var4 = var5.field_h;
+          var4 = var5.position;
           var5.i(1, 0);
           var5.i(param1.field_i, 0);
           var5.e(param2 ^ -5253, param1.field_k);
@@ -104,7 +104,7 @@ final class uca {
           var5.a(param1.field_l, (byte) -1);
           var5.a(param1.field_g, (byte) -90);
           var5.g(var4, 64);
-          var5.d(-var4 + var5.field_h, (byte) -122);
+          var5.d(-var4 + var5.position, (byte) -122);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

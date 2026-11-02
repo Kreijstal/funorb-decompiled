@@ -538,7 +538,7 @@ abstract class uta implements sia {
         }
     }
 
-    uta(il param0, fia param1) {
+    uta(il param0, PlatformTaskDispatcher param1) {
         int var3_int = 0;
         jea var4 = null;
         jea var5 = null;

@@ -20,7 +20,7 @@ final class fla extends IntrusiveNode {
           if (!(0 >= param0.field_i[this.field_l])) {
             param0.field_i[this.field_l] = param0.field_i[this.field_l] - 1;
           }
-          this.p(25);
+          this.unlink(25);
           rs.a(this, -110);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fla.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -57,7 +57,7 @@ final class fla extends IntrusiveNode {
             this.a(-91, param1);
             return;
           }
-          if (this.field_i.l((byte) 103)) {
+          if (this.field_i.isLinked((byte) 103)) {
             return;
           }
           this.a(-91, param1);
@@ -115,7 +115,7 @@ final class fla extends IntrusiveNode {
           if (!(0 >= param1.field_i[this.field_l])) {
             param1.field_i[this.field_l] = param1.field_i[this.field_l] - 1;
           }
-          this.p(18);
+          this.unlink(18);
           rs.a(this, -77);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fla.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

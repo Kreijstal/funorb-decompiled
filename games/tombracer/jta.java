@@ -24,7 +24,7 @@ final class jta extends qr {
         if (param0 < -105) {
           while (var3 != null) {
             if (var3.a(127)) {
-              var3.p(71);
+              var3.unlink(71);
             }
             var3 = (gn) (var2.a(-1));
           }
@@ -32,7 +32,7 @@ final class jta extends qr {
           this.g((byte) 58);
           while (var3 != null) {
             if (var3.a(127)) {
-              var3.p(71);
+              var3.unlink(71);
             }
             var3 = (gn) (var2.a(-1));
           }
@@ -98,7 +98,7 @@ final class jta extends qr {
         if (param0 == -1) {
           while (var3 != null) {
             if (var3.a((byte) -115)) {
-              var3.p(param0 ^ -111);
+              var3.unlink(param0 ^ -111);
             }
             var3 = (gn) (var2.a(-1));
           }
@@ -106,7 +106,7 @@ final class jta extends qr {
           this.d(true);
           while (var3 != null) {
             if (var3.a((byte) -115)) {
-              var3.p(param0 ^ -111);
+              var3.unlink(param0 ^ -111);
             }
             var3 = (gn) (var2.a(-1));
           }

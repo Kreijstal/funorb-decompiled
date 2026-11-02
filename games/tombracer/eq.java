@@ -29,7 +29,7 @@ final class eq extends nv {
           String stackIn_16_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (fia.field_j.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_j.startsWith("win") &&
               qla.a(param2, -127)) {
               return;
             }
@@ -78,7 +78,7 @@ final class eq extends nv {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -114,7 +114,7 @@ final class eq extends nv {
         this.field_q = param1 ? true : false;
     }
 
-    eq(la param0, boolean param1) {
+    eq(Room param0, boolean param1) {
         super(param0, param1);
     }
 
@@ -133,7 +133,7 @@ final class eq extends nv {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param6 instanceof ep &&
+          if (param6 instanceof Projectile &&
             this.field_o) {
             return false;
           }
@@ -167,7 +167,7 @@ final class eq extends nv {
         return ld.field_e >= 2 ? true : false;
     }
 
-    eq(la param0, kh param1, boolean param2) {
+    eq(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           if (param0.field_E >= 4) {
@@ -189,8 +189,8 @@ final class eq extends nv {
 
     final int a(boolean param0) {
         if (param0) {
-          fsa var3 = (fsa) null;
-          this.a(true, (fsa) null);
+          Trap var3 = (Trap) null;
+          this.a(true, (Trap) null);
           return 12;
         }
         return 12;
@@ -280,7 +280,7 @@ final class eq extends nv {
         this.a(-117, 44, 70, 106, 36, -110, (ffa) null);
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 56, this.field_q ? 1 : 0, 1);

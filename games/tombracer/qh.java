@@ -36,10 +36,10 @@ final class qh extends dfa implements rqa {
         int var3 = 0;
         int var7 = 0;
         int var2;
-        hca var4;
+        Player var4;
         ag var5;
         w var6;
-        la var8;
+        Room var8;
         int var9;
         var9 = TombRacer.field_G ? 1 : 0;
         var2 = this.field_k.field_H.length;
@@ -329,7 +329,7 @@ final class qh extends dfa implements rqa {
         int var14_int = 0;
         RuntimeException var14 = null;
         Object var15 = null;
-        hca var17 = null;
+        Player var17 = null;
         this.field_s = false;
         this.field_f = new vna();
         this.field_A = false;
@@ -457,7 +457,7 @@ final class qh extends dfa implements rqa {
     }
 
     final void k(byte param0) {
-        hca var2 = this.field_k.field_H[0];
+        Player var2 = this.field_k.field_H[0];
         if (param0 != -25) {
           this.field_w = true;
         }
@@ -466,7 +466,7 @@ final class qh extends dfa implements rqa {
         this.c(param0 ^ 102);
     }
 
-    final void b(int param0, kh param1) {
+    final void b(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -535,7 +535,7 @@ final class qh extends dfa implements rqa {
 
     final void c(int param0) {
         int var2;
-        la var3;
+        Room var3;
         int var4;
         int var2Lifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -570,7 +570,7 @@ final class qh extends dfa implements rqa {
         field_q = null;
     }
 
-    final void a(int param0, kh param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         int var4 = 0;
         int var5 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -663,7 +663,7 @@ final class qh extends dfa implements rqa {
     }
 
     final void b(boolean param0, boolean param1, int param2) {
-        hca var4 = null;
+        Player var4 = null;
         if (this.field_s) {
           return;
         }
@@ -905,7 +905,7 @@ final class qh extends dfa implements rqa {
         return this.field_l instanceof fja;
     }
 
-    final boolean a(int param0, int param1, kh param2) {
+    final boolean a(int param0, int param1, BitPacketBuffer param2) {
         RuntimeException var4 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -1089,7 +1089,7 @@ final class qh extends dfa implements rqa {
     private final void a(boolean param0, int param1) {
         int var4 = 0;
         int var3;
-        hca var5;
+        Player var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
         var3 = 0;
@@ -1179,7 +1179,7 @@ final class qh extends dfa implements rqa {
           if (param0 != -19805) {
             this.field_i = 76;
           }
-          param1.p(42);
+          param1.unlink(42);
           if (param1 instanceof dl) {
             this.field_t = false;
           }
@@ -1209,9 +1209,9 @@ final class qh extends dfa implements rqa {
           var4 = this.field_D ? 1 : 0;
           if (!wka.field_d &&
             var4 == 0 &&
-            rba.field_a != null &&
-            !rba.field_a.f((byte) 33) &&
-            rba.field_a == hb.field_t) {
+            SecondaryNodeDequeIterator.field_a != null &&
+            !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
+            SecondaryNodeDequeIterator.field_a == hb.field_t) {
             var5 = uca.field_c.a(8, 0);
             if (0 != var5) {
               if (1 != var5) {
@@ -1282,7 +1282,7 @@ final class qh extends dfa implements rqa {
         return true;
     }
 
-    private final String a(hca param0, byte param1, int param2) {
+    private final String a(Player param0, byte param1, int param2) {
         String dupTemp$1 = null;
         String[] var4 = null;
         RuntimeException var4_ref = null;
@@ -1485,11 +1485,11 @@ final class qh extends dfa implements rqa {
         if (param0 != this.field_j) {
           var3 = -this.field_j + param0;
           if (!wka.field_d &&
-            null != rba.field_a &&
-            rba.field_a.field_x >= 0 &&
-            !rba.field_a.field_D &&
-            !rba.field_a.f((byte) 33) &&
-            hb.field_t == rba.field_a) {
+            null != SecondaryNodeDequeIterator.field_a &&
+            SecondaryNodeDequeIterator.field_a.field_x >= 0 &&
+            !SecondaryNodeDequeIterator.field_a.field_D &&
+            !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
+            hb.field_t == SecondaryNodeDequeIterator.field_a) {
             var4 = uca.field_c.a(3, 0);
             if (0 != var4) {
               if (var4 == 1) {
@@ -1508,9 +1508,9 @@ final class qh extends dfa implements rqa {
           var3 = stackIn_4_0;
           if (!wka.field_d &&
             var3 == 0 &&
-            rba.field_a != null &&
-            !rba.field_a.f((byte) 33) &&
-            hb.field_t == rba.field_a) {
+            SecondaryNodeDequeIterator.field_a != null &&
+            !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
+            hb.field_t == SecondaryNodeDequeIterator.field_a) {
             var4 = uca.field_c.a(8, 0);
             if (0 != var4) {
               if (var4 != 1) {
@@ -1598,8 +1598,8 @@ final class qh extends dfa implements rqa {
 
     final String j(int param0, int param1) {
         if (param1 != 9) {
-          kh var4 = (kh) null;
-          this.b(-82, (kh) null);
+          BitPacketBuffer var4 = (BitPacketBuffer) null;
+          this.b(-82, (BitPacketBuffer) null);
         }
         return this.field_k.e(param0, 23807);
     }

@@ -39,7 +39,7 @@ final class qha extends ou {
         var12 = TombRacer.field_G ? 1 : 0;
         var2 = new wea(this.field_a);
         var3 = aq.a(-5640);
-        var4 = ml.a(57);
+        var4 = RandomAccessFileHandle.a(57);
         var5 = 0;
         var6 = 0;
         var7 = 1;

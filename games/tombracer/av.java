@@ -51,8 +51,8 @@ final class av {
           qpa.field_b.a(var11, param6, -23776, var10, var9_int - 5 - var11);
           var12 = 5 + (param6 + var10);
           lra.field_e.a(var9_int, param1, -23776, 0, 0);
-          ep.field_r.a(var9_int, var12, -23776, param1, 0);
-          ep.field_r.field_w = hca.c(ep.field_r.field_t, 2105376, 3, 11579568, -112, 8421504);
+          Projectile.field_r.a(var9_int, var12, -23776, param1, 0);
+          Projectile.field_r.field_w = Player.c(Projectile.field_r.field_t, 2105376, 3, 11579568, -112, 8421504);
           var12 = var12 + param1;
           wi.field_s.a(var9_int, var12, -23776, -(var12 / 2) + param0, -(var9_int / 2) + param8);
         } catch (RuntimeException runtimeException) {
@@ -60,7 +60,7 @@ final class av {
         }
     }
 
-    final static void a(int param0, fia param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           wea.field_a = param4;
           int var9_int = -25 / ((44 - param2) / 33);
@@ -72,8 +72,8 @@ final class av {
           ko.field_d = param8;
           du.field_d = param6;
           wg.field_l = (qda) ((Object) new gv());
-          ep.field_k = new ss(param1);
-          uja.field_a = new fma(wg.field_l, ep.field_k);
+          Projectile.field_k = new ss(param1);
+          uja.field_a = new fma(wg.field_l, Projectile.field_k);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "av.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

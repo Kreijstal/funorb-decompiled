@@ -327,7 +327,7 @@ class jea extends um {
     }
 
     final static void a(int param0, int param1, aca param2) {
-        kh var3 = null;
+        BitPacketBuffer var3 = null;
         aca var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

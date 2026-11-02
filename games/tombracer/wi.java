@@ -372,7 +372,7 @@ final class wi extends wda {
         this.field_p = param1;
     }
 
-    wi(la param0, int param1, int param2, int param3, boolean param4) {
+    wi(Room param0, int param1, int param2, int param3, boolean param4) {
         super(param0, param4);
         try {
           this.field_p = param2;
@@ -422,7 +422,7 @@ final class wi extends wda {
         this.field_t = param0;
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -117);
           param0.a((byte) 75, this.b(0, this.field_t), 8);
@@ -437,7 +437,7 @@ final class wi extends wda {
         }
     }
 
-    wi(la param0, kh param1, boolean param2) {
+    wi(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_13_0 = null;
@@ -483,7 +483,7 @@ final class wi extends wda {
         }
     }
 
-    wi(la param0, boolean param1) {
+    wi(Room param0, boolean param1) {
         this(param0, 131072, 0, 0, param1);
     }
 

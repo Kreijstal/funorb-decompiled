@@ -1478,8 +1478,8 @@ abstract class eo extends ha {
     }
 
     final void p(byte param0) {
-        if (od.field_h != this.field_v[this.field_Cc]) {
-          this.field_v[this.field_Cc] = od.field_h;
+        if (DualLinkNode.field_h != this.field_v[this.field_Cc]) {
+          this.field_v[this.field_Cc] = DualLinkNode.field_h;
           this.field_hc[this.field_Cc].a();
           this.u(0);
         }
@@ -1765,7 +1765,7 @@ abstract class eo extends ha {
         while (var2 < this.field_Vb) {
           this.field_db[var2] = iw.field_c;
           this.field_mc[var2] = iw.field_c;
-          this.field_v[var2] = od.field_h;
+          this.field_v[var2] = DualLinkNode.field_h;
           this.field_hc[var2] = new asa();
           var2++;
         }

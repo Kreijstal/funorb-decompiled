@@ -17,12 +17,12 @@ abstract class bja {
         }
         String[] var4 = new String[1];
         var4[0] = var3;
-        int var5 = jqa.a(2147483647, new Random(), -76);
+        int var5 = BufferedSocket.a(2147483647, new Random(), -76);
         wka.field_d = false;
         id var6 = new id(param0, var5);
-        rba.field_a = new qh(false, var5, var4, 0, false, rga.b(26499, param0), 0, 1, param2, param0, (BitSet[]) null, new boolean[]{wla.field_ub > 0 ? true : false}, var6);
-        rba.field_a.j((byte) -64);
-        rba.field_a.h((byte) -52);
+        SecondaryNodeDequeIterator.field_a = new qh(false, var5, var4, 0, false, rga.b(26499, param0), 0, 1, param2, param0, (BitSet[]) null, new boolean[]{wla.field_ub > 0 ? true : false}, var6);
+        SecondaryNodeDequeIterator.field_a.j((byte) -64);
+        SecondaryNodeDequeIterator.field_a.h((byte) -52);
         int var7 = -125 / ((param1 - 57) / 38);
         iqa.field_c.g(0);
         ira.a(false, -1, (byte) 92);

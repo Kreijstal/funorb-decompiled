@@ -117,7 +117,7 @@ final class ila {
               var6Lifetime1 = var6Lifetime1 + var7_refLifetime1.a(true);
             }
             if (var7_refLifetime1.e((byte) -39)) {
-              var7_refLifetime1.p(3);
+              var7_refLifetime1.unlink(3);
             }
             var7_refLifetime1 = (jha) (this.field_d.e(121));
           }
@@ -216,7 +216,7 @@ final class ila {
                 var10 = (String) null;
                 fd.field_d = b.a(param1, 0, (String) null, false, tr.field_g);
               }
-              ql.field_k.field_h = 0;
+              ql.field_k.position = 0;
               ql.field_k.i(14, 0);
               ql.field_k.i(fd.field_d.a((byte) 113).field_d, 0);
               bl.a(-1, -1);
@@ -232,12 +232,12 @@ final class ila {
                 oka.field_z = var6_int;
                 uca.field_d = -1;
               }
-              vc.field_q.field_h = 0;
+              vc.field_q.position = 0;
             }
             if (ola.field_yb == km.field_p &&
               ama.a(8, -1)) {
               ra.field_L = vc.field_q.b(290646880);
-              vc.field_q.field_h = 0;
+              vc.field_q.position = 0;
               ova.a((byte) 121, param5, param3, fd.field_d, param0);
               km.field_p = ria.field_o;
             }
@@ -245,7 +245,7 @@ final class ila {
             if (km.field_p == ria.field_o &&
               ama.a(1, param2 - 51)) {
               var6_intLifetime1 = vc.field_q.h(param2 + 205);
-              vc.field_q.field_h = 0;
+              vc.field_q.position = 0;
               oka.field_z = var6_intLifetime1;
               ji.field_d = null;
               if (var6_intLifetime1 != 0 &&
@@ -446,7 +446,7 @@ final class ila {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        kh var8 = null;
+        BitPacketBuffer var8 = null;
         wua var9 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         var8 = vc.field_q;

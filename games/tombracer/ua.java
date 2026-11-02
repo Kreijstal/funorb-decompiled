@@ -4,7 +4,7 @@
 final class ua implements bo {
     static cn field_a;
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           if (param1 != -19) {
             qh var4 = (qh) null;
@@ -45,7 +45,7 @@ final class ua implements bo {
         field_a = null;
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         try {
           if (param0 != 200) {
             field_a = (cn) null;

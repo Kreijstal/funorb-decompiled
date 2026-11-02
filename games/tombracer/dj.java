@@ -3,7 +3,7 @@
  */
 final class dj {
     static int field_b;
-    private la field_c;
+    private Room field_c;
     static String field_a;
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -195,7 +195,7 @@ final class dj {
           var9.a(this.a((byte) -33, 2048), this.a((byte) -33, 32) - 16, -110);
         }
         if (param2 != 46) {
-          this.field_c = (la) null;
+          this.field_c = (Room) null;
         }
     }
 
@@ -220,7 +220,7 @@ final class dj {
         }
     }
 
-    dj(la param0) {
+    dj(Room param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
@@ -292,7 +292,7 @@ final class dj {
         int var11 = 0;
         int var12 = TombRacer.field_G ? 1 : 0;
         if (param0 < 47) {
-          this.field_c = (la) null;
+          this.field_c = (Room) null;
         }
         for (var6 = 0; 5 > var6; var6++) {
           var7 = -256 + (this.a((byte) -33, 512) + param4);

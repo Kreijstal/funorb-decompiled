@@ -60,7 +60,7 @@ final class pc {
     }
 
     final static void a(boolean param0, int param1, bb param2) {
-        kh var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = ql.field_k;
           if (param0) {

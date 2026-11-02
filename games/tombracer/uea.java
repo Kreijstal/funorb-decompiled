@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uea extends kna {
-    uea(la param0, int param1) {
+    uea(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -30,11 +30,11 @@ final class uea extends kna {
         this.b(param0 + 174, 2097152, 2097152);
     }
 
-    uea(la param0, int param1, kh param2, csa param3) {
+    uea(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 
-    final static uca[] a(kh param0, byte param1) {
+    final static uca[] a(BitPacketBuffer param0, byte param1) {
         int var5 = 0;
         Object stackIn_3_0 = null;
         uca[] stackIn_12_0 = null;
@@ -99,7 +99,7 @@ final class uea extends kna {
         return 7;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -130,20 +130,20 @@ final class uea extends kna {
         return true;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         eq var5 = null;
         mfa var6 = null;
         am var7 = null;
         gaa var8 = null;
-        fsa var9 = null;
-        fsa stackIn_1_0 = null;
+        Trap var9 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new fsa(param2, param0);
+          var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.a((byte) -3, 5);
           var5 = new eq(param2, param0);

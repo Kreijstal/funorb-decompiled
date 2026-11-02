@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ena extends od {
+final class ena extends DualLinkNode {
     private byte[][] field_m;
     private int field_k;
     static vs field_p;
@@ -24,8 +24,8 @@ final class ena extends od {
         nk var10 = null;
         Object var10_ref = null;
         int var12 = 0;
-        uia var15 = null;
-        uia var18 = null;
+        PacketBuffer var15 = null;
+        PacketBuffer var18 = null;
         vna var19 = null;
         int[] var28 = null;
         byte[] var29 = null;
@@ -55,8 +55,8 @@ final class ena extends od {
         var3 = 0;
         while (var3 < this.field_m.length) {
           var29 = this.field_m[var3];
-          var15 = new uia(var29);
-          var15.field_h = 1;
+          var15 = new PacketBuffer(var29);
+          var15.position = 1;
           var6 = var15.d(124);
           var7 = jma.field_j;
           synchronized (var7) {
@@ -77,8 +77,8 @@ final class ena extends od {
         }
         while (var30.length > var5) {
           var31 = this.field_m[var5];
-          var18 = new uia(var31);
-          var18.field_h = 1;
+          var18 = new PacketBuffer(var31);
+          var18.position = 1;
           var8 = var18.d(param0 + 18);
           var9 = null;
           var10 = (nk) (var19.f(-80));

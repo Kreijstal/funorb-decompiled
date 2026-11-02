@@ -98,7 +98,7 @@ final class jc extends ra {
         }
     }
 
-    jc(la param0, int param1) {
+    jc(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -124,7 +124,7 @@ final class jc extends ra {
         this.a((byte) 113, new mka[]{new mka(0, 0, 2097152, 0, 40)});
     }
 
-    jc(la param0, int param1, kh param2, csa param3) {
+    jc(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -192,19 +192,19 @@ final class jc extends ra {
         return 7;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         ro var5 = null;
         mfa var6 = null;
         nq var7 = null;
-        fsa stackIn_1_0 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.h(param1, 0);
           var4.a(1, (byte) -12, true);
@@ -321,7 +321,7 @@ final class jc extends ra {
         return stackIn_18_0;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {

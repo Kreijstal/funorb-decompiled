@@ -7,7 +7,7 @@ final class ff implements dv {
     int field_k;
     dt[] field_G;
     int field_E;
-    hca[] field_H;
+    Player[] field_H;
     wd[] field_y;
     private int field_r;
     private mt field_d;
@@ -48,7 +48,7 @@ final class ff implements dv {
     int field_t;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        la var6 = this.field_G[param1].a(true, param0);
+        Room var6 = this.field_G[param1].a(true, param0);
         if (var6 == null) {
           throw new IllegalStateException("Could not resync player to room: " + param1 + ", " + param0);
         }
@@ -103,11 +103,11 @@ final class ff implements dv {
     }
 
     final boolean a(boolean param0, int param1, int param2) {
-        hca var4 = this.field_H[param1];
+        Player var4 = this.field_H[param1];
         if (param0) {
           return false;
         }
-        la var5 = var4.f((byte) -85);
+        Room var5 = var4.f((byte) -85);
         if (var5 == null) {
           return true;
         }
@@ -119,10 +119,10 @@ final class ff implements dv {
         return false;
     }
 
-    final void a(boolean param0, la param1) {
+    final void a(boolean param0, Room param1) {
         int var4 = 0;
         int var3_int = 0;
-        la var5 = null;
+        Room var5 = null;
         int var6 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -251,7 +251,7 @@ final class ff implements dv {
         }
     }
 
-    final la a(int param0, int param1) {
+    final Room a(int param0, int param1) {
         if (param0 != 0) {
           this.field_A = -127;
         }
@@ -278,7 +278,7 @@ final class ff implements dv {
         }
     }
 
-    public final void a(kh param0, boolean param1) {
+    public final void a(BitPacketBuffer param0, boolean param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -327,7 +327,7 @@ final class ff implements dv {
 
     final static void d(int param0, int param1) {
         if (msa.field_a == param1) {
-          if (null == rba.field_a) {
+          if (null == SecondaryNodeDequeIterator.field_a) {
             return;
           }
           if (param0 != 0) {
@@ -565,7 +565,7 @@ final class ff implements dv {
 
     final void c(byte param0) {
         int var2;
-        la var3;
+        Room var3;
         int var4;
         int var2Lifetime1;
         int var2Lifetime2;
@@ -663,10 +663,10 @@ final class ff implements dv {
           this.field_C = this.field_f;
           this.field_P = this.field_k;
           this.field_v = new int[this.field_P];
-          this.field_H = new hca[this.field_P];
+          this.field_H = new Player[this.field_P];
           this.field_y = new wd[this.field_P];
           for (var12_intLifetime2 = 0; this.field_H.length > var12_intLifetime2; var12_intLifetime2++) {
-            this.field_H[var12_intLifetime2] = new hca(var12_intLifetime2);
+            this.field_H[var12_intLifetime2] = new Player(var12_intLifetime2);
             this.field_y[var12_intLifetime2] = new wd(this.field_H[var12_intLifetime2]);
           }
           var12_intLifetime3 = this.field_K;

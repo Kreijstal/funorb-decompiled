@@ -32,7 +32,7 @@ final class uk extends ra {
         }
     }
 
-    uk(la param0, int param1, kh param2, csa param3) {
+    uk(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -51,23 +51,23 @@ final class uk extends ra {
         return 7;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         ro var5 = null;
         fra var6 = null;
         up var7 = null;
-        fsa var8 = null;
+        Trap var8 = null;
         eq var9 = null;
         mfa var10 = null;
         fu var11 = null;
-        fsa var12 = null;
-        fsa stackIn_1_0 = null;
+        Trap var12 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var12 = new fsa(param2, param0);
+          var12 = new Trap(param2, param0);
           var12.b((byte) -11, this.field_k, this.field_l);
           var12.h(0, param1 ^ param1);
           var12.a(4, (byte) -12, true);
@@ -81,7 +81,7 @@ final class uk extends ra {
           var6.a(true, var7);
           var6.a((byte) -24, true);
           var12.a((byte) 83, (nv) (var6));
-          var8 = new fsa(param2, param0);
+          var8 = new Trap(param2, param0);
           var8.b((byte) -11, 1048576, 1048576);
           var8.h(3, param1 ^ 3);
           var8.a(3, (byte) -12, true);
@@ -133,7 +133,7 @@ final class uk extends ra {
         return false;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -151,7 +151,7 @@ final class uk extends ra {
         this.b(66, 4194304, 4194304);
     }
 
-    uk(la param0, int param1) {
+    uk(Room param0, int param1) {
         super(param0, param1);
     }
 

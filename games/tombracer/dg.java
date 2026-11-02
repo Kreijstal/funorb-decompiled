@@ -104,7 +104,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         int var6;
         int var7;
         int var8;
-        la var9;
+        Room var9;
         int var4Lifetime1;
         int var4Lifetime2;
         int var5Lifetime1;
@@ -130,13 +130,13 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         int var8Lifetime2Lifetime1;
         int var8Lifetime3Lifetime1;
         int var8Lifetime3Lifetime2;
-        la var9Lifetime1;
-        la var9Lifetime2;
-        la var9Lifetime3;
-        la var9Lifetime4;
-        la var9Lifetime2Lifetime1;
-        la var9Lifetime3Lifetime1;
-        la var9Lifetime3Lifetime2;
+        Room var9Lifetime1;
+        Room var9Lifetime2;
+        Room var9Lifetime3;
+        Room var9Lifetime4;
+        Room var9Lifetime2Lifetime1;
+        Room var9Lifetime3Lifetime1;
+        Room var9Lifetime3Lifetime2;
         int var7Lifetime2Lifetime2;
         int var8Lifetime2Lifetime2;
         if (this.field_h == null) {
@@ -524,7 +524,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         return -1;
     }
 
-    void a(byte param0, kh param1) {
+    void a(byte param0, BitPacketBuffer param1) {
         try {
           if (0 < this.field_f) {
             param1.a((byte) 12, 1, 1);
@@ -635,13 +635,13 @@ abstract class dg extends IntrusiveNode implements fo, noa {
               return;
             }
             var3 = null;
-            if (this.field_h instanceof fsa) {
-              var3 = (fsa) (this.field_h);
+            if (this.field_h instanceof Trap) {
+              var3 = (Trap) (this.field_h);
             }
             var4 = (this.field_f << 16) + this.field_h.g((byte) 115);
             this.a(param1, this.field_h.e(9648), this.field_h.d(3), var4, (byte) 46);
             if (var3 != null) {
-              ((fsa) (var3)).a(param1, -10425);
+              ((Trap) (var3)).a(param1, -10425);
             }
           }
           if (param0 <= 103) {
@@ -675,7 +675,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         int var3 = -51 % ((param0 - 7) / 36);
     }
 
-    dg(int param0, la param1, kh param2) {
+    dg(int param0, Room param1, BitPacketBuffer param2) {
         this(param0);
         try {
           this.a(125, param1, param2);
@@ -690,7 +690,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         }
     }
 
-    final la a(int param0) {
+    final Room a(int param0) {
         if (param0 < 12) {
           this.a((byte) -118);
           if (this.field_h != null) {
@@ -737,7 +737,7 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         }
     }
 
-    void a(int param0, la param1, kh param2) {
+    void a(int param0, Room param1, BitPacketBuffer param2) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

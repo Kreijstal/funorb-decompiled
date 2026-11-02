@@ -30,7 +30,7 @@ final class fka {
     int field_i;
     private co field_h;
 
-    final void a(uia param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_g = new co();
@@ -39,7 +39,7 @@ final class fka {
         this.field_y.b(param0);
         int var2 = param0.h(255);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_c = new co();
           this.field_c.b(param0);
           this.field_l = new co();
@@ -47,7 +47,7 @@ final class fka {
         }
         var2 = param0.h(255);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_e = new co();
           this.field_e.b(param0);
           this.field_p = new co();
@@ -55,7 +55,7 @@ final class fka {
         }
         var2 = param0.h(255);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_k = new co();
           this.field_k.b(param0);
           this.field_h = new co();

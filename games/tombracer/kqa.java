@@ -4,7 +4,7 @@
 final class kqa {
     private int[] field_c;
     int[] field_b;
-    static fia field_a;
+    static PlatformTaskDispatcher field_a;
     int[] field_e;
     private ff field_d;
 
@@ -85,7 +85,7 @@ final class kqa {
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 18916) {
-            field_a = (fia) null;
+            field_a = (PlatformTaskDispatcher) null;
           }
           var1 = (vb) (tna.field_e.f(-80));
           while (var1 != null) {

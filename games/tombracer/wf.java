@@ -22,7 +22,7 @@ final class wf extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, kh param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         boolean discarded$0 = false;
         try {
           param1.a((byte) 2, this.field_f, 4);
@@ -72,8 +72,8 @@ final class wf extends IntrusiveNode {
         if (param0 == -1) {
           return new wf(this.field_f, this.field_h);
         }
-        hca var3 = (hca) null;
-        this.a((byte) -15, (hca) null);
+        Player var3 = (Player) null;
+        this.a((byte) -15, (Player) null);
         return new wf(this.field_f, this.field_h);
     }
 
@@ -84,7 +84,7 @@ final class wf extends IntrusiveNode {
         this.d(100);
     }
 
-    final boolean a(byte param0, hca param1) {
+    final boolean a(byte param0, Player param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
@@ -115,7 +115,7 @@ final class wf extends IntrusiveNode {
         }
     }
 
-    wf(la param0, kh param1) {
+    wf(Room param0, BitPacketBuffer param1) {
         this.field_h = 100;
         try {
           this.field_f = param1.b((byte) 44, 4);

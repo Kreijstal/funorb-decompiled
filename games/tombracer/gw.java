@@ -9,7 +9,7 @@ final class gw extends kna {
         return false;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -32,13 +32,13 @@ final class gw extends kna {
         }
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         mfa var5 = null;
         int var7_int = 0;
         int var8 = 0;
-        fsa var9 = null;
-        fsa stackIn_15_0 = null;
-        fsa stackIn_17_0 = null;
+        Trap var9 = null;
+        Trap stackIn_15_0 = null;
+        Trap stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -48,7 +48,7 @@ final class gw extends kna {
         ki var7 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          var9 = new fsa(param2, param0);
+          var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.a((byte) -3, 0);
           var9.b((byte) 17, true);
@@ -70,7 +70,7 @@ final class gw extends kna {
               break;
           }
           if (param1 != 3) {
-            stackIn_15_0 = (fsa) null;
+            stackIn_15_0 = (Trap) null;
             return stackIn_15_0;
           }
           var7 = (ki) (var5.a(14, 82));
@@ -278,11 +278,11 @@ final class gw extends kna {
         return true;
     }
 
-    gw(la param0, int param1) {
+    gw(Room param0, int param1) {
         super(param0, param1);
     }
 
-    gw(la param0, int param1, kh param2, csa param3) {
+    gw(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 

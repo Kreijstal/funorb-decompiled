@@ -85,7 +85,7 @@ abstract class lu {
         oh.field_o = param0;
     }
 
-    abstract void a(uia param0, boolean param1);
+    abstract void a(PacketBuffer param0, boolean param1);
 
     static {
         field_c = "<%0> has resigned.";

@@ -17,7 +17,7 @@ final class nra implements bo {
     private int field_h;
     private long field_j;
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         param1.a(1736565456, this.field_j);
         param1.f(param0 ^ -1477662080, this.field_m);
         param1.i(this.field_f, 0);
@@ -38,7 +38,7 @@ final class nra implements bo {
         }
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         this.field_j = param0.b(290646880);
         this.field_m = param0.d(122);
         this.field_f = param0.h(param1 + 274);
@@ -137,8 +137,8 @@ final class nra implements bo {
           this.field_b = param4;
           return;
         }
-        kh var11 = (kh) null;
-        this.a((kh) null, (byte) -83);
+        BitPacketBuffer var11 = (BitPacketBuffer) null;
+        this.a((BitPacketBuffer) null, (byte) -83);
         this.field_n = param1;
         this.field_b = param4;
     }

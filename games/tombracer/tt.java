@@ -6,7 +6,7 @@ final class tt extends IntrusiveNode implements bo {
     static String field_g;
     private boolean[] field_h;
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -86,7 +86,7 @@ final class tt extends IntrusiveNode implements bo {
         throw new IllegalStateException("Unknown/unimplemented weapon preset: " + param1);
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = TombRacer.field_G ? 1 : 0;

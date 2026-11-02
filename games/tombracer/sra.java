@@ -58,28 +58,28 @@ final class sra implements eb {
         ina dupTemp$0 = new ina(55);
         lba.field_r = dupTemp$0;
         ina var4 = dupTemp$0;
-        var4.a(256, this.field_k, fv.field_d[0], hca.field_U[0]);
-        var4.a(256, this.field_l, fv.field_d[1], hca.field_U[1]);
-        var4.a(256, this.field_o, fv.field_d[2], hca.field_U[2]);
-        var4.a(256, this.field_b, fv.field_d[3], hca.field_U[3]);
-        var4.a(256, this.field_h, fv.field_d[4], hca.field_U[4]);
-        var4.a(param0 ^ -294, this.field_p, fv.field_d[5], hca.field_U[5]);
-        var4.a(256, this.field_s, fv.field_d[6], hca.field_U[6]);
-        var4.a(hca.field_U[7], (byte) -36, "basic", var7, fv.field_d[7]);
-        var4.a(hca.field_U[8], (byte) -36, "lobby", var7, fv.field_d[8]);
-        var4.a(hca.field_U[9], (byte) -36, "lobby", var3, fv.field_d[9]);
-        var4.a(256, this.field_d, fv.field_d[10], hca.field_U[10]);
-        var4.a(256, this.field_e, fv.field_d[11], hca.field_U[11]);
-        var4.a(256, this.field_q, fv.field_d[12], hca.field_U[12]);
-        var4.a(256, this.field_r, fv.field_d[13], hca.field_U[13]);
-        var4.a(256, this.field_m, fv.field_d[14], hca.field_U[14]);
-        var4.a(param0 + 294, this.field_j, fv.field_d[15], hca.field_U[15]);
-        var4.a(256, this.field_f, fv.field_d[16], hca.field_U[16]);
-        var4.a(param0 ^ -294, this.field_g, fv.field_d[17], hca.field_U[17]);
-        var4.a(param0 ^ -294, this.field_a, fv.field_d[18], hca.field_U[18]);
+        var4.a(256, this.field_k, fv.field_d[0], Player.field_U[0]);
+        var4.a(256, this.field_l, fv.field_d[1], Player.field_U[1]);
+        var4.a(256, this.field_o, fv.field_d[2], Player.field_U[2]);
+        var4.a(256, this.field_b, fv.field_d[3], Player.field_U[3]);
+        var4.a(256, this.field_h, fv.field_d[4], Player.field_U[4]);
+        var4.a(param0 ^ -294, this.field_p, fv.field_d[5], Player.field_U[5]);
+        var4.a(256, this.field_s, fv.field_d[6], Player.field_U[6]);
+        var4.a(Player.field_U[7], (byte) -36, "basic", var7, fv.field_d[7]);
+        var4.a(Player.field_U[8], (byte) -36, "lobby", var7, fv.field_d[8]);
+        var4.a(Player.field_U[9], (byte) -36, "lobby", var3, fv.field_d[9]);
+        var4.a(256, this.field_d, fv.field_d[10], Player.field_U[10]);
+        var4.a(256, this.field_e, fv.field_d[11], Player.field_U[11]);
+        var4.a(256, this.field_q, fv.field_d[12], Player.field_U[12]);
+        var4.a(256, this.field_r, fv.field_d[13], Player.field_U[13]);
+        var4.a(256, this.field_m, fv.field_d[14], Player.field_U[14]);
+        var4.a(param0 + 294, this.field_j, fv.field_d[15], Player.field_U[15]);
+        var4.a(256, this.field_f, fv.field_d[16], Player.field_U[16]);
+        var4.a(param0 ^ -294, this.field_g, fv.field_d[17], Player.field_U[17]);
+        var4.a(param0 ^ -294, this.field_a, fv.field_d[18], Player.field_U[18]);
     }
 
-    final static String[][] a(byte param0, uia param1) {
+    final static String[][] a(byte param0, PacketBuffer param1) {
         int var5 = 0;
         vna var2 = null;
         RuntimeException var2_ref = null;
@@ -94,7 +94,7 @@ final class sra implements eb {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           var2 = new vna();
-          while (param1.field_h < param1.field_g.length) {
+          while (param1.position < param1.payload.length) {
             var2.b((byte) -72, new gba(pe.a(param1, (byte) 73)));
           }
           var3 = new String[var2.a((byte) -16)][];
@@ -230,7 +230,7 @@ final class sra implements eb {
           int var3 = 0;
           int var5_int = 0;
           int var8 = 0;
-          kh var9 = null;
+          BitPacketBuffer var9 = null;
           String stackIn_11_0 = null;
           String stackIn_16_0 = null;
           String stackIn_18_0 = null;
@@ -244,14 +244,14 @@ final class sra implements eb {
           Exception var5 = null;
           int var6 = 0;
           int var7 = 0;
-          kh var11 = null;
+          BitPacketBuffer var11 = null;
           esa var12 = null;
           byte[] var15 = null;
           var8 = TombRacer.field_G ? 1 : 0;
           try {
-            var9 = new kh(128);
-            var9.field_h = var9.field_h + 2;
-            var3 = var9.field_h;
+            var9 = new BitPacketBuffer(128);
+            var9.position = var9.position + 2;
+            var3 = var9.position;
             var9.i(8);
             try {
               for (var4_int = 0; param0.length() > var4_int; var4_int++) {
@@ -269,8 +269,8 @@ final class sra implements eb {
               return stackIn_11_0;
             }
             var9.k(-1826190686);
-            var9.b(-var3 + var9.field_h, (byte) 109);
-            var9.field_h = 0;
+            var9.b(-var3 + var9.position, (byte) 109);
+            var9.position = 0;
             var4_ref = null;
             try {
               var15 = ssa.a(var9, -26, true);
@@ -281,7 +281,7 @@ final class sra implements eb {
               stackIn_16_0 = "funorb profile threw Exception";
               return stackIn_16_0;
             }
-            var11 = new kh(var15);
+            var11 = new BitPacketBuffer(var15);
             var12 = new esa();
             var7 = -101 % ((-14 - param1) / 49);
             var6 = var11.h(255);

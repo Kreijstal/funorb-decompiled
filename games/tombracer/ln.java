@@ -13,7 +13,7 @@ final class ln extends kna {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -128, this.field_G, 4);
@@ -32,7 +32,7 @@ final class ln extends kna {
     final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
           if (null != param1.previous) {
-            param1.p(63);
+            param1.unlink(63);
           }
           param1.previous = param0.previous;
           int var3_int = -97 % ((-39 - param2) / 63);
@@ -87,7 +87,7 @@ final class ln extends kna {
         return new mg(new int[]{15, 10, 10, 15, 10, 5, 10, 5, 15, 5, 10, 10});
     }
 
-    ln(la param0, int param1, kh param2, csa param3) {
+    ln(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
         try {
           this.field_G = param2.b((byte) 44, 4);
@@ -96,7 +96,7 @@ final class ln extends kna {
         }
     }
 
-    ln(la param0, int param1) {
+    ln(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -115,19 +115,19 @@ final class ln extends kna {
         return false;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         lpa var5 = null;
         mfa var6 = null;
         ce var7 = null;
-        fsa stackIn_5_0 = null;
+        Trap stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           var4.b((byte) -11, this.field_k, this.field_l);
           var5 = new lpa(param2, false);
           var5.b(-5, this.field_G);

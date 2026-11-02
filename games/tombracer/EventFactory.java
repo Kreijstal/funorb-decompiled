@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lka {
-    final static bs a(int param0, kh param1, int param2) {
+final class EventFactory {
+    final static bs readEvent(int param0, BitPacketBuffer param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -43,7 +43,7 @@ final class lka {
 
     final static void a(byte param0) {
         if (param0 >= -33) {
-          lka.a((byte) 116);
+          EventFactory.a((byte) 116);
           sua.r((byte) 63);
           return;
         }

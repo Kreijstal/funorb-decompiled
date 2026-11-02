@@ -44,28 +44,28 @@ public final class TombRacer extends rfa implements ls {
             return true;
           }
           if (8 == param2) {
-            od.field_i = 0;
-            pca.a(od.field_i, param0 - 26037, 0);
+            DualLinkNode.field_i = 0;
+            pca.a(DualLinkNode.field_i, param0 - 26037, 0);
             return true;
           }
           if (param2 == 9) {
-            od.field_i = 50;
-            pca.a(od.field_i, param0 ^ 26043, 0);
+            DualLinkNode.field_i = 50;
+            pca.a(DualLinkNode.field_i, param0 ^ 26043, 0);
             return true;
           }
           if (param2 == 10) {
-            od.field_i = 80;
-            pca.a(od.field_i, param0 - 26037, 5);
+            DualLinkNode.field_i = 80;
+            pca.a(DualLinkNode.field_i, param0 - 26037, 5);
             return true;
           }
           if (11 == param2) {
-            od.field_i = 150;
-            pca.a(od.field_i, param0 ^ 26043, 0);
+            DualLinkNode.field_i = 150;
+            pca.a(DualLinkNode.field_i, param0 ^ 26043, 0);
             return true;
           }
           if (param2 == 12) {
-            od.field_i = 200;
-            pca.a(od.field_i, param0 - 26037, 0);
+            DualLinkNode.field_i = 200;
+            pca.a(DualLinkNode.field_i, param0 - 26037, 0);
             return true;
           }
           if (param2 == 52 &&
@@ -219,7 +219,7 @@ public final class TombRacer extends rfa implements ls {
     final void e(int param0) {
         TombRacer.y(param0 + 3787);
         cq.a(-90);
-        gt.a(127);
+        GameKeyHandler.a(127);
         pba.a(4096);
         vna.b((byte) 91);
         bea.d();
@@ -227,7 +227,7 @@ public final class TombRacer extends rfa implements ls {
         ssa.d(-98);
         nba.a(false);
         fa.a(-23172);
-        kh.g((byte) 0);
+        BitPacketBuffer.g((byte) 0);
         mua.a(0);
         bpa.a((byte) -57);
         rma.b(13902);
@@ -256,13 +256,13 @@ public final class TombRacer extends rfa implements ls {
         IsaacCipher.a(-3);
         rc.a(true);
         rfa.w(125);
-        ug.l(param0 ^ 3665);
-        lr.a(false);
+        AppletGameShell.l(param0 ^ 3665);
+        ClientException.a(false);
         GameApplet.c((byte) -88);
         MouseInputHandler.a(param0 ^ -3666);
         MouseWheelInput.a(14979);
         cn.d(0);
-        uia.a(true);
+        PacketBuffer.a(true);
         bva.a((byte) -13);
         s.a(true);
         oi.a(false);
@@ -296,7 +296,7 @@ public final class TombRacer extends rfa implements ls {
         qda.c((byte) 0);
         fma.a((byte) -127);
         ph.a(true);
-        jqa.a(-97);
+        BufferedSocket.a(-97);
         nda.a(-1);
         sq.a(true);
         fla.a(0);
@@ -316,12 +316,12 @@ public final class TombRacer extends rfa implements ls {
         tu.c(-1);
         kq.a(param0 ^ 11052);
         qra.b(param0 + 3762);
-        hca.D(-1);
+        Player.D(-1);
         goa.b(0);
         kv.a(-31014);
         pl.a(0);
         lu.a(-12);
-        la.p(-128);
+        Room.p(-128);
         tt.a(4);
         IntrusiveNode.o(param0 ^ -3621);
         hw.a(-75);
@@ -338,7 +338,7 @@ public final class TombRacer extends rfa implements ls {
         ht.d((byte) -113);
         af.a(123);
         re.a((byte) -33);
-        od.b(0);
+        DualLinkNode.b(0);
         il.a();
         ji.f(124);
         rf.a((byte) -19);
@@ -351,7 +351,7 @@ public final class TombRacer extends rfa implements ls {
         tv.f(119);
         bv.f(0);
         is.f(2);
-        kta.b();
+        AudioOutput.b();
         l.c(0);
         qt.b(-25809);
         iqa.a(126);
@@ -452,12 +452,12 @@ public final class TombRacer extends rfa implements ls {
         ts.b(32);
         fq.b(0);
         dj.a(-1);
-        fsa.K(8424);
+        Trap.K(8424);
         db.h((byte) -117);
         kua.a((byte) -113);
         pc.a(true);
         up.a((byte) 2);
-        ep.j(114);
+        Projectile.j(114);
         mda.j((byte) 87);
         cra.c(-63);
         dk.a((byte) 104);
@@ -500,7 +500,7 @@ public final class TombRacer extends rfa implements ls {
         nn.a((byte) 9);
         nea.a(0);
         vaa.a(0);
-        ml.a((byte) -7);
+        RandomAccessFileHandle.a((byte) -7);
         DelegatingCanvas.a(-24962);
         ol.a(0);
         pla.b(-1);
@@ -731,8 +731,8 @@ public final class TombRacer extends rfa implements ls {
         q.a(8);
         ql.a(true);
         iha.a();
-        sk.b(33);
-        hma.b(param0 + 11858);
+        IterableNodeHashTable.b(33);
+        SecondaryNodeDeque.b(param0 + 11858);
         pb.a((byte) 98);
         ie.b(-13170);
         tja.a(false);
@@ -867,7 +867,7 @@ public final class TombRacer extends rfa implements ls {
         dp.d(13936);
         hl.e(-127);
         dqa.a((byte) 11);
-        rba.a((byte) -92);
+        SecondaryNodeDequeIterator.a((byte) -92);
         pda.a((byte) -114);
         vja.a(30000);
         eta.a(29574);
@@ -1041,8 +1041,8 @@ public final class TombRacer extends rfa implements ls {
           jm.field_n = 2147483647;
         }
         if (uma.field_c &&
-          rba.field_a != null) {
-          rba.field_a.o(-18570);
+          SecondaryNodeDequeIterator.field_a != null) {
+          SecondaryNodeDequeIterator.field_a.o(-18570);
         }
     }
 
@@ -1061,17 +1061,17 @@ public final class TombRacer extends rfa implements ls {
         if (null != mq.field_e &&
           mq.field_e.a(54) > 0 &&
           this.field_D == null &&
-          hb.field_t != rba.field_a) {
+          hb.field_t != SecondaryNodeDequeIterator.field_a) {
           var4 = mq.field_e.c(43);
           stackIn_10_0 = !param0;
           if (!rd.b(stackIn_10_0) ||
             !var4.b(1)) {
-            this.field_D = new rca(rba.field_a, var4);
+            this.field_D = new rca(SecondaryNodeDequeIterator.field_a, var4);
           }
         }
         stackIn_17_0 = iqa.field_c;
         stackIn_17_1 = -91;
-        stackIn_18_2 = (null != rba.field_a) && (hb.field_t == rba.field_a);
+        stackIn_18_2 = (null != SecondaryNodeDequeIterator.field_a) && (hb.field_t == SecondaryNodeDequeIterator.field_a);
         ((ila) (Object) stackIn_17_0).a((byte) stackIn_17_1, stackIn_18_2, false);
         if (!param0) {
           this.field_E = 123;
@@ -1095,7 +1095,7 @@ public final class TombRacer extends rfa implements ls {
           param1 = stackIn_27_0;
         }
         if (!vd.field_n ||
-          rba.field_a == hb.field_t) {
+          SecondaryNodeDequeIterator.field_a == hb.field_t) {
           rp.a(8824);
         }
         this.field_H.b((byte) -66);
@@ -1147,7 +1147,7 @@ public final class TombRacer extends rfa implements ls {
         }
     }
 
-    final boolean a(int param0, kh param1, byte param2) {
+    final boolean a(int param0, BitPacketBuffer param1, byte param2) {
         int var11_int = 0;
         int var13 = 0;
         int var15 = 0;
@@ -1182,7 +1182,7 @@ public final class TombRacer extends rfa implements ls {
         boolean[] var25 = null;
         aoa var26 = null;
         bga var27 = null;
-        kh var28 = null;
+        BitPacketBuffer var28 = null;
         int[] var29 = null;
         boolean[] var32 = null;
         int[] var33 = null;
@@ -1197,11 +1197,11 @@ public final class TombRacer extends rfa implements ls {
         var16 = field_G ? 1 : 0;
         try {
           if (param0 == 75) {
-            if (null != rba.field_a) {
+            if (null != SecondaryNodeDequeIterator.field_a) {
               var4_int = param1.e(113);
               ql.field_k.k(69, -2988);
               ql.field_k.a(var4_int, (byte) 125);
-              rba.field_a.b(106, param1);
+              SecondaryNodeDequeIterator.field_a.b(106, param1);
             }
             return true;
           }
@@ -1240,12 +1240,12 @@ public final class TombRacer extends rfa implements ls {
           if (param0 == 11) {
             var19 = ila.a(-18787, false);
             k.a((byte) 124, var19);
-            if (null != rba.field_a) {
+            if (null != SecondaryNodeDequeIterator.field_a) {
               if (var19.field_m) {
                 return true;
               }
               var20 = var19.field_g;
-              var21 = im.a(var19.field_d, var19.field_f, 100, rba.field_a.a(false, var20), var20);
+              var21 = im.a(var19.field_d, var19.field_f, 100, SecondaryNodeDequeIterator.field_a.a(false, var20), var20);
               iqa.field_c.a(0, var21);
             }
             return true;
@@ -1256,10 +1256,10 @@ public final class TombRacer extends rfa implements ls {
           if (12 == param0) {
             var22 = ila.a(-18787, true);
             k.a((byte) 114, var22);
-            if (rba.field_a != null &&
+            if (SecondaryNodeDequeIterator.field_a != null &&
               !var22.field_m) {
               var23 = var22.field_g;
-              var24 = im.a(var22.field_d, var22.field_f, -87, rba.field_a.a(false, var23), var23);
+              var24 = im.a(var22.field_d, var22.field_f, -87, SecondaryNodeDequeIterator.field_a.a(false, var23), var23);
               iqa.field_c.a(0, var24);
             }
             return true;
@@ -1274,8 +1274,8 @@ public final class TombRacer extends rfa implements ls {
           if (64 != param0 &&
             param0 != 65) {
             if (param0 == 66) {
-              if (rba.field_a != null) {
-                rba.field_a.b(false, true, 0);
+              if (SecondaryNodeDequeIterator.field_a != null) {
+                SecondaryNodeDequeIterator.field_a.b(false, true, 0);
                 ira.a(false, -2, (byte) -33);
                 iqa.field_c.d(96);
               }
@@ -1335,9 +1335,9 @@ public final class TombRacer extends rfa implements ls {
             var17 = var4;
             var5 = var17;
             var28 = param1;
-            var7 = ((uia) ((Object) var28)).h(255);
+            var7 = ((PacketBuffer) ((Object) var28)).h(255);
             for (var8 = 0; var7 > var8; var8++) {
-              var17[var8] = ((uia) ((Object) var28)).e(-41);
+              var17[var8] = ((PacketBuffer) ((Object) var28)).e(-41);
             }
             var38 = sb.a(0, var33);
             this.field_H.a((byte) 6, var38);
@@ -1377,9 +1377,9 @@ public final class TombRacer extends rfa implements ls {
           }
           param1.i((byte) 98);
           qv.field_o = null;
-          rba.field_a = new qh(true, var4_intLifetime2, var9, var10, var5_intLifetime1 != 0, var6, -1 + var6, var7Lifetime1, var8Lifetime1, 0, var11, var32, (ou) null);
-          rba.field_a.a(120, param1);
-          rba.field_a.j((byte) -121);
+          SecondaryNodeDequeIterator.field_a = new qh(true, var4_intLifetime2, var9, var10, var5_intLifetime1 != 0, var6, -1 + var6, var7Lifetime1, var8Lifetime1, 0, var11, var32, (ou) null);
+          SecondaryNodeDequeIterator.field_a.a(120, param1);
+          SecondaryNodeDequeIterator.field_a.j((byte) -121);
           iqa.field_c.a(-68);
           ira.a(false, -1, (byte) 83);
           vda.field_q = false;
@@ -1407,7 +1407,7 @@ public final class TombRacer extends rfa implements ls {
           this.v(83);
         }
         jm.b((byte) 122);
-        nd.a((byte) 55);
+        NodeHashTableIterator.a((byte) 55);
         if (dq.field_f != null) {
           og.b(0);
         }
@@ -1444,7 +1444,7 @@ public final class TombRacer extends rfa implements ls {
         }
     }
 
-    private final boolean a(kh param0, int param1, byte param2) {
+    private final boolean a(BitPacketBuffer param0, int param1, byte param2) {
         int var5 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
@@ -1462,7 +1462,7 @@ public final class TombRacer extends rfa implements ls {
         int var4_intLifetime3;
         var10 = field_G ? 1 : 0;
         try {
-          if (null == rba.field_a) {
+          if (null == SecondaryNodeDequeIterator.field_a) {
             return false;
           }
           if (74 == param1) {
@@ -1470,42 +1470,42 @@ public final class TombRacer extends rfa implements ls {
           }
           if (param1 == 67) {
             var4_int = param0.c((byte) 102);
-            rba.field_a.a((byte) -54, var4_int);
+            SecondaryNodeDequeIterator.field_a.a((byte) -54, var4_int);
             return true;
           }
           if (68 == param1) {
             var4_intLifetime1 = param0.h(255);
-            for (var5 = 0; var5 < rba.field_a.field_k.field_k; var5++) {
+            for (var5 = 0; var5 < SecondaryNodeDequeIterator.field_a.field_k.field_k; var5++) {
               var6 = 1 & var4_intLifetime1 >> var5;
-              var7 = 1 & rba.field_a.field_k.field_b >> var5;
+              var7 = 1 & SecondaryNodeDequeIterator.field_a.field_k.field_b >> var5;
               if (var6 != var7 &&
                 1 == var6) {
-                var8 = rba.field_a.field_k.c(var5, 0);
+                var8 = SecondaryNodeDequeIterator.field_a.field_k.c(var5, 0);
                 var9 = im.a(1, gl.$cfr$intArgs$a$53ce4ab4c593(107, ad.field_h, new String[]{var8}), 111, var5, var8);
                 iqa.field_c.a(0, var9);
               }
             }
-            rba.field_a.field_k.field_b = var4_intLifetime1;
+            SecondaryNodeDequeIterator.field_a.field_k.field_b = var4_intLifetime1;
             return true;
           }
           if (param1 == 69) {
             var4_intLifetime2 = param0.h(255);
-            rba.field_a.d(5, var4_intLifetime2);
+            SecondaryNodeDequeIterator.field_a.d(5, var4_intLifetime2);
             return true;
           }
           if (param1 == 70) {
-            rba.field_a.field_k.field_t = param0.h(255);
+            SecondaryNodeDequeIterator.field_a.field_k.field_t = param0.h(255);
             return true;
           }
           if (param1 == 71) {
             var4_intLifetime3 = param0.h(255);
-            rba.field_a.a(var4_intLifetime3, (byte) -23);
+            SecondaryNodeDequeIterator.field_a.a(var4_intLifetime3, (byte) -23);
             return true;
           }
           if (param2 <= 108) {
             field_F = (String) null;
           }
-          if (!rba.field_a.a(param1, -4, param0)) {
+          if (!SecondaryNodeDequeIterator.field_a.a(param1, -4, param0)) {
             return false;
           }
           return true;
@@ -1537,14 +1537,14 @@ public final class TombRacer extends rfa implements ls {
         if (param0 != 1) {
           if (vd.field_n) {
             era.field_c = true;
-            if (null != rba.field_a &&
-              !rba.field_a.d((byte) 79)) {
+            if (null != SecondaryNodeDequeIterator.field_a &&
+              !SecondaryNodeDequeIterator.field_a.d((byte) 79)) {
               vj.a(ph.field_k, -114);
-              rba.field_a = null;
+              SecondaryNodeDequeIterator.field_a = null;
               ira.a(false, 1, (byte) 122);
             } else {
               wm.field_a = null;
-              rba.field_a = null;
+              SecondaryNodeDequeIterator.field_a = null;
               fp.a(-82);
               ira.a(false, 0, (byte) 124);
             }
@@ -1570,7 +1570,7 @@ public final class TombRacer extends rfa implements ls {
         if (oq.a((byte) 124).a(~param0)) {
           return;
         }
-        this.a(true, rba.field_a, (byte) 17);
+        this.a(true, SecondaryNodeDequeIterator.field_a, (byte) 17);
     }
 
     static {

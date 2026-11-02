@@ -7,9 +7,9 @@ final class nr implements bo {
     private int field_c;
     static sla field_a;
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         RuntimeException var3 = null;
-        kh var4 = null;
+        BitPacketBuffer var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -26,8 +26,8 @@ final class nr implements bo {
           if (param1 == -19) {
             return;
           }
-          var4 = (kh) null;
-          this.a((kh) null, (byte) -120);
+          var4 = (BitPacketBuffer) null;
+          this.a((BitPacketBuffer) null, (byte) -120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,7 +53,7 @@ final class nr implements bo {
         field_a = null;
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         try {
           param1.i(8);
           param1.a((byte) 89, this.field_b, 3);

@@ -8,7 +8,7 @@ final class wqa extends kna {
     static String field_F;
     static String field_H;
 
-    wqa(la param0, int param1) {
+    wqa(Room param0, int param1) {
         super(param0, param1);
         this.field_I = 262144;
     }
@@ -23,8 +23,8 @@ final class wqa extends kna {
 
     final int t(int param0) {
         if (param0 != 8) {
-          la var3 = (la) null;
-          this.a(false, 31, (la) null);
+          Room var3 = (Room) null;
+          this.a(false, 31, (Room) null);
           return 7;
         }
         return 7;
@@ -63,7 +63,7 @@ final class wqa extends kna {
         return false;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 15, wma.a((byte) 8, 2, this.field_I), 6);
@@ -72,24 +72,24 @@ final class wqa extends kna {
         }
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         eq var5 = null;
         tl var6 = null;
-        fsa var7 = null;
+        Trap var7 = null;
         int var8 = 0;
         int var9 = 0;
         eq var10 = null;
         mfa var11 = null;
         pqa var12 = null;
-        fsa var13 = null;
-        fsa stackIn_1_0 = null;
+        Trap var13 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new fsa(param2, param0);
+          var13 = new Trap(param2, param0);
           var13.b((byte) -11, this.field_k, this.field_l);
           var13.a((byte) -3, 0);
           var13.h(3, param1 ^ param1);
@@ -102,7 +102,7 @@ final class wqa extends kna {
           var6.a(new mg(50 * this.field_I >> 16), (byte) -105);
           var6.k((byte) -91).b(1, 97);
           var13.a((byte) 83, (nv) (var6));
-          var7 = new fsa(param2, true);
+          var7 = new Trap(param2, true);
           var8 = param2.m((byte) -86);
           var9 = param2.s(-127);
           var7.b((byte) -11, var9, var8);
@@ -144,7 +144,7 @@ final class wqa extends kna {
         field_H = null;
     }
 
-    wqa(la param0, int param1, kh param2, csa param3) {
+    wqa(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
         this.field_I = 262144;
         try {

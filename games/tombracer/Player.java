@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hca implements fo, gma, ffa, jfa, t {
+final class Player implements fo, gma, ffa, jfa, t {
     private ac field_u;
     private int field_c;
     private int field_G;
     private int field_lb;
-    private int field_H;
-    private int field_z;
+    private int velocityX;
+    private int y;
     private int field_S;
     private int field_b;
     private boolean field_gb;
     static fta field_p;
     private int field_r;
     private int field_M;
-    private la field_J;
-    private int field_d;
+    private Room field_J;
+    private int velocityY;
     private int field_Q;
     private vna field_fb;
     static vna field_I;
-    private int field_mb;
+    private int x;
     private int field_A;
     private int field_K;
     private roa field_i;
@@ -209,7 +209,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (this.field_db) {
-            this.field_z = this.field_z - 262144;
+            this.y = this.y - 262144;
             if (3 == this.field_lb) {
               this.field_M = this.field_M - 1;
               if (0 < this.field_M) {
@@ -258,7 +258,7 @@ final class hca implements fo, gma, ffa, jfa, t {
                     if (!stackIn_49_0) {
                       this.field_C[var3.a((byte) 91)] = true;
                     } else {
-                      var3.p(param0 ^ 93);
+                      var3.unlink(param0 ^ 93);
                     }
                     var3 = (wf) (this.field_fb.e(117));
                     continue;
@@ -298,15 +298,15 @@ final class hca implements fo, gma, ffa, jfa, t {
               var4 == 0) {
               this.field_J.a(0, (gma) (this));
               if (4 != this.field_r) {
-                this.field_d = 0;
-                this.field_H = 0;
+                this.velocityY = 0;
+                this.velocityX = 0;
               } else {
                 if (this.field_w > -17825792) {
                   this.field_w = this.field_w + this.field_O;
                   this.field_O = this.field_O - 16384;
                   if (this.field_w <= -17825792) {
                     if (this.field_T == 6) {
-                      var3_ref = this.field_J.a(this.field_mb, this.field_z, (byte) 100, -17825792);
+                      var3_ref = this.field_J.a(this.x, this.y, (byte) 100, -17825792);
                       var3_ref.a(false, 32, 4, 16, 5 + uca.field_c.a(5, 0));
                       var3_ref.b(param0 + 99, 0, 0);
                       var3_ref.a(uca.field_c.a(8192, param0 ^ 5), -32 + uca.field_c.a(64, param0 - 5), -125);
@@ -319,7 +319,7 @@ final class hca implements fo, gma, ffa, jfa, t {
               if (!(this.field_M > 0)) {
                 if (this.field_T != 5 &&
                   this.field_T != 6 &&
-                  this.field_J.a(this.field_G, this.field_G, (gma) (this), this.field_mb, this.field_z, (byte) -126) == 0) {
+                  this.field_J.a(this.field_G, this.field_G, (gma) (this), this.x, this.y, (byte) -126) == 0) {
                   this.field_J.a(8, this.o(-94));
                 }
                 this.field_J.i((byte) -124);
@@ -332,9 +332,9 @@ final class hca implements fo, gma, ffa, jfa, t {
                 this.field_K = -1;
                 this.field_b = 0;
                 this.field_M = this.field_M - 1;
-                this.field_z = this.field_z - 393216;
+                this.y = this.y - 393216;
                 if (0 >= this.field_M) {
-                  this.field_d = -393216;
+                  this.velocityY = -393216;
                   this.field_lb = 0;
                   this.field_c = 40;
                 }
@@ -487,14 +487,14 @@ final class hca implements fo, gma, ffa, jfa, t {
             param3 == 0) {
             return true;
           }
-          var7_int = this.field_mb;
+          var7_int = this.x;
           if (param0 <= 68) {
             this.J(-3);
           }
-          var8 = this.field_z;
+          var8 = this.y;
           this.a(param3, 127, param4, param2, 0);
-          if (var7_int == this.field_mb &&
-            this.field_z == var8) {
+          if (var7_int == this.x &&
+            this.y == var8) {
             stackIn_23_0 = 1;
           } else {
             stackIn_23_0 = 0;
@@ -539,7 +539,7 @@ final class hca implements fo, gma, ffa, jfa, t {
 
     final void g(int param0, int param1) {
         try {
-          this.field_J.a(this.field_z, this.field_mb, param0, 0, (byte) 6);
+          this.field_J.a(this.y, this.x, param0, 0, (byte) 6);
           int var3_int = 35 % ((57 - param1) / 47);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.W(" + param0 + ',' + param1 + ')');
@@ -604,7 +604,7 @@ final class hca implements fo, gma, ffa, jfa, t {
           if (param0 < 91) {
             this.field_gb = true;
           }
-          stackIn_4_0 = this.field_z;
+          stackIn_4_0 = this.y;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -618,7 +618,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          stackIn_1_0 = "(Player x=" + this.field_mb + " y=" + this.field_z + " vx=" + this.field_H + " vy=" + this.field_d + ")";
+          stackIn_1_0 = "(Player x=" + this.x + " y=" + this.y + " vx=" + this.velocityX + " vy=" + this.velocityY + ")";
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -653,50 +653,50 @@ final class hca implements fo, gma, ffa, jfa, t {
         int var8 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_H < 0) {
-            this.field_H = this.field_H + param4;
-            if (this.field_H > 0) {
-              this.field_H = 0;
+          if (this.velocityX < 0) {
+            this.velocityX = this.velocityX + param4;
+            if (this.velocityX > 0) {
+              this.velocityX = 0;
               if (var8 != 0 &&
-                this.field_H > 0) {
-                this.field_H = this.field_H - param4;
-                if (this.field_H < 0) {
-                  this.field_H = 0;
+                this.velocityX > 0) {
+                this.velocityX = this.velocityX - param4;
+                if (this.velocityX < 0) {
+                  this.velocityX = 0;
                 }
               }
             }
           } else {
-            if (this.field_H > 0) {
-              this.field_H = this.field_H - param4;
-              if (this.field_H < 0) {
-                this.field_H = 0;
+            if (this.velocityX > 0) {
+              this.velocityX = this.velocityX - param4;
+              if (this.velocityX < 0) {
+                this.velocityX = 0;
               }
             }
           }
-          if (this.field_d < 0) {
-            this.field_d = this.field_d + param4;
-            if (0 < this.field_d) {
-              this.field_d = 0;
+          if (this.velocityY < 0) {
+            this.velocityY = this.velocityY + param4;
+            if (0 < this.velocityY) {
+              this.velocityY = 0;
               if (var8 != 0 &&
-                this.field_d > 0) {
-                this.field_d = this.field_d - param4;
-                if (this.field_d < 0) {
-                  this.field_d = 0;
+                this.velocityY > 0) {
+                this.velocityY = this.velocityY - param4;
+                if (this.velocityY < 0) {
+                  this.velocityY = 0;
                 }
               }
             }
           } else {
-            if (this.field_d > 0) {
-              this.field_d = this.field_d - param4;
-              if (this.field_d < 0) {
-                this.field_d = 0;
+            if (this.velocityY > 0) {
+              this.velocityY = this.velocityY - param4;
+              if (this.velocityY < 0) {
+                this.velocityY = 0;
               }
             }
           }
-          this.field_H = this.field_H + gqa.a(param3, (byte) 24, param2);
-          this.field_H = za.$cfr$intArgs$a$c604db63f465(-param0, 108, param0, this.field_H);
-          this.field_d = this.field_d + gqa.a(param3, (byte) 24, param1);
-          this.field_d = za.$cfr$intArgs$a$c604db63f465(-param0, 84, param0, this.field_d);
+          this.velocityX = this.velocityX + gqa.a(param3, (byte) 24, param2);
+          this.velocityX = za.$cfr$intArgs$a$c604db63f465(-param0, 108, param0, this.velocityX);
+          this.velocityY = this.velocityY + gqa.a(param3, (byte) 24, param1);
+          this.velocityY = za.$cfr$intArgs$a$c604db63f465(-param0, 84, param0, this.velocityY);
           var7_int = -47 % ((75 - param5) / 43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -727,7 +727,7 @@ final class hca implements fo, gma, ffa, jfa, t {
             stackIn_7_0 = 1;
             return stackIn_7_0;
           }
-          if (eha.a(this.field_G, param1, this.field_z, this.field_G, param2, this.field_mb, 2) == -1) {
+          if (eha.a(this.field_G, param1, this.y, this.field_G, param2, this.x, 2) == -1) {
             stackIn_12_0 = 0;
             return stackIn_12_0;
           }
@@ -841,7 +841,7 @@ final class hca implements fo, gma, ffa, jfa, t {
             this.field_n = 0;
           }
           if (param0 != 0) {
-            hca.D(123);
+            Player.D(123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -934,7 +934,7 @@ final class hca implements fo, gma, ffa, jfa, t {
                           this.a(-5636, 17, true);
                           this.a(-5636, 16, true);
                           this.a(-5636, 13, true);
-                          this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.field_mb, this.field_z);
+                          this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
                         }
                       }
                     }} else {
@@ -942,19 +942,19 @@ final class hca implements fo, gma, ffa, jfa, t {
                     if (var5 != 0) {
                       this.a(-5636, 16, true);
                       this.a(-5636, 13, true);
-                      this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.field_mb, this.field_z);
+                      this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
                     }
                   }
                 } else {
                   this.a(-5636, 16, true);
                   if (var5 != 0) {
                     this.a(-5636, 13, true);
-                    this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.field_mb, this.field_z);
+                    this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
                   }
                 }
               } else {
                 this.a(-5636, 13, true);
-                this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.field_mb, this.field_z);
+                this.field_J.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
               }
             }
             this.p(30358);
@@ -985,8 +985,8 @@ final class hca implements fo, gma, ffa, jfa, t {
             !(this.field_J.o((byte) -82)));
           if (!decompiledSharedTail0) {
             this.field_lb = 0;
-            this.field_mb = this.field_e;
-            this.field_z = this.field_ib;
+            this.x = this.field_e;
+            this.y = this.field_ib;
             this.field_M = 0;
             this.field_r = 0;
             this.a(-5636, 0, true);
@@ -995,19 +995,19 @@ final class hca implements fo, gma, ffa, jfa, t {
           if (decompiledSharedTail0) {
             this.field_M = 17;
             this.field_lb = 2;
-            this.field_mb = this.field_e;
+            this.x = this.field_e;
             this.field_r = 0;
-            this.field_z = 2097152 + (this.field_M * 393216 + this.field_ib);
+            this.y = 2097152 + (this.field_M * 393216 + this.field_ib);
             this.a(-5636, 4, true);
           }
           this.field_q = false;
-          this.field_d = 0;
+          this.velocityY = 0;
           var3_int = -16 / ((-55 - param0) / 44);
           this.field_A = 0;
           this.field_h = 0;
           this.field_t = 0;
           this.field_c = 0;
-          this.field_H = 0;
+          this.velocityX = 0;
           this.field_S = 0;
           this.field_V = false;
           this.field_b = 0;
@@ -1046,7 +1046,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException var2 = null;
         try {
           var2_int = -94 / ((-23 - param0) / 53);
-          stackIn_1_0 = this.field_mb;
+          stackIn_1_0 = this.x;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1159,7 +1159,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 110) {
-            stackIn_4_0 = io.a(param4, this.field_z, (byte) -118, param3, this.field_mb, param1, this.field_G, this.field_G, param2);
+            stackIn_4_0 = io.a(param4, this.y, (byte) -118, param3, this.x, param1, this.field_G, this.field_G, param2);
             return stackIn_4_0;
           }
           return false;
@@ -1222,7 +1222,7 @@ final class hca implements fo, gma, ffa, jfa, t {
 
     private final void p(int param0) {
         RuntimeException decompiledCaughtException = null;
-        fsa var2 = null;
+        Trap var2 = null;
         RuntimeException var2_ref = null;
         ue var3 = null;
         int var4 = 0;
@@ -1232,8 +1232,8 @@ final class hca implements fo, gma, ffa, jfa, t {
           if (!this.x(param0 ^ -30382)) {
             return;
           }
-          var2 = new fsa(this.field_J, true);
-          var2.b(437453352, this.field_z, this.field_mb);
+          var2 = new Trap(this.field_J, true);
+          var2.b(437453352, this.y, this.x);
           if (param0 != 30358) {
             this.field_S = -25;
           }
@@ -1277,7 +1277,7 @@ final class hca implements fo, gma, ffa, jfa, t {
           field_U = null;
           field_I = null;
           if (param0 != -1) {
-            hca.D(-63);
+            Player.D(-63);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.TA(" + param0 + ')');
@@ -1286,8 +1286,8 @@ final class hca implements fo, gma, ffa, jfa, t {
 
     private final void o(byte param0) {
         try {
-          this.field_X = this.field_mb;
-          this.field_k = this.field_z;
+          this.field_X = this.x;
+          this.field_k = this.y;
           int var2_int = 103 % ((-7 - param0) / 44);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.JE(" + param0 + ')');
@@ -1305,7 +1305,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 40) {
-            this.field_H = 6;
+            this.velocityX = 6;
           }
           var4_int = 1;
           while (3 >= var4_int) {
@@ -1359,12 +1359,12 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_mb = this.field_J.a(this.field_mb, (byte) 71);
+          this.x = this.field_J.a(this.x, (byte) 71);
           this.field_b = -this.field_b;
           if (param0 != -57) {
             this.a((wf) null, (byte) -39);
           }
-          this.field_H = -this.field_H;
+          this.velocityX = -this.velocityX;
           stackIn_7_1 = !(this.field_o);
           this.field_o = stackIn_7_1;
           return;
@@ -1502,7 +1502,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         ffa[] var12 = null;
         int var13 = 0;
         ffa var14 = null;
-        fsa var15 = null;
+        Trap var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
@@ -1519,12 +1519,12 @@ final class hca implements fo, gma, ffa, jfa, t {
               this.field_cb = 60;
             }
             var4 = lw.a(this.field_b, (byte) -96);
-            var5 = var3_int * var4 + this.field_mb;
+            var5 = var3_int * var4 + this.x;
             var6 = lw.a(this.field_K, (byte) -109);
-            var7 = var6 * var3_int + this.field_z;
+            var7 = var6 * var3_int + this.y;
             if (null != this.field_g) {
-              if (!(this.field_g instanceof fsa) ||
-                ((fsa) (this.field_g)).s((byte) 92)) {
+              if (!(this.field_g instanceof Trap) ||
+                ((Trap) (this.field_g)).s((byte) 92)) {
                 if (this.field_g.a((byte) 110, var7, var5, 2, 2)) {
                   this.field_eb = this.field_g;
                   if (var20 != 0) {
@@ -1543,7 +1543,7 @@ final class hca implements fo, gma, ffa, jfa, t {
             }
             regionExit1: {
               if (null == this.field_eb) {
-                var8 = new int[][]{new int[]{var5, var7}, new int[]{this.field_mb - var3_int * var4, this.field_z + var3_int * var6}, new int[]{this.field_mb + var4 * var3_int, this.field_z - var6 * var3_int}, new int[]{-(var4 * var3_int) + this.field_mb, -(var6 * var3_int) + this.field_z}};
+                var8 = new int[][]{new int[]{var5, var7}, new int[]{this.x - var3_int * var4, this.y + var3_int * var6}, new int[]{this.x + var4 * var3_int, this.y - var6 * var3_int}, new int[]{-(var4 * var3_int) + this.x, -(var6 * var3_int) + this.y}};
                 var9 = new int[][]{new int[]{this.field_b, this.field_K}, new int[]{-this.field_b, this.field_K}, new int[]{this.field_b, -this.field_K}, new int[]{-this.field_b, -this.field_K}};
                 var10 = 0;
                 scanLoop2: while (true) {
@@ -1559,18 +1559,18 @@ final class hca implements fo, gma, ffa, jfa, t {
                   var13 = 0;
                   while (var13 < var12.length) {
                     var14 = var12[var13];
-                    stackOut_35_0 = var14 instanceof fsa;
+                    stackOut_35_0 = var14 instanceof Trap;
                     stackIn_31_0Lifetime1 = stackOut_35_0 ? 1 : 0;
                     stackIn_36_0 = stackOut_35_0;
                     if (stackIn_36_0) {
-                      var15 = (fsa) (var14);
+                      var15 = (Trap) (var14);
                       if (var15.s((byte) -114) &&
                         var15.a((byte) 110, var8[var10][1], var8[var10][0], 2, 2)) {
                         this.field_eb = (gma) ((Object) var14);
                         var16 = this.field_eb.d(3);
                         var17 = this.field_eb.e(9648);
-                        var18 = -this.field_mb + var16;
-                        var19 = -this.field_z + var17;
+                        var18 = -this.x + var16;
+                        var19 = -this.y + var17;
                         if (((var18 >> 8) * (var18 >> 8)) <= ((var19 >> 8) * (var19 >> 8))) {
                           if (var19 < 0) {
                             var19 = var19 + (this.field_G + this.field_eb.a((byte) 55) >> 1);
@@ -1579,7 +1579,7 @@ final class hca implements fo, gma, ffa, jfa, t {
                               var19 = var19 - (this.field_G + this.field_eb.a((byte) 55) >> 1);
                             }
                           }
-                          this.field_z = this.field_z + var19;
+                          this.y = this.y + var19;
                         } else {
                           if (var18 < 0) {
                             var18 = var18 + (this.field_G + this.field_eb.c(-114) >> 1);
@@ -1588,7 +1588,7 @@ final class hca implements fo, gma, ffa, jfa, t {
                               var18 = var18 - (this.field_G + this.field_eb.c(-110) >> 1);
                             }
                           }
-                          this.field_mb = this.field_mb + var18;
+                          this.x = this.x + var18;
                         }
                         this.field_b = var9[var10][0];
                         this.field_K = var9[var10][1];
@@ -1639,8 +1639,8 @@ final class hca implements fo, gma, ffa, jfa, t {
           var8 = param5 * (393216 * param2);
           var9 = param3 * 786432;
           var10 = 786432 * param4;
-          var11 = var9 / 2 + (var7_int + this.field_mb);
-          var12 = var10 / 2 + (var8 + this.field_z);
+          var11 = var9 / 2 + (var7_int + this.x);
+          var12 = var10 / 2 + (var8 + this.y);
           var13 = this.field_G + ua.a(var9, -113);
           var14 = this.field_G + ua.a(var10, 67);
           if (!this.field_J.a(var11, 131072, var13, var14, var12, true)) {
@@ -1693,7 +1693,7 @@ final class hca implements fo, gma, ffa, jfa, t {
           if (param0) {
             this.field_T = 52;
           }
-          stackIn_11_0 = this.field_J.a((ffa) (this), (gma) (this), 1, this.field_G, param1, 12, this.field_G, this.field_mb, param3, param4, this.field_z, param2, true);
+          stackIn_11_0 = this.field_J.a((ffa) (this), (gma) (this), 1, this.field_G, param1, 12, this.field_G, this.x, param3, param4, this.y, param2, true);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1834,8 +1834,8 @@ final class hca implements fo, gma, ffa, jfa, t {
           }
           var3_int = param1.d(3);
           var4 = param1.e(9648);
-          var5 = this.field_mb - var3_int;
-          var6 = -var4 + this.field_z;
+          var5 = this.x - var3_int;
+          var6 = -var4 + this.y;
           this.c(var6, param0 ^ -58, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1878,7 +1878,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException var2 = null;
         try {
           var2_int = 85 / ((param0 - 15) / 48);
-          stackIn_1_0 = this.field_mb;
+          stackIn_1_0 = this.x;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1912,15 +1912,15 @@ final class hca implements fo, gma, ffa, jfa, t {
           return;
         }
         try {
-          za.$cfr$intArgs$a$c604db63f465(0, 108, this.field_J.m((byte) -86), this.field_mb);
+          za.$cfr$intArgs$a$c604db63f465(0, 108, this.field_J.m((byte) -86), this.x);
           this.field_J.o(param0 - 66);
-          this.field_m = za.$cfr$intArgs$a$c604db63f465(0, 73, this.field_J.s(120), this.field_z) + this.field_J.n((byte) -51);
+          this.field_m = za.$cfr$intArgs$a$c604db63f465(0, 73, this.field_J.s(120), this.y) + this.field_J.n((byte) -51);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.TB(" + param0 + ')');
         }
     }
 
-    final void a(fsa param0, boolean param1, int param2) {
+    final void a(Trap param0, boolean param1, int param2) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -2178,7 +2178,7 @@ final class hca implements fo, gma, ffa, jfa, t {
               if (this.field_S <= 0) {
                 var25 = 100000;
                 var26 = 32000;
-                this.field_J.a(this.field_z, 0, (byte) 126, this.field_mb, this.field_d * 6, this.field_H * 6);
+                this.field_J.a(this.y, 0, (byte) 126, this.x, this.velocityY * 6, this.velocityX * 6);
                 if (var29 != 0) {
                   this.field_gb = true;
                   var22 = 1;
@@ -2202,8 +2202,8 @@ final class hca implements fo, gma, ffa, jfa, t {
               this.C(-1).f(8, 10915)) {
               this.field_gb = true;
               var22 = 1;
-              this.field_H = this.field_H + (131072 - this.field_J.q(-81).a(262144, 0));
-              this.field_d = this.field_d + (131072 - this.field_J.q(-83).a(262144, 0));
+              this.velocityX = this.velocityX + (131072 - this.field_J.q(-81).a(262144, 0));
+              this.velocityY = this.velocityY + (131072 - this.field_J.q(-83).a(262144, 0));
             }
             var16--;
             boolean decompiledSharedTail0 = (null == this.field_g);
@@ -2212,11 +2212,11 @@ final class hca implements fo, gma, ffa, jfa, t {
               decompiledSharedTail0 = (var29 != 0);
             }
             if (decompiledSharedTail0) {
-              this.a(this.field_d, this.field_H, (byte) -103);
+              this.a(this.velocityY, this.velocityX, (byte) -103);
               if (this.field_eb == null &&
                 this.field_kb == 0 &&
-                this.field_X == this.field_mb &&
-                ~this.field_k == ~this.field_z &&
+                this.field_X == this.x &&
+                ~this.field_k == ~this.y &&
                 var24 != 0) {
                 this.b((byte) 40, var20, var21);
               }
@@ -2254,8 +2254,8 @@ final class hca implements fo, gma, ffa, jfa, t {
               this.y(2);
             }
           }
-          if (this.field_X == this.field_mb &&
-            ~this.field_z == ~this.field_k) {
+          if (this.field_X == this.x &&
+            ~this.y == ~this.field_k) {
             stackIn_241_0 = 0;
           } else {
             stackIn_241_0 = 1;
@@ -2270,7 +2270,7 @@ final class hca implements fo, gma, ffa, jfa, t {
           }
           boolean decompiledFrameRemainder4 = true;
           if (var22 == 0 && (var25Lifetime1 != 0 ||
-            !this.field_J.a(false, this.field_z, (gma) (this), this.field_mb))) {
+            !this.field_J.a(false, this.y, (gma) (this), this.x))) {
             stackIn_259_0 = 0;
             decompiledFrameRemainder4 = false;
           }
@@ -2281,7 +2281,7 @@ final class hca implements fo, gma, ffa, jfa, t {
           if (var24 != 0 &&
             var25Lifetime1 != 0 &&
             var23 == 0) {
-            this.field_J.a(false, this.field_mb, 0, -this.field_H, this.field_z, -this.field_d);
+            this.field_J.a(false, this.x, 0, -this.velocityX, this.y, -this.velocityY);
           }
           boolean decompiledFrameRemainder0 = true;
           var26Lifetime1 = -1;
@@ -2328,8 +2328,8 @@ final class hca implements fo, gma, ffa, jfa, t {
               var26Lifetime1 = stackIn_314_0;
             }
             if (var22Lifetime1 == 0 &&
-              var23 != 0 && (0 != this.field_H ||
-              this.field_d != 0)) {
+              var23 != 0 && (0 != this.velocityX ||
+              this.velocityY != 0)) {
               var26Lifetime1 = 5;
             }
             stackIn_330_0 = (this.field_kb <= 0) ? 0 : 1;
@@ -2367,8 +2367,8 @@ final class hca implements fo, gma, ffa, jfa, t {
           }
           if (decompiledFrameRemainder0) {
             if (var23 == 0 ||
-              0 == this.field_H &&
-              this.field_d == 0) {
+              0 == this.velocityX &&
+              this.velocityY == 0) {
               if (var24 == 0) {
                 var26Lifetime1 = 8;
                 if (var29 != 0) {
@@ -2396,7 +2396,7 @@ final class hca implements fo, gma, ffa, jfa, t {
           }
           if (this.field_C[0]) {
             var28Lifetime1 = this.field_J.q(-96).a(32, 0) + 256 << 16;
-            this.field_J.a(-116, this.field_z, new up(4, 32), var28Lifetime1, var28Lifetime1, this.field_mb);
+            this.field_J.a(-116, this.y, new up(4, 32), var28Lifetime1, var28Lifetime1, this.x);
           }
           if (this.field_J.g((byte) -67)) {
             this.a(1, (byte) -25);
@@ -2434,7 +2434,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -75) {
-            hca.D(-48);
+            Player.D(-48);
           }
           stackIn_4_0 = this.field_hb;
           return stackIn_4_0;
@@ -2547,7 +2547,7 @@ final class hca implements fo, gma, ffa, jfa, t {
             return;
           }
           var2_int = im.a(this.field_K, this.field_b, param0 - 1);
-          this.field_l = this.field_i.a(var2_int, 1572864, (gma) (this), this.field_mb, this.field_z, this.f((byte) 80), this.field_H, this.field_d, this.field_G / param0, false);
+          this.field_l = this.field_i.a(var2_int, 1572864, (gma) (this), this.x, this.y, this.f((byte) 80), this.velocityX, this.velocityY, this.field_G / param0, false);
           if (!this.field_l) {
             return;
           }
@@ -2572,13 +2572,13 @@ final class hca implements fo, gma, ffa, jfa, t {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0 = fs.a((byte) 114, param0, this.field_mb);
-          param0 = fs.a((byte) 105, param0, this.field_z);
+          param0 = fs.a((byte) 114, param0, this.x);
+          param0 = fs.a((byte) 105, param0, this.y);
           if (param1 > -22) {
             this.field_w = -19;
           }
-          param0 = fs.a((byte) 44, param0, this.field_H);
-          param0 = fs.a((byte) 38, param0, this.field_d);
+          param0 = fs.a((byte) 44, param0, this.velocityX);
+          param0 = fs.a((byte) 38, param0, this.velocityY);
           stackIn_4_0 = param0;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2616,7 +2616,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         }
     }
 
-    final void a(la param0, int param1, int param2, boolean param3) {
+    final void a(Room param0, int param1, int param2, boolean param3) {
         boolean discarded$1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -2724,7 +2724,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -86) {
-            hca.D(-76);
+            Player.D(-76);
           }
           stackIn_4_0 = this.g((byte) 115);
           return stackIn_4_0;
@@ -3168,7 +3168,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         kua stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = this.field_mb;
+          var2_int = this.x;
           if (this.field_o) {
             var2_int = this.field_J.a(var2_int, (byte) 71);
           }
@@ -3177,10 +3177,10 @@ final class hca implements fo, gma, ffa, jfa, t {
           }
           if (this.field_lb == 1 &&
             this.field_r == 4) {
-            stackIn_12_0 = new kua(this, var2_int, this.field_z, -17825792, this.field_r);
+            stackIn_12_0 = new kua(this, var2_int, this.y, -17825792, this.field_r);
             return stackIn_12_0;
           }
-          stackIn_14_0 = new kua(this, var2_int, this.field_z, 0, this.field_r);
+          stackIn_14_0 = new kua(this, var2_int, this.y, 0, this.field_r);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3265,8 +3265,8 @@ final class hca implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final la f(byte param0) {
-        la stackIn_1_0 = null;
+    public final Room f(byte param0) {
+        Room stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -3308,7 +3308,7 @@ final class hca implements fo, gma, ffa, jfa, t {
           if (param0 != 0) {
             this.field_bb = 42;
           }
-          stackIn_4_0 = this.field_d;
+          stackIn_4_0 = this.velocityY;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3342,7 +3342,7 @@ final class hca implements fo, gma, ffa, jfa, t {
           if (param0 != 3) {
             this.e(true);
           }
-          stackIn_4_0 = this.field_mb;
+          stackIn_4_0 = this.x;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3376,7 +3376,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException var3 = null;
         try {
           if (param0 != -27496) {
-            hca.c(117, 34, -84, 122, 125, -27);
+            Player.c(117, 34, -84, 122, 125, -27);
           }
           this.field_u = param1;
           return;
@@ -3398,11 +3398,11 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_mb = param0;
+          this.x = param0;
           if (param2 != 76473160) {
             this.field_V = false;
           }
-          this.field_z = param1;
+          this.y = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3451,9 +3451,9 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -41) {
-            this.field_d = 111;
+            this.velocityY = 111;
           }
-          stackIn_4_0 = this.field_H;
+          stackIn_4_0 = this.velocityX;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3519,7 +3519,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException var4 = null;
         try {
           if (param0 != 56) {
-            this.a((la) null, -116, 25, false);
+            this.a((Room) null, -116, 25, false);
           }
           var4_int = 0;
           if (this.field_b > 0 &&
@@ -3532,10 +3532,10 @@ final class hca implements fo, gma, ffa, jfa, t {
             param1 < 0) {
             var4_int = 1;
           }
-          this.field_g.a(80, false, var4_int, this.field_d, this.field_H, 0);
-          if (this.field_mb == this.field_X &&
-            ~this.field_z == ~this.field_k) {
-            this.a(this.field_d, this.field_H, (byte) -103);
+          this.field_g.a(80, false, var4_int, this.velocityY, this.velocityX, 0);
+          if (this.x == this.field_X &&
+            ~this.y == ~this.field_k) {
+            this.a(this.velocityY, this.velocityX, (byte) -103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3550,7 +3550,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 18407) {
-            this.field_d = 52;
+            this.velocityY = 52;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3616,27 +3616,27 @@ final class hca implements fo, gma, ffa, jfa, t {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           this.o((byte) 45);
-          var6_int = this.field_mb;
-          var7 = this.field_z;
+          var6_int = this.x;
+          var7 = this.y;
           var8 = 0;
           if (param2 < 0) {
             var8 = 1;
-            this.field_mb = this.field_mb + param2;
+            this.x = this.x + param2;
           }
           if ((param2 >= 0 ||
             var10 != 0) &&
             param2 > 0) {
             var8 = 1;
-            this.field_mb = this.field_mb + param2;
+            this.x = this.x + param2;
           }
           if (var8 == 0) {
             this.field_t = this.field_t - 1;
             if (var10 != 0) {
               var9 = this.a(false, 0, param4, param3, param2);
               if (2 == var9) {
-                this.field_H = 0;
+                this.velocityX = 0;
                 this.field_V = true;
-                this.field_mb = var6_int;
+                this.x = var6_int;
               }
               if (1 == var9) {
                 this.field_kb = 5;
@@ -3651,9 +3651,9 @@ final class hca implements fo, gma, ffa, jfa, t {
           } else {
             var9 = this.a(false, 0, param4, param3, param2);
             if (2 == var9) {
-              this.field_H = 0;
+              this.velocityX = 0;
               this.field_V = true;
-              this.field_mb = var6_int;
+              this.x = var6_int;
             }
             if (1 == var9) {
               this.field_kb = 5;
@@ -3670,12 +3670,12 @@ final class hca implements fo, gma, ffa, jfa, t {
           var8Lifetime1 = 0;
           if (0 > param0) {
             var8Lifetime1 = 1;
-            this.field_z = this.field_z + param0;
+            this.y = this.y + param0;
           }
           if ((0 <= param0 ||
             var10 != 0) &&
             param0 > 0) {
-            this.field_z = this.field_z + param0;
+            this.y = this.y + param0;
             var8Lifetime1 = 1;
           }
           if (var8Lifetime1 != 0) {
@@ -3691,8 +3691,8 @@ final class hca implements fo, gma, ffa, jfa, t {
               this.field_kb = 5;
             }
             if (var9Lifetime1 == 2) {
-              this.field_z = var7;
-              this.field_d = 0;
+              this.y = var7;
+              this.velocityY = 0;
               this.field_V = true;
             }
           }
@@ -3700,20 +3700,20 @@ final class hca implements fo, gma, ffa, jfa, t {
             var10 != 0) {
             this.field_h = this.field_h - 1;
           }
-          boolean decompiledSharedTail0 = !(this.field_mb < (this.field_G / 2));
+          boolean decompiledSharedTail0 = !(this.x < (this.field_G / 2));
           if (!decompiledSharedTail0) {
-            this.field_mb = this.field_G / 2;
+            this.x = this.field_G / 2;
             decompiledSharedTail0 = (var10 != 0);
           }
           if ((decompiledSharedTail0) &&
-            (this.field_mb > this.field_J.m((byte) -86) - this.field_G / 2)) {
-            this.field_mb = this.field_J.m((byte) -86) - this.field_G / 2;
+            (this.x > this.field_J.m((byte) -86) - this.field_G / 2)) {
+            this.x = this.field_J.m((byte) -86) - this.field_G / 2;
           }
           if (param1 <= 126) {
             this.field_e = -23;
           }
-          if (this.field_z > (this.field_J.s(-125) - this.field_G / 2)) {
-            this.field_z = this.field_J.s(-121) - this.field_G / 2;
+          if (this.y > (this.field_J.s(-125) - this.field_G / 2)) {
+            this.y = this.field_J.s(-121) - this.field_G / 2;
           }
           this.v((byte) 74);
           this.field_t = za.$cfr$intArgs$a$c604db63f465(0, 36, 5, this.field_t);
@@ -3774,8 +3774,8 @@ final class hca implements fo, gma, ffa, jfa, t {
             stackIn_11_3 = 0;
           }
           var6 = za.$cfr$intArgs$a$c604db63f465(stackIn_10_0, stackIn_10_1, stackIn_10_2, stackIn_11_3 + 2 * this.field_Y);
-          this.field_H = gqa.a(param0, (byte) 24, param2) / var5_int;
-          this.field_d = gqa.a(param3, (byte) 24, param2) / var6;
+          this.velocityX = gqa.a(param0, (byte) 24, param2) / var5_int;
+          this.velocityY = gqa.a(param3, (byte) 24, param2) / var6;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3829,7 +3829,7 @@ final class hca implements fo, gma, ffa, jfa, t {
           if (param0 != 9648) {
             this.field_S = 6;
           }
-          stackIn_4_0 = this.field_z;
+          stackIn_4_0 = this.y;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3915,7 +3915,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int a(up param0, ep param1, int param2) {
+    public final int a(up param0, Projectile param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_7_0 = 0;
@@ -3947,8 +3947,8 @@ final class hca implements fo, gma, ffa, jfa, t {
           }
           if (!this.field_J.k((byte) 53) &&
             param0.field_j == 4) {
-            this.field_H = this.field_H + param1.k(-71) / 8;
-            this.field_d = this.field_d + param1.b(false) / 8;
+            this.velocityX = this.velocityX + param1.k(-71) / 8;
+            this.velocityY = this.velocityY + param1.b(false) / 8;
           }
           stackIn_23_0 = this.a(param0, -1);
           return stackIn_23_0;
@@ -3979,7 +3979,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = this.field_z;
+            stackIn_4_0 = this.y;
             return stackIn_4_0;
           }
           stackIn_2_0 = -61;
@@ -3991,7 +3991,7 @@ final class hca implements fo, gma, ffa, jfa, t {
         }
     }
 
-    hca(int param0) {
+    Player(int param0) {
         this.field_G = 1572864;
         this.field_fb = new vna();
         this.field_C = new boolean[6];

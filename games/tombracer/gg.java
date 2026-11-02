@@ -6,7 +6,7 @@ final class gg {
     boolean field_a;
     eja field_c;
     eja field_d;
-    static kta field_b;
+    static AudioOutput field_b;
     static nh field_f;
     static vna field_e;
 

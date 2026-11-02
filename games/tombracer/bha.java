@@ -32,7 +32,7 @@ final class bha extends wda {
         int var11;
         int var12;
         int var13;
-        hca var14;
+        Player var14;
         int var7Lifetime1;
         int var7Lifetime2;
         int var8Lifetime1;
@@ -199,7 +199,7 @@ final class bha extends wda {
         return;
     }
 
-    bha(la param0, kh param1, boolean param2) {
+    bha(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_6_1 = false;
         boolean stackIn_9_1 = false;
@@ -266,7 +266,7 @@ final class bha extends wda {
         field_x = null;
     }
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         if (param0 < 35) {
           return;
         }
@@ -308,11 +308,11 @@ final class bha extends wda {
         return 3;
     }
 
-    final void a(kh param0, byte param1) {
-        kh stackIn_2_0 = null;
+    final void a(BitPacketBuffer param0, byte param1) {
+        BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
-        kh stackIn_5_0 = null;
+        BitPacketBuffer stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -325,23 +325,23 @@ final class bha extends wda {
           param0.a((byte) -34, this.field_t >> 16, 10);
           param0.a((byte) -128, this.field_v >> 16, 10);
           param0.a((byte) -128, this.b(0, this.field_A), 8);
-          stackIn_2_0 = (kh) (param0);
+          stackIn_2_0 = (BitPacketBuffer) (param0);
           stackIn_2_1 = 111;
           if (!this.field_r) {
             stackIn_3_2 = 0;
           } else {
             stackIn_3_2 = 1;
           }
-          ((kh) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
           param0.a((byte) -128, cn.a((byte) -104, this.field_u, 8192, 8), 8);
-          stackIn_5_0 = (kh) (param0);
+          stackIn_5_0 = (BitPacketBuffer) (param0);
           stackIn_5_1 = -128;
           if (this.field_w) {
             stackIn_6_2 = 1;
           } else {
             stackIn_6_2 = 0;
           }
-          ((kh) (Object) stackIn_5_0).a((byte) stackIn_5_1, stackIn_6_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_5_0).a((byte) stackIn_5_1, stackIn_6_2, 1);
           if (param1 >= -78) {
             this.field_w = true;
           }

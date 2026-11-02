@@ -19,13 +19,13 @@ final class df extends lea {
         field_G = null;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         ef var5 = null;
         mfa var6 = null;
         kga var7 = null;
-        fsa stackIn_1_0 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -56,11 +56,11 @@ final class df extends lea {
         }
     }
 
-    df(la param0, int param1) {
+    df(Room param0, int param1) {
         super(param0, param1);
     }
 
-    df(la param0, int param1, kh param2, csa param3) {
+    df(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 

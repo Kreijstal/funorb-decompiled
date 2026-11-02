@@ -8,7 +8,7 @@ final class li {
         if (param0 != msa.field_a) {
           return;
         }
-        if (null == rba.field_a) {
+        if (null == SecondaryNodeDequeIterator.field_a) {
           return;
         }
         if (fna.field_j == null) {

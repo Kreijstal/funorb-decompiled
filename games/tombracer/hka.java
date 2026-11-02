@@ -6,11 +6,11 @@ final class hka {
     static lja field_b;
     static int field_a;
 
-    final static taa a(int param0, uia param1) {
+    final static taa a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        uia var4 = null;
+        PacketBuffer var4 = null;
         taa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -18,8 +18,8 @@ final class hka {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            var4 = (uia) null;
-            hka.a(62, (uia) null);
+            var4 = (PacketBuffer) null;
+            hka.a(62, (PacketBuffer) null);
           }
           var2_int = param1.h(255);
           var3 = param1.h(255);

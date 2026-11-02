@@ -6,7 +6,7 @@ final class wj {
     static String field_b;
 
     final static void a(cga param0, int param1, int param2) {
-        kh var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           if (param2 > -116) {
@@ -14,8 +14,8 @@ final class wj {
           }
           var5 = ql.field_k;
           var5.k(param1, -2988);
-          var5.field_h = var5.field_h + 1;
-          var4 = var5.field_h;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.i(1, 0);
           var5.i(param0.field_j, 0);
           var5.i(param0.field_o, 0);
@@ -24,7 +24,7 @@ final class wj {
           var5.a(param0.field_m, (byte) -123);
           var5.a(param0.field_n, (byte) 92);
           var5.g(var4, 64);
-          var5.d(var5.field_h - var4, (byte) 16);
+          var5.d(var5.position - var4, (byte) 16);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

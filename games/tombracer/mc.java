@@ -87,7 +87,7 @@ final class mc extends nv {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -95,13 +95,13 @@ final class mc extends nv {
         }
     }
 
-    mc(la param0, boolean param1) {
+    mc(Room param0, boolean param1) {
         super(param0, param1);
         this.field_v = -1;
         this.field_u = new pc();
     }
 
-    mc(la param0, kh param1, boolean param2) {
+    mc(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_v = -1;
         this.field_u = new pc();
@@ -174,7 +174,7 @@ final class mc extends nv {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        la var16 = null;
+        Room var16 = null;
         try {
           if (param2 != this.field_o) {
             stackIn_3_0 = 0;
@@ -232,7 +232,7 @@ final class mc extends nv {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(true, param1);
           param1.a(param0, 120);

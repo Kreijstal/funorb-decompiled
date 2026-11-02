@@ -30,9 +30,9 @@ final class sm extends nv implements ut {
         int var3;
         int var4;
         int var5;
-        hca var6;
-        hca var7;
-        hca var8;
+        Player var6;
+        Player var7;
+        Player var8;
         int var3Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -93,7 +93,7 @@ final class sm extends nv implements ut {
         return true;
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         if (!param0) {
           return;
         }
@@ -152,7 +152,7 @@ final class sm extends nv implements ut {
         return true;
     }
 
-    sm(la param0, boolean param1) {
+    sm(Room param0, boolean param1) {
         super(param0, param1);
         this.field_s = true;
         this.field_p = 1;
@@ -187,7 +187,7 @@ final class sm extends nv implements ut {
         this.field_q.a((byte) 48, this.h((byte) 109));
     }
 
-    sm(la param0, kh param1, boolean param2) {
+    sm(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_s = true;
         this.field_p = 1;
@@ -212,7 +212,7 @@ final class sm extends nv implements ut {
         return 32;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_q.a(this.h((byte) 111), (byte) 108, param1);

@@ -18,7 +18,7 @@ final class hia extends wda {
         int var8;
         int var9;
         int var10;
-        hca var11;
+        Player var11;
         var10 = TombRacer.field_G ? 1 : 0;
         var11 = this.field_n.H(-123);
         if (var11.u(-25561)) {
@@ -83,7 +83,7 @@ final class hia extends wda {
         return;
     }
 
-    hia(la param0, kh param1, boolean param2) {
+    hia(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_t = true;
         this.field_r = false;
@@ -99,7 +99,7 @@ final class hia extends wda {
         }
     }
 
-    hia(la param0, boolean param1) {
+    hia(Room param0, boolean param1) {
         super(param0, param1);
         this.field_t = true;
         this.field_r = false;
@@ -145,8 +145,8 @@ final class hia extends wda {
 
     final void a(boolean param0, int param1) {
         if (param0) {
-          kh var4 = (kh) null;
-          this.a((kh) null, (byte) -118);
+          BitPacketBuffer var4 = (BitPacketBuffer) null;
+          this.a((BitPacketBuffer) null, (byte) -118);
           this.field_q = param1;
           return;
         }
@@ -166,7 +166,7 @@ final class hia extends wda {
         }
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -108);
           param0.a((byte) -127, !this.field_t ? 0 : 1, 1);

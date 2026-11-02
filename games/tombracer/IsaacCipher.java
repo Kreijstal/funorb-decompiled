@@ -254,7 +254,7 @@ final class IsaacCipher {
         this.field_d = 256;
     }
 
-    final static void a(int param0, int param1, fia param2, int param3, String param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11, int param12, long param13) {
+    final static void a(int param0, int param1, PlatformTaskDispatcher param2, int param3, String param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11, int param12, long param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -265,15 +265,15 @@ final class IsaacCipher {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            vc.field_q = new kh(param6);
-            ql.field_k = new kh(param7);
+            vc.field_q = new BitPacketBuffer(param6);
+            ql.field_k = new BitPacketBuffer(param7);
             q.field_r = param9;
             SocketConnector.field_c = param0;
             csa.field_g = param11;
             nn.field_b = param3;
             du.field_h = param13;
             vh.field_g = param12;
-            lr.field_c = param1;
+            ClientException.field_c = param1;
             kqa.field_a = param2;
             rsa.field_x = param4;
             if (param8 != -1367135824) {

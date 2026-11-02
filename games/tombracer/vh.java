@@ -196,7 +196,7 @@ final class vh {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        kh var14 = null;
+        BitPacketBuffer var14 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
@@ -285,7 +285,7 @@ final class vh {
             }
           }
           var3.field_i = true;
-          var3.p(7);
+          var3.unlink(7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -23,7 +23,7 @@ final class dk {
         this(param0, param0.b(param1, -7768), param2);
     }
 
-    private final void a(int param0, uia param1) {
+    private final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         dn var5 = null;
@@ -101,7 +101,7 @@ final class dk {
         return var3;
     }
 
-    private final void a(int param0, uia param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var7 = 0;
         RuntimeException stackIn_59_0 = null;
@@ -291,7 +291,7 @@ final class dk {
           var9 = var10;
           var4 = var9;
           if (var9 != null) {
-            this.a(-110, new uia(var11));
+            this.a(-110, new PacketBuffer(var11));
           }
           var5 = 0;
           for (var6 = 0; var6 < this.field_l.length; var6++) {

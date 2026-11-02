@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class wda extends IntrusiveNode implements lj, noa, gr {
-    private la field_f;
+    private Room field_f;
     boolean field_k;
     private gpa field_g;
-    fsa field_n;
+    Trap field_n;
     boolean field_i;
     private gpa field_h;
     static String field_m;
     static String field_l;
     boolean field_j;
 
-    final la c(boolean param0) {
+    final Room c(boolean param0) {
         if (!param0) {
-          return (la) null;
+          return (Room) null;
         }
         return this.field_f;
     }
@@ -26,12 +26,12 @@ abstract class wda extends IntrusiveNode implements lj, noa, gr {
         return this.field_k;
     }
 
-    public final fsa f(byte param0) {
+    public final Trap f(byte param0) {
         int var2 = 73 / ((-32 - param0) / 50);
         return this.field_n;
     }
 
-    void a(kh param0, byte param1) {
+    void a(BitPacketBuffer param0, byte param1) {
         param0.a((byte) 61, this.c(1), 6);
         if (param1 > -78) {
           return;
@@ -147,13 +147,13 @@ abstract class wda extends IntrusiveNode implements lj, noa, gr {
 
     final int a(int param0, boolean param1) {
         if (param1) {
-          this.field_f = (la) null;
+          this.field_f = (Room) null;
           return ji.a(param0, 122, 4);
         }
         return ji.a(param0, 122, 4);
     }
 
-    wda(la param0, kh param1, boolean param2) {
+    wda(Room param0, BitPacketBuffer param1, boolean param2) {
         this(param0, param2);
         RuntimeException var4 = null;
         boolean stackIn_4_1 = false;
@@ -242,7 +242,7 @@ abstract class wda extends IntrusiveNode implements lj, noa, gr {
         return this.field_n.o((byte) -124);
     }
 
-    void a(int param0, fsa param1) {
+    void a(int param0, Trap param1) {
         try {
           this.field_n = param1;
           if (param0 < 35) {
@@ -268,7 +268,7 @@ abstract class wda extends IntrusiveNode implements lj, noa, gr {
         return this.field_n.M(0);
     }
 
-    wda(la param0, boolean param1) {
+    wda(Room param0, boolean param1) {
         this.field_k = true;
         this.field_i = false;
         this.field_j = false;

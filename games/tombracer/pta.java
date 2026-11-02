@@ -3,7 +3,7 @@
  */
 final class pta implements fo {
     static String field_g;
-    private la field_e;
+    private Room field_e;
     vna field_b;
     private c field_f;
     private vna field_c;
@@ -21,7 +21,7 @@ final class pta implements fo {
 
     public final int e(byte param0) {
         if (param0 > -86) {
-          this.field_e = (la) null;
+          this.field_e = (Room) null;
           return 0;
         }
         return 0;
@@ -92,7 +92,7 @@ final class pta implements fo {
         while (var3 != null) {
           var3.a(-1, param0);
           if (var3.h(18407)) {
-            var3.p(76);
+            var3.unlink(76);
             this.field_c.b((byte) -88, var3);
           }
           var3 = (c) (this.field_b.e(127));
@@ -107,7 +107,7 @@ final class pta implements fo {
         int var3 = TombRacer.field_G ? 1 : 0;
         c var2 = (c) (this.field_b.f(-80));
         while (var2 != null) {
-          var2.p(88);
+          var2.unlink(88);
           this.field_c.b((byte) -60, var2);
           var2 = (c) (this.field_b.e(112));
         }
@@ -120,7 +120,7 @@ final class pta implements fo {
 
     public final boolean d(byte param0) {
         if (param0 != 48) {
-          this.field_e = (la) null;
+          this.field_e = (Room) null;
           return false;
         }
         return false;
@@ -140,7 +140,7 @@ final class pta implements fo {
           }
           if (!this.field_c.d((byte) 14)) {
             var6 = (c) (this.field_c.c(param0 ^ 2800));
-            var6.p(param0 + 2821);
+            var6.unlink(param0 + 2821);
           } else {
             var6 = this.field_f.d(true);
           }
@@ -251,7 +251,7 @@ final class pta implements fo {
         }
     }
 
-    pta(la param0, c param1, int param2) {
+    pta(Room param0, c param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

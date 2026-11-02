@@ -26,7 +26,7 @@ final class aka extends cda {
         }
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         if (param0 <= 119) {
           return;
         }
@@ -146,7 +146,7 @@ final class aka extends cda {
         }
     }
 
-    aka(int param0, la param1, kh param2) {
+    aka(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
         this.field_w = false;
         this.field_z = 0;
@@ -161,11 +161,11 @@ final class aka extends cda {
         w var5;
         int var7;
         int var8;
-        fsa var9;
-        fsa var10;
-        fsa var11;
-        fsa var12;
-        fsa var13;
+        Trap var9;
+        Trap var10;
+        Trap var11;
+        Trap var12;
+        Trap var13;
         int var7Lifetime1;
         int var7Lifetime2;
         int var7Lifetime3;
@@ -195,7 +195,7 @@ final class aka extends cda {
           this.field_z = 0;
           if (!this.field_y) {
             if (!this.field_h.j(-1)) {
-              var12 = (fsa) (this.field_h);
+              var12 = (Trap) (this.field_h);
               if (var12 == null) {
                 return;
               }
@@ -214,7 +214,7 @@ final class aka extends cda {
             var5.a(new fm(79, this.b((byte) -112), this.c((byte) 121), this.e((byte) -119)), param0 + 4308);
             this.field_y = true;
           }
-          var13 = (fsa) (this.field_h);
+          var13 = (Trap) (this.field_h);
           if (var13 == null) {
             return;
           }
@@ -247,7 +247,7 @@ final class aka extends cda {
             var5.a(new fm(79, this.b((byte) -112), this.c((byte) 121), this.e((byte) -119)), param0 + 4308);
             this.field_y = true;
           }
-          var11 = (fsa) (this.field_h);
+          var11 = (Trap) (this.field_h);
           if (var11 == null) {
             return;
           }
@@ -270,7 +270,7 @@ final class aka extends cda {
         }
         this.field_z = this.field_z + 1;
         if (this.field_y) {
-          var9 = (fsa) (this.field_h);
+          var9 = (Trap) (this.field_h);
           if (var9 == null) {
             return;
           }
@@ -295,7 +295,7 @@ final class aka extends cda {
           var5.a(new fm(79, this.b((byte) -112), this.c((byte) 121), this.e((byte) -119)), param0 + 4308);
           this.field_y = true;
         }
-        var10 = (fsa) (this.field_h);
+        var10 = (Trap) (this.field_h);
         if (var10 == null) {
           return;
         }
@@ -338,7 +338,7 @@ final class aka extends cda {
         this.field_y = false;
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) 98, param1);
           param1.a((byte) -5, this.field_x, 4);

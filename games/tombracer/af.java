@@ -3,15 +3,15 @@
  */
 final class af {
     static fta field_g;
-    private od field_c;
+    private DualLinkNode field_c;
     private int field_e;
-    private od[] field_d;
+    private DualLinkNode[] field_d;
     private long field_h;
     static cn field_b;
-    private od field_a;
+    private DualLinkNode field_a;
     private int field_f;
 
-    final static dh[] a(int param0, fia param1) {
+    final static dh[] a(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         dh[] stackIn_3_0 = null;
         dh[] stackIn_9_0 = null;
@@ -26,7 +26,7 @@ final class af {
         int var6 = 0;
         dh var7 = null;
         int var8 = 0;
-        naa var9 = null;
+        AsyncRequest var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = TombRacer.field_G ? 1 : 0;
@@ -72,18 +72,18 @@ final class af {
         }
     }
 
-    final void a(int param0, od param1, long param2) {
-        od var5 = null;
+    final void a(int param0, DualLinkNode param1, long param2) {
+        DualLinkNode var5 = null;
         try {
-          if (param1.field_f != null) {
-            param1.c(-7975);
+          if (param1.secondaryPrevious != null) {
+            param1.unlinkSecondary(-7975);
           }
           var5 = this.field_d[(int)((long)(param0 + this.field_e) & param2)];
-          param1.field_f = var5.field_f;
-          param1.field_g = var5;
-          param1.field_f.field_g = param1;
-          param1.field_j = param2;
-          param1.field_g.field_f = param1;
+          param1.secondaryPrevious = var5.secondaryPrevious;
+          param1.secondaryNext = var5;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryKey = param2;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "af.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -100,18 +100,18 @@ final class af {
         field_b = null;
     }
 
-    final od a(byte param0) {
+    final DualLinkNode a(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int var3;
-        od var4;
-        od var5;
-        od var29;
-        od var57;
-        od var58;
-        od var59;
+        DualLinkNode var4;
+        DualLinkNode var5;
+        DualLinkNode var29;
+        DualLinkNode var57;
+        DualLinkNode var58;
+        DualLinkNode var59;
         var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_f <= 0) {
           if (param0 == -112) {
@@ -121,28 +121,28 @@ final class af {
               }
               fieldTemp$1 = this.field_f;
               this.field_f = this.field_f + 1;
-              var4 = this.field_d[fieldTemp$1].field_g;
+              var4 = this.field_d[fieldTemp$1].secondaryNext;
               var58 = var4;
             } while (var4 == this.field_d[this.field_f - 1]);
-            this.field_a = var58.field_g;
+            this.field_a = var58.secondaryNext;
             return var58;
           }
-          this.a(55, (od) null, 93L);
+          this.a(55, (DualLinkNode) null, 93L);
           do {
             if (this.field_f >= this.field_e) {
               return null;
             }
             fieldTemp$0 = this.field_f;
             this.field_f = this.field_f + 1;
-            var4 = this.field_d[fieldTemp$0].field_g;
+            var4 = this.field_d[fieldTemp$0].secondaryNext;
             var59 = var4;
           } while (var4 == this.field_d[this.field_f - 1]);
-          this.field_a = var59.field_g;
+          this.field_a = var59.secondaryNext;
           return var59;
         }
         if (this.field_a != this.field_d[-1 + this.field_f]) {
           var57 = this.field_a;
-          this.field_a = var57.field_g;
+          this.field_a = var57.secondaryNext;
           return var57;
         }
         if (param0 == -112) {
@@ -152,95 +152,95 @@ final class af {
             }
             fieldTemp$3 = this.field_f;
             this.field_f = this.field_f + 1;
-            var4 = this.field_d[fieldTemp$3].field_g;
+            var4 = this.field_d[fieldTemp$3].secondaryNext;
             var5 = var4;
           } while (var4 == this.field_d[this.field_f - 1]);
-          this.field_a = var5.field_g;
+          this.field_a = var5.secondaryNext;
           return var5;
         }
-        this.a(55, (od) null, 93L);
+        this.a(55, (DualLinkNode) null, 93L);
         do {
           if (this.field_f >= this.field_e) {
             return null;
           }
           fieldTemp$2 = this.field_f;
           this.field_f = this.field_f + 1;
-          var4 = this.field_d[fieldTemp$2].field_g;
+          var4 = this.field_d[fieldTemp$2].secondaryNext;
           var29 = var4;
         } while (var4 == this.field_d[this.field_f - 1]);
-        this.field_a = var29.field_g;
+        this.field_a = var29.secondaryNext;
         return var29;
     }
 
-    final od b(int param0) {
+    final DualLinkNode b(int param0) {
         int var2 = -55 % ((-40 - param0) / 47);
         this.field_f = 0;
         return this.a((byte) -112);
     }
 
-    final od a(int param0, long param1) {
-        od var4;
-        od var5;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
-        od var4Lifetime1;
-        od var5Lifetime1;
+        DualLinkNode var4Lifetime1;
+        DualLinkNode var5Lifetime1;
         var6 = TombRacer.field_G ? 1 : 0;
         if (param0 <= -104) {
           this.field_h = param1;
           var4 = this.field_d[(int)(param1 & (long)(-1 + this.field_e))];
-          this.field_c = var4.field_g;
+          this.field_c = var4.secondaryNext;
           while (true) {
             if (this.field_c == var4) {
               this.field_c = null;
               return null;
             }
-            if (this.field_c.field_j != param1) {
-              this.field_c = this.field_c.field_g;
+            if (this.field_c.secondaryKey != param1) {
+              this.field_c = this.field_c.secondaryNext;
               continue;
             }
             break;
           }
           var5 = this.field_c;
-          this.field_c = this.field_c.field_g;
+          this.field_c = this.field_c.secondaryNext;
           return var5;
         }
         this.field_f = 105;
         this.field_h = param1;
         var4Lifetime1 = this.field_d[(int)(param1 & (long)(-1 + this.field_e))];
-        this.field_c = var4Lifetime1.field_g;
+        this.field_c = var4Lifetime1.secondaryNext;
         while (true) {
           if (this.field_c == var4Lifetime1) {
             this.field_c = null;
             return null;
           }
-          if (this.field_c.field_j != param1) {
-            this.field_c = this.field_c.field_g;
+          if (this.field_c.secondaryKey != param1) {
+            this.field_c = this.field_c.secondaryNext;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_c;
-        this.field_c = this.field_c.field_g;
+        this.field_c = this.field_c.secondaryNext;
         return var5Lifetime1;
     }
 
-    final od b(byte param0) {
-        od var3 = null;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (param0 <= 13) {
-          return (od) null;
+          return (DualLinkNode) null;
         }
         if (null == this.field_c) {
           return null;
         }
-        od var2 = this.field_d[(int)(this.field_h & (long)(-1 + this.field_e))];
+        DualLinkNode var2 = this.field_d[(int)(this.field_h & (long)(-1 + this.field_e))];
         while (var2 != this.field_c) {
-          if (~this.field_c.field_j == ~this.field_h) {
+          if (~this.field_c.secondaryKey == ~this.field_h) {
             var3 = this.field_c;
-            this.field_c = this.field_c.field_g;
+            this.field_c = this.field_c.secondaryNext;
             return var3;
           }
-          this.field_c = this.field_c.field_g;
+          this.field_c = this.field_c.secondaryNext;
         }
         this.field_c = null;
         return null;
@@ -248,17 +248,17 @@ final class af {
 
     af(int param0) {
         int var2 = 0;
-        od dupTemp$1 = null;
-        od var3;
+        DualLinkNode dupTemp$1 = null;
+        DualLinkNode var3;
         this.field_f = 0;
         this.field_e = param0;
-        this.field_d = new od[param0];
+        this.field_d = new DualLinkNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new od();
+          dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_d[var2] = dupTemp$1;
-          var3.field_f = var3;
-          var3.field_g = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 

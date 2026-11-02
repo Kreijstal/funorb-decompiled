@@ -20,7 +20,7 @@ final class vca implements bo {
         return "S2CEventPacket";
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           this.field_a = new pi(param0);
           if (param1 != -19) {
@@ -31,7 +31,7 @@ final class vca implements bo {
         }
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         if (param0 != 200) {
           return;
         }

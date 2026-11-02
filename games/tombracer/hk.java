@@ -87,7 +87,7 @@ final class hk {
         return null != this.field_f ? true : false;
     }
 
-    final static void a(boolean param0, kh param1) {
+    final static void a(boolean param0, BitPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -163,7 +163,7 @@ final class hk {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.field_h;
+            var4 = param1.position;
             param1.a(var18.field_n, (byte) -59);
             for (var5 = 0; var5 < var18.field_f; var5++) {
               if (0 == var18.field_m[var5]) {
@@ -271,7 +271,7 @@ final class hk {
               }
             }
             param1.g(var4, 64);
-            var18.p(75);
+            var18.unlink(75);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

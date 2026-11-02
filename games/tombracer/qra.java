@@ -32,7 +32,7 @@ abstract class qra {
 
     abstract boolean e(int param0);
 
-    final static void a(la param0, int param1, ff param2) {
+    final static void a(Room param0, int param1, ff param2) {
         if (param1 != 100) {
           field_e = (int[]) null;
         }

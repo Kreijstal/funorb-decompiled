@@ -5,10 +5,10 @@ final class mua {
     static int field_b;
     static fpa field_a;
 
-    final static la a(dt param0, int param1) {
+    final static Room a(dt param0, int param1) {
         RuntimeException var2 = null;
         dt var3 = null;
-        la stackIn_3_0 = null;
+        Room stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -18,7 +18,7 @@ final class mua {
             var3 = (dt) null;
             mua.a((dt) null, -83);
           }
-          stackIn_3_0 = new la(param0, 0, (kh) null, 0, false);
+          stackIn_3_0 = new Room(param0, 0, (BitPacketBuffer) null, 0, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

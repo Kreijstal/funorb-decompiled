@@ -5,20 +5,20 @@ final class tca extends ra {
     static String field_M;
     static vna field_N;
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         eq var5 = null;
         ro var6 = null;
         mfa var7 = null;
         lma var8 = null;
-        fsa var9 = null;
-        fsa stackIn_1_0 = null;
+        Trap var9 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new fsa(param2, param0);
+          var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.h(param1, 0);
           var9.a(1, (byte) -12, true);
@@ -48,7 +48,7 @@ final class tca extends ra {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -78,11 +78,11 @@ final class tca extends ra {
         return true;
     }
 
-    tca(la param0, int param1) {
+    tca(Room param0, int param1) {
         super(param0, param1);
     }
 
-    tca(la param0, int param1, kh param2, csa param3) {
+    tca(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 

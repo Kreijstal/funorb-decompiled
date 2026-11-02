@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ml {
+final class RandomAccessFileHandle {
     private long field_d;
     static String field_c;
     private long field_b;
@@ -19,7 +19,7 @@ final class ml {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 22) {
-            ml.a(80);
+            RandomAccessFileHandle.a(80);
           }
           var5_int = this.field_a.read(param1, param3, param2);
           if (var5_int > 0) {
@@ -70,7 +70,7 @@ final class ml {
           this.field_a.close();
           this.field_a = null;
           if (param0 > -62) {
-            ml.a(-10);
+            RandomAccessFileHandle.a(-10);
             return;
           }
           return;
@@ -78,7 +78,7 @@ final class ml {
         if (param0 <= -62) {
           return;
         }
-        ml.a(-10);
+        RandomAccessFileHandle.a(-10);
     }
 
     final static int a(int param0) {
@@ -91,7 +91,7 @@ final class ml {
     public static void a(byte param0) {
         field_c = null;
         if (param0 != -7) {
-          ml.a(-107);
+          RandomAccessFileHandle.a(-107);
         }
     }
 
@@ -114,7 +114,7 @@ final class ml {
         this.field_d = param1;
     }
 
-    ml(File param0, String param1, long param2) throws IOException {
+    RandomAccessFileHandle(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

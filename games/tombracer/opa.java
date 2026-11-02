@@ -11,16 +11,16 @@ final class opa extends qra {
     static mi[] field_n;
 
     final static void a(int param0, String param1, int param2, int param3, String param4, int param5) {
-        kh var8 = null;
+        BitPacketBuffer var8 = null;
         int var7 = 0;
         try {
           var8 = ql.field_k;
           var8.k(param2, param3 - 35359);
-          var8.field_h = var8.field_h + 1;
+          var8.position = var8.position + 1;
           if (param3 != 32371) {
             field_n = (mi[]) null;
           }
-          var7 = var8.field_h;
+          var7 = var8.position;
           var8.i(param0, 0);
           if (param0 == 2) {
             var8.a(param4, false);
@@ -30,7 +30,7 @@ final class opa extends qra {
           } else {
             var8.f(-1477662136, param5);
           }
-          var8.d(-var7 + var8.field_h, (byte) 10);
+          var8.d(-var7 + var8.position, (byte) 10);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "opa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -243,7 +243,7 @@ final class opa extends qra {
           this.field_s = false;
         }
         ura.a(-10985);
-        la.field_j.a(0, 0);
+        Room.field_j.a(0, 0);
         ik.field_h.a(0, 0);
         ng.field_b[1].a(50, -10);
         var3 = -250 + aaa.a(false);

@@ -17,12 +17,12 @@ final class ona extends kna {
         field_F = null;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         ri var5 = null;
         int var6 = 0;
         int var7_int = 0;
-        fsa var9 = null;
-        fsa stackIn_6_0 = null;
+        Trap var9 = null;
+        Trap stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -31,7 +31,7 @@ final class ona extends kna {
         mfa var7 = null;
         nq var8 = null;
         try {
-          var9 = new fsa(param2, param0);
+          var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.h(param1, param1 - 3);
           var9.a(1, (byte) -12, true);
@@ -73,8 +73,8 @@ final class ona extends kna {
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-          kh var3 = (kh) null;
-          this.a(true, (kh) null);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a(true, (BitPacketBuffer) null);
           return true;
         }
         return true;
@@ -109,7 +109,7 @@ final class ona extends kna {
         return 7;
     }
 
-    final void a(la param0, int param1) {
+    final void a(Room param0, int param1) {
         try {
           super.a(param0, param1);
           this.field_G = -this.field_G;
@@ -118,7 +118,7 @@ final class ona extends kna {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -126, dqa.a(true, this.field_G, 5), 5);
@@ -134,7 +134,7 @@ final class ona extends kna {
         return false;
     }
 
-    ona(la param0, int param1, kh param2, csa param3) {
+    ona(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
         this.field_G = 4;
         try {
@@ -146,22 +146,22 @@ final class ona extends kna {
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-          kh var3 = (kh) null;
-          this.a(false, (kh) null);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a(false, (BitPacketBuffer) null);
           return true;
         }
         return true;
     }
 
-    ona(la param0, int param1) {
+    ona(Room param0, int param1) {
         super(param0, param1);
         this.field_G = 4;
     }
 
     final boolean z(int param0) {
         if (param0 != 0) {
-          la var3 = (la) null;
-          this.a(true, -127, (la) null);
+          Room var3 = (Room) null;
+          this.a(true, -127, (Room) null);
           return false;
         }
         return false;

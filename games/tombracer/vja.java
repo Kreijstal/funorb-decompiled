@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vja extends ib {
-    private fsa field_c;
+    private Trap field_c;
     static String field_b;
 
     final void a(byte param0) {
@@ -17,25 +17,25 @@ final class vja extends ib {
           return;
         }
         if (param1 % 10L != 0L) {
-          fsa.a(param0 + 9, param1);
+          Trap.a(param0 + 9, param1);
           if (param0 != 0) {
             field_b = (String) null;
             return;
           }
           return;
         }
-        fsa.a(9, param1 - 1L);
-        fsa.a(9, 1L);
+        Trap.a(9, param1 - 1L);
+        Trap.a(9, 1L);
         if (param0 != 0) {
           field_b = (String) null;
           return;
         }
     }
 
-    vja(la param0, kh param1) {
+    vja(Room param0, BitPacketBuffer param1) {
         super(param0, param1);
         try {
-          this.field_c = new fsa(this.field_a, param1, false);
+          this.field_c = new Trap(this.field_a, param1, false);
           this.field_c.c((byte) 50, false);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -62,12 +62,12 @@ final class vja extends ib {
         if (param0 != 30000) {
           return (kia) null;
         }
-        return la.field_k;
+        return Room.field_k;
     }
 
     final int a(boolean param0) {
         if (!param0) {
-          this.field_c = (fsa) null;
+          this.field_c = (Trap) null;
           return 0;
         }
         return 0;
@@ -80,7 +80,7 @@ final class vja extends ib {
         return this.field_c.a(param0, param2, (byte) -26);
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, param1);
           this.field_c.a(param0, 8);
@@ -90,15 +90,15 @@ final class vja extends ib {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        fsa var6 = null;
-        fsa var6Lifetime1;
+        Trap var6 = null;
+        Trap var6Lifetime1;
         if (this.field_c.J(96)) {
           return;
         }
         if (this.field_c.h(18407)) {
           return;
         }
-        kh var5 = new kh(30000);
+        BitPacketBuffer var5 = new BitPacketBuffer(30000);
         var5.i(8);
         this.field_c.a(var5, 97);
         if (param3 == 4) {

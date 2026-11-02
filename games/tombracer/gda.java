@@ -58,7 +58,7 @@ abstract class gda {
               var7 = var5[var6];
               bt.field_b = bt.field_b + 1;
               var14 = param0.a(var7.field_g, (byte) 127, var7.field_b);
-              var7.field_c = new kh(var14);
+              var7.field_c = new BitPacketBuffer(var14);
               var7.field_c.h((byte) -38);
               var7.field_e = m.a(-1, var7.field_c);
               var7.field_c.i((byte) 98);

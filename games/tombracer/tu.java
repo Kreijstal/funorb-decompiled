@@ -11,7 +11,7 @@ class tu extends eha {
     ff field_f;
     static String field_d;
 
-    private final boolean a(la param0, byte param1, int param2) {
+    private final boolean a(Room param0, byte param1, int param2) {
         RuntimeException var4 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -38,7 +38,7 @@ class tu extends eha {
         }
     }
 
-    void a(int param0, hca param1, int param2, la param3, int param4, int param5) {
+    void a(int param0, Player param1, int param2, Room param3, int param4, int param5) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -51,7 +51,7 @@ class tu extends eha {
         Object var9 = null;
         String var9_ref = null;
         jha var10 = null;
-        la var11 = null;
+        Room var11 = null;
         try {
           if (ab.field_n != null) {
             ab.field_n.field_y.a((byte) -105, 77, -1);
@@ -75,8 +75,8 @@ class tu extends eha {
             iqa.field_c.a(3, param0 - 15, var10);
           }
           if (param0 != 15) {
-            var11 = (la) null;
-            this.a(77, (hca) null, 88, (la) null, -63, 81);
+            var11 = (Room) null;
+            this.a(77, (Player) null, 88, (Room) null, -63, 81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +99,7 @@ class tu extends eha {
         }
     }
 
-    final void a(int param0, int param1, hca param2, fsa param3) {
+    final void a(int param0, int param1, Player param2, Trap param3) {
         int var5_int = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -161,10 +161,10 @@ class tu extends eha {
         field_d = null;
     }
 
-    final void a(int param0, la param1) {
+    final void a(int param0, Room param1) {
         if (param0 <= 12) {
-          la var4 = (la) null;
-          this.a((hca) null, (la) null, false);
+          Room var4 = (Room) null;
+          this.a((Player) null, (Room) null, false);
         }
         if (null != ab.field_n) {
           ab.field_n.field_y.a((byte) -105, 256, -1);
@@ -179,9 +179,9 @@ class tu extends eha {
         }
     }
 
-    final void a(fsa param0, int param1) {
+    final void a(Trap param0, int param1) {
         int var3_int = 0;
-        hca var4 = null;
+        Player var4 = null;
         int var5 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -216,7 +216,7 @@ class tu extends eha {
         }
     }
 
-    void a(int param0, hca param1, la param2) {
+    void a(int param0, Player param1, Room param2) {
         int var7 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -226,11 +226,11 @@ class tu extends eha {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        fsa[] var5 = null;
-        fsa[] var6 = null;
-        fsa var8 = null;
+        Trap[] var5 = null;
+        Trap[] var6 = null;
+        Trap var8 = null;
         int var9 = 0;
-        la var10 = null;
+        Room var10 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           if (!this.field_f.k(-25319) &&
@@ -257,8 +257,8 @@ class tu extends eha {
             }
           }
           if (param0 != -2) {
-            var10 = (la) null;
-            this.a(84, (hca) null, 71, (la) null, -32, -21);
+            var10 = (Room) null;
+            this.a(84, (Player) null, 71, (Room) null, -32, -21);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -289,7 +289,7 @@ class tu extends eha {
         return (qw) (this.field_c.c(73));
     }
 
-    void a(hca param0, la param1, boolean param2) {
+    void a(Player param0, Room param1, boolean param2) {
         jha dupTemp$0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;

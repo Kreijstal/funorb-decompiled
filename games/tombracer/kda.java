@@ -114,7 +114,7 @@ final class kda extends eo {
           var10 = param0.b(param1 ^ 13611);
           var11 = (sf) (param0);
           var11.c(-3);
-          jaggl.OpenGL.glDrawElements(var8_int, var9, lr.a(var10, 5126), var11.b(true) + (long)(param3 * var10.field_e));
+          jaggl.OpenGL.glDrawElements(var8_int, var9, ClientException.a(var10, 5126), var11.b(true) + (long)(param3 * var10.field_e));
           if (param1 != -19394) {
             this.N(76);
           }
@@ -575,7 +575,7 @@ final class kda extends eo {
           field_cd = (String) null;
         }
         jaggl.OpenGL.glMatrixMode(5890);
-        if (od.field_h == this.field_v[this.field_Cc]) {
+        if (DualLinkNode.field_h == this.field_v[this.field_Cc]) {
           jaggl.OpenGL.glLoadIdentity();
         } else {
           jaggl.OpenGL.glLoadMatrixf(this.field_hc[this.field_Cc].a(jba.field_k, (byte) -37), 0);

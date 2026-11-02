@@ -137,7 +137,7 @@ final class uja {
             var3 = var2.field_j;
           } else {
             if (var2 != null) {
-              var2.p(68);
+              var2.unlink(68);
             }
             var3 = new ssa(param1);
             hla.field_ub.a((long)param1.field_a, 109, new wl(param1, var3));

@@ -6,7 +6,7 @@ final class pt extends wda {
     static bb field_p;
     static String field_q;
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         try {
           if (param0 < 35) {
             this.field_o = 28;
@@ -54,7 +54,7 @@ final class pt extends wda {
 
     final void b(byte param0) {
         int var2;
-        hca var3;
+        Player var3;
         int var4;
         int var5;
         int var6;
@@ -122,8 +122,8 @@ final class pt extends wda {
 
     final void a(int param0, byte param1) {
         if (param1 < 123) {
-          fsa var4 = (fsa) null;
-          this.a(101, (fsa) null);
+          Trap var4 = (Trap) null;
+          this.a(101, (Trap) null);
           this.field_o = param0;
           return;
         }
@@ -153,7 +153,7 @@ final class pt extends wda {
         field_p = null;
     }
 
-    pt(la param0, boolean param1) {
+    pt(Room param0, boolean param1) {
         super(param0, param1);
         try {
           this.field_o = 16;
@@ -162,7 +162,7 @@ final class pt extends wda {
         }
     }
 
-    pt(la param0, kh param1, boolean param2) {
+    pt(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_o = bla.a(true, 12, param1.b((byte) 44, 12));
@@ -171,7 +171,7 @@ final class pt extends wda {
         }
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -124);
           param0.a((byte) 37, dqa.a(true, this.field_o, 12), 12);

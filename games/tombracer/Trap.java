@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, t {
+final class Trap extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, t {
     private vna field_K;
     static jea field_q;
     static int field_m;
     private gpa field_i;
-    private fsa field_X;
+    private Trap field_X;
     private gpa field_Y;
     private int field_ab;
-    private la field_y;
+    private Room field_y;
     vna field_B;
     vna field_u;
     private boolean field_v;
@@ -128,7 +128,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         int var6 = 0;
         wda var7 = null;
         nv var8 = null;
-        fsa var9 = null;
+        Trap var9 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (!param1) {
@@ -156,10 +156,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
             var8.a(-121, param2, param1, param3);
             var8 = (nv) (this.field_u.e(115));
           }
-          var9 = (fsa) (this.field_K.f(-80));
+          var9 = (Trap) (this.field_K.f(-80));
           while (var9 != null) {
             var9.a(true, param1, param2, param3);
-            var9 = (fsa) (this.field_K.e(109));
+            var9 = (Trap) (this.field_K.e(109));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -327,7 +327,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           return;
         }
         try {
-          kh.a(true, la.field_k, param1);
+          BitPacketBuffer.a(true, Room.field_k, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fsa.AF(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -420,12 +420,12 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         if (this.field_X != null &&
           !this.field_A) {
         }
-        fsa var2 = (fsa) (this.field_K.f(-80));
+        Trap var2 = (Trap) (this.field_K.f(-80));
         while (var2 != null) {
           if (var2.field_A) {
             var2.i(true);
           }
-          var2 = (fsa) (this.field_K.e(120));
+          var2 = (Trap) (this.field_K.e(120));
         }
         this.field_hb = 1;
         this.field_f = 0;
@@ -497,7 +497,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
 
     final void b(int param0, boolean param1) {
         boolean stackIn_20_0 = false;
-        fsa var4;
+        Trap var4;
         int var5;
         wda var6;
         dg var7;
@@ -555,7 +555,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
             var11 = (wda) (var8.a(true));
             while (var11 != null) {
               if (var11.a((byte) 87)) {
-                var11.p(126);
+                var11.unlink(126);
                 var11 = (wda) (var8.a(-1));
                 continue;
               }
@@ -584,19 +584,19 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
                 }
               }
             } else {
-              var12.p(82);
+              var12.unlink(82);
             }
             var12 = (nv) (var9.a(-1));
           }
           var10 = new uja(this.field_K);
-          var4 = (fsa) (var10.a(true));
+          var4 = (Trap) (var10.a(true));
           while (var4 != null) {
             var4.b(75, param1);
             if (var4.field_C) {
-              var4.p(2);
+              var4.unlink(2);
               var4.B(-165);
             }
-            var4 = (fsa) (var10.a(-1));
+            var4 = (Trap) (var10.a(-1));
           }
         }
         var7 = (dg) (this.field_O.f(-80));
@@ -644,10 +644,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         if (param0 != -60) {
           this.field_g = -7;
         }
-        fsa var4 = (fsa) (this.field_K.f(param0 ^ 116));
+        Trap var4 = (Trap) (this.field_K.f(param0 ^ 116));
         while (var4 != null) {
           var4.x((byte) -60);
-          var4 = (fsa) (this.field_K.e(113));
+          var4 = (Trap) (this.field_K.e(113));
         }
     }
 
@@ -681,7 +681,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
             var6 = 0;
             if (param0 != 57) {
               var12 = (CharSequence) null;
-              fsa.a(110, -65, true, (CharSequence) null);
+              Trap.a(110, -65, true, (CharSequence) null);
             }
             var7 = param3.length();
             for (var8 = 0; var7 > var8; var8++) {
@@ -799,7 +799,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         int var7;
         nv var8;
         wda var9;
-        fsa var10;
+        Trap var10;
         uja var11;
         uja var12;
         lj var4Lifetime1;
@@ -829,28 +829,28 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         if (param2 != -26) {
           this.h(122, -84);
         }
-        var10 = (fsa) (var12.a(true));
+        var10 = (Trap) (var12.a(true));
         while (var10 != null) {
           var4Lifetime2 = var10.a(param0, param1, (byte) -26);
           if (var4Lifetime2 != null) {
             return var4Lifetime2;
           }
-          var10 = (fsa) (var12.a(-1));
+          var10 = (Trap) (var12.a(-1));
         }
         return null;
     }
 
-    public final la f(byte param0) {
+    public final Room f(byte param0) {
         int var2 = 38 % ((param0 - 0) / 61);
         return this.field_y;
     }
 
     public final boolean l(int param0) {
-        ep var3;
+        Projectile var3;
         boolean stackIn_10_0 = false;
         if (param0 != 0) {
-          var3 = (ep) null;
-          this.a((up) null, (ep) null, -25);
+          var3 = (Projectile) null;
+          this.a((up) null, (Projectile) null, -25);
         }
         stackIn_10_0 = ((null != this.field_X &&
           this.field_X.l(0)) ||
@@ -918,7 +918,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         }
     }
 
-    private fsa(la param0, fsa param1, kh param2, boolean param3) {
+    private Trap(Room param0, Trap param1, BitPacketBuffer param2, boolean param3) {
         this(param0, 0, 0, 32, 32, 0, param3);
         int var9 = 0;
         boolean stackIn_6_1 = false;
@@ -941,7 +941,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         wda var7_ref_wda = null;
         int var8 = 0;
         nv var8_ref_nv = null;
-        fsa var9_ref_fsa = null;
+        Trap var9_ref_fsa = null;
         int var10 = 0;
         dg var11 = null;
         int var6Lifetime1;
@@ -992,13 +992,13 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           }
           var5_int = param2.b((byte) 44, 3);
           for (var6 = 0; var5_int > var6; var6++) {
-            var7_ref_wda = ki.a(param2, (byte) 95, param0, param3);
+            var7_ref_wda = ki.readLocomotor(param2, (byte) 95, param0, param3);
             this.field_B.b((byte) -49, var7_ref_wda);
             var7_ref_wda.a(64, this);
           }
           var6Lifetime1 = param2.b((byte) 44, 3);
           for (var7 = 0; var7 < var6Lifetime1; var7++) {
-            var8_ref_nv = bda.a(param3, (byte) 44, param0, param2);
+            var8_ref_nv = bda.readBehaviour(param3, (byte) 44, param0, param2);
             this.field_u.b((byte) -88, var8_ref_nv);
             var8_ref_nv.a(true, this);
           }
@@ -1008,7 +1008,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
             var7Lifetime1 = param2.b((byte) 44, 3);
           }
           for (var8 = 0; var8 < var7Lifetime1; var8++) {
-            var9_ref_fsa = new fsa(param0, this, param2, param3);
+            var9_ref_fsa = new Trap(param0, this, param2, param3);
             this.field_K.b((byte) -120, var9_ref_fsa);
           }
           if (param0.field_E > 8) {
@@ -1084,10 +1084,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           var5 = (nv) (var2.a(-1));
         }
         var2 = new uja(this.field_K);
-        fsa var6 = (fsa) (var2.a(param0));
+        Trap var6 = (Trap) (var2.a(param0));
         while (var6 != null) {
           var6.h(true);
-          var6 = (fsa) (var2.a(-1));
+          var6 = (Trap) (var2.a(-1));
         }
     }
 
@@ -1204,7 +1204,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
     final void a(int param0, uw param1) {
         int var4 = 0;
         CharSequence var5 = null;
-        fsa var6 = null;
+        Trap var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -1213,14 +1213,14 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           this.a(param1, true);
-          var6 = (fsa) (this.field_K.f(-80));
+          var6 = (Trap) (this.field_K.f(-80));
           while (var6 != null) {
             var6.a(127, param1);
-            var6 = (fsa) (this.field_K.e(115));
+            var6 = (Trap) (this.field_K.e(115));
           }
           if (param0 <= 115) {
             var5 = (CharSequence) null;
-            fsa.a(-115, -22, false, (CharSequence) null);
+            Trap.a(-115, -22, false, (CharSequence) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1237,20 +1237,20 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         }
     }
 
-    final void a(kh param0, int param1) {
-        kh stackIn_3_0 = null;
+    final void a(BitPacketBuffer param0, int param1) {
+        BitPacketBuffer stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_4_2 = 0;
-        kh stackIn_6_0 = null;
+        BitPacketBuffer stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
-        kh stackIn_9_0 = null;
+        BitPacketBuffer stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         int stackIn_10_2 = 0;
-        kh stackIn_12_0 = null;
+        BitPacketBuffer stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         int stackIn_13_2 = 0;
-        kh stackIn_31_0 = null;
+        BitPacketBuffer stackIn_31_0 = null;
         int stackIn_31_1 = 0;
         int stackIn_32_2 = 0;
         RuntimeException stackIn_36_0 = null;
@@ -1259,7 +1259,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        fsa var4 = null;
+        Trap var4 = null;
         int var5 = 0;
         wda var6 = null;
         nv var7 = null;
@@ -1270,43 +1270,43 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           param0.a((byte) -126, dqa.a(true, this.field_mb >> 16, 12), 12);
           param0.a((byte) -127, this.field_t >> 16, 10);
           param0.a((byte) 72, this.field_gb >> 16, 10);
-          stackIn_3_0 = (kh) (param0);
+          stackIn_3_0 = (BitPacketBuffer) (param0);
           stackIn_3_1 = 58;
           if (!this.field_eb) {
             stackIn_4_2 = 0;
           } else {
             stackIn_4_2 = 1;
           }
-          ((kh) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_4_2, 1);
-          stackIn_6_0 = (kh) (param0);
+          ((BitPacketBuffer) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_4_2, 1);
+          stackIn_6_0 = (BitPacketBuffer) (param0);
           stackIn_6_1 = 118;
           if (!this.field_p) {
             stackIn_7_2 = 0;
           } else {
             stackIn_7_2 = 1;
           }
-          ((kh) (Object) stackIn_6_0).a((byte) stackIn_6_1, stackIn_7_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_6_0).a((byte) stackIn_6_1, stackIn_7_2, 1);
           param0.a((byte) -125, this.field_N / 50, 6);
           var3_int = -112 / ((param1 + 58) / 39);
           param0.a((byte) -125, cn.a((byte) 59, this.field_F, 8192, 4), 4);
           param0.a((byte) -127, this.field_S, 8);
           param0.a((byte) -128, this.field_I, 8);
-          stackIn_9_0 = (kh) (param0);
+          stackIn_9_0 = (BitPacketBuffer) (param0);
           stackIn_9_1 = 123;
           if (this.field_r) {
             stackIn_10_2 = 1;
           } else {
             stackIn_10_2 = 0;
           }
-          ((kh) (Object) stackIn_9_0).a((byte) stackIn_9_1, stackIn_10_2, 1);
-          stackIn_12_0 = (kh) (param0);
+          ((BitPacketBuffer) (Object) stackIn_9_0).a((byte) stackIn_9_1, stackIn_10_2, 1);
+          stackIn_12_0 = (BitPacketBuffer) (param0);
           stackIn_12_1 = -25;
           if (!this.field_v) {
             stackIn_13_2 = 0;
           } else {
             stackIn_13_2 = 1;
           }
-          ((kh) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_13_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_13_2, 1);
           param0.a((byte) 26, this.field_f, 3);
           param0.a((byte) -127, this.field_V, 3);
           param0.a((byte) -126, this.field_L, 3);
@@ -1323,15 +1323,15 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
             var7 = (nv) (this.field_u.e(111));
           }
           param0.a((byte) -126, this.t((byte) 112), 3);
-          var4 = (fsa) (this.field_K.f(-80));
+          var4 = (Trap) (this.field_K.f(-80));
           while (var4 != null) {
             if (var4.w((byte) -119)) {
               var4.B(-165);
-              var4.p(17);
+              var4.unlink(17);
             } else {
               var4.a(param0, -14);
             }
-            var4 = (fsa) (this.field_K.e(124));
+            var4 = (Trap) (this.field_K.e(124));
           }
           if (this.field_y.field_E >= 9) {
             param0.a((byte) 88, this.field_O.a((byte) -16), 3);
@@ -1343,14 +1343,14 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
             }
           }
           this.field_o.a((byte) -125, param0);
-          stackIn_31_0 = (kh) (param0);
+          stackIn_31_0 = (BitPacketBuffer) (param0);
           stackIn_31_1 = -127;
           if (!this.field_A) {
             stackIn_32_2 = 0;
           } else {
             stackIn_32_2 = 1;
           }
-          ((kh) (Object) stackIn_31_0).a((byte) stackIn_31_1, stackIn_32_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_31_0).a((byte) stackIn_31_1, stackIn_32_2, 1);
           param0.a((byte) -126, this.field_db, 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1379,10 +1379,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           var2.e(param0 ^ -23607);
           var2 = (dg) (this.field_O.e(param0 ^ 23599));
         }
-        fsa var4 = (fsa) (this.field_K.f(-80));
+        Trap var4 = (Trap) (this.field_K.f(-80));
         while (var4 != null) {
           var4.A(23645);
-          var4 = (fsa) (this.field_K.e(110));
+          var4 = (Trap) (this.field_K.e(110));
         }
         if (param0 != 23645) {
           this.field_lb = -40;
@@ -1443,7 +1443,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
     }
 
     final void c(int param0, boolean param1) {
-        fsa var3_ref = null;
+        Trap var3_ref = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         this.v(-1332);
         nv var3 = (nv) (this.field_u.f(param0 ^ -437453416));
@@ -1452,10 +1452,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           var3 = (nv) (this.field_u.e(107));
         }
         if (param1) {
-          var3_ref = (fsa) (this.field_K.f(param0 ^ -437453416));
+          var3_ref = (Trap) (this.field_K.f(param0 ^ -437453416));
           while (var3_ref != null) {
             var3_ref.c(437453352, true);
-            var3_ref = (fsa) (this.field_K.e(117));
+            var3_ref = (Trap) (this.field_K.e(117));
           }
         }
         if (param0 != 437453352) {
@@ -1621,10 +1621,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         if (param0 != -165) {
           return;
         }
-        fsa var4 = (fsa) (this.field_K.f(-80));
+        Trap var4 = (Trap) (this.field_K.f(-80));
         while (var4 != null) {
           var4.B(-165);
-          var4 = (fsa) (this.field_K.e(110));
+          var4 = (Trap) (this.field_K.e(110));
         }
     }
 
@@ -1632,7 +1632,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         this.field_L = param1;
         if (param0 < 99) {
           kea var4 = (kea) null;
-          fsa.a(-31, (kea) null);
+          Trap.a(-31, (kea) null);
         }
     }
 
@@ -1652,10 +1652,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         }
         this.field_lb = this.field_U;
         uja var2 = new uja(this.field_K);
-        fsa var3 = (fsa) (var2.a(true));
+        Trap var3 = (Trap) (var2.a(true));
         while (var3 != null) {
           var3.D((byte) 118);
-          var3 = (fsa) (var2.a(-1));
+          var3 = (Trap) (var2.a(-1));
         }
     }
 
@@ -1691,7 +1691,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         return stackIn_8_0;
     }
 
-    public final int a(up param0, ep param1, int param2) {
+    public final int a(up param0, Projectile param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1822,7 +1822,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         }
     }
 
-    final hca H(int param0) {
+    final Player H(int param0) {
         int var2 = 68 % ((-84 - param0) / 32);
         return this.field_y.u(-53);
     }
@@ -1834,8 +1834,8 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         }
     }
 
-    fsa(la param0, kh param1, boolean param2) {
-        this(param0, (fsa) null, param1, param2);
+    Trap(Room param0, BitPacketBuffer param1, boolean param2) {
+        this(param0, (Trap) null, param1, param2);
     }
 
     final int s(int param0) {
@@ -1849,7 +1849,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         if (this.field_G <= param0) {
           this.field_G = param0;
           if (param1 >= -103) {
-            fsa.K(-88);
+            Trap.K(-88);
           }
           return;
         }
@@ -1871,34 +1871,34 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         }
         this.field_y.field_u.a((ffa) (this), -78);
         this.field_y.field_u.b((ffa) (this), param0 + 7072);
-        fsa var2 = (fsa) (this.field_K.f(-80));
+        Trap var2 = (Trap) (this.field_K.f(-80));
         if (param0 != 1) {
           this.field_j = 74;
         }
         while (var2 != null) {
           var2.z(param0 + 0);
-          var2 = (fsa) (this.field_K.e(122));
+          var2 = (Trap) (this.field_K.e(122));
         }
     }
 
     final void u(int param0) {
-        fsa var2;
+        Trap var2;
         dg var2_ref;
         int var3;
         wda var4;
         nv var5;
-        fsa var6;
+        Trap var6;
         var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_jb) {
           this.field_x = true;
         }
-        var2 = (fsa) (this.field_K.f(-80));
+        var2 = (Trap) (this.field_K.f(-80));
         while (var2 != null) {
           if (var2.w((byte) -127)) {
             var2.B(param0 ^ -165);
-            var2.p(48);
+            var2.unlink(48);
           }
-          var2 = (fsa) (this.field_K.e(118));
+          var2 = (Trap) (this.field_K.e(118));
         }
         this.x((byte) -60);
         this.N(param0 ^ param0);
@@ -1918,15 +1918,15 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           if (this.a(var2_ref, param0 ^ -113)) {
             var2_ref.a(var2_ref.c(-118), (gma) (this), (byte) 36);
           } else {
-            var2_ref.p(91);
+            var2_ref.unlink(91);
           }
           var2_ref = (dg) (this.field_O.e(124));
         }
-        var6 = (fsa) (this.field_K.f(-80));
+        var6 = (Trap) (this.field_K.f(-80));
         while (var6 != null) {
           var6.field_X = this;
           var6.u(param0 + 0);
-          var6 = (fsa) (this.field_K.e(126));
+          var6 = (Trap) (this.field_K.e(126));
         }
     }
 
@@ -1955,7 +1955,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
 
     final int P(int param0) {
         if (param0 != 0) {
-          fsa.K(-55);
+          Trap.K(-55);
         }
         return this.field_db + this.g((byte) 115);
     }
@@ -2017,7 +2017,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         boolean discarded$1 = false;
         int var4 = 0;
         nv var5 = null;
-        fsa var6 = null;
+        Trap var6 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -2030,10 +2030,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
             var5.b(123, param0);
             var5 = (nv) (this.field_u.e(param1 + 10546));
           }
-          var6 = (fsa) (this.field_K.f(-80));
+          var6 = (Trap) (this.field_K.f(-80));
           while (var6 != null) {
             var6.a(param0, -10425);
-            var6 = (fsa) (this.field_K.e(123));
+            var6 = (Trap) (this.field_K.e(123));
           }
           if (param1 != -10425) {
             discarded$1 = this.B((byte) 57);
@@ -2094,10 +2094,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         int var4 = TombRacer.field_G ? 1 : 0;
         this.u((byte) 116);
         uja var2 = new uja(this.field_K);
-        fsa var3 = (fsa) (var2.a(true));
+        Trap var3 = (Trap) (var2.a(true));
         while (var3 != null) {
           var3.F((byte) -102);
-          var3 = (fsa) (var2.a(-1));
+          var3 = (Trap) (var2.a(-1));
         }
         if (param0 > -90) {
           this.field_mb = 92;
@@ -2114,10 +2114,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
 
     public final void m(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        fsa var4 = (fsa) (this.field_K.f(-80));
+        Trap var4 = (Trap) (this.field_K.f(-80));
         while (var4 != null) {
           var4.m(-93);
-          var4 = (fsa) (this.field_K.e(123));
+          var4 = (Trap) (this.field_K.e(123));
         }
         wda var5 = (wda) (this.field_B.f(-80));
         while (var5 != null) {
@@ -2134,13 +2134,13 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
 
     final void d(int param0, byte param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        fsa var6 = (fsa) (this.field_K.f(-80));
+        Trap var6 = (Trap) (this.field_K.f(-80));
         while (var6 != null) {
           if (!var6.a(param0, 31749)) {
             var6.v((byte) 109);
-            var6.p(39);
+            var6.unlink(39);
           }
-          var6 = (fsa) (this.field_K.e(119));
+          var6 = (Trap) (this.field_K.e(119));
         }
         if (param1 >= -7) {
           ui var5 = (ui) null;
@@ -2156,10 +2156,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           return;
         }
         this.field_ib = this.q((byte) -80);
-        fsa var4 = (fsa) (this.field_K.f(-80));
+        Trap var4 = (Trap) (this.field_K.f(-80));
         while (var4 != null) {
           var4.N(0);
-          var4 = (fsa) (this.field_K.e(126));
+          var4 = (Trap) (this.field_K.e(126));
         }
         this.u((byte) 116);
     }
@@ -2322,28 +2322,28 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         return this.field_y.a(param0 + 0, param1, param2);
     }
 
-    final fsa a(int param0, la param1, boolean param2) {
-        kh var4 = null;
+    final Trap a(int param0, Room param1, boolean param2) {
+        BitPacketBuffer var4 = null;
         RuntimeException var4_ref = null;
-        fsa var5 = null;
-        fsa stackIn_2_0 = null;
-        fsa stackIn_4_0 = null;
+        Trap var5 = null;
+        Trap stackIn_2_0 = null;
+        Trap stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new kh(30000);
+          var4 = new BitPacketBuffer(30000);
           var4.i(8);
           if (param0 != -14402) {
-            stackIn_2_0 = (fsa) null;
+            stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
           this.a(var4, -108);
           var4.k(-1826190686);
-          var4.field_h = 0;
+          var4.position = 0;
           var4.h((byte) 111);
-          var5 = new fsa(param1, var4, param2);
+          var5 = new Trap(param1, var4, param2);
           var4.i((byte) 98);
           var5.a(true, param2, (ui) null, new ui());
           var5.h(true);
@@ -2395,7 +2395,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         int var2 = 66 % ((param0 - 60) / 58);
     }
 
-    final void a(la param0, boolean param1) {
+    final void a(Room param0, boolean param1) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -2405,7 +2405,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         wda var5 = null;
         nv var6 = null;
         dg var7 = null;
-        fsa var8 = null;
+        Trap var8 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           param0.field_u.a((ffa) (this), (byte) 116);
@@ -2444,10 +2444,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
             var7.h(65);
             var7 = (dg) (this.field_O.e(110));
           }
-          var8 = (fsa) (this.field_K.f(-80));
+          var8 = (Trap) (this.field_K.f(-80));
           while (var8 != null) {
             var8.a(param0, false);
-            var8 = (fsa) (this.field_K.e(121));
+            var8 = (Trap) (this.field_K.e(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2476,10 +2476,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         if (this.field_y.j((byte) 104) != null) {
           this.a(this.field_y.j((byte) 49), true);
         }
-        fsa var4 = (fsa) (this.field_K.f(-80));
+        Trap var4 = (Trap) (this.field_K.f(-80));
         while (var4 != null) {
           var4.F(127);
-          var4 = (fsa) (this.field_K.e(108));
+          var4 = (Trap) (this.field_K.e(108));
         }
         this.u(0);
         this.u((byte) 116);
@@ -2498,15 +2498,15 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
 
     final void a(int param0, byte param1, boolean param2) {
         uja var4 = null;
-        fsa var5 = null;
+        Trap var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         this.field_V = param0;
         if (param2) {
           var4 = new uja(this.field_K);
-          var5 = (fsa) (var4.a(true));
+          var5 = (Trap) (var4.a(true));
           while (var5 != null) {
             var5.a(param0, (byte) -12, param2);
-            var5 = (fsa) (var4.a(param1 ^ 11));
+            var5 = (Trap) (var4.a(param1 ^ 11));
           }
         }
         if (param1 != -12) {
@@ -2519,7 +2519,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           this.field_B.b((byte) -101, param0);
           param0.a(45, this);
           if (param1 != 0) {
-            this.field_y = (la) null;
+            this.field_y = (Room) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fsa.WD(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -2542,8 +2542,8 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           if (param1 >= -43) {
             this.w((byte) -34);
           }
-          if (param0 instanceof fsa &&
-            this.r(0) == ((fsa) (param0)).r(0)) {
+          if (param0 instanceof Trap &&
+            this.r(0) == ((Trap) (param0)).r(0)) {
             return true;
           }
           return false;
@@ -2565,7 +2565,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         int var3 = -10 / ((-12 - param0) / 42);
     }
 
-    final fsa r(int param0) {
+    final Trap r(int param0) {
         if (param0 != 0) {
           this.field_f = 55;
         }
@@ -2575,7 +2575,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         return this;
     }
 
-    fsa(la param0, boolean param1) {
+    Trap(Room param0, boolean param1) {
         this(param0, 0, 0, 32, 32, 0, param1);
     }
 
@@ -2611,7 +2611,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         return this.field_P;
     }
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -2704,10 +2704,10 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           gma var4 = (gma) null;
           this.a((gma) null, -13);
         }
-        fsa var6 = (fsa) (this.field_K.f(-80));
+        Trap var6 = (Trap) (this.field_K.f(-80));
         while (var6 != null) {
           var6.v((byte) 109);
-          var6 = (fsa) (this.field_K.e(111));
+          var6 = (Trap) (this.field_K.e(111));
         }
         this.B(-165);
         this.v(-1332);
@@ -2832,7 +2832,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
     }
 
     private final boolean d(boolean param0, int param1) {
-        fsa var4;
+        Trap var4;
         int var5;
         int var6;
         int var7;
@@ -2842,7 +2842,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         if (param1 != -3) {
           return true;
         }
-        var4 = (fsa) (var8.a(true));
+        var4 = (Trap) (var8.a(true));
         while (true) {
           if (var4 == null) {
             return false;
@@ -2857,7 +2857,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
           }
           if (var4.a(var5, var6, -4648, this.field_L, 0) != 2 &&
             !var4.d(param0, param1 ^ 0)) {
-            var4 = (fsa) (var8.a(-1));
+            var4 = (Trap) (var8.a(-1));
             continue;
           }
           break;
@@ -3144,12 +3144,12 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
     private final int t(byte param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
         int var2 = 0;
-        fsa var3 = (fsa) (this.field_K.f(-80));
+        Trap var3 = (Trap) (this.field_K.f(-80));
         while (var3 != null) {
           if (!var3.w((byte) -113)) {
             var2++;
           }
-          var3 = (fsa) (this.field_K.e(116));
+          var3 = (Trap) (this.field_K.e(116));
         }
         if (param0 <= 15) {
           return -30;
@@ -3157,7 +3157,7 @@ final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, 
         return var2;
     }
 
-    fsa(la param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    Trap(Room param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         this.field_K = new vna();
         this.field_B = new vna();
         this.field_u = new vna();

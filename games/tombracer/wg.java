@@ -8,12 +8,12 @@ final class wg extends tu {
     static String field_k;
     static int field_i;
 
-    final void a(int param0, hca param1, int param2, la param3, int param4, int param5) {
+    final void a(int param0, Player param1, int param2, Room param3, int param4, int param5) {
         try {
           nba.a(this.field_f, param3, (byte) 108);
           if (param0 != 15) {
-            la var8 = (la) null;
-            this.a((hca) null, (la) null, true);
+            Room var8 = (Room) null;
+            this.a((Player) null, (Room) null, true);
           }
           super.a(param0 + 0, param1, param2, param3, param4, param5);
         } catch (RuntimeException runtimeException) {
@@ -60,7 +60,7 @@ final class wg extends tu {
         }
     }
 
-    final void a(int param0, hca param1, la param2) {
+    final void a(int param0, Player param1, Room param2) {
         try {
           qra.a(param2, 100, this.field_f);
           super.a(param0, param1, param2);
@@ -83,11 +83,11 @@ final class wg extends tu {
         super(param0);
     }
 
-    final void a(hca param0, la param1, boolean param2) {
+    final void a(Player param0, Room param1, boolean param2) {
         try {
           if (param2) {
-            la var5 = (la) null;
-            this.a((hca) null, (la) null, false);
+            Room var5 = (Room) null;
+            this.a((Player) null, (Room) null, false);
           }
           caa.a(this.field_f, param1, 108);
           super.a(param0, param1, param2);

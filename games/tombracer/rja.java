@@ -56,7 +56,7 @@ final class rja extends loa {
                 0 == param0.b((byte) -5, var14, var13)) {
                 this.a(var10, (byte) -42, param0, var9, var14, var13);
                 this.a(param3 + 0, param0, var9, var10);
-                var5.p(param3 ^ 30);
+                var5.unlink(param3 ^ 30);
                 var11 = 1;
               }
               var12++;

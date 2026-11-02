@@ -3,23 +3,23 @@
  */
 import java.util.*;
 
-final class rba implements Iterator {
+final class SecondaryNodeDequeIterator implements Iterator {
     private static String[] field_e;
-    private od field_c;
+    private DualLinkNode field_c;
     static String field_b;
-    private hma field_d;
-    private od field_f;
+    private SecondaryNodeDeque field_d;
+    private DualLinkNode field_f;
     static qh field_a;
 
     public final Object next() {
         Object var1 = this.field_c;
-        if (var1 == this.field_d.field_d) {
+        if (var1 == this.field_d.sentinel) {
           var1 = null;
           this.field_c = null;
         } else {
-          this.field_c = ((od) (var1)).field_g;
+          this.field_c = ((DualLinkNode) (var1)).secondaryNext;
         }
-        this.field_f = (od) (var1);
+        this.field_f = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -36,12 +36,12 @@ final class rba implements Iterator {
         if (this.field_f == null) {
           throw new IllegalStateException();
         }
-        this.field_f.c(-7975);
+        this.field_f.unlinkSecondary(-7975);
         this.field_f = null;
     }
 
     public final boolean hasNext() {
-        return this.field_c != this.field_d.field_d;
+        return this.field_c != this.field_d.sentinel;
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
@@ -51,11 +51,11 @@ final class rba implements Iterator {
         }
     }
 
-    rba(hma param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_f = null;
         try {
           this.field_d = param0;
-          this.field_c = this.field_d.field_d.field_g;
+          this.field_c = this.field_d.sentinel.secondaryNext;
           this.field_f = null;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rba.<init>(" + (param0 != null ? "{...}" : "null") + ')');

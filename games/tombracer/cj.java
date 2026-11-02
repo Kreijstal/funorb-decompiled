@@ -41,15 +41,15 @@ final class cj implements isa {
           }
           var2_long = bva.b((byte) -107);
           if (ga.field_H != 0 &&
-            gt.field_b < 0) {
+            GameKeyHandler.field_b < 0) {
             var4_ref_rha = (rha) (vn.field_a.f(-80));
             if (var4_ref_rha != null &&
               var2_long > var4_ref_rha.field_f) {
-              var4_ref_rha.p(115);
+              var4_ref_rha.unlink(115);
               uca.field_d = var4_ref_rha.field_g.length;
-              vc.field_q.field_h = 0;
+              vc.field_q.position = 0;
               for (var5_int = 0; var5_int < uca.field_d; var5_int++) {
-                vc.field_q.field_g[var5_int] = var4_ref_rha.field_g[var5_int];
+                vc.field_q.payload[var5_int] = var4_ref_rha.field_g[var5_int];
               }
               vua.field_B = hla.field_xb;
               hla.field_xb = ufa.field_c;
@@ -59,14 +59,14 @@ final class cj implements isa {
             }
           }
           while (true) {
-            if (gt.field_b < 0) {
-              vc.field_q.field_h = 0;
+            if (GameKeyHandler.field_b < 0) {
+              vc.field_q.position = 0;
               if (!ama.a(1, -1)) {
                 return false;
               }
-              gt.field_b = vc.field_q.j(-83);
-              vc.field_q.field_h = 0;
-              uca.field_d = param0[gt.field_b];
+              GameKeyHandler.field_b = vc.field_q.j(-83);
+              vc.field_q.position = 0;
+              uca.field_d = param0[GameKeyHandler.field_b];
             }
             if (!cla.g(param1 + 0)) {
               return false;
@@ -75,8 +75,8 @@ final class cj implements isa {
               vua.field_B = hla.field_xb;
               hla.field_xb = ufa.field_c;
               ufa.field_c = oka.field_z;
-              oka.field_z = gt.field_b;
-              gt.field_b = -1;
+              oka.field_z = GameKeyHandler.field_b;
+              GameKeyHandler.field_b = -1;
               return true;
             }
             var4 = ga.field_H;
@@ -86,12 +86,12 @@ final class cj implements isa {
                 var4 = 0;
               }
             }
-            var5 = new rha(var2_long + (long)var4, gt.field_b, new byte[uca.field_d]);
+            var5 = new rha(var2_long + (long)var4, GameKeyHandler.field_b, new byte[uca.field_d]);
             for (var6 = 0; var6 < uca.field_d; var6++) {
-              var5.field_g[var6] = vc.field_q.field_g[var6];
+              var5.field_g[var6] = vc.field_q.payload[var6];
             }
             vn.field_a.b((byte) -98, var5);
-            gt.field_b = -1;
+            GameKeyHandler.field_b = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

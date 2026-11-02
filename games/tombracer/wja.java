@@ -20,7 +20,7 @@ final class wja extends ci {
           var4 = rv.field_c.field_H.a(param0, 272, rv.field_c.field_P);
           var5 = -(var4 / 2) + (-103 + var3 / 2);
           wo.field_k.a(320, -(2 * var5) + (var3 - 120), -23776, var5, (-320 + var2_int) / 2);
-          wo.field_k.field_w = hca.c(wo.field_k.field_t, 2105376, 3, 11579568, -118, 8421504);
+          wo.field_k.field_w = Player.c(wo.field_k.field_t, 2105376, 3, 11579568, -118, 8421504);
           rv.field_c.a(-24 + (wo.field_k.field_G - 24), -20 + wo.field_k.field_t - 24, -23776, 16, 24);
           bma.field_v.a(80, 24, param1 ^ -26595, -24 + wo.field_k.field_t - 20, 120);
         } catch (RuntimeException runtimeException) {
@@ -28,7 +28,7 @@ final class wja extends ci {
         }
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;

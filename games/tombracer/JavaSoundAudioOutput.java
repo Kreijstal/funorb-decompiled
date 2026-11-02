@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bu extends kta {
+final class JavaSoundAudioOutput extends AudioOutput {
     private int field_w;
     private byte[] field_v;
     private javax.sound.sampled.SourceDataLine field_x;
@@ -37,7 +37,7 @@ final class bu extends kta {
         return this.field_w - (this.field_x.available() >> (field_h ? 2 : 1));
     }
 
-    bu() {
+    JavaSoundAudioOutput() {
     }
 
     final void a(java.awt.Component param0) {

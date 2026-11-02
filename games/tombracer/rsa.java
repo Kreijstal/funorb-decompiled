@@ -30,12 +30,12 @@ final class rsa extends osa {
           this.field_w = this.field_w + 1;
         }
         if (param0 > -22) {
-          fsa var3 = (fsa) null;
-          this.a(-103, (fsa) null);
+          Trap var3 = (Trap) null;
+          this.a(-103, (Trap) null);
         }
     }
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         if (param0 <= 35) {
           return;
         }
@@ -46,7 +46,7 @@ final class rsa extends osa {
         }
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -123);
           param0.a((byte) -128, this.field_t >> 16, 10);
@@ -54,15 +54,15 @@ final class rsa extends osa {
           param0.a((byte) -127, this.field_v, 7);
           param0.a((byte) -127, this.field_w, 7);
           if (param1 >= -78) {
-            kh var4 = (kh) null;
-            this.a((kh) null, (byte) -48);
+            BitPacketBuffer var4 = (BitPacketBuffer) null;
+            this.a((BitPacketBuffer) null, (byte) -48);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rsa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    rsa(la param0, kh param1, boolean param2) {
+    rsa(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_t = param1.b((byte) 44, 10) << 16;
@@ -329,8 +329,8 @@ final class rsa extends osa {
 
     final int c(int param0) {
         if (param0 != 1) {
-          kh var3 = (kh) null;
-          this.a((kh) null, (byte) 14);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a((BitPacketBuffer) null, (byte) 14);
         }
         return 12;
     }

@@ -31,7 +31,7 @@ final class se extends wv {
         if (!param1) {
           return;
         }
-        la.field_j.a(0, 0);
+        Room.field_j.a(0, 0);
         gg.field_f.a((aaa.a(false) - gg.field_f.d()) / 2, (koa.b(0) - gg.field_f.b()) / 2);
         oka.a(so.field_L.toUpperCase(), 2431750, qr.field_v, -1, 60 + (koa.b(param0 + 28) - gg.field_f.b()) / 2, aaa.a(false) / 2, -1);
         SocketConnector.a(hl.field_i, 1, kn.field_p, 2431750, 20, 200, 1, -100 + koa.b(param0 + 28) / 2, aaa.a(false) / 2 - 150, -1, (byte) 60, 300);

@@ -41,7 +41,7 @@ final class kpa {
         }
     }
 
-    kpa(int param0, int param1, kh param2) {
+    kpa(int param0, int param1, BitPacketBuffer param2) {
         this(param0);
         int var5 = 0;
         int var4_int = 0;
@@ -99,7 +99,7 @@ final class kpa {
         return this.field_a[param1];
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = TombRacer.field_G ? 1 : 0;

@@ -45,7 +45,7 @@ abstract class me extends IntrusiveNode {
         }
     }
 
-    final static short[] a(byte param0, int param1, kh param2, short[] param3) {
+    final static short[] a(byte param0, int param1, BitPacketBuffer param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

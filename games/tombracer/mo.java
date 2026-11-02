@@ -51,7 +51,7 @@ final class mo extends nv {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        la var7_ref_la = null;
+        Room var7_ref_la = null;
         int var8 = 0;
         tqa var8_ref_tqa = null;
         int var9 = 0;
@@ -62,7 +62,7 @@ final class mo extends nv {
         int var14 = 0;
         int var17 = 0;
         Object var18 = null;
-        hca var19 = null;
+        Player var19 = null;
         int var5_intLifetime1;
         int var6Lifetime1;
         int var9Lifetime1;
@@ -77,7 +77,7 @@ final class mo extends nv {
           if (param3 != 1) {
             return;
           }
-          if (param2 instanceof hca) {
+          if (param2 instanceof Player) {
             var5_int = param2.d(3);
             var6 = param2.e(9648);
             var7_ref_la = this.b(true);
@@ -103,7 +103,7 @@ final class mo extends nv {
               !var8_ref_tqa.a(-112, var9 + 1, var10).a(-111, new int[]{1, 0})) {
               return;
             }
-            var19 = (hca) (param2);
+            var19 = (Player) (param2);
             if (this.field_s) {
               var19.a(10, (byte) -19);
             } else {
@@ -176,7 +176,7 @@ final class mo extends nv {
         }
     }
 
-    mo(la param0, boolean param1) {
+    mo(Room param0, boolean param1) {
         super(param0, param1);
         this.field_u = jm.field_l;
         this.field_n = 0;
@@ -191,7 +191,7 @@ final class mo extends nv {
         }
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         int var3_int = 0;
         int var4 = 0;
         try {
@@ -254,7 +254,7 @@ final class mo extends nv {
         return var7;
     }
 
-    mo(la param0, kh param1, boolean param2) {
+    mo(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_4_1 = false;
         boolean stackIn_12_1 = false;
@@ -314,7 +314,7 @@ final class mo extends nv {
         return 8;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 71, this.field_n, 8);

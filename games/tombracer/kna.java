@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class kna extends csa {
-    private fsa field_A;
+    private Trap field_A;
     static String field_E;
     static String field_C;
     static String field_B;
@@ -18,7 +18,7 @@ abstract class kna extends csa {
         }
     }
 
-    kna(la param0, int param1, kh param2, csa param3) {
+    kna(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 
@@ -30,12 +30,12 @@ abstract class kna extends csa {
         return (lj) ((Object) this.field_A);
     }
 
-    final void a(boolean param0, boolean param1, la param2, int param3, int param4, int param5, fsa param6) {
+    final void a(boolean param0, boolean param1, Room param2, int param3, int param4, int param5, Trap param6) {
         int var9 = 0;
         csa stackIn_14_0;
         boolean stackIn_14_1;
         boolean stackIn_14_2;
-        la stackIn_14_3;
+        Room stackIn_14_3;
         int stackIn_14_4;
         int stackIn_14_5;
         mka stackIn_14_6;
@@ -50,7 +50,7 @@ abstract class kna extends csa {
         mka var10 = null;
         csa var11 = null;
         int var12 = 0;
-        fsa var13 = null;
+        Trap var13 = null;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
           if (!this.field_z.a(param5, 14530)) {
@@ -63,7 +63,7 @@ abstract class kna extends csa {
           var13.a(this.field_z, (byte) 121);
           var13.m(1, this.field_j);
           if (!param1) {
-            this.field_A = (fsa) null;
+            this.field_A = (Trap) null;
           }
           var13.c(this.field_p, -19879);
           var13.a(this.field_r + param4, (byte) 110);
@@ -76,7 +76,7 @@ abstract class kna extends csa {
               stackIn_14_0 = var11;
               stackIn_14_1 = param0;
               stackIn_14_2 = true;
-              stackIn_14_3 = (la) (param2);
+              stackIn_14_3 = (Room) (param2);
               stackIn_14_4 = param3 + var10.b((byte) -125);
               stackIn_14_5 = param4;
               stackIn_14_6 = var10;
@@ -118,7 +118,7 @@ abstract class kna extends csa {
         }
     }
 
-    kna(la param0, int param1) {
+    kna(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -130,7 +130,7 @@ abstract class kna extends csa {
         return true;
     }
 
-    abstract fsa a(boolean param0, int param1, la param2);
+    abstract Trap a(boolean param0, int param1, Room param2);
 
     static {
         field_C = "<%0> cannot join; the game is full.";

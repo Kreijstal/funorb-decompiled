@@ -3,31 +3,31 @@
  */
 import java.util.*;
 
-final class hma implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static String field_e;
     static int[] field_f;
     static int field_a;
-    od field_d;
-    private od field_c;
+    DualLinkNode sentinel;
+    private DualLinkNode field_c;
     static jea field_b;
 
-    final od c(int param0) {
+    final DualLinkNode c(int param0) {
         if (param0 > 89) {
-          return this.a((byte) 121, (od) null);
+          return this.a((byte) 121, (DualLinkNode) null);
         }
-        od var3 = (od) null;
-        this.a((od) null, -48);
-        return this.a((byte) 121, (od) null);
+        DualLinkNode var3 = (DualLinkNode) null;
+        this.a((DualLinkNode) null, -48);
+        return this.a((byte) 121, (DualLinkNode) null);
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new rba(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final void a(byte param0) {
+    final void clear(byte param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        while (this.field_d.field_g != this.field_d) {
-          this.field_d.field_g.c(-7975);
+        while (this.sentinel.secondaryNext != this.sentinel) {
+          this.sentinel.secondaryNext.unlinkSecondary(-7975);
         }
         if (param0 == 84) {
           return;
@@ -40,28 +40,28 @@ final class hma implements Iterable {
         field_b = null;
         field_e = null;
         if (param0 != 8192) {
-          hma.b(101);
+          SecondaryNodeDeque.b(101);
         }
     }
 
-    final od b(byte param0) {
+    final DualLinkNode poll(byte param0) {
         if (param0 <= 44) {
-          return (od) null;
+          return (DualLinkNode) null;
         }
-        od var2 = this.field_d.field_g;
-        if (var2 != this.field_d) {
-          var2.c(-7975);
+        DualLinkNode var2 = this.sentinel.secondaryNext;
+        if (var2 != this.sentinel) {
+          var2.unlinkSecondary(-7975);
           return var2;
         }
         return null;
     }
 
-    private final od a(byte param0, od param1) {
+    private final DualLinkNode a(byte param0, DualLinkNode param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        od var4 = null;
+        DualLinkNode var4 = null;
         Object stackIn_6_0 = null;
-        od stackIn_8_0 = null;
+        DualLinkNode stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -71,14 +71,14 @@ final class hma implements Iterable {
           if (param1 != null) {
             var4 = param1;
           } else {
-            var4 = this.field_d.field_g;
+            var4 = this.sentinel.secondaryNext;
           }
-          if (var4 == this.field_d) {
+          if (var4 == this.sentinel) {
             this.field_c = null;
             stackIn_6_0 = null;
-            return (od) (stackIn_6_0);
+            return (DualLinkNode) (stackIn_6_0);
           }
-          this.field_c = var4.field_g;
+          this.field_c = var4.secondaryNext;
           stackIn_8_0 = var4;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,40 +95,40 @@ final class hma implements Iterable {
         }
     }
 
-    final void a(od param0, int param1) {
-        if (param0.field_f != null) {
-          param0.c(-7975);
+    final void a(DualLinkNode param0, int param1) {
+        if (param0.secondaryPrevious != null) {
+          param0.unlinkSecondary(-7975);
         }
-        param0.field_f = this.field_d.field_f;
-        param0.field_g = this.field_d;
-        param0.field_f.field_g = param0;
+        param0.secondaryPrevious = this.sentinel.secondaryPrevious;
+        param0.secondaryNext = this.sentinel;
+        param0.secondaryPrevious.secondaryNext = param0;
         if (param1 != -11396) {
           return;
         }
         try {
-          param0.field_g.field_f = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hma.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    hma() {
-        this.field_d = new od();
-        this.field_d.field_g = this.field_d;
-        this.field_d.field_f = this.field_d;
+    SecondaryNodeDeque() {
+        this.sentinel = new DualLinkNode();
+        this.sentinel.secondaryNext = this.sentinel;
+        this.sentinel.secondaryPrevious = this.sentinel;
     }
 
-    final od a(int param0) {
-        od var2 = this.field_c;
-        if (var2 == this.field_d) {
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_c;
+        if (var2 == this.sentinel) {
           this.field_c = null;
           return null;
         }
         if (param0 < -77) {
-          this.field_c = var2.field_g;
+          this.field_c = var2.secondaryNext;
           return var2;
         }
-        return (od) null;
+        return (DualLinkNode) null;
     }
 
     static {

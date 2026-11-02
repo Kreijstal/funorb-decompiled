@@ -105,11 +105,11 @@ final class ck {
           gv.field_w[0] = kda.field_cd;
           gv.field_w[2] = un.field_q;
           gv.field_w[3] = pta.field_d;
-          gv.field_w[4] = uia.field_f;
+          gv.field_w[4] = PacketBuffer.field_f;
           gv.field_w[1] = cha.field_b;
           rra.field_e = new jea(0L, (jea) null);
           uh.field_h = new jea(0L, ooa.field_f, ija.field_i);
-          vw.field_b = new jea(0L, hma.field_b, dl.field_m);
+          vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, dl.field_m);
           bsa.field_j = new iv(0L, new jea(0L, (jea) null), rfa.field_C, fe.field_F);
           rra.field_e.b(-126, uh.field_h);
           if (rca.field_p) {
@@ -130,7 +130,7 @@ final class ck {
           spa.field_o = new jea(0L, cs.field_a, du.field_a);
           l.field_K = new jea(0L, cs.field_a, qo.field_i);
           aw.field_I = new jea(0L, cs.field_a, ff.field_N);
-          cq.field_e = new jea(0L, hma.field_b, ra.field_G);
+          cq.field_e = new jea(0L, SecondaryNodeDeque.field_b, ra.field_G);
           nsa.field_i = new iv(0L, new jea(0L, (jea) null), rfa.field_C, fe.field_F);
           uq.field_c = new jea(0L, hg.field_g, iw.field_b.toUpperCase());
           uq.field_c.field_X = rca.field_p;
@@ -180,7 +180,7 @@ final class ck {
           cea.field_a = new jea(0L, kua.field_i);
           cea.field_a.field_z = 1;
           uaa.field_b = new jea(0L, ooa.field_f, ija.field_i);
-          lda.field_F = new jea(0L, hma.field_b, dl.field_m);
+          lda.field_F = new jea(0L, SecondaryNodeDeque.field_b, dl.field_m);
           tn.field_n = new iv(0L, new jea(0L, (jea) null), rfa.field_C, fe.field_F);
           lk.field_l.b(param11 ^ -25371, cea.field_a);
           lk.field_l.b(-124, uaa.field_b);
@@ -353,7 +353,7 @@ final class ck {
           dka.field_b.b(-125, hw.field_a);
           dka.field_b.b(-123, dl.field_t);
           vca.field_e = new jea(0L, oba.field_f, eu.field_b.toUpperCase());
-          fsa.field_q = new jea(0L, dp.field_i, ej.field_b.toUpperCase());
+          Trap.field_q = new jea(0L, dp.field_i, ej.field_b.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

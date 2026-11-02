@@ -18,15 +18,15 @@ final class sna {
 
     final void a(int param0) {
         int var7 = 0;
-        la var3;
+        Room var3;
         int var4;
-        fsa[] var5_ref_fsa__;
+        Trap[] var5_ref_fsa__;
         int var5;
-        fsa[] var6_ref_fsa__;
+        Trap[] var6_ref_fsa__;
         int var6;
-        fsa var8;
+        Trap var8;
         int var9;
-        hca var10;
+        Player var10;
         var9 = TombRacer.field_G ? 1 : 0;
         var10 = this.field_l.field_k.field_H[this.field_l.field_x];
         var3 = var10.f((byte) -106);
@@ -142,7 +142,7 @@ final class sna {
           } else {
             if (!this.field_l.d(0)) {
               this.field_l.a(var2.field_h, param0 ^ 644);
-              var2.p(param0 ^ 18);
+              var2.unlink(param0 ^ 18);
             }
           }
           var2 = (mga) (this.field_c.e(108));

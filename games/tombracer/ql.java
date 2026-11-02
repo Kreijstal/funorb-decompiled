@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ql extends od {
-    static kh field_k;
+class ql extends DualLinkNode {
+    static BitPacketBuffer field_k;
     static String[] field_m;
     static float field_l;
 
@@ -78,7 +78,7 @@ class ql extends od {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           var3 = -66 / ((param0 - 45) / 59);
-          param1.p(118);
+          param1.unlink(118);
           var2 = (pha) (uma.field_b.f(-80));
           while (var2 != null) {
             if (var2.a((byte) 123, param1)) {

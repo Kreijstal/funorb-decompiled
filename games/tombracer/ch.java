@@ -3,14 +3,14 @@
  */
 final class ch implements Runnable {
     volatile boolean field_b;
-    volatile kta[] field_c;
-    fia field_d;
+    volatile AudioOutput[] field_c;
+    PlatformTaskDispatcher field_d;
     static String field_e;
     volatile boolean field_a;
 
     public final void run() {
         int var1_int = 0;
-        kta var2 = null;
+        AudioOutput var2 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
@@ -59,7 +59,7 @@ final class ch implements Runnable {
     }
 
     ch() {
-        this.field_c = new kta[2];
+        this.field_c = new AudioOutput[2];
         this.field_a = false;
         this.field_b = false;
     }

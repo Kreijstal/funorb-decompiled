@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class od extends IntrusiveNode {
+class DualLinkNode extends IntrusiveNode {
     static ura field_h;
     static int field_i;
-    od field_f;
-    od field_g;
-    long field_j;
+    DualLinkNode secondaryPrevious;
+    DualLinkNode secondaryNext;
+    long secondaryKey;
 
     public static void b(int param0) {
         if (param0 != 0) {
@@ -17,48 +17,48 @@ class od extends IntrusiveNode {
         field_h = null;
     }
 
-    final boolean d(int param0) {
-        if (this.field_f == null) {
+    final boolean isSecondaryLinked(int param0) {
+        if (this.secondaryPrevious == null) {
           return false;
         }
         if (param0 != 0) {
-          uia var3 = (uia) null;
-          od.a(-117, (uia) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          DualLinkNode.a(-117, (PacketBuffer) null);
           return true;
         }
         return true;
     }
 
-    final void a(boolean param0, long param1) {
+    final void setSecondaryKey(boolean param0, long param1) {
         if (param0) {
-          od.b(-57);
-          if (this.field_f == null) {
-            this.field_j = param1;
+          DualLinkNode.b(-57);
+          if (this.secondaryPrevious == null) {
+            this.secondaryKey = param1;
             return;
           }
           throw new RuntimeException();
         }
-        if (this.field_f == null) {
-          this.field_j = param1;
+        if (this.secondaryPrevious == null) {
+          this.secondaryKey = param1;
           return;
         }
         throw new RuntimeException();
     }
 
-    final void c(int param0) {
-        if (this.field_f == null) {
+    final void unlinkSecondary(int param0) {
+        if (this.secondaryPrevious == null) {
           return;
         }
         if (param0 == -7975) {
-          this.field_f.field_g = this.field_g;
-          this.field_g.field_f = this.field_f;
-          this.field_f = null;
-          this.field_g = null;
+          this.secondaryPrevious.secondaryNext = this.secondaryNext;
+          this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+          this.secondaryPrevious = null;
+          this.secondaryNext = null;
           return;
         }
     }
 
-    final static hc a(int param0, uia param1) {
+    final static hc a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         hc stackIn_2_0 = null;
         hc stackIn_4_0 = null;
@@ -87,14 +87,14 @@ class od extends IntrusiveNode {
         }
     }
 
-    protected od() {
+    protected DualLinkNode() {
     }
 
-    final long e(int param0) {
+    final long getSecondaryKey(int param0) {
         if (param0 != 0) {
           return -21L;
         }
-        return this.field_j;
+        return this.secondaryKey;
     }
 
     static {

@@ -8,7 +8,7 @@ final class hf implements ac, gs {
     private int field_h;
     private int field_j;
     private bua field_c;
-    static uia field_d;
+    static PacketBuffer field_d;
     private boolean field_m;
     static jea field_a;
     int field_k;
@@ -16,7 +16,7 @@ final class hf implements ac, gs {
     private int field_f;
     private int field_i;
     static int field_b;
-    private hca field_p;
+    private Player field_p;
     private bua field_n;
 
     public final void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -413,7 +413,7 @@ final class hf implements ac, gs {
         float var5;
         int var6;
         int var7;
-        la var8;
+        Room var8;
         w var9;
         int var10;
         int var11;
@@ -879,7 +879,7 @@ final class hf implements ac, gs {
         return stackIn_7_0;
     }
 
-    hf(hca param0, int param1) {
+    hf(Player param0, int param1) {
         aga var3 = null;
         this.field_o = false;
         this.field_h = 0;
@@ -897,7 +897,7 @@ final class hf implements ac, gs {
         }
     }
 
-    public final void a(int param0, la param1) {
+    public final void a(int param0, Room param1) {
         sva var5 = null;
         if (param1 == null) {
           return;

@@ -77,11 +77,11 @@ final class wh extends nv implements ut {
     final void k(int param0) {
         int var3;
         int var10;
-        la var11;
+        Room var11;
         boolean stackIn_7_1 = false;
-        la stackIn_24_0 = null;
+        Room stackIn_24_0 = null;
         int stackIn_25_1 = 0;
-        la stackIn_28_0 = null;
+        Room stackIn_28_0 = null;
         int stackIn_29_1 = 0;
         boolean stackIn_38_1 = false;
         mma stackIn_58_0 = null;
@@ -160,7 +160,7 @@ final class wh extends nv implements ut {
           } else {
             stackIn_29_1 = 4;
           }
-          ((la) (Object) stackIn_28_0).a(stackIn_29_1, this.field_g, -44, this.field_u, this.e(6), this.field_z);
+          ((Room) (Object) stackIn_28_0).a(stackIn_29_1, this.field_g, -44, this.field_u, this.e(6), this.field_z);
           var4 = this.a(this.field_u, (byte) 72);
           this.q((byte) 92);
           var11.a(1, this.field_g, -91, this.field_u, this.e(6), this.field_z);
@@ -179,7 +179,7 @@ final class wh extends nv implements ut {
           } else {
             stackIn_25_1 = 3;
           }
-          ((la) (Object) stackIn_24_0).a(stackIn_25_1, this.field_u, this.e(6), (byte) -123);
+          ((Room) (Object) stackIn_24_0).a(stackIn_25_1, this.field_u, this.e(6), (byte) -123);
           var4 = this.a(this.field_u, (byte) -68);
           this.q((byte) 92);
           var11.a(1, this.field_u, this.e(6), (byte) 75);
@@ -380,7 +380,7 @@ final class wh extends nv implements ut {
         }
     }
 
-    wh(la param0, boolean param1) {
+    wh(Room param0, boolean param1) {
         super(param0, param1);
         this.field_u = new pc();
         this.field_s = 0;
@@ -415,7 +415,7 @@ final class wh extends nv implements ut {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_C.a(this.h((byte) 118), (byte) 113, param1);
@@ -439,7 +439,7 @@ final class wh extends nv implements ut {
         return false;
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           this.field_p = new mma(0, 16777215, this.field_u, param1.P(0));
@@ -484,7 +484,7 @@ final class wh extends nv implements ut {
         }
     }
 
-    wh(la param0, kh param1, boolean param2) {
+    wh(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_u = new pc();
         this.field_s = 0;

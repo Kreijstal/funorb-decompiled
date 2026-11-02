@@ -35,7 +35,7 @@ final class dta {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
-        hca var12 = null;
+        Player var12 = null;
         dt var13 = null;
         int var14 = 0;
         int var15 = 0;
@@ -61,9 +61,9 @@ final class dta {
         int var32 = 0;
         int var33 = 0;
         float var33_float = 0.0f;
-        la var34 = null;
+        Room var34 = null;
         int var34_int = 0;
-        fsa[] var35 = null;
+        Trap[] var35 = null;
         int var35_int = 0;
         da var36 = null;
         int var37 = 0;
@@ -125,7 +125,7 @@ final class dta {
             if (var9.field_P > 1) {
               if (var9.b((byte) 90, param2)) {
                 tga.field_a.KA(param0, param5, param1, param6);
-                la.field_j.a(0, 0);
+                Room.field_j.a(0, 0);
                 SocketConnector.a(ad.field_i.toUpperCase(), 1, qr.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
                 SocketConnector.a(dea.a(var9.c((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
                 tga.field_a.la();
@@ -371,7 +371,7 @@ final class dta {
           }
           if (!param4.n(99)) {
             tga.field_a.KA(param0, param5, param1, param6);
-            la.field_j.a(0, 0);
+            Room.field_j.a(0, 0);
             tga.field_a.la();
           }
           var9_int = (-param0 + param1 >> 1) + param0;

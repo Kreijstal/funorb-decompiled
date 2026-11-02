@@ -5,7 +5,7 @@ final class cm implements bo {
     private int field_b;
     static qg[] field_a;
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           this.field_b = param0.h(255);
           if (param1 != -19) {
@@ -23,7 +23,7 @@ final class cm implements bo {
         }
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         if (param0 != 200) {
           return;
         }
@@ -553,10 +553,10 @@ final class cm implements bo {
                     if (var14 != 0) {
                       var22 = ova.field_j;
                       if (var15 > 0 &&
-                        null != kh.field_l &&
-                        var15 <= kh.field_l.length &&
-                        null != kh.field_l[var15 - 1]) {
-                        var22 = kh.field_l[var15 - 1][0];
+                        null != BitPacketBuffer.field_l &&
+                        var15 <= BitPacketBuffer.field_l.length &&
+                        null != BitPacketBuffer.field_l[var15 - 1]) {
+                        var22 = BitPacketBuffer.field_l[var15 - 1][0];
                       }
                       if (var21 != null) {
                         var21 = (String) (var21) + "<br>" + (String) (var22);

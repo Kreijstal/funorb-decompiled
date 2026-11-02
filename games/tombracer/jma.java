@@ -19,15 +19,15 @@ final class jma implements noa {
     static String field_h;
     private int field_b;
 
-    final void a(ew param0, byte param1, kh param2) {
+    final void a(ew param0, byte param1, BitPacketBuffer param2) {
         try {
           this.field_d.a(30489, param0, param2);
           param2.a((byte) -127, this.field_e, 8);
           param2.a((byte) -45, this.field_k, 8);
           param2.a((byte) -125, this.field_i, 8);
           if (param1 <= 65) {
-            kh var5 = (kh) null;
-            this.a((ew) null, (byte) 97, (kh) null);
+            BitPacketBuffer var5 = (BitPacketBuffer) null;
+            this.a((ew) null, (byte) 97, (BitPacketBuffer) null);
           }
           param2.a((byte) -126, this.field_l, 8);
           param2.a((byte) -45, this.field_f, 8);
@@ -446,7 +446,7 @@ final class jma implements noa {
         return param1;
     }
 
-    jma(int param0, la param1, kh param2) {
+    jma(int param0, Room param1, BitPacketBuffer param2) {
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_14_0 = null;

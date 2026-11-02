@@ -25,7 +25,7 @@ final class wc extends lu {
         return boa.field_s;
     }
 
-    final void a(uia param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             this.field_f = (String) null;

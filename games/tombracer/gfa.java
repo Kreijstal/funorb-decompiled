@@ -9,7 +9,7 @@ final class gfa extends bs {
     static String field_i;
     static String field_m;
 
-    final void a(kh param0, int param1) {
+    final void a(BitPacketBuffer param0, int param1) {
         try {
           super.a(param0, param1);
           param0.a((byte) -128, this.field_n, 4);
@@ -53,7 +53,7 @@ final class gfa extends bs {
         return 0;
     }
 
-    gfa(int param0, kh param1) {
+    gfa(int param0, BitPacketBuffer param1) {
         super(param0, param1);
         try {
           this.field_n = param1.b((byte) 44, 4);

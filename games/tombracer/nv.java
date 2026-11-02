@@ -4,26 +4,26 @@
 abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
     boolean field_f;
     static String field_h;
-    fsa field_g;
+    Trap field_g;
     private gpa field_j;
     boolean field_k;
     private boolean field_i;
     private gpa field_l;
-    private la field_m;
+    private Room field_m;
 
     final boolean d(int param0) {
-        hca var2 = null;
-        hca var2Lifetime1;
+        Player var2 = null;
+        Player var2Lifetime1;
         if (param0 == 8031) {
           var2 = this.m((byte) 19);
           return io.a(var2.c(-47), this.field_g.e(9648), (byte) -57, var2.a((byte) 55), this.field_g.d(3), var2.e(9648), this.field_g.a((byte) 55), this.field_g.c(param0 ^ -8057), var2.d(3));
         }
-        this.field_m = (la) null;
+        this.field_m = (Room) null;
         var2Lifetime1 = this.m((byte) 19);
         return io.a(var2Lifetime1.c(-47), this.field_g.e(9648), (byte) -57, var2Lifetime1.a((byte) 55), this.field_g.d(3), var2Lifetime1.e(9648), this.field_g.a((byte) 55), this.field_g.c(param0 ^ -8057), var2Lifetime1.d(3));
     }
 
-    int a(int param0, ep param1, up param2) {
+    int a(int param0, Projectile param1, up param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -37,7 +37,7 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          this.field_m = (la) null;
+          this.field_m = (Room) null;
           return 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,7 +100,7 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
         return this.field_j;
     }
 
-    public final fsa f(byte param0) {
+    public final Trap f(byte param0) {
         int var2 = 119 / ((-32 - param0) / 50);
         return this.field_g;
     }
@@ -136,11 +136,11 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
         }
     }
 
-    final hca m(byte param0) {
+    final Player m(byte param0) {
         if (param0 == 19) {
           return this.field_g.H(param0 ^ -108);
         }
-        this.field_g = (fsa) null;
+        this.field_g = (Trap) null;
         return this.field_g.H(param0 ^ -108);
     }
 
@@ -203,7 +203,7 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
         return (ew) ((Object) this.field_g.r(0));
     }
 
-    nv(la param0, kh param1, boolean param2) {
+    nv(Room param0, BitPacketBuffer param1, boolean param2) {
         this(param0, param2);
         try {
           this.field_f = param1.b((byte) 44, 1) == 1 ? true : false;
@@ -215,7 +215,7 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
         }
     }
 
-    final la b(boolean param0) {
+    final Room b(boolean param0) {
         if (!param0) {
           this.a(-83, 93, false);
           return this.field_m;
@@ -235,7 +235,7 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
         field_h = null;
     }
 
-    void a(boolean param0, fsa param1) {
+    void a(boolean param0, Trap param1) {
         try {
           if (!param0) {
             this.m(23);
@@ -256,15 +256,15 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
 
     boolean a(int param0, int param1, pc param2, int param3) {
         RuntimeException var5 = null;
-        fsa var6 = null;
+        Trap var6 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            var6 = (fsa) null;
-            this.a(false, (fsa) null);
+            var6 = (Trap) null;
+            this.a(false, (Trap) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -352,7 +352,7 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
         return this.field_g.e(9648);
     }
 
-    void a(boolean param0, kh param1) {
+    void a(boolean param0, BitPacketBuffer param1) {
         try {
           param1.a((byte) -127, this.a(param0), 6);
           param1.a((byte) -126, !this.field_f ? 0 : 1, 1);
@@ -385,7 +385,7 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
         return this.field_g.x(param0 + 3130);
     }
 
-    final fsa e(int param0) {
+    final Trap e(int param0) {
         if (param0 == 6) {
           return this.field_g.r(param0 ^ 6);
         }
@@ -450,7 +450,7 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
     final void a(byte param0, boolean param1) {
         this.field_k = param1 ? true : false;
         if (param0 != -24) {
-          this.field_m = (la) null;
+          this.field_m = (Room) null;
         }
     }
 
@@ -460,7 +460,7 @@ abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
         }
     }
 
-    nv(la param0, boolean param1) {
+    nv(Room param0, boolean param1) {
         this.field_f = true;
         this.field_i = false;
         this.field_k = false;

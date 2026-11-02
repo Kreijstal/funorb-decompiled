@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class um extends od {
+class um extends DualLinkNode {
     static String field_k;
     static byte[] field_m;
     static mpa field_l;

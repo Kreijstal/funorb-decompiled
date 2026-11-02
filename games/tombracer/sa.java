@@ -129,14 +129,14 @@ final class sa extends wda {
           int[] var3 = (int[]) null;
           sa.a((jea) null, (jea) null, (jea) null, (int[]) null, true);
         }
-        if ((gt.field_a > 0 || fp.field_e > 0) &&
+        if ((GameKeyHandler.field_a > 0 || fp.field_e > 0) &&
           tla.field_e) {
           bea.d(0, 0, bea.field_g, era.field_e.field_A);
           hf.field_a.b(85, param0);
         }
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         super.a(param0, (byte) -85);
         param0.a((byte) 2, dqa.a(true, this.field_p >> 16, 12), 12);
         param0.a((byte) -126, dqa.a(true, this.field_q >> 16, 12), 12);
@@ -212,7 +212,7 @@ final class sa extends wda {
         }
     }
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         try {
           if (param0 <= 35) {
             sa.a(true, 47, true, -59, (byte) -121);
@@ -223,7 +223,7 @@ final class sa extends wda {
         }
     }
 
-    sa(la param0, kh param1, boolean param2) {
+    sa(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;

@@ -17,24 +17,24 @@ final class wha extends kna {
         return false;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         hia var5 = null;
         int var6 = 0;
         mfa var7 = null;
         nq var8 = null;
-        fsa var9 = null;
+        Trap var9 = null;
         int stackIn_3_0 = 0;
         hia stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         boolean stackIn_6_2 = false;
-        fsa stackIn_7_0 = null;
+        Trap stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new fsa(param2, param0);
+          var9 = new Trap(param2, param0);
           var9.b((byte) -11, this.field_k, this.field_l);
           var9.h(3, 0);
           var9.a(1, (byte) -12, true);
@@ -72,7 +72,7 @@ final class wha extends kna {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 28, wma.a((byte) 8, 4, this.field_F), 8);
@@ -81,7 +81,7 @@ final class wha extends kna {
         }
     }
 
-    wha(la param0, int param1, kh param2, csa param3) {
+    wha(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
         this.field_F = 131072;
         try {
@@ -91,7 +91,7 @@ final class wha extends kna {
         }
     }
 
-    wha(la param0, int param1) {
+    wha(Room param0, int param1) {
         super(param0, param1);
         this.field_F = 131072;
     }

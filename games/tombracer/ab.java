@@ -139,7 +139,7 @@ final class ab extends qra {
         int var8Lifetime1;
         int var9Lifetime1;
         var16 = TombRacer.field_G ? 1 : 0;
-        la.field_j.a(0, 0);
+        Room.field_j.a(0, 0);
         var3 = 0;
         var4 = this.field_o.g(-1);
         if (!this.field_h.d((byte) 63) &&

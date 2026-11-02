@@ -14,7 +14,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
     int field_l;
     static int field_n;
     static int field_g;
-    la field_o;
+    Room field_o;
     private gpa field_w;
     static su field_y;
     int field_p;
@@ -126,7 +126,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         return this.field_p;
     }
 
-    public final la f(byte param0) {
+    public final Room f(byte param0) {
         int var2 = -126 / ((param0 - 0) / 61);
         return this.field_o;
     }
@@ -275,7 +275,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         return io.a(param4, this.e(9648), (byte) -62, param3, this.d(3), param1, this.field_k, this.field_l, param2);
     }
 
-    void a(la param0, int param1) {
+    void a(Room param0, int param1) {
         try {
           if (param1 != 1) {
             this.field_k = -87;
@@ -397,8 +397,8 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
 
     final csa a(int param0, boolean param1, int param2) {
         if (param2 != 20) {
-          fsa var5 = (fsa) null;
-          this.a(true, false, (la) null, 109, -103, 35, (fsa) null);
+          Trap var5 = (Trap) null;
+          this.a(true, false, (Room) null, 109, -103, 35, (Trap) null);
         }
         if (!param1) {
           return this.field_o.a(param1, param0, param2 ^ 18);
@@ -414,7 +414,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         this.field_p = param1;
     }
 
-    csa(la param0, int param1, kh param2, csa param3) {
+    csa(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         this(param0, param1);
         int var5_int = 0;
         boolean stackIn_16_1 = false;
@@ -633,7 +633,7 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
 
     public final gpa n(int param0) {
         if (param0 != 31974) {
-          this.field_o = (la) null;
+          this.field_o = (Room) null;
         }
         return this.field_w;
     }
@@ -772,11 +772,11 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         return 0;
     }
 
-    void a(boolean param0, kh param1) {
-        kh stackIn_12_0 = null;
+    void a(boolean param0, BitPacketBuffer param1) {
+        BitPacketBuffer stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         int stackIn_13_2 = 0;
-        kh stackIn_16_0 = null;
+        BitPacketBuffer stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         int stackIn_17_2 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -801,24 +801,24 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
             param1.a((byte) 8, cn.a((byte) 103, this.field_r, 8192, 4), 4);
           }
           if (this.a(6)) {
-            stackIn_12_0 = (kh) (param1);
+            stackIn_12_0 = (BitPacketBuffer) (param1);
             stackIn_12_1 = 116;
             if (this.field_x) {
               stackIn_13_2 = 1;
             } else {
               stackIn_13_2 = 0;
             }
-            ((kh) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_13_2, 1);
+            ((BitPacketBuffer) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_13_2, 1);
           }
           this.field_z.a((byte) -97, param1);
-          stackIn_16_0 = (kh) (param1);
+          stackIn_16_0 = (BitPacketBuffer) (param1);
           stackIn_16_1 = 79;
           if (!this.field_v) {
             stackIn_17_2 = 0;
           } else {
             stackIn_17_2 = 1;
           }
-          ((kh) (Object) stackIn_16_0).a((byte) stackIn_16_1, stackIn_17_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_16_0).a((byte) stackIn_16_1, stackIn_17_2, 1);
           var3_int = 0;
           if (param0) {
             return;
@@ -856,9 +856,9 @@ abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
         }
     }
 
-    abstract void a(boolean param0, boolean param1, la param2, int param3, int param4, int param5, fsa param6);
+    abstract void a(boolean param0, boolean param1, Room param2, int param3, int param4, int param5, Trap param6);
 
-    csa(la param0, int param1) {
+    csa(Room param0, int param1) {
         this.field_t = new mka[]{};
         this.field_z = new bca();
         this.field_x = true;

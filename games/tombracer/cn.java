@@ -331,12 +331,12 @@ final class cn {
         byte[] var24 = null;
         int[] var25 = null;
         byte[] var26 = null;
-        uia var27 = null;
+        PacketBuffer var27 = null;
         byte[] var28 = null;
-        uia var30 = null;
+        PacketBuffer var30 = null;
         int[] var31 = null;
         byte[][] var32 = null;
-        uia var33 = null;
+        PacketBuffer var33 = null;
         int[] var35 = null;
         byte[] var36 = null;
         byte[] var37 = null;
@@ -401,8 +401,8 @@ final class cn {
             var36 = ir.a(this.field_a[param0], 13588, true);
             var26 = var36;
             var10 = var26;
-            var27 = new uia(var36);
-            var27.a(var27.field_g.length, -84984444, param1, 5);
+            var27 = new PacketBuffer(var36);
+            var27.a(var27.payload.length, -84984444, param1, 5);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -430,9 +430,9 @@ final class cn {
               var12--;
               var13 = var24[var12] & 255;
               var12 = var12 - 4 * (var5_int * var13);
-              var33 = new uia(var44);
+              var33 = new PacketBuffer(var44);
               var15 = 0;
-              var33.field_h = var12;
+              var33.position = var12;
               var16 = 0;
               for (var17 = 0; var17 < var13; var17++) {
                 var18 = 0;
@@ -453,7 +453,7 @@ final class cn {
                 return true;
               }
               var45 = new byte[var15];
-              var33.field_h = var12;
+              var33.position = var12;
               var15Lifetime1 = 0;
               var18Lifetime4 = 0;
               for (var19Lifetime3 = 0; var13 > var19Lifetime3; var19Lifetime3++) {
@@ -479,11 +479,11 @@ final class cn {
             var12--;
             var13Lifetime1 = var24[var12] & 255;
             var12 = var12 - var13Lifetime1 * var5_int * 4;
-            var30 = new uia(var44);
+            var30 = new PacketBuffer(var44);
             var39 = new int[var5_int];
             var31 = var39;
             var15_ref_int__ = var31;
-            var30.field_h = var12;
+            var30.position = var12;
             for (var16Lifetime1 = 0; var16Lifetime1 < var13Lifetime1; var16Lifetime1++) {
               var17Lifetime1 = 0;
               for (var18Lifetime1 = 0; var18Lifetime1 < var5_int; var18Lifetime1++) {
@@ -499,7 +499,7 @@ final class cn {
               var16_ref_byte____[var17Lifetime2] = array$1;
               var39[var17Lifetime2] = 0;
             }
-            var30.field_h = var12;
+            var30.position = var12;
             var17Lifetime3 = 0;
             for (var18Lifetime2 = 0; var13Lifetime1 > var18Lifetime2; var18Lifetime2++) {
               var19Lifetime1 = 0;

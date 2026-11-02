@@ -51,7 +51,7 @@ final class w extends sqa {
         this.a(true);
     }
 
-    final static int a(uia param0, int param1, vna param2) {
+    final static int a(PacketBuffer param0, int param1, vna param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -75,7 +75,7 @@ final class w extends sqa {
           var4 = 0;
           var5 = -1;
           while (true) {
-            if (param0.field_h < param0.field_g.length) {
+            if (param0.position < param0.payload.length) {
               var5 = param0.h(255);
               if ((~var5 != ~dia.field_q ||
                 var4 != 0) &&
@@ -87,7 +87,7 @@ final class w extends sqa {
                 }
                 boolean decompiledFrameRemainder0 = true;
                 if (var4 != 0) {
-                  if (param0.field_g.length == param0.field_h + 1) {
+                  if (param0.payload.length == param0.position + 1) {
                     throw new RuntimeException("Unterminated quote!");
                   }
                   var6 = param0.c((byte) 52);
@@ -96,13 +96,13 @@ final class w extends sqa {
                     if (uqa.field_w == var6) {
                       discarded$0 = var8.append((char)var6);
                     } else {
-                      param0.field_h = param0.field_h - 1;
+                      param0.position = param0.position - 1;
                       discarded$1 = var8.append((char)var5);
                     }
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    param0.field_h = param0.field_h - 1;
+                    param0.position = param0.position - 1;
                   }
                 }
                 stackIn_26_0 = (var4 != 0) ? 0 : 1;
@@ -307,7 +307,7 @@ final class w extends sqa {
         fla var6Lifetime1;
         while (var5 != null) {
           this.a(var5, -58);
-          var5.p(15);
+          var5.unlink(15);
           var5 = (fm) (this.field_b.e(124));
         }
         if (param0 < 75) {

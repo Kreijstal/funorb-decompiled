@@ -22,7 +22,7 @@ final class cf implements bo {
         }
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         int var4 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -82,7 +82,7 @@ final class cf implements bo {
         return var1;
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         int var4 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -91,7 +91,7 @@ final class cf implements bo {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var5 = 0;
-        kh var6 = null;
+        BitPacketBuffer var6 = null;
         int var3_intLifetime1;
         int var3_intLifetime2;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -105,8 +105,8 @@ final class cf implements bo {
             }
           }
           if (param1 != -19) {
-            var6 = (kh) null;
-            this.a(41, (kh) null);
+            var6 = (BitPacketBuffer) null;
+            this.a(41, (BitPacketBuffer) null);
           }
           this.field_b = new int[this.field_g];
           for (var3_intLifetime1 = 0; this.field_g > var3_intLifetime1; var3_intLifetime1++) {
@@ -181,7 +181,7 @@ final class cf implements bo {
     final void a(qh param0, int param1) {
         ff var8 = null;
         int var4 = 0;
-        hca var5 = null;
+        Player var5 = null;
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
         try {

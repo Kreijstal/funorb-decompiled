@@ -5,7 +5,7 @@ final class uc extends hn {
     static String field_K;
     static boolean field_L;
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           if (param0) {
             field_K = (String) null;
@@ -16,22 +16,22 @@ final class uc extends hn {
         }
     }
 
-    uc(la param0, int param1, kh param2, csa param3) {
+    uc(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 
     final boolean D(int param0) {
         if (param0 != 0) {
-          kh var3 = (kh) null;
-          this.a(false, (kh) null);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a(false, (BitPacketBuffer) null);
           return true;
         }
         return true;
     }
 
-    final fsa a(la param0, boolean param1, boolean param2) {
+    final Trap a(Room param0, boolean param1, boolean param2) {
         RuntimeException var4 = null;
-        fsa stackIn_3_0 = null;
+        Trap stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -40,7 +40,7 @@ final class uc extends hn {
           if (!param1) {
             return null;
           }
-          stackIn_3_0 = (fsa) null;
+          stackIn_3_0 = (Trap) null;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,21 +56,21 @@ final class uc extends hn {
         }
     }
 
-    final fsa a(int param0, boolean param1, la param2) {
+    final Trap a(int param0, boolean param1, Room param2) {
         RuntimeException var4 = null;
         eq var5 = null;
         cu var6 = null;
         kpa var7 = null;
         mfa var8 = null;
         boa var9 = null;
-        fsa var10 = null;
-        fsa stackIn_3_0 = null;
+        Trap var10 = null;
+        Trap stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new fsa(param2, param1);
+          var10 = new Trap(param2, param1);
           var10.b((byte) -11, 2097152, 2097152);
           var10.a((byte) -3, 4);
           var10.h(3, 0);
@@ -120,7 +120,7 @@ final class uc extends hn {
         return true;
     }
 
-    uc(la param0, int param1) {
+    uc(Room param0, int param1) {
         super(param0, param1);
     }
 

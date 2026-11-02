@@ -64,7 +64,7 @@ final class dja extends nv implements ut {
         return 3364198;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -127, this.field_o, 8);
@@ -75,7 +75,7 @@ final class dja extends nv implements ut {
         }
     }
 
-    dja(la param0, kh param1, boolean param2) {
+    dja(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_o = param1.b((byte) 44, 8);
@@ -96,7 +96,7 @@ final class dja extends nv implements ut {
         return this.field_o;
     }
 
-    dja(la param0, boolean param1) {
+    dja(Room param0, boolean param1) {
         super(param0, param1);
         try {
           this.field_o = 50;

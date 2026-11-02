@@ -21,8 +21,8 @@ final class jaa implements noa {
           }
           return var2;
         }
-        kh var3 = (kh) null;
-        this.a(8, (kh) null);
+        BitPacketBuffer var3 = (BitPacketBuffer) null;
+        this.a(8, (BitPacketBuffer) null);
         var2Lifetime1 = this.field_d | (this.field_g << 16 | this.field_f << 8);
         if (this.field_e) {
           var2Lifetime1 = this.field_h << 24 | var2Lifetime1;
@@ -30,7 +30,7 @@ final class jaa implements noa {
         return var2Lifetime1;
     }
 
-    private final void a(int param0, int param1, kh param2) {
+    private final void a(int param0, int param1, BitPacketBuffer param2) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -101,7 +101,7 @@ final class jaa implements noa {
         this.field_e = param0 ? true : false;
     }
 
-    final void a(int param0, kh param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -163,7 +163,7 @@ final class jaa implements noa {
         }
     }
 
-    jaa(boolean param0, int param1, int param2, kh param3) {
+    jaa(boolean param0, int param1, int param2, BitPacketBuffer param3) {
         try {
           this.field_e = param0 ? true : false;
           this.field_c = param1;

@@ -47,13 +47,13 @@ abstract class ob extends IntrusiveNode {
         int var2_intLifetime1;
         int var2_intLifetime2;
         tp.field_K = su.a(rva.field_v, param0, (byte) 127);
-        la.field_p = new nh[6][];
+        Room.field_p = new nh[6][];
         if (param1 != 17186) {
           return;
         }
         try {
           for (var2_int = 0; var2_int < 6; var2_int++) {
-            la.field_p[var2_int] = ak.a(param0, eta.field_a[var2_int], -82);
+            Room.field_p[var2_int] = ak.a(param0, eta.field_a[var2_int], -82);
           }
           ng.field_k = new nh[6];
           em.field_h = new nh[6];
@@ -122,13 +122,13 @@ abstract class ob extends IntrusiveNode {
           ng.field_b = ak.a(param0, qka.field_o, param1 - 17309);
           vna.field_c = su.a(ko.field_j, param0, (byte) -95);
           tka.field_p = su.a(ht.field_Db, param0, (byte) 27);
-          ep.field_n = su.a(oea.field_j, param0, (byte) -37);
+          Projectile.field_n = su.a(oea.field_j, param0, (byte) -37);
           wh.field_y = su.a(cn.field_h, param0, (byte) 127);
           haa.field_z = su.a(re.field_a, param0, (byte) 126);
           aq.field_a = ak.a(param0, mna.field_c, -55);
           mc.field_r = su.a(fm.field_h, param0, (byte) 127);
           dp.field_d = ri.a(param0, (byte) -105, haa.field_A.field_f);
-          la.field_j = ri.a(param0, (byte) -104, du.field_c.field_f);
+          Room.field_j = ri.a(param0, (byte) -104, du.field_c.field_f);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ob.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

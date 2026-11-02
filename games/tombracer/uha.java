@@ -46,7 +46,7 @@ final class uha extends wda {
         this.field_n.a((byte) -94, -var4 + var6, var8 - var5);
     }
 
-    final static boolean a(int param0, kh param1) {
+    final static boolean a(int param0, BitPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -73,7 +73,7 @@ final class uha extends wda {
         }
     }
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         try {
           super.a(85, param1);
           this.field_p = true;
@@ -107,9 +107,9 @@ final class uha extends wda {
         return 256;
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         jea var4 = null;
-        kh stackIn_2_0 = null;
+        BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -122,14 +122,14 @@ final class uha extends wda {
           param0.a((byte) -44, this.field_o >> 16, 10);
           param0.a((byte) 90, dqa.a(true, this.field_r, 12), 12);
           param0.a((byte) -126, cn.a((byte) 74, this.field_q, 32768, 4), 4);
-          stackIn_2_0 = (kh) (param0);
+          stackIn_2_0 = (BitPacketBuffer) (param0);
           stackIn_2_1 = -128;
           if (!this.field_t) {
             stackIn_3_2 = 0;
           } else {
             stackIn_3_2 = 1;
           }
-          ((kh) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
           if (param1 >= -78) {
             var4 = (jea) null;
             uha.a((jea) null, -46, (byte) 104, (jea) null, -72, 112, (byte[]) null, -67, (jea) null, 84);
@@ -149,7 +149,7 @@ final class uha extends wda {
         }
     }
 
-    uha(la param0, kh param1, boolean param2) {
+    uha(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_10_0 = null;

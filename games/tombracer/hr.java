@@ -334,7 +334,7 @@ final class hr extends c implements fo {
         this.field_p = param1;
     }
 
-    final void a(la param0, int param1) {
+    final void a(Room param0, int param1) {
         this.field_B = param0.a(this.field_B, (byte) 71);
         if (param1 >= -16) {
           return;

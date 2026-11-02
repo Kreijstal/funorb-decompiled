@@ -30,7 +30,7 @@ final class sg extends nv {
         field_u = null;
     }
 
-    sg(la param0, kh param1, boolean param2) {
+    sg(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_r = false;
         try {
@@ -109,7 +109,7 @@ final class sg extends nv {
     }
 
     final void k(int param0) {
-        hca var2 = null;
+        Player var2 = null;
         if (param0 != 5418) {
           return;
         }
@@ -150,7 +150,7 @@ final class sg extends nv {
         return 10;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -125, this.field_p ? 1 : 0, 1);

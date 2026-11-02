@@ -92,14 +92,14 @@ final class oia implements gs {
     }
 
     final static void a(int param0, sda param1, int param2) {
-        kh var6 = null;
+        BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = ql.field_k;
-          kh var3 = var6;
+          BitPacketBuffer var3 = var6;
           var6.k(param0, -2988);
-          var6.field_h = var6.field_h + 1;
-          var4 = var6.field_h;
+          var6.position = var6.position + 1;
+          var4 = var6.position;
           var6.i(1, 0);
           if (null != param1.field_j) {
             var6.i(param1.field_j.length, 0);
@@ -109,9 +109,9 @@ final class oia implements gs {
           }
           int var5 = 72 / ((30 - param2) / 34);
           var6.g(var4, 64);
-          var6.field_h = var6.field_h - 4;
+          var6.position = var6.position - 4;
           param1.field_l = var6.e(115);
-          var6.d(-var4 + var6.field_h, (byte) -110);
+          var6.d(-var4 + var6.position, (byte) -110);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oia.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

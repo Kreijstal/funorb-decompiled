@@ -17,13 +17,13 @@ final class bda extends ci {
           }
         }
         if (param0 != 1) {
-          kh var7 = (kh) null;
-          bda.a(true, (byte) 12, (la) null, (kh) null);
+          BitPacketBuffer var7 = (BitPacketBuffer) null;
+          bda.readBehaviour(true, (byte) 12, (Room) null, (BitPacketBuffer) null);
         }
         return var3;
     }
 
-    final static nv a(boolean param0, byte param1, la param2, kh param3) {
+    final static nv readBehaviour(boolean param0, byte param1, Room param2, BitPacketBuffer param3) {
         fra stackIn_51_0 = null;
         hi stackIn_53_0 = null;
         rea stackIn_55_0 = null;

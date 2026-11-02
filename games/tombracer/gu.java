@@ -34,7 +34,7 @@ final class gu extends me {
         var6 = 50 + this.field_g.field_P * var5;
         var7 = this.field_j;
         var8 = var7 + 40;
-        rba.a(192, var6, 3145728, this.field_n, (byte) 47, var7 - 16, this.field_m - this.field_n / 2);
+        SecondaryNodeDequeIterator.a(192, var6, 3145728, this.field_n, (byte) 47, var7 - 16, this.field_m - this.field_n / 2);
         tp.a(-(this.field_n / 2) + this.field_m, (byte) -85, var7 - 16, 5242880, 2, var6, this.field_n);
         oka.a(wj.field_b, 16777215, kn.field_p, -1, var7 + 4, this.field_m, 0);
         for (var9 = 0; var9 < this.field_g.field_H.length; var9++) {

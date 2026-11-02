@@ -33,7 +33,7 @@ abstract class ci extends IntrusiveNode {
         return this.field_j[param0].c(1, param2);
     }
 
-    void a(byte param0, uia param1, int param2) {
+    void a(byte param0, PacketBuffer param1, int param2) {
         try {
           if (param0 != 107) {
             this.c(1, -94);

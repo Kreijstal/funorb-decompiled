@@ -13,7 +13,7 @@ final class bqa implements bo {
     static String field_g;
 
     final void a(v param0, int param1, qh param2) {
-        hca var7 = null;
+        Player var7 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         if (!param2.f(param1 ^ param1)) {
@@ -25,7 +25,7 @@ final class bqa implements bo {
             param2.field_k.a(false, this.field_h, this.field_c)) {
             this.a(param2.field_k, (byte) -98);
             var7 = param2.field_k.field_H[this.field_h];
-            hca var4 = var7;
+            Player var4 = var7;
             for (var5 = 0; 3 > var5; var5++) {
               var7.a(true, var5, this.field_d[var5]);
             }
@@ -42,7 +42,7 @@ final class bqa implements bo {
         }
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
@@ -70,7 +70,7 @@ final class bqa implements bo {
         return "S2CNewRoomPacket (force:" + this.field_e + ", playerid:" + this.field_h + ", roomid:" + this.field_c + ", course ticks:" + this.field_b + ", room ticks:" + this.field_a + ", disregard:" + this.field_f + ", treasure: " + this.a(1) + ")";
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         param0.h((byte) 125);

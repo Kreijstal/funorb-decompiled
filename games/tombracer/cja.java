@@ -259,7 +259,7 @@ final class cja {
           var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            this.field_a.b((byte) -104, new no(rba.field_a, var5));
+            this.field_a.b((byte) -104, new no(SecondaryNodeDequeIterator.field_a, var5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -281,7 +281,7 @@ final class cja {
           !dma.field_l.a(param0 - 60)) {
           return;
         }
-        qh var2 = rba.field_a;
+        qh var2 = SecondaryNodeDequeIterator.field_a;
         if (var2 == null) {
           return;
         }

@@ -66,7 +66,7 @@ class tc extends lu {
         field_f = null;
     }
 
-    final void a(uia param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         if (param1) {
           return;
         }

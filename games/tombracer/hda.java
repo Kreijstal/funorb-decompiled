@@ -34,7 +34,7 @@ final class hda extends tc {
           if (param1 != 1303) {
             hda.b((byte) 32);
           }
-          stackIn_3_0 = new sc(param2, param0 * kta.field_d / 1000);
+          stackIn_3_0 = new sc(param2, param0 * AudioOutput.field_d / 1000);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

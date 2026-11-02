@@ -32,7 +32,7 @@ final class ria extends dg {
         super.h(89);
     }
 
-    ria(int param0, la param1, kh param2) {
+    ria(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
@@ -83,7 +83,7 @@ final class ria extends dg {
         field_r = null;
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         if (param0 <= 119) {
           this.field_q = -123;
         }
@@ -98,7 +98,7 @@ final class ria extends dg {
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           int var3_int = 33 % ((param0 + 8) / 40);
           super.a((byte) 117, param1);

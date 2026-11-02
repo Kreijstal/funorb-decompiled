@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hna {
-    static fia field_a;
+    static PlatformTaskDispatcher field_a;
     short field_h;
     short field_i;
     short field_b;

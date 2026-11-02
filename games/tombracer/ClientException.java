@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lr extends RuntimeException {
-    String field_d;
+final class ClientException extends RuntimeException {
+    String context;
     static jea field_b;
-    Throwable field_a;
+    Throwable cause;
     static String field_e;
     static int field_c;
 
@@ -83,9 +83,9 @@ final class lr extends RuntimeException {
         return param0 * (-param3 + param2) + param3;
     }
 
-    lr(Throwable param0, String param1) {
-        this.field_a = param0;
-        this.field_d = param1;
+    ClientException(Throwable param0, String param1) {
+        this.cause = param0;
+        this.context = param1;
     }
 
     public static void a(boolean param0) {
@@ -93,7 +93,7 @@ final class lr extends RuntimeException {
         field_b = null;
         if (param0) {
           una var2 = (una) null;
-          lr.a((una) null, 48);
+          ClientException.a((una) null, 48);
         }
     }
 

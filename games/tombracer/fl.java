@@ -130,7 +130,7 @@ final class fl extends ci {
         boa.field_o = boa.field_o & una.field_b;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;

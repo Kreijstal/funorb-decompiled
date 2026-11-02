@@ -58,7 +58,7 @@ final class ji {
             if (var4 == var3_ref_vg) {
               break;
             }
-            var4.p(113);
+            var4.unlink(113);
           }
         }
         int var3 = -17 % ((35 - param0) / 42);
@@ -101,7 +101,7 @@ final class ji {
         RuntimeException var5_ref = null;
         try {
           if (null != param2.previous) {
-            param2.p(48);
+            param2.unlink(48);
           }
           var5 = this.field_f[(int)(param0 & (long)(this.field_a - 1))];
           param2.next = var5;

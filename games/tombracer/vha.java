@@ -39,7 +39,7 @@ final class vha {
             decompiledFrameRemainder0 = false;
           }
           else {
-            la.l(2097152);
+            Room.l(2097152);
             param2 = false;
           }
         }

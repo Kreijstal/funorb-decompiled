@@ -4,11 +4,11 @@
 final class jia implements ms {
     private lw field_b;
     private waa[] field_c;
-    static jqa field_a;
+    static BufferedSocket field_a;
 
     public static void a(byte param0) {
         if (param0 != 31) {
-          field_a = (jqa) null;
+          field_a = (BufferedSocket) null;
         }
         field_a = null;
     }
@@ -57,7 +57,7 @@ final class jia implements ms {
 
     public final int a(boolean param0) {
         if (param0) {
-          field_a = (jqa) null;
+          field_a = (BufferedSocket) null;
         }
         return 140;
     }
@@ -73,7 +73,7 @@ final class jia implements ms {
         int var3Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 != -7109) {
-          field_a = (jqa) null;
+          field_a = (BufferedSocket) null;
         }
         var6 = this.field_c;
         var2_ref_waa__ = var6;

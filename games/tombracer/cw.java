@@ -222,7 +222,7 @@ final class cw {
         try {
           param1.field_h = param0 ? true : false;
           param1.d((byte) -71);
-          param1.p(72);
+          param1.unlink(72);
           this.b(64);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cw.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

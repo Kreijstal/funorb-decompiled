@@ -29,7 +29,7 @@ final class goa {
         field_c = null;
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
-          goa.a(107, -79, (kh) null, (byte[]) null);
+          goa.a(107, -79, (BitPacketBuffer) null, (byte[]) null);
         }
     }
 
@@ -66,7 +66,7 @@ final class goa {
         }
     }
 
-    final static byte[] a(int param0, int param1, kh param2, byte[] param3) {
+    final static byte[] a(int param0, int param1, BitPacketBuffer param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

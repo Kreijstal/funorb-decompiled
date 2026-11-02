@@ -113,7 +113,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) -102, "mu_chat_on");
                 if (null != var2) {
-                  rba.field_b = jaa.a((byte) 64, var2);
+                  SecondaryNodeDequeIterator.field_b = jaa.a((byte) 64, var2);
                 }
                 var2 = dn.a((byte) -78, "mu_chat_friends");
                 if (null != var2) {
@@ -141,7 +141,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) -120, "mu_chat_game");
                 if (var2 != null) {
-                  kh.field_p = jaa.a((byte) 77, var2);
+                  BitPacketBuffer.field_p = jaa.a((byte) 77, var2);
                 }
                 var2 = dn.a((byte) 122, "mu_chat_private");
                 if (var2 != null) {
@@ -513,7 +513,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) -111, "game_full");
                 if (null != var2) {
-                  ml.field_c = jaa.a((byte) 69, var2);
+                  RandomAccessFileHandle.field_c = jaa.a((byte) 69, var2);
                 }
                 var2 = dn.a((byte) 114, "join_requests_one");
                 if (var2 != null) {
@@ -685,7 +685,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) 123, "multiconst_open");
                 if (var2 != null) {
-                  uia.field_f = jaa.a((byte) 78, var2);
+                  PacketBuffer.field_f = jaa.a((byte) 78, var2);
                 }
                 var2 = dn.a((byte) -34, "no_options_available");
                 if (null != var2) {
@@ -863,7 +863,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) 104, "gameopt_playersdontqualify");
                 if (var2 != null) {
-                  kh.field_o = jaa.a((byte) 46, var2);
+                  BitPacketBuffer.field_o = jaa.a((byte) 46, var2);
                 }
                 var2 = dn.a((byte) 127, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
@@ -1523,7 +1523,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) 120, "create_password_hint");
                 if (null != var2) {
-                  gt.field_d = jaa.a((byte) 56, var2);
+                  GameKeyHandler.field_d = jaa.a((byte) 56, var2);
                 }
                 var2 = dn.a((byte) 122, "create_password_confirm_tooltip");
                 if (null != var2) {
@@ -2671,7 +2671,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) -56, "fs_button_close");
                 if (var2 != null) {
-                  kh.field_j = jaa.a((byte) 112, var2);
+                  BitPacketBuffer.field_j = jaa.a((byte) 112, var2);
                 }
                 var2 = dn.a((byte) 109, "fs_button_members");
                 if (null != var2) {

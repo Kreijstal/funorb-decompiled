@@ -258,7 +258,7 @@ final class sfa extends ha {
         float[] array$0 = null;
         ija var6 = (ija) (this.field_G.a((byte) -112, (long)param0.hashCode()));
         if (var6 != null) {
-          var6.p(30);
+          var6.unlink(30);
           var7 = tfa.a(param2, param1, param0, 0);
           this.field_G.a((long)param0.hashCode(), 116, var7);
           if (this.field_t == param0 &&

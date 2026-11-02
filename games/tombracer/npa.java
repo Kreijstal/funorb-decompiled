@@ -32,8 +32,8 @@ final class npa {
           var5 = (q) (this.field_e.a(-128, (long)param0.a(true)));
           while (var5 != null) {
             if (param0 == var5.a((byte) -128)) {
-              var5.p(100);
-              var5.c(-7975);
+              var5.unlink(100);
+              var5.unlinkSecondary(-7975);
               ft.a(var5, -201);
             }
             var5 = (q) (this.field_e.b((byte) 27));
@@ -318,8 +318,8 @@ final class npa {
           while (var8 != null) {
             if (var8.a((byte) -76) == param0 &&
               !var8.a(var7, var6, var4, var3_int, -98)) {
-              var8.p(104);
-              var8.c(-7975);
+              var8.unlink(104);
+              var8.unlinkSecondary(-7975);
               ft.a(var8, -201);
             }
             var8 = (q) (this.field_e.b((byte) 119));

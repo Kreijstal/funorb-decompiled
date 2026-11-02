@@ -113,7 +113,7 @@ final class gsa {
         boolean decompiledFrameRemainder0 = true;
         if (var6 != param0) {
           if (this.field_t != null &&
-            this.field_t.l((byte) -98)) {
+            this.field_t.isLinked((byte) -98)) {
             if (((var6 == 0)) &&
               ((null != this.field_t))) {
               this.field_t.a(mr.field_w, (byte) -113);
@@ -178,7 +178,7 @@ final class gsa {
         }
     }
 
-    gsa(hca param0, int[] param1) {
+    gsa(Player param0, int[] param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

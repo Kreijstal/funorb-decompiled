@@ -29,8 +29,8 @@ final class fj {
         String stackIn_69_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
-        hca var9 = null;
-        la var10 = null;
+        Player var9 = null;
+        Room var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -206,7 +206,7 @@ final class fj {
               iga.field_o.a(109);
               return;
             }
-            rba.a(var31 * 255 >> 8, param4, 0, param2, (byte) 25, param3, param1);
+            SecondaryNodeDequeIterator.a(var31 * 255 >> 8, param4, 0, param2, (byte) 25, param3, param1);
           }
           iga.field_o.a(109);
           return;

@@ -65,7 +65,7 @@ final class uda extends qra {
         int var11;
         int var7Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
-        la.field_j.a(0, 0);
+        Room.field_j.a(0, 0);
         var3 = aaa.a(false) / 2;
         var4 = koa.b(0) / 2;
         stackIn_3_0 = (this.i(-1)) ? 0 : 1;
@@ -235,7 +235,7 @@ final class uda extends qra {
         var4.a(param2, false, param1, 5, true);
         int var5 = var4.c((byte) 114);
         var4.a(param1 + 107, var5, param2, 0, 0);
-        jha var6 = ab.a(param1 ^ -41, gl.$cfr$intArgs$a$53ce4ab4c593(82, coa.field_n, new String[]{this.field_c.e(param0, 23807), la.field_m[param2]}));
+        jha var6 = ab.a(param1 ^ -41, gl.$cfr$intArgs$a$53ce4ab4c593(82, coa.field_n, new String[]{this.field_c.e(param0, 23807), Room.field_m[param2]}));
         iqa.field_c.a(0, var6);
     }
 

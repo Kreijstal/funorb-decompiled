@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km extends od {
+final class km extends DualLinkNode {
     private ci[] field_l;
     private ci field_r;
     private ci field_k;
@@ -303,9 +303,9 @@ final class km extends od {
               if (var22 < 0) {
                 var22 = 0;
               }
-              var20 = sk.field_c[var20];
-              var21 = sk.field_c[var21];
-              var22 = sk.field_c[var22];
+              var20 = IterableNodeHashTable.field_c[var20];
+              var21 = IterableNodeHashTable.field_c[var21];
+              var22 = IterableNodeHashTable.field_c[var22];
               var23 = var22 + ((var21 << 8) + (var20 << 16));
               if (0 != var23) {
                 var23 = var23 | -16777216;
@@ -344,7 +344,7 @@ final class km extends od {
         }
     }
 
-    km(uia param0) {
+    km(PacketBuffer param0) {
         int[] array$2 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -526,12 +526,12 @@ final class km extends od {
               if (var19 > 255) {
                 var19 = 255;
               }
-              var17 = sk.field_c[var17];
-              var18 = sk.field_c[var18];
+              var17 = IterableNodeHashTable.field_c[var17];
+              var18 = IterableNodeHashTable.field_c[var18];
               if (var19 < 0) {
                 var19 = 0;
               }
-              var19 = sk.field_c[var19];
+              var19 = IterableNodeHashTable.field_c[var19];
               if (var17 == 0 &&
                 var18 == 0 &&
                 var19 == 0) {

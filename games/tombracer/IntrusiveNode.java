@@ -8,11 +8,11 @@ class IntrusiveNode {
     long key;
     static String[] field_c;
 
-    final void p(int param0) {
+    final void unlink(int obfuscationGuard) {
         if (this.previous == null) {
           return;
         }
-        if (param0 >= 0) {
+        if (obfuscationGuard >= 0) {
           this.previous.next = this.next;
           this.next.previous = this.previous;
           this.next = null;
@@ -36,11 +36,11 @@ class IntrusiveNode {
         }
     }
 
-    final boolean l(byte param0) {
+    final boolean isLinked(byte obfuscationGuard) {
         if (this.previous == null) {
           return false;
         }
-        int var2 = -24 / ((-27 - param0) / 56);
+        int var2 = -24 / ((-27 - obfuscationGuard) / 56);
         return true;
     }
 

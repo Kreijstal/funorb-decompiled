@@ -142,7 +142,7 @@ final class ira extends osa {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 == -1 &&
-            rba.field_a == null) {
+            SecondaryNodeDequeIterator.field_a == null) {
             return;
           }
           if (param1 == hb.field_t.field_c) {
@@ -261,8 +261,8 @@ final class ira extends osa {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        uia var16 = null;
-        uia var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -274,9 +274,9 @@ final class ira extends osa {
         int var4Lifetime5;
         var15 = TombRacer.field_G ? 1 : 0;
         try {
-          var16 = new uia(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_h = -2 + param1.length;
+          var17.position = -2 + param1.length;
           fa.field_b = var17.d(123);
           pg.field_C = new int[fa.field_b];
           ck.field_c = new byte[fa.field_b][];
@@ -285,7 +285,7 @@ final class ira extends osa {
           mq.field_b = new int[fa.field_b];
           pb.field_l = new byte[fa.field_b][];
           qqa.field_n = new boolean[fa.field_b];
-          var17.field_h = -7 + param1.length - fa.field_b * 8;
+          var17.position = -7 + param1.length - fa.field_b * 8;
           ika.field_a = var17.d(126);
           kba.field_s = var17.d(param0 ^ 126);
           var3 = 1 + (var17.h(255) & 255);
@@ -301,7 +301,7 @@ final class ira extends osa {
           for (var4Lifetime3 = 0; fa.field_b > var4Lifetime3; var4Lifetime3++) {
             iga.field_m[var4Lifetime3] = var17.d(122);
           }
-          var17.field_h = -(var3 * 3) + 3 + (-(8 * fa.field_b) + (-7 + param1.length));
+          var17.position = -(var3 * 3) + 3 + (-(8 * fa.field_b) + (-7 + param1.length));
           mga.field_g = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
             mga.field_g[var4Lifetime4] = var17.a(-32768);
@@ -309,7 +309,7 @@ final class ira extends osa {
               mga.field_g[var4Lifetime4] = 1;
             }
           }
-          var17.field_h = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; fa.field_b > var4Lifetime5; var4Lifetime5++) {
             var5 = mq.field_b[var4Lifetime5];
             var6 = iga.field_m[var4Lifetime5];
@@ -405,7 +405,7 @@ final class ira extends osa {
         this.field_n.a((byte) -35, var4, var5);
     }
 
-    ira(la param0, kh param1, boolean param2) {
+    ira(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_u = param1.b((byte) 44, 10) << 16;
@@ -435,7 +435,7 @@ final class ira extends osa {
         return param1;
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -106);
           param0.a((byte) -126, this.field_u >> 16, 10);
@@ -448,7 +448,7 @@ final class ira extends osa {
         }
     }
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         try {
           if (param0 <= 35) {
             byte[] var4 = (byte[]) null;

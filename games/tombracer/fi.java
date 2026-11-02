@@ -51,7 +51,7 @@ abstract class fi {
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < 255; var3Lifetime1++) {
           var4 = -var3Lifetime1 + 255;
-          var5 = jqa.a(var4, var2, -120);
+          var5 = BufferedSocket.a(var4, var2, -120);
           var6 = this.field_e[var5];
           this.field_e[var5] = this.field_e[var4];
           this.field_e[256 + var4] = (short) var6;

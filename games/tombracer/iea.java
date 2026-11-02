@@ -171,7 +171,7 @@ final class iea {
         try {
           mp.a(joa.field_d, tka.field_q, param0, una.field_j, fe.field_F, kua.field_i, 0, dja.field_p, jq.field_o, ji.field_g, dn.field_a, kw.field_e);
           vda.field_m = uka.a(param1, "lobby", 5, "chatfilter");
-          jra.field_c[0] = rba.field_b;
+          jra.field_c[0] = SecondaryNodeDequeIterator.field_b;
           jra.field_c[param2] = hm.field_m;
           jra.field_c[1] = nga.field_o;
           gea.a(0, param3, qw.field_f);

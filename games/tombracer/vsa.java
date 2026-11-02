@@ -242,7 +242,7 @@ final class vsa extends dg {
         }
     }
 
-    vsa(int param0, la param1, kh param2) {
+    vsa(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
@@ -269,7 +269,7 @@ final class vsa extends dg {
         }
     }
 
-    final static void a(cn param0, fia param1, int param2) {
+    final static void a(cn param0, PlatformTaskDispatcher param1, int param2) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -349,7 +349,7 @@ final class vsa extends dg {
         }
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         try {
           super.a(120, param1, param2);
           this.field_t = param2.b((byte) 44, 4);
@@ -374,11 +374,11 @@ final class vsa extends dg {
           this.field_n = uca.field_c.a(262144, 0) - 131072;
           this.field_s = -131072 + uca.field_c.a(262144, 0);
         }
-        fsa var2 = (fsa) (this.field_h);
+        Trap var2 = (Trap) (this.field_h);
         if (var2 == null) {
           return;
         }
-        hca var3 = var2.H(param0 ^ 117);
+        Player var3 = var2.H(param0 ^ 117);
         if (var3 == null) {
           return;
         }
@@ -391,7 +391,7 @@ final class vsa extends dg {
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) -59, param1);
           int var3_int = -50 / ((param0 + 8) / 40);
@@ -461,7 +461,7 @@ final class vsa extends dg {
         int var17;
         int var18;
         int var19;
-        la var20;
+        Room var20;
         var19 = TombRacer.field_G ? 1 : 0;
         var20 = this.a(78);
         var3 = this.field_h.d(3);
@@ -625,30 +625,30 @@ final class vsa extends dg {
                 var4 = 0;
               }
             }
-            if (ql.field_k.field_h > 0) {
-              var14 = new byte[ql.field_k.field_h];
+            if (ql.field_k.position > 0) {
+              var14 = new byte[ql.field_k.position];
               var11 = var14;
               var8 = var11;
               var17 = var8;
               for (var6 = 0; var14.length > var6; var6++) {
-                var8[var6] = ql.field_k.field_g[var6];
+                var8[var6] = ql.field_k.payload[var6];
               }
-              var6_ref_rha = new rha(var2_long + (long)var4, ql.field_k.field_h, var17);
+              var6_ref_rha = new rha(var2_long + (long)var4, ql.field_k.position, var17);
               jla.field_z.b((byte) -71, var6_ref_rha);
-              ql.field_k.field_h = 0;
+              ql.field_k.position = 0;
             }
             var9 = (rha) (jla.field_z.f(-80));
             var13 = var9;
             if (var13 != null &&
               var13.field_f < var2_long) {
-              var13.p(117);
+              var13.unlink(117);
               var10 = 0;
               var6Lifetime1 = var10;
               while (var13.field_i > var10) {
-                ql.field_k.field_g[var10] = var9.field_g[var10];
+                ql.field_k.payload[var10] = var9.field_g[var10];
                 var10++;
               }
-              ql.field_k.field_h = var13.field_i;
+              ql.field_k.position = var13.field_i;
             }
           }
           bl.a(param1, -1);

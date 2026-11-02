@@ -10,8 +10,8 @@ abstract class hn extends kna {
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-          la var3 = (la) null;
-          this.a(false, -3, (la) null);
+          Room var3 = (Room) null;
+          this.a(false, -3, (Room) null);
           return true;
         }
         return true;
@@ -38,7 +38,7 @@ abstract class hn extends kna {
         return false;
     }
 
-    void a(boolean param0, kh param1) {
+    void a(boolean param0, BitPacketBuffer param1) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -73,20 +73,20 @@ abstract class hn extends kna {
         }
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         vd var5 = null;
-        fsa var6 = null;
-        fsa stackIn_2_0 = null;
-        fsa stackIn_4_0 = null;
+        Trap var6 = null;
+        Trap stackIn_2_0 = null;
+        Trap stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new fsa(param2, param0);
+          var6 = new Trap(param2, param0);
           if (param1 != 3) {
-            stackIn_2_0 = (fsa) null;
+            stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
           var6.b((byte) -11, this.field_k, this.field_l);
@@ -116,9 +116,9 @@ abstract class hn extends kna {
         }
     }
 
-    abstract fsa a(la param0, boolean param1, boolean param2);
+    abstract Trap a(Room param0, boolean param1, boolean param2);
 
-    hn(la param0, int param1, kh param2, csa param3) {
+    hn(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_9_0 = null;
@@ -176,19 +176,19 @@ abstract class hn extends kna {
 
     final int t(int param0) {
         if (param0 != 8) {
-          la var3 = (la) null;
-          this.a(true, 54, (la) null);
+          Room var3 = (Room) null;
+          this.a(true, 54, (Room) null);
         }
         return 7;
     }
 
-    private final fsa a(boolean param0, la param1, byte param2) {
+    private final Trap a(boolean param0, Room param1, byte param2) {
         int var5 = 0;
         ue var6 = null;
         int var7 = 0;
-        fsa var9 = null;
+        Trap var9 = null;
         ue var10 = null;
-        fsa stackIn_9_0 = null;
+        Trap stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -201,7 +201,7 @@ abstract class hn extends kna {
           if (this.field_I <= 0) {
             return null;
           }
-          var9 = new fsa(param1, param0);
+          var9 = new Trap(param1, param0);
           var5 = -31 % ((param2 + 48) / 57);
           var9.b((byte) -11, 2097152, 2097152);
           var9.b((byte) 17, false);
@@ -246,7 +246,7 @@ abstract class hn extends kna {
         return sja.field_i[param1];
     }
 
-    abstract fsa a(int param0, boolean param1, la param2);
+    abstract Trap a(int param0, boolean param1, Room param2);
 
     private final int B(int param0) {
         if (param0 <= 92) {
@@ -284,9 +284,9 @@ abstract class hn extends kna {
         var13 = TombRacer.field_G ? 1 : 0;
         try {
           ob.field_i = bea.field_g;
-          jqa.field_g = bea.field_a;
+          BufferedSocket.field_g = bea.field_a;
           if (param0) {
-            stackIn_4_0 = gt.field_a;
+            stackIn_4_0 = GameKeyHandler.field_a;
           } else {
             stackIn_4_0 = fp.field_e;
           }
@@ -406,9 +406,9 @@ abstract class hn extends kna {
           hf.field_a.a(360, -134 + (bea.field_a - 10), -23776, 10, bea.field_g - 360 >> 1);
           vca.field_e.a(hf.field_a.field_G, 24, -23776, 0, 0);
           vs.field_R.a(hf.field_a.field_G, -24 + hf.field_a.field_t, -23776, 24, 0);
-          vs.field_R.field_w = hca.c(vs.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);
+          vs.field_R.field_w = Player.c(vs.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);
           rra.field_e.a(-10 + vs.field_R.field_G, -24 + vs.field_R.field_t - 12, -23776, 5, 5);
-          fsa.field_q.a(80, 24, -23776, -5 + (vs.field_R.field_t - 24), (-80 + vs.field_R.field_G) / 2);
+          Trap.field_q.a(80, 24, -23776, -5 + (vs.field_R.field_t - 24), (-80 + vs.field_R.field_G) / 2);
           da.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -418,7 +418,7 @@ abstract class hn extends kna {
         }
     }
 
-    hn(la param0, int param1) {
+    hn(Room param0, int param1) {
         super(param0, param1);
     }
 

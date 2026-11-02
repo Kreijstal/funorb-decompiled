@@ -170,7 +170,7 @@ final class qka extends qra {
         String var24 = null;
         var21 = TombRacer.field_G ? 1 : 0;
         ura.a(-10985);
-        la.field_j.a(0, 0);
+        Room.field_j.a(0, 0);
         if (this.field_h.field_D) {
           var3 = aaa.a(false) >> 1;
           var4 = (aaa.a(false) >> 1) / 3 + 37;

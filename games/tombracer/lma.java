@@ -84,7 +84,7 @@ final class lma extends dg {
 
     final void d(int param0) {
         int discarded$1 = 0;
-        fsa var3;
+        Trap var3;
         int var4;
         fh var5;
         w var6;
@@ -97,8 +97,8 @@ final class lma extends dg {
         if (var6 == null) {
           return;
         }
-        if (this.field_h instanceof fsa) {
-          var3 = (fsa) (this.field_h);
+        if (this.field_h instanceof Trap) {
+          var3 = (Trap) (this.field_h);
           var4 = var3.d(param0 + 51, false) ? 1 : 0;
           if (this.field_o == null &&
             var4 != 0) {
@@ -253,7 +253,7 @@ final class lma extends dg {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
-        kh var7 = null;
+        BitPacketBuffer var7 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -269,8 +269,8 @@ final class lma extends dg {
             }
           }
           if (param0 < 50) {
-            var7 = (kh) null;
-            this.a(101, (la) null, (kh) null);
+            var7 = (BitPacketBuffer) null;
+            this.a(101, (Room) null, (BitPacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -287,7 +287,7 @@ final class lma extends dg {
         }
     }
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -366,7 +366,7 @@ final class lma extends dg {
         if (this.field_h.b(true)) {
           return true;
         }
-        if (this.field_h instanceof fsa) {
+        if (this.field_h instanceof Trap) {
           return true;
         }
         if (param0 != 10) {
@@ -446,7 +446,7 @@ final class lma extends dg {
         int var35;
         int var36;
         int var37;
-        la var38;
+        Room var38;
         var37 = TombRacer.field_G ? 1 : 0;
         var38 = this.field_h.f((byte) 68);
         var3 = var38.m((byte) -86);
@@ -881,7 +881,7 @@ final class lma extends dg {
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) 86, param1);
           int var3_int = -57 / ((param0 + 8) / 40);
@@ -913,7 +913,7 @@ final class lma extends dg {
         int stackIn_45_1 = 0;
         boolean stackIn_46_2 = false;
         int var2;
-        la var3;
+        Room var3;
         int var4;
         int var5;
         int var6;
@@ -1096,13 +1096,13 @@ final class lma extends dg {
 
     final boolean o(byte param0) {
         int var2 = 66 % ((25 - param0) / 57);
-        if (!(this.field_h instanceof fsa)) {
+        if (!(this.field_h instanceof Trap)) {
           return false;
         }
         return true;
     }
 
-    lma(int param0, la param1, kh param2) {
+    lma(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 

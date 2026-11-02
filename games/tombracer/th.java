@@ -30,7 +30,7 @@ final class th extends nv {
         field_s = null;
     }
 
-    th(la param0, kh param1, boolean param2) {
+    th(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_r = 2;
         this.field_q = 2;
@@ -234,7 +234,7 @@ final class th extends nv {
         return stackIn_7_0;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) -128, this.field_q, 2);
@@ -250,7 +250,7 @@ final class th extends nv {
         this.field_q = param1;
     }
 
-    th(la param0, boolean param1) {
+    th(Room param0, boolean param1) {
         super(param0, param1);
         this.field_r = 2;
         this.field_q = 2;

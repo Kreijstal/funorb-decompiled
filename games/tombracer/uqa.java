@@ -116,19 +116,19 @@ final class uqa extends osa {
         return param1;
     }
 
-    final void a(int param0, fsa param1) {
+    final void a(int param0, Trap param1) {
         try {
           super.a(114, param1);
           if (param0 < 35) {
-            fsa var4 = (fsa) null;
-            this.a(73, (fsa) null);
+            Trap var4 = (Trap) null;
+            this.a(73, (Trap) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uqa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    uqa(la param0, kh param1, boolean param2) {
+    uqa(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_u = param1.b((byte) 44, 10) << 16;
@@ -146,7 +146,7 @@ final class uqa extends osa {
         return 8;
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -88);
           if (param1 > -78) {

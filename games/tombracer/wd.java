@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wd implements dv {
-    private hca field_d;
+    private Player field_d;
     static jpa field_c;
     static String field_a;
     private int field_b;
@@ -51,7 +51,7 @@ final class wd implements dv {
         }
     }
 
-    final static void a(byte param0, int param1, boolean param2, la param3, fsa param4, boolean param5) {
+    final static void a(byte param0, int param1, boolean param2, Room param3, Trap param4, boolean param5) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -289,11 +289,11 @@ final class wd implements dv {
         }
     }
 
-    public final void a(kh param0, boolean param1) {
+    public final void a(BitPacketBuffer param0, boolean param1) {
         try {
           this.field_b = uma.a(5, param0, -26803);
           if (param1) {
-            this.field_d = (hca) null;
+            this.field_d = (Player) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -340,7 +340,7 @@ final class wd implements dv {
         }
     }
 
-    final void a(int param0, hca param1) {
+    final void a(int param0, Player param1) {
         if (param0 != 11008) {
           return;
         }
@@ -379,7 +379,7 @@ final class wd implements dv {
         this.field_d.n((byte) -82).a(26, 0, true);
     }
 
-    wd(hca param0) {
+    wd(Player param0) {
         try {
           this.field_d = param0;
           this.field_b = -1;

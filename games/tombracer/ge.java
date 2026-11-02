@@ -15,11 +15,11 @@ abstract class ge extends kna {
         return true;
     }
 
-    void a(boolean param0, kh param1) {
+    void a(boolean param0, BitPacketBuffer param1) {
         try {
           if (param0) {
-            la var4 = (la) null;
-            this.a((byte) -1, (mra) null, (la) null);
+            Room var4 = (Room) null;
+            this.a((byte) -1, (mra) null, (Room) null);
           }
           super.a(param0, param1);
           if (this.A(-1)) {
@@ -44,7 +44,7 @@ abstract class ge extends kna {
 
     abstract boolean B(int param0);
 
-    ge(la param0, int param1, kh param2, csa param3) {
+    ge(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
         try {
           if (!this.A(-1)) {
@@ -72,11 +72,11 @@ abstract class ge extends kna {
         field_G = null;
     }
 
-    ge(la param0, int param1) {
+    ge(Room param0, int param1) {
         super(param0, param1);
     }
 
-    final void a(fsa param0, int param1, nv param2, int param3) {
+    final void a(Trap param0, int param1, nv param2, int param3) {
         mfa var5 = null;
         gaa var6 = null;
         try {
@@ -92,7 +92,7 @@ abstract class ge extends kna {
         }
     }
 
-    final void a(byte param0, mra param1, la param2) {
+    final void a(byte param0, mra param1, Room param2) {
         RuntimeException var4 = null;
         IsaacCipher var5 = null;
         roa var6 = null;
@@ -155,8 +155,8 @@ abstract class ge extends kna {
 
     final boolean s(byte param0) {
         if (param0 < 64) {
-          kh var3 = (kh) null;
-          this.a(true, (kh) null);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a(true, (BitPacketBuffer) null);
           return this.field_I;
         }
         return this.field_I;

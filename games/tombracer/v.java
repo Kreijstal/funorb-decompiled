@@ -14,7 +14,7 @@ final class v {
     private int[] field_b;
     private vi field_c;
 
-    private final void a(byte param0, kh param1, qh param2) {
+    private final void a(byte param0, BitPacketBuffer param1, qh param2) {
         lta var4 = null;
         try {
           if (param0 != -73) {
@@ -28,7 +28,7 @@ final class v {
         }
     }
 
-    private final void b(qh param0, kh param1, int param2) {
+    private final void b(qh param0, BitPacketBuffer param1, int param2) {
         lf var4 = null;
         try {
           if (param2 != 93) {
@@ -66,7 +66,7 @@ final class v {
         this.field_a.a((byte) -113, param1);
     }
 
-    private final void a(int param0, kh param1, qh param2) {
+    private final void a(int param0, BitPacketBuffer param1, qh param2) {
         wga var4 = null;
         try {
           var4 = new wga();
@@ -96,7 +96,7 @@ final class v {
         return this.field_f;
     }
 
-    private final void a(kh param0, int param1) {
+    private final void a(BitPacketBuffer param0, int param1) {
         tt var3 = new tt(this.field_e);
         this.a(var3, -67, param0);
         int var4 = this.field_c.a((byte) 36, var3) ? 1 : 0;
@@ -121,7 +121,7 @@ final class v {
         }
     }
 
-    private final void a(kh param0, qh param1, int param2) {
+    private final void a(BitPacketBuffer param0, qh param1, int param2) {
         cf var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -181,7 +181,7 @@ final class v {
         RuntimeException var3 = null;
         int var4_int = 0;
         tt var4 = null;
-        la var5_ref_la = null;
+        Room var5_ref_la = null;
         int var7 = 0;
         ff var8 = null;
         var7 = TombRacer.field_G ? 1 : 0;
@@ -258,7 +258,7 @@ final class v {
         }
     }
 
-    private final void a(int param0, qh param1, kh param2) {
+    private final void a(int param0, qh param1, BitPacketBuffer param2) {
         nr var4 = null;
         try {
           var4 = new nr();
@@ -272,7 +272,7 @@ final class v {
         }
     }
 
-    private final void a(bo param0, int param1, kh param2) {
+    private final void a(bo param0, int param1, BitPacketBuffer param2) {
         try {
           int var4_int = -28 / ((param1 - 61) / 43);
           param0.a(param2, (byte) -19);
@@ -281,7 +281,7 @@ final class v {
         }
     }
 
-    private final void a(byte param0, qh param1, kh param2) {
+    private final void a(byte param0, qh param1, BitPacketBuffer param2) {
         foa var4 = null;
         qh var5 = null;
         RuntimeException stackIn_5_0 = null;
@@ -297,7 +297,7 @@ final class v {
           var4.a(param1, -1, this);
           if (param0 >= -7) {
             var5 = (qh) null;
-            this.a(-98, (kh) null, (qh) null);
+            this.a(-98, (BitPacketBuffer) null, (qh) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -320,7 +320,7 @@ final class v {
         }
     }
 
-    private final void a(boolean param0, kh param1, qh param2) {
+    private final void a(boolean param0, BitPacketBuffer param1, qh param2) {
         bqa var4 = null;
         try {
           if (!param0) {
@@ -342,7 +342,7 @@ final class v {
         ts.a(0, -122, 10 + var2Lifetime1, "received: " + this.field_c.a((byte) 107), param0, kn.field_p, 16777215);
     }
 
-    final boolean a(byte param0, qh param1, kh param2, int param3) {
+    final boolean a(byte param0, qh param1, BitPacketBuffer param2, int param3) {
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
@@ -424,7 +424,7 @@ final class v {
     }
 
     private final void a(ff param0, byte param1) {
-        la var3 = null;
+        Room var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
           while (!this.field_a.b((byte) -26)) {
@@ -437,7 +437,7 @@ final class v {
         }
     }
 
-    private final void a(qh param0, kh param1, boolean param2) {
+    private final void a(qh param0, BitPacketBuffer param1, boolean param2) {
         uj var4 = null;
         try {
           var4 = new uj(param0.field_k.field_H.length);
@@ -451,7 +451,7 @@ final class v {
         }
     }
 
-    private final void b(byte param0, qh param1, kh param2) {
+    private final void b(byte param0, qh param1, BitPacketBuffer param2) {
         ua var4 = null;
         try {
           var4 = new ua();
@@ -530,7 +530,7 @@ final class v {
         }
     }
 
-    private final void a(qh param0, kh param1, byte param2) {
+    private final void a(qh param0, BitPacketBuffer param1, byte param2) {
         vca var4 = null;
         try {
           if (param2 > -67) {
@@ -590,7 +590,7 @@ final class v {
         ql.field_k.k(81, -2988);
     }
 
-    private final void a(qh param0, kh param1, int param2) {
+    private final void a(qh param0, BitPacketBuffer param1, int param2) {
         vra var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -632,7 +632,7 @@ final class v {
         int var8 = TombRacer.field_G ? 1 : 0;
         if (param0 >= -80) {
           qh var9 = (qh) null;
-          this.a((kh) null, (qh) null, 41);
+          this.a((BitPacketBuffer) null, (qh) null, 41);
         }
         ea var6 = new ea();
         for (var7 = 0; var7 < 8; var7++) {

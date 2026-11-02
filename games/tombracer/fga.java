@@ -118,7 +118,7 @@ final class fga implements sia {
 
     private final void a(byte param0, boolean param1, int param2) {
         int var4_int = 0;
-        kh stackIn_3_0 = null;
+        BitPacketBuffer stackIn_3_0 = null;
         int stackIn_4_1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -131,7 +131,7 @@ final class fga implements sia {
           } else {
             stackIn_4_1 = 1;
           }
-          ((kh) (Object) stackIn_3_0).i(stackIn_4_1, 0);
+          ((BitPacketBuffer) (Object) stackIn_3_0).i(stackIn_4_1, 0);
           var4_int = -5 % ((param0 + 45) / 58);
           this.d(32415);
           return;
@@ -287,7 +287,7 @@ final class fga implements sia {
               }
               break;
             }
-            ts.a(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + ml.a(param0 + 86), 10, kn.field_p, 16777215);
+            ts.a(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + RandomAccessFileHandle.a(param0 + 86), 10, kn.field_p, 16777215);
             try {
               var3.e(param0 - 1);
             } catch (qva decompiledCaughtParameter0) {

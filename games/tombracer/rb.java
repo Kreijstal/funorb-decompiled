@@ -54,7 +54,7 @@ final class rb extends nv {
         }
     }
 
-    rb(la param0, kh param1, boolean param2) {
+    rb(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_t = param1.b((byte) 44, 4);
@@ -77,7 +77,7 @@ final class rb extends nv {
         field_p = null;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         if (param0) {
           return;
         }
@@ -145,8 +145,8 @@ final class rb extends nv {
           param0 = upa.a(this.field_s, param0, (byte) -53);
           return param0;
         }
-        kh var4 = (kh) null;
-        this.a(false, (kh) null);
+        BitPacketBuffer var4 = (BitPacketBuffer) null;
+        this.a(false, (BitPacketBuffer) null);
         param0 = upa.a(this.field_s, param0, (byte) -53);
         return param0;
     }

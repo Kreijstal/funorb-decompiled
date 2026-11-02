@@ -14,20 +14,20 @@ final class nja extends fqa {
         return false;
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+    final Trap a(boolean param0, int param1, Room param2) {
+        Trap var4 = null;
         RuntimeException var4_ref = null;
         rh var5 = null;
-        fsa stackIn_2_0 = null;
-        fsa stackIn_4_0 = null;
+        Trap stackIn_2_0 = null;
+        Trap stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fsa(param2, param0);
+          var4 = new Trap(param2, param0);
           if (param1 != 3) {
-            stackIn_2_0 = (fsa) null;
+            stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
           var4.b((byte) -11, this.field_k, this.field_l);
@@ -73,7 +73,7 @@ final class nja extends fqa {
         return false;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           if (param0) {
@@ -98,7 +98,7 @@ final class nja extends fqa {
         return true;
     }
 
-    nja(la param0, int param1) {
+    nja(Room param0, int param1) {
         super(param0, param1);
     }
 
@@ -110,7 +110,7 @@ final class nja extends fqa {
         return false;
     }
 
-    nja(la param0, int param1, kh param2, csa param3) {
+    nja(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 

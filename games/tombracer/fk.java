@@ -62,7 +62,7 @@ final class fk {
             var5Lifetime2 = (dq) (this.field_h.b(3));
             var4 = new dq(param0, var5Lifetime2.field_g);
             this.field_k[var5Lifetime2.field_i] = null;
-            var5Lifetime2.p(63);
+            var5Lifetime2.unlink(63);
           }
           this.field_k[param0] = var4;
         } else {

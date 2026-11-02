@@ -43,7 +43,7 @@ final class ho {
           var1 = (rw) (field_a.c(-113));
           if (var1 != null) {
             var1.field_f.w(true);
-            var1.p(120);
+            var1.unlink(120);
             continue;
           }
           break;

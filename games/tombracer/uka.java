@@ -56,7 +56,7 @@ final class uka extends ra {
         iea.a(param2, (byte) -56, param0);
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -140,7 +140,7 @@ final class uka extends ra {
         }
     }
 
-    final fsa a(boolean param0, int param1, la param2) {
+    final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         fra var5 = null;
         up var6 = null;
@@ -148,14 +148,14 @@ final class uka extends ra {
         ro var8 = null;
         mfa var9 = null;
         fu var10 = null;
-        fsa var11 = null;
-        fsa stackIn_1_0 = null;
+        Trap var11 = null;
+        Trap stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new fsa(param2, param0);
+          var11 = new Trap(param2, param0);
           var11.b((byte) -11, this.field_k, this.field_l);
           var11.h(param1, 0);
           var11.a(3, (byte) -12, true);
@@ -217,11 +217,11 @@ final class uka extends ra {
         return false;
     }
 
-    uka(la param0, int param1, kh param2, csa param3) {
+    uka(Room param0, int param1, BitPacketBuffer param2, csa param3) {
         super(param0, param1, param2, param3);
     }
 
-    uka(la param0, int param1) {
+    uka(Room param0, int param1) {
         super(param0, param1);
     }
 

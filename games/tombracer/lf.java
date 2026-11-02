@@ -16,8 +16,8 @@ final class lf implements bo {
     final void a(qh param0, int param1, v param2) {
         try {
           if (param1 != 0) {
-            kh var5 = (kh) null;
-            this.a(61, (kh) null);
+            BitPacketBuffer var5 = (BitPacketBuffer) null;
+            this.a(61, (BitPacketBuffer) null);
           }
           param0.i(this.field_b, 110);
         } catch (RuntimeException runtimeException) {
@@ -25,7 +25,7 @@ final class lf implements bo {
         }
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         param0.h((byte) 118);
         if (param1 != -19) {
           return;
@@ -38,7 +38,7 @@ final class lf implements bo {
         }
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         try {
           if (param0 != 200) {
             lf.a(-117, 42);

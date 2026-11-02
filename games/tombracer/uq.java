@@ -33,9 +33,9 @@ abstract class uq implements fo {
 
     public abstract void a(int param0, iq param1);
 
-    final la a(int param0) {
+    final Room a(int param0) {
         if (param0 != 10685) {
-          return (la) null;
+          return (Room) null;
         }
         return this.field_e.d(0);
     }

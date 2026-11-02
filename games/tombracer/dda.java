@@ -19,7 +19,7 @@ final class dda extends IntrusiveNode {
         }
     }
 
-    dda(hca param0, bs param1) {
+    dda(Player param0, bs param1) {
         try {
           this.field_g = param1;
           param0.C(-1);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wca extends od {
+abstract class wca extends DualLinkNode {
     int field_q;
     int field_p;
     static int[] field_l;

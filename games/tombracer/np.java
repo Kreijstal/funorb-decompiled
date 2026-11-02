@@ -1056,8 +1056,8 @@ final class np extends ka {
         int var4Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if ((this.field_ib * 6) <= this.field_R.field_cb.field_g.length) {
-            this.field_R.field_cb.field_h = 0;
+          if ((this.field_ib * 6) <= this.field_R.field_cb.payload.length) {
+            this.field_R.field_cb.position = 0;
             if (var5 != 0) {
               this.field_R.field_cb = new qf((this.field_ib + 100) * 6);
             }
@@ -1096,24 +1096,24 @@ final class np extends ka {
               }
             }
           }
-          if (0 != var3.field_h) {
+          if (0 != var3.position) {
             if (param0 > 0) {
               this.I(68, (int[]) null, -92, 111, -30, false, -95, (int[]) null);
             }
             if (param1) {
               if (null == this.field_jb) {
-                this.field_jb = this.field_R.a(-81, var3.field_h, 5123, true, var3.field_g);
+                this.field_jb = this.field_R.a(-81, var3.position, 5123, true, var3.payload);
                 if (var5 != 0) {
-                  this.field_jb.a(var3.field_h, -11783, var3.field_g, 5123);
+                  this.field_jb.a(var3.position, -11783, var3.payload, 5123);
                 }
               } else {
-                this.field_jb.a(var3.field_h, -11783, var3.field_g, 5123);
+                this.field_jb.a(var3.position, -11783, var3.payload, 5123);
               }
               this.field_w.field_a = this.field_jb;
             }
             if (!param1 ||
               var5 != 0) {
-              this.field_w.field_a = this.field_R.a(-56, var3.field_h, 5123, false, var3.field_g);
+              this.field_w.field_a = this.field_R.a(-56, var3.position, 5123, false, var3.payload);
             }
             if (!param1) {
               this.field_gb = true;
@@ -2796,13 +2796,13 @@ final class np extends ka {
           if (var7 == 0) {
             return;
           }
-          if (this.field_R.field_cb.field_g.length < (this.field_L * var7)) {
+          if (this.field_R.field_cb.payload.length < (this.field_L * var7)) {
             this.field_R.field_cb = new qf((this.field_L + 100) * var7);
             if (var35 != 0) {
-              this.field_R.field_cb.field_h = 0;
+              this.field_R.field_cb.position = 0;
             }
           } else {
-            this.field_R.field_cb.field_h = 0;
+            this.field_R.field_cb.position = 0;
           }
           boolean decompiledFrameCompleted7 = true;
           boolean decompiledFrameCompleted6 = true;
@@ -2832,7 +2832,7 @@ final class np extends ka {
                     stackIn_79_1 = ~var20;
                     if (stackIn_79_0 != stackIn_79_1 ||
                       var35 != 0) {
-                      var12.field_h = var7 * var20;
+                      var12.position = var7 * var20;
                       var12.a((byte) -35, var14_int);
                       var12.a((byte) -35, var15_int);
                       var12.a((byte) -35, var16_int);
@@ -2876,7 +2876,7 @@ final class np extends ka {
                   stackIn_95_1Lifetime1 = var20Lifetime2;
                   if (stackIn_95_0Lifetime1 != stackIn_95_1Lifetime1 ||
                     var35 != 0) {
-                    var12.field_h = var20Lifetime2 * var7;
+                    var12.position = var20Lifetime2 * var7;
                     var12.a(var14_intLifetime2, (byte) -72);
                     var12.a(var15_intLifetime1, (byte) -13);
                     var12.a(var16_intLifetime1, (byte) 81);
@@ -2901,11 +2901,11 @@ final class np extends ka {
               var13_intLifetime1 = 0;
               while (this.field_W > var13_intLifetime1) {
                 var14_intLifetime1 = this.a(-2117016184, (int) this.field_X[var13_intLifetime1], this.field_o[var13_intLifetime1], this.field_I[var13_intLifetime1], (int) this.field_B);
-                var12.field_h = var9 + var7 * this.field_H[var13_intLifetime1];
+                var12.position = var9 + var7 * this.field_H[var13_intLifetime1];
                 var12.a(var14_intLifetime1, (byte) 92);
-                var12.field_h = var7 * this.field_z[var13_intLifetime1] + var9;
+                var12.position = var7 * this.field_z[var13_intLifetime1] + var9;
                 var12.a(var14_intLifetime1, (byte) 91);
-                var12.field_h = var9 + this.field_hb[var13_intLifetime1] * var7;
+                var12.position = var9 + this.field_hb[var13_intLifetime1] * var7;
                 var12.a(var14_intLifetime1, (byte) 113);
                 var13_intLifetime1++;
                 if (var35 != 0) {
@@ -2976,7 +2976,7 @@ final class np extends ka {
                   }
                 }
                 var27 = (int)(var19_float * var22);
-                var12.field_h = var9 + var23 * var7;
+                var12.position = var9 + var23 * var7;
                 if (0 > var27) {
                   var27 = 0;
                 } else {
@@ -3027,7 +3027,7 @@ final class np extends ka {
                 } else {
                   var27Lifetime1 = 0;
                 }
-                var12.field_h = var23Lifetime1 * var7 + var9;
+                var12.position = var23Lifetime1 * var7 + var9;
                 var12.i(var25Lifetime1, param0 + 0);
                 var12.i(var26Lifetime1, param0 ^ 0);
                 var12.i(var27Lifetime1, 0);
@@ -3065,7 +3065,7 @@ final class np extends ka {
                     var27Lifetime2 = 255;
                   }
                 }
-                var12.field_h = var9 + var7 * var23Lifetime2;
+                var12.position = var9 + var7 * var23Lifetime2;
                 var12.i(var25Lifetime2, 0);
                 var12.i(var26Lifetime2, 0);
                 var12.i(var27Lifetime2, 0);
@@ -3099,7 +3099,7 @@ final class np extends ka {
                 var16Lifetime1 = this.field_O;
               }
               var17 = 3.0f / (float)this.field_h;
-              var12.field_h = var10;
+              var12.position = var10;
               var18Lifetime1 = 3.0f / (float)(this.field_h + this.field_h / 2);
               if (!this.field_R.field_O) {
                 var19Lifetime1 = 0;
@@ -3120,7 +3120,7 @@ final class np extends ka {
                     var12.a((byte) 114, (float)var14Lifetime1[var19Lifetime1] * var18Lifetime1);
                     var12.a((byte) 114, (float)var15Lifetime1[var19Lifetime1] * var18Lifetime1);
                   }
-                  var12.field_h = var12.field_h + (-12 + var7);
+                  var12.position = var12.position + (-12 + var7);
                   var19Lifetime1++;
                 }
                 if ((decompiledFrameCompleted3) &&
@@ -3147,7 +3147,7 @@ final class np extends ka {
                     var12.a(17133, (float)var14Lifetime1[var19Lifetime1Lifetime1] * var18Lifetime1);
                     var12.a(17133, (float)var15Lifetime1[var19Lifetime1Lifetime1] * var18Lifetime1);
                   }
-                  var12.field_h = var12.field_h + (-12 + var7);
+                  var12.position = var12.position + (-12 + var7);
                   var19Lifetime1Lifetime1++;
                 }
               }
@@ -3161,13 +3161,13 @@ final class np extends ka {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
           if (stackIn_244_0 != 0) {
-            var12.field_h = var11;
+            var12.position = var11;
             if (this.field_R.field_O) {
               var13_intLifetime2 = 0;
               while (this.field_L > var13_intLifetime2) {
                 var12.a(17133, this.field_n[var13_intLifetime2]);
                 var12.a(17133, this.field_y[var13_intLifetime2]);
-                var12.field_h = var12.field_h + (var7 - 8);
+                var12.position = var12.position + (var7 - 8);
                 var13_intLifetime2++;
                 if (var35 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -3184,7 +3184,7 @@ final class np extends ka {
               while (this.field_L > var13_intLifetime2Lifetime1) {
                 var12.a((byte) 114, this.field_n[var13_intLifetime2Lifetime1]);
                 var12.a((byte) 114, this.field_y[var13_intLifetime2Lifetime1]);
-                var12.field_h = var12.field_h + (-8 + var7);
+                var12.position = var12.position + (-8 + var7);
                 var13_intLifetime2Lifetime1++;
                 if (var35 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -3195,23 +3195,23 @@ final class np extends ka {
           }
           if ((decompiledFrameCompleted1) &&
             (decompiledFrameCompleted0)) {
-            var12.field_h = this.field_L * var7;
+            var12.position = this.field_L * var7;
           }
           if (param1) {
             boolean decompiledSharedTail0 = (this.field_Q == null);
             if (!decompiledSharedTail0) {
-              this.field_Q.a(var7, var12.field_h, (byte) -112, var12.field_g);
+              this.field_Q.a(var7, var12.position, (byte) -112, var12.payload);
               decompiledSharedTail0 = (var35 != 0);
             }
             if (decompiledSharedTail0) {
-              this.field_Q = this.field_R.a(var12.field_h, var12.field_g, var7, true, (byte) 117);
+              this.field_Q = this.field_R.a(var12.position, var12.payload, var7, true, (byte) 117);
             }
             this.field_Z = (byte) 0;
             var13_ref = this.field_Q;
           }
           if (!param1 ||
             var35 != 0) {
-            var13_ref = this.field_R.a(var12.field_h, var12.field_g, var7, false, (byte) 99);
+            var13_ref = this.field_R.a(var12.position, var12.payload, var7, false, (byte) 99);
             this.field_gb = true;
           }
           if (var5 != 0) {

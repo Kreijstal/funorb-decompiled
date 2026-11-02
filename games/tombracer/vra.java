@@ -14,7 +14,7 @@ final class vra implements bo {
         }
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         try {
           param1.i(8);
           param1.a((byte) -128, this.field_b, 3);
@@ -39,7 +39,7 @@ final class vra implements bo {
         }
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         param0.h((byte) 126);
         if (param1 != -19) {
           return;

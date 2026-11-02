@@ -14,7 +14,7 @@ final class uu implements bo {
         return (ir.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | er.c(param1, param2, 52)) & ss.a((byte) 61, param2, param1);
     }
 
-    final static void a(int param0, byte param1, byte[] param2, java.math.BigInteger param3, uia param4, java.math.BigInteger param5, int param6) {
+    final static void a(int param0, byte param1, byte[] param2, java.math.BigInteger param3, PacketBuffer param4, java.math.BigInteger param5, int param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -50,18 +50,18 @@ final class uu implements bo {
             var8[var9] = pb.field_n.nextInt();
           }
           if (null == hf.field_d ||
-            !(hf.field_d.field_g.length >= var7_int)) {
-            hf.field_d = new uia(var7_int);
+            !(hf.field_d.payload.length >= var7_int)) {
+            hf.field_d = new PacketBuffer(var7_int);
           }
-          hf.field_d.field_h = 0;
+          hf.field_d.position = 0;
           hf.field_d.a(param6, param2, param0, 61);
           hf.field_d.b(716148936, var7_int);
           hf.field_d.a((byte) -48, var13);
           if (ola.field_Bb == null ||
-            !(100 <= ola.field_Bb.field_g.length)) {
-            ola.field_Bb = new uia(100);
+            !(100 <= ola.field_Bb.payload.length)) {
+            ola.field_Bb = new PacketBuffer(100);
           }
-          ola.field_Bb.field_h = 0;
+          ola.field_Bb.position = 0;
           ola.field_Bb.i(10, param1 + 81);
           var11 = 0;
           var9Lifetime1 = var11;
@@ -71,8 +71,8 @@ final class uu implements bo {
           }
           ola.field_Bb.f(-1477662136, param0);
           ola.field_Bb.a(102, param3, param5);
-          param4.a(0, ola.field_Bb.field_g, ola.field_Bb.field_h, 96);
-          param4.a(0, hf.field_d.field_g, hf.field_d.field_h, param1 ^ -43);
+          param4.a(0, ola.field_Bb.payload, ola.field_Bb.position, 96);
+          param4.a(0, hf.field_d.payload, hf.field_d.position, param1 ^ -43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,7 +106,7 @@ final class uu implements bo {
         }
     }
 
-    public final void a(kh param0, byte param1) {
+    public final void a(BitPacketBuffer param0, byte param1) {
         try {
           param0.h((byte) 122);
           if (param1 != -19) {
@@ -153,11 +153,11 @@ final class uu implements bo {
         }
     }
 
-    public final void a(int param0, kh param1) {
+    public final void a(int param0, BitPacketBuffer param1) {
         try {
           if (param0 != 200) {
-            kh var4 = (kh) null;
-            this.a((kh) null, (byte) 46);
+            BitPacketBuffer var4 = (BitPacketBuffer) null;
+            this.a((BitPacketBuffer) null, (byte) 46);
           }
           param1.i(8);
           param1.a((byte) -125, this.field_b, 2);

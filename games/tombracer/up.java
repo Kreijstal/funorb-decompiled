@@ -76,7 +76,7 @@ final class up implements noa {
         field_d = null;
     }
 
-    final void a(kh param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           param0.a((byte) -125, this.field_f, 4);
           if (param1 != 125) {

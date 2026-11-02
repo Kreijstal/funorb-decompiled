@@ -39,7 +39,7 @@ final class wma extends nv {
         field_n = (vna) null;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_o.a(15637, param1);
@@ -58,7 +58,7 @@ final class wma extends nv {
         return this.field_q.a(param2, -65, param1);
     }
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           super.a(param0, param1);
           this.field_r = this.field_p;
@@ -143,12 +143,12 @@ final class wma extends nv {
         return param0;
     }
 
-    wma(la param0, kh param1, boolean param2) {
+    wma(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_p = 0;
         try {
           this.field_o = new mg(param0.field_E, param1);
-          this.field_q = pha.a(param1, param0, 162);
+          this.field_q = pha.readSpawner(param1, param0, 162);
           this.field_p = param1.b((byte) 44, 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

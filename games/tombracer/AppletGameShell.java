@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ug extends GameApplet {
+abstract class AppletGameShell extends GameApplet {
     private long field_w;
     private boolean field_A;
     private boolean field_y;
@@ -61,7 +61,7 @@ abstract class ug extends GameApplet {
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = uca.field_d - 1;
         if (param0 != -15) {
-          ug.n(39);
+          AppletGameShell.n(39);
         }
         byte[] var5 = new byte[var4];
         vc.field_q.a(0, param0 - 103, var5, var4);
@@ -70,7 +70,7 @@ abstract class ug extends GameApplet {
 
     final static boolean q(int param0) {
         if (param0 != -1) {
-          ug.q(12);
+          AppletGameShell.q(12);
         }
         return !ok.field_s ? true : false;
     }
@@ -86,7 +86,7 @@ abstract class ug extends GameApplet {
           int var4 = 0;
           int var5 = 0;
           Exception var6 = null;
-          uia var7 = null;
+          PacketBuffer var7 = null;
           String var8 = null;
           int var9 = 0;
           String var10 = null;
@@ -121,9 +121,9 @@ abstract class ug extends GameApplet {
             }
           }
           if (var4 == 3) {
-            if (-1 != fsa.field_m &&
-              fsa.field_m != 0) {
-              fsa.field_m = -1;
+            if (-1 != Trap.field_m &&
+              Trap.field_m != 0) {
+              Trap.field_m = -1;
               vja.b(true);
             }
             if (param1) {
@@ -185,11 +185,11 @@ abstract class ug extends GameApplet {
               if (ana.field_o.a(false)) {
                 var7 = ana.field_o.b((byte) -123);
                 if (var7 != null) {
-                  var8 = nia.a(var7.field_g, 0, var7.field_h, 255);
-                  nd.a(var8, -1);
+                  var8 = nia.a(var7.payload, 0, var7.position, 255);
+                  NodeHashTableIterator.a(var8, -1);
                 } else {
                   var10 = (String) null;
-                  nd.a((String) null, -1);
+                  NodeHashTableIterator.a((String) null, -1);
                 }
                 ana.field_o = null;
               }
@@ -198,7 +198,7 @@ abstract class ug extends GameApplet {
               var6 = (Exception) (Object) decompiledCaughtException;
               ssa.a("S1", (byte) 121, (Throwable) ((Object) var6));
               var11 = (String) null;
-              nd.a((String) null, -1);
+              NodeHashTableIterator.a((String) null, -1);
               ana.field_o = null;
             }
           }
@@ -324,7 +324,7 @@ abstract class ug extends GameApplet {
           if (gda.field_c != 11) {
             return var2;
           }
-          if (0 != fsa.field_m) {
+          if (0 != Trap.field_m) {
             return var2;
           }
           ak.g(param0 + 46);
@@ -340,7 +340,7 @@ abstract class ug extends GameApplet {
             return var2;
           }
           if (gda.field_c == 11 &&
-            0 == fsa.field_m) {
+            0 == Trap.field_m) {
             ak.g(param0 + 46);
           }
         }
@@ -521,7 +521,7 @@ abstract class ug extends GameApplet {
         int discarded$3 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 <= 89) {
-          ug.n(-80);
+          AppletGameShell.n(-80);
         }
         if (wua.c((byte) 49)) {
           discarded$1 = this.a((byte) -72, false, null != dq.field_f ? true : false);
@@ -585,33 +585,33 @@ abstract class ug extends GameApplet {
             oga.field_f = 15000L + bva.b((byte) -107);
           }
         }
-        if (fsa.field_m == -1 ||
-          0 == fsa.field_m) {
-          stackIn_26_0 = (fsa.field_m != -1) ? 0 : 1;
+        if (Trap.field_m == -1 ||
+          0 == Trap.field_m) {
+          stackIn_26_0 = (Trap.field_m != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_26_0;
-          fsa.field_m = si.A(61);
+          Trap.field_m = si.A(61);
           if (var3Lifetime1 != 0 &&
-            fsa.field_m == 0 &&
+            Trap.field_m == 0 &&
             gda.field_c == 11 &&
             !uma.b(-1)) {
             ak.g(0);
           }
-          if (fsa.field_m != -1 &&
-            fsa.field_m != 0) {
+          if (Trap.field_m != -1 &&
+            Trap.field_m != 0) {
             oga.field_f = bva.b((byte) -107) + 15000L;
           }
         }
-        if (-1 != fsa.field_m &&
-          fsa.field_m != 0) {
+        if (-1 != Trap.field_m &&
+          Trap.field_m != 0) {
           if (cga.field_f < 10) {
-            if (fsa.field_m != 3) {
-              if (fsa.field_m == 4) {
+            if (Trap.field_m != 3) {
+              if (Trap.field_m == 4) {
                 this.a(-6738, "js5io");
               } else {
-                if (fsa.field_m == 2) {
+                if (Trap.field_m == 2) {
                   this.a(-6738, "js5connect_full");
                 } else {
-                  if (fsa.field_m != 5) {
+                  if (Trap.field_m != 5) {
                     this.a(-6738, "js5connect");
                   } else {
                     this.a(-6738, "outofdate");
@@ -624,10 +624,10 @@ abstract class ug extends GameApplet {
           } else {
             if (gda.field_c >= 10) {
               dw.b((byte) -123);
-              if (fsa.field_m != 3) {
-                if (fsa.field_m != 4) {
-                  if (fsa.field_m != 2) {
-                    if (fsa.field_m != 5) {
+              if (Trap.field_m != 3) {
+                if (Trap.field_m != 4) {
+                  if (Trap.field_m != 2) {
+                    if (Trap.field_m != 5) {
                       epa.a(256, (byte) -84, wqa.field_H);
                     } else {
                       epa.a(5, (byte) -84, wq.field_a);
@@ -645,18 +645,18 @@ abstract class ug extends GameApplet {
             }
           }
         }
-        if ((fsa.field_m != -1 &&
-          fsa.field_m != 0 ||
+        if ((Trap.field_m != -1 &&
+          Trap.field_m != 0 ||
           uma.b(-1)) &&
           oga.field_f <= bva.b((byte) -107)) {
           wta.field_G = false;
-          if (-1 != fsa.field_m &&
-            fsa.field_m != 0) {
-            fsa.field_m = -1;
+          if (-1 != Trap.field_m &&
+            Trap.field_m != 0) {
+            Trap.field_m = -1;
             vja.b(true);
           }
         }
-        if (fsa.field_m == 0 &&
+        if (Trap.field_m == 0 &&
           !uma.b(-1)) {
           rca.field_l = false;
         }
@@ -779,7 +779,7 @@ abstract class ug extends GameApplet {
         hd.field_a[18] = true;
     }
 
-    ug() {
+    AppletGameShell() {
     }
 
     final void s(int param0) {

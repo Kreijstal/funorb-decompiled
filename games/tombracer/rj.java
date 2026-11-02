@@ -197,7 +197,7 @@ class rj extends ae {
         int var6 = 0;
         cn var7 = null;
         mm var10 = null;
-        kh var11 = null;
+        BitPacketBuffer var11 = null;
         byte[] var15 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
@@ -220,9 +220,9 @@ class rj extends ae {
               var15 = new byte[var4];
               var11.a(var15, 0, -115, var4);
             }
-            var11.field_h = var11.field_h + 4;
+            var11.position = var11.position + 4;
             if (var11.a((byte) 114)) {
-              var10.p(95);
+              var10.unlink(95);
               return;
             }
             dea.a(60);
@@ -243,7 +243,7 @@ class rj extends ae {
             break;
           }
           if (var4_ref_sda != null) {
-            var4_ref_sda.p(24);
+            var4_ref_sda.unlink(24);
             return;
           }
           dea.a(60);

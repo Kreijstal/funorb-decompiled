@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ib implements noa {
-    la field_a;
+    Room field_a;
 
     abstract void a(byte param0, ui param1, boolean param2, ui param3);
 
-    void a(kh param0, byte param1) {
+    void a(BitPacketBuffer param0, byte param1) {
         try {
           param0.a((byte) -126, this.a(true), 4);
           if (param1 != 52) {
@@ -21,7 +21,7 @@ abstract class ib implements noa {
 
     abstract int a(boolean param0);
 
-    ib(la param0, kh param1) {
+    ib(Room param0, BitPacketBuffer param1) {
         this(param0);
     }
 
@@ -29,7 +29,7 @@ abstract class ib implements noa {
 
     abstract void a(int param0, int param1, int param2, int param3);
 
-    private ib(la param0) {
+    private ib(Room param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

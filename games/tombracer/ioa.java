@@ -81,7 +81,7 @@ final class ioa extends dg {
         }
     }
 
-    ioa(int param0, la param1, kh param2) {
+    ioa(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 

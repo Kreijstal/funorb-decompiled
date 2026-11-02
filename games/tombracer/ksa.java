@@ -24,7 +24,7 @@ final class ksa extends ci {
 
     final static void a(boolean param0, kia param1) {
         try {
-          kh.a(param0, param1, qla.field_f);
+          BitPacketBuffer.a(param0, param1, qla.field_f);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ksa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -48,7 +48,7 @@ final class ksa extends ci {
         return var3;
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;

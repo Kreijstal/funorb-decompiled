@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la implements ew, fo, noa {
+final class Room implements ew, fo, noa {
     int field_E;
-    static naa field_R;
-    private int field_x;
+    static AsyncRequest field_R;
+    private int id;
     private dt field_h;
     private int field_e;
     private int field_v;
     static String[] field_m;
     static kia field_k;
     private int field_C;
-    private int field_N;
+    private int courseIndex;
     private vna field_d;
     private int field_w;
     static nh field_j;
@@ -31,7 +31,7 @@ final class la implements ew, fo, noa {
     private te field_D;
     private tqa field_B;
     private int field_r;
-    private kh field_K;
+    private BitPacketBuffer field_K;
     private ui field_y;
     private bba field_U;
     private int field_I;
@@ -267,7 +267,7 @@ final class la implements ew, fo, noa {
         }
     }
 
-    final void a(fsa param0, byte param1) {
+    final void a(Trap param0, byte param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -302,7 +302,7 @@ final class la implements ew, fo, noa {
         if (-1 == param1) {
           return;
         }
-        fsa var3 = (fsa) (this.field_i.f(-80));
+        Trap var3 = (Trap) (this.field_i.f(-80));
         while (var3 != null) {
           if (!var3.a(param1, 31749)) {
             this.a(var3, 2);
@@ -310,7 +310,7 @@ final class la implements ew, fo, noa {
           } else {
             var3.d(param1, (byte) -55);
           }
-          var3 = (fsa) (this.field_i.e(115));
+          var3 = (Trap) (this.field_i.e(115));
         }
         db var5 = (db) (this.field_d.f(-80));
         while (var5 != null) {
@@ -326,10 +326,10 @@ final class la implements ew, fo, noa {
         if (param0 >= -4) {
           this.k(7);
         }
-        fsa var6 = (fsa) (this.field_i.f(-80));
+        Trap var6 = (Trap) (this.field_i.f(-80));
         while (var6 != null) {
           var6.A(23645);
-          var6 = (fsa) (this.field_i.e(125));
+          var6 = (Trap) (this.field_i.e(125));
         }
         db var7 = (db) (this.field_d.f(-80));
         while (var7 != null) {
@@ -384,10 +384,10 @@ final class la implements ew, fo, noa {
     final void b(int param0, boolean param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
         this.field_B.f((byte) 64);
-        fsa var6 = (fsa) (this.field_i.f(param0 - 87));
+        Trap var6 = (Trap) (this.field_i.f(param0 - 87));
         while (var6 != null) {
           var6.a(this, false);
-          var6 = (fsa) (this.field_i.e(115));
+          var6 = (Trap) (this.field_i.e(115));
         }
         db var7 = (db) (this.field_d.f(-80));
         while (var7 != null) {
@@ -449,9 +449,9 @@ final class la implements ew, fo, noa {
         return this.field_t;
     }
 
-    final ep a(int param0, int param1, int param2, int param3) {
+    final Projectile a(int param0, int param1, int param2, int param3) {
         int var5 = -101 / ((29 - param2) / 33);
-        return (ep) (this.field_s.a(-2698, param0, param3, this.field_S, param1));
+        return (Projectile) (this.field_s.a(-2698, param0, param3, this.field_S, param1));
     }
 
     final boolean j(int param0) {
@@ -467,7 +467,7 @@ final class la implements ew, fo, noa {
         this.field_t = null;
         this.field_d.d(8);
         if (param1 <= 95) {
-          la.l(-107);
+          Room.l(-107);
         }
         this.field_i.d(8);
         this.field_z.d(8);
@@ -479,7 +479,7 @@ final class la implements ew, fo, noa {
           this.field_H = new IsaacCipher(new int[]{this.field_n});
           this.field_u = new npa(false, 16);
           this.field_c = new pta(this, new hr(), 100);
-          this.field_s = new pta(this, new ep(), 25);
+          this.field_s = new pta(this, new Projectile(), 25);
           this.field_f = new pta(this, new mda(), 50);
           this.field_B = new tqa(this, 2097152);
           this.field_c.a((byte) 114);
@@ -512,7 +512,7 @@ final class la implements ew, fo, noa {
         try {
           if (param0) {
             var6 = (up) null;
-            this.a((ep) null, -25, (up) null);
+            this.a((Projectile) null, -25, (up) null);
           }
           stackIn_5_0 = (1 == this.a(131072, 131072, param2, param3, param1, (byte) -128));
           return stackIn_5_0;
@@ -533,13 +533,13 @@ final class la implements ew, fo, noa {
     private final void m(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         this.field_y.a((byte) 97);
-        fsa var2 = (fsa) (this.field_i.f(-80));
+        Trap var2 = (Trap) (this.field_i.f(-80));
         if (param0 != 9) {
           this.d(-36);
         }
         while (var2 != null) {
           var2.a(true, false, this.field_y, new ui());
-          var2 = (fsa) (this.field_i.e(113));
+          var2 = (Trap) (this.field_i.e(113));
         }
         this.field_q.a((byte) 74);
         csa var2_ref = (csa) (this.field_z.f(param0 ^ -71));
@@ -656,7 +656,7 @@ final class la implements ew, fo, noa {
 
     public final lj a(int param0, int param1, boolean param2) {
         uja var4;
-        fsa var5;
+        Trap var5;
         lj var6;
         int var7;
         var7 = TombRacer.field_G ? 1 : 0;
@@ -664,13 +664,13 @@ final class la implements ew, fo, noa {
           this.toString();
         }
         var4 = new uja(this.field_i);
-        var5 = (fsa) (var4.a(true));
+        var5 = (Trap) (var4.a(true));
         while (var5 != null) {
           var6 = var5.a(false, param1, (byte) -26);
           if (var6 != null) {
             return var6;
           }
-          var5 = (fsa) (var4.a(-1));
+          var5 = (Trap) (var4.a(-1));
         }
         return null;
     }
@@ -687,7 +687,7 @@ final class la implements ew, fo, noa {
           this.field_S = new uw(10);
           this.field_S.a(-24343, param0);
           if (param1 <= 2) {
-            field_R = (naa) null;
+            field_R = (AsyncRequest) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "la.KC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -700,7 +700,7 @@ final class la implements ew, fo, noa {
         csa var4;
         int var5;
         gma var6;
-        hca var7;
+        Player var7;
         uw var8;
         csa var4Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -713,7 +713,7 @@ final class la implements ew, fo, noa {
             this.field_S = null;
             var4 = (csa) (this.field_z.f(-80));
             while (var4 != null) {
-              var4.a(false, true, this, 0, 0, 1, (fsa) null);
+              var4.a(false, true, this, 0, 0, 1, (Trap) null);
               var4 = (csa) (this.field_z.e(123));
             }
             var4Lifetime1 = (csa) (this.field_z.f(-80));
@@ -747,7 +747,7 @@ final class la implements ew, fo, noa {
         iq var2;
         int var3;
         int var4;
-        fsa var5;
+        Trap var5;
         db var6;
         csa var7;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -770,10 +770,10 @@ final class la implements ew, fo, noa {
         this.field_s.a(this.field_S, (byte) -89, true, 7);
         this.field_c.a(this.field_S, (byte) 126, true, 7);
         this.field_f.a(this.field_S, (byte) -33, false, 6);
-        var5 = (fsa) (this.field_i.f(-80));
+        var5 = (Trap) (this.field_i.f(-80));
         while (var5 != null) {
           var5.a(122, this.field_S);
-          var5 = (fsa) (this.field_i.e(107));
+          var5 = (Trap) (this.field_i.e(107));
         }
         var6 = (db) (this.field_d.f(-80));
         while (var6 != null) {
@@ -794,7 +794,7 @@ final class la implements ew, fo, noa {
     }
 
     final void d(boolean param0) {
-        System.out.println("Rooms ID: " + this.field_x);
+        System.out.println("Rooms ID: " + this.id);
         System.out.println("Projectiles: ");
         this.field_s.a(false);
         if (!param0) {
@@ -813,7 +813,7 @@ final class la implements ew, fo, noa {
         }
     }
 
-    final void a(fsa param0, int param1) {
+    final void a(Trap param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -821,7 +821,7 @@ final class la implements ew, fo, noa {
         RuntimeException var3 = null;
         try {
           if (param0.n((byte) 113)) {
-            param0.p(120);
+            param0.unlink(120);
             param0.B(-165);
           }
           if (param1 != 2) {
@@ -858,7 +858,7 @@ final class la implements ew, fo, noa {
         RuntimeException var3 = null;
         try {
           this.b(-1, param0.a((byte) 55), param0.c(-101), param0.e(9648), -124, param0.d(param1 ^ -26754), 0);
-          param0.p(112);
+          param0.unlink(112);
           this.field_u.a((ffa) (param0), (byte) 118);
           if (param1 != -26755) {
             this.field_z = (vna) null;
@@ -882,7 +882,7 @@ final class la implements ew, fo, noa {
     }
 
     public final void f(int param0) {
-        fsa[] discarded$0 = null;
+        Trap[] discarded$0 = null;
         if (param0 != -4366) {
           discarded$0 = this.a(54, 60, 37, -15, -117);
         }
@@ -910,35 +910,35 @@ final class la implements ew, fo, noa {
         return 0;
     }
 
-    private final fsa[] a(int param0, int param1, int param2, int param3, int param4) {
+    private final Trap[] a(int param0, int param1, int param2, int param3, int param4) {
         int var8_int = 0;
         ub var6;
         ffa[] var7;
         int var10;
-        fsa[] var8;
-        fsa var9;
+        Trap[] var8;
+        Trap var9;
         var10 = TombRacer.field_G ? 1 : 0;
         if (param2 <= 27) {
-          return (fsa[]) null;
+          return (Trap[]) null;
         }
         var6 = new ub();
         var7 = this.field_u.b(param1, -1, param4, param0, param3);
         for (var8_int = 0; var7.length > var8_int; var8_int++) {
-          if (var7[var8_int] instanceof fsa) {
-            var9 = (fsa) (var7[var8_int]);
+          if (var7[var8_int] instanceof Trap) {
+            var9 = (Trap) (var7[var8_int]);
             if (var9.a((byte) 110, param1, param4, param3, param0)) {
               var6.a((byte) -37, var9);
             }
           }
         }
-        var8 = new fsa[var6.a(-1)];
+        var8 = new Trap[var6.a(-1)];
         var6.a(var8, false);
         return var8;
     }
 
-    final fsa[] n(int param0) {
+    final Trap[] n(int param0) {
         if (param0 != 16) {
-          return (fsa[]) null;
+          return (Trap[]) null;
         }
         return this.a(this.field_v, this.field_w / 2, 59, this.field_w, this.field_v / 2);
     }
@@ -949,7 +949,7 @@ final class la implements ew, fo, noa {
         field_R = null;
         field_k = null;
         if (param0 != -128) {
-          la.l(-58);
+          Room.l(-58);
         }
         field_p = (nh[][]) null;
     }
@@ -980,7 +980,7 @@ final class la implements ew, fo, noa {
         if (param1) {
           this.a(false, -109, -42, 112, -101, -128);
         }
-        this.field_N = param0;
+        this.courseIndex = param0;
     }
 
     final boolean h(byte param0) {
@@ -1035,17 +1035,17 @@ final class la implements ew, fo, noa {
     private final void t(int param0) {
         int var7 = 0;
         uw var2;
-        kh var3;
+        BitPacketBuffer var3;
         int var4;
         int var5;
         int var6;
-        fsa var7_ref_fsa;
+        Trap var7_ref_fsa;
         csa var8;
         int var9;
-        fsa var10;
+        Trap var10;
         csa var11;
         db var12;
-        kh var13;
+        BitPacketBuffer var13;
         int var5Lifetime1;
         int var6Lifetime1;
         int var6Lifetime2;
@@ -1059,7 +1059,7 @@ final class la implements ew, fo, noa {
         this.field_y.a((byte) -69);
         bca.b((byte) 55);
         var3 = this.field_K;
-        var3.field_h = 0;
+        var3.position = 0;
         var3.h((byte) -64);
         this.field_E = var3.b((byte) 44, 8);
         this.field_P = new fq(this.field_E, var3);
@@ -1089,7 +1089,7 @@ final class la implements ew, fo, noa {
         }
         var5Lifetime1 = var3.b((byte) 44, 8);
         for (var6 = 0; var6 < var5Lifetime1; var6++) {
-          var7_ref_fsa = new fsa(this, var3, false);
+          var7_ref_fsa = new Trap(this, var3, false);
           this.a(var7_ref_fsa, (byte) 32);
           var7_ref_fsa.D((byte) 118);
         }
@@ -1123,27 +1123,27 @@ final class la implements ew, fo, noa {
         }
         var3.i((byte) 98);
         this.m(param0 ^ 1);
-        var10 = (fsa) (this.field_i.f(-80));
+        var10 = (Trap) (this.field_i.f(-80));
         while (var10 != null) {
           var10.h(true);
           var10.u(0);
-          var10 = (fsa) (this.field_i.e(115));
+          var10 = (Trap) (this.field_i.e(115));
         }
         var11 = (csa) (this.field_z.f(-80));
         while (var11 != null) {
           var11.c(true);
           var11 = (csa) (this.field_z.e(124));
         }
-        var3.field_h = 0;
+        var3.position = 0;
         if (this.field_E != 26) {
           if (this.field_E <= 19) {
             this.b(1, param0 - 28);
           }
           this.field_E = 26;
-          var13 = new kh(30000);
+          var13 = new BitPacketBuffer(30000);
           this.a(var13, -28426);
           this.field_K = var13;
-          var13.field_h = 0;
+          var13.position = 0;
         }
         if (var2 != null) {
           this.field_S = var2;
@@ -1234,7 +1234,7 @@ final class la implements ew, fo, noa {
           var14 = this.field_u.b(param4, -1, param5, param8, param1);
           var10 = var14;
           if (param2 != 2) {
-            la.p(-15);
+            Room.p(-15);
           }
           for (var11 = 0; var14.length > var11; var11++) {
             boolean decompiledFrameRemainder0 = true;
@@ -1308,7 +1308,7 @@ final class la implements ew, fo, noa {
         return this.field_J;
     }
 
-    final void a(la param0, byte param1) {
+    final void a(Room param0, byte param1) {
         if (param1 <= 108) {
           return;
         }
@@ -1352,7 +1352,7 @@ final class la implements ew, fo, noa {
         if (param0 != -82) {
           return -41;
         }
-        return this.field_x;
+        return this.id;
     }
 
     final void r(int param0) {
@@ -1394,8 +1394,8 @@ final class la implements ew, fo, noa {
             var10 = var7;
             for (var11 = 0; var11 < var10.length; var11++) {
               var12 = var10[var11];
-              if (var12 instanceof fsa) {
-                ((fsa) (var12)).a(26689, param1, var9, var8);
+              if (var12 instanceof Trap) {
+                ((Trap) (var12)).a(26689, param1, var9, var8);
               }
             }
           }
@@ -1429,14 +1429,14 @@ final class la implements ew, fo, noa {
 
     final boolean b(int param0, byte param1) {
         if (param1 != -44) {
-          fsa var4 = (fsa) null;
-          this.a((fsa) null, 48);
+          Trap var4 = (Trap) null;
+          this.a((Trap) null, 48);
         }
         return this.field_b[param0] != -1 ? true : false;
     }
 
     final boolean g(byte param0) {
-        hca var2;
+        Player var2;
         int var3;
         boolean stackIn_4_0 = false;
         var3 = 23 / ((param0 - 24) / 33);
@@ -1495,11 +1495,11 @@ final class la implements ew, fo, noa {
 
     final void d(int param0, int param1) {
         db var4;
-        fsa var5_ref_fsa;
+        Trap var5_ref_fsa;
         int var5;
         int var6;
-        fsa var7;
-        hca var8;
+        Trap var7;
+        Player var8;
         uja var9;
         var6 = TombRacer.field_G ? 1 : 0;
         var8 = this.u(-62);
@@ -1521,20 +1521,20 @@ final class la implements ew, fo, noa {
           var4 = (db) (this.field_d.e(120));
         }
         var9 = new uja(this.field_i);
-        var5_ref_fsa = (fsa) (var9.a(true));
+        var5_ref_fsa = (Trap) (var9.a(true));
         while (var5_ref_fsa != null) {
           var5_ref_fsa.b(param1 + 106, false);
           this.field_a = var5_ref_fsa.i(this.field_a, -109);
           if (var5_ref_fsa.h(param1 + 18407)) {
-            var5_ref_fsa.p(param1 ^ 79);
+            var5_ref_fsa.unlink(param1 ^ 79);
           }
-          var5_ref_fsa = (fsa) (var9.a(-1));
+          var5_ref_fsa = (Trap) (var9.a(-1));
         }
         this.field_g.c(true);
         var5 = this.a(-1553494544).g(param1 + 112) ? 1 : 0;
         if (param1 != 0) {
-          var7 = (fsa) null;
-          this.a((fsa) null, -31);
+          var7 = (Trap) null;
+          this.a((Trap) null, -31);
         }
         this.field_s.a(var5 != 0, (byte) -126);
         this.field_f.a(var5 != 0, (byte) -31);
@@ -1555,7 +1555,7 @@ final class la implements ew, fo, noa {
     }
 
     public final String toString() {
-        return "Room(courseIndex:" + this.field_N + ",id:" + this.field_x + ",diff:" + 1 + ")";
+        return "Room(courseIndex:" + this.courseIndex + ",id:" + this.id + ",diff:" + 1 + ")";
     }
 
     final int n(byte param0) {
@@ -1565,7 +1565,7 @@ final class la implements ew, fo, noa {
         return this.field_e;
     }
 
-    final hca u(int param0) {
+    final Player u(int param0) {
         if (param0 >= 0) {
           this.field_A = -11;
         }
@@ -1600,10 +1600,10 @@ final class la implements ew, fo, noa {
         if (param1 != -20) {
           this.field_b = (int[]) null;
         }
-        fsa var6 = (fsa) (this.field_i.f(-80));
+        Trap var6 = (Trap) (this.field_i.f(-80));
         while (var6 != null) {
           var6.o(var3, 81);
-          var6 = (fsa) (this.field_i.e(115));
+          var6 = (Trap) (this.field_i.e(115));
         }
         csa var7 = (csa) (this.field_z.f(param1 ^ 92));
         while (var7 != null) {
@@ -1643,7 +1643,7 @@ final class la implements ew, fo, noa {
           f.b(120);
         }
         if (param0 != 2097152) {
-          la.l(104);
+          Room.l(104);
         }
     }
 
@@ -1694,7 +1694,7 @@ final class la implements ew, fo, noa {
         return this.field_I;
     }
 
-    private final void a(kh param0, int param1) {
+    private final void a(BitPacketBuffer param0, int param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -1702,7 +1702,7 @@ final class la implements ew, fo, noa {
         RuntimeException var3 = null;
         int var4 = 0;
         db var5 = null;
-        fsa var6 = null;
+        Trap var6 = null;
         csa var7 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
@@ -1724,12 +1724,12 @@ final class la implements ew, fo, noa {
             var5 = (db) (this.field_d.e(113));
           }
           param0.a((byte) 119, this.field_i.a((byte) -16), 8);
-          var6 = (fsa) (this.field_i.f(-80));
+          var6 = (Trap) (this.field_i.f(-80));
           while (var6 != null) {
             if (!var6.w((byte) -117)) {
               var6.a(param0, -100);
             }
-            var6 = (fsa) (this.field_i.e(114));
+            var6 = (Trap) (this.field_i.e(114));
           }
           this.field_B.a(8, param0);
           param0.a((byte) 120, this.field_z.a((byte) -16), 8);
@@ -1789,7 +1789,7 @@ final class la implements ew, fo, noa {
         return this.field_y;
     }
 
-    final int a(ep param0, int param1, up param2) {
+    final int a(Projectile param0, int param1, up param2) {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -1992,7 +1992,7 @@ final class la implements ew, fo, noa {
 
     final int c(int param0) {
         int var2 = -6 % ((param0 - 1) / 54);
-        return this.field_N;
+        return this.courseIndex;
     }
 
     final csa a(boolean param0, int param1, int param2) {
@@ -2016,7 +2016,7 @@ final class la implements ew, fo, noa {
         return null;
     }
 
-    la(dt param0, int param1, kh param2, int param3, boolean param4) {
+    Room(dt param0, int param1, BitPacketBuffer param2, int param3, boolean param4) {
         int var6_int = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_11_0 = null;
@@ -2046,7 +2046,7 @@ final class la implements ew, fo, noa {
           this.field_v = 33554432;
           this.field_K = param2;
           this.field_w = 33554432;
-          this.field_x = param1;
+          this.id = param1;
           this.field_n = param3;
           stackIn_7_1 = (param4);
           this.field_T = stackIn_7_1;

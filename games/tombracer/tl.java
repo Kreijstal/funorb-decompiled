@@ -52,7 +52,7 @@ final class tl extends nv implements ut {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_s.a(this.h((byte) 123), (byte) 76, param1);
@@ -140,7 +140,7 @@ final class tl extends nv implements ut {
         return this.field_o.a(false);
     }
 
-    tl(la param0, boolean param1) {
+    tl(Room param0, boolean param1) {
         super(param0, param1);
         try {
           this.field_s = new jma(15);
@@ -189,7 +189,7 @@ final class tl extends nv implements ut {
         return 16711782;
     }
 
-    tl(la param0, kh param1, boolean param2) {
+    tl(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
           this.field_s = new jma(15, param0, param1);

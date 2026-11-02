@@ -23,7 +23,7 @@ final class fna {
     }
 
     final static void a(int param0, int param1, ik param2) {
-        kh var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           if (param1 != -23814) {
             field_j = (qua[]) null;
@@ -332,11 +332,11 @@ final class fna {
         }
         tga.field_a.KA(this.field_b - 35, -17 + var9, (var20 >> 1) - 35 + this.field_b, var9);
         if (!param3) {
-          ep.field_n.a(this.field_b - 34, -16 + var9, 0, -4144960, 1);
+          Projectile.field_n.a(this.field_b - 34, -16 + var9, 0, -4144960, 1);
         }
         if (param3 ||
           var24 != 0) {
-          ep.field_n.a(-34 + this.field_b, -16 + var9);
+          Projectile.field_n.a(-34 + this.field_b, -16 + var9);
         }
         tga.field_a.la();
         if (this.field_g != 6) {

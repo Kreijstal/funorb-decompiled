@@ -528,7 +528,7 @@ final class eka extends ci {
         }
         var2 = param0;
         if (var2 == -1) {
-          return (dfa) ((Object) rba.field_a);
+          return (dfa) ((Object) SecondaryNodeDequeIterator.field_a);
         }
         if (var2 == -2) {
           return (dfa) ((Object) oqa.field_s);
@@ -536,7 +536,7 @@ final class eka extends ci {
         return (dfa) ((Object) nl.a(param0, (byte) 50));
     }
 
-    final void a(byte param0, uia param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_8_1 = false;

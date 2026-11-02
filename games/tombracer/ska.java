@@ -11,7 +11,7 @@ final class ska extends nv implements mra {
     private boolean field_s;
     static String[] field_q;
 
-    final void a(boolean param0, fsa param1) {
+    final void a(boolean param0, Trap param1) {
         try {
           if (!param0) {
             this.field_p = false;
@@ -108,7 +108,7 @@ final class ska extends nv implements mra {
         }
     }
 
-    ska(la param0, boolean param1) {
+    ska(Room param0, boolean param1) {
         super(param0, param1);
         this.field_o = true;
         try {
@@ -119,7 +119,7 @@ final class ska extends nv implements mra {
         }
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           this.field_n.a(15637, param1);
@@ -208,14 +208,14 @@ final class ska extends nv implements mra {
 
     final int a(boolean param0) {
         if (param0) {
-          kh var3 = (kh) null;
-          this.a(true, (kh) null);
+          BitPacketBuffer var3 = (BitPacketBuffer) null;
+          this.a(true, (BitPacketBuffer) null);
           return 20;
         }
         return 20;
     }
 
-    ska(la param0, kh param1, boolean param2) {
+    ska(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_o = true;
         try {

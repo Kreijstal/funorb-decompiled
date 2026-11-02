@@ -96,7 +96,7 @@ final class rla extends b implements tsa {
         }
         this.a(this.field_C, this.field_n, this.field_i, false, this.field_m);
         this.field_G = false;
-        this.field_F.p(76);
+        this.field_F.unlink(76);
         if (param0 < 82) {
           field_y = (String) null;
         }

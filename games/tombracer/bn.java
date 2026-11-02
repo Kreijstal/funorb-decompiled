@@ -139,7 +139,7 @@ final class bn extends nv {
         return 27;
     }
 
-    final void a(boolean param0, kh param1) {
+    final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
           param1.a((byte) 72, this.field_q ? 1 : 0, 1);
@@ -157,7 +157,7 @@ final class bn extends nv {
         return true;
     }
 
-    bn(la param0, kh param1, boolean param2) {
+    bn(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         this.field_r = 2;
         this.field_q = true;

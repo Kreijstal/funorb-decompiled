@@ -54,14 +54,14 @@ final class vk implements os {
             sa.field_r.field_h >= 0) {
             var3 = hb.field_w[sa.field_r.field_h];
             if (var3 == 2) {
-              ug.n(-18);
+              AppletGameShell.n(-18);
             } else if (var3 == 5) {
-              ug.n(-18);
+              AppletGameShell.n(-18);
             }
           } else {
             if (var2 != 0 &&
               2 != mq.field_a) {
-              ug.n(-18);
+              AppletGameShell.n(-18);
             }
           }
           if (var3 == 0 &&

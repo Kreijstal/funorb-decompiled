@@ -6,7 +6,7 @@ abstract class bs extends IntrusiveNode {
     static float[][] field_f;
     static String field_h;
 
-    void a(kh param0, int param1) {
+    void a(BitPacketBuffer param0, int param1) {
         try {
           param0.a((byte) -3, this.b((byte) 121), 4);
           if (param1 != -5) {
@@ -37,7 +37,7 @@ abstract class bs extends IntrusiveNode {
         return (int)(var3Lifetime1 / (long)param0);
     }
 
-    bs(int param0, kh param1) {
+    bs(int param0, BitPacketBuffer param1) {
     }
 
     abstract boolean a(boolean param0, bs param1);

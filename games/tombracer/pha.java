@@ -31,8 +31,8 @@ final class pha extends jea {
           field_ub = null;
           return;
         }
-        la var2 = (la) null;
-        pha.a((kh) null, (la) null, 16);
+        Room var2 = (Room) null;
+        pha.readSpawner((BitPacketBuffer) null, (Room) null, 16);
         field_ub = null;
     }
 
@@ -83,7 +83,7 @@ final class pha extends jea {
         if (param0 != 162) {
           return false;
         }
-        return !this.d(0) ? true : false;
+        return !this.isSecondaryLinked(0) ? true : false;
     }
 
     pha(String param0, String param1, long param2) {
@@ -115,7 +115,7 @@ final class pha extends jea {
         }
     }
 
-    final static ib a(kh param0, la param1, int param2) {
+    final static ib readSpawner(BitPacketBuffer param0, Room param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

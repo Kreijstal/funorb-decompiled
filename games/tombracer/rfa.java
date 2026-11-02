@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-abstract class rfa extends ug implements sia {
+abstract class rfa extends AppletGameShell implements sia {
     static String field_B;
     static jea field_C;
 
-    abstract boolean a(int param0, kh param1, byte param2);
+    abstract boolean a(int param0, BitPacketBuffer param1, byte param2);
 
     final void c(int param0) {
         int var3 = 0;

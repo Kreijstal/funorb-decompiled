@@ -44,7 +44,7 @@ final class bca {
         }
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           this.field_b.a(param1, (byte) -120);
           if (param0 >= -13) {
@@ -80,7 +80,7 @@ final class bca {
         this.a((byte) -101);
     }
 
-    bca(int param0, kh param1) {
+    bca(int param0, BitPacketBuffer param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

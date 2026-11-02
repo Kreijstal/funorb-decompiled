@@ -10,7 +10,7 @@ final class lfa extends dg {
     static su field_o;
     static String field_n;
 
-    final void a(int param0, la param1, kh param2) {
+    final void a(int param0, Room param1, BitPacketBuffer param2) {
         super.a(126, param1, param2);
         if (param1.field_E <= 17) {
           return;
@@ -25,7 +25,7 @@ final class lfa extends dg {
         }
     }
 
-    lfa(int param0, la param1, kh param2) {
+    lfa(int param0, Room param1, BitPacketBuffer param2) {
         super(param0, param1, param2);
     }
 
@@ -39,8 +39,8 @@ final class lfa extends dg {
     final void h(int param0) {
         int var2;
         int var3;
-        kh var4;
-        kh var4Lifetime1;
+        BitPacketBuffer var4;
+        BitPacketBuffer var4Lifetime1;
         var3 = TombRacer.field_G ? 1 : 0;
         super.h(78);
         var2 = this.field_q;
@@ -52,8 +52,8 @@ final class lfa extends dg {
             if (param0 > 0) {
               return;
             }
-            var4 = (kh) null;
-            this.a(-98, (la) null, (kh) null);
+            var4 = (BitPacketBuffer) null;
+            this.a(-98, (Room) null, (BitPacketBuffer) null);
             return;
           }
           if (3 == var2) {
@@ -67,8 +67,8 @@ final class lfa extends dg {
         if (param0 > 0) {
           return;
         }
-        var4Lifetime1 = (kh) null;
-        this.a(-98, (la) null, (kh) null);
+        var4Lifetime1 = (BitPacketBuffer) null;
+        this.a(-98, (Room) null, (BitPacketBuffer) null);
     }
 
     final void a(iq param0, int param1, int param2, int param3, byte param4) {
@@ -169,7 +169,7 @@ final class lfa extends dg {
     final void d(int param0) {
         uja discarded$0 = null;
         uja discarded$1 = null;
-        fsa var3;
+        Trap var3;
         int var5;
         Object var6;
         w var6_ref;
@@ -180,7 +180,7 @@ final class lfa extends dg {
         if (var6_ref == null) {
           return;
         }
-        var3 = (fsa) (this.field_h);
+        var3 = (Trap) (this.field_h);
         if (var3.x(param0 + 15471).i(param0 - 14885)) {
           return;
         }
@@ -232,7 +232,7 @@ final class lfa extends dg {
         return;
     }
 
-    final void a(byte param0, kh param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         try {
           int var3_int = 94 / ((-8 - param0) / 40);
           super.a((byte) -88, param1);
