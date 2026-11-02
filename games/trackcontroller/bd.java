@@ -5,7 +5,7 @@ final class bd {
     static String[] field_a;
     static vi field_b;
 
-    final static li a(int param0, bh param1) {
+    final static li a(int param0, PcmSampleStream param1) {
         li var2 = null;
         RuntimeException var2_ref = null;
         li stackIn_2_0 = null;
@@ -20,7 +20,7 @@ final class bd {
             stackIn_2_0 = (li) null;
             return stackIn_2_0;
           }
-          kd.field_a.a((byte) -122, var2);
+          kd.field_a.addLast((byte) -122, var2);
           ProxySocketConnector.field_e.a(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -34,7 +34,7 @@ final class bd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

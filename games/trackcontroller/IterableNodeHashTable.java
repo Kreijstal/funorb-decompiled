@@ -45,17 +45,17 @@ final class IterableNodeHashTable implements Iterable {
     final void a(IntrusiveNode param0, long param1, int param2) {
         IntrusiveNode var5 = null;
         try {
-          if (null != param0.field_e) {
-            param0.a(param2 ^ 64);
+          if (null != param0.previous) {
+            param0.unlink(param2 ^ 64);
           }
           var5 = this.field_c[(int)((long)(param2 + this.field_a) & param1)];
-          param0.field_h = var5;
-          param0.field_e = var5.field_e;
-          param0.field_e.field_h = param0;
-          param0.field_b = param1;
-          param0.field_h.field_e = param0;
+          param0.next = var5;
+          param0.previous = var5.previous;
+          param0.previous.next = param0;
+          param0.key = param1;
+          param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ga.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ga.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -63,14 +63,14 @@ final class IterableNodeHashTable implements Iterable {
         IntrusiveNode var5 = null;
         int var6 = TrackController.field_F ? 1 : 0;
         IntrusiveNode var4 = this.field_c[(int)((long)(-1 + this.field_a) & param0)];
-        this.field_g = var4.field_h;
+        this.field_g = var4.next;
         while (var4 != this.field_g) {
-          if (param0 == this.field_g.field_b) {
+          if (param0 == this.field_g.key) {
             var5 = this.field_g;
-            this.field_g = this.field_g.field_h;
+            this.field_g = this.field_g.next;
             return var5;
           }
-          this.field_g = this.field_g.field_h;
+          this.field_g = this.field_g.next;
         }
         if (param1 == 20) {
           this.field_g = null;

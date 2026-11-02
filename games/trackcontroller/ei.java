@@ -2,25 +2,25 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ei extends IntrusiveNode {
-    static ja field_m;
+    static IntrusiveDeque field_m;
     int field_n;
     static int field_o;
     static String field_k;
-    static kk field_i;
+    static Archive field_i;
     byte[] field_l;
     static String field_j;
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
           if (param0 >= -119) {
-            qj var3 = (qj) null;
-            ei.a((qj) null, -127);
+            Sprite var3 = (Sprite) null;
+            ei.a((Sprite) null, -127);
           }
           param1.addMouseListener(hd.field_p);
           param1.addMouseMotionListener(hd.field_p);
           param1.addFocusListener(hd.field_p);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ei.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ei.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class ei extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class ei extends IntrusiveNode {
         }
         if (null != ff.field_b) {
           if (!ff.field_b.c(96)) {
-            return pc.field_t;
+            return ArchiveIndex.field_t;
           }
           return jb.field_c;
         }
@@ -108,7 +108,7 @@ final class ei extends IntrusiveNode {
         return f.field_d;
     }
 
-    final static void a(qj param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         int var6 = 0;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -151,7 +151,7 @@ final class ei extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class ei extends IntrusiveNode {
     }
 
     static {
-        field_m = new ja();
+        field_m = new IntrusiveDeque();
         field_k = "Loading levels";
         field_j = "Names should contain a maximum of 12 characters";
     }

@@ -25,12 +25,12 @@ final class uj {
         return (String) null;
     }
 
-    final static qj[] a(String param0, kk param1, byte param2, String param3) {
+    final static Sprite[] a(String param0, Archive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        qj[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -67,7 +67,7 @@ final class uj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class uj {
               return;
             }
             try {
-              pl.field_b = new il(gf.field_o.field_p, 64, 0);
+              pl.field_b = new BufferedCacheFile(gf.field_o.field_p, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +136,7 @@ final class uj {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

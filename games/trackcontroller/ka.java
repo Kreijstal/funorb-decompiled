@@ -3,7 +3,7 @@
  */
 final class ka {
     static boolean field_a;
-    static ja field_d;
+    static IntrusiveDeque field_d;
     static int[] field_f;
     static String field_e;
     static int field_c;
@@ -62,7 +62,7 @@ final class ka {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class ka {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class ka {
     }
 
     static {
-        field_d = new ja();
+        field_d = new IntrusiveDeque();
         field_e = "Show my scores only.";
         field_b = new ba();
     }

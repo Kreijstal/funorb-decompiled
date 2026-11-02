@@ -15,7 +15,7 @@ final class u extends IntrusiveNode {
         int var2;
         int var3;
         int var4;
-        qj var6;
+        Sprite var6;
         int var7;
         int var8;
         var8 = TrackController.field_F ? 1 : 0;
@@ -90,7 +90,7 @@ final class u extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

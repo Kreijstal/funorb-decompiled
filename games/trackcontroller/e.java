@@ -135,7 +135,7 @@ final class e {
                   if (ig.field_d <= param8) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + ll.field_d;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_d;
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
                 }
@@ -188,7 +188,7 @@ final class e {
               }
               var10 = var10 + var12;
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + ll.field_d;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_d;
             }
             return;
           }
@@ -203,7 +203,7 @@ final class e {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

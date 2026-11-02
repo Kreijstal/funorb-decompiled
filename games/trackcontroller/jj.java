@@ -3,7 +3,7 @@
  */
 class jj extends db implements m {
     private dg field_eb;
-    private oh field_gb;
+    private BitmapFont field_gb;
     private boolean field_jb;
     private boolean field_kb;
     static int[] field_fb;
@@ -40,7 +40,7 @@ class jj extends db implements m {
               stackIn_15_0 = var6;
               stackIn_15_1 = param2 - 17030;
               if (!this.field_hb) {
-                stackIn_16_2 = ea.field_p;
+                stackIn_16_2 = LevelData.field_p;
               } else {
                 stackIn_16_2 = ib.field_c;
               }
@@ -67,7 +67,7 @@ class jj extends db implements m {
               var6.a(-17040, wg.field_h, 8);
             }
           } else {
-            var6.a(-17040, ea.field_y, 7);
+            var6.a(-17040, LevelData.field_y, 7);
           }
           this.b(var6, -101);
           return;
@@ -81,7 +81,7 @@ class jj extends db implements m {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -113,11 +113,11 @@ class jj extends db implements m {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    jj(vl param0, oh param1, String param2, boolean param3, boolean param4) {
+    jj(vl param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new lc((jj) null, param1, param2), 77, 10, 10);
         try {
           this.field_jb = false;
@@ -129,7 +129,7 @@ class jj extends db implements m {
           this.field_eb.field_C = true;
           this.a(false, this.field_eb);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "jj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "jj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ class jj extends db implements m {
             return;
           }
           if (this.field_kb) {
-            ja.c(1);
+            IntrusiveDeque.c(1);
             return;
           }
           return;
@@ -156,7 +156,7 @@ class jj extends db implements m {
           return;
         }
         if (this.field_kb) {
-          ja.c(1);
+          IntrusiveDeque.c(1);
           return;
         }
     }
@@ -177,7 +177,7 @@ class jj extends db implements m {
         this.b(var2, -78);
     }
 
-    final boolean a(byte param0, char param1, al param2, int param3) {
+    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -203,7 +203,7 @@ class jj extends db implements m {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 

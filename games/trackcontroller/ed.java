@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ed extends rh {
-    static kk field_I;
+    static Archive field_I;
 
     private ed(String param0, tg param1) {
         this(param0, lb.field_O.field_h, param1);
         try {
           this.field_y = lb.field_O.field_j;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -18,7 +18,7 @@ final class ed extends rh {
         try {
           this.field_y = lb.field_O.field_j;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class ed extends rh {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class ed extends rh {
         }
         ij.a((byte) 111, 4, false);
         if (param0 > -91) {
-          field_I = (kk) null;
+          field_I = (Archive) null;
         }
     }
 
@@ -106,7 +106,7 @@ final class ed extends rh {
         try {
           this.field_G = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

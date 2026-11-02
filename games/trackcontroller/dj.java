@@ -50,7 +50,7 @@ final class dj extends IOException {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sl {
+abstract class LevelGrid {
     static aa field_e;
     int field_h;
     private int field_k;
     int[][] field_i;
-    int[][] field_d;
+    int[][] tileFlags;
     byte[][] field_o;
     static int field_n;
     int field_l;
@@ -30,17 +30,17 @@ abstract class sl {
         if (!param2) {
           this.field_f = -91;
         }
-        this.field_m = this.field_h / 5 % ri.field_H.length;
+        this.field_m = this.field_h / 5 % ActiveLevel.field_H.length;
         var4 = this.field_f;
         for (var5 = 0; this.field_o.length > var5; var5++) {
           var6 = this.field_a;
           for (var7 = 0; var7 < this.field_o[0].length; var7++) {
             this.a(var6, var4, 0, (int) this.field_o[var5][var7]);
-            var8 = -65 & this.field_d[var5][var7];
+            var8 = -65 & this.tileFlags[var5][var7];
             if (var8 >= 7 &&
               var8 < 38) {
               ii.field_r[var8].e(var6, var4);
-              if ((this.field_d[var5][var7] & 64) != 0) {
+              if ((this.tileFlags[var5][var7] & 64) != 0) {
                 ue.a(var6, var8, (byte) 91, var4);
               }
             } else {
@@ -95,13 +95,13 @@ abstract class sl {
             this.a(-69, 10, -15, -70);
           }
           if (param0.length != 0) {
-            this.field_d = new int[param0.length][param0[0].length];
+            this.tileFlags = new int[param0.length][param0[0].length];
           } else {
-            this.field_d = new int[0][0];
+            this.tileFlags = new int[0][0];
           }
           for (var5_int = 0; var5_int < param3.length; var5_int++) {
             pd.a(param3[var5_int], 0, this.field_o[var5_int], 0, param3[var5_int].length);
-            pd.a(param0[var5_int], 0, this.field_d[var5_int], 0, param0[var5_int].length);
+            pd.a(param0[var5_int], 0, this.tileFlags[var5_int], 0, param0[var5_int].length);
           }
           this.field_i = new int[param2.length][param2[0].length];
           for (var5_intLifetime1 = 0; var5_intLifetime1 < param2.length; var5_intLifetime1++) {
@@ -149,7 +149,7 @@ abstract class sl {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -157,18 +157,18 @@ abstract class sl {
         field_e = null;
         if (param0 != 107) {
           String var2 = (String) null;
-          sl.a((Throwable) null, (String) null);
+          LevelGrid.a((Throwable) null, (String) null);
         }
     }
 
-    void a(ea param0, int param1) {
+    void a(LevelData param0, int param1) {
         try {
-          this.a(param0.field_d, (byte) 50, param0.field_i, param0.field_o);
+          this.a(param0.tileFlags, (byte) 50, param0.field_i, param0.field_o);
           if (param1 <= 36) {
             this.field_f = 43;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "sl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "sl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -183,10 +183,10 @@ abstract class sl {
               var5 != 2) {
               switch (var5) {
                 case 4:
-                  ii.field_r[ri.field_H[this.field_m]].g(param0, param1);
+                  ii.field_r[ActiveLevel.field_H[this.field_m]].g(param0, param1);
                   break regionExit1;
                 case 3:
-                  ii.field_r[ri.field_H[this.field_m]].e(param0, param1);
+                  ii.field_r[ActiveLevel.field_H[this.field_m]].e(param0, param1);
                   break regionExit1;
                 case 6:
                   ii.field_r[ki.field_c[this.field_m]].f(param0, param1);
@@ -218,7 +218,7 @@ abstract class sl {
         if (param1 > -89) {
           return (th) null;
         }
-        fh.field_b.a((byte) -122, var2);
+        fh.field_b.addLast((byte) -122, var2);
         nk.a(param0, -108);
         return var2;
     }
@@ -243,12 +243,12 @@ abstract class sl {
     final void a(int param0, byte param1, int param2) {
         int var6 = 0;
         int var8 = 0;
-        qj var4;
+        Sprite var4;
         int var5;
         int var7;
         int var9;
         int var10;
-        qj var11;
+        Sprite var11;
         var10 = TrackController.field_F ? 1 : 0;
         var11 = nd.field_L[4];
         var4 = var11;
@@ -257,8 +257,8 @@ abstract class sl {
           return;
         }
         nd.field_L[4] = var11;
-        ll.a(nd.field_F);
-        ll.b(param0, param2, param0 + 156, param2 + 208);
+        SoftwareRasterizer.a(nd.field_F);
+        SoftwareRasterizer.b(param0, param2, param0 + 156, param2 + 208);
         cl.a(nd.field_L, param0 - 10, 228, -10 + param2, 176, 4);
         var5 = this.field_c + param2;
         for (var6 = 0; 8 > var6; var6++) {
@@ -273,10 +273,10 @@ abstract class sl {
           }
           var5 += 26;
         }
-        ll.b(nd.field_F);
+        SoftwareRasterizer.b(nd.field_F);
     }
 
-    sl(boolean param0, int param1, int param2) {
+    LevelGrid(boolean param0, int param1, int param2) {
         this.field_c = 0;
         this.field_f = param2;
         this.field_k = 0;

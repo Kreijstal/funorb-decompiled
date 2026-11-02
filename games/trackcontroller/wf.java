@@ -69,7 +69,7 @@ final class wf {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class wf {
         return false;
     }
 
-    final static String a(String param0, String param1, String param2, kk param3, int param4) {
+    final static String a(String param0, String param1, String param2, Archive param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -155,7 +155,7 @@ final class wf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 

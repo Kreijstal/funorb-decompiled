@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class al extends IntrusiveNode {
+class UiWidget extends IntrusiveNode {
     String field_n;
     tg field_l;
     int field_A;
@@ -16,9 +16,9 @@ class al extends IntrusiveNode {
     int field_p;
     static String[] field_i;
     int field_o;
-    static qj field_t;
+    static Sprite field_t;
     int field_r;
-    static qj[] field_z;
+    static Sprite[] field_z;
     static String field_v;
     int field_x;
     rb field_k;
@@ -42,8 +42,8 @@ class al extends IntrusiveNode {
         Object var7 = null;
         try {
           var9 = new PacketBuffer(param1);
-          var3 = var9.h(16383);
-          var4 = var9.e((byte) 113);
+          var3 = var9.readUnsignedByte(16383);
+          var4 = var9.readInt((byte) 113);
           if (0 <= var4 && (he.field_b == 0 ||
             !(var4 > he.field_b))) {
             if (param0 > -115) {
@@ -56,7 +56,7 @@ class al extends IntrusiveNode {
               stackIn_10_0 = var5_ref_byte__;
               return stackIn_10_0;
             }
-            var5 = var9.e((byte) 113);
+            var5 = var9.readInt((byte) 113);
             if (0 <= var5 && (he.field_b == 0 ||
               !(he.field_b < var5))) {
               var6 = new byte[var5];
@@ -84,7 +84,7 @@ class al extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ class al extends IntrusiveNode {
         this.field_u = param0;
     }
 
-    al(String param0, tg param1) {
+    UiWidget(String param0, tg param1) {
         this(param0, lb.field_O.field_k, param1);
     }
 
@@ -210,7 +210,7 @@ class al extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ class al extends IntrusiveNode {
         return false;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, al param5, byte param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -243,7 +243,7 @@ class al extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ class al extends IntrusiveNode {
         return stackIn_8_0;
     }
 
-    void a(int param0, int param1, byte param2, al param3) {
+    void a(int param0, int param1, byte param2, UiWidget param3) {
         int var5_int = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_14_0 = null;
@@ -290,7 +290,7 @@ class al extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -325,18 +325,18 @@ class al extends IntrusiveNode {
           }
           if (null != this.field_y) {
             discarded$4 = param1.append(" renderer=");
-            if (this.field_y instanceof al) {
+            if (this.field_y instanceof UiWidget) {
               param1 = this.a(false, param3, param1, 1 + param2);
             } else {
               discarded$5 = param1.append(this.field_y);
             }
           }
           if (param0 != 34) {
-            field_t = (qj) null;
+            field_t = (Sprite) null;
           }
           if (this.field_l != null) {
             discarded$6 = param1.append(" listener=");
-            if (!(this.field_l instanceof al)) {
+            if (!(this.field_l instanceof UiWidget)) {
               discarded$7 = param1.append(this.field_l);
               return;
             }
@@ -359,7 +359,7 @@ class al extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -379,14 +379,14 @@ class al extends IntrusiveNode {
         return false;
     }
 
-    void a(al param0, boolean param1, int param2, int param3, int param4, int param5) {
+    void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
         try {
           this.field_r = 0;
           if (param1) {
             this.field_o = 76;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "al.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "al.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -409,7 +409,7 @@ class al extends IntrusiveNode {
         try {
           if (param7 != -1) {
             var17 = (byte[]) null;
-            al.a(103, (byte[]) null);
+            UiWidget.a(103, (byte[]) null);
           }
           while (true) {
             param1--;
@@ -423,7 +423,7 @@ class al extends IntrusiveNode {
             var13 = param9;
             var14 = param3;
             var15 = 8355711 & var18[var11] >> 1;
-            var10[var11] = var15 + ((tc.a(var14, 33501438) >> 17) + tc.a(65280, var13 >> 9)) + tc.a(16711680, var12 >> 1);
+            var10[var11] = var15 + ((RandomAccessCacheFile.a(var14, 33501438) >> 17) + RandomAccessCacheFile.a(65280, var13 >> 9)) + RandomAccessCacheFile.a(16711680, var12 >> 1);
             param8++;
             param9 = param9 + param4;
             param2 = param2 + param5;
@@ -439,7 +439,7 @@ class al extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -460,7 +460,7 @@ class al extends IntrusiveNode {
         return this.a(false, new Hashtable(), new StringBuilder(), 0).toString();
     }
 
-    boolean a(al param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         byte[] var9 = null;
         RuntimeException stackIn_8_0 = null;
@@ -470,7 +470,7 @@ class al extends IntrusiveNode {
         try {
           if (param4 != 0) {
             var9 = (byte[]) null;
-            al.a(85, (byte[]) null);
+            UiWidget.a(85, (byte[]) null);
           }
           if (!this.a(param5, param6, param2, false, param1)) {
             return false;
@@ -487,13 +487,13 @@ class al extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     StringBuilder a(boolean param0, Hashtable param1, StringBuilder param2, int param3) {
         RuntimeException var5 = null;
-        al var6 = null;
+        UiWidget var6 = null;
         StringBuilder stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -506,8 +506,8 @@ class al extends IntrusiveNode {
             this.a(34, param2, param3, param1);
           }
           if (param0) {
-            var6 = (al) null;
-            this.a((byte) -107, 'ﾔ', (al) null, 124);
+            var6 = (UiWidget) null;
+            this.a((byte) -107, 'ﾔ', (UiWidget) null, 124);
           }
           stackIn_5_0 = (StringBuilder) (param2);
           return stackIn_5_0;
@@ -527,7 +527,7 @@ class al extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -542,7 +542,7 @@ class al extends IntrusiveNode {
         field_j = null;
         field_t = null;
         if (param0 > -30) {
-          al.d(17);
+          UiWidget.d(17);
         }
         field_w = null;
         field_v = null;
@@ -550,7 +550,7 @@ class al extends IntrusiveNode {
         field_i = null;
     }
 
-    boolean a(byte param0, al param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -572,7 +572,7 @@ class al extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -583,7 +583,7 @@ class al extends IntrusiveNode {
         return 0;
     }
 
-    boolean a(byte param0, char param1, al param2, int param3) {
+    boolean a(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_4_0 = null;
@@ -603,16 +603,16 @@ class al extends IntrusiveNode {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    protected al() {
+    protected UiWidget() {
         this.field_A = 0;
         this.field_o = 0;
     }
 
-    al(String param0, t param1, tg param2) {
+    UiWidget(String param0, t param1, tg param2) {
         RuntimeException runtimeException = null;
         dl var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -657,11 +657,11 @@ class al extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    al(int param0, int param1, int param2, int param3, t param4, tg param5) {
+    UiWidget(int param0, int param1, int param2, int param3, t param4, tg param5) {
         this.field_A = 0;
         this.field_o = 0;
         try {
@@ -672,7 +672,7 @@ class al extends IntrusiveNode {
           this.field_u = param3;
           this.field_x = param2;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

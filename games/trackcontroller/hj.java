@@ -565,19 +565,19 @@ final class hj implements Runnable {
 
     final static ti a(int param0, int param1, int param2, int param3, byte param4) {
         int var6 = TrackController.field_F ? 1 : 0;
-        ti var5 = (ti) (ea.field_s.b(2));
+        ti var5 = (ti) (LevelData.field_s.first(2));
         while (var5 != null) {
           if (var5.field_i == param1) {
             return var5;
           }
-          var5 = (ti) (ea.field_s.a(param4 + 112));
+          var5 = (ti) (LevelData.field_s.next(param4 + 112));
         }
         if (param4 == -102) {
           var5 = new ti();
           var5.field_l = param3;
           var5.field_k = param2;
           var5.field_i = param1;
-          ea.field_s.a((byte) -105, var5);
+          LevelData.field_s.addLast((byte) -105, var5);
           mc.a(false, param0, var5);
           return var5;
         }

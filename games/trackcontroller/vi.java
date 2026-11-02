@@ -29,15 +29,15 @@ final class vi {
 
     final void a(byte param0, byte[] param1, PacketBuffer param2) {
         try {
-          if (param2.field_j[param2.field_k] != 31 ||
-            param2.field_j[param2.field_k + 1] != -117) {
+          if (param2.payload[param2.position] != 31 ||
+            param2.payload[param2.position + 1] != -117) {
             throw new RuntimeException("");
           }
           if (this.field_b == null) {
             this.field_b = new java.util.zip.Inflater(true);
           }
           try {
-            this.field_b.setInput(param2.field_j, 10 + param2.field_k, -10 - (param2.field_k + (8 - param2.field_j.length)));
+            this.field_b.setInput(param2.payload, 10 + param2.position, -10 - (param2.position + (8 - param2.payload.length)));
             this.field_b.inflate(param1);
           } catch (Exception exception) {
             this.field_b.reset();
@@ -49,7 +49,7 @@ final class vi {
           try {
             this.field_b.reset();
           } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "vi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw LevelGrid.a((Throwable) ((Object) runtimeException), "vi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

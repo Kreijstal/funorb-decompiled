@@ -19,7 +19,7 @@ final class rd {
     private boolean field_r;
     static int field_b;
     static String field_i;
-    oh field_c;
+    BitmapFont field_c;
     int field_m;
     static int[] field_s;
     int field_d;
@@ -28,14 +28,14 @@ final class rd {
         if (param1 != 10066329) {
           return;
         }
-        ll.c(param6, param0, param2, param5, param4, param3);
+        SoftwareRasterizer.c(param6, param0, param2, param5, param4, param3);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 <= 73) {
           return;
         }
-        ll.e(param5, param4, param1, param2, param3);
+        SoftwareRasterizer.e(param5, param4, param1, param2, param3);
     }
 
     private final void a(String param0, boolean param1, int param2, int param3) {
@@ -66,7 +66,7 @@ final class rd {
           if (var7 == -1) {
             var7 = this.field_c.field_G + this.field_c.field_u;
           }
-          var8 = ll.field_d >> 2;
+          var8 = SoftwareRasterizer.field_d >> 2;
           var9 = this.field_c.a(param0);
           if (!param1) {
             this.field_g = (t) null;
@@ -95,15 +95,15 @@ final class rd {
             }
           }
           var12 = param3;
-          if (var9 + var12 + var5_int > ll.field_d) {
-            var12 = ll.field_d + (-var9 - var5_int);
+          if (var9 + var12 + var5_int > SoftwareRasterizer.field_d) {
+            var12 = SoftwareRasterizer.field_d + (-var9 - var5_int);
           }
           var13Lifetime1 = 32 + (-this.field_c.field_H + param2);
-          if (var6 + var13Lifetime1 + var10 > ll.field_k) {
+          if (var6 + var13Lifetime1 + var10 > SoftwareRasterizer.field_k) {
             var13Lifetime1 = -var6 - var10 + param2;
           }
-          ll.f(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_a);
-          ll.c(1 + var12, var13Lifetime1 + 1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_t);
+          SoftwareRasterizer.f(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_a);
+          SoftwareRasterizer.c(1 + var12, var13Lifetime1 + 1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_t);
           this.field_c.a(param0, var12 + this.field_p, this.field_m + var13Lifetime1, var9, var10, this.field_n, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,7 +116,7 @@ final class rd {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class rd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -154,17 +154,17 @@ final class rd {
         if (param0 != 1) {
           field_f = (int[]) null;
         }
-        vk var1 = (vk) (ea.field_t.b(2));
+        vk var1 = (vk) (LevelData.field_t.first(2));
         if (var1 == null) {
           GameKeyHandler.a((byte) 114);
           return;
         }
         la var2 = ne.field_a;
-        var2.e((byte) 113);
-        var2.e((byte) 113);
-        var2.e((byte) 113);
-        var2.e((byte) 113);
-        var1.a(-33);
+        var2.readInt((byte) 113);
+        var2.readInt((byte) 113);
+        var2.readInt((byte) 113);
+        var2.readInt((byte) 113);
+        var1.unlink(-33);
     }
 
     final static int a(int param0, boolean param1, CharSequence param2, int param3) {
@@ -246,7 +246,7 @@ final class rd {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -264,15 +264,15 @@ final class rd {
           var5_int = this.field_c.a(param3);
           var6 = this.field_c.field_H + this.field_c.field_u;
           var7 = param1;
-          if (ll.field_d < 6 + (var7 + var5_int)) {
-            var7 = -6 + (-var5_int + ll.field_d);
+          if (SoftwareRasterizer.field_d < 6 + (var7 + var5_int)) {
+            var7 = -6 + (-var5_int + SoftwareRasterizer.field_d);
           }
           var8 = param2 - (this.field_c.field_H - 32);
-          if (6 + var6 + var8 > ll.field_k) {
-            var8 = -var6 + ll.field_k - 6;
+          if (6 + var6 + var8 > SoftwareRasterizer.field_k) {
+            var8 = -var6 + SoftwareRasterizer.field_k - 6;
           }
-          ll.f(var7, var8, var5_int + 6, 6 + var6, this.field_n);
-          ll.c(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, this.field_t);
+          SoftwareRasterizer.f(var7, var8, var5_int + 6, 6 + var6, this.field_n);
+          SoftwareRasterizer.c(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, this.field_t);
           if (param0) {
             field_l = (MouseWheelInput) null;
           }
@@ -288,14 +288,14 @@ final class rd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final void a(int param0, oh param1) {
+    final void a(int param0, BitmapFont param1) {
         ic var17 = null;
         gi var4 = null;
-        qj[] var5 = null;
+        Sprite[] var5 = null;
         d var16 = null;
         d var18 = null;
         int var7_int = 0;
@@ -304,12 +304,12 @@ final class rd {
         gh discarded$0 = null;
         jd discarded$1 = null;
         gi var8 = null;
-        qj[] var9 = null;
-        qj[] var10 = null;
-        qj dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         gi var11 = null;
         gi var12 = null;
-        qj var13 = null;
+        Sprite var13 = null;
         gi var14 = null;
         gi var19 = null;
         int var15 = TrackController.field_F ? 1 : 0;
@@ -335,13 +335,13 @@ final class rd {
           var4.a((byte) 118, 0).a(15658734, false).a(param0 ^ 13421731, qe.a(8947848, 7829367, 10066329, param0 - 13421771));
           var4.a((byte) 118, 1).a(param0 - 13421653, qe.a(11184810, 13421772, 10066329, param0 ^ 13421773));
           var4.a((byte) 118, 3).a(125, qe.a(8947848, 10066329, 7829367, 1)).a(255, 1).a((byte) 85, 1);
-          var5 = new qj[9];
+          var5 = new Sprite[9];
           var16 = new d(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_z.length; var7_int++) {
             var16.field_z[var7_int] = 1077952576;
           }
-          var5[4] = (qj) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) 118, 4).a(true, 19749).a(param0 ^ 13421758, var5);
           var4.a((byte) 118, 5).a(113, qi.a(65793, 0, (byte) 116, 0, 0)).a(true, 19749).a(-1, false);
           this.field_h = (t) ((Object) var4);
@@ -359,10 +359,10 @@ final class rd {
           var8.a((byte) 118, 0).a(112, qe.a(15658734, 10066329, 7829367, 1)).a(1118481, false).b(-1, 113);
           var8.a((byte) 118, 4).a(true, 19749).a(110, var5);
           this.field_e = (t) ((Object) var8);
-          var9 = new qj[9];
-          var10 = new qj[9];
-          var9[4] = new qj(2, 1);
-          var10[4] = new qj(1, 2);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_z = new int[]{6710886, 7829367};
           var10[4].field_z = new int[]{6710886, 7829367};
@@ -370,7 +370,7 @@ final class rd {
           var12 = new gi();
           var11.a(0, var9, (byte) -33);
           var12.a(0, var10, (byte) -33);
-          var13 = new qj(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, param0, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new gi(var4, true);
           var14.a(var13.b(), -112);
@@ -384,7 +384,7 @@ final class rd {
           var19 = new gi(var4, true);
           var19.a(var13, -119);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "rd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "rd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -402,14 +402,14 @@ final class rd {
     final static void a(jf param0, int param1, int param2) {
         la var3 = ra.field_C;
         var3.c(param2, 7);
-        var3.a(param0.field_m, (byte) -89);
+        var3.writeByte(param0.field_m, (byte) -89);
         if (param1 != 4) {
           return;
         }
         try {
-          var3.a(param0.field_k, (byte) -114);
+          var3.writeByte(param0.field_k, (byte) -114);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "rd.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "rd.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

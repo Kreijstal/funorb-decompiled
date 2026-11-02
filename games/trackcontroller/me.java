@@ -45,24 +45,24 @@ final class me extends IntrusiveNode {
             if (param0 != -1) {
               return;
             }
-            if (ra.field_C.field_k == 0 &&
+            if (ra.field_C.position == 0 &&
               qg.a(false) > qh.field_f + 10000L) {
               ra.field_C.c(param1, param0 + 8);
             }
-            if (0 < ra.field_C.field_k) {
+            if (0 < ra.field_C.position) {
               try {
-                r.field_i.a(param0 - 124, ra.field_C.field_j, ra.field_C.field_k, 0);
+                r.field_i.a(param0 - 124, ra.field_C.payload, ra.field_C.position, 0);
                 qh.field_f = qg.a(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 GameKeyHandler.a((byte) 118);
               }
-              ra.field_C.field_k = 0;
+              ra.field_C.position = 0;
             }
             return;
           }
-          ra.field_C.field_k = 0;
+          ra.field_C.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -85,19 +85,19 @@ final class me extends IntrusiveNode {
           }
           var5 = ra.field_C;
           var5.c(param2, 7);
-          var5.field_k = var5.field_k + 1;
-          var4 = var5.field_k;
-          var5.a(1, (byte) -59);
-          var5.a(param0.field_k, (byte) -61);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, (byte) -59);
+          var5.writeByte(param0.field_k, (byte) -61);
           var5.b(param1 ^ 16, param0.field_q);
-          var5.b(false, param0.field_n);
-          var5.b(false, param0.field_o);
-          var5.b(false, param0.field_j);
-          var5.b(false, param0.field_m);
+          var5.writeInt(false, param0.field_n);
+          var5.writeInt(false, param0.field_o);
+          var5.writeInt(false, param0.field_j);
+          var5.writeInt(false, param0.field_m);
           var5.a(var4, false);
-          var5.a(true, -var4 + var5.field_k);
+          var5.a(true, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "me.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "me.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -161,11 +161,11 @@ final class me extends IntrusiveNode {
           }
           if (jc.field_a == gk.field_a) {
             qi.field_c = null;
-            ra.field_C.field_k = 0;
+            ra.field_C.position = 0;
             if (param0 == null) {
-              ui.field_p.field_k = 0;
-              ui.field_p.b(false, ta.field_c.nextInt());
-              ui.field_p.b(false, ta.field_c.nextInt());
+              ui.field_p.position = 0;
+              ui.field_p.writeInt(false, ta.field_c.nextInt());
+              ui.field_p.writeInt(false, ta.field_c.nextInt());
               stackIn_17_0 = ui.field_p;
               if (param3.a(-107)) {
                 stackIn_18_1 = var14;
@@ -180,44 +180,44 @@ final class me extends IntrusiveNode {
                 stackIn_21_1 = var8;
               }
               ((PacketBuffer) (Object) stackIn_20_0).b(stackIn_21_1, 112);
-              ra.field_C.a(16, (byte) -87);
-              ra.field_C.field_k = ra.field_C.field_k + 1;
-              var9 = ra.field_C.field_k;
+              ra.field_C.writeByte(16, (byte) -87);
+              ra.field_C.position = ra.field_C.position + 1;
+              var9 = ra.field_C.position;
               NodeHashTableIterator.a(sc.field_d, ra.field_C, fj.field_N, 0, ui.field_p);
-              ra.field_C.a(true, -var9 + ra.field_C.field_k);
+              ra.field_C.a(true, -var9 + ra.field_C.position);
             } else {
               var9 = 0;
-              ui.field_p.field_k = 0;
+              ui.field_p.position = 0;
               if (param1) {
                 var9 = var9 | 1;
               }
-              ui.field_p.b(false, ta.field_c.nextInt());
-              ui.field_p.b(false, ta.field_c.nextInt());
+              ui.field_p.writeInt(false, ta.field_c.nextInt());
+              ui.field_p.writeInt(false, ta.field_c.nextInt());
               ui.field_p.b(var14, 106);
               ui.field_p.b(var8, 124);
               var15 = (CharSequence) ((Object) param0);
               ui.field_p.b(qk.a(-128, var15), 119);
               ui.field_p.b(param4, (byte) -119);
-              ui.field_p.a(param2, (byte) -98);
-              ui.field_p.a(var9, (byte) -66);
-              ra.field_C.a(18, (byte) -92);
-              ra.field_C.field_k = ra.field_C.field_k + 2;
-              var10 = ra.field_C.field_k;
+              ui.field_p.writeByte(param2, (byte) -98);
+              ui.field_p.writeByte(var9, (byte) -66);
+              ra.field_C.writeByte(18, (byte) -92);
+              ra.field_C.position = ra.field_C.position + 2;
+              var10 = ra.field_C.position;
               var11_ref_StringLifetime4 = bg.a(gd.b((byte) 77), -22004);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              ra.field_C.a((byte) -57, var11_ref_StringLifetime4);
+              ra.field_C.writeString((byte) -57, var11_ref_StringLifetime4);
               NodeHashTableIterator.a(sc.field_d, ra.field_C, fj.field_N, 0, ui.field_p);
-              ra.field_C.c(-var10 + ra.field_C.field_k, (byte) -96);
+              ra.field_C.c(-var10 + ra.field_C.position, (byte) -96);
             }
             me.a(-1, -1);
             jc.field_a = l.field_m;
           }
           if (jc.field_a == l.field_m &&
             hf.a(1, false)) {
-            var9Lifetime1 = ne.field_a.h(16383);
-            ne.field_a.field_k = 0;
+            var9Lifetime1 = ne.field_a.readUnsignedByte(16383);
+            ne.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ca.field_a = new String[var9Lifetime1 - 100];
@@ -234,7 +234,7 @@ final class me extends IntrusiveNode {
               if (var9Lifetime1 == 99) {
                 hf.a(va.a(93), false);
                 qi.field_c = new Boolean(bg.a(ne.field_a, -2));
-                ne.field_a.field_k = 0;
+                ne.field_a.position = 0;
               } else {
                 uk.field_c = var9Lifetime1;
                 jc.field_a = sf.field_D;
@@ -245,8 +245,8 @@ final class me extends IntrusiveNode {
           if (kl.field_a == jc.field_a) {
             var9Lifetime2 = 2;
             if (hf.a(var9Lifetime2, false)) {
-              var10Lifetime1 = ne.field_a.d((byte) -94);
-              ne.field_a.field_k = 0;
+              var10Lifetime1 = ne.field_a.readUnsignedShort((byte) -94);
+              ne.field_a.position = 0;
               if (hf.a(var10Lifetime1, false)) {
                 var11 = ca.field_a.length;
                 for (var12 = 0; var11 > var12; var12++) {
@@ -263,12 +263,12 @@ final class me extends IntrusiveNode {
           if (jc.field_a == sf.field_D &&
             fh.a(520)) {
             if (255 == uk.field_c) {
-              var10_ref_String = ne.field_a.d(19016);
+              var10_ref_String = ne.field_a.readOptionalString(19016);
               if (var10_ref_String != null) {
                 dh.a(-19136, var10_ref_String, gd.b((byte) 77));
               }
             } else {
-              fi.field_t = ne.field_a.g(0);
+              fi.field_t = ne.field_a.readString(0);
             }
             GameKeyHandler.a((byte) 115);
             kg.field_f = false;
@@ -315,7 +315,7 @@ final class me extends IntrusiveNode {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class me extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

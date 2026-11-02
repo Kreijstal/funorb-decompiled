@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mb {
-    static qj[] field_d;
+    static Sprite[] field_d;
     static volatile int field_f;
     static int field_b;
     private DualLinkNode field_e;
@@ -122,23 +122,23 @@ final class mb {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         nk.b(false);
-        ll.b(param0, param1, param4, param2);
+        SoftwareRasterizer.b(param0, param1, param4, param2);
         int var5 = -22 % ((param3 - 51) / 54);
     }
 
-    final static void a(byte param0, qj param1) {
+    final static void a(byte param0, Sprite param1) {
         try {
           int var2_int = 45 / ((64 - param0) / 53);
           nk.b(false);
-          ll.a(param1.field_z, param1.field_s, param1.field_v);
+          SoftwareRasterizer.a(param1.field_z, param1.field_s, param1.field_v);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "mb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class mb {
           param0.field_j.field_k = param0;
           param0.field_k.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class mb {
     }
 
     static {
-        field_d = new qj[104];
+        field_d = new Sprite[104];
         field_f = 0;
         field_b = 0;
         field_a = "Achieved";

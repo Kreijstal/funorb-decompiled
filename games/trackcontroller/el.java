@@ -6,8 +6,8 @@ class el extends rh {
     private String[] field_M;
     static String[] field_O;
     static String field_K;
-    private ja field_I;
-    static kk field_L;
+    private IntrusiveDeque field_I;
+    static Archive field_L;
     private fi field_N;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -57,13 +57,13 @@ class el extends rh {
         int var16;
         int var7Lifetime1;
         var16 = TrackController.field_F ? 1 : 0;
-        this.field_I = new ja();
+        this.field_I = new IntrusiveDeque();
         var2 = 0;
         var3 = (dl) ((Object) this.field_y);
         if (!param0) {
           return;
         }
-        var4 = var3.a((byte) 96, (al) (this));
+        var4 = var3.a((byte) 96, (UiWidget) (this));
         while (true) {
           var5 = this.field_s.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -98,7 +98,7 @@ class el extends rh {
             if (var10 != null) {
               ((fi) (var10)).field_j = var15;
             }
-            this.field_I.a((byte) -121, var15);
+            this.field_I.addLast((byte) -121, var15);
             var10 = var15;
           }
         }
@@ -137,7 +137,7 @@ class el extends rh {
         try {
           this.field_y = param1;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -149,7 +149,7 @@ class el extends rh {
         if (param2 != 9) {
           field_O = (String[]) null;
         }
-        var4 = (fi) (this.field_I.b(param2 ^ 11));
+        var4 = (fi) (this.field_I.first(param2 ^ 11));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -161,7 +161,7 @@ class el extends rh {
             }
             var5 = var5.field_j;
           }
-          var4 = (fi) (this.field_I.a(10));
+          var4 = (fi) (this.field_I.next(10));
         }
         return null;
     }
@@ -176,8 +176,8 @@ class el extends rh {
         dl var5 = (dl) ((Object) this.field_y);
         fi var6 = this.field_N;
         if (var6 != null) {
-          var7 = var5.a(param1, (al) (this), 0);
-          var8 = var5.a((al) (this), -62, param2);
+          var7 = var5.a(param1, (UiWidget) (this), 0);
+          var8 = var5.a((UiWidget) (this), -62, param2);
           do {
             BufferedSocket.a(var6.field_m + 2, -28846, 2 + var6.field_k, var8 - (-var6.field_r + 2), -2 + (var7 + var6.field_n));
             var6 = var6.field_j;
@@ -189,10 +189,10 @@ class el extends rh {
         if (param1 != -44) {
           return;
         }
-        this.a(((dl) ((Object) this.field_y)).a(103, (al) (this)), -3050, param0, param2, param3);
+        this.a(((dl) ((Object) this.field_y)).a(103, (UiWidget) (this)), -3050, param0, param2, param3);
     }
 
-    boolean a(byte param0, al param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -202,7 +202,7 @@ class el extends rh {
           if (param0 <= -104) {
             return false;
           }
-          this.field_I = (ja) null;
+          this.field_I = (IntrusiveDeque) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,11 +214,11 @@ class el extends rh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, byte param2, al param3) {
+    void a(int param0, int param1, byte param2, UiWidget param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
@@ -230,7 +230,7 @@ class el extends rh {
             this.field_N = this.b(var5_int, var6, param2 + 133);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "el.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "el.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -252,7 +252,7 @@ class el extends rh {
           }
           this.field_M[param2] = param1;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "el.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "el.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

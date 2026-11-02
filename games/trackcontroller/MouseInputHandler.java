@@ -44,7 +44,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -53,11 +53,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != hd.field_p) {
             pa.field_a = 0;
             la.field_s = param0.getX();
-            wi.field_a = param0.getY();
+            ArchiveSource.field_a = param0.getY();
             hd.field_q = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "cb.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "cb.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -117,13 +117,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         field_a = null;
         field_b = null;
         if (param0 <= 13) {
-          qj[] var2 = (qj[]) null;
-          MouseInputHandler.a(-60, (byte) -87, 63, -125, (qj[]) null, -25);
+          Sprite[] var2 = (Sprite[]) null;
+          MouseInputHandler.a(-60, (byte) -87, 63, -125, (Sprite[]) null, -25);
         }
         field_c = null;
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, qj[] param4, int param5) {
+    final static void a(int param0, byte param1, int param2, int param3, Sprite[] param4, int param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -147,14 +147,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var8 = param4[1].field_s;
             param4[0].e(param5, param0, param2);
             param4[2].e(-var7 + (param3 + param5), param0, param2);
-            ll.a(kk.field_g);
-            ll.b(param5 + var6_int, param0, -var7 + param5 + param3, param4[1].field_v + param0);
+            SoftwareRasterizer.a(Archive.field_g);
+            SoftwareRasterizer.b(param5 + var6_int, param0, -var7 + param5 + param3, param4[1].field_v + param0);
             var9 = param5 + var6_int;
             var10 = param5 + (param3 - var7);
             for (param5 = var9; param5 < var10; param5 = param5 + var8) {
               param4[1].e(param5, param0, param2);
             }
-            ll.b(kk.field_g);
+            SoftwareRasterizer.b(Archive.field_g);
             return;
           }
           return;
@@ -168,7 +168,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != hd.field_p) {
             pa.field_a = 0;
             la.field_s = param0.getX();
-            wi.field_a = param0.getY();
+            ArchiveSource.field_a = param0.getY();
             hd.field_q = true;
           }
           return;
@@ -196,7 +196,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -205,11 +205,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (hd.field_p != null) {
             pa.field_a = 0;
             la.field_s = param0.getX();
-            wi.field_a = param0.getY();
+            ArchiveSource.field_a = param0.getY();
             hd.field_q = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "cb.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "cb.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -224,7 +224,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != hd.field_p) {
             pa.field_a = 0;
             sa.field_M = param0.getX();
-            ch.field_x = param0.getY();
+            GameShell.field_x = param0.getY();
             qg.a(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               wf.field_d = 2;
@@ -256,7 +256,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != hd.field_p) {
             pa.field_a = 0;
             la.field_s = -1;
-            wi.field_a = -1;
+            ArchiveSource.field_a = -1;
             hd.field_q = true;
           }
           return;
@@ -284,7 +284,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -305,39 +305,39 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           var2 = -37 / ((-10 - param0) / 56);
           var10 = ne.field_a;
-          var3 = var10.h(16383);
+          var3 = var10.readUnsignedByte(16383);
           if (var3 == 0) {
-            var9 = (r) (ne.field_b.b(2));
+            var9 = (r) (ne.field_b.first(2));
             if (var9 == null) {
               GameKeyHandler.a((byte) 113);
               return;
             }
-            var5 = var10.h(16383);
+            var5 = var10.readUnsignedByte(16383);
             if (0 != var5) {
               var14 = new byte[var5];
               var10.a(100, var14, 0, var5);
             } else {
               var6 = null;
             }
-            var10.field_k = var10.field_k + 4;
-            if (!var10.b(false)) {
+            var10.position = var10.position + 4;
+            if (!var10.checkCrcTrailer(false)) {
               GameKeyHandler.a((byte) 118);
               return;
             }
-            var9.a(-110);
+            var9.unlink(-110);
           } else {
             if (var3 == 1) {
-              var4 = var10.e((byte) 113);
-              var5_ref_ei = (ei) (fj.field_H.b(2));
+              var4 = var10.readInt((byte) 113);
+              var5_ref_ei = (ei) (fj.field_H.first(2));
               while (var5_ref_ei != null) {
                 if (var4 != var5_ref_ei.field_n) {
-                  var5_ref_ei = (ei) (fj.field_H.a(10));
+                  var5_ref_ei = (ei) (fj.field_H.next(10));
                   continue;
                 }
                 break;
               }
               if (var5_ref_ei != null) {
-                var5_ref_ei.a(-119);
+                var5_ref_ei.unlink(-119);
                 return;
               }
               GameKeyHandler.a((byte) 121);
@@ -350,7 +350,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "cb.D(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1), "cb.D(" + param0 + ')');
         }
     }
 
@@ -388,7 +388,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

@@ -82,10 +82,10 @@ final class wg {
           return false;
         }
         var10 = new PacketBuffer(this.field_c.g(512));
-        var10.field_k = 5;
-        var3 = var10.h(16383);
-        var10.field_k = var10.field_k + 72 * var3;
-        var13 = new byte[-var10.field_k + var10.field_j.length];
+        var10.position = 5;
+        var3 = var10.readUnsignedByte(16383);
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
         var10.a(122, var4, 0, var13.length);
@@ -100,7 +100,7 @@ final class wg {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = cf.a(5, var10.field_j, -5 + var10.field_k - var13.length, -6196);
+        var15 = cf.a(5, var10.payload, -5 + var10.position - var13.length, -6196);
         if (param0 > -62) {
           this.a((byte) -115);
         }
@@ -147,7 +147,7 @@ final class wg {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class wg {
             this.field_c = this.field_a.a(255, true, false, 255, (byte) 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -189,12 +189,12 @@ final class wg {
               stackIn_8_0 = this.field_g[param1];
               return stackIn_8_0;
             }
-            this.field_i.field_k = param1 * 72 + 6;
-            var6_int = this.field_i.e((byte) 113);
+            this.field_i.position = param1 * 72 + 6;
+            var6_int = this.field_i.readInt((byte) 113);
             if (param0 < 67) {
               field_h = (String) null;
             }
-            var7 = this.field_i.e((byte) 113);
+            var7 = this.field_i.readInt((byte) 113);
             var13 = new byte[64];
             this.field_i.a(102, var13, 0, 64);
             var9 = new gd(param1, param4, param2, this.field_a, this.field_f, var6_int, var13, var7, param3);
@@ -219,7 +219,7 @@ final class wg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

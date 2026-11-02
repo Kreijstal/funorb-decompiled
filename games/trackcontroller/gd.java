@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends wi {
-    static ja field_q;
+final class gd extends ArchiveSource {
+    static IntrusiveDeque field_q;
     private int field_y;
-    private id field_v;
+    private NodeHashTable field_v;
     private int field_o;
     private ae field_g;
-    static qj field_p;
+    static Sprite field_p;
     private int field_m;
     private hf field_w;
     static oi field_f;
     static boolean field_x;
     private byte[] field_d;
     private tk field_t;
-    private pc field_e;
+    private ArchiveIndex field_e;
     private sd field_i;
     private byte[] field_u;
     private hf field_n;
     private boolean field_j;
     private boolean field_z;
-    private ja field_s;
+    private IntrusiveDeque field_s;
     private int field_k;
-    private ja field_r;
+    private IntrusiveDeque field_r;
     private boolean field_h;
     private long field_l;
 
@@ -53,13 +53,13 @@ final class gd extends wi {
         if (this.a(9) == null) {
           return;
         }
-        var2 = this.field_s.b(param0 + 43);
+        var2 = this.field_s.first(param0 + 43);
         while (var2 != null) {
-          var3 = (int)var2.field_b;
+          var3 = (int)var2.key;
           if (var3 >= 0) {
             if (this.field_e.field_n > var3) {
               if (this.field_e.field_l[var3] == 0) {
-                var2.a(-33);
+                var2.unlink(-33);
               } else {
                 if (this.field_d[var3] == 0) {
                   discarded$0 = this.a(1, (byte) -128, var3);
@@ -68,16 +68,16 @@ final class gd extends wi {
                   discarded$1 = this.a(2, (byte) -8, var3);
                 }
                 if (this.field_d[var3] == 1) {
-                  var2.a(-108);
+                  var2.unlink(-108);
                 }
               }
             } else {
-              var2.a(-33);
+              var2.unlink(-33);
             }
           } else {
-            var2.a(-33);
+            var2.unlink(-33);
           }
-          var2 = this.field_s.a(10);
+          var2 = this.field_s.next(10);
         }
     }
 
@@ -90,7 +90,7 @@ final class gd extends wi {
         }
         this.field_z = true;
         if (this.field_r == null) {
-          this.field_r = new ja();
+          this.field_r = new IntrusiveDeque();
         }
     }
 
@@ -110,7 +110,7 @@ final class gd extends wi {
           return null;
         }
         byte[] var4 = var3.g(param0 + 513);
-        var3.a(-86);
+        var3.unlink(-86);
         if (param0 != -1) {
           this.field_n = (hf) null;
         }
@@ -126,7 +126,7 @@ final class gd extends wi {
         field_f = null;
     }
 
-    final pc a(int param0) {
+    final ArchiveIndex a(int param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -156,7 +156,7 @@ final class gd extends wi {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_e = new pc(var7, this.field_o, this.field_u);
+            this.field_e = new ArchiveIndex(var7, this.field_o, this.field_u);
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
@@ -177,7 +177,7 @@ final class gd extends wi {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_e = new pc(var7, this.field_o, this.field_u);
+            this.field_e = new ArchiveIndex(var7, this.field_o, this.field_u);
             if (this.field_y != this.field_e.field_k) {
               throw new RuntimeException();
             }
@@ -232,7 +232,7 @@ final class gd extends wi {
           0 == param0 &&
           !var13.field_q &&
           var13.field_w) {
-          var13.a(-120);
+          var13.unlink(-120);
           var4 = null;
         }
         if (var4 == null) {
@@ -307,7 +307,7 @@ final class gd extends wi {
                 this.field_d[param2] = (byte) 1;
               }
               if (!((tk) (var4)).field_q) {
-                ((tk) (var4)).a(-59);
+                ((tk) (var4)).unlink(-59);
               }
               stackIn_60_0 = var4;
               return (tk) (stackIn_60_0);
@@ -317,7 +317,7 @@ final class gd extends wi {
             decompiledCaughtException = decompiledCaughtParameter1;
             var7_ref = (Exception) (Object) decompiledCaughtException;
             this.field_d[param2] = (byte)-1;
-            ((tk) (var4)).a(-122);
+            ((tk) (var4)).unlink(-122);
             if (!((tk) (var4)).field_q) {
               return null;
             }
@@ -359,7 +359,7 @@ final class gd extends wi {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_g.b((byte) 113);
-          ((tk) (var4)).a(-90);
+          ((tk) (var4)).unlink(-90);
           if (((tk) (var4)).field_q) {
             if (this.field_g.d(-18316)) {
               return null;
@@ -380,7 +380,7 @@ final class gd extends wi {
           }
         }
         if (!((tk) (var4)).field_q) {
-          ((tk) (var4)).a(-52);
+          ((tk) (var4)).unlink(-52);
         }
         return (tk) (var4);
     }
@@ -412,18 +412,18 @@ final class gd extends wi {
           }
           if (this.field_j) {
             var2_int = 1;
-            var3 = this.field_r.b(2);
+            var3 = this.field_r.first(2);
             while (var3 != null) {
-              var4 = (int)var3.field_b;
+              var4 = (int)var3.key;
               if (0 == this.field_d[var4]) {
                 discarded$1 = this.a(1, (byte) 90, var4);
               }
               if (this.field_d[var4] != 0) {
-                var3.a(-47);
+                var3.unlink(-47);
               } else {
                 var2_int = 0;
               }
-              var3 = this.field_r.a(10);
+              var3 = this.field_r.next(10);
             }
             while (this.field_e.field_l.length > this.field_k) {
               if (this.field_e.field_l[this.field_k] == 0) {
@@ -436,9 +436,9 @@ final class gd extends wi {
                 }
                 if (this.field_d[this.field_k] == 0) {
                   var7 = new IntrusiveNode();
-                  var7.field_b = (long)this.field_k;
+                  var7.key = (long)this.field_k;
                   var2_int = 0;
-                  this.field_r.a((byte) -128, var7);
+                  this.field_r.addLast((byte) -128, var7);
                 }
                 this.field_k = this.field_k + 1;
                 continue;
@@ -455,18 +455,18 @@ final class gd extends wi {
           else {
             if (this.field_z) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_r.b(2);
+              var3Lifetime1 = this.field_r.first(2);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_b;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_d[var4Lifetime1] != 1) {
                   discarded$3 = this.a(2, (byte) 104, var4Lifetime1);
                 }
                 if (this.field_d[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.a(-76);
+                  var3Lifetime1.unlink(-76);
                 }
-                var3Lifetime1 = this.field_r.a(10);
+                var3Lifetime1 = this.field_r.next(10);
               }
               while (this.field_e.field_l.length > this.field_k) {
                 if (this.field_e.field_l[this.field_k] == 0) {
@@ -479,8 +479,8 @@ final class gd extends wi {
                   }
                   if (this.field_d[this.field_k] != 1) {
                     var6 = new IntrusiveNode();
-                    var6.field_b = (long)this.field_k;
-                    this.field_r.a((byte) -110, var6);
+                    var6.key = (long)this.field_k;
+                    this.field_r.addLast((byte) -110, var6);
                     var2_intLifetime1 = 0;
                   }
                   this.field_k = this.field_k + 1;
@@ -508,7 +508,7 @@ final class gd extends wi {
                         if (!var2.field_q) {
                           throw new RuntimeException();
                         }
-                        var2.a(-109);
+                        var2.unlink(-109);
                       } else {
                         var2.field_v = true;
                       }
@@ -543,7 +543,7 @@ final class gd extends wi {
                   if (!var2Lifetime1.field_q) {
                     throw new RuntimeException();
                   }
-                  var2Lifetime1.a(-109);
+                  var2Lifetime1.unlink(-109);
                 } else {
                   var2Lifetime1.field_v = true;
                 }
@@ -574,9 +574,9 @@ final class gd extends wi {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_v = new id(16);
+        this.field_v = new NodeHashTable(16);
         this.field_k = 0;
-        this.field_s = new ja();
+        this.field_s = new IntrusiveDeque();
         this.field_l = 0L;
         try {
           this.field_m = param0;
@@ -585,7 +585,7 @@ final class gd extends wi {
             this.field_j = false;
           } else {
             this.field_j = true;
-            this.field_r = new ja();
+            this.field_r = new IntrusiveDeque();
           }
           stackIn_7_1 = (param8);
           this.field_h = stackIn_7_1;
@@ -633,12 +633,12 @@ final class gd extends wi {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
     static {
-        field_q = new ja();
+        field_q = new IntrusiveDeque();
         field_x = false;
         field_f = new oi();
     }

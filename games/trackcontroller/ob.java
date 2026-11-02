@@ -29,28 +29,28 @@ final class ob extends DualLinkNode {
         var9 = TrackController.field_F ? 1 : 0;
         try {
           if (param1 == 1) {
-            this.field_s = DelegatingCanvas.a(param0.g(0), '<', (byte) -94);
+            this.field_s = DelegatingCanvas.a(param0.readString(0), '<', (byte) -94);
           } else {
             if (2 == param1) {
-              var4_int = param0.h(16383);
+              var4_int = param0.readUnsignedByte(16383);
               this.field_r = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_r[var5] = param0.d((byte) -66);
+                this.field_r[var5] = param0.readUnsignedShort((byte) -66);
               }
             } else {
               if (param1 == 3) {
-                var4_int = param0.h(16383);
+                var4_int = param0.readUnsignedByte(16383);
                 this.field_p = new int[var4_int];
                 this.field_t = new int[var4_int][];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = param0.d((byte) -79);
+                  var6 = param0.readUnsignedShort((byte) -79);
                   var7 = dk.a(var6, (byte) 25);
                   if (var7 != null) {
                     this.field_p[var5] = var6;
                     array$0 = new int[var7.field_b];
                     this.field_t[var5] = array$0;
                     for (var8 = 0; var7.field_b > var8; var8++) {
-                      this.field_t[var5][var8] = param0.d((byte) -78);
+                      this.field_t[var5][var8] = param0.readUnsignedShort((byte) -78);
                     }
                   }
                 }
@@ -74,7 +74,7 @@ final class ob extends DualLinkNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class ob extends DualLinkNode {
           }
           dh.a(var3, var4, param1, var2, 1000);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ob.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ob.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class ob extends DualLinkNode {
             field_x = (String) null;
           }
           while (true) {
-            var3_int = param1.h(16383);
+            var3_int = param1.readUnsignedByte(16383);
             if (var3_int == 0) {
               return;
             }
@@ -159,7 +159,7 @@ final class ob extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -173,10 +173,10 @@ final class ob extends DualLinkNode {
             gl.field_E.d((byte) -97, ib.field_e);
           }
           ib.field_e.a(param3, (byte) 88, param0, param2);
-          ll.a();
+          SoftwareRasterizer.a();
           lh.a(true, 66);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ob.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ob.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -253,7 +253,7 @@ final class ob extends DualLinkNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -281,13 +281,13 @@ final class ob extends DualLinkNode {
           synchronized (var1) {
             mb.field_f = mb.field_f + 1;
             GameKeyHandler.field_d = IntrusiveNode.field_d;
-            if (mg.field_f < 0) {
+            if (GameScreen.field_f < 0) {
               for (var2 = 0; var2 < 112; var2++) {
                 ni.field_m[var2] = false;
               }
-              mg.field_f = hb.field_f;
+              GameScreen.field_f = hb.field_f;
             } else {
-              while (hb.field_f != mg.field_f) {
+              while (hb.field_f != GameScreen.field_f) {
                 var2 = md.field_b[hb.field_f];
                 hb.field_f = hb.field_f + 1 & 127;
                 if (var2 < 0) {
@@ -297,13 +297,13 @@ final class ob extends DualLinkNode {
                 ni.field_m[var2] = true;
               }
             }
-            IntrusiveNode.field_d = ri.field_V;
+            IntrusiveNode.field_d = ActiveLevel.field_V;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1_ref), "ob.F(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1_ref), "ob.F(" + param0 + ')');
         }
     }
 
@@ -337,7 +337,7 @@ final class ob extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

@@ -5,18 +5,18 @@ class dd extends ic {
     static int field_o;
     static String field_p;
 
-    public final void a(int param0, al param1, int param2, boolean param3, int param4) {
+    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         try {
           if (param3) {
             IntrusiveNode.a(param1.field_x, param2 + param1.field_m, param1.field_u, (byte) -22, param1.field_p + param4);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "dd.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "dd.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    dd(oh param0, int param1) {
+    dd(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_G, -1, 2147483647, false);
     }
 

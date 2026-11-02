@@ -33,20 +33,20 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             var2_int = -1;
           }
-          if (mg.field_f >= 0 &&
+          if (GameScreen.field_f >= 0 &&
             var2_int >= 0) {
-            md.field_b[mg.field_f] = var2_int;
-            mg.field_f = mg.field_f + 1 & 127;
-            if (hb.field_f == mg.field_f) {
-              mg.field_f = -1;
+            md.field_b[GameScreen.field_f] = var2_int;
+            GameScreen.field_f = GameScreen.field_f + 1 & 127;
+            if (hb.field_f == GameScreen.field_f) {
+              GameScreen.field_f = -1;
             }
           }
           if (var2_int >= 0) {
-            var3 = ri.field_V + 1 & 127;
+            var3 = ActiveLevel.field_V + 1 & 127;
             if (field_d != var3) {
-              mc.field_K[ri.field_V] = var2_int;
-              tk.field_o[ri.field_V] = (char)0;
-              ri.field_V = var3;
+              mc.field_K[ActiveLevel.field_V] = var2_int;
+              tk.field_o[ActiveLevel.field_V] = (char)0;
+              ActiveLevel.field_V = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();
@@ -67,7 +67,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -88,12 +88,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (mg.field_f >= 0 &&
+            if (GameScreen.field_f >= 0 &&
               0 <= var2_int) {
-              md.field_b[mg.field_f] = ~var2_int;
-              mg.field_f = 1 + mg.field_f & 127;
-              if (mg.field_f == hb.field_f) {
-                mg.field_f = -1;
+              md.field_b[GameScreen.field_f] = ~var2_int;
+              GameScreen.field_f = 1 + GameScreen.field_f & 127;
+              if (GameScreen.field_f == hb.field_f) {
+                GameScreen.field_f = -1;
               }
             }
           }
@@ -109,7 +109,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -130,18 +130,18 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         try {
-          if (null != param1.field_e) {
-            param1.a(-91);
+          if (null != param1.previous) {
+            param1.unlink(-91);
           }
           if (param2 > -124) {
             field_a = -44;
           }
-          param1.field_h = param0;
-          param1.field_e = param0.field_e;
-          param1.field_e.field_h = param1;
-          param1.field_h.field_e = param1;
+          param1.next = param0;
+          param1.previous = param0.previous;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "lj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "lj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -172,17 +172,17 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (var2_int != 0 &&
               var2_int != 65535 &&
               nd.a(-92, (char) var2_int)) {
-              var3 = 1 + ri.field_V & 127;
+              var3 = 1 + ActiveLevel.field_V & 127;
               if (field_d != var3) {
-                mc.field_K[ri.field_V] = -1;
-                tk.field_o[ri.field_V] = (char)var2_int;
-                ri.field_V = var3;
+                mc.field_K[ActiveLevel.field_V] = -1;
+                tk.field_o[ActiveLevel.field_V] = (char)var2_int;
+                ActiveLevel.field_V = var3;
               }
             }
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "lj.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "lj.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null == cj.field_o) {
             return;
           }
-          mg.field_f = -1;
+          GameScreen.field_f = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -208,7 +208,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

@@ -6,7 +6,7 @@ import java.io.*;
 abstract class SocketConnector {
     int field_c;
     String field_b;
-    static qj[] field_a;
+    static Sprite[] field_a;
     static int field_d;
 
     final static int a(CharSequence param0, int param1) {
@@ -39,7 +39,7 @@ abstract class SocketConnector {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

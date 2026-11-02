@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id {
+final class NodeHashTable {
     static int field_h;
     static int field_e;
     private IntrusiveNode[] field_c;
@@ -21,20 +21,20 @@ final class id {
           return (IntrusiveNode) null;
         }
         IntrusiveNode var4 = this.field_c[(int)((long)(this.field_b - 1) & param1)];
-        this.field_j = var4.field_h;
+        this.field_j = var4.next;
         while (var4 != this.field_j) {
-          if (~param1 == ~this.field_j.field_b) {
+          if (~param1 == ~this.field_j.key) {
             var5 = this.field_j;
-            this.field_j = this.field_j.field_h;
+            this.field_j = this.field_j.next;
             return var5;
           }
-          this.field_j = this.field_j.field_h;
+          this.field_j = this.field_j.next;
         }
         this.field_j = null;
         return null;
     }
 
-    final static void a(byte param0, int param1, oh param2, String param3, va param4) {
+    final static void a(byte param0, int param1, BitmapFont param2, String param3, va param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -96,7 +96,7 @@ final class id {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class id {
         if (this.field_f > 0 &&
           this.field_c[this.field_f - 1] != this.field_d) {
           var2 = this.field_d;
-          this.field_d = var2.field_h;
+          this.field_d = var2.next;
           return var2;
         }
         do {
@@ -121,29 +121,29 @@ final class id {
           }
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          var2 = this.field_c[fieldTemp$0].field_h;
+          var2 = this.field_c[fieldTemp$0].next;
         } while (this.field_c[-1 + this.field_f] == var2);
-        this.field_d = var2.field_h;
+        this.field_d = var2.next;
         return var2;
     }
 
     final void a(boolean param0, long param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
-          if (null != param2.field_e) {
-            param2.a(-38);
+          if (null != param2.previous) {
+            param2.unlink(-38);
           }
           var5 = this.field_c[(int)((long)(this.field_b - 1) & param1)];
-          param2.field_h = var5;
+          param2.next = var5;
           if (param0) {
             this.field_f = 37;
           }
-          param2.field_e = var5.field_e;
-          param2.field_e.field_h = param2;
-          param2.field_h.field_e = param2;
-          param2.field_b = param1;
+          param2.previous = var5.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
+          param2.key = param1;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "id.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "id.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -164,7 +164,7 @@ final class id {
         field_k = null;
     }
 
-    id(int param0) {
+    NodeHashTable(int param0) {
         int var2 = 0;
         IntrusiveNode dupTemp$0 = null;
         IntrusiveNode var3 = null;
@@ -175,8 +175,8 @@ final class id {
           dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_c[var2] = dupTemp$0;
-          var3.field_h = var3;
-          var3.field_e = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 
@@ -187,7 +187,7 @@ final class id {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$1fdf1ca47e3f(int param0, int param1, oh param2, String param3, va param4) {
+    final static void $cfr$intArgs$a$1fdf1ca47e3f(int param0, int param1, BitmapFont param2, String param3, va param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -249,7 +249,7 @@ final class id {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class oh extends DualLinkNode {
+abstract class BitmapFont extends DualLinkNode {
     int field_H;
     private static StringBuilder field_C;
     private int[] field_v;
@@ -152,10 +152,10 @@ abstract class oh extends DualLinkNode {
               }
               param1 = param1 + this.field_K[var8];
               if (field_w != -1) {
-                ll.a(var11, param2 + (int)((double)this.field_q * 0.7), param1 - var11, field_w);
+                SoftwareRasterizer.a(var11, param2 + (int)((double)this.field_q * 0.7), param1 - var11, field_w);
               }
               if (field_B != -1) {
-                ll.a(var11, param2 + this.field_q + 1, param1 - var11, field_B);
+                SoftwareRasterizer.a(var11, param2 + this.field_q + 1, param1 - var11, field_B);
               }
               var5 = var8;
             }
@@ -295,7 +295,7 @@ abstract class oh extends DualLinkNode {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_J[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)oh.a(var15, var16, var17, this.field_K, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_J[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.field_K, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -900,10 +900,10 @@ abstract class oh extends DualLinkNode {
               }
               var16 = this.field_K[var11];
               if (field_w != -1) {
-                ll.a(param1, param2 + (int)((double)this.field_q * 0.7), var16, field_w);
+                SoftwareRasterizer.a(param1, param2 + (int)((double)this.field_q * 0.7), var16, field_w);
               }
               if (field_B != -1) {
-                ll.a(param1, param2 + this.field_q, var16, field_B);
+                SoftwareRasterizer.a(param1, param2 + this.field_q, var16, field_B);
               }
               param1 = param1 + var16;
               var7 = var11;
@@ -1002,7 +1002,7 @@ abstract class oh extends DualLinkNode {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
-    oh(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
+    BitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var8 = 0;
         int var6;
         int var7;

@@ -11,7 +11,7 @@ abstract class fd {
     static boolean field_i;
     static le field_h;
     int field_g;
-    static qj field_d;
+    static Sprite field_d;
     int field_a;
     private static String field_z;
 

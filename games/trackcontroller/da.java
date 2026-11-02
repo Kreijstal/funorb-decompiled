@@ -7,10 +7,10 @@ final class da extends ae {
     static int field_m;
     private BufferedSocket field_q;
     static qe field_n;
-    static qj[][] field_p;
+    static Sprite[][] field_p;
     static int field_o;
 
-    final static li a(ik param0, int param1, byte param2) {
+    final static li a(PcmSample param0, int param1, byte param2) {
         RuntimeException var3 = null;
         li stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -21,7 +21,7 @@ final class da extends ae {
           if (param2 > -108) {
             da.a(79, (byte) -19);
           }
-          stackIn_3_0 = bd.a(-31085, bh.a(param0, 100, param1));
+          stackIn_3_0 = bd.a(-31085, PcmSampleStream.a(param0, 100, param1));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -33,7 +33,7 @@ final class da extends ae {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -94,15 +94,15 @@ final class da extends ae {
               } else {
                 af.field_o = rl.a(20, false, param3, param2);
               }
-              ra.field_C.field_k = 0;
-              ra.field_C.a(14, (byte) -72);
-              ra.field_C.a(af.field_o.a(false).field_b, (byte) -100);
+              ra.field_C.position = 0;
+              ra.field_C.writeByte(14, (byte) -72);
+              ra.field_C.writeByte(af.field_o.a(false).field_b, (byte) -100);
               me.a(-1, -1);
               jc.field_a = sg.field_d;
             }
             if (jc.field_a == sg.field_d &&
               hf.a(1, false)) {
-              var6_int = ne.field_a.h(16383);
+              var6_int = ne.field_a.readUnsignedByte(16383);
               if (var6_int == 0) {
                 jc.field_a = md.field_e;
               } else {
@@ -110,22 +110,22 @@ final class da extends ae {
                 uk.field_c = var6_int;
                 jc.field_a = ij.field_j;
               }
-              ne.field_a.field_k = 0;
+              ne.field_a.position = 0;
             }
             if (jc.field_a == md.field_e &&
               hf.a(8, false)) {
-              MouseWheelInput.field_d = ne.field_a.f((byte) 110);
-              ne.field_a.field_k = 0;
+              MouseWheelInput.field_d = ne.field_a.readLong((byte) 110);
+              ne.field_a.position = 0;
               md.a(af.field_o, param5, param1, -1, param0);
               jc.field_a = ca.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
             if (ca.field_b == jc.field_a &&
               hf.a(1, false)) {
-              var6_intLifetime1 = ne.field_a.h(16383);
+              var6_intLifetime1 = ne.field_a.readUnsignedByte(16383);
               kg.field_a = null;
               uk.field_c = var6_intLifetime1;
-              ne.field_a.field_k = 0;
+              ne.field_a.position = 0;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
@@ -147,12 +147,12 @@ final class da extends ae {
             }
             if (jc.field_a == qe.field_C &&
               fh.a(520)) {
-              ClientException.field_e = ne.field_a.f((byte) 28);
-              sl.field_j = ne.field_a.h(16383);
-              ne.field_a.h(16383);
-              SocketConnector.field_d = ne.field_a.d((byte) -67);
-              var6 = ne.field_a.d(19016);
-              var7 = ne.field_a.h(16383);
+              ClientException.field_e = ne.field_a.readLong((byte) 28);
+              LevelGrid.field_j = ne.field_a.readUnsignedByte(16383);
+              ne.field_a.readUnsignedByte(16383);
+              SocketConnector.field_d = ne.field_a.readUnsignedShort((byte) -67);
+              var6 = ne.field_a.readOptionalString(19016);
+              var7 = ne.field_a.readUnsignedByte(16383);
               if ((1 & var7) != 0) {
                 qi.b(8770);
               }
@@ -165,19 +165,19 @@ final class da extends ae {
                 }
               }
               if (mk.field_c) {
-                ne.field_a.h(16383);
-                ne.field_a.h(16383);
-                ne.field_a.e((byte) 113);
-                jd.field_d = ne.field_a.d((byte) -118);
+                ne.field_a.readUnsignedByte(16383);
+                ne.field_a.readUnsignedByte(16383);
+                ne.field_a.readInt((byte) 113);
+                jd.field_d = ne.field_a.readUnsignedShort((byte) -118);
                 qa.field_a = new byte[jd.field_d];
                 for (var8 = 0; jd.field_d > var8; var8++) {
-                  qa.field_a[var8] = ne.field_a.f(-127);
+                  qa.field_a[var8] = ne.field_a.readByte(-127);
                 }
               }
-              ue.field_a = ne.field_a.g(0);
+              ue.field_a = ne.field_a.readString(0);
               var11 = (CharSequence) ((Object) ue.field_a);
               dd.field_p = r.a(var11, -11133);
-              si.field_d = ne.field_a.h(16383);
+              si.field_d = ne.field_a.readUnsignedByte(16383);
               jc.field_a = ka.field_b;
               if (af.field_o.a(false) != nd.field_M) {
                 if (af.field_o.a(false) == ji.field_a) {
@@ -229,7 +229,7 @@ final class da extends ae {
               if (uk.field_c == 7) {
                 uk.field_c = 3;
               }
-              fi.field_t = ne.field_a.g(0);
+              fi.field_t = ne.field_a.readString(0);
               kg.field_f = false;
               stackIn_90_0 = uk.field_c;
               return stackIn_90_0;
@@ -268,7 +268,7 @@ final class da extends ae {
             } else {
               stackIn_107_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+            throw LevelGrid.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param4).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -293,9 +293,9 @@ final class da extends ae {
 
     public static void e(int param0) {
         field_n = null;
-        field_p = (qj[][]) null;
+        field_p = (Sprite[][]) null;
         if (param0 < 63) {
-          field_p = (qj[][]) null;
+          field_p = (Sprite[][]) null;
         }
     }
 
@@ -310,16 +310,16 @@ final class da extends ae {
             return;
           }
           try {
-            this.field_g.field_k = 0;
+            this.field_g.position = 0;
             stackIn_4_0 = this.field_g;
             if (!param0) {
               stackIn_5_1 = 3;
             } else {
               stackIn_5_1 = 2;
             }
-            ((PacketBuffer) (Object) stackIn_4_0).a(stackIn_5_1, (byte) -127);
+            ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_5_1, (byte) -127);
             this.field_g.a(2488, 0L);
-            this.field_q.a(-103, this.field_g.field_j, this.field_g.field_j.length, param1);
+            this.field_q.a(-103, this.field_g.payload, this.field_g.payload.length, param1);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -350,28 +350,28 @@ final class da extends ae {
         var3 = TrackController.field_F ? 1 : 0;
         try {
           qd.field_d = param0;
-          var2 = (li) (kd.field_a.b(2));
+          var2 = (li) (kd.field_a.first(2));
           if (param1 != -74) {
-            field_p = (qj[][]) null;
+            field_p = (Sprite[][]) null;
           }
           while (var2 != null) {
             if (var2.field_k.b(10000536)) {
               var2.field_j.g(128 + var2.field_m * qd.field_d >> 8);
             } else {
-              var2.a(-76);
+              var2.unlink(-76);
             }
-            var2 = (li) (kd.field_a.a(param1 ^ -68));
+            var2 = (li) (kd.field_a.next(param1 ^ -68));
           }
           if (jk.field_c != null) {
-            var2Lifetime1 = (li) (jk.field_c.b(2));
+            var2Lifetime1 = (li) (jk.field_c.first(2));
             while (var2Lifetime1 != null) {
               stackIn_13_0 = var2Lifetime1.field_k.b(param1 ^ -10000594);
               if (!stackIn_13_0) {
-                var2Lifetime1.a(-33);
+                var2Lifetime1.unlink(-33);
               } else {
                 var2Lifetime1.field_j.g(128 + qd.field_d * var2Lifetime1.field_m >> 8);
               }
-              var2Lifetime1 = (li) (jk.field_c.a(10));
+              var2Lifetime1 = (li) (jk.field_c.next(10));
             }
             return;
           }
@@ -379,7 +379,7 @@ final class da extends ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var2_ref), "da.L(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var2_ref), "da.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -395,13 +395,13 @@ final class da extends ae {
             return;
           }
           try {
-            this.field_g.field_k = 0;
-            this.field_g.a(6, (byte) -59);
+            this.field_g.position = 0;
+            this.field_g.writeByte(6, (byte) -59);
             this.field_g.c((byte) -38, 3);
             this.field_g.b(0, (byte) -118);
-            this.field_q.a(-102, this.field_g.field_j, this.field_g.field_j.length, 0);
+            this.field_q.a(-102, this.field_g.payload, this.field_g.payload.length, 0);
             if (param0 >= -5) {
-              field_p = (qj[][]) null;
+              field_p = (Sprite[][]) null;
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -451,7 +451,7 @@ final class da extends ae {
             this.d((byte) -42);
             this.a(param1, 0);
             this.field_l = null;
-            this.field_a.field_k = 0;
+            this.field_a.position = 0;
             while (true) {
               var4_ref = (hi) (this.field_c.a(-58));
               if (var4_ref != null) {
@@ -473,11 +473,11 @@ final class da extends ae {
             }
             if (this.field_i != 0) {
               try {
-                this.field_g.field_k = 0;
-                this.field_g.a(4, (byte) -112);
-                this.field_g.a((int) this.field_i, (byte) -99);
-                this.field_g.b(false, 0);
-                this.field_q.a(-126, this.field_g.field_j, this.field_g.field_j.length, 0);
+                this.field_g.position = 0;
+                this.field_g.writeByte(4, (byte) -112);
+                this.field_g.writeByte((int) this.field_i, (byte) -99);
+                this.field_g.writeInt(false, 0);
+                this.field_q.a(-126, this.field_g.payload, this.field_g.payload.length, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -505,7 +505,7 @@ final class da extends ae {
             } else {
               stackIn_29_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+            throw LevelGrid.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -575,19 +575,19 @@ final class da extends ae {
             this.field_q.a(true);
             var2 = (hi) (this.field_f.b(48));
             while (var2 != null) {
-              this.field_g.field_k = 0;
-              this.field_g.a(1, (byte) -96);
+              this.field_g.position = 0;
+              this.field_g.writeByte(1, (byte) -96);
               this.field_g.a(2488, var2.field_m);
-              this.field_q.a(-124, this.field_g.field_j, this.field_g.field_j.length, 0);
+              this.field_q.a(-124, this.field_g.payload, this.field_g.payload.length, 0);
               this.field_c.a(var2, true);
               var2 = (hi) (this.field_f.a((byte) 108));
             }
             var2Lifetime1 = (hi) (this.field_h.b(48));
             while (var2Lifetime1 != null) {
-              this.field_g.field_k = 0;
-              this.field_g.a(0, (byte) -74);
+              this.field_g.position = 0;
+              this.field_g.writeByte(0, (byte) -74);
               this.field_g.a(2488, var2Lifetime1.field_m);
-              this.field_q.a(-106, this.field_g.field_j, this.field_g.field_j.length, 0);
+              this.field_q.a(-106, this.field_g.payload, this.field_g.payload.length, 0);
               this.field_k.a(var2Lifetime1, true);
               var2Lifetime1 = (hi) (this.field_h.a((byte) 113));
             }
@@ -607,34 +607,34 @@ final class da extends ae {
                   }
                 }
                 if (var4 > 0) {
-                  var5 = var4 - this.field_a.field_k;
+                  var5 = var4 - this.field_a.position;
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_q.a(this.field_a.field_j, 0, var5, this.field_a.field_k);
+                  this.field_q.a(this.field_a.payload, 0, var5, this.field_a.position);
                   if (this.field_i != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_a.field_j[this.field_a.field_k + var6] = (byte)ma.a((int) this.field_a.field_j[this.field_a.field_k + var6], (int) this.field_i);
+                      this.field_a.payload[this.field_a.position + var6] = (byte)ma.a((int) this.field_a.payload[this.field_a.position + var6], (int) this.field_i);
                     }
                   }
-                  this.field_a.field_k = this.field_a.field_k + var5;
-                  if (this.field_a.field_k >= var4) {
+                  this.field_a.position = this.field_a.position + var5;
+                  if (this.field_a.position >= var4) {
                     if (null != this.field_l) {
                       if (0 != this.field_l.field_z) {
                         throw new IOException();
                       }
-                      if (this.field_a.field_j[0] == -1) {
+                      if (this.field_a.payload[0] == -1) {
                         this.field_l.field_z = 1;
-                        this.field_a.field_k = 0;
+                        this.field_a.position = 0;
                       } else {
                         this.field_l = null;
                       }
                     } else {
-                      this.field_a.field_k = 0;
-                      var6 = this.field_a.h(16383);
-                      var7 = this.field_a.e((byte) 113);
-                      var8 = this.field_a.h(16383);
-                      var9 = this.field_a.e((byte) 113);
+                      this.field_a.position = 0;
+                      var6 = this.field_a.readUnsignedByte(16383);
+                      var7 = this.field_a.readInt((byte) 113);
+                      var8 = this.field_a.readUnsignedByte(16383);
+                      var9 = this.field_a.readInt((byte) 113);
                       var10 = var8 & 127;
                       stackIn_62_0 = ((128 & var8) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -670,30 +670,30 @@ final class da extends ae {
                       var15 = stackIn_78_0;
                       this.field_l = var14_ref;
                       this.field_l.field_x = new PacketBuffer(var9 - (-var15 - this.field_l.field_B));
-                      this.field_l.field_x.a(var10, (byte) -120);
-                      this.field_l.field_x.b(false, var9);
+                      this.field_l.field_x.writeByte(var10, (byte) -120);
+                      this.field_l.field_x.writeInt(false, var9);
                       this.field_l.field_z = 10;
-                      this.field_a.field_k = 0;
+                      this.field_a.position = 0;
                     }
                   }
                 } else {
-                  var5 = -this.field_l.field_B + this.field_l.field_x.field_j.length;
+                  var5 = -this.field_l.field_B + this.field_l.field_x.payload.length;
                   var6 = -this.field_l.field_z + 512;
-                  if (var6 > -this.field_l.field_x.field_k + var5) {
-                    var6 = var5 - this.field_l.field_x.field_k;
+                  if (var6 > -this.field_l.field_x.position + var5) {
+                    var6 = var5 - this.field_l.field_x.position;
                   }
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_q.a(this.field_l.field_x.field_j, 0, var6, this.field_l.field_x.field_k);
+                  this.field_q.a(this.field_l.field_x.payload, 0, var6, this.field_l.field_x.position);
                   if (this.field_i != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_l.field_x.field_j[this.field_l.field_x.field_k + var7] = (byte)ma.a((int) this.field_l.field_x.field_j[this.field_l.field_x.field_k + var7], (int) this.field_i);
+                      this.field_l.field_x.payload[this.field_l.field_x.position + var7] = (byte)ma.a((int) this.field_l.field_x.payload[this.field_l.field_x.position + var7], (int) this.field_i);
                     }
                   }
-                  this.field_l.field_x.field_k = this.field_l.field_x.field_k + var6;
+                  this.field_l.field_x.position = this.field_l.field_x.position + var6;
                   this.field_l.field_z = this.field_l.field_z + var6;
-                  if (var5 != this.field_l.field_x.field_k) {
+                  if (var5 != this.field_l.field_x.position) {
                     if (this.field_l.field_z == 512) {
                       this.field_l.field_z = 0;
                     }

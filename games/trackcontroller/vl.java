@@ -4,9 +4,9 @@
 final class vl extends ok {
     static int field_H;
     static String field_E;
-    private ja field_L;
+    private IntrusiveDeque field_L;
     static String field_J;
-    static qj field_K;
+    static Sprite field_K;
 
     final static boolean a(char param0, int param1) {
         String var3;
@@ -27,7 +27,7 @@ final class vl extends ok {
     final static void n(int param0) {
         GameApplet.field_k = false;
         fe.field_L = 0;
-        g.field_y = -1;
+        SpriteState.field_y = -1;
         ha.field_z = -1;
         if (param0 != -27145) {
           String var2 = (String) null;
@@ -45,16 +45,16 @@ final class vl extends ok {
         hl var3 = (hl) (var2.d(91));
         while (var3 != null) {
           if (var3.j(-27)) {
-            var3.a(-32);
+            var3.unlink(-32);
           }
           var3 = (hl) (var2.e(37));
         }
-        this.field_B = (al) ((Object) this.j(-6121));
+        this.field_B = (UiWidget) ((Object) this.j(-6121));
     }
 
     final static void m(int param0) {
         if (param0 != 1) {
-          field_K = (qj) null;
+          field_K = (Sprite) null;
         }
         String var2 = (String) null;
         oc.a("", (byte) -90, (String) null);
@@ -63,20 +63,20 @@ final class vl extends ok {
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = TrackController.field_F ? 1 : 0;
         if (null != this.field_y) {
-          this.field_y.a(param3 ^ -5038, (al) (this), param2, true, param1);
+          this.field_y.a(param3 ^ -5038, (UiWidget) (this), param2, true, param1);
         }
         ue var5 = new ue(this.field_L);
         if (param3 != 29221) {
-          this.field_L = (ja) null;
+          this.field_L = (IntrusiveDeque) null;
         }
-        al var6 = (al) (var5.a(66));
+        UiWidget var6 = (UiWidget) (var5.a(66));
         while (var6 != null) {
           var6.a(param0, this.field_p + param1, param2 + this.field_m, 29221);
-          var6 = (al) (var5.c(-87));
+          var6 = (UiWidget) (var5.c(-87));
         }
     }
 
-    final al i(int param0) {
+    final UiWidget i(int param0) {
         ue var2;
         hl var3;
         int var4;
@@ -97,7 +97,7 @@ final class vl extends ok {
 
     public vl() {
         super(0, 0, jf.field_j, kg.field_c, (t) null, (tg) null);
-        this.field_L = new ja();
+        this.field_L = new IntrusiveDeque();
     }
 
     final static void a(int param0, String param1) {
@@ -119,7 +119,7 @@ final class vl extends ok {
           if (param0 != -21173) {
             field_E = (String) null;
           }
-          var2_int = g.g(1);
+          var2_int = SpriteState.g(1);
           if (var2_int >= 0) {
             var3 = 3158064;
             var4 = 16777120;
@@ -133,15 +133,15 @@ final class vl extends ok {
               var6 = var6 * var7;
             }
             var9 = ha.field_z;
-            if (var5 + var9 + 6 > ll.field_d) {
-              var9 = -6 - var5 + ll.field_d;
+            if (var5 + var9 + 6 > SoftwareRasterizer.field_d) {
+              var9 = -6 - var5 + SoftwareRasterizer.field_d;
             }
             var10 = 32 + (-GameApplet.field_c.field_H + kj.field_o);
-            if (ll.field_k < var6 + var10 + 6) {
+            if (SoftwareRasterizer.field_k < var6 + var10 + 6) {
               var10 = kj.field_o - (var6 + 6);
             }
-            ll.f(var9, var10, 6 + var5, var6 + 6, var3);
-            ll.c(1 + var9, 1 + var10, var5 + 4, var6 + 4, var4);
+            SoftwareRasterizer.f(var9, var10, 6 + var5, var6 + 6, var3);
+            SoftwareRasterizer.c(1 + var9, 1 + var10, var5 + 4, var6 + 4, var4);
             if (1 < var7) {
               GameApplet.field_c.a(param1, var9 + 3, GameApplet.field_c.field_H + (var10 - (-3 + GameApplet.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
             } else {
@@ -159,7 +159,7 @@ final class vl extends ok {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class vl extends ok {
         hl var3 = (hl) (var2.d(105));
         while (var3 != null) {
           if (var3.k(0)) {
-            var3.a(-40);
+            var3.unlink(-40);
           }
           var3 = (hl) (var2.e(37));
         }
@@ -197,21 +197,21 @@ final class vl extends ok {
         return null;
     }
 
-    final void d(byte param0, al param1) {
+    final void d(byte param0, UiWidget param1) {
         hl var3 = null;
         try {
           if (!(param1 instanceof hl)) {
             throw new IllegalArgumentException();
           }
           if (param0 > -55) {
-            field_K = (qj) null;
+            field_K = (Sprite) null;
           }
           var3 = (hl) (param1);
-          this.field_L.a(var3, (byte) 112);
+          this.field_L.addFirst(var3, (byte) 112);
           var3.field_E = true;
-          var3.a((byte) -106, (al) (this));
+          var3.a((byte) -106, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "vl.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "vl.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

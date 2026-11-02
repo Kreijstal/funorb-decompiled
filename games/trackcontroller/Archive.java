@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk {
-    private pc field_b;
-    private wi field_c;
+final class Archive {
+    private ArchiveIndex field_b;
+    private ArchiveSource field_c;
     private Object[] field_d;
     private int field_i;
     private boolean field_e;
@@ -66,7 +66,7 @@ final class kk {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw sl.a((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ final class kk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ final class kk {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -299,13 +299,13 @@ final class kk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static boolean b(byte param0) {
         if (param0 >= -50) {
-          kk.a(-33);
+          Archive.a(-33);
         }
         return vg.field_o;
     }
@@ -360,7 +360,7 @@ final class kk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -399,7 +399,7 @@ final class kk {
           return false;
         }
         if (!param0) {
-          this.field_b = (pc) null;
+          this.field_b = (ArchiveIndex) null;
           return true;
         }
         return true;
@@ -498,7 +498,7 @@ final class kk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -518,7 +518,7 @@ final class kk {
           var4 = (CharSequence) ((Object) param0);
           var3_int = this.field_b.field_q.a(SocketConnector.a(var4, 0), -26556);
           if (param1 > -85) {
-            this.field_b = (pc) null;
+            this.field_b = (ArchiveIndex) null;
           }
           if (var3_int >= 0) {
             return true;
@@ -534,7 +534,7 @@ final class kk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -665,7 +665,7 @@ final class kk {
               var25 = var35;
               var9 = var25;
               var26 = new PacketBuffer(var35);
-              var26.a(5, param3, var26.field_j.length, false);
+              var26.a(5, param3, var26.payload.length, false);
               decompiledFrameRemainder1 = false;
             }
           }
@@ -673,7 +673,7 @@ final class kk {
             var9 = me.a(false, param0 ^ 22688, this.field_d[param1]);
           }
           try {
-            var36 = al.a(-127, var9);
+            var36 = UiWidget.a(-127, var9);
             var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -683,7 +683,7 @@ final class kk {
             stackIn_36_0 = var11_ref_RuntimeException;
             stackIn_36_1 = new StringBuilder();
             stackIn_37_2 = (param3 != null);
-            throw sl.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(ql.a(0, var9, var9.length)).append(" ").append(ql.a(param0 ^ 4, var9, -2 + var9.length)).append(" ").append(this.field_b.field_b[param1]).append(" ").append(this.field_b.field_p).toString());
+            throw LevelGrid.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(ql.a(0, var9, var9.length)).append(" ").append(ql.a(param0 ^ 4, var9, -2 + var9.length)).append(" ").append(this.field_b.field_b[param1]).append(" ").append(this.field_b.field_p).toString());
           }
           if (this.field_e) {
             this.field_d[param1] = null;
@@ -696,12 +696,12 @@ final class kk {
               var11 = var11 - 4 * (var12 * var5_int);
               var29 = new PacketBuffer(var43);
               var14_int = 0;
-              var29.field_k = var11;
+              var29.position = var11;
               var15_int = 0;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var29.e((byte) 113);
+                  var17 = var17 + var29.readInt((byte) 113);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -718,12 +718,12 @@ final class kk {
               }
               var44 = new byte[var14_int];
               var14_intLifetime1 = 0;
-              var29.field_k = var11;
+              var29.position = var11;
               var17Lifetime4 = 0;
               for (var18Lifetime3 = 0; var18Lifetime3 < var12; var18Lifetime3++) {
                 var19Lifetime2 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19Lifetime2 = var19Lifetime2 + var29.e((byte) 113);
+                  var19Lifetime2 = var19Lifetime2 + var29.readInt((byte) 113);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -744,14 +744,14 @@ final class kk {
             var12Lifetime1 = 255 & var23[var11];
             var11 = var11 - 4 * var5_int * var12Lifetime1;
             var31 = new PacketBuffer(var43);
-            var31.field_k = var11;
+            var31.position = var11;
             var39 = new int[var5_int];
             var32 = var39;
             var14 = var32;
             for (var15_intLifetime1 = 0; var15_intLifetime1 < var12Lifetime1; var15_intLifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var17Lifetime1 < var5_int; var17Lifetime1++) {
-                var16Lifetime1 = var16Lifetime1 + var31.e((byte) 113);
+                var16Lifetime1 = var16Lifetime1 + var31.readInt((byte) 113);
                 var14[var17Lifetime1] = var14[var17Lifetime1] + var16Lifetime1;
               }
             }
@@ -763,12 +763,12 @@ final class kk {
               var15[var16Lifetime2] = array$1;
               var39[var16Lifetime2] = 0;
             }
-            var31.field_k = var11;
+            var31.position = var11;
             var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var17Lifetime2 < var12Lifetime1; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var19Lifetime1 < var5_int; var19Lifetime1++) {
-                var18Lifetime1 = var18Lifetime1 + var31.e((byte) 113);
+                var18Lifetime1 = var18Lifetime1 + var31.readInt((byte) 113);
                 pd.a(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
@@ -809,7 +809,7 @@ final class kk {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
         }
     }
 
@@ -843,11 +843,11 @@ final class kk {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    kk(wi param0, boolean param1, int param2) {
+    Archive(ArchiveSource param0, boolean param1, int param2) {
         this.field_b = null;
         try {
           if (param2 < 0 ||
@@ -858,7 +858,7 @@ final class kk {
           this.field_c = param0;
           this.field_e = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

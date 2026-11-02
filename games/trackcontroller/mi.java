@@ -5,7 +5,7 @@ import java.io.*;
 
 final class mi extends el {
     private eh field_S;
-    private qj field_P;
+    private Sprite field_P;
     private int field_Q;
     private String field_R;
 
@@ -51,7 +51,7 @@ final class mi extends el {
               }
             }
           } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ')');
+            throw LevelGrid.a((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -69,9 +69,9 @@ final class mi extends el {
         int var11;
         int var12;
         int var13;
-        qj var14;
-        qj var15;
-        qj var16;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
         ud var6Lifetime1;
         var13 = TrackController.field_F ? 1 : 0;
         if (param3 != 29221) {
@@ -106,7 +106,7 @@ final class mi extends el {
         var6Lifetime1 = this.field_S.a((byte) -5);
         var8 = (dl) ((Object) this.field_y);
         var9 = param1 + this.field_p;
-        var10 = var8.a((al) (this), param3 ^ -29188, param2) + (var8.a((byte) 124, (al) (this)).a(12323) >> 1);
+        var10 = var8.a((UiWidget) (this), param3 ^ -29188, param2) + (var8.a((byte) 124, (UiWidget) (this)).a(12323) >> 1);
         if (var6Lifetime1 != lh.field_x &&
           var6Lifetime1 != tk.field_t) {
           if (ef.field_b == var6Lifetime1) {
@@ -124,37 +124,37 @@ final class mi extends el {
             var11 <= this.field_P.field_t &&
             var12 <= this.field_P.field_q) {
             mb.a((byte) 126, this.field_P);
-            ll.a();
+            SoftwareRasterizer.a();
           } else {
-            this.field_P = new qj(var11, var12);
+            this.field_P = new Sprite(var11, var12);
             mb.a((byte) -110, this.field_P);
           }
           var14.a(112, 144, var14.field_s << 4, var14.field_v << 4, -this.field_Q << 10, 4096);
-          ch.m(57);
+          GameShell.m(57);
           this.field_P.a(-(var14.field_s >> 1) + var9, var10 - var14.field_v, 256);
         }
     }
 
-    final void a(int param0, int param1, byte param2, al param3) {
+    final void a(int param0, int param1, byte param2, UiWidget param3) {
         try {
           this.field_Q = this.field_Q + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "mi.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mi.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(byte param0, al param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        al var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -104) {
-            var4 = (al) null;
-            this.a(66, -39, (byte) 109, (al) null);
+            var4 = (UiWidget) null;
+            this.a(66, -39, (byte) 109, (UiWidget) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -167,7 +167,7 @@ final class mi extends el {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class mi extends el {
           this.field_R = param1;
           this.a(param5, -3050, param3, param4, param2);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "mi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

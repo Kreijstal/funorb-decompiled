@@ -33,14 +33,14 @@ final class ti extends IntrusiveNode {
           if (param1 < 17) {
             ti.a(-51, -77);
           }
-          kd.field_b.a((byte) -120, param2);
+          kd.field_b.addLast((byte) -120, param2);
           md.a(param0, param2, 118);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ti.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ti.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static ng a(String param0, kk param1, String param2, int param3) {
+    final static ng a(String param0, Archive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -85,7 +85,7 @@ final class ti extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class ti extends IntrusiveNode {
           return;
         }
         String var2 = (String) null;
-        ti.a((String) null, (kk) null, (String) null, -73);
+        ti.a((String) null, (Archive) null, (String) null, -73);
         ProxySocketConnector.b(17, (byte) -42);
     }
 

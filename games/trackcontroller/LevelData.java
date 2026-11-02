@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea extends sl {
+final class LevelData extends LevelGrid {
     static String[] field_u;
     int field_r;
     String field_q;
-    static ja field_t;
+    static IntrusiveDeque field_t;
     static String field_y;
     int field_x;
     static int[] field_w;
     int field_v;
-    static ja field_s;
+    static IntrusiveDeque field_s;
     static String field_p;
 
-    ea(int param0, String param1) {
+    LevelData(int param0, String param1) {
         super(true, 0, 0);
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -76,7 +76,7 @@ final class ea extends sl {
               var5++;
               var23[var8][var9_int] = fh.a(0, (int) param1.charAt(incrementValue$7));
               if (var4 > (1 + var9_int)) {
-                var22[var8][var9_int + 1] = (byte)tc.a(7, var10);
+                var22[var8][var9_int + 1] = (byte)RandomAccessCacheFile.a(7, var10);
                 incrementValue$8 = var5;
                 var5++;
                 var23[var8][var9_int + 1] = fh.a(0, (int) param1.charAt(incrementValue$8));
@@ -122,7 +122,7 @@ final class ea extends sl {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class ea extends sl {
             field_p = (String) null;
           }
           ig.a();
-          wi.field_b = 11;
+          ArchiveSource.field_b = 11;
           ec.field_d = new int[260];
           for (var1_int = 0; 256 > var1_int; var1_int++) {
             var2 = 15.0;
@@ -156,7 +156,7 @@ final class ea extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "ea.O(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1), "ea.O(" + param0 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class ea extends sl {
         }
         for (var2 = 0; 16 > var2; var2++) {
           for (var3 = 0; var3 < 16; var3++) {
-            if (this.field_d[var2][var3] == 38) {
+            if (this.tileFlags[var2][var3] == 38) {
               return var3;
             }
           }
@@ -182,11 +182,11 @@ final class ea extends sl {
         int var3 = 0;
         int var4 = TrackController.field_F ? 1 : 0;
         if (param0 != -8299) {
-          ea.b(true, 12);
+          LevelData.b(true, 12);
         }
         for (var2 = 0; 16 > var2; var2++) {
           for (var3 = 0; var3 < 16; var3++) {
-            if (38 == this.field_d[var2][var3]) {
+            if (38 == this.tileFlags[var2][var3]) {
               return var2;
             }
           }
@@ -196,7 +196,7 @@ final class ea extends sl {
 
     final static int b(boolean param0, int param1) {
         if (param0) {
-          ea.d((byte) 81);
+          LevelData.d((byte) 81);
         }
         int var2 = 0;
         if (0 > param1 ||
@@ -239,8 +239,8 @@ final class ea extends sl {
         field_u = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
         field_w = new int[8192];
         field_y = "To server list";
-        field_t = new ja();
-        field_s = new ja();
+        field_t = new IntrusiveDeque();
+        field_s = new IntrusiveDeque();
         field_p = "Back";
     }
 }

@@ -13,7 +13,7 @@ class lb extends rh {
     private int field_Q;
     private int field_J;
 
-    final boolean a(byte param0, char param1, al param2, int param3) {
+    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_21_1 = 0;
         int stackIn_22_2 = 0;
@@ -147,7 +147,7 @@ class lb extends rh {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ class lb extends rh {
         }
     }
 
-    final boolean a(al param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
         boolean stackIn_10_1 = false;
@@ -207,7 +207,7 @@ class lb extends rh {
           if (!(this.field_y instanceof dl)) {
             return false;
           }
-          var8_int = ((dl) ((Object) this.field_y)).a(param6, kf.field_b, 81, fg.field_a, param5, (al) (this));
+          var8_int = ((dl) ((Object) this.field_y)).a(param6, kf.field_b, 81, fg.field_a, param5, (UiWidget) (this));
           stackIn_6_1 = -19166;
           if (var8_int == -1) {
             stackIn_7_2 = 0;
@@ -239,7 +239,7 @@ class lb extends rh {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -251,15 +251,15 @@ class lb extends rh {
         }
         if (this.field_y != null &&
           param0 == 0) {
-          this.field_y.a(-24969, (al) (this), param2, this.field_B, param1);
+          this.field_y.a(-24969, (UiWidget) (this), param2, this.field_B, param1);
           if (this.field_y instanceof dl) {
             var8 = (dl) ((Object) this.field_y);
             if (this.field_Q != this.field_N) {
-              var8.b(param1, param2, this.field_Q, -84, this.field_N, (al) (this));
+              var8.b(param1, param2, this.field_Q, -84, this.field_N, (UiWidget) (this));
             }
             var6 = qg.a(false);
             if (500L > (var6 - this.field_I) % 1000L) {
-              var8.a(this.field_Q, (al) (this), param3 ^ -29312, param2, param1);
+              var8.a(this.field_Q, (UiWidget) (this), param3 ^ -29312, param2, param1);
             }
           }
         }
@@ -302,7 +302,7 @@ class lb extends rh {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ class lb extends rh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -431,9 +431,9 @@ class lb extends rh {
           return;
         }
         var3 = (dl) ((Object) this.field_y);
-        var4 = var3.a((byte) 110, (al) (this));
+        var4 = var3.a((byte) 110, (UiWidget) (this));
         var5 = var4.c(-1);
-        var6 = var3.a((al) (this), 121);
+        var6 = var3.a((UiWidget) (this), 121);
         var7 = var3.a((byte) 46) >> 1;
         if (-var7 + var6 > var5) {
           this.field_o = 0;
@@ -464,8 +464,8 @@ class lb extends rh {
           java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.p(-87))), (java.awt.datatransfer.ClipboardOwner) null);
         }
         if (param0 <= 115) {
-          al var3 = (al) null;
-          this.a(-33, -113, (byte) 101, (al) null);
+          UiWidget var3 = (UiWidget) null;
+          this.a(-33, -113, (byte) 101, (UiWidget) null);
         }
     }
 
@@ -544,11 +544,11 @@ class lb extends rh {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, byte param2, al param3) {
+    void a(int param0, int param1, byte param2, UiWidget param3) {
         int var6 = 0;
         dl var7 = null;
         RuntimeException stackIn_16_0 = null;
@@ -562,7 +562,7 @@ class lb extends rh {
           if (this.field_r == 1) {
             if (this.field_y instanceof dl) {
               var7 = (dl) ((Object) this.field_y);
-              var6 = var7.a(param0, kf.field_b, 119, fg.field_a, param1, (al) (this));
+              var6 = var7.a(param0, kf.field_b, 119, fg.field_a, param1, (UiWidget) (this));
               if (var6 != -1) {
                 if (this.field_K &&
                   this.field_L > var6 &&
@@ -585,7 +585,7 @@ class lb extends rh {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -610,7 +610,7 @@ class lb extends rh {
           this.field_P = true;
           this.field_I = qg.a(false);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

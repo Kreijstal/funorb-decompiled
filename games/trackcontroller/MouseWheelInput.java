@@ -262,7 +262,7 @@ abstract class MouseWheelInput {
 
     abstract int a(int param0);
 
-    final static int a(byte param0, oh param1, int param2, String param3, String[] param4) {
+    final static int a(byte param0, BitmapFont param1, int param2, String param3, String[] param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -354,7 +354,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

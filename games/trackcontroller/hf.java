@@ -6,14 +6,14 @@ import java.io.*;
 final class hf {
     private int field_c;
     static le field_f;
-    private il field_g;
+    private BufferedCacheFile field_g;
     private int field_e;
-    private il field_h;
+    private BufferedCacheFile field_h;
     static String field_a;
     static byte[][] field_b;
     static int field_d;
 
-    final static void a(oh param0, int param1, int param2, int param3, boolean param4, int param5, int param6, oh param7, int param8, int param9, na param10, int param11, int param12, int param13, na param14, int param15, int param16, int param17, na param18, int param19, int param20) {
+    final static void a(BitmapFont param0, int param1, int param2, int param3, boolean param4, int param5, int param6, BitmapFont param7, int param8, int param9, na param10, int param11, int param12, int param13, na param14, int param15, int param16, int param17, na param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -37,7 +37,7 @@ final class hf {
           he.a(param9, 0, param3, param6);
           if (param4) {
             var22 = (na) null;
-            hf.a((oh) null, 9, -29, 58, false, 115, 108, (oh) null, 122, -19, (na) null, -127, 114, -93, (na) null, -79, 80, -6, (na) null, 93, 114);
+            hf.a((BitmapFont) null, 9, -29, 58, false, 115, 108, (BitmapFont) null, 122, -19, (na) null, -127, 114, -93, (na) null, -79, 80, -6, (na) null, 93, 114);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -74,7 +74,7 @@ final class hf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class hf {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (ne.field_a.field_k >= param0) {
+          if (ne.field_a.position >= param0) {
             return true;
           }
           if (null == r.field_i) {
@@ -95,16 +95,16 @@ final class hf {
             }
             var2_int = r.field_i.b(0);
             if (var2_int > 0) {
-              if (var2_int > param0 - ne.field_a.field_k) {
-                var2_int = -ne.field_a.field_k + param0;
+              if (var2_int > param0 - ne.field_a.position) {
+                var2_int = -ne.field_a.position + param0;
               }
-              r.field_i.a(ne.field_a.field_j, 0, var2_int, ne.field_a.field_k);
+              r.field_i.a(ne.field_a.payload, 0, var2_int, ne.field_a.position);
               he.field_a = qg.a(false);
-              ne.field_a.field_k = ne.field_a.field_k + var2_int;
-              if (ne.field_a.field_k < param0) {
+              ne.field_a.position = ne.field_a.position + var2_int;
+              if (ne.field_a.position < param0) {
                 return false;
               }
-              ne.field_a.field_k = 0;
+              ne.field_a.position = 0;
               return true;
             }
             if (var2_int >= 0 &&
@@ -261,7 +261,7 @@ final class hf {
         field_b = (byte[][]) null;
         if (param0 != 6) {
           na var2 = (na) null;
-          hf.a((oh) null, 27, 98, -128, true, -24, 31, (oh) null, 112, -78, (na) null, -60, 114, 126, (na) null, -28, 7, 29, (na) null, -35, -108);
+          hf.a((BitmapFont) null, 27, 98, -128, true, -24, 31, (BitmapFont) null, 112, -78, (na) null, -60, 114, 126, (na) null, -28, 7, 29, (na) null, -35, -108);
         }
         field_a = null;
         field_f = null;
@@ -269,7 +269,7 @@ final class hf {
 
     private final boolean a(byte[] param0, int param1, int param2, boolean param3, boolean param4) {
         try {
-          il stackIn_60_0 = null;
+          BufferedCacheFile stackIn_60_0 = null;
           long stackIn_60_1 = 0L;
           boolean stackIn_61_2 = false;
           RuntimeException stackIn_75_0 = null;
@@ -402,7 +402,7 @@ final class hf {
                       stackIn_60_0 = this.field_h;
                       stackIn_60_1 = (long)(520 * var7_int);
                       stackIn_61_2 = !(param4);
-                      ((il) (Object) stackIn_60_0).a(stackIn_60_1, stackIn_61_2);
+                      ((BufferedCacheFile) (Object) stackIn_60_0).a(stackIn_60_1, stackIn_61_2);
                       this.field_h.a(10, -1, fh.field_a, 0);
                       var11 = -var8 + param2;
                       if (510 < var11) {
@@ -451,7 +451,7 @@ final class hf {
             } else {
               stackIn_76_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw LevelGrid.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -460,7 +460,7 @@ final class hf {
         }
     }
 
-    hf(int param0, il param1, il param2, int param3) {
+    hf(int param0, BufferedCacheFile param1, BufferedCacheFile param2, int param3) {
         this.field_g = null;
         this.field_e = 65000;
         this.field_h = null;
@@ -470,7 +470,7 @@ final class hf {
           this.field_h = param1;
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "hf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "hf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -513,7 +513,7 @@ final class hf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 

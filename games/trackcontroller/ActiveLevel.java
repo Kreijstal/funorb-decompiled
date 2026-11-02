@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri extends sl {
-    private qj field_ab;
+final class ActiveLevel extends LevelGrid {
+    private Sprite field_ab;
     private int field_W;
     private int field_U;
     static int field_V;
@@ -18,14 +18,14 @@ final class ri extends sl {
     int field_O;
     private String field_L;
     private boolean field_F;
-    private ja field_S;
+    private IntrusiveDeque field_S;
     private int field_Z;
     static int[] field_H;
     private int field_q;
     private int field_T;
     private int field_s;
     private int field_G;
-    private ea field_I;
+    private LevelData field_I;
     private int field_E;
     private int field_t;
     private int field_p;
@@ -36,7 +36,7 @@ final class ri extends sl {
     private String field_y;
     private int field_D;
     static int[] field_B;
-    private ja field_M;
+    private IntrusiveDeque field_M;
     private int field_N;
     private boolean field_z;
     private boolean field_K;
@@ -53,10 +53,10 @@ final class ri extends sl {
         th.field_l = th.field_l | var4;
         oe.field_e = oe.field_e | var4;
         this.field_s = this.field_s | var4;
-        ka.field_d.a((byte) -123, new cf(param1, param0, this.field_R, this.field_bb, this.field_cb, this.field_E));
+        ka.field_d.addLast((byte) -123, new cf(param1, param0, this.field_R, this.field_bb, this.field_cb, this.field_E));
     }
 
-    private final void a(ja param0, int param1, ja param2, me param3) {
+    private final void a(IntrusiveDeque param0, int param1, IntrusiveDeque param2, me param3) {
         int stackIn_9_0 = 0;
         int stackIn_12_1 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -72,10 +72,10 @@ final class ri extends sl {
         var6 = TrackController.field_F ? 1 : 0;
         try {
           if (!param3.e(param1 - 3045)) {
-            param3.a(-68);
-            this.field_d[param3.field_s][param3.field_r] = tc.a(this.field_d[param3.field_s][param3.field_r], ~this.b(16384, param3.field_o, param3.field_j));
+            param3.unlink(-68);
+            this.tileFlags[param3.field_s][param3.field_r] = RandomAccessCacheFile.a(this.tileFlags[param3.field_s][param3.field_r], ~this.b(16384, param3.field_o, param3.field_j));
             param3.f(param1 ^ 3098);
-            this.field_d[param3.field_s][param3.field_r] = param3.field_m;
+            this.tileFlags[param3.field_s][param3.field_r] = param3.field_m;
             if (param3.field_m == 38) {
               this.field_D = param3.field_s;
               this.field_Z = param3.field_r;
@@ -91,9 +91,9 @@ final class ri extends sl {
               }
             } else {
               if (this.field_o[param3.field_s][param3.field_r] == 1) {
-                param2.a((byte) -118, param3);
+                param2.addLast((byte) -118, param3);
               } else {
-                param0.a((byte) -123, param3);
+                param0.addLast((byte) -123, param3);
               }
             }
           }
@@ -123,7 +123,7 @@ final class ri extends sl {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class ri extends sl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ final class ri extends sl {
           if (!this.field_F) {
             this.field_p = 0;
           } else {
-            this.field_L = tc.field_e + (var5 << 1);
+            this.field_L = RandomAccessCacheFile.field_e + (var5 << 1);
             this.field_O = this.field_O + var5;
             this.field_R = this.field_R + var5;
             this.field_p = this.field_p + 1;
@@ -240,19 +240,19 @@ final class ri extends sl {
             vd.b(-1, 10, 23636);
           }
           this.field_A.a(-1, this.field_A.field_a, (byte) 100);
-          if (pc.field_i + 1 == this.field_I.field_x) {
-            pc.field_i = this.field_I.field_x;
+          if (ArchiveIndex.field_i + 1 == this.field_I.field_x) {
+            ArchiveIndex.field_i = this.field_I.field_x;
             var7_ref_dh = new dh(0, -1 + this.field_I.field_x, this.field_R, this.field_bb, this.field_cb, this.field_E);
             if (!jj.s(param0 - 205)) {
               ij.a(var7_ref_dh, 5, -124);
             } else {
-              cd.field_h.a((byte) -97, var7_ref_dh);
+              cd.field_h.addLast((byte) -97, var7_ref_dh);
             }
           }
-          if (pc.field_i != 5) {
-            if (10 != pc.field_i) {
-              if (pc.field_i != 20) {
-                if (pc.field_i == 30) {
+          if (ArchiveIndex.field_i != 5) {
+            if (10 != ArchiveIndex.field_i) {
+              if (ArchiveIndex.field_i != 20) {
+                if (ArchiveIndex.field_i == 30) {
                   this.a(252, 3, -5383);
                 }
               } else {
@@ -300,10 +300,10 @@ final class ri extends sl {
           }
           for (var7 = 0; var7 < 16; var7++) {
             for (var8 = 0; var8 < 16; var8++) {
-              this.field_d[var7][var8] = tc.a(this.field_d[var7][var8], -32641);
+              this.tileFlags[var7][var8] = RandomAccessCacheFile.a(this.tileFlags[var7][var8], -32641);
             }
           }
-          this.field_u = new ra(this.field_o, this.field_d, this.field_i, 16, 48, true);
+          this.field_u = new ra(this.field_o, this.tileFlags, this.field_i, 16, 48, true);
           this.field_u.field_h = this.field_h;
           return;
         }
@@ -313,7 +313,7 @@ final class ri extends sl {
     private final int b(int param0, byte param1, int param2) {
         int var4;
         if (param1 >= -29) {
-          ri.e(-34);
+          ActiveLevel.e(-34);
         }
         var4 = param0 + param2 * 2;
         if (var4 == -1) {
@@ -339,7 +339,7 @@ final class ri extends sl {
         }
     }
 
-    ri() {
+    ActiveLevel() {
         super(true, 16, 48);
         this.field_W = 0;
         this.field_U = -1;
@@ -543,44 +543,44 @@ final class ri extends sl {
         int var8Lifetime1;
         int var9Lifetime1;
         var13 = TrackController.field_F ? 1 : 0;
-        if (sl.field_j >= 2 &&
+        if (LevelGrid.field_j >= 2 &&
           ni.field_m[12]) {
           return true;
         }
         if (param0 < 79) {
           this.field_v = 41;
         }
-        if (this.field_S.a(true) > 1) {
+        if (this.field_S.size(true) > 1) {
           return false;
         }
-        if (this.field_S.a(true) == 1 &&
-          ((me) (this.field_S.b(2))).field_m != 38) {
+        if (this.field_S.size(true) == 1 &&
+          ((me) (this.field_S.first(2))).field_m != 38) {
           return false;
         }
-        if (this.b(this.field_d, (byte) -66) != this.field_w) {
+        if (this.b(this.tileFlags, (byte) -66) != this.field_w) {
           return false;
         }
         var2 = this.a(this.field_i, 0);
         var3 = this.a(this.field_i, (byte) -76);
-        var4 = -var2 + this.a(this.field_d, 0);
-        var5 = -var3 + this.a(this.field_d, (byte) -69);
+        var4 = -var2 + this.a(this.tileFlags, 0);
+        var5 = -var3 + this.a(this.tileFlags, (byte) -69);
         var6 = this.field_i.length;
         var7 = this.field_i[0].length;
         for (var8 = var2; var6 > var8; var8++) {
           for (var9 = var3; var7 > var9; var9++) {
-            if (~this.field_i[var8][var9] != ~this.a(this.field_d, var5 + var9, 21278, var4 + var8)) {
+            if (~this.field_i[var8][var9] != ~this.a(this.tileFlags, var5 + var9, 21278, var4 + var8)) {
               return false;
             }
           }
         }
         var8Lifetime1 = var4 + var2;
         var9Lifetime1 = 0;
-        var10 = this.field_d[0].length;
-        var11 = this.field_d.length - 1;
+        var10 = this.tileFlags[0].length;
+        var11 = this.tileFlags.length - 1;
         scanLoop1: while (true) {
           if (var11 >= 0) {
             for (var12 = 0; var10 > var12; var12++) {
-              if (this.a((byte) 121, this.field_d[var11][var12]) != 0) {
+              if (this.a((byte) 121, this.tileFlags[var11][var12]) != 0) {
                 break scanLoop1;
               }
             }
@@ -658,8 +658,8 @@ final class ri extends sl {
         boolean stackIn_235_0 = false;
         int var3;
         int var4_int;
-        ja var4;
-        ja var5;
+        IntrusiveDeque var4;
+        IntrusiveDeque var5;
         int var6;
         int var7_int;
         me var7;
@@ -709,7 +709,7 @@ final class ri extends sl {
           discarded$0 = this.a(true, -46, 126);
         }
         if (param0 &&
-          mg.field_a) {
+          GameScreen.field_a) {
           this.field_A.field_a = true;
         }
         if (param0 &&
@@ -741,7 +741,7 @@ final class ri extends sl {
             return;
           }
         }
-        if (1 == g.field_p &&
+        if (1 == SpriteState.field_p &&
           1 == this.field_J) {
           si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
           sc.field_g = -2;
@@ -758,12 +758,12 @@ final class ri extends sl {
         }
         this.field_R = this.field_R + this.field_cb * 3;
         this.field_E = var3Lifetime1;
-        var4 = new ja();
-        var5 = new ja();
-        var18 = (me) (this.field_S.b(2));
+        var4 = new IntrusiveDeque();
+        var5 = new IntrusiveDeque();
+        var18 = (me) (this.field_S.first(2));
         while (var18 != null) {
           this.a(var5, 3098, var4, var18);
-          var18 = (me) (this.field_S.a(10));
+          var18 = (me) (this.field_S.next(10));
         }
         if (this.field_b != 0) {
           this.field_b = this.field_b + 1;
@@ -806,7 +806,7 @@ final class ri extends sl {
               var9 >= 0 &&
               16 > var10 &&
               16 > var9 && (~var10 == ~this.field_D ||
-              ~this.field_Z == ~var9) && 38 != this.field_d[var10][var9]) {
+              ~this.field_Z == ~var9) && 38 != this.tileFlags[var10][var9]) {
               this.field_x = var9;
               this.field_G = var10;
             }
@@ -924,14 +924,14 @@ final class ri extends sl {
           if (this.a(false, var8, var7_intLifetime1)) {
             var10Lifetime4 = this.field_D + var7_intLifetime1;
             var11 = var8 + this.field_Z;
-            var12 = this.field_d[var10Lifetime4][var11] & 32640;
-            if (this.field_d[var10Lifetime4][var11] != 0 &&
+            var12 = this.tileFlags[var10Lifetime4][var11] & 32640;
+            if (this.tileFlags[var10Lifetime4][var11] != 0 &&
               var12 == 0) {
               si.$cfr$intArgs$a$e9dea5688aa5(-68, 6);
-              if (this.a(this.field_d, var11, 21278, var10Lifetime4 - 1) == 0 &&
-                0 == this.a(this.field_d, var11, 21278, var10Lifetime4 + 1) &&
-                this.a(this.field_d, var11 - 1, 21278, var10Lifetime4) == 0 &&
-                this.a(this.field_d, var11 + 1, 21278, var10Lifetime4) == 0) {
+              if (this.a(this.tileFlags, var11, 21278, var10Lifetime4 - 1) == 0 &&
+                0 == this.a(this.tileFlags, var11, 21278, var10Lifetime4 + 1) &&
+                this.a(this.tileFlags, var11 - 1, 21278, var10Lifetime4) == 0 &&
+                this.a(this.tileFlags, var11 + 1, 21278, var10Lifetime4) == 0) {
                 stackIn_172_0 = 0;
               } else {
                 stackIn_172_0 = 1;
@@ -939,7 +939,7 @@ final class ri extends sl {
               var13 = stackIn_172_0;
               if (var13 != 0) {
                 var14_int = 1;
-                var15 = (me) (var4.b(2));
+                var15 = (me) (var4.first(2));
                 while (true) {
                   if (var15 != null) {
                     stackIn_191_0 = var10Lifetime4;
@@ -948,10 +948,10 @@ final class ri extends sl {
                       ~var11 == ~var15.field_r) {
                       var14_int = 0;
                     }
-                    var15 = (me) (var4.a(10));
+                    var15 = (me) (var4.next(10));
                     continue;
                   }
-                  var15 = (me) (var5.b(2));
+                  var15 = (me) (var5.first(2));
                   while (var15 != null) {
                     stackIn_191_0Lifetime1 = var15.field_s;
                     stackIn_191_1Lifetime1 = var10Lifetime4;
@@ -959,7 +959,7 @@ final class ri extends sl {
                       var15.field_r == var11) {
                       var14_int = 0;
                     }
-                    var15 = (me) (var5.a(10));
+                    var15 = (me) (var5.next(10));
                   }
                   if (var14_int == 0) {
                     break;
@@ -976,20 +976,20 @@ final class ri extends sl {
                 this.field_U = var7_intLifetime1 + this.field_G;
               }
               this.field_K = true;
-              var14 = (me) (var4.b(2));
+              var14 = (me) (var4.first(2));
               while (var14 != null) {
                 stackIn_206_0 = var14.field_s;
                 stackIn_206_1 = var10Lifetime4;
                 if (stackIn_206_0 == stackIn_206_1 &&
                   ~var11 == ~var14.field_r) {
-                  var14.a(-78);
+                  var14.unlink(-78);
                 }
-                var14 = (me) (var4.a(10));
+                var14 = (me) (var4.next(10));
               }
             }
             stackIn_204_1 = var8;
             stackIn_204_2 = this.field_D;
-            if (this.field_d[var10Lifetime4][var11] != 0) {
+            if (this.tileFlags[var10Lifetime4][var11] != 0) {
               stackIn_205_0 = this;
               stackIn_205_3 = 1;
             } else {
@@ -1008,46 +1008,46 @@ final class ri extends sl {
             }
           }
         }
-        var7 = (me) (var4.b(2));
+        var7 = (me) (var4.first(2));
         while (var7 != null) {
           stackIn_235_0 = this.a(var7.field_o, var7.field_j, 99, var7.field_o + var7.field_r, var7.field_j + var7.field_s);
           if (stackIn_235_0) {
-            this.field_S.a((byte) -125, var7);
+            this.field_S.addLast((byte) -125, var7);
             this.a((byte) -91, var7);
             si.$cfr$intArgs$a$e9dea5688aa5(-68, 9);
           } else {
-            var5.a((byte) -113, var7);
+            var5.addLast((byte) -113, var7);
           }
-          var7 = (me) (var4.a(10));
+          var7 = (me) (var4.next(10));
         }
-        var7_ref = (oc) (this.field_M.b(2));
+        var7_ref = (oc) (this.field_M.first(2));
         while (var7_ref != null) {
           var8Lifetime1 = var7_ref.field_l >> 24 & 255;
           var9Lifetime1 = (var7_ref.field_l & 16760288) >> 16;
-          if (this.field_d[var8Lifetime1][var9Lifetime1] != 0 &&
-            (32640 & this.field_d[var8Lifetime1][var9Lifetime1]) == 0) {
+          if (this.tileFlags[var8Lifetime1][var9Lifetime1] != 0 &&
+            (32640 & this.tileFlags[var8Lifetime1][var9Lifetime1]) == 0) {
             var10Lifetime1 = (byte)(var7_ref.field_l >> 8);
             var11Lifetime1 = (byte)var7_ref.field_l;
             var12Lifetime1 = var8Lifetime1 + var10Lifetime1;
             var13Lifetime1 = var9Lifetime1 + var11Lifetime1;
-            if (this.a(var11Lifetime1, var10Lifetime1, 86, var13Lifetime1, var12Lifetime1) && (this.field_d[var8Lifetime1][var9Lifetime1] != 38 ||
+            if (this.a(var11Lifetime1, var10Lifetime1, 86, var13Lifetime1, var12Lifetime1) && (this.tileFlags[var8Lifetime1][var9Lifetime1] != 38 ||
               var6Lifetime1 == 0)) {
               this.a(var11Lifetime1, var8Lifetime1, 1, var10Lifetime1, var9Lifetime1, (byte) -90);
             }
           }
-          var7_ref = (oc) (this.field_M.a(10));
+          var7_ref = (oc) (this.field_M.next(10));
         }
-        var7Lifetime1 = (me) (var5.b(2));
+        var7Lifetime1 = (me) (var5.first(2));
         scanLoop1: while (true) {
           if (var7Lifetime1 != null) {
-            if (0 == (32640 & this.field_d[var7Lifetime1.field_s][var7Lifetime1.field_r]) && (this.a(this.field_d, var7Lifetime1.field_r, 21278, var7Lifetime1.field_s - 1) != 0 ||
-              this.a(this.field_d, var7Lifetime1.field_r, 21278, 1 + var7Lifetime1.field_s) != 0 ||
-              0 != this.a(this.field_d, var7Lifetime1.field_r - 1, 21278, var7Lifetime1.field_s) ||
-              this.a(this.field_d, 1 + var7Lifetime1.field_r, 21278, var7Lifetime1.field_s) != 0)) {
+            if (0 == (32640 & this.tileFlags[var7Lifetime1.field_s][var7Lifetime1.field_r]) && (this.a(this.tileFlags, var7Lifetime1.field_r, 21278, var7Lifetime1.field_s - 1) != 0 ||
+              this.a(this.tileFlags, var7Lifetime1.field_r, 21278, 1 + var7Lifetime1.field_s) != 0 ||
+              0 != this.a(this.tileFlags, var7Lifetime1.field_r - 1, 21278, var7Lifetime1.field_s) ||
+              this.a(this.tileFlags, 1 + var7Lifetime1.field_r, 21278, var7Lifetime1.field_s) != 0)) {
               vd.b(0, 7, 23636);
               break scanLoop1;
             }
-            var7Lifetime1 = (me) (var5.a(10));
+            var7Lifetime1 = (me) (var5.next(10));
             continue;
           }
           break;
@@ -1076,7 +1076,7 @@ final class ri extends sl {
         if (this.field_I.field_x == 3) {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_D == -2) {
-            var3 = (me) (this.field_S.b(2));
+            var3 = (me) (this.field_S.first(2));
             while (var3 != null) {
               if (38 == ((me) (var3)).field_m) {
                 if (((me) (var3)).field_r != 12) {
@@ -1086,7 +1086,7 @@ final class ri extends sl {
                   return;
                 }
               }
-              var3 = (me) (this.field_S.a(10));
+              var3 = (me) (this.field_S.next(10));
             }
           } else {
             if ((this.field_D <= 11) &&
@@ -1103,9 +1103,9 @@ final class ri extends sl {
         }
         var3Lifetime1 = null;
         var4 = 0;
-        var5 = (me) (this.field_S.b(2));
+        var5 = (me) (this.field_S.first(2));
         if (param1 != -28786) {
-          this.field_ab = (qj) null;
+          this.field_ab = (Sprite) null;
         }
         while (var5 != null) {
           if (var5.field_m == 13 &&
@@ -1113,19 +1113,19 @@ final class ri extends sl {
             7 == var5.field_r) {
             var4 = 1;
           }
-          var5 = (me) (this.field_S.a(10));
+          var5 = (me) (this.field_S.next(10));
         }
-        if (this.field_d[11][8] != 13 &&
-          13 != this.field_d[9][8] &&
-          13 != this.field_d[7][8] &&
-          this.field_d[11][7] != 13 &&
-          this.field_d[4][7] != 13 &&
+        if (this.tileFlags[11][8] != 13 &&
+          13 != this.tileFlags[9][8] &&
+          13 != this.tileFlags[7][8] &&
+          this.tileFlags[11][7] != 13 &&
+          this.tileFlags[4][7] != 13 &&
           var4 == 0) {
           if (!this.field_z) {
             if (!param0) {
               var3Lifetime1 = ej.field_b;
             }
-          } else if (this.field_d[9][9] == 0) {
+          } else if (this.tileFlags[9][9] == 0) {
             if (param0 &&
               this.field_h % 30 < 15) {
               ii.field_r[50].e(182 + this.field_a, this.field_f + 234);
@@ -1133,7 +1133,7 @@ final class ri extends sl {
             if (!param0) {
               var3Lifetime1 = va.field_a;
             }
-          } else if (0 == this.field_d[7][9]) {
+          } else if (0 == this.tileFlags[7][9]) {
             if (param0 &&
               15 > this.field_h % 30) {
               ii.field_r[50].e(this.field_a + 182, 182 + this.field_f);
@@ -1141,8 +1141,8 @@ final class ri extends sl {
             if (!param0) {
               var3Lifetime1 = jk.field_b;
             }
-          } else if ((this.field_d[5][8] == 0 ||
-            this.field_d[4][8] == 0) && !param0) {
+          } else if ((this.tileFlags[5][8] == 0 ||
+            this.tileFlags[4][8] == 0) && !param0) {
             var3Lifetime1 = sk.field_g;
           }
         } else {
@@ -1179,7 +1179,7 @@ final class ri extends sl {
           if (param2 < 79) {
             return true;
           }
-          stackIn_16_0 = (0 == this.field_d[param4][param3]) || ((this.field_d[param4][param3] & 32640) == this.b(16384, param0, param1));
+          stackIn_16_0 = (0 == this.tileFlags[param4][param3]) || ((this.tileFlags[param4][param3] & 32640) == this.b(16384, param0, param1));
           return stackIn_16_0;
         }
         return false;
@@ -1192,7 +1192,7 @@ final class ri extends sl {
         return 2 == this.field_J ? true : false;
     }
 
-    final void a(ea param0, int param1) {
+    final void a(LevelData param0, int param1) {
         if (null == BufferedSocket.field_c) {
           BufferedSocket.field_c = new int[][]{new int[]{3, 2, 1, 4, 1, 2, 1, 0}, new int[]{1, 2, 3, 4, 1, 2, 0, 0}, new int[]{5, 4, 1, 4, 1, 0, 1, 0}, new int[]{1, 4, 3, 4, 0, 0, 0, 0}, new int[]{2, 2, 1, -4, 1, 2, 1, 0}, new int[]{1, 2, -4, -4, 2, 2, 0, 0}, new int[]{1, -4, -3, -4, -2, -2, 1, 0}, new int[]{-6, -2, -1, -4, -1, -2, -1, 0}};
         }
@@ -1215,7 +1215,7 @@ final class ri extends sl {
           this.field_s = 0;
           this.field_q = param0.field_v << 1;
           this.field_G = -1;
-          this.field_S = new ja();
+          this.field_S = new IntrusiveDeque();
           this.field_M = this.i(123);
           this.field_u = null;
           this.field_t = -1000;
@@ -1225,7 +1225,7 @@ final class ri extends sl {
           this.field_z = false;
           fe.a(true, pf.field_P[1], 256);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ri.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ri.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1269,7 +1269,7 @@ final class ri extends sl {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1288,11 +1288,11 @@ final class ri extends sl {
         bk.field_E.a(this.field_I.field_q, 622, 118, 5, -1);
     }
 
-    private final ja i(int param0) {
+    private final IntrusiveDeque i(int param0) {
         int discarded$1 = 0;
         int var3 = 0;
         int var4 = 0;
-        ja var2;
+        IntrusiveDeque var2;
         int var5;
         int var6;
         int var7;
@@ -1301,7 +1301,7 @@ final class ri extends sl {
         if (param0 < 102) {
           discarded$1 = this.a((int[][]) null, -88, -65, 122);
         }
-        var2 = new ja();
+        var2 = new IntrusiveDeque();
         for (var3 = 0; var3 < 16; var3++) {
           for (var4 = 0; var4 < 16; var4++) {
             var5 = 0;
@@ -1324,7 +1324,7 @@ final class ri extends sl {
             }
             if (0 != var5 ||
               0 != var6) {
-              var2.a((byte) -98, new oc(var3 << 24 | var4 << 16 | var5 << 8 & 65280 | 255 & var6));
+              var2.addLast((byte) -98, new oc(var3 << 24 | var4 << 16 | var5 << 8 & 65280 | 255 & var6));
             }
           }
         }
@@ -1353,7 +1353,7 @@ final class ri extends sl {
             return true;
           }
           if (param0 != 56) {
-            ri.a(106);
+            ActiveLevel.a(106);
           }
           if (MouseInputHandler.a(param2, param1, (byte) 96)) {
             return false;
@@ -1381,7 +1381,7 @@ final class ri extends sl {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -1401,7 +1401,7 @@ final class ri extends sl {
         int var3Lifetime2;
         var7 = TrackController.field_F ? 1 : 0;
         cl.a(ha.field_m, 6, 436, 38, 436, 4);
-        al.field_z[0].e(41, 1);
+        UiWidget.field_z[0].e(41, 1);
         if (null == this.field_u) {
           this.b(true, param0 - 53447);
           stackIn_7_1 = !(this.field_z);
@@ -1413,7 +1413,7 @@ final class ri extends sl {
             if (26 + ba.field_b.field_G > var3) {
               if (var2_int < 156) {
                 if (var3 >= 0) {
-                  al.field_t.e(0, 0);
+                  UiWidget.field_t.e(0, 0);
                 } else {
                   ai.field_a.e(0, 0);
                 }
@@ -1460,9 +1460,9 @@ final class ri extends sl {
         }
         this.a(false);
         if (param0 != 24661) {
-          ri.a(11);
+          ActiveLevel.a(11);
         }
-        var2 = (me) (this.field_S.b(2));
+        var2 = (me) (this.field_S.first(2));
         while (var2 != null) {
           var3Lifetime1 = var2.field_o * var2.field_l + 26 * var2.field_r + 16;
           var4 = var2.field_j * var2.field_l + (var2.field_s * 26 + 48);
@@ -1483,7 +1483,7 @@ final class ri extends sl {
               ue.a(var3Lifetime1, var2.field_m, (byte) 91, var4);
             }
           }
-          var2 = (me) (this.field_S.a(10));
+          var2 = (me) (this.field_S.next(10));
         }
         if (this.field_J == 1 &&
           this.field_G != -1) {
@@ -1546,12 +1546,12 @@ final class ri extends sl {
 
     private final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
         int var7 = 32 % ((-43 - param5) / 41);
-        if (this.field_d[param1][param4] == 38) {
+        if (this.tileFlags[param1][param4] == 38) {
           this.field_D = -2;
           this.field_Z = -2;
         }
-        me var8 = new me(this.field_d[param1][param4], param1, param4, param3, param0, param2);
-        this.field_S.a((byte) -122, var8);
+        me var8 = new me(this.tileFlags[param1][param4], param1, param4, param3, param0, param2);
+        this.field_S.addLast((byte) -122, var8);
         this.a((byte) -32, var8);
     }
 
@@ -1602,7 +1602,7 @@ final class ri extends sl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1667,7 +1667,7 @@ final class ri extends sl {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1695,12 +1695,12 @@ final class ri extends sl {
           if (this.field_o[var4][var5] == 2) {
             return false;
           }
-          var6 = 32640 & this.field_d[var4][var5];
+          var6 = 32640 & this.tileFlags[var4][var5];
           if (var6 != 0 &&
             this.b(16384, param1, param2) != var6) {
             return false;
           }
-          if (this.field_d[var4][var5] != 0 &&
+          if (this.tileFlags[var4][var5] != 0 &&
             var6 == 0 &&
             !this.a(param1, param2, 103, param1 + var5, param2 + var4)) {
             vd.b(0, 12, 23636);
@@ -1713,13 +1713,13 @@ final class ri extends sl {
 
     private final void a(byte param0, me param1) {
         try {
-          this.field_d[param1.field_s][param1.field_r] = tc.a(ok.a(this.field_d[param1.field_s][param1.field_r], this.b(16384, param1.field_o, param1.field_j)), 32640);
+          this.tileFlags[param1.field_s][param1.field_r] = RandomAccessCacheFile.a(ok.a(this.tileFlags[param1.field_s][param1.field_r], this.b(16384, param1.field_o, param1.field_j)), 32640);
           if (param0 > 0) {
             this.field_r = -66;
           }
-          this.field_d[param1.field_j + param1.field_s][param1.field_o + param1.field_r] = tc.a(32640, ok.a(this.field_d[param1.field_s + param1.field_j][param1.field_r + param1.field_o], this.b(param1.field_j, (byte) -86, param1.field_o)));
+          this.tileFlags[param1.field_j + param1.field_s][param1.field_o + param1.field_r] = RandomAccessCacheFile.a(32640, ok.a(this.tileFlags[param1.field_s + param1.field_j][param1.field_r + param1.field_o], this.b(param1.field_j, (byte) -86, param1.field_o)));
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ri.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ri.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1732,7 +1732,7 @@ final class ri extends sl {
         }
         if (!jj.s(51) &&
           rk.field_bb == null) {
-          g.field_w = null;
+          SpriteState.field_w = null;
           rk.field_bb = sd.a(this.field_cb, 3, 65525, 10, true, this.field_R, this.field_bb, new int[]{this.field_O}, this.field_E);
           return;
         }
@@ -1770,7 +1770,7 @@ final class ri extends sl {
         int var8;
         int var3Lifetime1;
         var8 = TrackController.field_F ? 1 : 0;
-        if (mg.field_a) {
+        if (GameScreen.field_a) {
           vg.field_p = false;
         }
         ak.field_b = -1;
@@ -1787,7 +1787,7 @@ final class ri extends sl {
                     this.field_o[var3][var6] <= 6) {
                     ak.field_b = 2;
                   } else {
-                    var7 = -65 & this.field_d[var3][var6];
+                    var7 = -65 & this.tileFlags[var3][var6];
                     if (var7 >= 7 &&
                       var7 < 38) {
                       ak.field_b = 3;
@@ -1826,13 +1826,13 @@ final class ri extends sl {
               eb.a(68, fg.field_a, 10, 312, 386, kf.field_b, 78)) {
               var3Lifetime1 = 1;
               if (this.field_D == -2) {
-                var4 = (me) (this.field_S.b(2));
+                var4 = (me) (this.field_S.first(2));
                 while (var4 != null) {
                   if (var4.field_m == 38 && (var4.field_r != 12 ||
                     var4.field_o != 0)) {
                     var3Lifetime1 = 0;
                   }
-                  var4 = (me) (this.field_S.a(10));
+                  var4 = (me) (this.field_S.next(10));
                 }
               } else if (this.field_D > 11 ||
                 this.field_Z != 12) {

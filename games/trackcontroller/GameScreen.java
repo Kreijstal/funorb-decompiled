@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg {
+final class GameScreen {
     static int field_f;
     static vl field_b;
     private int field_c;
@@ -17,7 +17,7 @@ final class mg {
         int var4;
         int var5;
         int var6;
-        ea var7;
+        LevelData var7;
         int var8;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -80,16 +80,16 @@ final class mg {
             var5 = 2;
           }
           if (uk.field_a != 0) {
-            tc.field_b = var5;
+            RandomAccessCacheFile.field_b = var5;
           }
           if (!this.field_e.e(0) && (this.field_e.field_a ||
             field_a)) {
             if (0 <= var4) {
-              tc.field_b = var4;
+              RandomAccessCacheFile.field_b = var4;
               this.field_e.field_a = true;
             } else {
               if (this.field_e.field_a) {
-                tc.field_b = -1;
+                RandomAccessCacheFile.field_b = -1;
               }
             }
           }
@@ -105,11 +105,11 @@ final class mg {
           }
           if (this.field_e.b(false)) {
             var6Lifetime1 = qh.field_b.field_x;
-            if (tc.field_b == 0 &&
+            if (RandomAccessCacheFile.field_b == 0 &&
               qh.field_b.field_x > 1) {
               qh.field_b = gj.field_f[-2 + qh.field_b.field_x];
             } else {
-              if (tc.field_b == 1 &&
+              if (RandomAccessCacheFile.field_b == 1 &&
                 gj.field_f.length > qh.field_b.field_x) {
                 qh.field_b = gj.field_f[qh.field_b.field_x];
               }
@@ -176,11 +176,11 @@ final class mg {
               var6 = ib.a(true, param1 ^ 10, sa.field_I[var3_int]);
               var7 = -(var6 >> 1) + sf.field_F;
               var4 = var4 + na.field_e;
-              if (eb.a(-mb.field_c + var7, param0, param1 ^ 10, (mb.field_c << 1) + var6, var4, param2, pc.field_m + (of.field_f << 1))) {
+              if (eb.a(-mb.field_c + var7, param0, param1 ^ 10, (mb.field_c << 1) + var6, var4, param2, ArchiveIndex.field_m + (of.field_f << 1))) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
-              var4 = var4 + (pc.field_m + ((of.field_f << 1) + na.field_e));
+              var4 = var4 + (ArchiveIndex.field_m + ((of.field_f << 1) + na.field_e));
             }
             var3_int++;
           }
@@ -189,11 +189,11 @@ final class mg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var3), "mg.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var3), "mg.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final ea a(int param0, int param1, int param2) {
+    private final LevelData a(int param0, int param1, int param2) {
         int var4 = 0;
         param0 -= 359;
         param2 = param2 - (bk.field_E.field_u + 62);
@@ -210,7 +210,7 @@ final class mg {
         if (param1 == 2600) {
           return null;
         }
-        return (ea) null;
+        return (LevelData) null;
     }
 
     private final void a(int param0, boolean param1, boolean param2) {
@@ -222,19 +222,19 @@ final class mg {
         int var3;
         int var5;
         int var6_int;
-        qj var6;
+        Sprite var6;
         int var7;
         int var8;
         int var9;
-        oh var10;
-        oh var11;
+        BitmapFont var10;
+        BitmapFont var11;
         var9 = TrackController.field_F ? 1 : 0;
         if (param0 != -114) {
           this.field_d = 37;
         }
         var10 = bk.field_E;
         var11 = var10;
-        al.field_z[2].e(-al.field_z[2].field_t + 640 >> 1, 1);
+        UiWidget.field_z[2].e(-UiWidget.field_z[2].field_t + 640 >> 1, 1);
         var3 = 74;
         if (rd.field_b == 0) {
           var3 += 20;
@@ -243,13 +243,13 @@ final class mg {
           var11.a(gh.field_e, 34, -var11.field_q + var3, 572, 1000, 0, -1, 3, 0, 26);
         } else {
           if (1 == rd.field_b) {
-            for (var4 = 0; ja.field_a.length > var4; var4++) {
-              var5 = ja.field_a[var4];
+            for (var4 = 0; IntrusiveDeque.field_a.length > var4; var4++) {
+              var5 = IntrusiveDeque.field_a[var4];
               if (3 == var5) {
-                var6_int = ii.field_o / 5 % ri.field_H.length;
-                var5 = ri.field_H[var6_int];
+                var6_int = ii.field_o / 5 % ActiveLevel.field_H.length;
+                var5 = ActiveLevel.field_H[var6_int];
               }
-              ll.f(46, -1 + var3, 28, 28, 16763904);
+              SoftwareRasterizer.f(46, -1 + var3, 28, 28, 16763904);
               var6 = ii.field_r[var5];
               var6.h(47, var3);
               var7 = 86;
@@ -301,7 +301,7 @@ final class mg {
           } else {
             stackIn_5_4 = 6048056;
           }
-          ll.c(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4);
+          SoftwareRasterizer.c(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4);
           stackIn_7_0 = 385;
           stackIn_7_1 = 26 * (var2_int + 1) + 48;
           stackIn_7_2 = 104;
@@ -311,23 +311,23 @@ final class mg {
           } else {
             stackIn_8_4 = 6048056;
           }
-          ll.c(stackIn_7_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4);
+          SoftwareRasterizer.c(stackIn_7_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4);
         }
-        ll.f(152, 75, 206, 284, 3352864);
-        ll.f(386, 75, 102, 284, 3352864);
+        SoftwareRasterizer.f(152, 75, 206, 284, 3352864);
+        SoftwareRasterizer.f(386, 75, 102, 284, 3352864);
         if (jj.s(23)) {
           var2 = nd.field_I;
           bk.field_E.b(hh.field_b, 320, 406, 0, -1);
         } else {
-          if (null == g.field_w) {
-            g.field_w = hj.a(3, 10, 1, 10, (byte) -102);
+          if (null == SpriteState.field_w) {
+            SpriteState.field_w = hj.a(3, 10, 1, 10, (byte) -102);
           }
-          if (g.field_w.field_o) {
-            if (g.field_w.field_m != null) {
+          if (SpriteState.field_w.field_o) {
+            if (SpriteState.field_w.field_m != null) {
               var2 = nd.field_I;
-              var3_ref_String__ = g.field_w.field_m[di.field_i];
+              var3_ref_String__ = SpriteState.field_w.field_m[di.field_i];
               var4 = -1;
-              var17 = g.field_w.field_n[di.field_i];
+              var17 = SpriteState.field_w.field_n[di.field_i];
               var6 = 94;
               for (var7 = 0; var7 <= 10; var7++) {
                 var8 = 0;
@@ -342,7 +342,7 @@ final class mg {
                     if (var4 < 0 &&
                       var3_ref_String__[var7] == ue.field_a &&
                       null != rk.field_bb &&
-                      ~rk.field_bb.field_j == ~g.field_w.field_q[di.field_i][var7] &&
+                      ~rk.field_bb.field_j == ~SpriteState.field_w.field_q[di.field_i][var7] &&
                       ua.field_L != null &&
                       var17[var7] == ua.field_L.field_O) {
                       var4 = var7;
@@ -405,13 +405,13 @@ final class mg {
         int stackIn_20_0 = 0;
         int stackIn_42_0 = 0;
         int stackIn_45_0 = 0;
-        qj[] stackIn_52_0 = null;
+        Sprite[] stackIn_52_0 = null;
         int stackIn_53_1 = 0;
         int var6;
         String var7;
         int var8;
         int var9;
-        qj var10;
+        Sprite var10;
         int var10_int;
         int var11;
         int var12;
@@ -419,7 +419,7 @@ final class mg {
         int var9Lifetime1;
         var13 = TrackController.field_F ? 1 : 0;
         var6 = this.b(66, param3);
-        var7 = ja.field_c[var6];
+        var7 = IntrusiveDeque.field_c[var6];
         cl.a(DualLinkNode.field_l, param1, 26, param2, 156, param4 ^ 5);
         if (var6 != 2 &&
           var6 != 3) {
@@ -483,7 +483,7 @@ final class mg {
             stackIn_42_0 = (param0) ? 8110658 : 15252224;
           }
           var10_int = stackIn_42_0;
-          ll.c(param1 + 78, param2 + 13, 64, 2, var10_int);
+          SoftwareRasterizer.c(param1 + 78, param2 + 13, 64, 2, var10_int);
           if (var6 == 2) {
             stackIn_45_0 = qd.field_d;
           } else {
@@ -493,9 +493,9 @@ final class mg {
           if (var11 < 0) {
             var11 = 0;
           }
-          ll.c(param1 + (78 - (-var11 + 1)), -6 + param2 + 13, 3, 14, 8110658);
-          ll.g(var11 + (78 + param1) - 2, 13 + param2, 2, 16580608);
-          ll.g(2 + (param1 + 78 + var11), param2 + 13, 2, 16580608);
+          SoftwareRasterizer.c(param1 + (78 - (-var11 + 1)), -6 + param2 + 13, 3, 14, 8110658);
+          SoftwareRasterizer.g(var11 + (78 + param1) - 2, 13 + param2, 2, 16580608);
+          SoftwareRasterizer.g(2 + (param1 + 78 + var11), param2 + 13, 2, 16580608);
         }
     }
 
@@ -517,7 +517,7 @@ final class mg {
         if (param1 != 1) {
           return true;
         }
-        stackIn_5_0 = (qh.field_b != null) && ((pc.field_i + 1) >= qh.field_b.field_x);
+        stackIn_5_0 = (qh.field_b != null) && ((ArchiveIndex.field_i + 1) >= qh.field_b.field_x);
         return stackIn_5_0;
     }
 
@@ -592,7 +592,7 @@ final class mg {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -8381) {
-          mg.a(-48);
+          GameScreen.a(-48);
         }
     }
 
@@ -633,7 +633,7 @@ final class mg {
         int var5;
         int var4Lifetime1;
         var5 = TrackController.field_F ? 1 : 0;
-        if (2 <= sl.field_j &&
+        if (2 <= LevelGrid.field_j &&
           1 == kg.field_d) {
           stackIn_6_0 = !(nf.field_f);
           nf.field_f = stackIn_6_0;
@@ -712,34 +712,34 @@ final class mg {
                   } else {
                     var3 = qh.field_b.field_x;
                     if (kg.field_d == 98) {
-                      tc.field_b = 2;
+                      RandomAccessCacheFile.field_b = 2;
                       if (qh.field_b.field_x > 1) {
                         qh.field_b = gj.field_f[-2 + qh.field_b.field_x];
                       }
                       this.field_e.field_a = false;
                     }
                     if (99 == kg.field_d) {
-                      tc.field_b = 2;
+                      RandomAccessCacheFile.field_b = 2;
                       if (gj.field_f.length > qh.field_b.field_x) {
                         qh.field_b = gj.field_f[qh.field_b.field_x];
                       }
                       this.field_e.field_a = false;
                     }
-                    if (tc.field_b == 0 && (kg.field_d == 83 ||
+                    if (RandomAccessCacheFile.field_b == 0 && (kg.field_d == 83 ||
                       kg.field_d == 84)) {
                       if (qh.field_b.field_x > 1) {
                         qh.field_b = gj.field_f[-2 + qh.field_b.field_x];
                       }
                       this.field_e.field_a = false;
                     }
-                    if (tc.field_b == 1 && (kg.field_d == 83 ||
+                    if (RandomAccessCacheFile.field_b == 1 && (kg.field_d == 83 ||
                       kg.field_d == 84)) {
                       if (qh.field_b.field_x < gj.field_f.length) {
                         qh.field_b = gj.field_f[qh.field_b.field_x];
                       }
                       this.field_e.field_a = false;
                     }
-                    if (2 != tc.field_b) {
+                    if (2 != RandomAccessCacheFile.field_b) {
                       var3 = var3 - qh.field_b.field_x;
                       mb.field_b = mb.field_b - 26 * var3;
                     } else {
@@ -768,11 +768,11 @@ final class mg {
                         this.field_e.field_a = false;
                       }
                       if (84 == kg.field_d &&
-                        1 + pc.field_i >= qh.field_b.field_x) {
+                        1 + ArchiveIndex.field_i >= qh.field_b.field_x) {
                         si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-                        g.field_w = null;
+                        SpriteState.field_w = null;
                         rk.field_bb = null;
-                        ua.field_L = new ri();
+                        ua.field_L = new ActiveLevel();
                         sc.field_g = -1;
                         oe.field_e = 0;
                       }
@@ -781,11 +781,11 @@ final class mg {
                     }
                   }
                 } else {
-                  if (2 != tc.field_b) {
-                    tc.field_b = 2;
+                  if (2 != RandomAccessCacheFile.field_b) {
+                    RandomAccessCacheFile.field_b = 2;
                     this.field_e.field_e = -1;
                   } else {
-                    tc.field_b = -1;
+                    RandomAccessCacheFile.field_b = -1;
                     this.field_e.field_e = 0;
                   }
                   this.field_e.field_a = false;
@@ -794,10 +794,10 @@ final class mg {
               }
               else {
                 if (this.field_e.field_e < 0) {
-                  tc.field_b = -1;
+                  RandomAccessCacheFile.field_b = -1;
                   this.field_e.field_e = 0;
                 } else {
-                  tc.field_b = 2;
+                  RandomAccessCacheFile.field_b = 2;
                   this.field_e.field_e = -1;
                 }
                 this.field_e.field_a = false;
@@ -868,7 +868,7 @@ final class mg {
                 fg.field_a >= var4 &&
                 fg.field_a <= (32 + var4)) {
                 var7 = var8;
-                ll.d(-2 + var3, var4 - 2, 36, 36, 6, 16711680);
+                SoftwareRasterizer.d(-2 + var3, var4 - 2, 36, 36, 6, 16711680);
               }
               if (-1 != this.field_h &&
                 var3 <= this.field_h &&
@@ -883,7 +883,7 @@ final class mg {
                 }
               }
               if (var8 == this.field_d) {
-                ll.d(var3 - 2, -2 + var4, 36, 36, 6, 15252224);
+                SoftwareRasterizer.d(var3 - 2, -2 + var4, 36, 36, 6, 15252224);
               }
               incrementValue$0 = var6Lifetime1;
               var6Lifetime1++;
@@ -931,7 +931,7 @@ final class mg {
           }
           return;
         }
-        bk.field_E.b(id.field_a, 320, 302, 0, -1);
+        bk.field_E.b(NodeHashTable.field_a, 320, 302, 0, -1);
         if (jj.s(39)) {
           bk.field_E.b(hh.field_b, 320, 354, 0, -1);
         }
@@ -1042,15 +1042,15 @@ final class mg {
         boolean stackIn_33_1 = false;
         int stackIn_73_0 = 0;
         int stackIn_76_0 = 0;
-        oh stackIn_99_0 = null;
+        BitmapFont stackIn_99_0 = null;
         boolean stackIn_100_1 = false;
         boolean stackIn_103_2 = false;
         boolean stackIn_106_3 = false;
-        oh stackIn_108_0 = null;
+        BitmapFont stackIn_108_0 = null;
         boolean stackIn_109_1 = false;
         boolean stackIn_112_2 = false;
         boolean stackIn_115_3 = false;
-        oh stackIn_117_0 = null;
+        BitmapFont stackIn_117_0 = null;
         boolean stackIn_118_1 = false;
         int stackIn_120_2 = 0;
         boolean stackIn_121_3 = false;
@@ -1065,8 +1065,8 @@ final class mg {
         int var6;
         int var7;
         int var8;
-        ea[] var9;
-        ea var11;
+        LevelData[] var9;
+        LevelData var11;
         String var12;
         int var13;
         int var14;
@@ -1090,9 +1090,9 @@ final class mg {
                 cl.a(ha.field_m, 11, 436, 38, 618, 4);
                 if (this.field_c == 10 ||
                   this.field_c == 11) {
-                  ll.e(19, 384, 621, 466);
+                  SoftwareRasterizer.e(19, 384, 621, 466);
                   cl.a(nd.field_L, 11, 436, 38, 618, param0 ^ -5);
-                  ll.d();
+                  SoftwareRasterizer.d();
                 }
               }
             } else {
@@ -1150,7 +1150,7 @@ final class mg {
                 if (this.field_c != 8 &&
                   9 != this.field_c) {
                   if (this.field_c == 16) {
-                    al.field_z[5].e(640 - al.field_z[5].field_t >> 1, 1);
+                    UiWidget.field_z[5].e(640 - UiWidget.field_z[5].field_t >> 1, 1);
                     this.a(true, param0 + 17461);
                     break scanLoop1;
                   }
@@ -1168,11 +1168,11 @@ final class mg {
                         bk.field_E.b(ui.field_n, 320, var4, 5, -1);
                         break scanLoop1;
                       }
-                      al.field_z[3].e(-al.field_z[3].field_t + 640 >> 1, 1);
-                      if (qh.field_b.field_x > (1 + pc.field_i)) {
+                      UiWidget.field_z[3].e(-UiWidget.field_z[3].field_t + 640 >> 1, 1);
+                      if (qh.field_b.field_x > (1 + ArchiveIndex.field_i)) {
                         cl.a(nd.field_L, 90, 254, 57, 176, 4);
                         if (!jj.s(param0 + 54)) {
-                          var4_ref_String = kk.field_a;
+                          var4_ref_String = Archive.field_a;
                           var12 = var4_ref_String;
                           var12Lifetime2 = var4_ref_String;
                         } else {
@@ -1184,23 +1184,23 @@ final class mg {
                         fd.field_d.e(-367, -162);
                       }
                       cl.a(nd.field_L, 566, 46, 57, 46, param0 + 5);
-                      stackIn_73_0 = (tc.field_b != 0) ? 15252224 : 8110658;
+                      stackIn_73_0 = (RandomAccessCacheFile.field_b != 0) ? 15252224 : 8110658;
                       var4 = stackIn_73_0;
                       ii.field_r[52].c(576, 67, var4);
                       cl.a(nd.field_L, 566, 46, 421, 46, 4);
-                      stackIn_76_0 = (tc.field_b != 1) ? 15252224 : 8110658;
+                      stackIn_76_0 = (RandomAccessCacheFile.field_b != 1) ? 15252224 : 8110658;
                       var4 = stackIn_76_0;
                       ii.field_r[53].c(576, 431, var4);
                       var5 = this.a(kf.field_b, 2600, fg.field_a);
                       var6 = 269 - (-(26 * (1 - qh.field_b.field_x)) - mb.field_b);
                       var7 = 359;
                       var8 = 62 + bk.field_E.field_u;
-                      ll.e(var7, var8, var7 + 182 + 10, var8 + 390);
+                      SoftwareRasterizer.e(var7, var8, var7 + 182 + 10, var8 + 390);
                       var9 = gj.field_f;
                       for (var10 = 0; var9.length > var10; var10++) {
                         var11 = var9[var10];
                         var12Lifetime1 = var11.field_q;
-                        if (var11.field_x > (pc.field_i + 1)) {
+                        if (var11.field_x > (ArchiveIndex.field_i + 1)) {
                           var12Lifetime1 = qg.field_a;
                         }
                         var13 = 0;
@@ -1209,7 +1209,7 @@ final class mg {
                         }
                         if (!this.field_e.field_a &&
                           this.field_e.field_e == -1 &&
-                          tc.field_b == 2 &&
+                          RandomAccessCacheFile.field_b == 2 &&
                           var11 == qh.field_b) {
                           var13 = 1;
                         }
@@ -1221,62 +1221,62 @@ final class mg {
                         bk.field_E.a(var11.field_x + ". ", 390, var6, var13, -1);
                         var6 += 26;
                       }
-                      ll.d();
+                      SoftwareRasterizer.d();
                       break scanLoop1;
                     }
                     this.c((byte) -114);
                     break scanLoop1;
                   }
-                  al.field_z[0].e(-al.field_z[0].field_t + 640 >> 1, 1);
+                  UiWidget.field_z[0].e(-UiWidget.field_z[0].field_t + 640 >> 1, 1);
                   bk.field_E.b(qg.field_b, 320, bk.field_E.field_G + 154, 5, -1);
                   stackIn_99_0 = bk.field_E;
                   stackIn_100_1 = (0 != oe.field_e);
                   stackIn_103_2 = (0 != ua.field_L.field_O);
                   stackIn_106_3 = (0 != ua.field_L.field_O);
-                  ((oh) (Object) stackIn_99_0).b(vj.a(stackIn_100_1, stackIn_103_2, stackIn_106_3, 118), 320, 180 + bk.field_E.field_G, 5, -1);
+                  ((BitmapFont) (Object) stackIn_99_0).b(vj.a(stackIn_100_1, stackIn_103_2, stackIn_106_3, 118), 320, 180 + bk.field_E.field_G, 5, -1);
                   stackIn_108_0 = bk.field_E;
                   stackIn_109_1 = (0 != ua.field_L.field_O);
                   stackIn_112_2 = (oe.field_e != 0);
                   stackIn_115_3 = (ua.field_L.field_O != 0);
-                  ((oh) (Object) stackIn_108_0).b(IntrusiveNode.a(stackIn_109_1, stackIn_112_2, stackIn_115_3, 12105912), 320, bk.field_E.field_G + 258, 5, -1);
+                  ((BitmapFont) (Object) stackIn_108_0).b(IntrusiveNode.a(stackIn_109_1, stackIn_112_2, stackIn_115_3, 12105912), 320, bk.field_E.field_G + 258, 5, -1);
                   stackIn_117_0 = bk.field_E;
                   stackIn_118_1 = (ua.field_L.field_O != 0);
                   stackIn_120_2 = -98;
                   stackIn_121_3 = (oe.field_e != 0);
                   stackIn_124_4 = (ua.field_L.field_O != 0);
-                  ((oh) (Object) stackIn_117_0).b(ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, bk.field_E.field_G + 310, 5, -1);
+                  ((BitmapFont) (Object) stackIn_117_0).b(ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, bk.field_E.field_G + 310, 5, -1);
                   break scanLoop1;
                 }
-                al.field_z[1].e(-al.field_z[1].field_t + 640 >> 1, 1);
+                UiWidget.field_z[1].e(-UiWidget.field_z[1].field_t + 640 >> 1, 1);
                 stackIn_127_1 = 0;
                 stackIn_127_2 = 17460;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                al.field_z[4].e(-al.field_z[4].field_t + 640 >> 1, 1);
+                UiWidget.field_z[4].e(-UiWidget.field_z[4].field_t + 640 >> 1, 1);
                 this.d(-25);
                 break scanLoop1;
               }
             }
             if (decompiledFrameRemainder0) {
-              al.field_z[0].e(41, 1);
+              UiWidget.field_z[0].e(41, 1);
               break scanLoop1;
             }
           }
           if (decompiledFrameRemainder0) {
-            al.field_z[0].e(640 - al.field_z[0].field_t >> 1, 1);
+            UiWidget.field_z[0].e(640 - UiWidget.field_z[0].field_t >> 1, 1);
             break scanLoop1;
           }
           this.a(stackIn_127_1 != 0, stackIn_127_2);
           break;
         }
-        var4Lifetime1 = g.g(1);
+        var4Lifetime1 = SpriteState.g(1);
         var5Lifetime1 = null;
         if (23 == var4Lifetime1) {
           var5Lifetime1 = vi.field_a;
         }
         if (var4Lifetime1 == 24) {
-          var5Lifetime1 = id.field_i;
+          var5Lifetime1 = NodeHashTable.field_i;
         }
         if (var4Lifetime1 == 25) {
           var5Lifetime1 = ud.field_b;
@@ -1312,9 +1312,9 @@ final class mg {
         if (var6 == 0) {
           if (this.field_e.b(false)) {
             si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-            if (2 <= sl.field_j &&
+            if (2 <= LevelGrid.field_j &&
               ni.field_m[48]) {
-              pc.field_i = 31;
+              ArchiveIndex.field_i = 31;
             }
             if (this.field_c != 0) {
               if (this.field_c != 1) {
@@ -1330,8 +1330,8 @@ final class mg {
             if (this.field_e.b(false)) {
               si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
               rk.field_bb = null;
-              g.field_w = null;
-              ua.field_L = new ri();
+              SpriteState.field_w = null;
+              ua.field_L = new ActiveLevel();
               oe.field_e = 0;
               sc.field_g = -1;
             }
@@ -1529,7 +1529,7 @@ final class mg {
                                                                   ol.e(256);
                                                                 }
                                                                 if (!(!this.field_e.c((byte) 11))) {
-                                                                  g.f(-96);
+                                                                  SpriteState.f(-96);
                                                                 }
                                                                 decompiledFrameRemainder0 = false;
                                                               }
@@ -1594,11 +1594,11 @@ final class mg {
                                             } else {
                                               if (this.field_e.b(false)) {
                                                 si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-                                                ka.field_d.e(param3 ^ 391);
+                                                ka.field_d.clear(param3 ^ 391);
                                                 th.field_l = 0;
-                                                pc.field_i = 0;
+                                                ArchiveIndex.field_i = 0;
                                                 oe.field_e = 0;
-                                                cd.field_h.e(1);
+                                                cd.field_h.clear(1);
                                                 sc.field_g = 0;
                                               }
                                             }
@@ -1656,7 +1656,7 @@ final class mg {
 
     }
 
-    mg(TrackController param0, int param1) {
+    GameScreen(TrackController param0, int param1) {
         this.field_h = -1;
         this.field_d = -1;
         this.field_g = -1;
@@ -1664,7 +1664,7 @@ final class mg {
           this.field_e = new cd(mf.field_f[param1].length);
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -7,7 +7,7 @@ final class vk extends IntrusiveNode {
     int field_k;
     static int field_j;
 
-    final static void a(int param0, kk param1) {
+    final static void a(int param0, Archive param1) {
         RuntimeException stackIn_294_0 = null;
         StringBuilder stackIn_294_1 = null;
         String stackIn_295_2 = null;
@@ -137,7 +137,7 @@ final class vk extends IntrusiveNode {
           }
           var2Lifetime9 = DualLinkNode.a("level_bonus_doubled", param0 - 526);
           if (null != var2Lifetime9) {
-            tc.field_e = ta.a(32200, var2Lifetime9);
+            RandomAccessCacheFile.field_e = ta.a(32200, var2Lifetime9);
           }
           var2Lifetime10 = DualLinkNode.a("hint_level3", -523);
           if (var2Lifetime10 != null) {
@@ -441,7 +441,7 @@ final class vk extends IntrusiveNode {
           } else {
             stackIn_295_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_294_0), ((StringBuilder) (Object) stackIn_294_1).append(stackIn_295_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_294_0), ((StringBuilder) (Object) stackIn_294_1).append(stackIn_295_2).append(')').toString());
         }
         if (GameApplet.field_j != 0) {
           TrackController.field_F = (var3 == 0);
@@ -461,7 +461,7 @@ final class vk extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "vk.C(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1), "vk.C(" + param0 + ')');
         }
     }
 
@@ -473,7 +473,7 @@ final class vk extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "vk.<init>()");
+          throw LevelGrid.a((Throwable) ((Object) var1), "vk.<init>()");
         }
     }
 
@@ -484,7 +484,7 @@ final class vk extends IntrusiveNode {
         try {
           field_i = null;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "vk.A(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "vk.A(" + param0 + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 final class va {
     int field_c;
     int[] field_b;
-    static ik[] field_d;
+    static PcmSample[] field_d;
     static String field_a;
     static int[] field_e;
     int field_f;
@@ -31,7 +31,7 @@ final class va {
           }
           return stackIn_15_0;
         }
-        field_d = (ik[]) null;
+        field_d = (PcmSample[]) null;
         param0 = param0 & 8191;
         if (param0 >= 4096) {
           if (param0 < 6144) {
@@ -128,7 +128,7 @@ final class va {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -142,6 +142,6 @@ final class va {
 
     static {
         field_a = "Move to the indicated square and push the block to the right.";
-        field_d = new ik[13];
+        field_d = new PcmSample[13];
     }
 }

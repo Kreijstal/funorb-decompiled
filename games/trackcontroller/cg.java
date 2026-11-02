@@ -5,7 +5,7 @@ final class cg {
     static String field_d;
     static int field_c;
     static String field_e;
-    static ja field_f;
+    static IntrusiveDeque field_f;
     int field_a;
     static String field_b;
     private static String field_z;

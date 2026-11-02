@@ -142,14 +142,14 @@ final class ld {
                         var38 = -var37 + (ig.field_g - 1);
                       }
                       if (0 > var37) {
-                        al.a(var41, var37 + var38, var21 - var37 * var39, var29 - var41 * var37, var40, var39, param15, -1, var36Lifetime2, -(var40 * var37) + var25);
+                        UiWidget.a(var41, var37 + var38, var21 - var37 * var39, var29 - var41 * var37, var40, var39, param15, -1, var36Lifetime2, -(var40 * var37) + var25);
                       } else {
-                        al.a(var41, var38, var21, var29, var40, var39, param15, -1, var37 + var36Lifetime2, var25);
+                        UiWidget.a(var41, var38, var21, var29, var40, var39, param15, -1, var37 + var36Lifetime2, var25);
                       }
                     } else {
                       if (var37 >= 0 &&
                         ig.field_g > var37) {
-                        al.a(0, var38, var21, var29, 0, 0, param15, -1, var37 + var36Lifetime2, var25);
+                        UiWidget.a(0, var38, var21, var29, 0, 0, param15, -1, var37 + var36Lifetime2, var25);
                       }
                     }
                   }
@@ -158,7 +158,7 @@ final class ld {
                     return;
                   }
                   var17_int = var17_int + var19;
-                  var36Lifetime2 = var36Lifetime2 + ll.field_d;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_d;
                   var25 = var25 + var27;
                   var29 = var29 + var31;
                   var30 = var30 + var32;
@@ -293,7 +293,7 @@ final class ld {
                 if (0 == var37Lifetime1) {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < ig.field_g) {
-                    al.a(0, var37Lifetime1, var21, var29, 0, 0, param15, -1, var35Lifetime1 + var36Lifetime1, var25);
+                    UiWidget.a(0, var37Lifetime1, var21, var29, 0, 0, param15, -1, var35Lifetime1 + var36Lifetime1, var25);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -303,9 +303,9 @@ final class ld {
                     var37Lifetime1 = -1 - var36Lifetime1 + ig.field_g;
                   }
                   if (var36Lifetime1 < 0) {
-                    al.a(var40Lifetime1, var36Lifetime1 + var37Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, -(var40Lifetime1 * var36Lifetime1) + var29, var39Lifetime1, var38Lifetime1, param15, -1, var35Lifetime1, -(var36Lifetime1 * var39Lifetime1) + var25);
+                    UiWidget.a(var40Lifetime1, var36Lifetime1 + var37Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, -(var40Lifetime1 * var36Lifetime1) + var29, var39Lifetime1, var38Lifetime1, param15, -1, var35Lifetime1, -(var36Lifetime1 * var39Lifetime1) + var25);
                   } else {
-                    al.a(var40Lifetime1, var37Lifetime1, var21, var29, var39Lifetime1, var38Lifetime1, param15, -1, var36Lifetime1 + var35Lifetime1, var25);
+                    UiWidget.a(var40Lifetime1, var37Lifetime1, var21, var29, var39Lifetime1, var38Lifetime1, param15, -1, var36Lifetime1 + var35Lifetime1, var25);
                   }
                 }
               }
@@ -314,7 +314,7 @@ final class ld {
                 return;
               }
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + ll.field_d;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_d;
               var17_int = var17_int + var19;
               var26 = var26 + var28;
               var22 = var22 + var24;
@@ -336,7 +336,7 @@ final class ld {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param16).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ final class ld {
         if (param1 != -29) {
           return;
         }
-        pc.field_t = ea.field_u[param0];
+        ArchiveIndex.field_t = LevelData.field_u[param0];
         jb.field_c = ff.field_c[param0];
     }
 

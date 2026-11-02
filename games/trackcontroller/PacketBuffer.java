@@ -4,47 +4,47 @@
 class PacketBuffer extends IntrusiveNode {
     static nh field_m;
     static String field_l;
-    byte[] field_j;
+    byte[] payload;
     static int field_i;
-    int field_k;
+    int position;
 
-    final void a(long param0, int param1) {
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$0] = (byte)(int)(param0 >> 56);
-        int fieldTemp$1 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$1] = (byte)(int)(param0 >> 48);
-        int fieldTemp$2 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$2] = (byte)(int)(param0 >> 40);
-        int fieldTemp$3 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$3] = (byte)(int)(param0 >> 32);
-        int fieldTemp$4 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$4] = (byte)(int)(param0 >> 24);
-        int fieldTemp$5 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$5] = (byte)(int)(param0 >> 16);
-        int fieldTemp$6 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$6] = (byte)(int)(param0 >> 8);
-        int fieldTemp$7 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$7] = (byte)(int)param0;
+    final void writeLong(long param0, int param1) {
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 56);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 48);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 40);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 32);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param0 >> 24);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param0 >> 16);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)(param0 >> 8);
+        int fieldTemp$7 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$7] = (byte)(int)param0;
         if (param1 != 2147483647) {
           byte[] var5 = (byte[]) null;
           this.a(30, 103, 56, (byte[]) null);
         }
     }
 
-    final long f(byte param0) {
+    final long readLong(byte param0) {
         if (param0 < 20) {
-          this.field_k = -112;
+          this.position = -112;
         }
-        long var2 = 4294967295L & (long)this.e((byte) 113);
-        long var4 = 4294967295L & (long)this.e((byte) 113);
+        long var2 = 4294967295L & (long)this.readInt((byte) 113);
+        long var4 = 4294967295L & (long)this.readInt((byte) 113);
         return (var2 << 32) + var4;
     }
 
@@ -55,20 +55,20 @@ class PacketBuffer extends IntrusiveNode {
         if (param0 != -3869) {
           return;
         }
-        while (this.field_k < param1) {
-          fieldTemp$0 = this.field_k;
-          this.field_k = this.field_k + 1;
-          this.field_j[fieldTemp$0] = (byte) 0;
+        while (this.position < param1) {
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         }
     }
 
     final int a(int param0, boolean param1) {
-        int var3 = cl.a(1, this.field_k, param0, this.field_j);
-        this.b(param1, var3);
+        int var3 = cl.a(1, this.position, param0, this.payload);
+        this.writeInt(param1, var3);
         return var3;
     }
 
-    final void a(byte param0, String param1) {
+    final void writeString(byte param0, String param1) {
         int var3_int = 0;
         CharSequence var5 = null;
         int fieldTemp$0 = 0;
@@ -82,33 +82,33 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var5 = (CharSequence) ((Object) param1);
-          this.field_k = this.field_k + sg.a(this.field_k, var5, this.field_j, 87, 0, param1.length());
-          fieldTemp$0 = this.field_k;
-          this.field_k = this.field_k + 1;
-          this.field_j[fieldTemp$0] = (byte) 0;
+          this.position = this.position + sg.a(this.position, var5, this.payload, 87, 0, param1.length());
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "be.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "be.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int l(int param0) {
+    final int readSmart(int param0) {
         if (param0 != -1) {
           return -116;
         }
-        int var2 = 255 & this.field_j[this.field_k];
+        int var2 = 255 & this.payload[this.position];
         if (var2 >= 128) {
-          return this.d((byte) -73) - 32768;
+          return this.readUnsignedShort((byte) -73) - 32768;
         }
-        return this.h(16383);
+        return this.readUnsignedByte(16383);
     }
 
-    final void a(int param0, byte param1) {
+    final void writeByte(int param0, byte param1) {
         if (param1 >= -58) {
-          this.field_k = -79;
+          this.position = -79;
         }
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$0] = (byte)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)param0;
     }
 
     public static void i(int param0) {
@@ -126,13 +126,13 @@ class PacketBuffer extends IntrusiveNode {
         return param2 + "/" + param1;
     }
 
-    final int h(int param0) {
+    final int readUnsignedByte(int param0) {
         if (param0 != 16383) {
           return -75;
         }
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        return 255 & this.field_j[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0];
     }
 
     final void a(String param0, int param1) {
@@ -194,43 +194,43 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final int d(byte param0) {
+    final int readUnsignedShort(byte param0) {
         if (param0 >= -40) {
           PacketBuffer.i(45);
         }
-        this.field_k = this.field_k + 2;
-        return (65280 & this.field_j[this.field_k - 2] << 8) + (255 & this.field_j[this.field_k - 1]);
+        this.position = this.position + 2;
+        return (65280 & this.payload[this.position - 2] << 8) + (255 & this.payload[this.position - 1]);
     }
 
     private final void a(long param0, byte param1) {
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$0] = (byte)(int)(param0 >> 48);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 48);
         if (param1 > -38) {
           this.a((byte) 5, -61);
         }
-        int fieldTemp$1 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$1] = (byte)(int)(param0 >> 40);
-        int fieldTemp$2 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$2] = (byte)(int)(param0 >> 32);
-        int fieldTemp$3 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$3] = (byte)(int)(param0 >> 24);
-        int fieldTemp$4 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$4] = (byte)(int)(param0 >> 16);
-        int fieldTemp$5 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$5] = (byte)(int)(param0 >> 8);
-        int fieldTemp$6 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$6] = (byte)(int)param0;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 40);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 32);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 24);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param0 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param0 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)param0;
     }
 
     final static int d(byte param0, int param1) {
@@ -290,26 +290,26 @@ class PacketBuffer extends IntrusiveNode {
         return var2Lifetime1;
     }
 
-    final String d(int param0) {
-        if (this.field_j[this.field_k] == 0) {
-          this.field_k = this.field_k + 1;
+    final String readOptionalString(int param0) {
+        if (this.payload[this.position] == 0) {
+          this.position = this.position + 1;
           return null;
         }
         if (param0 != 19016) {
           field_m = (nh) null;
         }
-        return this.g(0);
+        return this.readString(0);
     }
 
-    final void a(java.math.BigInteger param0, java.math.BigInteger param1, boolean param2) {
+    final void rsaEncrypt(java.math.BigInteger param0, java.math.BigInteger param1, boolean param2) {
         int var4_int = 0;
         byte[] var5 = null;
         java.math.BigInteger var6 = null;
         java.math.BigInteger var7 = null;
         byte[] var8 = null;
         try {
-          var4_int = this.field_k;
-          this.field_k = 0;
+          var4_int = this.position;
+          this.position = 0;
           if (param2) {
             field_m = (nh) null;
           }
@@ -318,21 +318,21 @@ class PacketBuffer extends IntrusiveNode {
           var6 = new java.math.BigInteger(var5);
           var7 = var6.modPow(param1, param0);
           var8 = var7.toByteArray();
-          this.field_k = 0;
+          this.position = 0;
           this.b(var8.length, (byte) -120);
           this.a(var8.length, 118, 0, var8);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "be.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "be.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final byte f(int param0) {
+    final byte readByte(int param0) {
         if (param0 > -124) {
           this.a(-51, false);
         }
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        return this.field_j[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0];
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) {
@@ -350,9 +350,9 @@ class PacketBuffer extends IntrusiveNode {
             field_l = (String) null;
           }
           for (var5_int = param2; var5_int < param2 + param3; var5_int++) {
-            fieldTemp$0 = this.field_k;
-            this.field_k = this.field_k + 1;
-            param1[var5_int] = this.field_j[fieldTemp$0];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param1[var5_int] = this.payload[fieldTemp$0];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -365,7 +365,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -373,40 +373,40 @@ class PacketBuffer extends IntrusiveNode {
         if (param1 != -96) {
           field_i = 62;
         }
-        this.field_j[-2 + (this.field_k - param0)] = (byte)(param0 >> 8);
-        this.field_j[this.field_k - param0 - 1] = (byte)param0;
+        this.payload[-2 + (this.position - param0)] = (byte)(param0 >> 8);
+        this.payload[this.position - param0 - 1] = (byte)param0;
     }
 
     final void a(boolean param0, int param1) {
         if (!param0) {
           field_l = (String) null;
         }
-        this.field_j[this.field_k - (param1 + 1)] = (byte)param1;
+        this.payload[this.position - (param1 + 1)] = (byte)param1;
     }
 
-    final String g(int param0) {
+    final String readString(int param0) {
         int fieldTemp$0 = 0;
         int var2;
         int var3;
-        var2 = this.field_k;
+        var2 = this.position;
         do {
-          fieldTemp$0 = this.field_k;
-          this.field_k = this.field_k + 1;
-        } while (this.field_j[fieldTemp$0] != 0);
-        var3 = -1 + (-var2 + this.field_k);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+        } while (this.payload[fieldTemp$0] != 0);
+        var3 = -1 + (-var2 + this.position);
         if (var3 != param0) {
-          return ka.a(var2, param0 ^ -129, this.field_j, var3);
+          return ka.a(var2, param0 ^ -129, this.payload, var3);
         }
         return "";
     }
 
     final void b(int param0, byte param1) {
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$0] = (byte)(param0 >> 8);
-        int fieldTemp$1 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$1] = (byte)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 >> 8);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)param0;
         if (param1 >= -117) {
           field_i = -55;
         }
@@ -423,21 +423,21 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final void c(byte param0, int param1) {
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$0] = (byte)(param1 >> 16);
-        int fieldTemp$1 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$1] = (byte)(param1 >> 8);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 16);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 >> 8);
         if (param0 != -38) {
-          this.field_k = -75;
+          this.position = -75;
         }
-        int fieldTemp$2 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$2] = (byte)param1;
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)param1;
     }
 
-    final void a(int param0, int[] param1) {
+    final void xteaEncrypt(int param0, int[] param1) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -454,18 +454,18 @@ class PacketBuffer extends IntrusiveNode {
         int var10 = 0;
         var10 = TrackController.field_F ? 1 : 0;
         try {
-          var3_int = this.field_k / 8;
-          this.field_k = 0;
+          var3_int = this.position / 8;
+          this.position = 0;
           var4 = 0;
           while (true) {
             if (var4 >= var3_int) {
               if (param0 != 29715) {
-                this.field_k = -77;
+                this.position = -77;
               }
               return;
             }
-            var5 = this.e((byte) 113);
-            var6 = this.e((byte) 113);
+            var5 = this.readInt((byte) 113);
+            var6 = this.readInt((byte) 113);
             var7 = 0;
             var8 = -1640531527;
             var9 = 32;
@@ -480,9 +480,9 @@ class PacketBuffer extends IntrusiveNode {
               }
               break;
             }
-            this.field_k = this.field_k - 8;
-            this.b(false, var5);
-            this.b(false, var6);
+            this.position = this.position - 8;
+            this.writeInt(false, var5);
+            this.writeInt(false, var6);
             var4++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -495,17 +495,17 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final boolean b(boolean param0) {
-        this.field_k = this.field_k - 4;
+    final boolean checkCrcTrailer(boolean param0) {
+        this.position = this.position - 4;
         if (param0) {
           field_i = 73;
         }
-        int var2 = cl.a(1, this.field_k, 0, this.field_j);
-        int var3 = this.e((byte) 113);
+        int var2 = cl.a(1, this.position, 0, this.payload);
+        int var3 = this.readInt((byte) 113);
         if (var3 == var2) {
           return true;
         }
@@ -523,18 +523,18 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           if (param1 <= 105) {
-            this.field_k = 63;
+            this.position = 63;
           }
-          fieldTemp$0 = this.field_k;
-          this.field_k = this.field_k + 1;
-          this.field_j[fieldTemp$0] = (byte) 0;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param0);
-          this.field_k = this.field_k + sg.a(this.field_k, var4, this.field_j, 70, 0, param0.length());
-          fieldTemp$1 = this.field_k;
-          this.field_k = this.field_k + 1;
-          this.field_j[fieldTemp$1] = (byte) 0;
+          this.position = this.position + sg.a(this.position, var4, this.payload, 70, 0, param0.length());
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "be.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "be.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -543,22 +543,22 @@ class PacketBuffer extends IntrusiveNode {
         int var2;
         int var3;
         int var4;
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        var2 = this.field_j[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         if (var2 != 0) {
           throw new IllegalStateException("");
         }
-        var3 = this.field_k;
+        var3 = this.position;
         do {
-          fieldTemp$1 = this.field_k;
-          this.field_k = this.field_k + 1;
-        } while (this.field_j[fieldTemp$1] != 0);
-        var4 = this.field_k - var3 + param0;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+        } while (this.payload[fieldTemp$1] != 0);
+        var4 = this.position - var3 + param0;
         if (var4 == 0) {
           return "";
         }
-        return ka.a(var3, param0 - 128, this.field_j, var4);
+        return ka.a(var3, param0 - 128, this.payload, var4);
     }
 
     final void b(byte param0, int param1) {
@@ -566,18 +566,18 @@ class PacketBuffer extends IntrusiveNode {
           if ((-16384 & param1) != 0) {
             if ((param1 & -2097152) != 0) {
               if (0 != (param1 & -268435456)) {
-                this.a(param1 >>> 28 | 128, (byte) -74);
+                this.writeByte(param1 >>> 28 | 128, (byte) -74);
               }
-              this.a(128 | param1 >>> 21, (byte) -121);
+              this.writeByte(128 | param1 >>> 21, (byte) -121);
             }
-            this.a((param1 | 2098045) >>> 14, (byte) -106);
+            this.writeByte((param1 | 2098045) >>> 14, (byte) -106);
           }
-          this.a(param1 >>> 7 | 128, (byte) -69);
+          this.writeByte(param1 >>> 7 | 128, (byte) -69);
         }
         if (param0 > -77) {
           return;
         }
-        this.a(param1 & 127, (byte) -104);
+        this.writeByte(param1 & 127, (byte) -104);
     }
 
     final static void a(byte param0) {
@@ -685,26 +685,26 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "be.E(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1), "be.E(" + param0 + ')');
         }
     }
 
-    final void b(boolean param0, int param1) {
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$0] = (byte)(param1 >> 24);
-        int fieldTemp$1 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$1] = (byte)(param1 >> 16);
-        int fieldTemp$2 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$2] = (byte)(param1 >> 8);
+    final void writeInt(boolean param0, int param1) {
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 24);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 >> 16);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(param1 >> 8);
         if (param0) {
-          this.b(false, -47);
+          this.writeInt(false, -47);
         }
-        int fieldTemp$3 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$3] = (byte)param1;
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)param1;
     }
 
     final void a(int param0, int[] param1, int param2, boolean param3) {
@@ -728,17 +728,17 @@ class PacketBuffer extends IntrusiveNode {
           if (param3) {
             return;
           }
-          var5_int = this.field_k;
-          this.field_k = param0;
+          var5_int = this.position;
+          this.position = param0;
           var6 = (param2 - param0) / 8;
           var7 = 0;
           while (true) {
             if (var7 >= var6) {
-              this.field_k = var5_int;
+              this.position = var5_int;
               return;
             }
-            var8 = this.e((byte) 113);
-            var9 = this.e((byte) 113);
+            var8 = this.readInt((byte) 113);
+            var9 = this.readInt((byte) 113);
             var10 = -957401312;
             var11 = -1640531527;
             var12 = 32;
@@ -753,9 +753,9 @@ class PacketBuffer extends IntrusiveNode {
               }
               break;
             }
-            this.field_k = this.field_k - 8;
-            this.b(false, var8);
-            this.b(false, var9);
+            this.position = this.position - 8;
+            this.writeInt(false, var8);
+            this.writeInt(false, var9);
             var7++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -768,37 +768,37 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final int e(int param0) {
-        this.field_k = this.field_k + 3;
+        this.position = this.position + 3;
         if (param0 != 8) {
           return 67;
         }
-        return ((255 & this.field_j[-2 + this.field_k]) << 8) + ((this.field_j[-3 + this.field_k] & 255) << 16) + (this.field_j[this.field_k - 1] & 255);
+        return ((255 & this.payload[-2 + this.position]) << 8) + ((this.payload[-3 + this.position] & 255) << 16) + (this.payload[this.position - 1] & 255);
     }
 
     final void a(int param0, long param1) {
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$0] = (byte)(int)(param1 >> 32);
-        int fieldTemp$1 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$1] = (byte)(int)(param1 >> 24);
-        int fieldTemp$2 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$2] = (byte)(int)(param1 >> 16);
-        int fieldTemp$3 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$3] = (byte)(int)(param1 >> 8);
-        int fieldTemp$4 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_j[fieldTemp$4] = (byte)(int)param1;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 32);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 24);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 16);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 8);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)param1;
         if (param0 != 2488) {
           java.math.BigInteger var5 = (java.math.BigInteger) null;
-          this.a((java.math.BigInteger) null, (java.math.BigInteger) null, false);
+          this.rsaEncrypt((java.math.BigInteger) null, (java.math.BigInteger) null, false);
         }
     }
 
@@ -806,21 +806,21 @@ class PacketBuffer extends IntrusiveNode {
         if (param0 < 116) {
           return -44;
         }
-        int var2 = 255 & this.field_j[this.field_k];
+        int var2 = 255 & this.payload[this.position];
         if (var2 >= 128) {
-          return this.d((byte) -41) - 49152;
+          return this.readUnsignedShort((byte) -41) - 49152;
         }
-        return this.h(16383) - 64;
+        return this.readUnsignedByte(16383) - 64;
     }
 
     final int c(boolean param0) {
         if (param0) {
-          this.a(92L, -49);
+          this.writeLong(92L, -49);
         }
-        if (this.field_j[this.field_k] < 0) {
-          return 2147483647 & this.e((byte) 113);
+        if (this.payload[this.position] < 0) {
+          return 2147483647 & this.readInt((byte) 113);
         }
-        return this.d((byte) -47);
+        return this.readUnsignedShort((byte) -47);
     }
 
     final int m(int param0) {
@@ -829,18 +829,18 @@ class PacketBuffer extends IntrusiveNode {
         int var3;
         int var4;
         var4 = TrackController.field_F ? 1 : 0;
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        var2 = this.field_j[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         if (param0 != 127) {
           field_l = (String) null;
         }
         var3 = 0;
         while (var2 < 0) {
           var3 = (var3 | 127 & var2) << 7;
-          fieldTemp$1 = this.field_k;
-          this.field_k = this.field_k + 1;
-          var2 = this.field_j[fieldTemp$1];
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          var2 = this.payload[fieldTemp$1];
         }
         return var3 | var2;
     }
@@ -861,9 +861,9 @@ class PacketBuffer extends IntrusiveNode {
             return;
           }
           while (var5_int < param2 + param0) {
-            fieldTemp$0 = this.field_k;
-            this.field_k = this.field_k + 1;
-            this.field_j[fieldTemp$0] = param3[var5_int];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$0] = param3[var5_int];
             var5_int++;
           }
           return;
@@ -877,35 +877,35 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final void a(byte param0, int param1) {
         int var3 = -49 % ((param0 - 40) / 60);
-        this.field_j[-4 + (-param1 + this.field_k)] = (byte)(param1 >> 24);
-        this.field_j[-3 + this.field_k - param1] = (byte)(param1 >> 16);
-        this.field_j[this.field_k - (param1 + 2)] = (byte)(param1 >> 8);
-        this.field_j[-1 - param1 + this.field_k] = (byte)param1;
+        this.payload[-4 + (-param1 + this.position)] = (byte)(param1 >> 24);
+        this.payload[-3 + this.position - param1] = (byte)(param1 >> 16);
+        this.payload[this.position - (param1 + 2)] = (byte)(param1 >> 8);
+        this.payload[-1 - param1 + this.position] = (byte)param1;
     }
 
-    final int e(byte param0) {
-        this.field_k = this.field_k + 4;
+    final int readInt(byte param0) {
+        this.position = this.position + 4;
         if (param0 != 113) {
           this.a(-36, -22L);
         }
-        return (255 & this.field_j[this.field_k - 1]) + (this.field_j[-2 + this.field_k] << 8 & 65280) + (((255 & this.field_j[this.field_k - 4]) << 24) + ((255 & this.field_j[this.field_k - 3]) << 16));
+        return (255 & this.payload[this.position - 1]) + (this.payload[-2 + this.position] << 8 & 65280) + (((255 & this.payload[this.position - 4]) << 24) + ((255 & this.payload[this.position - 3]) << 16));
     }
 
     PacketBuffer(int param0) {
-        this.field_j = ke.b(param0, -30001);
-        this.field_k = 0;
+        this.payload = ke.b(param0, -30001);
+        this.position = 0;
     }
 
     final void b(int param0, int param1) {
         if (64 > param1 &&
           param1 >= -64) {
-          this.a(64 + param1, (byte) -98);
+          this.writeByte(64 + param1, (byte) -98);
           return;
         }
         if (param0 != 16) {
@@ -921,10 +921,10 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(byte[] param0) {
         try {
-          this.field_j = param0;
-          this.field_k = 0;
+          this.payload = param0;
+          this.position = 0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "be.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

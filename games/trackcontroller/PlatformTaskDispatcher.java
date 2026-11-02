@@ -5,7 +5,7 @@ import java.io.*;
 
 final class PlatformTaskDispatcher implements Runnable {
     private tb field_w;
-    tc field_p;
+    RandomAccessCacheFile field_p;
     private Thread field_u;
     static String field_e;
     private boolean field_r;
@@ -17,10 +17,10 @@ final class PlatformTaskDispatcher implements Runnable {
     private static String field_h;
     boolean field_l;
     private Object field_f;
-    tc[] field_q;
+    RandomAccessCacheFile[] field_q;
     private boolean field_c;
-    tc field_t;
-    tc field_v;
+    RandomAccessCacheFile field_t;
+    RandomAccessCacheFile field_v;
     private static int field_s;
     private static String field_x;
     static String field_g;
@@ -94,15 +94,15 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.a((param1 << 16) + param2, 1484280784, (Object) null, param4 + (param3 << 16), 6);
     }
 
-    private final static tc a(String param0, int param1, int param2, String param3) {
+    private final static RandomAccessCacheFile a(String param0, int param1, int param2, String param3) {
         try {
           int var6 = 0;
-          tc stackIn_15_0 = null;
+          RandomAccessCacheFile stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           String var7 = null;
-          tc var8 = null;
+          RandomAccessCacheFile var8 = null;
           Exception var8_ref = null;
           if (param1 == 33) {
             var4 = "jagex_" + param3 + "_preferences" + param0 + "_rc.dat";
@@ -122,7 +122,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!(var7.length() > 0) ||
               new File(var7).exists()) {
               try {
-                var8 = new tc(new File(var7, var4), "rw", 10000L);
+                var8 = new RandomAccessCacheFile(new File(var7, var4), "rw", 10000L);
                 stackIn_15_0 = var8;
                 return stackIn_15_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -247,7 +247,7 @@ final class PlatformTaskDispatcher implements Runnable {
           ThreadDeath var2_ref = null;
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
-          tc var3_ref = null;
+          RandomAccessCacheFile var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
           dj var3_ref3 = null;
@@ -579,12 +579,12 @@ final class PlatformTaskDispatcher implements Runnable {
         }
         tj.a(field_s, field_a, (byte) -119);
         if (this.field_l) {
-          this.field_p = new tc(tj.a(field_s, (byte) 78, (String) null, "random.dat"), "rw", 25L);
-          this.field_t = new tc(tj.a((byte) -61, "main_file_cache.dat2"), "rw", 314572800L);
-          this.field_v = new tc(tj.a((byte) -61, "main_file_cache.idx255"), "rw", 1048576L);
-          this.field_q = new tc[param2];
+          this.field_p = new RandomAccessCacheFile(tj.a(field_s, (byte) 78, (String) null, "random.dat"), "rw", 25L);
+          this.field_t = new RandomAccessCacheFile(tj.a((byte) -61, "main_file_cache.dat2"), "rw", 314572800L);
+          this.field_v = new RandomAccessCacheFile(tj.a((byte) -61, "main_file_cache.idx255"), "rw", 1048576L);
+          this.field_q = new RandomAccessCacheFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_q[var5_int] = new tc(tj.a((byte) -61, "main_file_cache.idx" + var5_int), "rw", 1048576L);
+            this.field_q[var5_int] = new RandomAccessCacheFile(tj.a((byte) -61, "main_file_cache.idx" + var5_int), "rw", 1048576L);
           }
           if (this.field_c) {
             try {

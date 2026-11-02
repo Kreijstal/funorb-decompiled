@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class g extends DualLinkNode {
+abstract class SpriteState extends DualLinkNode {
     int field_t;
     static int[] field_u;
     static int field_p;
@@ -16,7 +16,7 @@ abstract class g extends DualLinkNode {
 
     final static int g(int param0) {
         if (param0 != 1) {
-          g.f(-106);
+          SpriteState.f(-106);
         }
         if (!GameApplet.field_k && fe.field_L >= BufferedSocket.field_o &&
           !(BufferedSocket.field_o + cl.field_a <= fe.field_L)) {
@@ -40,14 +40,14 @@ abstract class g extends DualLinkNode {
         var1Lifetime1 = 67 / ((-19 - param0) / 48);
     }
 
-    final static qj[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        qj[] var10;
-        qj[] var11_ref_qj__;
+        Sprite[] var10;
+        Sprite[] var11_ref_qj__;
         int var11;
         int var12;
-        qj var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -58,7 +58,7 @@ abstract class g extends DualLinkNode {
         int var12Lifetime4;
         var15 = TrackController.field_F ? 1 : 0;
         var9 = param6 + param1 + param2;
-        var10 = new qj[]{new qj(var9, var9), new qj(param7, var9), new qj(var9, var9), new qj(var9, param7), new qj(64, 64), new qj(var9, param7), new qj(var9, var9), new qj(param7, var9), new qj(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param7, var9), new Sprite(var9, var9), new Sprite(var9, param7), new Sprite(64, 64), new Sprite(var9, param7), new Sprite(var9, var9), new Sprite(param7, var9), new Sprite(var9, var9)};
         var11_ref_qj__ = var10;
         for (var12 = 0; var12 < var11_ref_qj__.length; var12++) {
           var13 = var11_ref_qj__[var12];
@@ -115,7 +115,7 @@ abstract class g extends DualLinkNode {
         }
     }
 
-    g() {
+    SpriteState() {
     }
 
     static {

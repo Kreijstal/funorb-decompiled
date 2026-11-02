@@ -15,7 +15,7 @@ final class og extends jj implements m {
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class og extends jj implements m {
         if (param0 != -83) {
           return;
         }
-        ne.field_a.h(16383);
+        ne.field_a.readUnsignedByte(16383);
     }
 
     final void u(int param0) {
@@ -96,7 +96,7 @@ final class og extends jj implements m {
                 var5.a(-17040, dh.field_r, 11);
                 var5.a(-17040, cg.field_b, 17);
               } else {
-                var5.a(param2 ^ -17033, ea.field_p, -1);
+                var5.a(param2 ^ -17033, LevelData.field_p, -1);
               }
             }
             if (param1.field_b != 3) {
@@ -104,7 +104,7 @@ final class og extends jj implements m {
                 var5.a(-17040, md.field_c, 9);
               }
             } else {
-              var5.a(-17040, ea.field_y, 7);
+              var5.a(-17040, LevelData.field_y, 7);
             }
           }
           if (param2 != 7) {
@@ -122,7 +122,7 @@ final class og extends jj implements m {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class og extends jj implements m {
             this.field_ob = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "og.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "og.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -160,7 +160,7 @@ final class nf {
             field_h = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "nf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "nf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -194,10 +194,10 @@ final class nf {
             }
           }
           this.field_c = this.field_c + this.field_d[var2 + 128 & 255];
-          dupTemp$1 = this.field_j + (this.field_d[tc.a(1020, var3) >> 2] + this.field_c);
+          dupTemp$1 = this.field_j + (this.field_d[RandomAccessCacheFile.a(1020, var3) >> 2] + this.field_c);
           var4 = dupTemp$1;
           this.field_d[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_d[tc.a(var4, 261211) >> 8 >> 2];
+          dupTemp$2 = var3 + this.field_d[RandomAccessCacheFile.a(var4, 261211) >> 8 >> 2];
           this.field_j = dupTemp$2;
           this.field_i[var2] = dupTemp$2;
         }
@@ -226,7 +226,7 @@ final class nf {
           }
           this.a(66);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "nf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "nf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 final class ij implements t {
     private int field_f;
     private int field_n;
-    private oh field_i;
+    private BitmapFont field_i;
     private int field_a;
     private int field_k;
     private int field_b;
@@ -54,7 +54,7 @@ final class ij implements t {
             for (var11 = param6; param4 > var11; var11++) {
               var12 = lf.field_Y[var11];
               if (param5) {
-                stackIn_26_0 = g.field_u[var12];
+                stackIn_26_0 = SpriteState.field_u[var12];
               } else {
                 stackIn_26_0 = va.field_e[var12];
               }
@@ -91,7 +91,7 @@ final class ij implements t {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var7), "ij.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var7), "ij.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -111,13 +111,13 @@ final class ij implements t {
 
     final static void a(dh param0, int param1, int param2) {
         try {
-          pa.field_c.a((byte) -115, param0);
+          pa.field_c.addLast((byte) -115, param0);
           if (param2 > -120) {
             ij.b(63);
           }
           me.a(param0, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ij.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ij.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -137,8 +137,8 @@ final class ij implements t {
         }
     }
 
-    public final void a(int param0, al param1, int param2, boolean param3, int param4) {
-        al stackIn_3_0 = null;
+    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -151,7 +151,7 @@ final class ij implements t {
         ed var11 = null;
         try {
           if (param1 instanceof ed) {
-            stackIn_3_0 = (al) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           } else {
             stackIn_3_0 = null;
           }
@@ -163,17 +163,17 @@ final class ij implements t {
             return;
           }
           var7 = 5592405;
-          ll.c(param1.field_p + param4, param2 + param1.field_m, param1.field_x, param1.field_u, this.field_a);
+          SoftwareRasterizer.c(param1.field_p + param4, param2 + param1.field_m, param1.field_x, param1.field_u, this.field_a);
           if (param3) {
             var7 = 16777215;
           }
           var8 = param1.field_p + param4 + this.field_c;
           var9 = this.field_e + (param2 + param1.field_m);
-          ll.a(var8, var9, this.field_l, this.field_m, 5592405);
-          ll.c(var8, var9, this.field_l, this.field_m, var7);
+          SoftwareRasterizer.a(var8, var9, this.field_l, this.field_m, 5592405);
+          SoftwareRasterizer.c(var8, var9, this.field_l, this.field_m, var7);
           if (var11.field_G) {
-            ll.e(var8, var9, var8 + this.field_l, var9 + this.field_m, 1);
-            ll.e(var8 + this.field_l, var9, var8, var9 + this.field_m, 1);
+            SoftwareRasterizer.e(var8, var9, var8 + this.field_l, var9 + this.field_m, 1);
+            SoftwareRasterizer.e(var8 + this.field_l, var9, var8, var9 + this.field_m, 1);
           }
           if (this.field_i != null) {
             var10 = this.field_b + (this.field_l + this.field_c);
@@ -190,7 +190,7 @@ final class ij implements t {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -469,7 +469,7 @@ final class ij implements t {
             if (mj.field_b[var4Lifetime2] < 0) {
               stackIn_111_1 = dh.field_l;
             } else {
-              stackIn_111_1 = pc.field_m;
+              stackIn_111_1 = ArchiveIndex.field_m;
             }
             oi.field_b = stackIn_110_0 + stackIn_111_1;
           }
@@ -492,25 +492,25 @@ final class ij implements t {
               ud.field_a[var4Lifetime3][0] = -mb.field_c + var8Lifetime1;
               ud.field_a[var4Lifetime3][1] = var5Lifetime3;
               ud.field_a[var4Lifetime3][2] = (mb.field_c << 1) + var7Lifetime2;
-              ud.field_a[var4Lifetime3][3] = pc.field_m + (of.field_f << 1);
-              var5Lifetime3 = var5Lifetime3 + (na.field_e + ((of.field_f << 1) + pc.field_m));
+              ud.field_a[var4Lifetime3][3] = ArchiveIndex.field_m + (of.field_f << 1);
+              var5Lifetime3 = var5Lifetime3 + (na.field_e + ((of.field_f << 1) + ArchiveIndex.field_m));
             }
             var4Lifetime3++;
           }
           if (di.field_h == 2) {
             vi.field_f.a(-1, -1, param2, 113);
           } else {
-            vi.field_f.a(0, mg.b(fg.field_a, 0, kf.field_b), param2, 106);
+            vi.field_f.a(0, GameScreen.b(fg.field_a, 0, kf.field_b), param2, 106);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var3), "ij.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var3), "ij.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    ij(oh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    ij(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_h = 1;
         this.field_g = 1;
         try {
@@ -525,7 +525,7 @@ final class ij implements t {
           this.field_f = param2;
           this.field_c = param5;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

@@ -23,24 +23,24 @@ final class md {
           pl.field_a[1] = ta.field_c.nextInt();
           pl.field_a[3] = (int)MouseWheelInput.field_d;
           pl.field_a[2] = (int)(MouseWheelInput.field_d >> 32);
-          ui.field_p.field_k = 0;
-          ui.field_p.b(false, pl.field_a[0]);
-          ui.field_p.b(false, pl.field_a[1]);
-          ui.field_p.b(false, pl.field_a[2]);
-          ui.field_p.b(false, pl.field_a[3]);
+          ui.field_p.position = 0;
+          ui.field_p.writeInt(false, pl.field_a[0]);
+          ui.field_p.writeInt(false, pl.field_a[1]);
+          ui.field_p.writeInt(false, pl.field_a[2]);
+          ui.field_p.writeInt(false, pl.field_a[3]);
           vd.a(ui.field_p, (byte) -69);
           ui.field_p.b(param1, (byte) -124);
           param0.a((byte) -6, ui.field_p);
-          ra.field_C.field_k = 0;
+          ra.field_C.position = 0;
           if (!param2) {
-            ra.field_C.a(16, (byte) -96);
+            ra.field_C.writeByte(16, (byte) -96);
           } else {
-            ra.field_C.a(18, (byte) -105);
+            ra.field_C.writeByte(18, (byte) -105);
           }
-          ra.field_C.field_k = ra.field_C.field_k + 2;
-          var5_int = ra.field_C.field_k;
-          ra.field_C.b(false, db.field_Z);
-          ra.field_C.a(sb.field_a, 2147483647);
+          ra.field_C.position = ra.field_C.position + 2;
+          var5_int = ra.field_C.position;
+          ra.field_C.writeInt(false, db.field_Z);
+          ra.field_C.writeLong(sb.field_a, 2147483647);
           var6 = 0;
           if (oc.field_i) {
             var6 = var6 | 1;
@@ -54,17 +54,17 @@ final class md {
           if (kg.field_a != null) {
             var6 = var6 | 16;
           }
-          ra.field_C.a(var6, (byte) -77);
+          ra.field_C.writeByte(var6, (byte) -77);
           var7 = bg.a(gd.b((byte) 77), -22004);
           if (var7 == null) {
             var7 = "";
           }
-          ra.field_C.a((byte) -57, var7);
+          ra.field_C.writeString((byte) -57, var7);
           if (null != kg.field_a) {
             ra.field_C.b(kg.field_a, 126);
           }
           NodeHashTableIterator.a(sc.field_d, ra.field_C, fj.field_N, ~param3, ui.field_p);
-          ra.field_C.c(ra.field_C.field_k - var5_int, (byte) -96);
+          ra.field_C.c(ra.field_C.position - var5_int, (byte) -96);
           me.a(param3, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,7 +77,7 @@ final class md {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -88,19 +88,19 @@ final class md {
           var6 = ra.field_C;
           var6.c(param0, 7);
           int var4 = 81 / ((-12 - param2) / 48);
-          var6.field_k = var6.field_k + 1;
-          var5 = var6.field_k;
-          var6.a(1, (byte) -87);
-          var6.a(param1.field_j, (byte) -91);
-          var6.a(param1.field_k, (byte) -77);
-          var6.b(false, param1.field_i);
-          var6.b(false, param1.field_n);
-          var6.b(false, param1.field_l);
-          var6.b(false, param1.field_o);
+          var6.position = var6.position + 1;
+          var5 = var6.position;
+          var6.writeByte(1, (byte) -87);
+          var6.writeByte(param1.field_j, (byte) -91);
+          var6.writeByte(param1.field_k, (byte) -77);
+          var6.writeInt(false, param1.field_i);
+          var6.writeInt(false, param1.field_n);
+          var6.writeInt(false, param1.field_l);
+          var6.writeInt(false, param1.field_o);
           var6.a(var5, false);
-          var6.a(true, -var5 + var6.field_k);
+          var6.a(true, -var5 + var6.position);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "md.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "md.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

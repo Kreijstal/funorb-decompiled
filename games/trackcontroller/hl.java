@@ -33,13 +33,13 @@ abstract class hl extends td {
 
     final static void a(int param0, PacketBuffer param1, int param2, int param3, int param4) {
         try {
-          param1.a(12, (byte) -69);
+          param1.writeByte(12, (byte) -69);
           param1.b(param2, (byte) -123);
           param1.b(param3, (byte) -120);
           param1.b(param0, (byte) -119);
-          param1.a(param4, (byte) -59);
+          param1.writeByte(param4, (byte) -59);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "hl.SB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "hl.SB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -62,15 +62,15 @@ abstract class hl extends td {
 
     abstract void b(int param0, int param1, int param2);
 
-    final al d(byte param0) {
+    final UiWidget d(byte param0) {
         if (param0 > -124) {
-          return (al) null;
+          return (UiWidget) null;
         }
-        al var2 = super.d((byte) -125);
+        UiWidget var2 = super.d((byte) -125);
         if (var2 != null) {
           return var2;
         }
-        return (al) (this);
+        return (UiWidget) (this);
     }
 
     hl(vl param0, int param1, int param2) {
@@ -80,7 +80,7 @@ abstract class hl extends td {
           this.field_D = param0;
           this.field_G = 0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -119,40 +119,40 @@ abstract class hl extends td {
           return;
         }
         if (gd.field_p == null) {
-          gd.field_p = new qj(this.field_x, this.field_u);
+          gd.field_p = new Sprite(this.field_x, this.field_u);
           mb.a((byte) -116, gd.field_p);
-          ll.a();
+          SoftwareRasterizer.a();
           this.b(0, 20, 0);
           super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
-          ch.m(119);
+          GameShell.m(119);
           gd.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
           return;
         }
         if (this.field_x > gd.field_p.field_t) {
-          gd.field_p = new qj(this.field_x, this.field_u);
+          gd.field_p = new Sprite(this.field_x, this.field_u);
           mb.a((byte) -116, gd.field_p);
-          ll.a();
+          SoftwareRasterizer.a();
           this.b(0, 20, 0);
           super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
-          ch.m(119);
+          GameShell.m(119);
           gd.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
           return;
         }
         if (this.field_u > gd.field_p.field_q) {
-          gd.field_p = new qj(this.field_x, this.field_u);
+          gd.field_p = new Sprite(this.field_x, this.field_u);
           mb.a((byte) -116, gd.field_p);
-          ll.a();
+          SoftwareRasterizer.a();
           this.b(0, 20, 0);
           super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
-          ch.m(119);
+          GameShell.m(119);
           gd.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
           return;
         }
         mb.a((byte) -116, gd.field_p);
-        ll.a();
+        SoftwareRasterizer.a();
         this.b(0, 20, 0);
         super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
-        ch.m(119);
+        GameShell.m(119);
         gd.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
     }
 

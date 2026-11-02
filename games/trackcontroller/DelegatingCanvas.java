@@ -9,7 +9,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "te.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "te.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "te.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "te.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

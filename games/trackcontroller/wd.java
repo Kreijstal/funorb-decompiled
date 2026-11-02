@@ -77,7 +77,7 @@ abstract class wd extends hl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -163,15 +163,15 @@ abstract class wd extends hl {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = TrackController.field_F ? 1 : 0;
-        ll.b(6 + param0, param2 + 35, this.field_x - 12, -40 + this.field_u, 2105376, 0);
+        SoftwareRasterizer.b(6 + param0, param2 + 35, this.field_x - 12, -40 + this.field_u, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param2;
         while (var7 < var4) {
-          if (ll.field_b <= var8 &&
-            ll.field_g > var8) {
+          if (SoftwareRasterizer.field_b <= var8 &&
+            SoftwareRasterizer.field_g > var8) {
             var9 = var5 + (-var5 + var6) * var7 / var4;
             var10 = 0;
             var11 = this.field_x;
@@ -184,7 +184,7 @@ abstract class wd extends hl {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  ll.field_i[param0 + (var8 * ll.field_d + var10)] = var13;
+                  SoftwareRasterizer.field_i[param0 + (var8 * SoftwareRasterizer.field_d + var10)] = var13;
                 }
                 var10++;
               }
@@ -201,7 +201,7 @@ abstract class wd extends hl {
                   } else {
                     var15 = var9 * (-var14 + 462) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    ll.field_i[param0 + var8 * ll.field_d + var11] = var15;
+                    SoftwareRasterizer.field_i[param0 + var8 * SoftwareRasterizer.field_d + var11] = var15;
                   }
                   var13Lifetime1++;
                   var11++;
@@ -212,7 +212,7 @@ abstract class wd extends hl {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            ll.a(param0 + var10, var8, var11 - var10, var9);
+            SoftwareRasterizer.a(param0 + var10, var8, var11 - var10, var9);
           }
           var7++;
           var8++;
@@ -228,8 +228,8 @@ abstract class wd extends hl {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          ll.a(param0, var8Lifetime1, 6, var9Lifetime1);
-          ll.a(-6 + param0 + this.field_x, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.a(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.a(-6 + param0 + this.field_x, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -244,8 +244,8 @@ abstract class wd extends hl {
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          ll.a(param0, var8Lifetime2, 6, var9Lifetime2);
-          ll.a(param0 - (-this.field_x + 6), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.a(param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.a(param0 - (-this.field_x + 6), var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
       "sources": {
         "files": 298,
-        "sha256": "e75c39185764cece9a50e0b531dd817a441d146d26797b499b39b5159ff88973"
+        "sha256": "0c99b28f172b1b44599bd62e1a9b19ded3a988261d6b94c08893f3021a358d72"
       },
       "dictionary": {
         "path": "decompilation/trackcontroller-naming.json",
-        "sha256": "ba4b9670f5041399e6741281215c5c6f74e16d76f5e3edcec85ad6881b3509e6"
+        "sha256": "31010000dcd3c358891e6e5aa2e146b5854b60a3c27581464d4b2ab360f348ea"
       },
       "readingGuide": {
         "path": "games/trackcontroller/README.md",
-        "sha256": "94e2af2dd90952e879466162644cbc22e361ac40a8f93d118e24575a15df24c7"
+        "sha256": "09ff7c50d3a4ecdce7da44b3059c826ae94a8927731019e012eddc85ee081b8c"
       },
-      "rulesSha256": "22b86c7971b696821ce8593a52894cd4ca9196e39ed275ef64cc288cf2698a9b",
+      "rulesSha256": "5afd79645d6d62f5c4a2848f958c6797dd4f733272eb5aa79b5f4abf4d4458b9",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12455,7 +12455,7 @@
         },
         "publishedSources": {
           "files": 298,
-          "sha256": "e75c39185764cece9a50e0b531dd817a441d146d26797b499b39b5159ff88973"
+          "sha256": "0c99b28f172b1b44599bd62e1a9b19ded3a988261d6b94c08893f3021a358d72"
         }
       },
       "transmogrify": {

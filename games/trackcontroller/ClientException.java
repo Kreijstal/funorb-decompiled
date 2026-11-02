@@ -59,7 +59,7 @@ final class ClientException extends RuntimeException {
               if (vi.field_f.field_e == var4) {
                 var5 = j.field_a;
               } else {
-                var5 = sl.field_n;
+                var5 = LevelGrid.field_n;
               }
             } else {
               var5 = db.field_db;
@@ -112,7 +112,7 @@ final class ClientException extends RuntimeException {
               }
               var9 = stackIn_45_0;
               if (var9 != null) {
-                var9.a((of.field_f << 1) + pc.field_m, var8Lifetime1 - mb.field_c, var1_int, (byte) 39, (mb.field_c << 1) + var7Lifetime1);
+                var9.a((of.field_f << 1) + ArchiveIndex.field_m, var8Lifetime1 - mb.field_c, var1_int, (byte) 39, (mb.field_c << 1) + var7Lifetime1);
               }
               var1_int = var1_int + of.field_f;
             }
@@ -121,7 +121,7 @@ final class ClientException extends RuntimeException {
               var1_int = var1_int + dh.field_l;
             } else {
               mk.field_b.c(var6, var8Lifetime1, dk.field_a + var1_int, var5, -1);
-              var1_int = var1_int + (na.field_e + of.field_f + pc.field_m);
+              var1_int = var1_int + (na.field_e + of.field_f + ArchiveIndex.field_m);
             }
             var3++;
           }
@@ -129,7 +129,7 @@ final class ClientException extends RuntimeException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "nl.C(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1), "nl.C(" + param0 + ')');
         }
     }
 

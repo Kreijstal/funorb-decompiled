@@ -15,7 +15,7 @@ final class ej implements Runnable {
     private int field_j;
     private ce field_k;
     private DataInputStream field_a;
-    static qj field_d;
+    static Sprite field_d;
 
     final PacketBuffer a(int param0) {
         if (param0 != -5) {
@@ -50,7 +50,7 @@ final class ej implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class ej implements Runnable {
             var3.write(BufferedSocket.a((byte) -6, var5));
             this.field_a = new DataInputStream(var4.getInputStream());
           }
-          this.field_g.field_k = 0;
+          this.field_g.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IOException) (Object) decompiledCaughtException;
@@ -266,7 +266,7 @@ final class ej implements Runnable {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -280,16 +280,16 @@ final class ej implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = TrackController.field_F ? 1 : 0;
           try {
-            while (this.field_g.field_k < this.field_g.field_j.length) {
-              var1_int = this.field_a.read(this.field_g.field_j, this.field_g.field_k, -this.field_g.field_k + this.field_g.field_j.length);
+            while (this.field_g.position < this.field_g.payload.length) {
+              var1_int = this.field_a.read(this.field_g.payload, this.field_g.position, -this.field_g.position + this.field_g.payload.length);
               if (var1_int >= 0) {
-                this.field_g.field_k = this.field_g.field_k + var1_int;
+                this.field_g.position = this.field_g.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_g.field_j.length == this.field_g.field_k) {
-              throw ej.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.field_j.length + " " + this.field_l));
+            if (this.field_g.payload.length == this.field_g.position) {
+              throw ej.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_l));
             }
             var1 = this;
             synchronized (var1) {
@@ -361,7 +361,7 @@ final class ej implements Runnable {
           this.field_c = param0;
           this.field_g = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

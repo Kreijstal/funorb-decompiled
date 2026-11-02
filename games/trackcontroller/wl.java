@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wl extends IntrusiveNode {
-    static kk field_l;
+    static Archive field_l;
     byte[] field_k;
     static int field_j;
     static wj field_i;
@@ -36,7 +36,7 @@ final class wl extends IntrusiveNode {
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

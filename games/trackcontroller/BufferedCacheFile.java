@@ -3,19 +3,19 @@
  */
 import java.io.*;
 
-final class il {
+final class BufferedCacheFile {
     private int field_c;
     static th field_e;
     private long field_d;
     private byte[] field_h;
     private long field_g;
-    private tc field_m;
+    private RandomAccessCacheFile field_m;
     private int field_f;
     private long field_j;
     private byte[] field_a;
     private long field_k;
     private long field_i;
-    static qj[] field_l;
+    static Sprite[] field_l;
     private long field_b;
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
@@ -160,7 +160,7 @@ final class il {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class il {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -214,13 +214,13 @@ final class il {
         this.a(-120);
         this.field_m.a(-31576);
         if (param0 != 0) {
-          il.c(57);
+          BufferedCacheFile.c(57);
         }
     }
 
     final static int c(int param0) {
         if (param0 != -14496) {
-          il.b(-115);
+          BufferedCacheFile.b(-115);
         }
         return (int)(1000000000L / ba.field_f);
     }
@@ -278,7 +278,7 @@ final class il {
         field_e = null;
         field_l = null;
         if (param0 != -1) {
-          il.b(-44);
+          BufferedCacheFile.b(-44);
         }
     }
 
@@ -414,11 +414,11 @@ final class il {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    il(tc param0, int param1, int param2) throws IOException {
+    BufferedCacheFile(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_d = -1L;
         this.field_j = -1L;
@@ -432,18 +432,18 @@ final class il {
           this.field_h = new byte[param2];
           this.field_a = new byte[param1];
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "il.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "il.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void a(int param0, byte[] param1) throws IOException {
         try {
           if (param0 > -113) {
-            il.b(46);
+            BufferedCacheFile.b(46);
           }
           this.a(param1, param1.length, 0, 0);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "il.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "il.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

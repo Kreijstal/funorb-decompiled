@@ -51,7 +51,7 @@ final class of extends ec {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -68,12 +68,12 @@ final class of extends ec {
             of.a((java.applet.Applet) null, (java.net.URL) null, false);
           }
           kf.field_b = la.field_s;
-          fg.field_a = wi.field_a;
-          mg.field_a = hd.field_q;
+          fg.field_a = ArchiveSource.field_a;
+          GameScreen.field_a = hd.field_q;
           hd.field_q = false;
           uk.field_a = wf.field_d;
           db.field_X = sa.field_M;
-          wg.field_e = ch.field_x;
+          wg.field_e = GameShell.field_x;
           wf.field_d = 0;
         }
     }
@@ -129,7 +129,7 @@ final class of extends ec {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+            throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

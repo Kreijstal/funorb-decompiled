@@ -11,7 +11,7 @@ final class sa extends ok {
     static String field_P;
     private int field_E;
     private int field_N;
-    private oh field_H;
+    private BitmapFont field_H;
     private String field_O;
     private int field_S;
     private boolean field_L;
@@ -58,7 +58,7 @@ final class sa extends ok {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "sa.B(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1), "sa.B(" + param0 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class sa extends ok {
         field_K = null;
     }
 
-    sa(int param0, int param1, int param2, int param3, al param4, boolean param5, int param6, int param7, oh param8, int param9, String param10) {
+    sa(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (t) null, (tg) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -142,7 +142,7 @@ final class sa extends ok {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

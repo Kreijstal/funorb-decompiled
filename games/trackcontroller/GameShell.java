@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ch extends GameApplet {
+abstract class GameShell extends GameApplet {
     private int field_A;
     private long field_w;
     String field_t;
@@ -123,10 +123,10 @@ abstract class ch extends GameApplet {
         try {
           this.a(480, param2, 640, 16813, param1);
           if (param0 >= -64) {
-            ch.n(-86);
+            GameShell.n(-86);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ch.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ch.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -164,7 +164,7 @@ abstract class ch extends GameApplet {
     }
 
     private final void k(int param0) {
-        int var2 = ne.field_a.h(16383);
+        int var2 = ne.field_a.readUnsignedByte(16383);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         if (param0 != -6) {
           this.b(true, 26);
@@ -325,7 +325,7 @@ abstract class ch extends GameApplet {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -397,7 +397,7 @@ abstract class ch extends GameApplet {
                   fi.field_t = null;
                 } else {
                   fi.field_p = ClientException.field_e;
-                  ri.e(-45);
+                  ActiveLevel.e(-45);
                   rl.field_N = 10;
                   ge.field_D = false;
                 }
@@ -450,7 +450,7 @@ abstract class ch extends GameApplet {
                   var9 = (String) null;
                   kd.a((String) null, (byte) 110);
                 } else {
-                  var7 = ka.a(0, -129, var12.field_j, var12.field_k);
+                  var7 = ka.a(0, -129, var12.payload, var12.position);
                   kd.a(var7, (byte) 92);
                 }
                 he.field_c = null;
@@ -518,18 +518,18 @@ abstract class ch extends GameApplet {
         if (gj.field_c != 0) {
           return var2;
         }
-        ri.e(-128);
+        ActiveLevel.e(-128);
         return var2;
     }
 
     final static void m(int param0) {
-        vg var1 = (vg) (cj.field_j.c((byte) -82));
+        vg var1 = (vg) (cj.field_j.removeLast((byte) -82));
         if (var1 != null) {
           int var2 = -73 % ((-24 - param0) / 38);
-          ll.a(var1.field_l, var1.field_j, var1.field_n);
-          ll.e(var1.field_q, var1.field_m, var1.field_k, var1.field_i);
+          SoftwareRasterizer.a(var1.field_l, var1.field_j, var1.field_n);
+          SoftwareRasterizer.e(var1.field_q, var1.field_m, var1.field_k, var1.field_i);
           var1.field_l = null;
-          gd.field_q.a((byte) -111, var1);
+          gd.field_q.addLast((byte) -111, var1);
           return;
         }
         throw new IllegalStateException();
@@ -568,9 +568,9 @@ abstract class ch extends GameApplet {
           NodeHashTableIterator.field_c = rd.field_l.a(86);
         }
         if (gh.a(3100)) {
-          var4 = il.c(-14496) * 1200;
+          var4 = BufferedCacheFile.c(-14496) * 1200;
           if (this.field_s ||
-            !(mg.a((byte) -29) <= var4) &&
+            !(GameScreen.a((byte) -29) <= var4) &&
             !(uk.a(0) <= var4)) {
             this.field_s = false;
             GameKeyHandler.a((byte) 112);
@@ -590,7 +590,7 @@ abstract class ch extends GameApplet {
             gj.field_c == 0 &&
             rl.field_N == 11 &&
             !IntrusiveNode.c(76)) {
-            ri.e(-96);
+            ActiveLevel.e(-96);
           }
           if (gj.field_c != -1 &&
             gj.field_c != 0) {
@@ -692,7 +692,7 @@ abstract class ch extends GameApplet {
           l.a(ei.field_i, ha.field_x, (byte) -112, ok.field_G) &&
           rc.a(-25, ok.field_G)) {
           nj.b((byte) -98);
-          sl.b((byte) -51);
+          LevelGrid.b((byte) -51);
           qi.field_k = gj.field_a;
           BufferedSocket.field_d = false;
           oe.a(oc.field_i, ei.field_i, ha.field_x, ok.field_G, -28484);
@@ -728,7 +728,7 @@ abstract class ch extends GameApplet {
         if (gl.field_I == 11) {
           if (null != ed.field_I && (!ed.field_I.c(-47) ||
             !ed.field_I.a((byte) 48))) {
-            ud.a(128, 0.0f, ug.a(pc.field_t, ed.field_I, 2147483647, jb.field_c));
+            ud.a(128, 0.0f, ug.a(ArchiveIndex.field_t, ed.field_I, 2147483647, jb.field_c));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -794,7 +794,7 @@ abstract class ch extends GameApplet {
     public static void n(int param0) {
         field_n = null;
         if (param0 != -8511) {
-          ch.m(-32);
+          GameShell.m(-32);
         }
         field_z = (byte[][]) null;
         field_y = null;
@@ -807,7 +807,7 @@ abstract class ch extends GameApplet {
         }
     }
 
-    protected ch() {
+    protected GameShell() {
     }
 
     static {

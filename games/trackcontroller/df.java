@@ -221,7 +221,7 @@ final class df {
         var2 = this.field_a.length;
         System.arraycopy(this.field_a, 0, field_j, 0, var2);
         var3 = field_k[this.field_i - 1];
-        var4 = ea.b(false, var3 - 1);
+        var4 = LevelData.b(false, var3 - 1);
         field_c[0] = ml.f(var4);
         field_c[1] = ml.f(var4);
         var5 = 2;

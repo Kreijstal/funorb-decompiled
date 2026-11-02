@@ -7,7 +7,7 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode field_k;
     long field_m;
     static int field_i;
-    static qj[] field_l;
+    static Sprite[] field_l;
 
     final static void a(int param0, int param1) {
         IntrusiveNode var2 = null;
@@ -17,24 +17,24 @@ class DualLinkNode extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          var4 = (ei) (fj.field_H.b(2));
+          var4 = (ei) (fj.field_H.first(2));
           while (var4 != null) {
             kc.a(param1, (byte) 75, var4);
-            var4 = (ei) (fj.field_H.a(10));
+            var4 = (ei) (fj.field_H.next(10));
           }
           if (param0 != 4) {
             field_n = (aa) null;
           }
-          var2 = ne.field_b.b(2);
+          var2 = ne.field_b.first(2);
           while (var2 != null) {
             cj.a(param1, false);
-            var2 = ne.field_b.a(10);
+            var2 = ne.field_b.next(10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var2_ref), "gb.OA(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var2_ref), "gb.OA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

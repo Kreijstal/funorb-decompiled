@@ -58,7 +58,7 @@ final class w extends wd implements m {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class w extends wd implements m {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class w extends wd implements m {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        al var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (param1 == jf.field_l) {
@@ -120,7 +120,7 @@ final class w extends wd implements m {
               }
             }
           }
-          var4 = new al((String) (var3), (tg) null);
+          var4 = new UiWidget((String) (var3), (tg) null);
           var4.field_m = 50;
           var4.field_x = this.field_x;
           var4.field_u = 80;
@@ -145,7 +145,7 @@ final class w extends wd implements m {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw LevelGrid.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

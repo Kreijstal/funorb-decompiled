@@ -3,7 +3,7 @@
  */
 final class jk {
     static boolean field_a;
-    static ja field_c;
+    static IntrusiveDeque field_c;
     static String field_b;
 
     final static void a(int param0, int param1, int param2) {

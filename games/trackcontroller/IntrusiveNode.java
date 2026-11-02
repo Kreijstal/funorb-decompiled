@@ -4,12 +4,12 @@
 class IntrusiveNode {
     static String field_a;
     static String field_g;
-    IntrusiveNode field_e;
+    IntrusiveNode previous;
     static String field_f;
     static String[] field_c;
     static int field_d;
-    IntrusiveNode field_h;
-    long field_b;
+    IntrusiveNode next;
+    long key;
 
     final static boolean c(int param0) {
         boolean stackIn_7_0 = false;
@@ -24,7 +24,7 @@ class IntrusiveNode {
         if (param0 != 10000536) {
           IntrusiveNode.a(20, 32, 14, (byte) -49, 34);
         }
-        if (null == this.field_e) {
+        if (null == this.previous) {
           return false;
         }
         return true;
@@ -61,27 +61,27 @@ class IntrusiveNode {
           if (param3 > -14) {
             field_a = (String) null;
           }
-          ll.a(param4, param1, param0 + 1, 10000536);
-          ll.a(param4, param2 + param1, param0 + 1, 12105912);
+          SoftwareRasterizer.a(param4, param1, param0 + 1, 10000536);
+          SoftwareRasterizer.a(param4, param2 + param1, param0 + 1, 12105912);
           var5_int = 1;
           var6 = param2;
-          if (var5_int + param1 < ll.field_b) {
-            var5_int = ll.field_b - param1;
+          if (var5_int + param1 < SoftwareRasterizer.field_b) {
+            var5_int = SoftwareRasterizer.field_b - param1;
           }
-          if (param1 + var6 > ll.field_g) {
-            var6 = -param1 + ll.field_g;
+          if (param1 + var6 > SoftwareRasterizer.field_g) {
+            var6 = -param1 + SoftwareRasterizer.field_g;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 152 + var7 * 48 / param2;
             var9 = var8 << 8 | var8 << 16 | var8;
-            ll.field_i[param4 + (param1 + var7) * ll.field_d] = var9;
-            ll.field_i[param0 + (ll.field_d * (var7 + param1) + param4)] = var9;
+            SoftwareRasterizer.field_i[param4 + (param1 + var7) * SoftwareRasterizer.field_d] = var9;
+            SoftwareRasterizer.field_i[param0 + (SoftwareRasterizer.field_d * (var7 + param1) + param4)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var5), "fc.LB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var5), "fc.LB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -92,8 +92,8 @@ class IntrusiveNode {
         if (null != sb.field_b) {
           sb.field_b.f();
         }
-        if (g.field_x != null) {
-          g.field_x.f();
+        if (SpriteState.field_x != null) {
+          SpriteState.field_x.f();
         }
     }
 
@@ -149,7 +149,7 @@ class IntrusiveNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -163,17 +163,17 @@ class IntrusiveNode {
         field_c = null;
     }
 
-    final void a(int param0) {
+    final void unlink(int param0) {
         if (param0 >= -22) {
-          this.field_b = 48L;
+          this.key = 48L;
         }
-        if (null == this.field_e) {
+        if (null == this.previous) {
           return;
         }
-        this.field_e.field_h = this.field_h;
-        this.field_h.field_e = this.field_e;
-        this.field_h = null;
-        this.field_e = null;
+        this.previous.next = this.next;
+        this.next.previous = this.previous;
+        this.next = null;
+        this.previous = null;
     }
 
     static {

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nb extends wh {
+final class nb extends PcmStream {
     private ha[][] field_n;
-    private id field_r;
+    private NodeHashTable field_r;
     private int[] field_t;
     private int[] field_E;
     static String field_A;
@@ -183,7 +183,7 @@ final class nb extends wh {
           this.field_p = this.field_P.field_b[this.field_D];
           this.field_H = this.field_P.f(this.field_p);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "nb.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "nb.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -203,7 +203,7 @@ final class nb extends wh {
           if (param1.field_v < 0) {
             return true;
           }
-          param1.a(-35);
+          param1.unlink(-35);
           if (param1.field_F > 0 &&
             this.field_n[param1.field_D][param1.field_F] == param1) {
             this.field_n[param1.field_D][param1.field_F] = null;
@@ -219,7 +219,7 @@ final class nb extends wh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -241,12 +241,12 @@ final class nb extends wh {
         ha var3 = null;
         int var4 = TrackController.field_F ? 1 : 0;
         if ((4 & this.field_I[param0]) != 0) {
-          var3 = (ha) (this.field_G.field_q.b(2));
+          var3 = (ha) (this.field_G.field_q.first(2));
           while (var3 != null) {
             if (var3.field_D == param0) {
               var3.field_C = 0;
             }
-            var3 = (ha) (this.field_G.field_q.a(10));
+            var3 = (ha) (this.field_G.field_q.next(10));
           }
         }
         if (param1 != 0) {
@@ -297,7 +297,7 @@ final class nb extends wh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -364,7 +364,7 @@ final class nb extends wh {
         if ((this.field_I[param3] & 2) == 0) {
           var8.field_v = 0;
         } else {
-          var6 = (ha) (this.field_G.field_q.b(2));
+          var6 = (ha) (this.field_G.field_q.first(2));
           while (var6 != null) {
             if (var8.field_D == var6.field_D &&
               var6.field_v < 0 &&
@@ -372,7 +372,7 @@ final class nb extends wh {
               var8.field_v = 0;
               break;
             }
-            var6 = (ha) (this.field_G.field_q.a(10));
+            var6 = (ha) (this.field_G.field_q.next(10));
           }
         }
     }
@@ -422,7 +422,7 @@ final class nb extends wh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -460,7 +460,7 @@ final class nb extends wh {
             this.a();
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "nb.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "nb.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -547,44 +547,44 @@ final class nb extends wh {
         var5Lifetime4 = (32723 & param0) >> 8;
         var6Lifetime3 = (8336064 & param0) >> 16;
         if (var5Lifetime4 == 0) {
-          this.field_O[var4Lifetime4] = tc.a(-2080769, this.field_O[var4Lifetime4]) + (var6Lifetime3 << 14);
+          this.field_O[var4Lifetime4] = RandomAccessCacheFile.a(-2080769, this.field_O[var4Lifetime4]) + (var6Lifetime3 << 14);
         }
         if (var5Lifetime4 == 32) {
-          this.field_O[var4Lifetime4] = (var6Lifetime3 << 7) + tc.a(this.field_O[var4Lifetime4], -16257);
+          this.field_O[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(this.field_O[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 1) {
-          this.field_T[var4Lifetime4] = (var6Lifetime3 << 7) + tc.a(-16257, this.field_T[var4Lifetime4]);
+          this.field_T[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(-16257, this.field_T[var4Lifetime4]);
         }
         if (33 == var5Lifetime4) {
-          this.field_T[var4Lifetime4] = tc.a(-128, this.field_T[var4Lifetime4]) + var6Lifetime3;
+          this.field_T[var4Lifetime4] = RandomAccessCacheFile.a(-128, this.field_T[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 5) {
-          this.field_F[var4Lifetime4] = (var6Lifetime3 << 7) + tc.a(-16257, this.field_F[var4Lifetime4]);
+          this.field_F[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(-16257, this.field_F[var4Lifetime4]);
         }
         if (37 == var5Lifetime4) {
-          this.field_F[var4Lifetime4] = tc.a(this.field_F[var4Lifetime4], -128) + var6Lifetime3;
+          this.field_F[var4Lifetime4] = RandomAccessCacheFile.a(this.field_F[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 7) {
-          this.field_J[var4Lifetime4] = (var6Lifetime3 << 7) + tc.a(this.field_J[var4Lifetime4], -16257);
+          this.field_J[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(this.field_J[var4Lifetime4], -16257);
         }
         if (39 == var5Lifetime4) {
-          this.field_J[var4Lifetime4] = tc.a(this.field_J[var4Lifetime4], -128) + var6Lifetime3;
+          this.field_J[var4Lifetime4] = RandomAccessCacheFile.a(this.field_J[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 10) {
-          this.field_E[var4Lifetime4] = (var6Lifetime3 << 7) + tc.a(-16257, this.field_E[var4Lifetime4]);
+          this.field_E[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(-16257, this.field_E[var4Lifetime4]);
         }
         if (var5Lifetime4 == 42) {
-          this.field_E[var4Lifetime4] = tc.a(-128, this.field_E[var4Lifetime4]) + var6Lifetime3;
+          this.field_E[var4Lifetime4] = RandomAccessCacheFile.a(-128, this.field_E[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 11) {
-          this.field_K[var4Lifetime4] = (var6Lifetime3 << 7) + tc.a(-16257, this.field_K[var4Lifetime4]);
+          this.field_K[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(-16257, this.field_K[var4Lifetime4]);
         }
         if (var5Lifetime4 == 43) {
-          this.field_K[var4Lifetime4] = tc.a(this.field_K[var4Lifetime4], -128) + var6Lifetime3;
+          this.field_K[var4Lifetime4] = RandomAccessCacheFile.a(this.field_K[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 64) {
           if (var6Lifetime3 < 64) {
-            this.field_I[var4Lifetime4] = tc.a(this.field_I[var4Lifetime4], -2);
+            this.field_I[var4Lifetime4] = RandomAccessCacheFile.a(this.field_I[var4Lifetime4], -2);
           } else {
             this.field_I[var4Lifetime4] = ok.a(this.field_I[var4Lifetime4], 1);
           }
@@ -592,22 +592,22 @@ final class nb extends wh {
         if (var5Lifetime4 == 65) {
           if (var6Lifetime3 < 64) {
             this.b(-22803, var4Lifetime4);
-            this.field_I[var4Lifetime4] = tc.a(this.field_I[var4Lifetime4], -3);
+            this.field_I[var4Lifetime4] = RandomAccessCacheFile.a(this.field_I[var4Lifetime4], -3);
           } else {
             this.field_I[var4Lifetime4] = ok.a(this.field_I[var4Lifetime4], 2);
           }
         }
         if (var5Lifetime4 == 99) {
-          this.field_x[var4Lifetime4] = tc.a(this.field_x[var4Lifetime4], 127) + (var6Lifetime3 << 7);
+          this.field_x[var4Lifetime4] = RandomAccessCacheFile.a(this.field_x[var4Lifetime4], 127) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 98) {
-          this.field_x[var4Lifetime4] = tc.a(this.field_x[var4Lifetime4], 16256) + var6Lifetime3;
+          this.field_x[var4Lifetime4] = RandomAccessCacheFile.a(this.field_x[var4Lifetime4], 16256) + var6Lifetime3;
         }
         if (var5Lifetime4 == 101) {
-          this.field_x[var4Lifetime4] = (var6Lifetime3 << 7) + (16384 + tc.a(127, this.field_x[var4Lifetime4]));
+          this.field_x[var4Lifetime4] = (var6Lifetime3 << 7) + (16384 + RandomAccessCacheFile.a(127, this.field_x[var4Lifetime4]));
         }
         if (100 == var5Lifetime4) {
-          this.field_x[var4Lifetime4] = var6Lifetime3 + 16384 + tc.a(this.field_x[var4Lifetime4], 16256);
+          this.field_x[var4Lifetime4] = var6Lifetime3 + 16384 + RandomAccessCacheFile.a(this.field_x[var4Lifetime4], 16256);
         }
         if (var5Lifetime4 == 120) {
           this.a(var4Lifetime4, true);
@@ -621,25 +621,25 @@ final class nb extends wh {
         if (var5Lifetime4 == 6) {
           var7 = this.field_x[var4Lifetime4];
           if (var7 == 16384) {
-            this.field_S[var4Lifetime4] = (var6Lifetime3 << 7) + tc.a(-16257, this.field_S[var4Lifetime4]);
+            this.field_S[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(-16257, this.field_S[var4Lifetime4]);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.field_x[var4Lifetime4];
           if (16384 == var7Lifetime1) {
-            this.field_S[var4Lifetime4] = tc.a(-128, this.field_S[var4Lifetime4]) + var6Lifetime3;
+            this.field_S[var4Lifetime4] = RandomAccessCacheFile.a(-128, this.field_S[var4Lifetime4]) + var6Lifetime3;
           }
         }
         if (var5Lifetime4 == 16) {
-          this.field_R[var4Lifetime4] = (var6Lifetime3 << 7) + tc.a(this.field_R[var4Lifetime4], -16257);
+          this.field_R[var4Lifetime4] = (var6Lifetime3 << 7) + RandomAccessCacheFile.a(this.field_R[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 48) {
-          this.field_R[var4Lifetime4] = var6Lifetime3 + tc.a(this.field_R[var4Lifetime4], -128);
+          this.field_R[var4Lifetime4] = var6Lifetime3 + RandomAccessCacheFile.a(this.field_R[var4Lifetime4], -128);
         }
         if (81 == var5Lifetime4) {
           if (var6Lifetime3 < 64) {
             this.c(var4Lifetime4, 0);
-            this.field_I[var4Lifetime4] = tc.a(this.field_I[var4Lifetime4], -5);
+            this.field_I[var4Lifetime4] = RandomAccessCacheFile.a(this.field_I[var4Lifetime4], -5);
           } else {
             this.field_I[var4Lifetime4] = ok.a(this.field_I[var4Lifetime4], 4);
           }
@@ -659,14 +659,14 @@ final class nb extends wh {
         int var5;
         int var6_int;
         mh var6;
-        ik var7;
+        PcmSample var7;
         ha var8;
         ha var9;
         int var10;
         var10 = TrackController.field_F ? 1 : 0;
         this.a(param2, -27205, 64, param3);
         if ((2 & this.field_I[param3]) != 0) {
-          var5_ref_ha = (ha) (this.field_G.field_q.a((byte) 95));
+          var5_ref_ha = (ha) (this.field_G.field_q.last((byte) 95));
           while (var5_ref_ha != null) {
             if (~param3 == ~var5_ref_ha.field_D &&
               0 > var5_ref_ha.field_v) {
@@ -679,7 +679,7 @@ final class nb extends wh {
               var5_ref_ha.field_p = var6_int - var5_ref_ha.field_A;
               return;
             }
-            var5_ref_ha = (ha) (this.field_G.field_q.d(100));
+            var5_ref_ha = (ha) (this.field_G.field_q.previous(100));
           }
         }
         var5 = -7 % ((57 - param0) / 55);
@@ -707,12 +707,12 @@ final class nb extends wh {
         var8.field_o = 0;
         var8.field_q = 0;
         if (0 != this.field_R[param3]) {
-          var8.field_l = bh.a(var7, this.a(var8, (byte) 117), 0, this.b(var8, (byte) 105));
+          var8.field_l = PcmSampleStream.a(var7, this.a(var8, (byte) 117), 0, this.b(var8, (byte) 105));
           stackIn_16_1 = false;
           stackIn_17_2 = !(var6.field_q[param2] >= 0);
           this.a(stackIn_16_1, stackIn_17_2, var8);
         } else {
-          var8.field_l = bh.a(var7, this.a(var8, (byte) 119), this.a(var8, 3), this.b(var8, (byte) 105));
+          var8.field_l = PcmSampleStream.a(var7, this.a(var8, (byte) 119), this.a(var8, 3), this.b(var8, (byte) 105));
         }
         if (var6.field_q[param2] < 0) {
           var8.field_l.f(-1);
@@ -726,7 +726,7 @@ final class nb extends wh {
           }
           this.field_n[param3][var8.field_F] = var8;
         }
-        this.field_G.field_q.a((byte) -96, var8);
+        this.field_G.field_q.addLast((byte) -96, var8);
         this.field_L[param3][param2] = var8;
         return;
     }
@@ -750,7 +750,7 @@ final class nb extends wh {
           if (0 <= param4.field_v && (null == param4.field_l ||
             param4.field_l.j())) {
             param4.e(-95);
-            param4.a(-35);
+            param4.unlink(-35);
             if (param4.field_F > 0) {
               if (param4 != this.field_n[param4.field_D][param4.field_F]) {
                 return true;
@@ -839,7 +839,7 @@ final class nb extends wh {
           }
           param4.e(param3 - 100);
           if (param4.field_v >= 0) {
-            param4.a(param3 ^ -62);
+            param4.unlink(param3 ^ -62);
             if (param4.field_F > 0 &&
               this.field_n[param4.field_D][param4.field_F] == param4) {
               this.field_n[param4.field_D][param4.field_F] = null;
@@ -862,7 +862,7 @@ final class nb extends wh {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 
@@ -877,7 +877,7 @@ final class nb extends wh {
         ha var3;
         int var4;
         var4 = TrackController.field_F ? 1 : 0;
-        var3 = (ha) (this.field_G.field_q.b(2));
+        var3 = (ha) (this.field_G.field_q.first(2));
         while (var3 != null) {
           if (0 > param0 ||
             param0 == var3.field_D) {
@@ -891,9 +891,9 @@ final class nb extends wh {
             if (var3.field_v < 0) {
               this.field_L[var3.field_D][var3.field_i] = null;
             }
-            var3.a(-36);
+            var3.unlink(-36);
           }
-          var3 = (ha) (this.field_G.field_q.a(10));
+          var3 = (ha) (this.field_G.field_q.next(10));
         }
         if (!param1) {
           this.a(-59, -83, 120, 85);
@@ -927,7 +927,7 @@ final class nb extends wh {
         this.b(param0, 8192, -131394585);
     }
 
-    final synchronized wh a() {
+    final synchronized PcmStream a() {
         return null;
     }
 
@@ -969,18 +969,18 @@ final class nb extends wh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final static qj[] a(byte param0) {
+    final static Sprite[] a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = TrackController.field_F ? 1 : 0;
-        qj[] var1 = new qj[gi.field_o];
+        Sprite[] var1 = new Sprite[gi.field_o];
         if (param0 >= -40) {
           String var8 = (String) null;
           nb.a((String) null, false, 38);
@@ -990,9 +990,9 @@ final class nb extends wh {
           var4 = qk.field_M[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = qe.field_z[tc.a((int) var4[var6], 255)];
+            var5[var6] = qe.field_z[RandomAccessCacheFile.a((int) var4[var6], 255)];
           }
-          var1[var2] = new qj(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var5);
+          var1[var2] = new Sprite(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var5);
         }
         ff.b(119);
         return var1;
@@ -1017,7 +1017,7 @@ final class nb extends wh {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (16 > var5) {
-          this.field_O[var5] = tc.a(this.field_y[var5], -128);
+          this.field_O[var5] = RandomAccessCacheFile.a(this.field_y[var5], -128);
           var5++;
         }
     }
@@ -1025,14 +1025,14 @@ final class nb extends wh {
     final static void a(String param0, boolean param1, int param2) {
         try {
           gh.field_k = true;
-          pc.field_h = param1 ? true : false;
-          kb.field_a = new jj(gl.field_E, p.field_a, param0, vg.field_o, pc.field_h);
+          ArchiveIndex.field_h = param1 ? true : false;
+          kb.field_a = new jj(gl.field_E, p.field_a, param0, vg.field_o, ArchiveIndex.field_h);
           if (param2 != -16257) {
             field_s = (int[]) null;
           }
           gl.field_E.d((byte) -94, kb.field_a);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "nb.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "nb.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1041,18 +1041,18 @@ final class nb extends wh {
         int var4;
         var4 = TrackController.field_F ? 1 : 0;
         if ((2 & this.field_I[param1]) != 0) {
-          var3 = (ha) (this.field_G.field_q.b(2));
+          var3 = (ha) (this.field_G.field_q.first(2));
           while (var3 != null) {
             if (~var3.field_D == ~param1) {
               if (null != this.field_L[param1][var3.field_i]) {
-                var3 = (ha) (this.field_G.field_q.a(10));
+                var3 = (ha) (this.field_G.field_q.next(10));
                 continue;
               }
               if (var3.field_v < 0) {
                 var3.field_v = 0;
               }
             }
-            var3 = (ha) (this.field_G.field_q.a(10));
+            var3 = (ha) (this.field_G.field_q.next(10));
           }
         }
         if (param0 != -22803) {
@@ -1060,8 +1060,8 @@ final class nb extends wh {
         }
     }
 
-    final synchronized wh b() {
-        return (wh) ((Object) this.field_G);
+    final synchronized PcmStream b() {
+        return (PcmStream) ((Object) this.field_G);
     }
 
     private final int a(ha param0, int param1) {
@@ -1136,13 +1136,13 @@ final class nb extends wh {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final void d(int param0, int param1, int param2) {
         this.field_y[param2] = param0;
-        this.field_O[param2] = tc.a(param0, -128);
+        this.field_O[param2] = RandomAccessCacheFile.a(param0, -128);
         this.a((byte) 83, param2, param0);
         if (param1 != -3) {
           this.field_O = (int[]) null;
@@ -1181,11 +1181,11 @@ final class nb extends wh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final synchronized boolean a(kk param0, byte param1, int param2, jc param3, wb param4) {
+    final synchronized boolean a(Archive param0, byte param1, int param2, jc param3, wb param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -1217,7 +1217,7 @@ final class nb extends wh {
           var8 = (wl) (param4.field_i.b(-35));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var9 = (int)var8.field_b;
+            var9 = (int)var8.key;
             var12 = (mh) (this.field_r.a(8434, (long)var9));
             if (var12 == null) {
               var13 = kf.a(-97, param0, var9);
@@ -1264,7 +1264,7 @@ final class nb extends wh {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -1273,14 +1273,14 @@ final class nb extends wh {
         if (param1 < 82) {
           return;
         }
-        ha var3 = (ha) (this.field_G.field_q.b(2));
+        ha var3 = (ha) (this.field_G.field_q.first(2));
         while (var3 != null) {
           if ((param0 < 0 || var3.field_D == param0) &&
             !(var3.field_v >= 0)) {
             this.field_L[var3.field_D][var3.field_i] = null;
             var3.field_v = 0;
           }
-          var3 = (ha) (this.field_G.field_q.a(10));
+          var3 = (ha) (this.field_G.field_q.next(10));
         }
     }
 
@@ -1307,7 +1307,7 @@ final class nb extends wh {
         this.field_O = new int[16];
         this.field_P = new fa();
         this.field_G = new ol(this);
-        this.field_r = new id(128);
+        this.field_r = new NodeHashTable(128);
         this.a(256, (byte) -119, -1);
         this.a((byte) 70, true);
     }

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ub extends rc implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_f;
-    static ja field_e;
+    static IntrusiveDeque field_e;
     private java.awt.image.ImageConsumer field_g;
 
     private final synchronized void b(int param0) {
@@ -20,7 +20,7 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
     public static void a(byte param0) {
         field_e = null;
         if (param0 != 12) {
-          field_e = (ja) null;
+          field_e = (IntrusiveDeque) null;
         }
     }
 
@@ -43,7 +43,7 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
           param2.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
           this.a(-91);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ub.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ub.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
           param0.setColorModel(this.field_f);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ub.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ub.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ub.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ub.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
             this.field_g = (java.awt.image.ImageConsumer) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ub.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ub.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -138,6 +138,6 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     static {
-        field_e = new ja();
+        field_e = new IntrusiveDeque();
     }
 }

@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-public final class TrackController extends ch {
+public final class TrackController extends GameShell {
     static ud field_G;
-    static qj[] field_D;
+    static Sprite[] field_D;
     static String[] field_E;
     static String field_C;
     public static boolean field_F;
@@ -33,11 +33,11 @@ public final class TrackController extends ch {
           if (na.field_b >= 80) {
             boolean decompiledFrameRemainder1 = true;
             if (~ib.field_a == ~sc.field_g &&
-              0 == id.field_g) {
+              0 == NodeHashTable.field_g) {
               if (ni.field_m[85]) {
-                g.field_p = g.field_p + 1;
+                SpriteState.field_p = SpriteState.field_p + 1;
               } else {
-                g.field_p = 0;
+                SpriteState.field_p = 0;
               }
               if (ib.field_a != -1) {
                 tk.field_p[ib.field_a].c(-99);
@@ -67,8 +67,8 @@ public final class TrackController extends ch {
               (decompiledFrameRemainder0)) {
               vl.n(-27145);
               vg.field_p = true;
-              id.field_g = id.field_g + 1;
-              if (id.field_g == 31) {
+              NodeHashTable.field_g = NodeHashTable.field_g + 1;
+              if (NodeHashTable.field_g == 31) {
                 if (sc.field_g != -2) {
                   if (sc.field_g != -1) {
                     var2 = 0;
@@ -84,11 +84,11 @@ public final class TrackController extends ch {
                   ua.field_L.b(0);
                 }
               }
-              if (id.field_g == 63) {
+              if (NodeHashTable.field_g == 63) {
                 if (ib.field_a == 11) {
-                  g.field_w = null;
+                  SpriteState.field_w = null;
                 }
-                id.field_g = 0;
+                NodeHashTable.field_g = 0;
                 ib.field_a = sc.field_g;
               }
               while (mh.e(127)) {
@@ -138,15 +138,15 @@ public final class TrackController extends ch {
                 dd.field_o = 3;
               }
             } else {
-              id.field_g = id.field_g - 1;
-              if (id.field_g == 0) {
+              NodeHashTable.field_g = NodeHashTable.field_g - 1;
+              if (NodeHashTable.field_g == 0) {
                 dd.field_o = 0;
               }
             }
           } else {
             vl.n(-27145);
-            id.field_g = id.field_g + 1;
-            if (id.field_g == 32) {
+            NodeHashTable.field_g = NodeHashTable.field_g + 1;
+            if (NodeHashTable.field_g == 32) {
               if (ag.b(74)) {
                 DelegatingCanvas.a((byte) -89);
               } else {
@@ -210,18 +210,18 @@ public final class TrackController extends ch {
           l.a((byte) 90, (java.awt.Canvas) (var7));
           return;
         }
-        if (il.field_e == null &&
+        if (BufferedCacheFile.field_e == null &&
           null == vd.field_G) {
           if (na.field_b < 80) {
             cd.field_c.h(0, 0);
             var3 = 640 * na.field_b / 160;
             var4 = 480 * na.field_b / 160;
-            ll.e(320 - var3, -var4 + 240, var3 + 320, 240 + var4);
+            SoftwareRasterizer.e(320 - var3, -var4 + 240, var3 + 320, 240 + var4);
           }
           boolean decompiledFrameRemainder0 = true;
           db.a(480, 0, na.field_c, 640, 0, (byte) -128);
           gd.field_x = false;
-          if (~sc.field_g == ~ib.field_a && (!(0 < id.field_g) ||
+          if (~sc.field_g == ~ib.field_a && (!(0 < NodeHashTable.field_g) ||
             dd.field_o != 0)) {
             if (ib.field_a == -1) {
               ua.field_L.h(24661);
@@ -231,21 +231,21 @@ public final class TrackController extends ch {
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (id.field_g >= 32) {
+            if (NodeHashTable.field_g >= 32) {
               if (-1 != sc.field_g &&
                 sc.field_g != -2) {
                 tk.field_p[sc.field_g].b(param0 - 161);
               } else {
                 ua.field_L.h(24661);
               }
-              var3Lifetime1 = -id.field_g + 63;
+              var3Lifetime1 = -NodeHashTable.field_g + 63;
             } else {
               if (ib.field_a != -1) {
                 tk.field_p[ib.field_a].b(-1);
               } else {
                 ua.field_L.h(param0 ^ 24821);
               }
-              var3Lifetime1 = id.field_g;
+              var3Lifetime1 = NodeHashTable.field_g;
             }
             ci.a(var3Lifetime1 + 1, -(var3Lifetime1 << 3) + 256, 16769381, false, false);
           }
@@ -254,9 +254,9 @@ public final class TrackController extends ch {
           } else {
             vd.b(-1, 2, 23636);
           }
-          ll.d();
+          SoftwareRasterizer.d();
           if (ag.b(param0 - 142)) {
-            ll.c(0, 0, ll.field_d, ll.field_k);
+            SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
             var3Lifetime2 = GameApplet.g(48);
             var4Lifetime1 = var3Lifetime2 % 26;
             if (var4Lifetime1 != 0) {
@@ -267,9 +267,9 @@ public final class TrackController extends ch {
             ClientException.a(-77);
           }
           if (0 != dd.field_o) {
-            var3Lifetime3 = id.field_g << 3;
+            var3Lifetime3 = NodeHashTable.field_g << 3;
             if (var3Lifetime3 > 0) {
-              ll.c(0, 0, ll.field_d, ll.field_k, 0, var3Lifetime3);
+              SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, var3Lifetime3);
             }
           }
           if (ob.g(-26998) &&
@@ -294,8 +294,8 @@ public final class TrackController extends ch {
     final void e(int param0) {
         TrackController.q(-29224);
         MouseInputHandler.a((byte) 120);
-        ja.c(false);
-        kk.a(-1);
+        IntrusiveDeque.c(false);
+        Archive.a(-1);
         bg.a(61);
         vb.a(true);
         ib.a((byte) -78);
@@ -305,13 +305,13 @@ public final class TrackController extends ch {
         uk.b(10);
         od.a(8192);
         we.a((byte) 57);
-        ch.n(-8511);
+        GameShell.n(-8511);
         ClientException.a((byte) -96);
         GameApplet.b((byte) -91);
         ej.b(17);
         MouseWheelInput.b(-31279);
-        ll.c();
-        oh.a();
+        SoftwareRasterizer.c();
+        BitmapFont.a();
         e.a(-1102);
         qf.a((byte) 98);
         PacketBuffer.i(3);
@@ -330,18 +330,18 @@ public final class TrackController extends ch {
         sk.a((byte) 111);
         gf.a((byte) 46);
         jc.a(-79);
-        ri.a(-107);
-        mg.a(-8381);
+        ActiveLevel.a(-107);
+        GameScreen.a(-8381);
         gj.b((byte) -103);
-        ea.d((byte) 96);
+        LevelData.d((byte) 96);
         md.a(false);
         sd.a((byte) -108);
         wg.c(param0 + 6778);
-        il.b(-1);
+        BufferedCacheFile.b(-1);
         BufferedSocket.c(32);
         IntrusiveNode.b((byte) 118);
         nb.d((byte) 84);
-        id.a(param0 - 104);
+        NodeHashTable.a(param0 - 104);
         ha.d(4);
         fa.c();
         ol.f(param0 ^ -109);
@@ -355,9 +355,9 @@ public final class TrackController extends ch {
         ac.a(105);
         p.b((byte) 117);
         ra.a(param0 - 208);
-        pc.a(true);
+        ArchiveIndex.a(true);
         vi.a(-25590);
-        wi.a(false);
+        ArchiveSource.a(false);
         pb.a(false);
         bb.a(true);
         ld.a(-16723);
@@ -376,8 +376,8 @@ public final class TrackController extends ch {
         gk.a(69);
         DualLinkNode.d(-126);
         fd.a((byte) 111);
-        g.a((byte) 12);
-        sl.a((byte) 107);
+        SpriteState.a((byte) 12);
+        LevelGrid.a((byte) 107);
         me.a((byte) 41);
         u.a((byte) 105);
         pg.a();
@@ -401,7 +401,7 @@ public final class TrackController extends ch {
         hf.a(6);
         lh.c((byte) -44);
         gd.c(-3);
-        tc.b((byte) -121);
+        RandomAccessCacheFile.b((byte) -121);
         rg.a(17883);
         tk.f(48);
         pl.c(-30877);
@@ -430,7 +430,7 @@ public final class TrackController extends ch {
         gh.b(8462);
         jd.a(-12814);
         rb.b(-2857);
-        al.d(param0 ^ -59);
+        UiWidget.d(param0 ^ -59);
         rh.i(param0 - 222);
         ok.d((byte) -7);
         wd.p(35);
@@ -572,12 +572,12 @@ public final class TrackController extends ch {
             return;
           }
           if (!jj.s(109)) {
-            il.field_e = sl.a(4, -124);
+            BufferedCacheFile.field_e = LevelGrid.a(4, -124);
             vd.field_G = dh.a(5, -1, 0, 1);
           }
         }
         if (pf.field_T) {
-          if (il.field_e == null) {
+          if (BufferedCacheFile.field_e == null) {
             if (vd.field_G == null) {
               if (!ag.b(116)) {
                 if (!ob.g(-26998)) {
@@ -621,18 +621,18 @@ public final class TrackController extends ch {
               }
             } else {
               if (vd.field_G.field_k) {
-                if (vd.field_G.field_m[0] > pc.field_i) {
-                  pc.field_i = vd.field_G.field_m[0];
+                if (vd.field_G.field_m[0] > ArchiveIndex.field_i) {
+                  ArchiveIndex.field_i = vd.field_G.field_m[0];
                 }
                 vd.field_G = null;
                 mf.c((byte) 123);
               }
             }
           } else {
-            if (il.field_e.field_j) {
-              th.field_l = th.field_l | il.field_e.field_m;
-              oe.field_e = oe.field_e & ~il.field_e.field_m;
-              il.field_e = null;
+            if (BufferedCacheFile.field_e.field_j) {
+              th.field_l = th.field_l | BufferedCacheFile.field_e.field_m;
+              oe.field_e = oe.field_e & ~BufferedCacheFile.field_e.field_m;
+              BufferedCacheFile.field_e = null;
               if (oe.field_e == 0 &&
                 16 == ib.field_a) {
                 ib.field_a = 11;
@@ -651,7 +651,7 @@ public final class TrackController extends ch {
         }
         if (!jj.s(47)) {
           while (true) {
-            var5 = (cf) (ka.field_d.b((byte) -105));
+            var5 = (cf) (ka.field_d.removeFirst((byte) -105));
             if (var5 != null) {
               ti.a(4, (byte) 88, var5);
               continue;
@@ -659,7 +659,7 @@ public final class TrackController extends ch {
             break;
           }
           while (true) {
-            var4 = (dh) (cd.field_h.b((byte) -111));
+            var4 = (dh) (cd.field_h.removeFirst((byte) -111));
             if (var4 == null) {
               break;
             }
@@ -667,7 +667,7 @@ public final class TrackController extends ch {
           }
         }
         if (pf.field_T &&
-          null == ch.field_n) {
+          null == GameShell.field_n) {
           fe.a(true, pf.field_P[0], 256);
         }
         while (ge.a(kg.field_b, param0)) {
@@ -713,18 +713,18 @@ public final class TrackController extends ch {
         int var3 = 10 / ((param0 - 61) / 61);
         j.field_a = 1;
         db.field_db = 5;
-        sl.field_n = 0;
+        LevelGrid.field_n = 0;
     }
 
     private final boolean b(int param0, boolean param1) {
         try {
           int[] array$6 = null;
-          qj dupTemp$5 = null;
-          qj dupTemp$0 = null;
-          qj dupTemp$1 = null;
-          qj dupTemp$2 = null;
-          qj dupTemp$3 = null;
-          qj dupTemp$4 = null;
+          Sprite dupTemp$5 = null;
+          Sprite dupTemp$0 = null;
+          Sprite dupTemp$1 = null;
+          Sprite dupTemp$2 = null;
+          Sprite dupTemp$3 = null;
+          Sprite dupTemp$4 = null;
           int stackIn_90_0 = 0;
           int stackIn_90_1 = 0;
           String stackIn_93_0 = null;
@@ -738,41 +738,41 @@ public final class TrackController extends ch {
           ng[] var4_ref_ng__ = null;
           int var5 = 0;
           IOException var5_ref_IOException = null;
-          oh var5_ref_oh = null;
+          BitmapFont var5_ref_oh = null;
           int var6 = 0;
           int[] var6_ref_int__ = null;
           int var7_int = 0;
-          qj[] var7 = null;
+          Sprite[] var7 = null;
           int var8 = 0;
-          qj var8_ref_qj = null;
-          qj var9 = null;
-          qj var10 = null;
-          qj var11 = null;
-          qj var12 = null;
-          qj var13 = null;
-          qj var14 = null;
-          qj var15 = null;
-          qj var16 = null;
-          qj var17 = null;
+          Sprite var8_ref_qj = null;
+          Sprite var9 = null;
+          Sprite var10 = null;
+          Sprite var11 = null;
+          Sprite var12 = null;
+          Sprite var13 = null;
+          Sprite var14 = null;
+          Sprite var15 = null;
+          Sprite var16 = null;
+          Sprite var17 = null;
           int var18 = 0;
           int[] var19 = null;
-          qj[] var20 = null;
-          qj var21 = null;
-          qj[] var22 = null;
-          qj var23 = null;
-          qj var24 = null;
-          qj[] var25 = null;
-          qj var26 = null;
-          qj var27 = null;
-          qj var28 = null;
+          Sprite[] var20 = null;
+          Sprite var21 = null;
+          Sprite[] var22 = null;
+          Sprite var23 = null;
+          Sprite var24 = null;
+          Sprite[] var25 = null;
+          Sprite var26 = null;
+          Sprite var27 = null;
+          Sprite var28 = null;
           byte[] var30 = null;
           BufferedReader var32 = null;
           int[] var33 = null;
           byte[] var35 = null;
           byte[] var39 = null;
           byte[] var40 = null;
-          qj var23Lifetime1;
-          qj var23Lifetime2;
+          Sprite var23Lifetime1;
+          Sprite var23Lifetime2;
           int stackIn_90_0Lifetime1;
           int stackIn_90_1Lifetime1;
           int var7_intLifetime1;
@@ -832,7 +832,7 @@ public final class TrackController extends ch {
                             dc.field_p = ab.a("basic", -15383, "orbcoin", el.field_L);
                             var3_ref_byte__ = si.field_c.a("", param0 ^ -468, "tcfont");
                             var4_ref_ng__ = ie.a("", sg.field_a, "tcfont", param0 - 341);
-                            var5_ref_oh = (oh) ((Object) ma.a(6488064, (byte) -123, 2, var4_ref_ng__, var3_ref_byte__, 15252224));
+                            var5_ref_oh = (BitmapFont) ((Object) ma.a(6488064, (byte) -123, 2, var4_ref_ng__, var3_ref_byte__, 15252224));
                             bk.field_E = var5_ref_oh;
                             var33 = ((de) (var5_ref_oh)).field_M[0];
                             var19 = var33;
@@ -856,8 +856,8 @@ public final class TrackController extends ch {
                             ((de) (var5_ref_oh)).field_M[7][1] = 16711680;
                             ((de) (var5_ref_oh)).field_M[8][1] = 15252224;
                             ((de) (var5_ref_oh)).field_M[8][2] = 0;
-                            ba.field_b = (oh) ((Object) uk.a("comic12", el.field_L, fb.field_b, "", 8));
-                            GameApplet.field_c = (oh) ((Object) uk.a("kartika13", el.field_L, fb.field_b, "", -43));
+                            ba.field_b = (BitmapFont) ((Object) uk.a("comic12", el.field_L, fb.field_b, "", 8));
+                            GameApplet.field_c = (BitmapFont) ((Object) uk.a("kartika13", el.field_L, fb.field_b, "", -43));
                             el.field_L = null;
                             fb.field_b = null;
                             qi.d(71);
@@ -913,7 +913,7 @@ public final class TrackController extends ch {
               for (var5 = 0; var5 < var39.length; var5++) {
                 var4_ref_byte__[var5] = var39[var5];
               }
-              va.field_d[10] = new ik(oa.field_h, var4_ref_byte__, 0, var35.length);
+              va.field_d[10] = new PcmSample(oa.field_h, var4_ref_byte__, 0, var35.length);
               for (var5 = 0; var5 < 13; var5++) {
                 if (nd.field_G[var5] == 0) {
                   nd.field_G[var5] = 96;
@@ -954,10 +954,10 @@ public final class TrackController extends ch {
               for (var4 = 1; 32 > var4; var4++) {
                 var5 = var4 * 65536 / 32;
                 for (var6 = 0; var6 < 4; var6++) {
-                  da.field_p[var4][var6] = new qj(26, 26);
+                  da.field_p[var4][var6] = new Sprite(26, 26);
                   da.field_p[var4][var6].a();
                   da.field_p[0][var6].a(var3, var3, var3, var3, var5, 4096);
-                  da.field_p[32 + var4][var6] = new qj(26, 26);
+                  da.field_p[32 + var4][var6] = new Sprite(26, 26);
                   da.field_p[var4 + 32][var6].a();
                   da.field_p[32][var6].a(var3, var3, var3, var3, var5, 4096);
                 }
@@ -971,12 +971,12 @@ public final class TrackController extends ch {
             }
             if (null != rl.field_D) {
               mj.a(208);
-              gj.field_f = new ea[31];
+              gj.field_f = new LevelData[31];
               var40 = rl.field_D.a("", param0 ^ -468, "levels.txt");
               var32 = new BufferedReader((Reader) ((Object) new InputStreamReader((InputStream) ((Object) new ByteArrayInputStream(var40)))));
               try {
                 for (var5 = 0; 31 > var5; var5++) {
-                  gj.field_f[var5] = new ea(1 + var5, var32.readLine());
+                  gj.field_f[var5] = new LevelData(1 + var5, var32.readLine());
                 }
                 var32.close();
               } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -984,11 +984,11 @@ public final class TrackController extends ch {
                 var5_ref_IOException = (IOException) (Object) decompiledCaughtException;
                 throw new RuntimeException();
               }
-              tk.field_p = new mg[17];
+              tk.field_p = new GameScreen[17];
               qh.field_b = gj.field_f[0];
               rl.field_D = null;
               for (var5 = 0; var5 < 17; var5++) {
-                tk.field_p[var5] = new mg(this, var5);
+                tk.field_p[var5] = new GameScreen(this, var5);
               }
               if (jj.s(125)) {
                 ib.field_a = 0;
@@ -1005,7 +1005,7 @@ public final class TrackController extends ch {
             return true;
           }
           var3 = bk.field_E.field_u + bk.field_E.field_G;
-          mc.field_E = new qj(var3, var3);
+          mc.field_E = new Sprite(var3, var3);
           mc.field_E.a();
           dc.field_p.a(0, 0, var3, var3);
           dc.field_p = null;
@@ -1019,15 +1019,15 @@ public final class TrackController extends ch {
             ei.a(var21, -1);
           }
           na.field_c = ab.a("", -15383, "bgtile", sg.field_a);
-          cd.field_c = new qj(640, 480);
+          cd.field_c = new Sprite(640, 480);
           cd.field_c.a();
           for (var4 = 0; var4 < 480; var4 = var4 + na.field_c.field_v) {
             for (var5 = 0; var5 < 640; var5 = var5 + na.field_c.field_s) {
               na.field_c.h(var5, var4);
             }
           }
-          ll.b(20, 30, 600, 383, 3894145, 11980506);
-          ll.f(0, 0, 640, 480, 0);
+          SoftwareRasterizer.b(20, 30, 600, 383, 3894145, 11980506);
+          SoftwareRasterizer.f(0, 0, 640, 480, 0);
           ab.a("", -15383, "titlescreen2", sg.field_a).e(0, 0);
           ia.field_b.a(-91);
           nd.field_L = ib.a(10, "", sg.field_a, "frame");
@@ -1040,7 +1040,7 @@ public final class TrackController extends ch {
             DualLinkNode.field_l[var4].field_v = DualLinkNode.field_l[var4].field_q;
           }
           ii.field_r = ib.a(10, "", sg.field_a, "tiles");
-          ha.field_m = new qj[9];
+          ha.field_m = new Sprite[9];
           ha.field_m[4] = ii.field_r[0];
           var4 = 0;
           while (var4 < 9) {
@@ -1053,20 +1053,20 @@ public final class TrackController extends ch {
               var6 = 0;
               var7_intLifetime1 = 2;
               if (0 == var4 % 3) {
-                var5 = -2 + ll.field_d;
+                var5 = -2 + SoftwareRasterizer.field_d;
               }
               if (3 > var4) {
-                var6 = ll.field_k - 2;
+                var6 = SoftwareRasterizer.field_k - 2;
               }
               var8 = 2;
               if (var4 % 3 == 1) {
-                var7_intLifetime1 = ll.field_d;
+                var7_intLifetime1 = SoftwareRasterizer.field_d;
               }
               if (3 == var4 ||
                 5 == var4) {
-                var8 = ll.field_k;
+                var8 = SoftwareRasterizer.field_k;
               }
-              ll.c(var5, var6, var7_intLifetime1, var8, 9073738);
+              SoftwareRasterizer.c(var5, var6, var7_intLifetime1, var8, 9073738);
             }
             var4++;
           }
@@ -1079,7 +1079,7 @@ public final class TrackController extends ch {
           }
           var4_ref_String = stackIn_93_0;
           var22 = ib.a(10, var4_ref_String, sg.field_a, "man");
-          da.field_p = new qj[64][4];
+          da.field_p = new Sprite[64][4];
           pd.a(var22, 0, da.field_p[0], 0, 4);
           pd.a(var22, 4, da.field_p[32], 0, 4);
           j.field_b = ib.a(param0 ^ 473, var4_ref_String, sg.field_a, "man_face");
@@ -1087,37 +1087,37 @@ public final class TrackController extends ch {
           kg.field_e = ib.a(10, "", sg.field_a, "tickbox");
           var25 = ib.a(10, "", sg.field_a, "titlebg");
           var7 = ib.a(10, "", sg.field_a, "titles");
-          al.field_z = new qj[1 + var7.length];
+          UiWidget.field_z = new Sprite[1 + var7.length];
           for (var8Lifetime1 = 0; var7.length > var8Lifetime1; var8Lifetime1++) {
             var23Lifetime1 = var7[var8Lifetime1];
-            dupTemp$5 = new qj(var23Lifetime1.field_s, var23Lifetime1.field_v);
-            al.field_z[var8Lifetime1] = dupTemp$5;
+            dupTemp$5 = new Sprite(var23Lifetime1.field_s, var23Lifetime1.field_v);
+            UiWidget.field_z[var8Lifetime1] = dupTemp$5;
             var24 = dupTemp$5;
             var24.a();
             cl.a(var25, 0, var23Lifetime1.field_v, 0, var23Lifetime1.field_s, 4);
             var23Lifetime1.e(0, 0);
           }
           var8_ref_qj = ab.a("", -15383, "titlegameach", sg.field_a);
-          dupTemp$0 = new qj(var8_ref_qj.field_s, var8_ref_qj.field_v);
-          al.field_z[var7.length] = dupTemp$0;
+          dupTemp$0 = new Sprite(var8_ref_qj.field_s, var8_ref_qj.field_v);
+          UiWidget.field_z[var7.length] = dupTemp$0;
           var26 = dupTemp$0;
           var26.a();
           cl.a(var25, 0, var8_ref_qj.field_v, 0, var8_ref_qj.field_s, param0 ^ 471);
           var8_ref_qj.e(0, 0);
           fd.field_d = ab.a("", -15383, "exhibit", sg.field_a);
           var8Lifetime2 = ba.field_b.field_G + 26;
-          dupTemp$1 = new qj(156, var8Lifetime2);
+          dupTemp$1 = new Sprite(156, var8Lifetime2);
           ai.field_a = dupTemp$1;
           var27 = dupTemp$1;
           var9 = var27;
-          dupTemp$2 = new qj(156, var8Lifetime2);
-          al.field_t = dupTemp$2;
+          dupTemp$2 = new Sprite(156, var8Lifetime2);
+          UiWidget.field_t = dupTemp$2;
           var28 = dupTemp$2;
           var10 = var28;
-          dupTemp$3 = new qj(156, var8Lifetime2);
+          dupTemp$3 = new Sprite(156, var8Lifetime2);
           bf.field_o = dupTemp$3;
           var11 = dupTemp$3;
-          dupTemp$4 = new qj(156, var8Lifetime2);
+          dupTemp$4 = new Sprite(156, var8Lifetime2);
           vl.field_K = dupTemp$4;
           var12 = dupTemp$4;
           var13 = var9;

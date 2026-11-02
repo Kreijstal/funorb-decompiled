@@ -3,7 +3,7 @@
  */
 abstract class wj {
     static sk field_b;
-    static qj[] field_a;
+    static Sprite[] field_a;
 
     abstract void b(int param0);
 
@@ -24,7 +24,7 @@ abstract class wj {
           rb.field_a = new sd(param1);
           ij.field_d = new wg(SecondaryNodeDeque.field_d, rb.field_a);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "wj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "wj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -38,7 +38,7 @@ abstract class wj {
           }
           return this.a(119, param1);
         }
-        field_a = (qj[]) null;
+        field_a = (Sprite[]) null;
         var4Lifetime1 = this.a(-27042);
         if (var4Lifetime1 > 0L) {
           wl.a(var4Lifetime1, false);

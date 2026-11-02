@@ -4,11 +4,11 @@
 import java.io.*;
 
 final class j {
-    static qj[] field_b;
+    static Sprite[] field_b;
     static int field_a;
     private boolean field_g;
     static int[] field_f;
-    static kk field_h;
+    static Archive field_h;
     private String field_e;
     static String field_d;
     private boolean field_i;
@@ -243,12 +243,12 @@ final class j {
         try {
           param0.removeKeyListener(cj.field_o);
           param0.removeFocusListener(cj.field_o);
-          mg.field_f = -1;
+          GameScreen.field_f = -1;
           if (param1 <= 55) {
             field_c = -8;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "j.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "j.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -260,7 +260,7 @@ final class j {
           field_h = null;
           return;
         }
-        field_b = (qj[]) null;
+        field_b = (Sprite[]) null;
         field_f = null;
         field_d = null;
         field_h = null;
@@ -272,7 +272,7 @@ final class j {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "j.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "j.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

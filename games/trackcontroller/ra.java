@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra extends sl {
+final class ra extends LevelGrid {
     private boolean field_q;
     private int field_G;
     static int field_z;
@@ -16,7 +16,7 @@ final class ra extends sl {
     static String field_r;
     static String field_w;
     static String[] field_t;
-    private ja field_x;
+    private IntrusiveDeque field_x;
     private boolean field_E;
     private int field_A;
     private u field_p;
@@ -26,18 +26,18 @@ final class ra extends sl {
         int var3 = TrackController.field_F ? 1 : 0;
         gd.field_x = param0 ? true : false;
         super.a(false, 1000, param0);
-        this.field_p = ClientException.a(this.field_s, this.field_E, -257, this.field_a + 26 * this.field_D, this.field_G, this.field_F, this.field_u * 26 + this.field_f, this.field_d[this.field_u][this.field_D]);
+        this.field_p = ClientException.a(this.field_s, this.field_E, -257, this.field_a + 26 * this.field_D, this.field_G, this.field_F, this.field_u * 26 + this.field_f, this.tileFlags[this.field_u][this.field_D]);
         if (this.field_h >= this.field_A) {
           if (this.field_p != null) {
-            this.field_x.a(this.field_p, (byte) -78);
+            this.field_x.addFirst(this.field_p, (byte) -78);
           }
           var2 = he.field_e.nextInt() & 16777215;
           this.field_A = this.field_h + 8 + sc.a(var2, -1);
         }
-        u var4 = (u) (this.field_x.b(2));
+        u var4 = (u) (this.field_x.first(2));
         while (var4 != null) {
           var4.d(18132);
-          var4 = (u) (this.field_x.a(10));
+          var4 = (u) (this.field_x.next(10));
         }
     }
 
@@ -98,7 +98,7 @@ final class ra extends sl {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class ra extends sl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class ra extends sl {
         int var8 = 0;
         this.field_q = true;
         this.field_E = true;
-        this.field_x = new ja();
+        this.field_x = new IntrusiveDeque();
         try {
           this.a(param1, (byte) 50, param2, param0);
           this.field_B = new short[param0.length][param0[0].length];
@@ -188,9 +188,9 @@ final class ra extends sl {
           }
           this.field_D = var8;
           this.field_u = var7_int;
-          this.field_d[var7_int][var8] = ma.a(64, param1[var7_int][var8]);
-          this.field_F = ud.a((byte) -56, this.field_d[var7_int][var8]);
-          this.field_s = e.a(this.field_d[var7_int][var8], -1932340400, this.field_F);
+          this.tileFlags[var7_int][var8] = ma.a(64, param1[var7_int][var8]);
+          this.field_F = ud.a((byte) -56, this.tileFlags[var7_int][var8]);
+          this.field_s = e.a(this.tileFlags[var7_int][var8], -1932340400, this.field_F);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,7 +214,7 @@ final class ra extends sl {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class ra extends sl {
         if (param3 > -39) {
           this.a(false);
         }
-        int var8 = e.field_a[this.field_d[this.field_u][this.field_D]] & (param6 | param4 | param1);
+        int var8 = e.field_a[this.tileFlags[this.field_u][this.field_D]] & (param6 | param4 | param1);
         var8 = this.b(var8, this.field_D, 16384, this.field_u);
         if (param4 == var8) {
           this.field_s = param2;
@@ -240,8 +240,8 @@ final class ra extends sl {
         }
     }
 
-    ra(ea param0, int param1, int param2) {
-        this(param0.field_o, param0.field_d, param0.field_i, param1, param2, true);
+    ra(LevelData param0, int param1, int param2) {
+        this(param0.field_o, param0.tileFlags, param0.field_i, param1, param2, true);
     }
 
     final void c(byte param0) {
@@ -273,12 +273,12 @@ final class ra extends sl {
         if (param1 < 72) {
           return;
         }
-        var5 = (u) (this.field_x.b(2));
+        var5 = (u) (this.field_x.first(2));
         while (var5 != null) {
           if (!var5.e(0)) {
-            var5.a(-26);
+            var5.unlink(-26);
           }
-          var5 = (u) (this.field_x.a(10));
+          var5 = (u) (this.field_x.next(10));
         }
         if (!this.field_q) {
           return;
@@ -287,7 +287,7 @@ final class ra extends sl {
         this.field_G = this.field_G + 1;
         if (13 == fieldTemp$0) {
           this.field_G = -13;
-          if (this.field_d[this.field_u][this.field_D] == 24 &&
+          if (this.tileFlags[this.field_u][this.field_D] == 24 &&
             256 == this.field_F) {
             this.field_F = 512;
             stackIn_17_1 = !(this.field_E);
@@ -295,7 +295,7 @@ final class ra extends sl {
             this.field_s = 4096;
             return;
           }
-          if (this.field_d[this.field_u][this.field_D] == 25 &&
+          if (this.tileFlags[this.field_u][this.field_D] == 25 &&
             this.field_F == 128) {
             this.field_s = 2048;
             this.field_F = 1024;

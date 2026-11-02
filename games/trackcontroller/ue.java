@@ -4,19 +4,19 @@
 final class ue {
     static String field_a;
     private IntrusiveNode field_d;
-    private ja field_b;
+    private IntrusiveDeque field_b;
     static String[] field_c;
 
     final IntrusiveNode a(int param0) {
-        IntrusiveNode var2 = this.field_b.field_d.field_e;
+        IntrusiveNode var2 = this.field_b.field_d.previous;
         if (param0 <= 43) {
-          this.field_b = (ja) null;
+          this.field_b = (IntrusiveDeque) null;
         }
         if (var2 == this.field_b.field_d) {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_e;
+        this.field_d = var2.previous;
         return var2;
     }
 
@@ -34,7 +34,7 @@ final class ue {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_b.field_d.field_e;
+            var3 = this.field_b.field_d.previous;
           }
           if (var3 == this.field_b.field_d) {
             this.field_d = null;
@@ -45,7 +45,7 @@ final class ue {
             stackIn_8_0 = (IntrusiveNode) null;
             return stackIn_8_0;
           }
-          this.field_d = var3.field_e;
+          this.field_d = var3.previous;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -58,7 +58,7 @@ final class ue {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class ue {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -154,12 +154,12 @@ final class ue {
             ue.a((java.net.URL) null, 89, (String) null, 12, (String) null);
           }
           if (param1 == null) {
-            var3 = this.field_b.field_d.field_h;
+            var3 = this.field_b.field_d.next;
           } else {
             var3 = param1;
           }
           if (var3 != this.field_b.field_d) {
-            this.field_d = var3.field_h;
+            this.field_d = var3.next;
             stackIn_9_0 = var3;
             return stackIn_9_0;
           }
@@ -176,7 +176,7 @@ final class ue {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class ue {
             } else {
               stackIn_53_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+            throw LevelGrid.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -329,7 +329,7 @@ final class ue {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_h;
+        this.field_d = var2.next;
         if (param0 != 37) {
           field_a = (String) null;
         }
@@ -406,7 +406,7 @@ final class ue {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_e;
+        this.field_d = var2.previous;
         if (param0 > -8) {
           this.e(-30);
         }
@@ -440,26 +440,26 @@ final class ue {
             ue.a(-17L, (byte) 10);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ue.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ue.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final IntrusiveNode d(int param0) {
-        IntrusiveNode var2 = this.field_b.field_d.field_h;
+        IntrusiveNode var2 = this.field_b.field_d.next;
         int var3 = 61 / ((38 - param0) / 34);
         if (this.field_b.field_d == var2) {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_h;
+        this.field_d = var2.next;
         return var2;
     }
 
-    ue(ja param0) {
+    ue(IntrusiveDeque param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ue.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ue.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

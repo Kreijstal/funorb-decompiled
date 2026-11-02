@@ -7,7 +7,7 @@ final class bl {
     static oi field_c;
     private String field_e;
     static String field_d;
-    static qj field_a;
+    static Sprite field_a;
     static int field_b;
 
     public static void a(int param0) {
@@ -17,7 +17,7 @@ final class bl {
           field_a = null;
           return;
         }
-        field_a = (qj) null;
+        field_a = (Sprite) null;
         field_c = null;
         field_d = null;
         field_a = null;
@@ -26,11 +26,11 @@ final class bl {
     final void a(java.applet.Applet param0, int param1) {
         try {
           if (param1 != -4) {
-            field_a = (qj) null;
+            field_a = (Sprite) null;
           }
           dh.a(this.field_e, 31536000L, param0, "jagex-last-login-method", param1 + 1004);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "bl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "bl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -72,8 +72,8 @@ final class bl {
           var14 = TrackController.field_F ? 1 : 0;
           try {
             var18 = new kj();
-            var18.field_n = param3.h(16383);
-            var18.field_w = param3.e((byte) 113);
+            var18.field_n = param3.readUnsignedByte(16383);
+            var18.field_w = param3.readInt((byte) 113);
             var18.field_j = new ce[var18.field_n];
             var18.field_u = new int[var18.field_n];
             var18.field_i = new int[var18.field_n];
@@ -82,25 +82,25 @@ final class bl {
             var18.field_p = new byte[var18.field_n][][];
             for (var5 = param0; var18.field_n > var5; var5++) {
               try {
-                var6_int = param3.h(param0 ^ 16383);
+                var6_int = param3.readUnsignedByte(param0 ^ 16383);
                 if (0 != var6_int &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (3 == var6_int ||
                     var6_int == 4) {
-                    var20 = param3.g(param0 + 0);
-                    var8 = param3.g(0);
-                    var9 = param3.h(16383);
+                    var20 = param3.readString(param0 + 0);
+                    var8 = param3.readString(0);
+                    var9 = param3.readUnsignedByte(16383);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param3.g(0);
+                      var10[var11_int] = param3.readString(0);
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param3.e((byte) 113);
+                        var13 = param3.readInt((byte) 113);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param3.a(105, var21[var12_int], 0, var13);
@@ -118,13 +118,13 @@ final class bl {
                     var18.field_p[var5] = var21;
                   }
                 } else {
-                  var16 = param3.g(param0 + 0);
+                  var16 = param3.readString(param0 + 0);
                   var7 = var16;
-                  var15 = param3.g(param0 ^ 0);
+                  var15 = param3.readString(param0 ^ 0);
                   var8 = var15;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param3.e((byte) 113);
+                    var9 = param3.readInt((byte) 113);
                   }
                   var18.field_m[var5] = var6_int;
                   var18.field_u[var5] = var9;
@@ -152,7 +152,7 @@ final class bl {
                 var18.field_i[var5] = -5;
               }
             }
-            si.field_a.a((byte) -121, var18);
+            si.field_a.addLast((byte) -121, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -170,7 +170,7 @@ final class bl {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+            throw LevelGrid.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -218,15 +218,15 @@ final class bl {
               }
             }
             if (param0 > -84) {
-              field_a = (qj) null;
+              field_a = (Sprite) null;
             }
             if (rf.field_c == 2) {
               ob.field_u = new BufferedSocket((java.net.Socket) (w.field_V.field_e), kb.field_d);
               var2 = new PacketBuffer(13);
               hl.a(kf.field_a, var2, 17, sa.field_T, vk.field_j);
-              var2.a(15, (byte) -100);
-              var2.b(false, gi.field_r);
-              ob.field_u.a(-128, var2.field_j, 13, 0);
+              var2.writeByte(15, (byte) -100);
+              var2.writeInt(false, gi.field_r);
+              ob.field_u.a(-128, var2.payload, 13, 0);
               rf.field_c = rf.field_c + 1;
               ma.field_b = qg.a(false) + 30000L;
             }
@@ -271,7 +271,7 @@ final class bl {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -298,7 +298,7 @@ final class bl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

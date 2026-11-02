@@ -11,23 +11,23 @@ class ec extends kd {
           if (param0 != -6) {
             ec.b((byte) 6);
           }
-          param1.a(this.field_e, 2147483647);
+          param1.writeLong(this.field_e, 2147483647);
           param1.a(this.field_c, param0 + 27939);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ec.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ec.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static qj a(int param0) {
+    final static Sprite a(int param0) {
         int var4_int = 0;
         int var5 = TrackController.field_F ? 1 : 0;
         int var1 = cf.field_p[0] * j.field_f[0];
         byte[] var2 = qk.field_M[0];
         int[] var3 = new int[var1];
         for (var4_int = param0; var4_int < var1; var4_int++) {
-          var3[var4_int] = qe.field_z[tc.a((int) var2[var4_int], 255)];
+          var3[var4_int] = qe.field_z[RandomAccessCacheFile.a((int) var2[var4_int], 255)];
         }
-        qj var4 = new qj(ab.field_a, qe.field_p, ka.field_f[0], vb.field_a[0], cf.field_p[0], j.field_f[0], var3);
+        Sprite var4 = new Sprite(ab.field_a, qe.field_p, ka.field_f[0], vb.field_a[0], cf.field_p[0], j.field_f[0], var3);
         ff.b(76);
         return var4;
     }
@@ -51,7 +51,7 @@ class ec extends kd {
           this.field_e = param0;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

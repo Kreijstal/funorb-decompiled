@@ -6,7 +6,7 @@ abstract class db extends wd {
     static int field_X;
     private jb field_ab;
     private gl field_cb;
-    private al field_V;
+    private UiWidget field_V;
     private int field_T;
     static volatile int field_bb;
     private int field_S;
@@ -39,7 +39,7 @@ abstract class db extends wd {
         super.o(param0 + param0);
     }
 
-    db(vl param0, al param1, int param2, int param3, int param4) {
+    db(vl param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_x + 12, param1.field_u + 12 + param2);
         try {
           this.field_T = param3;
@@ -48,11 +48,11 @@ abstract class db extends wd {
           this.field_S = param4;
           this.b((byte) 19, param1);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    void b(al param0, int param1) {
+    void b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -61,8 +61,8 @@ abstract class db extends wd {
         try {
           this.field_V = param0;
           if (dc.field_w != this.field_ab) {
-            if (wi.field_c != this.field_ab) {
-              this.field_ab = wi.field_c;
+            if (ArchiveSource.field_c != this.field_ab) {
+              this.field_ab = ArchiveSource.field_c;
               this.field_U = 0;
             }
           } else {
@@ -84,18 +84,18 @@ abstract class db extends wd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void b(byte param0, al param1) {
+    private final void b(byte param0, UiWidget param1) {
         try {
           if (param0 != 19) {
-            al var4 = (al) null;
-            this.b((byte) 30, (al) null);
+            UiWidget var4 = (UiWidget) null;
+            this.b((byte) 30, (UiWidget) null);
           }
           if (null != this.field_cb) {
-            this.field_cb.a(-84);
+            this.field_cb.unlink(-84);
           }
           if (param1 == null) {
             this.field_cb = new gl();
@@ -106,36 +106,36 @@ abstract class db extends wd {
           this.a(false, this.field_cb);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "db.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "db.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     boolean j(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        qj var4 = null;
+        Sprite var4 = null;
         int var3 = TrackController.field_F ? 1 : 0;
-        qj var4Lifetime1;
-        qj var4Lifetime2;
-        qj var4Lifetime3;
-        qj var4Lifetime1Lifetime1;
-        qj var4Lifetime2Lifetime1;
+        Sprite var4Lifetime1;
+        Sprite var4Lifetime2;
+        Sprite var4Lifetime3;
+        Sprite var4Lifetime1Lifetime1;
+        Sprite var4Lifetime2Lifetime1;
         if (null == this.field_ab) {
           if (param0 > -18) {
-            var4 = (qj) null;
-            db.a(99, 48, (qj) null, -61, 106, (byte) 90);
+            var4 = (Sprite) null;
+            db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
             return super.j(-94);
           }
           return super.j(-94);
         }
-        if (wi.field_c == this.field_ab) {
+        if (ArchiveSource.field_c == this.field_ab) {
           fieldTemp$0 = this.field_U + 1;
           this.field_U = this.field_U + 1;
           if (this.field_Y != fieldTemp$0) {
             this.field_cb.field_H = -((this.field_U << 8) / this.field_Y) + 256;
             if (param0 > -18) {
-              var4Lifetime1 = (qj) null;
-              db.a(99, 48, (qj) null, -61, 106, (byte) 90);
+              var4Lifetime1 = (Sprite) null;
+              db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
               return super.j(-94);
             }
             return super.j(-94);
@@ -147,8 +147,8 @@ abstract class db extends wd {
           if (param0 <= -18) {
             return super.j(-94);
           }
-          var4Lifetime1Lifetime1 = (qj) null;
-          db.a(99, 48, (qj) null, -61, 106, (byte) 90);
+          var4Lifetime1Lifetime1 = (Sprite) null;
+          db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
           return super.j(-94);
         }
         if (uj.field_b == this.field_ab) {
@@ -160,28 +160,28 @@ abstract class db extends wd {
             if (param0 <= -18) {
               return super.j(-94);
             }
-            var4Lifetime2 = (qj) null;
-            db.a(99, 48, (qj) null, -61, 106, (byte) 90);
+            var4Lifetime2 = (Sprite) null;
+            db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
             return super.j(-94);
           }
           this.field_cb.field_H = (this.field_U << 8) / this.field_T;
           if (param0 <= -18) {
             return super.j(-94);
           }
-          var4Lifetime2Lifetime1 = (qj) null;
-          db.a(99, 48, (qj) null, -61, 106, (byte) 90);
+          var4Lifetime2Lifetime1 = (Sprite) null;
+          db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
           return super.j(-94);
         }
         if (param0 <= -18) {
           return super.j(-94);
         }
-        var4Lifetime3 = (qj) null;
-        db.a(99, 48, (qj) null, -61, 106, (byte) 90);
+        var4Lifetime3 = (Sprite) null;
+        db.a(99, 48, (Sprite) null, -61, 106, (byte) 90);
         return super.j(-94);
     }
 
     final void a(byte param0) {
-        if (wi.field_c == this.field_ab) {
+        if (ArchiveSource.field_c == this.field_ab) {
           return;
         }
         this.field_U = 0;
@@ -203,7 +203,7 @@ abstract class db extends wd {
         ob.a(209, gd.b((byte) 77));
     }
 
-    boolean a(byte param0, char param1, al param2, int param3) {
+    boolean a(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_15_0 = null;
@@ -235,11 +235,11 @@ abstract class db extends wd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, qj param2, int param3, int param4, byte param5) {
+    final static void a(int param0, int param1, Sprite param2, int param3, int param4, byte param5) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -253,31 +253,31 @@ abstract class db extends wd {
         try {
           var6_int = 0;
           var7 = 0;
-          if (param4 < ll.field_a) {
-            var7 = ll.field_a - param4;
-            param4 = ll.field_a;
+          if (param4 < SoftwareRasterizer.field_a) {
+            var7 = SoftwareRasterizer.field_a - param4;
+            param4 = SoftwareRasterizer.field_a;
             param3 = param3 - var7;
             var7 = var7 % param2.field_t;
             var6_int = var6_int + var7;
           }
           var8 = 0;
-          if (param1 < ll.field_b) {
-            var8 = -param1 + ll.field_b;
-            param1 = ll.field_b;
+          if (param1 < SoftwareRasterizer.field_b) {
+            var8 = -param1 + SoftwareRasterizer.field_b;
+            param1 = SoftwareRasterizer.field_b;
             param0 = param0 - var8;
             var8 = var8 % param2.field_q;
             var6_int = var6_int + param2.field_t * var8;
           }
-          if (ll.field_e < param4 + param3) {
-            param3 = -param4 + ll.field_e;
+          if (SoftwareRasterizer.field_e < param4 + param3) {
+            param3 = -param4 + SoftwareRasterizer.field_e;
           }
-          if (param1 + param0 > ll.field_g) {
-            param0 = -param1 + ll.field_g;
+          if (param1 + param0 > SoftwareRasterizer.field_g) {
+            param0 = -param1 + SoftwareRasterizer.field_g;
           }
           if (param3 > 0 &&
             param0 > 0) {
-            var9 = param1 * ll.field_d + param4;
-            ra.a(var9, param2.field_t, param0, var8, (byte) -64, ll.field_i, param3, param2.field_z, -param3 + ll.field_d, var7, var6_int, param2.field_q);
+            var9 = param1 * SoftwareRasterizer.field_d + param4;
+            ra.a(var9, param2.field_t, param0, var8, (byte) -64, SoftwareRasterizer.field_i, param3, param2.field_z, -param3 + SoftwareRasterizer.field_d, var7, var6_int, param2.field_q);
             var10 = 77 / ((param5 - 56) / 53);
             return;
           }
@@ -292,7 +292,7 @@ abstract class db extends wd {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

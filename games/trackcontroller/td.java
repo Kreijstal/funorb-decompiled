@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-class td extends al implements je {
-    ja field_B;
+class td extends UiWidget implements je {
+    IntrusiveDeque field_B;
 
     final StringBuilder a(boolean param0, Hashtable param1, StringBuilder param2, int param3) {
         RuntimeException var5 = null;
@@ -43,21 +43,21 @@ class td extends al implements je {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
     td(int param0, int param1, int param2, int param3, t param4) {
         super(param0, param1, param2, param3, param4, (tg) null);
-        this.field_B = new ja();
+        this.field_B = new IntrusiveDeque();
     }
 
-    final boolean a(al param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
-        al var5 = null;
+        UiWidget var5 = null;
         ue var6 = null;
-        al var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
         ue var9 = null;
         RuntimeException stackIn_21_0 = null;
@@ -66,25 +66,25 @@ class td extends al implements je {
         RuntimeException decompiledCaughtException = null;
         var8 = TrackController.field_F ? 1 : 0;
         try {
-          if (this.field_B.b(false)) {
+          if (this.field_B.isEmpty(false)) {
             return false;
           }
           var9 = new ue(this.field_B);
           var4 = 61 % ((53 - param1) / 47);
-          var5 = (al) (var9.a(53));
+          var5 = (UiWidget) (var9.a(53));
           while (var5 != null) {
             if (var5.h(-118)) {
               var6 = new ue(this.field_B);
               var6.a(true, var5);
-              var7 = (al) (var6.c(-114));
+              var7 = (UiWidget) (var6.c(-114));
               while (var7 != null) {
                 if (var7.a((byte) -127, param0)) {
                   return true;
                 }
-                var7 = (al) (var6.c(-128));
+                var7 = (UiWidget) (var6.c(-128));
               }
             }
-            var5 = (al) (var9.c(-106));
+            var5 = (UiWidget) (var9.c(-106));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,15 +97,15 @@ class td extends al implements je {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final boolean a(al param0, boolean param1) {
+    final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
-        al var4 = null;
+        UiWidget var4 = null;
         ue var5 = null;
-        al var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         ue var8 = null;
         RuntimeException stackIn_20_0 = null;
@@ -114,30 +114,30 @@ class td extends al implements je {
         RuntimeException decompiledCaughtException = null;
         var7 = TrackController.field_F ? 1 : 0;
         try {
-          if (this.field_B.b(false)) {
+          if (this.field_B.isEmpty(false)) {
             return false;
           }
           var8 = new ue(this.field_B);
-          var4 = (al) (var8.d(-47));
+          var4 = (UiWidget) (var8.d(-47));
           while (var4 != null) {
             if (var4.h(-92)) {
               var5 = new ue(this.field_B);
               var5.a((byte) -37, var4);
-              var6 = (al) (var5.e(37));
+              var6 = (UiWidget) (var5.e(37));
               while (var6 != null) {
                 if (!var6.a((byte) -123, param0)) {
-                  var6 = (al) (var5.e(37));
+                  var6 = (UiWidget) (var5.e(37));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (al) (var8.e(37));
+            var4 = (UiWidget) (var8.e(37));
           }
           if (param1) {
             return false;
           }
-          this.field_B = (ja) null;
+          this.field_B = (IntrusiveDeque) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ class td extends al implements je {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -159,10 +159,10 @@ class td extends al implements je {
           this.a(67, 29, 21, 61, -112);
         }
         ue var2 = new ue(this.field_B);
-        al var3 = (al) (var2.d(120));
+        UiWidget var3 = (UiWidget) (var2.d(120));
         while (var3 != null) {
           var3.g(119);
-          var3 = (al) (var2.e(param0 ^ 37));
+          var3 = (UiWidget) (var2.e(param0 ^ 37));
         }
     }
 
@@ -171,10 +171,10 @@ class td extends al implements je {
         this.i(0);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, al param5, byte param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         ue var8 = null;
         RuntimeException var8_ref = null;
-        al var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -183,7 +183,7 @@ class td extends al implements je {
         var10 = TrackController.field_F ? 1 : 0;
         try {
           var8 = new ue(this.field_B);
-          var9 = (al) (var8.d(81));
+          var9 = (UiWidget) (var8.d(81));
           if (param6 != 127) {
             return false;
           }
@@ -193,7 +193,7 @@ class td extends al implements je {
                 var9.a(param0, param1, param2, param3, param4, param5, (byte) 127)) {
                 return true;
               }
-              var9 = (al) (var8.e(37));
+              var9 = (UiWidget) (var8.e(37));
               continue;
             }
             break;
@@ -209,14 +209,14 @@ class td extends al implements je {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(')').toString());
         }
     }
 
-    final boolean a(al param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         ue var8 = null;
         RuntimeException var8_ref = null;
-        al var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -226,13 +226,13 @@ class td extends al implements je {
         try {
           var8 = new ue(this.field_B);
           if (param4 != 0) {
-            this.field_B = (ja) null;
+            this.field_B = (IntrusiveDeque) null;
           }
-          var9 = (al) (var8.d(-126));
+          var9 = (UiWidget) (var8.d(-126));
           while (var9 != null) {
             if (var9.b(10000536)) {
               if (!var9.a(param0, param1, param2, param3, param4 ^ 0, param5 + this.field_p, this.field_m + param6)) {
-                var9 = (al) (var8.e(37));
+                var9 = (UiWidget) (var8.e(37));
                 continue;
               }
               return true;
@@ -250,26 +250,26 @@ class td extends al implements je {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final int c(byte param0) {
         int var2;
         ue var3;
-        al var4;
+        UiWidget var4;
         int var5;
         int var6;
         var6 = TrackController.field_F ? 1 : 0;
         var2 = 0;
         var3 = new ue(this.field_B);
-        var4 = (al) (var3.d(0));
+        var4 = (UiWidget) (var3.d(0));
         while (var4 != null) {
           var5 = var4.c((byte) -14);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (al) (var3.e(37));
+          var4 = (UiWidget) (var3.e(37));
         }
         if (param0 != -14) {
           this.a(123, 7, -116, -2);
@@ -277,60 +277,60 @@ class td extends al implements je {
         return var2;
     }
 
-    al d(byte param0) {
+    UiWidget d(byte param0) {
         int var4 = TrackController.field_F ? 1 : 0;
         ue var2 = new ue(this.field_B);
-        al var3 = (al) (var2.d(124));
+        UiWidget var3 = (UiWidget) (var2.d(124));
         while (var3 != null) {
           if (var3.h(-94)) {
             return var3;
           }
-          var3 = (al) (var2.e(37));
+          var3 = (UiWidget) (var2.e(37));
         }
         if (param0 < -124) {
           return null;
         }
-        this.field_B = (ja) null;
+        this.field_B = (IntrusiveDeque) null;
         return null;
     }
 
-    final void a(boolean param0, al param1) {
+    final void a(boolean param0, UiWidget param1) {
         try {
           if (param0) {
-            this.field_B = (ja) null;
+            this.field_B = (IntrusiveDeque) null;
           }
-          this.field_B.a((byte) -125, param1);
+          this.field_B.addLast((byte) -125, param1);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "td.EC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "td.EC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final String e(int param0) {
         ue var2;
-        al var3;
+        UiWidget var3;
         String var4;
         int var5;
-        al var6;
+        UiWidget var6;
         var5 = TrackController.field_F ? 1 : 0;
         if (param0 != 0) {
-          var6 = (al) null;
-          this.a((al) null, -92, 62, 7, -56, 58, -36);
+          var6 = (UiWidget) null;
+          this.a((UiWidget) null, -92, 62, 7, -56, 58, -36);
         }
         var2 = new ue(this.field_B);
-        var3 = (al) (var2.d(86));
+        var3 = (UiWidget) (var2.d(86));
         while (var3 != null) {
           var4 = var3.e(0);
           if (var4 != null) {
             return var4;
           }
-          var3 = (al) (var2.e(param0 + 37));
+          var3 = (UiWidget) (var2.e(param0 + 37));
         }
         return null;
     }
 
-    final void a(al param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
         ue var7 = null;
-        al var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -340,11 +340,11 @@ class td extends al implements je {
         var9 = TrackController.field_F ? 1 : 0;
         try {
           var7 = new ue(this.field_B);
-          var8 = (al) (var7.d(127));
+          var8 = (UiWidget) (var7.d(127));
           while (var8 != null) {
             if (var8.b(10000536)) {
               var8.a(param0, param1, param2, param3 + this.field_m, param4, param5 + this.field_p);
-              var8 = (al) (var7.e(37));
+              var8 = (UiWidget) (var7.e(37));
               continue;
             }
             break;
@@ -363,29 +363,29 @@ class td extends al implements je {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final void f(int param0) {
         int var4 = TrackController.field_F ? 1 : 0;
         ue var2 = new ue(this.field_B);
-        al var3 = (al) (var2.d(-58));
+        UiWidget var3 = (UiWidget) (var2.d(-58));
         while (var3 != null) {
           var3.f(-24174);
-          var3 = (al) (var2.e(param0 ^ -24137));
+          var3 = (UiWidget) (var2.e(param0 ^ -24137));
         }
         if (param0 != -24174) {
           this.a(73, -81, 6, -13, -113);
         }
     }
 
-    boolean a(byte param0, char param1, al param2, int param3) {
+    boolean a(byte param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        al var9 = null;
+        UiWidget var9 = null;
         ue var10 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_17_0 = null;
@@ -396,14 +396,14 @@ class td extends al implements je {
         try {
           var6 = -126 % ((17 - param0) / 51);
           var10 = new ue(this.field_B);
-          var9 = (al) (var10.d(125));
+          var9 = (UiWidget) (var10.d(125));
           while (var9 != null) {
             if (var9.b(10000536)) {
               if (var9.h(-119) &&
                 var9.a((byte) 103, param1, param2, param3)) {
                 return true;
               }
-              var9 = (al) (var10.e(37));
+              var9 = (UiWidget) (var10.e(37));
               continue;
             }
             break;
@@ -428,7 +428,7 @@ class td extends al implements je {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -437,7 +437,7 @@ class td extends al implements je {
         int var7 = 0;
         StringBuilder discarded$4 = null;
         ue var5 = null;
-        al var6 = null;
+        UiWidget var6 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -449,17 +449,17 @@ class td extends al implements je {
         var8 = TrackController.field_F ? 1 : 0;
         try {
           if (param0 != -62) {
-            this.field_B = (ja) null;
+            this.field_B = (IntrusiveDeque) null;
           }
           var5 = new ue(this.field_B);
-          var6 = (al) (var5.d(-99));
+          var6 = (UiWidget) (var5.d(-99));
           while (var6 != null) {
             discarded$3 = param3.append('\n');
             for (var7 = 0; var7 <= param1; var7++) {
               discarded$4 = param3.append(' ');
             }
             var6.a(false, param2, param3, param1 + 1);
-            var6 = (al) (var5.e(37));
+            var6 = (UiWidget) (var5.e(37));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -478,7 +478,7 @@ class td extends al implements je {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -486,25 +486,25 @@ class td extends al implements je {
         int var7 = TrackController.field_F ? 1 : 0;
         if (0 == param0 &&
           null != this.field_y) {
-          this.field_y.a(-24969, (al) (this), param2, true, param1);
+          this.field_y.a(-24969, (UiWidget) (this), param2, true, param1);
         }
         ue var5 = new ue(this.field_B);
-        al var6 = (al) (var5.a(79));
+        UiWidget var6 = (UiWidget) (var5.a(79));
         while (var6 != null) {
           var6.a(param0, this.field_p + param1, this.field_m + param2, 29221);
-          var6 = (al) (var5.c(param3 ^ -29291));
+          var6 = (UiWidget) (var5.c(param3 ^ -29291));
         }
         if (param3 != 29221) {
-          this.field_B = (ja) null;
+          this.field_B = (IntrusiveDeque) null;
         }
     }
 
-    final boolean a(byte param0, al param1) {
+    final boolean a(byte param0, UiWidget param1) {
         ue var3 = null;
         RuntimeException var3_ref = null;
-        al var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
-        al var6 = null;
+        UiWidget var6 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -512,17 +512,17 @@ class td extends al implements je {
         var5 = TrackController.field_F ? 1 : 0;
         try {
           var3 = new ue(this.field_B);
-          var4 = (al) (var3.d(-122));
+          var4 = (UiWidget) (var3.d(-122));
           if (param0 >= -104) {
-            var6 = (al) null;
-            this.a(false, (al) null);
+            var6 = (UiWidget) null;
+            this.a(false, (UiWidget) null);
           }
           while (true) {
             if (var4 == null) {
               return false;
             }
             if (!var4.a((byte) -114, param1)) {
-              var4 = (al) (var3.e(37));
+              var4 = (UiWidget) (var3.e(37));
               continue;
             }
             break;
@@ -538,7 +538,7 @@ class td extends al implements je {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -549,10 +549,10 @@ class td extends al implements je {
         return this.d((byte) -127) != null ? true : false;
     }
 
-    void a(int param0, int param1, byte param2, al param3) {
+    void a(int param0, int param1, byte param2, UiWidget param3) {
         RuntimeException runtimeException = null;
         ue var5 = null;
-        al var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -562,11 +562,11 @@ class td extends al implements je {
         try {
           super.a(param0, param1, param2, param3);
           var5 = new ue(this.field_B);
-          var6 = (al) (var5.d(-66));
+          var6 = (UiWidget) (var5.d(-66));
           while (var6 != null) {
             if (var6.b(10000536)) {
               var6.a(param0 + this.field_m, this.field_p + param1, (byte) -124, param3);
-              var6 = (al) (var5.e(param2 ^ -95));
+              var6 = (UiWidget) (var5.e(param2 ^ -95));
               continue;
             }
             break;
@@ -582,7 +582,7 @@ class td extends al implements je {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

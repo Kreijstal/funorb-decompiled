@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kg {
-    static qj[] field_e;
+    static Sprite[] field_e;
     static String field_a;
     static boolean field_f;
     static int field_d;
@@ -40,14 +40,14 @@ final class kg {
           var5 = sb.field_b;
           synchronized (var5) {
             fj.field_P.a(param2, (byte) -113, -1);
-            if (param3 == ch.field_n) {
+            if (param3 == GameShell.field_n) {
               return;
             }
             fj.field_P.f(11795);
             sb.field_b.c();
-            ch.field_n = param3;
-            if (ch.field_n != null) {
-              fj.field_P.a(ch.field_n, 14526, param0);
+            GameShell.field_n = param3;
+            if (GameShell.field_n != null) {
+              fj.field_P.a(GameShell.field_n, 14526, param0);
             }
           }
           return;
@@ -61,7 +61,7 @@ final class kg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

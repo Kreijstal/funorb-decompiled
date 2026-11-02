@@ -25,13 +25,13 @@ final class NodeHashTableIterator implements Iterator {
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          if (this.field_a.field_c[fieldTemp$0].field_h == this.field_a.field_c[-1 + this.field_b]) {
+          if (this.field_a.field_c[fieldTemp$0].next == this.field_a.field_c[-1 + this.field_b]) {
             this.field_g = this.field_a.field_c[this.field_b - 1];
             continue;
           }
           break;
         }
-        this.field_g = this.field_a.field_c[-1 + this.field_b].field_h;
+        this.field_g = this.field_a.field_c[-1 + this.field_b].next;
         return true;
     }
 
@@ -39,20 +39,20 @@ final class NodeHashTableIterator implements Iterator {
         if (null == this.field_d) {
           throw new IllegalStateException();
         }
-        this.field_d.a(-98);
+        this.field_d.unlink(-98);
         this.field_d = null;
     }
 
     final static void a(java.math.BigInteger param0, PacketBuffer param1, java.math.BigInteger param2, int param3, PacketBuffer param4) {
         try {
-          ha.a(param2, param0, param4.field_k, param4.field_j, param3, (byte) 77, param1);
+          ha.a(param2, param0, param4.position, param4.payload, param3, (byte) 77, param1);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ee.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ee.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void a(byte param0) {
-        this.field_g = this.field_a.field_c[0].field_h;
+        this.field_g = this.field_a.field_c[0].next;
         this.field_b = 1;
         this.field_d = null;
         int var2 = 80 / ((param0 - 7) / 59);
@@ -66,7 +66,7 @@ final class NodeHashTableIterator implements Iterator {
         var2 = TrackController.field_F ? 1 : 0;
         if (this.field_g != this.field_a.field_c[-1 + this.field_b]) {
           var4 = this.field_g;
-          this.field_g = var4.field_h;
+          this.field_g = var4.next;
           this.field_d = var4;
           return var4;
         }
@@ -76,17 +76,17 @@ final class NodeHashTableIterator implements Iterator {
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          var3 = this.field_a.field_c[fieldTemp$0].field_h;
+          var3 = this.field_a.field_c[fieldTemp$0].next;
         } while (var3 == this.field_a.field_c[-1 + this.field_b]);
-        this.field_g = var3.field_h;
+        this.field_g = var3.next;
         this.field_d = var3;
         return var3;
     }
 
-    final static qj a(int param0, int param1, byte param2) {
+    final static Sprite a(int param0, int param1, byte param2) {
         int var6 = TrackController.field_F ? 1 : 0;
-        qj var7 = new qj(param1, param1);
-        qj var3 = var7;
+        Sprite var7 = new Sprite(param1, param1);
+        Sprite var3 = var7;
         int var4 = 0;
         int var5 = -14 / ((param2 - 55) / 41);
         while (var3.field_z.length > var4) {
@@ -102,7 +102,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_a = param0;
           this.a((byte) 73);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

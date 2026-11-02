@@ -42,20 +42,20 @@ final class jl {
     }
 
     final void b(PacketBuffer param0) {
-        this.field_k = param0.h(16383);
-        this.field_a = param0.e((byte) 113);
-        this.field_g = param0.e((byte) 113);
+        this.field_k = param0.readUnsignedByte(16383);
+        this.field_a = param0.readInt((byte) 113);
+        this.field_g = param0.readInt((byte) 113);
         this.a(param0);
     }
 
     final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_f = param0.h(16383);
+        this.field_f = param0.readUnsignedByte(16383);
         this.field_i = new int[this.field_f];
         this.field_j = new int[this.field_f];
         for (var2 = 0; var2 < this.field_f; var2++) {
-          this.field_i[var2] = param0.d((byte) -62);
-          this.field_j[var2] = param0.d((byte) -102);
+          this.field_i[var2] = param0.readUnsignedShort((byte) -62);
+          this.field_j[var2] = param0.readUnsignedShort((byte) -102);
         }
     }
 

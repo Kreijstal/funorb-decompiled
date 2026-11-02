@@ -7,7 +7,7 @@ class oa {
     static boolean field_k;
     private static int field_o;
     int[] field_s;
-    private wh field_i;
+    private PcmStream field_i;
     private static hj field_q;
     private int field_n;
     private long field_u;
@@ -15,8 +15,8 @@ class oa {
     private int field_p;
     private int field_a;
     private boolean field_g;
-    private wh[] field_l;
-    private wh[] field_j;
+    private PcmStream[] field_l;
+    private PcmStream[] field_j;
     private int field_e;
     private int field_b;
     private int field_m;
@@ -119,12 +119,12 @@ class oa {
         }
     }
 
-    private final static void b(wh param0) {
+    private final static void b(PcmStream param0) {
         param0.field_k = false;
         if (param0.field_i != null) {
           param0.field_i.field_i = 0;
         }
-        wh var1 = param0.b();
+        PcmStream var1 = param0.b();
         while (var1 != null) {
           oa.b(var1);
           var1 = param0.a();
@@ -149,9 +149,9 @@ class oa {
         }
     }
 
-    private final void a(wh param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        wh var4 = this.field_l[var3];
+        PcmStream var4 = this.field_l[var3];
         if (var4 == null) {
           this.field_j[var3] = param0;
         } else {
@@ -167,7 +167,7 @@ class oa {
     void g() {
     }
 
-    final synchronized void a(wh param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_i = param0;
     }
 
@@ -305,20 +305,20 @@ class oa {
         int var7_int;
         Object var7;
         int var8_int;
-        wh[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        wh var11;
+        PcmStream var11;
         lk var12;
         int var13;
-        wh var14;
+        PcmStream var14;
         int var15_int;
-        wh var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        wh var14Lifetime1;
-        wh var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_k) {
           var3 = var3 << 1;
@@ -379,12 +379,12 @@ class oa {
                     var15 = var11.field_l;
                     var11.field_l = null;
                     if (var10 != null) {
-                      ((wh) (var10)).field_l = var15;
+                      ((PcmStream) (var10)).field_l = var15;
                     } else {
                       this.field_j[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_l[var7_int] = (wh) (var10);
+                      this.field_l[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -405,8 +405,8 @@ class oa {
             this.field_l[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((wh) (var7)).field_l;
-              ((wh) (var7)).field_l = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_l;
+              ((PcmStream) (var7)).field_l = null;
               var7 = var10Lifetime1;
             }
           }
@@ -427,8 +427,8 @@ class oa {
         this.field_p = 0;
         this.field_c = 0L;
         this.field_m = 0;
-        this.field_l = new wh[8];
-        this.field_j = new wh[8];
+        this.field_l = new PcmStream[8];
+        this.field_j = new PcmStream[8];
         this.field_g = true;
         this.field_t = 0;
         this.field_r = 0L;

@@ -95,8 +95,8 @@ final class ke {
           if (PacketBuffer.field_i > 0) {
             fieldTemp$18 = PacketBuffer.field_i - 1;
             PacketBuffer.field_i = PacketBuffer.field_i - 1;
-            var2Lifetime5 = ch.field_z[fieldTemp$18];
-            ch.field_z[PacketBuffer.field_i] = null;
+            var2Lifetime5 = GameShell.field_z[fieldTemp$18];
+            GameShell.field_z[PacketBuffer.field_i] = null;
             return var2Lifetime5;
           }
           if (param1 != ~param0) {
@@ -183,8 +183,8 @@ final class ke {
         if (PacketBuffer.field_i > 0) {
           fieldTemp$2 = PacketBuffer.field_i - 1;
           PacketBuffer.field_i = PacketBuffer.field_i - 1;
-          var2Lifetime2 = ch.field_z[fieldTemp$2];
-          ch.field_z[PacketBuffer.field_i] = null;
+          var2Lifetime2 = GameShell.field_z[fieldTemp$2];
+          GameShell.field_z[PacketBuffer.field_i] = null;
           return var2Lifetime2;
         }
         if (param1 != ~param0) {
@@ -238,16 +238,16 @@ final class ke {
           if (param0 != -101) {
             ke.a(true);
           }
-          var4 = (vk) (ea.field_t.b(2));
+          var4 = (vk) (LevelData.field_t.first(2));
           while (var4 != null) {
             ef.a(var4, param1, param0 + 111);
-            var4 = (vk) (ea.field_t.a(param0 + 111));
+            var4 = (vk) (LevelData.field_t.next(param0 + 111));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var2), "ke.A(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var2), "ke.A(" + param0 + ',' + param1 + ')');
         }
     }
 

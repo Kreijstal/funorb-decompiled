@@ -13,7 +13,7 @@ final class jh {
         nk.a(true, 41, true);
     }
 
-    final static int a(oh param0, String param1, int param2, boolean param3) {
+    final static int a(BitmapFont param0, String param1, int param2, boolean param3) {
         int var7 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -73,7 +73,7 @@ final class jh {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

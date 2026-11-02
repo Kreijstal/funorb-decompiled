@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends wh {
-    static qj field_n;
+final class ol extends PcmStream {
+    static Sprite field_n;
     private nb field_p;
     static String field_m;
-    ja field_q;
+    IntrusiveDeque field_q;
     k field_o;
 
     final void a(int[] param0, int param1, int param2) {
@@ -21,7 +21,7 @@ final class ol extends wh {
         var7 = TrackController.field_F ? 1 : 0;
         try {
           this.field_o.a(param0, param1, param2);
-          var6 = (ha) (this.field_q.b(2));
+          var6 = (ha) (this.field_q.first(2));
           while (var6 != null) {
             if (!this.field_p.a(-39, var6)) {
               var4_int = param1;
@@ -37,7 +37,7 @@ final class ol extends wh {
                 var5 = var5 - var6.field_w;
               } while (!this.field_p.a(var5, param0, var4_int, 1, var6));
             }
-            var6 = (ha) (this.field_q.a(10));
+            var6 = (ha) (this.field_q.next(10));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -50,7 +50,7 @@ final class ol extends wh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -73,13 +73,13 @@ final class ol extends wh {
             param0.field_C = 1048575 & param0.field_C + param1 * var4_int;
             if (var5 <= param1) {
               if (0 != this.field_p.field_R[param0.field_D]) {
-                param0.field_l = bh.a(param0.field_n, param0.field_l.f(), 0, param0.field_l.g());
+                param0.field_l = PcmSampleStream.a(param0.field_n, param0.field_l.f(), 0, param0.field_l.g());
                 stackIn_7_0 = this.field_p;
                 stackIn_7_1 = false;
                 stackIn_8_2 = !(param0.field_B.field_q[param0.field_i] >= 0);
                 ((nb) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_8_2, param0);
               } else {
-                param0.field_l = bh.a(param0.field_n, param0.field_l.f(), param0.field_l.e(), param0.field_l.g());
+                param0.field_l = PcmSampleStream.a(param0.field_n, param0.field_l.f(), param0.field_l.e(), param0.field_l.g());
               }
               if (0 > param0.field_B.field_q[param0.field_i]) {
                 param0.field_l.f(-1);
@@ -88,7 +88,7 @@ final class ol extends wh {
             }
           }
           if (param2 > -100) {
-            this.field_q = (ja) null;
+            this.field_q = (IntrusiveDeque) null;
           }
           param0.field_l.d(param1);
           return;
@@ -102,7 +102,7 @@ final class ol extends wh {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class ol extends wh {
         int var4;
         var4 = TrackController.field_F ? 1 : 0;
         this.field_o.d(param0);
-        var3 = (ha) (this.field_q.b(2));
+        var3 = (ha) (this.field_q.first(2));
         while (var3 != null) {
           if (!this.field_p.a(-93, var3)) {
             var2 = param0;
@@ -130,19 +130,19 @@ final class ol extends wh {
               var2 = var2 - var3.field_w;
             } while (!this.field_p.a(var2, (int[]) null, 0, 1, var3));
           }
-          var3 = (ha) (this.field_q.a(10));
+          var3 = (ha) (this.field_q.next(10));
         }
     }
 
-    final wh b() {
-        ha var1 = (ha) (this.field_q.b(2));
+    final PcmStream b() {
+        ha var1 = (ha) (this.field_q.first(2));
         if (var1 == null) {
           return null;
         }
         if (null == var1.field_l) {
           return this.a();
         }
-        return (wh) ((Object) var1.field_l);
+        return (PcmStream) ((Object) var1.field_l);
     }
 
     private final void a(int[] param0, int param1, byte param2, int param3, ha param4, int param5) {
@@ -160,7 +160,7 @@ final class ol extends wh {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        bh var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = TrackController.field_F ? 1 : 0;
         try {
@@ -184,14 +184,14 @@ final class ol extends wh {
               }
               var11 = param4.field_l;
               if (this.field_p.field_R[param4.field_D] != 0) {
-                param4.field_l = bh.a(param4.field_n, var11.f(), 0, var11.g());
+                param4.field_l = PcmSampleStream.a(param4.field_n, var11.f(), 0, var11.g());
                 stackIn_13_0 = this.field_p;
                 stackIn_13_1 = false;
                 stackIn_14_2 = !(0 <= param4.field_B.field_q[param4.field_i]);
                 ((nb) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_14_2, param4);
                 param4.field_l.c(var9, var11.e());
               } else {
-                param4.field_l = bh.a(param4.field_n, var11.f(), var11.e(), var11.g());
+                param4.field_l = PcmSampleStream.a(param4.field_n, var11.f(), var11.e(), var11.g());
               }
               if (param4.field_B.field_q[param4.field_i] < 0) {
                 param4.field_l.f(-1);
@@ -226,19 +226,19 @@ final class ol extends wh {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    final wh a() {
+    final PcmStream a() {
         ha var1_ref = null;
         do {
-          var1_ref = (ha) (this.field_q.a(10));
+          var1_ref = (ha) (this.field_q.next(10));
           if (var1_ref == null) {
             return null;
           }
         } while (var1_ref.field_l == null);
-        return (wh) ((Object) var1_ref.field_l);
+        return (PcmStream) ((Object) var1_ref.field_l);
     }
 
     public static void f(int param0) {
@@ -271,12 +271,12 @@ final class ol extends wh {
     }
 
     ol(nb param0) {
-        this.field_q = new ja();
+        this.field_q = new IntrusiveDeque();
         this.field_o = new k();
         try {
           this.field_p = param0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ol.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ol.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -6,7 +6,7 @@ import java.io.*;
 final class bf {
     private byte[] field_n;
     private long[] field_h;
-    static qj field_o;
+    static Sprite field_o;
     private byte[] field_g;
     static String field_c;
     static String field_d;
@@ -65,7 +65,7 @@ final class bf {
                 this.field_l = 0;
                 this.field_i = 0;
               }
-              this.field_g[this.field_i] = (byte)tc.a(255, var8 << 8 - var7);
+              this.field_g[this.field_i] = (byte)RandomAccessCacheFile.a(255, var8 << 8 - var7);
               param1 = param1 - 8L;
               this.field_l = this.field_l + var7;
               var5_int++;
@@ -88,7 +88,7 @@ final class bf {
               this.field_l = 0;
               this.field_i = 0;
             }
-            this.field_g[this.field_i] = (byte)tc.a(255, var8Lifetime1 << -var7 + 8);
+            this.field_g[this.field_i] = (byte)RandomAccessCacheFile.a(255, var8Lifetime1 << -var7 + 8);
             this.field_l = this.field_l + (int)param1;
           } else {
             this.field_l = (int)((long)this.field_l + param1);
@@ -104,7 +104,7 @@ final class bf {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class bf {
         int var8 = 0;
         var8 = TrackController.field_F ? 1 : 0;
         try {
-          this.field_g[this.field_i] = (byte)ok.a((int) this.field_g[this.field_i], 128 >>> tc.a(this.field_l, 7));
+          this.field_g[this.field_i] = (byte)ok.a((int) this.field_g[this.field_i], 128 >>> RandomAccessCacheFile.a(this.field_l, 7));
           this.field_i = this.field_i + 1;
           if (param2 != -513) {
             return;
@@ -202,7 +202,7 @@ final class bf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class bf {
             bf.a((byte) 1);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "bf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "bf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class bf {
         var2 = 0;
         var3 = 0;
         while (8 > var2) {
-          this.field_h[var2] = ib.a(ib.a(ib.a(ib.a(al.a(255L, (long)this.field_g[var3 + 4]) << 24, ib.a(al.a((long)this.field_g[var3 + 3], 255L) << 32, ib.a(al.a(280375465082880L, (long)this.field_g[var3 + 2] << 40), ib.a(al.a((long)this.field_g[var3 + 1], 255L) << 48, (long)this.field_g[var3] << 56)))), al.a((long)this.field_g[var3 + 5] << 16, 16711680L)), al.a((long)this.field_g[var3 + 6], 255L) << 8), al.a((long)this.field_g[7 + var3], 255L));
+          this.field_h[var2] = ib.a(ib.a(ib.a(ib.a(UiWidget.a(255L, (long)this.field_g[var3 + 4]) << 24, ib.a(UiWidget.a((long)this.field_g[var3 + 3], 255L) << 32, ib.a(UiWidget.a(280375465082880L, (long)this.field_g[var3 + 2] << 40), ib.a(UiWidget.a((long)this.field_g[var3 + 1], 255L) << 48, (long)this.field_g[var3] << 56)))), UiWidget.a((long)this.field_g[var3 + 5] << 16, 16711680L)), UiWidget.a((long)this.field_g[var3 + 6], 255L) << 8), UiWidget.a((long)this.field_g[7 + var3], 255L));
           var3 += 8;
           var2++;
         }
@@ -273,7 +273,7 @@ final class bf {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_b[var3Lifetime1] = ib.a(this.field_b[var3Lifetime1], lh.field_B[var4][tc.a(255, (int)(this.field_j[tc.a(7, var3Lifetime1 - var4)] >>> var5))]);
+              this.field_b[var3Lifetime1] = ib.a(this.field_b[var3Lifetime1], lh.field_B[var4][RandomAccessCacheFile.a(255, (int)(this.field_j[RandomAccessCacheFile.a(7, var3Lifetime1 - var4)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -288,7 +288,7 @@ final class bf {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_b[var3Lifetime1Lifetime2] = ib.a(this.field_b[var3Lifetime1Lifetime2], lh.field_B[var7][tc.a((int)(this.field_m[tc.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_b[var3Lifetime1Lifetime2] = ib.a(this.field_b[var3Lifetime1Lifetime2], lh.field_B[var7][RandomAccessCacheFile.a((int)(this.field_m[RandomAccessCacheFile.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }

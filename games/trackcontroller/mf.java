@@ -28,7 +28,7 @@ final class mf {
         try {
           jb.a((byte) -109, param1, param5, param2, param4, 1024, param3, param2);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "mf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,16 +51,16 @@ final class mf {
         var9 = TrackController.field_F ? 1 : 0;
         try {
           var10 = ne.field_a;
-          var2 = var10.h(16383);
-          var3 = var10.h(16383);
+          var2 = var10.readUnsignedByte(16383);
+          var3 = var10.readUnsignedByte(16383);
           var4 = -16 / ((38 - param0) / 45);
           if (0 == var2) {
-            var5_ref_nk = (nk) (qh.field_e.b(2));
+            var5_ref_nk = (nk) (qh.field_e.first(2));
             if (var5_ref_nk == null) {
               GameKeyHandler.a((byte) 113);
               return;
             }
-            var6_int = hd.field_o - var10.field_k;
+            var6_int = hd.field_o - var10.position;
             var12 = var5_ref_nk.field_m;
             var11 = var12;
             var7 = var11;
@@ -68,10 +68,10 @@ final class mf {
               var6_int = var12.length << 2;
             }
             for (var8 = 0; var6_int > var8; var8++) {
-              var7[var8 >> 2] = var7[var8 >> 2] + (var10.h(16383) << tc.a(var8 << 8, 768));
+              var7[var8 >> 2] = var7[var8 >> 2] + (var10.readUnsignedByte(16383) << RandomAccessCacheFile.a(var8 << 8, 768));
             }
             var5_ref_nk.field_k = true;
-            var5_ref_nk.a(-71);
+            var5_ref_nk.unlink(-71);
             return;
           }
           if (var2 != 1) {
@@ -80,17 +80,17 @@ final class mf {
             return;
           }
           var5 = var10.k(118);
-          var6 = (dh) (pa.field_c.b(2));
+          var6 = (dh) (pa.field_c.first(2));
           while (var6 != null) {
             if (var3 != var6.field_k ||
               var5 != var6.field_q) {
-              var6 = (dh) (pa.field_c.a(10));
+              var6 = (dh) (pa.field_c.next(10));
               continue;
             }
             break;
           }
           if (var6 != null) {
-            var6.a(-78);
+            var6.unlink(-78);
             return;
           }
           GameKeyHandler.a((byte) 112);
@@ -98,7 +98,7 @@ final class mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "mf.B(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1), "mf.B(" + param0 + ')');
         }
     }
 
@@ -137,28 +137,28 @@ final class mf {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          kf.field_c = param1.d((byte) -126) << 5;
-          var2_int = param1.h(16383);
+          kf.field_c = param1.readUnsignedShort((byte) -126) << 5;
+          var2_int = param1.readUnsignedByte(16383);
           kf.field_c = kf.field_c + (var2_int >> 3);
           ai.field_d = 1835008 & var2_int << 18;
-          ai.field_d = ai.field_d + (param1.d((byte) -97) << 2);
-          var2_intLifetime1 = param1.h(param0 ^ 16369);
+          ai.field_d = ai.field_d + (param1.readUnsignedShort((byte) -97) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(param0 ^ 16369);
           ai.field_d = ai.field_d + (var2_intLifetime1 >> 6);
           fe.field_Q = 2064384 & var2_intLifetime1 << 15;
-          fe.field_Q = fe.field_Q + (param1.h(16383) << 7);
+          fe.field_Q = fe.field_Q + (param1.readUnsignedByte(16383) << 7);
           if (param0 != 14) {
             mf.b((byte) 127);
           }
-          var2_intLifetime2 = param1.h(param0 ^ 16369);
+          var2_intLifetime2 = param1.readUnsignedByte(param0 ^ 16369);
           nh.field_a = var2_intLifetime2 << 16 & 65536;
           fe.field_Q = fe.field_Q + (var2_intLifetime2 >> 1);
-          nh.field_a = nh.field_a + param1.d((byte) -50);
+          nh.field_a = nh.field_a + param1.readUnsignedShort((byte) -50);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "mf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "mf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static kk a(int param0, byte param1) {
+    final static Archive a(int param0, byte param1) {
         int var2 = 19 / ((param1 - 24) / 42);
         return fh.a(true, param0, false, false, 1, 9);
     }

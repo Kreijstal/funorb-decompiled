@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends wh {
+final class qe extends PcmStream {
     private int field_t;
     private int[] field_s;
     private boolean field_q;
@@ -26,11 +26,11 @@ final class qe extends wh {
           param2.a(param0, (byte) -116, param1);
           param2.a(0, param3);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "qe.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "qe.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final wh b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -192,7 +192,7 @@ final class qe extends wh {
           } else {
             stackIn_67_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ final class qe extends wh {
         }
     }
 
-    final static qj[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param3 != 1) {
           qe.e(52);
         }
@@ -380,11 +380,11 @@ final class qe extends wh {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param5).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    final wh a() {
+    final PcmStream a() {
         return null;
     }
 

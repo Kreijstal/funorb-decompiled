@@ -3,12 +3,12 @@
  */
 final class qh {
     private boolean field_d;
-    static ja field_e;
+    static IntrusiveDeque field_e;
     static long field_f;
     private int[] field_g;
     private int field_a;
     static String field_c;
-    static ea field_b;
+    static LevelData field_b;
     private int field_h;
     static boolean field_i;
 
@@ -42,9 +42,9 @@ final class qh {
         this.a(-123, 110);
     }
 
-    final static hg a(kk param0, int param1, kk param2, int param3, int param4) {
+    final static hg a(Archive param0, int param1, Archive param2, int param3, int param4) {
         RuntimeException var5 = null;
-        kk var6 = null;
+        Archive var6 = null;
         Object stackIn_4_0 = null;
         hg stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -55,8 +55,8 @@ final class qh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != -11948) {
-            var6 = (kk) null;
-            qh.a((kk) null, -65, (kk) null, -113, 27);
+            var6 = (Archive) null;
+            qh.a((Archive) null, -65, (Archive) null, -113, 27);
           }
           if (sk.a(param3, param2, param4 + 11949, param1)) {
             stackIn_6_0 = ra.a(param4 + 11446, param0.a(param1, param3, (byte) -67));
@@ -80,7 +80,7 @@ final class qh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class qh {
 
     final int b(int param0) {
         if (param0 != -1) {
-          field_e = (ja) null;
+          field_e = (IntrusiveDeque) null;
           return this.field_a + 1;
         }
         return this.field_a + 1;
@@ -214,7 +214,7 @@ final class qh {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+            throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -229,6 +229,6 @@ final class qh {
 
     static {
         field_c = "Type your email address again to make sure it's correct";
-        field_e = new ja();
+        field_e = new IntrusiveDeque();
     }
 }

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class tc {
+final class RandomAccessCacheFile {
     private RandomAccessFile field_d;
     private long field_a;
     static String field_e;
@@ -24,7 +24,7 @@ final class tc {
     public static void b(byte param0) {
         field_e = null;
         if (param0 >= -78) {
-          tc.b((byte) -126);
+          RandomAccessCacheFile.b((byte) -126);
         }
     }
 
@@ -41,7 +41,7 @@ final class tc {
           this.field_d.write(param3, param2, param1);
           this.field_c = this.field_c + (long)param1;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "tc.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "tc.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class tc {
               }
             }
             if (param0 < 5) {
-              tc.c((byte) 29);
+              RandomAccessCacheFile.c((byte) 29);
               return;
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -110,7 +110,7 @@ final class tc {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class tc {
 
     final long a(byte param0) throws IOException {
         if (param0 < 118) {
-          tc.c((byte) -25);
+          RandomAccessCacheFile.c((byte) -25);
           return this.field_d.length();
         }
         return this.field_d.length();
@@ -142,7 +142,7 @@ final class tc {
         }
     }
 
-    tc(File param0, String param1, long param2) throws IOException {
+    RandomAccessCacheFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (-1L == param2) {
@@ -162,7 +162,7 @@ final class tc {
           }
           this.field_d.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "tc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "tc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

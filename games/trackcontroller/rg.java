@@ -20,7 +20,7 @@ final class rg {
             rg.a((wb) null, 121);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "rg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "rg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

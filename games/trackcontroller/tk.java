@@ -10,7 +10,7 @@ abstract class tk extends DualLinkNode {
     boolean field_v;
     static String field_r;
     static char[] field_o;
-    static mg[] field_p;
+    static GameScreen[] field_p;
 
     abstract byte[] g(int param0);
 
@@ -39,8 +39,8 @@ abstract class tk extends DualLinkNode {
           !(ti.field_j.length >= param0)) {
           ti.field_j = new int[param0 * 2];
         }
-        if (g.field_u == null) {
-          g.field_u = new int[2 * param0];
+        if (SpriteState.field_u == null) {
+          SpriteState.field_u = new int[2 * param0];
           if (ii.field_q == null ||
             !(ii.field_q.length >= param0)) {
             ii.field_q = new int[2 * param0];
@@ -67,15 +67,15 @@ abstract class tk extends DualLinkNode {
               dc.field_r = new boolean[param0 * 2];
             }
           } else {
-            field_p = (mg[]) null;
+            field_p = (GameScreen[]) null;
             if (dc.field_r == null ||
               !(dc.field_r.length >= param0)) {
               dc.field_r = new boolean[param0 * 2];
             }
           }
         } else {
-          if (g.field_u.length < param0) {
-            g.field_u = new int[2 * param0];
+          if (SpriteState.field_u.length < param0) {
+            SpriteState.field_u = new int[2 * param0];
             if (ii.field_q == null ||
               !(ii.field_q.length >= param0)) {
               ii.field_q = new int[2 * param0];
@@ -95,7 +95,7 @@ abstract class tk extends DualLinkNode {
             if (null == lf.field_Y) {
               lf.field_Y = new int[2 * (param2 + param0)];
               if (param1 != -14032) {
-                field_p = (mg[]) null;
+                field_p = (GameScreen[]) null;
               }
               if (dc.field_r == null ||
                 !(dc.field_r.length >= param0)) {
@@ -105,7 +105,7 @@ abstract class tk extends DualLinkNode {
               if (lf.field_Y.length < param0 + param2) {
                 lf.field_Y = new int[2 * (param2 + param0)];
                 if (param1 != -14032) {
-                  field_p = (mg[]) null;
+                  field_p = (GameScreen[]) null;
                 }
                 if (dc.field_r == null ||
                   !(dc.field_r.length >= param0)) {
@@ -118,7 +118,7 @@ abstract class tk extends DualLinkNode {
                     dc.field_r = new boolean[param0 * 2];
                   }
                 } else {
-                  field_p = (mg[]) null;
+                  field_p = (GameScreen[]) null;
                   if (dc.field_r == null ||
                     !(dc.field_r.length >= param0)) {
                     dc.field_r = new boolean[param0 * 2];
@@ -146,7 +146,7 @@ abstract class tk extends DualLinkNode {
                 lf.field_Y = new int[2 * (param2 + param0)];
               }
               if (param1 != -14032) {
-                field_p = (mg[]) null;
+                field_p = (GameScreen[]) null;
               }
               if (dc.field_r == null ||
                 !(dc.field_r.length >= param0)) {
@@ -167,7 +167,7 @@ abstract class tk extends DualLinkNode {
                   lf.field_Y = new int[2 * (param2 + param0)];
                 }
                 if (param1 != -14032) {
-                  field_p = (mg[]) null;
+                  field_p = (GameScreen[]) null;
                 }
                 if (dc.field_r == null ||
                   !(dc.field_r.length >= param0)) {
@@ -188,7 +188,7 @@ abstract class tk extends DualLinkNode {
                   lf.field_Y = new int[2 * (param2 + param0)];
                 }
                 if (param1 != -14032) {
-                  field_p = (mg[]) null;
+                  field_p = (GameScreen[]) null;
                 }
                 if (dc.field_r == null ||
                   !(dc.field_r.length >= param0)) {
@@ -215,6 +215,6 @@ abstract class tk extends DualLinkNode {
         field_t = new ud();
         field_o = new char[128];
         field_r = null;
-        field_p = new mg[17];
+        field_p = new GameScreen[17];
     }
 }

@@ -109,7 +109,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class ProxySocketConnector extends SocketConnector {
         int stackIn_9_0 = 0;
         var3 = TrackController.field_F ? 1 : 0;
         fe.field_L = fe.field_L + 1;
-        if (param0 != g.field_y) {
+        if (param0 != SpriteState.field_y) {
           if (!GameApplet.field_k) {
             if (fe.field_L >= BufferedSocket.field_o) {
               stackIn_9_0 = (fe.field_L < cl.field_a + BufferedSocket.field_o) ? 1 : 0;
@@ -156,10 +156,10 @@ final class ProxySocketConnector extends SocketConnector {
         if (param1 != 20) {
           return;
         }
-        g.field_y = param0;
+        SpriteState.field_y = param0;
         if (!GameApplet.field_k &&
           fe.field_L < BufferedSocket.field_o &&
-          mg.field_a) {
+          GameScreen.field_a) {
           fe.field_L = 0;
           kj.field_o = fg.field_a;
           ha.field_z = kf.field_b;
@@ -292,7 +292,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (param1 >= -59) {
           ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(true, -37, false, false);
         }
-        return al.field_i[var4];
+        return UiWidget.field_i[var4];
     }
 
     final static void b(int param0, byte param1) {
@@ -382,7 +382,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -405,7 +405,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (param1 >= -59) {
           ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(true, -37, false, false);
         }
-        return al.field_i[var4];
+        return UiWidget.field_i[var4];
     }
 
     @SuppressWarnings("unchecked")

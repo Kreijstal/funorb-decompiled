@@ -3,16 +3,16 @@
  */
 final class kh {
     private boolean field_c;
-    static il[] field_e;
+    static BufferedCacheFile[] field_e;
     static String field_a;
     private String field_d;
     static String field_b;
 
-    final static qj a(boolean param0, int param1, int param2, kk param3) {
+    final static Sprite a(boolean param0, int param1, int param2, Archive param3) {
         RuntimeException var4 = null;
         java.applet.Applet var5 = null;
         Object stackIn_4_0 = null;
-        qj stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -27,7 +27,7 @@ final class kh {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (qj) (stackIn_4_0);
+          return (Sprite) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -38,7 +38,7 @@ final class kh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class kh {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw sl.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw LevelGrid.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -110,7 +110,7 @@ final class kh {
         this(param0, false);
     }
 
-    final static ck a(kk param0, String param1, kk param2, String param3, int param4) {
+    final static ck a(Archive param0, String param1, Archive param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -161,7 +161,7 @@ final class kh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ final class kh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

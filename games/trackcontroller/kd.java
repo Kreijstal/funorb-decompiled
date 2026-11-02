@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class kd {
-    static ja field_b;
-    static ja field_a;
+    static IntrusiveDeque field_b;
+    static IntrusiveDeque field_a;
 
     final static void a(String param0, byte param1) {
         try {
           if (param1 <= 30) {
-            field_a = (ja) null;
+            field_a = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "kd.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "kd.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -21,14 +21,14 @@ abstract class kd {
         field_a = null;
         field_b = null;
         if (param0 < 23) {
-          field_b = (ja) null;
+          field_b = (IntrusiveDeque) null;
         }
     }
 
     abstract nh a(boolean param0);
 
     static {
-        field_b = new ja();
-        field_a = new ja();
+        field_b = new IntrusiveDeque();
+        field_a = new IntrusiveDeque();
     }
 }

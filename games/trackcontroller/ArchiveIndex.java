@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pc {
+final class ArchiveIndex {
     int[] field_b;
     private int[] field_o;
     int[] field_l;
@@ -70,22 +70,22 @@ final class pc {
         int var13Lifetime1Lifetime1;
         var16 = TrackController.field_F ? 1 : 0;
         try {
-          var17 = new PacketBuffer(al.a(-128, param1));
-          var4 = var17.h(16383);
+          var17 = new PacketBuffer(UiWidget.a(-128, param1));
+          var4 = var17.readUnsignedByte(16383);
           if (5 <= var4 &&
             var4 <= 7) {
             if (6 <= var4) {
-              this.field_k = var17.e((byte) 113);
+              this.field_k = var17.readInt((byte) 113);
             } else {
               this.field_k = 0;
             }
-            var5 = var17.h(16383);
+            var5 = var17.readUnsignedByte(16383);
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (7 <= var4) {
               this.field_s = var17.c(false);
             } else {
-              this.field_s = var17.d((byte) -78);
+              this.field_s = var17.readUnsignedShort((byte) -78);
             }
             stackIn_17_0 = ((2 & var5) == 0) ? 0 : 1;
             var7 = stackIn_17_0;
@@ -97,7 +97,7 @@ final class pc {
             this.field_f = new int[this.field_s];
             if (var4 < 7) {
               for (var10 = 0; this.field_s > var10; var10++) {
-                dupTemp$0 = var8 + var17.d((byte) -62);
+                dupTemp$0 = var8 + var17.readUnsignedShort((byte) -62);
                 var8 = dupTemp$0;
                 this.field_f[var10] = dupTemp$0;
                 if (this.field_f[var10] > var9) {
@@ -129,12 +129,12 @@ final class pc {
                 this.field_o[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_s; var10Lifetime1Lifetime1++) {
-                this.field_o[this.field_f[var10Lifetime1Lifetime1]] = var17.e((byte) 113);
+                this.field_o[this.field_f[var10Lifetime1Lifetime1]] = var17.readInt((byte) 113);
               }
               this.field_q = new oe(this.field_o);
             }
             for (var10Lifetime2 = 0; var10Lifetime2 < this.field_s; var10Lifetime2++) {
-              this.field_b[this.field_f[var10Lifetime2]] = var17.e((byte) 113);
+              this.field_b[this.field_f[var10Lifetime2]] = var17.readInt((byte) 113);
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_s > var10Lifetime3; var10Lifetime3++) {
@@ -144,7 +144,7 @@ final class pc {
               }
             }
             for (var10Lifetime4 = 0; var10Lifetime4 < this.field_s; var10Lifetime4++) {
-              this.field_d[this.field_f[var10Lifetime4]] = var17.e((byte) 113);
+              this.field_d[this.field_f[var10Lifetime4]] = var17.readInt((byte) 113);
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_s; var10Lifetime5++) {
@@ -174,7 +174,7 @@ final class pc {
               }
             } else {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_s; var10Lifetime5++) {
-                this.field_l[this.field_f[var10Lifetime5]] = var17.d((byte) -42);
+                this.field_l[this.field_f[var10Lifetime5]] = var17.readUnsignedShort((byte) -42);
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_s; var10Lifetime5++) {
                 var11 = this.field_f[var10Lifetime5];
@@ -184,7 +184,7 @@ final class pc {
                 this.field_r[var11] = array$5;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.d((byte) -109);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort((byte) -109);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_r[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -216,7 +216,7 @@ final class pc {
                   } else {
                     var14Lifetime1 = this.field_r[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_c[var11Lifetime1][var14Lifetime1] = var17.e((byte) 113);
+                  this.field_c[var11Lifetime1][var14Lifetime1] = var17.readInt((byte) 113);
                 }
                 this.field_e[var11Lifetime1] = new oe(this.field_c[var11Lifetime1]);
               }
@@ -235,7 +235,7 @@ final class pc {
           } else {
             stackIn_102_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class pc {
         field_t = null;
     }
 
-    pc(byte[] param0, int param1, byte[] param2) {
+    ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
           this.field_p = ql.a(0, param0, param0.length);
@@ -266,7 +266,7 @@ final class pc {
           }
           this.a((byte) -2, param0);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "pc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "pc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

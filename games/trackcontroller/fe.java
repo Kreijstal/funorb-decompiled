@@ -14,23 +14,23 @@ final class fe extends rh {
     int field_K;
     int field_O;
 
-    final static void a(bh param0, int param1) {
+    final static void a(PcmSampleStream param0, int param1) {
         try {
           ProxySocketConnector.field_e.b(param0);
           if (param1 != 2) {
-            kk var3 = (kk) null;
-            fe.a(-87, (kk) null);
+            Archive var3 = (Archive) null;
+            fe.a(-87, (Archive) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "fe.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "fe.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void j(int param0) {
         field_J = null;
         if (param0 > -85) {
-          kk var2 = (kk) null;
-          fe.a(126, (kk) null);
+          Archive var2 = (Archive) null;
+          fe.a(126, (Archive) null);
         }
     }
 
@@ -38,11 +38,11 @@ final class fe extends rh {
         try {
           kg.a(param0, (byte) 116, param2, param1);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "fe.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "fe.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final boolean a(al param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -87,7 +87,7 @@ final class fe extends rh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class fe extends rh {
         throw new Error();
     }
 
-    final static void a(int param0, kk param1) {
+    final static void a(int param0, Archive param1) {
         int var3 = 0;
         int var4 = 0;
         pf var5 = null;
@@ -115,7 +115,7 @@ final class fe extends rh {
         try {
           var9 = new la(param1.a("logo.fo3d", -1, ""));
           var11 = var9;
-          var3 = var11.h(param0 - 13961);
+          var3 = var11.readUnsignedByte(param0 - 13961);
           var11.h((byte) 31);
           lg.field_d = hb.a(12, var11);
           if (param0 != 30344) {
@@ -150,7 +150,7 @@ final class fe extends rh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

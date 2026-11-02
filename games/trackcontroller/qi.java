@@ -8,15 +8,15 @@ final class qi {
     private int field_d;
     static int[] field_b;
     private boolean field_j;
-    qj[] field_i;
-    qj field_g;
+    Sprite[] field_i;
+    Sprite field_g;
     private int field_a;
     private int field_e;
     private int field_l;
     static Boolean field_c;
 
-    final void a(int param0, int param1, al param2, int param3, gi param4) {
-        oh stackIn_18_0 = null;
+    final void a(int param0, int param1, UiWidget param2, int param3, gi param4) {
+        BitmapFont stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;
         int stackIn_21_2;
@@ -90,7 +90,7 @@ final class qi {
             } else {
               stackIn_25_8 = this.field_a;
             }
-            ((oh) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_f, param4.field_l, param4.field_n);
+            ((BitmapFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_f, param4.field_l, param4.field_n);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -109,7 +109,7 @@ final class qi {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class qi {
           param1.field_j = this.field_j;
           param1.field_a = this.field_a;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "qi.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "qi.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -206,8 +206,8 @@ final class qi {
           var8 = var41;
           var65 = new int[param7.field_l];
           var62 = wf.field_c;
-          var63 = ch.field_y;
-          var64 = ea.field_w;
+          var63 = GameShell.field_y;
+          var64 = LevelData.field_w;
           for (var13 = 0; var13 < param7.field_l; var13++) {
             var14 = param1 * var62[var13] - (-(var63[var13] * param5) - param3 * var64[var13]) >> 8;
             if (0 > var14) {
@@ -330,7 +330,7 @@ final class qi {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
         }
     }
 
@@ -358,11 +358,11 @@ final class qi {
           if (pl.field_b != null) {
             try {
               pl.field_b.a(0L, true);
-              pl.field_b.a(24, param0 ^ -8771, ne.field_a.field_j, ne.field_a.field_k);
+              pl.field_b.a(24, param0 ^ -8771, ne.field_a.payload, ne.field_a.position);
             } catch (Exception exception) {
             }
           }
-          ne.field_a.field_k = ne.field_a.field_k + 24;
+          ne.field_a.position = ne.field_a.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -391,11 +391,11 @@ final class qi {
           bf.a((byte) -26, param0);
           nb.a(rk.field_Z, false, -16257);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final qi a(int param0, qj[] param1) {
+    final qi a(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         qi stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -419,7 +419,7 @@ final class qi {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -438,7 +438,7 @@ final class qi {
           }
           v.field_f = 0;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "qi.D(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "qi.D(" + param0 + ')');
         }
     }
 
@@ -463,7 +463,7 @@ final class qi {
         return this;
     }
 
-    final void a(gi param0, int param1, al param2, int param3, qi param4, int param5) {
+    final void a(gi param0, int param1, UiWidget param2, int param3, qi param4, int param5) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -522,16 +522,16 @@ final class qi {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static qj[] a(int param0, int param1, byte param2, int param3, int param4) {
+    final static Sprite[] a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 < 114) {
           pf var6 = (pf) null;
           qi.a(-47, 76, (byte) -78, -114, -61, 88, -14, (pf) null);
         }
-        return g.a(param4, 1, 1, param3, param1, param0, 1, 3, -119);
+        return SpriteState.a(param4, 1, 1, param3, param1, param0, 1, 3, -119);
     }
 
     final qi a(int param0, int param1) {

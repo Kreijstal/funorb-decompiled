@@ -15,11 +15,11 @@ final class he {
         j.field_a = param3;
         if (param1 != 0) {
           field_d = -71;
-          sl.field_n = param0;
+          LevelGrid.field_n = param0;
           db.field_db = param2;
           return;
         }
-        sl.field_n = param0;
+        LevelGrid.field_n = param0;
         db.field_db = param2;
     }
 

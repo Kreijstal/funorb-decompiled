@@ -6,12 +6,12 @@ final class cc {
     private int field_c;
     private pg[] field_b;
 
-    final ik b() {
+    final PcmSample b() {
         byte[] var1 = this.a();
-        return new ik(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
-    final static cc a(kk param0, int param1, int param2) {
+    final static cc a(Archive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, param2, (byte) -79);
         if (var3 == null) {
           return null;
@@ -59,7 +59,7 @@ final class cc {
         return var3;
     }
 
-    final static cc a(kk param0, String param1, String param2) {
+    final static cc a(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, -1, param2);
         if (var3 == null) {
           return null;
@@ -72,14 +72,14 @@ final class cc {
         int var3;
         this.field_b = new pg[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.h(16383);
+          var3 = param0.readUnsignedByte(16383);
           if (var3 != 0) {
-            param0.field_k = param0.field_k - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new pg();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_c = param0.d((byte) -126);
-        this.field_a = param0.d((byte) -86);
+        this.field_c = param0.readUnsignedShort((byte) -126);
+        this.field_a = param0.readUnsignedShort((byte) -86);
     }
 }

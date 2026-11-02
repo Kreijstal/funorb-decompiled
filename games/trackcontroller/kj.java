@@ -14,7 +14,7 @@ final class kj extends IntrusiveNode {
     int[] field_m;
     int[] field_i;
     private static long[] field_q;
-    static qj field_l;
+    static Sprite field_l;
     static int field_o;
     static int field_k;
 
@@ -87,7 +87,7 @@ final class kj extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -141,6 +141,6 @@ final class kj extends IntrusiveNode {
           field_q[var2] = var0;
         }
         field_o = -1;
-        field_l = new qj(540, 140);
+        field_l = new Sprite(540, 140);
     }
 }

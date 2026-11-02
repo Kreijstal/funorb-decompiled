@@ -11,7 +11,7 @@ final class sk {
     private sg[] field_d;
     String field_a;
     private int field_e;
-    static kk field_j;
+    static Archive field_j;
 
     final boolean a(boolean param0) {
         int var3;
@@ -70,14 +70,14 @@ final class sk {
           }
           this.field_i = var4_float * (float)this.field_e / (float)(1 + this.field_c);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "sk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "sk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(int param0, kk param1, int param2, int param3) {
+    final static boolean a(int param0, Archive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        kk var5 = null;
+        Archive var5 = null;
         byte[] var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -87,8 +87,8 @@ final class sk {
           var6 = param1.a(param3, param0, (byte) -117);
           var4 = var6;
           if (param2 != 1) {
-            var5 = (kk) null;
-            sk.a(-44, (kk) null, 17, 118);
+            var5 = (Archive) null;
+            sk.a(-44, (Archive) null, 17, 118);
           }
           if (var6 == null) {
             return false;
@@ -105,7 +105,7 @@ final class sk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

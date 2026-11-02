@@ -7,8 +7,8 @@ final class cd {
     int field_e;
     private int field_m;
     boolean field_a;
-    static ja field_h;
-    static qj field_c;
+    static IntrusiveDeque field_h;
+    static Sprite field_c;
     static int field_b;
     private int field_d;
     private int field_f;
@@ -204,7 +204,7 @@ final class cd {
           if (uk.field_a == 0) {
             if (SecondaryNodeDeque.field_a != 0) {
               if (0 == this.field_l && (this.field_a ||
-                mg.field_a)) {
+                GameScreen.field_a)) {
                 if (0 <= param1) {
                   if (this.field_e == param1) {
                     this.field_e = param1;
@@ -246,7 +246,7 @@ final class cd {
                 return;
               }
             } else {
-              if (mg.field_a) {
+              if (GameScreen.field_a) {
                 if (0 <= param1) {
                   if (this.field_e == param1) {
                   }
@@ -275,7 +275,7 @@ final class cd {
           if (uk.field_a == 0) {
             if (SecondaryNodeDeque.field_a != 0) {
               if (0 == this.field_l && (this.field_a ||
-                mg.field_a)) {
+                GameScreen.field_a)) {
                 if (0 <= param1) {
                   if (this.field_e == param1) {
                     this.field_e = param1;
@@ -305,7 +305,7 @@ final class cd {
               return;
             }
             if (!this.field_a) {
-              if (!mg.field_a) {
+              if (!GameScreen.field_a) {
                 if (param0 < -117) {
                   return;
                 }
@@ -349,7 +349,7 @@ final class cd {
           if (uk.field_a == 0) {
             if (SecondaryNodeDeque.field_a != 0) {
               if (0 == this.field_l && (this.field_a ||
-                mg.field_a)) {
+                GameScreen.field_a)) {
                 if (0 <= param1) {
                   if (this.field_e == param1) {
                     this.field_e = param1;
@@ -395,7 +395,7 @@ final class cd {
             this.a(true);
             return;
           }
-          if (!mg.field_a) {
+          if (!GameScreen.field_a) {
             if (param0 < -117) {
               return;
             }
@@ -506,7 +506,7 @@ final class cd {
     }
 
     static {
-        field_h = new ja();
+        field_h = new IntrusiveDeque();
         field_g = 0;
         field_j = false;
     }

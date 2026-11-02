@@ -85,7 +85,7 @@ abstract class vh extends DualLinkNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ abstract class vh extends DualLinkNode {
         this.field_o = param0;
     }
 
-    final static kk a(int param0, int param1, boolean param2, int param3, boolean param4) {
+    final static Archive a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param1 == 98) {
           return fh.a(param4, param0, param2, false, param3, -122);
         }
@@ -345,7 +345,7 @@ abstract class vh extends DualLinkNode {
             field_q = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "vh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "vh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

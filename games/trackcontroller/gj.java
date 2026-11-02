@@ -3,7 +3,7 @@
  */
 final class gj {
     static int field_c;
-    static ea[] field_f;
+    static LevelData[] field_f;
     static String[] field_b;
     static String field_a;
     static String field_d;
@@ -21,11 +21,11 @@ final class gj {
         try {
           var3 = ra.field_C;
           var3.c(param2, 7);
-          var3.a(param0, (byte) -93);
-          var3.a(0, (byte) -69);
-          var3.a(param1.field_i, (byte) -120);
+          var3.writeByte(param0, (byte) -93);
+          var3.writeByte(0, (byte) -69);
+          var3.writeByte(param1.field_i, (byte) -120);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "gj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "gj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class gj {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

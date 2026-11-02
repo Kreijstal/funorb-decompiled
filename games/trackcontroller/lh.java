@@ -8,7 +8,7 @@ final class lh extends tk {
     static ud field_x;
     static long[][] field_B;
     static long[] field_D;
-    static kk field_C;
+    static Archive field_C;
 
     final byte[] g(int param0) {
         if (this.field_w) {
@@ -87,7 +87,7 @@ final class lh extends tk {
         field_D[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = -8 + var0 * 8;
-            field_D[var0] = ib.a(al.a(255L, field_B[7][var1 + 7]), ib.a(al.a(field_B[6][6 + var1], 65280L), ib.a(ib.a(ib.a(al.a(field_B[3][var1 + 3], 1095216660480L), ib.a(al.a(field_B[2][2 + var1], 280375465082880L), ib.a(al.a(field_B[0][var1], -72057594037927936L), al.a(71776119061217280L, field_B[1][var1 + 1])))), al.a(field_B[4][4 + var1], 4278190080L)), al.a(field_B[5][var1 + 5], 16711680L))));
+            field_D[var0] = ib.a(UiWidget.a(255L, field_B[7][var1 + 7]), ib.a(UiWidget.a(field_B[6][6 + var1], 65280L), ib.a(ib.a(ib.a(UiWidget.a(field_B[3][var1 + 3], 1095216660480L), ib.a(UiWidget.a(field_B[2][2 + var1], 280375465082880L), ib.a(UiWidget.a(field_B[0][var1], -72057594037927936L), UiWidget.a(71776119061217280L, field_B[1][var1 + 1])))), UiWidget.a(field_B[4][4 + var1], 4278190080L)), UiWidget.a(field_B[5][var1 + 5], 16711680L))));
         }
     }
 }

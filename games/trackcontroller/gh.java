@@ -9,7 +9,7 @@ final class gh implements t {
     private int field_f;
     static String field_e;
     private int field_b;
-    private oh field_d;
+    private BitmapFont field_d;
     private int field_a;
     private int field_i;
     private int field_h;
@@ -35,7 +35,7 @@ final class gh implements t {
         return true;
     }
 
-    public final void a(int param0, al param1, int param2, boolean param3, int param4) {
+    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         int var8 = 0;
         int var13 = 0;
         double var9 = 0.0;
@@ -45,7 +45,7 @@ final class gh implements t {
         double var9Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
-        ll.c(param4 + param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, this.field_h);
+        SoftwareRasterizer.c(param4 + param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, this.field_h);
         if (var14 == null) {
         }
         int var7 = var14.field_S + param1.field_p + param4;
@@ -54,28 +54,28 @@ final class gh implements t {
         }
         try {
           var8 = param2 + param1.field_m + var14.field_R;
-          ll.f(var7, var8, var14.field_I, this.field_a);
+          SoftwareRasterizer.f(var7, var8, var14.field_I, this.field_a);
           if (var14.field_K != -1) {
             var9 = (double)var14.field_K * 3.141592653589793 * 2.0 / (double)var14.field_M;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_I);
             var12 = (int)(Math.cos(var9) * (double)var14.field_I);
-            ll.f(var7 + var11, var8 + var12, 1, this.field_i);
+            SoftwareRasterizer.f(var7 + var11, var8 + var12, 1, this.field_i);
           }
-          ll.f(var7, var8, 2, 1);
+          SoftwareRasterizer.f(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_O * 3.141592653589793 * 2.0 / (double)var14.field_M;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_I);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_I);
-          ll.e(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.e(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (null != this.field_d) {
             var13 = var14.field_I + (var14.field_S + this.field_b);
             this.field_d.a(param1.field_s, var13 + (param4 + param1.field_p), this.field_f + (param1.field_m + param2), -this.field_b - var13 + param1.field_x, -(this.field_b << 1) + param1.field_u, this.field_j, this.field_g, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "gh.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "gh.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    gh(oh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    gh(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_b = param1;
           this.field_h = param7;
@@ -86,7 +86,7 @@ final class gh implements t {
           this.field_d = param0;
           this.field_i = param6;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

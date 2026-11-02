@@ -20,11 +20,11 @@ final class mj {
     }
 
     final static void a(int param0) {
-        qj var1 = null;
+        Sprite var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        qj[] stackIn_5_0 = null;
+        Sprite[] stackIn_5_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = TrackController.field_F ? 1 : 0;
@@ -38,12 +38,12 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1_ref), "mj.A(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1_ref), "mj.A(" + param0 + ')');
         }
         stackIn_5_0 = mb.field_d;
         try {
           while (stackIn_5_0.length > var3) {
-            mb.field_d[var3] = new qj(var2, var2);
+            mb.field_d[var3] = new Sprite(var2, var2);
             mb.field_d[var3].a();
             var1.a(208, 208, var2 << 3, var2 << 3, (int)(0.5 + 16384.0 * (double)var3 / 26.0), 4096);
             var3++;
@@ -54,7 +54,7 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1_ref), "mj.A(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1_ref), "mj.A(" + param0 + ')');
         }
     }
 

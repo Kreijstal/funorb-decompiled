@@ -12,10 +12,10 @@ final class ef {
           return;
         }
         try {
-          var3.a(param0.field_l, (byte) -95);
+          var3.writeByte(param0.field_l, (byte) -95);
           var3.b(param0.field_k, (byte) -122);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ef.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ef.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

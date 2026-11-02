@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ff {
-    static kk field_b;
+    static Archive field_b;
     static String[] field_c;
     private int[] field_a;
 
@@ -26,7 +26,7 @@ final class ff {
           j.field_f = null;
           return;
         }
-        field_b = (kk) null;
+        field_b = (Archive) null;
         qk.field_M = (byte[][]) null;
         j.field_f = null;
     }
@@ -230,7 +230,7 @@ final class ff {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 

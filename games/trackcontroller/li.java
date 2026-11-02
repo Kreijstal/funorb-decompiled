@@ -5,7 +5,7 @@ final class li extends IntrusiveNode {
     IntrusiveNode field_k;
     int field_m;
     static String field_l;
-    bh field_j;
+    PcmSampleStream field_j;
     static boolean field_i;
 
     final static String d(int param0) {
@@ -24,14 +24,14 @@ final class li extends IntrusiveNode {
         int var1 = -101 % ((param0 - 0) / 63);
     }
 
-    li(bh param0, IntrusiveNode param1) {
+    li(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_j = param0;
           this.field_m = param0.e();
           this.field_k = param1;
           this.field_j.g(qd.field_d * this.field_m + 128 >> 8);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 final class kf {
     static int field_c;
     static int field_b;
-    static qj[] field_d;
+    static Sprite[] field_d;
     static int field_a;
 
     public static void b(int param0) {
@@ -14,7 +14,7 @@ final class kf {
         }
     }
 
-    final static mh a(int param0, kk param1, int param2) {
+    final static mh a(int param0, Archive param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -46,7 +46,7 @@ final class kf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class kf {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -8,30 +8,30 @@ abstract class fh {
     static oi field_e;
     static byte[] field_a;
     static String field_d;
-    static ja field_b;
+    static IntrusiveDeque field_b;
 
-    final static kk a(boolean param0, int param1, boolean param2, boolean param3, int param4, int param5) {
+    final static Archive a(boolean param0, int param1, boolean param2, boolean param3, int param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           gd var8 = null;
           int var9 = 0;
-          kk stackIn_14_0 = null;
+          Archive stackIn_14_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
             var7 = null;
             if (null != kb.field_d.field_t) {
-              sd.field_c = new il(kb.field_d.field_t, 5200, 0);
+              sd.field_c = new BufferedCacheFile(kb.field_d.field_t, 5200, 0);
               kb.field_d.field_t = null;
-              var6 = new hf(255, sd.field_c, new il(kb.field_d.field_v, 12000, 0), 2097152);
+              var6 = new hf(255, sd.field_c, new BufferedCacheFile(kb.field_d.field_v, 12000, 0), 2097152);
             }
             if (null != sd.field_c) {
               if (null == kh.field_e) {
-                kh.field_e = new il[kb.field_d.field_q.length];
+                kh.field_e = new BufferedCacheFile[kb.field_d.field_q.length];
               }
               if (kh.field_e[param1] == null) {
-                kh.field_e[param1] = new il(kb.field_d.field_q[param1], 12000, 0);
+                kh.field_e[param1] = new BufferedCacheFile(kb.field_d.field_q[param1], 12000, 0);
                 kb.field_d.field_q[param1] = null;
               }
               var7 = new hf(param1, sd.field_c, kh.field_e[param1], 2097152);
@@ -41,7 +41,7 @@ abstract class fh {
             if (param2) {
               var8.b(6054);
             }
-            stackIn_14_0 = new kk(var8, param0, param4);
+            stackIn_14_0 = new Archive(var8, param0, param4);
             return stackIn_14_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,15 +91,15 @@ abstract class fh {
             if (!hf.a(1, false)) {
               return false;
             }
-            hd.field_o = ne.field_a.h(16383);
-            ne.field_a.field_k = 0;
+            hd.field_o = ne.field_a.readUnsignedByte(16383);
+            ne.field_a.position = 0;
           }
           if (hd.field_o == -2) {
             if (!hf.a(2, false)) {
               return false;
             }
-            hd.field_o = ne.field_a.d((byte) -76);
-            ne.field_a.field_k = 0;
+            hd.field_o = ne.field_a.readUnsignedShort((byte) -76);
+            ne.field_a.position = 0;
           }
           return hf.a(hd.field_o, false);
         }
@@ -107,15 +107,15 @@ abstract class fh {
           if (!hf.a(1, false)) {
             return false;
           }
-          hd.field_o = ne.field_a.h(16383);
-          ne.field_a.field_k = 0;
+          hd.field_o = ne.field_a.readUnsignedByte(16383);
+          ne.field_a.position = 0;
         }
         if (hd.field_o == -2) {
           if (!hf.a(2, false)) {
             return false;
           }
-          hd.field_o = ne.field_a.d((byte) -76);
-          ne.field_a.field_k = 0;
+          hd.field_o = ne.field_a.readUnsignedShort((byte) -76);
+          ne.field_a.position = 0;
         }
         return hf.a(hd.field_o, false);
     }
@@ -124,6 +124,6 @@ abstract class fh {
         field_a = new byte[520];
         field_e = new oi();
         field_d = "Change display name";
-        field_b = new ja();
+        field_b = new IntrusiveDeque();
     }
 }

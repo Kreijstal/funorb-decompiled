@@ -143,7 +143,7 @@ final class hb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -161,15 +161,15 @@ final class hb {
             var8.field_m = 0L;
           } else {
             var7 = new ad(var6, var8.field_o);
-            this.field_e.a(var7, var8.field_b, -1);
+            this.field_e.a(var7, var8.key, -1);
             this.field_h.a(var7, 8466);
             ((vh) ((Object) var7)).field_m = 0L;
-            var8.a(-57);
+            var8.unlink(-57);
             var8.e(0);
           }
           return var6;
         }
-        var8.a(-110);
+        var8.unlink(-110);
         var8.e(0);
         this.field_g = this.field_g + var8.field_o;
         return null;
@@ -190,7 +190,7 @@ final class hb {
           if (param1 == null) {
             return;
           }
-          param1.a(-113);
+          param1.unlink(-113);
           param1.e(0);
           this.field_g = this.field_g + param1.field_o;
           return;
@@ -204,7 +204,7 @@ final class hb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class hb {
           this.field_h.a(var6, 8466);
           ((vh) ((Object) var6)).field_m = 0L;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "hb.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "hb.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -267,7 +267,7 @@ final class hb {
             this.a(-15L, (byte) -124);
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "hb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "hb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

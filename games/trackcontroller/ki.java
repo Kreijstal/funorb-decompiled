@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class ki {
-    private kk field_g;
+    private Archive field_g;
     private hb field_d;
     static java.awt.Canvas field_f;
-    private kk field_b;
+    private Archive field_b;
     static Calendar field_e;
     static int[] field_c;
     static String field_a;
@@ -16,20 +16,20 @@ final class ki {
         if (param1 != 0) {
           ki.a(false, -67, false);
           if (param0) {
-            ll.c(0, 0, ll.field_d, ll.field_k, 0, 192);
+            SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, 192);
             lh.a(param0, -94);
             return;
           }
-          ll.a();
+          SoftwareRasterizer.a();
           lh.a(param0, -94);
           return;
         }
         if (param0) {
-          ll.c(0, 0, ll.field_d, ll.field_k, 0, 192);
+          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, 192);
           lh.a(param0, -94);
           return;
         }
-        ll.a();
+        SoftwareRasterizer.a();
         lh.a(param0, -94);
     }
 

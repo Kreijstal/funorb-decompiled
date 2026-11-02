@@ -52,7 +52,7 @@ final class ge extends td implements jg, m {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class ge extends td implements jg, m {
           this.a(false, this.field_E);
           this.a(55 + var3 + var5, -3050, 0, 300, 0);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class ge extends td implements jg, m {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(byte param0, char param1, al param2, int param3) {
+    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -130,7 +130,7 @@ final class ge extends td implements jg, m {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class ge extends td implements jg, m {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -186,14 +186,14 @@ final class ge extends td implements jg, m {
           var2_long = qg.a(param1);
           if (s.field_b != 0 &&
             vd.field_K < 0) {
-            var4_ref_wa = (wa) (cg.field_f.b(2));
+            var4_ref_wa = (wa) (cg.field_f.first(2));
             if (var4_ref_wa != null &&
               var4_ref_wa.field_l < var2_long) {
-              var4_ref_wa.a(-60);
+              var4_ref_wa.unlink(-60);
               hd.field_o = var4_ref_wa.field_m.length;
-              ne.field_a.field_k = 0;
+              ne.field_a.position = 0;
               for (var5_int = 0; hd.field_o > var5_int; var5_int++) {
-                ne.field_a.field_j[var5_int] = var4_ref_wa.field_m[var5_int];
+                ne.field_a.payload[var5_int] = var4_ref_wa.field_m[var5_int];
               }
               o.field_a = u.field_o;
               u.field_o = mc.field_L;
@@ -204,12 +204,12 @@ final class ge extends td implements jg, m {
           }
           while (true) {
             if (vd.field_K < 0) {
-              ne.field_a.field_k = 0;
+              ne.field_a.position = 0;
               if (!hf.a(1, false)) {
                 return false;
               }
               vd.field_K = ne.field_a.e(false);
-              ne.field_a.field_k = 0;
+              ne.field_a.position = 0;
               hd.field_o = param0[vd.field_K];
             }
             if (!fh.a(520)) {
@@ -232,9 +232,9 @@ final class ge extends td implements jg, m {
             }
             var5 = new wa((long)var4 + var2_long, vd.field_K, new byte[hd.field_o]);
             for (var6 = 0; var6 < hd.field_o; var6++) {
-              var5.field_m[var6] = ne.field_a.field_j[var6];
+              var5.field_m[var6] = ne.field_a.payload[var6];
             }
-            cg.field_f.a((byte) -110, var5);
+            cg.field_f.addLast((byte) -110, var5);
             vd.field_K = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -247,7 +247,7 @@ final class ge extends td implements jg, m {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
         }
     }
 

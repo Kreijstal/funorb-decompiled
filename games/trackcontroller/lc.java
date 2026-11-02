@@ -7,7 +7,7 @@ final class lc extends td implements m {
     private String field_H;
     static String field_E;
     private int field_I;
-    private oh field_F;
+    private BitmapFont field_F;
     private rh[] field_G;
 
     private final void a(int param0, int param1) {
@@ -73,7 +73,7 @@ final class lc extends td implements m {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class lc extends td implements m {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -140,11 +140,11 @@ final class lc extends td implements m {
           this.field_G[var4_int] = this.a(-14, (tg) (this), param1);
           this.field_C[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "lc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "lc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    lc(jj param0, oh param1, String param2) {
+    lc(jj param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (t) null);
         int var4_int = 0;
         this.field_I = 0;
@@ -155,7 +155,7 @@ final class lc extends td implements m {
           var4_int = null == this.field_H ? 0 : this.field_F.a(this.field_H, 260, this.field_F.field_G);
           this.a(22 + var4_int, -3050, 0, 288, 0);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

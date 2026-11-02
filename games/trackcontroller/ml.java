@@ -39,7 +39,7 @@ final class ml extends IntrusiveNode {
     private static int field_N;
     private static float[] field_P;
 
-    final ik a() {
+    final PcmSample a() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -71,7 +71,7 @@ final class ml extends IntrusiveNode {
           }
         }
         this.field_z = null;
-        return new ik(this.field_E, var1, this.field_O, this.field_C, this.field_u);
+        return new PcmSample(this.field_E, var1, this.field_O, this.field_C, this.field_u);
     }
 
     final static void a(byte[] param0) {
@@ -135,7 +135,7 @@ final class ml extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = ea.b(false, var5 - 1);
+          var10 = LevelData.b(false, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = fj.b(var10, 1, var11);
           }
@@ -190,7 +190,7 @@ final class ml extends IntrusiveNode {
         field_A = true;
     }
 
-    final static ml a(kk param0, int param1, int param2) {
+    final static ml a(Archive param0, int param1, int param2) {
         try {
           ml var4_ref = null;
           if (!ml.a(param0)) {
@@ -348,7 +348,7 @@ final class ml extends IntrusiveNode {
         int var18_intLifetime2;
         ml.a(this.field_o[param0], 0);
         ml.b();
-        var2 = ml.f(ea.b(false, field_k.length - 1));
+        var2 = ml.f(LevelData.b(false, field_k.length - 1));
         var3 = field_L[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_K;
@@ -467,7 +467,7 @@ final class ml extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = ea.b(false, var4 - 1);
+          var25Lifetime2 = LevelData.b(false, var4 - 1);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;
@@ -623,15 +623,15 @@ final class ml extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_E = var2.e((byte) 113);
-        this.field_B = var2.e((byte) 113);
-        this.field_O = var2.e((byte) 113);
-        this.field_C = var2.e((byte) 113);
+        this.field_E = var2.readInt((byte) 113);
+        this.field_B = var2.readInt((byte) 113);
+        this.field_O = var2.readInt((byte) 113);
+        this.field_C = var2.readInt((byte) 113);
         if (this.field_C < 0) {
           this.field_C = ~this.field_C;
           this.field_u = true;
         }
-        int var3 = var2.e((byte) 113);
+        int var3 = var2.readInt((byte) 113);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -639,7 +639,7 @@ final class ml extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.h(16383);
+            var6_int = var2.readUnsignedByte(16383);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
@@ -658,7 +658,7 @@ final class ml extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final ik a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -708,7 +708,7 @@ final class ml extends IntrusiveNode {
         this.field_z = null;
         var12 = this.field_F;
         this.field_F = null;
-        return new ik(this.field_E, var12, this.field_O, this.field_C, this.field_u);
+        return new PcmSample(this.field_E, var12, this.field_O, this.field_C, this.field_u);
     }
 
     private final static void a(byte[] param0, int param1) {
@@ -717,7 +717,7 @@ final class ml extends IntrusiveNode {
         field_M = 0;
     }
 
-    final static ml a(kk param0, String param1, String param2) {
+    final static ml a(Archive param0, String param1, String param2) {
         try {
           ml var4_ref = null;
           if (!ml.a(param0)) {
@@ -742,7 +742,7 @@ final class ml extends IntrusiveNode {
         }
     }
 
-    private final static boolean a(kk param0) {
+    private final static boolean a(Archive param0) {
         byte[] var1 = null;
         if (!field_A) {
           var1 = param0.a(0, 0, (byte) -77);

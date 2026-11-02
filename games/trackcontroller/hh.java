@@ -26,7 +26,7 @@ final class hh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "hh.remove()");
+          throw LevelGrid.a((Throwable) ((Object) var1), "hh.remove()");
         }
     }
 
@@ -37,7 +37,7 @@ final class hh implements Iterator {
             field_b = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "hh.D(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "hh.D(" + param0 + ')');
         }
     }
 
@@ -68,20 +68,20 @@ final class hh implements Iterator {
             field_b = (String) null;
           }
           var1 = ne.field_a;
-          var2 = var1.h(param0 ^ 16255);
+          var2 = var1.readUnsignedByte(param0 ^ 16255);
           if (0 == var2) {
             if (ug.field_cb == null) {
               ug.field_cb = new bj(128);
               jc.field_c = 0;
             }
-            stackIn_15_0 = (var1.h(16383) != 1) ? 0 : 1;
+            stackIn_15_0 = (var1.readUnsignedByte(16383) != 1) ? 0 : 1;
             var3_int = stackIn_15_0;
-            var4_ref_String = var1.g(0);
+            var4_ref_String = var1.readString(0);
             if (var3_int != 0) {
-              var1.g(0);
+              var1.readString(0);
             }
             var5_ref = nj.a((byte) 125, var4_ref_String);
-            var6_ref = var1.g(0);
+            var6_ref = var1.readString(0);
             var7_ref = r.a((CharSequence) ((Object) var4_ref_String), -11133);
             if (var7_ref == null) {
               var7_ref = var4_ref_String;
@@ -98,7 +98,7 @@ final class hh implements Iterator {
               fieldTemp$1 = jc.field_c;
               jc.field_c = jc.field_c + 1;
               var5_ref.field_R = fieldTemp$1;
-              pb.field_d.a((byte) -111, var5_ref);
+              pb.field_d.addLast((byte) -111, var5_ref);
             }
             var5_ref.field_jb = var4_ref_String;
             return;
@@ -122,9 +122,9 @@ final class hh implements Iterator {
               return;
             }
             q.field_a = 1;
-            var3 = var1.g(param0 ^ 128);
+            var3 = var1.readString(param0 ^ 128);
             la.field_q = ((String) (var3)).intern();
-            var4 = var1.h(16383);
+            var4 = var1.readUnsignedByte(16383);
             hj.a((byte) 100, var4);
             return;
           }
@@ -132,12 +132,12 @@ final class hh implements Iterator {
             ag.field_d = new bj(128);
             ei.field_o = 0;
           }
-          var3Lifetime1 = var1.g(0);
+          var3Lifetime1 = var1.readString(0);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.g(0);
-          var5 = var1.g(0);
+          var4_ref_StringLifetime1 = var1.readString(0);
+          var5 = var1.readString(0);
           var6 = ob.a(param0 - 218, var4_ref_StringLifetime1);
           if (var6 == null) {
             var6 = ob.a(param0 - 78, var5);
@@ -151,18 +151,18 @@ final class hh implements Iterator {
             fieldTemp$0 = ei.field_o;
             ei.field_o = ei.field_o + 1;
             var6.field_R = fieldTemp$0;
-            oj.field_d.a((byte) -97, var6);
+            oj.field_d.addLast((byte) -97, var6);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
           var6.field_ib = (String) (var3Lifetime1);
           var6.field_jb = var4_ref_StringLifetime1;
-          var6.a(-104);
-          var7 = (ve) (oj.field_d.b(2));
+          var6.unlink(-104);
+          var7 = (ve) (oj.field_d.first(2));
           while (var7 != null) {
             if (aj.a(true, var7, var6)) {
-              var7 = (ve) (oj.field_d.a(10));
+              var7 = (ve) (oj.field_d.next(10));
               if (var8 == 0) {
                 continue;
               }
@@ -170,7 +170,7 @@ final class hh implements Iterator {
             break;
           }
           if (var7 == null) {
-            oj.field_d.a((byte) -106, var6);
+            oj.field_d.addLast((byte) -106, var6);
             if (var8 == 0) {
               return;
             }
@@ -180,7 +180,7 @@ final class hh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1_ref), "hh.B(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1_ref), "hh.B(" + param0 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class hh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (var1), "hh.next()");
+          throw LevelGrid.a((Throwable) (var1), "hh.next()");
         }
     }
 
@@ -233,7 +233,7 @@ final class hh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) runtimeException), "hh.C(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "hh.C(" + param0 + ')');
         }
     }
 
@@ -259,7 +259,7 @@ final class hh implements Iterator {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ final class hh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var1), "hh.A(" + param0 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var1), "hh.A(" + param0 + ')');
         }
     }
 

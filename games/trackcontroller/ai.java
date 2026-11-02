@@ -10,7 +10,7 @@ final class ai {
     static int[] field_e;
     static String field_i;
     static int field_h;
-    static qj field_a;
+    static Sprite field_a;
     private static String field_z;
 
     public static void a(byte param0) {

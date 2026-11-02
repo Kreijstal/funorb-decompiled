@@ -64,7 +64,7 @@ final class l extends di {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -104,11 +104,11 @@ final class l extends di {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static boolean a(kk param0, kk param1, byte param2, kk param3) {
+    final static boolean a(Archive param0, Archive param1, byte param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_19_0 = null;
@@ -158,7 +158,7 @@ final class l extends di {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw LevelGrid.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class l extends di {
           }
           qd.a(param1, 0, 0, 2901);
         } catch (RuntimeException runtimeException) {
-          throw sl.a((Throwable) ((Object) runtimeException), "l.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw LevelGrid.a((Throwable) ((Object) runtimeException), "l.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -186,24 +186,24 @@ final class l extends di {
         RuntimeException var2_ref = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          var4 = (cf) (kd.field_b.b(param0 + 30424));
+          var4 = (cf) (kd.field_b.first(param0 + 30424));
           if (param0 != -30422) {
             return;
           }
           while (var4 != null) {
             md.a(param1, var4, 99);
-            var4 = (cf) (kd.field_b.a(10));
+            var4 = (cf) (kd.field_b.next(10));
           }
-          var2 = fh.field_b.b(2);
+          var2 = fh.field_b.first(2);
           while (var2 != null) {
             nk.a(param1, -120);
-            var2 = fh.field_b.a(param0 ^ -30432);
+            var2 = fh.field_b.next(param0 ^ -30432);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sl.a((Throwable) ((Object) var2_ref), "l.G(" + param0 + ',' + param1 + ')');
+          throw LevelGrid.a((Throwable) ((Object) var2_ref), "l.G(" + param0 + ',' + param1 + ')');
         }
     }
 
