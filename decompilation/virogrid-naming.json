@@ -1644,6 +1644,14 @@
       "renamedSymbol": "M:Virogrid.shutdown(I)V"
     },
     {
+      "symbol": "M:Virogrid.r(I)V",
+      "originalName": "r",
+      "to": "initScene",
+      "evidence": "Creates the camera, the 640 by 400 and 200 by 400 raster buffers and the 256-entry colour ramp.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Virogrid.initScene(I)V"
+    },
+    {
       "symbol": "M:Virogrid.t(I)V",
       "originalName": "t",
       "to": "openArchives",
@@ -43486,7 +43494,7 @@
     },
     {
       "symbol": "L:Virogrid.r(I)V#0",
-      "renamedSymbol": "L:Virogrid.r(I)V#0",
+      "renamedSymbol": "L:Virogrid.initScene(I)V#0",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -43497,7 +43505,7 @@
     },
     {
       "symbol": "L:Virogrid.r(I)V#1",
-      "renamedSymbol": "L:Virogrid.r(I)V#1",
+      "renamedSymbol": "L:Virogrid.initScene(I)V#1",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -43508,7 +43516,7 @@
     },
     {
       "symbol": "L:Virogrid.r(I)V#2",
-      "renamedSymbol": "L:Virogrid.r(I)V#2",
+      "renamedSymbol": "L:Virogrid.initScene(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -43519,7 +43527,7 @@
     },
     {
       "symbol": "L:Virogrid.r(I)V#3",
-      "renamedSymbol": "L:Virogrid.r(I)V#3",
+      "renamedSymbol": "L:Virogrid.initScene(I)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -43530,7 +43538,7 @@
     },
     {
       "symbol": "L:Virogrid.r(I)V#4",
-      "renamedSymbol": "L:Virogrid.r(I)V#4",
+      "renamedSymbol": "L:Virogrid.initScene(I)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -43541,7 +43549,7 @@
     },
     {
       "symbol": "L:Virogrid.r(I)V#5",
-      "renamedSymbol": "L:Virogrid.r(I)V#5",
+      "renamedSymbol": "L:Virogrid.initScene(I)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -197937,9 +197945,9 @@
     },
     {
       "symbol": "M:Virogrid.r(I)V",
-      "renamedSymbol": "M:Virogrid.r(I)V",
+      "renamedSymbol": "M:Virogrid.initScene(I)V",
       "originalName": "r",
-      "renamedName": "r",
+      "renamedName": "initScene",
       "declaration": {
         "file": "Virogrid.java",
         "start": 504,
@@ -227593,7 +227601,7 @@
     },
     {
       "symbol": "P:Virogrid.r(I)V#0",
-      "renamedSymbol": "P:Virogrid.r(I)V#0",
+      "renamedSymbol": "P:Virogrid.initScene(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -301055,7 +301063,7 @@
       "original": "Virogrid.java",
       "renamed": "Virogrid.java",
       "inputSha256": "d7265fea90666c31db8f708680063c32bd27b3ee78934cc3060a405b4381c4ef",
-      "outputSha256": "c0f6a7dee01578fb09fb15b5453492d0c4b7fa687aedab137d1411793f81cb5c",
+      "outputSha256": "1d35c7dfc59b44405a192b0cbd0c0292235859c4403d332d08850ff4b653bf5c",
       "edits": [
         {
           "start": 91,
@@ -301063,6 +301071,13 @@
           "symbol": "C:p",
           "original": "p",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 504,
+          "end": 505,
+          "symbol": "M:Virogrid.r(I)V",
+          "original": "r",
+          "renamed": "initScene"
         },
         {
           "start": 1301,
@@ -301483,6 +301498,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 10672,
+          "end": 10673,
+          "symbol": "M:Virogrid.r(I)V",
+          "original": "r",
+          "renamed": "initScene"
         },
         {
           "start": 11006,
@@ -361131,10 +361153,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/virogrid"
     },
-    "rulesSha256": "62e3107e298f2c4a9d7342e2e51f900456b1ac40a8e10291b1ae9e4fbb08d039",
+    "rulesSha256": "9983ac99478b109d73718b5cc8560ecd24814f37919e705100838953ce644bc7",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "73369b22d01d3ca4afc8a1bb025a3f1d85920183905582e40ec4c7859f2e1c78",
-    "outputTreeSha256": "b20ab5844dd1d674ae65899de0ae8affe879e7cd2f9c10b7c67a81d8ab716a5a",
+    "outputTreeSha256": "41b48309c8c357d1f3d6611f90556274bf310a9999118cf2edaffb9f0cf77667",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

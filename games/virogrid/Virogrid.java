@@ -18,7 +18,7 @@ public final class Virogrid extends od {
     private int[] field_J;
     public static boolean field_F;
 
-    private final void r(int param0) {
+    private final void initScene(int param0) {
         jf dupTemp$2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -266,7 +266,7 @@ public final class Virogrid extends od {
           PacketBuffer.field_i[58] = -2;
           PacketBuffer.field_i[66] = 1;
           db.a((byte) 81, 200);
-          this.r(114);
+          this.initScene(114);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
