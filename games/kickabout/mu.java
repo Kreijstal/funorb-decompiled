@@ -257,7 +257,7 @@ abstract class mu extends cm {
         return super.k(param0 + 0);
     }
 
-    final static boolean a(ml param0, byte param1) {
+    final static boolean a(CipherPacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;

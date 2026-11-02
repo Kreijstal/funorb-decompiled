@@ -6,7 +6,7 @@ final class un {
     static r field_c;
     static cn field_d;
     static int[] field_a;
-    static ml field_e;
+    static CipherPacketBuffer field_e;
 
     public static void a(byte param0) {
         field_e = null;

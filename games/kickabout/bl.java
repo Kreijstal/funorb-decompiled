@@ -44,7 +44,7 @@ final class bl {
         var3 = this.field_b;
         if (this.field_f) {
           on.a(-2 + var2, -2 + var3, this.field_a + 6, 6 + this.field_j, 4, 16777215, 48);
-          iw.a(-47, k.field_j);
+          PacketBuffer.a(-47, k.field_j);
           on.b();
           un.field_d.a(pp.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           un.field_d.a(du.field_g.toUpperCase(), 0, -32 + this.field_j >> 1, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
@@ -56,7 +56,7 @@ final class bl {
         }
         pq.field_Q.b(var2, var3, al.a(false, (byte) 14));
         if (this.field_e.field_f == 4) {
-          iw.a(-45, jg.field_K);
+          PacketBuffer.a(-45, jg.field_K);
           on.b();
           ea.a(this.field_e.field_h, 0, false, jg.field_K.field_q, 0, -52);
           ta.e(119);

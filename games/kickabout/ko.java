@@ -27,7 +27,7 @@ final class ko {
         if (param0 < 57) {
           field_f = (int[]) null;
         }
-        ml var4 = or.field_d;
+        CipherPacketBuffer var4 = or.field_d;
         var4.b(param1, (byte) 120);
         var4.field_n = var4.field_n + 1;
         int var5 = var4.field_n;

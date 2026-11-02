@@ -40,7 +40,7 @@ abstract class tu extends ma implements hc {
         if (param0 != 15848) {
           tu.n((byte) 32);
         }
-        ml var3 = or.field_d;
+        CipherPacketBuffer var3 = or.field_d;
         var3.b(param1, (byte) -117);
         var3.a(param0 - 15721, 3);
         var3.a(109, 10);
@@ -303,7 +303,7 @@ abstract class tu extends ma implements hc {
         }
     }
 
-    abstract boolean a(int param0, ml param1, int param2);
+    abstract boolean a(int param0, CipherPacketBuffer param1, int param2);
 
     final static void n(byte param0) {
         int var1_int = 0;

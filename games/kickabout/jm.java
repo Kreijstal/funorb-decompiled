@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jm extends gn {
+final class jm extends IntrusiveNode {
     static int field_e;
     byte[] field_k;
     static ut[] field_i;
@@ -126,7 +126,7 @@ final class jm extends gn {
           boolean decompiledFrameRemainder0 = true;
           if (cq.field_h.field_c == 12) {
             if (sk.a((byte) 97) == tu.field_E.field_p &&
-              gn.b((byte) -110) == tu.field_E.field_F) {
+              IntrusiveNode.b((byte) -110) == tu.field_E.field_F) {
               stackIn_31_0 = (tu.field_E.field_A) ? 0 : 1;
               if (stackIn_31_0 != (ei.field_n ? 1 : 0)) {
                 stackIn_35_0 = (tu.field_E.field_d) ? 0 : 1;
@@ -153,7 +153,7 @@ final class jm extends gn {
               if (pf.field_c) {
                 var3_int = var3_int | 4;
               }
-              var4Lifetime1 = gn.b((byte) -65);
+              var4Lifetime1 = IntrusiveNode.b((byte) -65);
               if (255 < var4Lifetime1) {
                 var4Lifetime1 = 255;
               }
@@ -168,7 +168,7 @@ final class jm extends gn {
                 or.field_d.a(param2 + 119, var3_int);
               }
               tu.field_E.field_p = sk.a((byte) 97);
-              tu.field_E.field_F = gn.b((byte) -95);
+              tu.field_E.field_F = IntrusiveNode.b((byte) -95);
               tu.field_E.field_d = pf.field_c;
               tu.field_E.field_A = ei.field_n;
             }

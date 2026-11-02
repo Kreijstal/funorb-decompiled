@@ -109,7 +109,7 @@ abstract class lg implements l {
             lg.a((Object) null, true, -58);
           }
           if (param0 != null &&
-            param0.length() >= aq.field_c &&
+            param0.length() >= IsaacRandom.field_c &&
             param0.length() <= ko.field_c) {
             return false;
           }

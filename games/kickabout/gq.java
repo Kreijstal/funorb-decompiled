@@ -67,7 +67,7 @@ final class gq extends lq {
     private final void a(me param0) {
         param0.c((byte) -109);
         param0.a();
-        gn var2 = this.field_i.field_c.field_d;
+        IntrusiveNode var2 = this.field_i.field_c.field_d;
         if (var2 == this.field_i.field_c) {
           this.field_l = -1;
         } else {
@@ -79,7 +79,7 @@ final class gq extends lq {
         param0.c((byte) -109);
     }
 
-    private final void a(gn param0, me param1) {
+    private final void a(IntrusiveNode param0, me param1) {
         while (true) {
           if (param0 == this.field_i.field_c) {
             ug.a(param0, 16737894, param1);

@@ -97,7 +97,7 @@ final class dd {
         if (param0 > -108) {
           return (hd) null;
         }
-        return bs.field_c.field_Ab;
+        return ClientException.field_c.field_Ab;
     }
 
     final static void a(byte param0) {

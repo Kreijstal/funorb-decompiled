@@ -176,13 +176,13 @@ final class wp {
           ka.field_c.field_A = 1;
           bh.field_u = new hd(0L, dn.field_zb, oh.field_h);
           jf.field_D = new hd(0L, pq.field_P, mt.field_b);
-          bs.field_c = new np(0L, new hd(0L, (hd) null), rj.field_b, uk.field_b);
+          ClientException.field_c = new np(0L, new hd(0L, (hd) null), rj.field_b, uk.field_b);
           fm.field_C.a((byte) -114, ka.field_c);
           fm.field_C.a((byte) -105, bh.field_u);
           if (ui.field_t) {
             fm.field_C.a((byte) -123, jf.field_D);
           }
-          fm.field_C.a((byte) -122, (hd) (bs.field_c));
+          fm.field_C.a((byte) -122, (hd) (ClientException.field_c));
           ac.field_b = new hd(0L, ev.field_D, ns.field_b.toUpperCase());
           ci.field_h = new hd(0L, qa.field_H);
           sg.field_a = new hd(0L, cp.field_g);
@@ -385,7 +385,7 @@ final class wp {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = lt.field_a[qj.b((int) var21[var6], 255)];
             }
-            var1[var2] = new ut(kw.field_i, ai.field_J, aq.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], var22);
+            var1[var2] = new ut(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], var22);
           } else {
             var16 = es.field_e[var2];
             var12 = var16;
@@ -397,7 +397,7 @@ final class wp {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = hf.a(lt.field_a[qj.b((int) var21[var7], 255)], qj.b(-16777216, var16[var7] << 24));
             }
-            var1[var2] = (ut) ((Object) new ot(kw.field_i, ai.field_J, aq.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], var17));
+            var1[var2] = (ut) ((Object) new ot(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], var17));
           }
         }
         if (param0 >= -123) {

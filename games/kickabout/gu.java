@@ -191,7 +191,7 @@ final class gu extends hd {
         if (param1 > -75) {
           field_yb = (char[]) null;
         }
-        ml var3 = or.field_d;
+        CipherPacketBuffer var3 = or.field_d;
         var3.b(param2, (byte) -76);
         var3.a(111, 3);
         var3.a(125, 9);

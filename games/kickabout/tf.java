@@ -5,17 +5,17 @@ final class tf {
     static boolean field_f;
     static double field_a;
     static String[] field_h;
-    gn field_c;
+    IntrusiveNode field_c;
     static ut field_e;
     static int[][][] field_g;
     static cc field_d;
-    private gn field_i;
+    private IntrusiveNode field_i;
     static String field_b;
 
-    final gn h(int param0) {
-        gn var2 = this.field_c.field_b;
+    final IntrusiveNode h(int param0) {
+        IntrusiveNode var2 = this.field_c.field_b;
         if (param0 >= -119) {
-          return (gn) null;
+          return (IntrusiveNode) null;
         }
         if (this.field_c != var2) {
           var2.c((byte) -109);
@@ -26,8 +26,8 @@ final class tf {
 
     final void b(int param0) {
         int var3;
-        gn var5;
-        gn var4;
+        IntrusiveNode var5;
+        IntrusiveNode var4;
         var3 = Kickabout.field_G;
         if (param0 == 22997) {
           while (true) {
@@ -54,19 +54,19 @@ final class tf {
         return;
     }
 
-    final gn b(int param0, gn param1) {
-        gn var3 = null;
+    final IntrusiveNode b(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        gn stackIn_2_0 = null;
+        IntrusiveNode stackIn_2_0 = null;
         Object stackIn_8_0 = null;
-        gn stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -7584) {
-            stackIn_2_0 = (gn) null;
+            stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
           if (param1 == null) {
@@ -81,7 +81,7 @@ final class tf {
           }
           this.field_i = null;
           stackIn_8_0 = null;
-          return (gn) (stackIn_8_0);
+          return (IntrusiveNode) (stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -96,11 +96,11 @@ final class tf {
         }
     }
 
-    final gn d(int param0) {
+    final IntrusiveNode d(int param0) {
         if (param0 != -9033) {
-          return (gn) null;
+          return (IntrusiveNode) null;
         }
-        gn var2 = this.field_c.field_b;
+        IntrusiveNode var2 = this.field_c.field_b;
         if (this.field_c == var2) {
           this.field_i = null;
           return null;
@@ -109,9 +109,9 @@ final class tf {
         return var2;
     }
 
-    final gn g(int param0) {
-        gn var2 = null;
-        gn var2Lifetime1;
+    final IntrusiveNode g(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 24009) {
           field_e = (ut) null;
           var2 = this.field_c.field_d;
@@ -172,30 +172,30 @@ final class tf {
         try {
           this.a(param1, this.field_c.field_d, 123);
           if (param0 != -17481) {
-            gn var4 = (gn) null;
-            this.a((tf) null, (gn) null, -14);
+            IntrusiveNode var4 = (IntrusiveNode) null;
+            this.a((tf) null, (IntrusiveNode) null, -14);
           }
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "tf.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final gn[] f(int param0) {
+    final IntrusiveNode[] f(int param0) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
-        gn[] var6 = null;
-        gn[] var2 = null;
+        IntrusiveNode[] var6 = null;
+        IntrusiveNode[] var2 = null;
         int var3 = 0;
-        gn var4 = null;
+        IntrusiveNode var4 = null;
         int var5 = Kickabout.field_G;
-        gn[] var6Lifetime1;
-        gn[] var2Lifetime1;
-        gn var4Lifetime1;
+        IntrusiveNode[] var6Lifetime1;
+        IntrusiveNode[] var2Lifetime1;
+        IntrusiveNode var4Lifetime1;
         int var3Lifetime1;
         if (param0 != 606511077) {
           tf.a(113);
         } else {
-          var6 = new gn[this.a(false)];
+          var6 = new IntrusiveNode[this.a(false)];
           var2 = var6;
           var3 = 0;
           var4 = this.field_c.field_d;
@@ -207,7 +207,7 @@ final class tf {
           }
           return var2;
         }
-        var6Lifetime1 = new gn[this.a(false)];
+        var6Lifetime1 = new IntrusiveNode[this.a(false)];
         var2Lifetime1 = var6Lifetime1;
         var3Lifetime1 = 0;
         var4Lifetime1 = this.field_c.field_d;
@@ -220,11 +220,11 @@ final class tf {
         return var2Lifetime1;
     }
 
-    final gn e(int param0) {
-        gn var2 = null;
-        gn var2Lifetime1;
+    final IntrusiveNode e(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 33) {
-          this.field_i = (gn) null;
+          this.field_i = (IntrusiveNode) null;
           var2 = this.field_i;
           if (this.field_c == var2) {
             this.field_i = null;
@@ -242,13 +242,13 @@ final class tf {
         return var2Lifetime1;
     }
 
-    final void a(gn param0, int param1) {
+    final void a(IntrusiveNode param0, int param1) {
         try {
           if (null != param0.field_b) {
             param0.c((byte) -109);
           }
           if (param1 != 3) {
-            this.field_i = (gn) null;
+            this.field_i = (IntrusiveNode) null;
           }
           param0.field_b = this.field_c.field_b;
           param0.field_d = this.field_c;
@@ -264,7 +264,7 @@ final class tf {
         return this.field_c == this.field_c.field_d ? true : false;
     }
 
-    final void a(int param0, gn param1) {
+    final void a(int param0, IntrusiveNode param1) {
         try {
           if (param1.field_b != null) {
             param1.c((byte) -109);
@@ -281,9 +281,9 @@ final class tf {
         }
     }
 
-    final gn c(int param0) {
-        gn var2 = null;
-        gn var2Lifetime1;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 33) {
           field_b = (String) null;
           var2 = this.field_i;
@@ -303,10 +303,10 @@ final class tf {
         return null;
     }
 
-    private final void a(tf param0, gn param1, int param2) {
+    private final void a(tf param0, IntrusiveNode param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        gn var5 = null;
+        IntrusiveNode var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -357,7 +357,7 @@ final class tf {
 
     final int a(boolean param0) {
         int var2 = 0;
-        gn var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = Kickabout.field_G;
         if (!param0) {
           var2 = 0;
@@ -371,8 +371,8 @@ final class tf {
         return 127;
     }
 
-    final gn b(byte param0) {
-        gn var2 = this.field_c.field_d;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_c.field_d;
         if (var2 != this.field_c) {
           int var3 = -19 / ((param0 - 75) / 50);
           var2.c((byte) -109);
@@ -382,7 +382,7 @@ final class tf {
     }
 
     public tf() {
-        this.field_c = new gn();
+        this.field_c = new IntrusiveNode();
         this.field_c.field_d = this.field_c;
         this.field_c.field_b = this.field_c;
     }

@@ -473,10 +473,10 @@ final class mk {
         }
     }
 
-    final static int a(ml param0, int param1, byte param2, int param3) {
+    final static int a(CipherPacketBuffer param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         int stackIn_5_0 = 0;
-        ml stackIn_7_1;
+        CipherPacketBuffer stackIn_7_1;
         int stackIn_7_2;
         int stackIn_7_3;
         int stackIn_8_4;
@@ -494,7 +494,7 @@ final class mk {
           } else {
             stackIn_5_0 = 0;
           }
-          stackIn_7_1 = (ml) (param0);
+          stackIn_7_1 = (CipherPacketBuffer) (param0);
           stackIn_7_2 = param1;
           stackIn_7_3 = 0;
           if (param3 != 0) {

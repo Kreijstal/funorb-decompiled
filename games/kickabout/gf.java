@@ -63,14 +63,14 @@ final class gf {
         int var3 = 0;
         int[] var4 = null;
         int[] var5 = null;
-        ml var6 = null;
+        CipherPacketBuffer var6 = null;
         int var7 = 0;
         int var9 = 0;
         int[] var11 = null;
         int[] var12 = null;
         dk var13 = null;
         ii var14 = null;
-        ml var15 = null;
+        CipherPacketBuffer var15 = null;
         Object var16 = null;
         dk var16_ref = null;
         var16 = null;
@@ -85,9 +85,9 @@ final class gf {
             var11 = var12;
             var5 = var11;
             var6 = var15;
-            var7 = ((iw) ((Object) var6)).h((byte) -108);
+            var7 = ((PacketBuffer) ((Object) var6)).h((byte) -108);
             for (var8 = 0; var7 > var8; var8++) {
-              var11[var8] = ((iw) ((Object) var6)).k(4);
+              var11[var8] = ((PacketBuffer) ((Object) var6)).k(4);
             }
             var13 = (dk) (ap.field_j.g(24009));
             if (var13 == null) {

@@ -11,7 +11,7 @@ final class dq extends av {
     static String field_h;
 
     final static void a(int param0, int param1) {
-        gn var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         mp var4 = null;
         RuntimeException decompiledCaughtException = null;

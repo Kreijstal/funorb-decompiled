@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class fd extends gn {
+class fd extends IntrusiveNode {
     boolean field_m;
     int field_t;
     String field_q;

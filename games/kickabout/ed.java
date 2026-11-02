@@ -16,7 +16,7 @@ final class ed {
         if (var3 == null) {
           return null;
         }
-        return new ed(new iw(var3));
+        return new ed(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -59,7 +59,7 @@ final class ed {
         return var3;
     }
 
-    private ed(iw param0) {
+    private ed(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_c = new kv[10];

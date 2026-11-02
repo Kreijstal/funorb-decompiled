@@ -186,7 +186,7 @@ class tj extends mo {
         return this.field_p >> 16;
     }
 
-    final void c(ml param0, int param1) {
+    final void c(CipherPacketBuffer param0, int param1) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -229,7 +229,7 @@ class tj extends mo {
         }
     }
 
-    final void a(ml param0, byte param1) {
+    final void a(CipherPacketBuffer param0, byte param1) {
         int discarded$0 = 0;
         try {
           this.field_m = param0.l(2, 59) - 1;
@@ -279,8 +279,8 @@ class tj extends mo {
           this.field_o = var5.field_o;
           this.field_v = var5.field_v;
           if (param0 > -52) {
-            ml var4 = (ml) null;
-            this.c((ml) null, -54);
+            CipherPacketBuffer var4 = (CipherPacketBuffer) null;
+            this.c((CipherPacketBuffer) null, -54);
           }
           this.field_t = var5.field_t;
           this.field_q = var5.field_q;

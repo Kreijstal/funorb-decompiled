@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aq {
+final class IsaacRandom {
     static String field_h;
     private int[] field_a;
     private int field_d;
@@ -23,7 +23,7 @@ final class aq {
         return this.field_a[fieldTemp$0];
     }
 
-    final static int a(int param0, int param1, ml param2) {
+    final static int a(int param0, int param1, CipherPacketBuffer param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -216,7 +216,7 @@ final class aq {
           var2 = var11;
           if (param1 < 103) {
             var10 = (String) null;
-            aq.a((String) null, -9);
+            IsaacRandom.a((String) null, -9);
           }
           var3 = new StringBuilder();
           for (var4 = 0; var11.length > var4; var4++) {
@@ -270,8 +270,8 @@ final class aq {
     public static void b(int param0) {
         field_f = null;
         if (param0 != 1) {
-          ml var2 = (ml) null;
-          aq.a(-123, -53, (ml) null);
+          CipherPacketBuffer var2 = (CipherPacketBuffer) null;
+          IsaacRandom.a(-123, -53, (CipherPacketBuffer) null);
         }
         field_h = null;
     }
@@ -334,7 +334,7 @@ final class aq {
         return param0 | param1;
     }
 
-    aq(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_i = new int[256];

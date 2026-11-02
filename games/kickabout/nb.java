@@ -102,13 +102,13 @@ final class nb {
         return (int)(1000000000L / no.field_H);
     }
 
-    final static bs a(Throwable param0, String param1) {
-        bs var2 = null;
-        if (param0 instanceof bs) {
-          var2 = (bs) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_d = var2.field_d + ' ' + param1;
         } else {
-          var2 = new bs(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }

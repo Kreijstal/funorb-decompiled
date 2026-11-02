@@ -22,7 +22,7 @@ final class le {
         String var11;
         int var13;
         Object var14;
-        bs var14_ref;
+        ClientException var14_ref;
         StringWriter var15;
         String var16;
         String var17;
@@ -45,7 +45,7 @@ final class le {
         String var11Lifetime2;
         String var11Lifetime3;
         String var11Lifetime4;
-        bs var14_refLifetime1;
+        ClientException var14_refLifetime1;
         StringWriter var15Lifetime1;
         String var16Lifetime1;
         String var17Lifetime1;
@@ -73,8 +73,8 @@ final class le {
         var14 = null;
         var13 = Kickabout.field_G;
         if (param0) {
-          if (param1 instanceof bs) {
-            var14_ref = (bs) ((Object) param1);
+          if (param1 instanceof ClientException) {
+            var14_ref = (ClientException) ((Object) param1);
             var2 = var14_ref.field_d + " | ";
             var11 = var2;
             param1 = var14_ref.field_e;
@@ -140,8 +140,8 @@ final class le {
           }
         }
         field_a = (String) null;
-        if (param1 instanceof bs) {
-          var14_refLifetime1 = (bs) ((Object) param1);
+        if (param1 instanceof ClientException) {
+          var14_refLifetime1 = (ClientException) ((Object) param1);
           var2Lifetime1 = var14_refLifetime1.field_d + " | ";
           var11Lifetime1 = var2Lifetime1;
           param1 = var14_refLifetime1.field_e;

@@ -25,7 +25,7 @@ final class kq extends hd {
             this.field_Fb = null;
             this.field_Gb = false;
           } else {
-            this.field_Fb = param1.a(1, var4.field_i) ? (ut) ((Object) eq.field_h) : (ut) ((Object) ml.field_q);
+            this.field_Fb = param1.a(1, var4.field_i) ? (ut) ((Object) eq.field_h) : (ut) ((Object) CipherPacketBuffer.field_q);
             this.field_Gb = true;
           }
           int var5 = -66 / ((-50 - param0) / 34);
@@ -77,7 +77,7 @@ final class kq extends hd {
           }
           return;
         }
-        iw.a(85, dc.field_b);
+        PacketBuffer.a(85, dc.field_b);
         on.b();
         var5 = new int[4];
         var4 = var5;

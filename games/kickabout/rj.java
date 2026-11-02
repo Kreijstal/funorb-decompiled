@@ -5,11 +5,11 @@ import java.util.*;
 
 final class rj {
     private sj field_d;
-    private kc field_f;
+    private IntrusiveNodeHashTable field_f;
     static boolean[] field_a;
     private sj field_e;
     static hd field_b;
-    private kc field_c;
+    private IntrusiveNodeHashTable field_c;
 
     private final to a(String param0, String param1, byte param2, int[] param3) {
         int var5_int = 0;
@@ -155,7 +155,7 @@ final class rj {
           var6 = (long)var5_int ^ 4294967296L;
           var8 = (to) (this.field_c.a(true, var6));
           if (param1 != 0) {
-            this.field_f = (kc) null;
+            this.field_f = (IntrusiveNodeHashTable) null;
           }
           if (var8 != null) {
             stackIn_5_0 = (to) (var8);
@@ -208,7 +208,7 @@ final class rj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            this.field_f = (kc) null;
+            this.field_f = (IntrusiveNodeHashTable) null;
           }
           stackIn_3_0 = this.a(param2, param0, (byte) -62, (int[]) null);
           return stackIn_3_0;
@@ -321,8 +321,8 @@ final class rj {
     }
 
     rj(sj param0, sj param1) {
-        this.field_f = new kc(256);
-        this.field_c = new kc(256);
+        this.field_f = new IntrusiveNodeHashTable(256);
+        this.field_c = new IntrusiveNodeHashTable(256);
         try {
           this.field_d = param1;
           this.field_e = param0;

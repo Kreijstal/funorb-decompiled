@@ -131,7 +131,7 @@ abstract class hs {
               var29.field_l[var13] = 3 * (var27.field_l[var13] - var12_int) + var12_int;
             }
           }
-          var12 = new vn(new vn[]{var29, iw.field_m[param2]}, 2);
+          var12 = new vn(new vn[]{var29, PacketBuffer.field_m[param2]}, 2);
           var13Lifetime1 = (short)param3;
           var14 = (short)param10;
           var15 = new vn(var12, true, false, true, true);
@@ -377,7 +377,7 @@ abstract class hs {
         var3 = 47;
         var4 = 83;
         var5 = Integer.toString(param1 / 50);
-        iw.a(-45, hg.field_G);
+        PacketBuffer.a(-45, hg.field_G);
         on.b();
         var6 = on.field_g >> 1;
         var7 = on.field_f >> 1;

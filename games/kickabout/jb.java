@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jb extends gn {
+abstract class jb extends IntrusiveNode {
     private int field_k;
     static String field_h;
     private int field_p;
@@ -123,7 +123,7 @@ abstract class jb extends gn {
           var3 = this.field_e * this.field_q >> 12;
           var4_int = this.field_r * this.field_q >> 12;
           var5 = -var3 + 640 >> 1;
-          iw.a(73, this.field_l);
+          PacketBuffer.a(73, this.field_l);
           var6 = -var4_int + 480 >> 1;
           this.a(32, 0, 0);
           for (var7 = 0; var7 < this.field_i.length; var7++) {

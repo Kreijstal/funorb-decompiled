@@ -4,7 +4,7 @@
 final class df extends dj {
     static int field_E;
     static int field_H;
-    static iw field_I;
+    static PacketBuffer field_I;
     static String[] field_F;
     static hd field_G;
 
@@ -134,7 +134,7 @@ final class df extends dj {
           ms.a(wa.field_b, this.field_j + 40, 560, false, 0, 126);
           un.field_d.a(c.field_h.toLowerCase(), 56 + this.field_j, 222, 16777215, -1);
           for (var3 = 0; var3 < 3; var3++) {
-            pb.field_C.c(ml.field_t[var3], 150 + this.field_j, 256 + 50 * var3, 16777215, -1);
+            pb.field_C.c(CipherPacketBuffer.field_t[var3], 150 + this.field_j, 256 + 50 * var3, 16777215, -1);
             pb.field_C.a(jq.field_a[var3], this.field_j + 170, 243 + var3 * 50, 420, 300, 16777215, -1, 0, 0, 16);
           }
         } else {
@@ -159,7 +159,7 @@ final class df extends dj {
               if (0 == (var3 & 1)) {
                 stackIn_23_0 = eq.field_h;
               } else {
-                stackIn_23_0 = ml.field_q;
+                stackIn_23_0 = CipherPacketBuffer.field_q;
               }
               var4 = stackIn_23_0;
               ((ut) ((Object) var4)).c(var3 * 45 + 380 + this.field_j, 145);

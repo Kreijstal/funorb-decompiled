@@ -38,7 +38,7 @@ final class rk {
         var7 = dq.$cfr$intArgs$a$7f8aad568c81(83, 4, var19);
         var8 = j.a(-5275);
         var9 = new ut(54, 85);
-        iw.a(114, var9);
+        PacketBuffer.a(114, var9);
         var10 = var8.field_o;
         var11 = var8.field_v;
         var12 = -15 - ct.a(105, this.field_a - 27, var10);
@@ -51,7 +51,7 @@ final class rk {
         for (var14 = 0; var14 < 4; var14++) {
           this.field_c[var14] = new ut(54, 85);
           var15 = this.field_c[var14];
-          iw.a(-114, var15);
+          PacketBuffer.a(-114, var15);
           var9.d(0, 0);
           incrementValue$3 = var7;
           var7++;

@@ -324,7 +324,7 @@ final class fn {
         var4 = Kickabout.field_G;
         try {
           var1 = new ut(540, 140);
-          iw.a(param0 + 26, var1);
+          PacketBuffer.a(param0 + 26, var1);
           t.c();
           on.b();
           up.field_p = 0;
@@ -424,7 +424,7 @@ final class fn {
           mn.field_a = param0;
           var3 = -110 / ((67 - param1) / 54);
           var2 = (ag) (ps.field_a.g(24009));
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (var2 != null) {
               stackIn_19_0 = var2.field_k.e((byte) -113);
@@ -458,7 +458,7 @@ final class fn {
               var2 = (ag) (qd.field_c.g(24009));
               while (var2 != null) {
                 if (var4 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
                 stackIn_19_0Lifetime1 = var2.field_k.e((byte) -113);
                 if (stackIn_19_0Lifetime1) {
@@ -619,7 +619,7 @@ final class fn {
               }
               var8Lifetime1 = stackIn_63_0;
               var4 = var4 + var3 + var8Lifetime1;
-              boolean decompiledSharedTail0 = !(iw.field_l);
+              boolean decompiledSharedTail0 = !(PacketBuffer.field_l);
               if (!decompiledSharedTail0) {
                 var4 = "<col=999999>" + var4 + ie.field_H + "</col>";
                 var5 = "";
@@ -634,7 +634,7 @@ final class fn {
               if (!vb.b(119)) {
                 if (ei.field_b.field_gb &&
                   el.field_A - ei.field_b.field_F < var9) {
-                  if (!iw.field_l) {
+                  if (!PacketBuffer.field_l) {
                     var1 = ru.field_t;
                   } else {
                     var1 = "Broken!";
@@ -642,7 +642,7 @@ final class fn {
                 }
                 if (ei.field_b.field_sb != 0 &&
                   ei.field_b.field_bb < var9 &&
-                  !iw.field_l) {
+                  !PacketBuffer.field_l) {
                   hp.b(0);
                 }
               }

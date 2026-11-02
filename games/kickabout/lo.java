@@ -151,7 +151,7 @@ final class lo extends jd {
           jr.field_Kb = param1;
           var6_int = (100 * jr.field_Kb >> 8) + 50;
           var7 = (116 * gv.field_h >> 8) + 40;
-          iw.a(-68, wn.field_j);
+          PacketBuffer.a(-68, wn.field_j);
           on.b();
           pt.a(var7, -22914, 0, on.field_f, 0);
           tn.field_e.a(0, 0, tn.field_e.field_o * var7 / 140, tn.field_e.field_v);
@@ -169,7 +169,7 @@ final class lo extends jd {
             }
           }
           ta.e(121);
-          iw.a(65, iw.field_g);
+          PacketBuffer.a(65, PacketBuffer.field_g);
           on.b();
           var8Lifetime1 = uv.b(-gb.field_K, wi.field_C, (byte) 2);
           if (param0 != 706856675) {

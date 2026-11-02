@@ -244,7 +244,7 @@ final class io {
         }
         int var3 = cj.k(256);
         int var4 = var3 >> 3;
-        int var5 = 17 != this.field_m ? gn.b((byte) -99) : sk.a((byte) 97);
+        int var5 = 17 != this.field_m ? IntrusiveNode.b((byte) -99) : sk.a((byte) 97);
         var5 = var5 + (param0 ? -var4 : var4);
         if (var5 < 0) {
           var5 = 0;
@@ -272,7 +272,7 @@ final class io {
           this.a(-1, true);
         }
         if (null != this.field_b) {
-          this.field_b.a(17 == this.field_m ? sk.a((byte) 97) : gn.b((byte) -124), 1);
+          this.field_b.a(17 == this.field_m ? sk.a((byte) 97) : IntrusiveNode.b((byte) -124), 1);
         }
         if (this.field_r &&
           param2 &&
@@ -354,7 +354,7 @@ final class io {
               var4[4 + var5] = var8[var5];
               var4[var5 + 8] = var3[var5];
             }
-            kc.a(true, var4);
+            IntrusiveNodeHashTable.a(true, var4);
           }
           if (null == ll.field_g) {
             if (!bo.field_Cb.a(false, "instructions")) {
@@ -461,7 +461,7 @@ final class io {
           var6 = param1 - (-var5 - 20);
           on.e(var6, param0 - 2, wo.field_m, 4, 65793);
           if (this.field_m != 17) {
-            stackIn_46_0 = gn.b((byte) -61);
+            stackIn_46_0 = IntrusiveNode.b((byte) -61);
           } else {
             stackIn_46_0 = sk.a((byte) 97);
           }
@@ -598,9 +598,9 @@ final class io {
                 this.field_n[0] = (ut) ((Object) kl.field_m);
                 var6 = kl.field_m.h();
                 this.field_n[2] = (ut) ((Object) kl.field_m);
-                iw.a(-104, var6);
+                PacketBuffer.a(-104, var6);
                 pt.a(-3 + on.field_g, -22914, 3, on.field_f - 3, 3);
-                iw.a(103, var6);
+                PacketBuffer.a(103, var6);
                 var6.c(0, 0, 60);
                 ta.e(119);
                 var11 = new int[64];

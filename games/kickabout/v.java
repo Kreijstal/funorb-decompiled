@@ -40,7 +40,7 @@ final class v {
           this.field_e = param1;
           this.field_g = 64;
           this.field_h = 96;
-          iw.a(74, this.field_f);
+          PacketBuffer.a(74, this.field_f);
           on.b();
           var4_int = 486400 / hw.field_i;
           param0.a(var4_int, 300, this.field_g, this.field_h, (byte) -74);
@@ -106,7 +106,7 @@ final class v {
           this.field_e = param0;
           this.field_j = param2.c(true);
           this.field_a = 17;
-          iw.a(-57, this.field_f);
+          PacketBuffer.a(-57, this.field_f);
           on.b();
           int var5 = 64 / ((-64 - param1) / 38);
           var4_int = (param2.j(-1) << 8) / hw.field_i;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class da extends gn {
+final class da extends IntrusiveNode {
     int field_f;
     int field_w;
     int field_e;

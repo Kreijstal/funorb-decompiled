@@ -72,7 +72,7 @@ class lb extends wi {
     }
 
     final static void a(byte param0, int param1) {
-        ml var2 = or.field_d;
+        CipherPacketBuffer var2 = or.field_d;
         if (param0 != -105) {
           lb.i(83);
         }

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class nr extends gn {
+final class nr extends IntrusiveNode {
     static de field_q;
     private int field_i;
     private eg field_p;
@@ -40,7 +40,7 @@ final class nr extends gn {
           if (param2 <= 25) {
             field_q = (de) null;
           }
-          bs.a(param8, 0, param4);
+          ClientException.a(param8, 0, param4);
           rn.a(param19, param6, param16, param9, param15, -110);
           tm.a(param3, param1, false, param12);
           bi.a(param20, param14, param17, 20);
@@ -91,7 +91,7 @@ final class nr extends gn {
         this.field_h.a(param0, 111);
         eg var5 = (eg) (this.field_h.a(this.field_p, false, true, true));
         nh.a(param1 + this.field_g << 4, this.field_i << 4, 320, -4 + fd.field_f.length, fd.field_f);
-        iw.a(103, ok.field_d);
+        PacketBuffer.a(103, ok.field_d);
         on.b();
         t.c();
         int var4 = 950;
@@ -101,7 +101,7 @@ final class nr extends gn {
         ok.field_d.f(-64 + this.field_g, this.field_i - 120);
     }
 
-    final static int a(int param0, ml param1, int param2, int param3, int param4, int param5) {
+    final static int a(int param0, CipherPacketBuffer param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -117,7 +117,7 @@ final class nr extends gn {
           var6_int = param1.l(1, 59);
           if (param3 == var6_int) {
             if (param5 != 0) {
-              stackIn_13_0 = aq.a(param5, -30273, param1);
+              stackIn_13_0 = IsaacRandom.a(param5, -30273, param1);
             } else {
               stackIn_13_0 = 0;
             }
@@ -129,7 +129,7 @@ final class nr extends gn {
           if (0 == param2) {
             stackIn_6_0 = 0;
           } else {
-            stackIn_6_0 = aq.a(param2, param3 ^ -30273, param1);
+            stackIn_6_0 = IsaacRandom.a(param2, param3 ^ -30273, param1);
           }
           var7 = stackIn_6_0;
           var8 = param4;

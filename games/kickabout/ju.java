@@ -185,11 +185,11 @@ final class ju extends lb {
           if (null != this.field_Q &&
             this.field_Q.field_q >= var11 &&
             this.field_Q.field_w >= var12) {
-            iw.a(param1 ^ -19, this.field_Q);
+            PacketBuffer.a(param1 ^ -19, this.field_Q);
             on.b();
           } else {
             this.field_Q = new ut(var11, var12);
-            iw.a(70, this.field_Q);
+            PacketBuffer.a(70, this.field_Q);
           }
           var14.b(112, 144, var14.field_o << 4, var14.field_v << 4, -this.field_S << 10, 4096);
           ta.e(126);
@@ -271,9 +271,9 @@ final class ju extends lb {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_W[0][var0] = aq.a(var12, aq.a(var4 << 8, aq.a(aq.a(var10 << 24, aq.a(aq.a(var6 << 40, aq.a(var2 << 48, var2 << 56)), var2 << 32)), var8 << 16)));
+            field_W[0][var0] = IsaacRandom.a(var12, IsaacRandom.a(var4 << 8, IsaacRandom.a(IsaacRandom.a(var10 << 24, IsaacRandom.a(IsaacRandom.a(var6 << 40, IsaacRandom.a(var2 << 48, var2 << 56)), var2 << 32)), var8 << 16)));
             for (var14 = 1; var14 < 8; var14++) {
-                field_W[var14][var0] = aq.a(field_W[var14 - 1][var0] << 56, field_W[var14 - 1][var0] >>> 8);
+                field_W[var14][var0] = IsaacRandom.a(field_W[var14 - 1][var0] << 56, field_W[var14 - 1][var0] >>> 8);
             }
             var0++;
         }

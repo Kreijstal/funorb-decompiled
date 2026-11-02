@@ -106,7 +106,7 @@ final class pd extends wj implements sv, vh {
                   if (this.field_C) {
                     jk.a((byte) -124);
                   } else {
-                    iw.g(4);
+                    PacketBuffer.g(4);
                   }
                 } else {
                   uv.a(false);

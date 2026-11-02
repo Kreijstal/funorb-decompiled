@@ -12,7 +12,7 @@ final class bg extends am {
     private int[][] field_t;
     int[] field_n;
 
-    private final void a(byte param0, int param1, iw param2) {
+    private final void a(byte param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -215,7 +215,7 @@ final class bg extends am {
         return var2.toString();
     }
 
-    final void a(byte param0, iw param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;

@@ -24,9 +24,9 @@ final class sk {
 
     final static void a(boolean param0) {
         fa var1 = null;
-        ml var2 = null;
+        CipherPacketBuffer var2 = null;
         fa var1Lifetime1;
-        ml var2Lifetime1;
+        CipherPacketBuffer var2Lifetime1;
         if (!param0) {
           sk.a(-17, -97, 99);
           var1 = (fa) (nl.field_f.g(24009));
@@ -89,8 +89,8 @@ final class sk {
         String var13 = null;
         String var12 = null;
         long var3 = nj.a(108);
-        if (var3 >= ah.field_c) {
-          ah.field_c = var3 + 25L;
+        if (var3 >= GameAppletShell.field_c) {
+          GameAppletShell.field_c = var3 + 25L;
           var5 = (float)param2 / (float)param1;
           var6 = (int)(var5 * 100.0f);
           int var8 = -80 / ((param0 - 12) / 58);
@@ -109,7 +109,7 @@ final class sk {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, ml param4, int param5) {
+    final static int a(int param0, int param1, int param2, int param3, CipherPacketBuffer param4, int param5) {
         RuntimeException var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

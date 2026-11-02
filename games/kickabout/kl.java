@@ -81,7 +81,7 @@ final class kl {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        iw var18 = null;
+        PacketBuffer var18 = null;
         byte[] var22 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -97,7 +97,7 @@ final class kl {
         int var14Lifetime1Lifetime1;
         var17 = Kickabout.field_G;
         try {
-          var18 = new iw(hh.a(param1, (byte) -3));
+          var18 = new PacketBuffer(hh.a(param1, (byte) -3));
           var4 = var18.h((byte) -107);
           if (5 <= var4 &&
             var4 <= 7) {

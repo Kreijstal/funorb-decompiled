@@ -91,7 +91,7 @@ final class rt extends i {
             stackIn_5_0.field_lb = stackIn_6_1;
             this.field_L.a((byte) -127, this.field_O[var4_int]);
           }
-          L1: {
+          regionExit1: {
             var6 = tu.field_E;
             stackIn_10_0 = this;
             stackIn_10_1 = this.field_J;
@@ -104,7 +104,7 @@ final class rt extends i {
               if (wn.a((byte) -3)) {
                 stackIn_11_0 = this;
                 stackIn_11_6 = true;
-                break L1;
+                break regionExit1;
               }
             }
             stackIn_11_0Lifetime1 = this;
@@ -327,7 +327,7 @@ final class rt extends i {
         this.field_L.field_J = 95 + param2;
         this.field_L.field_s = param1 + 180;
         this.field_L.b(0, true);
-        iw.a(-65, c.field_b);
+        PacketBuffer.a(-65, c.field_b);
         on.b();
         this.field_I.a(1200, 0, on.field_g >> 1, on.field_f - 10, (byte) -68);
         if (param0 >= -11) {

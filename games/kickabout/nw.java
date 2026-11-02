@@ -6,7 +6,7 @@ final class nw {
     static int field_d;
     static String field_c;
     static ut[] field_a;
-    private gn field_f;
+    private IntrusiveNode field_f;
     static nu field_b;
 
     public static void c(byte param0) {
@@ -16,11 +16,11 @@ final class nw {
         field_b = null;
     }
 
-    final gn a(byte param0, gn param1) {
-        gn var3 = null;
+    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        gn stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -32,12 +32,12 @@ final class nw {
             var3 = param1;
           }
           if (param0 <= 82) {
-            this.field_f = (gn) null;
+            this.field_f = (IntrusiveNode) null;
           }
           if (this.field_e.field_c == var3) {
             this.field_f = null;
             stackIn_8_0 = null;
-            return (gn) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
           this.field_f = var3.field_b;
           stackIn_10_0 = var3;
@@ -56,12 +56,12 @@ final class nw {
         }
     }
 
-    final gn a(int param0, gn param1) {
-        gn var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_6_0 = null;
-        gn stackIn_9_0 = null;
-        gn stackIn_11_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
+        IntrusiveNode stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -75,10 +75,10 @@ final class nw {
           if (this.field_e.field_c == var3) {
             this.field_f = null;
             stackIn_6_0 = null;
-            return (gn) (stackIn_6_0);
+            return (IntrusiveNode) (stackIn_6_0);
           }
           if (param0 != 395869153) {
-            stackIn_9_0 = (gn) null;
+            stackIn_9_0 = (IntrusiveNode) null;
             return stackIn_9_0;
           }
           this.field_f = var3.field_d;
@@ -98,9 +98,9 @@ final class nw {
         }
     }
 
-    final gn a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         int var2 = -27 % ((param0 - 9) / 40);
-        gn var3 = this.field_e.field_c.field_d;
+        IntrusiveNode var3 = this.field_e.field_c.field_d;
         if (var3 == this.field_e.field_c) {
           this.field_f = null;
           return null;
@@ -127,9 +127,9 @@ final class nw {
         }
     }
 
-    final gn a(int param0) {
-        gn var2 = null;
-        gn var2Lifetime1;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 0) {
           ut var3 = (ut) null;
           nw.a(-36, (ut) null);
@@ -150,8 +150,8 @@ final class nw {
         return null;
     }
 
-    final gn b(int param0) {
-        gn var2 = this.field_e.field_c.field_b;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_e.field_c.field_b;
         if (param0 != 0) {
           field_d = -67;
           if (var2 != this.field_e.field_c) {
@@ -169,12 +169,12 @@ final class nw {
         return null;
     }
 
-    final gn b(byte param0) {
-        gn var2 = null;
-        gn var2Lifetime1;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 46) {
-          gn var3 = (gn) null;
-          this.a((byte) -96, (gn) null);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a((byte) -96, (IntrusiveNode) null);
           var2 = this.field_f;
           if (var2 != this.field_e.field_c) {
             this.field_f = var2.field_b;

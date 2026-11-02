@@ -10,7 +10,7 @@ final class tc extends am {
     static boolean field_s;
     char[] field_q;
 
-    private final void a(int param0, boolean param1, iw param2) {
+    private final void a(int param0, boolean param1, PacketBuffer param2) {
         char[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_11_2 = 0;
@@ -371,7 +371,7 @@ final class tc extends am {
         return;
     }
 
-    final void a(iw param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;

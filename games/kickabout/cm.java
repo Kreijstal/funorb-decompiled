@@ -120,7 +120,7 @@ abstract class cm extends ub {
           var3 = wt.field_y.field_v;
           for (var4 = 0; var4 < 100; var4++) {
             lt.field_c[var4] = new ut(var2, var3);
-            iw.a(123, lt.field_c[var4]);
+            PacketBuffer.a(123, lt.field_c[var4]);
             var5 = (var4 << 16) / 100;
             wt.field_y.b(wt.field_y.field_o << 3, wt.field_y.field_v << 3, on.field_g << 3, on.field_f << 3, -var5, 4096);
             ta.e(127);

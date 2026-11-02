@@ -85,7 +85,7 @@ final class ki extends am {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        ml var14 = null;
+        CipherPacketBuffer var14 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
@@ -182,7 +182,7 @@ final class ki extends am {
         }
     }
 
-    final static boolean a(iw param0, byte param1) {
+    final static boolean a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

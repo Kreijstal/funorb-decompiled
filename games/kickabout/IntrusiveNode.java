@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class gn {
+class IntrusiveNode {
     long field_a;
     static String field_c;
-    gn field_b;
-    gn field_d;
+    IntrusiveNode field_b;
+    IntrusiveNode field_d;
 
     final static boolean a(byte param0, boolean param1, int param2, int param3) {
         int var4;
@@ -131,7 +131,7 @@ class gn {
           this.field_d = null;
           return;
         }
-        gn.c(80);
+        IntrusiveNode.c(80);
         this.field_b.field_d = this.field_d;
         this.field_d.field_b = this.field_b;
         this.field_b = null;
@@ -148,7 +148,7 @@ class gn {
     final static boolean a(int param0, char param1) {
         if (param0 != 12105) {
           StringBuilder var3 = (StringBuilder) null;
-          gn.a(-48, 1, 77, (StringBuilder) null);
+          IntrusiveNode.a(-48, 1, 77, (StringBuilder) null);
           if (param1 < 48) {
             return false;
           }

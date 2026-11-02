@@ -55,7 +55,7 @@ final class nu {
     wl field_o;
     int[] field_Q;
 
-    final void a(ml param0, int param1) {
+    final void a(CipherPacketBuffer param0, int param1) {
         int stackIn_35_0 = 0;
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
@@ -97,11 +97,11 @@ final class nu {
           if (this.field_u == 4) {
             this.field_V.b(param0, 4);
             var3_int = 0;
-            L8: while (true) {
+            scanLoop1: while (true) {
               if (var3_int < 2) {
                 stackIn_35_0 = 0;
                 if (var5 != 0) {
-                  break L8;
+                  break scanLoop1;
                 }
                 var4 = stackIn_35_0;
                 while (5 > var4) {
@@ -116,10 +116,10 @@ final class nu {
               break;
             }
             var3_int = stackIn_35_0;
-            L14: while (true) {
+            scanLoop2: while (true) {
               if (var3_int < 2) {
                 if (var5 != 0) {
-                  break L14;
+                  break scanLoop2;
                 }
                 var4Lifetime1 = 0;
                 while (var4Lifetime1 < 5) {
@@ -246,11 +246,11 @@ final class nu {
           var2_int = 0;
           if (this.field_u == 4) {
             var3 = 0;
-            L2: while (true) {
+            scanLoop1: while (true) {
               if (var3 < 2) {
                 stackIn_16_0 = 0;
                 if (var5 != 0) {
-                  break L2;
+                  break scanLoop1;
                 }
                 var4 = stackIn_16_0;
                 while (var4 < 5) {
@@ -591,7 +591,7 @@ final class nu {
             }
             boolean decompiledFrameCompleted6 = true;
             boolean decompiledFrameCompleted4 = true;
-            L21: {
+            regionExit1: {
               boolean decompiledFrameCompleted5 = true;
               if (this.field_X.field_m >= 245) {
                 this.a(-this.field_X.field_n + 1, 0);
@@ -749,17 +749,17 @@ final class nu {
             }
             boolean decompiledFrameCompleted1 = true;
             boolean decompiledFrameCompleted0 = true;
-            L73: {
+            regionExit2: {
               boolean decompiledFrameCompleted2 = true;
               boolean decompiledFrameCompleted3 = true;
-              L75: {
+              regionExit3: {
                 var2 = this.b((byte) -96);
                 if (var2 != null) {
                   this.field_V.field_p = var2.field_w;
                   this.field_V.field_v = var2.field_v;
                   this.field_V.field_t = var2.field_M;
                   if (var14 == 0) {
-                    break L75;
+                    break regionExit3;
                   }
                 }
                 if (this.field_V.g(param0 ^ -11752)) {
@@ -883,7 +883,7 @@ final class nu {
                     break;
                   }
                   var4Lifetime1 = stackIn_442_0;
-                  L123: while (true) {
+                  scanLoop4: while (true) {
                     stackIn_300_0 = -6;
                     if (stackIn_300_0 < ~var4Lifetime1) {
                       var5 = this.field_P[var3Lifetime2Lifetime1][var4Lifetime1];
@@ -1032,7 +1032,7 @@ final class nu {
                         }
                       }
                       var4Lifetime1++;
-                      continue L123;
+                      continue scanLoop4;
                     }
                     break;
                   }
@@ -1086,11 +1086,11 @@ final class nu {
             this.field_g[var3_int].a(param0.field_g[var3_int], false);
             var3_int++;
           } while (var5 == 0);
-          L4: while (true) {
+          scanLoop1: while (true) {
             if (var3_int < 2) {
               stackIn_21_0 = 0;
               if (var5 != 0) {
-                break L4;
+                break scanLoop1;
               }
               var4 = stackIn_21_0;
               while (var4 < 4) {
@@ -1265,7 +1265,7 @@ final class nu {
           var6 = 2147483647;
           var7 = 0;
           var7Lifetime1 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7Lifetime1 < param0.field_L) {
               var3_int = var3_int + param0.field_k;
@@ -1274,7 +1274,7 @@ final class nu {
               stackIn_12_0 = var7Lifetime1;
               stackIn_12_1 = 10;
               if (var12 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_12_0 > stackIn_12_1) {
                 var9 = -var3_int + var5.field_t >> 16;
@@ -1532,7 +1532,7 @@ final class nu {
         try {
           this.field_v = param0.field_v;
           var5_int = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var5_int < this.field_I) {
               this.field_R[var5_int].a(param0.field_R[var5_int], param1, param2, 117);
@@ -1549,7 +1549,7 @@ final class nu {
                     while (var5_int < 2) {
                       stackIn_39_0 = 0;
                       if (var7 != 0) {
-                        break L1;
+                        break scanLoop1;
                       }
                       var6 = stackIn_39_0;
                       while (var6 < 5) {
@@ -2373,7 +2373,7 @@ final class nu {
     final static void a(int param0, long param1, int param2, int param3, boolean param4, String param5) {
         RuntimeException runtimeException = null;
         int var7_int = 0;
-        ml stackIn_3_0 = null;
+        CipherPacketBuffer stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_4_2 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -2394,7 +2394,7 @@ final class nu {
           } else {
             stackIn_4_2 = 0;
           }
-          ((ml) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
+          ((CipherPacketBuffer) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
           if (param0 <= 101) {
             field_j = false;
           }
@@ -2431,53 +2431,53 @@ final class nu {
             stackIn_59_0 = 2;
             stackIn_59_1 = var3;
             if (var4 == 0) {
-              L3: {
-                L4: {
-                  L5: {
-                    L6: {
-                      L7: {
-                        L8: {
-                          L9: {
+              regionExit1: {
+                regionExit2: {
+                  regionExit3: {
+                    regionExit4: {
+                      regionExit5: {
+                        regionExit6: {
+                          regionExit7: {
                             if (stackIn_59_0 != stackIn_59_1) {
                               switch (var3) {
                                 case 0:
-                                  break L9;
+                                  break regionExit7;
                                 case 4:
-                                  break L8;
+                                  break regionExit6;
                                 case 3:
-                                  break L7;
+                                  break regionExit5;
                                 case 5:
-                                  break L6;
+                                  break regionExit4;
                                 case 6:
-                                  break L5;
+                                  break regionExit3;
                                 default:
-                                  break L3;
+                                  break regionExit1;
                                 case 7:
-                                  break L4;
+                                  break regionExit2;
                                 case 1:
                                   break;
                               }
                             } else {
                               this.a((byte) 60, var2);
-                              break L3;
+                              break regionExit1;
                             }
                             this.b((byte) 125, var2);
-                            break L3;
+                            break regionExit1;
                           }
                           this.b(true, var2);
-                          break L3;
+                          break regionExit1;
                         }
                         this.a(1, var2);
-                        break L3;
+                        break regionExit1;
                       }
                       this.b(26214, var2);
-                      break L3;
+                      break regionExit1;
                     }
                     this.a(var2, (byte) -34);
-                    break L3;
+                    break regionExit1;
                   }
                   this.c(5, var2);
-                  break L3;
+                  break regionExit1;
                 }
                 this.a(false, var2);
               }
@@ -2898,15 +2898,15 @@ final class nu {
             }
           }
           var3 = 0;
-          L16: while (true) {
+          scanLoop1: while (true) {
             if (var3 < 2) {
               discarded$16 = var1.append("\tteam " + var3 + ": kit=[" + this.field_H[var3] + "," + this.field_d[var3] + "," + this.field_Q[var3] + "]\tslot_owner=[");
               stackIn_74_0 = 0;
               if (var6 != 0) {
-                break L16;
+                break scanLoop1;
               }
               var4 = stackIn_74_0;
-              L18: while (true) {
+              scanLoop2: while (true) {
                 if (var4 >= 4) {
                   while (true) {
                     discarded$17 = var1.append("]\tchosen_player_ids=[");
@@ -2924,7 +2924,7 @@ final class nu {
                       discarded$19 = ((StringBuilder) (Object) stackIn_52_0).append(((StringBuilder) (Object) stackIn_52_1).append(stackIn_67_2).toString());
                       var4++;
                     }
-                    break L18;
+                    break scanLoop2;
                   }
                 }
                 stackIn_52_0Lifetime1 = var1;
@@ -2939,7 +2939,7 @@ final class nu {
                   }
                   discarded$18 = ((StringBuilder) (Object) stackIn_52_0Lifetime1).append(((StringBuilder) (Object) stackIn_52_1Lifetime1).append(stackIn_59_2).toString());
                   var4++;
-                  continue L18;
+                  continue scanLoop2;
                 }
 
               }
@@ -2967,11 +2967,11 @@ final class nu {
             discarded$26 = var1.append("\n\t" + this.field_X);
             discarded$27 = var1.append("\n\t" + this.field_V);
             var3 = 0;
-            L35: do {
+            scanLoop3: do {
               stackIn_90_0 = 2;
-              L37: while (true) {
+              scanLoop4: while (true) {
                 if (stackIn_90_0 <= var3) {
-                  break L35;
+                  break scanLoop3;
                 }
                 var4 = 0;
                 while (var4 < 5) {
@@ -2979,7 +2979,7 @@ final class nu {
                   var5 = this.a((byte) 6, var3, var4);
                   stackIn_90_0 = ~var5;
                   if (var6 != 0) {
-                    continue L37;
+                    continue scanLoop4;
                   }
                   if (stackIn_90_0 != 0) {
                     discarded$29 = var1.append("\n\t\tCTRL=\t" + this.field_S[var5]);
@@ -3000,7 +3000,7 @@ final class nu {
         }
     }
 
-    final void a(ml param0, int param1, int param2) {
+    final void a(CipherPacketBuffer param0, int param1, int param2) {
         int stackIn_38_0 = 0;
         int stackIn_51_0 = 0;
         int stackIn_64_0 = 0;
@@ -3081,11 +3081,11 @@ final class nu {
           boolean decompiledFrameCompleted1 = true;
           if (stackIn_38_0 < this.field_u) {
             var4_int = 0;
-            L19: while (true) {
+            scanLoop1: while (true) {
               if (var4_int < 2) {
                 stackIn_51_0 = 0;
                 if (var7 != 0) {
-                  break L19;
+                  break scanLoop1;
                 }
                 var5Lifetime1 = stackIn_51_0;
                 while (var5Lifetime1 < 4) {
@@ -3163,7 +3163,7 @@ final class nu {
           }
           this.field_v = -1 + sk.a(19881, 8, 0, 4, param0, 16);
           var4_int = 0;
-          L38: while (true) {
+          scanLoop2: while (true) {
             if (var4_int < this.field_I) {
               this.field_R[var4_int].b(param0, 4);
               this.field_R[var4_int].c(param0, param2 + 0);
@@ -3173,7 +3173,7 @@ final class nu {
               }
             } else {
               if (this.field_u != 0) {
-                break L38;
+                break scanLoop2;
               }
               this.field_n.b(param0, 4);
             }
@@ -3191,11 +3191,11 @@ final class nu {
           if (this.field_u == 4) {
             this.field_V.b(param0, 4);
             var4_int = 0;
-            L45: while (true) {
+            scanLoop3: while (true) {
               if (var4_int < 2) {
                 stackIn_120_0 = 0;
                 if (var7 != 0) {
-                  break L45;
+                  break scanLoop3;
                 }
                 var5Lifetime3 = stackIn_120_0;
                 while (var5Lifetime3 < 5) {
@@ -3210,10 +3210,10 @@ final class nu {
               break;
             }
             var4_int = stackIn_120_0;
-            L51: while (true) {
+            scanLoop4: while (true) {
               if (var4_int < 2) {
                 if (var7 != 0) {
-                  break L51;
+                  break scanLoop4;
                 }
                 var5Lifetime3Lifetime1 = 0;
                 while (var5Lifetime3Lifetime1 < 5) {
@@ -3327,11 +3327,11 @@ final class nu {
           }
           this.field_i = new int[2][4];
           var10_intLifetime1 = 0;
-          L4: while (true) {
+          scanLoop1: while (true) {
             if (var10_intLifetime1 < 2) {
               stackIn_24_0 = 0;
               if (var12 != 0) {
-                break L4;
+                break scanLoop1;
               }
               var11 = stackIn_24_0;
               while (var11 < 4) {
@@ -3340,7 +3340,7 @@ final class nu {
                 var11++;
               }
               var10_intLifetime1++;
-              continue L4;
+              continue scanLoop1;
             }
             this.field_d = new int[2];
             this.field_H = new int[2];

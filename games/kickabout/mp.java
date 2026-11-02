@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mp extends gn {
+final class mp extends IntrusiveNode {
     static String field_k;
     static jg field_g;
     static int[] field_j;
@@ -90,7 +90,7 @@ final class mp extends gn {
     }
 
     final static void a(int param0, byte param1) {
-        ml var2 = or.field_d;
+        CipherPacketBuffer var2 = or.field_d;
         var2.b(param0, (byte) 109);
         var2.a(127, 1);
         var2.a(103, 3);
@@ -126,8 +126,8 @@ final class mp extends gn {
     final static void a(int param0, int param1, sm param2) {
         int var5 = 0;
         int var6 = Kickabout.field_G;
-        ml var7 = or.field_d;
-        ml var8 = var7;
+        CipherPacketBuffer var7 = or.field_d;
+        CipherPacketBuffer var8 = var7;
         var8.b(param1, (byte) -58);
         var8.field_n = var8.field_n + 1;
         int var4 = var8.field_n;

@@ -34,7 +34,7 @@ final class et {
             var4[var5] = new ut(param2.field_o, param2.field_v);
             stackIn_6_0 = (1 != var5) ? 0 : 1;
             var6 = stackIn_6_0;
-            iw.a(param0 ^ 55, var9[var5]);
+            PacketBuffer.a(param0 ^ 55, var9[var5]);
             param2.d(0, 0);
             if (var6 == 0) {
               on.g(0, 0, on.field_g, on.field_f);

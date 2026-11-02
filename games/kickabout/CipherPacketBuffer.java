@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ml extends iw {
+final class CipherPacketBuffer extends PacketBuffer {
     static String[] field_s;
     private int field_u;
     static String[] field_t;
     static ot field_q;
     private int field_o;
     static int[] field_r;
-    private aq field_p;
+    private IsaacRandom field_p;
     static char field_v;
 
     public static void m(int param0) {
@@ -63,7 +63,7 @@ final class ml extends iw {
         int var5;
         var5 = Kickabout.field_G;
         if (param1 < 34) {
-          ml.m(35);
+          CipherPacketBuffer.m(35);
         }
         param2 = param2 & ti.field_b[param0];
         while (this.field_u < param0) {
@@ -168,7 +168,7 @@ final class ml extends iw {
         var1 = sh.field_c + 2;
         if (param0) {
           var4 = (sj) null;
-          ml.a(-41, (sj) null);
+          CipherPacketBuffer.a(-41, (sj) null);
         }
         stackIn_4_0 = mc.field_d;
         stackIn_5_1 = (param0) ? false : true;
@@ -186,7 +186,7 @@ final class ml extends iw {
           stackIn_11_6 = var1;
         }
         ((hd) (Object) stackIn_4_0).a(stackIn_5_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, stackIn_10_5 - stackIn_11_6);
-        bs.a(0);
+        ClientException.a(0);
         rg.field_a.a(true, ss.field_c.field_q, 0, ss.field_c.field_mb - 40, 40);
         fp.field_o.a(true, af.field_d.field_q, 0, 0, 30);
         stackIn_13_0 = bt.field_b;
@@ -213,7 +213,7 @@ final class ml extends iw {
 
     final static void k(int param0, int param1) {
         if (param0 != 61) {
-          ml.m(-70);
+          CipherPacketBuffer.m(-70);
         }
         if (!(sk.field_c <= param1)) {
           return;
@@ -222,11 +222,11 @@ final class ml extends iw {
         sk.a(101, 1, 0);
     }
 
-    ml(byte[] param0) {
+    CipherPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    ml(int param0) {
+    CipherPacketBuffer(int param0) {
         super(param0);
     }
 
@@ -244,7 +244,7 @@ final class ml extends iw {
           this.field_n = this.field_n + 1;
         }
         if (param0) {
-          ml.k(-89, 18);
+          CipherPacketBuffer.k(-89, 18);
         }
     }
 
@@ -284,7 +284,7 @@ final class ml extends iw {
 
     final void a(byte param0, int[] param1) {
         try {
-          this.field_p = new aq(param1);
+          this.field_p = new IsaacRandom(param1);
           if (param0 <= 99) {
             this.field_u = 93;
           }

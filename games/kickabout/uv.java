@@ -238,8 +238,8 @@ final class uv {
           RuntimeException var15_ref = null;
           String var16 = null;
           try {
-            un.field_e = new ml(param7);
-            or.field_d = new ml(param12);
+            un.field_e = new CipherPacketBuffer(param7);
+            or.field_d = new CipherPacketBuffer(param12);
             fp.field_g = param9;
             fu.field_c = param2;
             s.field_E = param1;
@@ -581,14 +581,14 @@ final class uv {
                 this.field_j.a(0, 6, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ij.field_r, new String[]{var5}));
                 if (param2 != null &&
                   param0 != 2 &&
-                  !iw.field_l) {
+                  !PacketBuffer.field_l) {
                   this.field_h = param2;
                   this.field_j.a(0, 19, vo.$cfr$intArgs$a$53ce4ab4c593(-18, nj.field_a, new String[]{var5}));
                 }
               }
               if (var6 != null) {
                 if (!ew.a(121, this.field_k) &&
-                  !iw.field_l) {
+                  !PacketBuffer.field_l) {
                   if (!kb.field_C) {
                     this.field_j.a(0, 8, vo.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var5}));
                   }

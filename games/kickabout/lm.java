@@ -130,7 +130,7 @@ final class lm extends js {
         ii.a((byte) -121);
     }
 
-    final void a(ml param0, boolean param1) {
+    final void a(CipherPacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = Kickabout.field_G;
@@ -583,7 +583,7 @@ final class lm extends js {
         return true;
     }
 
-    lm(ml param0) {
+    lm(CipherPacketBuffer param0) {
         super(-2);
         int[] var5 = null;
         int[] var2 = null;
@@ -628,7 +628,7 @@ final class lm extends js {
         return this.field_W;
     }
 
-    final void a(ml param0, byte param1) {
+    final void a(CipherPacketBuffer param0, byte param1) {
         boolean stackIn_7_1 = false;
         int stackIn_10_0 = 0;
         int stackIn_17_0 = 0;
@@ -1254,7 +1254,7 @@ final class lm extends js {
         field_j = null;
     }
 
-    final void a(int param0, ml param1) {
+    final void a(int param0, CipherPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var6 = Kickabout.field_G;

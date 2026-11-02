@@ -203,7 +203,7 @@ final class ig {
             }
           }
           if (param0) {
-            stackIn_17_0 = iw.field_k;
+            stackIn_17_0 = PacketBuffer.field_k;
           } else {
             stackIn_17_0 = qd.field_f;
           }

@@ -100,7 +100,7 @@ abstract class sr {
         var13 = stackIn_26_0;
         if (!vi.field_n) {
           var23 = oa.a(param2, param5, (byte) 95);
-          iw.a(121, var23);
+          PacketBuffer.a(121, var23);
           for (var15 = 0; var13 > var15; var15++) {
             if (!param2 ||
               var15 < 2) {
@@ -125,7 +125,7 @@ abstract class sr {
         var24 = var22;
         for (var15Lifetime1 = 0; var22.length > var15Lifetime1; var15Lifetime1++) {
           for (var16_intLifetime1 = 0; var16_intLifetime1 < var22[0].length; var16_intLifetime1++) {
-            L16: {
+            regionExit1: {
               if (p.a((byte) -24, 256) <= param1) {
                 var17Lifetime1 = 39 + var16_intLifetime1 * var10Lifetime1 + var15Lifetime1;
                 var18 = var9Lifetime1 + var15Lifetime1 * var11;
@@ -137,7 +137,7 @@ abstract class sr {
                     if (0 != var19 &&
                       var19 != 2) {
                       var22[var15Lifetime1][var16_intLifetime1] = new nr(var17Lifetime1, var18, var12, var19);
-                      break L16;
+                      break regionExit1;
                     }
                     var19++;
                   }
@@ -150,7 +150,7 @@ abstract class sr {
         for (var15Lifetime2 = 0; 6 > var15Lifetime2; var15Lifetime2++) {
           jm.a(100, 9863, (-param0 + param4) * var15Lifetime2 / 6 + param0);
           var16 = oa.a(param2, param5, (byte) 95);
-          iw.a(-101, var16);
+          PacketBuffer.a(-101, var16);
           for (var17Lifetime2 = 0; var13 > var17Lifetime2; var17Lifetime2++) {
             var18_ref_nr__ = var24[var17Lifetime2];
             for (var19Lifetime1 = 0; var19Lifetime1 < var18_ref_nr__.length; var19Lifetime1++) {

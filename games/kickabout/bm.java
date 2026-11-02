@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bm extends i {
-    static kc[] field_L;
+    static IntrusiveNodeHashTable[] field_L;
     pt field_J;
     static String field_K;
     private boolean field_G;
@@ -75,9 +75,9 @@ final class bm extends i {
 
     static {
         int var0 = 0;
-        field_L = new kc[7];
+        field_L = new IntrusiveNodeHashTable[7];
         for (var0 = 0; var0 < 7; var0++) {
-          field_L[var0] = new kc(256);
+          field_L[var0] = new IntrusiveNodeHashTable(256);
         }
         field_K = "Waiting to receive the game state...";
         field_H = new r();

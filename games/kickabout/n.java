@@ -3,7 +3,7 @@
  */
 final class n {
     private bi field_g;
-    private iw field_i;
+    private PacketBuffer field_i;
     static qv field_e;
     static String[] field_f;
     static int field_m;
@@ -503,7 +503,7 @@ final class n {
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var7;
         int var8;
-        iw var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -523,7 +523,7 @@ final class n {
         if (this.field_a.field_p) {
           return false;
         }
-        var10 = new iw(this.field_a.b(param0 ^ -12847));
+        var10 = new PacketBuffer(this.field_a.b(param0 ^ -12847));
         var10.field_n = 5;
         var3 = var10.h((byte) -116);
         var10.field_n = var10.field_n + 72 * var3;

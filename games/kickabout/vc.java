@@ -12,7 +12,7 @@ final class vc extends fp {
     static String field_H;
     static bt field_x;
 
-    final static vc a(int param0, iw param1) {
+    final static vc a(int param0, PacketBuffer param1) {
         vc stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

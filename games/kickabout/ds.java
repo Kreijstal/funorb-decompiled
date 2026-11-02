@@ -11,7 +11,7 @@ final class ds {
     static boolean field_g;
     static String field_f;
 
-    final static gf[] a(ml param0, byte param1) {
+    final static gf[] a(CipherPacketBuffer param0, byte param1) {
         int var5 = 0;
         gf[] stackIn_6_0 = null;
         gf[] stackIn_15_0 = null;

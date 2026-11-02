@@ -46,7 +46,7 @@ final class fi extends Exception {
             return;
           }
           vg.field_Wb = false;
-          if (iw.field_l) {
+          if (PacketBuffer.field_l) {
             var5 = ie.field_H;
           } else {
             if (!kb.field_C) {

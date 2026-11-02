@@ -91,7 +91,7 @@ final class ew {
           sf.field_F = param3;
           cv.field_f = param2;
           int var4_int = 82 / ((60 - param0) / 61);
-          bs.a(on.field_f / 2, 0, on.field_g / 2);
+          ClientException.a(on.field_f / 2, 0, on.field_g / 2);
           sb.a(param3.field_L, param3.field_p + param3.field_L, param2.field_L, param2.field_p + param2.field_L, (byte) 5);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ew.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -169,7 +169,7 @@ final class ew {
         }
     }
 
-    final static int a(byte param0, int param1, ml param2, int param3, int param4, int param5) {
+    final static int a(byte param0, int param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         int stackIn_4_0 = 0;
         int stackIn_5_1 = 0;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class tg extends gn {
+final class tg extends IntrusiveNode {
     private static int[] field_g;
     private static byte[] field_G;
     private static float[] field_H;
@@ -122,7 +122,7 @@ final class tg extends gn {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        iw var2 = new iw(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_k = var2.k(4);
         this.field_s = var2.k(4);
         this.field_l = var2.k(4);

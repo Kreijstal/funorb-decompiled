@@ -57,7 +57,7 @@ final class vo extends mu {
             var6_int = param1.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = 2 + var6_int; var5 < var3_int; var5++) {
-                if (gn.a(12105, param1.charAt(var5))) {
+                if (IntrusiveNode.a(12105, param1.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -94,7 +94,7 @@ final class vo extends mu {
             }
             stackIn_21_0 = 2 + var8Lifetime1;
             for (var5Lifetime1 = stackIn_21_0; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (gn.a(12105, param1.charAt(var5Lifetime1))) {
+              if (IntrusiveNode.a(12105, param1.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
@@ -169,8 +169,8 @@ final class vo extends mu {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        iw var16 = null;
-        iw var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -183,7 +183,7 @@ final class vo extends mu {
         int var5Lifetime1;
         var15 = Kickabout.field_G;
         try {
-          var16 = new iw(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.field_n = -2 + param1.length;
           io.field_l = var17.a((byte) 81);
@@ -191,7 +191,7 @@ final class vo extends mu {
           rm.field_B = new boolean[io.field_l];
           es.field_e = new byte[io.field_l][];
           ku.field_c = new int[io.field_l];
-          aq.field_f = new int[io.field_l];
+          IsaacRandom.field_f = new int[io.field_l];
           fc.field_g = new int[io.field_l];
           pq.field_O = new byte[io.field_l][];
           var17.field_n = -(io.field_l * 8) + param1.length - 7;
@@ -199,7 +199,7 @@ final class vo extends mu {
           ai.field_J = var17.a((byte) 81);
           var3 = 1 + (var17.h((byte) -116) & 255);
           for (var4 = 0; var4 < io.field_l; var4++) {
-            aq.field_f[var4] = var16.a((byte) 81);
+            IsaacRandom.field_f[var4] = var16.a((byte) 81);
           }
           for (var4Lifetime1 = 0; io.field_l > var4Lifetime1; var4Lifetime1++) {
             fc.field_g[var4Lifetime1] = var17.a((byte) 81);
@@ -350,7 +350,7 @@ final class vo extends mu {
             var6_int = param1.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = 2 + var6_int; var5 < var3_int; var5++) {
-                if (gn.a(12105, param1.charAt(var5))) {
+                if (IntrusiveNode.a(12105, param1.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -387,7 +387,7 @@ final class vo extends mu {
             }
             stackIn_21_0 = 2 + var8Lifetime1;
             for (var5Lifetime1 = stackIn_21_0; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (gn.a(12105, param1.charAt(var5Lifetime1))) {
+              if (IntrusiveNode.a(12105, param1.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

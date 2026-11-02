@@ -67,7 +67,7 @@ final class gs {
     }
 
     final static void c(int param0) {
-        iw.field_l = false;
+        PacketBuffer.field_l = false;
         kb.field_C = un.field_e.h((byte) -111) == 0 ? true : false;
         if (param0 == 25957) {
           return;

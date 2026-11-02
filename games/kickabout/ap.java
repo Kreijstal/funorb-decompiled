@@ -23,7 +23,7 @@ final class ap extends js {
     boolean field_t;
     private boolean field_u;
     static tf field_j;
-    static ah field_p;
+    static GameAppletShell field_p;
     static String field_x;
     static ut field_l;
 
@@ -64,11 +64,11 @@ final class ap extends js {
           sk.a(param0 - 15, 5, 1);
           var9 = new String[]{"tank", "striker", "specialist", "scout", "keeper"};
           for (var3_int = 0; var3_int < 5; var3_int++) {
-            iw.field_m[var3_int] = vn.a(param1, "", "Characters/" + var9[var3_int] + "_body");
+            PacketBuffer.field_m[var3_int] = vn.a(param1, "", "Characters/" + var9[var3_int] + "_body");
             for (var4 = 0; var4 < 5; var4++) {
               wj.field_v[var3_int][var4] = vn.a(param1, "", "Characters/" + var9[var3_int] + "_head_0" + (var4 + 1));
             }
-            kb.field_B[var3_int] = o.a(107, new vn(new vn[]{iw.field_m[var3_int], wj.field_v[var3_int][0]}, 2));
+            kb.field_B[var3_int] = o.a(107, new vn(new vn[]{PacketBuffer.field_m[var3_int], wj.field_v[var3_int][0]}, 2));
           }
           sk.a(param0 + 111, 5, 2);
           var3 = new vn[9];
@@ -337,7 +337,7 @@ final class ap extends js {
           this.a(true, 17);
         }
         if (null != this.field_r) {
-          iw.a(-44, rk.field_h);
+          PacketBuffer.a(-44, rk.field_h);
           hr.a((byte) -48);
           this.a(-5, false);
           ta.e(122);
@@ -381,7 +381,7 @@ final class ap extends js {
         return ((ol) (this.field_r)).h(-19510);
     }
 
-    final void a(int param0, ml param1) {
+    final void a(int param0, CipherPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -760,7 +760,7 @@ final class ap extends js {
         return 5 + this.field_z[this.field_h] / 20;
     }
 
-    final void a(byte param0, ml param1) {
+    final void a(byte param0, CipherPacketBuffer param1) {
         int stackIn_4_0 = 0;
         int stackIn_5_1 = 0;
         RuntimeException stackIn_45_0 = null;

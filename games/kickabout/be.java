@@ -237,7 +237,7 @@ abstract class be implements hc {
     }
 
     public boolean a(int param0, int param1, char param2) {
-        gn stackIn_26_1 = null;
+        IntrusiveNode stackIn_26_1 = null;
         hd var5;
         int var6;
         String var7;

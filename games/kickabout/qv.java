@@ -398,7 +398,7 @@ class qv implements gj, ke {
         field_d = null;
         if (!param0) {
           bu var2 = (bu) null;
-          qv.a((iw) null, -40, 96, (bu) null);
+          qv.a((PacketBuffer) null, -40, 96, (bu) null);
         }
         field_g = null;
     }
@@ -516,7 +516,7 @@ class qv implements gj, ke {
         }
     }
 
-    final static void a(iw param0, int param1, int param2, bu param3) {
+    final static void a(PacketBuffer param0, int param1, int param2, bu param3) {
         try {
           int var5 = 0;
           int var11_int = 0;

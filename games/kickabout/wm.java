@@ -6,7 +6,7 @@ final class wm extends ow {
     static ut[] field_m;
     static int field_E;
     private int field_D;
-    private kc field_v;
+    private IntrusiveNodeHashTable field_v;
     private bi field_l;
     static String field_p;
     private int field_h;
@@ -58,7 +58,7 @@ final class wm extends ow {
         vv discarded$0 = null;
         vv discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
-        gn var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -263,13 +263,13 @@ final class wm extends ow {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        gn var3 = null;
+        IntrusiveNode var3 = null;
         vv var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        gn var6 = null;
-        gn var7 = null;
-        gn var3Lifetime1;
+        IntrusiveNode var6 = null;
+        IntrusiveNode var7 = null;
+        IntrusiveNode var3Lifetime1;
         vv var3_refLifetime1;
         int var2_intLifetime1;
         int var4Lifetime1;
@@ -307,7 +307,7 @@ final class wm extends ow {
                     discarded$2 = this.a(1, this.field_i, (byte) -30);
                   }
                   if (0 == this.field_r[this.field_i]) {
-                    var6 = new gn();
+                    var6 = new IntrusiveNode();
                     var6.field_a = (long)this.field_i;
                     var2_int = 0;
                     this.field_t.a(var6, 3);
@@ -350,7 +350,7 @@ final class wm extends ow {
                       discarded$0 = this.a(2, this.field_i, (byte) -30);
                     }
                     if (this.field_r[this.field_i] != 1) {
-                      var7 = new gn();
+                      var7 = new IntrusiveNode();
                       var7.field_a = (long)this.field_i;
                       var2_intLifetime2 = 0;
                       this.field_t.a(var7, 3);
@@ -513,7 +513,7 @@ final class wm extends ow {
                 var4 = this.field_l.a(this.field_h, param1, (byte) 2, (byte) 89, false);
               }
             }
-            this.field_v.a((gn) (var4), -73, (long)param1);
+            this.field_v.a((IntrusiveNode) (var4), -73, (long)param1);
           }
           if (((vv) (var4)).field_p) {
             stackIn_40_0 = null;
@@ -572,7 +572,7 @@ final class wm extends ow {
                   return null;
                 }
                 var4 = this.field_l.a(this.field_h, param1, (byte) 2, (byte) 89, true);
-                this.field_v.a((gn) (var4), -50, (long)param1);
+                this.field_v.a((IntrusiveNode) (var4), -50, (long)param1);
               }
               stackIn_81_0 = null;
               return (vv) (stackIn_81_0);
@@ -617,7 +617,7 @@ final class wm extends ow {
               return null;
             }
             var4 = this.field_l.a(this.field_h, param1, (byte) 2, (byte) 89, true);
-            this.field_v.a((gn) (var4), param2 + 128, (long)param1);
+            this.field_v.a((IntrusiveNode) (var4), param2 + 128, (long)param1);
             stackIn_107_0 = null;
             return (vv) (stackIn_107_0);
           }
@@ -651,7 +651,7 @@ final class wm extends ow {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new ut(param2, param1.field_v);
-          iw.a(-59, var3);
+          PacketBuffer.a(-59, var3);
           param1.c(0, 0);
           pt.a(on.field_g, -22914, on.field_g >> 1, on.field_f, 0);
           if (param0 >= -20) {
@@ -724,7 +724,7 @@ final class wm extends ow {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_v = new kc(16);
+        this.field_v = new IntrusiveNodeHashTable(16);
         this.field_i = 0;
         this.field_F = new tf();
         this.field_y = 0L;

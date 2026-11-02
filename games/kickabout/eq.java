@@ -8,7 +8,7 @@ final class eq {
     static String[] field_c;
     static String field_b;
     private int field_k;
-    private ht field_e;
+    private IterableNodeHashTable field_e;
     private int field_f;
     static String field_g;
     static ot field_h;
@@ -218,7 +218,7 @@ final class eq {
         var3 = 1;
         while (true) {
           if (var3 + var3 >= param0) {
-            this.field_e = new ht(var3);
+            this.field_e = new IterableNodeHashTable(var3);
             return;
           }
           if (var3 < param1) {
@@ -227,7 +227,7 @@ final class eq {
           }
           break;
         }
-        this.field_e = new ht(var3);
+        this.field_e = new IterableNodeHashTable(var3);
         return;
     }
 

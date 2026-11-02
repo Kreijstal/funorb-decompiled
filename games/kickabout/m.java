@@ -114,7 +114,7 @@ final class m {
         try {
           h.field_e.field_E = param2;
           if (ov.field_b == 2) {
-            b.field_N.field_E = kc.field_f;
+            b.field_N.field_E = IntrusiveNodeHashTable.field_f;
           } else {
             b.field_N.field_E = im.field_Bb;
           }
@@ -154,9 +154,9 @@ final class m {
     final static int a(int param0, ec param1, ec param2, int param3, boolean param4, String param5, boolean param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        iw stackIn_17_0 = null;
+        PacketBuffer stackIn_17_0 = null;
         String stackIn_18_1 = null;
-        iw stackIn_20_0 = null;
+        PacketBuffer stackIn_20_0 = null;
         String stackIn_21_1 = null;
         int stackIn_35_0 = 0;
         int stackIn_45_0 = 0;
@@ -208,14 +208,14 @@ final class m {
               } else {
                 stackIn_18_1 = var14;
               }
-              ((iw) (Object) stackIn_17_0).a(stackIn_18_1, (byte) -126);
+              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_18_1, (byte) -126);
               stackIn_20_0 = gl.field_a;
               if (!param1.c(-94)) {
                 stackIn_21_1 = "";
               } else {
                 stackIn_21_1 = var8;
               }
-              ((iw) (Object) stackIn_20_0).a(stackIn_21_1, (byte) -128);
+              ((PacketBuffer) (Object) stackIn_20_0).a(stackIn_21_1, (byte) -128);
               or.field_d.a(106, 16);
               or.field_d.field_n = or.field_d.field_n + 1;
               var9 = or.field_d.field_n;

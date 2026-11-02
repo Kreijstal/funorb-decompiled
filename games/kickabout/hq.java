@@ -10,8 +10,8 @@ final class hq {
 
     final static boolean a(byte param0) {
         if (param0 != 10) {
-          ml var2 = (ml) null;
-          hq.a(-49, -20, (ml) null, 91);
+          CipherPacketBuffer var2 = (CipherPacketBuffer) null;
+          hq.a(-49, -20, (CipherPacketBuffer) null, 91);
           if (vj.field_c < 10) {
             return false;
           }
@@ -29,7 +29,7 @@ final class hq {
         return false;
     }
 
-    final static int a(int param0, int param1, ml param2, int param3) {
+    final static int a(int param0, int param1, CipherPacketBuffer param2, int param3) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

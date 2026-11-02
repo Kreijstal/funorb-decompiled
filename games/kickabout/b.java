@@ -296,7 +296,7 @@ final class b extends ta {
                 var18Lifetime1 = 65280;
                 if (ic.field_h.a(1, var28.field_a)) {
                   var18Lifetime1 = 16711680;
-                  var17Lifetime1 = bs.field_b;
+                  var17Lifetime1 = ClientException.field_b;
                 }
                 var5.a(var17Lifetime1, 10 + this.field_G.field_F, 75 + this.field_G.field_T, -20 + this.field_G.field_q, 50, var18Lifetime1, -1, 1, 1, 0);
               }

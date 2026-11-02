@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cq extends gn {
+final class cq extends IntrusiveNode {
     int field_l;
     static int field_g;
     static js field_h;
@@ -216,7 +216,7 @@ final class cq extends gn {
         this.field_k = param0;
     }
 
-    cq(iw param0) {
+    cq(PacketBuffer param0) {
         int var2_int = 0;
         try {
           param0.h((byte) -126);

@@ -21,7 +21,7 @@ final class vi extends mc {
         return tf.field_f;
     }
 
-    final static kk a(byte param0, ml param1) {
+    final static kk a(byte param0, CipherPacketBuffer param1) {
         int var7 = 0;
         kk stackIn_26_0 = null;
         kk stackIn_28_0 = null;
@@ -130,7 +130,7 @@ final class vi extends mc {
             return false;
           }
           var4_int = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var4_int >= param2.length) {
               return false;
             }
@@ -147,7 +147,7 @@ final class vi extends mc {
               }
               if (decompiledFrameRemainder0) {
                 var4_int++;
-                continue L1;
+                continue scanLoop1;
               }
               var6 += 2;
             }

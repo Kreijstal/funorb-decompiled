@@ -440,7 +440,7 @@ final class ti {
         field_d = null;
     }
 
-    ti(iw param0, int param1) {
+    ti(PacketBuffer param0, int param1) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;

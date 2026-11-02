@@ -42,10 +42,10 @@ final class mj {
           pf.field_b = eo.b(tm.field_z);
           mt.field_d = new ut(tm.field_z.field_o, ch.field_o.field_v);
           qj.field_a = new ut(od.field_p.field_o, bf.field_x.field_v);
-          iw.a(-70, mt.field_d);
+          PacketBuffer.a(-70, mt.field_d);
           ch.field_o.d(on.field_g - ch.field_o.field_o, 0);
           ta.e(param0 + 158);
-          iw.a(-42, qj.field_a);
+          PacketBuffer.a(-42, qj.field_a);
           od.field_p.d(0, -od.field_p.field_v + on.field_f);
           ta.e(118);
         } catch (RuntimeException runtimeException) {

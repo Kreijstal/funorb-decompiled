@@ -5,12 +5,12 @@ import java.util.*;
 
 final class ov implements Iterator {
     static String field_a;
-    private ht field_d;
-    private gn field_g;
+    private IterableNodeHashTable field_d;
+    private IntrusiveNode field_g;
     static String field_c;
     private int field_f;
     static int field_b;
-    private gn field_e;
+    private IntrusiveNode field_e;
 
     public final boolean hasNext() {
         int fieldTemp$0 = 0;
@@ -33,8 +33,8 @@ final class ov implements Iterator {
 
     final static void a(tf param0, int param1) {
         Object var2 = null;
-        gn var2_ref = null;
-        gn var3 = null;
+        IntrusiveNode var2_ref = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -87,7 +87,7 @@ final class ov implements Iterator {
     }
 
     final static void a(int param0, int param1) {
-        ml var2 = or.field_d;
+        CipherPacketBuffer var2 = or.field_d;
         int var3 = -31 / ((param0 - 40) / 56);
         var2.b(param1, (byte) 120);
         var2.a(106, 1);
@@ -96,7 +96,7 @@ final class ov implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        gn var1;
+        IntrusiveNode var1;
         int var2;
         var2 = Kickabout.field_G;
         if (this.field_d.field_e[this.field_f - 1] != this.field_e) {
@@ -150,7 +150,7 @@ final class ov implements Iterator {
         return false;
     }
 
-    ov(ht param0) {
+    ov(IterableNodeHashTable param0) {
         this.field_g = null;
         try {
           this.field_d = param0;

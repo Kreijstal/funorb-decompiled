@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hw extends gn {
+final class hw extends IntrusiveNode {
     static double field_f;
     static int field_i;
     static boolean field_k;

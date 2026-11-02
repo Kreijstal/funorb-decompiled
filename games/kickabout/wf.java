@@ -59,7 +59,7 @@ final class wf extends qt {
         for (var3 = 0; var3 < var5.length; var3++) {
           var5[var3] = ra.field_H;
           if (var3 == 2) {
-            var5[var3] = bs.field_a;
+            var5[var3] = ClientException.field_a;
           }
         }
         this.field_G = new jh(gk.field_f, gr.field_l, var6, 50);
@@ -111,7 +111,7 @@ final class wf extends qt {
     }
 
     final static void b(int param0, int param1, byte param2) {
-        ml var3 = or.field_d;
+        CipherPacketBuffer var3 = or.field_d;
         var3.b(param1, (byte) 127);
         var3.a(123, 3);
         int var4 = 127 / ((57 - param2) / 58);
@@ -236,7 +236,7 @@ final class wf extends qt {
         try {
           var16 = new int[]{uv.field_e, pb.field_A, rb.field_Kb, oc.field_e};
           var3 = new ut(32, 32);
-          iw.a(-111, var3);
+          PacketBuffer.a(-111, var3);
           for (var4_int = 15; var4_int < 19; var4_int++) {
             on.f(4, var4_int, 26, 592137);
           }
@@ -264,7 +264,7 @@ final class wf extends qt {
             stackIn_21_0 = (var11 != 0) ? 1 : 0;
             var12 = stackIn_21_0;
             var13 = new ut(param1.field_o, param1.field_v);
-            iw.a(-96, var13);
+            PacketBuffer.a(-96, var13);
             param1.d(0, 0);
             if (var11 == 0) {
               on.g(0, 0, on.field_g, on.field_f);
@@ -302,7 +302,7 @@ final class wf extends qt {
 
     final void a(int param0, int param1, boolean param2) {
         super.a(param0 ^ 0, param1, param2);
-        kc.a(tu.field_E.field_x, param0 + 415422632);
+        IntrusiveNodeHashTable.a(tu.field_E.field_x, param0 + 415422632);
         this.field_N = true;
         this.field_B = new jr[param0];
         this.field_G.a(0, (byte) -47, this.field_B, 5);

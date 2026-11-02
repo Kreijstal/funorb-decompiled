@@ -9,8 +9,8 @@ final class gp extends ps {
 
     final kj a(byte param0) {
         if (param0 > -77) {
-          iw var3 = (iw) null;
-          this.a((iw) null, -96);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((PacketBuffer) null, -96);
         }
         return qq.field_K;
     }
@@ -238,11 +238,11 @@ final class gp extends ps {
     }
 
     final static void a(int param0, int param1, int param2, int param3, String param4, String param5) {
-        ml var9 = null;
+        CipherPacketBuffer var9 = null;
         int var7 = 0;
         try {
           var9 = or.field_d;
-          ml var6 = var9;
+          CipherPacketBuffer var6 = var9;
           var9.b(param3, (byte) 104);
           var9.field_n = var9.field_n + 1;
           int var8 = 39 / ((param1 - 14) / 61);
@@ -262,7 +262,7 @@ final class gp extends ps {
         }
     }
 
-    final void a(iw param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         param0.a(this.field_f, (byte) -126);
         if (param1 != 17053) {
           return;

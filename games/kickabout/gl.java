@@ -7,7 +7,7 @@ final class gl {
     int field_h;
     int field_g;
     byte[] field_b;
-    static iw field_a;
+    static PacketBuffer field_a;
     int field_k;
     int field_j;
     int field_l;
@@ -17,7 +17,7 @@ final class gl {
     static String field_i;
     int field_n;
 
-    final static int a(int param0, byte param1, int param2, int param3, ml param4, int param5, int param6, int param7, int param8, int param9) {
+    final static int a(int param0, byte param1, int param2, int param3, CipherPacketBuffer param4, int param5, int param6, int param7, int param8, int param9) {
         int stackIn_7_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
@@ -35,7 +35,7 @@ final class gl {
         RuntimeException var10 = null;
         try {
           if (param1 <= 32) {
-            field_a = (iw) null;
+            field_a = (PacketBuffer) null;
           }
           var10_int = param4.l(2, 59);
           if (0 == var10_int) {
@@ -189,7 +189,7 @@ final class gl {
     }
 
     static {
-        field_a = new iw(256);
+        field_a = new PacketBuffer(256);
         field_i = "help";
         field_f = "Starting price";
     }

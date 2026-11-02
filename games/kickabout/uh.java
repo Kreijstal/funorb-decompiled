@@ -60,7 +60,7 @@ class uh {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -93,7 +93,7 @@ class uh {
                       var12.field_e = var12.field_e + var13;
                     }
                     if (var4 >= this.field_j) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.c();
                     if (var14Lifetime2 != null) {

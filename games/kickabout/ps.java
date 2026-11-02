@@ -121,7 +121,7 @@ abstract class ps {
 
     abstract kj a(byte param0);
 
-    abstract void a(iw param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 
     static {
         field_a = new tf();

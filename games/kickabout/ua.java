@@ -12,7 +12,7 @@ final class ua extends mo {
     int field_m;
     static int field_l;
 
-    final void a(ml param0, byte param1) {
+    final void a(CipherPacketBuffer param0, byte param1) {
         if (!mu.a(param0, (byte) -39)) {
           return;
         }

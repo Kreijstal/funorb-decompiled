@@ -58,7 +58,7 @@ final class bq {
           }
           ((hd) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
           jf.field_D.a(true, oe.field_f + 42, -40 - oe.field_f + (fm.field_C.field_q - 2), 2 + sh.field_c, 18);
-          bs.field_c.a(2, 124, -20 - sh.field_c + fm.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, fm.field_C.field_q, oe.field_f);
+          ClientException.field_c.a(2, 124, -20 - sh.field_c + fm.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, fm.field_C.field_q, oe.field_f);
           ac.field_b.a(true, dn.field_Cb.field_q, 0, -40 + dn.field_Cb.field_mb, 40);
           ci.field_h.a(true, fp.field_p.field_q, 0, 0, 30);
           sg.field_a.a(true, fp.field_p.field_q, 0, 30, -40 + (fp.field_p.field_mb - 2) - 30);
@@ -169,7 +169,7 @@ final class bq {
           vj.field_g.field_R = fs.a(vj.field_g.field_mb, 3, 1, 11579568, 8421504, (byte) 97);
           mc.field_d.a(true, vj.field_g.field_q - 10, 5, 5, -10 + (vj.field_g.field_mb - 24) - 2);
           kt.field_i.a(true, 80, (-80 + vj.field_g.field_q) / 2, -24 + (-5 + vj.field_g.field_mb), 24);
-          bs.a(0);
+          ClientException.a(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

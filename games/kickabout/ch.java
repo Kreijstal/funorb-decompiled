@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ch extends gn {
+final class ch extends IntrusiveNode {
     private int field_e;
     private int field_m;
     private int field_i;
@@ -31,7 +31,7 @@ final class ch extends gn {
             qe.field_i[var4_int] = param2;
           }
           qs.field_R = new ut(32, 32);
-          iw.a(-49, qs.field_R);
+          PacketBuffer.a(-49, qs.field_R);
           var4_intLifetime1 = 88 / ((param3 + 76) / 44);
           param0.b(0, 0, 32, 32);
           ta.e(123);
@@ -40,7 +40,7 @@ final class ch extends gn {
         }
     }
 
-    final void a(iw param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           this.field_s = param0.h((byte) -109);
           this.field_k = param0.h((byte) -113);

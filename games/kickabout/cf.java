@@ -138,12 +138,12 @@ final class cf extends hd {
     final void c(boolean param0) {
         if (param0) {
           this.h((byte) 103);
-          cu.field_a.a((gn) (this), 3);
+          cu.field_a.a((IntrusiveNode) (this), 3);
           return;
         }
         this.field_Bb = (String) null;
         this.h((byte) 103);
-        cu.field_a.a((gn) (this), 3);
+        cu.field_a.a((IntrusiveNode) (this), 3);
     }
 
     final void h(byte param0) {

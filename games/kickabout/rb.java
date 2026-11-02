@@ -46,7 +46,7 @@ final class rb extends hd {
         for (var7 = vb.field_j - 1; var7 >= 0; var7--) {
           var8_ref_tv = fu.field_b[var7];
           var9 = 0;
-          if (!iw.field_l &&
+          if (!PacketBuffer.field_l &&
             var5 < at.field_Hb) {
             var10_int = r.a(0, var8_ref_tv.field_c);
             if (var10_int <= var8_ref_tv.b(80) && (var8_ref_tv.field_m ||
@@ -340,7 +340,7 @@ final class rb extends hd {
             this.field_Fb.field_V = "|";
             if (!(bl.field_c < 5) ||
               !(tk.field_Ib < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
@@ -354,7 +354,7 @@ final class rb extends hd {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = vv.field_s;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;

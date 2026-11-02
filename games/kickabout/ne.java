@@ -237,7 +237,7 @@ final class ne extends dj {
           return;
         }
         for (var2 = 0; ip.field_b.length > var2; var2++) {
-          iw.a(73, sn.field_k);
+          PacketBuffer.a(73, sn.field_k);
           on.b();
           if (var2 != 3 &&
             var2 != 4) {
@@ -519,7 +519,7 @@ final class ne extends dj {
           }
           var5 = stackIn_9_0 + stackIn_10_1;
           un.field_d.a(sa.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
-          iw.a(param0 ^ -19, sn.field_k);
+          PacketBuffer.a(param0 ^ -19, sn.field_k);
           on.b();
           bk.field_a[var4].a(950, 300, on.field_g >> 1, (on.field_f >> 1) + 60, (byte) -71);
           ta.e(param0 ^ 24);

@@ -316,7 +316,7 @@ class nl extends mo {
         return this.field_w >> 16;
     }
 
-    final void a(int param0, ml param1) {
+    final void a(int param0, CipherPacketBuffer param1) {
         try {
           this.field_M = param1.l(26, param0 ^ -13927);
           this.field_w = param1.l(27, 59);
@@ -337,12 +337,12 @@ class nl extends mo {
           this.field_B = mk.a(param1, 30, (byte) 6, 18);
           this.field_h = param1.l(4, 59);
           this.field_z = param1.l(9, 59) - 5;
-          this.field_x = aq.a(11, -30273, param1);
+          this.field_x = IsaacRandom.a(11, -30273, param1);
           if (param0 != -13918) {
-            ml var4 = (ml) null;
-            this.b(-70, (ml) null);
+            CipherPacketBuffer var4 = (CipherPacketBuffer) null;
+            this.b(-70, (CipherPacketBuffer) null);
           }
-          this.field_P = aq.a(11, -30273, param1);
+          this.field_P = IsaacRandom.a(11, -30273, param1);
           this.field_A = param1.l(32, param0 + 13977);
           this.field_g = param1.l(32, 59);
           this.field_q = param1.l(32, 59);
@@ -394,7 +394,7 @@ class nl extends mo {
         }
     }
 
-    final void b(int param0, ml param1) {
+    final void b(int param0, CipherPacketBuffer param1) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -424,8 +424,8 @@ class nl extends mo {
             this.field_O = mu.a(param1, (byte) -39);
             this.field_h = param1.l(4, 59);
             this.field_z = -5 + param1.l(9, 59);
-            this.field_x = aq.a(11, -30273, param1);
-            this.field_P = aq.a(11, -30273, param1);
+            this.field_x = IsaacRandom.a(11, -30273, param1);
+            this.field_P = IsaacRandom.a(11, -30273, param1);
           }
           if (mu.a(param1, (byte) -39)) {
             this.field_s = mu.a(param1, (byte) -39);
@@ -737,9 +737,9 @@ class nl extends mo {
           discarded$34 = var2.append("\n\t\tkeeperstate=[" + this.field_o + "," + this.field_t + "]");
         }
         StringBuilder discarded$35 = var2.append("\n\t\tdirec=\t[");
-        gn.a(this.field_G, -28745, 4, var2);
+        IntrusiveNode.a(this.field_G, -28745, 4, var2);
         StringBuilder discarded$36 = var2.append(',');
-        gn.a(this.field_h, -28745, 4, var2);
+        IntrusiveNode.a(this.field_h, -28745, 4, var2);
         StringBuilder discarded$37 = var2.append("," + this.field_j + "," + this.field_n + "]");
         StringBuilder discarded$38 = var2.append("\n\t\tkick=\t[" + this.field_z + "," + this.field_x + "," + this.field_P + "," + this.field_O + "]");
         StringBuilder discarded$129 = var2.append("\n\t\ttackle=\t[" + this.field_k + "," + this.field_m + "," + this.field_s + "," + this.field_r + "," + this.field_B + "]");

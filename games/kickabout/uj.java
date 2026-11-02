@@ -83,7 +83,7 @@ final class uj extends tm {
           for (var6 = 0; var6 < var4_int; var6++) {
             var7 = param2[var6];
             var5[var6] = new ut(q.field_d.a(var7) + 4, 18);
-            iw.a(82, var5[var6]);
+            PacketBuffer.a(82, var5[var6]);
             stackIn_8_0 = (param1[var6].field_p == param3) ? 11184895 : 16755370;
             var8 = stackIn_8_0;
             q.field_d.d(var7, on.field_g >> 1, -4 + on.field_f, var8, -1);

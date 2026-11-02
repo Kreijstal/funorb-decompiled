@@ -33,13 +33,13 @@ final class oc {
             for (var6 = 0; var1 > var6; var6++) {
               var5_ref_int__[var6] = hf.a(lt.field_a[qj.b((int) var16[var6], 255)], qj.b(-16777216, var17[var6] << 24));
             }
-            var3 = new ot(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], var13);
+            var3 = new ot(kw.field_i, ai.field_J, IsaacRandom.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], var13);
           } else {
             var9 = new int[var1];
             for (var5 = 0; var1 > var5; var5++) {
               var9[var5] = lt.field_a[qj.b((int) var16[var5], 255)];
             }
-            var3 = new ut(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], var9);
+            var3 = new ut(kw.field_i, ai.field_J, IsaacRandom.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], var9);
           }
           tk.h((byte) -111);
           return (ut) (var3);

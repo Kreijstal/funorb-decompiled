@@ -714,11 +714,11 @@ public final class Kickabout extends tu {
         return stackIn_8_0;
     }
 
-    final boolean a(int param0, ml param1, int param2) {
+    final boolean a(int param0, CipherPacketBuffer param1, int param2) {
         boolean stackIn_9_0 = false;
         boolean stackIn_10_1 = false;
         int stackIn_29_0 = 0;
-        ml stackIn_29_1 = null;
+        CipherPacketBuffer stackIn_29_1 = null;
         boolean stackIn_30_2 = false;
         boolean stackIn_36_0 = false;
         boolean stackIn_37_1 = false;
@@ -1282,7 +1282,7 @@ public final class Kickabout extends tu {
           }
           rr.field_f = false;
           stackIn_29_0 = -105;
-          stackIn_29_1 = (ml) (param1);
+          stackIn_29_1 = (CipherPacketBuffer) (param1);
           stackIn_30_2 = (83 == so.field_b);
           mf.$cfr$intArgs$a$fbddc791f0bf(stackIn_29_0, stackIn_29_1, stackIn_30_2);
           return true;
@@ -1481,7 +1481,7 @@ public final class Kickabout extends tu {
         tf.a(param0 - 133);
         on.c();
         jl.a(param0 ^ 8198);
-        ml.m(0);
+        CipherPacketBuffer.m(0);
         gs.b((byte) -117);
         mi.a(param0 - 6);
         nc.a((byte) 72);
@@ -1491,15 +1491,15 @@ public final class Kickabout extends tu {
         gw.d(param0 + 92);
         qr.a(false);
         ma.d(true);
-        bs.a((byte) -95);
-        ah.c(1);
+        ClientException.a((byte) -95);
+        GameAppletShell.c(1);
         u.a(param0 - 8);
         ku.a(param0 - 7);
         rg.a((byte) 66);
         sj.c(param0 ^ -122);
         fc.a(29136);
         td.a(false);
-        iw.g((byte) 88);
+        PacketBuffer.g((byte) 88);
         nj.a((byte) -64);
         fh.a((byte) 122);
         fs.a(-81);
@@ -1521,7 +1521,7 @@ public final class Kickabout extends tu {
         kd.c(-1);
         lu.g((byte) -28);
         am.e(13421568);
-        gn.d(126);
+        IntrusiveNode.d(126);
         hj.a(param0 + 50);
         rd.a(true);
         ds.a(-49);
@@ -1582,7 +1582,7 @@ public final class Kickabout extends tu {
         qn.a((byte) -124);
         hu.a();
         nu.a(true);
-        aq.b(1);
+        IsaacRandom.b(1);
         vj.a((byte) 111);
         tg.a();
         wh.a(0);
@@ -1652,7 +1652,7 @@ public final class Kickabout extends tu {
         jw.a(0);
         jh.k((byte) 68);
         jr.i(-25734);
-        kc.a((byte) -111);
+        IntrusiveNodeHashTable.a((byte) -111);
         b.f(-2010043359);
         mf.i((byte) -127);
         pu.i((byte) -108);
@@ -1830,7 +1830,7 @@ public final class Kickabout extends tu {
         ln.k(31235);
         ll.b((byte) -56);
         fu.a(true);
-        ht.a(false);
+        IterableNodeHashTable.a(false);
         ci.a(18);
         ij.g((byte) -46);
         ff.a((byte) 101);

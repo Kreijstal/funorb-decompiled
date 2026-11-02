@@ -232,7 +232,7 @@ final class sl extends hd {
               this.field_Fb = 1;
               return true;
             }
-            if (gn.a(12105, (char) var2)) {
+            if (IntrusiveNode.a(12105, (char) var2)) {
               discarded$11 = this.field_yb.append((char) var2);
               var2 = -60 % ((-76 - param0) / 48);
               if (cc.field_e == 84) {
@@ -294,7 +294,7 @@ final class sl extends hd {
               }
               return true;
             }
-            if (gn.a(12105, (char) var2Lifetime1)) {
+            if (IntrusiveNode.a(12105, (char) var2Lifetime1)) {
               discarded$6 = this.field_yb.append((char) var2Lifetime1);
               var2Lifetime1 = -60 % ((-76 - param0) / 48);
               if (cc.field_e == 84) {
@@ -372,7 +372,7 @@ final class sl extends hd {
           }
           return true;
         }
-        if (gn.a(12105, (char) var2Lifetime3)) {
+        if (IntrusiveNode.a(12105, (char) var2Lifetime3)) {
           discarded$2 = this.field_yb.append((char) var2Lifetime3);
           var2Lifetime3 = -60 % ((-76 - param0) / 48);
           if (cc.field_e != 84) {

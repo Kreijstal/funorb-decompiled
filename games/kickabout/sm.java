@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sm extends gn {
+final class sm extends IntrusiveNode {
     int[] field_r;
     int field_h;
     int field_g;
@@ -32,7 +32,7 @@ final class sm extends gn {
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
-        ml var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         dl var5 = null;

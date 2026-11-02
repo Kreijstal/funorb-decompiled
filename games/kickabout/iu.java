@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iu extends gn {
+final class iu extends IntrusiveNode {
     static int field_i;
     static String field_e;
     static boolean field_j;
@@ -44,13 +44,13 @@ final class iu extends gn {
           var3 = "goal_rusty";
           var4 = 2;
         }
-        if (kc.field_g[var4] != null) {
+        if (IntrusiveNodeHashTable.field_g[var4] != null) {
           return true;
         }
         if (!bo.field_Cb.a("scenery", var3, (byte) -10)) {
           return false;
         }
-        kc.field_g[var4] = bg.a("scenery", bo.field_Cb, (byte) 76, var3);
+        IntrusiveNodeHashTable.field_g[var4] = bg.a("scenery", bo.field_Cb, (byte) 76, var3);
         return true;
     }
 

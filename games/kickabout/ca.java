@@ -25,8 +25,8 @@ final class ca {
     }
 
     final static void a(int param0, int param1) {
-        ml var2 = null;
-        ml var2Lifetime1;
+        CipherPacketBuffer var2 = null;
+        CipherPacketBuffer var2Lifetime1;
         if (param0 == 3) {
           var2 = or.field_d;
           var2.b(param1, (byte) 119);

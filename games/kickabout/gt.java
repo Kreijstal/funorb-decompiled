@@ -91,7 +91,7 @@ final class gt extends mo {
         }
     }
 
-    final void c(ml param0, int param1) {
+    final void c(CipherPacketBuffer param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

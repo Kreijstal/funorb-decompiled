@@ -67,7 +67,7 @@ final class ea {
           }
           on.a(-var13 + param3, param1, var13, var14, 2, 0, param4);
           if (256 != var9) {
-            iw.a(-122, ph.field_b);
+            PacketBuffer.a(-122, ph.field_b);
             on.b();
           }
           var15 = un.field_d;

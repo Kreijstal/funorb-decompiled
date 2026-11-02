@@ -193,7 +193,7 @@ final class fw extends ta {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          iw var2 = null;
+          PacketBuffer var2 = null;
           if (gt.field_t.field_o >= 4) {
             if (gt.field_t.field_l == -1) {
               return 3;
@@ -222,7 +222,7 @@ final class fw extends ta {
             }
             if (ci.field_a == 2) {
               je.field_e = new bh((java.net.Socket) (iv.field_o.field_b), hf.field_e);
-              var2 = new iw(13);
+              var2 = new PacketBuffer(13);
               dh.a(or.field_c, rc.field_f, var2, -3210, wo.field_k);
               var2.a(param0 + 52, 15);
               var2.b(param0 ^ -44, gg.field_Db);

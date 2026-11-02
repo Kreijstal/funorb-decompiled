@@ -18,7 +18,7 @@ final class ru extends lq {
     private int[] field_v;
     private int[] field_n;
     private int field_p;
-    private kc field_w;
+    private IntrusiveNodeHashTable field_w;
     private rs field_k;
     private int[] field_y;
     private da[][] field_O;
@@ -1052,23 +1052,23 @@ final class ru extends lq {
               if (rm.field_C > 2) {
                 if (rm.field_C == 3) {
                   if (!param0) {
-                    var2 = kc.field_g[0];
+                    var2 = IntrusiveNodeHashTable.field_g[0];
                     var4 = var4 - (hw.field_i * 58 >> 8);
                   } else {
-                    var2 = kc.field_g[1];
+                    var2 = IntrusiveNodeHashTable.field_g[1];
                     var4 = var4 - (hw.field_i * 97 >> 8);
                   }
                 }
               } else {
                 var4 = var4 - (55 * hw.field_i >> 8);
-                var2 = kc.field_g[2];
+                var2 = IntrusiveNodeHashTable.field_g[2];
                 if (!param0) {
                   var4 = var4 - (hw.field_i * 5 >> 8);
                 }
               }
             } else {
               var4 = var4 - (hw.field_i * 62 >> 8);
-              var2 = kc.field_g[3];
+              var2 = IntrusiveNodeHashTable.field_g[3];
               if (!param0) {
                 var4 = var4 - (5 * hw.field_i >> 8);
               }
@@ -1082,10 +1082,10 @@ final class ru extends lq {
                 stackIn_13_1 = 64;
               }
               var4 = stackIn_12_0 - (stackIn_13_1 * hw.field_i >> 8);
-              var2 = kc.field_g[6];
+              var2 = IntrusiveNodeHashTable.field_g[6];
             }
             if (ih.field_c == 1) {
-              var2 = kc.field_g[5];
+              var2 = IntrusiveNodeHashTable.field_g[5];
               stackIn_18_0 = var4;
               stackIn_18_1 = hw.field_i;
               if (param0) {
@@ -1096,7 +1096,7 @@ final class ru extends lq {
               var4 = stackIn_18_0 - (stackIn_18_1 * stackIn_19_2 >> 8);
             }
             if (ih.field_c == 2) {
-              var2 = kc.field_g[4];
+              var2 = IntrusiveNodeHashTable.field_g[4];
               stackIn_24_0 = var4;
               if (param0) {
                 stackIn_25_1 = 68;
@@ -1232,7 +1232,7 @@ final class ru extends lq {
           this.e(4204);
           return;
         }
-        L2: while (true) {
+        scanLoop1: while (true) {
           stackIn_7_0 = this.field_H;
           stackIn_7_1 = var3;
           if (stackIn_7_0 == stackIn_7_1) {
@@ -1275,7 +1275,7 @@ final class ru extends lq {
             var2 = this.field_k.g();
             var3 = this.field_k.field_e[var2];
             var4 = this.field_k.e(var3);
-            continue L2;
+            continue scanLoop1;
           }
           break;
         }
@@ -1441,7 +1441,7 @@ final class ru extends lq {
         this.field_o = new int[16];
         this.field_k = new rs();
         this.field_m = new pp(this);
-        this.field_w = new kc(128);
+        this.field_w = new IntrusiveNodeHashTable(128);
         this.d(-1, -1, 256);
         this.a(true, false);
     }

@@ -6,7 +6,7 @@ import java.io.*;
 final class u implements Runnable {
     static String[][] field_e;
     static ew[] field_j;
-    private iw field_g;
+    private PacketBuffer field_g;
     private wu field_l;
     private wu field_f;
     private bu field_a;
@@ -17,9 +17,9 @@ final class u implements Runnable {
     private wu field_i;
     static boolean field_c;
 
-    final iw b(int param0) {
+    final PacketBuffer b(int param0) {
         if (param0 != 0) {
-          return (iw) null;
+          return (PacketBuffer) null;
         }
         if (this.field_b == 3) {
           return this.field_g;
@@ -225,7 +225,7 @@ final class u implements Runnable {
         try {
           this.field_a = param0;
           this.field_k = param1;
-          this.field_g = new iw(param2);
+          this.field_g = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "u.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

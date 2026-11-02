@@ -15,7 +15,7 @@ abstract class lu extends am {
     int field_w;
 
     final static void a(int param0, int param1) {
-        ml var2 = or.field_d;
+        CipherPacketBuffer var2 = or.field_d;
         var2.b(param1, (byte) 108);
         var2.field_n = var2.field_n + 1;
         int var3 = var2.field_n;
@@ -149,23 +149,23 @@ abstract class lu extends am {
                   m.field_f[var11_int] = false;
                 }
                 var10 = 0;
-                L10: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11_intLifetime2 = 0;
                     var12 = 0;
                     while (true) {
                       if (var12 >= la.field_k.length) {
                         if (var11_intLifetime2 != 0) {
-                          break L10;
+                          break scanLoop1;
                         }
                         var10++;
-                        continue L10;
+                        continue scanLoop1;
                       }
                       var25 = la.field_k[var12];
                       var22 = var25;
                       var13 = var22;
                       var14_int = 0;
-                      L14: while (true) {
+                      scanLoop2: while (true) {
                         if (var14_int >= var25.length) {
                           var11_intLifetime2 = 1;
                           var14_int = -1;
@@ -181,7 +181,7 @@ abstract class lu extends am {
                           var16 = var13[var14_int + 1];
                           if (var15 != -1) {
                             if ((uv.field_i.field_Eb[var15] & 255) != var16) {
-                              break L14;
+                              break scanLoop2;
                             }
                           } else {
                             if (0 == var10) {
@@ -191,7 +191,7 @@ abstract class lu extends am {
                             }
                             var17_int = stackIn_37_0;
                             if (var17_int != var16) {
-                              break L14;
+                              break scanLoop2;
                             }
                           }
                           var14_int += 2;
@@ -237,14 +237,14 @@ abstract class lu extends am {
                         var13_int = var18_int;
                       }
                     }
-                    L32: {
+                    regionExit3: {
                       if (null != so.field_f) {
                         if (so.field_f[var16Lifetime1] == null) {
                           if (((null != hm.field_D)) &&
                             ((null != hm.field_D[var16Lifetime1]))) {
                             var15Lifetime1 = var15Lifetime1 | hm.field_D[var16Lifetime1][var17_intLifetime1];
                           }
-                          break L32;
+                          break regionExit3;
                         }
                         var18_intLifetime1 = so.field_f[var16Lifetime1][var17_intLifetime1];
                         if (var18_intLifetime1 > var14_intLifetime1) {
@@ -262,31 +262,31 @@ abstract class lu extends am {
                     }
                   }
                   var16Lifetime1Lifetime1 = 0;
-                  var17 = bs.field_c.field_Ab.field_jb;
+                  var17 = ClientException.field_c.field_Ab.field_jb;
                   var18_ref = (he) (var17.g(24009));
-                  L25: while (true) {
+                  scanLoop4: while (true) {
                     if (var18_ref != null) {
                       if (!var18_ref.h(-13356)) {
                         if (var11_intLifetime1 != 0 &&
                           !var18_ref.field_Cb) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L25;
+                          break scanLoop4;
                         }
                         if (var18_ref.field_Qb < var13_int) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L25;
+                          break scanLoop4;
                         }
                         if (var14_intLifetime1 > var18_ref.field_Db) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L25;
+                          break scanLoop4;
                         }
                         if ((var15Lifetime1 & ~var18_ref.field_Pb) > 0) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L25;
+                          break scanLoop4;
                         }
                         if (var12Lifetime1 != 0) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L25;
+                          break scanLoop4;
                         }
                       }
                       var18_ref = (he) (var17.c(param2 ^ -33));

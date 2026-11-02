@@ -63,8 +63,8 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
         if (param0 <= -124) {
           return uj.a(param1, (byte) -58, 1, false, false, true);
         }
-        iw var3 = (iw) null;
-        dh.a(81, 114, (iw) null, 122, 17);
+        PacketBuffer var3 = (PacketBuffer) null;
+        dh.a(81, 114, (PacketBuffer) null, 122, 17);
         return uj.a(param1, (byte) -58, 1, false, false, true);
     }
 
@@ -148,14 +148,14 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void a(int param0, int param1, iw param2, int param3, int param4) {
+    final static void a(int param0, int param1, PacketBuffer param2, int param3, int param4) {
         try {
           param2.a(param3 ^ -3315, 12);
           param2.g(param3 ^ 1207447422, 17);
           param2.g(-1207444472, param1);
           if (param3 != -3210) {
-            iw var6 = (iw) null;
-            dh.a(106, -79, (iw) null, 72, 113);
+            PacketBuffer var6 = (PacketBuffer) null;
+            dh.a(106, -79, (PacketBuffer) null, 72, 113);
           }
           param2.g(param3 - 1207441262, param4);
           param2.a(param3 ^ -3298, param0);
@@ -180,8 +180,8 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
 
     final static void c(byte param0) {
         if (param0 != -77) {
-          iw var2 = (iw) null;
-          dh.a(105, -41, (iw) null, 7, -41);
+          PacketBuffer var2 = (PacketBuffer) null;
+          dh.a(105, -41, (PacketBuffer) null, 7, -41);
           tf.field_f = false;
           return;
         }
@@ -217,129 +217,129 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
           up var3 = (up) null;
           dh.a((up) null, false);
           if (!iu.field_h) {
-            ht.a(true, (byte) 89);
+            IterableNodeHashTable.a(true, (byte) 89);
             return;
           }
           if (null == um.field_e) {
             ia.field_c = false;
             var1 = tq.h(-2521) - nv.field_E[ew.field_a];
-            var2 = aq.a(true) - qt.field_r[ew.field_a];
+            var2 = IsaacRandom.a(true) - qt.field_r[ew.field_a];
             if (var2 * var2 + var1 * var1 < 10000) {
               fieldTemp$0 = ew.field_a + 1;
               ew.field_a = ew.field_a + 1;
               ew.field_a = fieldTemp$0 % nv.field_E.length;
             }
             mj.a(256.0, 60, (double)nv.field_E[ew.field_a], (double)qt.field_r[ew.field_a]);
-            ht.a(false, (byte) 89);
+            IterableNodeHashTable.a(false, (byte) 89);
             return;
           }
           if (ra.field_G == null) {
             if (cq.field_h.field_c != 0) {
-              ht.a(true, (byte) 89);
+              IterableNodeHashTable.a(true, (byte) 89);
             } else {
               ia.field_c = false;
               var1Lifetime4 = tq.h(-2521) - nv.field_E[ew.field_a];
-              var2Lifetime4 = aq.a(true) - qt.field_r[ew.field_a];
+              var2Lifetime4 = IsaacRandom.a(true) - qt.field_r[ew.field_a];
               if (var2Lifetime4 * var2Lifetime4 + var1Lifetime4 * var1Lifetime4 < 10000) {
                 fieldTemp$1 = ew.field_a + 1;
                 ew.field_a = ew.field_a + 1;
                 ew.field_a = fieldTemp$1 % nv.field_E.length;
               }
               mj.a(256.0, 60, (double)nv.field_E[ew.field_a], (double)qt.field_r[ew.field_a]);
-              ht.a(false, (byte) 89);
+              IterableNodeHashTable.a(false, (byte) 89);
             }
             return;
           }
           if (ra.field_G.field_c == 0) {
             ia.field_c = false;
             var1Lifetime5 = tq.h(-2521) - nv.field_E[ew.field_a];
-            var2Lifetime5 = aq.a(true) - qt.field_r[ew.field_a];
+            var2Lifetime5 = IsaacRandom.a(true) - qt.field_r[ew.field_a];
             if (var2Lifetime5 * var2Lifetime5 + var1Lifetime5 * var1Lifetime5 < 10000) {
               fieldTemp$2 = ew.field_a + 1;
               ew.field_a = ew.field_a + 1;
               ew.field_a = fieldTemp$2 % nv.field_E.length;
             }
             mj.a(256.0, 60, (double)nv.field_E[ew.field_a], (double)qt.field_r[ew.field_a]);
-            ht.a(false, (byte) 89);
+            IterableNodeHashTable.a(false, (byte) 89);
             return;
           }
           if (cq.field_h.field_c != 0) {
-            ht.a(true, (byte) 89);
+            IterableNodeHashTable.a(true, (byte) 89);
             return;
           }
           ia.field_c = false;
           var1Lifetime6 = tq.h(-2521) - nv.field_E[ew.field_a];
-          var2Lifetime6 = aq.a(true) - qt.field_r[ew.field_a];
+          var2Lifetime6 = IsaacRandom.a(true) - qt.field_r[ew.field_a];
           if (var2Lifetime6 * var2Lifetime6 + var1Lifetime6 * var1Lifetime6 < 10000) {
             fieldTemp$3 = ew.field_a + 1;
             ew.field_a = ew.field_a + 1;
             ew.field_a = fieldTemp$3 % nv.field_E.length;
           }
           mj.a(256.0, 60, (double)nv.field_E[ew.field_a], (double)qt.field_r[ew.field_a]);
-          ht.a(false, (byte) 89);
+          IterableNodeHashTable.a(false, (byte) 89);
           return;
         }
         if (!iu.field_h) {
-          ht.a(true, (byte) 89);
+          IterableNodeHashTable.a(true, (byte) 89);
           return;
         }
         if (null == um.field_e) {
           ia.field_c = false;
           var1Lifetime1 = tq.h(-2521) - nv.field_E[ew.field_a];
-          var2Lifetime1 = aq.a(true) - qt.field_r[ew.field_a];
+          var2Lifetime1 = IsaacRandom.a(true) - qt.field_r[ew.field_a];
           if (var2Lifetime1 * var2Lifetime1 + var1Lifetime1 * var1Lifetime1 < 10000) {
             fieldTemp$4 = ew.field_a + 1;
             ew.field_a = ew.field_a + 1;
             ew.field_a = fieldTemp$4 % nv.field_E.length;
           }
           mj.a(256.0, 60, (double)nv.field_E[ew.field_a], (double)qt.field_r[ew.field_a]);
-          ht.a(false, (byte) 89);
+          IterableNodeHashTable.a(false, (byte) 89);
           return;
         }
         if (ra.field_G != null) {
           if (ra.field_G.field_c != 0) {
             if (cq.field_h.field_c != 0) {
-              ht.a(true, (byte) 89);
+              IterableNodeHashTable.a(true, (byte) 89);
             } else {
               ia.field_c = false;
               var1Lifetime2 = tq.h(-2521) - nv.field_E[ew.field_a];
-              var2Lifetime2 = aq.a(true) - qt.field_r[ew.field_a];
+              var2Lifetime2 = IsaacRandom.a(true) - qt.field_r[ew.field_a];
               if (var2Lifetime2 * var2Lifetime2 + var1Lifetime2 * var1Lifetime2 < 10000) {
                 fieldTemp$5 = ew.field_a + 1;
                 ew.field_a = ew.field_a + 1;
                 ew.field_a = fieldTemp$5 % nv.field_E.length;
               }
               mj.a(256.0, 60, (double)nv.field_E[ew.field_a], (double)qt.field_r[ew.field_a]);
-              ht.a(false, (byte) 89);
+              IterableNodeHashTable.a(false, (byte) 89);
             }
             return;
           }
           ia.field_c = false;
           var1Lifetime2Lifetime1 = tq.h(-2521) - nv.field_E[ew.field_a];
-          var2Lifetime2Lifetime1 = aq.a(true) - qt.field_r[ew.field_a];
+          var2Lifetime2Lifetime1 = IsaacRandom.a(true) - qt.field_r[ew.field_a];
           if (var2Lifetime2Lifetime1 * var2Lifetime2Lifetime1 + var1Lifetime2Lifetime1 * var1Lifetime2Lifetime1 < 10000) {
             fieldTemp$6 = ew.field_a + 1;
             ew.field_a = ew.field_a + 1;
             ew.field_a = fieldTemp$6 % nv.field_E.length;
           }
           mj.a(256.0, 60, (double)nv.field_E[ew.field_a], (double)qt.field_r[ew.field_a]);
-          ht.a(false, (byte) 89);
+          IterableNodeHashTable.a(false, (byte) 89);
           return;
         }
         if (cq.field_h.field_c == 0) {
           ia.field_c = false;
           var1Lifetime3 = tq.h(-2521) - nv.field_E[ew.field_a];
-          var2Lifetime3 = aq.a(true) - qt.field_r[ew.field_a];
+          var2Lifetime3 = IsaacRandom.a(true) - qt.field_r[ew.field_a];
           if (var2Lifetime3 * var2Lifetime3 + var1Lifetime3 * var1Lifetime3 < 10000) {
             fieldTemp$7 = ew.field_a + 1;
             ew.field_a = ew.field_a + 1;
             ew.field_a = fieldTemp$7 % nv.field_E.length;
           }
           mj.a(256.0, 60, (double)nv.field_E[ew.field_a], (double)qt.field_r[ew.field_a]);
-          ht.a(false, (byte) 89);
+          IterableNodeHashTable.a(false, (byte) 89);
           return;
         }
-        ht.a(true, (byte) 89);
+        IterableNodeHashTable.a(true, (byte) 89);
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {

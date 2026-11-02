@@ -68,13 +68,13 @@ final class wa {
         int var4Lifetime1;
         if (param0 < -89) {
           var8 = new ut(108, 108);
-          iw.a(-118, var8);
+          PacketBuffer.a(-118, var8);
           on.d(54, 54, 51, 255);
           on.d(54, 54, 43, 0);
           ts.a(param1, 0, 124);
           ta.e(117);
           var9 = new ot(54, 54);
-          iw.a(-92, var9);
+          PacketBuffer.a(-92, var9);
           var8.f(0, 0);
           ta.e(119);
           for (var4 = 0; var9.field_y.length > var4; var4++) {
@@ -84,13 +84,13 @@ final class wa {
         }
         wa.b((byte) 1);
         ut var6 = new ut(108, 108);
-        iw.a(-118, var6);
+        PacketBuffer.a(-118, var6);
         on.d(54, 54, 51, 255);
         on.d(54, 54, 43, 0);
         ts.a(param1, 0, 124);
         ta.e(117);
         ot var7 = new ot(54, 54);
-        iw.a(-92, var7);
+        PacketBuffer.a(-92, var7);
         var6.f(0, 0);
         ta.e(119);
         for (var4Lifetime1 = 0; var7.field_y.length > var4Lifetime1; var4Lifetime1++) {

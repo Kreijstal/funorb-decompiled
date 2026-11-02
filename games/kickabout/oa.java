@@ -9,7 +9,7 @@ final class oa {
 
     final static void b(int param0) {
         ee.b((byte) -25);
-        aq.c((byte) -125);
+        IsaacRandom.c((byte) -125);
         if (param0 != -23217) {
           field_a = (Calendar) null;
         }
@@ -33,7 +33,7 @@ final class oa {
           var4 = var10[0].field_a;
           var15 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
           var16 = new ut(var15[1] * param1 + var15[0] + var15[2], var4);
-          iw.a(-122, var16);
+          PacketBuffer.a(-122, var16);
           var7 = 0;
           var10[0].a(var7, 0);
           var7 = var7 + var15[0];
@@ -52,7 +52,7 @@ final class oa {
         var4Lifetime1 = var10[0].field_a;
         int[] var12 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
         ut var13 = new ut(var12[1] * param1 + var12[0] + var12[2], var4Lifetime1);
-        iw.a(-122, var13);
+        PacketBuffer.a(-122, var13);
         var7Lifetime1 = 0;
         var10[0].a(var7Lifetime1, 0);
         var7Lifetime1 = var7Lifetime1 + var12[0];
@@ -67,7 +67,7 @@ final class oa {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, int param4, byte[] param5) {
-        ml var10 = null;
+        CipherPacketBuffer var10 = null;
         int var7 = 0;
         int var8 = 0;
         try {

@@ -72,7 +72,7 @@ final class om extends hd {
         int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
-        ml var8 = null;
+        CipherPacketBuffer var8 = null;
         byte[] var12 = null;
         var6 = Kickabout.field_G;
         try {
@@ -136,7 +136,7 @@ final class om extends hd {
         this.a(param0, (byte) 14);
     }
 
-    final static void a(java.math.BigInteger param0, iw param1, byte param2, iw param3, java.math.BigInteger param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, byte param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
           if (param2 > -59) {
             field_Ab = (String) null;

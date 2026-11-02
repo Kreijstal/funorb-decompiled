@@ -136,7 +136,7 @@ final class bn extends qt {
           }
         }
         if (w.field_b.field_gb) {
-          qd.$cfr$intArgs$a$b6210757cdab(-67, ht.field_a);
+          qd.$cfr$intArgs$a$b6210757cdab(-67, IterableNodeHashTable.field_a);
         }
         var7 = 0;
         while (var7 < ha.field_H.length) {

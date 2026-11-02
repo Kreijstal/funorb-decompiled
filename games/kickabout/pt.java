@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pt extends gn {
+final class pt extends IntrusiveNode {
     private up field_k;
     static int field_e;
     private int field_g;
@@ -121,7 +121,7 @@ final class pt extends gn {
     }
 
     final static void a(boolean param0, int param1) {
-        ml var2 = null;
+        CipherPacketBuffer var2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
@@ -183,7 +183,7 @@ final class pt extends gn {
         }
     }
 
-    final void a(iw param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -216,7 +216,7 @@ final class pt extends gn {
         }
     }
 
-    private final void a(iw param0, byte param1) {
+    private final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -963,7 +963,7 @@ final class pt extends gn {
                 }
                 var2 = ni.a((byte) -116, "esc_cancelprivatemessage");
                 if (var2 != null) {
-                  kc.field_f = kt.a(var2, param0);
+                  IntrusiveNodeHashTable.field_f = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -53, "esc_cancelthisline");
                 if (var2 != null) {
@@ -1027,7 +1027,7 @@ final class pt extends gn {
                 }
                 var2 = ni.a((byte) -119, "gameopt_needrating");
                 if (null != var2) {
-                  aq.field_h = kt.a(var2, true);
+                  IsaacRandom.field_h = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -68, "gameopt_unratedonly");
                 if (var2 != null) {
@@ -1653,7 +1653,7 @@ final class pt extends gn {
                 }
                 var2 = ni.a((byte) -67, "create_email_confirm");
                 if (null != var2) {
-                  ah.field_n = kt.a(var2, true);
+                  GameAppletShell.field_n = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -52, "create_age");
                 if (var2 != null) {
@@ -1936,7 +1936,7 @@ final class pt extends gn {
                 }
                 var2 = ni.a((byte) -70, "friendlistdupe");
                 if (null != var2) {
-                  ah.field_m = kt.a(var2, true);
+                  GameAppletShell.field_m = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -84, "friendnotfound");
                 if (var2 != null) {
@@ -2762,7 +2762,7 @@ final class pt extends gn {
                 }
                 var2 = ni.a((byte) -106, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  ml.field_v = nl.a(false, var2[0]);
+                  CipherPacketBuffer.field_v = nl.a(false, var2[0]);
                 }
                 var2 = ni.a((byte) -113, "rating_noratings");
                 if (null != var2) {
@@ -3287,7 +3287,7 @@ final class pt extends gn {
                   }
                   throw nb.a((Throwable) ((Object) stackIn_2604_0), ((StringBuilder) (Object) stackIn_2604_1).append(stackIn_2605_2).append(')').toString());
                 }
-                if (ah.field_d) {
+                if (GameAppletShell.field_d) {
                   var3++;
                   Kickabout.field_G = var3;
                 }
@@ -3341,7 +3341,7 @@ final class pt extends gn {
         }
     }
 
-    pt(iw param0) {
+    pt(PacketBuffer param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

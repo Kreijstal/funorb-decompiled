@@ -179,7 +179,7 @@ class qt extends js {
           }
         }
         for (var3Lifetime2 = 0; var3Lifetime2 < this.field_x.field_a; var3Lifetime2++) {
-          L12: {
+          regionExit1: {
             if (this.a(var3Lifetime2, (byte) -95)) {
               var4Lifetime1 = this.b(var3Lifetime2, param0 - 22662) + this.field_j;
               var5Lifetime2 = this.field_i[var3Lifetime2].field_m;
@@ -187,7 +187,7 @@ class qt extends js {
                 if (this == cq.field_h &&
                   ra.field_G instanceof qt &&
                   ((qt) (ra.field_G)).e((byte) 83)) {
-                  break L12;
+                  break regionExit1;
                 }
                 if (ra.field_G == this &&
                   cq.field_h instanceof qt &&

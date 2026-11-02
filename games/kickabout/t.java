@@ -1190,7 +1190,7 @@ final class t {
             param0[param1++] = param2;
           }
         }
-        L2: {
+        regionExit1: {
           if (field_h == 254) {
             while (true) {
               param3--;
@@ -1199,7 +1199,7 @@ final class t {
                 while (true) {
                   param3--;
                   if (param3 < 0) {
-                    break L2;
+                    break regionExit1;
                   }
                   incrementValue$12 = param1;
                   param1++;
@@ -1230,7 +1230,7 @@ final class t {
               while (true) {
                 param3--;
                 if (param3 < 0) {
-                  break L2;
+                  break regionExit1;
                 }
                 var8 = param0[param1];
                 incrementValue$7 = param1;

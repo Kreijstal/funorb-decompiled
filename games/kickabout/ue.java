@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue extends gn {
+final class ue extends IntrusiveNode {
     static byte[] field_k;
     int field_i;
     int field_h;
@@ -77,7 +77,7 @@ final class ue extends gn {
 
     final static void a(int param0, int param1, int param2) {
         qb var4 = null;
-        ml var5 = null;
+        CipherPacketBuffer var5 = null;
         int var3 = 35 / ((23 - param1) / 35);
         if (jm.field_h != param0) {
           var4 = (qb) (sr.field_f.a(-3611, (long)jm.field_h));

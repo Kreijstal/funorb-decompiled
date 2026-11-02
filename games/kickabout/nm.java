@@ -127,7 +127,7 @@ final class nm {
         ih.field_c = param3;
     }
 
-    private final void a(int param0, iw param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var7 = 0;
         RuntimeException stackIn_59_0 = null;
@@ -289,7 +289,7 @@ final class nm {
         }
     }
 
-    private final void a(int param0, iw param1) {
+    private final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -348,7 +348,7 @@ final class nm {
           var9 = var10;
           var4 = var9;
           if (var9 != null) {
-            this.a(-1, new iw(var11));
+            this.a(-1, new PacketBuffer(var11));
           }
           var5 = 0;
           for (var6 = 0; this.field_e.length > var6; var6++) {

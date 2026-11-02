@@ -93,7 +93,7 @@ abstract class mo {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = lt.field_a[qj.b(255, (int) var2[var4_int])];
         }
-        ut var4 = new ut(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[param0], ku.field_c[0], lo.field_j[0], var3);
+        ut var4 = new ut(kw.field_i, ai.field_J, IsaacRandom.field_f[0], fc.field_g[param0], ku.field_c[0], lo.field_j[0], var3);
         tk.h((byte) -81);
         return var4;
     }
@@ -111,7 +111,7 @@ abstract class mo {
         }
     }
 
-    final static void a(ml param0, int param1) {
+    final static void a(CipherPacketBuffer param0, int param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -407,7 +407,7 @@ abstract class mo {
         }
     }
 
-    final void b(ml param0, int param1) {
+    final void b(CipherPacketBuffer param0, int param1) {
         mo var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

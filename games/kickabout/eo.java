@@ -369,7 +369,7 @@ final class eo {
 
     private final static void a(String param0, hu param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         ut var8 = new ut(param4, param5);
-        iw.a(-79, var8);
+        PacketBuffer.a(-79, var8);
         param1.a(param0, 0, 0, param4, param5, param6, -1, 1, 1, 0);
         ta.e(126);
         var8.c(param2, param3, param7, 4096);
@@ -623,12 +623,12 @@ final class eo {
         field_n = new ut[4];
         for (var5 = 0; var5 < 4; var5++) {
           field_n[var5] = ae.a(true, (byte) -52, var5, var4, 7126504);
-          iw.a(-41, field_n[var5]);
+          PacketBuffer.a(-41, field_n[var5]);
           ((hu) (var2)).d(var0, on.field_g >> 1, on.field_f - 8, 16777215, -1);
           ta.e(127);
         }
         field_g = new ut(102, 13);
-        iw.a(-67, field_g);
+        PacketBuffer.a(-67, field_g);
         eo.a(1, 1, 10066329, 2, 20, 0, 200);
         on.e(0, 0, on.field_g, on.field_f, 65793);
         ta.e(124);
@@ -636,7 +636,7 @@ final class eo {
         for (var5Lifetime1 = 0; var5Lifetime1 < 4; var5Lifetime1++) {
           for (var6 = 0; var6 < 4; var6++) {
             var7 = new ut(100, 11);
-            iw.a(81, var7);
+            PacketBuffer.a(81, var7);
             eo.a(0, 0, pd.field_B[var5Lifetime1], var6, 40, 90, 160);
             ta.e(120);
             field_h[var5Lifetime1][var6] = var7;
@@ -767,7 +767,7 @@ final class eo {
 
     private final static ot b(ut param0) {
         ot var1 = ((ot) (param0)).h();
-        iw.a(-112, var1);
+        PacketBuffer.a(-112, var1);
         param0.c(0, 0, 90);
         ta.e(117);
         return var1;
@@ -868,7 +868,7 @@ final class eo {
         ut[] var5 = new ut[4];
         for (var6_int = 0; var6_int < 4; var6_int++) {
           var5[var6_int] = ae.a(param4, (byte) -52, var6_int, param3, param1);
-          iw.a(-52, var5[var6_int]);
+          PacketBuffer.a(-52, var5[var6_int]);
           var7 = param4 ? 8 : 9;
           param2.d(param0, on.field_g >> 1, on.field_f - var7, 16777215, -1);
           ta.e(122);
@@ -889,7 +889,7 @@ final class eo {
         int var9 = 0;
         int var4 = 256 - (param2 - param1 << 8) / param2;
         ot var5 = new ot(param3, param3);
-        iw.a(-38, var5);
+        PacketBuffer.a(-38, var5);
         on.a(on.field_g << 3, on.field_f << 3, on.field_g << 3, param0.length - 1, param0);
         ta.e(122);
         byte[] var6 = new byte[var5.field_y.length];
@@ -989,7 +989,7 @@ final class eo {
         StringBuilder discarded$42 = null;
         if (param2 > 100) {
           var6_ref_ut = new ut(102, 13);
-          iw.a(73, var6_ref_ut);
+          PacketBuffer.a(73, var6_ref_ut);
           eo.a(0, 0, param2 - 100, param3, false, 0);
           ta.e(126);
           var6_ref_ut.b(param0 + 3, param1 + 7, 128);
@@ -1004,7 +1004,7 @@ final class eo {
         ta.e(127);
         on.e(param0 - 1, param1 - 1, 102, 13, 65793);
         if (param4) {
-          iw.a(-38, field_d);
+          PacketBuffer.a(-38, field_d);
           on.b();
           var7 = 131586;
           var8 = 10;
@@ -1438,7 +1438,7 @@ final class eo {
         var4 = var3 * var3 >> 8;
         var5 = var3 * var3 >> 12;
         var6 = new ot(72, 72);
-        iw.a(-115, var6);
+        PacketBuffer.a(-115, var6);
         on.a(on.field_g << 3, on.field_f << 3, on.field_g << 3, param0.length - 1, param0);
         ta.e(119);
         var7 = new byte[var6.field_y.length];

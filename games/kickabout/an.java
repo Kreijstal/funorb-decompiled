@@ -22,7 +22,7 @@ final class an {
         }
         var3 = new bg();
         if (var4 != null) {
-          var3.a((byte) 126, new iw(var4));
+          var3.a((byte) 126, new PacketBuffer(var4));
         }
         int var5 = 37 % ((param0 - 83) / 36);
         if (32768 > param1) {

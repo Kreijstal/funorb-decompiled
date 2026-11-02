@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj extends gn {
+final class lj extends IntrusiveNode {
     static String field_l;
     String field_i;
     static volatile long field_e;

@@ -402,7 +402,7 @@ final class kd extends be {
           else {
             this.field_k.f(-85, 1 + var5);
           }
-          cv.field_c = aq.a(this.field_k.j((byte) -16), 120);
+          cv.field_c = IsaacRandom.a(this.field_k.j((byte) -16), 120);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

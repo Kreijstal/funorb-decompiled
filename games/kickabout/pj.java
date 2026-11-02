@@ -33,7 +33,7 @@ final class pj extends ct {
           }
           var4 = stackIn_3_0[stackIn_4_1];
           var5 = new ut(var4.field_o, var4.field_v);
-          iw.a(-55, var5);
+          PacketBuffer.a(-55, var5);
           stackIn_6_0 = j.a(-5275);
           if (!param0) {
             stackIn_7_1 = -10;
@@ -110,7 +110,7 @@ final class pj extends ct {
           return;
         }
         ut var6 = new ut(this.field_z.field_n, this.field_z.field_i);
-        iw.a(-46, var6);
+        PacketBuffer.a(-46, var6);
         this.field_z.a(param0, (int) (char)param1, 0, 0);
         ta.e(127);
         var6.b(param2 + this.field_t, this.field_g + param3, this.field_F);

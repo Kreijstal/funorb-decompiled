@@ -249,13 +249,13 @@ class iv extends am {
           var16[22] = uq.field_e;
           var16[25] = he.field_Bb;
           var16[19] = uq.field_e;
-          var16[9] = ah.field_b;
-          var16[7] = ah.field_b;
+          var16[9] = GameAppletShell.field_b;
+          var16[7] = GameAppletShell.field_b;
           var18 = 101 % ((param1 + 68) / 52);
           var16[20] = uq.field_e;
           var16[24] = he.field_Bb;
           var16[16] = he.field_Bb;
-          var16[15] = ah.field_b;
+          var16[15] = GameAppletShell.field_b;
           var16[14] = he.field_Bb;
           var16[23] = he.field_Bb;
           var16[21] = uq.field_e;

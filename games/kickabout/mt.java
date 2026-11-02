@@ -10,7 +10,7 @@ final class mt {
     static String field_b;
 
     final static boolean a(byte param0) {
-        if (null != kc.field_g[1]) {
+        if (null != IntrusiveNodeHashTable.field_g[1]) {
           return true;
         }
         if (param0 != -43) {
@@ -19,8 +19,8 @@ final class mt {
             return false;
           }
           if (bo.field_Cb.a("scenery", "goal_bottom", (byte) -10)) {
-            kc.field_g[1] = bg.a("scenery", bo.field_Cb, (byte) 93, "goal_top");
-            kc.field_g[0] = bg.a("scenery", bo.field_Cb, (byte) 127, "goal_bottom");
+            IntrusiveNodeHashTable.field_g[1] = bg.a("scenery", bo.field_Cb, (byte) 93, "goal_top");
+            IntrusiveNodeHashTable.field_g[0] = bg.a("scenery", bo.field_Cb, (byte) 127, "goal_bottom");
             return true;
           }
           return false;
@@ -29,8 +29,8 @@ final class mt {
           return false;
         }
         if (bo.field_Cb.a("scenery", "goal_bottom", (byte) -10)) {
-          kc.field_g[1] = bg.a("scenery", bo.field_Cb, (byte) 93, "goal_top");
-          kc.field_g[0] = bg.a("scenery", bo.field_Cb, (byte) 127, "goal_bottom");
+          IntrusiveNodeHashTable.field_g[1] = bg.a("scenery", bo.field_Cb, (byte) 93, "goal_top");
+          IntrusiveNodeHashTable.field_g[0] = bg.a("scenery", bo.field_Cb, (byte) 127, "goal_bottom");
           return true;
         }
         return false;

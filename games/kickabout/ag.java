@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ag extends gn {
+final class ag extends IntrusiveNode {
     static int field_h;
     vm field_i;
     static String field_l;
@@ -9,7 +9,7 @@ final class ag extends gn {
     static int field_e;
     int field_j;
     static int field_g;
-    gn field_k;
+    IntrusiveNode field_k;
 
     final static hd a(int param0, int param1) {
         hd var2 = new hd((long)param1, (hd) null);
@@ -25,7 +25,7 @@ final class ag extends gn {
         }
     }
 
-    ag(vm param0, gn param1) {
+    ag(vm param0, IntrusiveNode param1) {
         try {
           this.field_i = param0;
           this.field_j = param0.m();
