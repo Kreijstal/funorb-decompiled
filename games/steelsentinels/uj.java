@@ -69,7 +69,7 @@ final class uj {
           }
           if (param7 > 0 &&
             0 < param4) {
-            var22 = param6.g();
+            var22 = param6.copySprite();
             if (param3 > -16) {
               var20 = (RgbSprite) null;
               uj.a(-28, -57, -101, (byte) 67, 90, 52, (RgbSprite) null, -77);
@@ -79,7 +79,7 @@ final class uj {
             var11 = SoftwareRaster.field_j;
             var30 = new int[4];
             SoftwareRaster.b(var30);
-            param6.d();
+            param6.bindRasterTarget();
             SoftwareRaster.h(var30[0], var30[1], var30[2], var30[3]);
             var13 = param1 + param2 * param6.field_A;
             var14 = -param7 + param6.field_A;
@@ -104,7 +104,7 @@ final class uj {
               var13 = var13 + var14;
             }
             var22.a(-param6.field_D, -param6.field_H);
-            SoftwareRaster.a(var31, var10, var11);
+            SoftwareRaster.setTarget(var31, var10, var11);
             SoftwareRaster.a(var30);
             return;
           }
@@ -168,11 +168,11 @@ final class uj {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          ua var13 = null;
+          ReflectionCheck var13 = null;
           java.lang.reflect.Field var15 = null;
           Object var16 = null;
           java.lang.reflect.Field var16_ref = null;
-          ua var17 = null;
+          ReflectionCheck var17 = null;
           Object var18 = null;
           java.lang.reflect.Field var19 = null;
           Object var21 = null;
@@ -188,7 +188,7 @@ final class uj {
           var22 = null;
           var12 = SteelSentinels.obfuscationControl;
           try {
-            var13 = (ua) (rg.field_d.first(13058));
+            var13 = (ReflectionCheck) (rg.field_d.first(13058));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -256,7 +256,7 @@ final class uj {
                       param1.writeByte((byte) 125, 0);
                     } else if (var10 instanceof Number) {
                       param1.writeByte((byte) 120, 1);
-                      param1.b(-28875, ((Number) (var10)).longValue());
+                      param1.writeLong(-28875, ((Number) (var10)).longValue());
                     } else if (!(var10 instanceof String)) {
                       param1.writeByte((byte) 111, 4);
                     } else {
@@ -322,7 +322,7 @@ final class uj {
                 }
               }
             }
-            param1.f(-127, var4);
+            param1.appendCrc32(-127, var4);
             var17.unlink(4);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

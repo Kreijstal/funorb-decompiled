@@ -7,7 +7,7 @@ abstract class da {
     il[] field_h;
     static RgbSprite[] field_e;
     static String field_a;
-    static vi field_b;
+    static AccountRegistrationPanel field_b;
     static RgbSprite field_f;
     static String field_i;
     static int field_g;
@@ -99,16 +99,16 @@ abstract class da {
         return -1;
     }
 
-    final static void a(ResourceArchive param0, int param1, int param2, wg param3) {
+    final static void a(ResourceArchive param0, int param1, int param2, PcmStreamMixer param3) {
         try {
           if (param1 <= 67) {
             da.a(true, -102);
           }
           vc.field_c = param2 * sj.a((byte) -108) / 1000;
           Sprite.a(param0, 1728986241);
-          nl.a((byte) 90, param0);
-          ah.a(77, param0);
-          lk.a(true);
+          DialWidget.a((byte) 90, param0);
+          SocialListEntry.a(77, param0);
+          ValidationIndicator.a(true);
           CombatWorld.a(true);
           vn.field_h = 0 - vc.field_c;
         } catch (RuntimeException runtimeException) {
@@ -143,16 +143,16 @@ abstract class da {
         return var2;
     }
 
-    final static ah a(String param0, byte param1) {
+    final static SocialListEntry a(String param0, byte param1) {
         String var2 = null;
-        ah var3 = null;
+        SocialListEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         Object stackIn_3_0 = null;
-        ah stackIn_9_0 = null;
-        ah stackIn_17_0 = null;
+        SocialListEntry stackIn_9_0 = null;
+        SocialListEntry stackIn_17_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -160,31 +160,31 @@ abstract class da {
         RuntimeException var2_ref = null;
         var5 = SteelSentinels.obfuscationControl;
         try {
-          if (null == db.field_h) {
+          if (null == SocketConnector.field_h) {
             stackIn_3_0 = null;
-            return (ah) (stackIn_3_0);
+            return (SocialListEntry) (stackIn_3_0);
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = ui.a(param1 ^ -42, var6);
+          var2 = AlphaContainer.a(param1 ^ -42, var6);
           if (var2 == null) {
             var2 = param0;
           }
           if (param1 != -41) {
-            stackIn_9_0 = (ah) null;
+            stackIn_9_0 = (SocialListEntry) null;
             return stackIn_9_0;
           }
-          var3 = (ah) (db.field_h.a((long)var2.hashCode(), (byte) -81));
+          var3 = (SocialListEntry) (SocketConnector.field_h.a((long)var2.hashCode(), (byte) -81));
           while (true) {
             if (var3 == null) {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_dc);
-            var4 = ui.a(1, var7);
+            var4 = AlphaContainer.a(1, var7);
             if (var4 == null) {
               var4 = var3.field_dc;
             }
             if (!var4.equals(var2)) {
-              var3 = (ah) (db.field_h.c((byte) 116));
+              var3 = (SocialListEntry) (SocketConnector.field_h.c((byte) 116));
               continue;
             }
             break;
@@ -299,7 +299,7 @@ abstract class da {
         il var5 = null;
         int var6 = SteelSentinels.obfuscationControl;
         if (param0 != 1) {
-          field_b = (vi) null;
+          field_b = (AccountRegistrationPanel) null;
         }
         il[] var7 = this.field_h;
         il[] var3 = var7;
@@ -320,10 +320,10 @@ abstract class da {
         if (NodeIterator.a(2)) {
           param0 = false;
         }
-        bf.a((byte) -112, param0);
+        LoginDialog.a((byte) -112, param0);
         if (di.field_b) {
-          SoftwareRaster.f(fg.field_Tb.field_d.field_Y, fg.field_Tb.field_d.field_eb, fg.field_Tb.field_d.field_zb, fg.field_Tb.field_d.field_Lb);
-          fg.field_Tb.field_d.a(param0, (byte) 127);
+          SoftwareRaster.f(RegistrationRequestDialog.field_Tb.field_d.field_Y, RegistrationRequestDialog.field_Tb.field_d.field_eb, RegistrationRequestDialog.field_Tb.field_d.field_zb, RegistrationRequestDialog.field_Tb.field_d.field_Lb);
+          RegistrationRequestDialog.field_Tb.field_d.a(param0, (byte) 127);
         }
         il.a(param0, (byte) -125);
     }
@@ -334,7 +334,7 @@ abstract class da {
         field_i = null;
         field_b = null;
         if (!param0) {
-          field_b = (vi) null;
+          field_b = (AccountRegistrationPanel) null;
         }
         field_f = null;
         field_c = null;

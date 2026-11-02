@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bi {
-    static kg field_f;
+    static ScrollContainer field_f;
     static int[][] field_e;
     static int field_d;
     static String field_a;
@@ -15,7 +15,7 @@ final class bi {
         jm var1 = (jm) (ri.field_c.first(13058));
         CipherPacketBuffer var2Lifetime1;
         if (var1 == null) {
-          pm.m(103);
+          LoginForm.m(103);
           return;
         }
         if (param0 == 2158) {

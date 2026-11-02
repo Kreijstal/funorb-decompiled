@@ -24,15 +24,15 @@ final class on extends me {
         try {
           lc.field_f = false;
           qf.field_b = false;
-          qh.field_Wb = false;
+          IconTextComponent.field_Wb = false;
           GameplayController.field_I = false;
-          bm.field_Q = false;
+          AccountMessagePanel.field_Q = false;
           if (param0 != 50) {
             return;
           }
           vc.field_d = false;
           Projectile.field_lb = false;
-          bf.field_Gb = false;
+          LoginDialog.field_Gb = false;
           var8 = new PartInstruction[]{};
           var7 = hl.field_v.a(var8, -21636, 4095);
           var2 = var7;
@@ -40,21 +40,21 @@ final class on extends me {
             var4 = var2[var3];
             if (null != var4.attachedPart &&
               var4.attachedPart.componentId == 89) {
-              qh.field_Wb = true;
+              IconTextComponent.field_Wb = true;
               lc.field_f = true;
             } else {
               if (null != var4.attachedPart &&
                 var4.attachedPart.componentId == 66) {
-                qh.field_Wb = true;
+                IconTextComponent.field_Wb = true;
               } else {
                 if (null != var4.attachedPart &&
                   76 == var4.attachedPart.componentId) {
-                  qh.field_Wb = true;
+                  IconTextComponent.field_Wb = true;
                 } else {
                   if (null != var4.attachedPart &&
                     83 != var4.attachedPart.componentId &&
                     (var4.attachedPart.field_Q & 1008) != 0) {
-                    qh.field_Wb = true;
+                    IconTextComponent.field_Wb = true;
                     var5 = ja.a(var4.attachedPart.componentId, false);
                     switch (var5) {
                       case 9:
@@ -78,18 +78,18 @@ final class on extends me {
                           break;
                         }
                         vc.field_d = true;
-                        bf.field_Gb = true;
+                        LoginDialog.field_Gb = true;
                         break;
                       case 8:
                         if (var4.attachedPart.componentId == 47) {
-                          bm.field_Q = true;
+                          AccountMessagePanel.field_Q = true;
                         }
                         vc.field_d = true;
                         break;
                       case 7:
                         Projectile.field_lb = true;
                         vc.field_d = true;
-                        bm.field_Q = true;
+                        AccountMessagePanel.field_Q = true;
                         break;
                       case 0:
                         vc.field_d = true;
@@ -106,7 +106,7 @@ final class on extends me {
           }
           if (dc.field_g == 8 &&
             !GameplayController.field_I) {
-            rc.a(false);
+            SectorCacheStore.a(false);
           }
           ef.field_b = true;
           return;
@@ -129,7 +129,7 @@ final class on extends me {
         }
     }
 
-    final static pc a(em param0, int param1) {
+    final static pc a(PcmSampleStream param0, int param1) {
         pc var2 = null;
         RuntimeException var2_ref = null;
         pc stackIn_2_0 = null;
@@ -145,7 +145,7 @@ final class on extends me {
           }
           var2 = new pc(param0, param0);
           mm.field_b.addLast(3, var2);
-          ll.field_e.b(param0);
+          UiTheme.field_e.addSubstream(param0);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -27,69 +27,69 @@ final class am {
         int var1 = 0;
         int var2 = SteelSentinels.obfuscationControl;
         int var1Lifetime1;
-        mg.a(IntKeyLookup.field_j, 7411, 5);
-        mg.a(bj.field_b, 7411, 6);
-        mg.a(SentinelDesigner.field_d, 7411, 8);
-        mg.a(a.field_h, 7411, 13);
-        mg.a(id.field_cc, 7411, 14);
-        mg.a(ql.field_ac, 7411, 20);
-        gd.field_sb = null;
+        QuickChatMenu.a(IntKeyLookup.field_j, 7411, 5);
+        QuickChatMenu.a(MusicPatchEnvelope.field_b, 7411, 6);
+        QuickChatMenu.a(SentinelDesigner.field_d, 7411, 8);
+        QuickChatMenu.a(MouseWheelInput.field_h, 7411, 13);
+        QuickChatMenu.a(IconLabelControl.field_cc, 7411, 14);
+        QuickChatMenu.a(SocialListPanel.field_ac, 7411, 20);
+        ContentTransitionDialog.field_sb = null;
         if (rd.field_b <= 0) {
-          mg.a(od.field_k, 7411, 6);
-          mg.a(ug.field_H, 7411, 8);
+          QuickChatMenu.a(ClientException.field_k, 7411, 6);
+          QuickChatMenu.a(SingleChildContainer.field_H, 7411, 8);
           var1 = 111 / ((param0 + 35) / 35);
           if (rd.field_b <= 0) {
-            mg.a(nc.field_h, 7411, 19);
+            QuickChatMenu.a(nc.field_h, 7411, 19);
             if (ArticulatedPart.f((byte) -128)) {
-              ti.field_A[34] = oe.field_l;
+              ImageProducerRasterBuffer.field_A[34] = oe.field_l;
             }
-            if (!vi.l(13539)) {
-              mg.a(NodeDeque.field_c, 7411, 1);
-              mg.a(qi.field_f, 7411, 2);
-              mg.a(vb.field_b, 7411, 3);
-              mg.a(ri.field_a, 7411, 4);
+            if (!AccountRegistrationPanel.l(13539)) {
+              QuickChatMenu.a(NodeDeque.field_c, 7411, 1);
+              QuickChatMenu.a(qi.field_f, 7411, 2);
+              QuickChatMenu.a(GzipDecoder.field_b, 7411, 3);
+              QuickChatMenu.a(ri.field_a, 7411, 4);
             }
             return;
           }
-          mg.a(DualNodeDeque.field_c, 7411, 0);
-          mg.a(ArchiveProvider.field_c, 7411, 19);
+          QuickChatMenu.a(DualNodeDeque.field_c, 7411, 0);
+          QuickChatMenu.a(ArchiveProvider.field_c, 7411, 19);
           if (ArticulatedPart.f((byte) -128)) {
-            ti.field_A[34] = oe.field_l;
+            ImageProducerRasterBuffer.field_A[34] = oe.field_l;
           }
-          if (!vi.l(13539)) {
-            mg.a(NodeDeque.field_c, 7411, 1);
-            mg.a(qi.field_f, 7411, 2);
-            mg.a(vb.field_b, 7411, 3);
-            mg.a(ri.field_a, 7411, 4);
+          if (!AccountRegistrationPanel.l(13539)) {
+            QuickChatMenu.a(NodeDeque.field_c, 7411, 1);
+            QuickChatMenu.a(qi.field_f, 7411, 2);
+            QuickChatMenu.a(GzipDecoder.field_b, 7411, 3);
+            QuickChatMenu.a(ri.field_a, 7411, 4);
           }
           return;
         }
-        mg.a(bj.field_b, 7411, 6);
-        mg.a(SentinelDesigner.field_d, 7411, 8);
+        QuickChatMenu.a(MusicPatchEnvelope.field_b, 7411, 6);
+        QuickChatMenu.a(SentinelDesigner.field_d, 7411, 8);
         var1Lifetime1 = 111 / ((param0 + 35) / 35);
         if (rd.field_b <= 0) {
-          mg.a(nc.field_h, 7411, 19);
+          QuickChatMenu.a(nc.field_h, 7411, 19);
           if (ArticulatedPart.f((byte) -128)) {
-            ti.field_A[34] = oe.field_l;
+            ImageProducerRasterBuffer.field_A[34] = oe.field_l;
           }
-          if (!vi.l(13539)) {
-            mg.a(NodeDeque.field_c, 7411, 1);
-            mg.a(qi.field_f, 7411, 2);
-            mg.a(vb.field_b, 7411, 3);
-            mg.a(ri.field_a, 7411, 4);
+          if (!AccountRegistrationPanel.l(13539)) {
+            QuickChatMenu.a(NodeDeque.field_c, 7411, 1);
+            QuickChatMenu.a(qi.field_f, 7411, 2);
+            QuickChatMenu.a(GzipDecoder.field_b, 7411, 3);
+            QuickChatMenu.a(ri.field_a, 7411, 4);
           }
           return;
         }
-        mg.a(DualNodeDeque.field_c, 7411, 0);
-        mg.a(ArchiveProvider.field_c, 7411, 19);
+        QuickChatMenu.a(DualNodeDeque.field_c, 7411, 0);
+        QuickChatMenu.a(ArchiveProvider.field_c, 7411, 19);
         if (ArticulatedPart.f((byte) -128)) {
-          ti.field_A[34] = oe.field_l;
+          ImageProducerRasterBuffer.field_A[34] = oe.field_l;
         }
-        if (!vi.l(13539)) {
-          mg.a(NodeDeque.field_c, 7411, 1);
-          mg.a(qi.field_f, 7411, 2);
-          mg.a(vb.field_b, 7411, 3);
-          mg.a(ri.field_a, 7411, 4);
+        if (!AccountRegistrationPanel.l(13539)) {
+          QuickChatMenu.a(NodeDeque.field_c, 7411, 1);
+          QuickChatMenu.a(qi.field_f, 7411, 2);
+          QuickChatMenu.a(GzipDecoder.field_b, 7411, 3);
+          QuickChatMenu.a(ri.field_a, 7411, 4);
         }
     }
 

@@ -10,12 +10,12 @@ final class ba {
     static int[] field_d;
 
     final static boolean a(int param0, int param1, int param2) {
-        if (ei.field_q == 13) {
-          pm.a((byte) -126);
+        if (NameAvailabilityValidator.field_q == 13) {
+          LoginForm.a((byte) -126);
           return true;
         }
         int var3 = -28 / ((35 - param0) / 54);
-        if (ei.field_q == 102) {
+        if (NameAvailabilityValidator.field_q == 102) {
           IntKeyLookup.field_i.l(-128);
           return true;
         }
@@ -68,18 +68,18 @@ final class ba {
     final static boolean a(byte param0) {
         if (param0 != -57) {
           field_e = (RgbSprite) null;
-          return ve.a(ge.field_m, 1, 25);
+          return ve.a(DirectByteStorage.field_m, 1, 25);
         }
-        return ve.a(ge.field_m, 1, 25);
+        return ve.a(DirectByteStorage.field_m, 1, 25);
     }
 
     final static void b(boolean param0) {
         if (param0) {
           ba.b(true);
-          pa.a(12105, ti.field_m);
+          pa.a(12105, ImageProducerRasterBuffer.field_m);
           return;
         }
-        pa.a(12105, ti.field_m);
+        pa.a(12105, ImageProducerRasterBuffer.field_m);
     }
 
     static {

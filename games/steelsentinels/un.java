@@ -5,7 +5,7 @@ final class un {
     static int field_i;
     static String field_d;
     static RgbSprite[] field_m;
-    static qh[][] field_h;
+    static IconTextComponent[][] field_h;
     static String field_g;
     static int field_n;
     static RgbSprite field_o;
@@ -30,7 +30,7 @@ final class un {
           field_d = null;
           field_k = null;
           field_a = null;
-          field_h = (qh[][]) null;
+          field_h = (IconTextComponent[][]) null;
           field_l = null;
           field_b = null;
           return;
@@ -50,20 +50,20 @@ final class un {
         int var1Lifetime1;
         if (param0 < 34) {
           field_g = (String) null;
-          if (224 <= ll.field_q) {
+          if (224 <= UiTheme.field_q) {
             ef.a(1, 256);
             return;
           }
-          var1 = ll.field_q % 32;
-          ef.a(1, -var1 + (ll.field_q + 32));
+          var1 = UiTheme.field_q % 32;
+          ef.a(1, -var1 + (UiTheme.field_q + 32));
           return;
         }
-        if (224 <= ll.field_q) {
+        if (224 <= UiTheme.field_q) {
           ef.a(1, 256);
           return;
         }
-        var1Lifetime1 = ll.field_q % 32;
-        ef.a(1, -var1Lifetime1 + (ll.field_q + 32));
+        var1Lifetime1 = UiTheme.field_q % 32;
+        ef.a(1, -var1Lifetime1 + (UiTheme.field_q + 32));
     }
 
     static {

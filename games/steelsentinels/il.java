@@ -19,7 +19,7 @@ final class il {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!wa.a((byte) 30, param0, param2, param3)) {
+          if (!StatefulTextPainter.a((byte) 30, param0, param2, param3)) {
             return null;
           }
           if (param1 != 20178) {
@@ -51,25 +51,25 @@ final class il {
 
     final static void a(int param0, int param1, int param2, int param3) {
         if (param1 == 0 &&
-          sg.field_c != param0) {
-          sg.field_c = param0;
-          cn.field_l = true;
-          b.a(param2, (byte) -118);
+          BufferedSocket.field_c != param0) {
+          BufferedSocket.field_c = param0;
+          TextWidgetPainter.field_l = true;
+          DialWidgetPainter.a(param2, (byte) -118);
         }
         if (param3 != -18853) {
           field_b = (String) null;
         }
         if (param1 == 1 &&
-          param0 != pm.field_Z) {
-          pm.field_Z = param0;
-          cn.field_l = true;
-          b.a(param2, (byte) -96);
+          param0 != LoginForm.field_Z) {
+          LoginForm.field_Z = param0;
+          TextWidgetPainter.field_l = true;
+          DialWidgetPainter.a(param2, (byte) -96);
         }
         if (param1 == 2 &&
           param0 != CachedArchiveProvider.field_y) {
           CachedArchiveProvider.field_y = param0;
-          cn.field_l = true;
-          b.a(param2, (byte) -100);
+          TextWidgetPainter.field_l = true;
+          DialWidgetPainter.a(param2, (byte) -100);
         }
     }
 
@@ -91,30 +91,30 @@ final class il {
     }
 
     final static void d(int param0) {
-        if (!de.field_d) {
+        if (!LoginMethod.field_d) {
           throw new IllegalStateException();
         }
         if (param0 != 0) {
           il.a(-7, 91, 38, 66);
         }
         if (ch.field_O != null) {
-          ch.field_O.m(106);
+          ch.field_O.closeDialog(106);
         }
         String var1 = CachedArchiveProvider.e(35);
-        jd.field_kb = new pm(var1, (String) null, true, false, false);
-        ag.field_p.a(ci.field_a, -114);
-        ci.field_a.c(jd.field_kb, param0 - 22908735);
+        AccountNoticeDialog.field_kb = new LoginForm(var1, (String) null, true, false, false);
+        GradientOutlineTextPainter.field_p.pushPanel(ci.field_a, -114);
+        ci.field_a.transitionToContent(AccountNoticeDialog.field_kb, param0 - 22908735);
         ci.field_a.i((byte) -14);
     }
 
     final static void a(boolean param0, byte param1) {
-        qc.field_V.a(param0, (byte) 126);
+        DisplayNameForm.field_V.a(param0, (byte) 126);
         pl var2 = ve.field_b;
         if (param1 > -108) {
           return;
         }
         if (var2 != null) {
-          var2.a(qc.field_V.field_Rb, qc.field_V.field_cb, (byte) -128);
+          var2.a(DisplayNameForm.field_V.field_Rb, DisplayNameForm.field_V.field_cb, (byte) -128);
         }
     }
 

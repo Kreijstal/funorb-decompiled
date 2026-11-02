@@ -22,33 +22,33 @@ final class sa {
     }
 
     final static String b(byte param0) {
-        if (nj.field_Q < 2) {
+        if (AccountTermsPanel.field_Q < 2) {
           return ud.field_w;
         }
         if (null != ok.field_f) {
           if (ok.field_f.ensureIndex(true)) {
-            return nm.field_t;
+            return EmailAvailabilityValidator.field_t;
           }
           return IntKeyLookup.field_g;
         }
         int var1 = -86 / ((69 - param0) / 47);
-        if (!ke.field_k.ensureIndex(true)) {
+        if (!WidgetStyleLayer.field_k.ensureIndex(true)) {
           return ai.field_t;
         }
-        if (!ke.field_k.a("commonui", (byte) 90)) {
-          return en.field_f + " - " + ke.field_k.a((byte) 78, "commonui") + "%";
+        if (!WidgetStyleLayer.field_k.a("commonui", (byte) 90)) {
+          return en.field_f + " - " + WidgetStyleLayer.field_k.getGroupProgressByName((byte) 78, "commonui") + "%";
         }
         if (!oe.field_d.ensureIndex(true)) {
           return og.field_c;
         }
         if (!oe.field_d.a("commonui", (byte) 90)) {
-          return kb.field_c + " - " + oe.field_d.a((byte) 103, "commonui") + "%";
+          return kb.field_c + " - " + oe.field_d.getGroupProgressByName((byte) 103, "commonui") + "%";
         }
-        if (!id.field_bc.ensureIndex(true)) {
+        if (!IconLabelControl.field_bc.ensureIndex(true)) {
           return sl.field_l;
         }
-        if (!id.field_bc.a(25)) {
-          return qj.field_i + " - " + id.field_bc.a((byte) -33) + "%";
+        if (!IconLabelControl.field_bc.ensureAllGroupsAvailable(25)) {
+          return qj.field_i + " - " + IconLabelControl.field_bc.a((byte) -33) + "%";
         }
         return GameApplet.field_a;
     }
@@ -73,47 +73,47 @@ final class sa {
         RuntimeException var3 = null;
         try {
           if (param0 == 1) {
-            stackIn_2_0 = db.a(ai.field_w, -73, new String[]{param1});
+            stackIn_2_0 = SocketConnector.a(ai.field_w, -73, new String[]{param1});
             return stackIn_2_0;
           }
           if (2 == param0) {
-            stackIn_5_0 = db.a(kb.field_d, -43, new String[]{param1});
+            stackIn_5_0 = SocketConnector.a(kb.field_d, -43, new String[]{param1});
             return stackIn_5_0;
           }
           if (param0 == 3) {
-            stackIn_8_0 = db.a(jj.field_j, -75, new String[]{param1});
+            stackIn_8_0 = SocketConnector.a(jj.field_j, -75, new String[]{param1});
             return stackIn_8_0;
           }
           if (param0 == 4) {
-            stackIn_11_0 = db.a(fk.field_p, -93, new String[]{param1});
+            stackIn_11_0 = SocketConnector.a(BoundedUrlRequest.field_p, -93, new String[]{param1});
             return stackIn_11_0;
           }
           if (5 == param0) {
-            stackIn_14_0 = db.a(s.field_b, -67, new String[]{param1});
+            stackIn_14_0 = SocketConnector.a(SpriteCheckboxPainter.field_b, -67, new String[]{param1});
             return stackIn_14_0;
           }
           if (param0 == 6) {
-            stackIn_17_0 = db.a(qf.field_i, -65, new String[]{param1});
+            stackIn_17_0 = SocketConnector.a(qf.field_i, -65, new String[]{param1});
             return stackIn_17_0;
           }
           if (7 == param0) {
-            stackIn_20_0 = db.a(um.field_db, -32, new String[]{param1});
+            stackIn_20_0 = SocketConnector.a(MarkerSlider.field_db, -32, new String[]{param1});
             return stackIn_20_0;
           }
           if (8 == param0) {
-            stackIn_23_0 = db.a(lb.field_Ub, -63, new String[]{param1});
+            stackIn_23_0 = SocketConnector.a(VerticalScrollbar.field_Ub, -63, new String[]{param1});
             return stackIn_23_0;
           }
           if (11 == param0) {
-            stackIn_26_0 = db.a(FunOrbClient.field_y, -107, new String[]{param1});
+            stackIn_26_0 = SocketConnector.a(FunOrbClient.field_y, -107, new String[]{param1});
             return stackIn_26_0;
           }
           if (param0 == 12) {
-            stackIn_29_0 = db.a(uf.field_e, -117, new String[]{param1});
+            stackIn_29_0 = SocketConnector.a(uf.field_e, -117, new String[]{param1});
             return stackIn_29_0;
           }
           if (13 == param0) {
-            stackIn_33_0 = db.a(vi.field_ab, -17, new String[]{param1});
+            stackIn_33_0 = SocketConnector.a(AccountRegistrationPanel.field_ab, -17, new String[]{param1});
             return stackIn_33_0;
           }
           if (param2 < -103) {
@@ -155,7 +155,7 @@ final class sa {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             uj.a(true, var1);
-            mm.field_g.b((byte) -93, -var2 + var1.position);
+            mm.field_g.backpatchByteLength((byte) -93, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,0 +1,298 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DisplayNameForm extends UiContainer implements NameSuggestionListener, ButtonListener {
+    static int field_P;
+    static int[] field_S;
+    private TextButton field_T;
+    static SceneWidget field_V;
+    private ValidatedTextWidget field_Q;
+    NameSuggestionsPanel field_R;
+    private TextButton field_U;
+
+    private final boolean a(int param0, ValidationProvider param1) {
+        ValidationSource var3 = null;
+        RuntimeException var3_ref = null;
+        vd var4 = null;
+        UiComponent var5 = null;
+        boolean stackIn_8_0 = false;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3 = param1.a(false);
+          if (var3 == null) {
+            return true;
+          }
+          if (param0 <= 97) {
+            var5 = (UiComponent) null;
+            this.onFocusedKey(-76, 19, 'ￂ', (UiComponent) null);
+          }
+          var4 = var3.a((byte) 21);
+          stackIn_8_0 = (var4 == vf.field_b);
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_11_0 = var3_ref;
+          stackIn_11_1 = new StringBuilder().append("qc.M(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw ci.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+        }
+    }
+
+    public DisplayNameForm() {
+        super(0, 0, 496, 0, (WidgetPainter) null);
+        this.field_Q = new ValidatedTextWidget("", (UiListener) null, 12);
+        TextWidgetPainter var1 = new TextWidgetPainter(SectorCacheStore.field_m, 0, 0, 0, 0, 16777215, -1, 3, 0, tj.field_e.field_G, -1, 2147483647, true);
+        UiComponent var2 = new UiComponent(na.field_h, var1, (UiListener) null);
+        this.field_U = new TextButton(Sentinel.field_D, (UiListener) null);
+        this.field_T = new TextButton(tj.field_b, (UiListener) null);
+        this.field_Q.field_v = lc.field_i;
+        this.field_Q.a(true, new NameAvailabilityValidator(this.field_Q));
+        this.field_U.field_K = false;
+        this.field_U.field_p = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
+        this.field_T.field_p = (WidgetPainter) ((Object) new LinkButtonPainter());
+        this.field_Q.field_p = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
+        int var3 = 20;
+        int var4 = 4;
+        int var5 = 200;
+        var2.a(20, (byte) -117, var3, 270, 50);
+        this.addChild(var2, -100);
+        var3 += 50;
+        var3 = var3 + (this.a(170, var3, -95, this.field_Q, LinkButtonPainter.field_b, cf.field_s) + 5);
+        this.field_U.a(496 - var5 >> 1, (byte) -82, var3, var5, 40);
+        this.field_T.a(3 + var4, (byte) -86, 15 + var3, 60, 40);
+        this.field_T.field_A = (UiListener) (this);
+        this.field_U.field_A = (UiListener) (this);
+        this.addChild(this.field_U, -89);
+        this.addChild(this.field_T, -116);
+        this.field_R = new NameSuggestionsPanel((NameSuggestionListener) (this));
+        this.field_R.a(this.field_Q.field_x + (this.field_Q.field_o + 60), (byte) -126, 20, -this.field_Q.field_x + (-this.field_Q.field_o + this.field_x - 60), 150);
+        this.addChild(this.field_R, -103);
+        this.a(0, (byte) -123, 0, 496, var4 + 55 + var3);
+    }
+
+    public final void a(int param0, String param1) {
+        ValidatedTextWidget var3 = null;
+        String var4 = null;
+        if (param0 != 20522) {
+          return;
+        }
+        try {
+          var3 = this.field_Q;
+          var4 = param1;
+          ((EditableTextWidget) ((Object) var3)).setText(var4, 29597, false);
+        } catch (RuntimeException runtimeException) {
+          throw ci.a((Throwable) ((Object) runtimeException), "qc.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final void i(int param0) {
+        if (!this.h((byte) -100)) {
+          return;
+        }
+        AccountRequestDialog.a((byte) 120, this.field_Q.field_y);
+        if (param0 != 55) {
+          this.a((byte) 61);
+        }
+    }
+
+    public final void a(byte param0) {
+        if (param0 == 86) {
+          ((NameAvailabilityValidator) (this.field_Q.a(false))).d(78);
+          return;
+        }
+        ValidationProvider var3 = (ValidationProvider) null;
+        boolean discarded$0 = this.a(45, (ValidationProvider) null);
+        ((NameAvailabilityValidator) (this.field_Q.a(false))).d(78);
+    }
+
+    private final boolean h(byte param0) {
+        int discarded$0 = 0;
+        if (param0 > -50) {
+          String var3 = (String) null;
+          discarded$0 = this.a((String) null, -50, (UiComponent) null, 71, (String) null, 5, -8);
+          if (this.a(127, (ValidationProvider) (this.field_Q))) {
+            return true;
+          }
+          return false;
+        }
+        if (this.a(127, (ValidationProvider) (this.field_Q))) {
+          return true;
+        }
+        return false;
+    }
+
+    final boolean onFocusedKey(int param0, int param1, char param2, UiComponent param3) {
+        RuntimeException var5 = null;
+        boolean stackIn_6_0 = false;
+        boolean stackIn_9_0 = false;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (super.onFocusedKey(param0, param1, param2, param3)) {
+            return true;
+          }
+          if (98 == param1) {
+            stackIn_6_0 = this.b(param3, 114);
+            return stackIn_6_0;
+          }
+          if (param1 != 99) {
+            return false;
+          }
+          stackIn_9_0 = this.b(-11963, param3);
+          return stackIn_9_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_14_0 = var5;
+          stackIn_14_1 = new StringBuilder().append("qc.R(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    private final int a(int param0, int param1, int param2, UiComponent param3, String param4, String param5) {
+        RuntimeException var7 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 > -68) {
+            field_V = (SceneWidget) null;
+          }
+          stackIn_3_0 = this.a(param4, param1, param3, 35, param5, 3, param0);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_6_0 = var7;
+          stackIn_6_1 = new StringBuilder().append("qc.CA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param4 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param5 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    private final int a(String param0, int param1, UiComponent param2, int param3, String param4, int param5, int param6) {
+        RuntimeException var8 = null;
+        ValidationHelpWidget var9 = null;
+        LabeledField var10 = null;
+        int stackIn_1_0 = 0;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var10 = new LabeledField(20, param1, 120 + param6, 25, param2, false, 120, param5, tj.field_e, 16777215, param0);
+          this.addChild(var10, param5 ^ -106);
+          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param2)).a(false), param4, 126, var10.field_E + param1, 25 + param6, param3);
+          var9.field_A = (UiListener) (this);
+          this.addChild(var9, -108);
+          stackIn_1_0 = var9.field_E + var10.field_E;
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_4_0 = var8;
+          stackIn_4_1 = new StringBuilder().append("qc.C(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw ci.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    public static void j(int param0) {
+        field_S = null;
+        if (param0 != 60) {
+          field_S = (int[]) null;
+          field_V = null;
+          return;
+        }
+        field_V = null;
+    }
+
+    final void updateHover(int param0, int param1, UiComponent param2, int param3) {
+        boolean discarded$0 = false;
+        try {
+          super.updateHover(param0, 122, param2, param3);
+          this.field_U.field_K = this.h((byte) -103);
+          if (param1 <= 56) {
+            discarded$0 = this.h((byte) 6);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ci.a((Throwable) ((Object) runtimeException), "qc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        }
+    }
+
+    public final void onAction(int param0, byte param1, int param2, TextButton param3, int param4) {
+        try {
+          if (this.field_T == param3) {
+            il.a(103);
+          } else {
+            if (param3 == this.field_U) {
+              this.i(55);
+            }
+          }
+          int var6_int = -2 % ((-85 - param1) / 36);
+        } catch (RuntimeException runtimeException) {
+          throw ci.a((Throwable) ((Object) runtimeException), "qc.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+        }
+    }
+
+    static {
+        field_S = new int[]{40, 150, 135, 40, 85, 75, 70, 30, 0, 70, 100, 90};
+    }
+}

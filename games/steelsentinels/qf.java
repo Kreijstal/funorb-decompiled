@@ -4,7 +4,7 @@
 final class qf {
     static String[] field_a;
     static RgbSprite field_f;
-    static ol field_e;
+    static QuickChatHelpDialog field_e;
     static String field_j;
     static boolean field_b;
     static SceneWidget field_c;
@@ -33,8 +33,8 @@ final class qf {
         int var2 = 0;
         if (param0 == 100) {
           var1 = sh.c(115);
-          var2 = ui.a(false);
-          tk.field_p.a((ug.field_I << 1) + var1, -15203, ej.field_D - ug.field_I, var2 + (on.field_n << 1), ug.field_Q - on.field_n);
+          var2 = AlphaContainer.a(false);
+          MatchingTextValidator.field_p.a((SingleChildContainer.field_I << 1) + var1, -15203, MusicPatchPcmStream.field_D - SingleChildContainer.field_I, var2 + (on.field_n << 1), SingleChildContainer.field_Q - on.field_n);
           dk.b(param0 - 6661);
           return;
         }
@@ -57,8 +57,8 @@ final class qf {
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
-        if (fk.field_i != null) {
-          fk.field_i.c(param0, 21519);
+        if (BoundedUrlRequest.field_i != null) {
+          BoundedUrlRequest.field_i.c(param0, 21519);
         }
         if (si.field_A != null) {
           si.field_A.c(param0, 21519);
@@ -76,40 +76,40 @@ final class qf {
           if (!jn.field_g) {
             var2 = 0;
             stackIn_50_0 = -94;
-            stackIn_51_1 = (param0) && (li.c(8)) && (var2 == 0);
-            lk.$cfr$intArgs$a$7ffe4b125357(stackIn_50_0, stackIn_51_1);
+            stackIn_51_1 = (param0) && (PasswordFieldPainter.c(8)) && (var2 == 0);
+            ValidationIndicator.$cfr$intArgs$a$7ffe4b125357(stackIn_50_0, stackIn_51_1);
             if (var2 != 0) {
-              stackIn_57_0 = (param0) && (li.c(8));
-              de.a(stackIn_57_0, -126);
+              stackIn_57_0 = (param0) && (PasswordFieldPainter.c(8));
+              LoginMethod.a(stackIn_57_0, -126);
             }
             return;
           }
           var2Lifetime3 = 1;
           stackIn_63_0 = -94;
-          stackIn_64_1 = (param0) && (li.c(8)) && (var2Lifetime3 == 0);
-          lk.$cfr$intArgs$a$7ffe4b125357(stackIn_63_0, stackIn_64_1);
+          stackIn_64_1 = (param0) && (PasswordFieldPainter.c(8)) && (var2Lifetime3 == 0);
+          ValidationIndicator.$cfr$intArgs$a$7ffe4b125357(stackIn_63_0, stackIn_64_1);
           if (var2Lifetime3 == 0) {
             return;
           }
-          stackIn_69_0 = (param0) && (li.c(8));
-          de.a(stackIn_69_0, -126);
+          stackIn_69_0 = (param0) && (PasswordFieldPainter.c(8));
+          LoginMethod.a(stackIn_69_0, -126);
           return;
         }
         if (!CombatWorld.field_G) {
           var2Lifetime1 = 0;
           stackIn_34_0 = -94;
-          stackIn_35_1 = (param0) && (li.c(8)) && (var2Lifetime1 == 0);
-          lk.$cfr$intArgs$a$7ffe4b125357(stackIn_34_0, stackIn_35_1);
+          stackIn_35_1 = (param0) && (PasswordFieldPainter.c(8)) && (var2Lifetime1 == 0);
+          ValidationIndicator.$cfr$intArgs$a$7ffe4b125357(stackIn_34_0, stackIn_35_1);
           if (var2Lifetime1 == 0) {
             return;
           }
           if (!param0) {
-            de.a(false, -126);
+            LoginMethod.a(false, -126);
           } else {
-            if (!li.c(8)) {
-              de.a(false, -126);
+            if (!PasswordFieldPainter.c(8)) {
+              LoginMethod.a(false, -126);
             } else {
-              de.a(true, -126);
+              LoginMethod.a(true, -126);
             }
           }
           return;
@@ -117,11 +117,11 @@ final class qf {
         stackIn_17_0 = (!jn.field_g) ? 0 : 1;
         var2Lifetime2 = stackIn_17_0;
         stackIn_21_0 = -94;
-        stackIn_22_1 = (param0) && (li.c(8)) && (var2Lifetime2 == 0);
-        lk.$cfr$intArgs$a$7ffe4b125357(stackIn_21_0, stackIn_22_1);
+        stackIn_22_1 = (param0) && (PasswordFieldPainter.c(8)) && (var2Lifetime2 == 0);
+        ValidationIndicator.$cfr$intArgs$a$7ffe4b125357(stackIn_21_0, stackIn_22_1);
         if (var2Lifetime2 != 0) {
-          stackIn_28_0 = (param0) && (li.c(8));
-          de.a(stackIn_28_0, -126);
+          stackIn_28_0 = (param0) && (PasswordFieldPainter.c(8));
+          LoginMethod.a(stackIn_28_0, -126);
         }
     }
 
@@ -132,18 +132,18 @@ final class qf {
         int var7;
         int var6Lifetime1;
         int var7Lifetime1;
-        pd.field_S[kc.field_z] = param1;
-        un.field_j[kc.field_z] = kc.field_z;
-        ok.field_d[kc.field_z] = param5;
-        if (nj.field_S > param5) {
-          ti.field_w = param5;
+        AccountChoicePanel.field_S[DelayedServerPacket.field_z] = param1;
+        un.field_j[DelayedServerPacket.field_z] = DelayedServerPacket.field_z;
+        ok.field_d[DelayedServerPacket.field_z] = param5;
+        if (AccountTermsPanel.field_S > param5) {
+          ImageProducerRasterBuffer.field_w = param5;
         }
-        if (param5 > k.field_Lb) {
-          mj.field_cc = param5;
+        if (param5 > AccountRequestDialog.field_Lb) {
+          TabbedPanel.field_cc = param5;
         }
-        jm.field_r[kc.field_z] = param2;
-        ne.field_G[kc.field_z] = param0;
-        Sentinel.field_T[kc.field_z] = param4;
+        jm.field_r[DelayedServerPacket.field_z] = param2;
+        ne.field_G[DelayedServerPacket.field_z] = param0;
+        Sentinel.field_T[DelayedServerPacket.field_z] = param4;
         if (param3 > 36) {
           var6 = param4 + param0 + param2;
           if (var6 != 0) {
@@ -152,17 +152,17 @@ final class qf {
             stackIn_23_0 = 0;
           }
           var7 = stackIn_23_0;
-          eb.field_u[kc.field_z] = var7;
-          if (var7 < ti.field_w) {
-            ti.field_w = var7;
+          eb.field_u[DelayedServerPacket.field_z] = var7;
+          if (var7 < ImageProducerRasterBuffer.field_w) {
+            ImageProducerRasterBuffer.field_w = var7;
           }
-          if (var7 > mj.field_cc) {
-            mj.field_cc = var7;
+          if (var7 > TabbedPanel.field_cc) {
+            TabbedPanel.field_cc = var7;
           }
-          kc.field_z = kc.field_z + 1;
+          DelayedServerPacket.field_z = DelayedServerPacket.field_z + 1;
           return;
         }
-        field_e = (ol) null;
+        field_e = (QuickChatHelpDialog) null;
         var6Lifetime1 = param4 + param0 + param2;
         if (var6Lifetime1 != 0) {
           stackIn_10_0 = param2 * 1000 / var6Lifetime1;
@@ -170,25 +170,25 @@ final class qf {
           stackIn_10_0 = 0;
         }
         var7Lifetime1 = stackIn_10_0;
-        eb.field_u[kc.field_z] = var7Lifetime1;
-        if (var7Lifetime1 < ti.field_w) {
-          ti.field_w = var7Lifetime1;
+        eb.field_u[DelayedServerPacket.field_z] = var7Lifetime1;
+        if (var7Lifetime1 < ImageProducerRasterBuffer.field_w) {
+          ImageProducerRasterBuffer.field_w = var7Lifetime1;
         }
-        if (var7Lifetime1 > mj.field_cc) {
-          mj.field_cc = var7Lifetime1;
+        if (var7Lifetime1 > TabbedPanel.field_cc) {
+          TabbedPanel.field_cc = var7Lifetime1;
         }
-        kc.field_z = kc.field_z + 1;
+        DelayedServerPacket.field_z = DelayedServerPacket.field_z + 1;
     }
 
-    final static he a(int param0, int param1, java.awt.Component param2, byte param3) {
+    final static RasterBuffer a(int param0, int param1, java.awt.Component param2, byte param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          he var5 = null;
-          ti var5_ref = null;
-          he stackIn_3_0 = null;
-          ti stackIn_5_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -198,18 +198,18 @@ final class qf {
               field_g = (String) null;
             }
             try {
-              var4 = Class.forName("kn");
-              var5 = (he) (var4.newInstance());
-              var5.a(param1, (byte) -87, param2, param0);
+              var4 = Class.forName("BufferedImageRasterBuffer");
+              var5 = (RasterBuffer) (var4.newInstance());
+              var5.initialize(param1, (byte) -87, param2, param0);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new ti();
-              ((he) ((Object) var5_ref)).a(param1, (byte) -78, param2, param0);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).initialize(param1, (byte) -78, param2, param0);
               stackIn_5_0 = var5_ref;
-              return (he) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

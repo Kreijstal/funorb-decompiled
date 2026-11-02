@@ -7,15 +7,15 @@ final class vd {
     static boolean[] field_g;
     static SceneWidget field_d;
     static String[] field_e;
-    static kg field_a;
+    static ScrollContainer field_a;
     static int field_h;
     static java.awt.Frame field_c;
 
-    final static fh a(ResourceArchive param0, String param1, ResourceArchive param2, int param3, String param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, String param1, ResourceArchive param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        fh stackIn_3_0 = null;
+        BinaryBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -32,7 +32,7 @@ final class vd {
             vd.a((byte) 19);
           }
           var6 = param2.getFileId(var5_int, -32759, param4);
-          stackIn_3_0 = dh.a(var5_int, var6, param2, (byte) 126, param0);
+          stackIn_3_0 = SceneWidgetNode.a(var5_int, var6, param2, (byte) 126, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,19 +77,19 @@ final class vd {
             bd.field_c = bd.field_c - 1;
             if (SentinelCommand.field_t <= 0) {
               if (0 < bd.field_c) {
-                vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
+                GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
               }
               if (0 < fj.field_f) {
-                vb.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
+                GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
               }
             } else {
               bh.a(0);
               if (0 < bd.field_c) {
-                vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
+                GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
               }
               decompiledFrameRemainder0 = !(0 >= fj.field_f);
               if (decompiledFrameRemainder0) {
-                vb.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
+                GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
               }
             }
             if (decompiledFrameRemainder0) {
@@ -105,18 +105,18 @@ final class vd {
             if (SentinelCommand.field_t > 0) {
               bh.a(0);
               if (0 < bd.field_c) {
-                vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
+                GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
               }
               if (0 < fj.field_f) {
-                vb.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
+                GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
               }
             } else {
               if (0 < bd.field_c) {
-                vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
+                GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
               }
               decompiledFrameRemainder0 = !(0 >= fj.field_f);
               if (decompiledFrameRemainder0) {
-                vb.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
+                GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
               }
             }
             if (decompiledFrameRemainder0) {
@@ -132,10 +132,10 @@ final class vd {
             bh.a(0);
           }
           if (0 < bd.field_c) {
-            vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
+            GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
           }
           if (0 < fj.field_f) {
-            vb.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
+            GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
           }
         }
         if (param0 == 63) {

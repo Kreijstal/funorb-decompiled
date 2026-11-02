@@ -6,7 +6,7 @@ final class ue {
     static String field_a;
     static int[][] field_c;
     static boolean field_b;
-    static tg field_e;
+    static MusicTrack field_e;
     static String field_d;
     static SceneWidget field_f;
 
@@ -18,25 +18,25 @@ final class ue {
         ne.field_y.writeByte((byte) 121, param0);
         ne.field_y.writeByte((byte) 109, param2);
         ne.field_y.writeShort(param1, 59);
-        ne.field_y.a(qe.field_d, jd.field_ib, -10048);
+        ne.field_y.a(qe.field_d, AccountNoticeDialog.field_ib, -10048);
         mm.field_g.writeCipheredOpcode(18, (byte) -117);
         int fieldTemp$0 = mm.field_g.position + 1;
         mm.field_g.position = mm.field_g.position + 1;
         int var4 = fieldTemp$0;
         mm.field_g.writeBytes(ne.field_y.position, (byte) -122, 0, ne.field_y.payload);
-        mm.field_g.b((byte) 89, -var4 + mm.field_g.position);
+        mm.field_g.backpatchByteLength((byte) 89, -var4 + mm.field_g.position);
     }
 
     final static int a(byte param0) {
         if (param0 <= 21) {
           field_b = true;
-          return ej.field_B;
+          return MusicPatchPcmStream.field_B;
         }
-        return ej.field_B;
+        return MusicPatchPcmStream.field_B;
     }
 
     final static void a(byte param0, boolean param1, int param2, int param3) {
-        nn.a(-1604006872, param1, param3, param2);
+        FullscreenFocusCanvas.a(-1604006872, param1, param3, param2);
         if (param0 != 38) {
           CharSequence[] var5 = (CharSequence[]) null;
           ue.a((CharSequence[]) null, -124);
@@ -77,7 +77,7 @@ final class ue {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = bf.a(param0.length, 0, (byte) 50, param0);
+            stackIn_4_0 = LoginDialog.a(param0.length, 0, (byte) 50, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

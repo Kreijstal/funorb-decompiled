@@ -2,26 +2,26 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class re extends ha {
-    private jf field_fb;
+    private EditableTextWidget field_fb;
     static String field_hb;
     static String field_ab;
     static String field_W;
-    private jf field_gb;
+    private EditableTextWidget field_gb;
     static BitmapFont field_ib;
     private boolean field_Y;
     static int field_eb;
     static String field_X;
     static int[] field_bb;
-    private jf field_db;
+    private EditableTextWidget field_db;
     static int field_Z;
     static String field_cb;
 
-    private final void a(int param0, lh param1, int param2, String param3, int param4) {
+    private final void a(int param0, UiComponent param1, int param2, String param3, int param4) {
         try {
           if (param0 != 15853) {
             this.h((byte) 24);
           }
-          rc.field_m.a(param3, param2 + param1.field_o + (param1.field_x >> 1), param4 - (-param1.field_z + 5), 16777215, -1);
+          SectorCacheStore.field_m.drawCentered(param3, param2 + param1.field_o + (param1.field_x >> 1), param4 - (-param1.field_z + 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "re.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -51,8 +51,8 @@ final class re extends ha {
         this.field_db.a(90 + var6, (byte) -110, 0, 40, param4);
     }
 
-    final String e(int param0) {
-        String var2 = this.field_gb.e(param0 ^ param0);
+    final String getTooltip(int param0) {
+        String var2 = this.field_gb.getTooltip(param0 ^ param0);
         if (var2 != null) {
           return var2;
         }
@@ -78,7 +78,7 @@ final class re extends ha {
         field_ib = null;
     }
 
-    re(qk param0, boolean param1, int param2, int param3, int param4, int param5) {
+    re(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.a(param2, (byte) -101, param3, param4, param5);
@@ -87,11 +87,11 @@ final class re extends ha {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void drawLayer(int param0, byte param1, int param2, int param3) {
         if (param1 >= -99) {
           return;
         }
-        super.a(param0, (byte) -116, param2, param3);
+        super.drawLayer(param0, (byte) -116, param2, param3);
         if (param3 != 0) {
           return;
         }
@@ -109,7 +109,7 @@ final class re extends ha {
         Throwable decompiledCaughtException = null;
         if (param0 != 14879) {
           var3 = (String) null;
-          this.a(-54, (lh) null, -29, (String) null, -63);
+          this.a(-54, (UiComponent) null, -29, (String) null, -63);
         }
         try {
           stackIn_3_0 = -1 + Integer.parseInt(this.field_gb.field_y);
@@ -150,7 +150,7 @@ final class re extends ha {
           try {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
-              param0.getAppletContext().showDocument(ge.a(param1 - 9268, var2, param0), "_top");
+              param0.getAppletContext().showDocument(DirectByteStorage.a(param1 - 9268, var2, param0), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;
@@ -202,7 +202,7 @@ final class re extends ha {
         if (param0 == -7034) {
           return false;
         }
-        this.a(47, (byte) 89, 117, 7);
+        this.drawLayer(47, (byte) 89, 117, 7);
         return false;
     }
 
@@ -223,24 +223,24 @@ final class re extends ha {
         }
     }
 
-    private re(qk param0, boolean param1) {
-        super(0, 0, 0, 0, (qk) null);
+    private re(WidgetPainter param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
-          this.field_fb = (jf) ((Object) new bc("", (tn) null, 2));
-          this.field_gb = (jf) ((Object) new bc("", (tn) null, 2));
-          this.field_db = (jf) ((Object) new bc("", (tn) null, 4));
+          this.field_fb = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (UiListener) null, 2));
+          this.field_gb = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (UiListener) null, 2));
+          this.field_db = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (UiListener) null, 4));
           this.field_db.field_p = param0;
           this.field_gb.field_p = param0;
           this.field_fb.field_p = param0;
           this.field_Y = param1 ? true : false;
           if (!this.field_Y) {
-            this.a(this.field_fb, -102);
-            this.a(this.field_gb, -122);
+            this.addChild(this.field_fb, -102);
+            this.addChild(this.field_gb, -122);
           } else {
-            this.a(this.field_gb, -98);
-            this.a(this.field_fb, -97);
+            this.addChild(this.field_gb, -98);
+            this.addChild(this.field_fb, -97);
           }
-          this.a(this.field_db, -114);
+          this.addChild(this.field_db, -114);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -252,9 +252,9 @@ final class re extends ha {
           return;
         }
         try {
-          this.field_fb.field_A = (tn) ((Object) param1);
-          this.field_gb.field_A = (tn) ((Object) param1);
-          this.field_db.field_A = (tn) ((Object) param1);
+          this.field_fb.field_A = (UiListener) ((Object) param1);
+          this.field_gb.field_A = (UiListener) ((Object) param1);
+          this.field_db.field_A = (UiListener) ((Object) param1);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

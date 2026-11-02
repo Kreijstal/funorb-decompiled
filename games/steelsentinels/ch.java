@@ -3,27 +3,27 @@
  */
 import java.util.*;
 
-abstract class ch extends lh implements lm {
+abstract class ch extends UiComponent implements UiContainerMarker {
     static boolean[] field_G;
     static int field_N;
     static String field_K;
     static String field_P;
     static String field_M;
-    static k field_O;
+    static AccountRequestDialog field_O;
     static int field_L;
     static String field_H;
     static String field_I;
-    lh[] field_J;
+    UiComponent[] field_J;
 
-    final boolean a(int param0, int param1, char param2, lh param3) {
-        lh[] var5 = null;
+    final boolean onFocusedKey(int param0, int param1, char param2, UiComponent param3) {
+        UiComponent[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
         int var6 = 0;
-        lh var7 = null;
+        UiComponent var7 = null;
         int var8 = 0;
-        lh var9 = null;
-        lh[] var10 = null;
+        UiComponent var9 = null;
+        UiComponent[] var10 = null;
         boolean stackIn_20_0 = false;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -35,8 +35,8 @@ abstract class ch extends lh implements lm {
             return false;
           }
           if (param0 != 30373) {
-            var9 = (lh) null;
-            this.a((byte) -45, 101, 54, 104, (lh) null, -22);
+            var9 = (UiComponent) null;
+            this.onPointerReleased((byte) -45, 101, 54, 104, (UiComponent) null, -22);
           }
           var10 = this.field_J;
           var5 = var10;
@@ -44,8 +44,8 @@ abstract class ch extends lh implements lm {
           while (var10.length > var6) {
             var7 = var10[var6];
             if (var7 != null &&
-              var7.d(0) &&
-              var7.a(30373, param1, param2, param3)) {
+              var7.isFocused(0) &&
+              var7.onFocusedKey(30373, param1, param2, param3)) {
               return true;
             }
             var6++;
@@ -78,7 +78,7 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    private final boolean b(lh param0, byte param1) {
+    private final boolean b(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -105,14 +105,14 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    private final boolean a(byte param0, lh param1, int param2) {
+    private final boolean a(byte param0, UiComponent param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        lh var5 = null;
-        lh var6 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         Object stackIn_9_0 = null;
-        lh stackIn_9_1 = null;
+        UiComponent stackIn_9_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -132,7 +132,7 @@ abstract class ch extends lh implements lm {
               stackIn_9_0 = null;
               stackIn_9_1 = var5;
               scanLoop1: while (stackIn_9_0 != stackIn_9_1 &&
-                var5.d(0)) {
+                var5.isFocused(0)) {
                 var4_int = var4_int + param2;
                 while (this.field_J.length > var4_int) {
                   var6 = this.field_J[var4_int];
@@ -143,7 +143,7 @@ abstract class ch extends lh implements lm {
                   }
                   if ((stackIn_9_0 != stackIn_9_1 ||
                     var7 != 0) &&
-                    var6.a(1, param1)) {
+                    var6.focusNext(1, param1)) {
                     return true;
                   }
                   var4_int = var4_int + param2;
@@ -174,7 +174,7 @@ abstract class ch extends lh implements lm {
 
     final StringBuilder a(Hashtable param0, StringBuilder param1, byte param2, int param3) {
         RuntimeException var5 = null;
-        lh var6 = null;
+        UiComponent var6 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -188,8 +188,8 @@ abstract class ch extends lh implements lm {
             this.a(0, param3, param0, param1);
           }
           if (param2 >= -104) {
-            var6 = (lh) null;
-            this.a(-37, -54, (lh) null, -3);
+            var6 = (UiComponent) null;
+            this.updateHover(-37, -54, (UiComponent) null, -3);
           }
           stackIn_6_0 = (StringBuilder) (param1);
           return stackIn_6_0;
@@ -213,14 +213,14 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    private final boolean b(byte param0, lh param1, int param2) {
+    private final boolean b(byte param0, UiComponent param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        lh var5 = null;
-        lh var6 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         Object stackIn_11_0 = null;
-        lh stackIn_11_1 = null;
+        UiComponent stackIn_11_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -240,7 +240,7 @@ abstract class ch extends lh implements lm {
               stackIn_11_0 = null;
               stackIn_11_1 = var5;
               scanLoop1: while (stackIn_11_0 != stackIn_11_1 &&
-                var5.d(0)) {
+                var5.isFocused(0)) {
                 var4_int = var4_int - param2;
                 while (0 <= var4_int) {
                   var6 = this.field_J[var4_int];
@@ -251,7 +251,7 @@ abstract class ch extends lh implements lm {
                   }
                   if ((stackIn_11_0 != stackIn_11_1 ||
                     var7 != 0) &&
-                    var6.a(1, param1)) {
+                    var6.focusNext(1, param1)) {
                     return true;
                   }
                   var4_int = var4_int - param2;
@@ -285,12 +285,12 @@ abstract class ch extends lh implements lm {
         StringBuilder discarded$4 = null;
         StringBuilder discarded$5 = null;
         RuntimeException runtimeException = null;
-        lh[] var5 = null;
+        UiComponent[] var5 = null;
         int var6 = 0;
-        lh var7 = null;
+        UiComponent var7 = null;
         int var8 = 0;
         int var9 = 0;
-        lh[] var10 = null;
+        UiComponent[] var10 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -348,14 +348,14 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    void a(int param0, byte param1, int param2, int param3) {
+    void drawLayer(int param0, byte param1, int param2, int param3) {
         int var5;
-        lh var6;
+        UiComponent var6;
         int var7;
         var7 = SteelSentinels.obfuscationControl;
         if (0 == param3 &&
           this.field_p != null) {
-          this.field_p.a(param2, (lh) (this), (byte) -30, true, param0);
+          this.field_p.a(param2, (UiComponent) (this), (byte) -30, true, param0);
         }
         boolean decompiledFrameCompleted0 = true;
         if (null != this.field_J) {
@@ -367,7 +367,7 @@ abstract class ch extends lh implements lm {
               break;
             }
             if (var6 != null) {
-              var6.a(param0 + this.field_z, (byte) -126, param2 + this.field_o, param3);
+              var6.drawLayer(param0 + this.field_z, (byte) -126, param2 + this.field_o, param3);
             }
             var5--;
           }
@@ -450,7 +450,7 @@ abstract class ch extends lh implements lm {
           boolean decompiledSharedTail0 = (null != var44.field_P &&
             (1 < var44.field_K));
           if (!decompiledSharedTail0) {
-            sn.a(0);
+            BoundedRandomAccessFile.a(0);
             decompiledSharedTail0 = (var40 != 0);
           }
           if (decompiledSharedTail0) {
@@ -467,7 +467,7 @@ abstract class ch extends lh implements lm {
           var64 = new int[param5.field_u];
           var61 = tc.field_A;
           var62 = hm.field_c;
-          var63 = pi.field_e;
+          var63 = DelegatingCanvas.field_e;
           var13 = 0;
           while (param5.field_u > var13) {
             var14 = var61[var13] * param6 + var62[var13] * param1 + param0 * var63[var13] >> 8;
@@ -477,7 +477,7 @@ abstract class ch extends lh implements lm {
               if (stackIn_26_0 <= stackIn_26_1) {
                 return;
               }
-              var14 = um.field_bb[var13];
+              var14 = MarkerSlider.field_bb[var13];
               var15 = param5.field_G[var14];
               var16 = param5.field_j[var14];
               var17 = param5.field_x[var14];
@@ -520,7 +520,7 @@ abstract class ch extends lh implements lm {
             if (stackIn_26_0Lifetime1 <= stackIn_26_1Lifetime1) {
               return;
             }
-            var14Lifetime1 = um.field_bb[var13Lifetime1];
+            var14Lifetime1 = MarkerSlider.field_bb[var13Lifetime1];
             var15Lifetime1 = param5.field_G[var14Lifetime1];
             var16Lifetime1 = param5.field_j[var14Lifetime1];
             var17Lifetime1 = param5.field_x[var14Lifetime1];
@@ -545,12 +545,12 @@ abstract class ch extends lh implements lm {
               stackIn_37_0 = -1;
             }
             var20 = stackIn_37_0;
-            if (pm.field_W != null &&
+            if (LoginForm.field_W != null &&
               null != param5.field_e &&
               param5.field_e.length > var14Lifetime1 &&
               param5.field_e[var14Lifetime1] != -1 &&
-              param5.field_e[var14Lifetime1] < pm.field_W.length) {
-              stackIn_44_0 = pm.field_W[param5.field_e[var14Lifetime1]];
+              param5.field_e[var14Lifetime1] < LoginForm.field_W.length) {
+              stackIn_44_0 = LoginForm.field_W[param5.field_e[var14Lifetime1]];
             } else {
               stackIn_44_0 = null;
             }
@@ -583,7 +583,7 @@ abstract class ch extends lh implements lm {
               var37 = var37 + var31 * 65793;
               var38 = var38 + 65793 * var32;
               var39 = var39 + 65793 * var33;
-              wh.a(var37 >> 16, (var38 & 65525) >> 8, var39 >> 16, var39 >> 8 & 255, var26, var22, 255 & var37 >> 8, 255 & var38, 255 & var37, var27, 255 & var39, var24, 22, var23, var38 >> 16, var25);
+              DualNodeDequeIterator.a(var37 >> 16, (var38 & 65525) >> 8, var39 >> 16, var39 >> 8 & 255, var26, var22, 255 & var37 >> 8, 255 & var38, 255 & var37, var27, 255 & var39, var24, 22, var23, var38 >> 16, var25);
             } else {
               var28 = var54[var18];
               var29 = var64[var18];
@@ -597,7 +597,7 @@ abstract class ch extends lh implements lm {
               var32 = var30 & 65280;
               var33 = 1812004608 & var28 * var32 >>> 8 | (var28 * var31 & -16711831) >>> 8;
               var33 = var33 + var29 * 65793;
-              vl.a(var27, var25, var23, var24, var26, var33 >> 1 & 8355711, false, var22);
+              TextHotspotRegion.a(var27, var25, var23, var24, var26, var33 >> 1 & 8355711, false, var22);
             }
             var13Lifetime1++;
           }
@@ -615,13 +615,13 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    final String e(int param0) {
-        lh[] var2 = null;
+    final String getTooltip(int param0) {
+        UiComponent[] var2 = null;
         int var3 = 0;
-        lh var4 = null;
+        UiComponent var4 = null;
         String var5 = null;
         int var6 = 0;
-        lh[] var7 = null;
+        UiComponent[] var7 = null;
         Object stackIn_7_0 = null;
         var6 = SteelSentinels.obfuscationControl;
         if (this.field_J == null) {
@@ -641,7 +641,7 @@ abstract class ch extends lh implements lm {
           }
           if (stackIn_7_0 != var4 ||
             var6 != 0) {
-            var5 = var4.e(0);
+            var5 = var4.getTooltip(0);
             if (var5 != null) {
               return var5;
             }
@@ -652,7 +652,7 @@ abstract class ch extends lh implements lm {
 
     abstract void f(int param0);
 
-    private final boolean a(lh param0, byte param1) {
+    private final boolean a(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -661,7 +661,7 @@ abstract class ch extends lh implements lm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -70) {
-            field_O = (k) null;
+            field_O = (AccountRequestDialog) null;
           }
           stackIn_3_0 = this.a((byte) -68, param0, 1);
           return stackIn_3_0;
@@ -692,14 +692,14 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, lh param4, int param5) {
+    final void onPointerReleased(byte param0, int param1, int param2, int param3, UiComponent param4, int param5) {
         RuntimeException runtimeException = null;
-        lh[] var7 = null;
+        UiComponent[] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        lh var10 = null;
+        UiComponent var10 = null;
         int var11 = 0;
-        lh[] var12 = null;
+        UiComponent[] var12 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -719,7 +719,7 @@ abstract class ch extends lh implements lm {
               return;
             }
             if (var10 != null) {
-              var10.a((byte) 127, param1, this.field_z + param2, param3 + this.field_o, param4, param5);
+              var10.onPointerReleased((byte) 127, param1, this.field_z + param2, param3 + this.field_o, param4, param5);
             }
             var9++;
           }
@@ -738,12 +738,12 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    final void d(byte param0) {
-        lh[] var2;
+    final void refreshChildLayouts(byte param0) {
+        UiComponent[] var2;
         int var3;
-        lh var4;
+        UiComponent var4;
         int var5;
-        lh[] var6;
+        UiComponent[] var6;
         var5 = SteelSentinels.obfuscationControl;
         var6 = this.field_J;
         var2 = var6;
@@ -754,7 +754,7 @@ abstract class ch extends lh implements lm {
             return;
           }
           if (var4 != null) {
-            var4.d((byte) -45);
+            var4.refreshChildLayouts((byte) -45);
           }
           var3++;
         }
@@ -764,15 +764,15 @@ abstract class ch extends lh implements lm {
         return;
     }
 
-    final boolean d(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != 0) {
           field_I = (String) null;
         }
         return null != this.a(true) ? true : false;
     }
 
-    ch(int param0, int param1, int param2, int param3, qk param4) {
-        super(param0, param1, param2, param3, param4, (tn) null);
+    ch(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+        super(param0, param1, param2, param3, param4, (UiListener) null);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -806,13 +806,13 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    final boolean a(byte param0, int param1, int param2, int param3, lh param4, int param5, int param6) {
-        lh[] var8 = null;
+    final boolean a(byte param0, int param1, int param2, int param3, UiComponent param4, int param5, int param6) {
+        UiComponent[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
-        lh var10 = null;
+        UiComponent var10 = null;
         int var11 = 0;
-        lh[] var12 = null;
+        UiComponent[] var12 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -831,7 +831,7 @@ abstract class ch extends lh implements lm {
           while (var9 < var12.length) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.d(0) &&
+              var10.isFocused(0) &&
               var10.a((byte) -118, param1, param2, param3, param4, param5, param6)) {
               return true;
             }
@@ -856,20 +856,20 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    void a(int param0, int param1, lh param2, int param3) {
+    void updateHover(int param0, int param1, UiComponent param2, int param3) {
         RuntimeException runtimeException = null;
-        lh[] var5 = null;
+        UiComponent[] var5 = null;
         int var6 = 0;
-        lh var7 = null;
+        UiComponent var7 = null;
         int var8 = 0;
-        lh[] var9 = null;
+        UiComponent[] var9 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         var8 = SteelSentinels.obfuscationControl;
         try {
-          super.a(param0, 95, param2, param3);
+          super.updateHover(param0, 95, param2, param3);
           if (param1 <= 56) {
             return;
           }
@@ -885,7 +885,7 @@ abstract class ch extends lh implements lm {
               return;
             }
             if (var7 != null) {
-              var7.a(param0 + this.field_o, 92, param2, param3 + this.field_z);
+              var7.updateHover(param0 + this.field_o, 92, param2, param3 + this.field_z);
             }
             var6++;
           }
@@ -904,15 +904,15 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    final boolean a(int param0, lh param1) {
+    final boolean focusNext(int param0, UiComponent param1) {
         boolean discarded$1 = false;
-        lh[] var3 = null;
+        UiComponent[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        lh var5 = null;
+        UiComponent var5 = null;
         int var6 = 0;
-        lh var7 = null;
-        lh[] var8 = null;
+        UiComponent var7 = null;
+        UiComponent[] var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -920,8 +920,8 @@ abstract class ch extends lh implements lm {
         var6 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != 1) {
-            var7 = (lh) null;
-            discarded$1 = this.a((lh) null, (byte) 117);
+            var7 = (UiComponent) null;
+            discarded$1 = this.a((UiComponent) null, (byte) 117);
           }
           var8 = this.field_J;
           var3 = var8;
@@ -929,7 +929,7 @@ abstract class ch extends lh implements lm {
           while (var8.length > var4) {
             var5 = var8[var4];
             if (var5 != null &&
-              var5.a(1, param1)) {
+              var5.focusNext(1, param1)) {
               return true;
             }
             var4++;
@@ -953,13 +953,13 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    private final lh a(boolean param0) {
-        lh var4 = null;
+    private final UiComponent a(boolean param0) {
+        UiComponent var4 = null;
         int var5 = SteelSentinels.obfuscationControl;
         if (null == this.field_J) {
           return null;
         }
-        lh[] var2 = this.field_J;
+        UiComponent[] var2 = this.field_J;
         int var3 = 0;
         if (!param0) {
           field_H = (String) null;
@@ -970,7 +970,7 @@ abstract class ch extends lh implements lm {
           }
           var4 = var2[var3];
           if (var4 != null &&
-            var4.d(0)) {
+            var4.isFocused(0)) {
             return var4;
           }
           var3++;
@@ -978,13 +978,13 @@ abstract class ch extends lh implements lm {
         return null;
     }
 
-    final boolean a(int param0, lh param1, int param2, int param3, int param4, boolean param5, int param6) {
-        lh[] var8 = null;
+    final boolean handlePointerPress(int param0, UiComponent param1, int param2, int param3, int param4, boolean param5, int param6) {
+        UiComponent[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
-        lh var10 = null;
+        UiComponent var10 = null;
         int var11 = 0;
-        lh[] var12 = null;
+        UiComponent[] var12 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -1002,7 +1002,7 @@ abstract class ch extends lh implements lm {
             var10 = var12[var9];
             if (var11 == 0) {
               if (var10 != null &&
-                var10.a(param0, param1, this.field_o + param2, param3, this.field_z + param4, true, param6)) {
+                var10.handlePointerPress(param0, param1, this.field_o + param2, param3, this.field_z + param4, true, param6)) {
                 return true;
               }
               var9++;
@@ -1034,7 +1034,7 @@ abstract class ch extends lh implements lm {
         super.a(param0, (byte) -88, param2, param3, param4);
         this.f(140);
         if (param1 > -71) {
-          field_O = (k) null;
+          field_O = (AccountRequestDialog) null;
         }
     }
 
@@ -1180,9 +1180,9 @@ abstract class ch extends lh implements lm {
 
     final int b(boolean param0) {
         int var2;
-        lh[] var3;
+        UiComponent[] var3;
         int var4;
-        lh var5;
+        UiComponent var5;
         int var6;
         int var7;
         var7 = SteelSentinels.obfuscationControl;

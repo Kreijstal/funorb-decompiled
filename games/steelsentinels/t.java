@@ -84,7 +84,7 @@ final class t {
                 t.a(true, (java.applet.Applet) null);
               }
               var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-              param1.getAppletContext().showDocument(ge.a(0, var2, param1), "_top");
+              param1.getAppletContext().showDocument(DirectByteStorage.a(0, var2, param1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

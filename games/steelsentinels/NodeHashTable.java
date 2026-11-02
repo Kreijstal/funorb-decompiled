@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NodeHashTable {
-    static lb field_j;
+    static VerticalScrollbar field_j;
     static int field_e;
     static String[] field_i;
     private IntrusiveNode[] buckets;
@@ -44,12 +44,12 @@ final class NodeHashTable {
     }
 
     final static void a(int param0) {
-        ca.field_r = null;
-        dl.field_L = (byte[][]) null;
+        MusicPatch.field_r = null;
+        UiContainer.field_L = (byte[][]) null;
         rl.field_a = null;
         ba.field_d = null;
-        oa.field_M = null;
-        le.field_L = null;
+        TextButton.field_M = null;
+        StrongCacheEntry.field_L = null;
         if (param0 != 9324) {
           field_i = (String[]) null;
           return;

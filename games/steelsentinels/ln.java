@@ -150,12 +150,12 @@ final class ln {
               var11 = var13;
               var6 = var11;
               if (1 != var3) {
-                var7 = wc.field_e;
+                var7 = MouseInputHandler.field_e;
                 synchronized (var7) {
-                  wc.field_e.a(var9, var13, true);
+                  MouseInputHandler.field_e.a(var9, var13, true);
                 }
               } else {
-                oi.a(var13, var5, encodedContainer, var4, 9);
+                Bzip2Decoder.decompressInto(var13, var5, encodedContainer, var4, 9);
               }
               stackIn_23_0 = var6;
               return stackIn_23_0;
@@ -195,7 +195,7 @@ final class ln {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
           }
-          var3 = jd.a(param0, param1, 88);
+          var3 = AccountNoticeDialog.a(param0, param1, 88);
           if (var3 != null) {
             stackIn_6_0 = var3;
             return stackIn_6_0;
@@ -252,7 +252,7 @@ final class ln {
               field_b = (String) null;
             }
             if (null != hk.field_oc) {
-              hk.field_oc.a(0);
+              hk.field_oc.shutdown(0);
             }
             if (null != si.field_o) {
               try {

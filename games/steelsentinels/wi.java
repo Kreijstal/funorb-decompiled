@@ -126,7 +126,7 @@ abstract class wi extends DualNode {
                         stackIn_36_0Lifetime1 = var16 << 4;
                         stackIn_36_1Lifetime1 = var17;
                         var18 = stackIn_36_0Lifetime1 + stackIn_36_1Lifetime1;
-                        um.field_bb[var18] = var8;
+                        MarkerSlider.field_bb[var18] = var8;
                         IntrusiveNode.field_c[var16] = var17 + 1;
                         if (param1.field_K > 0 &&
                           null != param1.field_P) {
@@ -177,16 +177,16 @@ abstract class wi extends DualNode {
         }
     }
 
-    final static ah a(String param0, byte param1) {
+    final static SocialListEntry a(String param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
-        ah var3 = null;
+        SocialListEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         Object stackIn_9_0 = null;
         Object stackIn_12_0 = null;
-        ah stackIn_15_0 = null;
-        ah stackIn_20_0 = null;
+        SocialListEntry stackIn_15_0 = null;
+        SocialListEntry stackIn_20_0 = null;
         Object stackIn_23_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -194,36 +194,36 @@ abstract class wi extends DualNode {
         RuntimeException decompiledCaughtException = null;
         var5 = SteelSentinels.obfuscationControl;
         try {
-          if (null != pi.field_a &&
+          if (null != DelegatingCanvas.field_a &&
             param0 != null &&
             param0.length() != 0) {
-            var2 = ui.a(1, (CharSequence) ((Object) param0));
+            var2 = AlphaContainer.a(1, (CharSequence) ((Object) param0));
             if (var2 == null) {
               stackIn_12_0 = null;
-              return (ah) (stackIn_12_0);
+              return (SocialListEntry) (stackIn_12_0);
             }
             if (param1 < 112) {
-              stackIn_15_0 = (ah) null;
+              stackIn_15_0 = (SocialListEntry) null;
               return stackIn_15_0;
             }
-            var3 = (ah) (pi.field_a.a((long)var2.hashCode(), (byte) 93));
+            var3 = (SocialListEntry) (DelegatingCanvas.field_a.a((long)var2.hashCode(), (byte) 93));
             while (null != var3) {
-              var4 = ui.a(1, (CharSequence) ((Object) var3.field_dc));
+              var4 = AlphaContainer.a(1, (CharSequence) ((Object) var3.field_dc));
               if (var4.equals(var2)) {
                 stackIn_20_0 = var3;
                 return stackIn_20_0;
               }
-              var3 = (ah) (pi.field_a.c((byte) 121));
+              var3 = (SocialListEntry) (DelegatingCanvas.field_a.c((byte) 121));
               if (var5 == 0) {
                 continue;
               }
               break;
             }
             stackIn_23_0 = null;
-            return (ah) (stackIn_23_0);
+            return (SocialListEntry) (stackIn_23_0);
           }
           stackIn_9_0 = null;
-          return (ah) (stackIn_9_0);
+          return (SocialListEntry) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -241,7 +241,7 @@ abstract class wi extends DualNode {
     final static void c(byte param0) {
         try {
           sl.field_m = mm.a(95);
-          sb.field_Z = 0;
+          Checkbox.field_Z = 0;
           if (param0 > -104) {
             field_y = -62;
           }

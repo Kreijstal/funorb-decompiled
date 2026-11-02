@@ -7,22 +7,22 @@ final class nc {
     static int field_f;
     static String field_g;
     static boolean field_b;
-    static h field_e;
+    static DraggableWidget field_e;
     private int field_l;
     static String field_i;
     static int field_a;
     static String[] field_m;
     static int[] field_h;
     private int field_c;
-    private hb field_k;
-    static a field_j;
-    private q field_o;
+    private IterableDualNodeDeque field_k;
+    static MouseWheelInput field_j;
+    private IterableNodeHashTable field_o;
     static boolean field_q;
     static SceneWidget field_n;
 
     private final void a(byte param0, int param1, Object param2, long param3) {
-        bg var6 = null;
-        le var6_ref = null;
+        WeightedCacheEntry var6 = null;
+        StrongCacheEntry var6_ref = null;
         int var7 = SteelSentinels.obfuscationControl;
         try {
           if (this.field_c < param1) {
@@ -31,16 +31,16 @@ final class nc {
           this.a((byte) 117, param3);
           this.field_l = this.field_l - param1;
           while (this.field_l < 0) {
-            var6 = (bg) (this.field_k.a(12515));
+            var6 = (WeightedCacheEntry) (this.field_k.a(12515));
             this.a(var6, -17389);
           }
           if (param0 > -47) {
-            field_e = (h) null;
+            field_e = (DraggableWidget) null;
           }
-          var6_ref = new le(param2, param1);
-          this.field_o.a(var6_ref, param3, false);
+          var6_ref = new StrongCacheEntry(param2, param1);
+          this.field_o.put(var6_ref, param3, false);
           this.field_k.a((byte) 47, var6_ref);
-          ((bg) ((Object) var6_ref)).field_w = 0L;
+          ((WeightedCacheEntry) ((Object) var6_ref)).field_w = 0L;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "nc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -69,21 +69,21 @@ final class nc {
         if (param0 != 117) {
           return;
         }
-        bg var4 = (bg) (this.field_o.a(param1, (byte) -125));
+        WeightedCacheEntry var4 = (WeightedCacheEntry) (this.field_o.a(param1, (byte) -125));
         this.a(var4, param0 ^ -17306);
     }
 
     final Object a(long param0, int param1) {
         Object var9 = null;
-        le var6 = null;
-        bg var8 = (bg) (this.field_o.a(param0, (byte) -127));
-        le var6Lifetime1;
+        StrongCacheEntry var6 = null;
+        WeightedCacheEntry var8 = (WeightedCacheEntry) (this.field_o.a(param0, (byte) -127));
+        StrongCacheEntry var6Lifetime1;
         if (var8 == null) {
           return null;
         }
         if (param1 > -30) {
-          bg var7 = (bg) null;
-          this.a((bg) null, -108);
+          WeightedCacheEntry var7 = (WeightedCacheEntry) null;
+          this.a((WeightedCacheEntry) null, -108);
           var9 = var8.d((byte) 125);
           if (var9 == null) {
             var8.unlink(4);
@@ -96,10 +96,10 @@ final class nc {
             var8.field_w = 0L;
             return var9;
           }
-          var6 = new le(var9, var8.field_z);
-          this.field_o.a(var6, var8.key, false);
+          var6 = new StrongCacheEntry(var9, var8.field_z);
+          this.field_o.put(var6, var8.key, false);
           this.field_k.a((byte) 72, var6);
-          ((bg) ((Object) var6)).field_w = 0L;
+          ((WeightedCacheEntry) ((Object) var6)).field_w = 0L;
           var8.unlink(4);
           var8.unlinkDual(480);
           return var9;
@@ -116,16 +116,16 @@ final class nc {
           var8.field_w = 0L;
           return var10;
         }
-        var6Lifetime1 = new le(var10, var8.field_z);
-        this.field_o.a(var6Lifetime1, var8.key, false);
+        var6Lifetime1 = new StrongCacheEntry(var10, var8.field_z);
+        this.field_o.put(var6Lifetime1, var8.key, false);
         this.field_k.a((byte) 72, var6Lifetime1);
-        ((bg) ((Object) var6Lifetime1)).field_w = 0L;
+        ((WeightedCacheEntry) ((Object) var6Lifetime1)).field_w = 0L;
         var8.unlink(4);
         var8.unlinkDual(480);
         return var10;
     }
 
-    private final void a(bg param0, int param1) {
+    private final void a(WeightedCacheEntry param0, int param1) {
         RuntimeException var3 = null;
         java.applet.Applet var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -158,12 +158,12 @@ final class nc {
         }
     }
 
-    final static ld a(byte[] param0, int param1) {
-        ld var2 = null;
+    final static PaletteBitmapFont a(byte[] param0, int param1) {
+        PaletteBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         java.applet.Applet var3 = null;
         Object stackIn_2_0 = null;
-        ld stackIn_6_0 = null;
+        PaletteBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -171,13 +171,13 @@ final class nc {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (ld) (stackIn_2_0);
+            return (PaletteBitmapFont) (stackIn_2_0);
           }
           if (param1 != 7045) {
             var3 = (java.applet.Applet) null;
             nc.a((byte) 100, (java.applet.Applet) null);
           }
-          var2 = new ld(param0, rl.field_a, oa.field_M, le.field_L, ca.field_r, ba.field_d, dl.field_L);
+          var2 = new PaletteBitmapFont(param0, rl.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, ba.field_d, UiContainer.field_L);
           NodeHashTable.a(param1 + 2279);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -206,10 +206,10 @@ final class nc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (ch.field_O != null) {
-            ch.field_O.m(105);
+            ch.field_O.closeDialog(105);
           }
-          jd.field_kb = new pm(param0, param1, false, true, true);
-          ci.field_a.c(jd.field_kb, -22908735);
+          AccountNoticeDialog.field_kb = new LoginForm(param0, param1, false, true, true);
+          ci.field_a.transitionToContent(AccountNoticeDialog.field_kb, -22908735);
           if (param2 < -37) {
             return;
           }
@@ -248,7 +248,7 @@ final class nc {
         this(param0, param0);
     }
 
-    final static vc[] a(int param0, pn param1) {
+    final static vc[] a(int param0, SystemTaskService param1) {
         int var5 = 0;
         vc[] stackIn_4_0 = null;
         vc[] stackIn_10_0 = null;
@@ -263,7 +263,7 @@ final class nc {
         vc[] var4 = null;
         vc var6 = null;
         int var7 = 0;
-        wj var8 = null;
+        SystemTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = SteelSentinels.obfuscationControl;
@@ -274,7 +274,7 @@ final class nc {
           }
           var8 = param1.a(param0 ^ -30726);
           while (var8.field_a == 0) {
-            a.a((byte) 121, 10L);
+            MouseWheelInput.a((byte) 121, 10L);
           }
           if (var8.field_a == 2) {
             stackIn_10_0 = new vc[]{};
@@ -325,7 +325,7 @@ final class nc {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-              param1.getAppletContext().showDocument(ge.a(0, var2, param1), "_top");
+              param1.getAppletContext().showDocument(DirectByteStorage.a(0, var2, param1), "_top");
               var3 = 58 % ((-15 - param0) / 42);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -355,13 +355,13 @@ final class nc {
 
     private nc(int param0, int param1) {
         int var3;
-        this.field_k = new hb();
+        this.field_k = new IterableDualNodeDeque();
         this.field_l = param0;
         this.field_c = param0;
         var3 = 1;
         while (true) {
           if (var3 + var3 >= param0) {
-            this.field_o = new q(var3);
+            this.field_o = new IterableNodeHashTable(var3);
             return;
           }
           if (var3 < param1) {
@@ -370,13 +370,13 @@ final class nc {
           }
           break;
         }
-        this.field_o = new q(var3);
+        this.field_o = new IterableNodeHashTable(var3);
         return;
     }
 
     final static IndexedSprite a(int param0, byte param1) {
         if (param0 >= 35) {
-          return bl.field_p[param0 - 35];
+          return LinkButtonPainter.field_p[param0 - 35];
         }
         if (param1 < -93) {
           return IsaacRandom.field_d[param0];

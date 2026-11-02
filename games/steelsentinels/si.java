@@ -8,7 +8,7 @@ final class si extends da {
     static int[] field_k;
     static boolean field_y;
     private int field_z;
-    static rj field_o;
+    static BufferedRandomAccessFile field_o;
     static String field_w;
     static boolean field_p;
     private int field_B;
@@ -71,19 +71,19 @@ final class si extends da {
         SceneWidget var11 = null;
         var10 = SteelSentinels.obfuscationControl;
         try {
-          stackIn_4_0 = (1 != fg.field_Ob) ? 64 : 78;
+          stackIn_4_0 = (1 != RegistrationRequestDialog.field_Ob) ? 64 : 78;
           var3_int = stackIn_4_0;
-          if ((1008 & fg.field_Ob) != 0) {
+          if ((1008 & RegistrationRequestDialog.field_Ob) != 0) {
             var3_int = 36;
           }
-          var4 = qa.field_O;
+          var4 = Js5NetworkRequest.field_O;
           var5 = new SceneWidget(-1L, (SceneWidget) null);
           var5.field_Pb = gj.field_a;
           var5.field_Kb = 2;
           var5.a(0, param2, 18, 0, var4);
           param0.a(var5, 118);
           var6 = ResourceArchive.field_p;
-          var7 = new SceneWidget(-1L, kh.field_s, var6);
+          var7 = new SceneWidget(-1L, ThreeSliceButtonPainter.field_s, var6);
           var7.field_nb = 0;
           var7.field_L = (BitmapFont) ((Object) pl.field_U);
           if (!param1) {
@@ -99,7 +99,7 @@ final class si extends da {
           param2 = param2 + var7.field_Lb;
           for (var8 = 0; var8 < ue.field_c.length; var8++) {
             if (ue.field_c[var8] != null) {
-              var9 = ff.a(false, 1 + var8, ue.field_c[var8]);
+              var9 = ValidationHelpWidget.a(false, 1 + var8, ue.field_c[var8]);
               param2 += 2;
               var9.a(0, param2, var3_int, 0, var4);
               param2 = param2 + var3_int;
@@ -177,7 +177,7 @@ final class si extends da {
           this.field_s = true;
           var8 = this.a(param0, (byte) 118, param4, param3);
           var9 = var8;
-          var9.field_f[0] = param2 - param4.c(param0);
+          var9.field_f[0] = param2 - param4.textWidth(param0);
           var9.field_f[param0.length()] = param2;
           kk.a(var9, 110, 0, param0, param4);
         } catch (RuntimeException runtimeException) {
@@ -210,7 +210,7 @@ final class si extends da {
           var7 = this.a(param1, (byte) 117, param4, param3);
           var8 = var7;
           var7.field_f[0] = param0;
-          var8.field_f[param1.length()] = param4.c(param1) + param0;
+          var8.field_f[param1.length()] = param4.textWidth(param1) + param0;
           kk.a(var8, 95, 0, param1, param4);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "si.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -239,7 +239,7 @@ final class si extends da {
           this.field_r = 1;
           this.field_s = true;
           var8 = this.a(param1, (byte) 117, param4, param2);
-          var7 = param4.c(param1);
+          var7 = param4.textWidth(param1);
           var8.field_f[0] = param0 - (var7 >> 1);
           var8.field_f[param1.length()] = (var7 >> 1) + param0;
           kk.a(var8, param3 ^ -1385548469, 0, param1, param4);
@@ -303,9 +303,9 @@ final class si extends da {
           this.field_x = param5;
           this.field_r = param1;
           this.field_G = param0;
-          var16 = new String[param5.b(param3, param0) + param7];
+          var16 = new String[param5.wrappedLineCount(param3, param0) + param7];
           var17 = var16;
-          var10 = Math.max(1, param5.a(param3, new int[]{param0}, var17));
+          var10 = Math.max(1, param5.wrapText(param3, new int[]{param0}, var17));
           if (this.field_B == 3 &&
             1 == var10) {
             this.field_B = 1;
@@ -347,11 +347,11 @@ final class si extends da {
             var14 = new il(stackIn_34_2, stackIn_34_3, stackIn_35_4);
             var14.field_f[0] = 0;
             if (var13 != null) {
-              var14.field_f[var13.length()] = param5.c(var13);
+              var14.field_f[var13.length()] = param5.textWidth(var13);
               stackIn_38_0 = var14;
               stackIn_38_1 = param7 - 63;
               if (3 == param1) {
-                stackIn_39_2 = this.a(var13, param0, param5.c(var13), (byte) 116);
+                stackIn_39_2 = this.a(var13, param0, param5.textWidth(var13), (byte) 116);
               } else {
                 stackIn_39_2 = 0;
               }

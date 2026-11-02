@@ -32,26 +32,26 @@ final class BattleTerrain {
           }
           stackIn_7_0 = (null == ni.field_a) ? 0 : 1;
           var3_int = stackIn_7_0;
-          if (ei.field_q == 9 &&
-            vk.a(se.field_b, pa.field_h, f.field_x, dh.field_B, -21)) {
-            if (dh.field_B != 2 &&
+          if (NameAvailabilityValidator.field_q == 9 &&
+            Js5Transport.a(se.field_b, pa.field_h, SocketJs5Transport.field_x, SceneWidgetNode.field_B, -21)) {
+            if (SceneWidgetNode.field_B != 2 &&
               var3_int != 0) {
               return false;
             }
-            stackIn_20_0 = dl.a(se.field_b, pa.field_h, param0 - 119, dh.field_B, f.field_x);
+            stackIn_20_0 = UiContainer.a(se.field_b, pa.field_h, param0 - 119, SceneWidgetNode.field_B, SocketJs5Transport.field_x);
             return stackIn_20_0;
           }
-          if (ei.field_q == 10) {
+          if (NameAvailabilityValidator.field_q == 10) {
             if (var3_int != 0) {
               return false;
             }
-            pd.j(13171);
+            AccountChoicePanel.j(13171);
             return true;
           }
-          if (ei.field_q == 11 &&
+          if (NameAvailabilityValidator.field_q == 11 &&
             ob.field_v) {
             if (hk.field_ic == 2 &&
-              !qm.a((byte) -31, CachedArchiveProvider.field_t, kh.field_q)) {
+              !qm.a((byte) -31, CachedArchiveProvider.field_t, ThreeSliceButtonPainter.field_q)) {
               return false;
             }
             if (hk.field_ic != 2 &&
@@ -255,7 +255,7 @@ final class BattleTerrain {
             var4_int = 6528;
           }
           if (10 == di.field_g) {
-            var4_int = ua.field_t[ol.field_Ub + ge.field_j * 10][2];
+            var4_int = ReflectionCheck.field_t[QuickChatHelpDialog.field_Ub + DirectByteStorage.field_j * 10][2];
           }
           this.profileLength = 15;
           this.groundHeightProfile = new int[this.profileLength];
@@ -265,13 +265,13 @@ final class BattleTerrain {
           do {
             if (var6 >= 15) {
               if (this.field_l == 16) {
-                var4_int = ua.field_t[ol.field_Ub + ge.field_j * 10][2];
+                var4_int = ReflectionCheck.field_t[QuickChatHelpDialog.field_Ub + DirectByteStorage.field_j * 10][2];
               }
               SentinelCommand.field_o = 0;
-              ge.field_l = 0;
-              fk.field_c = false;
-              he.field_k = 0;
-              hb.field_f = false;
+              DirectByteStorage.field_l = 0;
+              BoundedUrlRequest.field_c = false;
+              RasterBuffer.field_k = 0;
+              IterableDualNodeDeque.field_f = false;
               break;
             }
             this.secondaryHeightProfile[var6] = 128 + var5.nextIntBounded(38, 60 * var4_int / 640);
@@ -281,7 +281,7 @@ final class BattleTerrain {
           boolean decompiledFrameRemainder1 = true;
           if (this.field_l == 16) {
             if (di.field_g == 1 &&
-              qh.field_Yb >= 10) {
+              IconTextComponent.field_Yb >= 10) {
               this.groundHeightProfile[0] = 3000;
               this.groundHeightProfile[1] = 1000;
               this.secondaryHeightProfile[0] = 4300;
@@ -333,7 +333,7 @@ final class BattleTerrain {
               if (decompiledFrameRemainder1) {
                 this.secondaryHeightProfile[10] = 700;
                 this.secondaryHeightProfile[12] = 4000;
-                he.field_k = 180000;
+                RasterBuffer.field_k = 180000;
                 this.secondaryHeightProfile[11] = 3200;
                 decompiledFrameRemainder1 = (var22 != 0);
               }
@@ -369,7 +369,7 @@ final class BattleTerrain {
           }
           if (decompiledFrameCompleted2) {
             if (di.field_g == 5) {
-              he.field_k = 180000;
+              RasterBuffer.field_k = 180000;
             }
             var6 = 6;
           }
@@ -672,14 +672,14 @@ final class BattleTerrain {
                     if (stackIn_316_0 == 0) {
                       var13 = -var13 + this.profileLength;
                     }
-                    var14 = kc.field_x[4][0].field_z;
+                    var14 = DelayedServerPacket.field_x[4][0].field_z;
                     this.spawnPositions[this.field_c] = var13;
                     this.field_j[this.field_c] = -1;
                     var12 = 16 * var14;
                     var13 = var13 - var12 / 2;
                     this.field_h[this.field_c] = var11;
                     var15_int = var13;
-                    var16_ref_wk = kc.field_x[4][0];
+                    var16_ref_wk = DelayedServerPacket.field_x[4][0];
                     if (var10 != 0) {
                       var13 = var13 + (-var16_ref_wk.field_A + var16_ref_wk.field_z - var16_ref_wk.field_D << 4);
                     } else {
@@ -720,7 +720,7 @@ final class BattleTerrain {
                       var17++;
                     }
                     var13 = var15_int;
-                    var16_ref_wkLifetime2 = kc.field_x[4][1];
+                    var16_ref_wkLifetime2 = DelayedServerPacket.field_x[4][1];
                     var12 = var16_ref_wkLifetime2.field_A << 4;
                     stackIn_283_0Lifetime1 = 0;
                     if (stackIn_283_0Lifetime1 != var10) {
@@ -776,13 +776,13 @@ final class BattleTerrain {
                     var12 = 1200;
                     var13 = (var10 - 5) * 2150 + this.profileLength / 2;
                     var14 = var5.nextIntBounded(22, 5) + 1;
-                    var15_int = kc.field_x[1][var14].field_z;
+                    var15_int = DelayedServerPacket.field_x[1][var14].field_z;
                     this.spawnPositions[this.field_c] = var13;
                     this.field_j[this.field_c] = var14;
                     var12 = var15_int * 16;
                     var13 = var13 - var12 / 8;
                     this.field_h[this.field_c] = var11;
-                    var16_ref_wkLifetime1 = kc.field_x[1][var14];
+                    var16_ref_wkLifetime1 = DelayedServerPacket.field_x[1][var14];
                     var17Lifetime3 = 2;
                     var12 = var16_ref_wkLifetime1.field_A << var17Lifetime3;
                     var13 = var13 + (var16_ref_wkLifetime1.field_D << var17Lifetime3);
@@ -897,7 +897,7 @@ final class BattleTerrain {
             stackIn_397_1 = ~this.terrainType;
           }
           if (stackIn_397_0 == stackIn_397_1) {
-            var10 = kc.field_x[this.terrainType].length;
+            var10 = DelayedServerPacket.field_x[this.terrainType].length;
             var11 = this.profileLength / 8;
             while ((-(this.profileLength / 8) + this.profileLength) > var11) {
               var12 = this.secondaryHeightProfile[var11];
@@ -909,7 +909,7 @@ final class BattleTerrain {
                 this.spawnPositions[this.field_c] = var11;
                 var13 = var5.nextIntBounded(-115, var10);
                 this.field_j[this.field_c] = var13;
-                var14_ref_wk = kc.field_x[this.terrainType][var13];
+                var14_ref_wk = DelayedServerPacket.field_x[this.terrainType][var13];
                 var11 = var11 - var14_ref_wk.field_z * 2;
                 var15_int = var14_ref_wk.field_A * 4;
                 var11 = var11 + var14_ref_wk.field_D * 4;
@@ -936,7 +936,7 @@ final class BattleTerrain {
                     var11++;
                     while (var14_ref_wk.field_F > var18Lifetime1) {
                       stackIn_421_0 = 0;
-                      stackIn_421_1 = kc.field_x[this.terrainType][var13].field_E[var17Lifetime1 + var18Lifetime1 * var14_ref_wk.field_A];
+                      stackIn_421_1 = DelayedServerPacket.field_x[this.terrainType][var13].field_E[var17Lifetime1 + var18Lifetime1 * var14_ref_wk.field_A];
                       if (stackIn_421_0 == stackIn_421_1) {
                         var18Lifetime1++;
                         continue;
@@ -958,7 +958,7 @@ final class BattleTerrain {
             }
           }
           if (this.terrainType == 2) {
-            var10 = kc.field_x[this.terrainType].length;
+            var10 = DelayedServerPacket.field_x[this.terrainType].length;
             var11 = 0;
             var12 = this.profileLength / 8;
             while (var12 < (-(this.profileLength / 8) + this.profileLength)) {
@@ -976,7 +976,7 @@ final class BattleTerrain {
                   var14 = var5.nextIntBounded(52, -2 + var10) + 2;
                 }
                 this.field_j[this.field_c] = var14;
-                var15_ref = kc.field_x[this.terrainType][var14];
+                var15_ref = DelayedServerPacket.field_x[this.terrainType][var14];
                 var12 = var12 - 2 * var15_ref.field_z;
                 var16 = var15_ref.field_A * 4;
                 var12 = var12 + 4 * var15_ref.field_D;
@@ -1003,7 +1003,7 @@ final class BattleTerrain {
                     var19Lifetime1 = stackIn_476_0;
                     while (var15_ref.field_F > var19Lifetime1) {
                       stackIn_465_0 = 0;
-                      stackIn_465_1 = kc.field_x[this.terrainType][var14].field_E[var18Lifetime2 + var19Lifetime1 * var15_ref.field_A];
+                      stackIn_465_1 = DelayedServerPacket.field_x[this.terrainType][var14].field_E[var18Lifetime2 + var19Lifetime1 * var15_ref.field_A];
                       if (stackIn_465_0 == stackIn_465_1) {
                         var19Lifetime1++;
                         continue;
@@ -1067,7 +1067,7 @@ final class BattleTerrain {
                     stackIn_539_0 = 0;
                     var20Lifetime1 = stackIn_539_0;
                     while (var20Lifetime1 < var15_ref.field_F) {
-                      stackIn_528_0 = kc.field_x[this.terrainType][var14].field_E[var19Lifetime1Lifetime1 + var20Lifetime1 * var15_ref.field_A];
+                      stackIn_528_0 = DelayedServerPacket.field_x[this.terrainType][var14].field_E[var19Lifetime1Lifetime1 + var20Lifetime1 * var15_ref.field_A];
                       if (stackIn_528_0 == 0) {
                         var20Lifetime1++;
                         continue;
@@ -1136,9 +1136,9 @@ final class BattleTerrain {
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          vi.i(126);
+          AccountRegistrationPanel.i(126);
           var1_int = -85 / ((37 - param0) / 58);
-          stackIn_4_0 = (jd.field_rb != null);
+          stackIn_4_0 = (AccountNoticeDialog.field_rb != null);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1349,14 +1349,14 @@ final class BattleTerrain {
                         }
                         case 1: {
                             try {
-                                ao.field_H = new NodeDeque();
-                                if (li.field_z != null) {
+                                QuickChatPhraseDefinition.field_H = new NodeDeque();
+                                if (PasswordFieldPainter.field_z != null) {
                                     statePc = 4;
                                     continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 2. */
                                     {
-                                        li.field_z = new IndexedSprite[10];
+                                        PasswordFieldPainter.field_z = new IndexedSprite[10];
                                         statePc = 4;
                                         continue scanLoop1;
                                     }
@@ -1364,7 +1364,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_1) {
                                 statePc = (stateCaught_1 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_1);
                                 }
                                 caughtException = stateCaught_1;
                                 continue scanLoop1;
@@ -1386,7 +1386,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_4) {
                                 statePc = (stateCaught_4 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_4);
                                 }
                                 caughtException = stateCaught_4;
                                 continue scanLoop1;
@@ -1394,13 +1394,13 @@ final class BattleTerrain {
                         }
                         case 7: {
                             try {
-                                if (null != ng.field_c) {
+                                if (null != MembershipPromotionScreen.field_c) {
                                     statePc = 10;
                                     continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 8. */
                                     {
-                                        ng.field_c = new IndexedSprite[20];
+                                        MembershipPromotionScreen.field_c = new IndexedSprite[20];
                                         statePc = 10;
                                         continue scanLoop1;
                                     }
@@ -1408,7 +1408,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_7) {
                                 statePc = (stateCaught_7 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_7);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_7);
                                 }
                                 caughtException = stateCaught_7;
                                 continue scanLoop1;
@@ -1433,7 +1433,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_10) {
                                 statePc = (stateCaught_10 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_10);
                                 }
                                 caughtException = stateCaught_10;
                                 continue scanLoop1;
@@ -1441,13 +1441,13 @@ final class BattleTerrain {
                         }
                         case 14: {
                             try {
-                                if (ui.field_V != null) {
+                                if (AlphaContainer.field_V != null) {
                                     statePc = 17;
                                     continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 15. */
                                     {
-                                        ui.field_V = new IndexedSprite[12];
+                                        AlphaContainer.field_V = new IndexedSprite[12];
                                         statePc = 17;
                                         continue scanLoop1;
                                     }
@@ -1455,7 +1455,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_14) {
                                 statePc = (stateCaught_14 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_14);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_14);
                                 }
                                 caughtException = stateCaught_14;
                                 continue scanLoop1;
@@ -1463,10 +1463,10 @@ final class BattleTerrain {
                         }
                         case 17: {
                             try {
-                                if (lb.field_Zb == null) {
+                                if (VerticalScrollbar.field_Zb == null) {
                                     /* Inlined CFG state: 20. */
                                     {
-                                        lb.field_Zb = new IndexedSprite[4];
+                                        VerticalScrollbar.field_Zb = new IndexedSprite[4];
                                         statePc = 21;
                                         continue scanLoop1;
                                     }
@@ -1480,7 +1480,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_17) {
                                 statePc = (stateCaught_17 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_17);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_17);
                                 }
                                 caughtException = stateCaught_17;
                                 continue scanLoop1;
@@ -1488,13 +1488,13 @@ final class BattleTerrain {
                         }
                         case 21: {
                             try {
-                                if (null != jd.field_qb) {
+                                if (null != AccountNoticeDialog.field_qb) {
                                     statePc = 24;
                                     continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 22. */
                                     {
-                                        jd.field_qb = new IndexedSprite[12];
+                                        AccountNoticeDialog.field_qb = new IndexedSprite[12];
                                         statePc = 24;
                                         continue scanLoop1;
                                     }
@@ -1502,7 +1502,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_21) {
                                 statePc = (stateCaught_21 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_21);
                                 }
                                 caughtException = stateCaught_21;
                                 continue scanLoop1;
@@ -1524,7 +1524,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_24) {
                                 statePc = (stateCaught_24 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_24);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_24);
                                 }
                                 caughtException = stateCaught_24;
                                 continue scanLoop1;
@@ -1546,7 +1546,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_27) {
                                 statePc = (stateCaught_27 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_27);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_27);
                                 }
                                 caughtException = stateCaught_27;
                                 continue scanLoop1;
@@ -1571,7 +1571,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_30) {
                                 statePc = (stateCaught_30 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_30);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_30);
                                 }
                                 caughtException = stateCaught_30;
                                 continue scanLoop1;
@@ -1593,7 +1593,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_34) {
                                 statePc = (stateCaught_34 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_34);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_34);
                                 }
                                 caughtException = stateCaught_34;
                                 continue scanLoop1;
@@ -1618,7 +1618,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_37) {
                                 statePc = (stateCaught_37 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_37);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_37);
                                 }
                                 caughtException = stateCaught_37;
                                 continue scanLoop1;
@@ -1644,7 +1644,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_41) {
                                 statePc = (stateCaught_41 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_41);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_41);
                                 }
                                 caughtException = stateCaught_41;
                                 continue scanLoop1;
@@ -1683,7 +1683,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_45) {
                                 statePc = (stateCaught_45 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_45);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_45);
                                 }
                                 caughtException = stateCaught_45;
                                 continue scanLoop1;
@@ -1705,7 +1705,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_50) {
                                 statePc = (stateCaught_50 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_50);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_50);
                                 }
                                 caughtException = stateCaught_50;
                                 continue scanLoop1;
@@ -1730,7 +1730,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_53) {
                                 statePc = (stateCaught_53 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_53);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_53);
                                 }
                                 caughtException = stateCaught_53;
                                 continue scanLoop1;
@@ -1747,190 +1747,190 @@ final class BattleTerrain {
                             try {
                                 var1 = new ArticulatedPart(ArchiveProvider.field_a[0], 1, 32, 53, 0, 0, new PartInstruction[]{new PartInstruction("Land Drone Body - THIS SHOULD NEVER EVER EVER BE SEEN"), new PartInstruction(1, 1, 100), new PartInstruction(64), new PartInstruction(58, -20, 16384, 16384, 144), new PartInstruction(58, -20, 16384, 16384, 144)});
                                 var1.componentId = 109;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(lb.field_Zb[0], 1, 64, 98, 0, 0, new PartInstruction[]{new PartInstruction("Land Drone Body - THIS SHOULD NEVER EVER EVER BE SEEN"), new PartInstruction(100, 4, 200), new PartInstruction(64), new PartInstruction(64, 35, -8192, 16384, new ArticulatedPart(jd.field_qb[6], 50, 63, new PartInstruction[]{new PartInstruction(74, 62, 16384, 0, 288)}), true), new PartInstruction(64, 70, 0, 0, new ArticulatedPart(lb.field_Zb[1], 64, 70, new PartInstruction[]{}))});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(VerticalScrollbar.field_Zb[0], 1, 64, 98, 0, 0, new PartInstruction[]{new PartInstruction("Land Drone Body - THIS SHOULD NEVER EVER EVER BE SEEN"), new PartInstruction(100, 4, 200), new PartInstruction(64), new PartInstruction(64, 35, -8192, 16384, new ArticulatedPart(AccountNoticeDialog.field_qb[6], 50, 63, new PartInstruction[]{new PartInstruction(74, 62, 16384, 0, 288)}), true), new PartInstruction(64, 70, 0, 0, new ArticulatedPart(VerticalScrollbar.field_Zb[1], 64, 70, new PartInstruction[]{}))});
                                 var1.componentId = 107;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(lb.field_Zb[2], 1, 64, 140, 0, 0, new PartInstruction[]{new PartInstruction("Hover Drone Body - THIS SHOULD NEVER EVER EVER BE SEEN"), new PartInstruction(100, 4, 300), new PartInstruction(200, 200), new PartInstruction(64), new PartInstruction(64, 34, 16384, 0, 10, true), new PartInstruction(64, 94, 8192, 16384, new ArticulatedPart(jd.field_qb[6], 50, 63, new PartInstruction[]{new PartInstruction(74, 62, 16384, 0, 288)}), true)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(VerticalScrollbar.field_Zb[2], 1, 64, 140, 0, 0, new PartInstruction[]{new PartInstruction("Hover Drone Body - THIS SHOULD NEVER EVER EVER BE SEEN"), new PartInstruction(100, 4, 300), new PartInstruction(200, 200), new PartInstruction(64), new PartInstruction(64, 34, 16384, 0, 10, true), new PartInstruction(64, 94, 8192, 16384, new ArticulatedPart(AccountNoticeDialog.field_qb[6], 50, 63, new PartInstruction[]{new PartInstruction(74, 62, 16384, 0, 288)}), true)});
                                 var1.componentId = 108;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(jd.field_qb[2], 2, 58, 63, -16384, 4096, new PartInstruction[]{new PartInstruction("Golem Head"), new PartInstruction(100, 1, 325), new PartInstruction(80, 68, 16384, 4096, 16, true)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AccountNoticeDialog.field_qb[2], 2, 58, 63, -16384, 4096, new PartInstruction[]{new PartInstruction("Golem Head"), new PartInstruction(100, 1, 325), new PartInstruction(80, 68, 16384, 4096, 16, true)});
                                 var1.componentId = 1;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(jd.field_qb[4], 4, 64, 55, -12288, 4096, new PartInstruction[]{new PartInstruction("Golem Arm"), new PartInstruction(50, 0, 325), new PartInstruction(64, 77, 0, 4096, new ArticulatedPart(jd.field_qb[6], 50, 63, new PartInstruction[]{new PartInstruction(74, 62, 16384, 0, 288)}))});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AccountNoticeDialog.field_qb[4], 4, 64, 55, -12288, 4096, new PartInstruction[]{new PartInstruction("Golem Arm"), new PartInstruction(50, 0, 325), new PartInstruction(64, 77, 0, 4096, new ArticulatedPart(AccountNoticeDialog.field_qb[6], 50, 63, new PartInstruction[]{new PartInstruction(74, 62, 16384, 0, 288)}))});
                                 var1.componentId = 2;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(jd.field_qb[3], 8, 67, 78, -21845, 8192, new PartInstruction[]{new PartInstruction("Golem Wing"), new PartInstruction(50, 0, 100), new PartInstruction(81, 40, 16384, 1024, 128, true), new PartInstruction(82, 47, 16384, 1024, 128, true), new PartInstruction(83, 54, 16384, 1024, 128, true)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AccountNoticeDialog.field_qb[3], 8, 67, 78, -21845, 8192, new PartInstruction[]{new PartInstruction("Golem Wing"), new PartInstruction(50, 0, 100), new PartInstruction(81, 40, 16384, 1024, 128, true), new PartInstruction(82, 47, 16384, 1024, 128, true), new PartInstruction(83, 54, 16384, 1024, 128, true)});
                                 var1.componentId = 3;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(jd.field_qb[1], 1, 64, 138, 0, 0, new PartInstruction[]{new PartInstruction("Golem Chassis"), new PartInstruction(300, 3, 1150), new PartInstruction(64), new PartInstruction(150, 175), new PartInstruction(66, 94, 0, 0, new ArticulatedPart(jd.field_qb[8], 64, 45, new PartInstruction[]{new PartInstruction("A")}), false), new PartInstruction(68, 60, 0, 0, new ArticulatedPart(jd.field_qb[7], 66, 70, new PartInstruction[]{new PartInstruction("B"), new PartInstruction(46, 26, 4681, 4096, 768, true), new PartInstruction(64, 41, 16384, 0, 1024, true), new PartInstruction(66, 19, 16384, 0, 2), new PartInstruction(54, 31, 16384, 0, 8), new PartInstruction(54, 41, 16384, 0, 4)}), false)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AccountNoticeDialog.field_qb[1], 1, 64, 138, 0, 0, new PartInstruction[]{new PartInstruction("Golem Chassis"), new PartInstruction(300, 3, 1150), new PartInstruction(64), new PartInstruction(150, 175), new PartInstruction(66, 94, 0, 0, new ArticulatedPart(AccountNoticeDialog.field_qb[8], 64, 45, new PartInstruction[]{new PartInstruction("A")}), false), new PartInstruction(68, 60, 0, 0, new ArticulatedPart(AccountNoticeDialog.field_qb[7], 66, 70, new PartInstruction[]{new PartInstruction("B"), new PartInstruction(46, 26, 4681, 4096, 768, true), new PartInstruction(64, 41, 16384, 0, 1024, true), new PartInstruction(66, 19, 16384, 0, 2), new PartInstruction(54, 31, 16384, 0, 8), new PartInstruction(54, 41, 16384, 0, 4)}), false)});
                                 var1.componentId = 0;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(jd.field_qb[4], 1024, 64, 55, -16384, 4096, new PartInstruction[]{new PartInstruction("Golem Rear Arm"), new PartInstruction(64, 77, 0, 4096, new ArticulatedPart(jd.field_qb[6], 50, 63, new PartInstruction[]{new PartInstruction(74, 63, 16384, 0, 288)}))});
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AccountNoticeDialog.field_qb[4], 1024, 64, 55, -16384, 4096, new PartInstruction[]{new PartInstruction("Golem Rear Arm"), new PartInstruction(64, 77, 0, 4096, new ArticulatedPart(AccountNoticeDialog.field_qb[6], 50, 63, new PartInstruction[]{new PartInstruction(74, 63, 16384, 0, 288)}))});
                                 var1.componentId = 96;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(li.field_z[0], 2, 52, 68, -16384, 1024, new PartInstruction[]{new PartInstruction("Slave Head"), new PartInstruction(250, 0, 275), new PartInstruction(56, 62, 16384, 5461, 400)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(PasswordFieldPainter.field_z[0], 2, 52, 68, -16384, 1024, new PartInstruction[]{new PartInstruction("Slave Head"), new PartInstruction(250, 0, 275), new PartInstruction(56, 62, 16384, 5461, 400)});
                                 var1.componentId = 53;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(li.field_z[8], 8, 65, 68, -16384, 4096, new PartInstruction[]{new PartInstruction("Slave Shoulder"), new PartInstruction(100, 0, 550), new PartInstruction(80, 63, 16384, 1024, 288, true)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(PasswordFieldPainter.field_z[8], 8, 65, 68, -16384, 4096, new PartInstruction[]{new PartInstruction("Slave Shoulder"), new PartInstruction(100, 0, 550), new PartInstruction(80, 63, 16384, 1024, 288, true)});
                                 var1.componentId = 54;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(li.field_z[6], 4, 76, 42, -16384, 2048, new PartInstruction[]{new PartInstruction("Slave Arm"), new PartInstruction(250, 0, 425), new PartInstruction(55, 88, 0, 2048, new ArticulatedPart(li.field_z[7], 39, 56, new PartInstruction[]{new PartInstruction(80, 58, 16384, 0, 288, true), new PartInstruction(80, 79, 16384, 0, 288, true)}), false)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(PasswordFieldPainter.field_z[6], 4, 76, 42, -16384, 2048, new PartInstruction[]{new PartInstruction("Slave Arm"), new PartInstruction(250, 0, 425), new PartInstruction(55, 88, 0, 2048, new ArticulatedPart(PasswordFieldPainter.field_z[7], 39, 56, new PartInstruction[]{new PartInstruction(80, 58, 16384, 0, 288, true), new PartInstruction(80, 79, 16384, 0, 288, true)}), false)});
                                 var1.componentId = 56;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(li.field_z[6], 1024, 76, 42, -16384, 2048, new PartInstruction[]{new PartInstruction("Slave Rear Arm")});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(PasswordFieldPainter.field_z[6], 1024, 76, 42, -16384, 2048, new PartInstruction[]{new PartInstruction("Slave Rear Arm")});
                                 var1.componentId = 97;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(li.field_z[2], 1, 64, 188, 0, 0, new PartInstruction[]{new PartInstruction("Slave Chassis"), new PartInstruction(400, 1, 925), new PartInstruction(16), new PartInstruction(0, 400), new PartInstruction(80, 68, 0, 2048, new ArticulatedPart(li.field_z[5], 87, 33, new PartInstruction[]{new PartInstruction("Back0Leg"), new PartInstruction(39, 80, 0, 2048, new ArticulatedPart(li.field_z[3], 45, 44, new PartInstruction[]{new PartInstruction("Back1Leg"), new PartInstruction(86, 87, 0, 2048, new ArticulatedPart(li.field_z[1], 65, 96, new PartInstruction[]{new PartInstruction("Back2Leg"), new PartInstruction(58, 118, 0, 2048, new ArticulatedPart(li.field_z[4], 58, 118, new PartInstruction[]{new PartInstruction("Back3Leg")}), true), new PartInstruction(73, 118, 0, 2048, new ArticulatedPart(li.field_z[9], 73, 118, new PartInstruction[]{new PartInstruction("Back4Leg")}))}))}))}), true), new PartInstruction(80, 68, 0, 2048, new ArticulatedPart(li.field_z[5], 87, 33, new PartInstruction[]{new PartInstruction("Front0Leg"), new PartInstruction(39, 80, 0, 2048, new ArticulatedPart(li.field_z[3], 45, 44, new PartInstruction[]{new PartInstruction("Front1Leg"), new PartInstruction(86, 87, 0, 2048, new ArticulatedPart(li.field_z[1], 65, 96, new PartInstruction[]{new PartInstruction("Front2Leg"), new PartInstruction(58, 118, 0, 2048, new ArticulatedPart(li.field_z[4], 58, 118, new PartInstruction[]{new PartInstruction("Front3Leg")}), true), new PartInstruction(73, 118, 0, 2048, new ArticulatedPart(li.field_z[9], 73, 118, new PartInstruction[]{new PartInstruction("Front4Leg")}))}))}))})), new PartInstruction(110, 98, 16384, 0, 2), new PartInstruction(46, 25, 15384, 2730, 144, true), new PartInstruction(83, 33, 15384, 2730, 144, true), new PartInstruction(83, 40, 15384, 2730, 144, true), new PartInstruction(34, 28, 16384, 0, 8), new PartInstruction(34, 38, 16384, 0, 2052), new PartInstruction(34, 38, 16384, 0, 1024, true)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(PasswordFieldPainter.field_z[2], 1, 64, 188, 0, 0, new PartInstruction[]{new PartInstruction("Slave Chassis"), new PartInstruction(400, 1, 925), new PartInstruction(16), new PartInstruction(0, 400), new PartInstruction(80, 68, 0, 2048, new ArticulatedPart(PasswordFieldPainter.field_z[5], 87, 33, new PartInstruction[]{new PartInstruction("Back0Leg"), new PartInstruction(39, 80, 0, 2048, new ArticulatedPart(PasswordFieldPainter.field_z[3], 45, 44, new PartInstruction[]{new PartInstruction("Back1Leg"), new PartInstruction(86, 87, 0, 2048, new ArticulatedPart(PasswordFieldPainter.field_z[1], 65, 96, new PartInstruction[]{new PartInstruction("Back2Leg"), new PartInstruction(58, 118, 0, 2048, new ArticulatedPart(PasswordFieldPainter.field_z[4], 58, 118, new PartInstruction[]{new PartInstruction("Back3Leg")}), true), new PartInstruction(73, 118, 0, 2048, new ArticulatedPart(PasswordFieldPainter.field_z[9], 73, 118, new PartInstruction[]{new PartInstruction("Back4Leg")}))}))}))}), true), new PartInstruction(80, 68, 0, 2048, new ArticulatedPart(PasswordFieldPainter.field_z[5], 87, 33, new PartInstruction[]{new PartInstruction("Front0Leg"), new PartInstruction(39, 80, 0, 2048, new ArticulatedPart(PasswordFieldPainter.field_z[3], 45, 44, new PartInstruction[]{new PartInstruction("Front1Leg"), new PartInstruction(86, 87, 0, 2048, new ArticulatedPart(PasswordFieldPainter.field_z[1], 65, 96, new PartInstruction[]{new PartInstruction("Front2Leg"), new PartInstruction(58, 118, 0, 2048, new ArticulatedPart(PasswordFieldPainter.field_z[4], 58, 118, new PartInstruction[]{new PartInstruction("Front3Leg")}), true), new PartInstruction(73, 118, 0, 2048, new ArticulatedPart(PasswordFieldPainter.field_z[9], 73, 118, new PartInstruction[]{new PartInstruction("Front4Leg")}))}))}))})), new PartInstruction(110, 98, 16384, 0, 2), new PartInstruction(46, 25, 15384, 2730, 144, true), new PartInstruction(83, 33, 15384, 2730, 144, true), new PartInstruction(83, 40, 15384, 2730, 144, true), new PartInstruction(34, 28, 16384, 0, 8), new PartInstruction(34, 38, 16384, 0, 2052), new PartInstruction(34, 38, 16384, 0, 1024, true)});
                                 var1.componentId = 55;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(Sentinel.field_nc[4], 2, 60, 62, -16384, 4096, new PartInstruction[]{new PartInstruction("Aghilla Head"), new PartInstruction(50, 2, 575), new PartInstruction(50, 0)});
                                 var1.componentId = 60;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(Sentinel.field_nc[5], 8, 63, 50, -16384, 4096, new PartInstruction[]{new PartInstruction("Aghilla Shoulder"), new PartInstruction(50, 0, 235), new PartInstruction(100, 60)});
                                 var1.componentId = 59;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(Sentinel.field_nc[7], 4, 64, 45, -13107, 8192, new PartInstruction[]{new PartInstruction("Aghilla Arm"), new PartInstruction(50, 0, 175), new PartInstruction(50, 0), new PartInstruction(64, 74, 8192, 8192, new ArticulatedPart(Sentinel.field_nc[8], 49, 57, new PartInstruction[]{new PartInstruction(83, 59, 16384, 0, 16, true), new PartInstruction(79, 63, 16384, 0, 128), new PartInstruction(79, 71, 16384, 0, 128)}))});
                                 var1.componentId = 58;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(Sentinel.field_nc[7], 1024, 64, 45, -21845, 8192, new PartInstruction[]{new PartInstruction("Aghilla Rear Arm"), new PartInstruction(64, 74, 8192, 8192, new ArticulatedPart(Sentinel.field_nc[8], 49, 57, new PartInstruction[]{new PartInstruction(83, 59, 16384, 0, 16, true), new PartInstruction(79, 63, 16384, 0, 128), new PartInstruction(79, 71, 16384, 0, 128)}))});
                                 var1.componentId = 98;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(Sentinel.field_nc[0], 1, 58, 176, 0, 0, new PartInstruction[]{new PartInstruction("Aghilla Chassis"), new PartInstruction(250, 2, 725), new PartInstruction(68), new PartInstruction(440, 225), new PartInstruction(62, 62, 0, 0, new ArticulatedPart(Sentinel.field_nc[3], 62, 62, new PartInstruction[]{new PartInstruction("Torso"), new PartInstruction(60, 95, 2000, 2048, new ArticulatedPart(Sentinel.field_nc[1], 61, 48, new PartInstruction[]{new PartInstruction("Back0Leg"), new PartInstruction(63, 83, 1000, 2048, new ArticulatedPart(Sentinel.field_nc[2], 62, 45, new PartInstruction[]{new PartInstruction("Back1Leg")}))}), true), new PartInstruction(60, 95, -5000, 2048, new ArticulatedPart(Sentinel.field_nc[1], 61, 48, new PartInstruction[]{new PartInstruction("Front0Leg"), new PartInstruction(63, 83, 5000, 2048, new ArticulatedPart(Sentinel.field_nc[2], 62, 44, new PartInstruction[]{new PartInstruction("Front1Leg")}))}))}), true), new PartInstruction(65, 43, 16384, 0, 1024, true), new PartInstruction(65, 28, 16384, 0, 2), new PartInstruction(57, 43, 16384, 0, 4), new PartInstruction(57, 33, 16384, 0, 8)});
                                 var1.componentId = 57;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(Sprite.field_b[7], 2, 99, 80, -16384, 4096, new PartInstruction[]{new PartInstruction("Turtle Head"), new PartInstruction(150, 1, 350), new PartInstruction(108, 76, 16384, 0, 16)});
                                 var1.componentId = 61;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(Sprite.field_b[1], 1, 63, 120, 0, 0, new PartInstruction[]{new PartInstruction("Turtle Chassis"), new PartInstruction(600, 4, 1250), new PartInstruction(128), new PartInstruction(0, 225), new PartInstruction(43, 58, 0, 0, new ArticulatedPart(Sprite.field_b[0], 43, 58, new PartInstruction[]{new PartInstruction("B0"), new PartInstruction(21, 70, 0, 0, new ArticulatedPart(Sprite.field_b[3], 78, 67, new PartInstruction[]{new PartInstruction("B1"), new PartInstruction(55, 92, 0, 0, new ArticulatedPart(Sprite.field_b[4], 55, 92, new PartInstruction[]{new PartInstruction("B2"), new PartInstruction(76, 113, 0, 0, new ArticulatedPart(Sprite.field_b[5], 76, 113, new PartInstruction[]{new PartInstruction("B3")}), true), new PartInstruction(76, 113, 0, 0, new ArticulatedPart(Sprite.field_b[6], 76, 113, new PartInstruction[]{new PartInstruction("B4")}), true)}))})), new PartInstruction(21, 70, 0, 0, new ArticulatedPart(Sprite.field_b[3], 78, 67, new PartInstruction[]{new PartInstruction("2B1"), new PartInstruction(55, 92, 0, 0, new ArticulatedPart(Sprite.field_b[4], 55, 92, new PartInstruction[]{new PartInstruction("2B2"), new PartInstruction(76, 113, 0, 0, new ArticulatedPart(Sprite.field_b[5], 76, 113, new PartInstruction[]{new PartInstruction("2B3")}), true), new PartInstruction(76, 113, 0, 0, new ArticulatedPart(Sprite.field_b[6], 76, 113, new PartInstruction[]{new PartInstruction("2B4")}), true)}))}), true)})), new PartInstruction(80, 61, 0, 0, new ArticulatedPart(Sprite.field_b[2], 80, 61, new PartInstruction[]{new PartInstruction("F0"), new PartInstruction(105, 78, 16384, 0, 2, true), new PartInstruction(78, 67, 16384, 0, 8), new PartInstruction(78, 67, 0, 0, new ArticulatedPart(Sprite.field_b[3], 78, 67, new PartInstruction[]{new PartInstruction("F1"), new PartInstruction(55, 92, 0, 0, new ArticulatedPart(Sprite.field_b[4], 55, 92, new PartInstruction[]{new PartInstruction("F2"), new PartInstruction(76, 113, 0, 0, new ArticulatedPart(Sprite.field_b[5], 76, 113, new PartInstruction[]{new PartInstruction("F3")}), true), new PartInstruction(76, 113, 0, 0, new ArticulatedPart(Sprite.field_b[6], 76, 113, new PartInstruction[]{new PartInstruction("F4")}), true)}))})), new PartInstruction(78, 67, 0, 0, new ArticulatedPart(Sprite.field_b[3], 78, 67, new PartInstruction[]{new PartInstruction("2F1"), new PartInstruction(55, 92, 0, 0, new ArticulatedPart(Sprite.field_b[4], 55, 92, new PartInstruction[]{new PartInstruction("2F2"), new PartInstruction(76, 113, 0, 0, new ArticulatedPart(Sprite.field_b[5], 76, 113, new PartInstruction[]{new PartInstruction("2F3")}), true), new PartInstruction(76, 113, 0, 0, new ArticulatedPart(Sprite.field_b[6], 76, 113, new PartInstruction[]{new PartInstruction("2F4")}), true)}))}), true), new PartInstruction(98, 31, 16384, 4096, 144, true)})), new PartInstruction(41, 50, 0, 8192, new ArticulatedPart(Sprite.field_b[9], 63, 60, new PartInstruction[]{new PartInstruction(60, 43, 16384, 0, 384, true), new PartInstruction(60, 57, 16384, 0, 384, true)})), new PartInstruction(58, 28, 8192, 8192, 96, true)});
                                 var1.componentId = 62;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(cf.field_u[9], 2, 66, 23, -16384, 4096, new PartInstruction[]{new PartInstruction("Commando Head"), new PartInstruction(50, 3, 775)});
                                 var1.componentId = 64;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(cf.field_u[10], 8, 65, 35, -24576, 13107, new PartInstruction[]{new PartInstruction("Commando Shoulder"), new PartInstruction(50, 0, 75), new PartInstruction(82, 12, 16384, 0, 144, true), new PartInstruction(82, 16, 16384, 0, 144, true)});
                                 var1.componentId = 67;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(cf.field_u[7], 4, 65, 32, -29672, 8192, new PartInstruction[]{new PartInstruction("Commando Arm"), new PartInstruction(100, 0, 200), new PartInstruction(65, 75, 12288, 4096, new ArticulatedPart(jd.field_qb[6], 50, 63, new PartInstruction[]{new PartInstruction(74, 62, 16384, 0, 32)}), true)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(cf.field_u[7], 4, 65, 32, -29672, 8192, new PartInstruction[]{new PartInstruction("Commando Arm"), new PartInstruction(100, 0, 200), new PartInstruction(65, 75, 12288, 4096, new ArticulatedPart(AccountNoticeDialog.field_qb[6], 50, 63, new PartInstruction[]{new PartInstruction(74, 62, 16384, 0, 32)}), true)});
                                 var1.componentId = 66;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(cf.field_u[5], 1024, 64, 38, -18384, 10922, new PartInstruction[]{new PartInstruction("Commando Rear Arm"), new PartInstruction(65, 75, 1000, 4096, new ArticulatedPart(cf.field_u[6], 38, 75, new PartInstruction[]{new PartInstruction(70, 70, 16384, 0, 16), new PartInstruction(70, 84, 16384, 0, 16)}), true)});
                                 var1.componentId = 99;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(cf.field_u[0], 1, 58, 195, 0, 0, new PartInstruction[]{new PartInstruction("Commando Chassis"), new PartInstruction(400, 2, 1050), new PartInstruction(256), new PartInstruction(350, 250), new PartInstruction(75, 38, 16384, 0, 1024, true), new PartInstruction(49, 32, 0, 0, new ArticulatedPart(cf.field_u[11], 46, 37, new PartInstruction[]{new PartInstruction(57, 97, 0, 0, new ArticulatedPart(cf.field_u[1], 47, 42, new PartInstruction[]{new PartInstruction("Back0Leg"), new PartInstruction(56, 88, 9000, 0, new ArticulatedPart(cf.field_u[2], 64, 17, new PartInstruction[]{new PartInstruction("Back1Leg"), new PartInstruction(61, 54, 0, 0, new ArticulatedPart(cf.field_u[13], 61, 75, new PartInstruction[]{new PartInstruction("BackFoot")}), true)}))}), true), new PartInstruction(57, 97, -5000, 0, new ArticulatedPart(cf.field_u[3], 47, 38, new PartInstruction[]{new PartInstruction("Front0Leg"), new PartInstruction(56, 88, 5000, 0, new ArticulatedPart(cf.field_u[4], 64, 17, new PartInstruction[]{new PartInstruction("Front1Leg"), new PartInstruction(61, 54, 0, 0, new ArticulatedPart(cf.field_u[12], 61, 75, new PartInstruction[]{new PartInstruction("FrontFoot")}), true)}))}))}), true), new PartInstruction(68, 19, 16384, 0, 2), new PartInstruction(62, 28, 16384, 0, 8), new PartInstruction(62, 38, 16384, 0, 4)});
                                 var1.componentId = 65;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ParticleEffect.field_L[1], 2, 60, 61, -16384, 0, new PartInstruction[]{new PartInstruction("Hurricane Head"), new PartInstruction(50, 2, 550), new PartInstruction(71, 70, -5461, 9362, new ArticulatedPart(ParticleEffect.field_L[8], 71, 70, new PartInstruction[]{new PartInstruction(78, 77, 16384, 0, 16)}), true)});
                                 var1.componentId = 68;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ParticleEffect.field_L[0], 8, 42, 50, -21845, 10922, new PartInstruction[]{new PartInstruction("Hurricane Shoulder"), new PartInstruction(50, 0, 175), new PartInstruction(65, 60, 16384, 0, 288, true)});
                                 var1.componentId = 71;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ParticleEffect.field_L[9], 4, 62, 55, -8192, 8192, new PartInstruction[]{new PartInstruction("Hurricane Arm"), new PartInstruction(50, 0, 225), new PartInstruction(80, 74, 0, 4096, new ArticulatedPart(ParticleEffect.field_L[10], 52, 60, new PartInstruction[]{new PartInstruction(85, 53, 16384, 0, 128, true), new PartInstruction(85, 60, 16384, 0, 128, true), new PartInstruction(85, 67, 16384, 0, 128, true), new PartInstruction(74, 68, 16384, 0, 144)}))});
                                 var1.componentId = 70;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ParticleEffect.field_L[9], 1024, 62, 55, -16384, 8192, new PartInstruction[]{new PartInstruction("Hurricane Rear Arm"), new PartInstruction(80, 74, 0, 4096, new ArticulatedPart(ParticleEffect.field_L[10], 52, 60, new PartInstruction[]{new PartInstruction(85, 53, 16384, 0, 128, true), new PartInstruction(85, 60, 16384, 0, 128, true), new PartInstruction(85, 67, 16384, 0, 128, true), new PartInstruction(74, 68, 16384, 0, 144)}))});
                                 var1.componentId = 100;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ParticleEffect.field_L[5], 1, 58, 169, 0, 0, new PartInstruction[]{new PartInstruction("Hurricane Chassis"), new PartInstruction(300, 3, 1325), new PartInstruction(256), new PartInstruction(275, 150), new PartInstruction(64, 57, 0, 0, new ArticulatedPart(ParticleEffect.field_L[7], 63, 79, new PartInstruction[]{new PartInstruction("TopChassis"), new PartInstruction(110, 67, 16384, 0, 2), new PartInstruction(94, 73, 16384, 0, 4), new PartInstruction(39, 40, 16384, 0, 8), new PartInstruction(94, 73, 16384, 0, 1024, true)})), new PartInstruction(43, 80, 0, 0, new ArticulatedPart(ParticleEffect.field_L[2].b(), 77, 51, new PartInstruction[]{new PartInstruction("B0"), new PartInstruction(50, 77, 0, 0, new ArticulatedPart(ParticleEffect.field_L[3].b(), 76, 77, new PartInstruction[]{new PartInstruction("B1"), new PartInstruction(54, 58, 0, 0, new ArticulatedPart(ParticleEffect.field_L[4].b(), 76, 31, new PartInstruction[]{new PartInstruction("B2")}))}))}), true), new PartInstruction(62, 83, 0, 0, new ArticulatedPart(ParticleEffect.field_L[14], 69, 64, new PartInstruction[]{new PartInstruction("MB0"), new PartInstruction(68, 40, 0, 0, new ArticulatedPart(ParticleEffect.field_L[13].b(), 64, 38, new PartInstruction[]{new PartInstruction("MB1"), new PartInstruction(64, 67, 0, 0, new ArticulatedPart(ParticleEffect.field_L[12].b(), 64, 17, new PartInstruction[]{new PartInstruction("MB2")}))}))}), true), new PartInstruction(58, 83, 0, 0, new ArticulatedPart(ParticleEffect.field_L[16], 62, 40, new PartInstruction[]{new PartInstruction("MF0"), new PartInstruction(62, 68, 0, 0, new ArticulatedPart(ParticleEffect.field_L[15].b(), 68, 64, new PartInstruction[]{new PartInstruction("MF1"), new PartInstruction(68, 42, 0, 0, new ArticulatedPart(ParticleEffect.field_L[17].b(), 63, 25, new PartInstruction[]{new PartInstruction("MF2")}))}))})), new PartInstruction(80, 80, 0, 0, new ArticulatedPart(ParticleEffect.field_L[2], 51, 51, new PartInstruction[]{new PartInstruction("F0"), new PartInstruction(78, 77, 0, 0, new ArticulatedPart(ParticleEffect.field_L[3], 52, 77, new PartInstruction[]{new PartInstruction("F1"), new PartInstruction(74, 58, 0, 0, new ArticulatedPart(ParticleEffect.field_L[4], 52, 31, new PartInstruction[]{new PartInstruction("F2")}))}))}), true)});
                                 var1.componentId = 69;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ng.field_c[15], 2, 84, 115, -16384, 4096, new PartInstruction[]{new PartInstruction("Scorpion Head"), new PartInstruction(150, 2, 575)});
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(MembershipPromotionScreen.field_c[15], 2, 84, 115, -16384, 4096, new PartInstruction[]{new PartInstruction("Scorpion Head"), new PartInstruction(150, 2, 575)});
                                 var1.componentId = 74;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ui.field_V[10], 8, 113, 118, -16384, 2048, new PartInstruction[]{new PartInstruction("Scorpion Tail"), new PartInstruction(100, 0, 200), new PartInstruction(142, 54, 16384, 0, 128, true), new PartInstruction(142, 61, 16384, 0, 128, true), new PartInstruction(142, 68, 16384, 0, 128, true), new PartInstruction(142, 75, 16384, 0, 128, true), new PartInstruction(142, 82, 16384, 0, 128, true), new PartInstruction(142, 88, 16384, 0, 128, true)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AlphaContainer.field_V[10], 8, 113, 118, -16384, 2048, new PartInstruction[]{new PartInstruction("Scorpion Tail"), new PartInstruction(100, 0, 200), new PartInstruction(142, 54, 16384, 0, 128, true), new PartInstruction(142, 61, 16384, 0, 128, true), new PartInstruction(142, 68, 16384, 0, 128, true), new PartInstruction(142, 75, 16384, 0, 128, true), new PartInstruction(142, 82, 16384, 0, 128, true), new PartInstruction(142, 88, 16384, 0, 128, true)});
                                 var1.componentId = 73;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ng.field_c[17], 1, 120, 170, 0, 0, new PartInstruction[]{new PartInstruction("Scorpion Chassis"), new PartInstruction(300, 5, 2150), new PartInstruction(250, 0), new PartInstruction(256), new PartInstruction(91, 108, 0, 0, new ArticulatedPart(ng.field_c[16], 91, 108, new PartInstruction[]{new PartInstruction("SA"), new PartInstruction(27, 61, -3276, 6553, new ArticulatedPart(ng.field_c[11], 27, 61, new PartInstruction[]{new PartInstruction(76, 40, 11384, 0, 32, false)}), param0), new PartInstruction(80, 113, 0, 0, new ArticulatedPart(ng.field_c[1], 99, 29, new PartInstruction[]{new PartInstruction("LA"), new PartInstruction(53, 68, 0, 0, new ArticulatedPart(ng.field_c[0], 53, 68, new PartInstruction[]{new PartInstruction("BA")}), false)}), false)}), false), new PartInstruction(143, 71, 14336, 4096, 64, true), new PartInstruction(126, 103, 0, 0, new ArticulatedPart(ng.field_c[18], 11, 103, new PartInstruction[]{new PartInstruction("SC"), new PartInstruction(35, 105, 0, 0, new ArticulatedPart(ng.field_c[10], 55, 67, new PartInstruction[]{new PartInstruction("PC"), new PartInstruction(55, 42, 0, 0, new ArticulatedPart(ng.field_c[9], 55, 43, new PartInstruction[]{new PartInstruction("LC"), new PartInstruction(62, 96, 0, 0, new ArticulatedPart(ng.field_c[8], 62, 96, new PartInstruction[]{new PartInstruction("BC")}), false)}), false)}), false), new PartInstruction(8, 76, 16384, 0, 8, true), new PartInstruction(56, 105, 0, 0, new ArticulatedPart(ng.field_c[19], 56, 105, new PartInstruction[]{new PartInstruction("SD"), new PartInstruction(98, 114, 16384, 1024, 2, true), new PartInstruction(70, 110, 0, 8192, new ArticulatedPart(ng.field_c[12], 70, 110, new PartInstruction[]{new PartInstruction(86, 93, 16384, 0, 144, true)}), false), new PartInstruction(70, 110, 0, 0, new ArticulatedPart(ng.field_c[5], 20, 29, new PartInstruction[]{new PartInstruction("LD"), new PartInstruction(82, 82, 0, 0, new ArticulatedPart(ng.field_c[4], 82, 82, new PartInstruction[]{new PartInstruction("BD")}), false)}), false)}), false)}), false)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(MembershipPromotionScreen.field_c[17], 1, 120, 170, 0, 0, new PartInstruction[]{new PartInstruction("Scorpion Chassis"), new PartInstruction(300, 5, 2150), new PartInstruction(250, 0), new PartInstruction(256), new PartInstruction(91, 108, 0, 0, new ArticulatedPart(MembershipPromotionScreen.field_c[16], 91, 108, new PartInstruction[]{new PartInstruction("SA"), new PartInstruction(27, 61, -3276, 6553, new ArticulatedPart(MembershipPromotionScreen.field_c[11], 27, 61, new PartInstruction[]{new PartInstruction(76, 40, 11384, 0, 32, false)}), param0), new PartInstruction(80, 113, 0, 0, new ArticulatedPart(MembershipPromotionScreen.field_c[1], 99, 29, new PartInstruction[]{new PartInstruction("LA"), new PartInstruction(53, 68, 0, 0, new ArticulatedPart(MembershipPromotionScreen.field_c[0], 53, 68, new PartInstruction[]{new PartInstruction("BA")}), false)}), false)}), false), new PartInstruction(143, 71, 14336, 4096, 64, true), new PartInstruction(126, 103, 0, 0, new ArticulatedPart(MembershipPromotionScreen.field_c[18], 11, 103, new PartInstruction[]{new PartInstruction("SC"), new PartInstruction(35, 105, 0, 0, new ArticulatedPart(MembershipPromotionScreen.field_c[10], 55, 67, new PartInstruction[]{new PartInstruction("PC"), new PartInstruction(55, 42, 0, 0, new ArticulatedPart(MembershipPromotionScreen.field_c[9], 55, 43, new PartInstruction[]{new PartInstruction("LC"), new PartInstruction(62, 96, 0, 0, new ArticulatedPart(MembershipPromotionScreen.field_c[8], 62, 96, new PartInstruction[]{new PartInstruction("BC")}), false)}), false)}), false), new PartInstruction(8, 76, 16384, 0, 8, true), new PartInstruction(56, 105, 0, 0, new ArticulatedPart(MembershipPromotionScreen.field_c[19], 56, 105, new PartInstruction[]{new PartInstruction("SD"), new PartInstruction(98, 114, 16384, 1024, 2, true), new PartInstruction(70, 110, 0, 8192, new ArticulatedPart(MembershipPromotionScreen.field_c[12], 70, 110, new PartInstruction[]{new PartInstruction(86, 93, 16384, 0, 144, true)}), false), new PartInstruction(70, 110, 0, 0, new ArticulatedPart(MembershipPromotionScreen.field_c[5], 20, 29, new PartInstruction[]{new PartInstruction("LD"), new PartInstruction(82, 82, 0, 0, new ArticulatedPart(MembershipPromotionScreen.field_c[4], 82, 82, new PartInstruction[]{new PartInstruction("BD")}), false)}), false)}), false)}), false)});
                                 var1.componentId = 72;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(vc.field_b[7], 2, 83, 85, -16384, 4096, new PartInstruction[]{new PartInstruction("Crusher Head"), new PartInstruction(400, 0, 225), new PartInstruction(110, 58, 16384, 0, 144, true)});
                                 var1.componentId = 78;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(vc.field_b[0], 32, 76, 171, -16384, 0, new PartInstruction[]{new PartInstruction("Crusher Mounting"), new PartInstruction(0, 0, 50), new PartInstruction(91, 166, 16384, 0, 144, true), new PartInstruction(91, 177, 16384, 0, 144, true)});
                                 var1.componentId = 83;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(vc.field_b[2], 4, 64, 103, -16384, 4096, new PartInstruction[]{new PartInstruction("Crusher Arm"), new PartInstruction(200, 0, 400), new PartInstruction(64, 147, 0, 0, new ArticulatedPart(vc.field_b[1], 64, 147, new PartInstruction[]{new PartInstruction(87, 147, 16384, 0, 32), new PartInstruction(76, 171, 16384, 0, 32)}))});
                                 var1.componentId = 76;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(vc.field_b[2], 1024, 64, 103, -16384, 4096, new PartInstruction[]{new PartInstruction("Crusher Rear Arm"), new PartInstruction(64, 147, 0, 0, new ArticulatedPart(vc.field_b[14], 86, 147, new PartInstruction[]{}))});
                                 var1.componentId = 102;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(vc.field_b[3], 8, 64, 93, -16384, 2048, new PartInstruction[]{new PartInstruction("Crusher Wing"), new PartInstruction(400, 100), new PartInstruction(100, 0, 475), new PartInstruction(73, 91, 16384, 0, 144, true)});
                                 var1.componentId = 77;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(vc.field_b[10], 1, 66, 263, 0, 0, new PartInstruction[]{new PartInstruction("Crusher Chassis"), new PartInstruction(500, 5, 2500), new PartInstruction(0, 200), new PartInstruction(64), new PartInstruction(66, 152, 0, 0, new ArticulatedPart(vc.field_b[9], 66, 152, new PartInstruction[]{new PartInstruction("C1"), new PartInstruction(65, 172, 0, 0, new ArticulatedPart(vc.field_b[6], 65, 172, new PartInstruction[]{new PartInstruction("C2"), new PartInstruction(85, 200, 0, 0, new ArticulatedPart(vc.field_b[5], 85, 200, new PartInstruction[]{new PartInstruction("C3"), new PartInstruction(44, 234, 0, 0, new ArticulatedPart(vc.field_b[4], 42, 219, new PartInstruction[]{new PartInstruction("C4"), new PartInstruction(57, 241, 0, 0, new ArticulatedPart(vc.field_b[16], 57, 241, new PartInstruction[]{new PartInstruction("C5")}))}))}))})), new PartInstruction(70, 172, 0, 0, new ArticulatedPart(vc.field_b[11], 70, 172, new PartInstruction[]{new PartInstruction("C6"), new PartInstruction(95, 200, 0, 0, new ArticulatedPart(vc.field_b[12], 95, 200, new PartInstruction[]{new PartInstruction("C7"), new PartInstruction(53, 231, 0, 0, new ArticulatedPart(vc.field_b[13], 51, 219, new PartInstruction[]{new PartInstruction("C8"), new PartInstruction(67, 243, 0, 0, new ArticulatedPart(vc.field_b[17], 71, 245, new PartInstruction[]{new PartInstruction("C9")}))}))}))}), true)})), new PartInstruction(69, 138, 0, 0, new ArticulatedPart(vc.field_b[8], 69, 138, new PartInstruction[]{new PartInstruction("C10"), new PartInstruction(83, 85, 16384, 0, 2), new PartInstruction(64, 93, 16384, 0, 8), new PartInstruction(64, 103, 16384, 0, 2052), new PartInstruction(47, 101, 6553, 4096, 64, true)})), new PartInstruction(86, 103, 16384, 0, 1024, true)});
                                 var1.componentId = 75;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ui.field_V[7], 2, 150, 112, -16384, 4096, new PartInstruction[]{new PartInstruction("Bertha Head"), new PartInstruction(300, 1, 400), new PartInstruction(-300, -300)});
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AlphaContainer.field_V[7], 2, 150, 112, -16384, 4096, new PartInstruction[]{new PartInstruction("Bertha Head"), new PartInstruction(300, 1, 400), new PartInstruction(-300, -300)});
                                 var1.componentId = 82;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ui.field_V[6], 2048, 100, 122, -16384, 4096, new PartInstruction[]{new PartInstruction("Bertha Arm"), new PartInstruction(300, 0, 350), new PartInstruction(143, 111, 16384, 0, 128, true), new PartInstruction(151, 121, 16384, 0, 128, true), new PartInstruction(156, 131, 16384, 0, 128, true), new PartInstruction(156, 141, 16384, 0, 128, true), new PartInstruction(156, 151, 16384, 0, 128, true), new PartInstruction(156, 161, 16384, 0, 128, true), new PartInstruction(156, 171, 16384, 0, 128, true)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AlphaContainer.field_V[6], 2048, 100, 122, -16384, 4096, new PartInstruction[]{new PartInstruction("Bertha Arm"), new PartInstruction(300, 0, 350), new PartInstruction(143, 111, 16384, 0, 128, true), new PartInstruction(151, 121, 16384, 0, 128, true), new PartInstruction(156, 131, 16384, 0, 128, true), new PartInstruction(156, 141, 16384, 0, 128, true), new PartInstruction(156, 151, 16384, 0, 128, true), new PartInstruction(156, 161, 16384, 0, 128, true), new PartInstruction(156, 171, 16384, 0, 128, true)});
                                 var1.componentId = 80;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ui.field_V[11], 1024, 108, 153, -16384, 4096, new PartInstruction[]{new PartInstruction("Bertha Rear Arm"), new PartInstruction(108, 153, 0, 4096, new ArticulatedPart(ui.field_V[8], 113, 162, new PartInstruction[]{new PartInstruction(144, 180, 16384, 0, 32)}), true), new PartInstruction(145, 115, 13384, 0, 256, true)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AlphaContainer.field_V[11], 1024, 108, 153, -16384, 4096, new PartInstruction[]{new PartInstruction("Bertha Rear Arm"), new PartInstruction(108, 153, 0, 4096, new ArticulatedPart(AlphaContainer.field_V[8], 113, 162, new PartInstruction[]{new PartInstruction(144, 180, 16384, 0, 32)}), true), new PartInstruction(145, 115, 13384, 0, 256, true)});
                                 var1.componentId = 103;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ui.field_V[10], 8, 113, 113, -16384, 8192, new PartInstruction[]{new PartInstruction("Bertha Wing"), new PartInstruction(200, 0, 550), new PartInstruction(142, 58, 16384, 0, 256, true), new PartInstruction(142, 71, 16384, 0, 256, true), new PartInstruction(142, 84, 16384, 0, 256, true)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AlphaContainer.field_V[10], 8, 113, 113, -16384, 8192, new PartInstruction[]{new PartInstruction("Bertha Wing"), new PartInstruction(200, 0, 550), new PartInstruction(142, 58, 16384, 0, 256, true), new PartInstruction(142, 71, 16384, 0, 256, true), new PartInstruction(142, 84, 16384, 0, 256, true)});
                                 var1.componentId = 81;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ui.field_V[5], 1, 128, 258, 0, 0, new PartInstruction[]{new PartInstruction("Bertha Chassis"), new PartInstruction(800, 3, 1650), new PartInstruction(64), new PartInstruction(-500, 50), new PartInstruction(128, 221, 0, 0, new ArticulatedPart(ui.field_V[0], 128, 221, new PartInstruction[]{new PartInstruction("A")})), new PartInstruction(113, 113, 16384, 0, 8), new PartInstruction(100, 122, 16384, 0, 2052), new PartInstruction(100, 90, 16384, 0, 1024, true), new PartInstruction(150, 112, 16384, 0, 2, true), new PartInstruction(167, 191, 13384, 4096, 64, true)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AlphaContainer.field_V[5], 1, 128, 258, 0, 0, new PartInstruction[]{new PartInstruction("Bertha Chassis"), new PartInstruction(800, 3, 1650), new PartInstruction(64), new PartInstruction(-500, 50), new PartInstruction(128, 221, 0, 0, new ArticulatedPart(AlphaContainer.field_V[0], 128, 221, new PartInstruction[]{new PartInstruction("A")})), new PartInstruction(113, 113, 16384, 0, 8), new PartInstruction(100, 122, 16384, 0, 2052), new PartInstruction(100, 90, 16384, 0, 1024, true), new PartInstruction(150, 112, 16384, 0, 2, true), new PartInstruction(167, 191, 13384, 4096, 64, true)});
                                 var1.componentId = 79;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(hk.field_Ec[8], 2, 154, 97, -16384, 8192, new PartInstruction[]{new PartInstruction("Orbital Head"), new PartInstruction(150, 3, 825)});
                                 var1.componentId = 87;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(hk.field_Ec[11], 4, 125, 100, -16384, 4096, new PartInstruction[]{new PartInstruction("Orbital Arm"), new PartInstruction(150, 0, 575), new PartInstruction(116, 140, 24576, 4096, 64)});
                                 var1.componentId = 85;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(hk.field_Ec[1], 1024, 150, 100, -16384, 4096, new PartInstruction[]{new PartInstruction("Orbital Back arm"), new PartInstruction(116, 140, -4096, 2048, new ArticulatedPart(hk.field_Ec[0], 116, 140, new PartInstruction[]{new PartInstruction(171, 160, 20480, 0, 32, true)}), true)});
                                 var1.componentId = 104;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(hk.field_Ec[10], 8, 125, 91, -16384, 8192, new PartInstruction[]{new PartInstruction("Orbital Wing"), new PartInstruction(50, 0, 625), new PartInstruction(600, 0)});
                                 var1.componentId = 86;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(hk.field_Ec[9], 1, 146, 257, 0, 4096, new PartInstruction[]{new PartInstruction("Orbital Chassis"), new PartInstruction(300, 4, 2150), new PartInstruction(16), new PartInstruction(250, 0), new PartInstruction(150, 100, 16384, 0, 1024, true), new PartInstruction(156, 94, 0, 0, new ArticulatedPart(hk.field_Ec[7], 156, 94, new PartInstruction[]{new PartInstruction(154, 97, 16384, 0, 2)}), true), new PartInstruction(186, 121, 16384, 4096, 32, true), new PartInstruction(170, 105, 16384, 0, 128), new PartInstruction(168, 112, 16384, 0, 128), new PartInstruction(166, 119, 16384, 0, 128), new PartInstruction(128, 128, 0, 0, new ArticulatedPart(hk.field_Ec[13], 128, 128, new PartInstruction[]{})), new PartInstruction(125, 90, 16384, 0, 8), new PartInstruction(125, 100, 16384, 0, 4), new PartInstruction(105, 106, 6553, 0, new ArticulatedPart(hk.field_Ec[3], 115, 116, new PartInstruction[]{new PartInstruction("A"), new PartInstruction(113, 155, -4096, 0, new ArticulatedPart(hk.field_Ec[4], 113, 155, new PartInstruction[]{new PartInstruction("B"), new PartInstruction(131, 200, -4096, 0, new ArticulatedPart(hk.field_Ec[5], 131, 203, new PartInstruction[]{new PartInstruction("C")}))}), true)}), true), new PartInstruction(120, 116, 4096, 0, new ArticulatedPart(hk.field_Ec[3], 115, 116, new PartInstruction[]{new PartInstruction("D"), new PartInstruction(113, 155, -4096, 0, new ArticulatedPart(hk.field_Ec[4], 113, 155, new PartInstruction[]{new PartInstruction("E"), new PartInstruction(131, 200, -4096, 0, new ArticulatedPart(hk.field_Ec[5], 131, 203, new PartInstruction[]{new PartInstruction("F")}))}), true)}), true), new PartInstruction(135, 126, 3276, 2048, new ArticulatedPart(hk.field_Ec[3], 115, 116, new PartInstruction[]{new PartInstruction(113, 155, -5461, 2048, new ArticulatedPart(hk.field_Ec[4], 113, 155, new PartInstruction[]{new PartInstruction(131, 200, 10923, 2048, new ArticulatedPart(hk.field_Ec[6], 131, 203, new PartInstruction[]{new PartInstruction(138, 202, 16384, 0, 16)}))}), true)}), true)});
                                 var1.componentId = 84;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ne.field_R[20], 2, 153, 58, -16384, 8192, new PartInstruction[]{new PartInstruction("Valhalla Head"), new PartInstruction(250, 2, 625)});
                                 var1.componentId = 91;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ne.field_R[3], 2048, 120, 73, -16384, 4096, new PartInstruction[]{new PartInstruction("Valhalla Arm"), new PartInstruction(300, 0, 650), new PartInstruction(121, 31, 13884, 0, 256, true), new PartInstruction(123, 39, 13884, 0, 256, true), new PartInstruction(87, 98, 0, 10922, new ArticulatedPart(ne.field_R[4], 87, 98, new PartInstruction[]{new PartInstruction("Energy Blade"), new PartInstruction(65, 126, 29384, 0, 128, true), new PartInstruction(75, 120, 29384, 0, 128), new PartInstruction(70, 123, 29384, 0, 128, true)}))});
                                 var1.componentId = 89;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ne.field_R[0], 1024, 120, 73, -26384, 4096, new PartInstruction[]{new PartInstruction("Valhalla Back arm"), new PartInstruction(81, 97, 0, 4096, new ArticulatedPart(ne.field_R[1], 81, 97, new PartInstruction[]{new PartInstruction(98, 117, 26384, 0, 32, true)}), true)});
                                 var1.componentId = 105;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ne.field_R[13], 8, 128, 52, -16384, 4096, new PartInstruction[]{new PartInstruction("Valhalla Wing"), new PartInstruction(200, 0, 500), new PartInstruction(130, 51, 16384, 0, 64, true)});
                                 var1.componentId = 90;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ne.field_R[12], 1, 146, 293, 0, 0, new PartInstruction[]{new PartInstruction("Valhalla Chassis"), new PartInstruction(700, 4, 2350), new PartInstruction(16), new PartInstruction(0, 400), new PartInstruction(103, 142, 0, 0, new ArticulatedPart(ne.field_R[14], 103, 142, new PartInstruction[]{new PartInstruction("Front0Leg"), new PartInstruction(135, 203, 0, 0, new ArticulatedPart(ne.field_R[15], 135, 140, new PartInstruction[]{new PartInstruction("Front1Leg"), new PartInstruction(130, 153, 0, 0, new ArticulatedPart(ne.field_R[16], 128, 221, new PartInstruction[]{new PartInstruction("Front2Leg")})), new PartInstruction(108, 206, 0, 0, new ArticulatedPart(ne.field_R[17], 108, 206, new PartInstruction[]{new PartInstruction("Front3Leg"), new PartInstruction(138, 231, 0, 0, new ArticulatedPart(ne.field_R[18], 132, 213, new PartInstruction[]{new PartInstruction("Front4Leg")}), true)}))}))})), new PartInstruction(107, 142, 0, 0, new ArticulatedPart(ne.field_R[7], 103, 142, new PartInstruction[]{new PartInstruction("Back0Leg"), new PartInstruction(135, 203, 0, 0, new ArticulatedPart(ne.field_R[8], 135, 140, new PartInstruction[]{new PartInstruction("Back1Leg"), new PartInstruction(130, 153, 0, 0, new ArticulatedPart(ne.field_R[9], 128, 221, new PartInstruction[]{new PartInstruction("Back2Leg")})), new PartInstruction(108, 206, 0, 0, new ArticulatedPart(ne.field_R[10], 108, 206, new PartInstruction[]{new PartInstruction("Back3Leg"), new PartInstruction(138, 231, 0, 0, new ArticulatedPart(ne.field_R[11], 132, 213, new PartInstruction[]{new PartInstruction("Back4Leg")}), true)}))}))}), true), new PartInstruction(133, 63, 16384, 0, 1024, true), new PartInstruction(107, 104, 0, 0, new ArticulatedPart(ne.field_R[19], 107, 104, new PartInstruction[]{new PartInstruction("TopChassis"), new PartInstruction(153, 58, 16384, 0, 2), new PartInstruction(120, 62, 16384, 0, 8), new PartInstruction(120, 73, 16384, 0, 2052)}))});
                                 var1.componentId = 88;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(wi.field_C[9], 2, 100, 148, -16384, 4096, new PartInstruction[]{new PartInstruction("Babel Head"), new PartInstruction(500, 1, 500)});
                                 var1.componentId = 95;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(wi.field_C[2], 2048, 125, 91, -16384, 8192, new PartInstruction[]{new PartInstruction("Babel Arm"), new PartInstruction(700, 0, 850), new PartInstruction(125, 159, 0, 4096, new ArticulatedPart(wi.field_C[1], 97, 93, new PartInstruction[]{new PartInstruction(146, 168, 27384, 0, 256), new PartInstruction(111, 181, 27384, 0, 256), new PartInstruction(172, 151, 27384, 0, 256)}))});
                                 var1.componentId = 93;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(wi.field_C[12], 1024, 128, 99, -16384, 4096, new PartInstruction[]{new PartInstruction("Babel Back arm"), new PartInstruction(126, 179, 0, 4096, new ArticulatedPart(wi.field_C[14], 101, 143, new PartInstruction[]{new PartInstruction(121, 162, 16384, 0, 64, true)}), true)});
                                 var1.componentId = 106;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(wi.field_C[10], 1, 146, 405, 0, 0, new PartInstruction[]{new PartInstruction("Babel Chassis"), new PartInstruction(1800, 5, 2750), new PartInstruction(16), new PartInstruction(-600, 600), new PartInstruction(136, 145, 16384, 0, 1024, true), new PartInstruction(216, 101, 16384, 4096, 128, true), new PartInstruction(216, 111, 16384, 4096, 128, true), new PartInstruction(216, 121, 16384, 4096, 128, true), new PartInstruction(210, 182, 16384, 4096, 2, true), new PartInstruction(208, 82, 16384, 4096, 128, true), new PartInstruction(187, 201, 16384, 4096, 128, true), new PartInstruction(187, 211, 16384, 4096, 128, true), new PartInstruction(187, 221, 16384, 4096, 128, true), new PartInstruction(136, 145, 16384, 0, 2052), new PartInstruction(129, 220, 0, 0, new ArticulatedPart(wi.field_C[11], 136, 134, new PartInstruction[]{new PartInstruction("B1"), new PartInstruction(131, 154, 0, 0, new ArticulatedPart(wi.field_C[8], 131, 96, new PartInstruction[]{new PartInstruction("B2"), new PartInstruction(129, 140, 0, 0, new ArticulatedPart(wi.field_C[5], 129, 103, new PartInstruction[]{new PartInstruction("B3"), new PartInstruction(155, 157, 0, 0, new ArticulatedPart(wi.field_C[4], 153, 100, new PartInstruction[]{new PartInstruction("B4"), new PartInstruction(163, 105, 0, 0, new ArticulatedPart(wi.field_C[3], 124, 120, new PartInstruction[]{new PartInstruction("B5")})), new PartInstruction(128, 128, 0, 0, new ArticulatedPart(wi.field_C[6], 128, 128, new PartInstruction[]{new PartInstruction("B6"), new PartInstruction(168, 161, 0, 0, new ArticulatedPart(wi.field_C[7], 138, 222, new PartInstruction[]{new PartInstruction("B7")}), true)}), true)}))})), new PartInstruction(129, 140, 0, 0, new ArticulatedPart(wi.field_C[19], 129, 103, new PartInstruction[]{new PartInstruction("B8"), new PartInstruction(155, 157, 0, 0, new ArticulatedPart(wi.field_C[17], 153, 100, new PartInstruction[]{new PartInstruction("B9"), new PartInstruction(163, 105, 0, 0, new ArticulatedPart(wi.field_C[3], 124, 120, new PartInstruction[]{new PartInstruction("B10")})), new PartInstruction(128, 128, 0, 0, new ArticulatedPart(wi.field_C[13], 128, 128, new PartInstruction[]{new PartInstruction("B11"), new PartInstruction(168, 161, 0, 0, new ArticulatedPart(wi.field_C[7], 138, 222, new PartInstruction[]{new PartInstruction("B12")}), true)}), true)}))}), true)}))}), true), new PartInstruction(156, 70, 17384, 6553, 64, true)});
                                 var1.componentId = 92;
-                                var1 = wh.a(0, var1);
-                                ao.field_H.addLast(3, var1);
+                                var1 = DualNodeDequeIterator.a(0, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var2 = new int[]{17, 18, 19, 20, 21, 22, 27};
                                 var3 = 0;
                                 statePc = 58;
@@ -1938,7 +1938,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_57) {
                                 statePc = (stateCaught_57 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_57);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_57);
                                 }
                                 caughtException = stateCaught_57;
                                 continue scanLoop1;
@@ -1961,7 +1961,7 @@ final class BattleTerrain {
                                     {
                                         var1 = new ArticulatedPart(si.field_l[var2[var3] + 11], 16, 32, 39, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[-17 + var2[var3]]), new PartInstruction(0, 0, 10)});
                                         var1.componentId = var2[var3];
-                                        ao.field_H.addLast(3, var1);
+                                        QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                         var3++;
                                         if (var4 != 0) {
                                             statePc = 64;
@@ -1986,7 +1986,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_58) {
                                 statePc = (stateCaught_58 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_58);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_58);
                                 }
                                 caughtException = stateCaught_58;
                                 continue scanLoop1;
@@ -2000,7 +2000,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_63) {
                                 statePc = (stateCaught_63 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_63);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_63);
                                 }
                                 caughtException = stateCaught_63;
                                 continue scanLoop1;
@@ -2014,7 +2014,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_64) {
                                 statePc = (stateCaught_64 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_64);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_64);
                                 }
                                 caughtException = stateCaught_64;
                                 continue scanLoop1;
@@ -2030,7 +2030,7 @@ final class BattleTerrain {
                                     {
                                         var1 = new ArticulatedPart(si.field_l[11 + var2[var3]], 32, 32, 32, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[var2[var3] - 17]), new PartInstruction(0, 0, 35)});
                                         var1.componentId = var2[var3];
-                                        ao.field_H.addLast(3, var1);
+                                        QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                         var3++;
                                         if (var4 != 0) {
                                             statePc = 71;
@@ -2055,7 +2055,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_65) {
                                 statePc = (stateCaught_65 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_65);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_65);
                                 }
                                 caughtException = stateCaught_65;
                                 continue scanLoop1;
@@ -2069,7 +2069,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_70) {
                                 statePc = (stateCaught_70 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_70);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_70);
                                 }
                                 caughtException = stateCaught_70;
                                 continue scanLoop1;
@@ -2083,7 +2083,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_71) {
                                 statePc = (stateCaught_71 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_71);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_71);
                                 }
                                 caughtException = stateCaught_71;
                                 continue scanLoop1;
@@ -2099,7 +2099,7 @@ final class BattleTerrain {
                                     {
                                         var1 = new ArticulatedPart(si.field_l[-17 + var2[var3] + 28], 128, 32, 27, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[-17 + var2[var3]]), new PartInstruction(0, 0, 10)});
                                         var1.componentId = var2[var3];
-                                        ao.field_H.addLast(3, var1);
+                                        QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                         var3++;
                                         if (var4 != 0) {
                                             statePc = 78;
@@ -2124,7 +2124,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_72) {
                                 statePc = (stateCaught_72 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_72);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_72);
                                 }
                                 caughtException = stateCaught_72;
                                 continue scanLoop1;
@@ -2138,7 +2138,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_77) {
                                 statePc = (stateCaught_77 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_77);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_77);
                                 }
                                 caughtException = stateCaught_77;
                                 continue scanLoop1;
@@ -2152,7 +2152,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_78) {
                                 statePc = (stateCaught_78 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_78);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_78);
                                 }
                                 caughtException = stateCaught_78;
                                 continue scanLoop1;
@@ -2216,7 +2216,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_79) {
                                 statePc = (stateCaught_79 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_79);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_79);
                                 }
                                 caughtException = stateCaught_79;
                                 continue scanLoop1;
@@ -2265,7 +2265,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_82) {
                                 statePc = (stateCaught_82 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_82);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_82);
                                 }
                                 caughtException = stateCaught_82;
                                 continue scanLoop1;
@@ -2351,7 +2351,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_85) {
                                 statePc = (stateCaught_85 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_85);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_85);
                                 }
                                 caughtException = stateCaught_85;
                                 continue scanLoop1;
@@ -2362,7 +2362,7 @@ final class BattleTerrain {
                                 stackIn_88_9[stackIn_88_10] = new PartInstruction(stackIn_88_13, stackIn_88_14, stackIn_88_15);
                                 var1 = new ArticulatedPart(stackIn_88_2, stackIn_88_3, stackIn_88_4, stackIn_88_5, stackIn_88_6, stackIn_88_7, stackIn_88_8);
                                 var1.componentId = var2[var3];
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var3++;
                                 if (var4 == 0) {
                                     statePc = 79;
@@ -2373,7 +2373,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_88) {
                                 statePc = (stateCaught_88 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_88);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_88);
                                 }
                                 caughtException = stateCaught_88;
                                 continue scanLoop1;
@@ -2381,55 +2381,55 @@ final class BattleTerrain {
                         }
                         case 89: {
                             try {
-                                var1 = new ArticulatedPart(jd.field_qb[5], 512, 64, 64, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[32]), new PartInstruction(0, 0, 1000)});
+                                var1 = new ArticulatedPart(AccountNoticeDialog.field_qb[5], 512, 64, 64, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[32]), new PartInstruction(0, 0, 1000)});
                                 var1.componentId = 49;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(Sprite.field_b[8], 32, 64, 96, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[14]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 31;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ne.field_R[2], 32, 98, 144, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[18]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 35;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(cf.field_u[8], 32, 80, 69, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[15]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 32;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ParticleEffect.field_L[11], 32, 59, 65, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[16]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 33;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ng.field_c[14], 32, 49, 52, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[17]), new PartInstruction(0, 0, 100)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(MembershipPromotionScreen.field_c[14], 32, 49, 52, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[17]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 34;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ui.field_V[9], 32, 132, 124, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[21]), new PartInstruction(0, 0, 100)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AlphaContainer.field_V[9], 32, 132, 124, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[21]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 38;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ng.field_c[13], 64, 65, 96, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[26]), new PartInstruction(0, 0, 500)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(MembershipPromotionScreen.field_c[13], 64, 65, 96, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[26]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 43;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(wi.field_C[15], 64, 115, 157, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[31]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 48;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(wi.field_C[0], 64, 143, 152, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[35]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 52;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(ne.field_R[6], 64, 39, 127, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[29]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 46;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(vc.field_b[15], 64, 147, 168, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[28]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 45;
-                                ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ui.field_V[4], 64, 114, 145, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[27]), new PartInstruction(0, 0, 500)});
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                var1 = new ArticulatedPart(AlphaContainer.field_V[4], 64, 114, 145, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[27]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 44;
-                                ao.field_H.addLast(3, var1);
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(hk.field_Ec[12], 64, 117, 140, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[30]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 47;
-                                ao.field_H.addLast(3, var1);
-                                hc.field_bb = new ArticulatedPart[110];
+                                QuickChatPhraseDefinition.field_H.addLast(3, var1);
+                                LabeledField.field_bb = new ArticulatedPart[110];
                                 statePc = 90;
                                 continue scanLoop1;
                             } catch (Throwable stateCaught_89) {
                                 statePc = (stateCaught_89 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_89);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_89);
                                 }
                                 caughtException = stateCaught_89;
                                 continue scanLoop1;
@@ -2443,7 +2443,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_90) {
                                 statePc = (stateCaught_90 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_90);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_90);
                                 }
                                 caughtException = stateCaught_90;
                                 continue scanLoop1;
@@ -2457,7 +2457,7 @@ final class BattleTerrain {
                                 } else {
                                     /* Inlined CFG state: 92. */
                                     {
-                                        hc.field_bb[var3] = NodeDeque.a(var3, (byte) 67);
+                                        LabeledField.field_bb[var3] = NodeDeque.a(var3, (byte) 67);
                                         var3++;
                                         if (var4 != 0) {
                                             statePc = 98;
@@ -2482,7 +2482,7 @@ final class BattleTerrain {
                             } catch (Throwable stateCaught_91) {
                                 statePc = (stateCaught_91 instanceof RuntimeException ? 97 : -1);
                                 if (statePc == -1) {
-                                    throw BattleTerrain.<RuntimeException>$cfr$sneakyThrow(stateCaught_91);
+                                    throw BattleTerrain.<RuntimeException>rethrowUnchecked(stateCaught_91);
                                 }
                                 caughtException = stateCaught_91;
                                 continue scanLoop1;
@@ -2592,7 +2592,7 @@ final class BattleTerrain {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

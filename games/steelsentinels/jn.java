@@ -28,10 +28,10 @@ final class jn {
         field_a = null;
     }
 
-    final static void a(boolean param0, byte param1, int param2, tg param3) {
+    final static void a(boolean param0, byte param1, int param2, MusicTrack param3) {
         Object var4 = null;
         RuntimeException var4_ref = null;
-        tg var6 = null;
+        MusicTrack var6 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -41,26 +41,26 @@ final class jn {
           if (ja.field_g != null) {
             fn.a(-26907, 1048576, param0, param2, param3);
           }
-          if (null != q.field_f) {
+          if (null != IterableNodeHashTable.field_f) {
             var4_ref2 = fc.field_a;
             synchronized (var4_ref2) {
-              q.field_f.a(-1, (byte) 20, param2);
+              IterableNodeHashTable.field_f.a(-1, (byte) 20, param2);
               if (ml.field_g == param3) {
                 return;
               }
-              q.field_f.c((byte) -98);
-              fc.field_a.a();
+              IterableNodeHashTable.field_f.c((byte) -98);
+              fc.field_a.flush();
               ml.field_g = param3;
               if (null != ml.field_g) {
-                q.field_f.a(true, param0, ml.field_g);
+                IterableNodeHashTable.field_f.a(true, param0, ml.field_g);
               }
             }
           }
           if (param1 >= 65) {
             return;
           }
-          var6 = (tg) null;
-          jn.a(true, (byte) -9, -7, (tg) null);
+          var6 = (MusicTrack) null;
+          jn.a(true, (byte) -9, -7, (MusicTrack) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

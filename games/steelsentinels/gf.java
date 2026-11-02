@@ -14,9 +14,9 @@ final class gf {
         var3 = SteelSentinels.obfuscationControl;
         ha.field_T = null;
         nf.field_c = null;
-        wh.field_d = 0;
+        DualNodeDequeIterator.field_d = 0;
         var2 = ih.field_n;
-        ih.field_n = lh.field_B;
+        ih.field_n = UiComponent.field_B;
         ne.field_N.field_f = ne.field_N.field_f + 1;
         if (param0 == 51) {
           ne.field_N.field_t = 2;
@@ -30,7 +30,7 @@ final class gf {
         if (param1 != 16777215) {
           return 29;
         }
-        lh.field_B = var2;
+        UiComponent.field_B = var2;
         if (2 <= ne.field_N.field_f &&
           param0 == 51) {
           return 2;
@@ -61,15 +61,15 @@ final class gf {
         var5 = SteelSentinels.obfuscationControl;
         try {
           IntKeyLookup.a((byte) 6);
-          le.field_K = 77;
-          bc.a(49, 9, 56, 0, ArchiveProvider.field_b, 16711680, 255);
-          bc.a(83, 1, 63, 56, ArchiveProvider.field_b, 16711680, 255);
-          ta.field_e = pf.field_b;
-          rf.a(Sprite.field_m, 320, 8, 8, 8, 8, hk.field_Tb, 16777215, 0, pl.field_U, 1146810, 240, 2, param0 - 94, wc.field_d);
-          im.a(hk.field_Tb, 0, 8, -13782, Sprite.field_m, 16777215, 8, 8, 2, 240, pl.field_U, 1146810, wc.field_d, 320, 8);
+          StrongCacheEntry.field_K = 77;
+          ValidatedTextWidget.a(49, 9, 56, 0, ArchiveProvider.field_b, 16711680, 255);
+          ValidatedTextWidget.a(83, 1, 63, 56, ArchiveProvider.field_b, 16711680, 255);
+          Js5ArchiveManager.field_e = CheckboxPainter.field_b;
+          rf.a(Sprite.field_m, 320, 8, 8, 8, 8, hk.field_Tb, 16777215, 0, pl.field_U, 1146810, 240, 2, param0 - 94, MouseInputHandler.field_d);
+          im.a(hk.field_Tb, 0, 8, -13782, Sprite.field_m, 16777215, 8, 8, 2, 240, pl.field_U, 1146810, MouseInputHandler.field_d, 320, 8);
           eb.field_s = new RgbSprite[9];
           for (var1_int = 0; var1_int < 9; var1_int++) {
-            eb.field_s[var1_int] = pl.field_T[var1_int].g();
+            eb.field_s[var1_int] = pl.field_T[var1_int].copySprite();
             if (var1_int < 3) {
               sf.a(10, 43, 50, eb.field_s[var1_int], 0, 122);
             } else {
@@ -80,24 +80,24 @@ final class gf {
               }
             }
           }
-          var1_intLifetime1 = aj.field_r[0].field_B;
-          aj.field_r[1] = new RgbSprite(var1_intLifetime1, var1_intLifetime1);
-          aj.field_r[2] = new RgbSprite(var1_intLifetime1, var1_intLifetime1);
-          var9 = aj.field_r[0].field_E;
+          var1_intLifetime1 = RasterSnapshot.field_r[0].field_B;
+          RasterSnapshot.field_r[1] = new RgbSprite(var1_intLifetime1, var1_intLifetime1);
+          RasterSnapshot.field_r[2] = new RgbSprite(var1_intLifetime1, var1_intLifetime1);
+          var9 = RasterSnapshot.field_r[0].field_E;
           for (var3_int = 0; var9.length > var3_int; var3_int++) {
             if (var9[var3_int] == 16711680) {
-              aj.field_r[1].field_E[var3_int] = 45056;
-              aj.field_r[2].field_E[var3_int] = 8388608;
+              RasterSnapshot.field_r[1].field_E[var3_int] = 45056;
+              RasterSnapshot.field_r[2].field_E[var3_int] = 8388608;
               var9[var3_int] = 33023;
             }
           }
-          rh.field_v[21] = aj.field_r[0].g();
-          rh.field_v[22] = aj.field_r[1].g();
-          rh.field_v[23] = aj.field_r[2].g();
-          rh.field_v[24] = aj.field_r[2].g();
-          var3 = b.field_q[0];
-          b.field_q[0] = aj.field_r[0].g();
-          b.field_q[0].d();
+          rh.field_v[21] = RasterSnapshot.field_r[0].copySprite();
+          rh.field_v[22] = RasterSnapshot.field_r[1].copySprite();
+          rh.field_v[23] = RasterSnapshot.field_r[2].copySprite();
+          rh.field_v[24] = RasterSnapshot.field_r[2].copySprite();
+          var3 = DialWidgetPainter.field_q[0];
+          DialWidgetPainter.field_q[0] = RasterSnapshot.field_r[0].copySprite();
+          DialWidgetPainter.field_q[0].bindRasterTarget();
           var3.a(0, 0);
           for (var4 = 0; var4 < var3.field_E.length; var4++) {
             if ((65280 & var3.field_E[var4]) != 0) {
@@ -108,8 +108,8 @@ final class gf {
               }
             }
           }
-          b.field_q[1] = aj.field_r[1].g();
-          b.field_q[1].d();
+          DialWidgetPainter.field_q[1] = RasterSnapshot.field_r[1].copySprite();
+          DialWidgetPainter.field_q[1].bindRasterTarget();
           var3.a(0, 0);
           for (var4Lifetime1 = 0; var4Lifetime1 < var3.field_E.length; var4Lifetime1++) {
             if (var3.field_E[var4Lifetime1] == 8454016) {
@@ -120,23 +120,23 @@ final class gf {
               }
             }
           }
-          b.field_q[2] = aj.field_r[2].g();
-          b.field_q[2].d();
+          DialWidgetPainter.field_q[2] = RasterSnapshot.field_r[2].copySprite();
+          DialWidgetPainter.field_q[2].bindRasterTarget();
           var3.a(0, param0);
           for (var4Lifetime2 = 0; var4Lifetime2 < 3; var4Lifetime2++) {
-            rh.field_v[21 + var4Lifetime2].d();
-            b.field_q[var4Lifetime2].a(0, 0);
+            rh.field_v[21 + var4Lifetime2].bindRasterTarget();
+            DialWidgetPainter.field_q[var4Lifetime2].a(0, 0);
           }
-          rh.field_v[24].d();
-          si.field_E[1].c(0, 0, 4 * var1_intLifetime1, var1_intLifetime1 * 4);
-          sb.field_bb.b((byte) 122);
-          ff.field_rb = new RgbSprite[20];
+          rh.field_v[24].bindRasterTarget();
+          si.field_E[1].drawScaled(0, 0, 4 * var1_intLifetime1, var1_intLifetime1 * 4);
+          Checkbox.field_bb.b((byte) 122);
+          ValidationHelpWidget.field_rb = new RgbSprite[20];
           for (var4Lifetime3 = 0; 20 > var4Lifetime3; var4Lifetime3++) {
-            ff.field_rb[var4Lifetime3] = new RgbSprite(20, 20);
-            ff.field_rb[var4Lifetime3].d();
-            hb.field_j[var4Lifetime3].b(0, 0);
+            ValidationHelpWidget.field_rb[var4Lifetime3] = new RgbSprite(20, 20);
+            ValidationHelpWidget.field_rb[var4Lifetime3].bindRasterTarget();
+            IterableDualNodeDeque.field_j[var4Lifetime3].drawHalfSize(0, 0);
           }
-          sb.field_bb.b((byte) 125);
+          Checkbox.field_bb.b((byte) 125);
           ve.a((byte) 122);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

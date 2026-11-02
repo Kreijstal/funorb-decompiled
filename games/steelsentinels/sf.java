@@ -30,7 +30,7 @@ final class sf {
         if (param0 != -40) {
           this.a((byte) 57);
         }
-        int var2 = ak.a(this.field_r, this.field_g, this.field_c, this.field_u, this.field_o, param0 + 38, this.field_e, 1071146, this.field_q ? al.field_f : null, false);
+        int var2 = ak.a(this.field_r, this.field_g, this.field_c, this.field_u, this.field_o, param0 + 38, this.field_e, 1071146, this.field_q ? TickClock.field_f : null, false);
         if (var2 >= 0) {
           if (!this.field_w) {
             CombatWorld.c(-2483, 97);
@@ -44,27 +44,27 @@ final class sf {
           if (this.field_j == null) {
             this.field_j = var3.field_I;
           }
-          var3.field_I = 16 <= a.field_c % 32 ? this.field_k : this.field_j;
+          var3.field_I = 16 <= MouseWheelInput.field_c % 32 ? this.field_k : this.field_j;
         }
     }
 
     final static void a(int param0, byte param1, boolean param2, int param3) {
         int var4 = 0;
         int var4Lifetime1;
-        bc.field_ub.a(param3, param0);
+        ValidatedTextWidget.field_ub.a(param3, param0);
         if (param2) {
-          var4 = 2 * (ik.field_e % bc.field_ub.field_A);
-          if (var4 >= bc.field_ub.field_A) {
-            var4 = bc.field_ub.field_A + (-var4 + bc.field_ub.field_A);
+          var4 = 2 * (ik.field_e % ValidatedTextWidget.field_ub.field_A);
+          if (var4 >= ValidatedTextWidget.field_ub.field_A) {
+            var4 = ValidatedTextWidget.field_ub.field_A + (-var4 + ValidatedTextWidget.field_ub.field_A);
           }
           if (var4 < 10) {
             var4 = 10;
           } else {
-            if (!(-40 + bc.field_ub.field_A >= var4)) {
-              var4 = -40 + bc.field_ub.field_A;
+            if (!(-40 + ValidatedTextWidget.field_ub.field_A >= var4)) {
+              var4 = -40 + ValidatedTextWidget.field_ub.field_A;
             }
           }
-          tk.a(param0, 80, 30, 0, 0, -30456, bc.field_ub, param3, var4);
+          MatchingTextValidator.a(param0, 80, 30, 0, 0, -30456, ValidatedTextWidget.field_ub, param3, var4);
         }
         var4Lifetime1 = -105 % ((param1 - 74) / 35);
     }
@@ -80,7 +80,7 @@ final class sf {
             this.field_q = true;
             this.a(-67);
           } else if (var3 == 15 &&
-            df.field_K) {
+            DiskCacheRequest.field_K) {
             this.field_q = true;
             this.a(-6);
           }
@@ -100,16 +100,16 @@ final class sf {
         var3 = SteelSentinels.obfuscationControl;
         var2 = this.field_s;
         if (3 == var2) {
-          return vb.field_a[1];
+          return GzipDecoder.field_a[1];
         }
         if (var2 == 5) {
-          return vb.field_a[2];
+          return GzipDecoder.field_a[2];
         }
         if (10 == var2) {
-          return vb.field_a[3];
+          return GzipDecoder.field_a[3];
         }
         if (14 == var2) {
-          return vb.field_a[0];
+          return GzipDecoder.field_a[0];
         }
         if (param0 != 65) {
           field_f = (String) null;
@@ -163,7 +163,7 @@ final class sf {
     }
 
     final static void a(int param0, int param1, int param2) {
-        mg.field_kc = param1;
+        QuickChatMenu.field_kc = param1;
         int var3 = 78 % ((param0 + 41) / 56);
         kb.field_a = param2;
     }
@@ -222,7 +222,7 @@ final class sf {
           field_b = (String) null;
         }
         if (this.field_c != null) {
-          this.field_e = this.field_e + this.field_h.a(this.field_c, this.field_u - 2 * this.field_m, 0);
+          this.field_e = this.field_e + this.field_h.paragraphHeight(this.field_c, this.field_u - 2 * this.field_m, 0);
         }
         if (this.field_q) {
           this.field_e = this.field_e + 40;
@@ -256,7 +256,7 @@ final class sf {
         }
     }
 
-    final boolean a(rm param0, int param1) {
+    final boolean a(MenuInputState param0, int param1) {
         int stackIn_27_0 = 0;
         boolean stackIn_58_0 = false;
         RuntimeException stackIn_78_0 = null;
@@ -267,8 +267,8 @@ final class sf {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        kg var7 = null;
-        kg var8 = null;
+        ScrollContainer var7 = null;
+        ScrollContainer var8 = null;
         SceneWidget var9 = null;
         var6 = SteelSentinels.obfuscationControl;
         try {
@@ -277,7 +277,7 @@ final class sf {
           if (this.field_q &&
             this.field_w) {
             CombatWorld.c(-2483, 95);
-            rc.a(false);
+            SectorCacheStore.a(false);
           }
           if (param0.field_e == 3) {
             this.a((byte) 69);
@@ -309,7 +309,7 @@ final class sf {
           var5 = this.field_s;
           if (var5 == 1) {
             if (var4 != 0) {
-              rc.a(false);
+              SectorCacheStore.a(false);
               return true;
             }
           } else {
@@ -322,26 +322,26 @@ final class sf {
                   }
                   if (var5 == 10) {
                     if (var4 != 0) {
-                      rc.a(false);
+                      SectorCacheStore.a(false);
                       return true;
                     }
                   } else {
                     if (var5 == 12) {
-                      if (df.field_K) {
-                        rc.a(false);
+                      if (DiskCacheRequest.field_K) {
+                        SectorCacheStore.a(false);
                         return true;
                       }
                     } else {
                       if (14 == var5) {
                         if (var4 != 0) {
-                          rc.a(false);
+                          SectorCacheStore.a(false);
                           return true;
                         }
                       } else {
                         if (var5 != 16) {
                           return false;
                         }
-                        if (448 <= pi.field_c) {
+                        if (448 <= DelegatingCanvas.field_c) {
                           return true;
                         }
                       }
@@ -349,19 +349,19 @@ final class sf {
                   }
                 } else {
                   if (var4 != 0) {
-                    rc.a(false);
+                    SectorCacheStore.a(false);
                     return true;
                   }
                 }
               } else {
                 if (var4 != 0) {
-                  rc.a(false);
+                  SectorCacheStore.a(false);
                   return true;
                 }
               }
             } else {
               if (var4 != 0) {
-                rc.a(false);
+                SectorCacheStore.a(false);
                 return true;
               }
             }
@@ -382,9 +382,9 @@ final class sf {
     }
 
     private sf(String param0, int param1, int param2, int param3, int param4, RgbSprite param5, boolean param6) {
-        this.field_h = (BitmapFont) ((Object) ff.field_lb);
+        this.field_h = (BitmapFont) ((Object) ValidationHelpWidget.field_lb);
         this.field_m = 8;
-        this.field_k = bl.field_d;
+        this.field_k = LinkButtonPainter.field_d;
         this.field_n = 5;
         this.field_s = -1;
         try {
@@ -417,20 +417,20 @@ final class sf {
     final static void $cfr$intArgs$a$c79a3df4369d(int param0, int param1, boolean param2, int param3) {
         int var4 = 0;
         int var4Lifetime1;
-        bc.field_ub.a(param3, param0);
+        ValidatedTextWidget.field_ub.a(param3, param0);
         if (param2) {
-          var4 = 2 * (ik.field_e % bc.field_ub.field_A);
-          if (var4 >= bc.field_ub.field_A) {
-            var4 = bc.field_ub.field_A + (-var4 + bc.field_ub.field_A);
+          var4 = 2 * (ik.field_e % ValidatedTextWidget.field_ub.field_A);
+          if (var4 >= ValidatedTextWidget.field_ub.field_A) {
+            var4 = ValidatedTextWidget.field_ub.field_A + (-var4 + ValidatedTextWidget.field_ub.field_A);
           }
           if (var4 < 10) {
             var4 = 10;
           } else {
-            if (!(-40 + bc.field_ub.field_A >= var4)) {
-              var4 = -40 + bc.field_ub.field_A;
+            if (!(-40 + ValidatedTextWidget.field_ub.field_A >= var4)) {
+              var4 = -40 + ValidatedTextWidget.field_ub.field_A;
             }
           }
-          tk.a(param0, 80, 30, 0, 0, -30456, bc.field_ub, param3, var4);
+          MatchingTextValidator.a(param0, 80, 30, 0, 0, -30456, ValidatedTextWidget.field_ub, param3, var4);
         }
         var4Lifetime1 = -105 % ((param1 - 74) / 35);
     }

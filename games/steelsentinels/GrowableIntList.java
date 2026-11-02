@@ -1,0 +1,320 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GrowableIntList {
+    static ResourceArchive field_i;
+    private int field_f;
+    private boolean field_e;
+    private int[] field_k;
+    static String field_a;
+    static int field_h;
+    static RgbSprite field_d;
+    static PcmSampleStream field_c;
+    static String field_g;
+    static String field_l;
+    private int field_j;
+    static String field_b;
+    static String field_m;
+
+    private final void a(int param0, boolean param1, int param2) {
+        int discarded$0 = 0;
+        if (param2 > this.field_j) {
+          this.field_j = param2;
+        }
+        if (this.field_k.length <= param2) {
+          this.growToIndex(2, param2);
+        }
+        this.field_k[param2] = param0;
+        if (!param1) {
+          discarded$0 = this.b(57, 50);
+        }
+    }
+
+    private final int b(int param0, int param1) {
+        int var3;
+        int var4;
+        int var5;
+        var5 = SteelSentinels.obfuscationControl;
+        var3 = this.field_k.length;
+        var4 = 36 / ((-20 - param1) / 46);
+        while (var3 <= param0) {
+          if (!this.field_e) {
+            var3 = var3 + this.field_f;
+            continue;
+          }
+          if (0 == var3) {
+            var3 = 1;
+            continue;
+          }
+          var3 = var3 * this.field_f;
+        }
+        return var3;
+    }
+
+    final void d(int param0, int param1) {
+        if (param0 >= -97) {
+          return;
+        }
+        if (param1 < 0 ||
+          this.field_j < param1) {
+          throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        if (this.field_j != param1) {
+          ArraySupport.copy(this.field_k, 1 + param1, this.field_k, param1, -param1 + this.field_j);
+        }
+        this.field_j = this.field_j - 1;
+    }
+
+    final int size(boolean param0) {
+        if (param0) {
+          return -128;
+        }
+        return this.field_j + 1;
+    }
+
+    final static void b(int param0) {
+        int var8_int = 0;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int var19 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        kf var4 = null;
+        long var4_long = 0L;
+        int var5 = 0;
+        int var6 = 0;
+        tc var6_ref_tc = null;
+        int var7 = 0;
+        String[][] var8 = null;
+        String[][] var9 = null;
+        long[][] var10 = null;
+        int[][] var11 = null;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var20 = 0;
+        String var21 = null;
+        long var22 = 0L;
+        int var24 = 0;
+        int var25 = 0;
+        int var26 = 0;
+        CipherPacketBuffer var28 = null;
+        int var3Lifetime1;
+        int var25Lifetime1;
+        int var25Lifetime2;
+        var26 = SteelSentinels.obfuscationControl;
+        try {
+          if (param0 >= -115) {
+            return;
+          }
+          var28 = rf.field_d;
+          var2 = var28.readUnsignedByte((byte) -61);
+          if (var2 == 0) {
+            var3 = var28.readUnsignedShort((byte) -60);
+            var4 = (kf) (SentinelCommand.field_w.first(13058));
+            while (var4 != null) {
+              if (var3 != var4.field_C) {
+                var4 = (kf) (SentinelCommand.field_w.next((byte) -88));
+                continue;
+              }
+              break;
+            }
+            if (var4 == null) {
+              LoginForm.m(98);
+              return;
+            }
+            var5 = var28.readUnsignedByte((byte) -68);
+            if (var5 != 0) {
+              var6 = var4.field_u;
+              var7 = var4.field_w;
+              sa.field_f[0].field_d = false;
+              sa.field_f[0].field_b = null;
+              sa.field_f[0].field_g = field_l;
+              for (var8_int = 1; var8_int < var5; var8_int++) {
+                sa.field_f[var8_int].field_g = var28.h(1);
+                sa.field_f[var8_int].field_d = false;
+                if (var28.readUnsignedByte((byte) -99) != 1) {
+                  sa.field_f[var8_int].field_b = null;
+                } else {
+                  sa.field_f[var8_int].field_b = var28.h(1);
+                }
+              }
+              dupTemp$0 = new String[3][var6];
+              var4.field_x = dupTemp$0;
+              var8 = dupTemp$0;
+              var9 = new String[3][var6];
+              dupTemp$1 = new long[3][var6];
+              var4.field_D = dupTemp$1;
+              var10 = dupTemp$1;
+              dupTemp$2 = new int[3][var7 * var6];
+              var4.field_z = dupTemp$2;
+              var11 = dupTemp$2;
+              var12 = 0;
+              var13 = 0;
+              var14 = 0;
+              var15 = 0;
+              var16 = 0;
+              var17 = 0;
+              var18 = var28.readUnsignedByte((byte) -90);
+              if (var18 > 0) {
+                for (var19 = 0; var18 > var19; var19++) {
+                  var20 = var28.readUnsignedByte((byte) -58);
+                  var21 = sa.field_f[var20].field_g;
+                  var22 = var28.g((byte) -97);
+                  var24 = var28.position;
+                  if (var19 < var6) {
+                    var8[0][var12] = var21;
+                    var9[0][var12] = sa.field_f[var20].field_b;
+                    var10[0][var12] = var22;
+                    for (var25 = 0; var7 > var25; var25++) {
+                      incrementValue$3 = var15;
+                      var15++;
+                      var11[0][incrementValue$3] = var28.readInt(0);
+                    }
+                    var12++;
+                  }
+                  if (var21 != null &&
+                    Projectile.a(67, var21)) {
+                    var8[1][var13] = field_l;
+                    var9[1][var13] = null;
+                    var10[1][var13] = var22;
+                    var13++;
+                    var28.position = var24;
+                    for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
+                      incrementValue$4 = var16;
+                      var16++;
+                      var11[1][incrementValue$4] = var28.readInt(0);
+                    }
+                  }
+                  if (var14 < var6 &&
+                    !sa.field_f[var20].field_d) {
+                    sa.field_f[var20].field_d = true;
+                    var8[2][var14] = var21;
+                    var9[2][var14] = sa.field_f[var20].field_b;
+                    var10[2][var14] = var22;
+                    var14++;
+                    var28.position = var24;
+                    for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
+                      incrementValue$5 = var17;
+                      var17++;
+                      var11[2][incrementValue$5] = var28.readInt(0);
+                    }
+                  }
+                }
+              }
+            }
+            var4.field_q = true;
+            var4.unlink(4);
+            return;
+          }
+          if (var2 == 1) {
+            var3Lifetime1 = var28.readUnsignedShort((byte) -60);
+            var4_long = var28.g((byte) -122);
+            var6_ref_tc = (tc) (MidiPcmStream.field_B.first(13058));
+            while (var6_ref_tc != null) {
+              if (var6_ref_tc.field_p != var3Lifetime1) {
+                var6_ref_tc = (tc) (MidiPcmStream.field_B.next((byte) -20));
+                continue;
+              }
+              break;
+            }
+            if (var6_ref_tc == null) {
+              LoginForm.m(122);
+              return;
+            }
+            var6_ref_tc.field_D = var4_long;
+            var6_ref_tc.unlink(4);
+            return;
+          }
+          sj.a("HS1: " + ci.a((byte) 94), -37, (Throwable) null);
+          LoginForm.m(86);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ci.a((Throwable) ((Object) var1), "g.A(" + param0 + ')');
+        }
+    }
+
+    public static void a(int param0) {
+        field_b = null;
+        if (param0 < 78) {
+          GrowableIntList.b(97);
+        }
+        field_d = null;
+        field_a = null;
+        field_m = null;
+        field_l = null;
+        field_c = null;
+        field_i = null;
+        field_g = null;
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, SystemTaskService param4, byte param5, int param6, int param7, String param8) {
+        try {
+          rl.field_f = param8;
+          rb.field_f = param2;
+          UiComponent.field_B = param3;
+          wn.field_g = param0;
+          km.field_k = param4;
+          int var9_int = 48 / ((22 - param5) / 61);
+          ih.field_n = param1;
+          sh.field_a = param6;
+          EditableTextWidget.field_ib = param7;
+          ne.field_N = (Js5Transport) ((Object) new SocketJs5Transport());
+          hk.field_oc = new DiskCacheWorker(param4);
+          ByteStorage.field_c = new Js5ArchiveManager(ne.field_N, hk.field_oc);
+        } catch (RuntimeException runtimeException) {
+          throw ci.a((Throwable) ((Object) runtimeException), "g.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final int c(int param0, int param1) {
+        if (param0 < 7) {
+          return 2;
+        }
+        if (param1 > this.field_j) {
+          throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        return this.field_k[param1];
+    }
+
+    private GrowableIntList() throws Throwable {
+        throw new Error();
+    }
+
+    final void a(int param0, byte param1) {
+        if (param1 != 22) {
+          field_d = (RgbSprite) null;
+        }
+        this.a(param0, true, 1 + this.field_j);
+    }
+
+    private final void growToIndex(int param0, int param1) {
+        if (param0 != 2) {
+          GrowableIntList.b(64);
+        }
+        int[] var4 = new int[this.b(param1, 73)];
+        int[] var3 = var4;
+        ArraySupport.copy(this.field_k, 0, var4, 0, this.field_k.length);
+        this.field_k = var4;
+    }
+
+    static {
+        field_h = -1;
+        field_a = "Similar rating";
+        field_b = "Passwords must be between 5 and 20 letters and numbers";
+        field_g = "Add <%0> to ignore list";
+        field_m = "Confirm Email:";
+    }
+}

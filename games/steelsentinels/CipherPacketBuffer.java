@@ -10,7 +10,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     static SceneWidget field_H;
     static String field_y;
     private int readBitPosition;
-    static tg field_z;
+    static MusicTrack field_z;
     static String field_G;
     static String field_C;
     static String field_E;
@@ -74,9 +74,9 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final static int j(int param0) {
-        gb.field_c.a(false);
+        ByteStorage.field_c.a(false);
         if (!ne.field_N.d((byte) 125)) {
-          return qh.d((byte) -107);
+          return IconTextComponent.d((byte) -107);
         }
         if (param0 <= 9) {
           CipherPacketBuffer.j(-98);

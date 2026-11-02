@@ -4,8 +4,8 @@
 final class va {
     static qj field_c;
     static String field_i;
-    static fh field_j;
-    static rj field_h;
+    static BinaryBitmapFont field_j;
+    static BufferedRandomAccessFile field_h;
     static int[] field_f;
     static int field_e;
     static String field_a;
@@ -26,7 +26,7 @@ final class va {
           if (!param2) {
             field_k = (int[]) null;
           }
-          if (wa.a((byte) 30, param3, param0, param1)) {
+          if (StatefulTextPainter.a((byte) 30, param3, param0, param1)) {
             stackIn_6_0 = NodeDeque.d((byte) 51);
             return stackIn_6_0;
           }
@@ -61,12 +61,12 @@ final class va {
     }
 
     final static void a(int param0) {
-        ql.j(-29713);
+        SocialListPanel.j(-29713);
         rg.field_e = true;
         if (param0 == 29) {
-          de.field_d = true;
-          ag.field_p.h(param0 + 95);
-          bf.a((byte) -83, false, pf.field_f);
+          LoginMethod.field_d = true;
+          GradientOutlineTextPainter.field_p.refreshPanelVisibility(param0 + 95);
+          LoginDialog.a((byte) -83, false, CheckboxPainter.field_f);
           return;
         }
     }
@@ -113,7 +113,7 @@ final class va {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          ia.a(new ak(param7), new ak(param16), new ak(param6), param2, param17, param13, param8, param4, param9, param5, param19, param11, param10, param3, param12, param1, param0, param14, param18, param15);
+          TextFieldValidator.a(new ak(param7), new ak(param16), new ak(param6), param2, param17, param13, param8, param4, param9, param5, param19, param11, param10, param3, param12, param1, param0, param14, param18, param15);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

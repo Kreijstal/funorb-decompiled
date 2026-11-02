@@ -21,7 +21,7 @@ abstract class ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          if (!f.a(param1, 4, param0)) {
+          if (!SocketJs5Transport.a(param1, 4, param0)) {
             return false;
           }
           var2_int = 0;
@@ -29,7 +29,7 @@ abstract class ArchiveProvider {
             if (param1.length() <= var2_int) {
               return true;
             }
-            if (qh.a((byte) -30, param1.charAt(var2_int))) {
+            if (IconTextComponent.a((byte) -30, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }

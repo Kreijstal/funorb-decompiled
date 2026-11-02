@@ -85,7 +85,7 @@ final class rf {
         if (param0 < 77) {
           rf.a(-62);
         }
-        stackIn_8_0 = (this == uf.field_g) || (Projectile.field_N == this) || (this == jd.field_sb);
+        stackIn_8_0 = (this == uf.field_g) || (Projectile.field_N == this) || (this == AccountNoticeDialog.field_sb);
         return stackIn_8_0;
     }
 
@@ -102,23 +102,23 @@ final class rf {
             var7 = null;
             var8 = null;
             if (km.field_k.field_f != null) {
-              si.field_o = new rj(km.field_k.field_f, 5200, 0);
+              si.field_o = new BufferedRandomAccessFile(km.field_k.field_f, 5200, 0);
               km.field_k.field_f = null;
-              var7 = new rc(255, si.field_o, new rj(km.field_k.field_g, 12000, 0), 2097152);
+              var7 = new SectorCacheStore(255, si.field_o, new BufferedRandomAccessFile(km.field_k.field_g, 12000, 0), 2097152);
             }
             if (si.field_o != null) {
               if (rh.field_o == null) {
-                rh.field_o = new rj[km.field_k.field_a.length];
+                rh.field_o = new BufferedRandomAccessFile[km.field_k.field_a.length];
               }
               if (rh.field_o[param5] == null) {
-                rh.field_o[param5] = new rj(km.field_k.field_a[param5], 12000, 0);
+                rh.field_o[param5] = new BufferedRandomAccessFile(km.field_k.field_a[param5], 12000, 0);
                 km.field_k.field_a[param5] = null;
               }
-              var8 = new rc(param5, si.field_o, rh.field_o[param5], 2097152);
+              var8 = new SectorCacheStore(param5, si.field_o, rh.field_o[param5], 2097152);
             }
-            var9 = gb.field_c.a((rc) (var7), (byte) 115, param3, (rc) (var8), param5);
+            var9 = ByteStorage.field_c.a((SectorCacheStore) (var7), (byte) 115, param3, (SectorCacheStore) (var8), param5);
             if (param4) {
-              var9.d((byte) 74);
+              var9.startPrefetch((byte) 74);
             }
             stackIn_13_0 = new ResourceArchive(var9, param0, param1);
             return stackIn_13_0;
@@ -147,30 +147,30 @@ final class rf {
         int var2_intLifetime1;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          var2_int = v.field_e;
+          var2_int = DebouncedValidator.field_e;
           if (param0 >= -75) {
             stackIn_3_0 = -50;
             return stackIn_3_0;
           }
           if (2 != param1.field_k) {
             if (param1.field_k == 4) {
-              var2_intLifetime1 = pf.field_j[param1.field_k];
+              var2_intLifetime1 = CheckboxPainter.field_j[param1.field_k];
             } else {
               if (GameplayController.field_G == param1.field_j) {
-                var2_intLifetime1 = ag.field_r[param1.field_k];
+                var2_intLifetime1 = GradientOutlineTextPainter.field_r[param1.field_k];
               } else {
-                var2_intLifetime1 = pf.field_j[param1.field_k];
+                var2_intLifetime1 = CheckboxPainter.field_j[param1.field_k];
               }
             }
           } else {
             if (param1.field_g) {
-              var2_intLifetime1 = v.field_e;
+              var2_intLifetime1 = DebouncedValidator.field_e;
             } else {
               if (param1.field_w == 0 &&
                 0 == param1.field_n) {
-                var2_intLifetime1 = ag.field_r[param1.field_k];
+                var2_intLifetime1 = GradientOutlineTextPainter.field_r[param1.field_k];
               } else {
-                var2_intLifetime1 = pf.field_j[param1.field_k];
+                var2_intLifetime1 = CheckboxPainter.field_j[param1.field_k];
               }
             }
           }

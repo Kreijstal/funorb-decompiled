@@ -29,8 +29,8 @@ class fb extends me {
         try {
           if (param4 <= oh.field_f) {
             if (param3 + param4 > oh.field_f) {
-              if (param1 <= pi.field_c) {
-                stackIn_10_0 = (pi.field_c <= param1 + param0) ? 1 : 0;
+              if (param1 <= DelegatingCanvas.field_c) {
+                stackIn_10_0 = (DelegatingCanvas.field_c <= param1 + param0) ? 1 : 0;
               } else {
                 stackIn_10_0 = 0;
               }
@@ -49,7 +49,7 @@ class fb extends me {
           var8 = pl.field_T;
           jm.a(param1, param0, var8, 1, param4, param3);
           if (param2 != null) {
-            ui.field_U.a(ke.a(param5 - 12448, param2), param4 + param3 / 2, param1 + (ui.field_U.field_U + (param0 + 1)) / 2, var7, -1);
+            AlphaContainer.field_U.drawCentered(WidgetStyleLayer.a(param5 - 12448, param2), param4 + param3 / 2, param1 + (AlphaContainer.field_U.field_U + (param0 + 1)) / 2, var7, -1);
           }
           stackIn_20_0 = var6_int;
           return stackIn_20_0 != 0;
@@ -69,7 +69,7 @@ class fb extends me {
 
     final void a(PacketBuffer param0, boolean param1) {
         try {
-          param0.b(-28875, this.field_i);
+          param0.writeLong(-28875, this.field_i);
           if (param1) {
             field_q = (String) null;
           }
@@ -83,7 +83,7 @@ class fb extends me {
         if (param0 <= 47) {
           return (dj) null;
         }
-        return ol.field_Sb;
+        return QuickChatHelpDialog.field_Sb;
     }
 
     fb(long param0, String param1) {

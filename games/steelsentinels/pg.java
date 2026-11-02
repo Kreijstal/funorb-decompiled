@@ -97,7 +97,7 @@ final class pg extends fb {
         String var11;
         int var12;
         int var13;
-        od var14;
+        ClientException var14;
         StringWriter var15;
         String var20;
         BufferedReader var21;
@@ -149,8 +149,8 @@ final class pg extends fb {
         String var11Lifetime1Lifetime2;
         String var11Lifetime5Lifetime1;
         var13 = SteelSentinels.obfuscationControl;
-        if (param1 instanceof od) {
-          var14 = (od) ((Object) param1);
+        if (param1 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param1);
           param1 = var14.field_l;
           var2 = var14.field_a + " | ";
           var11 = var2;

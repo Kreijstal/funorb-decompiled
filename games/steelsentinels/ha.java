@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ha extends dl implements qn {
+abstract class ha extends UiContainer implements ValidationProvider {
     static String field_R;
     static RgbSprite[] field_Q;
     static String field_S;
     private vn field_U;
     static int field_V;
-    static wj field_T;
+    static SystemTask field_T;
     static String field_P;
 
     abstract int h(byte param0);
 
-    public final tl a(boolean param0) {
+    public final ValidationSource a(boolean param0) {
         if (param0) {
           this.h((byte) 56);
         }
-        return (tl) ((Object) this.field_U);
+        return (ValidationSource) ((Object) this.field_U);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -134,7 +134,7 @@ abstract class ha extends dl implements qn {
 
     abstract int k(int param0);
 
-    ha(int param0, int param1, int param2, int param3, qk param4) {
+    ha(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4);
     }
 
@@ -158,8 +158,8 @@ abstract class ha extends dl implements qn {
           var7 = SteelSentinels.obfuscationControl;
           try {
             try {
-              var3 = (String) (hn.a(param0, (byte) -96, "getcookies"));
-              var4 = ka.a(';', false, var3);
+              var3 = (String) (JavaScriptBridge.callWindowFunction(param0, (byte) -96, "getcookies"));
+              var4 = ModalStack.a(';', false, var3);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -234,12 +234,12 @@ abstract class ha extends dl implements qn {
     final static void a(int param0, int param1, byte param2, BitmapFont param3, int param4, RgbSprite param5, int param6, int param7, int param8, int param9, int param10) {
         try {
           pa.field_b = param6;
-          ij.field_W = param10;
+          NameSuggestionsPanel.field_W = param10;
           be.field_e = param4;
-          vl.field_t = param8;
-          sg.field_e = param7;
+          TextHotspotRegion.field_t = param8;
+          BufferedSocket.field_e = param7;
           int var11_int = 51 / ((param2 - 42) / 49);
-          ej.field_y = param1;
+          MusicPatchPcmStream.field_y = param1;
           ci.field_g = param9;
           hl.field_r = param5;
         } catch (RuntimeException runtimeException) {

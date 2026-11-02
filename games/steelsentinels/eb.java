@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb extends ia {
+final class eb extends TextFieldValidator {
     static RgbSprite[] field_s;
     static int[] field_u;
     static String field_q;
@@ -78,7 +78,7 @@ final class eb extends ia {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!fg.a(var4, -71)) {
+          if (!RegistrationRequestDialog.a(var4, -71)) {
             stackIn_3_0 = ArchiveProvider.field_d;
             return stackIn_3_0;
           }
@@ -163,20 +163,20 @@ final class eb extends ia {
           jn.field_g = false;
           if (!fj.field_e) {
             if (!uc.field_g) {
-              var5 = sg.field_h;
+              var5 = BufferedSocket.field_h;
             } else {
-              var5 = al.field_b;
+              var5 = TickClock.field_b;
             }
           } else {
             var5 = hk.field_Kc;
           }
           var7 = (String) null;
-          ParticleEffect.a(-104, v.field_e, var5, 0, (String) null);
-          vd.field_d.field_rb = ((td.field_ic.field_rb & 16711422) >> 1) + (v.field_e - ((16711422 & v.field_e) >> 1));
-          vd.field_d.field_xb = (8355711 & td.field_ic.field_xb >> 1) - ((16711422 & v.field_e) >> 1) + v.field_e;
-          sb.field_ab = wh.field_e;
+          ParticleEffect.a(-104, DebouncedValidator.field_e, var5, 0, (String) null);
+          vd.field_d.field_rb = ((ReportAbuseDialog.field_ic.field_rb & 16711422) >> 1) + (DebouncedValidator.field_e - ((16711422 & DebouncedValidator.field_e) >> 1));
+          vd.field_d.field_xb = (8355711 & ReportAbuseDialog.field_ic.field_xb >> 1) - ((16711422 & DebouncedValidator.field_e) >> 1) + DebouncedValidator.field_e;
+          Checkbox.field_ab = DualNodeDequeIterator.field_e;
           tj.field_f = vd.field_d;
-          vd.field_d.field_Mb = (td.field_ic.field_Mb >> 1 & 8355711) - ((16711422 & v.field_e) >> 1) + v.field_e;
+          vd.field_d.field_Mb = (ReportAbuseDialog.field_ic.field_Mb >> 1 & 8355711) - ((16711422 & DebouncedValidator.field_e) >> 1) + DebouncedValidator.field_e;
           hh.field_a = new SceneWidget(0L, param2);
           cc.field_bc = new SceneWidget(0L, param4);
           in.field_d = new SceneWidget(0L, (SceneWidget) null);
@@ -184,15 +184,15 @@ final class eb extends ia {
           vd.field_d = new SceneWidget((long)param0, param3);
           vd.field_d.field_L = pl.field_X;
           te.field_f.a(vd.field_d, 122);
-          wh.field_e = new SceneWidget(0L, sb.field_ab);
-          te.field_f.a(wh.field_e, 125);
-          vc.field_f = new SceneWidget(0L, td.field_ic, re.field_cb);
-          qa.field_N = new SceneWidget(0L, td.field_ic);
+          DualNodeDequeIterator.field_e = new SceneWidget(0L, Checkbox.field_ab);
+          te.field_f.a(DualNodeDequeIterator.field_e, 125);
+          vc.field_f = new SceneWidget(0L, ReportAbuseDialog.field_ic, re.field_cb);
+          Js5NetworkRequest.field_N = new SceneWidget(0L, ReportAbuseDialog.field_ic);
           hh.field_a.a(cc.field_bc, 124);
           hh.field_a.a(in.field_d, 127);
           in.field_d.a(te.field_f, 122);
           in.field_d.a(vc.field_f, 119);
-          in.field_d.a(qa.field_N, 121);
+          in.field_d.a(Js5NetworkRequest.field_N, 121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -238,17 +238,17 @@ final class eb extends ia {
         Exception var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
-        ao var9 = null;
+        QuickChatPhraseDefinition var9 = null;
         var7 = SteelSentinels.obfuscationControl;
         var8 = rf.field_d;
         var2 = var8;
         var3 = var8.readUnsignedByte((byte) -87);
-        m.field_a = var3 & 127;
+        HuffmanDecoder.field_a = var3 & 127;
         stackIn_3_0 = (0 != (var3 & 128));
         oh.field_e = stackIn_3_0;
         be.field_b = var8.readUnsignedByte((byte) -121);
         ni.field_d = var8.g((byte) -116);
-        if (m.field_a != 2) {
+        if (HuffmanDecoder.field_a != 2) {
           dk.field_a = 0;
           t.field_k = 0;
         } else {
@@ -257,54 +257,54 @@ final class eb extends ia {
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -77) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        b.field_g = var8.h(1);
+        DialWidgetPainter.field_g = var8.h(1);
         if (param0 >= -50) {
           field_s = (RgbSprite[]) null;
         }
         if (var4 != 0) {
           IntKeyLookup.field_e = var8.h(1);
         } else {
-          IntKeyLookup.field_e = b.field_g;
+          IntKeyLookup.field_e = DialWidgetPainter.field_g;
         }
-        if (m.field_a == 1) {
-          gd.field_lb = var8.readUnsignedShort((byte) -60);
+        if (HuffmanDecoder.field_a == 1) {
+          ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
           uj.field_a = var8.h(1);
         } else {
-          if (m.field_a == 4) {
-            gd.field_lb = var8.readUnsignedShort((byte) -60);
+          if (HuffmanDecoder.field_a == 4) {
+            ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
             uj.field_a = var8.h(1);
           } else {
             uj.field_a = null;
-            gd.field_lb = 0;
+            ContentTransitionDialog.field_lb = 0;
           }
         }
         if (!param1) {
-          bg.field_F = cd.a(var8, 80, (byte) -100);
-          bc.field_ob = null;
+          WeightedCacheEntry.field_F = cd.a(var8, 80, (byte) -100);
+          ValidatedTextWidget.field_ob = null;
           return new na(param1);
         }
         var5 = var8.readUnsignedShort((byte) -60);
         try {
           var9 = ArchiveIndex.field_w.a(var5, -81);
-          bg.field_F = var9.i(1);
-          if (IntKeyLookup.field_e.equals(g.field_l)) {
+          WeightedCacheEntry.field_F = var9.i(1);
+          if (IntKeyLookup.field_e.equals(GrowableIntList.field_l)) {
             stackIn_25_0 = null;
           } else {
             stackIn_25_0 = var9.field_F;
           }
-          bc.field_ob = stackIn_25_0;
+          ValidatedTextWidget.field_ob = stackIn_25_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           sj.a("CC1", -66, (Throwable) ((Object) var6));
-          bg.field_F = null;
-          bc.field_ob = null;
+          WeightedCacheEntry.field_F = null;
+          ValidatedTextWidget.field_ob = null;
           return new na(param1);
         }
         return new na(param1);
     }
 
-    eb(jf param0) {
+    eb(EditableTextWidget param0) {
         super(param0);
     }
 
@@ -328,17 +328,17 @@ final class eb extends ia {
         Exception var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
-        ao var9 = null;
+        QuickChatPhraseDefinition var9 = null;
         var7 = SteelSentinels.obfuscationControl;
         var8 = rf.field_d;
         var2 = var8;
         var3 = var8.readUnsignedByte((byte) -87);
-        m.field_a = var3 & 127;
+        HuffmanDecoder.field_a = var3 & 127;
         stackIn_3_0 = (0 != (var3 & 128));
         oh.field_e = stackIn_3_0;
         be.field_b = var8.readUnsignedByte((byte) -121);
         ni.field_d = var8.g((byte) -116);
-        if (m.field_a != 2) {
+        if (HuffmanDecoder.field_a != 2) {
           dk.field_a = 0;
           t.field_k = 0;
         } else {
@@ -347,48 +347,48 @@ final class eb extends ia {
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -77) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        b.field_g = var8.h(1);
+        DialWidgetPainter.field_g = var8.h(1);
         if (param0 >= -50) {
           field_s = (RgbSprite[]) null;
         }
         if (var4 != 0) {
           IntKeyLookup.field_e = var8.h(1);
         } else {
-          IntKeyLookup.field_e = b.field_g;
+          IntKeyLookup.field_e = DialWidgetPainter.field_g;
         }
-        if (m.field_a == 1) {
-          gd.field_lb = var8.readUnsignedShort((byte) -60);
+        if (HuffmanDecoder.field_a == 1) {
+          ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
           uj.field_a = var8.h(1);
         } else {
-          if (m.field_a == 4) {
-            gd.field_lb = var8.readUnsignedShort((byte) -60);
+          if (HuffmanDecoder.field_a == 4) {
+            ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
             uj.field_a = var8.h(1);
           } else {
             uj.field_a = null;
-            gd.field_lb = 0;
+            ContentTransitionDialog.field_lb = 0;
           }
         }
         if (!param1) {
-          bg.field_F = cd.a(var8, 80, (byte) -100);
-          bc.field_ob = null;
+          WeightedCacheEntry.field_F = cd.a(var8, 80, (byte) -100);
+          ValidatedTextWidget.field_ob = null;
           return new na(param1);
         }
         var5 = var8.readUnsignedShort((byte) -60);
         try {
           var9 = ArchiveIndex.field_w.a(var5, -81);
-          bg.field_F = var9.i(1);
-          if (IntKeyLookup.field_e.equals(g.field_l)) {
+          WeightedCacheEntry.field_F = var9.i(1);
+          if (IntKeyLookup.field_e.equals(GrowableIntList.field_l)) {
             stackIn_25_0 = null;
           } else {
             stackIn_25_0 = var9.field_F;
           }
-          bc.field_ob = stackIn_25_0;
+          ValidatedTextWidget.field_ob = stackIn_25_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           sj.a("CC1", -66, (Throwable) ((Object) var6));
-          bg.field_F = null;
-          bc.field_ob = null;
+          WeightedCacheEntry.field_F = null;
+          ValidatedTextWidget.field_ob = null;
           return new na(param1);
         }
         return new na(param1);

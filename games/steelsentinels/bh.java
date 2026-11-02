@@ -49,9 +49,9 @@ final class bh {
           }
           SoftwareRaster.a(var7 << 4, var8 << 4, param1, var9.length - 1, var9);
           if (param4 &&
-            BattleTerrain.field_a < f.field_w.length) {
-            f.field_w[BattleTerrain.field_a] = var7;
-            nj.field_U[BattleTerrain.field_a] = var8;
+            BattleTerrain.field_a < SocketJs5Transport.field_w.length) {
+            SocketJs5Transport.field_w[BattleTerrain.field_a] = var7;
+            AccountTermsPanel.field_U[BattleTerrain.field_a] = var8;
             BattleTerrain.field_a = BattleTerrain.field_a + 1;
           }
         }
@@ -68,42 +68,42 @@ final class bh {
         if (param2 != -49) {
           return;
         }
-        if (null != kc.field_y) {
-          var3 = kc.field_y.a(-2, param1);
+        if (null != DelayedServerPacket.field_y) {
+          var3 = DelayedServerPacket.field_y.a(-2, param1);
           if (0 != var3) {
             if (2 == var3 &&
-              kc.field_y.field_S != null &&
-              !kc.field_y.field_S.equals("")) {
-              if (91 == kc.field_y.field_S.charAt(0)) {
-                var4 = kc.field_y.field_S;
+              DelayedServerPacket.field_y.field_S != null &&
+              !DelayedServerPacket.field_y.field_S.equals("")) {
+              if (91 == DelayedServerPacket.field_y.field_S.charAt(0)) {
+                var4 = DelayedServerPacket.field_y.field_S;
                 var5 = var4;
                 var5Lifetime2 = var4;
               } else {
-                var7 = (CharSequence) ((Object) kc.field_y.field_S);
-                var4 = ui.a(1, var7);
+                var7 = (CharSequence) ((Object) DelayedServerPacket.field_y.field_S);
+                var4 = AlphaContainer.a(1, var7);
               }
               var5Lifetime1 = null;
-              if (ol.field_bc == 0) {
+              if (QuickChatHelpDialog.field_bc == 0) {
                 var5Lifetime1 = lj.a(var4, (byte) -79, param0);
               }
-              if (ol.field_bc == 1) {
-                var5Lifetime1 = nl.a(var4, param0, true);
+              if (QuickChatHelpDialog.field_bc == 1) {
+                var5Lifetime1 = DialWidget.a(var4, param0, true);
               }
-              if (ol.field_bc == 2) {
+              if (QuickChatHelpDialog.field_bc == 2) {
                 var5Lifetime1 = dd.a(param0, (byte) 55, var4);
               }
-              if (3 == ol.field_bc) {
+              if (3 == QuickChatHelpDialog.field_bc) {
                 var5Lifetime1 = rn.a(var4, param0, var4, true);
               }
               if (var5Lifetime1 != null) {
                 var6 = (String) null;
                 sj.a((String) null, (String) (var5Lifetime1), 0, (byte) 21, var4, 2);
               }
-              ol.field_bc = -1;
-              kc.field_y = null;
+              QuickChatHelpDialog.field_bc = -1;
+              DelayedServerPacket.field_y = null;
             } else {
-              ol.field_bc = -1;
-              kc.field_y = null;
+              QuickChatHelpDialog.field_bc = -1;
+              DelayedServerPacket.field_y = null;
             }
           }
         }
@@ -181,7 +181,7 @@ final class bh {
           }
           return true;
         }
-        return 0 == ge.field_j ? true : false;
+        return 0 == DirectByteStorage.field_j ? true : false;
     }
 
     final SentinelCommand a(SentinelCommand param0, boolean param1, int param2) {
@@ -316,7 +316,7 @@ final class bh {
             }
             else {
               if (!this.field_r &&
-                -100 + var6.endTick + ka.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][2] == -1 + param2 &&
+                -100 + var6.endTick + ModalStack.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][2] == -1 + param2 &&
                 var6.actionType == 3 &&
                 !this.field_j) {
                 this.field_a = 0;
@@ -353,7 +353,7 @@ final class bh {
               }
             } else {
               if (!this.field_r &&
-                var6Lifetime1.endTick - 100 + ka.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][2] == param2 - 1 &&
+                var6Lifetime1.endTick - 100 + ModalStack.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][2] == param2 - 1 &&
                 3 == var6Lifetime1.actionType) {
                 if (this.field_j) {
                   var6Lifetime1 = (SentinelCommand) (this.field_c.secondaryCommands.next((byte) -45));
@@ -398,15 +398,15 @@ final class bh {
                     this.field_b = -1;
                   }
                   var4 = param0;
-                  if (sn.field_n) {
-                    sn.field_n = false;
-                    pm.field_db.clear(6);
+                  if (BoundedRandomAccessFile.field_n) {
+                    BoundedRandomAccessFile.field_n = false;
+                    LoginForm.field_db.clear(6);
                     this.a(param0, (byte) 43);
                   }
                 } else {
                   if (param0.actionType != 0) {
                     cf.field_q = -1;
-                    l.field_g = -1;
+                    NodeHashTableIterator.field_g = -1;
                   } else {
                     if (this.field_g < param0.targetWorldX) {
                       this.field_b = 1;
@@ -414,8 +414,8 @@ final class bh {
                       this.field_b = -1;
                     }
                     var4 = param0;
-                    if (sn.field_n) {
-                      sn.field_n = false;
+                    if (BoundedRandomAccessFile.field_n) {
+                      BoundedRandomAccessFile.field_n = false;
                       this.a(param0, (byte) 35);
                     }
                   }
@@ -496,7 +496,7 @@ final class bh {
                   stackIn_209_0 = this;
                   stackIn_209_1 = this.field_g;
                   stackIn_209_2 = this.field_b;
-                  stackIn_209_3 = ka.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25];
+                  stackIn_209_3 = ModalStack.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25];
                   if (0 == this.field_a) {
                     stackIn_210_0 = this;
                     stackIn_210_4 = 0;
@@ -656,8 +656,8 @@ final class bh {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (kc.field_y != null) {
-          kc.field_y.a(param1, (byte) 127);
+        if (DelayedServerPacket.field_y != null) {
+          DelayedServerPacket.field_y.a(param1, (byte) 127);
         }
         if (param0 != -115) {
           field_o = (String) null;
@@ -909,7 +909,7 @@ final class bh {
           var17 = 5;
           var18 = 1;
         }
-        var10Lifetime2 = -kg.cosine16(param3 >> 3, (byte) -101) * 100 >> 16;
+        var10Lifetime2 = -ScrollContainer.cosine16(param3 >> 3, (byte) -101) * 100 >> 16;
         var13Lifetime1 = 100;
         if (null != IsaacRandom.field_f[param0 - 17]) {
           var19_int = IsaacRandom.field_f[param0 - 17][0];
@@ -1201,7 +1201,7 @@ final class bh {
             var13 = 5;
             var14 = 1;
           }
-          var6Lifetime2 = -kg.cosine16(param2.aimAngle >> 3, (byte) -87) * 100 >> 16;
+          var6Lifetime2 = -ScrollContainer.cosine16(param2.aimAngle >> 3, (byte) -87) * 100 >> 16;
           var9Lifetime1 = 100;
           if (null != IsaacRandom.field_f[-17 + param1.componentId]) {
             var15_int = -param1.field_G + IsaacRandom.field_f[param1.componentId - 17][0];
@@ -1229,9 +1229,9 @@ final class bh {
             var15.targetWorldY = param2.targetWorldY;
             var15.targetWorldX = param2.targetWorldX;
           }
-          pm.field_db.addLast(3, var15);
+          LoginForm.field_db.addLast(3, var15);
           cf.field_q = var15.worldY - this.field_q;
-          l.field_g = -this.field_g + var15.worldX;
+          NodeHashTableIterator.field_g = -this.field_g + var15.worldX;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1268,7 +1268,7 @@ final class bh {
           this.field_q = this.field_c.worldY;
           this.field_n = 16777215;
           this.field_m = this.field_c.velocityY;
-          this.field_e = ka.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][0];
+          this.field_e = ModalStack.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][0];
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -1276,9 +1276,9 @@ final class bh {
 
     final static void a(int param0) {
         int var1 = (re.field_Z - 640) / 2;
-        int var2 = an.field_h * an.field_h;
+        int var2 = AudioService.field_h * AudioService.field_h;
         int var3 = -(SentinelCommand.field_t * SentinelCommand.field_t) + var2;
-        mg.field_Ub.a(param0 ^ 0, 90, -210 + (SoftwareRaster.field_j - 4), -(199 * var3 / var2) + var1, 199);
+        QuickChatMenu.field_Ub.a(param0 ^ 0, 90, -210 + (SoftwareRaster.field_j - 4), -(199 * var3 / var2) + var1, 199);
         pc.field_q.a(param0 ^ param0, 0, -4 + (-120 + SoftwareRaster.field_j), 438 * var3 / var2 + (202 + var1), 438);
     }
 

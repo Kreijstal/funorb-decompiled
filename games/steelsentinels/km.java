@@ -10,11 +10,11 @@ final class km {
     static int field_g;
     static RgbSprite[] field_e;
     static String field_a;
-    static ql field_j;
+    static SocialListPanel field_j;
     static String field_d;
     String[] field_b;
     static int field_l;
-    static pn field_k;
+    static SystemTaskService field_k;
 
     final static boolean a(int param0) {
         if (param0 > -97) {
@@ -24,11 +24,11 @@ final class km {
     }
 
     final static void a(boolean param0) {
-        wc.field_f = null;
+        MouseInputHandler.field_f = null;
         if (param0) {
           field_c = -88;
         }
-        ll.field_j = null;
+        UiTheme.field_j = null;
     }
 
     final static byte[] a(int param0, CharSequence param1) {
@@ -48,7 +48,7 @@ final class km {
           var2_int = param1.length();
           var3 = new byte[var2_int];
           if (param0 > -12) {
-            field_k = (pn) null;
+            field_k = (SystemTaskService) null;
           }
           for (var4 = 0; var2_int > var4; var4++) {
             {
@@ -170,7 +170,7 @@ final class km {
         field_d = null;
         field_k = null;
         if (param0 != -27) {
-          field_j = (ql) null;
+          field_j = (SocialListPanel) null;
         }
         field_h = null;
     }
@@ -220,10 +220,10 @@ final class km {
         if (var3 == 2) {
           for (var3 = 0; FunOrbClient.field_z.length > var3; var3++) {
             var4_int = FunOrbClient.field_z[var3];
-            var22 = nl.a(var4_int, (byte) 127);
+            var22 = DialWidget.a(var4_int, (byte) 127);
             for (var6 = 0; var22.length - 8 > var6; var6++) {
               if (var22[var6] == param0) {
-                return db.a(si.field_F, -66, new String[]{cd.field_c[var3]});
+                return SocketConnector.a(si.field_F, -66, new String[]{cd.field_c[var3]});
               }
             }
           }
@@ -234,7 +234,7 @@ final class km {
             var3 = 0;
             for (var4_int = 0; var4_int < FunOrbClient.field_z.length; var4_int++) {
               var5 = FunOrbClient.field_z[var4_int];
-              var24 = nl.a(var5, (byte) 124);
+              var24 = DialWidget.a(var5, (byte) 124);
               for (var7 = 0; var7 < -8 + var24.length; var7++) {
                 if (var24[var7] != param0) {
                   continue;
@@ -247,7 +247,7 @@ final class km {
             var5Lifetime1 = 0;
             for (var6 = 0; var6 < FunOrbClient.field_z.length; var6++) {
               var7Lifetime1 = FunOrbClient.field_z[var6];
-              var25 = nl.a(var7Lifetime1, (byte) 123);
+              var25 = DialWidget.a(var7Lifetime1, (byte) 123);
               for (var9 = 0; -8 + var25.length > var9; var9++) {
                 if (var25[var9] != param0) {
                   continue;
@@ -272,10 +272,10 @@ final class km {
           if (decompiledFrameRemainder0) {
             for (var3 = 0; FunOrbClient.field_z.length > var3; var3++) {
               var4_int = FunOrbClient.field_z[var3];
-              var23 = nl.a(var4_int, (byte) 126);
+              var23 = DialWidget.a(var4_int, (byte) 126);
               for (var6 = 0; -8 + var23.length > var6; var6++) {
                 if (var23[var6] == param0) {
-                  return db.a(nj.field_T, -54, new String[]{cd.field_c[var3]});
+                  return SocketConnector.a(AccountTermsPanel.field_T, -54, new String[]{cd.field_c[var3]});
                 }
               }
             }

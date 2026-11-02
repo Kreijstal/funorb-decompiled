@@ -32,10 +32,10 @@ final class NodeDeque {
         }
     }
 
-    final static mn d(int param0) {
+    final static QuickChatCategory d(int param0) {
         int var1_int = 0;
-        mn var2 = null;
-        mn stackIn_5_0 = null;
+        QuickChatCategory var2 = null;
+        QuickChatCategory stackIn_5_0 = null;
         Object stackIn_8_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
@@ -55,7 +55,7 @@ final class NodeDeque {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
             stackIn_8_0 = null;
-            return (mn) (stackIn_8_0);
+            return (QuickChatCategory) (stackIn_8_0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -138,7 +138,7 @@ final class NodeDeque {
         RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          var2 = (ArticulatedPart) (ao.field_H.first(13058));
+          var2 = (ArticulatedPart) (QuickChatPhraseDefinition.field_H.first(13058));
           if (param1 != 67) {
             NodeDeque.e((byte) 116);
           }
@@ -147,7 +147,7 @@ final class NodeDeque {
               stackIn_7_0 = var2;
               return stackIn_7_0;
             }
-            var2 = (ArticulatedPart) (ao.field_H.next((byte) -87));
+            var2 = (ArticulatedPart) (QuickChatPhraseDefinition.field_H.next((byte) -87));
             if (var3 == 0) {
               continue;
             }
@@ -169,7 +169,7 @@ final class NodeDeque {
         RuntimeException var1_ref = null;
         int var2 = 0;
         try {
-          var1 = new IndexedSprite(un.field_n, eb.field_n, rl.field_a[0], oa.field_M[0], le.field_L[0], ca.field_r[0], dl.field_L[0], ba.field_d);
+          var1 = new IndexedSprite(un.field_n, eb.field_n, rl.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], UiContainer.field_L[0], ba.field_d);
           var2 = -124 % ((param0 + 33) / 62);
           NodeHashTable.a(9324);
           stackIn_1_0 = var1;
@@ -365,7 +365,7 @@ final class NodeDeque {
         }
     }
 
-    final void a(IntrusiveNode param0, int param1) {
+    final void addLast(IntrusiveNode param0, int param1) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -410,27 +410,27 @@ final class NodeDeque {
           var3 = -sl.field_m + var1_long;
           if (var3 <= 30000L) {
             var5 = 3000;
-            boolean decompiledSharedTail0 = !(sb.field_Z >= 7);
+            boolean decompiledSharedTail0 = !(Checkbox.field_Z >= 7);
             if (!decompiledSharedTail0) {
               var5 = 12000;
               decompiledSharedTail0 = (var6 != 0);
             }
             if (decompiledSharedTail0) {
-              if (sb.field_Z >= 5) {
+              if (Checkbox.field_Z >= 5) {
                 var5 = 9000;
                 if (var6 != 0 &&
-                  sb.field_Z >= 3) {
+                  Checkbox.field_Z >= 3) {
                   var5 = 6000;
                 }
               } else {
-                if (sb.field_Z >= 3) {
+                if (Checkbox.field_Z >= 3) {
                   var5 = 6000;
                 }
               }
             }
             if (var3 > (long)var5) {
               sl.field_m = var1_long;
-              sb.field_Z = sb.field_Z + 1;
+              Checkbox.field_Z = Checkbox.field_Z + 1;
               return true;
             }
             if (var6 == 0) {
@@ -440,7 +440,7 @@ final class NodeDeque {
               return false;
             }
           }
-          sb.field_Z = 0;
+          Checkbox.field_Z = 0;
           sl.field_m = var1_long;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -624,8 +624,8 @@ final class NodeDeque {
                 }
                 if (param5) {
                   ResourceArchive.field_l[var24Lifetime1] = var28Lifetime1 >> cj.field_j;
-                  sb.field_V[var24Lifetime1] = var29Lifetime1 >> cj.field_j;
-                  jd.field_lb[var24Lifetime1] = var30;
+                  Checkbox.field_V[var24Lifetime1] = var29Lifetime1 >> cj.field_j;
+                  AccountNoticeDialog.field_lb[var24Lifetime1] = var30;
                 }
                 var24Lifetime1++;
                 continue;
@@ -654,8 +654,8 @@ final class NodeDeque {
                   var26Lifetime1Lifetime1 = param4.field_S[var24Lifetime1];
                   var27Lifetime1Lifetime1 = param4.field_Q[var24Lifetime1];
                   re.field_bb[var24Lifetime1] = var9 + (var27Lifetime1Lifetime1 * var18 + (var12 * var25Lifetime1Lifetime1 + var15 * var26Lifetime1Lifetime1) >> 16);
-                  an.field_d[var24Lifetime1] = (var25Lifetime1Lifetime1 * var13 - (-(var26Lifetime1Lifetime1 * var16) - var27Lifetime1Lifetime1 * var19) >> 16) + var10;
-                  kh.field_u[var24Lifetime1] = var11 + (var25Lifetime1Lifetime1 * var14 + var17 * var26Lifetime1Lifetime1 + var27Lifetime1Lifetime1 * var20 >> 16);
+                  AudioService.field_d[var24Lifetime1] = (var25Lifetime1Lifetime1 * var13 - (-(var26Lifetime1Lifetime1 * var16) - var27Lifetime1Lifetime1 * var19) >> 16) + var10;
+                  ThreeSliceButtonPainter.field_u[var24Lifetime1] = var11 + (var25Lifetime1Lifetime1 * var14 + var17 * var26Lifetime1Lifetime1 + var27Lifetime1Lifetime1 * var20 >> 16);
                   var25Lifetime1Lifetime1 = param4.field_a[var24Lifetime1];
                   var26Lifetime1Lifetime1 = param4.field_X[var24Lifetime1];
                   var27Lifetime1Lifetime1 = param4.field_B[var24Lifetime1];
@@ -701,7 +701,7 @@ final class NodeDeque {
                   var21Lifetime2 = param4.field_F[var18];
                   tc.field_A[var18] = var15 * var21Lifetime2 + var20 * var12 + var19 * var9 >> 16;
                   hm.field_c[var18] = var10 * var19 + var20 * var13 + var16 * var21Lifetime2 >> 16;
-                  pi.field_e[var18] = var14 * var20 + (var19 * var11 + var17 * var21Lifetime2) >> 16;
+                  DelegatingCanvas.field_e[var18] = var14 * var20 + (var19 * var11 + var17 * var21Lifetime2) >> 16;
                   var18++;
                 }
               }
@@ -745,7 +745,7 @@ final class NodeDeque {
           if (param0 != 0) {
             NodeDeque.d(10);
           }
-          stackIn_4_0 = bm.b(param1, -2, 1, param2);
+          stackIn_4_0 = AccountMessagePanel.b(param1, -2, 1, param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -764,8 +764,8 @@ final class NodeDeque {
           }
           if (NodeIterator.a(2)) {
             t.a((byte) 125, param5, param4, param6);
-            if (null != an.field_i &&
-              an.field_i.a(param4, param0 ^ 125, param3, param6, param1)) {
+            if (null != AudioService.field_i &&
+              AudioService.field_i.a(param4, param0 ^ 125, param3, param6, param1)) {
               rh.a(false);
               param4 = false;
             }

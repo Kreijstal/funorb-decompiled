@@ -11,8 +11,8 @@ final class ok {
     static int field_a;
     static String field_h;
 
-    final static void a(int param0, pn param1, java.awt.Frame param2) {
-        wj var3 = null;
+    final static void a(int param0, SystemTaskService param1, java.awt.Frame param2) {
+        SystemTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -27,10 +27,10 @@ final class ok {
           while (true) {
             var3 = param1.a(param2, -1463474960);
             while (var3.field_a == 0) {
-              a.a((byte) 121, 10L);
+              MouseWheelInput.a((byte) 121, 10L);
             }
             if (var3.field_a != 1) {
-              a.a((byte) 118, 100L);
+              MouseWheelInput.a((byte) 118, 100L);
               continue;
             }
             break;
@@ -41,7 +41,7 @@ final class ok {
             return;
           }
           var5 = (java.awt.Frame) null;
-          ok.a(27, (pn) null, (java.awt.Frame) null);
+          ok.a(27, (SystemTaskService) null, (java.awt.Frame) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,7 +65,7 @@ final class ok {
 
     final static void a(boolean param0, boolean param1, int param2) {
         String var4 = (String) null;
-        nm.a((String) null, param0, param1, 12);
+        EmailAvailabilityValidator.a((String) null, param0, param1, 12);
         int var3 = -36 % ((param2 + 22) / 36);
     }
 
@@ -118,7 +118,7 @@ final class ok {
           }
           var4_int = -1;
           for (var5 = param0; param2 > var5; var5++) {
-            var4_int = var4_int >>> 8 ^ kh.field_r[255 & (var4_int ^ param1[var5])];
+            var4_int = var4_int >>> 8 ^ ThreeSliceButtonPainter.field_r[255 & (var4_int ^ param1[var5])];
           }
           var4_int = ~var4_int;
           stackIn_7_0 = var4_int;

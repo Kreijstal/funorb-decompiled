@@ -31,7 +31,7 @@ final class hk extends SceneWidget {
     String[] field_hc;
     static String field_Jc;
     int field_Ub;
-    static cb field_oc;
+    static DiskCacheWorker field_oc;
     static int[] quarterSine16;
     SceneWidget field_Wb;
     static String field_jc;
@@ -340,13 +340,13 @@ final class hk extends SceneWidget {
             ml.a(param0 ^ 87, var4, param1);
             var4 = (cf) (Explosion.field_A.next((byte) -124));
           }
-          var2 = ic.field_D.first(param0 ^ 13140);
+          var2 = MidiPcmStream.field_D.first(param0 ^ 13140);
           if (param0 != 86) {
             field_Yb = (String) null;
           }
           while (var2 != null) {
             eh.a(param1, -17274);
-            var2 = ic.field_D.next((byte) -110);
+            var2 = MidiPcmStream.field_D.next((byte) -110);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

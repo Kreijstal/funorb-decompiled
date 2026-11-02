@@ -42,7 +42,7 @@ final class oc {
               return true;
             }
             var4 = FunOrbClient.field_z[var3_int];
-            var12 = nl.a(var4, (byte) 124);
+            var12 = DialWidget.a(var4, (byte) 124);
             if (param2) {
               stackIn_18_0 = var12.length - 8;
             } else {
@@ -136,9 +136,9 @@ final class oc {
             param1.field_M.clear(param0 ^ 2);
           }
           var2_int = 0;
-          var3 = 110 - pf.field_n - param0;
+          var3 = 110 - CheckboxPainter.field_n - param0;
           var22 = new PartInstruction[]{};
-          var20 = hl.field_v.a(var22, -21636, fg.field_Ob);
+          var20 = hl.field_v.a(var22, -21636, RegistrationRequestDialog.field_Ob);
           var4 = var20;
           for (var5_int = 1; var5_int < var20.length; var5_int++) {
             if (0 != (var20[var5_int].field_q & 2)) {
@@ -161,7 +161,7 @@ final class oc {
             var7Lifetime1 = var23[var6];
             var2_int += 4;
             var8 = 0;
-            if (null == ti.field_B) {
+            if (null == ImageProducerRasterBuffer.field_B) {
               if (t.field_h >= 0) {
                 var24 = NodeDeque.a(t.field_h, (byte) 67);
                 if (var24 != null &&
@@ -170,7 +170,7 @@ final class oc {
                 }
               }
             } else {
-              if ((var7Lifetime1.field_q & ti.field_B.field_Q) != 0) {
+              if ((var7Lifetime1.field_q & ImageProducerRasterBuffer.field_B.field_Q) != 0) {
                 var8 = 1;
               }
             }
@@ -180,11 +180,11 @@ final class oc {
             if (var8 == 0) {
               stackIn_27_0 = null;
               stackIn_27_1 = null;
-              stackIn_27_3 = ei.field_n;
+              stackIn_27_3 = NameAvailabilityValidator.field_n;
             } else {
               stackIn_27_0 = null;
               stackIn_27_1 = null;
-              stackIn_27_3 = sb.field_Y;
+              stackIn_27_3 = Checkbox.field_Y;
             }
             var25 = new SceneWidget(stackIn_26_2, stackIn_27_3);
             var25.a(0, var2_int, 78, 4, var3);
@@ -195,8 +195,8 @@ final class oc {
             var10.field_Fb = 2;
             var10.a(0, 64, 12, 2, -4 + var3);
             var11 = var7Lifetime1.field_q;
-            var12 = kh.field_v.a((byte) 2, var7Lifetime1);
-            var10.field_L = (BitmapFont) ((Object) fk.field_d);
+            var12 = ThreeSliceButtonPainter.field_v.a((byte) 2, var7Lifetime1);
+            var10.field_L = (BitmapFont) ((Object) BoundedUrlRequest.field_d);
             var26 = var7Lifetime1.attachedPart;
             if (var26 != null) {
               if (var26.componentId == var12) {
@@ -211,10 +211,10 @@ final class oc {
                 var10.field_S = tc.field_r;
               }
               if ((var11 & 8) > 0) {
-                var10.field_S = ti.field_o;
+                var10.field_S = ImageProducerRasterBuffer.field_o;
               }
             }
-            var10.field_S = bg.a(var10.field_S, -(var10.field_ub * 2) + var10.field_zb, (byte) -45, var10.field_L);
+            var10.field_S = WeightedCacheEntry.a(var10.field_S, -(var10.field_ub * 2) + var10.field_zb, (byte) -45, var10.field_L);
             var25.a(var10, 120);
             param1.a(var25, 124);
             var14 = new SceneWidget(-1L, (SceneWidget) null);
@@ -226,18 +226,18 @@ final class oc {
             var25.a(var14, param0 + 117);
             if (oh.field_f >= param1.field_Rb &&
               param1.field_zb + param1.field_Rb > oh.field_f &&
-              var2_int + param1.field_cb <= pi.field_c &&
-              pi.field_c < 78 + param1.field_cb + var2_int) {
-              if (ti.field_B == null) {
+              var2_int + param1.field_cb <= DelegatingCanvas.field_c &&
+              DelegatingCanvas.field_c < 78 + param1.field_cb + var2_int) {
+              if (ImageProducerRasterBuffer.field_B == null) {
                 var25.field_I = be.field_f;
               }
               lj.field_h = var7Lifetime1;
             }
             if (0 <= var12) {
-              var15_ref_gh = new SceneWidget("", ei.field_n);
+              var15_ref_gh = new SceneWidget("", NameAvailabilityValidator.field_n);
               var15_ref_gh.field_S = NodeHashTable.field_h;
               var15_ref_gh.a(param0 - 4, 2, 10, 2, 10);
-              var15_ref_gh.field_L = (BitmapFont) ((Object) fk.field_d);
+              var15_ref_gh.field_L = (BitmapFont) ((Object) BoundedUrlRequest.field_d);
               var15_ref_gh.field_I = null;
               var15_ref_gh.field_nb = 65535;
               var25.a(var15_ref_gh, 123);
@@ -271,7 +271,7 @@ final class oc {
         if (param0 != 84) {
           field_f = (int[]) null;
         }
-        stackIn_6_0 = (dl.field_J != null) && (null != dl.field_J.i(-1850));
+        stackIn_6_0 = (UiContainer.field_J != null) && (null != UiContainer.field_J.i(-1850));
         return stackIn_6_0;
     }
 
@@ -298,7 +298,7 @@ final class oc {
         int var8Lifetime2;
         var10 = SteelSentinels.obfuscationControl;
         try {
-          gd.field_mb = param1;
+          ContentTransitionDialog.field_mb = param1;
           nc.field_q = true;
           var11 = param2;
           if (!param4) {
@@ -307,75 +307,75 @@ final class oc {
             stackIn_4_0 = cf.field_v;
           }
           var6 = stackIn_4_0;
-          if (gd.field_mb == 0) {
+          if (ContentTransitionDialog.field_mb == 0) {
             var7 = tc.a(480, re.field_ib, 75, var11, lj.field_a);
             var8 = 3 + var7;
-            an.field_g = new String[var8];
+            AudioService.field_g = new String[var8];
             kk.field_g = new int[var8];
             for (var9 = 0; var8 > var9; var9++) {
               kk.field_g[var9] = -1;
             }
-            cb.field_c = new int[2];
+            DiskCacheWorker.field_c = new int[2];
             for (var9 = 0; var7 > var9; var9++) {
-              an.field_g[var9] = lj.field_a[var9];
+              AudioService.field_g[var9] = lj.field_a[var9];
             }
-            an.field_g[var8 - 3] = "";
-            an.field_g[var8 - 2] = var6;
+            AudioService.field_g[var8 - 3] = "";
+            AudioService.field_g[var8 - 2] = var6;
             kk.field_g[-2 + var8] = 0;
-            cb.field_c[0] = 1;
-            an.field_g[-1 + var8] = jf.field_cb;
+            DiskCacheWorker.field_c[0] = 1;
+            AudioService.field_g[-1 + var8] = EditableTextWidget.field_cb;
             kk.field_g[-1 + var8] = 1;
-            cb.field_c[1] = 2;
+            DiskCacheWorker.field_c[1] = 2;
           } else {
-            if (gd.field_mb != 1) {
+            if (ContentTransitionDialog.field_mb != 1) {
               throw new IllegalArgumentException();
             }
             var7 = tc.a(480, re.field_ib, 75, var11, lj.field_a);
             var8 = var7 + 2;
-            an.field_g = new String[var8];
+            AudioService.field_g = new String[var8];
             kk.field_g = new int[var8];
             for (var9 = 0; var9 < var8; var9++) {
               kk.field_g[var9] = -1;
             }
-            cb.field_c = new int[1];
+            DiskCacheWorker.field_c = new int[1];
             for (var9 = 0; var9 < var7; var9++) {
-              an.field_g[var9] = lj.field_a[var9];
+              AudioService.field_g[var9] = lj.field_a[var9];
             }
-            an.field_g[-2 + var8] = "";
-            an.field_g[var8 - 1] = jf.field_cb;
+            AudioService.field_g[-2 + var8] = "";
+            AudioService.field_g[var8 - 1] = EditableTextWidget.field_cb;
             kk.field_g[-1 + var8] = 0;
-            cb.field_c[0] = 2;
+            DiskCacheWorker.field_c[0] = 2;
           }
-          se.field_c.field_m = cb.field_c.length;
+          se.field_c.field_m = DiskCacheWorker.field_c.length;
           var7Lifetime1 = 0;
-          for (var8Lifetime1 = 0; an.field_g.length > var8Lifetime1; var8Lifetime1++) {
-            stackIn_25_0 = an.field_g[var8Lifetime1];
+          for (var8Lifetime1 = 0; AudioService.field_g.length > var8Lifetime1; var8Lifetime1++) {
+            stackIn_25_0 = AudioService.field_g[var8Lifetime1];
             stackIn_26_1 = !(kk.field_g[var8Lifetime1] < 0);
             var9Lifetime1 = rg.a(stackIn_25_0, stackIn_26_1, (byte) -120);
             if (kk.field_g[var8Lifetime1] != -1) {
-              var9Lifetime1 = var9Lifetime1 + 2 * h.field_U;
+              var9Lifetime1 = var9Lifetime1 + 2 * DraggableWidget.field_U;
             }
             if (var7Lifetime1 < var9Lifetime1) {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          SceneWidget.field_hb = (id.field_ac + tf.field_c << 1) * se.field_c.field_m;
-          hb.field_b = -(var7Lifetime1 >> 1) + (var7Lifetime1 + vg.field_f);
-          hl.field_q = vg.field_f - (var7Lifetime1 >> 1);
+          SceneWidget.field_hb = (IconLabelControl.field_ac + tf.field_c << 1) * se.field_c.field_m;
+          IterableDualNodeDeque.field_b = -(var7Lifetime1 >> 1) + (var7Lifetime1 + ProxyAuthenticationException.field_f);
+          hl.field_q = ProxyAuthenticationException.field_f - (var7Lifetime1 >> 1);
           if (param0 < 46) {
             return;
           }
-          for (var8Lifetime2 = 0; var8Lifetime2 < an.field_g.length; var8Lifetime2++) {
+          for (var8Lifetime2 = 0; var8Lifetime2 < AudioService.field_g.length; var8Lifetime2++) {
             stackIn_39_0 = SceneWidget.field_hb;
             if (0 <= kk.field_g[var8Lifetime2]) {
-              stackIn_40_1 = ig.field_e;
+              stackIn_40_1 = WhirlpoolHasher.field_e;
             } else {
               stackIn_40_1 = IntrusiveNode.field_e;
             }
             SceneWidget.field_hb = stackIn_39_0 + stackIn_40_1;
           }
-          lk.field_W = qg.field_a - (SceneWidget.field_hb >> 1);
-          se.field_c.a(param3, 0, 0, se.a((byte) 32, oh.field_f, pi.field_c));
+          ValidationIndicator.field_W = MarkerSliderPainter.field_a - (SceneWidget.field_hb >> 1);
+          se.field_c.a(param3, 0, 0, se.a((byte) 32, oh.field_f, DelegatingCanvas.field_c));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

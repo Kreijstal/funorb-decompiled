@@ -50,12 +50,12 @@ final class na {
           var2 = var10.readUnsignedByte((byte) -87);
           var3 = var10.readUnsignedByte((byte) -80);
           if (var2 == 0) {
-            var4 = (ob) (ti.field_z.first(13058));
+            var4 = (ob) (ImageProducerRasterBuffer.field_z.first(13058));
             if (var4 == null) {
-              pm.m(123);
+              LoginForm.m(123);
               return;
             }
-            var5 = jg.field_f - var10.position;
+            var5 = ViewportController.field_f - var10.position;
             var12 = var4.field_p;
             var11 = var12;
             var6 = var11;
@@ -70,11 +70,11 @@ final class na {
           }
           if (var2 == 1) {
             var4_int = var10.f(27);
-            var5_ref_rn = (rn) (sn.field_r.first(13058));
+            var5_ref_rn = (rn) (BoundedRandomAccessFile.field_r.first(13058));
             while (var5_ref_rn != null) {
               if (var5_ref_rn.field_p != var3 ||
                 var4_int != var5_ref_rn.field_x) {
-                var5_ref_rn = (rn) (sn.field_r.next((byte) -26));
+                var5_ref_rn = (rn) (BoundedRandomAccessFile.field_r.next((byte) -26));
                 continue;
               }
               break;
@@ -83,11 +83,11 @@ final class na {
               var5_ref_rn.unlink(4);
               return;
             }
-            pm.m(73);
+            LoginForm.m(73);
             return;
           }
           sj.a("LR1: " + ci.a((byte) 94), -102, (Throwable) null);
-          pm.m(83);
+          LoginForm.m(83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -105,10 +105,10 @@ final class na {
           if (param0 != 58) {
             this.field_k = 23;
           }
-          if (qc.field_P != 2) {
+          if (DisplayNameForm.field_P != 2) {
             return 0;
           }
-          if (pf.a(this.field_p, param0 ^ -43)) {
+          if (CheckboxPainter.a(this.field_p, param0 ^ -43)) {
             return 1;
           }
           return 0;
@@ -169,13 +169,13 @@ final class na {
           RuntimeException var2_ref2 = null;
           var7 = SteelSentinels.obfuscationControl;
           try {
-            if (sn.field_d) {
+            if (BoundedRandomAccessFile.field_d) {
               return true;
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (hn.a(param0, (byte) -96, "getcookies"));
-              var4 = ka.a(';', false, var3);
+              var3 = (String) (JavaScriptBridge.callWindowFunction(param0, (byte) -96, "getcookies"));
+              var4 = ModalStack.a(';', false, var3);
               for (var5 = param1; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -210,16 +210,16 @@ final class na {
 
     na(boolean param0) {
         this.field_p = IntKeyLookup.field_e;
-        this.field_d = b.field_g;
+        this.field_d = DialWidgetPainter.field_g;
         this.field_t = be.field_b;
         this.field_w = dk.field_a;
-        this.field_e = gd.field_lb;
+        this.field_e = ContentTransitionDialog.field_lb;
         this.field_s = uj.field_a;
-        this.field_k = m.field_a;
+        this.field_k = HuffmanDecoder.field_a;
         this.field_j = ni.field_d;
-        this.field_o = bg.field_F;
+        this.field_o = WeightedCacheEntry.field_F;
         if (param0) {
-          this.field_l = bc.field_ob;
+          this.field_l = ValidatedTextWidget.field_ob;
         } else {
           this.field_l = null;
         }

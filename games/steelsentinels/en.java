@@ -25,10 +25,10 @@ final class en {
 
     final static void a(byte param0, ak param1, int param2, int param3, ak param4, int param5) {
         try {
-          h.field_U = param3;
-          qh.field_Xb = param4;
+          DraggableWidget.field_U = param3;
+          IconTextComponent.field_Xb = param4;
           tf.field_c = param5;
-          id.field_ac = param2;
+          IconLabelControl.field_ac = param2;
           rg.field_b = param1;
           if (param0 > -46) {
             en.a(70);
@@ -40,11 +40,11 @@ final class en {
 
     private final static void a(int param0, String param1, boolean param2, float param3) {
         try {
-          if (r.field_r == null) {
-            r.field_r = new ki(ag.field_p, ba.field_f);
-            ag.field_p.a(r.field_r, 79);
+          if (ProxySocketConnector.field_r == null) {
+            ProxySocketConnector.field_r = new LoadingProgressDialog(GradientOutlineTextPainter.field_p, ba.field_f);
+            GradientOutlineTextPainter.field_p.pushPanel(ProxySocketConnector.field_r, 79);
           }
-          r.field_r.a(114, param2, param1, param3);
+          ProxySocketConnector.field_r.setProgress(114, param2, param1, param3);
           if (param0 > -77) {
             en.a(-66);
           }
@@ -64,8 +64,8 @@ final class en {
             ak var3 = (ak) null;
             en.a((byte) 126, (ak) null, -34, -85, (ak) null, -5);
           }
-          en.a(-84, od.field_i, rg.field_h, q.field_l);
-          kg.a(0, 0, 28594, param0);
+          en.a(-84, ClientException.field_i, rg.field_h, IterableNodeHashTable.field_l);
+          ScrollContainer.a(0, 0, 28594, param0);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "en.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -73,7 +73,7 @@ final class en {
 
     final static void a(int param0) {
         int var1 = -81 % ((0 - param0) / 52);
-        s.a(10);
+        SpriteCheckboxPainter.a(10);
     }
 
     final static hk a(int param0, int param1) {

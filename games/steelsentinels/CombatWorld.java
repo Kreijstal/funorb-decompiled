@@ -196,9 +196,9 @@ final class CombatWorld {
               this.terrain.field_h[0] = -10000;
             }
           }
-          this.field_q = this.field_q + pi.field_c;
+          this.field_q = this.field_q + DelegatingCanvas.field_c;
           this.field_f = this.field_f - oh.field_f;
-          this.field_a = this.field_a - pi.field_c;
+          this.field_a = this.field_a - DelegatingCanvas.field_c;
           if (this.field_j &&
             this.field_h) {
             return;
@@ -210,13 +210,13 @@ final class CombatWorld {
           var2_int = stackIn_27_0;
           if (!this.field_j &&
             10 == di.field_g &&
-            qh.field_Yb > 0 &&
+            IconTextComponent.field_Yb > 0 &&
             this.f(obfuscationGuard ^ -114)) {
-            var3_ref_int____ = ua.field_I[ol.field_Ub + 10 * ge.field_j];
+            var3_ref_int____ = ReflectionCheck.field_I[QuickChatHelpDialog.field_Ub + 10 * DirectByteStorage.field_j];
             if (1 + this.field_cb < var3_ref_int____.length) {
               this.field_cb = this.field_cb + 1;
               if (this.field_cb > 0 &&
-                0 < ge.field_j) {
+                0 < DirectByteStorage.field_j) {
                 stackIn_47_0 = 1;
               } else {
                 stackIn_47_0 = 0;
@@ -236,7 +236,7 @@ final class CombatWorld {
                     break;
                   }
                   if (stackIn_396_0 == 0) {
-                    var8 = nn.field_c;
+                    var8 = FullscreenFocusCanvas.field_c;
                   }
                   if (var5_ref_int__[var7] == 1) {
                     var8 = va.field_f;
@@ -257,34 +257,34 @@ final class CombatWorld {
                     var8 = hk.field_Vb;
                   }
                   if (var5_ref_int__[var7] == 7) {
-                    var8 = ua.field_v;
+                    var8 = ReflectionCheck.field_v;
                   }
                   if (var5_ref_int__[var7] == 8) {
-                    var8 = ua.field_x;
+                    var8 = ReflectionCheck.field_x;
                   }
                   if (var5_ref_int__[var7] == 9) {
-                    var8 = ua.field_P;
+                    var8 = ReflectionCheck.field_P;
                   }
                   if (10 == var5_ref_int__[var7]) {
-                    var8 = ua.field_z;
+                    var8 = ReflectionCheck.field_z;
                   }
                   if (var5_ref_int__[var7] == 11) {
-                    var8 = ua.field_N;
+                    var8 = ReflectionCheck.field_N;
                   }
                   if (var5_ref_int__[var7] == 12) {
-                    var8 = ua.field_O;
+                    var8 = ReflectionCheck.field_O;
                   }
                   if (var5_ref_int__[var7] == 13) {
-                    var8 = ua.field_D;
+                    var8 = ReflectionCheck.field_D;
                   }
                   if (var5_ref_int__[var7] == 14) {
-                    var8 = ua.field_J;
+                    var8 = ReflectionCheck.field_J;
                   }
                   if (var5_ref_int__[var7] == 15) {
-                    var8 = ua.field_E;
+                    var8 = ReflectionCheck.field_E;
                   }
                   if (var5_ref_int__[var7] == 16) {
-                    var8 = vk.field_s;
+                    var8 = Js5Transport.field_s;
                   }
                   if (17 == var5_ref_int__[var7]) {
                     var8 = jm.field_p;
@@ -296,10 +296,10 @@ final class CombatWorld {
                     var8 = eb.field_o;
                   }
                   if (21 == var5_ref_int__[var7]) {
-                    var8 = bb.field_S;
+                    var8 = ModalPanel.field_S;
                   }
                   if (var5_ref_int__[var7] == 22) {
-                    var8 = ff.field_ob;
+                    var8 = ValidationHelpWidget.field_ob;
                   }
                   if (var5_ref_int__[var7] == 23) {
                     var8 = uj.field_i;
@@ -309,8 +309,8 @@ final class CombatWorld {
                   }
                   regionExit1: {
                     var9_int = -1;
-                    if (ge.field_j == 1 &&
-                      ol.field_Ub == 9) {
+                    if (DirectByteStorage.field_j == 1 &&
+                      QuickChatHelpDialog.field_Ub == 9) {
                       regionExit2: {
                         regionExit3: {
                           regionExit4: {
@@ -353,8 +353,8 @@ final class CombatWorld {
                       var9_int = 41;
                     }
                   }
-                  if (ge.field_j == 1 &&
-                    ol.field_Ub == 6 &&
+                  if (DirectByteStorage.field_j == 1 &&
+                    QuickChatHelpDialog.field_Ub == 6 &&
                     var7 == 0) {
                     var10 = this.field_cb;
                     if (var10 == 0 &&
@@ -365,8 +365,8 @@ final class CombatWorld {
                       var9_int = 33;
                     }
                   }
-                  if (1 == ge.field_j &&
-                    ol.field_Ub == 1) {
+                  if (1 == DirectByteStorage.field_j &&
+                    QuickChatHelpDialog.field_Ub == 1) {
                     if (this.field_cb == 2 &&
                       0 == var7) {
                       var9_int = 45;
@@ -376,26 +376,26 @@ final class CombatWorld {
                       var9_int = 45;
                     }
                   }
-                  if (ge.field_j == 2 &&
-                    ol.field_Ub == 3 &&
+                  if (DirectByteStorage.field_j == 2 &&
+                    QuickChatHelpDialog.field_Ub == 3 &&
                     this.field_cb == 3 &&
                     var7 == 0) {
                     var9_int = 45;
                   }
-                  if (ge.field_j == 2 &&
-                    ol.field_Ub == 1 &&
+                  if (DirectByteStorage.field_j == 2 &&
+                    QuickChatHelpDialog.field_Ub == 1 &&
                     var5_ref_int__[var7] == 9) {
                     var9_int = 36;
                   }
-                  if (ge.field_j == 2 &&
-                    ol.field_Ub == 2 &&
+                  if (DirectByteStorage.field_j == 2 &&
+                    QuickChatHelpDialog.field_Ub == 2 &&
                     var7 == 0 &&
                     this.field_cb == 2) {
                     var9_int = 18;
                   }
                   var10 = 36;
-                  if (ge.field_j == 2 &&
-                    ol.field_Ub == 9) {
+                  if (DirectByteStorage.field_j == 2 &&
+                    QuickChatHelpDialog.field_Ub == 9) {
                     if (var7 == 0 && (this.field_cb == 1 ||
                       this.field_cb == 3)) {
                       var9_int = 45;
@@ -425,8 +425,8 @@ final class CombatWorld {
                     }
                     var10 = 38;
                   }
-                  if (ge.field_j == 1 &&
-                    ol.field_Ub == 8) {
+                  if (DirectByteStorage.field_j == 1 &&
+                    QuickChatHelpDialog.field_Ub == 8) {
                     if (2 == this.field_cb &&
                       0 == var7) {
                       var9_int = 15;
@@ -436,8 +436,8 @@ final class CombatWorld {
                       var9_int = 9;
                     }
                   }
-                  if (ge.field_j == 1 &&
-                    ol.field_Ub == 7) {
+                  if (DirectByteStorage.field_j == 1 &&
+                    QuickChatHelpDialog.field_Ub == 7) {
                     if (this.field_cb == 3 &&
                       var7 == 0) {
                       var9_int = 39;
@@ -447,8 +447,8 @@ final class CombatWorld {
                       var9_int = 22;
                     }
                   }
-                  if (ge.field_j == 2 &&
-                    5 == ol.field_Ub) {
+                  if (DirectByteStorage.field_j == 2 &&
+                    5 == QuickChatHelpDialog.field_Ub) {
                     if (var7 == 0 &&
                       this.field_cb == 0) {
                       var9_int = 36;
@@ -462,8 +462,8 @@ final class CombatWorld {
                       var9_int = 42;
                     }
                   }
-                  if (ge.field_j == 2 &&
-                    ol.field_Ub == 7 &&
+                  if (DirectByteStorage.field_j == 2 &&
+                    QuickChatHelpDialog.field_Ub == 7 &&
                     1 == var7 &&
                     this.field_cb == 2) {
                     var9_int = 33;
@@ -545,7 +545,7 @@ final class CombatWorld {
               (!this.field_j)) {
               this.field_j = true;
               nc.field_a = this.simulationTick / 50;
-              if (b.field_f) {
+              if (DialWidgetPainter.field_f) {
                 nc.field_a = nc.field_a + 600;
               }
               var4 = 0;
@@ -553,7 +553,7 @@ final class CombatWorld {
               var6 = (ne) (var5_ref_jc.b(2));
               while (var6 != null) {
                 var4 = var4 + var6.field_O;
-                var6 = (ne) (var5_ref_jc.d(2));
+                var6 = (ne) (var5_ref_jc.next(2));
                 if (var15 != 0) {
                   decompiledFrameCompleted3 = false;
                   break;
@@ -569,9 +569,9 @@ final class CombatWorld {
                   var8_int = var10_ref_mb.charge;
                   var7 = var10_ref_mb.maximumArmour;
                   var6_int = var10_ref_mb.armour;
-                  var9_int = var10_ref_mb.maximumCharge - ag.a(91, var10_ref_mb.activeModuleType);
+                  var9_int = var10_ref_mb.maximumCharge - GradientOutlineTextPainter.a(91, var10_ref_mb.activeModuleType);
                 }
-                mj.a(ge.field_j, -(var9_int * 50000) + (this.field_M + this.field_f), nc.field_a, ol.field_Ub, -(var7 * 60000) + (-(var6_int * 128) + this.field_a), -(var8_int * 256) + (-(var4 * 100) + this.field_N), this.field_q, (byte) -65);
+                TabbedPanel.a(DirectByteStorage.field_j, -(var9_int * 50000) + (this.field_M + this.field_f), nc.field_a, QuickChatHelpDialog.field_Ub, -(var7 * 60000) + (-(var6_int * 128) + this.field_a), -(var8_int * 256) + (-(var4 * 100) + this.field_N), this.field_q, (byte) -65);
               }
             }
           }
@@ -605,7 +605,7 @@ final class CombatWorld {
                     break;
                   }
                   if (stackIn_721_0 == stackIn_721_1) {
-                    var9 = nn.field_c;
+                    var9 = FullscreenFocusCanvas.field_c;
                   }
                   if (var4_ref_int__[var6_int] == 1) {
                     var9 = va.field_f;
@@ -626,34 +626,34 @@ final class CombatWorld {
                     var9 = hk.field_Vb;
                   }
                   if (var4_ref_int__[var6_int] == 7) {
-                    var9 = ua.field_v;
+                    var9 = ReflectionCheck.field_v;
                   }
                   if (var4_ref_int__[var6_int] == 8) {
-                    var9 = ua.field_x;
+                    var9 = ReflectionCheck.field_x;
                   }
                   if (var4_ref_int__[var6_int] == 9) {
-                    var9 = ua.field_P;
+                    var9 = ReflectionCheck.field_P;
                   }
                   if (var4_ref_int__[var6_int] == 10) {
-                    var9 = ua.field_z;
+                    var9 = ReflectionCheck.field_z;
                   }
                   if (11 == var4_ref_int__[var6_int]) {
-                    var9 = ua.field_N;
+                    var9 = ReflectionCheck.field_N;
                   }
                   if (var4_ref_int__[var6_int] == 12) {
-                    var9 = ua.field_O;
+                    var9 = ReflectionCheck.field_O;
                   }
                   if (var4_ref_int__[var6_int] == 13) {
-                    var9 = ua.field_D;
+                    var9 = ReflectionCheck.field_D;
                   }
                   if (var4_ref_int__[var6_int] == 14) {
-                    var9 = ua.field_J;
+                    var9 = ReflectionCheck.field_J;
                   }
                   if (var4_ref_int__[var6_int] == 15) {
-                    var9 = ua.field_E;
+                    var9 = ReflectionCheck.field_E;
                   }
                   if (var4_ref_int__[var6_int] == 16) {
-                    var9 = vk.field_s;
+                    var9 = Js5Transport.field_s;
                   }
                   if (var4_ref_int__[var6_int] == 17) {
                     var9 = jm.field_p;
@@ -1399,12 +1399,12 @@ final class CombatWorld {
         var4 = SteelSentinels.obfuscationControl;
         try {
           var1 = new RgbSprite(540, 140);
-          q.a(var1, (byte) -82);
+          IterableNodeHashTable.a(var1, (byte) -82);
           lf.a();
           SoftwareRaster.b();
           vn.field_h = 0;
-          pm.a(param0);
-          var2 = var1.g();
+          LoginForm.a(param0);
+          var2 = var1.copySprite();
           var3 = 0;
           while (var3 < 15) {
             var2.e(-2, -2, 16777215);
@@ -1414,9 +1414,9 @@ final class CombatWorld {
               return;
             }
           }
-          gb.field_d.d();
-          var1.b(0, 0);
-          tk.$cfr$intArgs$f$20d51497949f(122);
+          ByteStorage.field_d.bindRasterTarget();
+          var1.drawHalfSize(0, 0);
+          MatchingTextValidator.$cfr$intArgs$f$20d51497949f(122);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1547,7 +1547,7 @@ final class CombatWorld {
                             var7 = var10_ref_mb;
                           }
                         }
-                        var10_ref_mb = (Sentinel) (var9_ref_jc.d(2));
+                        var10_ref_mb = (Sentinel) (var9_ref_jc.next(2));
                       }
                       break regionExit1;
                     }
@@ -1638,7 +1638,7 @@ final class CombatWorld {
                           var7 = var10_ref_mbLifetime1;
                         }
                       }
-                      var10_ref_mbLifetime1 = (Sentinel) (var9_ref_jcLifetime1.d(2));
+                      var10_ref_mbLifetime1 = (Sentinel) (var9_ref_jcLifetime1.next(2));
                     }
                   }
                   break;
@@ -1879,25 +1879,25 @@ final class CombatWorld {
           if (param0 != 11828) {
             field_k = (String) null;
           }
-          kc.field_A = false;
-          if (de.field_d) {
+          DelayedServerPacket.field_A = false;
+          if (LoginMethod.field_d) {
             ch.field_O.m((byte) 127);
             if (var2 == 0) {
               return;
             }
           }
-          var1_int = ua.field_o;
+          var1_int = ReflectionCheck.field_o;
           if (var1_int > 0) {
             if (var1_int != 1) {
-              ba.field_f = db.a(df.field_J, -120, new String[]{Integer.toString(var1_int)});
+              ba.field_f = SocketConnector.a(DiskCacheRequest.field_J, -120, new String[]{Integer.toString(var1_int)});
             }
             if (var1_int == 1 ||
               var2 != 0) {
-              ba.field_f = vk.field_k;
+              ba.field_f = Js5Transport.field_k;
             }
             ba.field_f = ue.a(new CharSequence[]{(CharSequence) ((Object) ba.field_f), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) in.field_f)}, param0 - 11828);
           }
-          ch.field_O.m(105);
+          ch.field_O.closeDialog(105);
           tc.a((byte) 54);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1932,7 +1932,7 @@ final class CombatWorld {
             this.field_b = 1;
           }
           var3_int = this.terrain.spawnPositions[param1];
-          var4 = kc.field_x[4][0].field_z << 4;
+          var4 = DelayedServerPacket.field_x[4][0].field_z << 4;
           var5 = -(var4 / 2) + var3_int;
           var6 = var3_int + var4 / 2;
           var7_int = var5;
@@ -3586,8 +3586,8 @@ final class CombatWorld {
         try {
           if ((11 == param3.field_Nb ||
             di.field_g == 10 &&
-            ge.field_j == 1 &&
-            !(ol.field_Ub > 2)) && 0 < param3.field_Mb[param2]) {
+            DirectByteStorage.field_j == 1 &&
+            !(QuickChatHelpDialog.field_Ub > 2)) && 0 < param3.field_Mb[param2]) {
             return false;
           }
           var8 = new SentinelCommand(0, param3.field_Xb[param2], param6);
@@ -3966,7 +3966,7 @@ final class CombatWorld {
               stackIn_10_0 = var4;
               return stackIn_10_0;
             }
-            var4 = (Sentinel) (var3.d(2));
+            var4 = (Sentinel) (var3.next(2));
             if (var5 == 0) {
               continue;
             }
@@ -4222,7 +4222,7 @@ final class CombatWorld {
           }
           if (this.field_R == 0) {
             var2_intLifetime1 = -this.terrain.spawnPositions[1] + this.terrain.spawnPositions[0];
-            if (kc.field_x[4][0].field_z << 5 > var2_intLifetime1) {
+            if (DelayedServerPacket.field_x[4][0].field_z << 5 > var2_intLifetime1) {
               var3 = 0;
               var4_ref_mb = (Sentinel) (this.sentinels.first(13058));
               while (true) {
@@ -4267,7 +4267,7 @@ final class CombatWorld {
             }
             if ((3 & this.simulationTick) == 0) {
               var3Lifetime1 = this.terrain.spawnPositions[0];
-              var4Lifetime1 = kc.field_x[4][0].field_z << 4;
+              var4Lifetime1 = DelayedServerPacket.field_x[4][0].field_z << 4;
               var5 = -(var4Lifetime1 / 2) + var3Lifetime1;
               var6 = var3Lifetime1 + var4Lifetime1 / 2;
               var7 = var5;
@@ -4362,7 +4362,7 @@ final class CombatWorld {
             }
             if ((3 & this.simulationTick) == 2) {
               var3Lifetime2 = this.terrain.spawnPositions[1];
-              var4Lifetime2 = kc.field_x[4][0].field_z << 4;
+              var4Lifetime2 = DelayedServerPacket.field_x[4][0].field_z << 4;
               var5Lifetime1 = var3Lifetime2 - var4Lifetime2 / 2;
               var6Lifetime1 = var4Lifetime2 / 2 + var3Lifetime2;
               var7Lifetime1 = var6Lifetime1;
@@ -4486,7 +4486,7 @@ final class CombatWorld {
           var11 = param4;
           while (param7 > var11) {
             var12 = jh.sine16(param0 * (var11 >> 3), 4096) * param3 >> 16;
-            var13 = kg.cosine16((var11 >> 3) * param0, (byte) -87) * -param3 >> 16;
+            var13 = ScrollContainer.cosine16((var11 >> 3) * param0, (byte) -87) * -param3 >> 16;
             if (var17 != 0) {
               return;
             }
@@ -4679,7 +4679,7 @@ final class CombatWorld {
               var10.field_Cb) {
               var10.field_Cb = false;
             }
-            var10 = (Sentinel) (var9.d(2));
+            var10 = (Sentinel) (var9.next(2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5869,9 +5869,9 @@ final class CombatWorld {
           if (param0) {
             discarded$1 = this.a(-35, (byte) 87, -74, (Sentinel) null, (Sentinel) null, -128, 75);
           }
-          var3 = new int[]{0, 6, 12, 18, 23, 29, fg.field_Xb.length};
+          var3 = new int[]{0, 6, 12, 18, 23, 29, RegistrationRequestDialog.field_Xb.length};
           var4 = var3[param1] + this.random.nextIntBounded(115, var3[1 + param1] - var3[param1]);
-          stackIn_4_0 = fg.field_Xb[var4];
+          stackIn_4_0 = RegistrationRequestDialog.field_Xb[var4];
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5908,7 +5908,7 @@ final class CombatWorld {
         var16 = SteelSentinels.obfuscationControl;
         try {
           if (10 == di.field_g &&
-            ge.field_j == 0) {
+            DirectByteStorage.field_j == 0) {
             stackIn_8_0 = 1;
           } else {
             stackIn_8_0 = 0;
@@ -6286,7 +6286,7 @@ final class CombatWorld {
           this.simulationTick = 0;
           this.sentinels = new NodeDeque();
           this.field_Z = new int[param6 + this.playerCount];
-          var12 = new int[][]{ua.field_v, ua.field_x, ua.field_P, ua.field_z, ua.field_N, ua.field_O, ua.field_D, ua.field_J, ua.field_E};
+          var12 = new int[][]{ReflectionCheck.field_v, ReflectionCheck.field_x, ReflectionCheck.field_P, ReflectionCheck.field_z, ReflectionCheck.field_N, ReflectionCheck.field_O, ReflectionCheck.field_D, ReflectionCheck.field_J, ReflectionCheck.field_E};
           this.field_W = param8;
           this.field_fb = param9;
           stackIn_8_1 = (this.field_P == 3);
@@ -6374,12 +6374,12 @@ final class CombatWorld {
                   var11.configureDesign(param3[var14], true, false, var14, var15);
                   if (this.field_F == 1 &&
                     6100 < hm.a((byte) 126, var11.moduleTypes, var11.chassis)) {
-                    var11.configureDesign(ua.field_x, true, false, var14, var15);
+                    var11.configureDesign(ReflectionCheck.field_x, true, false, var14, var15);
                   }
                   if (this.field_U != null) {
                     this.field_U.a(0, (byte) 123, var14, Integer.toString(var11.field_lb));
                   }
-                  this.sentinels.a(var11, -21459);
+                  this.sentinels.addLast(var11, -21459);
                 }
               }
               if (this.terrain.getTerrainType(115) == 4) {

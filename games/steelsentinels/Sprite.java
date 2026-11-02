@@ -17,7 +17,7 @@ abstract class Sprite {
     int field_a;
     static SceneWidget field_l;
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int param0, int param1, int param2);
 
     public static void a(byte param0) {
         if (param0 < 55) {
@@ -98,7 +98,7 @@ abstract class Sprite {
         }
     }
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
     final static na a(int param0, int param1, int param2, int param3) {
         boolean stackIn_47_0 = false;
@@ -119,7 +119,7 @@ abstract class Sprite {
         int var8Lifetime1;
         int var9Lifetime1;
         var13 = SteelSentinels.obfuscationControl;
-        sn.field_j.field_Ub.field_M.clear(6);
+        BoundedRandomAccessFile.field_j.field_Ub.field_M.clear(6);
         var4 = null;
         var5 = 0;
         var6 = 0;
@@ -128,7 +128,7 @@ abstract class Sprite {
           var9 = 0;
           if (!fj.field_e &&
             var5 < cj.field_h) {
-            var10_int = ei.a(var8_ref_na.field_k, 1);
+            var10_int = NameAvailabilityValidator.a(var8_ref_na.field_k, 1);
             if (var8_ref_na.a((byte) 58) >= var10_int && (var8_ref_na.field_g ||
               !o.a(-99, var8_ref_na.field_p))) {
               var9 = 1;
@@ -139,18 +139,18 @@ abstract class Sprite {
           } else {
             var5++;
             if (var8_ref_na.field_m == null ||
-              cn.field_l) {
+              TextWidgetPainter.field_l) {
               if (var8_ref_na.field_m == null) {
                 ln.field_e = ln.field_e + 1;
               }
               var10 = ArticulatedPart.a(-118, var8_ref_na);
-              var11 = var10 + BitmapFont.a(var8_ref_na.field_o);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_na.field_o);
               var12 = rf.a(-102, var8_ref_na);
-              var8_ref_na.field_m = new SceneWidget(0L, td.field_ic, var11);
-              var8_ref_na.field_m.field_xb = (8355711 & td.field_ic.field_xb >> 1) - (8355711 & var12 >> 1) + var12;
+              var8_ref_na.field_m = new SceneWidget(0L, ReportAbuseDialog.field_ic, var11);
+              var8_ref_na.field_m.field_xb = (8355711 & ReportAbuseDialog.field_ic.field_xb >> 1) - (8355711 & var12 >> 1) + var12;
               var8_ref_na.field_m.field_L = pl.field_X;
               var8_ref_na.field_m.field_nb = var12;
-              var8_ref_na.field_m.field_rb = ((td.field_ic.field_rb & 16711422) >> 1) + (-((16711422 & var12) >> 1) + var12);
+              var8_ref_na.field_m.field_rb = ((ReportAbuseDialog.field_ic.field_rb & 16711422) >> 1) + (-((16711422 & var12) >> 1) + var12);
               var6 = var6 + param3;
             }
           }
@@ -159,7 +159,7 @@ abstract class Sprite {
         for (var8 = 0; var8 < uc.field_a; var8++) {
           var9_ref_na = ph.field_e[var8];
           if (null != var9_ref_na.field_m) {
-            sn.field_j.field_Ub.a(var9_ref_na.field_m, 127);
+            BoundedRandomAccessFile.field_j.field_Ub.a(var9_ref_na.field_m, 127);
             var9_ref_na.field_m.a(0, var7Lifetime1, param3, param1, var9_ref_na.field_m.g(-2147483648));
             var7Lifetime1 = var7Lifetime1 + param3;
             if (var9_ref_na.field_m.field_Eb != 0) {
@@ -167,19 +167,19 @@ abstract class Sprite {
             }
           }
         }
-        var8Lifetime1 = sn.field_j.field_Ub.field_lb + sn.field_j.field_Ub.field_Lb - (-var6 + var7Lifetime1);
-        sn.field_j.field_Ub.field_Lb = sn.field_j.field_Ub.field_Lb - var8Lifetime1;
-        sn.field_j.field_Ub.field_eb = sn.field_j.field_Ub.field_eb + var8Lifetime1;
-        if (cn.field_l) {
-          sn.field_j.field_Ub.field_Lb = var7Lifetime1;
+        var8Lifetime1 = BoundedRandomAccessFile.field_j.field_Ub.field_lb + BoundedRandomAccessFile.field_j.field_Ub.field_Lb - (-var6 + var7Lifetime1);
+        BoundedRandomAccessFile.field_j.field_Ub.field_Lb = BoundedRandomAccessFile.field_j.field_Ub.field_Lb - var8Lifetime1;
+        BoundedRandomAccessFile.field_j.field_Ub.field_eb = BoundedRandomAccessFile.field_j.field_Ub.field_eb + var8Lifetime1;
+        if (TextWidgetPainter.field_l) {
+          BoundedRandomAccessFile.field_j.field_Ub.field_Lb = var7Lifetime1;
         }
-        if (cn.field_l) {
+        if (TextWidgetPainter.field_l) {
           rg.field_f = true;
-          sn.field_j.field_Ub.field_eb = -sn.field_j.field_Ub.field_Lb + sn.field_j.field_Tb.field_Lb;
-          sn.field_j.field_Ub.field_gb = 0;
-          cn.field_l = false;
+          BoundedRandomAccessFile.field_j.field_Ub.field_eb = -BoundedRandomAccessFile.field_j.field_Ub.field_Lb + BoundedRandomAccessFile.field_j.field_Tb.field_Lb;
+          BoundedRandomAccessFile.field_j.field_Ub.field_gb = 0;
+          TextWidgetPainter.field_l = false;
         }
-        sn.field_j.field_Ub.field_lb = -sn.field_j.field_Ub.field_Lb + var7Lifetime1;
+        BoundedRandomAccessFile.field_j.field_Ub.field_lb = -BoundedRandomAccessFile.field_j.field_Ub.field_Lb + var7Lifetime1;
         if (param2 <= 0) {
           return (na) null;
         }
@@ -187,25 +187,25 @@ abstract class Sprite {
           hh.field_a != null) {
           rg.field_f = true;
         }
-        var9Lifetime1 = sn.field_j.field_Tb.field_Lb - (sn.field_j.field_Ub.field_Lb + sn.field_j.field_Ub.field_lb);
+        var9Lifetime1 = BoundedRandomAccessFile.field_j.field_Tb.field_Lb - (BoundedRandomAccessFile.field_j.field_Ub.field_Lb + BoundedRandomAccessFile.field_j.field_Ub.field_lb);
         if (rg.field_f) {
-          sn.field_j.field_Ub.field_gb = -sn.field_j.field_Ub.field_eb + var9Lifetime1;
+          BoundedRandomAccessFile.field_j.field_Ub.field_gb = -BoundedRandomAccessFile.field_j.field_Ub.field_eb + var9Lifetime1;
         }
-        sn.field_j.a(true, 8113, param3, param0 * 2 * param3);
-        stackIn_47_0 = (var9Lifetime1 == sn.field_j.field_Ub.field_eb + sn.field_j.field_Ub.field_gb);
+        BoundedRandomAccessFile.field_j.a(true, 8113, param3, param0 * 2 * param3);
+        stackIn_47_0 = (var9Lifetime1 == BoundedRandomAccessFile.field_j.field_Ub.field_eb + BoundedRandomAccessFile.field_j.field_Ub.field_gb);
         rg.field_f = stackIn_47_0;
         return (na) (var4);
     }
 
     final static void a(ResourceArchive param0, int param1) {
-        uk var2 = null;
+        VorbisSample var2 = null;
         try {
-          uk.b(param0.a("", -742, "headers.packvorbis"));
+          VorbisSample.decodeSetup(param0.a("", -742, "headers.packvorbis"));
           if (param1 != 1728986241) {
             field_c = (NodeDeque) null;
           }
-          var2 = uk.a(param0, "jagex logo2.packvorbis", "");
-          var2.a();
+          var2 = VorbisSample.loadNamed(param0, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

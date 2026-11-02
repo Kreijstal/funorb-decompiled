@@ -32,8 +32,8 @@ final class vh {
           for (var6 = 0; var6 < param1.field_q.length; var6++) {
             var8.writeInt(true, param1.field_q[var6]);
           }
-          var9.f(-103, var4);
-          var9.b((byte) 99, -var4 + var9.position);
+          var9.appendCrc32(-103, var4);
+          var9.backpatchByteLength((byte) 99, -var4 + var9.position);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "vh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -48,7 +48,7 @@ final class vh {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!wa.a((byte) 30, param0, param2, param1)) {
+          if (!StatefulTextPainter.a((byte) 30, param0, param2, param1)) {
             return null;
           }
           if (param3 <= 16) {
@@ -81,9 +81,9 @@ final class vh {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (fj.field_e) {
-          return ve.field_b.a(true, ei.field_q, de.field_c);
+          return ve.field_b.a(true, NameAvailabilityValidator.field_q, LoginMethod.field_c);
         }
-        if (vb.field_e) {
+        if (GzipDecoder.field_e) {
           return ba.a(112, param3, param0);
         }
         if (BattleTerrain.b(-3, param3, param0)) {
@@ -93,7 +93,7 @@ final class vh {
           return false;
         }
         int var4 = 10 / ((param2 - 40) / 40);
-        return he.a((byte) -122, param1, param3);
+        return RasterBuffer.a((byte) -122, param1, param3);
     }
 
     static {

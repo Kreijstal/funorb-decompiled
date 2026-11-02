@@ -12,13 +12,13 @@ final class hl extends IntrusiveNode {
     boolean field_t;
 
     final static String d(int param0) {
-        if (cb.field_j == nj.field_ab) {
+        if (DiskCacheWorker.field_j == AccountTermsPanel.field_ab) {
           return kf.field_o;
         }
         if (!gf.field_a.a((byte) -72)) {
           return gf.field_a.a(true);
         }
-        if (nj.field_ab == jn.field_b) {
+        if (AccountTermsPanel.field_ab == jn.field_b) {
           return gf.field_a.a(true);
         }
         if (param0 >= 80) {
@@ -44,10 +44,10 @@ final class hl extends IntrusiveNode {
 
     final static SceneWidget a(byte param0) {
         if (fj.field_f > 0) {
-          return qa.field_L;
+          return Js5NetworkRequest.field_L;
         }
         if (bd.field_c > 0) {
-          return qa.field_L;
+          return Js5NetworkRequest.field_L;
         }
         if (param0 != -66) {
           hl.a((byte) 61);

@@ -13,12 +13,12 @@ final class og {
         if (param0 > -79) {
           og.a((byte) -45);
         }
-        if (ub.field_e == null) {
+        if (SoundCache.field_e == null) {
           return;
         }
-        var1 = ub.field_e;
+        var1 = SoundCache.field_e;
         synchronized (var1) {
-          ub.field_e = null;
+          SoundCache.field_e = null;
         }
     }
 
@@ -31,7 +31,7 @@ final class og {
     }
 
     final static void a(int param0) {
-        if (!mg.b(true)) {
+        if (!QuickChatMenu.b(true)) {
           return;
         }
         cl.a(118, false, 4);
@@ -49,13 +49,13 @@ final class og {
         PartInstruction[] var1Lifetime3;
         if (param0) {
           var1 = new PartInstruction[]{};
-          var2 = hl.field_v.a(var1, -21636, fg.field_Ob);
+          var2 = hl.field_v.a(var1, -21636, RegistrationRequestDialog.field_Ob);
           var1Lifetime3 = var2;
           return var2.length * 36;
         }
         og.b(124);
         var1Lifetime1 = new PartInstruction[]{};
-        var2Lifetime1 = hl.field_v.a(var1Lifetime1, -21636, fg.field_Ob);
+        var2Lifetime1 = hl.field_v.a(var1Lifetime1, -21636, RegistrationRequestDialog.field_Ob);
         var1Lifetime2 = var2Lifetime1;
         return var2Lifetime1.length * 36;
     }

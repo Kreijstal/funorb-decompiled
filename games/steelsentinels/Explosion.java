@@ -39,7 +39,7 @@ final class Explosion extends DualNode {
         int var8;
         int var9;
         int var10;
-        if (!ka.field_V) {
+        if (!ModalStack.field_V) {
           return;
         }
         var4 = param1 + (this.worldX >> 8);
@@ -60,12 +60,12 @@ final class Explosion extends DualNode {
           if (this.projectile != null &&
             300 < this.projectile.field_O) {
             if (this.ageTicks < var9) {
-              qh.b(var10 * this.ageTicks * 10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
+              IconTextComponent.b(var10 * this.ageTicks * 10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
               decompiledFrameRemainder0 = (SteelSentinels.obfuscationControl != 0);
             }
             if ((decompiledFrameRemainder0) &&
               (this.ageTicks < (2 * var9))) {
-              qh.b(10 * (2 * var9 - this.ageTicks) * var10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
+              IconTextComponent.b(10 * (2 * var9 - this.ageTicks) * var10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
               return;
             }
           }
@@ -92,8 +92,8 @@ final class Explosion extends DualNode {
         var2 = 0;
         scanLoop1: while (true) {
           if (rl.field_d > var2) {
-            var3 = le.field_L[var2] * ca.field_r[var2];
-            var10 = dl.field_L[var2];
+            var3 = StrongCacheEntry.field_L[var2] * MusicPatch.field_r[var2];
+            var10 = UiContainer.field_L[var2];
             var11 = new int[var3];
             var9 = var11;
             var5 = var9;
@@ -106,7 +106,7 @@ final class Explosion extends DualNode {
               var5[var6] = ba.field_d[ec.a((int) var10[var6], 255)];
               var6++;
             }
-            var1[var2] = new RgbSprite(un.field_n, eb.field_n, rl.field_a[var2], oa.field_M[var2], le.field_L[var2], ca.field_r[var2], var11);
+            var1[var2] = new RgbSprite(un.field_n, eb.field_n, rl.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var11);
             var2++;
             continue scanLoop1;
           }
@@ -191,11 +191,11 @@ final class Explosion extends DualNode {
                   if (stackIn_25_0 == stackIn_25_1) {
                     var15 = this.affectedSentinels;
                     this.affectedSentinels = new Sentinel[this.world.sentinels.size((byte) -128)];
-                    ii.a(var15, 0, this.affectedSentinels, 0, var6);
+                    ArraySupport.copy(var15, 0, this.affectedSentinels, 0, var6);
                   }
                   this.affectedSentinels[var6] = var7_ref_mb;
                   var6++;
-                  var7_ref_mb = (Sentinel) (var14.d(2));
+                  var7_ref_mb = (Sentinel) (var14.next(2));
                 }
                 while (true) {
                   stackIn_25_0Lifetime1 = ~var6;
@@ -376,7 +376,7 @@ final class Explosion extends DualNode {
                   }
                   var5_ref_wl.sourceSentinel = this.projectile.sourceSentinel;
                 }
-                var5_ref_wl = (Projectile) (var4_ref_jc.d(2));
+                var5_ref_wl = (Projectile) (var4_ref_jc.next(2));
               }
             }
             if (decompiledFrameCompleted1) {
@@ -626,7 +626,7 @@ final class Explosion extends DualNode {
     }
 
     final static void c(byte param0) {
-        kc.field_y = null;
+        DelayedServerPacket.field_y = null;
         int var1 = -122 / ((-17 - param0) / 41);
     }
 

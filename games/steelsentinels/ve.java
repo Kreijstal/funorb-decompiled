@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ve {
     static pl field_b;
-    static jg field_a;
+    static ViewportController field_a;
 
     public static void b(byte param0) {
         field_a = null;
@@ -57,10 +57,10 @@ final class ve {
         pa.field_d[9] = new sf(9, 170, 86, 300, 0, (RgbSprite) null, true);
         pa.field_d[10] = new sf(10, 224, 60, 200, 0, (RgbSprite) null, false);
         pa.field_d[11] = new sf(11, 224, 60, 285, 0, (RgbSprite) null, false);
-        pa.field_d[12] = new sf(12, 224, 100, 285, 0, b.field_q[2], false);
+        pa.field_d[12] = new sf(12, 224, 100, 285, 0, DialWidgetPainter.field_q[2], false);
         pa.field_d[13] = new sf(13, 170, 174, 300, 0, (RgbSprite) null, true);
         pa.field_d[14] = new sf(14, 224, 60, 200, 0, (RgbSprite) null, false);
-        pa.field_d[15] = new sf(15, 224, 60, 400, 0, b.field_q[2], false);
+        pa.field_d[15] = new sf(15, 224, 60, 400, 0, DialWidgetPainter.field_q[2], false);
         pa.field_d[16] = new sf(16, 170, 170, 300, 0, (RgbSprite) null, true);
     }
 
@@ -76,12 +76,12 @@ final class ve {
           if (rb.field_h == null) {
             return false;
           }
-          int var2_int = rb.field_h.a(-119);
+          int var2_int = rb.field_h.readUnsignedByte(-119);
           if (var2_int > 0) {
             if (!(var2_int <= -rf.field_d.position + param1)) {
               var2_int = -rf.field_d.position + param1;
             }
-            rb.field_h.a(rf.field_d.position, var2_int, rf.field_d.payload, -256);
+            rb.field_h.readFully(rf.field_d.position, var2_int, rf.field_d.payload, -256);
             oe.field_b = mm.a(-100);
             rf.field_d.position = rf.field_d.position + var2_int;
             if (rf.field_d.position < param1) {
@@ -93,12 +93,12 @@ final class ve {
           try {
             if (false) throw (IOException) null;
             if (0 <= var2_int &&
-              ki.l(150) <= 30000L) {
+              LoadingProgressDialog.l(150) <= 30000L) {
               return false;
             }
-            pm.m(-125);
+            LoginForm.m(-125);
           } catch (IOException iOException) {
-            pm.m(-40);
+            LoginForm.m(-40);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -152,13 +152,13 @@ final class ve {
           var17 = var16;
           var17.position = param1.length - 2;
           rl.field_d = var17.readUnsignedShort((byte) -60);
-          ca.field_r = new int[rl.field_d];
-          oa.field_M = new int[rl.field_d];
-          le.field_L = new int[rl.field_d];
-          pd.field_U = new boolean[rl.field_d];
-          dl.field_L = new byte[rl.field_d][];
+          MusicPatch.field_r = new int[rl.field_d];
+          TextButton.field_M = new int[rl.field_d];
+          StrongCacheEntry.field_L = new int[rl.field_d];
+          AccountChoicePanel.field_U = new boolean[rl.field_d];
+          UiContainer.field_L = new byte[rl.field_d][];
           rl.field_a = new int[rl.field_d];
-          sn.field_g = new byte[rl.field_d][];
+          BoundedRandomAccessFile.field_g = new byte[rl.field_d][];
           var17.position = -(8 * rl.field_d) - 7 + param1.length;
           un.field_n = var17.readUnsignedShort((byte) -60);
           eb.field_n = var17.readUnsignedShort((byte) -60);
@@ -172,13 +172,13 @@ final class ve {
             var4++;
           }
           for (var4Lifetime1 = 0; rl.field_d > var4Lifetime1; var4Lifetime1++) {
-            oa.field_M[var4Lifetime1] = var17.readUnsignedShort((byte) -60);
+            TextButton.field_M[var4Lifetime1] = var17.readUnsignedShort((byte) -60);
           }
           for (var4Lifetime2 = 0; rl.field_d > var4Lifetime2; var4Lifetime2++) {
-            le.field_L[var4Lifetime2] = var17.readUnsignedShort((byte) -60);
+            StrongCacheEntry.field_L[var4Lifetime2] = var17.readUnsignedShort((byte) -60);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < rl.field_d; var4Lifetime3++) {
-            ca.field_r[var4Lifetime3] = var17.readUnsignedShort((byte) -60);
+            MusicPatch.field_r[var4Lifetime3] = var17.readUnsignedShort((byte) -60);
           }
           var17.position = -(8 * rl.field_d) + (-7 + param1.length - 3 * (var3 - 1));
           ba.field_d = new int[var3];
@@ -190,17 +190,17 @@ final class ve {
           }
           var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < rl.field_d; var4Lifetime5++) {
-            var5 = le.field_L[var4Lifetime5];
-            var6 = ca.field_r[var4Lifetime5];
+            var5 = StrongCacheEntry.field_L[var4Lifetime5];
+            var6 = MusicPatch.field_r[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];
             var18 = var20;
             var8 = var18;
-            dl.field_L[var4Lifetime5] = var20;
+            UiContainer.field_L[var4Lifetime5] = var20;
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            sn.field_g[var4Lifetime5] = var21;
+            BoundedRandomAccessFile.field_g[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte((byte) -121);
             if ((1 & var11) == 0) {
@@ -246,7 +246,7 @@ final class ve {
                 }
               }
             }
-            pd.field_U[var4Lifetime5] = var10 != 0;
+            AccountChoicePanel.field_U[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -285,38 +285,38 @@ final class ve {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var4 = he.a(-1766, param1) ? 1 : 0;
-          var5 = he.a(-1766, param1) ? 1 : 0;
+          var4 = RasterBuffer.a(-1766, param1) ? 1 : 0;
+          var5 = RasterBuffer.a(-1766, param1) ? 1 : 0;
           var6 = new pe();
           var6.field_L = (short)param1.readBits(71, 16);
-          var6.field_z = s.a(var6.field_z, 16, param1, false);
-          var6.field_m = s.a(var6.field_m, 16, param1, false);
-          var6.field_C = s.a(var6.field_C, 16, param1, false);
+          var6.field_z = SpriteCheckboxPainter.a(var6.field_z, 16, param1, false);
+          var6.field_m = SpriteCheckboxPainter.a(var6.field_m, 16, param1, false);
+          var6.field_C = SpriteCheckboxPainter.a(var6.field_C, 16, param1, false);
           var6.field_w = (short)param1.readBits(95, 16);
-          var6.field_G = s.a(var6.field_G, 16, param1, false);
-          var6.field_j = s.a(var6.field_j, 16, param1, false);
-          var6.field_x = s.a(var6.field_x, 16, param1, false);
+          var6.field_G = SpriteCheckboxPainter.a(var6.field_G, 16, param1, false);
+          var6.field_j = SpriteCheckboxPainter.a(var6.field_j, 16, param1, false);
+          var6.field_x = SpriteCheckboxPainter.a(var6.field_x, 16, param1, false);
           if (var4 != 0) {
             var6.field_u = (short)param1.readBits(-113, 16);
-            var6.field_g = s.a(var6.field_g, 16, param1, false);
-            var6.field_H = s.a(var6.field_H, 16, param1, false);
-            var6.field_F = s.a(var6.field_F, 16, param1, false);
-            var6.field_M = s.a(var6.field_M, 16, param1, false);
-            var6.field_V = s.a(var6.field_V, 16, param1, false);
-            var6.field_T = s.a(var6.field_T, 16, param1, false);
+            var6.field_g = SpriteCheckboxPainter.a(var6.field_g, 16, param1, false);
+            var6.field_H = SpriteCheckboxPainter.a(var6.field_H, 16, param1, false);
+            var6.field_F = SpriteCheckboxPainter.a(var6.field_F, 16, param1, false);
+            var6.field_M = SpriteCheckboxPainter.a(var6.field_M, 16, param1, false);
+            var6.field_V = SpriteCheckboxPainter.a(var6.field_V, 16, param1, false);
+            var6.field_T = SpriteCheckboxPainter.a(var6.field_T, 16, param1, false);
           }
           if (var5 != 0) {
             param1.readBits(-113, 16);
-            var6.field_y = s.a(var6.field_y, 16, param1, false);
-            var6.field_i = s.a(var6.field_i, 16, param1, false);
-            var6.field_E = s.a(var6.field_E, 16, param1, false);
-            var6.field_k = s.a(var6.field_k, 16, param1, false);
-            var6.field_Y = s.a(var6.field_Y, 16, param1, false);
+            var6.field_y = SpriteCheckboxPainter.a(var6.field_y, 16, param1, false);
+            var6.field_i = SpriteCheckboxPainter.a(var6.field_i, 16, param1, false);
+            var6.field_E = SpriteCheckboxPainter.a(var6.field_E, 16, param1, false);
+            var6.field_k = SpriteCheckboxPainter.a(var6.field_k, 16, param1, false);
+            var6.field_Y = SpriteCheckboxPainter.a(var6.field_Y, 16, param1, false);
           }
-          if (he.a(-1766, param1)) {
-            var6.field_e = s.a(var6.field_e, 16, param1, false);
+          if (RasterBuffer.a(-1766, param1)) {
+            var6.field_e = SpriteCheckboxPainter.a(var6.field_e, 16, param1, false);
           }
-          if (he.a(-1766, param1)) {
+          if (RasterBuffer.a(-1766, param1)) {
             var6.field_P = ec.a(16, param1, var6.field_P, -13035);
             var7 = 0;
             for (var8 = 0; var6.field_P.length > var8; var8++) {

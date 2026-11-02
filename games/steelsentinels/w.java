@@ -4,7 +4,7 @@
 abstract class w extends IntrusiveNode {
     int field_o;
 
-    abstract int a(wg param0);
+    abstract int a(PcmStreamMixer param0);
 
     abstract void a();
 

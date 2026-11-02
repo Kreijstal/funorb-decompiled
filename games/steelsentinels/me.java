@@ -7,7 +7,7 @@ abstract class me {
     static int[] field_g;
     static String field_c;
     static String[] field_a;
-    static tg field_f;
+    static MusicTrack field_f;
     static int field_e;
 
     abstract dj a(byte param0);

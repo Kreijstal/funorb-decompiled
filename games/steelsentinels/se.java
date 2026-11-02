@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class se {
-    static rm field_c;
+    static MenuInputState field_c;
     static String field_d;
     static String[] field_a;
     static int field_e;
@@ -88,31 +88,31 @@ final class se {
               stackIn_20_0 = ((4 & var4_int) != 0);
               dm.field_c = stackIn_20_0;
               stackIn_24_0 = ((2 & var4_int) != 0);
-              ka.field_V = stackIn_24_0;
+              ModalStack.field_V = stackIn_24_0;
               var6 = tj.field_a ? 1 : 0;
               stackIn_28_0 = (0 != (16 & var4_int));
               ik.field_h = stackIn_28_0;
               stackIn_32_0 = ((var4_int & 8) != 0);
-              ui.field_G = stackIn_32_0;
-              stackIn_35_0 = ti.field_A;
+              AlphaContainer.field_G = stackIn_32_0;
+              stackIn_35_0 = ImageProducerRasterBuffer.field_A;
               stackIn_35_1 = 42;
               if (!dm.field_c) {
-                stackIn_36_2 = od.field_j;
+                stackIn_36_2 = ClientException.field_j;
               } else {
                 stackIn_36_2 = qm.field_c;
               }
               stackIn_35_0[stackIn_35_1] = stackIn_36_2;
               stackIn_40_0 = (0 != (32 & var4_int));
               tj.field_a = stackIn_40_0;
-              stackIn_43_0 = ti.field_A;
+              stackIn_43_0 = ImageProducerRasterBuffer.field_A;
               stackIn_43_1 = 37;
-              if (ka.field_V) {
-                stackIn_44_2 = ge.field_i;
+              if (ModalStack.field_V) {
+                stackIn_44_2 = DirectByteStorage.field_i;
               } else {
-                stackIn_44_2 = fg.field_Vb;
+                stackIn_44_2 = RegistrationRequestDialog.field_Vb;
               }
               stackIn_43_0[stackIn_43_1] = stackIn_44_2;
-              stackIn_47_0 = ti.field_A;
+              stackIn_47_0 = ImageProducerRasterBuffer.field_A;
               stackIn_47_1 = 41;
               if (si.field_p) {
                 stackIn_48_2 = hf.field_b;
@@ -120,7 +120,7 @@ final class se {
                 stackIn_48_2 = fm.field_h;
               }
               stackIn_47_0[stackIn_47_1] = stackIn_48_2;
-              stackIn_51_0 = ti.field_A;
+              stackIn_51_0 = ImageProducerRasterBuffer.field_A;
               stackIn_51_1 = 44;
               if (!ik.field_h) {
                 stackIn_52_2 = sa.field_b;
@@ -128,9 +128,9 @@ final class se {
                 stackIn_52_2 = o.field_a;
               }
               stackIn_51_0[stackIn_51_1] = stackIn_52_2;
-              stackIn_55_0 = ti.field_A;
+              stackIn_55_0 = ImageProducerRasterBuffer.field_A;
               stackIn_55_1 = 43;
-              if (ui.field_G) {
+              if (AlphaContainer.field_G) {
                 stackIn_56_2 = tm.field_f;
               } else {
                 stackIn_56_2 = fj.field_i;
@@ -144,15 +144,15 @@ final class se {
                   stackIn_67_1 = 1;
                 }
                 if (stackIn_63_0 != stackIn_67_1) {
-                  gd.field_sb = null;
+                  ContentTransitionDialog.field_sb = null;
                 }
               } else {
-                gd.field_sb = null;
+                ContentTransitionDialog.field_sb = null;
               }
-              stackIn_73_0 = ti.field_A;
+              stackIn_73_0 = ImageProducerRasterBuffer.field_A;
               stackIn_73_1 = 47;
               if (!tj.field_a) {
-                stackIn_74_2 = he.field_d;
+                stackIn_74_2 = RasterBuffer.field_d;
               } else {
                 stackIn_74_2 = qj.field_u;
               }
@@ -196,13 +196,13 @@ final class se {
               if (decompiledFrameCompleted1) {
                 var5_ref_int__ = new int[8];
                 if (SentinelDesigner.a(uc.field_b, (byte) 97, var5_ref_int__) == null) {
-                  uc.field_b = new int[ua.field_x.length];
-                  ii.a(ua.field_x, 0, uc.field_b, 0, uc.field_b.length);
+                  uc.field_b = new int[ReflectionCheck.field_x.length];
+                  ArraySupport.copy(ReflectionCheck.field_x, 0, uc.field_b, 0, uc.field_b.length);
                 }
                 if (ni.b(58) ||
                   !(rd.field_b > 0)) {
                   var6Lifetime1 = uc.field_b[0];
-                  var7_ref_int__ = nl.a(var6Lifetime1, (byte) 126);
+                  var7_ref_int__ = DialWidget.a(var6Lifetime1, (byte) 126);
                   var8 = 0;
                   if (var7_ref_int__ != null &&
                     !oc.a(var6Lifetime1, -87, false)) {
@@ -228,16 +228,16 @@ final class se {
                     if ((decompiledFrameCompleted0) &&
                       (var10 != 0)) {
                       var8 = 1;
-                      var7_ref_int__ = ua.field_x;
+                      var7_ref_int__ = ReflectionCheck.field_x;
                     }
                   } else {
                     var8 = 1;
-                    var7_ref_int__ = ua.field_x;
+                    var7_ref_int__ = ReflectionCheck.field_x;
                   }
                   if ((decompiledFrameCompleted0) &&
                     (var8 != 0)) {
                     uc.field_b = new int[var7_ref_int__.length];
-                    ii.a(var7_ref_int__, 0, uc.field_b, 0, var7_ref_int__.length);
+                    ArraySupport.copy(var7_ref_int__, 0, uc.field_b, 0, var7_ref_int__.length);
                   }
                 }
               }
@@ -328,30 +328,30 @@ final class se {
           var7 = SoftwareRaster.field_c;
           var8 = SoftwareRaster.field_j;
           var9 = new RgbSprite(param0, -(2 * param0) + param3);
-          var9.d();
+          var9.bindRasterTarget();
           SoftwareRaster.e(0, 0, param0, param3 - param0 * 2, param2, param4);
           var10 = new RgbSprite(param0, param0);
-          var10.d();
+          var10.bindRasterTarget();
           if (param5 != 13574) {
             field_a = (String[]) null;
           }
           SoftwareRaster.a(0, 0, param0, param0, param2);
           var11 = new RgbSprite(16, param0);
-          var11.d();
+          var11.bindRasterTarget();
           SoftwareRaster.a(0, 0, 16, param0, param2);
           var12 = new RgbSprite(param0, param0);
-          var12.d();
+          var12.bindRasterTarget();
           SoftwareRaster.a(0, 0, param0, param0, param4);
           var13 = new RgbSprite(16, param0);
-          var13.d();
+          var13.bindRasterTarget();
           SoftwareRaster.a(0, 0, 16, param0, param4);
           var14 = null;
           if (0 < param1) {
             var14 = new RgbSprite(16, 16);
-            ((RgbSprite) (var14)).d();
+            ((RgbSprite) (var14)).bindRasterTarget();
             SoftwareRaster.a(0, 0, 16, 16, param1);
           }
-          SoftwareRaster.a(var6, var7, var8);
+          SoftwareRaster.setTarget(var6, var7, var8);
           stackIn_8_0 = new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -386,24 +386,24 @@ final class se {
         var8 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
-          var4 = lk.field_W;
+          var4 = ValidationIndicator.field_W;
           if (param0 != 32) {
             field_a = (String[]) null;
           }
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(an.field_g.length > var3_int)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(AudioService.field_g.length > var3_int)))) {
             var5 = kk.field_g[var3_int];
             stackIn_18_0 = 0;
             if (var8 == 0) {
               if (stackIn_18_0 <= var5) {
-                var6 = rg.a(an.field_g[var3_int], true, (byte) -115);
+                var6 = rg.a(AudioService.field_g[var3_int], true, (byte) -115);
                 var4 = var4 + tf.field_c;
-                var7 = vg.field_f - (var6 >> 1);
-                if (pg.a(ig.field_e + (id.field_ac << 1), var6 + (h.field_U << 1), param2, var7 - h.field_U, param0 - 32, var4, param1)) {
+                var7 = ProxyAuthenticationException.field_f - (var6 >> 1);
+                if (pg.a(WhirlpoolHasher.field_e + (IconLabelControl.field_ac << 1), var6 + (DraggableWidget.field_U << 1), param2, var7 - DraggableWidget.field_U, param0 - 32, var4, param1)) {
                   stackIn_13_0 = var5;
                   return stackIn_13_0;
                 }
-                var4 = var4 + (tf.field_c + ((id.field_ac << 1) + ig.field_e));
+                var4 = var4 + (tf.field_c + ((IconLabelControl.field_ac << 1) + WhirlpoolHasher.field_e));
               } else {
                 var4 = var4 + IntrusiveNode.field_e;
               }
@@ -425,7 +425,7 @@ final class se {
 
     final static void a(int param0) {
         try {
-          hc.a(4, 0);
+          LabeledField.a(4, 0);
           if (param0 <= 17) {
             field_b = -41L;
           }
@@ -508,7 +508,7 @@ final class se {
         var19 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder2 = true;
-          var5_int = qa.field_O;
+          var5_int = Js5NetworkRequest.field_O;
           if ((ni.b(104) ||
             !(0 < rd.field_b)) && oc.a(param3.componentId, -125, false)) {
             stackIn_11_0 = 1;
@@ -527,11 +527,11 @@ final class se {
           if (param3.componentId == 83) {
             var7 = 36;
           }
-          var8 = new SceneWidget((long)param3.componentId, sb.field_Y);
+          var8 = new SceneWidget((long)param3.componentId, Checkbox.field_Y);
           cj.field_a[param3.componentId] = var8;
           stackIn_27_0 = var8;
           if (0 != param2) {
-            stackIn_28_1 = tk.field_t;
+            stackIn_28_1 = MatchingTextValidator.field_t;
           } else {
             stackIn_28_1 = be.field_f;
           }
@@ -540,7 +540,7 @@ final class se {
           if (param2 != 0) {
             stackIn_32_1 = co.field_d;
           } else {
-            stackIn_32_1 = tk.field_t;
+            stackIn_32_1 = MatchingTextValidator.field_t;
           }
           stackIn_31_0.field_I = stackIn_32_1;
           var9 = sj.field_v[param3.componentId];
@@ -548,7 +548,7 @@ final class se {
           if (param3.field_Q == 1 &&
             param2 != 0) {
             var11_ref_int__ = ne.a(param3.componentId, (byte) 28);
-            var12 = ki.b(param3.componentId, (byte) -101);
+            var12 = LoadingProgressDialog.b(param3.componentId, (byte) -101);
             var13_int = 0;
             var14_int = 0;
             var15_ref_int__ = var11_ref_int__;
@@ -585,7 +585,7 @@ final class se {
               var17_intLifetime2 = var15_ref_int__[var16Lifetime4];
               var18_intLifetime1 = qf.field_h[var17_intLifetime2];
               var13_int = var13_int + var18_intLifetime1;
-              stackOut_50_0 = t.a(fe.field_D, var17_intLifetime2, -20370);
+              stackOut_50_0 = t.a(ArchiveRequest.field_D, var17_intLifetime2, -20370);
               stackIn_58_0 = stackOut_50_0 ? 1 : 0;
               stackIn_51_0 = stackOut_50_0;
               if (var19 == 0) {
@@ -597,7 +597,7 @@ final class se {
               }
               break;
             }
-            if (stackIn_58_0 >= ~li.field_v) {
+            if (stackIn_58_0 >= ~PasswordFieldPainter.field_v) {
               param2 = 1;
               if (var19 != 0) {
                 param2 = 2;
@@ -608,11 +608,11 @@ final class se {
           }
           var11 = 66;
           var12_ref = param3.getPartName(-24719);
-          var13 = new SceneWidget((long)param3.componentId, kh.field_s, var12_ref);
+          var13 = new SceneWidget((long)param3.componentId, ThreeSliceButtonPainter.field_s, var12_ref);
           var13.a(0, 2, var7 - 19, -4 + var11, -var11 + var5_int);
           var13.field_Ib = 10;
           if (var7 < 40) {
-            var12_ref = bg.a(var12_ref, var13.field_zb - var13.field_ub * 2, (byte) -45, var13.field_L);
+            var12_ref = WeightedCacheEntry.a(var12_ref, var13.field_zb - var13.field_ub * 2, (byte) -45, var13.field_L);
           }
           var13.field_S = var12_ref;
           if (param4 != 14) {
@@ -626,20 +626,20 @@ final class se {
           if ((!(param3.componentId >= 17) ||
             !(53 > param3.componentId)) && param3.componentId != 83) {
             if (1 == param3.field_Q) {
-              var14_intLifetime1 = var13.field_L.a(var13.field_S, var13.field_zb - var13.field_ub * 2, var13.field_Ib) + 6;
-              kh.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, var14_intLifetime1, var5_int, 3000, var11, true);
+              var14_intLifetime1 = var13.field_L.paragraphHeight(var13.field_S, var13.field_zb - var13.field_ub * 2, var13.field_Ib) + 6;
+              ThreeSliceButtonPainter.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, var14_intLifetime1, var5_int, 3000, var11, true);
               var14_intLifetime1 += 14;
-              kh.a(var8, "<img=0>", param3.getTotalArmour(8192), param3.componentId, var14_intLifetime1, var5_int, 800, var11, true);
+              ThreeSliceButtonPainter.a(var8, "<img=0>", param3.getTotalArmour(8192), param3.componentId, var14_intLifetime1, var5_int, 800, var11, true);
               var14_intLifetime1 += 14;
               if (0 >= param3.j(0)) {
                 if (!(param3.h(-31496) <= 0)) {
-                  kh.a(var8, "<img=2>", (int)((double)param3.h(-31496) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
+                  ThreeSliceButtonPainter.a(var8, "<img=2>", (int)((double)param3.h(-31496) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
                   if (var19 != 0) {
-                    kh.a(var8, "<img=3>", (int)((double)param3.j(0) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
+                    ThreeSliceButtonPainter.a(var8, "<img=3>", (int)((double)param3.j(0) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
                   }
                 }
               } else {
-                kh.a(var8, "<img=3>", (int)((double)param3.j(0) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
+                ThreeSliceButtonPainter.a(var8, "<img=3>", (int)((double)param3.j(0) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
               }
               var14_intLifetime1 += 14;
               var16_ref_String = "";
@@ -653,7 +653,7 @@ final class se {
                 }
               }
               if (decompiledFrameCompleted1) {
-                var15_ref_gh = new SceneWidget((long)param3.componentId, kh.field_s, var16_ref_String);
+                var15_ref_gh = new SceneWidget((long)param3.componentId, ThreeSliceButtonPainter.field_s, var16_ref_String);
                 var15_ref_gh.a(0, var14_intLifetime1, 20, var11 - 4, var5_int - var11);
                 var8.a(var15_ref_gh, 123);
                 var14_intLifetime1 += 14;
@@ -663,10 +663,10 @@ final class se {
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameCompleted1)) {
               boolean decompiledFrameCompleted0 = true;
-              var14_intLifetime1Lifetime1 = var13.field_L.a(var13.field_S, var13.field_zb - var13.field_ub * 2, var13.field_Ib) + 6;
-              kh.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, var14_intLifetime1Lifetime1, var5_int, 3000, var11, true);
+              var14_intLifetime1Lifetime1 = var13.field_L.paragraphHeight(var13.field_S, var13.field_zb - var13.field_ub * 2, var13.field_Ib) + 6;
+              ThreeSliceButtonPainter.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, var14_intLifetime1Lifetime1, var5_int, 3000, var11, true);
               var14_intLifetime1Lifetime1 += 14;
-              kh.a(var8, "<img=0>", param3.getTotalArmour(8192), param3.componentId, var14_intLifetime1Lifetime1, var5_int, 400, var11, true);
+              ThreeSliceButtonPainter.a(var8, "<img=0>", param3.getTotalArmour(8192), param3.componentId, var14_intLifetime1Lifetime1, var5_int, 400, var11, true);
               var14_intLifetime1Lifetime1 += 14;
               if (0 < param3.i(-122)) {
                 var16_ref_StringLifetime1 = "";
@@ -680,7 +680,7 @@ final class se {
                   }
                 }
                 if (decompiledFrameCompleted0) {
-                  var15_ref_ghLifetime1 = new SceneWidget((long)param3.componentId, kh.field_s, var16_ref_StringLifetime1);
+                  var15_ref_ghLifetime1 = new SceneWidget((long)param3.componentId, ThreeSliceButtonPainter.field_s, var16_ref_StringLifetime1);
                   var15_ref_ghLifetime1.a(0, var14_intLifetime1Lifetime1, 20, -4 + var11, var5_int - var11);
                   var8.a(var15_ref_ghLifetime1, 125);
                 }
@@ -696,7 +696,7 @@ final class se {
                 stackIn_115_0 = null;
                 stackIn_115_1 = null;
                 stackIn_115_2 = (long)param3.componentId;
-                stackIn_115_3 = kh.field_s;
+                stackIn_115_3 = ThreeSliceButtonPainter.field_s;
                 if (var16Lifetime1 != 0) {
                   stackIn_116_0 = null;
                   stackIn_116_1 = null;
@@ -712,11 +712,11 @@ final class se {
                 var8.a(var15_ref_ghLifetime1Lifetime1, param4 + 108);
               }
               if (var19 != 0) {
-                kh.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, 18, var5_int, 500, var11, true);
+                ThreeSliceButtonPainter.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, 18, var5_int, 500, var11, true);
               }
             }
           } else {
-            kh.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, 18, var5_int, 500, var11, true);
+            ThreeSliceButtonPainter.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, 18, var5_int, 500, var11, true);
           }
           boolean decompiledFrameRemainder0 = true;
           var14 = new SceneWidget((long)param3.componentId, (SceneWidget) null);
@@ -730,24 +730,24 @@ final class se {
           if (decompiledFrameRemainder0) {
             var15 = NodeDeque.a((byte) 83, param3.componentId);
             var14.field_Pb = new RgbSprite(Math.min(64, -4 + var11), Math.min(64, var7 - 4));
-            var14.field_Pb.d();
+            var14.field_Pb.bindRasterTarget();
             si.field_E[var15].a(0, 0);
             SoftwareRaster.c();
-            sb.field_bb.b((byte) 121);
-            jg.field_h[var15] = var14;
+            Checkbox.field_bb.b((byte) 121);
+            ViewportController.field_h[var15] = var14;
             var14.field_Kb = 1;
             var14.field_Fb = 1;
           }
           if (!param0 ||
             param1 ||
             var6 != 0) {
-            var14.field_Pb.d();
+            var14.field_Pb.bindRasterTarget();
             SoftwareRaster.c(0, 0, var14.field_Pb.field_A, var14.field_Pb.field_F, 0, 128);
             if (param1 &&
               var6 == 0) {
-              pl.field_U.a(mc.field_d, var14.field_Pb.field_A / 2, (pl.field_U.field_G + var14.field_Pb.field_F) / 2, 12632256, 0);
+              pl.field_U.drawCentered(mc.field_d, var14.field_Pb.field_A / 2, (pl.field_U.field_G + var14.field_Pb.field_F) / 2, 12632256, 0);
             }
-            sb.field_bb.b((byte) 122);
+            Checkbox.field_bb.b((byte) 122);
           }
           var8.a(var14, 123);
           if (var6 != 0) {
@@ -772,7 +772,7 @@ final class se {
             var17Lifetime1.field_I = lj.field_b;
             var17Lifetime1.field_qb = 2;
             var17Lifetime1.field_sb = 2;
-            var17Lifetime1.field_Pb = b.field_q[param2];
+            var17Lifetime1.field_Pb = DialWidgetPainter.field_q[param2];
             var8.a(var17Lifetime1, 123);
             if (param3.componentId != 58) {
             }
@@ -781,7 +781,7 @@ final class se {
               var18.field_Kb = 1;
               var18.field_Fb = 1;
               var18.field_S = var10 + "%";
-              var18.field_L = (BitmapFont) ((Object) fk.field_d);
+              var18.field_L = (BitmapFont) ((Object) BoundedUrlRequest.field_d);
               stackIn_159_0 = var18;
               if (param2 != 1) {
                 stackIn_160_1 = 16711680;
@@ -818,6 +818,6 @@ final class se {
     static {
         field_a = new String[]{"Increases your energy gain by <img=7> ~16 GJ/s.", "Increases your energy gain by <img=7> ~33 GJ/s.", "Increases your energy gain by <img=7> ~50 GJ/s.", "Increases your energy gain by <img=7> ~66 GJ/s.", "Increases your energy gain by <img=7> ~83 GJ/s.", "Increase your energy storage by <img=4> 1 TJ.", "Increase your energy storage by <img=4> 2 TJ.", "Increase your energy storage by <img=4> 3 TJ.", "Increase your energy storage by <img=4> 4 TJ.", "Increase your energy storage by <img=4> 5 TJ.", "Provides a <img=5> 100 GJ shield that absorbs energy attacks and explosions.", "Provides a <img=5> 200 GJ shield that absorbs energy attacks and explosions.", "Provides a <img=5> 500 GJ shield that absorbs energy attacks and explosions.", "Provides a <img=5> 1,000 GJ shield that absorbs energy attacks and explosions.", "Provides a <img=5> 2,000 GJ shield that absorbs energy attacks and explosions.", "Detonates a massive EMP explosion that will drain the energy of any sentinel in the vicinity. Uses all of your stored energy.", "Allows you to gain a target lock on enemy sentinels, using <img=4> 1 TJ of energy. Locking on will make missiles home in on the target and direct all gun or laser fire.", "Automatically targets incoming missiles and rockets with any light weapons capable of shooting them down (flak, gun and laser weapons).", "Scrambles target locks on your sentinel.", "Repairs your sentinel slowly over time, as long as it is not taking damage. This module continuously draws power from your reactors.", "A high output reactor that has not yet completed testing for stability.", "Shows more information about your opponents, such as their installed systems and target lock status. Also extends the range of your firing arc projections.", "Reduces the reload time of rockets and missiles by half.", "Halves the energy requirements of plasma weapons.", "Allows you to teleport across the map to a safe location. Requires at least <img=4> 5 TJ of energy, and exhausts your energy bank when activated.", "Doubles the damage output of your laser weapons, but also doubles their energy use.", "Recharges your energy shield when your sentinel takes damage.", "Removes the energy-sapping effects of EMP attacks.", "Increases your <img=2> jumping ability and reduces skidding.", "Increases your <img=3> thrusting efficiency and allows you to continue thrusting even after being hit in the air.", "Makes your sentinel hard to target and pinpoint, by providing a cloaking system. The cloak will deactivate when taking damage or firing.", "Allows any weapon to be used while in the air.", "Absorbs kinetic damage from bullets, flak and kinetic weapons.", "Absorbs explosive damage from shells, missiles and rockets."};
         field_d = "LOCK";
-        field_c = new rm(1);
+        field_c = new MenuInputState(1);
     }
 }

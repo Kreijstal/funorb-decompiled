@@ -5,7 +5,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     static String field_a;
     static boolean field_l;
     static String field_b;
-    static fh field_g;
+    static BinaryBitmapFont field_g;
     static String field_f;
     boolean field_m;
     public static boolean field_i;
@@ -89,11 +89,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (pn.field_p != null) {
-                var1 = pn.field_p.toLowerCase();
+              if (SystemTaskService.field_p != null) {
+                var1 = SystemTaskService.field_p.toLowerCase();
                 if (-1 != ((String) (var1)).indexOf("sun") ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = pn.field_r;
+                  var2 = SystemTaskService.field_r;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -112,7 +112,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_68_0 = oa.a(-4278, var2.charAt(var3));
+                      stackIn_68_0 = TextButton.a(-4278, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -125,7 +125,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (fg.a((CharSequence) ((Object) var4), -111) &&
+                      if (RegistrationRequestDialog.a((CharSequence) ((Object) var4), -111) &&
                         !(dj.a((CharSequence) ((Object) var4), -118) >= 10)) {
                         this.a("wrongjava", -16946);
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -135,8 +135,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (pn.field_r != null))) {
-                stackIn_68_0 = pn.field_r.startsWith("1.");
+                (decompiledFrameRemainder2 = (SystemTaskService.field_r != null))) {
+                stackIn_68_0 = SystemTaskService.field_r.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -145,8 +145,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (var1_int < pn.field_r.length()) {
-                    var3 = pn.field_r.charAt(var1_int);
+                  if (var1_int < SystemTaskService.field_r.length()) {
+                    var3 = SystemTaskService.field_r.charAt(var1_int);
                     stackIn_83_0 = var3;
                     stackIn_83_1 = 48;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -173,7 +173,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (fb.field_o != null) {
                   var1 = fb.field_o;
                 }
-                var2_ref = pn.field_c;
+                var2_ref = SystemTaskService.field_c;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -184,13 +184,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 im.b((byte) 98);
                 this.a(false);
-                sb.field_bb = qf.a(li.field_A, na.field_i, (java.awt.Component) ((Object) sl.field_n), (byte) -113);
+                Checkbox.field_bb = qf.a(PasswordFieldPainter.field_A, na.field_i, (java.awt.Component) ((Object) sl.field_n), (byte) -113);
                 this.b(26689);
-                gd.field_qb = dl.g((byte) 3);
+                ContentTransitionDialog.field_qb = UiContainer.g((byte) 3);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (0L != qa.field_P) {
-                    stackIn_102_0 = $cfr$lcmp(qa.field_P, mm.a(-123));
+                  if (0L != Js5NetworkRequest.field_P) {
+                    stackIn_102_0 = compareLongs(Js5NetworkRequest.field_P, mm.a(-123));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 <= 0)) {
@@ -198,14 +198,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    di.field_a = gd.field_qb.a((byte) -122, ud.field_v);
+                    di.field_a = ContentTransitionDialog.field_qb.a((byte) -122, ud.field_v);
                     stackIn_102_0 = 0;
                   }
                   var3 = stackIn_102_0;
                   do {
                     if (!(var3 < di.field_a)) {
                       this.f(-7035);
-                      le.a(sl.field_n, 50, hb.field_i);
+                      StrongCacheEntry.a(sl.field_n, 50, IterableDualNodeDeque.field_i);
                       break;
                     }
                     this.d(0);
@@ -277,9 +277,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == km.field_m &&
             !SentinelCommand.field_v) {
-            qa.field_P = mm.a(-91);
-            a.a((byte) 124, 5000L);
-            ug.field_M = null;
+            Js5NetworkRequest.field_P = mm.a(-91);
+            MouseWheelInput.a((byte) 124, 5000L);
+            SingleChildContainer.field_M = null;
             this.a(false, (byte) -101);
             return;
           }
@@ -330,11 +330,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != -27983) {
             field_f = (String) null;
           }
-          var1 = wc.field_i;
+          var1 = MouseInputHandler.field_i;
           synchronized (var1) {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
-            ad.field_b = mn.field_y;
+            ad.field_b = QuickChatCategory.field_y;
             km.field_f = km.field_f + 1;
             if (qj.field_h < 0) {
               var2 = 0;
@@ -372,9 +372,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
             }
             if (decompiledFrameCompleted0) {
-              stackIn_28_0 = fk.field_e;
+              stackIn_28_0 = BoundedUrlRequest.field_e;
             }
-            mn.field_y = stackIn_28_0;
+            QuickChatCategory.field_y = stackIn_28_0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -396,7 +396,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -75 % ((13 - param2) / 60);
-          stackIn_1_0 = ka.a((String) null, false, 0, (byte) -90, 0, param1, param0);
+          stackIn_1_0 = ModalStack.a((String) null, false, 0, (byte) -90, 0, param1, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -450,8 +450,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2 = null;
         try {
           var2_long = mm.a(59);
-          var4 = bm.field_T[ResourceArchive.field_g];
-          bm.field_T[ResourceArchive.field_g] = var2_long;
+          var4 = AccountMessagePanel.field_T[ResourceArchive.field_g];
+          AccountMessagePanel.field_T[ResourceArchive.field_g] = var2_long;
           if (var4 != 0L &&
             var2_long > var4) {
           }
@@ -464,17 +464,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             dd.field_e = true;
             ml.field_a = ml.field_a - 50;
-            sl.field_n.setSize(na.field_i, li.field_A);
+            sl.field_n.setSize(na.field_i, PasswordFieldPainter.field_A);
             sl.field_n.setVisible(true);
             if (vd.field_c != null &&
               SceneWidget.field_N == null) {
               var6 = vd.field_c.getInsets();
-              sl.field_n.setLocation(kf.field_p + var6.left, var6.top + ij.field_X);
+              sl.field_n.setLocation(kf.field_p + var6.left, var6.top + NameSuggestionsPanel.field_X);
               if (SteelSentinels.obfuscationControl != 0) {
-                sl.field_n.setLocation(kf.field_p, ij.field_X);
+                sl.field_n.setLocation(kf.field_p, NameSuggestionsPanel.field_X);
               }
             } else {
-              sl.field_n.setLocation(kf.field_p, ij.field_X);
+              sl.field_n.setLocation(kf.field_p, NameSuggestionsPanel.field_X);
             }
           }
           this.a((byte) 112);
@@ -492,7 +492,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (km.field_m == this &&
             !SentinelCommand.field_v) {
-            qa.field_P = 0L;
+            Js5NetworkRequest.field_P = 0L;
             return;
           }
           return;
@@ -544,25 +544,25 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var2 = SceneWidget.field_N;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          sl.field_n = (java.awt.Canvas) ((Object) new pi((java.awt.Component) (this)));
+          sl.field_n = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) sl.field_n));
-          sl.field_n.setSize(na.field_i, li.field_A);
+          sl.field_n.setSize(na.field_i, PasswordFieldPainter.field_A);
           sl.field_n.setVisible(true);
           if (vd.field_c == var2) {
             var3 = vd.field_c.getInsets();
-            sl.field_n.setLocation(kf.field_p + var3.left, var3.top + ij.field_X);
+            sl.field_n.setLocation(kf.field_p + var3.left, var3.top + NameSuggestionsPanel.field_X);
             if (var4 != 0) {
-              sl.field_n.setLocation(kf.field_p, ij.field_X);
+              sl.field_n.setLocation(kf.field_p, NameSuggestionsPanel.field_X);
             }
           } else {
-            sl.field_n.setLocation(kf.field_p, ij.field_X);
+            sl.field_n.setLocation(kf.field_p, NameSuggestionsPanel.field_X);
           }
           sl.field_n.addFocusListener((java.awt.event.FocusListener) (this));
           sl.field_n.requestFocus();
-          kc.field_q = true;
+          DelayedServerPacket.field_q = true;
           pa.field_f = true;
           dd.field_e = true;
-          ti.field_x = param0;
+          ImageProducerRasterBuffer.field_x = param0;
           pl.field_Y = mm.a(-61);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -603,15 +603,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var6 = null;
         try {
           var2_long = mm.a(-111);
-          var4 = hg.field_c[ah.field_Wb];
-          hg.field_c[ah.field_Wb] = var2_long;
+          var4 = hg.field_c[SocialListEntry.field_Wb];
+          hg.field_c[SocialListEntry.field_Wb] = var2_long;
           if (var4 != (long)param0 &&
             var4 < var2_long) {
           }
-          ah.field_Wb = 31 & ah.field_Wb + 1;
+          SocialListEntry.field_Wb = 31 & SocialListEntry.field_Wb + 1;
           var6 = this;
           synchronized (var6) {
-            kc.field_q = pa.field_f;
+            DelayedServerPacket.field_q = pa.field_f;
           }
           this.c(2);
           return;
@@ -657,9 +657,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (null != hb.field_i) {
+          if (null != IterableDualNodeDeque.field_i) {
             try {
-              hb.field_i.c(0);
+              IterableDualNodeDeque.field_i.c(0);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -739,23 +739,23 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_3_0 = -108;
             return stackIn_3_0;
           }
-          var4 = ug.field_Q;
+          var4 = SingleChildContainer.field_Q;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(r.field_j.length > var3_int)))) {
-            var5 = bl.field_m[var3_int];
+          while (!(decompiledNaturalLoopExit0 = (!(ProxySocketConnector.field_j.length > var3_int)))) {
+            var5 = LinkButtonPainter.field_m[var3_int];
             stackIn_17_0 = 0;
             if (var8 == 0) {
               if (stackIn_17_0 > var5) {
                 var4 = var4 + ih.field_r;
               } else {
-                var6 = wd.$cfr$intArgs$a$1694234bddb3(r.field_j[var3_int], 52, true);
-                var7 = mg.field_kc - (var6 >> 1);
-                var4 = var4 + ng.field_m;
-                if (pg.a(rn.field_q + (rc.field_j << 1), (ud.field_y << 1) + var6, param1, var7 - ud.field_y, 0, var4, param2)) {
+                var6 = wd.$cfr$intArgs$a$1694234bddb3(ProxySocketConnector.field_j[var3_int], 52, true);
+                var7 = QuickChatMenu.field_kc - (var6 >> 1);
+                var4 = var4 + MembershipPromotionScreen.field_m;
+                if (pg.a(rn.field_q + (SectorCacheStore.field_j << 1), (ud.field_y << 1) + var6, param1, var7 - ud.field_y, 0, var4, param2)) {
                   stackIn_13_0 = var5;
                   return stackIn_13_0;
                 }
-                var4 = var4 + (rn.field_q + ng.field_m + (rc.field_j << 1));
+                var4 = var4 + (rn.field_q + MembershipPromotionScreen.field_m + (SectorCacheStore.field_j << 1));
               }
               var3_int++;
               continue;
@@ -779,7 +779,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == km.field_m &&
             !SentinelCommand.field_v) {
-            qa.field_P = 4000L + mm.a(54);
+            Js5NetworkRequest.field_P = 4000L + mm.a(54);
             return;
           }
           return;
@@ -837,7 +837,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
               }
-              ti.field_x = true;
+              ImageProducerRasterBuffer.field_x = true;
             }
             return;
           }
@@ -877,7 +877,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             System.out.println("error_game_" + param0);
             try {
-              hn.a(Projectile.d((byte) -21), (byte) -96, "loggedout");
+              JavaScriptBridge.callWindowFunction(Projectile.d((byte) -21), (byte) -96, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -937,14 +937,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     final void a(int param0, int param1, int param2, byte param3, String param4, int param5, int param6) {
         try {
-          pn dupTemp$0 = null;
+          SystemTaskService dupTemp$0 = null;
           RuntimeException stackIn_22_0 = null;
           StringBuilder stackIn_22_1 = null;
           String stackIn_23_2 = null;
           Throwable decompiledCaughtException = null;
           int var8_int = 0;
           RuntimeException var8 = null;
-          wj var9 = null;
+          SystemTask var9 = null;
           Throwable var9_ref = null;
           int var10 = 0;
           var10 = SteelSentinels.obfuscationControl;
@@ -960,22 +960,22 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.a("alreadyloaded", -16946);
                 return;
               }
-              li.field_A = param1;
+              PasswordFieldPainter.field_A = param1;
               ih.field_t = param1;
               na.field_i = param0;
               dc.field_c = param0;
-              ij.field_X = 0;
+              NameSuggestionsPanel.field_X = 0;
               dd.field_d = param5;
               kf.field_p = 0;
               km.field_m = this;
-              ug.field_O = Projectile.d((byte) -21);
-              dupTemp$0 = new pn(param2, param4, param6, true);
-              hb.field_i = dupTemp$0;
-              ug.field_M = dupTemp$0;
-              var9 = hb.field_i.a(2, 1, (Runnable) (this));
+              SingleChildContainer.field_O = Projectile.d((byte) -21);
+              dupTemp$0 = new SystemTaskService(param2, param4, param6, true);
+              IterableDualNodeDeque.field_i = dupTemp$0;
+              SingleChildContainer.field_M = dupTemp$0;
+              var9 = IterableDualNodeDeque.field_i.a(2, 1, (Runnable) (this));
               while (true) {
                 if (var9.field_a == 0) {
-                  a.a((byte) 120, 10L);
+                  MouseWheelInput.a((byte) 120, 10L);
                   if (var10 == 0) {
                     continue;
                   }
@@ -1022,7 +1022,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         field_b = "You are advised to complete training mission <%0> before attempting this mission.";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

@@ -4,8 +4,8 @@
 final class nf {
     static hk field_b;
     static String field_d;
-    static sg field_c;
-    static kg field_a;
+    static BufferedSocket field_c;
+    static ScrollContainer field_a;
 
     final static int a(int[] param0, int param1, byte param2) {
         int stackIn_9_0 = 0;
@@ -38,7 +38,7 @@ final class nf {
           boolean decompiledFrameCompleted0 = true;
           var3_int = stackIn_9_0;
           if (var3_int != 0) {
-            var11 = nl.a(param0[0], (byte) 124);
+            var11 = DialWidget.a(param0[0], (byte) 124);
             if (var11.length == param0.length) {
               var5 = 0;
               boolean decompiledNaturalLoopExit0 = false;
@@ -62,9 +62,9 @@ final class nf {
               var3_int = 0;
             }
           }
-          var4 = nn.a(param0, (byte) 78);
+          var4 = FullscreenFocusCanvas.a(param0, (byte) 78);
           if (param2 != 44) {
-            field_a = (kg) null;
+            field_a = (ScrollContainer) null;
           }
           stackIn_22_0 = (var4 > 6100) ? 0 : 1;
           var5Lifetime1 = stackIn_22_0;
@@ -125,23 +125,23 @@ final class nf {
         var10 = SteelSentinels.obfuscationControl;
         try {
           var7_int = me.a(param4, -97);
-          if (null == hb.field_c) {
-            hb.field_c = new java.security.SecureRandom();
+          if (null == IterableDualNodeDeque.field_c) {
+            IterableDualNodeDeque.field_c = new java.security.SecureRandom();
           }
           var14 = new int[4];
           var13 = var14;
           var8 = var13;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = hb.field_c.nextInt();
+            var8[var9] = IterableDualNodeDeque.field_c.nextInt();
           }
-          if (hj.field_H == null ||
-            !(hj.field_H.payload.length >= var7_int)) {
-            hj.field_H = new PacketBuffer(var7_int);
+          if (MusicPatchNode.field_H == null ||
+            !(MusicPatchNode.field_H.payload.length >= var7_int)) {
+            MusicPatchNode.field_H = new PacketBuffer(var7_int);
           }
-          hj.field_H.position = 0;
-          hj.field_H.writeBytes(param4, (byte) -122, param3, param6);
-          hj.field_H.b(-2, var7_int);
-          hj.field_H.a(var14, -108);
+          MusicPatchNode.field_H.position = 0;
+          MusicPatchNode.field_H.writeBytes(param4, (byte) -122, param3, param6);
+          MusicPatchNode.field_H.b(-2, var7_int);
+          MusicPatchNode.field_H.a(var14, -108);
           if (sj.field_u == null ||
             !(sj.field_u.payload.length >= 100)) {
             sj.field_u = new PacketBuffer(100);
@@ -161,7 +161,7 @@ final class nf {
           sj.field_u.writeShort(param4, 17);
           sj.field_u.a(param2, param5, -10048);
           param1.writeBytes(sj.field_u.position, (byte) -122, 0, sj.field_u.payload);
-          param1.writeBytes(hj.field_H.position, (byte) -122, 0, hj.field_H.payload);
+          param1.writeBytes(MusicPatchNode.field_H.position, (byte) -122, 0, MusicPatchNode.field_H.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

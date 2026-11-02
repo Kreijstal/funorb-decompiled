@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sj extends we {
+final class sj extends PcmStream {
     static SceneWidget field_J;
     static String field_C;
     static int[] field_v;
@@ -11,24 +11,24 @@ final class sj extends we {
     private int[] field_G;
     private boolean field_H;
     private int field_D;
-    private tg field_L;
+    private MusicTrack field_L;
     private int field_K;
     static RgbSprite[] field_x;
     static ResourceArchive field_y;
     static SceneWidget field_z;
-    private ic field_O;
+    private MidiPcmStream field_O;
     private int[] field_I;
-    private ic field_M;
-    private tg field_s;
+    private MidiPcmStream field_M;
+    private MusicTrack field_s;
     private int field_E;
-    private ic field_t;
+    private MidiPcmStream field_t;
     private int field_A;
     static RgbSprite field_F;
-    private tg field_w;
+    private MusicTrack field_w;
     static PacketBuffer field_u;
     private boolean field_N;
 
-    final synchronized int a() {
+    final synchronized int activity() {
         return 2;
     }
 
@@ -48,7 +48,7 @@ final class sj extends we {
         field_C = null;
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -72,7 +72,7 @@ final class sj extends we {
         var11 = SteelSentinels.obfuscationControl;
         try {
           if (this.field_A <= 0) {
-            this.d(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_N) {
@@ -120,7 +120,7 @@ final class sj extends we {
               }
             }
           }
-          if (tb.field_b) {
+          if (AudioOutput.field_b) {
             stackIn_33_0 = param2 << 1;
           } else {
             stackIn_33_0 = param2;
@@ -129,20 +129,20 @@ final class sj extends we {
           if (256 > this.field_E && (this.field_s != null ||
             null != this.field_w)) {
             if (var4_int == 256) {
-              this.field_O.a(param0, param1, param2);
+              this.field_O.mixInto(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (null != this.field_G &&
                   var6 <= this.field_G.length) {
-                  ii.a(this.field_G, 0, var6);
-                  ii.a(this.field_I, 0, var6);
+                  ArraySupport.clear(this.field_G, 0, var6);
+                  ArraySupport.clear(this.field_I, 0, var6);
                 } else {
                   this.field_I = new int[var6];
                   this.field_G = new int[var6];
                 }
-                this.field_O.a(this.field_G, 0, param2);
-                this.field_M.a(this.field_I, 0, param2);
-                if (tb.field_b) {
+                this.field_O.mixInto(this.field_G, 0, param2);
+                this.field_M.mixInto(this.field_I, 0, param2);
+                if (AudioOutput.field_b) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
                   stackIn_47_0 = localTemp$0;
@@ -154,7 +154,7 @@ final class sj extends we {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_G[var8] * var4_int + var5 * this.field_I[var8] >> 8);
                 }
               } else {
-                this.field_M.a(param0, param1, param2);
+                this.field_M.mixInto(param0, param1, param2);
               }
             }
           }
@@ -164,13 +164,13 @@ final class sj extends we {
             }
             if (null != this.field_G &&
               this.field_G.length >= var6) {
-              ii.a(this.field_G, 0, var6);
+              ArraySupport.clear(this.field_G, 0, var6);
             } else {
               this.field_G = new int[var6];
               this.field_I = new int[var6];
             }
-            this.field_t.a(this.field_G, 0, param2);
-            if (!tb.field_b) {
+            this.field_t.mixInto(this.field_G, 0, param2);
+            if (!AudioOutput.field_b) {
               stackIn_62_0 = param1;
             } else {
               localTemp$1 = param1 << 1;
@@ -212,20 +212,20 @@ final class sj extends we {
         }
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         var3 = SteelSentinels.obfuscationControl;
         if (this.field_D > 0 &&
           null != this.field_s) {
-          this.field_O.d(param0);
+          this.field_O.skipFrames(param0);
         }
         if (1048576 > this.field_D &&
           null != this.field_w) {
-          this.field_M.d(param0);
+          this.field_M.skipFrames(param0);
         }
         if (0 < this.field_E &&
           null != this.field_L) {
-          this.field_t.d(param0);
+          this.field_t.skipFrames(param0);
         }
         if (this.field_N) {
           if (this.field_K > 0 &&
@@ -272,7 +272,7 @@ final class sj extends we {
         }
     }
 
-    private final void a(int param0, ic param1, int param2, int param3) {
+    private final void a(int param0, MidiPcmStream param1, int param2, int param3) {
         try {
           if (param2 != 17396) {
             this.a(-97, 18);
@@ -286,7 +286,7 @@ final class sj extends we {
 
     final static void a(String param0, int param1, Throwable param2) {
         try {
-          pn stackIn_15_0;
+          SystemTaskService stackIn_15_0;
           java.net.URL stackIn_15_1;
           java.net.URL stackIn_15_2;
           java.net.URL stackIn_15_3;
@@ -297,7 +297,7 @@ final class sj extends we {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          wj var4 = null;
+          SystemTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -324,26 +324,26 @@ final class sj extends we {
             var8 = CombatWorld.a("@", var7, "%40", 101);
             var9 = CombatWorld.a("&", var8, "%26", -20);
             var10 = CombatWorld.a("#", var9, "%23", 97);
-            if (null == ug.field_O) {
+            if (null == SingleChildContainer.field_O) {
               return;
             }
-            stackIn_15_0 = ug.field_M;
+            stackIn_15_0 = SingleChildContainer.field_M;
             stackIn_15_1 = null;
             stackIn_15_2 = null;
-            stackIn_15_3 = ug.field_O.getCodeBase();
+            stackIn_15_3 = SingleChildContainer.field_O.getCodeBase();
             stackIn_15_4 = new StringBuilder().append("clienterror.ws?c=").append(dd.field_d).append("&u=");
             if (ih.field_q == null) {
               stackIn_16_1 = null;
               stackIn_16_2 = null;
-              stackIn_16_5 = "" + oa.field_P;
+              stackIn_16_5 = "" + TextButton.field_P;
             } else {
               stackIn_16_1 = null;
               stackIn_16_2 = null;
               stackIn_16_5 = ih.field_q;
             }
-            var4 = ((pn) (Object) stackIn_15_0).a(new java.net.URL(stackIn_15_3, ((StringBuilder) (Object) stackIn_15_4).append(stackIn_16_5).append("&v1=").append(pn.field_p).append("&v2=").append(pn.field_r).append("&e=").append(var10).toString()), 38);
+            var4 = ((SystemTaskService) (Object) stackIn_15_0).a(new java.net.URL(stackIn_15_3, ((StringBuilder) (Object) stackIn_15_4).append(stackIn_16_5).append("&v1=").append(SystemTaskService.field_p).append("&v2=").append(SystemTaskService.field_r).append("&e=").append(var10).toString()), 38);
             while (var4.field_a == 0) {
-              a.a((byte) 126, 1L);
+              MouseWheelInput.a((byte) 126, 1L);
             }
             if (var4.field_a == 1) {
               var5 = (DataInputStream) (var4.field_c);
@@ -361,7 +361,7 @@ final class sj extends we {
         }
     }
 
-    final we d() {
+    final PcmStream firstSubstream() {
         return null;
     }
 
@@ -403,10 +403,10 @@ final class sj extends we {
             var3 = 374.0 + (double)(var2 - 320) * (0.000234375 * (double)(var2 - 320));
             var5 = (int)Math.ceil(var3);
             if (var2 == oh.field_f &&
-              var5 <= pi.field_c) {
+              var5 <= DelegatingCanvas.field_c) {
               var1_int = 1;
             }
-            jg.a(0, 48, var2, false, 480, var5);
+            ViewportController.a(0, 48, var2, false, 480, var5);
             var6 = var5 - 1;
             var7 = var5 + 1;
             var8 = (int)(((double)var5 - var3) * 256.0);
@@ -460,13 +460,13 @@ final class sj extends we {
         this.field_A = param0;
     }
 
-    final synchronized void a(int param0, tg param1, int param2, int param3, boolean param4, int param5) {
+    final synchronized void a(int param0, MusicTrack param1, int param2, int param3, boolean param4, int param5) {
         boolean stackIn_20_1 = false;
         int stackIn_33_0 = 0;
-        ic stackIn_43_0 = null;
+        MidiPcmStream stackIn_43_0 = null;
         boolean stackIn_43_1 = false;
         boolean stackIn_44_2 = false;
-        ic stackIn_53_0 = null;
+        MidiPcmStream stackIn_53_0 = null;
         boolean stackIn_53_1 = false;
         boolean stackIn_54_2 = false;
         RuntimeException stackIn_59_0 = null;
@@ -535,7 +535,7 @@ final class sj extends we {
               stackIn_53_0 = this.field_M;
               stackIn_53_1 = true;
               stackIn_54_2 = !(param4);
-              ((ic) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_54_2, param1);
+              ((MidiPcmStream) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_54_2, param1);
               this.a(param3, this.field_M, 17396, param0);
             }
             this.field_K = -param2;
@@ -548,7 +548,7 @@ final class sj extends we {
               stackIn_43_0 = this.field_O;
               stackIn_43_1 = true;
               stackIn_44_2 = !(param4);
-              ((ic) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_44_2, param1);
+              ((MidiPcmStream) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_44_2, param1);
               this.a(param3, this.field_O, 17396, param0);
             }
             this.field_K = param2;
@@ -573,7 +573,7 @@ final class sj extends we {
         return (int)(1000000000L / ud.field_v);
     }
 
-    final we b() {
+    final PcmStream nextSubstream() {
         return null;
     }
 

@@ -15,8 +15,8 @@ final class qe {
           if (param1 != -30418) {
             field_f = (String) null;
           }
-          param0.removeKeyListener(wc.field_i);
-          param0.removeFocusListener(wc.field_i);
+          param0.removeKeyListener(MouseInputHandler.field_i);
+          param0.removeFocusListener(MouseInputHandler.field_i);
           qj.field_h = -1;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "qe.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -28,9 +28,9 @@ final class qe {
           if (param3 != 3) {
             qe.a(16, 30, -14);
           }
-          tk.field_p = param0;
+          MatchingTextValidator.field_p = param0;
           on.field_n = param2;
-          ug.field_I = param1;
+          SingleChildContainer.field_I = param1;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "qe.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -81,9 +81,9 @@ final class qe {
           for (var3_int = 0; param0.field_E.length > var3_int; var3_int++) {
             param0.field_E[var3_int] = 0;
           }
-          param0.d();
-          ff.field_lb.a(param2, param0.field_z / 2, param0.field_B - 10, 10790052, -1);
-          sb.field_bb.b((byte) 125);
+          param0.bindRasterTarget();
+          ValidationHelpWidget.field_lb.drawCentered(param2, param0.field_z / 2, param0.field_B - 10, 10790052, -1);
+          Checkbox.field_bb.b((byte) 125);
           var3_intLifetime1 = param0.field_z;
           var4 = param0.field_B;
           var5 = 0;

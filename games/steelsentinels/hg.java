@@ -26,14 +26,14 @@ final class hg {
           si.field_m = si.field_m + 1;
           if (pe.field_d == -1 &&
             jj.field_c == -1) {
-            jj.field_c = pi.field_c;
+            jj.field_c = DelegatingCanvas.field_c;
             pe.field_d = oh.field_f;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 == null) {
-            decompiledFrameRemainder0 = (rc.field_b == null);
+            decompiledFrameRemainder0 = (SectorCacheStore.field_b == null);
           } else {
-            decompiledFrameRemainder0 = !(param1.equals(rc.field_b));
+            decompiledFrameRemainder0 = !(param1.equals(SectorCacheStore.field_b));
           }
           if (decompiledFrameRemainder0) {
             if (!pg.field_A) {
@@ -79,9 +79,9 @@ final class hg {
           if (param0 > -125) {
             return;
           }
-          rc.field_b = param1;
+          SectorCacheStore.field_b = param1;
           if (pg.field_A &&
-            si.field_m == ql.field_Ub) {
+            si.field_m == SocialListPanel.field_Ub) {
             si.field_m = 0;
             pg.field_A = false;
           }
@@ -109,10 +109,10 @@ final class hg {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          db.a(-1, (java.awt.Component) ((Object) param1));
-          al.a(true, (java.awt.Component) ((Object) param1));
+          SocketConnector.a(-1, (java.awt.Component) ((Object) param1));
+          TickClock.a(true, (java.awt.Component) ((Object) param1));
           if (null != nc.field_j) {
-            nc.field_j.a((java.awt.Component) ((Object) param1), false);
+            nc.field_j.attach((java.awt.Component) ((Object) param1), false);
           }
           if (param0 == -93) {
             return;

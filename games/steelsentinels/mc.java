@@ -17,8 +17,8 @@ final class mc {
           return;
         }
         try {
-          od.field_i = param0;
-          q.field_l = param1;
+          ClientException.field_i = param0;
+          IterableNodeHashTable.field_l = param1;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "mc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

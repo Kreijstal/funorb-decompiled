@@ -14,7 +14,7 @@ final class co {
           return false;
         }
         if (ln.field_h) {
-          if (df.field_I) {
+          if (DiskCacheRequest.field_I) {
             return true;
           }
           return ni.b(56) ? true : false;
@@ -33,11 +33,11 @@ final class co {
         }
     }
 
-    final mn a(byte param0, int param1) {
-        mn var3;
+    final QuickChatCategory a(byte param0, int param1) {
+        QuickChatCategory var3;
         byte[] var4;
-        mn var3Lifetime1;
-        var3 = (mn) (this.field_a.a((long)param1, -100));
+        QuickChatCategory var3Lifetime1;
+        var3 = (QuickChatCategory) (this.field_a.a((long)param1, -100));
         if (var3 != null) {
           return var3;
         }
@@ -47,9 +47,9 @@ final class co {
           var4 = this.field_b.getFile(0, (byte) 40, param1);
         }
         if (param0 != -13) {
-          return (mn) null;
+          return (QuickChatCategory) null;
         }
-        var3Lifetime1 = new mn();
+        var3Lifetime1 = new QuickChatCategory();
         if (var4 != null) {
           var3Lifetime1.a(106, new PacketBuffer(var4));
         }
@@ -71,7 +71,7 @@ final class co {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        ig var5 = null;
+        WhirlpoolHasher var5 = null;
         byte[] var6 = null;
         var7 = SteelSentinels.obfuscationControl;
         try {
@@ -87,11 +87,11 @@ final class co {
           } else {
             var4 = param3;
           }
-          var5 = new ig();
+          var5 = new WhirlpoolHasher();
           var5.a(-635160440);
           var5.a((byte) 90, (long)(8 * param1), var4);
           var6 = new byte[64];
-          var5.a(var6, true, 0);
+          var5.finishDigest(var6, true, 0);
           stackIn_9_0 = var6;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

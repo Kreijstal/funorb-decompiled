@@ -35,7 +35,7 @@ final class kk {
           for (var8 = 1; param3.length() > var8; var8++) {
             var9 = param3.charAt(var8);
             if (var9 == 60) {
-              var6 = param0.field_f[0] + (var5_int >> 8) + param4.c(param3.substring(0, var8));
+              var6 = param0.field_f[0] + (var5_int >> 8) + param4.textWidth(param3.substring(0, var8));
             }
             if (-1 != var6) {
               param0.field_f[var8] = var6;
@@ -43,7 +43,7 @@ final class kk {
               if (32 == var9) {
                 var5_int = var5_int + param2;
               }
-              param0.field_f[var8] = param0.field_f[0] + ((var5_int >> 8) + (param4.c(param3.substring(0, var8 + 1)) - param4.a((char) var9)));
+              param0.field_f[var8] = param0.field_f[0] + ((var5_int >> 8) + (param4.textWidth(param3.substring(0, var8 + 1)) - param4.measureCharacterAdvance((char) var9)));
             }
             if (var9 == 62) {
               var6 = -1;
@@ -160,7 +160,7 @@ final class kk {
           var14 = var16;
           var2 = var14;
           var3 = Projectile.a(var15, 0, true, param0);
-          var4 = ub.a(127, param0.componentId);
+          var4 = SoundCache.a(127, param0.componentId);
           if (0 > var4) {
             stackIn_4_0 = null;
           } else {
@@ -194,9 +194,9 @@ final class kk {
             var9 = dc.a(var16[var7Lifetime1], 32);
             if (var9 != null) {
               if (var6 == null) {
-                var6 = db.a(hf.field_a, param1 ^ 4221, new String[]{Integer.toString(var8), var9});
+                var6 = SocketConnector.a(hf.field_a, param1 ^ 4221, new String[]{Integer.toString(var8), var9});
               } else {
-                var6 = db.a(q.field_a, param1 ^ 4141, new String[]{(String) (var6), Integer.toString(var8), var9});
+                var6 = SocketConnector.a(IterableNodeHashTable.field_a, param1 ^ 4141, new String[]{(String) (var6), Integer.toString(var8), var9});
               }
             }
           }
@@ -280,65 +280,65 @@ final class kk {
             if (0 > deltaX) {
               return -1;
             }
-            return td.field_Xb[deltaX] >> 12;
+            return ReportAbuseDialog.field_Xb[deltaX] >> 12;
           }
           if (deltaX < 4096) {
             if (deltaX >= 1024) {
-              return td.field_Xb[deltaX >> 4] >> 10;
+              return ReportAbuseDialog.field_Xb[deltaX >> 4] >> 10;
             }
-            return td.field_Xb[deltaX >> 2] >> 11;
+            return ReportAbuseDialog.field_Xb[deltaX >> 2] >> 11;
           }
           if (16384 <= deltaX) {
-            return td.field_Xb[deltaX >> 8] >> 8;
+            return ReportAbuseDialog.field_Xb[deltaX >> 8] >> 8;
           }
-          return td.field_Xb[deltaX >> 6] >> 9;
+          return ReportAbuseDialog.field_Xb[deltaX >> 6] >> 9;
         }
         if (deltaX < 16777216) {
           if (1048576 > deltaX) {
             if (deltaX < 262144) {
-              return td.field_Xb[deltaX >> 10] >> 7;
+              return ReportAbuseDialog.field_Xb[deltaX >> 10] >> 7;
             }
-            return td.field_Xb[deltaX >> 12] >> 6;
+            return ReportAbuseDialog.field_Xb[deltaX >> 12] >> 6;
           }
           if (deltaX < 4194304) {
-            return td.field_Xb[deltaX >> 14] >> 5;
+            return ReportAbuseDialog.field_Xb[deltaX >> 14] >> 5;
           }
-          return td.field_Xb[deltaX >> 16] >> 4;
+          return ReportAbuseDialog.field_Xb[deltaX >> 16] >> 4;
         }
         if (deltaX >= 268435456) {
           if (1073741824 <= deltaX) {
-            return td.field_Xb[deltaX >> 24] << var3;
+            return ReportAbuseDialog.field_Xb[deltaX >> 24] << var3;
           }
           if (var3 >= 1) {
-            stackIn_50_0 = td.field_Xb[deltaX >> 22] << -1 + var3;
+            stackIn_50_0 = ReportAbuseDialog.field_Xb[deltaX >> 22] << -1 + var3;
           } else {
-            stackIn_50_0 = td.field_Xb[deltaX >> 22] >> -var3 + 1;
+            stackIn_50_0 = ReportAbuseDialog.field_Xb[deltaX >> 22] >> -var3 + 1;
           }
           return stackIn_50_0;
         }
         if (67108864 > deltaX) {
           if (3 <= var3) {
-            stackIn_45_0 = td.field_Xb[deltaX >> 18] << -3 + var3;
+            stackIn_45_0 = ReportAbuseDialog.field_Xb[deltaX >> 18] << -3 + var3;
           } else {
-            stackIn_45_0 = td.field_Xb[deltaX >> 18] >> 3 - var3;
+            stackIn_45_0 = ReportAbuseDialog.field_Xb[deltaX >> 18] >> 3 - var3;
           }
           return stackIn_45_0;
         }
         if (var3 >= 2) {
-          stackIn_41_0 = td.field_Xb[deltaX >> 20] << var3 - 2;
+          stackIn_41_0 = ReportAbuseDialog.field_Xb[deltaX >> 20] << var3 - 2;
         } else {
-          stackIn_41_0 = td.field_Xb[deltaX >> 20] >> 2 - var3;
+          stackIn_41_0 = ReportAbuseDialog.field_Xb[deltaX >> 20] >> 2 - var3;
         }
         return stackIn_41_0;
     }
 
-    final static void a(SceneWidget param0, int param1, int param2, int[] param3, String param4, String param5, int param6, long param7, kg param8) {
+    final static void a(SceneWidget param0, int param1, int param2, int[] param3, String param4, String param5, int param6, long param7, ScrollContainer param8) {
         try {
           if (param6 != 1073741824) {
             field_a = (SceneWidget) null;
           }
           la.field_c = param8;
-          an.field_i = new dd(param0, param7, param4, param5, param1, param2, param3);
+          AudioService.field_i = new dd(param0, param7, param4, param5, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "kk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

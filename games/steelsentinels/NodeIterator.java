@@ -95,7 +95,7 @@ final class NodeIterator {
           return null;
         }
         if (ik.field_c + ni.field_c > si.field_m) {
-          return rc.field_b;
+          return SectorCacheStore.field_b;
         }
         if (param0 != -122) {
           field_j = (String) null;
@@ -107,30 +107,30 @@ final class NodeIterator {
     final static boolean a(int param0) {
         if (param0 != 2) {
           field_c = (IndexedSprite[]) null;
-          if (an.field_i != null) {
+          if (AudioService.field_i != null) {
             return true;
           }
-          if (fk.a(0)) {
+          if (BoundedUrlRequest.a(0)) {
             return true;
           }
           if (FunOrbClient.field_x != null) {
             return true;
           }
-          if (!a.a(false)) {
+          if (!MouseWheelInput.a(false)) {
             return false;
           }
           return true;
         }
-        if (an.field_i != null) {
+        if (AudioService.field_i != null) {
           return true;
         }
-        if (fk.a(0)) {
+        if (BoundedUrlRequest.a(0)) {
           return true;
         }
         if (FunOrbClient.field_x != null) {
           return true;
         }
-        if (!a.a(false)) {
+        if (!MouseWheelInput.a(false)) {
           return false;
         }
         return true;
@@ -144,7 +144,7 @@ final class NodeIterator {
         }
     }
 
-    final IntrusiveNode d(int param0) {
+    final IntrusiveNode next(int param0) {
         if (param0 != 2) {
           return (IntrusiveNode) null;
         }
@@ -158,11 +158,11 @@ final class NodeIterator {
     }
 
     final static void a(byte param0) {
-        nm.field_n = null;
+        EmailAvailabilityValidator.field_n = null;
         dj.field_j = null;
-        vl.field_r = false;
+        TextHotspotRegion.field_r = false;
         oc.field_d = null;
-        a.field_g = null;
+        MouseWheelInput.field_g = null;
         if (param0 != -2) {
           NodeIterator.b((byte) 42);
         }
@@ -212,7 +212,7 @@ final class NodeIterator {
         return var2Lifetime1;
     }
 
-    final IntrusiveNode a(boolean param0, IntrusiveNode param1) {
+    final IntrusiveNode startReverseAt(boolean param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;

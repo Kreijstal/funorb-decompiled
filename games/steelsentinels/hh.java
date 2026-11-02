@@ -80,14 +80,14 @@ final class hh {
           if (param2 != 50) {
             hh.a(28, true, (byte) -92, -82);
           }
-          ma.a(false, (byte) -65, param0, param1);
+          TextHotspotWidget.a(false, (byte) -65, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "hh.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        k.a((byte) 24, 50);
+        AccountRequestDialog.a((byte) 24, 50);
         field_b = 0;
         field_h = "This entry doesn't match";
         field_e = "Encouraging rule breaking";

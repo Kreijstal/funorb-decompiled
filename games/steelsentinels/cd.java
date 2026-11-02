@@ -31,7 +31,7 @@ final class cd {
           var14 = rf.field_d;
           var2 = var14.readUnsignedByte((byte) -117);
           if (var2 == 0) {
-            var11 = jg.a(true);
+            var11 = ViewportController.a(true);
             var3 = var11;
             var10 = var11;
             var4 = var10;
@@ -40,9 +40,9 @@ final class cd {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(0);
             }
-            var13 = (hl) (ic.field_D.first(param0 ^ 13058));
+            var13 = (hl) (MidiPcmStream.field_D.first(param0 ^ 13058));
             if (var13 == null) {
-              pm.m(-116);
+              LoginForm.m(-116);
               return;
             }
             var13.field_t = true;
@@ -52,21 +52,21 @@ final class cd {
             if (1 != var2) {
               if (var2 != 2) {
                 sj.a("A1: " + ci.a((byte) 94), -50, (Throwable) null);
-                pm.m(121);
+                LoginForm.m(121);
               } else {
-                var15 = (hl) (ic.field_D.first(13058));
+                var15 = (hl) (MidiPcmStream.field_D.first(13058));
                 if (var15 == null) {
-                  pm.m(param0 ^ 117);
+                  LoginForm.m(param0 ^ 117);
                   return;
                 }
-                var15.field_s = jg.a(true);
+                var15.field_s = ViewportController.a(true);
                 var15.field_t = true;
                 var15.unlink(4);
               }
             } else {
               var12 = (cf) (Explosion.field_A.first(13058));
               if (var12 == null) {
-                pm.m(-22);
+                LoginForm.m(-22);
                 return;
               }
               var12.unlink(4);
@@ -99,13 +99,13 @@ final class cd {
         try {
           var3_int = 66 / ((51 - param2) / 49);
           try {
-            var4_int = param0.b(false);
+            var4_int = param0.readUnsignedSmart(false);
             if (var4_int > param1) {
               var4_int = param1;
             }
             var5 = new byte[var4_int];
             param0.position = param0.position + ob.field_r.a(var5, var4_int, 4408131, 0, param0.payload, param0.position);
-            var6 = ub.a((byte) 37, 0, var5, var4_int);
+            var6 = SoundCache.a((byte) 37, 0, var5, var4_int);
             stackIn_5_0 = var6;
             return stackIn_5_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

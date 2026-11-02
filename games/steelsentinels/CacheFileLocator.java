@@ -1,0 +1,54 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+import java.util.*;
+
+public class CacheFileLocator {
+    private static String field_e;
+    private static String field_a;
+    private static boolean field_c;
+    private static Hashtable field_b;
+    private static int field_d;
+
+    public static File resolveFile(String param0, int param1, byte param2, String param3) {
+        return net.alterorb.launcher.Hook.cacheRedirect(param0, param3);
+    }
+
+    public static void a(String param0, boolean param1, int param2) {
+        Exception exception = null;
+        Throwable decompiledCaughtException = null;
+        field_a = param0;
+        field_d = param2;
+        try {
+          field_e = System.getProperty("user.home");
+          if (null != field_e) {
+            field_e = field_e + "/";
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          exception = (Exception) (Object) decompiledCaughtException;
+        }
+        if (field_e == null) {
+          field_e = "~/";
+        }
+        field_c = param1;
+    }
+
+    public static File a(int param0, String param1) {
+        if (param0 != 8244) {
+          field_b = (Hashtable) null;
+          return CacheFileLocator.resolveFile(field_a, field_d, (byte) 26, param1);
+        }
+        return CacheFileLocator.resolveFile(field_a, field_d, (byte) 26, param1);
+    }
+
+    private CacheFileLocator() throws Throwable {
+        throw new Error();
+    }
+
+    static {
+        field_c = false;
+        field_b = new Hashtable(16);
+    }
+}

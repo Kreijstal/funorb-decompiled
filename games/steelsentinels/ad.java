@@ -5,7 +5,7 @@ final class ad {
     static boolean field_h;
     static boolean[][] field_d;
     static volatile int field_c;
-    static ll field_j;
+    static UiTheme field_j;
     static String field_g;
     static int[] field_i;
     static String field_a;
@@ -45,7 +45,7 @@ final class ad {
             var6_int != 33 &&
             var6_int != 32) {
             if (var6_int == 24) {
-              stackIn_12_0 = bj.a(param5, 84, param1, (byte) 125);
+              stackIn_12_0 = MusicPatchEnvelope.a(param5, 84, param1, (byte) 125);
               return stackIn_12_0;
             }
             var15 = FunOrbClient.field_z;
@@ -58,8 +58,8 @@ final class ad {
             for (var7 = 0; var7 < var15.length; var7++) {
               var8 = var15[var7];
               if (t.a(param5, var8, -20370) ||
-                bj.a(param5, var8, param1, (byte) 96)) {
-                var18 = nl.a(var8, (byte) 123);
+                MusicPatchEnvelope.a(param5, var8, param1, (byte) 96)) {
+                var18 = DialWidget.a(var8, (byte) 123);
                 for (var10 = var18.length - 8; var10 < var18.length; var10++) {
                   if (param0 == var18[var10]) {
                     return true;
@@ -69,7 +69,7 @@ final class ad {
             }
             return false;
           }
-          stackIn_10_0 = bj.a(param5, 62, param1, (byte) 115);
+          stackIn_10_0 = MusicPatchEnvelope.a(param5, 62, param1, (byte) 115);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +107,7 @@ final class ad {
         int var4 = nf.field_b.field_Nc + (nf.field_b.field_sc << 6);
         var2.writeByte((byte) 127, var4);
         var2.writeBytes(nf.field_b.field_Sb.length, (byte) -122, param0, nf.field_b.field_Sb);
-        var2.b((byte) -113, var2.position - var3);
+        var2.backpatchByteLength((byte) -113, var2.position - var3);
     }
 
     final static void a(boolean param0, byte param1) {
@@ -164,62 +164,62 @@ final class ad {
                 var13 = new int[-8 + var12.length];
                 var9 = var13;
                 var5 = var9;
-                ii.a(var3, 0, var5, 0, var13.length);
-                ii.a(var3, var13.length, var4_ref_int__, 0, var14.length);
+                ArraySupport.copy(var3, 0, var5, 0, var13.length);
+                ArraySupport.copy(var3, var13.length, var4_ref_int__, 0, var14.length);
                 param1 = SentinelDesigner.a(var13, (byte) 97, var14);
               } else {
                 return;
               }
             }
             if (null != ue.field_g[param0]) {
-              ue.field_g[param0].d();
+              ue.field_g[param0].bindRasterTarget();
               SoftwareRaster.a(0, 0, 62, 74, 0);
             } else {
               ue.field_g[param0] = new RgbSprite(62, 74);
-              ue.field_g[param0].d();
+              ue.field_g[param0].bindRasterTarget();
             }
-            var3_int = hj.field_w;
+            var3_int = MusicPatchNode.field_w;
             if (param2 <= 23) {
               ad.a(true, (byte) -104);
             }
             if (param1.componentId == 0) {
-              hj.field_w = 1200;
+              MusicPatchNode.field_w = 1200;
             }
             if (55 == param1.componentId) {
-              hj.field_w = 1200;
+              MusicPatchNode.field_w = 1200;
             }
             if (param1.componentId == 57) {
-              hj.field_w = 1300;
+              MusicPatchNode.field_w = 1300;
             }
             if (param1.componentId == 62) {
-              hj.field_w = 1400;
+              MusicPatchNode.field_w = 1400;
             }
             if (param1.componentId == 65) {
-              hj.field_w = 1000;
+              MusicPatchNode.field_w = 1000;
             }
             if (param1.componentId == 69) {
-              hj.field_w = 1400;
+              MusicPatchNode.field_w = 1400;
             }
             if (param1.componentId == 72) {
-              hj.field_w = 1000;
+              MusicPatchNode.field_w = 1000;
             }
             if (param1.componentId == 75) {
-              hj.field_w = 1000;
+              MusicPatchNode.field_w = 1000;
             }
             if (param1.componentId == 79) {
-              hj.field_w = 1000;
+              MusicPatchNode.field_w = 1000;
             }
             if (param1.componentId == 84) {
-              hj.field_w = 1000;
+              MusicPatchNode.field_w = 1000;
             }
             if (88 == param1.componentId) {
-              hj.field_w = 1000;
+              MusicPatchNode.field_w = 1000;
             }
             if (param1.componentId == 92) {
-              hj.field_w = 700;
+              MusicPatchNode.field_w = 700;
             }
             param1.a(0, false, 31, 74, (byte) 49, 0);
-            hj.field_w = var3_int;
+            MusicPatchNode.field_w = var3_int;
             if (!ArticulatedPart.f((byte) -19)) {
               var4 = 0;
               var17 = ue.field_c[param0];
@@ -250,7 +250,7 @@ final class ad {
                 break;
               }
             }
-            sb.field_bb.b((byte) 123);
+            Checkbox.field_bb.b((byte) 123);
             return;
           }
           return;

@@ -82,8 +82,8 @@ final class ec {
         var4.position = var4.position + 1;
         int var5 = var4.position;
         var4.writeByte((byte) 127, 7);
-        var4.b(-28875, param2);
-        var4.b((byte) 105, -var5 + var4.position);
+        var4.writeLong(-28875, param2);
+        var4.backpatchByteLength((byte) 105, -var5 + var4.position);
         if (param1) {
           field_c = (int[]) null;
         }
@@ -121,23 +121,23 @@ final class ec {
         String[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         String stackIn_21_2 = null;
-        if (null != ti.field_A) {
+        if (null != ImageProducerRasterBuffer.field_A) {
           return;
         }
-        ti.field_A = new String[48];
-        ti.field_A[13] = bi.field_c;
-        ti.field_A[3] = CipherPacketBuffer.field_G;
-        ti.field_A[2] = fb.field_q;
-        ti.field_A[7] = jn.field_a;
-        ti.field_A[0] = fk.field_f;
-        ti.field_A[8] = null;
-        ti.field_A[6] = ge.field_g;
-        ti.field_A[5] = DualNode.field_s;
-        ti.field_A[9] = IntrusiveNode.field_m;
-        ti.field_A[1] = ParticleEffect.field_C;
-        ti.field_A[11] = vc.field_l;
-        ti.field_A[4] = hb.field_h;
-        stackIn_5_0 = ti.field_A;
+        ImageProducerRasterBuffer.field_A = new String[48];
+        ImageProducerRasterBuffer.field_A[13] = bi.field_c;
+        ImageProducerRasterBuffer.field_A[3] = CipherPacketBuffer.field_G;
+        ImageProducerRasterBuffer.field_A[2] = fb.field_q;
+        ImageProducerRasterBuffer.field_A[7] = jn.field_a;
+        ImageProducerRasterBuffer.field_A[0] = BoundedUrlRequest.field_f;
+        ImageProducerRasterBuffer.field_A[8] = null;
+        ImageProducerRasterBuffer.field_A[6] = DirectByteStorage.field_g;
+        ImageProducerRasterBuffer.field_A[5] = DualNode.field_s;
+        ImageProducerRasterBuffer.field_A[9] = IntrusiveNode.field_m;
+        ImageProducerRasterBuffer.field_A[1] = ParticleEffect.field_C;
+        ImageProducerRasterBuffer.field_A[11] = vc.field_l;
+        ImageProducerRasterBuffer.field_A[4] = IterableDualNodeDeque.field_h;
+        stackIn_5_0 = ImageProducerRasterBuffer.field_A;
         stackIn_5_1 = 44;
         if (!ik.field_h) {
           stackIn_6_2 = sa.field_b;
@@ -145,18 +145,18 @@ final class ec {
           stackIn_6_2 = o.field_a;
         }
         stackIn_5_0[stackIn_5_1] = stackIn_6_2;
-        stackIn_8_0 = ti.field_A;
+        stackIn_8_0 = ImageProducerRasterBuffer.field_A;
         stackIn_8_1 = 43;
-        if (ui.field_G) {
+        if (AlphaContainer.field_G) {
           stackIn_9_2 = tm.field_f;
         } else {
           stackIn_9_2 = fj.field_i;
         }
         stackIn_8_0[stackIn_8_1] = stackIn_9_2;
-        ti.field_A[param0] = jd.field_pb;
-        ti.field_A[14] = qj.field_d[0];
-        ti.field_A[23] = cf.field_v;
-        stackIn_11_0 = ti.field_A;
+        ImageProducerRasterBuffer.field_A[param0] = AccountNoticeDialog.field_pb;
+        ImageProducerRasterBuffer.field_A[14] = qj.field_d[0];
+        ImageProducerRasterBuffer.field_A[23] = cf.field_v;
+        stackIn_11_0 = ImageProducerRasterBuffer.field_A;
         stackIn_11_1 = 41;
         if (!si.field_p) {
           stackIn_12_2 = fm.field_h;
@@ -164,56 +164,56 @@ final class ec {
           stackIn_12_2 = hf.field_b;
         }
         stackIn_11_0[stackIn_11_1] = stackIn_12_2;
-        ti.field_A[21] = li.field_y;
-        ti.field_A[46] = jd.field_jb;
-        ti.field_A[24] = sn.field_h;
-        ti.field_A[27] = q.field_g;
-        ti.field_A[16] = qj.field_d[2];
-        ti.field_A[18] = wc.field_b[1];
-        ti.field_A[17] = wc.field_b[0];
-        ti.field_A[32] = pm.field_P;
-        ti.field_A[29] = NodeIterator.field_j;
-        ti.field_A[31] = mg.field_Tb;
-        ti.field_A[38] = "";
-        ti.field_A[33] = na.field_u;
-        ti.field_A[20] = CipherPacketBuffer.field_y;
-        ti.field_A[26] = ng.field_b;
-        ti.field_A[19] = NodeDeque.field_a;
-        stackIn_14_0 = ti.field_A;
+        ImageProducerRasterBuffer.field_A[21] = PasswordFieldPainter.field_y;
+        ImageProducerRasterBuffer.field_A[46] = AccountNoticeDialog.field_jb;
+        ImageProducerRasterBuffer.field_A[24] = BoundedRandomAccessFile.field_h;
+        ImageProducerRasterBuffer.field_A[27] = IterableNodeHashTable.field_g;
+        ImageProducerRasterBuffer.field_A[16] = qj.field_d[2];
+        ImageProducerRasterBuffer.field_A[18] = MouseInputHandler.field_b[1];
+        ImageProducerRasterBuffer.field_A[17] = MouseInputHandler.field_b[0];
+        ImageProducerRasterBuffer.field_A[32] = LoginForm.field_P;
+        ImageProducerRasterBuffer.field_A[29] = NodeIterator.field_j;
+        ImageProducerRasterBuffer.field_A[31] = QuickChatMenu.field_Tb;
+        ImageProducerRasterBuffer.field_A[38] = "";
+        ImageProducerRasterBuffer.field_A[33] = na.field_u;
+        ImageProducerRasterBuffer.field_A[20] = CipherPacketBuffer.field_y;
+        ImageProducerRasterBuffer.field_A[26] = MembershipPromotionScreen.field_b;
+        ImageProducerRasterBuffer.field_A[19] = NodeDeque.field_a;
+        stackIn_14_0 = ImageProducerRasterBuffer.field_A;
         stackIn_14_1 = 47;
         if (tj.field_a) {
           stackIn_15_2 = qj.field_u;
         } else {
-          stackIn_15_2 = he.field_d;
+          stackIn_15_2 = RasterBuffer.field_d;
         }
         stackIn_14_0[stackIn_14_1] = stackIn_15_2;
-        ti.field_A[15] = qj.field_d[1];
-        ti.field_A[22] = mg.field_ec;
-        stackIn_17_0 = ti.field_A;
+        ImageProducerRasterBuffer.field_A[15] = qj.field_d[1];
+        ImageProducerRasterBuffer.field_A[22] = QuickChatMenu.field_ec;
+        stackIn_17_0 = ImageProducerRasterBuffer.field_A;
         stackIn_17_1 = 42;
         if (dm.field_c) {
           stackIn_18_2 = qm.field_c;
         } else {
-          stackIn_18_2 = od.field_j;
+          stackIn_18_2 = ClientException.field_j;
         }
         stackIn_17_0[stackIn_17_1] = stackIn_18_2;
-        ti.field_A[45] = un.field_e;
-        ti.field_A[30] = ed.field_e;
-        stackIn_20_0 = ti.field_A;
+        ImageProducerRasterBuffer.field_A[45] = un.field_e;
+        ImageProducerRasterBuffer.field_A[30] = ed.field_e;
+        stackIn_20_0 = ImageProducerRasterBuffer.field_A;
         stackIn_20_1 = 37;
-        if (ka.field_V) {
-          stackIn_21_2 = ge.field_i;
+        if (ModalStack.field_V) {
+          stackIn_21_2 = DirectByteStorage.field_i;
         } else {
-          stackIn_21_2 = fg.field_Vb;
+          stackIn_21_2 = RegistrationRequestDialog.field_Vb;
         }
         stackIn_20_0[stackIn_20_1] = stackIn_21_2;
-        ti.field_A[34] = Sprite.field_e;
-        ti.field_A[28] = hc.field_cb;
-        ti.field_A[25] = vf.field_a;
-        ti.field_A[40] = pe.field_R;
-        ti.field_A[39] = mg.field_nc;
-        i.field_a = db.a(i.field_a, param0 ^ -25, new String[]{ln.a("<img=26>", (byte) 11, "<img=17>", he.field_d)});
-        bc.field_yb = db.a(bc.field_yb, param0 ^ -56, new String[]{ln.a("<img=26>", (byte) 11, "<img=17>", qj.field_u)});
+        ImageProducerRasterBuffer.field_A[34] = Sprite.field_e;
+        ImageProducerRasterBuffer.field_A[28] = LabeledField.field_cb;
+        ImageProducerRasterBuffer.field_A[25] = vf.field_a;
+        ImageProducerRasterBuffer.field_A[40] = pe.field_R;
+        ImageProducerRasterBuffer.field_A[39] = QuickChatMenu.field_nc;
+        GameKeyHandler.field_a = SocketConnector.a(GameKeyHandler.field_a, param0 ^ -25, new String[]{ln.a("<img=26>", (byte) 11, "<img=17>", RasterBuffer.field_d)});
+        ValidatedTextWidget.field_yb = SocketConnector.a(ValidatedTextWidget.field_yb, param0 ^ -56, new String[]{ln.a("<img=26>", (byte) 11, "<img=17>", qj.field_u)});
     }
 
     final static void a(byte param0) {
@@ -221,8 +221,8 @@ final class ec {
         if (param0 >= -60) {
           field_d = (String) null;
         }
-        int var2 = al.a(0);
-        gl.field_l.a((ok.field_c << 1) + var1, -15203, -ok.field_c + hl.field_q, var2 + (cl.field_b << 1), -cl.field_b + lk.field_W);
+        int var2 = TickClock.a(0);
+        NanoTickClock.field_l.a((ok.field_c << 1) + var1, -15203, -ok.field_c + hl.field_q, var2 + (cl.field_b << 1), -cl.field_b + ValidationIndicator.field_W);
         rg.a(118);
     }
 

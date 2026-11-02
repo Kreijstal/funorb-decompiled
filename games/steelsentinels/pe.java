@@ -190,7 +190,7 @@ final class pe {
           var4 = 1;
           var5 = 1;
         }
-        bl.field_e = dn.a(var5 * var2, var4 * var2, (byte) 71);
+        LinkButtonPainter.field_e = dn.a(var5 * var2, var4 * var2, (byte) 71);
     }
 
     final void a(int param0, int param1, int param2, int param3) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vn extends v implements fd, aa {
+final class vn extends DebouncedValidator implements TextInputListener, aa {
     static String field_j;
     ha field_n;
     static String field_k;
@@ -11,7 +11,7 @@ final class vn extends v implements fd, aa {
     static int field_h;
     static int field_o;
 
-    public final void a(boolean param0, jf param1) {
+    public final void onSubmit(boolean param0, EditableTextWidget param1) {
         try {
           if (!param0) {
             vn.d(116);
@@ -45,7 +45,7 @@ final class vn extends v implements fd, aa {
               return null;
             }
           } else {
-            stackIn_4_0 = db.a(ce.field_u, -26, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_4_0 = SocketConnector.a(ce.field_u, -26, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -64,15 +64,15 @@ final class vn extends v implements fd, aa {
         var2 = SteelSentinels.obfuscationControl;
         try {
           hm.field_a = null;
-          gd.field_jb = null;
+          ContentTransitionDialog.field_jb = null;
           vd.field_a = null;
           bi.field_f = null;
           kf.field_s = true;
           GameApplet.field_l = true;
           rh.field_u = null;
           kk.field_a = null;
-          for (var1_int = 0; wc.field_h.length > var1_int; var1_int++) {
-            wc.field_h[var1_int] = null;
+          for (var1_int = 0; MouseInputHandler.field_h.length > var1_int; var1_int++) {
+            MouseInputHandler.field_h[var1_int] = null;
           }
           for (var1_intLifetime1 = 0; cj.field_a.length > var1_intLifetime1; var1_intLifetime1++) {
             cj.field_a[var1_intLifetime1] = null;
@@ -89,7 +89,7 @@ final class vn extends v implements fd, aa {
         }
     }
 
-    public final void a(jf param0, byte param1) {
+    public final void onTextChanged(EditableTextWidget param0, byte param1) {
         if (param1 != 89) {
           return;
         }
@@ -177,12 +177,12 @@ final class vn extends v implements fd, aa {
         return vf.field_b;
     }
 
-    final static wg c(byte param0) {
+    final static PcmStreamMixer c(byte param0) {
         if (param0 != 83) {
           vn.d(true);
-          return ll.field_e;
+          return UiTheme.field_e;
         }
-        return ll.field_e;
+        return UiTheme.field_e;
     }
 
     public static void d(boolean param0) {

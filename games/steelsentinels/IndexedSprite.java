@@ -41,7 +41,7 @@ final class IndexedSprite extends Sprite {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -144,7 +144,7 @@ final class IndexedSprite extends Sprite {
         return var1;
     }
 
-    final void b(int param0, int param1) {
+    final void drawQuarter(int param0, int param1) {
         int var9 = 0;
         int var10 = 0;
         int var16 = 0;
@@ -411,7 +411,7 @@ final class IndexedSprite extends Sprite {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var13 = 0;
         int var15 = 0;
         int var5 = this.field_a;
@@ -468,7 +468,7 @@ final class IndexedSprite extends Sprite {
         IndexedSprite.a(SoftwareRaster.field_g, this.field_p, this.field_o, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

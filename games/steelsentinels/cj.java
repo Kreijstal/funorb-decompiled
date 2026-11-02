@@ -79,13 +79,13 @@ final class cj {
           }
           if (null != var3.field_g &&
             !var3.field_d.a(var3.field_g, (byte) 90)) {
-            this.a(var3, -9803, var3.field_d.a((byte) 76, var3.field_g));
+            this.a(var3, -9803, var3.field_d.getGroupProgressByName((byte) 76, var3.field_g));
             return false;
           }
           if (var3.field_a < 0 &&
             null == var3.field_g &&
             var3.field_e != null &&
-            !var3.field_d.a(25)) {
+            !var3.field_d.ensureAllGroupsAvailable(25)) {
             this.a(var3, -9803, var3.field_d.a((byte) -33));
             return false;
           }
@@ -234,7 +234,7 @@ final class cj {
             for (var8Lifetime1 = param4; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
               var9Lifetime1 = un.field_j[var8Lifetime1];
               var10Lifetime1 = un.field_j[var8Lifetime1 + 1];
-              if (q.a((byte) -127, var9Lifetime1, var10Lifetime1, param5)) {
+              if (IterableNodeHashTable.a((byte) -127, var9Lifetime1, var10Lifetime1, param5)) {
                 un.field_j[var8Lifetime1] = var10Lifetime1;
                 un.field_j[1 + var8Lifetime1] = var9Lifetime1;
               }
@@ -270,8 +270,8 @@ final class cj {
         if (param1 < 57) {
           field_h = 89;
         }
-        if (null != an.field_i &&
-          an.field_i.b((byte) 126)) {
+        if (null != AudioService.field_i &&
+          AudioService.field_i.b((byte) 126)) {
           rh.a(false);
           return true;
         }
@@ -281,7 +281,7 @@ final class cj {
           rh.a(false);
           return true;
         }
-        if (ta.a(-91)) {
+        if (Js5ArchiveManager.a(-91)) {
           return true;
         }
         if (vh.a(param3, param2, -80, param0)) {

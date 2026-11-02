@@ -6,7 +6,7 @@ final class rh extends IntrusiveNode {
     static String field_p;
     static SceneWidget field_u;
     int field_x;
-    static rj[] field_o;
+    static BufferedRandomAccessFile[] field_o;
     static cj field_q;
     static String[] field_t;
     static RgbSprite[] field_v;
@@ -17,7 +17,7 @@ final class rh extends IntrusiveNode {
         int var4;
         int var5;
         int var5Lifetime1;
-        if (!vb.field_e) {
+        if (!GzipDecoder.field_e) {
           return;
         }
         if (param3 != 635) {
@@ -25,9 +25,9 @@ final class rh extends IntrusiveNode {
         }
         qf.field_c.a((byte) -80, param1);
         var4 = IntKeyLookup.field_i.m(109) ? 1 : 0;
-        if (lb.field_gc != 0 &&
+        if (VerticalScrollbar.field_gc != 0 &&
           var4 == 0) {
-          pm.a((byte) 48);
+          LoginForm.a((byte) 48);
           param1 = false;
         }
         if (param1) {
@@ -65,25 +65,25 @@ final class rh extends IntrusiveNode {
     }
 
     final static void a(boolean param0) {
-        if (an.field_i == null) {
+        if (AudioService.field_i == null) {
           if (!param0) {
-            an.field_i = null;
+            AudioService.field_i = null;
             la.field_c = null;
             return;
           }
           return;
         }
-        if (null == an.field_i.field_c) {
+        if (null == AudioService.field_i.field_c) {
           if (!param0) {
-            an.field_i = null;
+            AudioService.field_i = null;
             la.field_c = null;
             return;
           }
           return;
         }
-        an.field_i.field_c.field_G = false;
+        AudioService.field_i.field_c.field_G = false;
         if (!param0) {
-          an.field_i = null;
+          AudioService.field_i = null;
           la.field_c = null;
           return;
         }

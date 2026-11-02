@@ -99,9 +99,9 @@ final class mm {
               if (0L > param4) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + mj.b(param4 * 1000L + mm.a(-75), 0) + "; Max-Age=" + param4;
+                var7Lifetime4 = var9 + "; Expires=" + TabbedPanel.b(param4 * 1000L + mm.a(-75), 0) + "; Max-Age=" + param4;
               }
-              hn.a(param3, 27781, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.a(param3, 27781, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;
@@ -162,7 +162,7 @@ final class mm {
           if (param1.field_Q == 1) {
             return false;
           }
-          var7 = nl.a(uc.field_b[0], (byte) 125);
+          var7 = DialWidget.a(uc.field_b[0], (byte) 125);
           var6 = var7;
           var5 = var6;
           var2 = var5;

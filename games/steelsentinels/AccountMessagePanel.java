@@ -1,0 +1,175 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AccountMessagePanel extends UiContainer implements ButtonListener {
+    static RgbSprite[] field_S;
+    static String field_W;
+    static RgbSprite[] field_R;
+    private String field_P;
+    private TextButton[] field_bb;
+    private int field_V;
+    static boolean field_Q;
+    private int[] field_U;
+    static RgbSprite[] field_Y;
+    private AccountRequestDialog field_X;
+    static RgbSprite[] field_Z;
+    static long[] field_T;
+    private BitmapFont field_ab;
+
+    public static void a(byte param0) {
+        field_Z = null;
+        field_Y = null;
+        field_S = null;
+        field_W = null;
+        field_R = null;
+        int var1 = 24 / ((77 - param0) / 37);
+        field_T = null;
+    }
+
+    AccountMessagePanel(AccountRequestDialog param0, BitmapFont param1, String param2) {
+        super(0, 0, 288, 0, (WidgetPainter) null);
+        int var4_int = 0;
+        this.field_V = 0;
+        try {
+          this.field_P = param2;
+          this.field_ab = param1;
+          this.field_X = param0;
+          var4_int = null != this.field_P ? this.field_ab.paragraphHeight(this.field_P, 260, this.field_ab.field_G) : 0;
+          this.a(0, (byte) -93, 0, 288, var4_int + 22);
+        } catch (RuntimeException runtimeException) {
+          throw ci.a((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void drawLayer(int param0, byte param1, int param2, int param3) {
+        super.drawLayer(param0, (byte) -123, param2, param3);
+        if (param1 > -99) {
+          this.drawLayer(-109, (byte) 96, 110, -22);
+        }
+        this.field_ab.a(this.field_P, this.field_o + (param2 + 14), this.field_z + param0 + 10, this.field_x - 28, this.field_E, 16777215, -1, 0, 0, this.field_ab.field_G);
+    }
+
+    final static RgbSprite[] b(int param0, int param1, int param2, int param3) {
+        int var5 = 0;
+        int var6 = SteelSentinels.obfuscationControl;
+        RgbSprite[] var7 = new RgbSprite[9];
+        RgbSprite[] var4 = var7;
+        if (param1 != -2) {
+          AccountMessagePanel.a((byte) 112);
+        }
+        var7[0] = bd.a(param0, param2, 248);
+        for (var5 = 1; var5 < 9; var5++) {
+          var7[var5] = var7[0];
+        }
+        var4[4] = bd.a(param3, 64, 248);
+        return var4;
+    }
+
+    public final void onAction(int param0, byte param1, int param2, TextButton param3, int param4) {
+        int var7 = 0;
+        int var6_int = 0;
+        int var8 = SteelSentinels.obfuscationControl;
+        int var6_intLifetime1;
+        try {
+          for (var6_int = 0; this.field_V > var6_int; var6_int++) {
+            if (param3 == this.field_bb[var6_int]) {
+              var7 = this.field_U[var6_int];
+              if (var7 != -1) {
+                LabeledField.a(this.field_U[var6_int], 0);
+                break;
+              }
+              this.field_X.closeDialog(112);
+              break;
+            }
+          }
+          var6_intLifetime1 = -76 / ((-85 - param1) / 36);
+        } catch (RuntimeException runtimeException) {
+          throw ci.a((Throwable) ((Object) runtimeException), "bm.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+        }
+    }
+
+    private final void a(int param0, byte param1) {
+        int var5 = 0;
+        int var6 = SteelSentinels.obfuscationControl;
+        if (this.field_V >= param0) {
+          return;
+        }
+        if (param1 < 71) {
+          field_T = (long[]) null;
+        }
+        TextButton[] var7 = new TextButton[param0];
+        TextButton[] var3 = var7;
+        int[] var4 = new int[param0];
+        for (var5 = 0; this.field_V > var5; var5++) {
+          var7[var5] = this.field_bb[var5];
+          var4[var5] = this.field_U[var5];
+        }
+        this.field_bb = var3;
+        this.field_U = var4;
+        this.field_V = param0;
+    }
+
+    final TextButton a(int param0, UiListener param1, String param2) {
+        TextButton var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        TextButton stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = new TextButton(param2, param1);
+          if (param0 > -101) {
+            this.a(3, (byte) -77);
+          }
+          var4.field_p = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
+          var5 = -2 + this.field_E;
+          this.a(0, (byte) -85, 0, this.field_x, 34 + this.field_E);
+          var4.a(7, (byte) -123, var5, this.field_x - 14, 30);
+          this.addChild(var4, -83);
+          stackIn_3_0 = var4;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_6_0 = var4_ref;
+          stackIn_6_1 = new StringBuilder().append("bm.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    final void a(int param0, String param1, int param2) {
+        int var4_int = 0;
+        try {
+          var4_int = this.field_V;
+          this.a(var4_int + 1, (byte) 108);
+          this.field_bb[var4_int] = this.a(-102, (UiListener) (this), param1);
+          if (param2 < 67) {
+            this.field_bb = (TextButton[]) null;
+          }
+          this.field_U[var4_int] = param0;
+        } catch (RuntimeException runtimeException) {
+          throw ci.a((Throwable) ((Object) runtimeException), "bm.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    static {
+        field_W = "Enter name of player to add to list";
+        field_Q = false;
+        field_T = new long[32];
+    }
+}

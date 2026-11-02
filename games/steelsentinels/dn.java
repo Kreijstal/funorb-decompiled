@@ -14,7 +14,7 @@ final class dn extends SceneWidget {
     private SceneWidget field_Yb;
     static int[] field_Sb;
     private int field_Xb;
-    private qh[] field_Vb;
+    private IconTextComponent[] field_Vb;
     private int field_ac;
     private RgbSprite[] field_Zb;
 
@@ -27,7 +27,7 @@ final class dn extends SceneWidget {
             return false;
           }
           var2_int = -127 % ((param0 - 9) / 61);
-          if (13 == ei.field_q) {
+          if (13 == NameAvailabilityValidator.field_q) {
             this.field_cc = -1;
           }
           return true;
@@ -67,7 +67,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "loginm2");
                 if (var2 != null) {
-                  bc.field_mb = IntKeyLookup.a(13, var2);
+                  ValidatedTextWidget.field_mb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "loginm1");
                 if (null != var2) {
@@ -79,7 +79,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "error_js5crc");
                 if (null != var2) {
-                  nh.field_F = IntKeyLookup.a(13, var2);
+                  Bzip2State.field_F = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "error_js5io");
                 if (var2 != null) {
@@ -99,7 +99,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_unable");
                 if (var2 != null) {
-                  ng.field_o = IntKeyLookup.a(13, var2);
+                  MembershipPromotionScreen.field_o = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_ineligible");
                 if (var2 != null) {
@@ -127,11 +127,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "ticketing_oneunread");
                 if (var2 != null) {
-                  vk.field_k = IntKeyLookup.a(13, var2);
+                  Js5Transport.field_k = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "ticketing_xunread");
                 if (null != var2) {
-                  df.field_J = IntKeyLookup.a(13, var2);
+                  DiskCacheRequest.field_J = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "ticketing_gotowebsite");
                 if (null != var2) {
@@ -143,7 +143,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_chat_on");
                 if (null != var2) {
-                  nl.field_V = IntKeyLookup.a(13, var2);
+                  DialWidget.field_V = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_friends");
                 if (null != var2) {
@@ -151,15 +151,15 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_chat_off");
                 if (var2 != null) {
-                  b.field_j = IntKeyLookup.a(13, var2);
+                  DialWidgetPainter.field_j = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_lobby");
                 if (null != var2) {
-                  kh.field_p = IntKeyLookup.a(13, var2);
+                  ThreeSliceButtonPainter.field_p = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_public");
                 if (null != var2) {
-                  vi.field_bb = IntKeyLookup.a(13, var2);
+                  AccountRegistrationPanel.field_bb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_ignore");
                 if (null != var2) {
@@ -171,11 +171,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_chat_game");
                 if (var2 != null) {
-                  bk.field_P = IntKeyLookup.a(13, var2);
+                  StripedProgressBar.field_P = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_private");
                 if (null != var2) {
-                  r.field_k = IntKeyLookup.a(13, var2);
+                  ProxySocketConnector.field_k = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_x_entered_game");
                 if (var2 != null) {
@@ -191,11 +191,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_x_left_lobby");
                 if (null != var2) {
-                  fk.field_p = IntKeyLookup.a(13, var2);
+                  BoundedUrlRequest.field_p = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_x_lost_con");
                 if (var2 != null) {
-                  s.field_b = IntKeyLookup.a(13, var2);
+                  SpriteCheckboxPainter.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_x_cannot_join_full");
                 if (var2 != null) {
@@ -203,11 +203,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_x_cannot_join_inprogress");
                 if (null != var2) {
-                  um.field_db = IntKeyLookup.a(13, var2);
+                  MarkerSlider.field_db = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_x_declined_invite");
                 if (var2 != null) {
-                  lb.field_Ub = IntKeyLookup.a(13, var2);
+                  VerticalScrollbar.field_Ub = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_x_withdrew_request");
                 if (var2 != null) {
@@ -219,23 +219,23 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_x_dropped_out");
                 if (var2 != null) {
-                  vi.field_ab = IntKeyLookup.a(13, var2);
+                  AccountRegistrationPanel.field_ab = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_entered_other_game");
                 if (var2 != null) {
-                  nh.field_n = IntKeyLookup.a(13, var2);
+                  Bzip2State.field_n = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_game_is_full");
                 if (var2 != null) {
-                  qh.field_Vb = IntKeyLookup.a(13, var2);
+                  IconTextComponent.field_Vb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_game_has_started");
                 if (var2 != null) {
-                  li.field_C = IntKeyLookup.a(13, var2);
+                  PasswordFieldPainter.field_C = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_you_declined_invite");
                 if (var2 != null) {
-                  lb.field_kc = IntKeyLookup.a(13, var2);
+                  VerticalScrollbar.field_kc = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_invite_withdrawn");
                 if (null != var2) {
@@ -251,7 +251,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_all_players_have_left");
                 if (null != var2) {
-                  k.field_Kb = IntKeyLookup.a(13, var2);
+                  AccountRequestDialog.field_Kb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_lobby_name");
                 if (null != var2) {
@@ -263,15 +263,15 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_lobby_friend_add");
                 if (null != var2) {
-                  qg.field_i = IntKeyLookup.a(13, var2);
+                  MarkerSliderPainter.field_i = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_lobby_friend_rm");
                 if (var2 != null) {
-                  cb.field_d = IntKeyLookup.a(13, var2);
+                  DiskCacheWorker.field_d = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_lobby_name_add");
                 if (var2 != null) {
-                  ge.field_k = IntKeyLookup.a(13, var2);
+                  DirectByteStorage.field_k = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_lobby_name_rm");
                 if (null != var2) {
@@ -279,11 +279,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_lobby_location");
                 if (var2 != null) {
-                  rm.field_i = IntKeyLookup.a(13, var2);
+                  MenuInputState.field_i = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_gamelist_all_games");
                 if (null != var2) {
-                  r.field_q = IntKeyLookup.a(13, var2);
+                  ProxySocketConnector.field_q = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_gamelist_status");
                 if (var2 != null) {
@@ -299,15 +299,15 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_gamelist_avg_rating");
                 if (null != var2) {
-                  ij.field_Q = IntKeyLookup.a(13, var2);
+                  NameSuggestionsPanel.field_Q = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_gamelist_options");
                 if (null != var2) {
-                  le.field_B = IntKeyLookup.a(13, var2);
+                  StrongCacheEntry.field_B = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_gamelist_elapsed_time");
                 if (null != var2) {
-                  bf.field_Bb = IntKeyLookup.a(13, var2);
+                  LoginDialog.field_Bb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_play_rated");
                 if (null != var2) {
@@ -315,7 +315,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_create_unrated");
                 if (null != var2) {
-                  q.field_c = IntKeyLookup.a(13, var2);
+                  IterableNodeHashTable.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_options");
                 if (null != var2) {
@@ -331,7 +331,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_options_dontmind");
                 if (null != var2) {
-                  cb.field_e = IntKeyLookup.a(13, var2);
+                  DiskCacheWorker.field_e = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_options_allow_spectate");
                 if (var2 != null) {
@@ -343,15 +343,15 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "yes");
                 if (var2 != null) {
-                  m.field_g = IntKeyLookup.a(13, var2);
+                  HuffmanDecoder.field_g = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "no");
                 if (var2 != null) {
-                  id.field_Sb = IntKeyLookup.a(13, var2);
+                  IconLabelControl.field_Sb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_invite_players");
                 if (var2 != null) {
-                  he.field_j = IntKeyLookup.a(13, var2);
+                  RasterBuffer.field_j = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "close");
                 if (var2 != null) {
@@ -359,23 +359,23 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "add_x_to_friends");
                 if (null != var2) {
-                  ti.field_r = IntKeyLookup.a(13, var2);
+                  ImageProducerRasterBuffer.field_r = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "add_x_to_ignore");
                 if (var2 != null) {
-                  g.field_g = IntKeyLookup.a(13, var2);
+                  GrowableIntList.field_g = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rm_x_from_friends");
                 if (var2 != null) {
-                  ei.field_r = IntKeyLookup.a(13, var2);
+                  NameAvailabilityValidator.field_r = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rm_x_from_ignore");
                 if (null != var2) {
-                  fk.field_n = IntKeyLookup.a(13, var2);
+                  BoundedUrlRequest.field_n = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "send_pm_to_x");
                 if (var2 != null) {
-                  rj.field_c = IntKeyLookup.a(13, var2);
+                  BufferedRandomAccessFile.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "send_qc_to_x");
                 if (var2 != null) {
@@ -383,15 +383,15 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "send_pm");
                 if (null != var2) {
-                  ug.field_L = IntKeyLookup.a(13, var2);
+                  SingleChildContainer.field_L = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "invite_accept_xs_game");
                 if (null != var2) {
-                  ah.field_Xb = IntKeyLookup.a(13, var2);
+                  SocialListEntry.field_Xb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "invite_decline_xs_game");
                 if (var2 != null) {
-                  vi.field_Z = IntKeyLookup.a(13, var2);
+                  AccountRegistrationPanel.field_Z = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "join_xs_game");
                 if (var2 != null) {
@@ -407,7 +407,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_gameopt_kick_x_from_this_game");
                 if (null != var2) {
-                  bg.field_E = IntKeyLookup.a(13, var2);
+                  WeightedCacheEntry.field_E = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_gameopt_withdraw_invite_to_x");
                 if (null != var2) {
@@ -427,7 +427,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "report_x_for_abuse");
                 if (null != var2) {
-                  gd.field_ob = IntKeyLookup.a(13, var2);
+                  ContentTransitionDialog.field_ob = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "unable_to_send_message_password_a");
                 if (null != var2) {
@@ -435,11 +435,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "unable_to_send_message_password_b");
                 if (var2 != null) {
-                  a.field_e = IntKeyLookup.a(13, var2);
+                  MouseWheelInput.field_e = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_lobby_show_all");
                 if (var2 != null) {
-                  ac.field_ab = IntKeyLookup.a(13, var2);
+                  ResizableModalPanel.field_ab = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_lobby_friends_only");
                 if (null != var2) {
@@ -451,11 +451,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_chat_lobby_hide");
                 if (null != var2) {
-                  lk.field_V = IntKeyLookup.a(13, var2);
+                  ValidationIndicator.field_V = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_game_show_all");
                 if (var2 != null) {
-                  kc.field_t = IntKeyLookup.a(13, var2);
+                  DelayedServerPacket.field_t = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_game_friends_only");
                 if (null != var2) {
@@ -471,7 +471,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_chat_pm_show_all");
                 if (null != var2) {
-                  mg.field_gc = IntKeyLookup.a(13, var2);
+                  QuickChatMenu.field_gc = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_pm_friends_only");
                 if (var2 != null) {
@@ -483,7 +483,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
-                  he.field_f = IntKeyLookup.a(13, var2);
+                  RasterBuffer.field_f = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "you_have_been_removed_from_xs_game");
                 if (null != var2) {
@@ -491,7 +491,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "your_rating_is_x");
                 if (null != var2) {
-                  qg.field_g = IntKeyLookup.a(13, var2);
+                  MarkerSliderPainter.field_g = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "you_are_on_x_server");
                 if (null != var2) {
@@ -499,19 +499,19 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "rated_game");
                 if (null != var2) {
-                  he.field_g = IntKeyLookup.a(13, var2);
+                  RasterBuffer.field_g = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "unrated_game");
                 if (null != var2) {
-                  i.field_b = IntKeyLookup.a(13, var2);
+                  GameKeyHandler.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rated_game_tips");
                 if (var2 != null) {
-                  oa.field_R = IntKeyLookup.a(13, var2);
+                  TextButton.field_R = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "searching_for_opponent_singular");
                 if (var2 != null) {
-                  ah.field_fc = IntKeyLookup.a(13, var2);
+                  SocialListEntry.field_fc = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "searching_for_opponents_plural");
                 if (var2 != null) {
@@ -531,7 +531,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "rated_game_tips_setup_plural");
                 if (null != var2) {
-                  vi.field_P = IntKeyLookup.a(13, var2);
+                  AccountRegistrationPanel.field_P = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "waiting_to_start_hint");
                 if (null != var2) {
@@ -539,7 +539,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "your_game");
                 if (var2 != null) {
-                  a.field_f = IntKeyLookup.a(13, var2);
+                  MouseWheelInput.field_f = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "game_full");
                 if (var2 != null) {
@@ -555,7 +555,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "xs_game");
                 if (null != var2) {
-                  pd.field_ab = IntKeyLookup.a(13, var2);
+                  AccountChoicePanel.field_ab = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "waiting_for_x_to_start_game");
                 if (var2 != null) {
@@ -575,7 +575,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "quickchat_lobby");
                 if (null != var2) {
-                  ei.field_u = IntKeyLookup.a(13, var2);
+                  NameAvailabilityValidator.field_u = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "message_game");
                 if (var2 != null) {
@@ -587,15 +587,15 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "quickchat_game");
                 if (var2 != null) {
-                  bl.field_g = IntKeyLookup.a(13, var2);
+                  LinkButtonPainter.field_g = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "kick");
                 if (var2 != null) {
-                  ej.field_w = IntKeyLookup.a(13, var2);
+                  MusicPatchPcmStream.field_w = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "inviting_x");
                 if (null != var2) {
-                  tk.field_q = IntKeyLookup.a(13, var2);
+                  MatchingTextValidator.field_q = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "x_wants_to_join");
                 if (null != var2) {
@@ -603,7 +603,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "accept");
                 if (null != var2) {
-                  cb.field_g = IntKeyLookup.a(13, var2);
+                  DiskCacheWorker.field_g = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "reject");
                 if (var2 != null) {
@@ -623,7 +623,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "status_playing");
                 if (var2 != null) {
-                  nn.field_e = IntKeyLookup.a(13, var2);
+                  FullscreenFocusCanvas.field_e = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "status_join");
                 if (var2 != null) {
@@ -631,11 +631,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "status_private");
                 if (null != var2) {
-                  mj.field_ac = IntKeyLookup.a(13, var2);
+                  TabbedPanel.field_ac = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "status_full");
                 if (null != var2) {
-                  ua.field_L = IntKeyLookup.a(13, var2);
+                  ReflectionCheck.field_L = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "players_in_game");
                 if (var2 != null) {
@@ -643,19 +643,19 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "you_are_invited_to_xs_game");
                 if (var2 != null) {
-                  de.field_a = IntKeyLookup.a(13, var2);
+                  LoginMethod.field_a = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "asking_to_join_xs_game");
                 if (var2 != null) {
-                  ej.field_x = IntKeyLookup.a(13, var2);
+                  MusicPatchPcmStream.field_x = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "who_can_join");
                 if (null != var2) {
-                  bc.field_xb = IntKeyLookup.a(13, var2);
+                  ValidatedTextWidget.field_xb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "you_can_join");
                 if (var2 != null) {
-                  ij.field_V = IntKeyLookup.a(13, var2);
+                  NameSuggestionsPanel.field_V = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "you_can_ask_to_join");
                 if (var2 != null) {
@@ -667,7 +667,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "you_can_spectate");
                 if (null != var2) {
-                  jf.field_db = IntKeyLookup.a(13, var2);
+                  EditableTextWidget.field_db = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "you_can_not_spectate");
                 if (null != var2) {
@@ -679,11 +679,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "hide_players_in_xs_game");
                 if (var2 != null) {
-                  ia.field_m = IntKeyLookup.a(13, var2);
+                  TextFieldValidator.field_m = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "show_players_in_xs_game");
                 if (var2 != null) {
-                  ej.field_u = IntKeyLookup.a(13, var2);
+                  MusicPatchPcmStream.field_u = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "connecting_to_friend_server_twoline");
                 if (var2 != null) {
@@ -699,7 +699,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "multiconst_invite_only");
                 if (var2 != null) {
-                  ei.field_x = IntKeyLookup.a(13, var2);
+                  NameAvailabilityValidator.field_x = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "multiconst_clan");
                 if (null != var2) {
@@ -711,7 +711,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "multiconst_similar_rating");
                 if (var2 != null) {
-                  g.field_a = IntKeyLookup.a(13, var2);
+                  GrowableIntList.field_a = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "multiconst_open");
                 if (var2 != null) {
@@ -727,11 +727,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "presstabtochat");
                 if (null != var2) {
-                  sg.field_h = IntKeyLookup.a(13, var2);
+                  BufferedSocket.field_h = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "pressf10toquickchat");
                 if (var2 != null) {
-                  al.field_b = IntKeyLookup.a(13, var2);
+                  TickClock.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "dob_chatdisabled");
                 if (var2 != null) {
@@ -739,7 +739,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "dob_enterforchat");
                 if (null != var2) {
-                  wh.field_j = IntKeyLookup.a(13, var2);
+                  DualNodeDequeIterator.field_j = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "tab_hidechattemporarily");
                 if (var2 != null) {
@@ -747,11 +747,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "esc_cancelprivatemessage");
                 if (null != var2) {
-                  qh.field_Ub = IntKeyLookup.a(13, var2);
+                  IconTextComponent.field_Ub = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "esc_cancelthisline");
                 if (null != var2) {
-                  ql.field_Yb = IntKeyLookup.a(13, var2);
+                  SocialListPanel.field_Yb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "privatequickchat_from_x");
                 if (null != var2) {
@@ -767,11 +767,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "publicchat_unavailable_ratedgame");
                 if (var2 != null) {
-                  ki.field_ob = IntKeyLookup.a(13, var2);
+                  LoadingProgressDialog.field_ob = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "privatechat_friend_offline");
                 if (null != var2) {
-                  wh.field_a = IntKeyLookup.a(13, var2);
+                  DualNodeDequeIterator.field_a = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "privatechat_friend_notlisted");
                 if (var2 != null) {
@@ -787,7 +787,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "thisisrunescapeclan_notowner");
                 if (null != var2) {
-                  fk.field_a = IntKeyLookup.a(13, var2);
+                  BoundedUrlRequest.field_a = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "runescapeclan");
                 if (null != var2) {
@@ -811,11 +811,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "gameopt_needrating");
                 if (null != var2) {
-                  bj.field_c = IntKeyLookup.a(13, var2);
+                  MusicPatchEnvelope.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_unratedonly");
                 if (null != var2) {
-                  vi.field_X = IntKeyLookup.a(13, var2);
+                  AccountRegistrationPanel.field_X = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_notunlocked");
                 if (var2 != null) {
@@ -831,23 +831,23 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "gameopt_playernotmember");
                 if (var2 != null) {
-                  ia.field_i = IntKeyLookup.a(13, var2);
+                  TextFieldValidator.field_i = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_younotmember");
                 if (null != var2) {
-                  ub.field_b = IntKeyLookup.a(13, var2);
+                  SoundCache.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_playerneedsrating");
                 if (var2 != null) {
-                  ub.field_h = IntKeyLookup.a(13, var2);
+                  SoundCache.field_h = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_youneedrating");
                 if (null != var2) {
-                  bl.field_j = IntKeyLookup.a(13, var2);
+                  LinkButtonPainter.field_j = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
-                  k.field_zb = IntKeyLookup.a(13, var2);
+                  AccountRequestDialog.field_zb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_youneedratedgames");
                 if (null != var2) {
@@ -867,7 +867,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "gameopt_youhaventunlocked");
                 if (var2 != null) {
-                  ca.field_w = IntKeyLookup.a(13, var2);
+                  MusicPatch.field_w = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_trychanging1");
                 if (null != var2) {
@@ -875,7 +875,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "gameopt_trychanging2");
                 if (null != var2) {
-                  hc.field_S = IntKeyLookup.a(13, var2);
+                  LabeledField.field_S = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_needchanging1");
                 if (var2 != null) {
@@ -883,11 +883,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "gameopt_needchanging2");
                 if (var2 != null) {
-                  vg.field_b = IntKeyLookup.a(13, var2);
+                  ProxyAuthenticationException.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_mightchange");
                 if (null != var2) {
-                  tk.field_r = IntKeyLookup.a(13, var2);
+                  MatchingTextValidator.field_r = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_playersdontqualify");
                 if (var2 != null) {
@@ -899,7 +899,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "gameopt_unselectedoptions");
                 if (var2 != null) {
-                  jf.field_gb = IntKeyLookup.a(13, var2);
+                  EditableTextWidget.field_gb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_pleaseselectoption1");
                 if (null != var2) {
@@ -907,7 +907,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "gameopt_pleaseselectoption2");
                 if (var2 != null) {
-                  ei.field_v = IntKeyLookup.a(13, var2);
+                  NameAvailabilityValidator.field_v = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_badnumplayers");
                 if (null != var2) {
@@ -927,7 +927,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "gameopt_pleasetrychanging");
                 if (null != var2) {
-                  ke.field_i = IntKeyLookup.a(13, var2);
+                  WidgetStyleLayer.field_i = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "ra_title");
                 if (var2 != null) {
@@ -935,11 +935,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "ra_mutethisplayer");
                 if (null != var2) {
-                  id.field_Xb = IntKeyLookup.a(13, var2);
+                  IconLabelControl.field_Xb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "ra_suggestmute");
                 if (var2 != null) {
-                  ge.field_h = IntKeyLookup.a(13, var2);
+                  DirectByteStorage.field_h = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "ra_intro");
                 if (null != var2) {
@@ -951,11 +951,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "ra_explanation");
                 if (null != var2) {
-                  nj.field_X = IntKeyLookup.a(13, var2);
+                  AccountTermsPanel.field_X = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rule_pillar_0");
                 if (null != var2) {
-                  al.field_c = IntKeyLookup.a(13, var2);
+                  TickClock.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rule_0_0");
                 if (var2 != null) {
@@ -969,7 +969,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "rule_0_2");
                 if (var2 != null) {
-                  bj.field_f = IntKeyLookup.a(13, var2);
+                  MusicPatchEnvelope.field_f = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rule_0_3");
                 if (var2 != null) {
@@ -977,7 +977,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "rule_0_4");
                 if (var2 != null) {
-                  hj.field_u = IntKeyLookup.a(13, var2);
+                  MusicPatchNode.field_u = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rule_0_5");
                 if (var2 != null) {
@@ -1001,7 +1001,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "rule_1_3");
                 if (null != var2) {
-                  ti.field_q = IntKeyLookup.a(13, var2);
+                  ImageProducerRasterBuffer.field_q = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rule_1_4");
                 if (null != var2) {
@@ -1009,11 +1009,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "rule_pillar_2");
                 if (null != var2) {
-                  id.field_Ub = IntKeyLookup.a(13, var2);
+                  IconLabelControl.field_Ub = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rule_2_0");
                 if (var2 != null) {
-                  i.field_c = IntKeyLookup.a(13, var2);
+                  GameKeyHandler.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rule_2_1");
                 if (var2 != null) {
@@ -1041,11 +1041,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "pleaselogin_member");
                 if (null != var2) {
-                  lk.field_bb = IntKeyLookup.a(13, var2);
+                  ValidationIndicator.field_bb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "invaliduserorpass");
                 if (null != var2) {
-                  rc.field_k = IntKeyLookup.a(13, var2);
+                  SectorCacheStore.field_k = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "pleasetryagain");
                 if (null != var2) {
@@ -1057,7 +1057,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "playfreeversion");
                 if (var2 != null) {
-                  bk.field_X = IntKeyLookup.a(13, var2);
+                  StripedProgressBar.field_X = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "reloadgame");
                 if (null != var2) {
@@ -1065,7 +1065,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "toserverlist");
                 if (null != var2) {
-                  vg.field_d = IntKeyLookup.a(13, var2);
+                  ProxyAuthenticationException.field_d = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "tocustomersupport");
                 if (null != var2) {
@@ -1073,7 +1073,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "changedisplayname");
                 if (var2 != null) {
-                  pm.field_Y = IntKeyLookup.a(13, var2);
+                  LoginForm.field_Y = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "returntohomepage");
                 if (null != var2) {
@@ -1089,7 +1089,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "login");
                 if (var2 != null) {
-                  lb.field_cc = IntKeyLookup.a(13, var2);
+                  VerticalScrollbar.field_cc = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "goback");
                 if (var2 != null) {
@@ -1133,7 +1133,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "connectionlost_reconnecting");
                 if (null != var2) {
-                  pf.field_f = IntKeyLookup.a(13, var2);
+                  CheckboxPainter.field_f = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "connectionlost_withreason");
                 if (var2 != null) {
@@ -1145,7 +1145,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "invalidpass");
                 if (var2 != null) {
-                  ia.field_h = IntKeyLookup.a(13, var2);
+                  TextFieldValidator.field_h = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "retry");
                 if (null != var2) {
@@ -1153,7 +1153,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "back");
                 if (null != var2) {
-                  le.field_J = IntKeyLookup.a(13, var2);
+                  StrongCacheEntry.field_J = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "exitfullscreenmode");
                 if (var2 != null) {
@@ -1169,7 +1169,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "warning_ifyouquit");
                 if (var2 != null) {
-                  bb.field_P = IntKeyLookup.a(13, var2);
+                  ModalPanel.field_P = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "warning_ifyouquitorleavepage");
                 if (var2 != null) {
@@ -1416,7 +1416,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_createanaccount");
                 if (null != var2) {
-                  tk.field_n = IntKeyLookup.a(13, var2);
+                  MatchingTextValidator.field_n = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_username");
                 if (null != var2) {
@@ -1424,7 +1424,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_displayname");
                 if (var2 != null) {
-                  bl.field_b = IntKeyLookup.a(13, var2);
+                  LinkButtonPainter.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_password");
                 if (var2 != null) {
@@ -1440,7 +1440,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_email_confirm");
                 if (var2 != null) {
-                  g.field_m = IntKeyLookup.a(13, var2);
+                  GrowableIntList.field_m = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_age");
                 if (null != var2) {
@@ -1476,7 +1476,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_more_suggestions");
                 if (var2 != null) {
-                  rc.field_f = IntKeyLookup.a(13, var2);
+                  SectorCacheStore.field_f = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_select_alternative");
                 if (null != var2) {
@@ -1484,7 +1484,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_optin_news");
                 if (null != var2) {
-                  ic.field_cb = IntKeyLookup.a(13, var2);
+                  MidiPcmStream.field_cb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_agreeterms");
                 if (var2 != null) {
@@ -1520,7 +1520,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "login_create_tooltip");
                 if (null != var2) {
-                  r.field_m = IntKeyLookup.a(13, var2);
+                  ProxySocketConnector.field_m = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "login_justplay_tooltip");
                 if (var2 != null) {
@@ -1556,7 +1556,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_password_hint");
                 if (var2 != null) {
-                  g.field_b = IntKeyLookup.a(13, var2);
+                  GrowableIntList.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_password_confirm_tooltip");
                 if (null != var2) {
@@ -1564,7 +1564,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_email_tooltip");
                 if (var2 != null) {
-                  bk.field_H = IntKeyLookup.a(13, var2);
+                  StripedProgressBar.field_H = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_email_confirm_tooltip");
                 if (null != var2) {
@@ -1576,7 +1576,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_optin_news_tooltip");
                 if (null != var2) {
-                  ug.field_K = IntKeyLookup.a(13, var2);
+                  SingleChildContainer.field_K = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_u13_email_tooltip");
                 if (null != var2) {
@@ -1604,7 +1604,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_username_unavailable");
                 if (var2 != null) {
-                  fg.field_Qb = IntKeyLookup.a(13, var2);
+                  RegistrationRequestDialog.field_Qb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_username_available");
                 if (var2 != null) {
@@ -1612,7 +1612,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_alert_namelength");
                 if (null != var2) {
-                  lk.field_Y = IntKeyLookup.a(13, var2);
+                  ValidationIndicator.field_Y = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_alert_namechars");
                 if (var2 != null) {
@@ -1628,7 +1628,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_alert_passchars");
                 if (var2 != null) {
-                  ua.field_u = IntKeyLookup.a(13, var2);
+                  ReflectionCheck.field_u = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_alert_passrepeated");
                 if (null != var2) {
@@ -1636,15 +1636,15 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_alert_passlength");
                 if (null != var2) {
-                  el.field_Zb = IntKeyLookup.a(13, var2);
+                  AccountNamePrompt.field_Zb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_alert_passcontainsname");
                 if (null != var2) {
-                  pd.field_R = IntKeyLookup.a(13, var2);
+                  AccountChoicePanel.field_R = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_alert_passcontainsemail");
                 if (var2 != null) {
-                  ej.field_z = IntKeyLookup.a(13, var2);
+                  MusicPatchPcmStream.field_z = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_alert_passcontainsname_partial");
                 if (var2 != null) {
@@ -1684,11 +1684,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_emailvalid");
                 if (var2 != null) {
-                  mg.field_lc = IntKeyLookup.a(13, var2);
+                  QuickChatMenu.field_lc = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_account_success");
                 if (null != var2) {
-                  lk.field_Z = IntKeyLookup.a(13, var2);
+                  ValidationIndicator.field_Z = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "invalid_name");
                 if (null != var2) {
@@ -1708,19 +1708,19 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "unable_to_delete_friend");
                 if (var2 != null) {
-                  ug.field_N = IntKeyLookup.a(13, var2);
+                  SingleChildContainer.field_N = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "unable_to_delete_ignore");
                 if (var2 != null) {
-                  ql.field_Zb = IntKeyLookup.a(13, var2);
+                  SocialListPanel.field_Zb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "friendlistfull");
                 if (var2 != null) {
-                  pf.field_m = IntKeyLookup.a(13, var2);
+                  CheckboxPainter.field_m = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "friendlistdupe");
                 if (var2 != null) {
-                  f.field_u = IntKeyLookup.a(13, var2);
+                  SocketJs5Transport.field_u = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "friendnotfound");
                 if (null != var2) {
@@ -1732,11 +1732,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "ignorelistdupe");
                 if (null != var2) {
-                  sn.field_s = IntKeyLookup.a(13, var2);
+                  BoundedRandomAccessFile.field_s = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "ignorenotfound");
                 if (var2 != null) {
-                  ui.field_W = IntKeyLookup.a(13, var2);
+                  AlphaContainer.field_W = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "removeignorefirst");
                 if (var2 != null) {
@@ -1744,19 +1744,19 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "removefriendfirst");
                 if (var2 != null) {
-                  mg.field_ic = IntKeyLookup.a(13, var2);
+                  QuickChatMenu.field_ic = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "enterfriend_add");
                 if (var2 != null) {
-                  ij.field_S = IntKeyLookup.a(13, var2);
+                  NameSuggestionsPanel.field_S = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "enterfriend_del");
                 if (var2 != null) {
-                  vk.field_b = IntKeyLookup.a(13, var2);
+                  Js5Transport.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "enterignore_add");
                 if (null != var2) {
-                  bm.field_W = IntKeyLookup.a(13, var2);
+                  AccountMessagePanel.field_W = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "enterignore_del");
                 if (null != var2) {
@@ -1768,7 +1768,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "text_lobby_pleaselogin_free");
                 if (null != var2) {
-                  ql.field_dc = IntKeyLookup.a(13, var2);
+                  SocialListPanel.field_dc = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "opengl");
                 if (null != var2) {
@@ -1800,7 +1800,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "waitingfor_music");
                 if (var2 != null) {
-                  nj.field_P = IntKeyLookup.a(13, var2);
+                  AccountTermsPanel.field_P = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "waitingfor_instruments");
                 if (null != var2) {
@@ -1920,13 +1920,13 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "music_colon");
                 if (null != var2) {
-                  li.field_y = IntKeyLookup.a(13, var2);
+                  PasswordFieldPainter.field_y = IntKeyLookup.a(13, var2);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
                 var2 = mm.a((byte) 9, "fullscreen");
                 if (var2 != null) {
-                  ge.field_g = IntKeyLookup.a(13, var2);
+                  DirectByteStorage.field_g = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "screensize");
                 if (var2 != null) {
@@ -1938,11 +1938,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "rankings");
                 if (null != var2) {
-                  hb.field_h = IntKeyLookup.a(13, var2);
+                  IterableDualNodeDeque.field_h = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "achievements");
                 if (var2 != null) {
-                  mg.field_ec = IntKeyLookup.a(13, var2);
+                  QuickChatMenu.field_ec = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "achievementsthisgame");
                 if (var2 != null) {
@@ -2010,7 +2010,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "newgame");
                 if (null != var2) {
-                  kc.field_C = IntKeyLookup.a(13, var2);
+                  DelayedServerPacket.field_C = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "resumegame");
                 if (var2 != null) {
@@ -2070,7 +2070,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "next");
                 if (var2 != null) {
-                  ng.field_b = IntKeyLookup.a(13, var2);
+                  MembershipPromotionScreen.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "graphics_colon");
                 if (null != var2) {
@@ -2118,7 +2118,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "cont");
                 if (null != var2) {
-                  ah.field_Sb = IntKeyLookup.a(13, var2);
+                  SocialListEntry.field_Sb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "continue_spectating");
                 if (var2 != null) {
@@ -2286,7 +2286,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "notyetachieved");
                 if (var2 != null) {
-                  ol.field_Zb = IntKeyLookup.a(13, var2);
+                  QuickChatHelpDialog.field_Zb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "achieved");
                 if (null != var2) {
@@ -2306,7 +2306,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "orbcoins_colon");
                 if (null != var2) {
-                  v.field_d = IntKeyLookup.a(13, var2);
+                  DebouncedValidator.field_d = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "achieved_colon_description");
                 if (null != var2) {
@@ -2370,11 +2370,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mp_acceptrematch_unrated");
                 if (null != var2) {
-                  nl.field_Z = IntKeyLookup.a(13, var2);
+                  DialWidget.field_Z = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mp_cancelrematch");
                 if (null != var2) {
-                  ig.field_d = IntKeyLookup.a(13, var2);
+                  WhirlpoolHasher.field_d = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mp_cancelrematch_unrated");
                 if (null != var2) {
@@ -2466,7 +2466,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mp_hidechat");
                 if (var2 != null) {
-                  sg.field_b = IntKeyLookup.a(13, var2);
+                  BufferedSocket.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mp_showchat_nounread");
                 if (var2 != null) {
@@ -2474,7 +2474,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mp_showchat_unread1");
                 if (var2 != null) {
-                  gb.field_b = IntKeyLookup.a(13, var2);
+                  ByteStorage.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mp_showchat_unread2");
                 if (null != var2) {
@@ -2490,35 +2490,35 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "quickchat_help");
                 if (var2 != null) {
-                  od.field_b = IntKeyLookup.a(13, var2);
+                  ClientException.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "quickchat_help_title");
                 if (null != var2) {
-                  od.field_f = IntKeyLookup.a(13, var2);
+                  ClientException.field_f = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "quickchat_shortcut_help,0");
                 if (var2 != null) {
-                  h.field_X[0] = IntKeyLookup.a(13, var2);
+                  DraggableWidget.field_X[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "quickchat_shortcut_help,1");
                 if (var2 != null) {
-                  h.field_X[1] = IntKeyLookup.a(13, var2);
+                  DraggableWidget.field_X[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "quickchat_shortcut_help,2");
                 if (var2 != null) {
-                  h.field_X[2] = IntKeyLookup.a(13, var2);
+                  DraggableWidget.field_X[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "quickchat_shortcut_help,3");
                 if (null != var2) {
-                  h.field_X[3] = IntKeyLookup.a(13, var2);
+                  DraggableWidget.field_X[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "quickchat_shortcut_help,4");
                 if (var2 != null) {
-                  h.field_X[4] = IntKeyLookup.a(13, var2);
+                  DraggableWidget.field_X[4] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "quickchat_shortcut_help,5");
                 if (var2 != null) {
-                  h.field_X[5] = IntKeyLookup.a(13, var2);
+                  DraggableWidget.field_X[5] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "quickchat_shortcut_keys,0");
                 if (null != var2) {
@@ -2546,7 +2546,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  v.field_g = eh.a((byte) -71, var2[0]);
+                  DebouncedValidator.field_g = eh.a((byte) -71, var2[0]);
                 }
                 var2 = mm.a((byte) 9, "rating_noratings");
                 if (null != var2) {
@@ -2586,15 +2586,15 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "members_expansion_benefits,0");
                 if (null != var2) {
-                  fe.field_A[0] = IntKeyLookup.a(13, var2);
+                  ArchiveRequest.field_A[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "members_expansion_benefits,1");
                 if (null != var2) {
-                  fe.field_A[1] = IntKeyLookup.a(13, var2);
+                  ArchiveRequest.field_A[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "members_expansion_benefits,2");
                 if (null != var2) {
-                  fe.field_A[2] = IntKeyLookup.a(13, var2);
+                  ArchiveRequest.field_A[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "members_expansion_price_top");
                 if (null != var2) {
@@ -2670,7 +2670,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "fs_accept_beforeaccept");
                 if (null != var2) {
-                  ki.field_kb = IntKeyLookup.a(13, var2);
+                  LoadingProgressDialog.field_kb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "fs_button_accept");
                 if (null != var2) {
@@ -2694,7 +2694,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "fs_accept_countdown_pl");
                 if (var2 != null) {
-                  q.field_k = IntKeyLookup.a(13, var2);
+                  IterableNodeHashTable.field_k = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "fs_nonmember");
                 if (var2 != null) {
@@ -2702,7 +2702,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "fs_button_close");
                 if (var2 != null) {
-                  jf.field_cb = IntKeyLookup.a(13, var2);
+                  EditableTextWidget.field_cb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "fs_button_members");
                 if (var2 != null) {
@@ -2714,11 +2714,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
-                  r.field_p = IntKeyLookup.a(13, var2);
+                  ProxySocketConnector.field_p = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "fs_focus");
                 if (var2 != null) {
-                  ff.field_gb = IntKeyLookup.a(13, var2);
+                  ValidationHelpWidget.field_gb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "fs_focus_or_resolution");
                 if (null != var2) {
@@ -2738,7 +2738,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mb_caption_title");
                 if (var2 != null) {
-                  ia.field_j = IntKeyLookup.a(13, var2);
+                  TextFieldValidator.field_j = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mb_including_gamename");
                 if (var2 != null) {
@@ -2762,7 +2762,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mb_exclusive_1");
                 if (var2 != null) {
-                  ol.field_Xb = IntKeyLookup.a(13, var2);
+                  QuickChatHelpDialog.field_Xb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mb_exclusive_2");
                 if (null != var2) {
@@ -2770,7 +2770,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "me_extra_benefits");
                 if (null != var2) {
-                  lb.field_Yb = IntKeyLookup.a(13, var2);
+                  VerticalScrollbar.field_Yb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "hs_friend_tip");
                 if (var2 != null) {
@@ -2778,7 +2778,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "hs_friend_tip_multi");
                 if (var2 != null) {
-                  k.field_Fb = IntKeyLookup.a(13, var2);
+                  AccountRequestDialog.field_Fb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "hs_mode_name,0");
                 if (null != var2) {
@@ -2794,19 +2794,19 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "rating_mode_name,0");
                 if (null != var2) {
-                  wc.field_b[0] = IntKeyLookup.a(13, var2);
+                  MouseInputHandler.field_b[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rating_mode_name,1");
                 if (null != var2) {
-                  wc.field_b[1] = IntKeyLookup.a(13, var2);
+                  MouseInputHandler.field_b[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rating_mode_long_name,0");
                 if (var2 != null) {
-                  rm.field_o[0] = IntKeyLookup.a(13, var2);
+                  MenuInputState.field_o[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rating_mode_long_name,1");
                 if (null != var2) {
-                  rm.field_o[1] = IntKeyLookup.a(13, var2);
+                  MenuInputState.field_o[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "graphics_config_fixed_size");
                 if (var2 != null) {
@@ -2850,7 +2850,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "createtouse");
                 if (var2 != null) {
-                  lb.field_hc = IntKeyLookup.a(13, var2);
+                  VerticalScrollbar.field_hc = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "achievementsoffline");
                 if (null != var2) {
@@ -2898,37 +2898,37 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mustlogin3,1");
                 if (null != var2) {
-                  pi.field_f[1] = IntKeyLookup.a(13, var2);
+                  DelegatingCanvas.field_f[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin3,2");
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  pi.field_f[2] = IntKeyLookup.a(13, var2);
+                  DelegatingCanvas.field_f[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin3,3");
                 if (var2 != null) {
-                  pi.field_f[3] = IntKeyLookup.a(13, var2);
+                  DelegatingCanvas.field_f[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin3,4");
                 if (null != var2) {
-                  pi.field_f[4] = IntKeyLookup.a(13, var2);
+                  DelegatingCanvas.field_f[4] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin3,5");
                 if (var2 != null) {
-                  pi.field_f[5] = IntKeyLookup.a(13, var2);
+                  DelegatingCanvas.field_f[5] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin3,6");
                 if (var2 != null) {
-                  pi.field_f[6] = IntKeyLookup.a(13, var2);
+                  DelegatingCanvas.field_f[6] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin3,7");
                 if (null != var2) {
-                  pi.field_f[7] = IntKeyLookup.a(13, var2);
+                  DelegatingCanvas.field_f[7] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "discard");
                 if (null != var2) {
-                  sn.field_h = IntKeyLookup.a(13, var2);
+                  BoundedRandomAccessFile.field_h = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin4,1");
                 if (var2 != null) {
@@ -3086,7 +3086,7 @@ final class dn extends SceneWidget {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_Vb[this.field_Wb] = new qh(0L, (SceneWidget) null, (SceneWidget) null, this.field_gc, param1, param2);
+          this.field_Vb[this.field_Wb] = new IconTextComponent(0L, (SceneWidget) null, (SceneWidget) null, this.field_gc, param1, param2);
           this.field_Vb[this.field_Wb].field_Ab = this.field_Zb;
           if (param3 >= -41) {
             return;
@@ -3154,7 +3154,7 @@ final class dn extends SceneWidget {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_17_0 = ~lb.field_gc;
+            stackIn_17_0 = ~VerticalScrollbar.field_gc;
             stackIn_17_1 = -1;
           }
           if (stackIn_17_0 != stackIn_17_1) {
@@ -3186,7 +3186,7 @@ final class dn extends SceneWidget {
         var11 = SteelSentinels.obfuscationControl;
         try {
           if (0 == this.field_Wb) {
-            this.field_Vb[this.field_Wb] = new qh(0L, (SceneWidget) null, (SceneWidget) null, this.field_Yb, (RgbSprite) null, im.field_i);
+            this.field_Vb[this.field_Wb] = new IconTextComponent(0L, (SceneWidget) null, (SceneWidget) null, this.field_Yb, (RgbSprite) null, im.field_i);
             this.field_Vb[this.field_Wb].field_Fb = 1;
             this.a(this.field_Vb[this.field_Wb], 125);
             this.field_ec[this.field_Wb] = -1;
@@ -3217,8 +3217,8 @@ final class dn extends SceneWidget {
             dn.b(false);
           }
           var7Lifetime1 = this.field_Tb + this.field_Tb + this.field_dc * this.field_Wb;
-          var8Lifetime1 = dl.a(param1, 127, param4, var6_int);
-          var9 = ol.a(param2, 0, param0, var7Lifetime1);
+          var8Lifetime1 = UiContainer.a(param1, 127, param4, var6_int);
+          var9 = QuickChatHelpDialog.a(param2, 0, param0, var7Lifetime1);
           this.a(0, var9, var7Lifetime1, var8Lifetime1, var6_int);
           var10 = 0;
           while (var10 < this.field_Wb) {
@@ -3251,13 +3251,13 @@ final class dn extends SceneWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = jh.sine16(param1, 4096);
-          var4 = kg.cosine16(param1, (byte) -83);
+          var4 = ScrollContainer.cosine16(param1, (byte) -83);
           if (param2 <= 61) {
             stackIn_2_0 = (int[]) null;
             return stackIn_2_0;
           }
           var5 = jh.sine16(param0, 4096);
-          var6 = kg.cosine16(param0, (byte) -101);
+          var6 = ScrollContainer.cosine16(param0, (byte) -101);
           var7 = (int)((long)var3_int * (long)var5 >> 16);
           var8 = (int)((long)var6 * (long)var3_int >> 16);
           var9 = (int)((long)var5 * (long)var4 >> 16);
@@ -3353,7 +3353,7 @@ final class dn extends SceneWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_Vb[this.field_Wb] = new qh(0L, (SceneWidget) null, (SceneWidget) null, this.field_gc, (RgbSprite) null, param2);
+          this.field_Vb[this.field_Wb] = new IconTextComponent(0L, (SceneWidget) null, (SceneWidget) null, this.field_gc, (RgbSprite) null, param2);
           this.field_Vb[this.field_Wb].field_Ab = this.field_Zb;
           if (param0 != 2) {
             this.field_Yb = (SceneWidget) null;
@@ -3406,7 +3406,7 @@ final class dn extends SceneWidget {
         RuntimeException decompiledCaughtException = null;
         this.field_ec = new int[256];
         this.field_cc = -2;
-        this.field_Vb = new qh[256];
+        this.field_Vb = new IconTextComponent[256];
         try {
           this.field_Yb = param2;
           this.field_fc = param5;

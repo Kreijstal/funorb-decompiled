@@ -22,7 +22,7 @@ final class pa {
         RuntimeException decompiledCaughtException = null;
         try {
           qe.a((java.awt.Component) ((Object) param0), param1 ^ -21768);
-          hb.a(0, (java.awt.Component) ((Object) param0));
+          IterableDualNodeDeque.a(0, (java.awt.Component) ((Object) param0));
           if (param1 != 9174) {
             field_b = -11;
           }
@@ -66,7 +66,7 @@ final class pa {
         field_h = null;
     }
 
-    final static void a(int param0, mg param1) {
+    final static void a(int param0, QuickChatMenu param1) {
         if (param1 == null) {
           return;
         }
@@ -77,7 +77,7 @@ final class pa {
           return;
         }
         try {
-          vb.field_e = true;
+          GzipDecoder.field_e = true;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "pa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -85,11 +85,11 @@ final class pa {
 
     final static void a(int param0, byte param1, tc param2) {
         try {
-          ic.field_B.addLast(3, param2);
+          MidiPcmStream.field_B.addLast(3, param2);
           vh.a(param0, param2, (byte) 109);
           if (param1 > -24) {
-            mg var4 = (mg) null;
-            pa.a(45, (mg) null);
+            QuickChatMenu var4 = (QuickChatMenu) null;
+            pa.a(45, (QuickChatMenu) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "pa.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -99,7 +99,7 @@ final class pa {
     final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         try {
           int var3_int = -47 / ((param1 - 53) / 45);
-          rj.field_d = param2;
+          BufferedRandomAccessFile.field_d = param2;
           field_a = param0;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "pa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

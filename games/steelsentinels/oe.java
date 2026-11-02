@@ -39,9 +39,9 @@ final class oe {
           if (param5 == null) {
             var8.writeShort(param4, 117);
           } else {
-            r.a(var8, param5, 0);
+            ProxySocketConnector.a(var8, param5, 0);
           }
-          var8.b((byte) 100, -var7 + var8.position);
+          var8.backpatchByteLength((byte) 100, -var7 + var8.position);
           if (param2 == -6988) {
             return;
           }
@@ -67,11 +67,11 @@ final class oe {
         }
     }
 
-    final ao a(int param0, int param1) {
+    final QuickChatPhraseDefinition a(int param0, int param1) {
         byte[] var4 = null;
-        ao var3 = (ao) (this.field_g.a((long)param0, -55));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_g.a((long)param0, -55));
         if (param1 >= -73) {
-          return (ao) null;
+          return (QuickChatPhraseDefinition) null;
         }
         if (var3 != null) {
           return var3;
@@ -81,7 +81,7 @@ final class oe {
         } else {
           var4 = this.field_c.getFile(1, (byte) 54, param0 & 32767);
         }
-        ao var5 = new ao();
+        QuickChatPhraseDefinition var5 = new QuickChatPhraseDefinition();
         if (var4 != null) {
           var5.a(new PacketBuffer(var4), (byte) -116);
           if (param0 >= 32768) {
@@ -129,8 +129,8 @@ final class oe {
           if (param2 != 1) {
             field_j = (String) null;
           }
-          if (wa.a((byte) 30, param1, param0, param3)) {
-            return d.a(true);
+          if (StatefulTextPainter.a((byte) 30, param1, param0, param3)) {
+            return DropTargetWidget.a(true);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

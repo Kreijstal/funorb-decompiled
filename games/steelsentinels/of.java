@@ -7,8 +7,8 @@ final class of {
     static String field_b;
 
     final static void a(int param0, int param1, int param2) {
-        qg.field_a = param1;
-        vg.field_f = param0;
+        MarkerSliderPainter.field_a = param1;
+        ProxyAuthenticationException.field_f = param0;
         if (param2 != 11) {
           of.a(-36);
         }
@@ -31,7 +31,7 @@ final class of {
           rg.field_h = true;
           return;
         }
-        if (!a.a(105)) {
+        if (!MouseWheelInput.a(105)) {
           va.a(29);
           uj.field_d = 11;
           rg.field_h = true;
