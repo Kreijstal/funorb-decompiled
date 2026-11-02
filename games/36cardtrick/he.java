@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class he extends qb {
+class he extends IntrusiveNode {
     he field_i;
     static float field_g;
     long field_j;

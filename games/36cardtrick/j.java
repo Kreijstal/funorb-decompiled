@@ -50,7 +50,7 @@ final class j extends qg {
         qf var3 = (qf) (var2.b((byte) -33));
         while (var3 != null) {
           if (var3.a(true)) {
-            var3.c(105);
+            var3.unlink(105);
           }
           var3 = (qf) (var2.a(28869));
         }
@@ -135,7 +135,7 @@ final class j extends qg {
         qf var3 = (qf) (var2.b((byte) -33));
         while (var3 != null) {
           if (var3.o(928516712)) {
-            var3.c(120);
+            var3.unlink(120);
           }
           var3 = (qf) (var2.a(28869));
         }

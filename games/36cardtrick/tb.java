@@ -69,7 +69,7 @@ final class tb implements ci {
     }
 
     final static void a(int param0, int param1) {
-        qb var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         int var4 = 0;
         dh var5 = null;

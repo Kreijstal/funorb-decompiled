@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class uh extends qb {
+final class uh extends IntrusiveNode {
     static de field_n;
     long[][] field_j;
     String[][] field_m;

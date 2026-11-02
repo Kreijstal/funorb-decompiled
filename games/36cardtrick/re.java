@@ -172,7 +172,7 @@ final class re {
           if (!var3.field_o) {
             var2 = tj.field_H;
           } else {
-            L2: {
+            regionExit1: {
               var4 = this.field_d.field_D;
               var5 = var3.field_m;
               var19 = var3.field_q;
@@ -186,12 +186,12 @@ final class re {
                   if ((null == var5[var4])) {
                     var2 = t.field_f;
                   }
-                  break L2;
+                  break regionExit1;
                 }
                 var2 = t.field_f;
               }
             }
-            L4: {
+            regionExit2: {
               if (var6 != null) {
                 var19Lifetime1 = var17;
                 if (var4 >= 0 &&
@@ -205,34 +205,34 @@ final class re {
                     var9 = eb.field_c.field_J[0][2];
                     eb.field_c.field_J[0][2] = 16777215;
                     var10 = 0;
-                    L7: while (true) {
+                    scanLoop3: while (true) {
                       if (8 >= var10) {
-                        L8: {
+                        regionExit4: {
                           var11 = null;
                           if (var10 == 8) {
                             if (var7 != -1) {
-                              break L7;
+                              break scanLoop3;
                             }
                             var11_ref = ri.field_c;
                             var13 = ai.field_m;
                             var7 = var10;
                             if (var13 == 0) {
-                              break L7;
+                              break scanLoop3;
                             }
                             var14 = dg.field_J;
                           } else {
                             if (var5[var4].length <= var10) {
                               var8 = var8 + (qa.field_b.field_x + qa.field_b.field_s);
-                              break L8;
+                              break regionExit4;
                             }
                             if (var10 >= var19Lifetime1[var4].length) {
                               var8 = var8 + (qa.field_b.field_s + qa.field_b.field_x);
-                              break L8;
+                              break regionExit4;
                             }
                             var11_ref = var5[var4][var10];
                             if (var11_ref == null) {
                               var8 = var8 + (qa.field_b.field_s + qa.field_b.field_x);
-                              break L8;
+                              break regionExit4;
                             }
                             var14 = 255 & var19Lifetime1[var4][var10];
                             var13 = var19Lifetime1[var4][var10] >> 8;
@@ -263,7 +263,7 @@ final class re {
                     }
                     eb.field_c.field_J[0][2] = var9;
                   }
-                  break L4;
+                  break regionExit2;
                 }
                 var2 = t.field_f;
               } else {
@@ -592,12 +592,12 @@ final class re {
           4 != var5) {
           rc.a((byte) 111, 15);
         }
-        L2: {
+        regionExit1: {
           var8 = var5;
           if (var8 != 0) {
             if (7 != var8) {
               if (var8 != 10) {
-                L3: {
+                regionExit2: {
                   if (var8 == 5) {
                     if (param2) {
                       this.field_d.a(11246, 3, 6, param0);
@@ -607,7 +607,7 @@ final class re {
                       if ((param2)) {
                         this.field_d.a(11246, 5, 8, param0);
                       }
-                      break L2;
+                      break regionExit1;
                     }
                     if (21 == var8) {
                       if (param2) {
@@ -632,7 +632,7 @@ final class re {
                             } else {
                               if (var8 == 9) {
                                 if (!param2) {
-                                  break L3;
+                                  break regionExit2;
                                 }
                                 this.field_d.a(11246, 4, 6, param0);
                               } else {
@@ -645,7 +645,7 @@ final class re {
                                       this.field_d.field_C = (1 + this.field_d.field_C) % 2;
                                     }
                                     if (!this.field_f.b(2)) {
-                                      break L3;
+                                      break regionExit2;
                                     }
                                     if (this.field_d.field_C == 0) {
                                       this.field_d.field_C = 2;
@@ -690,7 +690,7 @@ final class re {
                                         var8_ref_Object = bg.field_tb;
                                         synchronized (var8_ref_Object) {
                                           lh.field_d.e(-1);
-                                          if (!lh.field_d.b(66)) {
+                                          if (!lh.field_d.isLinked(66)) {
                                             lh.field_d.h(0);
                                             lh.field_d.g(96);
                                             gh.a(lh.field_d, (byte) -67);
@@ -702,33 +702,33 @@ final class re {
                                         switch (var8) {
                                           case 18:
                                             if (!param2) {
-                                              break L3;
+                                              break regionExit2;
                                             }
                                             this.field_d.field_D = 0;
-                                            break L2;
+                                            break regionExit1;
                                           case 19:
                                             if (!param2) {
-                                              break L3;
+                                              break regionExit2;
                                             }
                                             this.field_d.field_D = 1;
-                                            break L2;
+                                            break regionExit1;
                                           case 20:
                                             if (!param2) {
-                                              break L2;
+                                              break regionExit1;
                                             }
                                             this.field_d.field_D = 2;
-                                            break L2;
+                                            break regionExit1;
                                           default:
-                                            break L2;
+                                            break regionExit1;
                                           case 14:
                                             if (!param2) {
-                                              break L3;
+                                              break regionExit2;
                                             }
                                             nb.field_e = 0;
                                             db.field_m = 0;
                                             ij.field_h.c(29026);
                                             this.field_d.a(11246, 0, 5, param0);
-                                            break L2;
+                                            break regionExit1;
                                         }
                                       }
                                       var7 = fe.field_a;
@@ -761,7 +761,7 @@ final class re {
                                         }
                                       }
                                       if (fe.field_a == var7) {
-                                        break L3;
+                                        break regionExit2;
                                       }
                                       ag.a(var7, 0);
                                     }
@@ -774,7 +774,7 @@ final class re {
                                     if (this.field_i != 4 &&
                                       this.field_i != 5) {
                                       if (this.field_i != 9) {
-                                        break L3;
+                                        break regionExit2;
                                       }
                                       this.field_d.a(this.field_i, param0, 10, -112);
                                     } else {
@@ -785,7 +785,7 @@ final class re {
                               }
                             }
                           }
-                          break L2;
+                          break regionExit1;
                         }
                         if (param2) {
                           if (this.field_i != 6) {
@@ -802,7 +802,7 @@ final class re {
                                 }
                               }
                             }
-                            break L2;
+                            break regionExit1;
                           }
                           if (dl.d(0)) {
                             if (nb.field_e <= 0 &&
@@ -811,7 +811,7 @@ final class re {
                             } else {
                               this.field_d.a(11246, 9, 7, param0);
                             }
-                            break L2;
+                            break regionExit1;
                           }
                           if (nb.field_e > 0) {
                             this.field_d.a(11246, 10, 7, param0);
@@ -1137,7 +1137,7 @@ final class re {
             this.a(stackIn_14_1, stackIn_14_2, stackIn_15_3, param2, param1 - 102);
           }
         }
-        L6: {
+        regionExit1: {
           if (this.field_i != 5) {
             if (this.field_i != 3) {
               if (4 == this.field_i) {
@@ -1219,10 +1219,10 @@ final class re {
                   qa.field_b.a(id.field_d, 407, param2 + 226, 0, -1);
                   if (dl.d(0)) {
                     qa.field_b.a(ag.field_g, 248, param2 + (2 * (qa.field_b.field_x + qa.field_b.field_s) + 226), 319, 1024, 0, -1, 1, 0, qa.field_b.field_x + qa.field_b.field_s);
-                    break L6;
+                    break regionExit1;
                   }
                 }
-                break L6;
+                break regionExit1;
               }
               if (this.field_i != 8 &&
                 10 != this.field_i) {

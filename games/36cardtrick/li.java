@@ -100,7 +100,7 @@ final class li extends je {
         if (this.field_u < 0) {
           if (this.field_p <= 0) {
             this.f();
-            this.c(103);
+            this.unlink(103);
             return;
           }
           this.field_u = 0;
@@ -108,7 +108,7 @@ final class li extends je {
         if (this.field_u >= var7) {
           if (this.field_p >= 0) {
             this.f();
-            this.c(126);
+            this.unlink(126);
             return;
           }
           this.field_u = var7 - 1;
@@ -235,7 +235,7 @@ final class li extends je {
           if (this.field_u >= var7) {
             this.field_u = var7;
             this.f();
-            this.c(122);
+            this.unlink(122);
           }
           return;
         }
@@ -245,7 +245,7 @@ final class li extends je {
         }
         this.field_u = -1;
         this.f();
-        this.c(92);
+        this.unlink(92);
         return;
     }
 
@@ -834,7 +834,7 @@ final class li extends je {
         int var2Lifetime1;
         if (param0 == 0) {
           this.f(0);
-          this.c(127);
+          this.unlink(127);
           return;
         }
         if (this.field_v != 0) {
@@ -894,7 +894,7 @@ final class li extends je {
         this.field_x = 0;
         this.field_m = 0;
         this.field_q = 0;
-        this.c(122);
+        this.unlink(122);
     }
 
     final static li a(ib param0, int param1, int param2) {
@@ -988,7 +988,7 @@ final class li extends je {
           this.field_w = 0;
           this.field_v = 0;
           this.field_q = 0;
-          this.c(91);
+          this.unlink(91);
           return true;
         }
         if (this.field_q >= var1) {
@@ -1547,7 +1547,7 @@ final class li extends je {
               this.field_w = 0;
               this.field_v = 0;
               this.field_q = 0;
-              this.c(83);
+              this.unlink(83);
               param0 = this.field_x;
             }
             this.field_x = 0;
@@ -1565,7 +1565,7 @@ final class li extends je {
         if (this.field_u < 0) {
           if (this.field_p <= 0) {
             this.f();
-            this.c(93);
+            this.unlink(93);
             return;
           }
           this.field_u = 0;
@@ -1573,7 +1573,7 @@ final class li extends je {
         if (this.field_u >= var5) {
           if (this.field_p >= 0) {
             this.f();
-            this.c(113);
+            this.unlink(113);
             return;
           }
           this.field_u = var5 - 1;
@@ -1686,7 +1686,7 @@ final class li extends je {
           if (this.field_u >= var5) {
             this.field_u = var5;
             this.f();
-            this.c(101);
+            this.unlink(101);
           }
           return;
         }
@@ -1695,7 +1695,7 @@ final class li extends je {
         }
         this.field_u = -1;
         this.f();
-        this.c(103);
+        this.unlink(103);
     }
 
     final synchronized void i(int param0) {

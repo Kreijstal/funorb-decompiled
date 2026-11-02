@@ -397,7 +397,7 @@ final class pa extends dg {
             var13.field_p = var3;
             var13.field_j = true;
             var13.field_h = var16[0];
-            var13.c(87);
+            var13.unlink(87);
             return;
           }
           if (var2 == 1) {
@@ -406,7 +406,7 @@ final class pa extends dg {
               mc.a((byte) -128);
               return;
             }
-            var15.c(param0 ^ 121);
+            var15.unlink(param0 ^ 121);
           } else {
             if (var2 != 2) {
               k.a((Throwable) null, (byte) 70, "A1: " + aj.a((byte) 92));
@@ -420,7 +420,7 @@ final class pa extends dg {
               var14.field_p = eg.a(85);
               var14.field_h = var14.field_p[0];
               var14.field_j = true;
-              var14.c(118);
+              var14.unlink(118);
             }
           }
           return;

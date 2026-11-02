@@ -2,26 +2,26 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bk {
-    qb field_a;
+    IntrusiveNode field_a;
     static String field_f;
     static String field_e;
     static String[] field_c;
     static String field_b;
-    private qb field_d;
+    private IntrusiveNode field_d;
 
-    final qb a(byte param0) {
-        qb var2 = this.field_a.field_d;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_a.next;
         if (param0 != 74) {
-          this.field_d = (qb) null;
+          this.field_d = (IntrusiveNode) null;
           if (var2 != this.field_a) {
-            this.field_d = var2.field_d;
+            this.field_d = var2.next;
             return var2;
           }
           this.field_d = null;
           return null;
         }
         if (var2 != this.field_a) {
-          this.field_d = var2.field_d;
+          this.field_d = var2.next;
           return var2;
         }
         this.field_d = null;
@@ -80,35 +80,35 @@ final class bk {
         }
     }
 
-    final qb d(int param0) {
-        qb var2 = this.field_a.field_d;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_a.next;
         if (param0 >= -58) {
-          qb var3 = (qb) null;
-          this.a((qb) null, -66);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a((IntrusiveNode) null, -66);
           if (var2 != this.field_a) {
-            var2.c(111);
+            var2.unlink(111);
             return var2;
           }
           return null;
         }
         if (var2 != this.field_a) {
-          var2.c(111);
+          var2.unlink(111);
           return var2;
         }
         return null;
     }
 
-    final qb b(byte param0) {
-        qb var2 = this.field_d;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_d;
         if (this.field_a == var2) {
           this.field_d = null;
           return null;
         }
         if (param0 <= -91) {
-          this.field_d = var2.field_d;
+          this.field_d = var2.next;
           return var2;
         }
-        return (qb) null;
+        return (IntrusiveNode) null;
     }
 
     public static void a(boolean param0) {
@@ -123,57 +123,57 @@ final class bk {
 
     final boolean a(int param0) {
         if (param0 == 2220) {
-          return this.field_a == this.field_a.field_d ? true : false;
+          return this.field_a == this.field_a.next ? true : false;
         }
         field_c = (String[]) null;
-        return this.field_a == this.field_a.field_d ? true : false;
+        return this.field_a == this.field_a.next ? true : false;
     }
 
-    final qb b(int param0) {
-        qb var2 = null;
-        qb var2Lifetime1;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 >= -6) {
           field_f = (String) null;
-          var2 = this.field_a.field_a;
+          var2 = this.field_a.previous;
           if (this.field_a != var2) {
-            var2.c(126);
+            var2.unlink(126);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_a.field_a;
+        var2Lifetime1 = this.field_a.previous;
         if (this.field_a != var2Lifetime1) {
-          var2Lifetime1.c(126);
+          var2Lifetime1.unlink(126);
           return var2Lifetime1;
         }
         return null;
     }
 
-    final void a(int param0, qb param1) {
+    final void a(int param0, IntrusiveNode param1) {
         try {
-          if (null != param1.field_a) {
-            param1.c(109);
+          if (null != param1.previous) {
+            param1.unlink(109);
           }
-          param1.field_a = this.field_a;
+          param1.previous = this.field_a;
           if (param0 > -119) {
             String var4 = (String) null;
             bk.a((java.applet.Applet) null, 44, (String) null, true);
           }
-          param1.field_d = this.field_a.field_d;
-          param1.field_a.field_d = param1;
-          param1.field_d.field_a = param1;
+          param1.next = this.field_a.next;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "bk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public bk() {
-        this.field_a = new qb();
-        this.field_a.field_d = this.field_a;
-        this.field_a.field_a = this.field_a;
+        this.field_a = new IntrusiveNode();
+        this.field_a.next = this.field_a;
+        this.field_a.previous = this.field_a;
     }
 
-    final void a(qb param0, int param1) {
+    final void a(IntrusiveNode param0, int param1) {
         RuntimeException var3 = null;
         String var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -181,13 +181,13 @@ final class bk {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.field_a != null) {
-            param0.c(107);
+          if (param0.previous != null) {
+            param0.unlink(107);
           }
-          param0.field_a = this.field_a.field_a;
-          param0.field_d = this.field_a;
-          param0.field_a.field_d = param0;
-          param0.field_d.field_a = param0;
+          param0.previous = this.field_a.previous;
+          param0.next = this.field_a;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
           if (param1 == 27362) {
             return;
           }
@@ -209,14 +209,14 @@ final class bk {
     }
 
     final void c(int param0) {
-        qb var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = Main.field_T;
         while (true) {
-          var2 = this.field_a.field_d;
+          var2 = this.field_a.next;
           if (var2 == this.field_a) {
             break;
           }
-          var2.c(param0 ^ 28988);
+          var2.unlink(param0 ^ 28988);
         }
         if (param0 == 29026) {
           this.field_d = null;

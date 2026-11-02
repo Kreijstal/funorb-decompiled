@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dl extends qb {
+final class dl extends IntrusiveNode {
     static int field_g;
     int[] field_i;
     static int field_h;

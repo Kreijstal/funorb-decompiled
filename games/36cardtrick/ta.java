@@ -90,7 +90,7 @@ abstract class ta extends jc {
 
     private final void c(int param0, lk param1) {
         if (null != this.field_W) {
-          this.field_W.c(90);
+          this.field_W.unlink(90);
         }
         if (param0 != 0) {
           return;

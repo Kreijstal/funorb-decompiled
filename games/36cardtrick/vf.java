@@ -180,10 +180,10 @@ abstract class vf {
               var9Lifetime1++;
               var13++;
             }
-            var3.c(95);
+            var3.unlink(95);
             return;
           }
-          var3.c(95);
+          var3.unlink(95);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

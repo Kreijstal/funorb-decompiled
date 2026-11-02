@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class kf extends qb {
+final class kf extends IntrusiveNode {
     long field_g;
     int field_h;
     byte[] field_i;

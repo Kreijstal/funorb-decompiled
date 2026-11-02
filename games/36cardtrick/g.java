@@ -91,7 +91,7 @@ class g extends lk implements u {
           }
           var6 = (lk) (var5.b((byte) -33));
           while (var6 != null) {
-            if (var6.b(55)) {
+            if (var6.isLinked(55)) {
               var6.a(this.field_i + param0, param1 + this.field_o, param2, param3 + 0);
               var6 = (lk) (var5.a(28869));
               continue;
@@ -239,7 +239,7 @@ class g extends lk implements u {
           }
           var8 = (lk) (var7.b((byte) -33));
           while (var8 != null) {
-            if (var8.b(-100)) {
+            if (var8.isLinked(-100)) {
               var8.a(param0, param1, param2, this.field_o + param3, this.field_i + param4, param5);
               var8 = (lk) (var7.a(28869));
               continue;
@@ -328,7 +328,7 @@ class g extends lk implements u {
           var11 = new qd(this.field_z);
           var9 = (lk) (var11.b((byte) -33));
           while (var9 != null) {
-            if (var9.b(103)) {
+            if (var9.isLinked(103)) {
               if (var9.d(param5 + 70) &&
                 var9.a(param0, param1, param2, param3, param4, param5 ^ 0, param6)) {
                 return true;
@@ -375,7 +375,7 @@ class g extends lk implements u {
           while (var4 != null) {
             if (var4.d(72)) {
               var5_ref_qd = new qd(this.field_z);
-              var5_ref_qd.a((byte) -8, (qb) (var4));
+              var5_ref_qd.a((byte) -8, (IntrusiveNode) (var4));
               var6 = (lk) (var5_ref_qd.a((byte) 79));
               while (var6 != null) {
                 if (!var6.a(97, param1)) {
@@ -422,7 +422,7 @@ class g extends lk implements u {
           var9 = new qd(this.field_z);
           var8 = (lk) (var9.b((byte) -33));
           while (var8 != null) {
-            if (var8.b(111)) {
+            if (var8.isLinked(111)) {
               if (var8.d(109) &&
                 var8.a(param0, (byte) -123, param2, param3)) {
                 return true;
@@ -534,7 +534,7 @@ class g extends lk implements u {
           var12 = new qd(this.field_z);
           var9 = (lk) (var12.b((byte) -33));
           while (var9 != null) {
-            if (var9.b(24)) {
+            if (var9.isLinked(24)) {
               if (!var9.a(this.field_o + param0, this.field_i + param1, param2, -24, param4, param5, param6)) {
                 var9 = (lk) (var12.a(28869));
                 continue;

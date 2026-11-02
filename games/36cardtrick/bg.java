@@ -78,7 +78,7 @@ final class bg extends af implements qh {
                   this.field_ub = true;
                   var4 = pa.field_N;
                 } else {
-                  qb.a((byte) 18);
+                  IntrusiveNode.a((byte) 18);
                   this.field_ub = true;
                   var4 = pa.field_N;
                 }

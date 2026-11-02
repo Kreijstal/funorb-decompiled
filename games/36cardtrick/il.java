@@ -6,9 +6,9 @@ import java.util.*;
 final class il implements Iterator {
     private int field_b;
     private ed field_g;
-    private qb field_d;
+    private IntrusiveNode field_d;
     static sg field_e;
-    private qb field_c;
+    private IntrusiveNode field_c;
     static mg[] field_a;
     static char[] field_f;
 
@@ -25,13 +25,13 @@ final class il implements Iterator {
     private final void a(byte param0) {
         if (param0 == 64) {
           this.field_b = 1;
-          this.field_c = this.field_g.field_b[0].field_d;
+          this.field_c = this.field_g.field_b[0].next;
           this.field_d = null;
           return;
         }
         il.a(-8, false);
         this.field_b = 1;
-        this.field_c = this.field_g.field_b[0].field_d;
+        this.field_c = this.field_g.field_b[0].next;
         this.field_d = null;
     }
 
@@ -61,7 +61,7 @@ final class il implements Iterator {
     }
 
     public final boolean hasNext() {
-        qb[] fieldTemp$0 = null;
+        IntrusiveNode[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
         int var2;
         var2 = Main.field_T;
@@ -75,27 +75,27 @@ final class il implements Iterator {
           fieldTemp$0 = this.field_g.field_b;
           fieldTemp$1 = this.field_b;
           this.field_b = this.field_b + 1;
-          if (fieldTemp$0[fieldTemp$1].field_d == this.field_g.field_b[this.field_b - 1]) {
+          if (fieldTemp$0[fieldTemp$1].next == this.field_g.field_b[this.field_b - 1]) {
             this.field_c = this.field_g.field_b[-1 + this.field_b];
             continue;
           }
           break;
         }
-        this.field_c = this.field_g.field_b[-1 + this.field_b].field_d;
+        this.field_c = this.field_g.field_b[-1 + this.field_b].next;
         return true;
     }
 
     public final Object next() {
-        qb[] fieldTemp$0 = null;
+        IntrusiveNode[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
         int var2;
-        qb var3;
-        qb var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = Main.field_T;
         if (this.field_g.field_b[-1 + this.field_b] != this.field_c) {
           var4 = this.field_c;
           this.field_d = var4;
-          this.field_c = var4.field_d;
+          this.field_c = var4.next;
           return var4;
         }
         do {
@@ -105,10 +105,10 @@ final class il implements Iterator {
           fieldTemp$0 = this.field_g.field_b;
           fieldTemp$1 = this.field_b;
           this.field_b = this.field_b + 1;
-          var3 = fieldTemp$0[fieldTemp$1].field_d;
+          var3 = fieldTemp$0[fieldTemp$1].next;
         } while (this.field_g.field_b[this.field_b - 1] == var3);
         this.field_d = var3;
-        this.field_c = var3.field_d;
+        this.field_c = var3.next;
         return var3;
     }
 
@@ -126,7 +126,7 @@ final class il implements Iterator {
         if (this.field_d == null) {
           throw new IllegalStateException();
         }
-        this.field_d.c(121);
+        this.field_d.unlink(121);
         this.field_d = null;
     }
 

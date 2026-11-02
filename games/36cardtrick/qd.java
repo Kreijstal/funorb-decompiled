@@ -3,20 +3,20 @@
  */
 final class qd {
     static int field_c;
-    private qb field_d;
+    private IntrusiveNode field_d;
     private bk field_e;
     static String field_b;
     static volatile int field_a;
 
-    final qb b(byte param0) {
-        qb var2 = this.field_e.field_a.field_d;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_e.field_a.next;
         if (var2 == this.field_e.field_a) {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_d;
+        this.field_d = var2.next;
         if (param0 != -33) {
-          return (qb) null;
+          return (IntrusiveNode) null;
         }
         return var2;
     }
@@ -28,12 +28,12 @@ final class qd {
         }
     }
 
-    final qb a(int param0, qb param1) {
-        qb var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        qb var4 = null;
+        IntrusiveNode var4 = null;
         Object stackIn_8_0 = null;
-        qb stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -42,18 +42,18 @@ final class qd {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_e.field_a.field_d;
+            var3 = this.field_e.field_a.next;
           }
           if (param0 != 25755) {
-            var4 = (qb) null;
-            this.a((byte) 72, (qb) null);
+            var4 = (IntrusiveNode) null;
+            this.a((byte) 72, (IntrusiveNode) null);
           }
           if (this.field_e.field_a == var3) {
             this.field_d = null;
             stackIn_8_0 = null;
-            return (qb) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
-          this.field_d = var3.field_d;
+          this.field_d = var3.next;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,28 +70,28 @@ final class qd {
         }
     }
 
-    final qb a(byte param0, qb param1) {
-        qb var3 = null;
+    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object stackIn_5_0 = null;
-        qb stackIn_7_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_e.field_a.field_a;
+            var3 = this.field_e.field_a.previous;
           } else {
             var3 = param1;
           }
           if (var3 == this.field_e.field_a) {
             this.field_d = null;
             stackIn_5_0 = null;
-            return (qb) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
-          this.field_d = var3.field_a;
+          this.field_d = var3.previous;
           var4 = 95 / ((param0 + 78) / 33);
           stackIn_7_0 = var3;
           return stackIn_7_0;
@@ -148,21 +148,21 @@ final class qd {
         }
     }
 
-    final qb a(byte param0) {
-        qb var2 = this.field_d;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_d;
         if (this.field_e.field_a == var2) {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_a;
+        this.field_d = var2.previous;
         if (param0 < 55) {
-          return (qb) null;
+          return (IntrusiveNode) null;
         }
         return var2;
     }
 
-    final qb c(byte param0) {
-        qb var2 = this.field_e.field_a.field_a;
+    final IntrusiveNode c(byte param0) {
+        IntrusiveNode var2 = this.field_e.field_a.previous;
         if (this.field_e.field_a == var2) {
           this.field_d = null;
           return null;
@@ -170,20 +170,20 @@ final class qd {
         if (param0 != -13) {
           this.field_e = (bk) null;
         }
-        this.field_d = var2.field_a;
+        this.field_d = var2.previous;
         return var2;
     }
 
-    final qb a(int param0) {
-        qb var2 = this.field_d;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_d;
         if (param0 != 28869) {
-          return (qb) null;
+          return (IntrusiveNode) null;
         }
         if (this.field_e.field_a == var2) {
           this.field_d = null;
           return null;
         }
-        this.field_d = var2.field_d;
+        this.field_d = var2.next;
         return var2;
     }
 

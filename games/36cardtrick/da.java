@@ -134,7 +134,7 @@ final class da {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.c(104);
+          var9.unlink(104);
           this.field_d.a(var6, (byte) 118, var8Lifetime1);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;

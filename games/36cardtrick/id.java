@@ -46,18 +46,18 @@ final class id {
         long var1Lifetime1;
         if (param0 >= 21) {
           var1 = System.currentTimeMillis();
-          if (!(var1 >= qb.field_c)) {
-            ec.field_m = ec.field_m + (qb.field_c - var1);
+          if (!(var1 >= IntrusiveNode.field_c)) {
+            ec.field_m = ec.field_m + (IntrusiveNode.field_c - var1);
           }
-          qb.field_c = var1;
+          IntrusiveNode.field_c = var1;
           return ec.field_m + var1;
         }
         id.a((byte) -72);
         var1Lifetime1 = System.currentTimeMillis();
-        if (!(var1Lifetime1 >= qb.field_c)) {
-          ec.field_m = ec.field_m + (qb.field_c - var1Lifetime1);
+        if (!(var1Lifetime1 >= IntrusiveNode.field_c)) {
+          ec.field_m = ec.field_m + (IntrusiveNode.field_c - var1Lifetime1);
         }
-        qb.field_c = var1Lifetime1;
+        IntrusiveNode.field_c = var1Lifetime1;
         return ec.field_m + var1Lifetime1;
     }
 
