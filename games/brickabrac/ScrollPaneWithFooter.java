@@ -69,7 +69,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           } else {
             stackIn_3_5 = 0;
           }
-          SpriteGeometry.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.senderId, param1.senderDisplayName);
+          SpriteGeometry.createContextActions(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.senderId, param1.senderDisplayName);
           if (param1.channel == 0 &&
             !MatchingTextValidator.e(-91) &&
             null == ClientResourceHelpers.currentLobbyGame &&

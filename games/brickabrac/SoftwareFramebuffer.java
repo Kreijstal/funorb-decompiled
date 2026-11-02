@@ -16,7 +16,7 @@ abstract class SoftwareFramebuffer {
         if (param0 != 40) {
           return;
         }
-        ProxyAuthenticationRequiredException.a(param0 ^ -54);
+        ProxyAuthenticationRequiredException.animateLobbyOverlayBounds(param0 ^ -54);
         CacheIoWorker.a((byte) 93, LobbyGame.field_oc, ProxyAuthenticationRequiredException.field_b[0].canvasWidth, WidgetLayerBootstrap.uiRowHeight, DialogMessagePanel.uiScrollbarWidth, MenuSelection.field_g);
     }
 

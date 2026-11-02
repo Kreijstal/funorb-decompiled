@@ -270,7 +270,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         }
     }
 
-    private final int a(Widget param0, int param1, String param2, int param3, int param4, String param5, int param6) {
+    private final int addLabeledFieldWithMessage(Widget param0, int param1, String param2, int param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
         LabeledWidget var10 = null;
@@ -320,7 +320,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         }
     }
 
-    private final int a(String param0, Widget param1, int param2, int param3, int param4) {
+    private final int addLabeledField(String param0, Widget param1, int param2, int param3, int param4) {
         LabeledWidget var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -357,7 +357,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         }
     }
 
-    private final int a(Widget param0, String param1, int param2, int param3, int param4) {
+    private final int addLabeledFieldWithValidationIcon(Widget param0, String param1, int param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         ValidationIconWidget var7 = null;
@@ -400,7 +400,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         }
     }
 
-    final static void h(byte param0) {
+    final static void refreshMenuScreens(byte param0) {
         int var1_int = 0;
         MenuScreen var2 = null;
         int var3 = 0;
@@ -529,7 +529,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         }
     }
 
-    private final int a(int param0, String param1, String param2, int param3, Widget param4, int param5) {
+    private final int addLabeledFieldWithDefaultMessageWidth(int param0, String param1, String param2, int param3, Widget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -544,7 +544,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
           if (param3 != -3) {
             this.newsletterToggle = (ToggleButtonWidget) null;
           }
-          stackIn_3_0 = this.a(param4, param5, param1, 35, param0, param2, 170);
+          stackIn_3_0 = this.addLabeledFieldWithMessage(param4, param5, param1, 35, param0, param2, 170);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -618,12 +618,12 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         this.passwordField.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = GamePresentationHelpers.formatIndexedText(SocialListResponseHelpers.createAccountConsentText, new String[]{this.getLinkOpenTag(true), this.getLinkCloseTag(-987472479)}, (byte) 103);
         int var3 = 20;
-        var3 = var3 + this.a(IntNode.field_l, this.emailField, var3, 37, 170);
-        var3 = var3 + (this.a(this.emailConfirmationField, var3, "", 20, 170, DelayedPacket.field_o, 170) + 5);
-        var3 = var3 + this.a(HalfRgbBlendHelpers.passwordLabel, this.passwordField, var3, 84, 170);
-        var3 = var3 + (this.a(170, InstructionsScreen.field_x, WidgetLayerStack.field_G, -3, this.passwordConfirmationField, var3) + 5);
-        var3 = var3 + (this.a(170, GameClock.field_h, BlankScreen.field_j, -3, this.usernameField, var3) + 5);
-        var3 = var3 + this.a(this.ageField, HuffmanCodec.field_d, 170, 111, var3);
+        var3 = var3 + this.addLabeledField(IntNode.field_l, this.emailField, var3, 37, 170);
+        var3 = var3 + (this.addLabeledFieldWithMessage(this.emailConfirmationField, var3, "", 20, 170, DelayedPacket.field_o, 170) + 5);
+        var3 = var3 + this.addLabeledField(HalfRgbBlendHelpers.passwordLabel, this.passwordField, var3, 84, 170);
+        var3 = var3 + (this.addLabeledFieldWithDefaultMessageWidth(170, InstructionsScreen.field_x, WidgetLayerStack.field_G, -3, this.passwordConfirmationField, var3) + 5);
+        var3 = var3 + (this.addLabeledFieldWithDefaultMessageWidth(170, GameClock.field_h, BlankScreen.field_j, -3, this.usernameField, var3) + 5);
+        var3 = var3 + this.addLabeledFieldWithValidationIcon(this.ageField, HuffmanCodec.field_d, 170, 111, var3);
         LabeledWidget var4 = new LabeledWidget(46, var3, this.width - 90, 25, this.newsletterToggle, true, -120 + this.width, 5, QuickChatMenu.field_Yb, 11579568, LevelCompleteScreen.field_z);
         this.addChild(var4, true);
         var3 = var3 + var4.height;

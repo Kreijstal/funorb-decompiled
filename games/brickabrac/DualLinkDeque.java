@@ -44,7 +44,7 @@ final class DualLinkDeque implements Iterable {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isPopupOpen(int param0) {
         if (param0 != -4858) {
           DualLinkDeque.outlineRasterRegion(-58, 65, -66, 54, -73);
           if (null != GameRenderAudioHelpers.contextActions) {
@@ -135,7 +135,7 @@ final class DualLinkDeque implements Iterable {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (DualLinkDeque.a(-4858)) {
+        if (DualLinkDeque.isPopupOpen(-4858)) {
           param0 = false;
         }
         RichTextLayout.a(param0, (byte) 123);

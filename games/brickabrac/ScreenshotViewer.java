@@ -41,7 +41,7 @@ final class ScreenshotViewer {
             return stackIn_3_0;
           }
           this.field_o = this.field_o + 65536;
-          while (MouseInput.a(IsaacGenerator.field_c, -1, this.field_o) >= 65536) {
+          while (MouseInput.multiplyQ16(IsaacGenerator.field_c, -1, this.field_o) >= 65536) {
             this.field_i = this.field_i + 1;
             this.field_o = this.field_o - IsaacGenerator.field_c;
           }
@@ -368,7 +368,7 @@ final class ScreenshotViewer {
         RuntimeException var2_ref = null;
         try {
           try {
-            ChocolateBackground.a(EmailConfirmationValidator.e((byte) -86), 0);
+            ChocolateBackground.openSubscribePage(EmailConfirmationValidator.e((byte) -86), 0);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (Exception) (Object) decompiledCaughtException;

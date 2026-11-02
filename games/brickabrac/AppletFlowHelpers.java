@@ -88,10 +88,10 @@ final class AppletFlowHelpers {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (DualLinkDeque.a(-4858)) {
+        if (DualLinkDeque.isPopupOpen(-4858)) {
           param1 = false;
         }
-        LobbyOverlayHelpers.a(param1, -124);
+        LobbyOverlayHelpers.drawLobbyOverlays(param1, -124);
         if (param0 == -25) {
           BufferedSocket.a(21862);
           return;

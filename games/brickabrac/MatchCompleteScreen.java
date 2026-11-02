@@ -59,7 +59,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
           if (username.length() == 0) {
             return true;
           }
-          if (MenuButton.a(password, 0, username)) {
+          if (MenuButton.containsTextOrReverse(password, 0, username)) {
             return false;
           }
           if (PasswordTooltipHelpers.usernameContainsPasswordOrReverse(password, (byte) 122, username)) {

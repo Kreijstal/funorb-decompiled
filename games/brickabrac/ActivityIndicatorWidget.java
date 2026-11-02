@@ -28,7 +28,7 @@ final class ActivityIndicatorWidget extends Widget {
         this(x, y, width, height, phaseSpan, foregroundColor, backgroundColor, 8355711 & foregroundColor >> 1, (backgroundColor & 16711422) >> 1);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, PlatformServices param4, String param5, int param6, int param7, int param8) {
+    final static void initializeArchiveServices(int param0, int param1, int param2, int param3, PlatformServices param4, String param5, int param6, int param7, int param8) {
         DialogMessagePanel.field_P = param4;
         ArcticBackground.archiveHandshakeWord = param7;
         TextFieldWidget.serviceHeaderWordOne = param0;

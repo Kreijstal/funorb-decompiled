@@ -116,7 +116,7 @@ final class AgeValidator extends TextFieldValidator {
           age = UsernameAvailabilityValidator.parseDecimalInt(parseInput, -28734);
           if (obfuscationGuard != 106) {
             var4 = (ResourceArchive) null;
-            AgeValidator.a((String) null, (String) null, (ResourceArchive) null, -17);
+            AgeValidator.loadTiledFrameSprites((String) null, (String) null, (ResourceArchive) null, -17);
           }
           if (age > 0 &&
             age <= 130) {
@@ -252,7 +252,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(String param0, byte param1, java.applet.Applet param2) {
+    final static void openRelativeUrl(String param0, byte param1, java.applet.Applet param2) {
         try {
           java.net.URL var3 = null;
           RuntimeException stackIn_8_0 = null;
@@ -270,7 +270,7 @@ final class AgeValidator extends TextFieldValidator {
               }
               var3 = new java.net.URL(param2.getCodeBase(), param0);
               var3 = DisplayModeInfo.applyChangedAppletParameters(param2, var3, -1);
-              HuffmanCodec.a((byte) 94, param2, var3.toString(), true);
+              HuffmanCodec.openUrlInNewWindow((byte) 94, param2, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;
@@ -302,7 +302,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static RgbSprite[] a(String param0, String param1, ResourceArchive param2, int param3) {
+    final static RgbSprite[] loadTiledFrameSprites(String param0, String param1, ResourceArchive param2, int param3) {
         RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

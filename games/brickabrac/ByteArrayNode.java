@@ -34,7 +34,7 @@ final class ByteArrayNode extends IntrusiveNode {
           if (param0 != 17165) {
             ByteArrayNode.a(-74, (byte) 25, 127);
           }
-          stackIn_3_0 = WhirlpoolDigestHelpers.a((byte) 122, false, param1);
+          stackIn_3_0 = WhirlpoolDigestHelpers.isValidPlayerName((byte) 122, false, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

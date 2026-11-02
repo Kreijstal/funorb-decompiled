@@ -8,7 +8,7 @@ final class DiagnosticTextLine extends IntrusiveNode {
     static boolean[] field_m;
     StringBuilder text;
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadLogoSound(int param0, ResourceArchive param1) {
         VorbisSample var2 = null;
         VorbisSample.decodeSetup(param1.takeFileByName(111, "headers.packvorbis", ""));
         if (param0 != -2196) {
@@ -22,7 +22,7 @@ final class DiagnosticTextLine extends IntrusiveNode {
         }
     }
 
-    final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
+    final static void drawFramebufferToCanvas(java.awt.Canvas param0, int param1, int param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -80,7 +80,7 @@ final class DiagnosticTextLine extends IntrusiveNode {
         this.text = new StringBuilder(initialCapacity);
     }
 
-    final static void a(byte param0) {
+    final static void resetSessionDisplayState(byte param0) {
         HalfRgbBlendHelpers.field_b = false;
         LobbyOverlayHelpers.field_i = 13;
         MatchCompleteScreen.field_E = 0;

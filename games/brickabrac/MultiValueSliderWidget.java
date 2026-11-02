@@ -9,7 +9,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
     static RgbSprite[] field_K;
     int horizontalInset;
 
-    final static LoginMethodPreference a(java.applet.Applet param0, int param1) {
+    final static LoginMethodPreference readLastLoginMethod(java.applet.Applet param0, int param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -72,7 +72,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
         field_N = null;
         if (obfuscationGuard != 18724) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          MultiValueSliderWidget.a((java.applet.Applet) null, 5);
+          MultiValueSliderWidget.readLastLoginMethod((java.applet.Applet) null, 5);
         }
     }
 
@@ -183,7 +183,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
             return;
           }
           if (responseType != 2) {
-            AlignedIconLabel.a("A1: " + WhirlpoolHasher.c((byte) -92), (Throwable) null, 88);
+            AlignedIconLabel.a("A1: " + WhirlpoolHasher.describePacketHistory((byte) -92), (Throwable) null, 88);
             GameTransportHelpers.closeGameTransport((byte) 52);
             return;
           }

@@ -95,7 +95,7 @@ final class RankingsScreen extends MenuScreen {
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-59, param0.sprite);
           if (param5 < 39) {
-            RankingsScreen.a(true, 49, true);
+            RankingsScreen.drawOverlayBackdrop(true, 49, true);
           }
           Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, CacheIoWorker.desertBackgroundColors[param4], 16777215);
           param3.drawWithVerticalAlphaGradient((-param3.canvasWidth + param0.width) / 2 - 50 / param1, -(189 / param1) + (-param3.canvasHeight + param0.height) + param2, 55, 83);
@@ -160,7 +160,7 @@ final class RankingsScreen extends MenuScreen {
         ArrayWidgetGroup.decreaseMusicGain((byte) 122);
     }
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void drawOverlayBackdrop(boolean param0, int param1, boolean param2) {
         if (param1 >= -51) {
           RankingsScreen.a((byte) -69, false);
         }

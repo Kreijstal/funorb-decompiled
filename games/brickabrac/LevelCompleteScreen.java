@@ -45,7 +45,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         }
         Rasterizer2D.darkenRectangle(0, 0, 640, 480);
         this.drawMenuFrame(124);
-        DelayedPacket.d(0);
+        DelayedPacket.paintScreenFrame(0);
         this.drawEnabledButtons(0);
     }
 

@@ -120,7 +120,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           if (MeshAttributeRecord.currentKeyCode == 84) {
             if (var3 == 0) {
               if (ScreenNavigationHelpers.quickChatChannel != 0) {
-                UsernameAvailabilityValidator.b(!param0);
+                UsernameAvailabilityValidator.resetQuickChatInput(!param0);
               }
             } else {
               if (OptionsScreen.field_A.length() > 0) {
@@ -144,7 +144,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                   GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ScreenNavigationHelpers.quickChatChannel, param1, var4_ref_String);
                 }
               }
-              UsernameAvailabilityValidator.b(true);
+              UsernameAvailabilityValidator.resetQuickChatInput(true);
             }
             return true;
           }
@@ -157,7 +157,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           }
           var4 = ResourceArchiveFactory.currentKeyCharacter;
           stackIn_41_0 = !param0;
-          if (!RasterSnapshot.a(stackIn_41_0, (char) var4)) {
+          if (!RasterSnapshot.isSupportedTextChar(stackIn_41_0, (char) var4)) {
             return false;
           }
           if (var3 == 0) {
@@ -197,7 +197,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             var5Lifetime4 = var5Lifetime4 - CachedArchiveSource.chatFont.measureText(var20);
           } else {
             var24 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
-            var18 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{CanvasInputHelpers.a(true, var24)}, (byte) 103);
+            var18 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{CanvasInputHelpers.normalizeBase37Name(true, var24)}, (byte) 103);
             var7Lifetime15 = var18;
             var7Lifetime15 = var18;
             var8 = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
@@ -226,7 +226,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             if (MeshAttributeRecord.currentKeyCode == 84) {
               if (var3 == 0) {
                 if (ScreenNavigationHelpers.quickChatChannel != 0) {
-                  UsernameAvailabilityValidator.b(!param0);
+                  UsernameAvailabilityValidator.resetQuickChatInput(!param0);
                 }
               } else {
                 if (OptionsScreen.field_A.length() > 0) {
@@ -238,7 +238,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                     var15Lifetime1 = (String) null;
                     var14Lifetime1 = (String) null;
                     SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ScreenshotViewer.field_m, (String) null, 2);
-                    UsernameAvailabilityValidator.b(true);
+                    UsernameAvailabilityValidator.resetQuickChatInput(true);
                   } else {
                     var5Lifetime1 = ScreenNavigationHelpers.quickChatChannel;
                     if (var5Lifetime1 == 0 &&
@@ -249,10 +249,10 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                       DirectByteStorage.updateChatFilter(0, param2, 1, var5Lifetime1);
                     }
                     GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ScreenNavigationHelpers.quickChatChannel, param1, var4_ref_StringLifetime1);
-                    UsernameAvailabilityValidator.b(true);
+                    UsernameAvailabilityValidator.resetQuickChatInput(true);
                   }
                 } else {
-                  UsernameAvailabilityValidator.b(true);
+                  UsernameAvailabilityValidator.resetQuickChatInput(true);
                 }
               }
               return true;
@@ -266,7 +266,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             }
             var4Lifetime1 = ResourceArchiveFactory.currentKeyCharacter;
             stackIn_103_0 = !param0;
-            if (!RasterSnapshot.a(stackIn_103_0, (char) var4Lifetime1)) {
+            if (!RasterSnapshot.isSupportedTextChar(stackIn_103_0, (char) var4Lifetime1)) {
               return false;
             }
             if (var3 != 0 &&
@@ -304,7 +304,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                 var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - CachedArchiveSource.chatFont.measureText(var20Lifetime1);
               } else {
                 var25 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
-                var18Lifetime1 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{CanvasInputHelpers.a(true, var25)}, (byte) 103);
+                var18Lifetime1 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{CanvasInputHelpers.normalizeBase37Name(true, var25)}, (byte) 103);
                 var7Lifetime1Lifetime6 = var18Lifetime1;
                 var7Lifetime1Lifetime6 = var18Lifetime1;
                 var8Lifetime1 = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
@@ -333,7 +333,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         if (MeshAttributeRecord.currentKeyCode == 84) {
           if (var3 == 0) {
             if (ScreenNavigationHelpers.quickChatChannel != 0) {
-              UsernameAvailabilityValidator.b(!param0);
+              UsernameAvailabilityValidator.resetQuickChatInput(!param0);
             }
           } else {
             if (OptionsScreen.field_A.length() > 0) {
@@ -359,7 +359,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                 GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ScreenNavigationHelpers.quickChatChannel, param1, var4_ref_StringLifetime2);
               }
             }
-            UsernameAvailabilityValidator.b(true);
+            UsernameAvailabilityValidator.resetQuickChatInput(true);
           }
           return true;
         }
@@ -375,7 +375,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         }
         var4Lifetime2 = ResourceArchiveFactory.currentKeyCharacter;
         stackIn_160_0 = !param0;
-        if (!RasterSnapshot.a(stackIn_160_0, (char) var4Lifetime2)) {
+        if (!RasterSnapshot.isSupportedTextChar(stackIn_160_0, (char) var4Lifetime2)) {
           return false;
         }
         if (var3 == 0) {
@@ -442,7 +442,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime4);
         } else {
           var26 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
-          var18Lifetime2 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{CanvasInputHelpers.a(true, var26)}, (byte) 103);
+          var18Lifetime2 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{CanvasInputHelpers.normalizeBase37Name(true, var26)}, (byte) 103);
           var7Lifetime9 = var18Lifetime2;
           var7Lifetime9 = var18Lifetime2;
           var8Lifetime2 = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
@@ -495,7 +495,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             }
           }
           var7 = stackIn_14_0;
-          EmailAvailabilityRequest.a(this.buttonSprites, widget.y + parentY + (widget.height - this.buttonSprites[0].canvasHeight >> 1), widget.x + parentX, widget.width, var7, (byte) 122);
+          EmailAvailabilityRequest.drawHorizontalThreeSlice(this.buttonSprites, widget.y + parentY + (widget.height - this.buttonSprites[0].canvasHeight >> 1), widget.x + parentX, widget.width, var7, (byte) 122);
           stackIn_17_0 = (!obfuscationGuard) ? 7105644 : 16777215;
           var8 = stackIn_17_0;
           if (callbackGuard != -20618) {

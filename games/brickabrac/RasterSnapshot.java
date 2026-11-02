@@ -32,7 +32,7 @@ final class RasterSnapshot extends IntrusiveNode {
         }
     }
 
-    final static boolean a(boolean param0, char param1) {
+    final static boolean isSupportedTextChar(boolean param0, char param1) {
         if (param1 >= 32) {
           if (126 >= param1) {
             return true;

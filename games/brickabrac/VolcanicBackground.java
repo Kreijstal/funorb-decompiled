@@ -60,8 +60,8 @@ final class VolcanicBackground extends BackgroundScene {
         CacheIoWorker.volcanicCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.backgroundSpriteArchive, "volcanic_caps", 2);
         WidgetLayerBootstrap.volcanicSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.backgroundSpriteArchive, "volcanic_segs", 2);
         LevelList.volcanicCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.backgroundSpriteArchive);
-        CacheIoWorker.volcanicCapsSprites[1] = Under13RegistrationNoticePanel.a(CacheIoWorker.volcanicCapsSprites[0], false);
-        WidgetLayerBootstrap.volcanicSegsSprites[1] = Under13RegistrationNoticePanel.a(WidgetLayerBootstrap.volcanicSegsSprites[0], obfuscationGuard);
+        CacheIoWorker.volcanicCapsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(CacheIoWorker.volcanicCapsSprites[0], false);
+        WidgetLayerBootstrap.volcanicSegsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(WidgetLayerBootstrap.volcanicSegsSprites[0], obfuscationGuard);
         LevelList.volcanicCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, LevelList.volcanicCentreSprites[0]);
         return true;
     }

@@ -31,7 +31,7 @@ class TextFieldRenderer extends TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < 72) {
-            TextFieldRenderer.a((byte) 33, 79);
+            TextFieldRenderer.highestOneBit((byte) 33, 79);
           }
           var2_int = PlayerBadgeHelpers.selectPlayerBadgeKind(QuickChatHelpDialog.loginPrivilegeByteOne, TextChoiceDialogStyles.loginPrivilegeByteTwo, (byte) -22);
           if (var2_int == 1) {
@@ -96,7 +96,7 @@ class TextFieldRenderer extends TextWidgetRenderer {
         super(font, 4, 2, 2, 2, textColor, -1, 0, 1, font.ascent, -1, 2147483647, false);
     }
 
-    final static int a(byte param0, int param1) {
+    final static int highestOneBit(byte param0, int param1) {
         int var2 = param1 >>> 1;
         var2 = var2 | var2 >>> 1;
         if (param0 == -82) {

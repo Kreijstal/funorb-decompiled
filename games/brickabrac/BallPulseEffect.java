@@ -37,18 +37,18 @@ final class BallPulseEffect extends IntrusiveNode {
         return fieldTemp$1 < 40 ? true : false;
     }
 
-    final static void a(ResourceArchive param0, AudioMixer param1, int param2, int param3) {
+    final static void loadLogoAssets(ResourceArchive param0, AudioMixer param1, int param2, int param3) {
         try {
           BoundedFile.field_i = FriendListUi.a((byte) -98) * param2 / 1000;
           if (param3 < 91) {
             AudioMixer var5 = (AudioMixer) null;
-            BallPulseEffect.a((ResourceArchive) null, (AudioMixer) null, -127, -72);
+            BallPulseEffect.loadLogoAssets((ResourceArchive) null, (AudioMixer) null, -127, -72);
           }
-          DiagnosticTextLine.a(-2196, param0);
+          DiagnosticTextLine.loadLogoSound(-2196, param0);
           GameRenderAudioHelpers.loadLogoMeshes((byte) -70, param0);
-          AchievementSubmission.a(param0, 115);
+          AchievementSubmission.loadFinalFrameImage(param0, 115);
           ScorePopup.initializeMeshLighting(-37);
-          UsernameAvailabilityValidator.e(-41);
+          UsernameAvailabilityValidator.renderLogoGlow(-41);
           MatchResultScreen.logoAnimationTicks = -BoundedFile.field_i + 0;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

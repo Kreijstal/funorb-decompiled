@@ -140,8 +140,8 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
           if (!param0) {
             QuickChatCategoryDefinition.clearSharedReferences((byte) -116);
           }
-          ToggleButtonWidget.a(UsernameSuggestionPanel.field_N, 8192, WidgetTextLayout.field_a, LevelCompleteScreen.field_C);
-          DiagnosticTextLine.a(param1, 0, 14209, 0);
+          ToggleButtonWidget.showLoadingProgress(UsernameSuggestionPanel.field_N, 8192, WidgetTextLayout.field_a, LevelCompleteScreen.field_C);
+          DiagnosticTextLine.drawFramebufferToCanvas(param1, 0, 14209, 0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

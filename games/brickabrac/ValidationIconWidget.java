@@ -248,7 +248,7 @@ final class ValidationIconWidget extends FocusableWidget {
           var14 = param3.getText(2);
           var8 = param5.getText(2);
           if (WhirlpoolHasher.gameTransport == null &&
-            !CappedUrlRequest.a(false, param6 ^ 10004)) {
+            !CappedUrlRequest.pollGameSocketConnection(false, param6 ^ 10004)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }

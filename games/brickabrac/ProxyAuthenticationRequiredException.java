@@ -51,7 +51,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         }
     }
 
-    final static void a(int param0) {
+    final static void animateLobbyOverlayBounds(int param0) {
         int var3 = 0;
         int var1 = ScrollPaneWithFooter.field_Yb * ScrollPaneWithFooter.field_Yb;
         int var2 = -(MeshLobbyUiHelpers.field_f * MeshLobbyUiHelpers.field_f) + var1;
@@ -59,13 +59,13 @@ final class ProxyAuthenticationRequiredException extends IOException {
         if (param0 < -27) {
           var3 = (-BoundedFile.field_h + StrongCacheEntry.field_O) * var2 / var1 + BoundedFile.field_h;
           DualLinkDeque.field_d.setBounds(120, var3, ValidationStatus.field_f, 640, (byte) 64);
-          VerticalScrollbar.a(QuickChatCategoryDefinition.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
+          VerticalScrollbar.layoutQuickChatMenu(QuickChatCategoryDefinition.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
           return;
         }
         keyEventCodes = (int[]) null;
         var3Lifetime1 = (-BoundedFile.field_h + StrongCacheEntry.field_O) * var2 / var1 + BoundedFile.field_h;
         DualLinkDeque.field_d.setBounds(120, var3Lifetime1, ValidationStatus.field_f, 640, (byte) 64);
-        VerticalScrollbar.a(QuickChatCategoryDefinition.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
+        VerticalScrollbar.layoutQuickChatMenu(QuickChatCategoryDefinition.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
     }
 
     final static void a(String param0, int param1, int param2, String[] param3) {
@@ -99,7 +99,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
               return;
             }
             var8 = param3;
-            InstructionsScreen.a(var8, true);
+            InstructionsScreen.setUsernameSuggestions(var8, true);
             AccountIntroductionPanel.field_H = IntKeyIndex.createAccountResponseWithSuggestions(param1 ^ 2167, param3);
             return;
           }
@@ -107,7 +107,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           stackIn_7_1 = !(Paddle.field_x >= 13);
           AccountIntroductionPanel.field_H = LoginCredentialKind.createAccountResponse(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
-          InstructionsScreen.a((String[]) null, true);
+          InstructionsScreen.setUsernameSuggestions((String[]) null, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

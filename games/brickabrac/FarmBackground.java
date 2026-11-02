@@ -299,7 +299,7 @@ final class FarmBackground extends BackgroundScene {
     final static void g(int param0) {
         if (10 == AchievementIcon.field_j ||
           !ReportAbuseDialog.i(0)) {
-          DialogMessagePanel.h(6846);
+          DialogMessagePanel.showAccountMessageDialog(6846);
           AchievementIcon.field_j = 11;
         }
         if (param0 < 105) {

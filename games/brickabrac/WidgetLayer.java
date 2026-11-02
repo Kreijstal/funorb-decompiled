@@ -170,7 +170,7 @@ abstract class WidgetLayer extends WidgetGroup {
           if (param1 != 97) {
             WidgetLayer.clearSharedReferences((byte) -100);
           }
-          ContentTransitionPhase.a((byte) -111, param0);
+          ContentTransitionPhase.reloadPage((byte) -111, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

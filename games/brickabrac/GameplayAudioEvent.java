@@ -63,7 +63,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
         field_k = null;
     }
 
-    final static void a(int param0) {
+    final static void closeArchiveConnections(int param0) {
         try {
           int var1_int = 0;
           IOException iOException = null;
@@ -116,16 +116,16 @@ final class GameplayAudioEvent extends IntrusiveNode {
         }
     }
 
-    final static void c(int param0) {
+    final static void processUiLayerInput(int param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!ConditionalTextValue.a(param0 ^ 27146)) {
+          if (!ConditionalTextValue.hasVisibleLayer(param0 ^ 27146)) {
             if (null != GameplayRenderHelpers.fullscreenCanvas &&
               GameplayRenderHelpers.fullscreenCanvas.focusLossPending) {
-              LevelPack.b(109);
+              LevelPack.closeFullscreenCanvas(109);
               ParallaxMusicHelpers.field_b.pushLayer(-80, new FullscreenFailureDialog(ParallaxMusicHelpers.field_b, SocialListResponseHelpers.fullscreenFocusProblem));
             }
             return;
@@ -167,7 +167,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
         }
         int var3 = 0;
         if (obfuscationGuard != 3) {
-          GameplayAudioEvent.c(21);
+          GameplayAudioEvent.processUiLayerInput(21);
         }
         long var4 = value;
         while (var4 != 0L) {

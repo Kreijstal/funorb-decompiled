@@ -529,7 +529,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         }
     }
 
-    final static void a(byte param0, String param1) {
+    final static void showMessageDialogText(byte param0, String param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -730,7 +730,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
     final static void a(byte param0, boolean param1, boolean param2) {
         if (param0 != -16) {
           String var4 = (String) null;
-          ArrayWidgetGroup.a((byte) 10, (String) null);
+          ArrayWidgetGroup.showMessageDialogText((byte) 10, (String) null);
         }
         String var5 = (String) null;
         ToggleButtonWidget.showLoginPanel(param2, param1, -15947, (String) null);

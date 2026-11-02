@@ -215,7 +215,7 @@ final class DateFieldsWidget extends DateInputWidget {
         UiComponent stackIn_60_0 = null;
         boolean stackIn_61_1 = false;
         int var4;
-        Brick.e(-79);
+        Brick.layoutLobbySlidePanels(-79);
         if (ConditionalTextValue.field_h >= 0) {
           DraggableWidget.field_N.text = GamePresentationHelpers.formatIndexedText(FontRequestHelpers.field_c, new String[]{Integer.toString(ConditionalTextValue.field_h)}, (byte) 103);
           var4 = 34 / ((-10 - param2) / 53);

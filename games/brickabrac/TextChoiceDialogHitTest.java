@@ -27,7 +27,7 @@ final class TextChoiceDialogHitTest {
         return ResourceArchiveFactory.createResourceArchive(false, archiveIndex, false, 1, true, true);
     }
 
-    final static UiComponent a(int param0) {
+    final static UiComponent getLobbyCaptionContent(int param0) {
         if (param0 != 1345) {
           TextChoiceDialogHitTest.clearSharedReferences(94);
           return LobbyCaptionGlobals.field_e.content;

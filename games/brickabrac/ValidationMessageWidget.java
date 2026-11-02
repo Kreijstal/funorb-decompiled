@@ -46,7 +46,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     }
 
     ValidationMessageWidget(ValidationSource validationSource, String defaultPrompt, int x, int y, int width, int height) {
-        super(defaultPrompt, DraggableWidget.g(-23009));
+        super(defaultPrompt, DraggableWidget.getSharedTextWidgetRenderer(-23009));
         try {
           this.validationSource = validationSource;
           this.defaultPrompt = defaultPrompt;

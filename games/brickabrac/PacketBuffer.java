@@ -572,7 +572,7 @@ class PacketBuffer extends IntrusiveNode {
           var4_int = param1.getGroupId(param0, false);
           var5 = param1.getFileId(var4_int, -24, param2);
           if (param3 == -946715356) {
-            stackIn_4_0 = UiComponentNode.a(var4_int, var5, -59, param1);
+            stackIn_4_0 = UiComponentNode.loadIndexedSprites(var4_int, var5, -59, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (IndexedSprite[]) null;

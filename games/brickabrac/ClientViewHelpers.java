@@ -26,13 +26,13 @@ final class ClientViewHelpers {
         field_e = null;
         field_b = null;
         if (obfuscationGuard > -2) {
-          ClientViewHelpers.a(false);
+          ClientViewHelpers.isAdaptiveResizeAvailable(false);
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isAdaptiveResizeAvailable(boolean param0) {
         if (!param0) {
-          ClientViewHelpers.a(true);
+          ClientViewHelpers.isAdaptiveResizeAvailable(true);
           if (null == ModalOverlayHelpers.canvasResizeController) {
             return false;
           }

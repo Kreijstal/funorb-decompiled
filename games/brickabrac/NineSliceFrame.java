@@ -70,7 +70,7 @@ class NineSliceFrame {
         if (param1) {
           return;
         }
-        if (!ConditionalTextValue.a(2)) {
+        if (!ConditionalTextValue.hasVisibleLayer(2)) {
           return;
         }
         if (param0) {

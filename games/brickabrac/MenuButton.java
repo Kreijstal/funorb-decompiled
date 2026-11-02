@@ -160,7 +160,7 @@ final class MenuButton {
         }
     }
 
-    final static boolean a(String param0, int param1, String param2) {
+    final static boolean containsTextOrReverse(String param0, int param1, String param2) {
         String var3 = null;
         String var4 = null;
         boolean stackIn_14_0 = false;
@@ -175,7 +175,7 @@ final class MenuButton {
           var3 = ScreenshotViewer.reverseUtf16CodeUnits(param1 + 121, param2);
           if (param1 != 0) {
             var4 = (String) null;
-            MenuButton.a((String) null, 78, (String) null);
+            MenuButton.containsTextOrReverse((String) null, 78, (String) null);
           }
           if (param0.indexOf(param2) == -1 &&
             param0.indexOf(var3) == -1) {
@@ -237,7 +237,7 @@ final class MenuButton {
         }
     }
 
-    final static String a(byte[] param0, byte param1) {
+    final static String decodeCp1252Bytes(byte[] param0, byte param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

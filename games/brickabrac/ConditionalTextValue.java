@@ -15,7 +15,7 @@ final class ConditionalTextValue {
     static MidiSynthesizer musicSynthesizer;
     static String field_e;
 
-    final static boolean a(int param0) {
+    final static boolean hasVisibleLayer(int param0) {
         if (param0 != 2) {
           field_h = 108;
           if (ParallaxMusicHelpers.field_b == null) {
@@ -55,7 +55,7 @@ final class ConditionalTextValue {
             return true;
           }
           if (!obfuscationGuard) {
-            ConditionalTextValue.a(-100);
+            ConditionalTextValue.hasVisibleLayer(-100);
           }
           var6 = QuickChatPopupHelpers.nameCharacterExtensions;
           var2 = var6;

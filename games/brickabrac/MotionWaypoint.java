@@ -23,7 +23,7 @@ final class MotionWaypoint extends MovingBody {
     }
 
     final static void c(int param0) {
-        if (!HotspotTextWidget.a(9)) {
+        if (!HotspotTextWidget.isFullscreenDialogOpen(9)) {
           return;
         }
         FullscreenDialogHelpers.buildFullscreenDialog(false, param0, (byte) 104);
@@ -58,7 +58,7 @@ final class MotionWaypoint extends MovingBody {
         }
     }
 
-    final static void d(int param0) {
+    final static void openLoginPanel(int param0) {
         String var2 = null;
         String var2Lifetime1;
         if (param0 < -45) {

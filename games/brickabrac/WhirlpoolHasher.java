@@ -16,12 +16,12 @@ final class WhirlpoolHasher {
     static BufferedSocket gameTransport;
     static SecondaryHashTable lobbyPlayerIndex;
 
-    final static void a(int param0) {
+    final static void closeTransientPopups(int param0) {
         ActivityIndicatorWidget.closeContextActions((byte) -45);
         if (param0 != 7) {
           gameTransport = (BufferedSocket) null;
         }
-        SecondaryNodeQueue.d(125);
+        SecondaryNodeQueue.clearNameEntryPopup(125);
         CircleBody.reportAbuseDialog = null;
         GamePresentationHelpers.closeQuickChatMenu(param0 - 8);
     }
@@ -44,7 +44,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static String c(byte param0) {
+    final static String describePacketHistory(byte param0) {
         int var2 = 0;
         String var1;
         int var3;
@@ -55,7 +55,7 @@ final class WhirlpoolHasher {
         String var8;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (param0 >= -58) {
-          WhirlpoolHasher.c((byte) -29);
+          WhirlpoolHasher.describePacketHistory((byte) -29);
         }
         var6 = "(" + TextFieldRenderer.thirdPreviousPacketOpcode + " " + ReflectionCheckHelpers.secondPreviousPacketOpcode + " " + UiComponent.previousPacketOpcode + ") " + IntrusiveHashTable.currentPacketOpcode;
         var1 = var6;

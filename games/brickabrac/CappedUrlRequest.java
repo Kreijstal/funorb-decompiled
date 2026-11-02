@@ -46,7 +46,7 @@ final class CappedUrlRequest implements Runnable {
         this.readTask = null;
     }
 
-    final static boolean a(boolean param0, int param1) {
+    final static boolean pollGameSocketConnection(boolean param0, int param1) {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
@@ -235,7 +235,7 @@ final class CappedUrlRequest implements Runnable {
         field_l = null;
         chocolateSpiresSprite = null;
         if (obfuscationGuard != -16637) {
-          CappedUrlRequest.a(true, 13);
+          CappedUrlRequest.pollGameSocketConnection(true, 13);
         }
     }
 

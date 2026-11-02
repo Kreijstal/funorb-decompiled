@@ -11,7 +11,7 @@ final class InputOptionsHelpers {
     static boolean field_a;
     static String field_h;
 
-    final static int a(boolean param0, int[] param1) {
+    final static int findLastNonZeroIndex(boolean param0, int[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -29,7 +29,7 @@ final class InputOptionsHelpers {
             if (var2_int < 0) {
               if (!param0) {
                 var4 = (int[]) null;
-                InputOptionsHelpers.a(true, (int[]) null);
+                InputOptionsHelpers.findLastNonZeroIndex(true, (int[]) null);
               }
               stackIn_12_0 = -1;
               return stackIn_12_0;

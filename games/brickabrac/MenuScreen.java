@@ -32,7 +32,7 @@ abstract class MenuScreen extends GameScreen {
         if (obfuscationGuard >= -14) {
           return;
         }
-        DelayedPacket.d(0);
+        DelayedPacket.paintScreenFrame(0);
     }
 
     final void initializeButtons(int[] actionIds, int startIndex) {
@@ -460,7 +460,7 @@ abstract class MenuScreen extends GameScreen {
                   if (null == GameplayRenderHelpers.fullscreenCanvas) {
                     WidgetLayerStack.a(inputFlag, 21543);
                   } else {
-                    LevelPack.b(82);
+                    LevelPack.closeFullscreenCanvas(82);
                   }
                 }
                 break regionExit1;
@@ -487,7 +487,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (13 == var8) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  ArchiveNetworkRequest.f((byte) 122);
+                  ArchiveNetworkRequest.leaveCurrentGame((byte) 122);
                 }
                 break regionExit1;
               }
@@ -572,7 +572,7 @@ abstract class MenuScreen extends GameScreen {
               }
             }
             if (this.selection.isActivated((byte) 113)) {
-              GameplayScreen.b((byte) -126, inputFlag);
+              GameplayScreen.startLocalTwoPlayerGame((byte) -126, inputFlag);
             }
           } else {
             if (this.selection.isActivated((byte) 113)) {

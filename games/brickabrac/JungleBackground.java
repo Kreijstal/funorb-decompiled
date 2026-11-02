@@ -462,7 +462,7 @@ final class JungleBackground extends BackgroundScene {
                   if (null != LoginMethodPreference.field_e &&
                     LoginMethodPreference.field_e[var7] != null &&
                     0 < (LoginMethodPreference.field_e[var7][var9] & ~CanvasResizeController.field_f)) {
-                    var15 = TextFieldRenderer.a((byte) -82, LoginMethodPreference.field_e[var7][var9] & ~CanvasResizeController.field_f);
+                    var15 = TextFieldRenderer.highestOneBit((byte) -82, LoginMethodPreference.field_e[var7][var9] & ~CanvasResizeController.field_f);
                     var14 = 1;
                   }
                   if (null != NodeDeque.field_a &&
@@ -936,8 +936,8 @@ final class JungleBackground extends BackgroundScene {
         DualLinkNode.jungleCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.backgroundSpriteArchive, "jungle_caps", 2);
         DualLinkIterator.jungleSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.backgroundSpriteArchive, "jungle_segs", 2);
         StatefulWidgetRenderer.jungleCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.backgroundSpriteArchive);
-        DualLinkNode.jungleCapsSprites[1] = Under13RegistrationNoticePanel.a(DualLinkNode.jungleCapsSprites[0], false);
-        DualLinkIterator.jungleSegsSprites[1] = Under13RegistrationNoticePanel.a(DualLinkIterator.jungleSegsSprites[0], obfuscationGuard);
+        DualLinkNode.jungleCapsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(DualLinkNode.jungleCapsSprites[0], false);
+        DualLinkIterator.jungleSegsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(DualLinkIterator.jungleSegsSprites[0], obfuscationGuard);
         StatefulWidgetRenderer.jungleCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, StatefulWidgetRenderer.jungleCentreSprites[0]);
         return true;
     }

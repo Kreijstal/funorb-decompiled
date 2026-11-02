@@ -103,7 +103,7 @@ final class MeshLobbyUiHelpers {
         ninjaSmallSprite = null;
     }
 
-    final static void b(int param0) {
+    final static void resetFrameTimingHistory(int param0) {
         int var1_int = 0;
         int var2 = BrickABrac.field_J ? 1 : 0;
         int var1_intLifetime1;
@@ -229,16 +229,16 @@ final class MeshLobbyUiHelpers {
           var10.verticalAlignment = 1;
           var11.horizontalAlignment = 1;
           ValidationStatus.field_j = new UiComponent(0L, var8);
-          ValidationStatus.field_j.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "heading", 2), (byte) -117);
+          ValidationStatus.field_j.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "heading", 2), (byte) -117);
           AccountMessageDialog.field_Ab = new UiComponent(0L, (UiComponent) null);
           AccountMessageDialog.field_Ab.frameSprites = TimedSplashScreen.a(false, (byte) 83, 8421504, 120, 4210752, false);
           TableResponseHelpers.field_a = new UiComponent(0L, (UiComponent) null);
           TableResponseHelpers.field_a.frameSprites = DateFieldsWidget.createGradientNineSliceSprites(false, 6316128, 3, 6316128, 114, 1);
           GameUiController.field_c = new UiComponent(0L, (UiComponent) null);
-          GameUiController.field_c.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "popup", 2), (byte) -114);
-          var12 = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "popup_mouseover", 2), (byte) -117);
+          GameUiController.field_c.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "popup", 2), (byte) -114);
+          var12 = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "popup_mouseover", 2), (byte) -117);
           var13 = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "button", 2);
-          var14 = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "tab_active", 2), (byte) -110);
+          var14 = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "tab_active", 2), (byte) -110);
           GameConnectionHelpers.field_c = new UiComponent(0L, var8);
           GameConnectionHelpers.field_c.frameSprites = var14;
           ReportAbuseDialog.field_Zb = new UiComponent(0L, (UiComponent) null);
@@ -295,8 +295,8 @@ final class MeshLobbyUiHelpers {
           ArcticBackground.field_s.horizontalAlignment = 1;
           WidgetTheme.field_n = new UiComponent(0L, DualLinkNode.field_t);
           WidgetTheme.field_n.horizontalAlignment = 1;
-          WidgetTheme.field_n.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "tab_inactive", 2), (byte) -119);
-          WidgetTheme.field_n.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "tab_mouseover", 2), (byte) -124);
+          WidgetTheme.field_n.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "tab_inactive", 2), (byte) -119);
+          WidgetTheme.field_n.activeFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "tab_mouseover", 2), (byte) -124);
           WidgetTheme.field_n.selectedFrameSprites = var14;
           InvitationDialogHelpers.field_c = new UiComponent(0L, (UiComponent) null);
           InvitationDialogHelpers.field_c.frameSprites = DateFieldsWidget.createGradientNineSliceSprites(false, 1127256, 3, 1856141, 206, -1);
@@ -321,43 +321,43 @@ final class MeshLobbyUiHelpers {
           GzipInflater.field_d = new UiComponent(0L, MessageScreen.field_r);
           OptionsScreen.field_u = new UiComponent(0L, MessageScreen.field_r);
           AchievementMaskRequest.field_n = new UiComponent(0L, MessageScreen.field_r);
-          MessageScreen.field_r.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "smallbutton", 2), (byte) -119);
-          MessageScreen.field_r.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "smallbutton_mouseover", 2), (byte) -114);
-          dupTemp$0 = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "smallbutton_active", 2), (byte) -102);
+          MessageScreen.field_r.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "smallbutton", 2), (byte) -119);
+          MessageScreen.field_r.activeFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "smallbutton_mouseover", 2), (byte) -114);
+          dupTemp$0 = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "smallbutton_active", 2), (byte) -102);
           MessageScreen.field_r.selectedFrameSprites = dupTemp$0;
           MessageScreen.field_r.capturedFrameSprites = dupTemp$0;
-          MessageScreen.field_r.disabledFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "smallbutton_disabled", 2), (byte) -120);
-          GameUiController.field_b.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "mediumbutton", 2), (byte) -102);
-          GameUiController.field_b.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseover", 2), (byte) -105);
-          GameUiController.field_b.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseheld", 2), (byte) -123);
-          LobbyKeyboardGlobals.field_b.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton", 2), (byte) -114);
-          LobbyKeyboardGlobals.field_b.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseover", 2), (byte) -120);
-          LobbyKeyboardGlobals.field_b.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseheld", 2), (byte) -114);
-          LobbyKeyboardGlobals.field_b.disabledFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_disabled", 2), (byte) -106);
-          ClientViewHelpers.field_d.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton", 2), (byte) -127);
-          ClientViewHelpers.field_d.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseover", 2), (byte) -126);
-          ClientViewHelpers.field_d.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseheld", 2), (byte) -119);
-          MotionWaypoint.field_s.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "redbutton", 2), (byte) -105);
-          MotionWaypoint.field_s.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "redbutton_mouseover", 2), (byte) -106);
-          MotionWaypoint.field_s.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "redbutton_mouseheld", 2), (byte) -121);
-          MatchCompleteScreen.field_x.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "backbutton", 2), (byte) -127);
-          MatchCompleteScreen.field_x.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "backbutton_mouseover", 2), (byte) -103);
-          MatchCompleteScreen.field_x.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "backbutton_mouseheld", 2), (byte) -122);
-          MatchCompleteScreen.field_x.disabledFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "backbutton_disabled", 2), (byte) -107);
-          AchievementMaskRequest.field_n.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "gameoptionbutton", 2), (byte) -115);
-          AchievementMaskRequest.field_n.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_mouseover", 2), (byte) -114);
-          dupTemp$1 = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_active", 2), (byte) -112);
+          MessageScreen.field_r.disabledFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "smallbutton_disabled", 2), (byte) -120);
+          GameUiController.field_b.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "mediumbutton", 2), (byte) -102);
+          GameUiController.field_b.activeFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseover", 2), (byte) -105);
+          GameUiController.field_b.capturedFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseheld", 2), (byte) -123);
+          LobbyKeyboardGlobals.field_b.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton", 2), (byte) -114);
+          LobbyKeyboardGlobals.field_b.activeFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseover", 2), (byte) -120);
+          LobbyKeyboardGlobals.field_b.capturedFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseheld", 2), (byte) -114);
+          LobbyKeyboardGlobals.field_b.disabledFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_disabled", 2), (byte) -106);
+          ClientViewHelpers.field_d.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton", 2), (byte) -127);
+          ClientViewHelpers.field_d.activeFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseover", 2), (byte) -126);
+          ClientViewHelpers.field_d.capturedFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseheld", 2), (byte) -119);
+          MotionWaypoint.field_s.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "redbutton", 2), (byte) -105);
+          MotionWaypoint.field_s.activeFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "redbutton_mouseover", 2), (byte) -106);
+          MotionWaypoint.field_s.capturedFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "redbutton_mouseheld", 2), (byte) -121);
+          MatchCompleteScreen.field_x.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "backbutton", 2), (byte) -127);
+          MatchCompleteScreen.field_x.activeFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "backbutton_mouseover", 2), (byte) -103);
+          MatchCompleteScreen.field_x.capturedFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "backbutton_mouseheld", 2), (byte) -122);
+          MatchCompleteScreen.field_x.disabledFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "backbutton_disabled", 2), (byte) -107);
+          AchievementMaskRequest.field_n.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "gameoptionbutton", 2), (byte) -115);
+          AchievementMaskRequest.field_n.activeFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_mouseover", 2), (byte) -114);
+          dupTemp$1 = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_active", 2), (byte) -112);
           AchievementMaskRequest.field_n.selectedFrameSprites = dupTemp$1;
           AchievementMaskRequest.field_n.capturedFrameSprites = dupTemp$1;
-          AchievementMaskRequest.field_n.disabledFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_disabled", 2), (byte) -116);
-          GzipInflater.field_d.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatbutton", 2), (byte) -103);
-          GzipInflater.field_d.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatbutton_mouseover", 2), (byte) -113);
-          dupTemp$2 = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatbutton_active", 2), (byte) -125);
+          AchievementMaskRequest.field_n.disabledFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_disabled", 2), (byte) -116);
+          GzipInflater.field_d.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatbutton", 2), (byte) -103);
+          GzipInflater.field_d.activeFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatbutton_mouseover", 2), (byte) -113);
+          dupTemp$2 = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatbutton_active", 2), (byte) -125);
           GzipInflater.field_d.selectedFrameSprites = dupTemp$2;
           GzipInflater.field_d.capturedFrameSprites = dupTemp$2;
-          OptionsScreen.field_u.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatfilterbutton", 2), (byte) -119);
-          OptionsScreen.field_u.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_mouseover", 2), (byte) -106);
-          dupTemp$3 = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_active", 2), (byte) -105);
+          OptionsScreen.field_u.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatfilterbutton", 2), (byte) -119);
+          OptionsScreen.field_u.activeFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_mouseover", 2), (byte) -106);
+          dupTemp$3 = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_active", 2), (byte) -105);
           OptionsScreen.field_u.selectedFrameSprites = dupTemp$3;
           OptionsScreen.field_u.capturedFrameSprites = dupTemp$3;
           var17 = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "checkbox", 2);
@@ -368,10 +368,10 @@ final class MeshLobbyUiHelpers {
           QuickChatHelpDialog.field_Vb.capturedFrameSprites = HighscorePackSelector.createCenterOnlySpriteGrid(SpriteInputHelpers.loadRgbSpriteByName("lobby", "slideregion_mouseheld", (byte) 118, param3), -86);
           QuickChatHelpDialog.field_Vb.disabledFrameSprites = HighscorePackSelector.createCenterOnlySpriteGrid(SpriteInputHelpers.loadRgbSpriteByName("lobby", "slideregion_disabled", (byte) -47, param3), -39);
           RankingsScreen.field_s = new UiComponent(0L, (UiComponent) null);
-          RankingsScreen.field_s.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "dragbar", 2), (byte) -102);
-          RankingsScreen.field_s.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "dragbar_mouseover", 2), (byte) -119);
-          RankingsScreen.field_s.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "dragbar_mouseheld", 2), (byte) -120);
-          RankingsScreen.field_s.disabledFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "dragbar_disabled", 2), (byte) -123);
+          RankingsScreen.field_s.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "dragbar", 2), (byte) -102);
+          RankingsScreen.field_s.activeFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "dragbar_mouseover", 2), (byte) -119);
+          RankingsScreen.field_s.capturedFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "dragbar_mouseheld", 2), (byte) -120);
+          RankingsScreen.field_s.disabledFrameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "dragbar_disabled", 2), (byte) -123);
           ChocolateBackground.field_u = new UiComponent(0L, (UiComponent) null);
           ChocolateBackground.field_u.sprite = SpriteInputHelpers.loadRgbSpriteByName("lobby", "upbutton", (byte) -90, param3);
           ChocolateBackground.field_u.activeSprite = SpriteInputHelpers.loadRgbSpriteByName("lobby", "upbutton_mouseover", (byte) -125, param3);
@@ -421,7 +421,7 @@ final class MeshLobbyUiHelpers {
         ScreenNavigationHelpers.pollQuickChatHelpDialog((byte) -86, inputEnabled);
         QuickChatPopupHelpers.updateQuickChatMenu(inputEnabled, filterOpcode, (byte) 94, messageOpcode);
         if (obfuscationGuard != -7812) {
-          MeshLobbyUiHelpers.b(4);
+          MeshLobbyUiHelpers.resetFrameTimingHistory(4);
         }
     }
 

@@ -103,7 +103,7 @@ final class SocialListResponseHelpers {
               FriendListUi.applyChatFilters(2, serverStateWord);
               return;
             }
-            AlignedIconLabel.a("F1: " + WhirlpoolHasher.c((byte) -104), (Throwable) null, 58);
+            AlignedIconLabel.a("F1: " + WhirlpoolHasher.describePacketHistory((byte) -104), (Throwable) null, 58);
             GameTransportHelpers.closeGameTransport((byte) 98);
             if (obfuscationGuard < 52) {
               SocialListResponseHelpers.handleSocialListResponse((byte) -91);

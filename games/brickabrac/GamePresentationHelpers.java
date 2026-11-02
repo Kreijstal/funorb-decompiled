@@ -14,7 +14,7 @@ final class GamePresentationHelpers {
           InvitationDialogHelpers.quickChatMenu.resetSelection((byte) 41);
         }
         if (obfuscationGuard != ~ScreenNavigationHelpers.quickChatChannel) {
-          UsernameAvailabilityValidator.b(true);
+          UsernameAvailabilityValidator.resetQuickChatInput(true);
         }
         HighscoresScreen.quickChatScrollX = 0;
     }

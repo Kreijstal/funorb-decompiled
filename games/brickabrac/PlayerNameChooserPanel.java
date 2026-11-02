@@ -14,7 +14,7 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
     UsernameSuggestionPanel suggestionPanel;
     static int pressY;
 
-    private final int a(int param0, String param1, Widget param2, String param3, int param4, int param5) {
+    private final int addLabeledFieldWithDefaultMessageWidth(int param0, String param1, Widget param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -28,7 +28,7 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -10) {
-            stackIn_4_0 = this.a(param1, param5, param4, param2, 35, param3, false);
+            stackIn_4_0 = this.addLabeledFieldWithMessage(param1, param5, param4, param2, 35, param3, false);
             return stackIn_4_0;
           }
           stackIn_2_0 = 82;
@@ -137,7 +137,7 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
         }
     }
 
-    private final int a(String param0, int param1, int param2, Widget param3, int param4, String param5, boolean param6) {
+    private final int addLabeledFieldWithMessage(String param0, int param1, int param2, Widget param3, int param4, String param5, boolean param6) {
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
         LabeledWidget var10 = null;
@@ -210,7 +210,7 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
         RuntimeException var6 = null;
         try {
           if (widget == this.cancelButton) {
-            MotionWaypoint.d(-101);
+            MotionWaypoint.openLoginPanel(-101);
           } else {
             if (widget == this.submitButton) {
               this.submitPlayerName(28462);
@@ -308,7 +308,7 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
         var2.setBounds(50, 20, var3, (byte) -119, 270);
         var3 += 50;
         this.addChild(var2, true);
-        var3 = var3 + (this.a(-14, BlankScreen.field_j, this.usernameField, GameClock.field_h, var3, 170) + 5);
+        var3 = var3 + (this.addLabeledFieldWithDefaultMessageWidth(-14, BlankScreen.field_j, this.usernameField, GameClock.field_h, var3, 170) + 5);
         this.submitButton.setBounds(40, 496 - var5 >> 1, var3, (byte) -119, var5);
         this.cancelButton.setBounds(40, var4 + 3, var3 + 15, (byte) -119, 60);
         this.cancelButton.listener = (WidgetListener) (this);

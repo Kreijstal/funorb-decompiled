@@ -443,11 +443,11 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         return var2;
     }
 
-    final static boolean a(int param0, int param1, int param2, byte param3, int param4, boolean param5, int param6) {
+    final static boolean dispatchPopupInput(int param0, int param1, int param2, byte param3, int param4, boolean param5, int param6) {
         if (param3 > -122) {
           return true;
         }
-        if (DualLinkDeque.a(-4858)) {
+        if (DualLinkDeque.isPopupOpen(-4858)) {
           MeshLobbyUiHelpers.updateQuickChatInterface(param5, -7812, param4, param1);
           if (GameRenderAudioHelpers.contextActions != null &&
             GameRenderAudioHelpers.contextActions.pollAndDispatchAction(-2, param1, param6, param0, param5)) {
@@ -624,7 +624,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         }
     }
 
-    final static void g(byte param0) {
+    final static void buildMainScreenRoots(byte param0) {
         RectangleBody.field_q = new UiComponent(0L, (UiComponent) null);
         if (param0 != -24) {
           return;
@@ -637,7 +637,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         ContentTransitionLayer.field_gb = new UiComponent(0L, (UiComponent) null);
         ContentTransitionLayer.field_gb.addChild(CanvasInputHelpers.field_b.tabs, 0);
         ContentTransitionLayer.field_gb.addChild(HighscorePackSelector.field_k, 0);
-        NanoGameClock.b(param0 + 44);
+        NanoGameClock.layoutMainScreenWidgets(param0 + 44);
     }
 
     static {

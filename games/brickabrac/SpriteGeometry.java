@@ -20,17 +20,17 @@ abstract class SpriteGeometry extends DualLinkNode {
         field_u = null;
         if (obfuscationGuard != 2) {
           String var2 = (String) null;
-          SpriteGeometry.a(9, (UiComponent) null, (ScrollPane) null, (int[]) null, (String) null, 53, (byte) -45, 67L, (String) null);
+          SpriteGeometry.createContextActions(9, (UiComponent) null, (ScrollPane) null, (int[]) null, (String) null, 53, (byte) -45, 67L, (String) null);
         }
         field_w = null;
     }
 
-    final static void a(int param0, int param1, LobbyPlayer param2, ScrollPane param3, byte param4, int param5, int param6) {
+    final static void openPlayerContextMenu(int param0, int param1, LobbyPlayer param2, ScrollPane param3, byte param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        SpriteGeometry.a(-1, param2, param3, (int[]) null, param2.accountName, -1, (byte) -58, param2.playerId, param2.displayName);
+        SpriteGeometry.createContextActions(-1, param2, param3, (int[]) null, param2.accountName, -1, (byte) -58, param2.playerId, param2.displayName);
         GameRenderAudioHelpers.contextActions.addPlayerGameActions(true, true);
         GameRenderAudioHelpers.contextActions.addSocialActions((int[]) null, (byte) -120, 0);
         GameRenderAudioHelpers.contextActions.addReportAction((byte) -93);
@@ -93,7 +93,7 @@ abstract class SpriteGeometry extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, UiComponent param1, ScrollPane param2, int[] param3, String param4, int param5, byte param6, long param7, String param8) {
+    final static void createContextActions(int param0, UiComponent param1, ScrollPane param2, int[] param3, String param4, int param5, byte param6, long param7, String param8) {
         try {
           ClientResourceHelpers.field_b = param2;
           if (param6 != -58) {

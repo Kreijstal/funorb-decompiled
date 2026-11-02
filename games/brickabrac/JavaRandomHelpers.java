@@ -11,7 +11,7 @@ final class JavaRandomHelpers {
     public static void clearSharedReferences(int obfuscationGuard) {
         field_b = null;
         if (obfuscationGuard < 64) {
-          JavaRandomHelpers.a((byte) 28);
+          JavaRandomHelpers.trackFramebufferHeightChange((byte) 28);
           achievementIconPool = null;
           field_c = null;
           return;
@@ -79,7 +79,7 @@ final class JavaRandomHelpers {
         }
     }
 
-    final static void a(byte param0) {
+    final static void trackFramebufferHeightChange(byte param0) {
         RasterCacheSurface var2;
         if (param0 >= 23) {
           if (MeshLobbyUiHelpers.field_f > 0) {
@@ -90,7 +90,7 @@ final class JavaRandomHelpers {
             StrongCacheEntry.field_O = BallPulseEffect.framebuffer.height;
           }
           if (MeshLobbyUiHelpers.field_f > 0) {
-            ProxyAuthenticationRequiredException.a(-83);
+            ProxyAuthenticationRequiredException.animateLobbyOverlayBounds(-83);
           }
           return;
         }
@@ -104,7 +104,7 @@ final class JavaRandomHelpers {
           StrongCacheEntry.field_O = BallPulseEffect.framebuffer.height;
         }
         if (MeshLobbyUiHelpers.field_f > 0) {
-          ProxyAuthenticationRequiredException.a(-83);
+          ProxyAuthenticationRequiredException.animateLobbyOverlayBounds(-83);
         }
         return;
     }

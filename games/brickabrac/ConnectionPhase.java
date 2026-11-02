@@ -72,7 +72,7 @@ final class ConnectionPhase {
         }
     }
 
-    final static void a(int param0) {
+    final static void storeIncomingPacketBlock(int param0) {
         try {
           if (ResourceArchiveFactory.field_a != null) {
             try {

@@ -74,7 +74,7 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
             suggestionCount = suggestions.length;
             this.suggestions = new String[suggestionCount];
             for (suggestionIndex = 0; suggestionCount > suggestionIndex; suggestionIndex++) {
-              this.suggestions[suggestionIndex] = CanvasInputHelpers.a(true, (CharSequence) ((Object) suggestions[suggestionIndex])).replace(' ', ' ');
+              this.suggestions[suggestionIndex] = CanvasInputHelpers.normalizeBase37Name(true, (CharSequence) ((Object) suggestions[suggestionIndex])).replace(' ', ' ');
             }
             rowRenderer = new LinkWidgetRenderer(ArchiveNetworkClient.field_u, 0, 1);
             this.buttons = new FocusableWidget[suggestionCount + 1];
@@ -112,8 +112,8 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
         if (param0 > -41) {
           return;
         }
-        JavaRandomHelpers.a((byte) 96);
-        ArchiveIndex.a(-32120);
+        JavaRandomHelpers.trackFramebufferHeightChange((byte) 96);
+        ArchiveIndex.tickLobbyTransitions(-32120);
     }
 
     final boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {

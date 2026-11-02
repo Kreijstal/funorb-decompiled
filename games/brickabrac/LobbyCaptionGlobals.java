@@ -29,7 +29,7 @@ final class LobbyCaptionGlobals {
     }
 
     final static void b(int param0) {
-        TooltipSprite.e(40);
+        TooltipSprite.shutdownAudioPlayers(40);
         if (param0 != 18) {
           LobbyCaptionGlobals.clearSharedReferences(81);
         }

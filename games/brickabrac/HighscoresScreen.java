@@ -117,7 +117,7 @@ final class HighscoresScreen extends MenuScreen {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, String param7) {
+    private final void drawRankingRow(int param0, int param1, int param2, int param3, int param4, int param5, int param6, String param7) {
         try {
           if (param0 != -1) {
             PasswordFieldRenderer.field_D.drawRight(param0 + 1 + ". ", SecondaryNodeQueue.field_b[0], param2, param3, -1);
@@ -695,7 +695,7 @@ final class HighscoresScreen extends MenuScreen {
                   Rasterizer2D.fillRectangleAlpha(125, var2Lifetime1 - 15, 465, 18, 16777215, 16);
                 }
                 var4_ref = "";
-                this.a(var8, var10, var2Lifetime1, var3Lifetime1, var11, 105, var9, var5[var8]);
+                this.drawRankingRow(var8, var10, var2Lifetime1, var3Lifetime1, var11, 105, var9, var5[var8]);
               }
               var2Lifetime1 += 18;
             }
@@ -705,7 +705,7 @@ final class HighscoresScreen extends MenuScreen {
               var8Lifetime1 = var16[0];
               var9Lifetime1 = var16[1] >> 16 & 65535;
               var10Lifetime1 = 65535 & var16[1];
-              this.a(-1, var9Lifetime1, var2Lifetime1, 1, var10Lifetime1, 63, var8Lifetime1, LoadingProgressDialog.field_cb);
+              this.drawRankingRow(-1, var9Lifetime1, var2Lifetime1, 1, var10Lifetime1, 63, var8Lifetime1, LoadingProgressDialog.field_cb);
             }
           }
         } else {

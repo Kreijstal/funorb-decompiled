@@ -67,8 +67,8 @@ final class DesertBackground extends BackgroundScene {
           GzipInflater.desertCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.backgroundSpriteArchive, "desert_caps", 2);
           TableNameEntry.desertSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.backgroundSpriteArchive, "desert_segs", 2);
           TextWidgetRenderer.desertCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_centre", (byte) 110, AchievementIcon.backgroundSpriteArchive);
-          GzipInflater.desertCapsSprites[1] = Under13RegistrationNoticePanel.a(GzipInflater.desertCapsSprites[0], obfuscationGuard);
-          TableNameEntry.desertSegsSprites[1] = Under13RegistrationNoticePanel.a(TableNameEntry.desertSegsSprites[0], false);
+          GzipInflater.desertCapsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(GzipInflater.desertCapsSprites[0], obfuscationGuard);
+          TableNameEntry.desertSegsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(TableNameEntry.desertSegsSprites[0], false);
           TextWidgetRenderer.desertCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, TextWidgetRenderer.desertCentreSprites[0]);
           return true;
         }

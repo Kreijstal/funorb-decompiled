@@ -83,7 +83,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         }
     }
 
-    private final void g(byte param0) {
+    private final void sendOpcodeSixControlPacket(byte param0) {
         try {
           IOException iOException = null;
           int var2 = 0;
@@ -464,8 +464,8 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
               this.transport = null;
             }
             this.transport = (BufferedSocket) (transport);
-            this.g((byte) 116);
-            this.a(connectionMode, false);
+            this.sendOpcodeSixControlPacket((byte) 116);
+            this.sendStateControlPacket(connectionMode, false);
             if (obfuscationGuard != 12) {
               this.reportIntegrityFailure((byte) -71);
             }
@@ -535,11 +535,11 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
           this.transport.close((byte) 111);
         }
         if (obfuscationGuard != 30) {
-          this.g((byte) -72);
+          this.sendOpcodeSixControlPacket((byte) -72);
         }
     }
 
-    private final void a(boolean param0, boolean param1) {
+    private final void sendStateControlPacket(boolean param0, boolean param1) {
         try {
           IOException iOException = null;
           PacketBuffer stackIn_6_0 = null;

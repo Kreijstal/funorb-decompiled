@@ -259,7 +259,7 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
             AccountIntroductionPanel.a((PacketBuffer) null, (byte) -62);
           }
           if (this.backButton == widget) {
-            MotionWaypoint.d(-117);
+            MotionWaypoint.openLoginPanel(-117);
           } else {
             if (this.createAccountButton == widget) {
               Mesh3D.showAccountRegistrationPanel(-1);

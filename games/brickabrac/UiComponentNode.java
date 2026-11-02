@@ -14,7 +14,7 @@ class UiComponentNode extends DualLinkNode {
     UiComponentNode() {
     }
 
-    final static IndexedSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static IndexedSprite[] loadIndexedSprites(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         IndexedSprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -50,13 +50,13 @@ class UiComponentNode extends DualLinkNode {
 
     final static int getTextChoiceContentHeight(boolean obfuscationGuard) {
         if (!obfuscationGuard) {
-          UiComponentNode.f(-108);
+          UiComponentNode.consumeIntArrayReply(-108);
           return ReflectionCheck.textChoiceContentHeight;
         }
         return ReflectionCheck.textChoiceContentHeight;
     }
 
-    final static void f(int param0) {
+    final static void consumeIntArrayReply(int param0) {
         IntArrayRequestHelpers var1 = (IntArrayRequestHelpers) (SoundCache.field_f.first(-39));
         if (var1 == null) {
           GameTransportHelpers.closeGameTransport((byte) 106);

@@ -148,7 +148,7 @@ final class HuffmanCodec {
           InvitationDialogHelpers.quickChatMenu = menu;
           if (obfuscationGuard != 105) {
             String unusedCookieValue = (String) null;
-            HuffmanCodec.a((byte) 84, (java.applet.Applet) null, (String) null, false);
+            HuffmanCodec.openUrlInNewWindow((byte) 84, (java.applet.Applet) null, (String) null, false);
           }
           QuickChatPhraseDefinition.quickChatMenuRoot.children.clear((byte) -72);
           QuickChatPhraseDefinition.quickChatMenuRoot.addChild(InvitationDialogHelpers.quickChatMenu, 0);
@@ -499,7 +499,7 @@ final class HuffmanCodec {
         }
     }
 
-    final static void a(byte param0, java.applet.Applet param1, String param2, boolean param3) {
+    final static void openUrlInNewWindow(byte param0, java.applet.Applet param1, String param2, boolean param3) {
         try {
           int var4_int = 0;
           RuntimeException stackIn_10_0 = null;

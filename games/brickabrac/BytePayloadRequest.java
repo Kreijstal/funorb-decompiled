@@ -112,7 +112,7 @@ final class BytePayloadRequest extends IntrusiveNode {
             if (param3) {
               return;
             }
-            IterableIntrusiveHashTable.a(25459, param6, param5, param4, param0, param1);
+            IterableIntrusiveHashTable.scheduleMusicTrack(25459, param6, param5, param4, param0, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

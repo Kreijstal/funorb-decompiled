@@ -407,7 +407,7 @@ final class InstructionsScreen extends MenuScreen {
         return this.buttonTop;
     }
 
-    final static void a(String[] args, boolean param1) {
+    final static void setUsernameSuggestions(String[] args, boolean param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

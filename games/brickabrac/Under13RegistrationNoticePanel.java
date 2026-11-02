@@ -175,7 +175,7 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
         field_K = null;
     }
 
-    final static RgbSprite[] a(RgbSprite[] param0, boolean param1) {
+    final static RgbSprite[] createHalfSizeSprites(RgbSprite[] param0, boolean param1) {
         int var3 = 0;
         RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;

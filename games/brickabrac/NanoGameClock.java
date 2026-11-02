@@ -39,10 +39,10 @@ final class NanoGameClock extends GameClock {
         return cycles;
     }
 
-    final static void b(int param0) {
+    final static void layoutMainScreenWidgets(int param0) {
         IsaacGenerator.field_i = Rasterizer2D.height;
         LevelResultWireHelpers.field_a = Rasterizer2D.width;
-        Brick.e(-67);
+        Brick.layoutLobbySlidePanels(-67);
         CanvasInputHelpers.field_b.setBounds(ContentTransitionLayer.field_gb.width, 0, 80, 0, ContentTransitionLayer.field_gb.height - 40 - 2);
         DraggableWidget.field_N.setBounds(WidgetLayerBootstrap.uiRowHeight, 0, 0, RectangleBody.field_q.width, (byte) 64);
         if (param0 <= 16) {

@@ -172,7 +172,7 @@ final class MusicEnvelope {
               }
             }
             if (entry.pressedButton != 0) {
-              SpriteGeometry.a(-1, entry, TableResponseHelpers.ignoreListPane.scrollPane, (int[]) null, entry.actionName, -1, (byte) -58, 0L, entry.name);
+              SpriteGeometry.createContextActions(-1, entry, TableResponseHelpers.ignoreListPane.scrollPane, (int[]) null, entry.actionName, -1, (byte) -58, 0L, entry.name);
               contextForRemove = GameRenderAudioHelpers.contextActions;
               removeIgnoreCaption = ScreenNavigationHelpers.field_e;
               contextForRemove.contextMenu.addAction(removeIgnoreCaption, 7, (byte) 126);
@@ -304,7 +304,7 @@ final class MusicEnvelope {
             GameTransportHelpers.closeGameTransport((byte) 110);
             return;
           }
-          AlignedIconLabel.a("LR1: " + WhirlpoolHasher.c((byte) -96), (Throwable) null, 53);
+          AlignedIconLabel.a("LR1: " + WhirlpoolHasher.describePacketHistory((byte) -96), (Throwable) null, 53);
           GameTransportHelpers.closeGameTransport((byte) 52);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -129,7 +129,7 @@ final class MusicPatch extends IntrusiveNode {
                 } else {
                   if (TextLineLayout.field_b < ScrollPaneWithFooter.field_Yb) {
                     if (TextLineLayout.field_b == 0) {
-                      SingleChildWidget.g((byte) -24);
+                      SingleChildWidget.buildMainScreenRoots((byte) -24);
                     }
                     TextLineLayout.field_b = TextLineLayout.field_b + 1;
                   }

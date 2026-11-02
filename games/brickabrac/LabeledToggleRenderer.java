@@ -75,7 +75,7 @@ final class LabeledToggleRenderer implements WidgetRenderer {
         }
     }
 
-    final static void b(int param0) {
+    final static void updateUnreadMessageNotice(int param0) {
         int var1;
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;

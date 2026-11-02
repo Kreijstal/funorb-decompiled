@@ -70,7 +70,7 @@ final class AchievementSubmission extends IntrusiveNode {
           labels = new String[itemCount];
           if (obfuscationGuard != 4) {
             unusedArchive = (ResourceArchive) null;
-            AchievementSubmission.a((ResourceArchive) null, 30);
+            AchievementSubmission.loadFinalFrameImage((ResourceArchive) null, 30);
           }
           newShortcuts = new char[itemCount];
           shortcutsAlias = newShortcuts;
@@ -169,7 +169,7 @@ final class AchievementSubmission extends IntrusiveNode {
         field_q = null;
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadFinalFrameImage(ResourceArchive param0, int param1) {
         RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;

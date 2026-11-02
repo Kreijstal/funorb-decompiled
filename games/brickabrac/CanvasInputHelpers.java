@@ -17,7 +17,7 @@ final class CanvasInputHelpers {
         }
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String normalizeBase37Name(boolean param0, CharSequence param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_8_0 = null;
@@ -49,7 +49,7 @@ final class CanvasInputHelpers {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int approximateLogarithm(int param0, int param1) {
         int var2;
         var2 = -102 / ((-11 - param1) / 37);
         if ((long)param0 < 65536L) {
@@ -114,7 +114,7 @@ final class CanvasInputHelpers {
         RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != 117) {
-            CanvasInputHelpers.a(32, 14);
+            CanvasInputHelpers.approximateLogarithm(32, 14);
           }
           InstructionsScreen.attachKeyboardInput(-118, (java.awt.Component) ((Object) canvas));
           SpriteInputHelpers.attachMouseInput((java.awt.Component) ((Object) canvas), 7282);

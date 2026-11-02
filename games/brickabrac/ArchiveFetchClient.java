@@ -181,10 +181,10 @@ abstract class ArchiveFetchClient {
     final static void a(byte param0, boolean param1) {
         if (param0 > -16) {
           ArchiveFetchClient.clearSharedReferences(-18);
-          RankingsScreen.a(param1, -58, true);
+          RankingsScreen.drawOverlayBackdrop(param1, -58, true);
           return;
         }
-        RankingsScreen.a(param1, -58, true);
+        RankingsScreen.drawOverlayBackdrop(param1, -58, true);
     }
 
     ArchiveFetchClient() {

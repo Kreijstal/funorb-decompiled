@@ -232,7 +232,7 @@ final class SoundCache {
           var9 = BrickABrac.field_J ? 1 : 0;
           try {
             if (WhirlpoolHasher.gameTransport == null &&
-              !CappedUrlRequest.a(param1, 10000)) {
+              !CappedUrlRequest.pollGameSocketConnection(param1, 10000)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
@@ -304,7 +304,7 @@ final class SoundCache {
               var11 = LogoRenderHelpers.incomingPackets.readNullableCp1252String(0);
               var7 = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
-                ConnectionPhase.a(-1);
+                ConnectionPhase.storeIncomingPacketBlock(-1);
               }
               if (!param1) {
                 stackIn_41_0 = ((var7 & 2) != 0);

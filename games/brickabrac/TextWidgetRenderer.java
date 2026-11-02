@@ -526,7 +526,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
             field_p = (RgbSprite) null;
           }
           var5 = param3.getFileId(var4_int, param2 - 1593955846, param1);
-          stackIn_3_0 = TextLineLayout.a(param3, var4_int, var5, 1);
+          stackIn_3_0 = TextLineLayout.loadRgbSprite(param3, var4_int, var5, 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

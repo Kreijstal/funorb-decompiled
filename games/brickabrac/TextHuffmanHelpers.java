@@ -12,7 +12,7 @@ final class TextHuffmanHelpers {
         }
     }
 
-    final static void a(byte param0, PcmStream param1) {
+    final static void removeSoundStream(byte param0, PcmStream param1) {
         if (param0 != 80) {
           return;
         }

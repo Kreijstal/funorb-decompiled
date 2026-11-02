@@ -53,7 +53,7 @@ final class LevelPack {
         field_f = null;
     }
 
-    final static void b(int param0) {
+    final static void closeFullscreenCanvas(int param0) {
         if (null == GameplayRenderHelpers.fullscreenCanvas) {
           return;
         }
@@ -89,7 +89,7 @@ final class LevelPack {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 0) {
-            LevelPack.b(-40);
+            LevelPack.closeFullscreenCanvas(-40);
           }
           stackIn_5_0 = (RadialSelectorRenderer.findFriend(false, name) != null);
           return stackIn_5_0;

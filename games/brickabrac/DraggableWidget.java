@@ -124,7 +124,7 @@ final class DraggableWidget extends SingleChildWidget {
         super.layoutChild((byte) -39);
         this.child.setBounds(this.height, 0, 0, (byte) -119, this.width);
         if (obfuscationGuard > -7) {
-          DraggableWidget.g(1);
+          DraggableWidget.getSharedTextWidgetRenderer(1);
         }
         this.originX = this.x;
         this.originY = this.y;
@@ -222,13 +222,13 @@ final class DraggableWidget extends SingleChildWidget {
     public static void clearSharedReferences(int obfuscationGuard) {
         field_J = null;
         if (obfuscationGuard != 1) {
-          DraggableWidget.g(-43);
+          DraggableWidget.getSharedTextWidgetRenderer(-43);
         }
         field_N = null;
         field_K = null;
     }
 
-    final static TextWidgetRenderer g(int param0) {
+    final static TextWidgetRenderer getSharedTextWidgetRenderer(int param0) {
         if (param0 != -23009) {
           field_J = (String) null;
         }

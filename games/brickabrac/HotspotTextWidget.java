@@ -192,7 +192,7 @@ class HotspotTextWidget extends FocusableWidget {
         field_M = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean isFullscreenDialogOpen(int param0) {
         if (param0 != 9) {
           fireworkSpawnMaxX = -88;
         }
@@ -210,7 +210,7 @@ class HotspotTextWidget extends FocusableWidget {
           if (param2 != -1) {
             fireworkSpawnMaxX = -26;
           }
-          stackIn_3_0 = OptionsScreen.a(2, param0, param1, false);
+          stackIn_3_0 = OptionsScreen.renderScaledTextSprite(2, param0, param1, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

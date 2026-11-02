@@ -46,7 +46,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
         }
     }
 
-    final static boolean n(int param0) {
+    final static boolean isCursorBlinkVisible(int param0) {
         if (param0 != -5) {
           spaceSmallLeverSprites = (RgbSprite[]) null;
           if (!LegacyUtf8Decoder.hasFrameFocusOrFullscreen((byte) -80)) {
@@ -84,7 +84,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
         RuntimeException decompiledCaughtException = null;
         try {
           if (!this.response256) {
-            AgeValidator.a("tochangedisplayname.ws", (byte) -113, EmailConfirmationValidator.e((byte) -103));
+            AgeValidator.openRelativeUrl("tochangedisplayname.ws", (byte) -113, EmailConfirmationValidator.e((byte) -103));
           } else {
             CheckboxWidgetRenderer.a(3, true);
             this.closeDialog(17);
@@ -207,7 +207,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
           }
           this.visible = false;
           if (this.field_vb) {
-            MatchingTextValidator.e((byte) -46);
+            MatchingTextValidator.showAccountLoginContent((byte) -46);
             return;
           }
           if (this.field_tb) {
@@ -221,7 +221,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
         }
         this.visible = false;
         if (this.field_vb) {
-          MatchingTextValidator.e((byte) -46);
+          MatchingTextValidator.showAccountLoginContent((byte) -46);
           return;
         }
         if (this.field_tb) {
