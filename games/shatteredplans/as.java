@@ -38,7 +38,7 @@ final class as extends IntrusiveNode {
           if (param0 == null) {
             return null;
           }
-          var8 = (vd) (param0.d(0));
+          var8 = (vd) (param0.startForward(0));
           var6 = -44 / ((47 - param2) / 57);
           while (var8 != null) {
             var5 = var8.b((byte) 105, param1, param3);
@@ -47,7 +47,7 @@ final class as extends IntrusiveNode {
               stackIn_10_0 = var5;
               return stackIn_10_0;
             }
-            var8 = (vd) (param0.a((byte) -71));
+            var8 = (vd) (param0.nextForward((byte) -71));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -66,9 +66,9 @@ final class as extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, v param3) {
         try {
-          nr.field_h = param3;
+          StarAbandonedEvent.field_h = param3;
           dn.field_l = param0;
-          qi.field_j = param2;
+          SolarFlareEvent.field_j = param2;
           if (param1 != 20) {
             field_i = (String) null;
           }
@@ -91,7 +91,7 @@ final class as extends IntrusiveNode {
         field_i = null;
     }
 
-    as(mg param0) {
+    as(FleetMove param0) {
         try {
           this.field_m = param0.field_G;
           this.field_x = param0.field_z;

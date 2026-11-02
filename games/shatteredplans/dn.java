@@ -59,17 +59,17 @@ final class dn extends hb {
           var5.h(param0, 255);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.c(1, (byte) -60);
+          var5.writeByte(1, (byte) -60);
           if (param1.field_n != null) {
-            var5.c(param1.field_n.length, (byte) -66);
-            var5.a(0, param1.field_n.length, param1.field_n, 22186);
+            var5.writeByte(param1.field_n.length, (byte) -66);
+            var5.writeBytes(0, param1.field_n.length, param1.field_n, 22186);
           } else {
-            var5.c(0, (byte) -76);
+            var5.writeByte(0, (byte) -76);
           }
-          var5.a(var4, param2 ^ -40);
+          var5.writeChecksum(var4, param2 ^ -40);
           var5.position = var5.position - 4;
-          param1.field_j = var5.a(16711680);
-          var5.b(var5.position - var4, (byte) 119);
+          param1.field_j = var5.readInt(16711680);
+          var5.patchLengthByte(var5.position - var4, (byte) 119);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "dn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -100,24 +100,24 @@ final class dn extends hb {
     final IntrusiveNode a(boolean param0) {
         if (param0) {
           this.a((byte) -124);
-          return (IntrusiveNode) ((Object) this.field_i.b(32));
+          return (IntrusiveNode) ((Object) this.field_i.nextForward(32));
         }
-        return (IntrusiveNode) ((Object) this.field_i.b(32));
+        return (IntrusiveNode) ((Object) this.field_i.nextForward(32));
     }
 
     final IntrusiveNode a(byte param0) {
         if (param0 < 99) {
           field_k = (String) null;
-          return (IntrusiveNode) ((Object) this.field_i.c(-127));
+          return (IntrusiveNode) ((Object) this.field_i.startForward(-127));
         }
-        return (IntrusiveNode) ((Object) this.field_i.c(-127));
+        return (IntrusiveNode) ((Object) this.field_i.startForward(-127));
     }
 
     final int b(byte param0) {
         if (param0 != -61) {
           return -111;
         }
-        return this.field_i.c((byte) -73);
+        return this.field_i.size((byte) -73);
     }
 
     dn(DualLinkDeque param0) {

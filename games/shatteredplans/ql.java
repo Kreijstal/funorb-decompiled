@@ -88,27 +88,27 @@ final class ql extends IntrusiveNode {
         gm var1Lifetime1;
         try {
           aj.field_e.e();
-          hg.field_q.e();
+          IsolationistAi.field_q.e();
           if (param0 != -26848) {
             ql.a((byte) 108);
           }
           dp.field_u = dp.field_u - 1;
           if (dp.field_u == 0) {
             dp.field_u = 200;
-            var1 = (gm) (eo.field_ab.d(param0 ^ -26848));
+            var1 = (gm) (eo.field_ab.startForward(param0 ^ -26848));
             while (var1 != null) {
-              if (!var1.field_n.c(2048)) {
-                var1.b((byte) -108);
+              if (!var1.field_n.isLinked(2048)) {
+                var1.unlink((byte) -108);
               }
-              var1 = (gm) (eo.field_ab.a((byte) -71));
+              var1 = (gm) (eo.field_ab.nextForward((byte) -71));
             }
             if (nc.field_v != null) {
-              var1Lifetime1 = (gm) (nc.field_v.d(0));
+              var1Lifetime1 = (gm) (nc.field_v.startForward(0));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_n.c(2048)) {
-                  var1Lifetime1.b((byte) -84);
+                if (!var1Lifetime1.field_n.isLinked(2048)) {
+                  var1Lifetime1.unlink((byte) -84);
                 }
-                var1Lifetime1 = (gm) (nc.field_v.a((byte) -71));
+                var1Lifetime1 = (gm) (nc.field_v.nextForward((byte) -71));
               }
             }
           }

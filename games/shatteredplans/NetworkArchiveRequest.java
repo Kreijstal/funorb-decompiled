@@ -59,17 +59,17 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         if (param2 == -2) {
           var3 = js.field_f;
           var3.h(param0, 255);
-          var3.c(3, (byte) -71);
-          var3.c(9, (byte) -110);
-          var3.d(param1, 255);
+          var3.writeByte(3, (byte) -71);
+          var3.writeByte(9, (byte) -110);
+          var3.writeShort(param1, 255);
           return;
         }
         NetworkArchiveRequest.d(false);
         var3Lifetime1 = js.field_f;
         var3Lifetime1.h(param0, 255);
-        var3Lifetime1.c(3, (byte) -71);
-        var3Lifetime1.c(9, (byte) -110);
-        var3Lifetime1.d(param1, 255);
+        var3Lifetime1.writeByte(3, (byte) -71);
+        var3Lifetime1.writeByte(9, (byte) -110);
+        var3Lifetime1.writeShort(param1, 255);
     }
 
     final static boolean a(long param0, String param1, boolean param2, int[] param3, int param4) {
@@ -84,7 +84,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!j.a(2, param3, param1, param4, param0)) {
+          if (!LegacyAi.a(2, param3, param1, param4, param0)) {
             return false;
           }
           if (param2) {

@@ -168,17 +168,17 @@ final class NanoFrameTimer extends FrameTimer {
 
     final static void a(tm param0, boolean param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var2_int = hj.field_l.length - 1;
+        int var2_int = PlacementEvent.field_l.length - 1;
         if (!param1) {
           return;
         }
         try {
           while (var2_int >= 1) {
-            hj.field_l[var2_int] = hj.field_l[-1 + var2_int];
+            PlacementEvent.field_l[var2_int] = PlacementEvent.field_l[-1 + var2_int];
             var2_int--;
           }
           RasterBuffer.field_a = 0;
-          hj.field_l[0] = param0;
+          PlacementEvent.field_l[0] = param0;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "gs.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

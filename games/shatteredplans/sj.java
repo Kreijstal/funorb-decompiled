@@ -15,8 +15,8 @@ final class sj {
           if (null == param2.field_M) {
             param2.field_M = new IntrusiveDeque();
           }
-          if (eg.field_q == null) {
-            eg.field_q = new SecondaryNodeHashTable(64);
+          if (BattleEvent.field_q == null) {
+            BattleEvent.field_q = new SecondaryNodeHashTable(64);
           }
           if (CipherPacketBuffer.field_m == null) {
             CipherPacketBuffer.field_m = new SecondaryNodeHashTable(64);

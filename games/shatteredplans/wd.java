@@ -201,17 +201,17 @@ final class wd extends ji {
         if (param1 == -11857) {
           param2 = param2 + this.field_q;
           param3 = param3 + this.field_m;
-          this.a(param3, false, this.field_O, bh.field_n, param2);
-          this.a(param3, false, this.field_M, ac.field_p, param2);
-          this.a(param3, false, this.field_R, mg.field_D, param2);
+          this.a(param3, false, this.field_O, BoundsRect.field_n, param2);
+          this.a(param3, false, this.field_M, DefendTask.field_p, param2);
+          this.a(param3, false, this.field_R, FleetMove.field_D, param2);
           return;
         }
         field_Q = (String) null;
         param2 = param2 + this.field_q;
         param3 = param3 + this.field_m;
-        this.a(param3, false, this.field_O, bh.field_n, param2);
-        this.a(param3, false, this.field_M, ac.field_p, param2);
-        this.a(param3, false, this.field_R, mg.field_D, param2);
+        this.a(param3, false, this.field_O, BoundsRect.field_n, param2);
+        this.a(param3, false, this.field_M, DefendTask.field_p, param2);
+        this.a(param3, false, this.field_R, FleetMove.field_D, param2);
     }
 
     public static void e(boolean param0) {

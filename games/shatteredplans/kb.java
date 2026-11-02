@@ -14,7 +14,7 @@ final class kb extends vd {
     static ArgbSprite field_w;
 
     final static void f(int param0) {
-        Star.field_o = sa.field_a.e(-1);
+        Star.field_o = sa.field_a.readString(-1);
         if (param0 >= -82) {
           return;
         }
@@ -38,27 +38,27 @@ final class kb extends vd {
           this.field_C.e();
           for (var8_int = 0; this.field_C.field_w > var8_int; var8_int++) {
             var9 = (this.field_C.field_w / 2 - var8_int) * (this.field_C.field_w / 2 - var8_int);
-            gf.f(0, var8_int, this.field_C.field_z, ui.a(0, this.field_D, -80, -(256 * var9 / (this.field_C.field_w / 2 * (this.field_C.field_w / 2))) + 256));
+            gf.f(0, var8_int, this.field_C.field_z, SolVictoryChecker.a(0, this.field_D, -80, -(256 * var9 / (this.field_C.field_w / 2 * (this.field_C.field_w / 2))) + 256));
           }
           var11 = 0;
           var8_intLifetime1 = var11;
           while (var11 < this.field_C.field_w) {
-            gf.a(0, var11, ui.a(0, this.field_C.field_B[var11 * this.field_C.field_z], -105, 128));
-            gf.a(-1 + this.field_C.field_z, var11, ui.a(0, this.field_C.field_B[-1 + this.field_C.field_z * (1 + var11)], -112, 128));
+            gf.a(0, var11, SolVictoryChecker.a(0, this.field_C.field_B[var11 * this.field_C.field_z], -105, 128));
+            gf.a(-1 + this.field_C.field_z, var11, SolVictoryChecker.a(0, this.field_C.field_B[-1 + this.field_C.field_z * (1 + var11)], -112, 128));
             var11++;
           }
-          gf.a(1, 1, ui.a(0, this.field_C.field_B[1 + this.field_C.field_z], -93, 128));
-          gf.a(2, 1, ui.a(0, this.field_C.field_B[this.field_C.field_z + 2], -113, 192));
-          gf.a(1, 2, ui.a(0, this.field_C.field_B[1 + this.field_C.field_z * 2], -87, 192));
-          gf.a(1, this.field_C.field_w - 2, ui.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-2 + this.field_C.field_w)], -90, 128));
-          gf.a(2, -2 + this.field_C.field_w, ui.a(0, this.field_C.field_B[2 + (-2 + this.field_C.field_w) * this.field_C.field_z], -82, 192));
-          gf.a(1, this.field_C.field_w - 3, ui.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-3 + this.field_C.field_w)], -78, 192));
-          gf.a(-2 + this.field_C.field_z, 1, ui.a(0, this.field_C.field_B[2 * this.field_C.field_z - 2], -99, 128));
-          gf.a(-3 + this.field_C.field_z, 1, ui.a(0, this.field_C.field_B[-3 + this.field_C.field_z * 2], -85, 192));
-          gf.a(this.field_C.field_z - 2, 2, ui.a(0, this.field_C.field_B[-2 + 3 * this.field_C.field_z], -124, 192));
-          gf.a(this.field_C.field_z - 2, this.field_C.field_w - 2, ui.a(0, this.field_C.field_B[-2 + this.field_C.field_z * (this.field_C.field_w - 1)], -88, 128));
-          gf.a(-3 + this.field_C.field_z, -2 + this.field_C.field_w, ui.a(0, this.field_C.field_B[-3 + (this.field_C.field_w - 1) * this.field_C.field_z], -83, 192));
-          gf.a(-2 + this.field_C.field_z, this.field_C.field_w - 3, ui.a(0, this.field_C.field_B[-2 + (this.field_C.field_w - 2) * this.field_C.field_z], -94, 192));
+          gf.a(1, 1, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z], -93, 128));
+          gf.a(2, 1, SolVictoryChecker.a(0, this.field_C.field_B[this.field_C.field_z + 2], -113, 192));
+          gf.a(1, 2, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * 2], -87, 192));
+          gf.a(1, this.field_C.field_w - 2, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-2 + this.field_C.field_w)], -90, 128));
+          gf.a(2, -2 + this.field_C.field_w, SolVictoryChecker.a(0, this.field_C.field_B[2 + (-2 + this.field_C.field_w) * this.field_C.field_z], -82, 192));
+          gf.a(1, this.field_C.field_w - 3, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-3 + this.field_C.field_w)], -78, 192));
+          gf.a(-2 + this.field_C.field_z, 1, SolVictoryChecker.a(0, this.field_C.field_B[2 * this.field_C.field_z - 2], -99, 128));
+          gf.a(-3 + this.field_C.field_z, 1, SolVictoryChecker.a(0, this.field_C.field_B[-3 + this.field_C.field_z * 2], -85, 192));
+          gf.a(this.field_C.field_z - 2, 2, SolVictoryChecker.a(0, this.field_C.field_B[-2 + 3 * this.field_C.field_z], -124, 192));
+          gf.a(this.field_C.field_z - 2, this.field_C.field_w - 2, SolVictoryChecker.a(0, this.field_C.field_B[-2 + this.field_C.field_z * (this.field_C.field_w - 1)], -88, 128));
+          gf.a(-3 + this.field_C.field_z, -2 + this.field_C.field_w, SolVictoryChecker.a(0, this.field_C.field_B[-3 + (this.field_C.field_w - 1) * this.field_C.field_z], -83, 192));
+          gf.a(-2 + this.field_C.field_z, this.field_C.field_w - 3, SolVictoryChecker.a(0, this.field_C.field_B[-2 + (this.field_C.field_w - 2) * this.field_C.field_z], -94, 192));
           cg.i(0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
@@ -88,7 +88,7 @@ final class kb extends vd {
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           na.field_r = param3;
-          k.field_b = param1;
+          TurnEventLog.field_b = param1;
           var11 = param4;
           if (param2) {
             stackIn_7_0 = lq.field_p;
@@ -191,9 +191,9 @@ final class kb extends vd {
           kb.f(112);
         }
         var2.h(param1, 255);
-        var2.c(2, (byte) -59);
-        var2.c(4, (byte) -84);
-        var2.c(mr.a(0), (byte) -76);
+        var2.writeByte(2, (byte) -59);
+        var2.writeByte(4, (byte) -84);
+        var2.writeByte(DerelictMapReader.a(0), (byte) -76);
     }
 
     final void a(int param0) {

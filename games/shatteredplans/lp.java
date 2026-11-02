@@ -24,10 +24,10 @@ final class lp extends vd implements gj {
         int var3 = -this.field_i + this.field_y;
         int var4 = var3 * param1 / 65536;
         int var5 = var3 * this.field_x / 65536;
-        vd var6 = (vd) (this.field_l.d(0));
+        vd var6 = (vd) (this.field_l.startForward(0));
         while (var6 != null) {
           var6.d(-var4 + var5, 0, 0);
-          var6 = (vd) (this.field_l.a((byte) -71));
+          var6 = (vd) (this.field_l.nextForward((byte) -71));
         }
         if (param0 != 13280) {
           field_A = (String) null;
@@ -93,7 +93,7 @@ final class lp extends vd implements gj {
           }
           hm.field_q = param1;
           if (param1 == null) {
-            tp.field_b = pc.field_q;
+            tp.field_b = DerelictMapGenerator.field_q;
             jb.field_d = kp.field_j + ArchiveRequest.field_r >> 1;
             fe.field_B = kp.field_j + ArchiveRequest.field_r >> 1;
             oi.field_a = be.field_h;
@@ -108,7 +108,7 @@ final class lp extends vd implements gj {
           var5 = param1.field_q;
           if (param0 != 1546006977) {
             var12 = (PacketBuffer) null;
-            lp.a((mg) null, (byte) -74, (PacketBuffer) null);
+            lp.a((FleetMove) null, (byte) -74, (PacketBuffer) null);
           }
           if (param1.field_q == -1) {
             var6 = uq.field_m.a(5607, param1.field_c);
@@ -152,7 +152,7 @@ final class lp extends vd implements gj {
           if (WeightedLruCache.field_g != null) {
             return;
           }
-          pc.field_q = tp.field_b;
+          DerelictMapGenerator.field_q = tp.field_b;
           be.field_h = oi.field_a;
           kp.field_j = jb.field_d + fe.field_B >> 1;
           ArchiveRequest.field_r = jb.field_d + fe.field_B >> 1;
@@ -171,11 +171,11 @@ final class lp extends vd implements gj {
         }
     }
 
-    final static void a(mg param0, byte param1, PacketBuffer param2) {
+    final static void a(FleetMove param0, byte param1, PacketBuffer param2) {
         try {
           di.a(param0.field_y, false, param2);
           di.a(param0.field_B, false, param2);
-          param2.d(param0.field_z, 255);
+          param2.writeShort(param0.field_z, 255);
           if (param1 > -67) {
             field_A = (String) null;
           }
@@ -223,10 +223,10 @@ final class lp extends vd implements gj {
         int[] var3 = new int[4];
         gf.a(var3);
         gf.i(this.field_k, this.field_t, this.field_m + this.field_k, this.field_t + this.field_i);
-        vd var4 = (vd) (this.field_l.f(3725));
+        vd var4 = (vd) (this.field_l.startReverse(3725));
         while (var4 != null) {
           var4.a(116);
-          var4 = (vd) (this.field_l.b(-124));
+          var4 = (vd) (this.field_l.nextReverse(-124));
         }
         gf.b(var3);
     }

@@ -263,7 +263,7 @@ final class fc {
                 if (!ae.field_b) {
                   this.field_j.a(1, 8, re.a(NetworkArchiveRequest.field_B, 4371, new String[]{var7}));
                 }
-                this.field_j.a(1, 18, re.a(se.field_e, 4371, new String[]{var7}));
+                this.field_j.a(1, 18, re.a(AchievementProgress.field_e, 4371, new String[]{var7}));
                 if (param0 != null) {
                   this.field_i = param0;
                   this.field_j.a(1, 19, re.a(ri.field_G, 4371, new String[]{var7}));
@@ -452,7 +452,7 @@ final class fc {
           }
           if (2 == param0.field_n) {
             if (0 == ul.field_Hb) {
-              this.field_j.a(1, 12, hj.field_m);
+              this.field_j.a(1, 12, PlacementEvent.field_m);
             }
             this.field_j.a(1, 13, SecondaryNodeDeque.field_c);
           }
@@ -481,7 +481,7 @@ final class fc {
           if (null != np.field_a) {
             return;
           }
-          var6 = eg.a(this.field_f, 30888);
+          var6 = BattleEvent.a(this.field_f, 30888);
           if (var6 == null) {
             return;
           }
@@ -501,7 +501,7 @@ final class fc {
           if (!var6.field_Yb &&
             var6.field_mc) {
             if (!var6.field_Ab) {
-              this.field_j.a(1, 2, re.a(co.field_r, 4371, new String[]{var3}));
+              this.field_j.a(1, 2, re.a(GarrisonTask.field_r, 4371, new String[]{var3}));
               if (var6.field_Yb) {
                 this.field_j.a(1, 3, re.a(im.field_a, 4371, new String[]{var3}));
               }
@@ -513,7 +513,7 @@ final class fc {
               }
               return;
             }
-            this.field_j.a(1, 2, re.a(co.field_r, 4371, new String[]{var3}));
+            this.field_j.a(1, 2, re.a(GarrisonTask.field_r, 4371, new String[]{var3}));
           }
           if (!var6.field_Yb) {
             return;
@@ -523,7 +523,7 @@ final class fc {
           if (null != np.field_a) {
             return;
           }
-          var7 = eg.a(this.field_f, 30888);
+          var7 = BattleEvent.a(this.field_f, 30888);
           if (var7 == null) {
             return;
           }
@@ -539,10 +539,10 @@ final class fc {
             if (!var7.field_Yb &&
               var7.field_mc) {
               if (!var7.field_Ab) {
-                this.field_j.a(1, 2, re.a(co.field_r, 4371, new String[]{var3}));
+                this.field_j.a(1, 2, re.a(GarrisonTask.field_r, 4371, new String[]{var3}));
               } else {
                 if (var7.field_cc) {
-                  this.field_j.a(1, 2, re.a(co.field_r, 4371, new String[]{var3}));
+                  this.field_j.a(1, 2, re.a(GarrisonTask.field_r, 4371, new String[]{var3}));
                 }
               }
             }

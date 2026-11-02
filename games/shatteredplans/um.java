@@ -106,7 +106,7 @@ final class um {
                 var9 = (float)((double)var9 + (Math.random() - 0.5) / 5.0);
                 var10 = 0.0f;
                 var11 = 0.0f;
-                rp.field_K.a((byte) -113, new sb((float)(var7.field_e - 5), (float)(var1_int + var7.field_j), 0.0f, 0.0f, var8 / 200.0f, var9 / 200.0f, var10, var11));
+                rp.field_K.addLast((byte) -113, new sb((float)(var7.field_e - 5), (float)(var1_int + var7.field_j), 0.0f, 0.0f, var8 / 200.0f, var9 / 200.0f, var10, var11));
               }
               if (var7.field_a <= 0) {
                 var7.field_a = 0;
@@ -119,7 +119,7 @@ final class um {
               var7.field_h = 10;
             }
           }
-          var4_ref = (sb) (rp.field_K.d(0));
+          var4_ref = (sb) (rp.field_K.startForward(0));
           while (var4_ref != null) {
             var4_ref.field_o[var4_ref.field_q] = var4_ref.field_l;
             var4_ref.field_i[var4_ref.field_q] = var4_ref.field_n;
@@ -134,7 +134,7 @@ final class um {
             var4_ref.field_k = var4_ref.field_k + var4_ref.field_p;
             var4_ref.field_n = var4_ref.field_n + var4_ref.field_j;
             var4_ref.field_l = var4_ref.field_l + var4_ref.field_k;
-            var4_ref = (sb) (rp.field_K.a((byte) -71));
+            var4_ref = (sb) (rp.field_K.nextForward((byte) -71));
           }
           if (di.field_m == 0) {
             sg.a(true, false, 100, RandomAccessCacheFile.field_c, NetworkArchiveRequest.field_C);

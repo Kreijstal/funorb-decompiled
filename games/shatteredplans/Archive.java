@@ -37,13 +37,13 @@ final class Archive {
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var7 = (CharSequence) ((Object) param2);
-          var4_int = this.field_f.field_b.a(24396, pc.a(false, var7));
+          var4_int = this.field_f.field_b.a(24396, DerelictMapGenerator.a(false, var7));
           var5 = -116 / ((58 - param0) / 34);
           if (var4_int < 0) {
             return false;
           }
           var8 = (CharSequence) ((Object) param1);
-          var6 = this.field_f.field_i[var4_int].a(24396, pc.a(false, var8));
+          var6 = this.field_f.field_i[var4_int].a(24396, DerelictMapGenerator.a(false, var8));
           if (var6 >= 0) {
             return true;
           }
@@ -86,7 +86,7 @@ final class Archive {
           }
           param2 = param2.toLowerCase();
           var5 = (CharSequence) ((Object) param2);
-          var4_int = this.field_f.field_i[param0].a(24396, pc.a(false, var5));
+          var4_int = this.field_f.field_i[param0].a(24396, DerelictMapGenerator.a(false, var5));
           if (param1 != 106) {
             ((boolean[]) (this.field_m[2]))[1] = true;
           }
@@ -145,7 +145,7 @@ final class Archive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_b.a(24396, pc.a(false, var4));
+          var3_int = this.field_f.field_b.a(24396, DerelictMapGenerator.a(false, var4));
           stackIn_7_0 = this.c((byte) 36, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -230,7 +230,7 @@ final class Archive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_f.field_b.a(24396, pc.a(false, var4));
+          var3_int = this.field_f.field_b.a(24396, DerelictMapGenerator.a(false, var4));
           if (param0 <= 121) {
             field_h = (String) null;
           }
@@ -279,12 +279,12 @@ final class Archive {
           }
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_f.field_b.a(param1 + 24391, pc.a(false, var6));
+          var4_int = this.field_f.field_b.a(param1 + 24391, DerelictMapGenerator.a(false, var6));
           if (!this.b((byte) -63, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.field_f.field_i[var4_int].a(param1 ^ 24393, pc.a(false, var7));
+          var5 = this.field_f.field_i[var4_int].a(param1 ^ 24393, DerelictMapGenerator.a(false, var7));
           stackIn_11_0 = this.a((byte) 125, var5, var4_int);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -344,7 +344,7 @@ final class Archive {
           var4 = 2 % ((param1 + 1) / 49);
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_b.a(24396, pc.a(false, var5));
+          var3_int = this.field_f.field_b.a(24396, DerelictMapGenerator.a(false, var5));
           stackIn_4_0 = this.b(87, var3_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -393,9 +393,9 @@ final class Archive {
         }
         var4.position = var4.position + 1;
         int var5 = var4.position;
-        var4.c(7, (byte) -82);
-        var4.b(-16426, param2);
-        var4.b(-var5 + var4.position, (byte) 127);
+        var4.writeByte(7, (byte) -82);
+        var4.writeLong(-16426, param2);
+        var4.patchLengthByte(-var5 + var4.position, (byte) 127);
     }
 
     private final synchronized byte[] a(int[] param0, int param1, int param2, int param3) {
@@ -477,7 +477,7 @@ final class Archive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_b.a(24396, pc.a(false, var4));
+          var3_int = this.field_f.field_b.a(24396, DerelictMapGenerator.a(false, var4));
           if (0 > var3_int) {
             return false;
           }
@@ -570,7 +570,7 @@ final class Archive {
           stackIn_7_1 = 24396;
           stackIn_8_2 = !(param0);
           var6 = (CharSequence) ((Object) param2);
-          var4_int = ((cm) (Object) stackIn_7_0).a(stackIn_7_1, pc.a(stackIn_8_2, var6));
+          var4_int = ((cm) (Object) stackIn_7_0).a(stackIn_7_1, DerelictMapGenerator.a(stackIn_8_2, var6));
           if (!this.b((byte) -63, var4_int)) {
             return null;
           }
@@ -578,7 +578,7 @@ final class Archive {
           stackIn_13_1 = 24396;
           stackIn_14_2 = !(param0);
           var7 = (CharSequence) ((Object) param1);
-          var5 = ((cm) (Object) stackIn_13_0).a(stackIn_13_1, pc.a(stackIn_14_2, var7));
+          var5 = ((cm) (Object) stackIn_13_0).a(stackIn_13_1, DerelictMapGenerator.a(stackIn_14_2, var7));
           stackIn_15_0 = this.a(var4_int, -1, var5);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -777,7 +777,7 @@ final class Archive {
             var25 = var33;
             var9 = var25;
             var26 = new PacketBuffer(var33);
-            var26.a(5, param1, (byte) -82, var26.payload.length);
+            var26.xteaDecryptRange(5, param1, (byte) -82, var26.payload.length);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -812,7 +812,7 @@ final class Archive {
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var13.a(16711680);
+                  var17 = var17 + var13.readInt(16711680);
                   if (var6 != null) {
                     var19 = var32[var18];
                   } else {
@@ -834,7 +834,7 @@ final class Archive {
               for (var18Lifetime3 = 0; var12 > var18Lifetime3; var18Lifetime3++) {
                 var19Lifetime2 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19Lifetime2 = var19Lifetime2 + var13.a(16711680);
+                  var19Lifetime2 = var19Lifetime2 + var13.readInt(16711680);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -862,7 +862,7 @@ final class Archive {
             for (var15_intLifetime1 = 0; var12Lifetime1 > var15_intLifetime1; var15_intLifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var17Lifetime1 < var5_int; var17Lifetime1++) {
-                var16Lifetime1 = var16Lifetime1 + var13Lifetime1.a(16711680);
+                var16Lifetime1 = var16Lifetime1 + var13Lifetime1.readInt(16711680);
                 var14[var17Lifetime1] = var14[var17Lifetime1] + var16Lifetime1;
               }
             }
@@ -879,7 +879,7 @@ final class Archive {
             for (var17Lifetime2 = 0; var12Lifetime1 > var17Lifetime2; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
-                var18Lifetime1 = var18Lifetime1 + var13Lifetime1.a(16711680);
+                var18Lifetime1 = var18Lifetime1 + var13Lifetime1.readInt(16711680);
                 ps.a(var41, var16Lifetime3, var38[var19Lifetime1], var37[var19Lifetime1], var18Lifetime1);
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
@@ -941,7 +941,7 @@ final class Archive {
           if (param0 > -11) {
             field_h = (String) null;
           }
-          rp.field_I.a(eg.field_o, true, re.field_b, (byte) 0);
+          rp.field_I.a(BattleEvent.field_o, true, re.field_b, (byte) 0);
           rp.field_I.i(125);
           while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
             rp.field_I.a(oq.field_j, ho.field_h, true);

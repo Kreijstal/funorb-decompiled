@@ -23,7 +23,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           ql.field_q = 0;
           aj.field_f = param0.getX();
-          rf.field_i = param0.getY();
+          AllianceExpiredEvent.field_i = param0.getY();
           kh.field_Lb = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -65,7 +65,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           ql.field_q = 0;
           aj.field_f = param0.getX();
-          rf.field_i = param0.getY();
+          AllianceExpiredEvent.field_i = param0.getY();
           kh.field_Lb = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,7 +87,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (pd.field_j != null) {
             ql.field_q = 0;
             aj.field_f = param0.getX();
-            rf.field_i = param0.getY();
+            AllianceExpiredEvent.field_i = param0.getY();
             kh.field_Lb = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -125,13 +125,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             for (var6 = 0; var1 > var6; var6++) {
               var5_ref_int__[var6] = ee.a(eo.field_fb[we.a((int) var20[var6], 255)], we.a(-16777216, var21[var6] << 24));
             }
-            var3 = new ArgbSprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var13);
+            var3 = new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var13);
           } else {
             var9 = new int[var1];
             for (var5 = 0; var1 > var5; var5++) {
               var9[var5] = eo.field_fb[we.a(255, (int) var20[var5])];
             }
-            var3 = new Sprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var9);
+            var3 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var9);
           }
           pd.a(0);
           return (Sprite) (var3);
@@ -146,13 +146,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           for (var6Lifetime1 = 0; var1 > var6Lifetime1; var6Lifetime1++) {
             var5_ref_int__Lifetime1[var6Lifetime1] = ee.a(eo.field_fb[we.a((int) var18[var6Lifetime1], 255)], we.a(-16777216, var19[var6Lifetime1] << 24));
           }
-          var3Lifetime1 = new ArgbSprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var13Lifetime1);
+          var3Lifetime1 = new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var13Lifetime1);
         } else {
           var9Lifetime1 = new int[var1];
           for (var5Lifetime1 = 0; var1 > var5Lifetime1; var5Lifetime1++) {
             var9Lifetime1[var5Lifetime1] = eo.field_fb[we.a(255, (int) var18[var5Lifetime1])];
           }
-          var3Lifetime1 = new Sprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var9Lifetime1);
+          var3Lifetime1 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var9Lifetime1);
         }
         pd.a(0);
         return (Sprite) (var3Lifetime1);
@@ -174,38 +174,38 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (11 != oq.field_j) {
             return false;
           }
-          if (!jj.field_n) {
+          if (!ConquestVictoryChecker.field_n) {
             return false;
           }
-          if (vp.field_r == 2) {
-            if (!ShatteredPlansClient.a(16, ac.field_o, ah.field_S)) {
+          if (TertiaryLinkNode.field_r == 2) {
+            if (!ShatteredPlansClient.a(16, DefendTask.field_o, ah.field_S)) {
               return false;
             }
-            if (vp.field_r == 2) {
-              if (!sh.b(57)) {
+            if (TertiaryLinkNode.field_r == 2) {
+              if (!SolMapReader.b(57)) {
                 return true;
               }
-              ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
+              ih.a(ah.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
               return true;
             }
             if (var3 != 0) {
               return false;
             }
-            if (sh.b(57)) {
-              ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
+            if (SolMapReader.b(57)) {
+              ih.a(ah.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
             }
             return true;
           }
-          if (vp.field_r != 2 &&
+          if (TertiaryLinkNode.field_r != 2 &&
             var3 != 0) {
             return false;
           }
-          if (sh.b(57)) {
-            ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
+          if (SolMapReader.b(57)) {
+            ih.a(ah.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
           }
           return true;
         }
-        if (!j.a(2, uo.field_f, jj.field_o, tl.field_D, bq.field_e)) {
+        if (!LegacyAi.a(2, uo.field_f, ConquestVictoryChecker.field_o, tl.field_D, bq.field_e)) {
           if (oq.field_j == 10) {
             if (var3 != 0) {
               return false;
@@ -214,28 +214,28 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return true;
           }
           if (11 == oq.field_j) {
-            if (!jj.field_n) {
+            if (!ConquestVictoryChecker.field_n) {
               return false;
             }
-            if (vp.field_r == 2) {
-              if (ShatteredPlansClient.a(16, ac.field_o, ah.field_S)) {
-                if (vp.field_r != 2 &&
+            if (TertiaryLinkNode.field_r == 2) {
+              if (ShatteredPlansClient.a(16, DefendTask.field_o, ah.field_S)) {
+                if (TertiaryLinkNode.field_r != 2 &&
                   var3 != 0) {
                   return false;
                 }
-                if (sh.b(57)) {
-                  ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
+                if (SolMapReader.b(57)) {
+                  ih.a(ah.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
                 }
                 return true;
               }
               return false;
             }
-            if (vp.field_r != 2 &&
+            if (TertiaryLinkNode.field_r != 2 &&
               var3 != 0) {
               return false;
             }
-            if (sh.b(57)) {
-              ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
+            if (SolMapReader.b(57)) {
+              ih.a(ah.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
             }
             return true;
           }
@@ -245,7 +245,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           var3 != 0) {
           return false;
         }
-        return NetworkArchiveRequest.a(bq.field_e, jj.field_o, false, uo.field_f, tl.field_D);
+        return NetworkArchiveRequest.a(bq.field_e, ConquestVictoryChecker.field_o, false, uo.field_f, tl.field_D);
     }
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
@@ -260,7 +260,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           ql.field_q = 0;
           aj.field_f = -1;
-          rf.field_i = -1;
+          AllianceExpiredEvent.field_i = -1;
           kh.field_Lb = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -327,7 +327,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != pd.field_j) {
             ql.field_q = 0;
             ArchiveSource.field_c = param0.getX();
-            el.field_e = param0.getY();
+            TertiaryNodeList.field_e = param0.getY();
             pr.a(14274);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               vh.field_c = 2;

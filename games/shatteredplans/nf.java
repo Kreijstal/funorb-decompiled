@@ -62,7 +62,7 @@ final class nf {
         return 23;
     }
 
-    final static String a(eg param0, int param1) {
+    final static String a(BattleEvent param0, int param1) {
         int incrementValue$0 = 0;
         String stackIn_11_0 = null;
         String stackIn_14_0 = null;
@@ -75,7 +75,7 @@ final class nf {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        ne var4 = null;
+        BattleContribution var4 = null;
         String var5 = null;
         String[] var6 = null;
         String var7 = null;
@@ -85,7 +85,7 @@ final class nf {
         try {
           var2_int = 0;
           var3 = 0;
-          var4 = (ne) (param0.field_v.d(0));
+          var4 = (BattleContribution) (param0.field_v.startForward(0));
           while (var4 != null) {
             if (ho.field_d == var4.field_h) {
               if (var4.field_r != 0 &&
@@ -94,7 +94,7 @@ final class nf {
               }
               var2_int = var2_int + var4.field_p;
             }
-            var4 = (ne) (param0.field_v.a((byte) -71));
+            var4 = (BattleContribution) (param0.field_v.nextForward((byte) -71));
           }
           if (param1 != 23248) {
             stackIn_11_0 = (String) null;
@@ -115,7 +115,7 @@ final class nf {
             var6 = new String[1 + var3];
             var3 = 1;
             var6[0] = var9;
-            var4 = (ne) (param0.field_v.d(0));
+            var4 = (BattleContribution) (param0.field_v.startForward(0));
             while (var4 != null) {
               if (var4.field_h == ho.field_d &&
                 var4.field_r != 0 &&
@@ -129,7 +129,7 @@ final class nf {
                 var3++;
                 var6[incrementValue$0] = var7;
               }
-              var4 = (ne) (param0.field_v.a((byte) -71));
+              var4 = (BattleContribution) (param0.field_v.nextForward((byte) -71));
             }
             var5 = va.a(-2, var6);
           }
@@ -248,7 +248,7 @@ final class nf {
         this.field_h = kr.field_b;
         this.field_o = WeightedCacheEntry.field_q;
         this.field_p = sp.field_j;
-        this.field_l = el.field_f;
+        this.field_l = TertiaryNodeList.field_f;
         this.field_g = fm.field_f;
         this.field_n = PacketBuffer.field_k;
         this.field_d = ArchiveRequest.field_s;

@@ -35,7 +35,7 @@ final class vj extends qs {
             decompiledFrameRemainder0 = !(param0.equals(GameKeyHandler.field_d));
           }
           if (decompiledFrameRemainder0) {
-            if (!sc.field_q) {
+            if (!AggressiveAi.field_q) {
               if (ri.field_F <= rq.field_e) {
                 stackIn_16_0 = (rq.field_e < ri.field_F + de.field_i) ? 1 : 0;
               } else {
@@ -48,7 +48,7 @@ final class vj extends qs {
             if (param0 == null) {
               rq.field_e = 0;
             } else {
-              if (sc.field_q) {
+              if (AggressiveAi.field_q) {
                 rq.field_e = ri.field_F;
               } else {
                 if (var2_int == 0) {
@@ -59,17 +59,17 @@ final class vj extends qs {
               }
             }
             if (param0 != null) {
-              sc.field_q = false;
+              AggressiveAi.field_q = false;
             } else {
               if (var2_int != 0) {
-                sc.field_q = true;
+                AggressiveAi.field_q = true;
               }
             }
             rs.field_Fb = cb.field_n;
             RandomAccessCacheFile.field_g = GzipInflater.field_c;
           }
           GameKeyHandler.field_d = param0;
-          if (!sc.field_q &&
+          if (!AggressiveAi.field_q &&
             rq.field_e < ri.field_F &&
             r.field_d) {
             rq.field_e = 0;
@@ -81,9 +81,9 @@ final class vj extends qs {
             field_F = (int[]) null;
           }
           cb.field_n = -1;
-          if (sc.field_q &&
+          if (AggressiveAi.field_q &&
             rq.field_e == t.field_f) {
-            sc.field_q = false;
+            AggressiveAi.field_q = false;
             rq.field_e = 0;
             return;
           }
@@ -103,11 +103,11 @@ final class vj extends qs {
     }
 
     final static String g(byte param0) {
-        if (!(ma.field_p >= 2)) {
+        if (!(DefensiveAi.field_p >= 2)) {
           return de.field_h;
         }
-        if (es.field_j != null) {
-          if (!es.field_j.b((byte) 107)) {
+        if (StarAnnotation.field_j != null) {
+          if (!StarAnnotation.field_j.b((byte) 107)) {
             return i.field_a;
           }
           return ns.field_xb;
@@ -125,11 +125,11 @@ final class vj extends qs {
           return IntrusiveDequeCursor.field_h + " - " + tq.field_f.a("commonui", (byte) 28) + "%";
         }
         int var1 = 32 % ((param0 - 15) / 52);
-        if (!l.field_g.b((byte) -2)) {
+        if (!GalaxyMap.field_g.b((byte) -2)) {
           return MouseInputHandler.field_e;
         }
-        if (!l.field_g.a(-1)) {
-          return jh.field_v + " - " + l.field_g.d(100) + "%";
+        if (!GalaxyMap.field_g.a(-1)) {
+          return jh.field_v + " - " + GalaxyMap.field_g.d(100) + "%";
         }
         return IsaacBackedRandom.field_d;
     }

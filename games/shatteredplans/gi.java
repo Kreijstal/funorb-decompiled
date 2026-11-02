@@ -87,7 +87,7 @@ final class gi {
                   if (0 == ClientException.field_f[var2_int] &&
                     sp.a(var5[var2_int].field_c, (byte) -125)) {
                     ClientException.field_f[var2_int] = 1;
-                    vn.a(0);
+                    BattleSnapshot.a(0);
                   }
                 }
               }
@@ -104,26 +104,26 @@ final class gi {
           }
           if (sr.a(0, "unplaced")) {
             if (SocketArchiveNetworkClient.a("unplaced", -126)) {
-              ac.a(1, n.a("unplaced", -21502));
+              DefendTask.a(1, n.a("unplaced", -21502));
             }
           } else {
             if (sr.a(0, "losegame")) {
-              ac.a(1, n.a("lose", -21502));
+              DefendTask.a(1, n.a("lose", -21502));
             }
           }
-          aj.field_a.a(0);
+          aj.field_a.clear(0);
           if (WeightedLruCache.field_g == hm.field_q) {
             ei.field_e = kp.field_j;
             e.field_f = ArchiveRequest.field_r;
             ByteArrayNode.field_k = be.field_h;
-            kl.field_o = pc.field_q;
+            AttackTask.field_o = DerelictMapGenerator.field_q;
           } else {
             e.field_f = re.a(ArchiveRequest.field_r, 32, BufferedCacheFile.field_m, fe.field_B, 0);
             ByteArrayNode.field_k = re.a(be.field_h, 32, BufferedCacheFile.field_m, oi.field_a, 0);
             ei.field_e = re.a(kp.field_j, 32, BufferedCacheFile.field_m, jb.field_d, 0);
-            stackIn_28_0 = pc.field_q;
+            stackIn_28_0 = DerelictMapGenerator.field_q;
             stackIn_28_1 = 32;
-            kl.field_o = re.a(stackIn_28_0, stackIn_28_1, BufferedCacheFile.field_m, tp.field_b, 0);
+            AttackTask.field_o = re.a(stackIn_28_0, stackIn_28_1, BufferedCacheFile.field_m, tp.field_b, 0);
           }
           if (null != oi.field_i) {
             var1_int = 1;
@@ -184,31 +184,31 @@ final class gi {
           eo.field_cb.position = 0;
           qn.field_b[3] = (int)w.field_I;
           qn.field_b[2] = (int)(w.field_I >> 32);
-          eo.field_cb.e(11135, qn.field_b[0]);
-          eo.field_cb.e(11135, qn.field_b[1]);
-          eo.field_cb.e(11135, qn.field_b[2]);
-          eo.field_cb.e(11135, qn.field_b[3]);
+          eo.field_cb.writeInt(11135, qn.field_b[0]);
+          eo.field_cb.writeInt(11135, qn.field_b[1]);
+          eo.field_cb.writeInt(11135, qn.field_b[2]);
+          eo.field_cb.writeInt(11135, qn.field_b[3]);
           jo.a(24, eo.field_cb);
           if (param3 > -36) {
             return;
           }
-          eo.field_cb.d(param0, 255);
+          eo.field_cb.writeShort(param0, 255);
           param4.a(eo.field_cb, (byte) 118);
           js.field_f.position = 0;
           if (param1) {
-            js.field_f.c(18, (byte) -106);
+            js.field_f.writeByte(18, (byte) -106);
           } else {
-            js.field_f.c(16, (byte) -89);
+            js.field_f.writeByte(16, (byte) -89);
           }
           js.field_f.position = js.field_f.position + 2;
           var5_int = js.field_f.position;
-          js.field_f.e(11135, e.field_b);
-          js.field_f.b(-16426, be.field_l);
+          js.field_f.writeInt(11135, e.field_b);
+          js.field_f.writeLong(-16426, be.field_l);
           var6 = 0;
           if (DualLinkDeque.field_b) {
             var6 = var6 | 1;
           }
-          if (ka.field_a) {
+          if (StandardAi.field_a) {
             var6 = var6 | 4;
           }
           if (param2) {
@@ -217,17 +217,17 @@ final class gi {
           if (fr.field_H != null) {
             var6 = var6 | 16;
           }
-          js.field_f.c(var6, (byte) -93);
-          var7 = ck.a((byte) 70, kq.f((byte) 125));
+          js.field_f.writeByte(var6, (byte) -93);
+          var7 = ck.a((byte) 70, GameScreen.f((byte) 125));
           if (var7 == null) {
             var7 = "";
           }
-          js.field_f.a(var7, (byte) 0);
+          js.field_f.writeString(var7, (byte) 0);
           if (fr.field_H != null) {
-            js.field_f.a((byte) 95, fr.field_H);
+            js.field_f.writeMarkedString((byte) 95, fr.field_H);
           }
-          co.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
-          js.field_f.f(-549342136, js.field_f.position - var5_int);
+          GarrisonTask.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
+          js.field_f.patchLengthShort(-549342136, js.field_f.position - var5_int);
           d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

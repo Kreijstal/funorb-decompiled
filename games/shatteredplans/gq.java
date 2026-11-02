@@ -102,7 +102,7 @@ final class gq {
             var4 = var3;
             var4.field_a = 0;
           }
-          rp.field_K.a(0);
+          rp.field_K.clear(0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "gq.E(" + param0 + ')');
         }
@@ -120,7 +120,7 @@ final class gq {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param2.j(-74);
+          var3_int = param2.readUnsignedByte(-74);
           if (param1 != -2284) {
             stackIn_2_0 = (Star) null;
             return stackIn_2_0;
@@ -265,7 +265,7 @@ final class gq {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = eo.field_fb[we.a((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[param0], var3);
+        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[param0], var3);
         pd.a(0);
         return var4;
     }

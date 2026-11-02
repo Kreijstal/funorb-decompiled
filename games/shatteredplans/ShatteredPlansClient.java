@@ -68,7 +68,7 @@ public final class ShatteredPlansClient extends tl {
         em.field_j = 2458760;
         ih.field_b = 2458760;
         ah.field_P = 2458760;
-        es.field_n = 2805974;
+        StarAnnotation.field_n = 2805974;
         em.a(us.b(0), 1);
         this.a(false, true, -2839, true, true, false, false);
         td.field_K = TaskAi.field_a;
@@ -104,10 +104,10 @@ public final class ShatteredPlansClient extends tl {
           int stackIn_97_1 = 0;
           int stackIn_102_0 = 0;
           int stackIn_105_0 = 0;
-          km stackIn_111_0 = null;
-          kq stackIn_114_0 = null;
+          GameSession stackIn_111_0 = null;
+          GameScreen stackIn_114_0 = null;
           int stackIn_118_0 = 0;
-          km stackIn_126_0 = null;
+          GameSession stackIn_126_0 = null;
           boolean stackIn_127_1 = false;
           int stackIn_150_0 = 0;
           int stackIn_150_1 = 0;
@@ -120,16 +120,16 @@ public final class ShatteredPlansClient extends tl {
           lq var3_ref_lq = null;
           Object var4_ref = null;
           int var4 = 0;
-          vr var5_ref_vr = null;
+          GameRules var5_ref_vr = null;
           int var5 = 0;
           int var6 = 0;
           int var7 = 0;
           int var8 = 0;
           int var9 = 0;
           String[] var10 = null;
-          km var11 = null;
-          kq var12 = null;
-          km var13 = null;
+          GameSession var11 = null;
+          GameScreen var12 = null;
+          GameSession var13 = null;
           int var14 = 0;
           jn var15 = null;
           kr var15_ref = null;
@@ -140,12 +140,12 @@ public final class ShatteredPlansClient extends tl {
           int var3Lifetime1;
           var16 = field_F ? 1 : 0;
           po.b(-87);
-          l.field_f = po.b(-80);
+          GalaxyMap.field_f = po.b(-80);
           ql.a(-26848);
           if (null != bj.field_K &&
             bj.field_K.field_c) {
             BufferedCacheFile.c(0);
-            kq.g(4);
+            GameScreen.g(4);
           }
           stackIn_7_1 = (null != bj.field_K);
           this.a(stackIn_7_1, 77);
@@ -160,7 +160,7 @@ public final class ShatteredPlansClient extends tl {
               if (ik.field_h) {
                 return;
               }
-              if (wb.b(91)) {
+              if (QuaternaryNodeList.b(91)) {
                 ik.field_h = this.c(82, false);
               }
               return;
@@ -176,7 +176,7 @@ public final class ShatteredPlansClient extends tl {
             if (!StrongCacheEntry.f((byte) 122)) {
               tc.f((byte) 125);
             } else {
-              if (gl.field_e) {
+              if (DisplayModeInfo.field_e) {
                 if (!sq.a(false)) {
                   if (kh.f((byte) -67)) {
                     var2 = 1;
@@ -202,7 +202,7 @@ public final class ShatteredPlansClient extends tl {
                         var3 = ch.a(106);
                         if (var3 == 1) {
                           ns.field_ob = true;
-                          qk.a(se.field_a, 0, (byte) 122);
+                          qk.a(AchievementProgress.field_a, 0, (byte) 122);
                         }
                         this.b(false, true);
                       }
@@ -220,8 +220,8 @@ public final class ShatteredPlansClient extends tl {
                       BufferedCacheFile.c(0);
                     } else {
                       if (3 == var3) {
-                        ne.field_s = false;
-                        StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, mr.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, es.field_n);
+                        BattleContribution.field_s = false;
+                        StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, DerelictMapReader.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, DerelictMapReader.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
                         fm.a(true, -1);
                       } else {
                         if (var3 != 4) {
@@ -229,7 +229,7 @@ public final class ShatteredPlansClient extends tl {
                           decompiledFrameRemainder1 = false;
                         }
                         else {
-                          ne.field_s = true;
+                          BattleContribution.field_s = true;
                           qk.a(wi.field_b, 0, (byte) 125);
                         }
                       }
@@ -244,7 +244,7 @@ public final class ShatteredPlansClient extends tl {
                 if (!w.d(true)) {
                   GzipInflater.a(1);
                 }
-                gl.field_e = true;
+                DisplayModeInfo.field_e = true;
               }
             }
           }
@@ -267,7 +267,7 @@ public final class ShatteredPlansClient extends tl {
           }
           if (!w.d(true)) {
             while (true) {
-              var3_ref_lq = (lq) (GameKeyHandler.field_a.h(54));
+              var3_ref_lq = (lq) (GameKeyHandler.field_a.pollFirst(54));
               if (var3_ref_lq == null) {
                 break;
               }
@@ -282,7 +282,7 @@ public final class ShatteredPlansClient extends tl {
               DiskCacheWorker.a(1048576);
               md.field_Q = false;
               gr.field_o = 10;
-              oi.field_c = sa.field_a.e(-1);
+              oi.field_c = sa.field_a.readString(-1);
               continue;
             }
             if (BufferedCacheFile.field_e == 14) {
@@ -302,7 +302,7 @@ public final class ShatteredPlansClient extends tl {
                 ta.a(0, 0, (byte) 96, false);
                 mf.field_p = false;
                 lg.field_b = true;
-                cs.field_i = false;
+                Wormhole.field_i = false;
                 MusicEnvelope.field_d = false;
                 v.field_b = false;
                 DiskArchiveRequest.field_A = true;
@@ -318,10 +318,10 @@ public final class ShatteredPlansClient extends tl {
               continue;
             }
             if (BufferedCacheFile.field_e == 71) {
-              if (!hg.field_r) {
+              if (!IsolationistAi.field_r) {
                 continue;
               }
-              var4 = sa.field_a.a(16711680);
+              var4 = sa.field_a.readInt(16711680);
               var4 = var4 & ~vq.field_a;
               var5 = 0;
               while (var5 < 25) {
@@ -329,7 +329,7 @@ public final class ShatteredPlansClient extends tl {
                 stackIn_97_0 = ~(var6 & var4);
                 stackIn_97_1 = -1;
                 if (stackIn_97_0 != stackIn_97_1) {
-                  this.field_G.a((byte) -113, new he(var5));
+                  this.field_G.addLast((byte) -113, new he(var5));
                 }
                 var5++;
               }
@@ -349,7 +349,7 @@ public final class ShatteredPlansClient extends tl {
                   var4_ref = ce.field_x;
                 }
                 if (var4_ref != null &&
-                  ((km) (var4_ref)).c(14759)) {
+                  ((GameSession) (var4_ref)).c(14759)) {
                   continue;
                 }
                 this.e((byte) -84);
@@ -364,7 +364,7 @@ public final class ShatteredPlansClient extends tl {
                 lg.field_b = true;
                 v.field_b = false;
                 gr.field_o = -2;
-                cs.field_i = false;
+                Wormhole.field_i = false;
                 MusicEnvelope.field_d = false;
                 ImageProducerRasterBuffer.field_n = true;
                 wm.a(0);
@@ -373,17 +373,17 @@ public final class ShatteredPlansClient extends tl {
               continue;
             }
             DiskCacheWorker.a(1048576);
-            var4 = sa.field_a.j(-93);
+            var4 = sa.field_a.readUnsignedByte(-93);
             var5_ref_vr = kj.a((byte) -85, sa.field_a);
-            var6 = sa.field_a.g(-2852);
-            stackIn_102_0 = (sa.field_a.j(-95) == 0) ? 0 : 1;
+            var6 = sa.field_a.readSignedByte(-2852);
+            stackIn_102_0 = (sa.field_a.readUnsignedByte(-95) == 0) ? 0 : 1;
             var7 = stackIn_102_0;
-            var8 = sa.field_a.g(-2852);
+            var8 = sa.field_a.readSignedByte(-2852);
             stackIn_105_0 = (var8 < 0) ? 0 : 1;
             var9 = stackIn_105_0;
-            var10 = new String[sa.field_a.j(-128)];
+            var10 = new String[sa.field_a.readUnsignedByte(-128)];
             for (var11_int = 0; var11_int < var10.length; var11_int++) {
-              var10[var11_int] = sa.field_a.e((byte) -111);
+              var10[var11_int] = sa.field_a.readMarkedString((byte) -111);
             }
             tq.field_b = null;
             if (var9 == 0) {
@@ -398,14 +398,14 @@ public final class ShatteredPlansClient extends tl {
               stackIn_114_0 = var11.field_Y;
             }
             var12 = stackIn_114_0;
-            var13 = new km(true, false, var4, var5_ref_vr, var6, var10, var8, var7 != 0, var12);
+            var13 = new GameSession(true, false, var4, var5_ref_vr, var6, var10, var8, var7 != 0, var12);
             var14 = 1;
             if (var13.field_n != null) {
-              stackIn_118_0 = (1 != sa.field_a.j(-122)) ? 0 : 1;
+              stackIn_118_0 = (1 != sa.field_a.readUnsignedByte(-122)) ? 0 : 1;
               var14 = stackIn_118_0;
             }
             try {
-              var13.field_P.a(sa.field_a, var13.field_n, false);
+              var13.field_P.readMap(sa.field_a, var13.field_n, false);
               decompiledRegionSelector0 = 0;
             } catch (jn decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -445,7 +445,7 @@ public final class ShatteredPlansClient extends tl {
             }
             ta.a(0, -1, (byte) 96, false);
             ImageProducerRasterBuffer.field_n = false;
-            cs.field_i = true;
+            Wormhole.field_i = true;
             is.field_a = false;
           }
           stackIn_150_0 = 0;
@@ -456,16 +456,16 @@ public final class ShatteredPlansClient extends tl {
             vq.field_a = vq.field_a | ur.field_zb.field_h;
             oe.field_e = ur.field_zb.field_l;
             ur.field_zb = null;
-            hg.field_r = true;
+            IsolationistAi.field_r = true;
           }
-          if (vr.field_c == -2 &&
+          if (GameRules.field_c == -2 &&
             gr.field_o != -1) {
             ImageProducerRasterBuffer.field_n = true;
           }
           if (ImageProducerRasterBuffer.field_n) {
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!se.field_g && ((ce.field_x == null ||
+          if (!AchievementProgress.field_g && ((ce.field_x == null ||
             !ce.field_x.field_j) &&
             (SecondaryNodeHashTable.field_g == null ||
             !SecondaryNodeHashTable.field_g.field_j))) {
@@ -492,7 +492,7 @@ public final class ShatteredPlansClient extends tl {
             if (var6 == 0 ||
               var6 == 1) {
               vs.a(4, (byte) -103);
-              se.a(7, true);
+              AchievementProgress.a(7, true);
               oq.a(6, 37);
               ef.a(true);
               if (1 == var6) {
@@ -501,7 +501,7 @@ public final class ShatteredPlansClient extends tl {
               } else {
                 if (mf.field_p) {
                   lg.field_b = true;
-                  cs.field_i = false;
+                  Wormhole.field_i = false;
                   DiskArchiveRequest.field_A = true;
                   if (!v.field_b) {
                     ta.a(0, 0, (byte) 96, false);
@@ -510,7 +510,7 @@ public final class ShatteredPlansClient extends tl {
                     ta.a(0, 10, (byte) 96, false);
                   }
                   DiskCacheWorker.a(1048576);
-                  mj.field_Hb[vr.field_c].a(0, (byte) 84, false);
+                  mj.field_Hb[GameRules.field_c].a(0, (byte) 84, false);
                   MusicEnvelope.field_d = false;
                   v.field_b = false;
                   mf.field_p = false;
@@ -598,16 +598,16 @@ public final class ShatteredPlansClient extends tl {
           if (IntrusiveNodeHashTable.field_g != null) {
             nj.a(90.0f, 2, cc.field_p);
             this.d(1);
-            ck.a(ms.field_d, (java.applet.Applet) (this), kl.field_s, rl.field_f, IntrusiveNodeHashTable.field_g, la.field_k, (byte) -8);
+            ck.a(ms.field_d, (java.applet.Applet) (this), AttackTask.field_s, rl.field_f, IntrusiveNodeHashTable.field_g, la.field_k, (byte) -8);
             rl.field_f = null;
             IntrusiveNodeHashTable.field_g = null;
             la.field_k = null;
             u.c(122);
             return false;
           }
-          if (nh.field_l != null) {
-            oi.a((byte) -126, nh.field_l);
-            nh.field_l = null;
+          if (PointsVictoryChecker.field_l != null) {
+            oi.a((byte) -126, PointsVictoryChecker.field_l);
+            PointsVictoryChecker.field_l = null;
             u.c(125);
             return false;
           }
@@ -619,7 +619,7 @@ public final class ShatteredPlansClient extends tl {
             return false;
           }
           if (null != oi.field_h) {
-            jd.a(1, new fm(oi.field_h.a(true, "huffman", "")));
+            CellVertex.a(1, new fm(oi.field_h.a(true, "huffman", "")));
             oi.field_h = null;
             u.c(126);
             return false;
@@ -635,9 +635,9 @@ public final class ShatteredPlansClient extends tl {
           }
           gr.field_o = 0;
           stackIn_77_0 = !(bs.field_b < 2);
-          se.field_g = stackIn_77_0;
+          AchievementProgress.field_g = stackIn_77_0;
           uc.field_A = -1;
-          vr.field_c = 0;
+          GameRules.field_c = 0;
           de.field_j = -1;
           hk.a(50, (byte) 52);
           ec.b(param0 ^ -86, 50);
@@ -645,10 +645,10 @@ public final class ShatteredPlansClient extends tl {
           jo.a(32767, hk.field_nb, true, 1048576);
           return true;
         }
-        if (kl.field_s.b((byte) 127) &&
-          kl.field_s.a("basic", -70)) {
-          if (kl.field_s.b((byte) -45) &&
-            kl.field_s.a("lobby", param0 + 16)) {
+        if (AttackTask.field_s.b((byte) 127) &&
+          AttackTask.field_s.a("basic", -70)) {
+          if (AttackTask.field_s.b((byte) -45) &&
+            AttackTask.field_s.a("lobby", param0 + 16)) {
             if (rl.field_f.b((byte) 120) &&
               rl.field_f.a("lobby", param0 ^ -62)) {
               if (cm.field_a.b((byte) 120) &&
@@ -661,8 +661,8 @@ public final class ShatteredPlansClient extends tl {
                       StrongCacheEntry.field_z.a(-1)) {
                       if (ms.field_d.b((byte) -81) &&
                         ms.field_d.a("", -67)) {
-                        if (nh.field_l.b((byte) -19) &&
-                          nh.field_l.a(param0 ^ -83)) {
+                        if (PointsVictoryChecker.field_l.b((byte) -19) &&
+                          PointsVictoryChecker.field_l.a(param0 ^ -83)) {
                           if (IntrusiveNodeHashTable.field_g.b((byte) -79) &&
                             IntrusiveNodeHashTable.field_g.a(-1)) {
                             if (ai.field_c.b((byte) -40) &&
@@ -686,40 +686,40 @@ public final class ShatteredPlansClient extends tl {
                                 nj.a(75.0f, 2, nc.a(MouseInputHandler.field_e, la.field_k, param0 ^ 118, jh.field_v));
                                 return false;
                               }
-                              nj.a(75.0f, 2, bh.a("", oi.field_h, (byte) 77, MouseInputHandler.field_e, jh.field_v));
+                              nj.a(75.0f, 2, BoundsRect.a("", oi.field_h, (byte) 77, MouseInputHandler.field_e, jh.field_v));
                               return false;
                             }
-                            nj.a(75.0f, 2, bh.a("", ai.field_c, (byte) 39, MouseInputHandler.field_e, jh.field_v));
+                            nj.a(75.0f, 2, BoundsRect.a("", ai.field_c, (byte) 39, MouseInputHandler.field_e, jh.field_v));
                             return false;
                           }
-                          nj.a(75.0f, 2, bh.a("", IntrusiveNodeHashTable.field_g, (byte) 12, fa.field_J, SpriteState.field_r));
+                          nj.a(75.0f, 2, BoundsRect.a("", IntrusiveNodeHashTable.field_g, (byte) 12, fa.field_J, SpriteState.field_r));
                           return false;
                         }
-                        nj.a(75.0f, 2, bh.a("", nh.field_l, (byte) 61, fa.field_J, SpriteState.field_r));
+                        nj.a(75.0f, 2, BoundsRect.a("", PointsVictoryChecker.field_l, (byte) 61, fa.field_J, SpriteState.field_r));
                         return false;
                       }
-                      nj.a(75.0f, 2, bh.a("", ms.field_d, (byte) 11, fa.field_J, SpriteState.field_r));
+                      nj.a(75.0f, 2, BoundsRect.a("", ms.field_d, (byte) 11, fa.field_J, SpriteState.field_r));
                       return false;
                     }
-                    nj.a(60.0f, param0 - 80, bh.a("", StrongCacheEntry.field_z, (byte) 62, le.field_a, hc.field_b));
+                    nj.a(60.0f, param0 - 80, BoundsRect.a("", StrongCacheEntry.field_z, (byte) 62, le.field_a, hc.field_b));
                     return false;
                   }
                   nj.a(45.0f, 2, ve.a(DualLinkNode.field_n, 0, le.field_a, hc.field_b, param0 - 15012));
                   return false;
                 }
-                nj.a(40.0f, 2, bh.a("", ld.field_m, (byte) 47, kh.field_Db, k.field_e));
+                nj.a(40.0f, 2, BoundsRect.a("", ld.field_m, (byte) 47, kh.field_Db, TurnEventLog.field_e));
                 return false;
               }
-              nj.a(20.0f, 2, bh.a("", cm.field_a, (byte) 117, kh.field_Db, k.field_e));
+              nj.a(20.0f, 2, BoundsRect.a("", cm.field_a, (byte) 117, kh.field_Db, TurnEventLog.field_e));
               return false;
             }
-            nj.a(17.0f, 2, bh.a("lobby", rl.field_f, (byte) 94, rq.field_h, IntrusiveDequeCursor.field_h));
+            nj.a(17.0f, 2, BoundsRect.a("lobby", rl.field_f, (byte) 94, rq.field_h, IntrusiveDequeCursor.field_h));
             return false;
           }
-          nj.a(13.0f, 2, bh.a("lobby", kl.field_s, (byte) 19, fa.field_J, SpriteState.field_r));
+          nj.a(13.0f, 2, BoundsRect.a("lobby", AttackTask.field_s, (byte) 19, fa.field_J, SpriteState.field_r));
           return false;
         }
-        nj.a(10.0f, param0 ^ 80, bh.a("basic", kl.field_s, (byte) 38, fa.field_J, SpriteState.field_r));
+        nj.a(10.0f, param0 ^ 80, BoundsRect.a("basic", AttackTask.field_s, (byte) 38, fa.field_J, SpriteState.field_r));
         return false;
     }
 
@@ -733,10 +733,10 @@ public final class ShatteredPlansClient extends tl {
         MusicCrossfadeStream.d(param0 ^ 24068);
         id.a((byte) -77);
         va.a(102);
-        kq.d(param0 ^ -24389);
+        GameScreen.d(param0 ^ -24389);
         kr.a((byte) 16);
-        vr.a(true);
-        l.a((byte) -98);
+        GameRules.a(true);
+        GalaxyMap.a((byte) -98);
         rl.a(param0 ^ -24069);
         GameKeyHandler.a((byte) -102);
         uo.a(true);
@@ -773,7 +773,7 @@ public final class ShatteredPlansClient extends tl {
         BufferedCacheFile.a(false);
         BufferedSocket.b((byte) -127);
         um.a((byte) -17);
-        ui.c(-26088);
+        SolVictoryChecker.c(-26088);
         IntrusiveNode.a(true);
         c.b();
         nq.a();
@@ -788,7 +788,7 @@ public final class ShatteredPlansClient extends tl {
         ij.a((byte) -29);
         SoundCache.a((byte) 120);
         sm.f(-25370);
-        km.h(11);
+        GameSession.h(11);
         te.a(param0 + 24069);
         nn.a((byte) 63);
         MidiPcmStream.d(-17876);
@@ -837,15 +837,15 @@ public final class ShatteredPlansClient extends tl {
         ho.a(520);
         GameState.e((byte) -67);
         Star.e(param0 ^ -24069);
-        mg.g((byte) -106);
-        qa.e(21758);
+        FleetMove.g((byte) -106);
+        PlacementOrder.e(21758);
         an.b(true);
         fm.a(110);
-        ia.c(param0 ^ 28675);
-        tr.g(0);
-        jj.c(45);
-        hp.b((byte) -64);
-        nh.b((byte) 59);
+        MapViewState.c(param0 ^ 28675);
+        MapView.g(0);
+        ConquestVictoryChecker.c(45);
+        DerelictVictoryChecker.b((byte) -64);
+        PointsVictoryChecker.b((byte) 59);
         VictoryChecker.a(true);
         jb.a(30);
         vs.a(param0 ^ -24162);
@@ -867,25 +867,25 @@ public final class ShatteredPlansClient extends tl {
         jp.g(param0 + 23965);
         dd.a(param0 ^ 27074);
         dg.f((byte) -124);
-        ka.d((byte) 79);
+        StandardAi.d((byte) 79);
         TaskAi.f(param0 ^ 24118);
         as.a(param0 ^ -24081);
-        vn.a((byte) 68);
+        BattleSnapshot.a((byte) 68);
         Territory.f(-28714);
-        eg.a(param0 + 24195);
-        hj.a((byte) 12);
-        ne.c(false);
-        qi.a(0);
-        nr.a((byte) 48);
-        k.a(0);
+        BattleEvent.a(param0 + 24195);
+        PlacementEvent.a((byte) 12);
+        BattleContribution.c(false);
+        SolarFlareEvent.a(0);
+        StarAbandonedEvent.a((byte) 48);
+        TurnEventLog.a(0);
         hb.c((byte) -122);
         sf.a((byte) 82);
         DualLinkDeque.d(param0 ^ -8957);
-        wb.a(-79);
+        QuaternaryNodeList.a(-79);
         wm.a(false);
         mi.a((byte) 99);
         ls.a(param0 - 4458);
-        qg.c(-124);
+        TutorialVictoryChecker.c(-124);
         ph.a((byte) 118);
         ad.a(18973);
         em.a(param0 + 24072);
@@ -901,12 +901,12 @@ public final class ShatteredPlansClient extends tl {
         os.d(true);
         qh.d((byte) 6);
         lo.l(0);
-        pc.d(84);
-        hs.b(0);
-        vl.b((byte) -80);
-        vi.d(-10);
-        el.a(-5731);
-        se.a((byte) -37);
+        DerelictMapGenerator.d(84);
+        StandardMapGenerator.b(0);
+        SolMapGenerator.b((byte) -80);
+        TutorialMapGenerator.d(-10);
+        TertiaryNodeList.a(-5731);
+        AchievementProgress.a((byte) -37);
         ck.a(100);
         eh.i(-105);
         DualLinkNode.d(9768448);
@@ -924,12 +924,12 @@ public final class ShatteredPlansClient extends tl {
         tq.b(param0 ^ 10214);
         de.a((byte) 102);
         sq.a((byte) 127);
-        jd.a(14077);
-        fi.a(param0 + 24110);
+        CellVertex.a(14077);
+        StarLink.a(param0 + 24110);
         sn.a(param0 ^ -24146);
-        cs.a(-93);
+        Wormhole.a(-93);
         a.a((byte) 15);
-        rf.c(true);
+        AllianceExpiredEvent.c(true);
         SocketArchiveNetworkClient.f(-126);
         NetworkArchiveRequest.d(false);
         SectorCacheStore.a(4);
@@ -985,21 +985,21 @@ public final class ShatteredPlansClient extends tl {
         NanoFrameTimer.b((byte) 78);
         ImageProducerRasterBuffer.a(6);
         us.a(param0 ^ -24069);
-        gl.a(param0 + 24155);
+        DisplayModeInfo.a(param0 + 24155);
         WhirlpoolHasher.a(0);
         t.a((byte) -11);
         ei.a((byte) -81);
         we.a(-122);
         lm.a(true);
-        vp.e((byte) -21);
-        cn.e(true);
+        TertiaryLinkNode.e((byte) -21);
+        QuaternaryLinkNode.e(true);
         ep.b(640);
         be.a((byte) 123);
         SynthInstrument.a();
-        kl.d(-62);
-        ac.e(-127);
-        co.d((byte) -99);
-        wf.a((byte) -122);
+        AttackTask.d(-62);
+        DefendTask.e(-127);
+        GarrisonTask.d((byte) -99);
+        AiTask.a((byte) -122);
         n.a(11209);
         MusicPatch.d(59114);
         MusicEnvelope.a(false);
@@ -1020,10 +1020,10 @@ public final class ShatteredPlansClient extends tl {
         td.a(-104);
         en.a(-5);
         cr.a((byte) 41);
-        mr.a(false);
-        rd.a(-90);
-        sh.b((byte) 87);
-        es.a(param0 ^ 24068);
+        DerelictMapReader.a(false);
+        StandardMapReader.a(-90);
+        SolMapReader.b((byte) 87);
+        StarAnnotation.a(param0 ^ 24068);
         so.d(2);
         qe.a((byte) 93);
         di.c(true);
@@ -1031,13 +1031,13 @@ public final class ShatteredPlansClient extends tl {
         ja.d((byte) 124);
         wd.e(false);
         ek.a(-1);
-        cj.c(false);
-        j.i(19333);
-        sc.f((byte) 97);
-        rj.i(388178881);
-        hg.c(false);
-        ma.i(30);
-        ca.a(2105376);
+        TutorialAi.c(false);
+        LegacyAi.i(19333);
+        AggressiveAi.f((byte) 97);
+        RecklessAi.i(388178881);
+        IsolationistAi.c(false);
+        DefensiveAi.i(30);
+        PlayerEliminatedEvent.a(2105376);
         ji.g((byte) -113);
         la.a((byte) 36);
         cb.a((byte) 104);
@@ -1063,7 +1063,7 @@ public final class ShatteredPlansClient extends tl {
         gm.a((byte) -111);
         qf.a(9952);
         uq.a(param0 + 24123);
-        bh.a(0);
+        BoundsRect.a(0);
         oq.a(param0 + 24098);
         qp.b((byte) -128);
         rq.b(-110);
@@ -1156,25 +1156,25 @@ public final class ShatteredPlansClient extends tl {
                   ks.a(20, tq.field_b, 3);
                 }
                 stackIn_82_0 = !(bs.field_b < 2);
-                se.field_g = stackIn_82_0;
-                gr.field_o = sh.field_b;
-                ArchiveRequest.a(75, id.a(2, kl.field_s, "basic", "unachieved"));
+                AchievementProgress.field_g = stackIn_82_0;
+                gr.field_o = SolMapReader.field_b;
+                ArchiveRequest.a(75, id.a(2, AttackTask.field_s, "basic", "unachieved"));
                 oi.a(!param0);
-                if (ne.field_s) {
-                  ne.field_s = false;
-                  StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_q + mp.field_b.field_K, mr.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, es.field_n);
+                if (BattleContribution.field_s) {
+                  BattleContribution.field_s = false;
+                  StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, DerelictMapReader.field_i, 240, mp.field_b.field_q + mp.field_b.field_K, DerelictMapReader.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
                   fm.a(false, -1);
                 }
                 if (ns.field_ob) {
                   ta.a(gr.field_o, -6, (byte) 96, false);
                 }
-                if (nh.a((byte) -111, gr.field_o)) {
+                if (PointsVictoryChecker.a((byte) -111, gr.field_o)) {
                   DiskCacheWorker.a(1048576);
                 }
                 GzipInflater.a(1);
               }
               ns.field_ob = false;
-              ne.field_s = false;
+              BattleContribution.field_s = false;
               jb.field_g = o.field_n;
             } else {
               na.field_F = na.field_F - 1;
@@ -1185,7 +1185,7 @@ public final class ShatteredPlansClient extends tl {
           } else {
             na.field_F = na.field_F + 1;
             if (na.field_F == 16) {
-              if (ne.field_s) {
+              if (BattleContribution.field_s) {
                 oq.a(param0);
               } else {
                 if (!ns.field_ob) {
@@ -1201,14 +1201,14 @@ public final class ShatteredPlansClient extends tl {
           var3 = 0;
           var4 = 0;
           if (!param1) {
-            if (vr.field_c == gr.field_o) {
-              if (vr.field_c != -1) {
-                if (vr.field_c != -2) {
-                  if (vr.field_c == -3) {
+            if (GameRules.field_c == gr.field_o) {
+              if (GameRules.field_c != -1) {
+                if (GameRules.field_c != -2) {
+                  if (GameRules.field_c == -3) {
                     ub.f((byte) 93);
                   } else {
-                    if (nh.a((byte) -121, vr.field_c)) {
-                      mj.field_Hb[vr.field_c].i(2664);
+                    if (PointsVictoryChecker.a((byte) -121, GameRules.field_c)) {
+                      mj.field_Hb[GameRules.field_c].i(2664);
                     }
                   }
                 } else {
@@ -1227,8 +1227,8 @@ public final class ShatteredPlansClient extends tl {
               }
             } else {
               if (eh.field_Q != 0 ||
-                !nh.a((byte) -76, vr.field_c) ||
-                mj.field_Hb[vr.field_c].a((byte) 95)) {
+                !PointsVictoryChecker.a((byte) -76, GameRules.field_c) ||
+                mj.field_Hb[GameRules.field_c].a((byte) 95)) {
                 eh.field_Q = eh.field_Q + 1;
               }
               if (eh.field_Q == 32) {
@@ -1289,12 +1289,12 @@ public final class ShatteredPlansClient extends tl {
           if (uc.field_v > 0) {
             uc.field_v = uc.field_v - 1;
           }
-          if (this.field_G.d(0) != null) {
+          if (this.field_G.startForward(0) != null) {
             fieldTemp$0 = this.field_I + 1;
             this.field_I = this.field_I + 1;
             if (fieldTemp$0 == 335) {
               this.field_I = 0;
-              this.field_G.h(64);
+              this.field_G.pollFirst(64);
             }
           }
         }
@@ -1305,37 +1305,37 @@ public final class ShatteredPlansClient extends tl {
         if (gr.field_o == -4) {
           tq.field_b = null;
           var11 = new String[]{hn.field_f[0], hn.field_f[1], hn.field_f[2], hn.field_f[3]};
-          ce.field_x = new km(false, false, (int) MidiPcmStream.field_w[0], td.field_K, hj.field_k, var11, 0, false, (kq) null);
+          ce.field_x = new GameSession(false, false, (int) MidiPcmStream.field_w[0], td.field_K, PlacementEvent.field_k, var11, 0, false, (GameScreen) null);
           stackIn_102_0 = (!uh.field_i) ? 0 : 1;
           var4Lifetime1 = stackIn_102_0;
           ta.a(0, -1, (byte) 96, var4Lifetime1 != 0);
-          cs.field_i = true;
+          Wormhole.field_i = true;
         }
         if (gr.field_o == -5) {
           tq.field_b = null;
           var12 = new String[]{hn.field_f[0]};
-          ce.field_x = new km(false, true, 0, TaskAi.field_a, 0, var12, 0, false, (kq) null);
+          ce.field_x = new GameSession(false, true, 0, TaskAi.field_a, 0, var12, 0, false, (GameScreen) null);
           stackIn_107_0 = (!uh.field_i) ? 0 : 1;
           var4Lifetime2 = stackIn_107_0;
           ta.a(0, -1, (byte) 96, var4Lifetime2 != 0);
-          cs.field_i = true;
+          Wormhole.field_i = true;
         }
         if (gr.field_o == -7) {
           NetworkArchiveRequest.a(11, np.field_a.g(-79), (byte) -2);
-          gr.field_o = vr.field_c;
+          gr.field_o = GameRules.field_c;
           is.field_a = true;
         }
     }
 
     private final void c(boolean param0) {
-        if (ka.field_e != null) {
-          ee.a(-47, ka.field_e);
-          ka.field_e = null;
+        if (StandardAi.field_e != null) {
+          ee.a(-47, StandardAi.field_e);
+          StandardAi.field_e = null;
           u.c(121);
         }
         oi.field_h = SoundCache.a(3, 50);
         ms.field_d = IterableNodeHashTable.a(5, true, param0, !param0 ? true : false, false);
-        nh.field_l = SoundCache.a(6, 93);
+        PointsVictoryChecker.field_l = SoundCache.a(6, 93);
         IntrusiveNodeHashTable.field_g = SoundCache.a(7, 110);
         cm.field_a = SoundCache.a(8, 90);
         ld.field_m = SoundCache.a(9, 28);
@@ -1394,60 +1394,60 @@ public final class ShatteredPlansClient extends tl {
           ProxySocketConnector.a(9242, (java.awt.Canvas) (var2));
           return;
         }
-        if (~gr.field_o != ~vr.field_c) {
-          stackIn_28_0 = (-1 == vr.field_c);
+        if (~gr.field_o != ~GameRules.field_c) {
+          stackIn_28_0 = (-1 == GameRules.field_c);
           u.a(stackIn_28_0, false);
-          if (~vr.field_c != ~gr.field_o ||
-            -2 != vr.field_c) {
+          if (~GameRules.field_c != ~gr.field_o ||
+            -2 != GameRules.field_c) {
             ShatteredPlansClient.n((byte) 67);
           }
-          if (nh.a((byte) -105, vr.field_c) &&
-            !nh.a((byte) -123, gr.field_o)) {
-            mj.field_Hb[vr.field_c].b(94, 128 * eh.field_Q / 32);
+          if (PointsVictoryChecker.a((byte) -105, GameRules.field_c) &&
+            !PointsVictoryChecker.a((byte) -123, gr.field_o)) {
+            mj.field_Hb[GameRules.field_c].b(94, 128 * eh.field_Q / 32);
           } else {
-            if (!nh.a((byte) -75, vr.field_c) &&
-              nh.a((byte) -127, gr.field_o)) {
+            if (!PointsVictoryChecker.a((byte) -75, GameRules.field_c) &&
+              PointsVictoryChecker.a((byte) -127, gr.field_o)) {
               mj.field_Hb[gr.field_o].b(89, -(eh.field_Q * 128 / 32) + 128);
             } else {
-              if (nh.a((byte) -125, vr.field_c) &&
-                nh.a((byte) -74, gr.field_o)) {
-                mj.field_Hb[vr.field_c].c(gr.field_o, -6469, 128 * eh.field_Q / 32);
+              if (PointsVictoryChecker.a((byte) -125, GameRules.field_c) &&
+                PointsVictoryChecker.a((byte) -74, gr.field_o)) {
+                mj.field_Hb[GameRules.field_c].c(gr.field_o, -6469, 128 * eh.field_Q / 32);
               }
             }
           }
         } else {
-          if (vr.field_c != -2) {
-            stackIn_18_0 = (vr.field_c == -1);
+          if (GameRules.field_c != -2) {
+            stackIn_18_0 = (GameRules.field_c == -1);
             u.a(stackIn_18_0, false);
-            if (vr.field_c != gr.field_o ||
-              vr.field_c != -2) {
+            if (GameRules.field_c != gr.field_o ||
+              GameRules.field_c != -2) {
               ShatteredPlansClient.n((byte) 67);
             }
-            if (nh.a((byte) -99, vr.field_c)) {
-              mj.field_Hb[vr.field_c].g(-121);
+            if (PointsVictoryChecker.a((byte) -99, GameRules.field_c)) {
+              mj.field_Hb[GameRules.field_c].g(-121);
             }
           } else {
             gf.b();
           }
         }
-        if (gr.field_o != vr.field_c) {
+        if (gr.field_o != GameRules.field_c) {
           if (gr.field_o == -2) {
             gf.c(0, 0, 640, 480, 0, 256 * eh.field_Q / 32);
           } else {
-            if (vr.field_c == -2) {
+            if (GameRules.field_c == -2) {
               gf.c(0, 0, 640, 480, 0, -(256 * eh.field_Q / 32) + 256);
             }
           }
         }
-        if (!cj.field_x ||
-          !cs.field_i) {
+        if (!TutorialAi.field_x ||
+          !Wormhole.field_i) {
           qr.a(VictoryChecker.a(30), (byte) 111);
         }
         if (FullscreenFocusCanvas.field_b > 0) {
           gf.c(0, 0, 640, 480, 0, FullscreenFocusCanvas.field_b);
         }
         if (sq.a(false)) {
-          ts.a(sa.a(-27572), param0 ^ -2, mg.e(param0 ^ -84));
+          ts.a(sa.a(-27572), param0 ^ -2, FleetMove.e(param0 ^ -84));
           kd.a((byte) -119);
         } else {
           if (kh.f((byte) -67)) {
@@ -1456,8 +1456,8 @@ public final class ShatteredPlansClient extends tl {
             Player.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_71_1);
           } else {
             if (!i.c(0)) {
-              if (!this.field_G.g(27)) {
-                var3_ref_he = (he) (this.field_G.d(param0 ^ 1));
+              if (!this.field_G.isEmpty(27)) {
+                var3_ref_he = (he) (this.field_G.startForward(param0 ^ 1));
                 var4 = ud.field_a[var3_ref_he.field_k];
                 var5_int = mp.field_b.c(var4) + 50;
                 var6 = 36;
@@ -1495,7 +1495,7 @@ public final class ShatteredPlansClient extends tl {
           }
         }
         if (mm.field_n &&
-          se.field_g) {
+          AchievementProgress.field_g) {
           mp.field_b.d(Integer.toString(rq.field_i), 4, 4 + mp.field_b.field_J, 16777215, -1);
           var3 = Runtime.getRuntime().totalMemory();
           var5 = Runtime.getRuntime().freeMemory();
@@ -1518,7 +1518,7 @@ public final class ShatteredPlansClient extends tl {
         int var2 = 0;
         double var3 = 0.0;
         int var2Lifetime1;
-        if (-3 != vr.field_c) {
+        if (-3 != GameRules.field_c) {
           if (ce.field_x != null ||
             SecondaryNodeHashTable.field_g != null) {
             return;

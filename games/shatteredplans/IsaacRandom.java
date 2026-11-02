@@ -28,18 +28,18 @@ final class IsaacRandom {
           if (param0 < 15) {
             field_a = (String) null;
           }
-          if (vp.field_o.field_a >= 4) {
-            if (vp.field_o.field_p == -1) {
+          if (TertiaryLinkNode.field_o.field_a >= 4) {
+            if (TertiaryLinkNode.field_o.field_p == -1) {
               return 3;
             }
-            if (vp.field_o.field_p != -2) {
+            if (TertiaryLinkNode.field_o.field_p != -2) {
               return 1;
             }
             return 4;
           }
           try {
             if (gb.field_i == 0) {
-              oj.field_Gb = dh.field_a.a(65535, hn.field_i, rd.field_d);
+              oj.field_Gb = dh.field_a.a(65535, hn.field_i, StandardMapReader.field_d);
               gb.field_i = gb.field_i + 1;
             }
             if (gb.field_i == 1) {
@@ -55,8 +55,8 @@ final class IsaacRandom {
               js.field_a = new BufferedSocket((java.net.Socket) (oj.field_Gb.field_e), dh.field_a);
               var2 = new PacketBuffer(13);
               hq.a(ae.field_h, si.field_u, var2, (byte) 20, sr.field_q);
-              var2.c(15, (byte) -69);
-              var2.e(11135, sg.field_Cb);
+              var2.writeByte(15, (byte) -69);
+              var2.writeInt(11135, sg.field_Cb);
               js.field_a.a(13, 0, var2.payload, -13976);
               gb.field_i = gb.field_i + 1;
               am.field_Cb = 30000L + pr.a(14274);
@@ -79,7 +79,7 @@ final class IsaacRandom {
             if (4 != gb.field_i) {
               return -1;
             }
-            vp.field_o.a((byte) 90, hq.field_c, js.field_a);
+            TertiaryLinkNode.field_o.a((byte) 90, hq.field_c, js.field_a);
             js.field_a = null;
             gb.field_i = 0;
             oj.field_Gb = null;

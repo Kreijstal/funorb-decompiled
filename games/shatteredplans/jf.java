@@ -30,7 +30,7 @@ final class jf {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            cj.field_u = param1;
+            TutorialAi.field_u = param1;
             try {
               var7 = param2.getParameter("cookieprefix");
               var5 = var7;
@@ -105,17 +105,17 @@ final class jf {
     }
 
     final static void b(byte param0) {
-        bh.field_j = false;
+        BoundsRect.field_j = false;
         if (param0 == -15) {
           hm.field_p = null;
-          el.field_d = null;
+          TertiaryNodeList.field_d = null;
           kp.field_o = null;
           kd.field_b = null;
           return;
         }
         field_c = (byte[][]) null;
         hm.field_p = null;
-        el.field_d = null;
+        TertiaryNodeList.field_d = null;
         kp.field_o = null;
         kd.field_b = null;
     }

@@ -84,7 +84,7 @@ final class re {
                 continue;
               }
               var5++;
-              var8 = ma.a((CharSequence) ((Object) var7_ref_String), 2);
+              var8 = DefensiveAi.a((CharSequence) ((Object) var7_ref_String), 2);
               var4 = var4 + (param2[var8].length() - var5 + var6_int);
               continue;
             }
@@ -120,7 +120,7 @@ final class re {
               continue;
             }
             var5Lifetime1++;
-            var10 = ma.a((CharSequence) ((Object) var9), 2);
+            var10 = DefensiveAi.a((CharSequence) ((Object) var9), 2);
             discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
             discarded$1 = var6.append(param2[var10]);
             var7 = var5Lifetime1;

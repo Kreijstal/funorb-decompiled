@@ -141,12 +141,12 @@ final class dm {
           stackIn_42_0 = (ub) (param2);
           stackIn_42_1 = 4 * (2 + cr.field_c) * param0;
           stackIn_42_2 = cr.field_c * 2 + 4;
-          stackIn_43_3 = (param2 == hp.field_l);
+          stackIn_43_3 = (param2 == DerelictVictoryChecker.field_l);
           stackIn_46_0 = (!((ub) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_42_2, stackIn_43_3, -108, param3, 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_46_0;
           var10 = param2.field_xb.field_M;
           var11 = null;
-          var12 = (mj) (var10.d(param1));
+          var12 = (mj) (var10.startForward(param1));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_M) {
@@ -160,9 +160,9 @@ final class dm {
               var12.field_xb = new qr(0L, SpriteState.field_u);
               var12.a(4, var12.field_xb);
               var12.e((byte) -128);
-              var12.field_Jb = new qr(0L, kq.field_h);
+              var12.field_Jb = new qr(0L, GameScreen.field_h);
               var12.a(param1 ^ 4, var12.field_Jb);
-              var12.field_Mb = new qr(0L, rf.field_l);
+              var12.field_Mb = new qr(0L, AllianceExpiredEvent.field_l);
               var13 = 1;
               var12.a(4, var12.field_Mb);
             }
@@ -240,7 +240,7 @@ final class dm {
                   if (!var12.field_Vb) {
                     var12.field_Jb.field_z = um.field_p;
                   } else {
-                    var12.field_Ab.field_z = re.a(mg.field_E, 4371, new String[]{var20});
+                    var12.field_Ab.field_z = re.a(FleetMove.field_E, 4371, new String[]{var20});
                     var12.field_Jb.field_z = o.field_m;
                     var12.field_Mb.field_z = hl.field_J;
                   }
@@ -320,7 +320,7 @@ final class dm {
                 ArchiveSourceManager.a((byte) -79, param4, var12.field_Ib);
               } else {
                 if (0 == var12.field_Mb.field_rb) {
-                  qg.a(nh.field_p, var12, td.field_P, param2, 0, 0, (byte) 110);
+                  TutorialVictoryChecker.a(PointsVictoryChecker.field_p, var12, td.field_P, param2, 0, 0, (byte) 110);
                 } else {
                   Archive.a(param4, (byte) 2, var12.field_Ib);
                 }
@@ -329,7 +329,7 @@ final class dm {
             if (var12.field_v) {
               if (var12.h(-121)) {
                 var11 = var12;
-                var12 = (mj) (var10.a((byte) -71));
+                var12 = (mj) (var10.nextForward((byte) -71));
                 continue;
               }
               var24Lifetime2 = null;
@@ -349,10 +349,10 @@ final class dm {
                         var25_int = DualLinkDeque.a(param1 + 38, var8 & ~var12.field_Wb);
                         var24Lifetime2 = re.a(RandomAccessCacheFile.field_j, 4371, new String[]{var20});
                         if (0 < var25_int &&
-                          null != qa.field_s &&
-                          var25_int <= qa.field_s.length &&
-                          qa.field_s[var25_int - 1] != null) {
-                          var24Lifetime2 = re.a(qa.field_s[var25_int - 1][2], param1 ^ 4371, new String[]{var20});
+                          null != PlacementOrder.field_s &&
+                          var25_int <= PlacementOrder.field_s.length &&
+                          PlacementOrder.field_s[var25_int - 1] != null) {
+                          var24Lifetime2 = re.a(PlacementOrder.field_s[var25_int - 1][2], param1 ^ 4371, new String[]{var20});
                         }
                       }
                     } else {
@@ -383,10 +383,10 @@ final class dm {
                         var25_int = DualLinkDeque.a(param1 + 31, var8 & ~var12.field_Wb);
                         var24Lifetime2 = ub.field_Eb;
                         if (0 < var25_int &&
-                          null != qa.field_s &&
-                          qa.field_s.length >= var25_int &&
-                          qa.field_s[-1 + var25_int] != null) {
-                          var24Lifetime2 = qa.field_s[-1 + var25_int][1];
+                          null != PlacementOrder.field_s &&
+                          PlacementOrder.field_s.length >= var25_int &&
+                          PlacementOrder.field_s[-1 + var25_int] != null) {
+                          var24Lifetime2 = PlacementOrder.field_s[-1 + var25_int][1];
                         }
                       }
                     } else {
@@ -460,7 +460,7 @@ final class dm {
                 if (ro.field_a == param2 &&
                   SecondaryNodeDequeIterator.a((byte) -124)) {
                   if (var26Lifetime1 != 0) {
-                    var24Lifetime2 = var34 + "<br>" + eg.field_s + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + BattleEvent.field_s + (String) (var25);
                   } else {
                     var24Lifetime2 = var34 + "<br>" + re.a(ud.field_d, 4371, new String[]{(String) (var25)});
                   }
@@ -480,7 +480,7 @@ final class dm {
               }
             }
             var11 = var12;
-            var12 = (mj) (var10.a((byte) -71));
+            var12 = (mj) (var10.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

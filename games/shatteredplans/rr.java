@@ -20,7 +20,7 @@ class rr extends o {
           if (param0 == null) {
             return null;
           }
-          var7 = (a) (param0.d(param3 ^ param3));
+          var7 = (a) (param0.startForward(param3 ^ param3));
           while (var7 != null) {
             dupTemp$1 = var7.b(-125, param2, param1);
             var5 = dupTemp$1;
@@ -28,7 +28,7 @@ class rr extends o {
               stackIn_10_0 = var5;
               return stackIn_10_0;
             }
-            var7 = (a) (param0.a((byte) -71));
+            var7 = (a) (param0.nextForward((byte) -71));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -74,13 +74,13 @@ class rr extends o {
         RuntimeException decompiledCaughtException = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var3 = param1.d(0);
+          var3 = param1.startForward(0);
           while (var3 != null) {
             var4 = (vd) (var3);
             if (var4.a((byte) -118, param0)) {
               return true;
             }
-            var3 = param1.a((byte) -71);
+            var3 = param1.nextForward((byte) -71);
           }
           if (param2 == 64) {
             return false;

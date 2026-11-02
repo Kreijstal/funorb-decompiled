@@ -42,12 +42,12 @@ final class ph implements jk {
           if (null == cb.field_h) {
             return;
           }
-          var1 = (hd) (cb.field_h.d(param0));
+          var1 = (hd) (cb.field_h.startForward(param0));
           while (var1 != null) {
             if (0 > var1.field_h) {
-              var1.b((byte) -70);
+              var1.unlink((byte) -70);
             }
-            var1 = (hd) (cb.field_h.a((byte) -71));
+            var1 = (hd) (cb.field_h.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

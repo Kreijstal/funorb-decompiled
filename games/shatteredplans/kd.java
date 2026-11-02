@@ -6,7 +6,7 @@ final class kd {
     static String field_c;
     static int field_a;
 
-    final static void a(vr param0, boolean param1, Star param2, byte param3) {
+    final static void a(GameRules param0, boolean param1, Star param2, byte param3) {
         int var5 = 0;
         Star[] var4 = null;
         Star var6 = null;
@@ -246,7 +246,7 @@ final class kd {
             var4 = ss.field_a[var3];
             if (0 <= var4) {
               if (GameState.field_l.field_c == var4) {
-                var5 = es.field_n;
+                var5 = StarAnnotation.field_n;
               } else {
                 var5 = ah.field_P;
               }
@@ -256,10 +256,10 @@ final class kd {
             var6 = kr.field_f[var3];
             if (eh.field_C == 2 &&
               var2 == 1) {
-              if (kp.field_o.length >= el.field_d.length) {
+              if (kp.field_o.length >= TertiaryNodeList.field_d.length) {
                 stackIn_20_0 = kp.field_o.length;
               } else {
-                stackIn_20_0 = el.field_d.length;
+                stackIn_20_0 = TertiaryNodeList.field_d.length;
               }
               var7 = stackIn_20_0;
               if (hm.field_p.length > field_b.length) {
@@ -294,17 +294,17 @@ final class kd {
             stackIn_40_1 = 0;
             stackIn_41_2 = !(var4 < 0);
             var7Lifetime1 = vm.a(stackIn_40_0, stackIn_40_1, stackIn_41_2);
-            var8Lifetime1 = -(var7Lifetime1 >> 1) + cn.field_w;
+            var8Lifetime1 = -(var7Lifetime1 >> 1) + QuaternaryLinkNode.field_w;
             if (0 <= var4) {
               var1_int = var1_int + sm.field_b;
               if (GameState.field_l.field_c == var4) {
-                stackIn_45_0 = cs.field_l;
+                stackIn_45_0 = Wormhole.field_l;
               } else {
                 stackIn_45_0 = kr.field_a;
               }
               var9 = stackIn_45_0;
               if (var9 != null) {
-                var9.a((ArchiveNetworkClient.field_i << 1) + id.field_b, -tr.field_Lb + var8Lifetime1, var1_int, (tr.field_Lb << 1) + var7Lifetime1, -106);
+                var9.a((ArchiveNetworkClient.field_i << 1) + id.field_b, -MapView.field_Lb + var8Lifetime1, var1_int, (MapView.field_Lb << 1) + var7Lifetime1, -106);
               }
               var1_int = var1_int + ArchiveNetworkClient.field_i;
             }
@@ -342,10 +342,10 @@ final class kd {
         u.field_c = new int[param1];
         cb.field_o = new int[param1];
         ah.field_U = param1;
-        wb.field_b = new int[param1];
+        QuaternaryNodeList.field_b = new int[param1];
         rl.field_b = new boolean[param1];
         WeightedLruCache.field_a = new int[param1];
-        hs.field_i = new int[param1];
+        StandardMapGenerator.field_i = new int[param1];
         oe.field_i = new int[param1];
         u.field_d = new int[param1];
         ei.field_d = new int[param1];

@@ -51,8 +51,8 @@ final class fe extends vd {
     }
 
     final static void f(int param0) {
-        mg.field_C = false;
-        el.field_b = false;
+        FleetMove.field_C = false;
+        TertiaryNodeList.field_b = false;
         qj.a((byte) -127, param0);
         ee.field_l = oj.field_Fb;
         fj.field_s = oj.field_Fb;

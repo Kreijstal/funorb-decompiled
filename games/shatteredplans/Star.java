@@ -19,11 +19,11 @@ final class Star extends DualLinkNode {
     int field_x;
     static Sprite field_F;
     int field_B;
-    jd[] field_r;
+    CellVertex[] field_r;
     int field_p;
     static int[] field_H;
     static String field_o;
-    fi[] field_v;
+    StarLink[] field_v;
     IntrusiveDeque field_T;
     int field_N;
     boolean field_u;
@@ -37,7 +37,7 @@ final class Star extends DualLinkNode {
     int[] field_G;
     static String field_E;
 
-    final void e(byte param0) {
+    final void sortNeighboursByIndex(byte param0) {
         int var4 = 0;
         int var2;
         int var3;
@@ -81,19 +81,19 @@ final class Star extends DualLinkNode {
         field_O = (Sprite[][]) null;
     }
 
-    final void a(Star param0, byte param1) {
+    final void removeNeighbour(Star param0, byte param1) {
         Star[] var7 = null;
         Star[] var8 = null;
         int var4 = 0;
         int var5 = 0;
         int incrementValue$0 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (!this.b(param0, (byte) 10)) {
+        if (!this.isNeighbour(param0, (byte) 10)) {
           return;
         }
         if (this.field_D.length == 1) {
           this.field_D = new Star[]{};
-          param0.a(this, (byte) -124);
+          param0.removeNeighbour(this, (byte) -124);
           return;
         }
         try {
@@ -112,13 +112,13 @@ final class Star extends DualLinkNode {
             this.field_s = (DualLinkDeque) null;
           }
           this.field_D = var8;
-          param0.a(this, (byte) -123);
+          param0.removeNeighbour(this, (byte) -123);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ln.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, Star param1) {
+    final void addNeighbour(byte param0, Star param1) {
         int var4 = 0;
         Star[] var3 = null;
         int var5 = 0;
@@ -195,7 +195,7 @@ final class Star extends DualLinkNode {
           var4 = 0;
           if (param1 < 61) {
             var7 = (Star) null;
-            this.a((Star) null, (byte) 104);
+            this.removeNeighbour((Star) null, (byte) 104);
           }
           var8[2] = 4 * this.field_G[3];
           var8[3] = 4 * this.field_G[2];
@@ -236,7 +236,7 @@ final class Star extends DualLinkNode {
         }
     }
 
-    final boolean b(Star param0, byte param1) {
+    final boolean isNeighbour(Star param0, byte param1) {
         Star[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -260,7 +260,7 @@ final class Star extends DualLinkNode {
             if (var7.length <= var4) {
               if (param1 != 10) {
                 stackIn_13_1 = (Star) null;
-                this.a(stackIn_13_1, (byte) 102);
+                this.removeNeighbour(stackIn_13_1, (byte) 102);
               }
               return false;
             }
@@ -288,14 +288,14 @@ final class Star extends DualLinkNode {
 
     final static void f(byte param0) {
         int var2 = -118 / ((3 - param0) / 49);
-        cl var1 = (cl) (ta.field_b.a(true));
+        cl var1 = (cl) (ta.field_b.pollLast(true));
         if (var1 == null) {
           throw new IllegalStateException();
         }
         gf.a(var1.field_i, var1.field_r, var1.field_k);
         gf.d(var1.field_o, var1.field_h, var1.field_j, var1.field_l);
         var1.field_i = null;
-        ql.field_p.a((byte) -113, var1);
+        ql.field_p.addLast((byte) -113, var1);
     }
 
     Star(int param0, int param1, int param2, int param3) {

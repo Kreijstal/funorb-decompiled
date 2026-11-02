@@ -166,7 +166,7 @@ abstract class w extends WidgetContainer {
                 return stackIn_17_0;
               }
             } else {
-              if (ma.field_q.indexOf(var5) == -1) {
+              if (DefensiveAi.field_q.indexOf(var5) == -1) {
                 stackIn_21_0 = as.field_t;
                 return stackIn_21_0;
               }
@@ -201,7 +201,7 @@ abstract class w extends WidgetContainer {
     final static void f(byte param0) {
         BufferedCacheFile.c(0);
         if (tm.field_i != null) {
-          hs.a(tm.field_i, (byte) -101);
+          StandardMapGenerator.a(tm.field_i, (byte) -101);
         }
         rs.g(-96);
         og.a(false);

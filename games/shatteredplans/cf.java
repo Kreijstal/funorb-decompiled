@@ -71,17 +71,17 @@ final class cf extends WidgetContainer implements bp {
             field_D = -63;
           }
           if (je.field_d != 1) {
-            if (rf.field_n != 1) {
+            if (AllianceExpiredEvent.field_n != 1) {
               if (null != il.field_bb &&
                 uq.field_i >= 5) {
-                ca.field_h = null;
+                PlayerEliminatedEvent.field_h = null;
               } else {
-                ca.field_h = vn.field_s;
-                if (null != ca.field_h) {
-                  ca.field_h.d(-ca.field_h.field_l + pd.field_k, -ca.field_h.field_h + bb.field_b, -30872);
+                PlayerEliminatedEvent.field_h = BattleSnapshot.field_s;
+                if (null != PlayerEliminatedEvent.field_h) {
+                  PlayerEliminatedEvent.field_h.d(-PlayerEliminatedEvent.field_h.field_l + pd.field_k, -PlayerEliminatedEvent.field_h.field_h + bb.field_b, -30872);
                 }
               }
-              vn.field_s = null;
+              BattleSnapshot.field_s = null;
               il.field_bb = null;
             } else {
               uq.field_i = uq.field_i + 1;
@@ -89,7 +89,7 @@ final class cf extends WidgetContainer implements bp {
                 var2_int = (ba.field_c - bb.field_b) * (ba.field_c - bb.field_b) + (-pd.field_k + ck.field_e) * (-pd.field_k + ck.field_e);
                 if (5 < var2_int &&
                   uq.field_i > 5) {
-                  il.field_bb = vn.field_s;
+                  il.field_bb = BattleSnapshot.field_s;
                 }
               }
               if (il.field_bb != null) {
@@ -98,9 +98,9 @@ final class cf extends WidgetContainer implements bp {
             }
           } else {
             ba.field_c = td.field_P;
-            ck.field_e = nh.field_p;
+            ck.field_e = PointsVictoryChecker.field_p;
             uq.field_i = 0;
-            vn.field_s = rr.a(param0, td.field_P, nh.field_p, param1 - 37);
+            BattleSnapshot.field_s = rr.a(param0, td.field_P, PointsVictoryChecker.field_p, param1 - 37);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,7 +140,7 @@ final class cf extends WidgetContainer implements bp {
         }
         var2 = stackIn_6_0;
         stackIn_8_0 = 14;
-        stackIn_9_1 = (l.field_f <= 50) ? false : true;
+        stackIn_9_1 = (GalaxyMap.field_f <= 50) ? false : true;
         stackIn_12_2 = param0 ^ 16777213;
         stackIn_12_3 = param1;
         stackIn_12_4 = 13;
@@ -151,14 +151,14 @@ final class cf extends WidgetContainer implements bp {
         stackIn_12_9 = var2;
         stackIn_12_10 = 11;
         stackIn_14_11 = (v.field_b) || (MusicEnvelope.field_d);
-        hg.a(stackIn_8_0, stackIn_9_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9 != 0, stackIn_12_10, stackIn_14_11);
+        IsolationistAi.a(stackIn_8_0, stackIn_9_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9 != 0, stackIn_12_10, stackIn_14_11);
         if (sm.field_e &&
           cl.field_n % 50 == 0) {
           js.field_f.h(58, 255);
         }
-        if (ac.field_u) {
+        if (DefendTask.field_u) {
           js.field_f.h(58, 255);
-          ac.field_u = false;
+          DefendTask.field_u = false;
         }
         if (param0 != 2) {
           field_F = (Sprite) null;
@@ -168,7 +168,7 @@ final class cf extends WidgetContainer implements bp {
           GzipInflater.field_d = false;
         }
         if (uc.field_B) {
-          uc.a(320, mp.field_b.field_K, mp.field_b.field_q + mp.field_b.field_K, 240, 8, nd.field_i, true, mr.field_i, (byte) -87, 2, mr.field_i, mp.field_b, false, 8, 1);
+          uc.a(320, mp.field_b.field_K, mp.field_b.field_q + mp.field_b.field_K, 240, 8, nd.field_i, true, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, mp.field_b, false, 8, 1);
           uc.field_B = false;
         }
     }

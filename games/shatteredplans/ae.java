@@ -57,13 +57,13 @@ final class ae {
         try {
           boolean decompiledFrameRemainder0 = true;
           var27 = sa.field_a;
-          var2 = var27.j(-56);
+          var2 = var27.readUnsignedByte(-56);
           if (0 == var2) {
-            var3 = var27.f(-20976);
-            var4 = (jr) (i.field_n.d(0));
+            var3 = var27.readUnsignedShort(-20976);
+            var4 = (jr) (i.field_n.startForward(0));
             while (var4 != null) {
               if (~var3 != ~var4.field_j) {
-                var4 = (jr) (i.field_n.a((byte) -71));
+                var4 = (jr) (i.field_n.nextForward((byte) -71));
                 continue;
               }
               break;
@@ -72,20 +72,20 @@ final class ae {
               q.g(-125);
               return;
             }
-            var5 = var27.j(-77);
+            var5 = var27.readUnsignedByte(-77);
             if (0 != var5) {
               var6 = var4.field_i;
-              rf.field_j[0].field_b = null;
-              rf.field_j[0].field_d = Star.field_o;
+              AllianceExpiredEvent.field_j[0].field_b = null;
+              AllianceExpiredEvent.field_j[0].field_d = Star.field_o;
               var7 = var4.field_k;
-              rf.field_j[0].field_a = false;
+              AllianceExpiredEvent.field_j[0].field_a = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                rf.field_j[var8_int].field_d = var27.e(-1);
-                rf.field_j[var8_int].field_a = false;
-                if (var27.j(-78) != 1) {
-                  rf.field_j[var8_int].field_b = null;
+                AllianceExpiredEvent.field_j[var8_int].field_d = var27.readString(-1);
+                AllianceExpiredEvent.field_j[var8_int].field_a = false;
+                if (var27.readUnsignedByte(-78) != 1) {
+                  AllianceExpiredEvent.field_j[var8_int].field_b = null;
                 } else {
-                  rf.field_j[var8_int].field_b = var27.e(-1);
+                  AllianceExpiredEvent.field_j[var8_int].field_b = var27.readString(-1);
                 }
               }
               var8 = new String[3][var6];
@@ -98,21 +98,21 @@ final class ae {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.j(-56);
+              var18 = var27.readUnsignedByte(-56);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var27.j(-115);
-                  var21 = rf.field_j[var20].field_d;
-                  var22 = var27.d(105);
+                  var20 = var27.readUnsignedByte(-115);
+                  var21 = AllianceExpiredEvent.field_j[var20].field_d;
+                  var22 = var27.readLong(105);
                   var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = rf.field_j[var20].field_b;
+                    var9[0][var12] = AllianceExpiredEvent.field_j[var20].field_b;
                     var34[0][var12] = var22;
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$0 = var15;
                       var15++;
-                      var35[0][incrementValue$0] = var27.a(16711680);
+                      var35[0][incrementValue$0] = var27.readInt(16711680);
                     }
                     var12++;
                   }
@@ -126,41 +126,41 @@ final class ae {
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$1 = var16;
                       var16++;
-                      var35[1][incrementValue$1] = var27.a(16711680);
+                      var35[1][incrementValue$1] = var27.readInt(16711680);
                     }
                   }
                   if (var14 < var6 &&
-                    !rf.field_j[var20].field_a) {
-                    rf.field_j[var20].field_a = true;
+                    !AllianceExpiredEvent.field_j[var20].field_a) {
+                    AllianceExpiredEvent.field_j[var20].field_a = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = rf.field_j[var20].field_b;
+                    var9[2][var14] = AllianceExpiredEvent.field_j[var20].field_b;
                     var34[2][var14] = var22;
                     var27.position = var24;
                     var14++;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$2 = var17;
                       var17++;
-                      var35[2][incrementValue$2] = var27.a(16711680);
+                      var35[2][incrementValue$2] = var27.readInt(16711680);
                     }
                   }
                 }
               }
             }
-            var4.b((byte) -58);
+            var4.unlink((byte) -58);
           } else {
             if (1 == var2) {
-              var3 = var27.f(-20976);
-              var27.d(56);
-              var4_ref = (wj) (wd.field_P.d(0));
+              var3 = var27.readUnsignedShort(-20976);
+              var27.readLong(56);
+              var4_ref = (wj) (wd.field_P.startForward(0));
               while (var4_ref != null) {
                 if (var4_ref.field_h != var3) {
-                  var4_ref = (wj) (wd.field_P.a((byte) -71));
+                  var4_ref = (wj) (wd.field_P.nextForward((byte) -71));
                   continue;
                 }
                 break;
               }
               if (var4_ref != null) {
-                var4_ref.b((byte) -63);
+                var4_ref.unlink((byte) -63);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -209,14 +209,14 @@ final class ae {
         var2 = pd.field_j;
         synchronized (var2) {
           ql.field_q = ql.field_q + 1;
-          rf.field_n = v.field_d;
+          AllianceExpiredEvent.field_n = v.field_d;
           pd.field_k = aj.field_f;
-          bb.field_b = rf.field_i;
+          bb.field_b = AllianceExpiredEvent.field_i;
           r.field_d = kh.field_Lb;
           kh.field_Lb = false;
           je.field_d = vh.field_c;
-          nh.field_p = ArchiveSource.field_c;
-          td.field_P = el.field_e;
+          PointsVictoryChecker.field_p = ArchiveSource.field_c;
+          td.field_P = TertiaryNodeList.field_e;
           vh.field_c = 0;
         }
     }

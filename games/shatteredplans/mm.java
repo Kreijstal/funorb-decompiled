@@ -87,7 +87,7 @@ final class mm extends ml {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (vn.a(64, param1) != null) ? 0 : 1;
+          stackIn_3_0 = (BattleSnapshot.a(64, param1) != null) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (param0 != -11196) {
             stackIn_5_0 = (u) null;

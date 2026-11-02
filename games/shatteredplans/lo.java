@@ -49,25 +49,25 @@ final class lo extends Territory {
         }
     }
 
-    final Star j(int param0) {
+    final Star firstStar(int param0) {
         if (param0 == 18229) {
-          return (Star) (this.field_z.c(-127));
+          return (Star) (this.field_z.startForward(-127));
         }
         Archive var3 = (Archive) null;
         lo.a((Archive) null, (byte) -92, -64);
-        return (Star) (this.field_z.c(-127));
+        return (Star) (this.field_z.startForward(-127));
     }
 
-    final Star i(int param0) {
+    final Star removeFirstStar(int param0) {
         if (param0 > -16) {
           return (Star) null;
         }
-        return (Star) (this.field_z.a(-118));
+        return (Star) (this.field_z.pollFirst(-118));
     }
 
-    final void a(int param0, Star param1) {
+    final void addStar(int param0, Star param1) {
         try {
-          this.field_z.a(param1, 32);
+          this.field_z.addLast(param1, 32);
           if (param0 != -21771) {
             field_A = (String) null;
           }
@@ -85,12 +85,12 @@ final class lo extends Territory {
         }
     }
 
-    final int g(int param0) {
+    final int starCount(int param0) {
         int var2 = -24 % ((5 - param0) / 51);
-        return this.field_z.c((byte) 67);
+        return this.field_z.size((byte) 67);
     }
 
-    final void a(IntrusiveDeque param0, int param1) {
+    final void setStars(IntrusiveDeque param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -115,12 +115,12 @@ final class lo extends Territory {
         }
     }
 
-    final Star h(int param0) {
+    final Star nextStar(int param0) {
         if (param0 == -23410) {
-          return (Star) (this.field_z.b(32));
+          return (Star) (this.field_z.nextForward(32));
         }
         this.field_z = (DualLinkDeque) null;
-        return (Star) (this.field_z.b(32));
+        return (Star) (this.field_z.nextForward(32));
     }
 
     public static void l(int param0) {
@@ -130,11 +130,11 @@ final class lo extends Territory {
         field_A = null;
     }
 
-    final boolean e(int param0) {
+    final boolean isEmpty(int param0) {
         if (param0 != 27650) {
           return false;
         }
-        return this.field_z.a((byte) 25);
+        return this.field_z.isEmpty((byte) 25);
     }
 
     static {

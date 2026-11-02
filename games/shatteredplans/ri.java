@@ -154,7 +154,7 @@ final class ri extends WidgetContainer implements od, bp {
         if (i.a(1) ||
           !(this.field_H.field_s.length() <= 0) &&
           !(0 >= this.field_R.field_s.length())) {
-          bh.a((byte) 81, this.field_R.field_s, this.field_H.field_s);
+          BoundsRect.a((byte) 81, this.field_R.field_s, this.field_H.field_s);
         }
         if (param0 > -126) {
           this.a(-6);
@@ -254,7 +254,7 @@ final class ri extends WidgetContainer implements od, bp {
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = tr.field_Pb;
+              stackIn_19_3 = MapView.field_Pb;
             }
             this.field_P = new kg(stackIn_19_3, (ko) null);
             if (this.field_E) {
@@ -295,9 +295,9 @@ final class ri extends WidgetContainer implements od, bp {
             this.field_q = this.field_q + (var7.c(this.field_J, this.field_x - 40, var7.field_J) + 5);
           }
           var8 = ph.field_e;
-          var9 = ArchiveRequest.a(kq.f((byte) 124), true);
+          var9 = ArchiveRequest.a(GameScreen.f((byte) 124), true);
           if (var9 == og.field_b) {
-            var8 = cn.field_v;
+            var8 = QuaternaryLinkNode.field_v;
           } else {
             if (dm.field_f == var9) {
               var8 = ba.field_b;
@@ -307,7 +307,7 @@ final class ri extends WidgetContainer implements od, bp {
           var12 = dupTemp$0;
           this.b((byte) -65, dupTemp$0);
           this.field_q = this.field_q + (((UiWidget) ((Object) var12)).field_n + 5);
-          dupTemp$1 = new pg(10, this.field_q, this.field_x - 20, 25, this.field_R, false, 80, 3, var7, 16777215, co.field_t);
+          dupTemp$1 = new pg(10, this.field_q, this.field_x - 20, 25, this.field_R, false, 80, 3, var7, 16777215, GarrisonTask.field_t);
           var13 = dupTemp$1;
           this.b((byte) -66, dupTemp$1);
           this.field_q = this.field_q + (((UiWidget) ((Object) var13)).field_n + 5);
@@ -379,7 +379,7 @@ final class ri extends WidgetContainer implements od, bp {
         try {
           if (this.field_K != param0) {
             if (this.field_Q == param0) {
-              cs.a((byte) 115);
+              Wormhole.a((byte) 115);
             } else {
               if (this.field_P == param0) {
                 if (this.field_L) {

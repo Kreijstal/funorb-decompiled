@@ -38,7 +38,7 @@ final class en {
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           kh.field_Mb = gf.field_b;
-          el.field_c = gf.field_k;
+          TertiaryNodeList.field_c = gf.field_k;
           stackIn_3_0 = 22353;
           if (!param1) {
             stackIn_4_1 = ee.field_k;
@@ -47,7 +47,7 @@ final class en {
           }
           qo.a(stackIn_3_0, stackIn_4_1);
           n.field_h.a(0, -42 + am.field_xb.field_mb, (byte) 95, am.field_xb.field_K, 0);
-          ac.field_x.a(so.field_t.field_K, cr.field_c, (byte) 107, 0, 0);
+          DefendTask.field_x.a(so.field_t.field_K, cr.field_c, (byte) 107, 0, 0);
           stackIn_6_0 = lr.field_a;
           stackIn_6_1 = so.field_t.field_K;
           if (ns.field_pb) {
@@ -79,12 +79,12 @@ final class en {
           if (var4 > 40) {
             var4 = 40;
           }
-          es.field_l.a(bj.field_D.field_K - 5 - 5, var4, (byte) 83, 5, 5);
+          StarAnnotation.field_l.a(bj.field_D.field_K - 5 - 5, var4, (byte) 83, 5, 5);
           var5 = 2 + var4 + 5;
           for (var6 = 0; em.field_k + 4 > var6; var6++) {
             if ((var6 != 1 ||
               !(nl.field_a.length < 2)) && (3 != var6 ||
-              !(mg.field_A <= 1))) {
+              !(FleetMove.field_A <= 1))) {
               if (!param1 &&
                 var6 == 3) {
                 var7_ref_qr = re.field_g[var6];
@@ -164,7 +164,7 @@ final class en {
           MouseInputHandler.field_d.a(360, -10 + gf.field_k - 120 - 4 - 10, (byte) 122, 10, -360 + gf.field_b >> 1);
           hl.field_K.a(MouseInputHandler.field_d.field_K, 24, (byte) 80, 0, 0);
           jo.field_a.a(MouseInputHandler.field_d.field_K, -24 + MouseInputHandler.field_d.field_mb, (byte) 106, 24, 0);
-          jo.field_a.field_F = cs.a(16, 3, jo.field_a.field_mb, 11579568, 8421504, 1);
+          jo.field_a.field_F = Wormhole.a(16, 3, jo.field_a.field_mb, 11579568, 8421504, 1);
           lp.field_v.a(jo.field_a.field_K - 10, -2 + jo.field_a.field_mb - 10 - 24, (byte) 115, 5, 5);
           oo.field_c.a(80, 24, (byte) 108, -5 + jo.field_a.field_mb - 24, (jo.field_a.field_K - 80) / 2);
           CachedArchiveSource.d(18);

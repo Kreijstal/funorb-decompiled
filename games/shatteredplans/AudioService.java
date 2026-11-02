@@ -71,11 +71,11 @@ final class AudioService implements Runnable {
         }
     }
 
-    final static GameState a(vr param0, String[] param1, int param2, int param3, int param4) {
+    final static GameState a(GameRules param0, String[] param1, int param2, int param3, int param4) {
         try {
           GameState var5 = null;
           RuntimeException var5_ref = null;
-          vi var6 = null;
+          TutorialMapGenerator var6 = null;
           GameState stackIn_3_0 = null;
           GameState stackIn_8_0 = null;
           RuntimeException stackIn_11_0 = null;
@@ -89,7 +89,7 @@ final class AudioService implements Runnable {
             var5 = new GameState(param2, param0, -1, param1);
             try {
               if (false) throw (jn) null;
-              var6 = new vi();
+              var6 = new TutorialMapGenerator();
               var5.field_g = var6.a((byte) -116);
               if (param3 != -22379) {
                 stackIn_3_0 = (GameState) null;
@@ -97,7 +97,7 @@ final class AudioService implements Runnable {
               }
               var5.field_g.a(var5.field_v, param0, param3 + 22383);
               var5.e(0);
-              var5.b(-124);
+              var5.recomputePlayerTotals(-124);
               stackIn_8_0 = var5;
               return stackIn_8_0;
             } catch (jn decompiledCaughtParameter0) {
@@ -189,9 +189,9 @@ final class AudioService implements Runnable {
         Object var4Lifetime2;
         try {
           var3 = null;
-          if (cj.field_u != null &&
-            !cj.field_u.equals(param0.getParameter("settings"))) {
-            var3 = cj.field_u;
+          if (TutorialAi.field_u != null &&
+            !TutorialAi.field_u.equals(param0.getParameter("settings"))) {
+            var3 = TutorialAi.field_u;
             var4 = var3;
             var4Lifetime2 = var3;
           }
@@ -231,7 +231,7 @@ final class AudioService implements Runnable {
         field_e = null;
         if (param0 > -41) {
           String[] var2 = (String[]) null;
-          AudioService.a((vr) null, (String[]) null, 30, -16, 113);
+          AudioService.a((GameRules) null, (String[]) null, 30, -16, 113);
           return;
         }
     }

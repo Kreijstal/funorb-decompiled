@@ -479,7 +479,7 @@ final class jp extends qr {
             0 < this.field_Db.length()) {
             aj.a(this.field_Db, this.field_Db.length() - 1, 29, ' ');
           }
-          if (vi.a(ho.field_h, (CharSequence) ((Object) this.field_Db), (byte) 119)) {
+          if (TutorialMapGenerator.a(ho.field_h, (CharSequence) ((Object) this.field_Db), (byte) 119)) {
             discarded$0 = this.field_Db.append(ho.field_h);
           } else {
             if (this.field_Db.length() == 0 &&
@@ -532,12 +532,12 @@ final class jp extends qr {
         String[] var2 = null;
         String[] var2Lifetime1;
         dp.field_t = false;
-        if (mr.field_h != null) {
-          mr.field_h.h(0);
+        if (DerelictMapReader.field_h != null) {
+          DerelictMapReader.field_h.h(0);
           if (0 != em.field_h) {
             MusicVoice.c(false);
           }
-          jj.field_m = 0;
+          ConquestVictoryChecker.field_m = 0;
           if (param0 < 83) {
             var2 = (String[]) null;
             jp.a((String[]) null, false);
@@ -548,7 +548,7 @@ final class jp extends qr {
         if (0 != em.field_h) {
           MusicVoice.c(false);
         }
-        jj.field_m = 0;
+        ConquestVictoryChecker.field_m = 0;
         if (param0 < 83) {
           var2Lifetime1 = (String[]) null;
           jp.a((String[]) null, false);

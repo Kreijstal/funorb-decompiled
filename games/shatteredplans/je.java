@@ -54,13 +54,13 @@ final class je {
         CipherPacketBuffer var2 = js.field_f;
         var2.h(param1, 255);
         if (param0 > 32) {
-          var2.c(1, (byte) -104);
-          var2.c(1, (byte) -93);
+          var2.writeByte(1, (byte) -104);
+          var2.writeByte(1, (byte) -93);
           return;
         }
         je.a(-116, (byte) -104);
-        var2.c(1, (byte) -104);
-        var2.c(1, (byte) -93);
+        var2.writeByte(1, (byte) -104);
+        var2.writeByte(1, (byte) -93);
     }
 
     public static void a(int param0) {

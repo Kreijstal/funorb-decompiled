@@ -191,8 +191,8 @@ final class mf extends ml {
             IntrusiveNodeHashTable.field_e = false;
           }
           if (param1) {
-            if (0 < qa.field_t) {
-              qa.field_t = qa.field_t - 1;
+            if (0 < PlacementOrder.field_t) {
+              PlacementOrder.field_t = PlacementOrder.field_t - 1;
             } else {
               if (Archive.field_b <= 0) {
                 if (0 < ee.field_k) {
@@ -208,11 +208,11 @@ final class mf extends ml {
                 IntrusiveNodeHashTable.field_e = false;
                 if (Archive.field_b <= 0) {
                   if (0 >= ee.field_k) {
-                    if (MouseInputHandler.field_f > qa.field_t) {
-                      if (qa.field_t == 0) {
+                    if (MouseInputHandler.field_f > PlacementOrder.field_t) {
+                      if (PlacementOrder.field_t == 0) {
                         SecondaryNodeHashTable.a((byte) -83);
                       }
-                      qa.field_t = qa.field_t + 1;
+                      PlacementOrder.field_t = PlacementOrder.field_t + 1;
                     }
                   } else {
                     ee.field_k = ee.field_k - 1;
@@ -221,7 +221,7 @@ final class mf extends ml {
                   Archive.field_b = Archive.field_b - 1;
                 }
               } else {
-                if (qa.field_t <= 0) {
+                if (PlacementOrder.field_t <= 0) {
                   if (ee.field_k <= 0) {
                     if (MouseInputHandler.field_f > Archive.field_b) {
                       if (0 == Archive.field_b) {
@@ -233,12 +233,12 @@ final class mf extends ml {
                     ee.field_k = ee.field_k - 1;
                   }
                 } else {
-                  qa.field_t = qa.field_t - 1;
+                  PlacementOrder.field_t = PlacementOrder.field_t - 1;
                 }
               }
             } else {
-              if (0 < qa.field_t) {
-                qa.field_t = qa.field_t - 1;
+              if (0 < PlacementOrder.field_t) {
+                PlacementOrder.field_t = PlacementOrder.field_t - 1;
               } else {
                 if (Archive.field_b > 0) {
                   Archive.field_b = Archive.field_b - 1;
@@ -449,7 +449,7 @@ final class mf extends ml {
         var1 = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1_ref = (mj) (gr.field_p.d(0));
+          var1_ref = (mj) (gr.field_p.startForward(0));
           if (param0 < 4) {
             mf.a(true, true);
           }
@@ -459,39 +459,39 @@ final class mf extends ml {
               if (var1_ref.field_Gb == 0) {
                 var1_ref.field_Eb = 0;
                 if (var1_ref.h(-122)) {
-                  var1_ref.b((byte) -58);
+                  var1_ref.unlink((byte) -58);
                 }
               }
             }
-            var1_ref = (mj) (gr.field_p.a((byte) -71));
+            var1_ref = (mj) (gr.field_p.nextForward((byte) -71));
           }
-          var1_ref2 = (fb) (kj.field_a.d(0));
+          var1_ref2 = (fb) (kj.field_a.startForward(0));
           while (var1_ref2 != null) {
             if (0 < var1_ref2.field_Nb) {
               var1_ref2.field_Nb = var1_ref2.field_Nb - 1;
               if (var1_ref2.field_Nb == 0) {
                 var1_ref2.field_hc = 0;
                 if (var1_ref2.f((byte) -78)) {
-                  var1_ref2.b((byte) -58);
+                  var1_ref2.unlink((byte) -58);
                 }
               }
             }
-            var1_ref2 = (fb) (kj.field_a.a((byte) -71));
+            var1_ref2 = (fb) (kj.field_a.nextForward((byte) -71));
           }
-          var1_refLifetime1 = (mj) (uo.field_a.d(0));
+          var1_refLifetime1 = (mj) (uo.field_a.startForward(0));
           while (var1_refLifetime1 != null) {
             if (var1_refLifetime1.field_Gb > 0) {
               var1_refLifetime1.field_Gb = var1_refLifetime1.field_Gb - 1;
               if (var1_refLifetime1.field_Gb != 0) {
-                var1_refLifetime1 = (mj) (uo.field_a.a((byte) -71));
+                var1_refLifetime1 = (mj) (uo.field_a.nextForward((byte) -71));
                 continue;
               }
               var1_refLifetime1.field_Eb = 0;
               if (var1_refLifetime1.h(-96)) {
-                var1_refLifetime1.b((byte) -108);
+                var1_refLifetime1.unlink((byte) -108);
               }
             }
-            var1_refLifetime1 = (mj) (uo.field_a.a((byte) -71));
+            var1_refLifetime1 = (mj) (uo.field_a.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

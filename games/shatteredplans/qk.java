@@ -68,7 +68,7 @@ class qk extends vd {
               }
               break;
             }
-            var6.a(qi.a(param0, -var3 + var4, var3, -118), -126);
+            var6.a(SolarFlareEvent.a(param0, -var3 + var4, var3, -118), -126);
             while (param0.length > var4) {
               if (13 == param0[var4] ||
                 param0[var4] == 10) {
@@ -135,7 +135,7 @@ class qk extends vd {
     final static void g(int param0) {
         fe.f(-1);
         oe.field_f = true;
-        el.field_b = true;
+        TertiaryNodeList.field_b = true;
         le.field_e.k(99);
         if (param0 > -12) {
           return;
@@ -167,7 +167,7 @@ class qk extends vd {
             qk.a((qf) null, 124);
           }
           jb.field_g = po.field_f;
-          sh.field_b = param1;
+          SolMapReader.field_b = param1;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "qk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

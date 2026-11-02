@@ -65,7 +65,7 @@ abstract class da implements gk {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new gm(param1, param1);
-          eo.field_ab.a((byte) -113, var2);
+          eo.field_ab.addLast((byte) -113, var2);
           if (param0 > -121) {
             stackIn_2_0 = (gm) null;
             return stackIn_2_0;
@@ -164,10 +164,10 @@ abstract class da implements gk {
             java.applet.Applet var9 = (java.applet.Applet) null;
             da.a(-84, (java.applet.Applet) null);
           }
-          hg.field_q = PcmPlayerService.a(param1, param0, 1, param3);
+          IsolationistAi.field_q = PcmPlayerService.a(param1, param0, 1, param3);
           jp.field_Bb = new PcmStreamMixer();
-          kl.field_t = param3;
-          hg.field_q.a(jp.field_Bb);
+          AttackTask.field_t = param3;
+          IsolationistAi.field_q.a(jp.field_Bb);
           u.field_b = param2;
           u.field_b.a(wm.field_b, 0);
           aj.field_e.a(u.field_b);

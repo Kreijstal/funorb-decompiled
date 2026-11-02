@@ -97,7 +97,7 @@ final class dp extends DualLinkNode {
             return;
           }
           while (true) {
-            var3_int = param0.j(-126);
+            var3_int = param0.readUnsignedByte(-126);
             if (0 == var3_int) {
               return;
             }
@@ -133,28 +133,28 @@ final class dp extends DualLinkNode {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 == param1) {
-            this.field_y = so.a(param2.e(-1), '<', 51);
+            this.field_y = so.a(param2.readString(-1), '<', 51);
           } else {
             if (param1 == 2) {
-              var4_int = param2.j(-70);
+              var4_int = param2.readUnsignedByte(-70);
               this.field_o = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_o[var5] = param2.f(param0 - 20977);
+                this.field_o[var5] = param2.readUnsignedShort(param0 - 20977);
               }
             } else {
               if (param1 == 3) {
-                var4_int = param2.j(-74);
+                var4_int = param2.readUnsignedByte(-74);
                 this.field_w = new int[var4_int];
                 this.field_q = new int[var4_int][];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = param2.f(-20976);
+                  var6 = param2.readUnsignedShort(-20976);
                   var7 = aq.a(var6, 0);
                   if (var7 != null) {
                     this.field_w[var5] = var6;
                     array$0 = new int[var7.field_e];
                     this.field_q[var5] = array$0;
                     for (var8 = 0; var7.field_e > var8; var8++) {
-                      this.field_q[var5][var8] = param2.f(-20976);
+                      this.field_q[var5][var8] = param2.readUnsignedShort(-20976);
                     }
                   }
                 }
@@ -220,10 +220,10 @@ final class dp extends DualLinkNode {
           return true;
         }
         if (oq.field_j == 102) {
-          mr.field_h.h(0);
+          DerelictMapReader.field_h.h(0);
           return true;
         }
-        stackIn_11_0 = (null != mr.field_h) && (mr.field_h.a(param1, false, param2));
+        stackIn_11_0 = (null != DerelictMapReader.field_h) && (DerelictMapReader.field_h.a(param1, false, param2));
         return stackIn_11_0;
     }
 

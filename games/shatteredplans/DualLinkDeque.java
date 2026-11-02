@@ -9,7 +9,7 @@ final class DualLinkDeque {
     static String field_d;
     private DualLinkNode field_c;
 
-    final int c(byte param0) {
+    final int size(byte param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = 0;
         DualLinkNode var3 = this.field_e.field_h;
@@ -42,7 +42,7 @@ final class DualLinkDeque {
         return param1 & ~var2;
     }
 
-    final DualLinkNode b(int param0) {
+    final DualLinkNode nextForward(int param0) {
         DualLinkNode var2 = this.field_c;
         if (param0 != 32) {
           return (DualLinkNode) null;
@@ -55,7 +55,7 @@ final class DualLinkDeque {
         return var2;
     }
 
-    final void b(byte param0) {
+    final void clear(byte param0) {
         DualLinkNode var2 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         while (true) {
@@ -63,7 +63,7 @@ final class DualLinkDeque {
           if (var2 == this.field_e) {
             break;
           }
-          var2.a(16);
+          var2.unlinkSecondary(16);
         }
         this.field_c = null;
         if (param0 < 23) {
@@ -71,24 +71,24 @@ final class DualLinkDeque {
         }
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode pollFirst(int param0) {
         DualLinkNode var2 = this.field_e.field_h;
         if (this.field_e == var2) {
           return null;
         }
-        var2.a(16);
+        var2.unlinkSecondary(16);
         int var3 = 32 / ((49 - param0) / 38);
         return var2;
     }
 
-    final boolean a(byte param0) {
+    final boolean isEmpty(byte param0) {
         if (param0 != 25) {
           return true;
         }
         return this.field_e.field_h == this.field_e ? true : false;
     }
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addLast(DualLinkNode param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -96,7 +96,7 @@ final class DualLinkDeque {
         RuntimeException var3 = null;
         try {
           if (null != param0.field_j) {
-            param0.a(16);
+            param0.unlinkSecondary(16);
           }
           param0.field_h = this.field_e;
           param0.field_j = this.field_e.field_j;
@@ -120,7 +120,7 @@ final class DualLinkDeque {
         }
     }
 
-    final DualLinkNode c(int param0) {
+    final DualLinkNode startForward(int param0) {
         DualLinkNode var2 = this.field_e.field_h;
         if (this.field_e == var2) {
           this.field_c = null;

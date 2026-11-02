@@ -12,7 +12,7 @@ final class SecondaryNodeHashTable {
     static String field_l;
     static String field_e;
     static String field_a;
-    static km field_g;
+    static GameSession field_g;
     static Sprite field_f;
 
     final DualLinkNode b(byte param0) {
@@ -472,7 +472,7 @@ final class SecondaryNodeHashTable {
         RuntimeException var5_ref = null;
         try {
           if (null != param1.field_j) {
-            param1.a(16);
+            param1.unlinkSecondary(16);
           }
           var5 = this.field_b[(int)((long)(this.field_k - 1) & param0)];
           param1.field_j = var5.field_j;
@@ -587,9 +587,9 @@ final class SecondaryNodeHashTable {
         if (param0 != -83) {
           field_i = (Sprite) null;
         }
-        ia.field_j = new qr(0L, (qr) null);
-        ia.field_j.a(param0 + 87, Archive.field_g.field_d);
-        ia.field_j.a(4, vm.field_Ab);
+        MapViewState.field_j = new qr(0L, (qr) null);
+        MapViewState.field_j.a(param0 + 87, Archive.field_g.field_d);
+        MapViewState.field_j.a(4, vm.field_Ab);
         tc.j(96);
     }
 
@@ -632,7 +632,7 @@ final class SecondaryNodeHashTable {
         field_i = null;
         field_e = null;
         if (!param0) {
-          field_g = (km) null;
+          field_g = (GameSession) null;
         }
         field_l = null;
         field_g = null;

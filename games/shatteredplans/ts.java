@@ -138,7 +138,7 @@ class ts extends kg {
           int stackIn_9_0 = 0;
           Throwable decompiledCaughtException = null;
           if (da.field_e == null) {
-            da.field_e = nr.field_l.a(65535, of.field_f, mk.field_c);
+            da.field_e = StarAbandonedEvent.field_l.a(65535, of.field_f, mk.field_c);
           }
           if (da.field_e.field_d == 0) {
             return false;
@@ -147,10 +147,10 @@ class ts extends kg {
           mj.field_Pb = dupTemp$1;
           IntrusiveDeque.field_e = dupTemp$1;
           if (param1 != ~da.field_e.field_d) {
-            cs.field_j = oa.field_a;
+            Wormhole.field_j = oa.field_a;
           } else {
             try {
-              wg.field_f = new BufferedSocket((java.net.Socket) (da.field_e.field_e), nr.field_l);
+              wg.field_f = new BufferedSocket((java.net.Socket) (da.field_e.field_e), StarAbandonedEvent.field_l);
               var4 = sa.field_a;
               var5 = var4;
               js.field_f.position = 0;
@@ -158,14 +158,14 @@ class ts extends kg {
               IterableNodeHashTable.field_e = stackIn_9_0;
               tp.field_g = stackIn_9_0;
               kp.field_n = stackIn_9_0;
-              cs.field_j = j.field_r;
+              Wormhole.field_j = LegacyAi.field_r;
               var5.position = 0;
               hq.a(sp.field_g, ee.field_o, js.field_f, (byte) 20, uk.field_a);
               d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              cs.field_j = oa.field_a;
+              Wormhole.field_j = oa.field_a;
               da.field_e = null;
               return true;
             }
@@ -231,23 +231,23 @@ class ts extends kg {
         int var1;
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (ui.field_m == 0) {
+        if (SolVictoryChecker.field_m == 0) {
           gd.a(-114);
         } else {
-          if (ui.field_m == 1) {
+          if (SolVictoryChecker.field_m == 1) {
             hd.a(param0 - 6373);
           } else {
-            if (2 == ui.field_m) {
+            if (2 == SolVictoryChecker.field_m) {
               wj.a(128);
             } else {
-              if (ui.field_m == 3) {
+              if (SolVictoryChecker.field_m == 3) {
                 ProxySocketConnector.c(8421504);
               } else {
-                if (4 == ui.field_m) {
+                if (4 == SolVictoryChecker.field_m) {
                   FullscreenFocusCanvas.a(param0 - 6173);
                 } else {
-                  if (ui.field_m == 5) {
-                    vi.c(param0 ^ 6333);
+                  if (SolVictoryChecker.field_m == 5) {
+                    TutorialMapGenerator.c(param0 ^ 6333);
                   }
                 }
               }
@@ -265,7 +265,7 @@ class ts extends kg {
         if (var1 < 80) {
           var1 = 80;
         }
-        nh.a(var1, NetworkArchiveRequest.field_C, 8421504, 440, 10526880, -20 - var1 + 640, np.field_d, ArchiveIndex.field_o, 4210752, 20, -1, 5);
+        PointsVictoryChecker.a(var1, NetworkArchiveRequest.field_C, 8421504, 440, 10526880, -20 - var1 + 640, np.field_d, ArchiveIndex.field_o, 4210752, 20, -1, 5);
     }
 
     final void e(boolean param0) {
@@ -347,11 +347,11 @@ class ts extends kg {
               var26 = new ql(var7Lifetime2, var13, var25.field_e, var14 - var13, Math.max(var27.a(false), -var25.field_e + var25.field_c));
               if (var10 == null) {
                 var10 = var26;
-                this.field_D.a((byte) -113, var26);
+                this.field_D.addLast((byte) -113, var26);
               } else {
                 ((ql) (var10)).field_h = var26;
                 var10 = var26;
-                this.field_D.a((byte) -113, var26);
+                this.field_D.addLast((byte) -113, var26);
               }
             }
           }
@@ -393,11 +393,11 @@ class ts extends kg {
             var21 = new ql(var7Lifetime1Lifetime1, var13Lifetime1, var20.field_e, var14Lifetime1 - var13Lifetime1, Math.max(var28.a(false), -var20.field_e + var20.field_c));
             if (var10Lifetime1 == null) {
               var10Lifetime1 = var21;
-              this.field_D.a((byte) -113, var21);
+              this.field_D.addLast((byte) -113, var21);
             } else {
               ((ql) (var10Lifetime1)).field_h = var21;
               var10Lifetime1 = var21;
-              this.field_D.a((byte) -113, var21);
+              this.field_D.addLast((byte) -113, var21);
             }
           }
         }
@@ -417,7 +417,7 @@ class ts extends kg {
         ql var5;
         int var6;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        var4 = (ql) (this.field_D.d(0));
+        var4 = (ql) (this.field_D.startForward(0));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -429,7 +429,7 @@ class ts extends kg {
             }
             var5 = var5.field_h;
           }
-          var4 = (ql) (this.field_D.a((byte) -71));
+          var4 = (ql) (this.field_D.nextForward((byte) -71));
         }
         if (param2 == -66) {
           return null;

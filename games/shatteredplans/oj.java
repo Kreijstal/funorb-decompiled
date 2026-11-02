@@ -32,7 +32,7 @@ final class oj extends ns implements bp {
         try {
           var8 = new CipherPacketBuffer(param1.a(true, "", "logo.fo3d"));
           var10 = var8;
-          var3 = var10.j(-108);
+          var3 = var10.readUnsignedByte(-108);
           var10.m(-84);
           wc.field_a = SecondaryNodeDequeIterator.a(24243, var10);
           vc.field_d = new sr[var3];
@@ -101,7 +101,7 @@ final class oj extends ns implements bp {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-          hp.a((byte) 28, param1, "");
+          DerelictVictoryChecker.a((byte) 28, param1, "");
           hr.a(param1, (byte) -127);
           if (param0 != 0) {
             oj.q(13);

@@ -71,11 +71,11 @@ final class tb {
           ec.field_v = param6;
           so.field_r = param12;
           nb.field_d = param7;
-          mg.field_A = param8;
+          FleetMove.field_A = param8;
           uk.field_b = ae.a(62, "lobby", param4, "gameprivacy");
           tf.field_l = ae.a(83, "lobby", param4, "ratedgame");
           ji.field_E = ae.a(-88, "lobby", param4, "opentome");
-          j.field_s = ae.a(71, "lobby", param4, "allowspectators");
+          LegacyAi.field_s = ae.a(71, "lobby", param4, "allowspectators");
           mk.field_e = new String[5];
           mk.field_e[0] = mm.field_p;
           mk.field_e[4] = si.field_q;
@@ -85,7 +85,7 @@ final class tb {
           lp.field_v = new qr(0L, (qr) null);
           gm.field_m = new qr(0L, td.field_N, gd.field_c);
           sf.field_f = new qr(0L, vm.field_Cb, mk.field_b);
-          ls.field_a = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, se.field_m);
+          ls.field_a = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, AchievementProgress.field_m);
           lp.field_v.a(param13 ^ -7962, gm.field_m);
           if (ns.field_pb) {
             lp.field_v.a(4, sf.field_f);
@@ -101,13 +101,13 @@ final class tb {
           vm.field_Ab = new qr(0L, bd.field_E, v.field_a.toUpperCase());
           sg.field_zb = new qr(0L, gg.field_d, uc.field_z.toUpperCase());
           qf.field_e = new qr(0L, rs.field_Eb);
-          vn.field_y = new qr(0L, td.field_N, sm.field_c);
-          km.field_e = new qr(0L, jr.field_h, di.field_j);
+          BattleSnapshot.field_y = new qr(0L, td.field_N, sm.field_c);
+          GameSession.field_e = new qr(0L, jr.field_h, di.field_j);
           WeightedCacheEntry.field_t = new qr(0L, jr.field_h, vm.field_Lb);
           ta.field_d = new qr(0L, jr.field_h, fa.field_T);
           IsaacBackedRandom.field_c = new qr(0L, jr.field_h, WidgetContainer.field_z);
-          hq.field_b = new qr(0L, vm.field_Cb, pc.field_o);
-          qs.field_y = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, se.field_m);
+          hq.field_b = new qr(0L, vm.field_Cb, DerelictMapGenerator.field_o);
+          qs.field_y = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, AchievementProgress.field_m);
           gb.field_m = new qr(0L, IsaacBackedRandom.field_a, GameApplet.field_a.toUpperCase());
           gb.field_m.field_s = ns.field_pb;
           stackIn_6_0 = null;
@@ -117,18 +117,18 @@ final class tb {
           if (ns.field_pb) {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
-            stackIn_7_4 = gl.field_a;
+            stackIn_7_4 = DisplayModeInfo.field_a;
           } else {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
             stackIn_7_4 = rh.field_a;
           }
           rq.field_b = new qr(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
-          se.field_i = new qr(0L, (qr) null);
-          se.field_i.a(param13 ^ -7962, sg.field_zb);
-          se.field_i.a(4, qf.field_e);
-          qf.field_e.a(4, vn.field_y);
-          qf.field_e.a(4, km.field_e);
+          AchievementProgress.field_i = new qr(0L, (qr) null);
+          AchievementProgress.field_i.a(param13 ^ -7962, sg.field_zb);
+          AchievementProgress.field_i.a(4, qf.field_e);
+          qf.field_e.a(4, BattleSnapshot.field_y);
+          qf.field_e.a(4, GameSession.field_e);
           qf.field_e.a(param13 ^ -7962, WeightedCacheEntry.field_t);
           if (ns.field_pb) {
             qf.field_e.a(4, ta.field_d);
@@ -137,9 +137,9 @@ final class tb {
           qf.field_e.a(4, hq.field_b);
           qf.field_e.a(4, qs.field_y);
           if (ns.field_pb) {
-            se.field_i.a(4, gb.field_m);
+            AchievementProgress.field_i.a(4, gb.field_m);
           }
-          se.field_i.a(4, rq.field_b);
+          AchievementProgress.field_i.a(4, rq.field_b);
           SoundCache.field_c = new qr(0L, SpriteState.field_u);
           SoundCache.field_c.field_G = 0;
           SoundCache.field_c.field_y = 1;
@@ -153,12 +153,12 @@ final class tb {
           IntrusiveNode.field_c.field_G = 1;
           var16.field_y = 1;
           so.field_t = new qr(0L, (qr) null);
-          ac.field_x = new qr(0L, SpriteState.field_u);
-          ac.field_x.field_y = 1;
+          DefendTask.field_x = new qr(0L, SpriteState.field_u);
+          DefendTask.field_x.field_y = 1;
           lr.field_a = new qr(0L, td.field_N, gd.field_c);
           vd.field_q = new qr(0L, vm.field_Cb, mk.field_b);
-          ro.field_a = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, se.field_m);
-          so.field_t.a(4, ac.field_x);
+          ro.field_a = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, AchievementProgress.field_m);
+          so.field_t.a(4, DefendTask.field_x);
           so.field_t.a(4, lr.field_a);
           if (ns.field_pb) {
             so.field_t.a(4, vd.field_q);
@@ -167,7 +167,7 @@ final class tb {
           i.field_g = new qr(0L, bd.field_E, tm.field_o.toUpperCase());
           ArchiveSourceManager.field_f = new qr(0L, gg.field_d);
           bj.field_D = new qr(0L, rs.field_Eb);
-          es.field_l = new qr(0L, nl.field_b, ds.field_e.toUpperCase());
+          StarAnnotation.field_l = new qr(0L, nl.field_b, ds.field_e.toUpperCase());
           re.field_g = new qr[4 + param0];
           ByteArrayNode.field_p = new sg[4 + param0][];
           re.field_g[0] = new qr(0L, dm.field_h, am.field_Ab);
@@ -182,19 +182,19 @@ final class tb {
             re.field_g[1] = new qr(0L, dm.field_h, wl.field_b);
             array$0 = new sg[1 + nl.field_a.length];
             ByteArrayNode.field_p[1] = array$0;
-            ByteArrayNode.field_p[1][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r);
+            ByteArrayNode.field_p[1][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r);
             for (var17_intLifetime1 = 0; nl.field_a.length > var17_intLifetime1; var17_intLifetime1++) {
               ByteArrayNode.field_p[1][1 + var17_intLifetime1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, Integer.toString(nl.field_a[var17_intLifetime1]));
             }
           }
           re.field_g[2] = new qr(0L, dm.field_h, sq.field_s);
-          ByteArrayNode.field_p[2] = new sg[]{new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r), new sg(0L, an.field_d, (qr) null, gn.field_w, j.field_s[0], mi.field_c), new sg(0L, an.field_d, (qr) null, gn.field_w, j.field_s[1], he.field_j)};
-          if (mg.field_A > 1) {
+          ByteArrayNode.field_p[2] = new sg[]{new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r), new sg(0L, an.field_d, (qr) null, gn.field_w, LegacyAi.field_s[0], mi.field_c), new sg(0L, an.field_d, (qr) null, gn.field_w, LegacyAi.field_s[1], he.field_j)};
+          if (FleetMove.field_A > 1) {
             re.field_g[3] = new qr(0L, dm.field_h, jo.field_e);
-            array$1 = new sg[1 + mg.field_A];
+            array$1 = new sg[1 + FleetMove.field_A];
             ByteArrayNode.field_p[3] = array$1;
-            ByteArrayNode.field_p[3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r);
-            for (var17_intLifetime2 = 0; var17_intLifetime2 < mg.field_A; var17_intLifetime2++) {
+            ByteArrayNode.field_p[3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r);
+            for (var17_intLifetime2 = 0; var17_intLifetime2 < FleetMove.field_A; var17_intLifetime2++) {
               ByteArrayNode.field_p[3][var17_intLifetime2 + 1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, si.field_o[var17_intLifetime2]);
             }
           }
@@ -202,7 +202,7 @@ final class tb {
             re.field_g[4 + var17_intLifetime3] = new qr(0L, dm.field_h, gm.field_l[var17_intLifetime3]);
             array$2 = new sg[1 + we.a(255, (int) so.field_r[var17_intLifetime3])];
             ByteArrayNode.field_p[var17_intLifetime3 + 4] = array$2;
-            ByteArrayNode.field_p[4 + var17_intLifetime3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r);
+            ByteArrayNode.field_p[4 + var17_intLifetime3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r);
             for (var18 = 0; var18 < (255 & so.field_r[var17_intLifetime3]); var18++) {
               if (null == nb.field_d) {
                 var19_ref = null;
@@ -248,11 +248,11 @@ final class tb {
           IntrusiveDeque.field_g = new qr(0L, (qr) null);
           IntrusiveDeque.field_g.a(param13 + 7970, ArchiveSourceManager.field_f);
           IntrusiveDeque.field_g.a(4, bj.field_D);
-          bj.field_D.a(4, es.field_l);
+          bj.field_D.a(4, StarAnnotation.field_l);
           for (var18Lifetime2 = 0; 4 + param0 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(nl.field_a.length < 2)) && (var18Lifetime2 != 3 ||
-              !(mg.field_A <= 1))) {
+              !(FleetMove.field_A <= 1))) {
               bj.field_D.a(4, re.field_g[var18Lifetime2]);
               for (var19 = 0; var19 < ByteArrayNode.field_p[var18Lifetime2].length; var19++) {
                 if (null != ByteArrayNode.field_p[var18Lifetime2][var19]) {

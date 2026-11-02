@@ -47,7 +47,7 @@ final class sn {
           return;
         }
         if (js.field_j >= 150) {
-          qa.field_q.a(15 + var3, var4 + 10, var5);
+          PlacementOrder.field_q.a(15 + var3, var4 + 10, var5);
         } else {
           SecondaryNodeHashTable.field_i.d(var3, var4);
         }
@@ -56,14 +56,14 @@ final class sn {
           var6 < 50) {
           if (var6 >= 20) {
             if (var6 < 30) {
-              rf.field_h.c(var3, var4, 256);
+              AllianceExpiredEvent.field_h.c(var3, var4, 256);
             } else {
               var7 = 256 * (50 - var6) / 20;
-              rf.field_h.c(var3, var4, var7);
+              AllianceExpiredEvent.field_h.c(var3, var4, var7);
             }
           } else {
             var7 = var6 * 256 / 20;
-            rf.field_h.c(var3, var4, var7);
+            AllianceExpiredEvent.field_h.c(var3, var4, var7);
           }
         }
         var6Lifetime1 = js.field_j - 140;
@@ -100,12 +100,12 @@ final class sn {
           if (param1 != -76) {
             sn.a(72);
           }
-          var4 = param2.j(18229);
+          var4 = param2.firstStar(18229);
           while (var4 != null) {
             for (var3_int = 0; 4 > var3_int; var3_int++) {
               param0[var3_int] = param0[var3_int] + var4.field_G[var3_int];
             }
-            var4 = param2.h(-23410);
+            var4 = param2.nextStar(-23410);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

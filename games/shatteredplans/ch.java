@@ -44,7 +44,7 @@ final class ch implements wr {
             field_a = (String) null;
           }
           for (var9 = 0; -20 + param7 > var9; var9++) {
-            var10 = ui.a(param1, param6, param0 ^ -72, 256 * var9 / (param7 - 20));
+            var10 = SolVictoryChecker.a(param1, param6, param0 ^ -72, 256 * var9 / (param7 - 20));
             gf.a(param4, param2 + (param5 + var9), var10);
             gf.a(-1 + (param3 + param4), var9 + (param5 + param2), var10);
           }
@@ -132,21 +132,21 @@ final class ch implements wr {
     }
 
     final static qh a(byte param0) {
-        ne.field_l = new qh(0, 60, 238, 300, ShatteredPlansClient.field_L.toUpperCase());
-        fe var1 = new fe(-16 + ne.field_l.field_k + ne.field_l.field_m, 2 + ne.field_l.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
-        var1.field_h = ne.field_l;
-        lh var2 = new lh(-20 + ne.field_l.field_m, ne.field_l.field_t + 20, -28 + ne.field_l.field_i, 3974311);
+        BattleContribution.field_l = new qh(0, 60, 238, 300, ShatteredPlansClient.field_L.toUpperCase());
+        fe var1 = new fe(-16 + BattleContribution.field_l.field_k + BattleContribution.field_l.field_m, 2 + BattleContribution.field_l.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
+        var1.field_h = BattleContribution.field_l;
+        lh var2 = new lh(-20 + BattleContribution.field_l.field_m, BattleContribution.field_l.field_t + 20, -28 + BattleContribution.field_l.field_i, 3974311);
         int var3 = -24 / ((param0 - 57) / 47);
-        ne.field_l.a(var1, 8);
-        ne.field_l.a(var2, 8);
-        lp var4 = new lp(ne.field_l.field_k + 9, 20 + ne.field_l.field_t, 209, ne.field_l.field_i - 28);
-        ne.field_l.a(var4, 8);
-        ne.field_l.field_z = var4;
+        BattleContribution.field_l.a(var1, 8);
+        BattleContribution.field_l.a(var2, 8);
+        lp var4 = new lp(BattleContribution.field_l.field_k + 9, 20 + BattleContribution.field_l.field_t, 209, BattleContribution.field_l.field_i - 28);
+        BattleContribution.field_l.a(var4, 8);
+        BattleContribution.field_l.field_z = var4;
         var2.field_x = (gj) ((Object) var4);
         em var5 = new em();
-        ne.field_l.field_x = (jk) ((Object) var5);
+        BattleContribution.field_l.field_x = (jk) ((Object) var5);
         var5.field_e = var2;
-        return ne.field_l;
+        return BattleContribution.field_l;
     }
 
     final static Sprite[] a(int param0, byte param1, Archive param2, int param3) {
@@ -205,7 +205,7 @@ final class ch implements wr {
             }
             var1_int = 1;
           }
-          ns.field_nb.a(-1, ch.a(-15073, td.field_P, nh.field_p), ch.a(-15073, bb.field_b, pd.field_k));
+          ns.field_nb.a(-1, ch.a(-15073, td.field_P, PointsVictoryChecker.field_p), ch.a(-15073, bb.field_b, pd.field_k));
           if (ns.field_nb.a((byte) 36)) {
             var1_int = 1;
           }

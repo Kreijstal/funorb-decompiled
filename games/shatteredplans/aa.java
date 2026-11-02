@@ -264,12 +264,12 @@ final class aa extends WidgetContainer implements op, bp, dl {
         this.field_E = new kg(qn.field_e, (ko) null);
         this.field_O = new kg(DiskCacheWorker.field_a, (ko) null);
         this.field_Q.field_v = WeightedLruCache.field_i;
-        this.field_F.field_v = j.field_p;
+        this.field_F.field_v = LegacyAi.field_p;
         this.field_M.field_v = sf.field_h;
-        this.field_J.field_v = wf.field_k;
+        this.field_J.field_v = AiTask.field_k;
         this.field_H.field_v = he.field_o;
-        this.field_L.field_v = pc.field_p;
-        this.field_K.field_v = ca.field_i;
+        this.field_L.field_v = DerelictMapGenerator.field_p;
+        this.field_K.field_v = PlayerEliminatedEvent.field_i;
         this.field_Q.a(new ec(this.field_Q), 8945);
         this.field_F.a(new mm(this.field_F), 8945);
         this.field_M.a(new mf(this.field_M, this.field_F), 8945);
@@ -292,10 +292,10 @@ final class aa extends WidgetContainer implements op, bp, dl {
         int var3 = 20;
         var3 = var3 + this.a(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
         var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", ec.field_u, 20));
-        var3 = var3 + this.a(co.field_t, 21760, this.field_J, var3, 170);
+        var3 = var3 + this.a(GarrisonTask.field_t, 21760, this.field_J, var3, 170);
         var3 = var3 + (5 + this.a(170, ab.field_a, var3, (byte) -127, this.field_H, MusicVoice.field_l));
-        var3 = var3 + (this.a(170, rf.field_m, var3, (byte) -128, this.field_Q, tr.field_zb) + 5);
-        var3 = var3 + this.a(vl.field_m, this.field_L, var3, (byte) -123, 170);
+        var3 = var3 + (this.a(170, AllianceExpiredEvent.field_m, var3, (byte) -128, this.field_Q, MapView.field_zb) + 5);
+        var3 = var3 + this.a(SolMapGenerator.field_m, this.field_L, var3, (byte) -123, 170);
         pg var4 = new pg(46, var3, -90 + this.field_x, 25, this.field_K, true, -120 + this.field_x, 5, mf.field_x, 11579568, fe.field_E);
         this.b((byte) -71, var4);
         var3 = var3 + var4.field_n;
@@ -443,7 +443,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
         int var6Lifetime6Lifetime3;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var3 = 1 + rs.field_Cb.field_J * 3 / 4;
-        var4 = -60 + qg.field_r[6];
+        var4 = -60 + TutorialVictoryChecker.field_r[6];
         var5 = 40;
         if (0 == param0) {
           var6 = wk.a(-9615, wg.field_e.a(5607, vc.field_e), rs.field_Cb, new int[]{var4});
@@ -464,7 +464,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
           return stackIn_13_0;
         }
         if (param0 == 2) {
-          var6Lifetime2 = wk.a(param1 ^ 9672, wg.field_e.a(5607, jd.field_a), rs.field_Cb, new int[]{var4});
+          var6Lifetime2 = wk.a(param1 ^ 9672, wg.field_e.a(5607, CellVertex.field_a), rs.field_Cb, new int[]{var4});
           var5 = var5 + var3 * var6Lifetime2;
           if (param1 != -71) {
             return -98;
@@ -525,7 +525,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
           return stackIn_61_0;
         }
         if (8 == param0) {
-          var11 = hs.field_g;
+          var11 = StandardMapGenerator.field_g;
           var6Lifetime6 = wk.a(-9615, wg.field_e.a(5607, var11), rs.field_Cb, new int[]{var4 - 40});
           var12 = sp.field_b;
           var5 = var5 + ((3 + var6Lifetime6 * 4) * var3 >> 2);

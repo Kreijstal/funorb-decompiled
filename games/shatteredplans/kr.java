@@ -26,43 +26,43 @@ final class kr extends Exception {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        mg var3 = null;
+        FleetMove var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        mg var7 = null;
+        FleetMove var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         IntrusiveDeque var11 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (param1.field_T.g(112)) {
+          if (param1.field_T.isEmpty(112)) {
             return;
           }
           var11 = new IntrusiveDeque();
-          param1.field_T.a((byte) -90, var11);
+          param1.field_T.transferAllTo((byte) -90, var11);
           var4 = 65 / ((param0 + 1) / 60);
-          param1.field_T.a((byte) -113, var11.h(88));
-          var3 = (mg) (var11.d(0));
+          param1.field_T.addLast((byte) -113, var11.pollFirst(88));
+          var3 = (FleetMove) (var11.startForward(0));
           while (var3 != null) {
             var5 = -var3.field_y.field_A + var3.field_B.field_A;
             var6 = -var3.field_y.field_S + var3.field_B.field_S;
-            var7 = (mg) (param1.field_T.d(0));
+            var7 = (FleetMove) (param1.field_T.startForward(0));
             while (var7 != null) {
               var8 = -var7.field_y.field_A + var7.field_B.field_A;
               var9 = var7.field_B.field_S - var7.field_y.field_S;
               if (!ul.a(var8, var9, 0, var5, var6)) {
-                var7 = (mg) (param1.field_T.a((byte) -71));
+                var7 = (FleetMove) (param1.field_T.nextForward((byte) -71));
                 continue;
               }
               wp.$cfr$intArgs$a$2661ebe01e52(-125, var3, var7);
               break;
             }
             if (var7 == null) {
-              param1.field_T.a((byte) -113, var3);
+              param1.field_T.addLast((byte) -113, var3);
             }
-            var3 = (mg) (var11.a((byte) -71));
+            var3 = (FleetMove) (var11.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -529,13 +529,13 @@ final class kr extends Exception {
     }
 
     final static ik b(byte param0) {
-        if (MouseInputHandler.field_c.g(69)) {
+        if (MouseInputHandler.field_c.isEmpty(69)) {
           return new ik();
         }
         if (param0 != -103) {
           kr.b((byte) -5);
         }
-        return (ik) (MouseInputHandler.field_c.h(44));
+        return (ik) (MouseInputHandler.field_c.pollFirst(44));
     }
 
     static {

@@ -243,14 +243,14 @@ final class md extends UiWidget {
         gf.f(param0, 0, Star.field_F.field_z, 1052688);
         gf.f(0, -1 + Star.field_F.field_w, Star.field_F.field_z, 1052688);
         for (var1Lifetime1 = 0; var1Lifetime1 < Star.field_F.field_w; var1Lifetime1++) {
-          gf.a(-1 + Star.field_F.field_z, var1Lifetime1, ui.a(1052688, Star.field_F.field_B[-1 + (var1Lifetime1 + 1) * Star.field_F.field_z], -114, 128));
+          gf.a(-1 + Star.field_F.field_z, var1Lifetime1, SolVictoryChecker.a(1052688, Star.field_F.field_B[-1 + (var1Lifetime1 + 1) * Star.field_F.field_z], -114, 128));
         }
-        gf.a(Star.field_F.field_z - 2, 1, ui.a(1052688, Star.field_F.field_B[Star.field_F.field_z * 2 - 2], -83, 128));
-        gf.a(Star.field_F.field_z - 3, 1, ui.a(1052688, Star.field_F.field_B[-3 + Star.field_F.field_z * 2], -78, 192));
-        gf.a(-2 + Star.field_F.field_z, 2, ui.a(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * 3], -110, 192));
-        gf.a(Star.field_F.field_z - 2, Star.field_F.field_w - 2, ui.a(1052688, Star.field_F.field_B[Star.field_F.field_z * (Star.field_F.field_w - 1) - 2], param0 - 117, 128));
-        gf.a(-3 + Star.field_F.field_z, -2 + Star.field_F.field_w, ui.a(1052688, Star.field_F.field_B[-3 + (-1 + Star.field_F.field_w) * Star.field_F.field_z], -125, 192));
-        gf.a(-2 + Star.field_F.field_z, -3 + Star.field_F.field_w, ui.a(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * (-2 + Star.field_F.field_w)], -111, 192));
+        gf.a(Star.field_F.field_z - 2, 1, SolVictoryChecker.a(1052688, Star.field_F.field_B[Star.field_F.field_z * 2 - 2], -83, 128));
+        gf.a(Star.field_F.field_z - 3, 1, SolVictoryChecker.a(1052688, Star.field_F.field_B[-3 + Star.field_F.field_z * 2], -78, 192));
+        gf.a(-2 + Star.field_F.field_z, 2, SolVictoryChecker.a(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * 3], -110, 192));
+        gf.a(Star.field_F.field_z - 2, Star.field_F.field_w - 2, SolVictoryChecker.a(1052688, Star.field_F.field_B[Star.field_F.field_z * (Star.field_F.field_w - 1) - 2], param0 - 117, 128));
+        gf.a(-3 + Star.field_F.field_z, -2 + Star.field_F.field_w, SolVictoryChecker.a(1052688, Star.field_F.field_B[-3 + (-1 + Star.field_F.field_w) * Star.field_F.field_z], -125, 192));
+        gf.a(-2 + Star.field_F.field_z, -3 + Star.field_F.field_w, SolVictoryChecker.a(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * (-2 + Star.field_F.field_w)], -111, 192));
         cg.i(param0 + 0);
         return Star.field_F;
     }

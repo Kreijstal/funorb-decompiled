@@ -27,7 +27,7 @@ abstract class il extends jl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != this.field_eb) {
-            this.field_eb.b((byte) -124);
+            this.field_eb.unlink((byte) -124);
           }
           if (param1 != null) {
             param1.a(6 + this.field_db, param1.field_n, (byte) 121, 6, param1.field_x);

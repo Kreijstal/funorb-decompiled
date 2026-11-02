@@ -61,7 +61,7 @@ final class gm extends IntrusiveNode {
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           eh.field_C = param2;
-          bh.field_j = true;
+          BoundsRect.field_j = true;
           if (eh.field_C == 0) {
             var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, hl.field_D, ts.field_K, 3);
             var4 = 3 + var3_int;
@@ -102,7 +102,7 @@ final class gm extends IntrusiveNode {
               if (fa.field_W.field_w) {
                 var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, ja.field_k, ts.field_K, 3);
               } else {
-                var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, ne.field_n, ts.field_K, 3);
+                var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, BattleContribution.field_n, ts.field_K, 3);
               }
               var4 = 2 + var3_int;
               kr.field_f = new String[var4];
@@ -138,7 +138,7 @@ final class gm extends IntrusiveNode {
               if (eh.field_C != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, sc.field_p, ts.field_K, 3);
+              var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, AggressiveAi.field_p, ts.field_K, 3);
               var4 = 3 + var3_int;
               kr.field_f = new String[var4];
               ss.field_a = new int[var4];
@@ -186,14 +186,14 @@ final class gm extends IntrusiveNode {
             if (-1 == var4) {
               throw new IllegalStateException();
             }
-            el.field_d = new String[var4];
-            ps.a(ts.field_K, 0, el.field_d, 0, var4);
+            TertiaryNodeList.field_d = new String[var4];
+            ps.a(ts.field_K, 0, TertiaryNodeList.field_d, 0, var4);
             hm.field_p = new String[-1 + (var3_int - var4)];
             ps.a(ts.field_K, var4 + 1, hm.field_p, 0, var3_int - var4 - 1);
-            if (kp.field_o.length >= el.field_d.length) {
+            if (kp.field_o.length >= TertiaryNodeList.field_d.length) {
               stackIn_37_0 = kp.field_o.length;
             } else {
-              stackIn_37_0 = el.field_d.length;
+              stackIn_37_0 = TertiaryNodeList.field_d.length;
             }
             var5 = stackIn_37_0;
             if (hm.field_p.length > kd.field_b.length) {
@@ -222,10 +222,10 @@ final class gm extends IntrusiveNode {
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_47_0 = kr.field_f;
               stackIn_47_1 = var8Lifetime2 + 6;
-              if (0 > el.field_d.length + var8Lifetime2 - var5) {
+              if (0 > TertiaryNodeList.field_d.length + var8Lifetime2 - var5) {
                 stackIn_48_2 = "";
               } else {
-                stackIn_48_2 = el.field_d[var8Lifetime2 - (-el.field_d.length + var5)];
+                stackIn_48_2 = TertiaryNodeList.field_d[var8Lifetime2 - (-TertiaryNodeList.field_d.length + var5)];
               }
               stackIn_47_0[stackIn_47_1] = stackIn_48_2;
             }
@@ -275,19 +275,19 @@ final class gm extends IntrusiveNode {
               }
             }
           }
-          mr.field_a = (sm.field_b + ArchiveNetworkClient.field_i << 1) * GameState.field_l.field_b;
-          DualLinkDeque.field_f = cn.field_w - (var3_intLifetime1 >> 1);
-          ho.field_a = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + cn.field_w);
+          DerelictMapReader.field_a = (sm.field_b + ArchiveNetworkClient.field_i << 1) * GameState.field_l.field_b;
+          DualLinkDeque.field_f = QuaternaryLinkNode.field_w - (var3_intLifetime1 >> 1);
+          ho.field_a = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + QuaternaryLinkNode.field_w);
           for (var4Lifetime2 = 0; var4Lifetime2 < kr.field_f.length; var4Lifetime2++) {
-            stackIn_115_0 = mr.field_a;
+            stackIn_115_0 = DerelictMapReader.field_a;
             if (0 > ss.field_a[var4Lifetime2]) {
               stackIn_116_1 = e.field_d;
             } else {
               stackIn_116_1 = id.field_b;
             }
-            mr.field_a = stackIn_115_0 + stackIn_116_1;
+            DerelictMapReader.field_a = stackIn_115_0 + stackIn_116_1;
           }
-          uq.field_k = dm.field_i - (mr.field_a >> 1);
+          uq.field_k = dm.field_i - (DerelictMapReader.field_a >> 1);
           StrongCacheEntry.field_w = new int[kr.field_f.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = -123 / ((-15 - param1) / 55);
@@ -296,12 +296,12 @@ final class gm extends IntrusiveNode {
             var7Lifetime2 = ss.field_a[var4Lifetime3];
             if (var7Lifetime2 >= 0) {
               var8Lifetime1 = vm.a(kr.field_f[var4Lifetime3], 0, true);
-              var9 = cn.field_w - (var8Lifetime1 >> 1);
+              var9 = QuaternaryLinkNode.field_w - (var8Lifetime1 >> 1);
               var6Lifetime1 = var6Lifetime1 + sm.field_b;
               StrongCacheEntry.field_w[var4Lifetime3] = new int[4];
-              StrongCacheEntry.field_w[var4Lifetime3][0] = var9 - tr.field_Lb;
+              StrongCacheEntry.field_w[var4Lifetime3][0] = var9 - MapView.field_Lb;
               StrongCacheEntry.field_w[var4Lifetime3][1] = var6Lifetime1;
-              StrongCacheEntry.field_w[var4Lifetime3][2] = var8Lifetime1 + (tr.field_Lb << 1);
+              StrongCacheEntry.field_w[var4Lifetime3][2] = var8Lifetime1 + (MapView.field_Lb << 1);
               var6Lifetime1 = var6Lifetime1 + (id.field_b + ((ArchiveNetworkClient.field_i << 1) + sm.field_b));
               StrongCacheEntry.field_w[var4Lifetime3][3] = (ArchiveNetworkClient.field_i << 1) + id.field_b;
             } else {
@@ -312,7 +312,7 @@ final class gm extends IntrusiveNode {
           if (2 == eh.field_C) {
             GameState.field_l.a(-1, -1, param0, 99);
           } else {
-            GameState.field_l.a(kq.a(pd.field_k, bb.field_b, 16777215), 0, param0, -58);
+            GameState.field_l.a(GameScreen.a(pd.field_k, bb.field_b, 16777215), 0, param0, -58);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

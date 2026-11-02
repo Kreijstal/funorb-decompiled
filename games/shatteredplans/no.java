@@ -15,7 +15,7 @@ final class no {
           int var12 = 0;
           int var6 = 0;
           int var2_int = 0;
-          l var3 = null;
+          GalaxyMap var3 = null;
           int var8_int = 0;
           Star[] var9_ref_ln__ = null;
           int var10_int = 0;
@@ -96,7 +96,7 @@ final class no {
                 var13Lifetime2 = var19;
                 var22Lifetime2 = var13Lifetime2;
                 var13Lifetime2Lifetime1 = var19;
-                if (!var18_ref.b(var19, (byte) 10)) {
+                if (!var18_ref.isNeighbour(var19, (byte) 10)) {
                   var8_int++;
                 }
               }
@@ -112,7 +112,7 @@ final class no {
                   var22Lifetime3 = var13Lifetime3;
                   var26 = var22Lifetime3;
                   var22Lifetime3 = var13Lifetime3;
-                  if (!var18_ref.b(var13Lifetime3, (byte) 10)) {
+                  if (!var18_ref.isNeighbour(var13Lifetime3, (byte) 10)) {
                     var9_ref_ln__[var8_int + var10_intLifetime1] = var3.field_e[var13Lifetime3.field_p];
                     var8_int++;
                   }
@@ -133,16 +133,16 @@ final class no {
                   var16.field_y.field_m.field_q == var16) {
                   var10_intLifetime2 = 1;
                 }
-                var18_ref.field_R.a(-21771, var18_ref);
+                var18_ref.field_R.addStar(-21771, var18_ref);
                 if (var9 != 0) {
                   var18_ref.field_R.field_q = var18_ref;
                 }
-                var18_ref.field_y.field_m.a(-21771, var18_ref);
+                var18_ref.field_y.field_m.addStar(-21771, var18_ref);
                 if (var10_intLifetime2 != 0) {
                   var18_ref.field_y.field_m.field_q = var18_ref;
                 }
-                var16.b((byte) -71);
-                var16.a(16);
+                var16.unlink((byte) -71);
+                var16.unlinkSecondary(16);
               }
             }
             oq.field_a.a(var3, 6);
@@ -169,14 +169,14 @@ final class no {
               var3.field_e[7].field_t = var23;
               var3.field_e[7].field_y = var23;
               var23.field_m = new lo(var23, var3.field_e[7]);
-              var23.field_m.a(-21771, var3.field_e[7]);
-              var23.field_m.a(-21771, var3.field_e[6]);
+              var23.field_m.addStar(-21771, var3.field_e[7]);
+              var23.field_m.addStar(-21771, var3.field_e[6]);
               var24 = new Territory(var23, var3.field_e[7]);
-              var24.a(-21771, var3.field_e[7]);
-              var24.a(-21771, var3.field_e[6]);
+              var24.addStar(-21771, var3.field_e[7]);
+              var24.addStar(-21771, var3.field_e[6]);
               var3.field_e[6].field_R = var24;
               var3.field_e[7].field_R = var24;
-              var23.field_i.a((byte) -113, var24);
+              var23.field_i.addLast((byte) -113, var24);
               var23.field_q = new um(var3.field_e[7].field_x + var3.field_e[6].field_x);
             }
             if (6 == kb.field_x) {
@@ -188,11 +188,11 @@ final class no {
               var26Lifetime2.field_y = var25;
               var26Lifetime2.field_t = var25;
               var25.field_m = new lo(var25, var26Lifetime2);
-              var25.field_m.a(-21771, var26Lifetime2);
+              var25.field_m.addStar(-21771, var26Lifetime2);
               var27 = new Territory(var25, var26Lifetime2);
-              var27.a(-21771, var26Lifetime2);
+              var27.addStar(-21771, var26Lifetime2);
               var26Lifetime2.field_R = var27;
-              var25.field_i.a((byte) -113, var27);
+              var25.field_i.addLast((byte) -113, var27);
               var25.field_q = new um(var26Lifetime2.field_x);
             }
             if (kb.field_x == 7) {
@@ -214,23 +214,23 @@ final class no {
               var10.field_t = var28;
               var10.field_y = var28;
               var28.field_m = new lo(var28, var29Lifetime2);
-              var28.field_m.a(-21771, var29Lifetime2);
-              var28.field_m.a(-21771, var30);
-              var28.field_m.a(-21771, var8);
-              var28.field_m.a(-21771, var31);
-              var28.field_m.a(-21771, var10);
+              var28.field_m.addStar(-21771, var29Lifetime2);
+              var28.field_m.addStar(-21771, var30);
+              var28.field_m.addStar(-21771, var8);
+              var28.field_m.addStar(-21771, var31);
+              var28.field_m.addStar(-21771, var10);
               var32 = new Territory(var28, var29Lifetime2);
-              var32.a(-21771, var29Lifetime2);
-              var32.a(-21771, var30);
-              var32.a(-21771, var8);
-              var32.a(-21771, var31);
-              var32.a(-21771, var10);
+              var32.addStar(-21771, var29Lifetime2);
+              var32.addStar(-21771, var30);
+              var32.addStar(-21771, var8);
+              var32.addStar(-21771, var31);
+              var32.addStar(-21771, var10);
               var29Lifetime2.field_R = var32;
               var30.field_R = var32;
               var8.field_R = var32;
               var31.field_R = var32;
               var10.field_R = var32;
-              var28.field_i.a((byte) -113, var32);
+              var28.field_i.addLast((byte) -113, var32);
               var28.field_q = new um(var31.field_x + var8.field_x + (var30.field_x + var29Lifetime2.field_x) + var10.field_x);
             }
             if (var5 != null) {
@@ -263,7 +263,7 @@ final class no {
         RuntimeException var3 = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (param1 > ma.field_p) {
+          if (param1 > DefensiveAi.field_p) {
             var3_int = 0;
             if (oq.field_e) {
               oq.field_e = false;

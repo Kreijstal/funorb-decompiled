@@ -65,7 +65,7 @@ final class wp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1.previous != null) {
-            param1.b((byte) -111);
+            param1.unlink((byte) -111);
           }
           param1.next = param2;
           param1.previous = param2.previous;
@@ -191,7 +191,7 @@ final class wp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1.previous != null) {
-            param1.b((byte) -111);
+            param1.unlink((byte) -111);
           }
           param1.next = param2;
           param1.previous = param2.previous;

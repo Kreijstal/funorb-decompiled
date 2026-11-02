@@ -124,27 +124,27 @@ final class ai {
     }
 
     final static void a(int param0) {
-        if (hp.field_m == null) {
-          hp.field_l = null;
-          hp.field_m = null;
+        if (DerelictVictoryChecker.field_m == null) {
+          DerelictVictoryChecker.field_l = null;
+          DerelictVictoryChecker.field_m = null;
           if (param0 == 3) {
             return;
           }
           field_b = (int[]) null;
           return;
         }
-        if (null == hp.field_m.field_e) {
-          hp.field_l = null;
-          hp.field_m = null;
+        if (null == DerelictVictoryChecker.field_m.field_e) {
+          DerelictVictoryChecker.field_l = null;
+          DerelictVictoryChecker.field_m = null;
           if (param0 == 3) {
             return;
           }
           field_b = (int[]) null;
           return;
         }
-        hp.field_m.field_e.field_bb = false;
-        hp.field_l = null;
-        hp.field_m = null;
+        DerelictVictoryChecker.field_m.field_e.field_bb = false;
+        DerelictVictoryChecker.field_l = null;
+        DerelictVictoryChecker.field_m = null;
         if (param0 == 3) {
           return;
         }

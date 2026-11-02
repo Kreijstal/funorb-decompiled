@@ -20,7 +20,7 @@ abstract class SpriteState extends DualLinkNode {
         wp.field_a = MusicTrack.a(param0, "", "shattered_plans_ingame_two");
         js.field_i = MusicTrack.a(param0, "", "shattered_plans_ingame");
         hk.field_nb = wp.field_a;
-        hj.field_n = MusicTrack.a(param0, "", "shattered_plans_win");
+        PlacementEvent.field_n = MusicTrack.a(param0, "", "shattered_plans_win");
         wh.field_b = MusicTrack.a(param0, "", "shattered_plans_lose");
         u.field_b.field_u.a(param1, sf.field_d, 50, 0, mj.field_Sb);
         u.field_b.field_u.a(param1, wp.field_a, 41, 0, mj.field_Sb);

@@ -77,13 +77,13 @@ final class si extends DualLinkNode {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
-          if (cs.field_j == j.field_r) {
+          if (Wormhole.field_j == LegacyAi.field_r) {
             js.field_f.position = 0;
             sa.field_d = null;
             if (param5 == null) {
               eo.field_cb.position = 0;
-              eo.field_cb.e(11135, na.field_u.nextInt());
-              eo.field_cb.e(11135, na.field_u.nextInt());
+              eo.field_cb.writeInt(11135, na.field_u.nextInt());
+              eo.field_cb.writeInt(11135, na.field_u.nextInt());
               stackIn_21_0 = eo.field_cb;
               stackIn_21_1 = 95;
               if (!param3.a(2)) {
@@ -91,7 +91,7 @@ final class si extends DualLinkNode {
               } else {
                 stackIn_22_2 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_21_0).a((byte) stackIn_21_1, stackIn_22_2);
+              ((PacketBuffer) (Object) stackIn_21_0).writeMarkedString((byte) stackIn_21_1, stackIn_22_2);
               stackIn_24_0 = eo.field_cb;
               stackIn_24_1 = 95;
               if (!param2.a(2)) {
@@ -99,52 +99,52 @@ final class si extends DualLinkNode {
               } else {
                 stackIn_25_2 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_24_0).a((byte) stackIn_24_1, stackIn_25_2);
-              js.field_f.c(16, (byte) -69);
+              ((PacketBuffer) (Object) stackIn_24_0).writeMarkedString((byte) stackIn_24_1, stackIn_25_2);
+              js.field_f.writeByte(16, (byte) -69);
               js.field_f.position = js.field_f.position + 1;
               var9 = js.field_f.position;
-              co.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
-              js.field_f.b(js.field_f.position - var9, (byte) 119);
+              GarrisonTask.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
+              js.field_f.patchLengthByte(js.field_f.position - var9, (byte) 119);
             } else {
               var9 = 0;
               eo.field_cb.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              eo.field_cb.e(11135, na.field_u.nextInt());
-              eo.field_cb.e(11135, na.field_u.nextInt());
-              eo.field_cb.a((byte) 95, var14);
-              eo.field_cb.a((byte) 95, var8);
+              eo.field_cb.writeInt(11135, na.field_u.nextInt());
+              eo.field_cb.writeInt(11135, na.field_u.nextInt());
+              eo.field_cb.writeMarkedString((byte) 95, var14);
+              eo.field_cb.writeMarkedString((byte) 95, var8);
               var15 = (CharSequence) ((Object) param5);
-              eo.field_cb.a((byte) 95, cn.a(var15, (byte) 53));
-              eo.field_cb.d(param0, 255);
-              eo.field_cb.c(param1, (byte) -108);
-              eo.field_cb.c(var9, (byte) -60);
-              js.field_f.c(18, (byte) -76);
+              eo.field_cb.writeMarkedString((byte) 95, QuaternaryLinkNode.a(var15, (byte) 53));
+              eo.field_cb.writeShort(param0, 255);
+              eo.field_cb.writeByte(param1, (byte) -108);
+              eo.field_cb.writeByte(var9, (byte) -60);
+              js.field_f.writeByte(18, (byte) -76);
               js.field_f.position = js.field_f.position + 2;
               var10 = js.field_f.position;
-              var11_ref_String = ck.a((byte) -128, kq.f((byte) 124));
+              var11_ref_String = ck.a((byte) -128, GameScreen.f((byte) 124));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              js.field_f.a(var11_ref_String, (byte) 0);
-              co.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
-              js.field_f.f(-549342136, -var10 + js.field_f.position);
+              js.field_f.writeString(var11_ref_String, (byte) 0);
+              GarrisonTask.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
+              js.field_f.patchLengthShort(-549342136, -var10 + js.field_f.position);
             }
             d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
-            cs.field_j = qe.field_k;
+            Wormhole.field_j = qe.field_k;
           }
-          if (cs.field_j == qe.field_k &&
-            es.a(110, 1)) {
-            var9Lifetime1 = sa.field_a.j(-83);
+          if (Wormhole.field_j == qe.field_k &&
+            StarAnnotation.a(110, 1)) {
+            var9Lifetime1 = sa.field_a.readUnsignedByte(-83);
             sa.field_a.position = 0;
             if (100 <= var9Lifetime1 &&
               105 >= var9Lifetime1) {
-              cs.field_j = k.field_h;
+              Wormhole.field_j = TurnEventLog.field_h;
               ae.field_e = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                ce.a(kq.f((byte) 125), true);
+                ce.a(GameScreen.f((byte) 125), true);
                 nl.field_c = dh.field_b;
                 q.g(-125);
                 BufferedSocket.field_j = false;
@@ -152,25 +152,25 @@ final class si extends DualLinkNode {
                 return stackIn_34_0;
               }
               if (99 != var9Lifetime1) {
-                cs.field_j = nr.field_m;
+                Wormhole.field_j = StarAbandonedEvent.field_m;
                 BufferedCacheFile.field_e = var9Lifetime1;
                 rr.field_t = -1;
               } else {
-                es.a(119, nc.a(-85));
+                StarAnnotation.a(119, nc.a(-85));
                 sa.field_d = new Boolean(ro.a((byte) -24, sa.field_a));
                 sa.field_a.position = 0;
               }
             }
           }
-          if (k.field_h == cs.field_j) {
+          if (TurnEventLog.field_h == Wormhole.field_j) {
             var9Lifetime2 = 2;
-            if (es.a(-87, var9Lifetime2)) {
-              var10Lifetime1 = sa.field_a.f(-20976);
+            if (StarAnnotation.a(-87, var9Lifetime2)) {
+              var10Lifetime1 = sa.field_a.readUnsignedShort(-20976);
               sa.field_a.position = 0;
-              if (es.a(126, var10Lifetime1)) {
+              if (StarAnnotation.a(126, var10Lifetime1)) {
                 var11 = ae.field_e.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  ae.field_e[var12] = sa.field_a.e((byte) -126);
+                  ae.field_e[var12] = sa.field_a.readMarkedString((byte) -126);
                 }
                 q.g(-113);
                 BufferedSocket.field_j = false;
@@ -179,15 +179,15 @@ final class si extends DualLinkNode {
               }
             }
           }
-          if (nr.field_m == cs.field_j &&
+          if (StarAbandonedEvent.field_m == Wormhole.field_j &&
             uc.d((byte) -28)) {
             if (BufferedCacheFile.field_e == 255) {
-              var9_ref_String = sa.field_a.i(1910283844);
+              var9_ref_String = sa.field_a.readNullableString(1910283844);
               if (var9_ref_String != null) {
-                jf.a(-25602, var9_ref_String, kq.f((byte) 125));
+                jf.a(-25602, var9_ref_String, GameScreen.f((byte) 125));
               }
             } else {
-              nl.field_c = sa.field_a.e(-1);
+              nl.field_c = sa.field_a.readString(-1);
             }
             q.g(-99);
             BufferedSocket.field_j = false;
@@ -199,7 +199,7 @@ final class si extends DualLinkNode {
               if (wh.a(18) > 30000L) {
                 nl.field_c = gq.field_f;
               } else {
-                nl.field_c = wb.field_d;
+                nl.field_c = QuaternaryNodeList.field_d;
               }
               BufferedSocket.field_j = false;
               stackIn_63_0 = 249;
@@ -284,15 +284,15 @@ final class si extends DualLinkNode {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (1 == param2) {
-            this.field_t = param0.e(-1);
+            this.field_t = param0.readString(-1);
           } else {
             if (param2 == 2) {
-              var4_int = param0.j(-100);
+              var4_int = param0.readUnsignedByte(-100);
               this.field_p = new char[var4_int];
               this.field_r = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_r[var5] = param0.f(-20976);
-                var6 = param0.g(-2852);
+                this.field_r[var5] = param0.readUnsignedShort(-20976);
+                var6 = param0.readSignedByte(-2852);
                 stackIn_17_0 = this.field_p;
                 stackIn_17_1 = var5;
                 if (var6 != 0) {
@@ -304,12 +304,12 @@ final class si extends DualLinkNode {
               }
             } else {
               if (3 == param2) {
-                var4_int = param0.j(-81);
+                var4_int = param0.readUnsignedByte(-81);
                 this.field_s = new char[var4_int];
                 this.field_x = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  this.field_x[var5] = param0.f(-20976);
-                  var6 = param0.g(-2852);
+                  this.field_x[var5] = param0.readUnsignedShort(-20976);
+                  var6 = param0.readSignedByte(-2852);
                   stackIn_8_0 = this.field_s;
                   stackIn_8_1 = var5;
                   if (var6 != 0) {
@@ -395,7 +395,7 @@ final class si extends DualLinkNode {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           while (true) {
-            var3_int = param0.j(param1 ^ 109);
+            var3_int = param0.readUnsignedByte(param1 ^ 109);
             if (var3_int != 0) {
               this.a(param0, (byte) -67, var3_int);
               continue;

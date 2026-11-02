@@ -74,7 +74,7 @@ final class cl extends IntrusiveNode {
             var10Lifetime1 = param7 + var9_intLifetime1;
             var11Lifetime1 = (var9_intLifetime1 - 1) * 256 / (param4 - 2);
             if (var9_intLifetime1 >= 2) {
-              stackIn_18_0 = ui.a(param6, param1, param2 + 22363, var11Lifetime1);
+              stackIn_18_0 = SolVictoryChecker.a(param6, param1, param2 + 22363, var11Lifetime1);
             } else {
               stackIn_18_0 = param5;
             }

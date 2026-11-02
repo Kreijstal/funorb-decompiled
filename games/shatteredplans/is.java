@@ -17,15 +17,15 @@ final class is {
         int var2 = hn.field_i;
         hn.field_i = cf.field_D;
         if (param1 == 51) {
-          vp.field_o.field_p = 2;
+          TertiaryLinkNode.field_o.field_p = 2;
           cf.field_D = var2;
-          vp.field_o.field_a = vp.field_o.field_a + 1;
-          if (vp.field_o.field_a < 2) {
-            if (2 <= vp.field_o.field_a &&
+          TertiaryLinkNode.field_o.field_a = TertiaryLinkNode.field_o.field_a + 1;
+          if (TertiaryLinkNode.field_o.field_a < 2) {
+            if (2 <= TertiaryLinkNode.field_o.field_a &&
               param1 == 50) {
               return 5;
             }
-            if (vp.field_o.field_a < 4) {
+            if (TertiaryLinkNode.field_o.field_a < 4) {
               return -1;
             }
             return 1;
@@ -33,25 +33,25 @@ final class is {
           if (param1 == 51) {
             return 2;
           }
-          if (2 <= vp.field_o.field_a &&
+          if (2 <= TertiaryLinkNode.field_o.field_a &&
             param1 == 50) {
             return 5;
           }
-          if (vp.field_o.field_a < 4) {
+          if (TertiaryLinkNode.field_o.field_a < 4) {
             return -1;
           }
           return 1;
         }
         if (50 == param1) {
-          vp.field_o.field_p = 5;
+          TertiaryLinkNode.field_o.field_p = 5;
           cf.field_D = var2;
-          vp.field_o.field_a = vp.field_o.field_a + 1;
-          if (vp.field_o.field_a < 2) {
-            if (2 <= vp.field_o.field_a &&
+          TertiaryLinkNode.field_o.field_a = TertiaryLinkNode.field_o.field_a + 1;
+          if (TertiaryLinkNode.field_o.field_a < 2) {
+            if (2 <= TertiaryLinkNode.field_o.field_a &&
               param1 == 50) {
               return 5;
             }
-            if (vp.field_o.field_a < 4) {
+            if (TertiaryLinkNode.field_o.field_a < 4) {
               return -1;
             }
             return 1;
@@ -59,24 +59,24 @@ final class is {
           if (param1 == 51) {
             return 2;
           }
-          if (2 <= vp.field_o.field_a &&
+          if (2 <= TertiaryLinkNode.field_o.field_a &&
             param1 == 50) {
             return 5;
           }
-          if (vp.field_o.field_a < 4) {
+          if (TertiaryLinkNode.field_o.field_a < 4) {
             return -1;
           }
           return 1;
         }
-        vp.field_o.field_p = 1;
+        TertiaryLinkNode.field_o.field_p = 1;
         cf.field_D = var2;
-        vp.field_o.field_a = vp.field_o.field_a + 1;
-        if (vp.field_o.field_a < 2) {
-          if (2 <= vp.field_o.field_a &&
+        TertiaryLinkNode.field_o.field_a = TertiaryLinkNode.field_o.field_a + 1;
+        if (TertiaryLinkNode.field_o.field_a < 2) {
+          if (2 <= TertiaryLinkNode.field_o.field_a &&
             param1 == 50) {
             return 5;
           }
-          if (vp.field_o.field_a >= 4) {
+          if (TertiaryLinkNode.field_o.field_a >= 4) {
             return 1;
           }
           return -1;
@@ -84,11 +84,11 @@ final class is {
         if (param1 == 51) {
           return 2;
         }
-        if (2 <= vp.field_o.field_a &&
+        if (2 <= TertiaryLinkNode.field_o.field_a &&
           param1 == 50) {
           return 5;
         }
-        if (vp.field_o.field_a < 4) {
+        if (TertiaryLinkNode.field_o.field_a < 4) {
           return -1;
         }
         return 1;

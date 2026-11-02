@@ -38,7 +38,7 @@ final class vm extends qr {
         }
         if (null != this.field_Ob) {
           this.field_Ob.h(0);
-          this.field_Ob.b((byte) -128);
+          this.field_Ob.unlink((byte) -128);
         }
         this.field_Ob = null;
         this.field_Gb = -1;
@@ -152,7 +152,7 @@ final class vm extends qr {
         int var7 = i.field_e.get(11);
         int var8 = i.field_e.get(12);
         int var9 = i.field_e.get(13);
-        return j.field_q[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + qa.field_o[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return LegacyAi.field_q[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + PlacementOrder.field_o[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
@@ -247,7 +247,7 @@ final class vm extends qr {
           }
           return this.field_Ob.a(param0, param1, param2);
         }
-        if (this.field_Ob == null && this == mr.field_h &&
+        if (this.field_Ob == null && this == DerelictMapReader.field_h &&
           var4 != 0) {
           jp.g((byte) 92);
           return true;
@@ -256,7 +256,7 @@ final class vm extends qr {
         if (0 >= var5) {
           return false;
         }
-        if (hg.field_p == var5) {
+        if (IsolationistAi.field_p == var5) {
           var5 = 63;
         }
         for (var6 = 0; var6 < this.field_zb.length; var6++) {

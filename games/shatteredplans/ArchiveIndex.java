@@ -83,21 +83,21 @@ final class ArchiveIndex {
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var17 = new PacketBuffer(ProxySocketConnector.a(param0, 200));
-          var4 = var17.j(-89);
+          var4 = var17.readUnsignedByte(-89);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (var4 < 6) {
               this.field_e = 0;
             } else {
-              this.field_e = var17.a(16711680);
+              this.field_e = var17.readInt(16711680);
             }
-            var5 = var17.j(-57);
+            var5 = var17.readUnsignedByte(-57);
             stackIn_11_0 = (0 == (1 & var5)) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 < 7) {
-              this.field_l = var17.f(-20976);
+              this.field_l = var17.readUnsignedShort(-20976);
             } else {
-              this.field_l = var17.d(true);
+              this.field_l = var17.readLargeSmart(true);
             }
             stackIn_17_0 = ((2 & var5) == 0) ? 0 : 1;
             var7 = stackIn_17_0;
@@ -106,7 +106,7 @@ final class ArchiveIndex {
             var9 = -1;
             if (var4 < 7) {
               for (var10 = 0; this.field_l > var10; var10++) {
-                dupTemp$0 = var8 + var17.f(-20976);
+                dupTemp$0 = var8 + var17.readUnsignedShort(-20976);
                 var8 = dupTemp$0;
                 this.field_q[var10] = dupTemp$0;
                 if (this.field_q[var10] > var9) {
@@ -115,7 +115,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10 = 0; this.field_l > var10; var10++) {
-                dupTemp$1 = var8 + var17.d(true);
+                dupTemp$1 = var8 + var17.readLargeSmart(true);
                 var8 = dupTemp$1;
                 this.field_q[var10] = dupTemp$1;
                 if (this.field_q[var10] > var9) {
@@ -138,36 +138,36 @@ final class ArchiveIndex {
                 this.field_s[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_l; var10Lifetime1Lifetime1++) {
-                this.field_s[this.field_q[var10Lifetime1Lifetime1]] = var17.a(16711680);
+                this.field_s[this.field_q[var10Lifetime1Lifetime1]] = var17.readInt(16711680);
               }
               this.field_b = new cm(this.field_s);
             }
             for (var10Lifetime2 = 0; this.field_l > var10Lifetime2; var10Lifetime2++) {
-              this.field_f[this.field_q[var10Lifetime2]] = var17.a(16711680);
+              this.field_f[this.field_q[var10Lifetime2]] = var17.readInt(16711680);
             }
             if (var7 == 0) {
               if (param1 <= 77) {
                 return;
               }
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_l; var10Lifetime3++) {
-                this.field_v[this.field_q[var10Lifetime3]] = var17.a(16711680);
+                this.field_v[this.field_q[var10Lifetime3]] = var17.readInt(16711680);
               }
             } else {
               for (var10Lifetime3 = 0; this.field_l > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(64, 0, 17469032, var21);
+                var17.readBytes(64, 0, 17469032, var21);
                 this.field_j[this.field_q[var10Lifetime3]] = var21;
               }
               if (param1 <= 77) {
                 return;
               }
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_l; var10Lifetime3++) {
-                this.field_v[this.field_q[var10Lifetime3]] = var17.a(16711680);
+                this.field_v[this.field_q[var10Lifetime3]] = var17.readInt(16711680);
               }
             }
             if (var4 < 7) {
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_l; var10Lifetime4++) {
-                this.field_n[this.field_q[var10Lifetime4]] = var17.f(-20976);
+                this.field_n[this.field_q[var10Lifetime4]] = var17.readUnsignedShort(-20976);
               }
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_l; var10Lifetime4++) {
                 var11 = this.field_q[var10Lifetime4];
@@ -177,7 +177,7 @@ final class ArchiveIndex {
                 array$2 = new int[var12];
                 this.field_k[var11] = array$2;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.f(-20976);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShort(-20976);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_k[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -193,7 +193,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10Lifetime4 = 0; this.field_l > var10Lifetime4; var10Lifetime4++) {
-                this.field_n[this.field_q[var10Lifetime4]] = var17.d(true);
+                this.field_n[this.field_q[var10Lifetime4]] = var17.readLargeSmart(true);
               }
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_l; var10Lifetime4++) {
                 var11 = this.field_q[var10Lifetime4];
@@ -203,7 +203,7 @@ final class ArchiveIndex {
                 this.field_k[var11] = array$5;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.d(true);
+                  dupTemp$6 = var8Lifetime1 + var17.readLargeSmart(true);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_k[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -235,7 +235,7 @@ final class ArchiveIndex {
                   } else {
                     var14Lifetime1 = this.field_k[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_t[var11Lifetime1][var14Lifetime1] = var17.a(16711680);
+                  this.field_t[var11Lifetime1][var14Lifetime1] = var17.readInt(16711680);
                 }
                 this.field_i[var11Lifetime1] = new cm(this.field_t[var11Lifetime1]);
               }

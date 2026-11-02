@@ -61,7 +61,7 @@ final class gb extends IntrusiveNode {
             if (var2_int >= param1.length()) {
               return true;
             }
-            if (ne.a(0, param1.charAt(var2_int))) {
+            if (BattleContribution.a(0, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }

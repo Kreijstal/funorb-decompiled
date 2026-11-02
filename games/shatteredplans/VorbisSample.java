@@ -216,7 +216,7 @@ final class VorbisSample extends IntrusiveNode {
         int var18_intLifetime2;
         VorbisSample.a(this.field_v[param0], 0);
         VorbisSample.c();
-        var2 = VorbisSample.a(rj.c(99, field_J.length - 1));
+        var2 = VorbisSample.a(RecklessAi.c(99, field_J.length - 1));
         var3 = field_t[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_E;
@@ -335,7 +335,7 @@ final class VorbisSample extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = rj.c(69, var4 - 1);
+          var25Lifetime2 = RecklessAi.c(69, var4 - 1);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;
@@ -542,7 +542,7 @@ final class VorbisSample extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = rj.c(127, var5 - 1);
+          var10 = RecklessAi.c(127, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = js.a(var11, var10, (byte) 41);
           }
@@ -628,15 +628,15 @@ final class VorbisSample extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_B = var2.a(16711680);
-        this.field_q = var2.a(16711680);
-        this.field_H = var2.a(16711680);
-        this.field_G = var2.a(16711680);
+        this.field_B = var2.readInt(16711680);
+        this.field_q = var2.readInt(16711680);
+        this.field_H = var2.readInt(16711680);
+        this.field_G = var2.readInt(16711680);
         if (this.field_G < 0) {
           this.field_G = ~this.field_G;
           this.field_I = true;
         }
-        int var3 = var2.a(16711680);
+        int var3 = var2.readInt(16711680);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -644,11 +644,11 @@ final class VorbisSample extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.j(-57);
+            var6_int = var2.readUnsignedByte(-57);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(var5, 0, 17469032, var6);
+          var2.readBytes(var5, 0, 17469032, var6);
           this.field_v[var4] = var6;
         }
     }

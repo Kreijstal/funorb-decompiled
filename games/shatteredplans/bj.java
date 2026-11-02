@@ -122,7 +122,7 @@ final class bj extends WidgetContainer implements bp {
         int var6 = 0;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.field_A.a(0);
+          this.field_A.clear(0);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
@@ -139,7 +139,7 @@ final class bj extends WidgetContainer implements bp {
               this.field_I[var5].a(20 + var5 * 16, 15, (byte) 112, 0, 80);
               this.b((byte) -107, this.field_I[var5]);
             }
-            this.field_I[var3_int] = new kg(vl.field_p, (ko) (this));
+            this.field_I[var3_int] = new kg(SolMapGenerator.field_p, (ko) (this));
             this.field_I[var3_int].field_p = (iq) ((Object) var4);
             this.field_I[var3_int].a(16 + (var3_int * 16 + 20), 15, (byte) 102, 0, 100);
             this.b((byte) -65, this.field_I[var3_int]);

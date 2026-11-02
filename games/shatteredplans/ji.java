@@ -54,7 +54,7 @@ abstract class ji extends WidgetContainer implements ki {
         if (param0 > -115) {
           return -24;
         }
-        return kl.field_t;
+        return AttackTask.field_t;
     }
 
     final static String a(CharSequence param0, boolean param1) {
@@ -111,7 +111,7 @@ abstract class ji extends WidgetContainer implements ki {
           }
           while (var6 < var3) {
             var7 = param0.charAt(var6);
-            if (ne.a(0, (char) var7)) {
+            if (BattleContribution.a(0, (char) var7)) {
               var8 = os.a((char) var7, -31024);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

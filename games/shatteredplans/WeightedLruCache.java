@@ -26,12 +26,12 @@ final class WeightedLruCache {
           this.a(false, param0);
           this.field_k = this.field_k - param1;
           while (this.field_k < 0) {
-            var6 = (WeightedCacheEntry) (this.field_c.a((byte) -20));
+            var6 = (WeightedCacheEntry) (this.field_c.pollFirst((byte) -20));
             this.a(var6, (byte) -88);
           }
           var6_ref = new StrongCacheEntry(param3, param1);
-          this.field_h.a(var6_ref, true, param0);
-          this.field_c.a(var6_ref, 6);
+          this.field_h.put(var6_ref, true, param0);
+          this.field_c.addLast(var6_ref, 6);
           ((WeightedCacheEntry) ((Object) var6_ref)).field_l = (long)param2;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -41,7 +41,7 @@ final class WeightedLruCache {
     final Object a(long param0, int param1) {
         Object var8 = null;
         StrongCacheEntry var6 = null;
-        WeightedCacheEntry var7 = (WeightedCacheEntry) (this.field_h.a(-78, param0));
+        WeightedCacheEntry var7 = (WeightedCacheEntry) (this.field_h.get(-78, param0));
         StrongCacheEntry var6Lifetime1;
         if (param1 != 0) {
           WeightedLruCache.a(true);
@@ -51,22 +51,22 @@ final class WeightedLruCache {
           var8 = var7.e((byte) -111);
           Object var5 = var8;
           if (var8 == null) {
-            var7.b((byte) -123);
-            var7.a(param1 + 16);
+            var7.unlink((byte) -123);
+            var7.unlinkSecondary(param1 + 16);
             this.field_k = this.field_k + var7.field_p;
             return null;
           }
           if (!var7.e(false)) {
-            this.field_c.a(var7, 6);
+            this.field_c.addLast(var7, 6);
             var7.field_l = 0L;
             return var8;
           }
           var6 = new StrongCacheEntry(var8, var7.field_p);
-          this.field_h.a(var6, true, var7.key);
-          this.field_c.a(var6, 6);
+          this.field_h.put(var6, true, var7.key);
+          this.field_c.addLast(var6, 6);
           ((WeightedCacheEntry) ((Object) var6)).field_l = 0L;
-          var7.b((byte) -96);
-          var7.a(16);
+          var7.unlink((byte) -96);
+          var7.unlinkSecondary(16);
           return var8;
         }
         if (var7 == null) {
@@ -74,29 +74,29 @@ final class WeightedLruCache {
         }
         Object var9 = var7.e((byte) -111);
         if (var9 == null) {
-          var7.b((byte) -123);
-          var7.a(param1 + 16);
+          var7.unlink((byte) -123);
+          var7.unlinkSecondary(param1 + 16);
           this.field_k = this.field_k + var7.field_p;
           return null;
         }
         if (!var7.e(false)) {
-          this.field_c.a(var7, 6);
+          this.field_c.addLast(var7, 6);
           var7.field_l = 0L;
           return var9;
         }
         var6Lifetime1 = new StrongCacheEntry(var9, var7.field_p);
-        this.field_h.a(var6Lifetime1, true, var7.key);
-        this.field_c.a(var6Lifetime1, 6);
+        this.field_h.put(var6Lifetime1, true, var7.key);
+        this.field_c.addLast(var6Lifetime1, 6);
         ((WeightedCacheEntry) ((Object) var6Lifetime1)).field_l = 0L;
-        var7.b((byte) -96);
-        var7.a(16);
+        var7.unlink((byte) -96);
+        var7.unlinkSecondary(16);
         return var9;
     }
 
     final static boolean a(int param0) {
         if (param0 >= -79) {
           WeightedLruCache.a(true);
-          if (null != hp.field_m) {
+          if (null != DerelictVictoryChecker.field_m) {
             return true;
           }
           if (ih.b(-124)) {
@@ -110,7 +110,7 @@ final class WeightedLruCache {
           }
           return true;
         }
-        if (null != hp.field_m) {
+        if (null != DerelictVictoryChecker.field_m) {
           return true;
         }
         if (ih.b(-124)) {
@@ -166,8 +166,8 @@ final class WeightedLruCache {
           if (param0 == null) {
             return;
           }
-          param0.b((byte) -126);
-          param0.a(16);
+          param0.unlink((byte) -126);
+          param0.unlinkSecondary(16);
           this.field_k = this.field_k + param0.field_p;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -185,7 +185,7 @@ final class WeightedLruCache {
     }
 
     private final void a(boolean param0, long param1) {
-        WeightedCacheEntry var4 = (WeightedCacheEntry) (this.field_h.a(-99, param1));
+        WeightedCacheEntry var4 = (WeightedCacheEntry) (this.field_h.get(-99, param1));
         this.a(var4, (byte) -88);
         if (param0) {
           field_l = (String) null;

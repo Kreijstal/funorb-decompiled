@@ -13,13 +13,13 @@ final class IsaacBackedRandom extends Random {
 
     final static void a(int param0) {
         if (param0 > 111) {
-          vp.field_o.field_a = 0;
-          vp.field_o.field_p = 0;
+          TertiaryLinkNode.field_o.field_a = 0;
+          TertiaryLinkNode.field_o.field_p = 0;
           return;
         }
         field_c = (qr) null;
-        vp.field_o.field_a = 0;
-        vp.field_o.field_p = 0;
+        TertiaryLinkNode.field_o.field_a = 0;
+        TertiaryLinkNode.field_o.field_p = 0;
     }
 
     final static Sprite[] a(int param0, byte param1, int param2, int param3) {
@@ -62,8 +62,8 @@ final class IsaacBackedRandom extends Random {
     public final void setSeed(long param0) {
         int[] var4 = new int[2];
         int[] var3 = var4;
-        var4[0] = (int)co.a(65535L, param0);
-        var4[1] = (int)co.a(param0 >> 32, 65535L);
+        var4[0] = (int)GarrisonTask.a(65535L, param0);
+        var4[1] = (int)GarrisonTask.a(param0 >> 32, 65535L);
         this.field_f = new IsaacRandom(var4);
     }
 

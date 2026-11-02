@@ -44,13 +44,13 @@ final class ArchiveSourceManager {
               return stackIn_9_0;
             }
             this.field_i.position = 72 * param1 + 6;
-            var6_int = this.field_i.a(16711680);
+            var6_int = this.field_i.readInt(16711680);
             if (param0) {
               this.field_j = (java.math.BigInteger) null;
             }
-            var7 = this.field_i.a(16711680);
+            var7 = this.field_i.readInt(16711680);
             var13 = new byte[64];
-            this.field_i.a(64, 0, 17469032, var13);
+            this.field_i.readBytes(64, 0, 17469032, var13);
             var9 = new CachedArchiveSource(param1, param3, param2, this.field_e, this.field_d, var6_int, var13, var7, param4);
             this.field_a[param1] = var9;
             stackIn_13_0 = var9;
@@ -135,9 +135,9 @@ final class ArchiveSourceManager {
         var4.position = var4.position + 1;
         int var5 = var4.position;
         int var6 = 1 % ((30 - param0) / 59);
-        var4.c(6, (byte) -72);
-        var4.b(-16426, param2);
-        var4.b(-var5 + var4.position, (byte) 118);
+        var4.writeByte(6, (byte) -72);
+        var4.writeLong(-16426, param2);
+        var4.patchLengthByte(-var5 + var4.position, (byte) 118);
     }
 
     final void c(int param0) {
@@ -189,12 +189,12 @@ final class ArchiveSourceManager {
         }
         var10 = new PacketBuffer(this.field_c.e((byte) 91));
         var10.position = 5;
-        var3 = var10.j(-120);
+        var3 = var10.readUnsignedByte(-120);
         var10.position = var10.position + 72 * var3;
         var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.a(var13.length, 0, 17469032, var13);
+        var10.readBytes(var13.length, 0, 17469032, var13);
         if (null != this.field_g &&
           null != this.field_j) {
           var12 = new java.math.BigInteger(var13);

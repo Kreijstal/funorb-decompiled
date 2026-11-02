@@ -14,8 +14,8 @@ final class lk extends kg {
     }
 
     final static void a(int param0) {
-        rd.field_g = null;
-        ui.field_p = nm.field_a;
+        StandardMapReader.field_g = null;
+        SolVictoryChecker.field_p = nm.field_a;
         if (param0 != -15365) {
           lk.h(-36);
         }

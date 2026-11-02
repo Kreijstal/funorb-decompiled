@@ -43,7 +43,7 @@ class IntrusiveNode {
         return new bg[]{og.field_b, dm.field_f, mj.field_Rb};
     }
 
-    final void b(byte param0) {
+    final void unlink(byte param0) {
         if (this.previous == null) {
           return;
         }
@@ -54,7 +54,7 @@ class IntrusiveNode {
           this.next = null;
           return;
         }
-        this.c(32);
+        this.isLinked(32);
         this.next.previous = this.previous;
         this.previous = null;
         this.next = null;
@@ -81,7 +81,7 @@ class IntrusiveNode {
           if (wg.field_f == null) {
             return false;
           }
-          if (cs.field_j.a(64)) {
+          if (Wormhole.field_j.a(64)) {
             return true;
           }
           return false;
@@ -89,13 +89,13 @@ class IntrusiveNode {
         if (wg.field_f == null) {
           return false;
         }
-        if (cs.field_j.a(64)) {
+        if (Wormhole.field_j.a(64)) {
           return true;
         }
         return false;
     }
 
-    final boolean c(int param0) {
+    final boolean isLinked(int param0) {
         if (this.previous == null) {
           return false;
         }

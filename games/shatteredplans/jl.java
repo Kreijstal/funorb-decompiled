@@ -201,29 +201,29 @@ abstract class jl extends w {
                 var4 = ji.a(var7, true);
               }
               var5 = null;
-              if (0 == ia.field_b) {
+              if (0 == MapViewState.field_b) {
                 var5 = nj.a(var4, param2, (byte) -62);
               }
-              if (ia.field_b == 1) {
+              if (MapViewState.field_b == 1) {
                 var5 = o.a((byte) -88, param2, var4);
               }
-              if (ia.field_b == 2) {
+              if (MapViewState.field_b == 2) {
                 var5 = vq.a(2, var4, param2);
               }
-              if (3 == ia.field_b) {
+              if (3 == MapViewState.field_b) {
                 var5 = os.a((byte) 117, param2, var4, var4);
               }
               if (var5 == null) {
-                ia.field_b = -1;
+                MapViewState.field_b = -1;
                 lg.field_e = null;
               } else {
                 var6 = (String) null;
                 md.a(2, (String) (var5), 0, var4, (String) null, -16169);
-                ia.field_b = -1;
+                MapViewState.field_b = -1;
                 lg.field_e = null;
               }
             } else {
-              ia.field_b = -1;
+              MapViewState.field_b = -1;
               lg.field_e = null;
             }
           }

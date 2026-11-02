@@ -31,8 +31,8 @@ final class ProxySocketConnector extends SocketConnector {
         byte[] var13 = null;
         try {
           var9 = new PacketBuffer(param0);
-          var3 = var9.j(-56);
-          var4 = var9.a(16711680);
+          var3 = var9.readUnsignedByte(-56);
+          var4 = var9.readInt(16711680);
           if (param1 != 200) {
             field_h = (String) null;
           }
@@ -42,11 +42,11 @@ final class ProxySocketConnector extends SocketConnector {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(var4, 0, 17469032, var13);
+              var9.readBytes(var4, 0, 17469032, var13);
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
-            var5_int = var9.a(16711680);
+            var5_int = var9.readInt(16711680);
             if (0 <= var5_int && (ho.field_b == 0 ||
               !(var5_int > ho.field_b))) {
               var12 = new byte[var5_int];
@@ -184,7 +184,7 @@ final class ProxySocketConnector extends SocketConnector {
           return;
         }
         try {
-          jp.a(pc.field_r, il.field_cb, (byte) 121, oi.field_f);
+          jp.a(DerelictMapGenerator.field_r, il.field_cb, (byte) 121, oi.field_f);
           WeightedCacheEntry.a(47, 0, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "pa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

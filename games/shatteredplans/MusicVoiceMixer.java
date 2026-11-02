@@ -8,7 +8,7 @@ final class MusicVoiceMixer extends PcmStream {
     PcmStreamMixer field_o;
 
     final PcmStream b() {
-        MusicVoice var1 = (MusicVoice) (this.field_n.d(0));
+        MusicVoice var1 = (MusicVoice) (this.field_n.startForward(0));
         if (var1 == null) {
           return null;
         }
@@ -28,7 +28,7 @@ final class MusicVoiceMixer extends PcmStream {
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_o.a(param0);
-        var3 = (MusicVoice) (this.field_n.d(0));
+        var3 = (MusicVoice) (this.field_n.startForward(0));
         while (var3 != null) {
           if (!this.field_m.a((byte) 124, var3)) {
             var2 = param0;
@@ -42,7 +42,7 @@ final class MusicVoiceMixer extends PcmStream {
               var2 = var2 - var3.field_p;
             } while (!this.field_m.a(0, (int[]) null, 2, var3, var2));
           }
-          var3 = (MusicVoice) (this.field_n.a((byte) -71));
+          var3 = (MusicVoice) (this.field_n.nextForward((byte) -71));
         }
     }
 
@@ -60,7 +60,7 @@ final class MusicVoiceMixer extends PcmStream {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           this.field_o.b(param0, param1, param2);
-          var6 = (MusicVoice) (this.field_n.d(0));
+          var6 = (MusicVoice) (this.field_n.startForward(0));
           while (var6 != null) {
             stackIn_4_0 = this.field_m.a((byte) 122, var6);
             boolean decompiledFrameCompleted0 = true;
@@ -81,7 +81,7 @@ final class MusicVoiceMixer extends PcmStream {
                 var6.field_p = var6.field_p - var5;
               }
             }
-            var6 = (MusicVoice) (this.field_n.a((byte) -71));
+            var6 = (MusicVoice) (this.field_n.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,7 +145,7 @@ final class MusicVoiceMixer extends PcmStream {
         try {
           var21 = new lp(0, 0, 209, 70);
           var21.field_h = param1;
-          var5 = new ff(-5 + (40 - (-((5 + dm.field_d[0].field_z) * 4) - k.field_d.field_z)), rs.field_Cb.field_J - 7, fj.field_r);
+          var5 = new ff(-5 + (40 - (-((5 + dm.field_d[0].field_z) * 4) - TurnEventLog.field_d.field_z)), rs.field_Cb.field_J - 7, fj.field_r);
           var21.a(var5, 8);
           var22 = param1.field_q.name;
           var6 = var22;
@@ -172,7 +172,7 @@ final class MusicVoiceMixer extends PcmStream {
             var21.a(var14_ref, 8);
             var15_ref = new ff(40 + var11_int * (5 + dm.field_d[var11_int].field_z), var7.field_i + var8, dm.field_d[var11_int]);
             var21.a(var15_ref, 8);
-            var23 = ne.field_m[var11_int];
+            var23 = BattleContribution.field_m[var11_int];
             var16 = var23;
             if (0 == param1.field_u[var11_int]) {
               var16 = var23 + " " + sg.field_yb;
@@ -181,7 +181,7 @@ final class MusicVoiceMixer extends PcmStream {
             var14_ref.field_o = var16;
             var12_ref_b.field_o = var16;
           }
-          var11 = new b(dm.field_d[0].field_z * 4 + 60, var8 + (var7.field_i + dm.field_d[0].field_w / 2), k.field_d.field_z, -(dm.field_d[0].field_w / 2) + 35, 2, 534312);
+          var11 = new b(dm.field_d[0].field_z * 4 + 60, var8 + (var7.field_i + dm.field_d[0].field_w / 2), TurnEventLog.field_d.field_z, -(dm.field_d[0].field_w / 2) + 35, 2, 534312);
           var21.a(var11, 8);
           var12 = param1.field_r;
           if (var12 < 0) {
@@ -191,16 +191,16 @@ final class MusicVoiceMixer extends PcmStream {
             var20 = (em) null;
             MusicVoiceMixer.a((byte) -57, (Territory) null, (em) null, true);
           }
-          var13 = new qk(20 + 4 * dm.field_d[0].field_z + 40, dm.field_d[0].field_w + (var7.field_i + var8), k.field_d.field_z, rs.field_Cb.field_J, Integer.toString(var12));
+          var13 = new qk(20 + 4 * dm.field_d[0].field_z + 40, dm.field_d[0].field_w + (var7.field_i + var8), TurnEventLog.field_d.field_z, rs.field_Cb.field_J, Integer.toString(var12));
           var21.a(var13, 8);
-          var14 = new ff(20 - (-(4 * dm.field_d[0].field_z) - 40), var8 + (var7.field_i - 1), k.field_d);
+          var14 = new ff(20 - (-(4 * dm.field_d[0].field_z) - 40), var8 + (var7.field_i - 1), TurnEventLog.field_d);
           var21.a(var14, 8);
           var14.field_o = si.field_w;
           var13.field_o = si.field_w;
           var11.field_o = si.field_w;
           var15 = new qk(54 + dm.field_d[0].field_z * 4, var7.field_i + (var8 + dm.field_d[0].field_w), "=");
           var21.a(var15, 8);
-          var24_ref = new jh(4 * dm.field_d[0].field_z + 20 + 40 - (-5 - k.field_d.field_z), var7.field_i + 3, aq.field_i.field_z, aq.field_i.field_w, -1, aq.field_i, (String) null, -1, -1, hq.field_a, (String) null, -1);
+          var24_ref = new jh(4 * dm.field_d[0].field_z + 20 + 40 - (-5 - TurnEventLog.field_d.field_z), var7.field_i + 3, aq.field_i.field_z, aq.field_i.field_w, -1, aq.field_i, (String) null, -1, -1, hq.field_a, (String) null, -1);
           var24_ref.field_h = param1;
           var21.a(var24_ref, 8);
           var17 = new qk(var24_ref.field_k, 29 + var24_ref.field_t, var24_ref.field_m, rs.field_Cb.field_J, Integer.toString(param1.field_x));
@@ -253,7 +253,7 @@ final class MusicVoiceMixer extends PcmStream {
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         while (true) {
-          var1 = (MusicVoice) (this.field_n.a((byte) -71));
+          var1 = (MusicVoice) (this.field_n.nextForward((byte) -71));
           if (var1 == null) {
             return null;
           }

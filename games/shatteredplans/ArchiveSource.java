@@ -57,7 +57,7 @@ abstract class ArchiveSource {
             return stackIn_12_0;
           }
           if (4 == param0) {
-            stackIn_15_0 = re.a(vn.field_p, 4371, new String[]{param2});
+            stackIn_15_0 = re.a(BattleSnapshot.field_p, 4371, new String[]{param2});
             return stackIn_15_0;
           }
           if (param0 == 5) {
@@ -69,7 +69,7 @@ abstract class ArchiveSource {
             return stackIn_22_0;
           }
           if (7 == param0) {
-            stackIn_26_0 = re.a(kq.field_i, 4371, new String[]{param2});
+            stackIn_26_0 = re.a(GameScreen.field_i, 4371, new String[]{param2});
             return stackIn_26_0;
           }
           if (param0 == 8) {

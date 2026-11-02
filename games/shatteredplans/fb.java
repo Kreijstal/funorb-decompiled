@@ -120,7 +120,7 @@ final class fb extends qr {
           if (var10 != 0 &&
             param0 <= 3 &&
             0 < param0) {
-            var13_ref2Lifetime1 = new qk(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, -IntrusiveDeque.field_a[param4.field_x].field_z + var17.field_m, rs.field_Cb.field_J, re.a(ka.field_m, 4371, new String[]{Integer.toString(param0)}));
+            var13_ref2Lifetime1 = new qk(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, -IntrusiveDeque.field_a[param4.field_x].field_z + var17.field_m, rs.field_Cb.field_J, re.a(StandardAi.field_m, 4371, new String[]{Integer.toString(param0)}));
             var17.a(var13_ref2Lifetime1, 8);
           }
           var13_refLifetime1 = new ff(0, (-IntrusiveDeque.field_a[param4.field_x].field_w + var17.field_i) / 2, IntrusiveDeque.field_a[param4.field_x]);
@@ -141,13 +141,13 @@ final class fb extends qr {
             }
             if (var10 != 0 &&
               !param7.field_z) {
-              var14 = var14 + " " + ui.field_q;
+              var14 = var14 + " " + SolVictoryChecker.field_q;
             }
             var17.field_o = var14;
-            var15 = (vd) (var17.field_l.d(0));
+            var15 = (vd) (var17.field_l.startForward(0));
             while (var15 != null) {
               var15.field_o = var14;
-              var15 = (vd) (var17.field_l.a((byte) -71));
+              var15 = (vd) (var17.field_l.nextForward((byte) -71));
             }
           }
           stackIn_32_0 = var17;
@@ -182,14 +182,14 @@ final class fb extends qr {
         if (param0 != -78) {
           return false;
         }
-        return !this.a((byte) 98) ? true : false;
+        return !this.isSecondaryLinked((byte) 98) ? true : false;
     }
 
     final static void a(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9) {
         int var11;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!param5 && (kh.field_Mb != gf.field_b ||
-          el.field_c != gf.field_k) && (so.field_q.field_d == gf.field_k &&
+          TertiaryNodeList.field_c != gf.field_k) && (so.field_q.field_d == gf.field_k &&
           gf.field_b == so.field_q.field_g)) {
           if (null == np.field_a) {
             if (null == he.field_p) {
@@ -207,7 +207,7 @@ final class fb extends qr {
           tm.field_h = gn.field_t;
         }
         mf.a(true, param5);
-        if (qa.field_t > param9) {
+        if (PlacementOrder.field_t > param9) {
           TaskAi.a(param0, param9 ^ -26671, param5, param2);
         }
         dn.field_f.field_y = 1;
@@ -237,7 +237,7 @@ final class fb extends qr {
         if (param0 >= -74) {
           this.g(-46);
         }
-        return (int)this.d((byte) 118);
+        return (int)this.secondaryKey((byte) 118);
     }
 
     final boolean a(fb param0, int param1) {

@@ -114,7 +114,7 @@ class UiWidget extends IntrusiveNode {
             this.a(0, bb.field_b, pd.field_k, this, param2, param0, so.field_o);
           }
           if (je.field_d != 0) {
-            if (!this.a(je.field_d, nh.field_p, (byte) 96, td.field_P, param0, param2, this)) {
+            if (!this.a(je.field_d, PointsVictoryChecker.field_p, (byte) 96, td.field_P, param0, param2, this)) {
               if (var5 != 0) {
                 this.e((byte) -126);
               }
@@ -122,7 +122,7 @@ class UiWidget extends IntrusiveNode {
               param1 = false;
             }
           }
-          if (rf.field_n == 0 &&
+          if (AllianceExpiredEvent.field_n == 0 &&
             so.field_m != 0) {
             this.a(pd.field_k, param2, param0, bb.field_b, -600269855, this);
             var6 = oa.field_b;
@@ -134,7 +134,7 @@ class UiWidget extends IntrusiveNode {
             }
           }
         }
-        so.field_m = rf.field_n;
+        so.field_m = AllianceExpiredEvent.field_n;
         vj.a(this.c(true), 0);
         if (param3 != 0) {
           this.d((byte) 58);
@@ -179,7 +179,7 @@ class UiWidget extends IntrusiveNode {
 
     final static tq g(int param0) {
         int var1 = 4 / ((-7 - param0) / 37);
-        return eg.c(1, 0);
+        return BattleEvent.c(1, 0);
     }
 
     final static boolean a(CharSequence param0, byte param1) {
@@ -193,7 +193,7 @@ class UiWidget extends IntrusiveNode {
           if (param1 != -89) {
             field_i = 72L;
           }
-          stackIn_3_0 = jd.a((byte) 116, false, param0);
+          stackIn_3_0 = CellVertex.a((byte) 116, false, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

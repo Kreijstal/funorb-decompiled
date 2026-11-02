@@ -127,7 +127,7 @@ final class WhirlpoolHasher {
             }
           }
           if (sr.field_h) {
-            ca.a(param3, param0, param0, param2, param7, param1, -10, 20, param6);
+            PlayerEliminatedEvent.a(param3, param0, param0, param2, param7, param1, -10, 20, param6);
             fa.field_X.a(param5, -20429);
             if (param5) {
               if (hd.field_m.field_rb != 0) {
@@ -379,10 +379,10 @@ final class WhirlpoolHasher {
         if (!param0) {
           return;
         }
-        hg.field_t = mp.field_b.c(oq.field_i[21]);
+        IsolationistAi.field_t = mp.field_b.c(oq.field_i[21]);
         int var1 = mp.field_b.c(oq.field_i[22]);
-        if (!(var1 <= hg.field_t)) {
-          hg.field_t = var1;
+        if (!(var1 <= IsolationistAi.field_t)) {
+          IsolationistAi.field_t = var1;
         }
     }
 
@@ -488,30 +488,30 @@ final class WhirlpoolHasher {
           var8.e();
           if (param4 <= 0) {
             var7 = var7 + IntrusiveDeque.field_a[param3.field_x].field_z / 2;
-            var9 = ui.a(2105376, param3.field_k, -90, 128);
+            var9 = SolVictoryChecker.a(2105376, param3.field_k, -90, 128);
             for (var10 = 0; var7 > var10; var10++) {
               gf.j(var10, 0, var8.field_w, var9);
             }
           } else {
             var6 = var6 + IntrusiveDeque.field_a[param3.field_x].field_z / 2;
             for (var9 = 0; var9 < var6; var9++) {
-              gf.j(var9, 0, var8.field_w, ui.a(0, param3.field_k, -81, 128 + var9 * 128 / var6));
+              gf.j(var9, 0, var8.field_w, SolVictoryChecker.a(0, param3.field_k, -81, 128 + var9 * 128 / var6));
             }
             if (param0 > 0) {
-              var9 = ui.a(2105376, param3.field_k, -106, 128);
+              var9 = SolVictoryChecker.a(2105376, param3.field_k, -106, 128);
               for (var10 = 0; var10 < var7; var10++) {
                 gf.j(var6 + var10, 0, var8.field_w, var9);
               }
             }
           }
           for (var9Lifetime1 = 0; var8.field_z - 1 > var9Lifetime1; var9Lifetime1++) {
-            var8.field_B[var9Lifetime1] = ui.a(0, var8.field_B[var9Lifetime1], -124, 128);
-            var8.field_B[(var8.field_w - 1) * var8.field_z + var9Lifetime1] = ui.a(0, var8.field_B[var9Lifetime1 + (-1 + var8.field_w) * var8.field_z], -97, 64);
+            var8.field_B[var9Lifetime1] = SolVictoryChecker.a(0, var8.field_B[var9Lifetime1], -124, 128);
+            var8.field_B[(var8.field_w - 1) * var8.field_z + var9Lifetime1] = SolVictoryChecker.a(0, var8.field_B[var9Lifetime1 + (-1 + var8.field_w) * var8.field_z], -97, 64);
           }
           for (var9Lifetime2 = 0; var8.field_w > var9Lifetime2; var9Lifetime2++) {
-            var8.field_B[var8.field_z - 1 + var9Lifetime2 * var8.field_z] = ui.a(0, var8.field_B[var9Lifetime2 * var8.field_z - 1 + var8.field_z], -109, 128);
+            var8.field_B[var8.field_z - 1 + var9Lifetime2 * var8.field_z] = SolVictoryChecker.a(0, var8.field_B[var9Lifetime2 * var8.field_z - 1 + var8.field_z], -109, 128);
           }
-          var8.field_B[var8.field_w * var8.field_z - 1] = ui.a(0, var8.field_B[var8.field_w * var8.field_z - 1], -92, 190);
+          var8.field_B[var8.field_w * var8.field_z - 1] = SolVictoryChecker.a(0, var8.field_B[var8.field_w * var8.field_z - 1], -92, 190);
           cg.i(0);
           stackIn_29_0 = var8;
           return stackIn_29_0;
@@ -551,7 +551,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_m[var2] = bg.a(bg.a(bg.a(co.a((long)this.field_a[5 + var3] << 16, 16711680L), bg.a(bg.a(co.a((long)this.field_a[var3 + 3], 255L) << 32, bg.a(bg.a(co.a((long)this.field_a[1 + var3], 255L) << 48, (long)this.field_a[var3] << 56), co.a((long)this.field_a[2 + var3] << 40, 280375465082880L))), co.a(4278190080L, (long)this.field_a[4 + var3] << 24))), co.a((long)this.field_a[6 + var3], 255L) << 8), co.a(255L, (long)this.field_a[7 + var3]));
+          this.field_m[var2] = bg.a(bg.a(bg.a(GarrisonTask.a((long)this.field_a[5 + var3] << 16, 16711680L), bg.a(bg.a(GarrisonTask.a((long)this.field_a[var3 + 3], 255L) << 32, bg.a(bg.a(GarrisonTask.a((long)this.field_a[1 + var3], 255L) << 48, (long)this.field_a[var3] << 56), GarrisonTask.a((long)this.field_a[2 + var3] << 40, 280375465082880L))), GarrisonTask.a(4278190080L, (long)this.field_a[4 + var3] << 24))), GarrisonTask.a((long)this.field_a[6 + var3], 255L) << 8), GarrisonTask.a(255L, (long)this.field_a[7 + var3]));
           var2++;
           var3 += 8;
         }

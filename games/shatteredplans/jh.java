@@ -126,10 +126,10 @@ final class jh extends vd implements ok {
           var7 = (String) null;
           cq.a(-114, ho.field_c, (String) null, var5, 0);
           ck.field_a = uq.field_j;
-          uq.field_j.field_ab = -(8355711 & ho.field_c >> 1) + (ho.field_c + ((16711422 & bh.field_k.field_ab) >> 1));
-          uq.field_j.field_jb = -(8355711 & ho.field_c >> 1) + ho.field_c + ((bh.field_k.field_jb & 16711422) >> 1);
+          uq.field_j.field_ab = -(8355711 & ho.field_c >> 1) + (ho.field_c + ((16711422 & BoundsRect.field_k.field_ab) >> 1));
+          uq.field_j.field_jb = -(8355711 & ho.field_c >> 1) + ho.field_c + ((BoundsRect.field_k.field_jb & 16711422) >> 1);
           WhirlpoolHasher.field_j = cg.field_C;
-          uq.field_j.field_qb = -(ho.field_c >> 1 & 8355711) + ho.field_c + (bh.field_k.field_qb >> 1 & 8355711);
+          uq.field_j.field_qb = -(ho.field_c >> 1 & 8355711) + ho.field_c + (BoundsRect.field_k.field_qb >> 1 & 8355711);
           fa.field_X = new qr(0L, param1);
           mb.field_n = new qr(0L, param2);
           fe.field_w = new qr(0L, (qr) null);
@@ -139,8 +139,8 @@ final class jh extends vd implements ok {
           sg.field_Ab.a(4, uq.field_j);
           cg.field_C = new qr(0L, WhirlpoolHasher.field_j);
           sg.field_Ab.a(4, cg.field_C);
-          hd.field_m = new qr(0L, bh.field_k, ld.field_n);
-          cb.field_l = new qr(0L, bh.field_k);
+          hd.field_m = new qr(0L, BoundsRect.field_k, ld.field_n);
+          cb.field_l = new qr(0L, BoundsRect.field_k);
           fa.field_X.a(4, mb.field_n);
           fa.field_X.a(4, fe.field_w);
           fe.field_w.a(4, sg.field_Ab);

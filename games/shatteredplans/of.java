@@ -51,13 +51,13 @@ final class of {
     }
 
     final static e a(int param0) {
-        String var1 = bh.d(-77);
+        String var1 = BoundsRect.d(-77);
         if (param0 == 64) {
           if (var1 != null &&
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new e(bh.d(-98), ta.a(33));
+          return new e(BoundsRect.d(-98), ta.a(33));
         }
         return (e) null;
     }

@@ -81,9 +81,9 @@ final class cc extends ml {
           if (MouseInputHandler.field_f > pg.field_J) {
             pg.field_J = pg.field_J + 1;
           }
-          if (pc.field_m != so.field_q.field_d) {
-            NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (so.field_q.field_d - pc.field_m);
-            pc.field_m = so.field_q.field_d;
+          if (DerelictMapGenerator.field_m != so.field_q.field_d) {
+            NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (so.field_q.field_d - DerelictMapGenerator.field_m);
+            DerelictMapGenerator.field_m = so.field_q.field_d;
           }
           if (pg.field_J <= 0) {
             return;
@@ -101,17 +101,17 @@ final class cc extends ml {
             var5 = oq.field_b[var4_int];
             if (var5 != null) {
               if (var5.field_rb != 0) {
-                cj.a(var4_int, -127, var5);
+                TutorialAi.a(var4_int, -127, var5);
               }
               var6 = id.a(-7019, var4_int);
-              mr.field_d[var4_int].field_pb = bh.field_m[var6];
+              DerelictMapReader.field_d[var4_int].field_pb = BoundsRect.field_m[var6];
               n.field_n[var4_int].field_z = jf.field_d[var6];
             }
           }
           if (pr.field_c.field_rb != 0) {
             tc.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, (String) null, 0L);
           }
-          var9 = sh.a(false, param2, tg.field_a, cr.field_c);
+          var9 = SolMapReader.a(false, param2, tg.field_a, cr.field_c);
           if (var9 != null) {
             ks.a(var9, 0);
           }
@@ -150,14 +150,14 @@ final class cc extends ml {
               var6 = new SectorCacheStore(255, oq.field_g, new BufferedCacheFile(dh.field_a.field_n, 12000, 0), 2097152);
             }
             if (oq.field_g != null) {
-              if (tr.field_Eb == null) {
-                tr.field_Eb = new BufferedCacheFile[dh.field_a.field_p.length];
+              if (MapView.field_Eb == null) {
+                MapView.field_Eb = new BufferedCacheFile[dh.field_a.field_p.length];
               }
-              if (tr.field_Eb[param2] == null) {
-                tr.field_Eb[param2] = new BufferedCacheFile(dh.field_a.field_p[param2], 12000, 0);
+              if (MapView.field_Eb[param2] == null) {
+                MapView.field_Eb[param2] = new BufferedCacheFile(dh.field_a.field_p[param2], 12000, 0);
                 dh.field_a.field_p[param2] = null;
               }
-              var7 = new SectorCacheStore(param2, oq.field_g, tr.field_Eb[param2], 2097152);
+              var7 = new SectorCacheStore(param2, oq.field_g, MapView.field_Eb[param2], 2097152);
             }
             var8 = lg.field_c.a(false, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), param1);
             if (param5) {
@@ -317,7 +317,7 @@ final class cc extends ml {
             return stackIn_27_0;
           }
           if (ms.a(var5, (byte) -53, var6)) {
-            stackIn_31_0 = qg.field_k;
+            stackIn_31_0 = TutorialVictoryChecker.field_k;
             return stackIn_31_0;
           }
           if (!na.a(var5, 127, var6)) {

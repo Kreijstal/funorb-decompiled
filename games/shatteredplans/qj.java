@@ -45,7 +45,7 @@ final class qj {
           var2_int = rs.field_Cb.field_J + rs.field_Cb.field_q;
           var3 = -6 + param0.field_j - 20;
           var4 = uq.field_m.a(5607, param0.field_c);
-          var12 = vi.a(rs.field_Cb, (byte) 109, var4, new int[]{var3});
+          var12 = TutorialMapGenerator.a(rs.field_Cb, (byte) 109, var4, new int[]{var3});
           var6 = var12.length;
           RandomAccessCacheFile.a(-106);
           if (0 < var6) {
@@ -72,7 +72,7 @@ final class qj {
             for (var8 = 0; var7Lifetime1 > var8; var8++) {
               var9 = param0.field_f[var8];
               var4Lifetime1 = uq.field_m.a(5607, var9.field_b);
-              var13 = vi.a(rs.field_Cb, (byte) 121, var4Lifetime1, new int[]{var3});
+              var13 = TutorialMapGenerator.a(rs.field_Cb, (byte) 121, var4Lifetime1, new int[]{var3});
               var6Lifetime1 = var13.length;
               array$0 = new Sprite[var6Lifetime1];
               oi.field_i[var8] = array$0;
@@ -187,11 +187,11 @@ final class qj {
         cr.field_b = param1;
     }
 
-    final static qa a(byte param0, GameState param1, PacketBuffer param2) {
+    final static PlacementOrder a(byte param0, GameState param1, PacketBuffer param2) {
         Star var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        qa stackIn_3_0 = null;
+        PlacementOrder stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -202,9 +202,9 @@ final class qj {
           if (param0 >= -63) {
             qj.a((byte) 55);
           }
-          var3 = mg.a(param1, param2, 20);
-          var4 = param2.f(-20976);
-          stackIn_3_0 = new qa(var3, var4);
+          var3 = FleetMove.a(param1, param2, 20);
+          var4 = param2.readUnsignedShort(-20976);
+          stackIn_3_0 = new PlacementOrder(var3, var4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

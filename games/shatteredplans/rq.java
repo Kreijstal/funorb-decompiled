@@ -125,7 +125,7 @@ final class rq implements iq {
                 var5[var6] = eo.field_fb[we.a(255, (int) var4[var6])];
                 var6++;
               }
-              var1[var2] = new Sprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], var5);
+              var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], var5);
               var2++;
               continue scanLoop1;
             }
@@ -179,7 +179,7 @@ final class rq implements iq {
           stackIn_4_0 = d.field_a.field_Db;
           stackIn_4_1 = param1 * ((cr.field_c + 2) * 3);
           stackIn_4_2 = cr.field_c + 2;
-          stackIn_5_3 = (hp.field_l == d.field_a.field_Db);
+          stackIn_5_3 = (DerelictVictoryChecker.field_l == d.field_a.field_Db);
           var3_int = ((ub) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_5_3, -103, param2, 2) ? 1 : 0;
           var4 = d.field_a.field_Eb.field_M;
           if (!param0) {
@@ -189,9 +189,9 @@ final class rq implements iq {
           var5 = null;
           if (2 != po.field_b) {
             cg.field_A.field_s = false;
-            rj.field_p.field_z = IsaacBackedRandom.field_d;
+            RecklessAi.field_p.field_z = IsaacBackedRandom.field_d;
             if (po.field_b == 1) {
-              d.field_a.field_Db.field_zb.field_z = km.field_X;
+              d.field_a.field_Db.field_zb.field_z = GameSession.field_X;
               if (var19 != 0) {
                 d.field_a.field_Db.field_zb.field_z = tb.field_c;
               }
@@ -203,10 +203,10 @@ final class rq implements iq {
           }
           if (decompiledFrameRemainder0) {
             cg.field_A.field_s = true;
-            rj.field_p.field_z = re.a(DelegatingCanvas.field_b, 4371, new String[]{jo.field_d});
+            RecklessAi.field_p.field_z = re.a(DelegatingCanvas.field_b, 4371, new String[]{jo.field_d});
             d.field_a.field_Db.field_zb.field_z = null;
             var6 = null;
-            var7 = (ve) (var4.d(0));
+            var7 = (ve) (var4.startForward(0));
             while (true) {
               if (var7 != null) {
                 var8 = 0;
@@ -268,7 +268,7 @@ final class rq implements iq {
                   if (null != var7.field_xb) {
                     stackIn_51_1 = var7.field_xb;
                   } else {
-                    stackIn_51_1 = jj.field_p;
+                    stackIn_51_1 = ConquestVictoryChecker.field_p;
                   }
                   stackIn_50_0.field_z = stackIn_51_1;
                   var7.field_Fb.a(80, cr.field_c, (byte) 109, var9, -80 + var7.field_K);
@@ -287,15 +287,15 @@ final class rq implements iq {
                       var16 = var7.field_Ab;
                       tp.a((int[]) null, 0L, (String) null, var16, 293, d.field_a.field_Db, var7, -1, -1);
                       if (null != var7.field_xb &&
-                        !Player.a(62, hp.field_m.field_k) &&
+                        !Player.a(62, DerelictVictoryChecker.field_m.field_k) &&
                         !bg.field_g) {
                         if (!ae.field_b) {
-                          var17 = hp.field_m;
+                          var17 = DerelictVictoryChecker.field_m;
                           var18 = re.a(NetworkArchiveRequest.field_B, 4371, new String[]{var16});
                           var17.field_j.a(1, 8, var18);
                         }
-                        var17Lifetime1 = hp.field_m;
-                        var18Lifetime1 = re.a(se.field_e, 4371, new String[]{var16});
+                        var17Lifetime1 = DerelictVictoryChecker.field_m;
+                        var18Lifetime1 = re.a(AchievementProgress.field_e, 4371, new String[]{var16});
                         var17Lifetime1.field_j.a(1, 18, var18Lifetime1);
                       }
                       var5 = var7;
@@ -307,20 +307,20 @@ final class rq implements iq {
                     dn.field_k = var7.field_Bb;
                   }
                   var6 = var7;
-                  var7 = (ve) (var4.a((byte) -71));
+                  var7 = (ve) (var4.nextForward((byte) -71));
                   continue;
                 }
               } else {
                 if (d.field_a.field_Fb.field_rb != 0) {
-                  lg.field_e = new jp(d.field_a.field_Fb.field_B, d.field_a.field_Fb.field_N, d.field_a.field_Fb.field_K, d.field_a.field_Fb.field_mb, km.field_A, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
-                  ia.field_b = 0;
+                  lg.field_e = new jp(d.field_a.field_Fb.field_B, d.field_a.field_Fb.field_N, d.field_a.field_Fb.field_K, d.field_a.field_Fb.field_mb, GameSession.field_A, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+                  MapViewState.field_b = 0;
                 }
               }
               if (0 == d.field_a.field_yb.field_rb) {
                 break;
               }
               lg.field_e = new jp(d.field_a.field_yb.field_B, d.field_a.field_yb.field_N, d.field_a.field_yb.field_K, d.field_a.field_yb.field_mb, IntrusiveDequeCursor.field_f, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
-              ia.field_b = 1;
+              MapViewState.field_b = 1;
               break;
             }
           }
@@ -376,10 +376,10 @@ final class rq implements iq {
         RuntimeException decompiledCaughtException = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          mg.field_C = false;
+          FleetMove.field_C = false;
           var1_int = -1 / ((-28 - param0) / 57);
           tl.field_z = null;
-          if (el.field_b) {
+          if (TertiaryNodeList.field_b) {
             ji.field_G.p(-7011);
             if (var3 == 0) {
               return;
@@ -388,7 +388,7 @@ final class rq implements iq {
           var2 = tf.field_n;
           if (var2 > 0) {
             if (1 != var2) {
-              tl.field_z = re.a(ia.field_M, 4371, new String[]{Integer.toString(var2)});
+              tl.field_z = re.a(MapViewState.field_M, 4371, new String[]{Integer.toString(var2)});
             }
             if (1 == var2 ||
               var3 != 0) {

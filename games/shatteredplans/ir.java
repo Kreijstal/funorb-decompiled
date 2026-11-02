@@ -316,7 +316,7 @@ final class ir extends WidgetContainer implements dl, bp {
         var2.a(var3, 50, (byte) 121, 20, 270);
         this.b((byte) -47, var2);
         var3 += 50;
-        var3 = var3 + (this.a((byte) -110, 170, var3, this.field_H, rf.field_m, tr.field_zb) + 5);
+        var3 = var3 + (this.a((byte) -110, 170, var3, this.field_H, AllianceExpiredEvent.field_m, MapView.field_zb) + 5);
         this.field_I.a(var3, 40, (byte) 123, 496 - var5 >> 1, var5);
         this.field_G.a(var3 + 15, 40, (byte) 127, var4 + 3, 60);
         this.field_G.field_u = (ko) (this);

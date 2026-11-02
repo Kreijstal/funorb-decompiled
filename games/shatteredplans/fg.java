@@ -11,7 +11,7 @@ final class fg {
         if (param0 <= 14) {
           return true;
         }
-        stackIn_8_0 = (this == IntrusiveNodeHashTable.field_d) || (sh.field_c == this) || (this == ih.field_f);
+        stackIn_8_0 = (this == IntrusiveNodeHashTable.field_d) || (SolMapReader.field_c == this) || (this == ih.field_f);
         return stackIn_8_0;
     }
 

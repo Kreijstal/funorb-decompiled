@@ -33,7 +33,7 @@ final class IntrusiveNodeHashTable {
         IntrusiveNode var5 = null;
         try {
           if (param0.previous != null) {
-            param0.b((byte) -125);
+            param0.unlink((byte) -125);
           }
           var5 = this.field_a[(int)((long)(-1 + this.field_b) & param2)];
           param0.previous = var5.previous;
@@ -95,7 +95,7 @@ final class IntrusiveNodeHashTable {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var9[var6_int] = eo.field_fb[we.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new Sprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], var21);
+            var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], var21);
           } else {
             var22 = MusicEnvelope.field_l[var2];
             var16 = new int[var3];
@@ -104,7 +104,7 @@ final class IntrusiveNodeHashTable {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = ee.a(eo.field_fb[we.a((int) var20[var7], 255)], we.a(255, (int) var22[var7]) << 24);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], var16));
           }
         }
         pd.a(0);
@@ -115,7 +115,7 @@ final class IntrusiveNodeHashTable {
         try {
           ae.field_h = param3;
           dh.field_a = param6;
-          rd.field_d = param7;
+          StandardMapReader.field_d = param7;
           si.field_u = param0;
           hn.field_i = param1;
           if (param5 != 1491341222) {
@@ -124,9 +124,9 @@ final class IntrusiveNodeHashTable {
           sr.field_q = param4;
           sg.field_Cb = param2;
           cf.field_D = param8;
-          vp.field_o = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
-          vn.field_w = new DiskCacheWorker(param6);
-          lg.field_c = new ArchiveSourceManager(vp.field_o, vn.field_w);
+          TertiaryLinkNode.field_o = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
+          BattleSnapshot.field_w = new DiskCacheWorker(param6);
+          lg.field_c = new ArchiveSourceManager(TertiaryLinkNode.field_o, BattleSnapshot.field_w);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ti.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
@@ -167,11 +167,11 @@ final class IntrusiveNodeHashTable {
           for (var6 = 0; var2_intLifetime1 > var6; var6++) {
             var12 = param1[var6];
             if (var12.field_x == -1) {
-              var4.a((byte) -113, var12);
+              var4.addLast((byte) -113, var12);
               {
-                while (!(var4.g(-121))) {
-                  var13 = (Star) (var4.h(80));
-                  var3.a((byte) -113, var13);
+                while (!(var4.isEmpty(-121))) {
+                  var13 = (Star) (var4.pollFirst(80));
+                  var3.addLast((byte) -113, var13);
                   var13.field_x = var5;
                   if (var13.field_D == null) {
                     continue;
@@ -180,17 +180,17 @@ final class IntrusiveNodeHashTable {
                   for (var9 = 0; var9 < var8.length; var9++) {
                     var10 = var8[var9];
                     if (var10.field_x == -1) {
-                      var4.a((byte) -113, var10);
+                      var4.addLast((byte) -113, var10);
                     }
                   }
                 }
                 {
-                  var7 = (Star) (var3.d(0));
+                  var7 = (Star) (var3.startForward(0));
                   while (var7 != null) {
                     var7.field_x = var5;
-                    var7 = (Star) (var3.a((byte) -71));
+                    var7 = (Star) (var3.nextForward((byte) -71));
                   }
-                  var3.a(0);
+                  var3.clear(0);
                   var5++;
                 }
               }
@@ -252,12 +252,12 @@ final class IntrusiveNodeHashTable {
         var2.h(param0, 255);
         var2.position = var2.position + 1;
         int var3 = var2.position;
-        var2.c(5, (byte) -92);
-        var2.c(np.field_a.field_Eb, (byte) -120);
+        var2.writeByte(5, (byte) -92);
+        var2.writeByte(np.field_a.field_Eb, (byte) -120);
         int var4 = (np.field_a.field_Fb << 6) + np.field_a.field_nc;
-        var2.c(var4, (byte) -72);
-        var2.a(param1, np.field_a.field_dc.length, np.field_a.field_dc, param1 ^ 22186);
-        var2.b(var2.position - var3, (byte) 124);
+        var2.writeByte(var4, (byte) -72);
+        var2.writeBytes(param1, np.field_a.field_dc.length, np.field_a.field_dc, param1 ^ 22186);
+        var2.patchLengthByte(var2.position - var3, (byte) 124);
     }
 
     final static boolean a(String param0, boolean param1) {

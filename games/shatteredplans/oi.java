@@ -13,7 +13,7 @@ final class oi {
     static Sprite field_d;
 
     final static void a(boolean param0) {
-        k.field_b = false;
+        TurnEventLog.field_b = false;
         if (!param0) {
           oi.a(-116, (byte) -74);
         }
@@ -33,7 +33,7 @@ final class oi {
           Star.field_K = mf.a(param1, "", "starfield", false);
           mp.field_e = new Sprite[6];
           for (var2_int = 0; var2_int < 6; var2_int++) {
-            mp.field_e[var2_int] = vr.a(param1, var2_int + 1, 1);
+            mp.field_e[var2_int] = GameRules.a(param1, var2_int + 1, 1);
           }
           ce.field_v = mf.a(param1, "", "win", false);
           dp.field_s = mf.a(param1, "", "lose", false);
@@ -78,7 +78,7 @@ final class oi {
           var2 = var3;
           bd.field_C[param0] = dupTemp$0;
           bs.a(var3, 77);
-          jd.field_j[param0].g(0, 0);
+          CellVertex.field_j[param0].g(0, 0);
           cg.i(0);
         }
         if (param1 != 66) {

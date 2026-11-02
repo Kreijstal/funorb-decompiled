@@ -20,7 +20,7 @@ final class eh extends ek implements bp {
         }
     }
 
-    final static hb a(int param0, el param1) {
+    final static hb a(int param0, TertiaryNodeList param1) {
         RuntimeException var2 = null;
         pd stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

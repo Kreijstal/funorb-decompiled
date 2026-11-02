@@ -59,12 +59,12 @@ final class ad implements jk {
           if (param1 != -24925) {
             field_d = (String) null;
           }
-          var2 = (nc) (param0.d(0));
+          var2 = (nc) (param0.startForward(0));
           while (var2 != null) {
             if (var2.field_o <= var2.field_j) {
-              var2.b((byte) -71);
+              var2.unlink((byte) -71);
             }
-            var2 = (nc) (param0.a((byte) -71));
+            var2 = (nc) (param0.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

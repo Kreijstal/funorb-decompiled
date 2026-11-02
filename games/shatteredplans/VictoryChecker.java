@@ -66,7 +66,7 @@ abstract class VictoryChecker {
           }
           for (var6 = 0; var5_ref_fs__.length > var6; var6++) {
             var7_ref_fs = var5_ref_fs__[var6];
-            if (!var7_ref_fs.field_i.g(-96)) {
+            if (!var7_ref_fs.field_i.isEmpty(-96)) {
               var3_int++;
               var4 = var7_ref_fs;
             }
@@ -79,7 +79,7 @@ abstract class VictoryChecker {
             var9 = 0;
             var5 = var9;
             while (this.field_i.length > var9) {
-              if (!this.field_i[var9].field_i.g(88)) {
+              if (!this.field_i[var9].field_i.isEmpty(88)) {
                 this.field_b[var9] = true;
               } else {
                 this.field_b[var9] = false;
@@ -171,7 +171,7 @@ abstract class VictoryChecker {
         return this.field_g;
     }
 
-    abstract void a(byte param0, GameState param1, kq param2);
+    abstract void a(byte param0, GameState param1, GameScreen param2);
 
     final static int a(int param0, byte[] param1, int param2) {
         RuntimeException var3 = null;

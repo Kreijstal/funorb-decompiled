@@ -6,14 +6,14 @@ final class wl {
     static Sprite field_d;
     static String field_b;
     static String field_c;
-    static vi field_a;
+    static TutorialMapGenerator field_a;
     static vd field_f;
 
-    final static void a(int param0, int param1, ag[] param2) {
+    final static void a(int param0, int param1, Orderable[] param2) {
         int var4 = 0;
-        ag var3 = null;
+        Orderable var3 = null;
         int var5 = 0;
-        ag var6 = null;
+        Orderable var6 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -59,8 +59,8 @@ final class wl {
           field_f = null;
           return;
         }
-        ag[] var2 = (ag[]) null;
-        wl.a(-6, -65, (ag[]) null);
+        Orderable[] var2 = (Orderable[]) null;
+        wl.a(-6, -65, (Orderable[]) null);
         field_c = null;
         field_f = null;
     }

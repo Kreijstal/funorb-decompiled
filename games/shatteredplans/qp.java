@@ -386,7 +386,7 @@ final class qp extends o {
     }
 
     private qp(int param0, int param1, int param2) {
-        this.field_t = kl.field_q;
+        this.field_t = AttackTask.field_q;
         this.field_y = param0;
         this.field_c = CipherPacketBuffer.field_p;
         this.field_x = param1;

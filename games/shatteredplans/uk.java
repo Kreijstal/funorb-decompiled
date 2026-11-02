@@ -81,9 +81,9 @@ final class uk {
         }
     }
 
-    final static l a(int param0, GameState param1, PacketBuffer param2, IntrusiveDeque param3, Player[] param4, Player param5, byte param6, vr param7) throws jn, kr {
+    final static GalaxyMap a(int param0, GameState param1, PacketBuffer param2, IntrusiveDeque param3, Player[] param4, Player param5, byte param6, GameRules param7) throws jn, kr {
         int var17_int = 0;
-        l stackIn_81_0 = null;
+        GalaxyMap stackIn_81_0 = null;
         RuntimeException stackIn_84_0 = null;
         StringBuilder stackIn_84_1 = null;
         String stackIn_85_2 = null;
@@ -107,7 +107,7 @@ final class uk {
         int var13 = 0;
         Object var14 = null;
         int var15_int = 0;
-        l var15 = null;
+        GalaxyMap var15 = null;
         Star[] var16_ref_ln__ = null;
         int var16 = 0;
         Territory[] var17 = null;
@@ -127,7 +127,7 @@ final class uk {
         Star var23_ref_ln = null;
         int var24 = 0;
         Player var25 = null;
-        cs var25_ref = null;
+        Wormhole var25_ref = null;
         int var26 = 0;
         Star var27 = null;
         Player var28 = null;
@@ -159,10 +159,10 @@ final class uk {
         int var18Lifetime1;
         var26 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var8_int = param2.a(16711680);
-          var9 = param2.f(param6 - 20969);
-          var10 = param2.f(param6 - 20969);
-          var11 = param2.f(-20976);
+          var8_int = param2.readInt(16711680);
+          var9 = param2.readUnsignedShort(param6 - 20969);
+          var10 = param2.readUnsignedShort(param6 - 20969);
+          var11 = param2.readUnsignedShort(-20976);
           var12 = hl.a(-33, var9);
           var13 = sa.a(var10, -109);
           if (param6 != -7) {
@@ -173,17 +173,17 @@ final class uk {
           if (var15_int != 0 &&
             var15_int != 2) {
             if (var15_int == 1) {
-              var14 = new sh(param2, var8_int);
+              var14 = new SolMapReader(param2, var8_int);
             } else {
               if (3 != var15_int) {
                 throw new RuntimeException("No Received MapGenerator for gametype " + param0);
               }
-              var14 = new mr(param2, var8_int, var12, var13, var11, param4.length);
+              var14 = new DerelictMapReader(param2, var8_int, var12, var13, var11, param4.length);
             }
           } else {
-            var14 = new rd(param2, var8_int, var12, var13, var11);
+            var14 = new StandardMapReader(param2, var8_int, var12, var13, var11);
           }
-          var15 = ((fo) (var14)).a((byte) -115);
+          var15 = ((MapGenerator) (var14)).a((byte) -115);
           var16_ref_ln__ = var15.field_e;
           for (var17_int = 0; var16_ref_ln__.length > var17_int; var17_int++) {
             var18_ref_ln = var16_ref_ln__[var17_int];
@@ -191,64 +191,64 @@ final class uk {
             var22_ref_lnLifetime2 = var18_ref_ln;
             var18_ref_ln.field_t = us.a(param2, param4, 2);
           }
-          var16 = param2.j(-71);
+          var16 = param2.readUnsignedByte(-71);
           var17 = new Territory[var16];
           for (var18 = 0; var16 > var18; var18++) {
-            var28 = param4[param2.j(-123)];
+            var28 = param4[param2.readUnsignedByte(-123)];
             var19_ref = var28;
-            var20_ref_ln = var15.field_e[param2.j(-123)];
+            var20_ref_ln = var15.field_e[param2.readUnsignedByte(-123)];
             var17[var18] = new Territory(var28, var20_ref_ln);
-            var28.field_i.a((byte) -113, var17[var18]);
-            var17[var18].a(param6 ^ 21772, var20_ref_ln);
+            var28.field_i.addLast((byte) -113, var17[var18]);
+            var17[var18].addStar(param6 ^ 21772, var20_ref_ln);
             var20_ref_ln.field_R = var17[var18];
             var20_ref_ln.field_y = var19_ref;
-            var21 = -1 + param2.j(-89);
+            var21 = -1 + param2.readUnsignedByte(-89);
             for (var22 = 0; var22 < var21; var22++) {
-              var29 = var15.field_e[param2.j(-90)];
+              var29 = var15.field_e[param2.readUnsignedByte(-90)];
               var23_ref_ln = var29;
-              var17[var18].a(-21771, var29);
+              var17[var18].addStar(-21771, var29);
               var23_ref_ln.field_R = var17[var18];
               var23_ref_ln.field_y = var19_ref;
             }
           }
-          var18Lifetime1 = param2.j(param6 ^ 71);
+          var18Lifetime1 = param2.readUnsignedByte(param6 ^ 71);
           var32 = new lo[var18Lifetime1];
           var19 = var32;
           for (var20 = 0; var18Lifetime1 > var20; var20++) {
-            var30 = param4[param2.j(-69)];
+            var30 = param4[param2.readUnsignedByte(-69)];
             var21_ref_fs = var30;
-            var31 = var15.field_e[param2.j(-64)];
+            var31 = var15.field_e[param2.readUnsignedByte(-64)];
             var19[var20] = new lo(var30, var31);
             var21_ref_fs.field_m = var32[var20];
-            var32[var20].a(-21771, var31);
-            var23 = param2.j(-61) - 1;
+            var32[var20].addStar(-21771, var31);
+            var23 = param2.readUnsignedByte(-61) - 1;
             for (var24 = 0; var23 > var24; var24++) {
-              var33 = var15.field_e[param2.j(-60)];
-              var32[var20].a(-21771, var33);
+              var33 = var15.field_e[param2.readUnsignedByte(-60)];
+              var32[var20].addStar(-21771, var33);
             }
           }
           var15.b((byte) 80);
           for (var20Lifetime1 = 0; var20Lifetime1 < param4.length; var20Lifetime1++) {
             if (!param7.field_i) {
-              var21_ref_sd = (Territory) (param4[var20Lifetime1].field_i.d(0));
+              var21_ref_sd = (Territory) (param4[var20Lifetime1].field_i.startForward(0));
               while (var21_ref_sd != null) {
                 vf.a(127, var21_ref_sd);
-                sh.a(var21_ref_sd, -5);
-                var22_ref_lnLifetime1 = var21_ref_sd.j(18229);
+                SolMapReader.a(var21_ref_sd, -5);
+                var22_ref_lnLifetime1 = var21_ref_sd.firstStar(18229);
                 while (var22_ref_lnLifetime1 != null) {
                   kd.a(param7, false, var22_ref_lnLifetime1, (byte) -2);
-                  var22_ref_lnLifetime1 = var21_ref_sd.h(param6 ^ 23415);
+                  var22_ref_lnLifetime1 = var21_ref_sd.nextStar(param6 ^ 23415);
                 }
-                var21_ref_sd = (Territory) (param4[var20Lifetime1].field_i.a((byte) -71));
+                var21_ref_sd = (Territory) (param4[var20Lifetime1].field_i.nextForward((byte) -71));
               }
             } else {
               if (null != param4[var20Lifetime1].field_m) {
                 vf.a(123, param4[var20Lifetime1].field_m);
-                sh.a(param4[var20Lifetime1].field_m, -5);
-                var21_ref_ln = param4[var20Lifetime1].field_m.j(18229);
+                SolMapReader.a(param4[var20Lifetime1].field_m, -5);
+                var21_ref_ln = param4[var20Lifetime1].field_m.firstStar(18229);
                 while (var21_ref_ln != null) {
                   kd.a(param7, false, var21_ref_ln, (byte) -2);
-                  var21_ref_ln = param4[var20Lifetime1].field_m.h(-23410);
+                  var21_ref_ln = param4[var20Lifetime1].field_m.nextStar(-23410);
                 }
               }
             }
@@ -260,7 +260,7 @@ final class uk {
           }
           for (var20Lifetime3 = 0; var20Lifetime3 < param4.length; var20Lifetime3++) {
             for (var21Lifetime2 = 1 + var20Lifetime3; param4.length > var21Lifetime2; var21Lifetime2++) {
-              var22Lifetime1 = param2.g(-2852);
+              var22Lifetime1 = param2.readSignedByte(-2852);
               if (127 != var22Lifetime1) {
                 param4[var20Lifetime3].field_h[var21Lifetime2] = true;
                 param4[var21Lifetime2].field_h[var20Lifetime3] = true;
@@ -270,33 +270,33 @@ final class uk {
             }
           }
           if (param5 != null) {
-            param5.field_w = param2.j(param6 ^ 98);
+            param5.field_w = param2.readUnsignedByte(param6 ^ 98);
           }
           for (var20Lifetime4 = 0; param4.length > var20Lifetime4; var20Lifetime4++) {
             for (var21Lifetime3 = 0; var21Lifetime3 < 4; var21Lifetime3++) {
-              param4[var20Lifetime4].field_u[var21Lifetime3] = param2.j(-115);
+              param4[var20Lifetime4].field_u[var21Lifetime3] = param2.readUnsignedByte(-115);
             }
           }
-          param3.a(0);
-          var20Lifetime5 = param2.j(-115);
+          param3.clear(0);
+          var20Lifetime5 = param2.readUnsignedByte(-115);
           var21Lifetime4 = 0;
           while (var20Lifetime5 > var21Lifetime4) {
             var34 = gq.a(var15.field_e, -2284, param2);
             var35 = gq.a(var15.field_e, -2284, param2);
             if (var34 != null &&
               var35 != null) {
-              var24Lifetime1 = param2.j(-73);
-              var25_ref = new cs(var34, var35, var24Lifetime1);
-              param3.a((byte) -113, var25_ref);
+              var24Lifetime1 = param2.readUnsignedByte(-73);
+              var25_ref = new Wormhole(var34, var35, var24Lifetime1);
+              param3.addLast((byte) -113, var25_ref);
               var21Lifetime4++;
               continue;
             }
             throw new kr("Tannhauser Gate is unconnected at at least one end.");
           }
           param1.field_x.a(param2, (byte) -109);
-          var21Lifetime5 = param2.j(param6 - 63);
-          var22Lifetime2 = param2.j(param6 - 55);
-          param1.a(var22Lifetime2, var21Lifetime5, false);
+          var21Lifetime5 = param2.readUnsignedByte(param6 - 63);
+          var22Lifetime2 = param2.readUnsignedByte(param6 - 55);
+          param1.setYearNameIndices(var22Lifetime2, var21Lifetime5, false);
           var36 = param4;
           for (var24Lifetime2 = 0; var24Lifetime2 < var36.length; var24Lifetime2++) {
             var37 = var36[var24Lifetime2];

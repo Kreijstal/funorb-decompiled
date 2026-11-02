@@ -46,24 +46,24 @@ final class GzipInflater {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var1 = sa.field_a;
-          var2 = var1.j(-64);
+          var2 = var1.readUnsignedByte(-64);
           if (var2 == 0) {
             if (CipherPacketBuffer.field_m == null) {
               CipherPacketBuffer.field_m = new SecondaryNodeHashTable(128);
               oi.field_e = 0;
             }
-            stackIn_11_0 = (1 != var1.j(-65)) ? 0 : 1;
+            stackIn_11_0 = (1 != var1.readUnsignedByte(-65)) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.e(-1);
+            var4_ref_String = var1.readString(-1);
             if (var3_int != 0) {
-              var5 = var1.e(-1);
+              var5 = var1.readString(-1);
             }
             if (var3_int == 0 ||
               var9 != 0) {
               var5 = var4_ref_String;
             }
             var6 = di.a(var4_ref_String, 124);
-            var7 = var1.e(-1);
+            var7 = var1.readString(-1);
             var8 = ji.a((CharSequence) ((Object) var4_ref_String), true);
             if (var8 == null) {
               var8 = var4_ref_String;
@@ -80,7 +80,7 @@ final class GzipInflater {
               fieldTemp$0 = oi.field_e;
               oi.field_e = oi.field_e + 1;
               var6.field_zb = fieldTemp$0;
-              FrameTimer.field_b.a((byte) -113, var6);
+              FrameTimer.field_b.addLast((byte) -113, var6);
             }
             var6.field_Eb = var5;
             var6.field_Ab = var4_ref_String;
@@ -109,36 +109,36 @@ final class GzipInflater {
               return;
             }
             po.field_b = 1;
-            var3 = var1.e(-1);
+            var3 = var1.readString(-1);
             jo.field_d = ((String) (var3)).intern();
-            var4 = var1.j(-71);
+            var4 = var1.readUnsignedByte(-71);
             os.a(-82, var4);
             return;
           }
-          if (eg.field_q == null) {
-            eg.field_q = new SecondaryNodeHashTable(128);
+          if (BattleEvent.field_q == null) {
+            BattleEvent.field_q = new SecondaryNodeHashTable(128);
             r.field_c = 0;
           }
-          var3Lifetime1 = var1.e(-1);
+          var3Lifetime1 = var1.readString(-1);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.e(-1);
-          var5Lifetime1 = var1.e(-1);
+          var4_ref_StringLifetime1 = var1.readString(-1);
+          var5Lifetime1 = var1.readString(-1);
           var6Lifetime1 = hb.a((byte) -90, var4_ref_StringLifetime1);
           if (var6Lifetime1 == null) {
             var6Lifetime1 = hb.a((byte) -90, var5Lifetime1);
             if (null != var6Lifetime1) {
-              eg.field_q.a((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), param0).hashCode(), var6Lifetime1, true);
+              BattleEvent.field_q.a((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), param0).hashCode(), var6Lifetime1, true);
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new ve();
-            eg.field_q.a((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), true).hashCode(), var6Lifetime1, true);
+            BattleEvent.field_q.a((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), true).hashCode(), var6Lifetime1, true);
             fieldTemp$1 = r.field_c;
             r.field_c = r.field_c + 1;
             var6Lifetime1.field_zb = fieldTemp$1;
-            vd.field_j.a((byte) -113, var6Lifetime1);
+            vd.field_j.addLast((byte) -113, var6Lifetime1);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -146,8 +146,8 @@ final class GzipInflater {
           var6Lifetime1.field_Ab = var4_ref_StringLifetime1;
           var6Lifetime1.field_xb = (String) (var3Lifetime1);
           var6Lifetime1.field_Bb = var5Lifetime1;
-          var6Lifetime1.b((byte) -125);
-          var7_ref = (ve) (vd.field_j.d(0));
+          var6Lifetime1.unlink((byte) -125);
+          var7_ref = (ve) (vd.field_j.startForward(0));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7_ref != null) {
@@ -157,7 +157,7 @@ final class GzipInflater {
               decompiledFrameRemainder0 = (var9 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_43_0)) {
-                var7_ref = (ve) (vd.field_j.a((byte) -71));
+                var7_ref = (ve) (vd.field_j.nextForward((byte) -71));
                 continue;
               }
             }
@@ -173,7 +173,7 @@ final class GzipInflater {
             }
             break;
           }
-          vd.field_j.a((byte) -113, var6Lifetime1);
+          vd.field_j.addLast((byte) -113, var6Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -189,7 +189,7 @@ final class GzipInflater {
         }
         try {
           ec.a(param0 ^ -2, bg.field_c, 8);
-          if (!kl.d((byte) 104)) {
+          if (!AttackTask.d((byte) 104)) {
             ec.a(-1, IterableNodeHashTable.field_h, 1);
             ec.a(-1, SecondaryNodeDeque.field_b, 2);
             ec.a(param0 ^ -2, hr.field_e, 3);

@@ -21,11 +21,11 @@ final class ei {
         RuntimeException var2_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          param1.b((byte) -86);
-          var2 = (fb) (kj.field_a.d(param0));
+          param1.unlink((byte) -86);
+          var2 = (fb) (kj.field_a.startForward(param0));
           while (var2 != null) {
             if (var2.a(param1, -1)) {
-              var2 = (fb) (kj.field_a.a((byte) -71));
+              var2 = (fb) (kj.field_a.nextForward((byte) -71));
               continue;
             }
             break;
@@ -34,7 +34,7 @@ final class ei {
             stackIn_8_0 = -123;
             wp.$cfr$intArgs$a$2661ebe01e52(stackIn_8_0, param1, var2);
           } else {
-            kj.field_a.a((byte) -113, param1);
+            kj.field_a.addLast((byte) -113, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -129,19 +129,19 @@ final class ei {
           var10.h(param0, 255);
           var10.position = var10.position + 1;
           var7 = var10.position;
-          var10.c(4, (byte) -106);
+          var10.writeByte(4, (byte) -106);
           if (param4) {
             fb var9 = (fb) null;
             ei.a(-47, (fb) null);
           }
-          var10.c(param1, (byte) -122);
+          var10.writeByte(param1, (byte) -122);
           var8 = param5;
           if (param3) {
             var8 += 128;
           }
-          var10.c(var8, (byte) -56);
-          var10.a(0, param2.length, param2, 22186);
-          var10.b(-var7 + var10.position, (byte) 127);
+          var10.writeByte(var8, (byte) -56);
+          var10.writeBytes(0, param2.length, param2, 22186);
+          var10.patchLengthByte(-var7 + var10.position, (byte) 127);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ei.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -190,15 +190,15 @@ final class ei {
             gf.b(param2 + param5 - 10 - 1, param1 + param4 - 11, 10, 0);
             gf.b(var15);
             for (var8 = 0; var8 < param1 - 20; var8++) {
-              var9 = ui.a(2052949, 0, -110, var8 * 256 / (param1 - 20));
+              var9 = SolVictoryChecker.a(2052949, 0, -110, var8 * 256 / (param1 - 20));
               gf.a(param5, 10 + param4 + var8, var9);
               gf.a(param2 + (param5 - 1), var8 + (10 + param4), var9);
             }
             if (param0) {
               jl.field_W.c(param5 + 4, param4 + 3, 256);
               var8Lifetime1 = param5 + 4 + jl.field_W.field_z;
-              var9Lifetime1 = param5 + param2 - 3 - mr.field_g.field_z;
-              mr.field_g.c(var9Lifetime1, 3 + param4, 64);
+              var9Lifetime1 = param5 + param2 - 3 - DerelictMapReader.field_g.field_z;
+              DerelictMapReader.field_g.c(var9Lifetime1, 3 + param4, 64);
               for (var11 = var8Lifetime1; var11 < var9Lifetime1; var11++) {
                 var10 = 192 * (var9Lifetime1 - var11) / (-var8Lifetime1 + var9Lifetime1) + 64;
                 VictoryChecker.field_h.c(var11, 3 + param4, var10);
@@ -228,7 +228,7 @@ final class ei {
     }
 
     final static int a(int param0) {
-        if (ma.field_p < 2) {
+        if (DefensiveAi.field_p < 2) {
           return 0;
         }
         if (0 == ai.field_e) {
@@ -244,21 +244,21 @@ final class ei {
           if (!tq.field_f.a("commonui", -112)) {
             return 60;
           }
-          if (!l.field_g.b((byte) -85)) {
+          if (!GalaxyMap.field_g.b((byte) -85)) {
             return 70;
           }
-          if (!l.field_g.a(param0 - 83)) {
+          if (!GalaxyMap.field_g.a(param0 - 83)) {
             return 80;
           }
         } else {
-          if (es.field_j != null) {
-            if (!es.field_j.b((byte) -122)) {
+          if (StarAnnotation.field_j != null) {
+            if (!StarAnnotation.field_j.b((byte) -122)) {
               return 14;
             }
-            if (!es.field_j.b("", (byte) -122)) {
+            if (!StarAnnotation.field_j.b("", (byte) -122)) {
               return 29;
             }
-            if (!es.field_j.a("", -70)) {
+            if (!StarAnnotation.field_j.a("", -70)) {
               return 29;
             }
           }
@@ -274,10 +274,10 @@ final class ei {
           if (!tq.field_f.a("commonui", -105)) {
             return 80;
           }
-          if (!l.field_g.b((byte) -95)) {
+          if (!GalaxyMap.field_g.b((byte) -95)) {
             return 82;
           }
-          if (!l.field_g.a(-1)) {
+          if (!GalaxyMap.field_g.a(-1)) {
             return 86;
           }
         }

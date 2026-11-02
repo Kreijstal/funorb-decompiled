@@ -73,7 +73,7 @@ final class lr {
             return stackIn_9_0;
           }
           bg.a(-2612, param4.length);
-          var8 = new ff(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + rs.field_Cb.field_J, ne.a(-1, false));
+          var8 = new ff(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + rs.field_Cb.field_J, BattleContribution.a(-1, false));
           var13.a(var8, 8);
           var8.field_o = re.a(AudioService.field_f, 4371, new String[]{param3.name});
           stackIn_12_0 = param0.field_f;
@@ -339,7 +339,7 @@ final class lr {
             lr.a(121, -50, (int[]) null, (byte) -33, (Object[]) null);
           }
           var13 = sa.field_a;
-          var2 = var13.j(-100);
+          var2 = var13.readUnsignedByte(-100);
           if (var2 == 0) {
             var11 = ae.a(-128);
             var17 = var11;
@@ -348,11 +348,11 @@ final class lr {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).j(-115);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-115);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).a(16711680);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(16711680);
             }
-            var15 = (gb) (vl.field_o.d(0));
+            var15 = (gb) (SolMapGenerator.field_o.startForward(0));
             if (var15 == null) {
               q.g(-112);
               return;
@@ -361,19 +361,19 @@ final class lr {
             var15.field_h = var17[0];
             var15.field_j = true;
             var15.field_k = var3;
-            var15.b((byte) -105);
+            var15.unlink((byte) -105);
             return;
           }
           if (var2 == 1) {
-            var12 = (lq) (rs.field_Bb.d(0));
+            var12 = (lq) (rs.field_Bb.startForward(0));
             if (var12 == null) {
               q.g(-100);
               return;
             }
-            var12.b((byte) -108);
+            var12.unlink((byte) -108);
           } else {
             if (var2 == 2) {
-              var16_ref = (gb) (vl.field_o.d(0));
+              var16_ref = (gb) (SolMapGenerator.field_o.startForward(0));
               if (var16_ref == null) {
                 q.g(-120);
                 return;
@@ -382,7 +382,7 @@ final class lr {
               var16_ref.field_h = var16_ref.field_k[0];
               var16_ref.field_j = true;
               var16_ref.field_l = true;
-              var16_ref.b((byte) -89);
+              var16_ref.unlink((byte) -89);
             } else {
               GameKeyHandler.a(-29901, (Throwable) null, "A1: " + w.a(16738));
               q.g(-125);

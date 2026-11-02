@@ -19,7 +19,7 @@ final class rp extends kg {
         return wm.field_d[da.field_g - 1];
     }
 
-    final static hb a(int param0, wb param1) {
+    final static hb a(int param0, QuaternaryNodeList param1) {
         RuntimeException var2 = null;
         vf stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -207,17 +207,17 @@ final class rp extends kg {
             var12 = (java.applet.Applet) null;
             rp.a(false, (String) null, (java.applet.Applet) null);
           }
-          var2 = ((PacketBuffer) ((Object) var1)).j(-119);
+          var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-119);
           if (var2 != 0 &&
             var2 != 1 &&
             var2 != 2 &&
             var2 != 3 &&
             4 != var2) {
             if (var2 == 5) {
-              var3_long = ((PacketBuffer) ((Object) var1)).d(75);
-              var20 = ((PacketBuffer) ((Object) var1)).e(-1);
-              var19 = ((PacketBuffer) ((Object) var1)).e(-1);
-              var21 = ((PacketBuffer) ((Object) var1)).e(-1);
+              var3_long = ((PacketBuffer) ((Object) var1)).readLong(75);
+              var20 = ((PacketBuffer) ((Object) var1)).readString(-1);
+              var19 = ((PacketBuffer) ((Object) var1)).readString(-1);
+              var21 = ((PacketBuffer) ((Object) var1)).readString(-1);
               var22 = ta.a(115, var3_long);
               var8_ref_mj = var22;
               stackIn_12_0 = (var19.equals("")) ? 0 : 1;
@@ -230,21 +230,21 @@ final class rp extends kg {
                 var8_ref_mj = new mj(var20, var21, var3_long);
                 ShatteredPlansClient.field_H.a(var3_long, var8_ref_mj, true);
               }
-              var8_ref_mj.field_zb = pr.a(14274) - (long)((PacketBuffer) ((Object) var1)).a(16711680);
-              var8_ref_mj.field_Qb = ((PacketBuffer) ((Object) var1)).f(-20976);
-              var10 = ((PacketBuffer) ((Object) var1)).c(false);
+              var8_ref_mj.field_zb = pr.a(14274) - (long)((PacketBuffer) ((Object) var1)).readInt(16711680);
+              var8_ref_mj.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
+              var10 = ((PacketBuffer) ((Object) var1)).readVariableInt(false);
               var8_ref_mj.field_Fb = var10 >> 1;
               stackIn_19_0 = var8_ref_mj;
               stackIn_20_1 = ((1 & var10) != 0);
               stackIn_19_0.field_Ub = stackIn_20_1;
-              var8_ref_mj.field_Lb = ((PacketBuffer) ((Object) var1)).j(-122);
-              var8_ref_mj.field_Wb = ((PacketBuffer) ((Object) var1)).j(-109);
+              var8_ref_mj.field_Lb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-122);
+              var8_ref_mj.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-109);
               WidgetContainer.a((byte) -60, var8_ref_mj);
               return;
             }
             if (var2 == 6) {
-              var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).d(29);
-              var5 = ((PacketBuffer) ((Object) var1)).j(-53);
+              var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong(29);
+              var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-53);
               var31 = ta.a(-98, var3_longLifetime1);
               if (var31 == null) {
                 return;
@@ -254,26 +254,26 @@ final class rp extends kg {
                 var31.field_Vb = false;
               }
               if (var5 == 0) {
-                var31.b((byte) -113);
+                var31.unlink((byte) -113);
               } else {
                 var31.field_Eb = var5;
                 var31.field_Gb = ks.field_i;
               }
-              var31.a(16);
+              var31.unlinkSecondary(16);
               return;
             }
             if (var2 == 7) {
-              var34 = (mj) (gr.field_p.d(0));
+              var34 = (mj) (gr.field_p.startForward(0));
               while (var34 != null) {
-                var34.b((byte) -126);
-                var34.a(16);
-                var34 = (mj) (gr.field_p.a((byte) -71));
+                var34.unlink((byte) -126);
+                var34.unlinkSecondary(16);
+                var34 = (mj) (gr.field_p.nextForward((byte) -71));
               }
               ah.field_X = 0;
               return;
             }
             if (8 == var2) {
-              var3 = ((PacketBuffer) ((Object) var1)).f(-20976);
+              var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
               var4 = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3));
               if (var4 == null) {
                 var4 = new fb(em.field_k);
@@ -284,35 +284,35 @@ final class rp extends kg {
               return;
             }
             if (9 == var2) {
-              var3Lifetime4 = ((PacketBuffer) ((Object) var1)).f(-20976);
-              var4_int = ((PacketBuffer) ((Object) var1)).j(-98);
+              var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
+              var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-98);
               var32 = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3Lifetime4));
               if (var32 == null) {
                 return;
               }
               if (var4_int == 0) {
-                var32.b((byte) -62);
+                var32.unlink((byte) -62);
               } else {
                 var32.field_hc = var4_int;
                 var32.field_Nb = ks.field_i;
               }
-              var32.a(16);
+              var32.unlinkSecondary(16);
               return;
             }
             if (10 == var2) {
-              var33 = (fb) (kj.field_a.d(0));
+              var33 = (fb) (kj.field_a.startForward(0));
               while (var33 != null) {
-                var33.b((byte) -63);
-                var33.a(16);
-                var33 = (fb) (kj.field_a.a((byte) -71));
+                var33.unlink((byte) -63);
+                var33.unlinkSecondary(16);
+                var33 = (fb) (kj.field_a.nextForward((byte) -71));
               }
               return;
             }
             if (var2 != 11 &&
               var2 != 12) {
               if (var2 == 13) {
-                var3Lifetime5 = ((PacketBuffer) ((Object) var1)).f(-20976);
-                var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).j(-60);
+                var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
+                var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-60);
                 var30_ref = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3Lifetime5));
                 if (var30_ref == null) {
                   return;
@@ -333,38 +333,38 @@ final class rp extends kg {
                 if (15 != var2 &&
                   var2 != 17) {
                   if (var2 == 18) {
-                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).d(26);
-                    var26 = ((PacketBuffer) ((Object) var1)).e(-1);
-                    var27 = ((PacketBuffer) ((Object) var1)).e(-1);
+                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(26);
+                    var26 = ((PacketBuffer) ((Object) var1)).readString(-1);
+                    var27 = ((PacketBuffer) ((Object) var1)).readString(-1);
                     var7 = ik.a(-121, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new mj(var26, var27, var3_longLifetime2);
                       qp.field_w.a(var3_longLifetime2, var7, true);
                       np.field_a.field_Lb = np.field_a.field_Lb + 1;
                     }
-                    var7.field_Qb = ((PacketBuffer) ((Object) var1)).f(-20976);
-                    var8 = ((PacketBuffer) ((Object) var1)).c(false);
+                    var7.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
+                    var8 = ((PacketBuffer) ((Object) var1)).readVariableInt(false);
                     stackIn_66_0 = var7;
                     stackIn_67_1 = ((1 & var8) != 0);
                     stackIn_66_0.field_Ub = stackIn_67_1;
                     var7.field_Fb = var8 >> 1;
-                    var7.field_Lb = ((PacketBuffer) ((Object) var1)).j(-111);
-                    var7.field_Wb = ((PacketBuffer) ((Object) var1)).j(-68);
-                    uo.field_a.a((byte) -113, var7);
+                    var7.field_Lb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-111);
+                    var7.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-68);
+                    uo.field_a.addLast((byte) -113, var7);
                     return;
                   }
                   if (var2 == 19) {
-                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).d(105);
-                    var5Lifetime1 = ((PacketBuffer) ((Object) var1)).j(-120);
+                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(105);
+                    var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-120);
                     var28 = ik.a(-101, var3_longLifetime2);
                     if (var28 != null) {
                       if (0 != var5Lifetime1) {
                         var28.field_Gb = ks.field_i;
                         var28.field_Eb = var5Lifetime1;
                       } else {
-                        var28.b((byte) -124);
+                        var28.unlink((byte) -124);
                       }
-                      var28.a(16);
+                      var28.unlinkSecondary(16);
                       np.field_a.field_Lb = np.field_a.field_Lb - 1;
                     }
                     return;
@@ -374,7 +374,7 @@ final class rp extends kg {
                     return;
                   }
                   if (var2 == 21) {
-                    var3Lifetime5 = ((PacketBuffer) ((Object) var1)).f(-20976);
+                    var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
                     if (var3Lifetime5 != 0) {
                       sf.field_e = pr.a(14274) + (long)var3Lifetime5;
                       return;
@@ -383,20 +383,20 @@ final class rp extends kg {
                     return;
                   }
                   if (var2 == 22) {
-                    a.field_j = ((PacketBuffer) ((Object) var1)).f(-20976);
-                    bh.field_h = ((PacketBuffer) ((Object) var1)).c(false);
+                    a.field_j = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
+                    BoundsRect.field_h = ((PacketBuffer) ((Object) var1)).readVariableInt(false);
                     return;
                   }
                   if (23 == var2) {
-                    ec.field_p = ((PacketBuffer) ((Object) var1)).d(65);
+                    ec.field_p = ((PacketBuffer) ((Object) var1)).readLong(65);
                     return;
                   }
                   GameKeyHandler.a(-29901, (Throwable) null, "L1: " + w.a(16738));
                   q.g(-115);
                   return;
                 }
-                var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).d(127);
-                var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).j(-119);
+                var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(127);
+                var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-119);
                 var14 = ta.a(126, var3_longLifetime2);
                 var25 = var14;
                 if (var14 == null) {
@@ -417,7 +417,7 @@ final class rp extends kg {
                 WidgetContainer.a((byte) -60, var25);
                 return;
               }
-              var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).d(127);
+              var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(127);
               var29 = ta.a(121, var3_longLifetime2Lifetime1);
               if (var29 != null) {
                 if (var2 != 14) {
@@ -432,7 +432,7 @@ final class rp extends kg {
               }
               return;
             }
-            var3Lifetime6 = ((PacketBuffer) ((Object) var1)).f(-20976);
+            var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
             var18_ref = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3Lifetime6));
             var24 = var18_ref;
             if (var24 == null) {
@@ -446,11 +446,11 @@ final class rp extends kg {
             ei.a(0, var24);
             return;
           }
-          var3_ref_mj = (mj) (uo.field_a.d(0));
+          var3_ref_mj = (mj) (uo.field_a.startForward(0));
           while (var3_ref_mj != null) {
-            var3_ref_mj.b((byte) -91);
-            var3_ref_mj.a(16);
-            var3_ref_mj = (mj) (uo.field_a.a((byte) -71));
+            var3_ref_mj.unlink((byte) -91);
+            var3_ref_mj.unlinkSecondary(16);
+            var3_ref_mj = (mj) (uo.field_a.nextForward((byte) -71));
           }
           var3_ref_mjLifetime1 = (mj) (ShatteredPlansClient.field_H.c((byte) -109));
           while (var3_ref_mjLifetime1 != null) {
@@ -472,9 +472,9 @@ final class rp extends kg {
           if (4 != var2) {
             np.field_a = null;
           } else {
-            var3Lifetime1 = ((PacketBuffer) ((Object) var1)).f(-20976);
+            var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
             np.field_a = new fb(em.field_k);
-            np.field_a.a(16, (long)var3Lifetime1);
+            np.field_a.setSecondaryKey(16, (long)var3Lifetime1);
             mi.a((byte) -89, np.field_a, var1, false);
             sf.field_e = 0L;
           }
@@ -487,17 +487,17 @@ final class rp extends kg {
             }
           }
           if (var2 != 3) {
-            k.field_i = false;
+            TurnEventLog.field_i = false;
             return;
           }
-          k.field_i = true;
+          TurnEventLog.field_i = true;
           for (var3Lifetime2 = 0; var3Lifetime2 < id.field_c.length; var3Lifetime2++) {
-            id.field_c[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).g(-2852);
+            id.field_c[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readSignedByte(-2852);
           }
-          qj.field_b = ((PacketBuffer) ((Object) var1)).j(-82);
-          rj.field_q = ((PacketBuffer) ((Object) var1)).j(-54);
+          qj.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-82);
+          RecklessAi.field_q = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-54);
           for (var3Lifetime3 = 0; qj.field_f.length > var3Lifetime3; var3Lifetime3++) {
-            qj.field_f[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).g(-2852);
+            qj.field_f[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readSignedByte(-2852);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

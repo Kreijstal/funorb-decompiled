@@ -257,7 +257,7 @@ final class SynthInstrument {
         this.field_m.b(param0);
         this.field_i = new SoundEnvelope();
         this.field_i.b(param0);
-        int var2 = param0.j(-127);
+        int var2 = param0.readUnsignedByte(-127);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_l = new SoundEnvelope();
@@ -265,7 +265,7 @@ final class SynthInstrument {
           this.field_d = new SoundEnvelope();
           this.field_d.b(param0);
         }
-        var2 = param0.j(-79);
+        var2 = param0.readUnsignedByte(-79);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_g = new SoundEnvelope();
@@ -273,7 +273,7 @@ final class SynthInstrument {
           this.field_o = new SoundEnvelope();
           this.field_o.b(param0);
         }
-        var2 = param0.j(-60);
+        var2 = param0.readUnsignedByte(-60);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_e = new SoundEnvelope();
@@ -282,18 +282,18 @@ final class SynthInstrument {
           this.field_r.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.h(-1282738780);
+          var4 = param0.readUnsignedSmart(-1282738780);
           if (var4 == 0) {
             break;
           }
           this.field_y[var3] = var4;
-          this.field_x[var3] = param0.d((byte) 65);
-          this.field_h[var3] = param0.h(-1282738780);
+          this.field_x[var3] = param0.readSignedSmart((byte) 65);
+          this.field_h[var3] = param0.readUnsignedSmart(-1282738780);
         }
-        this.field_f = param0.h(-1282738780);
-        this.field_b = param0.h(-1282738780);
-        this.field_a = param0.f(-20976);
-        this.field_s = param0.f(-20976);
+        this.field_f = param0.readUnsignedSmart(-1282738780);
+        this.field_b = param0.readUnsignedSmart(-1282738780);
+        this.field_a = param0.readUnsignedShort(-20976);
+        this.field_s = param0.readUnsignedShort(-20976);
         this.field_k = new AudioFilter();
         this.field_n = new SoundEnvelope();
         this.field_k.a(param0, this.field_n);

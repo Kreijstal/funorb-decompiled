@@ -99,7 +99,7 @@ final class tf implements iq {
           ql.field_n = param1;
           um.field_c = param3;
           FrameTimer.field_c = param2;
-          eg.b(gf.field_b / 2, gf.field_k / 2, 0);
+          BattleEvent.b(gf.field_b / 2, gf.field_k / 2, 0);
           id.a(param3.field_K + param3.field_q, param3.field_K, 26883, param1.field_K, param1.field_q + param1.field_K);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -142,20 +142,20 @@ final class tf implements iq {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           scanLoop1: while (true) {
-            if (rd.field_g == null) {
+            if (StandardMapReader.field_g == null) {
               stackIn_13_0 = WhirlpoolHasher.field_i;
-              stackIn_13_1 = ui.field_p;
+              stackIn_13_1 = SolVictoryChecker.field_p;
               if (var4 != 0) {
                 break scanLoop1;
               }
               if (stackIn_13_0 > stackIn_13_1) {
-                fieldTemp$0 = ui.field_p;
-                ui.field_p = ui.field_p + 1;
-                rd.field_g = bj.field_J[fieldTemp$0];
+                fieldTemp$0 = SolVictoryChecker.field_p;
+                SolVictoryChecker.field_p = SolVictoryChecker.field_p + 1;
+                StandardMapReader.field_g = bj.field_J[fieldTemp$0];
                 continue;
               }
             }
-            if (null == rd.field_g) {
+            if (null == StandardMapReader.field_g) {
               stackIn_11_0 = null;
               return (wa) (stackIn_11_0);
             }
@@ -166,44 +166,44 @@ final class tf implements iq {
           if (stackIn_13_0 != stackIn_13_1) {
             field_p = -40;
           }
-          var1 = rd.field_g.field_c;
+          var1 = StandardMapReader.field_g.field_c;
           if (var1 != null) {
             while (true) {
-              if (rd.field_g.field_g == var1.field_g) {
-                var2 = rd.field_g.field_h - var1.field_h;
+              if (StandardMapReader.field_g.field_g == var1.field_g) {
+                var2 = StandardMapReader.field_g.field_h - var1.field_h;
                 stackIn_48_0 = -1;
                 stackIn_48_1 = ~var2;
                 if (var4 == 0) {
                   if (stackIn_48_0 > stackIn_48_1) {
-                    DiskArchiveRequest.a(var1.field_h, 0, rd.field_g);
+                    DiskArchiveRequest.a(var1.field_h, 0, StandardMapReader.field_g);
                   } else {
                     if (var2 < 0) {
                       throw new RuntimeException();
                     }
                   }
-                  rd.field_g.field_f = rd.field_g.field_f + var1.field_f;
-                  rd.field_g.field_e = rd.field_g.field_e + var1.field_e;
-                  rd.field_g.field_a = rd.field_g.field_a + var1.field_a;
+                  StandardMapReader.field_g.field_f = StandardMapReader.field_g.field_f + var1.field_f;
+                  StandardMapReader.field_g.field_e = StandardMapReader.field_g.field_e + var1.field_e;
+                  StandardMapReader.field_g.field_a = StandardMapReader.field_g.field_a + var1.field_a;
                   var3 = var1;
                   localTemp$1 = var1.field_c;
                   var1 = localTemp$1;
-                  rd.field_g.field_c = localTemp$1;
+                  StandardMapReader.field_g.field_c = localTemp$1;
                   var3.b(56);
-                  if (0 == rd.field_g.field_f &&
-                    0 == rd.field_g.field_a) {
+                  if (0 == StandardMapReader.field_g.field_f &&
+                    0 == StandardMapReader.field_g.field_a) {
                     if (var1 != null &&
-                      rd.field_g.field_g == var1.field_g) {
-                      var1.field_e = var1.field_e + rd.field_g.field_e;
-                      rd.field_g.b(-16);
-                      rd.field_g = var1;
+                      StandardMapReader.field_g.field_g == var1.field_g) {
+                      var1.field_e = var1.field_e + StandardMapReader.field_g.field_e;
+                      StandardMapReader.field_g.b(-16);
+                      StandardMapReader.field_g = var1;
                       var1 = var1.field_c;
                     } else {
-                      rd.field_g.field_h = 1;
+                      StandardMapReader.field_g.field_h = 1;
                     }
                   }
                   if (var1 == null) {
-                    var1 = rd.field_g;
-                    rd.field_g = null;
+                    var1 = StandardMapReader.field_g;
+                    StandardMapReader.field_g = null;
                     var1.b(param0 + 109);
                     stackIn_45_0 = var1;
                     return stackIn_45_0;
@@ -211,18 +211,18 @@ final class tf implements iq {
                   continue;
                 }
               } else {
-                stackIn_48_0 = var1.field_g - rd.field_g.field_g;
-                stackIn_48_1 = rd.field_g.field_h;
+                stackIn_48_0 = var1.field_g - StandardMapReader.field_g.field_g;
+                stackIn_48_1 = StandardMapReader.field_g.field_h;
               }
               if (stackIn_48_0 >= stackIn_48_1) {
                 break;
               }
-              DiskArchiveRequest.a(-rd.field_g.field_g + var1.field_g, 0, rd.field_g);
+              DiskArchiveRequest.a(-StandardMapReader.field_g.field_g + var1.field_g, 0, StandardMapReader.field_g);
               break;
             }
           }
-          var1Lifetime1 = rd.field_g;
-          rd.field_g = var1Lifetime1.field_c;
+          var1Lifetime1 = StandardMapReader.field_g;
+          StandardMapReader.field_g = var1Lifetime1.field_c;
           var1Lifetime1.b(-118);
           stackIn_52_0 = var1Lifetime1;
           return stackIn_52_0;

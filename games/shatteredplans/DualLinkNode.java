@@ -88,7 +88,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean isSecondaryLinked(byte param0) {
         if (param0 < 94) {
           field_n = (Archive) null;
         }
@@ -98,12 +98,12 @@ class DualLinkNode extends IntrusiveNode {
         return true;
     }
 
-    final long d(byte param0) {
+    final long secondaryKey(byte param0) {
         int var2 = -87 % ((54 - param0) / 41);
         return this.field_l;
     }
 
-    final void a(int param0) {
+    final void unlinkSecondary(int param0) {
         if (null == this.field_j) {
           return;
         }
@@ -134,7 +134,7 @@ class DualLinkNode extends IntrusiveNode {
         return var2;
     }
 
-    final void a(int param0, long param1) {
+    final void setSecondaryKey(int param0, long param1) {
         if (null != this.field_j) {
           throw new RuntimeException();
         }

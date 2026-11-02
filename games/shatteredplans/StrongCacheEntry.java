@@ -23,7 +23,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var2 = (Archive) null;
           StrongCacheEntry.a((byte) -50, (int[]) null, (Archive) null, (nk[]) null, (Archive) null);
         }
-        stackIn_9_0 = ((hg.field_r &&
+        stackIn_9_0 = ((IsolationistAi.field_r &&
           MusicCrossfadeStream.field_q) ||
           w.d(true));
         return stackIn_9_0;
@@ -47,7 +47,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         return false;
     }
 
-    final static void a(byte param0, Player[] param1, PacketBuffer param2, int param3, IntrusiveDeque param4, int param5, VictoryChecker param6, Player param7, l param8, boolean param9) {
+    final static void a(byte param0, Player[] param1, PacketBuffer param2, int param3, IntrusiveDeque param4, int param5, VictoryChecker param6, Player param7, GalaxyMap param8, boolean param9) {
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
         String stackIn_64_2 = null;
@@ -66,7 +66,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         RuntimeException var10 = null;
         int var11 = 0;
         int var12_int = 0;
-        cs var12 = null;
+        Wormhole var12 = null;
         Territory var12_ref = null;
         int var13 = 0;
         lo var13_ref_lo = null;
@@ -91,82 +91,82 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           param8.a(10529, param2, param1);
           var10_int = 0;
           for (var11 = 0; var11 < param1.length; var11++) {
-            var10_int = var10_int + param1[var11].field_i.e(0);
+            var10_int = var10_int + param1[var11].field_i.size(0);
           }
-          param2.c(var10_int, (byte) -89);
+          param2.writeByte(var10_int, (byte) -89);
           if (param0 > -57) {
             field_v = (String) null;
           }
           for (var11Lifetime1 = 0; param1.length > var11Lifetime1; var11Lifetime1++) {
-            var12_ref = (Territory) (param1[var11Lifetime1].field_i.d(0));
+            var12_ref = (Territory) (param1[var11Lifetime1].field_i.startForward(0));
             while (var12_ref != null) {
               im.a(var12_ref.field_o, param2, 9555);
               di.a(var12_ref.field_q, false, param2);
-              var13 = var12_ref.g(89);
-              param2.c(var13, (byte) -112);
-              var14_ref_ln = var12_ref.j(18229);
+              var13 = var12_ref.starCount(89);
+              param2.writeByte(var13, (byte) -112);
+              var14_ref_ln = var12_ref.firstStar(18229);
               while (var14_ref_ln != null) {
                 if (var14_ref_ln != var12_ref.field_q) {
                   di.a(var14_ref_ln, false, param2);
                 }
-                var14_ref_ln = var12_ref.h(-23410);
+                var14_ref_ln = var12_ref.nextStar(-23410);
               }
-              var12_ref = (Territory) (param1[var11Lifetime1].field_i.a((byte) -71));
+              var12_ref = (Territory) (param1[var11Lifetime1].field_i.nextForward((byte) -71));
             }
           }
           var11Lifetime2 = 0;
           for (var12_int = 0; param1.length > var12_int; var12_int++) {
             if (param1[var12_int].field_m != null &&
-              param1[var12_int].field_m.g(-68) > 0) {
+              param1[var12_int].field_m.starCount(-68) > 0) {
               var11Lifetime2++;
             }
           }
-          param2.c(var11Lifetime2, (byte) -118);
+          param2.writeByte(var11Lifetime2, (byte) -118);
           for (var12_intLifetime1 = 0; var12_intLifetime1 < param1.length; var12_intLifetime1++) {
             var13_ref_lo = param1[var12_intLifetime1].field_m;
             if (var13_ref_lo != null &&
-              var13_ref_lo.g(122) > 0) {
+              var13_ref_lo.starCount(122) > 0) {
               im.a(param1[var12_intLifetime1], param2, 9555);
               di.a(var13_ref_lo.field_q, false, param2);
-              var14 = var13_ref_lo.g(-127);
-              param2.c(var14, (byte) -69);
-              var15 = var13_ref_lo.j(18229);
+              var14 = var13_ref_lo.starCount(-127);
+              param2.writeByte(var14, (byte) -69);
+              var15 = var13_ref_lo.firstStar(18229);
               while (var15 != null) {
                 if (var15 != var13_ref_lo.field_q) {
                   di.a(var15, false, param2);
                 }
-                var15 = var13_ref_lo.h(-23410);
+                var15 = var13_ref_lo.nextStar(-23410);
               }
             }
           }
           for (var12_intLifetime2 = 0; var12_intLifetime2 < param1.length; var12_intLifetime2++) {
             for (var13Lifetime1 = var12_intLifetime2 + 1; var13Lifetime1 < param1.length; var13Lifetime1++) {
               if (param1[var12_intLifetime2].field_h[var13Lifetime1]) {
-                param2.c(param1[var12_intLifetime2].field_f[var13Lifetime1], (byte) -55);
+                param2.writeByte(param1[var12_intLifetime2].field_f[var13Lifetime1], (byte) -55);
               } else {
-                param2.c(127, (byte) -88);
+                param2.writeByte(127, (byte) -88);
               }
             }
           }
           if (param7 != null) {
-            param2.c(param7.field_w, (byte) -127);
+            param2.writeByte(param7.field_w, (byte) -127);
           }
           for (var12_intLifetime3 = 0; param1.length > var12_intLifetime3; var12_intLifetime3++) {
             for (var13Lifetime2 = 0; var13Lifetime2 < 4; var13Lifetime2++) {
-              param2.c(param1[var12_intLifetime3].field_u[var13Lifetime2], (byte) -94);
+              param2.writeByte(param1[var12_intLifetime3].field_u[var13Lifetime2], (byte) -94);
             }
           }
-          param2.c(param4.e(0), (byte) -67);
-          var12 = (cs) (param4.d(0));
+          param2.writeByte(param4.size(0), (byte) -67);
+          var12 = (Wormhole) (param4.startForward(0));
           while (var12 != null) {
             di.a(var12.field_n, false, param2);
             di.a(var12.field_k, false, param2);
-            param2.c(var12.field_m, (byte) -82);
-            var12 = (cs) (param4.a((byte) -71));
+            param2.writeByte(var12.field_m, (byte) -82);
+            var12 = (Wormhole) (param4.nextForward((byte) -71));
           }
           param6.a(-3, param2);
-          param2.c(param5, (byte) -125);
-          param2.c(param3, (byte) -90);
+          param2.writeByte(param5, (byte) -125);
+          param2.writeByte(param3, (byte) -90);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -326,8 +326,8 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           gg.field_d.field_F = re.a(ae.a(-82, "lobby", param4, "heading"), 123);
           IntrusiveNode.field_a = new qr(0L, (qr) null);
           IntrusiveNode.field_a.field_F = ArchiveSourceManager.a(false, 4210752, false, 120, 8421504, (byte) -63);
-          l.field_a = new qr(0L, (qr) null);
-          l.field_a.field_F = cs.a(16, 3, 114, 6316128, 6316128, 1);
+          GalaxyMap.field_a = new qr(0L, (qr) null);
+          GalaxyMap.field_a.field_F = Wormhole.a(16, 3, 114, 6316128, 6316128, 1);
           MusicCrossfadeStream.field_v = new qr(0L, (qr) null);
           MusicCrossfadeStream.field_v.field_F = re.a(ae.a(-113, "lobby", param4, "popup"), 122);
           var12 = re.a(ae.a(124, "lobby", param4, "popup_mouseover"), 117);
@@ -376,29 +376,29 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           ek.field_E.a(gn.field_w, false);
           var16 = ae.a(-82, "lobby", param4, "button_mouseover");
           hd.field_t = new ul(MusicCrossfadeStream.field_v, var12, SpriteState.field_u, gn.field_w, 3, 2, qo.field_b, 3, cr.field_c);
-          rd.field_h = new qr(0L, gn.field_w);
-          rd.field_h.field_lb = var16;
-          rd.field_h.field_T = 1;
-          rd.field_h.field_t = 1;
-          rd.field_h.field_V = 1;
-          rd.field_h.field_J = 1;
+          StandardMapReader.field_h = new qr(0L, gn.field_w);
+          StandardMapReader.field_h.field_lb = var16;
+          StandardMapReader.field_h.field_T = 1;
+          StandardMapReader.field_h.field_t = 1;
+          StandardMapReader.field_h.field_V = 1;
+          StandardMapReader.field_h.field_J = 1;
           if (param0 >= -25) {
             return;
           }
-          rd.field_h.field_F = var13;
-          rd.field_h.field_vb = ae.a(-112, "lobby", param4, "button_mouseheld");
-          rd.field_h.field_sb = ae.a(62, "lobby", param4, "button_active");
-          rd.field_h.field_wb = ae.a(-104, "lobby", param4, "button_disabled");
-          rd.field_h.field_y = 1;
+          StandardMapReader.field_h.field_F = var13;
+          StandardMapReader.field_h.field_vb = ae.a(-112, "lobby", param4, "button_mouseheld");
+          StandardMapReader.field_h.field_sb = ae.a(62, "lobby", param4, "button_active");
+          StandardMapReader.field_h.field_wb = ae.a(-104, "lobby", param4, "button_disabled");
+          StandardMapReader.field_h.field_y = 1;
           re.field_h = new qr(0L, gn.field_w);
           re.field_h.field_y = 1;
           re.field_h.field_F = re.a(ae.a(73, "lobby", param4, "tab_inactive"), 127);
           re.field_h.field_lb = re.a(ae.a(100, "lobby", param4, "tab_mouseover"), 85);
           re.field_h.field_sb = var14;
           tm.field_t = new qr(0L, (qr) null);
-          tm.field_t.field_F = cs.a(16, 3, 206, 1856141, 1127256, -1);
+          tm.field_t.field_F = Wormhole.a(16, 3, 206, 1856141, 1127256, -1);
           rs.field_Eb = new qr(0L, (qr) null);
-          rs.field_Eb.field_F = cs.a(16, 3, 290, 11579568, 6052956, -1);
+          rs.field_Eb.field_F = Wormhole.a(16, 3, 290, 11579568, 6052956, -1);
           IsaacBackedRandom.field_a = new qr(0L, var15);
           IsaacBackedRandom.field_a.field_T = 1;
           IsaacBackedRandom.field_a.field_y = 1;
@@ -412,8 +412,8 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           jf.field_b.field_y = 1;
           jf.field_b.field_T = 1;
           jf.field_b.field_J = 1;
-          kq.field_h = new qr(0L, jf.field_b);
-          rf.field_l = new qr(0L, jf.field_b);
+          GameScreen.field_h = new qr(0L, jf.field_b);
+          AllianceExpiredEvent.field_l = new qr(0L, jf.field_b);
           bd.field_E = new qr(0L, IsaacBackedRandom.field_a);
           n.field_o = new qr(0L, jf.field_b);
           WeightedCacheEntry.field_o = new qr(0L, jf.field_b);
@@ -431,12 +431,12 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           IsaacBackedRandom.field_a.field_lb = re.a(ae.a(92, "lobby", param4, "bigbutton_mouseover"), 76);
           IsaacBackedRandom.field_a.field_vb = re.a(ae.a(-108, "lobby", param4, "bigbutton_mouseheld"), 127);
           IsaacBackedRandom.field_a.field_wb = re.a(ae.a(-98, "lobby", param4, "bigbutton_disabled"), 122);
-          kq.field_h.field_F = re.a(ae.a(-86, "lobby", param4, "greenbutton"), 76);
-          kq.field_h.field_lb = re.a(ae.a(-78, "lobby", param4, "greenbutton_mouseover"), 91);
-          kq.field_h.field_vb = re.a(ae.a(-98, "lobby", param4, "greenbutton_mouseheld"), 39);
-          rf.field_l.field_F = re.a(ae.a(-126, "lobby", param4, "redbutton"), 56);
-          rf.field_l.field_lb = re.a(ae.a(120, "lobby", param4, "redbutton_mouseover"), 55);
-          rf.field_l.field_vb = re.a(ae.a(126, "lobby", param4, "redbutton_mouseheld"), 103);
+          GameScreen.field_h.field_F = re.a(ae.a(-86, "lobby", param4, "greenbutton"), 76);
+          GameScreen.field_h.field_lb = re.a(ae.a(-78, "lobby", param4, "greenbutton_mouseover"), 91);
+          GameScreen.field_h.field_vb = re.a(ae.a(-98, "lobby", param4, "greenbutton_mouseheld"), 39);
+          AllianceExpiredEvent.field_l.field_F = re.a(ae.a(-126, "lobby", param4, "redbutton"), 56);
+          AllianceExpiredEvent.field_l.field_lb = re.a(ae.a(120, "lobby", param4, "redbutton_mouseover"), 55);
+          AllianceExpiredEvent.field_l.field_vb = re.a(ae.a(126, "lobby", param4, "redbutton_mouseheld"), 103);
           bd.field_E.field_F = re.a(ae.a(-101, "lobby", param4, "backbutton"), 48);
           bd.field_E.field_lb = re.a(ae.a(-103, "lobby", param4, "backbutton_mouseover"), 60);
           bd.field_E.field_vb = re.a(ae.a(-104, "lobby", param4, "backbutton_mouseheld"), 123);
@@ -474,13 +474,13 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           sk.field_k.field_fb = id.a(2, param4, "lobby", "upbutton_mouseover");
           sk.field_k.field_U = id.a(2, param4, "lobby", "upbutton_mouseheld");
           sk.field_k.field_ob = id.a(2, param4, "lobby", "upbutton_disabled");
-          eg.field_u = new qr(0L, (qr) null);
-          eg.field_u.field_pb = id.a(2, param4, "lobby", "downbutton");
-          eg.field_u.field_fb = id.a(2, param4, "lobby", "downbutton_mouseover");
-          eg.field_u.field_U = id.a(2, param4, "lobby", "downbutton_mouseheld");
-          eg.field_u.field_ob = id.a(2, param4, "lobby", "downbutton_disabled");
-          se.field_m = new ur(0L, sk.field_k, eg.field_u, sj.field_c, ml.field_l);
-          ih.field_g = new am(0L, (qr) null, VictoryChecker.field_d, se.field_m, jf.field_b, (String) null, (String) null);
+          BattleEvent.field_u = new qr(0L, (qr) null);
+          BattleEvent.field_u.field_pb = id.a(2, param4, "lobby", "downbutton");
+          BattleEvent.field_u.field_fb = id.a(2, param4, "lobby", "downbutton_mouseover");
+          BattleEvent.field_u.field_U = id.a(2, param4, "lobby", "downbutton_mouseheld");
+          BattleEvent.field_u.field_ob = id.a(2, param4, "lobby", "downbutton_disabled");
+          AchievementProgress.field_m = new ur(0L, sk.field_k, BattleEvent.field_u, sj.field_c, ml.field_l);
+          ih.field_g = new am(0L, (qr) null, VictoryChecker.field_d, AchievementProgress.field_m, jf.field_b, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

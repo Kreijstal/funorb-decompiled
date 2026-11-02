@@ -54,7 +54,7 @@ final class IterableNodeHashTable implements Iterable {
           if (param1 != 17746) {
             field_a = (java.awt.Image) null;
           }
-          stackIn_3_0 = qi.a(param0, param0.length, 0, param1 - 17864);
+          stackIn_3_0 = SolarFlareEvent.a(param0, param0.length, 0, param1 - 17864);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode get(int param0, long param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;
@@ -95,7 +95,7 @@ final class IterableNodeHashTable implements Iterable {
           this.field_j = this.field_j.next;
           return var5;
         }
-        this.a((IntrusiveNode) null, true, 61L);
+        this.put((IntrusiveNode) null, true, 61L);
         var4Lifetime1 = this.field_f[(int)((long)(this.field_d - 1) & param1)];
         this.field_j = var4Lifetime1.next;
         while (true) {
@@ -114,11 +114,11 @@ final class IterableNodeHashTable implements Iterable {
         return var5Lifetime1;
     }
 
-    final void a(IntrusiveNode param0, boolean param1, long param2) {
+    final void put(IntrusiveNode param0, boolean param1, long param2) {
         IntrusiveNode var5 = null;
         try {
           if (param0.previous != null) {
-            param0.b((byte) -58);
+            param0.unlink((byte) -58);
           }
           if (!param1) {
             this.field_f = (IntrusiveNode[]) null;

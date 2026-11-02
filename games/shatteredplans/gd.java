@@ -23,8 +23,8 @@ final class gd {
         wc.a(-27030, di.field_m << 1, -va.field_d[0].field_z + 640 >> 1, va.field_d[0], var1, 256);
         wc.a(-27030, -128 + (di.field_m << 1), -va.field_d[1].field_z + 640 >> 1, va.field_d[1], var1 + va.field_d[1].field_w, 256);
         if (!mf.field_r) {
-          var2 = hp.field_n.a("intro", (byte) 53);
-          kl.a((byte) 73, 455, 15, 16711680, 10, var2, 100);
+          var2 = DerelictVictoryChecker.field_n.a("intro", (byte) 53);
+          AttackTask.a((byte) 73, 455, 15, 16711680, 10, var2, 100);
         }
         if (param0 <= -63) {
           return;
@@ -35,13 +35,13 @@ final class gd {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = js.field_f;
         var2.h(param0, 255);
-        var2.c(param1, (byte) -123);
-        var2.c(0, (byte) -78);
+        var2.writeByte(param1, (byte) -123);
+        var2.writeByte(0, (byte) -78);
     }
 
     final static void a(lq param0, int param1, int param2) {
         try {
-          rs.field_Bb.a((byte) -113, param0);
+          rs.field_Bb.addLast((byte) -113, param0);
           if (param1 != 1500005281) {
             gd.b(66);
           }

@@ -20,7 +20,7 @@ final class u {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1) {
           u.b(58);
-          if (vr.field_c == -3) {
+          if (GameRules.field_c == -3) {
             ts.a(6493);
           } else {
             if (null != ce.field_x) {
@@ -36,7 +36,7 @@ final class u {
           }
           return;
         }
-        if (vr.field_c == -3) {
+        if (GameRules.field_c == -3) {
           ts.a(6493);
         } else {
           if (null != ce.field_x) {
@@ -114,7 +114,7 @@ final class u {
           return;
         }
         try {
-          hp.field_p = 0;
+          DerelictVictoryChecker.field_p = 0;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "u.A(" + param0 + ')');
         }
@@ -122,7 +122,7 @@ final class u {
 
     final static int a(int param0) {
         lg.field_c.c(123);
-        if (!vp.field_o.d(0)) {
+        if (!TertiaryLinkNode.field_o.d(0)) {
           return IsaacRandom.b((byte) 115);
         }
         if (param0 < -28) {

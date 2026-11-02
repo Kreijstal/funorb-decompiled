@@ -189,7 +189,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           try {
             var3 = "";
             if (param1 != null) {
-              var3 = es.a(param1, (byte) -110);
+              var3 = StarAnnotation.a(param1, (byte) -110);
             }
             if (param2 != null) {
               if (param1 != null) {
@@ -213,7 +213,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (null == bj.field_E) {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
-              stackIn_14_5 = "" + co.field_o;
+              stackIn_14_5 = "" + GarrisonTask.field_o;
             } else {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
@@ -335,10 +335,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           try {
             sa.field_a = new CipherPacketBuffer(param4);
             js.field_f = new CipherPacketBuffer(param2);
-            ka.field_a = param6;
+            StandardAi.field_a = param6;
             ee.field_o = param7;
             of.field_f = param3;
-            nr.field_l = param1;
+            StarAbandonedEvent.field_l = param1;
             if (param0 != 0) {
               GameKeyHandler.a((byte) 38);
             }
@@ -349,11 +349,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             uk.field_a = param9;
             e.field_b = param10;
             sp.field_g = param11;
-            if (nr.field_l.field_a == null) {
+            if (StarAbandonedEvent.field_l.field_a == null) {
               return;
             }
             try {
-              vc.field_a = new BufferedCacheFile(nr.field_l.field_a, 64, 0);
+              vc.field_a = new BufferedCacheFile(StarAbandonedEvent.field_l.field_a, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -79,7 +79,7 @@ final class d {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (wg.field_f != null && (param0 < 0 ||
-            ih.field_f == cs.field_j)) {
+            ih.field_f == Wormhole.field_j)) {
             if (param1 != 82) {
               return;
             }
@@ -145,7 +145,7 @@ final class d {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (wg.field_f != null && (param0 < 0 ||
-            ih.field_f == cs.field_j)) {
+            ih.field_f == Wormhole.field_j)) {
             if (param1 != 82) {
               return;
             }

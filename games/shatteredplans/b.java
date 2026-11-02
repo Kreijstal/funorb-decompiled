@@ -58,9 +58,9 @@ final class b extends vd {
           if (var3_int > 255) {
             var3_int = 255;
           }
-          param1.c(var3_int, (byte) -60);
+          param1.writeByte(var3_int, (byte) -60);
           for (var4 = 0; var3_int > var4; var4++) {
-            param1.c((int) param2.charAt(var4), (byte) -57);
+            param1.writeByte((int) param2.charAt(var4), (byte) -57);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,6 +84,6 @@ final class b extends vd {
     }
 
     static {
-        ka.a(7321, 50);
+        StandardAi.a(7321, 50);
     }
 }

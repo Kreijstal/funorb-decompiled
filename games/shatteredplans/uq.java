@@ -55,7 +55,7 @@ final class uq extends IntrusiveNode {
         }
     }
 
-    final static GameState a(int param0, int param1, int param2, String[] param3, vr param4) {
+    final static GameState a(int param0, int param1, int param2, String[] param3, GameRules param4) {
         GameState var5 = null;
         RuntimeException var5_ref = null;
         GameState stackIn_3_0 = null;

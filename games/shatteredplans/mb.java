@@ -53,7 +53,7 @@ final class mb extends ml {
         try {
           tf.a(-86, param17, param16, param11);
           id.a(param20, param5, param3 + 26883, param10, param7);
-          eg.b(param2, param8, param3);
+          BattleEvent.b(param2, param8, param3);
           te.a(-4440, param19, param13, param14, param9, param12);
           ad.a(param4, param15, param1, (byte) 106);
           gn.a(param0, param18, false, param6);
@@ -210,7 +210,7 @@ final class mb extends ml {
             return stackIn_5_0;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3_int = ma.a(var5, param0 + 11198);
+          var3_int = DefensiveAi.a(var5, param0 + 11198);
           if (0 < var3_int &&
             130 >= var3_int) {
             stackIn_12_0 = CachedArchiveSource.field_g;

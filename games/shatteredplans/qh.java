@@ -122,9 +122,9 @@ final class qh extends vd {
             var6 = 64 - var6;
           }
           var6 = var6 * 10;
-          var3 = ui.a(2052949, 12993090, -108, var6);
-          var4 = ui.a(var4, 12993090, -122, var6);
-          var5 = ui.a(var5, 12993090, -128, var6);
+          var3 = SolVictoryChecker.a(2052949, 12993090, -108, var6);
+          var4 = SolVictoryChecker.a(var4, 12993090, -122, var6);
+          var5 = SolVictoryChecker.a(var5, 12993090, -128, var6);
         }
         gf.a(this.field_k, this.field_t, this.field_m, this.field_i, 10, 0, 200);
         am.a(-10 + this.field_m, var5, -79, 15, this.field_k, this.field_t);
@@ -140,7 +140,7 @@ final class qh extends vd {
         gf.b(this.field_k + this.field_m - 11, this.field_i + (this.field_t - 10 - 1), 10, 0);
         gf.a();
         for (var6Lifetime1 = 0; var6Lifetime1 < this.field_i - 20; var6Lifetime1++) {
-          var7 = ui.a(var3, 0, -109, var6Lifetime1 * 256 / (-20 + this.field_i));
+          var7 = SolVictoryChecker.a(var3, 0, -109, var6Lifetime1 * 256 / (-20 + this.field_i));
           gf.a(this.field_k, var6Lifetime1 + this.field_t + 10, var7);
           gf.a(this.field_m + (this.field_k - 1), this.field_t + 10 + var6Lifetime1, var7);
         }
@@ -157,29 +157,29 @@ final class qh extends vd {
         gf.b(-10 + this.field_m + (this.field_k - 4), -3 + this.field_t + this.field_i - 10 - 1, 10, var4);
         gf.a();
         for (var6Lifetime2 = 0; 2 * (-38 + this.field_i) / 3 > var6Lifetime2; var6Lifetime2++) {
-          var7Lifetime1 = ui.a(var3, 0, -82, 256 * var6Lifetime2 / ((-76 + 2 * this.field_i) / 3));
+          var7Lifetime1 = SolVictoryChecker.a(var3, 0, -82, 256 * var6Lifetime2 / ((-76 + 2 * this.field_i) / 3));
           gf.a(this.field_k + 3, this.field_t + 25 + var6Lifetime2, var7Lifetime1);
           gf.a(-1 + this.field_k - (-this.field_m + 3), var6Lifetime2 + (this.field_t + 15 + 10), var7Lifetime1);
         }
         var6Lifetime3 = (this.field_i * 2 - 76) / 3;
         for (var7Lifetime2 = 0; -var6Lifetime3 + this.field_i - 38 > var7Lifetime2; var7Lifetime2++) {
-          var8 = ui.a(0, var4, -117, 256 * var7Lifetime2 / (-38 + this.field_i - var6Lifetime3));
+          var8 = SolVictoryChecker.a(0, var4, -117, 256 * var7Lifetime2 / (-38 + this.field_i - var6Lifetime3));
           gf.a(this.field_k + 3, var6Lifetime3 + var7Lifetime2 + (15 + this.field_t + 10), var8);
           gf.a(-1 + (this.field_k + this.field_m - 3), 25 + this.field_t - (-var7Lifetime2 - var6Lifetime3), var8);
         }
         jl.field_W.c(4 + this.field_k, this.field_t + 3, 256);
         var7Lifetime3 = jl.field_W.field_z + 1 + (this.field_k + 3);
-        var8Lifetime1 = -mr.field_g.field_z - 3 + (this.field_m + this.field_k);
-        mr.field_g.c(var8Lifetime1, 3 + this.field_t, 64);
+        var8Lifetime1 = -DerelictMapReader.field_g.field_z - 3 + (this.field_m + this.field_k);
+        DerelictMapReader.field_g.c(var8Lifetime1, 3 + this.field_t, 64);
         for (var10 = var7Lifetime3; var10 < var8Lifetime1; var10++) {
           var9 = 64 + 192 * (-var10 + var8Lifetime1) / (var8Lifetime1 - var7Lifetime3);
           VictoryChecker.field_h.c(var10, this.field_t + 3, var9);
         }
         rs.field_Cb.c(this.field_y, this.field_k + this.field_m / 2, this.field_t + 12, 16777215, -1);
-        vd var12 = (vd) (this.field_l.f(3725));
+        vd var12 = (vd) (this.field_l.startReverse(3725));
         while (var12 != null) {
           var12.a(-14);
-          var12 = (vd) (this.field_l.b(-124));
+          var12 = (vd) (this.field_l.nextReverse(-124));
         }
     }
 
@@ -219,9 +219,9 @@ final class qh extends vd {
         if (!(pg.field_J <= 0)) {
           pg.field_J = pg.field_J - 1;
         }
-        if (pc.field_m != so.field_q.field_d) {
-          NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (-pc.field_m + so.field_q.field_d);
-          pc.field_m = so.field_q.field_d;
+        if (DerelictMapGenerator.field_m != so.field_q.field_d) {
+          NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (-DerelictMapGenerator.field_m + so.field_q.field_d);
+          DerelictMapGenerator.field_m = so.field_q.field_d;
         }
         if (!(pg.field_J <= 0)) {
           bq.a(125);

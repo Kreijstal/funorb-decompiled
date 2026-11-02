@@ -12,7 +12,7 @@ final class cq extends WidgetContainer implements bp {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = param3 + this.field_m;
         int var6 = param2 + this.field_q;
-        gn.field_u.a(fi.field_j, var5 + 20, var6 + 20, this.field_x - 40, -50 + this.field_n, 16777215, -1, 1, 0, gn.field_u.field_J);
+        gn.field_u.a(StarLink.field_j, var5 + 20, var6 + 20, this.field_x - 40, -50 + this.field_n, 16777215, -1, 1, 0, gn.field_u.field_J);
         super.a(param0, param1, param2, param3);
     }
 
@@ -40,7 +40,7 @@ final class cq extends WidgetContainer implements bp {
             }
             var2 = 1;
           }
-          GameState.field_l.a(-1, kq.a(nh.field_p, td.field_P, 16777215), kq.a(pd.field_k, bb.field_b, 16777215));
+          GameState.field_l.a(-1, GameScreen.a(PointsVictoryChecker.field_p, td.field_P, 16777215), GameScreen.a(pd.field_k, bb.field_b, 16777215));
           if (GameState.field_l.a((byte) -76)) {
             var1_int = 1;
           }
@@ -141,7 +141,7 @@ final class cq extends WidgetContainer implements bp {
             return;
           }
           if (this.field_H == param0) {
-            cs.a((byte) 71);
+            Wormhole.a((byte) 71);
             return;
           }
           if (param0 != this.field_G) {
@@ -170,9 +170,9 @@ final class cq extends WidgetContainer implements bp {
             String var3 = (String) null;
             cq.a(-64, -115, (String) null, (String) null, 39);
           }
-          hs.field_j = rp.i(0);
+          StandardMapGenerator.field_j = rp.i(0);
           ld.field_p = new IntrusiveDeque();
-          hj.field_l = new tm[7];
+          PlacementEvent.field_l = new tm[7];
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "cq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -206,7 +206,7 @@ final class cq extends WidgetContainer implements bp {
         super(0, 0, 476, 225, (iq) null);
         this.field_H = new kg(oj.field_Ab, (ko) null);
         this.field_J = new kg(DiskCacheWorker.field_a, (ko) null);
-        this.field_G = new kg(tr.field_Pb, (ko) null);
+        this.field_G = new kg(MapView.field_Pb, (ko) null);
         qp var1 = new qp();
         this.field_H.field_p = (iq) ((Object) var1);
         this.field_J.field_p = (iq) ((Object) var1);

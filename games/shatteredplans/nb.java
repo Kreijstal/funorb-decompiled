@@ -71,7 +71,7 @@ final class nb {
     final static void a(int param0) {
         String var1 = null;
         String var1Lifetime1;
-        if (!el.field_b) {
+        if (!TertiaryNodeList.field_b) {
           throw new IllegalStateException();
         }
         if (null == ji.field_G) {

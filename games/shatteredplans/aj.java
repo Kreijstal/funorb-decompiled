@@ -65,27 +65,27 @@ final class aj {
           tp.a((int[]) null, 0L, (String) null, (String) null, 293, qs.field_y, param2, -1, param2.g(-77));
           if (param2.field_Ab && (param2.field_Fb == 2 ||
             !(bs.field_b < 2))) {
-            var7 = hp.field_m;
+            var7 = DerelictVictoryChecker.field_m;
             var8 = re.a(ByteArrayNode.field_o, 4371, new String[]{param3});
             var7.field_j.a(1, 10, var8);
           }
-          hp.field_m.a(false);
+          DerelictVictoryChecker.field_m.a(false);
           if (param0) {
-            if (GameApplet.field_g == hp.field_m.field_f) {
-              var11 = hp.field_m;
+            if (GameApplet.field_g == DerelictVictoryChecker.field_m.field_f) {
+              var11 = DerelictVictoryChecker.field_m;
               var12 = re.a(id.field_e, 4371, new String[]{param3});
               var11.field_j.a(1, 16, var12);
             } else {
-              var9 = hp.field_m;
+              var9 = DerelictVictoryChecker.field_m;
               var10 = re.a(cb.field_g, 4371, new String[]{param3});
               var9.field_j.a(1, 15, var10);
             }
           }
-          var13 = hp.field_m;
+          var13 = DerelictVictoryChecker.field_m;
           if (param1 > -22) {
             return;
           }
-          var5 = nh.field_p;
+          var5 = PointsVictoryChecker.field_p;
           var6 = td.field_P;
           var13.field_j.b(0, 0, 0, var5, var6);
           return;

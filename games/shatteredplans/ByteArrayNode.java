@@ -15,8 +15,8 @@ final class ByteArrayNode extends IntrusiveNode {
     final static void a(String param0, int param1, boolean param2) {
         try {
           jh.field_D = param2;
-          mg.field_C = true;
-          ji.field_G = new ns(le.field_e, CipherPacketBuffer.field_p, param0, el.field_b, jh.field_D);
+          FleetMove.field_C = true;
+          ji.field_G = new ns(le.field_e, CipherPacketBuffer.field_p, param0, TertiaryNodeList.field_b, jh.field_D);
           le.field_e.a(true, ji.field_G);
           int var3_int = -116 / ((-1 - param1) / 54);
         } catch (RuntimeException runtimeException) {

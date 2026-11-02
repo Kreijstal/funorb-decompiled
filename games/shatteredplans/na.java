@@ -100,15 +100,15 @@ final class na {
         }
         try {
           MidiPcmStream.field_L = rs.field_zb + uq.field_h;
-          rj.field_r = rs.field_zb + an.field_a;
+          RecklessAi.field_r = rs.field_zb + an.field_a;
           oq.field_i = new String[33];
           oq.field_i[14] = tm.field_o;
           oq.field_i[0] = wm.field_f;
           oq.field_i[7] = sn.field_b;
           oq.field_i[4] = lr.field_e;
           oq.field_i[12] = ArchiveNetworkClient.field_g;
-          oq.field_i[1] = km.field_a;
-          oq.field_i[8] = cj.field_v;
+          oq.field_i[1] = GameSession.field_a;
+          oq.field_i[8] = TutorialAi.field_v;
           oq.field_i[5] = ro.field_e;
           if (param0 < 6) {
             field_u = (Random) null;
@@ -163,7 +163,7 @@ final class na {
           bk.field_b[5] = rk.field_m;
           bk.field_b[10] = nd.field_b;
           bk.field_b[9] = Star.field_P;
-          bk.field_b[8] = nr.field_s;
+          bk.field_b[8] = StarAbandonedEvent.field_s;
           bk.field_b[7] = VictoryChecker.field_f;
           bk.field_b[2] = nf.field_m;
           bk.field_b[3] = wa.field_i;

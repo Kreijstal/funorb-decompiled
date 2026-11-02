@@ -44,12 +44,12 @@ final class bf {
           return;
         }
         try {
-          mg.field_C = false;
+          FleetMove.field_C = false;
           if (ji.field_G != null &&
             ji.field_G.field_E) {
             if (8 == param1) {
               param1 = 2;
-              if (el.field_b) {
+              if (TertiaryNodeList.field_b) {
                 param2 = dp.field_p;
               } else {
                 param2 = aa.field_N;
@@ -72,7 +72,7 @@ final class bf {
             }
             if (param1 != 256 &&
               param1 != 10 &&
-              !el.field_b) {
+              !TertiaryNodeList.field_b) {
               no.field_e.l(8);
               return;
             }
@@ -98,7 +98,7 @@ final class bf {
           var4 = SoundCache.field_c.field_nb.c(param1, 272, SoundCache.field_c.field_Y);
           var5 = -(var4 / 2) - 110 + var3 / 2 + 7;
           so.field_v.a(320, -(2 * var5) + (-120 + var3), (byte) 102, var5, (var2_int - 320) / 2);
-          so.field_v.field_F = cs.a(16, 3, so.field_v.field_mb, 11579568, 8421504, 2105376);
+          so.field_v.field_F = Wormhole.a(16, 3, so.field_v.field_mb, 11579568, 8421504, 2105376);
           SoundCache.field_c.a(-24 + so.field_v.field_K - 24, -24 + so.field_v.field_mb - 20, (byte) 67, 16, 24);
           SocketConnector.field_d.a(80, 24, (byte) 115, so.field_v.field_mb - 20 - 24, 120);
         } catch (RuntimeException runtimeException) {

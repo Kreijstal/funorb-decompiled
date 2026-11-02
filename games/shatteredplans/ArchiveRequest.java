@@ -114,8 +114,8 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     final static void a(int param0, Sprite param1) {
         RandomAccessCacheFile.a(-117);
-        pc.field_n = new Sprite(128, 128);
-        pc.field_n.e();
+        DerelictMapGenerator.field_n = new Sprite(128, 128);
+        DerelictMapGenerator.field_n.e();
         if (param0 <= 12) {
           return;
         }
@@ -123,14 +123,14 @@ abstract class ArchiveRequest extends DualLinkNode {
           param1.f(0, 0);
           ks.field_h = new Sprite(256, 256);
           ks.field_h.e();
-          pc.field_n.b(0, 0, 256, 256);
+          DerelictMapGenerator.field_n.b(0, 0, 256, 256);
           gf.b(3, 3, 0, 0, 256, 256);
           lq.field_o = new Sprite(32, 32);
           lq.field_o.e();
-          pc.field_n.g(0, 0);
+          DerelictMapGenerator.field_n.g(0, 0);
           n.field_k = new Sprite(256, 256);
           n.field_k.e();
-          pc.field_n.f(64, 64);
+          DerelictMapGenerator.field_n.f(64, 64);
           gf.b(12, 12, 0, 0, 256, 256);
           MouseInputHandler.field_b = new Sprite(64, 64);
           MouseInputHandler.field_b.e();

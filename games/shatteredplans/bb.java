@@ -7,7 +7,7 @@ final class bb {
     static String field_a;
     static int field_b;
 
-    final static as a(int param0, mg param1) {
+    final static as a(int param0, FleetMove param1) {
         as var2 = null;
         RuntimeException var2_ref = null;
         as stackIn_2_0 = null;
@@ -55,11 +55,11 @@ final class bb {
           if (param0 < 18) {
             bb.a(false, true, (byte) -52, -121);
           }
-          js.field_f.b(-16426, param1);
-          js.field_f.a(param4, (byte) 0);
-          js.field_f.c(param5, (byte) -127);
-          js.field_f.c(param3 ? 1 : 0, (byte) -96);
-          js.field_f.b(js.field_f.position - var7_int, (byte) 118);
+          js.field_f.writeLong(-16426, param1);
+          js.field_f.writeString(param4, (byte) 0);
+          js.field_f.writeByte(param5, (byte) -127);
+          js.field_f.writeByte(param3 ? 1 : 0, (byte) -96);
+          js.field_f.patchLengthByte(js.field_f.position - var7_int, (byte) 118);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "bb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -158,7 +158,7 @@ final class bb {
               }
             }
             aq.field_j.field_s = true;
-            if (k.field_i) {
+            if (TurnEventLog.field_i) {
               i.field_g.field_s = false;
               IntrusiveNode.field_c.field_z = nb.field_c;
               if (var8 == 0) {
@@ -265,13 +265,13 @@ final class bb {
               je.a((byte) 62, param3);
             }
             if (0 != aq.field_j.field_rb) {
-              if (!k.field_i) {
-                rf.a(param3, 104);
+              if (!TurnEventLog.field_i) {
+                AllianceExpiredEvent.a(param3, 104);
               } else {
                 oq.a(param3, false);
               }
             }
-            sc.a(-109, true, he.field_p, param3);
+            AggressiveAi.a(-109, true, he.field_p, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

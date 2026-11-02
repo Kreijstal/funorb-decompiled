@@ -18,16 +18,16 @@ final class an {
           return;
         }
         try {
-          vd.field_j.a(0);
-          FrameTimer.field_b.a(0);
-          var1 = eg.field_q.c((byte) -86);
+          vd.field_j.clear(0);
+          FrameTimer.field_b.clear(0);
+          var1 = BattleEvent.field_q.c((byte) -86);
           while (var1 != null) {
-            var1.a(16);
-            var1 = eg.field_q.b((byte) -107);
+            var1.unlinkSecondary(16);
+            var1 = BattleEvent.field_q.b((byte) -107);
           }
           var1Lifetime1 = CipherPacketBuffer.field_m.c((byte) -70);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.a(16);
+            var1Lifetime1.unlinkSecondary(16);
             var1Lifetime1 = CipherPacketBuffer.field_m.b((byte) -107);
           }
           po.field_b = 0;
@@ -95,19 +95,19 @@ final class an {
             var11 = new qk(40 + var6_int * (Player.field_a[var6_int].field_z + 5), 7 + var5.field_i + Player.field_a[var6_int].field_w / 8, Player.field_a[var6_int].field_z, Player.field_a[var6_int].field_w, Integer.toString(var8_int));
             var9_ref = var11;
             var13.a(var9_ref, param0 ^ -68);
-            dupTemp$0 = ne.field_m[var6_int];
+            dupTemp$0 = BattleContribution.field_m[var6_int];
             var11.field_o = dupTemp$0;
             var7_ref_ff.field_o = dupTemp$0;
           }
-          var6 = new b(k.field_d.field_z / 2 + (Player.field_a[0].field_z + 5) * 4 + 40, 6 + var5.field_i, k.field_d.field_z * 2, -2 + k.field_d.field_w, 2, 534312);
+          var6 = new b(TurnEventLog.field_d.field_z / 2 + (Player.field_a[0].field_z + 5) * 4 + 40, 6 + var5.field_i, TurnEventLog.field_d.field_z * 2, -2 + TurnEventLog.field_d.field_w, 2, 534312);
           var13.a(var6, param0 ^ -68);
           var7 = param2.field_r;
           if (var7 < 0) {
             var7 = 0;
           }
-          var8 = new qk(k.field_d.field_z + 4 * (5 + Player.field_a[0].field_z) + 40, var5.field_i + (7 + Player.field_a[0].field_w / 8), 3 * k.field_d.field_z / 2, k.field_d.field_w, Integer.toString(var7));
+          var8 = new qk(TurnEventLog.field_d.field_z + 4 * (5 + Player.field_a[0].field_z) + 40, var5.field_i + (7 + Player.field_a[0].field_w / 8), 3 * TurnEventLog.field_d.field_z / 2, TurnEventLog.field_d.field_w, Integer.toString(var7));
           var13.a(var8, 8);
-          var9 = new ff(40 + 4 * (Player.field_a[0].field_z + 5), 5 + var5.field_i, k.field_d);
+          var9 = new ff(40 + 4 * (Player.field_a[0].field_z + 5), 5 + var5.field_i, TurnEventLog.field_d);
           var13.a(var9, 8);
           var9.field_o = si.field_w;
           var8.field_o = si.field_w;

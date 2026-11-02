@@ -45,7 +45,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final static void a(boolean param0, int param1, ag[] param2) {
+    final static void a(boolean param0, int param1, Orderable[] param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -130,25 +130,25 @@ final class RandomAccessCacheFile {
             ih.field_c = new PacketBuffer(var7_int);
           }
           ih.field_c.position = 0;
-          ih.field_c.a(param2, param6, param5, 22186);
-          ih.field_c.a(var7_int, (byte) -103);
-          ih.field_c.a(var13, param3 ^ 107);
+          ih.field_c.writeBytes(param2, param6, param5, 22186);
+          ih.field_c.padZerosTo(var7_int, (byte) -103);
+          ih.field_c.xteaEncryptAll(var13, param3 ^ 107);
           if (il.field_kb == null ||
             !(il.field_kb.payload.length >= 100)) {
             il.field_kb = new PacketBuffer(100);
           }
           il.field_kb.position = 0;
-          il.field_kb.c(10, (byte) -81);
+          il.field_kb.writeByte(10, (byte) -81);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            il.field_kb.e(11135, var13[var11]);
+            il.field_kb.writeInt(11135, var13[var11]);
             var11++;
           }
-          il.field_kb.d(param6, 255);
-          il.field_kb.a(param4, param0, (byte) -86);
-          param1.a(0, il.field_kb.position, il.field_kb.payload, 22186);
-          param1.a(0, ih.field_c.position, ih.field_c.payload, param3 ^ 22186);
+          il.field_kb.writeShort(param6, 255);
+          il.field_kb.rsaEncrypt(param4, param0, (byte) -86);
+          param1.writeBytes(0, il.field_kb.position, il.field_kb.payload, 22186);
+          param1.writeBytes(0, ih.field_c.position, ih.field_c.payload, param3 ^ 22186);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -243,7 +243,7 @@ final class RandomAccessCacheFile {
         bf.field_c[field_k] = gf.field_a;
         da.field_d[field_k] = gf.field_f;
         oj.field_Cb[field_k] = gf.field_b;
-        vp.field_s[field_k] = gf.field_k;
+        TertiaryLinkNode.field_s[field_k] = gf.field_k;
         field_k = field_k + 1;
     }
 

@@ -172,7 +172,7 @@ abstract class le {
                 }
                 return true;
               }
-              if (wf.field_m == null) {
+              if (AiTask.field_m == null) {
                 var48 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var49 = var48 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var49);
@@ -181,7 +181,7 @@ abstract class le {
                 }
                 return true;
               }
-              var52 = "[" + wf.field_m + "] ";
+              var52 = "[" + AiTask.field_m + "] ";
               var53 = var52 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var53);
               if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
@@ -201,7 +201,7 @@ abstract class le {
               }
               return true;
             }
-            if (wf.field_m == null) {
+            if (AiTask.field_m == null) {
               var55 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var56 = var55 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var56);
@@ -210,7 +210,7 @@ abstract class le {
               }
               return true;
             }
-            var7 = "[" + wf.field_m + "] ";
+            var7 = "[" + AiTask.field_m + "] ";
             var59Lifetime1 = var7 + var18 + ": ";
             var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var59Lifetime1);
             if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {

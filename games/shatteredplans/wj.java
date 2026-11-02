@@ -27,16 +27,16 @@ final class wj extends IntrusiveNode {
           if (param1 >= -68) {
             return false;
           }
-          qa.field_w = as.a(param0, bb.field_b, (byte) 115, pd.field_k);
+          PlacementOrder.field_w = as.a(param0, bb.field_b, (byte) 115, pd.field_k);
           if (1 == je.field_d) {
             jb.field_b = 0;
-            am.field_Gb = nh.field_p;
+            am.field_Gb = PointsVictoryChecker.field_p;
             tc.field_C = td.field_P;
             wl.field_f = as.a(param0, tc.field_C, (byte) -41, am.field_Gb);
             stackIn_26_0 = (null != wl.field_f);
             return stackIn_26_0;
           }
-          if (rf.field_n == 1) {
+          if (AllianceExpiredEvent.field_n == 1) {
             jb.field_b = jb.field_b + 1;
             if (rs.field_Db != null) {
               rs.field_Db.b(pd.field_k, bb.field_b, -498);
@@ -127,7 +127,7 @@ final class wj extends IntrusiveNode {
           }
           var1_intLifetime1 = -5;
           var2Lifetime1 = -80 + 100 * di.field_m / 1000;
-          so.a(0, 0, var2Lifetime1 - var4 + ac.field_s.field_x, ma.field_r);
+          so.a(0, 0, var2Lifetime1 - var4 + DefendTask.field_s.field_x, DefensiveAi.field_r);
           cg.i(0);
           var6 = 256;
           if (512 > di.field_m) {
@@ -137,7 +137,7 @@ final class wj extends IntrusiveNode {
           if (param0 != 128) {
             return;
           }
-          ac.field_s.f(var1_intLifetime1, var2Lifetime1);
+          DefendTask.field_s.f(var1_intLifetime1, var2Lifetime1);
           tg.a(var2Lifetime1, oe.field_c, (byte) 15, var1_intLifetime1);
           stackIn_13_0 = WeightedCacheEntry.field_u;
           stackIn_13_1 = 0;
@@ -162,7 +162,7 @@ final class wj extends IntrusiveNode {
               gf.b(var9_ref_nd.field_e + var1_intLifetime1 << 4, var9_ref_nd.field_j + var2Lifetime1 << 4, var9_ref_nd.field_f, var9_ref_nd.field_a, fe.field_u);
             }
           }
-          var7_ref = (sb) (rp.field_K.d(0));
+          var7_ref = (sb) (rp.field_K.startForward(0));
           while (var7_ref != null) {
             var2Lifetime2 = (int)var7_ref.field_n;
             var1_intLifetime2 = (int)var7_ref.field_l;
@@ -176,7 +176,7 @@ final class wj extends IntrusiveNode {
               var2Lifetime2 = (int)var7_ref.field_i[var9];
             }
             gf.b((int)var7_ref.field_l << 4, (int)var7_ref.field_n << 4, 128, 100, fe.field_u);
-            var7_ref = (sb) (rp.field_K.a((byte) -71));
+            var7_ref = (sb) (rp.field_K.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,18 +206,18 @@ final class wj extends IntrusiveNode {
           var5.h(param1, param0 - 65);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.c(1, (byte) -59);
-          var5.c(param2.field_j, (byte) -104);
-          var5.c(param2.field_l, (byte) -75);
+          var5.writeByte(1, (byte) -59);
+          var5.writeByte(param2.field_j, (byte) -104);
+          var5.writeByte(param2.field_l, (byte) -75);
           if (param0 != 320) {
             field_n = (String) null;
           }
-          var5.e(11135, param2.field_i);
-          var5.e(11135, param2.field_n);
-          var5.e(param0 ^ 10815, param2.field_m);
-          var5.e(param0 + 10815, param2.field_h);
-          var5.a(var4, param0 - 446);
-          var5.b(-var4 + var5.position, (byte) 127);
+          var5.writeInt(11135, param2.field_i);
+          var5.writeInt(11135, param2.field_n);
+          var5.writeInt(param0 ^ 10815, param2.field_m);
+          var5.writeInt(param0 + 10815, param2.field_h);
+          var5.writeChecksum(var4, param0 - 446);
+          var5.patchLengthByte(-var4 + var5.position, (byte) 127);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "wj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

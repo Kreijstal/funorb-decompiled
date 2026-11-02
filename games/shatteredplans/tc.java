@@ -35,7 +35,7 @@ final class tc extends qs {
         w var3 = (w) (var2.a(2));
         while (var3 != null) {
           if (var3.a((byte) 92)) {
-            var3.b((byte) -80);
+            var3.unlink((byte) -80);
           }
           var3 = (w) (var2.a((byte) 125));
         }
@@ -62,7 +62,7 @@ final class tc extends qs {
     }
 
     final static void f(byte param0) {
-        if (!hg.field_r &&
+        if (!IsolationistAi.field_r &&
           ur.field_zb == null) {
           ur.field_zb = vs.a((byte) 88, 4);
         }
@@ -139,7 +139,7 @@ final class tc extends qs {
             throw new IllegalArgumentException();
           }
           var3 = (w) (param1);
-          this.field_H.a(var3, 0);
+          this.field_H.addFirst(var3, 0);
           var3.field_E = param0 ? true : false;
           var3.a((byte) 126, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
@@ -154,7 +154,7 @@ final class tc extends qs {
         w var3 = (w) (var2.a(2));
         while (var3 != null) {
           if (var3.k(0)) {
-            var3.b((byte) -101);
+            var3.unlink((byte) -101);
           }
           var3 = (w) (var2.a((byte) 47));
         }
@@ -505,34 +505,34 @@ final class tc extends qs {
     }
 
     final static void j(int param0) {
-        el.field_c = gf.field_k;
+        TertiaryNodeList.field_c = gf.field_k;
         kh.field_Mb = gf.field_b;
         nj.a(438);
-        Archive.field_g.a(0, ia.field_j.field_mb - 42, (byte) 95, ia.field_j.field_K, 0);
+        Archive.field_g.a(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
         nm.field_c.a(cp.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
         int var1 = cr.field_c + 2;
         lp.field_v.a(cp.field_a.field_K, cp.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
         CachedArchiveSource.d(18);
-        vm.field_Ab.a(ia.field_j.field_K, 40, (byte) 41, -40 + ia.field_j.field_mb, 0);
-        sg.field_zb.a(se.field_i.field_K, 30, (byte) 72, 0, 0);
-        qf.field_e.a(se.field_i.field_K, -40 + se.field_i.field_mb - 32, (byte) 48, 30, 0);
-        vn.field_y.a(68, 30, (byte) 64, 5, 5);
-        km.field_e.a(78, 30, (byte) 42, 5, 75);
+        vm.field_Ab.a(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
+        sg.field_zb.a(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);
+        qf.field_e.a(AchievementProgress.field_i.field_K, -40 + AchievementProgress.field_i.field_mb - 32, (byte) 48, 30, 0);
+        BattleSnapshot.field_y.a(68, 30, (byte) 64, 5, 5);
+        GameSession.field_e.a(78, 30, (byte) 42, 5, 75);
         WeightedCacheEntry.field_t.a(48, 30, (byte) 61, 5, 155);
         ta.field_d.a(48, 30, (byte) 39, 5, 205);
         int var2 = !ns.field_pb ? 200 : 250;
         IsaacBackedRandom.field_c.a(363 - var2, 30, (byte) 95, 5, var2 + 5);
-        hq.field_b.a(-5 + se.field_i.field_K - 370, 30, (byte) 53, 5, 370);
+        hq.field_b.a(-5 + AchievementProgress.field_i.field_K - 370, 30, (byte) 53, 5, 370);
         qs.field_y.a(-5 + qf.field_e.field_K - 5, 37, 5, 2, -125, -5 + (qf.field_e.field_mb - 32) - 5, pe.field_K);
         if (param0 < 93) {
           field_C = -10;
         }
-        int var3 = (2 + se.field_i.field_K) / 2;
-        gb.field_m.a(-2 + var3, 40, (byte) 114, -40 + se.field_i.field_mb, 0);
+        int var3 = (2 + AchievementProgress.field_i.field_K) / 2;
+        gb.field_m.a(-2 + var3, 40, (byte) 114, -40 + AchievementProgress.field_i.field_mb, 0);
         if (!ns.field_pb) {
           var3 = 0;
         }
-        rq.field_b.a(se.field_i.field_K - var3, 40, (byte) 85, -40 + se.field_i.field_mb, var3);
+        rq.field_b.a(AchievementProgress.field_i.field_K - var3, 40, (byte) 85, -40 + AchievementProgress.field_i.field_mb, var3);
     }
 
     static {

@@ -6,7 +6,7 @@ final class td extends kg {
     private int field_F;
     static gq field_O;
     int field_M;
-    static vr field_K;
+    static GameRules field_K;
     private hn field_J;
     static int field_G;
     static boolean field_L;
@@ -126,7 +126,7 @@ final class td extends kg {
 
     final int g(byte param0) {
         if (param0 != 93) {
-          field_K = (vr) null;
+          field_K = (GameRules) null;
           return this.field_J.a((byte) 56);
         }
         return this.field_J.a((byte) 56);

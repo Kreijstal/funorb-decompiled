@@ -62,7 +62,7 @@ final class bg {
             field_c = (int[]) null;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_6_0 = ma.a(var3, 2);
+          stackIn_6_0 = DefensiveAi.a(var3, 2);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,10 +86,10 @@ final class bg {
         GameState.field_F.e();
         gf.f(0, 0, GameState.field_F.field_z, 10790052);
         gf.f(0, 1, GameState.field_F.field_z, 16777215);
-        GameState.field_F.field_B[0] = ui.a(0, GameState.field_F.field_B[0], -90, 185);
-        GameState.field_F.field_B[1] = ui.a(0, GameState.field_F.field_B[1], -94, 220);
-        GameState.field_F.field_B[var2] = ui.a(0, GameState.field_F.field_B[var2], -118, 185);
-        GameState.field_F.field_B[1 + var2] = ui.a(0, GameState.field_F.field_B[var2 + 1], -96, 220);
+        GameState.field_F.field_B[0] = SolVictoryChecker.a(0, GameState.field_F.field_B[0], -90, 185);
+        GameState.field_F.field_B[1] = SolVictoryChecker.a(0, GameState.field_F.field_B[1], -94, 220);
+        GameState.field_F.field_B[var2] = SolVictoryChecker.a(0, GameState.field_F.field_B[var2], -118, 185);
+        GameState.field_F.field_B[1 + var2] = SolVictoryChecker.a(0, GameState.field_F.field_B[var2 + 1], -96, 220);
         IntrusiveDeque.field_d.e();
         gf.f(0, 0, IntrusiveDeque.field_d.field_z, 10790052);
         gf.f(0, 1, IntrusiveDeque.field_d.field_z, 16777215);

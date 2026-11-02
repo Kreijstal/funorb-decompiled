@@ -170,7 +170,7 @@ class kg extends UiWidget {
 
     final static void f(byte param0) {
         if (null != cb.field_h) {
-          cb.field_h.a(0);
+          cb.field_h.clear(0);
         }
         if (param0 > -122) {
           field_C = (String) null;
@@ -199,11 +199,11 @@ class kg extends UiWidget {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_o != 0) {
-            if (rf.field_n == this.field_o) {
+            if (AllianceExpiredEvent.field_n == this.field_o) {
               return;
             }
             if (this.a(pd.field_k, 72, bb.field_b, param1, param0) &&
-              rf.field_n == 0) {
+              AllianceExpiredEvent.field_n == 0) {
               this.a(this.field_o, pd.field_k - param0, -param1 + bb.field_b, (byte) -109);
             }
             this.a(pd.field_k, param1, param0, bb.field_b, -600269855, param2);

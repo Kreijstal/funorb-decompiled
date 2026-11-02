@@ -200,15 +200,15 @@ final class BufferedCacheFile {
           if (cb.field_h == null) {
             return;
           }
-          var1 = (hd) (cb.field_h.d(0));
+          var1 = (hd) (cb.field_h.startForward(0));
           if (var1 != null) {
             fieldTemp$0 = var1.field_h + 1;
             var1.field_h = var1.field_h + 1;
             if (fieldTemp$0 == 300) {
               RandomAccessCacheFile.field_e = RandomAccessCacheFile.field_e + (float)var1.field_i.field_w;
-              var1.b((byte) -63);
+              var1.unlink((byte) -63);
             }
-            var1 = (hd) (cb.field_h.a((byte) -71));
+            var1 = (hd) (cb.field_h.nextForward((byte) -71));
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var1))) {
@@ -220,7 +220,7 @@ final class BufferedCacheFile {
               if (stackIn_20_0 > stackIn_20_1) {
                 var1.field_h = 75;
               }
-              var1 = (hd) (cb.field_h.a((byte) -71));
+              var1 = (hd) (cb.field_h.nextForward((byte) -71));
               continue;
             }
             break;
@@ -457,11 +457,11 @@ final class BufferedCacheFile {
           if (bj.field_K == null) {
             return;
           }
-          hs.a(bj.field_K, (byte) 9);
+          StandardMapGenerator.a(bj.field_K, (byte) 9);
           bj.field_K.a(fa.field_W, -17115);
           bj.field_K = null;
-          if (null != bh.field_p) {
-            bh.field_p.c(-119);
+          if (null != BoundsRect.field_p) {
+            BoundsRect.field_p.c(-119);
           }
           if (param0 != 0) {
             field_j = (String) null;
@@ -541,12 +541,12 @@ final class BufferedCacheFile {
           if (param0 != -523) {
             return;
           }
-          var2 = var1.j(-78);
-          var3 = var1.j(-127);
+          var2 = var1.readUnsignedByte(-78);
+          var3 = var1.readUnsignedByte(-127);
           if (var2 != 0) {
             if (1 == var2) {
-              var4_int = var1.d((byte) -122);
-              var5_ref_aq = (aq) (GameState.field_E.d(0));
+              var4_int = var1.readSignedSmart((byte) -122);
+              var5_ref_aq = (aq) (GameState.field_E.startForward(0));
               while (true) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var5_ref_aq != null) {
@@ -555,13 +555,13 @@ final class BufferedCacheFile {
                   decompiledFrameRemainder0 = (var8 == 0);
                   if ((decompiledFrameRemainder0) && (stackIn_21_0 != stackIn_21_1 ||
                     ~var5_ref_aq.field_l != ~var4_int)) {
-                    var5_ref_aq = (aq) (GameState.field_E.a((byte) -71));
+                    var5_ref_aq = (aq) (GameState.field_E.nextForward((byte) -71));
                     continue;
                   }
                 }
                 if (decompiledFrameRemainder0) {
                   if (null != var5_ref_aq) {
-                    var5_ref_aq.b((byte) -119);
+                    var5_ref_aq.unlink((byte) -119);
                     if (var8 == 0) {
                       return;
                     }
@@ -580,7 +580,7 @@ final class BufferedCacheFile {
               return;
             }
           }
-          var4 = (rk) (na.field_J.d(0));
+          var4 = (rk) (na.field_J.startForward(0));
           if (var4 == null) {
             q.g(-108);
             return;
@@ -592,13 +592,13 @@ final class BufferedCacheFile {
           }
           var7 = 0;
           while (var5 > var7) {
-            var6[var7 >> 2] = var6[var7 >> 2] + (var1.j(-106) << (we.a(3, var7) << 8));
+            var6[var7 >> 2] = var6[var7 >> 2] + (var1.readUnsignedByte(-106) << (we.a(3, var7) << 8));
             var7++;
             if (var8 != 0) {
               return;
             }
           }
-          var4.b((byte) -86);
+          var4.unlink((byte) -86);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -737,7 +737,7 @@ final class BufferedCacheFile {
         int var13Lifetime1;
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5_int = rj.c(param0 ^ -85, (param4 - param3) * 3);
+          var5_int = RecklessAi.c(param0 ^ -85, (param4 - param3) * 3);
           var6 = 3 * param3;
           ah.g((byte) 111);
           var7 = -10 + var5_int;
@@ -889,7 +889,7 @@ final class BufferedCacheFile {
         int var13Lifetime1;
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5_int = rj.c(param0 ^ -85, (param4 - param3) * 3);
+          var5_int = RecklessAi.c(param0 ^ -85, (param4 - param3) * 3);
           var6 = 3 * param3;
           ah.g((byte) 111);
           var7 = -10 + var5_int;

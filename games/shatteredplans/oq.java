@@ -10,7 +10,7 @@ final class oq {
     String field_d;
     static qr[] field_b;
     static String[] field_i;
-    static km field_a;
+    static GameSession field_a;
     static BufferedCacheFile field_g;
 
     final static int a(byte param0, int param1, int param2) {
@@ -67,8 +67,8 @@ final class oq {
           return;
         }
         var2.h(param0, 255);
-        var2.c(1, (byte) -114);
-        var2.c(3, (byte) -73);
+        var2.writeByte(1, (byte) -114);
+        var2.writeByte(3, (byte) -73);
     }
 
     public static void a(int param0) {
@@ -225,18 +225,18 @@ final class oq {
         RuntimeException var2_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var4 = (ByteArrayNode) (tr.field_vb.d(0));
+          var4 = (ByteArrayNode) (MapView.field_vb.startForward(0));
           while (var4 != null) {
             dn.a(param0, var4, (byte) 13);
-            var4 = (ByteArrayNode) (tr.field_vb.a((byte) -71));
+            var4 = (ByteArrayNode) (MapView.field_vb.nextForward((byte) -71));
           }
-          var2 = SectorCacheStore.field_d.d(0);
+          var2 = SectorCacheStore.field_d.startForward(0);
           if (param1 != 37) {
             field_i = (String[]) null;
           }
           while (var2 != null) {
             cp.a(param0, 1);
-            var2 = SectorCacheStore.field_d.a((byte) -71);
+            var2 = SectorCacheStore.field_d.nextForward((byte) -71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

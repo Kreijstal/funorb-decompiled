@@ -205,20 +205,20 @@ final class sr {
         de var2Lifetime1;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var2 = (de) (aj.field_a.d(0));
+          var2 = (de) (aj.field_a.startForward(0));
           while (var2 != null) {
             if (param1.equalsIgnoreCase(var2.field_l)) {
               return true;
             }
-            var2 = (de) (aj.field_a.a((byte) -71));
+            var2 = (de) (aj.field_a.nextForward((byte) -71));
           }
-          var2Lifetime1 = (de) (qi.field_h.d(param0));
+          var2Lifetime1 = (de) (SolarFlareEvent.field_h.startForward(param0));
           while (true) {
             if (var2Lifetime1 == null) {
               return false;
             }
             if (!param1.equalsIgnoreCase(var2Lifetime1.field_l)) {
-              var2Lifetime1 = (de) (qi.field_h.a((byte) -71));
+              var2Lifetime1 = (de) (SolarFlareEvent.field_h.nextForward((byte) -71));
               continue;
             }
             break;

@@ -76,12 +76,12 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static void a(Archive param0, byte param1, boolean param2, Archive param3) {
         try {
           int var4_int = -57 / ((param1 - 22) / 37);
-          ba.a(n.field_o, dm.field_h, 124, fg.field_b, se.field_m, WeightedCacheEntry.field_o, l.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, gn.field_w);
-          bh.field_m = ae.a(93, "lobby", param3, "chatfilter");
+          ba.a(n.field_o, dm.field_h, 124, fg.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, gn.field_w);
+          BoundsRect.field_m = ae.a(93, "lobby", param3, "chatfilter");
           jf.field_d[1] = gm.field_o;
           jf.field_d[0] = bf.field_b;
           jf.field_d[2] = ue.field_d;
-          ne.a(param0, (byte) -64, ImageProducerRasterBuffer.field_p);
+          BattleContribution.a(param0, (byte) -64, ImageProducerRasterBuffer.field_p);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ak.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -93,7 +93,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           CharSequence var2 = (CharSequence) null;
           DiskArchiveRequest.a(22, (CharSequence) null, '\001');
           if (di.field_m == 0) {
-            sg.a(true, false, 50, vr.field_d, NetworkArchiveRequest.field_C);
+            sg.a(true, false, 50, GameRules.field_d, NetworkArchiveRequest.field_C);
           }
           fieldTemp$0 = di.field_m + 1;
           di.field_m = di.field_m + 1;
@@ -104,7 +104,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           return;
         }
         if (di.field_m == 0) {
-          sg.a(true, false, 50, vr.field_d, NetworkArchiveRequest.field_C);
+          sg.a(true, false, 50, GameRules.field_d, NetworkArchiveRequest.field_C);
         }
         int fieldTemp$1 = di.field_m + 1;
         di.field_m = di.field_m + 1;
@@ -128,8 +128,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static boolean a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         if (WeightedLruCache.a(-126)) {
           o.a(param3, param6, false, param2);
-          if (null != hp.field_m &&
-            hp.field_m.a(param6, param1, -16, param5, param3)) {
+          if (null != DerelictVictoryChecker.field_m &&
+            DerelictVictoryChecker.field_m.a(param6, param1, -16, param5, param3)) {
             ai.a(3);
             param3 = false;
           }
@@ -165,8 +165,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static void i(int param0) {
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (qa.field_t > 0) {
-          qa.field_t = qa.field_t - 1;
+        if (PlacementOrder.field_t > 0) {
+          PlacementOrder.field_t = PlacementOrder.field_t - 1;
         } else {
           if (Archive.field_b > 0) {
             Archive.field_b = Archive.field_b - 1;
@@ -179,7 +179,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         if (param0 != -751) {
           field_z = (Sprite) null;
         }
-        if (qa.field_t > 0) {
+        if (PlacementOrder.field_t > 0) {
           nj.a(438);
         }
         if (Archive.field_b > 0) {

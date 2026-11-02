@@ -26,7 +26,7 @@ final class lg extends IOException {
             return (nk[]) (stackIn_2_0);
           }
           if (param0 == -20435) {
-            stackIn_7_0 = jj.c(true);
+            stackIn_7_0 = ConquestVictoryChecker.c(true);
             return stackIn_7_0;
           }
           stackIn_5_0 = (nk[]) null;

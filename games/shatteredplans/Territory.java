@@ -14,30 +14,30 @@ class Territory extends DualLinkNode {
     static String field_t;
     static String field_y;
 
-    void a(int param0, Star param1) {
+    void addStar(int param0, Star param1) {
         if (param0 != -21771) {
           return;
         }
         try {
-          this.field_s.a((byte) -113, param1);
+          this.field_s.addLast((byte) -113, param1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    Star h(int param0) {
+    Star nextStar(int param0) {
         if (param0 == -23410) {
-          return (Star) (this.field_s.a((byte) -71));
+          return (Star) (this.field_s.nextForward((byte) -71));
         }
-        this.e(126);
-        return (Star) (this.field_s.a((byte) -71));
+        this.isEmpty(126);
+        return (Star) (this.field_s.nextForward((byte) -71));
     }
 
-    Star i(int param0) {
+    Star removeFirstStar(int param0) {
         if (param0 > -16) {
           return (Star) null;
         }
-        return (Star) (this.field_s.h(43));
+        return (Star) (this.field_s.pollFirst(43));
     }
 
     public static void f(int param0) {
@@ -48,36 +48,36 @@ class Territory extends DualLinkNode {
         field_t = null;
     }
 
-    boolean e(int param0) {
+    boolean isEmpty(int param0) {
         if (param0 != 27650) {
           this.field_u = (int[]) null;
-          return this.field_s.g(27);
+          return this.field_s.isEmpty(27);
         }
-        return this.field_s.g(27);
+        return this.field_s.isEmpty(27);
     }
 
-    void a(IntrusiveDeque param0, int param1) {
+    void setStars(IntrusiveDeque param0, int param1) {
         try {
           this.field_s = param0;
           if (param1 != -9332) {
-            this.i(-14);
+            this.removeFirstStar(-14);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "sd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    int g(int param0) {
+    int starCount(int param0) {
         int var2 = -77 / ((param0 - 5) / 51);
-        return this.field_s.e(0);
+        return this.field_s.size(0);
     }
 
-    Star j(int param0) {
+    Star firstStar(int param0) {
         if (param0 == 18229) {
-          return (Star) (this.field_s.d(0));
+          return (Star) (this.field_s.startForward(0));
         }
-        this.g(-119);
-        return (Star) (this.field_s.d(0));
+        this.starCount(-119);
+        return (Star) (this.field_s.startForward(0));
     }
 
     Territory(Player param0, Star param1) {

@@ -35,16 +35,16 @@ final class hl extends kg {
             hl.a((byte) -92);
           }
           var7 = new IntrusiveDeque();
-          var3 = (nc) (param0.h(72));
+          var3 = (nc) (param0.pollFirst(72));
           var4 = var3;
-          var7.a((byte) -113, var4);
-          while (!param0.g(-87)) {
+          var7.addLast((byte) -113, var4);
+          while (!param0.isEmpty(-87)) {
             boolean decompiledFrameRemainder0 = true;
             if (null == var4.field_k) {
-              var5 = (nc) (param0.d(0));
+              var5 = (nc) (param0.startForward(0));
               while (var5 != null) {
                 if (var5.field_r != null) {
-                  var5 = (nc) (param0.a((byte) -71));
+                  var5 = (nc) (param0.nextForward((byte) -71));
                   continue;
                 }
                 break;
@@ -71,7 +71,7 @@ final class hl extends kg {
               var4 = var4.field_k;
             }
             if (var3 != var4) {
-              var7.a((byte) -113, var4);
+              var7.addLast((byte) -113, var4);
               continue;
             }
             break;

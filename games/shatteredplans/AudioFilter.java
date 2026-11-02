@@ -25,17 +25,17 @@ final class AudioFilter {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.j(-61);
+        var3 = param0.readUnsignedByte(-61);
         this.field_d[0] = var3 >> 4;
         this.field_d[1] = var3 & 15;
         if (var3 != 0) {
-          this.field_b[0] = param0.f(-20976);
-          this.field_b[1] = param0.f(-20976);
-          var4 = param0.j(-82);
+          this.field_b[0] = param0.readUnsignedShort(-20976);
+          this.field_b[1] = param0.readUnsignedShort(-20976);
+          var4 = param0.readUnsignedByte(-82);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_d[var5]; var6++) {
-              this.field_a[var5][0][var6] = param0.f(-20976);
-              this.field_c[var5][0][var6] = param0.f(-20976);
+              this.field_a[var5][0][var6] = param0.readUnsignedShort(-20976);
+              this.field_c[var5][0][var6] = param0.readUnsignedShort(-20976);
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
@@ -46,8 +46,8 @@ final class AudioFilter {
                 this.field_a[var5Lifetime1][1][var7] = this.field_a[var5Lifetime1][0][var7];
                 this.field_c[var5Lifetime1][1][var7] = this.field_c[var5Lifetime1][0][var7];
               } else {
-                this.field_a[var5Lifetime1][1][var7] = param0.f(-20976);
-                this.field_c[var5Lifetime1][1][var7] = param0.f(-20976);
+                this.field_a[var5Lifetime1][1][var7] = param0.readUnsignedShort(-20976);
+                this.field_c[var5Lifetime1][1][var7] = param0.readUnsignedShort(-20976);
               }
               var7++;
             }

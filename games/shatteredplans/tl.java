@@ -76,7 +76,7 @@ abstract class tl extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = sr.a(bh.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), vj.i(-100), of.a((byte) 42), aq.a(11));
+            var5_intLifetime1 = sr.a(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), vj.i(-100), of.a((byte) 42), aq.a(11));
             if (var5_intLifetime1 != -1) {
               va.a(ae.field_e, (byte) -113, var5_intLifetime1, nl.field_c);
               ae.field_e = null;
@@ -92,13 +92,13 @@ abstract class tl extends GameApplet {
             if (param0) {
               md.field_B = false;
             } else {
-              var5_intLifetime2 = ui.a(this.field_B, (byte) -121, false, vj.i(-116), this.field_C, bh.d(-121));
+              var5_intLifetime2 = SolVictoryChecker.a(this.field_B, (byte) -121, false, vj.i(-116), this.field_C, BoundsRect.d(-121));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   bf.a((byte) -127, var5_intLifetime2, nl.field_c);
                   nl.field_c = null;
                 } else {
-                  co.field_o = pd.field_l;
+                  GarrisonTask.field_o = pd.field_l;
                   rq.c(98);
                   eh.field_P = false;
                   gm.field_i = 10;
@@ -111,33 +111,33 @@ abstract class tl extends GameApplet {
               gm.field_i = 10;
               eh.field_P = true;
             } else {
-              oj.a(0, kq.f((byte) 127));
+              oj.a(0, GameScreen.f((byte) 127));
             }
           }
           if (5 == var4) {
-            da.a(param1 + 0, kq.f((byte) 126));
+            da.a(param1 + 0, GameScreen.f((byte) 126));
           }
           if (var4 == 6 &&
             or.field_a) {
             gm.field_i = 10;
           }
           if (var4 == 7) {
-            id.a(kq.f((byte) 127), (byte) -119);
+            id.a(GameScreen.f((byte) 127), (byte) -119);
           }
           if (8 == var4) {
-            oj.a(param1 ^ 1, kq.f((byte) 126));
+            oj.a(param1 ^ 1, GameScreen.f((byte) 126));
           }
           if (9 == var4) {
-            de.a(115, kq.f((byte) 125));
+            de.a(115, GameScreen.f((byte) 125));
           }
           if (10 == var4) {
             js.field_f.h(17, 255);
           }
           if (var4 == 11) {
-            hr.a(kq.f((byte) 126), (byte) -105);
+            hr.a(GameScreen.f((byte) 126), (byte) -105);
           }
           if (var4 == 12) {
-            CipherPacketBuffer.a(ui.c(false), kq.f((byte) 126), (byte) 88);
+            CipherPacketBuffer.a(SolVictoryChecker.c(false), GameScreen.f((byte) 126), (byte) 88);
           }
           if (var4 == 13) {
             try {
@@ -150,7 +150,7 @@ abstract class tl extends GameApplet {
                   var9 = (String) null;
                   aa.a((String) null, true);
                 } else {
-                  var7 = qi.a(var12.payload, var12.position, 0, param1 ^ -128);
+                  var7 = SolarFlareEvent.a(var12.payload, var12.position, 0, param1 ^ -128);
                   aa.a(var7, true);
                 }
                 va.field_g = null;
@@ -196,7 +196,7 @@ abstract class tl extends GameApplet {
         lm.a((byte) 100);
         aj.field_b = cg.e(true);
         re.a(tm.field_i, false);
-        jj.field_k = param2;
+        ConquestVictoryChecker.field_k = param2;
         ai.field_a = param5;
         ArchiveRequest.field_p = param1;
         tp.field_j = param6;
@@ -257,7 +257,7 @@ abstract class tl extends GameApplet {
                                 return;
                               }
                               if (var2 == 18) {
-                                sh.a(-1);
+                                SolMapReader.a(-1);
                                 return;
                               }
                               GameKeyHandler.a(-29901, (Throwable) null, "MGS1: " + w.a(16738));
@@ -347,20 +347,20 @@ abstract class tl extends GameApplet {
     }
 
     private final static void f(byte param0) {
-        uq var1 = (uq) (IsaacRandom.field_d.d(0));
+        uq var1 = (uq) (IsaacRandom.field_d.startForward(0));
         if (var1 == null) {
           q.g(-110);
           return;
         }
         CipherPacketBuffer var2 = sa.field_a;
-        var2.a(16711680);
-        var2.a(16711680);
+        var2.readInt(16711680);
+        var2.readInt(16711680);
         if (param0 != 24) {
           tl.k(-44);
         }
-        var2.a(16711680);
-        var2.a(param0 + 16711656);
-        var1.b((byte) -104);
+        var2.readInt(16711680);
+        var2.readInt(param0 + 16711656);
+        var1.unlink((byte) -104);
     }
 
     final void a(boolean param0, int param1) {
@@ -377,13 +377,13 @@ abstract class tl extends GameApplet {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (bh.field_p != null) {
+        if (BoundsRect.field_p != null) {
           if (null == bj.field_K) {
-            var6 = nr.a(76);
+            var6 = StarAbandonedEvent.a(76);
             var4 = var6.getSize();
-            bh.field_p.a(var4.width, var4.height, -28);
+            BoundsRect.field_p.a(var4.width, var4.height, -28);
           }
-          bh.field_p.a(true);
+          BoundsRect.field_p.a(true);
         }
         we.a((byte) -59);
         ae.b((byte) 62);
@@ -426,7 +426,7 @@ abstract class tl extends GameApplet {
         }
         if (-1 != qj.field_g &&
           qj.field_g != 0) {
-          if (ma.field_p >= 10) {
+          if (DefensiveAi.field_p >= 10) {
             if (gm.field_i >= 10) {
               IntrusiveNode.b(-11);
               if (3 != qj.field_g) {
@@ -437,7 +437,7 @@ abstract class tl extends GameApplet {
                     bf.a((byte) -125, 256, ArchiveNetworkClient.field_r);
                   } else {
                     if (qj.field_g != 5) {
-                      bf.a((byte) -127, 256, nr.field_n);
+                      bf.a((byte) -127, 256, StarAbandonedEvent.field_n);
                     } else {
                       bf.a((byte) -126, 5, ce.field_w);
                     }
@@ -483,49 +483,49 @@ abstract class tl extends GameApplet {
           !ArchiveRequest.f(-11)) {
           oi.field_f = false;
         }
-        if (ma.field_p == 0 &&
+        if (DefensiveAi.field_p == 0 &&
           mp.a(true)) {
-          ma.field_p = 1;
+          DefensiveAi.field_p = 1;
         }
         if (param1 <= 1) {
           this.i(-82);
         }
-        if (1 == ma.field_p) {
+        if (1 == DefensiveAi.field_p) {
           if (ai.field_e != 0) {
-            es.field_j = SoundCache.a(ai.field_a, 124);
+            StarAnnotation.field_j = SoundCache.a(ai.field_a, 124);
           }
           rq.field_g = rl.a(-1, true, 1, ArchiveRequest.field_p, false);
           tq.field_f = rl.a(-1, true, 1, tp.field_j, false);
-          l.field_g = rl.a(-1, true, 1, jj.field_k, false);
-          ma.field_p = 2;
-          kl.field_s = rq.field_g;
+          GalaxyMap.field_g = rl.a(-1, true, 1, ConquestVictoryChecker.field_k, false);
+          DefensiveAi.field_p = 2;
+          AttackTask.field_s = rq.field_g;
           rl.field_f = tq.field_f;
         }
-        if (ma.field_p == 2) {
-          if (null != es.field_j &&
-            es.field_j.b((byte) 122)) {
-            if (es.field_j.b("", (byte) -116)) {
-              if (es.field_j.a("", 51)) {
-                vi.a(es.field_j, true);
-                es.field_j = null;
+        if (DefensiveAi.field_p == 2) {
+          if (null != StarAnnotation.field_j &&
+            StarAnnotation.field_j.b((byte) 122)) {
+            if (StarAnnotation.field_j.b("", (byte) -116)) {
+              if (StarAnnotation.field_j.a("", 51)) {
+                TutorialMapGenerator.a(StarAnnotation.field_j, true);
+                StarAnnotation.field_j = null;
                 u.c(126);
               }
             } else {
-              es.field_j = null;
+              StarAnnotation.field_j = null;
             }
           }
-          if (null == es.field_j) {
-            ma.field_p = 3;
+          if (null == StarAnnotation.field_j) {
+            DefensiveAi.field_p = 3;
           }
         }
-        if (ma.field_p == 3 &&
-          ig.a(rq.field_g, -7526, tq.field_f, l.field_g) &&
-          uq.a(l.field_g, 0)) {
+        if (DefensiveAi.field_p == 3 &&
+          ig.a(rq.field_g, -7526, tq.field_f, GalaxyMap.field_g) &&
+          uq.a(GalaxyMap.field_g, 0)) {
           qr.f(-98);
-          kq.c(28164);
-          pc.field_r = tb.field_c;
+          GameScreen.c(28164);
+          DerelictMapGenerator.field_r = tb.field_c;
           or.field_a = false;
-          DiskCacheWorker.a(624, rq.field_g, DualLinkDeque.field_b, l.field_g, tq.field_f);
+          DiskCacheWorker.a(624, rq.field_g, DualLinkDeque.field_b, GalaxyMap.field_g, tq.field_f);
           if (go.field_D ||
             null != hr.field_b) {
             stackIn_106_0 = hr.field_b;
@@ -541,37 +541,37 @@ abstract class tl extends GameApplet {
             ns.field_rb = ae.c(3);
             md.field_M = ji.a(-123);
           }
-          DiskCacheWorker.a(ns.field_rb, md.field_M, 1000, l.field_g);
+          DiskCacheWorker.a(ns.field_rb, md.field_M, 1000, GalaxyMap.field_g);
           tq.field_f = null;
           rq.field_g = null;
-          l.field_g = null;
+          GalaxyMap.field_g = null;
           we.a((java.applet.Applet) (this), 4289);
           u.c(124);
-          ma.field_p = 10;
+          DefensiveAi.field_p = 10;
         }
-        if (ma.field_p == 10) {
+        if (DefensiveAi.field_p == 10) {
           if (ai.field_e != 0) {
-            ka.field_e = SoundCache.a(lo.field_B, 101);
+            StandardAi.field_e = SoundCache.a(lo.field_B, 101);
           }
-          ma.field_p = 11;
+          DefensiveAi.field_p = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (ma.field_p == 11) {
-          if (ka.field_e != null && (!ka.field_e.b((byte) -88) ||
-            !ka.field_e.a(-1))) {
-            nj.a(0.0f, 2, nc.a(i.field_a, ka.field_e, -80, ns.field_xb));
+        if (DefensiveAi.field_p == 11) {
+          if (StandardAi.field_e != null && (!StandardAi.field_e.b((byte) -88) ||
+            !StandardAi.field_e.a(-1))) {
+            nj.a(0.0f, 2, nc.a(i.field_a, StandardAi.field_e, -80, ns.field_xb));
             decompiledFrameRemainder0 = false;
           }
           else {
             um.field_n = true;
-            ma.field_p = 12;
+            DefensiveAi.field_p = 12;
           }
         }
-        if (ma.field_p == 12 &&
+        if (DefensiveAi.field_p == 12 &&
           !um.field_n) {
-          ma.field_p = 13;
+          DefensiveAi.field_p = 13;
         }
-        if (ma.field_p == 13) {
+        if (DefensiveAi.field_p == 13) {
           var3Lifetime2 = 1;
           if (null != hd.field_n) {
             stackIn_141_0 = (!hd.field_n.b(-1)) ? 0 : 1;
@@ -579,12 +579,12 @@ abstract class tl extends GameApplet {
             nj.a(hd.field_n.field_h, 2, hd.field_n.field_c);
           }
           if (var3Lifetime2 != 0) {
-            ma.field_p = 20;
+            DefensiveAi.field_p = 20;
           }
         }
         if (!param0 &&
           IntrusiveDeque.field_c) {
-          hs.a(tm.field_i, (byte) 125);
+          StandardMapGenerator.a(tm.field_i, (byte) 125);
           this.f(0);
           re.a(tm.field_i, false);
         }
@@ -604,8 +604,8 @@ abstract class tl extends GameApplet {
         if (param0) {
           return;
         }
-        String var2 = pc.a(param0);
-        hp.a((byte) 112, kq.f((byte) 126), var2);
+        String var2 = DerelictMapGenerator.a(param0);
+        DerelictVictoryChecker.a((byte) 112, GameScreen.f((byte) 126), var2);
     }
 
     private final void k(byte param0) {
@@ -627,7 +627,7 @@ abstract class tl extends GameApplet {
         if (param0 > -32) {
           return;
         }
-        if (wb.b(94)) {
+        if (QuaternaryNodeList.b(94)) {
           stackIn_12_1 = false;
           stackIn_12_2 = 1;
           if (null == bj.field_K) {
@@ -639,7 +639,7 @@ abstract class tl extends GameApplet {
           }
           discarded$1 = this.a(stackIn_12_1, stackIn_12_2, stackIn_13_3);
         } else {
-          if (ma.field_p >= 10) {
+          if (DefensiveAi.field_p >= 10) {
             if (or.a(250)) {
               if (gm.field_i == 0) {
                 discarded$2 = this.a(false, 1, false);
@@ -674,7 +674,7 @@ abstract class tl extends GameApplet {
         if (md.field_B) {
           return -1;
         }
-        int var2 = ui.a(this.field_B, (byte) -94, true, vj.i(-125), this.field_C, bh.d(-97));
+        int var2 = SolVictoryChecker.a(this.field_B, (byte) -94, true, vj.i(-125), this.field_C, BoundsRect.d(-97));
         if (var2 == -1) {
           return -1;
         }
@@ -766,12 +766,12 @@ abstract class tl extends GameApplet {
     }
 
     private final void i(int param0) {
-        int var2 = sa.field_a.j(-82);
+        int var2 = sa.field_a.readUnsignedByte(-82);
         int var3 = param0 != ~(var2 & 1) ? 1 : 0;
         int var4 = rr.field_t - 1;
         byte[] var5 = new byte[var4];
         sa.field_a.b(var4, ~param0, 0, var5);
-        ue.a(kq.f((byte) 126), var3 != 0, IterableNodeHashTable.a(var5, 17746), -128);
+        ue.a(GameScreen.f((byte) 126), var3 != 0, IterableNodeHashTable.a(var5, 17746), -128);
     }
 
     private final void j(int param0) {
@@ -792,12 +792,12 @@ abstract class tl extends GameApplet {
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gl[] var6 = null;
+        DisplayModeInfo[] var6 = null;
         RuntimeException var6_ref = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        gl[] var10 = null;
+        DisplayModeInfo[] var10 = null;
         PlatformTask var11 = null;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -806,7 +806,7 @@ abstract class tl extends GameApplet {
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (0 == param2) {
-            var10 = GameState.a(param1, (byte) -57);
+            var10 = GameState.queryDisplayModes(param1, (byte) -57);
             var6 = var10;
             if (var6 == null) {
               stackIn_8_0 = null;

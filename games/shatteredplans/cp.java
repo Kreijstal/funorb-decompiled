@@ -31,7 +31,7 @@ final class cp {
           if (re.field_a < this.field_p) {
             return false;
           }
-          if (es.field_m > 0) {
+          if (StarAnnotation.field_m > 0) {
             return true;
           }
           return false;
@@ -39,7 +39,7 @@ final class cp {
         if (re.field_a < this.field_p) {
           return false;
         }
-        if (es.field_m > 0) {
+        if (StarAnnotation.field_m > 0) {
           return true;
         }
         return false;
@@ -48,8 +48,8 @@ final class cp {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = js.field_f;
         var2.h(param0, 255);
-        var2.c(param1, (byte) -69);
-        var2.c(0, (byte) -119);
+        var2.writeByte(param1, (byte) -69);
+        var2.writeByte(0, (byte) -119);
     }
 
     private final void a(byte param0) {
@@ -140,9 +140,9 @@ final class cp {
         }
     }
 
-    final static boolean a(int param0, int param1, int[] param2, bh param3, int param4) {
+    final static boolean a(int param0, int param1, int[] param2, BoundsRect param3, int param4) {
         RuntimeException var5 = null;
-        bh var6 = null;
+        BoundsRect var6 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -155,8 +155,8 @@ final class cp {
             return false;
           }
           if (param0 != 0) {
-            var6 = (bh) null;
-            cp.a(-93, -33, (int[]) null, (bh) null, 124);
+            var6 = (BoundsRect) null;
+            cp.a(-93, -33, (int[]) null, (BoundsRect) null, 124);
           }
           stackIn_7_0 = aj.a(1, param4, param1, param2);
           return stackIn_7_0;
@@ -196,7 +196,7 @@ final class cp {
         if (bj.field_K != null) {
           return;
         }
-        if (es.field_m <= 0) {
+        if (StarAnnotation.field_m <= 0) {
           this.field_b = false;
         }
         if (this.field_b) {

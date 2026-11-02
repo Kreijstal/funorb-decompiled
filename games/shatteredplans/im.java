@@ -20,7 +20,7 @@ final class im {
           if (WeightedLruCache.a(-128)) {
             param1 = false;
           }
-          kq.a((byte) -57, param1);
+          GameScreen.a((byte) -57, param1);
           ms.b(20975);
           return;
         }
@@ -28,7 +28,7 @@ final class im {
         if (WeightedLruCache.a(-128)) {
           param1 = false;
         }
-        kq.a((byte) -57, param1);
+        GameScreen.a((byte) -57, param1);
         ms.b(20975);
     }
 
@@ -50,7 +50,7 @@ final class im {
           } else {
             stackIn_3_1 = param0.field_x;
           }
-          ((PacketBuffer) (Object) stackIn_2_0).c(stackIn_3_1, (byte) -97);
+          ((PacketBuffer) (Object) stackIn_2_0).writeByte(stackIn_3_1, (byte) -97);
           if (param2 == 9555) {
             return;
           }

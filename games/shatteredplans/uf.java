@@ -13,10 +13,10 @@ final class uf {
         if (param0) {
           return true;
         }
-        if (20 > ma.field_p) {
+        if (20 > DefensiveAi.field_p) {
           return true;
         }
-        if (!wb.b(109)) {
+        if (!QuaternaryNodeList.b(109)) {
           return true;
         }
         if (tf.field_n <= 0) {
@@ -36,8 +36,8 @@ final class uf {
         try {
           var3 = js.field_f;
           var3.h(param1, 255);
-          var3.c(param0.field_k, (byte) -81);
-          var3.c(param0.field_j, (byte) -124);
+          var3.writeByte(param0.field_k, (byte) -81);
+          var3.writeByte(param0.field_j, (byte) -124);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "uf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

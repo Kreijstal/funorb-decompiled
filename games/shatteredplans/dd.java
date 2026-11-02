@@ -184,9 +184,9 @@ final class dd {
           }
           var5 = js.field_f;
           var5.h(param1, 255);
-          var5.c(3, (byte) -92);
-          var5.c(11, (byte) -69);
-          var5.d(param0, 255);
+          var5.writeByte(3, (byte) -92);
+          var5.writeByte(11, (byte) -69);
+          var5.writeShort(param0, 255);
         }
     }
 

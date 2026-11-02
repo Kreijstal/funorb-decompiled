@@ -129,7 +129,7 @@ final class hr {
               } else {
                 oq.field_b[var12].a(var8, var7Lifetime1, (byte) 115, var13, var6_int);
                 tb.field_a[var12].a(var9 - param2, var7Lifetime1, (byte) 118, 0, param2);
-                mr.field_d[var12].a(param0, -param5 + var7Lifetime1 - param5, (byte) 122, param5, var9);
+                DerelictMapReader.field_d[var12].a(param0, -param5 + var7Lifetime1 - param5, (byte) 122, param5, var9);
                 n.field_n[var12].a(var8 - param2 - var10, var7Lifetime1 - param5 - param5, (byte) 52, param5, var10);
               }
             }

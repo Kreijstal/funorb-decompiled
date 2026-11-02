@@ -56,7 +56,7 @@ final class nc extends IntrusiveNode {
             }
           }
           if (param0.field_f != null) {
-            jj.field_o = param0.field_b;
+            ConquestVictoryChecker.field_o = param0.field_b;
             bq.field_e = param0.field_p;
             uo.field_f = param0.field_f;
             tl.field_D = param0.field_n;

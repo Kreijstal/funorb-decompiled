@@ -245,9 +245,9 @@ final class CipherPacketBuffer extends PacketBuffer {
           return;
         }
         try {
-          mr.field_h = param1;
-          SectorCacheStore.field_f.field_M.a(param0);
-          SectorCacheStore.field_f.a(4, mr.field_h);
+          DerelictMapReader.field_h = param1;
+          SectorCacheStore.field_f.field_M.clear(param0);
+          SectorCacheStore.field_f.a(4, DerelictMapReader.field_h);
           dp.field_t = true;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "sl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -52,7 +52,7 @@ class o implements iq, pj {
 
     final static void a(boolean param0, int param1, boolean param2, int param3) {
         pl.a(param0, (byte) -26);
-        tr.a(param3, param0, param2, param1);
+        MapView.a(param3, param0, param2, param1);
     }
 
     public final void a(int param0, int param1, int param2, int param3, UiWidget param4) {
@@ -414,7 +414,7 @@ class o implements iq, pj {
             return stackIn_3_0;
           }
           if (2 != po.field_b) {
-            stackIn_6_0 = ka.field_f;
+            stackIn_6_0 = StandardAi.field_f;
             return stackIn_6_0;
           }
           var8 = hb.a((byte) -90, param2);
@@ -422,17 +422,17 @@ class o implements iq, pj {
             stackIn_9_0 = re.a(us.field_e, 4371, new String[]{param2});
             return stackIn_9_0;
           }
-          vd.field_j.b(var8, -9189);
+          vd.field_j.startForwardFrom(var8, -9189);
           while (true) {
-            var7 = (ve) (vd.field_j.a((byte) -71));
+            var7 = (ve) (vd.field_j.nextForward((byte) -71));
             if (var7 != null) {
               var7.field_zb = var7.field_zb - 1;
               continue;
             }
             break;
           }
-          var8.b((byte) -76);
-          var8.a(16);
+          var8.unlink((byte) -76);
+          var8.unlinkSecondary(16);
           r.field_c = r.field_c - 1;
           var9 = js.field_f;
           var9.h(param1, 255);
@@ -441,9 +441,9 @@ class o implements iq, pj {
             o.a((byte) 60);
           }
           var5 = var9.position;
-          var9.c(1, (byte) -91);
-          var9.a(param2, (byte) 0);
-          var9.b(var9.position - var5, (byte) 122);
+          var9.writeByte(1, (byte) -91);
+          var9.writeString(param2, (byte) 0);
+          var9.patchLengthByte(var9.position - var5, (byte) 122);
           stackIn_16_0 = null;
           return (String) (stackIn_16_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

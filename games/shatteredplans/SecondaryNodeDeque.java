@@ -21,14 +21,14 @@ final class SecondaryNodeDeque implements Iterable {
         field_e = null;
     }
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addLast(DualLinkNode param0, int param1) {
         try {
           if (null != param0.field_j) {
-            param0.a(param1 ^ 22);
+            param0.unlinkSecondary(param1 ^ 22);
           }
           param0.field_j = this.field_a.field_j;
           if (param1 != 6) {
-            this.a((byte) 95);
+            this.pollFirst((byte) 95);
           }
           param0.field_h = this.field_a;
           param0.field_j.field_h = param0;
@@ -38,19 +38,19 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final DualLinkNode a(byte param0) {
+    final DualLinkNode pollFirst(byte param0) {
         DualLinkNode var2 = this.field_a.field_h;
         if (param0 != -20) {
           DualLinkNode var3 = (DualLinkNode) null;
-          this.a((DualLinkNode) null, 90);
+          this.addLast((DualLinkNode) null, 90);
           if (this.field_a != var2) {
-            var2.a(16);
+            var2.unlinkSecondary(16);
             return var2;
           }
           return null;
         }
         if (this.field_a != var2) {
-          var2.a(16);
+          var2.unlinkSecondary(16);
           return var2;
         }
         return null;

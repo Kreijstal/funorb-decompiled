@@ -16,12 +16,12 @@ final class SoundEnvelope {
 
     final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_a = param0.j(-126);
+        this.field_a = param0.readUnsignedByte(-126);
         this.field_k = new int[this.field_a];
         this.field_c = new int[this.field_a];
         for (var2 = 0; var2 < this.field_a; var2++) {
-          this.field_k[var2] = param0.f(-20976);
-          this.field_c[var2] = param0.f(-20976);
+          this.field_k[var2] = param0.readUnsignedShort(-20976);
+          this.field_c[var2] = param0.readUnsignedShort(-20976);
         }
     }
 
@@ -63,9 +63,9 @@ final class SoundEnvelope {
     }
 
     final void b(PacketBuffer param0) {
-        this.field_f = param0.j(-121);
-        this.field_d = param0.a(16711680);
-        this.field_i = param0.a(16711680);
+        this.field_f = param0.readUnsignedByte(-121);
+        this.field_d = param0.readInt(16711680);
+        this.field_i = param0.readInt(16711680);
         this.a(param0);
     }
 }

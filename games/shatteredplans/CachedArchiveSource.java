@@ -69,18 +69,18 @@ final class CachedArchiveSource extends ArchiveSource {
           }
           if (this.field_x) {
             var2_int = 1;
-            var3 = this.field_h.d(0);
+            var3 = this.field_h.startForward(0);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (0 == this.field_u[var4]) {
                 discarded$3 = this.a(1, 0, var4);
               }
               if (this.field_u[var4] != 0) {
-                var3.b((byte) -76);
+                var3.unlink((byte) -76);
               } else {
                 var2_int = 0;
               }
-              var3 = this.field_h.a((byte) -71);
+              var3 = this.field_h.nextForward((byte) -71);
             }
             while (this.field_q < this.field_p.field_n.length) {
               if (this.field_p.field_n[this.field_q] == 0) {
@@ -95,7 +95,7 @@ final class CachedArchiveSource extends ArchiveSource {
                   var6 = new IntrusiveNode();
                   var6.key = (long)this.field_q;
                   var2_int = 0;
-                  this.field_h.a((byte) -113, var6);
+                  this.field_h.addLast((byte) -113, var6);
                 }
                 this.field_q = this.field_q + 1;
                 continue;
@@ -119,7 +119,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       if (!var2.field_q) {
                         throw new RuntimeException();
                       }
-                      var2.b((byte) -60);
+                      var2.unlink((byte) -60);
                     } else {
                       var2.field_t = true;
                     }
@@ -135,7 +135,7 @@ final class CachedArchiveSource extends ArchiveSource {
             (decompiledFrameRemainder0)) {
             if (this.field_m) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_h.d(0);
+              var3Lifetime1 = this.field_h.startForward(0);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_u[var4Lifetime1] != 1) {
@@ -144,9 +144,9 @@ final class CachedArchiveSource extends ArchiveSource {
                 if (this.field_u[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.b((byte) -70);
+                  var3Lifetime1.unlink((byte) -70);
                 }
-                var3Lifetime1 = this.field_h.a((byte) -71);
+                var3Lifetime1 = this.field_h.nextForward((byte) -71);
               }
               scanLoop1: while (true) {
                 if (this.field_q < this.field_p.field_n.length) {
@@ -161,7 +161,7 @@ final class CachedArchiveSource extends ArchiveSource {
                     if (this.field_u[this.field_q] != 1) {
                       var7 = new IntrusiveNode();
                       var7.key = (long)this.field_q;
-                      this.field_h.a((byte) -113, var7);
+                      this.field_h.addLast((byte) -113, var7);
                       var2_intLifetime1 = 0;
                     }
                   }
@@ -191,7 +191,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 if (!var2Lifetime1.field_q) {
                   throw new RuntimeException();
                 }
-                var2Lifetime1.b((byte) -60);
+                var2Lifetime1.unlink((byte) -60);
               } else {
                 var2Lifetime1.field_t = true;
               }
@@ -218,13 +218,13 @@ final class CachedArchiveSource extends ArchiveSource {
         if (this.a(param0 - 59) == null) {
           return;
         }
-        var2 = this.field_i.d(0);
+        var2 = this.field_i.startForward(0);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 >= 0) {
             if (this.field_p.field_a > var3) {
               if (this.field_p.field_n[var3] == 0) {
-                var2.b((byte) -85);
+                var2.unlink((byte) -85);
               } else {
                 if (this.field_u[var3] == 0) {
                   discarded$0 = this.a(1, 0, var3);
@@ -233,16 +233,16 @@ final class CachedArchiveSource extends ArchiveSource {
                   discarded$1 = this.a(2, 0, var3);
                 }
                 if (this.field_u[var3] == 1) {
-                  var2.b((byte) -90);
+                  var2.unlink((byte) -90);
                 }
               }
             } else {
-              var2.b((byte) -85);
+              var2.unlink((byte) -85);
             }
           } else {
-            var2.b((byte) -85);
+            var2.unlink((byte) -85);
           }
-          var2 = this.field_i.a((byte) -71);
+          var2 = this.field_i.nextForward((byte) -71);
         }
         if (param0 != 65) {
           this.c(-101);
@@ -361,7 +361,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
         int var5 = 84 % ((param0 + 51) / 33);
         byte[] var4 = var3.e((byte) 109);
-        var3.b((byte) -60);
+        var3.unlink((byte) -60);
         return var4;
     }
 
@@ -396,7 +396,7 @@ final class CachedArchiveSource extends ArchiveSource {
           param0 == 0 &&
           !var12.field_q &&
           var12.field_u) {
-          var12.b((byte) -76);
+          var12.unlink((byte) -76);
           var4 = null;
         }
         if (var4 == null) {
@@ -473,7 +473,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 this.field_u[param2] = (byte) 1;
               }
               if (!((ArchiveRequest) (var4)).field_q) {
-                ((ArchiveRequest) (var4)).b((byte) -70);
+                ((ArchiveRequest) (var4)).unlink((byte) -70);
               }
               stackIn_89_0 = var4;
               return (ArchiveRequest) (stackIn_89_0);
@@ -483,7 +483,7 @@ final class CachedArchiveSource extends ArchiveSource {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_u[param2] = (byte)-1;
-            ((ArchiveRequest) (var4)).b((byte) -124);
+            ((ArchiveRequest) (var4)).unlink((byte) -124);
             if (((ArchiveRequest) (var4)).field_q) {
               if (this.field_w.c(27356)) {
                 return null;
@@ -522,7 +522,7 @@ final class CachedArchiveSource extends ArchiveSource {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_w.b((byte) -91);
-          ((ArchiveRequest) (var4)).b((byte) -68);
+          ((ArchiveRequest) (var4)).unlink((byte) -68);
           if (((ArchiveRequest) (var4)).field_q &&
             !this.field_w.c(27356)) {
             var4 = this.field_w.a(true, this.field_j, (byte) 2, -2057056416, param2);
@@ -541,7 +541,7 @@ final class CachedArchiveSource extends ArchiveSource {
           }
         }
         if (!((ArchiveRequest) (var4)).field_q) {
-          ((ArchiveRequest) (var4)).b((byte) -128);
+          ((ArchiveRequest) (var4)).unlink((byte) -128);
         }
         return (ArchiveRequest) (var4);
     }

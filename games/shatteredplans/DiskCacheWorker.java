@@ -21,22 +21,22 @@ final class DiskCacheWorker implements Runnable {
         int var3 = 0;
         int var8 = ShatteredPlansClient.field_F ? 1 : 0;
         RandomAccessCacheFile.a(-111);
-        vm.field_Jb = id.a(2, hp.field_n, "intro", "intro1_1");
-        w.field_D = id.a(param0 - 48, hp.field_n, "intro", "intro1_2");
-        DualLinkDeque.field_a = id.a(param0 ^ 48, hp.field_n, "intro", "intro1_3");
-        sr.field_F = id.a(param0 - 48, hp.field_n, "intro", "intro1_flash");
-        oi.field_d = id.a(2, hp.field_n, "intro", "intro1_glow");
-        tp.field_e = id.a(2, hp.field_n, "intro", "intro1_glow_fg");
+        vm.field_Jb = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_1");
+        w.field_D = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_2");
+        DualLinkDeque.field_a = id.a(param0 ^ 48, DerelictVictoryChecker.field_n, "intro", "intro1_3");
+        sr.field_F = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_flash");
+        oi.field_d = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
+        tp.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
         DualLinkDeque.field_a.e();
-        ne.a(0, gf.field_b, (byte) 24, 0, 0, 64, gf.field_k);
+        BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 64, gf.field_k);
         w.field_D.e();
-        ne.a(0, gf.field_b, (byte) 24, 0, 0, 128, gf.field_k);
+        BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 128, gf.field_k);
         vm.field_Jb.e();
         MouseWheelInput.a(0, 0, gf.field_k, 0, gf.field_b, param0 + 24024);
-        id.a(2, hp.field_n, "intro", "intro2_glow");
-        ac.field_s = id.a(2, hp.field_n, "intro", "intro2_earth");
-        oe.field_c = id.a(2, hp.field_n, "intro", "intro2_clouds");
-        ja.a(-174137048, ac.field_s.field_z / 2, ac.field_s, ac.field_s.field_w / 4);
+        id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");
+        DefendTask.field_s = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_earth");
+        oe.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_clouds");
+        ja.a(-174137048, DefendTask.field_s.field_z / 2, DefendTask.field_s, DefendTask.field_s.field_w / 4);
         ja.a(param0 ^ -174137062, oe.field_c.field_z / 2, oe.field_c, oe.field_c.field_w / 4);
         ds.field_b = new Sprite(640, 430);
         ds.field_b.e();
@@ -45,16 +45,16 @@ final class DiskCacheWorker implements Runnable {
           gf.g(320, 527, var2 + 400, (var1_int << 2) * 65793);
         }
         gf.b(4, 4, 0, 0, gf.field_b, gf.field_k);
-        ma.field_r = new Sprite(640, 624 - ac.field_s.field_x);
-        ma.field_r.e();
+        DefensiveAi.field_r = new Sprite(640, 624 - DefendTask.field_s.field_x);
+        DefensiveAi.field_r.e();
         for (var1_int = 254; var1_int >= 1; var1_int--) {
           var2 = (int)(Math.log((double)(254.0f / (float)var1_int)) * 40.0 / Math.log(2.0));
-          ac.field_s.e(var2 - 5, var2 - ac.field_s.field_x, var1_int * 65793);
+          DefendTask.field_s.e(var2 - 5, var2 - DefendTask.field_s.field_x, var1_int * 65793);
         }
-        va.field_e = id.a(2, hp.field_n, "intro", "intro3_stars");
-        q.field_Cb = id.a(2, hp.field_n, "intro", "intro3_citybg");
-        mm.field_o = id.a(param0 - 48, hp.field_n, "intro", "intro3_cityfg");
-        ch.field_c = id.a(2, hp.field_n, "intro", "intro3_crater");
+        va.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_stars");
+        q.field_Cb = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_citybg");
+        mm.field_o = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro3_cityfg");
+        ch.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_crater");
         var1_int = q.field_Cb.field_z;
         var2 = q.field_Cb.field_w + 60;
         he.field_h = new Sprite(var1_int, var2);
@@ -98,7 +98,7 @@ final class DiskCacheWorker implements Runnable {
             var7 = 255 & var4;
             ks.field_j.field_B[var3] = ee.a(ee.a(var6, var5), var7);
           }
-          MusicVoice.field_n = ac.field_s.c();
+          MusicVoice.field_n = DefendTask.field_s.c();
           uo.a((byte) 110, MusicVoice.field_n, 32768);
           var1_int = MusicVoice.field_n.field_z;
           var2 = MusicVoice.field_n.field_z + 120;
@@ -131,7 +131,7 @@ final class DiskCacheWorker implements Runnable {
           var4.field_y = param2;
           var5 = this.field_c;
           synchronized (var5) {
-            var6 = (DiskArchiveRequest) (this.field_c.c(-128));
+            var6 = (DiskArchiveRequest) (this.field_c.startForward(-128));
             while (var6 != null) {
               if (~var6.field_l == ~(long)param0 &&
                 param1 == var6.field_B &&
@@ -141,7 +141,7 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_8_0 = var4;
                 return stackIn_8_0;
               }
-              var6 = (DiskArchiveRequest) (this.field_c.b(32));
+              var6 = (DiskArchiveRequest) (this.field_c.nextForward(32));
             }
           }
           var4.field_w = param1.a(param0, 86);
@@ -186,7 +186,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.field_f) {
             var2 = this.field_c;
             synchronized (var2) {
-              var7 = (DiskArchiveRequest) (this.field_c.a(-49));
+              var7 = (DiskArchiveRequest) (this.field_c.pollFirst(-49));
               if (var7 != null) {
                 this.field_d = this.field_d - 1;
                 decompiledRegionSelector0 = 1;
@@ -241,7 +241,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var3 = this.field_c;
           synchronized (var3) {
-            this.field_c.a(param0, 32);
+            this.field_c.addLast(param0, 32);
             this.field_d = this.field_d + 1;
             if (param1 != 1048576) {
               var5 = (DiskArchiveRequest) null;
@@ -265,15 +265,15 @@ final class DiskCacheWorker implements Runnable {
     }
 
     final static void a(int param0) {
-        if (vr.field_c == gr.field_o) {
+        if (GameRules.field_c == gr.field_o) {
           return;
         }
-        if (nh.a((byte) -92, vr.field_c)) {
-          mj.field_Hb[vr.field_c].g((byte) 119);
+        if (PointsVictoryChecker.a((byte) -92, GameRules.field_c)) {
+          mj.field_Hb[GameRules.field_c].g((byte) 119);
         }
-        cj.field_x = cs.field_i;
+        TutorialAi.field_x = Wormhole.field_i;
         eh.field_Q = 0;
-        vr.field_c = gr.field_o;
+        GameRules.field_c = gr.field_o;
         if (gr.field_o == -3) {
           qf.a((byte) -126);
         }
@@ -284,7 +284,7 @@ final class DiskCacheWorker implements Runnable {
         if (gr.field_o == -6) {
           js.field_f.h(9, 255);
           md.field_Q = true;
-          gr.field_o = vr.field_c;
+          gr.field_o = GameRules.field_c;
         }
         if (lg.field_b) {
           if (null != ce.field_x &&
@@ -368,7 +368,7 @@ final class DiskCacheWorker implements Runnable {
             DiskCacheWorker.b((byte) -62);
           }
           wh.field_a.a(false, 37);
-          vl.a((byte) 87, param1, param4, param3);
+          SolMapGenerator.a((byte) 87, param1, param4, param3);
           AudioService.a(0);
           ee.field_l = oj.field_Fb;
           fj.field_s = oj.field_Fb;

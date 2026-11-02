@@ -184,13 +184,13 @@ final class pe extends WidgetContainer implements op, bp {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.h(-1282738780);
+            var3_int = param0.readUnsignedSmart(-1282738780);
             if (var3_int > param2) {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + DiskArchiveRequest.field_v.a(var4, param0.payload, var3_int, 7, param0.position, param1);
-            var5 = qi.a(var4, var3_int, 0, param1 ^ -127);
+            var5 = SolarFlareEvent.a(var4, var3_int, 0, param1 ^ -127);
             stackIn_3_0 = var5;
             return stackIn_3_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -251,14 +251,14 @@ final class pe extends WidgetContainer implements op, bp {
     final static void k(int param0) {
         int stackIn_40_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        eg var1 = null;
+        BattleEvent var1 = null;
         Star[] var1_array = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Star var3 = null;
         int var4 = 0;
         int var5 = 0;
-        eg var1Lifetime1;
+        BattleEvent var1Lifetime1;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 <= 95) {
@@ -268,23 +268,23 @@ final class pe extends WidgetContainer implements op, bp {
           if (2 == oq.field_a.field_P.field_g.field_e.length) {
             if (ho.field_d == oq.field_a.field_P.field_g.field_e[1].field_y) {
               if (SocketArchiveNetworkClient.a("combatSuccess", -116)) {
-                ac.a(1, n.a("combatSuccess", -21502));
+                DefendTask.a(1, n.a("combatSuccess", -21502));
                 if (var5 != 0) {
-                  var1 = vp.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
+                  var1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
                   if (null != var1 &&
                     SocketArchiveNetworkClient.a("combatFailed", -116)) {
-                    ac.a(1, n.a("combatFailed", -21502));
+                    DefendTask.a(1, n.a("combatFailed", -21502));
                   }
                 }
               }
             } else {
-              var1 = vp.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
+              var1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
               if (null != var1 &&
                 SocketArchiveNetworkClient.a("combatFailed", -116)) {
-                ac.a(1, n.a("combatFailed", -21502));
+                DefendTask.a(1, n.a("combatFailed", -21502));
               }
             }
-            var1Lifetime1 = vp.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
+            var1Lifetime1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
             if (null != var1Lifetime1) {
               uq.field_m.a(nf.a(var1Lifetime1, 23248), 27275, "combatreport1");
             }
@@ -292,7 +292,7 @@ final class pe extends WidgetContainer implements op, bp {
           }
           if (oq.field_a.field_P.field_z &&
             oq.field_a.field_P.field_k != ho.field_d.field_x) {
-            ac.a(1, n.a("lose", -21502));
+            DefendTask.a(1, n.a("lose", -21502));
           }
           var1_array = oq.field_a.field_P.field_g.field_e;
           var2 = 0;
@@ -453,7 +453,7 @@ final class pe extends WidgetContainer implements op, bp {
                   var24Lifetime1 = param6.field_a[var23Lifetime2];
                   var25Lifetime1 = param6.field_c[var23Lifetime2];
                   var26Lifetime1 = param6.field_l[var23Lifetime2];
-                  k.field_g[var23Lifetime2] = (var12 * var24Lifetime1 + (var15 * var25Lifetime1 + var18 * var26Lifetime1) >> 16) + var9;
+                  TurnEventLog.field_g[var23Lifetime2] = (var12 * var24Lifetime1 + (var15 * var25Lifetime1 + var18 * var26Lifetime1) >> 16) + var9;
                   MusicCrossfadeStream.field_t[var23Lifetime2] = (var13 * var24Lifetime1 + var25Lifetime1 * var16 + var26Lifetime1 * var19 >> 16) + var10;
                   nb.field_b[var23Lifetime2] = (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var20 * var26Lifetime1) >> 16) + var11;
                   var24Lifetime1 = param6.field_A[var23Lifetime2];

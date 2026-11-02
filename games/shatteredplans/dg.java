@@ -86,7 +86,7 @@ final class dg extends qr {
           this.field_xb.a(15, 15, (byte) 126, 5, -20 + var17.field_K);
           var8.a(this.field_K, -var17.field_mb + this.field_mb, (byte) 79, var17.field_mb, 0);
           var9.a(this.field_K, 15, (byte) 75, 20, 0);
-          var8.field_F = cs.a(16, 3, var8.field_mb, 11579568, 8421504, 2105376);
+          var8.field_F = Wormhole.a(16, 3, var8.field_mb, 11579568, 8421504, 2105376);
           var17.a(4, this.field_xb);
           var8.a(4, var9);
           this.a(4, var17);

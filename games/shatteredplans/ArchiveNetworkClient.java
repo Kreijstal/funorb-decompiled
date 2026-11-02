@@ -27,10 +27,10 @@ abstract class ArchiveNetworkClient {
 
     final int a(byte param0) {
         if (param0 == 0) {
-          return this.field_h.c((byte) 123) + this.field_j.c((byte) 83);
+          return this.field_h.size((byte) 123) + this.field_j.size((byte) 83);
         }
         this.c(-35);
-        return this.field_h.c((byte) 123) + this.field_j.c((byte) 83);
+        return this.field_h.size((byte) 123) + this.field_j.size((byte) 83);
     }
 
     abstract void a(byte param0, boolean param1, Object param2);
@@ -39,7 +39,7 @@ abstract class ArchiveNetworkClient {
         if (param0 != -5205) {
           return -48;
         }
-        return this.field_m.c((byte) -111) + this.field_f.c((byte) -109);
+        return this.field_m.size((byte) -111) + this.field_f.size((byte) -109);
     }
 
     abstract boolean d(int param0);
@@ -73,12 +73,12 @@ abstract class ArchiveNetworkClient {
             if (!(this.a((byte) 0) < 20)) {
               throw new RuntimeException();
             }
-            this.field_h.a(var8, 32);
+            this.field_h.addLast(var8, 32);
           } else {
             if (!(this.b(-5205) < 20)) {
               throw new RuntimeException();
             }
-            this.field_m.a(var8, 32);
+            this.field_m.addLast(var8, 32);
           }
           return var8;
         }
@@ -86,12 +86,12 @@ abstract class ArchiveNetworkClient {
           if (!(this.a((byte) 0) < 20)) {
             throw new RuntimeException();
           }
-          this.field_h.a(var8, 32);
+          this.field_h.addLast(var8, 32);
         } else {
           if (!(this.b(-5205) < 20)) {
             throw new RuntimeException();
           }
-          this.field_m.a(var8, 32);
+          this.field_m.addLast(var8, 32);
         }
         return var8;
     }

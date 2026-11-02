@@ -56,15 +56,15 @@ final class SynthesizedSoundEffect {
         int var3;
         this.field_b = new SynthInstrument[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.j(-68);
+          var3 = param0.readUnsignedByte(-68);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_b[var2] = new SynthInstrument();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_c = param0.f(-20976);
-        this.field_a = param0.f(-20976);
+        this.field_c = param0.readUnsignedShort(-20976);
+        this.field_a = param0.readUnsignedShort(-20976);
     }
 
     final static SynthesizedSoundEffect a(Archive param0, int param1, int param2) {

@@ -32,7 +32,7 @@ final class sf {
           ah.field_T = param1;
           no.field_f = new boolean[param1];
           og.field_c = new int[param1];
-          kq.field_c = new int[param1];
+          GameScreen.field_c = new int[param1];
           q.field_Ab = new int[param1];
           if (param0 < 123) {
             field_e = 41L;

@@ -14,7 +14,7 @@ final class gn extends o {
     private wk[] field_C;
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        es.field_n = param3;
+        StarAnnotation.field_n = param3;
         ah.field_P = param1;
         IterableNodeHashTable.field_b = param0;
         if (param2) {
@@ -266,7 +266,7 @@ final class gn extends o {
           var11 = new vm[var7];
           if (param1.field_r != null) {
             for (var12 = 0; var12 < param1.field_r.length; var12++) {
-              var13_ref_si = kq.field_A.a(param1.field_r[var12], (byte) 100);
+              var13_ref_si = GameScreen.field_A.a(param1.field_r[var12], (byte) 100);
               var8[var12] = var13_ref_si.field_t;
               var9[var12] = param1.field_p[var12];
               var11[var12] = gn.a(param0 + 0, var13_ref_si, param2, param3, param4);

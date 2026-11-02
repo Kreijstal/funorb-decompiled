@@ -27,7 +27,7 @@ final class hc {
           var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
           return null;
         }
-        stackIn_6_0 = kq.field_A;
+        stackIn_6_0 = GameScreen.field_A;
         try {
           while (true) {
             var2 = ((jo) (Object) stackIn_6_0).a(var1_int, (byte) 100);
@@ -36,7 +36,7 @@ final class hc {
               return stackIn_8_0;
             }
             var1_int++;
-            stackIn_6_0 = kq.field_A;
+            stackIn_6_0 = GameScreen.field_A;
           }
         } catch (java.lang.IllegalArgumentException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

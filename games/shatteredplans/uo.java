@@ -43,7 +43,7 @@ final class uo {
             stackIn_12_0 = var1_int;
             return stackIn_12_0;
           }
-          if (mg.field_C) {
+          if (FleetMove.field_C) {
             stackIn_15_0 = 3;
             return stackIn_15_0;
           }
@@ -221,7 +221,7 @@ final class uo {
                 if (ah.field_X != 1) {
                   var10_ref_String = re.a(AudioService.field_e, 4371, new String[]{Integer.toString(ah.field_X)});
                 } else {
-                  var10_ref_String = ui.field_k;
+                  var10_ref_String = SolVictoryChecker.field_k;
                 }
                 if ((16 & Star.field_w) == 0 &&
                   !IntrusiveNodeHashTable.field_e) {
@@ -351,7 +351,7 @@ final class uo {
                   }
                   var16Lifetime1Lifetime1 = 0;
                   var17 = ro.field_a.field_xb.field_M;
-                  var18_ref = (mj) (var17.d(0));
+                  var18_ref = (mj) (var17.startForward(0));
                   scanLoop3: while (true) {
                     if (var18_ref != null) {
                       if (!var18_ref.h(-80)) {
@@ -377,7 +377,7 @@ final class uo {
                           break scanLoop3;
                         }
                       }
-                      var18_ref = (mj) (var17.a((byte) -71));
+                      var18_ref = (mj) (var17.nextForward((byte) -71));
                       continue;
                     }
                     break;
@@ -442,7 +442,7 @@ final class uo {
               }
               var8.field_z = re.a(oe.field_b, 4371, new String[]{Integer.toString(var9)});
             }
-            ac.field_x.field_z = re.a(eg.field_r, 4371, new String[]{Integer.toString(np.field_a.field_Lb), Integer.toString(np.field_a.field_Eb)});
+            DefendTask.field_x.field_z = re.a(BattleEvent.field_r, 4371, new String[]{Integer.toString(np.field_a.field_Lb), Integer.toString(np.field_a.field_Eb)});
           }
           stackIn_159_0 = am.field_xb;
           stackIn_160_1 = (param1) && (!param4) && (!IntrusiveNodeHashTable.field_e);
@@ -463,7 +463,7 @@ final class uo {
               NetworkArchiveRequest.a(param2, np.field_a.g(-92), (byte) -2);
             }
             if (0 != aq.field_j.field_rb) {
-              ac.field_u = true;
+              DefendTask.field_u = true;
             }
             if (0 != go.field_I.field_rb) {
               IntrusiveNodeHashTable.field_e = true;
@@ -471,7 +471,7 @@ final class uo {
             if (oo.field_c.field_rb != 0) {
               IntrusiveNodeHashTable.field_e = false;
             }
-            sc.a(63, false, np.field_a, param2);
+            AggressiveAi.a(63, false, np.field_a, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

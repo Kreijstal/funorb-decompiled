@@ -179,7 +179,7 @@ abstract class nq extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = ma.a(var13, 2);
+                                  var10 = DefensiveAi.a(var13, 2);
                                   var11_ref_bq = this.field_z[var10];
                                   if (this.field_t == null) {
                                     stackIn_27_0 = var11_ref_bq.field_c;
@@ -383,7 +383,7 @@ abstract class nq extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_A = ma.a(var4, 2);
+                field_A = DefensiveAi.a(var4, 2);
               }
             } else {
               field_G = field_x;
@@ -635,7 +635,7 @@ abstract class nq extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = ma.a(var18, 2);
+                                    var16_int = DefensiveAi.a(var18, 2);
                                     var4 = var4 + this.field_z[var16_int].field_d;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -806,7 +806,7 @@ abstract class nq extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = ma.a(var10, 2);
+                                  var9_int = DefensiveAi.a(var10, 2);
                                   var4 = var4 + this.field_z[var9_int].field_d;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {

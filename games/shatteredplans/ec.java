@@ -5,7 +5,7 @@ final class ec extends ml {
     private String field_n;
     private boolean field_o;
     static boolean[] field_r;
-    static vr field_s;
+    static GameRules field_s;
     static int field_q;
     static long field_p;
     static String[] field_v;
@@ -14,7 +14,7 @@ final class ec extends ml {
 
     final static void a(int param0, int[] param1, int param2) {
         try {
-          qg.field_p[param2] = param1;
+          TutorialVictoryChecker.field_p[param2] = param1;
           if (param0 != -1) {
             field_t = (String) null;
           }
@@ -83,9 +83,9 @@ final class ec extends ml {
         try {
           he.field_p = null;
           np.field_a = null;
-          k.field_i = false;
+          TurnEventLog.field_i = false;
           if (null != gr.field_p) {
-            gr.field_p.a(param0 + 66);
+            gr.field_p.clear(param0 + 66);
             gr.field_p = null;
           }
           if (param0 != -66) {
@@ -93,19 +93,19 @@ final class ec extends ml {
           }
           ShatteredPlansClient.field_H = null;
           if (null != kj.field_a) {
-            kj.field_a.a(param0 + 66);
+            kj.field_a.clear(param0 + 66);
             kj.field_a = null;
           }
           IsaacBackedRandom.field_b = null;
           if (uo.field_a != null) {
-            uo.field_a.a(0);
+            uo.field_a.clear(0);
             uo.field_a = null;
           }
           qp.field_w = null;
           if (ShatteredPlansClient.field_H != null) {
             var3 = (mj) (ShatteredPlansClient.field_H.c((byte) -102));
             while (var3 != null) {
-              var3.a(16);
+              var3.unlinkSecondary(16);
               var3 = (mj) (ShatteredPlansClient.field_H.b((byte) -107));
             }
             ShatteredPlansClient.field_H = null;
@@ -139,16 +139,16 @@ final class ec extends ml {
         RandomAccessCacheFile.a(-104);
         var4.e();
         for (var5 = 0; var4.field_z > var5; var5++) {
-          gf.j(var5, 0, var4.field_w, ui.a(0, gm.field_k[param0], -81, 128 + 128 * var5 / var4.field_z));
+          gf.j(var5, 0, var4.field_w, SolVictoryChecker.a(0, gm.field_k[param0], -81, 128 + 128 * var5 / var4.field_z));
         }
         for (var5Lifetime1 = 0; -1 + var4.field_z > var5Lifetime1; var5Lifetime1++) {
-          var4.field_B[var5Lifetime1] = ui.a(0, var4.field_B[var5Lifetime1], -92, 128);
-          var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1] = ui.a(0, var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1], -118, 64);
+          var4.field_B[var5Lifetime1] = SolVictoryChecker.a(0, var4.field_B[var5Lifetime1], -92, 128);
+          var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1] = SolVictoryChecker.a(0, var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1], -118, 64);
         }
         for (var5Lifetime2 = 0; var5Lifetime2 < var4.field_w; var5Lifetime2++) {
-          var4.field_B[var4.field_z - 1 + var5Lifetime2 * var4.field_z] = ui.a(0, var4.field_B[var5Lifetime2 * var4.field_z + (-1 + var4.field_z)], -86, 128);
+          var4.field_B[var4.field_z - 1 + var5Lifetime2 * var4.field_z] = SolVictoryChecker.a(0, var4.field_B[var5Lifetime2 * var4.field_z + (-1 + var4.field_z)], -86, 128);
         }
-        var4.field_B[var4.field_z * var4.field_w - 1] = ui.a(0, var4.field_B[-1 + var4.field_w * var4.field_z], -85, 190);
+        var4.field_B[var4.field_z * var4.field_w - 1] = SolVictoryChecker.a(0, var4.field_B[-1 + var4.field_w * var4.field_z], -85, 190);
         cg.i(0);
         if (!param2) {
           field_r = (boolean[]) null;
@@ -390,7 +390,7 @@ final class ec extends ml {
     static {
         field_q = 480;
         field_t = "Animations speed is normal. Click to double.";
-        field_s = new vr(true, true, false, true, false, false, false, 0);
+        field_s = new GameRules(true, true, false, true, false, false, false, 0);
         field_u = "Confirm Email:";
     }
 }

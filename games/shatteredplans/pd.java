@@ -3,7 +3,7 @@
  */
 final class pd extends hb {
     static MouseInputHandler field_j;
-    private el field_i;
+    private TertiaryNodeList field_i;
     static u field_h;
     static qf field_m;
     static int field_k;
@@ -46,7 +46,7 @@ final class pd extends hb {
           while (param1 != 0L) {
             var8 = param1;
             param1 = param1 / 37L;
-            var10 = k.field_f[(int)(var8 - param1 * 37L)];
+            var10 = TurnEventLog.field_f[(int)(var8 - param1 * 37L)];
             if (var10 == 95) {
               var11 = -1 + var6.length();
               var6.setCharAt(var11, Character.toUpperCase(var6.charAt(var11)));
@@ -69,7 +69,7 @@ final class pd extends hb {
         return this.field_i.b(0);
     }
 
-    pd(el param0) {
+    pd(TertiaryNodeList param0) {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {

@@ -26,7 +26,7 @@ final class IntrusiveDequeCursor {
     final static String a(boolean param0) {
         if (param0) {
           IntrusiveDequeCursor.a(false);
-          if (sc.field_q) {
+          if (AggressiveAi.field_q) {
             return null;
           }
           if (ri.field_F > rq.field_e) {
@@ -37,7 +37,7 @@ final class IntrusiveDequeCursor {
           }
           return null;
         }
-        if (sc.field_q) {
+        if (AggressiveAi.field_q) {
           return null;
         }
         if (ri.field_F > rq.field_e) {
@@ -226,8 +226,8 @@ final class IntrusiveDequeCursor {
             return;
           }
           if (SecondaryNodeHashTable.field_g == null) {
-            if (cj.field_x &&
-              cs.field_i) {
+            if (TutorialAi.field_x &&
+              Wormhole.field_i) {
               if (v.field_b &&
                 sr.field_h) {
                 stackIn_94_0 = 1;
@@ -248,8 +248,8 @@ final class IntrusiveDequeCursor {
             return;
           }
           SecondaryNodeHashTable.field_g.a(param1, param0 ^ -74);
-          if (cj.field_x &&
-            cs.field_i) {
+          if (TutorialAi.field_x &&
+            Wormhole.field_i) {
             if (v.field_b &&
               sr.field_h) {
               stackIn_74_0 = 1;
@@ -274,10 +274,10 @@ final class IntrusiveDequeCursor {
           return;
         }
         if (SecondaryNodeHashTable.field_g == null) {
-          if (!cj.field_x) {
+          if (!TutorialAi.field_x) {
             return;
           }
-          if (!cs.field_i) {
+          if (!Wormhole.field_i) {
             return;
           }
           if (v.field_b &&
@@ -299,10 +299,10 @@ final class IntrusiveDequeCursor {
           return;
         }
         SecondaryNodeHashTable.field_g.a(param1, param0 ^ -74);
-        if (!cj.field_x) {
+        if (!TutorialAi.field_x) {
           return;
         }
-        if (!cs.field_i) {
+        if (!Wormhole.field_i) {
           return;
         }
         if (!v.field_b) {

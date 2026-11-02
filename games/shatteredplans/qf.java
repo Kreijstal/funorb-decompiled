@@ -22,7 +22,7 @@ final class qf {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (hp.field_m == null) {
+        if (DerelictVictoryChecker.field_m == null) {
           if (tc.field_G != null &&
             tc.field_G.h(0)) {
             tc.field_G = null;
@@ -32,7 +32,7 @@ final class qf {
           if (param0 != 0) {
             qf.a(-33, 11, -33, 82);
           }
-          if (ac.d(97)) {
+          if (DefendTask.d(97)) {
             return true;
           }
           if (ph.a(4, param1, param3, param2)) {
@@ -40,7 +40,7 @@ final class qf {
           }
           return false;
         }
-        if (hp.field_m.b(true)) {
+        if (DerelictVictoryChecker.field_m.b(true)) {
           ai.a(param0 + 3);
           return true;
         }
@@ -48,7 +48,7 @@ final class qf {
           if (param0 != 0) {
             qf.a(-33, 11, -33, 82);
           }
-          if (ac.d(97)) {
+          if (DefendTask.d(97)) {
             return true;
           }
           if (ph.a(4, param1, param3, param2)) {
@@ -62,7 +62,7 @@ final class qf {
           return true;
         }
         if (param0 == 0) {
-          if (ac.d(97)) {
+          if (DefendTask.d(97)) {
             return true;
           }
           if (ph.a(4, param1, param3, param2)) {
@@ -71,7 +71,7 @@ final class qf {
           return false;
         }
         qf.a(-33, 11, -33, 82);
-        if (ac.d(97)) {
+        if (DefendTask.d(97)) {
           return true;
         }
         if (!ph.a(4, param1, param3, param2)) {
@@ -85,7 +85,7 @@ final class qf {
         u.field_a = vc.a((byte) -39, 50);
         NetworkArchiveRequest.field_C = (nq) ((Object) rs.field_Cb);
         rp.field_K = new IntrusiveDeque();
-        ui.field_m = 0;
+        SolVictoryChecker.field_m = 0;
         MusicEnvelope.field_i = 0;
         di.field_m = 0;
         CachedArchiveSource.field_n = false;

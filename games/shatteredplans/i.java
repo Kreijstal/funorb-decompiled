@@ -23,7 +23,7 @@ final class i implements iq {
         if (param0 != 0) {
           return true;
         }
-        return k.field_b;
+        return TurnEventLog.field_b;
     }
 
     final static void a(byte param0, String param1, long param2) {
@@ -47,7 +47,7 @@ final class i implements iq {
         if (param0 != 1) {
           i.a(-46, -90, 61, -9, 124, 49);
         }
-        return el.field_b;
+        return TertiaryNodeList.field_b;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {

@@ -28,7 +28,7 @@ final class bo extends jl implements bp {
             if (param1 != bg.field_f) {
               if (param1 == pe.field_E) {
                 this.field_n = this.field_n + 30;
-                var3 = sc.field_p;
+                var3 = AggressiveAi.field_p;
               }
             } else {
               var3 = lp.field_z;
@@ -39,7 +39,7 @@ final class bo extends jl implements bp {
               }
             }
           } else {
-            var3 = ne.field_n;
+            var3 = BattleContribution.field_n;
           }
           var4 = new UiWidget((String) (var3), (ko) null);
           var4.field_q = 50;
@@ -136,8 +136,8 @@ final class bo extends jl implements bp {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = js.field_f;
         var2.h(param0, 255);
-        var2.c(1, (byte) -76);
-        var2.c(param1, (byte) -97);
+        var2.writeByte(1, (byte) -76);
+        var2.writeByte(param1, (byte) -97);
     }
 
     public final void a(kg param0, int param1, int param2, int param3, int param4) {

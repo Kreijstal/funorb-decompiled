@@ -230,7 +230,7 @@ final class SoundCache {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.b((byte) -98);
+          var9.unlink((byte) -98);
           this.field_d.a(var8Lifetime1, -128, var6);
           if (param0 == -12203) {
             stackIn_20_0 = var8Lifetime1;

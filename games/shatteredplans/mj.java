@@ -33,8 +33,8 @@ final class mj extends qr {
         if (dn.field_k != null) {
           dk.a((byte) 54, dn.field_k);
         }
-        if (hp.field_m != null) {
-          hp.field_m.a(13505, param1);
+        if (DerelictVictoryChecker.field_m != null) {
+          DerelictVictoryChecker.field_m.a(13505, param1);
           if (param0 == 0) {
             r.a((byte) -82, param1);
             if (null != tc.field_G) {
@@ -184,10 +184,10 @@ final class mj extends qr {
 
     final boolean h(int param0) {
         if (param0 < -58) {
-          return !this.a((byte) 96) ? true : false;
+          return !this.isSecondaryLinked((byte) 96) ? true : false;
         }
         mj.g(-58);
-        return !this.a((byte) 96) ? true : false;
+        return !this.isSecondaryLinked((byte) 96) ? true : false;
     }
 
     mj(String param0, String param1, long param2) {

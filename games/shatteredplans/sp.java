@@ -150,8 +150,8 @@ final class sp {
         int var2_int = 0;
         RuntimeException var2 = null;
         Star[] var3 = null;
-        mg var3_ref = null;
-        qm var3_ref2 = null;
+        FleetMove var3_ref = null;
+        ProjectUse var3_ref2 = null;
         int var4 = 0;
         int var6 = 0;
         Star[] var7 = null;
@@ -216,13 +216,13 @@ final class sp {
             return true;
           }
           if (param0.equalsIgnoreCase("placeTannhauser")) {
-            var3_ref2 = (qm) (oq.field_a.field_P.field_i.d(0));
+            var3_ref2 = (ProjectUse) (oq.field_a.field_P.field_i.startForward(0));
             while (var3_ref2 != null) {
               if (var3_ref2.field_o == 3 &&
                 oq.field_a.field_P.field_g.field_e[12] == var3_ref2.field_r) {
                 return true;
               }
-              var3_ref2 = (qm) (oq.field_a.field_P.field_i.a((byte) -71));
+              var3_ref2 = (ProjectUse) (oq.field_a.field_P.field_i.nextForward((byte) -71));
             }
             return false;
           }
@@ -230,13 +230,13 @@ final class sp {
             stackIn_60_0 = sr.a(0, param0);
             return stackIn_60_0;
           }
-          var3_ref = (mg) (oq.field_a.field_P.field_p.a(true));
+          var3_ref = (FleetMove) (oq.field_a.field_P.field_p.a(true));
           while (true) {
             if (var3_ref == null) {
               return false;
             }
             if (ho.field_d != var3_ref.field_G) {
-              var3_ref = (mg) (oq.field_a.field_P.field_p.a((byte) -68));
+              var3_ref = (FleetMove) (oq.field_a.field_P.field_p.a((byte) -68));
               continue;
             }
             break;

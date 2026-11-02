@@ -15,12 +15,12 @@ final class fm {
         int var2;
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (param1 > ~es.field_m) {
-          if (null == bh.field_p) {
+        if (param1 > ~StarAnnotation.field_m) {
+          if (null == BoundsRect.field_p) {
             bj.field_K = si.a(640, fa.field_W, 0, (byte) 98, 0, 480);
           } else {
-            bj.field_K = bh.field_p.a(0);
-            vr.a(param1 - 15468, 2);
+            bj.field_K = BoundsRect.field_p.a(0);
+            GameRules.a(param1 - 15468, 2);
           }
           if (null == bj.field_K) {
             var2 = 3;
@@ -31,7 +31,7 @@ final class fm {
         } else {
           var2 = (w.d(true)) ? 0 : 1;
         }
-        if (null == bh.field_p &&
+        if (null == BoundsRect.field_p &&
           cp.field_u) {
           gm.a(param0, 125, var2);
         }
