@@ -19,14 +19,14 @@ final class la extends PacketBuffer {
         while (var4 < param1) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((pf.field_c[var4] & this.payload[incrementValue$0]) << -var4 + param1);
+          var5 = var5 + ((Model.field_c[var4] & this.payload[incrementValue$0]) << -var4 + param1);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (param1 == var4) {
-          var5 = var5 + (this.payload[var3] & pf.field_c[var4]);
+          var5 = var5 + (this.payload[var3] & Model.field_c[var4]);
         } else {
-          var5 = var5 + (this.payload[var3] >> var4 - param1 & pf.field_c[param1]);
+          var5 = var5 + (this.payload[var3] >> var4 - param1 & Model.field_c[param1]);
         }
         return var5;
     }

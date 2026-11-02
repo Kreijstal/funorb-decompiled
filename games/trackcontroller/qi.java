@@ -131,7 +131,7 @@ final class qi {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, pf param7) {
+    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, Model param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
@@ -177,7 +177,7 @@ final class qi {
         int var40 = 0;
         int[] var41 = null;
         int var44 = 0;
-        pf var45 = null;
+        Model var45 = null;
         int[] var50 = null;
         int[] var55 = null;
         byte[] var61 = null;
@@ -389,7 +389,7 @@ final class qi {
             qi.b(-93);
           }
           WhirlpoolDigest.a((byte) -26, param0);
-          nb.a(rk.field_Z, false, -16257);
+          MidiPlayer.a(rk.field_Z, false, -16257);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -528,8 +528,8 @@ final class qi {
 
     final static Sprite[] a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 < 114) {
-          pf var6 = (pf) null;
-          qi.a(-47, 76, (byte) -78, -114, -61, 88, -14, (pf) null);
+          Model var6 = (Model) null;
+          qi.a(-47, 76, (byte) -78, -114, -61, 88, -14, (Model) null);
         }
         return SpriteState.a(param4, 1, 1, param3, param1, param0, 1, 3, -119);
     }

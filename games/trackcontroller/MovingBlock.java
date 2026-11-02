@@ -203,7 +203,7 @@ final class MovingBlock extends IntrusiveNode {
               LevelView.field_C.writeByte(18, (byte) -92);
               LevelView.field_C.position = LevelView.field_C.position + 2;
               var10 = LevelView.field_C.position;
-              var11_ref_StringLifetime4 = bg.a(gd.b((byte) 77), -22004);
+              var11_ref_StringLifetime4 = bg.a(CachedArchiveSource.b((byte) 77), -22004);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
@@ -224,7 +224,7 @@ final class MovingBlock extends IntrusiveNode {
               jc.field_a = kl.field_a;
             } else {
               if (var9Lifetime1 == 248) {
-                ob.a(209, gd.b((byte) 77));
+                ob.a(209, CachedArchiveSource.b((byte) 77));
                 fi.field_t = gh.field_c;
                 GameKeyHandler.a((byte) 125);
                 kg.field_f = false;
@@ -265,7 +265,7 @@ final class MovingBlock extends IntrusiveNode {
             if (255 == uk.field_c) {
               var10_ref_String = ne.field_a.readOptionalString(19016);
               if (var10_ref_String != null) {
-                dh.a(-19136, var10_ref_String, gd.b((byte) 77));
+                dh.a(-19136, var10_ref_String, CachedArchiveSource.b((byte) 77));
               }
             } else {
               fi.field_t = ne.field_a.readString(0);

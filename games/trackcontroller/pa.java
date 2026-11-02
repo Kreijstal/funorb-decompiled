@@ -46,7 +46,7 @@ final class pa {
         if (param0 != 91) {
           return true;
         }
-        return af.a(9819, gd.b((byte) 77));
+        return af.a(9819, CachedArchiveSource.b((byte) 77));
     }
 
     static {

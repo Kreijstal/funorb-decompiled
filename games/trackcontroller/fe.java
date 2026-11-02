@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe extends rh {
+final class fe extends ButtonWidget {
     int field_I;
     static String field_J;
     static int field_L;
@@ -34,7 +34,7 @@ final class fe extends rh {
         }
     }
 
-    final static void a(boolean param0, wb param1, int param2) {
+    final static void a(boolean param0, MidiFile param1, int param2) {
         try {
           kg.a(param0, (byte) 116, param2, param1);
         } catch (RuntimeException runtimeException) {
@@ -98,10 +98,10 @@ final class fe extends rh {
     final static void a(int param0, Archive param1) {
         int var3 = 0;
         int var4 = 0;
-        pf var5 = null;
+        Model var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        wb var8 = null;
+        MidiFile var8 = null;
         la var9 = null;
         int var10 = 0;
         la var11 = null;
@@ -119,10 +119,10 @@ final class fe extends rh {
           var11.h((byte) 31);
           lg.field_d = hb.a(12, var11);
           if (param0 != 30344) {
-            var8 = (wb) null;
-            fe.a(true, (wb) null, -7);
+            var8 = (MidiFile) null;
+            fe.a(true, (MidiFile) null, -7);
           }
-          ef.field_a = new pf[var3];
+          ef.field_a = new Model[var3];
           kc.field_c = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
             ef.field_a[var4] = sf.a(var9, false);

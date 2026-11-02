@@ -10,18 +10,18 @@ final class o {
         IntrusiveDeque.field_c[17] = oe.field_d;
         IntrusiveDeque.field_c[2] = hd.field_r;
         IntrusiveDeque.field_c[25] = vl.field_J;
-        IntrusiveDeque.field_c[9] = rh.field_H;
+        IntrusiveDeque.field_c[9] = ButtonWidget.field_H;
         IntrusiveDeque.field_c[5] = q.field_j;
         IntrusiveDeque.field_c[11] = nh.field_d;
         IntrusiveDeque.field_c[18] = oe.field_d;
         IntrusiveDeque.field_c[1] = jd.field_h;
         IntrusiveDeque.field_c[20] = rd.field_i;
         IntrusiveDeque.field_c[12] = null;
-        IntrusiveDeque.field_c[8] = rh.field_H;
+        IntrusiveDeque.field_c[8] = ButtonWidget.field_H;
         IntrusiveDeque.field_c[26] = ag.field_a;
         IntrusiveDeque.field_c[22] = af.field_n;
-        IntrusiveDeque.field_c[7] = rh.field_H;
-        IntrusiveDeque.field_c[6] = rh.field_H;
+        IntrusiveDeque.field_c[7] = ButtonWidget.field_H;
+        IntrusiveDeque.field_c[6] = ButtonWidget.field_H;
         if (param0 == -46) {
           IntrusiveDeque.field_c[21] = af.field_n;
           IntrusiveDeque.field_c[14] = nh.field_d;

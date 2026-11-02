@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ml extends IntrusiveNode {
+final class VorbisDecoder extends IntrusiveNode {
     private static float[] field_p;
     private byte[] field_F;
     private int field_G;
@@ -105,9 +105,9 @@ final class ml extends IntrusiveNode {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        ml.a(param0, 0);
-        field_K = 1 << ml.f(4);
-        field_s = 1 << ml.f(4);
+        VorbisDecoder.a(param0, 0);
+        field_K = 1 << VorbisDecoder.f(4);
+        field_s = 1 << VorbisDecoder.f(4);
         field_j = new float[field_s];
         for (var1 = 0; var1 < 2; var1++) {
           if (var1 == 0) {
@@ -151,49 +151,49 @@ final class ml extends IntrusiveNode {
             field_I = var9;
           }
         }
-        var1Lifetime1 = ml.f(8) + 1;
+        var1Lifetime1 = VorbisDecoder.f(8) + 1;
         field_w = new uc[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
           field_w[var2Lifetime1] = new uc();
         }
-        var2Lifetime2 = ml.f(6) + 1;
+        var2Lifetime2 = VorbisDecoder.f(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
-          ml.f(16);
+          VorbisDecoder.f(16);
         }
-        var2Lifetime3 = ml.f(6) + 1;
+        var2Lifetime3 = VorbisDecoder.f(6) + 1;
         field_q = new df[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
           field_q[var3Lifetime2] = new df();
         }
-        var3Lifetime3 = ml.f(6) + 1;
+        var3Lifetime3 = VorbisDecoder.f(6) + 1;
         field_t = new sh[var3Lifetime3];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
           field_t[var4Lifetime1] = new sh();
         }
-        var4Lifetime2 = ml.f(6) + 1;
+        var4Lifetime2 = VorbisDecoder.f(6) + 1;
         field_r = new pe[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
           field_r[var5Lifetime1] = new pe();
         }
-        var5Lifetime2 = ml.f(6) + 1;
+        var5Lifetime2 = VorbisDecoder.f(6) + 1;
         field_L = new boolean[var5Lifetime2];
         field_k = new int[var5Lifetime2];
         for (var6 = 0; var6 < var5Lifetime2; var6++) {
           stackIn_41_0 = (boolean[]) (field_L);
           stackIn_41_1 = var6;
-          stackIn_42_2 = (ml.b() != 0);
+          stackIn_42_2 = (VorbisDecoder.b() != 0);
           stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-          ml.f(16);
-          ml.f(16);
-          field_k[var6] = ml.f(8);
+          VorbisDecoder.f(16);
+          VorbisDecoder.f(16);
+          field_k[var6] = VorbisDecoder.f(8);
         }
         field_A = true;
     }
 
-    final static ml a(Archive param0, int param1, int param2) {
+    final static VorbisDecoder a(Archive param0, int param1, int param2) {
         try {
-          ml var4_ref = null;
-          if (!ml.a(param0)) {
+          VorbisDecoder var4_ref = null;
+          if (!VorbisDecoder.a(param0)) {
             param0.a(param1, param2, -1);
             return null;
           }
@@ -203,7 +203,7 @@ final class ml extends IntrusiveNode {
           }
           Object var4 = null;
           try {
-            var4_ref = new ml(var3);
+            var4_ref = new VorbisDecoder(var3);
           } catch (IOException iOException) {
             iOException.printStackTrace();
           }
@@ -346,9 +346,9 @@ final class ml extends IntrusiveNode {
         float var30Lifetime1Lifetime3;
         int var18_intLifetime1;
         int var18_intLifetime2;
-        ml.a(this.field_o[param0], 0);
-        ml.b();
-        var2 = ml.f(LevelData.b(false, field_k.length - 1));
+        VorbisDecoder.a(this.field_o[param0], 0);
+        VorbisDecoder.b();
+        var2 = VorbisDecoder.f(LevelData.b(false, field_k.length - 1));
         var3 = field_L[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_K;
@@ -359,9 +359,9 @@ final class ml extends IntrusiveNode {
         var5 = 0;
         var6 = 0;
         if (var3 != 0) {
-          stackIn_7_0 = (ml.b() == 0) ? 0 : 1;
+          stackIn_7_0 = (VorbisDecoder.b() == 0) ? 0 : 1;
           var5 = stackIn_7_0;
-          stackIn_10_0 = (ml.b() == 0) ? 0 : 1;
+          stackIn_10_0 = (VorbisDecoder.b() == 0) ? 0 : 1;
           var6 = stackIn_10_0;
         }
         var7 = var4 >> 1;
@@ -717,10 +717,10 @@ final class ml extends IntrusiveNode {
         field_M = 0;
     }
 
-    final static ml a(Archive param0, String param1, String param2) {
+    final static VorbisDecoder a(Archive param0, String param1, String param2) {
         try {
-          ml var4_ref = null;
-          if (!ml.a(param0)) {
+          VorbisDecoder var4_ref = null;
+          if (!VorbisDecoder.a(param0)) {
             param0.a(param1, param2, (byte) -45);
             return null;
           }
@@ -730,7 +730,7 @@ final class ml extends IntrusiveNode {
           }
           Object var4 = null;
           try {
-            var4_ref = new ml(var3);
+            var4_ref = new VorbisDecoder(var3);
           } catch (IOException iOException) {
             iOException.printStackTrace();
           }
@@ -749,12 +749,12 @@ final class ml extends IntrusiveNode {
           if (var1 == null) {
             return false;
           }
-          ml.a(var1);
+          VorbisDecoder.a(var1);
         }
         return true;
     }
 
-    private ml(byte[] param0) throws IOException {
+    private VorbisDecoder(byte[] param0) throws IOException {
         this.b(param0);
     }
 

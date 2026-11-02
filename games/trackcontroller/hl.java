@@ -118,42 +118,42 @@ abstract class hl extends td {
           }
           return;
         }
-        if (gd.field_p == null) {
-          gd.field_p = new Sprite(this.field_x, this.field_u);
-          mb.a((byte) -116, gd.field_p);
+        if (CachedArchiveSource.field_p == null) {
+          CachedArchiveSource.field_p = new Sprite(this.field_x, this.field_u);
+          mb.a((byte) -116, CachedArchiveSource.field_p);
           SoftwareRasterizer.a();
           this.b(0, 20, 0);
           super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
           GameShell.m(119);
-          gd.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
+          CachedArchiveSource.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
           return;
         }
-        if (this.field_x > gd.field_p.field_t) {
-          gd.field_p = new Sprite(this.field_x, this.field_u);
-          mb.a((byte) -116, gd.field_p);
+        if (this.field_x > CachedArchiveSource.field_p.field_t) {
+          CachedArchiveSource.field_p = new Sprite(this.field_x, this.field_u);
+          mb.a((byte) -116, CachedArchiveSource.field_p);
           SoftwareRasterizer.a();
           this.b(0, 20, 0);
           super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
           GameShell.m(119);
-          gd.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
+          CachedArchiveSource.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
           return;
         }
-        if (this.field_u > gd.field_p.field_q) {
-          gd.field_p = new Sprite(this.field_x, this.field_u);
-          mb.a((byte) -116, gd.field_p);
+        if (this.field_u > CachedArchiveSource.field_p.field_q) {
+          CachedArchiveSource.field_p = new Sprite(this.field_x, this.field_u);
+          mb.a((byte) -116, CachedArchiveSource.field_p);
           SoftwareRasterizer.a();
           this.b(0, 20, 0);
           super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
           GameShell.m(119);
-          gd.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
+          CachedArchiveSource.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
           return;
         }
-        mb.a((byte) -116, gd.field_p);
+        mb.a((byte) -116, CachedArchiveSource.field_p);
         SoftwareRasterizer.a();
         this.b(0, 20, 0);
         super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
         GameShell.m(119);
-        gd.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
+        CachedArchiveSource.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
     }
 
     public static void l(int param0) {

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w extends wd implements m {
-    private rh field_S;
+final class w extends wd implements ButtonListener {
+    private ButtonWidget field_S;
     static int field_T;
     static double field_U;
     static ce field_V;
@@ -16,12 +16,12 @@ final class w extends wd implements m {
         field_V = null;
     }
 
-    private final rh a(int param0, String param1, tg param2) {
-        rh var4 = null;
+    private final ButtonWidget a(int param0, String param1, tg param2) {
+        ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        rh stackIn_2_0 = null;
-        rh stackIn_4_0 = null;
+        ButtonWidget stackIn_2_0 = null;
+        ButtonWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -30,10 +30,10 @@ final class w extends wd implements m {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 23879) {
-            stackIn_2_0 = (rh) null;
+            stackIn_2_0 = (ButtonWidget) null;
             return stackIn_2_0;
           }
-          var4 = new rh(param1, param2);
+          var4 = new ButtonWidget(param1, param2);
           var4.field_y = (t) ((Object) new dc());
           var5 = this.field_u - 6;
           this.field_u = this.field_u + 38;
@@ -62,7 +62,7 @@ final class w extends wd implements m {
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -116,7 +116,7 @@ final class w extends wd implements m {
               this.field_u = this.field_u + 10;
               if (rf.b(120)) {
                 this.field_u = this.field_u + 20;
-                var3 = nb.field_A;
+                var3 = MidiPlayer.field_A;
               }
             }
           }
@@ -155,8 +155,8 @@ final class w extends wd implements m {
         }
         this.field_E = false;
         if (param0 != 0) {
-          rh var3 = (rh) null;
-          this.a((rh) null, -7, -55, -15, 33);
+          ButtonWidget var3 = (ButtonWidget) null;
+          this.a((ButtonWidget) null, -7, -55, -15, 33);
         }
     }
 

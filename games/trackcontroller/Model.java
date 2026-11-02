@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pf {
+final class Model {
     short[] field_Q;
     static int field_U;
     int field_p;
@@ -35,7 +35,7 @@ final class pf {
     int field_w;
     static String field_N;
     static String[] field_C;
-    static wb[] field_P;
+    static MidiFile[] field_P;
     int[] field_s;
     short[] field_H;
     short[] field_I;
@@ -66,7 +66,7 @@ final class pf {
         field_P = null;
         field_C = null;
         if (param0 < 54) {
-          pf.a(100);
+          Model.a(100);
         }
     }
 
@@ -82,7 +82,7 @@ final class pf {
           try {
             Thread.sleep(param1);
             if (param0 != 3) {
-              field_P = (wb[]) null;
+              field_P = (MidiFile[]) null;
             }
           } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,7 +110,7 @@ final class pf {
         this.a((byte) -59);
     }
 
-    pf() {
+    Model() {
         this.field_F = false;
         this.field_a = (byte) 0;
     }
@@ -180,7 +180,7 @@ final class pf {
           this.field_i = var2;
           return;
         }
-        pf.a(-106, 23L);
+        Model.a(-106, 23L);
         this.field_F = true;
         var2Lifetime1 = 32767;
         var3Lifetime1 = 32767;
@@ -222,7 +222,7 @@ final class pf {
     static {
         field_T = false;
         field_c = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
-        field_P = new wb[4];
+        field_P = new MidiFile[4];
         field_U = 0;
         field_C = new String[255];
         field_N = "Password is valid";

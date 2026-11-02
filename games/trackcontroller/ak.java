@@ -7,13 +7,13 @@ final class ak {
     static String field_c;
 
     final static void a(Archive param0, int param1) {
-        ml var2 = null;
+        VorbisDecoder var2 = null;
         try {
           if (param1 != 4) {
             field_a = (String) null;
           }
-          ml.a(param0.a("headers.packvorbis", param1 ^ -5, ""));
-          var2 = ml.a(param0, "jagex logo2.packvorbis", "");
+          VorbisDecoder.a(param0.a("headers.packvorbis", param1 ^ -5, ""));
+          var2 = VorbisDecoder.a(param0, "jagex logo2.packvorbis", "");
           var2.a();
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ak.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

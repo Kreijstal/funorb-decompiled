@@ -110,10 +110,10 @@ final class gk {
           }
           var4 = var15.readUnsignedByte(16383);
           if (var4 != 0) {
-            pf.field_C[0] = ue.field_a;
+            Model.field_C[0] = ue.field_a;
             var5 = var3.field_k;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              pf.field_C[var6_int] = var13.readString(0);
+              Model.field_C[var6_int] = var13.readString(0);
             }
             AsyncRequest.a(var4, -14032, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -132,12 +132,12 @@ final class gk {
             var10 = 0;
             while (var8 > var9) {
               var11 = lf.field_Y[var9];
-              var6[0][var10] = pf.field_C[var11];
+              var6[0][var10] = Model.field_C[var11];
               var19[0][var10 * 4] = SpriteState.field_u[var11];
               var19[0][1 + 4 * var10] = ii.field_q[var11];
               var19[0][4 * var10 + 2] = qf.field_a[var11];
               var19[0][3 + var10 * 4] = qi.field_b[var11];
-              if (rb.a(false, pf.field_C[var11]) &&
+              if (rb.a(false, Model.field_C[var11]) &&
                 qf.field_a[var11] + ii.field_q[var11] + qi.field_b[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -150,12 +150,12 @@ final class gk {
             var10Lifetime1 = var14;
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = lf.field_Y[var9Lifetime1 + var5];
-              var6[1][var14] = pf.field_C[var11Lifetime1];
+              var6[1][var14] = Model.field_C[var11Lifetime1];
               var19[1][4 * var14] = SpriteState.field_u[var11Lifetime1];
               var19[1][var14 * 4 + 1] = ii.field_q[var11Lifetime1];
               var19[1][2 + var14 * 4] = qf.field_a[var11Lifetime1];
               var19[1][var14 * 4 + 3] = qi.field_b[var11Lifetime1];
-              if (rb.a(false, pf.field_C[var11Lifetime1]) &&
+              if (rb.a(false, Model.field_C[var11Lifetime1]) &&
                 qf.field_a[var11Lifetime1] + ii.field_q[var11Lifetime1] + qi.field_b[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;

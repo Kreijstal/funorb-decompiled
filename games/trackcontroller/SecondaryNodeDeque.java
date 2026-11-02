@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class SecondaryNodeDeque implements Iterable {
-    static ae field_d;
+    static ArchiveRequestConnection field_d;
     DualLinkNode field_e;
     static int field_b;
     static int mouseButton;

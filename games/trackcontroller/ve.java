@@ -39,7 +39,7 @@ final class ve extends ug {
             return stackIn_15_0;
           }
           if (param0 != 11) {
-            ve.a(-101, 122, 42, (pf) null, false);
+            ve.a(-101, 122, 42, (Model) null, false);
           }
           if (param1.equals("Z")) {
             stackIn_22_0 = Boolean.TYPE;
@@ -73,7 +73,7 @@ final class ve extends ug {
         }
     }
 
-    final static void a(int param0, int param1, int param2, pf param3, boolean param4) {
+    final static void a(int param0, int param1, int param2, Model param3, boolean param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_11_0 = false;
         int stackIn_27_0 = 0;

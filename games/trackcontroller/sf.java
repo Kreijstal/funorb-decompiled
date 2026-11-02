@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends td implements m {
-    private rh field_E;
-    private rh field_C;
+final class sf extends td implements ButtonListener {
+    private ButtonWidget field_E;
+    private ButtonWidget field_C;
     static ba field_D;
     static int field_F;
-    private rh field_G;
+    private ButtonWidget field_G;
     static java.awt.Frame field_H;
 
-    final static pf a(la param0, boolean param1) {
+    final static Model a(la param0, boolean param1) {
         int stackIn_28_0 = 0;
         int stackIn_28_1 = 0;
-        pf stackIn_35_0 = null;
+        Model stackIn_35_0 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
@@ -21,7 +21,7 @@ final class sf extends td implements m {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        pf var5 = null;
+        Model var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -36,7 +36,7 @@ final class sf extends td implements m {
             field_H = (java.awt.Frame) null;
           }
           var4 = lf.a((byte) -68, param0) ? 1 : 0;
-          var5 = new pf();
+          var5 = new Model();
           var5.field_q = (short)param0.d(0, 16);
           var5.field_y = v.a(16, var5.field_y, param0, 115);
           var5.field_o = v.a(16, var5.field_o, param0, 39);
@@ -1629,7 +1629,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "login_username");
                 if (null != var2) {
-                  nb.field_q = ta.a(32200, var2);
+                  MidiPlayer.field_q = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "login_email");
                 if (null != var2) {
@@ -1809,7 +1809,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "create_passwordvalid");
                 if (var2 != null) {
-                  pf.field_N = ta.a(32200, var2);
+                  Model.field_N = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_emailvalid");
                 if (null != var2) {
@@ -2033,7 +2033,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "instructions");
                 if (null != var2) {
-                  rh.field_H = ta.a(32200, var2);
+                  ButtonWidget.field_H = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "tutorial");
                 if (var2 != null) {
@@ -2129,7 +2129,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "nextlevel");
                 if (null != var2) {
-                  rh.field_E = ta.a(32200, var2);
+                  ButtonWidget.field_E = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "startgame");
                 if (var2 != null) {
@@ -2852,7 +2852,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "fs_focus_or_resolution");
                 if (null != var2) {
-                  nb.field_A = ta.a(32200, var2);
+                  MidiPlayer.field_A = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "fs_timeout");
                 if (var2 != null) {
@@ -2860,7 +2860,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "fs_button_tryagain");
                 if (var2 != null) {
-                  vk.field_i = ta.a(32200, var2);
+                  GameStringTable.field_i = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "graphics_ui_fs_countdown");
                 if (null != var2) {
@@ -3215,9 +3215,9 @@ final class sf extends td implements m {
         int var3 = 0;
         int var4 = 0;
         try {
-          this.field_G = new rh(md.field_f, (tg) null);
-          this.field_E = new rh(UiWidget.field_v, (tg) null);
-          this.field_C = new rh(v.field_d, (tg) null);
+          this.field_G = new ButtonWidget(md.field_f, (tg) null);
+          this.field_E = new ButtonWidget(UiWidget.field_v, (tg) null);
+          this.field_C = new ButtonWidget(v.field_d, (tg) null);
           var1 = new dc();
           this.field_G.field_y = (t) ((Object) var1);
           this.field_E.field_y = (t) ((Object) var1);
@@ -3335,7 +3335,7 @@ final class sf extends td implements m {
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;

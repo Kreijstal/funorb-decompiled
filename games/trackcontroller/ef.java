@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ef {
-    static pf[] field_a;
+    static Model[] field_a;
     static ud field_b;
 
-    final static void a(vk param0, int param1, int param2) {
+    final static void a(GameStringTable param0, int param1, int param2) {
         la var3 = LevelView.field_C;
         var3.c(param1, 7);
         if (param2 != 10) {
@@ -23,7 +23,7 @@ final class ef {
         field_b = null;
         field_a = null;
         if (param0 != 27887) {
-          field_a = (pf[]) null;
+          field_a = (Model[]) null;
         }
     }
 

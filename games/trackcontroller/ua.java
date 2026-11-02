@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ua extends rh {
+final class ua extends ButtonWidget {
     private eh field_I;
     static ActiveLevel field_L;
     static String field_K;

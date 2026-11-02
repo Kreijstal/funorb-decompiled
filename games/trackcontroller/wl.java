@@ -14,22 +14,22 @@ final class wl extends IntrusiveNode {
             return;
           }
           if (param0 % 10L != 0L) {
-            pf.a(3, param0);
+            Model.a(3, param0);
             return;
           }
-          pf.a(3, -1L + param0);
-          pf.a(3, 1L);
+          Model.a(3, -1L + param0);
+          Model.a(3, 1L);
           return;
         }
         if (0L >= param0) {
           return;
         }
         if (param0 % 10L != 0L) {
-          pf.a(3, param0);
+          Model.a(3, param0);
           return;
         }
-        pf.a(3, -1L + param0);
-        pf.a(3, 1L);
+        Model.a(3, -1L + param0);
+        Model.a(3, 1L);
     }
 
     wl(byte[] param0) {

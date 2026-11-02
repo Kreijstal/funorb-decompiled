@@ -180,8 +180,8 @@ final class ma implements t {
             return;
           }
           var8 = TrackController.field_D[1];
-          if (param1 instanceof rh &&
-            ((rh) (param1)).field_G) {
+          if (param1 instanceof ButtonWidget &&
+            ((ButtonWidget) (param1)).field_G) {
             var8.a((param1.field_x - var8.field_s >> 1) + (1 + var6_int), var7 + 1 + (param1.field_u - var8.field_v >> 1), 256);
           }
           if (param1.h(-111)) {

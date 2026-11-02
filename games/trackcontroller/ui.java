@@ -265,14 +265,14 @@ final class ui extends di {
             return stackIn_17_0;
           }
           if (var6.length() <= 0) {
-            stackIn_31_0 = pf.field_N;
+            stackIn_31_0 = Model.field_N;
             return stackIn_31_0;
           }
           if (MouseInputHandler.a(var6, var5, (byte) -11)) {
             stackIn_21_0 = qd.field_c;
             return stackIn_21_0;
           }
-          if (rh.a(param1 ^ 19012, var6, var5)) {
+          if (ButtonWidget.a(param1 ^ 19012, var6, var5)) {
             stackIn_25_0 = fe.field_J;
             return stackIn_25_0;
           }
@@ -312,7 +312,7 @@ final class ui extends di {
         if (!param1) {
           ui.h(85);
         }
-        return (pf.field_U & 1 << param0) != 0 ? true : false;
+        return (Model.field_U & 1 << param0) != 0 ? true : false;
     }
 
     static {

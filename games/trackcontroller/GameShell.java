@@ -8,7 +8,7 @@ abstract class GameShell extends GameApplet {
     private int field_q;
     static byte[][] field_z;
     private int field_u;
-    static wb field_n;
+    static MidiFile field_n;
     static volatile int pressY;
     private boolean field_r;
     private boolean field_v;
@@ -172,7 +172,7 @@ abstract class GameShell extends GameApplet {
         int var4 = hd.field_o - 1;
         byte[] var5 = new byte[var4];
         ne.field_a.a(var4, false, 0, var5);
-        ib.a(var3 != 0, ta.a(32200, var5), gd.b((byte) 77), (byte) -25);
+        ib.a(var3 != 0, ta.a(32200, var5), CachedArchiveSource.b((byte) 77), (byte) -25);
     }
 
     final void a(int param0, boolean param1, boolean param2, boolean param3, boolean param4) {
@@ -218,7 +218,7 @@ abstract class GameShell extends GameApplet {
 
     private final void i(int param0) {
         String var2 = aj.a((byte) 107);
-        kc.a(gd.b((byte) 77), 1263, var2);
+        kc.a(CachedArchiveSource.b((byte) 77), 1263, var2);
         if (param0 != 3) {
           this.a(false, -56, 125, -69, 16, (byte) -87, 69, 98);
         }
@@ -390,7 +390,7 @@ abstract class GameShell extends GameApplet {
               jb.a(true);
             }
             if (!param1) {
-              var5_intLifetime2 = da.a(this.field_v, false, l.h(0), qk.b(false), 113, this.field_B);
+              var5_intLifetime2 = SocketArchiveRequestConnection.a(this.field_v, false, l.h(0), qk.b(false), 113, this.field_B);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   af.a(-114, var5_intLifetime2, fi.field_t);
@@ -408,36 +408,36 @@ abstract class GameShell extends GameApplet {
           }
           if (var4 == 4) {
             if (oc.field_i) {
-              we.a(0, gd.b((byte) 77));
+              we.a(0, CachedArchiveSource.b((byte) 77));
             } else {
               ge.field_D = true;
               rl.field_N = 10;
             }
           }
           if (5 == var4) {
-            af.a(gd.b((byte) 77), (byte) -9);
+            af.a(CachedArchiveSource.b((byte) 77), (byte) -9);
           }
           if (var4 == 6 &&
             BufferedSocket.field_d) {
             rl.field_N = 10;
           }
           if (var4 == 7) {
-            qh.a(!param0, gd.b((byte) 77));
+            qh.a(!param0, CachedArchiveSource.b((byte) 77));
           }
           if (var4 == 8) {
-            we.a(0, gd.b((byte) 77));
+            we.a(0, CachedArchiveSource.b((byte) 77));
           }
           if (var4 == 9) {
-            ma.a(-9969, gd.b((byte) 77));
+            ma.a(-9969, CachedArchiveSource.b((byte) 77));
           }
           if (var4 == 10) {
             LevelView.field_C.c(17, 7);
           }
           if (var4 == 11) {
-            q.a(gd.b((byte) 77), -1);
+            q.a(CachedArchiveSource.b((byte) 77), -1);
           }
           if (var4 == 12) {
-            gk.a(vk.b(true), gd.b((byte) 77), -104);
+            gk.a(GameStringTable.b(true), CachedArchiveSource.b((byte) 77), -104);
           }
           if (13 == var4) {
             try {
@@ -496,7 +496,7 @@ abstract class GameShell extends GameApplet {
         if (li.field_i) {
           return -1;
         }
-        var2 = da.a(this.field_v, true, l.h(0), qk.b(false), 78, this.field_B);
+        var2 = SocketArchiveRequestConnection.a(this.field_v, true, l.h(0), qk.b(false), 78, this.field_B);
         if (var2 == -1) {
           return -1;
         }
@@ -529,7 +529,7 @@ abstract class GameShell extends GameApplet {
           SoftwareRasterizer.a(var1.field_l, var1.field_j, var1.field_n);
           SoftwareRasterizer.e(var1.field_q, var1.field_m, var1.field_k, var1.field_i);
           var1.field_l = null;
-          gd.field_q.addLast((byte) -111, var1);
+          CachedArchiveSource.field_q.addLast((byte) -111, var1);
           return;
         }
         throw new IllegalStateException();
@@ -714,7 +714,7 @@ abstract class GameShell extends GameApplet {
           ok.field_G = null;
           ha.field_x = null;
           ei.field_i = null;
-          rh.a((java.applet.Applet) (this), (byte) 33);
+          ButtonWidget.a((java.applet.Applet) (this), (byte) 33);
           qi.d(-80);
           gl.field_I = 10;
         }

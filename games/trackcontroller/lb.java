@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lb extends rh {
+class lb extends ButtonWidget {
     static boolean field_M;
     private int field_L;
     private long field_R;

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd extends td implements m {
-    private rh[] field_K;
+final class nd extends td implements ButtonListener {
+    private ButtonWidget[] field_K;
     private a field_J;
     private String[] field_D;
     static int[] field_F;
@@ -34,7 +34,7 @@ final class nd extends td implements m {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
-            param1.position = param1.position + nb.field_v.a(param1.payload, param1.position, 0, 0, var3_int, var4);
+            param1.position = param1.position + MidiPlayer.field_v.a(param1.payload, param1.position, 0, 0, var3_int, var4);
             var5 = ka.a(0, -129, var4, var3_int);
             stackIn_6_0 = var5;
             return stackIn_6_0;
@@ -200,19 +200,19 @@ final class nd extends td implements m {
               this.field_D[var4_int] = ob.a((byte) 100, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
             var4 = new ne(gk.field_c, 0, 1);
-            this.field_K = new rh[1 + var3_int];
+            this.field_K = new ButtonWidget[1 + var3_int];
             if (param1 != -58) {
               var7 = (PacketBuffer) null;
               nd.a(59, (PacketBuffer) null, -116);
             }
             for (var5 = 0; var3_int > var5; var5++) {
-              this.field_K[var5] = new rh(this.field_D[var5], (tg) (this));
+              this.field_K[var5] = new ButtonWidget(this.field_D[var5], (tg) (this));
               this.field_K[var5].field_y = (t) ((Object) var4);
               this.field_K[var5].field_n = ke.field_b;
               this.field_K[var5].a(15, -3050, 16 * var5 + 20, 80, 0);
               this.a(false, this.field_K[var5]);
             }
-            this.field_K[var3_int] = new rh(j.field_d, (tg) (this));
+            this.field_K[var3_int] = new ButtonWidget(j.field_d, (tg) (this));
             this.field_K[var3_int].field_y = (t) ((Object) var4);
             this.field_K[var3_int].a(15, -3050, (var3_int + 1) * 16 + 20, 100, 0);
             this.a(false, this.field_K[var3_int]);
@@ -234,7 +234,7 @@ final class nd extends td implements m {
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;

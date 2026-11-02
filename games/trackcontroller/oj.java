@@ -7,7 +7,7 @@ final class oj {
     static String field_c;
     static aa field_a;
 
-    final static void a(int param0, boolean param1, boolean param2, pf param3, int[] param4, int[] param5, boolean param6) {
+    final static void a(int param0, boolean param1, boolean param2, Model param3, int[] param4, int[] param5, boolean param6) {
         int stackIn_62_0 = 0;
         int stackIn_62_1 = 0;
         RuntimeException stackIn_67_0 = null;
@@ -145,7 +145,7 @@ final class oj {
                   var24Lifetime1 = param3.field_v[var23Lifetime2];
                   var25Lifetime1 = param3.field_z[var23Lifetime2];
                   var26Lifetime1 = param3.field_s[var23Lifetime2];
-                  nb.field_s[var23Lifetime2] = (var18 * var26Lifetime1 + var12 * var24Lifetime1 + var25Lifetime1 * var15 >> 16) + var9;
+                  MidiPlayer.field_s[var23Lifetime2] = (var18 * var26Lifetime1 + var12 * var24Lifetime1 + var25Lifetime1 * var15 >> 16) + var9;
                   jb.field_b[var23Lifetime2] = var10 + (var25Lifetime1 * var16 + (var13 * var24Lifetime1 + var26Lifetime1 * var19) >> 16);
                   ActiveLevel.field_B[var23Lifetime2] = (var26Lifetime1 * var20 + (var17 * var25Lifetime1 + var14 * var24Lifetime1) >> 16) + var11;
                   var23Lifetime2++;

@@ -39,7 +39,7 @@ abstract class LevelGrid {
             var8 = -65 & this.tileFlags[var5][var7];
             if (var8 >= 7 &&
               var8 < 38) {
-              ii.field_r[var8].e(var6, var4);
+              ii.tileSprites[var8].e(var6, var4);
               if ((this.tileFlags[var5][var7] & 64) != 0) {
                 ue.a(var6, var8, (byte) 91, var4);
               }
@@ -47,14 +47,14 @@ abstract class LevelGrid {
               if (var8 == 38) {
                 if (param0 &&
                   this.tickCount % 30 < 15) {
-                  ii.field_r[50].e(var6, var4);
+                  ii.tileSprites[50].e(var6, var4);
                 }
                 var9 = this.field_b / 3 % 4;
                 if (ui.a(0, param2) &&
                   this.field_b != 0) {
-                  da.field_p[32 + this.field_l][var9].e(var6, var4);
+                  SocketArchiveRequestConnection.avatarSprites[32 + this.field_l][var9].e(var6, var4);
                 } else {
-                  da.field_p[this.field_l][var9].e(var6, var4);
+                  SocketArchiveRequestConnection.avatarSprites[this.field_l][var9].e(var6, var4);
                 }
               }
             }
@@ -183,22 +183,22 @@ abstract class LevelGrid {
               var5 != 2) {
               switch (var5) {
                 case 4:
-                  ii.field_r[ActiveLevel.field_H[this.field_m]].g(param0, param1);
+                  ii.tileSprites[ActiveLevel.field_H[this.field_m]].g(param0, param1);
                   break regionExit1;
                 case 3:
-                  ii.field_r[ActiveLevel.field_H[this.field_m]].e(param0, param1);
+                  ii.tileSprites[ActiveLevel.field_H[this.field_m]].e(param0, param1);
                   break regionExit1;
                 case 6:
-                  ii.field_r[ki.field_c[this.field_m]].f(param0, param1);
+                  ii.tileSprites[ki.field_c[this.field_m]].f(param0, param1);
                   break regionExit1;
                 default:
                   break regionExit1;
                 case 5:
-                  ii.field_r[ki.field_c[this.field_m]].e(param0, param1);
+                  ii.tileSprites[ki.field_c[this.field_m]].e(param0, param1);
                   break regionExit1;
               }
             }
-            ii.field_r[param3].e(param0, param1);
+            ii.tileSprites[param3].e(param0, param1);
           }
         }
         if (param2 != 0) {
@@ -267,7 +267,7 @@ abstract class LevelGrid {
             var9 = this.targetLayout[var6][var8];
             if (var9 >= 7 &&
               var9 < 38) {
-              ii.field_r[var9].e(var7, var5);
+              ii.tileSprites[var9].e(var7, var5);
             }
             var7 += 26;
           }

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class rh extends UiWidget {
+class ButtonWidget extends UiWidget {
     static boolean field_F;
     private boolean field_D;
     boolean field_G;
@@ -30,7 +30,7 @@ class rh extends UiWidget {
         try {
           if (this.h(-87) && (84 == param3 ||
             param3 == 83)) {
-            this.b(-1, -1, 0, 1);
+            this.activate(-1, -1, 0, 1);
             return true;
           }
           var5_int = 38 / ((17 - param0) / 51);
@@ -49,12 +49,12 @@ class rh extends UiWidget {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void activate(int param0, int param1, int param2, int param3) {
         if (param2 != 0) {
           this.field_D = false;
           if (this.field_l != null) {
-            if (this.field_l instanceof m) {
-              ((m) (this.field_l)).a(this, param3, param0, param1, -27322);
+            if (this.field_l instanceof ButtonListener) {
+              ((ButtonListener) (this.field_l)).a(this, param3, param0, param1, -27322);
             }
             return;
           }
@@ -63,13 +63,13 @@ class rh extends UiWidget {
         if (this.field_l == null) {
           return;
         }
-        if (this.field_l instanceof m) {
-          ((m) (this.field_l)).a(this, param3, param0, param1, -27322);
+        if (this.field_l instanceof ButtonListener) {
+          ((ButtonListener) (this.field_l)).a(this, param3, param0, param1, -27322);
           return;
         }
     }
 
-    rh(String param0, t param1, tg param2) {
+    ButtonWidget(String param0, t param1, tg param2) {
         super(param0, param1, param2);
         this.field_D = false;
         this.field_C = true;
@@ -122,7 +122,7 @@ class rh extends UiWidget {
           return;
         }
         String var2 = (String) null;
-        rh.a(31, (String) null, (String) null);
+        ButtonWidget.a(31, (String) null, (String) null);
         field_E = null;
     }
 
@@ -274,7 +274,7 @@ class rh extends UiWidget {
             }
             if (this.a(param1, param0, kf.mouseX, false, fg.mouseY) &&
               0 == SecondaryNodeDeque.mouseButton) {
-              this.b(-param0 + fg.mouseY, -param1 + kf.mouseX, 0, this.field_r);
+              this.activate(-param0 + fg.mouseY, -param1 + kf.mouseX, 0, this.field_r);
             }
             this.a(param3, false, fg.mouseY, param0, kf.mouseX, param1);
           }
@@ -329,7 +329,7 @@ class rh extends UiWidget {
         }
     }
 
-    rh(String param0, tg param1) {
+    ButtonWidget(String param0, tg param1) {
         this(param0, lb.field_O.field_h, param1);
     }
 
@@ -348,7 +348,7 @@ class rh extends UiWidget {
         }
     }
 
-    protected rh() {
+    protected ButtonWidget() {
         this.field_D = false;
         this.field_C = true;
         this.field_B = true;

@@ -5,23 +5,23 @@ final class qe extends PcmStream {
     private int field_t;
     private int[] field_s;
     private boolean field_q;
-    private wb field_y;
+    private MidiFile field_y;
     static ba field_C;
-    private nb field_A;
-    private nb field_w;
+    private MidiPlayer field_A;
+    private MidiPlayer field_w;
     private int field_m;
-    private nb field_r;
+    private MidiPlayer field_r;
     private int field_v;
     private int field_u;
     static int[] field_z;
-    private wb field_o;
+    private MidiFile field_o;
     private boolean field_D;
     private int[] field_B;
     static aa field_n;
-    private wb field_x;
+    private MidiFile field_x;
     static int field_p;
 
-    private final void a(int param0, int param1, nb param2, int param3) {
+    private final void a(int param0, int param1, MidiPlayer param2, int param3) {
         try {
           param2.a(param0, (byte) -116, param1);
           param2.a(0, param3);
@@ -272,15 +272,15 @@ final class qe extends PcmStream {
         field_n = null;
     }
 
-    final synchronized void a(boolean param0, int param1, boolean param2, int param3, wb param4, int param5) {
+    final synchronized void a(boolean param0, int param1, boolean param2, int param3, MidiFile param4, int param5) {
         boolean stackIn_21_1 = false;
         int stackIn_35_0 = 0;
-        nb stackIn_45_0 = null;
-        wb stackIn_45_1 = null;
+        MidiPlayer stackIn_45_0 = null;
+        MidiFile stackIn_45_1 = null;
         int stackIn_45_2 = 0;
         boolean stackIn_46_3;
-        nb stackIn_54_0 = null;
-        wb stackIn_54_1 = null;
+        MidiPlayer stackIn_54_0 = null;
+        MidiFile stackIn_54_1 = null;
         int stackIn_54_2 = 0;
         boolean stackIn_55_3;
         RuntimeException stackIn_60_0 = null;
@@ -347,10 +347,10 @@ final class qe extends PcmStream {
             this.field_y = param4;
             if (param4 != null) {
               stackIn_54_0 = this.field_r;
-              stackIn_54_1 = (wb) (param4);
+              stackIn_54_1 = (MidiFile) (param4);
               stackIn_54_2 = 14526;
               stackIn_55_3 = !(param0);
-              ((nb) (Object) stackIn_54_0).a(stackIn_54_1, stackIn_54_2, stackIn_55_3);
+              ((MidiPlayer) (Object) stackIn_54_0).a(stackIn_54_1, stackIn_54_2, stackIn_55_3);
               this.a(param5, -1, this.field_r, param3);
             }
             this.field_v = -param1;
@@ -361,10 +361,10 @@ final class qe extends PcmStream {
             this.field_x = param4;
             if (param4 != null) {
               stackIn_45_0 = this.field_w;
-              stackIn_45_1 = (wb) (param4);
+              stackIn_45_1 = (MidiFile) (param4);
               stackIn_45_2 = 14526;
               stackIn_46_3 = !(param0);
-              ((nb) (Object) stackIn_45_0).a(stackIn_45_1, stackIn_45_2, stackIn_46_3);
+              ((MidiPlayer) (Object) stackIn_45_0).a(stackIn_45_1, stackIn_45_2, stackIn_46_3);
               this.a(param5, -1, this.field_w, param3);
             }
             this.field_v = param1;

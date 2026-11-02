@@ -154,7 +154,7 @@ final class rd {
         if (param0 != 1) {
           field_f = (int[]) null;
         }
-        vk var1 = (vk) (LevelData.field_t.first(2));
+        GameStringTable var1 = (GameStringTable) (LevelData.field_t.first(2));
         if (var1 == null) {
           GameKeyHandler.a((byte) 114);
           return;

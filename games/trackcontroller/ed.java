@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ed extends rh {
+final class ed extends ButtonWidget {
     static Archive field_I;
 
     private ed(String param0, tg param1) {
@@ -40,7 +40,7 @@ final class ed extends rh {
           var4_int = 67 / ((param3 + 20) / 57);
           rk.field_X = cj.field_e;
           if (param1 == 255) {
-            stackIn_5_0 = !(da.field_o >= 13);
+            stackIn_5_0 = !(SocketArchiveRequestConnection.field_o >= 13);
             fh.field_c = oc.a(stackIn_5_0, -21017);
             var7 = (String[]) null;
             gk.a((String[]) null, (byte) -93);
@@ -96,9 +96,9 @@ final class ed extends rh {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void activate(int param0, int param1, int param2, int param3) {
         this.field_G = !this.field_G ? true : false;
-        super.b(param0, param1, param2, param3);
+        super.activate(param0, param1, param2, param3);
     }
 
     ed(String param0, tg param1, boolean param2) {

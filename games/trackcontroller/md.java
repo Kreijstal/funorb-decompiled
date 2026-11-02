@@ -55,7 +55,7 @@ final class md {
             var6 = var6 | 16;
           }
           LevelView.field_C.writeByte(var6, (byte) -77);
-          var7 = bg.a(gd.b((byte) 77), -22004);
+          var7 = bg.a(CachedArchiveSource.b((byte) 77), -22004);
           if (var7 == null) {
             var7 = "";
           }

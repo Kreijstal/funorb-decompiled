@@ -14,7 +14,7 @@ final class nj {
         vg.field_o = true;
         u.field_i = true;
         gl.field_E.l(24910);
-        nb.a(oj.field_c, false, -16257);
+        MidiPlayer.a(oj.field_c, false, -16257);
         if (param0 != -27958) {
           nj.b((byte) -82);
         }

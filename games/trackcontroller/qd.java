@@ -14,8 +14,8 @@ final class qd {
         if (null != fj.field_P) {
           fj.field_P.d(16384, param1);
         }
-        if (da.field_n != null) {
-          da.field_n.a(param1, -65);
+        if (SocketArchiveRequestConnection.field_n != null) {
+          SocketArchiveRequestConnection.field_n.a(param1, -65);
           if (param0) {
             var3 = (byte[]) null;
             qd.a((byte[]) null, (byte) 113);

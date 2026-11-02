@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qk extends rh {
+final class qk extends ButtonWidget {
     int field_P;
     static int field_N;
     static byte[][] field_M;

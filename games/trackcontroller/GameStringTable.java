@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk extends IntrusiveNode {
+final class GameStringTable extends IntrusiveNode {
     int field_l;
     static String field_i;
     int field_k;
@@ -465,7 +465,7 @@ final class vk extends IntrusiveNode {
         }
     }
 
-    private vk() throws Throwable {
+    private GameStringTable() throws Throwable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {

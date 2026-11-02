@@ -258,7 +258,7 @@ final class dg extends UiWidget {
             var5 = (Archive) null;
             dg.a(true, 90, -7, (Archive) null);
           }
-          stackIn_6_0 = nb.a((byte) -100);
+          stackIn_6_0 = MidiPlayer.a((byte) -100);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

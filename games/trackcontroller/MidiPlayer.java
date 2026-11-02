@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nb extends PcmStream {
+final class MidiPlayer extends PcmStream {
     private ha[][] field_n;
     private NodeHashTable field_r;
     private int[] field_t;
@@ -35,7 +35,7 @@ final class nb extends PcmStream {
     private boolean field_z;
     private int field_D;
     private boolean field_B;
-    private wb field_o;
+    private MidiFile field_o;
     private int field_u;
 
     private final void a(int param0, int param1, int param2) {
@@ -164,7 +164,7 @@ final class nb extends PcmStream {
         }
     }
 
-    private final synchronized void a(wb param0, int param1, boolean param2, boolean param3) {
+    private final synchronized void a(MidiFile param0, int param1, boolean param2, boolean param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = TrackController.field_F ? 1 : 0;
@@ -250,7 +250,7 @@ final class nb extends PcmStream {
           }
         }
         if (param1 != 0) {
-          nb.a((byte) 68);
+          MidiPlayer.a((byte) 68);
         }
     }
 
@@ -453,7 +453,7 @@ final class nb extends PcmStream {
         this.field_G.skip(param0);
     }
 
-    final synchronized void a(wb param0, int param1, boolean param2) {
+    final synchronized void a(MidiFile param0, int param1, boolean param2) {
         try {
           this.a(param0, 0, true, param2);
           if (param1 != 14526) {
@@ -983,7 +983,7 @@ final class nb extends PcmStream {
         Sprite[] var1 = new Sprite[gi.field_o];
         if (param0 >= -40) {
           String var8 = (String) null;
-          nb.a((String) null, false, 38);
+          MidiPlayer.a((String) null, false, 38);
         }
         for (var2 = 0; var2 < gi.field_o; var2++) {
           var3 = j.field_f[var2] * cf.field_p[var2];
@@ -1185,7 +1185,7 @@ final class nb extends PcmStream {
         }
     }
 
-    final synchronized boolean a(Archive param0, byte param1, int param2, jc param3, wb param4) {
+    final synchronized boolean a(Archive param0, byte param1, int param2, jc param3, MidiFile param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -1284,7 +1284,7 @@ final class nb extends PcmStream {
         }
     }
 
-    public nb() {
+    public MidiPlayer() {
         this.field_t = new int[16];
         this.field_n = new ha[16][128];
         this.field_S = new int[16];

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rl extends td implements se, m {
+final class rl extends td implements se, ButtonListener {
     private boolean field_L;
-    private rh field_G;
-    private rh field_O;
+    private ButtonWidget field_G;
+    private ButtonWidget field_O;
     static q[] field_C;
     private String field_M;
     private lb field_H;
@@ -13,7 +13,7 @@ final class rl extends td implements se, m {
     private boolean field_K;
     private lb field_F;
     private boolean field_I;
-    private rh field_J;
+    private ButtonWidget field_J;
 
     final static kd a(int param0, boolean param1, String param2, String param3) {
         long var4_long = 0L;
@@ -120,10 +120,10 @@ final class rl extends td implements se, m {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        rh stackIn_18_1 = null;
-        rh stackIn_18_2 = null;
-        rh stackIn_19_1 = null;
-        rh stackIn_19_2 = null;
+        ButtonWidget stackIn_18_1 = null;
+        ButtonWidget stackIn_18_2 = null;
+        ButtonWidget stackIn_19_1 = null;
+        ButtonWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -153,7 +153,7 @@ final class rl extends td implements se, m {
           this.field_H = (lb) ((Object) new lf(param0, (tg) (this), 100));
           this.field_F = (lb) ((Object) new lf("", (tg) (this), 20));
           if (!this.field_L) {
-            this.field_G = new rh(nd.field_H, (tg) null);
+            this.field_G = new ButtonWidget(nd.field_H, (tg) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_I) {
@@ -165,13 +165,13 @@ final class rl extends td implements se, m {
               stackIn_19_2 = null;
               stackIn_19_3 = v.field_d;
             }
-            this.field_J = new rh(stackIn_19_3, (tg) null);
+            this.field_J = new ButtonWidget(stackIn_19_3, (tg) null);
             if (this.field_K) {
-              this.field_O = new rh(md.field_f, (tg) (this));
+              this.field_O = new ButtonWidget(md.field_f, (tg) (this));
             }
           } else {
-            this.field_G = new rh(ib.field_c, (tg) null);
-            this.field_J = new rh(cg.field_b, (tg) null);
+            this.field_G = new ButtonWidget(ib.field_c, (tg) null);
+            this.field_J = new ButtonWidget(cg.field_b, (tg) null);
             this.field_H.field_B = false;
           }
           this.field_H.field_y = (t) ((Object) new dd(10000536));
@@ -204,10 +204,10 @@ final class rl extends td implements se, m {
             this.field_m = this.field_m + (var7.a(this.field_M, -40 + this.field_x, var7.field_G) + 5);
           }
           var8 = ai.field_i;
-          var9 = gj.a(100, gd.b((byte) 77));
+          var9 = gj.a(100, CachedArchiveSource.b((byte) 77));
           if (rd.field_o != var9) {
             if (qi.field_f == var9) {
-              var8 = nb.field_q;
+              var8 = MidiPlayer.field_q;
             }
           } else {
             var8 = GameApplet.field_m;
@@ -341,7 +341,7 @@ final class rl extends td implements se, m {
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -370,7 +370,7 @@ final class rl extends td implements se, m {
             }
           }
           if (param4 != -27322) {
-            this.field_O = (rh) null;
+            this.field_O = (ButtonWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

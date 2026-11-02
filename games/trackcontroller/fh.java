@@ -14,7 +14,7 @@ abstract class fh {
         try {
           Object var6 = null;
           Object var7 = null;
-          gd var8 = null;
+          CachedArchiveSource var8 = null;
           int var9 = 0;
           Archive stackIn_14_0 = null;
           Throwable decompiledCaughtException = null;

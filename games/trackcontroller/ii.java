@@ -5,7 +5,7 @@ class ii extends DualLinkNode {
     static Sprite field_p;
     static int field_o;
     static int[] field_q;
-    static Sprite[] field_r;
+    static Sprite[] tileSprites;
     static java.awt.Frame field_s;
 
     final static int b(boolean param0) {
@@ -70,12 +70,12 @@ class ii extends DualLinkNode {
         field_p = null;
         if (param0 == -5146) {
           field_q = null;
-          field_r = null;
+          tileSprites = null;
           return;
         }
         field_s = (java.awt.Frame) null;
         field_q = null;
-        field_r = null;
+        tileSprites = null;
     }
 
     ii() {

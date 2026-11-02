@@ -13,7 +13,7 @@ final class fj extends ok {
     static IndexedSprite[] field_M;
     static IntrusiveDeque field_H;
     private boolean field_J;
-    static nb field_P;
+    static MidiPlayer field_P;
     static String field_O;
     static int field_S;
     static String field_R;
@@ -242,8 +242,8 @@ final class fj extends ok {
         int var5_intLifetime1Lifetime1;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if ((!(this.field_B instanceof rh) ||
-            ((rh) (this.field_B)).field_B) &&
+          if ((!(this.field_B instanceof ButtonWidget) ||
+            ((ButtonWidget) (this.field_B)).field_B) &&
             1 == this.field_r) {
             var5_int = -this.field_K + (kf.mouseX - param1);
             var6 = -param0 + (-this.field_I + fg.mouseY);

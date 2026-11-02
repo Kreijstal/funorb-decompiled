@@ -5,8 +5,8 @@ final class wg {
     static int clickY;
     private PacketBuffer field_i;
     private sd field_f;
-    private gd[] field_g;
-    private ae field_a;
+    private CachedArchiveSource[] field_g;
+    private ArchiveRequestConnection field_a;
     static String field_h;
     private java.math.BigInteger field_b;
     private hi field_c;
@@ -16,14 +16,14 @@ final class wg {
         if (param0 <= 113) {
           field_h = (String) null;
         }
-        wb var2 = (wb) null;
-        rg.a((wb) null, 14915);
+        MidiFile var2 = (MidiFile) null;
+        rg.a((MidiFile) null, 14915);
     }
 
     final void a(byte param0) {
         int var2;
         int var3;
-        gd stackIn_15_0 = null;
+        CachedArchiveSource stackIn_15_0 = null;
         int var2Lifetime1;
         var3 = TrackController.field_F ? 1 : 0;
         if (null == this.field_g) {
@@ -45,7 +45,7 @@ final class wg {
         }
     }
 
-    wg(ae param0, sd param1) {
+    wg(ArchiveRequestConnection param0, sd param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -110,7 +110,7 @@ final class wg {
           }
         }
         this.field_i = var10;
-        this.field_g = new gd[var3];
+        this.field_g = new CachedArchiveSource[var3];
         return true;
     }
 
@@ -151,7 +151,7 @@ final class wg {
         }
     }
 
-    private wg(ae param0, sd param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private wg(ArchiveRequestConnection param0, sd param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_f = param1;
           this.field_b = param3;
@@ -165,14 +165,14 @@ final class wg {
         }
     }
 
-    final gd a(int param0, int param1, hf param2, boolean param3, hf param4) {
+    final CachedArchiveSource a(int param0, int param1, hf param2, boolean param3, hf param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        gd var9 = null;
+        CachedArchiveSource var9 = null;
         byte[] var13 = null;
-        gd stackIn_8_0 = null;
-        gd stackIn_12_0 = null;
+        CachedArchiveSource stackIn_8_0 = null;
+        CachedArchiveSource stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -197,7 +197,7 @@ final class wg {
             var7 = this.field_i.readInt((byte) 113);
             var13 = new byte[64];
             this.field_i.a(102, var13, 0, 64);
-            var9 = new gd(param1, param4, param2, this.field_a, this.field_f, var6_int, var13, var7, param3);
+            var9 = new CachedArchiveSource(param1, param4, param2, this.field_a, this.field_f, var6_int, var13, var7, param3);
             this.field_g[param1] = var9;
             stackIn_12_0 = var9;
             return stackIn_12_0;

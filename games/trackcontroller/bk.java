@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bk extends td implements a, m {
+final class bk extends td implements a, ButtonListener {
     static int field_D;
     static String[] field_J;
-    private rh field_H;
+    private ButtonWidget field_H;
     private lf field_K;
     static String field_G;
     static BitmapFont field_E;
     nd field_I;
-    private rh field_F;
+    private ButtonWidget field_F;
 
     final void a(int param0, int param1, byte param2, UiWidget param3) {
         try {
@@ -87,7 +87,7 @@ final class bk extends td implements a, m {
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -133,8 +133,8 @@ final class bk extends td implements a, m {
         this.field_K = new lf("", (tg) null, 12);
         ic var1 = new ic(fk.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, gk.field_c.field_G, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(qd.field_a, var1, (tg) null);
-        this.field_F = new rh(hb.field_a, (tg) null);
-        this.field_H = new rh(ta.field_a, (tg) null);
+        this.field_F = new ButtonWidget(hb.field_a, (tg) null);
+        this.field_H = new ButtonWidget(ta.field_a, (tg) null);
         this.field_K.field_n = ak.field_c;
         this.field_K.a(1, new af(this.field_K));
         this.field_F.field_B = false;

@@ -250,7 +250,7 @@ final class GameScreen {
                 var5 = ActiveLevel.field_H[var6_int];
               }
               SoftwareRasterizer.f(46, -1 + var3, 28, 28, 16763904);
-              var6 = ii.field_r[var5];
+              var6 = ii.tileSprites[var5];
               var6.h(47, var3);
               var7 = 86;
               var8 = var10.a(MovingBlock.field_p[var4], var7, -6 + (var3 + 26) - var11.field_G, 606 - var7, 1000, 0, -1, 0, 0, 26);
@@ -1186,11 +1186,11 @@ final class GameScreen {
                       cl.a(nd.field_L, 566, 46, 57, 46, param0 + 5);
                       stackIn_73_0 = (RandomAccessCacheFile.field_b != 0) ? 15252224 : 8110658;
                       var4 = stackIn_73_0;
-                      ii.field_r[52].c(576, 67, var4);
+                      ii.tileSprites[52].c(576, 67, var4);
                       cl.a(nd.field_L, 566, 46, 421, 46, 4);
                       stackIn_76_0 = (RandomAccessCacheFile.field_b != 1) ? 15252224 : 8110658;
                       var4 = stackIn_76_0;
-                      ii.field_r[53].c(576, 431, var4);
+                      ii.tileSprites[53].c(576, 431, var4);
                       var5 = this.a(kf.mouseX, 2600, fg.mouseY);
                       var6 = 269 - (-(26 * (1 - qh.field_b.levelIndex)) - mb.field_b);
                       var7 = 359;
@@ -1430,7 +1430,7 @@ final class GameScreen {
                                                   if (og.field_rb != null) {
                                                     oj.a(param3 ^ -499);
                                                   }
-                                                  of.a(-80, gd.b((byte) 77));
+                                                  of.a(-80, CachedArchiveSource.b((byte) 77));
                                                 }
                                                 decompiledFrameRemainder0 = false;
                                               }
@@ -1462,7 +1462,7 @@ final class GameScreen {
                                                         if (var6 == 16) {
                                                           if (!(!this.field_e.b(false))) {
                                                             si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-                                                            af.a(gd.b((byte) 77), (byte) -9);
+                                                            af.a(CachedArchiveSource.b((byte) 77), (byte) -9);
                                                           }
                                                           decompiledFrameRemainder0 = false;
                                                         }
@@ -1501,10 +1501,10 @@ final class GameScreen {
                                                             } else {
                                                               if (var6 == 2) {
                                                                 if (this.field_e.a(true)) {
-                                                                  da.a(0, (byte) -74);
+                                                                  SocketArchiveRequestConnection.a(0, (byte) -74);
                                                                 }
                                                                 if (this.field_e.b(-32)) {
-                                                                  da.a(256, (byte) -74);
+                                                                  SocketArchiveRequestConnection.a(256, (byte) -74);
                                                                 }
                                                                 if (this.field_e.e(0)) {
                                                                   stackIn_155_0 = this.e((byte) 57);
@@ -1517,12 +1517,12 @@ final class GameScreen {
                                                                   var7 = -var6 + kf.mouseX - 78 << 2;
                                                                   if (0 <= var7) {
                                                                     if (var7 >= 256) {
-                                                                      da.a(256, (byte) -74);
+                                                                      SocketArchiveRequestConnection.a(256, (byte) -74);
                                                                     } else {
-                                                                      da.a(var7, (byte) -74);
+                                                                      SocketArchiveRequestConnection.a(var7, (byte) -74);
                                                                     }
                                                                   } else {
-                                                                    da.a(0, (byte) -74);
+                                                                    SocketArchiveRequestConnection.a(0, (byte) -74);
                                                                   }
                                                                 }
                                                                 if (this.field_e.a(0)) {

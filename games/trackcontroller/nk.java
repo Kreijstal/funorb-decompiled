@@ -9,7 +9,7 @@ final class nk extends IntrusiveNode {
     static String field_j;
 
     final static void b(boolean param0) {
-        vg var1 = (vg) (gd.field_q.removeLast((byte) -123));
+        vg var1 = (vg) (CachedArchiveSource.field_q.removeLast((byte) -123));
         if (!param0) {
           if (var1 == null) {
             var1 = new vg();

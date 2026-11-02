@@ -50,7 +50,7 @@ final class ha extends IntrusiveNode {
         int var9Lifetime1;
         var10 = TrackController.field_F ? 1 : 0;
         try {
-          var7_int = ae.a((byte) -39, param2);
+          var7_int = ArchiveRequestConnection.a((byte) -39, param2);
           if (null == oj.field_b) {
             oj.field_b = new java.security.SecureRandom();
           }
@@ -167,7 +167,7 @@ final class ha extends IntrusiveNode {
             stackIn_12_0 = var5;
             return stackIn_12_0;
           }
-          stackIn_4_0 = gd.field_f;
+          stackIn_4_0 = CachedArchiveSource.field_f;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

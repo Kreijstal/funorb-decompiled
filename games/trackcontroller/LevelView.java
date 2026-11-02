@@ -24,7 +24,7 @@ final class LevelView extends LevelGrid {
     final void a(boolean param0) {
         int var2 = 0;
         int var3 = TrackController.field_F ? 1 : 0;
-        gd.field_x = param0 ? true : false;
+        CachedArchiveSource.field_x = param0 ? true : false;
         super.a(false, 1000, param0);
         this.field_p = ClientException.a(this.field_s, this.field_E, -257, this.field_a + 26 * this.field_D, this.field_G, this.field_F, this.field_u * 26 + this.field_f, this.tileFlags[this.field_u][this.field_D]);
         if (this.tickCount >= this.field_A) {

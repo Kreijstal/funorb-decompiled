@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class jj extends db implements m {
+class jj extends db implements ButtonListener {
     private dg field_eb;
     private BitmapFont field_gb;
     private boolean field_jb;
@@ -85,7 +85,7 @@ class jj extends db implements m {
         }
     }
 
-    public void a(rh param0, int param1, int param2, int param3, int param4) {
+    public void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -93,7 +93,7 @@ class jj extends db implements m {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!this.field_jb) {
-            gk.a("tochangedisplayname.ws", gd.b((byte) 77), -110);
+            gk.a("tochangedisplayname.ws", CachedArchiveSource.b((byte) 77), -110);
           } else {
             ProxySocketConnector.b(3, (byte) -42);
             this.t(20252);

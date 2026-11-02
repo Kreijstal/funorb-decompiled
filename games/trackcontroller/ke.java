@@ -230,7 +230,7 @@ final class ke {
 
     final static void a(int param0, int param1) {
         int var3 = 0;
-        vk var4 = null;
+        GameStringTable var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = TrackController.field_F ? 1 : 0;
@@ -238,10 +238,10 @@ final class ke {
           if (param0 != -101) {
             ke.a(true);
           }
-          var4 = (vk) (LevelData.field_t.first(2));
+          var4 = (GameStringTable) (LevelData.field_t.first(2));
           while (var4 != null) {
             ef.a(var4, param1, param0 + 111);
-            var4 = (vk) (LevelData.field_t.next(param0 + 111));
+            var4 = (GameStringTable) (LevelData.field_t.next(param0 + 111));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

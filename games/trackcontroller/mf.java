@@ -21,7 +21,7 @@ final class mf {
         p.a((byte) 25);
     }
 
-    final static void a(int param0, boolean param1, int param2, PlatformTaskDispatcher param3, java.awt.Component param4, nb param5) {
+    final static void a(int param0, boolean param1, int param2, PlatformTaskDispatcher param3, java.awt.Component param4, MidiPlayer param5) {
         if (param0 != 15) {
           return;
         }

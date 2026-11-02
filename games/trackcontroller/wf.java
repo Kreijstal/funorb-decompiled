@@ -39,7 +39,7 @@ final class wf {
           MouseWheelInput.field_c = null;
           v.field_e = param5;
           fd.field_h = oe.field_b;
-          da.field_o = param6;
+          SocketArchiveRequestConnection.field_o = param6;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

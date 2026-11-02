@@ -18,9 +18,9 @@ abstract class wj {
           kf.field_a = param5;
           int var9_int = 41 % ((-36 - param7) / 32);
           IntrusiveNode.field_g = param4;
-          vk.field_j = param2;
+          GameStringTable.field_j = param2;
           IterableNodeHashTable.field_e = param0;
-          SecondaryNodeDeque.field_d = (ae) ((Object) new da());
+          SecondaryNodeDeque.field_d = (ArchiveRequestConnection) ((Object) new SocketArchiveRequestConnection());
           rb.field_a = new sd(param1);
           ij.field_d = new wg(SecondaryNodeDeque.field_d, rb.field_a);
         } catch (RuntimeException runtimeException) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ae {
+abstract class ArchiveRequestConnection {
     mb field_f;
     mb field_c;
     mb field_h;
@@ -116,7 +116,7 @@ abstract class ae {
         return this.a(7) >= 20 ? true : false;
     }
 
-    ae() {
+    ArchiveRequestConnection() {
         this.field_f = new mb();
         this.field_c = new mb();
         this.field_h = new mb();

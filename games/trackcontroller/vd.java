@@ -3,10 +3,10 @@
  */
 import java.io.*;
 
-final class vd extends td implements jg, m, a {
+final class vd extends td implements jg, ButtonListener, a {
     private lf field_I;
-    private rh field_H;
-    private rh field_C;
+    private ButtonWidget field_H;
+    private ButtonWidget field_C;
     static nk field_G;
     private lf field_F;
     private ed field_O;
@@ -54,8 +54,8 @@ final class vd extends td implements jg, m, a {
         this.field_L = new lf("", (tg) null, 3);
         int var1 = 1;
         this.field_O = new ed("", (tg) null, var1 != 0);
-        this.field_C = new rh(dh.field_i, (tg) null);
-        this.field_H = new rh(UiWidget.field_v, (tg) null);
+        this.field_C = new ButtonWidget(dh.field_i, (tg) null);
+        this.field_H = new ButtonWidget(UiWidget.field_v, (tg) null);
         this.field_F.field_n = ak.field_c;
         this.field_M.field_n = og.field_nb;
         this.field_I.field_n = qh.field_c;
@@ -276,8 +276,8 @@ final class vd extends td implements jg, m, a {
 
     private final String m(int param0) {
         if (param0 != -9700) {
-          rh var3 = (rh) null;
-          this.a((rh) null, -78, 87, -1, -54);
+          ButtonWidget var3 = (ButtonWidget) null;
+          this.a((ButtonWidget) null, -78, 87, -1, -54);
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -607,7 +607,7 @@ final class vd extends td implements jg, m, a {
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

@@ -340,7 +340,7 @@ final class ij implements t {
                 sa.field_I[var5] = ok.field_C[var5];
               }
               sa.field_I[-3 + var4] = "";
-              sa.field_I[-2 + var4] = vk.field_i;
+              sa.field_I[-2 + var4] = GameStringTable.field_i;
               mj.field_b[-2 + var4] = 0;
               ac.field_c[0] = 3;
               sa.field_I[-1 + var4] = MovingBlock.field_k;

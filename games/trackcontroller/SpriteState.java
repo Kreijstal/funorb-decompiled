@@ -29,13 +29,13 @@ abstract class SpriteState extends DualLinkNode {
         int var1 = 0;
         int var1Lifetime1;
         if (32 >= qd.field_d) {
-          da.a(0, (byte) -74);
+          SocketArchiveRequestConnection.a(0, (byte) -74);
         } else {
           var1 = qd.field_d % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          da.a(-var1 + qd.field_d, (byte) -74);
+          SocketArchiveRequestConnection.a(-var1 + qd.field_d, (byte) -74);
         }
         var1Lifetime1 = 67 / ((-19 - param0) / 48);
     }

@@ -155,7 +155,7 @@ final class nf {
         try {
           qg.field_c = param2;
           lf.field_T = param1;
-          nb.a(rk.field_Z, param0, param3 - 16152);
+          MidiPlayer.a(rk.field_Z, param0, param3 - 16152);
           if (param3 != -105) {
             field_h = (String) null;
           }

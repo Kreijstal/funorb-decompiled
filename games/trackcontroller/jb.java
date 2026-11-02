@@ -11,7 +11,7 @@ final class jb {
         try {
           if (param3 != 0) {
             PlatformTaskDispatcher var5 = (PlatformTaskDispatcher) null;
-            jb.a((byte) -108, true, (nb) null, -51, (java.awt.Component) null, 84, (PlatformTaskDispatcher) null, 73);
+            jb.a((byte) -108, true, (MidiPlayer) null, -51, (java.awt.Component) null, 84, (PlatformTaskDispatcher) null, 73);
           }
           jf.e(640);
           gl.field_E.l(24910);
@@ -23,7 +23,7 @@ final class jb {
         }
     }
 
-    final static void a(byte param0, boolean param1, nb param2, int param3, java.awt.Component param4, int param5, PlatformTaskDispatcher param6, int param7) {
+    final static void a(byte param0, boolean param1, MidiPlayer param2, int param3, java.awt.Component param4, int param5, PlatformTaskDispatcher param6, int param7) {
         try {
           oa.a(param7, param1, 10);
           sb.field_b = oa.a(param6, param4, 0, param3);
@@ -49,7 +49,7 @@ final class jb {
           return;
         }
         PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
-        jb.a((byte) -13, true, (nb) null, 60, (java.awt.Component) null, 58, (PlatformTaskDispatcher) null, -3);
+        jb.a((byte) -13, true, (MidiPlayer) null, 60, (java.awt.Component) null, 58, (PlatformTaskDispatcher) null, -3);
         SecondaryNodeDeque.field_d.field_b = 0;
     }
 

@@ -31,8 +31,8 @@ final class dc extends ic {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param1 instanceof rh) {
-            param3 = param3 & ((rh) (param1)).field_B;
+          if (param1 instanceof ButtonWidget) {
+            param3 = param3 & ((ButtonWidget) (param1)).field_B;
           }
           if (param0 != -24969) {
             dc.c((byte) -91);

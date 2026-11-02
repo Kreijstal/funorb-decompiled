@@ -298,7 +298,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_e = true;
             System.out.println("error_game_" + param0);
             try {
-              sj.a((byte) -7, "loggedout", gd.b((byte) 77));
+              sj.a((byte) -7, "loggedout", CachedArchiveSource.b((byte) 77));
               if (param1 != 100) {
                 this.getAppletContext();
               }
@@ -343,7 +343,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (f.field_c == this &&
             !jk.field_a) {
             vh.field_q = true;
-            if (rh.field_F &&
+            if (ButtonWidget.field_F &&
               -SecondaryNodeDeque.field_c + qg.a(false) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
@@ -555,7 +555,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (stackIn_80_0 > stackIn_80_1) {
                     break;
                   }
-                  rh.field_F = true;
+                  ButtonWidget.field_F = true;
                   break;
                 }
               }
@@ -787,7 +787,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               DualLinkNode.field_i = 0;
               wf.field_b = param5;
               mf.field_g = param5;
-              qf.field_b = gd.b((byte) 77);
+              qf.field_b = CachedArchiveSource.b((byte) 77);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param3, param1, true);
               rg.field_c = dupTemp$0;
               field_f = dupTemp$0;

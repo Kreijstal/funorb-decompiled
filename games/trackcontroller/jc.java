@@ -57,7 +57,7 @@ final class jc {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        ml var9 = null;
+        VorbisDecoder var9 = null;
         PcmSample var8Lifetime1;
         try {
           var5_int = ((1879052287 & param1) << 4 | param1 >>> 12) ^ param2;
@@ -73,9 +73,9 @@ final class jc {
             stackIn_7_0 = null;
             return (PcmSample) (stackIn_7_0);
           }
-          var9 = (ml) (this.field_d.get(8434, var6));
+          var9 = (VorbisDecoder) (this.field_d.get(8434, var6));
           if (var9 == null) {
-            var9 = ml.a(this.field_b, param1, param2);
+            var9 = VorbisDecoder.a(this.field_b, param1, param2);
             if (var9 == null) {
               stackIn_11_0 = null;
               return (PcmSample) (stackIn_11_0);

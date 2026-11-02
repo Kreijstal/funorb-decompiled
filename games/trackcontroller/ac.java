@@ -25,7 +25,7 @@ final class ac {
           }
           if (param0 != null &&
             param0.length() >= wl.field_j &&
-            param0.length() <= da.field_m) {
+            param0.length() <= SocketArchiveRequestConnection.field_m) {
             return false;
           }
           return true;

@@ -29,7 +29,7 @@ final class mj {
         RuntimeException var1_ref = null;
         var4 = TrackController.field_F ? 1 : 0;
         try {
-          var1 = ii.field_r[39];
+          var1 = ii.tileSprites[39];
           var2 = 40;
           var3 = 0;
           if (param0 != 208) {

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends td implements jg, m {
+final class ge extends td implements jg, ButtonListener {
     private og field_C;
     static boolean field_D;
-    private rh field_E;
+    private ButtonWidget field_E;
     static int field_G;
     private el field_F;
 
@@ -65,7 +65,7 @@ final class ge extends td implements jg, m {
         int var6 = 0;
         try {
           this.field_C = param0;
-          this.field_E = new rh(hd.field_m, (tg) null);
+          this.field_E = new ButtonWidget(hd.field_m, (tg) null);
           this.field_E.field_y = (t) ((Object) new dc());
           var7 = dh.a((byte) -81, new String[]{this.k(0), this.j(11844)}, qd.field_b);
           var3 = 20;
@@ -134,7 +134,7 @@ final class ge extends td implements jg, m {
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         el var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

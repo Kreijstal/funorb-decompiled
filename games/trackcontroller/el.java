@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class el extends rh {
+class el extends ButtonWidget {
     static String field_J;
     private String[] field_M;
     static String[] field_O;
@@ -120,8 +120,8 @@ class el extends rh {
         return this.field_M[this.field_N.field_q];
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
-        super.b(param0, param1, param2 + param2, param3);
+    final void activate(int param0, int param1, int param2, int param3) {
+        super.activate(param0, param1, param2 + param2, param3);
         int var5 = param1 - this.field_p;
         int var6 = param0 - this.field_m;
         fi var7 = this.b(var5, var6, 9);

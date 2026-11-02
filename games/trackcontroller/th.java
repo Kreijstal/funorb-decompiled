@@ -12,10 +12,10 @@ final class th extends IntrusiveNode {
     final static void d(int param0) {
         if (param0 != -31574) {
           field_i = (String) null;
-          pf.field_U = 0;
+          Model.field_U = 0;
           return;
         }
-        pf.field_U = 0;
+        Model.field_U = 0;
     }
 
     final static kh f(int param0) {

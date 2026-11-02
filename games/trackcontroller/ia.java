@@ -67,9 +67,9 @@ final class ia {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, wb param4) {
+    final static void a(boolean param0, int param1, int param2, int param3, MidiFile param4) {
         try {
-          da.field_n.a(!param0 ? true : false, param2, true, param3, param4, param1);
+          SocketArchiveRequestConnection.field_n.a(!param0 ? true : false, param2, true, param3, param4, param1);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ia.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

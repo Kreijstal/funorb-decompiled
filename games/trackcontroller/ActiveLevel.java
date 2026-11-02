@@ -203,7 +203,7 @@ final class ActiveLevel extends LevelGrid {
         this.phase = param1;
         var7 = this.phase;
         if (var7 == 2) {
-          fe.a(false, pf.field_P[2], param0 ^ 503);
+          fe.a(false, Model.field_P[2], param0 ^ 503);
           si.$cfr$intArgs$a$e9dea5688aa5(-68, 3);
           var4 = this.field_X >> 1;
           var5 = this.field_I.field_v + var4;
@@ -605,7 +605,7 @@ final class ActiveLevel extends LevelGrid {
         int var4;
         var4 = TrackController.field_F ? 1 : 0;
         hl.a(10, 0);
-        fe.a((param0 == 0), pf.field_P[param0], 256);
+        fe.a((param0 == 0), Model.field_P[param0], 256);
         if (param1 <= 110) {
           this.setPhase(27, 2);
         }
@@ -842,16 +842,16 @@ final class ActiveLevel extends LevelGrid {
           }
           if (this.field_x != -1) {
             if (this.playerColumn < this.field_x) {
-              this.field_ab = da.field_p[16][0];
+              this.field_ab = SocketArchiveRequestConnection.avatarSprites[16][0];
             } else {
               if (this.field_x >= this.playerColumn) {
                 if (this.field_G <= this.playerRow) {
-                  this.field_ab = da.field_p[24][0];
+                  this.field_ab = SocketArchiveRequestConnection.avatarSprites[24][0];
                 } else {
-                  this.field_ab = da.field_p[8][0];
+                  this.field_ab = SocketArchiveRequestConnection.avatarSprites[8][0];
                 }
               } else {
-                this.field_ab = da.field_p[0][0];
+                this.field_ab = SocketArchiveRequestConnection.avatarSprites[0][0];
               }
             }
           } else {
@@ -1128,7 +1128,7 @@ final class ActiveLevel extends LevelGrid {
           } else if (this.tileFlags[9][9] == 0) {
             if (param0 &&
               this.tickCount % 30 < 15) {
-              ii.field_r[50].e(182 + this.field_a, this.field_f + 234);
+              ii.tileSprites[50].e(182 + this.field_a, this.field_f + 234);
             }
             if (!param0) {
               var3Lifetime1 = va.field_a;
@@ -1136,7 +1136,7 @@ final class ActiveLevel extends LevelGrid {
           } else if (0 == this.tileFlags[7][9]) {
             if (param0 &&
               15 > this.tickCount % 30) {
-              ii.field_r[50].e(this.field_a + 182, 182 + this.field_f);
+              ii.tileSprites[50].e(this.field_a + 182, 182 + this.field_f);
             }
             if (!param0) {
               var3Lifetime1 = jk.field_b;
@@ -1223,7 +1223,7 @@ final class ActiveLevel extends LevelGrid {
           vg.field_p = true;
           this.field_A.field_e = 0;
           this.field_z = false;
-          fe.a(true, pf.field_P[1], 256);
+          fe.a(true, Model.field_P[1], 256);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ri.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1358,7 +1358,7 @@ final class ActiveLevel extends LevelGrid {
           if (MouseInputHandler.a(param2, param1, (byte) 96)) {
             return false;
           }
-          if (rh.a(19438, param2, param1)) {
+          if (ButtonWidget.a(19438, param2, param1)) {
             return false;
           }
           if (!ui.a(param1, param2, (byte) 100)) {
@@ -1476,9 +1476,9 @@ final class ActiveLevel extends LevelGrid {
               stackIn_46_1 = 32;
             }
             var6 = stackIn_44_0 + stackIn_46_1;
-            da.field_p[var6][var5].e(var3Lifetime1, var4);
+            SocketArchiveRequestConnection.avatarSprites[var6][var5].e(var3Lifetime1, var4);
           } else {
-            ii.field_r[-65 & var2.tileValue].e(var3Lifetime1, var4);
+            ii.tileSprites[-65 & var2.tileValue].e(var3Lifetime1, var4);
             if ((var2.tileValue & 64) != 0) {
               ue.a(var3Lifetime1, var2.tileValue, (byte) 91, var4);
             }
@@ -1489,10 +1489,10 @@ final class ActiveLevel extends LevelGrid {
           this.field_G != -1) {
           this.field_ab.d(16 + this.field_x * 26, this.field_G * 26 + 48, 127);
           if (this.field_U != -1) {
-            ii.field_r[51].d(16 + this.field_r * 26, 48 + this.field_U * 26, 127);
+            ii.tileSprites[51].d(16 + this.field_r * 26, 48 + this.field_U * 26, 127);
           }
         }
-        var2_ref = rh.field_E;
+        var2_ref = ButtonWidget.field_E;
         if (this.field_I == gj.field_f[gj.field_f.length - 1]) {
           var2_ref = TrackController.field_C;
         }

@@ -20,7 +20,7 @@ final class kg {
         field_b = null;
     }
 
-    final static void a(boolean param0, byte param1, int param2, wb param3) {
+    final static void a(boolean param0, byte param1, int param2, MidiFile param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object var5 = null;
@@ -31,7 +31,7 @@ final class kg {
         Throwable decompiledCaughtException = null;
         try {
           var4_int = -101 % ((param1 - 11) / 46);
-          if (null != da.field_n) {
+          if (null != SocketArchiveRequestConnection.field_n) {
             ia.a(param0, param2, 1048576, 1000000, param3);
           }
           if (fj.field_P == null) {

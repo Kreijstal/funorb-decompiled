@@ -197,10 +197,10 @@ abstract class db extends wd {
     final static void b(boolean param0) {
         if (!param0) {
           field_Z = -47;
-          ob.a(209, gd.b((byte) 77));
+          ob.a(209, CachedArchiveSource.b((byte) 77));
           return;
         }
-        ob.a(209, gd.b((byte) 77));
+        ob.a(209, CachedArchiveSource.b((byte) 77));
     }
 
     boolean a(byte param0, char param1, UiWidget param2, int param3) {

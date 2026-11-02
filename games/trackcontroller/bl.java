@@ -223,7 +223,7 @@ final class bl {
             if (rf.field_c == 2) {
               ob.field_u = new BufferedSocket((java.net.Socket) (w.field_V.field_e), kb.field_d);
               var2 = new PacketBuffer(13);
-              hl.a(kf.field_a, var2, 17, sa.field_T, vk.field_j);
+              hl.a(kf.field_a, var2, 17, sa.field_T, GameStringTable.field_j);
               var2.writeByte(15, (byte) -100);
               var2.writeInt(false, gi.field_r);
               ob.field_u.a(-128, var2.payload, 13, 0);

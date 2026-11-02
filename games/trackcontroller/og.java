@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends jj implements m {
+final class og extends jj implements ButtonListener {
     static int field_pb;
     static FullscreenFocusCanvas field_rb;
     static String field_qb;
@@ -126,7 +126,7 @@ final class og extends jj implements m {
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         if (this.field_lb) {
           nk.a(true, -126, false);
           return;

@@ -13,7 +13,7 @@ final class gj {
         if (param0 >= -108) {
           return -112;
         }
-        return da.field_o;
+        return SocketArchiveRequestConnection.field_o;
     }
 
     final static void a(int param0, nk param1, int param2) {

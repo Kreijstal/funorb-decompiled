@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class da extends ae {
+final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
     static int field_m;
     private BufferedSocket field_q;
     static qe field_n;
-    static Sprite[][] field_p;
+    static Sprite[][] avatarSprites;
     static int field_o;
 
     final static li a(PcmSample param0, int param1, byte param2) {
@@ -19,7 +19,7 @@ final class da extends ae {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > -108) {
-            da.a(79, (byte) -19);
+            SocketArchiveRequestConnection.a(79, (byte) -19);
           }
           stackIn_3_0 = bd.a(-31085, PcmSampleStream.a(param0, 100, param1));
           return stackIn_3_0;
@@ -42,7 +42,7 @@ final class da extends ae {
           this.field_q.d(param0 ^ 16777114);
         }
         if (param0 != 101) {
-          da.a(-15, (byte) 51);
+          SocketArchiveRequestConnection.a(-15, (byte) 51);
         }
     }
 
@@ -181,26 +181,26 @@ final class da extends ae {
               jc.field_a = ka.field_b;
               if (af.field_o.a(false) != nd.field_M) {
                 if (af.field_o.a(false) == ji.field_a) {
-                  qi.field_f.a(gd.b((byte) 77), -4);
+                  qi.field_f.a(CachedArchiveSource.b((byte) 77), -4);
                 }
               } else {
-                rd.field_o.a(gd.b((byte) 77), -4);
+                rd.field_o.a(CachedArchiveSource.b((byte) 77), -4);
               }
               kg.field_f = false;
               if (var6 != null) {
-                dh.a(-19136, var6, gd.b((byte) 77));
+                dh.a(-19136, var6, CachedArchiveSource.b((byte) 77));
               }
               if (SocketConnector.field_d <= 0 &&
                 !fd.field_i) {
                 try {
-                  sj.a((byte) -128, "unzap", gd.b((byte) 77));
+                  sj.a((byte) -128, "unzap", CachedArchiveSource.b((byte) 77));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  sj.a(gd.b((byte) 77), new Object[]{ue.a(ClientException.field_e, (byte) 114)}, 7648, "zap");
+                  sj.a(CachedArchiveSource.b((byte) 77), new Object[]{ue.a(ClientException.field_e, (byte) 114)}, 7648, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -293,9 +293,9 @@ final class da extends ae {
 
     public static void e(int param0) {
         field_n = null;
-        field_p = (Sprite[][]) null;
+        avatarSprites = (Sprite[][]) null;
         if (param0 < 63) {
-          field_p = (Sprite[][]) null;
+          avatarSprites = (Sprite[][]) null;
         }
     }
 
@@ -352,7 +352,7 @@ final class da extends ae {
           qd.field_d = param0;
           var2 = (li) (kd.field_a.first(2));
           if (param1 != -74) {
-            field_p = (Sprite[][]) null;
+            avatarSprites = (Sprite[][]) null;
           }
           while (var2 != null) {
             if (var2.field_k.isLinked(10000536)) {
@@ -383,7 +383,7 @@ final class da extends ae {
         }
     }
 
-    public da() {
+    public SocketArchiveRequestConnection() {
     }
 
     private final void d(byte param0) {
@@ -401,7 +401,7 @@ final class da extends ae {
             this.field_g.b(0, (byte) -118);
             this.field_q.a(-102, this.field_g.payload, this.field_g.payload.length, 0);
             if (param0 >= -5) {
-              field_p = (Sprite[][]) null;
+              avatarSprites = (Sprite[][]) null;
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

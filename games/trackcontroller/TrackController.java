@@ -206,7 +206,7 @@ public final class TrackController extends GameShell {
         if (param0 != 160) {
           return;
         }
-        if (!pf.field_T) {
+        if (!Model.field_T) {
           l.a((byte) 90, (java.awt.Canvas) (var7));
           return;
         }
@@ -220,7 +220,7 @@ public final class TrackController extends GameShell {
           }
           boolean decompiledFrameRemainder0 = true;
           db.a(480, 0, na.field_c, 640, 0, (byte) -128);
-          gd.field_x = false;
+          CachedArchiveSource.field_x = false;
           if (~sc.field_g == ~ib.field_a && (!(0 < NodeHashTable.field_g) ||
             dd.field_o != 0)) {
             if (ib.field_a == -1) {
@@ -249,7 +249,7 @@ public final class TrackController extends GameShell {
             }
             ci.a(var3Lifetime1 + 1, -(var3Lifetime1 << 3) + 256, 16769381, false, false);
           }
-          if (!gd.field_x) {
+          if (!CachedArchiveSource.field_x) {
             kb.a(false, 4, 2);
           } else {
             vd.b(-1, 2, 23636);
@@ -340,7 +340,7 @@ public final class TrackController extends GameShell {
         BufferedCacheFile.b(-1);
         BufferedSocket.c(32);
         IntrusiveNode.b((byte) 118);
-        nb.d((byte) 84);
+        MidiPlayer.d((byte) 84);
         NodeHashTable.a(param0 - 104);
         ha.d(4);
         fa.c();
@@ -395,12 +395,12 @@ public final class TrackController extends GameShell {
         fh.a((byte) 125);
         b.a();
         nf.b(261211);
-        da.e(80);
+        SocketArchiveRequestConnection.e(80);
         mb.b((byte) -36);
         hi.c((byte) -81);
         hf.a(6);
         lh.c((byte) -44);
-        gd.c(-3);
+        CachedArchiveSource.c(-3);
         RandomAccessCacheFile.b((byte) -121);
         rg.a(17883);
         AsyncRequest.f(48);
@@ -409,10 +409,10 @@ public final class TrackController extends GameShell {
         bd.a(44);
         ic.b((byte) -56);
         ig.b();
-        ml.c();
+        VorbisDecoder.c();
         mf.b((byte) -103);
         cg.a((byte) 118);
-        pf.a(110);
+        Model.a(110);
         ef.a(27887);
         fg.a(-14138);
         fb.a(param0 ^ 30493);
@@ -431,7 +431,7 @@ public final class TrackController extends GameShell {
         jd.a(-12814);
         rb.b(-2857);
         UiWidget.d(param0 ^ -59);
-        rh.i(param0 - 222);
+        ButtonWidget.i(param0 - 222);
         ok.d((byte) -7);
         wd.p(35);
         hl.l(param0 ^ -66);
@@ -487,7 +487,7 @@ public final class TrackController extends GameShell {
         ti.c((byte) -121);
         ag.a(10);
         li.a((byte) 111);
-        vk.d(2);
+        GameStringTable.d(2);
         dc.c((byte) 97);
         ne.a(-29615);
         dd.b(-3674);
@@ -576,7 +576,7 @@ public final class TrackController extends GameShell {
             vd.field_G = dh.a(5, -1, 0, 1);
           }
         }
-        if (pf.field_T) {
+        if (Model.field_T) {
           if (BufferedCacheFile.field_e == null) {
             if (vd.field_G == null) {
               if (!ag.b(116)) {
@@ -594,7 +594,7 @@ public final class TrackController extends GameShell {
                       if (null != og.field_rb) {
                         oj.a(-84);
                       }
-                      af.a(gd.b((byte) 77), (byte) -9);
+                      af.a(CachedArchiveSource.b((byte) 77), (byte) -9);
                     }
                   }
                 }
@@ -643,7 +643,7 @@ public final class TrackController extends GameShell {
         } else {
           od.a((byte) -116, NodeHashTableIterator.field_c);
           if (this.b(467, true)) {
-            pf.field_T = true;
+            Model.field_T = true;
           }
         }
         if (param0) {
@@ -666,9 +666,9 @@ public final class TrackController extends GameShell {
             ij.a(var4, 5, -126);
           }
         }
-        if (pf.field_T &&
+        if (Model.field_T &&
           null == GameShell.field_n) {
-          fe.a(true, pf.field_P[0], 256);
+          fe.a(true, Model.field_P[0], 256);
         }
         while (ge.a(kg.field_b, param0)) {
           this.e((byte) 85);
@@ -687,7 +687,7 @@ public final class TrackController extends GameShell {
 
     private final void r(int param0) {
         if (null != ed.field_I) {
-          vk.a(3, ed.field_I);
+          GameStringTable.a(3, ed.field_I);
           ed.field_I = null;
           qi.d(58);
         }
@@ -706,7 +706,7 @@ public final class TrackController extends GameShell {
 
     final void c(byte param0) {
         this.a(false, 0, 10, 12, 7, (byte) 3, 11, 9);
-        nb var2 = new nb();
+        MidiPlayer var2 = new MidiPlayer();
         var2.a(false, 128, 9);
         mf.a(15, true, 22050, rg.field_c, (java.awt.Component) ((Object) ki.field_f), var2);
         this.a(-1, true, true, false, true);
@@ -926,17 +926,17 @@ public final class TrackController extends GameShell {
             if (sk.field_j != null) {
               ud.a(128, 80.0f, ji.field_e);
               this.a(160);
-              pf.field_P[0] = wb.a(sk.field_j, "", "track controller titlescreen");
-              pf.field_P[1] = wb.a(sk.field_j, "", "track controller new");
-              pf.field_P[2] = wb.a(sk.field_j, "", "track controller level complete");
-              pf.field_P[3] = wb.a(sk.field_j, "", "track controller game over");
+              Model.field_P[0] = MidiFile.a(sk.field_j, "", "track controller titlescreen");
+              Model.field_P[1] = MidiFile.a(sk.field_j, "", "track controller new");
+              Model.field_P[2] = MidiFile.a(sk.field_j, "", "track controller level complete");
+              Model.field_P[3] = MidiFile.a(sk.field_j, "", "track controller game over");
               sk.field_j = null;
               qi.d(param0 - 359);
               return false;
             }
             if (null != wl.field_l) {
               for (var3 = 0; var3 < 4; var3++) {
-                stackIn_146_0 = fj.field_P.a(wl.field_l, (byte) -27, 176400, od.field_d, pf.field_P[var3]);
+                stackIn_146_0 = fj.field_P.a(wl.field_l, (byte) -27, 176400, od.field_d, Model.field_P[var3]);
                 if (!stackIn_146_0) {
                   return false;
                 }
@@ -947,19 +947,19 @@ public final class TrackController extends GameShell {
               qi.d(param0 ^ 399);
               return false;
             }
-            if (da.field_p[1][0] == null) {
+            if (SocketArchiveRequestConnection.avatarSprites[1][0] == null) {
               ud.a(128, 95.0f, SecondaryNodeDeque.field_f);
               this.a(160);
               var3 = 208;
               for (var4 = 1; 32 > var4; var4++) {
                 var5 = var4 * 65536 / 32;
                 for (var6 = 0; var6 < 4; var6++) {
-                  da.field_p[var4][var6] = new Sprite(26, 26);
-                  da.field_p[var4][var6].a();
-                  da.field_p[0][var6].a(var3, var3, var3, var3, var5, 4096);
-                  da.field_p[32 + var4][var6] = new Sprite(26, 26);
-                  da.field_p[var4 + 32][var6].a();
-                  da.field_p[32][var6].a(var3, var3, var3, var3, var5, 4096);
+                  SocketArchiveRequestConnection.avatarSprites[var4][var6] = new Sprite(26, 26);
+                  SocketArchiveRequestConnection.avatarSprites[var4][var6].a();
+                  SocketArchiveRequestConnection.avatarSprites[0][var6].a(var3, var3, var3, var3, var5, 4096);
+                  SocketArchiveRequestConnection.avatarSprites[32 + var4][var6] = new Sprite(26, 26);
+                  SocketArchiveRequestConnection.avatarSprites[var4 + 32][var6].a();
+                  SocketArchiveRequestConnection.avatarSprites[32][var6].a(var3, var3, var3, var3, var5, 4096);
                 }
               }
               ia.field_b.a(-91);
@@ -998,7 +998,7 @@ public final class TrackController extends GameShell {
                 sc.field_g = 1;
               }
               ti.a(-123, 50);
-              fe.a(true, pf.field_P[0], 256);
+              fe.a(true, Model.field_P[0], 256);
               rk.r(13);
             }
             qi.d(54);
@@ -1039,9 +1039,9 @@ public final class TrackController extends GameShell {
             DualLinkNode.field_l[var4].field_s = DualLinkNode.field_l[var4].field_t;
             DualLinkNode.field_l[var4].field_v = DualLinkNode.field_l[var4].field_q;
           }
-          ii.field_r = ib.a(10, "", sg.field_a, "tiles");
+          ii.tileSprites = ib.a(10, "", sg.field_a, "tiles");
           ha.field_m = new Sprite[9];
-          ha.field_m[4] = ii.field_r[0];
+          ha.field_m[4] = ii.tileSprites[0];
           var4 = 0;
           while (var4 < 9) {
             stackIn_90_0 = var4;
@@ -1079,9 +1079,9 @@ public final class TrackController extends GameShell {
           }
           var4_ref_String = stackIn_93_0;
           var22 = ib.a(10, var4_ref_String, sg.field_a, "man");
-          da.field_p = new Sprite[64][4];
-          pd.a(var22, 0, da.field_p[0], 0, 4);
-          pd.a(var22, 4, da.field_p[32], 0, 4);
+          SocketArchiveRequestConnection.avatarSprites = new Sprite[64][4];
+          pd.a(var22, 0, SocketArchiveRequestConnection.avatarSprites[0], 0, 4);
+          pd.a(var22, 4, SocketArchiveRequestConnection.avatarSprites[32], 0, 4);
           j.field_b = ib.a(param0 ^ 473, var4_ref_String, sg.field_a, "man_face");
           SocketConnector.field_a = ib.a(10, "", sg.field_a, "smoke");
           kg.field_e = ib.a(10, "", sg.field_a, "tickbox");

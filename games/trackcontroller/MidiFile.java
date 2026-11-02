@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wb extends IntrusiveNode {
+final class MidiFile extends IntrusiveNode {
     byte[] field_j;
     NodeHashTable field_i;
 
@@ -106,19 +106,19 @@ final class wb extends IntrusiveNode {
         }
     }
 
-    final static wb a(Archive param0, String param1, String param2) {
+    final static MidiFile a(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, -1, param2);
         if (var3 == null) {
           return null;
         }
-        return new wb(new PacketBuffer(var3));
+        return new MidiFile(new PacketBuffer(var3));
     }
 
     final void b() {
         this.field_i = null;
     }
 
-    private wb(PacketBuffer param0) {
+    private MidiFile(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;

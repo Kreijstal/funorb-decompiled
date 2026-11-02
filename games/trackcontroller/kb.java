@@ -17,7 +17,7 @@ final class kb {
           }
           if (uh.field_b[param2].isLinked(10000536)) {
             fe.a(uh.field_b[param2], 2);
-            da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
+            SocketArchiveRequestConnection.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
             return;
           }
           return;
@@ -27,7 +27,7 @@ final class kb {
         }
         if (uh.field_b[param2].isLinked(10000536)) {
           fe.a(uh.field_b[param2], 2);
-          da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
+          SocketArchiveRequestConnection.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
           return;
         }
     }

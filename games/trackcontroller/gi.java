@@ -170,18 +170,18 @@ final class gi extends ic {
         RuntimeException var6 = null;
         qi var7 = null;
         qi var9 = null;
-        rh var10 = null;
+        ButtonWidget var10 = null;
         qi var11 = null;
         qi var12 = null;
         qi var13 = null;
         qi var14 = null;
         try {
-          if (!(param1 instanceof rh)) {
+          if (!(param1 instanceof ButtonWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (UiWidget) (param1);
           }
-          var10 = (rh) (stackIn_3_0);
+          var10 = (ButtonWidget) (stackIn_3_0);
           mb.a(param4 + param1.field_p, param1.field_m + param2, param2 + param1.field_m + param1.field_u, (byte) -41, param1.field_p + (param4 + param1.field_x));
           if (var10 != null) {
             param3 = param3 & var10.field_B;

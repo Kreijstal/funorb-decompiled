@@ -419,7 +419,7 @@ class PacketBuffer extends IntrusiveNode {
         if (null != ii.field_s) {
           return (java.awt.Container) ((Object) ii.field_s);
         }
-        return (java.awt.Container) ((Object) gd.b((byte) 77));
+        return (java.awt.Container) ((Object) CachedArchiveSource.b((byte) 77));
     }
 
     final void c(byte param0, int param1) {
@@ -587,7 +587,7 @@ class PacketBuffer extends IntrusiveNode {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        pf var4_ref_pf = null;
+        Model var4_ref_pf = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -606,7 +606,7 @@ class PacketBuffer extends IntrusiveNode {
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        pf var17 = null;
+        Model var17 = null;
         int var3Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc extends td implements m {
+final class lc extends td implements ButtonListener {
     private jj field_D;
     private int[] field_C;
     private String field_H;
     static String field_E;
     private int field_I;
     private BitmapFont field_F;
-    private rh[] field_G;
+    private ButtonWidget[] field_G;
 
     private final void a(int param0, int param1) {
         int var6 = 0;
@@ -16,8 +16,8 @@ final class lc extends td implements m {
         if (this.field_I >= param0) {
           return;
         }
-        rh[] var8 = new rh[param0];
-        rh[] var3 = var8;
+        ButtonWidget[] var8 = new ButtonWidget[param0];
+        ButtonWidget[] var3 = var8;
         int[] var4 = new int[param0];
         int var5 = -100 / ((param1 - 86) / 32);
         for (var6 = 0; this.field_I > var6; var6++) {
@@ -36,7 +36,7 @@ final class lc extends td implements m {
         }
     }
 
-    public final void a(rh param0, int param1, int param2, int param3, int param4) {
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -82,11 +82,11 @@ final class lc extends td implements m {
         this.field_F.a(this.field_H, 14 + param1 + this.field_p, param2 + this.field_m + 10, this.field_x - 28, this.field_u, 16777215, -1, 0, 0, this.field_F.field_G);
     }
 
-    final rh a(int param0, tg param1, String param2) {
-        rh var4 = null;
+    final ButtonWidget a(int param0, tg param1, String param2) {
+        ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        rh stackIn_1_0 = null;
+        ButtonWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -94,7 +94,7 @@ final class lc extends td implements m {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new rh(param2, param1);
+          var4 = new ButtonWidget(param2, param1);
           var4.field_y = (t) ((Object) new dc());
           var5 = this.field_u - 2;
           this.a(34 + this.field_u, -3050, 0, this.field_x, 0);

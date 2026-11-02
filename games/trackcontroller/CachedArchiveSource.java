@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends ArchiveSource {
+final class CachedArchiveSource extends ArchiveSource {
     static IntrusiveDeque field_q;
     private int field_y;
     private NodeHashTable field_v;
     private int field_o;
-    private ae field_g;
+    private ArchiveRequestConnection field_g;
     static Sprite field_p;
     private int field_m;
     private hf field_w;
@@ -99,7 +99,7 @@ final class gd extends ArchiveSource {
           return q.field_c;
         }
         if (param0 != 77) {
-          gd.b((byte) -108);
+          CachedArchiveSource.b((byte) -108);
         }
         return (java.applet.Applet) ((Object) f.field_c);
     }
@@ -120,7 +120,7 @@ final class gd extends ArchiveSource {
     public static void c(int param0) {
         field_p = null;
         if (param0 != -3) {
-          gd.b((byte) -10);
+          CachedArchiveSource.b((byte) -10);
         }
         field_q = null;
         field_f = null;
@@ -559,7 +559,7 @@ final class gd extends ArchiveSource {
 
     }
 
-    gd(int param0, hf param1, hf param2, ae param3, sd param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveSource(int param0, hf param1, hf param2, ArchiveRequestConnection param3, sd param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

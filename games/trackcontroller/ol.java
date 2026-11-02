@@ -3,7 +3,7 @@
  */
 final class ol extends PcmStream {
     static Sprite field_n;
-    private nb field_p;
+    private MidiPlayer field_p;
     static String field_m;
     IntrusiveDeque field_q;
     k field_o;
@@ -55,7 +55,7 @@ final class ol extends PcmStream {
     }
 
     private final void a(ha param0, int param1, int param2) {
-        nb stackIn_7_0 = null;
+        MidiPlayer stackIn_7_0 = null;
         boolean stackIn_7_1 = false;
         boolean stackIn_8_2 = false;
         RuntimeException stackIn_19_0 = null;
@@ -77,7 +77,7 @@ final class ol extends PcmStream {
                 stackIn_7_0 = this.field_p;
                 stackIn_7_1 = false;
                 stackIn_8_2 = !(param0.field_B.field_q[param0.field_i] >= 0);
-                ((nb) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_8_2, param0);
+                ((MidiPlayer) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_8_2, param0);
               } else {
                 param0.field_l = PcmSampleStream.a(param0.field_n, param0.field_l.f(), param0.field_l.e(), param0.field_l.g());
               }
@@ -146,7 +146,7 @@ final class ol extends PcmStream {
     }
 
     private final void a(int[] param0, int param1, byte param2, int param3, ha param4, int param5) {
-        nb stackIn_13_0 = null;
+        MidiPlayer stackIn_13_0 = null;
         boolean stackIn_13_1 = false;
         boolean stackIn_14_2 = false;
         RuntimeException stackIn_25_0 = null;
@@ -188,7 +188,7 @@ final class ol extends PcmStream {
                 stackIn_13_0 = this.field_p;
                 stackIn_13_1 = false;
                 stackIn_14_2 = !(0 <= param4.field_B.field_q[param4.field_i]);
-                ((nb) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_14_2, param4);
+                ((MidiPlayer) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_14_2, param4);
                 param4.field_l.c(var9, var11.e());
               } else {
                 param4.field_l = PcmSampleStream.a(param4.field_n, var11.f(), var11.e(), var11.g());
@@ -254,23 +254,23 @@ final class ol extends PcmStream {
         int var1Lifetime1;
         if (param0 == 256) {
           if (qd.field_d >= 224) {
-            da.a(256, (byte) -74);
+            SocketArchiveRequestConnection.a(256, (byte) -74);
           } else {
             var1 = qd.field_d % 32;
-            da.a(-var1 + (32 + qd.field_d), (byte) -74);
+            SocketArchiveRequestConnection.a(-var1 + (32 + qd.field_d), (byte) -74);
           }
           return;
         }
         ol.f(-80);
         if (qd.field_d >= 224) {
-          da.a(256, (byte) -74);
+          SocketArchiveRequestConnection.a(256, (byte) -74);
         } else {
           var1Lifetime1 = qd.field_d % 32;
-          da.a(-var1Lifetime1 + (32 + qd.field_d), (byte) -74);
+          SocketArchiveRequestConnection.a(-var1Lifetime1 + (32 + qd.field_d), (byte) -74);
         }
     }
 
-    ol(nb param0) {
+    ol(MidiPlayer param0) {
         this.field_q = new IntrusiveDeque();
         this.field_o = new k();
         try {

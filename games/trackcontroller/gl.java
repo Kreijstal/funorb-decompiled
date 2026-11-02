@@ -66,7 +66,7 @@ final class gl extends ok {
               }
             }
           } else {
-            stackIn_5_0 = !(da.field_o >= 13);
+            stackIn_5_0 = !(SocketArchiveRequestConnection.field_o >= 13);
             MouseWheelInput.field_c = oc.a(stackIn_5_0, -21017);
           }
           if (param3 >= 93) {
