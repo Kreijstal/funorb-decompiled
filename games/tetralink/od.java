@@ -105,7 +105,7 @@ final class od extends hn {
           var5_int = param0.a(param4 ^ -96, param3);
           var6 = param0.a(var5_int, false, param1);
           if (param4 == 95) {
-            stackIn_4_0 = un.a(-29082, param2, var5_int, var6, param0);
+            stackIn_4_0 = UrlFetchTask.a(-29082, param2, var5_int, var6, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ig) null;

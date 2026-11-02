@@ -9,7 +9,7 @@ final class va extends IntrusiveNode {
     static int field_z;
     static sj field_n;
     static volatile int field_y;
-    static kc field_q;
+    static ModelData field_q;
     int field_o;
     static int field_p;
     va field_v;

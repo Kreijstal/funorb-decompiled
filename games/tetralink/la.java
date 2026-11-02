@@ -3,7 +3,7 @@
  */
 final class la extends jd {
     static String field_k;
-    static ob field_g;
+    static Model field_g;
     static String[] field_h;
     static db field_i;
     static String field_f;

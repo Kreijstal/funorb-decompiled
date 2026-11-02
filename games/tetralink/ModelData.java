@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kc extends vh {
+final class ModelData extends vh {
     byte[] field_m;
     byte[] field_x;
     byte[] field_n;
@@ -215,15 +215,15 @@ final class kc extends vh {
     }
 
     final fc a(int param0, int param1, int param2, int param3, int param4) {
-        return (fc) ((Object) new ob(this, param0, param1, param2, param3, param4));
+        return (fc) ((Object) new Model(this, param0, param1, param2, param3, param4));
     }
 
-    final static kc a(Archive param0, String param1, String param2) {
+    final static ModelData a(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, param2, true);
         if (var3 == null) {
           return null;
         }
-        return new kc(var3);
+        return new ModelData(var3);
     }
 
     private final void a(byte[] param0) {
@@ -964,7 +964,7 @@ final class kc extends vh {
         }
     }
 
-    private kc(byte[] param0) {
+    private ModelData(byte[] param0) {
         this.field_K = 0;
         this.field_t = 0;
         this.field_s = (byte) 0;

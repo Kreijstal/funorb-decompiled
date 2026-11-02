@@ -49,7 +49,7 @@ final class bj {
             }
           }
           if (nc.field_e.field_F != 0) {
-            mm.field_y = new om(nc.field_e.field_eb, nc.field_e.field_z, nc.field_e.field_Hb, nc.field_e.field_R, param1, RandomAccessCacheFile.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, ek.field_n, (String) null, 0L);
+            mm.field_y = new om(nc.field_e.field_eb, nc.field_e.field_z, nc.field_e.field_Hb, nc.field_e.field_R, param1, RandomAccessCacheFile.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, NotificationToast.field_n, (String) null, 0L);
           }
           var9 = r.a(fn.field_Q, param3, GameKeyHandler.field_d, 0);
           if (var9 != null) {

@@ -129,7 +129,7 @@ final class sj {
             return true;
           }
           ma.field_d = ll.field_C;
-          ek.field_s = param2;
+          NotificationToast.field_s = param2;
           wh.field_k = param0;
           jl.field_c = param4;
           vj.field_q = param6;

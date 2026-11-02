@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends IntrusiveNode {
+final class NotificationToast extends IntrusiveNode {
     int field_q;
     static String field_t;
     static hl field_o;
@@ -10,7 +10,7 @@ final class ek extends IntrusiveNode {
     static Sprite field_p;
     static String field_s;
 
-    ek(int param0) {
+    NotificationToast(int param0) {
         this.field_q = param0;
     }
 
@@ -24,7 +24,7 @@ final class ek extends IntrusiveNode {
           field_p = null;
           return;
         }
-        ek.b((byte) -76);
+        NotificationToast.b((byte) -76);
         field_s = null;
         field_r = null;
         field_o = null;

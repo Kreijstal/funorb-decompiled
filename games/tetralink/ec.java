@@ -10,7 +10,7 @@ final class ec {
     static mh field_a;
     static Sprite[] field_n;
     private SecondaryNodeDeque field_o;
-    static ob field_l;
+    static Model field_l;
     static int field_i;
     static String field_h;
     static String field_d;
@@ -96,7 +96,7 @@ final class ec {
 
     final static void a(boolean param0, int param1) {
         if (param1 < 113) {
-          field_l = (ob) null;
+          field_l = (Model) null;
           oa.field_y.a(param0, 8);
           return;
         }

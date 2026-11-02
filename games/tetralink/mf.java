@@ -10,7 +10,7 @@ class mf extends al {
     static Sprite[] field_q;
     static Archive field_v;
     static String field_r;
-    static ob field_w;
+    static Model field_w;
 
     final static boolean a(byte param0, String param1, String param2) {
         int var3_int = 0;

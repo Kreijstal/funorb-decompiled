@@ -281,11 +281,11 @@ final class IntrusiveDequeCursor {
           pg.field_f[3] = 16736511;
           pg.field_f[4] = 16711935;
           pg.field_f[4] = 16711935;
-          un.field_j[0] = 16764000;
-          un.field_j[2] = 16736352;
+          UrlFetchTask.field_j[0] = 16764000;
+          UrlFetchTask.field_j[2] = 16736352;
           t.field_l = 8421504;
-          un.field_j[1] = 6356832;
-          un.field_j[3] = 16736511;
+          UrlFetchTask.field_j[1] = 6356832;
+          UrlFetchTask.field_j[3] = 16736511;
           var12 = new Sprite(4, 4);
           var13 = var12.field_C;
           var14 = var12.field_C;

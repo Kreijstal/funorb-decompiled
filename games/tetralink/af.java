@@ -3,10 +3,10 @@
  */
 final class af {
     static long field_f;
-    static un field_g;
+    static UrlFetchTask field_g;
     static int field_h;
     static String field_b;
-    static kc field_c;
+    static ModelData field_c;
     static int[] field_e;
     static String field_d;
     static int[] field_a;

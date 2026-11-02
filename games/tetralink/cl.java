@@ -863,7 +863,7 @@ final class cl {
           var10.c(param0 - 16, -16 + param4);
         } else {
           if ((hj.field_a & 1 << param1) == 0) {
-            stackIn_4_0 = ek.field_p;
+            stackIn_4_0 = NotificationToast.field_p;
           } else {
             stackIn_4_0 = sd.field_qb[param1];
           }

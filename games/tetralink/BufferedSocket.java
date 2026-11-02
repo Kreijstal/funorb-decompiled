@@ -10,7 +10,7 @@ final class BufferedSocket implements Runnable {
     static String field_a;
     static int field_b;
     private int field_k;
-    static kc field_o;
+    static ModelData field_o;
     private AsyncRequest field_r;
     private int field_v;
     private PlatformTaskDispatcher field_d;

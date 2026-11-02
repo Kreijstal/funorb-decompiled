@@ -638,7 +638,7 @@ final class ei {
               if (this.field_a.field_b == 0) {
                 stackIn_6_0 = PacketBuffer.field_s;
               } else {
-                stackIn_6_0 = ek.field_t;
+                stackIn_6_0 = NotificationToast.field_t;
               }
               var3_ref_String = stackIn_6_0;
               if (this.field_i != this.field_a.field_b) {

@@ -134,7 +134,7 @@ final class bn extends IOException {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 21747) {
-            bn.a(-95, 3, (int[]) null, -127, 20, (int[]) null, (kc) null, 45, (int[]) null, -111, -45, (int[]) null, (int[]) null, 93, -71, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, 104, (byte[]) null, (int[]) null);
+            bn.a(-95, 3, (int[]) null, -127, 20, (int[]) null, (ModelData) null, 45, (int[]) null, -111, -45, (int[]) null, (int[]) null, 93, -71, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, 104, (byte[]) null, (int[]) null);
           }
           stackIn_4_0 = mb.field_u.a(param0 - 21738);
           return stackIn_4_0;
@@ -197,7 +197,7 @@ final class bn extends IOException {
         }
     }
 
-    final static void a(int param0, int param1, int[] param2, int param3, int param4, int[] param5, kc param6, int param7, int[] param8, int param9, int param10, int[] param11, int[] param12, int param13, int param14, int[] param15, int[] param16, int[] param17, int[] param18, int[] param19, int[] param20, int param21, byte[] param22, int[] param23) {
+    final static void a(int param0, int param1, int[] param2, int param3, int param4, int[] param5, ModelData param6, int param7, int[] param8, int param9, int param10, int[] param11, int[] param12, int param13, int param14, int[] param15, int[] param16, int[] param17, int[] param18, int[] param19, int[] param20, int param21, byte[] param22, int[] param23) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

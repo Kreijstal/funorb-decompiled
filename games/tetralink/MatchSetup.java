@@ -197,33 +197,33 @@ final class MatchSetup {
           field_m[0] = new hl(0L, sd.field_rb, RasterBuffer.field_b);
           ClientException.field_e[0] = new nh[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            ClientException.field_e[0][var17_int + 1] = new nh(0L, ia.field_L, (hl) null, ek.field_n, rm.field_b[var17_int], wa.field_b[var17_int]);
+            ClientException.field_e[0][var17_int + 1] = new nh(0L, ia.field_L, (hl) null, NotificationToast.field_n, rm.field_b[var17_int], wa.field_b[var17_int]);
           }
           if (cl.field_f.length >= 2) {
             field_m[1] = new hl(0L, sd.field_rb, fi.field_zb);
             array$0 = new nh[cl.field_f.length + 1];
             ClientException.field_e[1] = array$0;
-            ClientException.field_e[1][0] = new nh(0L, ia.field_L, (hl) null, ek.field_n, (Sprite) null, qf.field_c);
+            ClientException.field_e[1][0] = new nh(0L, ia.field_L, (hl) null, NotificationToast.field_n, (Sprite) null, qf.field_c);
             for (var17_intLifetime1 = 0; cl.field_f.length > var17_intLifetime1; var17_intLifetime1++) {
-              ClientException.field_e[1][var17_intLifetime1 + 1] = new nh(0L, ia.field_L, (hl) null, ek.field_n, (Sprite) null, Integer.toString(cl.field_f[var17_intLifetime1]));
+              ClientException.field_e[1][var17_intLifetime1 + 1] = new nh(0L, ia.field_L, (hl) null, NotificationToast.field_n, (Sprite) null, Integer.toString(cl.field_f[var17_intLifetime1]));
             }
           }
           field_m[2] = new hl(0L, sd.field_rb, wa.field_i);
-          ClientException.field_e[2] = new nh[]{new nh(0L, ia.field_L, (hl) null, ek.field_n, (Sprite) null, qf.field_c), new nh(0L, ia.field_L, (hl) null, ek.field_n, SpriteState.field_B[0], q.field_d), new nh(0L, ia.field_L, (hl) null, ek.field_n, SpriteState.field_B[1], om.field_Zb)};
+          ClientException.field_e[2] = new nh[]{new nh(0L, ia.field_L, (hl) null, NotificationToast.field_n, (Sprite) null, qf.field_c), new nh(0L, ia.field_L, (hl) null, NotificationToast.field_n, SpriteState.field_B[0], q.field_d), new nh(0L, ia.field_L, (hl) null, NotificationToast.field_n, SpriteState.field_B[1], om.field_Zb)};
           if (mk.field_e > 1) {
             field_m[3] = new hl(0L, sd.field_rb, gi.field_a);
             array$1 = new nh[mk.field_e + 1];
             ClientException.field_e[3] = array$1;
-            ClientException.field_e[3][0] = new nh(0L, ia.field_L, (hl) null, ek.field_n, (Sprite) null, qf.field_c);
+            ClientException.field_e[3][0] = new nh(0L, ia.field_L, (hl) null, NotificationToast.field_n, (Sprite) null, qf.field_c);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < mk.field_e; var17_intLifetime2++) {
-              ClientException.field_e[3][1 + var17_intLifetime2] = new nh(0L, ia.field_L, (hl) null, ek.field_n, (Sprite) null, nd.field_Rb[var17_intLifetime2]);
+              ClientException.field_e[3][1 + var17_intLifetime2] = new nh(0L, ia.field_L, (hl) null, NotificationToast.field_n, (Sprite) null, nd.field_Rb[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; var17_intLifetime3 < param2; var17_intLifetime3++) {
             field_m[4 + var17_intLifetime3] = new hl(0L, sd.field_rb, ll.field_y[var17_intLifetime3]);
             array$2 = new nh[1 + pl.a(255, (int) eo.field_e[var17_intLifetime3])];
             ClientException.field_e[var17_intLifetime3 + 4] = array$2;
-            ClientException.field_e[4 + var17_intLifetime3][0] = new nh(0L, ia.field_L, (hl) null, ek.field_n, (Sprite) null, qf.field_c);
+            ClientException.field_e[4 + var17_intLifetime3][0] = new nh(0L, ia.field_L, (hl) null, NotificationToast.field_n, (Sprite) null, qf.field_c);
             for (var18 = 0; (eo.field_e[var17_intLifetime3] & 255) > var18; var18++) {
               if (null == jm.field_g) {
                 var19_ref = null;
@@ -243,7 +243,7 @@ final class MatchSetup {
                   var20 = null;
                 }
               }
-              ClientException.field_e[4 + var17_intLifetime3][1 + var18] = new nh(0L, ia.field_L, (hl) null, ek.field_n, (Sprite) (var19_ref), (String) (var20));
+              ClientException.field_e[4 + var17_intLifetime3][1 + var18] = new nh(0L, ia.field_L, (hl) null, NotificationToast.field_n, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param2 + 4 > var17_intLifetime4; var17_intLifetime4++) {

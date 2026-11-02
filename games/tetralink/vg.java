@@ -272,7 +272,7 @@ final class vg extends hl {
         mi.field_Kb.field_xb = 1;
         th.field_i = new hl(0L, mb.field_x, bm.field_o);
         eo.field_b = new hl(0L, um.field_l, FullscreenFocusCanvas.field_g);
-        kd.field_i = new hl(0L, ek.field_n);
+        kd.field_i = new hl(0L, NotificationToast.field_n);
         go.field_d.a((byte) -85, mi.field_Kb);
         go.field_d.a((byte) 59, th.field_i);
         go.field_d.a((byte) -107, eo.field_b);

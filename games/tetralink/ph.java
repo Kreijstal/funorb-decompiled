@@ -269,7 +269,7 @@ abstract class ph extends GameApplet {
           if (var4 == 13) {
             try {
               if (null == af.field_g) {
-                af.field_g = new un(nd.field_Pb, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                af.field_g = new UrlFetchTask(nd.field_Pb, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (af.field_g.b((byte) -75)) {
                 var7 = af.field_g.a((byte) 79);

@@ -209,7 +209,7 @@ class ka extends hm {
 
     final static String c(byte param0) {
         if (ma.field_d == ll.field_C) {
-          return ek.field_s;
+          return NotificationToast.field_s;
         }
         int var1 = -115 % ((-27 - param0) / 33);
         return ll.field_w;

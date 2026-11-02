@@ -460,10 +460,10 @@ final class vf {
                   if (var2 == 21) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(param0 ^ -122);
                     if (var3Lifetime5 != 0) {
-                      un.field_f = k.a(0) + (long)var3Lifetime5;
+                      UrlFetchTask.field_f = k.a(0) + (long)var3Lifetime5;
                       return;
                     }
-                    un.field_f = 0L;
+                    UrlFetchTask.field_f = 0L;
                     return;
                   }
                   if (var2 == 22) {
@@ -557,7 +557,7 @@ final class vf {
             qb.field_N = new el(hg.field_k);
             qb.field_N.a((long)var3Lifetime1, 17260);
             dh.a(false, true, qb.field_N, var1);
-            un.field_f = 0L;
+            UrlFetchTask.field_f = 0L;
           } else {
             qb.field_N = null;
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends fc {
+final class Model extends fc {
     int[] field_V;
     int[] field_A;
     int field_ib;
@@ -14,7 +14,7 @@ final class ob extends fc {
     int field_E;
     int[] field_I;
     byte[] field_eb;
-    private static ob field_o;
+    private static Model field_o;
     short[] field_J;
     byte field_K;
     int[] field_M;
@@ -462,21 +462,21 @@ final class ob extends fc {
             if (this.field_j[var4] != -1) {
               if (this.field_j[var4] != -2) {
                 var2 = this.field_hb[var4] & -131072;
-                this.field_hb[var4] = var2 | ob.a(var1, var2 >> 17);
+                this.field_hb[var4] = var2 | Model.a(var1, var2 >> 17);
                 var2 = this.field_M[var4] & -131072;
-                this.field_M[var4] = var2 | ob.a(var1, var2 >> 17);
+                this.field_M[var4] = var2 | Model.a(var1, var2 >> 17);
                 var2 = this.field_j[var4] & -131072;
-                this.field_j[var4] = var2 | ob.a(var1, var2 >> 17);
+                this.field_j[var4] = var2 | Model.a(var1, var2 >> 17);
               }
             } else {
               var2 = this.field_hb[var4] & -131072;
-              this.field_hb[var4] = var2 | ob.a(var1, var2 >> 17);
+              this.field_hb[var4] = var2 | Model.a(var1, var2 >> 17);
             }
           }
         }
     }
 
-    private final fc a(boolean param0, boolean param1, ob param2, byte[] param3, short[] param4, int[] param5, int[] param6, int[] param7) {
+    private final fc a(boolean param0, boolean param1, Model param2, byte[] param3, short[] param4, int[] param5, int[] param6, int[] param7) {
         int var9;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1875,7 +1875,7 @@ final class ob extends fc {
         this.field_s = false;
     }
 
-    public ob() {
+    public Model() {
         this.field_ib = 0;
         this.field_ob = 0;
         this.field_E = 0;
@@ -1885,7 +1885,7 @@ final class ob extends fc {
         this.field_s = false;
     }
 
-    ob(kc param0, int param1, int param2, int param3, int param4, int param5) {
+    Model(ModelData param0, int param1, int param2, int param3, int param4, int param5) {
         int dupTemp$1 = 0;
         int incrementValue$0 = 0;
         int var7;
@@ -2034,7 +2034,7 @@ final class ob extends fc {
               } else {
                 var19 = param0.field_o[var16];
                 var14 = param1 + (param3 * var19.field_g + param4 * var19.field_d + param5 * var19.field_h) / (var8 + var8 / 2);
-                this.field_hb[var16] = ob.e(var14);
+                this.field_hb[var16] = Model.e(var14);
                 this.field_j[var16] = -1;
               }
             } else {
@@ -2045,7 +2045,7 @@ final class ob extends fc {
                 var13 = param0.field_f[this.field_kb[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e);
-              this.field_hb[var16] = ob.e(var14);
+              this.field_hb[var16] = Model.e(var14);
               if (param0.field_w != null &&
                 param0.field_w[this.field_A[var16]] != null) {
                 var13 = param0.field_w[this.field_A[var16]];
@@ -2053,7 +2053,7 @@ final class ob extends fc {
                 var13 = param0.field_f[this.field_A[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e);
-              this.field_M[var16] = ob.e(var14);
+              this.field_M[var16] = Model.e(var14);
               if (param0.field_w != null &&
                 param0.field_w[this.field_p[var16]] != null) {
                 var13 = param0.field_w[this.field_p[var16]];
@@ -2061,7 +2061,7 @@ final class ob extends fc {
                 var13 = param0.field_f[this.field_p[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e);
-              this.field_j[var16] = ob.e(var14);
+              this.field_j[var16] = Model.e(var14);
             }
           } else {
             if (var10Lifetime2 != 0) {
@@ -2075,7 +2075,7 @@ final class ob extends fc {
               } else {
                 var18 = param0.field_o[var16];
                 var14 = param1 + (param3 * var18.field_g + param4 * var18.field_d + param5 * var18.field_h) / (var8 + var8 / 2) << 17;
-                this.field_hb[var16] = var14 | ob.a(param0.field_H[var16] & 65535, var14 >> 17);
+                this.field_hb[var16] = var14 | Model.a(param0.field_H[var16] & 65535, var14 >> 17);
                 this.field_j[var16] = -1;
               }
             } else {
@@ -2087,7 +2087,7 @@ final class ob extends fc {
                 var13 = param0.field_f[this.field_kb[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e) << 17;
-              this.field_hb[var16] = var14 | ob.a(var15, var14 >> 17);
+              this.field_hb[var16] = var14 | Model.a(var15, var14 >> 17);
               if (param0.field_w != null &&
                 param0.field_w[this.field_A[var16]] != null) {
                 var13 = param0.field_w[this.field_A[var16]];
@@ -2095,7 +2095,7 @@ final class ob extends fc {
                 var13 = param0.field_f[this.field_A[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e) << 17;
-              this.field_M[var16] = var14 | ob.a(var15, var14 >> 17);
+              this.field_M[var16] = var14 | Model.a(var15, var14 >> 17);
               if (param0.field_w != null &&
                 param0.field_w[this.field_p[var16]] != null) {
                 var13 = param0.field_w[this.field_p[var16]];
@@ -2103,14 +2103,14 @@ final class ob extends fc {
                 var13 = param0.field_f[this.field_p[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e) << 17;
-              this.field_j[var16] = var14 | ob.a(var15, var14 >> 17);
+              this.field_j[var16] = var14 | Model.a(var15, var14 >> 17);
             }
           }
           var16++;
         }
     }
 
-    ob(ob[] param0, int param1) {
+    Model(Model[] param0, int param1) {
         int var8 = 0;
         int stackIn_13_0 = 0;
         int stackIn_14_1 = 0;
@@ -2126,20 +2126,20 @@ final class ob extends fc {
         int var5;
         int var6;
         int var7;
-        ob var8_ref_ob;
-        ob var9;
+        Model var8_ref_ob;
+        Model var9;
         int var9_int;
         int var10;
-        ob var11;
+        Model var11;
         int var12;
-        ob var13;
-        ob var14;
+        Model var13;
+        Model var14;
         int var7Lifetime1;
         int var7Lifetime2;
         int var9_intLifetime1;
         int var9_intLifetime2;
         int var10Lifetime1;
-        ob var8_ref_obLifetime1;
+        Model var8_ref_obLifetime1;
         this.field_ib = 0;
         this.field_ob = 0;
         this.field_E = 0;
@@ -2320,14 +2320,14 @@ final class ob extends fc {
     }
 
     static {
-        field_o = new ob();
+        field_o = new Model();
         field_h = new short[1];
         field_n = new int[1];
         field_cb = new byte[1];
         field_jb = new int[1];
         field_O = new int[1];
-        ob discarded$0 = new ob();
-        ob discarded$1 = new ob();
+        Model discarded$0 = new Model();
+        Model discarded$1 = new Model();
         field_x = new int[10];
         field_w = new int[10];
         field_C = new int[4096];

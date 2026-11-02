@@ -225,9 +225,9 @@ abstract class SpriteState extends DualLinkNode {
               var12.field_wc.field_xb = 2;
               var12.field_Mb = new hl(0L, sk.field_h);
               var12.a((byte) 86, var12.field_Mb);
-              var12.field_vc = new hl(0L, ek.field_n);
+              var12.field_vc = new hl(0L, NotificationToast.field_n);
               var12.a((byte) -88, var12.field_vc);
-              var12.field_Pb = new hl(0L, ek.field_n);
+              var12.field_Pb = new hl(0L, NotificationToast.field_n);
               var12.a((byte) -116, var12.field_Pb);
               var12.field_Tb = new hl(0L, bk.field_i);
               var12.a((byte) -85, var12.field_Tb);

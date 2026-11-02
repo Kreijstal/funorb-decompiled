@@ -27,7 +27,7 @@ final class fi extends lk implements dm {
             var3_int = 1;
             if (8 == param1) {
               if (!qa.field_v) {
-                param0 = ek.field_r;
+                param0 = NotificationToast.field_r;
               } else {
                 param0 = fk.field_R;
               }
@@ -160,17 +160,17 @@ final class fi extends lk implements dm {
                 param1.field_s == 0) {
                 var2_intLifetime1 = pg.field_f[param1.field_i];
               } else {
-                var2_intLifetime1 = un.field_j[param1.field_i];
+                var2_intLifetime1 = UrlFetchTask.field_j[param1.field_i];
               }
             }
           } else {
             if (param1.field_i == 4) {
-              var2_intLifetime1 = un.field_j[param1.field_i];
+              var2_intLifetime1 = UrlFetchTask.field_j[param1.field_i];
             } else {
               if (~param1.field_r == ~oj.field_c) {
                 var2_intLifetime1 = pg.field_f[param1.field_i];
               } else {
-                var2_intLifetime1 = un.field_j[param1.field_i];
+                var2_intLifetime1 = UrlFetchTask.field_j[param1.field_i];
               }
             }
           }

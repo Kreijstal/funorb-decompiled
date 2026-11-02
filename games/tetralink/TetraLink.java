@@ -6,14 +6,14 @@ public final class TetraLink extends ph {
     static aa field_P;
     static String field_O;
     static String field_M;
-    private IntrusiveDeque field_L;
-    private int field_K;
+    private IntrusiveDeque notificationQueue;
+    private int notificationTimer;
     static int field_I;
     public static int field_J;
 
-    final void h(int param0) {
+    final void releaseStaticResources(int param0) {
         TetraLink.p(10297);
-        ek.b((byte) -64);
+        NotificationToast.b((byte) -64);
         IntrusiveNode.b(20043);
         IntrusiveDeque.b((byte) 25);
         kj.a(param0 ^ param0);
@@ -32,7 +32,7 @@ public final class TetraLink extends ph {
         ph.o(param0 ^ -1328);
         ClientException.a(true);
         GameApplet.e(6);
-        un.a(-2);
+        UrlFetchTask.a(-2);
         MouseInputHandler.a(param0 ^ 1322);
         MouseWheelInput.b(-1);
         SoftwareRasterizer.b();
@@ -65,7 +65,7 @@ public final class TetraLink extends ph {
         cl.d(-119);
         ei.b(false);
         wg.a(6945);
-        ob.d();
+        Model.d();
         ti.a(2);
         SpriteState.f(21);
         DualLinkNode.d(105);
@@ -311,11 +311,11 @@ public final class TetraLink extends ph {
         jk.a((byte) 77);
         d.b((byte) 6);
         mh.a(-82);
-        this.field_L = null;
+        this.notificationQueue = null;
         this.field_y = null;
     }
 
-    final void g(int param0) {
+    final void renderFrame(int param0) {
         Object stackIn_3_0 = null;
         ei stackIn_15_0 = null;
         int stackIn_42_0 = 0;
@@ -323,7 +323,7 @@ public final class TetraLink extends ph {
         Object var2;
         ei var3;
         int var4;
-        ek var4_ref_ek;
+        NotificationToast var4_ref_ek;
         int var5;
         int var6;
         int var7;
@@ -396,9 +396,9 @@ public final class TetraLink extends ph {
         } else {
           if (!ai.a((byte) 105)) {
             if (!dg.c(115)) {
-              if (!this.field_L.isEmpty(true)) {
-                var4_ref_ek = (ek) (this.field_L.c(false));
-                var6 = this.field_K;
+              if (!this.notificationQueue.isEmpty(true)) {
+                var4_ref_ek = (NotificationToast) (this.notificationQueue.c(false));
+                var6 = this.notificationTimer;
                 if (var6 < 80) {
                   var5 = -32 + var6 / 2;
                 } else {
@@ -476,7 +476,7 @@ public final class TetraLink extends ph {
         var8 = field_J;
         var2 = 1;
         if (param0 != 10) {
-          this.field_K = -53;
+          this.notificationTimer = -53;
         }
         if (ed.field_O == kb.field_t &&
           af.field_h == hm.field_a) {
@@ -691,7 +691,7 @@ public final class TetraLink extends ph {
         return;
     }
 
-    final void f(int param0) {
+    final void tick(int param0) {
         boolean discarded$0 = false;
         int var6_int = 0;
         String[] array$1 = null;
@@ -750,7 +750,7 @@ public final class TetraLink extends ph {
         stackIn_6_2 = (hd.field_u != null);
         this.b(stackIn_5_1, stackIn_6_2);
         if (oa.field_w) {
-          this.q(104);
+          this.loadArchives(104);
           oa.field_w = false;
         }
         dh.field_e = dh.field_e + 1;
@@ -899,7 +899,7 @@ public final class TetraLink extends ph {
             var2Lifetime1 = kb.field_q.readUnsignedByte((byte) -99);
             var3 = 1 << var2Lifetime1;
             hj.field_a = hj.field_a | var3;
-            this.field_L.addLast(new ek(var2Lifetime1), false);
+            this.notificationQueue.addLast(new NotificationToast(var2Lifetime1), false);
             continue;
           }
           if (ua.field_c != 57 &&
@@ -1043,7 +1043,7 @@ public final class TetraLink extends ph {
             if (0 == var5Lifetime1) {
               stackIn_104_3 = PacketBuffer.field_s;
             } else {
-              stackIn_104_3 = ek.field_t;
+              stackIn_104_3 = NotificationToast.field_t;
             }
             stackIn_103_1[stackIn_103_2] = stackIn_104_3;
             var13 = sk.a(stackIn_103_0, BufferedSocket.field_e, 119);
@@ -1126,7 +1126,7 @@ public final class TetraLink extends ph {
         int stackIn_74_1 = 0;
         int var2 = 0;
         int var3 = 0;
-        ob var4 = null;
+        Model var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
@@ -1149,7 +1149,7 @@ public final class TetraLink extends ph {
         int var16 = 0;
         int[] var17 = null;
         Object var18 = null;
-        ob var18_ref = null;
+        Model var18_ref = null;
         int[] var19 = null;
         int[] var20 = null;
         int[] var21 = null;
@@ -1230,12 +1230,12 @@ public final class TetraLink extends ph {
           var6 = le.d(var5, -28583);
           var7_int = ua.a(-122, var5);
           ng.field_s = new int[]{var8_int, var10, var9_int, var7_int, 0, -var6, 0, 65536, 0, var6, 0, var7_int};
-          var18_ref = (ob) (ac.field_a.a(false, -37, ec.field_l, true));
+          var18_ref = (Model) (ac.field_a.a(false, -37, ec.field_l, true));
           var18_ref.a(ng.field_s);
-          var4 = new ob(new ob[]{var4, var18_ref}, 2);
+          var4 = new Model(new Model[]{var4, var18_ref}, 2);
         }
-        lh.field_t = new ob();
-        la.field_g = new ob();
+        lh.field_t = new Model();
+        la.field_g = new Model();
         ui.a(la.field_g, 0, 0, lh.field_t, 0, bd.field_b[10] >> 10, 100, var4, bd.field_b[11] >> 10, bd.field_b[9] >> 10);
         if (var2 != 0) {
           SoftwareRasterizer.c(0, 0, 640, 480, 3158064);
@@ -1813,12 +1813,12 @@ public final class TetraLink extends ph {
             el.d(5, (int)dc.field_d);
             kd.a(320, ((int)(dc.field_d * 4.0f) + 240) / 9, (byte) -121);
           }
-          if (this.field_L.c(false) != null) {
-            fieldTemp$0 = this.field_K + 1;
-            this.field_K = this.field_K + 1;
+          if (this.notificationQueue.c(false) != null) {
+            fieldTemp$0 = this.notificationTimer + 1;
+            this.notificationTimer = this.notificationTimer + 1;
             if (fieldTemp$0 == 335) {
-              this.field_K = 0;
-              this.field_L.removeFirst(false);
+              this.notificationTimer = 0;
+              this.notificationQueue.removeFirst(false);
             }
           }
           if (!param1) {
@@ -1857,7 +1857,7 @@ public final class TetraLink extends ph {
         this.a("tetralink", 18, 640);
     }
 
-    final void b(int param0) {
+    final void onShutdown(int param0) {
         ja.a(0);
         if (hd.field_u != null) {
           qa.b((byte) 46);
@@ -1868,7 +1868,7 @@ public final class TetraLink extends ph {
         re.d(true);
     }
 
-    final void a(int param0) {
+    final void onStartup(int param0) {
         this.a(17, 2, 0, param0 ^ -20109, false, 4, 1, 17);
         g var3 = new g();
         var3.a(9, 128, (byte) -128);
@@ -1879,7 +1879,7 @@ public final class TetraLink extends ph {
         uj.field_w = 255;
         IntrusiveDeque.field_b[62] = 1;
         if (param0 != -20173) {
-          this.b(-119);
+          this.onShutdown(-119);
         }
         IntrusiveDeque.field_b[67] = 1;
         IntrusiveDeque.field_b[63] = 1;
@@ -1898,7 +1898,7 @@ public final class TetraLink extends ph {
     }
 
     private final void a(boolean param0, Archive param1) {
-        kc var3 = null;
+        ModelData var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -1907,13 +1907,13 @@ public final class TetraLink extends ph {
         try {
           vn.b(1.0f);
           vn.b();
-          af.field_c = kc.a(param1, "", "scenery");
+          af.field_c = ModelData.a(param1, "", "scenery");
           if (!cf.a(0, (byte) 117)) {
-            mf.field_w = (ob) (af.field_c.a(64, 728, 0, 256, 0));
+            mf.field_w = (Model) (af.field_c.a(64, 728, 0, 256, 0));
           } else {
-            mf.field_w = (ob) (af.field_c.a(32, 2184, 0, 256, 0));
-            var3 = kc.a(param1, "", "ghost_untextured");
-            ec.field_l = (ob) (var3.a(64, 728, 0, 256, 0));
+            mf.field_w = (Model) (af.field_c.a(32, 2184, 0, 256, 0));
+            var3 = ModelData.a(param1, "", "ghost_untextured");
+            ec.field_l = (Model) (var3.a(64, 728, 0, 256, 0));
           }
           mf.field_w.a(gk.field_e);
           if (param0) {
@@ -2019,7 +2019,7 @@ public final class TetraLink extends ph {
           qd.field_cb = el.a(param1, "walk3", "", -1409);
           li.field_l = oc.a("frame", true, param1, "");
           sd.field_qb = bf.a((byte) -69, param1, "", "achievements_large");
-          ek.field_p = ug.a(param0, (byte) -45, "unachieved", "basic");
+          NotificationToast.field_p = ug.a(param0, (byte) -45, "unachieved", "basic");
           w.field_r = ug.a(param0, (byte) -45, "orbcoin", "basic");
           var8 = sd.field_qb.length;
           hl.field_G = new Sprite[var8];
@@ -2032,11 +2032,11 @@ public final class TetraLink extends ph {
           }
           cm.field_F = new Sprite(32, 32);
           cm.field_F.c();
-          ek.field_p.b(0, 0, 32, 32);
+          NotificationToast.field_p.b(0, 0, 32, 32);
           fh.a(true);
           l.field_c = bf.a((byte) -97, param1, "", "viewicons");
-          e.field_f = this.a(8388608, 262144, (byte) -107);
-          ho.field_M = this.a(6316128, 263172, (byte) -107);
+          e.field_f = this.createShadedDiscSprite(8388608, 262144, (byte) -107);
+          ho.field_M = this.createShadedDiscSprite(6316128, 263172, (byte) -107);
           if (cf.a(0, (byte) 119)) {
             me.field_e = ug.a(param1, (byte) -45, "red_counter", "allhallowseve");
             qd.field_X = ug.a(param1, (byte) -45, "white_counter", "allhallowseve");
@@ -2091,7 +2091,7 @@ public final class TetraLink extends ph {
         }
     }
 
-    private final void q(int param0) {
+    private final void loadArchives(int param0) {
         if (um.field_k != null) {
           of.a(-98, um.field_k);
           um.field_k = null;
@@ -2117,7 +2117,7 @@ public final class TetraLink extends ph {
         }
     }
 
-    private final Sprite a(int param0, int param1, byte param2) {
+    private final Sprite createShadedDiscSprite(int param0, int param1, byte param2) {
         int var5 = 0;
         int var6 = field_J;
         Sprite var4 = new Sprite(57, 57);
@@ -2150,7 +2150,7 @@ public final class TetraLink extends ph {
         if (null == n.field_N) {
           if (null != nl.field_g) {
             ak.a(0, mf.field_r, 80.0f);
-            this.g(124);
+            this.renderFrame(124);
             qc.field_bb = new ri[4];
             qc.field_bb[0] = ri.a(nl.field_g, "", "tetralink titlescreen");
             qc.field_bb[1] = ri.a(nl.field_g, "", "tetralink ingame 1");
@@ -2168,7 +2168,7 @@ public final class TetraLink extends ph {
           }
           if (null != ll.field_x) {
             ak.a(0, hm.field_e, 90.0f);
-            this.g(126);
+            this.renderFrame(126);
             this.a(v.field_v, cd.field_b, true, ll.field_x, sb.field_a, vf.field_a);
             sb.field_a = null;
             ll.field_x = null;
@@ -2177,7 +2177,7 @@ public final class TetraLink extends ph {
           }
           if (fk.field_U != null) {
             ak.a(0, pi.field_e, 95.0f);
-            this.g(118);
+            this.renderFrame(118);
             this.a(false, fk.field_U);
             fk.field_U = null;
             SecondaryNodeDeque.c(-8243);
@@ -2273,7 +2273,7 @@ public final class TetraLink extends ph {
                                       rc.field_U.a(false)) {
                                       ni.d((byte) 126);
                                       ak.a(0, ji.field_Ub, 78.0f);
-                                      this.g(122);
+                                      this.renderFrame(122);
                                       if (!param1) {
                                         return false;
                                       }
@@ -2351,8 +2351,8 @@ public final class TetraLink extends ph {
     }
 
     public TetraLink() {
-        this.field_L = new IntrusiveDeque();
-        this.field_K = 0;
+        this.notificationQueue = new IntrusiveDeque();
+        this.notificationTimer = 0;
     }
 
     static {

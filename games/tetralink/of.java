@@ -318,7 +318,7 @@ final class of {
           }
           var2Lifetime14 = sj.a("TEXT_COLOUR_WHITE", -1);
           if (var2Lifetime14 != null) {
-            ek.field_t = ud.a(var2Lifetime14, -89);
+            NotificationToast.field_t = ud.a(var2Lifetime14, -89);
           }
           var2Lifetime15 = sj.a("TEXT_COLOUR_RED", -1);
           if (var2Lifetime15 != null) {

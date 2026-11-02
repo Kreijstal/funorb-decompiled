@@ -189,9 +189,9 @@ final class SoundEffectLibrary {
         if (!param0) {
           byte[] var2 = (byte[]) null;
           SoundEffectLibrary.a(-120, (byte[]) null);
-          return ek.a(true);
+          return NotificationToast.a(true);
         }
-        return ek.a(true);
+        return NotificationToast.a(true);
     }
 
     final static ig a(int param0, byte[] param1) {

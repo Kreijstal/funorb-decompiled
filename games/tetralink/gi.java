@@ -1018,7 +1018,7 @@ final class gi {
                 }
                 var2 = vj.a(param0 ^ -77, "invaliduserorpass");
                 if (null != var2) {
-                  ek.field_r = ud.a(var2, -93);
+                  NotificationToast.field_r = ud.a(var2, -93);
                 }
                 var2 = vj.a(-83, "pleasetryagain");
                 if (var2 != null) {

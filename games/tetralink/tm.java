@@ -194,7 +194,7 @@ final class tm extends um {
           ui.field_d = param2.field_fb;
           ui.field_d.clear(1);
           dg.field_g = new kd(param3);
-          un.field_f = 0L;
+          UrlFetchTask.field_f = 0L;
           u.field_a = param8;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

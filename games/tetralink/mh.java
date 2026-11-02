@@ -160,7 +160,7 @@ final class mh {
               rn.field_c.field_jb = lk.field_pb.toUpperCase();
               var8 = rn.field_c;
               stackIn_19_0 = rn.field_c;
-              stackIn_20_1 = (param0) && (un.field_f == 0L);
+              stackIn_20_1 = (param0) && (UrlFetchTask.field_f == 0L);
               stackIn_19_0.field_S = stackIn_20_1;
               var10 = 2;
               if (null != uj.field_s) {
@@ -374,8 +374,8 @@ final class mh {
               tn.field_a.field_jb = sk.a(new String[]{var9_ref_String}, om.field_Xb, 123);
               var8 = tn.field_a;
             }
-            if (un.field_f != 0L) {
-              var9 = (int)(-k.a(0) + un.field_f);
+            if (UrlFetchTask.field_f != 0L) {
+              var9 = (int)(-k.a(0) + UrlFetchTask.field_f);
               var9 = (999 + var9) / 1000;
               if (1 > var9) {
                 var9 = 1;

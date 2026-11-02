@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class un implements Runnable {
+final class UrlFetchTask implements Runnable {
     private AsyncRequest field_i;
     private PlatformTaskDispatcher field_a;
     static int[] field_j;
@@ -127,7 +127,7 @@ final class un implements Runnable {
               break;
             }
             if (this.field_g.position == this.field_g.payload.length) {
-              throw un.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_e));
+              throw UrlFetchTask.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_e));
             }
             var1 = this;
             synchronized (var1) {
@@ -152,7 +152,7 @@ final class un implements Runnable {
         }
     }
 
-    un(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
+    UrlFetchTask(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_e = param1;
           this.field_a = param0;
