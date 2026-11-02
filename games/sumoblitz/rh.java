@@ -7,7 +7,7 @@ final class rh extends PcmStream {
     IntrusiveDeque field_t;
     static int[] field_s;
     static boolean[] field_r;
-    private bs field_u;
+    private MidiPcmStream field_u;
     PcmStreamMixer field_o;
 
     final void b(int[] param0, int param1, int param2) {
@@ -63,7 +63,7 @@ final class rh extends PcmStream {
     }
 
     private final void a(uu param0, int[] param1, int param2, int param3, int param4, int param5) {
-        bs stackIn_14_0 = null;
+        MidiPcmStream stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         uu stackIn_14_2 = null;
         boolean stackIn_15_3;
@@ -112,7 +112,7 @@ final class rh extends PcmStream {
                 stackIn_14_1 = 114;
                 stackIn_14_2 = (uu) (param0);
                 stackIn_15_3 = !(param0.field_A.field_k[param0.field_E] >= 0);
-                ((bs) (Object) stackIn_14_0).a((byte) stackIn_14_1, stackIn_14_2, stackIn_15_3);
+                ((MidiPcmStream) (Object) stackIn_14_0).a((byte) stackIn_14_1, stackIn_14_2, stackIn_15_3);
                 param0.field_z.b(var9, var11.g());
               } else {
                 param0.field_z = PcmSampleStream.a(param0.field_B, var11.e(), var11.g(), var11.i());
@@ -209,7 +209,7 @@ final class rh extends PcmStream {
     }
 
     private final void a(uu param0, int param1, int param2) {
-        bs stackIn_8_0 = null;
+        MidiPcmStream stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         uu stackIn_8_2 = null;
         boolean stackIn_9_3;
@@ -236,7 +236,7 @@ final class rh extends PcmStream {
                 stackIn_8_1 = -56;
                 stackIn_8_2 = (uu) (param0);
                 stackIn_9_3 = !(param0.field_A.field_k[param0.field_E] >= 0);
-                ((bs) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
+                ((MidiPcmStream) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
               }
               if (param0.field_A.field_k[param0.field_E] < 0) {
                 param0.field_z.c(-1);
@@ -280,7 +280,7 @@ final class rh extends PcmStream {
         }
     }
 
-    rh(bs param0) {
+    rh(MidiPcmStream param0) {
         this.field_t = new IntrusiveDeque();
         this.field_o = new PcmStreamMixer();
         try {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bs extends PcmStream {
+final class MidiPcmStream extends PcmStream {
     private int field_E;
     private int[] field_L;
     private int[] field_H;
@@ -1463,7 +1463,7 @@ final class bs extends PcmStream {
     public static void f(int param0) {
         field_o = null;
         if (param0 >= -38) {
-          bs.f(-53);
+          MidiPcmStream.f(-53);
         }
     }
 
@@ -1507,7 +1507,7 @@ final class bs extends PcmStream {
 
     }
 
-    public bs() {
+    public MidiPcmStream() {
         this.field_R = new int[16];
         this.field_T = new int[16];
         this.field_B = new int[16];

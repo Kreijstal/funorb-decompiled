@@ -3,7 +3,7 @@
  */
 final class qc {
     private int field_d;
-    static bs field_e;
+    static MidiPcmStream field_e;
     static PacketBuffer field_c;
     private boolean field_f;
     private int field_b;
@@ -108,7 +108,7 @@ final class qc {
 
     private final void b(int param0, int param1) {
         if (param1 > -11) {
-          field_e = (bs) null;
+          field_e = (MidiPcmStream) null;
         }
         this.field_d = param0;
     }

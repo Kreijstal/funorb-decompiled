@@ -39,7 +39,7 @@ final class or extends bp implements ru {
           if (qw.a(57, param1)) {
             return true;
           }
-          var6 = bs.field_o;
+          var6 = MidiPcmStream.field_o;
           var2 = var6;
           if (param0 != 61) {
             field_k = -127;

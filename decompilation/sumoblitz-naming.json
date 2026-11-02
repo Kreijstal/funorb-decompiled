@@ -137,7 +137,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:bs.a(Log;Ltv;ILResourceArchive;I)Z#0"
+      "renamedSymbol": "B:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#0"
     },
     {
       "symbol": "B:bs.d(I)V#0",
@@ -145,7 +145,7 @@
       "to": "regionExit1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:bs.d(I)V#0"
+      "renamedSymbol": "B:MidiPcmStream.d(I)V#0"
     },
     {
       "symbol": "B:bs.d(I)V#1",
@@ -153,7 +153,7 @@
       "to": "scanLoop2",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:bs.d(I)V#1"
+      "renamedSymbol": "B:MidiPcmStream.d(I)V#1"
     },
     {
       "symbol": "B:du.a([II)V#0",
@@ -386,6 +386,14 @@
       "evidence": "Abstract GraphicsToolkit base of the OpenGL and DirectX toolkits.",
       "confidence": "reviewed",
       "renamedSymbol": "C:HardwareGraphicsToolkit"
+    },
+    {
+      "symbol": "C:bs",
+      "originalName": "bs",
+      "to": "MidiPcmStream",
+      "evidence": "PcmStream with per-channel controller arrays and note state advanced by a timing clock.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:MidiPcmStream"
     },
     {
       "symbol": "C:cb",
@@ -2783,7 +2791,7 @@
     },
     {
       "symbol": "B:bs.a(Log;Ltv;ILki;I)Z#0",
-      "renamedSymbol": "B:bs.a(Log;Ltv;ILResourceArchive;I)Z#0",
+      "renamedSymbol": "B:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#0",
       "originalName": "L2",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -2794,7 +2802,7 @@
     },
     {
       "symbol": "B:bs.d(I)V#0",
-      "renamedSymbol": "B:bs.d(I)V#0",
+      "renamedSymbol": "B:MidiPcmStream.d(I)V#0",
       "originalName": "L5",
       "renamedName": "regionExit1",
       "declaration": {
@@ -2805,7 +2813,7 @@
     },
     {
       "symbol": "B:bs.d(I)V#1",
-      "renamedSymbol": "B:bs.d(I)V#1",
+      "renamedSymbol": "B:MidiPcmStream.d(I)V#1",
       "originalName": "L8",
       "renamedName": "scanLoop2",
       "declaration": {
@@ -3597,9 +3605,9 @@
     },
     {
       "symbol": "C:bs",
-      "renamedSymbol": "C:bs",
+      "renamedSymbol": "C:MidiPcmStream",
       "originalName": "bs",
-      "renamedName": "bs",
+      "renamedName": "MidiPcmStream",
       "declaration": {
         "file": "bs.java",
         "start": 50,
@@ -13783,7 +13791,7 @@
     },
     {
       "symbol": "F:bs.field_A:Z",
-      "renamedSymbol": "F:bs.field_A:Z",
+      "renamedSymbol": "F:MidiPcmStream.field_A:Z",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -13794,7 +13802,7 @@
     },
     {
       "symbol": "F:bs.field_B:[I",
-      "renamedSymbol": "F:bs.field_B:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_B:[I",
       "originalName": "field_B",
       "renamedName": "field_B",
       "declaration": {
@@ -13805,7 +13813,7 @@
     },
     {
       "symbol": "F:bs.field_C:I",
-      "renamedSymbol": "F:bs.field_C:I",
+      "renamedSymbol": "F:MidiPcmStream.field_C:I",
       "originalName": "field_C",
       "renamedName": "field_C",
       "declaration": {
@@ -13816,7 +13824,7 @@
     },
     {
       "symbol": "F:bs.field_D:[I",
-      "renamedSymbol": "F:bs.field_D:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_D:[I",
       "originalName": "field_D",
       "renamedName": "field_D",
       "declaration": {
@@ -13827,7 +13835,7 @@
     },
     {
       "symbol": "F:bs.field_E:I",
-      "renamedSymbol": "F:bs.field_E:I",
+      "renamedSymbol": "F:MidiPcmStream.field_E:I",
       "originalName": "field_E",
       "renamedName": "field_E",
       "declaration": {
@@ -13838,7 +13846,7 @@
     },
     {
       "symbol": "F:bs.field_F:[I",
-      "renamedSymbol": "F:bs.field_F:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_F:[I",
       "originalName": "field_F",
       "renamedName": "field_F",
       "declaration": {
@@ -13849,7 +13857,7 @@
     },
     {
       "symbol": "F:bs.field_G:[I",
-      "renamedSymbol": "F:bs.field_G:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_G:[I",
       "originalName": "field_G",
       "renamedName": "field_G",
       "declaration": {
@@ -13860,7 +13868,7 @@
     },
     {
       "symbol": "F:bs.field_H:[I",
-      "renamedSymbol": "F:bs.field_H:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_H:[I",
       "originalName": "field_H",
       "renamedName": "field_H",
       "declaration": {
@@ -13871,7 +13879,7 @@
     },
     {
       "symbol": "F:bs.field_I:Ltv;",
-      "renamedSymbol": "F:bs.field_I:Ltv;",
+      "renamedSymbol": "F:MidiPcmStream.field_I:Ltv;",
       "originalName": "field_I",
       "renamedName": "field_I",
       "declaration": {
@@ -13882,7 +13890,7 @@
     },
     {
       "symbol": "F:bs.field_J:[I",
-      "renamedSymbol": "F:bs.field_J:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_J:[I",
       "originalName": "field_J",
       "renamedName": "field_J",
       "declaration": {
@@ -13893,7 +13901,7 @@
     },
     {
       "symbol": "F:bs.field_K:[I",
-      "renamedSymbol": "F:bs.field_K:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_K:[I",
       "originalName": "field_K",
       "renamedName": "field_K",
       "declaration": {
@@ -13904,7 +13912,7 @@
     },
     {
       "symbol": "F:bs.field_L:[I",
-      "renamedSymbol": "F:bs.field_L:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_L:[I",
       "originalName": "field_L",
       "renamedName": "field_L",
       "declaration": {
@@ -13915,7 +13923,7 @@
     },
     {
       "symbol": "F:bs.field_M:Z",
-      "renamedSymbol": "F:bs.field_M:Z",
+      "renamedSymbol": "F:MidiPcmStream.field_M:Z",
       "originalName": "field_M",
       "renamedName": "field_M",
       "declaration": {
@@ -13926,7 +13934,7 @@
     },
     {
       "symbol": "F:bs.field_N:[I",
-      "renamedSymbol": "F:bs.field_N:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_N:[I",
       "originalName": "field_N",
       "renamedName": "field_N",
       "declaration": {
@@ -13937,7 +13945,7 @@
     },
     {
       "symbol": "F:bs.field_O:J",
-      "renamedSymbol": "F:bs.field_O:J",
+      "renamedSymbol": "F:MidiPcmStream.field_O:J",
       "originalName": "field_O",
       "renamedName": "field_O",
       "declaration": {
@@ -13948,7 +13956,7 @@
     },
     {
       "symbol": "F:bs.field_P:[[Luu;",
-      "renamedSymbol": "F:bs.field_P:[[Luu;",
+      "renamedSymbol": "F:MidiPcmStream.field_P:[[Luu;",
       "originalName": "field_P",
       "renamedName": "field_P",
       "declaration": {
@@ -13959,7 +13967,7 @@
     },
     {
       "symbol": "F:bs.field_Q:I",
-      "renamedSymbol": "F:bs.field_Q:I",
+      "renamedSymbol": "F:MidiPcmStream.field_Q:I",
       "originalName": "field_Q",
       "renamedName": "field_Q",
       "declaration": {
@@ -13970,7 +13978,7 @@
     },
     {
       "symbol": "F:bs.field_R:[I",
-      "renamedSymbol": "F:bs.field_R:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_R:[I",
       "originalName": "field_R",
       "renamedName": "field_R",
       "declaration": {
@@ -13981,7 +13989,7 @@
     },
     {
       "symbol": "F:bs.field_S:[I",
-      "renamedSymbol": "F:bs.field_S:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_S:[I",
       "originalName": "field_S",
       "renamedName": "field_S",
       "declaration": {
@@ -13992,7 +14000,7 @@
     },
     {
       "symbol": "F:bs.field_T:[I",
-      "renamedSymbol": "F:bs.field_T:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_T:[I",
       "originalName": "field_T",
       "renamedName": "field_T",
       "declaration": {
@@ -14003,7 +14011,7 @@
     },
     {
       "symbol": "F:bs.field_o:[C",
-      "renamedSymbol": "F:bs.field_o:[C",
+      "renamedSymbol": "F:MidiPcmStream.field_o:[C",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -14014,7 +14022,7 @@
     },
     {
       "symbol": "F:bs.field_p:Lte;",
-      "renamedSymbol": "F:bs.field_p:Lte;",
+      "renamedSymbol": "F:MidiPcmStream.field_p:Lte;",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -14025,7 +14033,7 @@
     },
     {
       "symbol": "F:bs.field_q:J",
-      "renamedSymbol": "F:bs.field_q:J",
+      "renamedSymbol": "F:MidiPcmStream.field_q:J",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -14036,7 +14044,7 @@
     },
     {
       "symbol": "F:bs.field_r:I",
-      "renamedSymbol": "F:bs.field_r:I",
+      "renamedSymbol": "F:MidiPcmStream.field_r:I",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -14047,7 +14055,7 @@
     },
     {
       "symbol": "F:bs.field_s:Lrh;",
-      "renamedSymbol": "F:bs.field_s:Lrh;",
+      "renamedSymbol": "F:MidiPcmStream.field_s:Lrh;",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -14058,7 +14066,7 @@
     },
     {
       "symbol": "F:bs.field_t:[[Luu;",
-      "renamedSymbol": "F:bs.field_t:[[Luu;",
+      "renamedSymbol": "F:MidiPcmStream.field_t:[[Luu;",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -14069,7 +14077,7 @@
     },
     {
       "symbol": "F:bs.field_u:I",
-      "renamedSymbol": "F:bs.field_u:I",
+      "renamedSymbol": "F:MidiPcmStream.field_u:I",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -14080,7 +14088,7 @@
     },
     {
       "symbol": "F:bs.field_v:Lsh;",
-      "renamedSymbol": "F:bs.field_v:Lsh;",
+      "renamedSymbol": "F:MidiPcmStream.field_v:Lsh;",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -14091,7 +14099,7 @@
     },
     {
       "symbol": "F:bs.field_w:[I",
-      "renamedSymbol": "F:bs.field_w:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_w:[I",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -14102,7 +14110,7 @@
     },
     {
       "symbol": "F:bs.field_x:[I",
-      "renamedSymbol": "F:bs.field_x:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_x:[I",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -14113,7 +14121,7 @@
     },
     {
       "symbol": "F:bs.field_y:[I",
-      "renamedSymbol": "F:bs.field_y:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_y:[I",
       "originalName": "field_y",
       "renamedName": "field_y",
       "declaration": {
@@ -14124,7 +14132,7 @@
     },
     {
       "symbol": "F:bs.field_z:[I",
-      "renamedSymbol": "F:bs.field_z:[I",
+      "renamedSymbol": "F:MidiPcmStream.field_z:[I",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -38346,7 +38354,7 @@
     },
     {
       "symbol": "F:qc.field_e:Lbs;",
-      "renamedSymbol": "F:qc.field_e:Lbs;",
+      "renamedSymbol": "F:qc.field_e:LMidiPcmStream;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -40403,7 +40411,7 @@
     },
     {
       "symbol": "F:rh.field_u:Lbs;",
-      "renamedSymbol": "F:rh.field_u:Lbs;",
+      "renamedSymbol": "F:rh.field_u:LMidiPcmStream;",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -44154,7 +44162,7 @@
     },
     {
       "symbol": "F:ud.field_D:Lbs;",
-      "renamedSymbol": "F:ud.field_D:Lbs;",
+      "renamedSymbol": "F:ud.field_D:LMidiPcmStream;",
       "originalName": "field_D",
       "renamedName": "field_D",
       "declaration": {
@@ -44198,7 +44206,7 @@
     },
     {
       "symbol": "F:ud.field_r:Lbs;",
-      "renamedSymbol": "F:ud.field_r:Lbs;",
+      "renamedSymbol": "F:ud.field_r:LMidiPcmStream;",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -44264,7 +44272,7 @@
     },
     {
       "symbol": "F:ud.field_x:Lbs;",
-      "renamedSymbol": "F:ud.field_x:Lbs;",
+      "renamedSymbol": "F:ud.field_x:LMidiPcmStream;",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -67342,7 +67350,7 @@
     },
     {
       "symbol": "L:bs.a(B)V#0",
-      "renamedSymbol": "L:bs.a(B)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -67353,7 +67361,7 @@
     },
     {
       "symbol": "L:bs.a(B)V#1",
-      "renamedSymbol": "L:bs.a(B)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(B)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67364,7 +67372,7 @@
     },
     {
       "symbol": "L:bs.a(BII)V#0",
-      "renamedSymbol": "L:bs.a(BII)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(BII)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67375,7 +67383,7 @@
     },
     {
       "symbol": "L:bs.a(BII)V#1",
-      "renamedSymbol": "L:bs.a(BII)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(BII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67386,7 +67394,7 @@
     },
     {
       "symbol": "L:bs.a(BII)V#2",
-      "renamedSymbol": "L:bs.a(BII)V#2",
+      "renamedSymbol": "L:MidiPcmStream.a(BII)V#2",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -67397,7 +67405,7 @@
     },
     {
       "symbol": "L:bs.a(BLuu;Z)V#0",
-      "renamedSymbol": "L:bs.a(BLuu;Z)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(BLuu;Z)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -67408,7 +67416,7 @@
     },
     {
       "symbol": "L:bs.a(BLuu;Z)V#1",
-      "renamedSymbol": "L:bs.a(BLuu;Z)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(BLuu;Z)V#1",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -67419,7 +67427,7 @@
     },
     {
       "symbol": "L:bs.a(BLuu;Z)V#10",
-      "renamedSymbol": "L:bs.a(BLuu;Z)V#10",
+      "renamedSymbol": "L:MidiPcmStream.a(BLuu;Z)V#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -67430,7 +67438,7 @@
     },
     {
       "symbol": "L:bs.a(BLuu;Z)V#2",
-      "renamedSymbol": "L:bs.a(BLuu;Z)V#2",
+      "renamedSymbol": "L:MidiPcmStream.a(BLuu;Z)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67441,7 +67449,7 @@
     },
     {
       "symbol": "L:bs.a(BLuu;Z)V#3",
-      "renamedSymbol": "L:bs.a(BLuu;Z)V#3",
+      "renamedSymbol": "L:MidiPcmStream.a(BLuu;Z)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -67452,7 +67460,7 @@
     },
     {
       "symbol": "L:bs.a(BLuu;Z)V#4",
-      "renamedSymbol": "L:bs.a(BLuu;Z)V#4",
+      "renamedSymbol": "L:MidiPcmStream.a(BLuu;Z)V#4",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -67463,7 +67471,7 @@
     },
     {
       "symbol": "L:bs.a(BLuu;Z)V#5",
-      "renamedSymbol": "L:bs.a(BLuu;Z)V#5",
+      "renamedSymbol": "L:MidiPcmStream.a(BLuu;Z)V#5",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -67474,7 +67482,7 @@
     },
     {
       "symbol": "L:bs.a(BLuu;Z)V#6",
-      "renamedSymbol": "L:bs.a(BLuu;Z)V#6",
+      "renamedSymbol": "L:MidiPcmStream.a(BLuu;Z)V#6",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -67485,7 +67493,7 @@
     },
     {
       "symbol": "L:bs.a(BLuu;Z)V#7",
-      "renamedSymbol": "L:bs.a(BLuu;Z)V#7",
+      "renamedSymbol": "L:MidiPcmStream.a(BLuu;Z)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -67496,7 +67504,7 @@
     },
     {
       "symbol": "L:bs.a(BLuu;Z)V#8",
-      "renamedSymbol": "L:bs.a(BLuu;Z)V#8",
+      "renamedSymbol": "L:MidiPcmStream.a(BLuu;Z)V#8",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -67507,7 +67515,7 @@
     },
     {
       "symbol": "L:bs.a(BLuu;Z)V#9",
-      "renamedSymbol": "L:bs.a(BLuu;Z)V#9",
+      "renamedSymbol": "L:MidiPcmStream.a(BLuu;Z)V#9",
       "originalName": "decompiledSharedTail0",
       "renamedName": "decompiledSharedTail0",
       "declaration": {
@@ -67518,7 +67526,7 @@
     },
     {
       "symbol": "L:bs.a(I)V#0",
-      "renamedSymbol": "L:bs.a(I)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -67529,7 +67537,7 @@
     },
     {
       "symbol": "L:bs.a(I)V#1",
-      "renamedSymbol": "L:bs.a(I)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -67540,7 +67548,7 @@
     },
     {
       "symbol": "L:bs.a(I)V#2",
-      "renamedSymbol": "L:bs.a(I)V#2",
+      "renamedSymbol": "L:MidiPcmStream.a(I)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67551,7 +67559,7 @@
     },
     {
       "symbol": "L:bs.a(I)V#3",
-      "renamedSymbol": "L:bs.a(I)V#3",
+      "renamedSymbol": "L:MidiPcmStream.a(I)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -67562,7 +67570,7 @@
     },
     {
       "symbol": "L:bs.a(I)V#4",
-      "renamedSymbol": "L:bs.a(I)V#4",
+      "renamedSymbol": "L:MidiPcmStream.a(I)V#4",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -67573,7 +67581,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#0",
-      "renamedSymbol": "L:bs.a(IB)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -67584,7 +67592,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#1",
-      "renamedSymbol": "L:bs.a(IB)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67595,7 +67603,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#10",
-      "renamedSymbol": "L:bs.a(IB)V#10",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#10",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -67606,7 +67614,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#11",
-      "renamedSymbol": "L:bs.a(IB)V#11",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#11",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -67617,7 +67625,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#12",
-      "renamedSymbol": "L:bs.a(IB)V#12",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#12",
       "originalName": "var5Lifetime3",
       "renamedName": "var5Lifetime3",
       "declaration": {
@@ -67628,7 +67636,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#13",
-      "renamedSymbol": "L:bs.a(IB)V#13",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#13",
       "originalName": "var5Lifetime4",
       "renamedName": "var5Lifetime4",
       "declaration": {
@@ -67639,7 +67647,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#14",
-      "renamedSymbol": "L:bs.a(IB)V#14",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#14",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -67650,7 +67658,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#15",
-      "renamedSymbol": "L:bs.a(IB)V#15",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#15",
       "originalName": "var6Lifetime2",
       "renamedName": "var6Lifetime2",
       "declaration": {
@@ -67661,7 +67669,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#16",
-      "renamedSymbol": "L:bs.a(IB)V#16",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#16",
       "originalName": "var6Lifetime3",
       "renamedName": "var6Lifetime3",
       "declaration": {
@@ -67672,7 +67680,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#17",
-      "renamedSymbol": "L:bs.a(IB)V#17",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#17",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -67683,7 +67691,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#18",
-      "renamedSymbol": "L:bs.a(IB)V#18",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#18",
       "originalName": "var4Lifetime3Lifetime1",
       "renamedName": "var4Lifetime3Lifetime1",
       "declaration": {
@@ -67694,7 +67702,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#19",
-      "renamedSymbol": "L:bs.a(IB)V#19",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#19",
       "originalName": "var4Lifetime3Lifetime2",
       "renamedName": "var4Lifetime3Lifetime2",
       "declaration": {
@@ -67705,7 +67713,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#2",
-      "renamedSymbol": "L:bs.a(IB)V#2",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67716,7 +67724,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#20",
-      "renamedSymbol": "L:bs.a(IB)V#20",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#20",
       "originalName": "var5Lifetime3Lifetime1",
       "renamedName": "var5Lifetime3Lifetime1",
       "declaration": {
@@ -67727,7 +67735,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#21",
-      "renamedSymbol": "L:bs.a(IB)V#21",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#21",
       "originalName": "var5Lifetime3Lifetime2",
       "renamedName": "var5Lifetime3Lifetime2",
       "declaration": {
@@ -67738,7 +67746,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#3",
-      "renamedSymbol": "L:bs.a(IB)V#3",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -67749,7 +67757,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#4",
-      "renamedSymbol": "L:bs.a(IB)V#4",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -67760,7 +67768,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#5",
-      "renamedSymbol": "L:bs.a(IB)V#5",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -67771,7 +67779,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#6",
-      "renamedSymbol": "L:bs.a(IB)V#6",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#6",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -67782,7 +67790,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#7",
-      "renamedSymbol": "L:bs.a(IB)V#7",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#7",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -67793,7 +67801,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#8",
-      "renamedSymbol": "L:bs.a(IB)V#8",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#8",
       "originalName": "var4Lifetime3",
       "renamedName": "var4Lifetime3",
       "declaration": {
@@ -67804,7 +67812,7 @@
     },
     {
       "symbol": "L:bs.a(IB)V#9",
-      "renamedSymbol": "L:bs.a(IB)V#9",
+      "renamedSymbol": "L:MidiPcmStream.a(IB)V#9",
       "originalName": "var4Lifetime4",
       "renamedName": "var4Lifetime4",
       "declaration": {
@@ -67815,7 +67823,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#0",
-      "renamedSymbol": "L:bs.a(IBII)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#0",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -67826,7 +67834,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#1",
-      "renamedSymbol": "L:bs.a(IBII)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#1",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -67837,7 +67845,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#10",
-      "renamedSymbol": "L:bs.a(IBII)V#10",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#10",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -67848,7 +67856,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#11",
-      "renamedSymbol": "L:bs.a(IBII)V#11",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#11",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -67859,7 +67867,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#12",
-      "renamedSymbol": "L:bs.a(IBII)V#12",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#12",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -67870,7 +67878,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#2",
-      "renamedSymbol": "L:bs.a(IBII)V#2",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#2",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -67881,7 +67889,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#3",
-      "renamedSymbol": "L:bs.a(IBII)V#3",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#3",
       "originalName": "stackIn_18_3",
       "renamedName": "stackIn_18_3",
       "declaration": {
@@ -67892,7 +67900,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#4",
-      "renamedSymbol": "L:bs.a(IBII)V#4",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67903,7 +67911,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#5",
-      "renamedSymbol": "L:bs.a(IBII)V#5",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#5",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -67914,7 +67922,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#6",
-      "renamedSymbol": "L:bs.a(IBII)V#6",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -67925,7 +67933,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#7",
-      "renamedSymbol": "L:bs.a(IBII)V#7",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -67936,7 +67944,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#8",
-      "renamedSymbol": "L:bs.a(IBII)V#8",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -67947,7 +67955,7 @@
     },
     {
       "symbol": "L:bs.a(IBII)V#9",
-      "renamedSymbol": "L:bs.a(IBII)V#9",
+      "renamedSymbol": "L:MidiPcmStream.a(IBII)V#9",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -67958,7 +67966,7 @@
     },
     {
       "symbol": "L:bs.a(II)V#0",
-      "renamedSymbol": "L:bs.a(II)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -67969,7 +67977,7 @@
     },
     {
       "symbol": "L:bs.a(II)V#1",
-      "renamedSymbol": "L:bs.a(II)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(II)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67980,7 +67988,7 @@
     },
     {
       "symbol": "L:bs.a(IIII)V#0",
-      "renamedSymbol": "L:bs.a(IIII)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(IIII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -67991,7 +67999,7 @@
     },
     {
       "symbol": "L:bs.a(IIII)V#1",
-      "renamedSymbol": "L:bs.a(IIII)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(IIII)V#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -68002,7 +68010,7 @@
     },
     {
       "symbol": "L:bs.a(IIII)V#2",
-      "renamedSymbol": "L:bs.a(IIII)V#2",
+      "renamedSymbol": "L:MidiPcmStream.a(IIII)V#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -68013,7 +68021,7 @@
     },
     {
       "symbol": "L:bs.a(IIII)V#3",
-      "renamedSymbol": "L:bs.a(IIII)V#3",
+      "renamedSymbol": "L:MidiPcmStream.a(IIII)V#3",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -68024,7 +68032,7 @@
     },
     {
       "symbol": "L:bs.a(IIII)V#4",
-      "renamedSymbol": "L:bs.a(IIII)V#4",
+      "renamedSymbol": "L:MidiPcmStream.a(IIII)V#4",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -68035,7 +68043,7 @@
     },
     {
       "symbol": "L:bs.a(IIII)V#5",
-      "renamedSymbol": "L:bs.a(IIII)V#5",
+      "renamedSymbol": "L:MidiPcmStream.a(IIII)V#5",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -68046,7 +68054,7 @@
     },
     {
       "symbol": "L:bs.a(ILuu;)I#0",
-      "renamedSymbol": "L:bs.a(ILuu;)I#0",
+      "renamedSymbol": "L:MidiPcmStream.a(ILuu;)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -68057,7 +68065,7 @@
     },
     {
       "symbol": "L:bs.a(ILuu;)I#1",
-      "renamedSymbol": "L:bs.a(ILuu;)I#1",
+      "renamedSymbol": "L:MidiPcmStream.a(ILuu;)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -68068,7 +68076,7 @@
     },
     {
       "symbol": "L:bs.a(ILuu;)I#2",
-      "renamedSymbol": "L:bs.a(ILuu;)I#2",
+      "renamedSymbol": "L:MidiPcmStream.a(ILuu;)I#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -68079,7 +68087,7 @@
     },
     {
       "symbol": "L:bs.a(ILuu;)I#3",
-      "renamedSymbol": "L:bs.a(ILuu;)I#3",
+      "renamedSymbol": "L:MidiPcmStream.a(ILuu;)I#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -68090,7 +68098,7 @@
     },
     {
       "symbol": "L:bs.a(ILuu;)I#4",
-      "renamedSymbol": "L:bs.a(ILuu;)I#4",
+      "renamedSymbol": "L:MidiPcmStream.a(ILuu;)I#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -68101,7 +68109,7 @@
     },
     {
       "symbol": "L:bs.a(ILuu;)I#5",
-      "renamedSymbol": "L:bs.a(ILuu;)I#5",
+      "renamedSymbol": "L:MidiPcmStream.a(ILuu;)I#5",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -68112,7 +68120,7 @@
     },
     {
       "symbol": "L:bs.a(ILuu;)I#6",
-      "renamedSymbol": "L:bs.a(ILuu;)I#6",
+      "renamedSymbol": "L:MidiPcmStream.a(ILuu;)I#6",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -68123,7 +68131,7 @@
     },
     {
       "symbol": "L:bs.a(ILuu;)I#7",
-      "renamedSymbol": "L:bs.a(ILuu;)I#7",
+      "renamedSymbol": "L:MidiPcmStream.a(ILuu;)I#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -68134,7 +68142,7 @@
     },
     {
       "symbol": "L:bs.a(ILuu;)I#8",
-      "renamedSymbol": "L:bs.a(ILuu;)I#8",
+      "renamedSymbol": "L:MidiPcmStream.a(ILuu;)I#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -68145,7 +68153,7 @@
     },
     {
       "symbol": "L:bs.a(IZ)V#0",
-      "renamedSymbol": "L:bs.a(IZ)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(IZ)V#0",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -68156,7 +68164,7 @@
     },
     {
       "symbol": "L:bs.a(IZ)V#1",
-      "renamedSymbol": "L:bs.a(IZ)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(IZ)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -68167,7 +68175,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#0",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#0",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#0",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -68178,7 +68186,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#1",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#1",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#1",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -68189,7 +68197,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#10",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#10",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -68200,7 +68208,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#11",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#11",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -68211,7 +68219,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#12",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#12",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -68222,7 +68230,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#13",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#13",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -68233,7 +68241,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#14",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#14",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -68244,7 +68252,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#15",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#15",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -68255,7 +68263,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#16",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#16",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#16",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -68266,7 +68274,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#17",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#17",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -68277,7 +68285,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#2",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#2",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#2",
       "originalName": "stackIn_22_1",
       "renamedName": "stackIn_22_1",
       "declaration": {
@@ -68288,7 +68296,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#3",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#3",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#3",
       "originalName": "stackIn_23_2",
       "renamedName": "stackIn_23_2",
       "declaration": {
@@ -68299,7 +68307,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#4",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#4",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#4",
       "originalName": "stackIn_25_1",
       "renamedName": "stackIn_25_1",
       "declaration": {
@@ -68310,7 +68318,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#5",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#5",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#5",
       "originalName": "stackIn_26_2",
       "renamedName": "stackIn_26_2",
       "declaration": {
@@ -68321,7 +68329,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#6",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#6",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#6",
       "originalName": "stackIn_28_1",
       "renamedName": "stackIn_28_1",
       "declaration": {
@@ -68332,7 +68340,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#7",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#7",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#7",
       "originalName": "stackIn_29_2",
       "renamedName": "stackIn_29_2",
       "declaration": {
@@ -68343,7 +68351,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#8",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#8",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -68354,7 +68362,7 @@
     },
     {
       "symbol": "L:bs.a(Log;Ltv;ILki;I)Z#9",
-      "renamedSymbol": "L:bs.a(Log;Ltv;ILResourceArchive;I)Z#9",
+      "renamedSymbol": "L:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#9",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -68365,7 +68373,7 @@
     },
     {
       "symbol": "L:bs.a(ZIIILtv;Z)V#0",
-      "renamedSymbol": "L:bs.a(ZIIILtv;Z)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(ZIIILtv;Z)V#0",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -68376,7 +68384,7 @@
     },
     {
       "symbol": "L:bs.a(ZIIILtv;Z)V#1",
-      "renamedSymbol": "L:bs.a(ZIIILtv;Z)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(ZIIILtv;Z)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -68387,7 +68395,7 @@
     },
     {
       "symbol": "L:bs.a(ZIIILtv;Z)V#2",
-      "renamedSymbol": "L:bs.a(ZIIILtv;Z)V#2",
+      "renamedSymbol": "L:MidiPcmStream.a(ZIIILtv;Z)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -68398,7 +68406,7 @@
     },
     {
       "symbol": "L:bs.a(ZLtv;I)V#0",
-      "renamedSymbol": "L:bs.a(ZLtv;I)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLtv;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -68409,7 +68417,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#0",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#0",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#0",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -68420,7 +68428,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#1",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#1",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#1",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -68431,7 +68439,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#10",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#10",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -68442,7 +68450,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#11",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#11",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#11",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -68453,7 +68461,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#12",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#12",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -68464,7 +68472,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#2",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#2",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#2",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -68475,7 +68483,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#3",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#3",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#3",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -68486,7 +68494,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#4",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#4",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -68497,7 +68505,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#5",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#5",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#5",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -68508,7 +68516,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#6",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#6",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -68519,7 +68527,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#7",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#7",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -68530,7 +68538,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#8",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#8",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -68541,7 +68549,7 @@
     },
     {
       "symbol": "L:bs.a(ZLuu;)I#9",
-      "renamedSymbol": "L:bs.a(ZLuu;)I#9",
+      "renamedSymbol": "L:MidiPcmStream.a(ZLuu;)I#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -68552,7 +68560,7 @@
     },
     {
       "symbol": "L:bs.a(ZZ)V#0",
-      "renamedSymbol": "L:bs.a(ZZ)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZ)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -68563,7 +68571,7 @@
     },
     {
       "symbol": "L:bs.a(ZZ)V#1",
-      "renamedSymbol": "L:bs.a(ZZ)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZ)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -68574,7 +68582,7 @@
     },
     {
       "symbol": "L:bs.a(ZZZLtv;)V#0",
-      "renamedSymbol": "L:bs.a(ZZZLtv;)V#0",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZZLtv;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -68585,7 +68593,7 @@
     },
     {
       "symbol": "L:bs.a(ZZZLtv;)V#1",
-      "renamedSymbol": "L:bs.a(ZZZLtv;)V#1",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZZLtv;)V#1",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -68596,7 +68604,7 @@
     },
     {
       "symbol": "L:bs.a(ZZZLtv;)V#2",
-      "renamedSymbol": "L:bs.a(ZZZLtv;)V#2",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZZLtv;)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -68607,7 +68615,7 @@
     },
     {
       "symbol": "L:bs.a(ZZZLtv;)V#3",
-      "renamedSymbol": "L:bs.a(ZZZLtv;)V#3",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZZLtv;)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -68618,7 +68626,7 @@
     },
     {
       "symbol": "L:bs.a(ZZZLtv;)V#4",
-      "renamedSymbol": "L:bs.a(ZZZLtv;)V#4",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZZLtv;)V#4",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -68629,7 +68637,7 @@
     },
     {
       "symbol": "L:bs.a(ZZZLtv;)V#5",
-      "renamedSymbol": "L:bs.a(ZZZLtv;)V#5",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZZLtv;)V#5",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -68640,7 +68648,7 @@
     },
     {
       "symbol": "L:bs.a(ZZZLtv;)V#6",
-      "renamedSymbol": "L:bs.a(ZZZLtv;)V#6",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZZLtv;)V#6",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -68651,7 +68659,7 @@
     },
     {
       "symbol": "L:bs.a(ZZZLtv;)V#7",
-      "renamedSymbol": "L:bs.a(ZZZLtv;)V#7",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZZLtv;)V#7",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -68662,7 +68670,7 @@
     },
     {
       "symbol": "L:bs.a(ZZZLtv;)V#8",
-      "renamedSymbol": "L:bs.a(ZZZLtv;)V#8",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZZLtv;)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -68673,7 +68681,7 @@
     },
     {
       "symbol": "L:bs.a(ZZZLtv;)V#9",
-      "renamedSymbol": "L:bs.a(ZZZLtv;)V#9",
+      "renamedSymbol": "L:MidiPcmStream.a(ZZZLtv;)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -68684,7 +68692,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#0",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#0",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#0",
       "originalName": "stackIn_34_0",
       "renamedName": "stackIn_34_0",
       "declaration": {
@@ -68695,7 +68703,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#1",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#1",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#1",
       "originalName": "stackIn_34_1",
       "renamedName": "stackIn_34_1",
       "declaration": {
@@ -68706,7 +68714,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#10",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#10",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#10",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -68717,7 +68725,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#11",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#11",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#11",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -68728,7 +68736,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#12",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#12",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#12",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -68739,7 +68747,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#13",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#13",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#13",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -68750,7 +68758,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#14",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#14",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#14",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -68761,7 +68769,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#15",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#15",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -68772,7 +68780,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#16",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#16",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#16",
       "originalName": "decompiledSharedTail0",
       "renamedName": "decompiledSharedTail0",
       "declaration": {
@@ -68783,7 +68791,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#17",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#17",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#17",
       "originalName": "decompiledFrameRemainder1",
       "renamedName": "decompiledFrameRemainder1",
       "declaration": {
@@ -68794,7 +68802,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#18",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#18",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#18",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -68805,7 +68813,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#19",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#19",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#19",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -68816,7 +68824,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#2",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#2",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#2",
       "originalName": "stackIn_55_0",
       "renamedName": "stackIn_55_0",
       "declaration": {
@@ -68827,7 +68835,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#3",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#3",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#3",
       "originalName": "stackIn_55_1",
       "renamedName": "stackIn_55_1",
       "declaration": {
@@ -68838,7 +68846,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#4",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#4",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#4",
       "originalName": "stackIn_77_0",
       "renamedName": "stackIn_77_0",
       "declaration": {
@@ -68849,7 +68857,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#5",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#5",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#5",
       "originalName": "stackIn_77_1",
       "renamedName": "stackIn_77_1",
       "declaration": {
@@ -68860,7 +68868,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#6",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#6",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#6",
       "originalName": "stackIn_78_2",
       "renamedName": "stackIn_78_2",
       "declaration": {
@@ -68871,7 +68879,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#7",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#7",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#7",
       "originalName": "stackIn_80_1",
       "renamedName": "stackIn_80_1",
       "declaration": {
@@ -68882,7 +68890,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#8",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#8",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#8",
       "originalName": "stackIn_81_2",
       "renamedName": "stackIn_81_2",
       "declaration": {
@@ -68893,7 +68901,7 @@
     },
     {
       "symbol": "L:bs.a([IIILuu;I)Z#9",
-      "renamedSymbol": "L:bs.a([IIILuu;I)Z#9",
+      "renamedSymbol": "L:MidiPcmStream.a([IIILuu;I)Z#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -68904,7 +68912,7 @@
     },
     {
       "symbol": "L:bs.b(IB)V#0",
-      "renamedSymbol": "L:bs.b(IB)V#0",
+      "renamedSymbol": "L:MidiPcmStream.b(IB)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -68915,7 +68923,7 @@
     },
     {
       "symbol": "L:bs.b(IB)V#1",
-      "renamedSymbol": "L:bs.b(IB)V#1",
+      "renamedSymbol": "L:MidiPcmStream.b(IB)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -68926,7 +68934,7 @@
     },
     {
       "symbol": "L:bs.b(IB)V#2",
-      "renamedSymbol": "L:bs.b(IB)V#2",
+      "renamedSymbol": "L:MidiPcmStream.b(IB)V#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -68937,7 +68945,7 @@
     },
     {
       "symbol": "L:bs.b(IB)V#3",
-      "renamedSymbol": "L:bs.b(IB)V#3",
+      "renamedSymbol": "L:MidiPcmStream.b(IB)V#3",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -68948,7 +68956,7 @@
     },
     {
       "symbol": "L:bs.b(IB)V#4",
-      "renamedSymbol": "L:bs.b(IB)V#4",
+      "renamedSymbol": "L:MidiPcmStream.b(IB)V#4",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -68959,7 +68967,7 @@
     },
     {
       "symbol": "L:bs.b(II)V#0",
-      "renamedSymbol": "L:bs.b(II)V#0",
+      "renamedSymbol": "L:MidiPcmStream.b(II)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -68970,7 +68978,7 @@
     },
     {
       "symbol": "L:bs.b(ILuu;)Z#0",
-      "renamedSymbol": "L:bs.b(ILuu;)Z#0",
+      "renamedSymbol": "L:MidiPcmStream.b(ILuu;)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -68981,7 +68989,7 @@
     },
     {
       "symbol": "L:bs.b(ILuu;)Z#1",
-      "renamedSymbol": "L:bs.b(ILuu;)Z#1",
+      "renamedSymbol": "L:MidiPcmStream.b(ILuu;)Z#1",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -68992,7 +69000,7 @@
     },
     {
       "symbol": "L:bs.b(ILuu;)Z#2",
-      "renamedSymbol": "L:bs.b(ILuu;)Z#2",
+      "renamedSymbol": "L:MidiPcmStream.b(ILuu;)Z#2",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -69003,7 +69011,7 @@
     },
     {
       "symbol": "L:bs.b(ILuu;)Z#3",
-      "renamedSymbol": "L:bs.b(ILuu;)Z#3",
+      "renamedSymbol": "L:MidiPcmStream.b(ILuu;)Z#3",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -69014,7 +69022,7 @@
     },
     {
       "symbol": "L:bs.b(ILuu;)Z#4",
-      "renamedSymbol": "L:bs.b(ILuu;)Z#4",
+      "renamedSymbol": "L:MidiPcmStream.b(ILuu;)Z#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -69025,7 +69033,7 @@
     },
     {
       "symbol": "L:bs.b(ILuu;)Z#5",
-      "renamedSymbol": "L:bs.b(ILuu;)Z#5",
+      "renamedSymbol": "L:MidiPcmStream.b(ILuu;)Z#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -69036,7 +69044,7 @@
     },
     {
       "symbol": "L:bs.b([III)V#0",
-      "renamedSymbol": "L:bs.b([III)V#0",
+      "renamedSymbol": "L:MidiPcmStream.b([III)V#0",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -69047,7 +69055,7 @@
     },
     {
       "symbol": "L:bs.b([III)V#1",
-      "renamedSymbol": "L:bs.b([III)V#1",
+      "renamedSymbol": "L:MidiPcmStream.b([III)V#1",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -69058,7 +69066,7 @@
     },
     {
       "symbol": "L:bs.b([III)V#2",
-      "renamedSymbol": "L:bs.b([III)V#2",
+      "renamedSymbol": "L:MidiPcmStream.b([III)V#2",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -69069,7 +69077,7 @@
     },
     {
       "symbol": "L:bs.b([III)V#3",
-      "renamedSymbol": "L:bs.b([III)V#3",
+      "renamedSymbol": "L:MidiPcmStream.b([III)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -69080,7 +69088,7 @@
     },
     {
       "symbol": "L:bs.b([III)V#4",
-      "renamedSymbol": "L:bs.b([III)V#4",
+      "renamedSymbol": "L:MidiPcmStream.b([III)V#4",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -69091,7 +69099,7 @@
     },
     {
       "symbol": "L:bs.b([III)V#5",
-      "renamedSymbol": "L:bs.b([III)V#5",
+      "renamedSymbol": "L:MidiPcmStream.b([III)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -69102,7 +69110,7 @@
     },
     {
       "symbol": "L:bs.b([III)V#6",
-      "renamedSymbol": "L:bs.b([III)V#6",
+      "renamedSymbol": "L:MidiPcmStream.b([III)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -69113,7 +69121,7 @@
     },
     {
       "symbol": "L:bs.b([III)V#7",
-      "renamedSymbol": "L:bs.b([III)V#7",
+      "renamedSymbol": "L:MidiPcmStream.b([III)V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -69124,7 +69132,7 @@
     },
     {
       "symbol": "L:bs.b([III)V#8",
-      "renamedSymbol": "L:bs.b([III)V#8",
+      "renamedSymbol": "L:MidiPcmStream.b([III)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -69135,7 +69143,7 @@
     },
     {
       "symbol": "L:bs.b([III)V#9",
-      "renamedSymbol": "L:bs.b([III)V#9",
+      "renamedSymbol": "L:MidiPcmStream.b([III)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -69146,7 +69154,7 @@
     },
     {
       "symbol": "L:bs.c(IB)V#0",
-      "renamedSymbol": "L:bs.c(IB)V#0",
+      "renamedSymbol": "L:MidiPcmStream.c(IB)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -69157,7 +69165,7 @@
     },
     {
       "symbol": "L:bs.c(IB)V#1",
-      "renamedSymbol": "L:bs.c(IB)V#1",
+      "renamedSymbol": "L:MidiPcmStream.c(IB)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -69168,7 +69176,7 @@
     },
     {
       "symbol": "L:bs.c(IB)V#2",
-      "renamedSymbol": "L:bs.c(IB)V#2",
+      "renamedSymbol": "L:MidiPcmStream.c(IB)V#2",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -69179,7 +69187,7 @@
     },
     {
       "symbol": "L:bs.c(IB)V#3",
-      "renamedSymbol": "L:bs.c(IB)V#3",
+      "renamedSymbol": "L:MidiPcmStream.c(IB)V#3",
       "originalName": "decompiledNaturalLoopExit0",
       "renamedName": "decompiledNaturalLoopExit0",
       "declaration": {
@@ -69190,7 +69198,7 @@
     },
     {
       "symbol": "L:bs.c(II)V#0",
-      "renamedSymbol": "L:bs.c(II)V#0",
+      "renamedSymbol": "L:MidiPcmStream.c(II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -69201,7 +69209,7 @@
     },
     {
       "symbol": "L:bs.c(II)V#1",
-      "renamedSymbol": "L:bs.c(II)V#1",
+      "renamedSymbol": "L:MidiPcmStream.c(II)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -69212,7 +69220,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#0",
-      "renamedSymbol": "L:bs.c(ILuu;)I#0",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -69223,7 +69231,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#1",
-      "renamedSymbol": "L:bs.c(ILuu;)I#1",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -69234,7 +69242,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#10",
-      "renamedSymbol": "L:bs.c(ILuu;)I#10",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#10",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -69245,7 +69253,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#11",
-      "renamedSymbol": "L:bs.c(ILuu;)I#11",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#11",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -69256,7 +69264,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#12",
-      "renamedSymbol": "L:bs.c(ILuu;)I#12",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#12",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -69267,7 +69275,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#13",
-      "renamedSymbol": "L:bs.c(ILuu;)I#13",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -69278,7 +69286,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#14",
-      "renamedSymbol": "L:bs.c(ILuu;)I#14",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#14",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -69289,7 +69297,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#15",
-      "renamedSymbol": "L:bs.c(ILuu;)I#15",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#15",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -69300,7 +69308,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#16",
-      "renamedSymbol": "L:bs.c(ILuu;)I#16",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#16",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -69311,7 +69319,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#17",
-      "renamedSymbol": "L:bs.c(ILuu;)I#17",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#17",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -69322,7 +69330,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#18",
-      "renamedSymbol": "L:bs.c(ILuu;)I#18",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#18",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -69333,7 +69341,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#2",
-      "renamedSymbol": "L:bs.c(ILuu;)I#2",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -69344,7 +69352,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#3",
-      "renamedSymbol": "L:bs.c(ILuu;)I#3",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -69355,7 +69363,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#4",
-      "renamedSymbol": "L:bs.c(ILuu;)I#4",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -69366,7 +69374,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#5",
-      "renamedSymbol": "L:bs.c(ILuu;)I#5",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -69377,7 +69385,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#6",
-      "renamedSymbol": "L:bs.c(ILuu;)I#6",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -69388,7 +69396,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#7",
-      "renamedSymbol": "L:bs.c(ILuu;)I#7",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -69399,7 +69407,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#8",
-      "renamedSymbol": "L:bs.c(ILuu;)I#8",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#8",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -69410,7 +69418,7 @@
     },
     {
       "symbol": "L:bs.c(ILuu;)I#9",
-      "renamedSymbol": "L:bs.c(ILuu;)I#9",
+      "renamedSymbol": "L:MidiPcmStream.c(ILuu;)I#9",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -69421,7 +69429,7 @@
     },
     {
       "symbol": "L:bs.d(I)V#0",
-      "renamedSymbol": "L:bs.d(I)V#0",
+      "renamedSymbol": "L:MidiPcmStream.d(I)V#0",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -69432,7 +69440,7 @@
     },
     {
       "symbol": "L:bs.d(I)V#1",
-      "renamedSymbol": "L:bs.d(I)V#1",
+      "renamedSymbol": "L:MidiPcmStream.d(I)V#1",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -69443,7 +69451,7 @@
     },
     {
       "symbol": "L:bs.d(I)V#2",
-      "renamedSymbol": "L:bs.d(I)V#2",
+      "renamedSymbol": "L:MidiPcmStream.d(I)V#2",
       "originalName": "stackIn_29_0",
       "renamedName": "stackIn_29_0",
       "declaration": {
@@ -69454,7 +69462,7 @@
     },
     {
       "symbol": "L:bs.d(I)V#3",
-      "renamedSymbol": "L:bs.d(I)V#3",
+      "renamedSymbol": "L:MidiPcmStream.d(I)V#3",
       "originalName": "stackIn_29_1",
       "renamedName": "stackIn_29_1",
       "declaration": {
@@ -69465,7 +69473,7 @@
     },
     {
       "symbol": "L:bs.d(I)V#4",
-      "renamedSymbol": "L:bs.d(I)V#4",
+      "renamedSymbol": "L:MidiPcmStream.d(I)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -69476,7 +69484,7 @@
     },
     {
       "symbol": "L:bs.d(I)V#5",
-      "renamedSymbol": "L:bs.d(I)V#5",
+      "renamedSymbol": "L:MidiPcmStream.d(I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -69487,7 +69495,7 @@
     },
     {
       "symbol": "L:bs.d(I)V#6",
-      "renamedSymbol": "L:bs.d(I)V#6",
+      "renamedSymbol": "L:MidiPcmStream.d(I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -69498,7 +69506,7 @@
     },
     {
       "symbol": "L:bs.d(I)V#7",
-      "renamedSymbol": "L:bs.d(I)V#7",
+      "renamedSymbol": "L:MidiPcmStream.d(I)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -69509,7 +69517,7 @@
     },
     {
       "symbol": "L:bs.d(I)V#8",
-      "renamedSymbol": "L:bs.d(I)V#8",
+      "renamedSymbol": "L:MidiPcmStream.d(I)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -69520,7 +69528,7 @@
     },
     {
       "symbol": "L:bs.e(III)V#0",
-      "renamedSymbol": "L:bs.e(III)V#0",
+      "renamedSymbol": "L:MidiPcmStream.e(III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -69531,7 +69539,7 @@
     },
     {
       "symbol": "L:bs.e(III)V#1",
-      "renamedSymbol": "L:bs.e(III)V#1",
+      "renamedSymbol": "L:MidiPcmStream.e(III)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -69542,7 +69550,7 @@
     },
     {
       "symbol": "L:bs.e(III)V#2",
-      "renamedSymbol": "L:bs.e(III)V#2",
+      "renamedSymbol": "L:MidiPcmStream.e(III)V#2",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -189849,7 +189857,7 @@
     },
     {
       "symbol": "L:rh.<init>(Lbs;)V#0",
-      "renamedSymbol": "L:rh.<init>(Lbs;)V#0",
+      "renamedSymbol": "L:rh.<init>(LMidiPcmStream;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -216073,7 +216081,7 @@
     },
     {
       "symbol": "L:ud.<init>(Lbs;Lbs;)V#0",
-      "renamedSymbol": "L:ud.<init>(Lbs;Lbs;)V#0",
+      "renamedSymbol": "L:ud.<init>(LMidiPcmStream;LMidiPcmStream;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -216106,7 +216114,7 @@
     },
     {
       "symbol": "L:ud.a(IBLbs;I)V#0",
-      "renamedSymbol": "L:ud.a(IBLbs;I)V#0",
+      "renamedSymbol": "L:ud.a(IBLMidiPcmStream;I)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -216117,7 +216125,7 @@
     },
     {
       "symbol": "L:ud.a(IBLbs;I)V#1",
-      "renamedSymbol": "L:ud.a(IBLbs;I)V#1",
+      "renamedSymbol": "L:ud.a(IBLMidiPcmStream;I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -216425,7 +216433,7 @@
     },
     {
       "symbol": "L:ud.a(Lbs;ILbs;)V#0",
-      "renamedSymbol": "L:ud.a(Lbs;ILbs;)V#0",
+      "renamedSymbol": "L:ud.a(LMidiPcmStream;ILMidiPcmStream;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -248996,9 +249004,9 @@
     },
     {
       "symbol": "M:bs.<init>()V",
-      "renamedSymbol": "M:bs.<init>()V",
+      "renamedSymbol": "M:MidiPcmStream.<init>()V",
       "originalName": "bs",
-      "renamedName": "bs",
+      "renamedName": "MidiPcmStream",
       "declaration": {
         "file": "bs.java",
         "start": 52984,
@@ -249007,7 +249015,7 @@
     },
     {
       "symbol": "M:bs.a()Lhj;",
-      "renamedSymbol": "M:bs.a()LPcmStream;",
+      "renamedSymbol": "M:MidiPcmStream.a()LPcmStream;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249018,7 +249026,7 @@
     },
     {
       "symbol": "M:bs.a(B)V",
-      "renamedSymbol": "M:bs.a(B)V",
+      "renamedSymbol": "M:MidiPcmStream.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249029,7 +249037,7 @@
     },
     {
       "symbol": "M:bs.a(BII)V",
-      "renamedSymbol": "M:bs.a(BII)V",
+      "renamedSymbol": "M:MidiPcmStream.a(BII)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249040,7 +249048,7 @@
     },
     {
       "symbol": "M:bs.a(BLuu;Z)V",
-      "renamedSymbol": "M:bs.a(BLuu;Z)V",
+      "renamedSymbol": "M:MidiPcmStream.a(BLuu;Z)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249051,7 +249059,7 @@
     },
     {
       "symbol": "M:bs.a(I)V",
-      "renamedSymbol": "M:bs.a(I)V",
+      "renamedSymbol": "M:MidiPcmStream.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249062,7 +249070,7 @@
     },
     {
       "symbol": "M:bs.a(IB)V",
-      "renamedSymbol": "M:bs.a(IB)V",
+      "renamedSymbol": "M:MidiPcmStream.a(IB)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249073,7 +249081,7 @@
     },
     {
       "symbol": "M:bs.a(IBI)V",
-      "renamedSymbol": "M:bs.a(IBI)V",
+      "renamedSymbol": "M:MidiPcmStream.a(IBI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249084,7 +249092,7 @@
     },
     {
       "symbol": "M:bs.a(IBII)V",
-      "renamedSymbol": "M:bs.a(IBII)V",
+      "renamedSymbol": "M:MidiPcmStream.a(IBII)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249095,7 +249103,7 @@
     },
     {
       "symbol": "M:bs.a(II)V",
-      "renamedSymbol": "M:bs.a(II)V",
+      "renamedSymbol": "M:MidiPcmStream.a(II)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249106,7 +249114,7 @@
     },
     {
       "symbol": "M:bs.a(III)V",
-      "renamedSymbol": "M:bs.a(III)V",
+      "renamedSymbol": "M:MidiPcmStream.a(III)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249117,7 +249125,7 @@
     },
     {
       "symbol": "M:bs.a(IIII)V",
-      "renamedSymbol": "M:bs.a(IIII)V",
+      "renamedSymbol": "M:MidiPcmStream.a(IIII)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249128,7 +249136,7 @@
     },
     {
       "symbol": "M:bs.a(ILuu;)I",
-      "renamedSymbol": "M:bs.a(ILuu;)I",
+      "renamedSymbol": "M:MidiPcmStream.a(ILuu;)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249139,7 +249147,7 @@
     },
     {
       "symbol": "M:bs.a(IZ)V",
-      "renamedSymbol": "M:bs.a(IZ)V",
+      "renamedSymbol": "M:MidiPcmStream.a(IZ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249150,7 +249158,7 @@
     },
     {
       "symbol": "M:bs.a(Log;Ltv;ILki;I)Z",
-      "renamedSymbol": "M:bs.a(Log;Ltv;ILResourceArchive;I)Z",
+      "renamedSymbol": "M:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249161,7 +249169,7 @@
     },
     {
       "symbol": "M:bs.a(ZB)V",
-      "renamedSymbol": "M:bs.a(ZB)V",
+      "renamedSymbol": "M:MidiPcmStream.a(ZB)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249172,7 +249180,7 @@
     },
     {
       "symbol": "M:bs.a(ZIIILtv;Z)V",
-      "renamedSymbol": "M:bs.a(ZIIILtv;Z)V",
+      "renamedSymbol": "M:MidiPcmStream.a(ZIIILtv;Z)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249183,7 +249191,7 @@
     },
     {
       "symbol": "M:bs.a(ZLtv;I)V",
-      "renamedSymbol": "M:bs.a(ZLtv;I)V",
+      "renamedSymbol": "M:MidiPcmStream.a(ZLtv;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249194,7 +249202,7 @@
     },
     {
       "symbol": "M:bs.a(ZLuu;)I",
-      "renamedSymbol": "M:bs.a(ZLuu;)I",
+      "renamedSymbol": "M:MidiPcmStream.a(ZLuu;)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249205,7 +249213,7 @@
     },
     {
       "symbol": "M:bs.a(ZZ)V",
-      "renamedSymbol": "M:bs.a(ZZ)V",
+      "renamedSymbol": "M:MidiPcmStream.a(ZZ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249216,7 +249224,7 @@
     },
     {
       "symbol": "M:bs.a(ZZZLtv;)V",
-      "renamedSymbol": "M:bs.a(ZZZLtv;)V",
+      "renamedSymbol": "M:MidiPcmStream.a(ZZZLtv;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249227,7 +249235,7 @@
     },
     {
       "symbol": "M:bs.a([IIILuu;I)Z",
-      "renamedSymbol": "M:bs.a([IIILuu;I)Z",
+      "renamedSymbol": "M:MidiPcmStream.a([IIILuu;I)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -249238,7 +249246,7 @@
     },
     {
       "symbol": "M:bs.b(IB)V",
-      "renamedSymbol": "M:bs.b(IB)V",
+      "renamedSymbol": "M:MidiPcmStream.b(IB)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -249249,7 +249257,7 @@
     },
     {
       "symbol": "M:bs.b(II)V",
-      "renamedSymbol": "M:bs.b(II)V",
+      "renamedSymbol": "M:MidiPcmStream.b(II)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -249260,7 +249268,7 @@
     },
     {
       "symbol": "M:bs.b(III)V",
-      "renamedSymbol": "M:bs.b(III)V",
+      "renamedSymbol": "M:MidiPcmStream.b(III)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -249271,7 +249279,7 @@
     },
     {
       "symbol": "M:bs.b(IIII)V",
-      "renamedSymbol": "M:bs.b(IIII)V",
+      "renamedSymbol": "M:MidiPcmStream.b(IIII)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -249282,7 +249290,7 @@
     },
     {
       "symbol": "M:bs.b(ILuu;)Z",
-      "renamedSymbol": "M:bs.b(ILuu;)Z",
+      "renamedSymbol": "M:MidiPcmStream.b(ILuu;)Z",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -249293,7 +249301,7 @@
     },
     {
       "symbol": "M:bs.b(IZ)V",
-      "renamedSymbol": "M:bs.b(IZ)V",
+      "renamedSymbol": "M:MidiPcmStream.b(IZ)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -249304,7 +249312,7 @@
     },
     {
       "symbol": "M:bs.b([III)V",
-      "renamedSymbol": "M:bs.b([III)V",
+      "renamedSymbol": "M:MidiPcmStream.b([III)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -249315,7 +249323,7 @@
     },
     {
       "symbol": "M:bs.c()Lhj;",
-      "renamedSymbol": "M:bs.c()LPcmStream;",
+      "renamedSymbol": "M:MidiPcmStream.c()LPcmStream;",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -249326,7 +249334,7 @@
     },
     {
       "symbol": "M:bs.c(I)Z",
-      "renamedSymbol": "M:bs.c(I)Z",
+      "renamedSymbol": "M:MidiPcmStream.c(I)Z",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -249337,7 +249345,7 @@
     },
     {
       "symbol": "M:bs.c(IB)V",
-      "renamedSymbol": "M:bs.c(IB)V",
+      "renamedSymbol": "M:MidiPcmStream.c(IB)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -249348,7 +249356,7 @@
     },
     {
       "symbol": "M:bs.c(II)V",
-      "renamedSymbol": "M:bs.c(II)V",
+      "renamedSymbol": "M:MidiPcmStream.c(II)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -249359,7 +249367,7 @@
     },
     {
       "symbol": "M:bs.c(III)V",
-      "renamedSymbol": "M:bs.c(III)V",
+      "renamedSymbol": "M:MidiPcmStream.c(III)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -249370,7 +249378,7 @@
     },
     {
       "symbol": "M:bs.c(ILuu;)I",
-      "renamedSymbol": "M:bs.c(ILuu;)I",
+      "renamedSymbol": "M:MidiPcmStream.c(ILuu;)I",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -249381,7 +249389,7 @@
     },
     {
       "symbol": "M:bs.d()I",
-      "renamedSymbol": "M:bs.d()I",
+      "renamedSymbol": "M:MidiPcmStream.d()I",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -249392,7 +249400,7 @@
     },
     {
       "symbol": "M:bs.d(I)V",
-      "renamedSymbol": "M:bs.d(I)V",
+      "renamedSymbol": "M:MidiPcmStream.d(I)V",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -249403,7 +249411,7 @@
     },
     {
       "symbol": "M:bs.d(III)V",
-      "renamedSymbol": "M:bs.d(III)V",
+      "renamedSymbol": "M:MidiPcmStream.d(III)V",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -249414,7 +249422,7 @@
     },
     {
       "symbol": "M:bs.e(I)V",
-      "renamedSymbol": "M:bs.e(I)V",
+      "renamedSymbol": "M:MidiPcmStream.e(I)V",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -249425,7 +249433,7 @@
     },
     {
       "symbol": "M:bs.e(III)V",
-      "renamedSymbol": "M:bs.e(III)V",
+      "renamedSymbol": "M:MidiPcmStream.e(III)V",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -249436,7 +249444,7 @@
     },
     {
       "symbol": "M:bs.f(I)V",
-      "renamedSymbol": "M:bs.f(I)V",
+      "renamedSymbol": "M:MidiPcmStream.f(I)V",
       "originalName": "f",
       "renamedName": "f",
       "declaration": {
@@ -282579,7 +282587,7 @@
     },
     {
       "symbol": "M:rh.<init>(Lbs;)V",
-      "renamedSymbol": "M:rh.<init>(Lbs;)V",
+      "renamedSymbol": "M:rh.<init>(LMidiPcmStream;)V",
       "originalName": "rh",
       "renamedName": "rh",
       "declaration": {
@@ -287331,7 +287339,7 @@
     },
     {
       "symbol": "M:ud.<init>(Lbs;Lbs;)V",
-      "renamedSymbol": "M:ud.<init>(Lbs;Lbs;)V",
+      "renamedSymbol": "M:ud.<init>(LMidiPcmStream;LMidiPcmStream;)V",
       "originalName": "ud",
       "renamedName": "ud",
       "declaration": {
@@ -287375,7 +287383,7 @@
     },
     {
       "symbol": "M:ud.a(IBLbs;I)V",
-      "renamedSymbol": "M:ud.a(IBLbs;I)V",
+      "renamedSymbol": "M:ud.a(IBLMidiPcmStream;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -287408,7 +287416,7 @@
     },
     {
       "symbol": "M:ud.a(Lbs;ILbs;)V",
-      "renamedSymbol": "M:ud.a(Lbs;ILbs;)V",
+      "renamedSymbol": "M:ud.a(LMidiPcmStream;ILMidiPcmStream;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -303479,7 +303487,7 @@
     },
     {
       "symbol": "P:bs.a(B)V#0",
-      "renamedSymbol": "P:bs.a(B)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303490,7 +303498,7 @@
     },
     {
       "symbol": "P:bs.a(BII)V#0",
-      "renamedSymbol": "P:bs.a(BII)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303501,7 +303509,7 @@
     },
     {
       "symbol": "P:bs.a(BII)V#1",
-      "renamedSymbol": "P:bs.a(BII)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303512,7 +303520,7 @@
     },
     {
       "symbol": "P:bs.a(BII)V#2",
-      "renamedSymbol": "P:bs.a(BII)V#2",
+      "renamedSymbol": "P:MidiPcmStream.a(BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -303523,7 +303531,7 @@
     },
     {
       "symbol": "P:bs.a(BLuu;Z)V#0",
-      "renamedSymbol": "P:bs.a(BLuu;Z)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(BLuu;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303534,7 +303542,7 @@
     },
     {
       "symbol": "P:bs.a(BLuu;Z)V#1",
-      "renamedSymbol": "P:bs.a(BLuu;Z)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(BLuu;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303545,7 +303553,7 @@
     },
     {
       "symbol": "P:bs.a(BLuu;Z)V#2",
-      "renamedSymbol": "P:bs.a(BLuu;Z)V#2",
+      "renamedSymbol": "P:MidiPcmStream.a(BLuu;Z)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -303556,7 +303564,7 @@
     },
     {
       "symbol": "P:bs.a(I)V#0",
-      "renamedSymbol": "P:bs.a(I)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303567,7 +303575,7 @@
     },
     {
       "symbol": "P:bs.a(IB)V#0",
-      "renamedSymbol": "P:bs.a(IB)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303578,7 +303586,7 @@
     },
     {
       "symbol": "P:bs.a(IB)V#1",
-      "renamedSymbol": "P:bs.a(IB)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303589,7 +303597,7 @@
     },
     {
       "symbol": "P:bs.a(IBI)V#0",
-      "renamedSymbol": "P:bs.a(IBI)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(IBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303600,7 +303608,7 @@
     },
     {
       "symbol": "P:bs.a(IBI)V#1",
-      "renamedSymbol": "P:bs.a(IBI)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(IBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303611,7 +303619,7 @@
     },
     {
       "symbol": "P:bs.a(IBI)V#2",
-      "renamedSymbol": "P:bs.a(IBI)V#2",
+      "renamedSymbol": "P:MidiPcmStream.a(IBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -303622,7 +303630,7 @@
     },
     {
       "symbol": "P:bs.a(IBII)V#0",
-      "renamedSymbol": "P:bs.a(IBII)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(IBII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303633,7 +303641,7 @@
     },
     {
       "symbol": "P:bs.a(IBII)V#1",
-      "renamedSymbol": "P:bs.a(IBII)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(IBII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303644,7 +303652,7 @@
     },
     {
       "symbol": "P:bs.a(IBII)V#2",
-      "renamedSymbol": "P:bs.a(IBII)V#2",
+      "renamedSymbol": "P:MidiPcmStream.a(IBII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -303655,7 +303663,7 @@
     },
     {
       "symbol": "P:bs.a(IBII)V#3",
-      "renamedSymbol": "P:bs.a(IBII)V#3",
+      "renamedSymbol": "P:MidiPcmStream.a(IBII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -303666,7 +303674,7 @@
     },
     {
       "symbol": "P:bs.a(II)V#0",
-      "renamedSymbol": "P:bs.a(II)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303677,7 +303685,7 @@
     },
     {
       "symbol": "P:bs.a(II)V#1",
-      "renamedSymbol": "P:bs.a(II)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303688,7 +303696,7 @@
     },
     {
       "symbol": "P:bs.a(III)V#0",
-      "renamedSymbol": "P:bs.a(III)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303699,7 +303707,7 @@
     },
     {
       "symbol": "P:bs.a(III)V#1",
-      "renamedSymbol": "P:bs.a(III)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303710,7 +303718,7 @@
     },
     {
       "symbol": "P:bs.a(III)V#2",
-      "renamedSymbol": "P:bs.a(III)V#2",
+      "renamedSymbol": "P:MidiPcmStream.a(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -303721,7 +303729,7 @@
     },
     {
       "symbol": "P:bs.a(IIII)V#0",
-      "renamedSymbol": "P:bs.a(IIII)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303732,7 +303740,7 @@
     },
     {
       "symbol": "P:bs.a(IIII)V#1",
-      "renamedSymbol": "P:bs.a(IIII)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303743,7 +303751,7 @@
     },
     {
       "symbol": "P:bs.a(IIII)V#2",
-      "renamedSymbol": "P:bs.a(IIII)V#2",
+      "renamedSymbol": "P:MidiPcmStream.a(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -303754,7 +303762,7 @@
     },
     {
       "symbol": "P:bs.a(IIII)V#3",
-      "renamedSymbol": "P:bs.a(IIII)V#3",
+      "renamedSymbol": "P:MidiPcmStream.a(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -303765,7 +303773,7 @@
     },
     {
       "symbol": "P:bs.a(ILuu;)I#0",
-      "renamedSymbol": "P:bs.a(ILuu;)I#0",
+      "renamedSymbol": "P:MidiPcmStream.a(ILuu;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303776,7 +303784,7 @@
     },
     {
       "symbol": "P:bs.a(ILuu;)I#1",
-      "renamedSymbol": "P:bs.a(ILuu;)I#1",
+      "renamedSymbol": "P:MidiPcmStream.a(ILuu;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303787,7 +303795,7 @@
     },
     {
       "symbol": "P:bs.a(IZ)V#0",
-      "renamedSymbol": "P:bs.a(IZ)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303798,7 +303806,7 @@
     },
     {
       "symbol": "P:bs.a(IZ)V#1",
-      "renamedSymbol": "P:bs.a(IZ)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303809,7 +303817,7 @@
     },
     {
       "symbol": "P:bs.a(Log;Ltv;ILki;I)Z#0",
-      "renamedSymbol": "P:bs.a(Log;Ltv;ILResourceArchive;I)Z#0",
+      "renamedSymbol": "P:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303820,7 +303828,7 @@
     },
     {
       "symbol": "P:bs.a(Log;Ltv;ILki;I)Z#1",
-      "renamedSymbol": "P:bs.a(Log;Ltv;ILResourceArchive;I)Z#1",
+      "renamedSymbol": "P:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303831,7 +303839,7 @@
     },
     {
       "symbol": "P:bs.a(Log;Ltv;ILki;I)Z#2",
-      "renamedSymbol": "P:bs.a(Log;Ltv;ILResourceArchive;I)Z#2",
+      "renamedSymbol": "P:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -303842,7 +303850,7 @@
     },
     {
       "symbol": "P:bs.a(Log;Ltv;ILki;I)Z#3",
-      "renamedSymbol": "P:bs.a(Log;Ltv;ILResourceArchive;I)Z#3",
+      "renamedSymbol": "P:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -303853,7 +303861,7 @@
     },
     {
       "symbol": "P:bs.a(Log;Ltv;ILki;I)Z#4",
-      "renamedSymbol": "P:bs.a(Log;Ltv;ILResourceArchive;I)Z#4",
+      "renamedSymbol": "P:MidiPcmStream.a(Log;Ltv;ILResourceArchive;I)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -303864,7 +303872,7 @@
     },
     {
       "symbol": "P:bs.a(ZB)V#0",
-      "renamedSymbol": "P:bs.a(ZB)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(ZB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303875,7 +303883,7 @@
     },
     {
       "symbol": "P:bs.a(ZB)V#1",
-      "renamedSymbol": "P:bs.a(ZB)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(ZB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303886,7 +303894,7 @@
     },
     {
       "symbol": "P:bs.a(ZIIILtv;Z)V#0",
-      "renamedSymbol": "P:bs.a(ZIIILtv;Z)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(ZIIILtv;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303897,7 +303905,7 @@
     },
     {
       "symbol": "P:bs.a(ZIIILtv;Z)V#1",
-      "renamedSymbol": "P:bs.a(ZIIILtv;Z)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(ZIIILtv;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303908,7 +303916,7 @@
     },
     {
       "symbol": "P:bs.a(ZIIILtv;Z)V#2",
-      "renamedSymbol": "P:bs.a(ZIIILtv;Z)V#2",
+      "renamedSymbol": "P:MidiPcmStream.a(ZIIILtv;Z)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -303919,7 +303927,7 @@
     },
     {
       "symbol": "P:bs.a(ZIIILtv;Z)V#3",
-      "renamedSymbol": "P:bs.a(ZIIILtv;Z)V#3",
+      "renamedSymbol": "P:MidiPcmStream.a(ZIIILtv;Z)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -303930,7 +303938,7 @@
     },
     {
       "symbol": "P:bs.a(ZIIILtv;Z)V#4",
-      "renamedSymbol": "P:bs.a(ZIIILtv;Z)V#4",
+      "renamedSymbol": "P:MidiPcmStream.a(ZIIILtv;Z)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -303941,7 +303949,7 @@
     },
     {
       "symbol": "P:bs.a(ZIIILtv;Z)V#5",
-      "renamedSymbol": "P:bs.a(ZIIILtv;Z)V#5",
+      "renamedSymbol": "P:MidiPcmStream.a(ZIIILtv;Z)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -303952,7 +303960,7 @@
     },
     {
       "symbol": "P:bs.a(ZLtv;I)V#0",
-      "renamedSymbol": "P:bs.a(ZLtv;I)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(ZLtv;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303963,7 +303971,7 @@
     },
     {
       "symbol": "P:bs.a(ZLtv;I)V#1",
-      "renamedSymbol": "P:bs.a(ZLtv;I)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(ZLtv;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -303974,7 +303982,7 @@
     },
     {
       "symbol": "P:bs.a(ZLtv;I)V#2",
-      "renamedSymbol": "P:bs.a(ZLtv;I)V#2",
+      "renamedSymbol": "P:MidiPcmStream.a(ZLtv;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -303985,7 +303993,7 @@
     },
     {
       "symbol": "P:bs.a(ZLuu;)I#0",
-      "renamedSymbol": "P:bs.a(ZLuu;)I#0",
+      "renamedSymbol": "P:MidiPcmStream.a(ZLuu;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303996,7 +304004,7 @@
     },
     {
       "symbol": "P:bs.a(ZLuu;)I#1",
-      "renamedSymbol": "P:bs.a(ZLuu;)I#1",
+      "renamedSymbol": "P:MidiPcmStream.a(ZLuu;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304007,7 +304015,7 @@
     },
     {
       "symbol": "P:bs.a(ZZ)V#0",
-      "renamedSymbol": "P:bs.a(ZZ)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(ZZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304018,7 +304026,7 @@
     },
     {
       "symbol": "P:bs.a(ZZ)V#1",
-      "renamedSymbol": "P:bs.a(ZZ)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(ZZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304029,7 +304037,7 @@
     },
     {
       "symbol": "P:bs.a(ZZZLtv;)V#0",
-      "renamedSymbol": "P:bs.a(ZZZLtv;)V#0",
+      "renamedSymbol": "P:MidiPcmStream.a(ZZZLtv;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304040,7 +304048,7 @@
     },
     {
       "symbol": "P:bs.a(ZZZLtv;)V#1",
-      "renamedSymbol": "P:bs.a(ZZZLtv;)V#1",
+      "renamedSymbol": "P:MidiPcmStream.a(ZZZLtv;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304051,7 +304059,7 @@
     },
     {
       "symbol": "P:bs.a(ZZZLtv;)V#2",
-      "renamedSymbol": "P:bs.a(ZZZLtv;)V#2",
+      "renamedSymbol": "P:MidiPcmStream.a(ZZZLtv;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -304062,7 +304070,7 @@
     },
     {
       "symbol": "P:bs.a(ZZZLtv;)V#3",
-      "renamedSymbol": "P:bs.a(ZZZLtv;)V#3",
+      "renamedSymbol": "P:MidiPcmStream.a(ZZZLtv;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -304073,7 +304081,7 @@
     },
     {
       "symbol": "P:bs.a([IIILuu;I)Z#0",
-      "renamedSymbol": "P:bs.a([IIILuu;I)Z#0",
+      "renamedSymbol": "P:MidiPcmStream.a([IIILuu;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304084,7 +304092,7 @@
     },
     {
       "symbol": "P:bs.a([IIILuu;I)Z#1",
-      "renamedSymbol": "P:bs.a([IIILuu;I)Z#1",
+      "renamedSymbol": "P:MidiPcmStream.a([IIILuu;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304095,7 +304103,7 @@
     },
     {
       "symbol": "P:bs.a([IIILuu;I)Z#2",
-      "renamedSymbol": "P:bs.a([IIILuu;I)Z#2",
+      "renamedSymbol": "P:MidiPcmStream.a([IIILuu;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -304106,7 +304114,7 @@
     },
     {
       "symbol": "P:bs.a([IIILuu;I)Z#3",
-      "renamedSymbol": "P:bs.a([IIILuu;I)Z#3",
+      "renamedSymbol": "P:MidiPcmStream.a([IIILuu;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -304117,7 +304125,7 @@
     },
     {
       "symbol": "P:bs.a([IIILuu;I)Z#4",
-      "renamedSymbol": "P:bs.a([IIILuu;I)Z#4",
+      "renamedSymbol": "P:MidiPcmStream.a([IIILuu;I)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -304128,7 +304136,7 @@
     },
     {
       "symbol": "P:bs.b(IB)V#0",
-      "renamedSymbol": "P:bs.b(IB)V#0",
+      "renamedSymbol": "P:MidiPcmStream.b(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304139,7 +304147,7 @@
     },
     {
       "symbol": "P:bs.b(IB)V#1",
-      "renamedSymbol": "P:bs.b(IB)V#1",
+      "renamedSymbol": "P:MidiPcmStream.b(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304150,7 +304158,7 @@
     },
     {
       "symbol": "P:bs.b(II)V#0",
-      "renamedSymbol": "P:bs.b(II)V#0",
+      "renamedSymbol": "P:MidiPcmStream.b(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304161,7 +304169,7 @@
     },
     {
       "symbol": "P:bs.b(II)V#1",
-      "renamedSymbol": "P:bs.b(II)V#1",
+      "renamedSymbol": "P:MidiPcmStream.b(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304172,7 +304180,7 @@
     },
     {
       "symbol": "P:bs.b(III)V#0",
-      "renamedSymbol": "P:bs.b(III)V#0",
+      "renamedSymbol": "P:MidiPcmStream.b(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304183,7 +304191,7 @@
     },
     {
       "symbol": "P:bs.b(III)V#1",
-      "renamedSymbol": "P:bs.b(III)V#1",
+      "renamedSymbol": "P:MidiPcmStream.b(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304194,7 +304202,7 @@
     },
     {
       "symbol": "P:bs.b(III)V#2",
-      "renamedSymbol": "P:bs.b(III)V#2",
+      "renamedSymbol": "P:MidiPcmStream.b(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -304205,7 +304213,7 @@
     },
     {
       "symbol": "P:bs.b(IIII)V#0",
-      "renamedSymbol": "P:bs.b(IIII)V#0",
+      "renamedSymbol": "P:MidiPcmStream.b(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304216,7 +304224,7 @@
     },
     {
       "symbol": "P:bs.b(IIII)V#1",
-      "renamedSymbol": "P:bs.b(IIII)V#1",
+      "renamedSymbol": "P:MidiPcmStream.b(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304227,7 +304235,7 @@
     },
     {
       "symbol": "P:bs.b(IIII)V#2",
-      "renamedSymbol": "P:bs.b(IIII)V#2",
+      "renamedSymbol": "P:MidiPcmStream.b(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -304238,7 +304246,7 @@
     },
     {
       "symbol": "P:bs.b(IIII)V#3",
-      "renamedSymbol": "P:bs.b(IIII)V#3",
+      "renamedSymbol": "P:MidiPcmStream.b(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -304249,7 +304257,7 @@
     },
     {
       "symbol": "P:bs.b(ILuu;)Z#0",
-      "renamedSymbol": "P:bs.b(ILuu;)Z#0",
+      "renamedSymbol": "P:MidiPcmStream.b(ILuu;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304260,7 +304268,7 @@
     },
     {
       "symbol": "P:bs.b(ILuu;)Z#1",
-      "renamedSymbol": "P:bs.b(ILuu;)Z#1",
+      "renamedSymbol": "P:MidiPcmStream.b(ILuu;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304271,7 +304279,7 @@
     },
     {
       "symbol": "P:bs.b(IZ)V#0",
-      "renamedSymbol": "P:bs.b(IZ)V#0",
+      "renamedSymbol": "P:MidiPcmStream.b(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304282,7 +304290,7 @@
     },
     {
       "symbol": "P:bs.b(IZ)V#1",
-      "renamedSymbol": "P:bs.b(IZ)V#1",
+      "renamedSymbol": "P:MidiPcmStream.b(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304293,7 +304301,7 @@
     },
     {
       "symbol": "P:bs.b([III)V#0",
-      "renamedSymbol": "P:bs.b([III)V#0",
+      "renamedSymbol": "P:MidiPcmStream.b([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304304,7 +304312,7 @@
     },
     {
       "symbol": "P:bs.b([III)V#1",
-      "renamedSymbol": "P:bs.b([III)V#1",
+      "renamedSymbol": "P:MidiPcmStream.b([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304315,7 +304323,7 @@
     },
     {
       "symbol": "P:bs.b([III)V#2",
-      "renamedSymbol": "P:bs.b([III)V#2",
+      "renamedSymbol": "P:MidiPcmStream.b([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -304326,7 +304334,7 @@
     },
     {
       "symbol": "P:bs.c(I)Z#0",
-      "renamedSymbol": "P:bs.c(I)Z#0",
+      "renamedSymbol": "P:MidiPcmStream.c(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304337,7 +304345,7 @@
     },
     {
       "symbol": "P:bs.c(IB)V#0",
-      "renamedSymbol": "P:bs.c(IB)V#0",
+      "renamedSymbol": "P:MidiPcmStream.c(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304348,7 +304356,7 @@
     },
     {
       "symbol": "P:bs.c(IB)V#1",
-      "renamedSymbol": "P:bs.c(IB)V#1",
+      "renamedSymbol": "P:MidiPcmStream.c(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304359,7 +304367,7 @@
     },
     {
       "symbol": "P:bs.c(II)V#0",
-      "renamedSymbol": "P:bs.c(II)V#0",
+      "renamedSymbol": "P:MidiPcmStream.c(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304370,7 +304378,7 @@
     },
     {
       "symbol": "P:bs.c(II)V#1",
-      "renamedSymbol": "P:bs.c(II)V#1",
+      "renamedSymbol": "P:MidiPcmStream.c(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304381,7 +304389,7 @@
     },
     {
       "symbol": "P:bs.c(III)V#0",
-      "renamedSymbol": "P:bs.c(III)V#0",
+      "renamedSymbol": "P:MidiPcmStream.c(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304392,7 +304400,7 @@
     },
     {
       "symbol": "P:bs.c(III)V#1",
-      "renamedSymbol": "P:bs.c(III)V#1",
+      "renamedSymbol": "P:MidiPcmStream.c(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304403,7 +304411,7 @@
     },
     {
       "symbol": "P:bs.c(III)V#2",
-      "renamedSymbol": "P:bs.c(III)V#2",
+      "renamedSymbol": "P:MidiPcmStream.c(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -304414,7 +304422,7 @@
     },
     {
       "symbol": "P:bs.c(ILuu;)I#0",
-      "renamedSymbol": "P:bs.c(ILuu;)I#0",
+      "renamedSymbol": "P:MidiPcmStream.c(ILuu;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304425,7 +304433,7 @@
     },
     {
       "symbol": "P:bs.c(ILuu;)I#1",
-      "renamedSymbol": "P:bs.c(ILuu;)I#1",
+      "renamedSymbol": "P:MidiPcmStream.c(ILuu;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304436,7 +304444,7 @@
     },
     {
       "symbol": "P:bs.d(I)V#0",
-      "renamedSymbol": "P:bs.d(I)V#0",
+      "renamedSymbol": "P:MidiPcmStream.d(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304447,7 +304455,7 @@
     },
     {
       "symbol": "P:bs.d(III)V#0",
-      "renamedSymbol": "P:bs.d(III)V#0",
+      "renamedSymbol": "P:MidiPcmStream.d(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304458,7 +304466,7 @@
     },
     {
       "symbol": "P:bs.d(III)V#1",
-      "renamedSymbol": "P:bs.d(III)V#1",
+      "renamedSymbol": "P:MidiPcmStream.d(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304469,7 +304477,7 @@
     },
     {
       "symbol": "P:bs.d(III)V#2",
-      "renamedSymbol": "P:bs.d(III)V#2",
+      "renamedSymbol": "P:MidiPcmStream.d(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -304480,7 +304488,7 @@
     },
     {
       "symbol": "P:bs.e(I)V#0",
-      "renamedSymbol": "P:bs.e(I)V#0",
+      "renamedSymbol": "P:MidiPcmStream.e(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304491,7 +304499,7 @@
     },
     {
       "symbol": "P:bs.e(III)V#0",
-      "renamedSymbol": "P:bs.e(III)V#0",
+      "renamedSymbol": "P:MidiPcmStream.e(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304502,7 +304510,7 @@
     },
     {
       "symbol": "P:bs.e(III)V#1",
-      "renamedSymbol": "P:bs.e(III)V#1",
+      "renamedSymbol": "P:MidiPcmStream.e(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304513,7 +304521,7 @@
     },
     {
       "symbol": "P:bs.e(III)V#2",
-      "renamedSymbol": "P:bs.e(III)V#2",
+      "renamedSymbol": "P:MidiPcmStream.e(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -304524,7 +304532,7 @@
     },
     {
       "symbol": "P:bs.f(I)V#0",
-      "renamedSymbol": "P:bs.f(I)V#0",
+      "renamedSymbol": "P:MidiPcmStream.f(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -382701,7 +382709,7 @@
     },
     {
       "symbol": "P:rh.<init>(Lbs;)V#0",
-      "renamedSymbol": "P:rh.<init>(Lbs;)V#0",
+      "renamedSymbol": "P:rh.<init>(LMidiPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392733,7 +392741,7 @@
     },
     {
       "symbol": "P:ud.<init>(Lbs;Lbs;)V#0",
-      "renamedSymbol": "P:ud.<init>(Lbs;Lbs;)V#0",
+      "renamedSymbol": "P:ud.<init>(LMidiPcmStream;LMidiPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392744,7 +392752,7 @@
     },
     {
       "symbol": "P:ud.<init>(Lbs;Lbs;)V#1",
-      "renamedSymbol": "P:ud.<init>(Lbs;Lbs;)V#1",
+      "renamedSymbol": "P:ud.<init>(LMidiPcmStream;LMidiPcmStream;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392788,7 +392796,7 @@
     },
     {
       "symbol": "P:ud.a(IBLbs;I)V#0",
-      "renamedSymbol": "P:ud.a(IBLbs;I)V#0",
+      "renamedSymbol": "P:ud.a(IBLMidiPcmStream;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392799,7 +392807,7 @@
     },
     {
       "symbol": "P:ud.a(IBLbs;I)V#1",
-      "renamedSymbol": "P:ud.a(IBLbs;I)V#1",
+      "renamedSymbol": "P:ud.a(IBLMidiPcmStream;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392810,7 +392818,7 @@
     },
     {
       "symbol": "P:ud.a(IBLbs;I)V#2",
-      "renamedSymbol": "P:ud.a(IBLbs;I)V#2",
+      "renamedSymbol": "P:ud.a(IBLMidiPcmStream;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -392821,7 +392829,7 @@
     },
     {
       "symbol": "P:ud.a(IBLbs;I)V#3",
-      "renamedSymbol": "P:ud.a(IBLbs;I)V#3",
+      "renamedSymbol": "P:ud.a(IBLMidiPcmStream;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -392953,7 +392961,7 @@
     },
     {
       "symbol": "P:ud.a(Lbs;ILbs;)V#0",
-      "renamedSymbol": "P:ud.a(Lbs;ILbs;)V#0",
+      "renamedSymbol": "P:ud.a(LMidiPcmStream;ILMidiPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392964,7 +392972,7 @@
     },
     {
       "symbol": "P:ud.a(Lbs;ILbs;)V#1",
-      "renamedSymbol": "P:ud.a(Lbs;ILbs;)V#1",
+      "renamedSymbol": "P:ud.a(LMidiPcmStream;ILMidiPcmStream;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392975,7 +392983,7 @@
     },
     {
       "symbol": "P:ud.a(Lbs;ILbs;)V#2",
-      "renamedSymbol": "P:ud.a(Lbs;ILbs;)V#2",
+      "renamedSymbol": "P:ud.a(LMidiPcmStream;ILMidiPcmStream;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -406014,7 +406022,7 @@
       "original": "Sumoblitz.java",
       "renamed": "Sumoblitz.java",
       "inputSha256": "1df224629b461b48272c342e33eaa3312d42ce5b43428e0b9d646542080fd228",
-      "outputSha256": "e5c1752840bd32edfc10a796a4ee17ed38979c57addf4afe997f0f20482ce92c",
+      "outputSha256": "d91875bd983521c18f371e710a9dd1cdfed66deb2de3dc8c3f05b953d3dfbe12",
       "edits": [
         {
           "start": 96,
@@ -406078,6 +406086,27 @@
           "symbol": "M:qo.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsu;",
           "original": "a",
           "renamed": "wrapWithContext"
+        },
+        {
+          "start": 6404,
+          "end": 6406,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 6716,
+          "end": 6718,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 6787,
+          "end": 6789,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 6908,
@@ -407072,6 +407101,13 @@
           "symbol": "C:ms",
           "original": "ms",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 73812,
+          "end": 73814,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 73928,
@@ -413399,10 +413435,17 @@
     },
     {
       "original": "bs.java",
-      "renamed": "bs.java",
+      "renamed": "MidiPcmStream.java",
       "inputSha256": "66cd750b27c05bed76d171f7faab9fdc6e13953bd15e3147eac83e6b8b90dbc8",
-      "outputSha256": "8bbe5ef30eee1080c69088d58ddde118350c57a1a84167f9f96b3469945a6b7d",
+      "outputSha256": "9e70980da02f7aa25ec181782ab8d317bbe94fa288684c07f27315d5ae85fabd",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
         {
           "start": 61,
           "end": 63,
@@ -413740,11 +413783,25 @@
           "renamed": "wrapWithContext"
         },
         {
+          "start": 51749,
+          "end": 51751,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
           "start": 52073,
           "end": 52075,
           "symbol": "C:du",
           "original": "du",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 52984,
+          "end": 52986,
+          "symbol": "M:bs.<init>()V",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         }
       ]
     },
@@ -445945,7 +446002,7 @@
       "original": "or.java",
       "renamed": "or.java",
       "inputSha256": "2cf71e4ae52af7b346819aa62add268c4fca63acc3e0a32f679c96adfbbf2957",
-      "outputSha256": "90793db939c93e310999ed6ecc5fd22c8165217d1af5a8c1a1fab5f01594ca4a",
+      "outputSha256": "b33ead1c6e918b805a1a7fe5171dff52a077c1f32cdd95aa99663bf4c37cee7d",
       "edits": [
         {
           "start": 461,
@@ -445960,6 +446017,13 @@
           "symbol": "M:qo.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsu;",
           "original": "a",
           "renamed": "wrapWithContext"
+        },
+        {
+          "start": 1185,
+          "end": 1187,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 1491,
@@ -449688,8 +449752,15 @@
       "original": "qc.java",
       "renamed": "qc.java",
       "inputSha256": "9f63ab6951ec1eb0bdb76a54e73b0f2ebef96f9a2f0ea9114c74c3fea2c0e88b",
-      "outputSha256": "0764d1b11552508958930391dc8498d70d9bb2d88c18ae9e8b6e84e2cc4b1a2f",
+      "outputSha256": "d641d29ae868a6ed9b322b7c5254726eda14a4ed992f1d85dd4b93410d5ceafa",
       "edits": [
+        {
+          "start": 91,
+          "end": 93,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
         {
           "start": 114,
           "end": 116,
@@ -449787,6 +449858,13 @@
           "symbol": "M:qo.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsu;",
           "original": "a",
           "renamed": "wrapWithContext"
+        },
+        {
+          "start": 4163,
+          "end": 4165,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 5037,
@@ -452639,7 +452717,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "f9eefb9672fe26f8e1da325f2c6b8e7f6921d4ff0b217ff1c797b0f79ca29e73",
-      "outputSha256": "825b75978248954aea6bd5d2e274879967b01c39960686bbf50cf38967d7a7d3",
+      "outputSha256": "771826c4f392a4df14ffbe58374659e1c7643a62b533dd10225e7d0c10b362ed",
       "edits": [
         {
           "start": 61,
@@ -452654,6 +452732,13 @@
           "symbol": "C:jn",
           "original": "jn",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 199,
+          "end": 201,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 215,
@@ -452675,6 +452760,13 @@
           "symbol": "M:qo.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsu;",
           "original": "a",
           "renamed": "wrapWithContext"
+        },
+        {
+          "start": 2451,
+          "end": 2453,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 2969,
@@ -452703,6 +452795,13 @@
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 4392,
+          "end": 4394,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 4578,
@@ -452740,6 +452839,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 7583,
+          "end": 7585,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
           "start": 8167,
           "end": 8169,
           "symbol": "C:du",
@@ -452759,6 +452865,13 @@
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 8876,
+          "end": 8878,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 9801,
@@ -452787,6 +452900,13 @@
           "symbol": "C:hj",
           "original": "hj",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 10360,
+          "end": 10362,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 10400,
@@ -463311,7 +463431,7 @@
       "original": "ud.java",
       "renamed": "ud.java",
       "inputSha256": "9214a3b939d1da4f886cf8fc2f60890d4c6232655b0cf14d715c9068e92db833",
-      "outputSha256": "7db15e8cc4f3cb557edb79f0495578aef7515f1711693d9b0f16bcf048e3ab84",
+      "outputSha256": "e835d31153d9da37b0b882a391f733b8fd75cf374f0ed527721bd216ddf01732",
       "edits": [
         {
           "start": 61,
@@ -463319,6 +463439,41 @@
           "symbol": "C:hj",
           "original": "hj",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 356,
+          "end": 358,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 401,
+          "end": 403,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 417,
+          "end": 419,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 780,
+          "end": 782,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 850,
+          "end": 852,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 1190,
@@ -463340,6 +463495,20 @@
           "symbol": "C:wb",
           "original": "wb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 3137,
+          "end": 3139,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 3598,
+          "end": 3600,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 4280,
@@ -463377,6 +463546,13 @@
           "renamed": "wrapWithContext"
         },
         {
+          "start": 6476,
+          "end": 6478,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
           "start": 6713,
           "end": 6715,
           "symbol": "C:qo",
@@ -463389,6 +463565,20 @@
           "symbol": "M:qo.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsu;",
           "original": "a",
           "renamed": "wrapWithContext"
+        },
+        {
+          "start": 7052,
+          "end": 7054,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 7075,
+          "end": 7077,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 7336,
@@ -463452,6 +463642,20 @@
           "symbol": "M:qo.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsu;",
           "original": "a",
           "renamed": "wrapWithContext"
+        },
+        {
+          "start": 15969,
+          "end": 15971,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 15980,
+          "end": 15982,
+          "symbol": "C:bs",
+          "original": "bs",
+          "renamed": "MidiPcmStream"
         },
         {
           "start": 16200,
@@ -469481,10 +469685,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/sumoblitz"
     },
-    "rulesSha256": "81165fd7464e49d2add31e62fba10c25aa6eed42206c6d09b96f5691f2f766d9",
+    "rulesSha256": "7ad69107e9d230dc5e8e9395c7bd54081e68d7b7a29cae1125d11527a55b14c9",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "dfdbde2d64759f8dd722b88882ac48873a91678b6b97428875939f419d9e9bcc",
-    "outputTreeSha256": "e402e3491805c477556f372dab89539e54538a1f89127fc148fe6d4c3977cc0d",
+    "outputTreeSha256": "69f6f1f06cd54fdebbaaea360898dc93c2e45bb2bae2ee5deb75a07e63e0f141",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

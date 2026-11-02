@@ -194,7 +194,7 @@ public final class Sumoblitz extends GameClientShell {
     }
 
     final void f(int param0) {
-        bs var2 = null;
+        MidiPcmStream var2 = null;
         ud var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -203,9 +203,9 @@ public final class Sumoblitz extends GameClientShell {
             Sumoblitz.a(59, -122, (byte) 42);
           }
           this.a(100, 3, 1, 10, 2, 0, true);
-          var2 = new bs();
+          var2 = new MidiPcmStream();
           var2.a(177, 128, 9);
-          var3 = new ud(var2, new bs());
+          var3 = new ud(var2, new MidiPcmStream());
           aa.a(lt.field_m, true, var3, (byte) -125, 48000, (java.awt.Component) ((Object) qn.field_f));
           BufferedSocket.field_f = false;
           qc.field_e = var2;
@@ -1682,7 +1682,7 @@ public final class Sumoblitz extends GameClientShell {
           BufferedSocket.d(68);
           IntrusiveNode.b((byte) 80);
           ta.a(false);
-          bs.f(-95);
+          MidiPcmStream.f(-95);
           te.b(6406);
           uu.a((byte) 115);
           sh.g();

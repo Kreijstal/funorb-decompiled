@@ -13,10 +13,10 @@ final class ud extends PcmStream {
     private tv field_v;
     private int field_z;
     private int field_B;
-    private bs field_D;
+    private MidiPcmStream field_D;
     private boolean field_w;
-    bs field_r;
-    bs field_x;
+    MidiPcmStream field_r;
+    MidiPcmStream field_x;
     private int field_o;
 
     public static void c(int param0) {
@@ -28,9 +28,9 @@ final class ud extends PcmStream {
     final synchronized void a(int param0, int param1, tv param2, boolean param3, int param4, int param5) {
         boolean stackIn_22_1 = false;
         int stackIn_34_0 = 0;
-        bs stackIn_43_0 = null;
+        MidiPcmStream stackIn_43_0 = null;
         boolean stackIn_44_1 = false;
-        bs stackIn_53_0 = null;
+        MidiPcmStream stackIn_53_0 = null;
         boolean stackIn_54_1 = false;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -99,7 +99,7 @@ final class ud extends PcmStream {
             if (param2 != null) {
               stackIn_53_0 = this.field_r;
               stackIn_54_1 = !(param3);
-              ((bs) (Object) stackIn_53_0).a(stackIn_54_1, param2, param0 + 67);
+              ((MidiPcmStream) (Object) stackIn_53_0).a(stackIn_54_1, param2, param0 + 67);
               this.a(param1, (byte) 45, this.field_r, param5);
             }
             this.field_C = -param4;
@@ -111,7 +111,7 @@ final class ud extends PcmStream {
             if (param2 != null) {
               stackIn_43_0 = this.field_x;
               stackIn_44_1 = !(param3);
-              ((bs) (Object) stackIn_43_0).a(stackIn_44_1, param2, 121);
+              ((MidiPcmStream) (Object) stackIn_43_0).a(stackIn_44_1, param2, 121);
               this.a(param1, (byte) -114, this.field_x, param5);
             }
             this.field_C = param4;
@@ -177,7 +177,7 @@ final class ud extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1, bs param2, int param3) {
+    private final void a(int param0, byte param1, MidiPcmStream param2, int param3) {
         try {
           param2.a((byte) -86, -1, param3);
           param2.b(param0, 0);
@@ -194,7 +194,7 @@ final class ud extends PcmStream {
         this.field_B = param1;
     }
 
-    private final void a(bs param0, int param1, bs param2) {
+    private final void a(MidiPcmStream param0, int param1, MidiPcmStream param2) {
         try {
           if (param1 > -55) {
             this.d();
@@ -466,7 +466,7 @@ final class ud extends PcmStream {
         }
     }
 
-    ud(bs param0, bs param1) {
+    ud(MidiPcmStream param0, MidiPcmStream param1) {
         this.field_B = 256;
         this.field_w = false;
         this.field_z = 0;
