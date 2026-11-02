@@ -8,15 +8,15 @@ final class us {
     static IndexedSprite field_c;
     static String field_d;
 
-    final static tn a(int param0) {
+    final static GameClock a(int param0) {
         if (param0 != -4127) {
           us.a(23);
-          return (tn) ((Object) new ru());
+          return (GameClock) ((Object) new NanoGameClock());
         }
-        return (tn) ((Object) new ru());
+        return (GameClock) ((Object) new NanoGameClock());
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_e = null;
         field_c = null;

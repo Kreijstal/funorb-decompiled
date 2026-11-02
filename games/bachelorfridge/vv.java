@@ -42,12 +42,12 @@ abstract class vv {
         return new int[8];
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_b = null;
         field_c = null;
         if (param0 != 0) {
-          vv.b(-114);
+          vv.releaseStatics(-114);
         }
     }
 
@@ -190,9 +190,9 @@ abstract class vv {
         return -1;
     }
 
-    final static sna a(int param0) {
+    final static UiComponent a(int param0) {
         if (param0 != 31185) {
-          return (sna) null;
+          return (UiComponent) null;
         }
         return qca.e(param0 - 117517072);
     }

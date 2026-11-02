@@ -3,7 +3,7 @@
  */
 final class mu {
     CreatureProfile[] field_i;
-    ola field_e;
+    FridgeScreen field_e;
     static int[] field_j;
     int field_c;
     int field_a;

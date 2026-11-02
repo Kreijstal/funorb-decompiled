@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kr extends sna {
+final class kr extends UiComponent {
     kha field_yb;
     static String field_wb;
     static String field_xb;
@@ -23,7 +23,7 @@ final class kr extends sna {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_zb = null;
         int var1 = 110 % ((-79 - param0) / 43);
         field_xb = null;
@@ -35,9 +35,9 @@ final class kr extends sna {
           this.field_p = 39;
           this.field_v = param1;
           this.field_sb = 39;
-          if (qg.field_b.field_z != null) {
-            this.field_kb = 39 * (qg.field_b.field_z.g(0) % 4);
-            this.field_rb = qg.field_b.field_z.g(0) / 4 * 39 - 8;
+          if (qg.field_b.children != null) {
+            this.field_kb = 39 * (qg.field_b.children.g(0) % 4);
+            this.field_rb = qg.field_b.children.g(0) / 4 * 39 - 8;
           }
           this.field_yb = param2;
         } catch (RuntimeException runtimeException) {

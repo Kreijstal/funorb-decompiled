@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pt implements qda {
+final class pt implements WidgetRenderer {
     static String[] field_a;
     static String[] field_b;
 
@@ -15,7 +15,7 @@ final class pt implements qda {
         }
     }
 
-    public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;
@@ -25,19 +25,19 @@ final class pt implements qda {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = param0 + param1.field_s;
+          var6_int = param0 + param1.x;
           if (param2 != 32679) {
             return;
           }
-          var7 = param1.field_v + param3;
-          oka.a(var6_int, param1.field_p, var7, false, param1.field_q);
+          var7 = param1.y + param3;
+          oka.a(var6_int, param1.width, var7, false, param1.height);
           var8 = fr.field_q[1];
-          if (param1 instanceof hf &&
-            ((hf) (param1)).field_B) {
-            var8.drawAdditive((param1.field_p - var8.field_n >> 1) + var6_int + 1, var7 + 1 + (param1.field_q - var8.field_o >> 1), 256);
+          if (param1 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param1)).field_B) {
+            var8.drawAdditive((param1.width - var8.field_n >> 1) + var6_int + 1, var7 + 1 + (param1.height - var8.field_o >> 1), 256);
           }
-          if (param1.e(param2 ^ 31832)) {
-            uv.a(-4 + param1.field_p, var7 + 2, param1.field_q - 4, 2 + var6_int, false);
+          if (param1.isFocused(param2 ^ 31832)) {
+            uv.a(-4 + param1.width, var7 + 2, param1.height - 4, 2 + var6_int, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

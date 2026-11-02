@@ -6,7 +6,7 @@ final class cd extends k {
     private int field_q;
     private int field_r;
     static String field_k;
-    static sna field_n;
+    static UiComponent field_n;
     static String field_p;
     static String field_l;
     static String[] field_o;
@@ -67,7 +67,7 @@ final class cd extends k {
         return var3Lifetime1;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_p = null;
         field_n = null;
@@ -184,7 +184,7 @@ final class cd extends k {
           }
           return var3;
         }
-        cd.d(91);
+        cd.releaseStatics(91);
         var26Lifetime1 = this.field_h.a(param1, -858);
         var18Lifetime1 = var26Lifetime1;
         var16Lifetime1 = var18Lifetime1;

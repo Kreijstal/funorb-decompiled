@@ -7,19 +7,19 @@ final class lm {
     static int field_d;
     static Sprite field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_b = null;
         int var1 = 83 % ((param0 - 49) / 36);
     }
 
-    lm(String param0, sna param1) {
+    lm(String param0, UiComponent param1) {
         String[] var3 = null;
-        sna[] var4 = null;
+        UiComponent[] var4 = null;
         try {
           var3 = new String[]{param0, de.field_K, HailEvent.field_v};
-          var4 = new sna[]{param1, ov.field_d, (sna) ((Object) RageAnimation.field_w)};
-          this.field_a = new dna(0L, ad.field_q, var3, jfa.field_f, var4, 0);
+          var4 = new UiComponent[]{param1, ov.field_d, (UiComponent) ((Object) RageAnimation.field_w)};
+          this.field_a = new dna(0L, CreatureActor.field_q, var3, FridgeCreature.field_f, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "lm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

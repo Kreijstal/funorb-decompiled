@@ -4,7 +4,7 @@
 final class DiveBomberSpecial extends SpecialOrder {
     static String field_p;
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var12 = 0;
         int var13 = 0;
         CreatureEvent stackIn_3_0 = null;
@@ -77,7 +77,7 @@ final class DiveBomberSpecial extends SpecialOrder {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         int var1 = 9 / ((param0 + 60) / 39);
     }

@@ -5,17 +5,17 @@ abstract class nu {
     static MusicTrack field_h;
     static Sprite field_e;
     static String field_g;
-    static sna field_c;
+    static UiComponent field_c;
     static boolean field_b;
     static String field_a;
-    static sna field_f;
+    static UiComponent field_f;
     static String field_d;
 
     abstract void a(byte param0, byte[] param1);
 
     abstract byte[] a(boolean param0);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > 64) {
           field_e = null;
           field_h = null;

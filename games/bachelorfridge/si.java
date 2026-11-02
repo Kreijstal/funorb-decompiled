@@ -12,11 +12,11 @@ final class si {
         this.field_b = param0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_c = null;
         if (param0 != -28415) {
-          si.a(85);
+          si.releaseStatics(85);
         }
     }
 

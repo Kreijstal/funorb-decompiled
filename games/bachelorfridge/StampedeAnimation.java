@@ -11,7 +11,7 @@ final class StampedeAnimation extends EventAnimation {
     private int field_x;
     private StampedeEvent field_z;
     private int field_y;
-    private ad field_B;
+    private CreatureActor field_B;
 
     private final void d(int param0) {
         this.screen.a(-124, this.field_x, this.field_B, this.field_z.field_r);
@@ -104,7 +104,7 @@ final class StampedeAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = 0;
         int var3;
         int var4;
@@ -117,7 +117,7 @@ final class StampedeAnimation extends EventAnimation {
         }
         var7 = (AnimationNode) (this.field_v.b((byte) 90));
         while (var7 != null) {
-          if (var7.b(21807)) {
+          if (var7.update(21807)) {
             var7.unlink(false);
           }
           var7 = (AnimationNode) (this.field_v.c(0));
@@ -151,7 +151,7 @@ final class StampedeAnimation extends EventAnimation {
     }
 
     private final void a(int param0, int param1, int param2) {
-        ad var4 = null;
+        CreatureActor var4 = null;
         if (~param2 <= param0 &&
           param2 < this.screen.field_h.width &&
           param1 >= 0 &&
@@ -164,7 +164,7 @@ final class StampedeAnimation extends EventAnimation {
         this.a(param2, param1, this.field_B, 0);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         if (param0 != 25280) {
           field_C = (String[]) null;
@@ -204,7 +204,7 @@ final class StampedeAnimation extends EventAnimation {
         }
     }
 
-    StampedeAnimation(gj param0, StampedeEvent param1) {
+    StampedeAnimation(BattleScreen param0, StampedeEvent param1) {
         super(param0, param1);
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

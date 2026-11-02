@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qn extends kj {
+final class qn extends TileEffect {
     static cf field_i;
     private boolean field_f;
     static Sprite field_g;
@@ -64,7 +64,7 @@ final class qn extends kj {
           var6_int = cr.a(an.field_q, param2, ha.field_n, 0);
           var7 = cr.a(an.field_q, param5, ha.field_n, 0);
           if (param4 <= 28) {
-            qn.c((byte) -62);
+            qn.releaseStatics((byte) -62);
           }
           var8 = cr.a(DualLinkNode.field_l, param0, SnowAnimation.field_x, 0);
           var9 = cr.a(DualLinkNode.field_l, param1, SnowAnimation.field_x, 0);
@@ -86,7 +86,7 @@ final class qn extends kj {
         }
     }
 
-    qn(gj param0, int param1, int param2) {
+    qn(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -98,7 +98,7 @@ final class qn extends kj {
         return this.field_f;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_h = null;
         field_g = null;

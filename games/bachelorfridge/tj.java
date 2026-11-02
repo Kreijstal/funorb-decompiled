@@ -85,7 +85,7 @@ final class tj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -99) {
           return;
         }

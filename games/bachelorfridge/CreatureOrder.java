@@ -6,7 +6,7 @@ abstract class CreatureOrder extends IntrusiveNode {
     int field_f;
     int moveId;
 
-    abstract CreatureEvent a(BattleState param0, int param1);
+    abstract CreatureEvent createEvent(BattleState param0, int param1);
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         int var5 = -51 % ((-79 - param2) / 46);
@@ -44,11 +44,11 @@ abstract class CreatureOrder extends IntrusiveNode {
     }
 
     public final String toString() {
-        oha var1 = al.a(123, this.moveId);
+        MoveDefinition var1 = al.a(123, this.moveId);
         if (var1 == null) {
           return "Move not found.";
         }
-        return var1.field_f;
+        return var1.name;
     }
 
     void a(int param0, PacketBuffer param1) {

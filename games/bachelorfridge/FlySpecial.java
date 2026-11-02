@@ -20,7 +20,7 @@ final class FlySpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         FlyEvent var4 = null;
@@ -114,13 +114,13 @@ final class FlySpecial extends SpecialOrder {
           if (param1 != 2) {
             field_t = (String) null;
           }
-          lka.field_E = qs.a(false, var9);
+          TextInputWidget.field_E = qs.a(false, var9);
           hga.a(true, var13);
           var14 = param0.a((byte) 123, "UnlockTable.csv", "");
           var10 = var14;
           var5 = var10;
           var2Lifetime1 = var5;
-          qh.a((byte) -104);
+          WidgetTheme.a((byte) -104);
           MoveCreatureEffect.a(var14, (byte) 22);
           lg.a(-92);
           var15 = param0.a((byte) 123, "UnlockerTable.csv", "");
@@ -142,8 +142,8 @@ final class FlySpecial extends SpecialOrder {
           ResetAnimation.field_v = null;
           dl.field_h = null;
           InsanoSauceAnimation.field_x = null;
-          id.field_i = null;
-          ng.field_f = null;
+          PizzaArenaTheme.field_i = null;
+          MoveInfoPanel.field_f = null;
           cw.field_zb = null;
           DualLinkNode.field_f = null;
           i.field_h = null;

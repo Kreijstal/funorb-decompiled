@@ -7,7 +7,7 @@ final class SauceOfFlameEvent extends SpecialEvent {
     static Sprite field_t;
     int field_q;
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         SauceOfFlameAnimation stackIn_4_0 = null;
@@ -49,7 +49,7 @@ final class SauceOfFlameEvent extends SpecialEvent {
         super(param0, param1);
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_t = null;
         field_r = (int[][]) null;
         if (param0 > -98) {
@@ -81,7 +81,7 @@ final class SauceOfFlameEvent extends SpecialEvent {
     final int[][] a(BattleState param0, int param1, int param2, BattleCreature param3) {
         int[][] var5 = null;
         RuntimeException var5_ref = null;
-        gj var6 = null;
+        BattleScreen var6 = null;
         int[][] var7 = null;
         int[][] var8 = null;
         int[][] var9 = null;
@@ -98,8 +98,8 @@ final class SauceOfFlameEvent extends SpecialEvent {
           var7 = var8;
           var5 = var7;
           if (param2 >= -35) {
-            var6 = (gj) null;
-            this.a(-18, (gj) null);
+            var6 = (BattleScreen) null;
+            this.createAnimation(-18, (BattleScreen) null);
           }
           var9[6][7] = 1;
           var9[5][8] = 1;
@@ -152,8 +152,8 @@ final class SauceOfFlameEvent extends SpecialEvent {
         try {
           super.a((byte) -106, param1);
           if (param0 > -12) {
-            gj var4 = (gj) null;
-            this.a(106, (gj) null);
+            BattleScreen var4 = (BattleScreen) null;
+            this.createAnimation(106, (BattleScreen) null);
           }
           param1.writeByte(this.field_s, 0);
           param1.writeByte(this.field_q, 0);

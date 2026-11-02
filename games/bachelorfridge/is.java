@@ -8,7 +8,7 @@ final class is {
     static String field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;

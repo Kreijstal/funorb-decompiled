@@ -13,7 +13,7 @@ final class ZombiesEvent extends SpecialEvent {
         field_q = null;
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         ZombiesAnimation stackIn_4_0 = null;

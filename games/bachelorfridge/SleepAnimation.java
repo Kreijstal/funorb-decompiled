@@ -13,20 +13,20 @@ final class SleepAnimation extends EventAnimation {
         if (param0 != 1071140296) {
           SleepAnimation.e(-20);
         }
-        return dka.field_G == kq.field_j ? true : false;
+        return ReportAbusePanel.field_G == kq.field_j ? true : false;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         boolean stackIn_8_0 = false;
         if (param3 != 1) {
-          SleepAnimation.g(-64);
+          SleepAnimation.releaseStatics(-64);
         }
         stackIn_8_0 = (param6 >= param4) && (param6 < param4 + param2) && (param1 >= param5) && (param5 + param0 > param1);
         return stackIn_8_0;
     }
 
     private final void d(int param0) {
-        ad var4 = null;
+        CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
         BattleCreature var2 = this.field_x.creature.a(74, this.screen.field_h);
         if (var2.isDown(-117)) {
@@ -41,7 +41,7 @@ final class SleepAnimation extends EventAnimation {
           var4 = var3.target.a(-27449, this.screen);
           var4.b(param0 + 10648, 6);
           var4.a(24831, 95, kna.field_g[29]);
-          var3.a(var2, this.screen.field_h, 12);
+          var3.apply(var2, this.screen.field_h, 12);
           var3 = (DamageEffect) (this.field_x.effects.c(0));
         }
     }
@@ -52,7 +52,7 @@ final class SleepAnimation extends EventAnimation {
         }
     }
 
-    SleepAnimation(gj param0, SleepEvent param1) {
+    SleepAnimation(BattleScreen param0, SleepEvent param1) {
         super(param0, param1);
         try {
           this.field_x = param1;
@@ -61,7 +61,7 @@ final class SleepAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = 84 % ((71 - param0) / 47);
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
@@ -94,7 +94,7 @@ final class SleepAnimation extends EventAnimation {
         try {
           var2 = fi.a("jagex-last-login-method", 61, param1);
           if (param0 < 121) {
-            SleepAnimation.g(78);
+            SleepAnimation.releaseStatics(78);
           }
           if (var2 == null) {
             stackIn_6_0 = ImageProducerRasterBuffer.field_k;
@@ -124,7 +124,7 @@ final class SleepAnimation extends EventAnimation {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_z = null;
         field_v = (long[][]) null;
         if (param0 != 0) {

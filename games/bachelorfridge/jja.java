@@ -163,7 +163,7 @@ final class jja extends PcmStream {
         if (param0 < 18) {
           return;
         }
-        kka.field_l.e(new dka(), 33);
+        kka.field_l.e(new ReportAbusePanel(), 33);
     }
 
     final void a(int param0) {
@@ -209,7 +209,7 @@ final class jja extends PcmStream {
         JaggrabDownloader.field_a = HomingMissileSpecial.a(param0 ^ param0, var2);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -90) {
           field_m = (String) null;
           field_m = null;

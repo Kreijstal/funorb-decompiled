@@ -57,7 +57,7 @@ final class VorbisFloor {
         this.sortPoints(var3 + 1, param1);
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_e = null;
         field_d = null;
         field_c = null;

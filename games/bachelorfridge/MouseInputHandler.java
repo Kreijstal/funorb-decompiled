@@ -14,7 +14,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (uc.field_m != null) {
-            tf.field_n = 0;
+            UiNode.field_n = 0;
             FlirtEvent.field_q = 0;
             gja.field_j = true;
             var2_int = param0.getModifiers();
@@ -57,8 +57,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == uc.field_m) {
             return;
           }
-          tf.field_n = 0;
-          ue.field_N = param0.getX();
+          UiNode.field_n = 0;
+          AccountCreationPanel.field_N = param0.getX();
           dia.field_A = param0.getY();
           gja.field_j = true;
           return;
@@ -85,7 +85,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (uc.field_m != null) {
-            tf.field_n = 0;
+            UiNode.field_n = 0;
             FishRainEvent.field_u = param0.getX();
             dma.field_c = param0.getY();
             f.b((byte) 73);
@@ -130,8 +130,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
           if (null != uc.field_m) {
-            tf.field_n = 0;
-            ue.field_N = param0.getX();
+            UiNode.field_n = 0;
+            AccountCreationPanel.field_N = param0.getX();
             dia.field_A = param0.getY();
             gja.field_j = true;
           }
@@ -153,8 +153,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (null != uc.field_m) {
-            tf.field_n = 0;
-            ue.field_N = -1;
+            UiNode.field_n = 0;
+            AccountCreationPanel.field_N = -1;
             dia.field_A = -1;
             gja.field_j = true;
           }
@@ -224,16 +224,16 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static void a(byte param0, sna param1) {
+    final static void a(byte param0, UiComponent param1) {
         int var3 = BachelorFridge.field_y;
-        sna var4 = (sna) (param1.field_z.b((byte) 90));
-        sna var2 = var4;
+        UiComponent var4 = (UiComponent) (param1.children.b((byte) 90));
+        UiComponent var2 = var4;
         while (var4 != null) {
           var4.field_hb = 0;
           var4.field_p = 0;
           var4.field_I = 0;
           var4.field_rb = 0;
-          var4 = (sna) (param1.field_z.c(param0 ^ -126));
+          var4 = (UiComponent) (param1.children.c(param0 ^ -126));
           var2 = var4;
         }
         if (param0 != -126) {
@@ -262,9 +262,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          MouseInputHandler.a(-74);
+          MouseInputHandler.releaseStatics(-74);
           field_a = null;
           return;
         }
@@ -281,8 +281,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (uc.field_m == null) {
             return;
           }
-          tf.field_n = 0;
-          ue.field_N = param0.getX();
+          UiNode.field_n = 0;
+          AccountCreationPanel.field_N = param0.getX();
           dia.field_A = param0.getY();
           gja.field_j = true;
           return;

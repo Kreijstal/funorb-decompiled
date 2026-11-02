@@ -22,7 +22,7 @@ final class LevitateSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         RuntimeException var3 = null;
         BattleCreature var4 = null;
         LevitateEvent var5 = null;

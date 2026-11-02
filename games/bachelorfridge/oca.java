@@ -4,7 +4,7 @@
 final class oca extends BoardChange {
     private int field_q;
     static String field_p;
-    static sna field_n;
+    static UiComponent field_n;
     static String field_o;
     private int field_m;
 
@@ -30,7 +30,7 @@ final class oca extends BoardChange {
         }
     }
 
-    final void a(ub param0, int param1) {
+    final void a(BoardChangeAnimation param0, int param1) {
         if (param1 > -2) {
           return;
         }

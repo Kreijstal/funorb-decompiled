@@ -26,7 +26,7 @@ final class RefreshingAnimation extends EventAnimation {
           }
           qq.a(uaa.field_i, gfa.field_f, qf.field_y, rea.field_g, hl.field_H, ina.field_n, qs.field_m, oe.field_c, dla.field_k, -30803, nu.field_c, param2);
           ClientException.field_b = gw.a("lobby", "chatfilter", param3, -112);
-          qo.field_a[0] = wj.field_x;
+          qo.field_a[0] = UiWidget.field_x;
           qo.field_a[2] = PlaceCreatureEffect.field_i;
           qo.field_a[1] = de.field_K;
           gaa.a(ds.field_l, param0, -95);
@@ -35,7 +35,7 @@ final class RefreshingAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
         if (fieldTemp$0 < 0) {
@@ -66,7 +66,7 @@ final class RefreshingAnimation extends EventAnimation {
 
     private final void e(byte param0) {
         DamageEffect var4 = null;
-        ad var5 = null;
+        CreatureActor var5 = null;
         int var6 = BachelorFridge.field_y;
         BattleCreature var2 = this.field_w.creature.a(95, this.screen.field_h);
         int var3 = 22 % ((param0 - 16) / 42);
@@ -74,7 +74,7 @@ final class RefreshingAnimation extends EventAnimation {
           var4 = (DamageEffect) (this.field_w.effects.b((byte) 90));
           al.a(-42, this.field_w.moveId);
           while (var4 != null) {
-            var4.a(var2, this.screen.field_h, 12);
+            var4.apply(var2, this.screen.field_h, 12);
             var5 = var4.target.a(-27449, this.screen);
             var5.b(-1, 6);
             var5.a(24831, 44, kw.field_g);
@@ -94,7 +94,7 @@ final class RefreshingAnimation extends EventAnimation {
         field_v = null;
     }
 
-    RefreshingAnimation(gj param0, RefreshingEvent param1) {
+    RefreshingAnimation(BattleScreen param0, RefreshingEvent param1) {
         super(param0, param1);
         try {
           this.field_w = param1;

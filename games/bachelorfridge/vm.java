@@ -3,7 +3,7 @@
  */
 abstract class vm {
     DualLinkDeque field_f;
-    static sna field_i;
+    static UiComponent field_i;
     static String field_g;
     DualLinkDeque field_a;
     DualLinkDeque field_c;
@@ -160,7 +160,7 @@ abstract class vm {
           var5_int = mda.a((-param1 + param2) * 3, 16);
           var6 = param1 * 3;
           var7 = var5_int - 10;
-          qh.c((byte) 89);
+          WidgetTheme.c((byte) 89);
           if (param3.field_n > 0 &&
             param3.field_d != null) {
             ej.a(-11163);

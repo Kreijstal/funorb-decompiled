@@ -144,7 +144,7 @@ final class tc {
           var3Lifetime1 = aca.field_g[9] >> 8;
           var4 = aca.field_g[10] >> 8;
           var5Lifetime1 = aca.field_g[11] >> 8;
-          var6Lifetime1 = ur.field_d << 4;
+          var6Lifetime1 = WhirlpoolDigest.field_d << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = via.a(var6Lifetime1, (byte) 59) >> 8;
           var9Lifetime1 = ft.a(var6Lifetime1, (byte) -128) >> 8;
@@ -263,7 +263,7 @@ final class tc {
         }
     }
 
-    final void a(int param0, wd param1, wj param2, int param3, int param4) {
+    final void a(int param0, wd param1, UiWidget param2, int param3, int param4) {
         BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
@@ -288,21 +288,21 @@ final class tc {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          hp.a(param2.field_p, param4 + param2.field_s, (byte) -5, param2.field_q, this.field_c, param2.field_v + param0);
+          hp.a(param2.width, param4 + param2.x, (byte) -5, param2.height, this.field_c, param2.y + param0);
           if (null != this.field_g) {
-            var6_int = param4 + (param2.field_s + this.field_f);
-            var7 = param0 - (-param2.field_v - this.field_d);
+            var6_int = param4 + (param2.x + this.field_f);
+            var7 = param0 - (-param2.y - this.field_d);
             if (param1.field_m == 1) {
-              var6_int = var6_int + (-this.field_g.field_n + param2.field_p) / 2;
+              var6_int = var6_int + (-this.field_g.field_n + param2.width) / 2;
             }
             if (param1.field_m == 2) {
-              var6_int = var6_int + (param2.field_p - this.field_g.field_n);
+              var6_int = var6_int + (param2.width - this.field_g.field_n);
             }
             if (1 == param1.field_g) {
-              var7 = var7 + (param2.field_q - this.field_g.field_o) / 2;
+              var7 = var7 + (param2.height - this.field_g.field_o) / 2;
             }
             if (param1.field_g == 2) {
-              var7 = var7 + (param2.field_q - this.field_g.field_o);
+              var7 = var7 + (param2.height - this.field_g.field_o);
             }
             this.field_g.draw(var6_int, var7);
           }
@@ -322,17 +322,17 @@ final class tc {
             } else {
               stackIn_22_2 = this.field_f;
             }
-            stackIn_24_2 = stackIn_22_2 + param1.field_i + param2.field_s + param4;
+            stackIn_24_2 = stackIn_22_2 + param1.field_i + param2.x + param4;
             stackIn_24_3 = param1.field_j;
-            stackIn_24_4 = param2.field_v + param0;
+            stackIn_24_4 = param2.y + param0;
             if (this.field_d != -2147483648) {
               stackIn_25_5 = this.field_d;
             } else {
               stackIn_25_5 = 0;
             }
             stackIn_27_3 = stackIn_24_3 + (stackIn_24_4 + stackIn_25_5);
-            stackIn_27_4 = -param1.field_s + param2.field_p - param1.field_i;
-            stackIn_27_5 = param2.field_q + (-param1.field_j - param1.field_r);
+            stackIn_27_4 = -param1.field_s + param2.width - param1.field_i;
+            stackIn_27_5 = param2.height + (-param1.field_j - param1.field_r);
             stackIn_27_6 = this.field_h;
             stackIn_27_7 = this.field_e;
             if (this.field_a == -2147483648) {
@@ -379,7 +379,7 @@ final class tc {
         return this;
     }
 
-    final void a(wd param0, int param1, wj param2, byte param3, tc param4, int param5) {
+    final void a(wd param0, int param1, UiWidget param2, byte param3, tc param4, int param5) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;

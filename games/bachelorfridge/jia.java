@@ -49,7 +49,7 @@ final class jia extends k {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_l = null;
         if (param0) {
           field_l = (String) null;

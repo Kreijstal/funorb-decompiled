@@ -3,7 +3,7 @@
  */
 final class wea extends AnimationNode {
     private int field_k;
-    private gj field_j;
+    private BattleScreen field_j;
     private vg field_l;
 
     final static int b(boolean param0) {
@@ -66,14 +66,14 @@ final class wea extends AnimationNode {
         return 100;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         bf var2_ref_bf;
         int var2;
         int var4;
-        ad var5;
-        ad var6;
+        CreatureActor var5;
+        CreatureActor var6;
         int var2Lifetime1;
         var4 = BachelorFridge.field_y;
         if (this.field_k != 25) {
@@ -115,7 +115,7 @@ final class wea extends AnimationNode {
         return false;
     }
 
-    wea(gj param0, vg param1) {
+    wea(BattleScreen param0, vg param1) {
         try {
           this.field_j = param0;
           this.field_l = param1;

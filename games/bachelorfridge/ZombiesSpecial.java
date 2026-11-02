@@ -6,7 +6,7 @@ final class ZombiesSpecial extends SpecialOrder {
     static int[] field_q;
     static boolean field_r;
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var6 = 0;
         ZombiesEvent stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
@@ -27,7 +27,7 @@ final class ZombiesSpecial extends SpecialOrder {
           var5 = 0;
           if (param1 != 3) {
             var9 = (BattleState) null;
-            this.a((BattleState) null, -50);
+            this.createEvent((BattleState) null, -50);
           }
           while (var5 < param0.playerCount) {
             for (var6 = 0; 7 > var6; var6++) {
@@ -63,7 +63,7 @@ final class ZombiesSpecial extends SpecialOrder {
         super(param0, param1);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 46 % ((param0 + 42) / 51);
         field_q = null;
         field_p = null;

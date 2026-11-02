@@ -7,7 +7,7 @@ final class ala {
     static String field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 30 / ((79 - param0) / 46);
         field_d = null;
         field_a = null;
@@ -19,7 +19,7 @@ final class ala {
         try {
           pka.a(param1, true, (byte) 73);
           if (param0 != 26219) {
-            ala.a(101);
+            ala.releaseStatics(101);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ala.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

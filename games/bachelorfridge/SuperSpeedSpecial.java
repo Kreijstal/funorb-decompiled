@@ -39,7 +39,7 @@ final class SuperSpeedSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         SuperSpeedEvent var4 = null;
@@ -71,7 +71,7 @@ final class SuperSpeedSpecial extends SpecialOrder {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         if (param0 != 1) {
           SuperSpeedSpecial.c(-2);

@@ -129,7 +129,7 @@ final class ika {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           ika.a(124, 64, -125, -20, 67, -93, -14, 87);
           field_a = null;

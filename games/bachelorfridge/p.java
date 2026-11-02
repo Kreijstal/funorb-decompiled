@@ -5,7 +5,7 @@ final class p extends pu {
     static sga field_n;
     static long[] field_l;
     static String field_m;
-    static sna field_o;
+    static UiComponent field_o;
 
     final static void c(int param0) {
         int var2 = -3 / ((param0 - 19) / 61);
@@ -67,10 +67,10 @@ final class p extends pu {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 != 0) {
-          p.b(111);
+          p.releaseStatics(111);
         }
         field_l = null;
         field_n = null;

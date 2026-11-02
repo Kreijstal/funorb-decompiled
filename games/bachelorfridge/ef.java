@@ -43,10 +43,10 @@ final class ef extends k {
         return var13;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_m = null;
         if (param0) {
-          ef.b(true);
+          ef.releaseStatics(true);
         }
     }
 

@@ -18,10 +18,10 @@ final class ns extends BoardChange {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 != -11) {
-          ns.a(-52);
+          ns.releaseStatics(-52);
         }
     }
 
@@ -59,7 +59,7 @@ final class ns extends BoardChange {
               } else {
                 param0 = ClamsSpecial.field_q;
               }
-              ola.field_e.a(-113, IncomingSpecial.field_p);
+              FridgeScreen.field_e.a(-113, IncomingSpecial.field_p);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -70,7 +70,7 @@ final class ns extends BoardChange {
               if (ImageProducerRasterBuffer.field_j) {
                 param0 = lga.a(true, new String[]{param0}, ok.field_Cb);
               }
-              if (sna.field_s) {
+              if (UiComponent.field_s) {
                 param0 = kda.field_a;
               }
               oq.field_b.a(param2, param0, true);
@@ -78,7 +78,7 @@ final class ns extends BoardChange {
             if (param2 != 256 &&
               param2 != 10 &&
               !gfa.field_i) {
-              ola.field_e.b(false);
+              FridgeScreen.field_e.b(false);
             }
           }
           if (param1 == -11) {
@@ -110,9 +110,9 @@ final class ns extends BoardChange {
         }
     }
 
-    final void a(ub param0, int param1) {
+    final void a(BoardChangeAnimation param0, int param1) {
         try {
-          param0.a(27799, new gka(param0.field_o, this));
+          param0.addChild(27799, new gka(param0.field_o, this));
           if (param1 > -2) {
             BattleState var4 = (BattleState) null;
             this.a(false, (BattleState) null);

@@ -54,9 +54,9 @@ final class IntrusiveDequeCursor {
           return true;
         }
         var1 = f.b((byte) 73);
-        var3 = -pla.field_g + var1;
+        var3 = -DessertArenaTheme.field_g + var1;
         if (30000L < var3) {
-          pla.field_g = var1;
+          DessertArenaTheme.field_g = var1;
           qla.field_f = 0;
           return true;
         }
@@ -76,11 +76,11 @@ final class IntrusiveDequeCursor {
           return false;
         }
         qla.field_f = qla.field_f + 1;
-        pla.field_g = var1;
+        DessertArenaTheme.field_g = var1;
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 7) {
           return;
         }

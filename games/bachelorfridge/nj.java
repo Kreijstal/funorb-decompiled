@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nj extends kj {
+final class nj extends TileEffect {
     private int field_h;
     static String field_i;
     static lda field_j;
@@ -17,7 +17,7 @@ final class nj extends kj {
         if (param0 >= 21) {
           return false;
         }
-        nj.c(88);
+        nj.releaseStatics(88);
         return false;
     }
 
@@ -28,7 +28,7 @@ final class nj extends kj {
         }
     }
 
-    nj(gj param0, int param1, int param2, int param3) {
+    nj(BattleScreen param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         try {
           this.field_h = param3;
@@ -37,7 +37,7 @@ final class nj extends kj {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_j = null;
         if (param0 != 256) {

@@ -107,7 +107,7 @@ final class ew extends SpecialEvent {
                       }
                       try {
                         if (param1 != 25969) {
-                          ew.d(35);
+                          ew.releaseStatics(35);
                         }
                         stackIn_41_0 = new java.net.URL(param0, var7.toString());
                         return stackIn_41_0;
@@ -215,7 +215,7 @@ final class ew extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         BattleState var4 = null;
         ra stackIn_3_0 = null;
@@ -295,7 +295,7 @@ final class ew extends SpecialEvent {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 16776) {
           field_q = null;
           field_s = null;

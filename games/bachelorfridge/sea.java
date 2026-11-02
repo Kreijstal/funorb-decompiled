@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sea implements qda {
+final class sea implements WidgetRenderer {
     private int field_l;
     private int field_i;
     private int field_a;
@@ -13,12 +13,12 @@ final class sea implements qda {
     private int field_h;
     private int field_e;
     private int field_f;
-    static sna field_k;
+    static UiComponent field_k;
     private int field_d;
     private int field_g;
 
-    public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
-        wj stackIn_3_0 = null;
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -31,7 +31,7 @@ final class sea implements qda {
         dia var11 = null;
         try {
           if (param1 instanceof dia) {
-            stackIn_3_0 = (wj) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           } else {
             stackIn_3_0 = null;
           }
@@ -43,13 +43,13 @@ final class sea implements qda {
           if (param4) {
             var7 = 16777215;
           }
-          SoftwareRasterizer.fillRectangle(param1.field_s + param0, param1.field_v + param3, param1.field_p, param1.field_q, this.field_e);
-          var8 = param1.field_s + param0 + this.field_h;
-          var9 = this.field_a + param1.field_v + param3;
+          SoftwareRasterizer.fillRectangle(param1.x + param0, param1.y + param3, param1.width, param1.height, this.field_e);
+          var8 = param1.x + param0 + this.field_h;
+          var9 = this.field_a + param1.y + param3;
           SoftwareRasterizer.e(var8, var9, this.field_f, this.field_m, 5592405);
           SoftwareRasterizer.fillRectangle(var8, var9, this.field_f, this.field_m, var7);
           if (param2 != 32679) {
-            sea.a((byte) 118);
+            sea.releaseStatics((byte) 118);
           }
           if (var11.field_B) {
             SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_f, var9 + this.field_m, 1);
@@ -57,7 +57,7 @@ final class sea implements qda {
           }
           if (this.field_c != null) {
             var10 = this.field_n + (this.field_h + this.field_f);
-            this.field_c.drawParagraph(param1.field_w, var10 + param1.field_s + param0, param1.field_v + (param3 + this.field_b), -this.field_n + (-var10 + param1.field_p), param1.field_q - (this.field_n << 1), this.field_l, this.field_d, this.field_i, this.field_g, 0);
+            this.field_c.drawParagraph(param1.text, var10 + param1.x + param0, param1.y + (param3 + this.field_b), -this.field_n + (-var10 + param1.width), param1.height - (this.field_n << 1), this.field_l, this.field_d, this.field_i, this.field_g, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -74,7 +74,7 @@ final class sea implements qda {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -12) {
           return;
         }

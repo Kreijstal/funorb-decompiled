@@ -9,7 +9,7 @@ final class oea extends ul {
 
     final boolean f(int param0) {
         if (param0 <= 123) {
-          oea.g(-45);
+          oea.releaseStatics(-45);
           return false;
         }
         return false;
@@ -31,7 +31,7 @@ final class oea extends ul {
         return this.field_r;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         if (param0 != -8333) {
           field_s = (Sprite[]) null;

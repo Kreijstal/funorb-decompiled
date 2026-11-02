@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ge extends hfa {
+final class ge extends WidgetWrapper {
     private BitmapFont field_G;
     static int field_I;
     private boolean field_M;
@@ -16,8 +16,8 @@ final class ge extends hfa {
     private int field_E;
     private int field_H;
 
-    ge(int param0, int param1, int param2, int param3, wj param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (qda) null, (pl) null);
+    ge(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetRenderer) null, (WidgetListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -37,7 +37,7 @@ final class ge extends hfa {
           this.field_E = param7;
           this.field_H = param6;
           this.field_G = param8;
-          this.field_A = param4;
+          this.child = param4;
           stackIn_4_1 = (param5);
           this.field_M = stackIn_4_1;
           this.field_C = param10;
@@ -54,7 +54,7 @@ final class ge extends hfa {
             stackIn_10_0 = this.field_E * 2 + this.field_H;
           }
           var14 = stackIn_10_0;
-          this.field_A.a(var14, param3 - this.field_E * 2, (byte) 59, -this.field_H + param2 - this.field_E * 3, (-param3 + var13 >> 1) + this.field_E);
+          this.child.a(var14, param3 - this.field_E * 2, (byte) 59, -this.field_H + param2 - this.field_E * 3, (-param3 + var13 >> 1) + this.field_E);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class ge extends hfa {
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == SauceOfFlameAnimation.field_x) {
-            SauceOfFlameAnimation.field_x = cc.field_e.a((byte) 121, oca.field_p, kn.field_h);
+            SauceOfFlameAnimation.field_x = cc.field_e.a((byte) 121, oca.field_p, CurryArenaTheme.field_h);
           }
           if (0 == SauceOfFlameAnimation.field_x.field_f) {
             return false;
@@ -142,23 +142,23 @@ final class ge extends hfa {
         }
     }
 
-    final String c(byte param0) {
-        int var2 = this.field_A.field_t ? 1 : 0;
-        this.field_A.field_t = this.field_t;
-        String var3 = this.field_A.c(param0);
-        this.field_A.field_t = var2 != 0 ? true : false;
+    final String getTooltip(byte param0) {
+        int var2 = this.child.mouseOver ? 1 : 0;
+        this.child.mouseOver = this.mouseOver;
+        String var3 = this.child.getTooltip(param0);
+        this.child.mouseOver = var2 != 0 ? true : false;
         return var3;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void draw(byte param0, int param1, int param2, int param3) {
         int var8 = 0;
-        int var5 = param3 + this.field_s;
-        int var6 = param1 + this.field_v;
+        int var5 = param3 + this.x;
+        int var6 = param1 + this.y;
         int var7 = 44 % ((-20 - param0) / 54);
-        super.a((byte) 123, param1, param2, param3);
+        super.draw((byte) 123, param1, param2, param3);
         if (0 == param2) {
-          var8 = this.field_M ? -this.field_H + this.field_p - this.field_E * 2 : 0;
-          this.field_G.drawParagraph(this.field_C, var5 - (-var8 - this.field_E), var6 + this.field_E, -this.field_E + this.field_H, -(this.field_E * 2) + this.field_q, this.field_J, -1, !this.field_M ? 2 : 0, 1, this.field_G.field_u);
+          var8 = this.field_M ? -this.field_H + this.width - this.field_E * 2 : 0;
+          this.field_G.drawParagraph(this.field_C, var5 - (-var8 - this.field_E), var6 + this.field_E, -this.field_E + this.field_H, -(this.field_E * 2) + this.height, this.field_J, -1, !this.field_M ? 2 : 0, 1, this.field_G.field_u);
           return;
         }
     }

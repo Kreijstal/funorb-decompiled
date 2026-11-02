@@ -5,9 +5,9 @@ final class lv extends iha {
     private aj[] field_n;
     static int[] field_l;
     static Object[] field_m;
-    private gj field_o;
+    private BattleScreen field_o;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var4 = 0;
         aj var5 = null;
         mw var6 = null;
@@ -19,13 +19,13 @@ final class lv extends iha {
         for (var4 = 0; var4 < var8.length; var4++) {
           var5 = var8[var4];
           var6 = new mw(this.field_o, var5.field_c, var5.field_a);
-          ((kj) ((Object) var6)).a(0);
+          ((TileEffect) ((Object) var6)).a(0);
           this.field_o.field_h.tiles[var5.field_c][var5.field_a].field_j = 2;
         }
         return true;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -47) {
           field_l = (int[]) null;
         }
@@ -33,7 +33,7 @@ final class lv extends iha {
         field_m = null;
     }
 
-    lv(gj param0, aj[] param1) {
+    lv(BattleScreen param0, aj[] param1) {
         int var4 = 0;
         aj[] var3 = null;
         aj var5 = null;
@@ -56,7 +56,7 @@ final class lv extends iha {
             var6 = this.field_o.field_h.tiles[var5.field_c][var5.field_a].occupant;
             if (var6 != null) {
               var6.g(-76, 40);
-              this.a(27799, new ek(this.field_o, this.field_o.b(var6, -23990), 40));
+              this.addChild(27799, new ek(this.field_o, this.field_o.b(var6, -23990), 40));
             }
           }
           return;

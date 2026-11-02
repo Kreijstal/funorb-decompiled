@@ -5,7 +5,7 @@ final class dla extends bf {
     static char field_j;
     CreatureRef field_n;
     static char[] field_i;
-    static sna field_k;
+    static UiComponent field_k;
     static String field_m;
     static PcmStreamMixer field_l;
 
@@ -36,7 +36,7 @@ final class dla extends bf {
         rt.a(sc.field_n, (String) null, param0 + 9);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_l = null;
         if (param0 != 1097) {

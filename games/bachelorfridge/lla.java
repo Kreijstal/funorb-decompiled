@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lla extends pu {
-    static sna field_l;
+    static UiComponent field_l;
 
     public static void d(byte param0) {
         if (param0 != 0) {
@@ -35,15 +35,15 @@ final class lla extends pu {
           nla.field_b.field_N = 1;
           nha.field_e = new gba("scrollbar", vu.field_p, new Sprite(8, 8), new Sprite(8, 8), cb.field_m, vu.field_p, true);
           ika.field_a = new gba("scrollbar", nla.field_b, new Sprite(8, 8), new Sprite(8, 8), bu.field_j, nla.field_b, true);
-          mda.field_b = new sna();
-          qg.field_b = new sna();
+          mda.field_b = new UiComponent();
+          qg.field_b = new UiComponent();
           dga.field_a = param2;
           if (dga.field_a == 0) {
-            oha.b((byte) -34);
+            MoveDefinition.b((byte) -34);
           }
           MeshObject.a(-123);
           if (dga.field_a == 0) {
-            mda.field_b.a(jfa.field_q[BananarangAnimation.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
+            mda.field_b.a(FridgeCreature.field_q[BananarangAnimation.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
             RasterBuffer.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
             uaa.a(false);
             lf.a(114);
@@ -86,15 +86,15 @@ final class lla extends pu {
           nla.field_b.field_N = 1;
           nha.field_e = new gba("scrollbar", vu.field_p, new Sprite(8, 8), new Sprite(8, 8), cb.field_m, vu.field_p, true);
           ika.field_a = new gba("scrollbar", nla.field_b, new Sprite(8, 8), new Sprite(8, 8), bu.field_j, nla.field_b, true);
-          mda.field_b = new sna();
-          qg.field_b = new sna();
+          mda.field_b = new UiComponent();
+          qg.field_b = new UiComponent();
           dga.field_a = param2;
           if (dga.field_a == 0) {
-            oha.b((byte) -34);
+            MoveDefinition.b((byte) -34);
           }
           MeshObject.a(-123);
           if (dga.field_a == 0) {
-            mda.field_b.a(jfa.field_q[BananarangAnimation.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
+            mda.field_b.a(FridgeCreature.field_q[BananarangAnimation.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
             RasterBuffer.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
             uaa.a(false);
             lf.a(114);
@@ -135,15 +135,15 @@ final class lla extends pu {
         nla.field_b.field_N = 1;
         nha.field_e = new gba("scrollbar", vu.field_p, new Sprite(8, 8), new Sprite(8, 8), cb.field_m, vu.field_p, true);
         ika.field_a = new gba("scrollbar", nla.field_b, new Sprite(8, 8), new Sprite(8, 8), bu.field_j, nla.field_b, true);
-        mda.field_b = new sna();
-        qg.field_b = new sna();
+        mda.field_b = new UiComponent();
+        qg.field_b = new UiComponent();
         dga.field_a = param2;
         if (dga.field_a == 0) {
-          oha.b((byte) -34);
+          MoveDefinition.b((byte) -34);
         }
         MeshObject.a(-123);
         if (dga.field_a == 0) {
-          mda.field_b.a(jfa.field_q[BananarangAnimation.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
+          mda.field_b.a(FridgeCreature.field_q[BananarangAnimation.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
           RasterBuffer.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
           uaa.a(false);
           lf.a(114);

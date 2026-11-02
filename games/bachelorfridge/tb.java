@@ -6,7 +6,7 @@ final class tb {
     static java.awt.Font field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -7778) {
           field_a = (String) null;

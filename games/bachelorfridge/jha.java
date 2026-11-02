@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jha extends kj {
+final class jha extends TileEffect {
     private Sprite field_h;
     static BinaryBitmapFont field_g;
     private int field_k;
@@ -9,7 +9,7 @@ final class jha extends kj {
     private int field_f;
     static IntrusiveDeque field_i;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 95) {
           field_g = (BinaryBitmapFont) null;
         }
@@ -24,7 +24,7 @@ final class jha extends kj {
         this.field_h.a(param2, param0, var4);
     }
 
-    jha(gj param0, int param1, int param2, int param3) {
+    jha(BattleScreen param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         Sprite var5 = null;
         try {
@@ -70,9 +70,9 @@ final class jha extends kj {
         }
     }
 
-    final static sna c(int param0) {
+    final static UiComponent c(int param0) {
         if (param0 != -31068) {
-          return (sna) null;
+          return (UiComponent) null;
         }
         return ScavengerSpecial.c(0);
     }

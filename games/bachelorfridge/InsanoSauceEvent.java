@@ -89,7 +89,7 @@ final class InsanoSauceEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         InsanoSauceAnimation stackIn_4_0 = null;
@@ -232,7 +232,7 @@ final class InsanoSauceEvent extends SpecialEvent {
           var6 = (EventEffect) (this.effects.b((byte) 90));
           while (var6 != null) {
             if (!(var6 instanceof DamageEffect)) {
-              var6.a(var3, param0, 12);
+              var6.apply(var3, param0, 12);
             } else {
               ((DamageEffect) (var6)).a((byte) -67, var3, param0, this.field_q[var4]);
             }

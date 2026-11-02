@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ae {
-    static sna field_a;
+    static UiComponent field_a;
 
-    final static sna a(boolean param0) {
+    final static UiComponent a(boolean param0) {
         if (!param0) {
           ae.a(false);
           return qba.field_m.field_vb;
@@ -12,10 +12,10 @@ final class ae {
         return qba.field_m.field_vb;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 30317) {
-          field_a = (sna) null;
+          field_a = (UiComponent) null;
         }
     }
 

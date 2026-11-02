@@ -24,8 +24,8 @@ final class wk {
     }
 
     final static String a(boolean param0) {
-        if (kq.field_j == ola.field_p) {
-          return wj.field_i;
+        if (kq.field_j == FridgeScreen.field_p) {
+          return UiWidget.field_i;
         }
         if (!param0) {
           wk.a(44);

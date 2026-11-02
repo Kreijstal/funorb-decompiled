@@ -16,7 +16,7 @@ final class bh extends k {
     private int field_o;
     private int field_m;
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -78) {
           field_r = (Sprite) null;
         }

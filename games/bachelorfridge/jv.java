@@ -5,12 +5,12 @@ import java.util.*;
 
 final class jv extends tia {
     static String field_m;
-    static sna field_i;
+    static UiComponent field_i;
     private int field_k;
     static int field_j;
     private IntrusiveDeque field_l;
 
-    jv(gj param0, ad param1, int param2) {
+    jv(BattleScreen param0, CreatureActor param1, int param2) {
         super(param0, param1);
         try {
           this.field_k = param2;
@@ -21,7 +21,7 @@ final class jv extends tia {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         if (param0 != 79) {
           return;

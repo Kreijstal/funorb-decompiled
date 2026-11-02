@@ -37,7 +37,7 @@ final class FloodEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         FloodAnimation stackIn_4_0 = null;

@@ -9,7 +9,7 @@ final class ut extends tia {
     private dha field_i;
     private gw field_j;
     static Sprite[] field_r;
-    static sna field_q;
+    static UiComponent field_q;
     private IntrusiveDeque field_n;
     static int field_l;
     static n field_m;
@@ -19,7 +19,7 @@ final class ut extends tia {
         int var1 = 117 / ((param0 + 74) / 48);
     }
 
-    ut(gj param0, ad param1, int param2, int param3) {
+    ut(BattleScreen param0, CreatureActor param1, int param2, int param3) {
         super(param0, param1);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;

@@ -10,7 +10,7 @@ final class DreamsAnimation extends EventAnimation {
     static int field_A;
     static String[] field_B;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
         if (fieldTemp$0 < 0) {
@@ -38,7 +38,7 @@ final class DreamsAnimation extends EventAnimation {
     }
 
     private final void e(int param0) {
-        ad var4 = null;
+        CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
         if (param0 != 44) {
           return;
@@ -50,7 +50,7 @@ final class DreamsAnimation extends EventAnimation {
         DamageEffect var3 = (DamageEffect) (this.field_w.effects.b((byte) 90));
         al.a(107, this.field_w.moveId);
         while (var3 != null) {
-          var3.a(var2, this.screen.field_h, 12);
+          var3.apply(var2, this.screen.field_h, 12);
           var4 = var3.target.a(-27449, this.screen);
           var4.b(-1, 18);
           var4.a(24831, 110, kna.field_g[44]);
@@ -85,7 +85,7 @@ final class DreamsAnimation extends EventAnimation {
         }
     }
 
-    DreamsAnimation(gj param0, DreamsEvent param1) {
+    DreamsAnimation(BattleScreen param0, DreamsEvent param1) {
         super(param0, param1);
         try {
           this.field_w = param1;

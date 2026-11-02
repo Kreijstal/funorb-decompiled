@@ -52,7 +52,7 @@ final class MartyrEvent extends SpecialEvent {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         if (param0 < 62) {
           return;
@@ -60,7 +60,7 @@ final class MartyrEvent extends SpecialEvent {
         field_q = null;
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         MartyrAnimation stackIn_4_0 = null;

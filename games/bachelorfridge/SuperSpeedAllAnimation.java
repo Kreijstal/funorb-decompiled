@@ -8,7 +8,7 @@ final class SuperSpeedAllAnimation extends EventAnimation {
     static String field_w;
     private SuperSpeedAllEvent field_v;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_x = null;
         field_y = null;
         field_z = null;
@@ -19,7 +19,7 @@ final class SuperSpeedAllAnimation extends EventAnimation {
     }
 
     private final void d(int param0) {
-        ad var4 = null;
+        CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
         BattleCreature var6 = this.field_v.creature.a(99, this.screen.field_h);
         if (var6.isDown(-118)) {
@@ -28,11 +28,11 @@ final class SuperSpeedAllAnimation extends EventAnimation {
         DamageEffect var3 = (DamageEffect) (this.field_v.effects.b((byte) 90));
         al.a(-46, this.field_v.moveId);
         while (var3 != null) {
-          var3.a(var6, this.screen.field_h, 12);
+          var3.apply(var6, this.screen.field_h, 12);
           var4 = var3.target.a(-27449, this.screen);
-          this.a(27799, new taa(this.screen, var4));
-          this.a(27799, new cb(var4, 7));
-          this.a(27799, new wn(var4, kna.field_g[17], 24831));
+          this.addChild(27799, new ActorAnimation(this.screen, var4));
+          this.addChild(27799, new cb(var4, 7));
+          this.addChild(27799, new wn(var4, kna.field_g[17], 24831));
           var3 = (DamageEffect) (this.field_v.effects.c(0));
         }
         if (param0 == 24831) {
@@ -41,7 +41,7 @@ final class SuperSpeedAllAnimation extends EventAnimation {
         this.f(3);
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = 0;
         if (this.field_m.isLinked((byte) -106)) {
           return false;
@@ -76,7 +76,7 @@ final class SuperSpeedAllAnimation extends EventAnimation {
         return true;
     }
 
-    SuperSpeedAllAnimation(gj param0, SuperSpeedAllEvent param1) {
+    SuperSpeedAllAnimation(BattleScreen param0, SuperSpeedAllEvent param1) {
         super(param0, param1);
         try {
           this.field_v = param1;

@@ -138,13 +138,13 @@ final class ada extends k {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
-        sna stackIn_9_0 = null;
+        UiComponent stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         boolean stackIn_10_2 = false;
-        sna stackIn_16_0 = null;
+        UiComponent stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         boolean stackIn_17_2 = false;
-        sna stackIn_21_0 = null;
+        UiComponent stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         boolean stackIn_22_2 = false;
         IncomingAnimation.f(199);
@@ -153,18 +153,18 @@ final class ada extends k {
         } else {
           dea.field_m.field_Z = null;
         }
-        stackIn_9_0 = ng.field_e;
+        stackIn_9_0 = MoveInfoPanel.field_e;
         stackIn_9_1 = 19842;
         stackIn_10_2 = (param0) && (!param3) && (!eda.field_j) && (SnowAnimation.field_w == null) && (null == EffectBatch.field_n);
-        ((sna) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
+        ((UiComponent) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
         stackIn_16_0 = FullHealSpecial.field_r;
         stackIn_16_1 = 19842;
         stackIn_17_2 = (param0) && (!param3) && (!eda.field_j) && (SnowAnimation.field_w == null) && (EffectBatch.field_n == null);
-        ((sna) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
+        ((UiComponent) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
         stackIn_21_0 = sb.field_n;
         stackIn_21_1 = 19842;
         stackIn_22_2 = (param0) && (!param3) && (eda.field_j);
-        ((sna) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
+        ((UiComponent) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
         lia.field_j.field_a.f(18632);
         if (mc.field_g.field_R != 0) {
           StickySpecial.field_p = true;
@@ -473,7 +473,7 @@ final class ada extends k {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_p = null;
         field_l = null;

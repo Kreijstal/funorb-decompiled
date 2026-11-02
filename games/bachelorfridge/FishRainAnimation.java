@@ -3,7 +3,7 @@
  */
 final class FishRainAnimation extends EventAnimation {
     private boolean field_v;
-    private taa field_w;
+    private ActorAnimation field_w;
     private FishRainEvent field_x;
 
     private final void e(int param0) {
@@ -11,9 +11,9 @@ final class FishRainAnimation extends EventAnimation {
         EventEffect var3_ref;
         int var5;
         BattleCreature var6;
-        ad var7;
+        CreatureActor var7;
         BattleCreature var8;
-        ad var9;
+        CreatureActor var9;
         var3 = null;
         var5 = BachelorFridge.field_y;
         if (param0 > 9) {
@@ -25,9 +25,9 @@ final class FishRainAnimation extends EventAnimation {
           while (var3_ref != null) {
             var9 = var3_ref.target.a(-27449, this.screen);
             var9.b(-1, 6);
-            var3_ref.a(var8, this.screen.field_h, 12);
+            var3_ref.apply(var8, this.screen.field_h, 12);
             if (var3_ref instanceof DamageEffect) {
-              this.a(27799, new ek(this.screen, var9, var3_ref.field_f));
+              this.addChild(27799, new ek(this.screen, var9, var3_ref.field_f));
             }
             var3_ref = (EventEffect) (this.field_x.effects.c(0));
           }
@@ -42,16 +42,16 @@ final class FishRainAnimation extends EventAnimation {
         while (var3_ref != null) {
           var7 = var3_ref.target.a(-27449, this.screen);
           var7.b(-1, 6);
-          var3_ref.a(var6, this.screen.field_h, 12);
+          var3_ref.apply(var6, this.screen.field_h, 12);
           if (var3_ref instanceof DamageEffect) {
-            this.a(27799, new ek(this.screen, var7, var3_ref.field_f));
+            this.addChild(27799, new ek(this.screen, var7, var3_ref.field_f));
           }
           var3_ref = (EventEffect) (this.field_x.effects.c(0));
         }
         return;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
@@ -72,12 +72,12 @@ final class FishRainAnimation extends EventAnimation {
         return false;
     }
 
-    FishRainAnimation(gj param0, FishRainEvent param1) {
+    FishRainAnimation(BattleScreen param0, FishRainEvent param1) {
         super(param0, param1);
         try {
           this.field_x = param1;
-          this.field_w = new taa(this.screen, this.field_x.field_q, this.field_x.field_s);
-          this.a(27799, this.field_w);
+          this.field_w = new ActorAnimation(this.screen, this.field_x.field_q, this.field_x.field_s);
+          this.addChild(27799, this.field_w);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "qr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -106,7 +106,7 @@ final class FishRainAnimation extends EventAnimation {
               var5 >= 0 &&
               var8.height > var5) {
               var6 = new gf(this.screen, var4, var5);
-              ((kj) ((Object) var6)).a(0);
+              ((TileEffect) ((Object) var6)).a(0);
             }
           }
           return;
@@ -121,7 +121,7 @@ final class FishRainAnimation extends EventAnimation {
             var5Lifetime1 >= 0 &&
             var8.height > var5Lifetime1) {
             var6Lifetime1 = new gf(this.screen, var4Lifetime1, var5Lifetime1);
-            ((kj) ((Object) var6Lifetime1)).a(0);
+            ((TileEffect) ((Object) var6Lifetime1)).a(0);
           }
         }
     }

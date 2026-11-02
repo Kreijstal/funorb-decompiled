@@ -43,7 +43,7 @@ final class FishRainEvent extends SpecialEvent {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 9) {
           return;
         }
@@ -79,7 +79,7 @@ final class FishRainEvent extends SpecialEvent {
         sja.field_fb.writeLengthByte((byte) 118, sja.field_fb.position - var4);
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         FishRainAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

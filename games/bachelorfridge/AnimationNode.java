@@ -7,7 +7,7 @@ abstract class AnimationNode extends IntrusiveNode {
     boolean field_f;
     IntrusiveDeque field_h;
 
-    final void a(int param0, AnimationNode param1) {
+    final void addChild(int param0, AnimationNode param1) {
         try {
           if (this.field_h == null) {
             this.field_h = new IntrusiveDeque();
@@ -21,9 +21,9 @@ abstract class AnimationNode extends IntrusiveNode {
         }
     }
 
-    abstract boolean c(byte param0);
+    abstract boolean isFinished(byte param0);
 
-    boolean b(int param0) {
+    boolean update(int param0) {
         AnimationNode var2;
         int var3;
         boolean stackIn_11_0 = false;
@@ -47,7 +47,7 @@ abstract class AnimationNode extends IntrusiveNode {
               stackIn_11_0 = (this.field_f) && (this.field_h.e(param0 - 8890));
               return stackIn_11_0;
             }
-            if (var2.b(21807)) {
+            if (var2.update(21807)) {
               var2.unlink(false);
               var2 = (AnimationNode) (this.field_h.c(0));
               continue;
@@ -62,7 +62,7 @@ abstract class AnimationNode extends IntrusiveNode {
           }
           return false;
         }
-        if (!this.c((byte) -14)) {
+        if (!this.isFinished((byte) -14)) {
           if (param0 != 21807) {
             return false;
           }
@@ -75,7 +75,7 @@ abstract class AnimationNode extends IntrusiveNode {
               stackIn_61_0 = (this.field_f) && (this.field_h.e(param0 - 8890));
               return stackIn_61_0;
             }
-            if (var2Lifetime1.b(21807)) {
+            if (var2Lifetime1.update(21807)) {
               var2Lifetime1.unlink(false);
               var2Lifetime1 = (AnimationNode) (this.field_h.c(0));
               continue;
@@ -98,7 +98,7 @@ abstract class AnimationNode extends IntrusiveNode {
             stackIn_34_0 = (this.field_f) && (this.field_h.e(param0 - 8890));
             return stackIn_34_0;
           }
-          if (var2Lifetime2.b(21807)) {
+          if (var2Lifetime2.update(21807)) {
             var2Lifetime2.unlink(false);
             var2Lifetime2 = (AnimationNode) (this.field_h.c(0));
             continue;
@@ -114,11 +114,11 @@ abstract class AnimationNode extends IntrusiveNode {
 
     void c(int param0) {
         if (param0 >= -10) {
-          this.c((byte) 120);
+          this.isFinished((byte) 120);
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 != 5849) {
           return;

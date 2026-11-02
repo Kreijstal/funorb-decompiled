@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class iw {
-    static sna field_a;
+    static UiComponent field_a;
     static IndexedSprite[] field_b;
 
     final static void a(int param0, boolean param1, BitmapFont param2, BitmapFont param3) {
@@ -339,14 +339,14 @@ final class iw {
           qs.field_n = 0;
           return;
         }
-        field_a = (sna) null;
+        field_a = (UiComponent) null;
         on.field_t = param0;
         kw.field_k = new gs[15 * param0];
         oma.field_a = new int[3];
         qs.field_n = 0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 >= -101) {
           return;

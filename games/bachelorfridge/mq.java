@@ -5,7 +5,7 @@ final class mq {
     static String[] field_a;
     static Sprite[] field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 213) {
           return;
         }
@@ -244,7 +244,7 @@ final class mq {
     }
 
     final static int a(int param0, int param1, int param2) {
-        String var3 = lka.field_E[param2][param0];
+        String var3 = TextInputWidget.field_E[param2][param0];
         var3 = var3.trim();
         var3 = var3.toLowerCase();
         if (param1 != 207) {
@@ -252,16 +252,16 @@ final class mq {
           if (var3.equals("0")) {
             return 0;
           }
-          if (ng.field_f.a(true, (long)var3.hashCode()) != null) {
-            return ((ji) (ng.field_f.a(true, (long)var3.hashCode()))).field_h;
+          if (MoveInfoPanel.field_f.a(true, (long)var3.hashCode()) != null) {
+            return ((ji) (MoveInfoPanel.field_f.a(true, (long)var3.hashCode()))).field_h;
           }
           return Integer.parseInt(var3);
         }
         if (var3.equals("0")) {
           return 0;
         }
-        if (ng.field_f.a(true, (long)var3.hashCode()) != null) {
-          return ((ji) (ng.field_f.a(true, (long)var3.hashCode()))).field_h;
+        if (MoveInfoPanel.field_f.a(true, (long)var3.hashCode()) != null) {
+          return ((ji) (MoveInfoPanel.field_f.a(true, (long)var3.hashCode()))).field_h;
         }
         return Integer.parseInt(var3);
     }

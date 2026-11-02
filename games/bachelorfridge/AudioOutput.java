@@ -160,7 +160,7 @@ class AudioOutput {
         }
     }
 
-    public static void d() {
+    public static void releaseStatics() {
         field_u = null;
     }
 

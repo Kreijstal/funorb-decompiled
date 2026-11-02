@@ -5,11 +5,11 @@ final class jca {
     static String field_b;
     static BitmapFont field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != -8270) {
-          jca.a(-125);
+          jca.releaseStatics(-125);
         }
     }
 

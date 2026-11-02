@@ -51,7 +51,7 @@ final class ScavengerEvent extends SpecialEvent {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -64) {
           field_q = (String) null;
           field_q = null;
@@ -60,7 +60,7 @@ final class ScavengerEvent extends SpecialEvent {
         field_q = null;
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         ScavengerAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -69,7 +69,7 @@ final class ScavengerEvent extends SpecialEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            ScavengerEvent.d(36);
+            ScavengerEvent.releaseStatics(36);
           }
           stackIn_3_0 = new ScavengerAnimation(param1, this);
           return (AnimationNode) ((Object) stackIn_3_0);

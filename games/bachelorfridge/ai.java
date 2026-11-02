@@ -9,10 +9,10 @@ final class ai {
     static boolean field_e;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 22309) {
-          ai.a(67);
+          ai.releaseStatics(67);
           field_a = null;
           return;
         }

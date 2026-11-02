@@ -16,10 +16,10 @@ final class et extends k {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         if (param0 >= -40) {
-          et.d(-100);
+          et.releaseStatics(-100);
         }
         field_m = null;
     }

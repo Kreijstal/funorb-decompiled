@@ -6,7 +6,7 @@ final class ShuffleSpecial extends SpecialOrder {
     static Sprite field_r;
     static String field_q;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         if (param0 != -91) {
           field_r = (Sprite) null;
@@ -18,7 +18,7 @@ final class ShuffleSpecial extends SpecialOrder {
         super(param0, param1);
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var7_int = 0;
         ShuffleEvent stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;

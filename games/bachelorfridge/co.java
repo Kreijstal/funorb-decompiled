@@ -6,9 +6,9 @@ final class co {
     static String[][] field_a;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          co.a(false);
+          co.releaseStatics(false);
           field_a = (String[][]) null;
           field_b = null;
           return;

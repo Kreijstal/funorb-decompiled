@@ -5,7 +5,7 @@ final class ep extends pu {
     static int[] field_l;
     static int field_m;
 
-    final static void a(byte param0, jfa param1, boolean param2, int param3, int[] param4) {
+    final static void a(byte param0, FridgeCreature param1, boolean param2, int param3, int[] param4) {
         int var7 = 0;
         int var8 = 0;
         int var9 = BachelorFridge.field_y;
@@ -40,7 +40,7 @@ final class ep extends pu {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           return;
         }

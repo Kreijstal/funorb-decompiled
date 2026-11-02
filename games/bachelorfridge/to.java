@@ -31,7 +31,7 @@ final class to {
         return var5;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 <= 3) {
           field_a = (String) null;

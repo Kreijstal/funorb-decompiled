@@ -44,7 +44,7 @@ final class wla extends k {
             }
           }
           if (param0 != -71) {
-            wla.d(-67);
+            wla.releaseStatics(-67);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,9 +70,9 @@ final class wla extends k {
         this.field_o = new int[3];
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
-          wla.d(110);
+          wla.releaseStatics(110);
         }
         field_n = null;
     }

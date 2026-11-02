@@ -3,11 +3,11 @@
  */
 final class gka extends AnimationNode {
     static String field_m;
-    private gj field_p;
+    private BattleScreen field_p;
     private ns field_o;
     static rga field_n;
     private boolean field_j;
-    private taa field_k;
+    private ActorAnimation field_k;
     private mr field_l;
     private boolean field_q;
     static String field_r;
@@ -29,7 +29,7 @@ final class gka extends AnimationNode {
         kw.field_j.a(param1, true);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         field_m = null;
         if (param0 != -3) {
@@ -42,7 +42,7 @@ final class gka extends AnimationNode {
 
     private final void d(int param0) {
         if (param0 < 80) {
-          this.field_k = (taa) null;
+          this.field_k = (ActorAnimation) null;
         }
     }
 
@@ -80,7 +80,7 @@ final class gka extends AnimationNode {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         if (this.field_k.isLinked((byte) -106)) {
           return false;
         }
@@ -90,7 +90,7 @@ final class gka extends AnimationNode {
           MartyrAnimation.a(43, (byte) 126);
         }
         if (this.field_j) {
-          this.a(27799, new fha(this.field_l));
+          this.addChild(27799, new fha(this.field_l));
           this.d(91);
           return true;
         }
@@ -98,21 +98,21 @@ final class gka extends AnimationNode {
         if (!(0 > this.field_p.field_s.field_d)) {
           return false;
         }
-        ad var3 = this.field_o.field_n.a(-27449, this.field_p);
-        this.field_k = new taa(this.field_p, var3);
-        this.a(27799, this.field_k);
+        CreatureActor var3 = this.field_o.field_n.a(-27449, this.field_p);
+        this.field_k = new ActorAnimation(this.field_p, var3);
+        this.addChild(27799, this.field_k);
         this.field_j = true;
         this.field_l = new mr(this.field_p, this.field_o, var3.field_s.tileX, var3.field_s.tileY);
         return false;
     }
 
-    gka(gj param0, ns param1) {
+    gka(BattleScreen param0, ns param1) {
         this.field_q = false;
         try {
           this.field_p = param0;
           this.field_o = param1;
-          this.field_k = new taa(this.field_p, (this.field_p.field_h.width >> 1) - 1, -3);
-          this.a(27799, this.field_k);
+          this.field_k = new ActorAnimation(this.field_p, (this.field_p.field_h.width >> 1) - 1, -3);
+          this.addChild(27799, this.field_k);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

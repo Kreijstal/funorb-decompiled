@@ -10,7 +10,7 @@ final class ed {
     static Sprite[] field_f;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_f = null;
         if (param0 >= 41) {

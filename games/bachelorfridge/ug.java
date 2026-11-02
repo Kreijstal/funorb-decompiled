@@ -106,7 +106,7 @@ final class ug extends pv {
         return false;
     }
 
-    ug(jfa param0, int param1) {
+    ug(FridgeCreature param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -137,7 +137,7 @@ final class ug extends pv {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = (int[][]) null;
         field_m = null;
         if (param0 == 10) {

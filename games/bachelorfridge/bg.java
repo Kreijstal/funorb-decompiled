@@ -25,10 +25,10 @@ final class bg extends BoardChange {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 != 5) {
-          bg.b(92);
+          bg.releaseStatics(92);
         }
     }
 
@@ -40,7 +40,7 @@ final class bg extends BoardChange {
         bi.field_h = null;
         int var1 = -34 / ((-5 - param0) / 54);
         if (lna.field_C == null) {
-          ub.field_k = null;
+          BoardChangeAnimation.field_k = null;
           return;
         }
         DisableSpecial.field_r = qk.field_q;
@@ -49,7 +49,7 @@ final class bg extends BoardChange {
         HailAnimation.field_A.field_G = -1;
         qk.field_q = null;
         lna.field_C = null;
-        ub.field_k = null;
+        BoardChangeAnimation.field_k = null;
     }
 
     static {

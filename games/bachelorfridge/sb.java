@@ -3,13 +3,13 @@
  */
 final class sb extends pu {
     static IndexedSprite[] field_l;
-    static sna field_n;
+    static UiComponent field_n;
     static String[] field_m;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != 2630) {
-          field_n = (sna) null;
+          field_n = (UiComponent) null;
         }
         field_n = null;
         field_m = null;

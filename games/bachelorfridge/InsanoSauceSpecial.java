@@ -169,7 +169,7 @@ final class InsanoSauceSpecial extends SpecialOrder {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_q = null;
         if (param0 != -1452) {
@@ -179,7 +179,7 @@ final class InsanoSauceSpecial extends SpecialOrder {
         field_r = null;
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var11 = 0;
         CreatureEvent stackIn_3_0 = null;
         InsanoSauceEvent stackIn_32_0 = null;
@@ -261,8 +261,8 @@ final class InsanoSauceSpecial extends SpecialOrder {
         gfa.field_i = false;
         eea.field_b = param0 ? true : false;
         ep.a(-1, 8192);
-        ola.field_p = tn.field_a;
-        dka.field_G = tn.field_a;
+        FridgeScreen.field_p = GameClock.field_a;
+        ReportAbusePanel.field_G = GameClock.field_a;
     }
 
     static {

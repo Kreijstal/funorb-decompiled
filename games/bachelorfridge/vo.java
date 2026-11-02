@@ -6,7 +6,7 @@ abstract class vo {
     static eq field_d;
     int field_f;
     int field_a;
-    static sna field_b;
+    static UiComponent field_b;
     static String field_c;
 
     abstract void a(int param0, int param1, int param2);

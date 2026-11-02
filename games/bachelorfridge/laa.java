@@ -130,11 +130,11 @@ final class laa extends pv {
 
     final static void a(int param0, byte param1, int param2, int param3, String param4, int param5) {
         try {
-          param2 = param2 - (hfa.field_z.a(param4) >> 1);
+          param2 = param2 - (WidgetWrapper.field_z.a(param4) >> 1);
           if (param1 > -44) {
             laa.a(123, -54, -39, true, -63, -89, -61);
           }
-          hfa.field_z.drawText(param4, param2, param0, param5, -1);
+          WidgetWrapper.field_z.drawText(param4, param2, param0, param5, -1);
           jha.field_g.drawText(param4, param2, param0, param3, -1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "laa.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
@@ -171,7 +171,7 @@ final class laa extends pv {
         return (int)((double)Math.abs(this.field_o) * 20.0) / 39;
     }
 
-    laa(jfa param0, int param1) {
+    laa(FridgeCreature param0, int param1) {
         try {
           this.field_o = param1;
           this.field_f = param0;

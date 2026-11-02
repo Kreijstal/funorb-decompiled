@@ -5,7 +5,7 @@ final class ShieldEvent extends SpecialEvent {
     static int field_r;
     static String field_q;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           field_q = (String) null;
           field_q = null;
@@ -60,7 +60,7 @@ final class ShieldEvent extends SpecialEvent {
         super(param0, param1);
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         ShieldAnimation stackIn_4_0 = null;

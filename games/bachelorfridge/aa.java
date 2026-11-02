@@ -7,7 +7,7 @@ final class aa extends pu {
     static IntrusiveDeque field_l;
     private static String field_z;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 34 / ((param0 + 91) / 32);
         field_m = null;
         field_n = null;

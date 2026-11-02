@@ -26,9 +26,9 @@ final class jda extends iga {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          jda.a(72);
+          jda.releaseStatics(72);
           field_g = null;
           return;
         }

@@ -3,7 +3,7 @@
  */
 final class rfa {
     static Sprite field_a;
-    static sna field_b;
+    static UiComponent field_b;
 
     final static int a(boolean param0, int param1) {
         param1 = (param1 >>> 1 & 1431655765) + (1431655765 & param1);
@@ -17,11 +17,11 @@ final class rfa {
         return -30;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 != -101) {
-          field_b = (sna) null;
+          field_b = (UiComponent) null;
         }
     }
 
@@ -34,7 +34,7 @@ final class rfa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 29428) {
-            rfa.a((byte) 60);
+            rfa.releaseStatics((byte) 60);
           }
           stackIn_3_0 = new EffectBatch(param1);
           return (BattleUpdate) ((Object) stackIn_3_0);

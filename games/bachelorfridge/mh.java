@@ -4,8 +4,8 @@
 final class mh extends EventEffect {
     boolean field_i;
     static PlatformTaskDispatcher field_l;
-    static sna field_k;
-    static sna field_j;
+    static UiComponent field_k;
+    static UiComponent field_j;
 
     public static void a(int param0) {
         if (param0 != -15947) {
@@ -16,7 +16,7 @@ final class mh extends EventEffect {
         field_k = null;
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -92 / ((param1 - 34) / 58);
           FlirtAnimation.a(this.target, 126, param0);
@@ -26,7 +26,7 @@ final class mh extends EventEffect {
         }
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         try {
           if (param2 != 12) {
             this.field_i = true;
@@ -37,7 +37,7 @@ final class mh extends EventEffect {
     }
 
     final static void a(boolean param0, boolean param1, boolean param2, int param3, byte param4) {
-        sna stackIn_20_0 = null;
+        UiComponent stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_36_0 = 0;
         int stackIn_36_1 = 0;
@@ -50,24 +50,24 @@ final class mh extends EventEffect {
         int stackIn_87_0 = 0;
         boolean stackIn_134_0 = false;
         int stackIn_148_0 = 0;
-        sna stackIn_167_0 = null;
+        UiComponent stackIn_167_0 = null;
         int stackIn_167_1 = 0;
         boolean stackIn_168_2 = false;
-        sna stackIn_172_0 = null;
+        UiComponent stackIn_172_0 = null;
         int stackIn_172_1 = 0;
         boolean stackIn_173_2 = false;
-        sna stackIn_177_0 = null;
+        UiComponent stackIn_177_0 = null;
         int stackIn_177_1 = 0;
         boolean stackIn_178_2 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_79_0;
         boolean stackOut_133_0;
-        sna var5 = null;
+        UiComponent var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        sna var6 = null;
-        sna var7 = null;
-        sna var8 = null;
+        UiComponent var6 = null;
+        UiComponent var7 = null;
+        UiComponent var8 = null;
         String var9_ref_String = null;
         int var9 = 0;
         String var10_ref_String = null;
@@ -297,7 +297,7 @@ final class mh extends EventEffect {
                       var14_ref_String = lga.a(true, new String[]{(String) (var11_ref)}, ec.field_b);
                     }
                   } else {
-                    var13_ref_String = aha.field_H;
+                    var13_ref_String = LinkTextWidget.field_H;
                     boolean decompiledSharedTail1 = (var12 == 0);
                     if (!decompiledSharedTail1) {
                       var14_ref_String = ag.field_k + (String) (var11_ref);
@@ -363,7 +363,7 @@ final class mh extends EventEffect {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = SnowEvent.field_q.field_vb.field_z;
+                var17 = SnowEvent.field_q.field_vb.children;
                 var18_ref = (ema) (var17.b((byte) 90));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
@@ -426,7 +426,7 @@ final class mh extends EventEffect {
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
-                      jja.field_m = lga.a(true, new String[]{hfa.field_B}, n.field_c);
+                      jja.field_m = lga.a(true, new String[]{WidgetWrapper.field_B}, n.field_c);
                     }
                   }
                 }
@@ -445,15 +445,15 @@ final class mh extends EventEffect {
           stackIn_167_0 = ela.field_i;
           stackIn_167_1 = 19842;
           stackIn_168_2 = (param2) && (!param1) && (!w.field_e);
-          ((sna) (Object) stackIn_167_0).a(stackIn_167_1, stackIn_168_2);
+          ((UiComponent) (Object) stackIn_167_0).a(stackIn_167_1, stackIn_168_2);
           stackIn_172_0 = ho.field_g;
           stackIn_172_1 = 19842;
           stackIn_173_2 = (param2) && (!param1) && (!w.field_e);
-          ((sna) (Object) stackIn_172_0).a(stackIn_172_1, stackIn_173_2);
+          ((UiComponent) (Object) stackIn_172_0).a(stackIn_172_1, stackIn_173_2);
           stackIn_177_0 = qw.field_b;
           stackIn_177_1 = 19842;
           stackIn_178_2 = (param2) && (!param1) && (w.field_e);
-          ((sna) (Object) stackIn_177_0).a(stackIn_177_1, stackIn_178_2);
+          ((UiComponent) (Object) stackIn_177_0).a(stackIn_177_1, stackIn_178_2);
           BitPacketBuffer.field_n.field_a.f(18632);
           if (null != SnowAnimation.field_w) {
             if (0 != jj.field_wb.field_R) {

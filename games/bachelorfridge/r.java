@@ -6,7 +6,7 @@ import java.util.*;
 final class r extends pu {
     static Sprite field_n;
     static lo field_m;
-    static sna[] field_l;
+    static UiComponent[] field_l;
 
     final static void a(int[] param0, int param1, vr param2, String[][] param3, byte[] param4, byte[] param5, String[] param6, int param7, vr param8, vr param9, String[][] param10, Sprite[][] param11, boolean param12, Sprite[][] param13, int param14) {
         RuntimeException stackIn_5_0 = null;

@@ -76,7 +76,7 @@ final class ig extends k {
         this.field_x = 4;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_m = (BitPacketBuffer) null;
         }
@@ -187,11 +187,11 @@ final class ig extends k {
             return stackIn_2_0;
           }
           var2_int = param0.readUnsignedShort((byte) 64);
-          if (3 == ((t) (al.a(103, var2_int))).field_p) {
+          if (3 == ((BasicMoveDefinition) (al.a(103, var2_int))).field_p) {
             stackIn_6_0 = kfa.a(param0, 4096, var2_int);
             return (BattleUpdate) ((Object) stackIn_6_0);
           }
-          if (((t) (al.a(118, var2_int))).field_p == 2) {
+          if (((BasicMoveDefinition) (al.a(118, var2_int))).field_p == 2) {
             stackIn_10_0 = SuperSpeedAllSpecial.a(param0, var2_int, (byte) -116);
             return (BattleUpdate) ((Object) stackIn_10_0);
           }

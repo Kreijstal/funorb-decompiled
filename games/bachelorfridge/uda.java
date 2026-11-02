@@ -13,7 +13,7 @@ abstract class uda extends am {
     private hl field_S;
     private int field_bb;
     private kf field_Y;
-    private wj field_T;
+    private UiWidget field_T;
     static String field_eb;
 
     boolean a(int param0) {
@@ -34,7 +34,7 @@ abstract class uda extends am {
             this.field_S.field_F = -((this.field_Z << 8) / this.field_W) + 256;
           } else {
             this.field_Y = cp.field_b;
-            this.a(this.field_db, 26012, this.field_T.field_q + 12 + this.field_bb, 12 + this.field_T.field_p);
+            this.a(this.field_db, 26012, this.field_T.height + 12 + this.field_bb, 12 + this.field_T.width);
             this.field_S.field_F = 0;
             this.field_Z = 0;
           }
@@ -78,7 +78,7 @@ abstract class uda extends am {
         RasterBuffer.a(false, param0, param1, param2);
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > 109) {
           field_U = null;
           field_X = null;
@@ -87,7 +87,7 @@ abstract class uda extends am {
           field_eb = null;
           return;
         }
-        uda.n(-52);
+        uda.releaseStatics(-52);
         field_U = null;
         field_X = null;
         field_cb = null;
@@ -95,24 +95,24 @@ abstract class uda extends am {
         field_eb = null;
     }
 
-    boolean a(int param0, int param1, char param2, wj param3) {
+    boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_S == null) {
             return false;
           }
           if (98 == param1) {
-            this.field_S.a(param3, -101);
+            this.field_S.acquireFocus(param3, -101);
           }
           if (param1 == 99) {
-            this.field_S.a(param3, -94);
+            this.field_S.acquireFocus(param3, -94);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,15 +141,15 @@ abstract class uda extends am {
           this.field_T = null;
           return;
         }
-        wj var3 = (wj) null;
-        this.e((wj) null, 10);
+        UiWidget var3 = (UiWidget) null;
+        this.e((UiWidget) null, 10);
         this.d(this.field_T, -15084);
         this.field_S.field_F = 0;
         this.field_T = null;
     }
 
-    uda(rp param0, wj param1, int param2, int param3, int param4) {
-        super(param0, 12 + param1.field_p, param1.field_q + (12 + param2));
+    uda(rp param0, UiWidget param1, int param2, int param3, int param4) {
+        super(param0, 12 + param1.width, param1.height + (12 + param2));
         try {
           this.field_db = param4;
           this.field_bb = param2;
@@ -161,7 +161,7 @@ abstract class uda extends am {
         }
     }
 
-    private final void d(wj param0, int param1) {
+    private final void d(UiWidget param0, int param1) {
         try {
           if (null != this.field_S) {
             this.field_S.unlink(false);
@@ -169,7 +169,7 @@ abstract class uda extends am {
           if (param0 == null) {
             this.field_S = new hl();
           } else {
-            param0.a(6, param0.field_q, (byte) 59, param0.field_p, 6 + this.field_bb);
+            param0.a(6, param0.height, (byte) 59, param0.width, 6 + this.field_bb);
             this.field_S = new hl(param0);
           }
           this.c(this.field_S, param1 + 15073);
@@ -182,7 +182,7 @@ abstract class uda extends am {
         }
     }
 
-    void e(wj param0, int param1) {
+    void e(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -194,7 +194,7 @@ abstract class uda extends am {
             return;
           }
           if (this.field_Y == cp.field_b) {
-            this.a(this.field_db, 26012, this.field_T.field_q + this.field_bb + 12, 12 + this.field_T.field_p);
+            this.a(this.field_db, 26012, this.field_T.height + this.field_bb + 12, 12 + this.field_T.width);
             this.field_Z = 0;
             return;
           }
@@ -221,7 +221,7 @@ abstract class uda extends am {
     final void m(int param0) {
         if (null != this.field_Y) {
           if (this.field_Y != dha.field_b) {
-            this.b(-41, 12 + this.field_bb + this.field_T.field_q, 12 + this.field_T.field_p);
+            this.b(-41, 12 + this.field_bb + this.field_T.height, 12 + this.field_T.width);
             this.d(this.field_T, -15084);
           }
           this.field_S.field_F = 256;

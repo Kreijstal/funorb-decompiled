@@ -4,18 +4,18 @@
 final class cb extends AnimationNode {
     private int field_j;
     static String field_n;
-    static sna[] field_o;
+    static UiComponent[] field_o;
     private int field_l;
-    private ad field_k;
-    static sna field_m;
+    private CreatureActor field_k;
+    static UiComponent field_m;
 
     private final void d(int param0) {
         if (param0 != -24070) {
-          cb.d((byte) -101);
+          cb.releaseStatics((byte) -101);
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = 0;
         int var2 = 0;
         int var2Lifetime1;
@@ -45,7 +45,7 @@ final class cb extends AnimationNode {
         return 10;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 102) {
           return;
         }
@@ -54,7 +54,7 @@ final class cb extends AnimationNode {
         field_o = null;
     }
 
-    cb(ad param0, int param1) {
+    cb(CreatureActor param0, int param1) {
         try {
           this.field_k = param0;
           this.field_j = param1;

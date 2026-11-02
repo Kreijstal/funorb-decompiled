@@ -6,7 +6,7 @@ final class HailEvent extends SpecialEvent {
     int field_t;
     int field_q;
     static du field_u;
-    static sna field_r;
+    static UiComponent field_r;
     static char[] field_s;
 
     HailEvent(PacketBuffer param0) {
@@ -53,7 +53,7 @@ final class HailEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         HailAnimation stackIn_4_0 = null;

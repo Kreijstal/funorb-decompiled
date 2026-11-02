@@ -19,7 +19,7 @@ abstract class SocketConnector {
 
     abstract java.net.Socket a(byte param0) throws IOException;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != 1) {
           field_d = (IntrusiveDeque) null;

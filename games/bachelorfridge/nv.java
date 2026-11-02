@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nv extends sna {
+final class nv extends UiComponent {
     private nv field_Eb;
     static IndexedSprite field_wb;
     private int field_Ib;
@@ -17,7 +17,7 @@ final class nv extends sna {
     private int field_Cb;
     private int field_zb;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_wb = null;
         if (param0 != 20038) {
           field_wb = (IndexedSprite) null;
@@ -38,7 +38,7 @@ final class nv extends sna {
         int var7Lifetime1;
         var9 = BachelorFridge.field_y;
         if (param0 >= -91) {
-          nv.f(-20);
+          nv.releaseStatics(-20);
         }
         this.field_Fb = 2 * param4 + this.field_Gb;
         this.a(this.field_Ib, 31407, this.field_Fb, param3, param2 - this.field_Ib);
@@ -96,7 +96,7 @@ final class nv extends sna {
             this.b(0, false);
             this.field_xb = param1;
             this.field_Eb = this.field_Hb[this.field_xb];
-            dka.a(this.field_Eb, (byte) 59);
+            ReportAbusePanel.a(this.field_Eb, (byte) 59);
             this.field_Eb.b(12, false);
           }
         }
@@ -183,7 +183,7 @@ final class nv extends sna {
         return var4 != 0;
     }
 
-    nv(long param0, sna param1, sna param2, sna param3, nv[] param4, int[] param5, String[] param6, char[] param7) {
+    nv(long param0, UiComponent param1, UiComponent param2, UiComponent param3, nv[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -232,7 +232,7 @@ final class nv extends sna {
               this.field_yb[var13] == -1) {
               var14 = kga.field_a;
             }
-            this.field_vb[var13] = new gna(0L, param2, (sna) null, param3, (Sprite) (var14), param6[var13]);
+            this.field_vb[var13] = new gna(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
             this.a(-1, this.field_vb[var13]);
             var15 = var17.a(param6[var13]);
             if (var15 > this.field_Gb) {

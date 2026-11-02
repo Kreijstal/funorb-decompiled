@@ -5,7 +5,7 @@ final class as {
     static String field_b;
     static Sprite[] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 < 117) {

@@ -168,7 +168,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           qt.field_l.b((byte) 106);
         }
         hi.a(116);
-        qh.b((byte) 117);
+        WidgetTheme.b((byte) 117);
         if (!sn.c(94) &&
           11 != jv.field_j) {
           SpiltMilkEvent.d(-1);
@@ -180,7 +180,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           var3 = 1200 * fda.a(0);
           if (this.field_s ||
             !(GasCloudAnimation.e(30) <= var3) &&
-            !(var3 >= jfa.e(-124))) {
+            !(var3 >= FridgeCreature.e(-124))) {
             this.field_s = false;
             vc.a((byte) -65);
             ih.e(10);
@@ -273,9 +273,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (0 != kt.field_k) {
             lh.field_s = daa.c(68, OneAnimation.field_z);
           }
-          bv.field_B = rs.a(1, false, 0, true, OneEvent.field_q);
-          fi.field_n = rs.a(1, false, 0, true, mj.field_j);
-          em.field_T = rs.a(1, false, 0, true, vaa.field_d);
+          bv.field_B = StatusEffectInfo.a(1, false, 0, true, OneEvent.field_q);
+          fi.field_n = StatusEffectInfo.a(1, false, 0, true, mj.field_j);
+          em.field_T = StatusEffectInfo.a(1, false, 0, true, vaa.field_d);
           SuperSpeedAllEvent.field_r = 2;
           ClamsSpecial.field_p = fi.field_n;
           ScavengerSpecial.field_p = bv.field_B;
@@ -299,7 +299,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (3 == SuperSpeedAllEvent.field_r &&
           us.a(fi.field_n, bv.field_B, em.field_T, 76) &&
-          vd.a((byte) 89, em.field_T)) {
+          WidgetContainer.a((byte) 89, em.field_T)) {
           sr.a(48);
           ut.d(-124);
           lia.field_i = false;
@@ -382,9 +382,9 @@ abstract class NetworkGameClient extends GameAppletShell {
         jia.a(var2, param0 - 103, nia.d(param0 - 31767));
     }
 
-    final static sna n(int param0) {
+    final static UiComponent n(int param0) {
         if (param0 < 48) {
-          return (sna) null;
+          return (UiComponent) null;
         }
         return ae.a(true);
     }
@@ -450,7 +450,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 sh.l(-71);
                 break;
               case 2:
-                ola.c((byte) -60);
+                FridgeScreen.c((byte) -60);
                 break;
               case 1:
                 p.c(-84);
@@ -527,8 +527,8 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 1) {
             var5 = sp.a(DiveBomberAnimation.e(52), false, ti.a(-22));
             if (var5 != -1) {
-              oha.a(vd.field_B, var5, 4, vt.field_m);
-              vd.field_B = null;
+              MoveDefinition.a(WidgetContainer.field_B, var5, 4, vt.field_m);
+              WidgetContainer.field_B = null;
               vt.field_m = null;
             }
             var12 = RefreshingAnimation.b(true);
@@ -539,9 +539,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 2) {
             var5Lifetime1 = dha.a(lha.a((byte) -89), (byte) 53, waa.a(true), jc.f(-24457), tt.e(21240), this.field_p, wk.a(true));
             if (var5Lifetime1 != -1) {
-              PetAttackAnimation.a(true, var5Lifetime1, vt.field_m, vd.field_B);
+              PetAttackAnimation.a(true, var5Lifetime1, vt.field_m, WidgetContainer.field_B);
               vt.field_m = null;
-              vd.field_B = null;
+              WidgetContainer.field_B = null;
             }
           }
           if (var4 == 3) {
@@ -557,7 +557,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   ns.a(vt.field_m, -11, var5Lifetime2);
                   vt.field_m = null;
                 } else {
-                  ShuffleAnimation.field_v = gha.field_a;
+                  ShuffleAnimation.field_v = DefaultWidgetRenderer.field_a;
                   laa.b(-122);
                   qo.field_c = false;
                   jv.field_j = 10;
@@ -658,7 +658,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             kda.a(-85, 2);
           }
           if (cl.field_p[2]) {
-            ub.a(3, 1);
+            BoardChangeAnimation.a(3, 1);
           }
           if (cl.field_p[3]) {
             rg.a(35, 4);
@@ -784,7 +784,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           discarded$7 = this.a(stackIn_10_1, -89, false);
         } else {
           if (SuperSpeedAllEvent.field_r >= 10) {
-            if (ad.d((byte) 38)) {
+            if (CreatureActor.d((byte) 38)) {
               if (jv.field_j != 0) {
                 aca.a((byte) -118, vc.field_a);
               } else {

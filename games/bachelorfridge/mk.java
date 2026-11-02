@@ -4,13 +4,13 @@
 final class mk {
     private Sprite field_a;
     private Sprite field_r;
-    static sna field_h;
+    static UiComponent field_h;
     private int field_x;
     private Sprite field_g;
     private boolean field_l;
     private int[] field_k;
     private int field_t;
-    private sna field_u;
+    private UiComponent field_u;
     static qia field_o;
     private mj field_m;
     private int field_e;
@@ -217,7 +217,7 @@ final class mk {
         int var4;
         int var7;
         boolean stackIn_21_0 = false;
-        oha var6;
+        MoveDefinition var6;
         var7 = BachelorFridge.field_y;
         var2 = 0;
         var3 = 0;
@@ -228,8 +228,8 @@ final class mk {
               BananarangEvent.field_s.field_g.field_m[var5] > 6) {
               var4 = 0;
             }
-            var6 = ur.field_e[IsaacRandom.field_f.field_b[BananarangEvent.field_s.field_g.field_m[var5]]];
-            if (var6 instanceof t) {
+            var6 = WhirlpoolDigest.field_e[IsaacRandom.field_f.field_b[BananarangEvent.field_s.field_g.field_m[var5]]];
+            if (var6 instanceof BasicMoveDefinition) {
               var3 = 1;
             }
             if (var6 instanceof tv) {
@@ -288,11 +288,11 @@ final class mk {
         int stackIn_7_3;
         int stackIn_8_4;
         int stackIn_42_0 = 0;
-        oha var6;
+        MoveDefinition var6;
         int var6_int;
         int var7;
         int var8;
-        oha var8_ref_oha;
+        MoveDefinition var8_ref_oha;
         int var9;
         int var10;
         int var5Lifetime1;
@@ -302,18 +302,18 @@ final class mk {
         InsanoSauceEvent.a(this.field_v, 34, 16762880, true, 444, false);
         wt.field_k.drawParagraph(BananarangEvent.field_s.field_g.field_o.field_a, 350, 40, 240, 100, 16777215, -1, 0, 1, 14);
         jha.field_g.a(hl.field_G[2], 414, 178, 15204352, -1);
-        hfa.field_z.a(hl.field_G[2], 414, 178, 65793, -1);
+        WidgetWrapper.field_z.a(hl.field_G[2], 414, 178, 65793, -1);
         jha.field_g.a(hl.field_G[3], 412, 206, 818659, -1);
-        hfa.field_z.a(hl.field_G[3], 412, 206, 65793, -1);
+        WidgetWrapper.field_z.a(hl.field_G[3], 412, 206, 65793, -1);
         jha.field_g.a(hl.field_G[0], 414, 232, 16769792, -1);
-        hfa.field_z.a(hl.field_G[0], 414, 232, 65793, -1);
+        WidgetWrapper.field_z.a(hl.field_G[0], 414, 232, 65793, -1);
         var3 = 11 / ((65 - param1) / 50);
         jha.field_g.a(hl.field_G[1], 408, 259, 51233, -1);
-        hfa.field_z.a(hl.field_G[1], 408, 259, 65793, -1);
+        WidgetWrapper.field_z.a(hl.field_G[1], 408, 259, 65793, -1);
         jha.field_g.a(DelegatingCanvas.field_a, 180, 428, 16776960, -1);
-        hfa.field_z.a(DelegatingCanvas.field_a, 180, 428, 65793, -1);
+        WidgetWrapper.field_z.a(DelegatingCanvas.field_a, 180, 428, 65793, -1);
         jha.field_g.a(ida.field_o, 180, 32, 16776960, -1);
-        hfa.field_z.a(ida.field_o, 180, 32, 65793, -1);
+        WidgetWrapper.field_z.a(ida.field_o, 180, 32, 65793, -1);
         if (!this.field_s.field_A) {
           this.field_s.a(8);
         }
@@ -334,51 +334,51 @@ final class mk {
         stackIn_7_3 = 342;
         stackIn_8_4 = (!this.field_u.field_T) ? 16777215 : 16776960;
         ((BinaryBitmapFont) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, -1);
-        hfa.field_z.a(di.field_l, 522, 342, 65793, -1);
+        WidgetWrapper.field_z.a(di.field_l, 522, 342, 65793, -1);
         for (var5 = 0; var5 < BananarangEvent.field_s.field_g.field_m.length; var5++) {
           if (BananarangEvent.field_s.field_g.field_m[var5] != -1) {
             regionExit1: {
               var6_int = BuffVendorAnimation.field_A[var5][0];
               var7 = BuffVendorAnimation.field_A[var5][1];
               OneAnimation.field_E.a(0, var7, var6_int, -1049413117, 4096);
-              var8_ref_oha = ur.field_e[IsaacRandom.field_f.field_b[BananarangEvent.field_s.field_g.field_m[var5]]];
+              var8_ref_oha = WhirlpoolDigest.field_e[IsaacRandom.field_f.field_b[BananarangEvent.field_s.field_g.field_m[var5]]];
               if (!(var8_ref_oha instanceof tv)) {
-                if (var8_ref_oha instanceof hd) {
-                  nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) - 1 + var6_int, -(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1) - 1 + var7, 14971949);
+                if (var8_ref_oha instanceof SpecialMoveDefinition) {
+                  nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) - 1 + var6_int, -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1) - 1 + var7, 14971949);
                 } else {
                   if (var8_ref_oha instanceof a) {
                     if (var8_ref_oha.field_b == 3) {
-                      nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + (-1 + var6_int), -(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1) - 1 + var7, 16769792);
+                      nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + (-1 + var6_int), -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1) - 1 + var7, 16769792);
                     } else {
                       if (var8_ref_oha.field_b != 4) {
                         if (2 == var8_ref_oha.field_b) {
-                          nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + (var6_int - 1), -1 + (var7 - (nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1)), 15204352);
+                          nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + (var6_int - 1), -1 + (var7 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1)), 15204352);
                         } else {
                           if (var8_ref_oha.field_b == 1) {
-                            nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + var6_int - 1, -(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1) + var7 - 1, 818659);
+                            nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + var6_int - 1, -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1) + var7 - 1, 818659);
                           }
                         }
                       } else {
-                        nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) - 1 + var6_int, -(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1) + (var7 - 1), 51233);
+                        nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) - 1 + var6_int, -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1) + (var7 - 1), 51233);
                       }
                     }
                   } else {
-                    if (var8_ref_oha instanceof t) {
-                      if (((t) (var8_ref_oha)).field_p != 1 &&
-                        ((t) (var8_ref_oha)).field_p != 2) {
-                        if (((t) (var8_ref_oha)).field_p == 4) {
-                          nia.field_l[var8_ref_oha.field_b].e(-1 + var6_int - (nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1), -(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1) + (-1 + var7), 16769792);
+                    if (var8_ref_oha instanceof BasicMoveDefinition) {
+                      if (((BasicMoveDefinition) (var8_ref_oha)).field_p != 1 &&
+                        ((BasicMoveDefinition) (var8_ref_oha)).field_p != 2) {
+                        if (((BasicMoveDefinition) (var8_ref_oha)).field_p == 4) {
+                          nia.field_l[var8_ref_oha.field_b].e(-1 + var6_int - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1), -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1) + (-1 + var7), 16769792);
                         } else {
-                          nia.field_l[var8_ref_oha.field_b].e(-1 + (var6_int - (nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1)), var7 - (1 + (nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1)), 15204352);
+                          nia.field_l[var8_ref_oha.field_b].e(-1 + (var6_int - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1)), var7 - (1 + (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1)), 15204352);
                         }
                         break regionExit1;
                       }
-                      nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + (var6_int - 1), var7 - 1 - (nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1), 818659);
+                      nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + (var6_int - 1), var7 - 1 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1), 818659);
                     }
                   }
                 }
               } else {
-                nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + (-1 + var6_int), var7 - 1 - (nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1), 51233);
+                nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + (-1 + var6_int), var7 - 1 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1), 51233);
               }
             }
             CreatureType.a(true, -15 + BuffVendorAnimation.field_A[var5][1], -15 + BuffVendorAnimation.field_A[var5][0], IsaacRandom.field_f.field_b[BananarangEvent.field_s.field_g.field_m[var5]], 78);
@@ -419,10 +419,10 @@ final class mk {
         int var4;
         int var5;
         int var6;
-        oha var7;
+        MoveDefinition var7;
         int var8;
-        oha var9;
-        oha var10;
+        MoveDefinition var9;
+        MoveDefinition var10;
         var8 = BachelorFridge.field_y;
         if (param0) {
           this.field_i = (Sprite) null;
@@ -448,7 +448,7 @@ final class mk {
             }
             var6 = stackIn_20_0;
             if (var6 != 0) {
-              var10 = ur.field_e[bf.field_g[var3].field_vb];
+              var10 = WhirlpoolDigest.field_e[bf.field_g[var3].field_vb];
               var7 = var10;
               if (BananarangEvent.field_s.field_g.a(bf.field_g[var3].field_vb, 9)) {
                 a.field_o.rotateNearest(a.field_o.field_n << 3, a.field_o.field_o << 3, (1 + var4) * 16, 16 * var5 + 16, 0, 4096);
@@ -456,50 +456,50 @@ final class mk {
               boolean decompiledFrameRemainder2 = true;
               OneAnimation.field_E.a(0, var5, var4, -1049413117, 4096);
               if (!(var7 instanceof tv)) {
-                if (!(var7 instanceof hd)) {
+                if (!(var7 instanceof SpecialMoveDefinition)) {
                   if (!(var7 instanceof a)) {
-                    if (var7 instanceof t) {
-                      if (((t) (var10)).field_p != 1 &&
-                        ((t) (var10)).field_p != 2) {
-                        if (((t) (var10)).field_p == 4) {
-                          nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(var4 - 1 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1), -(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + var5 - 1, 16769792);
+                    if (var7 instanceof BasicMoveDefinition) {
+                      if (((BasicMoveDefinition) (var10)).field_p != 1 &&
+                        ((BasicMoveDefinition) (var10)).field_p != 2) {
+                        if (((BasicMoveDefinition) (var10)).field_p == 4) {
+                          nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(var4 - 1 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1), -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + var5 - 1, 16769792);
                         } else {
-                          nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(-1 + (var4 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), -1 + (var5 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 15204352);
+                          nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(-1 + (var4 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), -1 + (var5 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 15204352);
                         }
                         decompiledFrameRemainder2 = false;
                       }
                       else {
-                        nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + var4 - 1, -1 + var5 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1), 818659);
+                        nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + var4 - 1, -1 + var5 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1), 818659);
                       }
                     }
                   } else {
                     if (var10.field_b == 3) {
-                      nia.field_l[var10.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + (var4 - 1), -1 + var5 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1), 16769792);
+                      nia.field_l[var10.field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + (var4 - 1), -1 + var5 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1), 16769792);
                     } else {
                       if (var10.field_b == 4) {
-                        nia.field_l[var10.field_b].e(-1 + var4 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1), var5 - (1 + (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 51233);
+                        nia.field_l[var10.field_b].e(-1 + var4 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1), var5 - (1 + (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 51233);
                       } else {
                         if (var10.field_b != 2) {
                           if (1 == var10.field_b) {
-                            nia.field_l[var10.field_b].e(-1 + (var4 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), var5 - (1 + (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 818659);
+                            nia.field_l[var10.field_b].e(-1 + (var4 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), var5 - (1 + (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 818659);
                           }
                         } else {
-                          nia.field_l[var10.field_b].e(var4 - 1 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1), -(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) - 1 + var5, 15204352);
+                          nia.field_l[var10.field_b].e(var4 - 1 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1), -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) - 1 + var5, 15204352);
                         }
                       }
                     }
                   }
                 } else {
-                  nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(-1 + (var4 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), -(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) - 1 + var5, 14971949);
+                  nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(-1 + (var4 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) - 1 + var5, 14971949);
                 }
               } else {
-                nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + var4 - 1, -(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + var5 - 1, 51233);
+                nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + var4 - 1, -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + var5 - 1, 51233);
               }
               CreatureType.a(true, bf.field_g[var3].field_rb, bf.field_g[var3].field_kb + 1, bf.field_g[var3].field_vb, 106);
             } else {
               if (var3 >= var2 && (2 > var3 ||
                 BananarangEvent.field_s.field_g.field_g[var3 - 2])) {
-                var9 = ur.field_e[bf.field_g[var3].field_vb];
+                var9 = WhirlpoolDigest.field_e[bf.field_g[var3].field_vb];
                 var7 = var9;
                 if (BananarangEvent.field_s.field_g.a(bf.field_g[var3].field_vb, 9)) {
                   a.field_o.rotateNearest(a.field_o.field_n << 3, a.field_o.field_o << 3, var4 * 16 + 16, (1 + var5) * 16, 0, 4096);
@@ -507,49 +507,49 @@ final class mk {
                 boolean decompiledFrameRemainder1 = true;
                 OneAnimation.field_E.a(0, var5, var4, -1049413117, 4096);
                 if (var7 instanceof tv) {
-                  nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(var4 - (1 + (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), -1 + (var5 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 51233);
+                  nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(var4 - (1 + (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), -1 + (var5 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 51233);
                 } else {
-                  if (!(var7 instanceof hd)) {
+                  if (!(var7 instanceof SpecialMoveDefinition)) {
                     if (var7 instanceof a) {
                       if (var9.field_b != 3) {
                         if (4 != var9.field_b) {
                           if (var9.field_b == 2) {
-                            nia.field_l[var9.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) - 1 + var4, -(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + var5 - 1, 15204352);
+                            nia.field_l[var9.field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) - 1 + var4, -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + var5 - 1, 15204352);
                           } else {
                             if (var9.field_b == 1) {
-                              nia.field_l[var9.field_b].e(-1 + (var4 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), -(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + (var5 - 1), 818659);
+                              nia.field_l[var9.field_b].e(-1 + (var4 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + (var5 - 1), 818659);
                             }
                           }
                         } else {
-                          nia.field_l[var9.field_b].e(-1 + var4 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1), -1 + var5 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1), 51233);
+                          nia.field_l[var9.field_b].e(-1 + var4 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1), -1 + var5 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1), 51233);
                         }
                       } else {
-                        nia.field_l[var9.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + (var4 - 1), -(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + (var5 - 1), 16769792);
+                        nia.field_l[var9.field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + (var4 - 1), -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + (var5 - 1), 16769792);
                       }
                     } else {
-                      if (var7 instanceof t) {
-                        if (((t) (var9)).field_p != 1 &&
-                          2 != ((t) (var9)).field_p) {
-                          if (((t) (var9)).field_p == 4) {
-                            nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + (var4 - 1), var5 - 1 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1), 16769792);
+                      if (var7 instanceof BasicMoveDefinition) {
+                        if (((BasicMoveDefinition) (var9)).field_p != 1 &&
+                          2 != ((BasicMoveDefinition) (var9)).field_p) {
+                          if (((BasicMoveDefinition) (var9)).field_p == 4) {
+                            nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + (var4 - 1), var5 - 1 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1), 16769792);
                           } else {
-                            nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + (var4 - 1), -(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + (var5 - 1), 15204352);
+                            nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + (var4 - 1), -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + (var5 - 1), 15204352);
                           }
                           decompiledFrameRemainder1 = false;
                         }
                         else {
-                          nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) - 1 + var4, var5 + (-1 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 818659);
+                          nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) - 1 + var4, var5 + (-1 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 818659);
                         }
                       }
                     }
                   } else {
-                    nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + var4 - 1, -(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + (var5 - 1), 14971949);
+                    nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + var4 - 1, -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + (var5 - 1), 14971949);
                   }
                 }
                 CreatureType.a(true, bf.field_g[var3].field_rb, 1 + bf.field_g[var3].field_kb, bf.field_g[var3].field_vb, 106);
                 RefreshingAnimation.field_v.rotateNearest(RefreshingAnimation.field_v.field_n << 3, RefreshingAnimation.field_v.field_o << 3, 16 * var4, var5 * 16, 0, 4096);
               } else {
-                hp.field_b[ur.field_e[bf.field_g[var3].field_vb].field_b].rotateNearest(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_n << 3, nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_o << 3, 16 * var4, 16 * var5, 0, 4096);
+                hp.field_b[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].rotateNearest(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_n << 3, nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_o << 3, 16 * var4, 16 * var5, 0, 4096);
               }
             }
             decompiledFrameRemainder0 = false;
@@ -615,7 +615,7 @@ final class mk {
             discarded$0 = this.a(true);
           }
           for (var8 = 0; param1 > var8; var8++) {
-            var7_int = var7_int + ad.field_m[var8];
+            var7_int = var7_int + CreatureActor.field_m[var8];
           }
           SoftwareRasterizer.setClip(param4, param3, param4 + var7_int, 28 + param3);
           param2.draw(param4, param3);
@@ -688,7 +688,7 @@ final class mk {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 != 1) {
           return;
@@ -698,7 +698,7 @@ final class mk {
         field_y = null;
     }
 
-    mk(jfa param0, boolean param1, int param2) {
+    mk(FridgeCreature param0, boolean param1, int param2) {
         Sprite var8 = null;
         Sprite var9 = null;
         Sprite var10 = null;
@@ -724,7 +724,7 @@ final class mk {
           BananarangEvent.field_v.field_A = RageSpecial.field_p;
           BananarangEvent.field_v.field_db = BattleState.field_I;
           BananarangEvent.field_v.field_N = 1;
-          this.field_u = new sna("confirm", BananarangEvent.field_v, 470, 320, jha.field_g.a(di.field_l) + 40, 40, di.field_l);
+          this.field_u = new UiComponent("confirm", BananarangEvent.field_v, 470, 320, jha.field_g.a(di.field_l) + 40, 40, di.field_l);
           SleepAnimation.field_w = new hw[5];
           bf.field_g = new hw[15];
           uma.n(1);

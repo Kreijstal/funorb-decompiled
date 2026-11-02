@@ -6,7 +6,7 @@ final class af {
     static boolean field_a;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 9680) {
           af.a(73, 86);
           field_b = null;

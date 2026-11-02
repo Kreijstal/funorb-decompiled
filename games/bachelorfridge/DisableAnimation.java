@@ -6,10 +6,10 @@ final class DisableAnimation extends EventAnimation {
     static wba field_x;
     private DisableEvent field_A;
     static Sprite field_y;
-    static sna field_z;
+    static UiComponent field_z;
     static int field_w;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
         if (fieldTemp$0 < 0) {
@@ -24,7 +24,7 @@ final class DisableAnimation extends EventAnimation {
         return false;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_z = null;
         field_v = null;
         field_x = null;
@@ -32,7 +32,7 @@ final class DisableAnimation extends EventAnimation {
         field_y = null;
     }
 
-    DisableAnimation(gj param0, DisableEvent param1) {
+    DisableAnimation(BattleScreen param0, DisableEvent param1) {
         super(param0, param1);
         try {
           this.field_A = param1;

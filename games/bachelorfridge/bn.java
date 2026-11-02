@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class bn extends kj {
+final class bn extends TileEffect {
     private IntrusiveDeque field_g;
     static IndexedSprite field_h;
     private int field_f;
     static IndexedSprite field_i;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_h = null;
         if (param0 <= 93) {
@@ -35,7 +35,7 @@ final class bn extends kj {
         var4 = BachelorFridge.field_y;
         try {
           if (SuperSpeedAllEvent.field_r >= 10) {
-            if (!ad.d((byte) 27)) {
+            if (!CreatureActor.d((byte) 27)) {
               SoftwareRasterizer.clear();
               rha.a(240, false, 320);
               IncomingEvent.a(0, -83, param1, 0);
@@ -74,7 +74,7 @@ final class bn extends kj {
         }
     }
 
-    bn(gj param0, int param1, int param2) {
+    bn(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_f = 128;

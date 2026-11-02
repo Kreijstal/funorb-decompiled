@@ -98,7 +98,7 @@ final class FullHealEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         String var4 = null;
         FullHealAnimation stackIn_3_0 = null;

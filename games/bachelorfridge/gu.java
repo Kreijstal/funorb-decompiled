@@ -23,7 +23,7 @@ final class gu {
           return;
         }
         try {
-          nda.a(param0, new lda(param12), ge.field_I, param6, wk.field_f, param3, param3, new lda(param8), param14, false, raa.field_I, ru.field_c, param10, param6, wo.field_j, param4, param11, param4, ScavengerSpecial.field_v, param9);
+          nda.a(param0, new lda(param12), ge.field_I, param6, wk.field_f, param3, param3, new lda(param8), param14, false, raa.field_I, NanoGameClock.field_c, param10, param6, wo.field_j, param4, param11, param4, ScavengerSpecial.field_v, param9);
           qb.a(param13, param7, param5, param2 ^ -6107, param1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gu.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');

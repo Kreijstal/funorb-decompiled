@@ -6,7 +6,7 @@ final class rt {
     static String field_c;
     static PcmSample[] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 > -53) {
           field_c = (String) null;
@@ -30,8 +30,8 @@ final class rt {
           if (oq.field_b != null) {
             oq.field_b.p(param2 - 85);
           }
-          ola.field_e = new ph(param0, param1, false, true, true);
-          kka.field_l.e(ola.field_e, param2 + 24);
+          FridgeScreen.field_e = new ph(param0, param1, false, true, true);
+          kka.field_l.e(FridgeScreen.field_e, param2 + 24);
           if (param2 == 9) {
             return;
           }

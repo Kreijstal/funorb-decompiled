@@ -3,28 +3,28 @@
  */
 abstract class aba extends pk implements fca {
     static boolean field_f;
-    private lka field_e;
+    private TextInputWidget field_e;
 
     final jg c(byte param0) {
         if (param0 == 35) {
-          return this.a(this.field_e.field_w, false);
+          return this.a(this.field_e.text, false);
         }
         field_f = true;
-        return this.a(this.field_e.field_w, false);
+        return this.a(this.field_e.text, false);
     }
 
     public final boolean b(byte param0) {
         if (param0 != 5) {
           field_f = true;
-          if (null != this.field_e.field_w) {
-            return this.field_e.field_w.length() == 0 ? true : false;
+          if (null != this.field_e.text) {
+            return this.field_e.text.length() == 0 ? true : false;
           }
           return true;
         }
-        if (null == this.field_e.field_w) {
+        if (null == this.field_e.text) {
           return true;
         }
-        if (this.field_e.field_w.length() != 0) {
+        if (this.field_e.text.length() != 0) {
           return false;
         }
         return true;
@@ -64,7 +64,7 @@ abstract class aba extends pk implements fca {
         }
     }
 
-    public final void a(lka param0, byte param1) {
+    public final void a(TextInputWidget param0, byte param1) {
         try {
           int var3_int = 96 % ((param1 - 0) / 49);
           this.a(574);
@@ -77,7 +77,7 @@ abstract class aba extends pk implements fca {
         if (param0 < 97) {
           return (String) null;
         }
-        return this.a((byte) 112, this.field_e.field_w);
+        return this.a((byte) 112, this.field_e.text);
     }
 
     final static void a(byte param0, int param1) {
@@ -85,7 +85,7 @@ abstract class aba extends pk implements fca {
         ol.a(PizzaPartyAnimation.field_y[param1], true);
     }
 
-    public final void a(lka param0, int param1) {
+    public final void a(TextInputWidget param0, int param1) {
         try {
           if (param1 != 0) {
             this.c((byte) 6);
@@ -128,7 +128,7 @@ abstract class aba extends pk implements fca {
 
     abstract String a(byte param0, String param1);
 
-    aba(lka param0) {
+    aba(TextInputWidget param0) {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {

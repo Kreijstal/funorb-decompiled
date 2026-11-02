@@ -182,7 +182,7 @@ final class lha {
 
     final static int a(byte param0) {
         if (param0 >= -47) {
-          lha.a(-54);
+          lha.releaseStatics(-54);
         }
         return fga.field_f;
     }
@@ -210,7 +210,7 @@ final class lha {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           field_b = (BitmapFont) null;
         }
@@ -338,7 +338,7 @@ final class lha {
               var2_ref.printStackTrace();
             }
             if (param1 != -17672) {
-              lha.a(-63);
+              lha.releaseStatics(-63);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

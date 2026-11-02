@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rja extends mv {
-    private gj field_p;
+    private BattleScreen field_p;
     private ce field_q;
     static int field_o;
 
@@ -24,10 +24,10 @@ final class rja extends mv {
         }
     }
 
-    rja(gj param0, ce param1) {
+    rja(BattleScreen param0, ce param1) {
         super(param0, param1);
-        ad var3 = null;
-        ad var5 = null;
+        CreatureActor var3 = null;
+        CreatureActor var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -55,7 +55,7 @@ final class rja extends mv {
               var5.a(16761024, 110, dc.field_o);
             }
           }
-          this.a(27799, new qf(this.field_p, this.field_q.creature, this.field_q.moveId, this.field_q.field_q, this.field_q.field_v, false));
+          this.addChild(27799, new qf(this.field_p, this.field_q.creature, this.field_q.moveId, this.field_q.field_q, this.field_q.field_v, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

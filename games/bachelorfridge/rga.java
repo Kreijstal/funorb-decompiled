@@ -4,20 +4,20 @@
 final class rga {
     static qia field_c;
     static String[] field_b;
-    static ad[] field_a;
+    static CreatureActor[] field_a;
 
     public final String toString() {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == -84) {
           field_a = null;
           field_b = null;
           field_c = null;
           return;
         }
-        field_a = (ad[]) null;
+        field_a = (CreatureActor[]) null;
         field_a = null;
         field_b = null;
         field_c = null;

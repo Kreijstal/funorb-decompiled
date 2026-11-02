@@ -13,7 +13,7 @@ final class vla extends mv {
     static boolean field_s;
     static String field_p;
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         field_t = null;
         field_p = null;
@@ -30,7 +30,7 @@ final class vla extends mv {
 
     final void e(int param0) {
         EventEffect var2 = null;
-        ad var3 = null;
+        CreatureActor var3 = null;
         int var4 = BachelorFridge.field_y;
         if (param0 != ~this.field_k.field_p) {
           var2 = (EventEffect) (this.field_k.field_o.b((byte) 90));
@@ -47,7 +47,7 @@ final class vla extends mv {
         }
     }
 
-    vla(gj param0, AttackEvent param1) {
+    vla(BattleScreen param0, AttackEvent param1) {
         super(param0, param1);
         try {
           this.field_q = 64;
@@ -56,11 +56,11 @@ final class vla extends mv {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         Object var6 = null;
-        t var6_ref = (t) (al.a(-69, this.field_k.moveId));
+        BasicMoveDefinition var6_ref = (BasicMoveDefinition) (al.a(-69, this.field_k.moveId));
         BattleCreature var3 = this.field_k.creature.a(125, this.field_l.field_h);
-        ad var4 = this.field_k.creature.a(-27449, this.field_l);
+        CreatureActor var4 = this.field_k.creature.a(-27449, this.field_l);
         this.field_l.field_s.a((byte) -57, var3.tileY, var3.tileX);
         if (var3.isDown(91)) {
           return true;
@@ -197,7 +197,7 @@ final class vla extends mv {
           }
           return;
         }
-        vla.f((byte) -87);
+        vla.releaseStatics((byte) -87);
         if (!MoveOrder.field_k) {
           return;
         }

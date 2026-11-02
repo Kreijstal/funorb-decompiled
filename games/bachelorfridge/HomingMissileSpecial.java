@@ -17,7 +17,7 @@ final class HomingMissileSpecial extends SpecialOrder {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         field_q = null;
         field_s = null;
@@ -132,7 +132,7 @@ final class HomingMissileSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var6 = 0;
         int var7 = 0;
         CreatureEvent stackIn_3_0 = null;

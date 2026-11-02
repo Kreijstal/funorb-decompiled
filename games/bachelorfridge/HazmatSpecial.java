@@ -40,7 +40,7 @@ final class HazmatSpecial extends SpecialOrder {
         field_p = null;
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         RuntimeException var3 = null;
         HazmatEvent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

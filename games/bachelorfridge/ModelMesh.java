@@ -154,7 +154,7 @@ final class ModelMesh extends ModelMeshBase {
         this.field_K = true;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_D = null;
         field_z = null;
         field_p = null;

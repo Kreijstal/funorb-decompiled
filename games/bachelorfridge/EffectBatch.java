@@ -5,19 +5,19 @@ final class EffectBatch extends BattleUpdate {
     static uha field_n;
     IntrusiveDeque field_m;
     static Sprite[] field_k;
-    static sna field_l;
+    static UiComponent field_l;
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
-        jma stackIn_4_0 = null;
+        EffectBatchAnimation stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 5) {
-            stackIn_4_0 = new jma(param1, this);
+            stackIn_4_0 = new EffectBatchAnimation(param1, this);
             return (AnimationNode) ((Object) stackIn_4_0);
           }
           stackIn_2_0 = (AnimationNode) null;
@@ -47,7 +47,7 @@ final class EffectBatch extends BattleUpdate {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 15 % ((-53 - param3) / 36);
         if (param2 == param4) {
-          ur.a(param4, param7, param5, param0, param1, param6, 512);
+          WhirlpoolDigest.a(param4, param7, param5, param0, param1, param6, 512);
           return;
         }
         if (param7 - param4 < DualLinkNode.field_l) {
@@ -69,7 +69,7 @@ final class EffectBatch extends BattleUpdate {
         SnowAnimation.a(true, param4, param1, param6, param5, param2, param0, param7);
     }
 
-    final void a(BattleState param0, boolean param1) {
+    final void apply(BattleState param0, boolean param1) {
         int var4 = 0;
         EventEffect var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -84,7 +84,7 @@ final class EffectBatch extends BattleUpdate {
           }
           var5 = (EventEffect) (this.field_m.b((byte) 90));
           while (var5 != null) {
-            var5.a((BattleCreature) null, param0, 12);
+            var5.apply((BattleCreature) null, param0, 12);
             var5 = (EventEffect) (this.field_m.c(0));
           }
           return;
@@ -102,7 +102,7 @@ final class EffectBatch extends BattleUpdate {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != -4) {
           return;
@@ -172,7 +172,7 @@ final class EffectBatch extends BattleUpdate {
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void write(PacketBuffer param0, int param1) {
         EventEffect var3 = null;
         int var4 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -216,7 +216,7 @@ final class EffectBatch extends BattleUpdate {
             } else {
               param0.writeByte(1, 0);
             }
-            var3.a(param0, (byte) -56);
+            var3.write(param0, (byte) -56);
             var3 = (EventEffect) (this.field_m.c(param1 ^ -9));
           }
           return;

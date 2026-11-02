@@ -6,7 +6,7 @@ final class lia extends EventEffect {
     static lm field_j;
     static boolean field_i;
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         String var5 = null;
         BattleCreature var6 = null;
         BattleCreature var7 = null;
@@ -65,19 +65,19 @@ final class lia extends EventEffect {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 22) {
           return;
         }
         field_j = null;
     }
 
-    final static qh a(int param0) {
+    final static WidgetTheme a(int param0) {
         if (param0 != 5) {
           field_j = (lm) null;
         }
         if (null == go.field_s) {
-          go.field_s = new qh();
+          go.field_s = new WidgetTheme();
           go.field_s.a(jca.field_a, true);
           go.field_s.field_k = 0;
           go.field_s.field_f = 2763306;
@@ -91,7 +91,7 @@ final class lia extends EventEffect {
         return go.field_s;
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           FlirtAnimation.a(this.target, 125, param0);
           param0.b(this.field_f, -113);

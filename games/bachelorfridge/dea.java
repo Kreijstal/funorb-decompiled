@@ -4,7 +4,7 @@
 final class dea extends lw {
     static String field_l;
     static java.awt.Color field_o;
-    static sna field_m;
+    static UiComponent field_m;
     static int field_n;
 
     dea() {
@@ -17,14 +17,14 @@ final class dea extends lw {
           qd.field_q = param1;
           MassPoisonSpecial.field_p = param0;
           if (param2 < 114) {
-            dea.d(124);
+            dea.releaseStatics(124);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "dea.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_l = null;
         if (param0 != -35) {
@@ -147,7 +147,7 @@ final class dea extends lw {
 
     final void a(byte param0) {
         if (param0 <= 103) {
-          dea.d(-51);
+          dea.releaseStatics(-51);
         }
     }
 

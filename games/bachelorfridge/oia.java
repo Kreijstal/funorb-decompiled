@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class oia extends kj {
+final class oia extends TileEffect {
     private int field_h;
     private IntrusiveDeque field_g;
     static long field_f;
@@ -91,11 +91,11 @@ final class oia extends kj {
     final void a(int param0, int param1, int param2) {
         BananarangAnimation.a(this.field_g, true, 65280, param2, param0, 10);
         if (param1 != 0) {
-          oia.c(85);
+          oia.releaseStatics(85);
         }
     }
 
-    oia(gj param0, int param1, int param2) {
+    oia(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_h = 128;
@@ -105,7 +105,7 @@ final class oia extends kj {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         int var1 = 50 / ((param0 - 13) / 37);
     }

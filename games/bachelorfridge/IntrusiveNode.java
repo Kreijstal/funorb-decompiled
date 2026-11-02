@@ -3,16 +3,16 @@
  */
 class IntrusiveNode {
     IntrusiveNode next;
-    static sna field_a;
+    static UiComponent field_a;
     long key;
     IntrusiveNode previous;
     static String field_d;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_a = null;
         if (param0 != 127) {
-          IntrusiveNode.b((byte) 117);
+          IntrusiveNode.releaseStatics((byte) 117);
         }
     }
 
@@ -34,7 +34,7 @@ class IntrusiveNode {
           return false;
         }
         if (param0 != -106) {
-          field_a = (sna) null;
+          field_a = (UiComponent) null;
           return true;
         }
         return true;

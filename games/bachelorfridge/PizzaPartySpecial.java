@@ -7,13 +7,13 @@ final class PizzaPartySpecial extends SpecialOrder {
     static String field_p;
     static int[] field_q;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_p = null;
         int var1 = 114 % ((-67 - param0) / 47);
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         int fieldTemp$0 = 0;

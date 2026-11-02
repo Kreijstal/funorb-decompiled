@@ -13,7 +13,7 @@ final class fj extends IntrusiveNode {
     int field_h;
     int[] field_o;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 22) {
           return;
         }

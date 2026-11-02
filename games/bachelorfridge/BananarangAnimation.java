@@ -21,7 +21,7 @@ final class BananarangAnimation extends EventAnimation {
     static Sprite field_y;
     static int[] field_z;
     static long[] field_C;
-    private ad field_R;
+    private CreatureActor field_R;
     static String field_A;
     static String field_E;
     static byte[][] field_P;
@@ -109,7 +109,7 @@ final class BananarangAnimation extends EventAnimation {
         Runtime.getRuntime().gc();
     }
 
-    BananarangAnimation(gj param0, BananarangEvent param1) {
+    BananarangAnimation(BattleScreen param0, BananarangEvent param1) {
         super(param0, param1);
         this.field_L = 0;
         this.field_N = false;
@@ -129,7 +129,7 @@ final class BananarangAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var3 = 0;
         int var4 = 0;
         aj var5 = null;
@@ -174,7 +174,7 @@ final class BananarangAnimation extends EventAnimation {
 
     private final void f(int param0) {
         if (param0 > -98) {
-          this.field_R = (ad) null;
+          this.field_R = (CreatureActor) null;
           if (!this.field_B.effects.e(12917)) {
             throw new IllegalStateException();
           }
@@ -227,7 +227,7 @@ final class BananarangAnimation extends EventAnimation {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_E = null;
         field_P = (byte[][]) null;

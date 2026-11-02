@@ -7,7 +7,7 @@ final class ClearTileFlagEffect extends EventEffect {
     private int field_l;
     static String field_k;
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         BoardTile var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -44,14 +44,14 @@ final class ClearTileFlagEffect extends EventEffect {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         int var1 = -57 / ((-39 - param0) / 35);
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) 101);
+          super.write(param0, (byte) 101);
           int var3_int = 57 / ((34 - param1) / 58);
           param0.writeByte(this.field_i, 0);
           param0.writeByte(this.field_l, 0);

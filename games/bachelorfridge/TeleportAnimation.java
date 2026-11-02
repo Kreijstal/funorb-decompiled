@@ -27,7 +27,7 @@ final class TeleportAnimation extends EventAnimation {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        ur var5 = null;
+        WhirlpoolDigest var5 = null;
         byte[] var6 = null;
         var7 = BachelorFridge.field_y;
         try {
@@ -40,7 +40,7 @@ final class TeleportAnimation extends EventAnimation {
           } else {
             var4 = param1;
           }
-          var5 = new ur();
+          var5 = new WhirlpoolDigest();
           var5.b(true);
           var5.a(var4, (long)(param0 * param3), 0);
           var6 = new byte[64];
@@ -62,8 +62,8 @@ final class TeleportAnimation extends EventAnimation {
     }
 
     private final void g(int param0) {
-        ad var4 = null;
-        ad var6 = null;
+        CreatureActor var4 = null;
+        CreatureActor var6 = null;
         MoveCreatureEffect var5 = null;
         int var7 = BachelorFridge.field_y;
         if (param0 != 0) {
@@ -83,14 +83,14 @@ final class TeleportAnimation extends EventAnimation {
             var6 = var5.target.a(-27449, this.screen);
             this.screen.a(var5.field_i, var6, (byte) -106, var5.field_l);
           } else {
-            var3.a(var8, this.screen.field_h, 12);
+            var3.apply(var8, this.screen.field_h, 12);
           }
           var3 = (EventEffect) (this.field_A.effects.c(0));
         }
         this.field_y = true;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_v = null;
         field_x = null;
         if (param0 != 4) {
@@ -108,7 +108,7 @@ final class TeleportAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = 32 % ((71 - param0) / 47);
         if (this.field_m.isLinked((byte) -106)) {
           return false;
@@ -124,8 +124,8 @@ final class TeleportAnimation extends EventAnimation {
             return false;
           }
           this.g(0);
-          this.field_m = new taa(this.screen, this.field_n);
-          this.a(27799, this.field_m);
+          this.field_m = new ActorAnimation(this.screen, this.field_n);
+          this.addChild(27799, this.field_m);
           this.field_n.field_p = 1;
           return false;
         }
@@ -142,7 +142,7 @@ final class TeleportAnimation extends EventAnimation {
         return true;
     }
 
-    TeleportAnimation(gj param0, TeleportEvent param1) {
+    TeleportAnimation(BattleScreen param0, TeleportEvent param1) {
         super(param0, param1);
         try {
           this.field_n.field_p = -256;

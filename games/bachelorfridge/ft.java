@@ -7,24 +7,24 @@ final class ft extends IntrusiveNode {
     int field_g;
 
     final static void a(int param0) {
-        kt.field_m = new sna(0L, (sna) null);
+        kt.field_m = new UiComponent(0L, (UiComponent) null);
         if (IntrusiveDeque.field_c) {
           kt.field_m.a(-1, dea.field_m);
         }
         kt.field_m.a(-1, tv.field_o);
         if (param0 == 2048) {
           lia.field_j = new lm(FlyEvent.field_r, kt.field_m);
-          ng.field_e = new sna(0L, (sna) null);
-          ng.field_e.a(-1, lia.field_j.field_a);
-          ng.field_e.a(-1, mc.field_g);
+          MoveInfoPanel.field_e = new UiComponent(0L, (UiComponent) null);
+          MoveInfoPanel.field_e.a(-1, lia.field_j.field_a);
+          MoveInfoPanel.field_e.a(-1, mc.field_g);
           kf.a((byte) -6);
           return;
         }
         ft.a(93);
         lia.field_j = new lm(FlyEvent.field_r, kt.field_m);
-        ng.field_e = new sna(0L, (sna) null);
-        ng.field_e.a(-1, lia.field_j.field_a);
-        ng.field_e.a(-1, mc.field_g);
+        MoveInfoPanel.field_e = new UiComponent(0L, (UiComponent) null);
+        MoveInfoPanel.field_e.a(-1, lia.field_j.field_a);
+        MoveInfoPanel.field_e.a(-1, mc.field_g);
         kf.a((byte) -6);
     }
 
@@ -69,7 +69,7 @@ final class ft extends IntrusiveNode {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         int var1 = -81 / ((param0 - 3) / 50);
     }

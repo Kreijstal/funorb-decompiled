@@ -54,7 +54,7 @@ final class BagpipeSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         CreatureEvent stackIn_3_0 = null;
@@ -128,7 +128,7 @@ final class BagpipeSpecial extends SpecialOrder {
     }
 
     final static int a(byte param0, int param1) {
-        String var2 = lka.field_E[param1][14];
+        String var2 = TextInputWidget.field_E[param1][14];
         var2 = var2.trim();
         var2 = var2.toLowerCase();
         if (param0 != 91) {
@@ -140,7 +140,7 @@ final class BagpipeSpecial extends SpecialOrder {
         return ((ji) (i.field_h.a(true, (long)var2.hashCode()))).field_h;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_q = null;
         if (param0 != 14) {

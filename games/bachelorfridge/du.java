@@ -23,18 +23,18 @@ final class du {
             var3 = (String) null;
             du.a((String) null, (byte) -83);
           }
-          if (dka.field_G == kq.field_j) {
+          if (ReportAbusePanel.field_G == kq.field_j) {
             stackIn_4_0 = null;
             return (eq) (stackIn_4_0);
           }
-          if (dka.field_G == OhNoAnimation.field_w &&
+          if (ReportAbusePanel.field_G == OhNoAnimation.field_w &&
             param0.equals(BagpipeAnimation.field_w)) {
-            dka.field_G = tn.field_a;
+            ReportAbusePanel.field_G = GameClock.field_a;
             stackIn_8_0 = vo.field_d;
             return stackIn_8_0;
           }
           BagpipeAnimation.field_w = param0;
-          dka.field_G = kq.field_j;
+          ReportAbusePanel.field_G = kq.field_j;
           vo.field_d = null;
           stackIn_10_0 = null;
           return (eq) (stackIn_10_0);
@@ -61,7 +61,7 @@ final class du {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 8192) {
           field_a = (IntrusiveNodeHashTable) null;

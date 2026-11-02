@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ok extends sna {
-    sna field_wb;
+final class ok extends UiComponent {
+    UiComponent field_wb;
     static String field_Cb;
     static int field_vb;
     static byte[][] field_zb;
-    sna field_yb;
+    UiComponent field_yb;
     static int field_Bb;
     sga field_xb;
-    sna field_Ab;
+    UiComponent field_Ab;
 
     final static boolean a(CharSequence param0, char param1, byte param2) {
         int var3_int = 0;
@@ -53,9 +53,9 @@ final class ok extends sna {
         }
     }
 
-    final static sna f(byte param0) {
+    final static UiComponent f(byte param0) {
         if (param0 != -15) {
-          return (sna) null;
+          return (UiComponent) null;
         }
         return p.field_n.field_vb;
     }
@@ -64,13 +64,13 @@ final class ok extends sna {
         this(param0, param1, param1.field_xb.field_wb, param1.field_xb.field_xb, param1.field_Ab, param2, param3);
     }
 
-    ok(long param0, sna param1, sna param2, cw param3, sna param4, String param5, String param6) {
+    ok(long param0, UiComponent param1, UiComponent param2, cw param3, UiComponent param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_wb = new sna(0L, (sna) null);
+          this.field_wb = new UiComponent(0L, (UiComponent) null);
           this.field_xb = new sga(0L, this.field_wb, param2, param3);
-          this.field_Ab = new sna(0L, param4);
-          this.field_yb = new sna(0L, param4);
+          this.field_Ab = new UiComponent(0L, param4);
+          this.field_yb = new UiComponent(0L, param4);
           this.field_Ab.field_Z = param5;
           this.field_yb.field_Z = param6;
           this.a(-1, this.field_xb);
@@ -113,7 +113,7 @@ final class ok extends sna {
         this.field_yb.field_sb = -var5 + this.field_sb;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_Cb = null;
         if (param0 != 7576) {
           ok.c(53, 83);

@@ -3,7 +3,7 @@
  */
 final class aq {
     static int[] field_a;
-    static sna field_b;
+    static UiComponent field_b;
 
     final static void a(int param0, byte param1) {
         BitPacketBuffer var2 = null;
@@ -83,11 +83,11 @@ final class aq {
         aq.a(-13, (byte) 0);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 >= -123) {
-          field_b = (sna) null;
+          field_b = (UiComponent) null;
         }
     }
 

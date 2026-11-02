@@ -4,8 +4,8 @@
 final class rka extends ida {
     private CreatureRef field_t;
 
-    final boolean c(byte param0) {
-        ad var2 = this.field_p.a(-27449, this.field_s);
+    final boolean isFinished(byte param0) {
+        CreatureActor var2 = this.field_p.a(-27449, this.field_s);
         int fieldTemp$0 = this.field_n + 1;
         this.field_n = this.field_n + 1;
         if (fieldTemp$0 < 0) {
@@ -23,7 +23,7 @@ final class rka extends ida {
     }
 
     private final void e(byte param0) {
-        ad var2 = this.field_p.a(-27449, this.field_s);
+        CreatureActor var2 = this.field_p.a(-27449, this.field_s);
         this.field_s.a(132, this.field_t.a(-27449, this.field_s), this.field_r, this.field_k, var2);
         var2.b(false);
         var2.field_r = 0;
@@ -32,7 +32,7 @@ final class rka extends ida {
         var2.field_o = 0;
     }
 
-    rka(gj param0, CreatureRef param1, CreatureRef param2, int param3, int param4) {
+    rka(BattleScreen param0, CreatureRef param1, CreatureRef param2, int param3, int param4) {
         super(param0, param1, param3, param4);
         try {
           this.field_t = param2;

@@ -6,7 +6,7 @@ final class ni extends pv {
     static String field_k;
     static Sprite field_j;
 
-    ni(jfa param0) {
+    ni(FridgeCreature param0) {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
@@ -96,12 +96,12 @@ final class ni extends pv {
         return false;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_j = null;
         field_l = null;
         if (param0 >= -48) {
-          ni.b(113);
+          ni.releaseStatics(113);
         }
     }
 

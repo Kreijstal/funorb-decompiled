@@ -66,31 +66,31 @@ final class DualLinkNodeHashTable {
     }
 
     final static void c(byte param0) {
-        ru.field_d[44] = 71;
-        ru.field_d[93] = 43;
-        ru.field_d[92] = 74;
+        NanoGameClock.field_d[44] = 71;
+        NanoGameClock.field_d[93] = 43;
+        NanoGameClock.field_d[92] = 74;
         if (param0 >= 0) {
-          ru.field_d[46] = 72;
-          ru.field_d[61] = 27;
-          ru.field_d[59] = 57;
-          ru.field_d[520] = 59;
-          ru.field_d[222] = 58;
-          ru.field_d[192] = 28;
-          ru.field_d[45] = 26;
-          ru.field_d[47] = 73;
-          ru.field_d[91] = 42;
+          NanoGameClock.field_d[46] = 72;
+          NanoGameClock.field_d[61] = 27;
+          NanoGameClock.field_d[59] = 57;
+          NanoGameClock.field_d[520] = 59;
+          NanoGameClock.field_d[222] = 58;
+          NanoGameClock.field_d[192] = 28;
+          NanoGameClock.field_d[45] = 26;
+          NanoGameClock.field_d[47] = 73;
+          NanoGameClock.field_d[91] = 42;
           return;
         }
         field_b = 39;
-        ru.field_d[46] = 72;
-        ru.field_d[61] = 27;
-        ru.field_d[59] = 57;
-        ru.field_d[520] = 59;
-        ru.field_d[222] = 58;
-        ru.field_d[192] = 28;
-        ru.field_d[45] = 26;
-        ru.field_d[47] = 73;
-        ru.field_d[91] = 42;
+        NanoGameClock.field_d[46] = 72;
+        NanoGameClock.field_d[61] = 27;
+        NanoGameClock.field_d[59] = 57;
+        NanoGameClock.field_d[520] = 59;
+        NanoGameClock.field_d[222] = 58;
+        NanoGameClock.field_d[192] = 28;
+        NanoGameClock.field_d[45] = 26;
+        NanoGameClock.field_d[47] = 73;
+        NanoGameClock.field_d[91] = 42;
     }
 
     final DualLinkNode a(int param0) {

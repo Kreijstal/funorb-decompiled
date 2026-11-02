@@ -12,8 +12,8 @@ final class TeleportEvent extends SpecialEvent {
           super.a((byte) -38, param1);
           param1.writeByte(this.field_q, 0);
           if (param0 > -12) {
-            gj var4 = (gj) null;
-            this.a(-92, (gj) null);
+            BattleScreen var4 = (BattleScreen) null;
+            this.createAnimation(-92, (BattleScreen) null);
           }
           param1.writeByte(this.field_t, 0);
         } catch (RuntimeException runtimeException) {
@@ -21,7 +21,7 @@ final class TeleportEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         PacketBuffer var4 = null;
         TeleportAnimation stackIn_3_0 = null;

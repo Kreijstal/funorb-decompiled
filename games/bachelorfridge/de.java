@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class de extends wj {
+final class de extends UiWidget {
     private Sprite field_N;
     private Sprite field_H;
     static int field_E;
@@ -36,8 +36,8 @@ final class de extends wj {
         int var8 = 0;
         var8 = BachelorFridge.field_y;
         try {
-          var5_int = param1 + this.field_p;
-          ah.a(-this.field_N.field_q + var5_int, (byte) -99, param0, param1 + this.field_N.field_q, this.field_q + param0);
+          var5_int = param1 + this.width;
+          ah.a(-this.field_N.field_q + var5_int, (byte) -99, param0, param1 + this.field_N.field_q, this.height + param0);
           var6 = param1 - this.field_C;
           if (param2 != 2) {
             de.d(12, 87, 19);
@@ -57,7 +57,7 @@ final class de extends wj {
           }
           if (SoftwareRasterizer.field_h >= var5_int - this.field_N.field_q) {
             bu.a(0, this.field_H);
-            for (var7 = -this.field_N.field_q + this.field_p + this.field_C; var7 > this.field_J * 2; var7 = var7 - this.field_J * 2) {
+            for (var7 = -this.field_N.field_q + this.width + this.field_C; var7 > this.field_J * 2; var7 = var7 - this.field_J * 2) {
             }
             param3.draw(-var7, 0);
             param3.draw(this.field_J * 2 - var7, 0);
@@ -101,7 +101,7 @@ final class de extends wj {
         field_A = null;
     }
 
-    final void a(int param0, int param1, wj param2, int param3) {
+    final void updateMouseOver(int param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -141,12 +141,12 @@ final class de extends wj {
         if (param0 != 5) {
           return (Sprite) null;
         }
-        int var2 = this.field_q >> 1;
-        Sprite var3 = new Sprite(var2, this.field_q);
+        int var2 = this.height >> 1;
+        Sprite var3 = new Sprite(var2, this.height);
         bu.a(param0 - 5, var3);
-        for (var4 = 0; this.field_q > var4; var4++) {
+        for (var4 = 0; this.height > var4; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.field_q - var4));
+            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.height - var4));
             var8 = 1;
             if (1.0 > var6) {
               var6 = Math.sqrt(1.0 - var6);
@@ -168,16 +168,16 @@ final class de extends wj {
         int var11 = 0;
         int var12 = 0;
         int var13 = BachelorFridge.field_y;
-        Sprite var14 = new Sprite(2 * this.field_J, this.field_q);
+        Sprite var14 = new Sprite(2 * this.field_J, this.height);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         bu.a(0, var14);
-        int var5 = this.field_q >> 1;
+        int var5 = this.height >> 1;
         if (param2 > -13) {
           de.d(117, -107, -102);
         }
-        for (var6 = 0; var6 < this.field_q; var6++) {
+        for (var6 = 0; var6 < this.height; var6++) {
           var7 = (var6 >> 1) * (-1 + this.field_J * 2) % (2 * this.field_J);
           var8 = 16711935 & param1;
           var9 = param1 & 65280;
@@ -208,19 +208,19 @@ final class de extends wj {
           de.d(84, 78, 72);
         }
         this.field_z = this.field_N.copyFlippedHorizontal();
-        this.field_H = new Sprite(this.field_q >> 1, this.field_q);
+        this.field_H = new Sprite(this.height >> 1, this.height);
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void draw(byte param0, int param1, int param2, int param3) {
         if (param2 != 0) {
           return;
         }
-        int var5 = param3 + this.field_s;
-        int var6 = this.field_v + param1;
+        int var5 = param3 + this.x;
+        int var6 = this.y + param1;
         int var7 = 102 % ((-20 - param0) / 54);
         this.a(var6, var5, 2, this.field_D[0]);
         if (this.field_M < 65536) {
-          ah.a(var5 + this.field_p, (byte) 97, var6, var5 + (this.field_p * this.field_M >> 16), this.field_q + var6);
+          ah.a(var5 + this.width, (byte) 97, var6, var5 + (this.width * this.field_M >> 16), this.height + var6);
           this.a(var6, var5, 2, this.field_D[1]);
           db.b(70);
         }

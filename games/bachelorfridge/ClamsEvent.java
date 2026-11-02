@@ -7,7 +7,7 @@ final class ClamsEvent extends SpecialEvent {
     static int field_v;
     int[][] field_r;
     static String field_s;
-    static sna field_u;
+    static UiComponent field_u;
 
     ClamsEvent(PacketBuffer param0) {
         super(param0);
@@ -53,7 +53,7 @@ final class ClamsEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         ClamsAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -62,7 +62,7 @@ final class ClamsEvent extends SpecialEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            ClamsEvent.d(false);
+            ClamsEvent.releaseStatics(false);
           }
           stackIn_3_0 = new ClamsAnimation(param1, this);
           return (AnimationNode) ((Object) stackIn_3_0);
@@ -172,7 +172,7 @@ final class ClamsEvent extends SpecialEvent {
         var5[9][9] = 1;
         var5[10][8] = 1;
         if (param0) {
-          field_u = (sna) null;
+          field_u = (UiComponent) null;
           var5[10][9] = 1;
           var5[11][8] = 1;
           return var2;
@@ -254,7 +254,7 @@ final class ClamsEvent extends SpecialEvent {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, String param11, String param12) {
         try {
-          ur.field_e[pe.field_m] = (oha) ((Object) new hd(param5, param9, param10, param11, param12, param4, param2, param8, param7, param0, param3, param1));
+          WhirlpoolDigest.field_e[pe.field_m] = (MoveDefinition) ((Object) new SpecialMoveDefinition(param5, param9, param10, param11, param12, param4, param2, param8, param7, param0, param3, param1));
           int var13_int = -79 % ((0 - param6) / 43);
           pe.field_m = pe.field_m + 1;
         } catch (RuntimeException runtimeException) {
@@ -262,7 +262,7 @@ final class ClamsEvent extends SpecialEvent {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_s = null;
         if (!param0) {
           field_s = (String) null;

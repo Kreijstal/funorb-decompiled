@@ -102,7 +102,7 @@ final class rj extends vo {
         this.field_r = param0;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_q = null;
         int var1 = -2 % ((param0 + 17) / 59);
         field_o = null;

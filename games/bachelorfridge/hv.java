@@ -11,7 +11,7 @@ final class hv {
         return eea.a(MoveEvent.field_s, IntrusiveDeque.field_a, 12);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

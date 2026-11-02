@@ -153,7 +153,7 @@ final class uv extends k {
             return false;
           }
           if (DisableEvent.field_s != 0 &&
-            0 > hd.field_m) {
+            0 > SpecialMoveDefinition.field_m) {
             var4_ref_bs = (bs) (mba.field_c.b((byte) 90));
             if (var4_ref_bs != null &&
               var2_long > var4_ref_bs.field_f) {
@@ -171,14 +171,14 @@ final class uv extends k {
             }
           }
           while (true) {
-            if (hd.field_m < 0) {
+            if (SpecialMoveDefinition.field_m < 0) {
               ig.field_m.position = 0;
               if (!CreatureEvent.b(1, 0)) {
                 return false;
               }
-              hd.field_m = ig.field_m.readCipheredByte(694);
+              SpecialMoveDefinition.field_m = ig.field_m.readCipheredByte(694);
               ig.field_m.position = 0;
-              dw.field_f = param1[hd.field_m];
+              dw.field_f = param1[SpecialMoveDefinition.field_m];
             }
             if (!StickyEvent.d((byte) -67)) {
               return false;
@@ -187,8 +187,8 @@ final class uv extends k {
               f.field_b = ef.field_l;
               ef.field_l = bd.field_j;
               bd.field_j = ri.field_a;
-              ri.field_a = hd.field_m;
-              hd.field_m = -1;
+              ri.field_a = SpecialMoveDefinition.field_m;
+              SpecialMoveDefinition.field_m = -1;
               return true;
             }
             var4 = DisableEvent.field_s;
@@ -198,12 +198,12 @@ final class uv extends k {
                 var4 = 0;
               }
             }
-            var5 = new bs(var2_long + (long)var4, hd.field_m, new byte[dw.field_f]);
+            var5 = new bs(var2_long + (long)var4, SpecialMoveDefinition.field_m, new byte[dw.field_f]);
             for (var6 = 0; var6 < dw.field_f; var6++) {
               var5.field_h[var6] = ig.field_m.payload[var6];
             }
             mba.field_c.a(var5, true);
-            hd.field_m = -1;
+            SpecialMoveDefinition.field_m = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -221,19 +221,19 @@ final class uv extends k {
 
     final static void a(boolean param0, String param1, boolean param2) {
         try {
-          sna.field_s = param2;
+          UiComponent.field_s = param2;
           eea.field_b = true;
           if (param0) {
             field_k = (String) null;
           }
-          oq.field_b = new mf(gja.field_m, qia.field_a, param1, gfa.field_i, sna.field_s);
-          gja.field_m.a((wj) (oq.field_b), (byte) 73);
+          oq.field_b = new mf(gja.field_m, qia.field_a, param1, gfa.field_i, UiComponent.field_s);
+          gja.field_m.a((UiWidget) (oq.field_b), (byte) 73);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "uv.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -12) {
           field_k = (String) null;
         }

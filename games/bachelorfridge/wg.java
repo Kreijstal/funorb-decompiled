@@ -3,10 +3,10 @@
  */
 final class wg extends aba {
     static boolean field_g;
-    private lka field_j;
+    private TextInputWidget field_j;
     static String field_h;
-    private lka field_k;
-    static sna[] field_i;
+    private TextInputWidget field_k;
+    static UiComponent[] field_i;
 
     final jg a(String param0, boolean param1) {
         String var3 = null;
@@ -22,18 +22,18 @@ final class wg extends aba {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_j.field_w.toLowerCase();
+          var3 = this.field_j.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (0 == var4.length()) {
-            stackIn_3_0 = jt.field_f;
+            stackIn_3_0 = FoodShopPanel.field_f;
             return stackIn_3_0;
           }
           if (!bq.a(var4, 20133, var3)) {
-            stackIn_6_0 = jt.field_f;
+            stackIn_6_0 = FoodShopPanel.field_f;
             return stackIn_6_0;
           }
           if (this.a(true, param0)) {
-            stackIn_10_0 = jt.field_f;
+            stackIn_10_0 = FoodShopPanel.field_f;
             return stackIn_10_0;
           }
           if (!param1) {
@@ -68,10 +68,10 @@ final class wg extends aba {
         jv.field_j = 0;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 != 22753) {
-          field_i = (sna[]) null;
+          field_i = (UiComponent[]) null;
           field_i = null;
           return;
         }
@@ -97,7 +97,7 @@ final class wg extends aba {
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = this.field_j.field_w.toLowerCase();
+          var7 = this.field_j.text.toLowerCase();
           var4 = param1.toLowerCase();
           if (var4.length() == 0) {
             return null;
@@ -166,7 +166,7 @@ final class wg extends aba {
           if (!param0) {
             wg.a(true);
           }
-          var3 = this.field_k.field_w.toLowerCase();
+          var3 = this.field_k.text.toLowerCase();
           var4 = param1.toLowerCase();
           if (var3.length() > 0) {
             if (var4.length() <= 0) {
@@ -205,14 +205,14 @@ final class wg extends aba {
         String var2Lifetime1;
         if (param1 != 83) {
           wg.a(false, -62);
-          var2 = lka.field_E[param0][19];
+          var2 = TextInputWidget.field_E[param0][19];
           var2 = var2.trim();
           if (var2.equals("")) {
             return -1;
           }
           return ((ji) (pga.field_b.a(true, (long)var2.hashCode()))).field_h;
         }
-        var2Lifetime1 = lka.field_E[param0][19];
+        var2Lifetime1 = TextInputWidget.field_E[param0][19];
         var2Lifetime1 = var2Lifetime1.trim();
         if (var2Lifetime1.equals("")) {
           return -1;
@@ -220,7 +220,7 @@ final class wg extends aba {
         return ((ji) (pga.field_b.a(true, (long)var2Lifetime1.hashCode()))).field_h;
     }
 
-    wg(lka param0, lka param1, lka param2) {
+    wg(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {
         super(param0);
         try {
           this.field_k = param2;

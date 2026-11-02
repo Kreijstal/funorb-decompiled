@@ -35,10 +35,10 @@ final class nl {
         }
     }
 
-    nl(ola param0) {
+    nl(FridgeScreen param0) {
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 >= -80) {
           field_a = (String) null;
@@ -52,7 +52,7 @@ final class nl {
         try {
           if (null == hp.field_d) {
             hp.field_d = new hga(gja.field_m, AnimationNode.field_i);
-            gja.field_m.a((wj) (hp.field_d), (byte) 124);
+            gja.field_m.a((UiWidget) (hp.field_d), (byte) 124);
           }
           hp.field_d.a(50, param2, param0, param1);
           SoftwareRasterizer.clear();

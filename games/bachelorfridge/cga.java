@@ -51,7 +51,7 @@ abstract class cga extends DualLinkNode {
 
     abstract int e(int param0);
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_r = (IndexedSprite) null;
           field_r = null;

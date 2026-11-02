@@ -34,7 +34,7 @@ final class mia extends cia {
         this.field_s = param4;
     }
 
-    final static sna d(byte param0) {
+    final static UiComponent d(byte param0) {
         if (param0 != -104) {
           mia.b(-95);
         }

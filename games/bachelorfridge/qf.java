@@ -14,14 +14,14 @@ final class qf extends ida {
     private int field_t;
 
     private final void a(int param0, BattleCreature param1, int param2, boolean param3, int param4) {
-        ad var6 = null;
+        CreatureActor var6 = null;
         try {
           var6 = this.field_s.b(param1, -23990);
           var6.field_s.field_s = param2;
           super.a(param2, param4, 27230);
           this.field_n = -50;
           if (param0 != 0) {
-            this.c((byte) -81);
+            this.isFinished((byte) -81);
           }
           this.a(param1, param3, -3670);
         } catch (RuntimeException runtimeException) {
@@ -71,20 +71,20 @@ final class qf extends ida {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         PcmSampleStream var4_ref_je = null;
-        ad var2 = null;
+        CreatureActor var2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
-        ad var7 = this.field_p.a(-27449, this.field_s);
+        CreatureActor var7 = this.field_p.a(-27449, this.field_s);
         int var3 = -27 % ((71 - param0) / 47);
         int fieldTemp$0 = this.field_n + 1;
-        ad var2Lifetime1;
-        ad var2Lifetime2;
-        ad var2Lifetime3;
-        ad var2Lifetime4;
-        ad var2Lifetime1Lifetime1;
+        CreatureActor var2Lifetime1;
+        CreatureActor var2Lifetime2;
+        CreatureActor var2Lifetime3;
+        CreatureActor var2Lifetime4;
+        CreatureActor var2Lifetime1Lifetime1;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
@@ -178,8 +178,8 @@ final class qf extends ida {
     }
 
     private final void c(boolean param0) {
-        ad var2;
-        ad var3;
+        CreatureActor var2;
+        CreatureActor var3;
         var3 = this.field_p.a(-27449, this.field_s);
         var2 = var3;
         var3.b(false);
@@ -187,10 +187,10 @@ final class qf extends ida {
         var3.field_o = 0;
         var3.field_k = 0;
         if (null != this.field_u) {
-          id.a(72, this.field_u);
+          PizzaArenaTheme.a(72, this.field_u);
         }
         if (123 == this.field_C) {
-          this.field_s.b(var3, (ad) null, param0);
+          this.field_s.b(var3, (CreatureActor) null, param0);
         } else {
           this.field_s.a(-119, this.field_r, var3, this.field_k);
         }
@@ -214,9 +214,9 @@ final class qf extends ida {
         var3.field_s.statusTurns = var3.field_s.statusTurns - 1;
     }
 
-    qf(gj param0, MoveEvent param1) {
+    qf(BattleScreen param0, MoveEvent param1) {
         this(param0, param1.creature, param1.moveId, param1.field_p, param1.field_n, param1.field_t);
-        ad var3 = null;
+        CreatureActor var3 = null;
         try {
           var3 = this.field_p.a(-27449, this.field_s);
           var3.field_s.d(param1.moveId, (byte) -115);
@@ -225,9 +225,9 @@ final class qf extends ida {
         }
     }
 
-    qf(gj param0, CreatureRef param1, int param2, int param3, int param4, boolean param5) {
+    qf(BattleScreen param0, CreatureRef param1, int param2, int param3, int param4, boolean param5) {
         super(param0, param1, param3, param4);
-        ad var8 = null;
+        CreatureActor var8 = null;
         BattleCreature var10 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -250,7 +250,7 @@ final class qf extends ida {
               this.field_t = 8;
             }
           }
-          this.a(27799, new taa(this.field_s, var8));
+          this.addChild(27799, new ActorAnimation(this.field_s, var8));
           this.a(0, var10, this.field_k, param5, this.field_r);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -273,7 +273,7 @@ final class qf extends ida {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_A = null;
         field_w = null;
         field_x = null;
@@ -291,20 +291,20 @@ final class qf extends ida {
         RuntimeException var1 = null;
         var3 = BachelorFridge.field_y;
         try {
-          if (qg.field_b.field_z == null) {
+          if (qg.field_b.children == null) {
             return;
           }
           var1_int = 0;
           if (param0 != 20434) {
             field_x = (PcmSample[]) null;
           }
-          var2 = (kr) (qg.field_b.field_z.b((byte) 90));
+          var2 = (kr) (qg.field_b.children.b((byte) 90));
           while (var2 != null) {
-            if (null != qg.field_b.field_z) {
+            if (null != qg.field_b.children) {
               var2.field_kb = var1_int % 4 * 39;
               var2.field_rb = var1_int / 4 * 39;
             }
-            var2 = (kr) (qg.field_b.field_z.c(param0 ^ 20434));
+            var2 = (kr) (qg.field_b.children.c(param0 ^ 20434));
             var1_int++;
           }
           return;

@@ -17,7 +17,7 @@ final class eia {
         int var2 = 0;
         int var3 = BachelorFridge.field_y;
         if (param0) {
-          eia.a(-90);
+          eia.releaseStatics(-90);
         }
         for (var2 = 0; this.field_i > var2; var2++) {
           this.field_c[var2][0] = null;
@@ -51,7 +51,7 @@ final class eia {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 21 % ((81 - param0) / 37);
         field_a = null;
     }

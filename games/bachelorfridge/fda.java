@@ -5,7 +5,7 @@ final class fda extends EventEffect {
     static java.awt.Frame field_j;
     static Sprite field_m;
     static vr field_l;
-    static qh field_i;
+    static WidgetTheme field_i;
     static vr field_k;
 
     fda(CreatureRef param0) {
@@ -88,7 +88,7 @@ final class fda extends EventEffect {
         RuntimeException decompiledCaughtException = null;
         var2 = BachelorFridge.field_y;
         try {
-          gja.field_m.a(true, hk.field_e, tq.field_q, param0 ^ 6380);
+          gja.field_m.processInput(true, hk.field_e, tq.field_q, param0 ^ 6380);
           gja.field_m.i(0);
           while (kaa.b(127)) {
             gja.field_m.a(dla.field_j, (byte) 7, gf.field_k);
@@ -103,7 +103,7 @@ final class fda extends EventEffect {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (kq.field_j == dka.field_G) {
+          if (kq.field_j == ReportAbusePanel.field_G) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -115,7 +115,7 @@ final class fda extends EventEffect {
             stackIn_20_0 = -103;
             return stackIn_20_0;
           }
-          if (kq.field_j != ola.field_p) {
+          if (kq.field_j != FridgeScreen.field_p) {
             return -1;
           }
           stackIn_24_0 = 2;
@@ -127,7 +127,7 @@ final class fda extends EventEffect {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 25) {
           field_j = (java.awt.Frame) null;
         }
@@ -138,7 +138,7 @@ final class fda extends EventEffect {
         field_j = null;
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         BattleCreature var4 = this.target.a(103, param1);
         if (var4 == null) {
           return;
@@ -154,7 +154,7 @@ final class fda extends EventEffect {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           FlirtAnimation.a(this.target, 109, param0);
           int var3_int = -94 % ((param1 - 34) / 58);

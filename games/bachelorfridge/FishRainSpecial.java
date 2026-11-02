@@ -20,7 +20,7 @@ final class FishRainSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var12 = 0;
         CreatureEvent stackIn_3_0 = null;
         FishRainEvent stackIn_34_0 = null;
@@ -129,14 +129,14 @@ final class FishRainSpecial extends SpecialOrder {
           }
           RasterBuffer.field_d.a(true, 7802);
           jha.field_g.drawText(SnowEvent.field_t, 22, 146, 16370176, -1);
-          hfa.field_z.drawText(SnowEvent.field_t, 22, 146, 65793, -1);
+          WidgetWrapper.field_z.drawText(SnowEvent.field_t, 22, 146, 65793, -1);
           if (mg.field_m.field_a >= dea.field_n) {
             fba.field_a.a(48 + IntrusiveNode.field_a.field_kb, 4 + IntrusiveNode.field_a.field_rb);
             if (IntrusiveNode.field_a.field_T) {
               bn.field_h.a(48 + IntrusiveNode.field_a.field_kb, IntrusiveNode.field_a.field_rb + 4);
             }
           } else {
-            hfa.field_z.a(GasCloudSpecial.field_r, IntrusiveNode.field_a.field_kb + (IntrusiveNode.field_a.field_sb >> 1), 4 + IntrusiveNode.field_a.field_rb + (IntrusiveNode.field_a.field_p >> 1), 16204, -1);
+            WidgetWrapper.field_z.a(GasCloudSpecial.field_r, IntrusiveNode.field_a.field_kb + (IntrusiveNode.field_a.field_sb >> 1), 4 + IntrusiveNode.field_a.field_rb + (IntrusiveNode.field_a.field_p >> 1), 16204, -1);
             jha.field_g.a(GasCloudSpecial.field_r, IntrusiveNode.field_a.field_kb + (IntrusiveNode.field_a.field_sb >> 1), 4 + ((IntrusiveNode.field_a.field_p >> 1) + IntrusiveNode.field_a.field_rb), 16777215, -1);
           }
           stackIn_15_0 = jha.field_g;
@@ -149,33 +149,33 @@ final class FishRainSpecial extends SpecialOrder {
             stackIn_16_4 = 16699649;
           }
           ((BinaryBitmapFont) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_16_4, -1);
-          hfa.field_z.a(ow.field_n, 530, 446, 16204, -1);
+          WidgetWrapper.field_z.a(ow.field_n, 530, 446, 16204, -1);
           ug.field_q.a(true, param1 + 7766);
-          if (null != qg.field_b.field_z) {
+          if (null != qg.field_b.children) {
             SoftwareRasterizer.setClip(ug.field_q.field_kb, ug.field_q.field_rb, ug.field_q.field_sb + ug.field_q.field_kb, ug.field_q.field_p + ug.field_q.field_rb);
-            var2 = (kr) (qg.field_b.field_z.b((byte) 90));
+            var2 = (kr) (qg.field_b.children.b((byte) 90));
             while (var2 != null) {
               jha.field_g.drawText(Integer.toString(var2.field_yb.field_g), ug.field_q.field_kb - (-var2.field_kb - 28), qg.field_b.field_rb + 32 + (ug.field_q.field_rb + var2.field_rb), 16777215, -1);
-              hfa.field_z.drawText(Integer.toString(var2.field_yb.field_g), 28 + var2.field_kb + ug.field_q.field_kb, qg.field_b.field_rb + (32 + (var2.field_rb + ug.field_q.field_rb)), 65793, -1);
-              var2 = (kr) (qg.field_b.field_z.c(0));
+              WidgetWrapper.field_z.drawText(Integer.toString(var2.field_yb.field_g), 28 + var2.field_kb + ug.field_q.field_kb, qg.field_b.field_rb + (32 + (var2.field_rb + ug.field_q.field_rb)), 65793, -1);
+              var2 = (kr) (qg.field_b.children.c(0));
             }
             SoftwareRasterizer.c();
           }
           jha.field_g.drawText(hka.field_g, 452, 306, 65793, -1);
           var4 = lga.a(true, new String[]{ti.a((byte) -118, 2, (long)dea.field_n, kt.field_k, true)}, vla.field_u);
           jha.field_g.b(var4, 600, 306, 16699649, -1);
-          hfa.field_z.b(var4, 600, 306, 65793, -1);
+          WidgetWrapper.field_z.b(var4, 600, 306, 65793, -1);
           jha.field_g.drawText(jla.field_c, 452, 400, 65793, -1);
           if (param1 != 36) {
             field_q = (String) null;
           }
           var5 = lga.a(true, new String[]{ti.a((byte) -120, 2, (long)mg.field_m.field_a, kt.field_k, true)}, vla.field_u);
           jha.field_g.b(var5, 600, 400, 16699649, -1);
-          hfa.field_z.b(var5, 600, 400, 65793, -1);
+          WidgetWrapper.field_z.b(var5, 600, 400, 65793, -1);
           ClamsAnimation.field_y.a(412, 161);
-          gha.field_b.a(412, 441);
+          DefaultWidgetRenderer.field_b.a(412, 441);
           ClamsAnimation.field_y.a(598, 166);
-          gha.field_b.a(598, 271);
+          DefaultWidgetRenderer.field_b.a(598, 271);
           if (!um.a(true)) {
             DiveBomberAnimation.b(true);
           }
@@ -187,7 +187,7 @@ final class FishRainSpecial extends SpecialOrder {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_s = null;
         field_q = null;
         if (param0 > -23) {

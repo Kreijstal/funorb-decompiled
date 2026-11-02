@@ -52,16 +52,16 @@ final class wq extends k {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, String param8, int param9, int param10) {
         try {
           if (!param7) {
-            wq.d(51);
+            wq.releaseStatics(51);
           }
-          hfa.field_z.drawParagraph(param8, param10, param4, param5, param2, param6, -1, param0, param9, param1);
+          WidgetWrapper.field_z.drawParagraph(param8, param10, param4, param5, param2, param6, -1, param0, param9, param1);
           jha.field_g.drawParagraph(param8, param10, 20 + param4, param5, param2, param3, -1, param0, param9, param1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "wq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_m = null;
         int var1 = 79 / ((45 - param0) / 59);

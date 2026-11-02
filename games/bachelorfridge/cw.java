@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cw extends sna {
+final class cw extends UiComponent {
     static IntrusiveNodeHashTable field_zb;
-    private sna field_vb;
-    private sna field_wb;
+    private UiComponent field_vb;
+    private UiComponent field_wb;
     private int field_Cb;
-    private sna field_Bb;
-    static sna field_yb;
-    private sna field_Db;
-    private sna field_Ab;
-    private sna field_xb;
+    private UiComponent field_Bb;
+    static UiComponent field_yb;
+    private UiComponent field_Db;
+    private UiComponent field_Ab;
+    private UiComponent field_xb;
 
     final boolean f(int param0) {
         if (param0 <= 14) {
@@ -19,7 +19,7 @@ final class cw extends sna {
         return this.field_Bb.field_ib != 0 ? true : false;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_yb = null;
         field_zb = null;
         int var1 = -59 / ((param0 - 43) / 53);
@@ -32,7 +32,7 @@ final class cw extends sna {
         }
         if (0 == this.field_vb.field_ib) {
           if (param0 != 62) {
-            field_yb = (sna) null;
+            field_yb = (UiComponent) null;
             return false;
           }
           return false;
@@ -47,7 +47,7 @@ final class cw extends sna {
         if (param0 == 62) {
           return false;
         }
-        field_yb = (sna) null;
+        field_yb = (UiComponent) null;
         return false;
     }
 
@@ -195,7 +195,7 @@ final class cw extends sna {
           if (param0 == 0) {
             return false;
           }
-          this.field_xb = (sna) null;
+          this.field_xb = (UiComponent) null;
           return false;
         }
         if (this.field_Cb > 0) {
@@ -205,7 +205,7 @@ final class cw extends sna {
           if (param0 == 0) {
             return false;
           }
-          this.field_xb = (sna) null;
+          this.field_xb = (UiComponent) null;
           return false;
         }
         if (this.field_Bb.field_I + this.field_Bb.field_M > gd.field_m) {
@@ -215,12 +215,12 @@ final class cw extends sna {
         if (param0 == 0) {
           return false;
         }
-        this.field_xb = (sna) null;
+        this.field_xb = (UiComponent) null;
         return false;
     }
 
-    cw(long param0, sna param1, sna param2, sna param3, sna param4) {
-        super(param0, (sna) null);
+    cw(long param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4) {
+        super(param0, (UiComponent) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -232,24 +232,24 @@ final class cw extends sna {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        sna var9 = null;
-        sna var10 = null;
+        UiComponent var9 = null;
+        UiComponent var10 = null;
         try {
-          this.field_Db = new sna(0L, param1);
-          this.field_vb = new sna(0L, param2);
+          this.field_Db = new UiComponent(0L, param1);
+          this.field_vb = new UiComponent(0L, param2);
           this.a(-1, this.field_Db);
           this.a(-1, this.field_vb);
-          this.field_wb = new sna(0L, (sna) null);
+          this.field_wb = new UiComponent(0L, (UiComponent) null);
           this.a(-1, this.field_wb);
-          this.field_Ab = new sna(0L, param3);
-          this.field_xb = new sna(0L, param3);
+          this.field_Ab = new UiComponent(0L, param3);
+          this.field_xb = new UiComponent(0L, param3);
           this.field_xb.field_qb = true;
           var9 = this.field_Ab;
           var10 = var9;
           var10.field_qb = true;
           this.field_wb.a(-1, this.field_Ab);
           this.field_wb.a(-1, this.field_xb);
-          this.field_Bb = new sna(0L, param4);
+          this.field_Bb = new UiComponent(0L, param4);
           this.field_Bb.field_ub = true;
           this.field_wb.a(-1, this.field_Bb);
           return;
@@ -292,20 +292,20 @@ final class cw extends sna {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        sna var14 = null;
-        sna var15 = null;
-        sna var16 = null;
-        sna var17 = null;
-        sna var18 = null;
-        sna var19 = null;
-        sna var14Lifetime1;
-        sna var15Lifetime1;
-        sna var16Lifetime1;
-        sna var17Lifetime1;
-        sna var18Lifetime1;
-        sna var19Lifetime1;
-        sna var19Lifetime2;
-        sna var19Lifetime3;
+        UiComponent var14 = null;
+        UiComponent var15 = null;
+        UiComponent var16 = null;
+        UiComponent var17 = null;
+        UiComponent var18 = null;
+        UiComponent var19 = null;
+        UiComponent var14Lifetime1;
+        UiComponent var15Lifetime1;
+        UiComponent var16Lifetime1;
+        UiComponent var17Lifetime1;
+        UiComponent var18Lifetime1;
+        UiComponent var19Lifetime1;
+        UiComponent var19Lifetime2;
+        UiComponent var19Lifetime3;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -353,7 +353,7 @@ final class cw extends sna {
           var18.field_p = -var12 + var7;
           var18.field_rb = var12;
           if (param0 != 29) {
-            this.field_Ab = (sna) null;
+            this.field_Ab = (UiComponent) null;
             var19 = this.field_Bb;
             var19.field_p = var8;
             var19.field_kb = 0;
@@ -424,7 +424,7 @@ final class cw extends sna {
           var19Lifetime1.field_rb = var11Lifetime1;
           return;
         }
-        this.field_Ab = (sna) null;
+        this.field_Ab = (UiComponent) null;
         var19Lifetime2 = this.field_Bb;
         var19Lifetime2.field_p = var8;
         var19Lifetime2.field_kb = 0;

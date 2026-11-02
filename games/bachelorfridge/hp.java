@@ -49,7 +49,7 @@ final class hp {
             ScavengerEvent.field_q = param1;
             try {
               if (param2 != 3) {
-                hp.a(106);
+                hp.releaseStatics(106);
               }
               var6 = param0.getParameter("cookieprefix");
               var5 = var6;
@@ -79,7 +79,7 @@ final class hp {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         int var1 = 31 % ((-6 - param0) / 38);

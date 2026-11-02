@@ -4,7 +4,7 @@
 final class i {
     private vr field_b;
     static String[] field_e;
-    static sna field_a;
+    static UiComponent field_a;
     static IntrusiveNodeHashTable field_h;
     private vr field_g;
     private IntrusiveNodeHashTable field_f;
@@ -285,7 +285,7 @@ final class i {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         int var1 = 46 / ((param0 + 43) / 56);
         field_e = null;

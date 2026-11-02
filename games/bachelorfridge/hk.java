@@ -8,10 +8,10 @@ final class hk {
     private String field_g;
     static String[] field_h;
     static String field_a;
-    static sna field_c;
+    static UiComponent field_c;
     static String field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_h = null;
         field_f = null;
         field_a = null;

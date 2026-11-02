@@ -26,7 +26,7 @@ final class RageSpecial extends SpecialOrder {
             var6 = (vr) null;
             RageSpecial.a(39, (String) null, (String) null, (vr) null);
           }
-          stackIn_3_0 = kn.a(-7726, param3, var5, var4_int);
+          stackIn_3_0 = CurryArenaTheme.a(-7726, param3, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,7 +68,7 @@ final class RageSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         BattleCreature var4 = null;

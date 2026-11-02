@@ -7,7 +7,7 @@ final class ria extends gca {
     private IntrusiveDeque field_j;
     private Sprite field_l;
     static vr field_i;
-    static sna field_k;
+    static UiComponent field_k;
 
     final boolean a(boolean param0, boolean param1) {
         cia var3 = null;
@@ -52,7 +52,7 @@ final class ria extends gca {
         this.field_l = ff.field_u.toRgbSprite();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 != 127) {
           return;
@@ -63,9 +63,9 @@ final class ria extends gca {
     private final void e(byte param0) {
         int var3 = 0;
         cia var4 = null;
-        int var2 = DiveBomberAnimation.a(256, vd.field_z, -2147483648);
+        int var2 = DiveBomberAnimation.a(256, WidgetContainer.field_z, -2147483648);
         if (param0 < -80) {
-          var3 = DiveBomberAnimation.a(1024, vd.field_z, -2147483648);
+          var3 = DiveBomberAnimation.a(1024, WidgetContainer.field_z, -2147483648);
           var4 = new cia(var2, 0, var3);
           var4.a(119, 128, -2);
           var4.a(0, -15, 0, 0);

@@ -5,9 +5,9 @@ final class ow extends BoardChange {
     private aj[] field_m;
     static String field_n;
 
-    final void a(ub param0, int param1) {
+    final void a(BoardChangeAnimation param0, int param1) {
         try {
-          param0.a(27799, new lv(param0.field_o, this.field_m));
+          param0.addChild(27799, new lv(param0.field_o, this.field_m));
           if (param1 >= -2) {
             java.applet.Applet var4 = (java.applet.Applet) null;
             ow.a((java.net.URL) null, (byte) 29, (java.applet.Applet) null);
@@ -175,10 +175,10 @@ final class ow extends BoardChange {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 != -1) {
-          ow.a(123);
+          ow.releaseStatics(123);
         }
     }
 

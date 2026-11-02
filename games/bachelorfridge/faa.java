@@ -49,7 +49,7 @@ final class faa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         int var1 = -26 / ((89 - param0) / 36);
     }

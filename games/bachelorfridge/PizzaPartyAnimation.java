@@ -4,11 +4,11 @@
 final class PizzaPartyAnimation extends EventAnimation {
     static PcmSample[] field_y;
     static MusicTrack field_z;
-    private taa field_x;
+    private ActorAnimation field_x;
     static String field_v;
     private PizzaPartyEvent field_w;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = -89 % ((71 - param0) / 47);
         if (this.field_m.isLinked((byte) -106)) {
           return false;
@@ -29,18 +29,18 @@ final class PizzaPartyAnimation extends EventAnimation {
         return false;
     }
 
-    PizzaPartyAnimation(gj param0, PizzaPartyEvent param1) {
+    PizzaPartyAnimation(BattleScreen param0, PizzaPartyEvent param1) {
         super(param0, param1);
         try {
           this.field_w = param1;
-          this.field_x = new taa(this.screen, this.field_w.field_q, this.field_w.field_t);
-          this.a(27799, this.field_x);
+          this.field_x = new ActorAnimation(this.screen, this.field_w.field_q, this.field_w.field_t);
+          this.addChild(27799, this.field_x);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -57,7 +57,7 @@ final class PizzaPartyAnimation extends EventAnimation {
         for (var2 = 0; this.field_w.field_u > var2; var2++) {
           var3 = this.field_w.field_s[var2];
           var4 = new haa(this.screen, var3.field_c, var3.field_a, this.field_w.field_r == var2 ? true : false);
-          ((kj) ((Object) var4)).a(0);
+          ((TileEffect) ((Object) var4)).a(0);
         }
         if (!param0) {
           return;

@@ -5,7 +5,7 @@ final class el extends aba {
     static int field_h;
     static String field_g;
 
-    el(lka param0) {
+    el(TextInputWidget param0) {
         super(param0);
     }
 
@@ -107,7 +107,7 @@ final class el extends aba {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, false) == jt.field_f) {
+          if (this.a(param1, false) == FoodShopPanel.field_f) {
             stackIn_2_0 = bu.field_g;
             return stackIn_2_0;
           }
@@ -170,7 +170,7 @@ final class el extends aba {
         }
         int var1 = te.d((byte) 89);
         int var2 = nka.a((byte) -74);
-        raa.field_I.a((ge.field_I << 1) + var2, 9, -wo.field_j + rs.field_a, GasCloudSpecial.field_q - ge.field_I, (wo.field_j << 1) + var1);
+        raa.field_I.a((ge.field_I << 1) + var2, 9, -wo.field_j + StatusEffectInfo.field_a, GasCloudSpecial.field_q - ge.field_I, (wo.field_j << 1) + var1);
         w.a(true);
     }
 
@@ -196,7 +196,7 @@ final class el extends aba {
             stackIn_10_0 = cm.field_u;
             return stackIn_10_0;
           }
-          stackIn_8_0 = jt.field_f;
+          stackIn_8_0 = FoodShopPanel.field_f;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

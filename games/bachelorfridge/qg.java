@@ -4,7 +4,7 @@
 final class qg {
     static String field_a;
     static String field_c;
-    static sna field_b;
+    static UiComponent field_b;
 
     final static void a(int[] param0, int param1, Sprite param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int stackIn_67_0 = 0;
@@ -811,11 +811,11 @@ final class qg {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         if (param0 != 4096) {
-          qg.a(60);
+          qg.releaseStatics(60);
         }
         field_b = null;
     }

@@ -16,7 +16,7 @@ abstract class pk implements qu {
 
     abstract String d(byte param0);
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -41) {
           return;
         }
@@ -47,7 +47,7 @@ abstract class pk implements qu {
     }
 
     final static String a(SpecialEvent param0, boolean param1) {
-        hd var2 = null;
+        SpecialMoveDefinition var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -56,9 +56,9 @@ abstract class pk implements qu {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = (hd) (al.a(-56, param0.moveId));
+          var2 = (SpecialMoveDefinition) (al.a(-56, param0.moveId));
           if (param1) {
-            stackIn_4_0 = var2.field_f;
+            stackIn_4_0 = var2.name;
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

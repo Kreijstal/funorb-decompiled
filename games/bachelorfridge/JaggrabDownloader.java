@@ -9,7 +9,7 @@ final class JaggrabDownloader implements Runnable {
     private PlatformTaskDispatcher field_d;
     private PacketBuffer field_h;
     private java.net.URL field_i;
-    static sna field_c;
+    static UiComponent field_c;
     private PlatformTask field_g;
     private DataInputStream field_l;
     static vr field_m;
@@ -186,7 +186,7 @@ final class JaggrabDownloader implements Runnable {
 
     final PacketBuffer a(int param0) {
         if (param0 != -11514) {
-          JaggrabDownloader.a((byte) 18);
+          JaggrabDownloader.releaseStatics((byte) 18);
           if (this.field_e == 3) {
             return this.field_h;
           }
@@ -198,7 +198,7 @@ final class JaggrabDownloader implements Runnable {
         return null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -84) {
           return;
         }

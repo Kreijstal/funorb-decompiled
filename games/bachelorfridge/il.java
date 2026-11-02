@@ -9,10 +9,10 @@ final class il {
     static String field_e;
     private int[] field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 4) {
-          il.a(56);
+          il.releaseStatics(56);
         }
         field_b = null;
         field_e = null;

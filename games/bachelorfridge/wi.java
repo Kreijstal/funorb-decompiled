@@ -90,7 +90,7 @@ final class wi extends w implements oh {
         return null;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_o = null;
         field_i = null;
         if (!param0) {

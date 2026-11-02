@@ -16,7 +16,7 @@ final class pr {
     private int field_b;
     boolean field_m;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_c = null;
         field_j = null;

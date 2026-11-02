@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class daa extends sna {
-    private sna field_xb;
-    private sna field_wb;
+final class daa extends UiComponent {
+    private UiComponent field_xb;
+    private UiComponent field_wb;
     static volatile boolean field_vb;
 
     final static vr c(int param0, int param1) {
@@ -11,11 +11,11 @@ final class daa extends sna {
         return qma.a(true, 2097152, false, 1, false, param1);
     }
 
-    private daa(long param0, sna param1, sna param2, String param3) {
-        super(param0, (sna) null);
+    private daa(long param0, UiComponent param1, UiComponent param2, String param3) {
+        super(param0, (UiComponent) null);
         try {
-          this.field_wb = new sna(0L, param1);
-          this.field_xb = new sna(0L, param2);
+          this.field_wb = new UiComponent(0L, param1);
+          this.field_xb = new UiComponent(0L, param2);
           this.field_xb.field_Z = param3;
           this.a(-1, this.field_wb);
           this.a(-1, this.field_xb);
@@ -37,7 +37,7 @@ final class daa extends sna {
         if (param0 < -101) {
           return param1 + (this.field_wb.e(-1) + this.field_xb.e(-1));
         }
-        this.field_wb = (sna) null;
+        this.field_wb = (UiComponent) null;
         return param1 + (this.field_wb.e(-1) + this.field_xb.e(-1));
     }
 
@@ -45,8 +45,8 @@ final class daa extends sna {
         this(param0, param1.field_wb, param1.field_xb, param2);
     }
 
-    daa(long param0, Sprite param1, Sprite param2, int param3, sna param4, String param5) {
-        this(param0, (sna) null, param4, param5);
+    daa(long param0, Sprite param1, Sprite param2, int param3, UiComponent param4, String param5) {
+        this(param0, (UiComponent) null, param4, param5);
         try {
           this.field_wb.field_v = param2;
           this.field_wb.field_Y = param3;

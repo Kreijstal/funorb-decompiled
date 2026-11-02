@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class te extends kj {
+final class te extends TileEffect {
     private int field_i;
     private int field_g;
     static String field_f;
@@ -74,7 +74,7 @@ final class te extends kj {
 
     final static int a(int param0, byte param1) {
         int var3 = 70 % ((18 - param1) / 42);
-        String var2 = lka.field_E[param0][7];
+        String var2 = TextInputWidget.field_E[param0][7];
         var2 = var2.trim();
         var2 = var2.toLowerCase();
         if (!var2.equals("")) {
@@ -104,9 +104,9 @@ final class te extends kj {
     final static int d(byte param0) {
         if (param0 != 89) {
           field_f = (String) null;
-          return dfa.field_b - rs.field_a;
+          return dfa.field_b - StatusEffectInfo.field_a;
         }
-        return dfa.field_b - rs.field_a;
+        return dfa.field_b - StatusEffectInfo.field_a;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -131,7 +131,7 @@ final class te extends kj {
         var5Lifetime1.a(var6Lifetime1, var7Lifetime1 - 64);
     }
 
-    te(gj param0, int param1, int param2) {
+    te(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_g = 80;

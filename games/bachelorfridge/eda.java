@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eda extends kj {
+final class eda extends TileEffect {
     private lna field_h;
     private int field_f;
     static boolean field_j;
     static MusicTrack field_i;
-    static sna field_k;
+    static UiComponent field_k;
     private IndexedSprite field_g;
 
     final boolean b(int param0) {
         int fieldTemp$0 = 0;
         if (param0 < 21) {
-          eda.c(-107);
+          eda.releaseStatics(-107);
           fieldTemp$0 = this.field_f + 12;
           this.field_f = this.field_f + 12;
           if (fieldTemp$0 < bd.field_i.field_p) {
@@ -28,7 +28,7 @@ final class eda extends kj {
         return true;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_i = null;
         if (param0 != 60) {
@@ -36,7 +36,7 @@ final class eda extends kj {
         }
     }
 
-    eda(gj param0, int param1, int param2, lna param3, IndexedSprite param4) {
+    eda(BattleScreen param0, int param1, int param2, lna param3, IndexedSprite param4) {
         super(param0, param1, param2);
         try {
           this.field_g = param4;

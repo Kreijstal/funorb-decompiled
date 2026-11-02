@@ -14,7 +14,7 @@ final class ShieldSpecial extends SpecialOrder {
 
     final static void b(int param0) {
         CreatureType.field_n = CreatureType.field_n + 1;
-        gha.a(8, CreatureType.field_n);
+        DefaultWidgetRenderer.a(8, CreatureType.field_n);
         if (param0 != 23621) {
           return;
         }
@@ -27,14 +27,14 @@ final class ShieldSpecial extends SpecialOrder {
         bf.field_h[CreatureType.field_n].a(-123);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_p = null;
         field_s = null;
         int var1 = -110 / ((30 - param0) / 51);
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         RuntimeException var3 = null;

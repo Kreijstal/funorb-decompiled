@@ -18,7 +18,7 @@ final class ne extends IntrusiveNode {
     ne() {
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_n = null;
         if (param0 != 18072) {

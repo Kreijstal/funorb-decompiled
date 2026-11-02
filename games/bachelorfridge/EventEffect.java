@@ -14,7 +14,7 @@ abstract class EventEffect extends IntrusiveNode {
           }
           HailAnimation.field_A.field_Z = param2;
           HailAnimation.field_A.field_gb = param0;
-          HailAnimation.field_A.field_pb = param4;
+          HailAnimation.field_A.name = param4;
           DisableSpecial.field_r.field_kb = DisableSpecial.field_r.field_kb + DisableSpecial.field_r.field_sb;
           DisableSpecial.field_r.field_sb = param3;
           HailAnimation.field_A.field_sb = HailAnimation.field_A.field_sb - DisableSpecial.field_r.field_sb;
@@ -37,9 +37,9 @@ abstract class EventEffect extends IntrusiveNode {
         }
     }
 
-    abstract void a(BattleCreature param0, BattleState param1, int param2);
+    abstract void apply(BattleCreature param0, BattleState param1, int param2);
 
-    void a(PacketBuffer param0, byte param1) {
+    void write(PacketBuffer param0, byte param1) {
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;

@@ -38,7 +38,7 @@ abstract class lw {
 
     abstract void a(int param0, byte param1);
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_f = null;
         field_b = null;

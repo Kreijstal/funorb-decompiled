@@ -553,7 +553,7 @@ class PacketBuffer extends IntrusiveNode {
         uha var7 = null;
         BitPacketBuffer var4 = null;
         if (param0 != hja.field_i) {
-          var6 = (uha) (ola.field_g.a((long)hja.field_i, (byte) -87));
+          var6 = (uha) (FridgeScreen.field_g.a((long)hja.field_i, (byte) -87));
           var7 = var6;
           if (var7 != null) {
             var7.field_Cb = null;

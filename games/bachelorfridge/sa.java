@@ -61,7 +61,7 @@ final class sa extends pu {
             var5.field_w = as.a(var5.field_w, 81, param1, 16);
           }
           if (fa.a((byte) -75, param1)) {
-            var5.field_d = hd.a(var5.field_d, param1, (byte) 103, 16);
+            var5.field_d = SpecialMoveDefinition.a(var5.field_d, param1, (byte) 103, 16);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_d.length; var7++) {
               if (var6 < (var5.field_d[var7] & 255)) {
@@ -201,7 +201,7 @@ final class sa extends pu {
               var8_ref_ema.field_Gb = var10 >> 1;
               var8_ref_ema.field_Kb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ -16711930);
               var8_ref_ema.field_xb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(16711935);
-              gj.a((byte) 101, var8_ref_ema);
+              BattleScreen.a((byte) 101, var8_ref_ema);
               return;
             }
             if (var2 == 6) {
@@ -236,10 +236,10 @@ final class sa extends pu {
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 97);
-              var4_ref_uha = (uha) (ola.field_g.a((long)var3, (byte) -87));
+              var4_ref_uha = (uha) (FridgeScreen.field_g.a((long)var3, (byte) -87));
               if (var4_ref_uha == null) {
                 var4_ref_uha = new uha(ld.field_q);
-                ola.field_g.a(var4_ref_uha, 91, (long)var3);
+                FridgeScreen.field_g.a(var4_ref_uha, 91, (long)var3);
               }
               FlyEvent.a(var4_ref_uha, var1, 80, true);
               SpiltMilkSpecial.a(var4_ref_uha, 0);
@@ -248,7 +248,7 @@ final class sa extends pu {
             if (var2 == 9) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 54);
               var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(16711935);
-              var29 = (uha) (ola.field_g.a((long)var3Lifetime4, (byte) -87));
+              var29 = (uha) (FridgeScreen.field_g.a((long)var3Lifetime4, (byte) -87));
               if (var29 != null) {
                 if (var4 != 0) {
                   var29.field_Mb = DiveBomberAnimation.field_x;
@@ -274,7 +274,7 @@ final class sa extends pu {
               if (var2 == 13) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 100);
                 var4Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(16711935);
-                var27_ref = (uha) (ola.field_g.a((long)var3Lifetime5, (byte) -87));
+                var27_ref = (uha) (FridgeScreen.field_g.a((long)var3Lifetime5, (byte) -87));
                 if (var27_ref == null) {
                   return;
                 }
@@ -371,7 +371,7 @@ final class sa extends pu {
                     var23.field_Mb = DiveBomberAnimation.field_x;
                     var23.field_yb = var5Lifetime1Lifetime1;
                   }
-                  gj.a((byte) 63, var23);
+                  BattleScreen.a((byte) 63, var23);
                 }
                 return;
               }
@@ -386,12 +386,12 @@ final class sa extends pu {
                 } else {
                   var22.field_wb = true;
                 }
-                gj.a((byte) 56, var22);
+                BattleScreen.a((byte) 56, var22);
               }
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 72);
-            var14 = (uha) (ola.field_g.a((long)var3Lifetime6, (byte) -87));
+            var14 = (uha) (FridgeScreen.field_g.a((long)var3Lifetime6, (byte) -87));
             var28 = var14;
             if (var14 == null) {
               return;
@@ -419,13 +419,13 @@ final class sa extends pu {
                 hc.field_J = hc.field_J - 1;
               }
               var3_ref_emaLifetime2.field_wb = false;
-              gj.a((byte) 38, var3_ref_emaLifetime2);
+              BattleScreen.a((byte) 38, var3_ref_emaLifetime2);
             }
             var3_ref_emaLifetime2 = (ema) (iga.field_c.a(param0 - 25170));
           }
           if (var2 == 1 &&
             null != SnowAnimation.field_w) {
-            ur.field_b = SnowAnimation.field_w.field_Jb;
+            WhirlpoolDigest.field_b = SnowAnimation.field_w.field_Jb;
           }
           if (var2 == 4) {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 45);

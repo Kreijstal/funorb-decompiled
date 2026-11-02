@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class pv extends IntrusiveNode {
-    jfa field_f;
+    FridgeCreature field_f;
     static String field_h;
     static int field_i;
     int field_g;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 != -15565) {
-          pv.a(47);
+          pv.releaseStatics(47);
         }
     }
 
@@ -46,7 +46,7 @@ class pv extends IntrusiveNode {
         int var11 = 0;
         int stackIn_6_0 = 0;
         boolean stackIn_9_1 = false;
-        sna stackIn_11_0 = null;
+        UiComponent stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
         int stackIn_12_3 = 0;
@@ -59,17 +59,17 @@ class pv extends IntrusiveNode {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        sna var7_ref_sna = null;
+        UiComponent var7_ref_sna = null;
         int var7 = 0;
         int var8_int = 0;
-        sna var8 = null;
+        UiComponent var8 = null;
         gna var9_ref_gna = null;
         int var9 = 0;
         gna var10 = null;
         int var10_int = 0;
         int var12 = 0;
         int var13 = 0;
-        sna var14 = null;
+        UiComponent var14 = null;
         int var15 = 0;
         var13 = BachelorFridge.field_y;
         try {
@@ -95,7 +95,7 @@ class pv extends IntrusiveNode {
           } else {
             stackIn_12_3 = 4 + rj.field_j + 40;
           }
-          ((sna) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, -stackIn_12_3 + nu.field_f.field_sb, 0, rg.field_h + 2);
+          ((UiComponent) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, -stackIn_12_3 + nu.field_f.field_sb, 0, rg.field_h + 2);
           ut.field_q.a(18, 31407, 42 + rj.field_j, -40 + (nu.field_f.field_sb - rj.field_j - 2), rg.field_h + 2);
           SnowEvent.field_q.a((byte) -58, -2 + (nu.field_f.field_p - (rg.field_h + 20)), 0, 22 + rg.field_h, nu.field_f.field_sb, rj.field_j, 2);
           jj.field_wb.a(40, 31407, ela.field_i.field_sb, 0, -40 + ela.field_i.field_p);
@@ -204,10 +204,10 @@ class pv extends IntrusiveNode {
           }
           qw.field_b.a(-124 + (SoftwareRasterizer.field_c - 10 - 10), 31407, 360, SoftwareRasterizer.field_i - 360 >> 1, 10);
           saa.field_f.a(24, 31407, qw.field_b.field_sb, 0, 0);
-          rf.field_q.a(-24 + qw.field_b.field_p, 31407, qw.field_b.field_sb, 0, 24);
-          rf.field_q.field_eb = mu.a(11579568, 3, rf.field_q.field_p, 8421504, 1, (byte) 17);
-          tv.field_o.a(-26 + (-10 + rf.field_q.field_p), 31407, rf.field_q.field_sb - 10, 5, 5);
-          vca.field_h.a(24, 31407, 80, (rf.field_q.field_sb - 80) / 2, -24 + rf.field_q.field_p - 5);
+          ArchiveIndex.field_q.a(-24 + qw.field_b.field_p, 31407, qw.field_b.field_sb, 0, 24);
+          ArchiveIndex.field_q.field_eb = mu.a(11579568, 3, ArchiveIndex.field_q.field_p, 8421504, 1, (byte) 17);
+          tv.field_o.a(-26 + (-10 + ArchiveIndex.field_q.field_p), 31407, ArchiveIndex.field_q.field_sb - 10, 5, 5);
+          vca.field_h.a(24, 31407, 80, (ArchiveIndex.field_q.field_sb - 80) / 2, -24 + ArchiveIndex.field_q.field_p - 5);
           RageEvent.e(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

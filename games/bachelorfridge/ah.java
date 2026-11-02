@@ -63,11 +63,11 @@ final class ah extends tia {
             this.field_n.a(var8, true);
           }
         }
-        gj.a((byte) 116, this.field_n, this.field_f, this.field_g);
+        BattleScreen.a((byte) 116, this.field_n, this.field_f, this.field_g);
         return true;
     }
 
-    ah(gj param0, ad param1, int param2, int param3) {
+    ah(BattleScreen param0, CreatureActor param1, int param2, int param3) {
         super(param0, param1);
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

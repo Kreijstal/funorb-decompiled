@@ -76,7 +76,7 @@ final class SnowSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         SnowEvent var4 = null;

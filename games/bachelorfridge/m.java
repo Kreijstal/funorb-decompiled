@@ -9,7 +9,7 @@ final class m {
     static PcmSampleStream field_b;
 
     final static int a(int param0, byte param1, int param2) {
-        String var3 = lka.field_E[param0][param2];
+        String var3 = TextInputWidget.field_E[param0][param2];
         var3 = var3.trim();
         int var4 = -84 % ((-28 - param1) / 46);
         var3 = var3.toLowerCase();

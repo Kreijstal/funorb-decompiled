@@ -181,7 +181,7 @@ final class fw extends IntrusiveNode {
         this.field_g = param1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_h = null;
         if (param0 != -8668) {

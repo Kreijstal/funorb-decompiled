@@ -6,7 +6,7 @@ final class SpiltMilkAnimation extends EventAnimation {
     private SpiltMilkEvent field_x;
     static String field_w;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 25) {
           return;
         }
@@ -14,7 +14,7 @@ final class SpiltMilkAnimation extends EventAnimation {
         field_v = null;
     }
 
-    SpiltMilkAnimation(gj param0, SpiltMilkEvent param1) {
+    SpiltMilkAnimation(BattleScreen param0, SpiltMilkEvent param1) {
         super(param0, param1);
         try {
           this.field_x = param1;
@@ -24,8 +24,8 @@ final class SpiltMilkAnimation extends EventAnimation {
     }
 
     private final void b(boolean param0) {
-        ad var6 = null;
-        ad var7 = null;
+        CreatureActor var6 = null;
+        CreatureActor var7 = null;
         DamageEffect var3_ref = null;
         Object var3 = null;
         int var5 = BachelorFridge.field_y;
@@ -40,7 +40,7 @@ final class SpiltMilkAnimation extends EventAnimation {
           var3_ref = (DamageEffect) (this.field_x.effects.b((byte) 90));
           al.a(-36, this.field_x.moveId);
           while (var3_ref != null) {
-            var3_ref.a(var2, this.screen.field_h, 12);
+            var3_ref.apply(var2, this.screen.field_h, 12);
             var6 = var3_ref.target.a(-27449, this.screen);
             var6.b(-1, 7);
             var6.a(24831, 53, kna.field_g[43]);
@@ -51,7 +51,7 @@ final class SpiltMilkAnimation extends EventAnimation {
         var3_refLifetime1 = (DamageEffect) (this.field_x.effects.b((byte) 90));
         al.a(-36, this.field_x.moveId);
         while (var3_refLifetime1 != null) {
-          var3_refLifetime1.a(var2, this.screen.field_h, 12);
+          var3_refLifetime1.apply(var2, this.screen.field_h, 12);
           var7 = var3_refLifetime1.target.a(-27449, this.screen);
           var7.b(-1, 7);
           var7.a(24831, 53, kna.field_g[43]);
@@ -59,7 +59,7 @@ final class SpiltMilkAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = -106 % ((71 - param0) / 47);
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;

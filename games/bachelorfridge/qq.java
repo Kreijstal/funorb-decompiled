@@ -4,7 +4,7 @@
 final class qq extends EventEffect {
     static IndexedSprite[] field_i;
     static Sprite field_l;
-    static sna field_k;
+    static UiComponent field_k;
     private int field_j;
 
     final static String a(byte[] param0, boolean param1) {
@@ -34,7 +34,7 @@ final class qq extends EventEffect {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -156,7 +156,7 @@ final class qq extends EventEffect {
         }
     }
 
-    final static void a(sna param0, sna param1, cw param2, sna param3, BitmapFont param4, sna param5, sna param6, sna param7, sna param8, int param9, sna param10, boolean param11) {
+    final static void a(UiComponent param0, UiComponent param1, cw param2, UiComponent param3, BitmapFont param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, int param9, UiComponent param10, boolean param11) {
         String stackIn_27_0 = null;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_41_0 = null;
@@ -187,7 +187,7 @@ final class qq extends EventEffect {
         int[] var14 = null;
         int[] var15 = null;
         Sprite[] var16 = null;
-        sna var17 = null;
+        UiComponent var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
@@ -217,29 +217,29 @@ final class qq extends EventEffect {
           var15[8] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          i.field_a = new sna(0L, param10);
-          gha.field_d = new sna(0L, param7);
+          i.field_a = new UiComponent(0L, param10);
+          DefaultWidgetRenderer.field_d = new UiComponent(0L, param7);
           if (param9 != -30803) {
-            field_k = (sna) null;
+            field_k = (UiComponent) null;
           }
-          i.field_a.a(-1, gha.field_d);
-          var17 = new sna(0L, (sna) null);
-          var17.field_z = new IntrusiveDeque();
+          i.field_a.a(-1, DefaultWidgetRenderer.field_d);
+          var17 = new UiComponent(0L, (UiComponent) null);
+          var17.children = new IntrusiveDeque();
           af.field_b = new sga(0L, var17, param5, param2);
-          gha.field_d.a(-1, af.field_b);
-          ResetAnimation.field_w = new sna(0L, param3);
-          gha.field_d.a(-1, ResetAnimation.field_w);
-          HailAnimation.field_A = new sna(0L, param6);
+          DefaultWidgetRenderer.field_d.a(-1, af.field_b);
+          ResetAnimation.field_w = new UiComponent(0L, param3);
+          DefaultWidgetRenderer.field_d.a(-1, ResetAnimation.field_w);
+          HailAnimation.field_A = new UiComponent(0L, param6);
           HailAnimation.field_A.field_jb = dc.field_r;
           ResetAnimation.field_w.a(-1, HailAnimation.field_A);
           ResetAnimation.field_w.d((byte) 116);
-          DisableSpecial.field_r = new sna(0L, (sna) null);
+          DisableSpecial.field_r = new UiComponent(0L, (UiComponent) null);
           DisableSpecial.field_r.field_eb = var16;
           ResetAnimation.field_w.a(-1, DisableSpecial.field_r);
-          r.field_l = new sna[5];
-          bda.field_m = new sna[5];
-          cb.field_o = new sna[5];
-          wg.field_i = new sna[5];
+          r.field_l = new UiComponent[5];
+          bda.field_m = new UiComponent[5];
+          cb.field_o = new UiComponent[5];
+          wg.field_i = new UiComponent[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -249,7 +249,7 @@ final class qq extends EventEffect {
               if (stackIn_31_0 != 0) {
                 if (var18 == 1 &&
                   am.field_O) {
-                  var19 = hfa.field_B;
+                  var19 = WidgetWrapper.field_B;
                 } else {
                   decompiledFrameRemainder0 = (var18 == 2);
                   if (decompiledFrameRemainder0) {
@@ -265,18 +265,18 @@ final class qq extends EventEffect {
                 var19 = stackIn_27_0;
               }
               if (decompiledFrameRemainder0) {
-                r.field_l[var18] = new sna(0L, param0);
-                cb.field_o[var18] = new sna(0L, uc.field_l, var19);
-                wg.field_i[var18] = new sna(0L, (sna) null);
+                r.field_l[var18] = new UiComponent(0L, param0);
+                cb.field_o[var18] = new UiComponent(0L, uc.field_l, var19);
+                wg.field_i[var18] = new UiComponent(0L, (UiComponent) null);
                 wg.field_i[var18].field_Y = 1;
-                bda.field_m[var18] = new sna(0L, uc.field_l);
+                bda.field_m[var18] = new UiComponent(0L, uc.field_l);
                 bda.field_m[var18].field_Y = 1;
                 r.field_l[var18].a(param9 + 30802, cb.field_o[var18]);
                 r.field_l[var18].a(-1, wg.field_i[var18]);
                 r.field_l[var18].a(-1, bda.field_m[var18]);
                 r.field_l[var18].d((byte) 126);
                 i.field_a.a(param9 ^ 30802, r.field_l[var18]);
-                rf.field_k = rf.field_k + 1;
+                ArchiveIndex.field_k = ArchiveIndex.field_k + 1;
               }
               var18++;
               continue;
@@ -284,7 +284,7 @@ final class qq extends EventEffect {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            FullscreenFocusCanvas.field_a = new sna(0L, param1);
+            FullscreenFocusCanvas.field_a = new UiComponent(0L, param1);
             FullscreenFocusCanvas.field_a.field_Z = sv.field_b;
             i.field_a.a(-1, FullscreenFocusCanvas.field_a);
             stackIn_31_0 = cia.a(0) ? 1 : 0;
@@ -397,7 +397,7 @@ final class qq extends EventEffect {
         }
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         RuntimeException runtimeException = null;
         BattleCreature var4 = null;
         RuntimeException stackIn_16_0 = null;
@@ -418,7 +418,7 @@ final class qq extends EventEffect {
             return;
           }
           if (param2 != 12) {
-            this.a((PacketBuffer) null, (byte) -4);
+            this.write((PacketBuffer) null, (byte) -4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

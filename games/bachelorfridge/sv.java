@@ -7,14 +7,14 @@ final class sv {
     static IndexedSprite field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 24173) {
           field_c = null;
           field_a = null;
           field_b = null;
           return;
         }
-        sv.a(90);
+        sv.releaseStatics(90);
         field_c = null;
         field_a = null;
         field_b = null;

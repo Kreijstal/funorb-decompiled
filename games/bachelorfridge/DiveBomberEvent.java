@@ -9,7 +9,7 @@ final class DiveBomberEvent extends SpecialEvent {
         super(param0, param1);
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_q = null;
         if (param0 != -67) {
           return;
@@ -77,8 +77,8 @@ final class DiveBomberEvent extends SpecialEvent {
           var4[9][8] = 1;
           return var2;
         }
-        gj var3 = (gj) null;
-        this.a(-99, (gj) null);
+        BattleScreen var3 = (BattleScreen) null;
+        this.createAnimation(-99, (BattleScreen) null);
         var4Lifetime1 = new int[17][17];
         var2Lifetime1 = var4Lifetime1;
         var4Lifetime1[7][9] = 1;
@@ -111,11 +111,11 @@ final class DiveBomberEvent extends SpecialEvent {
         if (param0 == 23745) {
           return true;
         }
-        DiveBomberEvent.e((byte) -97);
+        DiveBomberEvent.releaseStatics((byte) -97);
         return true;
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         DiveBomberAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

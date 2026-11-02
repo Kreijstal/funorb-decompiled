@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vca extends IntrusiveNode {
-    static sna field_h;
+    static UiComponent field_h;
     private int field_k;
     private int field_o;
     private int field_j;
@@ -13,7 +13,7 @@ final class vca extends IntrusiveNode {
     private int field_l;
     private int field_n;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_i = null;
         field_m = null;
@@ -31,11 +31,11 @@ final class vca extends IntrusiveNode {
     final static void c(boolean param0) {
         if (!param0) {
           vca.c(true);
-          pla.field_g = f.b((byte) 73);
+          DessertArenaTheme.field_g = f.b((byte) 73);
           qla.field_f = 0;
           return;
         }
-        pla.field_g = f.b((byte) 73);
+        DessertArenaTheme.field_g = f.b((byte) 73);
         qla.field_f = 0;
     }
 

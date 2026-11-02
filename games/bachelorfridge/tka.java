@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class tka extends kj {
+final class tka extends TileEffect {
     private int field_f;
     private int field_h;
     private int field_g;
@@ -85,7 +85,7 @@ final class tka extends kj {
         var8.a(var6Lifetime1, var7Lifetime1 - 64);
     }
 
-    tka(gj param0, int param1, int param2) {
+    tka(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_f = 80;

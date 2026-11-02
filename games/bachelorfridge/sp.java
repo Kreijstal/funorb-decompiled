@@ -84,9 +84,9 @@ final class sp extends pu {
           oq.field_b.p(-96);
         }
         String var1 = kaa.c(97);
-        ola.field_e = new ph(var1, (String) null, true, false, false);
-        gja.field_m.a((wj) (kka.field_l), (byte) 82);
-        kka.field_l.e(ola.field_e, 33);
+        FridgeScreen.field_e = new ph(var1, (String) null, true, false, false);
+        gja.field_m.a((UiWidget) (kka.field_l), (byte) 82);
+        kka.field_l.e(FridgeScreen.field_e, 33);
         kka.field_l.m(param0 ^ 17311);
     }
 
@@ -102,9 +102,9 @@ final class sp extends pu {
         RuntimeException var2 = null;
         var4 = BachelorFridge.field_y;
         try {
-          lka.field_E = qs.a(false, new PacketBuffer(param0));
+          TextInputWidget.field_E = qs.a(false, new PacketBuffer(param0));
           w.field_h = new int[50][13];
-          for (var2_int = 1; var2_int < lka.field_E.length; var2_int++) {
+          for (var2_int = 1; var2_int < TextInputWidget.field_E.length; var2_int++) {
             for (var3 = 2; 15 > var3; var3++) {
               if (var3 != 3 &&
                 var3 != 6 &&

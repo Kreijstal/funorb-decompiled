@@ -15,7 +15,7 @@ final class TeleportSpecial extends SpecialOrder {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_q = (String) null;
           field_q = null;
@@ -37,7 +37,7 @@ final class TeleportSpecial extends SpecialOrder {
         var3 = BachelorFridge.field_y;
         try {
           for (var2_int = param0; var2_int < param1.length; var2_int++) {
-            lka.a((byte) 54, param1[var2_int]);
+            TextInputWidget.a((byte) 54, param1[var2_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ final class TeleportSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         TeleportEvent var4 = null;
@@ -65,7 +65,7 @@ final class TeleportSpecial extends SpecialOrder {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            TeleportSpecial.b(45);
+            TeleportSpecial.releaseStatics(45);
           }
           var3 = this.creature.a(94, param0);
           var4 = new TeleportEvent(this.moveId, new CreatureRef(var3));

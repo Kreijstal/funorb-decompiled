@@ -5,7 +5,7 @@ final class nca {
     static String field_b;
     static IndexedSprite[] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 87) {
           field_b = (String) null;
           field_a = null;
@@ -27,7 +27,7 @@ final class nca {
             nca.a(-125, (PacketBuffer) null, (BattleUpdate) null);
           }
           param1.writeByte(param2.field_h, 0);
-          param2.a(param1, -9);
+          param2.write(param1, -9);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "nca.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dw extends kj {
+final class dw extends TileEffect {
     private int field_h;
     static int field_f;
     static byte[] field_g;
 
-    dw(gj param0, int param1, int param2) {
+    dw(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_h = 39;
@@ -15,7 +15,7 @@ final class dw extends kj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         if (!param0) {
           return;

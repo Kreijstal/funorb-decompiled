@@ -51,7 +51,7 @@ final class qna extends k {
         var2.writeByte(0, param1 ^ 0);
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -106) {
           qna.b(18, -38);
           field_l = null;

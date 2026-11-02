@@ -55,7 +55,7 @@ final class ha extends tia {
     final static void a(int param0, int param1, boolean param2) {
         ld.field_n = param1;
         if (param2) {
-          ha.c(true);
+          ha.releaseStatics(true);
         }
         hda.field_o = param0;
     }
@@ -67,7 +67,7 @@ final class ha extends tia {
         }
     }
 
-    ha(gj param0, ad param1) {
+    ha(BattleScreen param0, CreatureActor param1) {
         super(param0, param1);
         try {
           this.field_g = 128;
@@ -77,7 +77,7 @@ final class ha extends tia {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_m = (int[]) null;
         }

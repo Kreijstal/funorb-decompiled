@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bu extends kj {
+final class bu extends TileEffect {
     private int field_h;
     private Sprite field_f;
     static String field_g;
-    static sna field_j;
+    static UiComponent field_j;
     private int field_i;
 
-    bu(gj param0, int param1, int param2, int param3) {
+    bu(BattleScreen param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         Sprite var5 = null;
         try {
@@ -24,7 +24,7 @@ final class bu extends kj {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_g = null;
         int var1 = 81 / ((14 - param0) / 62);

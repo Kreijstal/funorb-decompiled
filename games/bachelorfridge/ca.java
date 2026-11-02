@@ -7,7 +7,7 @@ final class ca extends kda {
     static String field_d;
     private static String field_z;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         int var1 = 71 % ((param0 - 1) / 60);
         field_e = null;

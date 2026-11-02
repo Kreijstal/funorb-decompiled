@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class via implements qda {
+final class via implements WidgetRenderer {
     private int field_a;
     private BitmapFont field_i;
     private int field_b;
@@ -76,10 +76,10 @@ final class via implements qda {
         vv.field_d = var8.readUnsignedByte(param0 ^ -16721722);
         sr.field_a = var8.readLong(-108);
         if (wka.field_a == 2) {
-          ad.field_g = var8.readUnsignedShort((byte) 75);
+          CreatureActor.field_g = var8.readUnsignedShort((byte) 75);
           DisableAnimation.field_w = var8.a(param0 ^ -10182);
         } else {
-          ad.field_g = 0;
+          CreatureActor.field_g = 0;
           DisableAnimation.field_w = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte(16711935) != 1) ? 0 : 1;
@@ -128,7 +128,7 @@ final class via implements qda {
         return new gs(param1);
     }
 
-    public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -137,7 +137,7 @@ final class via implements qda {
         int var12 = 0;
         int var13 = 0;
         km var14 = null;
-        wj stackIn_5_0 = null;
+        UiWidget stackIn_5_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -150,16 +150,16 @@ final class via implements qda {
             return;
           }
           if (param1 instanceof km) {
-            stackIn_5_0 = (wj) (param1);
+            stackIn_5_0 = (UiWidget) (param1);
           } else {
             stackIn_5_0 = null;
           }
           var14 = (km) (stackIn_5_0);
           if (var14 != null) {
           }
-          SoftwareRasterizer.fillRectangle(param0 + param1.field_s, param3 + param1.field_v, param1.field_p, param1.field_q, this.field_e);
-          var7 = param1.field_s + param0 + var14.field_A;
-          var8 = param3 + param1.field_v + var14.field_D;
+          SoftwareRasterizer.fillRectangle(param0 + param1.x, param3 + param1.y, param1.width, param1.height, this.field_e);
+          var7 = param1.x + param0 + var14.field_A;
+          var8 = param3 + param1.y + var14.field_D;
           SoftwareRasterizer.fillCircle(var7, var8, var14.field_G, this.field_d);
           if (var14.field_J != -1) {
             var9 = (double)var14.field_J * 3.141592653589793 * 2.0 / (double)var14.field_F;
@@ -176,7 +176,7 @@ final class via implements qda {
             return;
           }
           var13 = var14.field_G + var14.field_A + this.field_f;
-          this.field_i.drawParagraph(param1.field_w, param0 - (-param1.field_s - var13), param1.field_v + (param3 + this.field_g), -var13 + (-this.field_f + param1.field_p), -(this.field_f << 1) + param1.field_q, this.field_h, this.field_b, 1, 1, 0);
+          this.field_i.drawParagraph(param1.text, param0 - (-param1.x - var13), param1.y + (param3 + this.field_g), -var13 + (-this.field_f + param1.width), -(this.field_f << 1) + param1.height, this.field_h, this.field_b, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -192,7 +192,7 @@ final class via implements qda {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           field_c = (String) null;
           field_c = null;

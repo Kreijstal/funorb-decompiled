@@ -8,7 +8,7 @@ final class bha extends pu {
     static int field_o;
     private static String field_z;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         int var1 = 95 / ((-7 - param0) / 43);
     }

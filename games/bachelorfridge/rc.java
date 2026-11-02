@@ -26,7 +26,7 @@ final class rc extends k {
         return (int[]) null;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != -2) {
           return;

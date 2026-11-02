@@ -37,7 +37,7 @@ final class wa extends lw {
             return (AntialiasedBitmapFont) (stackIn_4_0);
           }
           var2 = new AntialiasedBitmapFont(param1, fl.field_j, AirstrikeAnimation.field_D, lq.field_A, InsanoSauceSpecial.field_s, hk.field_f, BananarangAnimation.field_P);
-          al.b(-18073);
+          al.releaseStatics(-18073);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -90,8 +90,8 @@ final class wa extends lw {
           if (param0 > -85) {
             wa.d((byte) -63);
           }
-          if (qg.field_b.field_z != null) {
-            var1 = (kr) (qg.field_b.field_z.b((byte) 90));
+          if (qg.field_b.children != null) {
+            var1 = (kr) (qg.field_b.children.b((byte) 90));
             while (var1 != null) {
               if (var1.field_R == 1) {
                 RasterBuffer.a(7, 7758);
@@ -102,7 +102,7 @@ final class wa extends lw {
                 }
                 gu.field_d = gu.field_d - 1;
               }
-              var1 = (kr) (qg.field_b.field_z.c(0));
+              var1 = (kr) (qg.field_b.children.c(0));
             }
           }
           qf.e(20434);

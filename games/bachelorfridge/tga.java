@@ -3,9 +3,9 @@
  */
 class tga extends BoardChange {
     int field_o;
-    static sna field_p;
+    static UiComponent field_p;
     int field_n;
-    static sna field_m;
+    static UiComponent field_m;
 
     final void b(PacketBuffer param0, byte param1) {
         try {
@@ -17,9 +17,9 @@ class tga extends BoardChange {
         }
     }
 
-    void a(ub param0, int param1) {
-        gj var3 = param0.field_o;
-        param0.a(27799, new fha(new uea(var3, this.field_n, this.field_o, 16777215)));
+    void a(BoardChangeAnimation param0, int param1) {
+        BattleScreen var3 = param0.field_o;
+        param0.addChild(27799, new fha(new uea(var3, this.field_n, this.field_o, 16777215)));
         if (param1 >= -2) {
           return;
         }
@@ -35,7 +35,7 @@ class tga extends BoardChange {
         int var3_int = 0;
         try {
           if (param0) {
-            tga.a(-106);
+            tga.releaseStatics(-106);
           }
           var3_int = param1.field_L.field_o[this.field_n][this.field_o].terrain;
           if (param1.field_L.field_o[this.field_n][this.field_o].field_a != -1 &&
@@ -48,9 +48,9 @@ class tga extends BoardChange {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -63) {
-          tga.a(110);
+          tga.releaseStatics(110);
           field_m = null;
           field_p = null;
           return;

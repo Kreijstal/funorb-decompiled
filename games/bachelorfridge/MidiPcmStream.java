@@ -1219,7 +1219,7 @@ final class MidiPcmStream extends PcmStream {
             var10 = (int)var8.key;
             var11 = (MusicPatch) (this.field_m.a(true, (long)var10));
             if (var11 == null) {
-              var11 = wj.a(param0, false, var10);
+              var11 = UiWidget.a(param0, false, var10);
               if (var11 == null) {
                 var6_int = 0;
                 decompiledFrameRemainder0 = false;

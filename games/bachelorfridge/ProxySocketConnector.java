@@ -44,7 +44,7 @@ final class ProxySocketConnector extends SocketConnector {
           var7 = new BufferedReader((Reader) ((Object) new InputStreamReader(var13.getInputStream())));
           var14 = var7.readLine();
           if (param1 != 23772) {
-            ProxySocketConnector.b((byte) -111);
+            ProxySocketConnector.releaseStatics((byte) -111);
           }
           boolean decompiledFrameRemainder0 = true;
           if (var14 != null) {
@@ -183,7 +183,7 @@ final class ProxySocketConnector extends SocketConnector {
         var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
         if (param0 != -70) {
-          ProxySocketConnector.b((byte) 99);
+          ProxySocketConnector.releaseStatics((byte) 99);
         }
         var7 = null;
         var8 = var6_array;
@@ -297,7 +297,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 != -100) {
           return;

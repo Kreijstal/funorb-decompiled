@@ -90,7 +90,7 @@ final class pma extends k {
           pma.a((byte) 49, false);
         }
         if (SnowAnimation.field_w != null) {
-          stackIn_8_0 = (hfa.a(SnowAnimation.field_w.field_Rb, param0 - 120)) ? 1 : 0;
+          stackIn_8_0 = (WidgetWrapper.a(SnowAnimation.field_w.field_Rb, param0 - 120)) ? 1 : 0;
         } else {
           stackIn_8_0 = 0;
         }

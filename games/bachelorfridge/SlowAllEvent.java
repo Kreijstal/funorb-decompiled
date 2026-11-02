@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SlowAllEvent extends SpecialEvent {
-    static sna field_s;
+    static UiComponent field_s;
     static java.math.BigInteger field_q;
     static int field_r;
 
@@ -48,7 +48,7 @@ final class SlowAllEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         SlowAllAnimation stackIn_4_0 = null;
@@ -107,7 +107,7 @@ final class SlowAllEvent extends SpecialEvent {
         return ig.field_m.readString(-32);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           SlowAllEvent.e(-8);
           field_s = null;

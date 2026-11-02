@@ -4,7 +4,7 @@
 final class ic extends EventEffect {
     static jd field_i;
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           int var3_int = 73 % ((param1 - 34) / 58);
         } catch (RuntimeException runtimeException) {
@@ -12,7 +12,7 @@ final class ic extends EventEffect {
         }
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         try {
           param1.field_R = false;
           if (param2 != 12) {
@@ -45,7 +45,7 @@ final class ic extends EventEffect {
         if (param0 >= 28) {
           return;
         }
-        ic.b(true);
+        ic.releaseStatics(true);
     }
 
     final static cq a(int param0, PcmSample param1, int param2) {
@@ -75,7 +75,7 @@ final class ic extends EventEffect {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_i = (jd) null;
           field_i = null;

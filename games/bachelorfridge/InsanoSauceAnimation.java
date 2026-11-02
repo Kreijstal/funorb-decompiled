@@ -46,7 +46,7 @@ final class InsanoSauceAnimation extends EventAnimation {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_y = null;
         field_v = null;
         field_x = null;
@@ -56,7 +56,7 @@ final class InsanoSauceAnimation extends EventAnimation {
     }
 
     private final void e(byte param0) {
-        ad var5 = null;
+        CreatureActor var5 = null;
         int var6 = BachelorFridge.field_y;
         BattleCreature var7 = this.field_w.creature.a(param0 + 9, this.screen.field_h);
         BattleCreature var2 = var7;
@@ -75,15 +75,15 @@ final class InsanoSauceAnimation extends EventAnimation {
           if (var3 instanceof DamageEffect) {
             ((DamageEffect) (var3)).a((byte) 74, var7, this.screen.field_h, this.field_w.field_q[var4]);
           } else {
-            var3.a(var7, this.screen.field_h, 12);
+            var3.apply(var7, this.screen.field_h, 12);
           }
-          this.a(27799, new ek(this.screen, var5, var3.field_f));
+          this.addChild(27799, new ek(this.screen, var5, var3.field_f));
           var4++;
           var3 = (EventEffect) (this.field_w.effects.c(0));
         }
     }
 
-    InsanoSauceAnimation(gj param0, InsanoSauceEvent param1) {
+    InsanoSauceAnimation(BattleScreen param0, InsanoSauceEvent param1) {
         super(param0, param1);
         try {
           this.field_w = param1;
@@ -108,11 +108,11 @@ final class InsanoSauceAnimation extends EventAnimation {
         int var15;
         int var16;
         Object var18;
-        hd var18_ref;
+        SpecialMoveDefinition var18_ref;
         int[][] var21;
         var18 = null;
         var16 = BachelorFridge.field_y;
-        var18_ref = (hd) (al.a(-88, this.field_w.moveId));
+        var18_ref = (SpecialMoveDefinition) (al.a(-88, this.field_w.moveId));
         if (param0 >= -123) {
           return;
         }
@@ -142,7 +142,7 @@ final class InsanoSauceAnimation extends EventAnimation {
         return;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = -105 / ((71 - param0) / 47);
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;

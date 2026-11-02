@@ -7,10 +7,10 @@ final class waa {
     final static String a(boolean param0) {
         if (!param0) {
           field_a = 2;
-          if (kq.field_j == ola.field_p) {
+          if (kq.field_j == FridgeScreen.field_p) {
             return em.field_V;
           }
-          if (kq.field_j == dka.field_G) {
+          if (kq.field_j == ReportAbusePanel.field_G) {
             return BagpipeAnimation.field_w;
           }
           if (ut.field_m.a(!param0 ? true : false)) {
@@ -18,10 +18,10 @@ final class waa {
           }
           return BagpipeAnimation.field_w;
         }
-        if (kq.field_j == ola.field_p) {
+        if (kq.field_j == FridgeScreen.field_p) {
           return em.field_V;
         }
-        if (kq.field_j == dka.field_G) {
+        if (kq.field_j == ReportAbusePanel.field_G) {
           return BagpipeAnimation.field_w;
         }
         if (ut.field_m.a(!param0 ? true : false)) {

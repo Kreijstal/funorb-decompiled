@@ -3,7 +3,7 @@
  */
 final class iia extends BoardChange {
     static int field_p;
-    static sna field_m;
+    static UiComponent field_m;
     static String field_o;
     private int field_r;
     static String field_q;
@@ -20,9 +20,9 @@ final class iia extends BoardChange {
         }
     }
 
-    final void a(ub param0, int param1) {
-        gj var4 = param0.field_o;
-        gj var3 = var4;
+    final void a(BoardChangeAnimation param0, int param1) {
+        BattleScreen var4 = param0.field_o;
+        BattleScreen var3 = var4;
         if (param1 > -2) {
           return;
         }
@@ -199,7 +199,7 @@ final class iia extends BoardChange {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_n = null;
         field_q = null;

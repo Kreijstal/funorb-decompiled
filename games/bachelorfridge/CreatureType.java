@@ -170,15 +170,15 @@ final class CreatureType {
         int var6;
         int var7;
         int var8;
-        oha var10;
-        oha var11;
+        MoveDefinition var10;
+        MoveDefinition var11;
         int var6Lifetime1;
         int var7Lifetime1;
         int var8Lifetime1;
         if (param4 >= 61) {
           var10 = al.a(-72, param3);
           var6 = var10.field_h;
-          var7 = var10.field_a;
+          var7 = var10.kind;
           var8 = var10.field_l;
           if (param0) {
             hh.field_b[var6].draw(5 + param2, param1 + 5);
@@ -232,7 +232,7 @@ final class CreatureType {
         CreatureType.a((byte) 117);
         var11 = al.a(-72, param3);
         var6Lifetime1 = var11.field_h;
-        var7Lifetime1 = var11.field_a;
+        var7Lifetime1 = var11.kind;
         var8Lifetime1 = var11.field_l;
         if (!param0) {
           hh.field_b[var6Lifetime1].a(5 + param2, param1 + 5, 128);

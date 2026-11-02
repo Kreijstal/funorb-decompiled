@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rda {
-    static sna field_a;
+    static UiComponent field_a;
     static byte[] field_b;
 
     final static void a(byte param0, int param1, int param2, sga param3, int param4, ema param5, int param6) {
@@ -58,7 +58,7 @@ final class rda {
         int var5Lifetime1;
         var6 = BachelorFridge.field_y;
         var2 = 0;
-        var3 = ur.field_d;
+        var3 = WhirlpoolDigest.field_d;
         if (5 > var3) {
           var2 = 8192 * var3 * var3 / 1100;
           var4 = 1;
@@ -177,7 +177,7 @@ final class rda {
         dl.field_j = ek.a(var4Lifetime1 * var2, var5Lifetime1 * var2, false);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_b = (byte[]) null;
           field_a = null;

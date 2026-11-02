@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ek extends AnimationNode {
-    private gj field_l;
+    private BattleScreen field_l;
     private int field_j;
     private int field_n;
     static String field_k;
@@ -96,7 +96,7 @@ final class ek extends AnimationNode {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    ek(gj param0, ad param1, int param2) {
+    ek(BattleScreen param0, CreatureActor param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -119,7 +119,7 @@ final class ek extends AnimationNode {
           if (param1.field_s.hp > 0) {
             return;
           }
-          this.a(27799, new fl(this.field_l, param1));
+          this.addChild(27799, new fl(this.field_l, param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -141,7 +141,7 @@ final class ek extends AnimationNode {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = 102 % ((71 - param0) / 47);
         int fieldTemp$0 = this.field_n - 1;
         this.field_n = this.field_n - 1;
@@ -151,10 +151,10 @@ final class ek extends AnimationNode {
         return false;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 8) {
-          ek.d(-98);
+          ek.releaseStatics(-98);
           field_o = null;
           field_m = null;
           return;

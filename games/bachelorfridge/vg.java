@@ -3,13 +3,13 @@
  */
 final class vg extends BattleUpdate {
     IntrusiveDeque field_m;
-    static sna field_k;
+    static UiComponent field_k;
     static BufferedCacheFile field_n;
     static Boolean field_l;
 
-    final void a(BattleState param0, boolean param1) {
+    final void apply(BattleState param0, boolean param1) {
         int var4 = 0;
-        gj var5 = null;
+        BattleScreen var5 = null;
         bf var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -20,8 +20,8 @@ final class vg extends BattleUpdate {
         try {
           var6 = (bf) (this.field_m.b((byte) 90));
           if (param1) {
-            var5 = (gj) null;
-            this.a(-71, (gj) null);
+            var5 = (BattleScreen) null;
+            this.createAnimation(-71, (BattleScreen) null);
           }
           while (var6 != null) {
             var6.a(param0, -26281);
@@ -94,7 +94,7 @@ final class vg extends BattleUpdate {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         if (param0 <= 64) {
           field_l = (Boolean) null;
@@ -106,7 +106,7 @@ final class vg extends BattleUpdate {
         field_k = null;
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         bf var4 = null;
         wea stackIn_3_0 = null;
@@ -135,7 +135,7 @@ final class vg extends BattleUpdate {
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void write(PacketBuffer param0, int param1) {
         bf var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -177,7 +177,7 @@ final class vg extends BattleUpdate {
     final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           if (param2 != 22997) {
-            vg.c((byte) -13);
+            vg.releaseStatics((byte) -13);
           }
           qg.a(param0.field_v, param4, param0, param1, 0, 0, 0, 0, SoftwareRasterizer.field_e, 0, param3, param7, param6, 0, 0, param5, param8);
         } catch (RuntimeException runtimeException) {

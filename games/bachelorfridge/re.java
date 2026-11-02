@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re extends hfa {
+final class re extends WidgetWrapper {
     static GameAppletShell field_C;
     static String field_D;
     static int[][] field_F;
@@ -10,18 +10,18 @@ final class re extends hfa {
     final static void a(int param0, PcmStreamMixer param1, vr param2, boolean param3) {
         try {
           fa.field_l = param0 * fda.a(0) / 1000;
-          id.a(param2, 64);
+          PizzaArenaTheme.a(param2, 64);
           FullscreenFocusCanvas.a(param2, 112);
           sha.a(param2, param3);
           pr.c(-95);
           uw.e(65536);
-          ur.field_d = 0 - fa.field_l;
+          WhirlpoolDigest.field_d = 0 - fa.field_l;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "re.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -121) {
           field_C = (GameAppletShell) null;
           field_D = null;
@@ -32,7 +32,7 @@ final class re extends hfa {
         field_F = (int[][]) null;
     }
 
-    final void a(int param0, int param1, byte param2, wj param3, int param4, int param5) {
+    final void a(int param0, int param1, byte param2, UiWidget param3, int param4, int param5) {
         raa var7 = null;
         try {
           super.a(param0, param1, param2, param3, param4, param5);
@@ -41,13 +41,13 @@ final class re extends hfa {
             if (!this.a(param4, param1, 0, param0, param5)) {
               return;
             }
-            if (this.field_k instanceof mo) {
-              ((mo) (this.field_k)).a(this, var7, (byte) -128);
+            if (this.listener instanceof mo) {
+              ((mo) (this.listener)).a(this, var7, (byte) -128);
               cea.field_b = null;
               return;
             }
-            if (var7.field_k instanceof mo) {
-              ((mo) (var7.field_k)).a(this, var7, (byte) -34);
+            if (var7.listener instanceof mo) {
+              ((mo) (var7.listener)).a(this, var7, (byte) -34);
               cea.field_b = null;
               return;
             }
@@ -57,10 +57,10 @@ final class re extends hfa {
         }
     }
 
-    private re(int param0, int param1, int param2, int param3, qda param4, pl param5, wj param6) {
+    private re(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-          this.field_A = param6;
+          this.child = param6;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "re.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

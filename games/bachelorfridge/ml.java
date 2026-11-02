@@ -27,7 +27,7 @@ final class ml {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -26 / ((-12 - param0) / 42);
         field_a = null;
     }

@@ -33,7 +33,7 @@ final class it {
         this.field_q = DiveBomberAnimation.a(100, m.field_a, -2147483648);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 102) {
           field_c = (double[]) null;
         }

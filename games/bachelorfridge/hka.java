@@ -42,7 +42,7 @@ final class hka extends aba {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!vn.a((byte) 119, var4)) {
-            stackIn_3_0 = jt.field_f;
+            stackIn_3_0 = FoodShopPanel.field_f;
             return stackIn_3_0;
           }
           var5 = (CharSequence) ((Object) param0);
@@ -55,7 +55,7 @@ final class hka extends aba {
             stackIn_12_0 = cm.field_u;
             return stackIn_12_0;
           }
-          stackIn_10_0 = jt.field_f;
+          stackIn_10_0 = FoodShopPanel.field_f;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ final class hka extends aba {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 41 / ((param0 + 8) / 45);
-          if (this.a(param1, false) != jt.field_f) {
+          if (this.a(param1, false) != FoodShopPanel.field_f) {
             return null;
           }
           stackIn_3_0 = ug.field_k;
@@ -100,7 +100,7 @@ final class hka extends aba {
         }
     }
 
-    hka(lka param0) {
+    hka(TextInputWidget param0) {
         super(param0);
     }
 

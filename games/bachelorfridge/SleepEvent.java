@@ -17,7 +17,7 @@ final class SleepEvent extends SpecialEvent {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         int var1 = 9 % ((55 - param0) / 43);
     }
@@ -55,7 +55,7 @@ final class SleepEvent extends SpecialEvent {
         super(param0, param1);
     }
 
-    final static void a(int param0, int[] param1, long param2, String param3, String param4, int param5, int param6, sga param7, sna param8) {
+    final static void a(int param0, int[] param1, long param2, String param3, String param4, int param5, int param6, sga param7, UiComponent param8) {
         if (param6 > -63) {
           return;
         }
@@ -67,7 +67,7 @@ final class SleepEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         SleepAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

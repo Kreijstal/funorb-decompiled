@@ -80,7 +80,7 @@ final class BagpipeEvent extends SpecialEvent {
         super(param0, param1);
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         BagpipeAnimation stackIn_4_0 = null;

@@ -3,7 +3,7 @@
  */
 final class FlyAnimation extends EventAnimation {
     private FlyEvent field_C;
-    private taa field_E;
+    private ActorAnimation field_E;
     private int field_v;
     static int field_z;
     private int field_H;
@@ -19,11 +19,11 @@ final class FlyAnimation extends EventAnimation {
     private final void e(byte param0) {
         int var2 = 10 % ((-10 - param0) / 39);
         if (null != this.field_y) {
-          id.a(127, this.field_y);
+          PizzaArenaTheme.a(127, this.field_y);
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         PcmSampleStream var5 = null;
         uea var2_ref_uea = null;
         int var3 = 0;
@@ -49,7 +49,7 @@ final class FlyAnimation extends EventAnimation {
         }
         if (this.field_F == -25) {
           var2_ref_uea = new uea(this.screen, this.field_C.field_s, this.field_C.field_u, 16777215);
-          ((kj) ((Object) var2_ref_uea)).a(0);
+          ((TileEffect) ((Object) var2_ref_uea)).a(0);
         }
         int var2 = 38 % ((param0 - 71) / 47);
         if (this.field_F != 0) {
@@ -68,14 +68,14 @@ final class FlyAnimation extends EventAnimation {
 
     private final void d(int param0) {
         if (param0 > 19) {
-          this.field_C.a(this.screen.field_h, false);
+          this.field_C.apply(this.screen.field_h, false);
           return;
         }
-        this.field_E = (taa) null;
-        this.field_C.a(this.screen.field_h, false);
+        this.field_E = (ActorAnimation) null;
+        this.field_C.apply(this.screen.field_h, false);
     }
 
-    FlyAnimation(gj param0, FlyEvent param1) {
+    FlyAnimation(BattleScreen param0, FlyEvent param1) {
         super(param0, param1);
         aj var6 = null;
         int var4 = 0;
@@ -101,10 +101,10 @@ final class FlyAnimation extends EventAnimation {
           this.field_F = -this.field_w;
           var4 = this.field_G - this.field_w * this.field_v;
           var5 = -(this.field_B * this.field_w) + this.field_x;
-          this.field_E = new taa(this.screen, 0, 0);
+          this.field_E = new ActorAnimation(this.screen, 0, 0);
           this.field_E.field_k = 320 - var4;
           this.field_E.field_j = -var5 + 240;
-          this.a(27799, this.field_E);
+          this.addChild(27799, this.field_E);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "mm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

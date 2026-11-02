@@ -6,9 +6,9 @@ final class CreatureRef extends IntrusiveNode {
     static String field_h;
     int field_g;
 
-    final ad a(int param0, gj param1) {
+    final CreatureActor a(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
-        ad stackIn_3_0 = null;
+        CreatureActor stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -43,7 +43,7 @@ final class CreatureRef extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 7) {
-            CreatureRef.c((byte) -65);
+            CreatureRef.releaseStatics((byte) -65);
           }
           var3 = param1.rosters[this.field_g].field_b[this.field_f];
           stackIn_3_0 = var3;
@@ -62,7 +62,7 @@ final class CreatureRef extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -115) {
           return;
         }

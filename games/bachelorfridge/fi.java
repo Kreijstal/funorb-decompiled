@@ -9,7 +9,7 @@ final class fi extends BoardChange {
     static byte[] field_p;
     private int field_r;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_m = null;
         field_p = null;
@@ -890,8 +890,8 @@ final class fi extends BoardChange {
         }
     }
 
-    final void a(ub param0, int param1) {
-        gj var3 = null;
+    final void a(BoardChangeAnimation param0, int param1) {
+        BattleScreen var3 = null;
         aca var4 = null;
         try {
           var3 = param0.field_o;
@@ -900,7 +900,7 @@ final class fi extends BoardChange {
           }
           this.a(false, var3.field_h);
           var4 = new aca(var3, this.field_r, this.field_q, false);
-          ((kj) ((Object) var4)).a(0);
+          ((TileEffect) ((Object) var4)).a(0);
           var3.field_s.field_F = 0;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "fi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

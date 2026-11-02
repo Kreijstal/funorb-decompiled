@@ -114,7 +114,7 @@ abstract class bf extends IntrusiveNode {
         wb.a(param1, param0, -115);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -105 / ((param0 + 1) / 57);
         field_g = null;
         field_h = null;

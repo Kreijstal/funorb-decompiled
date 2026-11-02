@@ -23,10 +23,10 @@ final class lf {
         int var2;
         int var1Lifetime1;
         var2 = BachelorFridge.field_y;
-        mda.field_b = new sna();
+        mda.field_b = new UiComponent();
         if (param0 >= 57) {
-          oha.b((byte) -34);
-          mda.field_b.a(jfa.field_q[BananarangAnimation.field_Q].field_d * 100, 31407, 400, 105, 350);
+          MoveDefinition.b((byte) -34);
+          mda.field_b.a(FridgeCreature.field_q[BananarangAnimation.field_Q].field_d * 100, 31407, 400, 105, 350);
           RasterBuffer.field_d = new wl("foodlist", mda.field_b, cb.field_m, nha.field_e);
           iu.d(118);
           SnowEvent.field_t = "";
@@ -70,8 +70,8 @@ final class lf {
           return;
         }
         lf.b(-42);
-        oha.b((byte) -34);
-        mda.field_b.a(jfa.field_q[BananarangAnimation.field_Q].field_d * 100, 31407, 400, 105, 350);
+        MoveDefinition.b((byte) -34);
+        mda.field_b.a(FridgeCreature.field_q[BananarangAnimation.field_Q].field_d * 100, 31407, 400, 105, 350);
         RasterBuffer.field_d = new wl("foodlist", mda.field_b, cb.field_m, nha.field_e);
         iu.d(118);
         SnowEvent.field_t = "";

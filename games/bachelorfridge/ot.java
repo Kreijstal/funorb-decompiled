@@ -23,7 +23,7 @@ class ot extends iga {
               di.c(55);
             }
             AirstrikeAnimation.a(true, param1, param2);
-            vd.a((byte) -35, param2, param5);
+            WidgetContainer.a((byte) -35, param2, param5);
             param2 = false;
           }
           return param2;
@@ -37,7 +37,7 @@ class ot extends iga {
             di.c(55);
           }
           AirstrikeAnimation.a(true, param1, param2);
-          vd.a((byte) -35, param2, param5);
+          WidgetContainer.a((byte) -35, param2, param5);
           param2 = false;
         }
         return param2;
@@ -64,7 +64,7 @@ class ot extends iga {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -36) {
           field_e = (Sprite) null;
           field_e = null;

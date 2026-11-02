@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class DisableSpecial extends SpecialOrder {
-    static sna field_r;
+    static UiComponent field_r;
     static String field_q;
     static String field_p;
 
@@ -91,7 +91,7 @@ final class DisableSpecial extends SpecialOrder {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_p = null;
         field_q = null;
         field_r = null;
@@ -100,7 +100,7 @@ final class DisableSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         BattleCreature var4 = null;

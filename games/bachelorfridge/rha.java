@@ -67,17 +67,17 @@ final class rha {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = BachelorFridge.field_y;
-        if (ur.field_d < 0) {
+        if (WhirlpoolDigest.field_d < 0) {
           return;
         }
         var3 = -135 + param2;
         var4 = param0 - 35;
         var5 = 256;
-        if (ur.field_d < 75) {
-          var5 = (ur.field_d << 8) / 75;
+        if (WhirlpoolDigest.field_d < 75) {
+          var5 = (WhirlpoolDigest.field_d << 8) / 75;
         }
-        if (ur.field_d > 200) {
-          var5 = (250 - ur.field_d << 8) / 50;
+        if (WhirlpoolDigest.field_d > 200) {
+          var5 = (250 - WhirlpoolDigest.field_d << 8) / 50;
         }
         bu.a(0, BuffVendorSpecial.field_r);
         TriangleRasterizer.d();
@@ -86,12 +86,12 @@ final class rha {
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0, -var5 + 256);
           db.b(110);
-          if (ur.field_d < 150) {
+          if (WhirlpoolDigest.field_d < 150) {
             BuffVendorSpecial.field_r.drawHalfSize(var3, var4);
           } else {
             nd.field_g.a(var3 + 15, var4 + 10, var5);
           }
-          var6 = ur.field_d - 125;
+          var6 = WhirlpoolDigest.field_d - 125;
           if (var6 > 0 &&
             var6 < 50) {
             if (var6 < 20) {
@@ -108,9 +108,9 @@ final class rha {
           }
         } else {
           db.b(110);
-          if (ur.field_d >= 150) {
+          if (WhirlpoolDigest.field_d >= 150) {
             nd.field_g.a(var3 + 15, var4 + 10, var5);
-            var6 = ur.field_d - 125;
+            var6 = WhirlpoolDigest.field_d - 125;
             if (var6 > 0 &&
               var6 < 50) {
               regionExit1: {
@@ -128,7 +128,7 @@ final class rha {
             }
           } else {
             BuffVendorSpecial.field_r.drawHalfSize(var3, var4);
-            var6 = ur.field_d - 125;
+            var6 = WhirlpoolDigest.field_d - 125;
             if (var6 > 0 &&
               var6 < 50) {
               if (var6 < 20) {
@@ -146,9 +146,9 @@ final class rha {
           }
         }
         if (param1) {
-          rha.c(-72);
+          rha.releaseStatics(-72);
         }
-        var6Lifetime1 = ur.field_d - 140;
+        var6Lifetime1 = WhirlpoolDigest.field_d - 140;
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = 256;
           if (var6Lifetime1 < 20) {
@@ -173,7 +173,7 @@ final class rha {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = (Sprite[][]) null;
         field_d = null;
         int var1 = -18 % ((40 - param0) / 37);

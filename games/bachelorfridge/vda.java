@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class vda {
-    static sna field_a;
+    static UiComponent field_a;
 
     final static void a(long param0, int param1, int param2, int param3, boolean param4, boolean param5, int param6, int param7, PlatformTaskDispatcher param8, int param9, int param10, String param11, int param12, int param13) {
         try {
@@ -32,7 +32,7 @@ final class vda {
             kha.field_k = param3;
             cc.field_e = param8;
             fl.field_q = param1;
-            kn.field_h = param13;
+            CurryArenaTheme.field_h = param13;
             if (null == cc.field_e.field_a) {
               return;
             }
@@ -69,7 +69,7 @@ final class vda {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 42 % ((34 - param0) / 38);
         field_a = null;
     }

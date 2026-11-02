@@ -37,7 +37,7 @@ final class MoveEvent extends CreatureEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         BattleState var4 = null;
         qf stackIn_3_0 = null;
@@ -48,7 +48,7 @@ final class MoveEvent extends CreatureEvent {
         try {
           if (param0 != 5) {
             var4 = (BattleState) null;
-            this.a((BattleState) null, false);
+            this.apply((BattleState) null, false);
           }
           stackIn_3_0 = new qf(param1, this);
           return (AnimationNode) ((Object) stackIn_3_0);
@@ -101,7 +101,7 @@ final class MoveEvent extends CreatureEvent {
         }
     }
 
-    final void a(BattleState param0, boolean param1) {
+    final void apply(BattleState param0, boolean param1) {
         BattleCreature var3 = null;
         try {
           var3 = this.creature.a(103, param0);
@@ -134,7 +134,7 @@ final class MoveEvent extends CreatureEvent {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_s = null;
         if (param0 != 15) {

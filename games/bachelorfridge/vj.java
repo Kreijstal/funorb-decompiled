@@ -19,14 +19,14 @@ final class vj extends pu {
           var3 = -80 / ((param2 - 82) / 44);
           return tj.field_e[param0];
         }
-        if (ad.a(30, param1)) {
+        if (CreatureActor.a(30, param1)) {
           return 29;
         }
         var3Lifetime1 = -80 / ((param2 - 82) / 44);
         return tj.field_e[param0];
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_m = null;
         int var1 = -87 % ((param0 - 37) / 34);

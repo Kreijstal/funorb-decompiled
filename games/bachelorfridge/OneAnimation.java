@@ -3,7 +3,7 @@
  */
 final class OneAnimation extends EventAnimation {
     private boolean field_v;
-    private taa field_A;
+    private ActorAnimation field_A;
     static int field_z;
     static String field_G;
     static boolean field_x;
@@ -14,9 +14,9 @@ final class OneAnimation extends EventAnimation {
     private int field_B;
     private int field_H;
     private int field_w;
-    private ad field_F;
+    private CreatureActor field_F;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_G = null;
         field_E = null;
         if (param0) {
@@ -31,7 +31,7 @@ final class OneAnimation extends EventAnimation {
         FlySpecial.a(false, param0, (byte) 85);
     }
 
-    OneAnimation(gj param0, OneEvent param1) {
+    OneAnimation(BattleScreen param0, OneEvent param1) {
         super(param0, param1);
         MoveCreatureEffect var4 = null;
         this.field_v = false;
@@ -43,8 +43,8 @@ final class OneAnimation extends EventAnimation {
           this.field_w = var4.field_l - this.field_F.field_s.tileY;
           this.field_H = (int)Math.sqrt((double)((this.field_w * this.field_w + this.field_y * this.field_y) * 100));
           this.field_C = (int)Math.sqrt((double)(256 * (this.field_y * this.field_y + this.field_w * this.field_w)));
-          this.field_A = new taa(this.screen, this.field_F);
-          this.a(27799, this.field_A);
+          this.field_A = new ActorAnimation(this.screen, this.field_F);
+          this.addChild(27799, this.field_A);
           this.field_B = 25 + this.field_H;
           this.field_F.field_o = 0;
           this.field_F.field_r = 0;
@@ -64,7 +64,7 @@ final class OneAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var2 = 0;
@@ -159,9 +159,9 @@ final class OneAnimation extends EventAnimation {
 
     private final void d(int param0) {
         EventEffect var3;
-        ad var4;
+        CreatureActor var4;
         MoveCreatureEffect var5;
-        ad var6;
+        CreatureActor var6;
         int var7;
         BattleCreature var8;
         var7 = BachelorFridge.field_y;
@@ -182,7 +182,7 @@ final class OneAnimation extends EventAnimation {
             this.screen.a(var5.field_i, var6, (byte) 48, var5.field_l);
           } else {
             if (!(var3 instanceof DamageEffect)) {
-              var3.a(var8, this.screen.field_h, param0 ^ 10);
+              var3.apply(var8, this.screen.field_h, param0 ^ 10);
             }
           }
           var3 = (EventEffect) (this.field_D.effects.c(0));
@@ -191,7 +191,7 @@ final class OneAnimation extends EventAnimation {
 
     private final void f(byte param0) {
         EventEffect var3 = null;
-        ad var4 = null;
+        CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
         BattleCreature var2 = this.field_D.creature.a(70, this.screen.field_h);
         if (var2.isDown(-112)) {
@@ -203,8 +203,8 @@ final class OneAnimation extends EventAnimation {
             var4 = var3.target.a(-27449, this.screen);
             var4.b(-1, 6);
             if (var3 instanceof DamageEffect) {
-              var3.a(var2, this.screen.field_h, 12);
-              this.a(27799, new ek(this.screen, var4, var3.field_f));
+              var3.apply(var2, this.screen.field_h, 12);
+              this.addChild(27799, new ek(this.screen, var4, var3.field_f));
             }
             var3 = (EventEffect) (this.field_D.effects.c(0));
           }

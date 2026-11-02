@@ -14,7 +14,7 @@ final class lna {
     int field_s;
     private Sprite[] field_D;
     private int field_p;
-    static sna field_C;
+    static UiComponent field_C;
     private int field_m;
     private Sprite field_a;
     static String field_h;
@@ -122,7 +122,7 @@ final class lna {
         if (this.field_A) {
           return;
         }
-        this.field_D = wj.a(-863, this.field_l);
+        this.field_D = UiWidget.a(-863, this.field_l);
         ek.a((byte) -25, this.field_l);
         this.field_A = true;
         if (param0 != 8) {
@@ -791,7 +791,7 @@ final class lna {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -44 / ((-7 - param0) / 56);
         field_h = null;
         field_y = (String[][]) null;

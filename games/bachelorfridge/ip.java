@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ip extends kj {
+final class ip extends TileEffect {
     static Sprite[] field_f;
     private int field_g;
 
-    ip(gj param0, int param1, int param2) {
+    ip(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -68,7 +68,7 @@ final class ip extends kj {
             return stackIn_18_0;
           }
           if (param1 != -80) {
-            ip.c((byte) 108);
+            ip.releaseStatics((byte) 108);
           }
           var5 = sja.field_fb;
           var5.writeCipheredByte(param2, (byte) 107);
@@ -93,7 +93,7 @@ final class ip extends kj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 != -36) {
           field_f = (Sprite[]) null;

@@ -14,7 +14,7 @@ class qb extends k {
         this.field_k = -1;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         int var1 = -31 % ((74 - param0) / 46);
         field_m = null;
@@ -197,17 +197,17 @@ class qb extends k {
           }
           dfa.field_b = -(var7Lifetime1 >> 1) + (var7Lifetime1 + sd.field_a);
           ula.field_f = (ShieldEvent.field_r + raa.field_J << 1) * fw.field_i.field_e;
-          rs.field_a = sd.field_a - (var7Lifetime1 >> 1);
+          StatusEffectInfo.field_a = sd.field_a - (var7Lifetime1 >> 1);
           for (var8Lifetime2 = 0; var8Lifetime2 < pt.field_a.length; var8Lifetime2++) {
             stackIn_37_0 = ula.field_f;
             if (gn.field_l[var8Lifetime2] >= 0) {
-              stackIn_38_1 = jo.field_t;
+              stackIn_38_1 = BoardView.field_t;
             } else {
               stackIn_38_1 = un.field_i;
             }
             ula.field_f = stackIn_37_0 + stackIn_38_1;
           }
-          GasCloudSpecial.field_q = jfa.field_w - (ula.field_f >> 1);
+          GasCloudSpecial.field_q = FridgeCreature.field_w - (ula.field_f >> 1);
           fw.field_i.a(param4, param3 ^ -86, rh.a(mk.field_p, (byte) -126, gd.field_m), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

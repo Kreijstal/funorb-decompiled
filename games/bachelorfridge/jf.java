@@ -7,7 +7,7 @@ final class jf extends pu {
     static IndexedSprite field_l;
     private static String field_z;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = (int[][]) null;
         if (param0 != 0) {
           return;

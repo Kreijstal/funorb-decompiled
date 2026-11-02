@@ -110,7 +110,7 @@ final class GasCloudEvent extends SpecialEvent {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 15) {
           return;
         }
@@ -139,7 +139,7 @@ final class GasCloudEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         GasCloudAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

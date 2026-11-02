@@ -4,11 +4,11 @@
 final class RaiseAnimation extends EventAnimation {
     static int[] field_x;
     private RaiseEvent field_w;
-    private taa field_v;
+    private ActorAnimation field_v;
 
     private final void b(boolean param0) {
-        ad var6 = null;
-        ad var7 = null;
+        CreatureActor var6 = null;
+        CreatureActor var7 = null;
         EventEffect var3_ref = null;
         Object var3 = null;
         int var5 = BachelorFridge.field_y;
@@ -25,7 +25,7 @@ final class RaiseAnimation extends EventAnimation {
             var6 = var3_ref.target.a(-27449, this.screen);
             var6.b(-1, 19);
             var6.a(24831, 105, gb.field_i);
-            var3_ref.a(var2, this.screen.field_h, 12);
+            var3_ref.apply(var2, this.screen.field_h, 12);
             var3_ref = (EventEffect) (this.field_w.effects.c(0));
           }
           return;
@@ -39,7 +39,7 @@ final class RaiseAnimation extends EventAnimation {
           var7 = var3_refLifetime1.target.a(-27449, this.screen);
           var7.b(-1, 19);
           var7.a(24831, 105, gb.field_i);
-          var3_refLifetime1.a(var2, this.screen.field_h, 12);
+          var3_refLifetime1.apply(var2, this.screen.field_h, 12);
           var3_refLifetime1 = (EventEffect) (this.field_w.effects.c(0));
         }
     }
@@ -52,7 +52,7 @@ final class RaiseAnimation extends EventAnimation {
         return fda.b(param0 ^ 8193);
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = -28 / ((param0 - 71) / 47);
         if (this.field_m.isLinked((byte) -106)) {
           return false;
@@ -73,7 +73,7 @@ final class RaiseAnimation extends EventAnimation {
         return true;
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 14) {
           field_x = (int[]) null;
           field_x = null;
@@ -84,18 +84,18 @@ final class RaiseAnimation extends EventAnimation {
 
     private final void f(byte param0) {
         if (param0 >= -90) {
-          this.field_v = (taa) null;
+          this.field_v = (ActorAnimation) null;
         }
     }
 
-    RaiseAnimation(gj param0, RaiseEvent param1) {
+    RaiseAnimation(BattleScreen param0, RaiseEvent param1) {
         super(param0, param1);
-        ad var3 = null;
+        CreatureActor var3 = null;
         try {
           this.field_w = param1;
           var3 = this.field_w.field_q.a(-27449, this.screen);
-          this.field_v = new taa(this.screen, var3);
-          this.a(27799, this.field_v);
+          this.field_v = new ActorAnimation(this.screen, var3);
+          this.addChild(27799, this.field_v);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "vea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

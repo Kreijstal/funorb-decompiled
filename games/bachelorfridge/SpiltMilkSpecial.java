@@ -12,14 +12,14 @@ final class SpiltMilkSpecial extends SpecialOrder {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 45) {
           return;
         }
         field_p = null;
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         SpiltMilkEvent var4 = null;
@@ -101,7 +101,7 @@ final class SpiltMilkSpecial extends SpecialOrder {
         super(param0, param1);
     }
 
-    final static boolean a(int param0, boolean param1, ue param2, int param3, String param4, String param5, String param6) {
+    final static boolean a(int param0, boolean param1, AccountCreationPanel param2, int param3, String param4, String param5, String param6) {
         RuntimeException var7 = null;
         int var8 = 0;
         tea var9 = null;
@@ -116,21 +116,21 @@ final class SpiltMilkSpecial extends SpecialOrder {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (tn.field_a != ola.field_p) {
+          if (GameClock.field_a != FridgeScreen.field_p) {
             return false;
           }
           var9 = new tea(gja.field_m, param2);
           var8 = -49 / ((-8 - param3) / 56);
-          gja.field_m.a((wj) (var9), (byte) 86);
+          gja.field_m.a((UiWidget) (var9), (byte) 86);
           if (AttackUpAllEvent.d((byte) 77)) {
             var9.r(-7);
             return true;
           }
-          ola.field_p = kq.field_j;
+          FridgeScreen.field_p = kq.field_j;
           pma.field_k = param1;
           sc.field_n = param5;
           ZombiesSpecial.field_p = null;
-          wj.field_i = param4;
+          UiWidget.field_i = param4;
           em.field_V = param6;
           fga.field_f = param0;
           return true;

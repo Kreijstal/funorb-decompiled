@@ -10,8 +10,8 @@ final class dl extends jla {
 
     final void e(int param0) {
         int var3 = 0;
-        ad[] var2;
-        ad var4;
+        CreatureActor[] var2;
+        CreatureActor var4;
         int var5;
         var5 = BachelorFridge.field_y;
         if (!um.a(true)) {
@@ -144,7 +144,7 @@ final class dl extends jla {
         if (param1 != 96) {
           dl.d((byte) 68);
         }
-        return param0 == 0 ? jt.field_g : gj.field_F;
+        return param0 == 0 ? FoodShopPanel.field_g : BattleScreen.field_F;
     }
 
     final boolean c(int param0, int param1) {
@@ -155,7 +155,7 @@ final class dl extends jla {
           param0 == 0) {
           return false;
         }
-        if (null != sna.field_fb) {
+        if (null != UiComponent.field_fb) {
           if (param0 != 0) {
             return true;
           }
@@ -214,7 +214,7 @@ final class dl extends jla {
         SoftwareRasterizer.a(40, 60, 560, 215, 20, 0, 80);
         SoftwareRasterizer.a(40, 295, 560, 95, 20, 0, 80);
         if (li.field_m) {
-          var2 = t.field_m;
+          var2 = BasicMoveDefinition.field_m;
         } else {
           if (null != dd.field_G) {
             var2 = lga.a(true, new String[]{dd.field_G}, jea.field_d);

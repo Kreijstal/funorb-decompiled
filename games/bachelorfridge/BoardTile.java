@@ -5,7 +5,7 @@ class BoardTile {
     static boolean field_e;
     static String field_c;
     boolean field_d;
-    static sna field_f;
+    static UiComponent field_f;
     int field_j;
     int terrain;
     boolean field_m;
@@ -89,7 +89,7 @@ class BoardTile {
             return true;
           }
           if (param0 != -27864) {
-            field_f = (sna) null;
+            field_f = (UiComponent) null;
           }
           if (this.occupant == null) {
             return false;
@@ -115,7 +115,7 @@ class BoardTile {
         }
         fa.a(param0, param1 + 26412);
         if (param1 == 31) {
-          if (ad.field_i) {
+          if (CreatureActor.field_i) {
             SoftwareRasterizer.darkenRectangle(BitPacketBuffer.field_n.field_a.field_kb, BitPacketBuffer.field_n.field_a.field_rb, BitPacketBuffer.field_n.field_a.field_sb, BitPacketBuffer.field_n.field_a.field_p);
             BitPacketBuffer.field_n.field_a.a(param0, 7802);
           }
@@ -123,7 +123,7 @@ class BoardTile {
           return;
         }
         BoardTile.a(true, (byte) 28);
-        if (ad.field_i) {
+        if (CreatureActor.field_i) {
           SoftwareRasterizer.darkenRectangle(BitPacketBuffer.field_n.field_a.field_kb, BitPacketBuffer.field_n.field_a.field_rb, BitPacketBuffer.field_n.field_a.field_sb, BitPacketBuffer.field_n.field_a.field_p);
           BitPacketBuffer.field_n.field_a.a(param0, 7802);
         }
@@ -261,11 +261,11 @@ class BoardTile {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != 788454) {
-          BoardTile.b(-90);
+          BoardTile.releaseStatics(-90);
           field_f = null;
           return;
         }

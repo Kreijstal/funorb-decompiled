@@ -37,7 +37,7 @@ final class au {
     final static void a(int param0, String param1, boolean param2) {
         try {
           ha.field_k = DreamsEvent.field_s;
-          taa.field_l = param0;
+          ActorAnimation.field_l = param0;
           if (param2) {
             field_a = (String) null;
           }

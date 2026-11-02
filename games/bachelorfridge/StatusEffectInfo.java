@@ -1,0 +1,147 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StatusEffectInfo {
+    int field_i;
+    private int field_b;
+    static String field_h;
+    static lr[] field_g;
+    static int field_c;
+    static int field_a;
+    static Sprite field_f;
+    String name;
+    String description;
+
+    final static void a(boolean param0) {
+        RuntimeException decompiledCaughtException = null;
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        int var3 = 0;
+        int[] var4 = null;
+        int[] var5 = null;
+        int var6 = 0;
+        int[] var7 = null;
+        int[] var8 = null;
+        int[] var9 = null;
+        int[] var10 = null;
+        int[] var1Lifetime1;
+        int var2Lifetime1;
+        var3 = BachelorFridge.field_y;
+        try {
+          if (OhNoEvent.field_s == kaa.field_m) {
+            return;
+          }
+          if (GameClock.a(OhNoEvent.field_s, 124)) {
+            LevitateSpecial.field_p[OhNoEvent.field_s].j(-5);
+          }
+          ip.a((byte) 22, kaa.field_m);
+          OhNoEvent.field_s = kaa.field_m;
+          vla.field_w = sia.field_h;
+          SplitAnimation.field_v = 0;
+          if (kaa.field_m != 1 &&
+            kaa.field_m != -3) {
+            OneEvent.c(0, -114);
+          }
+          if (!param0) {
+            field_h = (String) null;
+          }
+          if (nu.field_b) {
+            nu.field_b = false;
+            gs.field_f = null;
+            dj.field_c = null;
+            UiComponent.field_fb = null;
+            BananarangAnimation.e(17035);
+            OhNoEvent.d(34);
+          }
+          if (ai.field_c) {
+            AirstrikeEvent.field_q = new IntrusiveDeque();
+            var9 = ZombiesSpecial.field_q;
+            var7 = var9;
+            var4 = var7;
+            var1 = var4;
+            for (var2 = 0; var2 < 8; var2++) {
+              var9[var2] = 0;
+            }
+            var10 = nga.field_i;
+            var8 = var10;
+            var5 = var8;
+            var1Lifetime1 = var5;
+            var6 = 0;
+            var2Lifetime1 = var6;
+            while (var6 < 8) {
+              var10[var6] = 0;
+              var6++;
+            }
+            ai.field_c = false;
+          }
+          if (ge.field_D) {
+            ih.d((byte) -109);
+            FlirtEvent.e(46);
+            DualLinkNode.c(106);
+            ge.field_D = false;
+          }
+          if (OhNoEvent.field_s == 12) {
+            AirstrikeEvent.d(-89);
+          } else {
+            if (OhNoEvent.field_s == 0) {
+              AirstrikeEvent.d(-89);
+            } else {
+              if (OhNoEvent.field_s == -2) {
+                AirstrikeEvent.d(-89);
+              }
+            }
+          }
+          if (OhNoEvent.field_s != 0 &&
+            kaa.field_m == -3 &&
+            OhNoEvent.field_s != 12) {
+            ena.a((byte) -44, IterableNodeHashTable.field_a);
+            return;
+          }
+          if (kaa.field_m == -1) {
+            hba.a(true, IterableNodeHashTable.field_a);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "rs.D(" + param0 + ')');
+        }
+    }
+
+    final static boolean b(boolean param0) {
+        boolean stackIn_6_0 = false;
+        if (!param0) {
+          return true;
+        }
+        stackIn_6_0 = (null != pja.field_e) && (null != pja.field_e.h(0));
+        return stackIn_6_0;
+    }
+
+    final static vr a(int param0, boolean param1, int param2, boolean param3, int param4) {
+        if (param2 != 0) {
+          StatusEffectInfo.a(false);
+        }
+        return qma.a(param3, 2097152, false, param0, param1, param4);
+    }
+
+    public static void releaseStatics(int param0) {
+        field_f = null;
+        if (param0 != 2) {
+          StatusEffectInfo.b(true);
+        }
+        field_g = null;
+        field_h = null;
+    }
+
+    StatusEffectInfo(int param0, int param1) {
+        this.field_i = param1;
+        this.field_b = param0;
+        this.name = kna.field_g[this.field_b];
+        this.description = c.field_k[this.field_b];
+    }
+
+    static {
+        field_h = "You can spectate this game";
+    }
+}

@@ -68,12 +68,12 @@ final class PlayerRoster {
             }
           } else {
             if (var2 != 0 &&
-              ub.field_j != 2) {
+              BoardChangeAnimation.field_j != 2) {
               qja.a(0);
             }
           }
           if (0 == var3 &&
-            ub.field_j == 2) {
+            BoardChangeAnimation.field_j == 2) {
             var4 = f.b((byte) 73) - ph.field_P;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
@@ -90,7 +90,7 @@ final class PlayerRoster {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 > -71) {
           field_d = (PcmSample[]) null;

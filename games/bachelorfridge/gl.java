@@ -15,7 +15,7 @@ final class gl extends pk implements fca, ufa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 3) {
-            gl.d(0);
+            gl.releaseStatics(0);
           }
           stackIn_5_0 = (null != DisableAnimation.b(-56, param1));
           return stackIn_5_0;
@@ -33,7 +33,7 @@ final class gl extends pk implements fca, ufa {
         }
     }
 
-    public final void a(lka param0, int param1) {
+    public final void a(TextInputWidget param0, int param1) {
         try {
           if (param1 != 0) {
             field_g = (String) null;
@@ -78,7 +78,7 @@ final class gl extends pk implements fca, ufa {
     public gl() {
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_g = null;
         if (param0 > -1) {
@@ -90,7 +90,7 @@ final class gl extends pk implements fca, ufa {
         if (param0 == 5) {
           return this.field_e.k(param0 ^ -81);
         }
-        gl.d(97);
+        gl.releaseStatics(97);
         return this.field_e.k(param0 ^ -81);
     }
 
@@ -113,26 +113,26 @@ final class gl extends pk implements fca, ufa {
           }
           var5 = kja.a(27168);
           if (var4 < 1890) {
-            stackIn_5_0 = jt.field_f;
+            stackIn_5_0 = FoodShopPanel.field_f;
             return stackIn_5_0;
           }
           if (var5 - 3 < var4) {
-            stackIn_9_0 = jt.field_f;
+            stackIn_9_0 = FoodShopPanel.field_f;
             return stackIn_9_0;
           }
           if (!MidiPcmStream.a(var4, var3, (byte) 91, var2_int)) {
-            stackIn_13_0 = jt.field_f;
+            stackIn_13_0 = FoodShopPanel.field_f;
             return stackIn_13_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return jt.field_f;
+          return FoodShopPanel.field_f;
         }
         return cm.field_u;
     }
 
-    public final void a(lka param0, byte param1) {
+    public final void a(TextInputWidget param0, byte param1) {
         try {
           int var3_int = -85 / ((param1 - 0) / 49);
           this.a(574);

@@ -3,10 +3,10 @@
  */
 final class mg extends AnimationNode {
     private int field_n;
-    static sna field_l;
+    static UiComponent field_l;
     static mu field_m;
     static int field_k;
-    private ad field_j;
+    private CreatureActor field_j;
     static String field_p;
     static String field_o;
 
@@ -17,7 +17,7 @@ final class mg extends AnimationNode {
         return re.field_D;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = this.field_n - 1;
         this.field_n = this.field_n - 1;
         if (fieldTemp$0 <= 0) {
@@ -51,7 +51,7 @@ final class mg extends AnimationNode {
         return null;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         int var1 = 107 / ((param0 - 24) / 42);
         field_o = null;
@@ -59,7 +59,7 @@ final class mg extends AnimationNode {
         field_m = null;
     }
 
-    mg(ad param0) {
+    mg(CreatureActor param0) {
         try {
           this.field_n = 50;
           this.field_j = param0;

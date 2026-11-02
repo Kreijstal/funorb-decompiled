@@ -9,11 +9,11 @@ final class SplitAnimation extends EventAnimation {
 
     private final void b(boolean param0) {
         if (param0) {
-          this.c((byte) 26);
+          this.isFinished((byte) 26);
         }
     }
 
-    SplitAnimation(gj param0, SplitEvent param1) {
+    SplitAnimation(BattleScreen param0, SplitEvent param1) {
         super(param0, param1);
         try {
           this.field_y = param1;
@@ -33,7 +33,7 @@ final class SplitAnimation extends EventAnimation {
         al.a(88, this.field_y.moveId);
         int var4 = 96 / ((param0 + 68) / 50);
         while (var3 != null) {
-          var3.a(var2, this.screen.field_h, 12);
+          var3.apply(var2, this.screen.field_h, 12);
           var3 = (EventEffect) (this.field_y.effects.c(0));
         }
     }
@@ -48,7 +48,7 @@ final class SplitAnimation extends EventAnimation {
         field_x = null;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         if (this.field_y.field_p) {
           return true;
         }

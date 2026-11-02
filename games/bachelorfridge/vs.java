@@ -56,11 +56,11 @@ final class vs {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 10530) {
-          vs.b(24);
+          vs.releaseStatics(24);
         }
     }
 

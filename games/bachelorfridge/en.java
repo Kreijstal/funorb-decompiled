@@ -10,7 +10,7 @@ final class en extends IOException {
         super(param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -10132) {
           field_a = (IndexedSprite) null;

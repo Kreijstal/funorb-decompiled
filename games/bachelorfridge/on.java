@@ -224,7 +224,7 @@ final class on extends DualLinkNode {
           for (var10_int = 0; var10_int < this.field_y.length; var10_int++) {
             this.field_y[var10_int].a(param4, (byte) -93, param3);
           }
-          vd.a(param0, 81);
+          WidgetContainer.a(param0, 81);
           MidiPcmStream.a(-117, param3, param4);
           var26 = new int[param4 * param3];
           var10 = var26;

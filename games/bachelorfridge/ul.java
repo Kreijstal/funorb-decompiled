@@ -5,7 +5,7 @@ abstract class ul extends DualLinkNode {
     static String field_o;
     int field_n;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_o = (String) null;
           field_o = null;

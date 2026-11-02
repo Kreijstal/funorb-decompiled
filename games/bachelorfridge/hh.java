@@ -59,7 +59,7 @@ final class hh {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           field_b = (Sprite[]) null;
           field_b = null;

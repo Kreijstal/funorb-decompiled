@@ -195,7 +195,7 @@ final class BufferedCacheFile {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -203) {
           field_d = (PlatformTaskDispatcher) null;
         }
@@ -246,7 +246,7 @@ final class BufferedCacheFile {
 
     final void a(long param0, byte param1) throws IOException {
         if (param1 > -84) {
-          BufferedCacheFile.a(-19);
+          BufferedCacheFile.releaseStatics(-19);
         }
         if (param0 < 0L) {
           throw new IOException();
@@ -413,7 +413,7 @@ final class BufferedCacheFile {
           raa.field_J = param0;
           nj.field_j = param4;
           if (param1 <= 19) {
-            BufferedCacheFile.a(-48);
+            BufferedCacheFile.releaseStatics(-48);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "v.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');

@@ -128,7 +128,7 @@ final class wt extends k {
         return;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_m = null;
         field_n = null;

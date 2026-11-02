@@ -13,7 +13,7 @@ final class rr extends AnimationNode {
     private int field_n;
     int field_w;
     static String field_r;
-    private gj field_j;
+    private BattleScreen field_j;
     private int field_p;
     private int field_t;
     static String field_x;
@@ -61,7 +61,7 @@ final class rr extends AnimationNode {
 
     private final void e(int param0) {
         if (this.field_l != null) {
-          id.a(97, this.field_l);
+          PizzaArenaTheme.a(97, this.field_l);
           if (param0 >= -54) {
             this.field_m = true;
             return;
@@ -74,7 +74,7 @@ final class rr extends AnimationNode {
         this.field_m = true;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -13421) {
           field_r = (String) null;
           field_x = null;
@@ -115,7 +115,7 @@ final class rr extends AnimationNode {
           if (param0 >= 120) {
             return;
           }
-          rr.f(63);
+          rr.releaseStatics(63);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -137,17 +137,17 @@ final class rr extends AnimationNode {
         }
     }
 
-    final taa e(byte param0) {
+    final ActorAnimation e(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        taa var4 = null;
-        taa var4Lifetime1;
+        ActorAnimation var4 = null;
+        ActorAnimation var4Lifetime1;
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0 == -120) {
           var2 = this.field_p - this.field_t * this.field_q;
           var3 = -(this.field_t * this.field_k) + this.field_u;
-          var4 = new taa(this.field_j, 0, 0);
+          var4 = new ActorAnimation(this.field_j, 0, 0);
           var4.field_k = 320 - var2;
           var4.field_j = 240 - var3;
           return var4;
@@ -155,13 +155,13 @@ final class rr extends AnimationNode {
         this.field_w = 21;
         var2Lifetime1 = this.field_p - this.field_t * this.field_q;
         var3Lifetime1 = -(this.field_t * this.field_k) + this.field_u;
-        var4Lifetime1 = new taa(this.field_j, 0, 0);
+        var4Lifetime1 = new ActorAnimation(this.field_j, 0, 0);
         var4Lifetime1.field_k = 320 - var2Lifetime1;
         var4Lifetime1.field_j = 240 - var3Lifetime1;
         return var4Lifetime1;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         PcmSampleStream var3 = null;
         int var2 = -62 / ((param0 - 71) / 47);
         if (this.field_w == -this.field_t) {
@@ -190,12 +190,12 @@ final class rr extends AnimationNode {
         this.field_o.a(this.field_v, this.field_n, this.field_o.field_B.creature.a(-27449, this.field_j), 0);
         if (param0 > 87) {
           var2 = new oia(this.field_j, this.field_v, this.field_n);
-          ((kj) ((Object) var2)).a(0);
+          ((TileEffect) ((Object) var2)).a(0);
           return;
         }
     }
 
-    rr(gj param0, AirstrikeAnimation param1, int param2, int param3, boolean param4) {
+    rr(BattleScreen param0, AirstrikeAnimation param1, int param2, int param3, boolean param4) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

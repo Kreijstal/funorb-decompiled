@@ -12,7 +12,7 @@ final class eq {
     static int[] field_c;
     boolean field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 == 0) {
           field_c = null;
@@ -26,7 +26,7 @@ final class eq {
         field_i = null;
     }
 
-    final static void a(Sprite param0, gj param1, byte param2) {
+    final static void a(Sprite param0, BattleScreen param1, byte param2) {
         int var5 = 0;
         int var4 = 0;
         boolean stackIn_6_0 = false;
@@ -41,17 +41,17 @@ final class eq {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ad[] var4_ref_ad__ = null;
-        ad var6 = null;
+        CreatureActor[] var4_ref_ad__ = null;
+        CreatureActor var6 = null;
         int var7 = 0;
-        gj var8 = null;
+        BattleScreen var8 = null;
         var7 = BachelorFridge.field_y;
         try {
           pu.field_j = param1;
           rga.field_a = pu.field_j.field_G;
           if (param2 != -111) {
-            var8 = (gj) null;
-            eq.a((Sprite) null, (gj) null, (byte) 68);
+            var8 = (BattleScreen) null;
+            eq.a((Sprite) null, (BattleScreen) null, (byte) 68);
           }
           var3_int = pu.field_j.field_h.field_b;
           stackIn_6_0 = (var3_int == pu.field_j.field_n);
@@ -85,7 +85,7 @@ final class eq {
           if (1 != pu.field_j.field_h.field_o) {
             stackIn_28_1 = ina.field_o;
           } else {
-            stackIn_28_1 = wj.field_l;
+            stackIn_28_1 = UiWidget.field_l;
           }
           hi.a(stackIn_27_0, stackIn_28_1);
           if (li.field_m) {
@@ -93,7 +93,7 @@ final class eq {
           } else {
             pka.a(nu.field_h, false, (byte) 73);
           }
-          wj.field_g = false;
+          UiWidget.field_g = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

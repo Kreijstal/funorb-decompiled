@@ -47,7 +47,7 @@ final class ce extends AttackEvent {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_u = null;
         if (param0 <= 17) {
           return;
@@ -55,7 +55,7 @@ final class ce extends AttackEvent {
         field_w = (int[][]) null;
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         rja stackIn_4_0 = null;
@@ -143,10 +143,10 @@ final class ce extends AttackEvent {
         }
     }
 
-    final void a(BattleState param0, boolean param1) {
+    final void apply(BattleState param0, boolean param1) {
         RuntimeException runtimeException = null;
         BattleCreature var3 = null;
-        t var4 = null;
+        BasicMoveDefinition var4 = null;
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -157,7 +157,7 @@ final class ce extends AttackEvent {
           if (!this.field_r &&
             !this.field_n) {
             var3 = this.creature.a(69, param0);
-            var4 = (t) (al.a(120, this.moveId));
+            var4 = (BasicMoveDefinition) (al.a(120, this.moveId));
             var5 = 0;
             if (var4.field_u == 15 ||
               var4.field_u == 45 ||
@@ -167,7 +167,7 @@ final class ce extends AttackEvent {
             var6 = ShuffleAnimation.a(this.field_q, (byte) 25, var3.tileY, var5 != 0, this.field_v, var3, var3.tileX, param0);
             this.field_v = var6;
             var3.a(param1, this.field_v, this.field_q);
-            super.a(param0, false);
+            super.apply(param0, false);
             return;
           }
           return;
@@ -213,20 +213,20 @@ final class ce extends AttackEvent {
           }
           var3 = new ika(param0.a((byte) 123, "", "manifest"));
           BananarangEvent.field_u = var3.field_c;
-          rs.field_g = new lr[BananarangEvent.field_u];
+          StatusEffectInfo.field_g = new lr[BananarangEvent.field_u];
           var4 = 0;
           var5 = (ft) (var3.field_b.b((byte) 90));
           while (var5 != null) {
             var6 = var5.field_g;
             var7 = var5.field_f ? 1 : 0;
             var14 = param0.b(-102, var2_int, var6);
-            rs.field_g[var4] = new lr(new PacketBuffer(var14));
+            StatusEffectInfo.field_g[var4] = new lr(new PacketBuffer(var14));
             if (var7 != 0) {
             }
-            stackIn_9_0 = rs.field_g[var4];
+            stackIn_9_0 = StatusEffectInfo.field_g[var4];
             stackIn_10_1 = (var7 != 0);
             stackIn_9_0.field_i = stackIn_10_1;
-            incrementValue$0 = rs.field_g[var4];
+            incrementValue$0 = StatusEffectInfo.field_g[var4];
             incrementValue$1 = var4;
             var4++;
             incrementValue$0.field_g = incrementValue$1;

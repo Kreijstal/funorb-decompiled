@@ -118,7 +118,7 @@ final class SuperSpeedAllEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         CharSequence var4 = null;
         SuperSpeedAllAnimation stackIn_3_0 = null;
@@ -149,11 +149,11 @@ final class SuperSpeedAllEvent extends SpecialEvent {
 
     final static uha c(int param0, int param1) {
         if (param0 == -12411) {
-          return null != ola.field_g ? (uha) (ola.field_g.a((long)param1, (byte) -87)) : null;
+          return null != FridgeScreen.field_g ? (uha) (FridgeScreen.field_g.a((long)param1, (byte) -87)) : null;
         }
         CharSequence var3 = (CharSequence) null;
         SuperSpeedAllEvent.a((CharSequence) null, true, (byte) 50);
-        return null != ola.field_g ? (uha) (ola.field_g.a((long)param1, (byte) -87)) : null;
+        return null != FridgeScreen.field_g ? (uha) (FridgeScreen.field_g.a((long)param1, (byte) -87)) : null;
     }
 
     final static boolean d(int param0) {

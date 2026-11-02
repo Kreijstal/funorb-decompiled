@@ -36,7 +36,7 @@ final class gea extends IntrusiveNode {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 == 4096) {
           field_n = null;

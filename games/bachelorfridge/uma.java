@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uma extends sh {
-    private lka field_N;
-    private lka field_Q;
+    private TextInputWidget field_N;
+    private TextInputWidget field_Q;
     static Sprite[] field_J;
     private boolean field_K;
     static String field_O;
-    private lka field_L;
+    private TextInputWidget field_L;
     static IntrusiveDeque field_M;
     static kga[] field_P;
 
-    uma(qda param0, boolean param1, int param2, int param3, int param4, int param5) {
+    uma(WidgetRenderer param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.a(param2, param5, (byte) 59, param4, param3);
@@ -22,13 +22,13 @@ final class uma extends sh {
 
     final void a(gl param0, byte param1) {
         super.a(param0, (byte) 114);
-        this.field_Q.field_k = (pl) ((Object) param0);
+        this.field_Q.listener = (WidgetListener) ((Object) param0);
         if (param1 < 111) {
           return;
         }
         try {
-          this.field_N.field_k = (pl) ((Object) param0);
-          this.field_L.field_k = (pl) ((Object) param0);
+          this.field_N.listener = (WidgetListener) ((Object) param0);
+          this.field_L.listener = (WidgetListener) ((Object) param0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "uma.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -93,7 +93,7 @@ final class uma extends sh {
           if (param0 < 20) {
             field_J = (Sprite[]) null;
           }
-          stackIn_3_0 = Integer.parseInt(this.field_N.field_w) - 1;
+          stackIn_3_0 = Integer.parseInt(this.field_N.text) - 1;
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ final class uma extends sh {
           return 121;
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.field_L.field_w);
+          stackIn_3_0 = Integer.parseInt(this.field_L.text);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,26 +182,26 @@ final class uma extends sh {
         this.field_L.a(var6 + 90, param1, param2, 40, 0);
     }
 
-    private final void a(byte param0, wj param1, String param2, int param3, int param4) {
+    private final void a(byte param0, UiWidget param1, String param2, int param3, int param4) {
         if (param0 != -68) {
           return;
         }
         try {
-          oc.field_l.a(param2, param4 + param1.field_s + (param1.field_p >> 1), -5 + param1.field_v + param3, 16777215, -1);
+          oc.field_l.a(param2, param4 + param1.x + (param1.width >> 1), -5 + param1.y + param3, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "uma.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    private uma(qda param0, boolean param1) {
-        super(0, 0, 0, 0, (qda) null);
+    private uma(WidgetRenderer param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
-          this.field_Q = (lka) ((Object) new vn("", (pl) null, 2));
-          this.field_N = (lka) ((Object) new vn("", (pl) null, 2));
-          this.field_L = (lka) ((Object) new vn("", (pl) null, 4));
-          this.field_L.field_f = param0;
-          this.field_N.field_f = param0;
-          this.field_Q.field_f = param0;
+          this.field_Q = (TextInputWidget) ((Object) new vn("", (WidgetListener) null, 2));
+          this.field_N = (TextInputWidget) ((Object) new vn("", (WidgetListener) null, 2));
+          this.field_L = (TextInputWidget) ((Object) new vn("", (WidgetListener) null, 4));
+          this.field_L.renderer = param0;
+          this.field_N.renderer = param0;
+          this.field_Q.renderer = param0;
           this.field_K = param1 ? true : false;
           if (this.field_K) {
             this.c(this.field_N, 42);
@@ -216,7 +216,7 @@ final class uma extends sh {
         }
     }
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         field_O = null;
         if (param0 != -30829) {
           return;
@@ -226,31 +226,31 @@ final class uma extends sh {
         field_M = null;
     }
 
-    final String c(byte param0) {
-        String var2 = this.field_N.c(param0);
+    final String getTooltip(byte param0) {
+        String var2 = this.field_N.getTooltip(param0);
         if (var2 != null) {
           return var2;
         }
-        if (this.field_t) {
-          return this.field_h != null ? this.field_h : this.field_w;
+        if (this.mouseOver) {
+          return this.tooltip != null ? this.tooltip : this.text;
         }
         return null;
     }
 
     final boolean k(int param0) {
-        if (null == this.field_Q.field_w) {
+        if (null == this.field_Q.text) {
           return true;
         }
-        if (0 == this.field_Q.field_w.length()) {
+        if (0 == this.field_Q.text.length()) {
           return true;
         }
         if (param0 >= -54) {
           return true;
         }
-        if (null != this.field_N.field_w &&
-          0 != this.field_N.field_w.length()) {
-          if (this.field_L.field_w != null &&
-            0 != this.field_L.field_w.length()) {
+        if (null != this.field_N.text &&
+          0 != this.field_N.text.length()) {
+          if (this.field_L.text != null &&
+            0 != this.field_L.text.length()) {
             return false;
           }
           return true;
@@ -265,7 +265,7 @@ final class uma extends sh {
         NumberFormatException var2 = null;
         try {
           var2_int = -108 % ((-64 - param0) / 56);
-          stackIn_1_0 = Integer.parseInt(this.field_Q.field_w);
+          stackIn_1_0 = Integer.parseInt(this.field_Q.text);
           return stackIn_1_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -274,14 +274,14 @@ final class uma extends sh {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a((byte) 107, param1, param2, param3);
+    final void draw(byte param0, int param1, int param2, int param3) {
+        super.draw((byte) 107, param1, param2, param3);
         if (param2 != 0) {
           return;
         }
-        param1 = param1 + this.field_v;
+        param1 = param1 + this.y;
         int var5 = 83 % ((param0 + 20) / 54);
-        param3 = param3 + this.field_s;
+        param3 = param3 + this.x;
         this.a((byte) -68, this.field_Q, JaggrabDownloader.field_b, param1, param3);
         this.a((byte) -68, this.field_N, ao.field_c, param1, param3);
         this.a((byte) -68, this.field_L, ca.field_d, param1, param3);

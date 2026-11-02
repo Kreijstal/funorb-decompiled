@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class EventAnimation extends AnimationNode {
-    taa field_m;
+    ActorAnimation field_m;
     static String[] field_j;
-    ad field_n;
+    CreatureActor field_n;
     private SpecialEvent event;
     static String[] field_s;
-    gj screen;
+    BattleScreen screen;
     int field_l;
     static String[] field_t;
     static String[] field_u;
@@ -26,7 +26,7 @@ abstract class EventAnimation extends AnimationNode {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_t = null;
         field_u = null;
         field_r = null;
@@ -42,7 +42,7 @@ abstract class EventAnimation extends AnimationNode {
         field_j = null;
     }
 
-    final void a(int param0, int param1, ad param2, int param3) {
+    final void a(int param0, int param1, CreatureActor param2, int param3) {
         int stackIn_11_0 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -50,7 +50,7 @@ abstract class EventAnimation extends AnimationNode {
         RuntimeException decompiledCaughtException = null;
         EventEffect var5 = null;
         RuntimeException var5_ref = null;
-        ad var7 = null;
+        CreatureActor var7 = null;
         int var8 = 0;
         int var9 = 0;
         DamageEffect var10 = null;
@@ -72,7 +72,7 @@ abstract class EventAnimation extends AnimationNode {
                 var12 = (bm) (var5);
                 if (var12.field_k == param0 &&
                   param1 == var12.field_l) {
-                  var12.a(param2.field_s, this.screen.field_h, 12);
+                  var12.apply(param2.field_s, this.screen.field_h, 12);
                   var5.unlink(false);
                   return;
                 }
@@ -80,7 +80,7 @@ abstract class EventAnimation extends AnimationNode {
                 var11 = (DamageTileEffect) (var5);
                 if (param0 == var11.field_i &&
                   var11.field_l == param1) {
-                  var11.a(param2.field_s, this.screen.field_h, param3 + 12);
+                  var11.apply(param2.field_s, this.screen.field_h, param3 + 12);
                   var5.unlink(false);
                   return;
                 }
@@ -92,13 +92,13 @@ abstract class EventAnimation extends AnimationNode {
                 var7.field_s.tileY == param1) {
                 stackIn_11_0 = (var7.field_s.hp <= 0) ? 0 : 1;
                 var8 = stackIn_11_0;
-                var5.a(param2.field_s, this.screen.field_h, 12);
+                var5.apply(param2.field_s, this.screen.field_h, 12);
                 if (var8 == 0) {
                   var5.unlink(false);
                   return;
                 }
                 var7.b(param3 - 1, 6);
-                this.a(param3 ^ 27799, new ek(this.screen, var7, var10.field_f));
+                this.addChild(param3 ^ 27799, new ek(this.screen, var7, var10.field_f));
                 var5.unlink(false);
                 return;
               }
@@ -120,7 +120,7 @@ abstract class EventAnimation extends AnimationNode {
         }
     }
 
-    EventAnimation(gj param0, SpecialEvent param1) {
+    EventAnimation(BattleScreen param0, SpecialEvent param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -132,8 +132,8 @@ abstract class EventAnimation extends AnimationNode {
           this.screen = param0;
           this.event = param1;
           this.field_n = param1.creature.a(-27449, this.screen);
-          this.field_m = new taa(this.screen, this.field_n);
-          this.a(27799, this.field_m);
+          this.field_m = new ActorAnimation(this.screen, this.field_n);
+          this.addChild(27799, this.field_m);
           this.field_n.a(16776960, 119, pk.a(param1, true));
           this.field_l = 100;
           if (param1.field_p) {

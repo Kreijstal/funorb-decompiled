@@ -4,7 +4,7 @@
 final class ks extends EventEffect {
     static int field_i;
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           FlirtAnimation.a(this.target, 121, param0);
           int var3_int = 30 / ((34 - param1) / 58);
@@ -13,7 +13,7 @@ final class ks extends EventEffect {
         }
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         BattleCreature var4 = null;
         if (param2 != 12) {
           return;

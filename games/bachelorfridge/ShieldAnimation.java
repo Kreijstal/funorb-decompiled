@@ -6,7 +6,7 @@ final class ShieldAnimation extends EventAnimation {
     static Sprite field_v;
     private ShieldEvent field_x;
 
-    ShieldAnimation(gj param0, ShieldEvent param1) {
+    ShieldAnimation(BattleScreen param0, ShieldEvent param1) {
         super(param0, param1);
         try {
           this.field_x = param1;
@@ -16,8 +16,8 @@ final class ShieldAnimation extends EventAnimation {
     }
 
     private final void e(byte param0) {
-        ad var7 = null;
-        ad var8 = null;
+        CreatureActor var7 = null;
+        CreatureActor var8 = null;
         int var5 = BachelorFridge.field_y;
         BattleCreature var6 = this.field_x.creature.a(54, this.screen.field_h);
         if (var6.isDown(119)) {
@@ -31,11 +31,11 @@ final class ShieldAnimation extends EventAnimation {
           while (var3 != null) {
             var7 = var3.target.a(-27449, this.screen);
             if (var7 != null) {
-              this.a(27799, new taa(this.screen, var7));
-              this.a(27799, new fha(new nd(this.screen, var7.field_s.tileX, var7.field_s.tileY)));
-              this.a(27799, new wn(var7, kna.field_g[3], 24831));
+              this.addChild(27799, new ActorAnimation(this.screen, var7));
+              this.addChild(27799, new fha(new nd(this.screen, var7.field_s.tileX, var7.field_s.tileY)));
+              this.addChild(27799, new wn(var7, kna.field_g[3], 24831));
             }
-            var3.a(var6, this.screen.field_h, 12);
+            var3.apply(var6, this.screen.field_h, 12);
             var3 = (DamageEffect) (this.field_x.effects.c(0));
           }
           return;
@@ -44,11 +44,11 @@ final class ShieldAnimation extends EventAnimation {
         while (var3 != null) {
           var8 = var3.target.a(-27449, this.screen);
           if (var8 != null) {
-            this.a(27799, new taa(this.screen, var8));
-            this.a(27799, new fha(new nd(this.screen, var8.field_s.tileX, var8.field_s.tileY)));
-            this.a(27799, new wn(var8, kna.field_g[3], 24831));
+            this.addChild(27799, new ActorAnimation(this.screen, var8));
+            this.addChild(27799, new fha(new nd(this.screen, var8.field_s.tileX, var8.field_s.tileY)));
+            this.addChild(27799, new wn(var8, kna.field_g[3], 24831));
           }
-          var3.a(var6, this.screen.field_h, 12);
+          var3.apply(var6, this.screen.field_h, 12);
           var3 = (DamageEffect) (this.field_x.effects.c(0));
         }
     }
@@ -79,7 +79,7 @@ final class ShieldAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
         if (fieldTemp$0 >= 0) {
@@ -95,7 +95,7 @@ final class ShieldAnimation extends EventAnimation {
         return true;
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_w = null;
         field_v = null;
         int var1 = -9 / ((param0 - 75) / 38);

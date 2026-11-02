@@ -14,8 +14,8 @@ final class wp extends tga {
         this.field_j = 3;
     }
 
-    private final void a(ub param0, int param1, int param2, byte param3) {
-        gj var8 = param0.field_o;
+    private final void a(BoardChangeAnimation param0, int param1, int param2, byte param3) {
+        BattleScreen var8 = param0.field_o;
         if (param3 != 83) {
           field_r = -32;
         }
@@ -28,13 +28,13 @@ final class wp extends tga {
           param1 >= var6.height) {
           return;
         }
-        ad var7 = var8.a(param1, false, param2);
+        CreatureActor var7 = var8.a(param1, false, param2);
         if (var7 == null) {
           return;
         }
         try {
           var7.field_s.g(48, 45);
-          param0.a(27799, new ek(var8, var7, 45));
+          param0.addChild(27799, new ek(var8, var7, 45));
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "wp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -78,10 +78,10 @@ final class wp extends tga {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         if (param0 <= 58) {
-          wp.b(44);
+          wp.releaseStatics(44);
         }
     }
 
@@ -419,9 +419,9 @@ final class wp extends tga {
                 var9 >= 0) {
                 if (null != wda.field_c &&
                   wda.field_c[var7] != null &&
-                  (wda.field_c[var7][var9] & ~pn.field_d) > 0) {
+                  (wda.field_c[var7][var9] & ~ArenaTheme.field_d) > 0) {
                   var14 = 1;
-                  var15 = ho.a(62, wda.field_c[var7][var9] & ~pn.field_d);
+                  var15 = ho.a(62, wda.field_c[var7][var9] & ~ArenaTheme.field_d);
                 }
                 if (DelegatingCanvas.field_b != null &&
                   DelegatingCanvas.field_b[var7] != null &&
@@ -502,7 +502,7 @@ final class wp extends tga {
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   ala.field_b[var17_int] = false;
                 }
-                ub.a(0, param3, -96, var9, -1, param1, -1, var7);
+                BoardChangeAnimation.a(0, param3, -96, var9, -1, param1, -1, var7);
                 if (2 <= BananarangSpecial.field_r &&
                   InvincibleEvent.field_q[12]) {
                   ShieldSpecial.field_q = true;
@@ -712,14 +712,14 @@ final class wp extends tga {
         }
     }
 
-    final void a(ub param0, int param1) {
+    final void a(BoardChangeAnimation param0, int param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        gj var4 = null;
-        gj var5 = null;
+        BattleScreen var4 = null;
+        BattleScreen var5 = null;
         try {
           if (param1 > -2) {
             return;
@@ -727,11 +727,11 @@ final class wp extends tga {
           var4 = param0.field_o;
           var5 = var4;
           if (var4.field_h.tiles[this.field_n][this.field_o].terrain == 37) {
-            param0.a(27799, new iu(8, 128));
+            param0.addChild(27799, new iu(8, 128));
           } else {
-            param0.a(27799, new iu(60, 128));
+            param0.addChild(27799, new iu(60, 128));
           }
-          param0.a(27799, new fha(new dw(var5, this.field_n, this.field_o)));
+          param0.addChild(27799, new fha(new dw(var5, this.field_n, this.field_o)));
           this.a(param0, this.field_o, this.field_n, (byte) 83);
           this.a(param0, this.field_o, -1 + this.field_n, (byte) 83);
           this.a(param0, this.field_o, this.field_n + 1, (byte) 83);

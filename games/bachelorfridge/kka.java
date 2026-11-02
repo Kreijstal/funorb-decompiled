@@ -12,7 +12,7 @@ final class kka extends IntrusiveNode {
     static Sprite field_h;
 
     final static int a(int param0, int param1, int param2) {
-        String var3 = lka.field_E[param0][param2];
+        String var3 = TextInputWidget.field_E[param0][param2];
         var3 = var3.trim();
         var3 = var3.toLowerCase();
         if (!var3.equals("")) {
@@ -22,7 +22,7 @@ final class kka extends IntrusiveNode {
         return -1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_l = null;
         field_h = null;

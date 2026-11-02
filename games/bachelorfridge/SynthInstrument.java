@@ -98,7 +98,7 @@ final class SynthInstrument {
         this.field_e.a(param0, this.field_c);
     }
 
-    public static void releaseScratch() {
+    public static void releaseStatics() {
         field_t = null;
         field_p = null;
         field_o = null;

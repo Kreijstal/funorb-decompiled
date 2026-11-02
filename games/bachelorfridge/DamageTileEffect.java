@@ -7,10 +7,10 @@ final class DamageTileEffect extends EventEffect {
     int field_i;
     int field_l;
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -112 % ((34 - param1) / 58);
-          super.a(param0, (byte) -32);
+          super.write(param0, (byte) -32);
           param0.b(this.field_f, -114);
           param0.writeByte(this.field_i, 0);
           param0.writeByte(this.field_l, 0);
@@ -96,7 +96,7 @@ final class DamageTileEffect extends EventEffect {
         this.field_i = param1;
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -153,7 +153,7 @@ final class DamageTileEffect extends EventEffect {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         int var1 = 13 % ((param0 - 53) / 61);
         field_j = null;

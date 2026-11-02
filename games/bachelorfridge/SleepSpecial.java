@@ -4,7 +4,7 @@
 final class SleepSpecial extends SpecialOrder {
     static Sprite field_p;
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         CreatureEvent stackIn_3_0 = null;
         SleepEvent stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
@@ -115,7 +115,7 @@ final class SleepSpecial extends SpecialOrder {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_p = (Sprite) null;
         }

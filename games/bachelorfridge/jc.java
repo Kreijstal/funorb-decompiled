@@ -112,7 +112,7 @@ final class jc extends DualLinkNode {
             break;
           }
           if (param1) {
-            jc.e(91);
+            jc.releaseStatics(91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -201,9 +201,9 @@ final class jc extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 91) {
-          jc.e(5);
+          jc.releaseStatics(5);
         }
         field_n = null;
     }

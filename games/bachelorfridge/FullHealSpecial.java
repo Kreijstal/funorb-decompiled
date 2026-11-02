@@ -3,7 +3,7 @@
  */
 final class FullHealSpecial extends SpecialOrder {
     static String field_p;
-    static sna field_r;
+    static UiComponent field_r;
     static int field_q;
 
     FullHealSpecial(int param0, BattleCreature param1) {
@@ -81,7 +81,7 @@ final class FullHealSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         FullHealEvent var4 = null;

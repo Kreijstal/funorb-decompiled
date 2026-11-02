@@ -4,7 +4,7 @@
 abstract class qea {
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -454605656) {
           return;
         }

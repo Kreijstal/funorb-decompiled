@@ -5,9 +5,9 @@ final class hm {
     static String field_a;
     static boolean field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -123) {
-          hm.a(-6);
+          hm.releaseStatics(-6);
           field_a = null;
           return;
         }

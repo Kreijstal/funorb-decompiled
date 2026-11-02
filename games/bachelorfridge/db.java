@@ -55,7 +55,7 @@ final class db {
         CreatureEvent.field_m.a(var1, true);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_b = (String[]) null;
           field_a = null;

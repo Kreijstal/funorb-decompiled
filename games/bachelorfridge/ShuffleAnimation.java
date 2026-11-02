@@ -5,19 +5,19 @@ final class ShuffleAnimation extends EventAnimation {
     static long field_v;
     private boolean field_y;
     private ShuffleEvent field_x;
-    private ad[] field_z;
+    private CreatureActor[] field_z;
     private boolean field_w;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2;
         int var4;
-        ad var5;
+        CreatureActor var5;
         int var6;
-        ad[] var7;
+        CreatureActor[] var7;
         int var8;
-        ad[] var9;
-        ad var10;
-        ad var11;
+        CreatureActor[] var9;
+        CreatureActor var10;
+        CreatureActor var11;
         int var2Lifetime1;
         int var2Lifetime2;
         int var4Lifetime1;
@@ -76,17 +76,17 @@ final class ShuffleAnimation extends EventAnimation {
 
     private final void d(int param0) {
         int var3 = 0;
-        ad var4 = null;
+        CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
-        ad[] var6 = this.field_z;
-        ad[] var2 = var6;
+        CreatureActor[] var6 = this.field_z;
+        CreatureActor[] var2 = var6;
         for (var3 = param0; var6.length > var3; var3++) {
           var4 = var6[var3];
           var4.field_p = 0;
         }
     }
 
-    ShuffleAnimation(gj param0, ShuffleEvent param1) {
+    ShuffleAnimation(BattleScreen param0, ShuffleEvent param1) {
         super(param0, param1);
         int var3_int = 0;
         PlaceCreatureEffect var4 = null;
@@ -104,7 +104,7 @@ final class ShuffleAnimation extends EventAnimation {
         try {
           this.field_x = param1;
           var3_int = this.field_x.effects.g(0);
-          this.field_z = new ad[var3_int];
+          this.field_z = new CreatureActor[var3_int];
           var4 = (PlaceCreatureEffect) (this.field_x.effects.b((byte) 90));
           var5 = 0;
           var7 = 0;
@@ -217,7 +217,7 @@ final class ShuffleAnimation extends EventAnimation {
     }
 
     private final void e(int param0) {
-        ad var4 = null;
+        CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
         BattleCreature var2 = this.field_x.creature.a(107, this.screen.field_h);
         if (var2.isDown(param0 - 2147483560)) {
@@ -231,19 +231,19 @@ final class ShuffleAnimation extends EventAnimation {
           var4 = var3.target.a(param0 ^ -2147456200, this.screen);
           var4.field_s.tileY = var3.field_m;
           var4.field_s.tileX = var3.field_l;
-          this.screen.b(var4, (ad) null, true);
+          this.screen.b(var4, (CreatureActor) null, true);
           var3 = (PlaceCreatureEffect) (this.field_x.effects.c(0));
         }
         this.field_w = false;
         this.field_y = true;
     }
 
-    final static gha b(boolean param0) {
+    final static DefaultWidgetRenderer b(boolean param0) {
         if (null == gk.field_e) {
-          gk.field_e = new gha(oc.field_l, 20, 0, 0, 0, 11579568, -1, 0, 0, oc.field_l.field_u, -1, 2147483647, true);
+          gk.field_e = new DefaultWidgetRenderer(oc.field_l, 20, 0, 0, 0, 11579568, -1, 0, 0, oc.field_l.field_u, -1, 2147483647, true);
         }
         if (param0) {
-          return (gha) null;
+          return (DefaultWidgetRenderer) null;
         }
         return gk.field_e;
     }

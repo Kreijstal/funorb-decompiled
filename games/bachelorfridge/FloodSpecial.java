@@ -19,9 +19,9 @@ final class FloodSpecial extends SpecialOrder {
         var11 = new IntrusiveDeque();
         var12 = var11;
         for (var6 = 0; var6 < BananarangEvent.field_u; var6++) {
-          if (rs.field_g[var6].a(param4, param1, param2, param3, param0 ^ -2581) &&
-            rs.field_g[var6].a(param0 + 0, param2)) {
-            var11.a(rs.field_g[var6], true);
+          if (StatusEffectInfo.field_g[var6].a(param4, param1, param2, param3, param0 ^ -2581) &&
+            StatusEffectInfo.field_g[var6].a(param0 + 0, param2)) {
+            var11.a(StatusEffectInfo.field_g[var6], true);
           }
         }
         var6Lifetime1 = var12.g(0);
@@ -39,7 +39,7 @@ final class FloodSpecial extends SpecialOrder {
         return var9;
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         FloodEvent var4 = null;

@@ -282,7 +282,7 @@ final class sq {
         }
     }
 
-    public static void c() {
+    public static void releaseStatics() {
         field_g = null;
     }
 }

@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class FlirtAnimation extends EventAnimation {
-    private taa field_v;
+    private ActorAnimation field_v;
     static hk field_x;
     private FlirtEvent field_w;
     static boolean field_y;
 
     final static void e(int param0) {
         String var2 = null;
-        if (ur.field_b != null) {
-          var2 = ur.field_b;
+        if (WhirlpoolDigest.field_b != null) {
+          var2 = WhirlpoolDigest.field_b;
           String var1 = var2;
           rg.a(lga.a(true, new String[]{var2}, MouseInputHandler.field_a), param0 ^ 9943);
-          ur.field_b = null;
+          WhirlpoolDigest.field_b = null;
         }
         if (param0 != 9941) {
           field_y = false;
@@ -21,7 +21,7 @@ final class FlirtAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
@@ -78,7 +78,7 @@ final class FlirtAnimation extends EventAnimation {
           }
           return null;
         }
-        if (MoveEvent.field_o < pv.field_i + oha.field_i) {
+        if (MoveEvent.field_o < pv.field_i + MoveDefinition.field_i) {
           return ov.field_g;
         }
         if (param0 != 75) {
@@ -105,7 +105,7 @@ final class FlirtAnimation extends EventAnimation {
 
     final static void e(byte param0) {
         dj.field_c = null;
-        sna.field_fb = null;
+        UiComponent.field_fb = null;
         OhNoEvent.d(34);
         au.field_b = true;
         bf.field_f = false;
@@ -125,7 +125,7 @@ final class FlirtAnimation extends EventAnimation {
         sia var5;
         int var6;
         BattleCreature var7;
-        ad var8;
+        CreatureActor var8;
         var6 = BachelorFridge.field_y;
         var7 = this.field_w.creature.a(param0 ^ -113, this.screen.field_h);
         if (var7.isDown(param0 - 104)) {
@@ -141,20 +141,20 @@ final class FlirtAnimation extends EventAnimation {
             var8 = var3.target.a(param0 ^ 27448, this.screen);
             var8.b(-1, 6);
             var5 = new sia(this.screen, var8.field_s.tileX, var8.field_s.tileY, this.field_w.creature.a(-27449, this.screen));
-            ((kj) ((Object) var5)).a(0);
+            ((TileEffect) ((Object) var5)).a(0);
           }
-          var3.a(var7, this.screen.field_h, 12);
+          var3.apply(var7, this.screen.field_h, 12);
           var3 = (EventEffect) (this.field_w.effects.c(0));
         }
     }
 
-    FlirtAnimation(gj param0, FlirtEvent param1) {
+    FlirtAnimation(BattleScreen param0, FlirtEvent param1) {
         super(param0, param1);
         try {
           this.field_w = param1;
           al.a(105, this.field_w.moveId);
-          this.field_v = new taa(this.screen, this.field_w.field_s.a(-27449, this.screen));
-          this.a(27799, this.field_v);
+          this.field_v = new ActorAnimation(this.screen, this.field_w.field_s.a(-27449, this.screen));
+          this.addChild(27799, this.field_v);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "er.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

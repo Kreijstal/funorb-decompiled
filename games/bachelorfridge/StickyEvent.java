@@ -95,7 +95,7 @@ final class StickyEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         StickyAnimation stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -231,7 +231,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_chat_on");
                 if (var2 != null) {
-                  wj.field_x = qq.a(var2, false);
+                  UiWidget.field_x = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_friends");
                 if (null != var2) {
@@ -259,7 +259,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_chat_game");
                 if (null != var2) {
-                  hfa.field_B = qq.a(var2, false);
+                  WidgetWrapper.field_B = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_private");
                 if (var2 != null) {
@@ -279,7 +279,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_x_left_lobby");
                 if (null != var2) {
-                  tn.field_b = qq.a(var2, false);
+                  GameClock.field_b = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_x_lost_con");
                 if (null != var2) {
@@ -295,7 +295,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_x_declined_invite");
                 if (var2 != null) {
-                  ru.field_j = qq.a(var2, false);
+                  NanoGameClock.field_j = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_x_withdrew_request");
                 if (var2 != null) {
@@ -375,7 +375,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_gamelist_status");
                 if (var2 != null) {
-                  oha.field_e = qq.a(var2, false);
+                  MoveDefinition.field_e = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gamelist_owner");
                 if (null != var2) {
@@ -419,7 +419,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_options_dontmind");
                 if (null != var2) {
-                  ur.field_j = qq.a(var2, false);
+                  WhirlpoolDigest.field_j = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_options_allow_spectate");
                 if (var2 != null) {
@@ -475,7 +475,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "invite_accept_xs_game");
                 if (var2 != null) {
-                  qh.field_a = qq.a(var2, param0);
+                  WidgetTheme.field_a = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "invite_decline_xs_game");
                 if (var2 != null) {
@@ -755,7 +755,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "you_can_spectate");
                 if (var2 != null) {
-                  rs.field_h = qq.a(var2, param0);
+                  StatusEffectInfo.field_h = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "you_can_not_spectate");
                 if (null != var2) {
@@ -835,7 +835,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "esc_cancelprivatemessage");
                 if (null != var2) {
-                  ru.field_l = qq.a(var2, false);
+                  NanoGameClock.field_l = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "esc_cancelthisline");
                 if (var2 != null) {
@@ -943,7 +943,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
-                  sna.field_C = qq.a(var2, false);
+                  UiComponent.field_C = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_youneed1ratedgame");
                 if (var2 != null) {
@@ -987,7 +987,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "gameopt_unselectedoptions");
                 if (var2 != null) {
-                  aha.field_H = qq.a(var2, false);
+                  LinkTextWidget.field_H = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_pleaseselectoption1");
                 if (var2 != null) {
@@ -1019,7 +1019,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "ra_title");
                 if (var2 != null) {
-                  dka.field_D = qq.a(var2, false);
+                  ReportAbusePanel.field_D = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "ra_mutethisplayer");
                 if (var2 != null) {
@@ -1097,7 +1097,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "rule_pillar_2");
                 if (null != var2) {
-                  ur.field_p = qq.a(var2, false);
+                  WhirlpoolDigest.field_p = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_2_0");
                 if (null != var2) {
@@ -1145,7 +1145,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "playfreeversion");
                 if (null != var2) {
-                  hd.field_r = qq.a(var2, false);
+                  SpecialMoveDefinition.field_r = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "reloadgame");
                 if (null != var2) {
@@ -1637,7 +1637,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "create_password_tooltip");
                 if (var2 != null) {
-                  wj.field_r = qq.a(var2, false);
+                  UiWidget.field_r = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_password_hint");
                 if (var2 != null) {
@@ -1869,7 +1869,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "waitingfor_graphics");
                 if (null != var2) {
-                  kj.field_a = qq.a(var2, false);
+                  TileEffect.field_a = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "waitingfor_models");
                 if (null != var2) {
@@ -2043,7 +2043,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "quit");
                 if (var2 != null) {
-                  hfa.field_y = qq.a(var2, false);
+                  WidgetWrapper.field_y = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "login_createaccount");
                 if (var2 != null) {
@@ -2195,7 +2195,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "resign");
                 if (null != var2) {
-                  jma.field_m = qq.a(var2, param0);
+                  EffectBatchAnimation.field_m = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "returntolobby");
                 if (var2 != null) {

@@ -14,7 +14,7 @@ final class fba {
     final static void a(boolean param0, byte param1) {
         ih.field_l = 0;
         DreamsAnimation.field_A = ph.field_E;
-        pn.field_f = 0;
+        ArenaTheme.field_f = 0;
         InvincibleEvent.field_s = 0;
         if (param1 < -41) {
           ic.field_i = new jd(2);

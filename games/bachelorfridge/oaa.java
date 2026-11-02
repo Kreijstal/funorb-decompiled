@@ -36,7 +36,7 @@ final class oaa {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -3681) {
           field_b = (vr) null;
@@ -51,7 +51,7 @@ final class oaa {
         String var2Lifetime1;
         if (param0 > -66) {
           oaa.a(84, -6);
-          var2 = lka.field_E[param1][17];
+          var2 = TextInputWidget.field_E[param1][17];
           var2 = var2.trim();
           var2 = var2.toLowerCase();
           if (!var2.equals("")) {
@@ -59,7 +59,7 @@ final class oaa {
           }
           return -1;
         }
-        var2Lifetime1 = lka.field_E[param1][17];
+        var2Lifetime1 = TextInputWidget.field_E[param1][17];
         var2Lifetime1 = var2Lifetime1.trim();
         var2Lifetime1 = var2Lifetime1.toLowerCase();
         if (!var2Lifetime1.equals("")) {

@@ -8,7 +8,7 @@ final class TBomberAnimation extends EventAnimation {
     private TBomberEvent field_w;
     static java.awt.Canvas field_y;
 
-    TBomberAnimation(gj param0, TBomberEvent param1, boolean param2) {
+    TBomberAnimation(BattleScreen param0, TBomberEvent param1, boolean param2) {
         super(param0, param1);
         this.field_z = false;
         try {
@@ -33,7 +33,7 @@ final class TBomberAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         te var2 = null;
         if (this.field_x) {
           return true;
@@ -51,7 +51,7 @@ final class TBomberAnimation extends EventAnimation {
         if (!this.field_z) {
           this.field_w.creature.a(-27449, this.screen).b(-1, 7);
           var2 = new te(this.screen, this.field_w.field_q, this.field_w.field_t);
-          ((kj) ((Object) var2)).a(0);
+          ((TileEffect) ((Object) var2)).a(0);
           this.field_z = true;
         }
         return false;
@@ -111,7 +111,7 @@ final class TBomberAnimation extends EventAnimation {
             return stackIn_49_0;
           }
           if (var2_int == 7) {
-            stackIn_47_0 = ur.a(param1, (byte) 120);
+            stackIn_47_0 = WhirlpoolDigest.a(param1, (byte) 120);
             return stackIn_47_0;
           }
           if (var2_int == 8) {
@@ -168,7 +168,7 @@ final class TBomberAnimation extends EventAnimation {
 
     final static void d(int param0) {
         int var1 = -78 % ((param0 - 6) / 53);
-        if (ng.a((byte) -24)) {
+        if (MoveInfoPanel.a((byte) -24)) {
           return;
         }
         fma.a(1, true, wi.field_o);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AirstrikeAnimation extends EventAnimation {
-    private taa field_F;
+    private ActorAnimation field_F;
     private int field_w;
     private rr[] field_I;
     private int field_y;
@@ -64,7 +64,7 @@ final class AirstrikeAnimation extends EventAnimation {
         }
     }
 
-    AirstrikeAnimation(gj param0, AirstrikeEvent param1) {
+    AirstrikeAnimation(BattleScreen param0, AirstrikeEvent param1) {
         super(param0, param1);
         int var6 = 0;
         rr dupTemp$1 = null;
@@ -96,7 +96,7 @@ final class AirstrikeAnimation extends EventAnimation {
           }
           if (var4 > 0) {
             this.field_F = this.field_I[var4 >> 1].e((byte) -120);
-            this.a(27799, this.field_F);
+            this.addChild(27799, this.field_F);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -121,7 +121,7 @@ final class AirstrikeAnimation extends EventAnimation {
 
     private final void e(int param0) {
         if (this.field_G != null) {
-          id.a(-95, this.field_G);
+          PizzaArenaTheme.a(-95, this.field_G);
         }
         gka.a(-128, this.field_x);
         int var2 = -114 % ((param0 + 7) / 34);
@@ -325,7 +325,7 @@ final class AirstrikeAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var5 = 0;
         int var2;
         int var3;
@@ -369,7 +369,7 @@ final class AirstrikeAnimation extends EventAnimation {
         for (var5 = 0; var5 < var8.length; var5++) {
           var9 = var8[var5];
           if (var9 != null) {
-            if (!var9.b(21807)) {
+            if (!var9.update(21807)) {
               var3Lifetime1 = 0;
             } else {
               var6 = null;

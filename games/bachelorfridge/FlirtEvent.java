@@ -5,7 +5,7 @@ final class FlirtEvent extends SpecialEvent {
     static String field_r;
     static volatile int field_q;
     CreatureRef field_s;
-    static sna field_t;
+    static UiComponent field_t;
 
     final void a(byte param0, PacketBuffer param1) {
         try {
@@ -38,7 +38,7 @@ final class FlirtEvent extends SpecialEvent {
             uma.field_M.d(112);
             uma.field_M = null;
           }
-          ola.field_g = null;
+          FridgeScreen.field_g = null;
           if (null != bia.field_g) {
             bia.field_g.d(79);
             bia.field_g = null;
@@ -55,7 +55,7 @@ final class FlirtEvent extends SpecialEvent {
           if (param0 >= 7) {
             return;
           }
-          field_t = (sna) null;
+          field_t = (UiComponent) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,7 +82,7 @@ final class FlirtEvent extends SpecialEvent {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -96) {
           FlirtEvent.e(-82);
           field_r = null;
@@ -93,7 +93,7 @@ final class FlirtEvent extends SpecialEvent {
         field_t = null;
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         FlirtAnimation stackIn_4_0 = null;

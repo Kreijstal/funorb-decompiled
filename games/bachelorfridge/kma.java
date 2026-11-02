@@ -189,12 +189,12 @@ final class kma extends k {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          ng.field_f = new IntrusiveNodeHashTable(32);
+          MoveInfoPanel.field_f = new IntrusiveNodeHashTable(32);
           if (param0 > -93) {
             return;
           }
           for (var1_int = 0; fj.field_m.length > var1_int; var1_int++) {
-            ng.field_f.a((long)fj.field_m[var1_int].toLowerCase().hashCode(), (byte) -114, new ji(var1_int));
+            MoveInfoPanel.field_f.a((long)fj.field_m[var1_int].toLowerCase().hashCode(), (byte) -114, new ji(var1_int));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -204,7 +204,7 @@ final class kma extends k {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -1) {
           field_p = null;
           field_m = null;

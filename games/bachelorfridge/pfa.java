@@ -4,10 +4,10 @@
 final class pfa {
     private jj field_a;
     private jj[] field_e;
-    private ad field_f;
+    private CreatureActor field_f;
     static IndexedSprite field_g;
-    private gj field_c;
-    private sna field_d;
+    private BattleScreen field_c;
+    private UiComponent field_d;
     boolean field_b;
 
     final static int c(int param0) {
@@ -42,7 +42,7 @@ final class pfa {
         try {
           var1_int = HailSpecial.field_s;
           var2 = 0;
-          if (2 == ub.field_j) {
+          if (2 == BoardChangeAnimation.field_j) {
             var3_long = f.b((byte) 73) - ph.field_P;
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (0 > var2) {
@@ -61,7 +61,7 @@ final class pfa {
               }
             }
             var6 = mj.field_h[var3];
-            if (ub.field_j == 2 &&
+            if (BoardChangeAnimation.field_j == 2 &&
               var2 == 1) {
               if (GasCloudSpecial.field_p.length < mq.field_a.length) {
                 stackIn_16_0 = mq.field_a.length;
@@ -121,7 +121,7 @@ final class pfa {
             }
           }
           if (param0 != 1) {
-            pfa.b(false);
+            pfa.releaseStatics(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -131,7 +131,7 @@ final class pfa {
         }
     }
 
-    final void a(int param0, ad param1) {
+    final void a(int param0, CreatureActor param1) {
         try {
           this.field_f = param1;
           if (param0 != 0) {
@@ -147,7 +147,7 @@ final class pfa {
         int var2;
         int var5;
         jj var3;
-        sna var4;
+        UiComponent var4;
         var5 = BachelorFridge.field_y;
         this.field_e = new jj[this.field_f.field_s.field_m.length];
         var2 = 0;
@@ -167,10 +167,10 @@ final class pfa {
         var3 = this.field_a;
         this.field_a.field_p = 42;
         var3.field_sb = 42;
-        this.field_d = new sna();
+        this.field_d = new UiComponent();
         this.field_d.field_rb = 142;
         if (param0 <= 20) {
-          this.field_f = (ad) null;
+          this.field_f = (CreatureActor) null;
         }
         this.field_d.field_kb = 510;
         var4 = this.field_d;
@@ -202,14 +202,14 @@ final class pfa {
     final void d(int param0) {
         this.field_b = false;
         if (param0 != 15204352) {
-          this.field_f = (ad) null;
+          this.field_f = (CreatureActor) null;
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         if (param0) {
-          pfa.b(false);
+          pfa.releaseStatics(false);
         }
     }
 
@@ -218,7 +218,7 @@ final class pfa {
         int var3;
         var3 = BachelorFridge.field_y;
         if (param0 != -214844415) {
-          this.field_c = (gj) null;
+          this.field_c = (BattleScreen) null;
         }
         if (!this.field_b) {
           return false;
@@ -251,11 +251,11 @@ final class pfa {
         int var8;
         int var9;
         BattleCreature var10;
-        oha var11;
+        MoveDefinition var11;
         int var12;
         BattleCreature var13;
-        oha var14;
-        oha var15;
+        MoveDefinition var14;
+        MoveDefinition var15;
         String var16;
         int var3_intLifetime1;
         int var5Lifetime1;
@@ -273,20 +273,20 @@ final class pfa {
         this.field_f.field_f.a(this.field_f.field_f.field_x, param0, 2048, 2048, 0, -119, 256, 130, 104);
         MassPoisonSpecial.field_s.draw(280, 180);
         jha.field_g.a(hl.field_G[2], 334, 194, 15204352, -1);
-        hfa.field_z.a(hl.field_G[2], 334, 194, 65793, -1);
+        WidgetWrapper.field_z.a(hl.field_G[2], 334, 194, 65793, -1);
         jha.field_g.a(hl.field_G[3], 330, 224, 818659, -1);
-        hfa.field_z.a(hl.field_G[3], 330, 224, 65793, -1);
+        WidgetWrapper.field_z.a(hl.field_G[3], 330, 224, 65793, -1);
         jha.field_g.a(hl.field_G[0], 334, 252, 16769792, -1);
-        hfa.field_z.a(hl.field_G[0], 334, 252, 65793, -1);
+        WidgetWrapper.field_z.a(hl.field_G[0], 334, 252, 65793, -1);
         jha.field_g.a(hl.field_G[1], 328, 280, 51233, -1);
-        hfa.field_z.a(hl.field_G[1], 328, 280, 65793, -1);
+        WidgetWrapper.field_z.a(hl.field_G[1], 328, 280, 65793, -1);
         this.a(dt.field_a, var10.field_k[2], -128, 400, 174, 2);
         this.a(DualLinkDeque.field_b, var10.field_k[3], -128, 400, 204, 3);
         this.a(HomingMissileEvent.field_s, var10.field_k[0], -128, 400, 236, 0);
         this.a(vaa.field_b, var10.field_k[1], -128, 400, 263, 1);
         ce.a(true, 16776960, 155, var13.field_n, 320, true);
         jha.field_g.a(DelegatingCanvas.field_a, 390, 368, 16776960, -1);
-        hfa.field_z.a(DelegatingCanvas.field_a, 390, 368, 65793, -1);
+        WidgetWrapper.field_z.a(DelegatingCanvas.field_a, 390, 368, 65793, -1);
         for (var3_int = 0; var3_int < this.field_e.length; var3_int++) {
           if (this.field_e[var3_int] != null &&
             this.field_e[var3_int].field_zb != -1) {
@@ -295,7 +295,7 @@ final class pfa {
               var14 = var11;
               OneAnimation.field_E.draw(this.field_e[var3_int].field_kb, this.field_e[var3_int].field_rb);
               if (!(var14 instanceof tv)) {
-                if (!(var14 instanceof hd)) {
+                if (!(var14 instanceof SpecialMoveDefinition)) {
                   if (var14 instanceof a) {
                     if (var14.field_b == 3) {
                       nia.field_l[var14.field_b].e(-1 + this.field_e[var3_int].field_kb, this.field_e[var3_int].field_rb - 1, 16769792);
@@ -313,10 +313,10 @@ final class pfa {
                       }
                     }
                   } else {
-                    if (var14 instanceof t) {
-                      if (((t) (var14)).field_p != 1 &&
-                        ((t) (var14)).field_p != 2) {
-                        if (4 != ((t) (var14)).field_p) {
+                    if (var14 instanceof BasicMoveDefinition) {
+                      if (((BasicMoveDefinition) (var14)).field_p != 1 &&
+                        ((BasicMoveDefinition) (var14)).field_p != 2) {
+                        if (4 != ((BasicMoveDefinition) (var14)).field_p) {
                           nia.field_l[var14.field_b].e(-1 + this.field_e[var3_int].field_kb, -1 + this.field_e[var3_int].field_rb, 15204352);
                         } else {
                           nia.field_l[var14.field_b].e(this.field_e[var3_int].field_kb - 1, this.field_e[var3_int].field_rb - 1, 16754688);
@@ -362,18 +362,18 @@ final class pfa {
         }
         if (this.field_a.field_T &&
           this.field_f.field_s.statusId != 0) {
-          var3 = pna.field_zb[this.field_f.field_s.statusId].field_d;
-          var16 = pna.field_zb[this.field_f.field_s.statusId].field_e;
-          var5Lifetime1 = ad.field_h.c(var16, 200) + 10;
-          var6Lifetime1 = ad.field_h.measureWrappedHeight(var16, 200, 0) + (ad.field_h.field_F << 1);
+          var3 = pna.field_zb[this.field_f.field_s.statusId].name;
+          var16 = pna.field_zb[this.field_f.field_s.statusId].description;
+          var5Lifetime1 = CreatureActor.field_h.c(var16, 200) + 10;
+          var6Lifetime1 = CreatureActor.field_h.measureWrappedHeight(var16, 200, 0) + (CreatureActor.field_h.field_F << 1);
           SoftwareRasterizer.a(mk.field_p + 17, 4 + gd.field_m, var5Lifetime1 + 6, var6Lifetime1, 10, 65793, 128);
-          ad.field_h.drawText(var3, 20 + (mk.field_p + 4), 20 + gd.field_m, 0, -1);
-          ad.field_h.drawParagraph(var16, 4 + (mk.field_p + 20), gd.field_m + 24, 200, 200, 0, -1, 0, 0, 0);
+          CreatureActor.field_h.drawText(var3, 20 + (mk.field_p + 4), 20 + gd.field_m, 0, -1);
+          CreatureActor.field_h.drawParagraph(var16, 4 + (mk.field_p + 20), gd.field_m + 24, 200, 200, 0, -1, 0, 0, 0);
         }
         return;
     }
 
-    pfa(gj param0, sna param1, ad param2) {
+    pfa(BattleScreen param0, UiComponent param1, CreatureActor param2) {
         try {
           this.field_c = param0;
           this.a(0, param2);

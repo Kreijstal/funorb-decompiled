@@ -8,7 +8,7 @@ final class BuffVendorEvent extends SpecialEvent {
     static String field_q;
     static String field_s;
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         BuffVendorAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -55,7 +55,7 @@ final class BuffVendorEvent extends SpecialEvent {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_t = null;
         field_q = null;
@@ -70,7 +70,7 @@ final class BuffVendorEvent extends SpecialEvent {
           param1.writeByte(this.field_r, 0);
           param1.writeByte(this.field_u, 0);
           if (param0 > -12) {
-            BuffVendorEvent.d(94);
+            BuffVendorEvent.releaseStatics(94);
           }
           param1.writeByte(!this.field_p ? 0 : 1, 0);
         } catch (RuntimeException runtimeException) {

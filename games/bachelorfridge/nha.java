@@ -37,7 +37,7 @@ final class nha {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_d = null;
         if (param0 != -18307) {

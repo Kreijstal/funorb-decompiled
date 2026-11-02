@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends sna {
+final class oa extends UiComponent {
     private StringBuilder field_Ab;
     static int field_vb;
-    private sna field_xb;
+    private UiComponent field_xb;
     static String field_wb;
     private int field_zb;
-    private sna field_yb;
+    private UiComponent field_yb;
     static Sprite field_Bb;
 
-    oa(int param0, int param1, int param2, int param3, String param4, sna param5, sna param6, sna param7) {
+    oa(int param0, int param1, int param2, int param3, String param4, UiComponent param5, UiComponent param6, UiComponent param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -30,12 +30,12 @@ final class oa extends sna {
         int var13 = 0;
         this.field_zb = 0;
         try {
-          this.field_xb = new sna(0L, param6, param4);
+          this.field_xb = new UiComponent(0L, param6, param4);
           this.a(-1, this.field_xb);
-          this.field_yb = new sna(0L, param7);
+          this.field_yb = new UiComponent(0L, param7);
           this.field_yb.field_gb = 16764006;
           this.a(-1, this.field_yb);
-          this.field_yb.field_pb = "|";
+          this.field_yb.name = "|";
           this.field_Ab = new StringBuilder(12);
           var9_int = this.field_xb.e(-1);
           this.field_xb.a(rg.field_h, 31407, var9_int, 5, 3);
@@ -153,7 +153,7 @@ final class oa extends sna {
         return 2;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_Bb = null;
         field_wb = null;
         if (param0 <= 107) {

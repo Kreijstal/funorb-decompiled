@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gf extends kj {
+final class gf extends TileEffect {
     static String field_h;
     private IntrusiveDeque field_j;
     static String field_i;
@@ -12,7 +12,7 @@ final class gf extends kj {
     private Sprite[][] field_g;
     static int field_k;
 
-    gf(gj param0, int param1, int param2) {
+    gf(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         int var5 = 0;
         Sprite[] array$2 = null;
@@ -71,7 +71,7 @@ final class gf extends kj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_h = null;
         field_i = null;
         if (param0) {

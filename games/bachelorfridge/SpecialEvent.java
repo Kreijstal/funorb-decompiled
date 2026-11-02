@@ -52,7 +52,7 @@ abstract class SpecialEvent extends CreatureEvent {
         super(4, param0.readUnsignedShort((byte) 76), param0);
     }
 
-    final void a(BattleState param0, boolean param1) {
+    final void apply(BattleState param0, boolean param1) {
         if (this instanceof ew) {
           return;
         }
@@ -138,7 +138,7 @@ abstract class SpecialEvent extends CreatureEvent {
         try {
           var4 = (EventEffect) (this.effects.b((byte) 90));
           while (var4 != null) {
-            var4.a(var3, param0, 12);
+            var4.apply(var3, param0, 12);
             var4 = (EventEffect) (this.effects.c(0));
           }
           this.a(var3, param1 + 121);
@@ -164,7 +164,7 @@ abstract class SpecialEvent extends CreatureEvent {
           param1.writeByte(this.effects.g(0), 0);
           var5 = (EventEffect) (this.effects.b((byte) 90));
           while (var5 != null) {
-            var5.a(param1, (byte) 92);
+            var5.write(param1, (byte) 92);
             var5 = (EventEffect) (this.effects.c(0));
           }
           return;

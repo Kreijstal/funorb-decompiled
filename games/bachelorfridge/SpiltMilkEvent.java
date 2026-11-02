@@ -112,7 +112,7 @@ final class SpiltMilkEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         SpiltMilkAnimation stackIn_4_0 = null;
@@ -156,15 +156,15 @@ final class SpiltMilkEvent extends SpecialEvent {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          if (!rs.b(true)) {
+          if (!StatusEffectInfo.b(true)) {
             if (kga.field_c != null &&
               kga.field_c.field_f) {
               lga.c((byte) 112);
-              pja.field_e.a((wj) (new em(pja.field_e, r.field_m)), (byte) 93);
+              pja.field_e.a((UiWidget) (new em(pja.field_e, r.field_m)), (byte) 93);
             }
             return;
           }
-          pja.field_e.a(true, MassPoisonEvent.field_q, ef.field_k, param0 + 6382);
+          pja.field_e.processInput(true, MassPoisonEvent.field_q, ef.field_k, param0 + 6382);
           if (param0 != -1) {
             return;
           }

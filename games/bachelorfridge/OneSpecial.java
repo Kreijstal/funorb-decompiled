@@ -145,7 +145,7 @@ final class OneSpecial extends SpecialOrder {
           }
           if (!param3) {
             var8 = (BattleState) null;
-            this.a((BattleState) null, 4);
+            this.createEvent((BattleState) null, 4);
           }
           param4.effects.a(new MoveCreatureEffect(new CreatureRef(param2), param1, param0), param3);
           return true;
@@ -175,7 +175,7 @@ final class OneSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         boolean discarded$1 = false;
         RuntimeException var3 = null;
         OneEvent var4 = null;
@@ -236,7 +236,7 @@ final class OneSpecial extends SpecialOrder {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_s = null;
         field_r = null;
         field_p = null;

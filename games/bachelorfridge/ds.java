@@ -6,7 +6,7 @@ final class ds extends pu {
     static BinaryBitmapFont field_l;
     private static String field_z;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1182) {
           field_l = (BinaryBitmapFont) null;
           field_l = null;

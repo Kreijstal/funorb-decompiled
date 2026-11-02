@@ -25,7 +25,7 @@ final class wb extends lw {
         return false;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != 10046) {
           field_l = (vr) null;
@@ -33,7 +33,7 @@ final class wb extends lw {
     }
 
     wb() {
-        super(false, new String[]{wg.field_h, sk.field_n, sk.field_m, qh.field_g, paa.field_h, TeleportSpecial.field_p}, BoardChange.field_h);
+        super(false, new String[]{wg.field_h, sk.field_n, sk.field_m, WidgetTheme.field_g, paa.field_h, TeleportSpecial.field_p}, BoardChange.field_h);
         this.field_c = new int[][]{new int[]{180, 20}, new int[]{110, 190}, new int[]{70, 30}, new int[]{190, 310}, new int[]{30, 90}, new int[]{160, 350}, new int[]{200, 190}};
     }
 
@@ -91,7 +91,7 @@ final class wb extends lw {
         int stackIn_3_2;
         int stackIn_3_3;
         boolean stackIn_4_4 = false;
-        sna stackIn_20_0 = null;
+        UiComponent stackIn_20_0 = null;
         String stackIn_21_1 = null;
         int stackIn_24_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -120,7 +120,7 @@ final class wb extends lw {
           stackIn_3_3 = (6 + 3 * rg.field_h) * param1;
           stackIn_4_4 = (RageAnimation.field_w.field_xb == bga.field_m);
           var3_int = ((sga) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param0, true) ? 1 : 0;
-          var4 = RageAnimation.field_w.field_wb.field_z;
+          var4 = RageAnimation.field_w.field_wb.children;
           var5 = -98 / ((-4 - param2) / 42);
           if (2 != um.field_c &&
             um.field_c != 1) {
@@ -135,10 +135,10 @@ final class wb extends lw {
           var7 = (nea) (var4.b((byte) 90));
           while (var7 != null) {
             var8 = 0;
-            if (var7.field_z == null) {
-              var7.field_Db = new sna(0L, ClientException.field_c);
+            if (var7.children == null) {
+              var7.field_Db = new UiComponent(0L, ClientException.field_c);
               var7.a(-1, var7.field_Db);
-              var7.field_zb = new sna(0L, ClientException.field_c);
+              var7.field_zb = new UiComponent(0L, ClientException.field_c);
               var7.a(-1, var7.field_zb);
               var7.d((byte) 116);
               var8 = 1;
@@ -173,7 +173,7 @@ final class wb extends lw {
               var7.field_hb = rg.field_h - var7.field_p;
             }
             if (var8 != 0) {
-              RageAnimation.field_w.field_wb.a(false, var7, (sna) (var6), 2);
+              RageAnimation.field_w.field_wb.a(false, var7, (UiComponent) (var6), 2);
             }
             if (null != var7.field_zb &&
               var7.field_zb.field_T) {

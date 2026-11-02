@@ -175,23 +175,23 @@ final class ei {
     }
 
     final static void a(byte param0) {
-        if (-fa.field_l + 0 == ur.field_d) {
-          ur.field_d = ur.field_d + 1;
+        if (-fa.field_l + 0 == WhirlpoolDigest.field_d) {
+          WhirlpoolDigest.field_d = WhirlpoolDigest.field_d + 1;
           if (param0 == -34) {
             return;
           }
           ei.a(126, 17);
           return;
         }
-        if (ur.field_d != -fa.field_l + 250) {
-          ur.field_d = ur.field_d + 1;
+        if (WhirlpoolDigest.field_d != -fa.field_l + 250) {
+          WhirlpoolDigest.field_d = WhirlpoolDigest.field_d + 1;
           if (param0 == -34) {
             return;
           }
           ei.a(126, 17);
           return;
         }
-        ur.field_d = ur.field_d + 1;
+        WhirlpoolDigest.field_d = WhirlpoolDigest.field_d + 1;
         if (param0 == -34) {
           return;
         }

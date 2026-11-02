@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SlowAllAnimation extends EventAnimation {
-    static sna field_v;
+    static UiComponent field_v;
     static int field_w;
     private SlowAllEvent field_x;
 
@@ -49,7 +49,7 @@ final class SlowAllAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var2;
@@ -90,9 +90,9 @@ final class SlowAllAnimation extends EventAnimation {
         DamageEffect var3_ref;
         int var5;
         BattleCreature var7;
-        ad var8;
+        CreatureActor var8;
         BattleCreature var9;
-        ad var10;
+        CreatureActor var10;
         DamageEffect var3_refLifetime1;
         var3 = null;
         var5 = BachelorFridge.field_y;
@@ -104,11 +104,11 @@ final class SlowAllAnimation extends EventAnimation {
           var3_ref = (DamageEffect) (this.field_x.effects.b((byte) 90));
           al.a(118, this.field_x.moveId);
           while (var3_ref != null) {
-            var3_ref.a(var9, this.screen.field_h, 12);
+            var3_ref.apply(var9, this.screen.field_h, 12);
             var10 = var3_ref.target.a(-27449, this.screen);
-            this.a(27799, new taa(this.screen, var10));
-            this.a(27799, new cb(var10, 6));
-            this.a(27799, new wn(var10, kna.field_g[5], 24831));
+            this.addChild(27799, new ActorAnimation(this.screen, var10));
+            this.addChild(27799, new cb(var10, 6));
+            this.addChild(27799, new wn(var10, kna.field_g[5], 24831));
             var3_ref = (DamageEffect) (this.field_x.effects.c(0));
           }
           return;
@@ -121,17 +121,17 @@ final class SlowAllAnimation extends EventAnimation {
         var3_refLifetime1 = (DamageEffect) (this.field_x.effects.b((byte) 90));
         al.a(118, this.field_x.moveId);
         while (var3_refLifetime1 != null) {
-          var3_refLifetime1.a(var7, this.screen.field_h, 12);
+          var3_refLifetime1.apply(var7, this.screen.field_h, 12);
           var8 = var3_refLifetime1.target.a(-27449, this.screen);
-          this.a(27799, new taa(this.screen, var8));
-          this.a(27799, new cb(var8, 6));
-          this.a(27799, new wn(var8, kna.field_g[5], 24831));
+          this.addChild(27799, new ActorAnimation(this.screen, var8));
+          this.addChild(27799, new cb(var8, 6));
+          this.addChild(27799, new wn(var8, kna.field_g[5], 24831));
           var3_refLifetime1 = (DamageEffect) (this.field_x.effects.c(0));
         }
         return;
     }
 
-    SlowAllAnimation(gj param0, SlowAllEvent param1) {
+    SlowAllAnimation(BattleScreen param0, SlowAllEvent param1) {
         super(param0, param1);
         try {
           this.field_x = param1;

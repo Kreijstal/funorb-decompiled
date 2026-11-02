@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BananarangEvent extends SpecialEvent {
-    static sna field_v;
-    static jfa field_s;
+    static UiComponent field_v;
+    static FridgeCreature field_s;
     static String field_t;
     static byte[][] field_q;
     int field_r;
@@ -14,7 +14,7 @@ final class BananarangEvent extends SpecialEvent {
           super.a((byte) -98, param1);
           param1.writeByte(this.field_r, 0);
           if (param0 > -12) {
-            field_s = (jfa) null;
+            field_s = (FridgeCreature) null;
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "rn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -30,9 +30,9 @@ final class BananarangEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
-        gj var4 = null;
+        BattleScreen var4 = null;
         BananarangAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -40,8 +40,8 @@ final class BananarangEvent extends SpecialEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            var4 = (gj) null;
-            this.a(-73, (gj) null);
+            var4 = (BattleScreen) null;
+            this.createAnimation(-73, (BattleScreen) null);
           }
           stackIn_3_0 = new BananarangAnimation(param1, this);
           return (AnimationNode) ((Object) stackIn_3_0);
@@ -66,7 +66,7 @@ final class BananarangEvent extends SpecialEvent {
         return var2 * var4 >> 12;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_v = null;
         if (param0 < 83) {
           return;

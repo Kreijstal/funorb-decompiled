@@ -80,7 +80,7 @@ final class AirstrikeEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         AirstrikeAnimation stackIn_4_0 = null;
@@ -195,7 +195,7 @@ final class AirstrikeEvent extends SpecialEvent {
         int[][] var2 = var3;
         var5[5][8] = 1;
         if (param0) {
-          AirstrikeEvent.c(false);
+          AirstrikeEvent.releaseStatics(false);
         }
         var5[6][7] = 1;
         var5[7][7] = 1;
@@ -224,11 +224,11 @@ final class AirstrikeEvent extends SpecialEvent {
         return var2;
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_q = null;
         field_s = null;
         if (param0) {
-          AirstrikeEvent.c(true);
+          AirstrikeEvent.releaseStatics(true);
         }
     }
 

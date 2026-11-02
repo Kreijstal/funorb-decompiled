@@ -3,14 +3,14 @@
  */
 final class ScavengerSpecial extends SpecialOrder {
     static int field_v;
-    static sna field_q;
+    static UiComponent field_q;
     static String field_t;
     static int[] field_u;
     static vr field_p;
     static int field_s;
     static int field_r;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1687) {
           return;
         }
@@ -20,7 +20,7 @@ final class ScavengerSpecial extends SpecialOrder {
         field_p = null;
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         ScavengerEvent stackIn_16_0 = null;
@@ -70,9 +70,9 @@ final class ScavengerSpecial extends SpecialOrder {
         }
     }
 
-    final static sna c(int param0) {
+    final static UiComponent c(int param0) {
         if (param0 != 0) {
-          ScavengerSpecial.b(24);
+          ScavengerSpecial.releaseStatics(24);
         }
         return rba.field_a.field_wb;
     }

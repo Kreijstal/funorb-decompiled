@@ -7,7 +7,7 @@ final class IncomingSpecial extends SpecialOrder {
     static String field_q;
     static String field_p;
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var7 = 0;
         int var8 = 0;
         CreatureEvent stackIn_12_0 = null;

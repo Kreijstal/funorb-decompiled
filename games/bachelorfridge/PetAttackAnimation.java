@@ -3,7 +3,7 @@
  */
 final class PetAttackAnimation extends EventAnimation {
     static Sprite field_y;
-    private taa field_z;
+    private ActorAnimation field_z;
     static int field_w;
     static int[] field_x;
     private boolean field_v;
@@ -65,7 +65,7 @@ final class PetAttackAnimation extends EventAnimation {
           if (!param0) {
             field_w = 2;
           }
-          ola.field_p = OhNoAnimation.field_w;
+          FridgeScreen.field_p = OhNoAnimation.field_w;
           if (255 != param1) {
             if (param1 < 100) {
               ZombiesSpecial.field_p = wu.a(param1, (byte) 97, param2);
@@ -102,7 +102,7 @@ final class PetAttackAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = -54 % ((param0 - 71) / 47);
         if (this.field_m.isLinked((byte) -106)) {
           return false;
@@ -135,7 +135,7 @@ final class PetAttackAnimation extends EventAnimation {
         this.screen.field_s.field_d = 100;
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_x = null;
         field_y = null;
         if (param0 == -35) {
@@ -144,12 +144,12 @@ final class PetAttackAnimation extends EventAnimation {
         field_x = (int[]) null;
     }
 
-    PetAttackAnimation(gj param0, PetAttackEvent param1) {
+    PetAttackAnimation(BattleScreen param0, PetAttackEvent param1) {
         super(param0, param1);
         this.field_v = false;
         try {
-          this.field_z = new taa(this.screen, (this.screen.field_h.width >> 1) - 1, -3);
-          this.a(27799, this.field_z);
+          this.field_z = new ActorAnimation(this.screen, (this.screen.field_h.width >> 1) - 1, -3);
+          this.addChild(27799, this.field_z);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "fv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

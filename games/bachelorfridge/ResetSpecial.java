@@ -7,7 +7,7 @@ final class ResetSpecial extends SpecialOrder {
     static IntrusiveDeque field_s;
     static boolean field_p;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_q = null;
         if (param0 != 0) {
@@ -54,7 +54,7 @@ final class ResetSpecial extends SpecialOrder {
         return HailSpecial.field_r[var4Lifetime1];
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         ResetEvent var4 = null;

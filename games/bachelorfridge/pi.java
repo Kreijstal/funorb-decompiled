@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class pi extends kj {
+final class pi extends TileEffect {
     private int field_f;
     private IntrusiveDeque field_g;
     static String field_h;
@@ -126,11 +126,11 @@ final class pi extends kj {
             if (DiveBomberAnimation.a(20, this.field_e.field_h.field_w, -2147483648) >= 5) {
               stackIn_16_0 = null;
               stackIn_16_1 = null;
-              stackIn_16_5 = aha.field_A[this.field_e.field_h.field_E][0];
+              stackIn_16_5 = LinkTextWidget.field_A[this.field_e.field_h.field_E][0];
             } else {
               stackIn_16_0 = null;
               stackIn_16_1 = null;
-              stackIn_16_5 = aha.field_A[this.field_e.field_h.field_E][1];
+              stackIn_16_5 = LinkTextWidget.field_A[this.field_e.field_h.field_E][1];
             }
             var9 = new rea(stackIn_15_2, stackIn_15_3, stackIn_15_4, stackIn_16_5);
             DiveBomberAnimation.a(3, this.field_e.field_h.field_w, -2147483648);
@@ -201,7 +201,7 @@ final class pi extends kj {
         }
     }
 
-    pi(gj param0, int param1, int param2) {
+    pi(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_f = 136;
@@ -218,7 +218,7 @@ final class pi extends kj {
         PetAttackAnimation.a(param0, 65280, 10, this.field_g, param2, (byte) -115);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_h = (String) null;
         }

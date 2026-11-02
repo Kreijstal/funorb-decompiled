@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PlaceCreatureEffect extends EventEffect {
-    static sna field_j;
+    static UiComponent field_j;
     static String field_k;
     static String field_i;
     int field_m;
     int field_l;
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         BattleCreature var4 = this.target.a(52, param1);
         if (param2 != 12) {
           return;
@@ -23,9 +23,9 @@ final class PlaceCreatureEffect extends EventEffect {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) 100);
+          super.write(param0, (byte) 100);
           FlirtAnimation.a(this.target, 109, param0);
           param0.writeByte(this.field_l, 0);
           int var3_int = -63 % ((param1 - 34) / 58);
@@ -160,7 +160,7 @@ final class PlaceCreatureEffect extends EventEffect {
         return var2;
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_j = null;
         field_k = null;

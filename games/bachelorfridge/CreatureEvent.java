@@ -8,9 +8,9 @@ abstract class CreatureEvent extends BattleUpdate {
     int moveId;
     static IntrusiveDeque field_m;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -225) {
-          CreatureEvent.b(-121);
+          CreatureEvent.releaseStatics(-121);
           field_m = null;
           return;
         }
@@ -28,7 +28,7 @@ abstract class CreatureEvent extends BattleUpdate {
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void write(PacketBuffer param0, int param1) {
         try {
           param0.b(this.moveId, -121);
           FlirtAnimation.a(this.creature, param1 + 132, param0);

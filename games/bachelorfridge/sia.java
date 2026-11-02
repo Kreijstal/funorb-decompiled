@@ -3,25 +3,25 @@
  */
 import java.io.*;
 
-final class sia extends kj {
+final class sia extends TileEffect {
     private Sprite field_l;
     static Sprite field_j;
     static boolean field_h;
     static Sprite field_g;
     private int field_f;
     static java.awt.Canvas field_i;
-    private ad field_k;
+    private CreatureActor field_k;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         if (param0 != 10371) {
-          sia.c(13);
+          sia.releaseStatics(13);
         }
         field_g = null;
         field_i = null;
     }
 
-    sia(gj param0, int param1, int param2, ad param3) {
+    sia(BattleScreen param0, int param1, int param2, CreatureActor param3) {
         super(param0, param1, param2);
         try {
           this.field_k = param3;
@@ -34,7 +34,7 @@ final class sia extends kj {
 
     final boolean b(int param0) {
         if (param0 < 21) {
-          sia.c(-46);
+          sia.releaseStatics(-46);
         }
         int fieldTemp$0 = this.field_f - 1;
         this.field_f = this.field_f - 1;
@@ -272,7 +272,7 @@ final class sia extends kj {
         }
         this.field_k.field_f.a(-10 + param0, 2048, param2 - 10, 2048, var4, (byte) 119);
         if (!param1) {
-          this.field_k = (ad) null;
+          this.field_k = (CreatureActor) null;
         }
         for (var5 = 0; 3 > var5; var5++) {
           var6 = 50 * vr.field_b + 65536 * var5 / 3;

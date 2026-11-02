@@ -56,7 +56,7 @@ final class DiveBomberAnimation extends EventAnimation {
         }
         this.field_v.d((byte) 27);
         gv var3 = new gv(this.screen, var2.tileX, var2.tileY);
-        ((kj) ((Object) var3)).a(0);
+        ((TileEffect) ((Object) var3)).a(0);
     }
 
     final static int a(int param0, Random param1, int param2) {
@@ -139,7 +139,7 @@ final class DiveBomberAnimation extends EventAnimation {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 63) {
           return;
         }
@@ -158,7 +158,7 @@ final class DiveBomberAnimation extends EventAnimation {
           return rj.field_q;
         }
         if (!bv.field_B.a(param0 ^ param0)) {
-          return kj.field_a;
+          return TileEffect.field_a;
         }
         if (!bv.field_B.a("commonui", 20637)) {
           return iea.field_b + " - " + bv.field_B.a(0, "commonui") + "%";
@@ -178,7 +178,7 @@ final class DiveBomberAnimation extends EventAnimation {
         return fo.field_b;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         if (100 == this.field_l) {
           jja.a(256, -1, 11);
           this.field_l = this.field_l - 1;
@@ -207,7 +207,7 @@ final class DiveBomberAnimation extends EventAnimation {
         return true;
     }
 
-    DiveBomberAnimation(gj param0, DiveBomberEvent param1) {
+    DiveBomberAnimation(BattleScreen param0, DiveBomberEvent param1) {
         super(param0, param1);
         try {
           this.field_v = param1;
@@ -217,7 +217,7 @@ final class DiveBomberAnimation extends EventAnimation {
     }
 
     private final void f(byte param0) {
-        ad var4 = null;
+        CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
         BattleCreature var2 = this.field_v.creature.a(53, this.screen.field_h);
         if (var2.isDown(127)) {
@@ -231,8 +231,8 @@ final class DiveBomberAnimation extends EventAnimation {
         while (var3 != null) {
           var4 = var3.target.a(-27449, this.screen);
           var4.b(-1, 6);
-          var3.a(var2, this.screen.field_h, 12);
-          this.a(27799, new ek(this.screen, var4, 40));
+          var3.apply(var2, this.screen.field_h, 12);
+          this.addChild(27799, new ek(this.screen, var4, 40));
           var3 = (DamageEffect) (this.field_v.effects.c(0));
         }
     }

@@ -4,7 +4,7 @@
 final class ba extends mv {
     private qf field_q;
     static String field_r;
-    private gj field_p;
+    private BattleScreen field_p;
     private hba field_o;
 
     final static BattleUpdate a(PacketBuffer param0, byte param1) {
@@ -320,14 +320,14 @@ final class ba extends mv {
         var16 = -13 / ((-38 - param14) / 38);
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         if (param0 != -45) {
           field_r = (String) null;
         }
     }
 
-    ba(gj param0, hba param1) {
+    ba(BattleScreen param0, hba param1) {
         super(param0, param1);
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -336,7 +336,7 @@ final class ba extends mv {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        ad var5 = null;
+        CreatureActor var5 = null;
         try {
           this.field_o = param1;
           this.field_p = param0;
@@ -357,7 +357,7 @@ final class ba extends mv {
                 this.f(-109);
                 this.field_j = 50;
                 this.field_q = new qf(this.field_p, this.field_o.creature, this.field_o.moveId, this.field_o.field_q, this.field_o.field_w, false);
-                this.a(27799, this.field_q);
+                this.addChild(27799, this.field_q);
               } else {
                 var5.a(16761024, 41, MoveCreatureEffect.field_j);
               }
@@ -386,20 +386,20 @@ final class ba extends mv {
 
     final void d(int param0) {
         if (param0 <= 16) {
-          this.c((byte) -100);
+          this.isFinished((byte) -100);
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var3;
-        t var4;
+        BasicMoveDefinition var4;
         BattleCreature var5;
         int var6;
-        ad var7;
+        CreatureActor var7;
         var6 = BachelorFridge.field_y;
         var3 = -16 / ((71 - param0) / 47);
         var7 = this.field_o.creature.a(-27449, this.field_p);
-        var4 = (t) (al.a(-108, this.field_o.moveId));
+        var4 = (BasicMoveDefinition) (al.a(-108, this.field_o.moveId));
         if (this.field_j == 25 &&
           !this.field_o.field_r &&
           !this.field_o.field_n &&

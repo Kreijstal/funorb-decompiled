@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SplitSpecial extends SpecialOrder {
-    static sna field_p;
+    static UiComponent field_p;
 
     final static BattleUpdate a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
@@ -38,9 +38,9 @@ final class SplitSpecial extends SpecialOrder {
         int stackIn_7_3;
         boolean stackIn_8_4 = false;
         nea stackIn_12_0 = null;
-        sna stackIn_35_0 = null;
+        UiComponent stackIn_35_0 = null;
         String stackIn_36_1 = null;
-        sna stackIn_39_0 = null;
+        UiComponent stackIn_39_0 = null;
         String stackIn_40_1 = null;
         int stackIn_44_0 = 0;
         Object stackIn_91_0 = null;
@@ -80,7 +80,7 @@ final class SplitSpecial extends SpecialOrder {
           stackIn_8_4 = (bga.field_m == rba.field_a.field_xb);
           boolean decompiledFrameRemainder0 = true;
           var3_int = ((sga) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, param2, true) ? 1 : 0;
-          var4 = rba.field_a.field_wb.field_z;
+          var4 = rba.field_a.field_wb.children;
           var5 = null;
           if (um.field_c == 2) {
             ov.field_d.field_u = true;
@@ -95,12 +95,12 @@ final class SplitSpecial extends SpecialOrder {
               stackIn_91_0 = stackOut_11_0;
               stackIn_12_0 = stackOut_11_0;
               if (var19 == 0) {
-                if (stackIn_12_0.field_z == null) {
-                  var7.field_Db = new sna(0L, ClientException.field_c);
+                if (stackIn_12_0.children == null) {
+                  var7.field_Db = new UiComponent(0L, ClientException.field_c);
                   var7.a(~param0, var7.field_Db);
-                  var7.field_Eb = new sna(0L, wv.field_l);
+                  var7.field_Eb = new UiComponent(0L, wv.field_l);
                   var7.a(-1, var7.field_Eb);
-                  var7.field_zb = new sna(0L, ClientException.field_c);
+                  var7.field_zb = new UiComponent(0L, ClientException.field_c);
                   var7.a(-1, var7.field_zb);
                   var7.field_Eb.field_N = 2;
                   var8 = 1;
@@ -165,7 +165,7 @@ final class SplitSpecial extends SpecialOrder {
                   var7.field_hb = var9 - var7.field_p;
                 }
                 if (var8 != 0) {
-                  rba.field_a.field_wb.a(false, var7, (sna) (var6), 2);
+                  rba.field_a.field_wb.a(false, var7, (UiComponent) (var6), 2);
                 }
                 var6 = var7;
                 if (null != var7.field_zb &&
@@ -205,7 +205,7 @@ final class SplitSpecial extends SpecialOrder {
               }
               stackIn_91_0 = rba.field_a.field_yb;
             }
-            if (((sna) (stackIn_91_0)).field_R != 0) {
+            if (((UiComponent) (stackIn_91_0)).field_R != 0) {
               RefreshingSpecial.field_p = new oa(rba.field_a.field_yb.field_D, rba.field_a.field_yb.field_M, rba.field_a.field_yb.field_sb, rba.field_a.field_yb.field_p, vc.field_f, kha.field_i, qs.field_m, qs.field_m);
               vaa.field_f = 1;
             }
@@ -237,7 +237,7 @@ final class SplitSpecial extends SpecialOrder {
         super(param0, param1);
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         SplitEvent var4 = null;
@@ -248,7 +248,7 @@ final class SplitSpecial extends SpecialOrder {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            field_p = (sna) null;
+            field_p = (UiComponent) null;
           }
           var3 = this.creature.a(15, param0);
           var4 = new SplitEvent(this.moveId, new CreatureRef(var3));
@@ -272,7 +272,7 @@ final class SplitSpecial extends SpecialOrder {
         try {
           field_p = null;
           if (param0 >= -80) {
-            field_p = (sna) null;
+            field_p = (UiComponent) null;
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "hj.D(" + param0 + ')');

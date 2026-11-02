@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sn extends pu {
-    static sna field_l;
-    static sna field_m;
+    static UiComponent field_l;
+    static UiComponent field_m;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 > -88) {
-          field_l = (sna) null;
+          field_l = (UiComponent) null;
           field_m = null;
           return;
         }

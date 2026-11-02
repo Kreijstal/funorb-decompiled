@@ -20,7 +20,7 @@ final class kja {
         vla.a(5, param1, param0, param3);
     }
 
-    final static sna a(byte param0) {
+    final static UiComponent a(byte param0) {
         if (param0 != 20) {
           kja.a(-25, 95, (byte) 51, true);
           return SnowEvent.field_q.field_vb;
@@ -28,7 +28,7 @@ final class kja {
         return SnowEvent.field_q.field_vb;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1900) {
           field_e = (Sprite) null;
           field_e = null;

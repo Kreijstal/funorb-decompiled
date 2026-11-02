@@ -13,18 +13,18 @@ final class kaa extends pu {
         Throwable decompiledCaughtException = null;
         var1_ref = vv.field_e;
         synchronized (var1_ref) {
-          if (gha.field_q == HazmatEvent.field_s) {
+          if (DefaultWidgetRenderer.field_q == HazmatEvent.field_s) {
             return false;
           }
-          gf.field_k = aq.field_a[gha.field_q];
-          dla.field_j = dla.field_i[gha.field_q];
-          gha.field_q = param0 & 1 + gha.field_q;
+          gf.field_k = aq.field_a[DefaultWidgetRenderer.field_q];
+          dla.field_j = dla.field_i[DefaultWidgetRenderer.field_q];
+          DefaultWidgetRenderer.field_q = param0 & 1 + DefaultWidgetRenderer.field_q;
           stackIn_5_0 = true;
         }
         return stackIn_5_0;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 106) {
           return;
         }
@@ -33,8 +33,8 @@ final class kaa extends pu {
 
     final static String c(int param0) {
         String var1 = "";
-        if (ola.field_e != null) {
-          var1 = ola.field_e.a(1);
+        if (FridgeScreen.field_e != null) {
+          var1 = FridgeScreen.field_e.a(1);
         }
         if (var1.length() == 0) {
           var1 = uaa.d((byte) -82);
@@ -65,7 +65,7 @@ final class kaa extends pu {
         var4 = BachelorFridge.field_y;
         try {
           if (param1 != 63) {
-            kaa.d((byte) -125);
+            kaa.releaseStatics((byte) -125);
           }
           for (var2_int = 0; param0.length() > var2_int; var2_int++) {
             var3 = param0.charAt(var2_int);

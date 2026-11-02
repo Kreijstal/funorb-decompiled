@@ -5,7 +5,7 @@ import java.util.*;
 
 final class IncomingAnimation extends EventAnimation {
     private int field_C;
-    private taa field_y;
+    private ActorAnimation field_y;
     private qn field_x;
     static MusicTrack field_z;
     private Sprite field_D;
@@ -17,7 +17,7 @@ final class IncomingAnimation extends EventAnimation {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6, String param7, int param8) {
         try {
-          ur.field_e[pe.field_m] = (oha) ((Object) new a(param1, param4, param0, param6, param7, param3, param5, param8));
+          WhirlpoolDigest.field_e[pe.field_m] = (MoveDefinition) ((Object) new a(param1, param4, param0, param6, param7, param3, param5, param8));
           if (param2 != 12635) {
             IncomingAnimation.f(-58);
           }
@@ -27,7 +27,7 @@ final class IncomingAnimation extends EventAnimation {
         }
     }
 
-    IncomingAnimation(gj param0, IncomingEvent param1) {
+    IncomingAnimation(BattleScreen param0, IncomingEvent param1) {
         super(param0, param1);
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -86,7 +86,7 @@ final class IncomingAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var2;
@@ -96,15 +96,15 @@ final class IncomingAnimation extends EventAnimation {
         if (this.field_w == dba.field_a) {
           this.field_x = new qn(this.screen, this.field_E.field_s, this.field_E.field_r);
           this.field_x.a(0);
-          this.field_y = new taa(this.screen, this.field_E.field_s, this.field_E.field_r);
-          this.a(27799, this.field_y);
+          this.field_y = new ActorAnimation(this.screen, this.field_E.field_s, this.field_E.field_r);
+          this.addChild(27799, this.field_y);
           this.field_w = bia.field_i;
           return false;
         }
         if (bia.field_i == this.field_w) {
-          this.field_y = new taa(this.screen, this.field_B, this.field_C);
+          this.field_y = new ActorAnimation(this.screen, this.field_B, this.field_C);
           this.field_y.field_p = false;
-          this.a(27799, this.field_y);
+          this.addChild(27799, this.field_y);
           this.field_w = hba.field_x;
           return false;
         }
@@ -118,8 +118,8 @@ final class IncomingAnimation extends EventAnimation {
           return false;
         }
         if (hba.field_x == this.field_w) {
-          this.field_y = new taa(this.screen, this.field_E.field_s, this.field_E.field_r);
-          this.a(27799, this.field_y);
+          this.field_y = new ActorAnimation(this.screen, this.field_E.field_s, this.field_E.field_r);
+          this.addChild(27799, this.field_y);
           this.field_l = 30;
           this.field_w = lw.field_g;
           return false;
@@ -141,7 +141,7 @@ final class IncomingAnimation extends EventAnimation {
         return false;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -25) {
           return;
         }
@@ -150,7 +150,7 @@ final class IncomingAnimation extends EventAnimation {
     }
 
     private final void d(int param0) {
-        this.field_E.a(this.screen.field_h, false);
+        this.field_E.apply(this.screen.field_h, false);
         if (param0 >= -22) {
           String var3 = (String) null;
           IncomingAnimation.a(20, 100, 70, 26, 13, -84, (String) null, (String) null, -119);
@@ -164,7 +164,7 @@ final class IncomingAnimation extends EventAnimation {
         int stackIn_24_1 = 0;
         int var4;
         int var5;
-        ad var6;
+        CreatureActor var6;
         int var7;
         int var10;
         int var11;
@@ -206,7 +206,7 @@ final class IncomingAnimation extends EventAnimation {
                 } else {
                   var13 = new dw(this.screen, var10, var11);
                 }
-                ((kj) (var13)).a(0);
+                ((TileEffect) (var13)).a(0);
                 this.a(var10, var11, var6, 0);
               }
             }
@@ -245,7 +245,7 @@ final class IncomingAnimation extends EventAnimation {
         int var1 = (FullscreenFocusCanvas.field_b - 640) / 2;
         int var2 = saa.field_b * saa.field_b;
         int var3 = var2 - lfa.field_q * lfa.field_q;
-        ng.field_e.a(-94 + (-120 + SoftwareRasterizer.field_c), param0 ^ 31336, 199, -(param0 * var3 / var2) + var1, 90);
+        MoveInfoPanel.field_e.a(-94 + (-120 + SoftwareRasterizer.field_c), param0 ^ 31336, 199, -(param0 * var3 / var2) + var1, 90);
         FullHealSpecial.field_r.a(-4 + (SoftwareRasterizer.field_c - 120), 31407, 438, 438 * var3 / var2 + 202 + var1, 0);
     }
 

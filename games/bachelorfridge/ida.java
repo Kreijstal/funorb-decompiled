@@ -8,7 +8,7 @@ abstract class ida extends AnimationNode {
     int field_q;
     int field_r;
     int field_k;
-    gj field_s;
+    BattleScreen field_s;
     int field_n;
     int field_m;
     CreatureRef field_p;
@@ -146,7 +146,7 @@ abstract class ida extends AnimationNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
@@ -160,9 +160,9 @@ abstract class ida extends AnimationNode {
         return to.a(param0, param2, -25974, 1, param3);
     }
 
-    final static pn a(int param0, vr param1, int param2) {
+    final static ArenaTheme a(int param0, vr param1, int param2) {
         RuntimeException var3 = null;
-        pn stackIn_3_0 = null;
+        ArenaTheme stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -254,7 +254,7 @@ abstract class ida extends AnimationNode {
         }
     }
 
-    ida(gj param0, CreatureRef param1, int param2, int param3) {
+    ida(BattleScreen param0, CreatureRef param1, int param2, int param3) {
         try {
           this.field_k = param2;
           this.field_s = param0;

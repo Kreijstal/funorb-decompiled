@@ -6,7 +6,7 @@ final class gaa extends lg {
     static ma[] field_i;
     static int field_k;
     boolean field_j;
-    private jfa field_h;
+    private FridgeCreature field_h;
 
     final static void a(BitmapFont param0, vr param1, int param2) {
         int var8 = 0;
@@ -30,7 +30,7 @@ final class gaa extends lg {
         var9 = BachelorFridge.field_y;
         try {
           var3_int = kt.field_k;
-          fo.field_a = new sna(0L, (sna) null);
+          fo.field_a = new UiComponent(0L, (UiComponent) null);
           if (param1 == null) {
             var11 = (Throwable) null;
             SpiltMilkEvent.a(1, "QC1", (Throwable) null);
@@ -40,7 +40,7 @@ final class gaa extends lg {
           param1.field_e = 0;
           bga.field_l = new cc(var3_int, param1, param1);
           cea.field_h = new wk(var3_int, param1, param1, new oe());
-          var4 = kn.a(128);
+          var4 = CurryArenaTheme.a(128);
           if (var4 == null) {
             var12 = (Throwable) null;
             SpiltMilkEvent.a(1, "QC2", (Throwable) null);
@@ -64,8 +64,8 @@ final class gaa extends lg {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRasterizer.setTarget(var17, var5, var6);
-          sc.field_m = ad.a(mj.field_k, var4, tga.field_p, jv.field_i, false);
-          fo.field_a.field_z = new IntrusiveDeque();
+          sc.field_m = CreatureActor.a(mj.field_k, var4, tga.field_p, jv.field_i, false);
+          fo.field_a.children = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class gaa extends lg {
         }
     }
 
-    final static void a(sna param0, sna param1, byte param2, sna param3, sna param4) {
+    final static void a(UiComponent param0, UiComponent param1, byte param2, UiComponent param3, UiComponent param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -124,24 +124,24 @@ final class gaa extends lg {
           HailAnimation.field_A.field_w = ((uc.field_l.field_w & 16711423) >> 1) + (-((SlowAllAnimation.field_w & 16711423) >> 1) + SlowAllAnimation.field_w);
           lna.field_C = HailAnimation.field_A;
           qk.field_q = DisableSpecial.field_r;
-          bi.field_h = new sna(0L, param4);
-          qc.field_b = new sna(0L, param3);
-          tga.field_m = new sna(0L, (sna) null);
-          aja.field_p = new sna(0L, param1);
-          HailAnimation.field_A = new sna(0L, param0);
+          bi.field_h = new UiComponent(0L, param4);
+          qc.field_b = new UiComponent(0L, param3);
+          tga.field_m = new UiComponent(0L, (UiComponent) null);
+          aja.field_p = new UiComponent(0L, param1);
+          HailAnimation.field_A = new UiComponent(0L, param0);
           HailAnimation.field_A.field_jb = dc.field_r;
           aja.field_p.a(-1, HailAnimation.field_A);
           if (param2 != 55) {
             field_k = -39;
           }
-          DisableSpecial.field_r = new sna(0L, qk.field_q);
+          DisableSpecial.field_r = new UiComponent(0L, qk.field_q);
           aja.field_p.a(param2 ^ -56, DisableSpecial.field_r);
-          ub.field_k = new sna(0L, uc.field_l, FlySpecial.field_s);
-          qq.field_k = new sna(0L, uc.field_l);
+          BoardChangeAnimation.field_k = new UiComponent(0L, uc.field_l, FlySpecial.field_s);
+          qq.field_k = new UiComponent(0L, uc.field_l);
           bi.field_h.a(param2 ^ -56, qc.field_b);
           bi.field_h.a(-1, tga.field_m);
           tga.field_m.a(param2 ^ -56, aja.field_p);
-          tga.field_m.a(param2 ^ -56, ub.field_k);
+          tga.field_m.a(param2 ^ -56, BoardChangeAnimation.field_k);
           tga.field_m.a(-1, qq.field_k);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -191,7 +191,7 @@ final class gaa extends lg {
 
     private final void a(byte param0) {
         int var2 = 35 % ((15 - param0) / 49);
-        this.field_a.field_z = null;
+        this.field_a.children = null;
         this.a(OneSpecial.field_s, 40, -4586, 72, 334, 260);
         this.a(BananarangSpecial.field_s, 40, -4586, 72, 334, 366);
     }
@@ -205,7 +205,7 @@ final class gaa extends lg {
         }
     }
 
-    gaa(int param0, int param1, int param2, int param3, boolean param4, jfa param5) {
+    gaa(int param0, int param1, int param2, int param3, boolean param4, FridgeCreature param5) {
         super(param0, param1, param2, param3, 0, (String) null);
         try {
           this.field_j = param4 ? true : false;

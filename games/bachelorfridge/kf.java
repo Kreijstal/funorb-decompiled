@@ -13,12 +13,12 @@ final class kf {
         kq.field_i = SoftwareRasterizer.field_c;
         FullscreenFocusCanvas.field_b = SoftwareRasterizer.field_i;
         IncomingAnimation.f(199);
-        lia.field_j.a(0, -42 + ng.field_e.field_p, 0, ng.field_e.field_sb, (byte) 59);
+        lia.field_j.a(0, -42 + MoveInfoPanel.field_e.field_p, 0, MoveInfoPanel.field_e.field_sb, (byte) 59);
         dea.field_m.a(rg.field_h, 31407, kt.field_m.field_sb, 0, 0);
         int var1 = 2 + rg.field_h;
         tv.field_o.a(kt.field_m.field_p - (IntrusiveDeque.field_c ? var1 : 0), 31407, kt.field_m.field_sb, 0, IntrusiveDeque.field_c ? var1 : 0);
         RageEvent.e(0);
-        mc.field_g.a(40, 31407, ng.field_e.field_sb, 0, -40 + ng.field_e.field_p);
+        mc.field_g.a(40, 31407, MoveInfoPanel.field_e.field_sb, 0, -40 + MoveInfoPanel.field_e.field_p);
         BoardTile.field_f.a(30, 31407, FullHealSpecial.field_r.field_sb, 0, 0);
         nea.field_yb.a(FullHealSpecial.field_r.field_p - 72, param0 + 31413, FullHealSpecial.field_r.field_sb, 0, 30);
         fl.field_m.a(30, 31407, 68, 5, 5);
@@ -28,7 +28,7 @@ final class kf {
           SplitSpecial.field_p.a(30, 31407, 48, 205, 5);
           var2 = IntrusiveDeque.field_c ? 250 : 200;
           vf.field_F.a(30, param0 + 31413, -var2 + 363, var2 + 5, 5);
-          aia.field_l.a(30, 31407, -370 + FullHealSpecial.field_r.field_sb - 5, 370, 5);
+          TextLinkRegion.field_l.a(30, 31407, -370 + FullHealSpecial.field_r.field_sb - 5, 370, 5);
           p.field_n.a((byte) -58, -10 + (nea.field_yb.field_p - 32), 5, 37, -5 + (nea.field_yb.field_sb - 5), rj.field_j, 2);
           var3 = (FullHealSpecial.field_r.field_sb + 2) / 2;
           ae.field_a.a(40, 31407, -2 + var3, 0, -40 + FullHealSpecial.field_r.field_p);
@@ -40,7 +40,7 @@ final class kf {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 72) {
           return;
         }

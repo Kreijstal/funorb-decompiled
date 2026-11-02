@@ -19,7 +19,7 @@ final class HailSpecial extends SpecialOrder {
         field_r = null;
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         CreatureEvent stackIn_18_0 = null;

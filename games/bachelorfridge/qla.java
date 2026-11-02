@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qla extends kj {
+final class qla extends TileEffect {
     static Sprite[] field_g;
     static int field_f;
     private int field_i;
     private int field_h;
 
-    final static sna a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, int param12) {
-        sna var13 = null;
+    final static UiComponent a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, int param12) {
+        UiComponent var13 = null;
         RuntimeException var13_ref = null;
-        sna stackIn_3_0 = null;
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new sna(0L, (sna) null);
+          var13 = new UiComponent(0L, (UiComponent) null);
           var13.field_eb = GasCloudAnimation.a((byte) -85, param12, param0);
           var13.field_A = GasCloudAnimation.a((byte) 119, param1, param5);
           var13.field_db = GasCloudAnimation.a((byte) -38, param3, param9);
@@ -60,7 +60,7 @@ final class qla extends kj {
         return false;
     }
 
-    qla(gj param0, int param1, int param2, int param3) {
+    qla(BattleScreen param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         try {
           this.field_h = param3;

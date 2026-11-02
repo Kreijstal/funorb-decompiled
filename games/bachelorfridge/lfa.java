@@ -4,7 +4,7 @@
 final class lfa extends k {
     static int field_q;
     private int field_m;
-    static sna field_l;
+    static UiComponent field_l;
     static Sprite field_u;
     static IndexedSprite field_s;
     private int field_p;
@@ -15,7 +15,7 @@ final class lfa extends k {
     private int field_r;
     static int field_o;
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_s = null;
         field_l = null;
         if (param0 != -128) {
@@ -61,7 +61,7 @@ final class lfa extends k {
         int var9 = 0;
         Object var10 = null;
         int var11_int = 0;
-        gj var11 = null;
+        BattleScreen var11 = null;
         int var13 = 0;
         Sprite var14 = null;
         CreatureProfile[] var15 = null;
@@ -79,33 +79,33 @@ final class lfa extends k {
             ri.field_a != 58) {
             var1 = null;
             if (param0 > -30) {
-              field_l = (sna) null;
+              field_l = (UiComponent) null;
             }
             if (vs.field_d) {
               var1 = dj.field_c;
             } else {
               if (gja.field_n) {
-                var1 = sna.field_fb;
+                var1 = UiComponent.field_fb;
               }
             }
             if (var1 == null) {
               return false;
             }
             if (ri.field_a == 73) {
-              ((gj) (var1)).field_h.a(-2, ig.field_m);
-              ((gj) (var1)).l(-67);
-              ((gj) (var1)).d((byte) 77);
+              ((BattleScreen) (var1)).field_h.a(-2, ig.field_m);
+              ((BattleScreen) (var1)).l(-67);
+              ((BattleScreen) (var1)).d((byte) 77);
               return true;
             }
             if (ri.field_a == 74) {
-              ((gj) (var1)).field_h.a(dw.field_f, true, ig.field_m);
-              if (!((gj) (var1)).field_h.field_U.e(12917)) {
-                ((gj) (var1)).field_g = ((BattleUpdate) (((gj) (var1)).field_h.field_U.a(6))).field_j;
+              ((BattleScreen) (var1)).field_h.a(dw.field_f, true, ig.field_m);
+              if (!((BattleScreen) (var1)).field_h.field_U.e(12917)) {
+                ((BattleScreen) (var1)).field_g = ((BattleUpdate) (((BattleScreen) (var1)).field_h.field_U.a(6))).field_j;
               }
-              ((gj) (var1)).field_m = false;
-              ((gj) (var1)).b((byte) -117);
-              ((gj) (var1)).field_cb = false;
-              ((gj) (var1)).field_e.a((byte) 75);
+              ((BattleScreen) (var1)).field_m = false;
+              ((BattleScreen) (var1)).b((byte) -117);
+              ((BattleScreen) (var1)).field_cb = false;
+              ((BattleScreen) (var1)).field_e.a((byte) 75);
               return true;
             }
             if (ri.field_a == 60) {
@@ -116,31 +116,31 @@ final class lfa extends k {
                 var4_int = ig.field_m.b(true);
                 var5 = ig.field_m.readUnsignedByte(16711935);
                 var6 = ig.field_m.readUnsignedShort((byte) 127);
-                if (0 == ((gj) (var1)).field_h.field_A) {
+                if (0 == ((BattleScreen) (var1)).field_h.field_A) {
                   stackIn_51_0 = (0 != var2) ? 1 : 0;
                 } else {
                   stackIn_51_0 = 0;
                 }
                 var7 = stackIn_51_0;
-                ((gj) (var1)).field_h.a(var2, -16292, var3_int != 0);
-                ((gj) (var1)).field_h.field_Q = var5;
-                ((gj) (var1)).field_h.field_M = var4_int;
-                if (((gj) (var1)).field_h.field_o == 2) {
-                  ((gj) (var1)).c(640, var4_int, var5);
+                ((BattleScreen) (var1)).field_h.a(var2, -16292, var3_int != 0);
+                ((BattleScreen) (var1)).field_h.field_Q = var5;
+                ((BattleScreen) (var1)).field_h.field_M = var4_int;
+                if (((BattleScreen) (var1)).field_h.field_o == 2) {
+                  ((BattleScreen) (var1)).c(640, var4_int, var5);
                 }
                 if (var7 != 0) {
-                  ((gj) (var1)).l(-68);
+                  ((BattleScreen) (var1)).l(-68);
                 }
-                ((gj) (var1)).field_M = 0;
-                ((gj) (var1)).field_p = -500 + var6;
-                ((gj) (var1)).field_k = var6;
-                ((gj) (var1)).field_m = true;
-                ((gj) (var1)).field_Y = new CreatureOrder[7];
-                ((gj) (var1)).field_u = var6;
-                if (!((gj) (var1)).field_h.field_N) {
-                  ((gj) (var1)).f((byte) 50);
+                ((BattleScreen) (var1)).field_M = 0;
+                ((BattleScreen) (var1)).field_p = -500 + var6;
+                ((BattleScreen) (var1)).field_k = var6;
+                ((BattleScreen) (var1)).field_m = true;
+                ((BattleScreen) (var1)).field_Y = new CreatureOrder[7];
+                ((BattleScreen) (var1)).field_u = var6;
+                if (!((BattleScreen) (var1)).field_h.field_N) {
+                  ((BattleScreen) (var1)).f((byte) 50);
                 }
-                ((gj) (var1)).m(10);
+                ((BattleScreen) (var1)).m(10);
               }
               return true;
             }
@@ -149,9 +149,9 @@ final class lfa extends k {
             }
             if (75 == ri.field_a) {
               var2Lifetime2 = ig.field_m.readUnsignedShort((byte) 121);
-              ((gj) (var1)).field_u = var2Lifetime2;
-              ((gj) (var1)).field_p = var2Lifetime2 - 500;
-              ((gj) (var1)).c(false);
+              ((BattleScreen) (var1)).field_u = var2Lifetime2;
+              ((BattleScreen) (var1)).field_p = var2Lifetime2 - 500;
+              ((BattleScreen) (var1)).c(false);
               return true;
             }
             if (ri.field_a == 84) {
@@ -159,7 +159,7 @@ final class lfa extends k {
             }
             if (ri.field_a == 62) {
               var2Lifetime3 = ig.field_m.b(true);
-              var3 = ((gj) (var1)).field_h;
+              var3 = ((BattleScreen) (var1)).field_h;
               var4 = new PlayerMatchStats[var3.playerCount];
               for (var5Lifetime2 = 0; var3.playerCount > var5Lifetime2; var5Lifetime2++) {
                 var4[var5Lifetime2] = ika.a((byte) 85, ig.field_m);
@@ -168,29 +168,29 @@ final class lfa extends k {
               var3.field_H = var4;
               if (0 == var3.field_A) {
                 var14 = (Sprite) null;
-                eq.a((Sprite) null, (gj) (var1), (byte) -111);
+                eq.a((Sprite) null, (BattleScreen) (var1), (byte) -111);
                 sia.field_h = false;
                 lg.a(true, 3, false);
               }
               return true;
             }
             if (ri.field_a == 63) {
-              ((gj) (var1)).field_h.field_h = ig.field_m.readUnsignedByte(16711935);
+              ((BattleScreen) (var1)).field_h.field_h = ig.field_m.readUnsignedByte(16711935);
               if (vs.field_d) {
                 qi.a((byte) 120);
               }
               return true;
             }
             if (ri.field_a == 64) {
-              ((gj) (var1)).field_h.field_v = ig.field_m.readUnsignedByte(16711935);
+              ((BattleScreen) (var1)).field_h.field_v = ig.field_m.readUnsignedByte(16711935);
               return true;
             }
             if (ri.field_a == 65) {
-              ((gj) (var1)).field_h.field_s = ig.field_m.readUnsignedByte(16711935);
+              ((BattleScreen) (var1)).field_h.field_s = ig.field_m.readUnsignedByte(16711935);
               return true;
             }
             if (ri.field_a == 66) {
-              ((gj) (var1)).field_h.field_f = ig.field_m.readUnsignedByte(16711935);
+              ((BattleScreen) (var1)).field_h.field_f = ig.field_m.readUnsignedByte(16711935);
               if (vs.field_d) {
                 AttackOrder.c((byte) -109);
               }
@@ -199,7 +199,7 @@ final class lfa extends k {
             if (ri.field_a != 67) {
               return false;
             }
-            ((gj) (var1)).field_V = ig.field_m.readUnsignedByte(16711935);
+            ((BattleScreen) (var1)).field_V = ig.field_m.readUnsignedByte(16711935);
             if (vs.field_d) {
               AttackOrder.c((byte) -122);
             }
@@ -231,7 +231,7 @@ final class lfa extends k {
               var15[var12] = gka.a(ig.field_m, 255);
             }
           }
-          var11 = new gj(var8, var7Lifetime1, (CreatureProfile[]) (var10), true);
+          var11 = new BattleScreen(var8, var7Lifetime1, (CreatureProfile[]) (var10), true);
           var11.field_g = ig.field_m.readInt(51);
           if (var8.field_A != 0) {
             ala.a(26219, iq.field_m);
@@ -249,7 +249,7 @@ final class lfa extends k {
             qi.a((byte) 122);
             dna.f((byte) -12);
           } else {
-            sna.field_fb = var11;
+            UiComponent.field_fb = var11;
             gja.field_n = true;
           }
           pha.field_a = false;

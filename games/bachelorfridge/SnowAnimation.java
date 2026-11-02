@@ -9,7 +9,7 @@ final class SnowAnimation extends EventAnimation {
     static int field_x;
     private SnowEvent field_v;
 
-    SnowAnimation(gj param0, SnowEvent param1) {
+    SnowAnimation(BattleScreen param0, SnowEvent param1) {
         super(param0, param1);
         try {
           this.field_v = param1;
@@ -180,7 +180,7 @@ final class SnowAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
         if (fieldTemp$0 >= 0) {
@@ -219,8 +219,8 @@ final class SnowAnimation extends EventAnimation {
         var20 = this.field_v.d(1);
         var4 = this.field_v.field_r;
         var5 = this.field_v.field_s;
-        this.a(param0 ^ -27844, new taa(this.screen, var4, var5));
-        this.field_v.a(this.screen.field_h, false);
+        this.addChild(param0 ^ -27844, new ActorAnimation(this.screen, var4, var5));
+        this.field_v.apply(this.screen.field_h, false);
         var6 = 17;
         var7 = 17;
         var8 = -1 + var6 >> 1;
@@ -235,7 +235,7 @@ final class SnowAnimation extends EventAnimation {
                 0 <= var13 &&
                 var17.height > var13) {
                 var14 = new aca(this.screen, var12, var13, true);
-                ((kj) ((Object) var14)).a(0);
+                ((TileEffect) ((Object) var14)).a(0);
               }
             }
           }
@@ -243,7 +243,7 @@ final class SnowAnimation extends EventAnimation {
         if (param0 == -85) {
           return;
         }
-        this.c((byte) 19);
+        this.isFinished((byte) 19);
     }
 
     private final void e(int param0) {
@@ -257,14 +257,14 @@ final class SnowAnimation extends EventAnimation {
           var3 = (EventEffect) (this.field_v.effects.b((byte) 90));
           al.a(param0 - 69, this.field_v.moveId);
           while (var3 != null) {
-            var3.a(var2, this.screen.field_h, 12);
+            var3.apply(var2, this.screen.field_h, 12);
             var3 = (EventEffect) (this.field_v.effects.c(0));
           }
           return;
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_y = null;
         if (param0 > -110) {
           return;

@@ -65,8 +65,8 @@ final class ag extends k {
 
     final static long e(int param0) {
         if (param0 != -9109) {
-          jfa var2 = (jfa) null;
-          ag.a((jfa) null, (byte) 80);
+          FridgeCreature var2 = (FridgeCreature) null;
+          ag.a((FridgeCreature) null, (byte) 80);
         }
         return -pk.field_c + f.b((byte) 73);
     }
@@ -118,7 +118,7 @@ final class ag extends k {
         this.field_m = 4;
     }
 
-    final static void a(jfa param0, byte param1) {
+    final static void a(FridgeCreature param0, byte param1) {
         int var2_int = 0;
         if (AttackUpAllAnimation.e(param1 ^ 29881)) {
           return;
@@ -137,14 +137,14 @@ final class ag extends k {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -112 / ((39 - param0) / 53);
         field_k = null;
     }
 
     final static void a(int param0, String param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         try {
-          ur.field_e[pe.field_m] = (oha) ((Object) new t(param17, param1, param4, param12, param14, param11, param0, param7, param10, param3, param2, param16, param18, param5, param13, param15, param6, param8, param9));
+          WhirlpoolDigest.field_e[pe.field_m] = (MoveDefinition) ((Object) new BasicMoveDefinition(param17, param1, param4, param12, param14, param11, param0, param7, param10, param3, param2, param16, param18, param5, param13, param15, param6, param8, param9));
           pe.field_m = pe.field_m + 1;
           if (param19 != -4313) {
             field_k = (String) null;

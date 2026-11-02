@@ -96,7 +96,7 @@ abstract class MouseWheelInput {
 
     abstract void a(java.awt.Component param0, byte param1);
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != -33) {
           field_a = (Sprite) null;

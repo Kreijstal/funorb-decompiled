@@ -4,7 +4,7 @@
 final class StickySpecial extends SpecialOrder {
     static boolean field_p;
 
-    final static sna c(boolean param0) {
+    final static UiComponent c(boolean param0) {
         if (!param0) {
           StickySpecial.c(false);
         }
@@ -77,7 +77,7 @@ final class StickySpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         StickyEvent var4 = null;

@@ -90,7 +90,7 @@ final class li extends lw {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -46) {
           field_l = (cf) null;
           field_l = null;
@@ -100,7 +100,7 @@ final class li extends lw {
     }
 
     li() {
-        super(true, new String[]{bga.field_h, ur.field_m}, AttackUpAllAnimation.field_w);
+        super(true, new String[]{bga.field_h, WhirlpoolDigest.field_m}, AttackUpAllAnimation.field_w);
         this.field_c = new int[][]{new int[]{250, 195}, new int[]{320, 400}};
     }
 

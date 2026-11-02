@@ -3,13 +3,13 @@
  */
 final class cf {
     static String field_a;
-    static sna field_b;
+    static UiComponent field_b;
 
     public final String toString() {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 0) {
           field_a = (String) null;
@@ -26,7 +26,7 @@ final class cf {
           if (param3 >= 13) {
             return;
           }
-          cf.a(-81);
+          cf.releaseStatics(-81);
           return;
         }
         if (-3 == param1) {
@@ -34,7 +34,7 @@ final class cf {
           if (param3 >= 13) {
             return;
           }
-          cf.a(-81);
+          cf.releaseStatics(-81);
           return;
         }
         if (-2 == param1) {
@@ -42,7 +42,7 @@ final class cf {
           if (param3 >= 13) {
             return;
           }
-          cf.a(-81);
+          cf.releaseStatics(-81);
           return;
         }
         if (param2) {
@@ -52,14 +52,14 @@ final class cf {
           if (param3 >= 13) {
             return;
           }
-          cf.a(-81);
+          cf.releaseStatics(-81);
           return;
         }
         LevitateSpecial.field_p[param1].l(9);
         if (param3 >= 13) {
           return;
         }
-        cf.a(-81);
+        cf.releaseStatics(-81);
     }
 
     static {

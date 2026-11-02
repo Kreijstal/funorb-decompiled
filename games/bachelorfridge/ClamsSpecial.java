@@ -8,7 +8,7 @@ final class ClamsSpecial extends SpecialOrder {
     static vr field_p;
     static String field_q;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         if (param0 != -14431) {
           return;
@@ -46,7 +46,7 @@ final class ClamsSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var11_int = 0;
         ClamsEvent stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
@@ -77,7 +77,7 @@ final class ClamsSpecial extends SpecialOrder {
           var4 = new ClamsEvent(this.moveId, new CreatureRef(var17));
           var4.field_t = this.field_n;
           if (param1 != 3) {
-            ClamsSpecial.b(-73);
+            ClamsSpecial.releaseStatics(-73);
           }
           var4.field_q = this.field_k;
           var23 = var4.c(false);

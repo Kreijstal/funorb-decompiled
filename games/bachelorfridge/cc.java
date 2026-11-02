@@ -7,7 +7,7 @@ final class cc {
     private vr field_f;
     private pha field_g;
     static String[] field_d;
-    static sna field_b;
+    static UiComponent field_b;
     static PlatformTaskDispatcher field_e;
 
     final jc a(byte param0, int param1) {

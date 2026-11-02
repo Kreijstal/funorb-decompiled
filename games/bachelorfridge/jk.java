@@ -9,12 +9,12 @@ final class jk extends AnimationNode {
     static String field_p;
     static BitmapFont field_o;
     private mh field_n;
-    private ad field_q;
+    private CreatureActor field_q;
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         un.field_i = param0;
         mha.field_g = param2;
-        jo.field_t = param1;
+        BoardView.field_t = param1;
         if (param3 != -64) {
           field_j = (String) null;
           ah.field_l = param4;
@@ -64,7 +64,7 @@ final class jk extends AnimationNode {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_k = null;
         field_j = null;
@@ -75,7 +75,7 @@ final class jk extends AnimationNode {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -121,7 +121,7 @@ final class jk extends AnimationNode {
         return true;
     }
 
-    jk(gj param0, ad param1, mh param2) {
+    jk(BattleScreen param0, CreatureActor param1, mh param2) {
         try {
           this.field_m = 25;
           this.field_q = param1;

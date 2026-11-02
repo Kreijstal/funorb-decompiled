@@ -24,7 +24,7 @@ final class bga extends IntrusiveNode {
         kka.field_l.e(MartyrEvent.field_q, 33);
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_l = null;
         if (!param0) {
           field_j = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sh extends vd implements mca {
+abstract class sh extends WidgetContainer implements mca {
     private gl field_F;
     static String field_D;
     static String[] field_E;
@@ -98,7 +98,7 @@ abstract class sh extends vd implements mca {
 
     abstract boolean k(int param0);
 
-    sh(int param0, int param1, int param2, int param3, qda param4) {
+    sh(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
         super(param0, param1, param2, param3, param4);
     }
 
@@ -111,7 +111,7 @@ abstract class sh extends vd implements mca {
         return (qu) ((Object) this.field_F);
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_G = null;
         field_E = null;
         field_H = null;

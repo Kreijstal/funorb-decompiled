@@ -7,7 +7,7 @@ final class tw {
     static String field_b;
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -17,7 +17,7 @@ final class tw {
         }
     }
 
-    final static void a(int param0, jfa param1, int param2) {
+    final static void a(int param0, FridgeCreature param1, int param2) {
         int var3_int = 0;
         if (AttackUpAllAnimation.e(-29919)) {
           return;

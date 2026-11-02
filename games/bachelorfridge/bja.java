@@ -7,7 +7,7 @@ final class bja extends BoardChange {
     static byte[] field_o;
     static String field_p;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_n = null;
         field_m = null;
@@ -59,9 +59,9 @@ final class bja extends BoardChange {
         }
     }
 
-    final void a(ub param0, int param1) {
+    final void a(BoardChangeAnimation param0, int param1) {
         try {
-          param0.a(27799, new mi(param0.field_o, this));
+          param0.addChild(27799, new mi(param0.field_o, this));
           if (param1 >= -2) {
             Sprite var4 = (Sprite) null;
             bja.a((Sprite) null, 59, 82);

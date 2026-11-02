@@ -28,7 +28,7 @@ final class DreamsSpecial extends SpecialOrder {
           iea.a(param15, param2, (byte) -115);
           ShieldAnimation.a(param0, param3, param18, param4, param13, (byte) 85);
           ua.a((byte) -50, param5, param6, param12);
-          ng.a(param20, param16, param14, 116);
+          MoveInfoPanel.a(param20, param16, param14, 116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,7 +68,7 @@ final class DreamsSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         DreamsEvent var4 = null;

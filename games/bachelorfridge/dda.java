@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dda extends kj {
+final class dda extends TileEffect {
     static int field_j;
     boolean field_h;
     static boolean field_f;
@@ -25,7 +25,7 @@ final class dda extends kj {
         }
     }
 
-    dda(gj param0, int param1, int param2) {
+    dda(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_i = 150;
@@ -77,7 +77,7 @@ final class dda extends kj {
         return false;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_k = null;
         field_l = null;
         if (param0) {

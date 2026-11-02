@@ -19,8 +19,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             ce.field_x = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              ru.field_d.length > var2_int) {
-              var2_int = ru.field_d[var2_int];
+              NanoGameClock.field_d.length > var2_int) {
+              var2_int = NanoGameClock.field_d[var2_int];
               if ((var2_int & 128) != 0) {
                 var2_int = -1;
               }
@@ -37,7 +37,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (0 <= var2_int) {
               var3 = ClamsAnimation.field_x + 1 & 127;
-              if (gha.field_q != var3) {
+              if (DefaultWidgetRenderer.field_q != var3) {
                 aq.field_a[ClamsAnimation.field_x] = var2_int;
                 dla.field_i[ClamsAnimation.field_x] = (char)0;
                 ClamsAnimation.field_x = var3;
@@ -78,8 +78,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             ce.field_x = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
-              var2_int < ru.field_d.length) {
-              var2_int = ru.field_d[var2_int] & -129;
+              var2_int < NanoGameClock.field_d.length) {
+              var2_int = NanoGameClock.field_d[var2_int] & -129;
             } else {
               var2_int = -1;
             }
@@ -151,7 +151,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var1[var2] = (Sprite) ((Object) new ArgbSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[var2], AirstrikeAnimation.field_D[var2], lq.field_A[var2], InsanoSauceSpecial.field_s[var2], var16));
           }
         }
-        al.b(-18073);
+        al.releaseStatics(-18073);
         return var1;
     }
 
@@ -200,7 +200,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 0) {
           field_b = (int[]) null;
@@ -226,7 +226,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (0 != var2_int && 65535 != var2_int &&
               cga.a(255, (char) var2_int)) {
               var3 = ClamsAnimation.field_x + 1 & 127;
-              if (var3 != gha.field_q) {
+              if (var3 != DefaultWidgetRenderer.field_q) {
                 aq.field_a[ClamsAnimation.field_x] = -1;
                 dla.field_i[ClamsAnimation.field_x] = (char)var2_int;
                 ClamsAnimation.field_x = var3;

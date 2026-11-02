@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class uaa extends kj {
+final class uaa extends TileEffect {
     private BattleCreature field_j;
     static iga field_f;
-    static sna field_i;
+    static UiComponent field_i;
     private IntrusiveDeque field_h;
     private DamageTileEffect field_g;
 
@@ -40,7 +40,7 @@ final class uaa extends kj {
         }
     }
 
-    uaa(gj param0, DamageTileEffect param1, BattleCreature param2) {
+    uaa(BattleScreen param0, DamageTileEffect param1, BattleCreature param2) {
         super(param0, param1.field_i, param1.field_l);
         int var4_int = 0;
         RuntimeException stackIn_7_0 = null;
@@ -120,7 +120,7 @@ final class uaa extends kj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         if (param0 != -126) {
           return;
@@ -134,7 +134,7 @@ final class uaa extends kj {
         int var3 = BachelorFridge.field_y;
         bma var2_refLifetime1;
         if (null != this.field_g) {
-          this.field_g.a(this.field_j, this.field_e.field_h, 12);
+          this.field_g.apply(this.field_j, this.field_e.field_h, 12);
           if (param0 <= 21) {
             return true;
           }
@@ -163,8 +163,8 @@ final class uaa extends kj {
     }
 
     final static void a(boolean param0) {
-        sna var3 = mka.a(5222712, 9883516, 5222712, (byte) -121, jha.field_g, 9883516, 16777215, 9883516);
-        sna var4 = var3;
+        UiComponent var3 = mka.a(5222712, 9883516, 5222712, (byte) -121, jha.field_g, 9883516, 16777215, 9883516);
+        UiComponent var4 = var3;
         var4.field_Y = 1;
         var4.field_N = 1;
         var4.field_eb = bga.field_j;
@@ -172,19 +172,19 @@ final class uaa extends kj {
           uaa.d((byte) -72);
         }
         vu.field_p.field_Y = 1;
-        IntrusiveNode.field_a = new sna("checkout", vu.field_p, 444, 324, 167, 38, "");
-        lfa.field_l = new sna("back", vu.field_p, 440, 428, 177, 28, "");
-        EffectBatch.field_l = new sna("up", vu.field_p, 440, 137, 140, 16, "");
-        hk.field_c = new sna("down", vu.field_p, 440, 328, 140, 16, "");
-        DiskCacheRequest.field_s = new sna[8];
-        mg.field_l = new sna("bakery", vu.field_p, 14, 90, 73, 34, "Bakery");
-        qba.field_l = new sna("meat", vu.field_p, 91, 90, 73, 34, "Meat");
-        dt.field_b = new sna("fish", vu.field_p, 168, 90, 73, 34, "Fish");
-        ClamsEvent.field_u = new sna("dairy", vu.field_p, 245, 90, 73, 34, "Dairy");
-        sea.field_k = new sna("fruitnveg", vu.field_p, 322, 90, 73, 34, "Fruit & Veg");
-        mk.field_h = new sna("drinks", vu.field_p, 399, 90, 73, 34, "Drinks");
-        StampedeSpecial.field_q = new sna("readymeal", vu.field_p, 476, 90, 73, 34, "Ready Meal");
-        rfa.field_b = new sna("misc", vu.field_p, 553, 90, 73, 34, "Misc.");
+        IntrusiveNode.field_a = new UiComponent("checkout", vu.field_p, 444, 324, 167, 38, "");
+        lfa.field_l = new UiComponent("back", vu.field_p, 440, 428, 177, 28, "");
+        EffectBatch.field_l = new UiComponent("up", vu.field_p, 440, 137, 140, 16, "");
+        hk.field_c = new UiComponent("down", vu.field_p, 440, 328, 140, 16, "");
+        DiskCacheRequest.field_s = new UiComponent[8];
+        mg.field_l = new UiComponent("bakery", vu.field_p, 14, 90, 73, 34, "Bakery");
+        qba.field_l = new UiComponent("meat", vu.field_p, 91, 90, 73, 34, "Meat");
+        dt.field_b = new UiComponent("fish", vu.field_p, 168, 90, 73, 34, "Fish");
+        ClamsEvent.field_u = new UiComponent("dairy", vu.field_p, 245, 90, 73, 34, "Dairy");
+        sea.field_k = new UiComponent("fruitnveg", vu.field_p, 322, 90, 73, 34, "Fruit & Veg");
+        mk.field_h = new UiComponent("drinks", vu.field_p, 399, 90, 73, 34, "Drinks");
+        StampedeSpecial.field_q = new UiComponent("readymeal", vu.field_p, 476, 90, 73, 34, "Ready Meal");
+        rfa.field_b = new UiComponent("misc", vu.field_p, 553, 90, 73, 34, "Misc.");
         DiskCacheRequest.field_s[3] = ClamsEvent.field_u;
         DiskCacheRequest.field_s[0] = mg.field_l;
         DiskCacheRequest.field_s[4] = sea.field_k;

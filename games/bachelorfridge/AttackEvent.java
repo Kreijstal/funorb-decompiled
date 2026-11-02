@@ -38,7 +38,7 @@ class AttackEvent extends CreatureEvent {
           param1.writeByte(this.field_o.g(0), 0);
           var4 = (EventEffect) (this.field_o.b((byte) 90));
           while (var4 != null) {
-            var4.a(param1, (byte) -80);
+            var4.write(param1, (byte) -80);
             var4 = (EventEffect) (this.field_o.c(0));
           }
           return;
@@ -100,7 +100,7 @@ class AttackEvent extends CreatureEvent {
         }
     }
 
-    AnimationNode a(int param0, gj param1) {
+    AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         vla stackIn_5_0 = null;
@@ -114,7 +114,7 @@ class AttackEvent extends CreatureEvent {
             stackIn_2_0 = (AnimationNode) null;
             return stackIn_2_0;
           }
-          if (4 != ((t) (al.a(-121, this.moveId))).field_p) {
+          if (4 != ((BasicMoveDefinition) (al.a(-121, this.moveId))).field_p) {
             stackIn_7_0 = new mv(param1, this);
             return (AnimationNode) ((Object) stackIn_7_0);
           }
@@ -189,7 +189,7 @@ class AttackEvent extends CreatureEvent {
         }
     }
 
-    void a(BattleState param0, boolean param1) {
+    void apply(BattleState param0, boolean param1) {
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         String stackIn_43_2 = null;
@@ -227,7 +227,7 @@ class AttackEvent extends CreatureEvent {
                   this.moveId != 68) &&
                   (this.moveId != 69 &&
                   this.moveId != 70)) {
-                  var6 = ((t) (al.a(-67, this.moveId))).field_s;
+                  var6 = ((BasicMoveDefinition) (al.a(-67, this.moveId))).field_s;
                   if (this.field_p == 31) {
                     var6 = 0;
                   }
@@ -241,7 +241,7 @@ class AttackEvent extends CreatureEvent {
                 return;
               }
               if (!(var4 instanceof DamageEffect)) {
-                var4.a(var10, param0, 12);
+                var4.apply(var10, param0, 12);
                 var4 = (EventEffect) (this.field_o.c(0));
                 continue;
               }

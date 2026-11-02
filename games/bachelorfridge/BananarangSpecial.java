@@ -8,7 +8,7 @@ final class BananarangSpecial extends SpecialOrder {
     static String field_t;
     static String field_q;
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BananarangEvent stackIn_42_0 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -226,7 +226,7 @@ final class BananarangSpecial extends SpecialOrder {
         tfa.a(param0, param0 - 3, false);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_q = null;
         field_s = null;

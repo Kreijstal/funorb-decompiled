@@ -6,7 +6,7 @@ final class InvincibleEvent extends SpecialEvent {
     static boolean[] field_q;
     static Sprite field_r;
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         InvincibleAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -70,7 +70,7 @@ final class InvincibleEvent extends SpecialEvent {
         super(param0, param1);
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         int var1 = 63 % ((param0 - 30) / 59);
         field_q = null;

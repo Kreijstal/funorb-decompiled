@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ema extends sna {
+final class ema extends UiComponent {
     int field_xb;
     String field_Hb;
     int field_Mb;
-    sna field_Fb;
+    UiComponent field_Fb;
     int field_Kb;
     int field_Jb;
     boolean field_Ob;
     String field_Nb;
-    sna field_Bb;
+    UiComponent field_Bb;
     int field_yb;
-    sna field_Db;
+    UiComponent field_Db;
     boolean field_wb;
     static String field_Lb;
-    sna field_Ib;
-    sna field_vb;
+    UiComponent field_Ib;
+    UiComponent field_vb;
     int field_Gb;
     long field_Eb;
     boolean field_zb;
@@ -47,7 +47,7 @@ final class ema extends sna {
             return stackIn_9_0;
           }
           if (param0 != 0) {
-            this.field_Bb = (sna) null;
+            this.field_Bb = (UiComponent) null;
           }
           stackIn_15_0 = (param1.field_wb) ? 0 : 1;
           if (stackIn_15_0 == (this.field_wb ? 1 : 0)) {
@@ -78,9 +78,9 @@ final class ema extends sna {
         return !this.isSecondaryLinked(0) ? true : false;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          ema.f(56);
+          ema.releaseStatics(56);
           field_Ab = null;
           field_Lb = null;
           return;
@@ -90,7 +90,7 @@ final class ema extends sna {
     }
 
     ema(String param0, String param1, long param2) {
-        super(0L, (sna) null);
+        super(0L, (UiComponent) null);
         CharSequence var6 = null;
         try {
           this.field_Eb = param2;

@@ -202,9 +202,9 @@ final class DisableEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
-        gj var4 = null;
+        BattleScreen var4 = null;
         DisableAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -212,8 +212,8 @@ final class DisableEvent extends SpecialEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            var4 = (gj) null;
-            this.a(-68, (gj) null);
+            var4 = (BattleScreen) null;
+            this.createAnimation(-68, (BattleScreen) null);
           }
           stackIn_3_0 = new DisableAnimation(param1, this);
           return (AnimationNode) ((Object) stackIn_3_0);

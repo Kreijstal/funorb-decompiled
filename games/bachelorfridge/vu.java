@@ -9,7 +9,7 @@ final class vu extends pv {
     static String field_o;
     static IndexedSprite[] field_k;
     private int field_j;
-    static sna field_p;
+    static UiComponent field_p;
     static String field_l;
 
     private final int c(boolean param0) {
@@ -96,7 +96,7 @@ final class vu extends pv {
         if (param0 > 116) {
           return false;
         }
-        vu.c((byte) 125);
+        vu.releaseStatics((byte) 125);
         return false;
     }
 
@@ -111,7 +111,7 @@ final class vu extends pv {
         this.field_f.field_k = this.field_f.b(true);
     }
 
-    vu(jfa param0, boolean param1) {
+    vu(FridgeCreature param0, boolean param1) {
         try {
           this.field_f = param0;
           this.field_n = param1 ? true : false;
@@ -121,7 +121,7 @@ final class vu extends pv {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_p = null;
         field_k = null;

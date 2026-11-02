@@ -4,7 +4,7 @@
 final class jr {
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 33 % ((-32 - param0) / 54);
     }

@@ -6,9 +6,9 @@ final class ClientException extends RuntimeException {
     static boolean field_a;
     Throwable cause;
     String context;
-    static sna field_c;
+    static UiComponent field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         int var1 = 10 / ((param0 - 26) / 60);

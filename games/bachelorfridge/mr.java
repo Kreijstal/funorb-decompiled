@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mr extends kj {
+final class mr extends TileEffect {
     static Sprite field_f;
     private ns field_i;
     static String field_h;
     private int field_g;
 
-    mr(gj param0, ns param1, int param2, int param3) {
+    mr(BattleScreen param0, ns param1, int param2, int param3) {
         super(param0, param2, param3);
         try {
           this.field_i = param1;
@@ -17,7 +17,7 @@ final class mr extends kj {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != 0) {
           return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uea extends kj {
+final class uea extends TileEffect {
     static Sprite field_j;
     static int field_i;
     static String field_g;
@@ -14,7 +14,7 @@ final class uea extends kj {
         this.field_f.a(param2, param0, var4);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_g = null;
         int var1 = -108 % ((param0 - 15) / 62);
@@ -36,7 +36,7 @@ final class uea extends kj {
         }
     }
 
-    uea(gj param0, int param1, int param2, int param3) {
+    uea(BattleScreen param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         try {
           this.field_h = 50;

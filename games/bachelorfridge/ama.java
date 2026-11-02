@@ -16,7 +16,7 @@ final class ama extends k {
         int[] var4 = this.field_j.a(param0, -1);
         int[] var3 = var4;
         if (param1 != 0) {
-          ama.e((byte) 27);
+          ama.releaseStatics((byte) 27);
         }
         if (this.field_j.field_m) {
           this.a((byte) 126, this.field_j.a(false));
@@ -123,7 +123,7 @@ final class ama extends k {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_l = null;
         if (param0 > -107) {

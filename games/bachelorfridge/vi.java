@@ -54,7 +54,7 @@ final class vi {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         int var1 = 64 % ((param0 + 31) / 62);
         field_d = null;

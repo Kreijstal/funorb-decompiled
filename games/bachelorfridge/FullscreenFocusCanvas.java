@@ -4,10 +4,10 @@
 final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_c;
     volatile boolean field_f;
-    static sna field_e;
-    static sna field_a;
+    static UiComponent field_e;
+    static UiComponent field_a;
     java.awt.Frame field_g;
-    static sna field_d;
+    static UiComponent field_d;
     static int field_b;
 
     public final void paint(java.awt.Graphics param0) {

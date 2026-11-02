@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wv extends pu {
-    static sna field_l;
+    static UiComponent field_l;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -55) {
-          wv.b(-52);
+          wv.releaseStatics(-52);
         }
         field_l = null;
     }
@@ -35,22 +35,22 @@ final class wv extends pu {
         int[] var8Lifetime1;
         var12 = BachelorFridge.field_y;
         try {
-          lka.field_E = qs.a(false, new PacketBuffer(param1));
+          TextInputWidget.field_E = qs.a(false, new PacketBuffer(param1));
           if (param0 >= -16) {
-            field_l = (sna) null;
+            field_l = (UiComponent) null;
           }
-          gfa.field_a = new CreatureType[-1 + lka.field_E.length];
-          for (var2_int = 1; var2_int < lka.field_E.length; var2_int++) {
-            var3 = Integer.parseInt(lka.field_E[var2_int][0]);
-            var4 = lka.field_E[var2_int][3];
-            var5 = lka.field_E[var2_int][4];
+          gfa.field_a = new CreatureType[-1 + TextInputWidget.field_E.length];
+          for (var2_int = 1; var2_int < TextInputWidget.field_E.length; var2_int++) {
+            var3 = Integer.parseInt(TextInputWidget.field_E[var2_int][0]);
+            var4 = TextInputWidget.field_E[var2_int][3];
+            var5 = TextInputWidget.field_E[var2_int][4];
             var6 = m.a(var2_int, (byte) 98, 1);
             var7 = kka.a(var2_int, -55, 2);
             var8 = new int[13];
             var13 = w.field_h[var2_int - 1];
             var15 = var13;
             var8Lifetime1 = var15;
-            var9 = lka.field_E[var2_int][15];
+            var9 = TextInputWidget.field_E[var2_int][15];
             if (7 != var6) {
               if (var6 == 6) {
                 var8Lifetime1[1] = m.a(var2_int, (byte) 105, 5);

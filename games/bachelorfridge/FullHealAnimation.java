@@ -19,7 +19,7 @@ final class FullHealAnimation extends EventAnimation {
         return true;
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_A = null;
         field_w = null;
         if (param0 != 21) {
@@ -29,7 +29,7 @@ final class FullHealAnimation extends EventAnimation {
         field_C = null;
     }
 
-    FullHealAnimation(gj param0, FullHealEvent param1) {
+    FullHealAnimation(BattleScreen param0, FullHealEvent param1) {
         super(param0, param1);
         try {
           this.field_z = param1;
@@ -40,7 +40,7 @@ final class FullHealAnimation extends EventAnimation {
 
     private final void e(byte param0) {
         DamageEffect var3_ref = null;
-        ad var7 = null;
+        CreatureActor var7 = null;
         Object var3 = null;
         int var5 = BachelorFridge.field_y;
         BattleCreature var6 = this.field_z.creature.a(96, this.screen.field_h);
@@ -51,10 +51,10 @@ final class FullHealAnimation extends EventAnimation {
           var3_ref = (DamageEffect) (this.field_z.effects.b((byte) 90));
           al.a(-86, this.field_z.moveId);
           while (var3_ref != null) {
-            var3_ref.a(var6, this.screen.field_h, 12);
+            var3_ref.apply(var6, this.screen.field_h, 12);
             var7 = var3_ref.target.a(-27449, this.screen);
             var7.b(-1, 6);
-            this.a(27799, new ek(this.screen, this.field_z.creature.a(-27449, this.screen), -200));
+            this.addChild(27799, new ek(this.screen, this.field_z.creature.a(-27449, this.screen), -200));
             var3_ref = (DamageEffect) (this.field_z.effects.c(0));
           }
           return;
@@ -148,7 +148,7 @@ final class FullHealAnimation extends EventAnimation {
         return null;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
         if (fieldTemp$0 >= 0) {

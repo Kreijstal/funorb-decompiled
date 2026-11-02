@@ -49,7 +49,7 @@ final class FlyEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         PacketBuffer var4 = null;
         FlyAnimation stackIn_3_0 = null;

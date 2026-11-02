@@ -94,7 +94,7 @@ final class di extends pu {
           f.field_c = hca.a("benefits", vb.field_j, param0 - 167, "members_benefits_logo");
           ik.field_l = gw.a("benefits", "members_benefits_screenshots", vb.field_j, param0 - 143);
           EventEffect.a(qk.field_k, -84, qq.field_l);
-          gd.a(param0, -2400, 40, (byte) -85, st.field_c, 16744576, 80, 2, aha.field_D, 80, 15);
+          gd.a(param0, -2400, 40, (byte) -85, st.field_c, 16744576, 80, 2, LinkTextWidget.field_D, 80, 15);
           ResetAnimation.a(3, ik.field_l);
           TBomberSpecial.a((byte) 94, f.field_c);
           return true;
@@ -145,7 +145,7 @@ final class di extends pu {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -53) {
           di.a(false, 44);
           field_l = null;

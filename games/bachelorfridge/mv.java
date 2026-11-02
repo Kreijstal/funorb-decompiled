@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class mv extends AnimationNode {
-    gj field_l;
+    BattleScreen field_l;
     static String field_m;
     AttackEvent field_k;
     static int field_n;
@@ -18,25 +18,25 @@ class mv extends AnimationNode {
         Object var4 = null;
         EventEffect var4_ref = null;
         Object var5 = null;
-        t var5_ref = null;
+        BasicMoveDefinition var5_ref = null;
         int var6 = 0;
         BoardTile var8 = null;
         int var8_int = 0;
         fga var9 = null;
         int var10 = 0;
-        kj var11 = null;
+        TileEffect var11 = null;
         fa var11_ref = null;
         qla var11_ref2 = null;
         int var11_int = 0;
-        ad var12 = null;
+        CreatureActor var12 = null;
         bn var13 = null;
         int var14 = 0;
         DamageTileEffect var15 = null;
         BattleCreature var16 = null;
         AnimationNode var17 = null;
-        ad var18 = null;
+        CreatureActor var18 = null;
         BattleCreature var19 = null;
-        ad var20 = null;
+        CreatureActor var20 = null;
         DamageTileEffect var21 = null;
         int var6Lifetime1;
         var4 = null;
@@ -51,7 +51,7 @@ class mv extends AnimationNode {
               return;
             }
             var4_ref = (EventEffect) (this.field_k.field_o.b((byte) 90));
-            var5_ref = (t) (al.a(106, this.field_k.moveId));
+            var5_ref = (BasicMoveDefinition) (al.a(106, this.field_k.moveId));
             var6 = 0;
             while (var4_ref != null) {
               boolean decompiledFrameRemainder0 = true;
@@ -61,20 +61,20 @@ class mv extends AnimationNode {
                   var21 = var15;
                   var8 = this.field_l.field_h.tiles[var15.field_i][var15.field_l];
                   var9 = new fga(this.field_l, var21.field_i, var21.field_l, var21.field_f);
-                  ((kj) ((Object) var9)).a(0);
+                  ((TileEffect) ((Object) var9)).a(0);
                   stackIn_97_0 = (var8.terrain != 28) ? 0 : 1;
                   var10 = stackIn_97_0;
                   if (var10 != 0 &&
                     var8.field_h <= var21.field_f) {
-                    var11 = (kj) ((Object) new uaa(this.field_l, var21, var3));
-                    var11.field_b = ((kj) ((Object) var9)).field_b;
-                    ((kj) ((Object) var9)).field_b = var11;
+                    var11 = (TileEffect) ((Object) new uaa(this.field_l, var21, var3));
+                    var11.field_b = ((TileEffect) ((Object) var9)).field_b;
+                    ((TileEffect) ((Object) var9)).field_b = var11;
                   } else {
-                    var21.a(var3, this.field_l.field_h, 12);
+                    var21.apply(var3, this.field_l.field_h, 12);
                   }
                 } else {
                   if (var4_ref instanceof ClearTileFlagEffect) {
-                    ((ClearTileFlagEffect) (var4_ref)).a(var3, this.field_l.field_h, 12);
+                    ((ClearTileFlagEffect) (var4_ref)).apply(var3, this.field_l.field_h, 12);
                   } else {
                     if (var4_ref instanceof o) {
                       for (var7 = 0; this.field_l.field_h.width > var7; var7++) {
@@ -82,15 +82,15 @@ class mv extends AnimationNode {
                           var19 = this.field_l.field_h.tiles[var7][var8_int].occupant;
                           if (var19 != null) {
                             var20 = new CreatureRef(var19).a(-27449, this.field_l);
-                            this.a(27799, new ek(this.field_l, var20, var4_ref.field_f));
+                            this.addChild(27799, new ek(this.field_l, var20, var4_ref.field_f));
                           }
                         }
                       }
                       this.field_l.field_s.a(-1907, 20);
-                      ((o) (var4_ref)).a(var3, this.field_l.field_h, 12);
+                      ((o) (var4_ref)).apply(var3, this.field_l.field_h, 12);
                     } else {
                       if (var4_ref instanceof bm) {
-                        ((bm) (var4_ref)).a(var3, this.field_l.field_h, 12);
+                        ((bm) (var4_ref)).apply(var3, this.field_l.field_h, 12);
                       }
                     }
                   }
@@ -99,7 +99,7 @@ class mv extends AnimationNode {
                 var16 = var4_ref.target.a(54, this.field_l.field_h);
                 if (var16.a(13, (byte) 104)) {
                   var3.a(5, var16, (byte) 2);
-                  this.a(27799, new ek(this.field_l, this.field_k.creature.a(-27449, this.field_l), 5));
+                  this.addChild(27799, new ek(this.field_l, this.field_k.creature.a(-27449, this.field_l), 5));
                 }
                 var8_int = this.field_k.field_q;
                 if (this instanceof ba) {
@@ -107,7 +107,7 @@ class mv extends AnimationNode {
                 }
                 var17 = ((DamageEffect) (var4_ref)).a(this.field_k.creature.a(-27449, this.field_l), this.field_l, false, var8_int);
                 if (var17 != null) {
-                  this.a(27799, var17);
+                  this.addChild(27799, var17);
                 }
                 var18 = var4_ref.target.a(-27449, this.field_l);
                 if (this.field_k.moveId != 61) {
@@ -127,18 +127,18 @@ class mv extends AnimationNode {
                   if (0 >= var4_ref.field_f) {
                     if (var5_ref.field_p != 4 ||
                       var4_ref.field_f != 0) {
-                      this.a(27799, new ek(this.field_l, var18, var4_ref.field_f));
+                      this.addChild(27799, new ek(this.field_l, var18, var4_ref.field_f));
                     }
                   } else {
-                    this.a(27799, new ek(this.field_l, var18, var4_ref.field_f));
+                    this.addChild(27799, new ek(this.field_l, var18, var4_ref.field_f));
                     var11_ref = new fa(this.field_l, var18.field_s.tileX, var18.field_s.tileY, var18.field_f);
-                    ((kj) ((Object) var11_ref)).a(0);
+                    ((TileEffect) ((Object) var11_ref)).a(0);
                   }
                 } else {
                   var18.a(16777215, 106, bja.field_n);
                   if (var5_ref.field_p != 4 ||
                     0 != var4_ref.field_f) {
-                    this.a(27799, new ek(this.field_l, var18, var4_ref.field_f));
+                    this.addChild(27799, new ek(this.field_l, var18, var4_ref.field_f));
                   }
                 }
                 if (0 != var5_ref.field_u &&
@@ -153,7 +153,7 @@ class mv extends AnimationNode {
                     if (pna.field_zb[var5_ref.field_u].field_i != -1 &&
                       var5_ref.field_u != 9) {
                       var11_ref2 = new qla(this.field_l, var18.field_s.tileX, var18.field_s.tileY, pna.field_zb[var5_ref.field_u].field_i);
-                      ((kj) ((Object) var11_ref2)).a(0);
+                      ((TileEffect) ((Object) var11_ref2)).a(0);
                     }
                   } else {
                     var18.a(24831, 87, ClamsAnimation.field_A);
@@ -161,7 +161,7 @@ class mv extends AnimationNode {
                 }
                 var6Lifetime1 = var4_ref.field_f;
                 c.a(1220394217, var16.field_o.field_e);
-                var11_int = ((t) (al.a(112, this.field_k.moveId))).field_s;
+                var11_int = ((BasicMoveDefinition) (al.a(112, this.field_k.moveId))).field_s;
                 if (this.field_k.field_p == 31) {
                   var11_int = 0;
                 }
@@ -186,7 +186,7 @@ class mv extends AnimationNode {
                     var12 = this.field_k.creature.a(-27449, this.field_l);
                     this.field_k.creature.a(-27449, this.field_l).a(65280, 9, Integer.toString(var6Lifetime1));
                     var13 = new bn(this.field_l, var12.field_s.tileX, var12.field_s.tileY);
-                    ((kj) ((Object) var13)).a(0);
+                    ((TileEffect) ((Object) var13)).a(0);
                   }
                 }
               }
@@ -217,22 +217,22 @@ class mv extends AnimationNode {
         }
     }
 
-    boolean c(byte param0) {
+    boolean isFinished(byte param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         BattleCreature var4 = null;
-        ad var5 = null;
+        CreatureActor var5 = null;
         int var6 = 0;
         int var7 = 0;
         Object var8 = null;
-        t var8_ref = null;
+        BasicMoveDefinition var8_ref = null;
         var8 = null;
         var7 = BachelorFridge.field_y;
         try {
           var3 = 14 % ((71 - param0) / 47);
-          var8_ref = (t) (al.a(88, this.field_k.moveId));
+          var8_ref = (BasicMoveDefinition) (al.a(88, this.field_k.moveId));
           var4 = this.field_k.creature.a(72, this.field_l.field_h);
           var5 = this.field_k.creature.a(-27449, this.field_l);
           this.field_l.field_s.a((byte) -57, var4.tileY, var4.tileX);
@@ -294,7 +294,7 @@ class mv extends AnimationNode {
               return false;
             }
             var5.b(-1, var8_ref.field_o);
-            id.e(49, var5.field_s.field_o.field_e);
+            PizzaArenaTheme.e(49, var5.field_s.field_o.field_e);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -309,7 +309,7 @@ class mv extends AnimationNode {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        ad var3 = null;
+        CreatureActor var3 = null;
         var4 = BachelorFridge.field_y;
         try {
           if (~this.field_k.field_p == param0) {
@@ -410,7 +410,7 @@ class mv extends AnimationNode {
                     var16 = new bn(this.field_l, var14, var15);
                   }
                   if (var16 != null) {
-                    ((kj) (var16)).a(0);
+                    ((TileEffect) (var16)).a(0);
                   }
                 }
               }
@@ -435,7 +435,7 @@ class mv extends AnimationNode {
         }
     }
 
-    mv(gj param0, AttackEvent param1) {
+    mv(BattleScreen param0, AttackEvent param1) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -445,16 +445,16 @@ class mv extends AnimationNode {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        ad var4 = null;
-        t var6 = null;
+        CreatureActor var4 = null;
+        BasicMoveDefinition var6 = null;
         try {
           this.field_k = param1;
           this.field_l = param0;
-          var6 = (t) (al.a(-91, this.field_k.moveId));
+          var6 = (BasicMoveDefinition) (al.a(-91, this.field_k.moveId));
           var4 = this.field_k.creature.a(-27449, this.field_l);
           if (var6.field_p != 2 &&
             var6.field_p != 3) {
-            this.a(27799, new taa(this.field_l, var4));
+            this.addChild(27799, new ActorAnimation(this.field_l, var4));
           }
           if (!var4.field_s.isDown(-120)) {
             this.field_j = 100;

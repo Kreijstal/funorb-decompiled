@@ -106,7 +106,7 @@ final class nia extends lw {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_l = null;
         field_m = null;
         if (param0) {
@@ -115,7 +115,7 @@ final class nia extends lw {
     }
 
     nia() {
-        super(true, new String[]{md.field_m, HomingMissileSpecial.field_p}, id.field_j);
+        super(true, new String[]{md.field_m, HomingMissileSpecial.field_p}, PizzaArenaTheme.field_j);
         this.field_c = new int[][]{new int[]{320, 400}, new int[]{320, 390}};
     }
 
@@ -136,13 +136,13 @@ final class nia extends lw {
         try {
           sd.field_b = new int[50];
           var1_int = (SetFriendlyEffect.a(false, 16777088) - SetFriendlyEffect.a(false, 16711680)) / 50;
-          var2 = (tf.a(-6, 16777088) - tf.a(-127, 16711680)) / 50;
+          var2 = (UiNode.a(-6, 16777088) - UiNode.a(-127, 16711680)) / 50;
           if (param0 < 16) {
             nia.a(120, true);
           }
           var3 = (lda.a(16777088, (byte) -36) - lda.a(16711680, (byte) -45)) / 50;
           for (var4 = 0; var4 < 50; var4++) {
-            sd.field_b[var4] = gna.a(SetFriendlyEffect.a(false, 16711680) + var4 * var1_int, (byte) -64, var4 * var3 + lda.a(16711680, (byte) -21), tf.a(-127, 16711680) + var4 * var2);
+            sd.field_b[var4] = gna.a(SetFriendlyEffect.a(false, 16711680) + var4 * var1_int, (byte) -64, var4 * var3 + lda.a(16711680, (byte) -21), UiNode.a(-127, 16711680) + var4 * var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

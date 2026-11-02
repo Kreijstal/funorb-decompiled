@@ -17,7 +17,7 @@ final class BoardChangeBatch extends BattleUpdate {
         }
     }
 
-    final void a(BattleState param0, boolean param1) {
+    final void apply(BattleState param0, boolean param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         BoardChange var5 = null;
@@ -53,9 +53,9 @@ final class BoardChangeBatch extends BattleUpdate {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
-        ub stackIn_3_0 = null;
+        BoardChangeAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -64,7 +64,7 @@ final class BoardChangeBatch extends BattleUpdate {
           if (param0 != 5) {
             this.field_k = (IntrusiveDeque) null;
           }
-          stackIn_3_0 = new ub(param1, this);
+          stackIn_3_0 = new BoardChangeAnimation(param1, this);
           return (AnimationNode) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,7 +80,7 @@ final class BoardChangeBatch extends BattleUpdate {
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void write(PacketBuffer param0, int param1) {
         int var4 = 0;
         BoardChange var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -114,7 +114,7 @@ final class BoardChangeBatch extends BattleUpdate {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_l = null;
         if (param0) {
           field_l = (AudioOutput) null;

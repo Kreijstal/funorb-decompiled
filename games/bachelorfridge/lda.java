@@ -129,7 +129,7 @@ final class lda {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 90 % ((-75 - param0) / 49);
         field_d = null;
         field_b = null;

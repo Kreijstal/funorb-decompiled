@@ -28,7 +28,7 @@ final class hga extends am {
         }
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 8405024) {
           field_U = (RasterBuffer) null;
           field_U = null;
@@ -130,21 +130,21 @@ final class hga extends am {
         int var22 = 0;
         var22 = BachelorFridge.field_y;
         try {
-          lka.field_E = qs.a(false, new PacketBuffer(param1));
-          ur.field_e = new oha[lka.field_E.length - 1];
+          TextInputWidget.field_E = qs.a(false, new PacketBuffer(param1));
+          WhirlpoolDigest.field_e = new MoveDefinition[TextInputWidget.field_E.length - 1];
           pe.field_m = 0;
           var2_int = 1;
           if (!param0) {
             field_U = (RasterBuffer) null;
           }
-          while (lka.field_E.length > var2_int) {
+          while (TextInputWidget.field_E.length > var2_int) {
             var3 = -1 + var2_int;
-            var4 = lka.field_E[var2_int][1];
-            var5 = lka.field_E[var2_int][2];
+            var4 = TextInputWidget.field_E[var2_int][1];
+            var5 = TextInputWidget.field_E[var2_int][2];
             var6 = bm.a(80, var2_int);
             var7 = vc.a(var2_int, 3, -16306);
             var8 = dha.a((byte) -38, var2_int);
-            var9 = jfa.a(false, var2_int);
+            var9 = FridgeCreature.a(false, var2_int);
             var10 = vc.a(var2_int, 15, -16306);
             if (1 != var6) {
               if (2 != var6) {
@@ -203,7 +203,7 @@ final class hga extends am {
     final void a(int param0, byte param1, int param2) {
         int var4 = 26 % ((param1 + 16) / 56);
         super.a(param0, (byte) -79, param2);
-        qia.field_a.a(this.field_S, param2 + (this.field_p >> 1), param0 + 103, 16777215, -1);
+        qia.field_a.a(this.field_S, param2 + (this.width >> 1), param0 + 103, 16777215, -1);
         if (null != this.field_V) {
           SoftwareRasterizer.drawHorizontalLine(param2 + 20, param0 + 120 - 7, 260, 8421504);
           qia.field_a.drawParagraph(this.field_V, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, qia.field_a.field_u);
@@ -211,9 +211,9 @@ final class hga extends am {
         }
     }
 
-    final static ola n(int param0) {
+    final static FridgeScreen n(int param0) {
         int var1 = -44 % ((param0 + 54) / 61);
-        return new ola();
+        return new FridgeScreen();
     }
 
     static {

@@ -6,7 +6,7 @@ final class qt extends pu {
     static Sprite field_m;
     private static String field_z;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_m = null;
         if (param0 != -29205) {

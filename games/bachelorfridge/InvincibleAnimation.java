@@ -10,7 +10,7 @@ final class InvincibleAnimation extends EventAnimation {
         int var2 = 120 / ((param0 + 3) / 44);
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = 44 % ((71 - param0) / 47);
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
@@ -31,9 +31,9 @@ final class InvincibleAnimation extends EventAnimation {
         DamageEffect var3_ref;
         int var5;
         BattleCreature var6;
-        ad var7;
+        CreatureActor var7;
         BattleCreature var8;
-        ad var9;
+        CreatureActor var9;
         DamageEffect var3_refLifetime1;
         var3 = null;
         var5 = BachelorFridge.field_y;
@@ -45,7 +45,7 @@ final class InvincibleAnimation extends EventAnimation {
           var3_ref = (DamageEffect) (this.field_x.effects.b((byte) 90));
           al.a(param0 - 14993, this.field_x.moveId);
           while (var3_ref != null) {
-            var3_ref.a(var8, this.screen.field_h, 12);
+            var3_ref.apply(var8, this.screen.field_h, 12);
             var9 = var3_ref.target.a(-27449, this.screen);
             var9.b(-1, 6);
             var9.a(24831, 101, kna.field_g[33]);
@@ -61,7 +61,7 @@ final class InvincibleAnimation extends EventAnimation {
         var3_refLifetime1 = (DamageEffect) (this.field_x.effects.b((byte) 90));
         al.a(param0 - 14993, this.field_x.moveId);
         while (var3_refLifetime1 != null) {
-          var3_refLifetime1.a(var6, this.screen.field_h, 12);
+          var3_refLifetime1.apply(var6, this.screen.field_h, 12);
           var7 = var3_refLifetime1.target.a(-27449, this.screen);
           var7.b(-1, 6);
           var7.a(24831, 101, kna.field_g[33]);
@@ -81,13 +81,13 @@ final class InvincibleAnimation extends EventAnimation {
         if (wt.field_n != null) {
           return true;
         }
-        if (!ng.b(92)) {
+        if (!MoveInfoPanel.b(92)) {
           return false;
         }
         return true;
     }
 
-    InvincibleAnimation(gj param0, InvincibleEvent param1) {
+    InvincibleAnimation(BattleScreen param0, InvincibleEvent param1) {
         super(param0, param1);
         try {
           this.field_x = param1;
@@ -96,7 +96,7 @@ final class InvincibleAnimation extends EventAnimation {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_w = null;
         if (param0 != 39) {
           field_w = (String) null;

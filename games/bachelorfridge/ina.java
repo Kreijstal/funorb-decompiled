@@ -12,7 +12,7 @@ final class ina extends bi {
     static String field_s;
     private int field_t;
     private Sprite[] field_q;
-    static sna field_n;
+    static UiComponent field_n;
     private int field_p;
 
     final void j(int param0) {
@@ -28,7 +28,7 @@ final class ina extends bi {
           if (this.b(param0, true)) {
             return true;
           }
-          if (ng.a((byte) -24) &&
+          if (MoveInfoPanel.a((byte) -24) &&
             bia.field_f[param0]) {
             return false;
           }
@@ -37,7 +37,7 @@ final class ina extends bi {
         return hp.a(param0, (byte) -102, nga.field_i);
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         if (param0 >= -70) {
           return;
@@ -86,12 +86,12 @@ final class ina extends bi {
         }
         var3 = param0;
         if (var3 == 0) {
-          return jt.field_g;
+          return FoodShopPanel.field_g;
         }
         if (var3 != 1) {
           throw new IllegalStateException();
         }
-        return gj.field_F;
+        return BattleScreen.field_F;
     }
 
     private final void e(boolean param0) {

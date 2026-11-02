@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class km extends hf {
+final class km extends InteractiveWidget {
     int field_I;
     int field_D;
     int field_J;
@@ -11,7 +11,7 @@ final class km extends hf {
     int field_F;
     int field_G;
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4, wj param5, int param6) {
+    final boolean b(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -26,8 +26,8 @@ final class km extends hf {
           if (!super.b(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
-          var8_int = -this.field_s - (param2 + (this.field_A - param0));
-          var9 = param6 - this.field_D - this.field_v - param4;
+          var8_int = -this.x - (param2 + (this.field_A - param0));
+          var9 = param6 - this.field_D - this.y - param4;
           if (var9 * var9 + var8_int * var8_int < this.field_G * this.field_G) {
             var10 = Math.atan2((double)var9, (double)var8_int) - nd.field_j;
             if (0.0 > var10) {

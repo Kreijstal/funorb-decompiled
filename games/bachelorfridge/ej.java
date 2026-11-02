@@ -12,13 +12,13 @@ final class ej extends BoardChange {
         this.field_j = 7;
     }
 
-    final void a(ub param0, int param1) {
+    final void a(BoardChangeAnimation param0, int param1) {
         int var5 = 0;
         PlayerRoster var4 = null;
         int var6 = 0;
         BattleState var7 = null;
-        gj var8 = null;
-        gj var9 = null;
+        BattleScreen var8 = null;
+        BattleScreen var9 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -36,7 +36,7 @@ final class ej extends BoardChange {
           var4 = param0.field_o.field_h.rosters[this.field_m];
           for (var5 = 0; var4.field_b.length > var5; var5++) {
             if (var4.field_b[var5] != null) {
-              param0.a(27799, new cb(param0.field_o.b(var4.field_b[var5], -23990), 5));
+              param0.addChild(27799, new cb(param0.field_o.b(var4.field_b[var5], -23990), 5));
             }
           }
           this.a(false, var9.field_h);
@@ -140,7 +140,7 @@ final class ej extends BoardChange {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -12) {
-            ej.b(-110);
+            ej.releaseStatics(-110);
           }
           if (!param0.a(0)) {
             stackIn_5_0 = (String) (param1);
@@ -191,7 +191,7 @@ final class ej extends BoardChange {
         var4 = BachelorFridge.field_y;
         try {
           if (param0 != -11163) {
-            ej.b(49);
+            ej.releaseStatics(49);
           }
           var5 = fg.field_a;
           var1 = var5;
@@ -215,7 +215,7 @@ final class ej extends BoardChange {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != 0) {
           field_n = (String) null;

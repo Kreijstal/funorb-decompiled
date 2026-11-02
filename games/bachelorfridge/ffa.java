@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ffa extends kj {
+final class ffa extends TileEffect {
     static String field_i;
     private int field_g;
     static String[][] field_j;
@@ -55,7 +55,7 @@ final class ffa extends kj {
         return true;
     }
 
-    ffa(gj param0, CranberryEvent param1, int param2, int param3) {
+    ffa(BattleScreen param0, CranberryEvent param1, int param2, int param3) {
         super(param0, param2, param3);
         try {
           this.field_f = param1;

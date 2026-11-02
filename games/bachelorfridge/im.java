@@ -6,7 +6,7 @@ final class im {
     static String field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         int var1 = -48 / ((34 - param0) / 57);
         field_c = (boolean[][]) null;

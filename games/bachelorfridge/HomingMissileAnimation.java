@@ -4,7 +4,7 @@
 final class HomingMissileAnimation extends EventAnimation {
     private int field_D;
     private HomingMissileEvent field_C;
-    private taa field_v;
+    private ActorAnimation field_v;
     private cf field_z;
     private Sprite field_B;
     private dda field_A;
@@ -25,11 +25,11 @@ final class HomingMissileAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var2;
-        ad var3;
+        CreatureActor var3;
         if (this.field_v.isLinked((byte) -106)) {
           return false;
         }
@@ -58,8 +58,8 @@ final class HomingMissileAnimation extends EventAnimation {
           return false;
         }
         if (fn.field_m == this.field_z) {
-          this.field_v = new taa(this.screen, this.field_C.field_q, this.field_C.field_r);
-          this.a(27799, this.field_v);
+          this.field_v = new ActorAnimation(this.screen, this.field_C.field_q, this.field_C.field_r);
+          this.addChild(27799, this.field_v);
           this.field_z = qn.field_i;
           this.field_l = 40;
           return false;
@@ -87,7 +87,7 @@ final class HomingMissileAnimation extends EventAnimation {
         int stackIn_22_1 = 0;
         int var4;
         int var5;
-        ad var6;
+        CreatureActor var6;
         int var7;
         int var8;
         int var11;
@@ -128,7 +128,7 @@ final class HomingMissileAnimation extends EventAnimation {
                 } else {
                   var14 = new dw(this.screen, var11, var12);
                 }
-                ((kj) (var14)).a(param0 + 1);
+                ((TileEffect) (var14)).a(param0 + 1);
                 this.a(var11, var12, var6, param0 + 1);
               }
             }
@@ -144,7 +144,7 @@ final class HomingMissileAnimation extends EventAnimation {
 
     final void c(int param0) {
         int var2 = 0;
-        ad var3_ref_ad = null;
+        CreatureActor var3_ref_ad = null;
         aj var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -187,7 +187,7 @@ final class HomingMissileAnimation extends EventAnimation {
         return nv.a(param1, param2, -106, param0);
     }
 
-    HomingMissileAnimation(gj param0, HomingMissileEvent param1) {
+    HomingMissileAnimation(BattleScreen param0, HomingMissileEvent param1) {
         super(param0, param1);
         BattleCreature var3 = null;
         try {

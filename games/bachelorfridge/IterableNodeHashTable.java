@@ -56,10 +56,10 @@ final class IterableNodeHashTable implements Iterable {
         return (IntrusiveNode) null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != -1) {
-          IterableNodeHashTable.a(-48);
+          IterableNodeHashTable.releaseStatics(-48);
           field_a = null;
           field_e = null;
           field_b = null;

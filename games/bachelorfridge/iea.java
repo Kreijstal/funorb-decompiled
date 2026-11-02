@@ -15,7 +15,7 @@ final class iea {
         mg.field_k = param1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         field_d = null;

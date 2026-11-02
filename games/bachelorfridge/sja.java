@@ -23,19 +23,19 @@ final class sja extends uda {
         }
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int param0) {
         field_gb = null;
         field_fb = null;
         if (param0 != 33) {
-          sja.o(-59);
+          sja.releaseStatics(-59);
         }
     }
 
-    sja(rp param0, wj param1) {
+    sja(rp param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
-    final void e(wj param0, int param1) {
+    final void e(UiWidget param0, int param1) {
         try {
           super.e(param0, param1);
         } catch (RuntimeException runtimeException) {

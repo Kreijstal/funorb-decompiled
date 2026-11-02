@@ -233,7 +233,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = (int[][]) null;
         int var1 = 34 % ((57 - param0) / 37);
         field_o = null;

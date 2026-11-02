@@ -5,7 +5,7 @@ final class lga {
     private boolean[][] field_p;
     private int field_h;
     private int field_j;
-    private jfa field_o;
+    private FridgeCreature field_o;
     private wda[][] field_f;
     private int field_c;
     static String[] field_n;
@@ -154,7 +154,7 @@ final class lga {
         }
         try {
           da.field_d = param0;
-          fo.field_a.field_z.d(82);
+          fo.field_a.children.d(82);
           fo.field_a.a(-1, da.field_d);
           MoveOrder.field_k = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
@@ -394,7 +394,7 @@ final class lga {
         TBomberAnimation.field_y.requestFocus();
     }
 
-    lga(jfa param0) {
+    lga(FridgeCreature param0) {
         try {
           this.field_o = param0;
           this.field_f = this.field_o.field_m;

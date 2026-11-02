@@ -19,7 +19,7 @@ final class ji extends IntrusiveNode {
         var3 = BachelorFridge.field_y;
         try {
           if (param0 >= -87) {
-            ji.a(-69);
+            ji.releaseStatics(-69);
           }
           if (ld.field_n == -1 &&
             hda.field_o == -1) {
@@ -36,7 +36,7 @@ final class ji extends IntrusiveNode {
           if (decompiledFrameRemainder0) {
             if (!b.field_r) {
               if (pv.field_i <= MoveEvent.field_o) {
-                stackIn_19_0 = (pv.field_i + oha.field_i > MoveEvent.field_o) ? 1 : 0;
+                stackIn_19_0 = (pv.field_i + MoveDefinition.field_i > MoveEvent.field_o) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }
@@ -113,11 +113,11 @@ final class ji extends IntrusiveNode {
         hda.a((byte) -91, param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_g = null;
         if (param0 < 10) {
-          ji.a(111);
+          ji.releaseStatics(111);
           field_i = null;
           return;
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RaiseSpecial extends SpecialOrder {
-    static sna field_q;
+    static UiComponent field_q;
     static int field_p;
     static String field_r;
 
@@ -89,7 +89,7 @@ final class RaiseSpecial extends SpecialOrder {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -114) {
           RaiseSpecial.a(false, 'Z');
         }
@@ -106,7 +106,7 @@ final class RaiseSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         RuntimeException var3 = null;
         BattleCreature var4 = null;
         RaiseEvent var5 = null;
@@ -119,7 +119,7 @@ final class RaiseSpecial extends SpecialOrder {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            RaiseSpecial.b(87);
+            RaiseSpecial.releaseStatics(87);
           }
           var6 = this.creature.a(71, param0);
           var4 = this.field_j.a(67, param0);

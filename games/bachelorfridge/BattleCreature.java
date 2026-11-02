@@ -24,14 +24,14 @@ final class BattleCreature extends CreatureProfile {
     int[] field_K;
 
     final boolean c(byte param0, int param1) {
-        oha var3 = null;
+        MoveDefinition var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -10) {
             this.field_K = (int[]) null;
           }
-          var3 = ur.field_e[param1];
+          var3 = WhirlpoolDigest.field_e[param1];
           if (this.statusId == 44) {
             return false;
           }
@@ -46,11 +46,11 @@ final class BattleCreature extends CreatureProfile {
             return false;
           }
           if (this.statusId == 9 &&
-            var3.field_a == 1) {
+            var3.kind == 1) {
             return false;
           }
           if (this.statusId == 8 &&
-            var3.field_a == 2) {
+            var3.kind == 2) {
             return false;
           }
           if (54 == this.statusId) {
@@ -65,12 +65,12 @@ final class BattleCreature extends CreatureProfile {
     }
 
     final boolean f(int param0, int param1) {
-        oha var3 = null;
+        MoveDefinition var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = ur.field_e[param1];
+          var3 = WhirlpoolDigest.field_e[param1];
           var4 = this.b(param1, (byte) -127);
           if (var3.field_g != param0 &&
             ~this.field_K[var4] != ~(1 + var3.field_g)) {
@@ -102,7 +102,7 @@ final class BattleCreature extends CreatureProfile {
 
     final void a(boolean param0, byte param1, int param2) {
         int var4_int = 0;
-        oha var5 = null;
+        MoveDefinition var5 = null;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -121,7 +121,7 @@ final class BattleCreature extends CreatureProfile {
               return;
             }
             if (this.field_m[var4_int] != -1) {
-              var5 = ur.field_e[this.field_o.field_g.field_b[this.field_m[var4_int]]];
+              var5 = WhirlpoolDigest.field_e[this.field_o.field_g.field_b[this.field_m[var4_int]]];
               if (this.field_K[var4_int] < var5.field_g) {
                 this.field_K[var4_int] = this.field_K[var4_int] + 1;
               }
@@ -319,7 +319,7 @@ final class BattleCreature extends CreatureProfile {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        oha var6 = null;
+        MoveDefinition var6 = null;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = BachelorFridge.field_y;
@@ -332,7 +332,7 @@ final class BattleCreature extends CreatureProfile {
               return;
             }
             if (this.field_m[var5] != -1) {
-              var6 = ur.field_e[this.field_o.field_g.field_b[this.field_m[var5]]];
+              var6 = WhirlpoolDigest.field_e[this.field_o.field_g.field_b[this.field_m[var5]]];
               if ((var6.field_j != 3 ||
                 var7 != 0) && this.field_K[var5] <= var6.field_g) {
                 if (~param0 == ~var4) {
@@ -371,7 +371,7 @@ final class BattleCreature extends CreatureProfile {
     }
 
     final void j(int param0, int param1) {
-        oha var3 = ur.field_e[this.field_o.field_g.field_b[this.field_m[param0]]];
+        MoveDefinition var3 = WhirlpoolDigest.field_e[this.field_o.field_g.field_b[this.field_m[param0]]];
         if (param1 != 0) {
           return;
         }
@@ -384,14 +384,14 @@ final class BattleCreature extends CreatureProfile {
 
     final void d(int param0, byte param1) {
         RuntimeException runtimeException = null;
-        oha var3 = null;
+        MoveDefinition var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.statusId == 42) {
             return;
           }
-          var3 = ur.field_e[param0];
+          var3 = WhirlpoolDigest.field_e[param0];
           if (param1 > -78) {
             this.j(-35, -54);
           }
@@ -420,7 +420,7 @@ final class BattleCreature extends CreatureProfile {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        oha var6 = null;
+        MoveDefinition var6 = null;
         int var7 = 0;
         int var8 = 0;
         var8 = BachelorFridge.field_y;
@@ -434,7 +434,7 @@ final class BattleCreature extends CreatureProfile {
             param0.a("splitid: " + this.splitId, 4819);
           }
           if (this.statusId != 0) {
-            param0.a("status: " + pna.field_zb[this.statusId].field_d + " (" + this.statusTurns + " turns)", 4819);
+            param0.a("status: " + pna.field_zb[this.statusId].name + " (" + this.statusTurns + " turns)", 4819);
           }
           if (37 == this.statusId) {
             param0.a("friendly: " + this.friendly, 4819);
@@ -453,9 +453,9 @@ final class BattleCreature extends CreatureProfile {
               var6 = al.a(-80, this.field_o.field_g.field_b[var5]);
               var7 = this.field_K[var4];
               if (var7 == 0) {
-                param0.a("move " + var4 + ": " + var6.field_f, 4819);
+                param0.a("move " + var4 + ": " + var6.name, 4819);
               } else {
-                param0.a("move " + var4 + ": " + var6.field_f + " (cooldown " + var7 + ")", 4819);
+                param0.a("move " + var4 + ": " + var6.name + " (cooldown " + var7 + ")", 4819);
               }
             }
             var4++;
@@ -748,7 +748,7 @@ final class BattleCreature extends CreatureProfile {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        oha var4 = null;
+        MoveDefinition var4 = null;
         int var5 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -764,7 +764,7 @@ final class BattleCreature extends CreatureProfile {
             stackIn_15_0 = ~this.field_m[var3];
             if (var5 == 0) {
               if (stackIn_15_0 != 0) {
-                var4 = ur.field_e[this.field_o.field_g.field_b[this.field_m[var3]]];
+                var4 = WhirlpoolDigest.field_e[this.field_o.field_g.field_b[this.field_m[var3]]];
                 if (3 != var4.field_j) {
                   var2_int++;
                 }
@@ -801,7 +801,7 @@ final class BattleCreature extends CreatureProfile {
         EffectBatch var6 = null;
         int var7_int = 0;
         int[] var7 = null;
-        oha var8 = null;
+        MoveDefinition var8 = null;
         int var9 = 0;
         int var7_intLifetime1;
         int var7_intLifetime2;
@@ -835,7 +835,7 @@ final class BattleCreature extends CreatureProfile {
             stackIn_46_1 = ~this.field_m[var7_int];
             if (var9 == 0) {
               if (stackIn_46_0 != stackIn_46_1) {
-                var8 = ur.field_e[this.field_o.field_g.field_b[this.field_m[var7_int]]];
+                var8 = WhirlpoolDigest.field_e[this.field_o.field_g.field_b[this.field_m[var7_int]]];
                 if (this.field_K[var7_int] == var8.field_g &&
                   var8.field_g != 0) {
                   this.j(var7_int, 0);
@@ -912,7 +912,7 @@ final class BattleCreature extends CreatureProfile {
           if (var6.field_m.g(0) > 0) {
             param2.a(var6, true);
           }
-          var6.a(this.battle, false);
+          var6.apply(this.battle, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1505,7 +1505,7 @@ final class BattleCreature extends CreatureProfile {
     }
 
     final boolean a(boolean param0, int param1) {
-        oha var3 = null;
+        MoveDefinition var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         boolean stackIn_7_0 = false;
@@ -1514,7 +1514,7 @@ final class BattleCreature extends CreatureProfile {
           if (param0) {
             return false;
           }
-          var3 = ur.field_e[param1];
+          var3 = WhirlpoolDigest.field_e[param1];
           var4 = this.b(param1, (byte) 30);
           stackIn_7_0 = (~(var3.field_g + 2) == ~this.field_K[var4]);
           return stackIn_7_0;

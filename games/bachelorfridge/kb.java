@@ -14,10 +14,10 @@ final class kb {
     static int field_g;
     static int field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 <= 26) {
-          kb.a(-88);
+          kb.releaseStatics(-88);
         }
     }
 

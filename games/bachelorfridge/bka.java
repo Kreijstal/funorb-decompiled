@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bka implements qda {
+final class bka implements WidgetRenderer {
     private BitmapFont field_a;
     private int field_b;
     private int field_c;
@@ -54,7 +54,7 @@ final class bka implements qda {
         }
     }
 
-    public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int var10 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -62,7 +62,7 @@ final class bka implements qda {
         int var9 = 0;
         int var11 = 0;
         bb var12 = null;
-        wj stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -70,17 +70,17 @@ final class bka implements qda {
         var11 = BachelorFridge.field_y;
         try {
           if (param1 instanceof bb) {
-            stackIn_4_0 = (wj) (param1);
+            stackIn_4_0 = (UiWidget) (param1);
           } else {
             stackIn_4_0 = null;
           }
           var12 = (bb) (stackIn_4_0);
           if (var12 == null) {
           }
-          SoftwareRasterizer.fillRectangle(param0 + param1.field_s, param1.field_v + param3, param1.field_p, param1.field_q, this.field_g);
-          var7 = -(2 * var12.field_A) + param1.field_p;
-          var8 = var12.field_A + param0 + param1.field_s;
-          var9 = param3 - (-param1.field_v - var12.field_D);
+          SoftwareRasterizer.fillRectangle(param0 + param1.x, param1.y + param3, param1.width, param1.height, this.field_g);
+          var7 = -(2 * var12.field_A) + param1.width;
+          var8 = var12.field_A + param0 + param1.x;
+          var9 = param3 - (-param1.y - var12.field_D);
           SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_f);
           if (param2 != 32679) {
             return;
@@ -91,7 +91,7 @@ final class bka implements qda {
           if (this.field_a == null) {
             return;
           }
-          this.field_a.a(var12.field_w, var8 + var7 / 2, var12.field_D + (var9 + this.field_a.field_F), this.field_d, this.field_b);
+          this.field_a.a(var12.text, var8 + var7 / 2, var12.field_D + (var9 + this.field_a.field_F), this.field_d, this.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

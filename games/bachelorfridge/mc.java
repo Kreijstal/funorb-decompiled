@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mc extends IntrusiveNode {
-    static sna field_g;
+    static UiComponent field_g;
     int field_j;
     static String field_i;
     static int field_h;
     int field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_g = null;
         if (param0 > -21) {
-          field_g = (sna) null;
+          field_g = (UiComponent) null;
         }
     }
 

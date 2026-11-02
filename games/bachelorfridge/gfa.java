@@ -12,7 +12,7 @@ final class gfa {
     static String field_k;
     int field_d;
     static CreatureType[] field_a;
-    static sna field_f;
+    static UiComponent field_f;
     static String field_b;
 
     final static void a(boolean param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, int param8, boolean param9, int param10, int param11) {
@@ -29,7 +29,7 @@ final class gfa {
         this.field_l = param1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_f = null;
         field_k = null;

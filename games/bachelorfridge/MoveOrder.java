@@ -177,14 +177,14 @@ final class MoveOrder extends CreatureOrder {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }
         field_j = null;
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         MoveEvent stackIn_3_0 = null;
         MoveEvent stackIn_8_0 = null;
         MoveEvent stackIn_13_0 = null;
@@ -252,7 +252,7 @@ final class MoveOrder extends CreatureOrder {
           }
           if (param1 != 3) {
             var11 = (BattleState) null;
-            this.a((BattleState) null, -85);
+            this.createEvent((BattleState) null, -85);
           }
           if (param0.tiles[var4][var5].terrain == 22 ||
             param0.tiles[var4][var5].terrain == 28) {

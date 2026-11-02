@@ -12,7 +12,7 @@ final class cea {
     static Sprite field_i;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = (byte[][]) null;
         if (param0 == 65536) {
@@ -47,7 +47,7 @@ final class cea {
             return stackIn_5_0;
           }
           var2 = new PalettedBitmapFont(param0, fl.field_j, AirstrikeAnimation.field_D, lq.field_A, InsanoSauceSpecial.field_s, hk.field_f, BananarangAnimation.field_P);
-          al.b(-18073);
+          al.releaseStatics(-18073);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

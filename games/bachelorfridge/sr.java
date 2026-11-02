@@ -9,7 +9,7 @@ final class sr {
     int field_f;
     static long field_a;
     int field_e;
-    static sna field_b;
+    static UiComponent field_b;
 
     public static void b(byte param0) {
         field_d = null;
@@ -25,25 +25,25 @@ final class sr {
         boolean stackIn_6_1 = false;
         int stackIn_16_0 = 0;
         String stackIn_30_0 = null;
-        sna stackIn_40_0 = null;
+        UiComponent stackIn_40_0 = null;
         String stackIn_41_1 = null;
-        sna stackIn_43_0 = null;
+        UiComponent stackIn_43_0 = null;
         boolean stackIn_43_1 = false;
         String[] stackIn_43_2 = null;
         String stackIn_44_3 = null;
-        sna stackIn_73_0 = null;
+        UiComponent stackIn_73_0 = null;
         int stackIn_73_1 = 0;
         boolean stackIn_74_2 = false;
-        sna stackIn_78_0 = null;
+        UiComponent stackIn_78_0 = null;
         int stackIn_78_1 = 0;
         boolean stackIn_79_2 = false;
-        sna stackIn_83_0 = null;
+        UiComponent stackIn_83_0 = null;
         int stackIn_83_1 = 0;
         boolean stackIn_84_2 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        sna var5 = null;
-        sna var6 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -54,9 +54,9 @@ final class sr {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        sna var15 = null;
+        UiComponent var15 = null;
         String var16 = null;
-        sna var17 = null;
+        UiComponent var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -121,7 +121,7 @@ final class sr {
                 stackIn_41_1 = fka.field_h;
               }
               stackIn_40_0.field_Z = ((String) (Object) stackIn_41_1).toUpperCase();
-              stackIn_43_0 = (sna) (field_b);
+              stackIn_43_0 = (UiComponent) (field_b);
               stackIn_43_1 = true;
               stackIn_43_2 = new String[]{PlaceCreatureEffect.field_j.field_Z};
               if (var8 != 0) {
@@ -146,7 +146,7 @@ final class sr {
                   ala.field_b[var13] = false;
                   var13++;
                 }
-                ub.a(0, true, -81, -1, -1, EffectBatch.field_n, -1, ld.field_q);
+                BoardChangeAnimation.a(0, true, -81, -1, -1, EffectBatch.field_n, -1, ld.field_q);
                 if (!(2 > BananarangSpecial.field_r) &&
                   InvincibleEvent.field_q[12]) {
                   ShieldSpecial.field_q = true;
@@ -209,15 +209,15 @@ final class sr {
           stackIn_73_0 = ela.field_i;
           stackIn_73_1 = 19842;
           stackIn_74_2 = (param3) && (!param1) && (!w.field_e);
-          ((sna) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
+          ((UiComponent) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
           stackIn_78_0 = ho.field_g;
           stackIn_78_1 = 19842;
           stackIn_79_2 = (param3) && (!param1) && (!w.field_e);
-          ((sna) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_79_2);
+          ((UiComponent) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_79_2);
           stackIn_83_0 = qw.field_b;
           stackIn_83_1 = 19842;
           stackIn_84_2 = (param3) && (!param1) && (w.field_e);
-          ((sna) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_84_2);
+          ((UiComponent) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_84_2);
           BitPacketBuffer.field_n.field_a.f(18632);
           if (null != EffectBatch.field_n) {
             if (jj.field_wb.field_R != 0) {

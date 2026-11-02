@@ -5,7 +5,7 @@ final class cm extends oka {
     static boolean field_v;
     static jg field_u;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -70 / ((60 - param0) / 47);
         field_u = null;
     }
@@ -14,7 +14,7 @@ final class cm extends oka {
         this(jca.field_a, param0);
     }
 
-    final String c(wj param0, int param1) {
+    final String c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -23,9 +23,9 @@ final class cm extends oka {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            cm.c(35);
+            cm.releaseStatics(35);
           }
-          stackIn_3_0 = uu.a(param0.field_w.length(), param1 + 82, '*');
+          stackIn_3_0 = uu.a(param0.text.length(), param1 + 82, '*');
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,18 +52,18 @@ final class cm extends oka {
         }
         i.field_a.a(120, 31407, 640, ce.field_t, param0);
         if (param1 == -111) {
-          taa.a(5, gba.field_Bb, 115, -24 + pda.field_p, lm.field_d, 0, 640);
+          ActorAnimation.a(5, gba.field_Bb, 115, -24 + pda.field_p, lm.field_d, 0, 640);
           return;
         }
-        cm.c(27);
-        taa.a(5, gba.field_Bb, 115, -24 + pda.field_p, lm.field_d, 0, 640);
+        cm.releaseStatics(27);
+        ActorAnimation.a(5, gba.field_Bb, 115, -24 + pda.field_p, lm.field_d, 0, 640);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
         int var4 = 103 % ((45 - param3) / 59);
         ScavengerSpecial.field_v = param2;
         wk.field_f = param0;
-        ru.field_c = param1;
+        NanoGameClock.field_c = param1;
     }
 
     private cm(BitmapFont param0, int param1) {

@@ -4,7 +4,7 @@
 final class hca {
     private int field_d;
     private String field_a;
-    sna field_c;
+    UiComponent field_c;
     private int field_b;
 
     final static Sprite a(String param0, vr param1, int param2, String param3) {
@@ -77,7 +77,7 @@ final class hca {
           var1[var2] = new IndexedSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[var2], AirstrikeAnimation.field_D[var2], lq.field_A[var2], InsanoSauceSpecial.field_s[var2], BananarangAnimation.field_P[var2], hk.field_f);
         }
         if (param0 == 200) {
-          al.b(-18073);
+          al.releaseStatics(-18073);
           return var1;
         }
         return (IndexedSprite[]) null;
@@ -88,7 +88,7 @@ final class hca {
           this.field_a = param2;
           this.field_d = param0;
           this.field_b = param1;
-          this.field_c = new sna();
+          this.field_c = new UiComponent();
           this.field_c.field_kb = this.field_d - 15;
           this.field_c.field_rb = -10 + this.field_b;
           this.field_c.field_sb = 30 + g.field_g.c(this.field_a, 300);

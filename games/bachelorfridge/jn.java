@@ -4,7 +4,7 @@
 final class jn {
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -22089) {
           field_a = (String) null;

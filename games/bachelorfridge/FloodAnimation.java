@@ -11,7 +11,7 @@ final class FloodAnimation extends EventAnimation {
     private aj[] field_v;
     static String field_z;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
         if (0 <= fieldTemp$0) {
@@ -26,7 +26,7 @@ final class FloodAnimation extends EventAnimation {
         aj var5 = this.field_v[fieldTemp$1];
         aj var6 = var5;
         pi var3 = new pi(this.screen, var6.field_c, var6.field_a);
-        ((kj) ((Object) var3)).a(0);
+        ((TileEffect) ((Object) var3)).a(0);
         this.screen.field_h.tiles[var5.field_c][var5.field_a].field_i = false;
         int var4 = 75 % ((71 - param0) / 47);
         this.screen.field_s.d(82);
@@ -42,7 +42,7 @@ final class FloodAnimation extends EventAnimation {
         return false;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_y = null;
         field_z = null;
         int var1 = 64 / ((-34 - param0) / 33);
@@ -50,12 +50,12 @@ final class FloodAnimation extends EventAnimation {
 
     private final void e(int param0) {
         if (param0 != 19) {
-          FloodAnimation.d(92);
+          FloodAnimation.releaseStatics(92);
         }
         this.field_x.a(this.screen.field_h, (byte) -2);
     }
 
-    FloodAnimation(gj param0, FloodEvent param1) {
+    FloodAnimation(BattleScreen param0, FloodEvent param1) {
         super(param0, param1);
         int fieldTemp$0 = 0;
         RuntimeException stackIn_26_0 = null;

@@ -58,11 +58,11 @@ final class dha {
         }
     }
 
-    final static boolean a(int param0, SpecialEvent param1, gj param2) {
+    final static boolean a(int param0, SpecialEvent param1, BattleScreen param2) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         EventEffect var4 = null;
-        ad var5 = null;
+        CreatureActor var5 = null;
         int var6 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -84,7 +84,7 @@ final class dha {
           while (var4 != null) {
             var5 = var4.target.a(-27449, param2);
             var5.b(-1, 6);
-            var4.a(var3, param2.field_h, 12);
+            var4.apply(var3, param2.field_h, 12);
             var4 = (EventEffect) (param1.effects.c(0));
           }
           return true;
@@ -110,7 +110,7 @@ final class dha {
 
     final static int a(byte param0, int param1) {
         int var3 = 51 % ((param0 + 73) / 34);
-        String var2 = lka.field_E[param1][16];
+        String var2 = TextInputWidget.field_E[param1][16];
         var2 = var2.trim();
         var2 = var2.toLowerCase();
         if (!var2.equals("")) {

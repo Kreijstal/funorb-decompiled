@@ -10,16 +10,16 @@ final class mka extends IntrusiveNode {
     int field_k;
     int field_l;
 
-    final static sna a(int param0, int param1, int param2, byte param3, BitmapFont param4, int param5, int param6, int param7) {
-        sna var8 = null;
+    final static UiComponent a(int param0, int param1, int param2, byte param3, BitmapFont param4, int param5, int param6, int param7) {
+        UiComponent var8 = null;
         RuntimeException var8_ref = null;
-        sna stackIn_3_0 = null;
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new sna(0L, (sna) null);
+          var8 = new UiComponent(0L, (UiComponent) null);
           var8.field_eb = qaa.a(param2, -94);
           var8.field_A = qaa.a(param5, -68);
           var8.field_db = qaa.a(param7, -127);
@@ -28,7 +28,7 @@ final class mka extends IntrusiveNode {
           var8.field_jb = param4;
           var8.field_gb = param6;
           if (param3 > -118) {
-            mka.b(true);
+            mka.releaseStatics(true);
           }
           stackIn_3_0 = var8;
           return stackIn_3_0;
@@ -46,11 +46,11 @@ final class mka extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         field_i = null;
         if (param0) {
-          mka.b(true);
+          mka.releaseStatics(true);
         }
     }
 

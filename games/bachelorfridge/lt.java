@@ -45,7 +45,7 @@ final class lt {
         String var2Lifetime1;
         if (param0 != 28427) {
           lt.b((byte) -113);
-          var2 = lka.field_E[param1][17];
+          var2 = TextInputWidget.field_E[param1][17];
           var2 = var2.trim();
           var2 = var2.toLowerCase();
           if (!var2.equals("yes")) {
@@ -53,7 +53,7 @@ final class lt {
           }
           return true;
         }
-        var2Lifetime1 = lka.field_E[param1][17];
+        var2Lifetime1 = TextInputWidget.field_E[param1][17];
         var2Lifetime1 = var2Lifetime1.trim();
         var2Lifetime1 = var2Lifetime1.toLowerCase();
         if (!var2Lifetime1.equals("yes")) {

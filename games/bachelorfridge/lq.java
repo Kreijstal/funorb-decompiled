@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-abstract class lq extends wj implements e {
+abstract class lq extends UiWidget implements e {
     static String field_z;
     static int[] field_A;
     static int field_y;
-    wj[] field_B;
+    UiWidget[] field_B;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 43) {
           return;
         }
@@ -58,12 +58,12 @@ abstract class lq extends wj implements e {
         }
     }
 
-    private final wj b(boolean param0) {
+    private final UiWidget b(boolean param0) {
         int var3 = 0;
-        wj[] var2;
-        wj var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var5;
-        wj[] var6;
+        UiWidget[] var6;
         var5 = BachelorFridge.field_y;
         if (null == this.field_B) {
           return null;
@@ -71,12 +71,12 @@ abstract class lq extends wj implements e {
         var6 = this.field_B;
         var2 = var6;
         if (param0) {
-          this.field_B = (wj[]) null;
+          this.field_B = (UiWidget[]) null;
         }
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
           if (var4 != null &&
-            var4.e(1023)) {
+            var4.isFocused(1023)) {
             return var4;
           }
         }
@@ -85,12 +85,12 @@ abstract class lq extends wj implements e {
 
     abstract void h(int param0);
 
-    void a(int param0, int param1, wj param2, int param3) {
+    void updateMouseOver(int param0, int param1, UiWidget param2, int param3) {
         int var6 = 0;
-        wj[] var5 = null;
-        wj var7 = null;
+        UiWidget[] var5 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        wj[] var9 = null;
+        UiWidget[] var9 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -98,7 +98,7 @@ abstract class lq extends wj implements e {
         RuntimeException var5_ref = null;
         var8 = BachelorFridge.field_y;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateMouseOver(param0, param1, param2, param3);
           if (this.field_B == null) {
             return;
           }
@@ -107,7 +107,7 @@ abstract class lq extends wj implements e {
           for (var6 = 0; var9.length > var6; var6++) {
             var7 = var9[var6];
             if (var7 != null) {
-              var7.a(param0 + this.field_s, this.field_v + param1, param2, 20);
+              var7.updateMouseOver(param0 + this.x, this.y + param1, param2, 20);
             }
           }
           return;
@@ -130,12 +130,12 @@ abstract class lq extends wj implements e {
         this.h(param2 ^ -11436);
     }
 
-    final void a(int param0, int param1, byte param2, wj param3, int param4, int param5) {
+    final void a(int param0, int param1, byte param2, UiWidget param3, int param4, int param5) {
         int var8 = 0;
-        wj[] var7 = null;
-        wj var9 = null;
+        UiWidget[] var7 = null;
+        UiWidget var9 = null;
         int var10 = 0;
-        wj[] var11 = null;
+        UiWidget[] var11 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -147,14 +147,14 @@ abstract class lq extends wj implements e {
             return;
           }
           if (param2 != -101) {
-            this.a((byte) -33, 24, -35, -40);
+            this.draw((byte) -33, 24, -35, -40);
           }
           var11 = this.field_B;
           var7 = var11;
           for (var8 = 0; var11.length > var8; var8++) {
             var9 = var11[var8];
             if (var9 != null) {
-              var9.a(param0 + this.field_s, param1, (byte) -101, param3, param4, param5 + this.field_v);
+              var9.a(param0 + this.x, param1, (byte) -101, param3, param4, param5 + this.y);
             }
           }
           return;
@@ -172,12 +172,12 @@ abstract class lq extends wj implements e {
         }
     }
 
-    final void f(int param0) {
-        wj[] var2;
+    final void blur(int param0) {
+        UiWidget[] var2;
         int var3;
-        wj var4;
+        UiWidget var4;
         int var5;
-        wj[] var6;
+        UiWidget[] var6;
         var5 = BachelorFridge.field_y;
         var6 = this.field_B;
         var2 = var6;
@@ -188,7 +188,7 @@ abstract class lq extends wj implements e {
         while (var3 < var6.length) {
           var4 = var6[var3];
           if (var4 != null) {
-            var4.f(31);
+            var4.blur(31);
           }
           var3++;
         }
@@ -225,7 +225,7 @@ abstract class lq extends wj implements e {
             }
           }
           if (param0 != 1) {
-            lq.a(61);
+            lq.releaseStatics(61);
           }
           if (null != uf.field_c) {
             if (uf.field_c.c(28607)) {
@@ -241,11 +241,11 @@ abstract class lq extends wj implements e {
         }
     }
 
-    private final boolean a(int param0, wj param1, int param2) {
+    private final boolean a(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        wj var5 = null;
-        wj var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -260,11 +260,11 @@ abstract class lq extends wj implements e {
           while (var4_int < this.field_B.length) {
             var5 = this.field_B[var4_int];
             if (var5 != null &&
-              var5.e(1023)) {
+              var5.isFocused(1023)) {
               for (var4_int = var4_int + param0; this.field_B.length > var4_int; var4_int = var4_int + param0) {
                 var6 = this.field_B[var4_int];
                 if (var6 != null &&
-                  var6.a(param1, param2 ^ -86)) {
+                  var6.acquireFocus(param1, param2 ^ -86)) {
                   return true;
                 }
               }
@@ -286,38 +286,38 @@ abstract class lq extends wj implements e {
         }
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void draw(byte param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var5;
-        wj var7;
+        UiWidget var7;
         int var8;
         var8 = BachelorFridge.field_y;
         if (param2 == 0 &&
-          null != this.field_f) {
-          this.field_f.a(param3, (wj) (this), 32679, param1, true);
+          null != this.renderer) {
+          this.renderer.a(param3, (UiWidget) (this), 32679, param1, true);
         }
         var5 = -19 % ((param0 + 20) / 54);
         if (this.field_B != null) {
           for (var6 = this.field_B.length - 1; var6 >= 0; var6--) {
             var7 = this.field_B[var6];
             if (var7 != null) {
-              var7.a((byte) 125, param1 + this.field_v, param2, param3 + this.field_s);
+              var7.draw((byte) 125, param1 + this.y, param2, param3 + this.x);
             }
           }
         }
     }
 
-    lq(int param0, int param1, int param2, int param3, qda param4) {
-        super(param0, param1, param2, param3, param4, (pl) null);
+    lq(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
+        super(param0, param1, param2, param3, param4, (WidgetListener) null);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, wj param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int var9 = 0;
-        wj[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        wj var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        wj[] var12 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -335,7 +335,7 @@ abstract class lq extends wj implements e {
           for (var9 = 0; var9 < var12.length; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.e(1023) &&
+              var10.isFocused(1023) &&
               var10.a(param0, 13, param2, param3, param4, param5, param6)) {
               return true;
             }
@@ -358,8 +358,8 @@ abstract class lq extends wj implements e {
     final int b(int param0) {
         int var4 = 0;
         int var2;
-        wj[] var3;
-        wj var5;
+        UiWidget[] var3;
+        UiWidget var5;
         int var7;
         int var6;
         var7 = BachelorFridge.field_y;
@@ -380,14 +380,14 @@ abstract class lq extends wj implements e {
         return var2;
     }
 
-    final String c(byte param0) {
+    final String getTooltip(byte param0) {
         int var3 = 0;
-        wj[] var2;
-        wj var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var6;
-        wj[] var8;
+        UiWidget[] var8;
         String var5;
-        wj var7;
+        UiWidget var7;
         var6 = BachelorFridge.field_y;
         if (this.field_B == null) {
           return null;
@@ -397,7 +397,7 @@ abstract class lq extends wj implements e {
         for (var3 = 0; var3 < var8.length; var3++) {
           var4 = var8[var3];
           if (var4 != null) {
-            var5 = var4.c((byte) 16);
+            var5 = var4.getTooltip((byte) 16);
             if (var5 != null) {
               return var5;
             }
@@ -406,8 +406,8 @@ abstract class lq extends wj implements e {
         if (param0 == 16) {
           return null;
         }
-        var7 = (wj) null;
-        this.a(22, -72, ']', (wj) null);
+        var7 = (UiWidget) null;
+        this.handleKey(22, -72, ']', (UiWidget) null);
         return null;
     }
 
@@ -418,9 +418,9 @@ abstract class lq extends wj implements e {
         StringBuilder discarded$6 = null;
         StringBuilder discarded$5 = null;
         int var6 = 0;
-        wj var8 = null;
+        UiWidget var8 = null;
         int var10 = 0;
-        wj[] var11 = null;
+        UiWidget[] var11 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -468,14 +468,14 @@ abstract class lq extends wj implements e {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, wj param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         int var6 = 0;
-        wj[] var5 = null;
+        UiWidget[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        wj var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        wj[] var9 = null;
+        UiWidget[] var9 = null;
         boolean stackIn_18_0 = false;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -491,8 +491,8 @@ abstract class lq extends wj implements e {
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];
             if (var7 != null &&
-              var7.e(1023) &&
-              var7.a(10, param1, param2, param3)) {
+              var7.isFocused(1023) &&
+              var7.handleKey(10, param1, param2, param3)) {
               return true;
             }
           }
@@ -523,7 +523,7 @@ abstract class lq extends wj implements e {
         }
     }
 
-    private final boolean a(int param0, wj param1) {
+    private final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -550,7 +550,7 @@ abstract class lq extends wj implements e {
         }
     }
 
-    private final boolean b(wj param0, int param1) {
+    private final boolean b(UiWidget param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
@@ -636,21 +636,21 @@ abstract class lq extends wj implements e {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != 1023) {
           return false;
         }
         return null != this.b(false) ? true : false;
     }
 
-    private final boolean a(wj param0, boolean param1, int param2) {
+    private final boolean a(UiWidget param0, boolean param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        wj var5 = null;
-        wj var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         Object stackIn_7_0 = null;
-        wj stackIn_7_1 = null;
+        UiWidget stackIn_7_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -666,11 +666,11 @@ abstract class lq extends wj implements e {
             stackIn_7_0 = null;
             stackIn_7_1 = var5;
             if (stackIn_7_0 != stackIn_7_1 &&
-              var5.e(1023)) {
+              var5.isFocused(1023)) {
               for (var4_int = var4_int - param2; var4_int >= 0; var4_int = var4_int - param2) {
                 var6 = this.field_B[var4_int];
                 if (null != var6 &&
-                  var6.a(param0, -79)) {
+                  var6.acquireFocus(param0, -79)) {
                   return true;
                 }
               }
@@ -678,7 +678,7 @@ abstract class lq extends wj implements e {
             var4_int--;
           }
           if (param1) {
-            this.f(-93);
+            this.blur(-93);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -695,13 +695,13 @@ abstract class lq extends wj implements e {
         }
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4, wj param5, int param6) {
+    final boolean b(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         int var9 = 0;
-        wj[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        wj var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        wj[] var12 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -719,7 +719,7 @@ abstract class lq extends wj implements e {
           for (var9 = 0; var9 < var12.length; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.b(param0, -7375, this.field_s + param2, param3, this.field_v + param4, param5, param6)) {
+              var10.b(param0, -7375, this.x + param2, param3, this.y + param4, param5, param6)) {
               return true;
             }
           }
@@ -738,13 +738,13 @@ abstract class lq extends wj implements e {
         }
     }
 
-    final boolean a(wj param0, int param1) {
+    final boolean acquireFocus(UiWidget param0, int param1) {
         int var4 = 0;
-        wj[] var3 = null;
+        UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
-        wj var5 = null;
+        UiWidget var5 = null;
         int var6 = 0;
-        wj[] var7 = null;
+        UiWidget[] var7 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -756,7 +756,7 @@ abstract class lq extends wj implements e {
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
             if (var5 != null &&
-              var5.a(param0, -88)) {
+              var5.acquireFocus(param0, -88)) {
               return true;
             }
           }

@@ -10,7 +10,7 @@ final class gma {
     boolean field_a;
     static int[][] field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -5377) {
           gma.b(117);
           field_e = null;

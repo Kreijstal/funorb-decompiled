@@ -69,11 +69,11 @@ class jla {
           var2 = 590;
         }
         var3 = 0;
-        aha.field_D.drawText(EventAnimation.field_o[0], 25, 30, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_o[0], 25, 30, FullHealAnimation.field_v, -1);
         var3++;
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_o[1], 25, 30 + g.field_g.field_u * var3, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var3 += 2;
-        aha.field_D.drawText(EventAnimation.field_o[2], 25, var3 * g.field_g.field_u + 40, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_o[2], 25, var3 * g.field_g.field_u + 40, FullHealAnimation.field_v, -1);
         var3 += 2;
         if (param0 != -56) {
           field_d = (IndexedSprite) null;
@@ -159,7 +159,7 @@ class jla {
     private final void c(byte param0) {
         int var2 = 590;
         int var3 = 0;
-        aha.field_D.drawText(EventAnimation.field_u[0], 25, 30, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_u[0], 25, 30, FullHealAnimation.field_v, -1);
         var3++;
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_u[1], 25, g.field_g.field_u * var3 + 30, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var3++;
@@ -181,7 +181,7 @@ class jla {
           }
           if (ut.field_o == 0 ||
             kaa.field_m == 0) {
-            return gha.field_e;
+            return DefaultWidgetRenderer.field_e;
           }
           return pga.field_a;
         }
@@ -204,7 +204,7 @@ class jla {
           RasterBuffer.field_d.a(vc.field_a * 32, false, 32, 105);
           ug.field_q.a(19842, true);
           ug.field_q.a(vc.field_a * 32, false, 32, 121);
-          var2 = (uu) (mda.field_b.field_z.b((byte) 90));
+          var2 = (uu) (mda.field_b.children.b((byte) 90));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2 == null))) {
             stackIn_11_0 = ~var2.field_R;
@@ -213,14 +213,14 @@ class jla {
               if (stackIn_11_0 == stackIn_11_1) {
                 if (ProxySocketConnector.field_f <= 0 &&
                   !fw.field_h[var2.field_Cb].field_e) {
-                  var2 = (uu) (mda.field_b.field_z.c(0));
+                  var2 = (uu) (mda.field_b.children.c(0));
                   continue;
                 }
                 uca.a(32, (byte) 121);
                 RasterBuffer.a(7, param1 ^ 29576);
                 ImageProducerRasterBuffer.a(param1 - 28204, var2.field_Cb, 1);
               }
-              var2 = (uu) (mda.field_b.field_z.c(0));
+              var2 = (uu) (mda.field_b.children.c(0));
               continue;
             }
             break;
@@ -279,7 +279,7 @@ class jla {
           }
           lfa.field_l.a(19842, true);
           if (lfa.field_l.field_R == 1) {
-            rs.a(true);
+            StatusEffectInfo.a(true);
             sia.field_h = true;
             lg.a(true, -3, true);
           }
@@ -366,7 +366,7 @@ class jla {
 
     private final void h(int param0) {
         SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, 65280, 4227136);
-        aha.field_D.a(hl.field_E, 320, 240, 16777215, -1);
+        LinkTextWidget.field_D.a(hl.field_E, 320, 240, 16777215, -1);
         if (param0 >= -120) {
           this.field_e = (jd) null;
         }
@@ -401,7 +401,7 @@ class jla {
         int var2 = hs.a(false, nga.field_i) ? 1 : 0;
         String var3 = nga.field_j;
         var3 = var3 + " " + BoardChange.a((byte) 75, lga.a(true, new String[]{nla.field_c}, ResetSpecial.a((byte) -48, false, false, var2 != 0)), '#', "<br><br>");
-        aha.field_D.drawParagraph(var3, 80, 200, 480, 300, 3518976, -1, 1, 0, 30);
+        LinkTextWidget.field_D.drawParagraph(var3, 80, 200, 480, 300, 3518976, -1, 1, 0, 30);
     }
 
     private final void f(int param0) {
@@ -423,12 +423,12 @@ class jla {
           }
         }
         var2 = 590;
-        aha.field_D.drawText(EventAnimation.field_s[0], 25, 30, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_s[0], 25, 30, FullHealAnimation.field_v, -1);
         var3 = 0;
         var3++;
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_s[1], 25, g.field_g.field_u * var3 + 30, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var3 += 2;
-        aha.field_D.drawText(EventAnimation.field_s[2], 25, 40 + var3 * g.field_g.field_u, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_s[2], 25, 40 + var3 * g.field_g.field_u, FullHealAnimation.field_v, -1);
         var3++;
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_s[3], 25, 40 + var3 * g.field_g.field_u, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var3++;
@@ -570,7 +570,7 @@ class jla {
                   }
                   mg.field_m.b(27185);
                 }
-                kj.b((byte) -88);
+                TileEffect.b((byte) -88);
               }
               break regionExit1;
             } else if (var6 != 33 ||
@@ -717,7 +717,7 @@ class jla {
               if (AttackUpAllAnimation.e(-29919)) {
                 stackIn_95_0 = (!AttackUpAllAnimation.e(param0 - 29881)) ? 1 : 0;
                 var6Lifetime3 = stackIn_95_0;
-                gu.a(8, param2, 6106, aha.field_D, aha.field_D.field_B + aha.field_D.field_v, he.field_n, aha.field_D.field_v, true, (Sprite[]) null, 8, 240, 320, (Sprite[]) null, var6Lifetime3, 2);
+                gu.a(8, param2, 6106, LinkTextWidget.field_D, LinkTextWidget.field_D.field_B + LinkTextWidget.field_D.field_v, he.field_n, LinkTextWidget.field_D.field_v, true, (Sprite[]) null, 8, 240, 320, (Sprite[]) null, var6Lifetime3, 2);
                 if (var9 == 0) {
                   break regionExit2;
                 }
@@ -753,7 +753,7 @@ class jla {
                 break regionExit2;
               }
               if (dj.field_c == null &&
-                sna.field_fb == null) {
+                UiComponent.field_fb == null) {
                 lg.a(true, -3, param2);
                 if (var9 == 0) {
                   break regionExit2;
@@ -1165,7 +1165,7 @@ class jla {
               if (!this.field_e.e(0)) {
                 break regionExit2;
               }
-              if (null != sna.field_fb) {
+              if (null != UiComponent.field_fb) {
                 break regionExit2;
               }
               dj.field_c.field_e.b((byte) 27);
@@ -1200,8 +1200,8 @@ class jla {
               (decompiledFrameRemainder19) &&
               (decompiledFrameRemainder18) &&
               (decompiledFrameRemainder17)) {
-              if ((null == sna.field_fb ||
-                !sna.field_fb.field_e.field_a) &&
+              if ((null == UiComponent.field_fb ||
+                !UiComponent.field_fb.field_e.field_a) &&
                 (dj.field_c == null ||
                 !dj.field_c.field_e.field_a)) {
                 if (!this.field_e.e(0)) {
@@ -1425,7 +1425,7 @@ class jla {
           i.field_d.a(false, 1, 1, true, 0);
         }
         var2 = 590;
-        aha.field_D.drawText(EventAnimation.field_k[0], 25, 30, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_k[0], 25, 30, FullHealAnimation.field_v, -1);
         var3 = 0;
         var3++;
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_k[1], 25, 30 + var3 * g.field_g.field_u, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
@@ -1442,7 +1442,7 @@ class jla {
         SoftwareRasterizer.fillRectangle(bh.field_r.field_q + 163, var4 - 2, 20, 4, 3518976);
         var5 = -116 % ((-51 - param0) / 57);
         var3 += 16;
-        aha.field_D.drawText(EventAnimation.field_k[2], 25, 40 + g.field_g.field_u * var3, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_k[2], 25, 40 + g.field_g.field_u * var3, FullHealAnimation.field_v, -1);
         var3++;
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_k[3], 25, 40 + g.field_g.field_u * var3, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
     }
@@ -1514,7 +1514,7 @@ class jla {
           return BufferedSocket.field_h[this.field_b] + BufferedSocket.field_o[this.field_b] * param0;
         }
         var3 = BufferedSocket.field_h[this.field_b] + param0 * BufferedSocket.field_o[this.field_b];
-        stackIn_14_0 = (ng.a((byte) -24)) ? 4 : 5;
+        stackIn_14_0 = (MoveInfoPanel.a((byte) -24)) ? 4 : 5;
         var4 = stackIn_14_0;
         if (param0 >= var4) {
           var3 = BufferedSocket.field_o[this.field_b] * (-var4 + param0) + 294;
@@ -1540,7 +1540,7 @@ class jla {
           return true;
         }
         if (param0 == 0 &&
-          sna.field_fb != null) {
+          UiComponent.field_fb != null) {
           return false;
         }
         return true;
@@ -1595,7 +1595,7 @@ class jla {
         return BufferedSocket.field_l[this.field_b];
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_f = null;
         if (!param0) {
@@ -1731,7 +1731,7 @@ class jla {
                   }
                 }
                 if (null == dj.field_c &&
-                  sna.field_fb == null) {
+                  UiComponent.field_fb == null) {
                   if (this.field_b != 13 ||
                     gs.field_f != null) {
                     lg.a(true, -3, false);
@@ -1777,7 +1777,7 @@ class jla {
         boolean stackIn_14_0 = false;
         var6 = BachelorFridge.field_y;
         if (param0) {
-          jla.b(false);
+          jla.releaseStatics(false);
         }
         var4 = 0;
         while (BufferedSocket.field_b[this.field_b].length > var4) {
@@ -1941,7 +1941,7 @@ class jla {
           }
         }
         var20 = a.a(var12, 32, param2 + 16763049, var13);
-        gna.a(true, var20, var5, var10, false, var9 + aha.field_D.field_u);
+        gna.a(true, var20, var5, var10, false, var9 + LinkTextWidget.field_D.field_u);
         if (20 == var4Lifetime1 ||
           var4Lifetime1 == 21) {
           var10 = var10 + mv.field_n;
@@ -2030,7 +2030,7 @@ class jla {
 
     private final void b(int param0) {
         int var2 = 590;
-        aha.field_D.drawText(EventAnimation.field_t[0], 25, 30, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_t[0], 25, 30, FullHealAnimation.field_v, -1);
         int var3 = 0;
         var3 += 2;
         g.field_g.drawText(EventAnimation.field_t[1], 25, 30 + g.field_g.field_u * var3, 3518976, -1);
@@ -2047,7 +2047,7 @@ class jla {
         if (param0 > -20) {
           this.c((byte) 26);
         }
-        aha.field_D.drawText(EventAnimation.field_t[5], 25, 30 + g.field_g.field_u * var3, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_t[5], 25, 30 + g.field_g.field_u * var3, FullHealAnimation.field_v, -1);
         var3++;
         vw.field_a[0].field_b[120].a(25, 30 + var3 * g.field_g.field_u, 64, 32);
         vw.field_a[2].field_b[120].a(89, g.field_g.field_u * var3 + 30, 64, 32);
@@ -2087,7 +2087,7 @@ class jla {
           if (!di.b(40)) {
             return;
           }
-          aia.d((byte) -112);
+          TextLinkRegion.d((byte) -112);
           return;
         }
         if (this.field_b == 12) {
@@ -2125,15 +2125,15 @@ class jla {
               this.h(param0 - 137);
               if ((var3 != 0) &&
                 (this.field_b == 10)) {
-                var2 = aha.field_D.b(LevitateEvent.field_s, 480);
-                hp.a(uma.field_J[0].field_n + 480 + uma.field_J[2].field_n, -uma.field_J[0].field_n + 80, (byte) 113, 30 * var2 + (uma.field_J[0].field_o + uma.field_J[6].field_o), uma.field_J, -uma.field_J[0].field_o + (200 - aha.field_D.field_u));
-                aha.field_D.drawParagraph(LevitateEvent.field_s, 80, 188, 480, 1000, 3518976, -1, 0, 0, 30);
+                var2 = LinkTextWidget.field_D.b(LevitateEvent.field_s, 480);
+                hp.a(uma.field_J[0].field_n + 480 + uma.field_J[2].field_n, -uma.field_J[0].field_n + 80, (byte) 113, 30 * var2 + (uma.field_J[0].field_o + uma.field_J[6].field_o), uma.field_J, -uma.field_J[0].field_o + (200 - LinkTextWidget.field_D.field_u));
+                LinkTextWidget.field_D.drawParagraph(LevitateEvent.field_s, 80, 188, 480, 1000, 3518976, -1, 0, 0, 30);
               }
             } else {
               if (this.field_b == 10) {
-                var2 = aha.field_D.b(LevitateEvent.field_s, 480);
-                hp.a(uma.field_J[0].field_n + 480 + uma.field_J[2].field_n, -uma.field_J[0].field_n + 80, (byte) 113, 30 * var2 + (uma.field_J[0].field_o + uma.field_J[6].field_o), uma.field_J, -uma.field_J[0].field_o + (200 - aha.field_D.field_u));
-                aha.field_D.drawParagraph(LevitateEvent.field_s, 80, 188, 480, 1000, 3518976, -1, 0, 0, 30);
+                var2 = LinkTextWidget.field_D.b(LevitateEvent.field_s, 480);
+                hp.a(uma.field_J[0].field_n + 480 + uma.field_J[2].field_n, -uma.field_J[0].field_n + 80, (byte) 113, 30 * var2 + (uma.field_J[0].field_o + uma.field_J[6].field_o), uma.field_J, -uma.field_J[0].field_o + (200 - LinkTextWidget.field_D.field_u));
+                LinkTextWidget.field_D.drawParagraph(LevitateEvent.field_s, 80, 188, 480, 1000, 3518976, -1, 0, 0, 30);
               }
             }
           }
@@ -2157,7 +2157,7 @@ class jla {
 
     private final void d(int param0) {
         int var2 = 0;
-        aha.field_D.drawText(EventAnimation.field_j[0], 25, 30, FullHealAnimation.field_v, -1);
+        LinkTextWidget.field_D.drawText(EventAnimation.field_j[0], 25, 30, FullHealAnimation.field_v, -1);
         var2++;
         var2 = var2 + g.field_g.drawParagraph(EventAnimation.field_j[1], 25, -10 + (g.field_g.field_u * var2 + 40), 590, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var2 += 2;
@@ -2168,7 +2168,7 @@ class jla {
         var2 = var2 + g.field_g.drawParagraph(EventAnimation.field_j[4], var4, 40 + g.field_g.field_u * var2, var3, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         pt.a(315, 3518976, 145, true, var2 * g.field_g.field_u + 40 - g.field_g.field_u / 2, 180, 5, (byte) 111, 350);
         var2++;
-        qh.a(180, 270, -1271, 234, g.field_g.field_u * (1 + var2) + 40, 350, 5, 3518976);
+        WidgetTheme.a(180, 270, -1271, 234, g.field_g.field_u * (1 + var2) + 40, 350, 5, 3518976);
         var2 = var2 + g.field_g.drawParagraph(EventAnimation.field_j[5], var4, 40 + g.field_g.field_u * var2, var3, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var2++;
         pt.a(283, 3518976, 215, true, (var2 + 1) * g.field_g.field_u + 40, 280, 5, (byte) 53, 350);
@@ -2182,10 +2182,10 @@ class jla {
           var5 = 0;
         }
         g.field_g.drawParagraph(EventAnimation.field_j[3], 125, -((var5 + 11) * g.field_g.field_u / param0) + 470, var3, 2 * g.field_g.field_u, 3518976, -1, 0, 0, g.field_g.field_u);
-        qh.a(180, 198, -1271, 32, (-var5 + 3) * g.field_g.field_u / 2 + 385, 120, 10, 3518976);
+        WidgetTheme.a(180, 198, -1271, 32, (-var5 + 3) * g.field_g.field_u / 2 + 385, 120, 10, 3518976);
         var3 = g.field_g.a(EventAnimation.field_j[8]);
         g.field_g.drawText(EventAnimation.field_j[8], 25, 470 - 3 * g.field_g.field_u / 2, 3518976, -1);
-        qh.a(362, 91, -1271, 45, 435, 68, 5, 3518976);
+        WidgetTheme.a(362, 91, -1271, 45, 435, 68, 5, 3518976);
     }
 
     static {

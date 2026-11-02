@@ -38,7 +38,7 @@ final class hda extends k {
         var5 = BachelorFridge.field_y;
         try {
           if (param0 != -71) {
-            hda.e(36);
+            hda.releaseStatics(36);
           }
           var4_int = param2;
           if (var4_int != 0) {
@@ -67,7 +67,7 @@ final class hda extends k {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 7 % ((param0 - 52) / 62);
         field_l = null;
     }

@@ -13,7 +13,7 @@ final class fka extends IntrusiveNode {
     int field_n;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -2779) {
           return;
         }

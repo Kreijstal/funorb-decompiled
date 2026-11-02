@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ov extends uo {
-    static sna field_d;
+    static UiComponent field_d;
     static String field_g;
     static int field_c;
     static int[] field_e;
@@ -21,7 +21,7 @@ final class ov extends uo {
         return 0;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_f = null;
         field_g = null;

@@ -24,9 +24,9 @@ final class pga {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 470) {
-          pga.a(-55);
+          pga.releaseStatics(-55);
           field_b = null;
           return;
         }

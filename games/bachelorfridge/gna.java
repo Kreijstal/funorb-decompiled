@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gna extends sna {
-    private sna field_wb;
-    sna field_vb;
+final class gna extends UiComponent {
+    private UiComponent field_wb;
+    UiComponent field_vb;
 
     final static void f(byte param0) {
         int var1 = 20 % ((-9 - param0) / 54);
         bja.a(new Sprite(fi.field_p, (java.awt.Component) ((Object) TBomberAnimation.field_y)), 6, ep.field_m);
     }
 
-    gna(long param0, sna param1, sna param2, sna param3, Sprite param4, String param5) {
+    gna(long param0, UiComponent param1, UiComponent param2, UiComponent param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -27,12 +27,12 @@ final class gna extends sna {
         RuntimeException var8 = null;
         try {
           if (param4 != null) {
-            this.field_wb = new sna(0L, param2);
+            this.field_wb = new UiComponent(0L, param2);
             this.field_wb.field_v = param4;
             this.a(-1, this.field_wb);
           }
           if (param5 != null) {
-            this.field_vb = new sna(0L, param3, param5);
+            this.field_vb = new UiComponent(0L, param3, param5);
             this.a(-1, this.field_vb);
             this.d((byte) 121);
           } else {
@@ -131,7 +131,7 @@ final class gna extends sna {
           }
           return;
         }
-        this.field_wb = (sna) null;
+        this.field_wb = (UiComponent) null;
         var4Lifetime1 = -param1;
         var5Lifetime1 = -param1;
         if (null != this.field_wb) {

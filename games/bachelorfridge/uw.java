@@ -15,7 +15,7 @@ final class uw extends DualLinkNode {
           bu.a(0, var1);
           TriangleRasterizer.d();
           SoftwareRasterizer.clear();
-          ur.field_d = 0;
+          WhirlpoolDigest.field_d = 0;
           tc.b(-8144);
           var2 = var1.copy();
           if (param0 != 65536) {
@@ -33,7 +33,7 @@ final class uw extends DualLinkNode {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != 6144) {
           field_o = (MusicTrack) null;
@@ -48,7 +48,7 @@ final class uw extends DualLinkNode {
         } else {
           TriangleRasterizer.d();
           mu.field_j = new int[]{0, 0, -270, 65536, 0, 0, 0, 69632, 0, 0, 0, 65536};
-          lka.field_G = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
+          TextInputWidget.field_G = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
           via.a(6144, (byte) 71);
           ft.a(6144, (byte) -128);
           ft.a(6144, (byte) -128);
@@ -58,7 +58,7 @@ final class uw extends DualLinkNode {
         }
         TriangleRasterizer.d();
         mu.field_j = new int[]{0, 0, -270, 65536, 0, 0, 0, 69632, 0, 0, 0, 65536};
-        lka.field_G = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
+        TextInputWidget.field_G = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
         via.a(6144, (byte) 71);
         ft.a(6144, (byte) -128);
         ft.a(6144, (byte) -128);

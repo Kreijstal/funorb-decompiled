@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd extends gha {
+final class wd extends DefaultWidgetRenderer {
     private tc[] field_u;
     private tc field_y;
     static int[] field_x;
     static IntrusiveDeque field_t;
-    static sna field_v;
+    static UiComponent field_v;
     static Sprite[] field_w;
 
     wd(wd param0, boolean param1) {
@@ -34,8 +34,8 @@ final class wd extends gha {
         }
     }
 
-    public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
-        wj stackIn_3_0 = null;
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -43,19 +43,19 @@ final class wd extends gha {
         RuntimeException var6 = null;
         tc var7 = null;
         tc var9 = null;
-        hf var10 = null;
+        InteractiveWidget var10 = null;
         tc var11 = null;
         tc var12 = null;
         tc var13 = null;
         tc var14 = null;
         try {
-          if (!(param1 instanceof hf)) {
+          if (!(param1 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (wj) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           }
-          var10 = (hf) (stackIn_3_0);
-          ah.a(param0 + param1.field_s + param1.field_p, (byte) 110, param3 + param1.field_v, param0 + param1.field_s, param1.field_q + param3 + param1.field_v);
+          var10 = (InteractiveWidget) (stackIn_3_0);
+          ah.a(param0 + param1.x + param1.width, (byte) 110, param3 + param1.y, param0 + param1.x, param1.height + param3 + param1.y);
           if (var10 != null) {
             param4 = param4 & var10.field_z;
           }
@@ -72,7 +72,7 @@ final class wd extends gha {
                 var11.a(this, param0, param1, (byte) -58, this.field_y, param3);
               }
             }
-            if (var10.field_t) {
+            if (var10.mouseOver) {
               var12 = this.field_u[3];
               if (var10.field_u != 0 &&
                 var12 != null) {
@@ -85,7 +85,7 @@ final class wd extends gha {
               }
             }
           }
-          if (param1.e(1023)) {
+          if (param1.isFocused(1023)) {
             var13 = this.field_u[5];
             if (var13 != null) {
               var13.a(this, param0, param1, (byte) -124, this.field_y, param3);

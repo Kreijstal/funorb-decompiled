@@ -4,7 +4,7 @@
 final class CranberrySpecial extends SpecialOrder {
     static String field_p;
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         BattleCreature var4 = null;
@@ -121,7 +121,7 @@ final class CranberrySpecial extends SpecialOrder {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         if (param0 != -4) {
           field_p = (String) null;

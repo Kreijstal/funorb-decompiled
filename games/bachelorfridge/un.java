@@ -16,7 +16,7 @@ final class un {
     int field_c;
     int field_k;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 == 2) {
           field_a = null;

@@ -7,7 +7,7 @@ final class RageAnimation extends EventAnimation {
     static ok field_w;
     static String field_y;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
         if (0 > fieldTemp$0) {
@@ -68,7 +68,7 @@ final class RageAnimation extends EventAnimation {
 
     private final void f(int param0) {
         EventEffect var3_ref = null;
-        ad var7 = null;
+        CreatureActor var7 = null;
         rq discarded$0 = null;
         Object var3 = null;
         int var5 = BachelorFridge.field_y;
@@ -76,14 +76,14 @@ final class RageAnimation extends EventAnimation {
         if (param0 < 12) {
           this.d(-101);
         }
-        this.a(27799, new taa(this.screen, this.field_x.field_r.a(-27449, this.screen)));
+        this.addChild(27799, new ActorAnimation(this.screen, this.field_x.field_r.a(-27449, this.screen)));
         if (!var6.isDown(78)) {
           var3_ref = (EventEffect) (this.field_x.effects.b((byte) 90));
           al.a(-52, this.field_x.moveId);
           while (var3_ref != null) {
             var7 = var3_ref.target.a(-27449, this.screen);
             discarded$0 = new rq(this.screen, var7.field_s.tileX, var7.field_s.tileY);
-            var3_ref.a(var6, this.screen.field_h, 12);
+            var3_ref.apply(var6, this.screen.field_h, 12);
             var3_ref = (EventEffect) (this.field_x.effects.c(0));
           }
           return;
@@ -100,7 +100,7 @@ final class RageAnimation extends EventAnimation {
         }
     }
 
-    RageAnimation(gj param0, RageEvent param1) {
+    RageAnimation(BattleScreen param0, RageEvent param1) {
         super(param0, param1);
         try {
           this.field_x = param1;

@@ -6,7 +6,7 @@ final class g extends IntrusiveNode {
     byte[] field_h;
     static BitmapFont field_f;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 8 % ((-41 - param0) / 53);
         field_f = null;
         field_g = null;
@@ -16,7 +16,7 @@ final class g extends IntrusiveNode {
         try {
           wi.a(false, param1, param0, (byte) -68);
           if (param2 <= 55) {
-            g.c((byte) 93);
+            g.releaseStatics((byte) 93);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "g.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -35,7 +35,7 @@ final class g extends IntrusiveNode {
           var5 = param3.b(108, param0, param1);
           var4 = var5;
           if (param2 != -30744) {
-            g.c((byte) 41);
+            g.releaseStatics((byte) 41);
           }
           if (var5 == null) {
             return false;

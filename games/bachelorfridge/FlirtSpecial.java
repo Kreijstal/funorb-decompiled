@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class FlirtSpecial extends SpecialOrder {
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         RuntimeException var3 = null;
         BattleCreature var4 = null;
         FlirtEvent var5 = null;

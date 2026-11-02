@@ -104,7 +104,7 @@ final class StampedeEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         StampedeAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -172,7 +172,7 @@ final class StampedeEvent extends SpecialEvent {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_q = null;
         int var1 = 102 / ((param0 + 22) / 53);
     }

@@ -8,7 +8,7 @@ final class SnowEvent extends SpecialEvent {
     static sga field_q;
     static String field_t;
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         BattleState var4 = null;
         SnowAnimation stackIn_3_0 = null;
@@ -83,7 +83,7 @@ final class SnowEvent extends SpecialEvent {
         super(param0, param1);
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 26) {
           SnowEvent.e(29);
           field_t = null;

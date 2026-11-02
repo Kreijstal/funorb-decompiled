@@ -1,44 +1,44 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nea extends sna {
+final class nea extends UiComponent {
     String field_xb;
     String field_Cb;
     String field_Ab;
-    sna field_Db;
+    UiComponent field_Db;
     static IndexedSprite[] field_Bb;
     int field_wb;
     String field_vb;
-    static sna field_yb;
-    sna field_Eb;
-    sna field_zb;
+    static UiComponent field_yb;
+    UiComponent field_Eb;
+    UiComponent field_zb;
 
     nea() {
-        super(0L, (sna) null);
+        super(0L, (UiComponent) null);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_Bb = null;
         field_yb = null;
         if (param0 != 18178) {
-          field_yb = (sna) null;
+          field_yb = (UiComponent) null;
         }
     }
 
     final static eq f(byte param0) {
-        if (tn.field_a == ola.field_p) {
+        if (GameClock.field_a == FridgeScreen.field_p) {
           throw new IllegalStateException();
         }
         if (param0 != 94) {
-          nea.f(67);
-          if (ola.field_p == OhNoAnimation.field_w) {
-            ola.field_p = tn.field_a;
+          nea.releaseStatics(67);
+          if (FridgeScreen.field_p == OhNoAnimation.field_w) {
+            FridgeScreen.field_p = GameClock.field_a;
             return ZombiesSpecial.field_p;
           }
           return null;
         }
-        if (ola.field_p == OhNoAnimation.field_w) {
-          ola.field_p = tn.field_a;
+        if (FridgeScreen.field_p == OhNoAnimation.field_w) {
+          FridgeScreen.field_p = GameClock.field_a;
           return ZombiesSpecial.field_p;
         }
         return null;

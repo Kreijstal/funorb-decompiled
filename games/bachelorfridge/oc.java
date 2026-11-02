@@ -5,7 +5,7 @@ final class oc extends pu {
     static String field_m;
     static BitmapFont field_l;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 32586) {
           return;
         }

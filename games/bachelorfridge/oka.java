@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class oka extends gha {
+class oka extends DefaultWidgetRenderer {
     static String field_t;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_t = null;
         if (param0 < 105) {
           field_t = (String) null;
@@ -15,23 +15,23 @@ class oka extends gha {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_u, -1, 2147483647, false);
     }
 
-    public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         RuntimeException var6 = null;
-        wj var7 = null;
+        UiWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4) {
-            oka.a(param1.field_s + param0, param1.field_p, param1.field_v + param3, false, param1.field_q);
+            oka.a(param1.x + param0, param1.width, param1.y + param3, false, param1.height);
           }
           super.a(param0, param1, param2 + 0, param3, param4);
           if (param2 == 32679) {
             return;
           }
-          var7 = (wj) null;
-          this.a(-73, (wj) null, 81, 95, false);
+          var7 = (UiWidget) null;
+          this.a(-73, (UiWidget) null, 81, 95, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

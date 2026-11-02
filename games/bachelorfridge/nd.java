@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd extends kj {
+final class nd extends TileEffect {
     static double field_j;
     static int field_h;
     static Sprite field_g;
-    static sna field_i;
+    static UiComponent field_i;
     private int field_f;
 
     final void a(int param0, int param1, int param2) {
@@ -75,7 +75,7 @@ final class nd extends kj {
         return false;
     }
 
-    nd(gj param0, int param1, int param2) {
+    nd(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
     }
 

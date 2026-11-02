@@ -5,7 +5,7 @@ final class vr {
     int field_e;
     static int field_b;
     boolean field_g;
-    private rf field_f;
+    private ArchiveIndex field_f;
     private tja field_a;
     private Object[][] field_d;
     private Object[] field_c;
@@ -408,7 +408,7 @@ final class vr {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -19779) {
           return;
         }
@@ -784,7 +784,7 @@ final class vr {
           }
           param2 = param2.toLowerCase();
           if (param0 != 6) {
-            this.field_f = (rf) null;
+            this.field_f = (ArchiveIndex) null;
           }
           var5 = (CharSequence) ((Object) param2);
           var4_int = this.field_f.field_l[param1].a((byte) -128, StickySpecial.a(var5, true));

@@ -58,7 +58,7 @@ final class sk extends k {
         this.field_l = 1;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_n = null;
         field_m = null;

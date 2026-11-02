@@ -53,7 +53,7 @@ abstract class am extends vf {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = BachelorFridge.field_y;
-        SoftwareRasterizer.fillVerticalGradient(param2 + 6, param0 + 35, -12 + this.field_p, -40 + this.field_q, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(param2 + 6, param0 + 35, -12 + this.width, -40 + this.height, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
@@ -64,7 +64,7 @@ abstract class am extends vf {
             var8 < SoftwareRasterizer.field_k) {
             var9 = var7 * (-var5 + var6) / var4 + var5;
             var10 = 0;
-            var11 = this.field_p;
+            var11 = this.width;
             if (20 >= var7) {
               while (var10 <= 20) {
                 var12 = (20 - var10) * (-var10 + 20) + (-var7 + 20) * (-var7 + 20);
@@ -115,15 +115,15 @@ abstract class am extends vf {
           var10Lifetime1 = var7Lifetime1 * (var6Lifetime1 - var5Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var10Lifetime1 = var10Lifetime1 | (var10Lifetime1 << 16 | var10Lifetime1 << 8);
           SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var10Lifetime1);
-          SoftwareRasterizer.drawHorizontalLine(-6 + param2 + this.field_p, var8Lifetime1, 6, var10Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + param2 + this.width, var8Lifetime1, 6, var10Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        gt.field_s.draw(-90 + (param2 + this.field_p), 10 + param0);
-        ao.a(param2 + 5, oea.field_s, this.field_p - 10, (byte) -128, param0 + 35);
-        ao.a(param2, LevitateAnimation.field_v, this.field_p, (byte) -128, this.field_q + (param0 - 22));
+        gt.field_s.draw(-90 + (param2 + this.width), 10 + param0);
+        ao.a(param2 + 5, oea.field_s, this.width - 10, (byte) -128, param0 + 35);
+        ao.a(param2, LevitateAnimation.field_v, this.width, (byte) -128, this.height + (param0 - 22));
         var5Lifetime2 = 169;
-        var4Lifetime2 = this.field_q - 79;
+        var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var7Lifetime2 = 0;
         var8Lifetime2 = param0 + 57;
@@ -131,7 +131,7 @@ abstract class am extends vf {
           var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
           SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.drawHorizontalLine(this.field_p + (param2 - 6), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(this.width + (param2 - 6), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }
@@ -147,8 +147,8 @@ abstract class am extends vf {
         if (param1 != 26012) {
           return;
         }
-        this.field_I = this.field_p;
-        this.field_N = this.field_q;
+        this.field_I = this.width;
+        this.field_N = this.height;
         this.field_L = 0;
         this.field_P = param3;
     }

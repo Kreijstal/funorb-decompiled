@@ -5,7 +5,7 @@ final class DiskCacheRequest extends cga {
     SectorCacheStore field_w;
     int field_v;
     static hk field_u;
-    static sna[] field_s;
+    static UiComponent[] field_s;
     static boolean field_x;
     byte[] field_t;
 
@@ -20,7 +20,7 @@ final class DiskCacheRequest extends cga {
         return this.field_t;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_u = null;
         int var1 = -13 / ((40 - param0) / 62);

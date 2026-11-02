@@ -56,10 +56,10 @@ class w implements q {
           if (!param0) {
             w.a(true);
           }
-          var1_int = dfa.field_b - rs.field_a;
-          rs.field_a = sd.field_a - (var1_int >> 1);
-          GasCloudSpecial.field_q = -(ula.field_f >> 1) + jfa.field_w;
-          dfa.field_b = var1_int + rs.field_a;
+          var1_int = dfa.field_b - StatusEffectInfo.field_a;
+          StatusEffectInfo.field_a = sd.field_a - (var1_int >> 1);
+          GasCloudSpecial.field_q = -(ula.field_f >> 1) + FridgeCreature.field_w;
+          dfa.field_b = var1_int + StatusEffectInfo.field_a;
           var2 = GasCloudSpecial.field_q;
           for (var3 = 0; pt.field_a.length > var3; var3++) {
             var4 = gn.field_l[var3];
@@ -67,7 +67,7 @@ class w implements q {
               if (var4 != fw.field_i.field_g) {
                 var5 = ScavengerSpecial.field_v;
               } else {
-                var5 = ru.field_c;
+                var5 = NanoGameClock.field_c;
               }
             } else {
               var5 = wk.field_f;
@@ -86,13 +86,13 @@ class w implements q {
               var9 = stackIn_18_0;
               var2 = var2 + raa.field_J;
               if (var9 != null) {
-                var9.a(jo.field_t + (ShieldEvent.field_r << 1), 28, -hna.field_k + var8, var2, var7 + (hna.field_k << 1));
+                var9.a(BoardView.field_t + (ShieldEvent.field_r << 1), 28, -hna.field_k + var8, var2, var7 + (hna.field_k << 1));
               }
               var2 = var2 + ShieldEvent.field_r;
             }
             if (0 <= var4) {
               lha.field_b.drawText(var6, var8, var2 + mha.field_g, var5, -1);
-              var2 = var2 + (ShieldEvent.field_r + (raa.field_J + jo.field_t));
+              var2 = var2 + (ShieldEvent.field_r + (raa.field_J + BoardView.field_t));
             } else {
               RasterBuffer.field_a.drawText(var6, var8, ah.field_l + var2, var5, -1);
               var2 = var2 + un.field_i;
@@ -106,7 +106,7 @@ class w implements q {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = (int[][]) null;
         if (param0 <= 29) {
           w.a(true);

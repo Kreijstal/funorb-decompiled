@@ -10,10 +10,10 @@ final class ula {
     static int field_f;
     int field_g;
     static Sprite field_h;
-    jfa field_c;
+    FridgeCreature field_c;
     private int field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 != 0) {
           return;
@@ -85,7 +85,7 @@ final class ula {
         }
     }
 
-    ula(int param0, int param1, jfa param2, int param3, int param4) {
+    ula(int param0, int param1, FridgeCreature param2, int param3, int param4) {
         try {
           this.field_c = param2;
           this.field_b = param0;

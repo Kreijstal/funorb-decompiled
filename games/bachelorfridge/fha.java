@@ -5,7 +5,7 @@ final class fha extends AnimationNode {
     private int field_m;
     static String field_k;
     static String[][] field_j;
-    private kj field_l;
+    private TileEffect field_l;
 
     public static void d(byte param0) {
         field_j = (String[][]) null;
@@ -16,7 +16,7 @@ final class fha extends AnimationNode {
         fha.d((byte) 101);
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = 40 % ((71 - param0) / 47);
         if (0 == this.field_m) {
           this.field_l.a(0);
@@ -106,7 +106,7 @@ final class fha extends AnimationNode {
         if (param0 == 1) {
           return;
         }
-        this.field_l = (kj) null;
+        this.field_l = (TileEffect) null;
     }
 
     private final int d(int param0) {
@@ -116,7 +116,7 @@ final class fha extends AnimationNode {
         return 10;
     }
 
-    fha(kj param0) {
+    fha(TileEffect param0) {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {

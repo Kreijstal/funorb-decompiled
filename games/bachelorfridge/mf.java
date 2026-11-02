@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mf extends uda implements lja {
+class mf extends uda implements WidgetActionListener {
     private boolean field_ib;
     private boolean field_gb;
     private boolean field_fb;
@@ -22,7 +22,7 @@ class mf extends uda implements lja {
         this.e(var2, 33);
     }
 
-    final boolean a(int param0, int param1, char param2, wj param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -37,7 +37,7 @@ class mf extends uda implements lja {
           if (param0 != 10) {
             this.o(25);
           }
-          stackIn_6_0 = super.a(10, param1, param2, param3);
+          stackIn_6_0 = super.handleKey(10, param1, param2, param3);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ class mf extends uda implements lja {
           var4 = var6;
           if (5 != param0) {
             if (param0 == 256) {
-              var6.a((pl) (this), bga.field_k, 19528);
+              var6.a((WidgetListener) (this), bga.field_k, 19528);
             } else {
               stackIn_14_0 = var6;
               stackIn_14_1 = 7;
@@ -100,14 +100,14 @@ class mf extends uda implements lja {
             var6.a(7, pr.field_c, 7);
           } else {
             if (param0 == 4) {
-              var6.a(7, hd.field_r, 8);
+              var6.a(7, SpecialMoveDefinition.field_r, 8);
             } else {
               if (param0 != 6) {
                 if (param0 != 9) {
                   this.e(var6, 33);
                   return;
                 }
-                var6.a((pl) (this), eq.field_i, 19528);
+                var6.a((WidgetListener) (this), eq.field_i, 19528);
               } else {
                 var6.a(7, IterableNodeHashTable.field_b, 9);
               }
@@ -129,7 +129,7 @@ class mf extends uda implements lja {
         }
     }
 
-    public void a(int param0, hf param1, int param2, byte param3, int param4) {
+    public void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

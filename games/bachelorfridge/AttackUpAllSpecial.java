@@ -13,7 +13,7 @@ final class AttackUpAllSpecial extends SpecialOrder {
         return new hk[]{DiskCacheRequest.field_u, FlirtAnimation.field_x, ImageProducerRasterBuffer.field_k};
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var6 = 0;
         AttackUpAllEvent var4 = null;
         int var5 = 0;

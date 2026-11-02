@@ -4,7 +4,7 @@
 final class qs extends pu {
     static int field_o;
     static Sprite[][] field_l;
-    static sna field_m;
+    static UiComponent field_m;
     static int field_n;
 
     final static String[][] a(boolean param0, PacketBuffer param1) {
@@ -73,7 +73,7 @@ final class qs extends pu {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -5232) {
           return;
         }

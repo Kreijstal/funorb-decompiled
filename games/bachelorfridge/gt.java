@@ -18,7 +18,7 @@ final class gt extends k {
     private int field_k;
     private int field_v;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         int var1 = -120 / ((-48 - param0) / 58);
         field_s = null;

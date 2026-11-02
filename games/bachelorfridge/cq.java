@@ -7,7 +7,7 @@ final class cq extends IntrusiveNode {
     static jg field_g;
     IntrusiveNode field_h;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         int var1 = -118 / ((param0 - 24) / 34);
     }

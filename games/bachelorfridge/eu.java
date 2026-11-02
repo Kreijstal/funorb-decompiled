@@ -5,10 +5,10 @@ final class eu {
     static IntrusiveNodeHashTable field_b;
     static String field_a;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (param0) {
-          eu.a(true);
+          eu.releaseStatics(true);
           field_a = null;
           return;
         }
@@ -26,7 +26,7 @@ final class eu {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -58) {
-            eu.a(true);
+            eu.releaseStatics(true);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param4 != null && (param3 != 2 ||

@@ -8,7 +8,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     private java.awt.Component field_d;
     static IndexedSprite field_c;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_c = null;
           field_e = null;

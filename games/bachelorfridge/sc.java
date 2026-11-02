@@ -33,7 +33,7 @@ final class sc extends lw {
         if (param1 == 73) {
           return;
         }
-        sc.d(-97);
+        sc.releaseStatics(-97);
     }
 
     sc() {
@@ -41,7 +41,7 @@ final class sc extends lw {
         this.field_c = new int[][]{new int[]{170, 160}};
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_l = null;
         field_n = null;

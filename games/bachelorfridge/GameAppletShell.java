@@ -522,7 +522,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             if (param0 > -47) {
               this.stop();
             }
-            kt.field_i = ub.field_l;
+            kt.field_i = BoardChangeAnimation.field_l;
           }
           this.b((byte) 120);
           return;
@@ -612,7 +612,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param0 < 2) {
             field_e = (String) null;
           }
-          ub.field_l = true;
+          BoardChangeAnimation.field_l = true;
           kt.field_i = true;
           nf.field_K = true;
           daa.field_vb = false;
@@ -632,7 +632,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ub.field_l = false;
+          BoardChangeAnimation.field_l = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -750,7 +750,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ub.field_l = true;
+          BoardChangeAnimation.field_l = true;
           nf.field_K = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

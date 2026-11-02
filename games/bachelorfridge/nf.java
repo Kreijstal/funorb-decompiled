@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf extends aha {
+final class nf extends LinkTextWidget {
     static volatile boolean field_K;
     static Sprite[] field_P;
     private int field_Q;
@@ -19,7 +19,7 @@ final class nf extends aha {
         field_P = null;
     }
 
-    final boolean a(wj param0, int param1) {
+    final boolean acquireFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -29,7 +29,7 @@ final class nf extends aha {
           if (param1 < -78) {
             return false;
           }
-          this.c((byte) 91);
+          this.getTooltip((byte) 91);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,10 +45,10 @@ final class nf extends aha {
         }
     }
 
-    final void a(int param0, int param1, wj param2, int param3) {
+    final void updateMouseOver(int param0, int param1, UiWidget param2, int param3) {
         try {
           this.field_Q = this.field_Q + 1;
-          super.a(param0, param1, param2, param3 ^ 0);
+          super.updateMouseOver(param0, param1, param2, param3 ^ 0);
           if (param3 != 20) {
             field_K = false;
           }
@@ -57,12 +57,12 @@ final class nf extends aha {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void draw(byte param0, int param1, int param2, int param3) {
         String var5;
         jg var6;
         int var14;
         int var7;
-        qka var9;
+        WidgetMetrics var9;
         int var10;
         int var11;
         int var12;
@@ -86,26 +86,26 @@ final class nf extends aha {
                   var5 = this.field_O;
                   break regionExit3;
                 }
-                if (!var5.equals(this.field_w)) {
+                if (!var5.equals(this.text)) {
                   break regionExit2;
                 }
                 break regionExit1;
               }
               var5 = mr.field_h;
             }
-            if (var5.equals(this.field_w)) {
+            if (var5.equals(this.text)) {
               break regionExit1;
             }
           }
-          this.field_w = var5;
+          this.text = var5;
           this.a(21646);
         }
         var7 = -39 / ((param0 + 20) / 54);
-        super.a((byte) 86, param1, param2, param3);
+        super.draw((byte) 86, param1, param2, param3);
         var6Lifetime1 = this.field_L.b(-19704);
-        var9 = (qka) ((Object) this.field_f);
-        var10 = param3 + this.field_s;
-        var11 = var9.a((wj) (this), param1, (byte) -54) + (var9.b((wj) (this), false).a(false) >> 1);
+        var9 = (WidgetMetrics) ((Object) this.renderer);
+        var10 = param3 + this.x;
+        var11 = var9.a((UiWidget) (this), param1, (byte) -54) + (var9.b((UiWidget) (this), false).a(false) >> 1);
         if (var6Lifetime1 == cq.field_g) {
           var19 = fr.field_q[0];
           var12 = var19.field_n << 1;
@@ -133,7 +133,7 @@ final class nf extends aha {
           return;
         }
         if (var6Lifetime1 != ji.field_f) {
-          if (jt.field_f == var6Lifetime1) {
+          if (FoodShopPanel.field_f == var6Lifetime1) {
             var16 = fr.field_q[2];
             var16.drawAdditive(var10, var11 - (var16.field_p >> 1), 256);
             return;
@@ -170,7 +170,7 @@ final class nf extends aha {
         return;
     }
 
-    final String c(byte param0) {
+    final String getTooltip(byte param0) {
         if (param0 == 16) {
           return null;
         }

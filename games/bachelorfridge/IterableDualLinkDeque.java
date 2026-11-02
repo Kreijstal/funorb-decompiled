@@ -34,11 +34,11 @@ final class IterableDualLinkDeque implements Iterable {
         return (Iterator) ((Object) new DualLinkDequeIterator(this));
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_d = null;
         if (param0 > -101) {
-          IterableDualLinkDeque.b(24);
+          IterableDualLinkDeque.releaseStatics(24);
         }
     }
 

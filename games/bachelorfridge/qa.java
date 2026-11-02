@@ -11,7 +11,7 @@ final class qa extends k {
         TeleportAnimation.e(-116);
         hp.field_c = -3;
         if (!af.field_a) {
-          rs.a(true);
+          StatusEffectInfo.a(true);
           sia.field_h = false;
           lg.a(true, -4, true);
           if (param0 >= 115) {
@@ -46,7 +46,7 @@ final class qa extends k {
         return var3;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           qa.d(42);
           field_k = null;

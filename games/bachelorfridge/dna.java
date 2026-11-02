@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dna extends sna {
-    private sna field_vb;
-    private sna[] field_xb;
+final class dna extends UiComponent {
+    private UiComponent field_vb;
+    private UiComponent[] field_xb;
     int field_yb;
-    private sna[] field_wb;
+    private UiComponent[] field_wb;
 
     final void f(int param0) {
         int var2 = 0;
-        sna dupTemp$0 = null;
-        sna dupTemp$1 = null;
+        UiComponent dupTemp$0 = null;
+        UiComponent dupTemp$1 = null;
         int var3;
         var3 = BachelorFridge.field_y;
         for (var2 = 0; var2 < this.field_xb.length; var2++) {
@@ -30,8 +30,8 @@ final class dna extends sna {
         }
     }
 
-    dna(long param0, sna param1, String[] param2, sna param3, sna[] param4, int param5) {
-        super(param0, (sna) null);
+    dna(long param0, UiComponent param1, String[] param2, UiComponent param3, UiComponent[] param4, int param5) {
+        super(param0, (UiComponent) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -44,15 +44,15 @@ final class dna extends sna {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        sna var9 = null;
+        UiComponent var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_xb = new sna[param2.length];
-          this.field_vb = new sna(0L, param3);
+          this.field_xb = new UiComponent[param2.length];
+          this.field_vb = new UiComponent(0L, param3);
           this.field_wb = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
-            var9 = new sna(0L, param1);
+            var9 = new UiComponent(0L, param1);
             var9.field_Z = param2[var8_int];
             this.field_xb[var8_int] = var9;
             this.a(-1, var9);
@@ -129,7 +129,7 @@ final class dna extends sna {
     }
 
     final static int b(int param0, boolean param1) {
-        String var2 = lka.field_E[param0][4];
+        String var2 = TextInputWidget.field_E[param0][4];
         var2 = var2.trim();
         if (param1) {
           return 84;
@@ -139,7 +139,7 @@ final class dna extends sna {
     }
 
     private final void a(boolean param0, int param1, int param2) {
-        sna dupTemp$0 = null;
+        UiComponent dupTemp$0 = null;
         int var4;
         int var5;
         int var6;

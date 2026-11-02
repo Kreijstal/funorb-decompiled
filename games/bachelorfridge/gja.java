@@ -92,7 +92,7 @@ final class gja extends tia {
         gja.a(false, (java.applet.Applet) null, (String) null, 115);
     }
 
-    gja(gj param0, ad param1, int param2) {
+    gja(BattleScreen param0, CreatureActor param1, int param2) {
         super(param0, param1);
         try {
           this.field_g = 128;

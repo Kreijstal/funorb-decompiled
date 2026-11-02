@@ -16,7 +16,7 @@ final class hi {
           var1 = vv.field_e;
           synchronized (var1) {
             ce.field_x = ce.field_x + 1;
-            gha.field_q = HazmatEvent.field_s;
+            DefaultWidgetRenderer.field_q = HazmatEvent.field_s;
             if (param0 < 82) {
               return;
             }

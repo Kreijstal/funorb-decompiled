@@ -11,7 +11,7 @@ final class lo {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_b = null;
         if (param0 >= -90) {
@@ -81,7 +81,7 @@ final class lo {
     final static boolean b(byte param0) {
         int stackIn_16_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ola var1 = null;
+        FridgeScreen var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;
         int[] var2_ref_int__ = null;
@@ -93,7 +93,7 @@ final class lo {
         int[] var6 = null;
         boolean[] var7 = null;
         int var8 = 0;
-        ola var9 = null;
+        FridgeScreen var9 = null;
         boolean[] var13 = null;
         int[] var2_ref_int__Lifetime1;
         int var3Lifetime1;

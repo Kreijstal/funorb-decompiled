@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ho extends IntrusiveNode {
-    static sna field_g;
+    static UiComponent field_g;
     static String field_f;
     int field_i;
     pd field_h;
     static IndexedSprite[] field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_g = null;
         if (param0 < 70) {

@@ -103,7 +103,7 @@ final class aea extends k {
         return var3;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 87) {
           return;
         }

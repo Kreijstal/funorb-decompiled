@@ -4,14 +4,14 @@
 import java.util.*;
 
 final class HailAnimation extends EventAnimation {
-    private taa field_y;
+    private ActorAnimation field_y;
     static String field_w;
     static int field_x;
     private HailEvent field_z;
-    static sna field_A;
+    static UiComponent field_A;
     private boolean field_v;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$1 = 0;
         int var2;
         if (this.field_m.isLinked((byte) -106)) {
@@ -36,7 +36,7 @@ final class HailAnimation extends EventAnimation {
     private final void b(boolean param0) {
         this.f((byte) -125);
         if (!param0) {
-          field_A = (sna) null;
+          field_A = (UiComponent) null;
         }
     }
 
@@ -66,7 +66,7 @@ final class HailAnimation extends EventAnimation {
         var6 = 17;
         var7 = var5 - 1 >> 1;
         if (param0 != 47) {
-          HailAnimation.d(-36);
+          HailAnimation.releaseStatics(-36);
         }
         var8 = var6 - 1 >> 1;
         var9 = DiveBomberAnimation.a(513, m.field_a, -2147483648) - 256;
@@ -80,7 +80,7 @@ final class HailAnimation extends EventAnimation {
                 stackIn_15_0 = (this.screen.field_h.tiles[var13][var14].occupant != null) ? 0 : 1;
                 var15 = stackIn_15_0;
                 var16 = new kw(this.screen, var13, var14, var9, var10, var15 != 0);
-                ((kj) ((Object) var16)).a(0);
+                ((TileEffect) ((Object) var16)).a(0);
               }
             }
           }
@@ -88,19 +88,19 @@ final class HailAnimation extends EventAnimation {
         this.field_v = true;
     }
 
-    HailAnimation(gj param0, HailEvent param1) {
+    HailAnimation(BattleScreen param0, HailEvent param1) {
         super(param0, param1);
         try {
           this.field_z = param1;
-          this.field_y = new taa(this.screen, this.field_z.field_q, this.field_z.field_t);
-          this.a(27799, this.field_y);
+          this.field_y = new ActorAnimation(this.screen, this.field_z.field_q, this.field_z.field_t);
+          this.addChild(27799, this.field_y);
           this.field_l = 80;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         if (param0 != -128) {
           return;
@@ -108,7 +108,7 @@ final class HailAnimation extends EventAnimation {
         field_A = null;
     }
 
-    final static void a(it param0, jfa param1, int param2) {
+    final static void a(it param0, FridgeCreature param1, int param2) {
         int var3_int = 0;
         if (AttackUpAllAnimation.e(-29919)) {
           return;
@@ -126,7 +126,7 @@ final class HailAnimation extends EventAnimation {
     }
 
     private final void f(byte param0) {
-        ad var4 = null;
+        CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
         BattleCreature var2 = this.field_z.creature.a(param0 + 178, this.screen.field_h);
         if (param0 != -125) {
@@ -139,8 +139,8 @@ final class HailAnimation extends EventAnimation {
         while (var3 != null) {
           var4 = var3.target.a(param0 - 27324, this.screen);
           var4.b(param0 + 124, 6);
-          var3.a(var2, this.screen.field_h, 12);
-          this.a(27799, new ek(this.screen, var4, var3.field_f));
+          var3.apply(var2, this.screen.field_h, 12);
+          this.addChild(27799, new ek(this.screen, var4, var3.field_f));
           var3 = (EventEffect) (this.field_z.effects.c(0));
         }
     }
@@ -149,8 +149,8 @@ final class HailAnimation extends EventAnimation {
         try {
           param1.addMouseListener(uc.field_m);
           if (param0 != -30229) {
-            jfa var3 = (jfa) null;
-            HailAnimation.a((it) null, (jfa) null, -106);
+            FridgeCreature var3 = (FridgeCreature) null;
+            HailAnimation.a((it) null, (FridgeCreature) null, -106);
           }
           param1.addMouseMotionListener(uc.field_m);
           param1.addFocusListener(uc.field_m);

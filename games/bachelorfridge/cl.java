@@ -380,7 +380,7 @@ final class cl extends vm {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        String var3 = lka.field_E[param2][param0];
+        String var3 = TextInputWidget.field_E[param2][param0];
         var3 = var3.trim();
         var3 = var3.toLowerCase();
         if (param1 < 86) {
@@ -392,7 +392,7 @@ final class cl extends vm {
         return ((ji) (du.field_a.a(true, (long)var3.hashCode()))).field_h;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_p = null;
         if (param0) {
           field_p = (boolean[]) null;

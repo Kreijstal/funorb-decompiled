@@ -5,10 +5,10 @@ final class ec {
     static String[] field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -29584) {
-          ec.a(-78);
+          ec.releaseStatics(-78);
         }
         field_b = null;
     }

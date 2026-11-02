@@ -5,14 +5,14 @@ final class SauceOfFlameSpecial extends SpecialOrder {
     static String field_q;
     static int field_p;
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }
         field_q = null;
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         SauceOfFlameEvent stackIn_27_0 = null;

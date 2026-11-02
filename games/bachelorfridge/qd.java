@@ -19,7 +19,7 @@ final class qd extends pv {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         if (param0 < 31) {
           return;
@@ -97,7 +97,7 @@ final class qd extends pv {
               return false;
             }
             if (param1 >= -119) {
-              qd.c((byte) -22);
+              qd.releaseStatics((byte) -22);
             }
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             for (var3 = 0; param0.length() > var3; var3++) {
@@ -126,7 +126,7 @@ final class qd extends pv {
         }
     }
 
-    qd(jfa param0, int param1) {
+    qd(FridgeCreature param0, int param1) {
         try {
           this.field_f = param0;
           this.field_m = param1;

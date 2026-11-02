@@ -51,7 +51,7 @@ final class cla {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 34 / ((param0 - 24) / 48);
     }

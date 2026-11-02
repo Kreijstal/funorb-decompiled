@@ -4,9 +4,9 @@
 final class ShuffleEvent extends SpecialEvent {
     static BitmapFont field_q;
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
-        gj var4 = null;
+        BattleScreen var4 = null;
         ShuffleAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -14,8 +14,8 @@ final class ShuffleEvent extends SpecialEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            var4 = (gj) null;
-            this.a(-17, (gj) null);
+            var4 = (BattleScreen) null;
+            this.createAnimation(-17, (BattleScreen) null);
           }
           stackIn_3_0 = new ShuffleAnimation(param1, this);
           return (AnimationNode) ((Object) stackIn_3_0);
@@ -37,7 +37,7 @@ final class ShuffleEvent extends SpecialEvent {
         super(param0, param1);
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }
@@ -92,7 +92,7 @@ final class ShuffleEvent extends SpecialEvent {
           this.creature.a(73, param0);
           var4 = (PlaceCreatureEffect) (this.effects.b((byte) 90));
           while (var4 != null) {
-            var4.a((BattleCreature) null, param0, 12);
+            var4.apply((BattleCreature) null, param0, 12);
             var4 = (PlaceCreatureEffect) (this.effects.c(0));
           }
           return;

@@ -15,13 +15,13 @@ final class MassPoisonSpecial extends SpecialOrder {
     final static boolean a(boolean param0, char param1) {
         boolean stackIn_9_0 = false;
         if (!param0) {
-          MassPoisonSpecial.b(-30);
+          MassPoisonSpecial.releaseStatics(-30);
         }
         stackIn_9_0 = (param1 == 160) || (param1 == 32) || (param1 == 95) || (45 == param1);
         return stackIn_9_0;
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         MassPoisonEvent var4 = null;
@@ -135,7 +135,7 @@ final class MassPoisonSpecial extends SpecialOrder {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 95) {
           field_q = (int[]) null;
         }

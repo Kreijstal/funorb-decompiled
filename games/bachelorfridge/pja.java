@@ -10,7 +10,7 @@ final class pja {
     static Sprite[] field_d;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         int var1 = -126 / ((param0 + 54) / 35);
         field_e = null;

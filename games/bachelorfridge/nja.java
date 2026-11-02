@@ -113,7 +113,7 @@ final class nja {
           }
           var3 = new ArgbSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], lq.field_A[0], InsanoSauceSpecial.field_s[0], var13);
         }
-        al.b(-18073);
+        al.releaseStatics(-18073);
         if (!param0) {
           nja.a(28);
         }

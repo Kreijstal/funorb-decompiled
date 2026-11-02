@@ -7,7 +7,7 @@ final class RaiseEvent extends SpecialEvent {
     CreatureRef field_q;
     static String field_r;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_r = null;
         if (param0 > -64) {
@@ -36,7 +36,7 @@ final class RaiseEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         RaiseAnimation stackIn_4_0 = null;

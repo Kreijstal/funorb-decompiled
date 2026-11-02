@@ -7,7 +7,7 @@ final class pea extends EventEffect {
     private int field_j;
     private int field_i;
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         Object var4 = null;
         if (null != this.target) {
           var4 = this.target.a(116, param1);
@@ -38,10 +38,10 @@ final class pea extends EventEffect {
         field_k = null;
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           int var3_int = 23 % ((param1 - 34) / 58);
-          super.a(param0, (byte) 113);
+          super.write(param0, (byte) 113);
           FlirtAnimation.a(this.target, 115, param0);
           param0.writeByte(this.field_j, 0);
           param0.writeByte(this.field_i, 0);

@@ -7,7 +7,7 @@ final class jh extends k {
     static String field_m;
     static volatile int field_l;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_k = null;
         if (param0 != 4096) {
@@ -119,7 +119,7 @@ final class jh extends k {
           if (param0 == -71) {
             return;
           }
-          jh.d(-90);
+          jh.releaseStatics(-90);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

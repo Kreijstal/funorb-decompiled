@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pka implements qda {
-    static sna[] field_b;
+final class pka implements WidgetRenderer {
+    static UiComponent[] field_b;
     private int field_d;
     static boolean field_f;
     private BitmapFont field_c;
     static String field_a;
     private int field_e;
 
-    public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
+    public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -25,32 +25,32 @@ final class pka implements qda {
         PacketBuffer var12 = null;
         var11 = BachelorFridge.field_y;
         try {
-          if (!param1.field_t &&
-            !param1.e(param2 - 31656)) {
+          if (!param1.mouseOver &&
+            !param1.isFocused(param2 - 31656)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param0 + param1.field_s, param3 + param1.field_v, param1.field_p, param1.field_q, var6_int, -1, this.field_d, this.field_e, this.field_c.field_u + this.field_c.field_B);
-          if (param1.e(1023)) {
-            var7 = this.field_c.a(param1.field_w);
+          this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.text + "</u>", param0 + param1.x, param3 + param1.y, param1.width, param1.height, var6_int, -1, this.field_d, this.field_e, this.field_c.field_u + this.field_c.field_B);
+          if (param1.isFocused(1023)) {
+            var7 = this.field_c.a(param1.text);
             var8 = this.field_c.field_u + this.field_c.field_B;
-            var9 = param1.field_s + param0;
-            var10 = param3 + param1.field_v;
+            var9 = param1.x + param0;
+            var10 = param3 + param1.y;
             if (2 != this.field_d) {
               if (this.field_d == 1) {
-                var9 = var9 + (param1.field_p - var7 >> 1);
+                var9 = var9 + (param1.width - var7 >> 1);
               }
             } else {
-              var9 = var9 + (param1.field_p - var7);
+              var9 = var9 + (param1.width - var7);
             }
             if (this.field_e != 2) {
               if (this.field_e == 1) {
-                var10 = var10 + (param1.field_q - var8 >> 1);
+                var10 = var10 + (param1.height - var8 >> 1);
               }
             } else {
-              var10 = var10 + (param1.field_q - var8);
+              var10 = var10 + (param1.height - var8);
             }
             uv.a(var7 + 4, var10 + 2, var8, var9 - 2, false);
           }
@@ -131,7 +131,7 @@ final class pka implements qda {
           mg.field_m.field_a = mg.field_m.field_a - dea.field_n;
           dea.field_n = 0;
           gu.field_d = 0;
-          rs.a(true);
+          StatusEffectInfo.a(true);
           lg.a(true, -3, true);
           gs.field_f.a(-65);
         }

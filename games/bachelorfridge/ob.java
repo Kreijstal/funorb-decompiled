@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends kj {
+final class ob extends TileEffect {
     private int field_f;
     static ok field_g;
 
@@ -27,7 +27,7 @@ final class ob extends kj {
           we.field_b = param0;
           hda.field_l = param4;
           if (param1 != -47) {
-            ob.c(0);
+            ob.releaseStatics(0);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ob.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -40,7 +40,7 @@ final class ob extends kj {
         }
     }
 
-    ob(gj param0, int param1, int param2) {
+    ob(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
           this.field_f = 100;
@@ -49,7 +49,7 @@ final class ob extends kj {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_g = (ok) null;
           field_g = null;

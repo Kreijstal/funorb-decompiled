@@ -10,8 +10,8 @@ final class MartyrAnimation extends EventAnimation {
         if (param0 < -60) {
           return;
         }
-        jfa var3 = (jfa) null;
-        MartyrAnimation.a(-28, -56, 3, (jfa) null, 27);
+        FridgeCreature var3 = (FridgeCreature) null;
+        MartyrAnimation.a(-28, -56, 3, (FridgeCreature) null, 27);
     }
 
     public static void e(int param0) {
@@ -26,7 +26,7 @@ final class MartyrAnimation extends EventAnimation {
         BattleCreature var2;
         DamageEffect var3;
         int var5;
-        ad var6;
+        CreatureActor var6;
         var5 = BachelorFridge.field_y;
         var2 = this.field_w.creature.a(40, this.screen.field_h);
         if (var2.isDown(-99)) {
@@ -38,7 +38,7 @@ final class MartyrAnimation extends EventAnimation {
           return;
         }
         while (var3 != null) {
-          var3.a(var2, this.screen.field_h, 12);
+          var3.apply(var2, this.screen.field_h, 12);
           var6 = var3.target.a(-27449, this.screen);
           var6.b(-1, 7);
           var6.a(24831, 41, kna.field_g[31]);
@@ -46,7 +46,7 @@ final class MartyrAnimation extends EventAnimation {
         }
     }
 
-    MartyrAnimation(gj param0, MartyrEvent param1) {
+    MartyrAnimation(BattleScreen param0, MartyrEvent param1) {
         super(param0, param1);
         try {
           this.field_w = param1;
@@ -55,7 +55,7 @@ final class MartyrAnimation extends EventAnimation {
         }
     }
 
-    final static void a(int param0, int param1, int param2, jfa param3, int param4) {
+    final static void a(int param0, int param1, int param2, FridgeCreature param3, int param4) {
         int var5_int = 0;
         if (AttackUpAllAnimation.e(param0 - 33828)) {
           return;
@@ -82,7 +82,7 @@ final class MartyrAnimation extends EventAnimation {
         int var2 = 49 / ((83 - param1) / 43);
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = -56 % ((71 - param0) / 47);
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;

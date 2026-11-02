@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tea extends mf implements lja {
+final class tea extends mf implements WidgetActionListener {
     static String field_lb;
-    private ue field_ob;
+    private AccountCreationPanel field_ob;
     private boolean field_nb;
     private boolean field_mb;
 
@@ -71,10 +71,10 @@ final class tea extends mf implements lja {
           var5 = new hc((mf) (this), qia.field_a, var4);
           if (param2.field_e) {
             if (param2.field_h) {
-              this.e(new ar(this), 33);
+              this.e(new TermsPanel(this), 33);
               return;
             }
-            var5.a((pl) (this), tj.field_a, 19528);
+            var5.a((WidgetListener) (this), tj.field_a, 19528);
           } else {
             if (!this.field_mb) {
               if (5 != param2.field_d) {
@@ -84,7 +84,7 @@ final class tea extends mf implements lja {
                 var5.a(7, uda.field_ab, 17);
               }
             } else {
-              var5.a((pl) (this), tj.field_a, 19528);
+              var5.a((WidgetListener) (this), tj.field_a, 19528);
             }
             if (param2.field_d != 3) {
               if (param2.field_d != 6) {
@@ -119,14 +119,14 @@ final class tea extends mf implements lja {
         this.a(-12331, true, wu.a(248, (byte) 80, lda.field_b));
     }
 
-    public static void q(int param0) {
+    public static void releaseStatics(int param0) {
         field_lb = null;
         if (param0 != 10462) {
           field_lb = (String) null;
         }
     }
 
-    tea(rp param0, ue param1) {
+    tea(rp param0, AccountCreationPanel param1) {
         super(param0, qia.field_a, SocketConnector.field_c, false, false);
         try {
           this.field_ob = param1;
@@ -135,7 +135,7 @@ final class tea extends mf implements lja {
         }
     }
 
-    public final void a(int param0, hf param1, int param2, byte param3, int param4) {
+    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         if (this.field_mb) {
           FlySpecial.a(true, false, (byte) 60);
           return;

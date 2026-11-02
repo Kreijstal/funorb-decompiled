@@ -3,25 +3,25 @@
  */
 import java.util.*;
 
-final class uq extends sna {
-    private sna field_wb;
-    private sna field_Fb;
+final class uq extends UiComponent {
+    private UiComponent field_wb;
+    private UiComponent field_Fb;
     private int field_vb;
-    private sna field_yb;
+    private UiComponent field_yb;
     long field_Eb;
     private daa field_Db;
     static Sprite[] field_zb;
-    private sna[] field_Bb;
-    private sna field_Gb;
-    private sna field_Ab;
-    private sna field_xb;
+    private UiComponent[] field_Bb;
+    private UiComponent field_Gb;
+    private UiComponent field_Ab;
+    private UiComponent field_xb;
     private StringBuilder field_Cb;
 
     final int a(boolean param0, boolean param1) {
         int var3 = 0;
         daa stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        sna stackIn_16_0 = null;
+        UiComponent stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
         int var4;
         var4 = BachelorFridge.field_y;
@@ -49,7 +49,7 @@ final class uq extends sna {
           }
         }
         if (!param1) {
-          this.field_wb = (sna) null;
+          this.field_wb = (UiComponent) null;
         }
         if (this.field_Fb.field_R != 0) {
           return -1;
@@ -62,8 +62,8 @@ final class uq extends sna {
         return this.field_vb;
     }
 
-    private final int a(int param0, sna param1, byte param2, String param3, sna param4, int param5) {
-        sna var7 = null;
+    private final int a(int param0, UiComponent param1, byte param2, String param3, UiComponent param4, int param5) {
+        UiComponent var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -78,7 +78,7 @@ final class uq extends sna {
           if (param2 >= -44) {
             field_zb = (Sprite[]) null;
           }
-          var7 = new sna(0L, param4, 0, param5, param0, 24, param3);
+          var7 = new UiComponent(0L, param4, 0, param5, param0, 24, param3);
           param5 += 32;
           param1.a(-1, var7);
           stackIn_3_0 = param5;
@@ -109,7 +109,7 @@ final class uq extends sna {
         }
     }
 
-    private final int a(int param0, int param1, sna param2, int param3, sna param4) {
+    private final int a(int param0, int param1, UiComponent param2, int param3, UiComponent param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
@@ -177,7 +177,7 @@ final class uq extends sna {
         IntrusiveDeque var9 = mg.field_m.field_e.field_m;
         CreatureProfile[] var10 = new CreatureProfile[var9.g(param0 + 28716)];
         var9.a((byte) 88, var10);
-        gj var11 = new gj(var8, var7, var10, false);
+        BattleScreen var11 = new BattleScreen(var8, var7, var10, false);
         hp.field_c = 0;
         dj.field_c = var11;
         AttackOrder.c((byte) -124);
@@ -187,7 +187,7 @@ final class uq extends sna {
         dh.a((byte) 58, var2);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 7) {
           return;
         }
@@ -208,7 +208,7 @@ final class uq extends sna {
         return true;
     }
 
-    uq(int param0, int param1, int param2, int param3, int param4, sna param5, sna param6, sna param7, sna param8, daa param9, sna param10, String param11, long param12) {
+    uq(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, daa param9, UiComponent param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         Object stackIn_6_0;
@@ -221,7 +221,7 @@ final class uq extends sna {
         daa stackIn_8_1;
         daa stackIn_8_2;
         String stackIn_8_5;
-        sna stackIn_14_0 = null;
+        UiComponent stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -240,7 +240,7 @@ final class uq extends sna {
         String stackIn_70_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var15_int = 0;
-        sna[] var15 = null;
+        UiComponent[] var15 = null;
         RuntimeException var15_ref = null;
         int var16 = 0;
         int var17 = 0;
@@ -253,7 +253,7 @@ final class uq extends sna {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        sna[] var28 = null;
+        UiComponent[] var28 = null;
         Object stackIn_6_0Lifetime1;
         Object stackIn_8_0Lifetime1;
         daa stackIn_8_1Lifetime1;
@@ -278,26 +278,26 @@ final class uq extends sna {
         this.field_vb = -2;
         try {
           this.field_Eb = param12;
-          this.field_Gb = new sna(0L, param6, dka.field_D.toUpperCase());
+          this.field_Gb = new UiComponent(0L, param6, ReportAbusePanel.field_D.toUpperCase());
           this.field_Gb.field_N = 1;
           this.a(-1, this.field_Gb);
-          this.field_Fb = new sna(0L, param7);
+          this.field_Fb = new UiComponent(0L, param7);
           this.field_Gb.a(-1, this.field_Fb);
-          this.field_Ab = new sna(0L, (sna) null);
+          this.field_Ab = new UiComponent(0L, (UiComponent) null);
           this.a(-1, this.field_Ab);
           if (param11 != null) {
-            this.field_wb = new sna(0L, param8, dia.field_D);
+            this.field_wb = new UiComponent(0L, param8, dia.field_D);
             this.field_wb.field_N = 1;
             this.field_wb.field_gb = 11184810;
             this.field_Ab.a(-1, this.field_wb);
-            this.field_xb = new sna(0L, param8, vj.field_q);
+            this.field_xb = new UiComponent(0L, param8, vj.field_q);
             this.field_xb.field_gb = 11184810;
             this.field_xb.field_N = 1;
             this.field_Ab.a(-1, this.field_xb);
-            this.field_yb = new sna(0L, param8);
+            this.field_yb = new UiComponent(0L, param8);
             this.field_yb.field_gb = 16764006;
             this.field_Ab.a(-1, this.field_yb);
-            this.field_yb.field_pb = "|";
+            this.field_yb.name = "|";
             if (!(hka.field_i < 5) ||
               !(BananarangSpecial.field_r < 2)) {
               regionExit1: {
@@ -325,18 +325,18 @@ final class uq extends sna {
               this.field_Db = new daa(stackIn_6_3, stackIn_6_4, stackIn_8_5);
               this.field_Ab.a(-1, this.field_Db);
             }
-            var28 = new sna[3];
+            var28 = new UiComponent[3];
             var15 = var28;
-            var28[0] = new sna(0L, (sna) null);
+            var28[0] = new UiComponent(0L, (UiComponent) null);
             this.field_Ab.a(-1, var28[0]);
-            var28[1] = new sna(0L, (sna) null);
+            var28[1] = new UiComponent(0L, (UiComponent) null);
             this.field_Ab.a(-1, var28[1]);
-            var28[2] = new sna(0L, (sna) null);
+            var28[2] = new UiComponent(0L, (UiComponent) null);
             this.field_Ab.a(-1, var28[2]);
-            this.field_Bb = new sna[FlyEvent.field_v];
+            this.field_Bb = new UiComponent[FlyEvent.field_v];
             for (var16 = 0; var16 < FlyEvent.field_v; var16++) {
               if (null != lw.field_k[var16]) {
-                this.field_Bb[var16] = new sna(0L, param10, lw.field_k[var16]);
+                this.field_Bb[var16] = new UiComponent(0L, param10, lw.field_k[var16]);
                 this.field_Bb[var16].field_N = 0;
                 stackIn_14_0 = this.field_Bb[var16];
                 stackIn_15_1 = (param11 != null);
@@ -357,7 +357,7 @@ final class uq extends sna {
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_jb.a(ur.field_p);
+            var17Lifetime3 = param6.field_jb.a(WhirlpoolDigest.field_p);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -396,7 +396,7 @@ final class uq extends sna {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(var16Lifetime2, var28[2], (byte) -117, ur.field_p, param6, var18Lifetime5);
+            var18Lifetime5 = this.a(var16Lifetime2, var28[2], (byte) -117, WhirlpoolDigest.field_p, param6, var18Lifetime5);
             var18Lifetime5 = this.a(var18Lifetime5, var16Lifetime2, this.field_Bb[13], -13403, var28[2]);
             var18Lifetime5 = this.a(var18Lifetime5, var16Lifetime2, this.field_Bb[21], -13403, var28[2]);
             var18Lifetime5 = this.a(var18Lifetime5, var16Lifetime2, this.field_Bb[11], -13403, var28[2]);
@@ -441,7 +441,7 @@ final class uq extends sna {
             this.a(var24, 31407, var23, var25, var26);
             return;
           }
-          this.field_wb = new sna(0L, param8, InsanoSauceSpecial.field_r);
+          this.field_wb = new UiComponent(0L, param8, InsanoSauceSpecial.field_r);
           this.field_wb.field_gb = 11184810;
           this.field_wb.field_N = 1;
           this.field_Ab.a(-1, this.field_wb);

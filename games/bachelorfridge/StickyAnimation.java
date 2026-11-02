@@ -3,7 +3,7 @@
  */
 final class StickyAnimation extends EventAnimation {
     private StickyEvent field_w;
-    private taa field_y;
+    private ActorAnimation field_y;
     static Sprite field_x;
     static int field_v;
 
@@ -11,7 +11,7 @@ final class StickyAnimation extends EventAnimation {
         int var11 = 0;
         int var12 = 0;
         uea discarded$0 = null;
-        hd var2;
+        SpecialMoveDefinition var2;
         BattleState var3;
         int var5;
         int var6;
@@ -23,11 +23,11 @@ final class StickyAnimation extends EventAnimation {
         int var14;
         int var15;
         Object var16;
-        hd var16_ref;
+        SpecialMoveDefinition var16_ref;
         int[][] var20;
         var16 = null;
         var15 = BachelorFridge.field_y;
-        var16_ref = (hd) (al.a(103, this.field_w.moveId));
+        var16_ref = (SpecialMoveDefinition) (al.a(103, this.field_w.moveId));
         var2 = var16_ref;
         var3 = this.screen.field_h;
         this.field_w.creature.a(param0 + 46, this.screen.field_h);
@@ -52,15 +52,15 @@ final class StickyAnimation extends EventAnimation {
             }
           }
         }
-        this.field_w.a(this.screen.field_h, false);
+        this.field_w.apply(this.screen.field_h, false);
     }
 
-    StickyAnimation(gj param0, StickyEvent param1) {
+    StickyAnimation(BattleScreen param0, StickyEvent param1) {
         super(param0, param1);
         try {
           this.field_w = param1;
-          this.field_y = new taa(this.screen, this.field_w.field_r, this.field_w.field_q);
-          this.a(27799, this.field_y);
+          this.field_y = new ActorAnimation(this.screen, this.field_w.field_r, this.field_w.field_q);
+          this.addChild(27799, this.field_y);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "tp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -72,7 +72,7 @@ final class StickyAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$1 = 0;
         int var2;
         var2 = -68 / ((71 - param0) / 47);

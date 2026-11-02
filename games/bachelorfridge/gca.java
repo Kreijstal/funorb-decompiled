@@ -12,10 +12,10 @@ abstract class gca extends IntrusiveNode {
         }
     }
 
-    final static ola a(int param0, PacketBuffer param1) {
-        ola var2 = null;
+    final static FridgeScreen a(int param0, PacketBuffer param1) {
+        FridgeScreen var2 = null;
         RuntimeException var2_ref = null;
-        ola stackIn_3_0 = null;
+        FridgeScreen stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -24,7 +24,7 @@ abstract class gca extends IntrusiveNode {
           if (param0 != 0) {
             gca.c((byte) -1);
           }
-          var2 = new ola();
+          var2 = new FridgeScreen();
           var2.a((byte) -118, param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;

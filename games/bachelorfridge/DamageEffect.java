@@ -7,7 +7,7 @@ final class DamageEffect extends EventEffect {
     private int field_k;
     static String field_i;
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         try {
           if (param2 != 12) {
             this.field_l = -27;
@@ -18,10 +18,10 @@ final class DamageEffect extends EventEffect {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         try {
-          super.a(param0, (byte) -28);
+          super.write(param0, (byte) -28);
           FlirtAnimation.a(this.target, 107, param0);
           var3_int = 32767 & this.field_f;
           if (this.field_j) {
@@ -37,7 +37,7 @@ final class DamageEffect extends EventEffect {
         }
     }
 
-    final AnimationNode a(ad param0, gj param1, boolean param2, int param3) {
+    final AnimationNode a(CreatureActor param0, BattleScreen param1, boolean param2, int param3) {
         AnimationNode discarded$0 = null;
         Object stackIn_48_0 = null;
         RuntimeException stackIn_51_0 = null;
@@ -50,7 +50,7 @@ final class DamageEffect extends EventEffect {
         BattleCreature var6 = null;
         BattleCreature var7 = null;
         Object var8 = null;
-        gj var9 = null;
+        BattleScreen var9 = null;
         BattleState var10 = null;
         BattleState var11 = null;
         try {
@@ -59,8 +59,8 @@ final class DamageEffect extends EventEffect {
           var6 = param0.field_s;
           var7 = this.target.a(120, var11);
           if (param2) {
-            var9 = (gj) null;
-            discarded$0 = this.a(-99, (byte) -20, (ad) null, -42, (gj) null);
+            var9 = (BattleScreen) null;
+            discarded$0 = this.a(-99, (byte) -20, (CreatureActor) null, -42, (BattleScreen) null);
           }
           var8 = null;
           if (var7.a(13, (byte) -91)) {
@@ -247,7 +247,7 @@ final class DamageEffect extends EventEffect {
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               eia.field_a = RasterBuffer.field_g;
-              vd.field_B = new String[var9Lifetime1 - 100];
+              WidgetContainer.field_B = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
                 SauceOfFlameSpecial.a(nia.d(-31768), (byte) 87);
@@ -274,9 +274,9 @@ final class DamageEffect extends EventEffect {
               var10Lifetime1 = ig.field_m.readUnsignedShort((byte) 118);
               ig.field_m.position = 0;
               if (CreatureEvent.b(var10Lifetime1, 0)) {
-                var11 = vd.field_B.length;
+                var11 = WidgetContainer.field_B.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  vd.field_B[var12] = ig.field_m.i(0);
+                  WidgetContainer.field_B[var12] = ig.field_m.i(0);
                 }
                 vc.a((byte) -91);
                 DiskCacheRequest.field_x = false;
@@ -311,8 +311,8 @@ final class DamageEffect extends EventEffect {
               stackIn_63_0 = 249;
               return stackIn_63_0;
             }
-            var9Lifetime3 = kn.field_h;
-            kn.field_h = oja.field_c;
+            var9Lifetime3 = CurryArenaTheme.field_h;
+            CurryArenaTheme.field_h = oja.field_c;
             DiskCacheRequest.field_x = true;
             oja.field_c = var9Lifetime3;
           }
@@ -344,7 +344,7 @@ final class DamageEffect extends EventEffect {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 >= -30) {
           field_i = (String) null;
@@ -510,10 +510,10 @@ final class DamageEffect extends EventEffect {
         int var2 = -(FishRainSpecial.field_t * FishRainSpecial.field_t) + var1;
         int var3 = fs.field_f + (pda.field_p - fs.field_f) * var2 / var1;
         i.field_a.a(120, 31407, 640, ce.field_t, var3);
-        taa.a(5, gba.field_Bb, 91, -24 + pda.field_p, lm.field_d, 0, 640);
+        ActorAnimation.a(5, gba.field_Bb, 91, -24 + pda.field_p, lm.field_d, 0, 640);
     }
 
-    private final AnimationNode a(int param0, byte param1, ad param2, int param3, gj param4) {
+    private final AnimationNode a(int param0, byte param1, CreatureActor param2, int param3, BattleScreen param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         BattleState var8 = null;
@@ -530,7 +530,7 @@ final class DamageEffect extends EventEffect {
           var9 = this.target.a(param1 ^ -90, param4.field_h);
           if (param1 != -13) {
             var8 = (BattleState) null;
-            this.a((BattleCreature) null, (BattleState) null, 127);
+            this.apply((BattleCreature) null, (BattleState) null, 127);
           }
           var7 = param4.field_h.b(var9, 126, param3, param0);
           if (var7 < param0) {

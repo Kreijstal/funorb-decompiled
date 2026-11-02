@@ -8,7 +8,7 @@ class ao extends kda {
     ao() {
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         int var1 = 113 % ((param0 - 21) / 43);
         field_d = null;

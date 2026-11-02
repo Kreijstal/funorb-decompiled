@@ -83,7 +83,7 @@ final class qfa extends cga {
         try {
           qc.field_b.field_Z = param5;
           if (2 == gk.field_d) {
-            qq.field_k.field_Z = ru.field_l;
+            qq.field_k.field_Z = NanoGameClock.field_l;
           } else {
             qq.field_k.field_Z = ClearTileFlagEffect.field_k;
           }
@@ -93,7 +93,7 @@ final class qfa extends cga {
           HailAnimation.field_A.a(param4, 31407, aja.field_p.field_sb - DisableSpecial.field_r.field_sb, 0, 0);
           var10 = var10 + (param4 + param0);
           DisableSpecial.field_r.a(param4, 31407, DisableSpecial.field_r.field_sb, HailAnimation.field_A.field_sb, 0);
-          ub.field_k.a(param1, 31407, ub.field_k.e(-1), 5, var10);
+          BoardChangeAnimation.field_k.a(param1, 31407, BoardChangeAnimation.field_k.e(-1), 5, var10);
           var11 = qq.field_k.e(-1);
           qq.field_k.a(param1, 31407, var11, -var11 + (var9_int - 5), var10);
           var12 = param1 + (var10 + 5);
@@ -235,7 +235,7 @@ final class qfa extends cga {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         if (param0 != 97) {
           return;
@@ -340,7 +340,7 @@ final class qfa extends cga {
     }
 
     final static void f(int param0) {
-        qi.field_b = new ue();
+        qi.field_b = new AccountCreationPanel();
         kka.field_l.e(qi.field_b, 33);
         int var1 = -78 / ((param0 - 45) / 53);
     }

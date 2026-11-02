@@ -8,7 +8,7 @@ final class bm extends EventEffect {
     static String field_i;
     static String field_m;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_i = null;
         if (param0 != 3) {
@@ -17,7 +17,7 @@ final class bm extends EventEffect {
     }
 
     final static int a(int param0, int param1) {
-        String var2 = lka.field_E[param1][5];
+        String var2 = TextInputWidget.field_E[param1][5];
         var2 = var2.toLowerCase();
         var2 = var2.trim();
         ji var3 = (ji) (fi.field_m.a(true, (long)var2.hashCode()));
@@ -34,10 +34,10 @@ final class bm extends EventEffect {
         this.field_l = param2;
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           int var3_int = 96 / ((34 - param1) / 58);
-          super.a(param0, (byte) -58);
+          super.write(param0, (byte) -58);
           param0.writeByte(this.field_j, 0);
           param0.writeByte(this.field_k, 0);
           param0.writeByte(this.field_l, 0);
@@ -46,11 +46,11 @@ final class bm extends EventEffect {
         }
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         try {
           if (param2 != 12) {
             PacketBuffer var5 = (PacketBuffer) null;
-            this.a((PacketBuffer) null, (byte) 36);
+            this.write((PacketBuffer) null, (byte) 36);
           }
           param1.b((byte) 76, this.field_j, this.field_k, this.field_l);
         } catch (RuntimeException runtimeException) {

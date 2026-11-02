@@ -10,7 +10,7 @@ class bia extends IntrusiveNode {
     bia() {
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 10 / ((param0 + 27) / 54);
         field_i = null;
         field_h = null;

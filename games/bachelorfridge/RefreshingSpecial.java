@@ -5,7 +5,7 @@ final class RefreshingSpecial extends SpecialOrder {
     static oa field_p;
     static long field_q;
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var5 = 0;
         RuntimeException var3 = null;
         RefreshingEvent var4 = null;
@@ -53,9 +53,9 @@ final class RefreshingSpecial extends SpecialOrder {
         super(param0, param1);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          RefreshingSpecial.b(-93);
+          RefreshingSpecial.releaseStatics(-93);
         }
         field_p = null;
     }

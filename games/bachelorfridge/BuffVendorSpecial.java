@@ -6,7 +6,7 @@ final class BuffVendorSpecial extends SpecialOrder {
     static Sprite field_r;
     static PacketBuffer field_p;
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         BuffVendorEvent var4 = null;
@@ -50,10 +50,10 @@ final class BuffVendorSpecial extends SpecialOrder {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         if (param0 != 0) {
-          BuffVendorSpecial.b(-128);
+          BuffVendorSpecial.releaseStatics(-128);
           field_p = null;
           return;
         }

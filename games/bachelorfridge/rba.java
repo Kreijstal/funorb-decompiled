@@ -8,7 +8,7 @@ final class rba {
     static ok field_a;
     static MusicTrack field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         int var1 = -16 / ((param0 - 16) / 44);

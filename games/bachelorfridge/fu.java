@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class fu extends AnimationNode {
-    private gj field_m;
+    private BattleScreen field_m;
     private int field_k;
     private int field_o;
     static String field_s;
@@ -16,7 +16,7 @@ final class fu extends AnimationNode {
     private int field_n;
     private int field_j;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_s = null;
         field_l = null;
         if (param0 < 60) {
@@ -47,7 +47,7 @@ final class fu extends AnimationNode {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         dha var2 = this.field_t.a((double)this.field_o / 25.0, 82);
         int var4 = 75 / ((71 - param0) / 47);
         int var3 = var2.field_c;
@@ -84,51 +84,51 @@ final class fu extends AnimationNode {
         try {
           qs.field_l = new Sprite[14][50];
           wo.field_k = new Sprite[14][50];
-          dupTemp$0 = jfa.a(param0, 4, "left_eye");
+          dupTemp$0 = FridgeCreature.a(param0, 4, "left_eye");
           pha.field_f = dupTemp$0;
           qs.field_l[1] = dupTemp$0;
           wo.field_k[1] = cl.a(pha.field_f, false);
-          dupTemp$1 = jfa.a(param0, 4, "hat");
+          dupTemp$1 = FridgeCreature.a(param0, 4, "hat");
           ns.field_m = dupTemp$1;
           qs.field_l[0] = dupTemp$1;
           TeleportSpecial.a(0, qs.field_l[0]);
           wo.field_k[0] = cl.a(ns.field_m, false);
-          dupTemp$2 = jfa.a(param0, 4, "right_eye");
+          dupTemp$2 = FridgeCreature.a(param0, 4, "right_eye");
           pja.field_d = dupTemp$2;
           qs.field_l[2] = dupTemp$2;
           wo.field_k[2] = cl.a(pja.field_d, false);
-          dupTemp$3 = jfa.a(param0, 4, "head");
+          dupTemp$3 = FridgeCreature.a(param0, 4, "head");
           DualLinkNode.field_k = dupTemp$3;
           qs.field_l[8] = dupTemp$3;
           wo.field_k[8] = cl.a(DualLinkNode.field_k, param1);
-          dupTemp$4 = jfa.a(param0, 4, "mouth");
+          dupTemp$4 = FridgeCreature.a(param0, 4, "mouth");
           CranberryAnimation.field_v = dupTemp$4;
           qs.field_l[3] = dupTemp$4;
           wo.field_k[3] = cl.a(CranberryAnimation.field_v, param1);
-          dupTemp$5 = jfa.a(param0, 4, "left_hand");
+          dupTemp$5 = FridgeCreature.a(param0, 4, "left_hand");
           fja.field_d = dupTemp$5;
           qs.field_l[5] = dupTemp$5;
           TeleportSpecial.a(0, qs.field_l[5]);
           wo.field_k[5] = cl.a(fja.field_d, false);
-          dupTemp$6 = jfa.a(param0, 4, "torso");
+          dupTemp$6 = FridgeCreature.a(param0, 4, "torso");
           BoardChange.field_f = dupTemp$6;
           qs.field_l[9] = dupTemp$6;
           wo.field_k[9] = cl.a(BoardChange.field_f, param1);
-          dupTemp$7 = jfa.a(param0, 4, "right_hand");
+          dupTemp$7 = FridgeCreature.a(param0, 4, "right_hand");
           nf.field_P = dupTemp$7;
           qs.field_l[4] = dupTemp$7;
           TeleportSpecial.a(0, qs.field_l[4]);
           wo.field_k[4] = cl.a(nf.field_P, false);
-          dupTemp$8 = jfa.a(param0, 4, "left_foot");
+          dupTemp$8 = FridgeCreature.a(param0, 4, "left_foot");
           bha.field_m = dupTemp$8;
           qs.field_l[7] = dupTemp$8;
           TeleportSpecial.a(0, qs.field_l[7]);
           wo.field_k[7] = cl.a(bha.field_m, param1);
-          dupTemp$9 = jfa.a(param0, 4, "body");
+          dupTemp$9 = FridgeCreature.a(param0, 4, "body");
           tw.field_c = dupTemp$9;
           qs.field_l[10] = dupTemp$9;
           wo.field_k[10] = cl.a(tw.field_c, false);
-          dupTemp$10 = jfa.a(param0, 4, "right_foot");
+          dupTemp$10 = FridgeCreature.a(param0, 4, "right_foot");
           bia.field_h = dupTemp$10;
           qs.field_l[6] = dupTemp$10;
           TeleportSpecial.a(0, qs.field_l[6]);
@@ -146,8 +146,8 @@ final class fu extends AnimationNode {
           qs.field_l[13] = dupTemp$13;
           wo.field_k[13] = cl.a(ama.field_o, false);
           ClamsAnimation.field_y = BagpipeSpecial.a(param0, -1, "basic", "uparrow");
-          gha.field_b = ClamsAnimation.field_y.c();
-          gha.field_b.d();
+          DefaultWidgetRenderer.field_b = ClamsAnimation.field_y.c();
+          DefaultWidgetRenderer.field_b.d();
           ada.field_l = BagpipeSpecial.a(param0, -1, "basic", "scrollarrow_hover");
           oaa.field_a = ada.field_l.c();
           oaa.field_a.d();
@@ -163,8 +163,8 @@ final class fu extends AnimationNode {
           us.field_c = BagpipeSpecial.a(param0, -1, "basic", "rank_star");
           nu.field_e = FullHealEvent.a("generic_slime_bg", param0, "basic", (byte) -26);
           ew.field_r = FullHealEvent.a("small_bg", param0, "basic", (byte) 70);
-          jt.field_g = FullHealEvent.a("lrg_button", param0, "basic", (byte) 126);
-          gj.field_F = FullHealEvent.a("med_button", param0, "basic", (byte) -68);
+          FoodShopPanel.field_g = FullHealEvent.a("lrg_button", param0, "basic", (byte) 126);
+          BattleScreen.field_F = FullHealEvent.a("med_button", param0, "basic", (byte) -68);
           EventAnimation.field_r = FullHealEvent.a("small_button", param0, "basic", (byte) -17);
           de.field_A = MidiNote.a("frame_tape", param0, "basic", 7);
           bh.field_r = FullHealEvent.a("mag", param0, "basic", (byte) 62);
@@ -179,14 +179,14 @@ final class fu extends AnimationNode {
           et.field_p = FullHealEvent.a("tutorial_arrow_green", param0, "basic", (byte) 59);
           qt.field_m = hca.a("basic", param0, -80, "close_cross");
           mr.field_f = hca.a("basic", param0, 109, "instructions_back_tile");
-          t.a(0, param0);
+          BasicMoveDefinition.a(0, param0);
           param0 = null;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "fu.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    fu(gj param0, int param1, int param2, int param3, int param4) {
+    fu(BattleScreen param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         dha var7 = null;
         dha var8 = null;

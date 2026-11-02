@@ -6,7 +6,7 @@ final class fs {
     private boolean field_c;
     private BattleState field_d;
     static int field_f;
-    private gj field_b;
+    private BattleScreen field_b;
     boolean field_a;
 
     final void a(int param0, int param1) {
@@ -38,11 +38,11 @@ final class fs {
           sja.field_fb.writeByte(param1, 0);
         }
         if (param0 != 0) {
-          fs.c((byte) 97);
+          fs.releaseStatics((byte) 97);
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -59) {
           return;
         }
@@ -217,7 +217,7 @@ final class fs {
         }
     }
 
-    fs(gj param0, boolean param1) {
+    fs(BattleScreen param0, boolean param1) {
         BattleState var3 = null;
         try {
           this.field_b = param0;

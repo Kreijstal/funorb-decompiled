@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class pu extends bia {
-    static gj field_j;
+    static BattleScreen field_j;
     static String field_k;
 
     pu() {
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_j = null;
         int var1 = -64 % ((param0 - 74) / 49);

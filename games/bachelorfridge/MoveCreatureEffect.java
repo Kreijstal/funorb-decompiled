@@ -20,12 +20,12 @@ final class MoveCreatureEffect extends EventEffect {
         RuntimeException var2 = null;
         var6 = BachelorFridge.field_y;
         try {
-          lka.field_E = qs.a(false, new PacketBuffer(param0));
-          uma.field_P = new kga[lka.field_E.length - 1];
+          TextInputWidget.field_E = qs.a(false, new PacketBuffer(param0));
+          uma.field_P = new kga[TextInputWidget.field_E.length - 1];
           if (param1 != 22) {
             field_k = (du) null;
           }
-          for (var2_int = 1; lka.field_E.length > var2_int; var2_int++) {
+          for (var2_int = 1; TextInputWidget.field_E.length > var2_int; var2_int++) {
             var3 = vc.a(var2_int, 0, -16306);
             var4 = new int[15];
             for (var5 = 0; var4.length > var5; var5++) {
@@ -48,7 +48,7 @@ final class MoveCreatureEffect extends EventEffect {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_j = null;
         if (param0 != -13) {
@@ -56,9 +56,9 @@ final class MoveCreatureEffect extends EventEffect {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -28);
+          super.write(param0, (byte) -28);
           FlirtAnimation.a(this.target, 122, param0);
           param0.writeByte(this.field_i, 0);
           int var3_int = -81 / ((34 - param1) / 58);
@@ -68,7 +68,7 @@ final class MoveCreatureEffect extends EventEffect {
         }
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         if (param2 != 12) {
           field_k = (du) null;
         }

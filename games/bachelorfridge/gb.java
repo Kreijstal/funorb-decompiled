@@ -101,8 +101,8 @@ final class gb extends IntrusiveNode {
         }
         try {
           var7 = ft.a(8191 & 4096 - var5, (byte) -128);
-          lka.field_G = new int[]{-var4, 90, -42, var6, 0, -var7, 0, 65536, 0, var7, 0, var6};
-          ni.field_l.a(mu.field_j, lka.field_G);
+          TextInputWidget.field_G = new int[]{-var4, 90, -42, var6, 0, -var7, 0, 65536, 0, var7, 0, var6};
+          ni.field_l.a(mu.field_j, TextInputWidget.field_G);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gb.B(" + param0 + ',' + param1 + ')');
         }
@@ -129,7 +129,7 @@ final class gb extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -22615) {
           field_j = (String) null;
         }

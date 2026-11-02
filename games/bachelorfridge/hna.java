@@ -10,7 +10,7 @@ final class hna extends aba {
     static int field_k;
     private boolean field_i;
 
-    hna(lka param0, lka param1) {
+    hna(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         this.field_g = "";
         this.field_i = false;
@@ -21,7 +21,7 @@ final class hna extends aba {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 28) {
           hna.a(-7, 97);
           field_h = null;
@@ -42,8 +42,8 @@ final class hna extends aba {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_j.a(param0, param1) == jt.field_f) {
-            stackIn_3_0 = jt.field_f;
+          if (this.field_j.a(param0, param1) == FoodShopPanel.field_f) {
+            stackIn_3_0 = FoodShopPanel.field_f;
             return stackIn_3_0;
           }
           if (param1) {
@@ -60,7 +60,7 @@ final class hna extends aba {
             this.field_i = var3.a(-7750);
           }
           if (!this.field_i) {
-            stackIn_15_0 = jt.field_f;
+            stackIn_15_0 = FoodShopPanel.field_f;
           } else {
             stackIn_15_0 = cm.field_u;
           }
@@ -91,11 +91,11 @@ final class hna extends aba {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -92 / ((param0 + 8) / 45);
-          if (this.field_j.a(param1, false) == jt.field_f) {
+          if (this.field_j.a(param1, false) == FoodShopPanel.field_f) {
             stackIn_3_0 = this.field_j.a((byte) 66, param1);
             return stackIn_3_0;
           }
-          if (this.a(param1, false) != jt.field_f) {
+          if (this.a(param1, false) != FoodShopPanel.field_f) {
             stackIn_8_0 = bv.field_j;
             return stackIn_8_0;
           }

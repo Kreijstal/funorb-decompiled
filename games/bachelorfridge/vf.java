@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vf extends vd {
+abstract class vf extends WidgetContainer {
     private int field_E;
     boolean field_C;
     private rp field_G;
     static String field_D;
-    static sna field_F;
+    static UiComponent field_F;
 
     vf(rp param0, int param1, int param2) {
-        super(-param1 + InvincibleAnimation.field_v >> 1, mi.field_k - param2 >> 1, param1, param2, (qda) null);
+        super(-param1 + InvincibleAnimation.field_v >> 1, mi.field_k - param2 >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_G = param0;
           this.field_E = 0;
@@ -75,7 +75,7 @@ abstract class vf extends vd {
         return false;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void draw(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var5Lifetime1;
         int var5Lifetime2;
@@ -85,52 +85,52 @@ abstract class vf extends vd {
         }
         if (this.field_E >= 256) {
           if (param2 == 0) {
-            this.a(this.field_v + param1, (byte) 89, param3 + this.field_s);
-            super.a((byte) -85, param1, param2, param3);
+            this.a(this.y + param1, (byte) 89, param3 + this.x);
+            super.draw((byte) -85, param1, param2, param3);
             return;
           }
           return;
         }
         if (null == lfa.field_u) {
-          lfa.field_u = new Sprite(this.field_p, this.field_q);
+          lfa.field_u = new Sprite(this.width, this.height);
           bu.a(0, lfa.field_u);
           SoftwareRasterizer.clear();
           var5 = 42 % ((-20 - param0) / 54);
           this.a(0, (byte) -109, 0);
-          super.a((byte) 43, -this.field_v - param1, param2, -param3 - this.field_s);
+          super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
           db.b(110);
-          lfa.field_u.a(param3 + this.field_s, param1 + this.field_v, this.field_E);
+          lfa.field_u.a(param3 + this.x, param1 + this.y, this.field_E);
           return;
         }
-        if (this.field_p > lfa.field_u.field_q) {
-          lfa.field_u = new Sprite(this.field_p, this.field_q);
+        if (this.width > lfa.field_u.field_q) {
+          lfa.field_u = new Sprite(this.width, this.height);
           bu.a(0, lfa.field_u);
           SoftwareRasterizer.clear();
           var5Lifetime1 = 42 % ((-20 - param0) / 54);
           this.a(0, (byte) -109, 0);
-          super.a((byte) 43, -this.field_v - param1, param2, -param3 - this.field_s);
+          super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
           db.b(110);
-          lfa.field_u.a(param3 + this.field_s, param1 + this.field_v, this.field_E);
+          lfa.field_u.a(param3 + this.x, param1 + this.y, this.field_E);
           return;
         }
-        if (this.field_q > lfa.field_u.field_p) {
-          lfa.field_u = new Sprite(this.field_p, this.field_q);
+        if (this.height > lfa.field_u.field_p) {
+          lfa.field_u = new Sprite(this.width, this.height);
           bu.a(0, lfa.field_u);
           SoftwareRasterizer.clear();
           var5Lifetime2 = 42 % ((-20 - param0) / 54);
           this.a(0, (byte) -109, 0);
-          super.a((byte) 43, -this.field_v - param1, param2, -param3 - this.field_s);
+          super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
           db.b(110);
-          lfa.field_u.a(param3 + this.field_s, param1 + this.field_v, this.field_E);
+          lfa.field_u.a(param3 + this.x, param1 + this.y, this.field_E);
           return;
         }
         bu.a(0, lfa.field_u);
         SoftwareRasterizer.clear();
         var5Lifetime3 = 42 % ((-20 - param0) / 54);
         this.a(0, (byte) -109, 0);
-        super.a((byte) 43, -this.field_v - param1, param2, -param3 - this.field_s);
+        super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
         db.b(110);
-        lfa.field_u.a(param3 + this.field_s, param1 + this.field_v, this.field_E);
+        lfa.field_u.a(param3 + this.x, param1 + this.y, this.field_E);
     }
 
     final static void a(String param0, int param1, int param2, String param3, String param4, int param5) {
@@ -144,26 +144,26 @@ abstract class vf extends vd {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_D = null;
         int var1 = -123 / ((-26 - param0) / 40);
         field_F = null;
     }
 
-    final wj g(int param0) {
-        wj var2 = null;
-        wj var2Lifetime1;
+    final UiWidget g(int param0) {
+        UiWidget var2 = null;
+        UiWidget var2Lifetime1;
         if (param0 > -26) {
-          this.a((byte) 36, -117, 49, -84);
+          this.draw((byte) 36, -117, 49, -84);
           var2 = super.g(-116);
           if (var2 == null) {
-            return (wj) (this);
+            return (UiWidget) (this);
           }
           return var2;
         }
         var2Lifetime1 = super.g(-116);
         if (var2Lifetime1 == null) {
-          return (wj) (this);
+          return (UiWidget) (this);
         }
         return var2Lifetime1;
     }

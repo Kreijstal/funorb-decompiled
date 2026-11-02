@@ -269,7 +269,7 @@ final class tq extends vv {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -15298) {
           return;
         }

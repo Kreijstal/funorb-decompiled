@@ -44,7 +44,7 @@ final class fe extends vo {
         OhNoSpecial.a(var8, var5, (byte) 92, var6, var4, this.field_a);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         int var1 = -49 / ((param0 + 57) / 54);
     }

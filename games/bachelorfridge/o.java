@@ -11,10 +11,10 @@ final class o extends EventEffect {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           int var3_int = 33 / ((param1 - 34) / 58);
-          super.a(param0, (byte) 95);
+          super.write(param0, (byte) 95);
           param0.b(this.field_f, -115);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "o.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -32,7 +32,7 @@ final class o extends EventEffect {
         return CreatureType.field_n >= 11 ? true : false;
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         BattleCreature var6 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fga extends kj {
+final class fga extends TileEffect {
     static int field_f;
     private vca field_g;
     static vr field_h;
@@ -39,10 +39,10 @@ final class fga extends kj {
         }
     }
 
-    fga(gj param0, int param1, int param2, int param3) {
+    fga(BattleScreen param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         try {
-          this.field_g = new vca(taa.field_u, Integer.toString(param3), 16736256, 20, 30, 50);
+          this.field_g = new vca(ActorAnimation.field_u, Integer.toString(param3), 16736256, 20, 30, 50);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "fga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

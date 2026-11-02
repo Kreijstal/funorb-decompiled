@@ -3,9 +3,9 @@
  */
 final class tr {
     final static void a(int param0) {
-        wi.a(true, sc.field_n, wj.field_i, (byte) -68);
+        wi.a(true, sc.field_n, UiWidget.field_i, (byte) -68);
         int var1 = -114 % ((-65 - param0) / 32);
-        sna.field_s = true;
+        UiComponent.field_s = true;
     }
 
     final static void a(int param0, Sprite param1, int param2, int param3, Sprite param4, int param5, int param6, int param7) {

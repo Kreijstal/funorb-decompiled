@@ -4,7 +4,7 @@
 final class gg {
     static Sprite field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 > -76) {
           field_a = (Sprite) null;

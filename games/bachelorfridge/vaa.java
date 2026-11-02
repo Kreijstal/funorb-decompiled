@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class vaa {
-    static sna field_a;
+    static UiComponent field_a;
     static String field_c;
     static int field_d;
     private java.util.zip.Inflater field_e;
@@ -86,7 +86,7 @@ final class vaa {
         var48 = null;
         var11 = BachelorFridge.field_y;
         var3 = 1;
-        if (!qh.field_l &&
+        if (!WidgetTheme.field_l &&
           bi.field_h == null) {
           var3 = 0;
         }
@@ -391,7 +391,7 @@ final class vaa {
             return stackIn_10_0;
           }
           if (param1 == 4) {
-            stackIn_13_0 = lga.a(true, new String[]{param0}, tn.field_b);
+            stackIn_13_0 = lga.a(true, new String[]{param0}, GameClock.field_b);
             return stackIn_13_0;
           }
           if (param1 == 5) {
@@ -399,7 +399,7 @@ final class vaa {
             return stackIn_16_0;
           }
           if (param2 != -1) {
-            field_a = (sna) null;
+            field_a = (UiComponent) null;
           }
           if (param1 == 6) {
             stackIn_22_0 = lga.a(true, new String[]{param0}, fr.field_s);
@@ -410,7 +410,7 @@ final class vaa {
             return stackIn_25_0;
           }
           if (param1 == 8) {
-            stackIn_28_0 = lga.a(true, new String[]{param0}, ru.field_j);
+            stackIn_28_0 = lga.a(true, new String[]{param0}, NanoGameClock.field_j);
             return stackIn_28_0;
           }
           if (param1 == 11) {
@@ -440,7 +440,7 @@ final class vaa {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         if (param0 != -1) {

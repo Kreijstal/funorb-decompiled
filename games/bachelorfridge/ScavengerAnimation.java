@@ -5,8 +5,8 @@ final class ScavengerAnimation extends EventAnimation {
     private ScavengerEvent field_v;
     static Sprite field_w;
 
-    final boolean c(byte param0) {
-        ad var2 = this.field_v.creature.a(-27449, this.screen);
+    final boolean isFinished(byte param0) {
+        CreatureActor var2 = this.field_v.creature.a(-27449, this.screen);
         int var3 = 61 / ((param0 - 71) / 47);
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
@@ -18,7 +18,7 @@ final class ScavengerAnimation extends EventAnimation {
             return false;
           }
           var2.b(-1, 20);
-          id.e(49, var2.field_s.field_o.field_e);
+          PizzaArenaTheme.e(49, var2.field_s.field_o.field_e);
           return false;
         }
         this.d(107);
@@ -40,12 +40,12 @@ final class ScavengerAnimation extends EventAnimation {
           return;
         }
         if (param0 != 94) {
-          this.c((byte) 60);
+          this.isFinished((byte) 60);
         } else {
           var3 = (EventEffect) (this.field_v.effects.b((byte) 90));
           al.a(99, this.field_v.moveId);
           while (var3 != null) {
-            var3.a(var2, this.screen.field_h, 12);
+            var3.apply(var2, this.screen.field_h, 12);
             var3 = (EventEffect) (this.field_v.effects.c(0));
           }
           return;
@@ -53,12 +53,12 @@ final class ScavengerAnimation extends EventAnimation {
         var3Lifetime1 = (EventEffect) (this.field_v.effects.b((byte) 90));
         al.a(99, this.field_v.moveId);
         while (var3Lifetime1 != null) {
-          var3Lifetime1.a(var2, this.screen.field_h, 12);
+          var3Lifetime1.apply(var2, this.screen.field_h, 12);
           var3Lifetime1 = (EventEffect) (this.field_v.effects.c(0));
         }
     }
 
-    ScavengerAnimation(gj param0, ScavengerEvent param1) {
+    ScavengerAnimation(BattleScreen param0, ScavengerEvent param1) {
         super(param0, param1);
         try {
           this.field_v = param1;
@@ -192,7 +192,7 @@ final class ScavengerAnimation extends EventAnimation {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 94) {
           field_w = (Sprite) null;
           field_w = null;

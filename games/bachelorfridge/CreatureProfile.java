@@ -109,11 +109,11 @@ class CreatureProfile extends IntrusiveNode {
     }
 
     final int c(int param0, int param1) {
-        t var3;
+        BasicMoveDefinition var3;
         if (param0 != 87) {
           this.field_g = (boolean[]) null;
         }
-        var3 = (t) (al.a(-104, param1));
+        var3 = (BasicMoveDefinition) (al.a(-104, param1));
         if (var3.field_p != 4) {
           return var3.field_t;
         }
@@ -139,7 +139,7 @@ class CreatureProfile extends IntrusiveNode {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        oha var7 = null;
+        MoveDefinition var7 = null;
         int var8 = 0;
         int var5Lifetime1;
         var6 = BachelorFridge.field_y;
@@ -149,8 +149,8 @@ class CreatureProfile extends IntrusiveNode {
           param1.writeByte(0, 0);
           var3 = (ho) (this.field_h.b((byte) 90));
           if (param0 >= -21) {
-            var7 = (oha) null;
-            this.a((oha) null, -19);
+            var7 = (MoveDefinition) null;
+            this.a((MoveDefinition) null, -19);
           }
           param1.writeByte(this.field_h.g(0), 0);
           while (var3 != null) {
@@ -186,8 +186,8 @@ class CreatureProfile extends IntrusiveNode {
         }
     }
 
-    final double a(oha param0, int param1) {
-        t var3 = null;
+    final double a(MoveDefinition param0, int param1) {
+        BasicMoveDefinition var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         double stackIn_2_0 = 0.0;
@@ -198,14 +198,14 @@ class CreatureProfile extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.field_a != 1) {
+          if (param0.kind != 1) {
             stackIn_2_0 = 1.0;
             return stackIn_2_0;
           }
           if (param1 != -5313) {
-            CreatureProfile.c((byte) 75);
+            CreatureProfile.releaseStatics((byte) 75);
           }
-          var3 = (t) (param0);
+          var3 = (BasicMoveDefinition) (param0);
           stackIn_8_0 = (var3.c(27863)) ? 3 : 2;
           var4 = stackIn_8_0;
           stackIn_9_0 = it.field_c[this.field_k[var4]] / 100.0;
@@ -326,8 +326,8 @@ class CreatureProfile extends IntrusiveNode {
 
     private final void d(byte param0) {
         if (param0 >= -87) {
-          oha var3 = (oha) null;
-          this.a((oha) null, -23);
+          MoveDefinition var3 = (MoveDefinition) null;
+          this.a((MoveDefinition) null, -23);
         }
         this.field_n = this.field_o.field_h;
     }
@@ -484,7 +484,7 @@ class CreatureProfile extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         if (param0 <= 92) {
           field_r = (String) null;
@@ -492,11 +492,11 @@ class CreatureProfile extends IntrusiveNode {
     }
 
     final int d(int param0, int param1) {
-        t var3;
+        BasicMoveDefinition var3;
         if (param0 <= 122) {
           this.field_j = (int[]) null;
         }
-        var3 = (t) (al.a(114, param1));
+        var3 = (BasicMoveDefinition) (al.a(114, param1));
         if (var3.field_p != 4) {
           return var3.field_r;
         }

@@ -29,11 +29,11 @@ final class sj extends k {
         return var3;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_l = null;
         if (param0 != 0) {
-          sj.d(79);
+          sj.releaseStatics(79);
         }
     }
 

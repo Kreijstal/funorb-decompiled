@@ -13,7 +13,7 @@ final class qca extends k {
     static String field_m;
     private int field_k;
 
-    final static void a(int param0, sna param1, byte param2) {
+    final static void a(int param0, UiComponent param1, byte param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -342,7 +342,7 @@ final class qca extends k {
         }
     }
 
-    final static sna e(int param0) {
+    final static UiComponent e(int param0) {
         if (param0 != -117485887) {
           field_l = (String) null;
         }
@@ -358,7 +358,7 @@ final class qca extends k {
         this.field_k = 0;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_l = null;
         if (param0 > -86) {
@@ -402,7 +402,7 @@ final class qca extends k {
         int var25;
         int var26;
         int var27;
-        sna var28;
+        UiComponent var28;
         int[][] var32;
         int var16Lifetime1;
         int var16Lifetime2;
@@ -410,8 +410,8 @@ final class qca extends k {
         int var17Lifetime2;
         var27 = BachelorFridge.field_y;
         if (param1 != 0) {
-          var28 = (sna) null;
-          qca.a(90, (sna) null, (byte) -84);
+          var28 = (UiComponent) null;
+          qca.a(90, (UiComponent) null, (byte) -84);
         }
         var3 = this.field_j.a(param0, -1);
         if (this.field_j.field_m) {

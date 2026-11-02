@@ -4,7 +4,7 @@
 final class InvincibleSpecial extends SpecialOrder {
     static IndexedSprite field_p;
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
@@ -18,11 +18,11 @@ final class InvincibleSpecial extends SpecialOrder {
     final static IndexedSprite b(int param0) {
         IndexedSprite var1 = new IndexedSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], lq.field_A[0], InsanoSauceSpecial.field_s[0], BananarangAnimation.field_P[0], hk.field_f);
         if (param0 == -32124) {
-          al.b(-18073);
+          al.releaseStatics(-18073);
           return var1;
         }
         field_p = (IndexedSprite) null;
-        al.b(-18073);
+        al.releaseStatics(-18073);
         return var1;
     }
 
@@ -51,7 +51,7 @@ final class InvincibleSpecial extends SpecialOrder {
         return null;
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         InvincibleEvent var4 = null;

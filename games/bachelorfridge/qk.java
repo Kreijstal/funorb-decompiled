@@ -5,12 +5,12 @@ final class qk extends k {
     private int field_o;
     static int field_l;
     static String field_n;
-    static sna field_q;
+    static UiComponent field_q;
     static String field_p;
     static String field_k;
     static int[] field_m;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         if (param0 < 66) {
           return;

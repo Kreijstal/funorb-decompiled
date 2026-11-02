@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rq extends kj {
+final class rq extends TileEffect {
     static int field_f;
     private int field_h;
     static int field_g;
 
-    rq(gj param0, int param1, int param2) {
+    rq(BattleScreen param0, int param1, int param2) {
         super(param0, param1, param2);
     }
 

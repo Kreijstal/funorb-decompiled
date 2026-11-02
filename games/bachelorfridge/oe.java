@@ -4,7 +4,7 @@
 final class oe implements so {
     static String[] field_b;
     static String field_d;
-    static sna field_c;
+    static UiComponent field_c;
     static String field_a;
 
     final static void a(int param0, PacketBuffer param1, it param2) {
@@ -137,7 +137,7 @@ final class oe implements so {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_b = null;
         field_a = null;

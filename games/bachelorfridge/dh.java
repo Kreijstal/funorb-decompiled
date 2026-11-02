@@ -4,7 +4,7 @@
 final class dh extends EventEffect {
     static String field_i;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -39) {
           field_i = (String) null;
           field_i = null;
@@ -66,7 +66,7 @@ final class dh extends EventEffect {
         }
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         try {
           param1.field_R = true;
           if (param2 != 12) {
@@ -77,10 +77,10 @@ final class dh extends EventEffect {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -1 % ((34 - param1) / 58);
-          super.a(param0, (byte) -77);
+          super.write(param0, (byte) -77);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "dh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

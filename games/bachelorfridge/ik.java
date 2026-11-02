@@ -3,9 +3,9 @@
  */
 final class ik {
     static IndexedSprite[] field_h;
-    static sna field_i;
+    static UiComponent field_i;
     private String field_f;
-    sna field_g;
+    UiComponent field_g;
     static Sprite[] field_l;
     pna field_a;
     private long field_e;
@@ -25,7 +25,7 @@ final class ik {
           if (var5 != null) {
             var3 = var5.field_Jb;
             if (var5.field_Wb) {
-              this.field_a.a(lga.a(param0, new String[]{var3}, qh.field_a), true, 2);
+              this.field_a.a(lga.a(param0, new String[]{var3}, WidgetTheme.field_a), true, 2);
               this.field_a.a(lga.a(true, new String[]{var3}, cc.field_a), true, 3);
             } else {
               if (var5.field_zb) {
@@ -150,7 +150,7 @@ final class ik {
 
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_d = null;
         field_i = null;
@@ -215,7 +215,7 @@ final class ik {
     final void a(byte param0, boolean param1) {
         this.field_a.a(param1, 7802);
         if (param0 >= -119) {
-          this.field_g = (sna) null;
+          this.field_g = (UiComponent) null;
         }
     }
 
@@ -367,7 +367,7 @@ final class ik {
         return true;
     }
 
-    final static void a(int param0, jfa param1, int param2, int param3) {
+    final static void a(int param0, FridgeCreature param1, int param2, int param3) {
         BitPacketBuffer var4 = null;
         int var5 = 0;
         if (AttackUpAllAnimation.e(-29919)) {
@@ -431,7 +431,7 @@ final class ik {
         return true;
     }
 
-    ik(sna param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    ik(UiComponent param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_a = new pna(SpecialOrder.field_o);
           this.field_f = param3;

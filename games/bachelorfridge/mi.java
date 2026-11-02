@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class mi extends AnimationNode {
-    private gj field_j;
+    private BattleScreen field_j;
     static String field_n;
     private int field_o;
     private int field_q;
@@ -13,7 +13,7 @@ final class mi extends AnimationNode {
     static gu[] field_l;
     private int field_p;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_l = null;
         int var1 = 17 / ((-49 - param0) / 54);
@@ -21,11 +21,11 @@ final class mi extends AnimationNode {
 
     private final void b(boolean param0) {
         if (param0) {
-          mi.d((byte) 97);
+          mi.releaseStatics((byte) 97);
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$3 = 0;
         uea var3;
         int var4;
@@ -45,7 +45,7 @@ final class mi extends AnimationNode {
         var5 = this.field_m[fieldTemp$3];
         var6 = var5;
         var3 = new uea(this.field_j, var6.field_c, var6.field_a, 16777215);
-        ((kj) ((Object) var3)).a(0);
+        ((TileEffect) ((Object) var3)).a(0);
         this.field_j.field_h.tiles[var5.field_c][var5.field_a].field_i = true;
         this.field_j.field_s.d(74);
         var4 = -120 / ((71 - param0) / 47);
@@ -63,7 +63,7 @@ final class mi extends AnimationNode {
         return false;
     }
 
-    mi(gj param0, bja param1) {
+    mi(BattleScreen param0, bja param1) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;

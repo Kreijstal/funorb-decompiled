@@ -4,7 +4,7 @@
 final class bda extends lw {
     static String field_o;
     static String[] field_n;
-    static sna[] field_m;
+    static UiComponent[] field_m;
     static String field_p;
     static int field_l;
 

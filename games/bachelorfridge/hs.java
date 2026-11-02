@@ -146,7 +146,7 @@ final class hs {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 != -127) {
           field_c = (String) null;

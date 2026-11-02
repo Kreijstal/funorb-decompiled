@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hc extends vd implements lja {
+final class hc extends WidgetContainer implements WidgetActionListener {
     private mf field_I;
     private int[] field_G;
     private int field_E;
     static int field_J;
     private String field_C;
-    private hf[] field_F;
+    private InteractiveWidget[] field_F;
     static int field_D;
     private BitmapFont field_H;
 
-    public final void a(int param0, hf param1, int param2, byte param3, int param4) {
+    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -24,7 +24,7 @@ final class hc extends vd implements lja {
         try {
           var6_int = 0;
           if (param3 < 50) {
-            this.a((byte) -102, -21, 19, -11);
+            this.draw((byte) -102, -21, 19, -11);
           }
           while (var6_int < this.field_E) {
             if (param1 != this.field_F[var6_int]) {
@@ -54,9 +54,9 @@ final class hc extends vd implements lja {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a((byte) -85, param1, param2, param3);
-        this.field_H.drawParagraph(this.field_C, 14 + (this.field_s + param3), 10 + this.field_v + param1, -28 + this.field_p, this.field_q, 16777215, -1, 0, 0, this.field_H.field_u);
+    final void draw(byte param0, int param1, int param2, int param3) {
+        super.draw((byte) -85, param1, param2, param3);
+        this.field_H.drawParagraph(this.field_C, 14 + (this.x + param3), 10 + this.y + param1, -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_H.field_u);
         int var5 = -1 % ((param0 + 20) / 54);
     }
 
@@ -65,7 +65,7 @@ final class hc extends vd implements lja {
         try {
           var4_int = this.field_E;
           this.a(var4_int + 1, param0 ^ param0);
-          this.field_F[var4_int] = this.a((pl) (this), param1, param0 + 19521);
+          this.field_F[var4_int] = this.a((WidgetListener) (this), param1, param0 + 19521);
           this.field_G[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "hc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -78,8 +78,8 @@ final class hc extends vd implements lja {
         if (this.field_E >= param0) {
           return;
         }
-        hf[] var7 = new hf[param0];
-        hf[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param0];
         for (var5 = param1; this.field_E > var5; var5++) {
           var7[var5] = this.field_F[var5];
@@ -91,7 +91,7 @@ final class hc extends vd implements lja {
     }
 
     hc(mf param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (qda) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_E = 0;
         try {
@@ -105,12 +105,12 @@ final class hc extends vd implements lja {
         }
     }
 
-    final hf a(pl param0, String param1, int param2) {
-        hf var4 = null;
+    final InteractiveWidget a(WidgetListener param0, String param1, int param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         String var6 = null;
-        hf stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -120,13 +120,13 @@ final class hc extends vd implements lja {
         try {
           if (param2 != 19528) {
             var6 = (String) null;
-            this.a((pl) null, (String) null, -17);
+            this.a((WidgetListener) null, (String) null, -17);
           }
-          var4 = new hf(param1, param0);
-          var4.field_f = (qda) ((Object) new ff());
-          var5 = -2 + this.field_q;
-          this.a(0, 34 + this.field_q, (byte) 59, this.field_p, 0);
-          var4.a(7, 30, (byte) 59, -14 + this.field_p, var5);
+          var4 = new InteractiveWidget(param1, param0);
+          var4.renderer = (WidgetRenderer) ((Object) new ff());
+          var5 = -2 + this.height;
+          this.a(0, 34 + this.height, (byte) 59, this.width, 0);
+          var4.a(7, 30, (byte) 59, -14 + this.width, var5);
           this.c(var4, -126);
           stackIn_3_0 = var4;
           return stackIn_3_0;

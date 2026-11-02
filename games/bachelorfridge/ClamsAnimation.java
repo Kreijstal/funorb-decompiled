@@ -3,7 +3,7 @@
  */
 final class ClamsAnimation extends EventAnimation {
     static String field_z;
-    private taa field_v;
+    private ActorAnimation field_v;
     static IndexedSprite field_y;
     static String field_A;
     static int field_x;
@@ -14,7 +14,7 @@ final class ClamsAnimation extends EventAnimation {
     }
 
     private final void d(int param0) {
-        ad var4 = null;
+        CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
         BattleCreature var2 = this.field_w.creature.a(56, this.screen.field_h);
         if (var2.isDown(-109)) {
@@ -26,7 +26,7 @@ final class ClamsAnimation extends EventAnimation {
           while (var3 != null) {
             var4 = var3.target.a(param0 ^ -27455, this.screen);
             var4.b(-1, 6);
-            var3.a(var2, this.screen.field_h, 12);
+            var3.apply(var2, this.screen.field_h, 12);
             var3 = (EventEffect) (this.field_w.effects.c(param0 - 6));
           }
           return;
@@ -36,14 +36,14 @@ final class ClamsAnimation extends EventAnimation {
     private final void f(int param0) {
         int var4 = 0;
         uea discarded$0 = null;
-        hd var2;
+        SpecialMoveDefinition var2;
         BattleState var3;
         int var5;
         int var6;
         int var7;
-        hd var8;
+        SpecialMoveDefinition var8;
         var7 = BachelorFridge.field_y;
-        var8 = (hd) (al.a(-79, this.field_w.moveId));
+        var8 = (SpecialMoveDefinition) (al.a(-79, this.field_w.moveId));
         var2 = var8;
         var3 = this.screen.field_h;
         this.field_w.creature.a(90, this.screen.field_h);
@@ -58,10 +58,10 @@ final class ClamsAnimation extends EventAnimation {
             discarded$0 = new uea(this.screen, var5, var6, gma.field_e[var8.field_q].field_a);
           }
         }
-        this.field_w.a(this.screen.field_h, false);
+        this.field_w.apply(this.screen.field_h, false);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1111) {
           return;
         }
@@ -70,7 +70,7 @@ final class ClamsAnimation extends EventAnimation {
         field_z = null;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = -119 / ((param0 - 71) / 47);
         if (this.field_m.isLinked((byte) -106)) {
           return false;
@@ -92,7 +92,7 @@ final class ClamsAnimation extends EventAnimation {
         return true;
     }
 
-    final static nv a(sna param0, int[] param1, sna param2, int param3, sna param4) {
+    final static nv a(UiComponent param0, int[] param1, UiComponent param2, int param3, UiComponent param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
@@ -174,12 +174,12 @@ final class ClamsAnimation extends EventAnimation {
         }
     }
 
-    ClamsAnimation(gj param0, ClamsEvent param1) {
+    ClamsAnimation(BattleScreen param0, ClamsEvent param1) {
         super(param0, param1);
         try {
           this.field_w = param1;
-          this.field_v = new taa(this.screen, this.field_w.field_q, this.field_w.field_t);
-          this.a(27799, this.field_v);
+          this.field_v = new ActorAnimation(this.screen, this.field_w.field_q, this.field_w.field_t);
+          this.addChild(27799, this.field_v);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "lma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

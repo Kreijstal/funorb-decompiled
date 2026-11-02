@@ -3,7 +3,7 @@
  */
 final class nla {
     static boolean field_f;
-    static sna field_b;
+    static UiComponent field_b;
     static String field_e;
     static double field_d;
     static int[] field_a;
@@ -45,7 +45,7 @@ final class nla {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         if (param0) {
           return;

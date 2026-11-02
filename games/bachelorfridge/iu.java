@@ -48,7 +48,7 @@ final class iu extends AnimationNode {
         int var9Lifetime3Lifetime1;
         var13 = BachelorFridge.field_y;
         var4 = null;
-        af.field_b.field_vb.field_z.d(102);
+        af.field_b.field_vb.children.d(102);
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + qs.field_n; 0 <= var7; var7--) {
@@ -74,7 +74,7 @@ final class iu extends AnimationNode {
               var10 = ah.a(var8_ref_gs, (byte) -118);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_gs.field_n);
               var12 = tc.a(false, var8_ref_gs);
-              var8_ref_gs.field_h = new sna(0L, uc.field_l, var11);
+              var8_ref_gs.field_h = new UiComponent(0L, uc.field_l, var11);
               var8_ref_gs.field_h.field_jb = dc.field_r;
               var6 = var6 + param3;
               var8_ref_gs.field_h.field_ab = ((uc.field_l.field_ab & 16711422) >> 1) + var12 - (var12 >> 1 & 8355711);
@@ -107,21 +107,21 @@ final class iu extends AnimationNode {
           if (BoardTile.field_e) {
             af.field_b.field_vb.field_I = 0;
             BoardTile.field_e = false;
-            qh.field_l = true;
+            WidgetTheme.field_l = true;
             af.field_b.field_vb.field_rb = -af.field_b.field_vb.field_p + af.field_b.field_wb.field_p;
           }
           af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime1;
           if (lna.field_q &&
             bi.field_h != null) {
-            qh.field_l = true;
+            WidgetTheme.field_l = true;
           }
           var9Lifetime1 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
-          if (qh.field_l) {
+          if (WidgetTheme.field_l) {
             af.field_b.field_vb.field_I = var9Lifetime1 - af.field_b.field_vb.field_rb;
           }
           af.field_b.a(true, 0, param3, param0 * param3 * 2);
           stackIn_46_0 = (var9Lifetime1 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-          qh.field_l = stackIn_46_0;
+          WidgetTheme.field_l = stackIn_46_0;
           return (gs) (var4);
         }
         var7Lifetime2 = 0;
@@ -145,43 +145,43 @@ final class iu extends AnimationNode {
             af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime2;
             if (lna.field_q &&
               bi.field_h != null) {
-              qh.field_l = true;
+              WidgetTheme.field_l = true;
             }
             var9Lifetime2 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
-            if (qh.field_l) {
+            if (WidgetTheme.field_l) {
               af.field_b.field_vb.field_I = var9Lifetime2 - af.field_b.field_vb.field_rb;
             }
             af.field_b.a(true, 0, param3, param0 * param3 * 2);
             stackIn_68_0 = (var9Lifetime2 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-            qh.field_l = stackIn_68_0;
+            WidgetTheme.field_l = stackIn_68_0;
           } else {
             af.field_b.field_vb.field_I = 0;
             BoardTile.field_e = false;
-            qh.field_l = true;
+            WidgetTheme.field_l = true;
             af.field_b.field_vb.field_rb = -af.field_b.field_vb.field_p + af.field_b.field_wb.field_p;
             af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime2;
             if (!lna.field_q) {
               var9Lifetime2 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
-              if (qh.field_l) {
+              if (WidgetTheme.field_l) {
                 af.field_b.field_vb.field_I = var9Lifetime2 - af.field_b.field_vb.field_rb;
               }
               af.field_b.a(true, 0, param3, param0 * param3 * 2);
               stackIn_75_0 = (var9Lifetime2 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-              qh.field_l = stackIn_75_0;
+              WidgetTheme.field_l = stackIn_75_0;
             } else {
               if (bi.field_h != null) {
-                qh.field_l = true;
+                WidgetTheme.field_l = true;
               }
               var9Lifetime2 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
-              if (!qh.field_l) {
+              if (!WidgetTheme.field_l) {
                 af.field_b.a(true, 0, param3, param0 * param3 * 2);
                 stackIn_83_0 = (var9Lifetime2 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-                qh.field_l = stackIn_83_0;
+                WidgetTheme.field_l = stackIn_83_0;
               } else {
                 af.field_b.field_vb.field_I = var9Lifetime2 - af.field_b.field_vb.field_rb;
                 af.field_b.a(true, 0, param3, param0 * param3 * 2);
                 stackIn_87_0 = (var9Lifetime2 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-                qh.field_l = stackIn_87_0;
+                WidgetTheme.field_l = stackIn_87_0;
               }
             }
           }
@@ -192,70 +192,70 @@ final class iu extends AnimationNode {
           if (lna.field_q) {
             if (bi.field_h == null) {
               var9Lifetime3 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
-              if (!qh.field_l) {
+              if (!WidgetTheme.field_l) {
                 af.field_b.a(true, 0, param3, param0 * param3 * 2);
                 stackIn_119_0 = (var9Lifetime3 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-                qh.field_l = stackIn_119_0;
+                WidgetTheme.field_l = stackIn_119_0;
               } else {
                 af.field_b.field_vb.field_I = var9Lifetime3 - af.field_b.field_vb.field_rb;
                 af.field_b.a(true, 0, param3, param0 * param3 * 2);
                 stackIn_123_0 = (var9Lifetime3 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-                qh.field_l = stackIn_123_0;
+                WidgetTheme.field_l = stackIn_123_0;
               }
               return (gs) (var4);
             }
-            qh.field_l = true;
+            WidgetTheme.field_l = true;
           }
           var9Lifetime3Lifetime1 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
-          if (!qh.field_l) {
+          if (!WidgetTheme.field_l) {
             af.field_b.a(true, 0, param3, param0 * param3 * 2);
             stackIn_130_0 = (var9Lifetime3Lifetime1 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-            qh.field_l = stackIn_130_0;
+            WidgetTheme.field_l = stackIn_130_0;
           } else {
             af.field_b.field_vb.field_I = var9Lifetime3Lifetime1 - af.field_b.field_vb.field_rb;
             af.field_b.a(true, 0, param3, param0 * param3 * 2);
             stackIn_134_0 = (var9Lifetime3Lifetime1 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-            qh.field_l = stackIn_134_0;
+            WidgetTheme.field_l = stackIn_134_0;
           }
           return (gs) (var4);
         }
         af.field_b.field_vb.field_I = 0;
         BoardTile.field_e = false;
-        qh.field_l = true;
+        WidgetTheme.field_l = true;
         af.field_b.field_vb.field_rb = -af.field_b.field_vb.field_p + af.field_b.field_wb.field_p;
         af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime2;
         if (lna.field_q) {
           if (bi.field_h == null) {
             var9Lifetime4 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
-            if (!qh.field_l) {
+            if (!WidgetTheme.field_l) {
               af.field_b.a(true, 0, param3, param0 * param3 * 2);
               stackIn_96_0 = (var9Lifetime4 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-              qh.field_l = stackIn_96_0;
+              WidgetTheme.field_l = stackIn_96_0;
             } else {
               af.field_b.field_vb.field_I = var9Lifetime4 - af.field_b.field_vb.field_rb;
               af.field_b.a(true, 0, param3, param0 * param3 * 2);
               stackIn_100_0 = (var9Lifetime4 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-              qh.field_l = stackIn_100_0;
+              WidgetTheme.field_l = stackIn_100_0;
             }
             return (gs) (var4);
           }
-          qh.field_l = true;
+          WidgetTheme.field_l = true;
         }
         var9Lifetime5 = -af.field_b.field_vb.field_hb - (af.field_b.field_vb.field_p - af.field_b.field_wb.field_p);
-        if (!qh.field_l) {
+        if (!WidgetTheme.field_l) {
           af.field_b.a(true, 0, param3, param0 * param3 * 2);
           stackIn_107_0 = (var9Lifetime5 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-          qh.field_l = stackIn_107_0;
+          WidgetTheme.field_l = stackIn_107_0;
         } else {
           af.field_b.field_vb.field_I = var9Lifetime5 - af.field_b.field_vb.field_rb;
           af.field_b.a(true, 0, param3, param0 * param3 * 2);
           stackIn_111_0 = (var9Lifetime5 == af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb);
-          qh.field_l = stackIn_111_0;
+          WidgetTheme.field_l = stackIn_111_0;
         }
         return (gs) (var4);
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         jja.a(this.field_j, -1, this.field_k);
         int var2 = 27 % ((71 - param0) / 47);
         return true;
@@ -270,7 +270,7 @@ final class iu extends AnimationNode {
     }
 
     final static void d(int param0) {
-        mda.field_b.a(100 * jfa.field_q[BananarangAnimation.field_Q].field_d, 31407, 400, 105, 350);
+        mda.field_b.a(100 * FridgeCreature.field_q[BananarangAnimation.field_Q].field_d, 31407, 400, 105, 350);
         if (param0 > 6) {
           RasterBuffer.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
           RasterBuffer.field_d.a(0, 155, false, 19, 298, 20, 406);

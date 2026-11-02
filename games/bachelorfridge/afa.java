@@ -133,7 +133,7 @@ final class afa extends k {
         return this.field_o[param0];
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 <= 56) {
           field_k = (String) null;

@@ -22,7 +22,7 @@ final class SplitEvent extends SpecialEvent {
         super(param0, param1);
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         PacketBuffer var4 = null;
         SplitAnimation stackIn_3_0 = null;
@@ -91,7 +91,7 @@ final class SplitEvent extends SpecialEvent {
           param1.writeByte(this.effects.g(0), 0);
           var5 = (EventEffect) (this.effects.b((byte) 90));
           while (var5 != null) {
-            var5.a(param1, (byte) -54);
+            var5.write(param1, (byte) -54);
             var5 = (EventEffect) (this.effects.c(0));
           }
           param1.writeByte(this.field_p ? 1 : 0, 0);

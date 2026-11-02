@@ -6,7 +6,7 @@ import java.util.*;
 final class oma {
     static int[] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 51) {
           field_a = (int[]) null;
           field_a = null;

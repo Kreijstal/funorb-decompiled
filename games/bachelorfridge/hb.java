@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hb extends aba {
-    private lka field_h;
+    private TextInputWidget field_h;
     static String field_g;
     static IndexedSprite[] field_k;
     static String field_i;
     static boolean field_j;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 > -95) {
           return;
@@ -24,7 +24,7 @@ final class hb extends aba {
         kaa.field_m = param1;
         ut.field_o = param2;
         SplitAnimation.field_v = 0;
-        if (!tn.a(kaa.field_m, 120)) {
+        if (!GameClock.a(kaa.field_m, 120)) {
           boolean decompiledFrameRemainder0 = true;
           if (OhNoEvent.field_s == 0) {
             if (kaa.field_m != -3) {
@@ -141,8 +141,8 @@ final class hb extends aba {
         var14 = BachelorFridge.field_y;
         try {
           var6_int = param1 + 8 + (487 + param5 + 8);
-          gha.field_d.a(i.field_a.field_p - 6, 31407, -6 + var6_int, 3, 3);
-          var7 = gha.field_d.field_p - 5;
+          DefaultWidgetRenderer.field_d.a(i.field_a.field_p - 6, 31407, -6 + var6_int, 3, 3);
+          var7 = DefaultWidgetRenderer.field_d.field_p - 5;
           ResetAnimation.field_w.a(param3, 31407, 2 + param1 - (-485 - param5), 5, -param3 + var7);
           HailAnimation.field_A.a(param3, 31407, -DisableSpecial.field_r.field_sb + (ResetAnimation.field_w.field_sb - param1), param1, 0);
           var7 = var7 - (param3 + 2);
@@ -158,9 +158,9 @@ final class hb extends aba {
           for (var12 = 0; 6 > var12; var12++) {
             if (var12 >= 5 ||
               null != r.field_l[var12]) {
-              var13 = (-6 + i.field_a.field_p + 2) * var11 / (rf.field_k + 1) + 3;
+              var13 = (-6 + i.field_a.field_p + 2) * var11 / (ArchiveIndex.field_k + 1) + 3;
               var11++;
-              var7Lifetime1 = -var13 + (3 + ((2 + (-6 + i.field_a.field_p)) * var11 / (rf.field_k + 1) - 2));
+              var7Lifetime1 = -var13 + (3 + ((2 + (-6 + i.field_a.field_p)) * var11 / (ArchiveIndex.field_k + 1) - 2));
               if (var12 < 5) {
                 r.field_l[var12].a(var7Lifetime1, 31407, var8, var6_int, var13);
                 cb.field_o[var12].a(var7Lifetime1, 31407, var9 - param1, param1, 0);
@@ -201,14 +201,14 @@ final class hb extends aba {
             var3 = ((mca) ((Object) this.field_h)).a(16728128);
             if (var3 != null &&
               var3.b(-19704) != cm.field_u) {
-              stackIn_8_0 = jt.field_f;
+              stackIn_8_0 = FoodShopPanel.field_f;
               return stackIn_8_0;
             }
           }
-          if (param0.equals(this.field_h.field_w)) {
+          if (param0.equals(this.field_h.text)) {
             stackIn_12_0 = cm.field_u;
           } else {
-            stackIn_12_0 = jt.field_f;
+            stackIn_12_0 = FoodShopPanel.field_f;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -242,7 +242,7 @@ final class hb extends aba {
             var3 = ((mca) ((Object) this.field_h)).a(16728128);
             if (var3 != null) {
               if (var3.b(-19704) == cm.field_u &&
-                !param1.equals(this.field_h.field_w)) {
+                !param1.equals(this.field_h.text)) {
                 stackIn_6_0 = sa.field_l;
                 return stackIn_6_0;
               }
@@ -250,7 +250,7 @@ final class hb extends aba {
               return stackIn_8_0;
             }
           }
-          if (!param1.equals(this.field_h.field_w)) {
+          if (!param1.equals(this.field_h.text)) {
             stackIn_12_0 = sa.field_l;
             return stackIn_12_0;
           }
@@ -271,7 +271,7 @@ final class hb extends aba {
         }
     }
 
-    hb(lka param0, lka param1) {
+    hb(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         try {
           this.field_h = param1;

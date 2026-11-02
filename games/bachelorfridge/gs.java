@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gs {
-    sna field_h;
+    UiComponent field_h;
     int field_b;
     boolean field_i;
     int field_m;
@@ -19,7 +19,7 @@ final class gs {
     int[] field_o;
     String field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != 0) {
           return;
@@ -42,7 +42,7 @@ final class gs {
           var3 = new byte[var2_int];
           ArrayOperations.copy(param1, 0, var3, 0, var2_int);
           if (param0 < 118) {
-            gs.a(-47);
+            gs.releaseStatics(-47);
           }
           stackIn_3_0 = var3;
           return stackIn_3_0;
@@ -78,12 +78,12 @@ final class gs {
         if (param0 >= 117) {
           return 0;
         }
-        this.field_h = (sna) null;
+        this.field_h = (UiComponent) null;
         return 0;
     }
 
     gs(boolean param0) {
-        this.field_m = ad.field_g;
+        this.field_m = CreatureActor.field_g;
         this.field_i = OneAnimation.field_x;
         this.field_e = gba.field_yb;
         this.field_b = vv.field_d;

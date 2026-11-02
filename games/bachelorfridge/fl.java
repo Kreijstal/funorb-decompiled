@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fl extends AnimationNode {
-    static sna field_m;
+    static UiComponent field_m;
     static int field_q;
     static int[] field_j;
     static int[] field_p;
     private int field_k;
     static String[] field_o;
-    private ad field_n;
+    private CreatureActor field_n;
     static String field_l;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_m = null;
         if (!param0) {
           field_o = null;
@@ -20,7 +20,7 @@ final class fl extends AnimationNode {
           field_j = null;
           return;
         }
-        fl.b(true);
+        fl.releaseStatics(true);
         field_o = null;
         field_l = null;
         field_p = null;
@@ -42,7 +42,7 @@ final class fl extends AnimationNode {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         if (this.field_k == 10) {
           aba.a((byte) -67, 19);
         }
@@ -59,7 +59,7 @@ final class fl extends AnimationNode {
         return false;
     }
 
-    fl(gj param0, ad param1) {
+    fl(BattleScreen param0, CreatureActor param1) {
         try {
           this.field_n = param1;
           this.field_n.field_f.a((byte) 18, this.field_n.field_s.field_o.field_b, 5);

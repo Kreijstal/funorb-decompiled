@@ -108,10 +108,10 @@ final class MusicPatch extends IntrusiveNode {
         if (param0 <= 81) {
           field_g = (IndexedSprite[][]) null;
         }
-        String var2 = lka.field_E[param1][6];
+        String var2 = TextInputWidget.field_E[param1][6];
         var2 = var2.toLowerCase();
         var2 = var2.trim();
-        ji var3 = (ji) (id.field_i.a(true, (long)var2.hashCode()));
+        ji var3 = (ji) (PizzaArenaTheme.field_i.a(true, (long)var2.hashCode()));
         return var3.field_h;
     }
 
@@ -634,12 +634,12 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static void a(sna param0, int param1, sna param2) {
-        if (param2.field_z == null) {
-          param2.field_z = new IntrusiveDeque();
+    final static void a(UiComponent param0, int param1, UiComponent param2) {
+        if (param2.children == null) {
+          param2.children = new IntrusiveDeque();
         }
-        if (param0.field_z == null) {
-          param0.field_z = new IntrusiveDeque();
+        if (param0.children == null) {
+          param0.children = new IntrusiveDeque();
         }
         if (null == wja.field_m) {
           wja.field_m = new DualLinkNodeHashTable(64);
@@ -651,8 +651,8 @@ final class MusicPatch extends IntrusiveNode {
           return;
         }
         try {
-          es.field_j = param2.field_z;
-          HazmatAnimation.field_v = param0.field_z;
+          es.field_j = param2.children;
+          HazmatAnimation.field_v = param0.children;
           DualLinkNode.c(-55);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "eka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

@@ -4,11 +4,11 @@
 final class ena extends pu {
     static byte[][] field_p;
     static IndexedSprite field_l;
-    static tn field_m;
+    static GameClock field_m;
     static String[] field_o;
     static int field_n;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }
@@ -104,7 +104,7 @@ final class ena extends pu {
         FullHealEvent.a("rag_hover", param1, "basic", (byte) 67);
         hca.a("basic", param1, param0 - 50, "bucket");
         hca.a("basic", param1, -125, "bucket_empty");
-        ng.field_a = FullHealEvent.a("bag_hover", param1, "basic", (byte) 88);
+        MoveInfoPanel.field_a = FullHealEvent.a("bag_hover", param1, "basic", (byte) 88);
         pea.field_k = FullHealEvent.a("bag_bg", param1, "basic", (byte) -108);
         kga.field_d = FullHealEvent.a("bag_full_hover", param1, "basic", (byte) -111);
         ve.field_l = pi.a(param1, param0 - 8801, "basic", "arena_entrance_anim");

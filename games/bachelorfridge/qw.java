@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qw {
-    static sna field_b;
+    static UiComponent field_b;
     static int field_d;
     static Sprite field_c;
     static String field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -116) {
           return;
         }

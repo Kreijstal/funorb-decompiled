@@ -19,7 +19,7 @@ final class GasCloudAnimation extends EventAnimation {
     static String field_B;
     static Sprite[] field_H;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var3 = 0;
         int var2;
         int var7;
@@ -39,7 +39,7 @@ final class GasCloudAnimation extends EventAnimation {
                   var5 >= 0 &&
                   var5 < this.screen.field_h.height) {
                   var6 = new ob(this.screen, var4, var5);
-                  ((kj) ((Object) var6)).a(0);
+                  ((TileEffect) ((Object) var6)).a(0);
                 }
               }
             }
@@ -56,7 +56,7 @@ final class GasCloudAnimation extends EventAnimation {
         return true;
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_B = null;
         field_I = null;
         field_v = null;
@@ -182,7 +182,7 @@ final class GasCloudAnimation extends EventAnimation {
     final static void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         int var19_int = 0;
         int var23_int = 0;
-        sna dupTemp$0 = null;
+        UiComponent dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -195,19 +195,19 @@ final class GasCloudAnimation extends EventAnimation {
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
         uha stackIn_10_0;
-        sna stackIn_10_1;
-        sna stackIn_10_2;
+        UiComponent stackIn_10_1;
+        UiComponent stackIn_10_2;
         long stackIn_10_3;
-        sna stackIn_11_1 = null;
-        sna stackIn_11_2 = null;
-        sna stackIn_11_4 = null;
+        UiComponent stackIn_11_1 = null;
+        UiComponent stackIn_11_2 = null;
+        UiComponent stackIn_11_4 = null;
         uha stackIn_30_0;
-        sna stackIn_30_1;
-        sna stackIn_30_2;
+        UiComponent stackIn_30_1;
+        UiComponent stackIn_30_2;
         long stackIn_30_3;
-        sna stackIn_31_1;
-        sna stackIn_31_2;
-        sna stackIn_31_4;
+        UiComponent stackIn_31_1;
+        UiComponent stackIn_31_2;
+        UiComponent stackIn_31_4;
         int stackIn_35_0 = 0;
         int stackIn_70_0 = 0;
         int stackIn_79_0 = 0;
@@ -228,19 +228,19 @@ final class GasCloudAnimation extends EventAnimation {
         uha var13 = null;
         int var14 = 0;
         int var15 = 0;
-        sna var19 = null;
-        sna var20 = null;
-        sna var21 = null;
-        sna var22 = null;
-        sna var23 = null;
-        sna var24 = null;
-        sna var25 = null;
-        sna var26 = null;
-        sna var27 = null;
-        sna var28 = null;
-        sna var29 = null;
-        sna var30 = null;
-        sna var31 = null;
+        UiComponent var19 = null;
+        UiComponent var20 = null;
+        UiComponent var21 = null;
+        UiComponent var22 = null;
+        UiComponent var23 = null;
+        UiComponent var24 = null;
+        UiComponent var25 = null;
+        UiComponent var26 = null;
+        UiComponent var27 = null;
+        UiComponent var28 = null;
+        UiComponent var29 = null;
+        UiComponent var30 = null;
+        UiComponent var31 = null;
         int var32 = 0;
         String var33 = null;
         int var34_int = 0;
@@ -257,13 +257,13 @@ final class GasCloudAnimation extends EventAnimation {
         int var41 = 0;
         int var42 = 0;
         Sprite var43 = null;
-        sna var44 = null;
-        sna var45 = null;
-        sna var46 = null;
-        sna var47 = null;
-        sna var48 = null;
-        sna var49 = null;
-        sna var50 = null;
+        UiComponent var44 = null;
+        UiComponent var45 = null;
+        UiComponent var46 = null;
+        UiComponent var47 = null;
+        UiComponent var48 = null;
+        UiComponent var49 = null;
+        UiComponent var50 = null;
         Object var51 = null;
         Sprite var51_ref = null;
         Object var52 = null;
@@ -295,28 +295,28 @@ final class GasCloudAnimation extends EventAnimation {
           stackIn_3_3 = param3 * (rg.field_h * 4 + 8);
           stackIn_4_4 = (bga.field_m == p.field_n);
           var7_int = ((sga) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param1, true) ? 1 : 0;
-          var9 = p.field_n.field_vb.field_z;
+          var9 = p.field_n.field_vb.children;
           var10 = f.b((byte) 73);
           var12 = null;
           var13 = (uha) (var9.b((byte) 90));
           while (var13 != null) {
             var14 = 0;
-            if (var13.field_z == null) {
+            if (var13.children == null) {
               stackIn_8_0 = param6;
               stackIn_8_1 = param4;
               var15 = stackIn_8_0 | stackIn_8_1;
-              var13.field_hc = new sna(0L, wv.field_l);
+              var13.field_hc = new UiComponent(0L, wv.field_l);
               var13.a(-1, var13.field_hc);
               var13.field_hc.field_N = 1;
-              var13.field_Hb = new sna(0L, ClientException.field_c);
+              var13.field_Hb = new UiComponent(0L, ClientException.field_c);
               var13.a(-1, var13.field_Hb);
-              var13.field_yb = new sna(0L, wv.field_l);
+              var13.field_yb = new UiComponent(0L, wv.field_l);
               var13.a(-1, var13.field_yb);
               var13.field_yb.field_L = 0;
-              var13.field_Yb = new sna(0L, wv.field_l);
+              var13.field_Yb = new UiComponent(0L, wv.field_l);
               var13.a(-1, var13.field_Yb);
               var13.field_Yb.field_L = 0;
-              var13.field_vb = new sna(0L, ClientException.field_c);
+              var13.field_vb = new UiComponent(0L, ClientException.field_c);
               var13.a(-1, var13.field_vb);
               var13.field_vb.field_N = 2;
               stackIn_10_0 = var13;
@@ -332,22 +332,22 @@ final class GasCloudAnimation extends EventAnimation {
                 stackIn_11_2 = null;
                 stackIn_11_4 = ClientException.field_c;
               }
-              stackIn_10_0.field_Db = new sna(stackIn_10_3, stackIn_11_4);
+              stackIn_10_0.field_Db = new UiComponent(stackIn_10_3, stackIn_11_4);
               var13.a(-1, var13.field_Db);
-              var13.field_Ab = new sna[ld.field_q];
-              var13.field_xb = new sna(0L, (sna) null);
+              var13.field_Ab = new UiComponent[ld.field_q];
+              var13.field_xb = new UiComponent(0L, (UiComponent) null);
               if ((1 << wba.field_c & var15) != 0) {
                 var13.field_Db.a(-1, var13.field_xb);
               }
-              var13.field_wb = new sna(0L, (sna) null);
+              var13.field_wb = new UiComponent(0L, (UiComponent) null);
               if ((var15 & 1 << kf.field_b) != 0) {
                 var13.field_Db.a(-1, var13.field_wb);
               }
-              var13.field_Qb = new sna(0L, (sna) null);
+              var13.field_Qb = new UiComponent(0L, (UiComponent) null);
               if ((var15 & 1 << gf.field_l) != 0) {
                 var13.field_Db.a(-1, var13.field_Qb);
               }
-              var13.field_fc = new sna(0L, (sna) null);
+              var13.field_fc = new UiComponent(0L, (UiComponent) null);
               if ((var15 & 1 << lga.field_r) != 0) {
                 var13.field_Db.a(-1, var13.field_fc);
               }
@@ -359,7 +359,7 @@ final class GasCloudAnimation extends EventAnimation {
               var45.field_Y = 1;
               var46.field_Y = 1;
               for (var19_int = 0; var19_int < ld.field_q; var19_int++) {
-                var13.field_Ab[var19_int] = new sna(0L, (sna) null);
+                var13.field_Ab[var19_int] = new UiComponent(0L, (UiComponent) null);
                 if (0 != (var15 & 1 << ClamsEvent.field_v + var19_int)) {
                   var13.field_Db.a(-1, var13.field_Ab[var19_int]);
                 }
@@ -378,19 +378,19 @@ final class GasCloudAnimation extends EventAnimation {
                 stackIn_31_2 = null;
                 stackIn_31_4 = wv.field_l;
               }
-              stackIn_30_0.field_Gb = new sna(stackIn_30_3, stackIn_31_4);
+              stackIn_30_0.field_Gb = new UiComponent(stackIn_30_3, stackIn_31_4);
               var13.a(-1, var13.field_Gb);
               var13.field_Gb.field_N = 2;
-              var13.field_cc = new sna(0L, ClientException.field_c);
+              var13.field_cc = new UiComponent(0L, ClientException.field_c);
               var13.a(-1, var13.field_cc);
-              var13.field_Tb = new sna(0L, dla.field_k);
+              var13.field_Tb = new UiComponent(0L, dla.field_k);
               var13.a(-1, var13.field_Tb);
-              var13.field_Ib = new sna(0L, dla.field_k);
+              var13.field_Ib = new UiComponent(0L, dla.field_k);
               var13.a(-1, var13.field_Ib);
-              var13.field_ac = new sna(0L, qs.field_m);
+              var13.field_ac = new UiComponent(0L, qs.field_m);
               var13.a(-1, var13.field_ac);
               var13.d((byte) 119);
-              var13.field_Ub = new sna(0L, mh.field_k);
+              var13.field_Ub = new UiComponent(0L, mh.field_k);
               var14 = 1;
               var13.a(-1, var13.field_Ub);
             }
@@ -651,7 +651,7 @@ final class GasCloudAnimation extends EventAnimation {
               var13.field_hb = var32 - var13.field_p;
             }
             if (var14 != 0) {
-              p.field_n.field_vb.a(false, var13, (sna) (var12), 2);
+              p.field_n.field_vb.a(false, var13, (UiComponent) (var12), 2);
             }
             for (var35_intLifetime2 = 0; var35_intLifetime2 < ld.field_q; var35_intLifetime2++) {
               if (var13.field_Ab[var35_intLifetime2].field_T) {
@@ -704,7 +704,7 @@ final class GasCloudAnimation extends EventAnimation {
               if (var13.field_Lb != 2) {
                 stackIn_169_0 = aa.field_n;
               } else {
-                stackIn_169_0 = rs.field_h;
+                stackIn_169_0 = StatusEffectInfo.field_h;
               }
               jja.field_m = stackIn_169_0;
             }
@@ -735,7 +735,7 @@ final class GasCloudAnimation extends EventAnimation {
         }
     }
 
-    GasCloudAnimation(gj param0, GasCloudEvent param1) {
+    GasCloudAnimation(BattleScreen param0, GasCloudEvent param1) {
         super(param0, param1);
         this.field_x = 17;
         this.field_y = -1 + this.field_x >> 1;
@@ -792,14 +792,14 @@ final class GasCloudAnimation extends EventAnimation {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         BinaryBitmapFont var7 = null;
-        sna var8 = null;
-        sna var9 = null;
-        sna var10 = null;
-        sna var11 = null;
+        UiComponent var8 = null;
+        UiComponent var9 = null;
+        UiComponent var10 = null;
+        UiComponent var11 = null;
         Sprite[] var12 = null;
         Sprite[] var13 = null;
         Sprite[] var14 = null;
-        sna var15 = null;
+        UiComponent var15 = null;
         Sprite[] var16 = null;
         Sprite[] var17 = null;
         int[] var19 = null;
@@ -852,75 +852,75 @@ final class GasCloudAnimation extends EventAnimation {
           var7.setInlineSprites(var5, var25);
           ds.field_l.setInlineSprites(var5, var25);
           hl.field_H.setInlineSprites(var5, var25);
-          var8 = new sna(0L, (sna) null);
+          var8 = new UiComponent(0L, (UiComponent) null);
           var8.field_gb = 16777215;
           var8.field_B = rg.field_h;
           var8.field_jb = (BitmapFont) ((Object) var7);
           var8.field_Y = 1;
           var9 = var8;
           var9.field_N = 1;
-          var10 = new sna(0L, (sna) null);
+          var10 = new UiComponent(0L, (UiComponent) null);
           var10.field_jb = (BitmapFont) ((Object) ds.field_l);
           var10.field_gb = 16777215;
           var10.field_B = rg.field_h;
           var11 = var10;
           var10.field_Y = 1;
           var11.field_N = 1;
-          p.field_o = new sna(0L, var8);
+          p.field_o = new UiComponent(0L, var8);
           p.field_o.field_eb = tj.a(gw.a("lobby", "heading", param2, -74), (byte) 104);
-          nu.field_c = new sna(0L, (sna) null);
+          nu.field_c = new UiComponent(0L, (UiComponent) null);
           nu.field_c.field_eb = nba.a(false, 8421504, 1, false, 120, 4210752);
-          oe.field_c = new sna(0L, (sna) null);
+          oe.field_c = new UiComponent(0L, (UiComponent) null);
           oe.field_c.field_eb = mu.a(6316128, 3, 114, 6316128, 1, (byte) 17);
-          kha.field_i = new sna(0L, (sna) null);
+          kha.field_i = new UiComponent(0L, (UiComponent) null);
           kha.field_i.field_eb = tj.a(gw.a("lobby", "popup", param2, -54), (byte) -56);
           var12 = tj.a(gw.a("lobby", "popup_mouseover", param2, param0 - 30913), (byte) 125);
           var13 = gw.a("lobby", "button", param2, -96);
           var14 = tj.a(gw.a("lobby", "tab_active", param2, -128), (byte) -29);
-          mda.field_c = new sna(0L, var8);
+          mda.field_c = new UiComponent(0L, var8);
           mda.field_c.field_eb = var14;
-          SlowAllEvent.field_s = new sna(0L, (sna) null);
+          SlowAllEvent.field_s = new UiComponent(0L, (UiComponent) null);
           SlowAllEvent.field_s.field_v = hca.a("lobby", param2, -39, "closebutton");
           SlowAllEvent.field_s.field_U = hca.a("lobby", param2, param0 - 30996, "closebutton_mouseover");
-          rda.field_a = new sna(0L, var8);
+          rda.field_a = new UiComponent(0L, var8);
           rda.field_a.field_eb = nba.a(true, 3815994, 1, true, 40, 2039583);
-          iia.field_m = new sna(0L, var10);
+          iia.field_m = new UiComponent(0L, var10);
           iia.field_m.field_L = 2;
           iia.field_m.field_eb = nba.a(false, 3815994, param0 ^ 30868, true, 30, 2039583);
-          DisableAnimation.field_z = new sna(0L, var10);
+          DisableAnimation.field_z = new UiComponent(0L, var10);
           DisableAnimation.field_z.field_L = 2;
           DisableAnimation.field_z.field_eb = nba.a(false, 3815994, param0 ^ 30868, false, 30, 2039583);
-          vda.field_a = new sna(0L, var10);
+          vda.field_a = new UiComponent(0L, var10);
           vda.field_a.field_L = 2;
           vda.field_a.field_eb = nba.a(true, 3815994, 1, false, 30, 2039583);
-          qs.field_m = new sna(0L, (sna) null);
+          qs.field_m = new UiComponent(0L, (UiComponent) null);
           qs.field_m.field_Y = 1;
           qs.field_m.field_gb = 13421772;
           qs.field_m.field_B = rg.field_h;
           qs.field_m.field_jb = (BitmapFont) ((Object) ds.field_l);
-          dla.field_k = new sna(0L, qs.field_m);
+          dla.field_k = new UiComponent(0L, qs.field_m);
           dla.field_k.field_w = 16777215;
           dla.field_k.field_gb = 16764006;
           dla.field_k.field_G = 16777215;
           dla.field_k.field_o = 8421504;
           dla.field_k.field_ab = 16777215;
-          var15 = new sna(0L, dla.field_k);
+          var15 = new UiComponent(0L, dla.field_k);
           var15.field_B = rg.field_h;
           var15.field_jb = (BitmapFont) ((Object) var7);
           var15.field_gb = 16777215;
-          rea.field_g = new sna(0L, qs.field_m);
+          rea.field_g = new UiComponent(0L, qs.field_m);
           rea.field_g.field_eb = nba.a(false, 2236962, 1, false, 16, 2236962);
           rea.field_g.field_L = 2;
-          ina.field_n = new sna(0L, qs.field_m);
+          ina.field_n = new UiComponent(0L, qs.field_m);
           ina.field_n.field_eb = nba.a(false, 1513239, 1, false, 16, 1513239);
           ina.field_n.field_L = 2;
-          wv.field_l = new sna(0L, rea.field_g);
+          wv.field_l = new UiComponent(0L, rea.field_g);
           wv.field_l.a(dla.field_k, param0 ^ 30944);
-          ClientException.field_c = new sna(0L, ina.field_n);
+          ClientException.field_c = new UiComponent(0L, ina.field_n);
           ClientException.field_c.a(dla.field_k, 41);
           var16 = gw.a("lobby", "button_mouseover", param2, param0 - 30928);
           SpecialOrder.field_o = new pna(kha.field_i, var12, qs.field_m, dla.field_k, 3, 2, lm.field_d, 3, rg.field_h);
-          wd.field_v = new sna(0L, dla.field_k);
+          wd.field_v = new UiComponent(0L, dla.field_k);
           wd.field_v.field_V = 1;
           wd.field_v.field_lb = 1;
           wd.field_v.field_r = 1;
@@ -931,38 +931,38 @@ final class GasCloudAnimation extends EventAnimation {
           wd.field_v.field_K = gw.a("lobby", "button_active", param2, param0 - 30961);
           wd.field_v.field_X = gw.a("lobby", "button_disabled", param2, -85);
           wd.field_v.field_N = 1;
-          ad.field_q = new sna(0L, dla.field_k);
-          ad.field_q.field_N = 1;
-          ad.field_q.field_eb = tj.a(gw.a("lobby", "tab_inactive", param2, -80), (byte) 106);
-          ad.field_q.field_A = tj.a(gw.a("lobby", "tab_mouseover", param2, -44), (byte) 103);
-          ad.field_q.field_K = var14;
-          jfa.field_f = new sna(0L, (sna) null);
-          jfa.field_f.field_eb = mu.a(1856141, 3, 206, 1127256, -1, (byte) 17);
-          SlowAllAnimation.field_v = new sna(0L, (sna) null);
+          CreatureActor.field_q = new UiComponent(0L, dla.field_k);
+          CreatureActor.field_q.field_N = 1;
+          CreatureActor.field_q.field_eb = tj.a(gw.a("lobby", "tab_inactive", param2, -80), (byte) 106);
+          CreatureActor.field_q.field_A = tj.a(gw.a("lobby", "tab_mouseover", param2, -44), (byte) 103);
+          CreatureActor.field_q.field_K = var14;
+          FridgeCreature.field_f = new UiComponent(0L, (UiComponent) null);
+          FridgeCreature.field_f.field_eb = mu.a(1856141, 3, 206, 1127256, -1, (byte) 17);
+          SlowAllAnimation.field_v = new UiComponent(0L, (UiComponent) null);
           SlowAllAnimation.field_v.field_eb = mu.a(11579568, 3, 290, 6052956, -1, (byte) 17);
-          vo.field_b = new sna(0L, var15);
+          vo.field_b = new UiComponent(0L, var15);
           vo.field_b.field_ob = 1;
           vo.field_b.field_N = 1;
           vo.field_b.field_r = 1;
           vo.field_b.field_lb = 1;
           vo.field_b.field_V = 1;
-          sn.field_l = new sna(0L, vo.field_b);
-          ria.field_k = new sna(0L, dla.field_k);
+          sn.field_l = new UiComponent(0L, vo.field_b);
+          ria.field_k = new UiComponent(0L, dla.field_k);
           ria.field_k.field_r = 1;
           ria.field_k.field_ob = 1;
           ria.field_k.field_lb = 1;
           ria.field_k.field_N = 1;
           ria.field_k.field_V = 1;
-          mh.field_k = new sna(0L, ria.field_k);
-          JaggrabDownloader.field_c = new sna(0L, ria.field_k);
-          iw.field_a = new sna(0L, vo.field_b);
+          mh.field_k = new UiComponent(0L, ria.field_k);
+          JaggrabDownloader.field_c = new UiComponent(0L, ria.field_k);
+          iw.field_a = new UiComponent(0L, vo.field_b);
           if (param0 != 30869) {
             var19 = (int[]) null;
             GasCloudAnimation.a(93, (IndexedSprite[]) null, (vr) null, (vr) null, (int[]) null);
           }
-          gfa.field_f = new sna(0L, ria.field_k);
-          uaa.field_i = new sna(0L, ria.field_k);
-          HailEvent.field_r = new sna(0L, ria.field_k);
+          gfa.field_f = new UiComponent(0L, ria.field_k);
+          uaa.field_i = new UiComponent(0L, ria.field_k);
+          HailEvent.field_r = new UiComponent(0L, ria.field_k);
           ria.field_k.field_eb = tj.a(gw.a("lobby", "smallbutton", param2, -111), (byte) -65);
           ria.field_k.field_A = tj.a(gw.a("lobby", "smallbutton_mouseover", param2, -76), (byte) -1);
           dupTemp$0 = tj.a(gw.a("lobby", "smallbutton_active", param2, -67), (byte) -9);
@@ -1004,28 +1004,28 @@ final class GasCloudAnimation extends EventAnimation {
           uaa.field_i.field_db = dupTemp$3;
           var17 = gw.a("lobby", "checkbox", param2, -76);
           RageAnimation.field_v = new daa(0L, var17[1], var17[0], 1, dla.field_k, (String) null);
-          cd.field_n = new sna(0L, (sna) null);
+          cd.field_n = new UiComponent(0L, (UiComponent) null);
           cd.field_n.field_eb = aba.a(hca.a("lobby", param2, -56, "slideregion"), true);
           cd.field_n.field_A = aba.a(hca.a("lobby", param2, 110, "slideregion_mouseover"), true);
           cd.field_n.field_db = aba.a(hca.a("lobby", param2, 81, "slideregion_mouseheld"), true);
           cd.field_n.field_X = aba.a(hca.a("lobby", param2, param0 - 30970, "slideregion_disabled"), true);
-          dj.field_d = new sna(0L, (sna) null);
+          dj.field_d = new UiComponent(0L, (UiComponent) null);
           dj.field_d.field_eb = tj.a(gw.a("lobby", "dragbar", param2, param0 - 30977), (byte) -94);
           dj.field_d.field_A = tj.a(gw.a("lobby", "dragbar_mouseover", param2, -125), (byte) -82);
           dj.field_d.field_db = tj.a(gw.a("lobby", "dragbar_mouseheld", param2, -78), (byte) -92);
           dj.field_d.field_X = tj.a(gw.a("lobby", "dragbar_disabled", param2, -76), (byte) -22);
-          aha.field_F = new sna(0L, (sna) null);
-          aha.field_F.field_v = hca.a("lobby", param2, 82, "upbutton");
-          aha.field_F.field_U = hca.a("lobby", param2, 107, "upbutton_mouseover");
-          aha.field_F.field_y = hca.a("lobby", param2, -36, "upbutton_mouseheld");
-          aha.field_F.field_H = hca.a("lobby", param2, 74, "upbutton_disabled");
-          lla.field_l = new sna(0L, (sna) null);
+          LinkTextWidget.field_F = new UiComponent(0L, (UiComponent) null);
+          LinkTextWidget.field_F.field_v = hca.a("lobby", param2, 82, "upbutton");
+          LinkTextWidget.field_F.field_U = hca.a("lobby", param2, 107, "upbutton_mouseover");
+          LinkTextWidget.field_F.field_y = hca.a("lobby", param2, -36, "upbutton_mouseheld");
+          LinkTextWidget.field_F.field_H = hca.a("lobby", param2, 74, "upbutton_disabled");
+          lla.field_l = new UiComponent(0L, (UiComponent) null);
           lla.field_l.field_v = hca.a("lobby", param2, 114, "downbutton");
           lla.field_l.field_U = hca.a("lobby", param2, 120, "downbutton_mouseover");
           lla.field_l.field_y = hca.a("lobby", param2, param0 ^ -30859, "downbutton_mouseheld");
           lla.field_l.field_H = hca.a("lobby", param2, param0 ^ -30898, "downbutton_disabled");
-          qf.field_y = new cw(0L, aha.field_F, lla.field_l, cd.field_n, dj.field_d);
-          ob.field_g = new ok(0L, (sna) null, vg.field_k, qf.field_y, ria.field_k, (String) null, (String) null);
+          qf.field_y = new cw(0L, LinkTextWidget.field_F, lla.field_l, cd.field_n, dj.field_d);
+          ob.field_g = new ok(0L, (UiComponent) null, vg.field_k, qf.field_y, ria.field_k, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

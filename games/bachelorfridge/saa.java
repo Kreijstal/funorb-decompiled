@@ -13,9 +13,9 @@ final class saa {
     ua field_d;
     private int field_l;
     private boolean field_h;
-    jfa field_k;
+    FridgeCreature field_k;
     static String field_u;
-    static sna field_f;
+    static UiComponent field_f;
     static PcmStreamMixer field_a;
     static int field_b;
     private boolean field_j;
@@ -27,24 +27,24 @@ final class saa {
     private final void c(byte param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
-        jfa var2 = null;
+        FridgeCreature var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         var3 = BachelorFridge.field_y;
         try {
           if (mg.field_m != null) {
-            this.field_d.field_c.field_r = new jfa[50];
+            this.field_d.field_c.field_r = new FridgeCreature[50];
             this.field_d.field_c.a((byte) 103, mg.field_m.field_e);
             for (var2_int = 0; var2_int < 50; var2_int++) {
               if (mg.field_m.field_i[var2_int] != null) {
-                this.field_d.field_c.field_r[var2_int] = new jfa(mg.field_m.field_i[var2_int], 0, 0, this.field_d.field_c.field_i);
+                this.field_d.field_c.field_r[var2_int] = new FridgeCreature(mg.field_m.field_i[var2_int], 0, 0, this.field_d.field_c.field_i);
                 this.field_d.field_c.field_r[var2_int].field_g.a((byte) -121, ProxySocketConnector.field_f);
               }
             }
-            var2 = (jfa) (this.field_d.field_c.field_m.b((byte) 90));
+            var2 = (FridgeCreature) (this.field_d.field_c.field_m.b((byte) 90));
             while (var2 != null) {
               var2.field_g.a((byte) 13, ProxySocketConnector.field_f);
-              var2 = (jfa) (this.field_d.field_c.field_m.c(0));
+              var2 = (FridgeCreature) (this.field_d.field_c.field_m.c(0));
             }
             this.field_d.field_c.field_n = mg.field_m.field_c;
             this.field_d.field_c.field_k.a(false, mg.field_m.field_f);
@@ -115,33 +115,33 @@ final class saa {
         Object stackIn_156_0;
         mk stackIn_156_1;
         mk stackIn_156_2;
-        jfa stackIn_156_3;
+        FridgeCreature stackIn_156_3;
         boolean stackIn_156_4;
         Object stackIn_158_0;
         mk stackIn_158_1;
         mk stackIn_158_2;
-        jfa stackIn_158_3;
+        FridgeCreature stackIn_158_3;
         boolean stackIn_158_4;
         Object stackIn_159_0;
         mk stackIn_159_1;
         mk stackIn_159_2;
-        jfa stackIn_159_3;
+        FridgeCreature stackIn_159_3;
         boolean stackIn_159_4;
         int stackIn_159_5;
         Object stackIn_167_0;
         mk stackIn_167_1;
         mk stackIn_167_2;
-        jfa stackIn_167_3;
+        FridgeCreature stackIn_167_3;
         boolean stackIn_167_4;
         Object stackIn_169_0;
         mk stackIn_169_1;
         mk stackIn_169_2;
-        jfa stackIn_169_3;
+        FridgeCreature stackIn_169_3;
         boolean stackIn_169_4;
         Object stackIn_170_0;
         mk stackIn_170_1;
         mk stackIn_170_2;
-        jfa stackIn_170_3;
+        FridgeCreature stackIn_170_3;
         boolean stackIn_170_4;
         int stackIn_170_5;
         RuntimeException decompiledCaughtException = null;
@@ -149,8 +149,8 @@ final class saa {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        jfa var5 = null;
-        jfa var6 = null;
+        FridgeCreature var5 = null;
+        FridgeCreature var6 = null;
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var2_intLifetime3;
@@ -482,9 +482,9 @@ final class saa {
     }
 
     private final void a(boolean param0) {
-        sna var2 = null;
-        sna discarded$0 = null;
-        sna discarded$1 = null;
+        UiComponent var2 = null;
+        UiComponent discarded$0 = null;
+        UiComponent discarded$1 = null;
         try {
           var2 = mka.a(13558251, 13558251, 13558251, (byte) -124, jha.field_g, 13558251, 16777215, 13558251);
           var2.field_eb = wd.field_w;
@@ -493,14 +493,14 @@ final class saa {
           if (param0) {
             field_a = (PcmStreamMixer) null;
           }
-          FullscreenFocusCanvas.field_e = new sna("shopbutton", var2, 433, 87, 195, 42, "");
-          sn.field_m = new sna("getmagnify", var2, 420, 32, 80, 62, "");
-          d.field_H = new sna("clean", var2, 526, 318, 82, 124, "");
-          discarded$0 = new sna("freeze", var2, 576, 430, 50, 42, "");
-          discarded$1 = new sna("throwin", var2, 580, 380, 80, 20, "Throw in");
-          aq.field_b = new sna("viewstats", var2, -50, -50, 50, 20, "View");
+          FullscreenFocusCanvas.field_e = new UiComponent("shopbutton", var2, 433, 87, 195, 42, "");
+          sn.field_m = new UiComponent("getmagnify", var2, 420, 32, 80, 62, "");
+          d.field_H = new UiComponent("clean", var2, 526, 318, 82, 124, "");
+          discarded$0 = new UiComponent("freeze", var2, 576, 430, 50, 42, "");
+          discarded$1 = new UiComponent("throwin", var2, 580, 380, 80, 20, "Throw in");
+          aq.field_b = new UiComponent("viewstats", var2, -50, -50, 50, 20, "View");
           aq.field_b.field_L = 10;
-          cf.field_b = new sna("close", var2, -50, -50, 50, 20, "Close");
+          cf.field_b = new UiComponent("close", var2, -50, -50, 50, 20, "Close");
           cf.field_b.field_L = 10;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.G(" + param0 + ')');
@@ -511,7 +511,7 @@ final class saa {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        jfa var4 = null;
+        FridgeCreature var4 = null;
         int var5 = 0;
         var5 = BachelorFridge.field_y;
         try {
@@ -522,7 +522,7 @@ final class saa {
             if (!this.field_i &&
               this.field_s == null) {
               var3_int = 0;
-              var4 = (jfa) (this.field_d.field_c.field_m.b((byte) 90));
+              var4 = (FridgeCreature) (this.field_d.field_c.field_m.b((byte) 90));
               while (var4 != null) {
                 if (var4.a(gd.field_m, (byte) 116, mk.field_p)) {
                   var3_int = 1;
@@ -530,7 +530,7 @@ final class saa {
                     OneEvent.c(4 + kr.field_vb, -113);
                   }
                 }
-                var4 = (jfa) (this.field_d.field_c.field_m.c(0));
+                var4 = (FridgeCreature) (this.field_d.field_c.field_m.c(0));
               }
               if (!this.field_j &&
                 !this.field_h &&
@@ -678,7 +678,7 @@ final class saa {
         boolean discarded$0 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
-        jfa var2 = null;
+        FridgeCreature var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -700,10 +700,10 @@ final class saa {
             var2_int++;
           }
           mg.field_m.field_e.field_m = new IntrusiveDeque();
-          var2 = (jfa) (this.field_d.field_c.field_m.b((byte) 90));
+          var2 = (FridgeCreature) (this.field_d.field_c.field_m.b((byte) 90));
           while (var2 != null) {
             mg.field_m.field_e.field_m.a(var2.field_g, true);
-            var2 = (jfa) (this.field_d.field_c.field_m.c(0));
+            var2 = (FridgeCreature) (this.field_d.field_c.field_m.c(0));
           }
           mg.field_m.field_i = new CreatureProfile[50];
           var5 = 0;

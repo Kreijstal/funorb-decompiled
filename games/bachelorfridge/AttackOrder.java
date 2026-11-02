@@ -168,19 +168,19 @@ final class AttackOrder extends CreatureOrder {
     }
 
     private final AttackEvent a(boolean param0, boolean param1, boolean param2, int param3) {
-        if (((t) (al.a(param3 ^ -366, this.moveId))).field_p == 3) {
+        if (((BasicMoveDefinition) (al.a(param3 ^ -366, this.moveId))).field_p == 3) {
           return (AttackEvent) ((Object) new ce(this.moveId, this.creature, this.field_j, param0, param2, param1, 0));
         }
         if (param3 != -279) {
           this.field_j = -73;
         }
-        if (((t) (al.a(param3 + 240, this.moveId))).field_p == 2) {
+        if (((BasicMoveDefinition) (al.a(param3 + 240, this.moveId))).field_p == 2) {
           return (AttackEvent) ((Object) new hba(this.moveId, this.creature, this.field_j, this.field_k, param0, param2, param1, false));
         }
         return new AttackEvent(this.moveId, this.creature, this.field_j, this.field_k, param0, param2, param1);
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         AttackEvent stackIn_4_0 = null;
         AttackEvent stackIn_10_0 = null;
         AttackEvent stackIn_15_0 = null;
@@ -191,7 +191,7 @@ final class AttackOrder extends CreatureOrder {
         String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        t var4 = null;
+        BasicMoveDefinition var4 = null;
         Object var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -219,7 +219,7 @@ final class AttackOrder extends CreatureOrder {
             stackIn_15_0 = this.a(false, true, true, -279);
             return (CreatureEvent) ((Object) stackIn_15_0);
           }
-          var4 = (t) (al.a(-107, this.moveId));
+          var4 = (BasicMoveDefinition) (al.a(-107, this.moveId));
           if (var10.field_q < 10) {
           }
           DiveBomberAnimation.a(50, param0.field_w, param1 + 2147483645);
@@ -312,13 +312,13 @@ final class AttackOrder extends CreatureOrder {
         DamageEffect var26 = null;
         int var27 = 0;
         Object var28 = null;
-        t var28_ref = null;
-        t var29 = null;
+        BasicMoveDefinition var28_ref = null;
+        BasicMoveDefinition var29 = null;
         int[][] var33 = null;
         var28 = null;
         var27 = BachelorFridge.field_y;
         try {
-          var28_ref = (t) (al.a(-103, this.moveId));
+          var28_ref = (BasicMoveDefinition) (al.a(-103, this.moveId));
           var29 = var28_ref;
           var5 = this.creature.a(67, param2);
           var33 = haa.b(1, var5.d(125, this.moveId), this.field_j);

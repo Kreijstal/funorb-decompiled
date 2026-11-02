@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dia extends hf {
+final class dia extends InteractiveWidget {
     static volatile int field_A;
     static String field_D;
 
-    private dia(String param0, qda param1, pl param2) {
+    private dia(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.field_f = fda.field_i.field_h;
+          this.renderer = fda.field_i.field_h;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "dia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -19,7 +19,7 @@ final class dia extends hf {
         super.a(param0, param1, param2, param3);
     }
 
-    dia(String param0, pl param1, boolean param2) {
+    dia(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_B = param2 ? true : false;
@@ -28,19 +28,19 @@ final class dia extends hf {
         }
     }
 
-    private dia(String param0, pl param1) {
+    private dia(String param0, WidgetListener param1) {
         this(param0, fda.field_i.field_r, param1);
         try {
-          this.field_f = fda.field_i.field_h;
+          this.renderer = fda.field_i.field_h;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "dia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_D = null;
         if (param0 != 14213) {
-          dia.a(-32);
+          dia.releaseStatics(-32);
         }
     }
 

@@ -14,7 +14,7 @@ final class AttackUpAllAnimation extends EventAnimation {
         }
     }
 
-    AttackUpAllAnimation(gj param0, AttackUpAllEvent param1) {
+    AttackUpAllAnimation(BattleScreen param0, AttackUpAllEvent param1) {
         super(param0, param1);
         try {
           this.field_v = param1;
@@ -23,7 +23,7 @@ final class AttackUpAllAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = 0;
         int var2 = 0;
         int var2Lifetime1;
@@ -62,8 +62,8 @@ final class AttackUpAllAnimation extends EventAnimation {
 
     private final void f(int param0) {
         BattleCreature var7 = null;
-        ad var8 = null;
-        ad var10 = null;
+        CreatureActor var8 = null;
+        CreatureActor var10 = null;
         DamageEffect var3_ref = null;
         Object var3 = null;
         int var5 = BachelorFridge.field_y;
@@ -75,13 +75,13 @@ final class AttackUpAllAnimation extends EventAnimation {
             var3_ref = (DamageEffect) (this.field_v.effects.b((byte) 90));
             al.a(106, this.field_v.moveId);
             while (var3_ref != null) {
-              var3_ref.a(var7, this.screen.field_h, 12);
+              var3_ref.apply(var7, this.screen.field_h, 12);
               var8 = var3_ref.target.a(param0 ^ 24849, this.screen);
               if (var8 != null) {
-                this.a(27799, new taa(this.screen, var8));
-                this.a(27799, new iu(3));
-                this.a(27799, new cb(var8, 7));
-                this.a(27799, new wn(var8, kna.field_g[18], 24831));
+                this.addChild(27799, new ActorAnimation(this.screen, var8));
+                this.addChild(27799, new iu(3));
+                this.addChild(27799, new cb(var8, 7));
+                this.addChild(27799, new wn(var8, kna.field_g[18], 24831));
               }
               var3_ref = (DamageEffect) (this.field_v.effects.c(0));
             }
@@ -94,13 +94,13 @@ final class AttackUpAllAnimation extends EventAnimation {
           var3_refLifetime1 = (DamageEffect) (this.field_v.effects.b((byte) 90));
           al.a(106, this.field_v.moveId);
           while (var3_refLifetime1 != null) {
-            var3_refLifetime1.a(var9, this.screen.field_h, 12);
+            var3_refLifetime1.apply(var9, this.screen.field_h, 12);
             var10 = var3_refLifetime1.target.a(param0 ^ 24849, this.screen);
             if (var10 != null) {
-              this.a(27799, new taa(this.screen, var10));
-              this.a(27799, new iu(3));
-              this.a(27799, new cb(var10, 7));
-              this.a(27799, new wn(var10, kna.field_g[18], 24831));
+              this.addChild(27799, new ActorAnimation(this.screen, var10));
+              this.addChild(27799, new iu(3));
+              this.addChild(27799, new cb(var10, 7));
+              this.addChild(27799, new wn(var10, kna.field_g[18], 24831));
             }
             var3_refLifetime1 = (DamageEffect) (this.field_v.effects.c(0));
           }
@@ -133,7 +133,7 @@ final class AttackUpAllAnimation extends EventAnimation {
         va.a((byte) 75);
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_y = null;
         if (param0 < 90) {
           return;

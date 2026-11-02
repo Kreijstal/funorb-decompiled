@@ -6,7 +6,7 @@ final class fp extends tja {
     private byte[] field_s;
     private SectorCacheStore field_g;
     private vm field_n;
-    private rf field_d;
+    private ArchiveIndex field_d;
     private int field_k;
     private byte[] field_w;
     private cga field_i;
@@ -375,7 +375,7 @@ final class fp extends tja {
         return (cga) (var4);
     }
 
-    final rf b(int param0) {
+    final ArchiveIndex b(int param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -408,7 +408,7 @@ final class fp extends tja {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_d = new rf(var7, this.field_k, this.field_w);
+            this.field_d = new ArchiveIndex(var7, this.field_k, this.field_w);
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
@@ -429,7 +429,7 @@ final class fp extends tja {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_d = new rf(var7, this.field_k, this.field_w);
+            this.field_d = new ArchiveIndex(var7, this.field_k, this.field_w);
             if (this.field_d.field_r != this.field_c) {
               throw new RuntimeException();
             }
@@ -494,7 +494,7 @@ final class fp extends tja {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         int var1 = 5 % ((-59 - param0) / 47);
         field_f = null;

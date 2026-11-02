@@ -45,9 +45,9 @@ final class jka extends pu {
         fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 11178) {
-          jka.b(-10);
+          jka.releaseStatics(-10);
           field_l = null;
           return;
         }

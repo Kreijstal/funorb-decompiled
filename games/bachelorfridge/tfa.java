@@ -5,9 +5,9 @@ final class tfa extends EventEffect {
     public tfa() {
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -57);
+          super.write(param0, (byte) -57);
           int var3_int = -49 % ((34 - param1) / 58);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "tfa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -91,12 +91,12 @@ final class tfa extends EventEffect {
         int var7Lifetime1Lifetime1;
         var9 = BachelorFridge.field_y;
         try {
-          ub.field_j = param0;
+          BoardChangeAnimation.field_j = param0;
           if (param1 != 1) {
             return;
           }
           fr.field_n = true;
-          if (ub.field_j == 0) {
+          if (BoardChangeAnimation.field_j == 0) {
             var3_int = ut.a(ec.field_a, FullHealEvent.field_s, oa.field_wb, jk.field_o, -125);
             var4 = var3_int + 3;
             fr.field_l = new int[var4];
@@ -115,7 +115,7 @@ final class tfa extends EventEffect {
             mj.field_h[-1 + var4] = ala.field_d;
             fr.field_l[-1 + var4] = 1;
             mu.field_l[1] = 5;
-          } else if (ub.field_j == 1) {
+          } else if (BoardChangeAnimation.field_j == 1) {
             var3_int = ut.a(ec.field_a, FullHealEvent.field_s, oa.field_wb, jk.field_o, 125);
             var4 = var3_int + 2;
             fr.field_l = new int[var4];
@@ -131,8 +131,8 @@ final class tfa extends EventEffect {
             mj.field_h[-1 + var4] = ala.field_d;
             fr.field_l[-1 + var4] = 0;
             mu.field_l[0] = 5;
-          } else if (2 != ub.field_j) {
-            if (ub.field_j == 3) {
+          } else if (2 != BoardChangeAnimation.field_j) {
+            if (BoardChangeAnimation.field_j == 3) {
               if (!DiveBomberEvent.field_r.field_k) {
                 var3_int = ut.a(ec.field_a, FullHealEvent.field_s, qca.field_l, jk.field_o, -10);
               } else {
@@ -152,7 +152,7 @@ final class tfa extends EventEffect {
               mj.field_h[-1 + var4] = ala.field_d;
               fr.field_l[var4 - 1] = 0;
               mu.field_l[0] = 5;
-            } else if (ub.field_j == 4) {
+            } else if (BoardChangeAnimation.field_j == 4) {
               var3_int = ut.a(ec.field_a, FullHealEvent.field_s, PlaceCreatureEffect.field_k, jk.field_o, 2);
               var4 = var3_int + 2;
               mj.field_h = new String[var4];
@@ -169,7 +169,7 @@ final class tfa extends EventEffect {
               fr.field_l[-1 + var4] = 0;
               mu.field_l[0] = 5;
             } else {
-              if (ub.field_j != 5) {
+              if (BoardChangeAnimation.field_j != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = ut.a(ec.field_a, FullHealEvent.field_s, jia.field_l, jk.field_o, -126);
@@ -286,7 +286,7 @@ final class tfa extends EventEffect {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (ub.field_j == 2) {
+          if (BoardChangeAnimation.field_j == 2) {
             var10 = GasCloudSpecial.field_p;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
@@ -338,7 +338,7 @@ final class tfa extends EventEffect {
             }
             var4Lifetime3++;
           }
-          if (2 == ub.field_j) {
+          if (2 == BoardChangeAnimation.field_j) {
             dp.field_o.a(param2, 46, -1, -1);
           } else {
             dp.field_o.a(param2, 90, SetFriendlyEffect.a(mk.field_p, gd.field_m, param1 ^ -128), 0);
@@ -351,7 +351,7 @@ final class tfa extends EventEffect {
         }
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         try {
           param1.field_l = true;
           if (param2 != 12) {

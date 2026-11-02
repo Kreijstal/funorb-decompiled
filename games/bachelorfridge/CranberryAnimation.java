@@ -4,10 +4,10 @@
 final class CranberryAnimation extends EventAnimation {
     private CranberryEvent field_w;
     static Sprite[] field_v;
-    private taa field_x;
+    private ActorAnimation field_x;
 
-    final boolean c(byte param0) {
-        ad var3 = null;
+    final boolean isFinished(byte param0) {
+        CreatureActor var3 = null;
         ffa var4 = null;
         int var2 = 56 / ((71 - param0) / 47);
         if (this.field_m.isLinked((byte) -106)) {
@@ -19,7 +19,7 @@ final class CranberryAnimation extends EventAnimation {
         if (this.field_l == 100) {
           var3 = this.field_w.field_q.a(-27449, this.screen);
           var4 = new ffa(this.screen, this.field_w, var3.field_s.tileX, var3.field_s.tileY);
-          ((kj) ((Object) var4)).a(0);
+          ((TileEffect) ((Object) var4)).a(0);
         }
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
@@ -36,12 +36,12 @@ final class CranberryAnimation extends EventAnimation {
         }
     }
 
-    CranberryAnimation(gj param0, CranberryEvent param1) {
+    CranberryAnimation(BattleScreen param0, CranberryEvent param1) {
         super(param0, param1);
         try {
           this.field_w = param1;
-          this.field_x = new taa(this.screen, this.field_w.field_q.a(-27449, this.screen));
-          this.a(27799, this.field_x);
+          this.field_x = new ActorAnimation(this.screen, this.field_w.field_q.a(-27449, this.screen));
+          this.addChild(27799, this.field_x);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "mea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -58,11 +58,11 @@ final class CranberryAnimation extends EventAnimation {
         AttackUpAllEvent.e((byte) 113);
         if (param0 != 0) {
           field_v = (Sprite[]) null;
-          gha.b(16);
+          DefaultWidgetRenderer.b(16);
           og.a(12);
           return;
         }
-        gha.b(16);
+        DefaultWidgetRenderer.b(16);
         og.a(12);
     }
 

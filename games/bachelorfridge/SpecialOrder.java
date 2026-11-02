@@ -114,9 +114,9 @@ class SpecialOrder extends CreatureOrder {
     private final boolean a(int param0) {
         if (param0 != -4) {
           BattleState var3 = (BattleState) null;
-          this.a((BattleState) null, 56);
+          this.createEvent((BattleState) null, 56);
         }
-        hd var2 = (hd) (ur.field_e[this.moveId]);
+        SpecialMoveDefinition var2 = (SpecialMoveDefinition) (WhirlpoolDigest.field_e[this.moveId]);
         return var2.c(0) == 3 ? true : false;
     }
 
@@ -129,7 +129,7 @@ class SpecialOrder extends CreatureOrder {
         }
     }
 
-    CreatureEvent a(BattleState param0, int param1) {
+    CreatureEvent createEvent(BattleState param0, int param1) {
         int[] dupTemp$0 = null;
         int[] dupTemp$1 = null;
         CreatureEvent stackIn_132_0 = null;
@@ -351,7 +351,7 @@ class SpecialOrder extends CreatureOrder {
             dupTemp$1 = param0.field_T.field_m[this.creature.field_g];
             dupTemp$1[31] = dupTemp$1[31] + 1;
           }
-          var4 = ((SpecialOrder) (var3)).a(param0, param1);
+          var4 = ((SpecialOrder) (var3)).createEvent(param0, param1);
           if (var3 == null) {
             throw new IllegalArgumentException("Special not found");
           }

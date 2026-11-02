@@ -1,0 +1,340 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TextLinkRegion extends IntrusiveNode {
+    int field_j;
+    int field_f;
+    int field_k;
+    static UiComponent field_l;
+    int field_g;
+    int field_h;
+    TextLinkRegion field_i;
+
+    public static void releaseStatics(byte param0) {
+        if (param0 > -56) {
+          field_l = (UiComponent) null;
+        }
+        field_l = null;
+    }
+
+    final static void d(byte param0) {
+        int stackIn_50_0 = 0;
+        int stackIn_50_1 = 0;
+        int stackIn_51_2 = 0;
+        int stackIn_56_0 = 0;
+        int stackIn_56_1 = 0;
+        int stackIn_56_2 = 0;
+        boolean stackIn_57_3;
+        int stackIn_66_0 = 0;
+        int stackIn_66_1 = 0;
+        int stackIn_66_2 = 0;
+        boolean stackIn_67_3;
+        RuntimeException decompiledCaughtException = null;
+        Sprite var1 = null;
+        int var1_int = 0;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        String var5_ref_String = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9_int = 0;
+        Sprite var9 = null;
+        int var10 = 0;
+        Sprite var11 = null;
+        Sprite var12 = null;
+        String var14 = null;
+        Sprite var16 = null;
+        int[] var27 = null;
+        int[] var28 = null;
+        int[] var29 = null;
+        int[] var30 = null;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var2Lifetime3;
+        int var2Lifetime4;
+        int var2Lifetime5;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        int var3Lifetime3;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var8Lifetime1;
+        int var9_intLifetime1;
+        int var9_intLifetime2;
+        int var9_intLifetime3;
+        var10 = BachelorFridge.field_y;
+        try {
+          if (null != sha.field_l &&
+            sha.field_l.a(0) &&
+            sha.field_l.a("benefits", 20637) &&
+            null != TBomberEvent.field_s &&
+            TBomberEvent.field_s.a(0) &&
+            TBomberEvent.field_s.a("benefits", 20637)) {
+            lm.field_b = hca.a("benefits", sha.field_l, 72, "headline");
+            uea.field_j = hca.a("benefits", sha.field_l, -71, "blurbpane");
+            HomingMissileAnimation.field_E = hca.a("benefits", sha.field_l, 126, "button");
+            ai.field_a = hca.a("benefits", sha.field_l, 87, "signup_text");
+            DisableAnimation.field_y = hca.a("benefits", sha.field_l, 106, "menu_text");
+            ug.field_o = hca.a("benefits", sha.field_l, -115, "button_frame");
+            PizzaArenaTheme.field_h = hca.a("benefits", sha.field_l, 113, "arrow");
+            ShuffleEvent.field_q = (BitmapFont) ((Object) ClamsSpecial.a("large_font", sha.field_l, -58, "benefits", TBomberEvent.field_s));
+            g.field_f = (BitmapFont) ((Object) ClamsSpecial.a("small_font", sha.field_l, 117, "benefits", TBomberEvent.field_s));
+            var27 = SoftwareRasterizer.field_e;
+            var2 = SoftwareRasterizer.field_i;
+            var3 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ie.field_b);
+            var11 = new Sprite(4 + PizzaArenaTheme.field_h.field_q, 4 + PizzaArenaTheme.field_h.field_p);
+            var11.b();
+            PizzaArenaTheme.field_h.drawGrayModulated(2, 2, bha.field_o);
+            sb.a(0, 2, var11, var11.field_p, 0, var11.field_q, 1, 87);
+            PizzaArenaTheme.field_h = var11;
+            vs.field_b = PizzaArenaTheme.field_h.copyFlippedHorizontal();
+            var12 = new Sprite(195, 221);
+            var6 = var12.field_q / 2;
+            var12.b();
+            ShuffleEvent.field_q.a(lga.a(true, new String[]{RageEvent.field_q}, LevitateAnimation.field_x), var6, 40, 16777215, -1);
+            g.field_f.a(lga.a(true, new String[]{RageEvent.field_q}, ni.field_k), var6, 60, 16777215, -1);
+            ShuffleEvent.field_q.a(lga.a(true, new String[]{SpecialOrder.field_l}, ra.field_p), var6, 110, 16777215, -1);
+            g.field_f.a(lga.a(true, new String[]{SpecialOrder.field_l}, vca.field_i), var6, 130, 16777215, -1);
+            ShuffleEvent.field_q.a(hb.field_g, var6, 180, 16777215, -1);
+            g.field_f.a(ema.field_Lb, var6, 200, 16777215, -1);
+            sb.a(0, 3, var12, var12.field_p, 0, var12.field_q, 1, 117);
+            uea.field_j.b();
+            var12.draw(18 - uea.field_j.field_t, -uea.field_j.field_u + 241);
+            for (var7 = 0; var7 < MeshObject.field_b.length; var7++) {
+              ActorAnimation.field_m[var7].b();
+              g.field_f.drawParagraph(MeshObject.field_b[var7], 3, 3, ActorAnimation.field_m[var7].field_q - 6, -6 + ActorAnimation.field_m[var7].field_p, bha.field_o, -1, 1, 1, g.field_f.field_B + g.field_f.field_u);
+              sb.a(0, 3, ActorAnimation.field_m[var7], ActorAnimation.field_m[var7].field_p, 0, ActorAnimation.field_m[var7].field_q, 1, 88);
+            }
+            MeshObject.field_b = null;
+            BananarangAnimation.field_y = ai.field_a.copy();
+            BananarangAnimation.field_y.b();
+            AirstrikeSpecial.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c * 2 / 3, 16711680, 64, 0, 0);
+            SoftwareRasterizer.setTarget(var27, var2, var3);
+            SoftwareRasterizer.restoreClip(ie.field_b);
+            et.field_l = 390 + (HomingMissileAnimation.field_E.field_p - ug.field_o.field_p) / 2;
+            SnowEvent.field_u = 434 + (-ug.field_o.field_q + HomingMissileAnimation.field_E.field_q) / 2;
+            sha.field_l = null;
+            hka.field_h = (HomingMissileAnimation.field_E.field_p - ug.field_o.field_p) / 2 + 390;
+            qs.field_o = (-ug.field_o.field_q + HomingMissileAnimation.field_E.field_q) / 2 + 231;
+          }
+          if (null == BagpipeAnimation.field_x) {
+            return;
+          }
+          if (null != BuffVendorAnimation.field_B &&
+            ShuffleEvent.field_q != null) {
+            var28 = SoftwareRasterizer.field_e;
+            var2Lifetime1 = SoftwareRasterizer.field_i;
+            var3Lifetime1 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ie.field_b);
+            var14 = lga.a(true, new String[]{aa.field_m[SuperSpeedAllEvent.field_q]}, uca.field_c);
+            var5 = ShuffleEvent.field_q.c(var14, TeleportEvent.field_r);
+            var6Lifetime1 = ShuffleEvent.field_q.measureWrappedHeight(var14, TeleportEvent.field_r, ShuffleEvent.field_q.field_B + ShuffleEvent.field_q.field_u);
+            var7Lifetime1 = StatusEffectInfo.field_c + (TeleportEvent.field_r - var5) / 2;
+            var5 += 6;
+            var8 = vc.field_c + (-var6Lifetime1 + kt.field_j) / 2;
+            var7Lifetime1 -= 3;
+            var8 -= 3;
+            if (var7Lifetime1 < 0) {
+              var9_int = -var7Lifetime1;
+              var5 = var5 + 2 * var9_int;
+              StatusEffectInfo.field_c = StatusEffectInfo.field_c + var9_int;
+              var7Lifetime1 = var7Lifetime1 + var9_int;
+              sha.field_m = sha.field_m - var9_int;
+              BuffVendorAnimation.field_B.field_n = BuffVendorAnimation.field_B.field_n + var9_int * 2;
+              BuffVendorAnimation.field_B.field_t = BuffVendorAnimation.field_B.field_t + var9_int;
+            }
+            var6Lifetime1 += 6;
+            if (var7Lifetime1 + var5 > BuffVendorAnimation.field_B.field_n) {
+              var9_intLifetime1 = var5 + var7Lifetime1 - BuffVendorAnimation.field_B.field_n;
+              sha.field_m = sha.field_m - var9_intLifetime1;
+              StatusEffectInfo.field_c = StatusEffectInfo.field_c + var9_intLifetime1;
+              var5 = var5 + 2 * var9_intLifetime1;
+              BuffVendorAnimation.field_B.field_t = BuffVendorAnimation.field_B.field_t + var9_intLifetime1;
+              var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
+              BuffVendorAnimation.field_B.field_n = BuffVendorAnimation.field_B.field_n + var9_intLifetime1 * 2;
+            }
+            if (var8 < 0) {
+              var9_intLifetime2 = -var8;
+              cga.field_p = cga.field_p - var9_intLifetime2;
+              BuffVendorAnimation.field_B.field_o = BuffVendorAnimation.field_B.field_o + 2 * var9_intLifetime2;
+              vc.field_c = vc.field_c + var9_intLifetime2;
+              var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime2;
+              BuffVendorAnimation.field_B.field_u = BuffVendorAnimation.field_B.field_u + var9_intLifetime2;
+              var8 = var8 + var9_intLifetime2;
+            }
+            if (BuffVendorAnimation.field_B.field_o < var8 + var6Lifetime1) {
+              var9_intLifetime3 = -BuffVendorAnimation.field_B.field_o + (var6Lifetime1 + var8);
+              BuffVendorAnimation.field_B.field_o = BuffVendorAnimation.field_B.field_o + var9_intLifetime3 * 2;
+              vc.field_c = vc.field_c + var9_intLifetime3;
+              cga.field_p = cga.field_p - var9_intLifetime3;
+              var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
+              var8 = var8 + var9_intLifetime3;
+              BuffVendorAnimation.field_B.field_u = BuffVendorAnimation.field_B.field_u + var9_intLifetime3;
+            }
+            BuffVendorAnimation.field_B.normalizeCanvas();
+            var9 = new Sprite(BuffVendorAnimation.field_B.field_n, BuffVendorAnimation.field_B.field_o);
+            var9.b();
+            ShuffleEvent.field_q.drawParagraph(var14, StatusEffectInfo.field_c, vc.field_c, TeleportEvent.field_r, kt.field_j, 16777215, -1, 1, 1, ShuffleEvent.field_q.field_B + ShuffleEvent.field_q.field_u);
+            sb.a(0, 3, var9, var9.field_o, 0, var9.field_n, 1, 89);
+            BuffVendorAnimation.field_B.b();
+            var9.draw(0, 0);
+            is.field_c = new Sprite(640, 480);
+            is.field_c.b();
+            BuffVendorAnimation.field_B.d(sha.field_m + (BuffVendorAnimation.field_B.field_n >> 1), cga.field_p + (BuffVendorAnimation.field_B.field_o >> 1), IterableDualLinkDeque.field_b, 4096);
+            BuffVendorAnimation.field_B = null;
+            is.field_c.trimTransparentBorders();
+            SoftwareRasterizer.setTarget(var28, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.restoreClip(ie.field_b);
+          }
+          if (null != rr.field_r &&
+            g.field_f != null) {
+            var29 = SoftwareRasterizer.field_e;
+            var2Lifetime2 = SoftwareRasterizer.field_i;
+            var3Lifetime2 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ie.field_b);
+            var16 = new Sprite(412, 43);
+            var5_ref_String = lga.a(true, new String[]{rr.field_r}, kr.field_wb);
+            rr.field_r = null;
+            var16.b();
+            g.field_f.drawParagraph(var5_ref_String, 3, 3, -6 + var16.field_q, var16.field_p - 6, 16777215, -1, 0, 1, g.field_f.field_u + g.field_f.field_B);
+            sb.a(0, 3, var16, var16.field_p, 0, var16.field_q, 1, 120);
+            BagpipeAnimation.field_x.b();
+            var16.draw(-BagpipeAnimation.field_x.field_t + 199, 83 - BagpipeAnimation.field_x.field_u);
+            SoftwareRasterizer.setTarget(var29, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.restoreClip(ie.field_b);
+          }
+          if (kka.field_h != null &&
+            g.field_f != null) {
+            var30 = SoftwareRasterizer.field_e;
+            var2Lifetime3 = SoftwareRasterizer.field_i;
+            var3Lifetime3 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ie.field_b);
+            var4 = 6 + g.field_f.c(fja.field_c, 640);
+            var5Lifetime1 = 20 + kka.field_h.field_n + var4;
+            var6Lifetime2 = 427 - var5Lifetime1 / 2;
+            var7Lifetime2 = 20 + kka.field_h.field_n + var6Lifetime2;
+            BagpipeAnimation.field_x.b();
+            g.field_f.drawText(fja.field_c, -BagpipeAnimation.field_x.field_t + var7Lifetime2, g.field_f.field_B + (g.field_f.field_u - BagpipeAnimation.field_x.field_u) + 155, 16777215, -1);
+            sb.a(-4 - BagpipeAnimation.field_x.field_t + var7Lifetime2, 3, BagpipeAnimation.field_x, 50, -BagpipeAnimation.field_x.field_u + 155, var4, 1, 117);
+            var8Lifetime1 = -((-g.field_f.field_B + (-g.field_f.field_u - 3 + kka.field_h.field_o)) / 2) + 155 - BagpipeAnimation.field_x.field_u;
+            kka.field_h.draw(-BagpipeAnimation.field_x.field_t + var6Lifetime2, var8Lifetime1);
+            SoftwareRasterizer.setTarget(var30, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.restoreClip(ie.field_b);
+            kka.field_h = null;
+          }
+          SoftwareRasterizer.saveClip(ie.field_b);
+          SoftwareRasterizer.a(16, 16, 608, 112, 15, dp.field_q, BuffVendorSpecial.field_q);
+          SoftwareRasterizer.a(231, 144, 393, 232, 15, dp.field_q, BuffVendorSpecial.field_q);
+          if (null != lm.field_b) {
+            lm.field_b.draw(0, 0);
+          }
+          if (param0 >= -105) {
+            TextLinkRegion.releaseStatics((byte) 87);
+          }
+          if (null != uea.field_j) {
+            uea.field_j.draw(0, 0);
+          }
+          BagpipeAnimation.field_x.draw(0, 0);
+          if (is.field_c != null) {
+            is.field_c.draw(0, 0);
+          }
+          if (HomingMissileAnimation.field_E != null &&
+            null != ug.field_o) {
+            HomingMissileAnimation.field_E.draw(231, 390);
+            var1 = ai.field_a;
+            if (ic.field_i.field_g == 0) {
+              var1 = BananarangAnimation.field_y;
+            }
+            var1.draw(0, 0);
+            stackIn_50_0 = 40;
+            stackIn_50_1 = InvincibleEvent.field_s;
+            if (ic.field_i.field_g == 0) {
+              stackIn_51_2 = 4;
+            } else {
+              stackIn_51_2 = 3;
+            }
+            var2Lifetime4 = (stackIn_50_0 * iw.a(stackIn_50_1 << stackIn_51_2, 2047) >> 16) + 40;
+            if (0 < var2Lifetime4) {
+              HomingMissileAnimation.field_E.drawAdditive(230, 389, var2Lifetime4);
+              HomingMissileAnimation.field_E.drawAdditive(232, 389, var2Lifetime4);
+              HomingMissileAnimation.field_E.drawAdditive(232, 391, var2Lifetime4);
+              HomingMissileAnimation.field_E.drawAdditive(230, 391, var2Lifetime4);
+              var1.drawAdditive(1, 1, var2Lifetime4);
+              var1.drawAdditive(-1, 1, var2Lifetime4);
+              var1.drawAdditive(1, -1, var2Lifetime4);
+              var1.drawAdditive(-1, -1, var2Lifetime4);
+            }
+            stackIn_56_0 = qs.field_o;
+            stackIn_56_1 = et.field_l;
+            stackIn_56_2 = 91;
+            stackIn_57_3 = (ic.field_i.field_g == 0);
+            rg.$cfr$intArgs$a$c6021a39f7cf(stackIn_56_0, stackIn_56_1, stackIn_56_2, stackIn_57_3);
+          }
+          if (null != HomingMissileAnimation.field_E &&
+            null != ug.field_o) {
+            HomingMissileAnimation.field_E.draw(434, 390);
+            DisableAnimation.field_y.draw(0, 0);
+            if (1 == ic.field_i.field_g) {
+              AirstrikeSpecial.a(-4 + HomingMissileAnimation.field_E.field_q, 7 * HomingMissileAnimation.field_E.field_p / 12, 16711680, 64, 392, 436);
+            }
+            stackIn_66_0 = SnowEvent.field_u;
+            stackIn_66_1 = hka.field_h;
+            stackIn_66_2 = -112;
+            stackIn_67_3 = (ic.field_i.field_g == 1);
+            rg.$cfr$intArgs$a$c6021a39f7cf(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3);
+          }
+          if (PizzaArenaTheme.field_h != null) {
+            var1_int = -(PizzaArenaTheme.field_h.field_o / 2) + 357;
+            PizzaArenaTheme.field_h.draw(-PizzaArenaTheme.field_h.field_n + 269, var1_int);
+            vs.field_b.draw(586, var1_int);
+            if (gd.field_m > var1_int &&
+              gd.field_m < var1_int + PizzaArenaTheme.field_h.field_p) {
+              var2Lifetime5 = (iw.a(InvincibleEvent.field_s << 4, 2047) * 40 >> 16) + 40;
+              if (var2Lifetime5 > 0) {
+                if (-PizzaArenaTheme.field_h.field_q + 269 < mk.field_p &&
+                  mk.field_p < 269) {
+                  PizzaArenaTheme.field_h.drawAdditive(-PizzaArenaTheme.field_h.field_n + 268, -1 + var1_int, var2Lifetime5);
+                  PizzaArenaTheme.field_h.drawAdditive(269 - PizzaArenaTheme.field_h.field_n + 1, -1 + var1_int, var2Lifetime5);
+                  PizzaArenaTheme.field_h.drawAdditive(-PizzaArenaTheme.field_h.field_n + 269 - 1, var1_int + 1, var2Lifetime5);
+                  PizzaArenaTheme.field_h.drawAdditive(269 + (-PizzaArenaTheme.field_h.field_n + 1), var1_int + 1, var2Lifetime5);
+                } else {
+                  if (mk.field_p > 586 &&
+                    mk.field_p < PizzaArenaTheme.field_h.field_q + 586) {
+                    vs.field_b.drawAdditive(585, var1_int - 1, var2Lifetime5);
+                    vs.field_b.drawAdditive(587, -1 + var1_int, var2Lifetime5);
+                    vs.field_b.drawAdditive(585, var1_int + 1, var2Lifetime5);
+                    vs.field_b.drawAdditive(587, var1_int + 1, var2Lifetime5);
+                  }
+                }
+              }
+            }
+          }
+          va.a(127);
+          ActorAnimation.field_m[ih.field_l].draw(269, 340);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "aia.B(" + param0 + ')');
+        }
+    }
+
+    TextLinkRegion(int param0, int param1, int param2, int param3, int param4) {
+        this.field_j = param4;
+        this.field_f = param1;
+        this.field_h = param2;
+        this.field_k = param3;
+        this.field_g = param0;
+    }
+
+    static {
+    }
+}

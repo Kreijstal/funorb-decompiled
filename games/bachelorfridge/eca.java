@@ -322,12 +322,12 @@ final class eca extends bi {
         }
         var3 = param0;
         if (var3 == 3) {
-          return gj.field_F;
+          return BattleScreen.field_F;
         }
         if (var3 != 2) {
           return EventAnimation.field_r;
         }
-        return jt.field_g;
+        return FoodShopPanel.field_g;
     }
 
     private final void a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

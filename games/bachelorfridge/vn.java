@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vn extends lka implements mca {
+final class vn extends TextInputWidget implements mca {
     static int[] field_M;
     private int field_P;
     private qu field_N;
 
-    final String c(byte param0) {
-        if (!this.field_t) {
+    final String getTooltip(byte param0) {
+        if (!this.mouseOver) {
           return null;
         }
-        if (null == this.field_h) {
+        if (null == this.tooltip) {
           return null;
         }
         if (param0 == 16) {
-          ha.a(gd.field_m, mk.field_p - (this.field_P - this.field_p), false);
-          return this.field_h;
+          ha.a(gd.field_m, mk.field_p - (this.field_P - this.width), false);
+          return this.tooltip;
         }
         this.field_P = 104;
-        ha.a(gd.field_m, mk.field_p - (this.field_P - this.field_p), false);
-        return this.field_h;
+        ha.a(gd.field_m, mk.field_p - (this.field_P - this.width), false);
+        return this.tooltip;
     }
 
     public final qu a(int param0) {
@@ -44,10 +44,10 @@ final class vn extends lka implements mca {
         }
     }
 
-    final void a(int param0, int param1, wj param2, int param3) {
+    final void updateMouseOver(int param0, int param1, UiWidget param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_P = mk.field_p - this.field_s - param0;
+          super.updateMouseOver(param0, param1, param2, param3);
+          this.field_P = mk.field_p - this.x - param0;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "vn.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -113,7 +113,7 @@ final class vn extends lka implements mca {
         return 66;
     }
 
-    vn(String param0, pl param1, int param2) {
+    vn(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 

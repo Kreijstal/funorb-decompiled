@@ -6,7 +6,7 @@ final class ij extends pu {
     static String field_m;
     private static String field_z;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         int var1 = -90 % ((61 - param0) / 41);
         field_l = null;

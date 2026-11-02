@@ -5,7 +5,7 @@ final class CranberryEvent extends SpecialEvent {
     CreatureRef field_q;
     static String field_r;
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         BattleState var4 = null;
         CranberryAnimation stackIn_3_0 = null;
@@ -47,7 +47,7 @@ final class CranberryEvent extends SpecialEvent {
         try {
           super.a((byte) -124, param1);
           if (param0 > -12) {
-            CranberryEvent.d((byte) -104);
+            CranberryEvent.releaseStatics((byte) -104);
           }
           FlirtAnimation.a(this.field_q, 117, param1);
         } catch (RuntimeException runtimeException) {
@@ -55,7 +55,7 @@ final class CranberryEvent extends SpecialEvent {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         int var1 = 53 % ((25 - param0) / 44);
     }

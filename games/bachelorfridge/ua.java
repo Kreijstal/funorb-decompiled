@@ -3,19 +3,19 @@
  */
 final class ua {
     static String field_a;
-    ola field_c;
+    FridgeScreen field_c;
     static boolean field_b;
     static Sprite field_d;
 
     ua(String param0, mu param1) {
         try {
-          this.field_c = new ola();
+          this.field_c = new FridgeScreen();
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         int var1 = -19 % ((64 - param0) / 60);
         field_a = null;

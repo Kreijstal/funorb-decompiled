@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qc {
-    static sna field_b;
+    static UiComponent field_b;
     int field_d;
     private int field_f;
     private int field_c;
@@ -41,7 +41,7 @@ final class qc {
         this.field_a = new pd[this.field_d];
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 15) {
           field_e = (String) null;
           field_e = null;

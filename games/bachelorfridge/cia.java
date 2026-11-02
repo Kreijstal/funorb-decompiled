@@ -83,7 +83,7 @@ class cia extends IntrusiveNode {
         this.field_q = param0;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         if (param0 >= -70) {
           return;

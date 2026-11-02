@@ -108,7 +108,7 @@ final class SlowAllSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var6 = 0;
         SlowAllEvent var4 = null;
         int var5 = 0;

@@ -6,7 +6,7 @@ final class HazmatAnimation extends EventAnimation {
     static IntrusiveDeque field_v;
     private HazmatEvent field_x;
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         uea var2_ref_uea = null;
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
@@ -14,7 +14,7 @@ final class HazmatAnimation extends EventAnimation {
           if (25 == this.field_l) {
             jja.a(256, -1, 26);
             var2_ref_uea = new uea(this.screen, this.field_x.field_t, this.field_x.field_r, 16777215);
-            ((kj) ((Object) var2_ref_uea)).a(0);
+            ((TileEffect) ((Object) var2_ref_uea)).a(0);
             return false;
           }
           return false;
@@ -26,11 +26,11 @@ final class HazmatAnimation extends EventAnimation {
 
     private final void e(byte param0) {
         if (param0 == -64) {
-          this.field_x.a(this.screen.field_h, false);
+          this.field_x.apply(this.screen.field_h, false);
           return;
         }
         field_v = (IntrusiveDeque) null;
-        this.field_x.a(this.screen.field_h, false);
+        this.field_x.apply(this.screen.field_h, false);
     }
 
     final static n b(int param0, String param1) {
@@ -79,7 +79,7 @@ final class HazmatAnimation extends EventAnimation {
         }
     }
 
-    HazmatAnimation(gj param0, HazmatEvent param1) {
+    HazmatAnimation(BattleScreen param0, HazmatEvent param1) {
         super(param0, param1);
         try {
           this.field_x = param1;
@@ -88,7 +88,7 @@ final class HazmatAnimation extends EventAnimation {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 71) {
           return;
         }

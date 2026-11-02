@@ -5,7 +5,7 @@ final class ska extends k {
     private int field_l;
     static Sprite field_k;
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 1) {
           return;
         }

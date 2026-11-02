@@ -6,7 +6,7 @@ final class wo extends bia {
     static Sprite[][] field_k;
     private static String field_z;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 121 / ((36 - param0) / 45);
         field_k = (Sprite[][]) null;
     }

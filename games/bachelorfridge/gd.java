@@ -22,7 +22,7 @@ final class gd extends pu {
           IterableDualLinkDeque.field_b = param1;
           cga.field_p = param7;
           vc.field_c = param0;
-          rs.field_c = param2;
+          StatusEffectInfo.field_c = param2;
           BuffVendorAnimation.field_B = param4;
           kt.field_j = param9;
           sha.field_m = param10;

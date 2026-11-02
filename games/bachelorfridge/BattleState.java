@@ -335,7 +335,7 @@ final class BattleState {
           for (var3_int = 0; this.playerCount > var3_int; var3_int++) {
             this.rosters[var3_int] = new PlayerRoster(var3_int);
             for (var4 = 0; var4 < 7; var4++) {
-              var5 = ng.a(this, -51, param1);
+              var5 = MoveInfoPanel.a(this, -51, param1);
               if (var5 != null) {
                 this.rosters[var3_int].field_b[var4] = var5;
                 dupTemp$0 = this.rosters[var3_int];
@@ -634,13 +634,13 @@ final class BattleState {
             stackIn_8_0 = null;
             return (BattleUpdate) (stackIn_8_0);
           }
-          var4 = param0.a(this, 3);
+          var4 = param0.createEvent(this, 3);
           var7.field_z = true;
           var5 = this.field_T.field_w[var6.ownerIndex];
           if (param1 != 91) {
             this.e(-72, 2, 10);
           }
-          ((BattleUpdate) ((Object) var4)).a(this, false);
+          ((BattleUpdate) ((Object) var4)).apply(this, false);
           if (3 <= -var5 + this.field_T.field_w[var6.ownerIndex]) {
             this.field_T.field_a[var6.ownerIndex] = true;
           }
@@ -665,7 +665,7 @@ final class BattleState {
         int var4 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        oha var5 = null;
+        MoveDefinition var5 = null;
         int var6 = 0;
         int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -680,8 +680,8 @@ final class BattleState {
           var3_int = 0;
           for (var4 = 0; var4 < param0.length; var4++) {
             if (null != param0[var4]) {
-              var5 = ur.field_e[param0[var4].moveId];
-              if (var5 instanceof hd) {
+              var5 = WhirlpoolDigest.field_e[param0[var4].moveId];
+              if (var5 instanceof SpecialMoveDefinition) {
                 var3_int++;
               }
             }
@@ -840,7 +840,7 @@ final class BattleState {
           }
         }
         if (!var14.field_m.e(12917)) {
-          var14.a(this, false);
+          var14.apply(this, false);
           this.field_U.a(var14, true);
         }
     }
@@ -895,7 +895,7 @@ final class BattleState {
         if (param0 > -46) {
           this.c((byte) 75);
         }
-        return pn.a((byte) 48, this.field_E, new String[]{"Pizza", "Dessert", "Curry"});
+        return ArenaTheme.a((byte) 48, this.field_E, new String[]{"Pizza", "Dessert", "Curry"});
     }
 
     final void a(int param0, int param1, int param2, int[][] param3, int param4) {
@@ -1257,7 +1257,7 @@ final class BattleState {
         CreatureOrder var4;
         int var6;
         IntrusiveDeque var7;
-        oha var5;
+        MoveDefinition var5;
         int var3Lifetime1;
         CreatureOrder var4Lifetime1;
         var6 = BachelorFridge.field_y;
@@ -1277,7 +1277,7 @@ final class BattleState {
           var4Lifetime1 = (CreatureOrder) (var7.b((byte) 90));
           while (var4Lifetime1 != null) {
             var5 = al.a(120, var4Lifetime1.moveId);
-            if (2 == var5.field_a &&
+            if (2 == var5.kind &&
               hl.a((byte) 121, var5.field_j) &&
               var5.field_l == var3Lifetime1) {
               this.field_P.a(var4Lifetime1, true);
@@ -2045,7 +2045,7 @@ final class BattleState {
           }
           var3_int = param0.tileX;
           var4 = param0.tileY;
-          var5 = ((t) (al.a(-97, 24))).field_t;
+          var5 = ((BasicMoveDefinition) (al.a(-97, 24))).field_t;
           var6 = 1 + DiveBomberAnimation.a(4, this.field_w, -2147483648);
           var7 = var6;
           var8 = 0;
@@ -2252,7 +2252,7 @@ final class BattleState {
                 }
                 var10 = new EffectBatch();
                 var10.a(true, new qq(new CreatureRef(var8Lifetime1), -1, var9));
-                var10.a(this, false);
+                var10.apply(this, false);
                 this.field_U.a(var10, true);
               }
             }
@@ -2366,7 +2366,7 @@ final class BattleState {
         var8 = BachelorFridge.field_y;
         try {
           this.field_D = param1.readUnsignedByte(16711935);
-          this.field_L = rs.field_g[this.field_D];
+          this.field_L = StatusEffectInfo.field_g[this.field_D];
           this.field_o = param1.readUnsignedByte(16711935);
           this.field_E = param1.readUnsignedByte(param0 + 16711936);
           this.width = param1.readUnsignedByte(16711935);
@@ -2907,7 +2907,7 @@ final class BattleState {
           this.field_F >= 3) {
           var8.a(new bja(), (byte) 114);
         }
-        var8.a(this, false);
+        var8.apply(this, false);
         this.field_U.a(var8, true);
         this.a(var8, (byte) 73);
         for (var3Lifetime5 = 0; var3Lifetime5 < this.playerCount; var3Lifetime5++) {
@@ -3000,7 +3000,7 @@ final class BattleState {
         if (param0 != 42) {
           return (String) null;
         }
-        return pn.a((byte) -122, this.field_o, new String[]{null, "Annihilation", "Take & Hold", "CTF"});
+        return ArenaTheme.a((byte) -122, this.field_o, new String[]{null, "Annihilation", "Take & Hold", "CTF"});
     }
 
     final void a(int param0, CreatureProfile[] param1, int param2) {

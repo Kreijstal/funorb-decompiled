@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qi {
-    static ue field_b;
+    static AccountCreationPanel field_b;
     static String field_a;
 
     final static CreatureRef a(PacketBuffer param0, byte param1) {
@@ -15,7 +15,7 @@ final class qi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 1) {
-            field_b = (ue) null;
+            field_b = (AccountCreationPanel) null;
           }
           var2_int = param0.readUnsignedByte(16711935);
           if (255 == var2_int) {
@@ -37,7 +37,7 @@ final class qi {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 10) {
           field_a = (String) null;
@@ -52,7 +52,7 @@ final class qi {
         if ((dj.field_c.field_h.field_h & 1 << dj.field_c.field_n) != 0) {
           lr.field_k[10] = cd.field_k;
           if (param0 < 27) {
-            field_b = (ue) null;
+            field_b = (AccountCreationPanel) null;
             return;
           }
           return;
@@ -60,7 +60,7 @@ final class qi {
         if (0 == dj.field_c.field_h.field_h) {
           lr.field_k[10] = SuperSpeedAllAnimation.field_w;
           if (param0 < 27) {
-            field_b = (ue) null;
+            field_b = (AccountCreationPanel) null;
             return;
           }
           return;
@@ -69,7 +69,7 @@ final class qi {
         if (param0 >= 27) {
           return;
         }
-        field_b = (ue) null;
+        field_b = (AccountCreationPanel) null;
     }
 
     final static void b(int param0) {

@@ -43,7 +43,7 @@ final class SuperSpeedAllSpecial extends SpecialOrder {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 98) {
           return;
         }
@@ -55,7 +55,7 @@ final class SuperSpeedAllSpecial extends SpecialOrder {
         int var1 = 50 % ((param0 + 71) / 47);
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int var6 = 0;
         RuntimeException var3 = null;
         SuperSpeedAllEvent var4 = null;
@@ -74,7 +74,7 @@ final class SuperSpeedAllSpecial extends SpecialOrder {
           var4 = new SuperSpeedAllEvent(this.moveId, new CreatureRef(var9));
           var5 = 0;
           if (param1 != 3) {
-            SuperSpeedAllSpecial.c((byte) 56);
+            SuperSpeedAllSpecial.releaseStatics((byte) 56);
           }
           while (var5 < param0.width) {
             for (var6 = 0; var6 < param0.height; var6++) {

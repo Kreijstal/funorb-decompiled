@@ -3,8 +3,8 @@
  */
 final class aja extends pv {
     private double field_j;
-    static sna field_p;
-    static sna field_l;
+    static UiComponent field_p;
+    static UiComponent field_l;
     static int field_o;
     static String field_m;
     private int field_n;
@@ -31,7 +31,7 @@ final class aja extends pv {
         return false;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         int var1 = -36 % ((param0 - 28) / 40);
         field_p = null;
@@ -85,7 +85,7 @@ final class aja extends pv {
         return false;
     }
 
-    aja(jfa param0, int param1) {
+    aja(FridgeCreature param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

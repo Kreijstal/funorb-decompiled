@@ -7,14 +7,14 @@ final class qaa {
     static int field_c;
     static String field_a;
     private RandomAccessFile field_b;
-    static sna field_d;
+    static UiComponent field_d;
     static int[] field_e;
     private long field_f;
     private long field_g;
 
     final long a(byte param0) throws IOException {
         if (param0 != 24) {
-          qaa.b(true);
+          qaa.releaseStatics(true);
           return this.field_b.length();
         }
         return this.field_b.length();
@@ -66,7 +66,7 @@ final class qaa {
             throw new EOFException();
           }
           if (param3 <= 56) {
-            qaa.b(false);
+            qaa.releaseStatics(false);
           }
           this.field_b.write(param2, param0, param1);
           this.field_f = this.field_f + (long)param1;
@@ -75,7 +75,7 @@ final class qaa {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         if (param0) {
           field_a = (String) null;

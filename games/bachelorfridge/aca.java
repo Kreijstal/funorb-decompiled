@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class aca extends kj {
+final class aca extends TileEffect {
     static int[] field_g;
     private int field_f;
     static int field_i;
@@ -688,7 +688,7 @@ final class aca extends kj {
         return (byte) var2;
     }
 
-    aca(gj param0, int param1, int param2, boolean param3) {
+    aca(BattleScreen param0, int param1, int param2, boolean param3) {
         super(param0, param1, param2);
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;

@@ -129,7 +129,7 @@ abstract class BitmapFont extends DualLinkNode {
         this.b(param0, param1 - this.a(param0) / 2, param2);
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_A = null;
         field_p = null;
     }

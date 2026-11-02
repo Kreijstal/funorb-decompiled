@@ -4,19 +4,19 @@
 final class mj extends lg {
     static int field_i;
     static du field_l;
-    static sna field_k;
+    static UiComponent field_k;
     static String[] field_h;
     static int field_j;
 
     private final void c(byte param0) {
         if (param0 == -51) {
-          this.field_a.field_z = null;
+          this.field_a.children = null;
           this.a(BananarangSpecial.field_s, 40, param0 ^ 4571, 72, 334, 366);
           return;
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_h = null;
         if (param0 <= 29) {

@@ -108,15 +108,15 @@ final class an extends qb {
         RuntimeException var2 = null;
         var9 = BachelorFridge.field_y;
         try {
-          lka.field_E = qs.a(false, new PacketBuffer(param0));
+          TextInputWidget.field_E = qs.a(false, new PacketBuffer(param0));
           if (param1 > -40) {
             an.f((byte) 123);
           }
-          fw.field_h = new pd[-1 + lka.field_E.length];
-          for (var2_int = 1; var2_int < lka.field_E.length; var2_int++) {
+          fw.field_h = new pd[-1 + TextInputWidget.field_E.length];
+          for (var2_int = 1; var2_int < TextInputWidget.field_E.length; var2_int++) {
             vc.a(var2_int, 0, -16306);
-            var3 = lka.field_E[var2_int][3];
-            var4 = lka.field_E[var2_int][16];
+            var3 = TextInputWidget.field_E[var2_int][3];
+            var4 = TextInputWidget.field_E[var2_int][16];
             var5 = m.a(var2_int, (byte) -98, 1);
             var6 = kka.a(var2_int, -114, 2);
             var7 = vc.a(var2_int, 9, -16306);

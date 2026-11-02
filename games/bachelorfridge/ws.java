@@ -17,7 +17,7 @@ final class ws {
           var4_int++;
         }
         Sprite var4 = new Sprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], lq.field_A[0], InsanoSauceSpecial.field_s[0], var3);
-        al.b(-18073);
+        al.releaseStatics(-18073);
         return var4;
     }
 

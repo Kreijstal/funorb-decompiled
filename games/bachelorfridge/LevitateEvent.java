@@ -50,7 +50,7 @@ final class LevitateEvent extends SpecialEvent {
         super(param0, param1);
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }
@@ -67,7 +67,7 @@ final class LevitateEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         LevitateAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

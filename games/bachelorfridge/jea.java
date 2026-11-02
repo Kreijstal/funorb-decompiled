@@ -10,7 +10,7 @@ final class jea {
 
     final static void a(boolean param0) {
         if (!param0) {
-          jea.a(25);
+          jea.releaseStatics(25);
         }
         lga.c((byte) 112);
         if (TBomberAnimation.field_y != null) {
@@ -26,7 +26,7 @@ final class jea {
         vc.a((byte) -96);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           field_c = (ofa) null;
           field_c = null;

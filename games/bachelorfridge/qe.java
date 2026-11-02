@@ -65,7 +65,7 @@ final class qe {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_q = null;
         int var1 = 101 / ((param0 - 34) / 50);

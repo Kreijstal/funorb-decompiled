@@ -3,8 +3,8 @@
  */
 final class dj {
     static String field_a;
-    static sna field_d;
-    static gj field_c;
+    static UiComponent field_d;
+    static BattleScreen field_c;
     static String field_b;
 
     public static void a(byte param0) {
@@ -18,16 +18,16 @@ final class dj {
     }
 
     final static void a(int param0, boolean param1) {
-        BitPacketBuffer.field_n = !param1 ? new lm(hfa.field_B, nu.field_f) : new lm(dea.field_l, sr.field_b);
-        ela.field_i = new sna(0L, (sna) null);
+        BitPacketBuffer.field_n = !param1 ? new lm(WidgetWrapper.field_B, nu.field_f) : new lm(dea.field_l, sr.field_b);
+        ela.field_i = new UiComponent(0L, (UiComponent) null);
         ela.field_i.a(-1, BitPacketBuffer.field_n.field_a);
         ela.field_i.a(param0 - 1, jj.field_wb);
-        qw.field_b = new sna(0L, qaa.field_d);
-        rf.field_q = new sna((long)param0, (sna) null);
+        qw.field_b = new UiComponent(0L, qaa.field_d);
+        ArchiveIndex.field_q = new UiComponent((long)param0, (UiComponent) null);
         qw.field_b.a(-1, saa.field_f);
-        qw.field_b.a(param0 - 1, rf.field_q);
-        rf.field_q.a(-1, tv.field_o);
-        rf.field_q.a(-1, vca.field_h);
+        qw.field_b.a(param0 - 1, ArchiveIndex.field_q);
+        ArchiveIndex.field_q.a(-1, tv.field_o);
+        ArchiveIndex.field_q.a(-1, vca.field_h);
         pv.a(param1, true);
     }
 
@@ -52,7 +52,7 @@ final class dj {
           if (param1 == -15437) {
             return true;
           }
-          field_c = (gj) null;
+          field_c = (BattleScreen) null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

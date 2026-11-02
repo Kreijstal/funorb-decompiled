@@ -72,7 +72,7 @@ final class nda extends pu {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -73 / ((0 - param0) / 41);
         field_l = null;
     }

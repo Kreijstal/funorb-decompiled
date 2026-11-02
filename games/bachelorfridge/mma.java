@@ -45,7 +45,7 @@ final class mma {
                 uaa.field_f = li.a(26130, false, param4, param1);
               } else {
                 var10 = (String) null;
-                uaa.field_f = ov.a(gha.field_a, false, (String) null, param1, (byte) 94);
+                uaa.field_f = ov.a(DefaultWidgetRenderer.field_a, false, (String) null, param1, (byte) 94);
               }
               sja.field_fb.position = 0;
               sja.field_fb.writeByte(14, 0);
@@ -100,7 +100,7 @@ final class mma {
             }
             if (eia.field_a == gca.field_f &&
               StickyEvent.d((byte) -67)) {
-              gha.field_a = ig.field_m.readLong(-108);
+              DefaultWidgetRenderer.field_a = ig.field_m.readLong(-108);
               kda.field_b = param1;
               BananarangSpecial.field_r = ig.field_m.readUnsignedByte(16711935);
               hka.field_i = ig.field_m.readUnsignedByte(16711935);
@@ -159,7 +159,7 @@ final class mma {
                 }
               } else {
                 try {
-                  ac.a(nia.d(-31768), "zap", new Object[]{FullHealAnimation.a(gha.field_a, 48)}, (byte) 73);
+                  ac.a(nia.d(-31768), "zap", new Object[]{FullHealAnimation.a(DefaultWidgetRenderer.field_a, 48)}, (byte) 73);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -205,8 +205,8 @@ final class mma {
                 stackIn_102_0 = 3;
                 return stackIn_102_0;
               }
-              var7 = kn.field_h;
-              kn.field_h = oja.field_c;
+              var7 = CurryArenaTheme.field_h;
+              CurryArenaTheme.field_h = oja.field_c;
               oja.field_c = var7;
               DiskCacheRequest.field_x = true;
             }

@@ -3,12 +3,12 @@
  */
 final class StampedeSpecial extends SpecialOrder {
     static String field_r;
-    static sna field_q;
+    static UiComponent field_q;
     static String field_p;
     static byte[] field_s;
-    static sna field_t;
+    static UiComponent field_t;
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         StampedeEvent stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -22,34 +22,34 @@ final class StampedeSpecial extends SpecialOrder {
         var6 = BachelorFridge.field_y;
         try {
           if (param1 != 3) {
-            field_t = (sna) null;
+            field_t = (UiComponent) null;
           }
           var7 = this.creature.a(69, param0);
           var4 = new StampedeEvent(this.moveId, new CreatureRef(var7), this.field_i);
           if (2 == this.field_i) {
             for (var5 = 0; var7.tileX > var5; var5++) {
-              ar.a(var7.tileY, 31546, var5, false, param0, var4);
-              ar.a(var7.tileY - 1, 31546, var5, false, param0, var4);
-              ar.a(var7.tileY + 1, param1 + 31543, var5, false, param0, var4);
+              TermsPanel.a(var7.tileY, 31546, var5, false, param0, var4);
+              TermsPanel.a(var7.tileY - 1, 31546, var5, false, param0, var4);
+              TermsPanel.a(var7.tileY + 1, param1 + 31543, var5, false, param0, var4);
             }
           } else if (this.field_i == 4) {
             for (var5 = 1 + var7.tileX; param0.width > var5; var5++) {
-              ar.a(var7.tileY, 31546, var5, false, param0, var4);
-              ar.a(-1 + var7.tileY, 31546, var5, false, param0, var4);
-              ar.a(var7.tileY + 1, 31546, var5, false, param0, var4);
+              TermsPanel.a(var7.tileY, 31546, var5, false, param0, var4);
+              TermsPanel.a(-1 + var7.tileY, 31546, var5, false, param0, var4);
+              TermsPanel.a(var7.tileY + 1, 31546, var5, false, param0, var4);
             }
           } else if (1 == this.field_i) {
             for (var5 = 0; var5 < var7.tileY; var5++) {
-              ar.a(var5, 31546, var7.tileX, false, param0, var4);
-              ar.a(var5, 31546, -1 + var7.tileX, false, param0, var4);
-              ar.a(var5, 31546, var7.tileX + 1, false, param0, var4);
+              TermsPanel.a(var5, 31546, var7.tileX, false, param0, var4);
+              TermsPanel.a(var5, 31546, -1 + var7.tileX, false, param0, var4);
+              TermsPanel.a(var5, 31546, var7.tileX + 1, false, param0, var4);
             }
           } else {
             if (this.field_i == 3) {
               for (var5 = 1 + var7.tileY; var5 < param0.height; var5++) {
-                ar.a(var5, 31546, var7.tileX, false, param0, var4);
-                ar.a(var5, 31546, var7.tileX - 1, false, param0, var4);
-                ar.a(var5, 31546, 1 + var7.tileX, false, param0, var4);
+                TermsPanel.a(var5, 31546, var7.tileX, false, param0, var4);
+                TermsPanel.a(var5, 31546, var7.tileX - 1, false, param0, var4);
+                TermsPanel.a(var5, 31546, 1 + var7.tileX, false, param0, var4);
               }
             }
           }
@@ -88,7 +88,7 @@ final class StampedeSpecial extends SpecialOrder {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_r = null;
         int var1 = 25 / ((16 - param0) / 44);

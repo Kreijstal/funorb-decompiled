@@ -3,7 +3,7 @@
  */
 final class ResetAnimation extends EventAnimation {
     static IntrusiveNodeHashTable field_v;
-    static sna field_w;
+    static UiComponent field_w;
 
     private final void d(int param0) {
         if (param0 != 256) {
@@ -41,7 +41,7 @@ final class ResetAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = -107 / ((param0 - 71) / 47);
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
@@ -99,7 +99,7 @@ final class ResetAnimation extends EventAnimation {
         return SoftwareRasterizer.field_i - param1;
     }
 
-    ResetAnimation(gj param0, ResetEvent param1) {
+    ResetAnimation(BattleScreen param0, ResetEvent param1) {
         super(param0, param1);
     }
 

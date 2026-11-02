@@ -11,7 +11,7 @@ final class BuffVendorAnimation extends EventAnimation {
     static String field_z;
     private boolean field_v;
 
-    BuffVendorAnimation(gj param0, BuffVendorEvent param1, boolean param2) {
+    BuffVendorAnimation(BattleScreen param0, BuffVendorEvent param1, boolean param2) {
         super(param0, param1);
         this.field_v = false;
         try {
@@ -59,7 +59,7 @@ final class BuffVendorAnimation extends EventAnimation {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_A = (int[][]) null;
         if (param0) {
           return;
@@ -119,7 +119,7 @@ final class BuffVendorAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         tka var2 = null;
         if (this.field_x) {
           return true;
@@ -137,7 +137,7 @@ final class BuffVendorAnimation extends EventAnimation {
         if (!this.field_v) {
           this.field_y.creature.a(-27449, this.screen).b(-1, 2);
           var2 = new tka(this.screen, this.field_y.field_r, this.field_y.field_u);
-          ((kj) ((Object) var2)).a(0);
+          ((TileEffect) ((Object) var2)).a(0);
           this.field_v = true;
           return false;
         }

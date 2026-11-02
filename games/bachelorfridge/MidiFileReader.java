@@ -12,7 +12,7 @@ final class MidiFileReader {
     private int[] field_b;
     private int[] field_c;
 
-    public static void b() {
+    public static void releaseStatics() {
         field_f = null;
     }
 

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ofa extends sna {
-    private sna field_vb;
+final class ofa extends UiComponent {
+    private UiComponent field_vb;
 
     final boolean a(boolean param0, byte param1) {
         int var3 = -74 / ((-55 - param1) / 48);
@@ -31,7 +31,7 @@ final class ofa extends sna {
         }
     }
 
-    ofa(sna param0, sna param1, sna param2, sna param3, sna param4, sna param5) {
+    ofa(UiComponent param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -48,27 +48,27 @@ final class ofa extends sna {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        sna var8 = null;
-        sna var9 = null;
+        UiComponent var8 = null;
+        UiComponent var9 = null;
         int var10 = 0;
         int var11 = 0;
-        sna var13 = null;
-        sna var14 = null;
+        UiComponent var13 = null;
+        UiComponent var14 = null;
         int var15 = 0;
-        sna var17 = null;
+        UiComponent var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new sna(0L, param1, PizzaPartySpecial.field_p.toUpperCase());
+          var17 = new UiComponent(0L, param1, PizzaPartySpecial.field_p.toUpperCase());
           var17.field_N = 1;
-          this.field_vb = new sna(0L, param2);
-          var8 = new sna(0L, param3);
-          var9 = new sna(0L, param3, qd.field_k);
+          this.field_vb = new UiComponent(0L, param2);
+          var8 = new UiComponent(0L, param3);
+          var9 = new UiComponent(0L, param3, qd.field_k);
           var9.field_N = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; jd.field_d.length > var12; var12++) {
-            var13 = new sna(0L, param3, ij.field_l[var12]);
-            var14 = new sna(0L, param3, jd.field_d[var12]);
+            var13 = new UiComponent(0L, param3, ij.field_l[var12]);
+            var14 = new UiComponent(0L, param3, jd.field_d[var12]);
             var15 = param3.field_jb.a(jd.field_d[var12]);
             if (var15 > var11) {
               var11 = var15;

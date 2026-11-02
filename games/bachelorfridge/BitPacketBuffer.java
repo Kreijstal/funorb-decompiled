@@ -55,14 +55,14 @@ final class BitPacketBuffer extends PacketBuffer {
         while (var5 < param0) {
           incrementValue$0 = var3;
           var3++;
-          var6 = var6 + ((this.payload[incrementValue$0] & wj.field_n[var5]) << param0 - var5);
+          var6 = var6 + ((this.payload[incrementValue$0] & UiWidget.field_n[var5]) << param0 - var5);
           param0 = param0 - var5;
           var5 = 8;
         }
         if (var5 != param0) {
-          var6 = var6 + (this.payload[var3] >> var5 - param0 & wj.field_n[param0]);
+          var6 = var6 + (this.payload[var3] >> var5 - param0 & UiWidget.field_n[param0]);
         } else {
-          var6 = var6 + (wj.field_n[var5] & this.payload[var3]);
+          var6 = var6 + (UiWidget.field_n[var5] & this.payload[var3]);
         }
         return var6;
     }
@@ -87,7 +87,7 @@ final class BitPacketBuffer extends PacketBuffer {
         return this.payload[fieldTemp$1] - this.cipher.nextInt(28602) & 255;
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_j = null;
         if (param0 != -6199) {

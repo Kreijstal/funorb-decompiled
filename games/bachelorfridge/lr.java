@@ -198,10 +198,10 @@ final class lr extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 34) {
-          lr.a(54);
+          lr.releaseStatics(54);
         }
     }
 

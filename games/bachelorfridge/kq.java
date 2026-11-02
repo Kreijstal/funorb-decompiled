@@ -9,10 +9,10 @@ final class kq extends EventEffect {
     kq() {
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           int var3_int = 91 % ((34 - param1) / 58);
-          super.a(param0, (byte) 126);
+          super.write(param0, (byte) 126);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "kq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -27,12 +27,12 @@ final class kq extends EventEffect {
         field_j = null;
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         try {
           param1.field_l = false;
           if (param2 != 12) {
             PacketBuffer var5 = (PacketBuffer) null;
-            this.a((PacketBuffer) null, (byte) 108);
+            this.write((PacketBuffer) null, (byte) 108);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "kq.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

@@ -58,9 +58,9 @@ final class SetFriendlyEffect extends EventEffect {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -123);
+          super.write(param0, (byte) -123);
           FlirtAnimation.a(this.target, 117, param0);
           param0.writeByte(this.field_j, 0);
           int var3_int = -78 / ((34 - param1) / 58);
@@ -69,7 +69,7 @@ final class SetFriendlyEffect extends EventEffect {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         if (param0 != 29) {
           field_k = (Sprite) null;
@@ -79,7 +79,7 @@ final class SetFriendlyEffect extends EventEffect {
         field_i = null;
     }
 
-    final void a(BattleCreature param0, BattleState param1, int param2) {
+    final void apply(BattleCreature param0, BattleState param1, int param2) {
         BattleCreature var6 = this.target.a(74, param1);
         BattleCreature var4 = var6;
         if (var6 == null) {
@@ -89,7 +89,7 @@ final class SetFriendlyEffect extends EventEffect {
           var6.friendly = this.field_j;
           if (param2 != 12) {
             PacketBuffer var5 = (PacketBuffer) null;
-            this.a((PacketBuffer) null, (byte) -61);
+            this.write((PacketBuffer) null, (byte) -61);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "rla.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

@@ -17,7 +17,7 @@ final class vt extends tia {
         boolean stackIn_41_4 = false;
         int stackIn_44_0 = 0;
         int stackIn_57_0 = 0;
-        sna stackIn_95_0;
+        UiComponent stackIn_95_0;
         int stackIn_95_1;
         int stackIn_95_2;
         int stackIn_95_3;
@@ -38,11 +38,11 @@ final class vt extends tia {
         Object var11 = null;
         ema var12 = null;
         int var13 = 0;
-        sna var14 = null;
-        sna var15 = null;
-        sna var16 = null;
-        sna var17 = null;
-        sna var18 = null;
+        UiComponent var14 = null;
+        UiComponent var15 = null;
+        UiComponent var16 = null;
+        UiComponent var17 = null;
+        UiComponent var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -128,25 +128,25 @@ final class vt extends tia {
           stackIn_41_4 = (bga.field_m == param0);
           stackIn_44_0 = (!((sga) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, param3, true)) ? 0 : 1;
           var9Lifetime1 = stackIn_44_0;
-          var10 = param0.field_vb.field_z;
+          var10 = param0.field_vb.children;
           var11 = null;
           var12 = (ema) (var10.b((byte) 90));
           while (var12 != null) {
             var13 = 0;
-            if (var12.field_z == null) {
-              var12.field_Ib = new sna(0L, ClientException.field_c);
+            if (var12.children == null) {
+              var12.field_Ib = new UiComponent(0L, ClientException.field_c);
               var12.a(-1, var12.field_Ib);
-              var12.field_Bb = new sna(0L, wv.field_l);
+              var12.field_Bb = new UiComponent(0L, wv.field_l);
               if (IntrusiveDeque.field_c) {
                 var12.a(-1, var12.field_Bb);
               }
               var12.field_Bb.field_N = 2;
-              var12.field_vb = new sna(0L, qs.field_m);
+              var12.field_vb = new UiComponent(0L, qs.field_m);
               var12.a(~param2, var12.field_vb);
               var12.d((byte) 118);
-              var12.field_Fb = new sna(0L, mh.field_k);
+              var12.field_Fb = new UiComponent(0L, mh.field_k);
               var12.a(-1, var12.field_Fb);
-              var12.field_Db = new sna(0L, JaggrabDownloader.field_c);
+              var12.field_Db = new UiComponent(0L, JaggrabDownloader.field_c);
               var13 = 1;
               var12.a(-1, var12.field_Db);
             }
@@ -258,7 +258,7 @@ final class vt extends tia {
               } else {
                 stackIn_96_4 = 42;
               }
-              ((sna) (Object) stackIn_95_0).a(stackIn_95_1, stackIn_95_2, stackIn_95_3 - stackIn_96_4 - var25_int, var25_int, var19);
+              ((UiComponent) (Object) stackIn_95_0).a(stackIn_95_1, stackIn_95_2, stackIn_95_3 - stackIn_96_4 - var25_int, var25_int, var19);
               var12.field_Bb.field_Z = Integer.toString(var12.field_Jb);
               var12.field_Bb.a(rg.field_h, param2 + 31407, 40, -40 + var12.field_sb, var19);
               if (var12.field_Ib.field_T &&
@@ -293,7 +293,7 @@ final class vt extends tia {
               var12.field_hb = var19 - var12.field_p;
             }
             if (var13 != 0) {
-              param0.field_vb.a(false, var12, (sna) (var11), 2);
+              param0.field_vb.a(false, var12, (UiComponent) (var11), 2);
             }
             if (var12.field_R != 0 &&
               !var12.f((byte) 21)) {
@@ -324,7 +324,7 @@ final class vt extends tia {
                   if (var7 > var12.field_Gb) {
                     var25_int = var7 - var12.field_Gb;
                     if (var25_int == 1) {
-                      var24Lifetime2 = lga.a(true, new String[]{var20}, sna.field_C);
+                      var24Lifetime2 = lga.a(true, new String[]{var20}, UiComponent.field_C);
                     }
                     var24Lifetime2 = lga.a(true, new String[]{var20, Integer.toString(var25_int)}, pi.field_h);
                   } else {
@@ -474,7 +474,7 @@ final class vt extends tia {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 != 0) {
           return;
@@ -482,7 +482,7 @@ final class vt extends tia {
         field_l = null;
     }
 
-    vt(gj param0, ad param1) {
+    vt(BattleScreen param0, CreatureActor param1) {
         super(param0, param1);
         int var3_int = 0;
         int var4 = 0;
@@ -524,7 +524,7 @@ final class vt extends tia {
     final void a(int param0, int param1, int param2) {
         int var5 = BachelorFridge.field_y;
         if (param1 != 25415) {
-          vt.b(-62);
+          vt.releaseStatics(-62);
         }
         b var4 = (b) (this.field_j.b((byte) 90));
         while (var4 != null) {

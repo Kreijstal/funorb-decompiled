@@ -4,7 +4,7 @@
 abstract class go extends DualLinkNode {
     int field_t;
     int field_q;
-    static qh field_s;
+    static WidgetTheme field_s;
     int field_o;
     int field_p;
     int field_n;
@@ -23,7 +23,7 @@ abstract class go extends DualLinkNode {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        pna.field_zb[param2] = new rs(param2, param0);
+        pna.field_zb[param2] = new StatusEffectInfo(param2, param0);
         if (param1 >= -125) {
           field_r = (String) null;
         }

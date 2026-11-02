@@ -6,7 +6,7 @@ final class iq extends lw {
     static Sprite field_l;
 
     iq() {
-        super(true, new String[]{su.field_e, n.field_d, ur.field_f, ld.field_m, uu.field_zb, MartyrAnimation.field_v}, kr.field_xb);
+        super(true, new String[]{su.field_e, n.field_d, WhirlpoolDigest.field_f, ld.field_m, uu.field_zb, MartyrAnimation.field_v}, kr.field_xb);
         try {
           this.field_c = new int[][]{new int[]{160, 390}, new int[]{160, 390}, new int[]{160, 350}, new int[]{160, 390}, new int[]{160, 380}, new int[]{160, 400}};
         } catch (RuntimeException runtimeException) {

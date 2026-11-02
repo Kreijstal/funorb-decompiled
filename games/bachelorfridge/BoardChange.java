@@ -10,7 +10,7 @@ abstract class BoardChange extends IntrusiveNode {
     static Sprite[] field_f;
     static lna field_i;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_f = null;
         field_h = null;
@@ -35,8 +35,8 @@ abstract class BoardChange extends IntrusiveNode {
         if (!param1) {
           BoardChange.a((byte) 31, 92);
         }
-        if (null != sna.field_fb) {
-          sna.field_fb.b(106, param0);
+        if (null != UiComponent.field_fb) {
+          UiComponent.field_fb.b(106, param0);
         }
         if (vla.field_w &&
           sia.field_h) {
@@ -300,7 +300,7 @@ abstract class BoardChange extends IntrusiveNode {
         }
     }
 
-    void a(ub param0, int param1) {
+    void a(BoardChangeAnimation param0, int param1) {
         try {
           if (param1 > -2) {
             field_i = (lna) null;

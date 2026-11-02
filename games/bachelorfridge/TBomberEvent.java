@@ -127,7 +127,7 @@ final class TBomberEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         TBomberAnimation stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

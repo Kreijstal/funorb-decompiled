@@ -8,7 +8,7 @@ abstract class BattleUpdate extends IntrusiveNode {
     int field_j;
     static String field_g;
 
-    abstract void a(PacketBuffer param0, int param1);
+    abstract void write(PacketBuffer param0, int param1);
 
     final static boolean b(boolean param0) {
         if (!param0) {
@@ -27,7 +27,7 @@ abstract class BattleUpdate extends IntrusiveNode {
         return true;
     }
 
-    abstract AnimationNode a(int param0, gj param1);
+    abstract AnimationNode createAnimation(int param0, BattleScreen param1);
 
     final static int a(int param0, int param1) {
         int var2;
@@ -112,16 +112,16 @@ abstract class BattleUpdate extends IntrusiveNode {
         return -1;
     }
 
-    abstract void a(BattleState param0, boolean param1);
+    abstract void apply(BattleState param0, boolean param1);
 
     BattleUpdate(int param0) {
         this.field_h = param0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != -51) {
-          BattleUpdate.a(45);
+          BattleUpdate.releaseStatics(45);
         }
     }
 

@@ -30,7 +30,7 @@ final class hba extends AttackEvent {
         }
     }
 
-    final void a(BattleState param0, boolean param1) {
+    final void apply(BattleState param0, boolean param1) {
         BattleCreature var3 = this.creature.a(11, param0);
         if (this.field_r ||
           this.field_n ||
@@ -40,7 +40,7 @@ final class hba extends AttackEvent {
         }
         try {
           var3.a(param1, this.field_w, this.field_q);
-          super.a(param0, false);
+          super.apply(param0, false);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "hba.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -98,7 +98,7 @@ final class hba extends AttackEvent {
           ve.field_m[2] = pi.a(param1, -8845, "basic", "powerup_attack");
           ve.field_m[3] = pi.a(param1, -8845, "basic", "powerup_special");
           am.field_M = pi.a(param1, -8845, "basic", "status_icons");
-          gha.field_h = RageSpecial.a(29611, "basic", "doughnut", param1)[0];
+          DefaultWidgetRenderer.field_h = RageSpecial.a(29611, "basic", "doughnut", param1)[0];
           var10 = RageSpecial.a(29611, "basic", "special_tiles_ones", param1);
           qq.field_i = new IndexedSprite[3];
           dupTemp$0 = var10[6];
@@ -213,7 +213,7 @@ final class hba extends AttackEvent {
           PetAttackAnimation.field_y = hca.a("basic", param1, 103, "action_phase");
           InvincibleEvent.field_r = hca.a("basic", param1, -85, "suddendeath");
           nca.field_a = RageSpecial.a(29611, "basic", "tiles_shadows", param1);
-          kn.field_g = FullHealEvent.a("skull", param1, "basic", (byte) 117);
+          CurryArenaTheme.field_g = FullHealEvent.a("skull", param1, "basic", (byte) 117);
           vc.field_d = new Sprite[9];
           var6 = pi.a(param1, -8845, "basic", "arena_objects_1");
           var7 = pi.a(param1, -8845, "basic", "arena_objects_2");
@@ -316,7 +316,7 @@ final class hba extends AttackEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         ba stackIn_4_0 = null;
@@ -384,9 +384,9 @@ final class hba extends AttackEvent {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          id.field_i = new IntrusiveNodeHashTable(4);
+          PizzaArenaTheme.field_i = new IntrusiveNodeHashTable(4);
           for (var1_int = 0; jk.field_k.length > var1_int; var1_int++) {
-            id.field_i.a((long)jk.field_k[var1_int].toLowerCase().hashCode(), (byte) 69, new ji(var1_int));
+            PizzaArenaTheme.field_i.a((long)jk.field_k[var1_int].toLowerCase().hashCode(), (byte) 69, new ji(var1_int));
           }
           if (param0 != 7) {
             field_v = (String) null;

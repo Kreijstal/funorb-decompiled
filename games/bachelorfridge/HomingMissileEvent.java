@@ -17,7 +17,7 @@ final class HomingMissileEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         HomingMissileAnimation stackIn_4_0 = null;
@@ -128,7 +128,7 @@ final class HomingMissileEvent extends SpecialEvent {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 105 / ((param0 + 54) / 37);
         field_t = null;
         field_s = null;

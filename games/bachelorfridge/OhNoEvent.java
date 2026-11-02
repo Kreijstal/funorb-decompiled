@@ -39,7 +39,7 @@ final class OhNoEvent extends SpecialEvent {
         il.field_a = null;
         hl.field_D = null;
         lf.field_b = null;
-        gha.field_h = null;
+        DefaultWidgetRenderer.field_h = null;
         BuffVendorAnimation.field_C = null;
         ik.field_h = null;
         nia.field_l = null;
@@ -91,7 +91,7 @@ final class OhNoEvent extends SpecialEvent {
         if (param0 == 34) {
           DelegatingCanvas.field_c = null;
           ena.field_l = null;
-          kn.field_g = null;
+          CurryArenaTheme.field_g = null;
           ld.field_l = null;
           fw.field_f = null;
           sv.field_c = null;
@@ -103,7 +103,7 @@ final class OhNoEvent extends SpecialEvent {
         OhNoEvent.b((byte) 59, (PacketBuffer) null);
         DelegatingCanvas.field_c = null;
         ena.field_l = null;
-        kn.field_g = null;
+        CurryArenaTheme.field_g = null;
         ld.field_l = null;
         fw.field_f = null;
         sv.field_c = null;
@@ -111,7 +111,7 @@ final class OhNoEvent extends SpecialEvent {
         Runtime.getRuntime().gc();
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         BattleState var4 = null;
         OhNoAnimation stackIn_3_0 = null;

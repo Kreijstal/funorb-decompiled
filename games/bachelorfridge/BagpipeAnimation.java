@@ -4,7 +4,7 @@
 final class BagpipeAnimation extends EventAnimation {
     static Sprite field_x;
     private BagpipeEvent field_v;
-    static sna field_y;
+    static UiComponent field_y;
     static String field_w;
 
     private final void d(int param0) {
@@ -159,9 +159,9 @@ final class BagpipeAnimation extends EventAnimation {
     }
 
     private final void e(int param0) {
-        ad var8 = null;
-        ad var9 = null;
-        ad var11 = null;
+        CreatureActor var8 = null;
+        CreatureActor var9 = null;
+        CreatureActor var11 = null;
         int var6 = BachelorFridge.field_y;
         BattleCreature var7 = this.field_v.creature.a(77, this.screen.field_h);
         if (var7.isDown(111)) {
@@ -175,7 +175,7 @@ final class BagpipeAnimation extends EventAnimation {
           var8 = this.field_v.creature.a(-27449, this.screen);
           this.screen.field_fb.a(new vt(this.screen, var8), true);
           while (var3 != null) {
-            var3.a(var7, this.screen.field_h, 12);
+            var3.apply(var7, this.screen.field_h, 12);
             var9 = var3.target.a(-27449, this.screen);
             var9.b(~param0, 6);
             var9.a(24831, 17, kna.field_g[40]);
@@ -183,10 +183,10 @@ final class BagpipeAnimation extends EventAnimation {
           }
           return;
         }
-        ad var10 = this.field_v.creature.a(-27449, this.screen);
+        CreatureActor var10 = this.field_v.creature.a(-27449, this.screen);
         this.screen.field_fb.a(new vt(this.screen, var10), true);
         while (var3 != null) {
-          var3.a(var7, this.screen.field_h, 12);
+          var3.apply(var7, this.screen.field_h, 12);
           var11 = var3.target.a(-27449, this.screen);
           var11.b(~param0, 6);
           var11.a(24831, 17, kna.field_g[40]);
@@ -194,7 +194,7 @@ final class BagpipeAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
         if (fieldTemp$0 < 0) {
@@ -244,9 +244,9 @@ final class BagpipeAnimation extends EventAnimation {
           bha.field_o = param3;
           dp.field_q = param2;
           BuffVendorSpecial.field_q = param0;
-          taa.field_m = new Sprite[param1.length];
+          ActorAnimation.field_m = new Sprite[param1.length];
           for (var7 = param4; param1.length > var7; var7++) {
-            taa.field_m[var7] = new Sprite(317, 34);
+            ActorAnimation.field_m[var7] = new Sprite(317, 34);
           }
           MeshObject.field_b = param1;
           return;
@@ -270,7 +270,7 @@ final class BagpipeAnimation extends EventAnimation {
         }
     }
 
-    BagpipeAnimation(gj param0, BagpipeEvent param1) {
+    BagpipeAnimation(BattleScreen param0, BagpipeEvent param1) {
         super(param0, param1);
         try {
           this.field_v = param1;

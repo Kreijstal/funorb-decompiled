@@ -17,7 +17,7 @@ final class HazmatEvent extends SpecialEvent {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -88) {
           field_u = (int[]) null;
           field_u = null;
@@ -36,7 +36,7 @@ final class HazmatEvent extends SpecialEvent {
         }
     }
 
-    final AnimationNode a(int param0, gj param1) {
+    final AnimationNode createAnimation(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         AnimationNode stackIn_2_0 = null;
         HazmatAnimation stackIn_4_0 = null;

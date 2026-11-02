@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ona extends sna {
+final class ona extends UiComponent {
     static String field_vb;
     kna field_zb;
     static Sprite field_yb;
@@ -64,7 +64,7 @@ final class ona extends sna {
           }
           var3Lifetime1 = 0;
           if (param1 != -15679) {
-            ona.f(47);
+            ona.releaseStatics(47);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < var2_int; var4Lifetime1++) {
             boolean decompiledFrameRemainder0 = true;
@@ -106,17 +106,17 @@ final class ona extends sna {
 
     final static boolean c(int param0, int param1) {
         if (param1 != 34) {
-          ona.f(87);
+          ona.releaseStatics(87);
         }
         return param0 == (-param0 & param0) ? true : false;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_xb = null;
         field_vb = null;
         field_yb = null;
         if (param0 != 1) {
-          ona.f(26);
+          ona.releaseStatics(26);
         }
     }
 
@@ -126,9 +126,9 @@ final class ona extends sna {
           this.field_v = param1;
           this.field_wb = param0;
           this.field_sb = 39;
-          if (cc.field_b.field_z != null) {
-            this.field_kb = cc.field_b.field_z.g(0) % 4 * 39;
-            this.field_rb = 39 * (cc.field_b.field_z.g(0) / 4);
+          if (cc.field_b.children != null) {
+            this.field_kb = cc.field_b.children.g(0) % 4 * 39;
+            this.field_rb = 39 * (cc.field_b.children.g(0) / 4);
           }
           this.field_zb = param2;
         } catch (RuntimeException runtimeException) {

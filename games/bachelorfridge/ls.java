@@ -8,7 +8,7 @@ final class ls {
     static String field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 <= -28) {
@@ -16,7 +16,7 @@ final class ls {
           field_c = null;
           return;
         }
-        ls.a(91);
+        ls.releaseStatics(91);
         field_d = null;
         field_c = null;
     }

@@ -12,13 +12,13 @@ final class SauceOfFlameAnimation extends EventAnimation {
         try {
           ut.field_m = ida.a("", -203);
           if (param1 != -12472) {
-            SauceOfFlameAnimation.e((byte) -127);
+            SauceOfFlameAnimation.releaseStatics((byte) -127);
           }
           ut.field_m.a(false, param1 ^ -1537021683);
           StampedeAnimation.a(param2, param3, 111, param4);
           nga.b((byte) 113);
-          ola.field_p = tn.field_a;
-          dka.field_G = tn.field_a;
+          FridgeScreen.field_p = GameClock.field_a;
+          ReportAbusePanel.field_G = GameClock.field_a;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "aw.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -41,11 +41,11 @@ final class SauceOfFlameAnimation extends EventAnimation {
         int var15;
         int var16;
         Object var18;
-        hd var18_ref;
+        SpecialMoveDefinition var18_ref;
         int[][] var21;
         var18 = null;
         var16 = BachelorFridge.field_y;
-        var18_ref = (hd) (al.a(-111, this.field_z.moveId));
+        var18_ref = (SpecialMoveDefinition) (al.a(-111, this.field_z.moveId));
         var3 = this.screen.field_h;
         var4 = this.field_z.creature.a(92, this.screen.field_h);
         if (param0 > -56) {
@@ -75,7 +75,7 @@ final class SauceOfFlameAnimation extends EventAnimation {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFinished(byte param0) {
         int var2 = 90 % ((71 - param0) / 47);
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
@@ -97,7 +97,7 @@ final class SauceOfFlameAnimation extends EventAnimation {
     }
 
     private final void g(byte param0) {
-        ad var4 = null;
+        CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
         BattleCreature var6 = this.field_z.creature.a(106, this.screen.field_h);
         if (var6.isDown(-69)) {
@@ -110,16 +110,16 @@ final class SauceOfFlameAnimation extends EventAnimation {
         al.a(param0 ^ 19, this.field_z.moveId);
         while (var3 != null) {
           var4 = var3.target.a(-27449, this.screen);
-          this.a(27799, new taa(this.screen, var4));
-          this.a(27799, new cb(var4, 6));
-          this.a(27799, new fha(new ip(this.screen, var4.field_s.tileX, var4.field_s.tileY)));
-          this.a(27799, new fha(new oia(this.screen, var4.field_s.tileX, var4.field_s.tileY)));
-          var3.a(var6, this.screen.field_h, 12);
+          this.addChild(27799, new ActorAnimation(this.screen, var4));
+          this.addChild(27799, new cb(var4, 6));
+          this.addChild(27799, new fha(new ip(this.screen, var4.field_s.tileX, var4.field_s.tileY)));
+          this.addChild(27799, new fha(new oia(this.screen, var4.field_s.tileX, var4.field_s.tileY)));
+          var3.apply(var6, this.screen.field_h, 12);
           var3 = (EventEffect) (this.field_z.effects.c(param0 - 69));
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_x = null;
         field_y = null;
         field_v = (IndexedSprite[][]) null;
@@ -129,7 +129,7 @@ final class SauceOfFlameAnimation extends EventAnimation {
         }
     }
 
-    SauceOfFlameAnimation(gj param0, SauceOfFlameEvent param1) {
+    SauceOfFlameAnimation(BattleScreen param0, SauceOfFlameEvent param1) {
         super(param0, param1);
         try {
           this.field_z = param1;

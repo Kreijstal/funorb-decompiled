@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class kw extends kj {
+final class kw extends TileEffect {
     private int field_l;
     static MusicCrossfadeStream field_j;
     private int field_h;
@@ -109,7 +109,7 @@ final class kw extends kj {
         }
     }
 
-    kw(gj param0, int param1, int param2, int param3, int param4, boolean param5) {
+    kw(BattleScreen param0, int param1, int param2, int param3, int param4, boolean param5) {
         super(param0, param1, param2);
         try {
           this.field_o = param5 ? true : false;
@@ -121,7 +121,7 @@ final class kw extends kj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         if (param0 >= 75) {
           field_g = null;

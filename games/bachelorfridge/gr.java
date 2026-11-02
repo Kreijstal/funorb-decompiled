@@ -56,7 +56,7 @@ final class gr {
             }
           }
           if (null == var2 &&
-            !qh.field_l &&
+            !WidgetTheme.field_l &&
             null == bi.field_h) {
             var2 = cd.field_l;
           }

@@ -57,7 +57,7 @@ final class sd {
         return new byte[param0];
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -65,7 +65,7 @@ final class sd {
         field_c = null;
     }
 
-    final static void a(double param0, int param1, oha param2, byte param3, int param4, int param5, int param6) {
+    final static void a(double param0, int param1, MoveDefinition param2, byte param3, int param4, int param5, int param6) {
         try {
           bi.a(param6, false, 20, param2, param1, param5, param4, false, param0);
           if (param3 != 74) {

@@ -22,9 +22,9 @@ final class AirstrikeSpecial extends SpecialOrder {
             return null;
           }
           var2 = new BinaryBitmapFont(param1, fl.field_j, AirstrikeAnimation.field_D, lq.field_A, InsanoSauceSpecial.field_s, BananarangAnimation.field_P);
-          al.b(-18073);
+          al.releaseStatics(-18073);
           if (param0 != -3) {
-            AirstrikeSpecial.b(5);
+            AirstrikeSpecial.releaseStatics(5);
           }
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -43,22 +43,22 @@ final class AirstrikeSpecial extends SpecialOrder {
     }
 
     final static void a(int param0, vr param1) {
-        sna var5 = null;
-        sna var6 = null;
-        sna var3 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
+        UiComponent var3 = null;
         try {
           TeleportAnimation.field_x = hca.a("basic", param1, param0 + 12213, "display_name_changed");
           rba.field_a = new ok(0L, ob.field_g, BananarangAnimation.field_A, cd.field_p);
           RageAnimation.field_w = new ok(0L, ob.field_g, ClamsAnimation.field_z, SleepEvent.field_r);
-          ov.field_d = new sna(0L, (sna) null);
-          FullscreenFocusCanvas.field_d = new sna(0L, qs.field_m);
+          ov.field_d = new UiComponent(0L, (UiComponent) null);
+          FullscreenFocusCanvas.field_d = new UiComponent(0L, qs.field_m);
           FullscreenFocusCanvas.field_d.field_N = 1;
-          eda.field_k = new sna(0L, iia.field_m, bs.field_j);
-          vl.field_d = new sna(0L, vda.field_a, te.field_f);
+          eda.field_k = new UiComponent(0L, iia.field_m, bs.field_j);
+          vl.field_d = new UiComponent(0L, vda.field_a, te.field_f);
           if (param0 != -12238) {
             field_s = (int[]) null;
           }
-          fa.field_k = new sna(0L, dla.field_k);
+          fa.field_k = new UiComponent(0L, dla.field_k);
           ov.field_d.a(param0 ^ 12237, FullscreenFocusCanvas.field_d);
           ov.field_d.a(-1, eda.field_k);
           ov.field_d.a(-1, vl.field_d);
@@ -88,7 +88,7 @@ final class AirstrikeSpecial extends SpecialOrder {
         }
     }
 
-    final CreatureEvent a(BattleState param0, int param1) {
+    final CreatureEvent createEvent(BattleState param0, int param1) {
         int incrementValue$1 = 0;
         int fieldTemp$0 = 0;
         AirstrikeEvent stackIn_37_0 = null;
@@ -272,7 +272,7 @@ final class AirstrikeSpecial extends SpecialOrder {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         field_p = null;
         field_q = null;
