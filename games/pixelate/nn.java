@@ -219,7 +219,7 @@ final class nn {
     }
 
     final static void a(int param0, fm param1, fm param2, fm param3) {
-        tf var17 = null;
+        Sprite var17 = null;
         hh[] var5 = null;
         hh[][] var6 = null;
         int[][] var19 = null;
@@ -227,10 +227,10 @@ final class nn {
         int[][] var7 = null;
         hh[] var14 = null;
         int var11_int = 0;
-        tf var15 = null;
-        tf var18 = null;
-        tf var11 = null;
-        tf var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = Pixelate.field_H ? 1 : 0;
@@ -241,11 +241,11 @@ final class nn {
           hd.field_v = eh.a("frame_bottom", "commonui", (byte) 47, param2);
           ge.field_g = bi.a("commonui", "jagex_logo_grey", param2, (byte) -74);
           fc.field_d = eh.a("button", "commonui", (byte) 47, param2);
-          ha.field_g = vi.a(param2, 20049, "validation", "commonui");
+          CanvasRasterBuffer.field_g = vi.a(param2, 20049, "validation", "commonui");
           ep.field_b = (jl) ((Object) kk.a(param2, "commonui", 0, "arezzo12", param3));
           he.field_d = (jl) ((Object) kk.a(param2, "commonui", 0, "arezzo14", param3));
           ba.field_d = (jl) ((Object) kk.a(param2, "commonui", 0, "arezzo14bold", param3));
-          var17 = new tf(param1.a((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) ec.field_u));
+          var17 = new Sprite(param1.a((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) ec.field_u));
           dq.a((byte) 31, "dropdown", "commonui", param2);
           var5 = lb.a(param2, param0 ^ 4767934, "commonui", "screen_options");
           ng.field_A = new hh[4];
@@ -267,25 +267,25 @@ final class nn {
             var14 = var6[var9];
             hh[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
-              var14[var11_int] = wb.a(var5[var9], false, var19[var11_int]);
+              var14[var11_int] = MouseInputHandler.a(var5[var9], false, var19[var11_int]);
             }
           }
           var9Lifetime1 = var17.field_E;
           ti.a(false);
           var17.c();
-          t.e(0, 0, t.field_j, t.field_d);
-          var15 = new tf(var9Lifetime1, var9Lifetime1);
+          SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.c();
           var17.f(0, 0);
-          var11 = new tf(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.c();
           var17.f(var9Lifetime1 - var17.field_F, 0);
-          var12 = new tf(-(2 * var9Lifetime1) + var17.field_F, var9Lifetime1);
+          var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_F, var9Lifetime1);
           var12.c();
           var17.f(-var9Lifetime1, 0);
           ia.a((byte) 92);
-          fc.field_d = new tf[]{var15, var12, var11};
+          fc.field_d = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "nn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

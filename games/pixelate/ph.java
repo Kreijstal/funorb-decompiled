@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class ph extends fa {
+final class ph extends IntrusiveNode {
     static on field_l;
     static String field_m;
     int field_k;
-    static tf field_n;
+    static Sprite field_n;
     static int field_o;
 
     final static int e(int param0) {
@@ -20,7 +20,7 @@ final class ph extends fa {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          we var2 = null;
+          PacketBuffer var2 = null;
           if (pm.field_h.field_h >= 4) {
             if (pm.field_h.field_m == -1) {
               return 3;
@@ -45,12 +45,12 @@ final class ph extends fa {
               }
             }
             if (rb.field_q == 2) {
-              sc.field_d = new mo((java.net.Socket) (se.field_o.field_e), ef.field_e);
-              var2 = new we(13);
+              sc.field_d = new BufferedSocket((java.net.Socket) (se.field_o.field_e), ef.field_e);
+              var2 = new PacketBuffer(13);
               al.a(ql.field_o, (byte) 66, ak.field_ib, var2, lk.field_n);
-              var2.e(160, 15);
+              var2.writeByte(160, 15);
               var2.d(fj.field_a, -76);
-              sc.field_d.a(13, -103, 0, var2.field_k);
+              sc.field_d.a(13, -103, 0, var2.payload);
               rb.field_q = rb.field_q + 1;
               co.field_a = 30000L + hm.a(64);
             }
@@ -115,7 +115,7 @@ final class ph extends fa {
         try {
           dk.field_e = bi.a("basic", "display_name_changed", param0, (byte) -25);
           ma.field_z = new pd(0L, rm.field_a, tp.field_u, op.field_q);
-          v.field_e = new pd(0L, rm.field_a, qh.field_e, k.field_n);
+          MouseWheelHandler.field_e = new pd(0L, rm.field_a, qh.field_e, k.field_n);
           wa.field_f = new ak(0L, (ak) null);
           ak.field_E = new ak(0L, mg.field_h);
           ak.field_E.field_Bb = 1;
@@ -132,9 +132,9 @@ final class ph extends fa {
           var5 = ma.field_z.field_Gb.field_Ib;
           var6 = var5;
           var6.field_Bb = 1;
-          v.field_e.field_Gb.field_Ib.a(param1 ^ 27853, mg.field_h);
-          v.field_e.field_Gb.field_Ib.field_kb = 1;
-          var3 = v.field_e.field_Gb.field_Ib;
+          MouseWheelHandler.field_e.field_Gb.field_Ib.a(param1 ^ 27853, mg.field_h);
+          MouseWheelHandler.field_e.field_Gb.field_Ib.field_kb = 1;
+          var3 = MouseWheelHandler.field_e.field_Gb.field_Ib;
           var3.field_Bb = 1;
           if (param1 == -106) {
             return;

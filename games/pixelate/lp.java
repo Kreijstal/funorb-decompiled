@@ -38,7 +38,7 @@ final class lp {
             }
             var1_int = 1;
           }
-          vp.field_Gb.a(ec.a(false, uo.field_a, ji.field_c), ec.a(false, uf.field_d, bg.field_k), -1);
+          vp.field_Gb.a(ec.a(false, uo.field_a, ji.field_c), ec.a(false, ProxyAuthenticationException.field_d, bg.field_k), -1);
           if (param0 != 2) {
             field_d = 101;
           }
@@ -89,7 +89,7 @@ final class lp {
           for (var7 = -var3; var7 < 0; var7++) {
             incrementValue$0 = var5;
             var5++;
-            t.field_k[incrementValue$0] = t.field_k[incrementValue$0] + uj.field_Ob;
+            SoftwareRasterizer.field_k[incrementValue$0] = SoftwareRasterizer.field_k[incrementValue$0] + uj.field_Ob;
           }
           var5 = var5 + var4;
         }

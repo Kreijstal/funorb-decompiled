@@ -38,12 +38,12 @@ final class tg {
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         if (!param5) {
-          t.b(param3, param0, param2, param1, param4);
+          SoftwareRasterizer.b(param3, param0, param2, param1, param4);
           return;
         }
         String var8 = (String) null;
         this.a((String) null, 6, 30, -19);
-        t.b(param3, param0, param2, param1, param4);
+        SoftwareRasterizer.b(param3, param0, param2, param1, param4);
     }
 
     static long a(long param0, long param1) {
@@ -93,7 +93,7 @@ final class tg {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cf.a(param1, param4, param0, param2, 500)) {
+          if (!SpriteState.a(param1, param4, param0, param2, 500)) {
             return false;
           }
           if (param3 == ~param2) {
@@ -128,7 +128,7 @@ final class tg {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        t.a(param2, param6, param4, param3, param1, param0);
+        SoftwareRasterizer.a(param2, param6, param4, param3, param1, param0);
         int var8 = -61 / ((-21 - param5) / 44);
     }
 
@@ -149,15 +149,15 @@ final class tg {
           if (param3 < 27) {
             this.field_e = 119;
           }
-          if (var5_int + var7 + 6 > t.field_j) {
-            var7 = -var5_int + (t.field_j - 6);
+          if (var5_int + var7 + 6 > SoftwareRasterizer.field_j) {
+            var7 = -var5_int + (SoftwareRasterizer.field_j - 6);
           }
           var8 = -this.field_m.field_D + (param1 + 32);
-          if (6 + (var6 + var8) > t.field_d) {
-            var8 = -6 + (-var6 + t.field_d);
+          if (6 + (var6 + var8) > SoftwareRasterizer.field_d) {
+            var8 = -6 + (-var6 + SoftwareRasterizer.field_d);
           }
-          t.a(var7, var8, 6 + var5_int, 6 + var6, this.field_c);
-          t.d(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.field_e);
+          SoftwareRasterizer.a(var7, var8, 6 + var5_int, 6 + var6, this.field_c);
+          SoftwareRasterizer.d(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.field_e);
           this.field_m.a(param0, 3 + var7, this.field_m.field_D + (var8 + 3), this.field_c, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,7 +202,7 @@ final class tg {
           if (var7 == -1) {
             var7 = this.field_m.field_w + this.field_m.field_z;
           }
-          var8 = t.field_j >> 2;
+          var8 = SoftwareRasterizer.field_j >> 2;
           var9 = this.field_m.c(param0);
           var10 = this.field_m.field_w + this.field_m.field_z;
           var11 = 1;
@@ -228,18 +228,18 @@ final class tg {
             }
           }
           var12 = param1;
-          if (var5_int + (var9 + var12) > t.field_j) {
-            var12 = -var5_int + t.field_j - var9;
+          if (var5_int + (var9 + var12) > SoftwareRasterizer.field_j) {
+            var12 = -var5_int + SoftwareRasterizer.field_j - var9;
           }
           var13Lifetime1 = 32 + param2 - this.field_m.field_D;
-          if (var6 + var10 + var13Lifetime1 > t.field_d) {
+          if (var6 + var10 + var13Lifetime1 > SoftwareRasterizer.field_d) {
             var13Lifetime1 = param2 - var10 - var6;
           }
           if (param3 <= 123) {
             return;
           }
-          t.a(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_d);
-          t.d(var12 + 1, 1 + var13Lifetime1, var9 - (-var5_int + 2), -2 + (var10 + var6), this.field_e);
+          SoftwareRasterizer.a(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_d);
+          SoftwareRasterizer.d(var12 + 1, 1 + var13Lifetime1, var9 - (-var5_int + 2), -2 + (var10 + var6), this.field_e);
           this.field_m.a(param0, var12 + this.field_n, var13Lifetime1 + this.field_o, var9, var10, this.field_c, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -259,21 +259,21 @@ final class tg {
     final void a(int param0, jl param1) {
         uc var17 = null;
         w var4 = null;
-        tf[] var5 = null;
-        sa var16 = null;
-        sa var18 = null;
+        Sprite[] var5 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         w var6 = null;
         w var7 = null;
         f discarded$0 = null;
         hg discarded$1 = null;
         w var8 = null;
-        tf[] var9 = null;
-        tf[] var10 = null;
-        tf dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         w var11 = null;
         w var12 = null;
-        tf var13 = null;
+        Sprite var13 = null;
         w var14 = null;
         w var19 = null;
         int var15 = Pixelate.field_H ? 1 : 0;
@@ -296,16 +296,16 @@ final class tg {
           this.field_n = 3;
           this.field_m = param1;
           this.field_g = 3;
-          var4.a(0, 7177).a(15658734, 15115).a(qa.a(8947848, 7829367, 10066329, 3), (byte) -65);
-          var4.a(1, 7177).a(qa.a(11184810, 13421772, 10066329, param0 ^ 7), (byte) -65);
-          var4.a(3, 7177).a(qa.a(8947848, 10066329, 7829367, 3), (byte) -65).a((byte) 124, 1).a(1, false);
-          var5 = new tf[9];
-          var16 = new sa(32, 32);
+          var4.a(0, 7177).a(15658734, 15115).a(ClientException.a(8947848, 7829367, 10066329, 3), (byte) -65);
+          var4.a(1, 7177).a(ClientException.a(11184810, 13421772, 10066329, param0 ^ 7), (byte) -65);
+          var4.a(3, 7177).a(ClientException.a(8947848, 10066329, 7829367, 3), (byte) -65).a((byte) 124, 1).a(1, false);
+          var5 = new Sprite[9];
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_G.length > var7_int; var7_int++) {
             var16.field_G[var7_int] = 1077952576;
           }
-          var5[4] = (tf) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a(4, 7177).a(true, true).a(var5, (byte) -65);
           var4.a(5, 7177).a(og.a(0, true, 65793, 0, 0), (byte) -65).a(true, true).a(-1, 15115);
           this.field_r = (eb) ((Object) var4);
@@ -313,20 +313,20 @@ final class tg {
           var6.field_l = 0;
           var7 = new w(var4, true);
           var7.field_l = 0;
-          var7.a(0, pg.a(8947848, (byte) -128));
-          var7.a(1, 7177).a(pg.a(11184810, (byte) -93), (byte) -65).a(2236962, 15115);
+          var7.a(0, SecondaryNodeDeque.a(8947848, (byte) -128));
+          var7.a(1, 7177).a(SecondaryNodeDeque.a(11184810, (byte) -93), (byte) -65).a(2236962, 15115);
           this.field_t = (eb) ((Object) new jo(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new f(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new hg(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new w();
           var17.a(var8, (byte) 126);
-          var8.a(0, 7177).a(qa.a(15658734, 10066329, 7829367, 3), (byte) -65).a(1118481, 15115).a(-1, (byte) -68);
+          var8.a(0, 7177).a(ClientException.a(15658734, 10066329, 7829367, 3), (byte) -65).a(1118481, 15115).a(-1, (byte) -68);
           var8.a(4, 7177).a(true, true).a(var5, (byte) -65);
           this.field_i = (eb) ((Object) var8);
-          var9 = new tf[9];
-          var10 = new tf[9];
-          var9[4] = new tf(2, 1);
-          var10[4] = new tf(1, 2);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_G = new int[]{6710886, 7829367};
           var10[param0].field_G = new int[]{6710886, 7829367};
@@ -334,7 +334,7 @@ final class tg {
           var12 = new w();
           var11.a(122, 0, var9);
           var12.a(92, 0, var10);
-          var13 = new tf(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_G = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new w(var4, true);
           var14.a(param0 + 107, var13.a());

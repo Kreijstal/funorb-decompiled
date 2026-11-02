@@ -342,7 +342,7 @@ final class w extends uc {
         }
     }
 
-    final void a(int param0, int param1, tf[] param2) {
+    final void a(int param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         try {
           if (param0 <= 88) {
@@ -416,7 +416,7 @@ final class w extends uc {
         }
     }
 
-    final void a(int param0, tf[] param1) {
+    final void a(int param0, Sprite[] param1) {
         int var4 = 0;
         lf[] var3 = null;
         lf var5 = null;
@@ -452,7 +452,7 @@ final class w extends uc {
         }
     }
 
-    final void a(int param0, tf param1) {
+    final void a(int param0, Sprite param1) {
         lf[] var7 = null;
         int var4 = 0;
         lf var5_ref_lf = null;

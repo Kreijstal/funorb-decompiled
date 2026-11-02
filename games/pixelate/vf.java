@@ -122,20 +122,20 @@ final class vf {
         wi var18 = null;
         var15 = Pixelate.field_H ? 1 : 0;
         try {
-          stackIn_3_0 = v.field_e.field_Gb;
+          stackIn_3_0 = MouseWheelHandler.field_e.field_Gb;
           stackIn_3_1 = param0;
-          stackIn_4_2 = (bj.field_d == v.field_e.field_Gb);
+          stackIn_4_2 = (bj.field_d == MouseWheelHandler.field_e.field_Gb);
           var3_int = ((gp) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, 2, 3 * (fq.field_q + 2) * param2, param1 ^ param1, 2 + fq.field_q) ? 1 : 0;
-          var4 = v.field_e.field_Fb.field_L;
+          var4 = MouseWheelHandler.field_e.field_Fb.field_L;
           if (2 != gk.field_db &&
             1 != gk.field_db) {
-            v.field_e.field_Gb.field_Ib.field_cb = mk.field_c;
-            v.field_e.field_rb = false;
-            wd.a(v.field_e.field_Fb, false);
+            MouseWheelHandler.field_e.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
+            MouseWheelHandler.field_e.field_rb = false;
+            wd.a(MouseWheelHandler.field_e.field_Fb, false);
             return;
           }
-          v.field_e.field_rb = true;
-          v.field_e.field_Gb.field_Ib.field_cb = null;
+          MouseWheelHandler.field_e.field_rb = true;
+          MouseWheelHandler.field_e.field_Gb.field_Ib.field_cb = null;
           var5 = null;
           var6 = (im) (var4.c(1504642273));
           while (var6 != null) {
@@ -148,7 +148,7 @@ final class vf {
               var6.h(-257);
               var7 = 1;
             }
-            var6.field_K = v.field_e.field_Fb.field_K;
+            var6.field_K = MouseWheelHandler.field_e.field_Fb.field_K;
             var6.field_Pb.a(0, fq.field_q, 0, param1 ^ 256, var6.field_K);
             var8 = 0;
             if (null != var6.field_Gb &&
@@ -178,7 +178,7 @@ final class vf {
               var6.field_Z = fq.field_q - var6.field_nb;
             }
             if (var7 != 0) {
-              v.field_e.field_Fb.a(var6, 2, -1, (ak) (var5));
+              MouseWheelHandler.field_e.field_Fb.a(var6, 2, -1, (ak) (var5));
             }
             if (var6.field_Ob != null &&
               var6.field_Ob.field_W) {
@@ -190,7 +190,7 @@ final class vf {
               }
             }
             if (var6.field_P != 0) {
-              em.a(var6.field_Fb, 0L, var6.field_Ib, -1, var6, -163, v.field_e.field_Gb, (int[]) null, -1);
+              em.a(var6.field_Fb, 0L, var6.field_Ib, -1, var6, -163, MouseWheelHandler.field_e.field_Gb, (int[]) null, -1);
               var17 = eg.field_n;
               var13_ref_String = k.field_n;
               var17.field_b.a(var13_ref_String, (byte) -107, 7);
@@ -202,14 +202,14 @@ final class vf {
             var5 = var6;
             var6 = (im) (var4.f(1504642273));
           }
-          if (v.field_e.field_Ib.field_P != 0) {
-            he.field_f = new ve(v.field_e.field_Ib.field_tb, v.field_e.field_Ib.field_gb, v.field_e.field_Ib.field_K, v.field_e.field_Ib.field_nb, dp.field_p, po.field_c, mg.field_h, mg.field_h);
+          if (MouseWheelHandler.field_e.field_Ib.field_P != 0) {
+            he.field_f = new ve(MouseWheelHandler.field_e.field_Ib.field_tb, MouseWheelHandler.field_e.field_Ib.field_gb, MouseWheelHandler.field_e.field_Ib.field_K, MouseWheelHandler.field_e.field_Ib.field_nb, dp.field_p, po.field_c, mg.field_h, mg.field_h);
             il.field_e = 2;
           }
-          if (v.field_e.field_Hb.field_P == 0) {
+          if (MouseWheelHandler.field_e.field_Hb.field_P == 0) {
             return;
           }
-          he.field_f = new ve(v.field_e.field_Hb.field_tb, v.field_e.field_Hb.field_gb, v.field_e.field_Hb.field_K, v.field_e.field_Hb.field_nb, uf.field_f, po.field_c, mg.field_h, mg.field_h);
+          he.field_f = new ve(MouseWheelHandler.field_e.field_Hb.field_tb, MouseWheelHandler.field_e.field_Hb.field_gb, MouseWheelHandler.field_e.field_Hb.field_K, MouseWheelHandler.field_e.field_Hb.field_nb, ProxyAuthenticationException.field_f, po.field_c, mg.field_h, mg.field_h);
           il.field_e = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

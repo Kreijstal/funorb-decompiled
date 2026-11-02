@@ -246,7 +246,7 @@ final class gm implements Runnable {
         }
     }
 
-    gm(cb param0) {
+    gm(PlatformTaskDispatcher param0) {
         ei var2 = null;
         this.field_b = new nj();
         this.field_c = 0;

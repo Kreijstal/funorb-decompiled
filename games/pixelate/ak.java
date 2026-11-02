@@ -8,14 +8,14 @@ class ak extends tp {
     int field_hb;
     boolean field_rb;
     private boolean field_lb;
-    tf field_ob;
+    Sprite field_ob;
     int field_Q;
     private int field_F;
     private int field_Ab;
     int field_Z;
     int field_tb;
     int field_N;
-    tf field_xb;
+    Sprite field_xb;
     int field_wb;
     int field_ub;
     int field_V;
@@ -26,15 +26,15 @@ class ak extends tp {
     boolean field_U;
     int field_gb;
     static ak field_T;
-    tf[] field_eb;
+    Sprite[] field_eb;
     int field_K;
-    tf field_B;
+    Sprite field_B;
     boolean field_A;
     int field_Bb;
-    tf field_z;
-    tf[] field_zb;
+    Sprite field_z;
+    Sprite[] field_zb;
     boolean field_R;
-    tf[] field_ab;
+    Sprite[] field_ab;
     String field_cb;
     boolean field_vb;
     int field_kb;
@@ -44,7 +44,7 @@ class ak extends tp {
     bb field_L;
     static int[] field_db;
     private int field_I;
-    tf field_H;
+    Sprite field_H;
     private boolean field_X;
     int field_Cb;
     int field_yb;
@@ -52,12 +52,12 @@ class ak extends tp {
     boolean field_W;
     int field_C;
     int field_S;
-    tf[] field_M;
+    Sprite[] field_M;
     int field_sb;
     int field_pb;
     int field_D;
     private int field_x;
-    tf[] field_bb;
+    Sprite[] field_bb;
     private int field_G;
     int field_P;
     int field_nb;
@@ -193,7 +193,7 @@ class ak extends tp {
           ak var4 = (ak) null;
           this.a((ak) null, (byte) 61);
         }
-        this.a(t.field_j, 0, true, t.field_d, 0, 59);
+        this.a(SoftwareRasterizer.field_j, 0, true, SoftwareRasterizer.field_d, 0, 59);
     }
 
     ak(long param0, ak param1, String param2) {
@@ -201,7 +201,7 @@ class ak extends tp {
     }
 
     final void a(boolean param0, int param1) {
-        this.a(false, 0, false, param0, t.field_j, false, (byte) -50, param1, t.field_d, false, true);
+        this.a(false, 0, false, param0, SoftwareRasterizer.field_j, false, (byte) -50, param1, SoftwareRasterizer.field_d, false, true);
     }
 
     final void a(ak param0, int param1, int param2, ak param3) {
@@ -250,8 +250,8 @@ class ak extends tp {
         int var13;
         int var14;
         int var15;
-        tf[] var16;
-        tf var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;
@@ -268,11 +268,11 @@ class ak extends tp {
         var25 = Pixelate.field_H ? 1 : 0;
         this.field_gb = this.field_S + param7;
         this.field_tb = param1 + this.field_D;
-        var12 = t.field_e;
-        var13 = t.field_f;
-        var14 = t.field_h;
-        var15 = t.field_a;
-        t.d(this.field_tb, this.field_gb, this.field_K + this.field_tb, this.field_gb + this.field_nb);
+        var12 = SoftwareRasterizer.field_e;
+        var13 = SoftwareRasterizer.field_f;
+        var14 = SoftwareRasterizer.field_h;
+        var15 = SoftwareRasterizer.field_a;
+        SoftwareRasterizer.d(this.field_tb, this.field_gb, this.field_K + this.field_tb, this.field_gb + this.field_nb);
         if (!this.field_fb) {
           param0 = this.field_U;
           stackIn_5_0 = (this.field_J != 0);
@@ -424,7 +424,7 @@ class ak extends tp {
             var23_ref = (ak) (this.field_L.f(1504642273));
           }
         }
-        t.f(var12, var13, var14, var15);
+        SoftwareRasterizer.f(var12, var13, var14, var15);
     }
 
     private final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
@@ -475,19 +475,19 @@ class ak extends tp {
         this.field_nb = this.field_nb + var7Lifetime3;
         this.field_Z = this.field_Z - var7Lifetime3;
         this.field_tb = this.field_D + param1;
-        var9 = t.field_e;
-        var10 = t.field_f;
-        var11 = t.field_h;
-        var12 = t.field_a;
-        t.d(this.field_tb, this.field_gb, this.field_K + this.field_tb, this.field_gb + this.field_nb);
+        var9 = SoftwareRasterizer.field_e;
+        var10 = SoftwareRasterizer.field_f;
+        var11 = SoftwareRasterizer.field_h;
+        var12 = SoftwareRasterizer.field_a;
+        SoftwareRasterizer.d(this.field_tb, this.field_gb, this.field_K + this.field_tb, this.field_gb + this.field_nb);
         var13 = 0;
         if (!cg.field_I &&
           param2 &&
           nm.field_c != 0 &&
-          uo.field_a >= t.field_e &&
-          uo.field_a < t.field_h &&
-          ji.field_c >= t.field_f &&
-          ji.field_c < t.field_a) {
+          uo.field_a >= SoftwareRasterizer.field_e &&
+          uo.field_a < SoftwareRasterizer.field_h &&
+          ji.field_c >= SoftwareRasterizer.field_f &&
+          ji.field_c < SoftwareRasterizer.field_a) {
           var13 = 1;
           this.field_Ab = -this.field_gb + ji.field_c;
           this.field_P = nm.field_c;
@@ -499,7 +499,7 @@ class ak extends tp {
           }
           this.field_P = 0;
         }
-        stackIn_31_1 = (!bm.field_q) && (t.field_e <= uf.field_d) && (uf.field_d < t.field_h) && (bg.field_k >= t.field_f) && (t.field_a > bg.field_k);
+        stackIn_31_1 = (!bm.field_q) && (SoftwareRasterizer.field_e <= ProxyAuthenticationException.field_d) && (ProxyAuthenticationException.field_d < SoftwareRasterizer.field_h) && (bg.field_k >= SoftwareRasterizer.field_f) && (SoftwareRasterizer.field_a > bg.field_k);
         this.field_R = stackIn_31_1;
         if (0 == ef.field_b) {
           this.field_J = 0;
@@ -519,10 +519,10 @@ class ak extends tp {
         if (var13 != 0) {
           cg.field_I = true;
         }
-        t.f(var9, var10, var11, var12);
+        SoftwareRasterizer.f(var9, var10, var11, var12);
         if (this.field_J != 0 &&
           this.field_vb) {
-          this.field_D = -this.field_ub + (uf.field_d - param1);
+          this.field_D = -this.field_ub + (ProxyAuthenticationException.field_d - param1);
           this.field_S = bg.field_k - this.field_Ab - param4;
           if (this.field_D < 0) {
             this.field_D = 0;

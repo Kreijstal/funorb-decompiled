@@ -197,8 +197,8 @@ final class ul extends bg {
           var5 = 13 + (76 + var4 * 76 + 2);
           if (var3 + 5 <= var5 &&
             var3 + this.field_o - 6 >= var5) {
-            t.f(1 + var5, 438, 19, 0, 128);
-            t.f(2 + var5, 439, 18, 16777215, 128);
+            SoftwareRasterizer.f(1 + var5, 438, 19, 0, 128);
+            SoftwareRasterizer.f(2 + var5, 439, 18, 16777215, 128);
           }
         }
     }

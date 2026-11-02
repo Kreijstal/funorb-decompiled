@@ -10,7 +10,7 @@ final class ib {
     static int[] field_i;
     static boolean field_b;
     int field_d;
-    static mk field_f;
+    static FullscreenFocusCanvas field_f;
     static int field_g;
 
     final static void a(java.applet.Applet param0, boolean param1) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gd {
-    static tf field_i;
+    static Sprite field_i;
     static int[] field_c;
     static String field_d;
     static re field_a;
@@ -13,7 +13,7 @@ final class gd {
     static String field_j;
     static byte[][] field_k;
     static int field_g;
-    static tf[] field_f;
+    static Sprite[] field_f;
 
     final static void a(byte param0) {
         vd.field_c = new ak(0L, (ak) null);
@@ -28,7 +28,7 @@ final class gd {
         }
         ql.field_n.a(cl.field_g.field_g, (byte) 26);
         ql.field_n.a(gk.field_cb, (byte) 26);
-        we.b(false);
+        PacketBuffer.b(false);
     }
 
     public static void a(int param0) {

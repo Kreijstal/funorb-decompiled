@@ -3,7 +3,7 @@
  */
 final class sb {
     static int field_a;
-    private tf[] field_b;
+    private Sprite[] field_b;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         dk.a(param3, param4, (byte) 75, param1, param0, this.field_b);
@@ -45,7 +45,7 @@ final class sb {
         }
     }
 
-    sb(tf[] param0) {
+    sb(Sprite[] param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

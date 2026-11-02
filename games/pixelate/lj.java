@@ -105,7 +105,7 @@ final class lj {
         field_g = null;
     }
 
-    final static String a(int param0, int param1, we param2) {
+    final static String a(int param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -127,7 +127,7 @@ final class lj {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param2.field_m = param2.field_m + kp.field_v.a(-1, var3_int, param2.field_k, 0, param2.field_m, var4);
+            param2.position = param2.position + kp.field_v.a(-1, var3_int, param2.payload, 0, param2.position, var4);
             var5 = ui.a(true, var4, 0, var3_int);
             stackIn_5_0 = var5;
             return stackIn_5_0;
@@ -153,8 +153,8 @@ final class lj {
 
     final void b(int param0) throws IOException {
         if (param0 != -5317) {
-          we var3 = (we) null;
-          lj.a(-58, 20, (we) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          lj.a(-58, 20, (PacketBuffer) null);
           if (this.field_e != null) {
             this.field_e.close();
             this.field_e = null;

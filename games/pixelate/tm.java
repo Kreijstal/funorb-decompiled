@@ -20,7 +20,7 @@ final class tm extends qm {
         if (param0 < 108) {
           field_U = -99;
         }
-        stackIn_9_0 = (null != eg.field_n) || (sc.b(-10093)) || (null != hc.field_M) || (ha.b(12742));
+        stackIn_9_0 = (null != eg.field_n) || (sc.b(-10093)) || (null != hc.field_M) || (CanvasRasterBuffer.b(12742));
         return stackIn_9_0;
     }
 
@@ -126,14 +126,14 @@ final class tm extends qm {
           if (null != vi.field_p) {
             try {
               vi.field_p.a(0L, -112);
-              vi.field_p.a(24, vi.field_o.field_m, (byte) -121, vi.field_o.field_k);
+              vi.field_p.a(24, vi.field_o.position, (byte) -121, vi.field_o.payload);
             } catch (Exception exception) {
             }
           }
           if (param0 >= -45) {
             field_N = (sb) null;
           }
-          vi.field_o.field_m = vi.field_o.field_m + 24;
+          vi.field_o.position = vi.field_o.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

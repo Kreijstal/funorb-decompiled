@@ -20,9 +20,9 @@ final class ci extends jj {
     }
 
     final void a(boolean param0) {
-        qa.field_g.f(0, 0);
+        ClientException.field_g.f(0, 0);
         int var2 = lg.field_a >> 3;
-        t.f(0, 0, 640, 480, 17, (var2 << 8) + (var2 * 2 + 34) + (var2 << 16));
+        SoftwareRasterizer.f(0, 0, 640, 480, 17, (var2 << 8) + (var2 * 2 + 34) + (var2 << 16));
         this.field_p.b((byte) -123);
         this.field_q.b((byte) -123);
         Pixelate.field_E.b(0, -Pixelate.field_E.field_B + 480);
@@ -32,7 +32,7 @@ final class ci extends jj {
         u.field_f.b(0, -u.field_f.field_B + 480, lg.field_a);
     }
 
-    ci(String param0, tf[] param1) {
+    ci(String param0, Sprite[] param1) {
         super(param0, param1);
         int var4 = 0;
         RuntimeException stackIn_31_0 = null;

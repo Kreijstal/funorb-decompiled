@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tk extends fa {
+final class tk extends IntrusiveNode {
     private int field_k;
     private int field_l;
     private int field_r;
@@ -45,14 +45,14 @@ final class tk extends fa {
         fi.a(this.field_r + var2, -var2 + this.field_k, this.field_r + var2, var2 + this.field_k, 7, this.field_n, rg.field_e.field_g[this.field_l]);
     }
 
-    final static tf[] a(int param0, int param1, boolean param2, int param3) {
+    final static Sprite[] a(int param0, int param1, boolean param2, int param3) {
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
         if (!param2) {
           field_q = (String) null;
         }
-        tf[] var7 = new tf[9];
-        tf[] var4 = var7;
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var4 = var7;
         var7[0] = cl.a(param0, param1, (byte) -87);
         for (var5 = 1; var5 < 9; var5++) {
           var7[var5] = var7[0];

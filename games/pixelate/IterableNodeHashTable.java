@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class kl implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static String field_c;
-    fa[] field_e;
-    private fa field_b;
+    IntrusiveNode[] field_e;
+    private IntrusiveNode field_b;
     int field_a;
     static String field_d;
 
@@ -14,7 +14,7 @@ final class kl implements Iterable {
         ce.field_d = 0;
         oo.field_d = true;
         if (param0 != 7500) {
-          kl.a((byte) -13);
+          IterableNodeHashTable.a((byte) -13);
         }
     }
 
@@ -32,9 +32,9 @@ final class kl implements Iterable {
         return var2;
     }
 
-    final fa a(int param0, long param1) {
-        fa var4;
-        fa var5;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         var4 = this.field_e[(int)((long)(this.field_a - param0) & param1)];
@@ -55,8 +55,8 @@ final class kl implements Iterable {
         return var5;
     }
 
-    final void a(fa param0, long param1, int param2) {
-        fa var5 = null;
+    final void a(IntrusiveNode param0, long param1, int param2) {
+        IntrusiveNode var5 = null;
         try {
           if (param0.field_h != null) {
             param0.c(2779);
@@ -84,17 +84,17 @@ final class kl implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new sh(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    kl(int param0) {
+    IterableNodeHashTable(int param0) {
         int var2 = 0;
-        fa dupTemp$0 = null;
-        fa var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_a = param0;
-        this.field_e = new fa[param0];
+        this.field_e = new IntrusiveNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new fa();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_e[var2] = dupTemp$0;
           var3.field_a = var3;

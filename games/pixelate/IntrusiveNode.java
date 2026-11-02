@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fa {
+class IntrusiveNode {
     static volatile int field_j;
     static String field_f;
-    fa field_a;
+    IntrusiveNode field_a;
     static int field_c;
     long field_e;
     static int[] field_b;
     static String field_g;
     static String field_d;
     static String field_i;
-    fa field_h;
+    IntrusiveNode field_h;
 
-    final static void a(String[] args, fm param1, int[] param2, byte param3, tf[][] param4, int param5, byte[] param6, tf[][] param7, String[] param8, String[][] param9, String[][] param10, String[] param11, int param12, int param13, byte[] param14) {
+    final static void a(String[] args, fm param1, int[] param2, byte param3, Sprite[][] param4, int param5, byte[] param6, Sprite[][] param7, String[] param8, String[][] param9, String[][] param10, String[] param11, int param12, int param13, byte[] param14) {
         lo[] array$0 = null;
         lo[] array$1 = null;
         lo[] array$2 = null;
@@ -75,7 +75,7 @@ class fa {
           ff.field_i = param5;
           g.field_s = param6;
           ig.field_a = param7;
-          tn.field_o = param13;
+          GameApplet.field_o = param13;
           bg.field_d = param14;
           bf.field_q = param10;
           dk.field_a = param4;
@@ -110,7 +110,7 @@ class fa {
           gm.field_a = new ak(0L, ff.field_a);
           wc.field_n = new ak(0L, u.field_l, op.field_w);
           if (param3 < 108) {
-            fa.d(41);
+            IntrusiveNode.d(41);
           }
           lh.field_b = new ak(0L, vk.field_mb, co.field_u);
           on.field_pb = new ak(0L, vk.field_mb, nk.field_c);
@@ -118,7 +118,7 @@ class fa {
           g.field_o = new ak(0L, vk.field_mb, ii.field_b);
           wn.field_t = new ak(0L, ni.field_s, df.field_m);
           aj.field_k = new gp(0L, new ak(0L, (ak) null), ff.field_g, ug.field_s);
-          lg.field_c = new ak(0L, bf.field_k, lm.field_m.toUpperCase());
+          lg.field_c = new ak(0L, bf.field_k, DualLinkNode.field_m.toUpperCase());
           lg.field_c.field_rb = f.field_n;
           stackIn_8_0 = null;
           stackIn_8_1 = null;
@@ -153,10 +153,10 @@ class fa {
           jm.field_h = new ak(0L, mg.field_h);
           jm.field_h.field_kb = 0;
           jm.field_h.field_Bb = 1;
-          hk.field_h = new ak(0L, nk.field_f, ig.field_c.toUpperCase());
+          DelegatingCanvas.field_h = new ak(0L, nk.field_f, ig.field_c.toUpperCase());
           nc.field_e = new ak(0L, cm.field_o);
           nc.field_e.a(jm.field_h, (byte) 26);
-          nc.field_e.a(hk.field_h, (byte) 26);
+          nc.field_e.a(DelegatingCanvas.field_h, (byte) 26);
           an.field_a = new ak(0L, ff.field_g);
           an.field_a.a(-27813, mg.field_h);
           var16 = an.field_a;
@@ -189,27 +189,27 @@ class fa {
             dh.field_b[1] = new ak(0L, qk.field_d, pk.field_e);
             array$0 = new lo[ia.field_a.length + 1];
             hc.field_L[1] = array$0;
-            hc.field_L[1][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a);
+            hc.field_L[1][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, fg.field_a);
             for (var17_intLifetime1 = 0; ia.field_a.length > var17_intLifetime1; var17_intLifetime1++) {
-              hc.field_L[1][var17_intLifetime1 + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, Integer.toString(ia.field_a[var17_intLifetime1]));
+              hc.field_L[1][var17_intLifetime1 + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, Integer.toString(ia.field_a[var17_intLifetime1]));
             }
           }
           dh.field_b[2] = new ak(0L, qk.field_d, eq.field_Xb);
-          hc.field_L[2] = new lo[]{new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a), new lo(0L, bc.field_o, (ak) null, dn.field_c, so.field_d[0], gk.field_eb), new lo(0L, bc.field_o, (ak) null, dn.field_c, so.field_d[1], ij.field_t)};
+          hc.field_L[2] = new lo[]{new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, fg.field_a), new lo(0L, bc.field_o, (ak) null, dn.field_c, so.field_d[0], gk.field_eb), new lo(0L, bc.field_o, (ak) null, dn.field_c, so.field_d[1], ij.field_t)};
           if (ff.field_i > 1) {
             dh.field_b[3] = new ak(0L, qk.field_d, ii.field_c);
             array$1 = new lo[1 + ff.field_i];
             hc.field_L[3] = array$1;
-            hc.field_L[3][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a);
+            hc.field_L[3][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, fg.field_a);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < ff.field_i; var17_intLifetime2++) {
-              hc.field_L[3][var17_intLifetime2 + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, rm.field_b[var17_intLifetime2]);
+              hc.field_L[3][var17_intLifetime2 + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, rm.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param12 > var17_intLifetime3; var17_intLifetime3++) {
             dh.field_b[4 + var17_intLifetime3] = new ak(0L, qk.field_d, jk.field_e[var17_intLifetime3]);
             array$2 = new lo[1 + cm.a(255, (int) g.field_s[var17_intLifetime3])];
             hc.field_L[4 + var17_intLifetime3] = array$2;
-            hc.field_L[var17_intLifetime3 + 4][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a);
+            hc.field_L[var17_intLifetime3 + 4][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, fg.field_a);
             for (var18 = 0; (g.field_s[var17_intLifetime3] & 255) > var18; var18++) {
               if (null == dk.field_a) {
                 var19_ref = null;
@@ -229,7 +229,7 @@ class fa {
                   var20 = null;
                 }
               }
-              hc.field_L[4 + var17_intLifetime3][1 + var18] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) (var19_ref), (String) (var20));
+              hc.field_L[4 + var17_intLifetime3][1 + var18] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param12 > var17_intLifetime4; var17_intLifetime4++) {

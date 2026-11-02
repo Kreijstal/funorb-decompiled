@@ -25,7 +25,7 @@ final class dd {
         if (param0 != 62) {
           dd.a('￑', (byte) 81);
         }
-        return new wm[]{rn.field_f, ej.field_b, w.field_w, gj.field_T, lb.field_r, lm.field_l, lb.field_C, gn.field_u, pf.field_f, of.field_e, kn.field_M, u.field_d, gh.field_s, ad.field_u};
+        return new wm[]{rn.field_f, ej.field_b, w.field_w, gj.field_T, lb.field_r, DualLinkNode.field_l, lb.field_C, gn.field_u, pf.field_f, of.field_e, kn.field_M, u.field_d, gh.field_s, ad.field_u};
     }
 
     final void a(byte param0, Random param1) {

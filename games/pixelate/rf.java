@@ -11,12 +11,12 @@ abstract class rf {
     static int field_n;
     nj field_p;
     int field_o;
-    we field_b;
+    PacketBuffer field_b;
     long field_k;
     byte field_a;
     volatile int field_h;
     volatile int field_m;
-    we field_g;
+    PacketBuffer field_g;
     rj field_c;
 
     abstract boolean a(boolean param0);
@@ -104,30 +104,30 @@ abstract class rf {
           for (var3_int = 0; 16 > var3_int; var3_int++) {
             var4 = Integer.toString(var3_int + 1);
             if (var3_int != 5) {
-              pg.field_f[0 + (8 * var3_int + 0)] = param0.a(true, "pix_skin" + var4 + "_move1", "");
-              pg.field_f[0 + (var3_int * 8 + 1)] = param0.a(true, "pix_skin" + var4 + "_move2", "");
-              pg.field_f[2 + (0 + 8 * var3_int)] = param0.a(true, "pix_skin" + var4 + "_move3", "");
-              pg.field_f[3 + var3_int * 8] = param0.a(true, "pix_skin" + var4 + "_move4", "");
+              SecondaryNodeDeque.field_f[0 + (8 * var3_int + 0)] = param0.a(true, "pix_skin" + var4 + "_move1", "");
+              SecondaryNodeDeque.field_f[0 + (var3_int * 8 + 1)] = param0.a(true, "pix_skin" + var4 + "_move2", "");
+              SecondaryNodeDeque.field_f[2 + (0 + 8 * var3_int)] = param0.a(true, "pix_skin" + var4 + "_move3", "");
+              SecondaryNodeDeque.field_f[3 + var3_int * 8] = param0.a(true, "pix_skin" + var4 + "_move4", "");
             } else {
-              pg.field_f[0 + var3_int * 8 + 0] = qd.a(param2, "", "pix_skin" + var4 + "_move1").a();
-              pg.field_f[0 + 8 * var3_int + 1] = qd.a(param2, "", "pix_skin" + var4 + "_move2").a();
-              pg.field_f[2 + (0 + var3_int * 8)] = qd.a(param2, "", "pix_skin" + var4 + "_move3").a();
-              pg.field_f[3 + var3_int * 8] = qd.a(param2, "", "pix_skin" + var4 + "_move4").a();
+              SecondaryNodeDeque.field_f[0 + var3_int * 8 + 0] = qd.a(param2, "", "pix_skin" + var4 + "_move1").a();
+              SecondaryNodeDeque.field_f[0 + 8 * var3_int + 1] = qd.a(param2, "", "pix_skin" + var4 + "_move2").a();
+              SecondaryNodeDeque.field_f[2 + (0 + var3_int * 8)] = qd.a(param2, "", "pix_skin" + var4 + "_move3").a();
+              SecondaryNodeDeque.field_f[3 + var3_int * 8] = qd.a(param2, "", "pix_skin" + var4 + "_move4").a();
             }
-            pg.field_f[5 + var3_int * 8] = param0.a(true, "pix_skin" + var4 + "_landing_normal", "");
+            SecondaryNodeDeque.field_f[5 + var3_int * 8] = param0.a(true, "pix_skin" + var4 + "_landing_normal", "");
             if (7 == var3_int) {
-              pg.field_f[8 * var3_int + 6] = param0.a(true, "pix_skin" + var4 + "_landing_special", "");
-              pg.field_f[8 * var3_int + 7] = param0.a(true, "pix_skin" + var4 + "_picture_complete", "");
+              SecondaryNodeDeque.field_f[8 * var3_int + 6] = param0.a(true, "pix_skin" + var4 + "_landing_special", "");
+              SecondaryNodeDeque.field_f[8 * var3_int + 7] = param0.a(true, "pix_skin" + var4 + "_picture_complete", "");
             } else {
-              pg.field_f[6 + var3_int * 8] = qd.a(param2, "", "pix_skin" + var4 + "_landing_special").a();
-              pg.field_f[7 + var3_int * 8] = qd.a(param2, "", "pix_skin" + var4 + "_picture_complete").a();
+              SecondaryNodeDeque.field_f[6 + var3_int * 8] = qd.a(param2, "", "pix_skin" + var4 + "_landing_special").a();
+              SecondaryNodeDeque.field_f[7 + var3_int * 8] = qd.a(param2, "", "pix_skin" + var4 + "_picture_complete").a();
             }
-            pg.field_f[4 + 8 * var3_int] = param0.a(true, "pix_skin" + var4 + "_tile_rotate", "");
+            SecondaryNodeDeque.field_f[4 + 8 * var3_int] = param0.a(true, "pix_skin" + var4 + "_tile_rotate", "");
           }
-          pg.field_f[128] = param0.a(true, "menu_select", "");
-          pg.field_f[131] = param0.a(true, "pix_grid_wipe", "");
-          pg.field_f[129] = param0.a(true, "pix_time_running_out", "");
-          pg.field_f[130] = param0.a(true, "pix_time_up", "");
+          SecondaryNodeDeque.field_f[128] = param0.a(true, "menu_select", "");
+          SecondaryNodeDeque.field_f[131] = param0.a(true, "pix_grid_wipe", "");
+          SecondaryNodeDeque.field_f[129] = param0.a(true, "pix_time_running_out", "");
+          SecondaryNodeDeque.field_f[130] = param0.a(true, "pix_time_up", "");
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "rf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -138,11 +138,11 @@ abstract class rf {
         this.field_f = new nj();
         this.field_l = new nj();
         this.field_p = new nj();
-        this.field_b = new we(6);
+        this.field_b = new PacketBuffer(6);
         this.field_h = 0;
         this.field_a = (byte) 0;
         this.field_m = 0;
-        this.field_g = new we(10);
+        this.field_g = new PacketBuffer(10);
     }
 
     static {

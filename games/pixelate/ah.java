@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ah extends lm {
+abstract class ah extends DualLinkNode {
     int field_t;
     static String field_u;
 
@@ -49,9 +49,9 @@ abstract class ah extends lm {
           var9 = 0;
           if (!ln.field_q &&
             var5 < ee.field_d) {
-            var10_int = kl.a(var8_ref_aa.field_j, 0);
+            var10_int = IterableNodeHashTable.a(var8_ref_aa.field_j, 0);
             if (var8_ref_aa.a((byte) -54) >= var10_int && (var8_ref_aa.field_a ||
-              !i.a(-640, var8_ref_aa.field_n))) {
+              !ImageProducerRasterBuffer.a(-640, var8_ref_aa.field_n))) {
               var9 = 1;
             }
           }

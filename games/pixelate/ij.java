@@ -29,7 +29,7 @@ final class ij extends de {
           }
           if (fh.field_L == -1 &&
             -1 == h.field_Q) {
-            fh.field_L = uf.field_d;
+            fh.field_L = ProxyAuthenticationException.field_d;
             h.field_Q = bg.field_k;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -108,7 +108,7 @@ final class ij extends de {
         if (param0 != 0) {
           return;
         }
-        t.d();
+        SoftwareRasterizer.d();
     }
 
     final void c(byte param0) {

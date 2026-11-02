@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jf {
-    static tf field_a;
+    static Sprite field_a;
     static String field_b;
     static mj field_c;
 
@@ -11,7 +11,7 @@ final class jf {
         field_c = null;
         field_b = null;
         if (param0 != -31476) {
-          field_a = (tf) null;
+          field_a = (Sprite) null;
         }
     }
 
@@ -44,9 +44,9 @@ final class jf {
               var2_long > var4_ref_ug.field_o) {
               var4_ref_ug.c(2779);
               jj.field_b = var4_ref_ug.field_r.length;
-              vi.field_o.field_m = 0;
+              vi.field_o.position = 0;
               for (var5_int = 0; jj.field_b > var5_int; var5_int++) {
-                vi.field_o.field_k[var5_int] = var4_ref_ug.field_r[var5_int];
+                vi.field_o.payload[var5_int] = var4_ref_ug.field_r[var5_int];
               }
               oj.field_G = gb.field_d;
               gb.field_d = tm.field_U;
@@ -57,12 +57,12 @@ final class jf {
           }
           while (true) {
             if (ao.field_c < 0) {
-              vi.field_o.field_m = 0;
+              vi.field_o.position = 0;
               if (!rd.a(1, false)) {
                 return false;
               }
               ao.field_c = vi.field_o.f((byte) 114);
-              vi.field_o.field_m = 0;
+              vi.field_o.position = 0;
               jj.field_b = param1[ao.field_c];
             }
             if (!in.e(-18481)) {
@@ -85,7 +85,7 @@ final class jf {
             }
             var5 = new ug(var2_long + (long)var4, ao.field_c, new byte[jj.field_b]);
             for (var6 = 0; var6 < jj.field_b; var6++) {
-              var5.field_r[var6] = vi.field_o.field_k[var6];
+              var5.field_r[var6] = vi.field_o.payload[var6];
             }
             id.field_d.a(22125, var5);
             ao.field_c = -1;
@@ -135,8 +135,8 @@ final class jf {
             stackIn_9_0 = wd.field_h;
             return stackIn_9_0;
           }
-          if (ha.a(param0, (byte) 37)) {
-            stackIn_13_0 = sd.a(mo.field_b, 34, new String[]{param0});
+          if (CanvasRasterBuffer.a(param0, (byte) 37)) {
+            stackIn_13_0 = sd.a(BufferedSocket.field_b, 34, new String[]{param0});
             return stackIn_13_0;
           }
           if (f.field_q >= 100 &&
@@ -151,17 +151,17 @@ final class jf {
             stackIn_24_0 = tm.field_Q;
             return stackIn_24_0;
           }
-          if (i.a(-640, param0)) {
+          if (ImageProducerRasterBuffer.a(-640, param0)) {
             stackIn_27_0 = sd.a(bm.field_r, 85, new String[]{param0});
             return stackIn_27_0;
           }
           var5 = aa.field_f;
           var5.g(param1, 15514);
-          var5.field_m = var5.field_m + 1;
-          var4 = var5.field_m;
-          var5.e(160, 0);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(160, 0);
           var5.b((byte) -41, param0);
-          var5.f(-var4 + var5.field_m, -1);
+          var5.f(-var4 + var5.position, -1);
           stackIn_29_0 = null;
           return (String) (stackIn_29_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -205,7 +205,7 @@ final class jf {
             return stackIn_4_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = mk.field_a;
+            stackIn_7_0 = FullscreenFocusCanvas.field_a;
             return stackIn_7_0;
           }
           var3 = dd.a(param0, (byte) -96, '.');

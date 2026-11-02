@@ -81,11 +81,11 @@ final class eg extends eh {
                   if (var11 != -1) {
                     var8Lifetime2Lifetime2 = var15.substring(0, var11);
                   }
-                  throw new uf(var8Lifetime2Lifetime2);
+                  throw new ProxyAuthenticationException(var8Lifetime2Lifetime2);
                 }
                 break;
               }
-              throw new uf("");
+              throw new ProxyAuthenticationException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_11_0 = var13;
@@ -151,9 +151,9 @@ final class eg extends eh {
           in.field_t = param2;
           gq.field_n = param1;
           ug.field_k = param3;
-          li.field_a = new tf[param5.length];
+          li.field_a = new Sprite[param5.length];
           for (var7 = 0; param5.length > var7; var7++) {
-            li.field_a[var7] = new tf(317, 34);
+            li.field_a[var7] = new Sprite(317, 34);
           }
           if (param0 != -94) {
             field_h = (int[]) null;
@@ -216,19 +216,19 @@ final class eg extends eh {
           for (var2 = 0; var2 < 256; var2++) {
             var9[var2] = var2 * 65793;
           }
-          gd.field_f = new tf[50];
+          gd.field_f = new Sprite[50];
           var2Lifetime1 = -48 / ((param0 - 31) / 39);
           for (var3 = 0; 50 > var3; var3++) {
-            gd.field_f[var3] = new tf(63, 63);
+            gd.field_f[var3] = new Sprite(63, 63);
             gd.field_f[var3].c();
             var4 = (double)var3 * 6.283185307179586 / 50.0;
             var6 = (int)(16.0 * Math.sin(var4)) >> 1;
-            t.a(512, 512, 48 + var6 << 4, 255, var13);
-            for (var7 = 0; t.field_k.length > var7; var7++) {
-              t.field_k[var7] = 16777215 - t.field_k[var7];
+            SoftwareRasterizer.a(512, 512, 48 + var6 << 4, 255, var13);
+            for (var7 = 0; SoftwareRasterizer.field_k.length > var7; var7++) {
+              SoftwareRasterizer.field_k[var7] = 16777215 - SoftwareRasterizer.field_k[var7];
             }
             for (var7Lifetime1 = 0; var7Lifetime1 < 5; var7Lifetime1++) {
-              t.b();
+              SoftwareRasterizer.b();
             }
           }
           return;
@@ -268,7 +268,7 @@ final class eg extends eh {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        uf var12_ref = null;
+        ProxyAuthenticationException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = Pixelate.field_H ? 1 : 0;
@@ -319,15 +319,15 @@ final class eg extends eh {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (uf) null;
+            if (false) throw (ProxyAuthenticationException) null;
             var12 = this.a(var11, 26251);
             if (var12 != null) {
               stackIn_22_0 = var12;
               return stackIn_22_0;
             }
-          } catch (uf decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (uf) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;

@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class pg implements Iterable {
-    lm field_a;
+final class SecondaryNodeDeque implements Iterable {
+    DualLinkNode field_a;
     static long[] field_c;
     static int field_e;
     static long[][] field_b;
     static String field_d;
     static sp[] field_f;
 
-    final lm a(int param0) {
+    final DualLinkNode a(int param0) {
         if (param0 < 57) {
-          return (lm) null;
+          return (DualLinkNode) null;
         }
-        lm var2 = this.field_a.field_p;
+        DualLinkNode var2 = this.field_a.field_p;
         if (this.field_a == var2) {
           return null;
         }
@@ -23,7 +23,7 @@ final class pg implements Iterable {
         return var2;
     }
 
-    final static void a(java.math.BigInteger param0, boolean param1, int param2, int param3, java.math.BigInteger param4, we param5, byte[] param6) {
+    final static void a(java.math.BigInteger param0, boolean param1, int param2, int param3, java.math.BigInteger param4, PacketBuffer param5, byte[] param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -56,29 +56,29 @@ final class pg implements Iterable {
             var8[var9] = qo.field_y.nextInt();
           }
           if (ed.field_b == null ||
-            !(var7_int <= ed.field_b.field_k.length)) {
-            ed.field_b = new we(var7_int);
+            !(var7_int <= ed.field_b.payload.length)) {
+            ed.field_b = new PacketBuffer(var7_int);
           }
-          ed.field_b.field_m = 0;
+          ed.field_b.position = 0;
           ed.field_b.a(param3, param2, -3493, param6);
           ed.field_b.c(var7_int, param1);
           ed.field_b.a(true, var13);
           if (null == bi.field_d ||
-            !(100 <= bi.field_d.field_k.length)) {
-            bi.field_d = new we(100);
+            !(100 <= bi.field_d.payload.length)) {
+            bi.field_d = new PacketBuffer(100);
           }
-          bi.field_d.field_m = 0;
-          bi.field_d.e(160, 10);
+          bi.field_d.position = 0;
+          bi.field_d.writeByte(160, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
             bi.field_d.d(var13[var11], -127);
             var11++;
           }
-          bi.field_d.b(1276387944, param3);
+          bi.field_d.writeShort(1276387944, param3);
           bi.field_d.a(param4, param0, 0);
-          param5.a(bi.field_d.field_m, 0, -3493, bi.field_d.field_k);
-          param5.a(ed.field_b.field_m, 0, -3493, ed.field_b.field_k);
+          param5.a(bi.field_d.position, 0, -3493, bi.field_d.payload);
+          param5.a(ed.field_b.position, 0, -3493, ed.field_b.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,18 +123,18 @@ final class pg implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new nb(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final static tf[] a(int param0, byte param1) {
-        tf[] var4 = new tf[9];
-        tf[] var2 = var4;
+    final static Sprite[] a(int param0, byte param1) {
+        Sprite[] var4 = new Sprite[9];
+        Sprite[] var2 = var4;
         int var3 = -118 % ((param1 - 67) / 55);
         var4[4] = cl.a(64, param0, (byte) -61);
         return var2;
     }
 
-    final void a(byte param0, lm param1) {
+    final void a(byte param0, DualLinkNode param1) {
         if (param1.field_r != null) {
           param1.e(17);
         }
@@ -154,13 +154,13 @@ final class pg implements Iterable {
     final static boolean b(int param0) {
         if (param0 != 916440577) {
           byte[] var2 = (byte[]) null;
-          pg.a((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (we) null, (byte[]) null);
+          SecondaryNodeDeque.a((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (PacketBuffer) null, (byte[]) null);
         }
         return ck.field_j.c(32059);
     }
 
-    pg() {
-        this.field_a = new lm();
+    SecondaryNodeDeque() {
+        this.field_a = new DualLinkNode();
         this.field_a.field_p = this.field_a;
         this.field_a.field_r = this.field_a;
     }
@@ -203,7 +203,7 @@ final class pg implements Iterable {
         field_c[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = (var0 - 1) * 8;
-            field_c[var0] = fp.a(fp.a(fp.a(fp.a(mk.a(4278190080L, field_b[4][4 + var1]), fp.a(mk.a(1095216660480L, field_b[3][var1 + 3]), fp.a(mk.a(field_b[2][var1 + 2], 280375465082880L), fp.a(mk.a(-72057594037927936L, field_b[0][var1]), mk.a(field_b[1][var1 + 1], 71776119061217280L))))), mk.a(field_b[5][5 + var1], 16711680L)), mk.a(65280L, field_b[6][var1 + 6])), mk.a(field_b[7][var1 + 7], 255L));
+            field_c[var0] = fp.a(fp.a(fp.a(fp.a(FullscreenFocusCanvas.a(4278190080L, field_b[4][4 + var1]), fp.a(FullscreenFocusCanvas.a(1095216660480L, field_b[3][var1 + 3]), fp.a(FullscreenFocusCanvas.a(field_b[2][var1 + 2], 280375465082880L), fp.a(FullscreenFocusCanvas.a(-72057594037927936L, field_b[0][var1]), FullscreenFocusCanvas.a(field_b[1][var1 + 1], 71776119061217280L))))), FullscreenFocusCanvas.a(field_b[5][5 + var1], 16711680L)), FullscreenFocusCanvas.a(65280L, field_b[6][var1 + 6])), FullscreenFocusCanvas.a(field_b[7][var1 + 7], 255L));
         }
         field_f = new sp[132];
         field_d = "Achievements";

@@ -4,7 +4,7 @@
 final class up {
     static String field_o;
     static int[] field_e;
-    private tf field_l;
+    private Sprite field_l;
     static int[] field_f;
     static int[] field_k;
     private int field_b;
@@ -91,7 +91,7 @@ final class up {
         hh var10 = lk.field_o[this.field_m];
         hh var11 = var10;
         jj var3 = rj.field_C[gd.field_e[this.field_m].field_a];
-        this.field_l = new tf(160, 160);
+        this.field_l = new Sprite(160, 160);
         this.field_l.c();
         int var4 = param0 * (5 - var11.field_f);
         int var5 = (-var11.field_a + 5) * 16;
@@ -101,7 +101,7 @@ final class up {
             var3.field_k[!var6[var7 * var10.field_f + var8] ? 0 : 1].f(var8 * 32 + var4, 32 * var7 + var5);
           }
         }
-        qa.field_f.a(param0 + 19676);
+        ClientException.field_f.a(param0 + 19676);
     }
 
     up(int param0) {

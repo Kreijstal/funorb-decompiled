@@ -4,7 +4,7 @@
 final class no extends kd {
     private int field_f;
     static String field_n;
-    static tf[] field_p;
+    static Sprite[] field_p;
     static String field_g;
     private int field_i;
     static String field_j;
@@ -59,9 +59,9 @@ final class no extends kd {
         int var10Lifetime2;
         var15 = Pixelate.field_H ? 1 : 0;
         try {
-          L0: {
+          regionExit1: {
             boolean decompiledFrameCompleted0 = true;
-            L1: {
+            regionExit2: {
               boolean decompiledFrameCompleted1 = true;
               if (param0 <= param7) {
                 var8_int = 1;
@@ -79,7 +79,7 @@ final class no extends kd {
                     decompiledFrameRemainder0 = (var15 == 0);
                     if (decompiledFrameRemainder0) {
                       var12 = stackIn_36_0;
-                      L8: while (true) {
+                      scanLoop3: while (true) {
                         if (var18.length > var12) {
                           var13_int = var18[var12];
                           var14 = var10_ref_int__[1 + var12];
@@ -91,15 +91,15 @@ final class no extends kd {
                               var11 = 1;
                             } else {
                               if (var13_int >= param7) {
-                                break L8;
+                                break scanLoop3;
                               }
                               if ((kf.field_o[var13_int] & 255) != var14) {
-                                break L8;
+                                break scanLoop3;
                               }
                             }
                           } else {
                             if (~var14 != ~ia.field_a[param4]) {
-                              break L8;
+                              break scanLoop3;
                             }
                           }
                           var12 += 2;
@@ -107,7 +107,7 @@ final class no extends kd {
                         }
                         if (var11 == 0 &&
                           fj.field_b != param7) {
-                          break L8;
+                          break scanLoop3;
                         }
                         var8_int = 0;
                         var12 = 0;
@@ -161,11 +161,11 @@ final class no extends kd {
                 if (param3) {
                   if (param7 != -1) {
                     var10 = 0;
-                    L24: while (true) {
+                    scanLoop4: while (true) {
                       if (var10 < var16.length - 1) {
                         stackIn_52_0 = k.field_k[(var10 + param1) / 8] & 1 << (7 & var10 + param1);
                         if (var15 != 0) {
-                          break L24;
+                          break scanLoop4;
                         }
                         if (stackIn_52_0 != 0) {
                           var9Lifetime1 = 0;
@@ -271,7 +271,7 @@ final class no extends kd {
                       stackIn_110_0 = 0;
                       stackIn_110_1 = ~param7;
                       if (var15 != 0) {
-                        break L0;
+                        break regionExit1;
                       }
                       if (stackIn_110_0 != stackIn_110_1) {
                         kf.field_o[param7] = (byte)var11Lifetime1;
@@ -599,7 +599,7 @@ final class no extends kd {
               decompiledFrameRemainder3 = (var19 != 0);
             }
             if (decompiledFrameRemainder3) {
-              vp.field_Qb.field_cb = hk.field_g.toUpperCase();
+              vp.field_Qb.field_cb = DelegatingCanvas.field_g.toUpperCase();
               var9 = (ai.field_A.field_K + 2) / 2;
               wm.field_d.a(ai.field_A.field_nb - 40, 40, 0, 256, var9 - 2);
               if (io.field_c.field_ec <= io.field_c.field_mc) {
@@ -650,12 +650,12 @@ final class no extends kd {
                   lc.field_t[var11_int] = false;
                   var11_int++;
                 } while (var19 == 0);
-                L16: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11_int = 0;
                     stackIn_66_0 = 0;
                     if (var19 != 0) {
-                      break L16;
+                      break scanLoop1;
                     }
                     var12 = stackIn_66_0;
                     while (true) {
@@ -668,7 +668,7 @@ final class no extends kd {
                         var13 = var20;
                         stackIn_60_0 = 0;
                         var14_int = stackIn_60_0;
-                        L23: while (true) {
+                        scanLoop2: while (true) {
                           if (var14_int < var26.length) {
                             var15 = var26[var14_int];
                             var16 = var20[var14_int + 1];
@@ -681,11 +681,11 @@ final class no extends kd {
                               }
                               var17_int = stackIn_47_0;
                               if (~var17_int != ~var16) {
-                                break L23;
+                                break scanLoop2;
                               }
                             } else {
                               if (~var16 != ~(255 & io.field_c.field_Eb[var15])) {
-                                break L23;
+                                break scanLoop2;
                               }
                             }
                             var14_int += 2;
@@ -786,14 +786,14 @@ final class no extends kd {
                 }
                 var17 = ae.field_c.field_Fb.field_L;
                 var18_ref = (uj) (var17.c(1504642273));
-                L46: while (true) {
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
                     stackOut_109_0 = var18_ref.b((byte) -98);
                     stackIn_129_0 = stackOut_109_0 ? 1 : 0;
                     stackIn_110_0 = stackOut_109_0;
                     if (var19 != 0) {
-                      break L46;
+                      break scanLoop3;
                     }
                     if (!stackIn_110_0) {
                       if (var11_int != 0 &&
@@ -913,10 +913,10 @@ final class no extends kd {
                   if (var12 == 0) {
                     var14 = sd.a(sm.field_n, 80, new String[]{(String) (var11)});
                     if (var19 != 0) {
-                      var14 = cf.field_x + (String) (var11);
+                      var14 = SpriteState.field_x + (String) (var11);
                     }
                   } else {
-                    var14 = cf.field_x + (String) (var11);
+                    var14 = SpriteState.field_x + (String) (var11);
                   }
                 } else {
                   var13_ref = aq.field_c;
@@ -986,22 +986,22 @@ final class no extends kd {
         Object var2 = null;
         int var3 = 0;
         int var4 = 0;
-        tf var5 = null;
-        tf var6 = null;
-        tf var7 = null;
+        Sprite var5 = null;
+        Sprite var6 = null;
+        Sprite var7 = null;
         int var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          t.a(243, 197, 369, 143, 16777215);
-          t.d(244, 198, 367, 141, 0);
+          SoftwareRasterizer.a(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.d(244, 198, 367, 141, 0);
           if (wg.field_g == null) {
             if (null != qe.field_A) {
-              qe.field_A.a(mk.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              qe.field_A.a(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
           if (param0 != -19308) {
-            field_p = (tf[]) null;
+            field_p = (Sprite[]) null;
           }
           var5 = wg.field_g[ae.field_b];
           boolean decompiledSharedTail1 = (var5 == null);
@@ -1011,7 +1011,7 @@ final class no extends kd {
           }
           if ((decompiledSharedTail1) &&
             (qe.field_A != null)) {
-            qe.field_A.a(mk.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            qe.field_A.a(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
           }
           if (ui.field_k > jn.field_q) {
             var6 = wg.field_g[jc.field_b];

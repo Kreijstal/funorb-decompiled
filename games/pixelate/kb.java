@@ -9,11 +9,11 @@ abstract class kb extends ch implements bp {
     static String[] field_I;
     private oa field_K;
 
-    final static void a(int param0, cb param1, vi param2, boolean param3, java.awt.Component param4, int param5) {
+    final static void a(int param0, PlatformTaskDispatcher param1, vi param2, boolean param3, java.awt.Component param4, int param5) {
         try {
           if (param5 <= 102) {
             java.awt.Component var7 = (java.awt.Component) null;
-            kb.a(-5, (cb) null, (vi) null, false, (java.awt.Component) null, -3);
+            kb.a(-5, (PlatformTaskDispatcher) null, (vi) null, false, (java.awt.Component) null, -3);
           }
           oh.a(1024, param0, param3, param0, (byte) -110, param4, param1, param2);
         } catch (RuntimeException runtimeException) {

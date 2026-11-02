@@ -11,7 +11,7 @@ final class qo extends mg {
     static boolean field_z;
     static ii field_r;
     static String[] field_t;
-    static tf field_v;
+    static Sprite field_v;
     static int field_A;
     static ge field_n;
     static int[] field_w;

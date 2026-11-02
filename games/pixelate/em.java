@@ -24,14 +24,14 @@ final class em {
           }
           var3 = aa.field_f;
           var3.g(param2, 15514);
-          var3.e(160, param1.field_k);
-          var3.e(160, param1.field_s);
+          var3.writeByte(160, param1.field_k);
+          var3.writeByte(160, param1.field_s);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "em.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static void a(tf[] param0, int param1) {
+    final static void a(Sprite[] param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;

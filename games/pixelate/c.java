@@ -14,7 +14,7 @@ class c extends qm {
     static boolean field_T;
     static volatile int field_X;
     static String field_O;
-    static ha field_R;
+    static CanvasRasterBuffer field_R;
     static tc field_Y;
 
     private final void d(boolean param0) {
@@ -99,7 +99,7 @@ class c extends qm {
           }
           this.field_ab = this.field_ab + param0.length();
           if (param1 != 32240) {
-            field_R = (ha) null;
+            field_R = (CanvasRasterBuffer) null;
           }
           this.field_S = this.field_ab;
           this.n(param1 + 1392121585);
@@ -143,8 +143,8 @@ class c extends qm {
         }
         int var2 = qh.field_c * qh.field_c;
         int var3 = var2 - oo.field_b * oo.field_b;
-        ql.field_n.a(90, -210 + t.field_d - 4, -(var3 * 199 / var2) + var1, 256, 199);
-        ti.field_E.a(0, -120 + t.field_d - 4, 438 * var3 / var2 + var1 + 202, 256, 438);
+        ql.field_n.a(90, -210 + SoftwareRasterizer.field_d - 4, -(var3 * 199 / var2) + var1, 256, 199);
+        ti.field_E.a(0, -120 + SoftwareRasterizer.field_d - 4, 438 * var3 / var2 + var1 + 202, 256, 438);
     }
 
     private final String a(byte param0) {
@@ -421,7 +421,7 @@ class c extends qm {
           if (!(this.field_y instanceof af)) {
             return false;
           }
-          var8_int = ((af) ((Object) this.field_y)).a(param3, param5, 0, uf.field_d, bg.field_k, (ng) (this));
+          var8_int = ((af) ((Object) this.field_y)).a(param3, param5, 0, ProxyAuthenticationException.field_d, bg.field_k, (ng) (this));
           if (var8_int == -1) {
             stackIn_6_1 = 0;
           } else {
@@ -522,7 +522,7 @@ class c extends qm {
           if (this.field_k == 1) {
             if (this.field_y instanceof af) {
               var5 = (af) ((Object) this.field_y);
-              var6 = var5.a(param1, param2, param0 ^ 40, uf.field_d, bg.field_k, (ng) (this));
+              var6 = var5.a(param1, param2, param0 ^ 40, ProxyAuthenticationException.field_d, bg.field_k, (ng) (this));
               if (var6 != -1) {
                 if (this.field_P &&
                   var6 < this.field_V &&

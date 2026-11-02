@@ -152,7 +152,7 @@ final class uh {
         var10 = Pixelate.field_H ? 1 : 0;
         try {
           ek.field_c = true;
-          uf.field_g = param4;
+          ProxyAuthenticationException.field_g = param4;
           var11 = param2;
           if (param1) {
             stackIn_4_0 = td.field_a;
@@ -160,13 +160,13 @@ final class uh {
             stackIn_4_0 = ln.field_k;
           }
           var6 = stackIn_4_0;
-          if (uf.field_g == 0) {
-            var7 = qn.a(var11, 480, nc.field_c, -121, lm.field_o);
+          if (ProxyAuthenticationException.field_g == 0) {
+            var7 = qn.a(var11, 480, nc.field_c, -121, DualLinkNode.field_o);
             var8 = var7 + 3;
             pl.field_J = new String[var8];
-            uf.field_e = new int[var8];
+            ProxyAuthenticationException.field_e = new int[var8];
             for (var9 = 0; var9 < var8; var9++) {
-              uf.field_e[var9] = -1;
+              ProxyAuthenticationException.field_e[var9] = -1;
             }
             di.field_b = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
@@ -174,21 +174,21 @@ final class uh {
             }
             pl.field_J[-3 + var8] = "";
             pl.field_J[var8 - 2] = var6;
-            uf.field_e[-2 + var8] = 0;
+            ProxyAuthenticationException.field_e[-2 + var8] = 0;
             di.field_b[0] = 1;
             pl.field_J[-1 + var8] = od.field_Hb;
-            uf.field_e[var8 - 1] = 1;
+            ProxyAuthenticationException.field_e[var8 - 1] = 1;
             di.field_b[1] = 2;
           } else {
-            if (1 != uf.field_g) {
+            if (1 != ProxyAuthenticationException.field_g) {
               throw new IllegalArgumentException();
             }
-            var7 = qn.a(var11, 480, nc.field_c, -109, lm.field_o);
+            var7 = qn.a(var11, 480, nc.field_c, -109, DualLinkNode.field_o);
             var8 = var7 + 2;
             pl.field_J = new String[var8];
-            uf.field_e = new int[var8];
+            ProxyAuthenticationException.field_e = new int[var8];
             for (var9 = 0; var8 > var9; var9++) {
-              uf.field_e[var9] = -1;
+              ProxyAuthenticationException.field_e[var9] = -1;
             }
             di.field_b = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
@@ -196,7 +196,7 @@ final class uh {
             }
             pl.field_J[-2 + var8] = "";
             pl.field_J[var8 - 1] = od.field_Hb;
-            uf.field_e[var8 - 1] = 0;
+            ProxyAuthenticationException.field_e[var8 - 1] = 0;
             di.field_b[0] = 2;
           }
           vp.field_Gb.field_h = di.field_b.length;
@@ -204,10 +204,10 @@ final class uh {
           for (var8Lifetime1 = 0; var8Lifetime1 < pl.field_J.length; var8Lifetime1++) {
             stackIn_25_0 = pl.field_J[var8Lifetime1];
             stackIn_25_1 = 8192;
-            stackIn_26_2 = !(uf.field_e[var8Lifetime1] < 0);
+            stackIn_26_2 = !(ProxyAuthenticationException.field_e[var8Lifetime1] < 0);
             var9Lifetime1 = jp.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
-            if (uf.field_e[var8Lifetime1] != -1) {
-              var9Lifetime1 = var9Lifetime1 + uf.field_a * 2;
+            if (ProxyAuthenticationException.field_e[var8Lifetime1] != -1) {
+              var9Lifetime1 = var9Lifetime1 + ProxyAuthenticationException.field_a * 2;
             }
             if (var7Lifetime1 < var9Lifetime1) {
               var7Lifetime1 = var9Lifetime1;
@@ -218,7 +218,7 @@ final class uh {
           nf.field_c = (lf.field_b + ki.field_e << 1) * vp.field_Gb.field_h;
           for (var8Lifetime2 = param3; pl.field_J.length > var8Lifetime2; var8Lifetime2++) {
             stackIn_36_0 = nf.field_c;
-            if (uf.field_e[var8Lifetime2] >= 0) {
+            if (ProxyAuthenticationException.field_e[var8Lifetime2] >= 0) {
               stackIn_37_1 = dk.field_d;
             } else {
               stackIn_37_1 = da.field_m;
@@ -226,7 +226,7 @@ final class uh {
             nf.field_c = stackIn_36_0 + stackIn_37_1;
           }
           ce.field_c = -(nf.field_c >> 1) + qh.field_b;
-          vp.field_Gb.a(param0, ec.a(false, uf.field_d, bg.field_k), param3 ^ 17068, 0);
+          vp.field_Gb.a(param0, ec.a(false, ProxyAuthenticationException.field_d, bg.field_k), param3 ^ 17068, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

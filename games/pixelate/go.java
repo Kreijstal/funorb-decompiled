@@ -5,8 +5,8 @@ class go extends rg {
     private long field_g;
     static boolean field_f;
     private String field_j;
-    static tf[] field_h;
-    static tf field_i;
+    static Sprite[] field_h;
+    static Sprite field_i;
     static int field_k;
 
     final static int c(int param0) {
@@ -97,7 +97,7 @@ class go extends rg {
                 io.field_c != null) {
                 var6 = 1;
               }
-              if (kl.a(var6, 0) == 2) {
+              if (IterableNodeHashTable.a(var6, 0) == 2) {
                 am.a(1, -26931, var6, param2);
               }
               dg.a(true, ce.field_d, -1, var5_ref_String, jo.field_k, param0);
@@ -133,7 +133,7 @@ class go extends rg {
         if (mp.field_a.length() >= 80) {
           return true;
         }
-        L5: {
+        regionExit1: {
           discarded$0 = mp.field_a.append((char) var5);
           var6Lifetime1 = 485;
           var32 = kn.field_J;
@@ -155,25 +155,25 @@ class go extends rg {
               if (io.field_c == null) {
                 var34 = var8Lifetime1Lifetime6 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var34);
-                break L5;
+                break regionExit1;
               }
               if (!nc.field_b) {
                 var37 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var38 = var37 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var38);
-                break L5;
+                break regionExit1;
               }
               if (mn.field_f == null) {
                 var35 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var36 = var35 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var36);
-                break L5;
+                break regionExit1;
               }
               var8Lifetime1Lifetime6 = "[" + mn.field_f + "] ";
             }
             var39 = var8Lifetime1Lifetime6 + var33 + ": ";
             var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var39);
-            break L5;
+            break regionExit1;
           }
           var44 = (CharSequence) ((Object) jo.field_k);
           var40 = sd.a(dg.field_b, 116, new String[]{ng.a(var44, -1)});
@@ -193,12 +193,12 @@ class go extends rg {
         return true;
     }
 
-    final void a(byte param0, we param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 != -12) {
             this.field_g = -108L;
           }
-          param1.a(false, this.field_g);
+          param1.writeLong(false, this.field_g);
           param1.a(-129, this.field_j);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "go.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -55,7 +55,7 @@ final class gg extends jp {
         gn discarded$0 = null;
         gn discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
-        fa var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -175,7 +175,7 @@ final class gg extends jp {
                 var4 = this.field_i.a((byte) -31, this.field_m, false, param0, (byte) 2);
               }
             }
-            this.field_j.a((long)param0, 127, (fa) (var4));
+            this.field_j.a((long)param0, 127, (IntrusiveNode) (var4));
           }
           if (((gn) (var4)).field_v) {
             stackIn_40_0 = null;
@@ -233,7 +233,7 @@ final class gg extends jp {
                   return null;
                 }
                 var4 = this.field_i.a((byte) -31, this.field_m, true, param0, (byte) 2);
-                this.field_j.a((long)param0, 127, (fa) (var4));
+                this.field_j.a((long)param0, 127, (IntrusiveNode) (var4));
               }
               stackIn_118_0 = null;
               return (gn) (stackIn_118_0);
@@ -275,7 +275,7 @@ final class gg extends jp {
               return null;
             }
             var4 = this.field_i.a((byte) -31, this.field_m, true, param0, (byte) 2);
-            this.field_j.a((long)param0, 127, (fa) (var4));
+            this.field_j.a((long)param0, 127, (IntrusiveNode) (var4));
             stackIn_68_0 = null;
             return (gn) (stackIn_68_0);
           }
@@ -337,7 +337,7 @@ final class gg extends jp {
         }
     }
 
-    final static void a(boolean param0, String[][] param1, byte[] param2, fm param3, String[] param4, byte[] param5, tf[][] param6, int param7, int param8, tf[][] param9, fm param10, int param11, String[][] param12, fm param13, int[] param14) {
+    final static void a(boolean param0, String[][] param1, byte[] param2, fm param3, String[] param4, byte[] param5, Sprite[][] param6, int param7, int param8, Sprite[][] param9, fm param10, int param11, String[][] param12, fm param13, int[] param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -504,12 +504,12 @@ final class gg extends jp {
         int var2_int = 0;
         gn var2_ref = null;
         RuntimeException var2_ref2 = null;
-        fa var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         int var5 = 0;
-        fa var6 = null;
-        fa var7 = null;
-        fa var3Lifetime1;
+        IntrusiveNode var6 = null;
+        IntrusiveNode var7 = null;
+        IntrusiveNode var3Lifetime1;
         int var2_intLifetime1;
         int var4Lifetime1;
         var2 = null;
@@ -545,7 +545,7 @@ final class gg extends jp {
                     discarded$2 = this.a(this.field_x, 1, true);
                   }
                   if (0 == this.field_s[this.field_x]) {
-                    var6 = new fa();
+                    var6 = new IntrusiveNode();
                     var6.field_e = (long)this.field_x;
                     this.field_w.a(22125, var6);
                     var2_int = 0;
@@ -588,7 +588,7 @@ final class gg extends jp {
                       discarded$0 = this.a(this.field_x, 2, true);
                     }
                     if (this.field_s[this.field_x] != 1) {
-                      var7 = new fa();
+                      var7 = new IntrusiveNode();
                       var7.field_e = (long)this.field_x;
                       this.field_w.a(22125, var7);
                       var2_intLifetime1 = 0;
@@ -738,7 +738,7 @@ final class gg extends jp {
         try {
           field_h = null;
           if (param0 != 45) {
-            gg.a(true, (String[][]) null, (byte[]) null, (fm) null, (String[]) null, (byte[]) null, (tf[][]) null, -91, 127, (tf[][]) null, (fm) null, 112, (String[][]) null, (fm) null, (int[]) null);
+            gg.a(true, (String[][]) null, (byte[]) null, (fm) null, (String[]) null, (byte[]) null, (Sprite[][]) null, -91, 127, (Sprite[][]) null, (fm) null, 112, (String[][]) null, (fm) null, (int[]) null);
           }
           field_z = null;
           field_v = null;
@@ -764,7 +764,7 @@ final class gg extends jp {
             return (id) (stackIn_12_0);
           }
           tm.field_X = wm.field_a;
-          stackIn_10_0 = v.field_b;
+          stackIn_10_0 = MouseWheelHandler.field_b;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

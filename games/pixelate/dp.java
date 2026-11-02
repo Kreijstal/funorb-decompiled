@@ -18,10 +18,10 @@ final class dp extends de {
 
     final void a(int param0, boolean param1, boolean param2) {
         int var6_int = 0;
-        ha var6 = null;
+        CanvasRasterBuffer var6 = null;
         int var4 = param0 * 2;
         int var5 = param0 >= 128 ? (param0 - 128) * 2 : 0;
-        ha var6Lifetime1;
+        CanvasRasterBuffer var6Lifetime1;
         if (param2) {
           var6_int = var4;
           var4 = var5;
@@ -31,22 +31,22 @@ final class dp extends de {
           c.field_R = vk.a(480, 2, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
         }
         if (param1) {
-          var6 = qa.field_f;
-          qa.field_f = c.field_R;
-          qa.field_f.a(19692);
+          var6 = ClientException.field_f;
+          ClientException.field_f = c.field_R;
+          ClientException.field_f.a(19692);
           this.c(0);
-          qa.field_f = var6;
-          qa.field_f.a(19692);
+          ClientException.field_f = var6;
+          ClientException.field_f.a(19692);
           fi.a(c.field_R.field_e, var4, var5);
           return;
         }
         field_p = (String) null;
-        var6Lifetime1 = qa.field_f;
-        qa.field_f = c.field_R;
-        qa.field_f.a(19692);
+        var6Lifetime1 = ClientException.field_f;
+        ClientException.field_f = c.field_R;
+        ClientException.field_f.a(19692);
         this.c(0);
-        qa.field_f = var6Lifetime1;
-        qa.field_f.a(19692);
+        ClientException.field_f = var6Lifetime1;
+        ClientException.field_f.a(19692);
         fi.a(c.field_R.field_e, var4, var5);
     }
 
@@ -145,15 +145,15 @@ final class dp extends de {
         int var7 = 0;
         int var8 = 0;
         try {
-          var2_int = uf.field_d;
+          var2_int = ProxyAuthenticationException.field_d;
           var3 = bg.field_k;
           var4 = mg.field_h.field_Db.b(param0, 500);
           var5 = mg.field_h.field_Db.a(param0, 500) + 6;
           var6 = 2 + var4 * fq.field_q;
           var7 = ui.a(12, var2_int, var5, (byte) -1);
           var8 = pj.a(var6, var3, 20, (byte) 112);
-          t.a(var7, var8, var5, var6, 0);
-          t.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
+          SoftwareRasterizer.a(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
           mg.field_h.field_Db.a(param0, 3 + var7, nc.field_d + (1 + (var8 - mg.field_h.field_Db.field_w)), 500, 1000, 0, -1, 0, 0, fq.field_q);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -182,7 +182,7 @@ final class dp extends de {
           } else {
             var4.a(false, param0 + param0);
             if (this.field_l == 1) {
-              t.a(0, 0, 640, 480);
+              SoftwareRasterizer.a(0, 0, 640, 480);
               rh.b((byte) 121);
             }
           }
@@ -194,7 +194,7 @@ final class dp extends de {
             } else {
               var3.a(false, param0 + param0);
               if (this.field_l == 1) {
-                t.a(0, 0, 640, 480);
+                SoftwareRasterizer.a(0, 0, 640, 480);
                 rh.b((byte) 121);
               }
             }
@@ -205,7 +205,7 @@ final class dp extends de {
               } else {
                 ((ii) (var2)).a(false, param0 + param0);
                 if (this.field_l == 1) {
-                  t.a(0, 0, 640, 480);
+                  SoftwareRasterizer.a(0, 0, 640, 480);
                   rh.b((byte) 121);
                 }
               }
@@ -216,7 +216,7 @@ final class dp extends de {
               } else {
                 var5.a(false, param0 + param0);
                 if (this.field_l == 1) {
-                  t.a(0, 0, 640, 480);
+                  SoftwareRasterizer.a(0, 0, 640, 480);
                   rh.b((byte) 121);
                 }
               }

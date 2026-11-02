@@ -60,12 +60,12 @@ final class nk {
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
         RuntimeException decompiledCaughtException = null;
-        tf var12 = null;
+        Sprite var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        tf[] var16 = null;
+        Sprite[] var16 = null;
         ak var17 = null;
         int var18 = 0;
         String var19 = null;
@@ -86,7 +86,7 @@ final class nk {
           qp.field_P[2] = 16736352;
           vp.field_Ib = 8421504;
           qp.field_P[0] = 16764000;
-          var12 = new tf(4, 4);
+          var12 = new Sprite(4, 4);
           var13 = var12.field_G;
           var14 = var12.field_G;
           var15 = var12.field_G;
@@ -94,7 +94,7 @@ final class nk {
           var14[5] = 7368816;
           var13[2] = 7368816;
           var15[8] = 7368816;
-          var16 = new tf[9];
+          var16 = new Sprite[9];
           var16[4] = var12;
           ui.field_i = new ak(0L, param0);
           ki.field_k = new ak(0L, param3);
@@ -115,7 +115,7 @@ final class nk {
             nk.a(-96);
           }
           oc.field_U.a(rh.field_y, (byte) 26);
-          hk.field_e = new ak[5];
+          DelegatingCanvas.field_e = new ak[5];
           jo.field_n = new ak[5];
           fm.field_f = new ak[5];
           fm.field_h = new ak[5];
@@ -148,11 +148,11 @@ final class nk {
                 jo.field_n[var18] = new ak(0L, oi.field_e, var19);
                 fm.field_h[var18] = new ak(0L, (ak) null);
                 fm.field_h[var18].field_kb = 1;
-                hk.field_e[var18] = new ak(0L, oi.field_e);
-                hk.field_e[var18].field_kb = 1;
+                DelegatingCanvas.field_e[var18] = new ak(0L, oi.field_e);
+                DelegatingCanvas.field_e[var18].field_kb = 1;
                 fm.field_f[var18].a(jo.field_n[var18], (byte) 26);
                 fm.field_f[var18].a(fm.field_h[var18], (byte) 26);
-                fm.field_f[var18].a(hk.field_e[var18], (byte) 26);
+                fm.field_f[var18].a(DelegatingCanvas.field_e[var18], (byte) 26);
                 fm.field_f[var18].h(-257);
                 ui.field_i.a(fm.field_f[var18], (byte) 26);
                 qm.field_F = qm.field_F + 1;

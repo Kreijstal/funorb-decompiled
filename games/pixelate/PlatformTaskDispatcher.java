@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class cb implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     lj field_m;
     static String field_p;
     private boolean field_v;
     boolean field_x;
-    private cp field_d;
+    private NativeWindowCallback field_d;
     private static volatile long field_c;
     private static String field_r;
     static String field_l;
@@ -26,7 +26,7 @@ final class cb implements Runnable {
     private static String field_a;
     private static int field_t;
     lj[] field_u;
-    private vb field_s;
+    private DisplayModeEnumerator field_s;
     lj field_e;
 
     private final ei a(int param0, int param1, int param2, Object param3, int param4) {
@@ -83,7 +83,7 @@ final class cb implements Runnable {
           }
           if (param0 >= -98) {
             var9 = (String) null;
-            cb.a(120, (String) null, (String) null, 79);
+            PlatformTaskDispatcher.a(120, (String) null, (String) null, 79);
           }
           var5 = new String[]{"c:/rscache/", "/rscache/", field_a, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
           for (var6 = 0; var6 < var5.length; var6++) {
@@ -186,7 +186,7 @@ final class cb implements Runnable {
           int var3 = 0;
           Exception var3_ref_Exception = null;
           lj var3_ref_lj = null;
-          uf var3_ref_uf = null;
+          ProxyAuthenticationException var3_ref_uf = null;
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -242,7 +242,7 @@ final class cb implements Runnable {
                   case 16:
                   default:
                     if (!this.field_x) {
-                      throw cb.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 6:
@@ -293,21 +293,21 @@ final class cb implements Runnable {
                           Class.forName("cj").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_n, new Object[]{var14[0], var14[1], new Integer(var8.field_a), new Integer(var8.field_c), var14[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw cb.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_p.startsWith("win")) {
-                              throw cb.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var15 = (String) (var8.field_g);
                             if (!var15.startsWith("http://") &&
                               !var15.startsWith("https://")) {
-                              throw cb.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var15.length() > var5; var5++) {
                               if (var4_ref_String.indexOf((int) var15.charAt(var5)) == -1) {
-                                throw cb.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var15 + "\"");
@@ -316,16 +316,16 @@ final class cb implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref_Exception = (Exception) (Object) decompiledCaughtException;
                             var8.field_e = var3_ref_Exception;
-                            throw cb.<RuntimeException>$cfr$sneakyThrow(var3_ref_Exception);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref_Exception);
                           }
                         }
                         break;
                       case 13:
-                        var3_ref_lj = cb.a(-117, (String) (var8.field_g), "", field_t);
+                        var3_ref_lj = PlatformTaskDispatcher.a(-117, (String) (var8.field_g), "", field_t);
                         var8.field_e = var3_ref_lj;
                         break;
                       case 12:
-                        var3_ref_lj = cb.a(-121, (String) (var8.field_g), field_r, field_t);
+                        var3_ref_lj = PlatformTaskDispatcher.a(-121, (String) (var8.field_g), field_r, field_t);
                         var8.field_e = var3_ref_lj;
                         break;
                       case 5:
@@ -384,11 +384,11 @@ final class cb implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (uf) null;
+                      if (false) throw (ProxyAuthenticationException) null;
                       var8.field_e = qe.a((String) (var8.field_g), var8.field_a, (byte) 126).a(116);
-                    } catch (uf decompiledCaughtParameter2) {
+                    } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref_uf = (uf) (Object) decompiledCaughtException;
+                      var3_ref_uf = (ProxyAuthenticationException) (Object) decompiledCaughtException;
                       var8.field_e = var3_ref_uf.getMessage();
                       throw var3_ref_uf;
                     }
@@ -433,7 +433,7 @@ final class cb implements Runnable {
     final ei a(java.awt.Frame param0, int param1) {
         if (param1 >= -71) {
           String var4 = (String) null;
-          cb.a(112, (String) null, (String) null, 9);
+          PlatformTaskDispatcher.a(112, (String) null, (String) null, 9);
         }
         return this.a(0, 7, -102, param0, 0);
     }
@@ -441,7 +441,7 @@ final class cb implements Runnable {
     final ei a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 27705) {
           String var7 = (String) null;
-          cb.a(-61, (String) null, (String) null, -124);
+          PlatformTaskDispatcher.a(-61, (String) null, (String) null, -124);
         }
         return this.a(param4 + (param0 << 16), 6, param3 - 27832, (Object) null, param1 + (param2 << 16));
     }
@@ -490,13 +490,13 @@ final class cb implements Runnable {
         return this.a(0, 4, 32, param1, 0);
     }
 
-    cb(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
-        vb var6 = null;
+        DisplayModeEnumerator var6 = null;
         this.field_v = false;
         this.field_h = null;
         this.field_k = null;
@@ -594,7 +594,7 @@ final class cb implements Runnable {
             if (!this.field_v) {
               this.field_g = Class.forName("gl").newInstance();
             } else {
-              var6 = new vb();
+              var6 = new DisplayModeEnumerator();
               this.field_s = var6;
             }
           } catch (java.lang.Throwable decompiledCaughtParameter9) {
@@ -605,7 +605,7 @@ final class cb implements Runnable {
             if (!this.field_v) {
               this.field_n = Class.forName("cj").newInstance();
             } else {
-              this.field_d = new cp();
+              this.field_d = new NativeWindowCallback();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter10) {
             decompiledCaughtException = decompiledCaughtParameter10;

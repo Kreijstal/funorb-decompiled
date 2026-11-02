@@ -3,7 +3,7 @@
  */
 final class lg {
     static ak field_c;
-    static tf[] field_d;
+    static Sprite[] field_d;
     static String[] field_b;
     static int field_a;
 
@@ -303,6 +303,6 @@ final class lg {
 
     static {
         field_b = new String[255];
-        field_d = new tf[2];
+        field_d = new Sprite[2];
     }
 }

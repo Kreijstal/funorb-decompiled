@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hf extends fa {
+final class hf extends IntrusiveNode {
     int field_l;
     static int field_n;
     int field_s;
@@ -13,7 +13,7 @@ final class hf extends fa {
     static int field_q;
     static int field_w;
     int field_v;
-    static tf field_m;
+    static Sprite field_m;
     static long field_t;
 
     public static void a(byte param0) {

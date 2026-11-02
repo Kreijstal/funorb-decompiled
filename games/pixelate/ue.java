@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ue extends fa {
+final class ue extends IntrusiveNode {
     int[][] field_l;
     static ak field_t;
     static String field_q;
@@ -76,7 +76,7 @@ final class ue extends fa {
     }
 
     final static void b(int param0, byte param1) {
-        fa var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         hf var4 = null;
         RuntimeException decompiledCaughtException = null;

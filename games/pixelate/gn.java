@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gn extends lm {
+abstract class gn extends DualLinkNode {
     volatile boolean field_v;
     static nc field_y;
     boolean field_t;
@@ -12,35 +12,35 @@ abstract class gn extends lm {
     static wm field_u;
 
     final static void a(byte param0) {
-        ui.field_f = new tf(7, 25);
+        ui.field_f = new Sprite(7, 25);
         ui.field_f.c();
-        t.d(0, 0, 28, 25, 7, 16711935);
-        t.e(0, 0, 28, 25, 7, 65793);
-        qa.field_f.a(19692);
-        ec.field_q = new tf(7, 25);
+        SoftwareRasterizer.d(0, 0, 28, 25, 7, 16711935);
+        SoftwareRasterizer.e(0, 0, 28, 25, 7, 65793);
+        ClientException.field_f.a(19692);
+        ec.field_q = new Sprite(7, 25);
         ec.field_q.c();
-        t.e(1, 3, 28, 21, 6, 16777215);
-        t.e(1, 2, 28, 21, 6, 16777215);
+        SoftwareRasterizer.e(1, 3, 28, 21, 6, 16777215);
+        SoftwareRasterizer.e(1, 2, 28, 21, 6, 16777215);
         if (param0 > 91) {
-          t.e(0, 2, 28, 21, 6, 65793);
-          qa.field_f.a(19692);
-          di.field_c = new tf(8, 25);
+          SoftwareRasterizer.e(0, 2, 28, 21, 6, 65793);
+          ClientException.field_f.a(19692);
+          di.field_c = new Sprite(8, 25);
           di.field_c.c();
-          t.e(t.field_j - 28, 3, 28, 21, 6, 16777215);
-          t.e(-28 + t.field_j, 2, 28, 21, 6, 16777215);
-          t.e(-28 + (t.field_j - 1), 2, 28, 21, 6, 65793);
-          qa.field_f.a(19692);
+          SoftwareRasterizer.e(SoftwareRasterizer.field_j - 28, 3, 28, 21, 6, 16777215);
+          SoftwareRasterizer.e(-28 + SoftwareRasterizer.field_j, 2, 28, 21, 6, 16777215);
+          SoftwareRasterizer.e(-28 + (SoftwareRasterizer.field_j - 1), 2, 28, 21, 6, 65793);
+          ClientException.field_f.a(19692);
           return;
         }
         gn.a((byte) 36);
-        t.e(0, 2, 28, 21, 6, 65793);
-        qa.field_f.a(19692);
-        di.field_c = new tf(8, 25);
+        SoftwareRasterizer.e(0, 2, 28, 21, 6, 65793);
+        ClientException.field_f.a(19692);
+        di.field_c = new Sprite(8, 25);
         di.field_c.c();
-        t.e(t.field_j - 28, 3, 28, 21, 6, 16777215);
-        t.e(-28 + t.field_j, 2, 28, 21, 6, 16777215);
-        t.e(-28 + (t.field_j - 1), 2, 28, 21, 6, 65793);
-        qa.field_f.a(19692);
+        SoftwareRasterizer.e(SoftwareRasterizer.field_j - 28, 3, 28, 21, 6, 16777215);
+        SoftwareRasterizer.e(-28 + SoftwareRasterizer.field_j, 2, 28, 21, 6, 16777215);
+        SoftwareRasterizer.e(-28 + (SoftwareRasterizer.field_j - 1), 2, 28, 21, 6, 65793);
+        ClientException.field_f.a(19692);
     }
 
     public static void b(byte param0) {

@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dk {
-    static tf[][] field_a;
+    static Sprite[][] field_a;
     static boolean field_b;
     static int field_d;
-    static tf field_e;
+    static Sprite field_e;
     static boolean field_c;
     static String field_f;
 
-    final static tf a(int param0, fm param1, int param2, int param3) {
+    final static Sprite a(int param0, fm param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        tf stackIn_5_0 = null;
-        tf stackIn_7_0 = null;
+        Sprite stackIn_5_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -21,13 +21,13 @@ final class dk {
         try {
           if (!rk.a(param0, false, param1, param2)) {
             stackIn_2_0 = null;
-            return (tf) (stackIn_2_0);
+            return (Sprite) (stackIn_2_0);
           }
           if (param3 == -1) {
             stackIn_7_0 = ca.a(0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (tf) null;
+          stackIn_5_0 = (Sprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,7 +100,7 @@ final class dk {
           fm var2 = (fm) null;
           dk.a((String) null, 119, (String) null, (fm) null);
         }
-        field_a = (tf[][]) null;
+        field_a = (Sprite[][]) null;
     }
 
     final static void a(boolean param0, fm param1) {
@@ -109,7 +109,7 @@ final class dk {
         rl var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        tf[] var8 = null;
+        Sprite[] var8 = null;
         pc var9 = null;
         int var10 = 0;
         pc var11 = null;
@@ -144,8 +144,8 @@ final class dk {
             var10++;
           }
           if (param0) {
-            var8 = (tf[]) null;
-            dk.a(53, -11, (byte) -74, -9, -26, (tf[]) null);
+            var8 = (Sprite[]) null;
+            dk.a(53, -11, (byte) -74, -9, -26, (Sprite[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,7 +162,7 @@ final class dk {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, tf[] param5) {
+    final static void a(int param0, int param1, byte param2, int param3, int param4, Sprite[] param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -238,76 +238,76 @@ final class dk {
             }
             var18 = var14;
             var19 = var15;
-            t.a(qk.field_c);
+            SoftwareRasterizer.a(qk.field_c);
             if (var18 > var19) {
               var19 = param3 * var8 / (var9 + var8) + param4;
               var18 = param3 * var8 / (var9 + var8) + param4;
             }
             if (null != param5[0]) {
-              t.d(param1, param4, var16, var18);
+              SoftwareRasterizer.d(param1, param4, var16, var18);
               param5[0].b(param1, param4);
-              t.b(qk.field_c);
+              SoftwareRasterizer.b(qk.field_c);
             }
             if (param5[2] != null) {
-              t.d(var17, param4, var10, var18);
+              SoftwareRasterizer.d(var17, param4, var10, var18);
               param5[2].b(var13, param4);
-              t.b(qk.field_c);
+              SoftwareRasterizer.b(qk.field_c);
             }
             if (param2 != 75) {
               return;
             }
             if (param5[6] != null) {
-              t.d(param1, var19, var16, var11);
+              SoftwareRasterizer.d(param1, var19, var16, var11);
               param5[6].b(param1, var15);
-              t.b(qk.field_c);
+              SoftwareRasterizer.b(qk.field_c);
             }
             if (null != param5[8]) {
-              t.d(var17, var19, var10, var11);
+              SoftwareRasterizer.d(var17, var19, var10, var11);
               param5[8].b(var13, var15);
-              t.b(qk.field_c);
+              SoftwareRasterizer.b(qk.field_c);
             }
             if (param5[1] != null &&
               0 != param5[1].field_A) {
-              t.d(var16, param4, var17, var18);
+              SoftwareRasterizer.d(var16, param4, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param5[1].field_A) {
                 param5[1].b(var20, param4);
               }
-              t.b(qk.field_c);
+              SoftwareRasterizer.b(qk.field_c);
             }
             if (null != param5[7] &&
               param5[7].field_A != 0) {
-              t.d(var16, var19, var17, var11);
+              SoftwareRasterizer.d(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param5[7].field_A) {
                 param5[7].b(var20Lifetime1, var15);
               }
-              t.b(qk.field_c);
+              SoftwareRasterizer.b(qk.field_c);
             }
             if (param5[3] != null &&
               param5[3].field_B != 0) {
-              t.d(param1, var18, var16, var19);
+              SoftwareRasterizer.d(param1, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param5[3].field_B) {
                 param5[3].b(param1, var20Lifetime2);
               }
-              t.b(qk.field_c);
+              SoftwareRasterizer.b(qk.field_c);
             }
             if (null != param5[5] &&
               param5[5].field_B != 0) {
-              t.d(var17, var18, var10, var19);
+              SoftwareRasterizer.d(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param5[5].field_B) {
                 param5[5].b(var13, var20Lifetime3);
               }
-              t.b(qk.field_c);
+              SoftwareRasterizer.b(qk.field_c);
             }
             if (param5[4] != null &&
               param5[4].field_A != 0 &&
               0 != param5[4].field_B) {
-              t.d(var16, var18, var17, var19);
+              SoftwareRasterizer.d(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param5[4].field_B) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param5[4].field_A) {
                   param5[4].b(var21, var20Lifetime4);
                 }
               }
-              t.b(qk.field_c);
+              SoftwareRasterizer.b(qk.field_c);
               return;
             }
             return;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fj {
-    static wb field_c;
+    static MouseInputHandler field_c;
     static int field_a;
     static int field_b;
 
@@ -103,7 +103,7 @@ final class fj {
           try {
             var5 = -63 % ((param2 - 41) / 63);
             var4 = param3.getGraphics();
-            qa.field_f.a(var4, false, param0, param1);
+            ClientException.field_f.a(var4, false, param0, param1);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -146,6 +146,6 @@ final class fj {
     }
 
     static {
-        field_c = new wb();
+        field_c = new MouseInputHandler();
     }
 }

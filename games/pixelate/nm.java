@@ -4,20 +4,20 @@
 final class nm {
     static String field_b;
     private bb field_a;
-    static tf field_f;
-    private fa field_e;
+    static Sprite field_f;
+    private IntrusiveNode field_e;
     static int field_c;
     static boolean field_d;
 
-    final fa a(byte param0) {
-        fa var2 = this.field_e;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_e;
         if (var2 == this.field_a.field_f) {
           this.field_e = null;
           return null;
         }
         this.field_e = var2.field_a;
         if (param0 != -104) {
-          return (fa) null;
+          return (IntrusiveNode) null;
         }
         return var2;
     }
@@ -30,8 +30,8 @@ final class nm {
         field_f = null;
     }
 
-    final fa d(int param0) {
-        fa var2 = this.field_a.field_f.field_a;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_a.field_f.field_a;
         if (param0 != 0) {
           field_b = (String) null;
         }
@@ -58,7 +58,7 @@ final class nm {
             var3 = (String) null;
             nm.a((String) null, -43);
           }
-          var1 = (uj) (i.field_n.c(1504642273));
+          var1 = (uj) (ImageProducerRasterBuffer.field_n.c(1504642273));
           while (var1 != null) {
             if (var1.field_Tb > 0) {
               var1.field_Tb = var1.field_Tb - 1;
@@ -69,7 +69,7 @@ final class nm {
                 }
               }
             }
-            var1 = (uj) (i.field_n.f(param0 ^ -1504642274));
+            var1 = (uj) (ImageProducerRasterBuffer.field_n.f(param0 ^ -1504642274));
           }
           var1_ref = (eq) (nk.field_a.c(param0 ^ -1504642274));
           while (var1_ref != null) {
@@ -108,12 +108,12 @@ final class nm {
         }
     }
 
-    final fa b(byte param0, fa param1) {
-        fa var3 = null;
+    final IntrusiveNode b(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
-        fa stackIn_8_0 = null;
-        fa stackIn_10_0 = null;
+        IntrusiveNode stackIn_8_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -127,14 +127,14 @@ final class nm {
           if (this.field_a.field_f == var3) {
             this.field_e = null;
             stackIn_5_0 = null;
-            return (fa) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
           this.field_e = var3.field_a;
           if (param0 < -72) {
             stackIn_10_0 = var3;
             return stackIn_10_0;
           }
-          stackIn_8_0 = (fa) null;
+          stackIn_8_0 = (IntrusiveNode) null;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -154,29 +154,29 @@ final class nm {
         String var2 = (String) null;
         al.a("", -110, (String) null);
         if (!param0) {
-          field_f = (tf) null;
+          field_f = (Sprite) null;
         }
     }
 
-    final fa e(int param0) {
-        fa var2 = this.field_e;
+    final IntrusiveNode e(int param0) {
+        IntrusiveNode var2 = this.field_e;
         if (this.field_a.field_f == var2) {
           this.field_e = null;
           return null;
         }
         if (param0 > -56) {
-          return (fa) null;
+          return (IntrusiveNode) null;
         }
         this.field_e = var2.field_h;
         return var2;
     }
 
-    final fa a(byte param0, fa param1) {
-        fa var3 = null;
+    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        fa var4 = null;
+        IntrusiveNode var4 = null;
         Object stackIn_6_0 = null;
-        fa stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -190,12 +190,12 @@ final class nm {
           if (var3 == this.field_a.field_f) {
             this.field_e = null;
             stackIn_6_0 = null;
-            return (fa) (stackIn_6_0);
+            return (IntrusiveNode) (stackIn_6_0);
           }
           this.field_e = var3.field_h;
           if (param0 != -99) {
-            var4 = (fa) null;
-            this.b((byte) -11, (fa) null);
+            var4 = (IntrusiveNode) null;
+            this.b((byte) -11, (IntrusiveNode) null);
           }
           stackIn_10_0 = var3;
           return stackIn_10_0;
@@ -249,11 +249,11 @@ final class nm {
         }
     }
 
-    final fa b(int param0) {
+    final IntrusiveNode b(int param0) {
         if (param0 != -1) {
           field_c = 52;
         }
-        fa var2 = this.field_a.field_f.field_h;
+        IntrusiveNode var2 = this.field_a.field_f.field_h;
         if (var2 == this.field_a.field_f) {
           this.field_e = null;
           return null;

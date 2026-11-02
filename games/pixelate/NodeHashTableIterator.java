@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-final class sh implements Iterator {
-    private fa field_a;
+final class NodeHashTableIterator implements Iterator {
+    private IntrusiveNode field_a;
     static String field_c;
-    private kl field_g;
+    private IterableNodeHashTable field_g;
     private int field_b;
-    private fa field_d;
-    static mo field_e;
+    private IntrusiveNode field_d;
+    static BufferedSocket field_e;
     static int field_f;
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        fa var1;
+        IntrusiveNode var1;
         int var2;
         var2 = Pixelate.field_H ? 1 : 0;
         if (this.field_g.field_e[-1 + this.field_b] != this.field_a) {
@@ -100,12 +100,12 @@ final class sh implements Iterator {
         this.field_d = null;
         this.field_a = this.field_g.field_e[0].field_a;
         if (param0 >= -11) {
-          this.field_a = (fa) null;
+          this.field_a = (IntrusiveNode) null;
           return;
         }
     }
 
-    sh(kl param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_d = null;
         try {
           this.field_g = param0;

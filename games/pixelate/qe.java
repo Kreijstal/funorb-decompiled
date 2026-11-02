@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends lm {
+final class qe extends DualLinkNode {
     int[] field_D;
     static int[] field_v;
     String field_C;
@@ -43,10 +43,10 @@ final class qe extends lm {
         field_v = null;
     }
 
-    final void a(boolean param0, we param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
-        we var5 = null;
+        PacketBuffer var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -55,8 +55,8 @@ final class qe extends lm {
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           if (param0) {
-            var5 = (we) null;
-            this.a(113, 78, (we) null);
+            var5 = (PacketBuffer) null;
+            this.a(113, 78, (PacketBuffer) null);
           }
           while (true) {
             var3_int = param1.f(255);
@@ -114,7 +114,7 @@ final class qe extends lm {
         this.field_y = false;
     }
 
-    private final void a(int param0, int param1, we param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         char[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         char stackIn_10_2 = 0;
@@ -130,7 +130,7 @@ final class qe extends lm {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        we var8 = null;
+        PacketBuffer var8 = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           if (param0 != 1) {
@@ -177,8 +177,8 @@ final class qe extends lm {
             this.field_C = param2.h(param1 ^ 6);
           }
           if (param1 != 3) {
-            var8 = (we) null;
-            this.a(true, (we) null);
+            var8 = (PacketBuffer) null;
+            this.a(true, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

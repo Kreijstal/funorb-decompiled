@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf extends fa {
+final class bf extends IntrusiveNode {
     static String[][] field_q;
     static String field_t;
     private int field_n;
     static float field_o;
-    private tf field_l;
+    private Sprite field_l;
     static ak field_k;
     private boolean[] field_p;
     static long field_m;
@@ -88,11 +88,11 @@ final class bf extends fa {
         return new int[8];
     }
 
-    final static tf[] a(int param0, String param1, String param2) {
-        tf[] var3 = null;
+    final static Sprite[] a(int param0, String param1, String param2) {
+        Sprite[] var3 = null;
         RuntimeException var3_ref = null;
-        tf[] var4 = null;
-        tf[] stackIn_1_0 = null;
+        Sprite[] var4 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -142,7 +142,7 @@ final class bf extends fa {
         if (param1) {
           var4++;
         }
-        return v.field_a[var4];
+        return MouseWheelHandler.field_a[var4];
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -157,12 +157,12 @@ final class bf extends fa {
           param2 >= 256) {
           this.a(param3, param1, (byte) 98);
         } else {
-          t.a(a.field_N);
+          SoftwareRasterizer.a(a.field_N);
           this.field_l.c();
-          t.d();
+          SoftwareRasterizer.d();
           this.a(0, 0, (byte) 98);
-          qa.field_f.a(19692);
-          t.b(a.field_N);
+          ClientException.field_f.a(19692);
+          SoftwareRasterizer.b(a.field_N);
           fi.a(this.field_l, param1, param3, param4, param2);
         }
     }
@@ -171,13 +171,13 @@ final class bf extends fa {
         int var7 = 0;
         int var8 = 0;
         int stackIn_5_0 = 0;
-        tf[] stackIn_12_0 = null;
+        Sprite[] stackIn_12_0 = null;
         int stackIn_13_1 = 0;
-        tf[] stackIn_18_0 = null;
+        Sprite[] stackIn_18_0 = null;
         int stackIn_19_1 = 0;
-        tf[] stackIn_23_0 = null;
+        Sprite[] stackIn_23_0 = null;
         int stackIn_24_1 = 0;
-        tf[] stackIn_26_0 = null;
+        Sprite[] stackIn_26_0 = null;
         int stackIn_27_1 = 0;
         int var4;
         int var5;
@@ -205,14 +205,14 @@ final class bf extends fa {
                 } else {
                   stackIn_24_1 = 0;
                 }
-                ((tf) (Object) stackIn_23_0[stackIn_24_1]).f(var4, var5);
+                ((Sprite) (Object) stackIn_23_0[stackIn_24_1]).f(var4, var5);
                 stackIn_26_0 = fq.field_o.field_a;
                 if (this.field_p[var7 * this.field_n + var8]) {
                   stackIn_27_1 = 1;
                 } else {
                   stackIn_27_1 = 0;
                 }
-                ((tf) (Object) stackIn_26_0[stackIn_27_1]).a(var4, var5, var6);
+                ((Sprite) (Object) stackIn_26_0[stackIn_27_1]).a(var4, var5, var6);
               } else {
                 stackIn_18_0 = fq.field_o.field_a;
                 if (this.field_p[var8 + var7 * this.field_n]) {
@@ -220,7 +220,7 @@ final class bf extends fa {
                 } else {
                   stackIn_19_1 = 0;
                 }
-                ((tf) (Object) stackIn_18_0[stackIn_19_1]).f(var4, var5);
+                ((Sprite) (Object) stackIn_18_0[stackIn_19_1]).f(var4, var5);
               }
             } else {
               stackIn_12_0 = rg.field_e.field_a;
@@ -229,7 +229,7 @@ final class bf extends fa {
               } else {
                 stackIn_13_1 = 1;
               }
-              ((tf) (Object) stackIn_12_0[stackIn_13_1]).f(var4, var5);
+              ((Sprite) (Object) stackIn_12_0[stackIn_13_1]).f(var4, var5);
             }
             var4 += 16;
           }
@@ -249,7 +249,7 @@ final class bf extends fa {
           this.field_p = ad.a(param0, 21922);
           this.field_n = param0.field_f;
           this.field_s = param0.field_a;
-          this.field_l = new tf(16 * this.field_n, 16 * this.field_s);
+          this.field_l = new Sprite(16 * this.field_n, 16 * this.field_s);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -537,7 +537,7 @@ final class ti extends sj {
         if (param0) {
           ti.a(-80, 'ￆ');
         }
-        var1.a(t.field_k, t.field_a, t.field_d, t.field_e, (byte) -102, t.field_h, t.field_f, t.field_j);
+        var1.a(SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, SoftwareRasterizer.field_e, (byte) -102, SoftwareRasterizer.field_h, SoftwareRasterizer.field_f, SoftwareRasterizer.field_j);
         oj.field_P.a(22125, var1);
     }
 

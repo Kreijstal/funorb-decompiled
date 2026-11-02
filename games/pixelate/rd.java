@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class rd extends fa {
+final class rd extends IntrusiveNode {
     static byte[] field_l;
     int field_k;
     int field_m;
@@ -11,8 +11,8 @@ final class rd extends fa {
     public static void a(int param0) {
         field_l = null;
         if (param0 != -5778) {
-          we var2 = (we) null;
-          rd.a(-60, (we) null);
+          PacketBuffer var2 = (PacketBuffer) null;
+          rd.a(-60, (PacketBuffer) null);
         }
     }
 
@@ -156,24 +156,24 @@ final class rd extends fa {
           if (param1) {
             field_l = (byte[]) null;
           }
-          if (!(param0 > vi.field_o.field_m)) {
+          if (!(param0 > vi.field_o.position)) {
             return true;
           }
-          if (null == sh.field_e) {
+          if (null == NodeHashTableIterator.field_e) {
             return false;
           }
-          int var2_int = sh.field_e.a(-70);
+          int var2_int = NodeHashTableIterator.field_e.a(-70);
           if (var2_int > 0) {
-            if (!(-vi.field_o.field_m + param0 >= var2_int)) {
-              var2_int = param0 - vi.field_o.field_m;
+            if (!(-vi.field_o.position + param0 >= var2_int)) {
+              var2_int = param0 - vi.field_o.position;
             }
-            sh.field_e.a(vi.field_o.field_k, vi.field_o.field_m, (byte) 119, var2_int);
+            NodeHashTableIterator.field_e.a(vi.field_o.payload, vi.field_o.position, (byte) 119, var2_int);
             jc.field_c = hm.a(64);
-            vi.field_o.field_m = vi.field_o.field_m + var2_int;
-            if (param0 > vi.field_o.field_m) {
+            vi.field_o.position = vi.field_o.position + var2_int;
+            if (param0 > vi.field_o.position) {
               return false;
             }
-            vi.field_o.field_m = 0;
+            vi.field_o.position = 0;
             return true;
           }
           try {
@@ -194,7 +194,7 @@ final class rd extends fa {
         }
     }
 
-    final static void a(int param0, we param1) {
+    final static void a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;

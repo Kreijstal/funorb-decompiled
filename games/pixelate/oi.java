@@ -29,7 +29,7 @@ final class oi {
           wa.field_c.b(-6183, var8);
           if (!og.a((byte) -96)) {
             tm.field_X = rj.field_F;
-            v.field_b = null;
+            MouseWheelHandler.field_b = null;
             oc.field_J = param2;
             nk.field_b = param3;
             um.field_r = param1;

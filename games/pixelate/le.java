@@ -5,11 +5,11 @@ final class le {
     static int field_j;
     private int field_f;
     static ak field_h;
-    private pg field_g;
+    private SecondaryNodeDeque field_g;
     static int[] field_b;
     static String field_d;
     static String field_i;
-    private kl field_e;
+    private IterableNodeHashTable field_e;
     static int field_c;
     private int field_a;
 
@@ -206,13 +206,13 @@ final class le {
 
     private le(int param0, int param1) {
         int var3;
-        this.field_g = new pg();
+        this.field_g = new SecondaryNodeDeque();
         this.field_f = param0;
         this.field_a = param0;
         var3 = 1;
         while (true) {
           if (param0 <= var3 + var3) {
-            this.field_e = new kl(var3);
+            this.field_e = new IterableNodeHashTable(var3);
             return;
           }
           if (param1 > var3) {
@@ -221,7 +221,7 @@ final class le {
           }
           break;
         }
-        this.field_e = new kl(var3);
+        this.field_e = new IterableNodeHashTable(var3);
         return;
     }
 

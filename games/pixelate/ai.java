@@ -52,7 +52,7 @@ final class ai {
         RuntimeException decompiledCaughtException = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          if (!we.a(true, 5832, param1)) {
+          if (!PacketBuffer.a(true, 5832, param1)) {
             return false;
           }
           var2_int = 0;

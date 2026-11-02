@@ -8,13 +8,13 @@ abstract class jg extends ng implements j {
     static fp field_F;
     static String field_M;
     static java.awt.Image field_K;
-    static tf field_H;
+    static Sprite field_H;
     static char[] field_I;
     static int field_J;
 
     final boolean b(boolean param0) {
         if (!param0) {
-          field_H = (tf) null;
+          field_H = (Sprite) null;
         }
         return null != this.m(0) ? true : false;
     }
@@ -128,7 +128,7 @@ abstract class jg extends ng implements j {
         super.a(param0, (byte) 75, param2, param3, param4);
         this.a(14210);
         if (param1 < 19) {
-          field_H = (tf) null;
+          field_H = (Sprite) null;
         }
     }
 

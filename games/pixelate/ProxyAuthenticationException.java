@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class uf extends IOException {
+final class ProxyAuthenticationException extends IOException {
     static String field_f;
     static int[] field_b;
     static int field_g;
@@ -12,7 +12,7 @@ final class uf extends IOException {
     static int field_a;
     static int[] field_e;
 
-    uf(String param0) {
+    ProxyAuthenticationException(String param0) {
         super(param0);
     }
 
@@ -29,7 +29,7 @@ final class uf extends IOException {
         field_f = null;
     }
 
-    final static void a(int param0, int param1, int param2, tf param3, int param4, int param5, int param6, int param7, byte param8) {
+    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7, byte param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -39,27 +39,27 @@ final class uf extends IOException {
           var9_int = -param5 + (param3.field_D + param4) + param6;
           var10 = param2 + param6 + param4 + param3.field_D;
           var11 = (param3.field_E >> 1) + param3.field_y + param7;
-          t.d(var9_int, 0, var10, param0 + var11);
+          SoftwareRasterizer.d(var9_int, 0, var10, param0 + var11);
           param3.b(param4 - 1, -1 + param7, param1);
           param3.b(param4 - 1, 1 + param7, param1);
-          t.b(wi.field_f);
-          t.d(1 + var9_int, 0, var10 + 1, var11 + param0);
+          SoftwareRasterizer.b(wi.field_f);
+          SoftwareRasterizer.d(1 + var9_int, 0, var10 + 1, var11 + param0);
           param3.b(1 + param4, param7 - 1, param1);
           param3.b(1 + param4, param7 + 1, param1);
-          t.b(wi.field_f);
+          SoftwareRasterizer.b(wi.field_f);
           var10Lifetime1 = param3.field_D + (param3.field_F + param4 - param6 - param5);
           var9_intLifetime1 = -param2 + (param4 + param3.field_D) + param3.field_F - param6;
-          t.d(var9_intLifetime1, -param0 + var11, var10Lifetime1, 480);
+          SoftwareRasterizer.d(var9_intLifetime1, -param0 + var11, var10Lifetime1, 480);
           param3.b(param4 - 1, param7 - 1, param1);
           param3.b(-1 + param4, 1 + param7, param1);
-          t.b(wi.field_f);
+          SoftwareRasterizer.b(wi.field_f);
           if (param8 > -81) {
             field_e = (int[]) null;
           }
-          t.d(1 + var9_intLifetime1, -param0 + var11, 1 + var10Lifetime1, 480);
+          SoftwareRasterizer.d(1 + var9_intLifetime1, -param0 + var11, 1 + var10Lifetime1, 480);
           param3.b(1 + param4, -1 + param7, param1);
           param3.b(param4 + 1, 1 + param7, param1);
-          t.b(wi.field_f);
+          SoftwareRasterizer.b(wi.field_f);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "uf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

@@ -4,7 +4,7 @@
 final class jc implements eb {
     static id field_f;
     static long field_c;
-    static tf field_a;
+    static Sprite field_a;
     static String field_e;
     static boolean field_d;
     static int field_b;
@@ -17,8 +17,8 @@ final class jc implements eb {
           }
           var3 = aa.field_f;
           var3.g(param1, 15514);
-          var3.e(160, param2.field_m);
-          var3.b(param0 + 1276387975, param2.field_k);
+          var3.writeByte(160, param2.field_m);
+          var3.writeShort(param0 + 1276387975, param2.field_k);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -42,7 +42,7 @@ final class jc implements eb {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        tf var8 = null;
+        Sprite var8 = null;
         try {
           if (param1 != -124) {
             field_e = (String) null;
@@ -50,7 +50,7 @@ final class jc implements eb {
           var6_int = param0.field_z + param3;
           var7 = param2 + param0.field_p;
           kk.a(var6_int, param0.field_C, var7, param0.field_E, (byte) -51);
-          var8 = ha.field_g[1];
+          var8 = CanvasRasterBuffer.field_g[1];
           if (param0 instanceof qm &&
             ((qm) (param0)).field_M) {
             var8.b((-var8.field_A + param0.field_E >> 1) + var6_int + 1, var7 + (1 + (-var8.field_B + param0.field_C >> 1)), 256);

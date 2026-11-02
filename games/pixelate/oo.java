@@ -4,7 +4,7 @@
 final class oo {
     static int field_f;
     static boolean field_d;
-    static tf[] field_c;
+    static Sprite[] field_c;
     static String field_a;
     static int field_b;
     static int[][] field_e;

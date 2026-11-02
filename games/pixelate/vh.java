@@ -36,7 +36,7 @@ final class vh {
           ce.field_c = -(nf.field_c >> 1) + qh.field_b;
           var2 = ce.field_c;
           for (var3 = 0; var3 < pl.field_J.length; var3++) {
-            var4 = uf.field_e[var3];
+            var4 = ProxyAuthenticationException.field_e[var3];
             if (var4 < 0) {
               var5 = hd.field_n;
             } else {
@@ -61,7 +61,7 @@ final class vh {
               var9 = stackIn_18_0;
               var2 = var2 + ki.field_e;
               if (var9 != null) {
-                var9.a(var2, dk.field_d + (lf.field_b << 1), -1, (uf.field_a << 1) + var7, var8 - uf.field_a);
+                var9.a(var2, dk.field_d + (lf.field_b << 1), -1, (ProxyAuthenticationException.field_a << 1) + var7, var8 - ProxyAuthenticationException.field_a);
               }
               var2 = var2 + lf.field_b;
             }
@@ -69,7 +69,7 @@ final class vh {
               ie.field_G.a(var6, var8, var2 + w.field_q, var5, -1);
               var2 = var2 + (dk.field_d + lf.field_b + ki.field_e);
             } else {
-              lm.field_o.a(var6, var8, ab.field_b + var2, var5, -1);
+              DualLinkNode.field_o.a(var6, var8, ab.field_b + var2, var5, -1);
               var2 = var2 + da.field_m;
             }
           }
@@ -81,18 +81,18 @@ final class vh {
         }
     }
 
-    final void a(int param0, byte[] param1, we param2) {
+    final void a(int param0, byte[] param1, PacketBuffer param2) {
         try {
           try {
-            if (31 != param2.field_k[param2.field_m] ||
-              param2.field_k[param2.field_m + 1] != -117) {
+            if (31 != param2.payload[param2.position] ||
+              param2.payload[param2.position + 1] != -117) {
               throw new RuntimeException("");
             }
             if (null == this.field_a) {
               this.field_a = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_a.setInput(param2.field_k, param2.field_m + 10, param0 - param2.field_m - (10 - param2.field_k.length));
+              this.field_a.setInput(param2.payload, param2.position + 10, param0 - param2.position - (10 - param2.payload.length));
               this.field_a.inflate(param1);
             } catch (Exception exception) {
               this.field_a.reset();

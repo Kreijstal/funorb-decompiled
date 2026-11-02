@@ -23,17 +23,17 @@ final class qg {
         if (!param2) {
           var3 = aa.field_f;
           var3.g(param1, 15514);
-          var3.e(160, 3);
-          var3.e(160, 9);
-          var3.b(1276387944, param0);
+          var3.writeByte(160, 3);
+          var3.writeByte(160, 9);
+          var3.writeShort(1276387944, param0);
           return;
         }
         field_c = (String) null;
         var3Lifetime1 = aa.field_f;
         var3Lifetime1.g(param1, 15514);
-        var3Lifetime1.e(160, 3);
-        var3Lifetime1.e(160, 9);
-        var3Lifetime1.b(1276387944, param0);
+        var3Lifetime1.writeByte(160, 3);
+        var3Lifetime1.writeByte(160, 9);
+        var3Lifetime1.writeShort(1276387944, param0);
     }
 
     static {

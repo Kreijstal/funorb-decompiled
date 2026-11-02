@@ -251,74 +251,74 @@ final class ve extends ak {
         return true;
     }
 
-    final static tf[] a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
-        tf var19 = null;
-        tf var20 = null;
-        tf var17 = null;
-        tf var18 = null;
+    final static Sprite[] a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
+        Sprite var19 = null;
+        Sprite var20 = null;
+        Sprite var17 = null;
+        Sprite var18 = null;
         Object var10 = null;
         Object var11 = null;
-        int[] var16 = t.field_k;
+        int[] var16 = SoftwareRasterizer.field_k;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = t.field_j;
-        int var8 = t.field_d;
-        tf var9 = new tf(16, param3);
+        int var7 = SoftwareRasterizer.field_j;
+        int var8 = SoftwareRasterizer.field_d;
+        Sprite var9 = new Sprite(16, param3);
         var9.c();
         if (param4) {
-          t.g(0, 0, 16, param3, param5, param2);
+          SoftwareRasterizer.g(0, 0, 16, param3, param5, param2);
           var10 = null;
           if (param0) {
             var19 = var9.a();
             var10 = var19;
             var19.c();
-            t.b(0, 0, 5, 0);
-            t.b(0, 1, 3, 0);
-            t.b(0, 2, 2, 0);
-            t.b(0, 3, 1, 0);
-            t.b(0, 4, 1, 0);
+            SoftwareRasterizer.b(0, 0, 5, 0);
+            SoftwareRasterizer.b(0, 1, 3, 0);
+            SoftwareRasterizer.b(0, 2, 2, 0);
+            SoftwareRasterizer.b(0, 3, 1, 0);
+            SoftwareRasterizer.b(0, 4, 1, 0);
           }
           var11 = null;
           if (param1) {
             var20 = var9.a();
             var11 = var20;
             var20.c();
-            t.b(11, 0, 5, 0);
-            t.b(13, 1, 3, 0);
-            t.b(14, 2, 2, 0);
-            t.b(15, 3, 1, 0);
-            t.b(15, 4, 1, 0);
+            SoftwareRasterizer.b(11, 0, 5, 0);
+            SoftwareRasterizer.b(13, 1, 3, 0);
+            SoftwareRasterizer.b(14, 2, 2, 0);
+            SoftwareRasterizer.b(15, 3, 1, 0);
+            SoftwareRasterizer.b(15, 4, 1, 0);
           }
-          t.a(var16, var7, var8);
-          return new tf[]{null, null, null, (tf) (var10), var9, (tf) (var11), null, null, null};
+          SoftwareRasterizer.a(var16, var7, var8);
+          return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
         field_Kb = 20;
-        t.g(0, 0, 16, param3, param5, param2);
+        SoftwareRasterizer.g(0, 0, 16, param3, param5, param2);
         var10 = null;
         if (param0) {
           var17 = var9.a();
           var10 = var17;
           var17.c();
-          t.b(0, 0, 5, 0);
-          t.b(0, 1, 3, 0);
-          t.b(0, 2, 2, 0);
-          t.b(0, 3, 1, 0);
-          t.b(0, 4, 1, 0);
+          SoftwareRasterizer.b(0, 0, 5, 0);
+          SoftwareRasterizer.b(0, 1, 3, 0);
+          SoftwareRasterizer.b(0, 2, 2, 0);
+          SoftwareRasterizer.b(0, 3, 1, 0);
+          SoftwareRasterizer.b(0, 4, 1, 0);
         }
         var11 = null;
         if (param1) {
           var18 = var9.a();
           var11 = var18;
           var18.c();
-          t.b(11, 0, 5, 0);
-          t.b(13, 1, 3, 0);
-          t.b(14, 2, 2, 0);
-          t.b(15, 3, 1, 0);
-          t.b(15, 4, 1, 0);
+          SoftwareRasterizer.b(11, 0, 5, 0);
+          SoftwareRasterizer.b(13, 1, 3, 0);
+          SoftwareRasterizer.b(14, 2, 2, 0);
+          SoftwareRasterizer.b(15, 3, 1, 0);
+          SoftwareRasterizer.b(15, 4, 1, 0);
         }
-        t.a(var16, var7, var8);
-        return new tf[]{null, null, null, (tf) (var10), var9, (tf) (var11), null, null, null};
+        SoftwareRasterizer.a(var16, var7, var8);
+        return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
     final int b(int param0, boolean param1) {
@@ -458,7 +458,7 @@ final class ve extends ak {
     final static void j(int param0) {
         cd.field_e = new String[d.field_b];
         cd.field_e[17] = ap.field_i;
-        cd.field_e[20] = sh.field_c;
+        cd.field_e[20] = NodeHashTableIterator.field_c;
         cd.field_e[21] = nk.field_g;
         cd.field_e[5] = wf.field_a;
         cd.field_e[18] = gp.field_Eb;

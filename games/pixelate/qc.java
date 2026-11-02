@@ -30,7 +30,7 @@ final class qc {
     private static int[] field_j;
     private bk field_h;
 
-    final void a(we param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_x = new bk();
@@ -39,7 +39,7 @@ final class qc {
         this.field_g.a(param0);
         int var2 = param0.f(255);
         if (var2 != 0) {
-          param0.field_m = param0.field_m - 1;
+          param0.position = param0.position - 1;
           this.field_h = new bk();
           this.field_h.a(param0);
           this.field_t = new bk();
@@ -47,7 +47,7 @@ final class qc {
         }
         var2 = param0.f(255);
         if (var2 != 0) {
-          param0.field_m = param0.field_m - 1;
+          param0.position = param0.position - 1;
           this.field_l = new bk();
           this.field_l.a(param0);
           this.field_f = new bk();
@@ -55,7 +55,7 @@ final class qc {
         }
         var2 = param0.f(255);
         if (var2 != 0) {
-          param0.field_m = param0.field_m - 1;
+          param0.position = param0.position - 1;
           this.field_q = new bk();
           this.field_q.a(param0);
           this.field_b = new bk();

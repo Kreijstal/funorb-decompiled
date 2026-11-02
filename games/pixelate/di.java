@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class di {
-    static tf field_c;
+    static Sprite field_c;
     static int[] field_b;
     static int field_a;
 
@@ -66,7 +66,7 @@ final class di {
           ej.field_a = param1;
           ck.field_g = param2;
           if (param3 != 9) {
-            field_c = (tf) null;
+            field_c = (Sprite) null;
           }
           jo.field_r = true;
           kk.field_a = param4;

@@ -7,7 +7,7 @@ final class md extends db {
     private int field_X;
     static String field_V;
     private ml field_W;
-    private tf field_Z;
+    private Sprite field_Z;
 
     final String b(byte param0) {
         if (param0 > 16) {
@@ -17,7 +17,7 @@ final class md extends db {
         return null;
     }
 
-    final static void a(tf param0, tf param1, int param2) {
+    final static void a(Sprite param0, Sprite param1, int param2) {
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -34,27 +34,27 @@ final class md extends db {
         var8 = Pixelate.field_H ? 1 : 0;
         try {
           Pixelate.field_E = param1;
-          u.field_f = new tf(Pixelate.field_E.field_A, Pixelate.field_E.field_B);
+          u.field_f = new Sprite(Pixelate.field_E.field_A, Pixelate.field_E.field_B);
           u.field_f.c();
           Pixelate.field_E.f(0, 0);
           var3_int = 5395026;
-          var4 = t.field_d;
-          for (var5 = 0; t.field_k.length > var5; var5++) {
-            if (t.field_k[var5] < var3_int) {
-              t.field_k[var5] = 0;
+          var4 = SoftwareRasterizer.field_d;
+          for (var5 = 0; SoftwareRasterizer.field_k.length > var5; var5++) {
+            if (SoftwareRasterizer.field_k[var5] < var3_int) {
+              SoftwareRasterizer.field_k[var5] = 0;
             } else {
-              var6 = -(var5 / t.field_j) + t.field_d;
+              var6 = -(var5 / SoftwareRasterizer.field_j) + SoftwareRasterizer.field_d;
               var7 = 255 * var6 / var4;
-              t.field_k[var5] = bq.a(bq.a(var7 << 8, var7 << 16), var7 >> 1);
+              SoftwareRasterizer.field_k[var5] = bq.a(bq.a(var7 << 8, var7 << 16), var7 >> 1);
             }
           }
-          qa.field_g = new tf(640, 480);
-          qa.field_g.c();
+          ClientException.field_g = new Sprite(640, 480);
+          ClientException.field_g.c();
           param0.c(0, 0, 255, 80);
           param0.c(320, 0, 255, 80);
           param0.c(0, 240, 80, 0);
           param0.c(320, 240, param2, 0);
-          qa.field_f.a(19692);
+          ClientException.field_f.a(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,14 +87,14 @@ final class md extends db {
         int var11;
         int var12;
         int var13;
-        tf var17;
-        tf var19;
-        tf var20;
-        tf var21;
-        tf var22;
-        tf var25;
-        tf var26;
-        tf var27;
+        Sprite var17;
+        Sprite var19;
+        Sprite var20;
+        Sprite var21;
+        Sprite var22;
+        Sprite var25;
+        Sprite var26;
+        Sprite var27;
         af var28;
         af var29;
         int var9Lifetime1;
@@ -129,34 +129,34 @@ final class md extends db {
           if (var6Lifetime1 != uo.field_b &&
             tg.field_j != var6Lifetime1) {
             if (sk.field_a == var6Lifetime1) {
-              var26 = ha.field_g[2];
+              var26 = CanvasRasterBuffer.field_g[2];
               var26.b(var9, var10 - (var26.field_E >> 1), 256);
               return;
             }
             if (var6Lifetime1 != qk.field_g) {
               return;
             }
-            var25 = ha.field_g[1];
+            var25 = CanvasRasterBuffer.field_g[1];
             var25.b(var9, var10 - (var25.field_E >> 1), 256);
             return;
           }
-          var27 = ha.field_g[0];
+          var27 = CanvasRasterBuffer.field_g[0];
           var12 = var27.field_A << 1;
           var13 = var27.field_B << 1;
           if (null == this.field_Z) {
-            this.field_Z = new tf(var12, var13);
+            this.field_Z = new Sprite(var12, var13);
             h.a(-119, this.field_Z);
           } else {
             if (this.field_Z.field_F < var12) {
-              this.field_Z = new tf(var12, var13);
+              this.field_Z = new Sprite(var12, var13);
               h.a(-119, this.field_Z);
             } else {
               if (this.field_Z.field_E < var13) {
-                this.field_Z = new tf(var12, var13);
+                this.field_Z = new Sprite(var12, var13);
                 h.a(-119, this.field_Z);
               } else {
                 h.a(-72, this.field_Z);
-                t.d();
+                SoftwareRasterizer.d();
               }
             }
           }
@@ -174,16 +174,16 @@ final class md extends db {
         var10Lifetime1 = var28.a(param0, (ng) (this), (byte) 107) + (var28.b(-117, (ng) (this)).b(1) >> 1);
         var11Lifetime1 = -23 / ((param3 - 70) / 49);
         if (var6Lifetime2 == uo.field_b) {
-          var19 = ha.field_g[0];
+          var19 = CanvasRasterBuffer.field_g[0];
           var12Lifetime1 = var19.field_A << 1;
           var13Lifetime1 = var19.field_B << 1;
           if (null != this.field_Z &&
             this.field_Z.field_F >= var12Lifetime1 &&
             this.field_Z.field_E >= var13Lifetime1) {
             h.a(-72, this.field_Z);
-            t.d();
+            SoftwareRasterizer.d();
           } else {
-            this.field_Z = new tf(var12Lifetime1, var13Lifetime1);
+            this.field_Z = new Sprite(var12Lifetime1, var13Lifetime1);
             h.a(-119, this.field_Z);
           }
           var19.a(112, 144, var19.field_A << 4, var19.field_B << 4, -this.field_X << 10, 4096);
@@ -193,18 +193,18 @@ final class md extends db {
         }
         if (tg.field_j != var6Lifetime2) {
           if (sk.field_a == var6Lifetime2) {
-            var22 = ha.field_g[2];
+            var22 = CanvasRasterBuffer.field_g[2];
             var22.b(var9Lifetime1, var10Lifetime1 - (var22.field_E >> 1), 256);
             return;
           }
           if (var6Lifetime2 != qk.field_g) {
             return;
           }
-          var21 = ha.field_g[1];
+          var21 = CanvasRasterBuffer.field_g[1];
           var21.b(var9Lifetime1, var10Lifetime1 - (var21.field_E >> 1), 256);
           return;
         }
-        var20 = ha.field_g[0];
+        var20 = CanvasRasterBuffer.field_g[0];
         var17 = var20;
         var12Lifetime2 = var20.field_A << 1;
         var13Lifetime2 = var20.field_B << 1;
@@ -212,9 +212,9 @@ final class md extends db {
           this.field_Z.field_F >= var12Lifetime2 &&
           this.field_Z.field_E >= var13Lifetime2) {
           h.a(-72, this.field_Z);
-          t.d();
+          SoftwareRasterizer.d();
         } else {
-          this.field_Z = new tf(var12Lifetime2, var13Lifetime2);
+          this.field_Z = new Sprite(var12Lifetime2, var13Lifetime2);
           h.a(-119, this.field_Z);
         }
         var20.a(112, 144, var20.field_A << 4, var20.field_B << 4, -this.field_X << 10, 4096);

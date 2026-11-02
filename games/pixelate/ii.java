@@ -354,7 +354,7 @@ final class ii {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, tf[] param4) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -375,8 +375,8 @@ final class ii {
             var7 = param4[1].field_A;
             param4[0].b(param3, param1);
             param4[2].b(-var6 + param0 + param3, param1);
-            t.a(wg.field_c);
-            t.d(param3 + var5_int, param1, param0 + param3 - var6, param1 + param4[1].field_B);
+            SoftwareRasterizer.a(wg.field_c);
+            SoftwareRasterizer.d(param3 + var5_int, param1, param0 + param3 - var6, param1 + param4[1].field_B);
             var8 = var5_int + param3;
             var9 = param3 + param0 - var6;
             param3 = var8;
@@ -387,7 +387,7 @@ final class ii {
               param4[1].b(param3, param1);
               param3 = param3 + var7;
             }
-            t.b(wg.field_c);
+            SoftwareRasterizer.b(wg.field_c);
             return;
           }
           return;
@@ -517,9 +517,9 @@ final class ii {
           if (fq.field_o != null &&
             jc.field_d) {
             pe.field_b.c();
-            t.d();
+            SoftwareRasterizer.d();
             fq.field_o.a(false);
-            qa.field_f.a(19692);
+            ClientException.field_f.a(19692);
             pe.field_b.a(0, 0, hn.field_d);
           }
           if (pm.field_u) {
@@ -574,7 +574,7 @@ final class ii {
             var7 = var5 + 110;
             var8 = this.field_a.getClass();
             var9 = var8.getFields();
-            t.a(var5 - 5, -5 + var6 - var4, 70 + var7 - var5, var4 * var9.length, 0, 190);
+            SoftwareRasterizer.a(var5 - 5, -5 + var6 - var4, 70 + var7 - var5, var4 * var9.length, 0, 190);
             var10 = var9;
             for (var11 = 0; var11 < var10.length; var11++) {
               var12 = var10[var11];
@@ -1075,7 +1075,7 @@ final class ii {
         }
     }
 
-    final void a(byte param0, we param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 != 20) {
             this.field_d = (uh[]) null;
@@ -1124,7 +1124,7 @@ final class ii {
           this.field_a.field_d.field_d == 4) {
           var4.a(param0 - 77, var8.i(-122));
         }
-        wb.b(5);
+        MouseInputHandler.b(5);
         if (null != aa.field_p &&
           aa.field_p.field_n &&
           aa.field_p.field_r != null) {
@@ -1162,7 +1162,7 @@ final class ii {
           if (50 == var3.field_f) {
             var8.a(-20791, var3.field_f, true);
             gb.field_f[2] = gb.field_f[2] + 1;
-            kl.a((byte) -117);
+            IterableNodeHashTable.a((byte) -117);
           }
           var5 = var3.field_f;
           f.field_o = f.field_o + (var5 << 7);

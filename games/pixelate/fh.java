@@ -261,7 +261,7 @@ final class fh extends ch implements pn, vo {
         uc var1 = new uc(ep.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.field_w, -1, 2147483647, true);
         ng var2 = new ng(uh.field_d, var1, (fn) null);
         this.field_P = new qm(ig.field_c, (fn) null);
-        this.field_N = new qm(fa.field_f, (fn) null);
+        this.field_N = new qm(IntrusiveNode.field_f, (fn) null);
         this.field_O.field_l = bg.field_i;
         this.field_O.a((byte) 57, new ec(this.field_O));
         this.field_P.field_H = false;
@@ -274,7 +274,7 @@ final class fh extends ch implements pn, vo {
         int var5 = 200;
         this.b(var2, 80);
         var3 += 50;
-        var3 = var3 + (5 + this.a((byte) 52, var3, na.field_a, this.field_O, mo.field_i, 170));
+        var3 = var3 + (5 + this.a((byte) 52, var3, na.field_a, this.field_O, BufferedSocket.field_i, 170));
         this.field_P.a(var5, (byte) 49, var3, 496 - var5 >> 1, 40);
         this.field_N.a(60, (byte) 38, 15 + var3, 3 + var4, 40);
         this.field_N.field_n = (fn) (this);

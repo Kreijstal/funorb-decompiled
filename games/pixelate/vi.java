@@ -271,12 +271,12 @@ final class vi extends sj {
         }
     }
 
-    final static tf[] a(fm param0, int param1, String param2, String param3) {
+    final static Sprite[] a(fm param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        tf[] stackIn_2_0 = null;
-        tf[] stackIn_4_0 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -292,7 +292,7 @@ final class vi extends sj {
             stackIn_4_0 = se.a(var5, var4_int, 1000, param0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (tf[]) null;
+          stackIn_2_0 = (Sprite[]) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

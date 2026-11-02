@@ -49,7 +49,7 @@ final class hq extends de {
               this.field_I = 0;
             }
           } else {
-            this.field_A = pg.field_d;
+            this.field_A = SecondaryNodeDeque.field_d;
             this.field_I = 9;
           }
         } else {
@@ -122,8 +122,8 @@ final class hq extends de {
           var5.a(lo.field_Lb, 120, var6, 0, -1);
           var5.c(Integer.toString(this.field_J), 540, var6, 1, -1);
           var6 = var6 + var7;
-          t.d(118, var6 - 5, 424, 9, 0);
-          t.d(120, var6 - 2, 420, 3, 16777215);
+          SoftwareRasterizer.d(118, var6 - 5, 424, 9, 0);
+          SoftwareRasterizer.d(120, var6 - 2, 420, 3, 16777215);
           var6 = var6 + var7;
           var5.a(he.field_c, 120, var6, 0, -1);
           var5.c(this.field_K, 540, var6, 1, -1);
@@ -152,8 +152,8 @@ final class hq extends de {
             var5.a(ep.field_d, 120, var6, 0, -1);
             var5.c(this.field_y, 540, var6, 1, -1);
             var6 = var6 + var7;
-            t.d(118, var6 - 5, 424, 9, 0);
-            t.d(120, var6 - 2, 420, 3, 16777215);
+            SoftwareRasterizer.d(118, var6 - 5, 424, 9, 0);
+            SoftwareRasterizer.d(120, var6 - 2, 420, 3, 16777215);
             var6 = var6 + var7;
             var5.b(this.field_u, 330, var6, 0, -1);
           }
@@ -218,7 +218,7 @@ final class hq extends de {
     }
 
     final void a(boolean param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
-        this.field_u = !param1 ? qj.field_c : wb.field_a;
+        this.field_u = !param1 ? qj.field_c : MouseInputHandler.field_a;
         this.field_G = 1;
         this.field_x = param5;
         this.field_y = sd.a(lj.field_b, param4 + 21, new String[]{Integer.toString(param2), Integer.toString(param6)});
@@ -231,10 +231,10 @@ final class hq extends de {
         }
         if (!param0) {
           this.field_I = 17;
-          this.field_A = tn.field_f;
+          this.field_A = GameApplet.field_f;
         } else {
           this.field_I = 9;
-          this.field_A = pg.field_d;
+          this.field_A = SecondaryNodeDeque.field_d;
         }
     }
 
@@ -269,7 +269,7 @@ final class hq extends de {
           super.c(0);
         } else {
           ro.field_e.a(false, param0 ^ 0);
-          t.a(0, 0, 640, 480);
+          SoftwareRasterizer.a(0, 0, 640, 480);
           rh.b((byte) -75);
         }
     }
@@ -382,12 +382,12 @@ final class hq extends de {
         if (c.field_R == null) {
           c.field_R = vk.a(480, 123, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
         }
-        ha var6 = qa.field_f;
-        qa.field_f = c.field_R;
-        qa.field_f.a(19692);
+        CanvasRasterBuffer var6 = ClientException.field_f;
+        ClientException.field_f = c.field_R;
+        ClientException.field_f.a(19692);
         this.c(0);
-        qa.field_f = var6;
-        qa.field_f.a(19692);
+        ClientException.field_f = var6;
+        ClientException.field_f.a(19692);
         fi.a(c.field_R.field_e, var4, var5);
     }
 

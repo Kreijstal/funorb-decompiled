@@ -8,7 +8,7 @@ final class sc {
     private String field_f;
     static byte[][] field_e;
     static ob field_h;
-    static mo field_d;
+    static BufferedSocket field_d;
     static String field_a;
     static String field_c;
 
@@ -45,7 +45,7 @@ final class sc {
           return g.field_q + " - " + wk.field_j.c(119, "commonui") + "%";
         }
         if (!io.field_g.b(param0 ^ -16421)) {
-          return ha.field_f;
+          return CanvasRasterBuffer.field_f;
         }
         if (!io.field_g.a("commonui", -1)) {
           return pc.field_x + " - " + io.field_g.c(param0 ^ 16463, "commonui") + "%";

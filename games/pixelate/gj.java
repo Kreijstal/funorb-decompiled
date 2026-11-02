@@ -10,7 +10,7 @@ final class gj extends kb {
     private boolean field_S;
     static String[] field_R;
     static long field_P;
-    static tf[] field_W;
+    static Sprite[] field_W;
 
     final int c(boolean param0) {
         NumberFormatException var2 = null;

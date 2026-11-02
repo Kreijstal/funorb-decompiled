@@ -7,18 +7,18 @@ import java.util.*;
 final class vg {
     private int field_h;
     private int field_d;
-    private lm[] field_a;
+    private DualLinkNode[] field_a;
     static String field_e;
-    private lm field_g;
-    private lm field_c;
+    private DualLinkNode field_g;
+    private DualLinkNode field_c;
     private long field_b;
     static String field_f;
 
-    final lm b(byte param0) {
-        lm var2;
-        lm var3;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
         int var4;
-        lm var3Lifetime1;
+        DualLinkNode var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
         if (this.field_g == null) {
           return null;
@@ -57,8 +57,8 @@ final class vg {
         return var3Lifetime1;
     }
 
-    final void a(boolean param0, lm param1, long param2) {
-        lm var5 = null;
+    final void a(boolean param0, DualLinkNode param1, long param2) {
+        DualLinkNode var5 = null;
         try {
           if (param1.field_r != null) {
             param1.e(17);
@@ -137,18 +137,18 @@ final class vg {
         return new ib(4, 4);
     }
 
-    final lm a(byte param0) {
+    final DualLinkNode a(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int var3;
-        lm var4;
-        lm var5;
-        lm var29;
-        lm var57;
-        lm var58;
-        lm var59;
+        DualLinkNode var4;
+        DualLinkNode var5;
+        DualLinkNode var29;
+        DualLinkNode var57;
+        DualLinkNode var58;
+        DualLinkNode var59;
         var3 = Pixelate.field_H ? 1 : 0;
         if (0 >= this.field_d) {
           if (param0 == 50) {
@@ -260,12 +260,12 @@ final class vg {
         return bl.field_a[param0 - 32768] << var2Lifetime1;
     }
 
-    final lm a(int param0, long param1) {
-        lm var4;
-        lm var5;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
-        lm var4Lifetime1;
-        lm var5Lifetime1;
+        DualLinkNode var4Lifetime1;
+        DualLinkNode var5Lifetime1;
         var6 = Pixelate.field_H ? 1 : 0;
         if (param0 == -11434) {
           this.field_b = param1;
@@ -286,7 +286,7 @@ final class vg {
           this.field_g = this.field_g.field_p;
           return var5;
         }
-        this.field_c = (lm) null;
+        this.field_c = (DualLinkNode) null;
         this.field_b = param1;
         var4Lifetime1 = this.field_a[(int)(param1 & (long)(this.field_h - 1))];
         this.field_g = var4Lifetime1.field_p;
@@ -306,7 +306,7 @@ final class vg {
         return var5Lifetime1;
     }
 
-    final lm a(int param0) {
+    final DualLinkNode a(int param0) {
         this.field_d = 0;
         if (param0 > -21) {
           this.field_d = -64;
@@ -320,30 +320,30 @@ final class vg {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
           boolean decompiledFrameRemainder0 = true;
-          if (null != sh.field_e) {
+          if (null != NodeHashTableIterator.field_e) {
             if (param0 >= 0) {
               decompiledFrameRemainder0 = (Pixelate.field_G == uk.field_s);
-              if ((decompiledFrameRemainder0) && (aa.field_f.field_m == 0 &&
+              if ((decompiledFrameRemainder0) && (aa.field_f.position == 0 &&
                 hm.a(64) > (aj.field_m + 10000L))) {
                 aa.field_f.g(param0, 15514);
               }
             } else {
-              if (aa.field_f.field_m == 0 &&
+              if (aa.field_f.position == 0 &&
                 hm.a(64) > (aj.field_m + 10000L)) {
                 aa.field_f.g(param0, 15514);
               }
             }
             if (decompiledFrameRemainder0) {
-              if (aa.field_f.field_m > 0) {
+              if (aa.field_f.position > 0) {
                 try {
-                  sh.field_e.a(aa.field_f.field_m, -98, 0, aa.field_f.field_k);
+                  NodeHashTableIterator.field_e.a(aa.field_f.position, -98, 0, aa.field_f.payload);
                   aj.field_m = hm.a(64);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   na.a(true);
                 }
-                aa.field_f.field_m = 0;
+                aa.field_f.position = 0;
               }
               if (param1 == 10000) {
                 return;
@@ -352,7 +352,7 @@ final class vg {
               return;
             }
           }
-          aa.field_f.field_m = 0;
+          aa.field_f.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -362,13 +362,13 @@ final class vg {
 
     vg(int param0) {
         int var2 = 0;
-        lm dupTemp$1 = null;
-        lm var3;
+        DualLinkNode dupTemp$1 = null;
+        DualLinkNode var3;
         this.field_d = 0;
-        this.field_a = new lm[param0];
+        this.field_a = new DualLinkNode[param0];
         this.field_h = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new lm();
+          dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_a[var2] = dupTemp$1;
           var3.field_r = var3;

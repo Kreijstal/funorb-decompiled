@@ -95,7 +95,7 @@ final class fq extends de {
 
     final void a(byte param0, boolean param1, int param2) {
         int stackIn_5_1 = 0;
-        tf stackIn_7_2 = null;
+        Sprite stackIn_7_2 = null;
         if (param0 >= -116) {
           fq.g((byte) 97);
         }
@@ -208,7 +208,7 @@ final class fq extends de {
         int[] var20;
         int var12Lifetime1;
         String var2Lifetime1;
-        L0: {
+        regionExit1: {
           var16 = Pixelate.field_H ? 1 : 0;
           gj.field_W[5].b(0, 45);
           this.b((byte) -71);
@@ -254,7 +254,7 @@ final class fq extends de {
                   qj.field_e.a(kn.field_J, 180, var11, var8, var9);
                   qj.field_e.c(Integer.toString(var12Lifetime1), 480, var11, var8, var9);
                 }
-                break L0;
+                break regionExit1;
               }
               var2 = pf.field_l;
             } else {

@@ -3,8 +3,8 @@
  */
 final class nj {
     static bb field_h;
-    private lm field_b;
-    private lm field_a;
+    private DualLinkNode field_b;
+    private DualLinkNode field_a;
     static int[] field_e;
     static String field_g;
     static String field_d;
@@ -27,7 +27,7 @@ final class nj {
 
     final int b(int param0) {
         int var2 = 0;
-        lm var3 = null;
+        DualLinkNode var3 = null;
         int var4 = Pixelate.field_H ? 1 : 0;
         if (param0 > 96) {
           var2 = 0;
@@ -52,8 +52,8 @@ final class nj {
         field_c = null;
     }
 
-    final lm a(byte param0) {
-        lm var2 = this.field_b.field_p;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_b.field_p;
         if (var2 == this.field_b) {
           return null;
         }
@@ -61,7 +61,7 @@ final class nj {
         if (param0 == 80) {
           return var2;
         }
-        this.field_a = (lm) null;
+        this.field_a = (DualLinkNode) null;
         return var2;
     }
 
@@ -96,11 +96,11 @@ final class nj {
         }
     }
 
-    final lm c(int param0) {
+    final DualLinkNode c(int param0) {
         if (param0 < 53) {
-          return (lm) null;
+          return (DualLinkNode) null;
         }
-        lm var2 = this.field_b.field_p;
+        DualLinkNode var2 = this.field_b.field_p;
         if (this.field_b != var2) {
           this.field_a = var2.field_p;
           return var2;
@@ -109,7 +109,7 @@ final class nj {
         return null;
     }
 
-    final void a(int param0, lm param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
           if (param1.field_r != null) {
             param1.e(17);
@@ -124,8 +124,8 @@ final class nj {
         }
     }
 
-    final lm a(int param0) {
-        lm var2 = this.field_a;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_a;
         if (var2 == this.field_b) {
           this.field_a = null;
           return null;
@@ -134,11 +134,11 @@ final class nj {
         if (param0 == 65151) {
           return var2;
         }
-        return (lm) null;
+        return (DualLinkNode) null;
     }
 
     public nj() {
-        this.field_b = new lm();
+        this.field_b = new DualLinkNode();
         this.field_b.field_r = this.field_b;
         this.field_b.field_p = this.field_b;
     }

@@ -10962,6 +10962,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "pixelate": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/pixelate"
+      },
+      "inputTreeSha256": "bbe81e06d5b464eab92a6b6bf59f014012750ba4b945989ca378209286aa16a7",
+      "sources": {
+        "files": 397,
+        "sha256": "f1503092594179ddfdde1218dbc2544a1be10bc077a19aa51d1146fe6b49e8e0"
+      },
+      "dictionary": {
+        "path": "decompilation/pixelate-naming.json",
+        "sha256": "4708c3e1ee6fabbcfac4a4f0966d76cd7dfd922c2289165f00f1934ca4b7b0ca"
+      },
+      "readingGuide": {
+        "path": "games/pixelate/README.md",
+        "sha256": "275dd230f1291988e53721773d2aeddeba5989d7ae299eae6c1cd823efc5ca94"
+      },
+      "rulesSha256": "2241c61194748a5e346ead19d8d5ff6383afb2b34f270cc88021191f4c8f1057",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12326,6 +12350,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 397,
+          "sha256": "f1503092594179ddfdde1218dbc2544a1be10bc077a19aa51d1146fe6b49e8e0"
         }
       },
       "pool": {

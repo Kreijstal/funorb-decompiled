@@ -172,14 +172,14 @@ final class cl {
         }
     }
 
-    final static tf a(int param0, int param1, byte param2) {
+    final static Sprite a(int param0, int param1, byte param2) {
         int var4 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         if (param2 >= -40) {
-          return (tf) null;
+          return (Sprite) null;
         }
-        tf var6 = new tf(param0, param0);
-        tf var3 = var6;
+        Sprite var6 = new Sprite(param0, param0);
+        Sprite var3 = var6;
         for (var4 = 0; var4 < var3.field_G.length; var4++) {
           var6.field_G[var4] = param1;
         }

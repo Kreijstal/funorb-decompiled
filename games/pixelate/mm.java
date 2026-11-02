@@ -60,7 +60,7 @@ class mm {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -93,7 +93,7 @@ class mm {
                       var12.field_k = var12.field_k + var13;
                     }
                     if (var4 >= this.field_u) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.b();
                     if (var14Lifetime2 != null) {
@@ -165,7 +165,7 @@ class mm {
         param0.field_m = param1;
     }
 
-    final static mm a(cb param0, java.awt.Component param1, int param2, int param3) {
+    final static mm a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           je var4 = null;
           Throwable var4_ref = null;

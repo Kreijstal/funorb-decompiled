@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_b;
     static String field_a;
 
@@ -17,8 +17,8 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
             ia.field_i = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < tn.field_j.length) {
-              var2_int = tn.field_j[var2_int] & -129;
+              var2_int < GameApplet.field_j.length) {
+              var2_int = GameApplet.field_j[var2_int] & -129;
             } else {
               var2_int = -1;
             }
@@ -47,12 +47,12 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, cb param4, int param5, String param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, String param6, int param7, int param8) {
         try {
           kj.field_s = param3;
           if (param7 != -21462) {
             String var10 = (String) null;
-            rp.a(117, 59, -61, 116, (cb) null, -123, (String) null, 58, -63);
+            KeyboardInputHandler.a(117, 59, -61, 116, (PlatformTaskDispatcher) null, -123, (String) null, 58, -63);
           }
           fj.field_a = param0;
           bl.field_e = param6;
@@ -69,7 +69,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void a(byte param0, tf param1) {
+    final static void a(byte param0, Sprite param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -185,8 +185,8 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
             ia.field_i = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              tn.field_j.length > var2_int) {
-              var2_int = tn.field_j[var2_int];
+              GameApplet.field_j.length > var2_int) {
+              var2_int = GameApplet.field_j[var2_int];
               if ((128 & var2_int) != 0) {
                 var2_int = -1;
               }

@@ -37,9 +37,9 @@ final class na {
     }
 
     final static void a(boolean param0) {
-        if (sh.field_e != null) {
-          sh.field_e.b(-1);
-          sh.field_e = null;
+        if (NodeHashTableIterator.field_e != null) {
+          NodeHashTableIterator.field_e.b(-1);
+          NodeHashTableIterator.field_e = null;
         }
         if (!param0) {
           field_a = (String) null;

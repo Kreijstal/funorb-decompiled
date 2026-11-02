@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends fa {
+final class rh extends IntrusiveNode {
     int field_l;
     int field_s;
     static gi[] field_u;
@@ -36,14 +36,14 @@ final class rh extends fa {
           }
           if (param3 == 255) {
             stackIn_12_0 = !(um.field_r >= 13);
-            v.field_b = pk.a(stackIn_12_0, 5731);
+            MouseWheelHandler.field_b = pk.a(stackIn_12_0, 5731);
           } else {
             if (param3 >= 100 &&
               param3 <= 105) {
-              v.field_b = fk.a((byte) 117, param2);
+              MouseWheelHandler.field_b = fk.a((byte) 117, param2);
               return;
             }
-            v.field_b = pa.a(param3, param1, (byte) -120);
+            MouseWheelHandler.field_b = pa.a(param3, param1, (byte) -120);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

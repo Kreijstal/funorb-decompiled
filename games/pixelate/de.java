@@ -15,7 +15,7 @@ abstract class de {
     int field_m;
     static int field_h;
     static aa[] field_e;
-    static tf field_c;
+    static Sprite field_c;
 
     int b(int param0, int param1) {
         if (this.field_l == 6 &&
@@ -29,7 +29,7 @@ abstract class de {
         return param1 * this.field_i + this.field_d;
     }
 
-    final static void a(int param0, int param1, int param2, tf param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_42_0 = null;
@@ -44,26 +44,26 @@ abstract class de {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        tf var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
         int[] var30 = null;
         var19 = Pixelate.field_H ? 1 : 0;
         try {
-          if (t.field_e > param0) {
-            param4 = param4 - (-param0 + t.field_e);
-            param0 = t.field_e;
+          if (SoftwareRasterizer.field_e > param0) {
+            param4 = param4 - (-param0 + SoftwareRasterizer.field_e);
+            param0 = SoftwareRasterizer.field_e;
           }
-          if (t.field_h < param4 + param0) {
-            param4 = t.field_h - param0;
+          if (SoftwareRasterizer.field_h < param4 + param0) {
+            param4 = SoftwareRasterizer.field_h - param0;
           }
-          if (t.field_f > param1) {
-            param7 = param7 - (-param1 + t.field_f);
-            param1 = t.field_f;
+          if (SoftwareRasterizer.field_f > param1) {
+            param7 = param7 - (-param1 + SoftwareRasterizer.field_f);
+            param1 = SoftwareRasterizer.field_f;
           }
-          if (t.field_a < param7 + param1) {
-            param7 = -param1 + t.field_a;
+          if (SoftwareRasterizer.field_a < param7 + param1) {
+            param7 = -param1 + SoftwareRasterizer.field_a;
           }
           if (param5 != -1) {
             field_f = false;
@@ -71,13 +71,13 @@ abstract class de {
           if (param4 > 0 &&
             param7 > 0) {
             var21 = param3.a();
-            var30 = t.field_k;
-            var10 = t.field_j;
-            var11 = t.field_d;
+            var30 = SoftwareRasterizer.field_k;
+            var10 = SoftwareRasterizer.field_j;
+            var11 = SoftwareRasterizer.field_d;
             var29 = new int[4];
-            t.a(var29);
+            SoftwareRasterizer.a(var29);
             param3.c();
-            t.d(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.d(var29[0], var29[1], var29[2], var29[3]);
             var13 = param3.field_F * param1 + param0;
             var14 = param3.field_F - param4;
             var25 = var21.field_G;
@@ -94,15 +94,15 @@ abstract class de {
                   var15[var13 + 1] == 0 ||
                   !(-1 + param3.field_E <= var16) &&
                   var15[var13 + param3.field_F] == 0)) {
-                  t.c(var17, var16, param6, param2);
+                  SoftwareRasterizer.c(var17, var16, param6, param2);
                 }
                 var13++;
               }
               var13 = var13 + var14;
             }
             var21.b(-param3.field_D, -param3.field_y);
-            t.a(var30, var10, var11);
-            t.b(var29);
+            SoftwareRasterizer.a(var30, var10, var11);
+            SoftwareRasterizer.b(var29);
             return;
           }
           return;
@@ -127,8 +127,8 @@ abstract class de {
         if (param1 >= -82) {
           field_e = (aa[]) null;
         }
-        t.a(30, param0 + 20, 580, param2 + 250, 0, 180);
-        t.b(30, param0 + 20, 580, 250 + param2, 16777215, 192);
+        SoftwareRasterizer.a(30, param0 + 20, 580, param2 + 250, 0, 180);
+        SoftwareRasterizer.b(30, param0 + 20, 580, 250 + param2, 16777215, 192);
     }
 
     final void b(byte param0) {
@@ -207,7 +207,7 @@ abstract class de {
     }
 
     void a(int param0, int param1, boolean param2) {
-        this.field_g.a(param2, this.a(uf.field_d, bg.field_k, -119), 17068, param1);
+        this.field_g.a(param2, this.a(ProxyAuthenticationException.field_d, bg.field_k, -119), 17068, param1);
         nk.field_i = pa.field_b;
         if (param0 != 2) {
           field_h = -13;
@@ -220,7 +220,7 @@ abstract class de {
         int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         if (param2 > -110) {
-          field_c = (tf) null;
+          field_c = (Sprite) null;
         }
         for (var4 = 0; var4 < this.field_k.length; var4++) {
           var5 = this.b(-108, var4);
@@ -258,10 +258,10 @@ abstract class de {
         if (!param1) {
           this.field_m = -106;
         }
-        this.a(we.field_o[7], oc.field_W, (byte) 109, param0);
+        this.a(PacketBuffer.field_o[7], oc.field_W, (byte) 109, param0);
     }
 
-    final void a(String param0, tf param1, byte param2, boolean param3) {
+    final void a(String param0, Sprite param1, byte param2, boolean param3) {
         if (param2 < 98) {
           return;
         }
@@ -343,9 +343,9 @@ abstract class de {
 
     abstract void c(byte param0);
 
-    final void a(byte param0, tf param1, boolean param2, int param3) {
+    final void a(byte param0, Sprite param1, boolean param2, int param3) {
         try {
-          this.a(we.field_o[this.field_k[param3]], param2, param3, param1, (byte) 89);
+          this.a(PacketBuffer.field_o[this.field_k[param3]], param2, param3, param1, (byte) 89);
           if (param0 != 35) {
             field_b = (bb) null;
           }
@@ -379,7 +379,7 @@ abstract class de {
         int var2 = -125 % ((param0 - 5) / 39);
     }
 
-    final void a(String param0, boolean param1, int param2, tf param3, byte param4) {
+    final void a(String param0, boolean param1, int param2, Sprite param3, byte param4) {
         int stackIn_27_0 = 0;
         int stackIn_45_0 = 0;
         RuntimeException stackIn_49_0 = null;
@@ -399,7 +399,7 @@ abstract class de {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        tf[] var16 = null;
+        Sprite[] var16 = null;
         int var17 = 0;
         var17 = Pixelate.field_H ? 1 : 0;
         try {
@@ -419,12 +419,12 @@ abstract class de {
                   param0 = mg.field_k;
                 }
               } else {
-                param0 = mk.field_b;
+                param0 = FullscreenFocusCanvas.field_b;
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              param0 = we.field_o[7];
+              param0 = PacketBuffer.field_o[7];
             }
           }
           var7 = sc.field_h.c(param0);
@@ -457,7 +457,7 @@ abstract class de {
             return;
           }
           var12 = var12 + h.field_T;
-          t.a(var12, var10 + var13 / 2 - 1, 121, 2, var14);
+          SoftwareRasterizer.a(var12, var10 + var13 / 2 - 1, 121, 2, var14);
           if (var6_int == 20) {
             stackIn_45_0 = 120 * ia.field_h / 256;
           } else {
@@ -487,7 +487,7 @@ abstract class de {
         }
     }
 
-    final void a(boolean param0, String param1, tf param2, int param3, int param4) {
+    final void a(boolean param0, String param1, Sprite param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -528,7 +528,7 @@ abstract class de {
         }
         pe.field_b.c();
         this.c(0);
-        qa.field_f.a(19692);
+        ClientException.field_f.a(19692);
         fi.a(pe.field_b.field_G, var4, var5);
     }
 
@@ -555,7 +555,7 @@ abstract class de {
             }
             this.a(this.field_g.field_j, (byte) -114, false);
           }
-          this.field_g.a(this.a(uo.field_a, ji.field_c, -125), this.a(uf.field_d, bg.field_k, -115), -1);
+          this.field_g.a(this.a(uo.field_a, ji.field_c, -125), this.a(ProxyAuthenticationException.field_d, bg.field_k, -115), -1);
           if (-1 != this.field_g.field_j) {
             this.a(this.field_g.field_j, (byte) -128, true);
           }
@@ -589,7 +589,7 @@ abstract class de {
         if (param1 > -103) {
           return;
         }
-        L1: {
+        regionExit1: {
           var6 = var4;
           if (var6 != 0) {
             if (29 != var6) {
@@ -609,7 +609,7 @@ abstract class de {
                         la.a(ti.field_t, -4, var6 != 0, -25528);
                       }
                     }
-                    break L1;
+                    break regionExit1;
                   }
                   if (var6 == 2) {
                     if (!(!this.field_g.a(86))) {
@@ -617,14 +617,14 @@ abstract class de {
                       stackIn_74_0 = (!gq.d(107)) ? 0 : 12;
                       la.a(stackIn_74_0, -1, var6 != 0, -25528);
                     }
-                    break L1;
+                    break regionExit1;
                   }
                   if (var6 == 7) {
                     if (!(!this.field_g.a(91))) {
                       var6 = param2 ? 1 : 0;
                       la.a(ti.field_t, 0, var6 != 0, -25528);
                     }
-                    break L1;
+                    break regionExit1;
                   }
                   if (24 == var6) {
                     if (!(!this.field_g.a(84))) {
@@ -632,7 +632,7 @@ abstract class de {
                       la.a(ti.field_t, 12, var6 != 0, -25528);
                       ce.field_a = true;
                     }
-                    break L1;
+                    break regionExit1;
                   }
                   if (var6 == 25) {
                     if (this.field_g.a(74) &&
@@ -658,7 +658,7 @@ abstract class de {
                             var6 = param2 ? 1 : 0;
                             la.a(ti.field_t, 7, var6 != 0, -25528);
                           }
-                          break L1;
+                          break regionExit1;
                         }
                         if (8 != var6) {
                           if (var6 == 4) {
@@ -666,7 +666,7 @@ abstract class de {
                               var6 = param2 ? 1 : 0;
                               la.a(ti.field_t, 6, var6 != 0, -25528);
                             }
-                            break L1;
+                            break regionExit1;
                           }
                           if (3 == var6) {
                             if (!(!this.field_g.a(62))) {
@@ -679,7 +679,7 @@ abstract class de {
                                 la.a(stackIn_105_0, 5, var6 != 0, -25528);
                               }
                             }
-                            break L1;
+                            break regionExit1;
                           }
                           if (20 == var6) {
                             var5 = 0;
@@ -695,7 +695,7 @@ abstract class de {
                             }
                             if (this.field_g.c((byte) 35)) {
                               var6 = this.a(param0, (byte) 90) + this.a(param0, false) + (h.field_T - 120) >> 1;
-                              var7_int = -var6 + uf.field_d;
+                              var7_int = -var6 + ProxyAuthenticationException.field_d;
                               var8 = 256 * var7_int / 120;
                               var5 = 1;
                               if (var8 <= 0) {
@@ -733,7 +733,7 @@ abstract class de {
                               }
                               if (this.field_g.c((byte) 35)) {
                                 var6 = -120 + (this.a(param0, (byte) 90) + (this.a(param0, false) + h.field_T)) >> 1;
-                                var7_int = uf.field_d - var6;
+                                var7_int = ProxyAuthenticationException.field_d - var6;
                                 var8 = var7_int * 256 / 120;
                                 if (var8 <= 0) {
                                   jg.a(0, -50);
@@ -751,7 +751,7 @@ abstract class de {
                               if (!(!this.field_g.c(102))) {
                                 eg.e(-4767);
                               }
-                              break L1;
+                              break regionExit1;
                             }
                             if (var6 == 6) {
                               if (this.field_g.a(68)) {
@@ -773,7 +773,7 @@ abstract class de {
                                     stackIn_162_0 = (!gq.d(71)) ? 0 : 12;
                                     la.a(stackIn_162_0, -1, var6 != 0, -25528);
                                   }
-                                  break L1;
+                                  break regionExit1;
                                 }
                                 if (var6 == 13) {
                                   if (!(!this.field_g.a(117))) {
@@ -785,7 +785,7 @@ abstract class de {
                                       qj.a(false, 0, 11);
                                     }
                                   }
-                                  break L1;
+                                  break regionExit1;
                                 }
                                 switch (var6) {
                                   case 14:
@@ -852,10 +852,10 @@ abstract class de {
                                     stackIn_208_0 = !(jc.field_d);
                                     jc.field_d = stackIn_208_0;
                                     if (!jc.field_d) {
-                                      we.field_o[27] = ef.field_c;
+                                      PacketBuffer.field_o[27] = ef.field_c;
                                       break;
                                     }
-                                    we.field_o[27] = kl.field_d;
+                                    PacketBuffer.field_o[27] = IterableNodeHashTable.field_d;
                                     break;
                                   case 19:
                                     if (this.field_g.a(77)) {

@@ -163,13 +163,13 @@ final class ee {
           var6Lifetime1.field_Gb = var5Lifetime1;
           var6Lifetime1.c(2779);
           var7_ref = (im) (vp.field_Hb.c(1504642273));
-          L16: while (true) {
+          scanLoop1: while (true) {
             if (null != var7_ref) {
               stackOut_49_0 = hn.a((byte) 115, var6Lifetime1, var7_ref);
               stackIn_60_0 = stackOut_49_0 ? 1 : 0;
               stackIn_50_0 = stackOut_49_0;
               if (var9 != 0) {
-                break L16;
+                break scanLoop1;
               }
               if (stackIn_50_0) {
                 var7_ref = (im) (vp.field_Hb.f(1504642273));

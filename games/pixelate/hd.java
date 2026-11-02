@@ -10,7 +10,7 @@ final class hd {
     boolean field_x;
     private dd field_j;
     int field_a;
-    static tf field_w;
+    static Sprite field_w;
     static String field_l;
     boolean field_m;
     private Random field_t;
@@ -22,14 +22,14 @@ final class hd {
     byte[] field_r;
     int field_b;
     boolean field_k;
-    static tf[] field_v;
+    static Sprite[] field_v;
     static int field_n;
     int field_i;
     static int field_q;
     static fm field_c;
     int field_e;
 
-    final void a(int param0, we param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         boolean stackIn_6_1 = false;

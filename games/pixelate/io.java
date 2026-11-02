@@ -101,7 +101,7 @@ final class io {
             dupTemp$1 = new int[2][var6 * 4];
             var3.field_r = dupTemp$1;
             var8 = dupTemp$1;
-            var9 = pg.field_e;
+            var9 = SecondaryNodeDeque.field_e;
             var10 = 0;
             var11 = 0;
             while (var9 > var10) {
@@ -179,10 +179,10 @@ final class io {
           }
           h.a(-113, re.field_b);
           ja.a();
-          t.d();
+          SoftwareRasterizer.d();
           ma.d((byte) 106);
           if (256 > var5) {
-            t.a(0, 0, t.field_j, t.field_d, 0, -var5 + 256);
+            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           }
           ia.a((byte) 92);
           if (ga.field_f >= 150) {
@@ -230,10 +230,10 @@ final class io {
         }
         h.a(-113, re.field_b);
         ja.a();
-        t.d();
+        SoftwareRasterizer.d();
         ma.d((byte) 106);
         if (256 > var5) {
-          t.a(0, 0, t.field_j, t.field_d, 0, -var5 + 256);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           ia.a((byte) 92);
           if (ga.field_f >= 150) {
             th.field_b.a(var3 + 15, var4 + 10, var5);
@@ -390,7 +390,7 @@ final class io {
         try {
           ud.field_L[0] = ai.field_d.nextInt();
           ud.field_L[1] = ai.field_d.nextInt();
-          uk.field_v.field_m = 0;
+          uk.field_v.position = 0;
           ud.field_L[3] = (int)gj.field_P;
           ud.field_L[2] = (int)(gj.field_P >> 32);
           uk.field_v.d(ud.field_L[0], -55);
@@ -398,18 +398,18 @@ final class io {
           uk.field_v.d(ud.field_L[2], -68);
           uk.field_v.d(ud.field_L[3], -48);
           wf.a(1, uk.field_v);
-          uk.field_v.b(1276387944, param3);
+          uk.field_v.writeShort(1276387944, param3);
           param2.a((byte) -12, uk.field_v);
-          aa.field_f.field_m = 0;
+          aa.field_f.position = 0;
           if (param0) {
-            aa.field_f.e(160, 18);
+            aa.field_f.writeByte(160, 18);
           } else {
-            aa.field_f.e(160, 16);
+            aa.field_f.writeByte(160, 16);
           }
-          aa.field_f.field_m = aa.field_f.field_m + 2;
-          var5_int = aa.field_f.field_m;
+          aa.field_f.position = aa.field_f.position + 2;
+          var5_int = aa.field_f.position;
           aa.field_f.d(ra.field_c, -118);
-          aa.field_f.a(false, hf.field_t);
+          aa.field_f.writeLong(false, hf.field_t);
           var6 = 0;
           if (uj.field_Lb) {
             var6 = var6 | 1;
@@ -423,7 +423,7 @@ final class io {
           if (sc.field_a != null) {
             var6 = var6 | 16;
           }
-          aa.field_f.e(160, var6);
+          aa.field_f.writeByte(160, var6);
           var7 = ln.a(ao.a(13867), (byte) -85);
           if (var7 == null) {
             var7 = "";
@@ -437,7 +437,7 @@ final class io {
             io.a((tc) null, (byte) 105);
           }
           wh.a(ag.field_m, aa.field_f, tp.field_t, uk.field_v, 12556);
-          aa.field_f.c(7519, aa.field_f.field_m - var5_int);
+          aa.field_f.c(7519, aa.field_f.position - var5_int);
           vg.b(-1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -456,8 +456,8 @@ final class io {
 
     final static void a(tc param0, byte param1) {
         try {
-          hk.field_d = param0;
-          pe.field_c = hk.field_d.field_z + hk.field_d.field_w;
+          DelegatingCanvas.field_d = param0;
+          pe.field_c = DelegatingCanvas.field_d.field_z + DelegatingCanvas.field_d.field_w;
           int var2_int = -116 / ((70 - param1) / 48);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "io.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

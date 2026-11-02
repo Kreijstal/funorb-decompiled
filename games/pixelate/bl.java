@@ -59,21 +59,21 @@ final class bl {
         if (!param0) {
           bl.b(-26);
         }
-        return wb.field_b;
+        return MouseInputHandler.field_b;
     }
 
-    final static v a(int param0) {
+    final static MouseWheelHandler a(int param0) {
         try {
           Throwable var1 = null;
-          v stackIn_2_0 = null;
-          v stackIn_4_0 = null;
+          MouseWheelHandler stackIn_2_0 = null;
+          MouseWheelHandler stackIn_4_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 >= 27) {
-              stackIn_4_0 = (v) (Class.forName("wj").newInstance());
+              stackIn_4_0 = (MouseWheelHandler) (Class.forName("MouseWheelInput").newInstance());
               return stackIn_4_0;
             }
-            stackIn_2_0 = (v) null;
+            stackIn_2_0 = (MouseWheelHandler) null;
             return stackIn_2_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,13 +87,13 @@ final class bl {
         }
     }
 
-    final static void a(int param0, tf param1, String param2) {
+    final static void a(int param0, Sprite param1, String param2) {
         try {
           if (param0 != 11833) {
             field_g = (String) null;
           }
           qf.field_c = param1;
-          fa.field_i = param2;
+          IntrusiveNode.field_i = param2;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

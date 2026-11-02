@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pj {
-    static tf field_a;
+    static Sprite field_a;
     private int field_h;
-    private tf field_e;
+    private Sprite field_e;
     static ak field_i;
     boolean field_f;
     private int field_b;
@@ -120,12 +120,12 @@ final class pj {
           this.field_j = 0;
           var5_int = rk.field_e.c(param0);
           if (var5_int > this.field_e.field_A) {
-            this.field_e = new tf(10 + var5_int, this.field_e.field_B);
+            this.field_e = new Sprite(10 + var5_int, this.field_e.field_B);
           }
           this.field_e.c();
-          t.d();
+          SoftwareRasterizer.d();
           rk.field_e.b(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
-          qa.field_f.a(19692);
+          ClientException.field_f.a(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,9 +149,9 @@ final class pj {
         RuntimeException var4 = null;
         try {
           if (param3 <= 19) {
-            field_a = (tf) null;
+            field_a = (Sprite) null;
           }
-          if (t.field_d >= param1 + param2 + param0) {
+          if (SoftwareRasterizer.field_d >= param1 + param2 + param0) {
             stackIn_4_0 = param1 + param2;
             return stackIn_4_0;
           }
@@ -159,7 +159,7 @@ final class pj {
             stackIn_9_0 = -param0 + param1;
             return stackIn_9_0;
           }
-          stackIn_11_0 = t.field_d - param0;
+          stackIn_11_0 = SoftwareRasterizer.field_d - param0;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -240,7 +240,7 @@ final class pj {
 
     pj() {
         this.field_h = 0;
-        this.field_e = new tf(320, 21);
+        this.field_e = new Sprite(320, 21);
         this.field_f = true;
     }
 

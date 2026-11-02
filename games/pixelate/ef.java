@@ -3,7 +3,7 @@
  */
 final class ef {
     static String field_c;
-    static cb field_e;
+    static PlatformTaskDispatcher field_e;
     static boolean field_a;
     static int field_b;
     static int field_g;
@@ -17,10 +17,10 @@ final class ef {
           return;
         }
         pc var2 = vi.field_o;
-        var2.k(0);
-        var2.k(0);
-        var2.k(0);
-        var2.k(0);
+        var2.readInt(0);
+        var2.readInt(0);
+        var2.readInt(0);
+        var2.readInt(0);
         var1.c(2779);
         if (param0 != -14439) {
           ef.b(false);
@@ -122,7 +122,7 @@ final class ef {
                   var20 = var28.f(255);
                   var21 = rh.field_u[var20].field_e;
                   var22 = var28.a(false);
-                  var24 = var28.field_m;
+                  var24 = var28.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
                     var9[0][var12] = rh.field_u[var20].field_f;
@@ -131,7 +131,7 @@ final class ef {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var28.k(0);
+                      var11[0][incrementValue$3] = var28.readInt(0);
                     }
                   }
                   if (var21 != null &&
@@ -139,12 +139,12 @@ final class ef {
                     var8[1][var13] = kn.field_J;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var28.field_m = var24;
+                    var28.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var28.k(0);
+                      var11[1][incrementValue$4] = var28.readInt(0);
                     }
                   }
                   if (var6 > var14 &&
@@ -153,12 +153,12 @@ final class ef {
                     var8[2][var14] = var21;
                     var9[2][var14] = rh.field_u[var20].field_f;
                     var10[2][var14] = var22;
-                    var28.field_m = var24;
+                    var28.position = var24;
                     var14++;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var28.k(0);
+                      var11[2][incrementValue$5] = var28.readInt(0);
                     }
                   }
                 }

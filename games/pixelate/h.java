@@ -11,7 +11,7 @@ final class h extends qm {
     static tg field_X;
     static int field_T;
     static boolean field_R;
-    static tf[] field_V;
+    static Sprite[] field_V;
     static boolean[] field_P;
     static int field_Q;
     static int field_W;
@@ -48,12 +48,12 @@ final class h extends qm {
         super.a(param0, param1, param2, param3);
     }
 
-    final static void a(int param0, tf param1) {
+    final static void a(int param0, Sprite param1) {
         try {
           ti.a(false);
-          t.a(param1.field_G, param1.field_A, param1.field_B);
+          SoftwareRasterizer.a(param1.field_G, param1.field_A, param1.field_B);
           if (param0 >= -58) {
-            field_V = (tf[]) null;
+            field_V = (Sprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "h.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -64,8 +64,8 @@ final class h extends qm {
         if (param0 == -8) {
           return new io[]{ig.field_e, vm.field_a, cd.field_c};
         }
-        tf var2 = (tf) null;
-        h.a(-96, (tf) null);
+        Sprite var2 = (Sprite) null;
+        h.a(-96, (Sprite) null);
         return new io[]{ig.field_e, vm.field_a, cd.field_c};
     }
 

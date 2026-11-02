@@ -39,7 +39,7 @@ final class mi extends de {
           if (var3 != null) {
             ii.field_q = var3.field_k;
             ki.field_f = 300;
-            nn.field_a = qj.field_e.c(tn.field_n[ii.field_q]) + 56;
+            nn.field_a = qj.field_e.c(GameApplet.field_n[ii.field_q]) + 56;
             gk.field_bb = 50 + nn.field_a;
           }
         } else {
@@ -143,8 +143,8 @@ final class mi extends de {
           int var8Lifetime1;
           var9 = Pixelate.field_H ? 1 : 0;
           try {
-            if (null == sh.field_e &&
-              !wb.a(0, param4)) {
+            if (null == NodeHashTableIterator.field_e &&
+              !MouseInputHandler.a(0, param4)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
@@ -155,16 +155,16 @@ final class mi extends de {
               } else {
                 li.field_g = k.a(param2, false, -61, param5);
               }
-              aa.field_f.field_m = 0;
-              aa.field_f.e(160, 14);
-              aa.field_f.e(160, li.field_g.b(-27096).field_a);
+              aa.field_f.position = 0;
+              aa.field_f.writeByte(160, 14);
+              aa.field_f.writeByte(160, li.field_g.b(-27096).field_a);
               vg.b(-1, 10000);
               uk.field_s = cn.field_a;
             }
             if (uk.field_s == cn.field_a &&
               rd.a(1, false)) {
               var6_int = vi.field_o.f(255);
-              vi.field_o.field_m = 0;
+              vi.field_o.position = 0;
               if (var6_int != 0) {
                 mn.field_e = var6_int;
                 uk.field_s = sl.field_b;
@@ -176,7 +176,7 @@ final class mi extends de {
             if (uk.field_s == ke.field_b &&
               rd.a(8, false)) {
               gj.field_P = vi.field_o.a(false);
-              vi.field_o.field_m = 0;
+              vi.field_o.position = 0;
               io.a(param4, -67, li.field_g, param3, param0);
               uk.field_s = kk.field_b;
             }
@@ -185,7 +185,7 @@ final class mi extends de {
               rd.a(1, false)) {
               var6_intLifetime1 = vi.field_o.f(255);
               sc.field_a = null;
-              vi.field_o.field_m = 0;
+              vi.field_o.position = 0;
               mn.field_e = var6_intLifetime1;
               if (0 != var6_intLifetime1 &&
                 1 != var6_intLifetime1) {
@@ -234,10 +234,10 @@ final class mi extends de {
               if (vm.field_d) {
                 vi.field_o.f(255);
                 vi.field_o.f(255);
-                vi.field_o.k(0);
-                mo.field_k = vi.field_o.a((byte) -115);
-                dc.field_b = new byte[mo.field_k];
-                for (var8 = 0; mo.field_k > var8; var8++) {
+                vi.field_o.readInt(0);
+                BufferedSocket.field_k = vi.field_o.a((byte) -115);
+                dc.field_b = new byte[BufferedSocket.field_k];
+                for (var8 = 0; BufferedSocket.field_k > var8; var8++) {
                   dc.field_b[var8] = vi.field_o.a(0);
                 }
               }
@@ -267,7 +267,7 @@ final class mi extends de {
                 }
               } else {
                 try {
-                  cq.a(ao.a(13867), (byte) -37, new Object[]{we.b(vn.field_b, -7067)}, "zap");
+                  cq.a(ao.a(13867), (byte) -37, new Object[]{PacketBuffer.b(vn.field_b, -7067)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -302,7 +302,7 @@ final class mi extends de {
               return stackIn_90_0;
             }
             var6_intLifetime2 = 51 % ((-18 - param1) / 46);
-            if (null == sh.field_e) {
+            if (null == NodeHashTableIterator.field_e) {
               if (qj.field_b) {
                 if (no.d(8) <= 30000L) {
                   gi.field_b = ho.field_b;
@@ -355,7 +355,7 @@ final class mi extends de {
             field_o = false;
           }
           cn.field_b.a(param3, param1, 7595, param0);
-          t.d();
+          SoftwareRasterizer.d();
           rj.a(94, true);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -406,12 +406,12 @@ final class mi extends de {
     }
 
     final static void b(boolean param0) {
-        ho.field_g.a(0, 18, 0, 256, -(!f.field_n ? 0 : 40 + hk.field_b + 4) + oc.field_O.field_K);
+        ho.field_g.a(0, 18, 0, 256, -(!f.field_n ? 0 : 40 + DelegatingCanvas.field_b + 4) + oc.field_O.field_K);
         if (param0) {
           field_o = false;
         }
-        l.field_s.a(0, 18, -40 + (-hk.field_b + (oc.field_O.field_K - 2)), 256, 42 + hk.field_b);
-        jm.field_b.a(0, 2, (byte) 102, oc.field_O.field_K, 20, oc.field_O.field_nb - 20, hk.field_b);
+        l.field_s.a(0, 18, -40 + (-DelegatingCanvas.field_b + (oc.field_O.field_K - 2)), 256, 42 + DelegatingCanvas.field_b);
+        jm.field_b.a(0, 2, (byte) 102, oc.field_O.field_K, 20, oc.field_O.field_nb - 20, DelegatingCanvas.field_b);
     }
 
     static {

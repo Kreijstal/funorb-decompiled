@@ -53,16 +53,16 @@ final class ap {
         }
     }
 
-    final static tf[] a(int param0, int param1, int param2, int param3, int param4) {
-        tf[] var6 = new tf[9];
-        tf[] var5 = var6;
-        tf dupTemp$0 = cl.a(param4, param3, (byte) -108);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = cl.a(param4, param3, (byte) -108);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        tf dupTemp$1 = cl.a(param4, param0, (byte) -116);
+        Sprite dupTemp$1 = cl.a(param4, param0, (byte) -116);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[param2] = dupTemp$1;

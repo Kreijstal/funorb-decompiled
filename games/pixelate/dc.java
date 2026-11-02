@@ -5,10 +5,10 @@ final class dc {
     static byte[] field_b;
     static ak field_a;
 
-    final static void a(byte param0, java.awt.Frame param1, cb param2) {
+    final static void a(byte param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
         ei var3 = null;
         int var4 = 0;
-        cb var5 = null;
+        PlatformTaskDispatcher var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -19,8 +19,8 @@ final class dc {
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           if (param0 != -124) {
-            var5 = (cb) null;
-            dc.a((byte) 3, (java.awt.Frame) null, (cb) null);
+            var5 = (PlatformTaskDispatcher) null;
+            dc.a((byte) 3, (java.awt.Frame) null, (PlatformTaskDispatcher) null);
           }
           while (true) {
             var3 = param2.a(param1, -84);

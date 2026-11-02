@@ -68,7 +68,7 @@ final class mj {
     final static void a(int param0, sb param1, int param2, int param3, int param4, sb param5) {
         try {
           uo.field_m = param1;
-          uf.field_a = param2;
+          ProxyAuthenticationException.field_a = param2;
           lf.field_b = param4;
           wg.field_d = param5;
           if (param3 != 300) {
@@ -121,25 +121,25 @@ final class mj {
             stackIn_9_0 = le.field_d;
             return stackIn_9_0;
           }
-          if (i.a(-640, param1)) {
-            stackIn_13_0 = sd.a(cf.field_H, 45, new String[]{param1});
+          if (ImageProducerRasterBuffer.a(-640, param1)) {
+            stackIn_13_0 = sd.a(SpriteState.field_H, 45, new String[]{param1});
             return stackIn_13_0;
           }
           if (aj.field_t >= 100) {
             stackIn_17_0 = co.field_k;
             return stackIn_17_0;
           }
-          if (ha.a(param1, (byte) 37)) {
+          if (CanvasRasterBuffer.a(param1, (byte) 37)) {
             stackIn_20_0 = sd.a(jp.field_b, 89, new String[]{param1});
             return stackIn_20_0;
           }
           var6 = aa.field_f;
           var6.g(param2, 15514);
-          var6.field_m = var6.field_m + 1;
-          var4 = var6.field_m;
-          var6.e(160, 2);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(160, 2);
           var6.b((byte) -41, param1);
-          var6.f(var6.field_m - var4, -1);
+          var6.f(var6.position - var4, -1);
           var5 = 55 / ((param0 - 16) / 45);
           stackIn_22_0 = null;
           return (String) (stackIn_22_0);

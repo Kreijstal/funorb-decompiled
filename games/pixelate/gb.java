@@ -3,7 +3,7 @@
  */
 final class gb {
     static int[] field_f;
-    static tf field_b;
+    static Sprite field_b;
     static int[] field_e;
     static int field_a;
     static int field_d;
@@ -49,7 +49,7 @@ final class gb {
         int var3 = Pixelate.field_H ? 1 : 0;
         hh[] var1 = new hh[im.field_Qb];
         for (var2 = 0; var2 < im.field_Qb; var2++) {
-          var1[var2] = new hh(tj.field_y, jb.field_a, fa.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], wo.field_f[var2], fl.field_g);
+          var1[var2] = new hh(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], wo.field_f[var2], fl.field_g);
         }
         re.b(140);
         if (param0 != -96) {

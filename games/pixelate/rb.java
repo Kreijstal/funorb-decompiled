@@ -22,7 +22,7 @@ final class rb extends de {
         if (param0 == 0) {
           return ge.field_b;
         }
-        return we.field_o[this.field_k[param0]];
+        return PacketBuffer.field_o[this.field_k[param0]];
     }
 
     private final int f(int param0) {
@@ -61,7 +61,7 @@ final class rb extends de {
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         var2 = 0;
-        for (var3 = param0; var3 < tn.field_n.length; var3++) {
+        for (var3 = param0; var3 < GameApplet.field_n.length; var3++) {
           if ((1 << var3 & this.f(-111)) > 0) {
             var2++;
           }
@@ -78,10 +78,10 @@ final class rb extends de {
         tc var4;
         int var5;
         int var6;
-        tf var6_ref_tf;
+        Sprite var6_ref_tf;
         int var7;
         int var8;
-        tf var9;
+        Sprite var9;
         int var10;
         int var11;
         int var12;
@@ -99,17 +99,17 @@ final class rb extends de {
         var4 = qj.field_e;
         gj.field_W[6].b(0, 45);
         this.b((byte) -71);
-        for (var5 = 0; var5 < tn.field_n.length; var5++) {
+        for (var5 = 0; var5 < GameApplet.field_n.length; var5++) {
           var6_ref_tf = this.b((byte) 37, var5);
           if ((this.a((byte) 66, var5) ||
             var2 == 0) && this.c(var5, (byte) 97)) {
             var7 = this.d(var5, (byte) -54);
             var8 = this.f(-111, var5);
             if (var5 == jm.field_j) {
-              t.a(var7 - 3, -3 + var8, 38, 38, 6, 0, 128);
+              SoftwareRasterizer.a(var7 - 3, -3 + var8, 38, 38, 6, 0, 128);
             }
             if (var5 == jn.field_v) {
-              t.e(var7 - 3, var8 - 3, 38, 38, 6, 16777215);
+              SoftwareRasterizer.e(var7 - 3, var8 - 3, 38, 38, 6, 16777215);
             }
             var6_ref_tf.e(var7, var8);
           }
@@ -123,7 +123,7 @@ final class rb extends de {
         if (-1 != var5Lifetime1) {
           var6 = var3.field_z + var3.field_D;
           var7Lifetime1 = var4.field_D + (var4.field_z + 3);
-          var3.b(tn.field_n[var5Lifetime1], 320, 280, 0, -1);
+          var3.b(GameApplet.field_n[var5Lifetime1], 320, 280, 0, -1);
           if (this.a((byte) 66, var5Lifetime1)) {
             var3.b(co.field_d, 320, 280 + var6, 0, -1);
           } else {
@@ -160,7 +160,7 @@ final class rb extends de {
         if (param0 != 4) {
           return 126;
         }
-        while (tn.field_n.length > var4) {
+        while (GameApplet.field_n.length > var4) {
           if (this.c(var4, (byte) 95)) {
             var5 = this.d(var4, (byte) -89);
             var6 = this.f(124, var4);
@@ -204,7 +204,7 @@ final class rb extends de {
           !this.a((byte) 66, param1)) {
           return dq.field_a;
         }
-        return qa.field_a[param1];
+        return ClientException.field_a[param1];
     }
 
     final void c(byte param0) {
@@ -239,7 +239,7 @@ final class rb extends de {
         return var4;
     }
 
-    private final tf b(byte param0, int param1) {
+    private final Sprite b(byte param0, int param1) {
         if (this.a((byte) 66, param1)) {
           return oo.field_c[param1];
         }
@@ -250,7 +250,7 @@ final class rb extends de {
         if (param0 == 37) {
           return pj.field_a;
         }
-        return (tf) null;
+        return (Sprite) null;
     }
 
     private final boolean a(byte param0, int param1) {
@@ -271,7 +271,7 @@ final class rb extends de {
         if (param0 > -64) {
           field_q = 92;
         }
-        jn.field_v = this.b(4, uf.field_d, bg.field_k);
+        jn.field_v = this.b(4, ProxyAuthenticationException.field_d, bg.field_k);
         if (jn.field_v != -1 &&
           nm.field_c == 1) {
           mc.a(128, -126);
@@ -317,8 +317,8 @@ final class rb extends de {
 
     final void a(byte param0, boolean param1, int param2) {
         String var4;
-        tf stackIn_5_0 = null;
-        tf var5;
+        Sprite stackIn_5_0 = null;
+        Sprite var5;
         var4 = this.d(param2, 7698);
         if (param2 == 1 &&
           this.field_k[param2] == 23) {

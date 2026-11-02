@@ -39,13 +39,13 @@ final class nd {
         var3.field_r[22] = (byte)2;
         var3.field_r[17] = (byte) 1;
         var3.field_r[21] = (byte)2;
-        cf.field_C = new kk(var3, 460, 285);
-        te.field_Qb = new al(var10, var3, cf.field_C);
+        SpriteState.field_C = new kk(var3, 460, 285);
+        te.field_Qb = new al(var10, var3, SpriteState.field_C);
         ug.field_q = new pb(var2, 150, 280);
-        cf.field_C.a(0, 0, 0, (byte) -124, 0);
+        SpriteState.field_C.a(0, 0, 0, (byte) -124, 0);
         ug.field_q.a(param0 - 18614);
-        cf.field_u = new kf();
-        cf.field_u.a(262144, -76);
+        SpriteState.field_u = new kf();
+        SpriteState.field_u.a(262144, -76);
         jf.field_c = new mj();
         dd var4 = new dd(3, 4, 0, 0, 0, 262144, 0, 0, al.field_c[3][4]);
         if (param0 != 37) {
@@ -90,11 +90,11 @@ final class nd {
 
     final static void a(int param0) {
         sc.field_h = rk.field_e;
-        h.field_T = 10 + sc.field_h.c(we.field_o[20]);
+        h.field_T = 10 + sc.field_h.c(PacketBuffer.field_o[20]);
         if (param0 != 3) {
           field_c = (int[]) null;
         }
-        int var1 = sc.field_h.c(we.field_o[21]);
+        int var1 = sc.field_h.c(PacketBuffer.field_o[21]);
         if (var1 > h.field_T) {
           h.field_T = var1;
         }

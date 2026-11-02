@@ -74,9 +74,9 @@ final class fo {
           var10.b(3887);
           var8++;
         }
-        t.b(this.field_p - 3, this.field_i - 5, 299 + this.field_d, this.field_q, 3355392);
-        t.b(-2 + this.field_p, this.field_i - 5, this.field_d + 0 + 300, this.field_q, 6710784);
-        t.b(-1 + this.field_p, -5 + this.field_i, 300 + this.field_d + param0, this.field_q, 3355392);
+        SoftwareRasterizer.b(this.field_p - 3, this.field_i - 5, 299 + this.field_d, this.field_q, 3355392);
+        SoftwareRasterizer.b(-2 + this.field_p, this.field_i - 5, this.field_d + 0 + 300, this.field_q, 6710784);
+        SoftwareRasterizer.b(-1 + this.field_p, -5 + this.field_i, 300 + this.field_d + param0, this.field_q, 3355392);
     }
 
     final static boolean a(byte param0) {

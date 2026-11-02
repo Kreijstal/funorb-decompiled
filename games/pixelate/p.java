@@ -64,7 +64,7 @@ final class p {
         return this.field_g[param0] * 2;
     }
 
-    final void a(we param0, bk param1) {
+    final void a(PacketBuffer param0, bk param1) {
         int var3;
         int var4;
         int var5;

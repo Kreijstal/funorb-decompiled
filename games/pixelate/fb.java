@@ -28,7 +28,7 @@ final class fb extends ak {
         if (param0 < 93) {
           return (ak) null;
         }
-        return v.field_e.field_Fb;
+        return MouseWheelHandler.field_e.field_Fb;
     }
 
     private final void b(int param0, boolean param1) {
@@ -55,11 +55,11 @@ final class fb extends ak {
     final static void a(int param0, int param1) {
         pc var2 = aa.field_f;
         var2.g(param1, 15514);
-        var2.e(160, param0);
-        var2.e(160, 1);
+        var2.writeByte(160, param0);
+        var2.writeByte(160, 1);
     }
 
-    fb(long param0, tf param1, tf param2, int param3, ak param4, String param5) {
+    fb(long param0, Sprite param1, Sprite param2, int param3, ak param4, String param5) {
         this(param0, (ak) null, param4, param5);
         try {
           this.field_Fb.field_kb = param3;

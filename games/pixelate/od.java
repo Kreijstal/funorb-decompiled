@@ -48,7 +48,7 @@ final class od extends ak {
         }
     }
 
-    final static void a(int param0, we param1, int param2, cb param3) {
+    final static void a(int param0, PacketBuffer param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -86,7 +86,7 @@ final class od extends ak {
           try {
             var17 = new aj();
             var17.field_s = param1.f(255);
-            var17.field_p = param1.k(param0 ^ param0);
+            var17.field_p = param1.readInt(param0 ^ param0);
             var17.field_r = new int[var17.field_s];
             var17.field_q = new int[var17.field_s];
             var17.field_l = new ei[var17.field_s];
@@ -113,7 +113,7 @@ final class od extends ak {
                     var11 = var18;
                     if (3 == var6_int) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param1.k(param0 + 5);
+                        var13 = param1.readInt(param0 + 5);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param1.a(var20[var12_int], 0, -76, var13);
@@ -124,10 +124,10 @@ final class od extends ak {
                     var16 = 0;
                     var13Lifetime1 = var16;
                     while (var16 < var9) {
-                      var12[var16] = i.a(var10[var16], -113);
+                      var12[var16] = ImageProducerRasterBuffer.a(var10[var16], -113);
                       var16++;
                     }
-                    var17.field_v[var5] = param3.a(0, var12, var8, i.a(var19, -115));
+                    var17.field_v[var5] = param3.a(0, var12, var8, ImageProducerRasterBuffer.a(var19, -115));
                     var17.field_w[var5] = var20;
                   }
                 } else {
@@ -136,11 +136,11 @@ final class od extends ak {
                   var8 = param1.h(param0 + 10);
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param1.k(param0 + 5);
+                    var9 = param1.readInt(param0 + 5);
                   }
                   var17.field_r[var5] = var6_int;
                   var17.field_q[var5] = var9;
-                  var17.field_l[var5] = param3.a(var8, i.a(var15, bn.a(param0, 121)), (byte) -94);
+                  var17.field_l[var5] = param3.a(var8, ImageProducerRasterBuffer.a(var15, bn.a(param0, 121)), (byte) -94);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

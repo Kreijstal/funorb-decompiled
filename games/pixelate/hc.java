@@ -299,7 +299,7 @@ final class hc extends ch implements om, vo {
                   var26 = var26 + var28;
                   var17_int = var17_int + var19;
                   var30 = var30 + var32;
-                  var36Lifetime2 = var36Lifetime2 + t.field_j;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_j;
                 }
               }
               var36Lifetime3 = param1 - param13;
@@ -451,7 +451,7 @@ final class hc extends ch implements om, vo {
               var29 = var29 + var31;
               var30 = var30 + var32;
               var17_int = var17_int + var19;
-              var35Lifetime1 = var35Lifetime1 + t.field_j;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_j;
               var25 = var25 + var27;
               var26 = var26 + var28;
               var22 = var22 + var24;
@@ -490,8 +490,8 @@ final class hc extends ch implements om, vo {
           var4 = new uc(he.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.field_w, -1, 2147483647, true);
           this.field_N = new db(var7, var4);
           this.field_N.field_l = "";
-          this.field_N.a(fa.field_g, 0, 0);
-          this.field_N.a(fa.field_g, 0, 1);
+          this.field_N.a(IntrusiveNode.field_g, 0, 0);
+          this.field_N.a(IntrusiveNode.field_g, 0, 1);
           this.field_N.field_n = (fn) (this);
           this.field_N.field_E = this.field_E - 40;
           this.field_N.a(26, this.field_E - 40, var3, -118);

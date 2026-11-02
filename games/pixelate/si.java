@@ -37,10 +37,10 @@ final class si extends qm {
     final static void a(int param0, byte[] param1, int param2, int param3, boolean param4, byte param5) {
         pc var6 = aa.field_f;
         var6.g(param0, 15514);
-        var6.field_m = var6.field_m + 1;
-        int var7 = var6.field_m;
-        var6.e(160, 4);
-        var6.e(160, param2);
+        var6.position = var6.position + 1;
+        int var7 = var6.position;
+        var6.writeByte(160, 4);
+        var6.writeByte(160, param2);
         int var8 = param3;
         if (param4) {
           var8 += 128;
@@ -49,9 +49,9 @@ final class si extends qm {
           return;
         }
         try {
-          var6.e(160, var8);
+          var6.writeByte(160, var8);
           var6.a(param1.length, 0, -3493, param1);
-          var6.f(var6.field_m - var7, param5 + 75);
+          var6.f(var6.position - var7, param5 + 75);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "si.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ng extends fa {
+class ng extends IntrusiveNode {
     int field_B;
     eb field_y;
     static hh[] field_A;
@@ -155,7 +155,7 @@ class ng extends fa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(param0 + 66, param2, param1, bg.field_k, uf.field_d) ? 1 : 0;
+          var5_int = this.a(param0 + 66, param2, param1, bg.field_k, ProxyAuthenticationException.field_d) ? 1 : 0;
           stackIn_3_0 = (var5_int != 0) ? 0 : 1;
           if (this.field_D) {
             stackIn_6_1 = 0;
@@ -231,24 +231,24 @@ class ng extends fa {
 
     final static void g(int param0) {
         RuntimeException runtimeException = null;
-        tf var1 = null;
-        tf var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          var1 = new tf(540, 140);
+          var1 = new Sprite(540, 140);
           h.a(-126, var1);
           ja.a();
-          t.d();
+          SoftwareRasterizer.d();
           ga.field_f = param0;
           ma.d((byte) 106);
           var2 = var1.a();
           var3 = 0;
           while (15 > var3) {
             var2.e(-2, -2, 16777215);
-            t.c(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.c(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
               return;
@@ -370,7 +370,7 @@ class ng extends fa {
         bn var6Lifetime2;
         bn var6Lifetime3;
         bn var6Lifetime2Lifetime1;
-        L0: {
+        regionExit1: {
           var7 = Pixelate.field_H ? 1 : 0;
           this.a(40, param0, param3, this);
           var5 = this.b(true) ? 1 : 0;
@@ -380,7 +380,7 @@ class ng extends fa {
                 if (0 == nm.field_c) {
                   if (ef.field_b == 0 &&
                     db.field_R != 0) {
-                    this.a(bg.field_k, param3, this, param2 - 99, param0, uf.field_d);
+                    this.a(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                     var10 = qf.field_a;
                     if (var10 != null) {
                       if (var10.field_n instanceof s) {
@@ -399,7 +399,7 @@ class ng extends fa {
                     param1 = false;
                     if (ef.field_b == 0 &&
                       db.field_R != 0) {
-                      this.a(bg.field_k, param3, this, param2 - 99, param0, uf.field_d);
+                      this.a(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                       var8 = qf.field_a;
                       var6 = var8;
                       if (var8 != null) {
@@ -417,7 +417,7 @@ class ng extends fa {
                   } else {
                     if (ef.field_b == 0 &&
                       db.field_R != 0) {
-                      this.a(bg.field_k, param3, this, param2 - 99, param0, uf.field_d);
+                      this.a(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                       var9 = qf.field_a;
                       var6Lifetime3 = var9;
                       if (var9 != null) {
@@ -434,14 +434,14 @@ class ng extends fa {
                     }
                   }
                 }
-                break L0;
+                break regionExit1;
               }
-              this.a(uf.field_d, (byte) 80, param0, param3, bg.field_k, lp.field_i, this);
+              this.a(ProxyAuthenticationException.field_d, (byte) 80, param0, param3, bg.field_k, lp.field_i, this);
             }
             if (0 == nm.field_c) {
               if (ef.field_b == 0 &&
                 db.field_R != 0) {
-                this.a(bg.field_k, param3, this, param2 - 99, param0, uf.field_d);
+                this.a(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                 var11 = qf.field_a;
                 var6Lifetime1 = var11;
                 if (var11 != null) {
@@ -478,7 +478,7 @@ class ng extends fa {
                     ij.a(-5516, this.b((byte) 37));
                     return param1;
                   }
-                  this.a(bg.field_k, param3, this, param2 - 99, param0, uf.field_d);
+                  this.a(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                   var12 = qf.field_a;
                   if (var12 != null) {
                     if (var12.field_n instanceof s) {
@@ -514,9 +514,9 @@ class ng extends fa {
                 param1 = false;
                 if (ef.field_b == 0) {
                   if (db.field_R == 0) {
-                    break L0;
+                    break regionExit1;
                   }
-                  this.a(bg.field_k, param3, this, param2 - 99, param0, uf.field_d);
+                  this.a(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                   var14 = qf.field_a;
                   var6Lifetime2 = var14;
                   if (var14 != null) {
@@ -558,7 +558,7 @@ class ng extends fa {
                   ij.a(-5516, this.b((byte) 37));
                   return param1;
                 }
-                this.a(bg.field_k, param3, this, param2 - 99, param0, uf.field_d);
+                this.a(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                 var13 = qf.field_a;
                 var6Lifetime2Lifetime1 = var13;
                 if (var13 != null) {
@@ -592,7 +592,7 @@ class ng extends fa {
             }
             param1 = false;
             if (ef.field_b != 0) {
-              break L0;
+              break regionExit1;
             }
             if (db.field_R == 0) {
               db.field_R = ef.field_b;
@@ -604,7 +604,7 @@ class ng extends fa {
               ij.a(-5516, this.b((byte) 37));
               return param1;
             }
-            this.a(bg.field_k, param3, this, param2 - 99, param0, uf.field_d);
+            this.a(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
             var15 = qf.field_a;
             if (var15 != null) {
               if (var15.field_n instanceof s) {
@@ -613,7 +613,7 @@ class ng extends fa {
               qf.field_a = null;
             }
             if (var7 == 0) {
-              break L0;
+              break regionExit1;
             }
           }
           if (var5 != 0 &&
@@ -750,7 +750,7 @@ class ng extends fa {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = we.b(nh.a(param0, -29667), -7067);
+          var2 = PacketBuffer.b(nh.a(param0, -29667), -7067);
           if (var2 == null) {
             var2 = "";
           }

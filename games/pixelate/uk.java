@@ -3,7 +3,7 @@
  */
 final class uk extends de {
     private int field_t;
-    static we field_v;
+    static PacketBuffer field_v;
     private ga field_o;
     static fm field_u;
     static bd field_s;
@@ -108,11 +108,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("ticketing_xunread", 0);
                 if (null != var2) {
-                  cf.field_v = of.a(var2, 1);
+                  SpriteState.field_v = of.a(var2, 1);
                 }
                 var2 = vd.a("ticketing_gotowebsite", param0 ^ 31873);
                 if (null != var2) {
-                  tn.field_d = of.a(var2, 1);
+                  GameApplet.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("ticketing_waitingformessages", param0 ^ 31873);
                 if (null != var2) {
@@ -160,7 +160,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_x_joined_your_game", 0);
                 if (var2 != null) {
-                  cf.field_w = of.a(var2, param0 - 31872);
+                  SpriteState.field_w = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mu_x_entered_other_game", param0 ^ 31873);
                 if (var2 != null) {
@@ -168,7 +168,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_x_left_lobby", 0);
                 if (var2 != null) {
-                  rp.field_b = of.a(var2, 1);
+                  KeyboardInputHandler.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_x_lost_con", param0 ^ 31873);
                 if (var2 != null) {
@@ -288,7 +288,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_play_rated", 0);
                 if (var2 != null) {
-                  lm.field_m = of.a(var2, 1);
+                  DualLinkNode.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_create_unrated", param0 - 31873);
                 if (var2 != null) {
@@ -348,7 +348,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("rm_x_from_ignore", 0);
                 if (null != var2) {
-                  hk.field_a = of.a(var2, 1);
+                  DelegatingCanvas.field_a = of.a(var2, 1);
                 }
                 var2 = vd.a("send_pm_to_x", param0 - 31873);
                 if (var2 != null) {
@@ -400,7 +400,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_gameopt_invite_x_to_game", 0);
                 if (null != var2) {
-                  i.field_m = of.a(var2, 1);
+                  ImageProducerRasterBuffer.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("report_x_for_abuse", 0);
                 if (null != var2) {
@@ -516,7 +516,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("your_game", 0);
                 if (var2 != null) {
-                  hk.field_g = of.a(var2, 1);
+                  DelegatingCanvas.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("game_full", param0 - 31873);
                 if (var2 != null) {
@@ -640,11 +640,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("you_cannot_join_in_progress", param0 - 31873);
                 if (var2 != null) {
-                  qa.field_b = of.a(var2, 1);
+                  ClientException.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("you_can_spectate", 0);
                 if (var2 != null) {
-                  nb.field_a = of.a(var2, 1);
+                  SecondaryNodeDequeIterator.field_a = of.a(var2, 1);
                 }
                 var2 = vd.a("you_can_not_spectate", 0);
                 if (null != var2) {
@@ -668,7 +668,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("loading", 0);
                 if (null != var2) {
-                  mk.field_c = of.a(var2, 1);
+                  FullscreenFocusCanvas.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("offline", 0);
                 if (null != var2) {
@@ -748,7 +748,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("privatechat_friend_offline", param0 - 31873);
                 if (null != var2) {
-                  tn.field_m = of.a(var2, 1);
+                  GameApplet.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("privatechat_friend_notlisted", param0 - 31873);
                 if (null != var2) {
@@ -764,7 +764,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("thisisrunescapeclan_notowner", param0 - 31873);
                 if (var2 != null) {
-                  kl.field_c = of.a(var2, 1);
+                  IterableNodeHashTable.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("runescapeclan", 0);
                 if (var2 != null) {
@@ -856,7 +856,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_needchanging1", param0 ^ 31873);
                 if (null != var2) {
-                  we.field_l = of.a(var2, 1);
+                  PacketBuffer.field_l = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_needchanging2", 0);
                 if (null != var2) {
@@ -884,7 +884,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_pleaseselectoption2", 0);
                 if (null != var2) {
-                  cf.field_x = of.a(var2, 1);
+                  SpriteState.field_x = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_badnumplayers", 0);
                 if (var2 != null) {
@@ -982,7 +982,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("rule_1_4", 0);
                 if (null != var2) {
-                  sh.field_c = of.a(var2, 1);
+                  NodeHashTableIterator.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("rule_pillar_2", 0);
                 if (var2 != null) {
@@ -1006,7 +1006,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("cancel", 0);
                 if (null != var2) {
-                  fa.field_f = of.a(var2, 1);
+                  IntrusiveNode.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("pleaselogintoplay", 0);
                 if (null != var2) {
@@ -1110,7 +1110,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("connectionlost_reconnecting", 0);
                 if (null != var2) {
-                  nb.field_b = of.a(var2, 1);
+                  SecondaryNodeDequeIterator.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("connectionlost_withreason", 0);
                 if (null != var2) {
@@ -1138,7 +1138,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("quittowebsite", 0);
                 if (null != var2) {
-                  mk.field_e = of.a(var2, 1);
+                  FullscreenFocusCanvas.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("connectionrestored", 0);
                 if (null != var2) {
@@ -1286,7 +1286,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("openinpopupwindow", 0);
                 if (var2 != null) {
-                  fa.field_g = of.a(var2, 1);
+                  IntrusiveNode.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("create", 0);
                 if (null != var2) {
@@ -1398,7 +1398,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_displayname", param0 ^ 31873);
                 if (null != var2) {
-                  mo.field_i = of.a(var2, 1);
+                  BufferedSocket.field_i = of.a(var2, 1);
                 }
                 var2 = vd.a("create_password", 0);
                 if (null != var2) {
@@ -1458,11 +1458,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_optin_news", param0 ^ 31873);
                 if (null != var2) {
-                  ha.field_j = of.a(var2, 1);
+                  CanvasRasterBuffer.field_j = of.a(var2, 1);
                 }
                 var2 = vd.a("create_agreeterms", 0);
                 if (null != var2) {
-                  hk.field_f = of.a(var2, 1);
+                  DelegatingCanvas.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("create_u13terms", param0 - 31873);
                 if (var2 != null) {
@@ -1494,7 +1494,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("login_create_tooltip", param0 - 31873);
                 if (null != var2) {
-                  rp.field_a = of.a(var2, 1);
+                  KeyboardInputHandler.field_a = of.a(var2, 1);
                 }
                 var2 = vd.a("login_justplay_tooltip", param0 - 31873);
                 if (null != var2) {
@@ -1694,7 +1694,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("friendlistdupe", 0);
                 if (null != var2) {
-                  mo.field_b = of.a(var2, 1);
+                  BufferedSocket.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("friendnotfound", param0 ^ 31873);
                 if (null != var2) {
@@ -1706,7 +1706,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("ignorelistdupe", 0);
                 if (null != var2) {
-                  cf.field_H = of.a(var2, param0 - 31872);
+                  SpriteState.field_H = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("ignorenotfound", 0);
                 if (var2 != null) {
@@ -1734,7 +1734,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("enterignore_del", 0);
                 if (var2 != null) {
-                  uf.field_f = of.a(var2, 1);
+                  ProxyAuthenticationException.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("text_removed_from_game", 0);
                 if (var2 != null) {
@@ -1766,7 +1766,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("waitingfor_fonts", 0);
                 if (var2 != null) {
-                  ha.field_f = of.a(var2, 1);
+                  CanvasRasterBuffer.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("waitingfor_soundeffects", 0);
                 if (var2 != null) {
@@ -1914,7 +1914,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("achievements", 0);
                 if (null != var2) {
-                  pg.field_d = of.a(var2, 1);
+                  SecondaryNodeDeque.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("achievementsthisgame", param0 ^ 31873);
                 if (var2 != null) {
@@ -1960,7 +1960,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("pausemenu", 0);
                 if (var2 != null) {
-                  mk.field_b = of.a(var2, param0 ^ 31872);
+                  FullscreenFocusCanvas.field_b = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("optionsmenu_notpaused", param0 ^ 31873);
                 if (null != var2) {
@@ -2496,27 +2496,27 @@ final class uk extends de {
                 }
                 var2 = vd.a("quickchat_shortcut_keys,0", 0);
                 if (null != var2) {
-                  cf.field_I[0] = of.a(var2, 1);
+                  SpriteState.field_I[0] = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_shortcut_keys,1", 0);
                 if (var2 != null) {
-                  cf.field_I[1] = of.a(var2, bn.a(param0, 31872));
+                  SpriteState.field_I[1] = of.a(var2, bn.a(param0, 31872));
                 }
                 var2 = vd.a("quickchat_shortcut_keys,2", 0);
                 if (var2 != null) {
-                  cf.field_I[2] = of.a(var2, 1);
+                  SpriteState.field_I[2] = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_shortcut_keys,3", 0);
                 if (var2 != null) {
-                  cf.field_I[3] = of.a(var2, 1);
+                  SpriteState.field_I[3] = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_shortcut_keys,4", 0);
                 if (null != var2) {
-                  cf.field_I[4] = of.a(var2, 1);
+                  SpriteState.field_I[4] = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_shortcut_keys,5", param0 - 31873);
                 if (var2 != null) {
-                  cf.field_I[5] = of.a(var2, 1);
+                  SpriteState.field_I[5] = of.a(var2, 1);
                 }
                 var2 = vd.a("keychar_the_character_under_questionmark", 0);
                 if (null != var2) {
@@ -2524,7 +2524,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("rating_noratings", 0);
                 if (var2 != null) {
-                  cf.field_z = of.a(var2, 1);
+                  SpriteState.field_z = of.a(var2, 1);
                 }
                 var2 = vd.a("rating_rating", 0);
                 if (null != var2) {
@@ -2544,7 +2544,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("rating_drawn", 0);
                 if (var2 != null) {
-                  fa.field_d = of.a(var2, 1);
+                  IntrusiveNode.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("benefits_fullscreen", 0);
                 if (var2 != null) {
@@ -2580,19 +2580,19 @@ final class uk extends de {
                 }
                 var2 = vd.a("reconnect_lost_seq,0", 0);
                 if (var2 != null) {
-                  ha.field_c[0] = of.a(var2, 1);
+                  CanvasRasterBuffer.field_c[0] = of.a(var2, 1);
                 }
                 var2 = vd.a("reconnect_lost_seq,1", 0);
                 if (var2 != null) {
-                  ha.field_c[1] = of.a(var2, 1);
+                  CanvasRasterBuffer.field_c[1] = of.a(var2, 1);
                 }
                 var2 = vd.a("reconnect_lost_seq,2", 0);
                 if (null != var2) {
-                  ha.field_c[2] = of.a(var2, 1);
+                  CanvasRasterBuffer.field_c[2] = of.a(var2, 1);
                 }
                 var2 = vd.a("reconnect_lost_seq,3", param0 ^ 31873);
                 if (null != var2) {
-                  ha.field_c[3] = of.a(var2, 1);
+                  CanvasRasterBuffer.field_c[3] = of.a(var2, 1);
                 }
                 var2 = vd.a("reconnect_lost", 0);
                 if (null != var2) {
@@ -2664,7 +2664,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("fs_accept_countdown_sing", 0);
                 if (null != var2) {
-                  lm.field_n = of.a(var2, 1);
+                  DualLinkNode.field_n = of.a(var2, 1);
                 }
                 var2 = vd.a("fs_accept_countdown_pl", 0);
                 if (var2 != null) {
@@ -2700,7 +2700,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("fs_timeout", 0);
                 if (var2 != null) {
-                  ha.field_k = of.a(var2, param0 ^ 31872);
+                  CanvasRasterBuffer.field_k = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("fs_button_tryagain", param0 - 31873);
                 if (var2 != null) {
@@ -2776,11 +2776,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("rating_mode_long_name,0", 0);
                 if (null != var2) {
-                  lm.field_k[0] = of.a(var2, 1);
+                  DualLinkNode.field_k[0] = of.a(var2, 1);
                 }
                 var2 = vd.a("rating_mode_long_name,1", param0 ^ 31873);
                 if (null != var2) {
-                  lm.field_k[1] = of.a(var2, 1);
+                  DualLinkNode.field_k[1] = of.a(var2, 1);
                 }
                 var2 = vd.a("graphics_config_fixed_size", 0);
                 if (null != var2) {
@@ -2938,31 +2938,31 @@ final class uk extends de {
                 }
                 var2 = vd.a("mustlogin_alternate,1", 0);
                 if (var2 != null) {
-                  v.field_a[1] = of.a(var2, 1);
+                  MouseWheelHandler.field_a[1] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin_alternate,2", 0);
                 if (var2 != null) {
-                  v.field_a[2] = of.a(var2, 1);
+                  MouseWheelHandler.field_a[2] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin_alternate,3", 0);
                 if (null != var2) {
-                  v.field_a[3] = of.a(var2, 1);
+                  MouseWheelHandler.field_a[3] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin_alternate,4", 0);
                 if (var2 != null) {
-                  v.field_a[4] = of.a(var2, 1);
+                  MouseWheelHandler.field_a[4] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin_alternate,5", 0);
                 if (var2 != null) {
-                  v.field_a[5] = of.a(var2, param0 - 31872);
+                  MouseWheelHandler.field_a[5] = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mustlogin_alternate,6", 0);
                 if (var2 != null) {
-                  v.field_a[6] = of.a(var2, param0 - 31872);
+                  MouseWheelHandler.field_a[6] = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mustlogin_alternate,7", 0);
                 if (null != var2) {
-                  v.field_a[7] = of.a(var2, 1);
+                  MouseWheelHandler.field_a[7] = of.a(var2, 1);
                 }
                 var2 = vd.a("subscription_cost_monthly,0", param0 - 31873);
                 if (null != var2) {
@@ -3046,9 +3046,9 @@ final class uk extends de {
                   throw aa.a((Throwable) ((Object) stackIn_2602_0), ((StringBuilder) (Object) stackIn_2602_1).append(stackIn_2603_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = tn.field_l;
+                  var4 = GameApplet.field_l;
                   var4++;
-                  tn.field_l = var4;
+                  GameApplet.field_l = var4;
                 }
             }
         }
@@ -3562,6 +3562,6 @@ final class uk extends de {
 
     static {
         field_q = new String[]{"Enter the multiplayer lobby to compete in a <col=FF9900>head-to-head race</col>! You'll see your opponent's grid next to yours as you both try to make the target picture as quickly as possible. "};
-        field_v = new we(256);
+        field_v = new PacketBuffer(256);
     }
 }

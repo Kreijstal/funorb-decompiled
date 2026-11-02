@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bd {
-    static tf field_a;
+    static Sprite field_a;
     static int field_c;
     static java.applet.Applet field_b;
 
@@ -26,9 +26,9 @@ final class bd {
         aa var9 = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          if (qo.field_o != qa.field_f.field_i) {
-            wa.field_i = wa.field_i + (qa.field_f.field_i - qo.field_o);
-            qo.field_o = qa.field_f.field_i;
+          if (qo.field_o != ClientException.field_f.field_i) {
+            wa.field_i = wa.field_i + (ClientException.field_f.field_i - qo.field_o);
+            qo.field_o = ClientException.field_f.field_i;
           }
           if (param0 > -50) {
             return;
@@ -54,15 +54,15 @@ final class bd {
               if (var5.field_P != 0) {
                 cg.a((byte) -13, var5, var4_int);
               }
-              var6 = kl.a(var4_int, 0);
+              var6 = IterableNodeHashTable.a(var4_int, 0);
               fm.field_h[var4_int].field_H = h.field_V[var6];
-              hk.field_e[var4_int].field_cb = rg.field_a[var6];
+              DelegatingCanvas.field_e[var4_int].field_cb = rg.field_a[var6];
             }
           }
           if (0 != gh.field_u.field_P) {
             hc.field_M = new oe(gh.field_u.field_tb, gh.field_u.field_gb, gh.field_u.field_K, gh.field_u.field_nb, param3, cm.field_o, pj.field_i, ae.field_f, mg.field_h, um.field_q, dn.field_c, (String) null, 0L);
           }
-          var9 = ah.a((byte) -110, fq.field_q, param2, v.field_c);
+          var9 = ah.a((byte) -110, fq.field_q, param2, MouseWheelHandler.field_c);
           if (var9 != null) {
             fj.a(var9, (byte) 125);
           }
@@ -81,7 +81,7 @@ final class bd {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          field_a = (tf) null;
+          field_a = (Sprite) null;
           if (hf.field_q < 20) {
             return true;
           }
@@ -128,9 +128,9 @@ final class bd {
     }
 
     final static void a(byte param0) {
-        lm var1 = null;
+        DualLinkNode var1 = null;
         int var2 = Pixelate.field_H ? 1 : 0;
-        lm var1Lifetime1;
+        DualLinkNode var1Lifetime1;
         try {
           aj.field_t = 0;
           f.field_q = 0;
@@ -161,6 +161,6 @@ final class bd {
     }
 
     static {
-        field_a = new tf(270, 70);
+        field_a = new Sprite(270, 70);
     }
 }

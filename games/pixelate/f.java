@@ -47,24 +47,24 @@ final class f implements eb {
           var14 = (si) (stackIn_3_0);
           if (var14 == null) {
           }
-          t.d(param3 + param0.field_z, param2 + param0.field_p, param0.field_E, param0.field_C, this.field_m);
+          SoftwareRasterizer.d(param3 + param0.field_z, param2 + param0.field_p, param0.field_E, param0.field_C, this.field_m);
           if (param1 != -124) {
             this.field_h = -106;
           }
           var7 = param3 - (-param0.field_z - var14.field_O);
           var8 = var14.field_R + param0.field_p + param2;
-          t.c(var7, var8, var14.field_N, this.field_k);
+          SoftwareRasterizer.c(var7, var8, var14.field_N, this.field_k);
           if (var14.field_Q != -1) {
             var9 = 3.141592653589793 * (double)var14.field_Q * 2.0 / (double)var14.field_V;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_N);
             var12 = (int)(Math.cos(var9) * (double)var14.field_N);
-            t.c(var11 + var7, var8 + var12, 1, this.field_h);
+            SoftwareRasterizer.c(var11 + var7, var8 + var12, 1, this.field_h);
           }
-          t.c(var7, var8, 2, 1);
+          SoftwareRasterizer.c(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_T) / (double)var14.field_V;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_N);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_N);
-          t.b(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.b(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_g) {
             var13 = this.field_e + (var14.field_N + var14.field_O);
             this.field_g.a(param0.field_q, var13 + param3 + param0.field_z, this.field_b + (param0.field_p + param2), -var13 - (this.field_e - param0.field_E), param0.field_C - (this.field_e << 1), this.field_r, this.field_l, 1, 1, 0);
@@ -118,7 +118,7 @@ final class f implements eb {
         RuntimeException decompiledCaughtException = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          if (!we.a(param2, 5832, param0)) {
+          if (!PacketBuffer.a(param2, 5832, param0)) {
             return false;
           }
           if (param1 >= -60) {

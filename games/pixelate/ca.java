@@ -228,7 +228,7 @@ final class ca {
               var2_int = 0;
               break;
             }
-            this.field_c[var2_int] = fp.a(fp.a(mk.a(65280L, (long)this.field_j[var3 + 6] << 8), fp.a(fp.a(mk.a((long)this.field_j[4 + var3], 255L) << 24, fp.a(fp.a(fp.a(mk.a((long)this.field_j[1 + var3], 255L) << 48, (long)this.field_j[var3] << 56), mk.a(280375465082880L, (long)this.field_j[2 + var3] << 40)), mk.a((long)this.field_j[3 + var3], 255L) << 32)), mk.a((long)this.field_j[var3 + 5] << 16, 16711680L))), mk.a((long)this.field_j[7 + var3], 255L));
+            this.field_c[var2_int] = fp.a(fp.a(FullscreenFocusCanvas.a(65280L, (long)this.field_j[var3 + 6] << 8), fp.a(fp.a(FullscreenFocusCanvas.a((long)this.field_j[4 + var3], 255L) << 24, fp.a(fp.a(fp.a(FullscreenFocusCanvas.a((long)this.field_j[1 + var3], 255L) << 48, (long)this.field_j[var3] << 56), FullscreenFocusCanvas.a(280375465082880L, (long)this.field_j[2 + var3] << 40)), FullscreenFocusCanvas.a((long)this.field_j[3 + var3], 255L) << 32)), FullscreenFocusCanvas.a((long)this.field_j[var3 + 5] << 16, 16711680L))), FullscreenFocusCanvas.a((long)this.field_j[7 + var3], 255L));
             var2_int++;
             var3 += 8;
           } while (var6 == 0);
@@ -243,11 +243,11 @@ final class ca {
             this.field_e[var2_int] = fp.a(arrayValue$1, dupTemp$0);
             var2_int++;
           } while (var6 == 0);
-          L6: while (true) {
+          scanLoop1: while (true) {
             if (var2_int <= 10) {
               stackIn_60_0 = 0;
               if (var6 != 0) {
-                break L6;
+                break scanLoop1;
               }
               var3 = stackIn_60_0;
               while (var3 < 8) {
@@ -256,7 +256,7 @@ final class ca {
                 stackIn_32_0 = 56;
                 var5 = stackIn_32_0;
                 while (var4 < 8) {
-                  this.field_b[var3] = fp.a(this.field_b[var3], pg.field_b[var4][cm.a(255, (int)(this.field_d[cm.a(-var4 + var3, 7)] >>> var5))]);
+                  this.field_b[var3] = fp.a(this.field_b[var3], SecondaryNodeDeque.field_b[var4][cm.a(255, (int)(this.field_d[cm.a(-var4 + var3, 7)] >>> var5))]);
                   var4++;
                   var5 -= 8;
                 }
@@ -268,7 +268,7 @@ final class ca {
                 this.field_d[var3] = this.field_b[var3];
                 var3++;
               }
-              this.field_d[0] = fp.a(this.field_d[0], pg.field_c[var2_int]);
+              this.field_d[0] = fp.a(this.field_d[0], SecondaryNodeDeque.field_c[var2_int]);
               var3 = 0;
               while (var3 < 8) {
                 this.field_b[var3] = this.field_d[var3];
@@ -276,7 +276,7 @@ final class ca {
                 stackIn_51_0 = 56;
                 var5Lifetime1 = stackIn_51_0;
                 while (var4Lifetime1 < 8) {
-                  this.field_b[var3] = fp.a(this.field_b[var3], pg.field_b[var4Lifetime1][cm.a((int)(this.field_e[cm.a(7, var3 - var4Lifetime1)] >>> var5Lifetime1), 255)]);
+                  this.field_b[var3] = fp.a(this.field_b[var3], SecondaryNodeDeque.field_b[var4Lifetime1][cm.a((int)(this.field_e[cm.a(7, var3 - var4Lifetime1)] >>> var5Lifetime1), 255)]);
                   var5Lifetime1 -= 8;
                   var4Lifetime1++;
                 }
@@ -289,7 +289,7 @@ final class ca {
                 var3++;
               }
               var2_int++;
-              continue L6;
+              continue scanLoop1;
             }
             var2_int = 0;
             stackIn_60_0 = param0;
@@ -313,15 +313,15 @@ final class ca {
         }
     }
 
-    final static tf a(int param0) {
+    final static Sprite a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         byte[] var2 = null;
         int[] var3 = null;
         int var4_int = 0;
-        tf var4 = null;
+        Sprite var4 = null;
         int var5 = 0;
-        tf stackIn_5_0 = null;
+        Sprite stackIn_5_0 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
@@ -337,7 +337,7 @@ final class ca {
             }
             break;
           }
-          var4 = new tf(tj.field_y, jb.field_a, fa.field_b[0], e.field_b[0], gf.field_g[0], ge.field_c[0], var3);
+          var4 = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], gf.field_g[0], ge.field_c[0], var3);
           re.b(140);
           stackIn_5_0 = var4;
           return stackIn_5_0;
@@ -372,7 +372,7 @@ final class ca {
           var9 = param1;
           var11 = 31;
           var12 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var11 >= 0) {
               var12 = var12 + ((255 & this.field_l[var11]) + ((int)var9 & 255));
               this.field_l[var11] = (byte)var12;
@@ -387,7 +387,7 @@ final class ca {
                 var8 = 255 & param0[var5_int] << var6 | (255 & param0[var5_int + 1]) >>> 8 - var6;
                 stackIn_24_0 = var8;
                 if (var13 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
                 if (stackIn_24_0 >= 0 &&
                   256 > var8) {

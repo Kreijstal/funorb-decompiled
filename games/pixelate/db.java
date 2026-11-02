@@ -319,11 +319,11 @@ class db extends qm {
         return null;
     }
 
-    final static tf[] a(int param0, tf param1) {
-        tf[] var2 = null;
+    final static Sprite[] a(int param0, Sprite param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        tf[] var3 = null;
-        tf[] stackIn_3_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -332,7 +332,7 @@ class db extends qm {
           if (param0 != 24414) {
             field_N = (String) null;
           }
-          var3 = new tf[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = param1;
           stackIn_3_0 = var2;
@@ -388,7 +388,7 @@ class db extends qm {
           super.a(param0, param1, param2, param3);
           this.field_P = null;
           if (this.field_D) {
-            var5_int = uf.field_d - (param2 + this.field_z);
+            var5_int = ProxyAuthenticationException.field_d - (param2 + this.field_z);
             var6 = -param1 + (bg.field_k - this.field_p);
             this.field_P = this.b(var5_int, -22562, var6);
           }

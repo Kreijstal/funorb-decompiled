@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends RuntimeException {
+final class ClientException extends RuntimeException {
     static int field_e;
     Throwable field_c;
-    static ha field_f;
+    static CanvasRasterBuffer field_f;
     static String[] field_a;
     static String field_b;
     String field_d;
-    static tf field_g;
+    static Sprite field_g;
     private static String field_z;
 
     public static void a(boolean param0) {
@@ -17,19 +17,19 @@ final class qa extends RuntimeException {
         field_b = null;
         field_g = null;
         if (!param0) {
-          qa.a(62, -2, 14, -125);
+          ClientException.a(62, -2, 14, -125);
         }
     }
 
-    final static tf[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param3 == 3) {
           return ap.a(param1, param0, 5, param2, 1);
         }
-        qa.a(-72, -103, -103, -51);
+        ClientException.a(-72, -103, -103, -51);
         return ap.a(param1, param0, 5, param2, 1);
     }
 
-    qa(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_d = param1;
         this.field_c = param0;
     }

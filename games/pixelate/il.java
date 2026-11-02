@@ -62,7 +62,7 @@ final class il {
           }
           var6 = new qe();
           if (var4 != null) {
-            var6.a(false, new we(var4));
+            var6.a(false, new PacketBuffer(var4));
           }
           if (param0 >= 32768) {
             var6.a((byte) 92);
@@ -91,7 +91,7 @@ final class il {
         var5 = new qe();
         var3Lifetime2 = var5;
         if (var4Lifetime1 != null) {
-          var5.a(false, new we(var4Lifetime1));
+          var5.a(false, new PacketBuffer(var4Lifetime1));
         }
         if (param0 >= 32768) {
           var5.a((byte) 92);
@@ -115,16 +115,16 @@ final class il {
             return;
           }
           param1.c(2779);
-          var2 = (uj) (i.field_n.c(1504642273));
+          var2 = (uj) (ImageProducerRasterBuffer.field_n.c(1504642273));
           while (var2 != null) {
             if (var2.a(param1, (byte) -82)) {
-              var2 = (uj) (i.field_n.f(1504642273));
+              var2 = (uj) (ImageProducerRasterBuffer.field_n.f(1504642273));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            i.field_n.a(22125, param1);
+            ImageProducerRasterBuffer.field_n.a(22125, param1);
             return;
           }
           stackIn_10_0 = 126;

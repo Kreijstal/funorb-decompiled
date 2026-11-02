@@ -13,22 +13,22 @@ final class dg {
         int var7 = 0;
         pc var8 = aa.field_f;
         var8.g(param5, 15514);
-        var8.field_m = var8.field_m + 1;
+        var8.position = var8.position + 1;
         if (!param0) {
           return;
         }
         try {
-          var7 = var8.field_m;
-          var8.e(160, param1);
+          var7 = var8.position;
+          var8.writeByte(160, param1);
           if (param1 == 2) {
             var8.b((byte) -41, param4);
           }
           if (param3 != null) {
             hn.a(!param0 ? true : false, param3, var8);
           } else {
-            var8.b(1276387944, param2);
+            var8.writeShort(1276387944, param2);
           }
-          var8.f(var8.field_m - var7, -1);
+          var8.f(var8.position - var7, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

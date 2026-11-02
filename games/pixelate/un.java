@@ -20,11 +20,11 @@ final class un {
         int var1 = 0;
         if (-1 != ii.field_q) {
           var1 = -gk.field_bb + 50;
-          t.a(var1, 70, nn.field_a, 48, 65793, 160);
-          ha.field_b.a(nn.field_a + var1, 70, 160);
+          SoftwareRasterizer.a(var1, 70, nn.field_a, 48, 65793, 160);
+          CanvasRasterBuffer.field_b.a(nn.field_a + var1, 70, 160);
           de.field_c.a(var1 - 22, 70, 160);
           oo.field_c[ii.field_q].e(var1, 78);
-          qj.field_e.a(tn.field_n[ii.field_q], var1 + 16 + 32, 99, 16777215, -1);
+          qj.field_e.a(GameApplet.field_n[ii.field_q], var1 + 16 + 32, 99, 16777215, -1);
         }
         if (param0 >= 21) {
           return;

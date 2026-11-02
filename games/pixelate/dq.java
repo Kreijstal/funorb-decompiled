@@ -37,19 +37,19 @@ final class dq {
           var5 = aa.field_f;
           pc var3 = var5;
           var5.g(param0, 15514);
-          var5.field_m = var5.field_m + 1;
-          var4 = var5.field_m;
-          var5.e(160, 1);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(160, 1);
           if (param2.field_k != null) {
-            var5.e(160, param2.field_k.length);
+            var5.writeByte(160, param2.field_k.length);
             var5.a(param2.field_k.length, 0, param1 + 15496, param2.field_k);
           } else {
-            var5.e(160, 0);
+            var5.writeByte(160, 0);
           }
           var5.b(var4, (byte) 48);
-          var5.field_m = var5.field_m - 4;
-          param2.field_m = var5.k(param1 + 18989);
-          var5.f(var5.field_m - var4, param1 + 18988);
+          var5.position = var5.position - 4;
+          param2.field_m = var5.readInt(param1 + 18989);
+          var5.f(var5.position - var4, param1 + 18988);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dq.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

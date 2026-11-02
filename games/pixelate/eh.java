@@ -6,7 +6,7 @@ import java.io.*;
 abstract class eh {
     static String[] field_g;
     int field_e;
-    static tf[] field_c;
+    static Sprite[] field_c;
     static fm field_a;
     String field_b;
     static String field_d;
@@ -54,7 +54,7 @@ abstract class eh {
                 fm.field_f[var12].a(var13, var7Lifetime1, var6_int, 256, var8);
                 jo.field_n[var12].a(0, var7Lifetime1, param1, 256, -param1 + var9);
                 fm.field_h[var12].a(param3, var7Lifetime1 + (-param3 - param3), var9, 256, param4);
-                hk.field_e[var12].a(param3, -param3 + (-param3 + var7Lifetime1), var10, param0 + 253, var8 - (param1 + var10));
+                DelegatingCanvas.field_e[var12].a(param3, -param3 + (-param3 + var7Lifetime1), var10, param0 + 253, var8 - (param1 + var10));
               }
             }
           }
@@ -77,11 +77,11 @@ abstract class eh {
         field_g = null;
     }
 
-    final static tf[] a(String param0, String param1, byte param2, fm param3) {
+    final static Sprite[] a(String param0, String param1, byte param2, fm param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        tf[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

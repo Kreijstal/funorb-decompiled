@@ -14,7 +14,7 @@ final class pi extends ak {
     private int field_Ob;
     private lo[] field_Ib;
     private ak field_Jb;
-    private tf[] field_Kb;
+    private Sprite[] field_Kb;
     private int field_Hb;
 
     final static String a(CharSequence[] param0, int param1, int param2, int param3) {
@@ -109,7 +109,7 @@ final class pi extends ak {
 
     final void a(String param0, byte param1, int param2) {
         try {
-          this.field_Ib[this.field_Hb] = new lo(0L, (ak) null, (ak) null, this.field_Jb, (tf) null, param0);
+          this.field_Ib[this.field_Hb] = new lo(0L, (ak) null, (ak) null, this.field_Jb, (Sprite) null, param0);
           this.field_Ib[this.field_Hb].field_ab = this.field_Kb;
           this.field_Ib[this.field_Hb].field_A = true;
           this.field_Ib[this.field_Hb].field_kb = 1;
@@ -134,7 +134,7 @@ final class pi extends ak {
         return var1;
     }
 
-    final void a(int param0, int param1, tf param2, String param3) {
+    final void a(int param0, int param1, Sprite param2, String param3) {
         try {
           this.field_Ib[this.field_Hb] = new lo((long)param0, (ak) null, (ak) null, this.field_Jb, param2, param3);
           this.field_Ib[this.field_Hb].field_ab = this.field_Kb;
@@ -181,7 +181,7 @@ final class pi extends ak {
         return true;
     }
 
-    pi(ak param0, tf[] param1, ak param2, ak param3, int param4, int param5, int param6, int param7, int param8) {
+    pi(ak param0, Sprite[] param1, ak param2, ak param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Mb = new int[256];
         this.field_Gb = -2;
@@ -211,7 +211,7 @@ final class pi extends ak {
         int var8Lifetime1;
         var11 = Pixelate.field_H ? 1 : 0;
         if (this.field_Hb == 0) {
-          this.field_Ib[this.field_Hb] = new lo(0L, (ak) null, (ak) null, this.field_Pb, (tf) null, ln.field_l);
+          this.field_Ib[this.field_Hb] = new lo(0L, (ak) null, (ak) null, this.field_Pb, (Sprite) null, ln.field_l);
           this.field_Ib[this.field_Hb].field_kb = 1;
           this.a(this.field_Ib[this.field_Hb], (byte) 26);
           this.field_Mb[this.field_Hb] = -1;

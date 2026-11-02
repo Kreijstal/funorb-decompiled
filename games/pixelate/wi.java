@@ -69,7 +69,7 @@ final class wi {
             var7 = this.a((byte) 114);
             var4 = var7;
             var5 = re.a(this.field_h, -1);
-            var6 = i.a(-640, this.field_h) ? 1 : 0;
+            var6 = ImageProducerRasterBuffer.a(-640, this.field_h) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_b.a(sd.a(ji.field_d, 52, new String[]{var7}), (byte) -106, 4);
@@ -96,7 +96,7 @@ final class wi {
               this.field_b.a(sd.a(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
             }
             if (var6 != 0) {
-              this.field_b.a(sd.a(hk.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
+              this.field_b.a(sd.a(DelegatingCanvas.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
               return;
             }
           }
@@ -307,7 +307,7 @@ final class wi {
           return;
         }
         if (!param0) {
-          this.field_b.a(sd.a(i.field_m, 67, new String[]{var5}), (byte) -83, 0);
+          this.field_b.a(sd.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
           if (param1 == -98) {
             return;
           }
@@ -315,7 +315,7 @@ final class wi {
           return;
         }
         if (!var7.field_Jb) {
-          this.field_b.a(sd.a(i.field_m, 67, new String[]{var5}), (byte) -83, 0);
+          this.field_b.a(sd.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
           if (param1 == -98) {
             return;
           }
@@ -337,17 +337,17 @@ final class wi {
         if (param1 == -925) {
           var3 = aa.field_f;
           var3.g(param0, 15514);
-          var3.e(160, 3);
-          var3.e(160, 8);
-          var3.b(1276387944, param2);
+          var3.writeByte(160, 3);
+          var3.writeByte(160, 8);
+          var3.writeShort(1276387944, param2);
           return;
         }
         field_e = (String) null;
         var3Lifetime1 = aa.field_f;
         var3Lifetime1.g(param0, 15514);
-        var3Lifetime1.e(160, 3);
-        var3Lifetime1.e(160, 8);
-        var3Lifetime1.b(1276387944, param2);
+        var3Lifetime1.writeByte(160, 3);
+        var3Lifetime1.writeByte(160, 8);
+        var3Lifetime1.writeShort(1276387944, param2);
     }
 
     private final boolean a(int param0, byte param1, int param2) {
@@ -478,7 +478,7 @@ final class wi {
                   am.a(2, -26931, this.field_k, param2);
                 } else {
                   if (param0 == 14) {
-                    kl.a(7500);
+                    IterableNodeHashTable.a(7500);
                   } else {
                     if (20 == param0) {
                       ak.c(true);

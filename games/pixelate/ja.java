@@ -13,7 +13,7 @@ final class ja {
     private static int[] field_f;
 
     final static void a() {
-        ja.a(t.field_e, t.field_f, t.field_h, t.field_a);
+        ja.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_a);
     }
 
     private final static void b() {
@@ -29,10 +29,10 @@ final class ja {
         if (field_g.length < field_e) {
           field_g = new int[ne.a(-1879863704, field_e)];
         }
-        int var4 = param1 * t.field_j + param0;
+        int var4 = param1 * SoftwareRasterizer.field_j + param0;
         for (var5 = 0; var5 < field_e; var5++) {
           field_g[var5] = var4;
-          var4 = var4 + t.field_j;
+          var4 = var4 + SoftwareRasterizer.field_j;
         }
     }
 

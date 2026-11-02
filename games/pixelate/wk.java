@@ -9,7 +9,7 @@ final class wk extends rg {
     private String field_h;
     static String field_f;
 
-    final static tf[] a(int param0, int param1, int param2) {
+    final static Sprite[] a(int param0, int param1, int param2) {
         if (param2 != 1) {
           wk.c(-57);
           return tk.a(1, param1, true, param0);
@@ -54,13 +54,13 @@ final class wk extends rg {
         int var12 = -97 % ((param6 + 37) / 37);
     }
 
-    final void a(byte param0, we param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           param1.a((byte) -66, this.field_h);
           param1.a(-129, this.field_k);
           if (param0 != -12) {
-            we var4 = (we) null;
-            this.a((byte) -114, (we) null);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a((byte) -114, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

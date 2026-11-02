@@ -110,7 +110,7 @@ final class rn {
                 this.field_e.a(6, 0, (byte) -106, vi.field_K);
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param4) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -126,7 +126,7 @@ final class rn {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var11 = (255 & vi.field_K[1]) + (vi.field_K[0] << 8 & 65280);
                         var12 = ((255 & vi.field_K[2]) << 8) + (vi.field_K[3] & 255);
@@ -142,7 +142,7 @@ final class rn {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var11 = (vi.field_K[0] << 24 & -16777216) - (-((255 & vi.field_K[1]) << 16) - ((vi.field_K[2] & 255) << 8)) + (vi.field_K[3] & 255);
                         var10 = (vi.field_K[7] << 8 & 65280) + ((255 & vi.field_K[6]) << 16) + (vi.field_K[8] & 255);
@@ -246,8 +246,8 @@ final class rn {
         field_g = null;
         field_f = null;
         if (param0 != 512) {
-          we var2 = (we) null;
-          rn.a((byte) -3, (we) null);
+          PacketBuffer var2 = (PacketBuffer) null;
+          rn.a((byte) -3, (PacketBuffer) null);
         }
     }
 
@@ -294,7 +294,7 @@ final class rn {
         return "" + this.field_d;
     }
 
-    final static boolean a(byte param0, we param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

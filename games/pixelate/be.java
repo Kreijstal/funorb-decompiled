@@ -225,7 +225,7 @@ final class be extends ch implements hi, vo {
                   break;
                 }
               }
-              up.field_o = sd.a(kl.field_c, 96, new String[]{io.field_c.field_pc});
+              up.field_o = sd.a(IterableNodeHashTable.field_c, 96, new String[]{io.field_c.field_pc});
               break;
             }
           }
@@ -417,14 +417,14 @@ final class be extends ch implements hi, vo {
             stackIn_249_0 = 0;
           }
           var7 = stackIn_249_0;
-          L61: while (true) {
+          scanLoop1: while (true) {
             if (fj.field_b > var7) {
               var8_array = hc.field_L[var7 + 4];
               stackOut_251_0 = param0;
               stackIn_560_0 = stackOut_251_0 ? 1 : 0;
               stackIn_252_0 = stackOut_251_0;
               if (var26 != 0) {
-                break L61;
+                break scanLoop1;
               }
               stackIn_258_0 = (stackIn_252_0) ? -1 : 0;
               var9 = stackIn_258_0;
@@ -729,7 +729,7 @@ final class be extends ch implements hi, vo {
               stackIn_558_0Lifetime1 = var6Lifetime2 + (oe.field_Rb[var7] & 255);
               var6Lifetime2 = stackIn_558_0Lifetime1;
               var7++;
-              continue L61;
+              continue scanLoop1;
             }
             stackIn_560_0 = var5;
             break;
@@ -784,7 +784,7 @@ final class be extends ch implements hi, vo {
             he.field_d.a(this.field_S, 20 + (param2 + this.field_z), 15 + param0 + this.field_p, -40 + this.field_E, this.field_C, 16777215, -1, 1, 0, he.field_d.field_w);
           }
           if (this.field_Q != null) {
-            t.b(param2 + 10, 134 + param0, -20 + this.field_E, 4210752);
+            SoftwareRasterizer.b(param2 + 10, 134 + param0, -20 + this.field_E, 4210752);
           }
           super.a(param0, param1, param2, (byte) 6);
           var5_int = 11 / ((param3 - 70) / 49);
@@ -1089,180 +1089,180 @@ final class be extends ch implements hi, vo {
           }
           var2Lifetime5 = hb.a("achievement_names,0", (byte) -110);
           if (var2Lifetime5 != null) {
-            tn.field_n[0] = of.a(var2Lifetime5, 1);
+            GameApplet.field_n[0] = of.a(var2Lifetime5, 1);
           }
           var2Lifetime6 = hb.a("achievement_names,1", (byte) -11);
           if (var2Lifetime6 != null) {
-            tn.field_n[1] = of.a(var2Lifetime6, 1);
+            GameApplet.field_n[1] = of.a(var2Lifetime6, 1);
           }
           var2Lifetime7 = hb.a("achievement_names,2", (byte) 109);
           if (null != var2Lifetime7) {
-            tn.field_n[2] = of.a(var2Lifetime7, 1);
+            GameApplet.field_n[2] = of.a(var2Lifetime7, 1);
           }
           var2Lifetime8 = hb.a("achievement_names,3", (byte) -9);
           if (null != var2Lifetime8) {
-            tn.field_n[3] = of.a(var2Lifetime8, 1);
+            GameApplet.field_n[3] = of.a(var2Lifetime8, 1);
           }
           var2Lifetime9 = hb.a("achievement_names,4", (byte) -61);
           if (var2Lifetime9 != null) {
-            tn.field_n[4] = of.a(var2Lifetime9, 1);
+            GameApplet.field_n[4] = of.a(var2Lifetime9, 1);
           }
           var2Lifetime10 = hb.a("achievement_names,5", (byte) -86);
           if (null != var2Lifetime10) {
-            tn.field_n[5] = of.a(var2Lifetime10, 1);
+            GameApplet.field_n[5] = of.a(var2Lifetime10, 1);
           }
           var2Lifetime11 = hb.a("achievement_names,6", (byte) 117);
           if (var2Lifetime11 != null) {
-            tn.field_n[6] = of.a(var2Lifetime11, 1);
+            GameApplet.field_n[6] = of.a(var2Lifetime11, 1);
           }
           var2Lifetime12 = hb.a("achievement_names,7", (byte) -100);
           if (null != var2Lifetime12) {
-            tn.field_n[7] = of.a(var2Lifetime12, 1);
+            GameApplet.field_n[7] = of.a(var2Lifetime12, 1);
           }
           var2Lifetime13 = hb.a("achievement_names,8", (byte) 112);
           if (null != var2Lifetime13) {
-            tn.field_n[8] = of.a(var2Lifetime13, 1);
+            GameApplet.field_n[8] = of.a(var2Lifetime13, 1);
           }
           var2Lifetime14 = hb.a("achievement_names,9", (byte) -32);
           if (null != var2Lifetime14) {
-            tn.field_n[9] = of.a(var2Lifetime14, 1);
+            GameApplet.field_n[9] = of.a(var2Lifetime14, 1);
           }
           var2Lifetime15 = hb.a("achievement_names,10", (byte) -67);
           var3 = 98 / ((param0 - 33) / 43);
           if (var2Lifetime15 != null) {
-            tn.field_n[10] = of.a(var2Lifetime15, 1);
+            GameApplet.field_n[10] = of.a(var2Lifetime15, 1);
           }
           var2Lifetime16 = hb.a("achievement_names,11", (byte) -118);
           if (var2Lifetime16 != null) {
-            tn.field_n[11] = of.a(var2Lifetime16, 1);
+            GameApplet.field_n[11] = of.a(var2Lifetime16, 1);
           }
           var2Lifetime17 = hb.a("achievement_names,12", (byte) 117);
           if (var2Lifetime17 != null) {
-            tn.field_n[12] = of.a(var2Lifetime17, 1);
+            GameApplet.field_n[12] = of.a(var2Lifetime17, 1);
           }
           var2Lifetime18 = hb.a("achievement_names,13", (byte) 127);
           if (null != var2Lifetime18) {
-            tn.field_n[13] = of.a(var2Lifetime18, 1);
+            GameApplet.field_n[13] = of.a(var2Lifetime18, 1);
           }
           var2Lifetime19 = hb.a("achievement_names,14", (byte) 123);
           if (null != var2Lifetime19) {
-            tn.field_n[14] = of.a(var2Lifetime19, 1);
+            GameApplet.field_n[14] = of.a(var2Lifetime19, 1);
           }
           var2Lifetime20 = hb.a("achievement_names,15", (byte) -79);
           if (var2Lifetime20 != null) {
-            tn.field_n[15] = of.a(var2Lifetime20, 1);
+            GameApplet.field_n[15] = of.a(var2Lifetime20, 1);
           }
           var2Lifetime21 = hb.a("achievement_names,16", (byte) 112);
           if (null != var2Lifetime21) {
-            tn.field_n[16] = of.a(var2Lifetime21, 1);
+            GameApplet.field_n[16] = of.a(var2Lifetime21, 1);
           }
           var2Lifetime22 = hb.a("achievement_names,17", (byte) -113);
           if (null != var2Lifetime22) {
-            tn.field_n[17] = of.a(var2Lifetime22, 1);
+            GameApplet.field_n[17] = of.a(var2Lifetime22, 1);
           }
           var2Lifetime23 = hb.a("achievement_names,18", (byte) -45);
           if (null != var2Lifetime23) {
-            tn.field_n[18] = of.a(var2Lifetime23, 1);
+            GameApplet.field_n[18] = of.a(var2Lifetime23, 1);
           }
           var2Lifetime24 = hb.a("achievement_names,19", (byte) -103);
           if (var2Lifetime24 != null) {
-            tn.field_n[19] = of.a(var2Lifetime24, 1);
+            GameApplet.field_n[19] = of.a(var2Lifetime24, 1);
           }
           var2Lifetime25 = hb.a("achievement_names,20", (byte) 124);
           if (var2Lifetime25 != null) {
-            tn.field_n[20] = of.a(var2Lifetime25, 1);
+            GameApplet.field_n[20] = of.a(var2Lifetime25, 1);
           }
           var2Lifetime26 = hb.a("achievement_names,21", (byte) 114);
           if (var2Lifetime26 != null) {
-            tn.field_n[21] = of.a(var2Lifetime26, 1);
+            GameApplet.field_n[21] = of.a(var2Lifetime26, 1);
           }
           var2Lifetime27 = hb.a("achievement_criteria,0", (byte) 122);
           if (var2Lifetime27 != null) {
-            qa.field_a[0] = of.a(var2Lifetime27, 1);
+            ClientException.field_a[0] = of.a(var2Lifetime27, 1);
           }
           var2Lifetime28 = hb.a("achievement_criteria,1", (byte) -12);
           if (var2Lifetime28 != null) {
-            qa.field_a[1] = of.a(var2Lifetime28, 1);
+            ClientException.field_a[1] = of.a(var2Lifetime28, 1);
           }
           var2Lifetime29 = hb.a("achievement_criteria,2", (byte) 122);
           if (null != var2Lifetime29) {
-            qa.field_a[2] = of.a(var2Lifetime29, 1);
+            ClientException.field_a[2] = of.a(var2Lifetime29, 1);
           }
           var2Lifetime30 = hb.a("achievement_criteria,3", (byte) 123);
           if (var2Lifetime30 != null) {
-            qa.field_a[3] = of.a(var2Lifetime30, 1);
+            ClientException.field_a[3] = of.a(var2Lifetime30, 1);
           }
           var2Lifetime31 = hb.a("achievement_criteria,4", (byte) 113);
           if (var2Lifetime31 != null) {
-            qa.field_a[4] = of.a(var2Lifetime31, 1);
+            ClientException.field_a[4] = of.a(var2Lifetime31, 1);
           }
           var2Lifetime32 = hb.a("achievement_criteria,5", (byte) 118);
           if (null != var2Lifetime32) {
-            qa.field_a[5] = of.a(var2Lifetime32, 1);
+            ClientException.field_a[5] = of.a(var2Lifetime32, 1);
           }
           var2Lifetime33 = hb.a("achievement_criteria,6", (byte) 118);
           if (null != var2Lifetime33) {
-            qa.field_a[6] = of.a(var2Lifetime33, 1);
+            ClientException.field_a[6] = of.a(var2Lifetime33, 1);
           }
           var2Lifetime34 = hb.a("achievement_criteria,7", (byte) 116);
           if (null != var2Lifetime34) {
-            qa.field_a[7] = of.a(var2Lifetime34, 1);
+            ClientException.field_a[7] = of.a(var2Lifetime34, 1);
           }
           var2Lifetime35 = hb.a("achievement_criteria,8", (byte) 108);
           if (null != var2Lifetime35) {
-            qa.field_a[8] = of.a(var2Lifetime35, 1);
+            ClientException.field_a[8] = of.a(var2Lifetime35, 1);
           }
           var2Lifetime36 = hb.a("achievement_criteria,9", (byte) 118);
           if (var2Lifetime36 != null) {
-            qa.field_a[9] = of.a(var2Lifetime36, 1);
+            ClientException.field_a[9] = of.a(var2Lifetime36, 1);
           }
           var2Lifetime37 = hb.a("achievement_criteria,10", (byte) 124);
           if (null != var2Lifetime37) {
-            qa.field_a[10] = of.a(var2Lifetime37, 1);
+            ClientException.field_a[10] = of.a(var2Lifetime37, 1);
           }
           var2Lifetime38 = hb.a("achievement_criteria,11", (byte) -5);
           if (null != var2Lifetime38) {
-            qa.field_a[11] = of.a(var2Lifetime38, 1);
+            ClientException.field_a[11] = of.a(var2Lifetime38, 1);
           }
           var2Lifetime39 = hb.a("achievement_criteria,12", (byte) 107);
           if (var2Lifetime39 != null) {
-            qa.field_a[12] = of.a(var2Lifetime39, 1);
+            ClientException.field_a[12] = of.a(var2Lifetime39, 1);
           }
           var2Lifetime40 = hb.a("achievement_criteria,13", (byte) -90);
           if (null != var2Lifetime40) {
-            qa.field_a[13] = of.a(var2Lifetime40, 1);
+            ClientException.field_a[13] = of.a(var2Lifetime40, 1);
           }
           var2Lifetime41 = hb.a("achievement_criteria,14", (byte) 109);
           if (var2Lifetime41 != null) {
-            qa.field_a[14] = of.a(var2Lifetime41, 1);
+            ClientException.field_a[14] = of.a(var2Lifetime41, 1);
           }
           var2Lifetime42 = hb.a("achievement_criteria,15", (byte) 118);
           if (var2Lifetime42 != null) {
-            qa.field_a[15] = of.a(var2Lifetime42, 1);
+            ClientException.field_a[15] = of.a(var2Lifetime42, 1);
           }
           var2Lifetime43 = hb.a("achievement_criteria,16", (byte) -10);
           if (var2Lifetime43 != null) {
-            qa.field_a[16] = of.a(var2Lifetime43, 1);
+            ClientException.field_a[16] = of.a(var2Lifetime43, 1);
           }
           var2Lifetime44 = hb.a("achievement_criteria,17", (byte) -12);
           if (var2Lifetime44 != null) {
-            qa.field_a[17] = of.a(var2Lifetime44, 1);
+            ClientException.field_a[17] = of.a(var2Lifetime44, 1);
           }
           var2Lifetime45 = hb.a("achievement_criteria,18", (byte) 123);
           if (var2Lifetime45 != null) {
-            qa.field_a[18] = of.a(var2Lifetime45, 1);
+            ClientException.field_a[18] = of.a(var2Lifetime45, 1);
           }
           var2Lifetime46 = hb.a("achievement_criteria,19", (byte) -17);
           if (var2Lifetime46 != null) {
-            qa.field_a[19] = of.a(var2Lifetime46, 1);
+            ClientException.field_a[19] = of.a(var2Lifetime46, 1);
           }
           var2Lifetime47 = hb.a("achievement_criteria,20", (byte) 118);
           if (null != var2Lifetime47) {
-            qa.field_a[20] = of.a(var2Lifetime47, 1);
+            ClientException.field_a[20] = of.a(var2Lifetime47, 1);
           }
           var2Lifetime48 = hb.a("achievement_criteria,21", (byte) 116);
           if (var2Lifetime48 != null) {
-            qa.field_a[21] = of.a(var2Lifetime48, 1);
+            ClientException.field_a[21] = of.a(var2Lifetime48, 1);
           }
           var2Lifetime49 = hb.a("tutorial_title,0", (byte) 114);
           if (var2Lifetime49 != null) {
@@ -1358,11 +1358,11 @@ final class be extends ch implements hi, vo {
           }
           var2Lifetime72 = hb.a("instructions5,0", (byte) -123);
           if (var2Lifetime72 != null) {
-            tn.field_k[0] = of.a(var2Lifetime72, 1);
+            GameApplet.field_k[0] = of.a(var2Lifetime72, 1);
           }
           var2Lifetime73 = hb.a("instructions5,1", (byte) 111);
           if (null != var2Lifetime73) {
-            tn.field_k[1] = of.a(var2Lifetime73, 1);
+            GameApplet.field_k[1] = of.a(var2Lifetime73, 1);
           }
           var2Lifetime74 = hb.a("instructions6,0", (byte) -89);
           if (var2Lifetime74 != null) {
@@ -1566,7 +1566,7 @@ final class be extends ch implements hi, vo {
           }
           var2Lifetime124 = hb.a("high_detail", (byte) -93);
           if (var2Lifetime124 != null) {
-            kl.field_d = of.a(var2Lifetime124, 1);
+            IterableNodeHashTable.field_d = of.a(var2Lifetime124, 1);
           }
           var2Lifetime125 = hb.a("low_detail", (byte) 119);
           if (var2Lifetime125 != null) {
@@ -1574,7 +1574,7 @@ final class be extends ch implements hi, vo {
           }
           var2Lifetime126 = hb.a("puzzlecomplete", (byte) 103);
           if (null != var2Lifetime126) {
-            wb.field_a = of.a(var2Lifetime126, 1);
+            MouseInputHandler.field_a = of.a(var2Lifetime126, 1);
           }
           var2Lifetime127 = hb.a("puzzlefailed", (byte) -63);
           if (var2Lifetime127 != null) {
@@ -1582,7 +1582,7 @@ final class be extends ch implements hi, vo {
           }
           var2Lifetime128 = hb.a("puzzles", (byte) 110);
           if (null != var2Lifetime128) {
-            tn.field_f = of.a(var2Lifetime128, 1);
+            GameApplet.field_f = of.a(var2Lifetime128, 1);
           }
           var2Lifetime129 = hb.a("a_of_b", (byte) -22);
           if (null != var2Lifetime129) {
@@ -1673,7 +1673,7 @@ final class be extends ch implements hi, vo {
           }
           throw aa.a((Throwable) ((Object) stackIn_529_0), ((StringBuilder) (Object) stackIn_529_1).append(stackIn_530_2).append(')').toString());
         }
-        if (tn.field_l != 0) {
+        if (GameApplet.field_l != 0) {
           Pixelate.field_H = (var4 == 0);
         }
     }
@@ -1783,13 +1783,13 @@ final class be extends ch implements hi, vo {
               this.field_Q = new qm(sd.field_M, (fn) (this));
               if (var11 != 0) {
                 this.field_L = new qm(bo.field_k, (fn) null);
-                this.field_N = new qm(mk.field_e, (fn) null);
+                this.field_N = new qm(FullscreenFocusCanvas.field_e, (fn) null);
                 this.field_J.field_H = false;
               }
             }
           } else {
             this.field_L = new qm(bo.field_k, (fn) null);
-            this.field_N = new qm(mk.field_e, (fn) null);
+            this.field_N = new qm(FullscreenFocusCanvas.field_e, (fn) null);
             this.field_J.field_H = false;
           }
           this.field_J.field_y = (eb) ((Object) new gh(10000536));
@@ -1804,7 +1804,7 @@ final class be extends ch implements hi, vo {
           }
           this.field_J.field_l = rm.field_c;
           if (null != this.field_Q) {
-            this.field_Q.field_l = rp.field_a;
+            this.field_Q.field_l = KeyboardInputHandler.field_a;
           }
           if (!this.field_I) {
             if (this.field_K) {

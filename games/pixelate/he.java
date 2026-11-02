@@ -19,9 +19,9 @@ final class he {
         try {
           var3 = aa.field_f;
           var3.g(param1, 15514);
-          var3.e(160, 2);
-          var3.e(160, 0);
-          var3.e(160, param2.field_p);
+          var3.writeByte(160, 2);
+          var3.writeByte(160, 0);
+          var3.writeByte(160, param2.field_p);
           if (param0 == -53) {
             return;
           }

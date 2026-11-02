@@ -3,7 +3,7 @@
  */
 final class fp {
     static String field_d;
-    static cb field_c;
+    static PlatformTaskDispatcher field_c;
     static String[] field_a;
     static long field_e;
     static String field_b;

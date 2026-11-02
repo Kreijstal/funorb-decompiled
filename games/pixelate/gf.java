@@ -41,8 +41,8 @@ abstract class gf {
     }
 
     final static void a(int param0) {
-        fa var1 = null;
-        fa var2 = null;
+        IntrusiveNode var1 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;

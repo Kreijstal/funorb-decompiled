@@ -8,7 +8,7 @@ final class jh extends ch implements vo {
     static String field_P;
     static int field_M;
     private qm field_L;
-    static tf field_O;
+    static Sprite field_O;
     private qm field_J;
 
     final static void a(int param0, int param1, boolean param2, boolean param3) {
@@ -93,12 +93,12 @@ final class jh extends ch implements vo {
         }
         if (0 != in.field_p.field_P) {
           if (1 == ia.field_a.length &&
-            tn.field_o != ia.field_a[0]) {
-            tn.field_o = ia.field_a[0];
+            GameApplet.field_o != ia.field_a[0]) {
+            GameApplet.field_o = ia.field_a[0];
           }
-          si.a(param1, bg.field_d, tn.field_o, 0, true, (byte) -76);
+          si.a(param1, bg.field_d, GameApplet.field_o, 0, true, (byte) -76);
         }
-        if (hk.field_h.field_P != 0) {
+        if (DelegatingCanvas.field_h.field_P != 0) {
           uj.field_Wb = false;
         }
     }
@@ -203,7 +203,7 @@ final class jh extends ch implements vo {
         this.field_J.a(var3, (byte) 103, -(2 * var2) + (this.field_C - 78), this.field_E - var3 >> 1, 30);
         this.field_N.field_n = (fn) (this);
         this.field_J.field_n = (fn) (this);
-        this.field_J.field_l = rp.field_a;
+        this.field_J.field_l = KeyboardInputHandler.field_a;
         this.field_L.field_n = (fn) (this);
         this.field_L.field_l = up.field_q;
         this.b(this.field_N, 80);

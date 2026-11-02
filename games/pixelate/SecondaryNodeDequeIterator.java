@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class nb implements Iterator {
+final class SecondaryNodeDequeIterator implements Iterator {
     static String field_a;
-    private lm field_e;
+    private DualLinkNode field_e;
     static int[] field_c;
-    private pg field_d;
-    private lm field_f;
+    private SecondaryNodeDeque field_d;
+    private DualLinkNode field_f;
     static String field_b;
 
     public final Object next() {
@@ -17,9 +17,9 @@ final class nb implements Iterator {
           this.field_f = null;
           var1 = null;
         } else {
-          this.field_f = ((lm) (var1)).field_p;
+          this.field_f = ((DualLinkNode) (var1)).field_p;
         }
-        this.field_e = (lm) (var1);
+        this.field_e = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -32,10 +32,10 @@ final class nb implements Iterator {
 
     final static void a(int param0, int param1, int param2, sb param3) {
         try {
-          v.field_d = param1;
+          MouseWheelHandler.field_d = param1;
           if (param2 != 7) {
             sb var5 = (sb) null;
-            nb.a(-44, 85, 83, (sb) null);
+            SecondaryNodeDequeIterator.a(-44, 85, 83, (sb) null);
           }
           nl.field_c = param3;
           ao.field_d = param0;
@@ -56,7 +56,7 @@ final class nb implements Iterator {
         this.field_e = null;
     }
 
-    final static void a(int param0, tf[] param1, byte param2) {
+    final static void a(int param0, Sprite[] param1, byte param2) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -64,8 +64,8 @@ final class nb implements Iterator {
         RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
-        tf[] var6 = null;
-        tf[] var7 = null;
+        Sprite[] var6 = null;
+        Sprite[] var7 = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
           if (param2 != -53) {
@@ -74,7 +74,7 @@ final class nb implements Iterator {
           if (null == kb.field_L) {
             kb.field_L = rk.field_e;
           }
-          var6 = new tf[]{param1[0], param1[1]};
+          var6 = new Sprite[]{param1[0], param1[1]};
           var7 = var6;
           var4 = wc.field_m[param0];
           if (param0 == 0) {
@@ -124,7 +124,7 @@ final class nb implements Iterator {
         }
     }
 
-    nb(pg param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_e = null;
         try {
           this.field_d = param0;

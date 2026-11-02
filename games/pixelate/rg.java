@@ -27,8 +27,8 @@ abstract class rg {
         int var5 = 0;
         uj.field_Wb = true;
         jm.field_h.field_cb = param0;
-        int var2_int = qa.field_f.field_a;
-        int var3 = qa.field_f.field_i;
+        int var2_int = ClientException.field_f.field_a;
+        int var3 = ClientException.field_f.field_i;
         int var4 = jm.field_h.field_Db.a(param0, 272, jm.field_h.field_mb);
         if (param1) {
           return;
@@ -38,13 +38,13 @@ abstract class rg {
           nc.field_e.a(var5, -(var5 * 2) + (-120 + var3), (-320 + var2_int) / 2, 256, 320);
           nc.field_e.field_zb = op.a(8421504, 16, 11579568, nc.field_e.field_nb, 2105376, 3);
           jm.field_h.a(16, -24 + nc.field_e.field_nb - 20, 24, 256, -24 + (nc.field_e.field_K - 24));
-          hk.field_h.a(-24 + (nc.field_e.field_nb - 20), 24, 120, 256, 80);
+          DelegatingCanvas.field_h.a(-24 + (nc.field_e.field_nb - 20), 24, 120, 256, 80);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "rg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    abstract void a(byte param0, we param1);
+    abstract void a(byte param0, PacketBuffer param1);
 
     abstract ea b(int param0);
 

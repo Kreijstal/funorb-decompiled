@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qd extends fa {
+final class qd extends IntrusiveNode {
     private boolean field_K;
     private byte[][] field_Q;
     private static kg[] field_A;
@@ -138,16 +138,16 @@ final class qd extends fa {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        we var2 = new we(param0);
-        this.field_m = var2.k(0);
-        this.field_k = var2.k(0);
-        this.field_M = var2.k(0);
-        this.field_G = var2.k(0);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_m = var2.readInt(0);
+        this.field_k = var2.readInt(0);
+        this.field_M = var2.readInt(0);
+        this.field_G = var2.readInt(0);
         if (this.field_G < 0) {
           this.field_G = ~this.field_G;
           this.field_K = true;
         }
-        int var3 = var2.k(0);
+        int var3 = var2.readInt(0);
         if (var3 < 0) {
           throw new IOException();
         }

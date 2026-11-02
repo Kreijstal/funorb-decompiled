@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class v {
+abstract class MouseWheelHandler {
     static String[] field_a;
     static pd field_e;
     static int field_d;
@@ -17,7 +17,7 @@ abstract class v {
 
     public static void a(boolean param0) {
         if (param0) {
-          v.a(true);
+          MouseWheelHandler.a(true);
           field_b = null;
           field_a = null;
           field_e = null;

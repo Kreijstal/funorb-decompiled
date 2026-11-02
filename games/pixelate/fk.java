@@ -4,7 +4,7 @@
 final class fk extends de {
     static String field_q;
     private int field_r;
-    static tf[] field_s;
+    static Sprite[] field_s;
     static int field_o;
     static String field_p;
 
@@ -133,13 +133,13 @@ final class fk extends de {
     final void e(byte param0) {
         super.e((byte) -107);
         if (this.field_r == 3) {
-          cf.field_u.a((byte) 21);
+          SpriteState.field_u.a((byte) 21);
         }
         if (this.field_r == 7) {
           jf.field_c.b(300);
         }
         if (param0 > -64) {
-          field_s = (tf[]) null;
+          field_s = (Sprite[]) null;
         }
     }
 
@@ -207,16 +207,16 @@ final class fk extends de {
             var9.field_r[3] = (byte)2;
             var9.field_r[2] = (byte) 1;
             var9.field_r[7] = (byte) 1;
-            t.f(0, 0, 640, 389);
+            SoftwareRasterizer.f(0, 0, 640, 389);
             var10.a(false);
-            t.c();
+            SoftwareRasterizer.c();
           } else {
             if (this.field_r != 2) {
               if (this.field_r == 3) {
                 var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
                 var7 += 10;
                 var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][1], 50, var7, 540, 400, 16777215, 0, 0, 0, var6);
-                cf.field_u.c(2);
+                SpriteState.field_u.c(2);
                 for (var8_int = 3; 0 <= var8_int; var8_int--) {
                   stackIn_29_0 = (var8_int % 2 != 0) ? 0 : 20;
                   var9_int = stackIn_29_0;
@@ -226,7 +226,7 @@ final class fk extends de {
                   } else {
                     stackIn_32_1 = 2;
                   }
-                  ((tf) (Object) stackIn_31_0[stackIn_32_1].field_f[var8_int % 2]).b(340 + 55 * var8_int, var9_int + 170);
+                  ((Sprite) (Object) stackIn_31_0[stackIn_32_1].field_f[var8_int % 2]).b(340 + 55 * var8_int, var9_int + 170);
                 }
               } else {
                 if (4 == this.field_r) {
@@ -251,8 +251,8 @@ final class fk extends de {
                         jf.field_c.a((byte) -8);
                         var4.a(ln.field_m[this.field_r][1], var8_int, 314, 0, -1);
                         var9_int = 2;
-                        if (640 - var8_int > uf.field_d &&
-                          -var8_int + 640 - 170 < uf.field_d &&
+                        if (640 - var8_int > ProxyAuthenticationException.field_d &&
+                          -var8_int + 640 - 170 < ProxyAuthenticationException.field_d &&
                           314 > bg.field_k &&
                           bg.field_k > 290) {
                           var9_int++;
@@ -261,13 +261,13 @@ final class fk extends de {
                       }
                     } else {
                       var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
-                      t.f(0, 0, 640, 389);
+                      SoftwareRasterizer.f(0, 0, 640, 389);
                       g.field_r.a(false);
                       an.field_b.a(false);
                       cg.field_H.c((byte) 119);
                       lj.field_g.a(55, 0, 0);
                       f.field_a.a(60, 0, 0);
-                      t.c();
+                      SoftwareRasterizer.c();
                     }
                   }
                 }
@@ -302,7 +302,7 @@ final class fk extends de {
           var7 = var7 + var5.a(ln.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6) * var6;
           var7 += 10;
           var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][1], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
-          cf.field_C.a(false);
+          SpriteState.field_C.a(false);
           te.field_Qb.a(50, 0, 0);
         }
         var4.b(pk.field_d[this.field_r], 320, 180, 0, -1);
@@ -322,7 +322,7 @@ final class fk extends de {
           ke.field_a = var3;
         }
         if (param1 != 97) {
-          field_s = (tf[]) null;
+          field_s = (Sprite[]) null;
         }
     }
 

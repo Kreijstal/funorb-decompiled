@@ -26,7 +26,7 @@ final class kf extends bg {
             stackIn_2_0 = null;
             return (tc) (stackIn_2_0);
           }
-          var2 = new tc(param0, fa.field_b, e.field_b, gf.field_g, ge.field_c, wo.field_f);
+          var2 = new tc(param0, IntrusiveNode.field_b, e.field_b, gf.field_g, ge.field_c, wo.field_f);
           re.b(140);
           var3 = -91 % ((77 - param1) / 37);
           stackIn_4_0 = var2;
@@ -76,8 +76,8 @@ final class kf extends bg {
           var6 = 13 + (76 * var5 + 76) + 2;
           if (5 + var4 <= var6 &&
             this.field_r + var4 - 6 >= var6) {
-            t.f(var6, var2 + 3, 19, 0, 128);
-            t.f(var6 + 1, var2 + 4, 18, 16777215, 128);
+            SoftwareRasterizer.f(var6, var2 + 3, 19, 0, 128);
+            SoftwareRasterizer.f(var6 + 1, var2 + 4, 18, 16777215, 128);
           }
         }
     }

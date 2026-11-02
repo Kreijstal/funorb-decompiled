@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cf extends lm {
+abstract class SpriteState extends DualLinkNode {
     int field_B;
-    static tf field_t;
+    static Sprite field_t;
     static kk field_C;
     static String field_H;
     static String field_z;
@@ -48,7 +48,7 @@ abstract class cf extends lm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 500) {
-            cf.a((byte) -8);
+            SpriteState.a((byte) -8);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null && (param3 != 2 ||
@@ -102,7 +102,7 @@ abstract class cf extends lm {
         return var4Lifetime1;
     }
 
-    cf() {
+    SpriteState() {
     }
 
     static {

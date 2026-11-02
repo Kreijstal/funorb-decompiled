@@ -4,12 +4,12 @@
 final class gp extends ak {
     static String field_Jb;
     static String field_Eb;
-    static v field_Lb;
+    static MouseWheelHandler field_Lb;
     ak field_Fb;
     static String[] field_Hb;
     vp field_Gb;
     ak field_Ib;
-    static tf field_Kb;
+    static Sprite field_Kb;
 
     gp(long param0, ak param1, ak param2, vp param3) {
         super(param0, (ak) null);

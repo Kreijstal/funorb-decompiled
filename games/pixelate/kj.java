@@ -37,9 +37,9 @@ final class kj {
           rl.field_r = false;
           io.field_c = null;
           bn.field_S = null;
-          if (null != i.field_n) {
-            i.field_n.e(-123);
-            i.field_n = null;
+          if (null != ImageProducerRasterBuffer.field_n) {
+            ImageProducerRasterBuffer.field_n.e(-123);
+            ImageProducerRasterBuffer.field_n = null;
           }
           if (param0 != 23949) {
             field_s = 72;
@@ -142,7 +142,7 @@ final class kj {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        we var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -160,12 +160,12 @@ final class kj {
         int var13Lifetime1Lifetime1;
         var16 = Pixelate.field_H ? 1 : 0;
         try {
-          var17 = new we(la.a(param1, 0));
+          var17 = new PacketBuffer(la.a(param1, 0));
           var4 = var17.f(255);
           if (5 <= var4 &&
             var4 <= 7) {
             if (var4 >= 6) {
-              this.field_c = var17.k(0);
+              this.field_c = var17.readInt(0);
             } else {
               this.field_c = 0;
             }
@@ -216,12 +216,12 @@ final class kj {
                 this.field_n[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_m; var10Lifetime1Lifetime1++) {
-                this.field_n[this.field_f[var10Lifetime1Lifetime1]] = var17.k(0);
+                this.field_n[this.field_f[var10Lifetime1Lifetime1]] = var17.readInt(0);
               }
               this.field_g = new ap(this.field_n);
             }
             for (var10Lifetime2 = 0; this.field_m > var10Lifetime2; var10Lifetime2++) {
-              this.field_k[this.field_f[var10Lifetime2]] = var17.k(0);
+              this.field_k[this.field_f[var10Lifetime2]] = var17.readInt(0);
             }
             var11 = -79 % ((param0 - 0) / 44);
             if (var7 != 0) {
@@ -232,7 +232,7 @@ final class kj {
               }
             }
             for (var10Lifetime4 = 0; this.field_m > var10Lifetime4; var10Lifetime4++) {
-              this.field_a[this.field_f[var10Lifetime4]] = var17.k(0);
+              this.field_a[this.field_f[var10Lifetime4]] = var17.readInt(0);
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; this.field_m > var10Lifetime5; var10Lifetime5++) {
@@ -304,7 +304,7 @@ final class kj {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_p[var11Lifetime2][var14Lifetime1] = var17.k(0);
+                  this.field_p[var11Lifetime2][var14Lifetime1] = var17.readInt(0);
                 }
                 this.field_q[var11Lifetime2] = new ap(this.field_p[var11Lifetime2]);
               }
@@ -332,12 +332,12 @@ final class kj {
         un.field_j = gd.field_e[param0];
         un.field_j.b(false);
         if (param1 < 124) {
-          tf var3 = (tf) null;
-          kj.a(-60, (tf) null, 85, -59, 28, 57);
+          Sprite var3 = (Sprite) null;
+          kj.a(-60, (Sprite) null, 85, -59, 28, 57);
         }
     }
 
-    final static void a(int param0, tf param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, Sprite param1, int param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -370,34 +370,34 @@ final class kj {
           param4 = param4 + param1.field_y;
           param2 = param2 + param1.field_D;
           var8 = (param5 << 8) + param1.field_D * var7;
-          var9 = param2 + param4 * t.field_j;
+          var9 = param2 + param4 * SoftwareRasterizer.field_j;
           var10 = 0;
           var11 = param1.field_E;
           var12 = param1.field_F;
-          var13 = -var12 + t.field_j;
+          var13 = -var12 + SoftwareRasterizer.field_j;
           var14 = 0;
-          if (t.field_f > param4) {
-            var15 = -param4 + t.field_f;
-            var9 = var9 + t.field_j * var15;
+          if (SoftwareRasterizer.field_f > param4) {
+            var15 = -param4 + SoftwareRasterizer.field_f;
+            var9 = var9 + SoftwareRasterizer.field_j * var15;
             var11 = var11 - var15;
             var10 = var10 + var15 * var12;
-            param4 = t.field_f;
+            param4 = SoftwareRasterizer.field_f;
           }
-          if (param4 + var11 > t.field_a) {
-            var11 = var11 - (var11 + (param4 - t.field_a));
+          if (param4 + var11 > SoftwareRasterizer.field_a) {
+            var11 = var11 - (var11 + (param4 - SoftwareRasterizer.field_a));
           }
-          if (t.field_e > param2) {
-            var15Lifetime1 = -param2 + t.field_e;
+          if (SoftwareRasterizer.field_e > param2) {
+            var15Lifetime1 = -param2 + SoftwareRasterizer.field_e;
             var10 = var10 + var15Lifetime1;
             var13 = var13 + var15Lifetime1;
             var9 = var9 + var15Lifetime1;
             var8 = var8 + var7 * var15Lifetime1;
             var12 = var12 - var15Lifetime1;
-            param2 = t.field_e;
+            param2 = SoftwareRasterizer.field_e;
             var14 = var14 + var15Lifetime1;
           }
-          if (t.field_h < var12 + param2) {
-            var15Lifetime2 = param2 + (var12 - t.field_h);
+          if (SoftwareRasterizer.field_h < var12 + param2) {
+            var15Lifetime2 = param2 + (var12 - SoftwareRasterizer.field_h);
             var13 = var13 + var15Lifetime2;
             var14 = var14 + var15Lifetime2;
             var12 = var12 - var15Lifetime2;
@@ -419,11 +419,11 @@ final class kj {
                   var18 = param1.field_G[incrementValue$0];
                   if (var18 != 0) {
                     if (var16 > 255) {
-                      t.field_k[var9] = var18;
+                      SoftwareRasterizer.field_k[var9] = var18;
                     } else {
-                      var19 = t.field_k[var9];
+                      var19 = SoftwareRasterizer.field_k[var9];
                       var20 = 16711935 & (var19 & 16711935) * var17 + (16711935 & var18) * var16 >> 8;
-                      t.field_k[var9] = var20 + (cm.a(var17 * cm.a(65280, var19) + var16 * cm.a(65280, var18), 16711874) >> 8);
+                      SoftwareRasterizer.field_k[var9] = var20 + (cm.a(var17 * cm.a(65280, var19) + var16 * cm.a(65280, var18), 16711874) >> 8);
                     }
                   }
                   var9++;

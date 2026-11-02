@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rj extends gn {
-    we field_D;
+    PacketBuffer field_D;
     int field_H;
     static ge field_F;
     byte field_B;
@@ -14,12 +14,12 @@ final class rj extends gn {
         if (param0 >= -92) {
           rj.i(15);
           if (this.field_D != null) {
-            return this.field_D.field_m * 100 / (-this.field_B + this.field_D.field_k.length);
+            return this.field_D.position * 100 / (-this.field_B + this.field_D.payload.length);
           }
           return 0;
         }
         if (this.field_D != null) {
-          return this.field_D.field_m * 100 / (-this.field_B + this.field_D.field_k.length);
+          return this.field_D.position * 100 / (-this.field_B + this.field_D.payload.length);
         }
         return 0;
     }
@@ -43,14 +43,14 @@ final class rj extends gn {
         if (this.field_v) {
           throw new RuntimeException();
         }
-        if (this.field_D.field_m < -this.field_B + this.field_D.field_k.length) {
+        if (this.field_D.position < -this.field_B + this.field_D.payload.length) {
           throw new RuntimeException();
         }
         if (param0 == 0) {
-          return this.field_D.field_k;
+          return this.field_D.payload;
         }
         this.field_H = 39;
-        return this.field_D.field_k;
+        return this.field_D.payload;
     }
 
     rj() {
@@ -58,46 +58,46 @@ final class rj extends gn {
 
     final static void i(int param0) {
         int var1 = 16777215;
-        gb.field_b = new tf(108, 100);
+        gb.field_b = new Sprite(108, 100);
         int var2 = 65793;
         gb.field_b.c();
-        t.d(4, 0, t.field_j - 8, t.field_d, var1);
-        t.c(4, 0, 4, var2);
-        t.c(-4 + t.field_j - 1, 0, 4, var2);
-        t.c(4, t.field_d, 4, var2);
-        t.c(-4 + (t.field_j - 1), t.field_d, 4, var2);
-        t.g(4, 0, t.field_d, var2);
-        t.g(5, 0, t.field_d, var2);
+        SoftwareRasterizer.d(4, 0, SoftwareRasterizer.field_j - 8, SoftwareRasterizer.field_d, var1);
+        SoftwareRasterizer.c(4, 0, 4, var2);
+        SoftwareRasterizer.c(-4 + SoftwareRasterizer.field_j - 1, 0, 4, var2);
+        SoftwareRasterizer.c(4, SoftwareRasterizer.field_d, 4, var2);
+        SoftwareRasterizer.c(-4 + (SoftwareRasterizer.field_j - 1), SoftwareRasterizer.field_d, 4, var2);
+        SoftwareRasterizer.g(4, 0, SoftwareRasterizer.field_d, var2);
+        SoftwareRasterizer.g(5, 0, SoftwareRasterizer.field_d, var2);
         if (param0 == 7902) {
-          t.g(-5 + t.field_j, 0, t.field_d, var2);
-          t.g(-2 + t.field_j - 4, 0, t.field_d, var2);
-          t.b(4, 0, -8 + t.field_j, var2);
-          t.b(4, -1 + t.field_d, t.field_j - 8, var2);
-          wh.field_q = new tf(gb.field_b.field_A, 4);
+          SoftwareRasterizer.g(-5 + SoftwareRasterizer.field_j, 0, SoftwareRasterizer.field_d, var2);
+          SoftwareRasterizer.g(-2 + SoftwareRasterizer.field_j - 4, 0, SoftwareRasterizer.field_d, var2);
+          SoftwareRasterizer.b(4, 0, -8 + SoftwareRasterizer.field_j, var2);
+          SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
+          wh.field_q = new Sprite(gb.field_b.field_A, 4);
           wh.field_q.c();
-          t.c(4, t.field_d, 4, var2);
-          t.c(t.field_j - 5, t.field_d, 4, var2);
-          t.b(4, -1 + t.field_d, -8 + t.field_j, var2);
-          of.field_h = new tf(wh.field_q.field_A, wh.field_q.field_B);
+          SoftwareRasterizer.c(4, SoftwareRasterizer.field_d, 4, var2);
+          SoftwareRasterizer.c(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
+          SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
+          of.field_h = new Sprite(wh.field_q.field_A, wh.field_q.field_B);
           of.field_h.c();
           wh.field_q.c(0, 0);
-          qa.field_f.a(19692);
+          ClientException.field_f.a(19692);
           return;
         }
         field_C = (jj[]) null;
-        t.g(-5 + t.field_j, 0, t.field_d, var2);
-        t.g(-2 + t.field_j - 4, 0, t.field_d, var2);
-        t.b(4, 0, -8 + t.field_j, var2);
-        t.b(4, -1 + t.field_d, t.field_j - 8, var2);
-        wh.field_q = new tf(gb.field_b.field_A, 4);
+        SoftwareRasterizer.g(-5 + SoftwareRasterizer.field_j, 0, SoftwareRasterizer.field_d, var2);
+        SoftwareRasterizer.g(-2 + SoftwareRasterizer.field_j - 4, 0, SoftwareRasterizer.field_d, var2);
+        SoftwareRasterizer.b(4, 0, -8 + SoftwareRasterizer.field_j, var2);
+        SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
+        wh.field_q = new Sprite(gb.field_b.field_A, 4);
         wh.field_q.c();
-        t.c(4, t.field_d, 4, var2);
-        t.c(t.field_j - 5, t.field_d, 4, var2);
-        t.b(4, -1 + t.field_d, -8 + t.field_j, var2);
-        of.field_h = new tf(wh.field_q.field_A, wh.field_q.field_B);
+        SoftwareRasterizer.c(4, SoftwareRasterizer.field_d, 4, var2);
+        SoftwareRasterizer.c(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
+        SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
+        of.field_h = new Sprite(wh.field_q.field_A, wh.field_q.field_B);
         of.field_h.c();
         wh.field_q.c(0, 0);
-        qa.field_f.a(19692);
+        ClientException.field_f.a(19692);
     }
 
     public static void c(byte param0) {

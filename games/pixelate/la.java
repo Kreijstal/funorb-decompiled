@@ -49,9 +49,9 @@ final class la {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((we) ((Object) var5)).f(255);
+            var6 = ((PacketBuffer) ((Object) var5)).f(255);
             for (var7 = 0; var6 > var7; var7++) {
-              var10[var7] = ((we) ((Object) var5)).k(0);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(0);
             }
             var15 = (mc) (tj.field_z.c(1504642273));
             if (var15 == null) {
@@ -164,7 +164,7 @@ final class la {
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           try {
-            if (!cb.field_p.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_p.startsWith("win")) {
               return false;
             }
             if (param1 != -31451) {
@@ -426,7 +426,7 @@ final class la {
               } else {
                 if (var12.field_Vb) {
                   var12.field_Hb.field_cb = sd.a(gf.field_e, 111, new String[]{var20});
-                  var12.field_Mb.field_cb = fa.field_f;
+                  var12.field_Mb.field_cb = IntrusiveNode.field_f;
                 } else {
                   if (var12.field_Jb) {
                     var12.field_Hb.field_cb = sd.a(ud.field_O, 58, new String[]{var20});
@@ -442,7 +442,7 @@ final class la {
                 pl.m(99) &&
                 hn.field_f != var12.field_Nb) {
                 if (null != var12.field_Zb.field_cb) {
-                  var26 = var12.field_Zb.g(0) + v.field_c * 2;
+                  var26 = var12.field_Zb.g(0) + MouseWheelHandler.field_c * 2;
                   var12.field_Zb.a(var19, fq.field_q, var25_int, 256, var26);
                   var25_int = var25_int + var26;
                 }
@@ -450,7 +450,7 @@ final class la {
                   if (param2 == ae.field_c) {
                     var26Lifetime2 = 40;
                   } else {
-                    var26Lifetime2 = var12.field_Mb.g(0) + 2 * v.field_c;
+                    var26Lifetime2 = var12.field_Mb.g(0) + 2 * MouseWheelHandler.field_c;
                   }
                   var12.field_Mb.a(var19, fq.field_q, var25_int, 256, var26Lifetime2);
                   var25_int = var25_int + var26Lifetime2;
@@ -491,10 +491,10 @@ final class la {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Sb.field_Db.b(var23, -v.field_c + (var12.field_K - v.field_c));
+              var24_intLifetime1 = var12.field_Sb.field_Db.b(var23, -MouseWheelHandler.field_c + (var12.field_K - MouseWheelHandler.field_c));
               var12.field_Sb.field_cb = var23;
               var12.field_Sb.field_yb = var12.field_Tb * 256 / mh.field_b;
-              var12.field_Sb.a(var19, fq.field_q * var24_intLifetime1, v.field_c, 256, var12.field_K - v.field_c * 2);
+              var12.field_Sb.a(var19, fq.field_q * var24_intLifetime1, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
               var19 = var19 + var24_intLifetime1 * fq.field_q;
             }
             if (var9Lifetime1 == 0) {
@@ -652,7 +652,7 @@ final class la {
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + sd.a(we.field_l, 102, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + sd.a(PacketBuffer.field_l, 102, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + bh.field_i + (String) (var25);
                   }
@@ -734,15 +734,15 @@ final class la {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        we var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new we(param0);
+          var9 = new PacketBuffer(param0);
           var3 = var9.f(param1 ^ 255);
-          var4 = var9.k(0);
+          var4 = var9.readInt(0);
           if (var4 >= param1 && (up.field_j == 0 ||
             !(up.field_j < var4))) {
             if (var3 == 0) {
@@ -753,7 +753,7 @@ final class la {
               stackIn_21_0 = var5;
               return stackIn_21_0;
             }
-            var5_int = var9.k(0);
+            var5_int = var9.readInt(0);
             if (0 <= var5_int && (up.field_j == 0 ||
               !(var5_int > up.field_j))) {
               var12 = new byte[var5_int];

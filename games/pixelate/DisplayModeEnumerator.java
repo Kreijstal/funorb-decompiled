@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vb implements com.ms.directX.IEnumModesCallback {
+final class DisplayModeEnumerator implements com.ms.directX.IEnumModesCallback {
     private com.ms.directX.DirectDraw field_c;
     private static int[] field_a;
     private static int field_b;
@@ -22,7 +22,7 @@ final class vb implements com.ms.directX.IEnumModesCallback {
         return (int[]) null;
     }
 
-    public vb() {
+    public DisplayModeEnumerator() {
         this.field_c = new com.ms.directX.DirectDraw();
         this.field_c.initialize((com.ms.com._Guid) null);
     }

@@ -7,7 +7,7 @@ final class wf {
     static int field_b;
     static String field_a;
 
-    final static void a(int param0, we param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -106,7 +106,7 @@ final class wf {
             return stackIn_3_0;
           }
           if (var2_int > 64) {
-            stackIn_6_0 = mk.field_a;
+            stackIn_6_0 = FullscreenFocusCanvas.field_a;
             return stackIn_6_0;
           }
           if (param1.charAt(0) == 34) {

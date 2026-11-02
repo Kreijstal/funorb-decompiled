@@ -17,7 +17,7 @@ final class jm {
     static gp field_b;
     int field_f;
     static bd field_q;
-    static tf[] field_i;
+    static Sprite[] field_i;
     static ak field_h;
     static int[] field_g;
     static String field_s;
@@ -75,7 +75,7 @@ final class jm {
           for (var2 = 0; var2 < jj.field_b; var2++) {
             var7 = var1 + ' ';
             var1 = var7;
-            var3 = 255 & vi.field_o.field_k[var2];
+            var3 = 255 & vi.field_o.payload[var2];
             var4 = var3 >> 4;
             if (10 <= var4) {
               var4 += 55;

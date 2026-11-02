@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lm extends fa {
+class DualLinkNode extends IntrusiveNode {
     long field_q;
     static wm field_l;
-    lm field_r;
-    lm field_p;
+    DualLinkNode field_r;
+    DualLinkNode field_p;
     static String field_n;
     static jl field_o;
     static String field_m;
@@ -67,11 +67,11 @@ class lm extends fa {
           this.field_q = param0;
           return;
         }
-        this.field_p = (lm) null;
+        this.field_p = (DualLinkNode) null;
         this.field_q = param0;
     }
 
-    protected lm() {
+    protected DualLinkNode() {
     }
 
     static {

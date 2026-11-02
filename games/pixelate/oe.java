@@ -127,7 +127,7 @@ final class oe extends ak {
             this.field_Nb.field_qb = "|";
             if (!(rj.field_I < 5) ||
               !(wo.field_h < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
@@ -141,7 +141,7 @@ final class oe extends ak {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = wi.field_c;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;
@@ -447,10 +447,10 @@ final class oe extends ak {
     }
 
     final static void a(int param0, fm param1, hh[] param2, int[] param3, fm param4) {
-        tf[] dupTemp$0 = null;
-        tf[] dupTemp$1 = null;
-        tf[] dupTemp$2 = null;
-        tf[] dupTemp$3 = null;
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         hh[] var5 = null;
         hh[] var6 = null;
         int[] var6_array = null;
@@ -478,12 +478,12 @@ final class oe extends ak {
         ak var9 = null;
         ak var10 = null;
         ak var11 = null;
-        tf[] var12 = null;
-        tf[] var13 = null;
-        tf[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         ak var15 = null;
-        tf[] var16 = null;
-        tf[] var17 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
@@ -522,7 +522,7 @@ final class oe extends ak {
               }
             }
           }
-          v.field_c = 4;
+          MouseWheelHandler.field_c = 4;
           fq.field_q = 15;
           nc.field_d = 11;
           r.field_c = 2;

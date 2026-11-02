@@ -10,7 +10,7 @@ final class bm extends jj {
     private int field_s;
     static String field_m;
     static boolean field_q;
-    static tf field_u;
+    static Sprite field_u;
 
     private final void a(int param0, int param1) {
         param0 = (16711935 - (param0 & 16711935) & 133695482) >> 3 | (65280 - (65280 & param0) & 522245) >> 3;
@@ -46,19 +46,19 @@ final class bm extends jj {
         while (var2 < 307200) {
           incrementValue$2 = var2;
           var2++;
-          t.field_k[incrementValue$2] = 16777215;
+          SoftwareRasterizer.field_k[incrementValue$2] = 16777215;
         }
         var3_ref_lp__ = this.field_p;
         for (var4 = 0; var4 < var3_ref_lp__.length; var4++) {
           var5 = var3_ref_lp__[var4];
           var5.a();
         }
-        for (var3 = 0; var3 < t.field_k.length; var3++) {
-          if (pl.field_O < t.field_k[var3]) {
-            t.field_k[var3] = 16777215;
+        for (var3 = 0; var3 < SoftwareRasterizer.field_k.length; var3++) {
+          if (pl.field_O < SoftwareRasterizer.field_k[var3]) {
+            SoftwareRasterizer.field_k[var3] = 16777215;
           } else {
-            if (od.field_Gb > t.field_k[var3]) {
-              t.field_k[var3] = od.field_Gb;
+            if (od.field_Gb > SoftwareRasterizer.field_k[var3]) {
+              SoftwareRasterizer.field_k[var3] = od.field_Gb;
             }
           }
         }
@@ -151,7 +151,7 @@ final class bm extends jj {
         field_m = null;
     }
 
-    bm(String param0, tf[] param1) {
+    bm(String param0, Sprite[] param1) {
         super(param0, param1);
         int var3_int = 0;
         this.field_s = 0;

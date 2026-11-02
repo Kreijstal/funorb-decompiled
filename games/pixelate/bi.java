@@ -3,8 +3,8 @@
  */
 final class bi {
     private String[] field_b;
-    static tf[] field_g;
-    static we field_d;
+    static Sprite[] field_g;
+    static PacketBuffer field_d;
     int field_f;
     private int field_c;
     private String field_a;
@@ -16,36 +16,36 @@ final class bi {
         int var4;
         int var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
-        t.a(this.field_f, this.field_e, 250, this.field_c, 12, 0, 180);
-        t.e(this.field_f, this.field_e, 250, this.field_c, 12, 0);
+        SoftwareRasterizer.a(this.field_f, this.field_e, 250, this.field_c, 12, 0, 180);
+        SoftwareRasterizer.e(this.field_f, this.field_e, 250, this.field_c, 12, 0);
         var2 = 4 + this.field_e + 8;
         if (!param0) {
           if (null != this.field_a) {
-            hk.field_d.b(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
+            DelegatingCanvas.field_d.b(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
             var2 = var2 + (8 + pe.field_c);
           }
           for (var3 = 0; var3 < this.field_b.length; var3++) {
-            var2 = var2 + pe.field_c * hk.field_d.a(this.field_b[var3], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
+            var2 = var2 + pe.field_c * DelegatingCanvas.field_d.a(this.field_b[var3], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
             var2 += 8;
           }
           return;
         }
         bi.a(1);
         if (null != this.field_a) {
-          hk.field_d.b(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
+          DelegatingCanvas.field_d.b(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
           var2 = var2 + (8 + pe.field_c);
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < this.field_b.length; var3Lifetime1++) {
-          var2 = var2 + pe.field_c * hk.field_d.a(this.field_b[var3Lifetime1], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
+          var2 = var2 + pe.field_c * DelegatingCanvas.field_d.a(this.field_b[var3Lifetime1], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
           var2 += 8;
         }
     }
 
-    final static tf a(String param0, String param1, fm param2, byte param3) {
+    final static Sprite a(String param0, String param1, fm param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        tf stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -91,7 +91,7 @@ final class bi {
     public static void a(int param0) {
         field_g = null;
         if (param0 != -8) {
-          field_g = (tf[]) null;
+          field_g = (Sprite[]) null;
           field_d = null;
           return;
         }
@@ -147,7 +147,7 @@ final class bi {
             this.field_c = this.field_c + (pe.field_c + 8);
           }
           for (var4_int = 0; this.field_b.length > var4_int; var4_int++) {
-            this.field_c = this.field_c + pe.field_c * hk.field_d.b(this.field_b[var4_int], 234);
+            this.field_c = this.field_c + pe.field_c * DelegatingCanvas.field_d.b(this.field_b[var4_int], 234);
             this.field_c = this.field_c + 8;
           }
           this.field_e = 20;

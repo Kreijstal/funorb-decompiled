@@ -118,7 +118,7 @@ final class dm extends vk implements vo {
                 var5.a(-1, -1, bo.field_f);
               } else {
                 var5.a(11, -1, jj.field_c);
-                var5.a(17, -1, mk.field_e);
+                var5.a(17, -1, FullscreenFocusCanvas.field_e);
               }
             } else {
               var5.a(1707, (fn) (this), vi.field_J);
@@ -155,7 +155,7 @@ final class dm extends vk implements vo {
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (!param0) {
-          t.d();
+          SoftwareRasterizer.d();
           if (param2 != 0) {
             dm.a(true, false, -123);
             rj.a(param2 ^ 91, param0);
@@ -164,7 +164,7 @@ final class dm extends vk implements vo {
           rj.a(param2 ^ 91, param0);
           return;
         }
-        t.a(0, 0, t.field_j, t.field_d, 0, 192);
+        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
         if (param2 != 0) {
           dm.a(true, false, -123);
           rj.a(param2 ^ 91, param0);

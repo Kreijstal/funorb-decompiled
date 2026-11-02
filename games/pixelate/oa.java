@@ -28,7 +28,7 @@ final class oa extends hn implements hi, mb {
     }
 
     final static String a(Throwable param0, byte param1) throws IOException {
-        qa var14 = null;
+        ClientException var14 = null;
         String var8_ref_String = null;
         int var9 = 0;
         int var10 = 0;
@@ -50,10 +50,10 @@ final class oa extends hn implements hi, mb {
         String var11Lifetime6;
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
-        if (!(param0 instanceof qa)) {
+        if (!(param0 instanceof ClientException)) {
           var2 = "";
         } else {
-          var14 = (qa) ((Object) param0);
+          var14 = (ClientException) ((Object) param0);
           param0 = var14.field_c;
           var2 = var14.field_d + " | ";
           var11 = var2;

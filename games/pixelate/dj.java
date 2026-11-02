@@ -12,10 +12,10 @@ final class dj {
             jl var5 = (jl) null;
             dj.a((byte) -124, (jl) null, (jl) null, -15);
           }
-          wb.field_c = param3;
+          MouseInputHandler.field_c = param3;
           bg.field_j = param2;
           ma.field_y = param1;
-          op.b(t.field_d / 2, t.field_j / 2, true);
+          op.b(SoftwareRasterizer.field_d / 2, SoftwareRasterizer.field_j / 2, true);
           jj.a(param2.field_z + param2.field_D, false, param1.field_D, param2.field_D, param1.field_D + param1.field_z);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -26,11 +26,11 @@ final class dj {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, tf[] param2, int param3) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3) {
         try {
           nl.field_c = new sb(param2);
           ao.field_d = param1;
-          v.field_d = param0;
+          MouseWheelHandler.field_d = param0;
           dj.a(param3);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -45,14 +45,14 @@ final class dj {
         if (param0 == -1501881951) {
           var1 = ka.m(param0 + 1501881973);
           var2 = go.c(107);
-          nl.field_c.a(-ao.field_d + ce.field_c, (ao.field_d << 1) + var2, param0 + 1501881950, (v.field_d << 1) + var1, -v.field_d + qn.field_o);
+          nl.field_c.a(-ao.field_d + ce.field_c, (ao.field_d << 1) + var2, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1, -MouseWheelHandler.field_d + qn.field_o);
           vh.a(88);
           return;
         }
         dj.b(-112);
         var1Lifetime1 = ka.m(param0 + 1501881973);
         var2Lifetime1 = go.c(107);
-        nl.field_c.a(-ao.field_d + ce.field_c, (ao.field_d << 1) + var2Lifetime1, param0 + 1501881950, (v.field_d << 1) + var1Lifetime1, -v.field_d + qn.field_o);
+        nl.field_c.a(-ao.field_d + ce.field_c, (ao.field_d << 1) + var2Lifetime1, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1Lifetime1, -MouseWheelHandler.field_d + qn.field_o);
         vh.a(88);
     }
 

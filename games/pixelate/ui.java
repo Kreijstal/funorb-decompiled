@@ -9,7 +9,7 @@ final class ui {
     static String[] field_h;
     static int field_a;
     static int field_j;
-    static tf field_f;
+    static Sprite field_f;
     static String field_g;
     static String field_d;
     static int field_b;
@@ -27,14 +27,14 @@ final class ui {
     }
 
     final static int a(int param0, int param1, int param2, byte param3) {
-        if (t.field_j >= param2 + param1) {
+        if (SoftwareRasterizer.field_j >= param2 + param1) {
           return param1;
         }
         if (param3 != -1) {
           return 38;
         }
         if (-param2 + (param1 + param0) < 0) {
-          return -param2 + t.field_j;
+          return -param2 + SoftwareRasterizer.field_j;
         }
         return param1 + param0 - param2;
     }
@@ -99,21 +99,21 @@ final class ui {
     final static void a(int param0, int param1, int param2, int param3) {
         int fieldTemp$0 = 0;
         int var4 = 0;
-        uk.field_v.field_m = 0;
-        uk.field_v.e(160, 12);
+        uk.field_v.position = 0;
+        uk.field_v.writeByte(160, 12);
         uk.field_v.d(ai.field_d.nextInt(), -42);
         uk.field_v.d(ai.field_d.nextInt(), -97);
-        uk.field_v.e(160, param1);
+        uk.field_v.writeByte(160, param1);
         if (param0 > 79) {
-          uk.field_v.e(160, param3);
-          uk.field_v.b(1276387944, param2);
+          uk.field_v.writeByte(160, param3);
+          uk.field_v.writeShort(1276387944, param2);
           uk.field_v.a(tp.field_t, ag.field_m, 0);
           aa.field_f.g(18, 15514);
-          fieldTemp$0 = aa.field_f.field_m + 1;
-          aa.field_f.field_m = aa.field_f.field_m + 1;
+          fieldTemp$0 = aa.field_f.position + 1;
+          aa.field_f.position = aa.field_f.position + 1;
           var4 = fieldTemp$0;
-          aa.field_f.a(uk.field_v.field_m, 0, -3493, uk.field_v.field_k);
-          aa.field_f.f(-var4 + aa.field_f.field_m, -1);
+          aa.field_f.a(uk.field_v.position, 0, -3493, uk.field_v.payload);
+          aa.field_f.f(-var4 + aa.field_f.position, -1);
           return;
         }
     }
@@ -122,18 +122,18 @@ final class ui {
         int stackIn_9_0 = 0;
         int var6;
         int var7;
-        ca.field_a[pg.field_e] = param4;
-        gn.field_A[pg.field_e] = pg.field_e;
-        ep.field_c[pg.field_e] = param3;
+        ca.field_a[SecondaryNodeDeque.field_e] = param4;
+        gn.field_A[SecondaryNodeDeque.field_e] = SecondaryNodeDeque.field_e;
+        ep.field_c[SecondaryNodeDeque.field_e] = param3;
         if (w.field_s > param3) {
           ro.field_a = param3;
         }
         if (param3 > aa.field_o) {
           qn.field_k = param3;
         }
-        uc.field_b[pg.field_e] = param0;
-        vp.field_Fb[pg.field_e] = param5;
-        gh.field_q[pg.field_e] = param2;
+        uc.field_b[SecondaryNodeDeque.field_e] = param0;
+        vp.field_Fb[SecondaryNodeDeque.field_e] = param5;
+        gh.field_q[SecondaryNodeDeque.field_e] = param2;
         var6 = param2 + (param5 + param0);
         if (param1 != var6) {
           stackIn_9_0 = 1000 * param0 / var6;
@@ -141,14 +141,14 @@ final class ui {
           stackIn_9_0 = 0;
         }
         var7 = stackIn_9_0;
-        nb.field_c[pg.field_e] = var7;
+        SecondaryNodeDequeIterator.field_c[SecondaryNodeDeque.field_e] = var7;
         if (qn.field_k < var7) {
           qn.field_k = var7;
         }
         if (var7 < ro.field_a) {
           ro.field_a = var7;
         }
-        pg.field_e = pg.field_e + 1;
+        SecondaryNodeDeque.field_e = SecondaryNodeDeque.field_e + 1;
     }
 
     static {

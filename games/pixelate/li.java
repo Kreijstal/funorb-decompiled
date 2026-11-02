@@ -3,13 +3,13 @@
  */
 final class li {
     static String field_b;
-    static tf[] field_a;
+    static Sprite[] field_a;
     private ba[] field_c;
     static String field_i;
     static boolean field_e;
     private int[] field_f;
-    static tf field_d;
-    static tf[] field_h;
+    static Sprite field_d;
+    static Sprite[] field_h;
     static String field_j;
     static rg field_g;
 
@@ -43,7 +43,7 @@ final class li {
             var2--;
           }
         } else {
-          field_d = (tf) null;
+          field_d = (Sprite) null;
           while (0 <= var2) {
             if (this.field_c[var2] != null) {
               this.field_c[var2].b(-904);

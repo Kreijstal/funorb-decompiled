@@ -4,8 +4,8 @@
 final class fd {
     static vh field_b;
     static String field_d;
-    static tf field_a;
-    static tf[] field_c;
+    static Sprite field_a;
+    static Sprite[] field_c;
 
     final static ak a(int param0) {
         if (param0 != 0) {
@@ -43,11 +43,11 @@ final class fd {
         byte[] var3Lifetime3;
         if (100 != param1) {
           if (~param1 == param0 &&
-            fa.field_c > 0) {
-            fieldTemp$9 = fa.field_c - 1;
-            fa.field_c = fa.field_c - 1;
+            IntrusiveNode.field_c > 0) {
+            fieldTemp$9 = IntrusiveNode.field_c - 1;
+            IntrusiveNode.field_c = IntrusiveNode.field_c - 1;
             var2_ref_byte__ = db.field_S[fieldTemp$9];
-            db.field_S[fa.field_c] = null;
+            db.field_S[IntrusiveNode.field_c] = null;
             return var2_ref_byte__;
           }
           if (param1 != 30000) {
@@ -98,11 +98,11 @@ final class fd {
           return var2_ref_byte__Lifetime1;
         }
         if (~param1 == param0 &&
-          fa.field_c > 0) {
-          fieldTemp$2 = fa.field_c - 1;
-          fa.field_c = fa.field_c - 1;
+          IntrusiveNode.field_c > 0) {
+          fieldTemp$2 = IntrusiveNode.field_c - 1;
+          IntrusiveNode.field_c = IntrusiveNode.field_c - 1;
           var2_ref_byte__Lifetime2 = db.field_S[fieldTemp$2];
-          db.field_S[fa.field_c] = null;
+          db.field_S[IntrusiveNode.field_c] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (param1 != 30000) {

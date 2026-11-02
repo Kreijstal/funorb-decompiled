@@ -37,7 +37,7 @@ final class aa {
           if (2 != gk.field_db) {
             return 0;
           }
-          if (ha.a(this.field_n, (byte) 37)) {
+          if (CanvasRasterBuffer.a(this.field_n, (byte) 37)) {
             return 1;
           }
           return 0;
@@ -49,7 +49,7 @@ final class aa {
         if (2 != gk.field_db) {
           return 0;
         }
-        if (ha.a(this.field_n, (byte) 37)) {
+        if (CanvasRasterBuffer.a(this.field_n, (byte) 37)) {
           return 1;
         }
         return 0;
@@ -68,13 +68,13 @@ final class aa {
         field_f = null;
     }
 
-    final static qa a(Throwable param0, String param1) {
-        qa var2 = null;
-        if (param0 instanceof qa) {
-          var2 = (qa) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_d = var2.field_d + ' ' + param1;
         } else {
-          var2 = new qa(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm extends fa {
+final class cm extends IntrusiveNode {
     static boolean field_m;
     int field_p;
     static String field_l;
-    fa field_k;
+    IntrusiveNode field_k;
     static ak field_o;
     pp field_n;
 
@@ -54,8 +54,8 @@ final class cm extends fa {
         int var3 = qh.field_c * qh.field_c;
         int var4 = -(param0 * param0) + var3;
         if (param1 == 4740) {
-          ff.field_h.a(90, -124 + (t.field_d - 90), -(var4 * 199 / var3) + var2, 256, 199);
-          ai.field_A.a(0, t.field_d - 124, var4 * 438 / var3 + (var2 + 202), 256, 438);
+          ff.field_h.a(90, -124 + (SoftwareRasterizer.field_d - 90), -(var4 * 199 / var3) + var2, 256, 199);
+          ai.field_A.a(0, SoftwareRasterizer.field_d - 124, var4 * 438 / var3 + (var2 + 202), 256, 438);
           return;
         }
     }
@@ -127,13 +127,13 @@ final class cm extends fa {
         try {
           int var7_int = -86 % ((-33 - param0) / 49);
           aa.field_f.g(param5, 15514);
-          aa.field_f.field_m = aa.field_f.field_m + 1;
-          var8 = aa.field_f.field_m;
-          aa.field_f.a(false, param2);
+          aa.field_f.position = aa.field_f.position + 1;
+          var8 = aa.field_f.position;
+          aa.field_f.writeLong(false, param2);
           aa.field_f.b((byte) -41, param3);
-          aa.field_f.e(160, param4);
-          aa.field_f.e(160, param1 ? 1 : 0);
-          aa.field_f.f(aa.field_f.field_m - var8, -1);
+          aa.field_f.writeByte(160, param4);
+          aa.field_f.writeByte(160, param1 ? 1 : 0);
+          aa.field_f.f(aa.field_f.position - var8, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "cm.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -151,18 +151,18 @@ final class cm extends fa {
         synchronized (var1) {
           oi.field_c = oi.field_c + 1;
           ef.field_b = jm.field_o;
-          uf.field_d = u.field_b;
+          ProxyAuthenticationException.field_d = u.field_b;
           bg.field_k = ra.field_d;
           im.field_Jb = u.field_j;
           u.field_j = false;
           nm.field_c = tl.field_a;
           uo.field_a = c.field_X;
-          ji.field_c = fa.field_j;
+          ji.field_c = IntrusiveNode.field_j;
           tl.field_a = 0;
         }
     }
 
-    cm(pp param0, fa param1) {
+    cm(pp param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
           this.field_p = param0.e();
