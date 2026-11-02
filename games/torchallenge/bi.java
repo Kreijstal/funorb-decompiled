@@ -4,7 +4,7 @@
 final class bi {
     static String[] field_b;
     static int field_i;
-    static uf field_d;
+    static PacketBuffer field_d;
     static String field_c;
     static boolean field_f;
     static int[][] field_a;
@@ -22,7 +22,7 @@ final class bi {
           field_d = null;
           return;
         }
-        field_d = (uf) null;
+        field_d = (PacketBuffer) null;
         field_b = null;
         field_c = null;
         field_e = (int[][][]) null;

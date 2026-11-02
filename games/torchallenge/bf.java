@@ -30,9 +30,9 @@ final class bf {
         field_c = (fe[][]) null;
     }
 
-    final static ka[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 <= 30) {
-          return (ka[]) null;
+          return (Sprite[]) null;
         }
         return e.a(3, param2, 1, 1065, 1, param4, param3, param0, 1);
     }
@@ -106,7 +106,7 @@ final class bf {
         this.field_e = ik.field_b;
         this.field_k = hc.field_O;
         this.field_b = uk.field_L;
-        this.field_a = lk.field_b;
+        this.field_a = SpriteLoader.field_b;
         if (!param0) {
           this.field_j = null;
         } else {

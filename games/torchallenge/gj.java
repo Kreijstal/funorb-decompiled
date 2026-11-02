@@ -3,18 +3,18 @@
  */
 final class gj {
     private int field_j;
-    static ka field_b;
+    static Sprite field_b;
     private int field_g;
-    ka field_e;
+    Sprite field_e;
     private int field_f;
     static ne field_a;
     static int field_c;
-    ka[] field_k;
+    Sprite[] field_k;
     private int field_h;
     private boolean field_d;
     private int field_i;
 
-    final gj a(byte param0, ka[] param1) {
+    final gj a(byte param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -36,7 +36,7 @@ final class gj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class gj {
           param0.field_i = this.field_i;
           param0.field_f = this.field_f;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "gj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "gj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -137,8 +137,8 @@ final class gj {
         var9 = TorChallenge.field_F ? 1 : 0;
         try {
           gi.field_c = true;
-          nd.field_c = param1;
-          if (param0 == ~nd.field_c) {
+          RandomAccessCacheFile.field_c = param1;
+          if (param0 == ~RandomAccessCacheFile.field_c) {
             var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, ll.field_c);
             var4 = 3 + var3_int;
             dl.field_s = new int[var4];
@@ -157,7 +157,7 @@ final class gj {
             gf.field_s[-1 + var4] = ab.field_n;
             dl.field_s[-1 + var4] = 1;
             pe.field_db[1] = 5;
-          } else if (nd.field_c == 1) {
+          } else if (RandomAccessCacheFile.field_c == 1) {
             var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, ll.field_c);
             var4 = 2 + var3_int;
             gf.field_s = new String[var4];
@@ -173,10 +173,10 @@ final class gj {
             gf.field_s[-1 + var4] = ab.field_n;
             dl.field_s[var4 - 1] = 0;
             pe.field_db[0] = 5;
-          } else if (nd.field_c != 2) {
-            if (3 == nd.field_c) {
+          } else if (RandomAccessCacheFile.field_c != 2) {
+            if (3 == RandomAccessCacheFile.field_c) {
               if (!sh.field_u.field_g) {
-                var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, d.field_z);
+                var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, GameClientBase.field_z);
               } else {
                 var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, cj.field_a);
               }
@@ -194,7 +194,7 @@ final class gj {
               gf.field_s[-1 + var4] = ab.field_n;
               dl.field_s[-1 + var4] = 0;
               pe.field_db[0] = 5;
-            } else if (nd.field_c == 4) {
+            } else if (RandomAccessCacheFile.field_c == 4) {
               var3_int = ga.a(~param0, pf.field_c, wf.field_e, aj.field_b, uc.field_T);
               var4 = 2 + var3_int;
               gf.field_s = new String[var4];
@@ -211,10 +211,10 @@ final class gj {
               dl.field_s[var4 - 1] = 0;
               pe.field_db[0] = 5;
             } else {
-              if (nd.field_c != 5) {
+              if (RandomAccessCacheFile.field_c != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, jd.field_d);
+              var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, ClientException.field_d);
               var4 = 3 + var3_int;
               gf.field_s = new String[var4];
               dl.field_s = new int[var4];
@@ -226,7 +226,7 @@ final class gj {
                 gf.field_s[var5] = wf.field_e[var5];
               }
               gf.field_s[-3 + var4] = "";
-              gf.field_s[-2 + var4] = ak.field_g;
+              gf.field_s[-2 + var4] = SecondaryNodeDeque.field_g;
               dl.field_s[-2 + var4] = 0;
               pe.field_db[0] = 3;
               gf.field_s[-1 + var4] = ab.field_n;
@@ -250,7 +250,7 @@ final class gj {
             he.a(wf.field_e, 0, ji.field_n, 0, var4);
             jl.field_c = new String[-1 + (var3_int - var4)];
             he.a(wf.field_e, var4 + 1, jl.field_c, 0, -var4 + var3_int - 1);
-            var3_int = ga.a(~param0, pf.field_c, wf.field_e, aj.field_b, ni.a(new String[]{"<br><%0><br>"}, 0, wb.field_q));
+            var3_int = ga.a(~param0, pf.field_c, wf.field_e, aj.field_b, ni.a(new String[]{"<br><%0><br>"}, 0, BufferedSocket.field_q));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(wf.field_e[var5])) {
@@ -319,7 +319,7 @@ final class gj {
               }
               stackIn_44_0[stackIn_44_1] = stackIn_47_2;
             }
-            fd.field_e = ol.a(256);
+            IterableNodeHashTable.field_e = ol.a(256);
           }
           ui.field_c.field_b = pe.field_db.length;
           var3_intLifetime1 = 0;
@@ -331,7 +331,7 @@ final class gj {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (nd.field_c == 2) {
+          if (RandomAccessCacheFile.field_c == 2) {
             var10 = ji.field_n;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
@@ -350,13 +350,13 @@ final class gj {
               }
             }
           }
-          qe.field_R = dg.field_ab - (var3_intLifetime1 >> 1);
+          LevelEntity.field_R = dg.field_ab - (var3_intLifetime1 >> 1);
           fh.field_c = ui.field_c.field_b * (ai.field_a + uc.field_Y << 1);
           sd.field_a = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + dg.field_ab);
           for (var4Lifetime2 = 0; gf.field_s.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_112_0 = fh.field_c;
             if (dl.field_s[var4Lifetime2] >= 0) {
-              stackIn_113_1 = sl.field_f;
+              stackIn_113_1 = IntrusiveDeque.field_f;
             } else {
               stackIn_113_1 = ok.field_e;
             }
@@ -378,26 +378,26 @@ final class gj {
               r.field_h[var4Lifetime3][0] = var8Lifetime1 - ni.field_i;
               r.field_h[var4Lifetime3][1] = var5Lifetime3;
               r.field_h[var4Lifetime3][2] = (ni.field_i << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (uc.field_Y + (ai.field_a << 1) + sl.field_f);
-              r.field_h[var4Lifetime3][3] = sl.field_f + (ai.field_a << 1);
+              var5Lifetime3 = var5Lifetime3 + (uc.field_Y + (ai.field_a << 1) + IntrusiveDeque.field_f);
+              r.field_h[var4Lifetime3][3] = IntrusiveDeque.field_f + (ai.field_a << 1);
             }
             var4Lifetime3++;
           }
-          if (2 == nd.field_c) {
+          if (2 == RandomAccessCacheFile.field_c) {
             ui.field_c.a((byte) -86, param2, -1, -1);
           } else {
-            ui.field_c.a((byte) 13, param2, 0, ha.a(ph.field_d, kc.field_u, -36));
+            ui.field_c.a((byte) 13, param2, 0, ha.a(ph.field_d, LocalizedStrings.field_u, -36));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "gj.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "gj.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0, ee param1, int param2, ga param3, byte param4) {
-        eg stackIn_20_0 = null;
+    final void a(int param0, UiComponent param1, int param2, ga param3, byte param4) {
+        BitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
         int stackIn_23_2 = 0;
@@ -419,21 +419,21 @@ final class gj {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          hd.a(this.field_k, param1.field_l, param1.field_p, (byte) 95, param1.field_i + param0, param1.field_m + param2);
+          GzipDecoder.a(this.field_k, param1.field_l, param1.field_p, (byte) 95, param1.field_i + param0, param1.field_m + param2);
           if (null != this.field_e) {
             var6_int = param2 + param1.field_m + this.field_f;
             var7 = param1.field_i + (param0 + this.field_h);
             if (param3.field_e == 1) {
-              var6_int = var6_int + (param1.field_p - this.field_e.field_q) / 2;
+              var6_int = var6_int + (param1.field_p - this.field_e.fullWidth) / 2;
             }
             if (param3.field_i == 1) {
-              var7 = var7 + (param1.field_l - this.field_e.field_v) / 2;
+              var7 = var7 + (param1.field_l - this.field_e.fullHeight) / 2;
             }
             if (param3.field_e == 2) {
-              var6_int = var6_int + (param1.field_p - this.field_e.field_q);
+              var6_int = var6_int + (param1.field_p - this.field_e.fullWidth);
             }
             if (param3.field_i == 2) {
-              var7 = var7 + (param1.field_l - this.field_e.field_v);
+              var7 = var7 + (param1.field_l - this.field_e.fullHeight);
             }
             this.field_e.g(var6_int, var7);
           }
@@ -467,7 +467,7 @@ final class gj {
             } else {
               stackIn_27_8 = 256;
             }
-            ((eg) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param3.field_e, param3.field_i, param3.field_n);
+            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param3.field_e, param3.field_i, param3.field_n);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -486,7 +486,7 @@ final class gj {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -503,7 +503,7 @@ final class gj {
         return this;
     }
 
-    final void a(int param0, gj param1, ga param2, int param3, int param4, ee param5) {
+    final void a(int param0, gj param1, ga param2, int param3, int param4, UiComponent param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -562,7 +562,7 @@ final class gj {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

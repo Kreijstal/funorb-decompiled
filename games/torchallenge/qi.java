@@ -64,7 +64,7 @@ final class qi {
         }
     }
 
-    final static qj a(lj param0, String param1, lj param2, String param3, int param4) {
+    final static qj a(ResourceArchive param0, String param1, ResourceArchive param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -84,7 +84,7 @@ final class qi {
           var5_int = param2.a(param1, -89);
           if (param4 != 0) {
             var7 = (String) null;
-            qi.a((lj) null, (String) null, (lj) null, (String) null, 9);
+            qi.a((ResourceArchive) null, (String) null, (ResourceArchive) null, (String) null, 9);
           }
           var6 = param2.a(var5_int, param3, (byte) 123);
           stackIn_3_0 = dg.a(var5_int, param2, var6, param0, (byte) 69);
@@ -117,7 +117,7 @@ final class qi {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 

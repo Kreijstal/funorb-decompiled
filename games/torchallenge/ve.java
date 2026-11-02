@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ve {
-    static ka[] field_b;
+    static Sprite[] field_b;
     static wl field_a;
-    static sl field_c;
+    static IntrusiveDeque field_c;
 
     final static void a(int param0, int param1, int param2) {
         int var3;
@@ -127,6 +127,6 @@ final class ve {
     }
 
     static {
-        field_c = new sl();
+        field_c = new IntrusiveDeque();
     }
 }

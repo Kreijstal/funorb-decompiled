@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends qd {
+final class kb extends PcmStream {
     int[] field_J;
     private int[] field_n;
     private int field_m;
@@ -42,7 +42,7 @@ final class kb extends qd {
         try {
           fl.a(-125, false, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kb.LA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.LA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class kb extends qd {
           }
           this.a(true, param2, param1, 28050);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kb.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class kb extends qd {
         try {
           if (param0 != 256) {
             var7 = (kb) null;
-            kb.a(-76, -111, (uj) null, true, (java.awt.Component) null, (kb) null);
+            kb.a(-76, -111, (PlatformTaskDispatcher) null, true, (java.awt.Component) null, (kb) null);
           }
           var4_int = param2.field_k.field_k.length;
           if (param1 &&
@@ -97,7 +97,7 @@ final class kb extends qd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class kb extends qd {
           this.field_t[var3] = this.field_q[var3];
         }
         if (param0 != -1863960953) {
-          this.b();
+          this.nextSubstream();
         }
         int var5 = 0;
         var3Lifetime1 = var5;
@@ -147,7 +147,7 @@ final class kb extends qd {
           param1.removeFocusListener(te.field_b);
           jc.field_h = 0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kb.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -370,7 +370,7 @@ final class kb extends qd {
         this.field_s = param1;
     }
 
-    final synchronized int a() {
+    final synchronized int activity() {
         return 0;
     }
 
@@ -405,12 +405,12 @@ final class kb extends qd {
         dl var3 = null;
         int var4 = TorChallenge.field_F ? 1 : 0;
         if (0 != (4 & this.field_J[param0])) {
-          var3 = (dl) (this.field_I.field_o.c((byte) -22));
+          var3 = (dl) (this.field_I.field_o.first((byte) -22));
           while (var3 != null) {
             if (var3.field_G == param0) {
               var3.field_x = 0;
             }
-            var3 = (dl) (this.field_I.field_o.c(-270));
+            var3 = (dl) (this.field_I.field_o.next(-270));
           }
         }
         if (param1 != -870) {
@@ -419,7 +419,7 @@ final class kb extends qd {
         }
     }
 
-    final static void a(int param0, int param1, uj param2, boolean param3, java.awt.Component param4, kb param5) {
+    final static void a(int param0, int param1, PlatformTaskDispatcher param2, boolean param3, java.awt.Component param4, kb param5) {
         try {
           if (param1 != 16239) {
             java.awt.Component var7 = (java.awt.Component) null;
@@ -427,11 +427,11 @@ final class kb extends qd {
           }
           bg.a(param5, param0, 1024, param0, param4, param2, -118, param3);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kb.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var2;
         long var3;
         int var6;
@@ -447,7 +447,7 @@ final class kb extends qd {
             }
             var5 = (int)((-1L + (this.field_x - this.field_H + (long)var2)) / (long)var2);
             this.field_H = this.field_H + (long)var5 * (long)var2;
-            this.field_I.a(var5);
+            this.field_I.skip(var5);
             param0 = param0 - var5;
             this.c(true);
             if (!this.field_P.d()) {
@@ -455,7 +455,7 @@ final class kb extends qd {
             }
           }
         }
-        this.field_I.a(param0);
+        this.field_I.skip(param0);
     }
 
     private final int a(int param0, dl param1) {
@@ -487,7 +487,7 @@ final class kb extends qd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -513,7 +513,7 @@ final class kb extends qd {
           this.field_K = this.field_P.field_f[this.field_M];
           this.field_x = this.field_P.b(this.field_K);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kb.SA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.SA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -547,7 +547,7 @@ final class kb extends qd {
 
     private final void a(boolean param0, int param1) {
         int var4 = TorChallenge.field_F ? 1 : 0;
-        dl var3 = (dl) (this.field_I.field_o.c((byte) -83));
+        dl var3 = (dl) (this.field_I.field_o.first((byte) -83));
         if (!param0) {
           ej var5 = (ej) null;
           this.a(-128, (ej) null, true);
@@ -558,16 +558,16 @@ final class kb extends qd {
             if (var3.field_K != null) {
               var3.field_K.g(kh.field_p / 100);
               if (var3.field_K.l()) {
-                this.field_I.field_u.a(var3.field_K);
+                this.field_I.field_u.addSubstream(var3.field_K);
               }
               var3.a(1047574608);
             }
             if (!(var3.field_F >= 0)) {
               this.field_r[var3.field_G][var3.field_p] = null;
             }
-            var3.a(true);
+            var3.unlink(true);
           }
-          var3 = (dl) (this.field_I.field_o.c(-270));
+          var3 = (dl) (this.field_I.field_o.next(-270));
         }
     }
 
@@ -655,7 +655,7 @@ final class kb extends qd {
         }
         if (param1 != 122) {
           int[] var6 = (int[]) null;
-          this.b((int[]) null, -5, 97);
+          this.mixInto((int[]) null, -5, 97);
         }
     }
 
@@ -666,21 +666,21 @@ final class kb extends qd {
         var4 = TorChallenge.field_F ? 1 : 0;
         if (param1 >= -95) {
           var5 = (int[]) null;
-          this.b((int[]) null, -23, -98);
+          this.mixInto((int[]) null, -23, -98);
         }
         if ((2 & this.field_J[param0]) != 0) {
-          var3 = (dl) (this.field_I.field_o.c((byte) 113));
+          var3 = (dl) (this.field_I.field_o.first((byte) 113));
           while (var3 != null) {
             if (param0 == var3.field_G) {
               if (this.field_r[param0][var3.field_p] != null) {
-                var3 = (dl) (this.field_I.field_o.c(-270));
+                var3 = (dl) (this.field_I.field_o.next(-270));
                 continue;
               }
               if (var3.field_F < 0) {
                 var3.field_F = 0;
               }
             }
-            var3 = (dl) (this.field_I.field_o.c(-270));
+            var3 = (dl) (this.field_I.field_o.next(-270));
           }
         }
     }
@@ -694,7 +694,7 @@ final class kb extends qd {
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
@@ -713,7 +713,7 @@ final class kb extends qd {
               if (0L > -var5 + this.field_x) {
                 var7 = (int)((-1L + (long)var4_int + (-this.field_H + this.field_x)) / (long)var4_int);
                 this.field_H = this.field_H + (long)var7 * (long)var4_int;
-                this.field_I.b(param0, param1, var7);
+                this.field_I.mixInto(param0, param1, var7);
                 this.c(true);
                 param1 = param1 + var7;
                 param2 = param2 - var7;
@@ -725,10 +725,10 @@ final class kb extends qd {
               }
               break;
             }
-            this.field_I.b(param0, param1, param2);
+            this.field_I.mixInto(param0, param1, param2);
             return;
           }
-          this.field_I.b(param0, param1, param2);
+          this.field_I.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -740,13 +740,13 @@ final class kb extends qd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final synchronized boolean a(boolean param0, u param1, ej param2, lj param3, int param4) {
+    final synchronized boolean a(boolean param0, u param1, ej param2, ResourceArchive param3, int param4) {
         int stackIn_13_0 = 0;
-        lj stackIn_13_1 = null;
+        ResourceArchive stackIn_13_1 = null;
         boolean stackIn_14_2 = false;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -778,11 +778,11 @@ final class kb extends qd {
           }
           var8 = (s) (param2.field_j.a((byte) -73));
           while (var8 != null) {
-            var9 = (int)var8.field_d;
+            var9 = (int)var8.key;
             var12 = (fb) (this.field_A.a((byte) 92, (long)var9));
             if (var12 == null) {
               stackIn_13_0 = var9;
-              stackIn_13_1 = (lj) (param3);
+              stackIn_13_1 = (ResourceArchive) (param3);
               stackIn_14_2 = !(param0);
               var13 = dh.a(stackIn_13_0, stackIn_13_1, stackIn_14_2);
               if (var13 == null) {
@@ -829,7 +829,7 @@ final class kb extends qd {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -879,7 +879,7 @@ final class kb extends qd {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -916,7 +916,7 @@ final class kb extends qd {
           if (param4.field_F >= 0 && (null == param4.field_K ||
             param4.field_K.j())) {
             param4.a(1047574608);
-            param4.a(true);
+            param4.unlink(true);
             if (param4.field_i > 0 &&
               param4 == this.field_v[param4.field_G][param4.field_i]) {
               this.field_v[param4.field_G][param4.field_i] = null;
@@ -993,16 +993,16 @@ final class kb extends qd {
           }
           param4.field_K.g(param4.field_z);
           if (param2 != null) {
-            param4.field_K.b(param2, param0, param3);
+            param4.field_K.mixInto(param2, param0, param3);
           } else {
-            param4.field_K.a(param3);
+            param4.field_K.skip(param3);
           }
           if (param4.field_K.l()) {
-            this.field_I.field_u.a(param4.field_K);
+            this.field_I.field_u.addSubstream(param4.field_K);
           }
           param4.a(1047574608);
           if (0 <= param4.field_F) {
-            param4.a(true);
+            param4.unlink(true);
             if (param4.field_i > 0 &&
               this.field_v[param4.field_G][param4.field_i] == param4) {
               this.field_v[param4.field_G][param4.field_i] = null;
@@ -1025,7 +1025,7 @@ final class kb extends qd {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 
@@ -1056,7 +1056,7 @@ final class kb extends qd {
           }
           if (!param1) {
             var9 = (kb) null;
-            kb.a(-89, -61, (uj) null, false, (java.awt.Component) null, (kb) null);
+            kb.a(-89, -61, (PlatformTaskDispatcher) null, false, (java.awt.Component) null, (kb) null);
           }
           var10 = param0.field_I;
           var11 = var10;
@@ -1101,7 +1101,7 @@ final class kb extends qd {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1110,23 +1110,23 @@ final class kb extends qd {
         if (param1 <= 84) {
           return;
         }
-        dl var3 = (dl) (this.field_I.field_o.c((byte) 120));
+        dl var3 = (dl) (this.field_I.field_o.first((byte) 120));
         while (var3 != null) {
           if ((0 > param0 || param0 == var3.field_G) &&
             var3.field_F < 0) {
             this.field_r[var3.field_G][var3.field_p] = null;
             var3.field_F = 0;
           }
-          var3 = (dl) (this.field_I.field_o.c(-270));
+          var3 = (dl) (this.field_I.field_o.next(-270));
         }
     }
 
-    final synchronized qd b() {
+    final synchronized PcmStream nextSubstream() {
         return null;
     }
 
-    final synchronized qd c() {
-        return (qd) ((Object) this.field_I);
+    final synchronized PcmStream firstSubstream() {
+        return (PcmStream) ((Object) this.field_I);
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
@@ -1145,7 +1145,7 @@ final class kb extends qd {
         var9 = TorChallenge.field_F ? 1 : 0;
         this.a(param2, 64, param3, 9208);
         if (0 != (this.field_J[param2] & 2)) {
-          var5 = (dl) (this.field_I.field_o.b((byte) 65));
+          var5 = (dl) (this.field_I.field_o.last((byte) 65));
           while (var5 != null) {
             if (param2 == var5.field_G &&
               var5.field_F < 0) {
@@ -1158,7 +1158,7 @@ final class kb extends qd {
               var5.field_o = var6_int - var5.field_u;
               return;
             }
-            var5 = (dl) (this.field_I.field_o.e((byte) -112));
+            var5 = (dl) (this.field_I.field_o.previous((byte) -112));
           }
         }
         var11 = (fb) (this.field_A.a((byte) 100, (long)this.field_t[param2]));
@@ -1209,7 +1209,7 @@ final class kb extends qd {
           }
           this.field_v[param2][var7.field_i] = var7;
         }
-        this.field_I.field_o.a(var7, -53);
+        this.field_I.field_o.addLast(var7, -53);
         this.field_r[param2][param3] = var7;
         return;
     }
@@ -1240,7 +1240,7 @@ final class kb extends qd {
         if (0 == (this.field_J[param0] & 2)) {
           var8.field_F = 0;
         } else {
-          var6 = (dl) (this.field_I.field_o.c((byte) 110));
+          var6 = (dl) (this.field_I.field_o.first((byte) 110));
           while (var6 != null) {
             if (var8.field_G == var6.field_G &&
               var6.field_F < 0 &&
@@ -1248,7 +1248,7 @@ final class kb extends qd {
               var8.field_F = 0;
               break;
             }
-            var6 = (dl) (this.field_I.field_o.c(-270));
+            var6 = (dl) (this.field_I.field_o.next(-270));
           }
         }
     }
@@ -1256,7 +1256,7 @@ final class kb extends qd {
     public static void c(int param0) {
         if (param0 != 128) {
           kb var2 = (kb) null;
-          kb.a(116, 24, (uj) null, true, (java.awt.Component) null, (kb) null);
+          kb.a(116, 24, (PlatformTaskDispatcher) null, true, (java.awt.Component) null, (kb) null);
         }
         field_O = null;
     }
@@ -1277,7 +1277,7 @@ final class kb extends qd {
           if (0 > param0.field_F) {
             return true;
           }
-          param0.a(true);
+          param0.unlink(true);
           if (param0.field_i > 0 &&
             param0 == this.field_v[param0.field_G][param0.field_i]) {
             this.field_v[param0.field_G][param0.field_i] = null;
@@ -1293,7 +1293,7 @@ final class kb extends qd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

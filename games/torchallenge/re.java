@@ -4,10 +4,10 @@
 final class re extends lb {
     private Object field_y;
     static String field_z;
-    static ka[][] field_v;
+    static Sprite[][] field_v;
     static kh field_B;
     static int[] field_w;
-    static ka[][] field_x;
+    static Sprite[][] field_x;
     static int field_A;
 
     public static void e(byte param0) {
@@ -15,9 +15,9 @@ final class re extends lb {
           re.a(86, -45, 70, -5);
         }
         field_B = null;
-        field_v = (ka[][]) null;
+        field_v = (Sprite[][]) null;
         field_z = null;
-        field_x = (ka[][]) null;
+        field_x = (Sprite[][]) null;
         field_w = null;
     }
 
@@ -138,7 +138,7 @@ final class re extends lb {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (rk.field_h.indexOf(var5Lifetime1) == -1) {
+              if (BufferedCacheFile.field_h.indexOf(var5Lifetime1) == -1) {
                 stackIn_44_0 = di.field_g;
                 return stackIn_44_0;
               }
@@ -156,7 +156,7 @@ final class re extends lb {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ final class re extends lb {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -213,7 +213,7 @@ final class re extends lb {
         try {
           this.field_y = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -249,14 +249,14 @@ final class re extends lb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     static {
         field_w = new int[]{1, 1, 2, 2, 3, 1, 2, 3, 1, 2, 2, 3, 1, 2, 3, 3, 1};
         field_z = "Please try again in a few minutes.";
-        field_v = new ka[2][2];
-        field_x = new ka[9][];
+        field_v = new Sprite[2][2];
+        field_x = new Sprite[9][];
     }
 }

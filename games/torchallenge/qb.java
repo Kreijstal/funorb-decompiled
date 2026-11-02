@@ -9,10 +9,10 @@ final class qb {
     static String[] field_c;
     static int field_i;
     static int field_b;
-    static volatile int field_g;
+    static volatile int mouseY;
     static int field_h;
 
-    final static void a(byte param0, ka[] param1) {
+    final static void a(byte param0, Sprite[] param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -41,7 +41,7 @@ final class qb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class qb {
         field_d = 0;
         field_a = new int[][]{new int[]{171, 61}, new int[]{157, 61}, new int[]{175, 61}};
         field_i = -1;
-        field_g = -1;
+        mouseY = -1;
         field_h = -1;
         field_b = 200;
         field_e = "Retry";

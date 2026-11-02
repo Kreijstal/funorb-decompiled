@@ -3,7 +3,7 @@
  */
 final class hh {
     static java.awt.Font field_a;
-    static ka field_b;
+    static Sprite field_b;
     static int[][][] field_c;
 
     final static int[] b(int param0, int param1, int param2) {
@@ -23,17 +23,17 @@ final class hh {
 
     final static void a(int param0, int param1, int param2) {
         if (param0 == 2) {
-          if (kc.field_s == null ||
-            !(param2 <= kc.field_s.length)) {
-            kc.field_s = new int[2 * param2];
+          if (LocalizedStrings.field_s == null ||
+            !(param2 <= LocalizedStrings.field_s.length)) {
+            LocalizedStrings.field_s = new int[2 * param2];
           }
           if (null == bg.field_Q ||
             !(param2 <= bg.field_Q.length)) {
             bg.field_Q = new int[param2 * 2];
           }
-          if (rk.field_p == null ||
-            !(rk.field_p.length >= param2)) {
-            rk.field_p = new int[2 * param2];
+          if (BufferedCacheFile.field_p == null ||
+            !(BufferedCacheFile.field_p.length >= param2)) {
+            BufferedCacheFile.field_p = new int[2 * param2];
           }
           if (null != ea.field_a &&
             ea.field_a.length >= param2) {
@@ -121,16 +121,16 @@ final class hh {
             qa.field_i = new boolean[param2 * 2];
           }
         } else {
-          field_b = (ka) null;
-          if (kc.field_s == null ||
-            !(param2 <= kc.field_s.length)) {
-            kc.field_s = new int[2 * param2];
+          field_b = (Sprite) null;
+          if (LocalizedStrings.field_s == null ||
+            !(param2 <= LocalizedStrings.field_s.length)) {
+            LocalizedStrings.field_s = new int[2 * param2];
           }
           if (null == bg.field_Q) {
             bg.field_Q = new int[param2 * 2];
-            if (rk.field_p == null ||
-              !(rk.field_p.length >= param2)) {
-              rk.field_p = new int[2 * param2];
+            if (BufferedCacheFile.field_p == null ||
+              !(BufferedCacheFile.field_p.length >= param2)) {
+              BufferedCacheFile.field_p = new int[2 * param2];
             }
             if (null != ea.field_a &&
               ea.field_a.length >= param2) {
@@ -221,9 +221,9 @@ final class hh {
             if (param2 > bg.field_Q.length) {
               bg.field_Q = new int[param2 * 2];
             }
-            if (rk.field_p == null ||
-              !(rk.field_p.length >= param2)) {
-              rk.field_p = new int[2 * param2];
+            if (BufferedCacheFile.field_p == null ||
+              !(BufferedCacheFile.field_p.length >= param2)) {
+              BufferedCacheFile.field_p = new int[2 * param2];
             }
             if (null != ea.field_a &&
               ea.field_a.length >= param2) {

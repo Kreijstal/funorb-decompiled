@@ -177,19 +177,19 @@ final class ed {
         try {
           if (o.field_l > 0) {
             if (pg.field_p == null) {
-              fd.a((byte) -86);
+              IterableNodeHashTable.a((byte) -86);
             }
             o.field_l = o.field_l - 1;
             if (0 == o.field_l) {
-              ug.field_o = 0;
+              GameApplet.field_o = 0;
               df.field_O = true;
             }
           }
           if (o.field_l > 0 &&
-            wb.field_p.field_db <= 0) {
+            BufferedSocket.field_p.field_db <= 0) {
             df.field_O = true;
             o.field_l = 0;
-            ug.field_o = 0;
+            GameApplet.field_o = 0;
           }
           if (o.field_l == 0 &&
             ok.field_a != null) {
@@ -220,10 +220,10 @@ final class ed {
           }
           for (var2_intLifetime2 = 0; var2_intLifetime2 < ea.field_g.length; var2_intLifetime2++) {
             if (ea.field_g[var2_intLifetime2] != null &&
-              0 != ea.field_g[var2_intLifetime2].field_F) {
+              0 != ea.field_g[var2_intLifetime2].type) {
               ea.field_g[var2_intLifetime2] = ea.field_g[var2_intLifetime2].c((byte) 29, param1);
               if (ea.field_g[var2_intLifetime2] != null &&
-                vg.a(ea.field_g[var2_intLifetime2].field_F, -1)) {
+                vg.a(ea.field_g[var2_intLifetime2].type, -1)) {
                 ea.field_g[var2_intLifetime2].l(0);
               }
             }
@@ -231,7 +231,7 @@ final class ed {
           if (hc.field_Q &&
             ub.field_n >= 0) {
             ub.field_n = ub.field_n - 1;
-            cb.a(25, wb.field_p.field_H, (byte) 93, wb.field_p.field_o);
+            cb.a(25, BufferedSocket.field_p.y, (byte) 93, BufferedSocket.field_p.x);
           }
           t.b(true);
           hk.a(126);
@@ -263,7 +263,7 @@ final class ed {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "ed.E(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "ed.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class ed {
           }
           this.b(-82);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

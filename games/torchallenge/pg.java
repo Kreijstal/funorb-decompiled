@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends qd {
+final class pg extends PcmStream {
     static int field_q;
     private kb field_t;
     static boolean field_s;
-    sl field_o;
+    IntrusiveDeque field_o;
     static nc field_p;
     static int field_m;
     static int[] field_r;
-    jk field_u;
+    PcmStreamMixer field_u;
     static int[][] field_n;
 
-    final void a(int param0) {
+    final void skip(int param0) {
         int var2;
         dl var3;
         int var4;
         boolean stackIn_3_0 = false;
         var4 = TorChallenge.field_F ? 1 : 0;
-        this.field_u.a(param0);
-        var3 = (dl) (this.field_o.c((byte) -128));
+        this.field_u.skip(param0);
+        var3 = (dl) (this.field_o.first((byte) -128));
         while (var3 != null) {
           stackIn_3_0 = this.field_t.a(var3, (byte) 22);
           boolean decompiledFrameCompleted0 = true;
@@ -38,29 +38,29 @@ final class pg extends qd {
               var3.field_z = var3.field_z - var2;
             }
           }
-          var3 = (dl) (this.field_o.c(-270));
+          var3 = (dl) (this.field_o.next(-270));
         }
     }
 
     final static int e(int param0) {
         int var1 = -60 % ((param0 + 80) / 42);
-        return vf.field_a;
+        return MouseInputHandler.field_a;
     }
 
-    final qd b() {
+    final PcmStream nextSubstream() {
         dl var1;
         while (true) {
-          var1 = (dl) (this.field_o.c(-270));
+          var1 = (dl) (this.field_o.next(-270));
           if (var1 == null) {
             return null;
           }
           if (var1.field_K != null) {
-            return (qd) ((Object) var1.field_K);
+            return (PcmStream) ((Object) var1.field_K);
           }
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         dl var6 = null;
@@ -73,8 +73,8 @@ final class pg extends qd {
         RuntimeException var4 = null;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
-          this.field_u.b(param0, param1, param2);
-          var6 = (dl) (this.field_o.c((byte) 112));
+          this.field_u.mixInto(param0, param1, param2);
+          var6 = (dl) (this.field_o.first((byte) 112));
           while (var6 != null) {
             stackIn_4_0 = this.field_t.a(var6, (byte) 22);
             boolean decompiledFrameCompleted0 = true;
@@ -95,7 +95,7 @@ final class pg extends qd {
                 var6.field_z = var6.field_z - var5;
               }
             }
-            var6 = (dl) (this.field_o.c(-270));
+            var6 = (dl) (this.field_o.next(-270));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,7 +108,7 @@ final class pg extends qd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -126,29 +126,29 @@ final class pg extends qd {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        uf var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new uf(param1);
+          var9 = new PacketBuffer(param1);
           if (param0 != -1048576) {
             pg.c(38);
           }
-          var3 = var9.j(-107);
-          var4 = var9.i(29);
+          var3 = var9.readUnsignedByte(-107);
+          var4 = var9.readInt(29);
           if (var4 >= 0 && (ai.field_c == 0 ||
             !(ai.field_c < var4))) {
             if (var3 == 0) {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(param0 ^ -1048518, var13, var4, 0);
+              var9.readBytes(param0 ^ -1048518, var13, var4, 0);
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
-            var5_int = var9.i(92);
+            var5_int = var9.readInt(92);
             if (var5_int >= 0 && (ai.field_c == 0 ||
               !(ai.field_c < var5_int))) {
               var12 = new byte[var5_int];
@@ -157,9 +157,9 @@ final class pg extends qd {
               if (var3 == 1) {
                 nl.a(var12, var5_int, param1, var4, 9);
               } else {
-                var7 = jd.field_b;
+                var7 = ClientException.field_b;
                 synchronized (var7) {
-                  jd.field_b.a(var12, (byte) -117, var9);
+                  ClientException.field_b.a(var12, (byte) -117, var9);
                 }
               }
               stackIn_21_0 = var6;
@@ -178,11 +178,11 @@ final class pg extends qd {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
-    final int a() {
+    final int activity() {
         return 0;
     }
 
@@ -222,7 +222,7 @@ final class pg extends qd {
           if (param1 != -45) {
             return;
           }
-          param2.field_K.a(param0);
+          param2.field_K.skip(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -234,7 +234,7 @@ final class pg extends qd {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class pg extends qd {
                 param0.field_x = param0.field_x + var7_int * param2;
                 break;
               }
-              param0.field_K.b(param4, param5, var8);
+              param0.field_K.mixInto(param4, param5, var8);
               param2 = param2 - var8;
               param5 = param5 + var8;
               param0.field_x = param0.field_x + (-1048576 + var7_int * var8);
@@ -290,17 +290,17 @@ final class pg extends qd {
                 param0.field_K.e(-1);
               }
               var11.g(var9);
-              var11.b(param4, param5, param1 - param5);
+              var11.mixInto(param4, param5, param1 - param5);
               if (!var11.l()) {
                 continue;
               }
-              this.field_u.a(var11);
+              this.field_u.addSubstream(var11);
             }
           }
           if (param3 <= 51) {
-            this.c();
+            this.firstSubstream();
           }
-          param0.field_K.b(param4, param5, param2);
+          param0.field_K.mixInto(param4, param5, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -318,19 +318,19 @@ final class pg extends qd {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    final qd c() {
-        dl var1 = (dl) (this.field_o.c((byte) 112));
+    final PcmStream firstSubstream() {
+        dl var1 = (dl) (this.field_o.first((byte) 112));
         if (var1 == null) {
           return null;
         }
         if (null != var1.field_K) {
-          return (qd) ((Object) var1.field_K);
+          return (PcmStream) ((Object) var1.field_K);
         }
-        return this.b();
+        return this.nextSubstream();
     }
 
     final static boolean d(int param0) {
@@ -344,7 +344,7 @@ final class pg extends qd {
           var1_int = 0;
           for (var2 = param0; var2 < ea.field_g.length; var2++) {
             if (null != ea.field_g[var2] &&
-              ea.field_g[var2].field_F == 19) {
+              ea.field_g[var2].type == 19) {
               var1_int++;
             }
           }
@@ -355,7 +355,7 @@ final class pg extends qd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "pg.C(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "pg.C(" + param0 + ')');
         }
     }
 
@@ -368,23 +368,23 @@ final class pg extends qd {
         field_p = null;
     }
 
-    final static gl a(int param0, String param1, int param2) {
-        fc var3 = null;
+    final static SocketConnector a(int param0, String param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        fc stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new fc();
-          ((gl) ((Object) var3)).field_d = param0;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).port = param0;
           if (param2 >= -16) {
             field_m = -121;
           }
-          ((gl) ((Object) var3)).field_i = param1;
+          ((SocketConnector) ((Object) var3)).host = param1;
           stackIn_3_0 = var3;
-          return (gl) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -395,17 +395,17 @@ final class pg extends qd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
     pg(kb param0) {
-        this.field_o = new sl();
-        this.field_u = new jk();
+        this.field_o = new IntrusiveDeque();
+        this.field_u = new PcmStreamMixer();
         try {
           this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -5,14 +5,14 @@ final class tk extends ng {
     static String field_T;
     private int field_S;
     static boolean field_P;
-    static eg field_R;
+    static BitmapFont field_R;
     static int[] field_Q;
     private wd field_O;
 
     public static void c(byte param0) {
         field_T = null;
         if (param0 < 68) {
-          field_R = (eg) null;
+          field_R = (BitmapFont) null;
         }
         field_Q = null;
         field_R = null;
@@ -46,8 +46,8 @@ final class tk extends ng {
         var5 = vb.field_a[param3][param0];
         var6 = 1 + var5;
         var7 = var5 - 1;
-        var8 = gl.field_l[param3][param0][1][0];
-        var9 = gl.field_l[param3][param0][1][1];
+        var8 = SocketConnector.field_l[param3][param0][1][0];
+        var9 = SocketConnector.field_l[param3][param0][1][1];
         var10 = var9 - var8;
         if (var10 <= 0) {
           return;
@@ -71,7 +71,7 @@ final class tk extends ng {
         var14Lifetime1 = stackIn_15_0;
         if (null != kj.field_C &&
           null != kj.field_C[0]) {
-          var15 = kj.field_C[0].field_v;
+          var15 = kj.field_C[0].fullHeight;
           var16 = param1 + (64 - var15);
           var17 = var16;
           var18 = param1 + param4;
@@ -95,7 +95,7 @@ final class tk extends ng {
         return;
     }
 
-    final boolean a(ee param0, int param1) {
+    final boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -116,7 +116,7 @@ final class tk extends ng {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -142,9 +142,9 @@ final class tk extends ng {
           var7 = var8;
           var1 = var7;
           var2 = mh.a(122, ic.field_C, "font", "");
-          fc.field_p = id.a(var10, var2, 256);
+          ProxySocketConnector.field_p = id.a(var10, var2, 256);
           var3 = vh.a(var2, 2, 33, var10, 16301089, 8015912);
-          tf.field_x = (eg) ((Object) var3);
+          tf.field_x = (BitmapFont) ((Object) var3);
           if (param0 < 101) {
             tk.c((byte) 15);
           }
@@ -170,11 +170,11 @@ final class tk extends ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1_ref), "tk.UA(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "tk.UA(" + param0 + ')');
         }
     }
 
-    final void a(ee param0, int param1, byte param2, int param3) {
+    final void a(UiComponent param0, int param1, byte param2, int param3) {
         if (param2 > -97) {
           return;
         }
@@ -182,7 +182,7 @@ final class tk extends ng {
           this.field_S = this.field_S + 1;
           super.a(param0, param1, (byte) -112, param3);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "tk.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "tk.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class tk extends ng {
         return this.field_O.a((byte) -10);
     }
 
-    final static String a(String param0, lj param1, String param2, int param3) {
+    final static String a(String param0, ResourceArchive param1, String param2, int param3) {
         RuntimeException var4 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -210,7 +210,7 @@ final class tk extends ng {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 256) {
-            field_R = (eg) null;
+            field_R = (BitmapFont) null;
           }
           if (!param1.b(param3 - 8213)) {
             stackIn_5_0 = (String) (param0);
@@ -240,7 +240,7 @@ final class tk extends ng {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -251,9 +251,9 @@ final class tk extends ng {
         int var9;
         int var10;
         int var11;
-        ka var12;
-        ka var13;
-        ka var14;
+        Sprite var12;
+        Sprite var13;
+        Sprite var14;
         var11 = TorChallenge.field_F ? 1 : 0;
         super.a(param0, param1, param2, param3);
         if (param3 != 0) {
@@ -267,29 +267,29 @@ final class tk extends ng {
         var8 = this.field_O.b(-53);
         if (bl.field_S != var8 &&
           jh.field_c != var8) {
-          if (lk.field_c == var8) {
+          if (SpriteLoader.field_c == var8) {
             var14 = ub.field_f[2];
-            var14.b(var5 - (var14.field_u >> 1), var6 - (var14.field_x >> 1), 256);
+            var14.b(var5 - (var14.storedWidth >> 1), var6 - (var14.storedHeight >> 1), 256);
           } else if (var8 == tf.field_w) {
             var13 = ub.field_f[1];
-            var13.b(-(var13.field_u >> 1) + var5, var6 - (var13.field_x >> 1), 256);
+            var13.b(-(var13.storedWidth >> 1) + var5, var6 - (var13.storedHeight >> 1), 256);
           }
         } else {
           var12 = ub.field_f[0];
-          var9 = var12.field_q << 1;
-          var10 = var12.field_v << 1;
+          var9 = var12.fullWidth << 1;
+          var10 = var12.fullHeight << 1;
           if (lh.field_v != null &&
-            var9 <= lh.field_v.field_u &&
-            var10 <= lh.field_v.field_x) {
-            ad.a(-50, lh.field_v);
-            qg.b();
+            var9 <= lh.field_v.storedWidth &&
+            var10 <= lh.field_v.storedHeight) {
+            FullscreenFocusCanvas.a(-50, lh.field_v);
+            SoftwareRasterizer.b();
           } else {
-            lh.field_v = new ka(var9, var10);
-            ad.a(120, lh.field_v);
+            lh.field_v = new Sprite(var9, var10);
+            FullscreenFocusCanvas.a(120, lh.field_v);
           }
-          var12.b(112, 144, var12.field_q << 4, var12.field_v << 4, -this.field_S << 10, 4096);
+          var12.b(112, 144, var12.fullWidth << 4, var12.fullHeight << 4, -this.field_S << 10, 4096);
           ie.b((byte) -9);
-          lh.field_v.b(var5 - var12.field_q, var6 - var12.field_v, 256);
+          lh.field_v.b(var5 - var12.fullWidth, var6 - var12.fullHeight, 256);
         }
     }
 
@@ -297,7 +297,7 @@ final class tk extends ng {
         try {
           this.field_O = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

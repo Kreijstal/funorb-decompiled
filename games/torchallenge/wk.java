@@ -15,8 +15,8 @@ final class wk extends ic {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (da.field_c != null) {
-            da.field_c.o(77);
+          if (IntrusiveNode.field_c != null) {
+            IntrusiveNode.field_c.o(77);
           }
           kb.field_O = new fg(param2, param0, false, true, true);
           bg.field_K.c(0, kb.field_O);
@@ -42,7 +42,7 @@ final class wk extends ic {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -72,31 +72,31 @@ final class wk extends ic {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, byte param1, ee param2, int param3, int param4, int param5) {
+    final void a(int param0, byte param1, UiComponent param2, int param3, int param4, int param5) {
         uk var9 = null;
         try {
           int var8 = 16 / ((param1 + 29) / 39);
           super.a(param0, (byte) -124, param2, param3, param4, param5);
-          var9 = gl.field_b;
+          var9 = SocketConnector.field_b;
           if (var9 != null &&
             this.a(param5, param4, param0, -29991, param3)) {
             if (this.field_k instanceof f) {
               ((f) (this.field_k)).a(var9, this, false);
-              gl.field_b = null;
+              SocketConnector.field_b = null;
               return;
             }
             if (!(var9.field_k instanceof f)) {
               return;
             }
             ((f) (var9.field_k)).a(var9, this, false);
-            gl.field_b = null;
+            SocketConnector.field_b = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "wk.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "wk.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -110,23 +110,23 @@ final class wk extends ic {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        ka var7 = null;
+        Sprite var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         String[] var11 = null;
         int var12 = 0;
-        ka var13 = null;
-        ka var14 = null;
-        ka var15 = null;
-        ka var16 = null;
-        ka var7Lifetime1;
-        ka var7Lifetime2;
-        ka var7Lifetime3;
-        ka var7Lifetime4;
-        ka var7Lifetime5;
-        ka var15Lifetime1;
-        ka var15Lifetime2;
+        Sprite var13 = null;
+        Sprite var14 = null;
+        Sprite var15 = null;
+        Sprite var16 = null;
+        Sprite var7Lifetime1;
+        Sprite var7Lifetime2;
+        Sprite var7Lifetime3;
+        Sprite var7Lifetime4;
+        Sprite var7Lifetime5;
+        Sprite var15Lifetime1;
+        Sprite var15Lifetime2;
         int var1_intLifetime1;
         int var2Lifetime1;
         int var3Lifetime1;
@@ -182,9 +182,9 @@ final class wk extends ic {
           var1_int = dg.field_M[var3Lifetime1][0][0];
           if (var5 < 0) {
             cg.field_g.d();
-            qg.b();
+            SoftwareRasterizer.b();
             var13.d(0, 0);
-            la.field_f.a(117);
+            SectorCacheStore.field_f.bindAsTarget(117);
             var7Lifetime2 = cg.field_g;
           }
           var7Lifetime2.b(var1_int - var6, -var6 + var2, 256);
@@ -203,9 +203,9 @@ final class wk extends ic {
           var5Lifetime1 = dg.field_M[var4Lifetime1][1][2];
           if (var5Lifetime1 < 0) {
             cg.field_g.d();
-            qg.b();
+            SoftwareRasterizer.b();
             var15Lifetime2.d(0, 0);
-            la.field_f.a(126);
+            SectorCacheStore.field_f.bindAsTarget(126);
             var7Lifetime4 = cg.field_g;
           }
           var7Lifetime4.b(-var6 + var1_intLifetime1, -var6 + var2Lifetime1, 256);
@@ -224,16 +224,16 @@ final class wk extends ic {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "wk.R(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "wk.R(" + param0 + ')');
         }
     }
 
-    private wk(int param0, int param1, int param2, int param3, j param4, gg param5, ee param6) {
+    private wk(int param0, int param1, int param2, int param3, j param4, gg param5, UiComponent param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_A = param6;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "wk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "wk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

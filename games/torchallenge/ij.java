@@ -7,9 +7,9 @@ final class ij extends fk {
     static long[] field_A;
     static String field_x;
     static int field_B;
-    static rk[] field_y;
+    static BufferedCacheFile[] field_y;
 
-    final String a(ee param0, int param1) {
+    final String a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -20,7 +20,7 @@ final class ij extends fk {
           if (param1 != -6782) {
             ij.c((byte) -111);
           }
-          stackIn_3_0 = la.a((byte) 123, param0.field_v.length(), '*');
+          stackIn_3_0 = SectorCacheStore.a((byte) 123, param0.field_v.length(), '*');
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -32,15 +32,15 @@ final class ij extends fk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     ij(int param0) {
-        this(oe.field_g, param0);
+        this(RasterBuffer.field_g, param0);
     }
 
-    private ij(eg param0, int param1) {
+    private ij(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -48,7 +48,7 @@ final class ij extends fk {
         if (gi.field_d == null) {
           return;
         }
-        rk.a((byte) 116, gi.field_d);
+        BufferedCacheFile.a((byte) 116, gi.field_d);
         if (param0 < -77) {
           gi.field_d.a(sh.field_u, -69);
           gi.field_d = null;

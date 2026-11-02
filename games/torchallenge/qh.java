@@ -9,7 +9,7 @@ final class qh extends kj implements tl, sg {
     private ng field_K;
     static boolean[][][] field_O;
     static String field_L;
-    static lj field_M;
+    static ResourceArchive field_M;
 
     private final String a(int param0) {
         if (param0 <= 27) {
@@ -27,7 +27,7 @@ final class qh extends kj implements tl, sg {
         int var7;
         Object var8;
         int var9;
-        ka var10;
+        Sprite var10;
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
@@ -45,16 +45,16 @@ final class qh extends kj implements tl, sg {
         var9 = TorChallenge.field_F ? 1 : 0;
         if (null != uk.field_N) {
           uk.field_N.d();
-          qg.b();
+          SoftwareRasterizer.b();
         } else {
-          uk.field_N = new ka(640, 480);
+          uk.field_N = new Sprite(640, 480);
           uk.field_N.d();
         }
         if (3 != param0) {
           if (ii.field_h == null) {
             ue.b((byte) 102);
           }
-          ag.a(52);
+          SecondaryNodeDequeIterator.a(52);
         } else {
           param0 = 0;
         }
@@ -86,13 +86,13 @@ final class qh extends kj implements tl, sg {
         var2Lifetime2 = oj.field_e[0];
         var5Lifetime2 = oj.field_e[3];
         var3Lifetime2 = oj.field_e[1];
-        var10 = new ka(1 + var4Lifetime2 / 2, var5Lifetime2);
+        var10 = new Sprite(1 + var4Lifetime2 / 2, var5Lifetime2);
         sf.a(var10, ph.field_h, 0, var5Lifetime2, 0, var4Lifetime2 / 2 + 1, (byte) -55);
         uk.field_N.d();
         var10.g(var2Lifetime2, var3Lifetime2);
         var10.d(var2Lifetime2 + var4Lifetime2 / 2 - 2, var3Lifetime2);
-        var7 = di.field_t[vj.field_c].field_v;
-        var6 = di.field_t[vj.field_c].field_q;
+        var7 = di.field_t[vj.field_c].fullHeight;
+        var6 = di.field_t[vj.field_c].fullWidth;
         var8 = null;
         di.field_t[vj.field_c].g(var2Lifetime2 + (-var6 + var4Lifetime2 / 2) / 2 + 2, (var5Lifetime2 - var7) / 2 + var3Lifetime2);
         if (0 != param0 &&
@@ -109,9 +109,9 @@ final class qh extends kj implements tl, sg {
           var2Lifetime3 = rf.field_eb[vj.field_c][0];
           uk.field_N.d();
           ie.field_f[vj.field_c][0].g(var2Lifetime3, var3Lifetime3);
-          fd.field_h = new ka(ie.field_f[vj.field_c][1].field_q, ie.field_f[vj.field_c][1].field_v);
-          ac.field_a = new ka(ie.field_f[vj.field_c][1].field_q, ie.field_f[vj.field_c][1].field_v);
-          fd.field_h.d();
+          IterableNodeHashTable.field_h = new Sprite(ie.field_f[vj.field_c][1].fullWidth, ie.field_f[vj.field_c][1].fullHeight);
+          ac.field_a = new Sprite(ie.field_f[vj.field_c][1].fullWidth, ie.field_f[vj.field_c][1].fullHeight);
+          IterableNodeHashTable.field_h.d();
           ie.field_f[vj.field_c][1].a(0, 0, 0, 47211);
         }
         if (param0 == 0 ||
@@ -121,7 +121,7 @@ final class qh extends kj implements tl, sg {
           uk.field_N.d();
           wf.field_b.g(var2Lifetime4, var3Lifetime4);
         }
-        la.field_f.a(-53);
+        SectorCacheStore.field_f.bindAsTarget(-53);
     }
 
     public final void a(df param0, int param1, int param2, boolean param3) {
@@ -160,7 +160,7 @@ final class qh extends kj implements tl, sg {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -177,18 +177,18 @@ final class qh extends kj implements tl, sg {
             qh.a((CharSequence) null, (byte) -29);
           }
           for (var1_int = 0; var1_int < 2; var1_int++) {
-            if (tg.field_r != null &&
-              var1_int < tg.field_r.length &&
-              tg.field_r[var1_int] != null) {
-              je.a((byte) 15, tg.field_r[var1_int]);
+            if (SpriteState.field_r != null &&
+              var1_int < SpriteState.field_r.length &&
+              SpriteState.field_r[var1_int] != null) {
+              je.a((byte) 15, SpriteState.field_r[var1_int]);
             }
-            if (tg.field_r != null &&
-              tg.field_r.length > var1_int) {
-              tg.field_r[var1_int] = null;
+            if (SpriteState.field_r != null &&
+              SpriteState.field_r.length > var1_int) {
+              SpriteState.field_r[var1_int] = null;
             }
-            if (da.field_g != null &&
-              var1_int < da.field_g.length) {
-              da.field_g[var1_int] = null;
+            if (IntrusiveNode.field_g != null &&
+              var1_int < IntrusiveNode.field_g.length) {
+              IntrusiveNode.field_g[var1_int] = null;
             }
             if (wh.field_d != null &&
               wh.field_d.length > var1_int) {
@@ -207,7 +207,7 @@ final class qh extends kj implements tl, sg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "qh.F(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "qh.F(" + param0 + ')');
         }
     }
 
@@ -236,7 +236,7 @@ final class qh extends kj implements tl, sg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -249,7 +249,7 @@ final class qh extends kj implements tl, sg {
         field_M = null;
     }
 
-    final boolean a(int param0, char param1, byte param2, ee param3) {
+    final boolean a(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_12_0 = false;
@@ -283,7 +283,7 @@ final class qh extends kj implements tl, sg {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -356,7 +356,7 @@ final class qh extends kj implements tl, sg {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -385,7 +385,7 @@ final class qh extends kj implements tl, sg {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -410,7 +410,7 @@ final class qh extends kj implements tl, sg {
           this.field_K.field_q = (j) ((Object) new cl());
           var7 = ni.a(new String[]{this.c(false), this.a(109)}, 0, lc.field_m);
           var3 = 20;
-          var4 = new bc(oe.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, oe.field_g.field_x, -1, 2147483647, true);
+          var4 = new bc(RasterBuffer.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
           this.field_N = new df(var7, var4);
           this.field_N.field_r = "";
           this.field_N.a(0, false, gh.field_z);
@@ -427,7 +427,7 @@ final class qh extends kj implements tl, sg {
           this.a(0, this.field_K);
           this.a((byte) 106, 0, var5 + 55 + var3, 300, 0);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

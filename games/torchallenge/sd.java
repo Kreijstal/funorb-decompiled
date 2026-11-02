@@ -73,7 +73,7 @@ final class sd {
           param1.removeFocusListener(hl.field_d);
           df.field_Q = -1;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -74,15 +74,15 @@ final class qk extends kg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var8), "qk.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw oj.wrapException((Throwable) ((Object) var8), "qk.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    final static ka a(String param0, String param1, lj param2, int param3) {
+    final static Sprite a(String param0, String param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ka stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -121,13 +121,13 @@ final class qk extends kg {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void d(byte param0) {
-        if (null != da.field_c) {
-          da.field_c.o(77);
+        if (null != IntrusiveNode.field_c) {
+          IntrusiveNode.field_c.o(77);
         }
         m.field_j = new ib();
         if (param0 < -43) {

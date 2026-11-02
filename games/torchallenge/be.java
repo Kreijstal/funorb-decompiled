@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class be {
-    static ka[] field_f;
+    static Sprite[] field_f;
     static String field_a;
     static boolean[] field_c;
     static boolean field_b;
@@ -26,13 +26,13 @@ final class be {
     }
 
     final static void a(int param0, byte param1, boolean param2) {
-        bb.field_h = param0;
+        bb.activeScreenId = param0;
         if (param1 >= -101) {
           be.a(19, (byte) -122, true);
         }
         hk.field_e = 0;
-        if (!(bb.field_h < 0)) {
-          ug.field_i[bb.field_h].a(3, param2);
+        if (!(bb.activeScreenId < 0)) {
+          GameApplet.screens[bb.activeScreenId].a(3, param2);
         }
     }
 
@@ -67,33 +67,33 @@ final class be {
           var14 = var13 / var12;
           var15 = 1;
           ie.field_f[param2][1].d(param4, param3, 160);
-          qg.a(sh.field_w);
-          var18 = ie.field_f[param2][1].field_q;
+          SoftwareRasterizer.a(sh.field_w);
+          var18 = ie.field_f[param2][1].fullWidth;
           if (param5 != 25) {
             field_e = (TorChallenge) null;
           }
-          var19 = ie.field_f[param2][1].field_v;
+          var19 = ie.field_f[param2][1].fullHeight;
           if (!param0) {
-            if (lj.field_b > 0) {
+            if (ResourceArchive.field_b > 0) {
               var17 = var18 / 4;
-              var17 = var17 * (25 + lj.field_b / 25 * 25 - lj.field_b) / 25;
-              var18 = (param1 - lj.field_b / 25 - 1) * var18 / 4 + var17;
-              qg.f(param4, param3, param4 + var18, param3 + var19);
-              fd.field_h.d(param4, param3, var8_int);
-              qg.b(sh.field_w);
+              var17 = var17 * (25 + ResourceArchive.field_b / 25 * 25 - ResourceArchive.field_b) / 25;
+              var18 = (param1 - ResourceArchive.field_b / 25 - 1) * var18 / 4 + var17;
+              SoftwareRasterizer.f(param4, param3, param4 + var18, param3 + var19);
+              IterableNodeHashTable.field_h.d(param4, param3, var8_int);
+              SoftwareRasterizer.b(sh.field_w);
             } else {
               if (0 < fh.field_d) {
                 var17 = var18 / 4;
                 var17 = fh.field_d * var17 / 200;
                 var18 = var17 + param1 * var18 / 4;
-                qg.f(param4, param3, var18 + param4, var19 + param3);
-                fd.field_h.d(param4, param3, var8_int);
-                qg.b(sh.field_w);
+                SoftwareRasterizer.f(param4, param3, var18 + param4, var19 + param3);
+                IterableNodeHashTable.field_h.d(param4, param3, var8_int);
+                SoftwareRasterizer.b(sh.field_w);
               } else {
                 var18 = var18 * param1 / 4;
-                qg.f(param4, param3, param4 + var18, param3 + var19);
-                fd.field_h.d(param4, param3, var8_int);
-                qg.b(sh.field_w);
+                SoftwareRasterizer.f(param4, param3, param4 + var18, param3 + var19);
+                IterableNodeHashTable.field_h.d(param4, param3, var8_int);
+                SoftwareRasterizer.b(sh.field_w);
               }
             }
           } else {
@@ -119,12 +119,12 @@ final class be {
                 }
               }
             }
-            qg.b();
-            qg.f(0, 0, var18, var19);
-            fd.field_h.g(0, 0);
-            qg.d(2, 2, 0, 0, var18, var19);
-            qg.b(sh.field_w);
-            la.field_f.a(-123);
+            SoftwareRasterizer.b();
+            SoftwareRasterizer.f(0, 0, var18, var19);
+            IterableNodeHashTable.field_h.g(0, 0);
+            SoftwareRasterizer.d(2, 2, 0, 0, var18, var19);
+            SoftwareRasterizer.b(sh.field_w);
+            SectorCacheStore.field_f.bindAsTarget(-123);
             if (param1 == 4) {
               var19 += 2;
               param3--;
@@ -135,16 +135,16 @@ final class be {
             if (125 > var20Lifetime1) {
               var18 = 2 * (var18 * var20Lifetime1) / 250;
             }
-            qg.f(param4, param3, var18 + param4, var19 + param3);
+            SoftwareRasterizer.f(param4, param3, var18 + param4, var19 + param3);
             ac.field_a.d(param4, param3, var8_int);
-            qg.b(sh.field_w);
+            SoftwareRasterizer.b(sh.field_w);
           }
           stackIn_28_0 = param6;
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var8), "be.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw oj.wrapException((Throwable) ((Object) var8), "be.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class be {
           0 <= var1.indexOf('@')) {
           var1 = "";
         }
-        return new qa(si.h(16), fc.d(125));
+        return new qa(si.h(16), ProxySocketConnector.d(125));
     }
 
     final static ql a(int param0, int param1) {
@@ -175,7 +175,7 @@ final class be {
         if (param1 != 31315) {
           field_e = (TorChallenge) null;
         }
-        ji.field_q.a(var2, -77);
+        ji.field_q.addLast(var2, -77);
         af.b(9245, param0);
         return var2;
     }

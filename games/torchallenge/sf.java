@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sf {
-    private lj field_g;
+    private ResourceArchive field_g;
     private je field_e;
     static int[] field_b;
-    private lj field_f;
+    private ResourceArchive field_f;
     static int field_c;
-    static lj field_a;
-    static ka[][][] field_d;
+    static ResourceArchive field_a;
+    static Sprite[][][] field_d;
 
     final lh a(int param0, byte param1) {
         lh var3 = null;
@@ -32,7 +32,7 @@ final class sf {
           }
           var3Lifetime1 = new lh();
           if (var4 != null) {
-            var3Lifetime1.a(new uf(var4), (byte) -113);
+            var3Lifetime1.a(new PacketBuffer(var4), (byte) -113);
           }
           if (param0 >= 32768) {
             var3Lifetime1.d(0);
@@ -47,11 +47,11 @@ final class sf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3_ref), "sf.A(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3_ref), "sf.A(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static void a(ka param0, ka[] param1, int param2, int param3, int param4, int param5, byte param6) {
+    final static void a(Sprite param0, Sprite[] param1, int param2, int param3, int param4, int param5, byte param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -68,8 +68,8 @@ final class sf {
         try {
           var7_int = param4 + (param5 - 1);
           var8 = -1 + (param3 + param2);
-          var9 = param1[0].field_q;
-          var10 = param1[0].field_v;
+          var9 = param1[0].fullWidth;
+          var10 = param1[0].fullHeight;
           param0.d();
           param1[0].g(param4, param2);
           param1[2].g(-var9 + var7_int, param2);
@@ -79,11 +79,11 @@ final class sf {
           param1[7].d(param4 + var9, var8 - var10, param5 - var9 * 2, var10);
           param1[3].d(param4, param2 + var10, var9, param3 - var10 * 2);
           if (param6 != -55) {
-            field_a = (lj) null;
+            field_a = (ResourceArchive) null;
           }
           param1[5].d(var7_int - var9, param2 + var10, var9, param3 - var10 * 2);
           param1[4].d(param4 + var9, param2 + var10, -(var9 * 2) + param5, -(2 * var10) + param3);
-          la.field_f.a(-47);
+          SectorCacheStore.field_f.bindAsTarget(-47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,7 +104,7 @@ final class sf {
             stackIn_12_0 = stackIn_7_0;
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -128,12 +128,12 @@ final class sf {
           }
           boolean decompiledFrameRemainder0 = true;
           if (bc.field_o != 1 && (bc.field_o != 3 ||
-            !ad.field_j)) {
+            !FullscreenFocusCanvas.field_j)) {
             if (bc.field_o == -1 &&
               var4 == 0 &&
               ea.field_e >= 0 &&
-              wb.field_p != null &&
-              gl.field_k > 0) {
+              BufferedSocket.field_p != null &&
+              SocketConnector.field_k > 0) {
               if (0 == ea.field_e) {
                 var1_int = 0;
               } else {
@@ -216,19 +216,19 @@ final class sf {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var1_int = ag.field_d;
+            var1_int = SecondaryNodeDequeIterator.field_d;
           }
-          if (~ag.field_d != ~var1_int) {
+          if (~SecondaryNodeDequeIterator.field_d != ~var1_int) {
             bd.d(1);
             if (var1_int != -1) {
               pg.field_q = 10;
             }
-            ag.field_d = var1_int;
+            SecondaryNodeDequeIterator.field_d = var1_int;
           } else {
             if (pg.field_q == 0) {
               pg.field_q = -1;
-              if (ag.field_d != -1) {
-                var5 = dd.field_n[var1_int] ? 1 : 0;
+              if (SecondaryNodeDequeIterator.field_d != -1) {
+                var5 = ImageProducerRasterBuffer.field_n[var1_int] ? 1 : 0;
                 lg.a(var5 != 0, (byte) -79, al.field_x[var1_int]);
                 return;
               }
@@ -238,7 +238,7 @@ final class sf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "sf.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "sf.B(" + param0 + ')');
         }
     }
 
@@ -247,11 +247,11 @@ final class sf {
           if (param0) {
             field_c = 84;
           }
-          field_d = (ka[][][]) null;
+          field_d = (Sprite[][][]) null;
           field_b = null;
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "sf.D(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "sf.D(" + param0 + ')');
         }
     }
 
@@ -263,13 +263,13 @@ final class sf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "sf.<init>()");
+          throw oj.wrapException((Throwable) ((Object) var1), "sf.<init>()");
         }
     }
 
     static {
         field_c = 0;
         field_b = new int[12];
-        field_d = new ka[4][2][2];
+        field_d = new Sprite[4][2][2];
     }
 }

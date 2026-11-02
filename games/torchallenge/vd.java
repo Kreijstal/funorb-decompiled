@@ -3,7 +3,7 @@
  */
 final class vd {
     static int[] field_e;
-    static ka[] field_d;
+    static Sprite[] field_d;
     static boolean[] field_c;
     static boolean field_b;
     static int field_f;
@@ -37,7 +37,7 @@ final class vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class vd {
 
     static {
         field_e = new int[4];
-        field_d = new ka[3];
+        field_d = new Sprite[3];
         field_b = false;
         field_a = 0L;
     }

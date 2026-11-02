@@ -3,7 +3,7 @@
  */
 final class ri extends na {
     static int field_i;
-    static ka field_j;
+    static Sprite field_j;
     static String field_k;
 
     public static void g(int param0) {
@@ -30,7 +30,7 @@ final class ri extends na {
         RuntimeException var2_ref = null;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (gl.field_e == null) {
+          if (SocketConnector.field_e == null) {
             return null;
           }
           if (param1 == null) {
@@ -48,7 +48,7 @@ final class ri extends na {
           if (var2 == null) {
             return null;
           }
-          var3 = (qk) (gl.field_e.a(true, (long)var2.hashCode()));
+          var3 = (qk) (SocketConnector.field_e.a(true, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               return null;
@@ -56,7 +56,7 @@ final class ri extends na {
             var7 = (CharSequence) ((Object) var3.field_F);
             var4 = il.a(var7, (byte) 21);
             if (!var4.equals(var2)) {
-              var3 = (qk) (gl.field_e.a((byte) 125));
+              var3 = (qk) (SocketConnector.field_e.a((byte) 125));
               continue;
             }
             break;
@@ -73,7 +73,7 @@ final class ri extends na {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ final class ri extends na {
           ol.a(-118, var1, var2);
           return;
         }
-        field_j = (ka) null;
+        field_j = (Sprite) null;
         var2Lifetime1 = ab.field_g[10];
         ol.a(-118, var1, var2Lifetime1);
     }
@@ -110,7 +110,7 @@ final class ri extends na {
           fk.a(true, 12);
           int var2_int = -108 / ((param1 + 3) / 57);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ri.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ri.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -7,15 +7,15 @@ final class ef {
     boolean field_m;
     static int[] field_d;
     String field_g;
-    static og field_l;
-    static ka[] field_a;
+    static MouseWheelInput field_l;
+    static Sprite[] field_a;
     static int[][] field_i;
     static int field_e;
     static int[] field_j;
     String[] field_b;
     int field_n;
     static int field_k;
-    static ka[][] field_h;
+    static Sprite[][] field_h;
 
     final static void a(int param0, h param1, byte param2, int param3) {
         try {
@@ -24,13 +24,13 @@ final class ef {
           gb.field_f = param1;
           int var4_int = 124 % ((-49 - param2) / 36);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ef.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ef.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static void a(int param0, qe param1) {
+    final static void a(int param0, LevelEntity param1) {
         int var2_int = 0;
-        qe[] var3 = null;
+        LevelEntity[] var3 = null;
         int var4 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -41,7 +41,7 @@ final class ef {
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
           if (ea.field_g == null) {
-            ea.field_g = new qe[10];
+            ea.field_g = new LevelEntity[10];
           }
           var2_int = param0;
           while (ea.field_g.length > var2_int) {
@@ -54,7 +54,7 @@ final class ef {
             return;
           }
           var3 = ea.field_g;
-          ea.field_g = new qe[var3.length + 10];
+          ea.field_g = new LevelEntity[var3.length + 10];
           for (var2_intLifetime1 = 0; var2_intLifetime1 < var3.length; var2_intLifetime1++) {
             ea.field_g[var2_intLifetime1] = var3[var2_intLifetime1];
           }
@@ -72,7 +72,7 @@ final class ef {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -108,18 +108,18 @@ final class ef {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void b(int param0) {
-        field_h = (ka[][]) null;
+        field_h = (Sprite[][]) null;
         field_i = (int[][]) null;
         field_f = null;
         field_j = null;
         if (param0 >= -82) {
-          qe var2 = (qe) null;
-          ef.a(-3, (qe) null);
+          LevelEntity var2 = (LevelEntity) null;
+          ef.a(-3, (LevelEntity) null);
         }
         field_l = null;
         field_a = null;
@@ -157,7 +157,7 @@ final class ef {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1_ref), "ef.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "ef.B(" + param0 + ')');
         }
     }
 
@@ -218,9 +218,9 @@ final class ef {
             var8 = sf.field_b[9] >> 2;
             var9 = sf.field_b[10] >> 2;
             var10_int = sf.field_b[11] >> 2;
-            var11 = uf.field_n[3] * var8 + var9 * uf.field_n[4] + uf.field_n[5] * var10_int >> 14;
-            var12 = uf.field_n[7] * var9 + (var8 * uf.field_n[6] + var10_int * uf.field_n[8]) >> 14;
-            var13 = uf.field_n[9] * var8 + var9 * uf.field_n[10] + var10_int * uf.field_n[11] >> 14;
+            var11 = PacketBuffer.field_n[3] * var8 + var9 * PacketBuffer.field_n[4] + PacketBuffer.field_n[5] * var10_int >> 14;
+            var12 = PacketBuffer.field_n[7] * var9 + (var8 * PacketBuffer.field_n[6] + var10_int * PacketBuffer.field_n[8]) >> 14;
+            var13 = PacketBuffer.field_n[9] * var8 + var9 * PacketBuffer.field_n[10] + var10_int * PacketBuffer.field_n[11] >> 14;
             var2[var3] = var6 * var12 + (var11 * var5 + var7 * var13) >> 16;
           }
           var3Lifetime1 = sf.field_b[9] >> 8;
@@ -233,11 +233,11 @@ final class ef {
           var7Lifetime1 = 0;
           var8Lifetime1 = ai.a(true, var6Lifetime1) >> 8;
           var9Lifetime1 = lc.b(param0 ^ -73, var6Lifetime1) >> 8;
-          if (-1 != kc.field_u &&
+          if (-1 != LocalizedStrings.field_u &&
             ph.field_d != -1) {
             var8Lifetime1 = -ph.field_d + 240;
             var9Lifetime1 = -128;
-            var7Lifetime1 = kc.field_u - 320;
+            var7Lifetime1 = LocalizedStrings.field_u - 320;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1)));
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);
@@ -261,16 +261,16 @@ final class ef {
             var17Lifetime1 = qc.field_a[var16];
             ue.a(var16, false);
             for (var18 = 0; var18 < 3; var18++) {
-              uf.field_n[var18] = uf.field_n[var18] + ok.field_d[var15][var18];
+              PacketBuffer.field_n[var18] = PacketBuffer.field_n[var18] + ok.field_d[var15][var18];
             }
-            rj.a((byte) -77, false, uf.field_n, var17Lifetime1, true, false, sf.field_b);
+            rj.a((byte) -77, false, PacketBuffer.field_n, var17Lifetime1, true, false, sf.field_b);
             ul.a(var7Lifetime1, var8Lifetime1, var13Lifetime1, var14, var12Lifetime1, var17Lifetime1, var9Lifetime1, -16711780);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "ef.F(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "ef.F(" + param0 + ')');
         }
     }
 
@@ -328,7 +328,7 @@ final class ef {
               var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
               param1.getAppletContext().showDocument(mc.a(var2, -1, param1), "_top");
               if (param0 != -93) {
-                field_l = (og) null;
+                field_l = (MouseWheelInput) null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -346,7 +346,7 @@ final class ef {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -356,12 +356,12 @@ final class ef {
     }
 
     static {
-        field_a = new ka[2];
+        field_a = new Sprite[2];
         field_j = new int[]{290, 40};
         field_i = new int[][]{new int[]{-1, -1, -1}, new int[]{-1, -1, -1}, new int[]{-1, -1, -1}, new int[]{0, 0, 0}, new int[]{-1, 1, -1}, new int[]{-1, 2, -1}, new int[]{-1, -1, -1}, new int[]{-1, -1, -1}, new int[]{-1, 5, 6}, new int[]{-1, -1, 4}, new int[]{3, -1, -1}};
         field_f = "Log in / Create account";
         field_e = 250;
-        field_h = new ka[5][];
+        field_h = new Sprite[5][];
         field_k = 0;
         field_d = new int[8192];
     }

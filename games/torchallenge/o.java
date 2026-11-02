@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class o extends da {
+final class o extends IntrusiveNode {
     int field_o;
     static int field_l;
     static int field_i;
     static String field_n;
     static int[] field_j;
-    static jk field_k;
+    static PcmStreamMixer field_k;
     int field_p;
     static boolean field_m;
 
@@ -459,10 +459,10 @@ final class o extends da {
               param3 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (null == uf.field_i) {
-                uf.field_i = bg.field_P.createImage(304, 34);
+              if (null == PacketBuffer.field_i) {
+                PacketBuffer.field_i = bg.field_P.createImage(304, 34);
               }
-              var10 = uf.field_i.getGraphics();
+              var10 = PacketBuffer.field_i.getGraphics();
               var10.setColor(param3);
               var10.drawRect(0, 0, param1, 33);
               var10.fillRect(2, 2, 3 * param0, 30);
@@ -472,7 +472,7 @@ final class o extends da {
               var10.setFont(hh.field_a);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (304 - param4.length() * 6) / 2, 22);
-              var9.drawImage(uf.field_i, sd.field_c / 2 - 152, fl.field_v / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(PacketBuffer.field_i, sd.field_c / 2 - 152, fl.field_v / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
@@ -515,7 +515,7 @@ final class o extends da {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -536,7 +536,7 @@ final class o extends da {
     }
 
     final static void a(int param0, boolean param1) {
-        md.field_a = false;
+        NodeHashTableIterator.field_a = false;
         rj.field_g = param0;
         if (rj.field_g == 0) {
           gh.field_x = false;
@@ -545,9 +545,9 @@ final class o extends da {
           o.b(false);
         }
         rf.field_ib = 0;
-        nd.field_e = s.field_k[1 + rj.field_g];
+        RandomAccessCacheFile.field_e = s.field_k[1 + rj.field_g];
         bc.field_o = 13;
-        bb.field_h = 13;
+        bb.activeScreenId = 13;
         ch.b(!param1);
     }
 

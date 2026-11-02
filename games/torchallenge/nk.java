@@ -9,7 +9,7 @@ final class nk {
     static byte[][] field_b;
     static String[] field_g;
     static java.awt.Frame field_d;
-    static ka[] field_a;
+    static Sprite[] field_a;
     private static String field_z;
 
     public static void a(int param0) {

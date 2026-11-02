@@ -12,7 +12,7 @@ final class ch {
           ch.b(true);
         }
         hh.field_a = null;
-        uf.field_i = null;
+        PacketBuffer.field_i = null;
     }
 
     final static void b(boolean param0) {
@@ -53,20 +53,20 @@ final class ch {
             am.field_b = (int[][][]) null;
           }
           na.field_f = false;
-          lj.field_n = null;
+          ResourceArchive.field_n = null;
           kd.field_m = null;
           stackIn_29_0 = param0;
           vb.field_q = stackIn_29_0;
-          if (null != lj.field_g) {
-            for (var1_intLifetime2 = 0; var1_intLifetime2 < lj.field_g.length; var1_intLifetime2++) {
-              if (lj.field_g[var1_intLifetime2] != null) {
-                for (var2Lifetime2 = 0; var2Lifetime2 < lj.field_g[var1_intLifetime2].length; var2Lifetime2++) {
-                  lj.field_g[var1_intLifetime2][var2Lifetime2] = null;
+          if (null != ResourceArchive.field_g) {
+            for (var1_intLifetime2 = 0; var1_intLifetime2 < ResourceArchive.field_g.length; var1_intLifetime2++) {
+              if (ResourceArchive.field_g[var1_intLifetime2] != null) {
+                for (var2Lifetime2 = 0; var2Lifetime2 < ResourceArchive.field_g[var1_intLifetime2].length; var2Lifetime2++) {
+                  ResourceArchive.field_g[var1_intLifetime2][var2Lifetime2] = null;
                 }
-                lj.field_g[var1_intLifetime2] = (int[][]) null;
+                ResourceArchive.field_g[var1_intLifetime2] = (int[][]) null;
               }
             }
-            lj.field_g = (int[][][]) null;
+            ResourceArchive.field_g = (int[][][]) null;
           }
           if (null != ba.field_j) {
             for (var1_intLifetime3 = 0; var1_intLifetime3 < ba.field_j.length; var1_intLifetime3++) {
@@ -86,11 +86,11 @@ final class ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "ch.D(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "ch.D(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, ka[] param6) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, Sprite[] param6) {
         int var22 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -130,19 +130,19 @@ final class ch {
             0 < param3 &&
             param0 != 0) {
             if (param6[3] != null) {
-              stackIn_12_0 = param6[3].field_q;
+              stackIn_12_0 = param6[3].fullWidth;
             } else {
               stackIn_12_0 = 0;
             }
             var7_int = stackIn_12_0;
             if (param6[5] != null) {
-              stackIn_15_0 = param6[5].field_q;
+              stackIn_15_0 = param6[5].fullWidth;
             } else {
               stackIn_15_0 = 0;
             }
             var8 = stackIn_15_0;
             if (param6[1] != null) {
-              stackIn_18_0 = param6[1].field_v;
+              stackIn_18_0 = param6[1].fullHeight;
             } else {
               stackIn_18_0 = 0;
             }
@@ -150,7 +150,7 @@ final class ch {
             if (null == param6[7]) {
               stackIn_21_0 = 0;
             } else {
-              stackIn_21_0 = param6[7].field_v;
+              stackIn_21_0 = param6[7].fullHeight;
             }
             var10 = stackIn_21_0;
             if (!param4) {
@@ -174,71 +174,71 @@ final class ch {
               var20 = param3 * var9 / (var9 + var10) + param2;
               var19 = param3 * var9 / (var9 + var10) + param2;
             }
-            qg.a(hb.field_a);
+            SoftwareRasterizer.a(hb.field_a);
             if (param6[0] != null) {
-              qg.a(param1, param2, var17, var19);
+              SoftwareRasterizer.a(param1, param2, var17, var19);
               param6[0].d(param1, param2, param0);
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (null != param6[2]) {
-              qg.a(var18, param2, var11, var19);
+              SoftwareRasterizer.a(var18, param2, var11, var19);
               param6[2].d(var14, param2, param0);
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (param6[6] != null) {
-              qg.a(param1, var20, var17, var12);
+              SoftwareRasterizer.a(param1, var20, var17, var12);
               param6[6].d(param1, var16, param0);
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (param6[8] != null) {
-              qg.a(var18, var20, var11, var12);
+              SoftwareRasterizer.a(var18, var20, var11, var12);
               param6[8].d(var14, var16, param0);
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (param6[1] != null &&
-              0 != param6[1].field_q) {
-              qg.a(var17, param2, var18, var19);
-              for (var21 = var13; var21 < var14; var21 = var21 + param6[1].field_q) {
+              0 != param6[1].fullWidth) {
+              SoftwareRasterizer.a(var17, param2, var18, var19);
+              for (var21 = var13; var21 < var14; var21 = var21 + param6[1].fullWidth) {
                 param6[1].d(var21, param2, param0);
               }
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (null != param6[7] &&
-              param6[7].field_q != 0) {
-              qg.a(var17, var20, var18, var12);
-              for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param6[7].field_q) {
+              param6[7].fullWidth != 0) {
+              SoftwareRasterizer.a(var17, var20, var18, var12);
+              for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param6[7].fullWidth) {
                 param6[7].d(var21Lifetime1, var16, param0);
               }
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (param6[3] != null &&
-              0 != param6[3].field_v) {
-              qg.a(param1, var19, var17, var20);
-              for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param6[3].field_v) {
+              0 != param6[3].fullHeight) {
+              SoftwareRasterizer.a(param1, var19, var17, var20);
+              for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param6[3].fullHeight) {
                 param6[3].d(param1, var21Lifetime2, param0);
               }
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (null != param6[5] &&
-              0 != param6[5].field_v) {
-              qg.a(var18, var19, var11, var20);
-              for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param6[5].field_v) {
+              0 != param6[5].fullHeight) {
+              SoftwareRasterizer.a(var18, var19, var11, var20);
+              for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param6[5].fullHeight) {
                 param6[5].d(var14, var21Lifetime3, param0);
               }
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (param6[4] != null &&
-              param6[4].field_q != 0) {
-              if (param6[4].field_v == 0) {
+              param6[4].fullWidth != 0) {
+              if (param6[4].fullHeight == 0) {
                 return;
               }
-              qg.a(var17, var19, var18, var20);
-              for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param6[4].field_v) {
-                for (var22 = var13; var14 > var22; var22 = var22 + param6[4].field_q) {
+              SoftwareRasterizer.a(var17, var19, var18, var20);
+              for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param6[4].fullHeight) {
+                for (var22 = var13; var14 > var22; var22 = var22 + param6[4].fullWidth) {
                   param6[4].d(var22, var21Lifetime4, param0);
                 }
               }
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             return;
           }
@@ -253,7 +253,7 @@ final class ch {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
@@ -271,7 +271,7 @@ final class ch {
         try {
           qh.a(param2, param1, (byte) 75, param0, -1 + param0.length);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ch.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ch.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

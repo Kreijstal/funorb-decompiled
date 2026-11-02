@@ -11178,6 +11178,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "torchallenge": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/torchallenge"
+      },
+      "inputTreeSha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65",
+      "sources": {
+        "files": 300,
+        "sha256": "3731c6faac9f4c664d6975917f19a61f56c6e2d4c07eb0d552c796282e72d4b9"
+      },
+      "dictionary": {
+        "path": "decompilation/torchallenge-naming.json",
+        "sha256": "9cae16049b50f5f2ba007bebec724d0299fe90d3f5b8740e33e86ae8cfa1151c"
+      },
+      "readingGuide": {
+        "path": "games/torchallenge/README.md",
+        "sha256": "2a70e5f690e05f5a337667fbe87342ebf2707a3f643954a26c5f6b6d75b5ea57"
+      },
+      "rulesSha256": "723abb752aa756298d1c169daaae856b39822d79f6c0af4fd5677f33d068cd90",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -13111,6 +13135,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 300,
+          "sha256": "3731c6faac9f4c664d6975917f19a61f56c6e2d4c07eb0d552c796282e72d4b9"
         }
       },
       "torquing": {

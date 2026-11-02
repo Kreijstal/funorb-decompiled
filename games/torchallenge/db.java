@@ -6,9 +6,9 @@ final class db extends sh {
     static int[][] field_x;
     static int field_y;
     int field_C;
-    static sl field_D;
+    static IntrusiveDeque field_D;
     static int field_B;
-    uf field_A;
+    PacketBuffer field_A;
     static int field_z;
     static int[] field_E;
 
@@ -19,7 +19,7 @@ final class db extends sh {
         if (this.field_A == null) {
           return 0;
         }
-        return this.field_A.field_q * 100 / (-this.field_F + this.field_A.field_m.length);
+        return this.field_A.position * 100 / (-this.field_F + this.field_A.payload.length);
     }
 
     final static void j(int param0) {
@@ -31,9 +31,9 @@ final class db extends sh {
         RuntimeException var1 = null;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
-          var1_int = vf.field_b[0];
-          for (var2 = 1; vf.field_b.length > var2; var2++) {
-            var3 = vf.field_b[var2];
+          var1_int = MouseInputHandler.field_b[0];
+          for (var2 = 1; MouseInputHandler.field_b.length > var2; var2++) {
+            var3 = MouseInputHandler.field_b[var2];
             he.a(k.field_e, var2 << 4, k.field_e, var1_int, var3);
             var1_int = var1_int + var3;
           }
@@ -44,7 +44,7 @@ final class db extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "db.A(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "db.A(" + param0 + ')');
         }
     }
 
@@ -67,14 +67,14 @@ final class db extends sh {
         try {
           boolean decompiledFrameRemainder0 = true;
           var10 = id.field_b;
-          var2 = var10.j(-99);
+          var2 = var10.readUnsignedByte(-99);
           if (var2 == 0) {
-            var9 = (eb) (ga.field_w.c((byte) -71));
+            var9 = (eb) (ga.field_w.first((byte) -71));
             if (var9 == null) {
               ob.b(-128);
               return;
             }
-            var4 = var10.j(-119);
+            var4 = var10.readUnsignedByte(-119);
             if (0 == var4) {
               var5 = null;
             } else {
@@ -82,29 +82,29 @@ final class db extends sh {
               var11 = var12;
               var8 = var11;
               var5 = var8;
-              var10.a(111, var12, var4, 0);
+              var10.readBytes(111, var12, var4, 0);
             }
-            var10.field_q = var10.field_q + 4;
+            var10.position = var10.position + 4;
             if (!var10.e(0)) {
               ob.b(-90);
               return;
             }
             var9.field_j = true;
             var9.field_q = (byte[]) (var5);
-            var9.a(true);
+            var9.unlink(true);
           } else {
             if (var2 == 1) {
-              var3 = var10.i(30);
-              var4_ref_eh = (eh) (nh.field_cb.c((byte) 105));
+              var3 = var10.readInt(30);
+              var4_ref_eh = (eh) (nh.field_cb.first((byte) 105));
               while (var4_ref_eh != null) {
                 if (~var4_ref_eh.field_j != ~var3) {
-                  var4_ref_eh = (eh) (nh.field_cb.c(-270));
+                  var4_ref_eh = (eh) (nh.field_cb.next(-270));
                   continue;
                 }
                 break;
               }
               if (var4_ref_eh != null) {
-                var4_ref_eh.a(true);
+                var4_ref_eh.unlink(true);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -122,7 +122,7 @@ final class db extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "db.F(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "db.F(" + param0 + ')');
         }
     }
 
@@ -141,10 +141,10 @@ final class db extends sh {
         int var2 = 0;
         int var3 = 0;
         int var6 = 0;
-        qe var7 = null;
-        qe var8 = null;
-        qe var9 = null;
-        qe var10 = null;
+        LevelEntity var7 = null;
+        LevelEntity var8 = null;
+        LevelEntity var9 = null;
+        LevelEntity var10 = null;
         int var1_intLifetime1;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
@@ -154,7 +154,7 @@ final class db extends sh {
             eb.field_n) {
             var7 = vk.field_i;
             var9 = var7;
-            var1_int = qk.a(-1, var9.field_o, var9.field_H, -1, 123, wb.field_p.field_H, -1, wb.field_p.field_o);
+            var1_int = qk.a(-1, var9.x, var9.y, -1, 123, BufferedSocket.field_p.y, -1, BufferedSocket.field_p.x);
             var1_int = sh.field_r * var1_int / 256;
             fh.field_h[1] = var1_int;
             fj.field_p[1] = var7.field_y;
@@ -165,7 +165,7 @@ final class db extends sh {
               ie.field_e[var5].field_nb) {
               var8 = ie.field_e[var5];
               var10 = var8;
-              var1_intLifetime1 = qk.a(-1, var10.field_o, var10.field_H, -1, -3, wb.field_p.field_H, -1, wb.field_p.field_o);
+              var1_intLifetime1 = qk.a(-1, var10.x, var10.y, -1, -3, BufferedSocket.field_p.y, -1, BufferedSocket.field_p.x);
               var1_intLifetime1 = var1_intLifetime1 * sh.field_r / 256;
               if (fh.field_h[0] <= var1_intLifetime1) {
                 fh.field_h[0] = var1_intLifetime1;
@@ -177,17 +177,17 @@ final class db extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "db.C(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "db.C(" + param0 + ')');
         }
     }
 
     final byte[] e(int param0) {
         if (!this.field_v &&
-          -this.field_F + this.field_A.field_m.length <= this.field_A.field_q) {
+          -this.field_F + this.field_A.payload.length <= this.field_A.position) {
           if (param0 != 2) {
             field_z = 54;
           }
-          return this.field_A.field_m;
+          return this.field_A.payload;
         }
         throw new RuntimeException();
     }
@@ -197,7 +197,7 @@ final class db extends sh {
 
     static {
         field_x = new int[][]{new int[]{4, 4, 4}, new int[]{6, 6, 6}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{1, 1, 1}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{1, 1, 1}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{3, 2, 3}, new int[]{2, 4, 2}, new int[]{2, 6, 4}, new int[]{6, 6, 6}, new int[]{2, 5, 3}, new int[]{0, 5, 0}, new int[]{6, 0, 6}, new int[]{2, 2, 2}, new int[]{1, 1, 1}};
-        field_D = new sl();
+        field_D = new IntrusiveDeque();
         field_E = new int[]{-5, -5, -5};
         field_z = -1;
     }

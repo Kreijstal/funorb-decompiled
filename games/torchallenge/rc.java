@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rc extends w {
+class rc extends DualLinkNode {
     static ae field_r;
     static boolean field_u;
-    static uj field_t;
+    static PlatformTaskDispatcher field_t;
     static String field_q;
     static String[] field_s;
-    static ka[] field_p;
+    static Sprite[] field_p;
 
     public static void b(boolean param0) {
         RuntimeException decompiledCaughtException = null;
@@ -25,7 +25,7 @@ class rc extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "rc.M(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "rc.M(" + param0 + ')');
         }
     }
 
@@ -109,12 +109,12 @@ class rc extends w {
           var24 = 0;
           var25 = ol.field_c[var23][var24][4];
           var27 = 0;
-          L5: while (true) {
+          scanLoop1: while (true) {
             if (8 > var27) {
               var26 = 1;
               stackIn_33_0 = 0;
               if (var33 != 0) {
-                break L5;
+                break scanLoop1;
               }
               var28 = stackIn_33_0;
               while (3 > var28) {
@@ -182,7 +182,7 @@ class rc extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var9), "rc.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw oj.wrapException((Throwable) ((Object) var9), "rc.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -219,20 +219,20 @@ class rc extends w {
             rc.b(true);
           }
           var1 = id.field_b;
-          var2 = var1.j(-126);
+          var2 = var1.readUnsignedByte(-126);
           if (var2 == 0) {
             if (mh.field_e == null) {
               mh.field_e = new aa(128);
-              og.field_a = 0;
+              MouseWheelInput.field_a = 0;
             }
-            stackIn_15_0 = (var1.j(-107) != 1) ? 0 : 1;
+            stackIn_15_0 = (var1.readUnsignedByte(-107) != 1) ? 0 : 1;
             var3_int = stackIn_15_0;
-            var4_ref_String = var1.b(false);
+            var4_ref_String = var1.readString(false);
             if (var3_int != 0) {
-              var1.b(false);
+              var1.readString(false);
             }
             var5_ref = wf.a((byte) -123, var4_ref_String);
-            var6_ref = var1.b(false);
+            var6_ref = var1.readString(false);
             var7_ref = il.a((CharSequence) ((Object) var4_ref_String), (byte) 21);
             if (var7_ref == null) {
               var7_ref = var4_ref_String;
@@ -246,10 +246,10 @@ class rc extends w {
             if (null == var5_ref) {
               var5_ref = new qk();
               mh.field_e.a((long)var7_ref.hashCode(), var5_ref, 118);
-              fieldTemp$1 = og.field_a;
-              og.field_a = og.field_a + 1;
+              fieldTemp$1 = MouseWheelInput.field_a;
+              MouseWheelInput.field_a = MouseWheelInput.field_a + 1;
               var5_ref.field_ob = fieldTemp$1;
-              ie.field_d.a(var5_ref, -42);
+              ie.field_d.addLast(var5_ref, -42);
             }
             var5_ref.field_F = var4_ref_String;
             return;
@@ -273,60 +273,60 @@ class rc extends w {
               return;
             }
             oj.field_f = 1;
-            var3 = var1.b(false);
+            var3 = var1.readString(false);
             me.field_d = ((String) (var3)).intern();
-            var4 = var1.j(-108);
+            var4 = var1.readUnsignedByte(-108);
             bd.a(-116, var4);
             return;
           }
-          if (gl.field_e == null) {
-            gl.field_e = new aa(128);
+          if (SocketConnector.field_e == null) {
+            SocketConnector.field_e = new aa(128);
             kf.field_c = 0;
           }
-          var3Lifetime1 = var1.b(false);
+          var3Lifetime1 = var1.readString(false);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.b(false);
-          var5 = var1.b(false);
+          var4_ref_StringLifetime1 = var1.readString(false);
+          var5 = var1.readString(false);
           var6 = ri.a(0, var4_ref_StringLifetime1);
           if (null == var6) {
             var6 = ri.a(0, var5);
             if (var6 != null) {
-              gl.field_e.a((long)il.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 21).hashCode(), var6, -47);
+              SocketConnector.field_e.a((long)il.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 21).hashCode(), var6, -47);
             }
           }
           if (var6 == null) {
             var6 = new qk();
-            gl.field_e.a((long)il.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 21).hashCode(), var6, 121);
+            SocketConnector.field_e.a((long)il.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 21).hashCode(), var6, 121);
             fieldTemp$0 = kf.field_c;
             kf.field_c = kf.field_c + 1;
             var6.field_ob = fieldTemp$0;
-            rk.field_g.a(var6, -35);
+            BufferedCacheFile.field_g.addLast(var6, -35);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
           var6.field_mb = (String) (var3Lifetime1);
           var6.field_F = var4_ref_StringLifetime1;
-          var6.a(true);
-          var7 = (qk) (rk.field_g.c((byte) -7));
-          L10: while (true) {
+          var6.unlink(true);
+          var7 = (qk) (BufferedCacheFile.field_g.first((byte) -7));
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7 != null) {
-              stackOut_57_0 = fd.a(var6, 116, var7);
+              stackOut_57_0 = IterableNodeHashTable.a(var6, 116, var7);
               stackIn_65_0 = stackOut_57_0 ? 1 : 0;
               stackIn_58_0 = stackOut_57_0;
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_58_0)) {
-                var7 = (qk) (rk.field_g.c(-270));
+                var7 = (qk) (BufferedCacheFile.field_g.next(-270));
                 continue;
               }
             }
             if (decompiledFrameRemainder0) {
               if (var7 == null) {
-                break L10;
+                break scanLoop1;
               }
               stackIn_65_0 = 52;
             }
@@ -336,12 +336,12 @@ class rc extends w {
             }
             break;
           }
-          rk.field_g.a(var6, -86);
+          BufferedCacheFile.field_g.addLast(var6, -86);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1_ref), "rc.J(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "rc.J(" + param0 + ')');
         }
     }
 
@@ -378,7 +378,7 @@ class rc extends w {
           var1_int = 0;
           var2 = 0;
           var3 = 0;
-          if (d.p(-115)) {
+          if (GameClientBase.p(-115)) {
             var4 = eh.field_l;
             if (var7 != 0) {
               var4 = jj.field_c;
@@ -403,11 +403,11 @@ class rc extends w {
             hf.a(254, 89, 1);
           }
           if (!t.a(2, var4, 126) &&
-            0 < gf.a(hd.field_c[vj.field_c], (byte) 78)) {
+            0 < gf.a(GzipDecoder.field_c[vj.field_c], (byte) 78)) {
             hf.a(253, 13, 2);
           }
           if (!t.a(3, var4, 121) &&
-            gf.a(hd.field_c[vj.field_c], (byte) 78) >= 3) {
+            gf.a(GzipDecoder.field_c[vj.field_c], (byte) 78) >= 3) {
             hf.a(252, param0 ^ -62, 3);
           }
           if (!t.a(4, var4, 117)) {
@@ -415,7 +415,7 @@ class rc extends w {
             while (true) {
               if (3 > var5) {
                 stackIn_58_0 = 3;
-                stackIn_58_1 = gf.a(hd.field_c[var5], (byte) 78);
+                stackIn_58_1 = gf.a(GzipDecoder.field_c[var5], (byte) 78);
                 if (var7 == 0) {
                   if (stackIn_58_0 <= stackIn_58_1) {
                     var1_int++;
@@ -554,18 +554,18 @@ class rc extends w {
             }
           }
           if (!t.a(12, var4, 117) &&
-            rk.a((byte) -119, pi.field_d[vj.field_c]) >= 20) {
+            BufferedCacheFile.a((byte) -119, pi.field_d[vj.field_c]) >= 20) {
             hf.a(243, param0 + 172, 12);
           }
           if (!t.a(13, var4, 113) &&
-            30 <= rk.a((byte) 118, pi.field_d[vj.field_c])) {
+            30 <= BufferedCacheFile.a((byte) 118, pi.field_d[vj.field_c])) {
             hf.a(242, 101, 13);
           }
           if (!t.a(14, var4, 121)) {
             var5Lifetime5 = 0;
             while (true) {
               if (var5Lifetime5 < 3) {
-                var3 = var3 + rk.a((byte) 49, pi.field_d[var5Lifetime5]);
+                var3 = var3 + BufferedCacheFile.a((byte) 49, pi.field_d[var5Lifetime5]);
                 var5Lifetime5++;
                 if (var7 == 0) {
                   continue;
@@ -595,7 +595,7 @@ class rc extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "rc.L(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "rc.L(" + param0 + ')');
         }
     }
 
@@ -614,7 +614,7 @@ class rc extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var4), "rc.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) var4), "rc.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -622,7 +622,7 @@ class rc extends w {
         field_r = null;
         field_u = false;
         field_q = "Back";
-        ka discarded$0 = new ka(96, 96);
+        Sprite discarded$0 = new Sprite(96, 96);
         field_s = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
     }
 }

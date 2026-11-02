@@ -26,37 +26,37 @@ abstract class b extends kj {
           this.b(-50, 9, 119);
         }
         if (null == nb.field_a) {
-          nb.field_a = new ka(this.field_p, this.field_l);
-          ad.a(-15, nb.field_a);
-          qg.b();
+          nb.field_a = new Sprite(this.field_p, this.field_l);
+          FullscreenFocusCanvas.a(-15, nb.field_a);
+          SoftwareRasterizer.b();
           this.c(103, 0, 0);
           super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
           nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
           return;
         }
-        if (this.field_p > nb.field_a.field_u) {
-          nb.field_a = new ka(this.field_p, this.field_l);
-          ad.a(-15, nb.field_a);
-          qg.b();
+        if (this.field_p > nb.field_a.storedWidth) {
+          nb.field_a = new Sprite(this.field_p, this.field_l);
+          FullscreenFocusCanvas.a(-15, nb.field_a);
+          SoftwareRasterizer.b();
           this.c(103, 0, 0);
           super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
           nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
           return;
         }
-        if (nb.field_a.field_x >= this.field_l) {
-          ad.a(-15, nb.field_a);
-          qg.b();
+        if (nb.field_a.storedHeight >= this.field_l) {
+          FullscreenFocusCanvas.a(-15, nb.field_a);
+          SoftwareRasterizer.b();
           this.c(103, 0, 0);
           super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
           nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
           return;
         }
-        nb.field_a = new ka(this.field_p, this.field_l);
-        ad.a(-15, nb.field_a);
-        qg.b();
+        nb.field_a = new Sprite(this.field_p, this.field_l);
+        FullscreenFocusCanvas.a(-15, nb.field_a);
+        SoftwareRasterizer.b();
         this.c(103, 0, 0);
         super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
         ie.b((byte) -9);
@@ -65,7 +65,7 @@ abstract class b extends kj {
 
     final void b(int param0, int param1, int param2) {
         if (param0 == 0) {
-          this.a((byte) 113, -param2 + TorChallenge.field_G >> 1, param1, param2, -param1 + md.field_h >> 1);
+          this.a((byte) 113, -param2 + TorChallenge.field_G >> 1, param1, param2, -param1 + NodeHashTableIterator.field_h >> 1);
           return;
         }
     }
@@ -78,18 +78,18 @@ abstract class b extends kj {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var7 = gl.field_l[param5][param2][1][0];
-        int var8 = gl.field_l[param5][param2][1][1];
-        qg.a(ae.field_y);
-        qg.a(var7, param6, var8, param4);
+        int var7 = SocketConnector.field_l[param5][param2][1][0];
+        int var8 = SocketConnector.field_l[param5][param2][1][1];
+        SoftwareRasterizer.a(ae.field_y);
+        SoftwareRasterizer.a(var7, param6, var8, param4);
         we.field_e[param1][param2].a(var7, param6);
         if (param0 < 105) {
           b.a(-8);
         } else {
-          qg.b(ae.field_y);
+          SoftwareRasterizer.b(ae.field_y);
           return;
         }
-        qg.b(ae.field_y);
+        SoftwareRasterizer.b(ae.field_y);
     }
 
     abstract void c(int param0, int param1, int param2);
@@ -102,12 +102,12 @@ abstract class b extends kj {
         }
     }
 
-    final ee d(byte param0) {
-        ee var2 = super.d(param0);
+    final UiComponent d(byte param0) {
+        UiComponent var2 = super.d(param0);
         if (var2 != null) {
           return var2;
         }
-        return (ee) (this);
+        return (UiComponent) (this);
     }
 
     boolean h(int param0) {
@@ -179,13 +179,13 @@ abstract class b extends kj {
     }
 
     b(si param0, int param1, int param2) {
-        super(TorChallenge.field_G - param1 >> 1, md.field_h - param2 >> 1, param1, param2, (j) null);
+        super(TorChallenge.field_G - param1 >> 1, NodeHashTableIterator.field_h - param2 >> 1, param1, param2, (j) null);
         try {
           this.field_P = 0;
           this.field_L = param0;
           this.field_K = false;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

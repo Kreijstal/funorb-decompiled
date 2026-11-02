@@ -22,11 +22,11 @@ final class sa {
           }
           return sd.field_g;
         }
-        if (!sl.field_a.b(-7957)) {
+        if (!IntrusiveDeque.field_a.b(-7957)) {
           return uk.field_K;
         }
-        if (!sl.field_a.b(5, "commonui")) {
-          return ra.field_m + " - " + sl.field_a.a(112, "commonui") + "%";
+        if (!IntrusiveDeque.field_a.b(5, "commonui")) {
+          return ra.field_m + " - " + IntrusiveDeque.field_a.a(112, "commonui") + "%";
         }
         if (!gf.field_p.b(-7957)) {
           return wf.field_a;
@@ -59,24 +59,24 @@ final class sa {
         try {
           var5 = dk.field_s;
           var5.d(25, param1);
-          var5.field_q = var5.field_q + 1;
-          var4 = var5.field_q;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           if (param0 < 11) {
             field_c = false;
           }
-          var5.d(1, (byte) 122);
+          var5.writeByte(1, (byte) 122);
           if (null == param2.field_i) {
-            var5.d(0, (byte) 122);
+            var5.writeByte(0, (byte) 122);
           } else {
-            var5.d(param2.field_i.length, (byte) 122);
+            var5.writeByte(param2.field_i.length, (byte) 122);
             var5.a(param2.field_i.length, 0, param2.field_i, -16384);
           }
           var5.b(var4, 14430);
-          var5.field_q = var5.field_q - 4;
-          param2.field_j = var5.i(67);
-          var5.a(var5.field_q - var4, -112);
+          var5.position = var5.position - 4;
+          param2.field_j = var5.readInt(67);
+          var5.patchByteLength(var5.position - var4, -112);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "sa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "sa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

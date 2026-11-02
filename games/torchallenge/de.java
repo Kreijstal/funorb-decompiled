@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class de {
-    static ka field_a;
+    static Sprite field_a;
     static ll field_b;
     static boolean[][] field_c;
     static int field_d;
@@ -18,8 +18,8 @@ final class de {
         field_c = (boolean[][]) null;
     }
 
-    final static ka[] a(boolean param0) {
-        ka[] var1;
+    final static Sprite[] a(boolean param0) {
+        Sprite[] var1;
         int var2;
         int var3;
         int var6_int;
@@ -37,7 +37,7 @@ final class de {
         byte[] var31;
         var8 = TorChallenge.field_F ? 1 : 0;
         if (param0) {
-          var1 = new ka[vl.field_b];
+          var1 = new Sprite[vl.field_b];
           for (var2 = 0; vl.field_b > var2; var2++) {
             var3 = lg.field_e[var2] * pg.field_r[var2];
             var26 = h.field_a[var2];
@@ -47,7 +47,7 @@ final class de {
               for (var6_int = 0; var3 > var6_int; var6_int++) {
                 var9[var6_int] = td.field_m[jh.a((int) var26[var6_int], 255)];
               }
-              var1[var2] = new ka(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], var27);
+              var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], pg.field_r[var2], lg.field_e[var2], var27);
             } else {
               var28 = gf.field_t[var2];
               var16 = new int[var3];
@@ -56,12 +56,12 @@ final class de {
               for (var7 = 0; var3 > var7; var7++) {
                 var6[var7] = p.a(jh.a(255, (int) var28[var7]) << 24, td.field_m[jh.a(255, (int) var26[var7])]);
               }
-              var1[var2] = (ka) ((Object) new el(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], var16));
+              var1[var2] = (Sprite) ((Object) new el(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], pg.field_r[var2], lg.field_e[var2], var16));
             }
           }
         } else {
           field_c = (boolean[][]) null;
-          var1 = new ka[vl.field_b];
+          var1 = new Sprite[vl.field_b];
           for (var2 = 0; vl.field_b > var2; var2++) {
             var3 = lg.field_e[var2] * pg.field_r[var2];
             var29 = h.field_a[var2];
@@ -71,7 +71,7 @@ final class de {
               for (var6_int = 0; var3 > var6_int; var6_int++) {
                 var9[var6_int] = td.field_m[jh.a((int) var29[var6_int], 255)];
               }
-              var1[var2] = new ka(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], var30);
+              var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], pg.field_r[var2], lg.field_e[var2], var30);
             } else {
               var31 = gf.field_t[var2];
               var16 = new int[var3];
@@ -80,7 +80,7 @@ final class de {
               for (var7 = 0; var3 > var7; var7++) {
                 var6[var7] = p.a(jh.a(255, (int) var31[var7]) << 24, td.field_m[jh.a(255, (int) var29[var7])]);
               }
-              var1[var2] = (ka) ((Object) new el(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], var16));
+              var1[var2] = (Sprite) ((Object) new el(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], pg.field_r[var2], lg.field_e[var2], var16));
             }
           }
         }
@@ -97,7 +97,7 @@ final class de {
         RuntimeException decompiledCaughtException = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          var4 = (gh) (pf.field_d.c((byte) -66));
+          var4 = (gh) (pf.field_d.first((byte) -66));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -113,13 +113,13 @@ final class de {
             }
           }
           if (param0 != -1) {
-            field_a = (ka) null;
+            field_a = (Sprite) null;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1_ref), "de.D(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "de.D(" + param0 + ')');
         }
     }
 
@@ -163,8 +163,8 @@ final class de {
           var10 = 0;
           var8Lifetime1 = var10;
           while (3 > var10) {
-            if (lj.field_n[var10] != null) {
-              lj.field_n[var10].field_kb = 0;
+            if (ResourceArchive.field_n[var10] != null) {
+              ResourceArchive.field_n[var10].field_kb = 0;
             }
             var10++;
           }
@@ -172,11 +172,11 @@ final class de {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "de.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "de.B(" + param0 + ')');
         }
     }
 
-    final static boolean a(int param0, lj param1) {
+    final static boolean a(int param0, ResourceArchive param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -198,7 +198,7 @@ final class de {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -231,10 +231,10 @@ final class de {
               }
             }
             param1 = param1 << (var2 << 1);
-            return dd.field_p[param1 - 32768] >> var2;
+            return ImageProducerRasterBuffer.field_p[param1 - 32768] >> var2;
           }
           if (param1 < 131072) {
-            return dd.field_p[-32768 + param1];
+            return ImageProducerRasterBuffer.field_p[-32768 + param1];
           }
           if (param1 >= 33554432) {
             if (param1 >= 536870912) {
@@ -299,10 +299,10 @@ final class de {
               }
             }
             param1 = param1 << (var2 << 1);
-            return dd.field_p[param1 - 32768] >> var2;
+            return ImageProducerRasterBuffer.field_p[param1 - 32768] >> var2;
           }
           if (param1 < 131072) {
-            return dd.field_p[-32768 + param1];
+            return ImageProducerRasterBuffer.field_p[-32768 + param1];
           }
           if (param1 >= 33554432) {
             if (param1 >= 536870912) {
@@ -311,7 +311,7 @@ final class de {
               if (param1 < 134217728) {
                 var2 = 5;
                 param1 = param1 >> (var2 << 1);
-                return dd.field_p[param1 - 32768] << var2;
+                return ImageProducerRasterBuffer.field_p[param1 - 32768] << var2;
               }
               var2 = 6;
             }
@@ -332,7 +332,7 @@ final class de {
           }
         }
         param1 = param1 >> (var2 << 1);
-        return dd.field_p[param1 - 32768] << var2;
+        return ImageProducerRasterBuffer.field_p[param1 - 32768] << var2;
     }
 
     static {

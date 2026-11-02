@@ -11,7 +11,7 @@ final class bg extends ic {
     private String field_L;
     private int field_H;
     static jf field_K;
-    private eg field_F;
+    private BitmapFont field_F;
     static int[][] field_I;
     static float field_G;
 
@@ -94,45 +94,45 @@ final class bg extends ic {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
     final static void a(int param0, byte param1, ae param2) {
         pa var3 = dk.field_s;
         var3.d(param1 ^ 3, param0);
-        var3.d(5, (byte) 122);
-        var3.d(0, (byte) 122);
-        var3.a(param2.field_o, (byte) 106);
+        var3.writeByte(5, (byte) 122);
+        var3.writeByte(0, (byte) 122);
+        var3.writeShort(param2.field_o, (byte) 106);
         if (param1 != 26) {
           return;
         }
         try {
-          var3.d(param2.field_r, (byte) 122);
-          var3.d(param2.field_q, (byte) 122);
+          var3.writeByte(param2.field_r, (byte) 122);
+          var3.writeByte(param2.field_q, (byte) 122);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "bg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "bg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(kb param0, int param1, int param2, int param3, java.awt.Component param4, uj param5, int param6, boolean param7) {
+    final static void a(kb param0, int param1, int param2, int param3, java.awt.Component param4, PlatformTaskDispatcher param5, int param6, boolean param7) {
         try {
           kh.a(param1, param7, 10);
           bh.field_o = kh.a(param5, param4, 0, param3);
           re.field_B = kh.a(param5, param4, 1, param2);
-          mj.field_a = new jk();
+          GameKeyHandler.field_a = new PcmStreamMixer();
           ea.field_f = param2 * 1000 / param1;
-          re.field_B.b(mj.field_a);
-          la.field_a = param0;
-          la.field_a.c(nk.field_h, false);
+          re.field_B.b(GameKeyHandler.field_a);
+          SectorCacheStore.field_a = param0;
+          SectorCacheStore.field_a.c(nk.field_h, false);
           int var8_int = -123 % ((param6 - 59) / 51);
-          bh.field_o.b(la.field_a);
+          bh.field_o.b(SectorCacheStore.field_a);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "bg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "bg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    final static void a(int param0, byte param1, uj param2, uf param3) {
+    final static void a(int param0, byte param1, PlatformTaskDispatcher param2, PacketBuffer param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -170,41 +170,41 @@ final class bg extends ic {
           var14 = TorChallenge.field_F ? 1 : 0;
           try {
             var18 = new gh();
-            var18.field_p = param3.j(-125);
-            var18.field_l = param3.i(84);
+            var18.field_p = param3.readUnsignedByte(-125);
+            var18.field_l = param3.readInt(84);
             var18.field_s = new byte[var18.field_p][][];
-            var18.field_q = new mi[var18.field_p];
+            var18.field_q = new PlatformTask[var18.field_p];
             var18.field_t = new int[var18.field_p];
             var18.field_u = new int[var18.field_p];
             if (param1 <= 120) {
               return;
             }
             var18.field_o = new int[var18.field_p];
-            var18.field_j = new mi[var18.field_p];
+            var18.field_j = new PlatformTask[var18.field_p];
             for (var5 = 0; var5 < var18.field_p; var5++) {
               try {
-                var6_int = param3.j(-121);
+                var6_int = param3.readUnsignedByte(-121);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   2 != var6_int) {
                   if (var6_int == 3 ||
                     4 == var6_int) {
-                    var20 = param3.b(false);
-                    var8 = param3.b(false);
-                    var9 = param3.j(-87);
+                    var20 = param3.readString(false);
+                    var8 = param3.readString(false);
+                    var9 = param3.readUnsignedByte(-87);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param3.b(false);
+                      var10[var11_int] = param3.readString(false);
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param3.i(98);
+                        var13 = param3.readInt(98);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param3.a(102, var21[var12_int], var13, 0);
+                        param3.readBytes(102, var21[var12_int], var13, 0);
                       }
                     }
                     var18.field_t[var5] = var6_int;
@@ -215,21 +215,21 @@ final class bg extends ic {
                       var12[var17] = gf.a(0, var10[var17]);
                       var17++;
                     }
-                    var18.field_q[var5] = param2.a(var8, (byte) 113, var12, gf.a(0, var20));
+                    var18.field_q[var5] = param2.requestMethod(var8, (byte) 113, var12, gf.a(0, var20));
                     var18.field_s[var5] = var21;
                   }
                 } else {
-                  var16 = param3.b(false);
+                  var16 = param3.readString(false);
                   var7 = var16;
-                  var15 = param3.b(false);
+                  var15 = param3.readString(false);
                   var8 = var15;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param3.i(92);
+                    var9 = param3.readInt(92);
                   }
                   var18.field_t[var5] = var6_int;
                   var18.field_u[var5] = var9;
-                  var18.field_j[var5] = param2.a((byte) -125, var15, gf.a(0, var16));
+                  var18.field_j[var5] = param2.requestField((byte) -125, var15, gf.a(0, var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -253,7 +253,7 @@ final class bg extends ic {
                 var18.field_o[var5] = -5;
               }
             }
-            pf.field_d.a(var18, -83);
+            pf.field_d.addLast(var18, -83);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -271,7 +271,7 @@ final class bg extends ic {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -280,7 +280,7 @@ final class bg extends ic {
         }
     }
 
-    bg(int param0, int param1, int param2, int param3, ee param4, boolean param5, int param6, int param7, eg param8, int param9, String param10) {
+    bg(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (j) null, (gg) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -342,7 +342,7 @@ final class bg extends ic {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

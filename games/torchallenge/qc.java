@@ -15,7 +15,7 @@ final class qc {
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         hb.field_d = param2;
-        sl.field_f = param3;
+        IntrusiveDeque.field_f = param3;
         if (param0 >= -21) {
           return;
         }
@@ -33,7 +33,7 @@ final class qc {
         RuntimeException var1_ref = null;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
-          var5 = vf.field_b;
+          var5 = MouseInputHandler.field_b;
           var1 = var5;
           var2 = param0;
           var3 = var5.length;
@@ -51,7 +51,7 @@ final class qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1_ref), "qc.C(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "qc.C(" + param0 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class qc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

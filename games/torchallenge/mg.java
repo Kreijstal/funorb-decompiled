@@ -25,22 +25,22 @@ final class mg {
         try {
           var5 = dk.field_s;
           var5.d(25, param2);
-          var5.field_q = var5.field_q + 1;
+          var5.position = var5.position + 1;
           if (param0 >= -125) {
             field_a = (int[]) null;
           }
-          var4 = var5.field_q;
-          var5.d(1, (byte) 122);
-          var5.d(param1.field_n, (byte) 122);
-          var5.d(param1.field_m, (byte) 122);
-          var5.a(param1.field_k, false);
-          var5.a(param1.field_l, false);
-          var5.a(param1.field_o, false);
-          var5.a(param1.field_q, false);
+          var4 = var5.position;
+          var5.writeByte(1, (byte) 122);
+          var5.writeByte(param1.field_n, (byte) 122);
+          var5.writeByte(param1.field_m, (byte) 122);
+          var5.writeInt(param1.field_k, false);
+          var5.writeInt(param1.field_l, false);
+          var5.writeInt(param1.field_o, false);
+          var5.writeInt(param1.field_q, false);
           var5.b(var4, 14430);
-          var5.a(var5.field_q - var4, -127);
+          var5.patchByteLength(var5.position - var4, -127);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "mg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "mg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class mg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 

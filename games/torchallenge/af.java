@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class af {
-    static ka[] field_a;
-    static ka[] field_b;
+    static Sprite[] field_a;
+    static Sprite[] field_b;
     static java.security.SecureRandom field_d;
     static String[] field_c;
     static int[][][] field_e;
@@ -13,13 +13,13 @@ final class af {
         pa var2 = dk.field_s;
         var2.d(25, param1);
         if (param0 == 9245) {
-          var2.d(1, (byte) 122);
-          var2.d(2, (byte) 122);
+          var2.writeByte(1, (byte) 122);
+          var2.writeByte(2, (byte) 122);
           return;
         }
         af.b(-81, -34);
-        var2.d(1, (byte) 122);
-        var2.d(2, (byte) 122);
+        var2.writeByte(1, (byte) 122);
+        var2.writeByte(2, (byte) 122);
     }
 
     public static void a(int param0) {

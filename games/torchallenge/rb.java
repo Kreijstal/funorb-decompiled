@@ -31,20 +31,20 @@ final class rb implements Runnable {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (!(oe.field_f <= param1)) {
-          oe.field_f = param1;
+        if (!(RasterBuffer.field_f <= param1)) {
+          RasterBuffer.field_f = param1;
         }
         if (param0 < -49) {
-          oe.field_f = oe.field_f - 1;
-          if (0 > oe.field_f) {
+          RasterBuffer.field_f = RasterBuffer.field_f - 1;
+          if (0 > RasterBuffer.field_f) {
             h.a(param2, 4);
-            oe.field_f = param1;
+            RasterBuffer.field_f = param1;
           }
           return;
         }
     }
 
-    final al a(la param0, boolean param1, int param2) {
+    final al a(SectorCacheStore param0, boolean param1, int param2) {
         al var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -94,22 +94,22 @@ final class rb implements Runnable {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     private final void a(int param0, al param1) {
         Object var3 = null;
         Throwable var4 = null;
-        la var5 = null;
+        SectorCacheStore var5 = null;
         Object stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         Throwable decompiledCaughtException = null;
         try {
           if (param0 != 1) {
-            var5 = (la) null;
-            this.a((la) null, true, 40);
+            var5 = (SectorCacheStore) null;
+            this.a((SectorCacheStore) null, true, 40);
           }
           var3 = this.field_a;
           synchronized (var3) {
@@ -128,7 +128,7 @@ final class rb implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) (stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oj.wrapException((Throwable) (stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class rb implements Runnable {
         field_c = null;
     }
 
-    final al a(int param0, int param1, la param2) {
+    final al a(int param0, int param1, SectorCacheStore param2) {
         al var4 = null;
         RuntimeException var4_ref = null;
         al stackIn_1_0 = null;
@@ -164,7 +164,7 @@ final class rb implements Runnable {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -226,7 +226,7 @@ final class rb implements Runnable {
         }
     }
 
-    final static ge a(lj param0, String param1, byte param2, String param3) {
+    final static ge a(ResourceArchive param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -245,7 +245,7 @@ final class rb implements Runnable {
           }
           var4_int = param0.a(param1, 50);
           var5 = param0.a(var4_int, param3, (byte) 86);
-          stackIn_3_0 = w.a((byte) 61, var4_int, var5, param0);
+          stackIn_3_0 = DualLinkNode.a((byte) 61, var4_int, var5, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,11 +269,11 @@ final class rb implements Runnable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final al a(int param0, la param1, byte param2, byte[] param3) {
+    final al a(int param0, SectorCacheStore param1, byte param2, byte[] param3) {
         al var5 = null;
         RuntimeException var5_ref = null;
         al stackIn_3_0 = null;
@@ -312,26 +312,26 @@ final class rb implements Runnable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    rb(uj param0) {
-        mi var2 = null;
+    rb(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_a = new ii();
         this.field_e = 0;
         this.field_f = false;
         try {
-          var2 = param0.a((Runnable) (this), true, 5);
+          var2 = param0.requestThread((Runnable) (this), true, 5);
           while (var2.field_d == 0) {
             c.a(-105, 10L);
           }
           if (var2.field_d == 2) {
             throw new RuntimeException();
           }
-          this.field_d = (Thread) (var2.field_g);
+          this.field_d = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

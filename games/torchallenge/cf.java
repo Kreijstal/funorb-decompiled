@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class cf {
-    static ka field_c;
+    static Sprite field_c;
     static Calendar field_e;
     static int field_f;
-    static rk field_d;
+    static BufferedCacheFile field_d;
     static int field_a;
     static int field_b;
 
@@ -77,11 +77,11 @@ final class cf {
           var8 = 1;
           var9 = 1;
           for (var10 = 1; var10 < param0; var10++) {
-            var5_intLifetime1 = fj.a(1870096848, var10 * param3 << 16, lj.field_j[param0]) >> 16;
+            var5_intLifetime1 = fj.a(1870096848, var10 * param3 << 16, ResourceArchive.field_j[param0]) >> 16;
             if (var6 < var5_intLifetime1) {
               if (var6 > 0 &&
                 var6 < param3) {
-                param1[var6] = fj.a(1870096848, var7 << 16, lj.field_j[var10 - var9]) >> 16;
+                param1[var6] = fj.a(1870096848, var7 << 16, ResourceArchive.field_j[var10 - var9]) >> 16;
               }
               var7 = 0;
               var6 = var5_intLifetime1;
@@ -112,7 +112,7 @@ final class cf {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

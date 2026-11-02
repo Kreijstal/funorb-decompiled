@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends eg {
+final class rh extends BitmapFont {
     int[][] field_O;
     private byte[][] field_N;
 
@@ -100,31 +100,31 @@ final class rh extends eg {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * qg.field_g;
-        var9 = qg.field_g - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.width;
+        var9 = SoftwareRasterizer.width - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < qg.field_k) {
-          var12 = qg.field_k - param2;
+        if (param2 < SoftwareRasterizer.field_k) {
+          var12 = SoftwareRasterizer.field_k - param2;
           param4 = param4 - var12;
-          param2 = qg.field_k;
+          param2 = SoftwareRasterizer.field_k;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * qg.field_g;
+          var8 = var8 + var12 * SoftwareRasterizer.width;
         }
-        if (param2 + param4 > qg.field_l) {
-          param4 = param4 - (param2 + param4 - qg.field_l);
+        if (param2 + param4 > SoftwareRasterizer.field_l) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_l);
         }
-        if (param1 < qg.field_a) {
-          var12Lifetime1 = qg.field_a - param1;
+        if (param1 < SoftwareRasterizer.field_a) {
+          var12Lifetime1 = SoftwareRasterizer.field_a - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = qg.field_a;
+          param1 = SoftwareRasterizer.field_a;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > qg.field_c) {
-          var12Lifetime2 = param1 + param3 - qg.field_c;
+        if (param1 + param3 > SoftwareRasterizer.field_c) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.field_c;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
@@ -132,9 +132,9 @@ final class rh extends eg {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            rh.a(0, qg.field_i, this.field_N[param0], this.field_O[param5], var11, var8, param3, param4, var9, var10);
+            rh.a(0, SoftwareRasterizer.pixels, this.field_N[param0], this.field_O[param5], var11, var8, param3, param4, var9, var10);
           } else {
-            nf.a(qg.field_i, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
+            nf.a(SoftwareRasterizer.pixels, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }
@@ -148,31 +148,31 @@ final class rh extends eg {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * qg.field_g;
-        var10 = qg.field_g - param3;
+        var9 = param1 + param2 * SoftwareRasterizer.width;
+        var10 = SoftwareRasterizer.width - param3;
         var11 = 0;
         var12 = 0;
-        if (param2 < qg.field_k) {
-          var13 = qg.field_k - param2;
+        if (param2 < SoftwareRasterizer.field_k) {
+          var13 = SoftwareRasterizer.field_k - param2;
           param4 = param4 - var13;
-          param2 = qg.field_k;
+          param2 = SoftwareRasterizer.field_k;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * qg.field_g;
+          var9 = var9 + var13 * SoftwareRasterizer.width;
         }
-        if (param2 + param4 > qg.field_l) {
-          param4 = param4 - (param2 + param4 - qg.field_l);
+        if (param2 + param4 > SoftwareRasterizer.field_l) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_l);
         }
-        if (param1 < qg.field_a) {
-          var13Lifetime1 = qg.field_a - param1;
+        if (param1 < SoftwareRasterizer.field_a) {
+          var13Lifetime1 = SoftwareRasterizer.field_a - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = qg.field_a;
+          param1 = SoftwareRasterizer.field_a;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > qg.field_c) {
-          var13Lifetime2 = param1 + param3 - qg.field_c;
+        if (param1 + param3 > SoftwareRasterizer.field_c) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_c;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -180,9 +180,9 @@ final class rh extends eg {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            rh.a(0, qg.field_i, this.field_N[param0], this.field_O[param5], var12, var9, param3, param4, var10, var11, param6);
+            rh.a(0, SoftwareRasterizer.pixels, this.field_N[param0], this.field_O[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {
-            nf.a(qg.field_i, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            nf.a(SoftwareRasterizer.pixels, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }

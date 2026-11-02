@@ -4,7 +4,7 @@
 final class fa extends lg {
     static int[][] field_m;
     static int field_j;
-    static ka field_q;
+    static Sprite field_q;
     static int field_t;
     static int field_g;
     private int field_r;
@@ -13,11 +13,11 @@ final class fa extends lg {
     static int[] field_h;
     private String field_i;
     private int field_l;
-    private eg field_p;
+    private BitmapFont field_p;
     private int field_k;
     private int field_n;
 
-    final void a(eg param0, String param1, int param2, byte param3, int param4) {
+    final void a(BitmapFont param0, String param1, int param2, byte param3, int param4) {
         qi var8 = null;
         qi var9 = null;
         if (param1 == null) {
@@ -45,15 +45,15 @@ final class fa extends lg {
           var9.field_g[param1.length()] = param2;
           ua.a(0, (byte) -113, param0, param1, var9);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "fa.Q(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "fa.Q(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    private final qi a(int param0, String param1, int param2, eg param3) {
+    private final qi a(int param0, String param1, int param2, BitmapFont param3) {
         qi discarded$1 = null;
         qi var5 = null;
         RuntimeException var5_ref = null;
-        eg var6 = null;
+        BitmapFont var6 = null;
         qi var7 = null;
         qi stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -66,8 +66,8 @@ final class fa extends lg {
           var7 = new qi(-param3.field_x + param2, param3.field_K + param2, param1.length());
           var5 = var7;
           if (param0 != 1063303649) {
-            var6 = (eg) null;
-            discarded$1 = this.a(-1, (String) null, 18, (eg) null);
+            var6 = (BitmapFont) null;
+            discarded$1 = this.a(-1, (String) null, 18, (BitmapFont) null);
           }
           this.field_a = new qi[]{var7};
           stackIn_3_0 = var5;
@@ -88,11 +88,11 @@ final class fa extends lg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, eg param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, int param2, String param3, BitmapFont param4, int param5, int param6, int param7) {
         qi stackIn_35_0;
         qi stackIn_35_1;
         int stackIn_35_2;
@@ -217,13 +217,13 @@ final class fa extends lg {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    final void b(eg param0, String param1, int param2, int param3, int param4) {
+    final void b(BitmapFont param0, String param1, int param2, int param3, int param4) {
         qi discarded$1 = null;
-        eg var7 = null;
+        BitmapFont var7 = null;
         qi var8 = null;
         qi var9 = null;
         RuntimeException stackIn_16_0 = null;
@@ -255,8 +255,8 @@ final class fa extends lg {
           var9.field_g[param1.length()] = param0.a(param1) + param4;
           ua.a(0, (byte) -113, param0, param1, var9);
           if (param3 > -62) {
-            var7 = (eg) null;
-            discarded$1 = this.a(107, (String) null, -69, (eg) null);
+            var7 = (BitmapFont) null;
+            discarded$1 = this.a(107, (String) null, -69, (BitmapFont) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -275,7 +275,7 @@ final class fa extends lg {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ final class fa extends lg {
         field_m = (int[][]) null;
     }
 
-    final void a(eg param0, String param1, int param2, int param3, int param4) {
+    final void a(BitmapFont param0, String param1, int param2, int param3, int param4) {
         qi var8 = null;
         int var7 = 0;
         if (param3 != -25602) {
@@ -315,7 +315,7 @@ final class fa extends lg {
           var8.field_g[param1.length()] = param2 + (var7 >> 1);
           ua.a(0, (byte) -113, param0, param1, var8);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "fa.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "fa.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

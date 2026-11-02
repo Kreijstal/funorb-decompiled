@@ -73,8 +73,8 @@ final class m {
         try {
           var1_int = jl.field_e;
           var2 = 0;
-          if (nd.field_c == 2) {
-            var3_long = ol.a(256) - fd.field_e;
+          if (RandomAccessCacheFile.field_c == 2) {
+            var3_long = ol.a(256) - IterableNodeHashTable.field_e;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
               var2 = 0;
@@ -92,7 +92,7 @@ final class m {
               }
             }
             var6 = gf.field_s[var3];
-            if (nd.field_c == 2 &&
+            if (RandomAccessCacheFile.field_c == 2 &&
               var2 == 1) {
               if (qb.field_c.length > ji.field_n.length) {
                 stackIn_19_0 = qb.field_c.length;
@@ -141,13 +141,13 @@ final class m {
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a(sl.field_f + (ai.field_a << 1), var1_int, -1, -ni.field_i + var8Lifetime1, (ni.field_i << 1) + var7Lifetime1);
+                var9.a(IntrusiveDeque.field_f + (ai.field_a << 1), var1_int, -1, -ni.field_i + var8Lifetime1, (ni.field_i << 1) + var7Lifetime1);
               }
               var1_int = var1_int + ai.field_a;
             }
             if (var4 >= 0) {
               ec.field_c.c(var6, var8Lifetime1, re.field_A + var1_int, var5, -1);
-              var1_int = var1_int + (sl.field_f + (ai.field_a + uc.field_Y));
+              var1_int = var1_int + (IntrusiveDeque.field_f + (ai.field_a + uc.field_Y));
             } else {
               pf.field_c.c(var6, var8Lifetime1, var1_int + hb.field_d, var5, -1);
               var1_int = var1_int + ok.field_e;
@@ -160,7 +160,7 @@ final class m {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "m.J(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "m.J(" + param0 + ')');
         }
     }
 
@@ -195,15 +195,15 @@ final class m {
               fl.field_t[var3] != null) {
               var1 = fl.field_t[var3];
             }
-            da.a(var1[1], var1[2], var1[8] + var1[6], param0 ^ -26, var1[3], var3, var9);
+            IntrusiveNode.a(var1[1], var1[2], var1[8] + var1[6], param0 ^ -26, var1[3], var3, var9);
           }
-          ee.field_s = tf.field_x.a(we.field_c[12][0]);
+          UiComponent.field_s = tf.field_x.a(we.field_c[12][0]);
           if (param0 != -98) {
             field_j = (ib) null;
           }
           var3Lifetime1 = tf.field_x.a(we.field_c[13][0]);
-          if (ee.field_s < var3Lifetime1) {
-            ee.field_s = var3Lifetime1;
+          if (UiComponent.field_s < var3Lifetime1) {
+            UiComponent.field_s = var3Lifetime1;
           }
           var4 = tf.field_x.field_t + tf.field_x.field_K + 4;
           il.field_q[6] = var4 + tf.field_x.field_x + (200 + tf.field_x.field_K);
@@ -212,7 +212,7 @@ final class m {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1_ref), "m.H(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "m.H(" + param0 + ')');
         }
     }
 
@@ -245,9 +245,9 @@ final class m {
         }
     }
 
-    final static ge[] a(lj param0, int param1, byte param2, int param3) {
+    final static ge[] a(ResourceArchive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
-        lj var5 = null;
+        ResourceArchive var5 = null;
         Object stackIn_4_0 = null;
         ge[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -256,10 +256,10 @@ final class m {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 6) {
-            var5 = (lj) null;
-            m.a((lj) null, -92, (byte) -64, 66);
+            var5 = (ResourceArchive) null;
+            m.a((ResourceArchive) null, -92, (byte) -64, 66);
           }
-          if (lk.a(160, param0, param1, param3)) {
+          if (SpriteLoader.a(160, param0, param1, param3)) {
             stackIn_6_0 = jc.b(-125);
             return stackIn_6_0;
           }
@@ -275,7 +275,7 @@ final class m {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -357,7 +357,7 @@ final class m {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

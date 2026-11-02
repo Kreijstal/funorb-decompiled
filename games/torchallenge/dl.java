@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dl extends da {
+final class dl extends IntrusiveNode {
     int field_B;
     int field_t;
     int field_J;
@@ -14,7 +14,7 @@ final class dl extends da {
     int field_w;
     static java.awt.Color field_l;
     int field_p;
-    static eg field_H;
+    static BitmapFont field_H;
     fe field_k;
     int field_y;
     int field_m;
@@ -28,7 +28,7 @@ final class dl extends da {
     ab field_I;
     int field_x;
     static boolean[][] field_r;
-    static ka field_j;
+    static Sprite field_j;
     static int[][] field_C;
     static String field_E;
 
@@ -163,7 +163,7 @@ final class dl extends da {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         var37 < oc.field_d) {
-                        ug.a(var25, (byte) -27, param12, 0, 0, var38, var36Lifetime2 + var37, 0, var21, var29);
+                        GameApplet.a(var25, (byte) -27, param12, 0, 0, var38, var36Lifetime2 + var37, 0, var21, var29);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
@@ -173,9 +173,9 @@ final class dl extends da {
                         var38 = -var37 + (oc.field_d - 1);
                       }
                       if (var37 < 0) {
-                        ug.a(var25 - var37 * var40, (byte) -61, param12, var39, var40, var38 + var37, var36Lifetime2, var41, -(var37 * var39) + var21, -(var37 * var41) + var29);
+                        GameApplet.a(var25 - var37 * var40, (byte) -61, param12, var39, var40, var38 + var37, var36Lifetime2, var41, -(var37 * var39) + var21, -(var37 * var41) + var29);
                       } else {
-                        ug.a(var25, (byte) -44, param12, var39, var40, var38, var37 + var36Lifetime2, var41, var21, var29);
+                        GameApplet.a(var25, (byte) -44, param12, var39, var40, var38, var37 + var36Lifetime2, var41, var21, var29);
                       }
                     }
                   }
@@ -185,7 +185,7 @@ final class dl extends da {
                   }
                   var21 = var21 + var23;
                   var25 = var25 + var27;
-                  var36Lifetime2 = var36Lifetime2 + qg.field_g;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.width;
                   var22 = var22 + var24;
                   var29 = var29 + var31;
                   var26 = var26 + var28;
@@ -319,7 +319,7 @@ final class dl extends da {
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < oc.field_d) {
-                    ug.a(var25, (byte) -55, param12, 0, 0, var37Lifetime1, var35Lifetime1 + var36Lifetime1, 0, var21, var29);
+                    GameApplet.a(var25, (byte) -55, param12, 0, 0, var37Lifetime1, var35Lifetime1 + var36Lifetime1, 0, var21, var29);
                   }
                 } else {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
@@ -329,9 +329,9 @@ final class dl extends da {
                     var37Lifetime1 = oc.field_d + (-var36Lifetime1 - 1);
                   }
                   if (0 <= var36Lifetime1) {
-                    ug.a(var25, (byte) -118, param12, var38Lifetime1, var39Lifetime1, var37Lifetime1, var35Lifetime1 + var36Lifetime1, var40Lifetime1, var21, var29);
+                    GameApplet.a(var25, (byte) -118, param12, var38Lifetime1, var39Lifetime1, var37Lifetime1, var35Lifetime1 + var36Lifetime1, var40Lifetime1, var21, var29);
                   } else {
-                    ug.a(var25 - var36Lifetime1 * var39Lifetime1, (byte) -118, param12, var38Lifetime1, var39Lifetime1, var37Lifetime1 + var36Lifetime1, var35Lifetime1, var40Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, -(var40Lifetime1 * var36Lifetime1) + var29);
+                    GameApplet.a(var25 - var36Lifetime1 * var39Lifetime1, (byte) -118, param12, var38Lifetime1, var39Lifetime1, var37Lifetime1 + var36Lifetime1, var35Lifetime1, var40Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, -(var40Lifetime1 * var36Lifetime1) + var29);
                   }
                 }
               }
@@ -340,7 +340,7 @@ final class dl extends da {
                 return;
               }
               var30 = var30 + var32;
-              var35Lifetime1 = var35Lifetime1 + qg.field_g;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.width;
               var17_int = var17_int + var19;
               var18 = var18 + var20;
               var29 = var29 + var31;
@@ -362,7 +362,7 @@ final class dl extends da {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -401,7 +401,7 @@ final class dl extends da {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -429,7 +429,7 @@ final class dl extends da {
             return stackIn_3_0;
           }
           var10 = (CharSequence) ((Object) param0);
-          var3_int = w.a(-15, var10, param1);
+          var3_int = DualLinkNode.a(-15, var10, param1);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -454,13 +454,13 @@ final class dl extends da {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void b(boolean param0) {
         if (param0) {
-          field_H = (eg) null;
+          field_H = (BitmapFont) null;
         }
         field_C = (int[][]) null;
         field_j = null;

@@ -3,14 +3,14 @@
  */
 final class ga extends bc {
     private gj field_t;
-    static sl field_w;
+    static IntrusiveDeque field_w;
     static String field_u;
     private gj[] field_v;
     static boolean field_y;
     static int[][][] field_x;
     static int[][] field_s;
 
-    final void a(ka[] param0, int param1, int param2) {
+    final void a(Sprite[] param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -37,7 +37,7 @@ final class ga extends bc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -95,12 +95,12 @@ final class ga extends bc {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public final void a(ee param0, int param1, int param2, byte param3, boolean param4) {
-        ee stackIn_5_0 = null;
+    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
+        UiComponent stackIn_5_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -120,7 +120,7 @@ final class ga extends bc {
             this.a((ga) null, true, 35);
           }
           if (param0 instanceof ng) {
-            stackIn_5_0 = (ee) (param0);
+            stackIn_5_0 = (UiComponent) (param0);
           } else {
             stackIn_5_0 = null;
           }
@@ -177,11 +177,11 @@ final class ga extends bc {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final void a(byte param0, ka param1) {
+    final void a(byte param0, Sprite param1) {
         gj[] var7 = null;
         int var4 = 0;
         gj var5_ref_gj = null;
@@ -197,11 +197,11 @@ final class ga extends bc {
           }
           int var5 = -109 / ((param0 + 88) / 32);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ga.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ga.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(int param0, eg param1, String[] param2, int param3, String param4) {
+    final static int a(int param0, BitmapFont param1, String[] param2, int param3, String param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -290,7 +290,7 @@ final class ga extends bc {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -308,11 +308,11 @@ final class ga extends bc {
         try {
           param0.a(this, param1, 31);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, ka[] param1) {
+    final void a(byte param0, Sprite[] param1) {
         int var4 = 0;
         gj[] var3 = null;
         gj var5 = null;
@@ -347,7 +347,7 @@ final class ga extends bc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -379,7 +379,7 @@ final class ga extends bc {
 
     static {
         field_u = "Unfortunately we are unable to create an account for you at this time.";
-        field_w = new sl();
+        field_w = new IntrusiveDeque();
         field_x = new int[][][]{new int[][]{new int[]{40, 40, 40}, new int[]{40, 40}, new int[]{40, 40}, new int[]{40, 40, 40, 40, 40, 40}, new int[]{40, 40}, new int[]{0}, new int[]{100, 100, 100, 100, 100, 80}}, new int[][]{new int[]{60, 60}, new int[]{60, 60, 60, 60}, new int[]{60, 60, 60, 60, 60, 60}, new int[]{60, 60, 60, 60, 60, 60}, new int[]{60, 60, 60, 60, 60}, new int[]{60, 60, 60, 60, 60}, new int[]{0}}, new int[][]{new int[]{30, 30, 30}, new int[]{30, 30}, new int[]{30, 30, 30, 30}, new int[]{30, 30, 30, 30, 30, 30}, new int[]{30, 30, 30}, new int[]{0}, new int[]{60, 60, 60, 60, 60, 60}}};
         field_s = new int[][]{new int[]{6, 0, 0, 5, 0, 0, 0}, new int[]{6, 5, 4, 0, 0, 7, 0}, new int[]{6, 0, 0, 0, 6, 0, 6}};
     }

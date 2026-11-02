@@ -68,7 +68,7 @@ final class ca {
           var7_int = 0;
           param3 = param3 + param2;
           var8 = param1;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param5[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -82,7 +82,7 @@ final class ca {
               param2++;
               param4[incrementValue$1] = (byte)(~var10);
               if (param2 >= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -98,7 +98,7 @@ final class ca {
               param2++;
               param4[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param2 >= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -114,7 +114,7 @@ final class ca {
               param2++;
               param4[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param3 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -130,7 +130,7 @@ final class ca {
               param2++;
               param4[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param2 >= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -146,7 +146,7 @@ final class ca {
               param2++;
               param4[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param3 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -178,7 +178,7 @@ final class ca {
               param2++;
               param4[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param2 >= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -194,7 +194,7 @@ final class ca {
               param2++;
               param4[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param2 >= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -220,7 +220,7 @@ final class ca {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 
@@ -254,7 +254,7 @@ final class ca {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

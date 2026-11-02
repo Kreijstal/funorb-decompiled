@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class si extends ic {
-    static ka[][][] field_I;
+    static Sprite[][][] field_I;
     static int field_J;
     static int[] field_L;
     static String field_M;
     static int[] field_H;
-    private sl field_G;
-    static ka field_F;
+    private IntrusiveDeque field_G;
+    static Sprite field_F;
     static int[] field_K;
 
     final void g(byte param0) {
@@ -20,7 +20,7 @@ final class si extends ic {
         b var3 = (b) (var2.c(0));
         while (var3 != null) {
           if (var3.h(124)) {
-            var3.a(true);
+            var3.unlink(true);
           }
           var3 = (b) (var2.a(false));
         }
@@ -41,7 +41,7 @@ final class si extends ic {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ka var12 = null;
+        Sprite var12 = null;
         int var13 = 0;
         int var14 = 0;
         int var16 = 0;
@@ -53,7 +53,7 @@ final class si extends ic {
           if (param0 != 125) {
             field_K = (int[]) null;
           }
-          var1_int = ba.field_b[1].field_q + ba.field_b[0].field_q + ba.field_b[2].field_q;
+          var1_int = ba.field_b[1].fullWidth + ba.field_b[0].fullWidth + ba.field_b[2].fullWidth;
           var2 = 3;
           var3 = lg.field_d[var2][8];
           var4 = ef.field_j[0];
@@ -63,7 +63,7 @@ final class si extends ic {
           var8 = var5 - var3 >> 1;
           var9 = var8 - (var8 << 1) + var5 - var3;
           rj.a(2, var2, var3, ba.field_b, var1_int);
-          ji.field_p = new ka[9];
+          ji.field_p = new Sprite[9];
           var12 = de.field_a;
           for (var15 = 0; var15 < 9; var15++) {
             var16 = var15;
@@ -76,26 +76,26 @@ final class si extends ic {
                 if (var16 != 3 &&
                   5 != var16) {
                   if (var16 == 4) {
-                    var13 = var12.field_q;
-                    var14 = var12.field_v;
-                    var1_intLifetime1 = -var7 + (var13 - var6) - ba.field_b[var15].field_q * 2;
-                    var3Lifetime1 = -(ba.field_b[var15].field_v * 2) + (-var8 + var14 - var9);
-                    ji.field_p[var15] = new ka(var1_intLifetime1, var3Lifetime1);
+                    var13 = var12.fullWidth;
+                    var14 = var12.fullHeight;
+                    var1_intLifetime1 = -var7 + (var13 - var6) - ba.field_b[var15].fullWidth * 2;
+                    var3Lifetime1 = -(ba.field_b[var15].fullHeight * 2) + (-var8 + var14 - var9);
+                    ji.field_p[var15] = new Sprite(var1_intLifetime1, var3Lifetime1);
                     ji.field_p[var15].d();
-                    var3Lifetime1 = ba.field_b[var15].field_v;
-                    var1_intLifetime1 = ba.field_b[var15].field_q;
+                    var3Lifetime1 = ba.field_b[var15].fullHeight;
+                    var1_intLifetime1 = ba.field_b[var15].fullWidth;
                     var10 = -var6 - var1_intLifetime1;
                     var11 = -var3Lifetime1 - var8;
                     var12.g(var10, var11);
                   }
                 } else {
-                  var14 = var12.field_v;
-                  var1_intLifetime1 = ba.field_b[var15].field_q;
-                  var13 = var12.field_q;
-                  var3Lifetime1 = -var9 + (var14 - var8 - 2 * ba.field_b[var15].field_v);
-                  ji.field_p[var15] = new ka(var1_intLifetime1, var3Lifetime1);
+                  var14 = var12.fullHeight;
+                  var1_intLifetime1 = ba.field_b[var15].fullWidth;
+                  var13 = var12.fullWidth;
+                  var3Lifetime1 = -var9 + (var14 - var8 - 2 * ba.field_b[var15].fullHeight);
+                  ji.field_p[var15] = new Sprite(var1_intLifetime1, var3Lifetime1);
                   ji.field_p[var15].d();
-                  var3Lifetime1 = ba.field_b[var15].field_v;
+                  var3Lifetime1 = ba.field_b[var15].fullHeight;
                   if (3 == var15) {
                     var10 = -var6;
                   } else {
@@ -105,13 +105,13 @@ final class si extends ic {
                   var12.g(var10, var11);
                 }
               } else {
-                var14 = var12.field_v;
-                var13 = var12.field_q;
-                var3Lifetime1 = ba.field_b[var15].field_v;
-                var1_intLifetime1 = -(ba.field_b[var15].field_q * 2) + (-var7 - var6) + var13;
-                ji.field_p[var15] = new ka(var1_intLifetime1, var3Lifetime1);
+                var14 = var12.fullHeight;
+                var13 = var12.fullWidth;
+                var3Lifetime1 = ba.field_b[var15].fullHeight;
+                var1_intLifetime1 = -(ba.field_b[var15].fullWidth * 2) + (-var7 - var6) + var13;
+                ji.field_p[var15] = new Sprite(var1_intLifetime1, var3Lifetime1);
                 ji.field_p[var15].d();
-                var1_intLifetime1 = ba.field_b[var15].field_q;
+                var1_intLifetime1 = ba.field_b[var15].fullWidth;
                 var10 = -var6 - var1_intLifetime1;
                 if (1 == var15) {
                   var11 = -var8;
@@ -121,11 +121,11 @@ final class si extends ic {
                 var12.g(var10, var11);
               }
             } else {
-              var14 = var12.field_v;
-              var13 = var12.field_q;
-              var1_intLifetime1 = ba.field_b[var15].field_q;
-              var3Lifetime1 = ba.field_b[var15].field_v;
-              ji.field_p[var15] = new ka(var1_intLifetime1, var3Lifetime1);
+              var14 = var12.fullHeight;
+              var13 = var12.fullWidth;
+              var1_intLifetime1 = ba.field_b[var15].fullWidth;
+              var3Lifetime1 = ba.field_b[var15].fullHeight;
+              ji.field_p[var15] = new Sprite(var1_intLifetime1, var3Lifetime1);
               if (0 != var15 &&
                 var15 != 2) {
                 var11 = var9 - var14 + var3Lifetime1;
@@ -142,29 +142,29 @@ final class si extends ic {
               var12.g(var10, var11);
             }
           }
-          la.field_f.a(param0 - 188);
+          SectorCacheStore.field_f.bindAsTarget(param0 - 188);
           ll.field_b = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "si.F(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "si.F(" + param0 + ')');
         }
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
         int var7 = TorChallenge.field_F ? 1 : 0;
         if (null != this.field_q) {
-          this.field_q.a((ee) (this), param0, param1, (byte) 97, true);
+          this.field_q.a((UiComponent) (this), param0, param1, (byte) 97, true);
         }
         nj var5 = new nj(this.field_G);
-        ee var6 = (ee) (var5.a(-107));
+        UiComponent var6 = (UiComponent) (var5.a(-107));
         if (param2) {
           return;
         }
         while (var6 != null) {
           var6.a(this.field_i + param0, this.field_m + param1, false, param3);
-          var6 = (ee) (var5.c((byte) -13));
+          var6 = (UiComponent) (var5.c((byte) -13));
         }
     }
 
@@ -184,7 +184,7 @@ final class si extends ic {
 
     final static vh a(String param0, int param1) {
         RuntimeException var2 = null;
-        ka[] var3 = null;
+        Sprite[] var3 = null;
         vh stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -192,12 +192,12 @@ final class si extends ic {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 22) {
-            var3 = (ka[]) null;
-            si.a(true, (ka[]) null, -120, -97);
+            var3 = (Sprite[]) null;
+            si.a(true, (Sprite[]) null, -120, -97);
           }
           if (ji.field_k.b(0) &&
             !param0.equals(ji.field_k.a(0))) {
-            ji.field_k = og.a(param0, true);
+            ji.field_k = MouseWheelInput.a(param0, true);
           }
           stackIn_7_0 = ji.field_k;
           return stackIn_7_0;
@@ -211,11 +211,11 @@ final class si extends ic {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, ka[] param1, int param2, int param3) {
+    final static void a(boolean param0, Sprite[] param1, int param2, int param3) {
         try {
           gb.field_f = new h(param1);
           if (!param0) {
@@ -225,11 +225,11 @@ final class si extends ic {
           mg.field_d = param2;
           rf.m(62);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "si.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "si.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final ee c(byte param0) {
+    final UiComponent c(byte param0) {
         nj var2;
         b var3;
         int var4;
@@ -268,18 +268,18 @@ final class si extends ic {
           for (var9 = 0; 2 > var9; var9++) {
             for (var10 = 0; var10 <= 1; var10++) {
               sf.field_d[var9][param2][var10].d();
-              qg.a(ae.field_y);
+              SoftwareRasterizer.a(ae.field_y);
               var6_int = param3[param2][var10][1] - param3[param2][var10][0];
               if (var6_int > 0) {
-                qg.a(0, 0, var6_int, var7);
+                SoftwareRasterizer.a(0, 0, var6_int, var7);
                 var8 = param1[var10][param2];
                 od.a(nj.field_e[var9][var6_int - 1], var8);
-                qg.b(ae.field_y);
-                la.field_f.a(-38);
+                SoftwareRasterizer.b(ae.field_y);
+                SectorCacheStore.field_f.bindAsTarget(-38);
               }
             }
           }
-          la.field_f.a(param5 + 104);
+          SectorCacheStore.field_f.bindAsTarget(param5 + 104);
           if (param5 != 1) {
             field_L = (int[]) null;
           }
@@ -300,7 +300,7 @@ final class si extends ic {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -310,26 +310,26 @@ final class si extends ic {
         b var3 = (b) (var2.c(0));
         while (var3 != null) {
           if (var3.j(1)) {
-            var3.a(true);
+            var3.unlink(true);
           }
           var3 = (b) (var2.a(false));
         }
         if (param0 > -38) {
-          this.field_G = (sl) null;
+          this.field_G = (IntrusiveDeque) null;
         }
-        this.field_A = (ee) ((Object) this.f((byte) 123));
+        this.field_A = (UiComponent) ((Object) this.f((byte) 123));
     }
 
     final b f(byte param0) {
         nj var2;
         b var3;
         int var4;
-        ee var5;
+        UiComponent var5;
         var4 = TorChallenge.field_F ? 1 : 0;
         var2 = new nj(this.field_G);
         if (param0 != 123) {
-          var5 = (ee) null;
-          this.a((byte) -70, (ee) null);
+          var5 = (UiComponent) null;
+          this.a((byte) -70, (UiComponent) null);
         }
         var3 = (b) (var2.c(0));
         while (var3 != null) {
@@ -362,7 +362,7 @@ final class si extends ic {
         field_K = null;
         int var1 = 74 % ((param0 - 15) / 51);
         field_H = null;
-        field_I = (ka[][][]) null;
+        field_I = (Sprite[][][]) null;
         field_F = null;
         field_M = null;
         field_L = null;
@@ -382,7 +382,7 @@ final class si extends ic {
         }
     }
 
-    final void a(byte param0, ee param1) {
+    final void a(byte param0, UiComponent param1) {
         b var3 = null;
         if (param0 < 52) {
           return;
@@ -392,17 +392,17 @@ final class si extends ic {
             throw new IllegalArgumentException();
           }
           var3 = (b) (param1);
-          this.field_G.a((byte) 119, var3);
+          this.field_G.addFirst((byte) 119, var3);
           var3.field_K = true;
-          var3.a((ee) (this), 0);
+          var3.a((UiComponent) (this), 0);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "si.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "si.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public si() {
-        super(0, 0, TorChallenge.field_G, md.field_h, (j) null, (gg) null);
-        this.field_G = new sl();
+        super(0, 0, TorChallenge.field_G, NodeHashTableIterator.field_h, (j) null, (gg) null);
+        this.field_G = new IntrusiveDeque();
     }
 
     static {

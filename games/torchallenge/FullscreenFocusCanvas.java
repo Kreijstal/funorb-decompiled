@@ -1,0 +1,147 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
+    static boolean field_j;
+    static ge field_e;
+    static int[] field_h;
+    java.awt.Frame field_d;
+    volatile boolean field_i;
+    static int[][][] field_b;
+    static boolean field_a;
+    static int field_c;
+    static ResourceArchive field_g;
+    static String field_f;
+
+    final static void a(int param0, Sprite param1) {
+        try {
+          BufferedSocket.b((byte) -91);
+          int var2_int = 53 % ((73 - param0) / 47);
+          SoftwareRasterizer.setTarget(param1.pixels, param1.fullWidth, param1.fullHeight);
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ad.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static nf a(ResourceArchive param0, ResourceArchive param1, String param2, String param3, boolean param4) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        String var7 = null;
+        nf stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param4) {
+            var7 = (String) null;
+            FullscreenFocusCanvas.a((ResourceArchive) null, (ResourceArchive) null, (String) null, (String) null, false);
+          }
+          var5_int = param0.a(param2, -91);
+          var6 = param0.a(var5_int, param3, (byte) 91);
+          stackIn_3_0 = al.a(param0, var6, var5_int, param1, -127);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_6_0 = var5;
+          stackIn_6_1 = new StringBuilder().append("ad.E(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param2 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          if (param3 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    public final void paint(java.awt.Graphics param0) {
+    }
+
+    public final void focusLost(java.awt.event.FocusEvent param0) {
+        try {
+          this.field_i = true;
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ad.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(java.awt.Component param0, int param1) {
+        try {
+          if (param1 != 0) {
+            field_b = (int[][][]) null;
+          }
+          param0.setFocusTraversalKeysEnabled(false);
+          param0.addKeyListener(hl.field_d);
+          param0.addFocusListener(hl.field_d);
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ad.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public static void a(int param0) {
+        field_g = null;
+        if (param0 != 0) {
+          return;
+        }
+        field_h = null;
+        field_f = null;
+        field_e = null;
+        field_b = (int[][][]) null;
+    }
+
+    public final void focusGained(java.awt.event.FocusEvent param0) {
+    }
+
+    final void a(PlatformTaskDispatcher param0, int param1) {
+        try {
+          lg.a(param0, (byte) 49, this.field_d);
+          if (param1 >= -47) {
+            java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
+            this.focusLost((java.awt.event.FocusEvent) null);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ad.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    FullscreenFocusCanvas() {
+    }
+
+    public final void update(java.awt.Graphics param0) {
+    }
+
+    static {
+        field_j = false;
+        field_b = new int[9][2][2];
+        field_h = new int[8192];
+        field_c = 0;
+        field_a = true;
+        field_f = "Confirm Email:";
+    }
+}

@@ -3,7 +3,7 @@
  */
 final class hl {
     static boolean field_e;
-    static mj field_d;
+    static GameKeyHandler field_d;
     static jl field_b;
     static boolean[][] field_c;
     static String field_a;
@@ -54,7 +54,7 @@ final class hl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -69,20 +69,20 @@ final class hl {
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           var1_double = 65536.0;
-          lj.field_j = new int[1025];
+          ResourceArchive.field_j = new int[1025];
           if (param0 != 50) {
             field_c = (boolean[][]) null;
           }
           for (var7 = 1; var7 <= 1024; var7++) {
             var3 = (double)var7;
             var5 = var1_double / var3;
-            lj.field_j[var7] = (int)var5;
+            ResourceArchive.field_j[var7] = (int)var5;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "hl.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "hl.B(" + param0 + ')');
         }
     }
 
@@ -118,12 +118,12 @@ final class hl {
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ff.a(param1, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 1);
+              JavaScriptBridge.evaluate(param1, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 1);
             } catch (Throwable throwable) {
             }
-            ok.a(param1, -1);
+            ok.updatePageLinks(param1, -1);
           } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "hl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw oj.wrapException((Throwable) ((Object) runtimeException), "hl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -166,7 +166,7 @@ final class hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "hl.C(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "hl.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -192,14 +192,14 @@ final class hl {
           if (255 == param1) {
             stackIn_10_0 = -114;
             stackIn_11_1 = !(13 <= cf.field_f);
-            pd.field_h = be.a(stackIn_10_0, stackIn_11_1);
+            GameScreen.field_h = be.a(stackIn_10_0, stackIn_11_1);
           } else {
             if (param1 >= 100 &&
               param1 <= 105) {
-              pd.field_h = wk.a(param2, param0 - 1);
+              GameScreen.field_h = wk.a(param2, param0 - 1);
               return;
             }
-            pd.field_h = mg.a((byte) 81, param3, param1);
+            GameScreen.field_h = mg.a((byte) 81, param3, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -218,39 +218,39 @@ final class hl {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final static void a(uf param0, int param1, int param2, int param3, int param4) {
+    final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
-          param0.d(param1, (byte) 122);
-          param0.a(17, (byte) 106);
-          param0.a(param3, (byte) 106);
-          param0.a(param4, (byte) 106);
-          param0.d(param2, (byte) 122);
+          param0.writeByte(param1, (byte) 122);
+          param0.writeShort(17, (byte) 106);
+          param0.writeShort(param3, (byte) 106);
+          param0.writeShort(param4, (byte) 106);
+          param0.writeByte(param2, (byte) 122);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static void a(eg param0, eg param1, int param2, int param3) {
+    final static void a(BitmapFont param0, BitmapFont param1, int param2, int param3) {
         try {
           int var4_int = -83 % ((param2 + 5) / 60);
           ec.field_c = param1;
           pf.field_c = param0;
           aj.field_b = param3;
-          ok.a(qg.field_g / 2, qg.field_f / 2, (byte) -128);
+          ok.a(SoftwareRasterizer.width / 2, SoftwareRasterizer.height / 2, (byte) -128);
           qc.a((byte) -48, param0.field_t + param0.field_K, param0.field_t, param1.field_K + param1.field_t, param1.field_t);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hl.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hl.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
         field_e = false;
         field_c = new boolean[][]{new boolean[]{true, true, true}, new boolean[]{true, false, true}, new boolean[]{false, true, false}, new boolean[]{true, true, true}};
-        field_d = new mj();
+        field_d = new GameKeyHandler();
         field_a = "Next";
     }
 }

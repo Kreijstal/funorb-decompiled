@@ -3,7 +3,7 @@
  */
 final class al extends sh {
     int field_C;
-    la field_D;
+    SectorCacheStore field_D;
     static ej[] field_x;
     static int[][] field_A;
     byte[] field_y;
@@ -50,7 +50,7 @@ final class al extends sh {
 
     final static void c(boolean param0) {
         String var2 = (String) null;
-        wk.a((String) null, -105, mj.field_d);
+        wk.a((String) null, -105, GameKeyHandler.field_d);
         if (param0) {
           field_A = (int[][]) null;
         }
@@ -65,7 +65,7 @@ final class al extends sh {
         return var1;
     }
 
-    final static nf a(lj param0, int param1, int param2, lj param3, int param4) {
+    final static nf a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
@@ -77,12 +77,12 @@ final class al extends sh {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!lk.a(160, param0, param2, param1)) {
+          if (!SpriteLoader.a(160, param0, param2, param1)) {
             stackIn_2_0 = null;
             return (nf) (stackIn_2_0);
           }
           var5_int = 69 / ((param4 + 78) / 40);
-          stackIn_4_0 = gl.a(param3.c(param2, param1, 0), (byte) 110);
+          stackIn_4_0 = SocketConnector.a(param3.c(param2, param1, 0), (byte) 110);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,7 +100,7 @@ final class al extends sh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jj {
-    static rk field_b;
-    static ka field_e;
+    static BufferedCacheFile field_b;
+    static Sprite field_e;
     static boolean field_d;
     static int field_c;
-    static ka[] field_a;
+    static Sprite[] field_a;
 
     public static void a(byte param0) {
         field_b = null;
@@ -53,11 +53,11 @@ final class jj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2_ref), "jj.C(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2_ref), "jj.C(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static ka a(byte param0, lj param1, int param2, int param3) {
+    final static Sprite a(byte param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -65,9 +65,9 @@ final class jj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 30) {
-            field_a = (ka[]) null;
+            field_a = (Sprite[]) null;
           }
-          if (lk.a(160, param1, param2, param3)) {
+          if (SpriteLoader.a(160, param1, param2, param3)) {
             return rl.b(true);
           }
           return null;
@@ -81,7 +81,7 @@ final class jj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class jj {
           var2 = 0;
           var3 = 0;
           if (param0 != 255) {
-            field_a = (ka[]) null;
+            field_a = (Sprite[]) null;
           }
           for (var4 = 0; var4 < 6; var4++) {
             var3Lifetime1 = pi.field_d[vj.field_c][var4];
@@ -127,12 +127,12 @@ final class jj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "jj.A(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "jj.A(" + param0 + ')');
         }
     }
 
     static {
-        field_e = new ka(96, 96);
+        field_e = new Sprite(96, 96);
         field_d = false;
         field_a = null;
     }

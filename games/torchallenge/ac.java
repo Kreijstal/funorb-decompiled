@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ac {
-    static ka field_a;
+    static Sprite field_a;
     static int field_d;
     static long field_e;
     static p field_c;
     static String field_b;
 
-    final static void a(java.math.BigInteger param0, byte param1, uf param2, java.math.BigInteger param3, uf param4) {
+    final static void a(java.math.BigInteger param0, byte param1, PacketBuffer param2, java.math.BigInteger param3, PacketBuffer param4) {
         try {
-          lc.a(0, param4, 0, param2.field_m, param2.field_q, param3, param0);
+          lc.a(0, param4, 0, param2.payload, param2.position, param3, param0);
           if (param1 != -105) {
             ej var6 = (ej) null;
             ac.a(true, 15, (ej) null, true, -63);
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ac.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ac.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class ac {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = la.field_d;
+          stackIn_2_0 = SectorCacheStore.field_d;
           stackIn_2_1 = 12048;
           stackIn_2_2 = 1000000;
           stackIn_2_3 = param1;
@@ -68,7 +68,7 @@ final class ac {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class ac {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 

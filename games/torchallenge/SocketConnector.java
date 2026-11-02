@@ -1,0 +1,127 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+abstract class SocketConnector {
+    static int[][][][] field_l;
+    int port;
+    static aa field_e;
+    static int field_k;
+    static String field_j;
+    static boolean field_f;
+    static boolean field_a;
+    static int[][] field_c;
+    static uk field_b;
+    String host;
+    static int[] field_g;
+    static Sprite field_h;
+
+    final static void a(java.applet.Applet param0, int param1) {
+        try {
+          java.net.URL var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            try {
+              if (param1 != 17) {
+                return;
+              }
+              var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
+              param0.getAppletContext().showDocument(mc.a(var2, param1 ^ -18, param0), "_top");
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref2;
+            stackIn_8_1 = new StringBuilder().append("gl.J(");
+            if (param0 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public static void a(int param0) {
+        field_h = null;
+        field_j = null;
+        field_g = null;
+        field_e = null;
+        field_c = (int[][]) null;
+        field_b = null;
+        field_l = (int[][][][]) null;
+        if (param0 != -26425) {
+          SocketConnector.a(-19);
+        }
+    }
+
+    abstract java.net.Socket a(byte param0) throws IOException;
+
+    final static nf a(byte[] param0, byte param1) {
+        nf var2 = null;
+        RuntimeException var2_ref = null;
+        byte[] var3 = null;
+        nf stackIn_6_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 == null) {
+            return null;
+          }
+          var2 = new nf(param0, GameApplet.field_e, ImageProducerRasterBuffer.field_t, pg.field_r, lg.field_e, h.field_a);
+          p.a(0);
+          if (param1 <= 107) {
+            var3 = (byte[]) null;
+            SocketConnector.a((byte[]) null, (byte) -57);
+          }
+          stackIn_6_0 = var2;
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_9_0 = var2_ref;
+          stackIn_9_1 = new StringBuilder().append("gl.K(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final java.net.Socket b(int param0) throws IOException {
+        if (param0 != 1) {
+          return (java.net.Socket) null;
+        }
+        return new java.net.Socket(this.host, this.port);
+    }
+
+    static {
+        field_l = new int[25][2][3][2];
+        field_f = false;
+        field_g = new int[]{1, 0, -1, -1, -1, -1, -1, -1, 2, 2, 0, 0};
+        field_j = "Email (Login):";
+        field_a = false;
+        field_c = new int[][]{new int[]{17, 20}, new int[]{42, 45}};
+    }
+}

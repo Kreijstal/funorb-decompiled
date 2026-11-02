@@ -14,12 +14,12 @@ class bc implements j, gd {
     int field_r;
     int field_i;
     int field_c;
-    eg field_g;
+    BitmapFont field_g;
     private boolean field_j;
     static int field_o;
     int field_k;
     int field_b;
-    static ka field_f;
+    static Sprite field_f;
 
     public final int a(int param0) {
         if (param0 != -1) {
@@ -28,7 +28,7 @@ class bc implements j, gd {
         return this.field_g.field_K + this.field_g.field_x;
     }
 
-    public final int a(ee param0, int param1, int param2) {
+    public final int a(UiComponent param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -51,22 +51,22 @@ class bc implements j, gd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void a(int param0, ee param1, int param2, int param3) {
+    private final void a(int param0, UiComponent param1, int param2, int param3) {
         try {
           this.a(param0, param1, 0, param2, 0, this.field_k, 3, this.field_m);
           if (param3 != 1703945953) {
             bc.a(6, 'ﾓ');
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "bc.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "bc.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, int param4, ee param5) {
+    public final void a(byte param0, int param1, int param2, int param3, int param4, UiComponent param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -139,13 +139,13 @@ class bc implements j, gd {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
-    private final int d(ee param0, byte param1) {
+    private final int d(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
-        ee var4 = null;
+        UiComponent var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -153,8 +153,8 @@ class bc implements j, gd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -4) {
-            var4 = (ee) null;
-            this.c((ee) null, (byte) -125);
+            var4 = (UiComponent) null;
+            this.c((UiComponent) null, (byte) -125);
           }
           stackIn_3_0 = -this.field_a + param0.field_l - this.field_b;
           return stackIn_3_0;
@@ -168,13 +168,13 @@ class bc implements j, gd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final int b(int param0, ee param1, int param2, int param3) {
+    private final int b(int param0, UiComponent param1, int param2, int param3) {
         RuntimeException var5 = null;
-        ee var6 = null;
+        UiComponent var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -182,8 +182,8 @@ class bc implements j, gd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -161) {
-            var6 = (ee) null;
-            this.a(36, -6, (ee) null, -5, (byte) 77);
+            var6 = (UiComponent) null;
+            this.a(36, -6, (UiComponent) null, -5, (byte) 77);
           }
           stackIn_3_0 = param1.field_j + (param1.field_i + param2) + this.field_a + param3;
           return stackIn_3_0;
@@ -197,11 +197,11 @@ class bc implements j, gd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public final int a(ee param0, byte param1) {
+    public final int a(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -224,7 +224,7 @@ class bc implements j, gd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -262,11 +262,11 @@ class bc implements j, gd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    private final void b(int param0, ee param1) {
+    private final void b(int param0, UiComponent param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -335,15 +335,15 @@ class bc implements j, gd {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    bc(eg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    bc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final void a(int param0, int param1, ee param2, int param3, byte param4) {
+    public final void a(int param0, int param1, UiComponent param2, int param3, byte param4) {
         int var7 = 0;
         qi var8 = null;
         int var9 = 0;
@@ -397,11 +397,11 @@ class bc implements j, gd {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    String a(ee param0, int param1) {
+    String a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -426,11 +426,11 @@ class bc implements j, gd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public final lg a(int param0, ee param1) {
+    public final lg a(int param0, UiComponent param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         lg stackIn_7_0 = null;
@@ -460,13 +460,13 @@ class bc implements j, gd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    public final int c(ee param0, byte param1) {
+    public final int c(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
-        ee var4 = null;
+        UiComponent var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -475,8 +475,8 @@ class bc implements j, gd {
         try {
           this.a(-96, param0);
           if (param1 > -91) {
-            var4 = (ee) null;
-            this.b((ee) null, (byte) -62);
+            var4 = (UiComponent) null;
+            this.b((UiComponent) null, (byte) -62);
           }
           stackIn_3_0 = param0.field_t.b((byte) 57) + (this.field_r + this.field_p);
           return stackIn_3_0;
@@ -490,7 +490,7 @@ class bc implements j, gd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -498,8 +498,8 @@ class bc implements j, gd {
         if (param4 != 1) {
           return;
         }
-        wb.b((byte) -118);
-        qg.a(param1, param2, param3, param0);
+        BufferedSocket.b((byte) -118);
+        SoftwareRasterizer.a(param1, param2, param3, param0);
     }
 
     final static boolean a(int param0, char param1) {
@@ -521,7 +521,7 @@ class bc implements j, gd {
         return true;
     }
 
-    public final int a(int param0, int param1, ee param2, byte param3, int param4, int param5) {
+    public final int a(int param0, int param1, UiComponent param2, byte param3, int param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -544,7 +544,7 @@ class bc implements j, gd {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -556,8 +556,8 @@ class bc implements j, gd {
           param1.field_e = this.field_e;
           param1.field_j = this.field_j;
           if (param0 >= -93) {
-            ee var4 = (ee) null;
-            discarded$0 = this.d((ee) null, (byte) 49);
+            UiComponent var4 = (UiComponent) null;
+            discarded$0 = this.d((UiComponent) null, (byte) 49);
           }
           param1.field_i = this.field_i;
           param1.field_a = this.field_a;
@@ -569,17 +569,17 @@ class bc implements j, gd {
           param1.field_g = this.field_g;
           param1.field_p = this.field_p;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "bc.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "bc.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final int a(int param0, ee param1, boolean param2) {
+    public final int a(int param0, UiComponent param1, boolean param2) {
         RuntimeException var4 = null;
-        ee var5 = null;
+        UiComponent var5 = null;
         Object stackIn_4_0;
         int stackIn_4_1;
         int stackIn_4_2;
-        ee stackIn_4_3;
+        UiComponent stackIn_4_3;
         Object stackIn_5_0;
         boolean stackIn_5_4;
         int stackIn_6_0 = 0;
@@ -589,13 +589,13 @@ class bc implements j, gd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            var5 = (ee) null;
-            this.b(46, (ee) null);
+            var5 = (UiComponent) null;
+            this.b(46, (UiComponent) null);
           }
           stackIn_4_0 = this;
           stackIn_4_1 = param0;
           stackIn_4_2 = 0;
-          stackIn_4_3 = (ee) (param1);
+          stackIn_4_3 = (UiComponent) (param1);
           if (param2) {
             stackIn_5_0 = this;
             stackIn_5_4 = false;
@@ -615,7 +615,7 @@ class bc implements j, gd {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -628,7 +628,7 @@ class bc implements j, gd {
         }
     }
 
-    public void a(ee param0, int param1, int param2, byte param3, boolean param4) {
+    public void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         if (this.field_g == null) {
           return;
         }
@@ -638,11 +638,11 @@ class bc implements j, gd {
         try {
           this.a(param2, param0, param1, param3 ^ 1703945856);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "bc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "bc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public final int b(ee param0, byte param1) {
+    public final int b(UiComponent param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -665,11 +665,11 @@ class bc implements j, gd {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void a(int param0, ee param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void a(int param0, UiComponent param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -734,14 +734,14 @@ class bc implements j, gd {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
     protected bc() {
     }
 
-    private final int a(int param0, int param1, ee param2, boolean param3) {
+    private final int a(int param0, int param1, UiComponent param2, boolean param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -766,11 +766,11 @@ class bc implements j, gd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    bc(eg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    bc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_n = param9;
           this.field_c = param10;
@@ -786,7 +786,7 @@ class bc implements j, gd {
           this.field_p = param2;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bk extends da {
+final class bk extends IntrusiveNode {
     int field_u;
     static boolean field_w;
     static int field_i;
-    static sl field_t;
+    static IntrusiveDeque field_t;
     static String field_n;
     static String field_l;
     static int field_p;
@@ -101,12 +101,12 @@ final class bk extends da {
           var4 = il.a(param0, (byte) 21);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!ak.a(95, var4.charAt(0)) &&
-              !ak.a(95, var4.charAt(-1 + var4.length()))) {
+            if (!SecondaryNodeDeque.a(95, var4.charAt(0)) &&
+              !SecondaryNodeDeque.a(95, var4.charAt(-1 + var4.length()))) {
               var5 = 0;
               for (var6 = 0; param0.length() > var6; var6++) {
                 var7 = param0.charAt(var6);
-                if (!ak.a(95, (char) var7)) {
+                if (!SecondaryNodeDeque.a(95, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;
@@ -134,7 +134,7 @@ final class bk extends da {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ final class bk extends da {
         field_r = "Unable to connect to the data server. Please check any firewall you are using.";
         field_n = "Connection restored.";
         field_l = "Loading extra data";
-        field_t = new sl();
+        field_t = new IntrusiveDeque();
         field_q = new int[8192];
         field_s = new int[4];
     }

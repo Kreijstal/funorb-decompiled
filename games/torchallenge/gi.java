@@ -6,18 +6,18 @@ final class gi {
     static java.awt.Frame field_b;
     static int field_e;
     static rb field_a;
-    static ka[] field_f;
-    static ad field_d;
+    static Sprite[] field_f;
+    static FullscreenFocusCanvas field_d;
 
     final static java.applet.Applet b(int param0) {
         if (null != aj.field_g) {
           return aj.field_g;
         }
         if (param0 != 12476) {
-          field_d = (ad) null;
-          return (java.applet.Applet) ((Object) mj.field_c);
+          field_d = (FullscreenFocusCanvas) null;
+          return (java.applet.Applet) ((Object) GameKeyHandler.field_c);
         }
-        return (java.applet.Applet) ((Object) mj.field_c);
+        return (java.applet.Applet) ((Object) GameKeyHandler.field_c);
     }
 
     public static void a(int param0) {
@@ -57,7 +57,7 @@ final class gi {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

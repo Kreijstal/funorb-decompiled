@@ -6,16 +6,16 @@ final class ph implements j {
     private int field_c;
     static vk[] field_b;
     private int field_j;
-    private eg field_l;
+    private BitmapFont field_l;
     private int field_i;
     static int field_d;
     private int field_g;
     private int field_k;
-    static ka[] field_o;
+    static Sprite[] field_o;
     static int field_e;
     static String[] field_a;
-    static ka[] field_h;
-    static ka[] field_m;
+    static Sprite[] field_h;
+    static Sprite[] field_m;
     static String field_f;
 
     final static boolean a(byte param0) {
@@ -25,9 +25,9 @@ final class ph implements j {
         return gi.field_d != null ? true : m.field_d;
     }
 
-    public final void a(ee param0, int param1, int param2, byte param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         int var10 = 0;
-        ee stackIn_6_0 = null;
+        UiComponent stackIn_6_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -37,29 +37,29 @@ final class ph implements j {
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        ee var12 = null;
+        UiComponent var12 = null;
         bl var13 = null;
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
           if (param3 != 97) {
-            var12 = (ee) null;
-            this.a((ee) null, 19, 73, (byte) 52, true);
+            var12 = (UiComponent) null;
+            this.a((UiComponent) null, 19, 73, (byte) 52, true);
           }
           if (param0 instanceof bl) {
-            stackIn_6_0 = (ee) (param0);
+            stackIn_6_0 = (UiComponent) (param0);
           } else {
             stackIn_6_0 = null;
           }
           var13 = (bl) (stackIn_6_0);
-          qg.f(param2 + param0.field_m, param1 + param0.field_i, param0.field_p, param0.field_l, this.field_j);
+          SoftwareRasterizer.f(param2 + param0.field_m, param1 + param0.field_i, param0.field_p, param0.field_l, this.field_j);
           if (var13 == null) {
           }
           var7 = param0.field_p - 2 * var13.field_W;
           var8 = param0.field_m + (param2 + var13.field_W);
           var9 = var13.field_Y + (param1 + param0.field_i);
-          qg.d(var8, var9, var7 + var8, var9, this.field_n);
+          SoftwareRasterizer.d(var8, var9, var7 + var8, var9, this.field_n);
           for (var10 = -1 + var13.d(true); var10 >= 0; var10--) {
-            qg.e(var8 + var7 * var13.a(-20, var10) / var13.a(-1), var9, this.field_k, this.field_c);
+            SoftwareRasterizer.e(var8 + var7 * var13.a(-20, var10) / var13.a(-1), var9, this.field_k, this.field_c);
           }
           if (this.field_l != null) {
             this.field_l.a(var13.field_v, var7 / 2 + var8, this.field_l.field_G + (var9 + var13.field_Y), this.field_g, this.field_i);
@@ -75,7 +75,7 @@ final class ph implements j {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class ph implements j {
         field_f = null;
     }
 
-    ph(eg param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    ph(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_n = param3;
           this.field_k = param5;
@@ -101,7 +101,7 @@ final class ph implements j {
           this.field_g = param1;
           this.field_j = param4;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

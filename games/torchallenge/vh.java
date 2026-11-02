@@ -23,16 +23,16 @@ final class vh {
             var4 = (CharSequence) null;
             vh.a((byte) -81, false, -106, (CharSequence) null);
           }
-          var5 = (o) (ve.field_c.c((byte) -72));
+          var5 = (o) (ve.field_c.first((byte) -72));
           while (var5 != null) {
             te.a(param0, 9082, var5);
-            var5 = (o) (ve.field_c.c(-270));
+            var5 = (o) (ve.field_c.next(-270));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "vh.H(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "vh.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class vh {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -209,11 +209,11 @@ final class vh {
           var40 = new byte[256][];
           var33 = var40;
           var11 = var33;
-          var45 = qg.field_i;
-          var13 = qg.field_g;
-          var14 = qg.field_f;
+          var45 = SoftwareRasterizer.pixels;
+          var13 = SoftwareRasterizer.width;
+          var14 = SoftwareRasterizer.height;
           var44 = new int[4];
-          qg.a(var44);
+          SoftwareRasterizer.a(var44);
           for (var16_int = 0; var16_int < 256; var16_int++) {
             var6[var16_int] = -param1 + param0[var16_int].field_f;
             var7[var16_int] = param0[var16_int].field_g - param1;
@@ -227,17 +227,17 @@ final class vh {
             var20 = param0[var16_int].field_a;
             var21 = var36[var16_int];
             var22 = -var19 + var21;
-            qg.a(new int[var36[var16_int] * var37[var16_int]], var36[var16_int], var37[var16_int]);
+            SoftwareRasterizer.setTarget(new int[var36[var16_int] * var37[var16_int]], var36[var16_int], var37[var16_int]);
             var23 = 0;
             for (var24 = 0; var20 > var24; var24++) {
               for (var25 = 0; var19 > var25; var25++) {
                 if (var18[var23++] != 0) {
-                  qg.e(param1 + var25, var24 + param1, param1, 2);
+                  SoftwareRasterizer.e(param1 + var25, var24 + param1, param1, 2);
                 }
               }
             }
             for (var24Lifetime1 = 0; var24Lifetime1 < var17.length; var24Lifetime1++) {
-              var17[var24Lifetime1] = (byte)qg.field_i[var24Lifetime1];
+              var17[var24Lifetime1] = (byte)SoftwareRasterizer.pixels[var24Lifetime1];
             }
             var23Lifetime1 = 0;
             var24Lifetime2 = (var36[var16_int] + 1) * param1;
@@ -258,8 +258,8 @@ final class vh {
           var16.field_t = var16.field_t - param1;
           var16.field_K = var16.field_K - param1;
           var16.field_x = var16.field_x - param1;
-          qg.a(var45, var13, var14);
-          qg.b(var44);
+          SoftwareRasterizer.setTarget(var45, var13, var14);
+          SoftwareRasterizer.b(var44);
           if (param2 < 24) {
             field_h = -21;
           }
@@ -281,7 +281,7 @@ final class vh {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -308,7 +308,7 @@ final class vh {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

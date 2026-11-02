@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cg {
-    static String[] field_c;
+    static String[] levelNames;
     static byte[][][] field_i;
-    static ka field_g;
-    static ka[] field_d;
+    static Sprite field_g;
+    static Sprite[] field_d;
     static fe[] field_a;
     static int[] field_e;
     static boolean[][] field_h;
-    static ka[][][] field_b;
+    static Sprite[][][] field_b;
     static int[][] field_f;
 
     public static void b(byte param0) {
-        field_c = null;
+        levelNames = null;
         field_d = null;
         if (param0 == -13) {
-          field_b = (ka[][][]) null;
+          field_b = (Sprite[][][]) null;
           field_i = (byte[][][]) null;
           field_g = null;
           field_e = null;
@@ -49,9 +49,9 @@ final class cg {
 
     static {
         field_a = new fe[17];
-        field_c = new String[]{"Tower0", "Tower1", "Tower2", "Tower3", "Tower4", "Tower5", "boss1", "boss2", "boss3"};
+        levelNames = new String[]{"Tower0", "Tower1", "Tower2", "Tower3", "Tower4", "Tower5", "boss1", "boss2", "boss3"};
         field_e = new int[2];
-        field_b = new ka[3][2][32];
+        field_b = new Sprite[3][2][32];
         field_f = new int[][]{new int[]{0, 2, 0, 60, 140, 80}, new int[]{0, 1, 0, 60, 140, 80}, new int[]{0, 3, 0, 80, 120, 80}, new int[]{3, 5, 1, 160, 200, 0}, new int[]{0, 2, 0, 100, 40, 80}, new int[]{-1}, new int[]{3, 5, 1, 160, 200, 0}};
         field_h = new boolean[][]{new boolean[]{false, false, true, false, true, true}, new boolean[]{false, false, false, false, false, false}, new boolean[]{false, false, true, false, true, false}};
     }

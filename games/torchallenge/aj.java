@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aj {
-    static lj field_f;
+    static ResourceArchive field_f;
     static String field_a;
     static String[] field_e;
     static boolean field_h;
     static String field_d;
     static cf field_c;
-    static ka[] field_i;
+    static Sprite[] field_i;
     static java.applet.Applet field_g;
     static int field_b;
 
-    final static int a(byte param0, qe param1, int param2) {
+    final static int a(byte param0, LevelEntity param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -31,15 +31,15 @@ final class aj {
             return stackIn_3_0;
           }
           var4 = 0;
-          if (!vg.a(param1.field_F, -1)) {
+          if (!vg.a(param1.type, -1)) {
             return -1;
           }
           if (null != n.field_kb &&
             param1 != null &&
-            n.field_kb[param1.field_o][param1.field_H] != null) {
+            n.field_kb[param1.x][param1.y] != null) {
             for (var3_int = 0; 8 > var3_int; var3_int++) {
-              if (param2 == n.field_kb[param1.field_o][param1.field_H][var3_int]) {
-                n.field_kb[param1.field_o][param1.field_H][var3_int] = -1;
+              if (param2 == n.field_kb[param1.x][param1.y][var3_int]) {
+                n.field_kb[param1.x][param1.y][var3_int] = -1;
               }
             }
             stackIn_19_0 = 1;
@@ -57,7 +57,7 @@ final class aj {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class aj {
               return stackIn_8_0;
             }
             if (!param1) {
-              field_i = (ka[]) null;
+              field_i = (Sprite[]) null;
             }
             var3 = param0.substring(0, var2_int);
             var4 = param0.substring(var2_int + 1);
@@ -108,7 +108,7 @@ final class aj {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -138,11 +138,11 @@ final class aj {
         try {
           var13 = id.field_b;
           var15 = var13;
-          var2 = var15.j(-87);
-          var3 = (ue) (wl.field_b.c((byte) -63));
+          var2 = var15.readUnsignedByte(-87);
+          var3 = (ue) (wl.field_b.first((byte) -63));
           while (var3 != null) {
             if (var2 != var3.field_k) {
-              var3 = (ue) (wl.field_b.c(param0 - 5697));
+              var3 = (ue) (wl.field_b.next(param0 - 5697));
               continue;
             }
             break;
@@ -151,20 +151,20 @@ final class aj {
             ob.b(param0 ^ -5466);
             return;
           }
-          var4 = var15.j(-90);
+          var4 = var15.readUnsignedByte(-90);
           if (var4 != 0) {
             var5 = var3.field_m;
-            mf.field_b[0] = mf.field_a;
+            LevelDecoder.field_b[0] = LevelDecoder.field_a;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              mf.field_b[var6_int] = var13.b(false);
+              LevelDecoder.field_b[var6_int] = var13.readString(false);
             }
             hh.a(param0 ^ 5425, var5, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ob.a(-33, var15);
               if (var6_intLifetime1 == 0) {
-                dd.a(ia.field_j, var6_intLifetime1, 27715, jf.field_sb, uc.field_U, ti.field_e);
+                ImageProducerRasterBuffer.a(ia.field_j, var6_intLifetime1, 27715, jf.field_sb, uc.field_U, ti.field_e);
               } else {
-                dd.a(ia.field_j, var6_intLifetime1, param0 ^ 31088, jf.field_sb, uc.field_U, ti.field_e);
+                ImageProducerRasterBuffer.a(ia.field_j, var6_intLifetime1, param0 ^ 31088, jf.field_sb, uc.field_U, ti.field_e);
               }
             }
             hl.a((byte) -44, var5);
@@ -175,13 +175,13 @@ final class aj {
             var10 = 0;
             while (var8 > var9) {
               var11 = hi.field_G[var9];
-              var6[0][var10] = mf.field_b[var11];
+              var6[0][var10] = LevelDecoder.field_b[var11];
               var19[0][4 * var10] = bg.field_Q[var11];
-              var19[0][var10 * 4 + 1] = rk.field_p[var11];
+              var19[0][var10 * 4 + 1] = BufferedCacheFile.field_p[var11];
               var19[0][var10 * 4 + 2] = ea.field_a[var11];
               var19[0][3 + var10 * 4] = cb.field_e[var11];
-              if (jc.a(mf.field_b[var11], 26691) &&
-                ea.field_a[var11] + (rk.field_p[var11] + cb.field_e[var11]) == 0) {
+              if (jc.a(LevelDecoder.field_b[var11], 26691) &&
+                ea.field_a[var11] + (BufferedCacheFile.field_p[var11] + cb.field_e[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -193,13 +193,13 @@ final class aj {
             var10Lifetime1 = var14;
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = hi.field_G[var9Lifetime1 + var5];
-              var6[1][var14] = mf.field_b[var11Lifetime1];
+              var6[1][var14] = LevelDecoder.field_b[var11Lifetime1];
               var19[1][var14 * 4] = bg.field_Q[var11Lifetime1];
-              var19[1][1 + 4 * var14] = rk.field_p[var11Lifetime1];
+              var19[1][1 + 4 * var14] = BufferedCacheFile.field_p[var11Lifetime1];
               var19[1][2 + var14 * 4] = ea.field_a[var11Lifetime1];
               var19[1][3 + 4 * var14] = cb.field_e[var11Lifetime1];
-              if (jc.a(mf.field_b[var11Lifetime1], 26691) &&
-                rk.field_p[var11Lifetime1] + (ea.field_a[var11Lifetime1] + cb.field_e[var11Lifetime1]) == 0) {
+              if (jc.a(LevelDecoder.field_b[var11Lifetime1], 26691) &&
+                BufferedCacheFile.field_p[var11Lifetime1] + (ea.field_a[var11Lifetime1] + cb.field_e[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -210,12 +210,12 @@ final class aj {
           if (param0 != 5427) {
             return;
           }
-          var3.a(true);
+          var3.unlink(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "aj.A(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "aj.A(" + param0 + ')');
         }
     }
 
@@ -244,7 +244,7 @@ final class aj {
           if (param0 != 3) {
             field_g = (java.applet.Applet) null;
           }
-          if (!d.p(-82)) {
+          if (!GameClientBase.p(-82)) {
             if (!li.field_N) {
               if (null == qa.field_g) {
                 qa.field_g = be.a(4, 31315);
@@ -258,7 +258,7 @@ final class aj {
             }
             if (eb.field_l != null &&
               eb.field_l.field_j) {
-              if (gl.field_a &&
+              if (SocketConnector.field_a &&
                 null != eb.field_l.field_q &&
                 null != hf.field_d) {
                 vl.a(eb.field_l.field_q, 10);
@@ -266,32 +266,32 @@ final class aj {
                   jl.a((byte) 121);
                 }
                 if (!bh.field_p &&
-                  !d.p(param0 ^ -99)) {
-                  wj.field_b.a(new eh(hf.field_d), -55);
+                  !GameClientBase.p(param0 ^ -99)) {
+                  wj.field_b.addLast(new eh(hf.field_d), -55);
                 }
                 if (vh.field_d == null) {
-                  gl.field_a = false;
+                  SocketConnector.field_a = false;
                 }
-              } else if (gl.field_a &&
+              } else if (SocketConnector.field_a &&
                 null == eb.field_l.field_q &&
                 hf.field_d != null) {
                 jl.a((byte) 123);
                 if (!bh.field_p &&
-                  !d.p(-86)) {
-                  wj.field_b.a(new eh(hf.field_d), -82);
+                  !GameClientBase.p(-86)) {
+                  wj.field_b.addLast(new eh(hf.field_d), -82);
                 }
                 if (vh.field_d == null) {
-                  gl.field_a = false;
+                  SocketConnector.field_a = false;
                 }
               } else {
                 hf.field_d = eb.field_l.field_q;
-                if (gl.field_a) {
-                  gl.field_a = false;
+                if (SocketConnector.field_a) {
+                  SocketConnector.field_a = false;
                 }
                 if (null != hf.field_d) {
                   jl.a((byte) 114);
                   if (vh.field_d == null) {
-                    vf.b((byte) 109);
+                    MouseInputHandler.b((byte) 109);
                   }
                 }
               }
@@ -314,21 +314,21 @@ final class aj {
             if (var1_intLifetime1 != 0) {
               vh.field_d = null;
               if (eb.field_l == null &&
-                !gl.field_a) {
-                vf.b((byte) 115);
+                !SocketConnector.field_a) {
+                MouseInputHandler.b((byte) 115);
                 return;
               }
               if (eb.field_l != null) {
                 return;
               }
-              gl.field_a = false;
+              SocketConnector.field_a = false;
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "aj.E(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "aj.E(" + param0 + ')');
         }
     }
 

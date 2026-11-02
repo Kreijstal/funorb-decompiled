@@ -7,7 +7,7 @@ final class pe extends v {
     private boolean field_ib;
     private String field_fb;
     private boolean field_cb;
-    static ka[] field_eb;
+    static Sprite[] field_eb;
     static int[] field_db;
     static int[] field_gb;
     private ek field_bb;
@@ -36,7 +36,7 @@ final class pe extends v {
           this.field_bb.field_L = true;
           this.a(0, this.field_bb);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class pe extends v {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -95,21 +95,21 @@ final class pe extends v {
         super.c(param0, param1, param2);
         dl.field_H.a(this.field_fb, (this.field_p >> 1) + param2, 103 + param1, 16777215, -1);
         if (this.field_hb != null) {
-          qg.b(20 + param2, 120 + (param1 - 7), 260, 8421504);
+          SoftwareRasterizer.b(20 + param2, 120 + (param1 - 7), 260, 8421504);
           dl.field_H.a(this.field_hb, 20 + param2, 8 + param1 + 120, 260, 100, 16777215, -1, 1, 0, dl.field_H.field_x);
         }
     }
 
-    final static lj b(int param0, int param1) {
+    final static ResourceArchive b(int param0, int param1) {
         if (param1 != -1) {
-          return (lj) null;
+          return (ResourceArchive) null;
         }
         return bb.a(param0, true, 1, (byte) 95, false, false);
     }
 
     final static boolean a(byte param0, int param1) {
         try {
-          if (!(id.field_b.field_q < param1)) {
+          if (!(id.field_b.position < param1)) {
             return true;
           }
           if (param0 < 58) {
@@ -120,22 +120,22 @@ final class pe extends v {
           }
           int var2_int = qf.field_a.a(0);
           if (var2_int > 0) {
-            if (!(-id.field_b.field_q + param1 >= var2_int)) {
-              var2_int = param1 - id.field_b.field_q;
+            if (!(-id.field_b.position + param1 >= var2_int)) {
+              var2_int = param1 - id.field_b.position;
             }
-            qf.field_a.a(-1, id.field_b.field_q, var2_int, id.field_b.field_m);
+            qf.field_a.a(-1, id.field_b.position, var2_int, id.field_b.payload);
             ac.field_e = ol.a(256);
-            id.field_b.field_q = id.field_b.field_q + var2_int;
-            if (!(param1 <= id.field_b.field_q)) {
+            id.field_b.position = id.field_b.position + var2_int;
+            if (!(param1 <= id.field_b.position)) {
               return false;
             }
-            id.field_b.field_q = 0;
+            id.field_b.position = 0;
             return true;
           }
           try {
             if (false) throw (IOException) null;
             if (var2_int >= 0 &&
-              fc.e(106) <= 30000L) {
+              ProxySocketConnector.e(106) <= 30000L) {
               return false;
             }
             ob.b(-111);

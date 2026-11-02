@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj extends kj implements sg {
-    private eg field_P;
+    private BitmapFont field_P;
     static int[] field_S;
     static int field_N;
     private String field_Q;
@@ -46,7 +46,7 @@ final class sj extends kj implements sg {
         this.field_M = param0;
     }
 
-    sj(wa param0, eg param1, String param2) {
+    sj(wa param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (j) null);
         int var4_int = 0;
         this.field_M = 0;
@@ -57,7 +57,7 @@ final class sj extends kj implements sg {
           var4_int = this.field_Q == null ? 0 : this.field_P.b(this.field_Q, 260, this.field_P.field_x);
           this.a((byte) 106, 0, 22 + var4_int, 288, 0);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class sj extends kj implements sg {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ final class sj extends kj implements sg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class sj extends kj implements sg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

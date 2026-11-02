@@ -5,7 +5,7 @@ final class qa {
     static int field_b;
     static int field_h;
     static boolean[] field_i;
-    static ka[] field_e;
+    static Sprite[] field_e;
     static String field_c;
     private String field_j;
     static int field_a;
@@ -17,7 +17,7 @@ final class qa {
     final static ge a(int[] param0, int param1, ge param2) {
         ge var3 = null;
         RuntimeException var3_ref = null;
-        qe var4 = null;
+        LevelEntity var4 = null;
         ge stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -36,8 +36,8 @@ final class qa {
           var3.field_l = param0;
           var3.field_a = param2.field_a;
           if (param1 != -1) {
-            var4 = (qe) null;
-            qa.a(2, -104, 38, (qe) null, 16, -8, 43, -66, -92, -17);
+            var4 = (LevelEntity) null;
+            qa.a(2, -104, 38, (LevelEntity) null, 16, -8, 43, -66, -92, -17);
           }
           stackIn_3_0 = var3;
           return stackIn_3_0;
@@ -57,7 +57,7 @@ final class qa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class qa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -98,11 +98,11 @@ final class qa {
             qa.a(-28, (CharSequence[]) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "qa.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "qa.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, qe param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void a(int param0, int param1, int param2, LevelEntity param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -127,7 +127,7 @@ final class qa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -202,15 +202,15 @@ final class qa {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_g = null;
         if (param0 != -1) {
-          qe var2 = (qe) null;
-          qa.a(36, -77, 17, (qe) null, -32, 109, -70, -100, 87, -49);
+          LevelEntity var2 = (LevelEntity) null;
+          qa.a(36, -77, 17, (LevelEntity) null, -32, 109, -70, -100, 87, -49);
         }
         field_i = null;
         field_d = null;
@@ -253,7 +253,7 @@ final class qa {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

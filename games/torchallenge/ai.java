@@ -60,7 +60,7 @@ final class ai {
               if (ef.field_h[var1_int] != null) {
                 for (var2 = 0; ef.field_h[var1_int].length > var2; var2++) {
                   if (ef.field_h[var1_int][var2] != null) {
-                    ef.field_h[var1_int][var2].field_y = null;
+                    ef.field_h[var1_int][var2].pixels = null;
                   }
                   ef.field_h[var1_int][var2] = null;
                 }
@@ -71,12 +71,12 @@ final class ai {
           if (param0 != 0) {
             ai.a(68);
           }
-          ef.field_h = (ka[][]) null;
+          ef.field_h = (Sprite[][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "ai.C(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "ai.C(" + param0 + ')');
         }
     }
 

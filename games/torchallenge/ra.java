@@ -19,7 +19,7 @@ final class ra {
     private int[][][] field_e;
     private int[][] field_c;
     static boolean field_q;
-    static ka[][] field_b;
+    static Sprite[][] field_b;
     private int[][] field_h;
     static int[][] field_p;
     private int[][] field_n;
@@ -35,20 +35,20 @@ final class ra {
         }
         for (var11 = 0; 1 >= var11; var11++) {
           if (0 == var11) {
-            var10 = gl.field_l[param0][param2][0][1];
-            var9 = gl.field_l[param0][param2][0][0];
+            var10 = SocketConnector.field_l[param0][param2][0][1];
+            var9 = SocketConnector.field_l[param0][param2][0][0];
           } else {
             if (0 == param2 &&
               var11 == 1) {
-              var10 = gl.field_l[param0][param2][1][1];
-              var9 = gl.field_l[param0][param2][0][1];
+              var10 = SocketConnector.field_l[param0][param2][1][1];
+              var9 = SocketConnector.field_l[param0][param2][0][1];
             } else {
-              var9 = gl.field_l[param0][param2][1][0];
-              var10 = gl.field_l[param0][param2][0][0];
+              var9 = SocketConnector.field_l[param0][param2][1][0];
+              var10 = SocketConnector.field_l[param0][param2][0][0];
             }
           }
-          qg.a(ae.field_y);
-          qg.a(var9, param1, var10, param4);
+          SoftwareRasterizer.a(ae.field_y);
+          SoftwareRasterizer.a(var9, param1, var10, param4);
           if ((1 & ic.field_E[vb.field_a[param0][param2]][param5]) > 0) {
             sf.field_d[param6][param2][var11].a(var9, param1);
           }
@@ -61,7 +61,7 @@ final class ra {
           if ((8 & ic.field_E[vb.field_a[param0][param2]][param5]) > 0) {
             sf.field_d[param6][param2][var11].a(var9, 48 + param1);
           }
-          qg.b(ae.field_y);
+          SoftwareRasterizer.b(ae.field_y);
         }
         return;
     }
@@ -74,10 +74,10 @@ final class ra {
           return -37;
         }
         if (kf.field_b == 0) {
-          if (!sl.field_a.b(param0 - 7958)) {
+          if (!IntrusiveDeque.field_a.b(param0 - 7958)) {
             return 20;
           }
-          if (!sl.field_a.b(param0 + 4, "commonui")) {
+          if (!IntrusiveDeque.field_a.b(param0 + 4, "commonui")) {
             return 40;
           }
           if (!gf.field_p.b(-7957)) {
@@ -104,10 +104,10 @@ final class ra {
               return 29;
             }
           }
-          if (!sl.field_a.b(-7957)) {
+          if (!IntrusiveDeque.field_a.b(-7957)) {
             return 43;
           }
-          if (!sl.field_a.b(param0 ^ 4, "commonui")) {
+          if (!IntrusiveDeque.field_a.b(param0 ^ 4, "commonui")) {
             return 57;
           }
           if (!gf.field_p.b(param0 - 7958)) {
@@ -181,7 +181,7 @@ final class ra {
         return false;
     }
 
-    final void a(boolean param0, int param1, boolean param2, ka param3, int param4, int param5, int param6, int param7, int param8) {
+    final void a(boolean param0, int param1, boolean param2, Sprite param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_25_0;
         int stackIn_25_1;
         int stackIn_25_2;
@@ -209,7 +209,7 @@ final class ra {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        ka var26 = null;
+        Sprite var26 = null;
         int stackIn_68_0Lifetime1;
         int stackIn_70_1Lifetime1;
         int stackIn_71_2Lifetime1;
@@ -236,7 +236,7 @@ final class ra {
           var16 = null;
           var17 = null;
           je.field_i = false;
-          qg.a(vd.field_e);
+          SoftwareRasterizer.a(vd.field_e);
           if (var10_int < 0) {
             var11 = var11 - var10_int;
             var10_int = 0;
@@ -250,25 +250,25 @@ final class ra {
           if (param4 == 3 &&
             param2) {
             if (ub.field_i) {
-              qg.a(0, 0, 640, 480 - td.field_n);
+              SoftwareRasterizer.a(0, 0, 640, 480 - td.field_n);
             }
-            qg.c(0, 0, 25, this.field_a * 64, 14022908, 10533565);
-            qg.c(615, 0, 25, 64 * this.field_a, 14022908, 10533565);
-            og.a(param5, param6, -15516);
+            SoftwareRasterizer.c(0, 0, 25, this.field_a * 64, 14022908, 10533565);
+            SoftwareRasterizer.c(615, 0, 25, 64 * this.field_a, 14022908, 10533565);
+            MouseWheelInput.a(param5, param6, -15516);
             if (ub.field_i) {
-              qg.b(vd.field_e);
+              SoftwareRasterizer.b(vd.field_e);
             }
           }
           for (var18 = -24; 0 >= var18; var18++) {
             if (var18 < -16) {
-              qg.b(vd.field_e);
-              qg.a(0, 0, 25, 480);
+              SoftwareRasterizer.b(vd.field_e);
+              SoftwareRasterizer.a(0, 0, 25, 480);
             } else {
               if (var18 == -16) {
-                qg.b(vd.field_e);
+                SoftwareRasterizer.b(vd.field_e);
               }
             }
-            L11: {
+            regionExit1: {
               boolean decompiledFrameCompleted0 = true;
               var19 = 8 + (16 + var18);
               var12Lifetime1 = -param6 + 64 * var10_int;
@@ -287,15 +287,15 @@ final class ra {
                   if (var19 == 0) {
                     this.field_n[0][var20] = vb.field_a[var19][var20];
                   }
-                  var14 = -gl.field_l[var19][var20][1][0] + gl.field_l[var19][var20][1][1];
+                  var14 = -SocketConnector.field_l[var19][var20][1][0] + SocketConnector.field_l[var19][var20][1][1];
                   if (var14 > 0) {
                     cf.a(32, this.field_f, this.field_h[vb.field_a[var19][var20]], var14, false);
-                    this.field_t[var20][0] = gl.field_l[var19][var20][1][0];
-                    this.field_t[var20][1] = gl.field_l[var19][var20][1][1];
-                    this.field_s[var20][0] = gl.field_l[var19][var20][2][0];
-                    this.field_s[var20][1] = gl.field_l[var19][var20][2][1];
-                    this.field_o[var20][0][0] = gl.field_l[var19][var20][0][0];
-                    this.field_o[var20][0][1] = gl.field_l[var19][var20][0][1];
+                    this.field_t[var20][0] = SocketConnector.field_l[var19][var20][1][0];
+                    this.field_t[var20][1] = SocketConnector.field_l[var19][var20][1][1];
+                    this.field_s[var20][0] = SocketConnector.field_l[var19][var20][2][0];
+                    this.field_s[var20][1] = SocketConnector.field_l[var19][var20][2][1];
+                    this.field_o[var20][0][0] = SocketConnector.field_l[var19][var20][0][0];
+                    this.field_o[var20][0][1] = SocketConnector.field_l[var19][var20][0][1];
                     var15 = 1 & vb.field_a[var19][var20];
                     sh.a(var15, -100, this.field_f, var20, this.field_s, this.field_t, var18);
                     if (param3 != null) {
@@ -305,14 +305,14 @@ final class ra {
                 }
               } else if (param4 == 6) {
                 for (var20 = 0; var20 <= 1; var20++) {
-                  this.field_o[var20][0][0] = gl.field_l[var19][var20][0][0];
-                  this.field_o[var20][0][1] = gl.field_l[var19][var20][0][1];
+                  this.field_o[var20][0][0] = SocketConnector.field_l[var19][var20][0][0];
+                  this.field_o[var20][0][1] = SocketConnector.field_l[var19][var20][0][1];
                   if (var20 != 0) {
-                    this.field_o[var20][1][0] = gl.field_l[var19][var20][1][0];
-                    this.field_o[var20][1][1] = gl.field_l[var19][var20][0][0];
+                    this.field_o[var20][1][0] = SocketConnector.field_l[var19][var20][1][0];
+                    this.field_o[var20][1][1] = SocketConnector.field_l[var19][var20][0][0];
                   } else {
-                    this.field_o[var20][1][0] = gl.field_l[var19][var20][0][1];
-                    this.field_o[var20][1][1] = gl.field_l[var19][var20][1][1];
+                    this.field_o[var20][1][0] = SocketConnector.field_l[var19][var20][0][1];
+                    this.field_o[var20][1][1] = SocketConnector.field_l[var19][var20][1][1];
                   }
                   var15 = vb.field_a[var19][var20] & 1;
                   si.a(var18, this.field_e[vb.field_a[var19][var20]], var20, this.field_o, var15, 1);
@@ -323,7 +323,7 @@ final class ra {
               } else {
                 var20 = var10_int;
                 if (var11 <= var20) {
-                  break L11;
+                  break regionExit1;
                 }
                 var21 = 0;
                 if (var21 > 1) {
@@ -344,7 +344,7 @@ final class ra {
                         }
                       } else {
                         if (-16 > var18) {
-                          qg.b(vd.field_e);
+                          SoftwareRasterizer.b(vd.field_e);
                           stackIn_68_0 = (var21 == 0) ? 0 : 615;
                           stackIn_70_1 = 0;
                           if (0 == var21) {
@@ -352,13 +352,13 @@ final class ra {
                           } else {
                             stackIn_71_2 = 640;
                           }
-                          qg.a(stackIn_68_0, stackIn_70_1, stackIn_71_2, 480);
+                          SoftwareRasterizer.a(stackIn_68_0, stackIn_70_1, stackIn_71_2, 480);
                         } else {
                           if (var18 == -16) {
-                            qg.b(vd.field_e);
+                            SoftwareRasterizer.b(vd.field_e);
                           }
                         }
-                        var14 = gl.field_l[var19][var21][1][1] - gl.field_l[var19][var21][1][0];
+                        var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
                         if (param4 == 3 &&
                           var14 > 0) {
                           if ((64 & ic.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
@@ -376,47 +376,47 @@ final class ra {
                         }
                         if (6 == param4 &&
                           param0) {
-                          qg.a(ae.field_y);
+                          SoftwareRasterizer.a(ae.field_y);
                           var17 = hi.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
-                          qg.b(ae.field_y);
+                          SoftwareRasterizer.b(ae.field_y);
                           var16 = hi.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
-                          qg.b(ae.field_y);
+                          SoftwareRasterizer.b(ae.field_y);
                         }
                         if (param4 == 6 &&
                           0 == (16 & ic.field_E[vb.field_a[var19][var21]][var20])) {
-                          qg.a(ae.field_y);
+                          SoftwareRasterizer.a(ae.field_y);
                           var22 = this.field_r[vb.field_a[var19][var21]][var20];
                           this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22, -10440);
-                          qg.b(ae.field_y);
+                          SoftwareRasterizer.b(ae.field_y);
                         }
                         if (param4 == 2 &&
                           param0) {
-                          qg.a(ae.field_y);
+                          SoftwareRasterizer.a(ae.field_y);
                           var16 = hi.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
-                          qg.b(ae.field_y);
+                          SoftwareRasterizer.b(ae.field_y);
                         }
                         if (6 == param4) {
-                          if (gl.field_l[var19][var21][0][0] <= param7 &&
+                          if (SocketConnector.field_l[var19][var21][0][0] <= param7 &&
                             var12Lifetime1 <= param8 &&
                             param8 < var12Lifetime1 + 64 &&
-                            gl.field_l[var19][var21][0][1] > param7) {
+                            SocketConnector.field_l[var19][var21][0][1] > param7) {
                             this.field_l = vb.field_a[var19][var21];
                             this.field_i = var20;
                           }
                           if (vb.field_a[var19][var21] == this.field_l &&
                             this.field_i == var20 &&
                             ol.field_a) {
-                            qg.a(ae.field_y);
-                            qg.b(vd.field_e);
-                            qg.b(gl.field_l[var19][var21][0][0], var12Lifetime1, -gl.field_l[var19][var21][0][0] + gl.field_l[var19][var21][0][1], 64, 16777215);
-                            qg.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
+                            SoftwareRasterizer.a(ae.field_y);
+                            SoftwareRasterizer.b(vd.field_e);
+                            SoftwareRasterizer.b(SocketConnector.field_l[var19][var21][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21][0][0] + SocketConnector.field_l[var19][var21][0][1], 64, 16777215);
+                            SoftwareRasterizer.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
                             if (var16 != null &&
-                              md.field_j == null) {
-                              md.field_j = (qe) (var16);
+                              NodeHashTableIterator.field_j == null) {
+                              NodeHashTableIterator.field_j = (LevelEntity) (var16);
                             } else {
                               if (var17 != null &&
-                                null == md.field_j) {
-                                md.field_j = (qe) (var17);
+                                null == NodeHashTableIterator.field_j) {
+                                NodeHashTableIterator.field_j = (LevelEntity) (var17);
                               }
                             }
                           }
@@ -440,7 +440,7 @@ final class ra {
                           var12Lifetime1 += 64;
                           var20++;
                           if (var11 <= var20) {
-                            break L11;
+                            break regionExit1;
                           }
                           var21 = 0;
                         }
@@ -449,7 +449,7 @@ final class ra {
                           break;
                         }
                         if (-16 > var18) {
-                          qg.b(vd.field_e);
+                          SoftwareRasterizer.b(vd.field_e);
                           stackIn_68_0Lifetime2 = (var21 == 0) ? 0 : 615;
                           stackIn_70_1Lifetime2 = 0;
                           if (0 == var21) {
@@ -457,13 +457,13 @@ final class ra {
                           } else {
                             stackIn_71_2Lifetime2 = 640;
                           }
-                          qg.a(stackIn_68_0Lifetime2, stackIn_70_1Lifetime2, stackIn_71_2Lifetime2, 480);
+                          SoftwareRasterizer.a(stackIn_68_0Lifetime2, stackIn_70_1Lifetime2, stackIn_71_2Lifetime2, 480);
                         } else {
                           if (var18 == -16) {
-                            qg.b(vd.field_e);
+                            SoftwareRasterizer.b(vd.field_e);
                           }
                         }
-                        var14 = gl.field_l[var19][var21][1][1] - gl.field_l[var19][var21][1][0];
+                        var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
                         if (param4 == 3 &&
                           var14 > 0) {
                           if ((64 & ic.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
@@ -481,32 +481,32 @@ final class ra {
                         }
                         if (6 == param4 &&
                           param0) {
-                          qg.a(ae.field_y);
+                          SoftwareRasterizer.a(ae.field_y);
                           var17 = hi.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
-                          qg.b(ae.field_y);
+                          SoftwareRasterizer.b(ae.field_y);
                           var16 = hi.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
-                          qg.b(ae.field_y);
+                          SoftwareRasterizer.b(ae.field_y);
                         }
                         if (param4 == 6 &&
                           0 == (16 & ic.field_E[vb.field_a[var19][var21]][var20])) {
-                          qg.a(ae.field_y);
+                          SoftwareRasterizer.a(ae.field_y);
                           var22Lifetime2 = this.field_r[vb.field_a[var19][var21]][var20];
                           this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22Lifetime2, -10440);
-                          qg.b(ae.field_y);
+                          SoftwareRasterizer.b(ae.field_y);
                         }
                         if (param4 == 2 &&
                           param0) {
-                          qg.a(ae.field_y);
+                          SoftwareRasterizer.a(ae.field_y);
                           var16 = hi.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
-                          qg.b(ae.field_y);
+                          SoftwareRasterizer.b(ae.field_y);
                         }
                         if (6 != param4) {
                           continue;
                         }
-                        if (gl.field_l[var19][var21][0][0] <= param7 &&
+                        if (SocketConnector.field_l[var19][var21][0][0] <= param7 &&
                           var12Lifetime1 <= param8 &&
                           param8 < var12Lifetime1 + 64 &&
-                          gl.field_l[var19][var21][0][1] > param7) {
+                          SocketConnector.field_l[var19][var21][0][1] > param7) {
                           this.field_l = vb.field_a[var19][var21];
                           this.field_i = var20;
                         }
@@ -519,28 +519,28 @@ final class ra {
                         if (!ol.field_a) {
                           continue;
                         }
-                        qg.a(ae.field_y);
-                        qg.b(vd.field_e);
-                        qg.b(gl.field_l[var19][var21][0][0], var12Lifetime1, -gl.field_l[var19][var21][0][0] + gl.field_l[var19][var21][0][1], 64, 16777215);
-                        qg.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
+                        SoftwareRasterizer.a(ae.field_y);
+                        SoftwareRasterizer.b(vd.field_e);
+                        SoftwareRasterizer.b(SocketConnector.field_l[var19][var21][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21][0][0] + SocketConnector.field_l[var19][var21][0][1], 64, 16777215);
+                        SoftwareRasterizer.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
                         if (var16 != null &&
-                          md.field_j == null) {
-                          md.field_j = (qe) (var16);
+                          NodeHashTableIterator.field_j == null) {
+                          NodeHashTableIterator.field_j = (LevelEntity) (var16);
                           continue;
                         }
                         if (var17 == null) {
                           continue;
                         }
-                        if (null != md.field_j) {
+                        if (null != NodeHashTableIterator.field_j) {
                           continue;
                         }
-                        md.field_j = (qe) (var17);
+                        NodeHashTableIterator.field_j = (LevelEntity) (var17);
                       }
                     }
                   }
                   while (true) {
                     if (-16 > var18) {
-                      qg.b(vd.field_e);
+                      SoftwareRasterizer.b(vd.field_e);
                       stackIn_68_0Lifetime2 = (var21 == 0) ? 0 : 615;
                       stackIn_70_1Lifetime2 = 0;
                       if (0 == var21) {
@@ -548,13 +548,13 @@ final class ra {
                       } else {
                         stackIn_71_2Lifetime2 = 640;
                       }
-                      qg.a(stackIn_68_0Lifetime2, stackIn_70_1Lifetime2, stackIn_71_2Lifetime2, 480);
+                      SoftwareRasterizer.a(stackIn_68_0Lifetime2, stackIn_70_1Lifetime2, stackIn_71_2Lifetime2, 480);
                     } else {
                       if (var18 == -16) {
-                        qg.b(vd.field_e);
+                        SoftwareRasterizer.b(vd.field_e);
                       }
                     }
-                    var14 = gl.field_l[var19][var21][1][1] - gl.field_l[var19][var21][1][0];
+                    var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
                     if (param4 == 3 &&
                       var14 > 0) {
                       if ((64 & ic.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
@@ -572,47 +572,47 @@ final class ra {
                     }
                     if (6 == param4 &&
                       param0) {
-                      qg.a(ae.field_y);
+                      SoftwareRasterizer.a(ae.field_y);
                       var17 = hi.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
-                      qg.b(ae.field_y);
+                      SoftwareRasterizer.b(ae.field_y);
                       var16 = hi.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
-                      qg.b(ae.field_y);
+                      SoftwareRasterizer.b(ae.field_y);
                     }
                     if (param4 == 6 &&
                       0 == (16 & ic.field_E[vb.field_a[var19][var21]][var20])) {
-                      qg.a(ae.field_y);
+                      SoftwareRasterizer.a(ae.field_y);
                       var22Lifetime2 = this.field_r[vb.field_a[var19][var21]][var20];
                       this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22Lifetime2, -10440);
-                      qg.b(ae.field_y);
+                      SoftwareRasterizer.b(ae.field_y);
                     }
                     if (param4 == 2 &&
                       param0) {
-                      qg.a(ae.field_y);
+                      SoftwareRasterizer.a(ae.field_y);
                       var16 = hi.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
-                      qg.b(ae.field_y);
+                      SoftwareRasterizer.b(ae.field_y);
                     }
                     if (6 == param4) {
-                      if (gl.field_l[var19][var21][0][0] <= param7 &&
+                      if (SocketConnector.field_l[var19][var21][0][0] <= param7 &&
                         var12Lifetime1 <= param8 &&
                         param8 < var12Lifetime1 + 64 &&
-                        gl.field_l[var19][var21][0][1] > param7) {
+                        SocketConnector.field_l[var19][var21][0][1] > param7) {
                         this.field_l = vb.field_a[var19][var21];
                         this.field_i = var20;
                       }
                       if (vb.field_a[var19][var21] == this.field_l &&
                         this.field_i == var20 &&
                         ol.field_a) {
-                        qg.a(ae.field_y);
-                        qg.b(vd.field_e);
-                        qg.b(gl.field_l[var19][var21][0][0], var12Lifetime1, -gl.field_l[var19][var21][0][0] + gl.field_l[var19][var21][0][1], 64, 16777215);
-                        qg.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
+                        SoftwareRasterizer.a(ae.field_y);
+                        SoftwareRasterizer.b(vd.field_e);
+                        SoftwareRasterizer.b(SocketConnector.field_l[var19][var21][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21][0][0] + SocketConnector.field_l[var19][var21][0][1], 64, 16777215);
+                        SoftwareRasterizer.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
                         if (var16 != null &&
-                          md.field_j == null) {
-                          md.field_j = (qe) (var16);
+                          NodeHashTableIterator.field_j == null) {
+                          NodeHashTableIterator.field_j = (LevelEntity) (var16);
                         } else {
                           if (var17 != null &&
-                            null == md.field_j) {
-                            md.field_j = (qe) (var17);
+                            null == NodeHashTableIterator.field_j) {
+                            NodeHashTableIterator.field_j = (LevelEntity) (var17);
                           }
                         }
                       }
@@ -623,7 +623,7 @@ final class ra {
                         var12Lifetime1 += 64;
                         var20++;
                         if (var11 <= var20) {
-                          break L11;
+                          break regionExit1;
                         }
                         var21 = 0;
                       }
@@ -657,7 +657,7 @@ final class ra {
                       }
                     } else {
                       if (-16 > var18) {
-                        qg.b(vd.field_e);
+                        SoftwareRasterizer.b(vd.field_e);
                         stackIn_68_0Lifetime1 = (var21Lifetime1 == 0) ? 0 : 615;
                         stackIn_70_1Lifetime1 = 0;
                         if (0 == var21Lifetime1) {
@@ -665,13 +665,13 @@ final class ra {
                         } else {
                           stackIn_71_2Lifetime1 = 640;
                         }
-                        qg.a(stackIn_68_0Lifetime1, stackIn_70_1Lifetime1, stackIn_71_2Lifetime1, 480);
+                        SoftwareRasterizer.a(stackIn_68_0Lifetime1, stackIn_70_1Lifetime1, stackIn_71_2Lifetime1, 480);
                       } else {
                         if (var18 == -16) {
-                          qg.b(vd.field_e);
+                          SoftwareRasterizer.b(vd.field_e);
                         }
                       }
-                      var14Lifetime1 = gl.field_l[var19][var21Lifetime1][1][1] - gl.field_l[var19][var21Lifetime1][1][0];
+                      var14Lifetime1 = SocketConnector.field_l[var19][var21Lifetime1][1][1] - SocketConnector.field_l[var19][var21Lifetime1][1][0];
                       if (param4 == 3 &&
                         var14Lifetime1 > 0) {
                         if ((64 & ic.field_E[vb.field_a[var19][var21Lifetime1]][var20Lifetime2]) <= 0) {
@@ -689,47 +689,47 @@ final class ra {
                       }
                       if (6 == param4 &&
                         param0) {
-                        qg.a(ae.field_y);
+                        SoftwareRasterizer.a(ae.field_y);
                         var17 = hi.a(param6, vb.field_a[var19][var21Lifetime1], param5, 0, 101, var20Lifetime2);
-                        qg.b(ae.field_y);
+                        SoftwareRasterizer.b(ae.field_y);
                         var16 = hi.a(param6, vb.field_a[var19][var21Lifetime1], param5, 1, 115, var20Lifetime2);
-                        qg.b(ae.field_y);
+                        SoftwareRasterizer.b(ae.field_y);
                       }
                       if (param4 == 6 &&
                         0 == (16 & ic.field_E[vb.field_a[var19][var21Lifetime1]][var20Lifetime2])) {
-                        qg.a(ae.field_y);
+                        SoftwareRasterizer.a(ae.field_y);
                         var22Lifetime1Lifetime1 = this.field_r[vb.field_a[var19][var21Lifetime1]][var20Lifetime2];
                         this.a(var19, var12Lifetime1, var21Lifetime1, var18, var12Lifetime1 + 64, var20Lifetime2, var22Lifetime1Lifetime1, -10440);
-                        qg.b(ae.field_y);
+                        SoftwareRasterizer.b(ae.field_y);
                       }
                       if (param4 == 2 &&
                         param0) {
-                        qg.a(ae.field_y);
+                        SoftwareRasterizer.a(ae.field_y);
                         var16 = hi.a(param6, vb.field_a[var19][var21Lifetime1], param5, 2, 113, var20Lifetime2);
-                        qg.b(ae.field_y);
+                        SoftwareRasterizer.b(ae.field_y);
                       }
                       if (6 == param4) {
-                        if (gl.field_l[var19][var21Lifetime1][0][0] <= param7 &&
+                        if (SocketConnector.field_l[var19][var21Lifetime1][0][0] <= param7 &&
                           var12Lifetime1 <= param8 &&
                           param8 < var12Lifetime1 + 64 &&
-                          gl.field_l[var19][var21Lifetime1][0][1] > param7) {
+                          SocketConnector.field_l[var19][var21Lifetime1][0][1] > param7) {
                           this.field_l = vb.field_a[var19][var21Lifetime1];
                           this.field_i = var20Lifetime2;
                         }
                         if (vb.field_a[var19][var21Lifetime1] == this.field_l &&
                           this.field_i == var20Lifetime2 &&
                           ol.field_a) {
-                          qg.a(ae.field_y);
-                          qg.b(vd.field_e);
-                          qg.b(gl.field_l[var19][var21Lifetime1][0][0], var12Lifetime1, -gl.field_l[var19][var21Lifetime1][0][0] + gl.field_l[var19][var21Lifetime1][0][1], 64, 16777215);
-                          qg.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
+                          SoftwareRasterizer.a(ae.field_y);
+                          SoftwareRasterizer.b(vd.field_e);
+                          SoftwareRasterizer.b(SocketConnector.field_l[var19][var21Lifetime1][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21Lifetime1][0][0] + SocketConnector.field_l[var19][var21Lifetime1][0][1], 64, 16777215);
+                          SoftwareRasterizer.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
                           if (var16 != null &&
-                            md.field_j == null) {
-                            md.field_j = (qe) (var16);
+                            NodeHashTableIterator.field_j == null) {
+                            NodeHashTableIterator.field_j = (LevelEntity) (var16);
                           } else {
                             if (var17 != null &&
-                              null == md.field_j) {
-                              md.field_j = (qe) (var17);
+                              null == NodeHashTableIterator.field_j) {
+                              NodeHashTableIterator.field_j = (LevelEntity) (var17);
                             }
                           }
                         }
@@ -742,8 +742,8 @@ final class ra {
             }
           }
           if (param1 != 18) {
-            var26 = (ka) null;
-            this.a(false, 6, false, (ka) null, 26, -8, -26, -57, 72);
+            var26 = (Sprite) null;
+            this.a(false, 6, false, (Sprite) null, 26, -8, -26, -57, 72);
           }
           if (param4 == 3) {
             nb.a((byte) 42, this.field_n);
@@ -755,19 +755,19 @@ final class ra {
               var18Lifetime1++;
             }
             var19Lifetime1 = 480 + (-td.field_n - 16);
-            jf.field_qb.field_q = qg.field_g;
-            jf.field_qb.field_u = jf.field_qb.field_q;
-            jf.field_qb.field_v = qg.field_f;
-            jf.field_qb.field_x = jf.field_qb.field_v;
-            mb.field_c.field_q = qg.field_g;
-            jf.field_qb.field_y = qg.field_i;
-            mb.field_c.field_v = qg.field_f;
-            mb.field_c.field_u = mb.field_c.field_q;
-            mb.field_c.field_y = qg.field_i;
-            mb.field_c.field_x = mb.field_c.field_v;
-            qg.f(0, var19Lifetime1 + 16, 640, 480 - (16 + var19Lifetime1), 1);
+            jf.field_qb.fullWidth = SoftwareRasterizer.width;
+            jf.field_qb.storedWidth = jf.field_qb.fullWidth;
+            jf.field_qb.fullHeight = SoftwareRasterizer.height;
+            jf.field_qb.storedHeight = jf.field_qb.fullHeight;
+            mb.field_c.fullWidth = SoftwareRasterizer.width;
+            jf.field_qb.pixels = SoftwareRasterizer.pixels;
+            mb.field_c.fullHeight = SoftwareRasterizer.height;
+            mb.field_c.storedWidth = mb.field_c.fullWidth;
+            mb.field_c.pixels = SoftwareRasterizer.pixels;
+            mb.field_c.storedHeight = mb.field_c.fullHeight;
+            SoftwareRasterizer.f(0, var19Lifetime1 + 16, 640, 480 - (16 + var19Lifetime1), 1);
             for (var20Lifetime1 = 0; var18Lifetime1 > var20Lifetime1; var20Lifetime1++) {
-              ka.a(jf.field_qb, mb.field_c, 0, var19Lifetime1, 0, var19Lifetime1 + 16, 640, 16);
+              Sprite.a(jf.field_qb, mb.field_c, 0, var19Lifetime1, 0, var19Lifetime1 + 16, 640, 16);
               var19Lifetime1 += 16;
             }
             return;
@@ -783,13 +783,13 @@ final class ra {
           } else {
             stackIn_132_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_131_0), ((StringBuilder) (Object) stackIn_131_1).append(stackIn_132_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_131_0), ((StringBuilder) (Object) stackIn_131_1).append(stackIn_132_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
         field_k = (boolean[][]) null;
-        field_b = (ka[][]) null;
+        field_b = (Sprite[][]) null;
         field_j = null;
         field_d = null;
         field_p = (int[][]) null;
@@ -943,7 +943,7 @@ final class ra {
         for (var3 = 0; var3 < 3; var3++) {
           for (var4 = 0; var4 <= 1; var4++) {
             for (var5 = 0; 32 > var5; var5++) {
-              cg.field_b[var3][var4][var5] = new ka(var5 + 1, ub.field_c[var3][var4].field_v);
+              cg.field_b[var3][var4][var5] = new Sprite(var5 + 1, ub.field_c[var3][var4].fullHeight);
               cg.field_b[var3][var4][var5].d();
               od.c(ub.field_c[var3][var4], 0, 0, var5 + 1, 0);
             }
@@ -954,19 +954,19 @@ final class ra {
         }
         for (var3Lifetime1 = 0; 1 >= var3Lifetime1; var3Lifetime1++) {
           for (var4Lifetime1 = 0; 32 > var4Lifetime1; var4Lifetime1++) {
-            fh.field_a[var3Lifetime1][var4Lifetime1] = new ka(var4Lifetime1 + 1, af.field_a[var3Lifetime1].field_v);
+            fh.field_a[var3Lifetime1][var4Lifetime1] = new Sprite(var4Lifetime1 + 1, af.field_a[var3Lifetime1].fullHeight);
             fh.field_a[var3Lifetime1][var4Lifetime1].d();
             od.c(af.field_a[param1 * 2 + var3Lifetime1], 0, 0, 1 + var4Lifetime1, 0);
           }
         }
         for (var3Lifetime2 = 0; var3Lifetime2 < 2; var3Lifetime2++) {
           for (var4Lifetime2 = 0; 64 > var4Lifetime2; var4Lifetime2++) {
-            nj.field_e[var3Lifetime2][var4Lifetime2] = new ka(var4Lifetime2 + 1, ef.field_a[var3Lifetime2].field_v);
+            nj.field_e[var3Lifetime2][var4Lifetime2] = new Sprite(var4Lifetime2 + 1, ef.field_a[var3Lifetime2].fullHeight);
             nj.field_e[var3Lifetime2][var4Lifetime2].d();
             od.c(ef.field_a[var3Lifetime2], 0, 0, 1 + var4Lifetime2, 0);
           }
         }
-        la.field_f.a(102);
+        SectorCacheStore.field_f.bindAsTarget(102);
         return;
     }
 
@@ -1007,20 +1007,20 @@ final class ra {
         if (3 < var2) {
           var2 = 3;
         }
-        var3 = lj.field_h[0].field_q * lj.field_h[0].field_v;
+        var3 = ResourceArchive.field_h[0].fullWidth * ResourceArchive.field_h[0].fullHeight;
         var4 = 32;
         var5 = 16;
         var6 = var4 * 32;
         var7 = 32 * var5;
         var8 = var7 * var6;
         if (param0 != 28026) {
-          field_b = (ka[][]) null;
+          field_b = (Sprite[][]) null;
         }
-        da.field_e = var2 * var8 / var3 >> 4;
+        IntrusiveNode.field_e = var2 * var8 / var3 >> 4;
         var24 = new int[1];
         var23 = var24;
         var9 = var23;
-        wc.field_e = new int[da.field_e][][];
+        wc.field_e = new int[IntrusiveNode.field_e][][];
         for (var10 = 0; var10 < 0; var10++) {
           var9[var10] = 8 >> var10;
         }
@@ -1030,7 +1030,7 @@ final class ra {
         }
         var9[0] = -var10Lifetime1 + 16;
         var12 = 0;
-        for (var19 = 0; var19 < da.field_e; var19++) {
+        for (var19 = 0; var19 < IntrusiveNode.field_e; var19++) {
           var12Lifetime1 = 0;
           var11Lifetime1 = e.b((byte) 57, 16);
           var10Lifetime2 = 0;
@@ -1105,7 +1105,7 @@ final class ra {
         for (var3_int = 0; var3_int < 3; var3_int++) {
           for (var4 = 0; var4 <= 1; var4++) {
             ub.field_c[var3_int][var4] = ic.field_D[var4 + (param1 * 12 + 2 * var3_int)];
-            la.field_f.a(-73);
+            SectorCacheStore.field_f.bindAsTarget(-73);
           }
         }
         rj.field_b[0] = af.field_a[param1 * 2];
@@ -1142,7 +1142,7 @@ final class ra {
     static {
         field_k = new boolean[][]{new boolean[]{false, false, false}, new boolean[]{true, true, true}, new boolean[]{true, true, true}, new boolean[]{true, true, true}, new boolean[]{true, false, true}, new boolean[]{false, true, false}, new boolean[]{true, true, true}, new boolean[]{true, true, true}};
         field_j = new int[]{28, 20};
-        field_b = new ka[2][2];
+        field_b = new Sprite[2][2];
         field_q = false;
         field_g = 0;
         field_m = "Loading graphics";

@@ -8,8 +8,8 @@ final class cl extends bc {
     static String field_w;
     static int[] field_s;
     private int field_B;
-    static lj field_y;
-    private ka[] field_t;
+    static ResourceArchive field_y;
+    private Sprite[] field_t;
     static boolean field_z;
     private int field_v;
 
@@ -42,27 +42,27 @@ final class cl extends bc {
           var1_int = 120 % ((param0 + 61) / 54);
           if (qb.field_b == 0) {
             qb.field_b = 200;
-            var2 = (e) (tj.field_e.c((byte) 112));
+            var2 = (e) (tj.field_e.first((byte) 112));
             while (var2 != null) {
-              if (!var2.field_k.b(11163)) {
-                var2.a(true);
+              if (!var2.field_k.isLinked(11163)) {
+                var2.unlink(true);
               }
-              var2 = (e) (tj.field_e.c(-270));
+              var2 = (e) (tj.field_e.next(-270));
             }
             if (TorChallenge.field_I != null) {
-              var2Lifetime1 = (e) (TorChallenge.field_I.c((byte) -118));
+              var2Lifetime1 = (e) (TorChallenge.field_I.first((byte) -118));
               while (var2Lifetime1 != null) {
-                if (!var2Lifetime1.field_k.b(11163)) {
-                  var2Lifetime1.a(true);
+                if (!var2Lifetime1.field_k.isLinked(11163)) {
+                  var2Lifetime1.unlink(true);
                 }
-                var2Lifetime1 = (e) (TorChallenge.field_I.c(-270));
+                var2Lifetime1 = (e) (TorChallenge.field_I.next(-270));
               }
             }
           }
-          if (la.field_a != null) {
-            stackIn_17_0 = la.field_a.d(0);
+          if (SectorCacheStore.field_a != null) {
+            stackIn_17_0 = SectorCacheStore.field_a.d(0);
             if (!stackIn_17_0) {
-              tg.field_t = null;
+              SpriteState.field_t = null;
               return;
             }
           }
@@ -70,11 +70,11 @@ final class cl extends bc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "cl.M(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "cl.M(" + param0 + ')');
         }
     }
 
-    public final void a(ee param0, int param1, int param2, byte param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -106,7 +106,7 @@ final class cl extends bc {
             }
           }
           var7 = stackIn_14_0;
-          uk.a(var7, param3 ^ 96, param0.field_m + param2, (param0.field_l - this.field_t[0].field_v >> 1) + param0.field_i + param1, param0.field_p, this.field_t);
+          uk.a(var7, param3 ^ 96, param0.field_m + param2, (param0.field_l - this.field_t[0].fullHeight >> 1) + param0.field_i + param1, param0.field_p, this.field_t);
           if (param3 != 97) {
             cl.c((byte) 98);
           }
@@ -124,7 +124,7 @@ final class cl extends bc {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

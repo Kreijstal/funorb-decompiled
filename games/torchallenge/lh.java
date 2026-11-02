@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh extends w {
+final class lh extends DualLinkNode {
     static int field_s;
     int[] field_x;
     static int[] field_C;
@@ -14,7 +14,7 @@ final class lh extends w {
     static int[][][][][] field_r;
     static int[] field_B;
     static k field_w;
-    static ka field_v;
+    static Sprite field_v;
     static String field_y;
 
     final static int e(int param0) {
@@ -30,7 +30,7 @@ final class lh extends w {
         RuntimeException decompiledCaughtException = null;
         var2 = TorChallenge.field_F ? 1 : 0;
         try {
-          t.field_b.a(lk.field_g, false, nd.field_g, true);
+          t.field_b.a(SpriteLoader.field_g, false, RandomAccessCacheFile.field_g, true);
           t.field_b.j(-91);
           while (kj.e((byte) -39)) {
             t.field_b.a(di.field_m, b.field_J, 104);
@@ -62,7 +62,7 @@ final class lh extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "lh.F(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "lh.F(" + param0 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class lh extends w {
     lh() {
     }
 
-    private final void a(int param0, uf param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         k stackIn_19_0 = null;
@@ -135,25 +135,25 @@ final class lh extends w {
         try {
           if (1 != param0) {
             if (param0 == 2) {
-              var4_int = param1.j(-95);
+              var4_int = param1.readUnsignedByte(-95);
               this.field_x = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_x[var5] = param1.c(false);
+                this.field_x[var5] = param1.readUnsignedShort(false);
               }
             } else {
               if (param0 == 3) {
-                var4_int = param1.j(-87);
+                var4_int = param1.readUnsignedByte(-87);
                 this.field_t = new int[var4_int];
                 this.field_A = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param1.c(false);
+                  var6 = param1.readUnsignedShort(false);
                   var7 = oh.a((byte) 123, var6);
                   if (var7 != null) {
                     this.field_t[var5] = var6;
                     array$0 = new int[var7.field_j];
                     this.field_A[var5] = array$0;
                     for (var8 = 0; var7.field_j > var8; var8++) {
-                      this.field_A[var5][var8] = param1.c(false);
+                      this.field_A[var5][var8] = param1.readUnsignedShort(false);
                     }
                   }
                 }
@@ -163,7 +163,7 @@ final class lh extends w {
               }
             }
           } else {
-            this.field_z = dl.a(param1.b(false), '<', -33);
+            this.field_z = dl.a(param1.readString(false), '<', -33);
           }
           if (param2 != -817) {
             stackIn_19_0 = (k) null;
@@ -180,7 +180,7 @@ final class lh extends w {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -188,20 +188,20 @@ final class lh extends w {
         if (param0 <= 44) {
           return;
         }
-        o var1 = (o) (ve.field_c.c((byte) 116));
+        o var1 = (o) (ve.field_c.first((byte) 116));
         if (var1 == null) {
           ob.b(-103);
           return;
         }
         pa var2 = id.field_b;
-        var2.i(67);
-        var2.i(54);
-        var2.i(65);
-        var2.i(56);
-        var1.a(true);
+        var2.readInt(67);
+        var2.readInt(54);
+        var2.readInt(65);
+        var2.readInt(56);
+        var1.unlink(true);
     }
 
-    final void a(uf param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -215,7 +215,7 @@ final class lh extends w {
             return;
           }
           while (true) {
-            var3_int = param0.j(-118);
+            var3_int = param0.readUnsignedByte(-118);
             if (0 == var3_int) {
               return;
             }
@@ -231,7 +231,7 @@ final class lh extends w {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

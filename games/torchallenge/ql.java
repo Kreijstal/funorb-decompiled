@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql extends da {
+final class ql extends IntrusiveNode {
     boolean field_i;
     static char[] field_k;
     static int field_n;

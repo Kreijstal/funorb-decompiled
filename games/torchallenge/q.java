@@ -6,20 +6,20 @@ final class q {
     private dc[] field_b;
     private int field_c;
 
-    final static q a(lj param0, int param1, int param2) {
+    final static q a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.c(param1, param2, 0);
         if (var3 == null) {
           return null;
         }
-        return new q(new uf(var3));
+        return new q(new PacketBuffer(var3));
     }
 
-    final static q a(lj param0, String param1, String param2) {
+    final static q a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(-2, param2, param1);
         if (var3 == null) {
           return null;
         }
-        return new q(new uf(var3));
+        return new q(new PacketBuffer(var3));
     }
 
     final fe b() {
@@ -67,19 +67,19 @@ final class q {
         return var3;
     }
 
-    private q(uf param0) {
+    private q(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new dc[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.j(-109);
+          var3 = param0.readUnsignedByte(-109);
           if (var3 != 0) {
-            param0.field_q = param0.field_q - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new dc();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_c = param0.c(false);
-        this.field_a = param0.c(false);
+        this.field_c = param0.readUnsignedShort(false);
+        this.field_a = param0.readUnsignedShort(false);
     }
 }

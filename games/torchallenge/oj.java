@@ -3,10 +3,10 @@
  */
 final class oj {
     static int[] field_e;
-    static ka field_d;
+    static Sprite field_d;
     static int[] field_a;
     static int field_f;
-    static ka field_b;
+    static Sprite field_b;
     static int field_c;
     static int[][] field_g;
 
@@ -19,11 +19,11 @@ final class oj {
           field_e = null;
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "oj.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "oj.B(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, lj param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2620_0;
             StringBuilder stackIn_2620_1;
@@ -34,9 +34,9 @@ final class oj {
             int var3;
             int var4;
             int param0;
-            lj param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, lj initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2620_0 = null;
@@ -683,7 +683,7 @@ final class oj {
                 }
                 var2 = dl.a("loading", false);
                 if (null != var2) {
-                  wb.field_m = re.a(param0 ^ -17660, var2);
+                  BufferedSocket.field_m = re.a(param0 ^ -17660, var2);
                 }
                 var2 = dl.a("offline", false);
                 if (var2 != null) {
@@ -1129,7 +1129,7 @@ final class oj {
                 }
                 var2 = dl.a("connectionlost_withreason", false);
                 if (var2 != null) {
-                  ug.field_a = re.a(param0 ^ -17660, var2);
+                  GameApplet.field_a = re.a(param0 ^ -17660, var2);
                 }
                 var2 = dl.a("passwordverificationrequired", false);
                 if (null != var2) {
@@ -1405,7 +1405,7 @@ final class oj {
                 }
                 var2 = dl.a("create_createanaccount", false);
                 if (var2 != null) {
-                  nd.field_a = re.a(18990, var2);
+                  RandomAccessCacheFile.field_a = re.a(18990, var2);
                 }
                 var2 = dl.a("create_username", false);
                 if (null != var2) {
@@ -1425,11 +1425,11 @@ final class oj {
                 }
                 var2 = dl.a("create_email", false);
                 if (var2 != null) {
-                  gl.field_j = re.a(param0 + 22788, var2);
+                  SocketConnector.field_j = re.a(param0 + 22788, var2);
                 }
                 var2 = dl.a("create_email_confirm", false);
                 if (var2 != null) {
-                  ad.field_f = re.a(18990, var2);
+                  FullscreenFocusCanvas.field_f = re.a(18990, var2);
                 }
                 var2 = dl.a("create_age", false);
                 if (null != var2) {
@@ -1465,7 +1465,7 @@ final class oj {
                 }
                 var2 = dl.a("create_more_suggestions", false);
                 if (null != var2) {
-                  ee.field_y = re.a(param0 + 22788, var2);
+                  UiComponent.field_y = re.a(param0 + 22788, var2);
                 }
                 var2 = dl.a("create_select_alternative", false);
                 if (var2 != null) {
@@ -1553,15 +1553,15 @@ final class oj {
                 }
                 var2 = dl.a("create_email_tooltip", false);
                 if (null != var2) {
-                  ak.field_c = re.a(18990, var2);
+                  SecondaryNodeDeque.field_c = re.a(18990, var2);
                 }
                 var2 = dl.a("create_email_confirm_tooltip", false);
                 if (null != var2) {
-                  pd.field_d = re.a(18990, var2);
+                  GameScreen.field_d = re.a(18990, var2);
                 }
                 var2 = dl.a("create_age_tooltip", false);
                 if (null != var2) {
-                  ak.field_d = re.a(18990, var2);
+                  SecondaryNodeDeque.field_d = re.a(18990, var2);
                 }
                 var2 = dl.a("create_optin_news_tooltip", false);
                 if (null != var2) {
@@ -1597,7 +1597,7 @@ final class oj {
                 }
                 var2 = dl.a("create_username_available", false);
                 if (var2 != null) {
-                  uf.field_l = re.a(18990, var2);
+                  PacketBuffer.field_l = re.a(18990, var2);
                 }
                 var2 = dl.a("create_alert_namelength", false);
                 if (null != var2) {
@@ -1633,7 +1633,7 @@ final class oj {
                 }
                 var2 = dl.a("create_alert_passcontainsemail", false);
                 if (null != var2) {
-                  pd.field_a = re.a(18990, var2);
+                  GameScreen.field_a = re.a(18990, var2);
                 }
                 var2 = dl.a("create_alert_passcontainsname_partial", false);
                 if (null != var2) {
@@ -1645,7 +1645,7 @@ final class oj {
                 }
                 var2 = dl.a("create_alert_invalidemail", false);
                 if (var2 != null) {
-                  d.field_r = re.a(18990, var2);
+                  GameClientBase.field_r = re.a(18990, var2);
                 }
                 var2 = dl.a("create_alert_email_unavailable", false);
                 if (null != var2) {
@@ -1673,11 +1673,11 @@ final class oj {
                 }
                 var2 = dl.a("create_emailvalid", false);
                 if (null != var2) {
-                  rk.field_c = re.a(18990, var2);
+                  BufferedCacheFile.field_c = re.a(18990, var2);
                 }
                 var2 = dl.a("create_account_success", false);
                 if (null != var2) {
-                  ak.field_e = re.a(18990, var2);
+                  SecondaryNodeDeque.field_e = re.a(18990, var2);
                 }
                 var2 = dl.a("invalid_name", false);
                 if (null != var2) {
@@ -1869,7 +1869,7 @@ final class oj {
                 }
                 var2 = dl.a("unpacking_soundeffects", false);
                 if (null != var2) {
-                  pk.field_a = re.a(18990, var2);
+                  DelegatingCanvas.field_a = re.a(18990, var2);
                 }
                 var2 = dl.a("unpacking_music", false);
                 if (var2 != null) {
@@ -1913,7 +1913,7 @@ final class oj {
                 }
                 var2 = dl.a("fullscreen", false);
                 if (null != var2) {
-                  og.field_b = re.a(18990, var2);
+                  MouseWheelInput.field_b = re.a(18990, var2);
                 }
                 var2 = dl.a("screensize", false);
                 if (null != var2) {
@@ -1945,7 +1945,7 @@ final class oj {
                 }
                 var2 = dl.a("quit", false);
                 if (var2 != null) {
-                  lj.field_d = re.a(18990, var2);
+                  ResourceArchive.field_d = re.a(18990, var2);
                 }
                 var2 = dl.a("login_createaccount", false);
                 if (var2 != null) {
@@ -1981,7 +1981,7 @@ final class oj {
                 }
                 var2 = dl.a("menu", false);
                 if (var2 != null) {
-                  dd.field_o = re.a(18990, var2);
+                  ImageProducerRasterBuffer.field_o = re.a(18990, var2);
                 }
                 var2 = dl.a("selectlevel", false);
                 if (var2 != null) {
@@ -2275,7 +2275,7 @@ final class oj {
                 }
                 var2 = dl.a("notyetachieved", false);
                 if (var2 != null) {
-                  da.field_a = re.a(18990, var2);
+                  IntrusiveNode.field_a = re.a(18990, var2);
                 }
                 var2 = dl.a("achieved", false);
                 if (null != var2) {
@@ -2307,7 +2307,7 @@ final class oj {
                 }
                 var2 = dl.a("no_highscores", false);
                 if (var2 != null) {
-                  vf.field_c = re.a(18990, var2);
+                  MouseInputHandler.field_c = re.a(18990, var2);
                 }
                 var2 = dl.a("hs_name", false);
                 if (null != var2) {
@@ -2571,7 +2571,7 @@ final class oj {
                 }
                 var2 = dl.a("benefits_price", false);
                 if (var2 != null) {
-                  jd.field_f = re.a(18990, var2);
+                  ClientException.field_f = re.a(18990, var2);
                 }
                 var2 = dl.a("members_expansion_benefits,0", false);
                 if (var2 != null) {
@@ -2683,7 +2683,7 @@ final class oj {
                 }
                 var2 = dl.a("fs_accept_countdown_pl", false);
                 if (null != var2) {
-                  wb.field_q = re.a(18990, var2);
+                  BufferedSocket.field_q = re.a(18990, var2);
                 }
                 var2 = dl.a("fs_nonmember", false);
                 if (var2 != null) {
@@ -2703,7 +2703,7 @@ final class oj {
                 }
                 var2 = dl.a("fs_unavailable_try_signed_applet", false);
                 if (null != var2) {
-                  d.field_z = re.a(18990, var2);
+                  GameClientBase.field_z = re.a(18990, var2);
                 }
                 var2 = dl.a("fs_focus", false);
                 if (null != var2) {
@@ -2711,15 +2711,15 @@ final class oj {
                 }
                 var2 = dl.a("fs_focus_or_resolution", false);
                 if (null != var2) {
-                  hd.field_g = re.a(param0 ^ -17660, var2);
+                  GzipDecoder.field_g = re.a(param0 ^ -17660, var2);
                 }
                 var2 = dl.a("fs_timeout", false);
                 if (var2 != null) {
-                  jd.field_d = re.a(18990, var2);
+                  ClientException.field_d = re.a(18990, var2);
                 }
                 var2 = dl.a("fs_button_tryagain", false);
                 if (null != var2) {
-                  ak.field_g = re.a(18990, var2);
+                  SecondaryNodeDeque.field_g = re.a(18990, var2);
                 }
                 var2 = dl.a("graphics_ui_fs_countdown", false);
                 if (null != var2) {
@@ -2727,11 +2727,11 @@ final class oj {
                 }
                 var2 = dl.a("mb_caption_title", false);
                 if (null != var2) {
-                  dd.field_r = re.a(18990, var2);
+                  ImageProducerRasterBuffer.field_r = re.a(18990, var2);
                 }
                 var2 = dl.a("mb_including_gamename", false);
                 if (null != var2) {
-                  w.field_n = re.a(18990, var2);
+                  DualLinkNode.field_n = re.a(18990, var2);
                 }
                 var2 = dl.a("mb_full_access_1", false);
                 if (var2 != null) {
@@ -2743,7 +2743,7 @@ final class oj {
                 }
                 var2 = dl.a("mb_achievement_count_1", false);
                 if (var2 != null) {
-                  kc.field_t = re.a(18990, var2);
+                  LocalizedStrings.field_t = re.a(18990, var2);
                 }
                 var2 = dl.a("mb_achievement_count_2", false);
                 if (null != var2) {
@@ -2835,7 +2835,7 @@ final class oj {
                 }
                 var2 = dl.a("serviceunavailable", false);
                 if (var2 != null) {
-                  ak.field_b = re.a(18990, var2);
+                  SecondaryNodeDeque.field_b = re.a(18990, var2);
                 }
                 var2 = dl.a("createtouse", false);
                 if (null != var2) {
@@ -3058,12 +3058,12 @@ final class oj {
                   } else {
                     stackIn_2621_2 = "{...}";
                   }
-                  throw oj.a((Throwable) ((Object) stackIn_2620_0), ((StringBuilder) (Object) stackIn_2620_1).append(stackIn_2621_2).append(')').toString());
+                  throw oj.wrapException((Throwable) ((Object) stackIn_2620_0), ((StringBuilder) (Object) stackIn_2620_1).append(stackIn_2621_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = ug.field_k;
+                  var4 = GameApplet.field_k;
                   var4++;
-                  ug.field_k = var4;
+                  GameApplet.field_k = var4;
                 }
             }
         }
@@ -3088,9 +3088,9 @@ final class oj {
           if (kg.field_db == null) {
             kg.field_db = "0";
           }
-          qe.field_J = param0.getParameter("overxachievements");
-          if (null == qe.field_J) {
-            qe.field_J = "0";
+          LevelEntity.field_J = param0.getParameter("overxachievements");
+          if (null == LevelEntity.field_J) {
+            LevelEntity.field_J = "0";
           }
           if (param3) {
             field_c = 37;
@@ -3108,10 +3108,10 @@ final class oj {
           gf.field_u = param1;
           ea.field_c = param2;
           vh.field_h = param5;
-          ak.field_i = new ka[param4.length];
+          SecondaryNodeDeque.field_i = new Sprite[param4.length];
           var7 = 0;
           while (var7 < param4.length) {
-            ak.field_i[var7] = new ka(317, 34);
+            SecondaryNodeDeque.field_i[var7] = new Sprite(317, 34);
             var7++;
             if (var8 != 0) {
               return;
@@ -3135,18 +3135,18 @@ final class oj {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param5).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static jd a(Throwable param0, String param1) {
-        jd var2;
+    final static ClientException wrapException(Throwable param0, String param1) {
+        ClientException var2;
         RuntimeException var2_ref;
-        if (!(param0 instanceof jd)) {
-          var2 = new jd(param0, param1);
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (jd) ((Object) param0);
-          var2.field_c = var2.field_c + ' ' + param1;
+          var2 = (ClientException) ((Object) param0);
+          var2.context = var2.context + ' ' + param1;
         }
         return var2;
     }

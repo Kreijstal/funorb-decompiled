@@ -4,7 +4,7 @@
 final class hi extends ic {
     static int[] field_G;
     int field_H;
-    static ka[] field_F;
+    static Sprite[] field_F;
 
     public static void h(int param0) {
         if (param0 != -1) {
@@ -14,14 +14,14 @@ final class hi extends ic {
         field_G = null;
     }
 
-    hi(ee param0) {
+    hi(UiComponent param0) {
         super(param0.field_m, param0.field_i, param0.field_p, param0.field_l, (j) null, (gg) null);
         try {
           param0.a((byte) 112, 0, this.field_l, this.field_p, 0);
           this.field_H = 256;
           this.field_A = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -79,8 +79,8 @@ final class hi extends ic {
           var7Lifetime1 = vb.field_a[param3][param0];
           var8 = 1 + var7Lifetime1;
           var9 = -1 + var7Lifetime1;
-          var10 = gl.field_l[param3][param0][1][0];
-          var11 = gl.field_l[param3][param0][1][1];
+          var10 = SocketConnector.field_l[param3][param0][1][0];
+          var11 = SocketConnector.field_l[param3][param0][1][1];
           if (param1 != 5446) {
             hi.h(-76);
           }
@@ -91,8 +91,8 @@ final class hi extends ic {
           if (null == vk.field_i) {
             return;
           }
-          var13 = vk.field_i.field_o;
-          var14 = vk.field_i.field_H;
+          var13 = vk.field_i.x;
+          var14 = vk.field_i.y;
           var15 = 1 + var13;
           var16 = var13 + 2;
           var17 = 0;
@@ -151,7 +151,7 @@ final class hi extends ic {
           if (var24Lifetime1 == 0) {
             return;
           }
-          var25 = kj.field_C[0].field_v;
+          var25 = kj.field_C[0].fullHeight;
           var26 = var23 + var20Lifetime1 + param2 - var25;
           if (param4 == var22Lifetime1) {
             var26 = var26 - var20Lifetime1;
@@ -233,7 +233,7 @@ final class hi extends ic {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var5), "hi.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) var5), "hi.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -242,12 +242,12 @@ final class hi extends ic {
         this.field_H = 256;
     }
 
-    final static qe a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static LevelEntity a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int stackIn_26_0 = 0;
         int stackIn_34_0 = 0;
         int stackIn_43_0 = 0;
         Object var6;
-        qe var6_ref;
+        LevelEntity var6_ref;
         Object var7;
         int var8;
         int var9;
@@ -255,7 +255,7 @@ final class hi extends ic {
         int var11;
         int var12;
         int var13;
-        qe var14;
+        LevelEntity var14;
         int var8Lifetime1;
         var13 = TorChallenge.field_F ? 1 : 0;
         var6 = null;
@@ -277,7 +277,7 @@ final class hi extends ic {
         var12 = 0;
         while (true) {
           if (var12 >= var8Lifetime1) {
-            return (qe) (var7);
+            return (LevelEntity) (var7);
           }
           if (bi.field_g[param1][param5][param3][1 + var12] < 0) {
             return null;
@@ -290,21 +290,21 @@ final class hi extends ic {
           if (var6_ref == null) {
             return null;
           }
-          if (var14.field_o != param1) {
+          if (var14.x != param1) {
             return null;
           }
-          if (param5 != var14.field_H) {
+          if (param5 != var14.y) {
             return null;
           }
-          if (8 <= var14.field_F) {
-            stackIn_26_0 = (21 >= var14.field_F) ? 1 : 0;
+          if (8 <= var14.type) {
+            stackIn_26_0 = (21 >= var14.type) ? 1 : 0;
           } else {
             stackIn_26_0 = 0;
           }
           var9 = stackIn_26_0;
           if (var14.field_L != 13) {
             if (var9 == 0) {
-              stackIn_34_0 = (var14.field_F != 22) ? 1 : 0;
+              stackIn_34_0 = (var14.type != 22) ? 1 : 0;
             } else {
               stackIn_34_0 = 0;
             }
@@ -314,7 +314,7 @@ final class hi extends ic {
           var10 = stackIn_34_0;
           if (13 != var14.field_L &&
             var14.field_db >= 0 &&
-            var14.field_F != 22) {
+            var14.type != 22) {
             stackIn_43_0 = 0;
           } else {
             stackIn_43_0 = (var9 == 0) ? 1 : 0;
@@ -326,7 +326,7 @@ final class hi extends ic {
             var10 != 0 ||
             param3 == 2 &&
             var11 != 0) {
-            var14.a(param0, param2, var14.field_B, var14.field_H, var14.field_o, var14.field_F, 2657, var14.field_u);
+            var14.a(param0, param2, var14.field_B, var14.y, var14.x, var14.type, 2657, var14.field_u);
             var14.a((byte) -117, param2, param0);
             var7 = var6_ref;
           }
@@ -348,8 +348,8 @@ final class hi extends ic {
           this.field_A.a(this.field_i + param0, this.field_m + param1, param2, param3);
           return;
         }
-        ka var5 = new ka(this.field_A.field_p, this.field_A.field_l);
-        ad.a(-13, var5);
+        Sprite var5 = new Sprite(this.field_A.field_p, this.field_A.field_l);
+        FullscreenFocusCanvas.a(-13, var5);
         this.field_A.a(0, 0, param2, param3);
         ie.b((byte) -9);
         var5.d(param1 + this.field_m, param0 + this.field_i, this.field_H);

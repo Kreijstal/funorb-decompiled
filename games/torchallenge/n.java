@@ -11,8 +11,8 @@ abstract class n extends v {
     private hi field_eb;
     static int[][][] field_kb;
     private p field_mb;
-    private ee field_ib;
-    static mi field_cb;
+    private UiComponent field_ib;
+    static PlatformTask field_cb;
     static int field_jb;
     private int field_lb;
 
@@ -24,19 +24,19 @@ abstract class n extends v {
         if (!eb.field_m) {
           throw new IllegalStateException();
         }
-        if (da.field_c == null) {
-          var1 = pd.f((byte) 48);
+        if (IntrusiveNode.field_c == null) {
+          var1 = GameScreen.f((byte) 48);
           kb.field_O = new fg(var1, (String) null, true, false, false);
-          t.field_b.a((byte) 69, (ee) (bg.field_K));
+          t.field_b.a((byte) 69, (UiComponent) (bg.field_K));
           bg.field_K.c(0, kb.field_O);
           bg.field_K.d(true);
           var2 = 9 / ((param0 + 2) / 62);
           return;
         }
-        da.field_c.o(77);
-        var1Lifetime1 = pd.f((byte) 48);
+        IntrusiveNode.field_c.o(77);
+        var1Lifetime1 = GameScreen.f((byte) 48);
         kb.field_O = new fg(var1Lifetime1, (String) null, true, false, false);
-        t.field_b.a((byte) 69, (ee) (bg.field_K));
+        t.field_b.a((byte) 69, (UiComponent) (bg.field_K));
         bg.field_K.c(0, kb.field_O);
         bg.field_K.d(true);
         var2Lifetime1 = 9 / ((param0 + 2) / 62);
@@ -56,7 +56,7 @@ abstract class n extends v {
         field_kb = (int[][][]) null;
     }
 
-    n(si param0, ee param1, int param2, int param3, int param4) {
+    n(si param0, UiComponent param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_p, 12 + param2 + param1.field_l);
         try {
           this.field_bb = param3;
@@ -65,7 +65,7 @@ abstract class n extends v {
           this.field_gb = param2;
           this.b(param1, 18744);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ abstract class n extends v {
         return super.j(1);
     }
 
-    boolean a(int param0, char param1, byte param2, ee param3) {
+    boolean a(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -149,7 +149,7 @@ abstract class n extends v {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ abstract class n extends v {
         super.d(param0);
     }
 
-    private final void b(ee param0, int param1) {
+    private final void b(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -191,7 +191,7 @@ abstract class n extends v {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != this.field_eb) {
-            this.field_eb.a(true);
+            this.field_eb.unlink(true);
           }
           if (param0 == null) {
             this.field_eb = new hi();
@@ -204,7 +204,7 @@ abstract class n extends v {
           if (param1 == 18744) {
             return;
           }
-          field_cb = (mi) null;
+          field_cb = (PlatformTask) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,13 +216,13 @@ abstract class n extends v {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    void c(int param0, ee param1) {
+    void c(int param0, UiComponent param1) {
         RuntimeException var3 = null;
-        ee var4 = null;
+        UiComponent var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -241,8 +241,8 @@ abstract class n extends v {
           if (param0 == 0) {
             return;
           }
-          var4 = (ee) null;
-          this.c(-2, (ee) null);
+          var4 = (UiComponent) null;
+          this.c(-2, (UiComponent) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -254,7 +254,7 @@ abstract class n extends v {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

@@ -4,18 +4,18 @@
 import java.io.*;
 
 final class we implements Runnable {
-    private mi field_k;
+    private PlatformTask field_k;
     static bf[] field_i;
-    static ka[] field_m;
-    private mi field_g;
-    private mi field_n;
+    static Sprite[] field_m;
+    private PlatformTask field_g;
+    private PlatformTask field_n;
     static ge[] field_o;
     static int field_f;
-    static ka[][] field_e;
-    private uj field_b;
+    static Sprite[][] field_e;
+    private PlatformTaskDispatcher field_b;
     private java.net.URL field_h;
     static String[][] field_c;
-    private uf field_d;
+    private PacketBuffer field_d;
     private DataInputStream field_a;
     static int[] field_l;
     private int field_p;
@@ -23,18 +23,18 @@ final class we implements Runnable {
 
     protected final void finalize() {
         if (this.field_k != null) {
-          if (null != this.field_k.field_g) {
+          if (null != this.field_k.result) {
             try {
-              ((DataInputStream) (this.field_k.field_g)).close();
+              ((DataInputStream) (this.field_k.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_k = null;
         }
         if (null != this.field_g) {
-          if (null != this.field_g.field_g) {
+          if (null != this.field_g.result) {
             try {
-              ((java.net.Socket) (this.field_g.field_g)).close();
+              ((java.net.Socket) (this.field_g.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -60,11 +60,11 @@ final class we implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new e(param0, param0);
-          tj.field_e.a(var2, param1 - 6300);
+          tj.field_e.addLast(var2, param1 - 6300);
           if (param1 != 6222) {
             we.b(false);
           }
-          mj.field_a.a(param0);
+          GameKeyHandler.field_a.addSubstream(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,7 +77,7 @@ final class we implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class we implements Runnable {
         }
         if (0 == this.field_p) {
           if (null == this.field_k) {
-            this.field_k = this.field_b.a(this.field_h, -125);
+            this.field_k = this.field_b.requestUrl(this.field_h, -125);
           }
           if (this.field_k.field_d == 0) {
             return false;
@@ -105,7 +105,7 @@ final class we implements Runnable {
         }
         if (this.field_p == 1) {
           if (this.field_g == null) {
-            this.field_g = this.field_b.a(443, this.field_h.getHost(), 431890200);
+            this.field_g = this.field_b.requestSocket(443, this.field_h.getHost(), 431890200);
           }
           if (0 == this.field_g.field_d) {
             return false;
@@ -119,10 +119,10 @@ final class we implements Runnable {
         if (null == this.field_a) {
           try {
             if (this.field_p == 0) {
-              this.field_a = (DataInputStream) (this.field_k.field_g);
+              this.field_a = (DataInputStream) (this.field_k.result);
             }
             if (this.field_p == 1) {
-              var4 = (java.net.Socket) (this.field_g.field_g);
+              var4 = (java.net.Socket) (this.field_g.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -130,7 +130,7 @@ final class we implements Runnable {
               var3.write(pi.a(var5, 353));
               this.field_a = new DataInputStream(var4.getInputStream());
             }
-            this.field_d.field_q = 0;
+            this.field_d.position = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
@@ -139,7 +139,7 @@ final class we implements Runnable {
           }
         }
         if (null == this.field_n) {
-          this.field_n = this.field_b.a((Runnable) (this), true, 5);
+          this.field_n = this.field_b.requestThread((Runnable) (this), true, 5);
         }
         if (this.field_n.field_d == 0) {
           return false;
@@ -164,16 +164,16 @@ final class we implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = TorChallenge.field_F ? 1 : 0;
           try {
-            while (this.field_d.field_q < this.field_d.field_m.length) {
-              var1_int = this.field_a.read(this.field_d.field_m, this.field_d.field_q, -this.field_d.field_q + this.field_d.field_m.length);
+            while (this.field_d.position < this.field_d.payload.length) {
+              var1_int = this.field_a.read(this.field_d.payload, this.field_d.position, -this.field_d.position + this.field_d.payload.length);
               if (var1_int >= 0) {
-                this.field_d.field_q = this.field_d.field_q + var1_int;
+                this.field_d.position = this.field_d.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_d.field_q == this.field_d.field_m.length) {
-              throw we.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.field_m.length + " " + this.field_h));
+            if (this.field_d.position == this.field_d.payload.length) {
+              throw we.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.payload.length + " " + this.field_h));
             }
             var1 = this;
             synchronized (var1) {
@@ -225,17 +225,17 @@ final class we implements Runnable {
         return var4;
     }
 
-    we(uj param0, java.net.URL param1, int param2) {
+    we(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_h = param1;
           this.field_b = param0;
-          this.field_d = new uf(param2);
+          this.field_d = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final uf b(int param0) {
+    final PacketBuffer b(int param0) {
         if (3 == this.field_p) {
           return this.field_d;
         }
@@ -247,21 +247,21 @@ final class we implements Runnable {
         field_l = null;
         field_m = null;
         if (param0 == 25910) {
-          field_e = (ka[][]) null;
+          field_e = (Sprite[][]) null;
           field_i = null;
           field_c = (String[][]) null;
           field_o = null;
           return;
         }
         we.b(true);
-        field_e = (ka[][]) null;
+        field_e = (Sprite[][]) null;
         field_i = null;
         field_c = (String[][]) null;
         field_o = null;
     }
 
     static {
-        field_e = new ka[6][2];
+        field_e = new Sprite[6][2];
         field_l = new int[]{0, 1, 4, 1, 1, 1, 1, 1};
         field_f = 0;
         field_j = -1;

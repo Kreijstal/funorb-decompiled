@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc extends da {
+final class lc extends IntrusiveNode {
     static boolean field_r;
     static ge[] field_o;
     byte[] field_q;
@@ -29,12 +29,12 @@ final class lc extends da {
         ji.field_y = 15000L + ol.a(256);
         if (param0 != 1) {
           java.math.BigInteger var2 = (java.math.BigInteger) null;
-          lc.a(20, (uf) null, -87, (byte[]) null, -9, (java.math.BigInteger) null, (java.math.BigInteger) null);
+          lc.a(20, (PacketBuffer) null, -87, (byte[]) null, -9, (java.math.BigInteger) null, (java.math.BigInteger) null);
         }
         return gj.field_c == 11 ? true : false;
     }
 
-    final static void a(int param0, uf param1, int param2, byte[] param3, int param4, java.math.BigInteger param5, java.math.BigInteger param6) {
+    final static void a(int param0, PacketBuffer param1, int param2, byte[] param3, int param4, java.math.BigInteger param5, java.math.BigInteger param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -67,29 +67,29 @@ final class lc extends da {
             var8[var9] = af.field_d.nextInt();
           }
           if (null == nh.field_eb ||
-            !(var7_int <= nh.field_eb.field_m.length)) {
-            nh.field_eb = new uf(var7_int);
+            !(var7_int <= nh.field_eb.payload.length)) {
+            nh.field_eb = new PacketBuffer(var7_int);
           }
-          nh.field_eb.field_q = 0;
+          nh.field_eb.position = 0;
           nh.field_eb.a(param4, param0, param3, -16384);
           nh.field_eb.c(var7_int, (byte) 36);
           nh.field_eb.a(var13, (byte) -124);
           if (null == bi.field_d ||
-            !(bi.field_d.field_m.length >= 100)) {
-            bi.field_d = new uf(100);
+            !(bi.field_d.payload.length >= 100)) {
+            bi.field_d = new PacketBuffer(100);
           }
-          bi.field_d.field_q = 0;
-          bi.field_d.d(10, (byte) 122);
+          bi.field_d.position = 0;
+          bi.field_d.writeByte(10, (byte) 122);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            bi.field_d.a(var13[var11], false);
+            bi.field_d.writeInt(var13[var11], false);
             var11++;
           }
-          bi.field_d.a(param4, (byte) 106);
+          bi.field_d.writeShort(param4, (byte) 106);
           bi.field_d.a(param6, true, param5);
-          param1.a(bi.field_d.field_q, param2, bi.field_d.field_m, param2 ^ -16384);
-          param1.a(nh.field_eb.field_q, 0, nh.field_eb.field_m, -16384);
+          param1.a(bi.field_d.position, param2, bi.field_d.payload, param2 ^ -16384);
+          param1.a(nh.field_eb.position, 0, nh.field_eb.payload, -16384);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,7 +119,7 @@ final class lc extends da {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -134,24 +134,24 @@ final class lc extends da {
         int var5Lifetime2;
         var2 = -1;
         var5 = 0;
-        if (v.field_X[0][rf.field_ib][param0][0] <= nd.field_e &&
-          nd.field_e < v.field_X[0][rf.field_ib][param0][1]) {
+        if (v.field_X[0][rf.field_ib][param0][0] <= RandomAccessCacheFile.field_e &&
+          RandomAccessCacheFile.field_e < v.field_X[0][rf.field_ib][param0][1]) {
           var4 = v.field_X[0][rf.field_ib][param0][1];
           var3 = v.field_X[0][rf.field_ib][param0][0];
-          var5Lifetime1 = -var3 + nd.field_e;
+          var5Lifetime1 = -var3 + RandomAccessCacheFile.field_e;
           var2 = var5Lifetime1 * 256 / (var4 - var3);
         }
-        if (v.field_X[1][rf.field_ib][param0][0] <= nd.field_e &&
-          nd.field_e < v.field_X[1][rf.field_ib][param0][1]) {
+        if (v.field_X[1][rf.field_ib][param0][0] <= RandomAccessCacheFile.field_e &&
+          RandomAccessCacheFile.field_e < v.field_X[1][rf.field_ib][param0][1]) {
           var3Lifetime1 = v.field_X[1][rf.field_ib][param0][0];
           var4Lifetime1 = v.field_X[1][rf.field_ib][param0][1];
-          var5Lifetime2 = -var3Lifetime1 + nd.field_e;
+          var5Lifetime2 = -var3Lifetime1 + RandomAccessCacheFile.field_e;
           var2 = 256 - 256 * var5Lifetime2 / (-var3Lifetime1 + var4Lifetime1);
         }
-        if (v.field_X[0][rf.field_ib][param0][0] > nd.field_e) {
+        if (v.field_X[0][rf.field_ib][param0][0] > RandomAccessCacheFile.field_e) {
           var2 = 0;
         }
-        if (nd.field_e >= v.field_X[param1][rf.field_ib][param0][1]) {
+        if (RandomAccessCacheFile.field_e >= v.field_X[param1][rf.field_ib][param0][1]) {
           var2 = 0;
         }
         return var2;
@@ -174,7 +174,7 @@ final class lc extends da {
           this.field_q = param2;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "lc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "lc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

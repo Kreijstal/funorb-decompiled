@@ -18,9 +18,9 @@ final class uk extends ic {
     static int field_H;
     static String field_K;
     static int field_J;
-    static ka field_N;
+    static Sprite field_N;
 
-    final void a(ee param0, int param1, byte param2, int param3) {
+    final void a(UiComponent param0, int param1, byte param2, int param3) {
         int stackIn_16_1 = 0;
         int stackIn_17_2 = 0;
         int stackIn_21_1 = 0;
@@ -36,7 +36,7 @@ final class uk extends ic {
           if ((!(this.field_A instanceof ng) ||
             ((ng) (this.field_A)).field_F) &&
             this.field_z == 1) {
-            var5_int = -this.field_P + kc.field_u - param1;
+            var5_int = -this.field_P + LocalizedStrings.field_u - param1;
             var6 = -this.field_F + ph.field_d - param3;
             if (var5_int != this.field_m ||
               this.field_i != var6) {
@@ -93,7 +93,7 @@ final class uk extends ic {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -333,7 +333,7 @@ final class uk extends ic {
         return '_';
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ee param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_5_0 = 0;
@@ -354,7 +354,7 @@ final class uk extends ic {
           if (param5 == 1) {
             this.field_P = param1 - this.field_m - param4;
             this.field_F = -this.field_i + param0 - param3;
-            gl.field_b = this;
+            SocketConnector.field_b = this;
           }
           this.field_z = param5;
           return true;
@@ -368,7 +368,7 @@ final class uk extends ic {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -387,7 +387,7 @@ final class uk extends ic {
         StringBuilder discarded$64 = null;
         StringBuilder discarded$65 = null;
         RuntimeException var5 = null;
-        ee var6 = null;
+        UiComponent var6 = null;
         StringBuilder stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -406,8 +406,8 @@ final class uk extends ic {
             }
           }
           if (!param3) {
-            var6 = (ee) null;
-            this.a(-98, (byte) -61, (ee) null, -95, 42, 108);
+            var6 = (UiComponent) null;
+            this.a(-98, (byte) -61, (UiComponent) null, -95, 42, 108);
           }
           stackIn_8_0 = (StringBuilder) (param2);
           return stackIn_8_0;
@@ -427,21 +427,21 @@ final class uk extends ic {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, byte param1, ee param2, int param3, int param4, int param5) {
+    final void a(int param0, byte param1, UiComponent param2, int param3, int param4, int param5) {
         try {
           int var7_int = 56 % ((param1 + 29) / 39);
           super.a(param0, (byte) -127, param2, param3, param4, param5);
           this.field_z = 0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "uk.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "uk.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, ka[] param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -457,19 +457,19 @@ final class uk extends ic {
         try {
           if (param5 != null &&
             param4 > 0) {
-            var6_int = param5[0].field_q;
-            var7 = param5[2].field_q;
-            var8 = param5[param1].field_q;
+            var6_int = param5[0].fullWidth;
+            var7 = param5[2].fullWidth;
+            var8 = param5[param1].fullWidth;
             param5[0].c(param2, param3, param0);
             param5[2].c(param2 + (param4 - var7), param3, param0);
-            qg.a(bk.field_s);
-            qg.a(var6_int + param2, param3, param4 + param2 - var7, param3 + param5[1].field_v);
+            SoftwareRasterizer.a(bk.field_s);
+            SoftwareRasterizer.a(var6_int + param2, param3, param4 + param2 - var7, param3 + param5[1].fullHeight);
             var9 = var6_int + param2;
             var10 = -var7 + param2 + param4;
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param5[1].c(param2, param3, param0);
             }
-            qg.b(bk.field_s);
+            SoftwareRasterizer.b(bk.field_s);
             return;
           }
           return;
@@ -483,7 +483,7 @@ final class uk extends ic {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -495,7 +495,7 @@ final class uk extends ic {
         int var2 = 48 % ((param0 + 45) / 48);
     }
 
-    private uk(int param0, int param1, int param2, int param3, j param4, gg param5, ee param6, boolean param7, boolean param8) {
+    private uk(int param0, int param1, int param2, int param3, j param4, gg param5, UiComponent param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_M = 2147483647;
         this.field_S = 2147483647;
@@ -504,7 +504,7 @@ final class uk extends ic {
           this.field_R = param8 ? true : false;
           this.field_T = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "uk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "uk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 

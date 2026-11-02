@@ -15,7 +15,7 @@ abstract class t {
         return false;
     }
 
-    abstract void a(uf param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 
     final static void b(boolean param0) {
         int var1_int = 0;
@@ -41,27 +41,27 @@ abstract class t {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "t.J(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "t.J(" + param0 + ')');
         }
     }
 
     final static void a(int param0) {
         we.field_c = new String[37][];
-        we.field_c[5] = new String[]{dd.field_o};
+        we.field_c[5] = new String[]{ImageProducerRasterBuffer.field_o};
         we.field_c[13] = new String[]{sd.field_f};
         we.field_c[14] = new String[]{ac.field_b};
         we.field_c[7] = new String[]{cl.field_w};
         we.field_c[15] = new String[]{ef.field_f};
         int var1 = 106 / ((31 - param0) / 53);
         we.field_c[16] = new String[]{aa.field_b};
-        we.field_c[4] = new String[]{og.field_b};
+        we.field_c[4] = new String[]{MouseWheelInput.field_b};
         we.field_c[2] = new String[]{a.field_e};
-        we.field_c[6] = new String[]{dd.field_o};
+        we.field_c[6] = new String[]{ImageProducerRasterBuffer.field_o};
         we.field_c[0] = new String[]{si.field_M};
         we.field_c[12] = new String[]{kj.field_H};
         we.field_c[3] = new String[]{ui.field_g};
         we.field_c[1] = new String[]{eb.field_i};
-        we.field_c[11] = new String[]{lj.field_d};
+        we.field_c[11] = new String[]{ResourceArchive.field_d};
         we.field_c[17] = new String[]{ik.field_e};
         we.field_c[20] = new String[]{wf.field_f, rc.field_q};
         we.field_c[31] = new String[]{gh.field_i, o.field_n};

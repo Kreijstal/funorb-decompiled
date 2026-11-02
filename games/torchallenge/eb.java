@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb extends da {
+final class eb extends IntrusiveNode {
     static int[] field_k;
     boolean field_j;
     static boolean field_n;
-    static ka[] field_p;
+    static Sprite[] field_p;
     static int[] field_s;
     byte[] field_q;
     static String field_i;
@@ -39,16 +39,16 @@ final class eb extends da {
           }
           var9 = new ta(t.field_b, param4);
           var7 = var9;
-          t.field_b.a((byte) 125, (ee) (var9));
+          t.field_b.a((byte) 125, (UiComponent) (var9));
           if (wi.a(0)) {
             var9.h((byte) 21);
             return true;
           }
-          mj.field_d = param6;
+          GameKeyHandler.field_d = param6;
           cf.field_f = param5;
-          uf.field_j = param2;
+          PacketBuffer.field_j = param2;
           cj.field_d = param1;
-          pd.field_h = null;
+          GameScreen.field_h = null;
           gj.field_a = qc.field_i;
           vb.field_m = param0;
           return true;
@@ -80,7 +80,7 @@ final class eb extends da {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

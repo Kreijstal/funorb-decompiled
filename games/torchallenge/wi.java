@@ -4,7 +4,7 @@
 final class wi {
     static String field_b;
     static byte[] field_c;
-    static ka[] field_d;
+    static Sprite[] field_d;
     private int[] field_e;
     static int[] field_a;
 
@@ -33,7 +33,7 @@ final class wi {
             var10 = (int[]) null;
             wi.a(85, 87, (int[]) null, (byte) -123, -94, 96, 7, -66, 33);
           }
-          wf.field_g.a(var9, param3 - 188);
+          wf.field_g.addLast(var9, param3 - 188);
           ul.a(-18261, var9, param8);
           stackIn_3_0 = var9;
           return stackIn_3_0;
@@ -47,7 +47,7 @@ final class wi {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class wi {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class wi {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

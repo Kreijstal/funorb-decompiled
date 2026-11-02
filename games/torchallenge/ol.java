@@ -56,7 +56,7 @@ final class ol {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class ol {
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
           try {
-            if (!uj.field_a.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_a.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&
@@ -106,11 +106,11 @@ final class ol {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static boolean a(byte param0, uj param1) {
+    final static boolean a(byte param0, PlatformTaskDispatcher param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -133,7 +133,7 @@ final class ol {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

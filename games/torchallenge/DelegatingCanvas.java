@@ -1,0 +1,114 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DelegatingCanvas extends java.awt.Canvas {
+    private java.awt.Component field_b;
+    static PacketBuffer field_e;
+    static String[] field_c;
+    static boolean field_f;
+    static ResourceArchive field_d;
+    static String field_a;
+
+    public final void paint(java.awt.Graphics param0) {
+        try {
+          this.field_b.paint(param0);
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pk.paint(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    DelegatingCanvas(java.awt.Component param0) {
+        try {
+          this.field_b = param0;
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void a(boolean param0) {
+        field_a = null;
+        if (!param0) {
+          field_d = null;
+          field_e = null;
+          field_c = null;
+          return;
+        }
+        field_d = (ResourceArchive) null;
+        field_d = null;
+        field_e = null;
+        field_c = null;
+    }
+
+    public final void update(java.awt.Graphics param0) {
+        try {
+          this.field_b.update(param0);
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pk.update(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static String a(int param0, String param1, String param2, ResourceArchive param3, String param4) {
+        RuntimeException var5 = null;
+        String stackIn_3_0 = null;
+        String stackIn_6_0 = null;
+        String stackIn_8_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!param3.b(-7957)) {
+            stackIn_3_0 = (String) (param4);
+            return stackIn_3_0;
+          }
+          if (param0 == 256) {
+            stackIn_8_0 = param1 + " - " + param3.a(109, param2) + "%";
+            return stackIn_8_0;
+          }
+          stackIn_6_0 = (String) null;
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_11_0 = var5;
+          stackIn_11_1 = new StringBuilder().append("pk.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+          if (param3 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
+          if (param4 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
+          }
+          throw oj.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_c = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
+        field_e = new PacketBuffer(256);
+        field_f = false;
+        field_a = "Unpacking sound effects";
+    }
+}

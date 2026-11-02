@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh extends da {
+final class eh extends IntrusiveNode {
     int field_j;
     static int field_k;
     static int field_m;
@@ -11,14 +11,14 @@ final class eh extends da {
     byte[] field_i;
     static int field_n;
 
-    final static boolean a(int param0, int param1, int[] param2, int param3, qe param4) {
+    final static boolean a(int param0, int param1, int[] param2, int param3, LevelEntity param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qe var5 = null;
+        LevelEntity var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
@@ -28,7 +28,7 @@ final class eh extends da {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        qe var14 = null;
+        LevelEntity var14 = null;
         try {
           if (param1 != -30917) {
             field_o = 49;
@@ -73,7 +73,7 @@ final class eh extends da {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -88,25 +88,25 @@ final class eh extends da {
     public static void c(byte param0) {
         field_p = null;
         if (param0 != 121) {
-          qe var2 = (qe) null;
-          eh.a(65, 6, (int[]) null, 124, (qe) null);
+          LevelEntity var2 = (LevelEntity) null;
+          eh.a(65, 6, (int[]) null, 124, (LevelEntity) null);
         }
     }
 
     final static void b(byte param0) {
         if (param0 >= -45) {
           field_l = -119;
-          pf.field_d = new sl();
+          pf.field_d = new IntrusiveDeque();
           return;
         }
-        pf.field_d = new sl();
+        pf.field_d = new IntrusiveDeque();
     }
 
     eh(byte[] param0) {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "eh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "eh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

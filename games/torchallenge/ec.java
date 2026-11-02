@@ -3,10 +3,10 @@
  */
 final class ec {
     static int field_b;
-    static eg field_c;
+    static BitmapFont field_c;
     static boolean field_e;
     static int field_d;
-    static ka[] field_a;
+    static Sprite[] field_a;
     private static String field_z;
 
     public static void a(int param0) {

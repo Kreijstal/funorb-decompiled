@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj extends qd {
+final class fj extends PcmStream {
     private int[] field_q;
     private kb field_B;
     private ej field_n;
@@ -32,7 +32,7 @@ final class fj extends qd {
         jl.field_c = null;
     }
 
-    final qd c() {
+    final PcmStream firstSubstream() {
         return null;
     }
 
@@ -51,11 +51,11 @@ final class fj extends qd {
         try {
           param2.b((byte) 44, param3);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "fj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "fj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final qd b() {
+    final PcmStream nextSubstream() {
         return null;
     }
 
@@ -178,7 +178,7 @@ final class fj extends qd {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(')').toString());
         }
     }
 
@@ -192,24 +192,24 @@ final class fj extends qd {
         field_p = null;
     }
 
-    final synchronized int a() {
+    final synchronized int activity() {
         return 2;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
         if (this.field_w > 0 &&
           null != this.field_n) {
-          this.field_B.a(param0);
+          this.field_B.skip(param0);
         }
         if (this.field_w < 1048576 &&
           null != this.field_A) {
-          this.field_v.a(param0);
+          this.field_v.skip(param0);
         }
         if (this.field_o > 0 &&
           null != this.field_r) {
-          this.field_D.a(param0);
+          this.field_D.skip(param0);
         }
         if (this.field_t) {
           if (this.field_x > 0 &&
@@ -256,7 +256,7 @@ final class fj extends qd {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -280,7 +280,7 @@ final class fj extends qd {
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
           if (this.field_y <= 0) {
-            this.a(param2);
+            this.skip(param2);
             return;
           }
           if (this.field_t) {
@@ -337,7 +337,7 @@ final class fj extends qd {
           if (this.field_o < 256 && (null != this.field_n ||
             this.field_A != null)) {
             if (256 == var4_int) {
-              this.field_B.b(param0, param1, param2);
+              this.field_B.mixInto(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (null != this.field_u &&
@@ -348,8 +348,8 @@ final class fj extends qd {
                   this.field_u = new int[var6];
                   this.field_q = new int[var6];
                 }
-                this.field_B.b(this.field_u, 0, param2);
-                this.field_v.b(this.field_q, 0, param2);
+                this.field_B.mixInto(this.field_u, 0, param2);
+                this.field_v.mixInto(this.field_q, 0, param2);
                 if (kh.field_g) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
@@ -362,7 +362,7 @@ final class fj extends qd {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_u[var8] * var4_int + var5 * this.field_q[var8] >> 8);
                 }
               } else {
-                this.field_v.b(param0, param1, param2);
+                this.field_v.mixInto(param0, param1, param2);
               }
             }
           }
@@ -377,7 +377,7 @@ final class fj extends qd {
               this.field_q = new int[var6];
               this.field_u = new int[var6];
             }
-            this.field_D.b(this.field_u, 0, param2);
+            this.field_D.mixInto(this.field_u, 0, param2);
             if (kh.field_g) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
@@ -403,7 +403,7 @@ final class fj extends qd {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class te {
-    static ka field_e;
-    static vf field_b;
+    static Sprite field_e;
+    static MouseInputHandler field_b;
     static String field_a;
     static String field_c;
     static byte[] field_d;
@@ -33,8 +33,8 @@ final class te {
           if (param0 != -1) {
             return;
           }
-          if (null != da.field_c) {
-            if (!da.field_c.field_K) {
+          if (null != IntrusiveNode.field_c) {
+            if (!IntrusiveNode.field_c.field_K) {
               return;
             }
             var3_int = 1;
@@ -53,12 +53,12 @@ final class te {
             }
             if (var3_int != 0) {
               if (ga.field_y) {
-                param2 = ni.a(new String[]{param2}, 0, ug.field_a);
+                param2 = ni.a(new String[]{param2}, 0, GameApplet.field_a);
               }
               if (ae.field_C) {
                 param2 = re.field_z;
               }
-              da.field_c.a(true, param2, param1);
+              IntrusiveNode.field_c.a(true, param2, param1);
             }
             if (param1 != 256 &&
               param1 != 10 &&
@@ -78,7 +78,7 @@ final class te {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -92,11 +92,11 @@ final class te {
         try {
           var1 = hl.field_d;
           synchronized (var1) {
-            ja.field_f = kc.field_n;
+            ja.field_f = LocalizedStrings.field_n;
             if (param0 != -11) {
               te.a(-52);
             }
-            vf.field_a = vf.field_a + 1;
+            MouseInputHandler.field_a = MouseInputHandler.field_a + 1;
             if (df.field_Q < 0) {
               for (var2 = 0; var2 < 112; var2++) {
                 nj.field_c[var2] = false;
@@ -113,13 +113,13 @@ final class te {
                 nj.field_c[~var2] = false;
               }
             }
-            kc.field_n = b.field_M;
+            LocalizedStrings.field_n = b.field_M;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1_ref), "te.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "te.B(" + param0 + ')');
         }
     }
 
@@ -131,15 +131,15 @@ final class te {
         try {
           var3 = dk.field_s;
           var3.d(25, param0);
-          var3.d(param2.field_p, (byte) 122);
-          var3.a(param2.field_o, (byte) 106);
+          var3.writeByte(param2.field_p, (byte) 122);
+          var3.writeShort(param2.field_o, (byte) 106);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_b = new vf();
+        field_b = new MouseInputHandler();
         field_a = "Player names can be up to 12 letters, numbers and underscores";
         field_c = "Reload game";
     }

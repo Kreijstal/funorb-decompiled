@@ -4,7 +4,7 @@
 final class h {
     static byte[][] field_a;
     static int[][][] field_b;
-    private ka[] field_c;
+    private Sprite[] field_c;
 
     public static void a(int param0) {
         field_b = (int[][][]) null;
@@ -71,7 +71,7 @@ final class h {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -85,17 +85,17 @@ final class h {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        hd.a(this.field_c, param0, param4, (byte) -66, param1, param3);
+        GzipDecoder.a(this.field_c, param0, param4, (byte) -66, param1, param3);
         if (param2 != -1) {
-          this.field_c = (ka[]) null;
+          this.field_c = (Sprite[]) null;
         }
     }
 
-    h(ka[] param0) {
+    h(Sprite[] param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

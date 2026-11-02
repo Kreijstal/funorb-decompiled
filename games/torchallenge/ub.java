@@ -5,9 +5,9 @@ final class ub {
     static u field_d;
     private static int[] field_b;
     static int field_h;
-    static ka[] field_f;
-    static ka field_e;
-    static ka[][] field_c;
+    static Sprite[] field_f;
+    static Sprite field_e;
+    static Sprite[][] field_c;
     static boolean field_i;
     static String field_m;
     static String field_g;
@@ -19,7 +19,7 @@ final class ub {
 
     public static void a(byte param0) {
         field_d = null;
-        field_c = (ka[][]) null;
+        field_c = (Sprite[][]) null;
         int var1 = -122 / ((40 - param0) / 45);
         field_e = null;
         field_b = null;
@@ -105,7 +105,7 @@ final class ub {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var4), "ub.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) var4), "ub.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class ub {
         field_h = 0;
         field_g = "Connection lost - attempting to reconnect";
         field_m = "EXCLUSIVE";
-        field_c = new ka[3][2];
+        field_c = new Sprite[3][2];
         field_n = -1;
         field_l = new int[]{96, 96, 96, 96, 96, 96};
         field_i = false;

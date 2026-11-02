@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qf {
-    static ka[] field_c;
+    static Sprite[] field_c;
     static String field_d;
-    static wb field_a;
+    static BufferedSocket field_a;
     static String field_b;
     static int field_f;
     static ge[] field_e;
@@ -40,7 +40,7 @@ final class qf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

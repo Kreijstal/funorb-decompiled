@@ -3,7 +3,7 @@
  */
 class na extends t {
     private long field_h;
-    static sl field_d;
+    static IntrusiveDeque field_d;
     static int field_c;
     static boolean field_f;
     private String field_g;
@@ -18,7 +18,7 @@ class na extends t {
         field_d = null;
     }
 
-    final static void a(byte param0, da param1, da param2) {
+    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -27,13 +27,13 @@ class na extends t {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.field_h != null) {
-            param2.a(true);
+          if (param2.previous != null) {
+            param2.unlink(true);
           }
-          param2.field_f = param1;
-          param2.field_h = param1.field_h;
-          param2.field_h.field_f = param2;
-          param2.field_f.field_h = param2;
+          param2.next = param1;
+          param2.previous = param1.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
           if (param0 == 52) {
             return;
           }
@@ -55,19 +55,19 @@ class na extends t {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final void a(uf param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
-          param0.a(true, this.field_h);
+          param0.writeLong(true, this.field_h);
           param0.b(this.field_g, (byte) -73);
           if (param1 >= -29) {
             field_e = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "na.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "na.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -83,18 +83,18 @@ class na extends t {
           this.field_h = param0;
           this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "na.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "na.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_f = false;
         field_e = true;
-        field_d = new sl();
+        field_d = new IntrusiveDeque();
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$83744e1822f8(int param0, da param1, da param2) {
+    final static void $cfr$intArgs$a$83744e1822f8(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -103,13 +103,13 @@ class na extends t {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.field_h != null) {
-            param2.a(true);
+          if (param2.previous != null) {
+            param2.unlink(true);
           }
-          param2.field_f = param1;
-          param2.field_h = param1.field_h;
-          param2.field_h.field_f = param2;
-          param2.field_f.field_h = param2;
+          param2.next = param1;
+          param2.previous = param1.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
           if (param0 == 52) {
             return;
           }
@@ -131,7 +131,7 @@ class na extends t {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 }

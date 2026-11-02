@@ -10,7 +10,7 @@ final class ll {
     static String field_f;
     static int field_b;
     static int field_d;
-    static volatile int field_g;
+    static volatile int pressY;
     static boolean[][][] field_j;
     static int[][] field_k;
 
@@ -27,7 +27,7 @@ final class ll {
         int var13;
         int var14;
         int var15;
-        ka var16;
+        Sprite var16;
         int var17;
         int var18;
         int var19;
@@ -48,7 +48,7 @@ final class ll {
         int var22Lifetime1;
         int var22Lifetime2;
         var23 = TorChallenge.field_F ? 1 : 0;
-        var12 = kj.field_C[0].field_q;
+        var12 = kj.field_C[0].fullWidth;
         var13 = -1;
         var14 = param11 - param2;
         var15 = 0;
@@ -90,7 +90,7 @@ final class ll {
           if (var22 < var20) {
             return;
           }
-          if (param0 > param7 + var16.field_v) {
+          if (param0 > param7 + var16.fullHeight) {
             return;
           }
           if (param7 > param9) {
@@ -111,34 +111,34 @@ final class ll {
             je.field_g.e(0, 0, param8);
             od.a(cj.field_c, 33, 30, 68, 90);
             var16.g(0, 0);
-            la.field_f.a(119);
+            SectorCacheStore.field_f.bindAsTarget(119);
             je.field_i = true;
           }
-          qg.a(vd.field_e);
-          qg.a(var21, param0, var22, param9);
+          SoftwareRasterizer.a(vd.field_e);
+          SoftwareRasterizer.a(var21, param0, var22, param9);
           if (2 != param1) {
-            var16.d(var20, param7, var18, var16.field_v);
+            var16.d(var20, param7, var18, var16.fullHeight);
           } else {
-            cj.field_c.d(var20, param7, var18, cj.field_c.field_v);
+            cj.field_c.d(var20, param7, var18, cj.field_c.fullHeight);
           }
           if (1 == param1 ||
             param1 == 2) {
             if (1 == var13) {
-              if (var14 >= c.field_b.field_u >> 1) {
-                c.field_b.g(param11 - (c.field_b.field_q >> 1), param7);
+              if (var14 >= c.field_b.storedWidth >> 1) {
+                c.field_b.g(param11 - (c.field_b.fullWidth >> 1), param7);
               } else {
-                c.field_b.d(-(var14 * (c.field_b.field_q >> 1) / (c.field_b.field_u >> 1)) + param11, param7, var14 * c.field_b.field_q / (c.field_b.field_u >> 1), c.field_b.field_v);
+                c.field_b.d(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
             }
             if (2 == var13) {
-              if (c.field_b.field_u >> 1 <= var14) {
-                c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
+              if (c.field_b.storedWidth >> 1 <= var14) {
+                c.field_b.g(param2 - (c.field_b.fullWidth >> 1), param7);
               } else {
-                c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
+                c.field_b.d(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
             }
           }
-          qg.b(vd.field_e);
+          SoftwareRasterizer.b(vd.field_e);
           return;
         }
         if (!param6) {
@@ -167,7 +167,7 @@ final class ll {
           if (var22Lifetime1 < var20Lifetime1) {
             return;
           }
-          if (param0 > param7 + var16.field_v) {
+          if (param0 > param7 + var16.fullHeight) {
             return;
           }
           if (param7 > param9) {
@@ -188,34 +188,34 @@ final class ll {
             je.field_g.e(0, 0, param8);
             od.a(cj.field_c, 33, 30, 68, 90);
             var16.g(0, 0);
-            la.field_f.a(119);
+            SectorCacheStore.field_f.bindAsTarget(119);
             je.field_i = true;
           }
-          qg.a(vd.field_e);
-          qg.a(var21Lifetime1, param0, var22Lifetime1, param9);
+          SoftwareRasterizer.a(vd.field_e);
+          SoftwareRasterizer.a(var21Lifetime1, param0, var22Lifetime1, param9);
           if (2 != param1) {
-            var16.d(var20Lifetime1, param7, var18Lifetime1, var16.field_v);
+            var16.d(var20Lifetime1, param7, var18Lifetime1, var16.fullHeight);
           } else {
-            cj.field_c.d(var20Lifetime1, param7, var18Lifetime1, cj.field_c.field_v);
+            cj.field_c.d(var20Lifetime1, param7, var18Lifetime1, cj.field_c.fullHeight);
           }
           if (1 == param1 ||
             param1 == 2) {
             if (1 == var13) {
-              if (var14 >= c.field_b.field_u >> 1) {
-                c.field_b.g(param11 - (c.field_b.field_q >> 1), param7);
+              if (var14 >= c.field_b.storedWidth >> 1) {
+                c.field_b.g(param11 - (c.field_b.fullWidth >> 1), param7);
               } else {
-                c.field_b.d(-(var14 * (c.field_b.field_q >> 1) / (c.field_b.field_u >> 1)) + param11, param7, var14 * c.field_b.field_q / (c.field_b.field_u >> 1), c.field_b.field_v);
+                c.field_b.d(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
             }
             if (2 == var13) {
-              if (c.field_b.field_u >> 1 <= var14) {
-                c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
+              if (c.field_b.storedWidth >> 1 <= var14) {
+                c.field_b.g(param2 - (c.field_b.fullWidth >> 1), param7);
               } else {
-                c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
+                c.field_b.d(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
             }
           }
-          qg.b(vd.field_e);
+          SoftwareRasterizer.b(vd.field_e);
           return;
         }
         if (param6) {
@@ -244,7 +244,7 @@ final class ll {
         if (var22Lifetime2 < var20Lifetime2) {
           return;
         }
-        if (param0 > param7 + var16.field_v) {
+        if (param0 > param7 + var16.fullHeight) {
           return;
         }
         if (param7 > param9) {
@@ -265,34 +265,34 @@ final class ll {
           je.field_g.e(0, 0, param8);
           od.a(cj.field_c, 33, 30, 68, 90);
           var16.g(0, 0);
-          la.field_f.a(119);
+          SectorCacheStore.field_f.bindAsTarget(119);
           je.field_i = true;
         }
-        qg.a(vd.field_e);
-        qg.a(var21Lifetime2, param0, var22Lifetime2, param9);
+        SoftwareRasterizer.a(vd.field_e);
+        SoftwareRasterizer.a(var21Lifetime2, param0, var22Lifetime2, param9);
         if (2 != param1) {
-          var16.d(var20Lifetime2, param7, var18Lifetime2, var16.field_v);
+          var16.d(var20Lifetime2, param7, var18Lifetime2, var16.fullHeight);
         } else {
-          cj.field_c.d(var20Lifetime2, param7, var18Lifetime2, cj.field_c.field_v);
+          cj.field_c.d(var20Lifetime2, param7, var18Lifetime2, cj.field_c.fullHeight);
         }
         if (1 == param1 ||
           param1 == 2) {
           if (1 == var13) {
-            if (var14 < c.field_b.field_u >> 1) {
-              c.field_b.d(-(var14 * (c.field_b.field_q >> 1) / (c.field_b.field_u >> 1)) + param11, param7, var14 * c.field_b.field_q / (c.field_b.field_u >> 1), c.field_b.field_v);
+            if (var14 < c.field_b.storedWidth >> 1) {
+              c.field_b.d(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
             } else {
-              c.field_b.g(param11 - (c.field_b.field_q >> 1), param7);
+              c.field_b.g(param11 - (c.field_b.fullWidth >> 1), param7);
             }
           }
           if (2 == var13) {
-            if (c.field_b.field_u >> 1 <= var14) {
-              c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
+            if (c.field_b.storedWidth >> 1 <= var14) {
+              c.field_b.g(param2 - (c.field_b.fullWidth >> 1), param7);
             } else {
-              c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
+              c.field_b.d(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
             }
           }
         }
-        qg.b(vd.field_e);
+        SoftwareRasterizer.b(vd.field_e);
         return;
     }
 
@@ -317,7 +317,7 @@ final class ll {
 
     final static void a(int param0, boolean param1, boolean param2) {
         if (param1) {
-          qg.a(0, 0, qg.field_g, qg.field_f, 0, 192);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           if (param0 != 0) {
             ll.a(80, true, false);
             c.a(param1, false);
@@ -326,7 +326,7 @@ final class ll {
           c.a(param1, false);
           return;
         }
-        qg.b();
+        SoftwareRasterizer.b();
         if (param0 != 0) {
           ll.a(80, true, false);
           c.a(param1, false);
@@ -360,7 +360,7 @@ final class ll {
         field_e = new int[][][]{new int[][]{new int[]{256, 256, 256}, new int[]{256, 224, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{224, 256, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{224, 224, 224}, new int[]{224, 256, 224}, new int[]{224, 224, 224}, new int[]{256, 256, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{224, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{356, 256, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{224, 224, 224}, new int[]{256, 256, 256}, new int[]{224, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}}, new int[][]{new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{256, 256, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{224, 224, 224}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}};
         field_c = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
         field_b = -1;
-        field_g = 0;
+        pressY = 0;
         field_j = new boolean[][][]{new boolean[][]{new boolean[]{false, false, true}, new boolean[]{false, true}, new boolean[]{false, true}, new boolean[]{false, false, false, false, false, true}, new boolean[]{false, true}, new boolean[]{false}, new boolean[]{true, true, true, false, true, true}}, new boolean[][]{new boolean[]{false, true}, new boolean[]{false, false, false, true}, new boolean[]{false, false, false, false, false, true}, new boolean[]{false, false, false, false, true, true}, new boolean[]{false, false, false, false, true}, new boolean[]{false, false, false, false, true}, new boolean[]{false}}, new boolean[][]{new boolean[]{false, false, true}, new boolean[]{false, true}, new boolean[]{false, false, false, true}, new boolean[]{false, false, false, false, false, true}, new boolean[]{false, false, true}, new boolean[]{false}, new boolean[]{true, true, true, false, false, true}}};
         field_k = new int[][]{new int[]{1, 1, 1}, new int[]{1, 1, 1}, new int[]{1, 2, 3}, new int[]{5, 5, 5}, new int[]{0, 1, 1}, new int[]{2, 2, 2}, new int[]{10, 10, 10}, new int[]{0, 0, 0}, new int[]{0}, new int[]{0}};
     }

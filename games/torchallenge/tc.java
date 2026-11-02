@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends da {
+final class tc extends IntrusiveNode {
     static int[][] field_m;
     int field_j;
     int[] field_n;
@@ -21,7 +21,7 @@ final class tc extends da {
           uc.field_Y = param5;
           ni.field_i = param4;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "tc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "tc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -12,7 +12,7 @@ final class ih extends kj implements sg {
 
     public ih() {
         super(0, 0, 476, 225, (j) null);
-        this.field_M = new ng(nd.field_a, (gg) null);
+        this.field_M = new ng(RandomAccessCacheFile.field_a, (gg) null);
         this.field_P = new ng(uk.field_Q, (gg) null);
         this.field_L = new ng(cj.field_k, (gg) null);
         cl var1 = new cl();
@@ -53,7 +53,7 @@ final class ih extends kj implements sg {
               }
             }
           } else {
-            nd.b((byte) 116);
+            RandomAccessCacheFile.b((byte) 116);
           }
           if (param4) {
             field_K = -44;
@@ -69,7 +69,7 @@ final class ih extends kj implements sg {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -98,31 +98,31 @@ final class ih extends kj implements sg {
         me.field_g = 0;
         ii.field_k = null;
         we.field_j = 0;
-        lj.field_b = 0;
+        ResourceArchive.field_b = 0;
         ec.field_b = -1;
         ed.field_c = 0;
         gh.field_m = false;
         fa.field_t = -1;
         sd.field_d = 0;
-        kc.field_w = (int[][]) null;
+        LocalizedStrings.field_w = (int[][]) null;
         fh.field_d = 0;
         vi.field_a = 0;
         n.field_jb = 0;
-        fc.field_o = 0;
+        ProxySocketConnector.field_o = 0;
         if (param0 <= 84) {
           field_O = (int[]) null;
         }
-        rk.field_e = true;
+        BufferedCacheFile.field_e = true;
         o.field_l = 0;
-        ad.field_a = true;
+        FullscreenFocusCanvas.field_a = true;
         tk.field_P = false;
         bd.field_l = false;
         i.field_r = 0;
         qk.field_lb = 0;
         rj.field_d = null;
-        uf.field_k = false;
+        PacketBuffer.field_k = false;
         hf.field_c = 0;
-        gl.field_f = false;
+        SocketConnector.field_f = false;
         pi.field_c = null;
         id.field_d = (int[][]) null;
         wj.field_a = 0;
@@ -140,16 +140,16 @@ final class ih extends kj implements sg {
         ea.field_h = null;
         sf.field_c = 0;
         ql.field_n = 0;
-        mj.field_b = false;
+        GameKeyHandler.field_b = false;
         wh.field_b = false;
         qh.d(true);
         sd.a(123);
         sd.b(116);
     }
 
-    final boolean a(int param0, char param1, byte param2, ee param3) {
+    final boolean a(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
-        ee var6 = null;
+        UiComponent var6 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_16_0 = null;
@@ -171,8 +171,8 @@ final class ih extends kj implements sg {
           if (param2 > 9) {
             return false;
           }
-          var6 = (ee) null;
-          this.a(20, 'Q', (byte) 83, (ee) null);
+          var6 = (UiComponent) null;
+          this.a(20, 'Q', (byte) 83, (UiComponent) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -184,11 +184,11 @@ final class ih extends kj implements sg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, ka param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -203,43 +203,43 @@ final class ih extends kj implements sg {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        ka var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
         int[] var30 = null;
         var19 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (qg.field_a > param1) {
-            param0 = param0 - (qg.field_a - param1);
-            param1 = qg.field_a;
+          if (SoftwareRasterizer.field_a > param1) {
+            param0 = param0 - (SoftwareRasterizer.field_a - param1);
+            param1 = SoftwareRasterizer.field_a;
           }
-          if (qg.field_k > param6) {
-            param3 = param3 - (-param6 + qg.field_k);
-            param6 = qg.field_k;
+          if (SoftwareRasterizer.field_k > param6) {
+            param3 = param3 - (-param6 + SoftwareRasterizer.field_k);
+            param6 = SoftwareRasterizer.field_k;
           }
-          if (qg.field_c < param0 + param1) {
-            param0 = -param1 + qg.field_c;
+          if (SoftwareRasterizer.field_c < param0 + param1) {
+            param0 = -param1 + SoftwareRasterizer.field_c;
           }
           if (param2 != 4) {
             return;
           }
-          if (qg.field_l < param6 + param3) {
-            param3 = qg.field_l - param6;
+          if (SoftwareRasterizer.field_l < param6 + param3) {
+            param3 = SoftwareRasterizer.field_l - param6;
           }
           if (param0 > 0 &&
             param3 > 0) {
             var21 = param5.c();
-            var30 = qg.field_i;
-            var10 = qg.field_g;
-            var11 = qg.field_f;
+            var30 = SoftwareRasterizer.pixels;
+            var10 = SoftwareRasterizer.width;
+            var11 = SoftwareRasterizer.height;
             var29 = new int[4];
-            qg.a(var29);
+            SoftwareRasterizer.a(var29);
             param5.d();
-            qg.a(var29[0], var29[1], var29[2], var29[3]);
-            var13 = param6 * param5.field_u + param1;
-            var14 = -param0 + param5.field_u;
-            var25 = var21.field_y;
+            SoftwareRasterizer.a(var29[0], var29[1], var29[2], var29[3]);
+            var13 = param6 * param5.storedWidth + param1;
+            var14 = -param0 + param5.storedWidth;
+            var25 = var21.pixels;
             var22 = var25;
             var15 = var22;
             for (var16 = param6; var16 < param6 + param3; var16++) {
@@ -248,19 +248,19 @@ final class ih extends kj implements sg {
                 if (var18 != 0) {
                   if (var17 > 0 &&
                     0 == var15[-1 + var13]) {
-                    qg.e(var17, var16, param4, param7);
+                    SoftwareRasterizer.e(var17, var16, param4, param7);
                   } else {
                     if (var16 > 0 &&
-                      var15[var13 - param5.field_u] == 0) {
-                      qg.e(var17, var16, param4, param7);
+                      var15[var13 - param5.storedWidth] == 0) {
+                      SoftwareRasterizer.e(var17, var16, param4, param7);
                     } else {
-                      if (var17 < param5.field_u - 1 &&
+                      if (var17 < param5.storedWidth - 1 &&
                         var15[var13 + 1] == 0) {
-                        qg.e(var17, var16, param4, param7);
+                        SoftwareRasterizer.e(var17, var16, param4, param7);
                       } else {
-                        if (var16 < -1 + param5.field_x &&
-                          var15[param5.field_u + var13] == 0) {
-                          qg.e(var17, var16, param4, param7);
+                        if (var16 < -1 + param5.storedHeight &&
+                          var15[param5.storedWidth + var13] == 0) {
+                          SoftwareRasterizer.e(var17, var16, param4, param7);
                         }
                       }
                     }
@@ -270,9 +270,9 @@ final class ih extends kj implements sg {
               }
               var13 = var13 + var14;
             }
-            var21.g(-param5.field_s, -param5.field_p);
-            qg.a(var30, var10, var11);
-            qg.b(var29);
+            var21.g(-param5.offsetX, -param5.offsetY);
+            SoftwareRasterizer.setTarget(var30, var10, var11);
+            SoftwareRasterizer.b(var29);
             return;
           }
           return;
@@ -286,7 +286,7 @@ final class ih extends kj implements sg {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class ih extends kj implements sg {
     final void a(int param0, int param1, boolean param2, int param3) {
         int var5 = this.field_m + param1;
         int var6 = this.field_i + param0;
-        oe.field_g.a(dk.field_g, 20 + var5, var6 + 20, -40 + this.field_p, this.field_l - 50, 16777215, -1, 1, 0, oe.field_g.field_x);
+        RasterBuffer.field_g.a(dk.field_g, 20 + var5, var6 + 20, -40 + this.field_p, this.field_l - 50, 16777215, -1, 1, 0, RasterBuffer.field_g.field_x);
         super.a(param0, param1, param2, param3);
     }
 

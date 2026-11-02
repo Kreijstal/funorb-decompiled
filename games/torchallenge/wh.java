@@ -3,7 +3,7 @@
  */
 final class wh {
     static boolean[] field_d;
-    static ka[] field_f;
+    static Sprite[] field_f;
     static int field_e;
     static long field_c;
     static String field_a;
@@ -62,7 +62,7 @@ final class wh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

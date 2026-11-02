@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hf implements j {
-    static ka field_a;
+    static Sprite field_a;
     static int field_c;
     static byte[] field_d;
     static int[][] field_f;
@@ -76,7 +76,7 @@ final class hf implements j {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param5).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -92,9 +92,9 @@ final class hf implements j {
         ae.field_z = ae.field_z ^ 4;
         jj.field_c = jj.field_c | var3;
         eh.field_l = eh.field_l | var3;
-        db.field_D.a(new ul(param2), -83);
+        db.field_D.addLast(new ul(param2), -83);
         if (!bh.field_p) {
-          wc.field_g.a(new rd(param2, param0, al.field_z, pi.field_a, pi.field_f, ub.field_j), -53);
+          wc.field_g.addLast(new rd(param2, param0, al.field_z, pi.field_a, pi.field_f, ub.field_j), -53);
         }
     }
 
@@ -153,7 +153,7 @@ final class hf implements j {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class hf implements j {
         fk.a(true, 4);
     }
 
-    public final void a(ee param0, int param1, int param2, byte param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -183,7 +183,7 @@ final class hf implements j {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        ka var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param0.field_m + param2;
           if (param3 != 97) {
@@ -194,7 +194,7 @@ final class hf implements j {
           var8 = ub.field_f[1];
           if (param0 instanceof ng &&
             ((ng) (param0)).field_D) {
-            var8.b(var6_int + 1 + (param0.field_p - var8.field_q >> 1), (-var8.field_v + param0.field_l >> 1) + (var7 + 1), 256);
+            var8.b(var6_int + 1 + (param0.field_p - var8.fullWidth >> 1), (-var8.fullHeight + param0.field_l >> 1) + (var7 + 1), 256);
           }
           if (param0.c(param3 - 11)) {
             jc.a((byte) -115, var6_int + 2, param0.field_l - 4, param0.field_p - 4, 2 + var7);
@@ -210,7 +210,7 @@ final class hf implements j {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class hf implements j {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param5).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param5).append(')').toString());
         }
     }
 }

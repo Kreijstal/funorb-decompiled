@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vj {
-    static ka[] field_d;
+    static Sprite[] field_d;
     static int field_c;
     static String field_a;
     static String field_e;
@@ -10,7 +10,7 @@ final class vj {
 
     public static void a(byte param0) {
         if (param0 < 60) {
-          field_d = (ka[]) null;
+          field_d = (Sprite[]) null;
         }
         field_b = null;
         field_a = null;
@@ -18,8 +18,8 @@ final class vj {
         field_d = null;
     }
 
-    final static void a(lj param0, lj param1, int param2, lj param3) {
-        ka var17 = null;
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
+        Sprite var17 = null;
         ge[] var5 = null;
         ge[][] var6 = null;
         int[][] var19 = null;
@@ -27,25 +27,25 @@ final class vj {
         int[][] var7 = null;
         ge[] var14 = null;
         int var11_int = 0;
-        ka var15 = null;
-        ka var18 = null;
-        ka var11 = null;
-        ka var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = TorChallenge.field_F ? 1 : 0;
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          fl.field_s = lk.a(-128, "frame_top", "commonui", param3);
-          qa.field_e = lk.a(-127, "frame_bottom", "commonui", param3);
+          fl.field_s = SpriteLoader.a(-128, "frame_top", "commonui", param3);
+          qa.field_e = SpriteLoader.a(-127, "frame_bottom", "commonui", param3);
           rj.field_a = qk.a("commonui", "jagex_logo_grey", param3, 0);
-          ae.field_v = lk.a(param2 ^ -23127, "button", "commonui", param3);
+          ae.field_v = SpriteLoader.a(param2 ^ -23127, "button", "commonui", param3);
           ub.field_f = s.a(param3, "commonui", 0, "validation");
-          ug.field_f = (eg) ((Object) qi.a(param0, "commonui", param3, "arezzo12", 0));
-          oe.field_g = (eg) ((Object) qi.a(param0, "commonui", param3, "arezzo14", param2 ^ param2));
-          dl.field_H = (eg) ((Object) qi.a(param0, "commonui", param3, "arezzo14bold", param2 - 23081));
-          var17 = new ka(param1.a(-2, "", "button.gif"), (java.awt.Component) ((Object) bg.field_P));
+          GameApplet.field_f = (BitmapFont) ((Object) qi.a(param0, "commonui", param3, "arezzo12", 0));
+          RasterBuffer.field_g = (BitmapFont) ((Object) qi.a(param0, "commonui", param3, "arezzo14", param2 ^ param2));
+          dl.field_H = (BitmapFont) ((Object) qi.a(param0, "commonui", param3, "arezzo14bold", param2 - 23081));
+          var17 = new Sprite(param1.a(-2, "", "button.gif"), (java.awt.Component) ((Object) bg.field_P));
           rb.a(param3, "commonui", (byte) -114, "dropdown");
           var5 = mh.a(32, param3, "screen_options", "commonui");
           c.field_d = new ge[4];
@@ -70,24 +70,24 @@ final class vj {
               var14[var11_int] = qa.a(var19[var11_int], TorChallenge.a(param2, -23082), var5[var9]);
             }
           }
-          var9Lifetime1 = var17.field_x;
-          wb.b((byte) -128);
+          var9Lifetime1 = var17.storedHeight;
+          BufferedSocket.b((byte) -128);
           var17.d();
-          qg.g(0, 0, qg.field_g, qg.field_f);
-          var15 = new ka(var9Lifetime1, var9Lifetime1);
+          SoftwareRasterizer.g(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.d();
           var17.a(0, 0);
-          var11 = new ka(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.d();
-          var17.a(var9Lifetime1 - var17.field_u, 0);
-          var12 = new ka(-(2 * var9Lifetime1) + var17.field_u, var9Lifetime1);
+          var17.a(var9Lifetime1 - var17.storedWidth, 0);
+          var12 = new Sprite(-(2 * var9Lifetime1) + var17.storedWidth, var9Lifetime1);
           var12.d();
           var17.a(-var9Lifetime1, 0);
           ie.b((byte) -9);
-          ae.field_v = new ka[]{var15, var12, var11};
+          ae.field_v = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "vj.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "vj.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -6,7 +6,7 @@ final class bd extends jl {
     private long field_p;
     private int field_s;
     private long field_r;
-    static ka field_t;
+    static Sprite field_t;
     private long field_i;
     private long[] field_q;
     static int[] field_m;
@@ -21,15 +21,15 @@ final class bd extends jl {
         if (!(2 >= mg.field_b)) {
           mg.field_b = 2;
         }
-        wb.field_j = param1 >> 2 & 3;
+        BufferedSocket.field_j = param1 >> 2 & 3;
         o.field_i = param1 & 3;
-        if (wb.field_j <= 2) {
+        if (BufferedSocket.field_j <= 2) {
           if (!(o.field_i <= 2)) {
             o.field_i = 2;
           }
           return;
         }
-        wb.field_j = 2;
+        BufferedSocket.field_j = 2;
         if (!(o.field_i <= 2)) {
           o.field_i = 2;
         }
@@ -175,7 +175,7 @@ final class bd extends jl {
 
     static {
         field_m = new int[16];
-        field_t = new ka(540, 140);
+        field_t = new Sprite(540, 140);
         field_j = "Visit the Account Management section on the main site to view.";
         field_l = false;
         field_n = "Password: ";

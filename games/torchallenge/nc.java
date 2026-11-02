@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nc extends qd {
+final class nc extends PcmStream {
     private int field_v;
     private int field_r;
     private int field_m;
@@ -271,7 +271,7 @@ final class nc extends qd {
         return param5 >> 1;
     }
 
-    final int a() {
+    final int activity() {
         if (this.field_q == 0 &&
           this.field_w == 0) {
           return 0;
@@ -303,7 +303,7 @@ final class nc extends qd {
           this.field_n = 0;
           this.field_v = 0;
           this.field_o = 0;
-          this.a(true);
+          this.unlink(true);
           return true;
         }
         if (this.field_o >= var1) {
@@ -421,7 +421,7 @@ final class nc extends qd {
         return this.field_A < 0 || this.field_A >= ((fe) (this.field_k)).field_k.length << 8;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -443,7 +443,7 @@ final class nc extends qd {
               this.field_n = 0;
               this.field_v = 0;
               this.field_o = 0;
-              this.a(true);
+              this.unlink(true);
               param0 = this.field_w;
             }
             this.field_w = 0;
@@ -461,7 +461,7 @@ final class nc extends qd {
         if (this.field_A < 0) {
           if (this.field_s <= 0) {
             this.h();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_A = 0;
@@ -469,7 +469,7 @@ final class nc extends qd {
         if (this.field_A >= var5) {
           if (this.field_s >= 0) {
             this.h();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_A = var5 - 1;
@@ -582,7 +582,7 @@ final class nc extends qd {
           if (this.field_A >= var5) {
             this.field_A = var5;
             this.h();
-            this.a(true);
+            this.unlink(true);
           }
           return;
         }
@@ -591,7 +591,7 @@ final class nc extends qd {
         }
         this.field_A = -1;
         this.h();
-        this.a(true);
+        this.unlink(true);
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, nc param10) {
@@ -975,7 +975,7 @@ final class nc extends qd {
         this.field_A = param0;
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -991,7 +991,7 @@ final class nc extends qd {
         int var10Lifetime1;
         if (this.field_q == 0 &&
           this.field_w == 0) {
-          this.a(param2);
+          this.skip(param2);
           return;
         }
         var4 = (fe) (this.field_k);
@@ -1007,7 +1007,7 @@ final class nc extends qd {
         if (this.field_A < 0) {
           if (this.field_s <= 0) {
             this.h();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_A = 0;
@@ -1015,7 +1015,7 @@ final class nc extends qd {
         if (this.field_A >= var7) {
           if (this.field_s >= 0) {
             this.h();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_A = var7 - 1;
@@ -1142,7 +1142,7 @@ final class nc extends qd {
           if (this.field_A >= var7) {
             this.field_A = var7;
             this.h();
-            this.a(true);
+            this.unlink(true);
           }
           return;
         }
@@ -1152,7 +1152,7 @@ final class nc extends qd {
         }
         this.field_A = -1;
         this.h();
-        this.a(true);
+        this.unlink(true);
         return;
     }
 
@@ -1286,7 +1286,7 @@ final class nc extends qd {
         this.field_u = param1;
     }
 
-    final int d() {
+    final int priority() {
         int var1 = this.field_o * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_x == 0) {
@@ -1342,7 +1342,7 @@ final class nc extends qd {
         return param3;
     }
 
-    final qd c() {
+    final PcmStream firstSubstream() {
         return null;
     }
 
@@ -1551,7 +1551,7 @@ final class nc extends qd {
         int var2Lifetime1;
         if (param0 == 0) {
           this.f(0);
-          this.a(true);
+          this.unlink(true);
           return;
         }
         if (this.field_v != 0) {
@@ -1611,7 +1611,7 @@ final class nc extends qd {
         this.field_w = 0;
         this.field_q = 0;
         this.field_o = 0;
-        this.a(true);
+        this.unlink(true);
     }
 
     final synchronized void b(int param0, int param1, int param2) {
@@ -1747,7 +1747,7 @@ final class nc extends qd {
         return param3;
     }
 
-    final qd b() {
+    final PcmStream nextSubstream() {
         return null;
     }
 

@@ -22,19 +22,19 @@ class fk extends bc {
         field_u = null;
     }
 
-    public final void a(ee param0, int param1, int param2, byte param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         try {
           if (param4) {
             v.b(param0.field_m + param2, param3 ^ 12105945, param0.field_p, param0.field_i + param1, param0.field_l);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "fk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "fk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     fk(int param0) {
-        this(oe.field_g, param0);
+        this(RasterBuffer.field_g, param0);
     }
 
     final static void a(boolean param0, int param1) {
@@ -44,7 +44,7 @@ class fk extends bc {
         }
     }
 
-    fk(eg param0, int param1) {
+    fk(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_x, -1, 2147483647, false);
     }
 
@@ -60,7 +60,7 @@ class fk extends bc {
         String var28 = null;
         String var29 = null;
         String var30 = null;
-        jd var14 = null;
+        ClientException var14 = null;
         String var2 = null;
         String var11 = null;
         int var9 = 0;
@@ -93,10 +93,10 @@ class fk extends bc {
         int var9Lifetime1;
         int var10Lifetime1;
         int var12Lifetime1;
-        if (param0 instanceof jd) {
-          var14 = (jd) ((Object) param0);
-          param0 = var14.field_a;
-          var2 = var14.field_c + " | ";
+        if (param0 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param0);
+          param0 = var14.cause;
+          var2 = var14.context + " | ";
         } else {
           var2 = "";
           var11 = var2;

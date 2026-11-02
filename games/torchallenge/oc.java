@@ -18,7 +18,7 @@ final class oc {
     }
 
     final static void c() {
-        oc.a(qg.field_a, qg.field_k, qg.field_c, qg.field_l);
+        oc.a(SoftwareRasterizer.field_a, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c, SoftwareRasterizer.field_l);
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
@@ -29,10 +29,10 @@ final class oc {
         if (field_b.length < field_e) {
           field_b = new int[ll.a(true, field_e)];
         }
-        int var4 = param1 * qg.field_g + param0;
+        int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < field_e; var5++) {
           field_b[var5] = var4;
-          var4 = var4 + qg.field_g;
+          var4 = var4 + SoftwareRasterizer.width;
         }
     }
 

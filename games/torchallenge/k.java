@@ -33,8 +33,8 @@ final class k {
     }
 
     final static void a(int param0) {
-        ug.field_n = new dg();
-        bg.field_K.c(0, ug.field_n);
+        GameApplet.field_n = new dg();
+        bg.field_K.c(0, GameApplet.field_n);
         if (param0 != -14956) {
           byte[] var2 = (byte[]) null;
           k.a((byte[]) null, 40, -82);
@@ -64,7 +64,7 @@ final class k {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

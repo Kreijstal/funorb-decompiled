@@ -7,7 +7,7 @@ final class ah {
     static int[][] field_a;
     static boolean field_i;
     static String field_c;
-    static ka[][][][] field_d;
+    static Sprite[][][][] field_d;
     static boolean field_h;
     static int[] field_f;
     static int[][][] field_j;
@@ -27,17 +27,17 @@ final class ah {
           lb.d((byte) -81);
         }
         if (fj.field_m == null) {
-          uf.c(-7668);
+          PacketBuffer.c(-7668);
         }
         if (null == pa.field_z) {
           jf.m(115);
         }
-        if (null == lj.field_j) {
+        if (null == ResourceArchive.field_j) {
           hl.a((byte) 50);
         }
         if (null != je.field_c[param0] &&
           !ol.field_a) {
-          mf.a(false, je.field_c[param0], param1 ^ -2282, false);
+          LevelDecoder.a(false, je.field_c[param0], param1 ^ -2282, false);
         }
         kd.field_m.b((byte) 63);
         kd.field_m.a(param1 + 22083, param0);
@@ -102,7 +102,7 @@ final class ah {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class ah {
         field_j = (int[][][]) null;
         field_e = null;
         field_c = null;
-        field_d = (ka[][][][]) null;
+        field_d = (Sprite[][][][]) null;
         if (param0 <= 26) {
           field_g = (String) null;
           return;
@@ -128,31 +128,31 @@ final class ah {
         RuntimeException var2 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          var5 = (bk) (na.field_d.c((byte) 118));
+          var5 = (bk) (na.field_d.first((byte) 118));
           if (param0 != -86) {
             field_i = true;
           }
           while (var5 != null) {
             ae.a(param1, var5, -15024);
-            var5 = (bk) (na.field_d.c(-270));
+            var5 = (bk) (na.field_d.next(-270));
           }
-          var4 = (tc) (gf.field_q.c((byte) -18));
+          var4 = (tc) (gf.field_q.first((byte) -18));
           while (var4 != null) {
             ue.a(var4, 2, param1);
-            var4 = (tc) (gf.field_q.c(param0 ^ 344));
+            var4 = (tc) (gf.field_q.next(param0 ^ 344));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "ah.D(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "ah.D(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
         field_a = new int[][]{new int[]{3, 2, 2, 6, 2, 0, 6}, new int[]{2, 4, 6, 6, 5, 5, 0}, new int[]{3, 2, 4, 6, 3, 0, 6}};
         field_i = false;
-        field_d = new ka[9][8][3][];
+        field_d = new Sprite[9][8][3][];
         field_h = false;
         field_e = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
         field_f = new int[]{20, 30, 40};

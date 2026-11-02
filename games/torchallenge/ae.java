@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ae extends da {
+final class ae extends IntrusiveNode {
     static int[] field_w;
     static int field_z;
     int[][] field_l;
@@ -16,7 +16,7 @@ final class ae extends da {
     static char[] field_p;
     static boolean field_C;
     static int field_k;
-    static ka[] field_v;
+    static Sprite[] field_v;
     static int[] field_A;
     int field_r;
     int field_o;
@@ -32,8 +32,8 @@ final class ae extends da {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -91 % ((param0 + 22) / 50);
-          if (null != ug.field_n) {
-            ug.field_n.field_L.a(-6620, param1);
+          if (null != GameApplet.field_n) {
+            GameApplet.field_n.field_L.a(-6620, param1);
           }
           if (m.field_j == null) {
             return;
@@ -50,7 +50,7 @@ final class ae extends da {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -88,22 +88,22 @@ final class ae extends da {
         try {
           var5 = dk.field_s;
           var5.d(25, param0);
-          var5.field_q = var5.field_q + 1;
-          var4 = var5.field_q;
-          var5.d(1, (byte) 122);
-          var5.d(param1.field_v, (byte) 122);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, (byte) 122);
+          var5.writeByte(param1.field_v, (byte) 122);
           if (param2 != -15024) {
             field_A = (int[]) null;
           }
-          var5.c((byte) -89, param1.field_o);
-          var5.a(param1.field_m, false);
-          var5.a(param1.field_k, false);
-          var5.a(param1.field_u, false);
-          var5.a(param1.field_j, false);
+          var5.writeSignedSmart((byte) -89, param1.field_o);
+          var5.writeInt(param1.field_m, false);
+          var5.writeInt(param1.field_k, false);
+          var5.writeInt(param1.field_u, false);
+          var5.writeInt(param1.field_j, false);
           var5.b(var4, param2 + 29454);
-          var5.a(var5.field_q - var4, -111);
+          var5.patchByteLength(var5.position - var4, -111);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ae.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ae.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

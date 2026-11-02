@@ -9,14 +9,14 @@ final class gb {
     static double field_a;
     static h field_f;
 
-    final static void a(int param0, int param1, eg param2, int param3, ka[] param4, ka[] param5, boolean param6, int param7, eg param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void a(int param0, int param1, BitmapFont param2, int param3, Sprite[] param4, Sprite[] param5, boolean param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         try {
-          ka[] var16 = (ka[]) null;
-          bh.a(param10, param14, ai.field_d, 0, param4, qa.field_f, param9, param5, param7, param12, param3, param13, 0, param0, param8, param11, -96, 480, (ka[]) null, lg.field_f, param2);
+          Sprite[] var16 = (Sprite[]) null;
+          bh.a(param10, param14, ai.field_d, 0, param4, qa.field_f, param9, param5, param7, param12, param3, param13, 0, param0, param8, param11, -96, 480, (Sprite[]) null, lg.field_f, param2);
           int var15_int = -62 % ((param1 - 1) / 55);
           ik.a(param6, -27055);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "gb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "gb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class gb {
           if (param0 != -28993) {
             gb.a(16);
           }
-          var2 = new qj(param1, ug.field_e, dd.field_t, pg.field_r, lg.field_e, td.field_m, h.field_a);
+          var2 = new qj(param1, GameApplet.field_e, ImageProducerRasterBuffer.field_t, pg.field_r, lg.field_e, td.field_m, h.field_a);
           p.a(0);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -51,7 +51,7 @@ final class gb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class gb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

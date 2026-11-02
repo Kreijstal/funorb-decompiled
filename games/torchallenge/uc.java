@@ -23,21 +23,21 @@ final class uc extends ng {
         Throwable decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          if (la.field_d != null) {
+          if (SectorCacheStore.field_d != null) {
             ac.a(false, param3, param0, param2, 1048576);
           }
-          if (la.field_a != null) {
+          if (SectorCacheStore.field_a != null) {
             var4 = bh.field_o;
             synchronized (var4) {
-              la.field_a.a(param1 + 298, param3, -1);
-              if (tg.field_t == param0) {
+              SectorCacheStore.field_a.a(param1 + 298, param3, -1);
+              if (SpriteState.field_t == param0) {
                 return;
               }
-              la.field_a.b((byte) 31);
+              SectorCacheStore.field_a.b((byte) 31);
               bh.field_o.g();
-              tg.field_t = param0;
-              if (tg.field_t != null) {
-                la.field_a.a(-8126, tg.field_t, param2);
+              SpriteState.field_t = param0;
+              if (SpriteState.field_t != null) {
+                SectorCacheStore.field_a.a(-8126, SpriteState.field_t, param2);
               }
             }
           }
@@ -56,7 +56,7 @@ final class uc extends ng {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class uc extends ng {
         }
     }
 
-    final static ja[] a(int param0, uj param1) {
+    final static ja[] a(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         ja[] stackIn_3_0 = null;
         ja[] stackIn_12_0 = null;
@@ -82,7 +82,7 @@ final class uc extends ng {
         ja[] var4 = null;
         ja var6 = null;
         int var7 = 0;
-        mi var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = TorChallenge.field_F ? 1 : 0;
@@ -102,7 +102,7 @@ final class uc extends ng {
             stackIn_12_0 = new ja[]{};
             return stackIn_12_0;
           }
-          var10 = (int[]) (var8.field_g);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new ja[var10.length >> 2];
@@ -126,11 +126,11 @@ final class uc extends ng {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ee param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -175,7 +175,7 @@ final class uc extends ng {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ul extends da {
-    static ka field_k;
+final class ul extends IntrusiveNode {
+    static Sprite field_k;
     static int field_j;
     static int field_l;
     static int field_n;
@@ -208,7 +208,7 @@ final class ul extends da {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -225,28 +225,28 @@ final class ul extends da {
         pa var7 = dk.field_s;
         pa var8 = var7;
         var8.d(25, param2);
-        var8.field_q = var8.field_q + 1;
-        int var4 = var8.field_q;
-        var8.d(1, (byte) 122);
-        var8.a(param1.field_l, (byte) 106);
-        var8.a(param1.field_o, (byte) 106);
-        var8.a(param1.field_t, (byte) 106);
-        var8.a(param1.field_s, false);
-        var8.a(param1.field_i, false);
-        var8.a(param1.field_v, false);
-        var8.a(param1.field_j, false);
+        var8.position = var8.position + 1;
+        int var4 = var8.position;
+        var8.writeByte(1, (byte) 122);
+        var8.writeShort(param1.field_l, (byte) 106);
+        var8.writeShort(param1.field_o, (byte) 106);
+        var8.writeShort(param1.field_t, (byte) 106);
+        var8.writeInt(param1.field_s, false);
+        var8.writeInt(param1.field_i, false);
+        var8.writeInt(param1.field_v, false);
+        var8.writeInt(param1.field_j, false);
         if (param0 != -18261) {
           return;
         }
         try {
-          var8.d(param1.field_w.length, (byte) 122);
+          var8.writeByte(param1.field_w.length, (byte) 122);
           for (var5 = 0; param1.field_w.length > var5; var5++) {
-            var7.a(param1.field_w[var5], false);
+            var7.writeInt(param1.field_w[var5], false);
           }
           var8.b(var4, 14430);
-          var8.a(var8.field_q - var4, -120);
+          var8.patchByteLength(var8.position - var4, -120);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ul.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ul.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class ul extends da {
         if (param0 != -1247) {
           return;
         }
-        ee.a(true, 1, true);
+        UiComponent.a(true, 1, true);
     }
 
     final static boolean a(int param0) {
@@ -266,16 +266,16 @@ final class ul extends da {
         return wf.field_i.a(-11982);
     }
 
-    final static void a(lj param0, int param1, lj param2) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         try {
           sf.field_a = param2;
-          fd.field_c = param0;
+          IterableNodeHashTable.field_c = param0;
           if (param1 != -1656370552) {
             vg var4 = (vg) null;
             ul.a(-64, -22, 5, -39, 95, (vg) null, -87, -81);
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ul.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ul.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -284,7 +284,7 @@ final class ul extends da {
     }
 
     static {
-        field_k = new ka(270, 70);
+        field_k = new Sprite(270, 70);
         field_j = -1;
         field_n = -1;
         field_m = 0;
