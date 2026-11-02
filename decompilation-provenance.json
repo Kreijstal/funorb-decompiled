@@ -10511,6 +10511,49 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "arcanistsmulti": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/arcanistsmulti"
+      },
+      "inputTreeSha256": "cb35eeeb97345181e40620f0f0948dfb771d6390b0699c56900b5f91559c8df0",
+      "sources": {
+        "files": 363,
+        "sha256": "086324d3a8e97837df62104ab26854eef285c60bf670c386bc1ce8eb8ef4f343"
+      },
+      "dictionary": {
+        "path": "decompilation/arcanistsmulti-naming.json",
+        "sha256": "009bd61f1aa2ffbfa0e03717f71e61d2c401fdd854ab2b2f47de93e7cb0d462d"
+      },
+      "readingGuide": {
+        "path": "games/arcanistsmulti/README.md",
+        "sha256": "beace6cdd936a3346872b6add89a7e75a72af12aa6d73ee4d1a8d6c860e72e9d"
+      },
+      "rulesSha256": "d4032fc89044d29ee495ca09a0d4a54afc8fb9f1a1d2ae908f4fcabf161b3cd9",
+      "compiler": {
+        "repository": "Kreijstal/java-tools",
+        "commit": "d88bc5ce810baed642d8cb3fd7a6cd8953baac3d",
+        "trackedClean": true,
+        "sourceArchive": {
+          "sha256": "3210cfac245b602d71ecd007f672cbc92d0038a74b73d9ab29895ddf383358cb",
+          "reproduce": "git archive --format=tar d88bc5ce810baed642d8cb3fd7a6cd8953baac3d | sha256sum",
+          "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+        },
+        "sourceTreeSha256": "cb35eeeb97345181e40620f0f0948dfb771d6390b0699c56900b5f91559c8df0",
+        "correctedFailures": {
+          "pipeline": 0,
+          "cli": 1,
+          "verify": 0,
+          "javac": 1
+        },
+        "runner": {
+          "repository": "Kreijstal/dekobloko-work",
+          "commit": "f83a1da5b2d201554bcd1c741c83c4f32139f047",
+          "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
+        }
+      }
     }
   },
   "publication": {
@@ -10729,6 +10772,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 363,
+          "sha256": "086324d3a8e97837df62104ab26854eef285c60bf670c386bc1ce8eb8ef4f343"
         }
       },
       "armiesofgielinor": {
