@@ -98,7 +98,7 @@ final class ih extends kj implements sg {
         me.field_g = 0;
         ii.field_k = null;
         we.field_j = 0;
-        lj.field_b = 0;
+        ResourceArchive.field_b = 0;
         ec.field_b = -1;
         ed.field_c = 0;
         gh.field_m = false;

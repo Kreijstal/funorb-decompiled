@@ -37,7 +37,7 @@ final class ik {
           if (null == gi.field_d) {
             var2 = 3;
           } else {
-            lk.a(gi.field_d, false);
+            SpriteLoader.a(gi.field_d, false);
             var2 = 2;
           }
         }

@@ -8,7 +8,7 @@ abstract class ic extends UiComponent implements gk {
     static int[][] field_B;
     UiComponent field_A;
     static int[][] field_E;
-    static lj field_C;
+    static ResourceArchive field_C;
 
     void a(UiComponent param0, int param1, byte param2, int param3) {
         RuntimeException var5 = null;
@@ -482,7 +482,7 @@ abstract class ic extends UiComponent implements gk {
         String var2 = super.b(param0);
         String var3Lifetime1;
         if (param0) {
-          field_C = (lj) null;
+          field_C = (ResourceArchive) null;
           if (null != this.field_A) {
             var3 = this.field_A.b(false);
             if (var3 != null) {

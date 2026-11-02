@@ -11,7 +11,7 @@ final class ie {
     static sf field_a;
 
     final static void b(byte param0) {
-        kd var1 = (kd) (rf.field_db.d((byte) -112));
+        kd var1 = (kd) (rf.field_db.pollLast((byte) -112));
         if (var1 == null) {
           throw new IllegalStateException();
         }

@@ -46,15 +46,15 @@ final class rf extends dj implements uh {
         }
     }
 
-    final static void a(lj param0, byte param1, boolean param2, lj param3, lj param4) {
+    final static void a(ResourceArchive param0, byte param1, boolean param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           ji.field_k = MouseWheelInput.a("", true);
           ji.field_k.a((byte) 56, false);
           vj.a(param4, param3, param1 + 23104, param0);
           ul.c(-1247);
           if (param1 != -23) {
-            lj var6 = (lj) null;
-            rf.a((lj) null, (byte) 35, false, (lj) null, (lj) null);
+            ResourceArchive var6 = (ResourceArchive) null;
+            rf.a((ResourceArchive) null, (byte) 35, false, (ResourceArchive) null, (ResourceArchive) null);
           }
           gj.field_a = mg.field_c;
           eh.field_p = mg.field_c;

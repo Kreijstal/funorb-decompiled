@@ -14,7 +14,7 @@ class dj extends ng {
     static vi field_W;
     static ge[] field_V;
     static ll field_P;
-    static lj field_cb;
+    static ResourceArchive field_cb;
     static int field_Q;
     static boolean field_Z;
 
@@ -266,7 +266,7 @@ class dj extends ng {
     }
 
     final static void f(byte param0) {
-        if (!lj.field_q) {
+        if (!ResourceArchive.field_q) {
           throw new IllegalStateException();
         }
         fh.field_g = true;

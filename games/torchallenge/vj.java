@@ -18,7 +18,7 @@ final class vj {
         field_d = null;
     }
 
-    final static void a(lj param0, lj param1, int param2, lj param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         Sprite var17 = null;
         ge[] var5 = null;
         ge[][] var6 = null;
@@ -37,10 +37,10 @@ final class vj {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          fl.field_s = lk.a(-128, "frame_top", "commonui", param3);
-          qa.field_e = lk.a(-127, "frame_bottom", "commonui", param3);
+          fl.field_s = SpriteLoader.a(-128, "frame_top", "commonui", param3);
+          qa.field_e = SpriteLoader.a(-127, "frame_bottom", "commonui", param3);
           rj.field_a = qk.a("commonui", "jagex_logo_grey", param3, 0);
-          ae.field_v = lk.a(param2 ^ -23127, "button", "commonui", param3);
+          ae.field_v = SpriteLoader.a(param2 ^ -23127, "button", "commonui", param3);
           ub.field_f = s.a(param3, "commonui", 0, "validation");
           GameApplet.field_f = (BitmapFont) ((Object) qi.a(param0, "commonui", param3, "arezzo12", 0));
           RasterBuffer.field_g = (BitmapFont) ((Object) qi.a(param0, "commonui", param3, "arezzo14", param2 ^ param2));

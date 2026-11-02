@@ -114,7 +114,7 @@ final class wl {
         int var2 = 123 % ((param0 - 34) / 54);
     }
 
-    final static void a(int param0, lj param1) {
+    final static void a(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         vg var5 = null;
@@ -197,8 +197,8 @@ final class wl {
           fh.field_d = 200;
           dk.field_a = dk.field_a - 1;
         }
-        if (lj.field_b > 0) {
-          lj.field_b = lj.field_b - 1;
+        if (ResourceArchive.field_b > 0) {
+          ResourceArchive.field_b = ResourceArchive.field_b - 1;
         }
         FullscreenFocusCanvas.field_c = FullscreenFocusCanvas.field_c + 1;
         de.field_d = de.field_d + 1;
@@ -594,8 +594,8 @@ final class wl {
         field_c = (fe[][]) null;
         field_l = null;
         if (param0 != 10) {
-          lj var2 = (lj) null;
-          wl.a(88, (lj) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          wl.a(88, (ResourceArchive) null);
         }
     }
 
@@ -654,7 +654,7 @@ final class wl {
         if (null == pa.field_z) {
           jf.m(104);
         }
-        if (lj.field_j == null) {
+        if (ResourceArchive.field_j == null) {
           hl.a((byte) 50);
         }
         ve.field_a = this;

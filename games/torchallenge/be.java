@@ -74,10 +74,10 @@ final class be {
           }
           var19 = ie.field_f[param2][1].field_v;
           if (!param0) {
-            if (lj.field_b > 0) {
+            if (ResourceArchive.field_b > 0) {
               var17 = var18 / 4;
-              var17 = var17 * (25 + lj.field_b / 25 * 25 - lj.field_b) / 25;
-              var18 = (param1 - lj.field_b / 25 - 1) * var18 / 4 + var17;
+              var17 = var17 * (25 + ResourceArchive.field_b / 25 * 25 - ResourceArchive.field_b) / 25;
+              var18 = (param1 - ResourceArchive.field_b / 25 - 1) * var18 / 4 + var17;
               SoftwareRasterizer.f(param4, param3, param4 + var18, param3 + var19);
               IterableNodeHashTable.field_h.d(param4, param3, var8_int);
               SoftwareRasterizer.b(sh.field_w);

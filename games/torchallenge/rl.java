@@ -20,7 +20,7 @@ final class rl {
         return 0 != this.field_i ? true : false;
     }
 
-    final static Sprite[] a(int param0, int param1, lj param2, byte param3) {
+    final static Sprite[] a(int param0, int param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -31,7 +31,7 @@ final class rl {
           if (param3 != 17) {
             field_f = -112;
           }
-          if (!lk.a(param3 ^ 177, param2, param1, param0)) {
+          if (!SpriteLoader.a(param3 ^ 177, param2, param1, param0)) {
             return null;
           }
           stackIn_6_0 = lb.f(param3 ^ 221);

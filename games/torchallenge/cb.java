@@ -17,16 +17,16 @@ final class cb {
         synchronized (var1) {
           sj.field_L = sj.field_L + 1;
           wh.field_e = jc.field_h;
-          LocalizedStrings.field_u = bj.field_c;
-          ph.field_d = qb.field_g;
+          LocalizedStrings.field_u = bj.mouseX;
+          ph.field_d = qb.mouseY;
           ek.field_P = ua.field_c;
           ua.field_c = false;
           vb.field_n = e.field_o;
-          ik.field_a = aa.field_a;
+          ik.field_a = aa.pressX;
           if (param0 != 30210) {
             cb.a(71, 118, (byte) -25, 29);
           }
-          ci.field_m = ll.field_g;
+          ci.field_m = ll.pressY;
           e.field_o = 0;
         }
     }

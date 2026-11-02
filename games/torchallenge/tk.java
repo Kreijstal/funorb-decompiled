@@ -196,7 +196,7 @@ final class tk extends ng {
         return this.field_O.a((byte) -10);
     }
 
-    final static String a(String param0, lj param1, String param2, int param3) {
+    final static String a(String param0, ResourceArchive param1, String param2, int param3) {
         RuntimeException var4 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -267,7 +267,7 @@ final class tk extends ng {
         var8 = this.field_O.b(-53);
         if (bl.field_S != var8 &&
           jh.field_c != var8) {
-          if (lk.field_c == var8) {
+          if (SpriteLoader.field_c == var8) {
             var14 = ub.field_f[2];
             var14.b(var5 - (var14.field_u >> 1), var6 - (var14.field_x >> 1), 256);
           } else if (var8 == tf.field_w) {

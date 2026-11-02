@@ -163,8 +163,8 @@ final class de {
           var10 = 0;
           var8Lifetime1 = var10;
           while (3 > var10) {
-            if (lj.field_n[var10] != null) {
-              lj.field_n[var10].field_kb = 0;
+            if (ResourceArchive.field_n[var10] != null) {
+              ResourceArchive.field_n[var10].field_kb = 0;
             }
             var10++;
           }
@@ -176,7 +176,7 @@ final class de {
         }
     }
 
-    final static boolean a(int param0, lj param1) {
+    final static boolean a(int param0, ResourceArchive param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;

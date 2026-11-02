@@ -558,7 +558,7 @@ final class kb extends PcmStream {
             if (var3.field_K != null) {
               var3.field_K.g(kh.field_p / 100);
               if (var3.field_K.l()) {
-                this.field_I.field_u.a(var3.field_K);
+                this.field_I.field_u.addSubstream(var3.field_K);
               }
               var3.a(1047574608);
             }
@@ -744,9 +744,9 @@ final class kb extends PcmStream {
         }
     }
 
-    final synchronized boolean a(boolean param0, u param1, ej param2, lj param3, int param4) {
+    final synchronized boolean a(boolean param0, u param1, ej param2, ResourceArchive param3, int param4) {
         int stackIn_13_0 = 0;
-        lj stackIn_13_1 = null;
+        ResourceArchive stackIn_13_1 = null;
         boolean stackIn_14_2 = false;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -782,7 +782,7 @@ final class kb extends PcmStream {
             var12 = (fb) (this.field_A.a((byte) 92, (long)var9));
             if (var12 == null) {
               stackIn_13_0 = var9;
-              stackIn_13_1 = (lj) (param3);
+              stackIn_13_1 = (ResourceArchive) (param3);
               stackIn_14_2 = !(param0);
               var13 = dh.a(stackIn_13_0, stackIn_13_1, stackIn_14_2);
               if (var13 == null) {
@@ -998,7 +998,7 @@ final class kb extends PcmStream {
             param4.field_K.skip(param3);
           }
           if (param4.field_K.l()) {
-            this.field_I.field_u.a(param4.field_K);
+            this.field_I.field_u.addSubstream(param4.field_K);
           }
           param4.a(1047574608);
           if (0 <= param4.field_F) {
@@ -1145,7 +1145,7 @@ final class kb extends PcmStream {
         var9 = TorChallenge.field_F ? 1 : 0;
         this.a(param2, 64, param3, 9208);
         if (0 != (this.field_J[param2] & 2)) {
-          var5 = (dl) (this.field_I.field_o.b((byte) 65));
+          var5 = (dl) (this.field_I.field_o.last((byte) 65));
           while (var5 != null) {
             if (param2 == var5.field_G &&
               var5.field_F < 0) {
@@ -1158,7 +1158,7 @@ final class kb extends PcmStream {
               var5.field_o = var6_int - var5.field_u;
               return;
             }
-            var5 = (dl) (this.field_I.field_o.e((byte) -112));
+            var5 = (dl) (this.field_I.field_o.previous((byte) -112));
           }
         }
         var11 = (fb) (this.field_A.a((byte) 100, (long)this.field_t[param2]));

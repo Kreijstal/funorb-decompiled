@@ -9,7 +9,7 @@ final class mh {
     static aa field_e;
     static long field_f;
 
-    final static ge[] a(int param0, lj param1, String param2, String param3) {
+    final static ge[] a(int param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -160,7 +160,7 @@ final class mh {
           }
           if (!param1) {
             var4 = (String) null;
-            mh.a(66, (lj) null, (String) null, (String) null);
+            mh.a(66, (ResourceArchive) null, (String) null, (String) null);
           }
           if (bc.a((byte) -128, param2, param0)) {
             return false;

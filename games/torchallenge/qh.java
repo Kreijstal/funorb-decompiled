@@ -9,7 +9,7 @@ final class qh extends kj implements tl, sg {
     private ng field_K;
     static boolean[][][] field_O;
     static String field_L;
-    static lj field_M;
+    static ResourceArchive field_M;
 
     private final String a(int param0) {
         if (param0 <= 27) {

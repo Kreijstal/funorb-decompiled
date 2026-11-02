@@ -23,18 +23,18 @@ final class we implements Runnable {
 
     protected final void finalize() {
         if (this.field_k != null) {
-          if (null != this.field_k.field_g) {
+          if (null != this.field_k.result) {
             try {
-              ((DataInputStream) (this.field_k.field_g)).close();
+              ((DataInputStream) (this.field_k.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_k = null;
         }
         if (null != this.field_g) {
-          if (null != this.field_g.field_g) {
+          if (null != this.field_g.result) {
             try {
-              ((java.net.Socket) (this.field_g.field_g)).close();
+              ((java.net.Socket) (this.field_g.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -64,7 +64,7 @@ final class we implements Runnable {
           if (param1 != 6222) {
             we.b(false);
           }
-          GameKeyHandler.field_a.a(param0);
+          GameKeyHandler.field_a.addSubstream(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -119,10 +119,10 @@ final class we implements Runnable {
         if (null == this.field_a) {
           try {
             if (this.field_p == 0) {
-              this.field_a = (DataInputStream) (this.field_k.field_g);
+              this.field_a = (DataInputStream) (this.field_k.result);
             }
             if (this.field_p == 1) {
-              var4 = (java.net.Socket) (this.field_g.field_g);
+              var4 = (java.net.Socket) (this.field_g.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);

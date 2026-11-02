@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj {
+final class ResourceArchive {
     private kl field_a;
     static int[] field_j;
     private Object[] field_c;
@@ -404,7 +404,7 @@ final class lj {
           var4 = (CharSequence) ((Object) param1);
           var3_int = this.field_l.field_p.a((byte) -120, wh.a((byte) 68, var4));
           if (param0 < 99) {
-            lj.a(30);
+            ResourceArchive.a(30);
           }
           stackIn_6_0 = this.a(var3_int, (byte) 12);
           return stackIn_6_0;
@@ -844,7 +844,7 @@ final class lj {
         return this.a((int[]) null, param0, -62, param1);
     }
 
-    lj(kl param0, boolean param1, int param2) {
+    ResourceArchive(kl param0, boolean param1, int param2) {
         this.field_l = null;
         try {
           if (0 > param2 ||

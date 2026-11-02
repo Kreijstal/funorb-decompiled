@@ -165,27 +165,27 @@ final class hb {
                 try {
                   var7_int = var19.field_t[var6];
                   if (var7_int == 0) {
-                    var28 = (java.lang.reflect.Field) (var19.field_j[var6].field_g);
+                    var28 = (java.lang.reflect.Field) (var19.field_j[var6].result);
                     var9 = var28.getInt((Object) null);
                     param0.writeByte(0, (byte) 122);
                     param0.writeInt(var9, false);
                   } else {
                     if (var7_int != 1) {
                       if (var7_int == 2) {
-                        var27 = (java.lang.reflect.Field) (var19.field_j[var6].field_g);
+                        var27 = (java.lang.reflect.Field) (var19.field_j[var6].result);
                         var9 = var27.getModifiers();
                         param0.writeByte(0, (byte) 122);
                         param0.writeInt(var9, false);
                       }
                     } else {
-                      var18_ref = (java.lang.reflect.Field) (var19.field_j[var6].field_g);
+                      var18_ref = (java.lang.reflect.Field) (var19.field_j[var6].result);
                       var20 = var18_ref;
                       var20.setInt((Object) null, var19.field_u[var6]);
                       param0.writeByte(0, (byte) 122);
                     }
                   }
                   if (var7_int == 3) {
-                    var30 = (java.lang.reflect.Method) (var19.field_q[var6].field_g);
+                    var30 = (java.lang.reflect.Method) (var19.field_q[var6].result);
                     var26 = var19.field_s[var6];
                     var10 = new Object[var26.length];
                     for (var11_int = 0; var26.length > var11_int; var11_int++) {
@@ -206,7 +206,7 @@ final class hb {
                     }
                   } else {
                     if (var7_int == 4) {
-                      var29 = (java.lang.reflect.Method) (var19.field_q[var6].field_g);
+                      var29 = (java.lang.reflect.Method) (var19.field_q[var6].result);
                       var9Lifetime1 = var29.getModifiers();
                       param0.writeByte(0, (byte) 122);
                       param0.writeInt(var9Lifetime1, false);

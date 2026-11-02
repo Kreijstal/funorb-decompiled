@@ -102,7 +102,7 @@ final class uc extends ng {
             stackIn_12_0 = new ja[]{};
             return stackIn_12_0;
           }
-          var10 = (int[]) (var8.field_g);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new ja[var10.length >> 2];

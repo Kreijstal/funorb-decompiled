@@ -69,14 +69,14 @@ final class hl {
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           var1_double = 65536.0;
-          lj.field_j = new int[1025];
+          ResourceArchive.field_j = new int[1025];
           if (param0 != 50) {
             field_c = (boolean[][]) null;
           }
           for (var7 = 1; var7 <= 1024; var7++) {
             var3 = (double)var7;
             var5 = var1_double / var3;
-            lj.field_j[var7] = (int)var5;
+            ResourceArchive.field_j[var7] = (int)var5;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

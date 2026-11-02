@@ -100,9 +100,9 @@ final class pe extends v {
         }
     }
 
-    final static lj b(int param0, int param1) {
+    final static ResourceArchive b(int param0, int param1) {
         if (param1 != -1) {
-          return (lj) null;
+          return (ResourceArchive) null;
         }
         return bb.a(param0, true, 1, (byte) 95, false, false);
     }

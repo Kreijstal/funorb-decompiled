@@ -245,9 +245,9 @@ final class m {
         }
     }
 
-    final static ge[] a(lj param0, int param1, byte param2, int param3) {
+    final static ge[] a(ResourceArchive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
-        lj var5 = null;
+        ResourceArchive var5 = null;
         Object stackIn_4_0 = null;
         ge[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -256,10 +256,10 @@ final class m {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 6) {
-            var5 = (lj) null;
-            m.a((lj) null, -92, (byte) -64, 66);
+            var5 = (ResourceArchive) null;
+            m.a((ResourceArchive) null, -92, (byte) -64, 66);
           }
-          if (lk.a(160, param0, param1, param3)) {
+          if (SpriteLoader.a(160, param0, param1, param3)) {
             stackIn_6_0 = jc.b(-125);
             return stackIn_6_0;
           }

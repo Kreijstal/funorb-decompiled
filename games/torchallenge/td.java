@@ -349,7 +349,7 @@ final class td {
               c.a(51, 1L);
             }
             if (var4.field_d == 1) {
-              var5 = (DataInputStream) (var4.field_g);
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

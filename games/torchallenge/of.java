@@ -209,11 +209,11 @@ abstract class of {
             SoftwareRasterizer.a(sh.field_w);
             SoftwareRasterizer.a(0, 0, 320, 240);
           }
-          od.a(param0, param1, 1, 7, 6, lj.field_o[0]);
+          od.a(param0, param1, 1, 7, 6, ResourceArchive.field_o[0]);
           if (var8 != 0) {
             SoftwareRasterizer.b(sh.field_w);
           }
-          od.a(param0, param1 + (479 - lj.field_o[1].field_v), 1, 7, 6, lj.field_o[1]);
+          od.a(param0, param1 + (479 - ResourceArchive.field_o[1].field_v), 1, 7, 6, ResourceArchive.field_o[1]);
           uk.field_N.g(param0, param1);
           if (param2 < 32) {
             return;

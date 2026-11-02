@@ -14,7 +14,7 @@ final class s extends IntrusiveNode {
     static int[] field_i;
     static Sprite[] field_n;
 
-    final static Sprite[] a(lj param0, String param1, int param2, String param3) {
+    final static Sprite[] a(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -85,7 +85,7 @@ final class s extends IntrusiveNode {
             aj.field_c = pf.field_b;
           } else {
             try {
-              qf.field_a = new BufferedSocket((java.net.Socket) (gf.field_o.field_g), vl.field_a);
+              qf.field_a = new BufferedSocket((java.net.Socket) (gf.field_o.result), vl.field_a);
               dk.field_s.position = 0;
               var4 = id.field_b;
               var5 = var4;

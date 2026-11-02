@@ -23,12 +23,12 @@ final class bb implements Runnable {
         return id.field_b.readString(false);
     }
 
-    final static lj a(int param0, boolean param1, int param2, byte param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(int param0, boolean param1, int param2, byte param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           di var8 = null;
-          lj stackIn_16_0 = null;
+          ResourceArchive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           if (param3 <= 91) {
             bb.a(70, true, 52, (byte) -68, false, false);
@@ -55,7 +55,7 @@ final class bb implements Runnable {
             if (param5) {
               var8.d(14);
             }
-            stackIn_16_0 = new lj(var8, param1, param2);
+            stackIn_16_0 = new ResourceArchive(var8, param1, param2);
             return stackIn_16_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

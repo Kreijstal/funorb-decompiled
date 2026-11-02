@@ -24,7 +24,7 @@ final class li extends kj implements sg {
         String var7 = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
-          this.field_F.a(param0 ^ 8671);
+          this.field_F.clear(param0 ^ 8671);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;

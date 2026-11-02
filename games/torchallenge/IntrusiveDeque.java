@@ -3,7 +3,7 @@
  */
 final class IntrusiveDeque {
     static int field_b;
-    static lj field_a;
+    static ResourceArchive field_a;
     static int field_f;
     static String[] field_d;
     IntrusiveNode sentinel;
@@ -174,7 +174,7 @@ final class IntrusiveDeque {
             pf.field_e = (-ub.field_e.field_u + NodeHashTableIterator.field_b.field_u) / 2 + 434;
             bi.field_i = 390 + (NodeHashTableIterator.field_b.field_x - ub.field_e.field_x) / 2;
           }
-          if (lj.field_f == null) {
+          if (ResourceArchive.field_f == null) {
             return;
           }
           if (vk.field_d != null &&
@@ -255,8 +255,8 @@ final class IntrusiveDeque {
             var16.d();
             ek.field_G.a(var17, 3, 3, var16.field_u - 6, var16.field_x - 6, 16777215, -1, 0, 1, ek.field_G.field_K + ek.field_G.field_x);
             ih.a(var16.field_u, 0, 4, var16.field_x, 3, var16, 0, 1);
-            lj.field_f.d();
-            var16.g(199 - lj.field_f.field_s, 83 - lj.field_f.field_p);
+            ResourceArchive.field_f.d();
+            var16.g(199 - ResourceArchive.field_f.field_s, 83 - ResourceArchive.field_f.field_p);
             SoftwareRasterizer.a(var30, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.b(ck.field_c);
           }
@@ -270,11 +270,11 @@ final class IntrusiveDeque {
             var5Lifetime1 = var4 + (ProxySocketConnector.field_m.field_q + 20);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (var6Lifetime2 + ProxySocketConnector.field_m.field_q);
-            lj.field_f.d();
-            ek.field_G.c(ImageProducerRasterBuffer.field_r, -lj.field_f.field_s + var7Lifetime2, ek.field_G.field_x + (155 - lj.field_f.field_p + ek.field_G.field_K), 16777215, -1);
-            ih.a(var4, -lj.field_f.field_s + (var7Lifetime2 - 4), 4, 50, 3, lj.field_f, -lj.field_f.field_p + 155, 1);
-            var8Lifetime1 = -((ProxySocketConnector.field_m.field_v - (3 + ek.field_G.field_x + ek.field_G.field_K)) / 2) + (-lj.field_f.field_p + 155);
-            ProxySocketConnector.field_m.g(var6Lifetime2 - lj.field_f.field_s, var8Lifetime1);
+            ResourceArchive.field_f.d();
+            ek.field_G.c(ImageProducerRasterBuffer.field_r, -ResourceArchive.field_f.field_s + var7Lifetime2, ek.field_G.field_x + (155 - ResourceArchive.field_f.field_p + ek.field_G.field_K), 16777215, -1);
+            ih.a(var4, -ResourceArchive.field_f.field_s + (var7Lifetime2 - 4), 4, 50, 3, ResourceArchive.field_f, -ResourceArchive.field_f.field_p + 155, 1);
+            var8Lifetime1 = -((ProxySocketConnector.field_m.field_v - (3 + ek.field_G.field_x + ek.field_G.field_K)) / 2) + (-ResourceArchive.field_f.field_p + 155);
+            ProxySocketConnector.field_m.g(var6Lifetime2 - ResourceArchive.field_f.field_s, var8Lifetime1);
             SoftwareRasterizer.a(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.b(ck.field_c);
             ProxySocketConnector.field_m = null;
@@ -288,7 +288,7 @@ final class IntrusiveDeque {
           if (null != me.field_e) {
             me.field_e.g(0, 0);
           }
-          lj.field_f.g(0, 0);
+          ResourceArchive.field_f.g(0, 0);
           if (cf.field_c != null) {
             cf.field_c.g(0, 0);
           }
@@ -378,9 +378,9 @@ final class IntrusiveDeque {
         return GameKeyHandler.field_a;
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode last(byte param0) {
         if (param0 != 65) {
-          this.d((byte) 1);
+          this.pollLast((byte) 1);
         }
         IntrusiveNode var2 = this.sentinel.previous;
         if (this.sentinel != var2) {
@@ -391,7 +391,7 @@ final class IntrusiveDeque {
         return null;
     }
 
-    final void a(int param0) {
+    final void clear(int param0) {
         IntrusiveNode var2;
         int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
@@ -405,12 +405,12 @@ final class IntrusiveDeque {
         }
         this.cursor = null;
         if (param0 != -14341) {
-          field_a = (lj) null;
+          field_a = (ResourceArchive) null;
         }
         return;
     }
 
-    final boolean d(int param0) {
+    final boolean isEmpty(int param0) {
         if (param0 > -113) {
           return false;
         }
@@ -457,7 +457,7 @@ final class IntrusiveDeque {
         return var6 != 0;
     }
 
-    final IntrusiveNode d(byte param0) {
+    final IntrusiveNode pollLast(byte param0) {
         IntrusiveNode var2 = this.sentinel.previous;
         if (var2 != this.sentinel) {
           if (param0 >= -103) {
@@ -477,10 +477,10 @@ final class IntrusiveDeque {
         kj.field_G = param0;
     }
 
-    final void a(byte param0, IntrusiveNode param1) {
+    final void addFirst(byte param0, IntrusiveNode param1) {
         try {
           if (param0 < 76) {
-            this.b((byte) 15);
+            this.last((byte) 15);
           }
           if (param1.previous != null) {
             param1.unlink(true);
@@ -494,7 +494,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode e(byte param0) {
+    final IntrusiveNode previous(byte param0) {
         IntrusiveNode var2 = this.cursor;
         if (var2 == this.sentinel) {
           this.cursor = null;

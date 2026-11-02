@@ -10,7 +10,7 @@ final class ll {
     static String field_f;
     static int field_b;
     static int field_d;
-    static volatile int field_g;
+    static volatile int pressY;
     static boolean[][][] field_j;
     static int[][] field_k;
 
@@ -360,7 +360,7 @@ final class ll {
         field_e = new int[][][]{new int[][]{new int[]{256, 256, 256}, new int[]{256, 224, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{224, 256, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{224, 224, 224}, new int[]{224, 256, 224}, new int[]{224, 224, 224}, new int[]{256, 256, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{224, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{356, 256, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{224, 224, 224}, new int[]{256, 256, 256}, new int[]{224, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}}, new int[][]{new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{256, 256, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{224, 224, 224}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}, new int[][]{new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 256}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}, new int[]{224, 224, 224}}};
         field_c = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
         field_b = -1;
-        field_g = 0;
+        pressY = 0;
         field_j = new boolean[][][]{new boolean[][]{new boolean[]{false, false, true}, new boolean[]{false, true}, new boolean[]{false, true}, new boolean[]{false, false, false, false, false, true}, new boolean[]{false, true}, new boolean[]{false}, new boolean[]{true, true, true, false, true, true}}, new boolean[][]{new boolean[]{false, true}, new boolean[]{false, false, false, true}, new boolean[]{false, false, false, false, false, true}, new boolean[]{false, false, false, false, true, true}, new boolean[]{false, false, false, false, true}, new boolean[]{false, false, false, false, true}, new boolean[]{false}}, new boolean[][]{new boolean[]{false, false, true}, new boolean[]{false, true}, new boolean[]{false, false, false, true}, new boolean[]{false, false, false, false, false, true}, new boolean[]{false, false, true}, new boolean[]{false}, new boolean[]{true, true, true, false, false, true}}};
         field_k = new int[][]{new int[]{1, 1, 1}, new int[]{1, 1, 1}, new int[]{1, 2, 3}, new int[]{5, 5, 5}, new int[]{0, 1, 1}, new int[]{2, 2, 2}, new int[]{10, 10, 10}, new int[]{0, 0, 0}, new int[]{0}, new int[]{0}};
     }

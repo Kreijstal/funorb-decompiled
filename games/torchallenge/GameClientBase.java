@@ -25,7 +25,7 @@ abstract class GameClientBase extends GameApplet {
         if (param0 >= -64) {
           field_z = (String) null;
         }
-        return lj.field_q;
+        return ResourceArchive.field_q;
     }
 
     private final void m(int param0) {
@@ -277,7 +277,7 @@ abstract class GameClientBase extends GameApplet {
           sa.field_c) {
           BufferedCacheFile.a((byte) -104, bg.field_P);
           this.e(-72);
-          lk.a(bg.field_P, false);
+          SpriteLoader.a(bg.field_P, false);
         }
         if (ki.field_a[8]) {
           ma.e(102);
@@ -423,7 +423,7 @@ abstract class GameClientBase extends GameApplet {
         GzipDecoder.a(7, this.field_w, this.field_D, this.field_u, this.field_C, kf.field_b, this.field_x, param7, sh.field_u);
         kk.e(-79);
         ef.field_l = dj.c((byte) 96);
-        lk.a(bg.field_P, param0);
+        SpriteLoader.a(bg.field_P, param0);
         kk.field_j = param3;
         gh.field_w = param1;
         rj.field_c = param5;
@@ -545,7 +545,7 @@ abstract class GameClientBase extends GameApplet {
                   je.field_a = ed.field_j;
                   mc.a(111);
                   gj.field_c = 10;
-                  lj.field_q = false;
+                  ResourceArchive.field_q = false;
                 }
               }
             } else {
@@ -556,7 +556,7 @@ abstract class GameClientBase extends GameApplet {
             if (fg.field_S) {
               pl.a((byte) 119, gi.b(12476));
             } else {
-              lj.field_q = true;
+              ResourceArchive.field_q = true;
               gj.field_c = 10;
             }
           }

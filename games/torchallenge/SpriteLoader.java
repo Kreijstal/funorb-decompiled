@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lk {
+final class SpriteLoader {
     static rj field_c;
     static Sprite field_e;
-    static lj field_f;
+    static ResourceArchive field_f;
     static k field_a;
     static k field_d;
     static String field_b;
     static int field_g;
 
-    final static boolean a(int param0, lj param1, int param2, int param3) {
+    final static boolean a(int param0, ResourceArchive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -40,7 +40,7 @@ final class lk {
         }
     }
 
-    final static Sprite[] a(int param0, String param1, String param2, lj param3) {
+    final static Sprite[] a(int param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -141,7 +141,7 @@ final class lk {
           if (!param1) {
             return;
           }
-          lk.a(-102);
+          SpriteLoader.a(-102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

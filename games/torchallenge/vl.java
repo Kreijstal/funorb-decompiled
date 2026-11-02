@@ -8,7 +8,7 @@ final class vl {
     static boolean[][][] field_d;
 
     final static void a(byte param0) {
-        if (!lj.field_q) {
+        if (!ResourceArchive.field_q) {
           throw new IllegalStateException();
         }
         if (param0 != -88) {

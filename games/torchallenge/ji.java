@@ -12,7 +12,7 @@ final class ji extends IntrusiveNode {
     static String[] field_n;
     static Sprite[] field_p;
     int field_j;
-    static lj field_r;
+    static ResourceArchive field_r;
     static vh field_k;
     int[] field_w;
     int field_v;

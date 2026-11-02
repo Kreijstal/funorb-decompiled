@@ -30,7 +30,7 @@ final class lh extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         var2 = TorChallenge.field_F ? 1 : 0;
         try {
-          t.field_b.a(lk.field_g, false, RandomAccessCacheFile.field_g, true);
+          t.field_b.a(SpriteLoader.field_g, false, RandomAccessCacheFile.field_g, true);
           t.field_b.j(-91);
           while (kj.e((byte) -39)) {
             t.field_b.a(di.field_m, b.field_J, 104);

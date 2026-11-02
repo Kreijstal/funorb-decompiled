@@ -53,20 +53,20 @@ final class ch {
             am.field_b = (int[][][]) null;
           }
           na.field_f = false;
-          lj.field_n = null;
+          ResourceArchive.field_n = null;
           kd.field_m = null;
           stackIn_29_0 = param0;
           vb.field_q = stackIn_29_0;
-          if (null != lj.field_g) {
-            for (var1_intLifetime2 = 0; var1_intLifetime2 < lj.field_g.length; var1_intLifetime2++) {
-              if (lj.field_g[var1_intLifetime2] != null) {
-                for (var2Lifetime2 = 0; var2Lifetime2 < lj.field_g[var1_intLifetime2].length; var2Lifetime2++) {
-                  lj.field_g[var1_intLifetime2][var2Lifetime2] = null;
+          if (null != ResourceArchive.field_g) {
+            for (var1_intLifetime2 = 0; var1_intLifetime2 < ResourceArchive.field_g.length; var1_intLifetime2++) {
+              if (ResourceArchive.field_g[var1_intLifetime2] != null) {
+                for (var2Lifetime2 = 0; var2Lifetime2 < ResourceArchive.field_g[var1_intLifetime2].length; var2Lifetime2++) {
+                  ResourceArchive.field_g[var1_intLifetime2][var2Lifetime2] = null;
                 }
-                lj.field_g[var1_intLifetime2] = (int[][]) null;
+                ResourceArchive.field_g[var1_intLifetime2] = (int[][]) null;
               }
             }
-            lj.field_g = (int[][][]) null;
+            ResourceArchive.field_g = (int[][][]) null;
           }
           if (null != ba.field_j) {
             for (var1_intLifetime3 = 0; var1_intLifetime3 < ba.field_j.length; var1_intLifetime3++) {

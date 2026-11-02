@@ -297,7 +297,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             if (null == pa.field_z) {
               jf.m(96);
             }
-            if (lj.field_j == null) {
+            if (ResourceArchive.field_j == null) {
               hl.a((byte) 50);
             }
             var2 = je.field_c[ea.field_e];
@@ -347,7 +347,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               if (pa.field_z == null) {
                 jf.m(106);
               }
-              if (lj.field_j == null) {
+              if (ResourceArchive.field_j == null) {
                 hl.a((byte) 50);
               }
               ol.field_g = ba.field_i;

@@ -8,7 +8,7 @@ final class cl extends bc {
     static String field_w;
     static int[] field_s;
     private int field_B;
-    static lj field_y;
+    static ResourceArchive field_y;
     private Sprite[] field_t;
     static boolean field_z;
     private int field_v;

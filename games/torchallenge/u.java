@@ -5,8 +5,8 @@ final class u {
     static int[] field_c;
     private ha field_f;
     static PlatformTaskDispatcher field_a;
-    private lj field_d;
-    private lj field_e;
+    private ResourceArchive field_d;
+    private ResourceArchive field_e;
     private ha field_g;
     static int[][][] field_b;
 
@@ -176,7 +176,7 @@ final class u {
         }
     }
 
-    final static void a(boolean param0, lj param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         Sprite var2 = new Sprite(param1.a(-2, "", "final_frame.jpg"), (java.awt.Component) ((Object) bg.field_P));
         int var3 = var2.field_u;
         int var4 = var2.field_x;
@@ -250,7 +250,7 @@ final class u {
         }
     }
 
-    u(lj param0, lj param1) {
+    u(ResourceArchive param0, ResourceArchive param1) {
         this.field_f = new ha(256);
         this.field_g = new ha(256);
         try {

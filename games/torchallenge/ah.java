@@ -32,7 +32,7 @@ final class ah {
         if (null == pa.field_z) {
           jf.m(115);
         }
-        if (null == lj.field_j) {
+        if (null == ResourceArchive.field_j) {
           hl.a((byte) 50);
         }
         if (null != je.field_c[param0] &&

@@ -6,7 +6,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static PacketBuffer field_e;
     static String[] field_c;
     static boolean field_f;
-    static lj field_d;
+    static ResourceArchive field_d;
     static String field_a;
 
     public final void paint(java.awt.Graphics param0) {
@@ -33,7 +33,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           field_c = null;
           return;
         }
-        field_d = (lj) null;
+        field_d = (ResourceArchive) null;
         field_d = null;
         field_e = null;
         field_c = null;
@@ -47,7 +47,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static String a(int param0, String param1, String param2, lj param3, String param4) {
+    final static String a(int param0, String param1, String param2, ResourceArchive param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;

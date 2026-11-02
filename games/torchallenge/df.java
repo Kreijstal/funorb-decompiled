@@ -122,7 +122,7 @@ class df extends ng {
               }
             }
             if (nh.field_jb == 2) {
-              bl.field_V = new BufferedSocket((java.net.Socket) (n.field_cb.field_g), rc.field_t);
+              bl.field_V = new BufferedSocket((java.net.Socket) (n.field_cb.result), rc.field_t);
               var2 = new PacketBuffer(13);
               hl.a(var2, 12, vk.field_j, MouseInputHandler.field_d, vb.field_r);
               var2.writeByte(15, (byte) 122);

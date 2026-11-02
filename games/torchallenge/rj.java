@@ -8,7 +8,7 @@ final class rj {
     static int field_g;
     static Sprite[] field_b;
     static int field_c;
-    static lj field_f;
+    static ResourceArchive field_f;
     static String field_d;
     static int[] field_e;
     static char[] field_h;
@@ -369,7 +369,7 @@ final class rj {
           field_d = null;
           field_a = null;
           if (param0 != 10) {
-            field_f = (lj) null;
+            field_f = (ResourceArchive) null;
           }
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "rj.E(" + param0 + ')');

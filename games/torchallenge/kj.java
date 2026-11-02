@@ -170,7 +170,7 @@ class kj extends UiComponent implements gk {
             var8 = (StringBuilder) null;
             this.a((Hashtable) null, -30, (StringBuilder) null, true);
           }
-          if (this.field_F.d(-127)) {
+          if (this.field_F.isEmpty(-127)) {
             return false;
           }
           var9 = new nj(this.field_F);
@@ -586,7 +586,7 @@ class kj extends UiComponent implements gk {
         RuntimeException decompiledCaughtException = null;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (this.field_F.d(param1 ^ 116)) {
+          if (this.field_F.isEmpty(param1 ^ 116)) {
             return false;
           }
           var9 = new nj(this.field_F);

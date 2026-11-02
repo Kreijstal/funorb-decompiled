@@ -9,7 +9,7 @@ final class ni {
     static int field_i;
     static int field_f;
     static Sprite[] field_h;
-    lj field_a;
+    ResourceArchive field_a;
     static bc field_d;
     String field_g;
 

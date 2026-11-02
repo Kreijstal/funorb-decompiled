@@ -104,7 +104,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static lj a(boolean param0, int param1, int param2, int param3, boolean param4) {
+    final static ResourceArchive a(boolean param0, int param1, int param2, int param3, boolean param4) {
         int var5 = 118 % ((-62 - param2) / 37);
         return bb.a(param3, param4, param1, (byte) 92, false, param0);
     }
@@ -208,7 +208,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static String a(String param0, lj param1, int param2, int param3, String param4) {
+    final static String a(String param0, ResourceArchive param1, int param2, int param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;

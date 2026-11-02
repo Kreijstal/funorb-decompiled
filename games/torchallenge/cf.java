@@ -77,11 +77,11 @@ final class cf {
           var8 = 1;
           var9 = 1;
           for (var10 = 1; var10 < param0; var10++) {
-            var5_intLifetime1 = fj.a(1870096848, var10 * param3 << 16, lj.field_j[param0]) >> 16;
+            var5_intLifetime1 = fj.a(1870096848, var10 * param3 << 16, ResourceArchive.field_j[param0]) >> 16;
             if (var6 < var5_intLifetime1) {
               if (var6 > 0 &&
                 var6 < param3) {
-                param1[var6] = fj.a(1870096848, var7 << 16, lj.field_j[var10 - var9]) >> 16;
+                param1[var6] = fj.a(1870096848, var7 << 16, ResourceArchive.field_j[var10 - var9]) >> 16;
               }
               var7 = 0;
               var6 = var5_intLifetime1;

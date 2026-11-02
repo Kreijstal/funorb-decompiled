@@ -3,7 +3,7 @@
  */
 final class ClientException extends RuntimeException {
     String context;
-    static lj field_e;
+    static ResourceArchive field_e;
     static String field_d;
     static GzipDecoder field_b;
     Throwable cause;

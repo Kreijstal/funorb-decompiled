@@ -6,7 +6,7 @@ final class gf extends ma {
     private dj field_r;
     static ef field_w;
     static Sprite field_n;
-    static lj field_p;
+    static ResourceArchive field_p;
     static int[][] field_m;
     static IntrusiveDeque field_q;
     static PlatformTask field_o;
@@ -109,12 +109,12 @@ final class gf extends ma {
             var3 = ((uh) ((Object) this.field_r)).a(-113);
             if (var3 != null &&
               var3.b(97) != tf.field_w) {
-              stackIn_6_0 = lk.field_c;
+              stackIn_6_0 = SpriteLoader.field_c;
               return stackIn_6_0;
             }
           }
           if (!param1.equals(this.field_r.field_v)) {
-            stackIn_10_0 = lk.field_c;
+            stackIn_10_0 = SpriteLoader.field_c;
           } else {
             stackIn_10_0 = tf.field_w;
           }

@@ -80,7 +80,7 @@ final class bl extends ng {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, lj param2, int param3) {
+    final static Sprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite[] stackIn_5_0 = null;
@@ -90,7 +90,7 @@ final class bl extends ng {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!lk.a(160, param2, param1, param0)) {
+          if (!SpriteLoader.a(160, param2, param1, param0)) {
             stackIn_2_0 = null;
             return (Sprite[]) (stackIn_2_0);
           }

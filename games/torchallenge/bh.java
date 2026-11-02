@@ -9,7 +9,7 @@ final class bh extends ma {
     static boolean field_r;
     static String[] field_m;
     private dj field_n;
-    static lj field_q;
+    static ResourceArchive field_q;
 
     final rj a(byte param0, String param1) {
         String var3 = null;
@@ -27,11 +27,11 @@ final class bh extends ma {
           var3 = this.field_s.field_v.toLowerCase();
           var4 = param1.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_3_0 = lk.field_c;
+            stackIn_3_0 = SpriteLoader.field_c;
             return stackIn_3_0;
           }
           if (!mh.a(var3, true, var4)) {
-            stackIn_6_0 = lk.field_c;
+            stackIn_6_0 = SpriteLoader.field_c;
             return stackIn_6_0;
           }
           if (param0 != 24) {
@@ -41,7 +41,7 @@ final class bh extends ma {
           if (!this.a(param0 - 25, param1)) {
             return tf.field_w;
           }
-          stackIn_13_0 = lk.field_c;
+          stackIn_13_0 = SpriteLoader.field_c;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

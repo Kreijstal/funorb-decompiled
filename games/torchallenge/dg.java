@@ -81,7 +81,7 @@ final class dg extends kj implements tl, sg, tb {
         return eb.a(this.field_Q.field_v, this.field_W.field_D, this.field_X.field_v, 193, this, var2, this.field_cb.field_v);
     }
 
-    final static qj a(int param0, lj param1, int param2, lj param3, byte param4) {
+    final static qj a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, byte param4) {
         RuntimeException var5 = null;
         qj stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -97,7 +97,7 @@ final class dg extends kj implements tl, sg, tb {
             stackIn_2_0 = (qj) null;
             return stackIn_2_0;
           }
-          if (lk.a(param4 ^ 229, param1, param0, param2)) {
+          if (SpriteLoader.a(param4 ^ 229, param1, param0, param2)) {
             stackIn_7_0 = gb.a(param4 ^ -28934, param3.c(param0, param2, param4 - 69));
             return stackIn_7_0;
           }
@@ -156,7 +156,7 @@ final class dg extends kj implements tl, sg, tb {
 
     private final int a(boolean param0, UiComponent param1, int param2, String param3, int param4, String param5) {
         RuntimeException var7 = null;
-        lj var8 = null;
+        ResourceArchive var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -168,8 +168,8 @@ final class dg extends kj implements tl, sg, tb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            var8 = (lj) null;
-            dg.a(88, (lj) null, -8, (lj) null, (byte) -28);
+            var8 = (ResourceArchive) null;
+            dg.a(88, (ResourceArchive) null, -8, (ResourceArchive) null, (byte) -28);
           }
           stackIn_3_0 = this.a(35, 125, param5, param2, param1, param4, param3);
           return stackIn_3_0;
@@ -415,7 +415,7 @@ final class dg extends kj implements tl, sg, tb {
             return true;
           }
           var4 = var3.b(-98);
-          if (lk.field_c == var4) {
+          if (SpriteLoader.field_c == var4) {
             return false;
           }
           if (bl.field_S == var4) {

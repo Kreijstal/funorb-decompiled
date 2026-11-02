@@ -112,7 +112,7 @@ final class ci extends ma {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) 24, param0) == lk.field_c) {
+          if (this.a((byte) 24, param0) == SpriteLoader.field_c) {
             stackIn_2_0 = ue.field_l;
             return stackIn_2_0;
           }
@@ -159,7 +159,7 @@ final class ci extends ma {
         try {
           var4 = (CharSequence) ((Object) param1);
           if (!ei.a((byte) -117, var4)) {
-            stackIn_2_0 = lk.field_c;
+            stackIn_2_0 = SpriteLoader.field_c;
             return stackIn_2_0;
           }
           if (param0 != 24) {
@@ -171,7 +171,7 @@ final class ci extends ma {
             var3_int <= 130) {
             return tf.field_w;
           }
-          stackIn_9_0 = lk.field_c;
+          stackIn_9_0 = SpriteLoader.field_c;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jb extends IntrusiveNode {
-    int field_i;
+abstract class PcmScheduledEvent extends IntrusiveNode {
+    int time;
 
     abstract int a(PcmStreamMixer param0);
 
     abstract void a();
 
-    private jb() throws Throwable {
+    private PcmScheduledEvent() throws Throwable {
         throw new Error();
     }
 }

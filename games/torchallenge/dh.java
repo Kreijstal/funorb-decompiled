@@ -11,7 +11,7 @@ final class dh extends df {
     private int field_X;
     static Sprite field_ab;
 
-    final static fb a(int param0, lj param1, boolean param2) {
+    final static fb a(int param0, ResourceArchive param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -153,7 +153,7 @@ final class dh extends df {
           var10 = var41.a((UiComponent) (this), 3, param0) + (var41.a(102, (UiComponent) (this)).a((byte) -63) >> 1);
           if (var6 != bl.field_S &&
             jh.field_c != var6) {
-            if (lk.field_c == var6) {
+            if (SpriteLoader.field_c == var6) {
               var19 = ub.field_f[2];
               var19.b(var9, -(var19.field_x >> 1) + var10, 256);
               return;
@@ -199,7 +199,7 @@ final class dh extends df {
           var10Lifetime1 = var43.a((UiComponent) (this), 3, param0) + (var43.a(102, (UiComponent) (this)).a((byte) -63) >> 1);
           if (var6 != bl.field_S &&
             jh.field_c != var6) {
-            if (lk.field_c == var6) {
+            if (SpriteLoader.field_c == var6) {
               var38 = ub.field_f[2];
               var38.b(var9Lifetime1, -(var38.field_x >> 1) + var10Lifetime1, 256);
               return;
@@ -266,7 +266,7 @@ final class dh extends df {
           return;
         }
         if (jh.field_c != var6Lifetime1) {
-          if (lk.field_c == var6Lifetime1) {
+          if (SpriteLoader.field_c == var6Lifetime1) {
             var27 = ub.field_f[2];
             var27.b(var9Lifetime2, -(var27.field_x >> 1) + var10Lifetime2, 256);
             return;

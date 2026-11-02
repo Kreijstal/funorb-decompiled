@@ -5,7 +5,7 @@ import java.io.*;
 
 final class bj extends IOException {
     static int[] field_b;
-    static volatile int field_c;
+    static volatile int mouseX;
     static int[] field_d;
     static int[] field_a;
 
@@ -133,7 +133,7 @@ final class bj extends IOException {
     }
 
     static {
-        field_c = -1;
+        mouseX = -1;
         field_d = new int[]{28, 26, 24, 22, 20};
         field_a = new int[]{0, 5, 10};
     }

@@ -56,7 +56,7 @@ class DualLinkNode extends IntrusiveNode {
         field_j = null;
     }
 
-    final static ge a(byte param0, int param1, int param2, lj param3) {
+    final static ge a(byte param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         ge stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -64,7 +64,7 @@ class DualLinkNode extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!lk.a(160, param3, param1, param2)) {
+          if (!SpriteLoader.a(160, param3, param1, param2)) {
             return null;
           }
           if (param0 != 61) {

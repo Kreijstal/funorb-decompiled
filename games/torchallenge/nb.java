@@ -31,7 +31,7 @@ final class nb {
         if (param0 != -26375) {
           field_a = (Sprite) null;
         }
-        stackIn_7_0 = (gj.field_c >= 10) && (!lj.field_q) && (!hf.a(4));
+        stackIn_7_0 = (gj.field_c >= 10) && (!ResourceArchive.field_q) && (!hf.a(4));
         return stackIn_7_0;
     }
 

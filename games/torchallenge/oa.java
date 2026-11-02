@@ -127,9 +127,9 @@ final class oa {
         var4 = stackIn_11_0;
         vc.field_f = var9.readString(false);
         if (var4 == 0) {
-          lk.field_b = vc.field_f;
+          SpriteLoader.field_b = vc.field_f;
         } else {
-          lk.field_b = var9.readString(false);
+          SpriteLoader.field_b = var9.readString(false);
         }
         if (uk.field_L == 1) {
           var9.readUnsignedShort(false);
@@ -149,7 +149,7 @@ final class oa {
         try {
           var10 = ie.field_a.a(var5, (byte) -104);
           td.field_q = var10.b(true);
-          if (lk.field_b.equals(LevelDecoder.field_a)) {
+          if (SpriteLoader.field_b.equals(LevelDecoder.field_a)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var10.field_x;

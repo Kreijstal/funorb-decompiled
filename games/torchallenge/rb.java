@@ -226,7 +226,7 @@ final class rb implements Runnable {
         }
     }
 
-    final static ge a(lj param0, String param1, byte param2, String param3) {
+    final static ge a(ResourceArchive param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -329,7 +329,7 @@ final class rb implements Runnable {
           if (var2.field_d == 2) {
             throw new RuntimeException();
           }
-          this.field_d = (Thread) (var2.field_g);
+          this.field_d = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -6,7 +6,7 @@ abstract class jl {
     static String field_d;
     static int field_e;
     static long field_h;
-    static lj field_b;
+    static ResourceArchive field_b;
     static Sprite[] field_a;
     static java.math.BigInteger field_f;
     static String field_g;

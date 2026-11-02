@@ -65,7 +65,7 @@ final class al extends sh {
         return var1;
     }
 
-    final static nf a(lj param0, int param1, int param2, lj param3, int param4) {
+    final static nf a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
@@ -77,7 +77,7 @@ final class al extends sh {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!lk.a(160, param0, param2, param1)) {
+          if (!SpriteLoader.a(160, param0, param2, param1)) {
             stackIn_2_0 = null;
             return (nf) (stackIn_2_0);
           }

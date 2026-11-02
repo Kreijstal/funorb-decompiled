@@ -294,7 +294,7 @@ final class pg extends PcmStream {
               if (!var11.l()) {
                 continue;
               }
-              this.field_u.a(var11);
+              this.field_u.addSubstream(var11);
             }
           }
           if (param3 <= 51) {

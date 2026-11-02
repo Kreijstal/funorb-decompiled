@@ -266,7 +266,7 @@ final class ul extends IntrusiveNode {
         return wf.field_i.a(-11982);
     }
 
-    final static void a(lj param0, int param1, lj param2) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         try {
           sf.field_a = param2;
           IterableNodeHashTable.field_c = param0;

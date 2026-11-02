@@ -186,9 +186,9 @@ final class od {
                   var19 = var19 + (var22 & 16711935);
                   var20 = var20 + (var22 & 65280);
                 }
-                var21Lifetime1 = fj.a(1870096848, var19 & -65536, lj.field_j[var16]) >> 16;
-                var22Lifetime1 = fj.a(1870096848, (var19 & 65535) << 16, lj.field_j[var16]) >> 16;
-                var23 = fj.a(1870096848, (var20 & 16776960) << 8, lj.field_j[var16]) >> 16;
+                var21Lifetime1 = fj.a(1870096848, var19 & -65536, ResourceArchive.field_j[var16]) >> 16;
+                var22Lifetime1 = fj.a(1870096848, (var19 & 65535) << 16, ResourceArchive.field_j[var16]) >> 16;
+                var23 = fj.a(1870096848, (var20 & 16776960) << 8, ResourceArchive.field_j[var16]) >> 16;
                 var24 = (var21Lifetime1 << 16) + (var23 << 8) + var22Lifetime1;
                 if (var24 == 0 &&
                   param4 == 0) {

@@ -61,7 +61,7 @@ abstract class t {
         we.field_c[12] = new String[]{kj.field_H};
         we.field_c[3] = new String[]{ui.field_g};
         we.field_c[1] = new String[]{eb.field_i};
-        we.field_c[11] = new String[]{lj.field_d};
+        we.field_c[11] = new String[]{ResourceArchive.field_d};
         we.field_c[17] = new String[]{ik.field_e};
         we.field_c[20] = new String[]{wf.field_f, rc.field_q};
         we.field_c[31] = new String[]{gh.field_i, o.field_n};

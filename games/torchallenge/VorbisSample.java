@@ -39,7 +39,7 @@ final class VorbisSample extends IntrusiveNode {
     private static ig[] field_G;
     private static int field_t;
 
-    final static VorbisSample a(lj param0, String param1, String param2) {
+    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
@@ -64,7 +64,7 @@ final class VorbisSample extends IntrusiveNode {
         }
     }
 
-    final static VorbisSample a(lj param0, int param1, int param2) {
+    final static VorbisSample a(ResourceArchive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
@@ -126,7 +126,7 @@ final class VorbisSample extends IntrusiveNode {
         field_t = 0;
     }
 
-    private final static boolean a(lj param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_O) {
           var1 = param0.c(0, 0, 0);

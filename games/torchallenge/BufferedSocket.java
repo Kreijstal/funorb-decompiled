@@ -89,7 +89,7 @@ final class BufferedSocket implements Runnable {
     }
 
     final static void b(byte param0) {
-        kd var1 = (kd) (mc.field_k.d((byte) -119));
+        kd var1 = (kd) (mc.field_k.pollLast((byte) -119));
         if (var1 == null) {
           var1 = new kd();
         }
@@ -298,7 +298,7 @@ final class BufferedSocket implements Runnable {
             }
             if (this.field_h.field_d == 1) {
               try {
-                ((Thread) (this.field_h.field_g)).join();
+                ((Thread) (this.field_h.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var3_ref = (InterruptedException) (Object) decompiledCaughtException;

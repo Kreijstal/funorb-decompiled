@@ -175,8 +175,8 @@ abstract class MouseWheelInput {
           var10 = 0;
           var11 = 0;
           var12 = 0;
-          var17 = lj.field_h[0].field_q;
-          var18 = lj.field_h[0].field_v;
+          var17 = ResourceArchive.field_h[0].field_q;
+          var18 = ResourceArchive.field_h[0].field_v;
           var20 = 0;
           var21 = 480;
           var22 = 32;
@@ -239,7 +239,7 @@ abstract class MouseWheelInput {
                       var21 > var15 && (var13 < var22 ||
                       var23 <= var14)) {
                       var19 = wc.field_e[var25][var26][2];
-                      lj.field_h[var19].g(var13, var15);
+                      ResourceArchive.field_h[var19].g(var13, var15);
                     }
                   }
                 }

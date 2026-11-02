@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sf {
-    private lj field_g;
+    private ResourceArchive field_g;
     private je field_e;
     static int[] field_b;
-    private lj field_f;
+    private ResourceArchive field_f;
     static int field_c;
-    static lj field_a;
+    static ResourceArchive field_a;
     static Sprite[][][] field_d;
 
     final lh a(int param0, byte param1) {
@@ -79,7 +79,7 @@ final class sf {
           param1[7].d(param4 + var9, var8 - var10, param5 - var9 * 2, var10);
           param1[3].d(param4, param2 + var10, var9, param3 - var10 * 2);
           if (param6 != -55) {
-            field_a = (lj) null;
+            field_a = (ResourceArchive) null;
           }
           param1[5].d(var7_int - var9, param2 + var10, var9, param3 - var10 * 2);
           param1[4].d(param4 + var9, param2 + var10, -(var9 * 2) + param5, -(2 * var10) + param3);

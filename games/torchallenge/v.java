@@ -172,7 +172,7 @@ abstract class v extends b {
         int var6;
         int var7;
         int var8;
-        lj var9;
+        ResourceArchive var9;
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = TorChallenge.field_F ? 1 : 0;
@@ -197,8 +197,8 @@ abstract class v extends b {
         }
         ie.b((byte) -9);
         if (param2 < 40) {
-          var9 = (lj) null;
-          v.a((String) null, 32, (String) null, (lj) null);
+          var9 = (ResourceArchive) null;
+          v.a((String) null, 32, (String) null, (ResourceArchive) null);
         }
         if (jc.field_c >= 150) {
           hf.field_a.d(var3 + 15, var4 + 10, var5);
@@ -320,7 +320,7 @@ abstract class v extends b {
         this.field_Q = 0;
     }
 
-    final static Sprite[] a(String param0, int param1, String param2, lj param3) {
+    final static Sprite[] a(String param0, int param1, String param2, ResourceArchive param3) {
         Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         Sprite[] var5 = null;
@@ -337,7 +337,7 @@ abstract class v extends b {
           if (param1 < 25) {
             v.e(-94, -6, -17);
           }
-          var5 = lk.a(-128, param0, param2, param3);
+          var5 = SpriteLoader.a(-128, param0, param2, param3);
           var4 = var5;
           var5[3].field_v = var5[3].field_x;
           var5[1].field_q = var5[1].field_u;
@@ -415,7 +415,7 @@ abstract class v extends b {
         }
     }
 
-    final static void a(byte param0, PcmStreamMixer param1, int param2, lj param3) {
+    final static void a(byte param0, PcmStreamMixer param1, int param2, ResourceArchive param3) {
         try {
           vk.field_h = param2 * ol.b(-128) / 1000;
           GameApplet.a(0, param3);
@@ -493,7 +493,7 @@ abstract class v extends b {
           while (var12.field_d == 0) {
             c.a(127, 10L);
           }
-          var8 = (java.awt.Frame) (var12.field_g);
+          var8 = (java.awt.Frame) (var12.result);
           if (var8 == null) {
             return null;
           }

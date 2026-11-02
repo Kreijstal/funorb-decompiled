@@ -354,7 +354,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public final void windowOpened(java.awt.event.WindowEvent param0) {
     }
 
-    final static void a(int param0, lj param1) {
+    final static void a(int param0, ResourceArchive param1) {
         VorbisSample var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -787,7 +787,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             break;
           }
           if (param1 >= -26) {
-            GameApplet.a(-77, (lj) null);
+            GameApplet.a(-77, (ResourceArchive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

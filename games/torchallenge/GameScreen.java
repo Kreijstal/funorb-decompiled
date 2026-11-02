@@ -162,7 +162,7 @@ final class GameScreen {
             id.field_b.position = 0;
             if (var9 >= 100 &&
               var9 <= 105) {
-              aj.field_c = lj.field_r;
+              aj.field_c = ResourceArchive.field_r;
               ra.field_d = new String[var9 - 100];
             } else {
               if (var9 != 248) {
@@ -190,7 +190,7 @@ final class GameScreen {
               }
             }
           }
-          if (aj.field_c == lj.field_r) {
+          if (aj.field_c == ResourceArchive.field_r) {
             var9 = 2;
             if (pe.a((byte) 113, var9)) {
               var10 = id.field_b.readUnsignedShort(false);
@@ -2061,13 +2061,13 @@ final class GameScreen {
           boolean decompiledFrameCompleted0 = true;
           var2_int = vj.field_c;
           if (!na.field_f) {
-            lj.field_n = new LevelEntity[3];
+            ResourceArchive.field_n = new LevelEntity[3];
             na.field_f = true;
             jj.field_a = new Sprite[3];
             var3 = 0;
             while (var3 < 3) {
               vj.field_c = var3;
-              lj.field_n[var3] = new LevelEntity(0, 0, 0, 0);
+              ResourceArchive.field_n[var3] = new LevelEntity(0, 0, 0, 0);
               jj.field_a[var3] = new Sprite(192, 192);
               var3++;
               if (var4 != 0) {
@@ -2110,8 +2110,8 @@ final class GameScreen {
             if (var4 != 0) {
               return;
             }
-            if (null != lj.field_n[var3Lifetime1]) {
-              lj.field_n[var3Lifetime1].field_kb = 0;
+            if (null != ResourceArchive.field_n[var3Lifetime1]) {
+              ResourceArchive.field_n[var3Lifetime1].field_kb = 0;
             }
             var3Lifetime1++;
           }
@@ -2137,7 +2137,7 @@ final class GameScreen {
             var1 = kb.field_O.g((byte) -39);
           }
           if (0 == var1.length()) {
-            var1 = lj.a((byte) -116);
+            var1 = ResourceArchive.a((byte) -116);
           }
           if (var1.length() == 0) {
             var1 = wc.field_i;
@@ -2172,8 +2172,8 @@ final class GameScreen {
           var4Lifetime1 = 0;
           var5 = -77 % ((param0 - 15) / 35);
           while (3 > var4Lifetime1) {
-            if (null != lj.field_n[var4Lifetime1]) {
-              lj.field_n[var4Lifetime1].field_kb = 0;
+            if (null != ResourceArchive.field_n[var4Lifetime1]) {
+              ResourceArchive.field_n[var4Lifetime1].field_kb = 0;
             }
             var4Lifetime1++;
             if (var6 == 0) {
@@ -4615,79 +4615,79 @@ final class GameScreen {
             SoftwareRasterizer.a(ui.field_f);
           }
           this.c(false);
-          var8_int = ja.a((byte) 109, lj.field_n[param4].field_L) ? 1 : 0;
-          stackIn_8_0 = (lj.field_n[param4].field_L != 17) ? 0 : 1;
+          var8_int = ja.a((byte) 109, ResourceArchive.field_n[param4].field_L) ? 1 : 0;
+          stackIn_8_0 = (ResourceArchive.field_n[param4].field_L != 17) ? 0 : 1;
           var9 = stackIn_8_0;
           var10 = 0;
           var10Lifetime1 = bd.field_l ? 1 : 0;
           bd.field_l = false;
           if (var8_int == 0 &&
             var9 == 0) {
-            lj.field_n[param4].field_L = 3;
-            lj.field_n[param4].field_kb = 0;
+            ResourceArchive.field_n[param4].field_L = 3;
+            ResourceArchive.field_n[param4].field_kb = 0;
           }
           boolean decompiledFrameRemainder0 = true;
           if (var9 == 0) {
             vj.field_c = param4;
-            lj.field_n[param4].b(false, false);
-            lj.field_n[param4].a(jj.field_a[param4], 32, 128, (int[]) null, 0, -20861, 64, 0);
-            if (db.field_x[i.field_r][param4] - 1 <= lj.field_n[param4].field_kb) {
-              lj.field_n[param4].field_kb = db.field_x[i.field_r][param4] - 1;
+            ResourceArchive.field_n[param4].b(false, false);
+            ResourceArchive.field_n[param4].a(jj.field_a[param4], 32, 128, (int[]) null, 0, -20861, 64, 0);
+            if (db.field_x[i.field_r][param4] - 1 <= ResourceArchive.field_n[param4].field_kb) {
+              ResourceArchive.field_n[param4].field_kb = db.field_x[i.field_r][param4] - 1;
             }
-            var11 = pl.field_e[lj.field_n[param4].field_L];
-            var12 = a.field_d[param4][var11][lj.field_n[param4].field_kb][0];
-            var13 = 2 * ae.field_u[param4][var11][lj.field_n[param4].field_kb] - 1;
-            stackIn_25_0 = (var13 > -lj.field_n[param4].field_p + ef.field_k) ? 0 : 1;
+            var11 = pl.field_e[ResourceArchive.field_n[param4].field_L];
+            var12 = a.field_d[param4][var11][ResourceArchive.field_n[param4].field_kb][0];
+            var13 = 2 * ae.field_u[param4][var11][ResourceArchive.field_n[param4].field_kb] - 1;
+            stackIn_25_0 = (var13 > -ResourceArchive.field_n[param4].field_p + ef.field_k) ? 0 : 1;
             var14 = stackIn_25_0;
-            var15 = ll.field_j[param4][var11][lj.field_n[param4].field_kb] ? 1 : 0;
+            var15 = ll.field_j[param4][var11][ResourceArchive.field_n[param4].field_kb] ? 1 : 0;
             if (var14 != 0 &&
               var15 != 0) {
-              if (lj.field_n[param4].field_L != 10 ||
+              if (ResourceArchive.field_n[param4].field_L != 10 ||
                 var12 == 17) {
-                if (lj.field_n[param4].field_L == 9 &&
+                if (ResourceArchive.field_n[param4].field_L == 9 &&
                   var12 != 17) {
-                  dupTemp$0 = lj.field_n[param4];
+                  dupTemp$0 = ResourceArchive.field_n[param4];
                   dupTemp$0.field_kb = dupTemp$0.field_kb + 1;
-                  lj.field_n[param4].field_p = ef.field_k;
+                  ResourceArchive.field_n[param4].field_p = ef.field_k;
                   decompiledFrameRemainder0 = (var16 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  if (lj.field_n[param4].field_L == 7) {
+                  if (ResourceArchive.field_n[param4].field_L == 7) {
                     var12 = 17;
                   }
-                  lj.field_n[param4].field_L = var12;
-                  lj.field_n[param4].field_kb = 0;
-                  dupTemp$1 = lj.field_n[param4];
+                  ResourceArchive.field_n[param4].field_L = var12;
+                  ResourceArchive.field_n[param4].field_kb = 0;
+                  dupTemp$1 = ResourceArchive.field_n[param4];
                   dupTemp$1.field_p = dupTemp$1.field_p + (1 + var13);
                   if (var16 != 0) {
-                    dupTemp$2 = lj.field_n[param4];
+                    dupTemp$2 = ResourceArchive.field_n[param4];
                     dupTemp$2.field_kb = dupTemp$2.field_kb + 1;
-                    lj.field_n[param4].field_p = ef.field_k;
+                    ResourceArchive.field_n[param4].field_p = ef.field_k;
                     if (var14 != 0) {
-                      dupTemp$3 = lj.field_n[param4];
+                      dupTemp$3 = ResourceArchive.field_n[param4];
                       dupTemp$3.field_kb = dupTemp$3.field_kb + 1;
-                      dupTemp$4 = lj.field_n[param4];
+                      dupTemp$4 = ResourceArchive.field_n[param4];
                       dupTemp$4.field_p = dupTemp$4.field_p + (1 + var13);
                     }
                   }
                 }
               } else {
-                dupTemp$2 = lj.field_n[param4];
+                dupTemp$2 = ResourceArchive.field_n[param4];
                 dupTemp$2.field_kb = dupTemp$2.field_kb + 1;
-                lj.field_n[param4].field_p = ef.field_k;
+                ResourceArchive.field_n[param4].field_p = ef.field_k;
                 if ((var16 != 0) &&
                   (var14 != 0)) {
-                  dupTemp$3 = lj.field_n[param4];
+                  dupTemp$3 = ResourceArchive.field_n[param4];
                   dupTemp$3.field_kb = dupTemp$3.field_kb + 1;
-                  dupTemp$4 = lj.field_n[param4];
+                  dupTemp$4 = ResourceArchive.field_n[param4];
                   dupTemp$4.field_p = dupTemp$4.field_p + (1 + var13);
                 }
               }
             } else {
               if (var14 != 0) {
-                dupTemp$3 = lj.field_n[param4];
+                dupTemp$3 = ResourceArchive.field_n[param4];
                 dupTemp$3.field_kb = dupTemp$3.field_kb + 1;
-                dupTemp$4 = lj.field_n[param4];
+                dupTemp$4 = ResourceArchive.field_n[param4];
                 dupTemp$4.field_p = dupTemp$4.field_p + (1 + var13);
               }
             }
@@ -5329,7 +5329,7 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (null == lj.field_n) {
+          if (null == ResourceArchive.field_n) {
             return;
           }
           if (param0) {
@@ -5337,9 +5337,9 @@ final class GameScreen {
           }
           var2_int = 0;
           while (var2_int < 3) {
-            lj.field_n[var2_int].field_L = 0;
-            lj.field_n[var2_int].field_p = ef.field_k;
-            lj.field_n[var2_int].field_kb = 0;
+            ResourceArchive.field_n[var2_int].field_L = 0;
+            ResourceArchive.field_n[var2_int].field_p = ef.field_k;
+            ResourceArchive.field_n[var2_int].field_kb = 0;
             var2_int++;
             if (var3 == 0) {
               continue;
@@ -6406,7 +6406,7 @@ final class GameScreen {
           this.c(false);
           var9_int = ef.field_k % param0;
           var10 = ja.a((byte) 107, param3) ? 1 : 0;
-          stackIn_7_0 = (lj.field_n[param7].field_L != 17) ? 0 : 1;
+          stackIn_7_0 = (ResourceArchive.field_n[param7].field_L != 17) ? 0 : 1;
           var11 = stackIn_7_0;
           var12 = bd.field_l ? 1 : 0;
           bd.field_l = false;
@@ -6414,11 +6414,11 @@ final class GameScreen {
           if (var11 != 0 &&
             var9_int < 15) {
             var11 = 0;
-            lj.field_n[param7].field_p = ef.field_k;
+            ResourceArchive.field_n[param7].field_p = ef.field_k;
           }
           if (param3 == 10 &&
             var11 == 0) {
-            lj.field_n[param7].field_L = param3;
+            ResourceArchive.field_n[param7].field_L = param3;
           }
           if (param3 != 10 ||
             var11 != 0 || var15 != 0) {
@@ -6427,51 +6427,51 @@ final class GameScreen {
               if (param3 != 7 ||
                 var11 != 0) {
                 if (6 != param3 ||
-                  3 == lj.field_n[param7].field_L ||
+                  3 == ResourceArchive.field_n[param7].field_L ||
                   4 == param3) {
                   if ((var10 == 0) &&
                     (var11 == 0)) {
-                    lj.field_n[param7].field_L = param3;
+                    ResourceArchive.field_n[param7].field_L = param3;
                     if (var15 != 0) {
-                      lj.field_n[param7].field_L = param3;
-                      lj.field_n[param7].field_L = param3;
-                      lj.field_n[param7].field_L = param3;
+                      ResourceArchive.field_n[param7].field_L = param3;
+                      ResourceArchive.field_n[param7].field_L = param3;
+                      ResourceArchive.field_n[param7].field_L = param3;
                     }
                   }
                 } else {
-                  lj.field_n[param7].field_L = param3;
+                  ResourceArchive.field_n[param7].field_L = param3;
                   if (var15 != 0) {
-                    lj.field_n[param7].field_L = param3;
-                    lj.field_n[param7].field_L = param3;
+                    ResourceArchive.field_n[param7].field_L = param3;
+                    ResourceArchive.field_n[param7].field_L = param3;
                   }
                 }
               } else {
-                lj.field_n[param7].field_L = param3;
+                ResourceArchive.field_n[param7].field_L = param3;
                 if (var15 != 0) {
-                  lj.field_n[param7].field_L = param3;
+                  ResourceArchive.field_n[param7].field_L = param3;
                 }
               }
             } else {
-              lj.field_n[param7].field_L = param3;
+              ResourceArchive.field_n[param7].field_L = param3;
             }
           }
-          lj.field_n[param7].field_Q = param2;
-          lj.field_n[param7].field_h = 0;
-          lj.field_n[param7].field_a = 1;
+          ResourceArchive.field_n[param7].field_Q = param2;
+          ResourceArchive.field_n[param7].field_h = 0;
+          ResourceArchive.field_n[param7].field_a = 1;
           if (param2 < 0) {
-            lj.field_n[param7].field_a = -1;
+            ResourceArchive.field_n[param7].field_a = -1;
           }
           if (param3 == 2 &&
             param0 * 3 >> 2 < var9_int) {
-            lj.field_n[param7].field_L = 0;
-            lj.field_n[param7].field_eb = true;
+            ResourceArchive.field_n[param7].field_L = 0;
+            ResourceArchive.field_n[param7].field_eb = true;
           }
           if (param3 != 2 ||
             param0 * 3 >> 2 >= var9_int || var15 != 0) {
-            lj.field_n[param7].field_eb = false;
+            ResourceArchive.field_n[param7].field_eb = false;
           }
           if (var11 == 0) {
-            lj.field_n[param7].b(false, false);
+            ResourceArchive.field_n[param7].b(false, false);
           }
           var13 = -1;
           if (param0 > 0) {
@@ -6488,35 +6488,35 @@ final class GameScreen {
           }
           if (var13 >= 0) {
             if (var10 != 0) {
-              this.a((byte) 42, lj.field_n[param7].field_I, 0, lj.field_n[param7].field_w, param7, false, 16);
+              this.a((byte) 42, ResourceArchive.field_n[param7].field_I, 0, ResourceArchive.field_n[param7].field_w, param7, false, 16);
             }
             if (var10 == 0 ||
               var15 != 0) {
-              lj.field_n[param7].a(jj.field_a[param7], 32, 128, (int[]) null, 0, -20861, 64, 0);
+              ResourceArchive.field_n[param7].a(jj.field_a[param7], 32, 128, (int[]) null, 0, -20861, 64, 0);
             }
             SectorCacheStore.field_f.a(-74);
             param1 = -32 + param1;
-            param4 = param4 - (jj.field_a[param7].field_q - lj.field_n[param7].field_I >> 1);
-            if (0 > lj.field_n[param7].field_a) {
+            param4 = param4 - (jj.field_a[param7].field_q - ResourceArchive.field_n[param7].field_I >> 1);
+            if (0 > ResourceArchive.field_n[param7].field_a) {
               param4 += 16;
             }
             jj.field_a[param7].d(param4, param1, var13);
             if (var15 != 0) {
               if (var10 == 0) {
-                lj.field_n[param7].a((Sprite) null, param1, lj.field_n[param7].field_I + param4, (int[]) null, 0, -20861, param4, 0);
-                this.a((byte) 42, lj.field_n[param7].field_I, param4, lj.field_n[param7].field_w, param7, true, 16 + param1);
+                ResourceArchive.field_n[param7].a((Sprite) null, param1, ResourceArchive.field_n[param7].field_I + param4, (int[]) null, 0, -20861, param4, 0);
+                this.a((byte) 42, ResourceArchive.field_n[param7].field_I, param4, ResourceArchive.field_n[param7].field_w, param7, true, 16 + param1);
               } else {
-                this.a((byte) 42, lj.field_n[param7].field_I, param4, lj.field_n[param7].field_w, param7, true, 16 + param1);
+                this.a((byte) 42, ResourceArchive.field_n[param7].field_I, param4, ResourceArchive.field_n[param7].field_w, param7, true, 16 + param1);
               }
             }
           } else {
             boolean decompiledSharedTail0 = (var10 != 0);
             if (!decompiledSharedTail0) {
-              lj.field_n[param7].a((Sprite) null, param1, lj.field_n[param7].field_I + param4, (int[]) null, 0, -20861, param4, 0);
+              ResourceArchive.field_n[param7].a((Sprite) null, param1, ResourceArchive.field_n[param7].field_I + param4, (int[]) null, 0, -20861, param4, 0);
               decompiledSharedTail0 = (var15 != 0);
             }
             if (decompiledSharedTail0) {
-              this.a((byte) 42, lj.field_n[param7].field_I, param4, lj.field_n[param7].field_w, param7, true, 16 + param1);
+              this.a((byte) 42, ResourceArchive.field_n[param7].field_I, param4, ResourceArchive.field_n[param7].field_w, param7, true, 16 + param1);
             }
           }
           vj.field_c = ok.field_b;
@@ -6860,8 +6860,8 @@ final class GameScreen {
           boolean decompiledFrameCompleted0 = true;
           jj.field_c = 0;
           eh.field_l = 0;
-          wc.field_g.a(-14341);
-          kj.field_B.a(-14341);
+          wc.field_g.clear(-14341);
+          kj.field_B.clear(-14341);
           if (hf.field_d != null) {
             var2_int = 0;
             while (!(var2_int >= hf.field_d.length)) {

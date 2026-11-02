@@ -1007,7 +1007,7 @@ final class ra {
         if (3 < var2) {
           var2 = 3;
         }
-        var3 = lj.field_h[0].field_q * lj.field_h[0].field_v;
+        var3 = ResourceArchive.field_h[0].field_q * ResourceArchive.field_h[0].field_v;
         var4 = 32;
         var5 = 16;
         var6 = var4 * 32;

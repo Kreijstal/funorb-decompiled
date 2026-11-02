@@ -1227,7 +1227,7 @@ final class LevelEntity {
                       if (LocalizedStrings.field_w != null) {
                         LocalizedStrings.field_w[0][0] = 0;
                       }
-                      lj.field_b = 0;
+                      ResourceArchive.field_b = 0;
                       hf.field_c = 0;
                       fh.field_d = 0;
                       vd.field_b = true;
@@ -1872,7 +1872,7 @@ final class LevelEntity {
             }
             if (hf.field_c == 0) {
               GameKeyHandler.field_b = false;
-              lj.field_b = 0;
+              ResourceArchive.field_b = 0;
               vd.field_b = true;
               if (LocalizedStrings.field_w != null) {
                 LocalizedStrings.field_w[0][0] = 0;
@@ -2765,7 +2765,7 @@ final class LevelEntity {
                 GameKeyHandler.field_b = false;
                 dk.field_a = 0;
                 hf.field_c = 0;
-                lj.field_b = 0;
+                ResourceArchive.field_b = 0;
               }
               if (SocketConnector.field_k > 0) {
                 SocketConnector.field_k = SocketConnector.field_k - 1;
@@ -3825,7 +3825,7 @@ final class LevelEntity {
                     var26 = 16777215;
                   }
                   SoftwareRasterizer.a(bf.field_l);
-                  lk.field_e.d();
+                  SpriteLoader.field_e.d();
                   SoftwareRasterizer.b();
                   if (var10 == 0) {
                     c.field_c[var14][var9_int][var15].d(0, 0, var20, var19);
@@ -3851,7 +3851,7 @@ final class LevelEntity {
                     }
                   }
                   if (var18 != 0) {
-                    lk.field_e.a(param6 + param4, param1, var24Lifetime1, var26);
+                    SpriteLoader.field_e.a(param6 + param4, param1, var24Lifetime1, var26);
                   }
                   if (this.field_l > 0 ||
                     !(SocketConnector.field_k > 0)) {
@@ -4843,7 +4843,7 @@ final class LevelEntity {
                           }
                           if (stackIn_127_0 >= stackIn_127_1 ||
                             var5 != 0) {
-                            rj.field_d = lj.field_k;
+                            rj.field_d = ResourceArchive.field_k;
                             eb.field_n = true;
                           }
                           if (BufferedSocket.field_p != null &&
@@ -9730,7 +9730,7 @@ final class LevelEntity {
           if (param0.field_db <= 0) {
             kk.a(param0, 0);
             if (4 > dk.field_a) {
-              lj.field_b = lj.field_b + 25;
+              ResourceArchive.field_b = ResourceArchive.field_b + 25;
               dk.field_a = dk.field_a + 1;
             }
             discarded$0 = this.a((byte) -31, param0);

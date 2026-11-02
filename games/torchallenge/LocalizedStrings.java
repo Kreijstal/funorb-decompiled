@@ -54,7 +54,7 @@ final class LocalizedStrings extends ma {
         }
     }
 
-    final static void a(lj param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         RuntimeException stackIn_648_0 = null;
         StringBuilder stackIn_648_1 = null;
         String stackIn_649_2 = null;
@@ -872,7 +872,7 @@ final class LocalizedStrings extends ma {
           }
           var2Lifetime154 = MouseInputHandler.a(95, "LEVEL_EXIT_UNLOCKED");
           if (var2Lifetime154 != null) {
-            lj.field_k = re.a(18990, var2Lifetime154);
+            ResourceArchive.field_k = re.a(18990, var2Lifetime154);
           }
           var2Lifetime155 = MouseInputHandler.a(95, "COLLECT_MORE_SEALS");
           if (null != var2Lifetime155) {
@@ -1045,14 +1045,14 @@ final class LocalizedStrings extends ma {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_r.a((byte) 24, param0) == lk.field_c) {
+          if (this.field_r.a((byte) 24, param0) == SpriteLoader.field_c) {
             stackIn_2_0 = this.field_r.a(param0, (byte) -24);
             return stackIn_2_0;
           }
           if (param1 != -24) {
             LocalizedStrings.a((String) null, (byte) -57, (String) null);
           }
-          if (this.a((byte) 24, param0) == lk.field_c) {
+          if (this.a((byte) 24, param0) == SpriteLoader.field_c) {
             stackIn_10_0 = kg.field_cb;
             return stackIn_10_0;
           }
@@ -1199,8 +1199,8 @@ final class LocalizedStrings extends ma {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_r.a(param0, param1) == lk.field_c) {
-            stackIn_2_0 = lk.field_c;
+          if (this.field_r.a(param0, param1) == SpriteLoader.field_c) {
+            stackIn_2_0 = SpriteLoader.field_c;
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_q)) {
@@ -1213,7 +1213,7 @@ final class LocalizedStrings extends ma {
             this.field_o = var3.a(false);
           }
           if (!this.field_o) {
-            stackIn_12_0 = lk.field_c;
+            stackIn_12_0 = SpriteLoader.field_c;
           } else {
             stackIn_12_0 = tf.field_w;
           }

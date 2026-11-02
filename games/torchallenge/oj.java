@@ -23,7 +23,7 @@ final class oj {
         }
     }
 
-    final static void a(int param0, lj param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2620_0;
             StringBuilder stackIn_2620_1;
@@ -34,9 +34,9 @@ final class oj {
             int var3;
             int var4;
             int param0;
-            lj param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, lj initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2620_0 = null;
@@ -1945,7 +1945,7 @@ final class oj {
                 }
                 var2 = dl.a("quit", false);
                 if (var2 != null) {
-                  lj.field_d = re.a(18990, var2);
+                  ResourceArchive.field_d = re.a(18990, var2);
                 }
                 var2 = dl.a("login_createaccount", false);
                 if (var2 != null) {

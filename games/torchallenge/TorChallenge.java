@@ -76,34 +76,34 @@ public final class TorChallenge extends GameClientBase {
           dh.field_cb = new Sprite[2][];
           GzipDecoder.field_a = v.a("main_menu_frame", param0 + 123, "", ic.field_C);
           dh.field_cb[0] = GzipDecoder.field_a;
-          dh.field_cb[1] = lk.a(-127, "char_select_frame_selected", "", ic.field_C);
+          dh.field_cb[1] = SpriteLoader.a(-127, "char_select_frame_selected", "", ic.field_C);
           ba.field_b = v.a("button_frame", 53, "", ic.field_C);
-          aa.field_k = lk.a(-127, "nav_frame", "", ic.field_C);
-          ph.field_m = lk.a(param0 - 129, "text_frame", "", ic.field_C);
-          qf.field_c = lk.a(-127, "seal_list", "", ic.field_C);
-          ib.field_M = lk.a(-127, "go_button", "", ic.field_C);
+          aa.field_k = SpriteLoader.a(-127, "nav_frame", "", ic.field_C);
+          ph.field_m = SpriteLoader.a(param0 - 129, "text_frame", "", ic.field_C);
+          qf.field_c = SpriteLoader.a(-127, "seal_list", "", ic.field_C);
+          ib.field_M = SpriteLoader.a(-127, "go_button", "", ic.field_C);
           dg.field_J = v.a("instructions_frame", 35, "", ic.field_C);
-          lk.a(-127, "char_select_arrows", "", ic.field_C);
+          SpriteLoader.a(-127, "char_select_arrows", "", ic.field_C);
           ua.field_d = mh.a(param0 + 52, ic.field_C, "keys", "");
           dj.field_V = mh.a(113, ic.field_C, "keys2", "");
-          tf.field_j = lk.a(-128, "achievements_large", "", ic.field_C);
+          tf.field_j = SpriteLoader.a(-128, "achievements_large", "", ic.field_C);
           var2 = tf.field_j;
           var3_int = 0;
           do {
             if (var3_int >= var2.length) {
               IterableNodeHashTable.a((byte) -44, je.field_b);
-              lj.field_o = lk.a(-127, "interface_clouds", "", ic.field_C);
-              rd.field_i = lk.a(param0 ^ -127, "interface_border", "", ic.field_C);
-              ng.field_L = lk.a(param0 - 128, "interface_score_health", "", ic.field_C);
-              ph.field_h = lk.a(-127, "interface_lives_remaining", "", ic.field_C);
-              di.field_t = lk.a(-128, "interface_lives_heads", "", ic.field_C);
-              rc.field_p = lk.a(-127, "interface_bo_energy", "", ic.field_C);
-              ni.field_h = lk.a(param0 - 128, "interface_sais_energy", "", ic.field_C);
-              ba.field_d = lk.a(-128, "interface_glovepunch_energy", "", ic.field_C);
+              ResourceArchive.field_o = SpriteLoader.a(-127, "interface_clouds", "", ic.field_C);
+              rd.field_i = SpriteLoader.a(param0 ^ -127, "interface_border", "", ic.field_C);
+              ng.field_L = SpriteLoader.a(param0 - 128, "interface_score_health", "", ic.field_C);
+              ph.field_h = SpriteLoader.a(-127, "interface_lives_remaining", "", ic.field_C);
+              di.field_t = SpriteLoader.a(-128, "interface_lives_heads", "", ic.field_C);
+              rc.field_p = SpriteLoader.a(-127, "interface_bo_energy", "", ic.field_C);
+              ni.field_h = SpriteLoader.a(param0 - 128, "interface_sais_energy", "", ic.field_C);
+              ba.field_d = SpriteLoader.a(-128, "interface_glovepunch_energy", "", ic.field_C);
               wf.field_b = qk.a("", "interface_seals", ic.field_C, 0);
               dl.field_j = qk.a("", "interface_sealscollected", ic.field_C, param0 ^ 1);
-              mb.field_d = lk.a(-128, "interface_health_icon", "", ic.field_C);
-              rl.field_h = lk.a(param0 - 129, "boss_heads", "", ic.field_C);
+              mb.field_d = SpriteLoader.a(-128, "interface_health_icon", "", ic.field_C);
+              rl.field_h = SpriteLoader.a(param0 - 129, "boss_heads", "", ic.field_C);
               SectorCacheStore.field_f.a(-63);
               ie.field_f = new Sprite[3][2];
               ie.field_f[0][0] = rc.field_p[0];
@@ -200,38 +200,38 @@ public final class TorChallenge extends GameClientBase {
             pf.field_a[2] = qk.a("", "game_win_1_ziren", ic.field_C, 0);
             pf.field_a[3] = qk.a("", "game_win_1_damen", ic.field_C, 0);
             pf.field_a[4] = qk.a("", "game_win_1_stars", ic.field_C, 0);
-            pe.field_eb = lk.a(-127, "status_messages", "", ic.field_C);
+            pe.field_eb = SpriteLoader.a(-127, "status_messages", "", ic.field_C);
             var2_int = pe.field_eb.length;
             stackIn_51_0 = 0;
           }
           var3_int = stackIn_51_0;
           do {
             if (var2_int <= var3_int) {
-              ImageProducerRasterBuffer.field_m = lk.a(param0 - 129, "rocket_trail", "", ic.field_C);
+              ImageProducerRasterBuffer.field_m = SpriteLoader.a(param0 - 129, "rocket_trail", "", ic.field_C);
               qb.a((byte) 49, ImageProducerRasterBuffer.field_m);
-              wh.field_f = lk.a(-127, "dust_cloud", "", ic.field_C);
+              wh.field_f = SpriteLoader.a(-127, "dust_cloud", "", ic.field_C);
               qb.a((byte) 45, wh.field_f);
-              ve.field_b = lk.a(param0 - 128, "monk1", "", ic.field_C);
+              ve.field_b = SpriteLoader.a(param0 - 128, "monk1", "", ic.field_C);
               qb.a((byte) 87, ve.field_b);
-              tf.field_a = lk.a(param0 - 128, "monk2", "", ic.field_C);
+              tf.field_a = SpriteLoader.a(param0 - 128, "monk2", "", ic.field_C);
               qb.a((byte) 81, tf.field_a);
-              RasterBuffer.field_d = lk.a(param0 - 128, "monk3", "", ic.field_C);
+              RasterBuffer.field_d = SpriteLoader.a(param0 - 128, "monk3", "", ic.field_C);
               qb.a((byte) 23, RasterBuffer.field_d);
-              hc.field_T = lk.a(param0 ^ -127, "monk1_swooshes", "", ic.field_C);
+              hc.field_T = SpriteLoader.a(param0 ^ -127, "monk1_swooshes", "", ic.field_C);
               qb.a((byte) 57, hc.field_T);
-              cg.field_d = lk.a(-127, "monk2_swooshes", "", ic.field_C);
+              cg.field_d = SpriteLoader.a(-127, "monk2_swooshes", "", ic.field_C);
               qb.a((byte) 16, cg.field_d);
-              af.field_b = lk.a(-127, "boss1", "", ic.field_C);
+              af.field_b = SpriteLoader.a(-127, "boss1", "", ic.field_C);
               qb.a((byte) 64, af.field_b);
-              aj.field_i = lk.a(-127, "boss1_attacks", "", ic.field_C);
+              aj.field_i = SpriteLoader.a(-127, "boss1_attacks", "", ic.field_C);
               qb.a((byte) 33, aj.field_i);
-              pl.field_c = lk.a(-127, "boss2", "", ic.field_C);
+              pl.field_c = SpriteLoader.a(-127, "boss2", "", ic.field_C);
               qb.a((byte) 72, pl.field_c);
-              s.field_n = lk.a(-127, "boss2_attacks", "", ic.field_C);
+              s.field_n = SpriteLoader.a(-127, "boss2_attacks", "", ic.field_C);
               qb.a((byte) 109, s.field_n);
-              hi.field_F = lk.a(-127, "boss3", "", ic.field_C);
+              hi.field_F = SpriteLoader.a(-127, "boss3", "", ic.field_C);
               qb.a((byte) 126, hi.field_F);
-              nk.field_a = lk.a(-128, "boss3_attacks", "", ic.field_C);
+              nk.field_a = SpriteLoader.a(-128, "boss3_attacks", "", ic.field_C);
               qb.a((byte) 14, nk.field_a);
               si.field_I = new Sprite[3][][];
               break;
@@ -252,13 +252,13 @@ public final class TorChallenge extends GameClientBase {
                   if (1 != var6_int) {
                     decompiledFrameRemainder4 = (2 == var6_int);
                     if (decompiledFrameRemainder4) {
-                      var3 = lk.a(-127, "boss3_swooshes", "", ic.field_C);
+                      var3 = SpriteLoader.a(-127, "boss3_swooshes", "", ic.field_C);
                     }
                   } else {
-                    var3 = lk.a(-128, "boss2_swooshes", "", ic.field_C);
+                    var3 = SpriteLoader.a(-128, "boss2_swooshes", "", ic.field_C);
                   }
                 } else {
-                  var3 = lk.a(-128, "boss1_swooshes", "", ic.field_C);
+                  var3 = SpriteLoader.a(-128, "boss1_swooshes", "", ic.field_C);
                 }
                 if (decompiledFrameRemainder4) {
                   qb.a((byte) 4, var3);
@@ -365,9 +365,9 @@ public final class TorChallenge extends GameClientBase {
                 if (decompiledFrameRemainder2) {
                   cg.field_d = null;
                   hc.field_T = null;
-                  SecondaryNodeDeque.field_a[0] = lk.a(-127, "henhui_puff", "", ic.field_C);
-                  SecondaryNodeDeque.field_a[1] = lk.a(param0 - 129, "ziren_puff", "", ic.field_C);
-                  SecondaryNodeDeque.field_a[2] = lk.a(-128, "damen_puff", "", ic.field_C);
+                  SecondaryNodeDeque.field_a[0] = SpriteLoader.a(-127, "henhui_puff", "", ic.field_C);
+                  SecondaryNodeDeque.field_a[1] = SpriteLoader.a(param0 - 129, "ziren_puff", "", ic.field_C);
+                  SecondaryNodeDeque.field_a[2] = SpriteLoader.a(-128, "damen_puff", "", ic.field_C);
                   ra.field_b[0][0] = qk.a("", "damen_vert_swipe", ic.field_C, param0 - 1);
                   ra.field_b[0][1] = ra.field_b[0][0].i();
                   ra.field_b[1][0] = qk.a("", "damen_angled_swipe", ic.field_C, 0);
@@ -425,13 +425,13 @@ public final class TorChallenge extends GameClientBase {
                     }
                   }
                   if (decompiledFrameRemainder1) {
-                    ec.field_a = lk.a(param0 - 129, "tour_icon", "", ic.field_C);
+                    ec.field_a = SpriteLoader.a(param0 - 129, "tour_icon", "", ic.field_C);
                     qb.a((byte) 21, ec.field_a);
-                    wi.field_d = lk.a(-127, "coins", "", ic.field_C);
+                    wi.field_d = SpriteLoader.a(-127, "coins", "", ic.field_C);
                     qb.a((byte) 103, wi.field_d);
-                    be.field_f = lk.a(-127, "tour_wall", "", ic.field_C);
-                    ic.field_D = lk.a(param0 ^ -127, "tour_wall2", "", ic.field_C);
-                    af.field_a = lk.a(-128, "tour_wall3", "", ic.field_C);
+                    be.field_f = SpriteLoader.a(-127, "tour_wall", "", ic.field_C);
+                    ic.field_D = SpriteLoader.a(param0 ^ -127, "tour_wall2", "", ic.field_C);
+                    af.field_a = SpriteLoader.a(-128, "tour_wall3", "", ic.field_C);
                     stackIn_182_0 = 0;
                   }
                   var6_int = stackIn_182_0;
@@ -493,7 +493,7 @@ public final class TorChallenge extends GameClientBase {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      kj.field_C = lk.a(param0 - 129, "doors", "", ic.field_C);
+                      kj.field_C = SpriteLoader.a(param0 - 129, "doors", "", ic.field_C);
                       qb.a((byte) 82, kj.field_C);
                       stackIn_223_0 = 8;
                     }
@@ -530,8 +530,8 @@ public final class TorChallenge extends GameClientBase {
                         continue;
                       }
                       wi.field_d = null;
-                      lj.field_h = lk.a(param0 - 128, "clouds", "", ic.field_C);
-                      qb.a((byte) 86, lj.field_h);
+                      ResourceArchive.field_h = SpriteLoader.a(param0 - 128, "clouds", "", ic.field_C);
+                      qb.a((byte) 86, ResourceArchive.field_h);
                       var9 = tf.field_x.field_x + tf.field_x.field_K;
                       hh.field_b = new Sprite(var9, var9);
                       hh.field_b.d();
@@ -545,7 +545,7 @@ public final class TorChallenge extends GameClientBase {
                     var10 = qk.a("", "mb_frames", ic.field_C, param0 ^ 1);
                     pl.a(13267, dl.field_E, var10);
                     nj.a(qk.a("", "mb_logo", ic.field_C, 0), 2);
-                    pa.a(-99, lk.a(-127, "mb_sshots", "", ic.field_C));
+                    pa.a(-99, SpriteLoader.a(-127, "mb_sshots", "", ic.field_C));
                     var11 = qk.a("", "mb_pricing_bg", ic.field_C, 0);
                     hc.a(10, param0 ^ 100, 10, 30, 80, 1500, 80, 10, var11);
                     return;
@@ -855,7 +855,7 @@ public final class TorChallenge extends GameClientBase {
         try {
           boolean decompiledFrameCompleted0 = true;
           if (param1) {
-            var3 = lk.a(-128, "skeleton_runner", "", ic.field_C);
+            var3 = SpriteLoader.a(-128, "skeleton_runner", "", ic.field_C);
             var4 = 3;
             var5 = 8;
             var6 = var3.length;
@@ -895,7 +895,7 @@ public final class TorChallenge extends GameClientBase {
           if (decompiledFrameCompleted0) {
             if (!param1 ||
               var15 != 0) {
-              re.field_x[dg.field_T[1]] = lk.a(-128, "runner", "", ic.field_C);
+              re.field_x[dg.field_T[1]] = SpriteLoader.a(-128, "runner", "", ic.field_C);
             }
             qb.a((byte) 94, re.field_x[dg.field_T[1]]);
             stackIn_22_0 = param0;
@@ -924,7 +924,7 @@ public final class TorChallenge extends GameClientBase {
           ic.field_C = pe.b(4, -1);
           bh.field_q = pe.b(5, -1);
           DelegatingCanvas.field_d = pe.b(6, -1);
-          lk.field_f = pe.b(7, -1);
+          SpriteLoader.field_f = pe.b(7, -1);
           cl.field_y = pe.b(8, -1);
           fh.field_f = pe.b(9, -1);
           qh.field_M = pe.b(10, -1);
@@ -1182,8 +1182,8 @@ public final class TorChallenge extends GameClientBase {
               aj.field_f.b(5, "basic")) {
               if (DelegatingCanvas.field_d.b(-7957) &&
                 DelegatingCanvas.field_d.b((byte) 79)) {
-                if (lk.field_f.b(-7957) &&
-                  lk.field_f.b((byte) 79)) {
+                if (SpriteLoader.field_f.b(-7957) &&
+                  SpriteLoader.field_f.b((byte) 79)) {
                   if (cl.field_y.b(-7957) &&
                     cl.field_y.b((byte) 79)) {
                     if (fh.field_f.b(-7957) &&
@@ -1200,7 +1200,7 @@ public final class TorChallenge extends GameClientBase {
                             }
                             bi.a(124);
                             this.f(7808);
-                            ub.field_d = new u(DelegatingCanvas.field_d, lk.field_f);
+                            ub.field_d = new u(DelegatingCanvas.field_d, SpriteLoader.field_f);
                             cg.field_a[0] = q.a(DelegatingCanvas.field_d, "", "Btn_Chime").b();
                             cg.field_a[1] = q.a(DelegatingCanvas.field_d, "", "menu_change_character").b();
                             cg.field_a[2] = q.a(DelegatingCanvas.field_d, "", "Slider").b();
@@ -1330,7 +1330,7 @@ public final class TorChallenge extends GameClientBase {
                   mh.a(ProxySocketConnector.a(qh.field_L, cl.field_y, 0, 89, ui.field_e), (byte) -125, 30.0f);
                   return false;
                 }
-                mh.a(DelegatingCanvas.a(256, ie.field_c, "", lk.field_f, cb.field_a), (byte) -125, 20.0f);
+                mh.a(DelegatingCanvas.a(256, ie.field_c, "", SpriteLoader.field_f, cb.field_a), (byte) -125, 20.0f);
                 return false;
               }
               mh.a(DelegatingCanvas.a(256, ie.field_c, "", DelegatingCanvas.field_d, cb.field_a), (byte) -125, 10.0f);
@@ -1353,57 +1353,57 @@ public final class TorChallenge extends GameClientBase {
             } while (var4 == 0);
             return false;
           }
-          if (null != lk.field_f) {
+          if (null != SpriteLoader.field_f) {
             mh.a(DelegatingCanvas.field_a, (byte) -125, 70.0f);
             this.f(7808);
-            cg.field_a[3] = VorbisSample.a(lk.field_f, "", "Henhui_character_select").c();
-            cg.field_a[4] = VorbisSample.a(lk.field_f, "", "Ziren_character_select").c();
-            cg.field_a[5] = VorbisSample.a(lk.field_f, "", "Damen_character_select").c();
-            cg.field_a[6] = VorbisSample.a(lk.field_f, "", "TOR_Challenge_Menu").c();
-            cg.field_a[7] = VorbisSample.a(lk.field_f, "", "menu_character_selected_gong").c();
-            cg.field_a[8] = VorbisSample.a(lk.field_f, "", "menu_TOWER").c();
-            cg.field_a[9] = VorbisSample.a(lk.field_f, "", "menu_ONE").c();
-            cg.field_a[10] = VorbisSample.a(lk.field_f, "", "menu_TWO").c();
-            cg.field_a[11] = VorbisSample.a(lk.field_f, "", "menu_THREE").c();
-            cg.field_a[12] = VorbisSample.a(lk.field_f, "", "menu_FOUR").c();
-            cg.field_a[13] = VorbisSample.a(lk.field_f, "", "menu_FIVE").c();
-            cg.field_a[14] = VorbisSample.a(lk.field_f, "", "menu_SIX").c();
-            cg.field_a[15] = VorbisSample.a(lk.field_f, "", "menu_READY").c();
-            cg.field_a[16] = VorbisSample.a(lk.field_f, "", "menu_YOU_LOSE").c();
-            wl.field_c[6][0] = VorbisSample.a(lk.field_f, "", "H_Attack_1").c();
-            wl.field_c[6][1] = VorbisSample.a(lk.field_f, "", "Z_Attack_1").c();
-            wl.field_c[6][2] = VorbisSample.a(lk.field_f, "", "D_Attack_1").c();
-            wl.field_c[7][0] = VorbisSample.a(lk.field_f, "", "H_Attack_2").c();
-            wl.field_c[7][1] = VorbisSample.a(lk.field_f, "", "Z_Attack_2").c();
-            wl.field_c[7][2] = VorbisSample.a(lk.field_f, "", "D_Attack_2").c();
-            wl.field_c[8][0] = VorbisSample.a(lk.field_f, "", "H_Attack_3_combo").c();
-            wl.field_c[8][1] = VorbisSample.a(lk.field_f, "", "Z_Attack_3_combo").c();
-            wl.field_c[8][2] = VorbisSample.a(lk.field_f, "", "D_Attack_3_combo").c();
-            wl.field_c[9][0] = VorbisSample.a(lk.field_f, "", "H_Attack_2_spec").c();
-            wl.field_c[9][1] = VorbisSample.a(lk.field_f, "", "Z_Attack_2_spec").c();
-            wl.field_c[9][2] = VorbisSample.a(lk.field_f, "", "D_Attack_2_spec").c();
-            wl.field_c[10][0] = VorbisSample.a(lk.field_f, "", "H_Death").c();
-            wl.field_c[10][1] = VorbisSample.a(lk.field_f, "", "Z_Death").c();
-            wl.field_c[10][2] = VorbisSample.a(lk.field_f, "", "D_Death").c();
-            wl.field_c[11][0] = VorbisSample.a(lk.field_f, "", "H_Hit_1").c();
-            wl.field_c[11][1] = VorbisSample.a(lk.field_f, "", "Z_Hit_1").c();
-            wl.field_c[11][2] = VorbisSample.a(lk.field_f, "", "D_Hit_1").c();
-            wl.field_c[12][0] = VorbisSample.a(lk.field_f, "", "H_Hit_2").c();
-            wl.field_c[12][1] = VorbisSample.a(lk.field_f, "", "Z_Hit_2").c();
-            wl.field_c[12][2] = VorbisSample.a(lk.field_f, "", "D_Hit_2").c();
-            wl.field_c[13][0] = VorbisSample.a(lk.field_f, "", "H_Hit_3").c();
-            wl.field_c[13][1] = VorbisSample.a(lk.field_f, "", "Z_Hit_3").c();
-            wl.field_c[13][2] = VorbisSample.a(lk.field_f, "", "D_Hit_3").c();
-            bf.field_c[0][6] = VorbisSample.a(lk.field_f, "", "Boss_1_Attack_combo").c();
-            bf.field_c[0][7] = VorbisSample.a(lk.field_f, "", "Boss_1_Death").c();
-            bf.field_c[0][8] = VorbisSample.a(lk.field_f, "", "Boss_1_Hit").c();
-            bf.field_c[1][6] = VorbisSample.a(lk.field_f, "", "Boss_2_Attack_combo").c();
-            bf.field_c[1][7] = VorbisSample.a(lk.field_f, "", "Boss_2_Death").c();
-            bf.field_c[1][8] = VorbisSample.a(lk.field_f, "", "Boss_2_Hit").c();
-            bf.field_c[2][6] = VorbisSample.a(lk.field_f, "", "Boss_3_Attack_combo").c();
-            bf.field_c[2][7] = VorbisSample.a(lk.field_f, "", "Boss_3_Death").c();
-            bf.field_c[2][8] = VorbisSample.a(lk.field_f, "", "Boss_3_Hit").c();
-            lk.field_f = null;
+            cg.field_a[3] = VorbisSample.a(SpriteLoader.field_f, "", "Henhui_character_select").c();
+            cg.field_a[4] = VorbisSample.a(SpriteLoader.field_f, "", "Ziren_character_select").c();
+            cg.field_a[5] = VorbisSample.a(SpriteLoader.field_f, "", "Damen_character_select").c();
+            cg.field_a[6] = VorbisSample.a(SpriteLoader.field_f, "", "TOR_Challenge_Menu").c();
+            cg.field_a[7] = VorbisSample.a(SpriteLoader.field_f, "", "menu_character_selected_gong").c();
+            cg.field_a[8] = VorbisSample.a(SpriteLoader.field_f, "", "menu_TOWER").c();
+            cg.field_a[9] = VorbisSample.a(SpriteLoader.field_f, "", "menu_ONE").c();
+            cg.field_a[10] = VorbisSample.a(SpriteLoader.field_f, "", "menu_TWO").c();
+            cg.field_a[11] = VorbisSample.a(SpriteLoader.field_f, "", "menu_THREE").c();
+            cg.field_a[12] = VorbisSample.a(SpriteLoader.field_f, "", "menu_FOUR").c();
+            cg.field_a[13] = VorbisSample.a(SpriteLoader.field_f, "", "menu_FIVE").c();
+            cg.field_a[14] = VorbisSample.a(SpriteLoader.field_f, "", "menu_SIX").c();
+            cg.field_a[15] = VorbisSample.a(SpriteLoader.field_f, "", "menu_READY").c();
+            cg.field_a[16] = VorbisSample.a(SpriteLoader.field_f, "", "menu_YOU_LOSE").c();
+            wl.field_c[6][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Attack_1").c();
+            wl.field_c[6][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Attack_1").c();
+            wl.field_c[6][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Attack_1").c();
+            wl.field_c[7][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Attack_2").c();
+            wl.field_c[7][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Attack_2").c();
+            wl.field_c[7][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Attack_2").c();
+            wl.field_c[8][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Attack_3_combo").c();
+            wl.field_c[8][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Attack_3_combo").c();
+            wl.field_c[8][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Attack_3_combo").c();
+            wl.field_c[9][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Attack_2_spec").c();
+            wl.field_c[9][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Attack_2_spec").c();
+            wl.field_c[9][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Attack_2_spec").c();
+            wl.field_c[10][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Death").c();
+            wl.field_c[10][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Death").c();
+            wl.field_c[10][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Death").c();
+            wl.field_c[11][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Hit_1").c();
+            wl.field_c[11][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Hit_1").c();
+            wl.field_c[11][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Hit_1").c();
+            wl.field_c[12][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Hit_2").c();
+            wl.field_c[12][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Hit_2").c();
+            wl.field_c[12][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Hit_2").c();
+            wl.field_c[13][0] = VorbisSample.a(SpriteLoader.field_f, "", "H_Hit_3").c();
+            wl.field_c[13][1] = VorbisSample.a(SpriteLoader.field_f, "", "Z_Hit_3").c();
+            wl.field_c[13][2] = VorbisSample.a(SpriteLoader.field_f, "", "D_Hit_3").c();
+            bf.field_c[0][6] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_1_Attack_combo").c();
+            bf.field_c[0][7] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_1_Death").c();
+            bf.field_c[0][8] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_1_Hit").c();
+            bf.field_c[1][6] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_2_Attack_combo").c();
+            bf.field_c[1][7] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_2_Death").c();
+            bf.field_c[1][8] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_2_Hit").c();
+            bf.field_c[2][6] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_3_Attack_combo").c();
+            bf.field_c[2][7] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_3_Death").c();
+            bf.field_c[2][8] = VorbisSample.a(SpriteLoader.field_f, "", "Boss_3_Hit").c();
+            SpriteLoader.field_f = null;
             id.a(102);
             return false;
           }
@@ -1560,7 +1560,7 @@ public final class TorChallenge extends GameClientBase {
                 if (ji.field_m != null) {
                   ji.field_m.c((byte) -66);
                 }
-                bc.field_o = lj.field_e;
+                bc.field_o = ResourceArchive.field_e;
                 if (bc.field_o == -2) {
                   bc.field_o = 0;
                   il.a(false, 0);
@@ -1720,22 +1720,22 @@ public final class TorChallenge extends GameClientBase {
         try {
           var2_int = g.a(124, 0) ? 1 : 0;
           this.d(83, var2_int != 0);
-          re.field_x[dg.field_T[2]] = lk.a(-128, "spitter", "", ic.field_C);
+          re.field_x[dg.field_T[2]] = SpriteLoader.a(-128, "spitter", "", ic.field_C);
           qb.a((byte) 69, re.field_x[dg.field_T[2]]);
-          re.field_x[dg.field_T[7]] = lk.a(-127, "spittle", "", ic.field_C);
+          re.field_x[dg.field_T[7]] = SpriteLoader.a(-127, "spittle", "", ic.field_C);
           qb.a((byte) 85, re.field_x[dg.field_T[7]]);
           if (!param0) {
             this.d((byte) 102);
           }
-          re.field_x[dg.field_T[3]] = lk.a(-127, "thudder", "", ic.field_C);
+          re.field_x[dg.field_T[3]] = SpriteLoader.a(-127, "thudder", "", ic.field_C);
           qb.a((byte) 46, re.field_x[dg.field_T[3]]);
-          re.field_x[dg.field_T[4]] = lk.a(-127, "rocketeer", "", ic.field_C);
+          re.field_x[dg.field_T[4]] = SpriteLoader.a(-127, "rocketeer", "", ic.field_C);
           qb.a((byte) 114, re.field_x[dg.field_T[4]]);
-          re.field_x[dg.field_T[5]] = lk.a(-127, "slimer", "", ic.field_C);
+          re.field_x[dg.field_T[5]] = SpriteLoader.a(-127, "slimer", "", ic.field_C);
           qb.a((byte) 65, re.field_x[dg.field_T[5]]);
-          re.field_x[dg.field_T[6]] = lk.a(-127, "grinder", "", ic.field_C);
+          re.field_x[dg.field_T[6]] = SpriteLoader.a(-127, "grinder", "", ic.field_C);
           qb.a((byte) 21, re.field_x[dg.field_T[6]]);
-          re.field_x[dg.field_T[22]] = lk.a(-128, "rock", "", ic.field_C);
+          re.field_x[dg.field_T[22]] = SpriteLoader.a(-128, "rock", "", ic.field_C);
           qb.a((byte) 56, re.field_x[dg.field_T[22]]);
           var3 = new int[8];
           var4 = new int[8];
@@ -1841,7 +1841,7 @@ public final class TorChallenge extends GameClientBase {
         try {
           TorChallenge.q(1);
           IntrusiveDeque.e(25840);
-          lj.a(11446);
+          ResourceArchive.a(11446);
           ki.a(64);
           ea.a((byte) -106);
           sd.a((byte) -55);
@@ -1884,7 +1884,7 @@ public final class TorChallenge extends GameClientBase {
           u.a(-26193);
           GameScreen.k(1);
           wl.b(10);
-          lk.a(-89);
+          SpriteLoader.a(-89);
           qb.a(2316);
           vd.a(-38);
           vb.d(0);

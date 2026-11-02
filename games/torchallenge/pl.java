@@ -131,7 +131,7 @@ final class pl {
 
     final static void a(int param0, String param1, Sprite param2) {
         try {
-          lj.field_f = param2;
+          ResourceArchive.field_f = param2;
           if (param0 != 13267) {
             field_b = (int[]) null;
           }
@@ -141,7 +141,7 @@ final class pl {
         }
     }
 
-    final static boolean a(lj param0, lj param1, byte param2, lj param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;

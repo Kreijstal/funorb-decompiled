@@ -10,7 +10,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static int[][][] field_b;
     static boolean field_a;
     static int field_c;
-    static lj field_g;
+    static ResourceArchive field_g;
     static String field_f;
 
     final static void a(int param0, Sprite param1) {
@@ -23,7 +23,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static nf a(lj param0, lj param1, String param2, String param3, boolean param4) {
+    final static nf a(ResourceArchive param0, ResourceArchive param1, String param2, String param3, boolean param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -42,7 +42,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           if (param4) {
             var7 = (String) null;
-            FullscreenFocusCanvas.a((lj) null, (lj) null, (String) null, (String) null, false);
+            FullscreenFocusCanvas.a((ResourceArchive) null, (ResourceArchive) null, (String) null, (String) null, false);
           }
           var5_int = param0.a(param2, -91);
           var6 = param0.a(var5_int, param3, (byte) 91);

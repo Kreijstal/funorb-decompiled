@@ -34,7 +34,7 @@ final class il extends ma {
             stackIn_9_0 = tf.field_w;
             return stackIn_9_0;
           }
-          stackIn_7_0 = lk.field_c;
+          stackIn_7_0 = SpriteLoader.field_c;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,7 +77,7 @@ final class il extends ma {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (this.a((byte) 24, param0) != lk.field_c) {
+          if (this.a((byte) 24, param0) != SpriteLoader.field_c) {
             stackIn_7_0 = BufferedCacheFile.field_c;
             return stackIn_7_0;
           }

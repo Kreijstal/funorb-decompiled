@@ -57,7 +57,7 @@ final class jj {
         }
     }
 
-    final static Sprite a(byte param0, lj param1, int param2, int param3) {
+    final static Sprite a(byte param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -67,7 +67,7 @@ final class jj {
           if (param0 <= 30) {
             field_a = (Sprite[]) null;
           }
-          if (lk.a(160, param1, param2, param3)) {
+          if (SpriteLoader.a(160, param1, param2, param3)) {
             return rl.b(true);
           }
           return null;

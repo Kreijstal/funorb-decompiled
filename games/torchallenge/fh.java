@@ -4,7 +4,7 @@
 final class fh {
     static boolean field_g;
     static int field_b;
-    static lj field_f;
+    static ResourceArchive field_f;
     static int field_d;
     static Sprite[][] field_a;
     static int field_e;
@@ -16,7 +16,7 @@ final class fh {
           return;
         }
         rb.field_b = 1;
-        lj.field_e = param2;
+        ResourceArchive.field_e = param2;
         m.field_h = param0;
     }
 

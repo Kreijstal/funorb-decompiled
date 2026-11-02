@@ -392,7 +392,7 @@ final class si extends ic {
             throw new IllegalArgumentException();
           }
           var3 = (b) (param1);
-          this.field_G.a((byte) 119, var3);
+          this.field_G.addFirst((byte) 119, var3);
           var3.field_K = true;
           var3.a((UiComponent) (this), 0);
         } catch (RuntimeException runtimeException) {
