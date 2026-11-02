@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aia extends bw {
+final class aia extends IntrusiveNode {
     int field_j;
     int field_f;
     int field_k;

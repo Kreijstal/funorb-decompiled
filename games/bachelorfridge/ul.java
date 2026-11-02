@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ul extends eo {
+abstract class ul extends DualLinkNode {
     static String field_o;
     int field_n;
 

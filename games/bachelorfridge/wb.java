@@ -5,8 +5,8 @@ final class wb extends lw {
     static vr field_l;
 
     final static boolean a(int param0, int param1, boolean param2, int param3) {
-        if (null != ms.field_u &&
-          ms.field_u.a(true)) {
+        if (null != NetworkGameClient.field_u &&
+          NetworkGameClient.field_u.a(true)) {
           di.c(-87);
           return true;
         }
@@ -186,10 +186,10 @@ final class wb extends lw {
             }
             if (var7.field_R != 0) {
               mna.a(-1, (int[]) null, 0L, var7.field_xb, var7.field_Cb, -1, -113, nr.field_w.field_xb, var7);
-              var17 = ms.field_u;
+              var17 = NetworkGameClient.field_u;
               var14_ref_String = mna.field_r;
               var17.field_a.a(var14_ref_String, true, 7);
-              var18 = ms.field_u;
+              var18 = NetworkGameClient.field_u;
               var14 = nfa.field_a;
               var15 = jc.field_r;
               var18.field_a.a(0, false, var14, 0, var15);

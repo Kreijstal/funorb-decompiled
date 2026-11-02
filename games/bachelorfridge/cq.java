@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cq extends bw {
+final class cq extends IntrusiveNode {
     je field_i;
     int field_f;
     static jg field_g;
-    bw field_h;
+    IntrusiveNode field_h;
 
     public static void c(byte param0) {
         field_g = null;
         int var1 = -118 / ((param0 - 24) / 34);
     }
 
-    cq(je param0, bw param1) {
+    cq(je param0, IntrusiveNode param1) {
         try {
           this.field_i = param0;
           this.field_f = param0.g();

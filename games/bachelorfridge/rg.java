@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rg extends bw {
+final class rg extends IntrusiveNode {
     int[] field_g;
     int field_i;
     static int field_h;
@@ -66,7 +66,7 @@ final class rg extends bw {
     }
 
     final static void a(int param0, int param1) {
-        bw var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         int var4 = 0;
         cfa var5 = null;

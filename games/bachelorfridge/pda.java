@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pda extends eo {
+final class pda extends DualLinkNode {
     private String[] field_r;
     int[] field_s;
     private int[] field_o;

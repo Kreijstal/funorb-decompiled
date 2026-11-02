@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class at extends bw {
+abstract class at extends IntrusiveNode {
     static String field_i;
     static String[] field_g;
     boolean field_f;

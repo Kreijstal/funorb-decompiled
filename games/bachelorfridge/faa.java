@@ -24,8 +24,8 @@ final class faa {
         try {
           var11 = cr.a(an.field_q, param5, ha.field_n, param3 - 14040);
           var12 = cr.a(an.field_q, param4, ha.field_n, 0);
-          var13 = cr.a(eo.field_l, param2, pw.field_x, 0);
-          var14 = cr.a(eo.field_l, param1, pw.field_x, param3 ^ param3);
+          var13 = cr.a(DualLinkNode.field_l, param2, pw.field_x, 0);
+          var14 = cr.a(DualLinkNode.field_l, param1, pw.field_x, param3 ^ param3);
           var7_int = cr.a(an.field_q, param5 + param6, ha.field_n, 0);
           var8 = cr.a(an.field_q, param4 - param6, ha.field_n, 0);
           for (var15 = var11; var15 < var7_int; var15++) {
@@ -34,8 +34,8 @@ final class faa {
           for (var15Lifetime1 = var12; var15Lifetime1 > var8; var15Lifetime1--) {
             hba.a(param0, var13, tj.field_b[var15Lifetime1], param3 ^ 14047, var14);
           }
-          var9 = cr.a(eo.field_l, param6 + param2, pw.field_x, 0);
-          var10 = cr.a(eo.field_l, -param6 + param1, pw.field_x, 0);
+          var9 = cr.a(DualLinkNode.field_l, param6 + param2, pw.field_x, 0);
+          var10 = cr.a(DualLinkNode.field_l, -param6 + param1, pw.field_x, 0);
           for (var15Lifetime2 = var7_int; var15Lifetime2 <= var8; var15Lifetime2++) {
             var21 = tj.field_b[var15Lifetime2];
             hba.a(param0, var13, var21, 7, var9);

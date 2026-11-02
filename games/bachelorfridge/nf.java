@@ -74,9 +74,9 @@ final class nf extends aha {
         int var12Lifetime1;
         int var13Lifetime1;
         jg var6Lifetime1;
-        L0: {
-          L1: {
-            L2: {
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
               var14 = BachelorFridge.field_y;
               var6 = this.field_L.b(-19704);
               if (cq.field_g != var6 &&
@@ -84,17 +84,17 @@ final class nf extends aha {
                 var5 = this.field_L.a((byte) 110);
                 if (var5 == null) {
                   var5 = this.field_O;
-                  break L2;
+                  break regionExit3;
                 }
                 if (!var5.equals(this.field_w)) {
-                  break L1;
+                  break regionExit2;
                 }
-                break L0;
+                break regionExit1;
               }
               var5 = mr.field_h;
             }
             if (var5.equals(this.field_w)) {
-              break L0;
+              break regionExit1;
             }
           }
           this.field_w = var5;

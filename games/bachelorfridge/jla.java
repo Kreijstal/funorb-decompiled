@@ -232,15 +232,15 @@ class jla {
           if (stackIn_11_0 != stackIn_11_1) {
             return;
           }
-          L5: {
-            bw.field_a.a(19842, true);
-            if (bw.field_a.field_R == 1) {
+          regionExit1: {
+            IntrusiveNode.field_a.a(19842, true);
+            if (IntrusiveNode.field_a.field_R == 1) {
               if (!(dea.field_n <= mg.field_m.field_a) ||
                 !(gu.field_d > 0) ||
                 !lca.c(false)) {
                 qm.a(32, 7758);
                 if (var3 == 0) {
-                  break L5;
+                  break regionExit1;
                 }
               }
               if (dga.field_a != 0) {
@@ -249,14 +249,14 @@ class jla {
                   gs.field_f.e((byte) 8);
                   tp.field_v = -1;
                   if (var3 == 0) {
-                    break L5;
+                    break regionExit1;
                   }
                 } else {
                   if (((dga.field_a == 1)) &&
                     (~(gs.field_f.field_d.field_c.field_n + 1) != ~tp.field_v)) {
                     return;
                   }
-                  break L5;
+                  break regionExit1;
                 }
               }
               qm.a(6, 7758);
@@ -532,8 +532,8 @@ class jla {
         if (param0 != -38) {
           field_c = (String) null;
         }
-        L3: {
-          L4: {
+        regionExit1: {
+          regionExit2: {
             boolean decompiledFrameRemainder23 = true;
             boolean decompiledFrameRemainder22 = true;
             boolean decompiledFrameRemainder21 = true;
@@ -572,7 +572,7 @@ class jla {
                 }
                 kj.b((byte) -88);
               }
-              break L3;
+              break regionExit1;
             } else if (var6 != 33 ||
               var9 != 0) {
               decompiledFrameRemainder0 = (var6 != 1);
@@ -613,41 +613,41 @@ class jla {
                 (decompiledFrameRemainder23 = (27 != var6))) {
                 if (28 == var6) {
                   if (this.field_e.e(0)) {
-                    break L4;
+                    break regionExit2;
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 if (var6 == 29 &&
                   var9 == 0) {
                   if (!this.field_e.e(0)) {
-                    break L4;
+                    break regionExit2;
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 if (var6 == 30 &&
                   var9 == 0) {
                   if (this.field_e.e(0)) {
-                    break L4;
+                    break regionExit2;
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 if (var6 == 31) {
                   if (this.field_e.e(0)) {
-                    break L4;
+                    break regionExit2;
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 if (32 != var6) {
-                  break L3;
+                  break regionExit1;
                 }
                 if (!this.field_e.e(0)) {
-                  break L3;
+                  break regionExit1;
                 }
                 if (!this.field_e.e(0)) {
-                  break L3;
+                  break regionExit1;
                 }
                 lg.a(true, 14, param2);
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -677,7 +677,7 @@ class jla {
               if (!(!this.field_e.e(0))) {
                 lg.a(true, 15, param2);
               }
-              break L4;
+              break regionExit2;
             }
             if ((decompiledFrameRemainder23) &&
               (decompiledFrameRemainder22) &&
@@ -703,28 +703,28 @@ class jla {
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
               if (!this.field_e.e(0)) {
-                break L3;
+                break regionExit1;
               }
               if (null == mg.field_m) {
-                break L4;
+                break regionExit2;
               }
               if (!mg.field_m.a((byte) 122)) {
-                break L4;
+                break regionExit2;
               }
               if (mg.field_m.field_e.field_m.g(0) == 0) {
-                break L4;
+                break regionExit2;
               }
               if (bp.e(-29919)) {
                 stackIn_95_0 = (!bp.e(param0 - 29881)) ? 1 : 0;
                 var6Lifetime3 = stackIn_95_0;
                 gu.a(8, param2, 6106, aha.field_D, aha.field_D.field_B + aha.field_D.field_v, he.field_n, aha.field_D.field_v, true, (kv[]) null, 8, 240, 320, (kv[]) null, var6Lifetime3, 2);
                 if (var9 == 0) {
-                  break L4;
+                  break regionExit2;
                 }
               }
               lg.a(true, -4, param2);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -750,18 +750,18 @@ class jla {
               (decompiledFrameRemainder3) &&
               (decompiledFrameRemainder2)) {
               if (!this.field_e.e(0)) {
-                break L4;
+                break regionExit2;
               }
               if (dj.field_c == null &&
                 sna.field_fb == null) {
                 lg.a(true, -3, param2);
                 if (var9 == 0) {
-                  break L4;
+                  break regionExit2;
                 }
               }
               lg.a(true, -1, param2);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -786,11 +786,11 @@ class jla {
               (decompiledFrameRemainder4) &&
               (decompiledFrameRemainder3)) {
               if (!this.field_e.e(0)) {
-                break L4;
+                break regionExit2;
               }
               lg.a(true, 0, param2);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -814,12 +814,12 @@ class jla {
               (decompiledFrameRemainder5) &&
               (decompiledFrameRemainder4)) {
               if (!this.field_e.e(0)) {
-                break L4;
+                break regionExit2;
               }
               lg.a(true, 11, param2);
               ai.field_c = true;
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -842,11 +842,11 @@ class jla {
               (decompiledFrameRemainder6) &&
               (decompiledFrameRemainder5)) {
               if (!this.field_e.e(0)) {
-                break L3;
+                break regionExit1;
               }
               lg.a(true, 7, param2);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -868,12 +868,12 @@ class jla {
               (decompiledFrameRemainder7) &&
               (decompiledFrameRemainder6)) {
               if (!this.field_e.e(param0 ^ -38)) {
-                break L4;
+                break regionExit2;
               }
               ie.field_a = 0;
               lg.a(true, 6, param2);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -894,11 +894,11 @@ class jla {
               (decompiledFrameRemainder8) &&
               (decompiledFrameRemainder7)) {
               if (!this.field_e.e(0)) {
-                break L4;
+                break regionExit2;
               }
               lg.a(true, ut.field_o, param2);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -918,11 +918,11 @@ class jla {
               (decompiledFrameRemainder9) &&
               (decompiledFrameRemainder8)) {
               if (!this.field_e.e(param0 ^ -38)) {
-                break L4;
+                break regionExit2;
               }
               lg.a(true, 5, param2);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -988,16 +988,16 @@ class jla {
                 ii.c((byte) 62);
               }
               if (var5 == 0) {
-                break L4;
+                break regionExit2;
               }
               if (this.field_e.b(param0 ^ -38) &&
                 fia.field_q >= vr.field_b) {
-                break L4;
+                break regionExit2;
               }
               ol.a(kea.field_r[0], true);
               fia.field_q = 20 + vr.field_b;
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1045,11 +1045,11 @@ class jla {
                 sr.a((byte) -107);
               }
               if (!this.field_e.b((byte) -73)) {
-                break L4;
+                break regionExit2;
               }
               bv.b(16964);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1066,17 +1066,17 @@ class jla {
               (decompiledFrameRemainder12) &&
               (decompiledFrameRemainder11)) {
               if (!this.field_e.e(0)) {
-                break L3;
+                break regionExit1;
               }
               if (null == kga.field_c) {
                 oq.a(param2, false);
                 if (var9 == 0) {
-                  break L4;
+                  break regionExit2;
                 }
               }
               lga.c((byte) 119);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1092,7 +1092,7 @@ class jla {
               (decompiledFrameRemainder13) &&
               (decompiledFrameRemainder12)) {
               if (!this.field_e.e(0)) {
-                break L4;
+                break regionExit2;
               }
               if (null != dj.field_c) {
                 ((dfa) ((Object) dj.field_c)).a(8, param2);
@@ -1104,14 +1104,14 @@ class jla {
               sia.field_h = false;
               nu.field_b = true;
               if (mg.field_m.a((byte) 102)) {
-                break L3;
+                break regionExit1;
               }
               if (!bp.e(param0 - 29881)) {
                 h.c((byte) -69);
               }
               mg.field_m.b(param0 ^ -27157);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1126,12 +1126,12 @@ class jla {
               (decompiledFrameRemainder14) &&
               (decompiledFrameRemainder13)) {
               if (!this.field_e.e(param0 + 38)) {
-                break L3;
+                break regionExit1;
               }
               dj.field_c.field_e.b(param0 + 97);
               lg.a(true, -1, param2);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1145,12 +1145,12 @@ class jla {
               (decompiledFrameRemainder15) &&
               (decompiledFrameRemainder14)) {
               if (!this.field_e.e(0)) {
-                break L3;
+                break regionExit1;
               }
               dj.field_c.field_e.d(-111);
               lg.a(true, -1, param2);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1163,15 +1163,15 @@ class jla {
               (decompiledFrameRemainder16) &&
               (decompiledFrameRemainder15)) {
               if (!this.field_e.e(0)) {
-                break L4;
+                break regionExit2;
               }
               if (null != sna.field_fb) {
-                break L4;
+                break regionExit2;
               }
               dj.field_c.field_e.b((byte) 27);
               lg.a(true, -1, param2);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1183,14 +1183,14 @@ class jla {
               (decompiledFrameRemainder17) &&
               (decompiledFrameRemainder16)) {
               if (!this.field_e.e(0)) {
-                break L4;
+                break regionExit2;
               }
               if (!this.d(param1, param0 ^ -26927)) {
-                break L3;
+                break regionExit1;
               }
               this.c(param2, param0 - 17769);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1205,28 +1205,28 @@ class jla {
                 (dj.field_c == null ||
                 !dj.field_c.field_e.field_a)) {
                 if (!this.field_e.e(0)) {
-                  break L4;
+                  break regionExit2;
                 }
                 if (!this.d(param1, 26891)) {
-                  break L4;
+                  break regionExit2;
                 }
                 hp.field_c = -3;
                 ((dfa) ((Object) dj.field_c)).a(8, param2);
                 vs.field_d = false;
                 uca.a(39, (byte) -97);
                 if (var9 == 0) {
-                  break L4;
+                  break regionExit2;
                 }
               }
               if (!this.field_e.e(0)) {
-                break L4;
+                break regionExit2;
               }
               if (!this.d(param1, param0 ^ -26927)) {
-                break L3;
+                break regionExit1;
               }
               this.c(param2, -17807);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1236,11 +1236,11 @@ class jla {
               (decompiledFrameRemainder19) &&
               (decompiledFrameRemainder18)) {
               if (!this.field_e.e(param0 ^ -38)) {
-                break L3;
+                break regionExit1;
               }
               ks.field_i = 0;
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1249,11 +1249,11 @@ class jla {
               (decompiledFrameRemainder20) &&
               (decompiledFrameRemainder19)) {
               if (!this.field_e.e(0)) {
-                break L4;
+                break regionExit2;
               }
               ks.field_i = 1;
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1261,58 +1261,58 @@ class jla {
               (decompiledFrameRemainder21) &&
               (decompiledFrameRemainder20)) {
               if (!this.field_e.e(0)) {
-                break L3;
+                break regionExit1;
               }
               if (9 == this.field_b) {
                 var12 = (String) null;
                 au.a(8, (String) null, false);
                 if (var9 == 0) {
-                  break L4;
+                  break regionExit2;
                 }
               }
               if (7 != this.field_b &&
                 iba.field_s != 5) {
-                break L4;
+                break regionExit2;
               }
               au.a(this.field_b, gba.field_Ib, false);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
               (decompiledFrameRemainder22) &&
               (decompiledFrameRemainder21)) {
               if (!this.field_e.e(0)) {
-                break L4;
+                break regionExit2;
               }
               if (!this.d(param1, 26891)) {
-                break L3;
+                break regionExit1;
               }
               ie.field_a = ie.field_a - 1;
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if ((decompiledFrameRemainder23) &&
               (decompiledFrameRemainder22)) {
               if (!this.field_e.e(param0 ^ -38)) {
-                break L4;
+                break regionExit2;
               }
               if (!this.d(param1, param0 + 26929)) {
-                break L3;
+                break regionExit1;
               }
               ie.field_a = ie.field_a + 1;
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if (decompiledFrameRemainder23) {
               if (!this.field_e.e(param0 + 38)) {
-                break L3;
+                break regionExit1;
               }
               dh.a(nia.d(-31768), 124);
               if (var9 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if (!this.field_e.e(param0 + 38)) {
@@ -1554,11 +1554,11 @@ class jla {
         int var2Lifetime1;
         var4 = BachelorFridge.field_y;
         var2 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var2 < 640) {
             stackIn_11_0 = 0;
             if (var4 != 0) {
-              break L0;
+              break scanLoop1;
             }
             var3 = stackIn_11_0;
             while (480 > var3) {
@@ -1566,7 +1566,7 @@ class jla {
               var3 = var3 + mr.field_f.field_p;
             }
             var2 = var2 + mr.field_f.field_q;
-            continue L0;
+            continue scanLoop1;
           }
           dg.a(10, 10, 620, 460, 10, 0, 192);
           stackIn_11_0 = -124 % ((param0 - 65) / 33);
@@ -1608,11 +1608,11 @@ class jla {
     private final void n(int param0) {
         int var2;
         int var3;
-        L0: {
-          L1: {
-            L2: {
-              L3: {
-                L4: {
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
+              regionExit4: {
+                regionExit5: {
                   boolean decompiledFrameRemainder0 = true;
                   var3 = BachelorFridge.field_y;
                   this.m(116);
@@ -1623,46 +1623,46 @@ class jla {
                     (decompiledFrameRemainder0 = (var2 != 1))) {
                     if (var2 == 2 &&
                       var3 == 0) {
-                      break L4;
+                      break regionExit5;
                     }
                     if (var2 == 3 &&
                       var3 == 0) {
-                      break L3;
+                      break regionExit4;
                     }
                     if (4 == var2) {
-                      break L2;
+                      break regionExit3;
                     }
                     if (var2 != 5) {
-                      break L0;
+                      break regionExit1;
                     }
                     if (var3 == 0) {
-                      break L1;
+                      break regionExit2;
                     }
                   }
                   if (decompiledFrameRemainder0) {
                     this.d(2);
                     if (var3 == 0) {
-                      break L0;
+                      break regionExit1;
                     }
                   }
                   this.f(295);
                   if (var3 == 0) {
-                    break L0;
+                    break regionExit1;
                   }
                 }
                 this.a((byte) -124);
                 if (var3 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               }
               this.b((byte) -56);
               if (var3 == 0) {
-                break L0;
+                break regionExit1;
               }
             }
             this.b(-46);
             if (var3 == 0) {
-              break L0;
+              break regionExit1;
             }
           }
           this.c((byte) 110);

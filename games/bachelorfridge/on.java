@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class on extends eo {
+final class on extends DualLinkNode {
     private k field_v;
     static int[] field_u;
     static int field_n;

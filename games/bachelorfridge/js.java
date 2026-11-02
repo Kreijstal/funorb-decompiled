@@ -3,16 +3,16 @@
  */
 final class js {
     private int field_a;
-    private bw[] field_b;
-    private bw field_c;
+    private IntrusiveNode[] field_b;
+    private IntrusiveNode field_c;
     private int field_e;
-    private bw field_d;
+    private IntrusiveNode field_d;
 
-    final bw c(int param0) {
+    final IntrusiveNode c(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$1 = 0;
-        bw var2;
+        IntrusiveNode var2;
         int var3;
         var3 = BachelorFridge.field_y;
         if (param0 == -21446) {
@@ -63,8 +63,8 @@ final class js {
         return var2;
     }
 
-    final void a(long param0, byte param1, bw param2) {
-        bw var5 = null;
+    final void a(long param0, byte param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param2.field_e) {
             param2.a(false);
@@ -81,12 +81,12 @@ final class js {
         }
     }
 
-    final bw a(boolean param0, long param1) {
-        bw var4;
-        bw var5;
+    final IntrusiveNode a(boolean param0, long param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
-        bw var4Lifetime1;
-        bw var5Lifetime1;
+        IntrusiveNode var4Lifetime1;
+        IntrusiveNode var5Lifetime1;
         var6 = BachelorFridge.field_y;
         if (param0) {
           var4 = this.field_b[(int)(param1 & (long)(this.field_e - 1))];
@@ -125,7 +125,7 @@ final class js {
         return var5Lifetime1;
     }
 
-    final bw b(int param0) {
+    final IntrusiveNode b(int param0) {
         this.field_a = 0;
         if (param0 != -13023) {
           this.b(45);
@@ -141,13 +141,13 @@ final class js {
 
     js(int param0) {
         int var2 = 0;
-        bw dupTemp$0 = null;
-        bw var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_a = 0;
-        this.field_b = new bw[param0];
+        this.field_b = new IntrusiveNode[param0];
         this.field_e = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new bw();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_b[var2] = dupTemp$0;
           var3.field_e = var3;

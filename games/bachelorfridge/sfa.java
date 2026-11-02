@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sfa extends bw {
+abstract class sfa extends IntrusiveNode {
     nq field_h;
     int field_f;
     int field_g;
@@ -14,8 +14,8 @@ abstract class sfa extends bw {
           return;
         }
         if (param3 <= ha.field_n) {
-          param1 = cr.a(eo.field_l, param1, pw.field_x, 0);
-          param4 = cr.a(eo.field_l, param4, pw.field_x, 0);
+          param1 = cr.a(DualLinkNode.field_l, param1, pw.field_x, 0);
+          param4 = cr.a(DualLinkNode.field_l, param4, pw.field_x, 0);
           ew.a(param1, param3, -82, param0, param4);
           return;
         }

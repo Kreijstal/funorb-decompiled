@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rea extends bw {
+final class rea extends IntrusiveNode {
     static sna field_g;
     double field_o;
     double field_m;

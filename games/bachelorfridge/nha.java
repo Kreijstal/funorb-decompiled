@@ -64,9 +64,9 @@ final class nha {
         try {
           if (param2 <= ha.field_n &&
             an.field_q <= param1) {
-            if (param4 < eo.field_l) {
+            if (param4 < DualLinkNode.field_l) {
               var6_int = 0;
-              param4 = eo.field_l;
+              param4 = DualLinkNode.field_l;
             } else {
               if (param4 <= pw.field_x) {
                 var6_int = 1;
@@ -75,8 +75,8 @@ final class nha {
                 param4 = pw.field_x;
               }
             }
-            if (param5 < eo.field_l) {
-              param5 = eo.field_l;
+            if (param5 < DualLinkNode.field_l) {
+              param5 = DualLinkNode.field_l;
               var7 = 0;
             } else {
               if (pw.field_x < param5) {

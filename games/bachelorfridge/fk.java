@@ -87,7 +87,7 @@ final class fk extends bca {
     }
 
     final static void c(int param0, int param1) {
-        bw var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         bga var4 = null;
         RuntimeException decompiledCaughtException = null;

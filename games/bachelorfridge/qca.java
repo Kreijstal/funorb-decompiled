@@ -69,21 +69,21 @@ final class qca extends k {
         try {
           mna.a(-1, (int[]) null, 0L, (String) null, (String) null, param0, -114, (sga) null, param1);
           if (param0 == 0) {
-            var11 = ms.field_u;
+            var11 = NetworkGameClient.field_u;
             var13 = gi.field_b[0];
             var22 = var13;
             var31 = var22;
             var22Lifetime2 = var13;
             var12 = pr.field_e;
             var11.field_a.a((byte) 62, var12, var13, 11);
-            var14 = ms.field_u;
+            var14 = NetworkGameClient.field_u;
             var16 = gi.field_b[1];
             var22Lifetime3 = var16;
             var31Lifetime3 = var22Lifetime3;
             var22Lifetime4 = var16;
             var15 = hw.field_wb;
             var14.field_a.a((byte) 119, var15, var16, 12);
-            var17 = ms.field_u;
+            var17 = NetworkGameClient.field_u;
             var19 = gi.field_b[2];
             var22Lifetime5 = var19;
             var31Lifetime4 = var22Lifetime5;
@@ -92,19 +92,19 @@ final class qca extends k {
             var17.field_a.a((byte) 31, var18, var19, 13);
           }
           if (param0 == 1) {
-            var20 = ms.field_u;
+            var20 = NetworkGameClient.field_u;
             var22Lifetime1 = gi.field_b[0];
             var31Lifetime1 = var22Lifetime1;
             var31Lifetime1Lifetime1 = var22Lifetime1;
             var21 = eaa.field_f;
             var20.field_a.a((byte) 118, var21, var22Lifetime1, 11);
-            var23 = ms.field_u;
+            var23 = NetworkGameClient.field_u;
             var25 = gi.field_b[1];
             var31Lifetime1Lifetime2 = var25;
             var31Lifetime1Lifetime3 = var25;
             var24 = mn.field_n;
             var23.field_a.a((byte) 116, var24, var25, 12);
-            var26 = ms.field_u;
+            var26 = NetworkGameClient.field_u;
             var28 = gi.field_b[2];
             var31Lifetime1Lifetime4 = var28;
             var31Lifetime1Lifetime5 = var28;
@@ -112,20 +112,20 @@ final class qca extends k {
             var26.field_a.a((byte) 49, var27, var28, 13);
           }
           if (param0 == 2) {
-            var29 = ms.field_u;
+            var29 = NetworkGameClient.field_u;
             var31Lifetime2 = gi.field_b[0];
             var30 = sh.field_H;
             var29.field_a.a((byte) 69, var30, var31Lifetime2, 11);
-            var32 = ms.field_u;
+            var32 = NetworkGameClient.field_u;
             var34 = gi.field_b[1];
             var33 = kk.field_t;
             var32.field_a.a((byte) 59, var33, var34, 12);
-            var35 = ms.field_u;
+            var35 = NetworkGameClient.field_u;
             var37 = gi.field_b[2];
             var36 = ho.field_f;
             var35.field_a.a((byte) 122, var36, var37, 13);
           }
-          var38 = ms.field_u;
+          var38 = NetworkGameClient.field_u;
           var4 = param1.field_D;
           var5 = param1.field_M;
           var6 = param1.field_sb;

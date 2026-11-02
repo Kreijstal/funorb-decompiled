@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class re extends hfa {
-    static ck field_C;
+    static GameAppletShell field_C;
     static String field_D;
     static int[][] field_F;
     static int field_E;
@@ -23,7 +23,7 @@ final class re extends hfa {
 
     public static void h(int param0) {
         if (param0 >= -121) {
-          field_C = (ck) null;
+          field_C = (GameAppletShell) null;
           field_D = null;
           field_F = (int[][]) null;
           return;

@@ -300,7 +300,7 @@ final class uq extends sna {
             this.field_yb.field_pb = "|";
             if (!(hka.field_i < 5) ||
               !(hea.field_r < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
@@ -314,7 +314,7 @@ final class uq extends sna {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = lq.field_z;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;

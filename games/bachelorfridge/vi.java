@@ -5,13 +5,13 @@ final class vi {
     static ee field_f;
     static int[] field_d;
     static long field_a;
-    private eo field_e;
+    private DualLinkNode field_e;
     private js field_g;
     private in field_c;
     private int field_b;
 
-    final void a(eo param0, long param1, int param2) {
-        eo var5 = null;
+    final void a(DualLinkNode param0, long param1, int param2) {
+        DualLinkNode var5 = null;
         try {
           if (param2 <= 64) {
             vi.b(13);
@@ -60,11 +60,11 @@ final class vi {
         field_d = null;
     }
 
-    final eo a(int param0, long param1) {
+    final DualLinkNode a(int param0, long param1) {
         if (param0 < 98) {
-          return (eo) null;
+          return (DualLinkNode) null;
         }
-        eo var4 = (eo) (this.field_g.a(true, param1));
+        DualLinkNode var4 = (DualLinkNode) (this.field_g.a(true, param1));
         if (var4 != null) {
           this.field_c.a(var4, (byte) 115);
         }
@@ -73,7 +73,7 @@ final class vi {
 
     vi(int param0) {
         int var2 = 0;
-        this.field_e = new eo();
+        this.field_e = new DualLinkNode();
         this.field_c = new in();
         this.field_b = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {

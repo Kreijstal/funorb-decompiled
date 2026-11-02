@@ -65,9 +65,9 @@ final class pna extends sna {
         }
         var12 = (var7 << 12) / var6;
         var13 = -(param4 * var12 >> 12) + param5;
-        if (param4 < eo.field_l) {
-          var10 = (var12 * eo.field_l >> 12) + var13;
-          var8 = eo.field_l;
+        if (param4 < DualLinkNode.field_l) {
+          var10 = (var12 * DualLinkNode.field_l >> 12) + var13;
+          var8 = DualLinkNode.field_l;
         } else {
           if (pw.field_x >= param4) {
             var8 = param4;
@@ -77,7 +77,7 @@ final class pna extends sna {
             var10 = (pw.field_x * var12 >> 12) + var13;
           }
         }
-        if (param3 >= eo.field_l) {
+        if (param3 >= DualLinkNode.field_l) {
           if (param3 > pw.field_x) {
             var9 = pw.field_x;
             var11 = var13 + (var12 * pw.field_x >> 12);
@@ -86,8 +86,8 @@ final class pna extends sna {
             var11 = param0;
           }
         } else {
-          var11 = var13 + (var12 * eo.field_l >> 12);
-          var9 = eo.field_l;
+          var11 = var13 + (var12 * DualLinkNode.field_l >> 12);
+          var9 = DualLinkNode.field_l;
         }
         if (an.field_q > var10) {
           var10 = an.field_q;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class ck extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_e;
     static String field_f;
     boolean field_g;
@@ -824,7 +824,7 @@ public abstract class ck extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected ck() {
+    protected GameAppletShell() {
         this.field_g = false;
     }
 

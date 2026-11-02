@@ -929,7 +929,7 @@ class aha extends hf {
                 }
                 var2 = od.a("end_turn", (byte) 125);
                 if (var2 != null) {
-                  ms.field_q = qq.a(var2, false);
+                  NetworkGameClient.field_q = qq.a(var2, false);
                 }
                 var2 = od.a("flag_captured", (byte) 88);
             }
@@ -2505,7 +2505,7 @@ class aha extends hf {
                   }
                   throw pe.a((Throwable) ((Object) stackIn_2085_0), ((StringBuilder) (Object) stackIn_2085_1).append(stackIn_2086_2).append(')').toString());
                 }
-                if (ck.field_a != 0) {
+                if (GameAppletShell.field_a != 0) {
                   var3++;
                   BachelorFridge.field_y = var3;
                 }
@@ -2611,7 +2611,7 @@ class aha extends hf {
             this.a(54, 48, (wj) null, 89);
           }
           var4 = (aia) (this.field_G.b((byte) 90));
-          L1: while (null != var4) {
+          scanLoop1: while (null != var4) {
             var5 = var4;
             while (true) {
               if (null != var5) {
@@ -2634,7 +2634,7 @@ class aha extends hf {
             }
             var4 = stackIn_25_0;
             if (var6 == 0) {
-              continue L1;
+              continue scanLoop1;
             }
             break;
           }
@@ -2676,11 +2676,11 @@ class aha extends hf {
           var2_int = 0;
           var3 = (qka) ((Object) this.field_f);
           var4 = var3.b((wj) (this), false);
-          L0: while (true) {
+          scanLoop1: while (true) {
             var5 = this.field_w.indexOf("<hotspot=", var2_int);
             stackIn_3_0 = -1;
             stackIn_3_1 = var5;
-            L1: while (stackIn_3_0 != stackIn_3_1 ||
+            scanLoop2: while (stackIn_3_0 != stackIn_3_1 ||
               var16 != 0) {
               var7 = this.field_w.indexOf(">", var5);
               var6 = this.field_w.substring(9 + var5, var7);
@@ -2695,7 +2695,7 @@ class aha extends hf {
                 stackIn_3_0 = var11;
                 stackIn_3_1 = var8;
                 if (var16 != 0) {
-                  continue L1;
+                  continue scanLoop2;
                 }
                 if (stackIn_3_0 != stackIn_3_1) {
                   stackIn_12_0 = var12.field_a[0];
@@ -2722,7 +2722,7 @@ class aha extends hf {
                 var11++;
               }
               if (var16 == 0) {
-                continue L0;
+                continue scanLoop1;
               }
               break;
             }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fh extends bw {
+final class fh extends IntrusiveNode {
     int field_h;
     je field_z;
     int field_t;

@@ -173,12 +173,12 @@ final class mh extends pp {
                   ala.field_b[var11] = false;
                   var11++;
                 } while (var19 == 0);
-                L16: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11 = 0;
                     stackIn_70_0 = 0;
                     if (var19 != 0) {
-                      break L16;
+                      break scanLoop1;
                     }
                     var12 = stackIn_70_0;
                     while (true) {
@@ -191,7 +191,7 @@ final class mh extends pp {
                         var13_ref_int__ = var20;
                         stackIn_64_0 = 0;
                         var14 = stackIn_64_0;
-                        L23: while (true) {
+                        scanLoop2: while (true) {
                           if (var23.length > var14) {
                             var15 = var23[var14];
                             var16 = var20[1 + var14];
@@ -199,7 +199,7 @@ final class mh extends pp {
                             stackIn_55_1 = ~var15;
                             if (stackIn_55_0 != stackIn_55_1) {
                               if ((255 & pw.field_w.field_Eb[var15]) != var16) {
-                                break L23;
+                                break scanLoop2;
                               }
                             } else {
                               if (var10 == 0) {
@@ -210,7 +210,7 @@ final class mh extends pp {
                               var17_int = stackIn_48_0;
                               if (~var16 != ~var17_int &&
                                 var19 == 0) {
-                                break L23;
+                                break scanLoop2;
                               }
                             }
                             var14 += 2;
@@ -365,14 +365,14 @@ final class mh extends pp {
                 }
                 var17 = ak.field_q.field_vb.field_z;
                 var18_ref = (ema) (var17.b((byte) 90));
-                L54: while (true) {
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
                     stackOut_133_0 = var18_ref.f((byte) 21);
                     stackIn_148_0 = stackOut_133_0 ? 1 : 0;
                     stackIn_134_0 = stackOut_133_0;
                     if (var19 != 0) {
-                      break L54;
+                      break scanLoop3;
                     }
                     if (!stackIn_134_0) {
                       if (var11 != 0 &&

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tda extends bw {
+abstract class tda extends IntrusiveNode {
     lj field_h;
     volatile boolean field_f;
     int field_i;

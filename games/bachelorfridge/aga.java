@@ -616,7 +616,7 @@ final class aga extends rk {
             this.field_w.field_a[this.field_x][this.field_J].field_m &&
             !this.g((byte) 85) &&
             33 != this.field_y) {
-            L1: {
+            regionExit1: {
               if (var3_int != 11) {
                 if (var3_int == 10) {
                   this.b((byte) 126, 18);
@@ -642,25 +642,25 @@ final class aga extends rk {
                             this.b((byte) 126, 17);
                             this.field_w.field_T.field_e[this.field_D] = this.field_w.field_T.field_e[this.field_D] + 1;
                             if (var5 == 0) {
-                              break L1;
+                              break regionExit1;
                             }
                           default:
-                            break L1;
+                            break regionExit1;
                           case 29:
                             this.b((byte) 126, 12);
                             if (var5 == 0) {
-                              break L1;
+                              break regionExit1;
                             }
                           case 12:
                             this.b((byte) 113, 19);
                             this.field_w.field_T.field_e[this.field_D] = this.field_w.field_T.field_e[this.field_D] + 1;
                             if (var5 == 0) {
-                              break L1;
+                              break regionExit1;
                             }
                           case 13:
                             this.b((byte) 116, 7);
                             if (var5 == 0) {
-                              break L1;
+                              break regionExit1;
                             }
                             break;
                         }

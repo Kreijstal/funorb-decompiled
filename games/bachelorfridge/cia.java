@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class cia extends bw {
+class cia extends IntrusiveNode {
     int field_h;
     int field_m;
     int field_l;

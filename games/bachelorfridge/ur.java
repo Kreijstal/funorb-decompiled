@@ -293,7 +293,7 @@ final class ur {
         if (param6 != 512) {
           field_d = -72;
         }
-        if (eo.field_l <= param1 - param0 &&
+        if (DualLinkNode.field_l <= param1 - param0 &&
           pw.field_x >= param0 + param1 &&
           an.field_q <= -param0 + param2 &&
           param2 + param0 <= ha.field_n) {

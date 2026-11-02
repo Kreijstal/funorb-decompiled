@@ -5,21 +5,21 @@ final class wma {
     static int field_b;
     private int field_a;
     private int field_e;
-    private eo field_f;
+    private DualLinkNode field_f;
     private long field_d;
-    private eo field_c;
-    private eo[] field_g;
+    private DualLinkNode field_c;
+    private DualLinkNode[] field_g;
 
-    final eo a(long param0, byte param1) {
-        eo var4;
-        eo var5;
+    final DualLinkNode a(long param0, byte param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
         var6 = BachelorFridge.field_y;
         this.field_d = param0;
         var4 = this.field_g[(int)((long)(-1 + this.field_e) & param0)];
         this.field_c = var4.field_m;
         if (param1 != -87) {
-          return (eo) null;
+          return (DualLinkNode) null;
         }
         while (true) {
           if (var4 == this.field_c) {
@@ -37,8 +37,8 @@ final class wma {
         return var5;
     }
 
-    final void a(eo param0, int param1, long param2) {
-        eo var5 = null;
+    final void a(DualLinkNode param0, int param1, long param2) {
+        DualLinkNode var5 = null;
         try {
           if (null != param0.field_i) {
             param0.b(0);
@@ -57,10 +57,10 @@ final class wma {
         }
     }
 
-    final eo b(byte param0) {
+    final DualLinkNode b(byte param0) {
         this.field_a = 0;
         if (param0 != -73) {
-          return (eo) null;
+          return (DualLinkNode) null;
         }
         return this.a(-25177);
     }
@@ -93,18 +93,18 @@ final class wma {
         ru.field_d[91] = 42;
     }
 
-    final eo a(int param0) {
+    final DualLinkNode a(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int var3;
-        eo var4;
-        eo var35;
-        eo var36;
-        eo var37;
-        eo var38;
-        eo var41;
+        DualLinkNode var4;
+        DualLinkNode var35;
+        DualLinkNode var36;
+        DualLinkNode var37;
+        DualLinkNode var38;
+        DualLinkNode var41;
         var3 = BachelorFridge.field_y;
         if (param0 == -25177) {
           if (this.field_a <= 0) {
@@ -165,13 +165,13 @@ final class wma {
         return var36;
     }
 
-    final eo a(byte param0) {
-        eo var3 = null;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var3 = null;
         int var4 = BachelorFridge.field_y;
         if (null == this.field_c) {
           return null;
         }
-        eo var2 = this.field_g[(int)(this.field_d & (long)(this.field_e - 1))];
+        DualLinkNode var2 = this.field_g[(int)(this.field_d & (long)(this.field_e - 1))];
         while (var2 != this.field_c) {
           if (this.field_d == this.field_c.field_h) {
             var3 = this.field_c;
@@ -191,13 +191,13 @@ final class wma {
 
     wma(int param0) {
         int var2 = 0;
-        eo dupTemp$1 = null;
-        eo var3;
+        DualLinkNode dupTemp$1 = null;
+        DualLinkNode var3;
         this.field_a = 0;
-        this.field_g = new eo[param0];
+        this.field_g = new DualLinkNode[param0];
         this.field_e = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new eo();
+          dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_g[var2] = dupTemp$1;
           var3.field_m = var3;

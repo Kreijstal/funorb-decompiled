@@ -237,13 +237,13 @@ final class rd extends td {
           var6Lifetime1.field_xb = var4_ref_StringLifetime1;
           var6Lifetime1.a(false);
           var7_ref = (nea) (es.field_j.b((byte) 90));
-          L14: while (true) {
+          scanLoop1: while (true) {
             if (var7_ref != null) {
               stackOut_49_0 = re.a(param0 ^ -29797, var7_ref, var6Lifetime1);
               stackIn_60_0 = stackOut_49_0 ? 1 : 0;
               stackIn_50_0 = stackOut_49_0;
               if (var9 != 0) {
-                break L14;
+                break scanLoop1;
               }
               if (stackIn_50_0) {
                 var7_ref = (nea) (es.field_j.c(0));

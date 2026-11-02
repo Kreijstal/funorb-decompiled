@@ -145,10 +145,10 @@ final class eia {
           if (an.field_q <= param5 &&
             param5 <= ha.field_n) {
             var57 = tj.field_b[param5];
-            var40 = cr.a(eo.field_l, -param7 + param6, pw.field_x, 0);
-            var41 = cr.a(eo.field_l, param6 + param7, pw.field_x, 0);
-            var42 = cr.a(eo.field_l, param6 - var11, pw.field_x, 0);
-            var43 = cr.a(eo.field_l, param6 + var11, pw.field_x, 0);
+            var40 = cr.a(DualLinkNode.field_l, -param7 + param6, pw.field_x, 0);
+            var41 = cr.a(DualLinkNode.field_l, param6 + param7, pw.field_x, 0);
+            var42 = cr.a(DualLinkNode.field_l, param6 - var11, pw.field_x, 0);
+            var43 = cr.a(DualLinkNode.field_l, param6 + var11, pw.field_x, 0);
             hba.a(param1, var40, var57, 7, var42);
             hba.a(param4, var42, var57, 7, var43);
             hba.a(param1, var43, var57, 7, var41);
@@ -210,8 +210,8 @@ final class eia {
             if (ha.field_n < var40Lifetime1) {
               continue;
             }
-            var42Lifetime1 = cr.a(eo.field_l, param6 + var8_int, pw.field_x, 0);
-            var43Lifetime1 = cr.a(eo.field_l, -var8_int + param6, pw.field_x, 0);
+            var42Lifetime1 = cr.a(DualLinkNode.field_l, param6 + var8_int, pw.field_x, 0);
+            var43Lifetime1 = cr.a(DualLinkNode.field_l, -var8_int + param6, pw.field_x, 0);
             if (var39 == 0) {
               if (var40Lifetime1 >= an.field_q) {
                 hba.a(param1, var43Lifetime1, tj.field_b[var40Lifetime1], 7, var42Lifetime1);
@@ -222,8 +222,8 @@ final class eia {
               hba.a(param1, var43Lifetime1, tj.field_b[var41Lifetime1], 7, var42Lifetime1);
               continue;
             }
-            var44 = cr.a(eo.field_l, var10 + param6, pw.field_x, 0);
-            var45 = cr.a(eo.field_l, param6 - var10, pw.field_x, 0);
+            var44 = cr.a(DualLinkNode.field_l, var10 + param6, pw.field_x, 0);
+            var45 = cr.a(DualLinkNode.field_l, param6 - var10, pw.field_x, 0);
             if (an.field_q <= var40Lifetime1) {
               var58 = tj.field_b[var40Lifetime1];
               hba.a(param1, var43Lifetime1, var58, 7, var45);

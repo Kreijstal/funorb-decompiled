@@ -145,7 +145,7 @@ final class nw extends td {
           id.field_i = null;
           ng.field_f = null;
           cw.field_zb = null;
-          eo.field_f = null;
+          DualLinkNode.field_f = null;
           i.field_h = null;
         } catch (RuntimeException runtimeException) {
           throw pe.a((Throwable) ((Object) runtimeException), "nw.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

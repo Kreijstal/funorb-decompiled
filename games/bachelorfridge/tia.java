@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class tia extends bw {
+class tia extends IntrusiveNode {
     ad field_h;
     Random field_f;
     int field_g;

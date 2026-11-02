@@ -170,7 +170,7 @@ final class vaa {
         if (jm.field_g.length() >= 80) {
           return true;
         }
-        L7: {
+        regionExit1: {
           discarded$0 = jm.field_g.append((char) var4);
           var5Lifetime1 = 485;
           var16 = cha.field_l;
@@ -229,7 +229,7 @@ final class vaa {
                 }
                 var5Lifetime1 = var5Lifetime1 - var9;
               }
-              break L7;
+              break regionExit1;
             }
             if (null == pw.field_w) {
               if (!am.field_O) {
@@ -280,7 +280,7 @@ final class vaa {
                   }
                   var5Lifetime1 = var5Lifetime1 - var9;
                 }
-                break L7;
+                break regionExit1;
               }
               var7Lifetime1Lifetime6 = "[" + cja.field_r + "] ";
             }
@@ -304,7 +304,7 @@ final class vaa {
                 }
                 var5Lifetime1 = var5Lifetime1 - var9;
               }
-              break L7;
+              break regionExit1;
             }
             if (ada.field_k &&
               null != jc.field_n) {

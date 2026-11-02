@@ -223,7 +223,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "ticketing_gotowebsite");
                 if (null != var2) {
-                  eo.field_j = qq.a(var2, false);
+                  DualLinkNode.field_j = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "ticketing_waitingformessages");
                 if (var2 != null) {
@@ -927,7 +927,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "gameopt_playerneedsrating");
                 if (var2 != null) {
-                  bw.field_d = qq.a(var2, param0);
+                  IntrusiveNode.field_d = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "gameopt_youneedrating");
                 if (var2 != null) {
@@ -1849,7 +1849,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "text_removed_from_game");
                 if (null != var2) {
-                  ck.field_f = qq.a(var2, false);
+                  GameAppletShell.field_f = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "text_lobby_pleaselogin_free");
                 if (null != var2) {
@@ -2375,7 +2375,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "achieved");
                 if (var2 != null) {
-                  eo.field_g = qq.a(var2, param0);
+                  DualLinkNode.field_g = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "orbpoints");
                 if (null != var2) {
@@ -2774,7 +2774,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "fs_accept_aftercancel");
                 if (var2 != null) {
-                  ck.field_e = qq.a(var2, false);
+                  GameAppletShell.field_e = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_accept_countdown_sing");
                 if (var2 != null) {
@@ -3160,9 +3160,9 @@ final class u extends bca {
                   throw pe.a((Throwable) ((Object) stackIn_2618_0), ((StringBuilder) (Object) stackIn_2618_1).append(stackIn_2619_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = ck.field_a;
+                  var4 = GameAppletShell.field_a;
                   var4++;
-                  ck.field_a = var4;
+                  GameAppletShell.field_a = var4;
                 }
             }
         }

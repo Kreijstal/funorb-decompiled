@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class jfa extends bw {
+final class jfa extends IntrusiveNode {
     lna field_v;
     int field_y;
     int field_n;

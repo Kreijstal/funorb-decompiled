@@ -218,7 +218,7 @@ final class ina extends bi {
         var8 = this.a(872364388, var6);
         var8.a((210 - var8.field_n >> 1) + 390, -(var8.field_o >> 1) + 235, 160);
         if (this.b(var2, true)) {
-          fn.field_n.a(eo.field_g, 495, 265, 10, -1);
+          fn.field_n.a(DualLinkNode.field_g, 495, 265, 10, -1);
         } else {
           fn.field_n.a(ed.field_e, 495, 265, 10, -1);
         }

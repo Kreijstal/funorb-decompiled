@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ms extends ck {
+abstract class NetworkGameClient extends GameAppletShell {
     static ik field_u;
     private int field_t;
     private int field_l;
@@ -402,7 +402,7 @@ abstract class ms extends ck {
           if (0 == var2) {
             return;
           }
-          L1: {
+          regionExit1: {
             switch (var2) {
               case 7:
                 this.j(-1);
@@ -419,17 +419,17 @@ abstract class ms extends ck {
                   switch (var2) {
                     case 13:
                       rd.c((byte) -111);
-                      break L1;
+                      break regionExit1;
                     case 17:
                       this.k(10);
-                      break L1;
+                      break regionExit1;
                     case 18:
                       nja.a(118);
-                      break L1;
+                      break regionExit1;
                     default:
                       cv.a(1, "MGS1: " + nia.d((byte) -113), (Throwable) null);
                       vc.a((byte) -72);
-                      break L1;
+                      break regionExit1;
                   }
                 }
                 stackIn_31_0 = -10183;
@@ -734,7 +734,7 @@ abstract class ms extends ck {
         cl.field_p[5] = true;
     }
 
-    protected ms() {
+    protected NetworkGameClient() {
     }
 
     final void a(int param0, int param1, int param2, int param3, boolean param4, boolean param5, int param6, int param7) {

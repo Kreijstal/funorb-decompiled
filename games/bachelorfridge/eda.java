@@ -63,7 +63,7 @@ final class eda extends kj {
         if (param3) {
           return;
         }
-        if (param1 - param2 < eo.field_l) {
+        if (param1 - param2 < DualLinkNode.field_l) {
           wu.a(param4, param0, param2, param1, (byte) -23);
           return;
         }

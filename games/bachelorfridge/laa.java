@@ -159,7 +159,7 @@ final class laa extends pv {
             } else {
               at.field_i = qw.field_a;
             }
-            at.field_i = rca.a(0, new CharSequence[]{(CharSequence) ((Object) at.field_i), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) eo.field_j)});
+            at.field_i = rca.a(0, new CharSequence[]{(CharSequence) ((Object) at.field_i), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DualLinkNode.field_j)});
           }
           oq.field_b.p(-97);
           bi.o(2);

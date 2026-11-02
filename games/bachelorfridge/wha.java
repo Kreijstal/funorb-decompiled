@@ -8,16 +8,16 @@ final class wha implements Iterable {
     static vr field_a;
     static String field_g;
     int field_f;
-    private bw field_d;
+    private IntrusiveNode field_d;
     static String field_b;
-    bw[] field_c;
+    IntrusiveNode[] field_c;
 
     public final Iterator iterator() {
         return (Iterator) ((Object) new np(this));
     }
 
-    final void a(int param0, long param1, bw param2) {
-        bw var5 = null;
+    final void a(int param0, long param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param2.field_e) {
             param2.a(false);
@@ -36,10 +36,10 @@ final class wha implements Iterable {
         }
     }
 
-    final bw a(long param0, byte param1) {
-        bw var5 = null;
+    final IntrusiveNode a(long param0, byte param1) {
+        IntrusiveNode var5 = null;
         int var6 = BachelorFridge.field_y;
-        bw var4 = this.field_c[(int)((long)(-1 + this.field_f) & param0)];
+        IntrusiveNode var4 = this.field_c[(int)((long)(-1 + this.field_f) & param0)];
         this.field_d = var4.field_b;
         while (this.field_d != var4) {
           if (~param0 == ~this.field_d.field_c) {
@@ -53,7 +53,7 @@ final class wha implements Iterable {
         if (param1 <= -100) {
           return null;
         }
-        return (bw) null;
+        return (IntrusiveNode) null;
     }
 
     public static void a(int param0) {
@@ -72,12 +72,12 @@ final class wha implements Iterable {
 
     wha(int param0) {
         int var2 = 0;
-        bw dupTemp$0 = null;
-        bw var3 = null;
-        this.field_c = new bw[param0];
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
+        this.field_c = new IntrusiveNode[param0];
         this.field_f = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new bw();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_c[var2] = dupTemp$0;
           var3.field_e = var3;

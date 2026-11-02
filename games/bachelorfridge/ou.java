@@ -4,17 +4,17 @@
 import java.util.*;
 
 final class ou implements Iterable {
-    eo field_a;
+    DualLinkNode field_a;
     static ee[] field_d;
     static int field_b;
     static String field_c;
 
-    final eo a(int param0) {
-        eo var2 = null;
-        eo var2Lifetime1;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != 24383) {
-          eo var3 = (eo) null;
-          this.a((eo) null, (byte) -80);
+          DualLinkNode var3 = (DualLinkNode) null;
+          this.a((DualLinkNode) null, (byte) -80);
           var2 = this.field_a.field_m;
           if (this.field_a != var2) {
             var2.b(param0 - 24383);
@@ -43,12 +43,12 @@ final class ou implements Iterable {
     }
 
     ou() {
-        this.field_a = new eo();
+        this.field_a = new DualLinkNode();
         this.field_a.field_i = this.field_a;
         this.field_a.field_m = this.field_a;
     }
 
-    final void a(eo param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
           if (null != param0.field_i) {
             param0.b(0);

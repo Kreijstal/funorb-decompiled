@@ -97,11 +97,11 @@ final class ub extends at {
               var10_ref_int__ = var17;
               var11 = 0;
               var12 = 0;
-              L18: while (true) {
+              scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
                     ld.field_q != param4) {
-                    break L18;
+                    break scanLoop1;
                   }
                   for (var12 = 0; var19.length > var12; var12 += 2) {
                     var13_int = var19[var12];
@@ -114,7 +114,7 @@ final class ub extends at {
                     }
                   }
                   var8_int = 0;
-                  break L18;
+                  break scanLoop1;
                 }
                 var13_intLifetime1 = var19[var12];
                 var14 = var10_ref_int__[var12 + 1];
@@ -124,15 +124,15 @@ final class ub extends at {
                     var11 = 1;
                   } else {
                     if (param4 <= var13_intLifetime1) {
-                      break L18;
+                      break scanLoop1;
                     }
                     if ((255 & bja.field_o[var13_intLifetime1]) != var14) {
-                      break L18;
+                      break scanLoop1;
                     }
                   }
                 } else {
                   if (qha.field_c[param6] != var14) {
-                    break L18;
+                    break scanLoop1;
                   }
                 }
                 var12 += 2;

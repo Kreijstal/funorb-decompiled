@@ -127,7 +127,7 @@ final class ok extends sna {
         if (param1) {
           return;
         }
-        if (eo.field_l > param4) {
+        if (DualLinkNode.field_l > param4) {
           vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
@@ -135,7 +135,7 @@ final class ok extends sna {
           vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
-        if (param5 < eo.field_l) {
+        if (param5 < DualLinkNode.field_l) {
           vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
@@ -143,7 +143,7 @@ final class ok extends sna {
           vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
-        if (param6 < eo.field_l) {
+        if (param6 < DualLinkNode.field_l) {
           vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
@@ -151,7 +151,7 @@ final class ok extends sna {
           vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
-        if (param8 < eo.field_l) {
+        if (param8 < DualLinkNode.field_l) {
           vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }

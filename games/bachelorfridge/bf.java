@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bf extends bw {
+abstract class bf extends IntrusiveNode {
     static lw[] field_h;
     static hw[] field_g;
     static boolean field_f;
@@ -102,11 +102,11 @@ abstract class bf extends bw {
         int var4 = 6 / ((-4 - param2) / 36);
         ik var5Lifetime1;
         if (var3 != null) {
-          ms.field_u.a(117, false);
-          var5 = ms.field_u;
+          NetworkGameClient.field_u.a(117, false);
+          var5 = NetworkGameClient.field_u;
           var6_ref_String = cd.field_p;
           var5.field_a.a(var6_ref_String, true, 5);
-          var5Lifetime1 = ms.field_u;
+          var5Lifetime1 = NetworkGameClient.field_u;
           var6 = nfa.field_a;
           var7 = jc.field_r;
           var5Lifetime1.field_a.a(0, false, var6, 0, var7);

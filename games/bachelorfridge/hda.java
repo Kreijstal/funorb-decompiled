@@ -17,8 +17,8 @@ final class hda extends k {
         if (null != jja.field_m) {
           gp.b(-25942, jja.field_m);
         }
-        if (ms.field_u != null) {
-          ms.field_u.a((byte) -120, param1);
+        if (NetworkGameClient.field_u != null) {
+          NetworkGameClient.field_u.a((byte) -120, param1);
         }
         bga.a(param0 ^ 10043, param1);
         if (null != wt.field_n) {
@@ -97,15 +97,15 @@ final class hda extends k {
           if (0 == this.field_m) {
             var5 = 0;
             var6 = 0;
-            L2: while (true) {
+            scanLoop1: while (true) {
               if (var6 < this.field_k) {
                 if (var4 >= this.field_q[var6] &&
                   this.field_q[1 + var6] > var4) {
                   if (this.field_p[var6] <= var4) {
-                    break L2;
+                    break scanLoop1;
                   }
                   var5 = 4096;
-                  break L2;
+                  break scanLoop1;
                 }
                 var6++;
                 continue;
@@ -135,15 +135,15 @@ final class hda extends k {
               }
               var11 = 0;
               var9Lifetime1 = var11;
-              L7: while (true) {
+              scanLoop2: while (true) {
                 if (var11 < this.field_k) {
                   if (this.field_q[var11] <= var6Lifetime1 &&
                     var6Lifetime1 < this.field_q[1 + var11]) {
                     if (this.field_p[var11] <= var6Lifetime1) {
-                      break L7;
+                      break scanLoop2;
                     }
                     var7 = 4096;
-                    break L7;
+                    break scanLoop2;
                   }
                   var11++;
                   continue;

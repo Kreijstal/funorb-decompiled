@@ -41,7 +41,7 @@ final class fc extends td {
         if (param0 == param1) {
           eda.a(param3, param4, param1, false, param5);
         } else {
-          if (param4 - param1 < eo.field_l) {
+          if (param4 - param1 < DualLinkNode.field_l) {
             vda.a(param0, param5, param3, param1, (byte) -115, param4);
           } else {
             if (pw.field_x < param1 + param4) {

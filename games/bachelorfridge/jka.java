@@ -7,7 +7,7 @@ final class jka extends pu {
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
         if (param5 != 88) {
           field_l = (il) null;
-          if (param1 < eo.field_l) {
+          if (param1 < DualLinkNode.field_l) {
             fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
             return;
           }
@@ -26,7 +26,7 @@ final class jka extends pu {
           fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
           return;
         }
-        if (param1 < eo.field_l) {
+        if (param1 < DualLinkNode.field_l) {
           fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
           return;
         }

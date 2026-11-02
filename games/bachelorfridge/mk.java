@@ -337,7 +337,7 @@ final class mk {
         hfa.field_z.a(di.field_l, 522, 342, 65793, -1);
         for (var5 = 0; var5 < rn.field_s.field_g.field_m.length; var5++) {
           if (rn.field_s.field_g.field_m[var5] != -1) {
-            L10: {
+            regionExit1: {
               var6_int = od.field_A[var5][0];
               var7 = od.field_A[var5][1];
               gq.field_E.a(0, var7, var6_int, -1049413117, 4096);
@@ -371,7 +371,7 @@ final class mk {
                         } else {
                           nia.field_l[var8_ref_oha.field_b].e(-1 + (var6_int - (nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1)), var7 - (1 + (nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1)), 15204352);
                         }
-                        break L10;
+                        break regionExit1;
                       }
                       nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + (var6_int - 1), var7 - 1 - (nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1), 818659);
                     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kia extends bw {
+final class kia extends IntrusiveNode {
     js field_f;
     byte[] field_g;
 

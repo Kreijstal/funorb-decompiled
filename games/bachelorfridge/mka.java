@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mka extends bw {
+final class mka extends IntrusiveNode {
     static String[] field_i;
     static boolean field_j;
     static eaa field_f;

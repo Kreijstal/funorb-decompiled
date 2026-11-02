@@ -504,7 +504,7 @@ final class ss extends gga {
           field_g = 0;
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < this.field_o; var8Lifetime1++) {
-          L45: {
+          regionExit1: {
             if (this.field_L[var8Lifetime1] != -2) {
               var9 = this.field_l[var8Lifetime1];
               var10 = this.field_n[var8Lifetime1];
@@ -551,7 +551,7 @@ final class ss extends gga {
                       var28 = field_j[var27];
                       if (var28 == 64) {
                         if (field_g == 512) {
-                          break L45;
+                          break regionExit1;
                         }
                         fieldTemp$7 = field_g;
                         field_g = field_g + 1;
@@ -566,7 +566,7 @@ final class ss extends gga {
                     }
                   }
                 }
-                break L45;
+                break regionExit1;
               }
               if (param1 &&
                 this.a(aca.field_i + jb.field_h, on.field_n + jb.field_j, field_F[var9], field_F[var10], field_F[var11], var12, var13, var14_int)) {
@@ -593,7 +593,7 @@ final class ss extends gga {
                     var16Lifetime2 = field_j[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
                       if (field_g == 512) {
-                        break L45;
+                        break regionExit1;
                       }
                       fieldTemp$14 = field_g;
                       field_g = field_g + 1;

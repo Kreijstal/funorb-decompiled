@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class k extends bw {
+abstract class k extends IntrusiveNode {
     pr field_j;
     k[] field_g;
     eia field_h;

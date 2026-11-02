@@ -49,12 +49,12 @@ class lg {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          eo.field_f = new js(64);
+          DualLinkNode.field_f = new js(64);
           if (param0 >= -10) {
             lg.c(56);
           }
           for (var1_int = 0; mka.field_i.length > var1_int; var1_int++) {
-            eo.field_f.a((long)mka.field_i[var1_int].toLowerCase().hashCode(), (byte) -102, new ji(var1_int));
+            DualLinkNode.field_f.a((long)mka.field_i[var1_int].toLowerCase().hashCode(), (byte) -102, new ji(var1_int));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

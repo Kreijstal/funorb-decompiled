@@ -61,7 +61,7 @@ final class mna extends bca {
         }
         try {
           bga.field_m = param7;
-          ms.field_u = new ik(param8, param2, param4, param3, param0, param5, param1);
+          NetworkGameClient.field_u = new ik(param8, param2, param4, param3, param0, param5, param1);
         } catch (RuntimeException runtimeException) {
           throw pe.a((Throwable) ((Object) runtimeException), "mna.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

@@ -4,12 +4,12 @@
 final class in {
     static String field_d;
     static double field_e;
-    private eo field_a;
-    private eo field_c;
+    private DualLinkNode field_a;
+    private DualLinkNode field_c;
     static kv field_b;
 
-    final eo a(boolean param0) {
-        eo var2 = this.field_a.field_m;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2 = this.field_a.field_m;
         if (this.field_a == var2) {
           return null;
         }
@@ -17,13 +17,13 @@ final class in {
         if (param0) {
           return var2;
         }
-        return (eo) null;
+        return (DualLinkNode) null;
     }
 
     final int b(boolean param0) {
         int var4 = BachelorFridge.field_y;
         int var2 = 0;
-        eo var3 = this.field_a.field_m;
+        DualLinkNode var3 = this.field_a.field_m;
         while (var3 != this.field_a) {
           var3 = var3.field_m;
           var2++;
@@ -35,10 +35,10 @@ final class in {
         return var2;
     }
 
-    final eo a(int param0) {
-        eo var2 = this.field_a.field_m;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_a.field_m;
         if (param0 >= -73) {
-          return (eo) null;
+          return (DualLinkNode) null;
         }
         if (var2 != this.field_a) {
           this.field_c = var2.field_m;
@@ -48,8 +48,8 @@ final class in {
         return null;
     }
 
-    final eo a(byte param0) {
-        eo var2 = this.field_c;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_c;
         if (var2 == this.field_a) {
           this.field_c = null;
           return null;
@@ -63,7 +63,7 @@ final class in {
     }
 
     public in() {
-        this.field_a = new eo();
+        this.field_a = new DualLinkNode();
         this.field_a.field_i = this.field_a;
         this.field_a.field_m = this.field_a;
     }
@@ -76,7 +76,7 @@ final class in {
         }
     }
 
-    final void a(eo param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
           if (param0.field_i != null) {
             param0.b(0);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pv extends bw {
+class pv extends IntrusiveNode {
     jfa field_f;
     static String field_h;
     static int field_i;

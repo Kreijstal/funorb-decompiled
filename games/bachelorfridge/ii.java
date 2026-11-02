@@ -141,23 +141,23 @@ abstract class ii extends cj {
           mna.a(param3.f((byte) -92), (int[]) null, 0L, (String) null, (String) null, -1, -99, p.field_n, param3);
           if (param3.field_Zb && (2 == param3.field_Lb ||
             !(hea.field_r < 2))) {
-            var9 = ms.field_u;
+            var9 = NetworkGameClient.field_u;
             var10 = lga.a(true, new String[]{param0}, bea.field_s);
             var9.field_a.a(var10, true, 10);
           }
-          ms.field_u.b(true);
+          NetworkGameClient.field_u.b(true);
           if (param1) {
-            if (hja.field_i != ms.field_u.field_k) {
-              var13 = ms.field_u;
+            if (hja.field_i != NetworkGameClient.field_u.field_k) {
+              var13 = NetworkGameClient.field_u;
               var14 = lga.a(true, new String[]{param0}, jh.field_k);
               var13.field_a.a(var14, true, 15);
             } else {
-              var11 = ms.field_u;
+              var11 = NetworkGameClient.field_u;
               var12 = lga.a(true, new String[]{param0}, wl.field_wb);
               var11.field_a.a(var12, true, 16);
             }
           }
-          var15 = ms.field_u;
+          var15 = NetworkGameClient.field_u;
           if (param2 != -3) {
             field_m = (eaa) null;
           }

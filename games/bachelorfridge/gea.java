@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gea extends bw {
+final class gea extends IntrusiveNode {
     int field_h;
     static String field_f;
     static String field_g;

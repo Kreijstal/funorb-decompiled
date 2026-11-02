@@ -731,13 +731,13 @@ final class lna {
           var14 = 0;
           var15 = 0;
           var16 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var16 < var25.length) {
               if (param1 == (var25[var16] & param3)) {
                 var15 = var16 / param7.field_q;
                 var14 = var16 % param7.field_q;
                 if (param4) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var16++;

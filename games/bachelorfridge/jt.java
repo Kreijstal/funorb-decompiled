@@ -268,7 +268,7 @@ final class jt {
         Object var3Lifetime1;
         Object var3Lifetime2;
         int var3_intLifetime1Lifetime1;
-        L0: {
+        regionExit1: {
           boolean decompiledFrameRemainder0 = true;
           var3 = null;
           var8 = BachelorFridge.field_y;
@@ -450,7 +450,7 @@ final class jt {
                       stackIn_109_0 = var4.field_wb;
                       stackIn_109_1 = this.field_p.field_g;
                       if (var8 != 0) {
-                        break L0;
+                        break regionExit1;
                       }
                       if (stackIn_109_0 == stackIn_109_1) {
                         var3Lifetime2 = var4;
