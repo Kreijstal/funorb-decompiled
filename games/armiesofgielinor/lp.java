@@ -38,8 +38,8 @@ final class lp {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 13094936) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != 13094936) {
           return;
         }
         field_b = null;

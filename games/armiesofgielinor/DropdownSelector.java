@@ -15,9 +15,9 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
     private int maximumDropdownHeight;
     ScrollWidgetContainer dropdownViewport;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_M = null;
-        if (param0 != -11835) {
+        if (obfuscationGuard != -11835) {
           return;
         }
         field_P = null;
@@ -99,7 +99,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
           ((DropdownSelectionListener) ((Object) this.listener)).selectionChanged(-109, this);
         }
         if (param0 <= 4) {
-          DropdownSelector.a(-40);
+          DropdownSelector.releaseStatics(-40);
         }
     }
 
@@ -120,7 +120,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
           this.expanded = false;
           this.optionList.listener = (WidgetListener) (this);
           this.maximumDropdownHeight = maximumDropdownHeight;
-          this.textButton = new InteractiveWidget("", new fk(this), (WidgetListener) (this));
+          this.textButton = new InteractiveWidget("", new DropdownSelectorPainter(this), (WidgetListener) (this));
           this.arrowButton = new InteractiveWidget();
           this.arrowButton.painter = (WidgetPainter) ((Object) new DropdownArrowPainter());
           this.arrowButton.listener = (WidgetListener) (this);
@@ -253,7 +253,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
               var9 = 0;
               var3Lifetime1 = var9;
               while (var9 < 8) {
-                var7[var9] = rn.bitwiseAnd(var13[var9], ~var17[var9]);
+                var7[var9] = ProceduralMapSupport.bitwiseAnd(var13[var9], ~var17[var9]);
                 var9++;
               }
               ValidationState.field_b = null;
@@ -265,7 +265,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
             }
             if (OwnerChangeEvent.field_B) {
               UpkeepEvent.h(-78);
-              ws.b(true);
+              DialWidget.b(true);
               if (ClientContextMenu.field_a == 9 &&
                 !MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 116)) {
                 ClientContextMenu.field_a = 0;
@@ -273,14 +273,14 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
             }
           }
           if (!ClientUiNode.field_w &&
-            !de.field_a) {
+            !SpellCastErrorSupport.field_a) {
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 69);
-            de.field_a = true;
+            SpellCastErrorSupport.field_a = true;
           }
           if (!ve.field_b &&
-            !af.field_c) {
+            !LoginCredentials.field_c) {
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 75);
-            af.field_c = true;
+            LoginCredentials.field_c = true;
           }
           var1_int = -118 / ((16 - param0) / 35);
           if (!UnitAnimationPreview.field_h) {
@@ -298,7 +298,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
                 stackIn_37_0 = ((AnimationFrameSet.field_E & 1) != 0);
                 cu.field_a = stackIn_37_0;
                 stackIn_40_0 = ((2 & AnimationFrameSet.field_E) != 0);
-                uc.field_a = stackIn_40_0;
+                SpellDefinitionTable.field_a = stackIn_40_0;
                 if (3 <= ek.field_d) {
                   ek.field_d = 0;
                 }
@@ -533,7 +533,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
         return super.getTooltipText(obfuscationGuard + 0);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, nr param12, int param13, nr param14, int param15, int param16, int param17, nr param18, BitmapFont param19) {
+    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, NineSliceFrame param12, int param13, NineSliceFrame param14, int param15, int param16, int param17, NineSliceFrame param18, BitmapFont param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -555,7 +555,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
           if (param11 != -99) {
             return;
           }
-          op.a(param7, param1, param12, param14, -3, param6);
+          FriendRequestSupport.a(param7, param1, param12, param14, -3, param6);
           ContextualRuntimeException.a((byte) -85, param15, param9);
           MusicPatchNode.a(param8, param0, param13, 3815);
           return;
@@ -607,7 +607,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
         }
         this.a(var3 + this.collapsedHeight, this.y, (byte) 50, this.x, this.width);
         this.optionList.setBounds(0, this.width, obfuscationGuard, obfuscationGuard ^ 8192, var2);
-        this.dropdownViewport = new ScrollWidgetContainer(0, 0, 0, 0, new fc(), this.optionList, (WidgetPainter) null);
+        this.dropdownViewport = new ScrollWidgetContainer(0, 0, 0, 0, new EmptyWidgetPainter(), this.optionList, (WidgetPainter) null);
         if (var4 != 0) {
           this.dropdownViewport.setVerticalControl((byte) 118, true, StandardContentDialog.createVerticalScrollControl(obfuscationGuard ^ 0));
         }

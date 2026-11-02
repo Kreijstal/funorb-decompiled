@@ -38,9 +38,9 @@ final class Bzip2State {
     int totalOutputBytes;
     boolean[] inUse;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_t = null;
-        if (param0 != 75) {
+        if (obfuscationGuard != 75) {
           return;
         }
         field_C = null;
@@ -56,9 +56,9 @@ final class Bzip2State {
         int var1_intLifetime1;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          CampaignMenuEntry.field_u = new int[vs.field_e.length];
-          for (var1_int = 0; var1_int < vs.field_e.length; var1_int++) {
-            CampaignMenuEntry.field_u[var1_int] = QuickChatCategory.field_G[vs.field_e[var1_int].terrainType];
+          CampaignMenuEntry.field_u = new int[QuickChatMenuDisplaySupport.field_e.length];
+          for (var1_int = 0; var1_int < QuickChatMenuDisplaySupport.field_e.length; var1_int++) {
+            CampaignMenuEntry.field_u[var1_int] = QuickChatCategory.field_G[QuickChatMenuDisplaySupport.field_e[var1_int].terrainType];
           }
           if (param0 <= 79) {
             Bzip2State.a((byte) 84);
@@ -114,7 +114,7 @@ final class Bzip2State {
         try {
           var3 = SummonAction.a(-127, param1, param0);
           if (param2 > -34) {
-            Bzip2State.b((byte) -25);
+            Bzip2State.releaseStatics((byte) -25);
           }
           if (var3 != null) {
             stackIn_6_0 = var3;
@@ -131,7 +131,7 @@ final class Bzip2State {
             }
             break;
           }
-          stackIn_12_0 = od.field_h;
+          stackIn_12_0 = ByteArrayPoolSupport.field_h;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,11 +156,11 @@ final class Bzip2State {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kp.decodeSpriteSheetFromArchive(false, param0, param3, param2)) {
+          if (!MarkerSliderPainter.decodeSpriteSheetFromArchive(false, param0, param3, param2)) {
             return null;
           }
           if (param1 == 28) {
-            stackIn_7_0 = se.a((byte) 32);
+            stackIn_7_0 = IgnoreRequestSupport.a((byte) 32);
             return stackIn_7_0;
           }
           stackIn_5_0 = (RgbSprite[]) null;

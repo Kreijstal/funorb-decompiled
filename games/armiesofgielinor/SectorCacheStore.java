@@ -457,11 +457,11 @@ final class SectorCacheStore {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         field_k = null;
-        if (param0 != 1) {
-          SectorCacheStore.b(11);
+        if (obfuscationGuard != 1) {
+          SectorCacheStore.releaseStatics(11);
         }
         field_f = null;
         field_h = null;

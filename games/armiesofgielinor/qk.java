@@ -17,9 +17,9 @@ final class qk {
         return 1 + param2 + ArrayWidgetContainer.field_I + param0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_e = null;
-        if (param0 != 50) {
+        if (obfuscationGuard != 50) {
           return;
         }
         field_f = null;

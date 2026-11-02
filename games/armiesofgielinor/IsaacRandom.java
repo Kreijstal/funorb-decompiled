@@ -141,8 +141,8 @@ final class IsaacRandom {
         this.remainingResults = 256;
     }
 
-    public static void b(int param0) {
-        int var1 = -102 / ((param0 - 45) / 43);
+    public static void releaseStatics(int obfuscationGuard) {
+        int var1 = -102 / ((obfuscationGuard - 45) / 43);
         field_i = null;
         loginAccountIdentifier = null;
         field_g = null;
@@ -180,10 +180,10 @@ final class IsaacRandom {
             }
           }
           this.accumulator = this.accumulator + this.memory[var2 + 128 & 255];
-          dupTemp$1 = this.lastResult + (this.memory[rn.bitwiseAnd(255, var3 >> 2)] + this.accumulator);
+          dupTemp$1 = this.lastResult + (this.memory[ProceduralMapSupport.bitwiseAnd(255, var3 >> 2)] + this.accumulator);
           var4 = dupTemp$1;
           this.memory[var2] = dupTemp$1;
-          dupTemp$2 = this.memory[rn.bitwiseAnd(var4 >> 8, 1020) >> 2] + var3;
+          dupTemp$2 = this.memory[ProceduralMapSupport.bitwiseAnd(var4 >> 8, 1020) >> 2] + var3;
           this.lastResult = dupTemp$2;
           this.results[var2] = dupTemp$2;
         }

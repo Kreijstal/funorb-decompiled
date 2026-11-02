@@ -203,15 +203,15 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         this.emailConfirmationInput.painter = (WidgetPainter) ((Object) dupTemp$0);
         this.emailInput.painter = (WidgetPainter) ((Object) dupTemp$0);
         this.ageInput.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
-        this.emailOptInToggle.painter = (WidgetPainter) ((Object) new oi());
+        this.emailOptInToggle.painter = (WidgetPainter) ((Object) new CheckMarkWidgetPainter());
         MaskedTextEntryPainter dupTemp$1 = new MaskedTextEntryPainter(10000536);
         this.passwordConfirmationInput.painter = (WidgetPainter) ((Object) dupTemp$1);
         this.passwordInput.painter = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = EmailCheckResult.a(4800, StateChangeEvent.field_D, new String[]{this.m(150), this.l(29406)});
+        String var2 = EmailCheckResult.a(4800, StateChangeEvent.field_D, new String[]{this.getLinkOpenMarkup(150), this.getLinkCloseMarkup(29406)});
         int var3 = 20;
         var3 = var3 + this.a(FullscreenMembershipDialog.field_X, var3, 170, (byte) 18, this.emailInput);
         var3 = var3 + (this.a(false, 170, this.emailConfirmationInput, TrianglePulse.field_j, 20, "", var3) + 5);
-        var3 = var3 + this.a(jj.field_h, var3, 170, (byte) 18, this.passwordInput);
+        var3 = var3 + this.a(FriendLookupSupport.field_h, var3, 170, (byte) 18, this.passwordInput);
         var3 = var3 + (this.a(TurnEffectEvent.field_B, this.passwordConfirmationInput, 170, tf.field_m, 210, var3) + 5);
         var3 = var3 + (5 + this.a(ScrollContainer.field_Ob, this.nameInput, 170, MusicPatchEnvelope.field_k, 210, var3));
         var3 = var3 + this.a(var3, this.ageInput, 170, field_S, 27270);
@@ -241,8 +241,8 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         this.setBounds(0, 496, 0, 8192, var3 + (55 + var6));
     }
 
-    private final String m(int param0) {
-        if (param0 != 150) {
+    private final String getLinkOpenMarkup(int obfuscationGuard) {
+        if (obfuscationGuard != 150) {
           return (String) null;
         }
         return "<u=2164A2><col=2164A2>";
@@ -265,13 +265,13 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
             return true;
           }
           state = source.getValidationState(false);
-          if (state == rn.validationInvalid) {
+          if (state == ProceduralMapSupport.validationInvalid) {
             return false;
           }
           if (state == DialogMessagePane.validationWaiting) {
             return false;
           }
-          if (lq.validationEmpty != state) {
+          if (IntegerPowerSupport.validationEmpty != state) {
             return true;
           }
           return false;
@@ -289,7 +289,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_L = null;
         field_S = null;
         field_F = null;
@@ -297,8 +297,8 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         field_M = null;
         field_Z = (int[][]) null;
         field_Q = null;
-        if (param0 != 19) {
-          AccountRegistrationForm.f((byte) -98);
+        if (obfuscationGuard != 19) {
+          AccountRegistrationForm.releaseStatics((byte) -98);
         }
         field_Y = null;
         field_R = null;
@@ -346,7 +346,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
 
     private final int a(int param0, Widget param1, int param2, String param3, int param4) {
         RuntimeException var6 = null;
-        kw var7 = null;
+        ValidationStatusIcon var7 = null;
         LabeledWidgetContainer var8 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -363,7 +363,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
             return stackIn_2_0;
           }
           this.addChild((byte) 10, (Widget) (var8));
-          var7 = new kw(((ValidationProvider) ((Object) param1)).getValidationSource(-918933630));
+          var7 = new ValidationStatusIcon(((ValidationProvider) ((Object) param1)).getValidationSource(-918933630));
           this.addChild((byte) 10, (Widget) (var7));
           var7.setBounds(3 + var8.width + var8.x, 15, var8.y + (-15 + var8.height >> 1), 8192, 15);
           stackIn_4_0 = var8.height;
@@ -430,8 +430,8 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         }
     }
 
-    private final String l(int param0) {
-        if (param0 != 29406) {
+    private final String getLinkCloseMarkup(int obfuscationGuard) {
+        if (obfuscationGuard != 29406) {
           AccountRegistrationForm.a(109, -112, true);
         }
         return "</col></u>";
@@ -648,13 +648,13 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
               }
               var5Lifetime1 = null;
               if (0 == DisplaySettingsDialog.field_fb) {
-                var5Lifetime1 = op.requestAddFriend(20, var4, param1);
+                var5Lifetime1 = FriendRequestSupport.requestAddFriend(20, var4, param1);
               }
               if (DisplaySettingsDialog.field_fb == 1) {
                 var5Lifetime1 = DamageEvent.requestRemoveFriend(var4, (byte) -27, param1);
               }
               if (DisplaySettingsDialog.field_fb == 2) {
-                var5Lifetime1 = se.requestAddIgnoredAccount(var4, param1, param0 - 83);
+                var5Lifetime1 = IgnoreRequestSupport.requestAddIgnoredAccount(var4, param1, param0 - 83);
               }
               if (DisplaySettingsDialog.field_fb == 3) {
                 var5Lifetime1 = MusicPatchEnvelope.requestRemoveIgnoredAccount(param1, var4, false, var4);

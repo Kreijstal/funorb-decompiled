@@ -54,14 +54,14 @@ final class ScrollContainer extends ClientUiComponent {
 
     final static boolean l(int param0) {
         if (param0 != 0) {
-          ScrollContainer.k(118);
+          ScrollContainer.releaseStatics(118);
           return null != EffectPresentation.field_e ? true : false;
         }
         return null != EffectPresentation.field_e ? true : false;
     }
 
-    public static void k(int param0) {
-        if (param0 != 0) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           ScrollContainer.l(-24);
           field_Mb = null;
           unitDisplayNames = null;

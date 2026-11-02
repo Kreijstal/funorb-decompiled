@@ -62,9 +62,9 @@ abstract class MeshObject {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_c = null;
-        if (param0 != -66) {
+        if (obfuscationGuard != -66) {
           return;
         }
         field_b = null;

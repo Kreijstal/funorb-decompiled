@@ -12,11 +12,11 @@ final class DirectByteStorage extends ByteStorage {
     static String field_i;
     static String[] field_j;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_o = null;
         field_n = null;
         field_j = null;
-        if (param0 == 1) {
+        if (obfuscationGuard == 1) {
           field_i = null;
           field_m = null;
           field_l = null;

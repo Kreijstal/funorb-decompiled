@@ -14,24 +14,24 @@ final class CorpseConditionMarker extends PreparedAction {
         int stackIn_20_1 = 0;
         if (AccountRegistrationForm.field_X < 0) {
           Widget.field_n = 0;
-          dd.field_e = 0;
+          ArchiveMasterIndex.field_e = 0;
           return;
         }
-        dd.field_e = dd.field_e + Widget.field_n;
-        if (dd.field_e < 0) {
-          dd.field_e = 0;
+        ArchiveMasterIndex.field_e = ArchiveMasterIndex.field_e + Widget.field_n;
+        if (ArchiveMasterIndex.field_e < 0) {
+          ArchiveMasterIndex.field_e = 0;
           Widget.field_n = 0;
         }
         if (param0 != -28309) {
           defaultMusicProfile = (ChannelGainProfile) null;
         }
-        if (NanoGameClock.field_q < dd.field_e &&
+        if (NanoGameClock.field_q < ArchiveMasterIndex.field_e &&
           -1 < NanoGameClock.field_q) {
-          dd.field_e = NanoGameClock.field_q;
+          ArchiveMasterIndex.field_e = NanoGameClock.field_q;
           Widget.field_n = 0;
         } else {
           if (NanoGameClock.field_q == -1) {
-            dd.field_e = 0;
+            ArchiveMasterIndex.field_e = 0;
           }
         }
         if (param1 &&
@@ -131,14 +131,14 @@ final class CorpseConditionMarker extends PreparedAction {
         this.playerFlags[this.actingPlayer] = 1024;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         defaultMusicProfile = null;
         field_s = null;
         field_t = null;
         field_x = null;
         field_v = null;
         field_w = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_s = (String[]) null;
         }
     }

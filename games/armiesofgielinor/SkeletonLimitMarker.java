@@ -35,7 +35,7 @@ final class SkeletonLimitMarker extends PreparedAction {
             SkeletonLimitMarker.printCurrentCoat((byte) -52);
           }
           var3 = new byte[var2_int];
-          vm.a(param0, 0, var3, 0, var2_int);
+          ArrayBlockSupport.copyBytes(param0, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -58,9 +58,9 @@ final class SkeletonLimitMarker extends PreparedAction {
         this.playerFlags[this.actingPlayer] = 8192;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_t = null;
-        if (param0) {
+        if (obfuscationGuard) {
           SkeletonLimitMarker.printCurrentCoat((byte) 66);
           field_s = null;
           return;
@@ -72,13 +72,13 @@ final class SkeletonLimitMarker extends PreparedAction {
         String query = null;
         String guardedQuery;
         if (obfuscationGuard > 26) {
-          query = ah.localCoat.toQueryString((byte) -109);
+          query = LocalCoatSupport.localCoat.toQueryString((byte) -109);
           System.out.println(query);
           return query;
         }
         byte[] unusedPackedCoat = (byte[]) null;
         SkeletonLimitMarker.a((byte[]) null, -39);
-        guardedQuery = ah.localCoat.toQueryString((byte) -109);
+        guardedQuery = LocalCoatSupport.localCoat.toQueryString((byte) -109);
         System.out.println(guardedQuery);
         return guardedQuery;
     }

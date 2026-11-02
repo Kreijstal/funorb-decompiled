@@ -158,9 +158,9 @@ final class CampaignMenu {
           var2_int = 0;
           while (3 > var2_int) {
             var3 = "campaign_map" + (var2_int + 1);
-            mu.field_g[var2_int][0] = pv.a("campaign", var3, iw.field_l, 24914);
-            mu.field_g[var2_int][1] = pv.a("campaign", var3 + "_areas", iw.field_l, 24914);
-            mu.field_g[var2_int][2] = pv.a("campaign", var3 + "_full", iw.field_l, 24914);
+            mu.field_g[var2_int][0] = AccountNameFoldingSupport.a("campaign", var3, iw.field_l, 24914);
+            mu.field_g[var2_int][1] = AccountNameFoldingSupport.a("campaign", var3 + "_areas", iw.field_l, 24914);
+            mu.field_g[var2_int][2] = AccountNameFoldingSupport.a("campaign", var3 + "_full", iw.field_l, 24914);
             var2_int++;
             if (var4 != 0) {
               return;
@@ -238,11 +238,11 @@ final class CampaignMenu {
           var6 = EmailCheckResult.a(4800, BufferedSocket.field_h, new String[]{var5});
           if (this.field_h == null) {
             var7 = 164;
-            var8 = nr.field_e.textWidth(qf.field_c) / 2 + 26;
+            var8 = NineSliceFrame.field_e.textWidth(qf.field_c) / 2 + 26;
             if (var7 < var8) {
               var7 = var8;
             }
-            var9 = 26 + nr.field_e.textWidth(lb.field_c) / 2;
+            var9 = 26 + NineSliceFrame.field_e.textWidth(ResourceClientErrorSupport.field_c) / 2;
             if (var7 < var9) {
               var7 = var9;
             }
@@ -253,21 +253,21 @@ final class CampaignMenu {
             var7 = this.field_h.width;
           }
           var8Lifetime1 = 26 + var7;
-          var9Lifetime1 = rs.field_n.getParagraphHeight(var6, var8Lifetime1, 0);
+          var9Lifetime1 = PowerOfTwoSupport.field_n.getParagraphHeight(var6, var8Lifetime1, 0);
           var10 = 60 + (30 + (var9Lifetime1 + 14) + 40 + 10);
           var11 = -(var8Lifetime1 / 2) + 320;
           var12 = -(var10 / 2) + 240;
           var13 = 13 + var11;
-          GradientUiRenderer.drawHollowGradientFrame(db.a(true, var11), MatchConditionEntry.a(var12, (byte) 94), var8Lifetime1, var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
+          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var11), MatchConditionEntry.a(var12, (byte) 94), var8Lifetime1, var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
           var14 = -26 + var8Lifetime1;
           var15 = var13;
           var16 = var12 + 30;
           if (param0 < 9) {
             field_s = (Boolean) null;
           }
-          GradientUiRenderer.drawWrappedCenteredGradientText(this.selectedMissionEntry.title, db.a(true, var8Lifetime1 / 2 + var11), MatchConditionEntry.a(var16, (byte) 94), var8Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
+          GradientUiRenderer.drawWrappedCenteredGradientText(this.selectedMissionEntry.title, IgnoreListLookupSupport.a(true, var8Lifetime1 / 2 + var11), MatchConditionEntry.a(var16, (byte) 94), var8Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
           var16 += 14;
-          rs.field_n.drawParagraph(var6, db.a(true, var15), MatchConditionEntry.a(var16, (byte) 94), var14, var10, 16777215, 1, 1, 0, 0);
+          PowerOfTwoSupport.field_n.drawParagraph(var6, IgnoreListLookupSupport.a(true, var15), MatchConditionEntry.a(var16, (byte) 94), var14, var10, 16777215, 1, 1, 0, 0);
           var16 = var16 + (var9Lifetime1 + 30);
           if (this.field_h == null) {
             this.field_h = new CampaignMenuButton(qf.field_c, var15, var16, var7);
@@ -275,7 +275,7 @@ final class CampaignMenu {
           this.field_h.draw(0);
           var16 += 40;
           if (null == this.field_f) {
-            this.field_f = new CampaignMenuButton(lb.field_c, var15, var16, var7);
+            this.field_f = new CampaignMenuButton(ResourceClientErrorSupport.field_c, var15, var16, var7);
           }
           this.field_f.draw(0);
           return;
@@ -310,8 +310,8 @@ final class CampaignMenu {
         int var4Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          GradientUiRenderer.drawTitledGradientFrame(db.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, MusicPatch.field_m, AgeValidator.field_k, 0, 128, ScrollWidgetContainer.field_V, true, ConsoleValue.field_b);
-          GradientUiRenderer.drawTitledGradientFrame(db.a(true, 32), MatchConditionEntry.a(321, (byte) 94), 305, 92, MusicPatch.field_m, AgeValidator.field_k, 0, 128, SummonAction.field_A, true, ConsoleValue.field_b);
+          GradientUiRenderer.drawTitledGradientFrame(IgnoreListLookupSupport.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, MusicPatch.field_m, AgeValidator.field_k, 0, 128, ScrollWidgetContainer.field_V, true, ConsoleValue.field_b);
+          GradientUiRenderer.drawTitledGradientFrame(IgnoreListLookupSupport.a(true, 32), MatchConditionEntry.a(321, (byte) 94), 305, 92, MusicPatch.field_m, AgeValidator.field_k, 0, 128, SummonAction.field_A, true, ConsoleValue.field_b);
           if (null != this.selectedCampaignEntry) {
             if (this.selectedCampaignEntry.entryId == -1) {
               stackIn_8_0 = SummonAction.field_A;
@@ -319,13 +319,13 @@ final class CampaignMenu {
               stackIn_8_0 = this.selectedCampaignEntry.title;
             }
             var2 = stackIn_8_0;
-            GradientUiRenderer.drawTitledGradientFrame(db.a(true, 346), MatchConditionEntry.a(70, (byte) 94), 262, 343, MusicPatch.field_m, AgeValidator.field_k, 0, 128, (String) (var2), true, ConsoleValue.field_b);
-            stackIn_11_0 = db.a(true, 354);
+            GradientUiRenderer.drawTitledGradientFrame(IgnoreListLookupSupport.a(true, 346), MatchConditionEntry.a(70, (byte) 94), 262, 343, MusicPatch.field_m, AgeValidator.field_k, 0, 128, (String) (var2), true, ConsoleValue.field_b);
+            stackIn_11_0 = IgnoreListLookupSupport.a(true, 354);
             stackIn_11_1 = MatchConditionEntry.a(361, (byte) 94);
             stackIn_11_2 = 246;
             stackIn_11_3 = 41;
             stackIn_11_4 = DisplacedUnitMarker.field_s;
-            if (!IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 354), db.a(true, 354) + 246, MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(361, (byte) 94) + 41)) {
+            if (!IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 354), IgnoreListLookupSupport.a(true, 354) + 246, MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(361, (byte) 94) + 41)) {
               stackIn_12_5 = ConsoleValue.field_b;
             } else {
               stackIn_12_5 = TutorialController.field_e;
@@ -335,8 +335,8 @@ final class CampaignMenu {
             if (this.selectedCampaignEntry.entryId == -1) {
               var3 = ConsoleTokenCursor.field_b;
             }
-            GradientUiRenderer.drawCenteredSolidText(var3, db.a(true, 477), MatchConditionEntry.a(396, (byte) 94), 0, true);
-            var4 = db.a(true, 359);
+            GradientUiRenderer.drawCenteredSolidText(var3, IgnoreListLookupSupport.a(true, 477), MatchConditionEntry.a(396, (byte) 94), 0, true);
+            var4 = IgnoreListLookupSupport.a(true, 359);
             var5 = MatchConditionEntry.a(85, (byte) 94);
             CampaignUnitOverride.a(var4, var4 + 236, var5 + 200, var5, (byte) 83);
             boolean decompiledSharedTail0 = (this.selectedCampaignEntry == null ||
@@ -351,7 +351,7 @@ final class CampaignMenu {
             }
             QuickChatPhraseRepository.popRasterState(param0 ^ -18466);
             var6 = 5;
-            var7 = 5 + rs.field_n.getParagraphHeight(this.selectedCampaignEntry.description, 232, 0);
+            var7 = 5 + PowerOfTwoSupport.field_n.getParagraphHeight(this.selectedCampaignEntry.description, 232, 0);
             DateInputWidget.field_E.drawParagraph(this.selectedCampaignEntry.description, var4 + var6, 200 + var5, -(2 * var6) + 236, var7, 16777215, -1, 1, 0, 0);
           }
           if (param0 != 396) {
@@ -395,7 +395,7 @@ final class CampaignMenu {
             break;
           }
           this.hoveredEntry = (CampaignMenuEntry) (var2);
-          GradientUiRenderer.drawAlignedGradientText(ConsoleExpression.field_u, db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, 1, false);
+          GradientUiRenderer.drawAlignedGradientText(ConsoleExpression.field_u, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, 1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -448,9 +448,9 @@ final class CampaignMenu {
         int var11 = 0;
         int var9Lifetime1;
         try {
-          var5_int = db.a(true, -15 + param2.left);
+          var5_int = IgnoreListLookupSupport.a(true, -15 + param2.left);
           var6 = MatchConditionEntry.a(19 + param2.top, (byte) 94);
-          CampaignUnitOverride.a(db.a(true, param2.left), db.a(true, param2.width + param2.left), MatchConditionEntry.a(param2.top + param2.height, (byte) 94), MatchConditionEntry.a(param2.top, (byte) 94), (byte) 125);
+          CampaignUnitOverride.a(IgnoreListLookupSupport.a(true, param2.left), IgnoreListLookupSupport.a(true, param2.width + param2.left), MatchConditionEntry.a(param2.top + param2.height, (byte) 94), MatchConditionEntry.a(param2.top, (byte) 94), (byte) 125);
           var7 = 54;
           var8 = 128;
           var9 = -1;
@@ -471,12 +471,12 @@ final class CampaignMenu {
             var9Lifetime1 = 1 + param2.godId;
           }
           UnitModelPreview.field_d[var9Lifetime1].drawWithBrightness(var5_int, var6, var8);
-          gt.field_c[var9Lifetime1].drawWithBrightness(-12 + var5_int, var6 - 18, var8);
+          LocalAccountNameSupport.field_c[var9Lifetime1].drawWithBrightness(-12 + var5_int, var6 - 18, var8);
           if (param0 != 13) {
             field_n = (String) null;
           }
           QuickChatPhraseRepository.popRasterState(param0 - 18875);
-          stackIn_17_0 = db.a(true, param2.left);
+          stackIn_17_0 = IgnoreListLookupSupport.a(true, param2.left);
           stackIn_17_1 = MatchConditionEntry.a(param2.top, (byte) 94);
           stackIn_17_2 = param2.width;
           stackIn_17_3 = param2.height;
@@ -488,11 +488,11 @@ final class CampaignMenu {
           }
           GradientUiRenderer.drawHollowGradientFrame(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5, 0, 0);
           if (null != param2.title) {
-            var10 = db.a(true, param2.left + var7);
-            var11 = param2.height / 2 + param2.top + rs.field_n.baselineHeight;
+            var10 = IgnoreListLookupSupport.a(true, param2.left + var7);
+            var11 = param2.height / 2 + param2.top + PowerOfTwoSupport.field_n.baselineHeight;
             GradientUiRenderer.drawTextBackdrop(param2.title, var10, MatchConditionEntry.a(8 + (param2.top + param2.height / 2), (byte) 94), true);
             GradientUiRenderer.drawGradientText(param2.title, var10, MatchConditionEntry.a(param2.height / 2 + param2.top + 8, (byte) 94), ConsoleValue.field_b, true);
-            rs.field_n.drawText(param2.statusText, var10, MatchConditionEntry.a(var11, (byte) 94), 12303291, 1);
+            PowerOfTwoSupport.field_n.drawText(param2.statusText, var10, MatchConditionEntry.a(var11, (byte) 94), 12303291, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -609,17 +609,17 @@ final class CampaignMenu {
                 }
                 var6_int = 8573219;
               }
-              GradientUiRenderer.drawSolidMask(param3.previewSprite, db.a(true, 0), MatchConditionEntry.a(3, (byte) 94), param3.previewSprite.pixelWidth, var6_int);
+              GradientUiRenderer.drawSolidMask(param3.previewSprite, IgnoreListLookupSupport.a(true, 0), MatchConditionEntry.a(3, (byte) 94), param3.previewSprite.pixelWidth, var6_int);
             }
             if (param4) {
-              param3.previewSprite.drawAdditive(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), 128);
+              param3.previewSprite.drawAdditive(IgnoreListLookupSupport.a(true, 0), MatchConditionEntry.a(0, (byte) 94), 128);
             }
             if (param2) {
               if (null == param3.highlightSprite) {
                 param3.highlightSprite = param3.previewSprite.copySprite();
-                param3.highlightSprite.c(228, 130, 4);
+                param3.highlightSprite.adjustColourChannels(228, 130, 4);
               }
-              param3.highlightSprite.drawWithOpacity(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (SocketResourceClient.b(NanoGameClock.field_n << 6, 100) >> 12) + 22);
+              param3.highlightSprite.drawWithOpacity(IgnoreListLookupSupport.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (SocketResourceClient.sine8192(NanoGameClock.field_n << 6, 100) >> 12) + 22);
             }
             if (!param2 ||
               var13 != 0) {
@@ -636,7 +636,7 @@ final class CampaignMenu {
                     var10 = 0;
                     var9 = DeployAction.field_D[this.campaignIndex];
                   } else {
-                    var8 = km.field_h[2];
+                    var8 = ProjectileEffect.field_h[2];
                     var9 = param3.mission.createRewardPreview(-1).icon;
                   }
                   if (var8 == null &&
@@ -730,32 +730,32 @@ final class CampaignMenu {
           }
           if (decompiledSharedTail0) {
             var6 = 164;
-            var7 = nr.field_e.textWidth(AccountRegistrationForm.field_Y) / 2 + 26;
+            var7 = NineSliceFrame.field_e.textWidth(AccountRegistrationForm.field_Y) / 2 + 26;
             if (var6 < var7) {
               var6 = var7;
             }
-            var8 = 26 + nr.field_e.textWidth(PacketBuffer.field_r) / 2;
+            var8 = 26 + NineSliceFrame.field_e.textWidth(PacketBuffer.field_r) / 2;
             if (var6 < var8) {
               var6 = var8;
             }
-            var9 = 26 + nr.field_e.textWidth(lb.field_c) / 2;
+            var9 = 26 + NineSliceFrame.field_e.textWidth(ResourceClientErrorSupport.field_c) / 2;
             if (var9 > var6) {
               var6 = var9;
             }
           }
           var7Lifetime1 = param0 + var6;
-          var8Lifetime1 = rs.field_n.getParagraphHeight(var5, var7Lifetime1, 0);
+          var8Lifetime1 = PowerOfTwoSupport.field_n.getParagraphHeight(var5, var7Lifetime1, 0);
           var9Lifetime1 = 154 + (var8Lifetime1 + 40);
           var10 = -(var7Lifetime1 / 2) + 320;
           var11 = 240 - var9Lifetime1 / 2;
           var12 = var10 + 13;
-          GradientUiRenderer.drawHollowGradientFrame(db.a(true, var10), MatchConditionEntry.a(var11, (byte) 94), var7Lifetime1, var9Lifetime1, MusicPatch.field_m, TutorialController.field_e, 0, 192);
+          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var10), MatchConditionEntry.a(var11, (byte) 94), var7Lifetime1, var9Lifetime1, MusicPatch.field_m, TutorialController.field_e, 0, 192);
           var13 = var7Lifetime1 - 26;
           var14 = var12;
           var15 = 30 + var11;
-          GradientUiRenderer.drawWrappedCenteredGradientText(this.selectedMissionEntry.title, db.a(true, var10 + var7Lifetime1 / 2), MatchConditionEntry.a(var15, (byte) 94), var7Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
+          GradientUiRenderer.drawWrappedCenteredGradientText(this.selectedMissionEntry.title, IgnoreListLookupSupport.a(true, var10 + var7Lifetime1 / 2), MatchConditionEntry.a(var15, (byte) 94), var7Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
           var15 += 14;
-          rs.field_n.drawParagraph(var5, db.a(true, var14), MatchConditionEntry.a(var15, (byte) 94), var13, var9Lifetime1, 16777215, 1, 1, 0, 0);
+          PowerOfTwoSupport.field_n.drawParagraph(var5, IgnoreListLookupSupport.a(true, var14), MatchConditionEntry.a(var15, (byte) 94), var13, var9Lifetime1, 16777215, 1, 1, 0, 0);
           var15 = var15 + (30 + var8Lifetime1);
           if (null == this.field_c) {
             this.field_c = new CampaignMenuButton(AccountRegistrationForm.field_Y, var14, var15, var6);
@@ -768,7 +768,7 @@ final class CampaignMenu {
           var15 += 40;
           this.field_j.draw(0);
           if (this.field_o == null) {
-            this.field_o = new CampaignMenuButton(lb.field_c, var14, var15, var6);
+            this.field_o = new CampaignMenuButton(ResourceClientErrorSupport.field_c, var14, var15, var6);
           }
           this.field_o.draw(param0 ^ 26);
           return;
@@ -832,9 +832,9 @@ final class CampaignMenu {
               }
               if (2 == this.campaignIndex &&
                 channel == 0) {
-                baseGainToApply = 20 + gi.campaignBaseChannelGain;
+                baseGainToApply = 20 + AccountNameCheckStatusSupport.campaignBaseChannelGain;
               } else {
-                baseGainToApply = gi.campaignBaseChannelGain;
+                baseGainToApply = AccountNameCheckStatusSupport.campaignBaseChannelGain;
               }
               baseGain = baseGainToApply;
               targetGains = profile.gains;
@@ -859,7 +859,7 @@ final class CampaignMenu {
         }
     }
 
-    final static void a(byte param0, nr param1, int param2, int param3) {
+    final static void a(byte param0, NineSliceFrame param1, int param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -869,9 +869,9 @@ final class CampaignMenu {
           if (param0 != 123) {
             field_q = (String) null;
           }
-          b.field_k = param3;
+          SpriteSheetDecoder.field_k = param3;
           sg.field_c = param1;
-          ov.field_b = param2;
+          SpectateRoomRequestSupport.field_b = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -973,22 +973,22 @@ final class CampaignMenu {
             }
             if (decompiledSharedTail0) {
               var2_int = 184;
-              var3 = 26 + nr.field_e.textWidth(LineOfSightGrid.field_j) / 2;
+              var3 = 26 + NineSliceFrame.field_e.textWidth(LineOfSightGrid.field_j) / 2;
               if (var3 > var2_int) {
                 var2_int = var3;
               }
-              var4 = nr.field_e.textWidth(pn.field_k) / 2 + 26;
+              var4 = NineSliceFrame.field_e.textWidth(GradientFrame.field_k) / 2 + 26;
               if (var2_int < var4) {
                 var2_int = var4;
               }
             }
             var3Lifetime1 = var2_int + 26;
             var4Lifetime1 = -26 + var3Lifetime1;
-            GradientUiRenderer.drawHollowGradientFrame(db.a(true, 5), MatchConditionEntry.a(4, (byte) 94), var3Lifetime1, 472, MusicPatch.field_m, TutorialController.field_e, 0, 112);
+            GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 5), MatchConditionEntry.a(4, (byte) 94), var3Lifetime1, 472, MusicPatch.field_m, TutorialController.field_e, 0, 112);
             var5 = 18;
             var6 = 34;
             var6Lifetime1 = 34;
-            GradientUiRenderer.drawWrappedCenteredGradientText(this.selectedMissionEntry.title, db.a(true, var3Lifetime1 / 2 + 5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), -20 + var3Lifetime1, ConsoleValue.field_b, true, 40, 1);
+            GradientUiRenderer.drawWrappedCenteredGradientText(this.selectedMissionEntry.title, IgnoreListLookupSupport.a(true, var3Lifetime1 / 2 + 5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), -20 + var3Lifetime1, ConsoleValue.field_b, true, 40, 1);
             var6Lifetime1 += 14;
             var7 = this.selectedMissionEntry.mission.getMapLayout(-127);
             var8 = 0;
@@ -1012,19 +1012,19 @@ final class CampaignMenu {
                 while (var16 < var13[0].length) {
                   var17 = var13[var15_int][-var16 + var13[0].length - 1];
                   var18 = UnitLossCondition.battlefieldThemes[var7.mapTheme].terrainPreviewColours[var17];
-                  var19_int = db.a(true, var8Lifetime1 + var9Lifetime1 * (var14 - var16) + var5);
+                  var19_int = IgnoreListLookupSupport.a(true, var8Lifetime1 + var9Lifetime1 * (var14 - var16) + var5);
                   var20 = MatchConditionEntry.a(var6Lifetime1 + var10Lifetime1 * var15_int, (byte) 94);
-                  SoftwareRaster.f(var19_int, var20, var9Lifetime1, var10Lifetime1, var18);
-                  SoftwareRaster.e(var19_int, var20, var19_int + var9Lifetime1, var20, 16777215, 16);
-                  SoftwareRaster.e(var19_int, 1 + var20, var19_int, var20 + var10Lifetime1, 16777215, 16);
-                  SoftwareRaster.d(1 + var19_int, var10Lifetime1 + (var20 - 1), var9Lifetime1 + var19_int, -1 + (var10Lifetime1 + var20), 0, 16);
-                  SoftwareRaster.e(var9Lifetime1 + (var19_int - 1), var20 + 1, var19_int + var9Lifetime1 - 1, var20 + var10Lifetime1 - 1, 0, 16);
+                  SoftwareRaster.fillRectangle(var19_int, var20, var9Lifetime1, var10Lifetime1, var18);
+                  SoftwareRaster.drawLineBlended(var19_int, var20, var19_int + var9Lifetime1, var20, 16777215, 16);
+                  SoftwareRaster.drawLineBlended(var19_int, 1 + var20, var19_int, var20 + var10Lifetime1, 16777215, 16);
+                  SoftwareRaster.drawLineBlendedInclusive(1 + var19_int, var10Lifetime1 + (var20 - 1), var9Lifetime1 + var19_int, -1 + (var10Lifetime1 + var20), 0, 16);
+                  SoftwareRaster.drawLineBlended(var9Lifetime1 + (var19_int - 1), var20 + 1, var19_int + var9Lifetime1 - 1, var20 + var10Lifetime1 - 1, 0, 16);
                   var16++;
                 }
                 var15_int++;
                 continue scanLoop1;
               }
-              GradientUiRenderer.drawHollowGradientFrame(db.a(true, var5 + var8Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.mapWidth, var7.mapHeight * var10Lifetime1, MusicPatch.field_m, TutorialController.field_e, 0, 0);
+              GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var5 + var8Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.mapWidth, var7.mapHeight * var10Lifetime1, MusicPatch.field_m, TutorialController.field_e, 0, 0);
               var6Lifetime1 = var6Lifetime1 + (124 + ProgressMessageDialog.field_rb[0].canvasHeight);
               stackIn_26_0 = 18;
               break;
@@ -1034,7 +1034,7 @@ final class CampaignMenu {
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var16_ref_tc == null))) {
               var17Lifetime1 = (int)var16_ref_tc.key;
-              ProgressMessageDialog.field_rb[var17Lifetime1].draw(db.a(true, var15_intLifetime1), MatchConditionEntry.a(var6Lifetime1 - ProgressMessageDialog.field_rb[var17Lifetime1].canvasHeight, (byte) 94));
+              ProgressMessageDialog.field_rb[var17Lifetime1].draw(IgnoreListLookupSupport.a(true, var15_intLifetime1), MatchConditionEntry.a(var6Lifetime1 - ProgressMessageDialog.field_rb[var17Lifetime1].canvasHeight, (byte) 94));
               var15_intLifetime1 = var15_intLifetime1 + ProgressMessageDialog.field_rb[var17Lifetime1].canvasWidth;
               stackIn_31_0 = this.selectedMissionEntry;
               if (var29 == 0) {
@@ -1047,8 +1047,8 @@ final class CampaignMenu {
               stackIn_31_0 = this.selectedMissionEntry;
             }
             var15 = stackIn_31_0.mission;
-            rs.field_n.drawParagraph(AccountNameNormalizer.field_b + var15.difficulty, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
-            var6Lifetime1 = var6Lifetime1 + rs.field_n.baselineHeight;
+            PowerOfTwoSupport.field_n.drawParagraph(AccountNameNormalizer.field_b + var15.difficulty, IgnoreListLookupSupport.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
+            var6Lifetime1 = var6Lifetime1 + PowerOfTwoSupport.field_n.baselineHeight;
             var16Lifetime1 = 1;
             if (this.selectedMissionEntry.statusText != null) {
               array$0 = new String[1];
@@ -1064,25 +1064,25 @@ final class CampaignMenu {
               }
               stackIn_37_3[stackIn_37_4] = stackIn_38_5;
               var17_ref_String = EmailCheckResult.a(stackIn_37_0, stackIn_37_1, stackIn_37_2);
-              var16Lifetime1 = rs.field_n.drawParagraph(var17_ref_String, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
-              var18Lifetime1 = rs.field_n.getWrappedWidth(var17_ref_String, var4Lifetime1);
+              var16Lifetime1 = PowerOfTwoSupport.field_n.drawParagraph(var17_ref_String, IgnoreListLookupSupport.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
+              var18Lifetime1 = PowerOfTwoSupport.field_n.getWrappedWidth(var17_ref_String, var4Lifetime1);
               var19_intLifetime1 = this.selectedMissionEntry.score;
               if (1000 >= var19_intLifetime1) {
                 if (var19_intLifetime1 > 500) {
-                  MoveAttackRequest.field_C[1].drawTransparent(db.a(true, 5 + var18Lifetime1 + var5), MatchConditionEntry.a(var6Lifetime1 + rs.field_n.maxAscent - rs.field_n.capitalHeight, (byte) 94));
+                  MoveAttackRequest.field_C[1].drawTransparent(IgnoreListLookupSupport.a(true, 5 + var18Lifetime1 + var5), MatchConditionEntry.a(var6Lifetime1 + PowerOfTwoSupport.field_n.maxAscent - PowerOfTwoSupport.field_n.capitalHeight, (byte) 94));
                 }
                 if ((!(var19_intLifetime1 > 500) ||
                   var29 != 0) &&
                   (!(10 >= var19_intLifetime1))) {
-                  MoveAttackRequest.field_C[2].drawTransparent(db.a(true, var5 + var18Lifetime1 + 5), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
+                  MoveAttackRequest.field_C[2].drawTransparent(IgnoreListLookupSupport.a(true, var5 + var18Lifetime1 + 5), MatchConditionEntry.a(-PowerOfTwoSupport.field_n.capitalHeight + PowerOfTwoSupport.field_n.maxAscent + var6Lifetime1, (byte) 94));
                   if (var29 != 0) {
-                    MoveAttackRequest.field_C[0].drawTransparent(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
+                    MoveAttackRequest.field_C[0].drawTransparent(IgnoreListLookupSupport.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-PowerOfTwoSupport.field_n.capitalHeight + PowerOfTwoSupport.field_n.maxAscent + var6Lifetime1, (byte) 94));
                   }
                 }} else {
-                MoveAttackRequest.field_C[0].drawTransparent(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
+                MoveAttackRequest.field_C[0].drawTransparent(IgnoreListLookupSupport.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-PowerOfTwoSupport.field_n.capitalHeight + PowerOfTwoSupport.field_n.maxAscent + var6Lifetime1, (byte) 94));
               }
             }
-            var6Lifetime1 = var6Lifetime1 + rs.field_n.baselineHeight * (-1 + var16Lifetime1);
+            var6Lifetime1 = var6Lifetime1 + PowerOfTwoSupport.field_n.baselineHeight * (-1 + var16Lifetime1);
             var17Lifetime2 = 276;
             var5Lifetime1 = 18;
             var18Lifetime2 = var5Lifetime1;
@@ -1105,7 +1105,7 @@ final class CampaignMenu {
               if (var24_int >= var23.length) {
                 var5Lifetime1 = 18;
                 var6Lifetime1 += 16;
-                DateInputWidget.field_E.drawParagraph(var15.description, db.a(true, var5Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16777215, 1, 0, 0, 12);
+                DateInputWidget.field_E.drawParagraph(var15.description, IgnoreListLookupSupport.a(true, var5Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16777215, 1, 0, 0, 12);
                 stackIn_70_0 = 391;
                 break;
               }
@@ -1115,13 +1115,13 @@ final class CampaignMenu {
                 if (stackIn_70_0 <= var25_int) {
                   var26_ref_sd = var15.campaign.participants[var25_int];
                   if (var20Lifetime1 > 2) {
-                    var26_ref_sd.coatOfArms.a(false, false, (byte) 68, false, false, false, MatchConditionEntry.a(var17Lifetime2, (byte) 94), var26_ref_sd.displayName, db.a(true, -5 + var18Lifetime2));
+                    var26_ref_sd.coatOfArms.a(false, false, (byte) 68, false, false, false, MatchConditionEntry.a(var17Lifetime2, (byte) 94), var26_ref_sd.displayName, IgnoreListLookupSupport.a(true, -5 + var18Lifetime2));
                   } else {
-                    var26_ref_sd.coatOfArms.a(false, 0, MatchConditionEntry.a(var17Lifetime2, (byte) 94), false, db.a(true, var18Lifetime2 - 5), var26_ref_sd.displayName, false, false, false, param0 - 19764);
+                    var26_ref_sd.coatOfArms.a(false, 0, MatchConditionEntry.a(var17Lifetime2, (byte) 94), false, IgnoreListLookupSupport.a(true, var18Lifetime2 - 5), var26_ref_sd.displayName, false, false, false, param0 - 19764);
                   }
                   var27 = var18Lifetime2 + 60;
                   var28 = 5 + var4Lifetime1 - var27;
-                  rs.field_n.drawParagraph(var26_ref_sd.displayName, db.a(true, var27), MatchConditionEntry.a(var17Lifetime2 + var22, (byte) 94), var28, 20, 16777215, 1, 0, 2, 0);
+                  PowerOfTwoSupport.field_n.drawParagraph(var26_ref_sd.displayName, IgnoreListLookupSupport.a(true, var27), MatchConditionEntry.a(var17Lifetime2 + var22, (byte) 94), var28, 20, 16777215, 1, 0, 2, 0);
                   var17Lifetime2 = var17Lifetime2 - var21;
                 }
                 var24_int++;
@@ -1131,35 +1131,35 @@ final class CampaignMenu {
             }
             var6Lifetime2 = stackIn_70_0;
             var23_ref = var15.createRewardPreview(-1);
-            var24 = km.field_h[2];
+            var24 = ProjectileEffect.field_h[2];
             this.a(var24, 0, 0, 10 + var6Lifetime2, var23_ref.icon, param0 - 19, 1.0f, 18 + var23_ref.icon.canvasWidth / 2);
             if (var23_ref.description != null &&
-              TabbedPanel.a(MatchConditionEntry.a(var6Lifetime2 + 10, (byte) 94), db.a(true, var23_ref.icon.canvasWidth / 2 + 18), 25, false)) {
+              TabbedPanel.a(MatchConditionEntry.a(var6Lifetime2 + 10, (byte) 94), IgnoreListLookupSupport.a(true, var23_ref.icon.canvasWidth / 2 + 18), 25, false)) {
               var25_intLifetime1 = var4Lifetime1 * 2;
               var26 = var3Lifetime1 + 5;
-              if (so.field_b.field_a < var26 + var25_intLifetime1) {
-                var25_intLifetime1 = so.field_b.field_a - var26;
+              if (FixedSquareRootSupport.field_b.width < var26 + var25_intLifetime1) {
+                var25_intLifetime1 = FixedSquareRootSupport.field_b.width - var26;
               }
-              var27Lifetime1 = rs.field_n.getParagraphHeight(var23_ref.description, var25_intLifetime1, 0);
+              var27Lifetime1 = PowerOfTwoSupport.field_n.getParagraphHeight(var23_ref.description, var25_intLifetime1, 0);
               var28Lifetime1 = var6Lifetime2 - var27Lifetime1 / 2;
-              SoftwareRaster.b(db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, var27Lifetime1 + 2, 0, 128);
-              rs.field_n.drawParagraph(var23_ref.description, db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
+              SoftwareRaster.fillRectangleBlended(IgnoreListLookupSupport.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, var27Lifetime1 + 2, 0, 128);
+              PowerOfTwoSupport.field_n.drawParagraph(var23_ref.description, IgnoreListLookupSupport.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
             }
-            rs.field_n.drawParagraph(IntPair.field_l + var23_ref.title, db.a(true, var23_ref.icon.canvasWidth + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.icon.canvasWidth + var4Lifetime1), var23_ref.icon.canvasHeight, 16776960, 0, 0, 1, 0);
+            PowerOfTwoSupport.field_n.drawParagraph(IntPair.field_l + var23_ref.title, IgnoreListLookupSupport.a(true, var23_ref.icon.canvasWidth + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.icon.canvasWidth + var4Lifetime1), var23_ref.icon.canvasHeight, 16776960, 0, 0, 1, 0);
             if (null != var19) {
               var25_intLifetime2 = 100;
               var26Lifetime1 = AiPlanningStrategy.pointerX;
-              var27Lifetime2 = rs.field_n.getParagraphHeight(((CampaignParticipant) (var19)).displayName, var25_intLifetime2, 0);
+              var27Lifetime2 = PowerOfTwoSupport.field_n.getParagraphHeight(((CampaignParticipant) (var19)).displayName, var25_intLifetime2, 0);
               var28Lifetime2 = -(var27Lifetime2 / 2) + (25 + ko.pointerY);
-              SoftwareRaster.b(db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, var27Lifetime2 + 2, 0, 255);
-              rs.field_n.drawParagraph(((CampaignParticipant) (var19)).displayName, db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, 472, 16777215, 1, 1, 0, 0);
+              SoftwareRaster.fillRectangleBlended(IgnoreListLookupSupport.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, var27Lifetime2 + 2, 0, 255);
+              PowerOfTwoSupport.field_n.drawParagraph(((CampaignParticipant) (var19)).displayName, IgnoreListLookupSupport.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, 472, 16777215, 1, 1, 0, 0);
             }
             var6Lifetime3 = 436;
             if (this.field_t == null) {
               this.field_t = new CampaignMenuButton(LineOfSightGrid.field_j, var5Lifetime1, var6Lifetime3, var2_int);
             }
             if (null == this.field_p) {
-              this.field_p = new CampaignMenuButton(pn.field_k, var5Lifetime1, var6Lifetime3, var2_int);
+              this.field_p = new CampaignMenuButton(GradientFrame.field_k, var5Lifetime1, var6Lifetime3, var2_int);
             }
             var25 = DropTargetWidgetContainer.getStoredQuicksave(121);
             if (null != var25 &&
@@ -1208,7 +1208,7 @@ final class CampaignMenu {
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9_int = param4.pixelWidth;
-          param7 = db.a(true, param7);
+          param7 = IgnoreListLookupSupport.a(true, param7);
           param3 = MatchConditionEntry.a(param3, (byte) 94);
           var10 = (13 * param3 + GradientUiRenderer.particlePhasePercent + param7 * 57) % 100;
           if (param6 == (float)param5) {
@@ -1345,7 +1345,7 @@ final class CampaignMenu {
             runtimeException.printStackTrace();
           }
           CombatSandbox.a(sprite, 3);
-          SoftwareRaster.f(0, 0, sprite.pixelWidth, sprite.pixelHeight, 4473924);
+          SoftwareRaster.fillRectangle(0, 0, sprite.pixelWidth, sprite.pixelHeight, 4473924);
           tileIndex = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(tileIndex < previewBattlefield.tiles.length)))) {
@@ -1362,15 +1362,15 @@ final class CampaignMenu {
               tileColour = UnitLossCondition.battlefieldThemes[layout.mapTheme].terrainPreviewColours[terrainType];
               if (null != tile.occupant) {
                 unit = tile.occupant;
-                tileColour = op.field_c[0][unit.ownerPlayer];
+                tileColour = FriendRequestSupport.field_c[0][unit.ownerPlayer];
               }
               left = tileWidth * tileX + leftOffset;
               top = topOffset + tileHeight * tileY;
-              SoftwareRaster.f(left, top, tileWidth, tileHeight, tileColour);
-              SoftwareRaster.e(left, top, left + tileWidth, top, 16777215, 16);
-              SoftwareRaster.e(left, top + 1, left, tileHeight + top, 16777215, 16);
-              SoftwareRaster.d(1 + left, -1 + (tileHeight + top), left + tileWidth, -1 + top + tileHeight, 0, 16);
-              SoftwareRaster.e(left + tileWidth - 1, top + 1, left + (tileWidth - 1), tileHeight + (top - 1), 0, 16);
+              SoftwareRaster.fillRectangle(left, top, tileWidth, tileHeight, tileColour);
+              SoftwareRaster.drawLineBlended(left, top, left + tileWidth, top, 16777215, 16);
+              SoftwareRaster.drawLineBlended(left, top + 1, left, tileHeight + top, 16777215, 16);
+              SoftwareRaster.drawLineBlendedInclusive(1 + left, -1 + (tileHeight + top), left + tileWidth, -1 + top + tileHeight, 0, 16);
+              SoftwareRaster.drawLineBlended(left + tileWidth - 1, top + 1, left + (tileWidth - 1), tileHeight + (top - 1), 0, 16);
               tileIndex++;
               continue;
             }
@@ -1413,7 +1413,7 @@ final class CampaignMenu {
         RuntimeException decompiledCaughtException = null;
         try {
           entry = new CampaignMenuEntry(mission);
-          score = mh.getProfileMissionScore(this.campaignIndex, obfuscationGuard - 119, entry.entryId);
+          score = EffectsGainSupport.getProfileMissionScore(this.campaignIndex, obfuscationGuard - 119, entry.entryId);
           if (~score < obfuscationGuard) {
             entry.statusText = AiInfluenceMap.a(10602, score);
             entry.score = score;
@@ -1464,13 +1464,13 @@ final class CampaignMenu {
             var2 = DropTargetWidgetContainer.getStoredQuicksave(obfuscationGuard + 86);
             if (!BoundedFile.a(var2.campaignIndex, obfuscationGuard + 11906) &&
               QuickChatPhraseRepository.a(27875)) {
-              PaletteRegionMap.field_i = bn.field_g;
+              PaletteRegionMap.field_i = CalendarSupport.field_g;
               CipherPacketBuffer.a(false, 11, obfuscationGuard ^ 1, jt.field_a);
               return;
             }
             this.rebuildMissionEntries(var2.campaignIndex, 53);
             var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
-            l.activeCampaignMission = var3;
+            QuickChatCategoryMenuSupport.activeCampaignMission = var3;
             CipherPacketBuffer.a(true, -11, obfuscationGuard + 1, 0);
             if (ArmiesOfGielinor.obfuscationControl) {
               this.openCampaign(this.selectedCampaignEntry.entryId, true);
@@ -1511,13 +1511,13 @@ final class CampaignMenu {
             return;
           }
           if (2 <= BufferedSocket.field_j &&
-            br.heldKeys[5] &&
-            br.heldKeys[81]) {
-            kw.campaignPacketWord0 = 2297;
-            cg.campaignPacketWord2 = 72584621;
+            CampaignLookupSupport.heldKeys[5] &&
+            CampaignLookupSupport.heldKeys[81]) {
+            ValidationStatusIcon.campaignPacketWord0 = 2297;
+            ScreenWipeTransition.campaignPacketWord2 = 72584621;
             BirthDateChatEnableForm.campaignPacketWord3 = 224;
             ii.campaignPacketWord1 = 4452;
-            var2 = br.getCampaign(this.campaignIndex, (byte) -125).missions;
+            var2 = CampaignLookupSupport.getCampaign(this.campaignIndex, (byte) -125).missions;
             var3_int = 0;
             while (true) {
               if (java.lang.reflect.Array.getLength(var2) > var3_int) {
@@ -1528,7 +1528,7 @@ final class CampaignMenu {
                   continue;
                 }
               } else {
-                pg.playerProfile.campaignProgress = new CampaignProgress();
+                UnitAnimationSelectionSupport.playerProfile.campaignProgress = new CampaignProgress();
               }
               break;
             }
@@ -1548,7 +1548,7 @@ final class CampaignMenu {
                 this.selectMissionOrQuicksaveDialog((byte) 107);
                 return;
               }
-              var2_int = this.regionMap.getRegionAt(AiPlanningStrategy.pointerX - db.a(true, 0), (byte) -79, ko.pointerY - MatchConditionEntry.a(0, (byte) 94));
+              var2_int = this.regionMap.getRegionAt(AiPlanningStrategy.pointerX - IgnoreListLookupSupport.a(true, 0), (byte) -79, ko.pointerY - MatchConditionEntry.a(0, (byte) 94));
               if (-1 < var2_int) {
                 var3 = null;
                 var4_ref = (CampaignMenuEntry) (this.missionEntries.first(1));
@@ -1571,12 +1571,12 @@ final class CampaignMenu {
                   ((CampaignMenuEntry) (var3)).selectable)) {
                   var4_int = 0;
                   if (BufferedSocket.field_j >= 2) {
-                    boolean decompiledSharedTail0 = !(br.heldKeys[81]);
+                    boolean decompiledSharedTail0 = !(CampaignLookupSupport.heldKeys[81]);
                     if (!decompiledSharedTail0) {
-                      cg.campaignPacketWord2 = 72584621;
+                      ScreenWipeTransition.campaignPacketWord2 = 72584621;
                       ii.campaignPacketWord1 = 4452;
                       BirthDateChatEnableForm.campaignPacketWord3 = 224;
-                      kw.campaignPacketWord0 = 2297;
+                      ValidationStatusIcon.campaignPacketWord0 = 2297;
                       UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
                       UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
                       UnitModelViewer.campaignMetricMutationCounter = Math.abs(UnitModelViewer.campaignMetricMutationCounter);
@@ -1588,18 +1588,18 @@ final class CampaignMenu {
                         ) ? var6 : -1) {
                         case 0:
                           ii.campaignPacketWord1 = ii.campaignPacketWord1 - 12;
-                          kw.campaignPacketWord0 = kw.campaignPacketWord0 - 3;
+                          ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 - 3;
                           if (var7 == 0) {
                             break;
                           }
                         case 1:
                           ii.campaignPacketWord1 = ii.campaignPacketWord1 + 3;
-                          kw.campaignPacketWord0 = kw.campaignPacketWord0 + 12;
+                          ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + 12;
                           if (var7 == 0) {
                             break;
                           }
                         case 2:
-                          kw.campaignPacketWord0 = kw.campaignPacketWord0 + 9;
+                          ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + 9;
                           if (var7 == 0) {
                             break;
                           }
@@ -1611,7 +1611,7 @@ final class CampaignMenu {
                         default:
                           throw new IllegalStateException("");
                       }
-                      var5 = b.calculateMissionScore(2, 10, 12, (byte) 25, 3);
+                      var5 = SpriteSheetDecoder.calculateMissionScore(2, 10, 12, (byte) 25, 3);
                       ActionSpell.submitCampaignResult(4, 12, ((CampaignMenuEntry) (var3)).mission, true, var5, 3);
                       this.openCampaign(((CampaignMenuEntry) (var3)).mission.campaign.campaignIndex, true);
                       System.out.println("m  id " + ((CampaignMenuEntry) (var3)).entryId + " " + ((CampaignMenuEntry) (var3)).title);
@@ -1619,7 +1619,7 @@ final class CampaignMenu {
                       decompiledSharedTail0 = (var7 != 0);
                     }
                     if ((decompiledSharedTail0) &&
-                      (br.heldKeys[82])) {
+                      (CampaignLookupSupport.heldKeys[82])) {
                       var4_int = 1;
                       ActionSpell.submitCampaignResult(4, -1, ((CampaignMenuEntry) (var3)).mission, true, 1, -1);
                       this.openCampaign(((CampaignMenuEntry) (var3)).mission.campaign.campaignIndex, true);
@@ -1657,14 +1657,14 @@ final class CampaignMenu {
                   this.field_c.containsPointer((byte) -49)) {
                   var2 = DropTargetWidgetContainer.getStoredQuicksave(86);
                   var3 = QuickChatPhrase.getCampaignMission(((CampaignQuicksave) (var2)).campaignIndex, ((CampaignQuicksave) (var2)).missionId, 0);
-                  l.activeCampaignMission = (CampaignMission) (var3);
+                  QuickChatCategoryMenuSupport.activeCampaignMission = (CampaignMission) (var3);
                   CipherPacketBuffer.a(true, -11, 1, 0);
                 }
                 if (DeployEvent.pointerPressButton == 1 &&
                   null != this.field_j &&
                   this.field_j.containsPointer((byte) 121)) {
                   this.resumeQuicksave(-2);
-                  l.activeCampaignMission = this.selectedMissionEntry.mission;
+                  QuickChatCategoryMenuSupport.activeCampaignMission = this.selectedMissionEntry.mission;
                   CipherPacketBuffer.a(true, -10, 1, 0);
                 }
                 if (DeployEvent.pointerPressButton == 1 &&
@@ -1679,7 +1679,7 @@ final class CampaignMenu {
                   null != this.field_h &&
                   this.field_h.containsPointer((byte) 86)) {
                   this.resumeQuicksave(-2);
-                  l.activeCampaignMission = this.selectedMissionEntry.mission;
+                  QuickChatCategoryMenuSupport.activeCampaignMission = this.selectedMissionEntry.mission;
                   CipherPacketBuffer.a(true, -10, 1, 0);
                 }
                 if (DeployEvent.pointerPressButton == 1 &&
@@ -1695,7 +1695,7 @@ final class CampaignMenu {
               }
               if (null != this.selectedCampaignEntry &&
                 DeployEvent.pointerPressButton == 1 &&
-                IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 354), db.a(true, 600), MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(402, (byte) 94))) {
+                IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 354), IgnoreListLookupSupport.a(true, 600), MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(402, (byte) 94))) {
                 this.openSelectedCampaign(0);
                 return;
               }
@@ -1738,10 +1738,10 @@ final class CampaignMenu {
                 if (BufferedSocket.field_j < 2) {
                   return;
                 }
-                if (!br.heldKeys[81]) {
+                if (!CampaignLookupSupport.heldKeys[81]) {
                   return;
                 }
-                pg.playerProfile.campaignProgress.setResult(65535, ((CampaignMenuEntry) (var2)).entryId, NanoGameClock.field_n % 10 + ((CampaignMenuEntry) (var2)).entryId * 10, this.campaignIndex, ((CampaignMenuEntry) (var2)).entryId * 200 + NanoGameClock.field_n % 200);
+                UnitAnimationSelectionSupport.playerProfile.campaignProgress.setResult(65535, ((CampaignMenuEntry) (var2)).entryId, NanoGameClock.field_n % 10 + ((CampaignMenuEntry) (var2)).entryId * 10, this.campaignIndex, ((CampaignMenuEntry) (var2)).entryId * 200 + NanoGameClock.field_n % 200);
                 this.openCampaign(this.campaignIndex, true);
                 if (var7 == 0) {
                   return;
@@ -1779,7 +1779,7 @@ final class CampaignMenu {
         try {
           var2 = DropTargetWidgetContainer.getStoredQuicksave(91);
           if (null == var2) {
-            l.activeCampaignMission = this.selectedMissionEntry.mission;
+            QuickChatCategoryMenuSupport.activeCampaignMission = this.selectedMissionEntry.mission;
             CipherPacketBuffer.a(true, -10, 1, 0);
             if (var4 != 0) {
               if (this.selectedMissionEntry.entryId == var2.missionId &&
@@ -1857,7 +1857,7 @@ final class CampaignMenu {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              if (mh.getProfileMissionScore(stackIn_18_0.campaignIndex, -120, var6_int) > 0) {
+              if (EffectsGainSupport.getProfileMissionScore(stackIn_18_0.campaignIndex, -120, var6_int) > 0) {
                 var4_int++;
               }
               var6_int++;
@@ -1880,11 +1880,11 @@ final class CampaignMenu {
               QuickChatPhraseRepository.popRasterState(-18862);
               var3.previewSprite = var7;
               if (var9 != 0) {
-                var3.statusText = bn.field_g;
+                var3.statusText = CalendarSupport.field_g;
               }
             }
           } else {
-            var3.statusText = bn.field_g;
+            var3.statusText = CalendarSupport.field_g;
           }
           if (decompiledFrameCompleted0) {
             stackIn_34_0 = this.campaignEntries.get(-64, (long)var3.entryId);
@@ -1941,7 +1941,7 @@ final class CampaignMenu {
         try {
           this.regionMap = new PaletteRegionMap(mu.field_g[campaignIndex][1], 1, 16777215);
           this.missionEntries = new NodeHashTable(32);
-          campaign = br.getCampaign(campaignIndex, (byte) -118);
+          campaign = CampaignLookupSupport.getCampaign(campaignIndex, (byte) -118);
           if (campaign != null) {
             missions = campaign.missions;
             missionIndex = 0;
@@ -2033,7 +2033,7 @@ final class CampaignMenu {
         try {
           if (!BoundedFile.a(campaignIndex, 11906) &&
             QuickChatPhraseRepository.a(27875)) {
-            PaletteRegionMap.field_i = bn.field_g;
+            PaletteRegionMap.field_i = CalendarSupport.field_g;
             CipherPacketBuffer.a(false, 11, 1, jt.field_a);
             return;
           }
@@ -2116,7 +2116,7 @@ final class CampaignMenu {
             } else {
               var4_int = param0 - 16;
             }
-            stackIn_46_0 = (!br.heldKeys[81]) ? 256 : 0;
+            stackIn_46_0 = (!CampaignLookupSupport.heldKeys[81]) ? 256 : 0;
             var5Lifetime1 = stackIn_46_0;
             if (var4_int != -2) {
               BitmapTextWidgetPainter.musicCrossfadeStream.firstSequencer.setChannelGain(var5Lifetime1, var4_int, (byte) -52);
@@ -2163,14 +2163,14 @@ final class CampaignMenu {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2 = mu.field_g[this.campaignIndex][0];
-          var2.drawOpaque(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
+          var2.drawOpaque(IgnoreListLookupSupport.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
           if (null != this.regionMap) {
             try {
               var3 = new boolean[this.missionEntries.size((byte) 117)];
               var4 = (CampaignMenuEntry) (this.missionEntries.first(param0 ^ -25751));
               do {
                 if (var4 == null) {
-                  this.regionMap.drawSelectedRegions((byte) 93, db.a(true, 0), (boolean[]) (var3), MatchConditionEntry.a(0, (byte) 94), mu.field_g[this.campaignIndex][2]);
+                  this.regionMap.drawSelectedRegions((byte) 93, IgnoreListLookupSupport.a(true, 0), (boolean[]) (var3), MatchConditionEntry.a(0, (byte) 94), mu.field_g[this.campaignIndex][2]);
                   break;
                 }
                 ((byte[]) (var3))[var4.entryId] = (byte) (var4.selectable ? 1 : 0);
@@ -2197,8 +2197,8 @@ final class CampaignMenu {
             if (var8 == 0) {
               if (stackIn_96_0 == stackIn_96_1) {
                 if (var5_ref_cq.selectable &&
-                  AiPlanningStrategy.pointerX >= db.a(true, var5_ref_cq.left) &&
-                  AiPlanningStrategy.pointerX <= db.a(true, var5_ref_cq.left + var5_ref_cq.width) &&
+                  AiPlanningStrategy.pointerX >= IgnoreListLookupSupport.a(true, var5_ref_cq.left) &&
+                  AiPlanningStrategy.pointerX <= IgnoreListLookupSupport.a(true, var5_ref_cq.left + var5_ref_cq.width) &&
                   ko.pointerY >= MatchConditionEntry.a(var5_ref_cq.top, (byte) 94) &&
                   ko.pointerY <= MatchConditionEntry.a(var5_ref_cq.height + var5_ref_cq.top, (byte) 94)) {
                   stackIn_38_0 = 1;
@@ -2208,7 +2208,7 @@ final class CampaignMenu {
                 var6Lifetime1 = stackIn_38_0;
                 if (this.regionMap != null) {
                   if (var5_ref_cq.selectable &&
-                    this.regionMap.getRegionAt(AiPlanningStrategy.pointerX - db.a(true, 0), (byte) -128, ko.pointerY - MatchConditionEntry.a(0, (byte) 94)) == var5_ref_cq.entryId) {
+                    this.regionMap.getRegionAt(AiPlanningStrategy.pointerX - IgnoreListLookupSupport.a(true, 0), (byte) -128, ko.pointerY - MatchConditionEntry.a(0, (byte) 94)) == var5_ref_cq.entryId) {
                     stackIn_48_0 = 1;
                   } else {
                     stackIn_48_0 = 0;
@@ -2258,7 +2258,7 @@ final class CampaignMenu {
           }
           if (decompiledNaturalLoopExit0) {
             if (null != var3) {
-              var5 = nr.field_e.textWidth(((CampaignMenuEntry) (var3)).title) >> 2;
+              var5 = NineSliceFrame.field_e.textWidth(((CampaignMenuEntry) (var3)).title) >> 2;
               var6 = ((CampaignMenuEntry) (var3)).left;
               if (var5 + var6 > 630) {
                 var6 = -var5 + 630;
@@ -2266,8 +2266,8 @@ final class CampaignMenu {
               if (-var5 + var6 < 225) {
                 var6 = 225 + var5;
               }
-              GradientUiRenderer.drawCenteredTextBackdrop(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), true);
-              GradientUiRenderer.drawCenteredGradientText(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), ConsoleValue.field_b, true);
+              GradientUiRenderer.drawCenteredTextBackdrop(((CampaignMenuEntry) (var3)).title, IgnoreListLookupSupport.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), true);
+              GradientUiRenderer.drawCenteredGradientText(((CampaignMenuEntry) (var3)).title, IgnoreListLookupSupport.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), ConsoleValue.field_b, true);
               if (null != var4_ref &&
                 ~this.campaignIndex == ~var4_ref.campaignIndex &&
                 var4_ref.missionId == ((CampaignMenuEntry) (var3)).entryId) {
@@ -2277,8 +2277,8 @@ final class CampaignMenu {
               }
               var7 = stackIn_89_0;
               if (var7 != 0) {
-                GradientUiRenderer.drawCenteredTextBackdrop(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(10 + ((CampaignMenuEntry) (var3)).top, (byte) 94), true);
-                GradientUiRenderer.drawCenteredGradientText(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top + 10, (byte) 94), ConsoleValue.field_b, true);
+                GradientUiRenderer.drawCenteredTextBackdrop(qf.field_a, IgnoreListLookupSupport.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(10 + ((CampaignMenuEntry) (var3)).top, (byte) 94), true);
+                GradientUiRenderer.drawCenteredGradientText(qf.field_a, IgnoreListLookupSupport.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top + 10, (byte) 94), ConsoleValue.field_b, true);
               }
               if (this.hoveredEntry != var3) {
                 RadialSummonMenu.playDefaultSoundWithIntGuard(127, ClientUiNode.field_v[1]);
@@ -2336,7 +2336,7 @@ final class CampaignMenu {
               var4 = 50;
               var3_int = 200;
               var6 = 150;
-              var5 = -(var3_int / 2) + so.field_b.field_a / 2;
+              var5 = -(var3_int / 2) + FixedSquareRootSupport.field_b.width / 2;
               var6Lifetime1 = 90;
               var4 = 56;
               var3_int = 278;
@@ -2368,7 +2368,7 @@ final class CampaignMenu {
                   if (!var12.campaign.c((byte) -45) &&
                     QuickChatPhraseRepository.a(27875)) {
                     var11.selectable = false;
-                    var11.statusText = bn.field_g + " (" + var11.statusText + ")";
+                    var11.statusText = CalendarSupport.field_g + " (" + var11.statusText + ")";
                   }
                   var15 = this.renderMissionPreview(var12, var10_ref_sl, 200, 1, 200);
                   var11.previewSprite = var15;
@@ -2377,13 +2377,13 @@ final class CampaignMenu {
               } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var10_ref_RuntimeException = decompiledCaughtException;
-                af.a((Throwable) ((Object) var10_ref_RuntimeException), 93, "Error reading quicksave map.");
-                qh.requestDeleteQuicksave((byte) 27);
+                LoginCredentials.a((Throwable) ((Object) var10_ref_RuntimeException), 93, "Error reading quicksave map.");
+                QuicksaveRequestSupport.requestDeleteQuicksave((byte) 27);
               }
               var10 = 0;
               scanLoop1: while (true) {
                 if (var10 < 3) {
-                  var11_ref = br.getCampaign(var10, (byte) -12);
+                  var11_ref = CampaignLookupSupport.getCampaign(var10, (byte) -12);
                   if (var16 == 0) {
                     if (var11_ref != null) {
                       var12_ref = this.buildCampaignEntry(true, var11_ref);

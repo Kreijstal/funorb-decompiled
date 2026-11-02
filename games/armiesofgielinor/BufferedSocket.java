@@ -37,9 +37,9 @@ final class BufferedSocket implements Runnable {
         return;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_h = null;
-        if (param0 > 72) {
+        if (obfuscationGuard > 72) {
           field_m = null;
           field_i = null;
           field_a = null;
@@ -244,7 +244,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            af.a((Throwable) ((Object) var1_ref), -65, (String) null);
+            LoginCredentials.a((Throwable) ((Object) var1_ref), -65, (String) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -256,16 +256,16 @@ final class BufferedSocket implements Runnable {
     final static void b(boolean param0) {
         int var1 = 0;
         if (ResourceProtocolClient.effectsGain <= 32) {
-          mh.setEffectsGain(0, (byte) -109);
+          EffectsGainSupport.setEffectsGain(0, (byte) -109);
         } else {
           var1 = ResourceProtocolClient.effectsGain % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          mh.setEffectsGain(ResourceProtocolClient.effectsGain - var1, (byte) -109);
+          EffectsGainSupport.setEffectsGain(ResourceProtocolClient.effectsGain - var1, (byte) -109);
         }
         if (param0) {
-          BufferedSocket.b((byte) -114);
+          BufferedSocket.releaseStatics((byte) -114);
           return;
         }
     }

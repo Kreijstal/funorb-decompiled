@@ -106,8 +106,8 @@ final class MusicCrossfadeStream extends PcmStream {
               if (secondGain != 256) {
                 if (null != this.firstSamples &&
                   sampleCount <= this.firstSamples.length) {
-                  vm.a(this.firstSamples, 0, sampleCount);
-                  vm.a(this.secondSamples, 0, sampleCount);
+                  ArrayBlockSupport.clearInts(this.firstSamples, 0, sampleCount);
+                  ArrayBlockSupport.clearInts(this.secondSamples, 0, sampleCount);
                 } else {
                   this.firstSamples = new int[sampleCount];
                   this.secondSamples = new int[sampleCount];
@@ -138,7 +138,7 @@ final class MusicCrossfadeStream extends PcmStream {
             }
             if (this.firstSamples != null &&
               sampleCount <= this.firstSamples.length) {
-              vm.a(this.firstSamples, 0, sampleCount);
+              ArrayBlockSupport.clearInts(this.firstSamples, 0, sampleCount);
             } else {
               this.secondSamples = new int[sampleCount];
               this.firstSamples = new int[sampleCount];
@@ -185,17 +185,17 @@ final class MusicCrossfadeStream extends PcmStream {
             field_u = (String) null;
           }
           if (BitmapTextWidgetPainter.musicCrossfadeStream != null) {
-            bk.selectMusicTrack(channelGain, 1048576, track, obfuscationGuard + 20566, loop);
+            MusicTrackSelectionSupport.selectMusicTrack(channelGain, 1048576, track, obfuscationGuard + 20566, loop);
           }
           if (null != LobbyRoom.directMusicSequencer) {
-            playerLock = l.musicPlayer;
+            playerLock = QuickChatCategoryMenuSupport.musicPlayer;
             synchronized (playerLock) {
               LobbyRoom.directMusicSequencer.setChannelGain(channelGain, -1, (byte) -91);
               if (MapLayout.currentDirectMusicTrack == track) {
                 return;
               }
               LobbyRoom.directMusicSequencer.stop(7);
-              l.musicPlayer.flush();
+              QuickChatCategoryMenuSupport.musicPlayer.flush();
               MapLayout.currentDirectMusicTrack = track;
               if (MapLayout.currentDirectMusicTrack != null) {
                 LobbyRoom.directMusicSequencer.playTrack(2, loop, MapLayout.currentDirectMusicTrack);
@@ -434,8 +434,8 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    public static void e(int param0) {
-        if (param0 != 256) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != 256) {
           field_u = (String) null;
         }
         field_u = null;
@@ -463,13 +463,13 @@ final class MusicCrossfadeStream extends PcmStream {
         boolean stackIn_28_1 = false;
         CampaignUnitOverride.a(-640 + SoftwareRaster.width >> 1, 640 + SoftwareRaster.width >> 1, SoftwareRaster.height, 0, (byte) 91);
         if (ModalDialogHost.field_J > 0) {
-          if (null != dh.field_k) {
-            dh.field_k.drawPixels(NumericDateInputWidget.field_T.x, 0);
+          if (null != ImageProducerSurface.field_k) {
+            ImageProducerSurface.field_k.drawPixels(NumericDateInputWidget.field_T.x, 0);
           }
           stackIn_6_0 = NumericDateInputWidget.field_T;
           stackIn_7_1 = (param1) && (!WhirlpoolHasher.field_g);
           ((ClientUiComponent) (Object) stackIn_6_0).draw(stackIn_7_1, 20);
-          stackIn_10_0 = ov.field_i;
+          stackIn_10_0 = SpectateRoomRequestSupport.field_i;
           stackIn_11_1 = (param1) && (!WhirlpoolHasher.field_g);
           ((ClientUiComponent) (Object) stackIn_10_0).draw(stackIn_11_1, 20);
         }
@@ -478,13 +478,13 @@ final class MusicCrossfadeStream extends PcmStream {
         }
         if (!(0 >= PreparedAction.field_r) ||
           !(InstructionsPanel.field_D <= 0)) {
-          if (dh.field_k != null) {
-            dh.field_k.drawPixels(BitmapTextWidgetPainter.field_a.x, 0);
+          if (ImageProducerSurface.field_k != null) {
+            ImageProducerSurface.field_k.drawPixels(BitmapTextWidgetPainter.field_a.x, 0);
           }
           stackIn_23_0 = BitmapTextWidgetPainter.field_a;
           stackIn_24_1 = (param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_23_0).draw(stackIn_24_1, 20);
-          stackIn_27_0 = pd.field_c;
+          stackIn_27_0 = PasswordLengthSupport.field_c;
           stackIn_28_1 = (param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_27_0).draw(stackIn_28_1, 20);
         }

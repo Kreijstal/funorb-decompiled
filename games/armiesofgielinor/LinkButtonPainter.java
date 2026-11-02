@@ -11,10 +11,10 @@ final class LinkButtonPainter implements WidgetPainter {
     static BattleGraphicsAssets field_f;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_h = null;
         field_a = null;
-        if (param0 < -9) {
+        if (obfuscationGuard < -9) {
           field_f = null;
           field_d = (PcmSample[][]) null;
           field_g = null;
@@ -114,7 +114,7 @@ final class LinkButtonPainter implements WidgetPainter {
 
     final static void a(boolean param0, boolean param1, int param2) {
         String var4 = (String) null;
-        rn.openLoginDialog(3, (String) null, param0, param1);
+        ProceduralMapSupport.openLoginDialog(3, (String) null, param0, param1);
         if (param2 <= 4) {
           LinkButtonPainter.a(46, (byte) -104);
         }

@@ -50,7 +50,7 @@ final class NodeHashTable {
         IntrusiveNode var4 = this.buckets[(int)((long)(this.bucketCount - 1) & key)];
         this.lookupNext = var4.next;
         if (obfuscationGuard > -8) {
-          NodeHashTable.a(-7);
+          NodeHashTable.releaseStatics(-7);
         }
         while (var4 != this.lookupNext) {
           if (~key == ~this.lookupNext.key) {
@@ -136,9 +136,9 @@ final class NodeHashTable {
         return var2;
     }
 
-    public static void a(int param0) {
-        if (param0 >= -2) {
-          NodeHashTable.a(-78);
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard >= -2) {
+          NodeHashTable.releaseStatics(-78);
         }
         field_b = null;
     }

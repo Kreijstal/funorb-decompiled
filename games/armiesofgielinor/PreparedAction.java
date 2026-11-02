@@ -34,7 +34,7 @@ abstract class PreparedAction extends IntrusiveNode {
             var6 = param0[var5].length;
             array$1 = new int[var6];
             BestScoreStrategy.unitAnimationVariants[param2][var5] = array$1;
-            da.a(var5, 0, param0, param1, param2);
+            LocalAccountSupport.a(var5, 0, param0, param1, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,9 +57,9 @@ abstract class PreparedAction extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_k = null;
-        if (param0 != 28038) {
+        if (obfuscationGuard != 28038) {
           return;
         }
         field_p = null;
@@ -96,7 +96,7 @@ abstract class PreparedAction extends IntrusiveNode {
           } else {
             stackIn_4_0 = 0;
           }
-          ds.a(stackIn_4_0, 115);
+          PointerCaptureSupport.a(stackIn_4_0, 115);
           if (param0 < 65) {
             field_r = -94;
           }

@@ -29,7 +29,7 @@ final class SpriteScrollBar {
         try {
           param0 -= 16;
           AttackEvent.field_E.drawHalfSize(param0 + 48, 12 + param1);
-          km.field_h[0].drawHalfSize(46 + param0, param1 + 10);
+          ProjectileEffect.field_h[0].drawHalfSize(46 + param0, param1 + 10);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nb.S(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -54,7 +54,7 @@ final class SpriteScrollBar {
         if (this.orientation == 0) {
           var2 = this.length;
           var3 = this.arrowSprites[0].canvasHeight;
-          SoftwareRaster.b(this.x, this.y, var2, var3, this.colours[0]);
+          SoftwareRaster.drawRectangleOutline(this.x, this.y, var2, var3, this.colours[0]);
           if (obfuscationGuard != 1043) {
             this.drawTrack(61);
             return;
@@ -65,7 +65,7 @@ final class SpriteScrollBar {
           var3 = this.length;
           var2 = this.arrowSprites[0].canvasWidth;
         }
-        SoftwareRaster.b(this.x, this.y, var2, var3, this.colours[0]);
+        SoftwareRaster.drawRectangleOutline(this.x, this.y, var2, var3, this.colours[0]);
         if (obfuscationGuard == 1043) {
           return;
         }
@@ -128,9 +128,9 @@ final class SpriteScrollBar {
         return var5 != 0;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_h = null;
-        int var1 = -89 / ((param0 + 18) / 38);
+        int var1 = -89 / ((obfuscationGuard + 18) / 38);
         nameCheckResultConsumed = null;
     }
 
@@ -669,12 +669,12 @@ final class SpriteScrollBar {
           if (this.scrollOffset + this.visibleExtent == this.contentExtent) {
             thumbHeight = this.getArrowY(0, 0) - thumbY;
           }
-          SoftwareRaster.f(thumbX, thumbY, thumbWidth, thumbHeight, this.colours[1]);
-          SoftwareRaster.b(thumbX, thumbY, thumbWidth, thumbHeight, this.colours[0]);
+          SoftwareRaster.fillRectangle(thumbX, thumbY, thumbWidth, thumbHeight, this.colours[1]);
+          SoftwareRaster.drawRectangleOutline(thumbX, thumbY, thumbWidth, thumbHeight, this.colours[0]);
           return;
         }
-        SoftwareRaster.f(thumbX, thumbY, thumbWidth, thumbHeight, this.colours[1]);
-        SoftwareRaster.b(thumbX, thumbY, thumbWidth, thumbHeight, this.colours[0]);
+        SoftwareRaster.fillRectangle(thumbX, thumbY, thumbWidth, thumbHeight, this.colours[1]);
+        SoftwareRaster.drawRectangleOutline(thumbX, thumbY, thumbWidth, thumbHeight, this.colours[0]);
     }
 
     SpriteScrollBar(RgbSprite[] arrowSprites, int[] colours, int orientation) {

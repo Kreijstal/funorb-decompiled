@@ -7,9 +7,9 @@ final class wm {
     static String chatRecipientNameKey;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_c = null;
-        if (param0 == -10743) {
+        if (obfuscationGuard == -10743) {
           field_a = null;
           field_d = null;
           chatRecipientNameKey = null;
@@ -21,7 +21,7 @@ final class wm {
         chatRecipientNameKey = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, nr param6, int param7, byte param8, int param9, int param10, int param11, nr param12, int param13, BitmapFont param14, int param15, int param16, BitmapFont param17, int param18, int param19, nr param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, NineSliceFrame param6, int param7, byte param8, int param9, int param10, int param11, NineSliceFrame param12, int param13, BitmapFont param14, int param15, int param16, BitmapFont param17, int param18, int param19, NineSliceFrame param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -36,11 +36,11 @@ final class wm {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          br.a(param14, param9, 333, param17);
+          CampaignLookupSupport.a(param14, param9, 333, param17);
           if (param8 <= 80) {
             return;
           }
-          uc.a(param11, param19, param5, false, param4);
+          SpellDefinitionTable.a(param11, param19, param5, false, param4);
           ContentTransitionDialog.c(param0, param2, 56);
           qf.a(param6, param10, param7, param12, param15, -125);
           ConsoleCommand.a(param16, (byte) 96, param13, param20);
@@ -122,7 +122,7 @@ final class wm {
           var9 = 0;
           if (!NodeIterator.field_a &&
             AnimationPlayer.chatHistoryCategoryLimit > var5) {
-            var10_int = kp.getChatFilter(var8_ref_mo.channelId, -125);
+            var10_int = MarkerSliderPainter.getChatFilter(var8_ref_mo.channelId, -125);
             if (var8_ref_mo.getFilterPriority(true) >= var10_int && (var8_ref_mo.systemMessage ||
               !IndexedSpriteBase.isIgnoredAccount(var8_ref_mo.accountName, -3404))) {
               var9 = 1;
@@ -134,7 +134,7 @@ final class wm {
               if (null == var8_ref_mo.rowComponent) {
                 s.field_d = s.field_d + 1;
               }
-              var10 = af.formatChatPrefix(var8_ref_mo, (byte) 103);
+              var10 = LoginCredentials.formatChatPrefix(var8_ref_mo, (byte) 103);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_mo.text);
               var12 = PlayerProfile.a(var8_ref_mo, -5);
               var8_ref_mo.rowComponent = new ClientUiComponent(0L, SpellConfirmationDialog.field_i, var11);
@@ -152,7 +152,7 @@ final class wm {
         var7Lifetime1 = 0;
         var8 = 0;
         if (param2 <= 126) {
-          wm.a(44);
+          wm.releaseStatics(44);
         }
         while (BitmapTextWidgetPainter.chatHistorySize > var8) {
           var9_ref_mo = DefeatPlayerConsoleCommand.chatHistory[var8];
@@ -178,7 +178,7 @@ final class wm {
             MoveEvent.field_J = false;
             cu.field_c = true;
           }
-          if (hf.textChatActive) {
+          if (ClientStateChecksumSupport.textChatActive) {
             if (null == UnitCycler.field_g) {
               var9Lifetime1 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
               if (cu.field_c) {
@@ -211,7 +211,7 @@ final class wm {
           MoveEvent.field_J = false;
           cu.field_c = true;
         }
-        if (hf.textChatActive) {
+        if (ClientStateChecksumSupport.textChatActive) {
           if (null == UnitCycler.field_g) {
             var9Lifetime2 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
             if (!cu.field_c) {

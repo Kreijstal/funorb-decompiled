@@ -34,7 +34,7 @@ abstract class ActionRequest extends IntrusiveNode {
           return;
         }
         int var6 = param4 * ResourceRequest.field_y + param1;
-        rv.a(false, param5, param2, var6);
+        LocalizedUrlSupport.a(false, param5, param2, var6);
     }
 
     final String formatIllegalMove(int obfuscationGuard, String[] messageParts, String actionKind) {

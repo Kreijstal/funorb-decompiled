@@ -13,9 +13,9 @@ final class nt extends IntrusiveNode {
     int field_s;
     int field_m;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_p = null;
-        if (param0 != 97) {
+        if (obfuscationGuard != 97) {
           field_p = (String) null;
         }
     }
@@ -42,7 +42,7 @@ final class nt extends IntrusiveNode {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 894) {
-            nt.a((byte) 82);
+            nt.releaseStatics((byte) 82);
           }
           if (cu.field_a) {
             var5_int = param1 & 3;

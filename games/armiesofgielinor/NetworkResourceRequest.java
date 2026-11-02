@@ -9,8 +9,8 @@ final class NetworkResourceRequest extends ResourceRequest {
     static GameplayController field_C;
     static String field_G;
 
-    public static void h(int param0) {
-        if (param0 != -29390) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != -29390) {
           return;
         }
         field_G = null;

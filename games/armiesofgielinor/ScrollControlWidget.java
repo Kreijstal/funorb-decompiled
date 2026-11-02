@@ -201,7 +201,7 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
             }
             if (keyCode == 102) {
               if (this.verticalEnabled &&
-                br.heldKeys[82]) {
+                CampaignLookupSupport.heldKeys[82]) {
                 this.adjustVerticalPosition(0, obfuscationGuard ^ -12215);
                 return true;
               }
@@ -212,7 +212,7 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
             } else {
               if (keyCode == 103) {
                 if (this.verticalEnabled &&
-                  br.heldKeys[82]) {
+                  CampaignLookupSupport.heldKeys[82]) {
                   this.adjustVerticalPosition(65536, obfuscationGuard + 12215);
                   return true;
                 }
@@ -384,7 +384,7 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
 
     final static boolean c(int param0, int param1) {
         if (param0 != 0) {
-          ScrollControlWidget.l(106);
+          ScrollControlWidget.releaseStatics(106);
           if (!(param1 < WhirlpoolHasher.unitDefinitions.length)) {
             return false;
           }
@@ -696,9 +696,9 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
         }
     }
 
-    public static void l(int param0) {
-        if (param0 != -24061) {
-          ScrollControlWidget.l(-117);
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != -24061) {
+          ScrollControlWidget.releaseStatics(-117);
           field_bb = null;
           field_J = null;
           return;

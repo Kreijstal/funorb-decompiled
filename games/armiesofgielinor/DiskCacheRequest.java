@@ -69,12 +69,12 @@ final class DiskCacheRequest extends ResourceRequest {
         return this.bytes;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_J = null;
         field_G = null;
         field_I = null;
         unitProjectionVariants = null;
-        if (param0 < 107) {
+        if (obfuscationGuard < 107) {
           return;
         }
         field_H = null;

@@ -35,12 +35,12 @@ final class SocialListPanel extends ClientUiComponent {
         this.layoutControls((byte) -110, scrollbarWidth, buttonHeight, gap);
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_Pb = null;
         field_Qb = null;
         field_Ob = null;
-        if (param0 != -8291) {
-          SocialListPanel.l(-93);
+        if (obfuscationGuard != -8291) {
+          SocialListPanel.releaseStatics(-93);
           field_Jb = null;
           quickChatCategories = null;
           field_Mb = null;
@@ -72,7 +72,7 @@ final class SocialListPanel extends ClientUiComponent {
 
     final static int k(int param0) {
         if (param0 <= -38) {
-          return nr.field_e.baselineHeight - nr.field_e.maxDescent + (-(nr.field_e.maxAscent >> 1) + (nr.field_e.xHeight >> 2) + 3);
+          return NineSliceFrame.field_e.baselineHeight - NineSliceFrame.field_e.maxDescent + (-(NineSliceFrame.field_e.maxAscent >> 1) + (NineSliceFrame.field_e.xHeight >> 2) + 3);
         }
         return 60;
     }

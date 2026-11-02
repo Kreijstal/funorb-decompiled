@@ -53,7 +53,7 @@ final class ScrollWidgetContainer extends ArrayWidgetContainer {
           if (!obfuscationGuard) {
             field_N = (String) null;
           }
-          stackIn_3_0 = de.readTieredSignedInt(-102, packet, 4, 14, 30, 20);
+          stackIn_3_0 = SpellCastErrorSupport.readTieredSignedInt(-102, packet, 4, 14, 30, 20);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -819,13 +819,13 @@ final class ScrollWidgetContainer extends ArrayWidgetContainer {
         this.updateThumbSizes((byte) -3);
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_U = null;
         field_P = null;
         field_T = null;
         field_N = null;
         field_R = null;
-        if (param0) {
+        if (obfuscationGuard) {
           return;
         }
         field_J = null;

@@ -149,7 +149,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             }
           }
           if (this.field_l) {
-            if (this.field_v > vi.monotonicMillis(param0 + 26060)) {
+            if (this.field_v > MonotonicClockSupport.monotonicMillis(param0 + 26060)) {
               return;
             }
             var2_ref = (ResourceRequest) (this.field_t.first(1));
@@ -166,7 +166,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               }
               var2_ref = (ResourceRequest) (this.field_t.next((byte) 127));
             }
-            this.field_v = 1000L + vi.monotonicMillis(65);
+            this.field_v = 1000L + MonotonicClockSupport.monotonicMillis(65);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -353,9 +353,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
             try {
               if (var5 != null &&
                 var18.length > 2) {
-                ab.field_b.reset();
-                ab.field_b.update(var5, 0, -2 + var18.length);
-                var6_int = (int)ab.field_b.getValue();
+                AlphanumericTextSupport.field_b.reset();
+                AlphanumericTextSupport.field_b.update(var5, 0, -2 + var18.length);
+                var6_int = (int)AlphanumericTextSupport.field_b.getValue();
                 if (var6_int != this.index.groupCrcs[param1]) {
                   throw new RuntimeException();
                 }
@@ -404,9 +404,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              ab.field_b.reset();
-              ab.field_b.update(var5, 0, var18.length - 2);
-              var6_int = (int)ab.field_b.getValue();
+              AlphanumericTextSupport.field_b.reset();
+              AlphanumericTextSupport.field_b.update(var5, 0, var18.length - 2);
+              var6_int = (int)AlphanumericTextSupport.field_b.getValue();
               if (var6_int != this.index.groupCrcs[param1]) {
                 throw new RuntimeException();
               }

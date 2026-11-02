@@ -15,29 +15,29 @@ final class RadialSummonItem {
     final static int getCampaignPacketWord2(boolean obfuscationGuard) {
         if (obfuscationGuard) {
           field_e = (String) null;
-          return cg.campaignPacketWord2;
+          return ScreenWipeTransition.campaignPacketWord2;
         }
-        return cg.campaignPacketWord2;
+        return ScreenWipeTransition.campaignPacketWord2;
     }
 
     final static String a(int param0) {
         if (param0 != -1) {
           return (String) null;
         }
-        if (du.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
+        if (SocketFactory.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
           return qk.field_b;
         }
-        return ah.loginPassword;
+        return LocalCoatSupport.loginPassword;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_e = null;
-        if (param0 > 52) {
+        if (obfuscationGuard > 52) {
           field_f = null;
           field_h = (int[][]) null;
           return;
         }
-        RadialSummonItem.b(125);
+        RadialSummonItem.releaseStatics(125);
         field_f = null;
         field_h = (int[][]) null;
     }
@@ -77,11 +77,11 @@ final class RadialSummonItem {
             if (var6 == 0) {
               if (this.choiceId != 81) {
                 DeployAction.field_x[this.choiceId].drawTransparent(this.offsetX + originX - 20, this.offsetY + originY - 20);
-                km.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
+                ProjectileEffect.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
                 return;
               }
               DeployAction.field_x[4].drawTransparent(-20 + this.offsetX + originX, -20 + (originY + this.offsetY));
-              km.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
+              ProjectileEffect.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
               return;
             }
           }
@@ -94,14 +94,14 @@ final class RadialSummonItem {
           } else {
             DeployAction.field_x[this.choiceId].drawTransparent(this.offsetX + originX - 20, this.offsetY + originY - 20);
           }
-          km.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
+          ProjectileEffect.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
           if (var6 != 0) {
             StandardContentDialog.field_ob.drawTintedGrayscale(this.offsetX + (originX - 20), -20 + originY + this.offsetY, GradientUiRenderer.scaleColour(TutorialLayout.field_g[this.godGroupId], 128));
             if (this.choiceId != 81) {
               DeployAction.field_x[this.choiceId].drawWithBrightness(-20 + this.offsetX + originX, -20 + (originY + this.offsetY), 0);
             }
             DeployAction.field_x[4].drawWithBrightness(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
-            km.field_h[0].drawWithBrightness(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
+            ProjectileEffect.field_h[0].drawWithBrightness(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
           }
           return;
         }
@@ -114,7 +114,7 @@ final class RadialSummonItem {
             DeployAction.field_x[4].drawWithBrightness(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
           }
         }
-        km.field_h[0].drawWithBrightness(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
+        ProjectileEffect.field_h[0].drawWithBrightness(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -197,9 +197,9 @@ final class RadialSummonItem {
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           SpellConfirmationDialog.field_a = param7;
-          t.field_b = param3;
+          ReloadPageSupport.field_b = param3;
           ChannelBaseVolumeConsoleCommand.localAccountId = -1L;
-          tq.gameOptionCount = param3.length;
+          NineSliceSpriteSupport.gameOptionCount = param3.length;
           NumericDateInputWidget.roomSetup = null;
           SpellCastAction.field_s = false;
           if (param8 >= -52) {
@@ -210,12 +210,12 @@ final class RadialSummonItem {
           var10_int = 0;
           var11 = 0;
           do {
-            if (!(t.field_b.length > var11)) {
+            if (!(ReloadPageSupport.field_b.length > var11)) {
               var10_int = (7 + var10_int) / 8;
               ClientContextMenu.field_d = new byte[var10_int];
               break;
             }
-            var10_int = var10_int + (t.field_b[var11] & 255);
+            var10_int = var10_int + (ReloadPageSupport.field_b[var11] & 255);
             var11++;
           } while (var12 == 0);
           if (param9.children == null) {
@@ -223,10 +223,10 @@ final class RadialSummonItem {
           }
           SummonAction.lobbyPlayerOrder = param9.children;
           SummonAction.lobbyPlayerOrder.clear(80);
-          oi.lobbyPlayersById = new DualNodeHashTable(param4);
+          CheckMarkWidgetPainter.lobbyPlayersById = new DualNodeHashTable(param4);
           AnimationPlayer.pendingJoinRequestCount = 0;
           SummonAction.field_s = -1;
-          oo.watchedRoomId = 0;
+          MembershipExpansionScreen.watchedRoomId = 0;
           GlobalSpell.field_g = -1;
           if (null == param1.children) {
             param1.children = new NodeDeque();
@@ -241,7 +241,7 @@ final class RadialSummonItem {
           ModalDialog.currentRoomPlayers.clear(122);
           UnitCycler.currentRoomPlayersById = new DualNodeHashTable(param0);
           RegistrationAgreementPane.lobbyNotificationDuration = param2;
-          ph.field_d = 0L;
+          AccountNameCharacterSupport.field_d = 0L;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

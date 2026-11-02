@@ -34,7 +34,7 @@ final class tf extends IntrusiveNode {
             var5 = var9;
             var6 = param0;
             var7 = param4;
-            var9[var6] = var7 + rn.bitwiseAnd(var9[var6] >> 1, 8355711);
+            var9[var6] = var7 + ProceduralMapSupport.bitwiseAnd(var9[var6] >> 1, 8355711);
             param0++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -51,10 +51,10 @@ final class tf extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_m = null;
         field_p = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return;
         }
         field_m = (String) null;

@@ -19,7 +19,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
           if (BattleCharacter.pointerInputHandler == null) {
             return;
           }
-          av.pointerIdleTicks = 0;
+          PointerIdleState.pointerIdleTicks = 0;
           DiskCacheRequest.livePointerX = -1;
           ResourceArchive.livePointerY = -1;
           DropTargetWidgetContainer.pointerChanged = true;
@@ -56,10 +56,10 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (BattleCharacter.pointerInputHandler != null) {
-            av.pointerIdleTicks = 0;
+            PointerIdleState.pointerIdleTicks = 0;
             QuickChatMenu.lastPointerPressX = event.getX();
             BoundedFile.lastPointerPressY = event.getY();
-            vi.monotonicMillis(-112);
+            MonotonicClockSupport.monotonicMillis(-112);
             if (javax.swing.SwingUtilities.isRightMouseButton(event)) {
               ArchiveIndex.pressedPointerButton = 2;
               GridWidgetContainer.heldPointerButton = 2;
@@ -108,7 +108,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
           if (BattleCharacter.pointerInputHandler == null) {
             return;
           }
-          av.pointerIdleTicks = 0;
+          PointerIdleState.pointerIdleTicks = 0;
           DiskCacheRequest.livePointerX = event.getX();
           ResourceArchive.livePointerY = event.getY();
           DropTargetWidgetContainer.pointerChanged = true;
@@ -140,12 +140,12 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
     final static void a(int param0) {
         if (param0 == 4) {
           PaletteRegionMap.field_g.advance(-99);
-          ug.field_b = ug.field_b + 1;
+          ProxyAuthenticationRequiredException.field_b = ProxyAuthenticationRequiredException.field_b + 1;
           return;
         }
         field_a = (ProgressDialog) null;
         PaletteRegionMap.field_g.advance(-99);
-        ug.field_b = ug.field_b + 1;
+        ProxyAuthenticationRequiredException.field_b = ProxyAuthenticationRequiredException.field_b + 1;
     }
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent event) {
@@ -158,7 +158,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
           if (BattleCharacter.pointerInputHandler == null) {
             return;
           }
-          av.pointerIdleTicks = 0;
+          PointerIdleState.pointerIdleTicks = 0;
           DiskCacheRequest.livePointerX = event.getX();
           ResourceArchive.livePointerY = event.getY();
           DropTargetWidgetContainer.pointerChanged = true;
@@ -180,8 +180,8 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
     public final void focusGained(java.awt.event.FocusEvent event) {
     }
 
-    public static void a(byte param0) {
-        if (param0 != -79) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != -79) {
           return;
         }
         field_e = null;
@@ -195,7 +195,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
     public final synchronized void mouseEntered(java.awt.event.MouseEvent event) {
         try {
           if (BattleCharacter.pointerInputHandler != null) {
-            av.pointerIdleTicks = 0;
+            PointerIdleState.pointerIdleTicks = 0;
             DiskCacheRequest.livePointerX = event.getX();
             ResourceArchive.livePointerY = event.getY();
             DropTargetWidgetContainer.pointerChanged = true;
@@ -224,7 +224,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != BattleCharacter.pointerInputHandler) {
-            av.pointerIdleTicks = 0;
+            PointerIdleState.pointerIdleTicks = 0;
             GridWidgetContainer.heldPointerButton = 0;
             DropTargetWidgetContainer.pointerChanged = true;
             var2_int = event.getModifiers();

@@ -172,12 +172,12 @@ final class GradientUiRenderer {
         for (y = 0; y < height; y++) {
           if (y >= cornerSprites[0].pixelHeight) {
             if (y < var7) {
-              SoftwareRaster.d(x, var6, x + width - 1, var6, 0, opacity);
+              SoftwareRaster.drawLineBlendedInclusive(x, var6, x + width - 1, var6, 0, opacity);
             } else {
-              SoftwareRaster.d(x + cornerSprites[0].pixelWidth, var6, x + var8 - 1, var6, 0, opacity);
+              SoftwareRaster.drawLineBlendedInclusive(x + cornerSprites[0].pixelWidth, var6, x + var8 - 1, var6, 0, opacity);
             }
           } else {
-            SoftwareRaster.d(x + cornerSprites[0].pixelWidth, var6, x + var8 - 1, var6, 0, opacity);
+            SoftwareRaster.drawLineBlendedInclusive(x + cornerSprites[0].pixelWidth, var6, x + var8 - 1, var6, 0, opacity);
           }
           var6++;
         }
@@ -193,11 +193,11 @@ final class GradientUiRenderer {
         for (var8 = 0; var8 < particleCount; var8++) {
           var9 = (double)phasePercent * 3.141592653589793 * 2.0 / 100.0;
           var11 = (double)var8 * 3.141592653589793 * 2.0 / (double)particleCount;
-          SoftwareRaster.a((int)(((double)centerX + (Math.cos(var9) * Math.cos(var11) * (double)orbitRadius - Math.sin(var9) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)centerY + (Math.sin(var9) * Math.cos(var11) * (double)var7 + Math.cos(var9) * Math.sin(var11) * (double)orbitRadius)) * 16.0), stampRadius16, 15, particlePalettes[paletteIndex]);
+          SoftwareRaster.fillRadialPaletteCircle((int)(((double)centerX + (Math.cos(var9) * Math.cos(var11) * (double)orbitRadius - Math.sin(var9) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)centerY + (Math.sin(var9) * Math.cos(var11) * (double)var7 + Math.cos(var9) * Math.sin(var11) * (double)orbitRadius)) * 16.0), stampRadius16, 15, particlePalettes[paletteIndex]);
           var9Lifetime1 = (double)(phasePercent + 5) * 3.141592653589793 * 2.0 / 100.0;
-          SoftwareRaster.a((int)(((double)centerX + (Math.cos(var9Lifetime1) * Math.cos(var11) * (double)orbitRadius - Math.sin(var9Lifetime1) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)centerY + (Math.sin(var9Lifetime1) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime1) * Math.sin(var11) * (double)orbitRadius)) * 16.0), stampRadius16, 31, particlePalettes[paletteIndex]);
+          SoftwareRaster.fillRadialPaletteCircle((int)(((double)centerX + (Math.cos(var9Lifetime1) * Math.cos(var11) * (double)orbitRadius - Math.sin(var9Lifetime1) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)centerY + (Math.sin(var9Lifetime1) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime1) * Math.sin(var11) * (double)orbitRadius)) * 16.0), stampRadius16, 31, particlePalettes[paletteIndex]);
           var9Lifetime2 = (double)(phasePercent + 10) * 3.141592653589793 * 2.0 / 100.0;
-          SoftwareRaster.a((int)(((double)centerX + (Math.cos(var9Lifetime2) * Math.cos(var11) * (double)orbitRadius - Math.sin(var9Lifetime2) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)centerY + (Math.sin(var9Lifetime2) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime2) * Math.sin(var11) * (double)orbitRadius)) * 16.0), stampRadius16, 63, particlePalettes[paletteIndex]);
+          SoftwareRaster.fillRadialPaletteCircle((int)(((double)centerX + (Math.cos(var9Lifetime2) * Math.cos(var11) * (double)orbitRadius - Math.sin(var9Lifetime2) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)centerY + (Math.sin(var9Lifetime2) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime2) * Math.sin(var11) * (double)orbitRadius)) * 16.0), stampRadius16, 63, particlePalettes[paletteIndex]);
         }
     }
 
@@ -301,8 +301,8 @@ final class GradientUiRenderer {
           if ((textPixelWidth & 1) == 1) {
             textPixelWidth++;
           }
-          textMask.b();
-          SoftwareRaster.b();
+          textMask.bindAsRasterTarget();
+          SoftwareRaster.clearPixels();
           font.drawText(text, 0, font.maxAscent + 3, 0, -1);
           SoftwareRaster.setTarget(savedPixels, savedWidth, savedHeight);
           GradientUiRenderer.restoreClip();
@@ -448,8 +448,8 @@ final class GradientUiRenderer {
           if ((textPixelWidth & 1) == 1) {
             textPixelWidth++;
           }
-          textMask.b();
-          SoftwareRaster.b();
+          textMask.bindAsRasterTarget();
+          SoftwareRaster.clearPixels();
           font.drawText(text, 0, font.maxAscent + 3, 0, -1);
           SoftwareRaster.setTarget(savedPixels, savedWidth, savedHeight);
           GradientUiRenderer.restoreClip();
@@ -1130,7 +1130,7 @@ final class GradientUiRenderer {
         int pixelColour;
         int rowColour;
         if (underlayOpacity > 0) {
-          SoftwareRaster.b(x, y, width, height, underlayColour, underlayOpacity);
+          SoftwareRaster.fillRectangleBlended(x, y, width, height, underlayColour, underlayOpacity);
         }
         if (x >= SoftwareRaster.clipLeft &&
           y >= SoftwareRaster.clipTop &&
@@ -1172,7 +1172,7 @@ final class GradientUiRenderer {
                   if ((pixelColour & -65281) == 0) {
                     pixelColour = GradientUiRenderer.shadeColour(rowColour, pixelColour >> 8, 0, 0);
                   }
-                  SoftwareRaster.a(destinationX, y + row, pixelColour);
+                  SoftwareRaster.setPixel(destinationX, y + row, pixelColour);
                 }
                 columnCounter++;
                 sourceIndex++;
@@ -1191,7 +1191,7 @@ final class GradientUiRenderer {
                     if ((pixelColour & -65281) == 0) {
                       pixelColour = GradientUiRenderer.shadeColour(rowColour, pixelColour >> 8, 0, 0);
                     }
-                    SoftwareRaster.a(destinationX, y + row, pixelColour);
+                    SoftwareRaster.setPixel(destinationX, y + row, pixelColour);
                     columnCounter++;
                     destinationX++;
                   }

@@ -86,7 +86,7 @@ class ClientUiComponent extends ClientUiNode {
           if (null != ToggleWidget.currentRoom) {
             if (ModalDialogHost.field_J <= 0) {
               if (PreparedAction.field_r <= 0) {
-                if (mj.field_c > InstructionsPanel.field_D) {
+                if (AudioShutdownSupport.field_c > InstructionsPanel.field_D) {
                   if (InstructionsPanel.field_D == 0) {
                     RadialSummonMenu.a(false, false);
                   }
@@ -107,7 +107,7 @@ class ClientUiComponent extends ClientUiNode {
                 if (InstructionsPanel.field_D > 0) {
                   InstructionsPanel.field_D = InstructionsPanel.field_D - 1;
                 } else {
-                  if (mj.field_c > ModalDialogHost.field_J) {
+                  if (AudioShutdownSupport.field_c > ModalDialogHost.field_J) {
                     if (ModalDialogHost.field_J == 0) {
                       DeployEvent.h(14570);
                     }
@@ -120,7 +120,7 @@ class ClientUiComponent extends ClientUiNode {
                 ModalDialogHost.field_J = ModalDialogHost.field_J - 1;
               } else {
                 if (InstructionsPanel.field_D <= 0) {
-                  if (mj.field_c > PreparedAction.field_r) {
+                  if (AudioShutdownSupport.field_c > PreparedAction.field_r) {
                     if (0 == PreparedAction.field_r) {
                       RadialSummonMenu.a(false, true);
                     }
@@ -414,7 +414,7 @@ class ClientUiComponent extends ClientUiNode {
         savedClipTop = SoftwareRaster.clipTop;
         savedClipRight = SoftwareRaster.clipRight;
         savedClipBottom = SoftwareRaster.clipBottom;
-        SoftwareRaster.b(this.screenX, this.screenY, this.screenX + this.width, this.screenY + this.height);
+        SoftwareRaster.intersectClip(this.screenX, this.screenY, this.screenX + this.width, this.screenY + this.height);
         pressCaptured = capturePress ? 1 : 0;
         if (!SectorCacheStore.field_e &&
           inputAllowed &&
@@ -550,7 +550,7 @@ class ClientUiComponent extends ClientUiNode {
         ClientUiComponent var14 = null;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          tq.field_c = SoftwareRaster.width;
+          NineSliceSpriteSupport.field_c = SoftwareRaster.width;
           CachedArchiveProvider.field_p = SoftwareRaster.height;
           if (param1) {
             stackIn_4_0 = PreparedAction.field_r;
@@ -559,26 +559,26 @@ class ClientUiComponent extends ClientUiNode {
           }
           AnimationSequence.a(stackIn_4_0, -106);
           DebugConsole.field_w.setLayout(-40 + BitmapTextWidgetPainter.field_a.height - 2, (byte) -125, 0, BitmapTextWidgetPainter.field_a.width, 0);
-          PrintVictoryConditionsConsoleCommand.field_E.setBounds(jn.field_d, -20500, eb.field_c.width, 0, 0);
+          PrintVictoryConditionsConsoleCommand.field_E.setBounds(jn.field_d, -20500, BitCountSupport.field_c.width, 0, 0);
           stackIn_6_0 = MatchingTextValidator.field_l;
           stackIn_6_1 = 18;
           stackIn_6_2 = -20500;
-          stackIn_6_3 = eb.field_c.width;
-          if (fh.field_c) {
+          stackIn_6_3 = BitCountSupport.field_c.width;
+          if (GrowableIntArray.field_c) {
             stackIn_7_4 = 2 + jn.field_c + 42;
           } else {
             stackIn_7_4 = 0;
           }
           ((ClientUiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + jn.field_d, 0);
-          SpellCastEvent.field_D.setBounds(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.width - jn.field_c - 2));
-          bu.field_a.setLayout(0, false, eb.field_c.width, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + eb.field_c.height)));
+          SpellCastEvent.field_D.setBounds(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (BitCountSupport.field_c.width - jn.field_c - 2));
+          bu.field_a.setLayout(0, false, BitCountSupport.field_c.width, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + BitCountSupport.field_c.height)));
           SocialListPanel.field_Lb.setBounds(40, -20500, BitmapTextWidgetPainter.field_a.width, BitmapTextWidgetPainter.field_a.height - 40, 0);
-          AccountRegistrationForm.field_F.setBounds(30, -20500, pd.field_c.width, 0, 0);
+          AccountRegistrationForm.field_F.setBounds(30, -20500, PasswordLengthSupport.field_c.width, 0, 0);
           if (param0 < 13) {
             return;
           }
-          MusicPatchUsage.gameOptionsGrid.setBounds(-2 + pd.field_c.height - 70, -20500, pd.field_c.width, 30, 0);
-          var2_int = 3 + tq.gameOptionCount;
+          MusicPatchUsage.gameOptionsGrid.setBounds(-2 + PasswordLengthSupport.field_c.height - 70, -20500, PasswordLengthSupport.field_c.width, 30, 0);
+          var2_int = 3 + NineSliceSpriteSupport.gameOptionCount;
           if (2 > lm.field_e.length) {
             var2_int--;
           }
@@ -595,7 +595,7 @@ class ClientUiComponent extends ClientUiNode {
           }
           BattleTutorial.field_d.setBounds(var4, -20500, MusicPatchUsage.gameOptionsGrid.width - 5 - 5, 5, 5);
           var5 = 5 + var4 + 2;
-          for (var6 = 0; 4 + tq.gameOptionCount > var6; var6++) {
+          for (var6 = 0; 4 + NineSliceSpriteSupport.gameOptionCount > var6; var6++) {
             if ((var6 != 1 ||
               !(lm.field_e.length < 2)) && (3 != var6 ||
               !(1 >= BoundedFile.field_h))) {
@@ -663,7 +663,7 @@ class ClientUiComponent extends ClientUiNode {
                       var9.width = 0;
                     }
                   }
-                  var9_int = -5 + (pd.field_c.width + (-var8 + 2));
+                  var9_int = -5 + (PasswordLengthSupport.field_c.width + (-var8 + 2));
                   var10 = pu.field_k[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
@@ -675,12 +675,12 @@ class ClientUiComponent extends ClientUiNode {
             }
           }
           LabeledWidgetContainer.field_R.setBounds(-134 + (SoftwareRaster.height - 10), -20500, 360, 10, SoftwareRaster.width - 360 >> 1);
-          bk.field_f.setBounds(24, -20500, LabeledWidgetContainer.field_R.width, 0, 0);
+          MusicTrackSelectionSupport.field_f.setBounds(24, -20500, LabeledWidgetContainer.field_R.width, 0, 0);
           LoginForm.field_K.setBounds(-24 + LabeledWidgetContainer.field_R.height, -20500, LabeledWidgetContainer.field_R.width, 24, 0);
-          LoginForm.field_K.skinSprites = tq.a(11579568, false, LoginForm.field_K.height, 1, 3, 8421504);
+          LoginForm.field_K.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(11579568, false, LoginForm.field_K.height, 1, 3, 8421504);
           IconTextComponent.field_Kb.setBounds(LoginForm.field_K.height - 36, -20500, LoginForm.field_K.width - 10, 5, 5);
           ConsolePanel.field_m.setBounds(24, -20500, 80, -24 + LoginForm.field_K.height - 5, (LoginForm.field_K.width - 80) / 2);
-          mj.a((byte) 120);
+          AudioShutdownSupport.a((byte) 120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -783,7 +783,7 @@ class ClientUiComponent extends ClientUiNode {
         var13 = SoftwareRaster.clipTop;
         var14 = SoftwareRaster.clipRight;
         var15 = SoftwareRaster.clipBottom;
-        SoftwareRaster.b(this.screenX, this.screenY, this.width + this.screenX, this.height + this.screenY);
+        SoftwareRaster.intersectClip(this.screenX, this.screenY, this.width + this.screenX, this.height + this.screenY);
         inputAllowed = inputAllowed & this.inputEnabled;
         if (!this.inheritParentVisualState) {
           inheritedSelection = this.selected;
@@ -994,9 +994,9 @@ class ClientUiComponent extends ClientUiNode {
         return var3;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_Q = null;
-        int var1 = 52 / ((param0 + 55) / 44);
+        int var1 = 52 / ((obfuscationGuard + 55) / 44);
         field_K = (int[][]) null;
         field_zb = null;
         field_lb = null;

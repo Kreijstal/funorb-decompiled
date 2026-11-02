@@ -41,7 +41,7 @@ final class ConsoleExpression extends IntrusiveNode {
     }
 
     public final String toString() {
-        if (this.kind == rn.consoleCallKind) {
+        if (this.kind == ProceduralMapSupport.consoleCallKind) {
           return "Method{" + this.text + "}";
         }
         if (PrintVictoryConditionsConsoleCommand.consoleNumberKind == this.kind) {
@@ -50,7 +50,7 @@ final class ConsoleExpression extends IntrusiveNode {
         if (EquipmentBattleTutorial.consoleBooleanKind == this.kind) {
           return "Boolean{" + this.text + "}";
         }
-        if (this.kind == hf.consoleCharacterKind) {
+        if (this.kind == ClientStateChecksumSupport.consoleCharacterKind) {
           return "Char{" + this.text + "}";
         }
         if (this.kind == BattleTutorial.consoleStringKind) {
@@ -72,10 +72,10 @@ final class ConsoleExpression extends IntrusiveNode {
         CharSequence var5 = null;
         try {
           RegistrationAgreementPane.chatRecipientName = recipientName;
-          rs.outgoingChatChannel = 2;
+          PowerOfTwoSupport.outgoingChatChannel = 2;
           var5 = (CharSequence) ((Object) recipientName);
           wm.chatRecipientNameKey = AccountNameNormalizer.normalize(var5, false);
-          dj.chatRecipientAccountId = accountId;
+          TextSplitSupport.chatRecipientAccountId = accountId;
           TrianglePulse.openDefaultQuickChatMenu((byte) 118);
           if (obfuscationGuard != 1) {
             field_r = (String) null;
@@ -114,7 +114,7 @@ final class ConsoleExpression extends IntrusiveNode {
             if (obfuscationGuard != 1) {
               ConsoleExpression.updateQuickChatHelp(64, true);
             }
-            if (this.kind == rn.consoleCallKind) {
+            if (this.kind == ProceduralMapSupport.consoleCallKind) {
               argumentValues = new ConsoleValue[this.arguments.size(false)];
               argumentValuesAlias = argumentValues;
               argumentIndex = 0;
@@ -149,7 +149,7 @@ final class ConsoleExpression extends IntrusiveNode {
               booleanValue = new ConsoleValue(this.text.equals("true"));
               return booleanValue;
             }
-            if (hf.consoleCharacterKind == this.kind) {
+            if (ClientStateChecksumSupport.consoleCharacterKind == this.kind) {
               characterText = this.text.substring(1, -1 + this.text.length());
               if (characterText.length() != 1) {
                 throw new ConsoleEvaluationException("Invalid char value: " + characterText);
@@ -181,12 +181,12 @@ final class ConsoleExpression extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_n = null;
         field_p = null;
         field_l = null;
         field_r = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return;
         }
         field_t = null;

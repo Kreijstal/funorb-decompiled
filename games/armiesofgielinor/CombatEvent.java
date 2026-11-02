@@ -22,9 +22,9 @@ final class CombatEvent extends GameEvent {
     static String field_O;
     private int attackerAnimationCount;
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_A = null;
-        if (param0 < -122) {
+        if (obfuscationGuard < -122) {
           field_O = null;
           field_L = null;
           field_I = null;
@@ -45,7 +45,7 @@ final class CombatEvent extends GameEvent {
           var3.writeShort(true, roomId);
           return;
         }
-        CombatEvent.e((byte) 75);
+        CombatEvent.releaseStatics((byte) 75);
         var3.writeShort(true, roomId);
     }
 
@@ -127,7 +127,7 @@ final class CombatEvent extends GameEvent {
             }
           }
           param2.d(this.battleId, 4);
-          if (!uc.field_a) {
+          if (!SpellDefinitionTable.field_a) {
             stackIn_34_0 = this.a((byte) -39, param2, param0, true);
             return stackIn_34_0;
           }
@@ -159,7 +159,7 @@ final class CombatEvent extends GameEvent {
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
         try {
           battlefield.queueCombatConsequences(this.attackerY, this.targetDeltaX, this.attackerDies, this.attackerX, this.targetDeltaY, 111, this.defenderDies, this.attackerDamage, this.defenderDamage, this.unseenUnitType);
-          hf.recomputeClientStateChecksum(battlefield, (byte) 9, true);
+          ClientStateChecksumSupport.recomputeClientStateChecksum(battlefield, (byte) 9, true);
           if (obfuscationGuard != -26661) {
             this.targetDeltaY = -38;
           }

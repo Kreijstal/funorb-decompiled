@@ -13,10 +13,10 @@ final class iw extends IntrusiveNode {
     int field_t;
     int field_q;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_o = null;
         field_p = null;
-        if (param0 != -25771) {
+        if (obfuscationGuard != -25771) {
           field_l = (ResourceArchive) null;
           field_l = null;
           return;

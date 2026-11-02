@@ -28,7 +28,7 @@ final class DeathEvent extends GameEvent {
             var5.writeByte(1, param0.field_l.length);
             var5.writeBytes(param0.field_l, 0, param0.field_l.length, 86);
           }
-          var5.b((byte) -39, var4);
+          var5.appendChecksum((byte) -39, var4);
           var5.position = var5.position - 4;
           param0.field_o = var5.readInt(param2 ^ 25523);
           var5.writeByteLengthPrefix(-var4 + var5.position, 5930);
@@ -51,9 +51,9 @@ final class DeathEvent extends GameEvent {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_A = null;
-        if (param0 >= -80) {
+        if (obfuscationGuard >= -80) {
           field_A = (RgbSprite) null;
         }
     }
@@ -153,10 +153,10 @@ final class DeathEvent extends GameEvent {
           NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
           NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
           NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
-          DropTargetWidgetContainer.field_J.b();
-          SoftwareRaster.b();
+          DropTargetWidgetContainer.field_J.bindAsRasterTarget();
+          SoftwareRaster.clearPixels();
           MatchSetupPanel.a(-1, -1, param1, -1, false, param0, -1, false, 0, false, 0, param2);
-          NumericDateInputWidget.field_P.b();
+          NumericDateInputWidget.field_P.bindAsRasterTarget();
           if (param3 == 17813) {
             stackIn_4_0 = ArchiveProvider.a((byte) 107, DropTargetWidgetContainer.field_J);
             return (RgbSprite) ((Object) stackIn_4_0);
@@ -221,9 +221,9 @@ final class DeathEvent extends GameEvent {
           if (this.unit != null) {
             stackIn_8_0 = this.unit;
             stackIn_9_1 = !(this.field_z);
-            ((Unit) (Object) stackIn_8_0).a(stackIn_9_1, (byte) 105);
+            ((Unit) (Object) stackIn_8_0).removeFromPlay(stackIn_9_1, (byte) 105);
           }
-          hf.recomputeClientStateChecksum(battlefield, (byte) 9, true);
+          ClientStateChecksumSupport.recomputeClientStateChecksum(battlefield, (byte) 9, true);
           if (obfuscationGuard == -26661) {
             return;
           }

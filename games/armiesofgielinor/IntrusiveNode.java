@@ -45,19 +45,19 @@ class IntrusiveNode {
           }
           if (param2 == 0 ||
             var7[-CipherPacketBuffer.currentBattlefield.mapWidth + param4] > var9) {
-            SoftwareRaster.d(-40 + param5, param3, param5, param3 - 20, 65280, var6);
+            SoftwareRaster.drawLineBlendedInclusive(-40 + param5, param3, param5, param3 - 20, 65280, var6);
           }
           if (-1 + ConsoleParseException.field_c == param2 ||
             var7[param4 + ResourceRequest.field_y] > var9) {
-            SoftwareRaster.d(40 + param5, param3, param5, param3 + 20, 65280, var6);
+            SoftwareRaster.drawLineBlendedInclusive(40 + param5, param3, param5, param3 + 20, 65280, var6);
           }
           if (0 == param1 ||
             var7[param4 - 1] > var9) {
-            SoftwareRaster.d(-40 + param5, param3, param5, param3 + 20, 65280, var6);
+            SoftwareRaster.drawLineBlendedInclusive(-40 + param5, param3, param5, param3 + 20, 65280, var6);
           }
           if (ResourceRequest.field_y - 1 == param1 ||
             var9 < var7[param4 + 1]) {
-            SoftwareRaster.d(param5 + 40, param3, param5, -20 + param3, 65280, var6);
+            SoftwareRaster.drawLineBlendedInclusive(param5 + 40, param3, param5, -20 + param3, 65280, var6);
           }
         }
         if (NetworkResourceRequest.field_C.field_gc <= -1) {
@@ -81,13 +81,13 @@ class IntrusiveNode {
                     break regionExit1;
                   }
                   if (param2 == NetworkResourceRequest.field_C.field_eb - NetworkResourceRequest.field_C.field_ic) {
-                    SoftwareRaster.d(param5 - 40, param3, param5, param3 - 20, 65280, var6);
+                    SoftwareRaster.drawLineBlendedInclusive(param5 - 40, param3, param5, param3 - 20, 65280, var6);
                   }
                   if (param2 == NetworkResourceRequest.field_C.field_eb) {
-                    SoftwareRaster.d(40 + param5, param3, param5, param3 + 20, 65280, var6);
+                    SoftwareRaster.drawLineBlendedInclusive(40 + param5, param3, param5, param3 + 20, 65280, var6);
                   }
-                  SoftwareRaster.d(param5 - 40, param3, param5, 20 + param3, 65280, var6);
-                  SoftwareRaster.d(40 + param5, param3, param5, param3 - 20, 65280, var6);
+                  SoftwareRaster.drawLineBlendedInclusive(param5 - 40, param3, param5, 20 + param3, 65280, var6);
+                  SoftwareRaster.drawLineBlendedInclusive(40 + param5, param3, param5, param3 - 20, 65280, var6);
                   break regionExit1;
                 case 0:
                   if (param2 != NetworkResourceRequest.field_C.field_eb) {
@@ -99,15 +99,15 @@ class IntrusiveNode {
                   if (NetworkResourceRequest.field_C.field_cc + NetworkResourceRequest.field_C.field_ic < param1) {
                     break regionExit1;
                   }
-                  SoftwareRaster.d(param5 - 40, param3, param5, param3 - 20, 65280, var6);
-                  SoftwareRaster.d(40 + param5, param3, param5, 20 + param3, 65280, var6);
+                  SoftwareRaster.drawLineBlendedInclusive(param5 - 40, param3, param5, param3 - 20, 65280, var6);
+                  SoftwareRaster.drawLineBlendedInclusive(40 + param5, param3, param5, 20 + param3, 65280, var6);
                   if (NetworkResourceRequest.field_C.field_cc == param1) {
-                    SoftwareRaster.d(-40 + param5, param3, param5, 20 + param3, 65280, var6);
+                    SoftwareRaster.drawLineBlendedInclusive(-40 + param5, param3, param5, 20 + param3, 65280, var6);
                   }
                   if (NetworkResourceRequest.field_C.field_cc + NetworkResourceRequest.field_C.field_ic != param1) {
                     break regionExit1;
                   }
-                  SoftwareRaster.d(param5 + 40, param3, param5, param3 - 20, 65280, var6);
+                  SoftwareRaster.drawLineBlendedInclusive(param5 + 40, param3, param5, param3 - 20, 65280, var6);
                   break regionExit1;
                 case 2:
                   if (NetworkResourceRequest.field_C.field_cc != param1) {
@@ -120,13 +120,13 @@ class IntrusiveNode {
                     break regionExit1;
                   }
                   if (param2 == NetworkResourceRequest.field_C.field_eb) {
-                    SoftwareRaster.d(param5 - 40, param3, param5, param3 - 20, 65280, var6);
+                    SoftwareRaster.drawLineBlendedInclusive(param5 - 40, param3, param5, param3 - 20, 65280, var6);
                   }
                   if (param2 == NetworkResourceRequest.field_C.field_ic + NetworkResourceRequest.field_C.field_eb) {
-                    SoftwareRaster.d(param5 + 40, param3, param5, 20 + param3, 65280, var6);
+                    SoftwareRaster.drawLineBlendedInclusive(param5 + 40, param3, param5, 20 + param3, 65280, var6);
                   }
-                  SoftwareRaster.d(param5 - 40, param3, param5, param3 + 20, 65280, var6);
-                  SoftwareRaster.d(40 + param5, param3, param5, -20 + param3, 65280, var6);
+                  SoftwareRaster.drawLineBlendedInclusive(param5 - 40, param3, param5, param3 + 20, 65280, var6);
+                  SoftwareRaster.drawLineBlendedInclusive(40 + param5, param3, param5, -20 + param3, 65280, var6);
                   break regionExit1;
                 default:
                   break regionExit1;
@@ -140,15 +140,15 @@ class IntrusiveNode {
                   if (param1 < -NetworkResourceRequest.field_C.field_ic + NetworkResourceRequest.field_C.field_cc) {
                     break regionExit1;
                   }
-                  SoftwareRaster.d(-40 + param5, param3, param5, param3 - 20, 65280, var6);
-                  SoftwareRaster.d(40 + param5, param3, param5, param3 + 20, 65280, var6);
+                  SoftwareRaster.drawLineBlendedInclusive(-40 + param5, param3, param5, param3 - 20, 65280, var6);
+                  SoftwareRaster.drawLineBlendedInclusive(40 + param5, param3, param5, param3 + 20, 65280, var6);
                   if (-NetworkResourceRequest.field_C.field_ic + NetworkResourceRequest.field_C.field_cc == param1) {
-                    SoftwareRaster.d(-40 + param5, param3, param5, 20 + param3, 65280, var6);
+                    SoftwareRaster.drawLineBlendedInclusive(-40 + param5, param3, param5, 20 + param3, 65280, var6);
                   }
                   if (param1 != NetworkResourceRequest.field_C.field_cc) {
                     break regionExit1;
                   }
-                  SoftwareRaster.d(40 + param5, param3, param5, -20 + param3, 65280, var6);
+                  SoftwareRaster.drawLineBlendedInclusive(40 + param5, param3, param5, -20 + param3, 65280, var6);
                   break regionExit1;
               }
             }
@@ -160,19 +160,19 @@ class IntrusiveNode {
               Math.abs(var11) <= NetworkResourceRequest.field_C.field_ic) {
               if (param2 == 0 ||
                 var11 == NetworkResourceRequest.field_C.field_ic) {
-                SoftwareRaster.d(-40 + param5, param3, param5, param3 - 20, var9, var6);
+                SoftwareRaster.drawLineBlendedInclusive(-40 + param5, param3, param5, param3 - 20, var9, var6);
               }
               if (param2 == -1 + ConsoleParseException.field_c ||
                 -var11 == NetworkResourceRequest.field_C.field_ic) {
-                SoftwareRaster.d(param5 + 40, param3, param5, param3 + 20, var9, var6);
+                SoftwareRaster.drawLineBlendedInclusive(param5 + 40, param3, param5, param3 + 20, var9, var6);
               }
               if (param1 == 0 ||
                 var10 == NetworkResourceRequest.field_C.field_ic) {
-                SoftwareRaster.d(-40 + param5, param3, param5, 20 + param3, var9, var6);
+                SoftwareRaster.drawLineBlendedInclusive(-40 + param5, param3, param5, 20 + param3, var9, var6);
               }
               if ((param1 == -1 + ResourceRequest.field_y ||
                 -var10 == NetworkResourceRequest.field_C.field_ic)) {
-                SoftwareRaster.d(40 + param5, param3, param5, -20 + param3, var9, var6);
+                SoftwareRaster.drawLineBlendedInclusive(40 + param5, param3, param5, -20 + param3, var9, var6);
               }
               break regionExit1;
             }
@@ -192,7 +192,7 @@ class IntrusiveNode {
         return true;
     }
 
-    final static void a(int param0, rs param1, byte param2) {
+    final static void a(int param0, PowerOfTwoSupport param1, byte param2) {
         CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
@@ -202,7 +202,7 @@ class IntrusiveNode {
           var4 = var5.position;
           var5.writeByte(1, 1);
           var5.writeByte(1, param1.field_r);
-          var5.c((byte) 60, param1.field_l);
+          var5.writeSignedSmart((byte) 60, param1.field_l);
           if (param2 != 105) {
             IntrusiveNode.a((java.applet.Applet) null, (String) null, (byte) 58, (String) null, -67L);
           }
@@ -210,17 +210,17 @@ class IntrusiveNode {
           var5.writeInt((byte) -53, param1.field_m);
           var5.writeInt((byte) -63, param1.field_s);
           var5.writeInt((byte) -109, param1.field_u);
-          var5.b((byte) -39, var4);
+          var5.appendChecksum((byte) -39, var4);
           var5.writeByteLengthPrefix(-var4 + var5.position, param2 + 5825);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tc.OB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_e = null;
         field_g = null;
-        if (param0 != 4) {
+        if (obfuscationGuard != 4) {
           field_c = (String) null;
         }
         field_a = null;
@@ -268,11 +268,11 @@ class IntrusiveNode {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (param4 >= 0L) {
-                var7Lifetime4 = var9 + "; Expires=" + MusicPatchEnvelope.a((byte) -82, vi.monotonicMillis(107) + 1000L * param4) + "; Max-Age=" + param4;
+                var7Lifetime4 = var9 + "; Expires=" + MusicPatchEnvelope.a((byte) -82, MonotonicClockSupport.monotonicMillis(107) + 1000L * param4) + "; Max-Age=" + param4;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              lj.a((byte) -52, param0, "document.cookie=\"" + var7Lifetime4 + "\"");
+              AppletScriptBridge.evaluateScript((byte) -52, param0, "document.cookie=\"" + var7Lifetime4 + "\"");
               if (param2 <= 23) {
                 field_e = (BitmapFont) null;
               }
@@ -320,7 +320,7 @@ class IntrusiveNode {
     }
 
     final static int b(int param0) {
-        oi.field_c.a(18199);
+        CheckMarkWidgetPainter.field_c.serviceProviders(18199);
         if (!ScrollWidgetContainer.field_T.poll(true)) {
           return ep.b((byte) -120);
         }

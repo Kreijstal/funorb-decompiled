@@ -204,9 +204,9 @@ final class ManaEvent extends GameEvent {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_A = null;
-        if (param0 != -829) {
+        if (obfuscationGuard != -829) {
           return;
         }
         field_y = null;
@@ -248,7 +248,7 @@ final class ManaEvent extends GameEvent {
               battlefield.teamManaCollected[battlefield.getPlayerTeamIndex(this.playerId, -1)] = 1000000000;
             }
           }
-          fl.recomputeClientStateChecksum(battlefield, -120);
+          WidgetTheme.recomputeClientStateChecksum(battlefield, -120);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vp.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
@@ -303,10 +303,10 @@ final class ManaEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -9027) {
-            ManaEvent.g(-17);
+            ManaEvent.releaseStatics(-17);
           }
-          if (kp.decodeSpriteSheetFromArchive(false, param0, param3, param1)) {
-            return gv.buildFirstDecodedRgbSprite(2809);
+          if (MarkerSliderPainter.decodeSpriteSheetFromArchive(false, param0, param3, param1)) {
+            return DecodedSpriteSupport.buildFirstDecodedRgbSprite(2809);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

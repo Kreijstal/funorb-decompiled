@@ -83,13 +83,13 @@ final class VerticalScrollbar extends ClientUiComponent {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_Nb = null;
         field_Tb = null;
         field_Kb = null;
         field_Mb = (String[][]) null;
         field_Jb = null;
-        if (param0 == -1) {
+        if (obfuscationGuard == -1) {
           field_Rb = null;
           field_Sb = null;
           return;
@@ -263,7 +263,7 @@ final class VerticalScrollbar extends ClientUiComponent {
         if (!obfuscationGuard) {
           return this.thumb.heldPressButton != 0 ? true : false;
         }
-        VerticalScrollbar.k(-78);
+        VerticalScrollbar.releaseStatics(-78);
         return this.thumb.heldPressButton != 0 ? true : false;
     }
 

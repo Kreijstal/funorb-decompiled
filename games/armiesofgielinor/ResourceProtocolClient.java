@@ -60,8 +60,8 @@ abstract class ResourceProtocolClient {
         return this.getPriorityCount(88) >= 20 ? true : false;
     }
 
-    public static void c(byte param0) {
-        if (param0 != 35) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != 35) {
           return;
         }
         field_d = null;

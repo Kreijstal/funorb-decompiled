@@ -9,9 +9,9 @@ final class jg extends IntrusiveNode {
     static String field_n;
     static int field_k;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_n = null;
-        int var1 = 48 % ((param0 - 27) / 32);
+        int var1 = 48 % ((obfuscationGuard - 27) / 32);
         field_m = null;
     }
 
@@ -28,14 +28,14 @@ final class jg extends IntrusiveNode {
             param0 = 512 - (param0 - 800);
             param1 = 512 + (param1 <= 512 ? param1 < -512 ? -512 : param1 : 512) >> 2;
             param0 = ((param0 <= 512 ? param0 : 512) >> 2) + 120;
-            jv.playSoundWithPan(LinkButtonPainter.field_d[var5][var6], param1, param0, (byte) 87);
+            SoundPanSupport.playSoundWithPan(LinkButtonPainter.field_d[var5][var6], param1, param0, (byte) 87);
           }
         }
     }
 
     final static void a(byte param0) {
         if (BattleTutorial.quickChatMenuVisible) {
-          SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, SoftwareRaster.clipRight - SoftwareRaster.clipLeft, SoftwareRaster.clipBottom - SoftwareRaster.clipTop);
+          SoftwareRaster.darkenRectangle(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, SoftwareRaster.clipRight - SoftwareRaster.clipLeft, SoftwareRaster.clipBottom - SoftwareRaster.clipTop);
           OwnerChangeEvent.quickChatMenuHost.draw(false, 20);
         }
         if (param0 != 102) {
@@ -160,22 +160,22 @@ final class jg extends IntrusiveNode {
           stackIn_4_4 = (CipherPacketBuffer.field_x == PointerInputHandler.contextMenuScrollContainer);
           var7_int = ((ScrollContainer) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param0, 2) ? 1 : 0;
           var8 = CipherPacketBuffer.field_x.content.children;
-          var9 = vi.monotonicMillis(-118);
+          var9 = MonotonicClockSupport.monotonicMillis(-118);
           var11 = null;
           var12 = (LobbyRoom) (var8.first((byte) 120));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.children) {
-              var12.field_Xb = new ClientUiComponent(0L, ws.field_P);
+              var12.field_Xb = new ClientUiComponent(0L, DialWidget.field_P);
               var14 = param4 | param5;
               var12.addChild(var12.field_Xb, param0 + 107);
               var12.field_Xb.horizontalAlignment = 1;
               var12.ownerNameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
               var12.addChild(var12.ownerNameComponent, 102);
-              var12.playerCountComponent = new ClientUiComponent(0L, ws.field_P);
+              var12.playerCountComponent = new ClientUiComponent(0L, DialWidget.field_P);
               var12.addChild(var12.playerCountComponent, 59);
               var12.playerCountComponent.textHorizontalPadding = 0;
-              var12.capacityComponent = new ClientUiComponent(0L, ws.field_P);
+              var12.capacityComponent = new ClientUiComponent(0L, DialWidget.field_P);
               var12.addChild(var12.capacityComponent, 61);
               var12.capacityComponent.textHorizontalPadding = 0;
               var12.ratingComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
@@ -185,18 +185,18 @@ final class jg extends IntrusiveNode {
               stackIn_10_1 = null;
               stackIn_10_2 = null;
               stackIn_10_3 = 0L;
-              if (!fh.field_c) {
+              if (!GrowableIntArray.field_c) {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
                 stackIn_11_4 = IsaacRandom.field_i;
               } else {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
-                stackIn_11_4 = ws.field_P;
+                stackIn_11_4 = DialWidget.field_P;
               }
               stackIn_10_0.optionIconContainer = new ClientUiComponent(stackIn_10_3, stackIn_11_4);
               var12.addChild(var12.optionIconContainer, param0 ^ 63);
-              var12.optionIcons = new ClientUiComponent[tq.gameOptionCount];
+              var12.optionIcons = new ClientUiComponent[NineSliceSpriteSupport.gameOptionCount];
               var12.gameTypeIcon = new ClientUiComponent(0L, (ClientUiComponent) null);
               if (0 != (var14 & 1 << RasterViewportResizeHandler.field_c)) {
                 var12.optionIconContainer.addChild(var12.gameTypeIcon, param0 + 62);
@@ -220,7 +220,7 @@ final class jg extends IntrusiveNode {
               var43.verticalAlignment = 1;
               var44.verticalAlignment = 1;
               var45.verticalAlignment = 1;
-              for (var18_int = 0; tq.gameOptionCount > var18_int; var18_int++) {
+              for (var18_int = 0; NineSliceSpriteSupport.gameOptionCount > var18_int; var18_int++) {
                 var12.optionIcons[var18_int] = new ClientUiComponent(0L, (ClientUiComponent) null);
                 if ((var14 & 1 << var18_int + AccountNameSelectionForm.field_E) != 0) {
                   var12.optionIconContainer.addChild(var12.optionIcons[var18_int], 39);
@@ -231,14 +231,14 @@ final class jg extends IntrusiveNode {
               stackIn_31_1 = null;
               stackIn_31_2 = null;
               stackIn_31_3 = 0L;
-              if (fh.field_c) {
+              if (GrowableIntArray.field_c) {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
                 stackIn_32_4 = IsaacRandom.field_i;
               } else {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
-                stackIn_32_4 = ws.field_P;
+                stackIn_32_4 = DialWidget.field_P;
               }
               stackIn_31_0.field_Rb = new ClientUiComponent(stackIn_31_3, stackIn_32_4);
               var12.addChild(var12.field_Rb, 39);
@@ -249,7 +249,7 @@ final class jg extends IntrusiveNode {
               var12.addChild(var12.field_Ib, 78);
               var12.field_sc = new ClientUiComponent(0L, DualLinkedNode.field_k);
               var12.addChild(var12.field_sc, param0 ^ 47);
-              var12.field_Wb = new ClientUiComponent(0L, eq.field_h);
+              var12.field_Wb = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
               var12.addChild(var12.field_Wb, 51);
               var12.inheritVisualStateForDescendants(param0 ^ -10027);
               var12.field_Yb = new ClientUiComponent(0L, QuickChatPhraseRepository.field_d);
@@ -286,7 +286,7 @@ final class jg extends IntrusiveNode {
             var12.optionIconContainer.height = 0;
             var21 = var12.optionIconContainer;
             var21.width = 0;
-            for (var22_int = 0; var22_int < tq.gameOptionCount; var22_int++) {
+            for (var22_int = 0; var22_int < NineSliceSpriteSupport.gameOptionCount; var22_int++) {
               var12.optionIcons[var22_int].sprite = null;
               var23 = var12.optionIcons[var22_int];
               var12.optionIcons[var22_int].height = 0;
@@ -337,18 +337,18 @@ final class jg extends IntrusiveNode {
                 if (var12.completedDurationMillis < 0) {
                   if (var12.allowsAdmissionRequests && (var12.joinable ||
                     var12.invitationReceived)) {
-                    var12.field_Yb.text = fl.field_l;
+                    var12.field_Yb.text = WidgetTheme.field_l;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (var12.spectatorMode != 2) {
-                      var12.field_Xb.text = bi.field_d;
+                      var12.field_Xb.text = RasterImageSurface.field_d;
                     } else {
                       var12.field_Yb.text = HelloConsoleCommand.field_E;
                     }
                   }
                 } else {
-                  var12.field_Xb.text = kw.field_Q;
+                  var12.field_Xb.text = ValidationStatusIcon.field_Q;
                 }
               } else {
                 if (!var12.joinable &&
@@ -361,7 +361,7 @@ final class jg extends IntrusiveNode {
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var12.field_Yb.text = fl.field_l;
+                  var12.field_Yb.text = WidgetTheme.field_l;
                 }
               }
               if (var12.field_Yb.text == null) {
@@ -388,12 +388,12 @@ final class jg extends IntrusiveNode {
               }
               var12.ratingComponent.text = Integer.toString(var12.displayRating);
               var12.ratingComponent.setBounds(jn.field_d, param0 - 20500, 48, var31, 200);
-              stackIn_72_0 = (!fh.field_c) ? 200 : 250;
+              stackIn_72_0 = (!GrowableIntArray.field_c) ? 200 : 250;
               var33_intLifetime1 = stackIn_72_0;
               var12.optionIconContainer.setBounds(jn.field_d, param0 ^ -20500, 365 - var33_intLifetime1 - 2, var31, var33_intLifetime1);
               var34_int = MusicPatch.field_n;
               if ((1 << RasterViewportResizeHandler.field_c & var14Lifetime1) != 0) {
-                var50_ref = rs.field_p[var12.gameType];
+                var50_ref = PowerOfTwoSupport.field_p[var12.gameType];
                 var12.gameTypeIcon.sprite = var50_ref;
                 var12.gameTypeIcon.setBounds(var12.optionIconContainer.height, param0 ^ -20500, var50_ref.canvasWidth, 0, var34_int);
                 var34_int = var34_int + (var50_ref.canvasWidth + MusicPatch.field_n);
@@ -435,7 +435,7 @@ final class jg extends IntrusiveNode {
                 var34_int = var34_int + (MusicPatch.field_n + var53_ref.canvasWidth);
               }
               if (TextLayout.field_a != null) {
-                for (var36Lifetime1 = 0; var36Lifetime1 < tq.gameOptionCount; var36Lifetime1++) {
+                for (var36Lifetime1 = 0; var36Lifetime1 < NineSliceSpriteSupport.gameOptionCount; var36Lifetime1++) {
                   if (TextLayout.field_a[var36Lifetime1] != null &&
                     (1 << var36Lifetime1 + AccountNameSelectionForm.field_E & var14Lifetime1) != 0) {
                     var42 = TextLayout.field_a[var36Lifetime1][var12.gameOptions[var36Lifetime1] & 255];
@@ -452,7 +452,7 @@ final class jg extends IntrusiveNode {
                 var12.field_ec.x = var12.field_ec.x + var36Lifetime2;
                 var12.spectatorIcon.x = var12.spectatorIcon.x + var36Lifetime2;
                 var12.ratedIcon.x = var12.ratedIcon.x + var36Lifetime2;
-                for (var37_int = 0; var37_int < tq.gameOptionCount; var37_int++) {
+                for (var37_int = 0; var37_int < NineSliceSpriteSupport.gameOptionCount; var37_int++) {
                   dupTemp$0 = var12.optionIcons[var37_int];
                   dupTemp$0.x = dupTemp$0.x + var36Lifetime2;
                 }
@@ -478,7 +478,7 @@ final class jg extends IntrusiveNode {
               if (var12.playerNames != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
-                discarded$1 = var37.append(dh.field_i);
+                discarded$1 = var37.append(ImageProducerSurface.field_i);
                 discarded$2 = var37.append(var12.playerNames[0]);
                 for (var38_intLifetime1 = 1; var12.playerCount > var38_intLifetime1; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");
@@ -491,7 +491,7 @@ final class jg extends IntrusiveNode {
                 var31 = var31 + jn.field_d * var39Lifetime1;
               }
               if (var12.invitationReceived) {
-                var12.field_Ib.text = EmailCheckResult.a(4800, sq.field_n, new String[]{var32});
+                var12.field_Ib.text = EmailCheckResult.a(4800, ToastMessage.field_n, new String[]{var32});
                 var12.field_Ib.setBounds(jn.field_d, -20500, -(2 * MusicPatchNode.field_l) + var12.width, var31, MusicPatchNode.field_l);
                 var31 = var31 + jn.field_d;
               }
@@ -515,13 +515,13 @@ final class jg extends IntrusiveNode {
             if (var13 != 0) {
               CipherPacketBuffer.field_x.content.positionAfter(var12, true, 2, (ClientUiComponent) (var11));
             }
-            for (var34_intLifetime2 = 0; var34_intLifetime2 < tq.gameOptionCount; var34_intLifetime2++) {
+            for (var34_intLifetime2 = 0; var34_intLifetime2 < NineSliceSpriteSupport.gameOptionCount; var34_intLifetime2++) {
               if (var12.optionIcons[var34_intLifetime2].heldButtonMatches) {
-                if (wb.field_a == null) {
+                if (LoginCredentialStagingSupport.field_a == null) {
                   var35 = null;
                 } else {
-                  if (wb.field_a[var34_intLifetime2] != null) {
-                    var35 = wb.field_a[var34_intLifetime2][255 & var12.gameOptions[var34_intLifetime2]];
+                  if (LoginCredentialStagingSupport.field_a[var34_intLifetime2] != null) {
+                    var35 = LoginCredentialStagingSupport.field_a[var34_intLifetime2][255 & var12.gameOptions[var34_intLifetime2]];
                   } else {
                     var35 = null;
                   }
@@ -564,7 +564,7 @@ final class jg extends IntrusiveNode {
             }
             if (var12.spectatorIcon.heldButtonMatches) {
               if (var12.spectatorMode != 2) {
-                stackIn_171_0 = jj.field_d;
+                stackIn_171_0 = FriendLookupSupport.field_d;
               } else {
                 stackIn_171_0 = BitmapTextLayout.field_e;
               }
@@ -582,7 +582,7 @@ final class jg extends IntrusiveNode {
                 if (var12.playing && (!var12.allowsAdmissionRequests ||
                   !var12.joinable &&
                   !var12.invitationReceived)) {
-                  ov.writeSpectateRoomRequest(param6, param0 + 3, var12.getRoomId((byte) 119));
+                  SpectateRoomRequestSupport.writeSpectateRoomRequest(param6, param0 + 3, var12.getRoomId((byte) 119));
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -613,9 +613,9 @@ final class jg extends IntrusiveNode {
         int[] var9 = null;
         int[] var10 = null;
         iw var11 = null;
-        b var12 = null;
+        SpriteSheetDecoder var12 = null;
         CipherPacketBuffer var13 = null;
-        b var14 = null;
+        SpriteSheetDecoder var14 = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var13 = ByteStorage.incomingPacket;
@@ -630,9 +630,9 @@ final class jg extends IntrusiveNode {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(1);
             }
-            var12 = (b) (LabeledWidgetContainer.field_O.first((byte) 98));
+            var12 = (SpriteSheetDecoder) (LabeledWidgetContainer.field_O.first((byte) 98));
             if (var12 == null) {
-              dj.a((byte) -127);
+              TextSplitSupport.a((byte) -127);
               return;
             }
             var12.field_m = true;
@@ -641,25 +641,25 @@ final class jg extends IntrusiveNode {
             return;
           }
           if (var2 == 1) {
-            var11 = (iw) (cg.field_c.first((byte) 104));
+            var11 = (iw) (ScreenWipeTransition.field_c.first((byte) 104));
             if (var11 == null) {
-              dj.a((byte) -126);
+              TextSplitSupport.a((byte) -126);
               return;
             }
             var11.unlink(41);
           } else {
             if (var2 == 2) {
-              var14 = (b) (LabeledWidgetContainer.field_O.first((byte) 125));
+              var14 = (SpriteSheetDecoder) (LabeledWidgetContainer.field_O.first((byte) 125));
               if (var14 == null) {
-                dj.a((byte) -125);
+                TextSplitSupport.a((byte) -125);
                 return;
               }
               var14.field_l = GuestPlayConfirmationForm.a(-120);
               var14.field_m = true;
               var14.unlink(param0 ^ 35);
             } else {
-              af.a((Throwable) null, 78, "A1: " + CampaignProgress.b(false));
-              dj.a((byte) -127);
+              LoginCredentials.a((Throwable) null, 78, "A1: " + CampaignProgress.b(false));
+              TextSplitSupport.a((byte) -127);
             }
           }
           return;

@@ -426,7 +426,7 @@ final class EditableTextField extends ClientUiComponent {
               }
               if (keyCode == 96) {
                 if (this.caretIndex > 0) {
-                  if (!br.heldKeys[82]) {
+                  if (!CampaignLookupSupport.heldKeys[82]) {
                     backwardCaretValue = -1 + this.caretIndex;
                   } else {
                     backwardCaretValue = this.previousSeparatorBoundary(-1);
@@ -438,7 +438,7 @@ final class EditableTextField extends ClientUiComponent {
               } else {
                 if (keyCode == 97) {
                   if (this.caretIndex < this.textBuffer.length()) {
-                    if (!br.heldKeys[82]) {
+                    if (!CampaignLookupSupport.heldKeys[82]) {
                       forwardCaretValue = this.caretIndex + 1;
                     } else {
                       forwardCaretValue = this.nextSeparatorBoundary((byte) 109);
@@ -456,17 +456,17 @@ final class EditableTextField extends ClientUiComponent {
                     this.moveCaret(this.textBuffer.length(), false);
                     return true;
                   }
-                  if (br.heldKeys[82] &&
+                  if (CampaignLookupSupport.heldKeys[82] &&
                     keyCode == 65) {
                     this.cutSelection((byte) 114);
                     return true;
                   }
-                  if (br.heldKeys[82] &&
+                  if (CampaignLookupSupport.heldKeys[82] &&
                     keyCode == 66) {
                     this.copySelection(obfuscationGuard ^ 26164);
                     return true;
                   }
-                  if (br.heldKeys[82] &&
+                  if (CampaignLookupSupport.heldKeys[82] &&
                     keyCode == 67) {
                     this.requestPaste((byte) -77);
                     return true;
@@ -655,7 +655,7 @@ final class EditableTextField extends ClientUiComponent {
           return;
         }
         try {
-          if (!br.heldKeys[81]) {
+          if (!CampaignLookupSupport.heldKeys[81]) {
             this.selectionAnchor = this.caretIndex;
           }
         } catch (RuntimeException runtimeException) {
@@ -702,7 +702,7 @@ final class EditableTextField extends ClientUiComponent {
             if (this.pressedButton == 1) {
               this.moveCaret(pointerCharacterIndex, false);
               this.pointerSelecting = true;
-              pressMillis = vi.monotonicMillis(obfuscationGuard - 95);
+              pressMillis = MonotonicClockSupport.monotonicMillis(obfuscationGuard - 95);
               pressWithinDoubleClickThreshold = !(250L <= pressMillis - this.lastPressMillis);
               this.wordSelectionDrag = pressWithinDoubleClickThreshold;
               if (this.wordSelectionDrag) {

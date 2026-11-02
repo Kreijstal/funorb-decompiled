@@ -42,12 +42,12 @@ final class EffectPresentation implements EventPresentation {
     final static void d(int param0) {
         MapRepository.a(true);
         DeployAction.field_A = true;
-        fh.field_i = true;
+        GrowableIntArray.field_i = true;
         KingBlackDragonEvent.field_C.closeAllDialogs(-102);
         if (param0 != 7) {
-          EffectPresentation.c(101);
+          EffectPresentation.releaseStatics(101);
         }
-        af.openLoginProgress(false, CachedArchiveProvider.field_z, -1);
+        LoginCredentials.openLoginProgress(false, CachedArchiveProvider.field_z, -1);
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, byte param4, int param5) {
@@ -95,7 +95,7 @@ final class EffectPresentation implements EventPresentation {
             }
             stackIn_22_0 = (stackIn_16_0 != stackIn_19_1) ? -1 : 1;
             var8 = stackIn_22_0;
-            var9 = so.field_b.field_a;
+            var9 = FixedSquareRootSupport.field_b.width;
             for (var10 = 0; var10 < 40; var10++) {
               var11 = var6_int * var10 + param1;
               if (param2) {
@@ -103,14 +103,14 @@ final class EffectPresentation implements EventPresentation {
               }
               if (var11 >= 0 &&
                 var9 >= var11) {
-                var12 = (int)(Math.sin((double)(var10 + ug.field_b * (var8 * 2)) * 3.141592653589793 / 20.0) * 3.0 * (double)var8);
-                var12 = var12 + (int)((double)var8 * (3.0 * Math.sin(3.141592653589793 * (double)(-(3 * var8 * ug.field_b) + 2 * var10) / 20.0)));
+                var12 = (int)(Math.sin((double)(var10 + ProxyAuthenticationRequiredException.field_b * (var8 * 2)) * 3.141592653589793 / 20.0) * 3.0 * (double)var8);
+                var12 = var12 + (int)((double)var8 * (3.0 * Math.sin(3.141592653589793 * (double)(-(3 * var8 * ProxyAuthenticationRequiredException.field_b) + 2 * var10) / 20.0)));
                 var13 = 32;
                 var14 = 256;
                 for (var15 = 0; var15 < 16; var15++) {
                   stackIn_34_0 = var11;
                   stackIn_34_1 = param3 - (-((20 - (var10 >> 1)) * var7) - (-var15 - var12));
-                  stackIn_34_2 = op.field_c;
+                  stackIn_34_2 = FriendRequestSupport.field_c;
                   if (CipherPacketBuffer.currentBattlefield != null &&
                     CipherPacketBuffer.currentBattlefield.teamGame) {
                     stackIn_35_3 = 1;
@@ -124,7 +124,7 @@ final class EffectPresentation implements EventPresentation {
                   } else {
                     stackIn_38_4 = var14;
                   }
-                  SoftwareRaster.g(stackIn_34_0, stackIn_34_1, stackIn_37_2, stackIn_37_3 - stackIn_38_4);
+                  SoftwareRaster.addPixel(stackIn_34_0, stackIn_34_1, stackIn_37_2, stackIn_37_3 - stackIn_38_4);
                   var14 = var14 - var13;
                 }
               }
@@ -139,12 +139,12 @@ final class EffectPresentation implements EventPresentation {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_j = null;
         field_b = null;
         field_a = null;
         field_d = null;
-        if (param0 > -58) {
+        if (obfuscationGuard > -58) {
           field_j = (RgbSprite[]) null;
         }
         field_h = null;
@@ -154,17 +154,17 @@ final class EffectPresentation implements EventPresentation {
     final static boolean a(boolean param0, int param1) {
         long dupTemp$2 = 0L;
         if (AccountRegistrationForm.field_J == null) {
-          AccountRegistrationForm.field_J = wj.field_n.openSocketAsync(rn.field_d, (byte) 120, AccountNameNormalizer.field_c);
+          AccountRegistrationForm.field_J = wj.field_n.openSocketAsync(ProceduralMapSupport.field_d, (byte) 120, AccountNameNormalizer.field_c);
         }
         if (param1 == AccountRegistrationForm.field_J.status) {
           return false;
         }
-        dupTemp$2 = vi.monotonicMillis(82);
+        dupTemp$2 = MonotonicClockSupport.monotonicMillis(82);
         SummonEvent.field_G = dupTemp$2;
         CampaignMenuButton.lastPacketReadMillis = dupTemp$2;
         if (AccountRegistrationForm.field_J.status != 1) {
         }
-        ov.connectionState = DirectByteStorage.field_o;
+        SpectateRoomRequestSupport.connectionState = DirectByteStorage.field_o;
         AccountRegistrationForm.field_J = null;
         return true;
     }
@@ -305,7 +305,7 @@ final class EffectPresentation implements EventPresentation {
                 var23_ref.unit = this.battlefield.getUnitAt(var23_ref.tileY, true, var23_ref.tileX);
                 if (var23_ref.unit == null) {
                   var24 = ScrollControlWidget.field_bb + ": Can see capture";
-                  this.battlefield.a(obfuscationGuard ^ 57, var24, event);
+                  this.battlefield.reportEventFailure(obfuscationGuard ^ 57, var24, event);
                   return false;
                 }
                 RadialSummonMenu.playDefaultSoundWithIntGuard(91, ClientUiNode.field_v[8]);
@@ -326,7 +326,7 @@ final class EffectPresentation implements EventPresentation {
                       }
                       if (null == var21_ref.unit) {
                         var22 = ScrollControlWidget.field_bb + ": Can see telepop";
-                        this.battlefield.a(0, var22, event);
+                        this.battlefield.reportEventFailure(0, var22, event);
                         return false;
                       }
                       var21_ref.unit.modelAnimationIndex = 2;
@@ -337,13 +337,13 @@ final class EffectPresentation implements EventPresentation {
                         var20_ref = (TelefragEvent) (event);
                         if (var20_ref.unit == null) {
                           var4_ref_String = ScrollControlWidget.field_bb + ": Telefrag unit null";
-                          this.battlefield.a(0, var4_ref_String, event);
+                          this.battlefield.reportEventFailure(0, var4_ref_String, event);
                           return false;
                         }
                         var4 = var20_ref.unit.tileX + var20_ref.unit.tileY * this.mapWidth;
                         var20_ref.unit.modelAnimationIndex = 1;
                         this.presenter.tileIndex = var4;
-                        dh.a(var20_ref.unit.unitType, 0, obfuscationGuard ^ 25);
+                        ImageProducerSurface.a(var20_ref.unit.unitType, 0, obfuscationGuard ^ 25);
                         var20_ref.claimUnitModel(var20_ref.unit, 12);
                         this.advanceFrame(var20_ref, (byte) -115);
                       } else {
@@ -357,7 +357,7 @@ final class EffectPresentation implements EventPresentation {
                             var15.unit = this.battlefield.getUnitAt(var15.tileY, true, var15.tileX);
                             if (var15.unit == null) {
                               var16 = ScrollControlWidget.field_bb + ": Can see deployment";
-                              this.battlefield.a(0, var16, event);
+                              this.battlefield.reportEventFailure(0, var16, event);
                               return false;
                             }
                             if (34 == var15.unit.unitType) {
@@ -367,7 +367,7 @@ final class EffectPresentation implements EventPresentation {
                               if (var15.unit.unitType != 7 &&
                                 17 != var15.unit.unitType) {
                                 var17 = ScrollControlWidget.field_bb + ": Unit not deployable";
-                                this.battlefield.a(0, var17, event);
+                                this.battlefield.reportEventFailure(0, var17, event);
                                 return false;
                               }
                               var15.unit.modelAnimationIndex = 4;
@@ -384,7 +384,7 @@ final class EffectPresentation implements EventPresentation {
                           var18_ref.unit = this.battlefield.getUnitAt(var18_ref.tileY, true, var18_ref.tileX);
                           if (var18_ref.unit == null) {
                             var19 = ScrollControlWidget.field_bb + ": Can see heal, raise, pump";
-                            this.battlefield.a(0, var19, event);
+                            this.battlefield.reportEventFailure(0, var19, event);
                             return false;
                           }
                           var18_ref.unit.modelAnimationIndex = 8;
@@ -404,10 +404,10 @@ final class EffectPresentation implements EventPresentation {
                     this.presenter.tileIndex = var4;
                     if (var13.unit == null) {
                       var14 = ScrollControlWidget.field_bb + ": Can see teleport";
-                      this.battlefield.a(0, var14, event);
+                      this.battlefield.reportEventFailure(0, var14, event);
                       return false;
                     }
-                    dh.a(var13.unit.unitType, 0, 32);
+                    ImageProducerSurface.a(var13.unit.unitType, 0, 32);
                     var13.unit.modelAnimationIndex = 2;
                     var13.claimUnitModel(var13.unit, 12);
                     this.advanceFrame(var13, (byte) 73);
@@ -419,7 +419,7 @@ final class EffectPresentation implements EventPresentation {
                   var11.unit = this.battlefield.getUnitAt(var11.tileY, true, var11.tileX);
                   if (null == var11.unit) {
                     var12 = ScrollControlWidget.field_bb + ": Can see burial";
-                    this.battlefield.a(0, var12, event);
+                    this.battlefield.reportEventFailure(0, var12, event);
                     return false;
                   }
                   var11.unit.modelAnimationIndex = 4;
@@ -433,7 +433,7 @@ final class EffectPresentation implements EventPresentation {
               this.presenter.tileIndex = var4;
               if (null == var9.unit) {
                 var10 = ScrollControlWidget.field_bb + ": Can see growth";
-                this.battlefield.a(0, var10, event);
+                this.battlefield.reportEventFailure(0, var10, event);
                 return false;
               }
               var9.unit.modelAnimationIndex = 1;
@@ -449,11 +449,11 @@ final class EffectPresentation implements EventPresentation {
             }
             if (null == var7.unit) {
               var8 = ScrollControlWidget.field_bb + ": Can see death";
-              this.battlefield.a(0, var8, event);
+              this.battlefield.reportEventFailure(0, var8, event);
               return false;
             }
             var7.unit.modelAnimationIndex = 7;
-            dh.a(var7.unit.unitType, 5, obfuscationGuard - 25);
+            ImageProducerSurface.a(var7.unit.unitType, 5, obfuscationGuard - 25);
             var7.claimUnitModel(var7.unit, 12);
             this.advanceFrame(var7, (byte) 68);
           }

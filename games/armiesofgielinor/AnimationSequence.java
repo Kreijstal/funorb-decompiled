@@ -29,13 +29,13 @@ final class AnimationSequence {
             field_c = (String[]) null;
           }
           while (lp.field_c.length > var1_int) {
-            op.field_c[0][var1_int] = lp.field_c[var1_int];
+            FriendRequestSupport.field_c[0][var1_int] = lp.field_c[var1_int];
             var1_int++;
           }
           var3 = 0;
           var1_intLifetime1 = var3;
-          while (var3 < bn.field_a.length) {
-            ActionRequest.unitModels[76][var3] = bn.field_a[var3];
+          while (var3 < CalendarSupport.field_a.length) {
+            ActionRequest.unitModels[76][var3] = CalendarSupport.field_a[var3];
             var3++;
           }
           return;
@@ -171,12 +171,12 @@ final class AnimationSequence {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = (-640 + tq.field_c) / 2;
+        int var2 = (-640 + NineSliceSpriteSupport.field_c) / 2;
         int var4 = -54 / ((33 - param1) / 47);
-        int var3 = mj.field_c * mj.field_c;
+        int var3 = AudioShutdownSupport.field_c * AudioShutdownSupport.field_c;
         int var5 = -(param0 * param0) + var3;
         BitmapTextWidgetPainter.field_a.setBounds(-90 + (-120 + (SoftwareRaster.height - 4)), -20500, 199, 90, -(199 * var5 / var3) + var2);
-        pd.field_c.setBounds(SoftwareRaster.height - 124, -20500, 438, 0, 202 + var2 + 438 * var5 / var3);
+        PasswordLengthSupport.field_c.setBounds(SoftwareRaster.height - 124, -20500, 438, 0, 202 + var2 + 438 * var5 / var3);
     }
 
     private final void decode(int obfuscationGuard, PacketBuffer packet) {
@@ -215,9 +215,9 @@ final class AnimationSequence {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_k = null;
-        if (param0 >= -18) {
+        if (obfuscationGuard >= -18) {
           return;
         }
         field_l = null;

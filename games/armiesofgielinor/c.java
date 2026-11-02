@@ -9,13 +9,13 @@ final class c {
     static boolean field_c;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_f = null;
         field_a = null;
         decodedSpriteHeights = null;
         field_d = null;
         field_b = null;
-        int var1 = 14 / ((17 - param0) / 45);
+        int var1 = 14 / ((17 - obfuscationGuard) / 45);
     }
 
     final static boolean a(int param0, byte param1) {

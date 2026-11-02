@@ -11,12 +11,12 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
     static String decodedChatDisplayName;
     static String field_J;
 
-    public static void k(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         decodedChatDisplayName = null;
         chatRecipientName = null;
         activeQuickChatMenu = null;
-        if (param0 != -15) {
-          RegistrationAgreementPane.k(71);
+        if (obfuscationGuard != -15) {
+          RegistrationAgreementPane.releaseStatics(71);
           field_J = null;
           return;
         }
@@ -80,13 +80,13 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ab.containsNonAlphanumeric(password, 0)) {
+          if (AlphanumericTextSupport.containsNonAlphanumeric(password, 0)) {
             return false;
           }
-          if (ph.isAllSameCharacter(password, (byte) 123)) {
+          if (AccountNameCharacterSupport.isAllSameCharacter(password, (byte) 123)) {
             return false;
           }
-          if (pd.hasInvalidPasswordLength(password, 0)) {
+          if (PasswordLengthSupport.hasInvalidPasswordLength(password, 0)) {
             return false;
           }
           if (name.length() == 0) {
@@ -95,7 +95,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           if (DebouncedValidator.passwordContainsNameVariant(name, password, 113)) {
             return false;
           }
-          if (e.nameContainsPasswordVariant(86, name, password)) {
+          if (QuickChatMenuCloseSupport.nameContainsPasswordVariant(86, name, password)) {
             return false;
           }
           if (obfuscationGuard) {
@@ -165,8 +165,8 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         try {
           InteractiveWidget.field_C = DualNodeHashTable.getNominalTickRate(-74) * param3 / 1000;
           DualNodeDeque.a((byte) -124, param0);
-          jj.a(-93, param0);
-          lg.a(32381, param0);
+          FriendLookupSupport.a(-93, param0);
+          GzipDecoder.a(32381, param0);
           DropdownArrowPainter.a(54);
           SpriteDropdownMenu.b(true);
           if (param1 <= 70) {

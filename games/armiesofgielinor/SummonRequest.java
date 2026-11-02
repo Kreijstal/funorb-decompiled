@@ -134,15 +134,15 @@ final class SummonRequest extends ActionRequest {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = -1;
-          if (null != gv.field_a &&
-            param1 < gv.field_a.length) {
-            if (null != gv.field_a[param1] &&
-              gv.field_a[param1].length > param2) {
+          if (null != DecodedSpriteSupport.field_a &&
+            param1 < DecodedSpriteSupport.field_a.length) {
+            if (null != DecodedSpriteSupport.field_a[param1] &&
+              DecodedSpriteSupport.field_a[param1].length > param2) {
               if (param0 != 29) {
                 SummonRequest.a(false);
               }
-              for (var4 = 0; gv.field_a[param1][param2].length > var4; var4++) {
-                var7 = gv.field_a[param1][param2][var4];
+              for (var4 = 0; DecodedSpriteSupport.field_a[param1][param2].length > var4; var4++) {
+                var7 = DecodedSpriteSupport.field_a[param1][param2][var4];
                 var5 = var7;
                 if (var7 != null &&
                   var7.canvasWidth >= 0 && (var3_int < 0 ||
@@ -153,8 +153,8 @@ final class SummonRequest extends ActionRequest {
               if (var3_int <= 0) {
                 return;
               }
-              for (var4Lifetime1 = 0; var4Lifetime1 < gv.field_a[param1][param2].length; var4Lifetime1++) {
-                var5Lifetime1 = gv.field_a[param1][param2][var4Lifetime1];
+              for (var4Lifetime1 = 0; var4Lifetime1 < DecodedSpriteSupport.field_a[param1][param2].length; var4Lifetime1++) {
+                var5Lifetime1 = DecodedSpriteSupport.field_a[param1][param2][var4Lifetime1];
                 if (var5Lifetime1 != null &&
                   var3_int > var5Lifetime1.canvasWidth) {
                   var5Lifetime1.offsetX = -var5Lifetime1.canvasWidth + var3_int >> 1;

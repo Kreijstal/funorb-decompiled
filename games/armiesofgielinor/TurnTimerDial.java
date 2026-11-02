@@ -32,7 +32,7 @@ final class TurnTimerDial {
           var5 = SoftwareRaster.width * screenY + screenX;
           var6 = SoftwareRaster.width - CampaignProgress.field_b;
           var12 = 0;
-          while (ac.field_m > var12) {
+          while (ManaStarParticle.field_m > var12) {
             var13 = 0;
             while (var13 < CampaignProgress.field_b) {
               var7 = vg.field_q[0].pixels[var4];
@@ -71,7 +71,7 @@ final class TurnTimerDial {
             var5 = var5 + var6;
           }
         }
-        DeployEvent.field_z.b(384, 2464, screenX + (CampaignProgress.field_b >> 1) << 4, screenY + (ac.field_m >> 1) << 4, this.sweepPosition * 65535 / this.cycleLength, 1024);
+        DeployEvent.field_z.drawRotatedAboutPivot(384, 2464, screenX + (CampaignProgress.field_b >> 1) << 4, screenY + (ManaStarParticle.field_m >> 1) << 4, this.sweepPosition * 65535 / this.cycleLength, 1024);
         if (obfuscationGuard == 121) {
           return;
         }
@@ -216,18 +216,18 @@ final class TurnTimerDial {
               LinkButtonPainter.field_d[var3][var4] = var5;
             }
           }
-          ke.a((byte) 90, param1);
+          SoundEffectPreloadSupport.loadSoundEffectsByName((byte) 90, param1);
           wh.field_f = true;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_b = null;
         field_a = null;
         field_g = null;
-        if (param0 > -17) {
+        if (obfuscationGuard > -17) {
           field_b = (String) null;
         }
     }
@@ -242,11 +242,11 @@ final class TurnTimerDial {
         this.useSweepMask = false;
         this.cycleLength = cycleLength;
         minimumThreshold = 2147483647;
-        this.pixelThresholds = new int[ac.field_m * CampaignProgress.field_b];
+        this.pixelThresholds = new int[ManaStarParticle.field_m * CampaignProgress.field_b];
         maximumThreshold = -2147483648;
-        for (pixelIndex = 0; ac.field_m * CampaignProgress.field_b > pixelIndex; pixelIndex++) {
+        for (pixelIndex = 0; ManaStarParticle.field_m * CampaignProgress.field_b > pixelIndex; pixelIndex++) {
           pixelXFromCenter = pixelIndex % CampaignProgress.field_b - (CampaignProgress.field_b >> 1);
-          pixelYFromCenter = -(ac.field_m >> 1) + pixelIndex / CampaignProgress.field_b;
+          pixelYFromCenter = -(ManaStarParticle.field_m >> 1) + pixelIndex / CampaignProgress.field_b;
           threshold = (this.cycleLength - (int)(Math.atan2((double)(-pixelXFromCenter), (double)pixelYFromCenter) * (double)this.cycleLength / 3.141592653589793)) / 2;
           if (maximumThreshold < threshold) {
             maximumThreshold = threshold;

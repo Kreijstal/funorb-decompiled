@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mu {
-    static cg field_a;
+    static ScreenWipeTransition field_a;
     static java.math.BigInteger field_c;
     static IndexedSprite[][] field_g;
     static int field_d;
@@ -53,7 +53,7 @@ final class mu {
           OwnerChangeEvent.quickChatMenuHost = new ClientUiComponent(0L, (ClientUiComponent) null);
           if (param2 == null) {
             var10 = (Throwable) null;
-            af.a((Throwable) null, -116, "QC1");
+            LoginCredentials.a((Throwable) null, -116, "QC1");
             return;
           }
           param2.discardPackedGroups = false;
@@ -63,24 +63,24 @@ final class mu {
           var4 = DisplayModeOptionPainter.findQuickChatRootCategory((byte) -83);
           if (var4 == null) {
             var11 = (Throwable) null;
-            af.a((Throwable) null, 124, "QC2");
+            LoginCredentials.a((Throwable) null, 124, "QC2");
             return;
           }
           MapLayout.addCustomQuickChatOption(var4, 19003);
           var12 = (BitmapFont) null;
-          hf.field_f = PaletteRegionMap.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
-          vs.field_g = PaletteRegionMap.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
+          ClientStateChecksumSupport.field_f = PaletteRegionMap.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
+          QuickChatMenuDisplaySupport.field_g = PaletteRegionMap.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
           AccountNameAvailabilityValidator.field_n = PaletteRegionMap.a(0, 0, 0, 0, 0, 16777215, param0, 0, 0, 0, 0, (byte) -124, 0);
           var5 = SoftwareRaster.width;
           var6 = SoftwareRaster.height;
           var16 = SoftwareRaster.pixels;
           s.quickChatArrow = new RgbSprite(10, 14);
-          s.quickChatArrow.b();
+          s.quickChatArrow.bindAsRasterTarget();
           for (var8 = 2; var8 < 7; var8++) {
-            SoftwareRaster.h(var8, var8 + 1, 14 - (var8 << 1), 16777215);
+            SoftwareRaster.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRaster.setTarget(var16, var5, var6);
-          AdaptiveMidiPcmStream.defaultQuickChatMenu = l.buildQuickChatCategoryMenu(var4, hf.field_f, param1 ^ 0, vs.field_g, AccountNameAvailabilityValidator.field_n);
+          AdaptiveMidiPcmStream.defaultQuickChatMenu = QuickChatCategoryMenuSupport.buildQuickChatCategoryMenu(var4, ClientStateChecksumSupport.field_f, param1 ^ 0, QuickChatMenuDisplaySupport.field_g, AccountNameAvailabilityValidator.field_n);
           OwnerChangeEvent.quickChatMenuHost.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -103,10 +103,10 @@ final class mu {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_g = (IndexedSprite[][]) null;
         field_c = null;
-        if (param0 == 0) {
+        if (obfuscationGuard == 0) {
           field_b = null;
           field_a = null;
           field_e = null;

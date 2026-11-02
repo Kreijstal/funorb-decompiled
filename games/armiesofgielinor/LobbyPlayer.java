@@ -44,7 +44,7 @@ final class LobbyPlayer extends ClientUiComponent {
           var5 = (CharSequence) ((Object) this.accountName);
           AccountNameNormalizer.normalize(var5, false);
           if (obfuscationGuard != 53) {
-            LobbyPlayer.e((byte) -11);
+            LobbyPlayer.releaseStatics((byte) -11);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "of.D(" + obfuscationGuard + ',' + (displayName != null ? "{...}" : "null") + ',' + (accountName != null ? "{...}" : "null") + ')');
@@ -122,15 +122,15 @@ final class LobbyPlayer extends ClientUiComponent {
 
     final static void d(byte param0) {
         String var2 = (String) null;
-        vi.showLoginWithDescription(cd.field_e, 640, (String) null);
+        MonotonicClockSupport.showLoginWithDescription(cd.field_e, 640, (String) null);
         if (param0 != -24) {
           LobbyPlayer.d((byte) -75);
         }
     }
 
-    public static void e(byte param0) {
-        if (param0 != 20) {
-          LobbyPlayer.e((byte) 74);
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != 20) {
+          LobbyPlayer.releaseStatics((byte) 74);
           field_Jb = null;
           field_bc = null;
           cannotMoveSprites = null;
@@ -160,7 +160,7 @@ final class LobbyPlayer extends ClientUiComponent {
           }
           payloadStart = EmailValidator.outgoingPacket.position;
           quicksave.write(0, EmailValidator.outgoingPacket);
-          EmailValidator.outgoingPacket.f(0, EmailValidator.outgoingPacket.position - payloadStart);
+          EmailValidator.outgoingPacket.writeShortLengthPrefix(0, EmailValidator.outgoingPacket.position - payloadStart);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "of.E(" + (battlefield != null ? "{...}" : "null") + ',' + damageTaken + ',' + unitLossCount + ',' + obfuscationGuard + ',' + missionId + ',' + campaignIndex + ')');
         }

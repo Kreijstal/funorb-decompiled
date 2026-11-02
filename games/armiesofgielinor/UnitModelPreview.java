@@ -30,11 +30,11 @@ final class UnitModelPreview {
         this.drawModel(false, highlighted, var3, var4Lifetime1);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_h = null;
         field_d = null;
         field_b = null;
-        if (param0 != -298276720) {
+        if (obfuscationGuard != -298276720) {
           UnitModelPreview.b((byte) -86);
           field_m = null;
           return;
@@ -191,7 +191,7 @@ final class UnitModelPreview {
 
     private final void loadSequence(byte obfuscationGuard) {
         this.animationAvailable = true;
-        AnimationSequence var2 = pg.selectUnitAnimation(this.animationIndex, 176, false, this.unitType);
+        AnimationSequence var2 = UnitAnimationSelectionSupport.selectUnitAnimation(this.animationIndex, 176, false, this.unitType);
         if (var2 == null) {
           this.animationAvailable = false;
           return;
@@ -427,7 +427,7 @@ final class UnitModelPreview {
 
     private final void installFrameSet(int obfuscationGuard) {
         int var2 = this.animationPlayer.frameId >> 16;
-        AnimationFrameSet var3 = we.a(var2, true);
+        AnimationFrameSet var3 = ArchiveLoadStep.a(var2, true);
         if (obfuscationGuard == -298276720) {
           MusicPatch.a(var3, (byte) -34);
           return;

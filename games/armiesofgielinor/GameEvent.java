@@ -132,7 +132,7 @@ abstract class GameEvent extends IntrusiveNode {
           if (param0 != -39) {
             return false;
           }
-          var5 = cp.a(param1, 10120, param1.battlefield, this.e(1023) & param3, this, param1.unitRenderer);
+          var5 = EventPresenterFactory.createEventPresenter(param1, 10120, param1.battlefield, this.e(1023) & param3, this, param1.unitRenderer);
           if (var5 != null) {
             param2.addLast((byte) -119, (IntrusiveNode) (var5));
           }
@@ -205,13 +205,13 @@ abstract class GameEvent extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_r = null;
         field_t = null;
         field_u = null;
         field_q = null;
         quickChatHelpTitle = null;
-        if (param0 != -103) {
+        if (obfuscationGuard != -103) {
           return;
         }
         field_p = null;
@@ -353,7 +353,7 @@ abstract class GameEvent extends IntrusiveNode {
           this.unit.modelAnimationIndex = 0;
         }
         if (obfuscationGuard != 6) {
-          GameEvent.a((byte) 88);
+          GameEvent.releaseStatics((byte) 88);
         }
         this.pendingPresentations = 0;
         this.presentationComplete = true;
@@ -400,7 +400,7 @@ abstract class GameEvent extends IntrusiveNode {
             var13 = stackIn_14_0;
             var12 = var13;
             var10 = var12;
-            SoftwareRaster.a((-6 + param4 << 4) + (var7 * SocketResourceClient.b(param2 + var5_int << 4, 100) >> 12), -4 + (param0 + var5_int) << 4, var8 << 4, var9, var13);
+            SoftwareRaster.fillRadialPaletteCircle((-6 + param4 << 4) + (var7 * SocketResourceClient.sine8192(param2 + var5_int << 4, 100) >> 12), -4 + (param0 + var5_int) << 4, var8 << 4, var9, var13);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

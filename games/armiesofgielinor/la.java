@@ -28,10 +28,10 @@ final class la {
         return 111;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         loaderApplet = null;
         field_e = null;
-        if (param0 >= -106) {
+        if (obfuscationGuard >= -106) {
           la.d((byte) -100);
         }
     }
@@ -40,8 +40,8 @@ final class la {
         if (obfuscationGuard != -26887) {
           return;
         }
-        rs.outgoingChatChannel = 0;
-        hf.textChatActive = true;
+        PowerOfTwoSupport.outgoingChatChannel = 0;
+        ClientStateChecksumSupport.textChatActive = true;
     }
 
     final static void d(byte param0) {
@@ -50,7 +50,7 @@ final class la {
         int var3 = 0;
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var6 = jp.field_g;
+          var6 = ArchiveLoadSequence.field_g;
           int[] var1 = var6;
           var2 = 0;
           var3 = var6.length;
@@ -98,7 +98,7 @@ final class la {
         if (param0 < 68) {
           this.a(91);
         }
-        AnimationFrameSet var3 = we.a(var2, true);
+        AnimationFrameSet var3 = ArchiveLoadStep.a(var2, true);
         MusicPatch.a(var3, (byte) -34);
     }
 
@@ -178,9 +178,9 @@ final class la {
             var8 = CachedArchiveProvider.field_y[var9][1] + (param0 + (3 & param1) - 64);
             var7 = -44 + CachedArchiveProvider.field_y[var9][0] + (param3 + (7 & var6_int));
             if (var9 != 0) {
-              nr.activeFoliageSprites[param1 % 9 + 25].b(var7, var8, param4, param2);
+              NineSliceFrame.activeFoliageSprites[param1 % 9 + 25].drawFadedToColour(var7, var8, param4, param2);
             } else {
-              nr.activeFoliageSprites[16 + param1 % 9].b(var7, var8 - CachedArchiveProvider.field_y[var9][1], param4, param2);
+              NineSliceFrame.activeFoliageSprites[16 + param1 % 9].drawFadedToColour(var7, var8 - CachedArchiveProvider.field_y[var9][1], param4, param2);
             }
             param1 = param1 >> 1;
             var6_int = var6_int >> 1;
@@ -196,9 +196,9 @@ final class la {
     private final void c(int param0) {
         if (this.field_b >= 0 &&
           this.field_b < 9) {
-          this.field_a.selectSequence(-1, ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.field_f]][BestScoreStrategy.unitAnimationVariants[this.field_f][this.field_b][0]]);
+          this.field_a.selectSequence(-1, StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.field_f]][BestScoreStrategy.unitAnimationVariants[this.field_f][this.field_b][0]]);
         } else {
-          this.field_a.selectSequence(~param0, ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.field_f]][0]);
+          this.field_a.selectSequence(~param0, StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.field_f]][0]);
         }
         if (param0 != 0) {
           this.a((byte) 11, -94);
@@ -225,10 +225,10 @@ final class la {
         int var12 = 0;
         int var13 = 500;
         int var14 = 250 - (this.field_h ? 100 * param0 / 128 : 0);
-        var14 = var14 + wv.field_g[this.field_f];
+        var14 = var14 + KeyedLoginCredentials.field_g[this.field_f];
         var15.scaleGeometry(param0, param0, param0);
         if (param5) {
-          fh.a(124, var15);
+          GrowableIntArray.a(124, var15);
         }
         var15.a(var8, var9, var10, var11, var12, var14, var13);
     }

@@ -113,7 +113,7 @@ final class DamageEvent extends GameEvent {
             field_z = (String) null;
           }
           ClientContextMenu.a(param13, 2, param5, param8);
-          hf.a(param10 + 13099);
+          ClientStateChecksumSupport.a(param10 + 13099);
           DeployEvent.h(14570);
           TurnChangeEvent.d((byte) -112);
           return;
@@ -238,7 +238,7 @@ final class DamageEvent extends GameEvent {
             battlefield.damageTakenByPlayer[this.unit.ownerPlayer] = battlefield.damageTakenByPlayer[this.unit.ownerPlayer] + var3_int;
             battlefield.d(this.unit.ownerPlayer, battlefield.damageTakenByPlayer[this.unit.ownerPlayer], 72, 11);
           }
-          hf.recomputeClientStateChecksum(battlefield, (byte) 9, true);
+          ClientStateChecksumSupport.recomputeClientStateChecksum(battlefield, (byte) 9, true);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nw.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
@@ -274,11 +274,11 @@ final class DamageEvent extends GameEvent {
             stackIn_3_0 = SectorCacheStore.field_d;
             return stackIn_3_0;
           }
-          if (th.socialListState != 2) {
+          if (FloorModSupport.socialListState != 2) {
             stackIn_7_0 = PopupPresentation.field_l;
             return stackIn_7_0;
           }
-          friend = lg.findFriend(name, (byte) -34);
+          friend = GzipDecoder.findFriend(name, (byte) -34);
           if (friend == null) {
             stackIn_10_0 = EmailCheckResult.a(4800, TaggedMapData.field_d, new String[]{name});
             return stackIn_10_0;
@@ -297,7 +297,7 @@ final class DamageEvent extends GameEvent {
             field_y = (String) null;
           }
           friend.unlinkSecondary((byte) -76);
-          dj.friendCount = dj.friendCount - 1;
+          TextSplitSupport.friendCount = TextSplitSupport.friendCount - 1;
           packet = EmailValidator.outgoingPacket;
           packet.writeCipheredOpcode(32161, packetOpcode);
           packet.position = packet.position + 1;
@@ -321,8 +321,8 @@ final class DamageEvent extends GameEvent {
         }
     }
 
-    public static void d(byte param0) {
-        if (param0 != -26) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != -26) {
           return;
         }
         field_y = null;

@@ -52,7 +52,7 @@ final class MoveAttackAction extends PreparedAction {
           }
           var6 = stackIn_4_0;
           if (DualNodeDeque.field_f == 0) {
-            var7 = BattleTutorial.a(480, var11, param3 ^ 7444, AiPlanner.field_G, fs.field_c);
+            var7 = BattleTutorial.a(480, var11, param3 ^ 7444, AiPlanner.field_G, PrivateTextRecipientSupport.field_c);
             var8 = 3 + var7;
             DirectByteStorage.field_k = new int[var8];
             SpriteScrollBar.field_h = new String[var8];
@@ -61,20 +61,20 @@ final class MoveAttackAction extends PreparedAction {
             }
             SpellMenuGroup.field_m = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
-              SpriteScrollBar.field_h[var9] = fs.field_c[var9];
+              SpriteScrollBar.field_h[var9] = PrivateTextRecipientSupport.field_c[var9];
             }
             SpriteScrollBar.field_h[var8 - 3] = "";
             SpriteScrollBar.field_h[-2 + var8] = var6;
             DirectByteStorage.field_k[-2 + var8] = 0;
             SpellMenuGroup.field_m[0] = 1;
-            SpriteScrollBar.field_h[var8 - 1] = pd.field_f;
+            SpriteScrollBar.field_h[var8 - 1] = PasswordLengthSupport.field_f;
             DirectByteStorage.field_k[var8 - 1] = 1;
             SpellMenuGroup.field_m[1] = 2;
           } else {
             if (DualNodeDeque.field_f != 1) {
               throw new IllegalArgumentException();
             }
-            var7 = BattleTutorial.a(480, var11, param3 + 7412, AiPlanner.field_G, fs.field_c);
+            var7 = BattleTutorial.a(480, var11, param3 + 7412, AiPlanner.field_G, PrivateTextRecipientSupport.field_c);
             var8 = 2 + var7;
             DirectByteStorage.field_k = new int[var8];
             SpriteScrollBar.field_h = new String[var8];
@@ -83,10 +83,10 @@ final class MoveAttackAction extends PreparedAction {
             }
             SpellMenuGroup.field_m = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
-              SpriteScrollBar.field_h[var9] = fs.field_c[var9];
+              SpriteScrollBar.field_h[var9] = PrivateTextRecipientSupport.field_c[var9];
             }
             SpriteScrollBar.field_h[var8 - 2] = "";
-            SpriteScrollBar.field_h[var8 - 1] = pd.field_f;
+            SpriteScrollBar.field_h[var8 - 1] = PasswordLengthSupport.field_f;
             DirectByteStorage.field_k[var8 - 1] = 0;
             SpellMenuGroup.field_m[0] = 2;
           }
@@ -162,13 +162,13 @@ final class MoveAttackAction extends PreparedAction {
                 return;
               }
               var4 = param1.getCodeBase();
-              var3 = ck.a(-3780, var4, param1).getFile();
-              lj.a(param1, "updatelinks", new Object[]{"home", var3 + "home.ws"}, 116);
-              lj.a(param1, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, 74);
-              lj.a(param1, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, 98);
-              lj.a(param1, "updatelinks", new Object[]{"options", var3 + "options.ws"}, 75);
-              lj.a(param1, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, 122);
-              lj.a(param1, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, param0 - 15938);
+              var3 = StructureTerrainSupport.a(-3780, var4, param1).getFile();
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"home", var3 + "home.ws"}, 116);
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, 74);
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, 98);
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"options", var3 + "options.ws"}, 75);
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, 122);
+              AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, param0 - 15938);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
@@ -288,7 +288,7 @@ final class MoveAttackAction extends PreparedAction {
               param5 = param5 - (var9 - 640);
             }
           }
-          jp.a(-(var7_int >> 1) + param5, param0, var7_int, param1, param4, -8991);
+          ArchiveLoadSequence.a(-(var7_int >> 1) + param5, param0, var7_int, param1, param4, -8991);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -316,8 +316,8 @@ final class MoveAttackAction extends PreparedAction {
         }
     }
 
-    public static void e(int param0) {
-        if (param0 >= -40) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard >= -40) {
           return;
         }
         field_G = null;

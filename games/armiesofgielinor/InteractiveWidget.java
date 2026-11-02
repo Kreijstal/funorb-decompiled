@@ -30,7 +30,7 @@ class InteractiveWidget extends Widget {
           if (param0 == -1) {
             return;
           }
-          InteractiveWidget.i(-98);
+          InteractiveWidget.releaseStatics(-98);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,7 +106,7 @@ class InteractiveWidget extends Widget {
     }
 
     InteractiveWidget(String text, WidgetListener listener) {
-        this(text, t.field_c.field_j, listener);
+        this(text, ReloadPageSupport.field_c.field_j, listener);
     }
 
     boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
@@ -140,10 +140,10 @@ class InteractiveWidget extends Widget {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_H = null;
         bzip2TraversalTable = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_F = null;
@@ -326,7 +326,7 @@ class InteractiveWidget extends Widget {
         this.focusable = true;
         this.focused = false;
         this.lastActivationButton = 0;
-        this.painter = t.field_c.field_q;
+        this.painter = ReloadPageSupport.field_c.field_q;
     }
 
     static {

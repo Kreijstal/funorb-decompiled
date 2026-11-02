@@ -30,12 +30,12 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_p = null;
         field_z = null;
         field_o = null;
         field_m = null;
-        if (param0 != 52) {
+        if (obfuscationGuard != 52) {
           return;
         }
         field_u = null;
@@ -427,7 +427,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               sampleId = input.readVarInt(110);
             }
-            this.pitchAndLoopFlags[sampleKey] = (short)(this.pitchAndLoopFlags[sampleKey] + (rn.bitwiseAnd(-1 + sampleId, 2) << 14));
+            this.pitchAndLoopFlags[sampleKey] = (short)(this.pitchAndLoopFlags[sampleKey] + (ProceduralMapSupport.bitwiseAnd(-1 + sampleId, 2) << 14));
             this.sampleIds[sampleKey] = sampleId;
             sampleRunRemaining--;
           }

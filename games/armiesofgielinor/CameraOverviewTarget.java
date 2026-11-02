@@ -223,9 +223,9 @@ final class CameraOverviewTarget extends IntrusiveNode {
         return -50;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_o = null;
-        int var1 = 107 % ((param0 + 36) / 54);
+        int var1 = 107 % ((obfuscationGuard + 36) / 54);
     }
 
     CameraOverviewTarget(Unit unit) {

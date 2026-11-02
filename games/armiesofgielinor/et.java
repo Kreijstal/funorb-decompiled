@@ -102,12 +102,12 @@ final class et {
                         }
                         stackIn_35_0Lifetime1 = var17 + (var16 << 4);
                         var18 = stackIn_35_0Lifetime1;
-                        ab.field_c[var18] = var8;
+                        AlphanumericTextSupport.field_c[var18] = var8;
                         MoveAttackRequest.field_K[var16] = 1 + var17;
                         if (param0.field_E > 0 &&
                           null != param0.field_K) {
                           dupTemp$0 = param0.field_K[var8];
-                          jp.field_g[dupTemp$0] = jp.field_g[dupTemp$0] + 1;
+                          ArchiveLoadSequence.field_g[dupTemp$0] = ArchiveLoadSequence.field_g[dupTemp$0] + 1;
                         }
                         UnitModelViewer.field_q = UnitModelViewer.field_q + 1;
                         break;
@@ -128,9 +128,9 @@ final class et {
             param0.field_K != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(jp.field_g.length <= var9Lifetime1)) {
-              var10Lifetime1 = jp.field_g[var9Lifetime1];
-              jp.field_g[var9Lifetime1] = var8Lifetime1;
+            while (!(ArchiveLoadSequence.field_g.length <= var9Lifetime1)) {
+              var10Lifetime1 = ArchiveLoadSequence.field_g[var9Lifetime1];
+              ArchiveLoadSequence.field_g[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {
@@ -174,19 +174,19 @@ final class et {
           do {
             if (!Unit.pollKeyEvent((byte) 80)) {
               if (OctaveNoiseMap.field_r == -1) {
-                if (ac.field_n) {
+                if (ManaStarParticle.field_n) {
                   stackIn_18_0 = 3;
                   return stackIn_18_0;
                 }
-                if (du.nameCheckPending == mh.accountNameCheckState) {
+                if (SocketFactory.nameCheckPending == EffectsGainSupport.accountNameCheckState) {
                   stackIn_21_0 = 1;
                   return stackIn_21_0;
                 }
-                if (!se.emailCheckResult.isComplete((byte) -26)) {
+                if (!IgnoreRequestSupport.emailCheckResult.isComplete((byte) -26)) {
                   stackIn_24_0 = 1;
                   return stackIn_24_0;
                 }
-                if (ChannelBaseVolumeConsoleCommand.field_L == du.nameCheckPending) {
+                if (ChannelBaseVolumeConsoleCommand.field_L == SocketFactory.nameCheckPending) {
                   stackIn_29_0 = 2;
                   return stackIn_29_0;
                 }
@@ -195,7 +195,7 @@ final class et {
               }
               break;
             }
-            KingBlackDragonEvent.field_C.a(rs.keyCode, DualNodeDeque.typedCharacter, 80);
+            KingBlackDragonEvent.field_C.a(PowerOfTwoSupport.keyCode, DualNodeDeque.typedCharacter, 80);
           } while (var2 == 0);
           var1_int = OctaveNoiseMap.field_r;
           gl.a(param0 ^ -127, -1);

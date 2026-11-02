@@ -31,8 +31,8 @@ final class cd {
           var2 = var8.readUnsignedByte(0);
           if (var2 != 0) {
             if (var2 != 1) {
-              af.a((Throwable) null, 76, "A1: " + CampaignProgress.b(false));
-              dj.a((byte) -128);
+              LoginCredentials.a((Throwable) null, 76, "A1: " + CampaignProgress.b(false));
+              TextSplitSupport.a((byte) -128);
               return;
             }
             var3 = var8.readInt(1);
@@ -45,7 +45,7 @@ final class cd {
               break;
             }
             if (var4 == null) {
-              dj.a((byte) -125);
+              TextSplitSupport.a((byte) -125);
               return;
             }
             var4.unlink(-102);
@@ -53,7 +53,7 @@ final class cd {
           }
           var3_ref_vg = (vg) (AccountRegistrationDialog.field_Bb.first((byte) 98));
           if (var3_ref_vg == null) {
-            dj.a((byte) -126);
+            TextSplitSupport.a((byte) -126);
             return;
           }
           var4_int = var8.readUnsignedByte(0);
@@ -67,8 +67,8 @@ final class cd {
             var5 = null;
           }
           var8.position = var8.position + 4;
-          if (!var8.j(4215)) {
-            dj.a((byte) -126);
+          if (!var8.verifyChecksum(4215)) {
+            TextSplitSupport.a((byte) -126);
             return;
           }
           var3_ref_vg.field_n = true;
@@ -95,11 +95,11 @@ final class cd {
     final static boolean a(int param0, int param1, boolean param2) {
         if (param2) {
           campaigns = (CampaignDefinition[]) null;
-          if (rs.keyCode == 13) {
+          if (PowerOfTwoSupport.keyCode == 13) {
             DelayedPacket.e(-3);
             return true;
           }
-          if (rs.keyCode == 102) {
+          if (PowerOfTwoSupport.keyCode == 102) {
             RegistrationAgreementPane.activeQuickChatMenu.resetSelection((byte) -106);
             return true;
           }
@@ -111,11 +111,11 @@ final class cd {
           }
           return false;
         }
-        if (rs.keyCode == 13) {
+        if (PowerOfTwoSupport.keyCode == 13) {
           DelayedPacket.e(-3);
           return true;
         }
-        if (rs.keyCode == 102) {
+        if (PowerOfTwoSupport.keyCode == 102) {
           RegistrationAgreementPane.activeQuickChatMenu.resetSelection((byte) -106);
           return true;
         }
@@ -149,14 +149,14 @@ final class cd {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        BattleCharacter.field_h[uc.spellDefinitions[param0][param3]].drawHalfSize(48 + param1, param2 + 12);
-        km.field_h[0].drawHalfSize(param1 + 46, param2 + 10);
+        BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[param0][param3]].drawHalfSize(48 + param1, param2 + 12);
+        ProjectileEffect.field_h[0].drawHalfSize(param1 + 46, param2 + 10);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         campaigns = null;
         field_b = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_e = null;
           field_d = null;
           return;

@@ -9,10 +9,10 @@ class TextEntryWidgetPainter extends BitmapTextWidgetPainter {
         super(font, 4, 2, 2, 2, textColour, -1, 0, 1, font.maxAscent, -1, 2147483647, false);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_v = null;
         field_u = null;
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           field_v = (String) null;
         }
     }

@@ -165,19 +165,19 @@ final class MoveEvent extends GameEvent {
         int var13 = 0;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          t.field_d = fk.loadRgbSpritesByName("frame_top", (byte) -124, param2, "commonui");
-          ip.field_c = fk.loadRgbSpritesByName("frame_bottom", (byte) -125, param2, "commonui");
-          gt.field_e = GameplayController.a("jagex_logo_grey", (byte) 51, "commonui", param2);
-          NodeIterator.field_b = fk.loadRgbSpritesByName("button", (byte) -124, param2, "commonui");
-          db.validationStatusIcons = ac.a(param2, "validation", (byte) -4, "commonui");
-          gl.field_e = (BitmapFont) ((Object) it.a("arezzo12", param2, param3, (byte) -87, "commonui"));
-          ArmiesOfGielinor.field_J = (BitmapFont) ((Object) it.a("arezzo14", param2, param3, (byte) -87, "commonui"));
-          CipherPacketBuffer.field_t = (BitmapFont) ((Object) it.a("arezzo14bold", param2, param3, (byte) -87, "commonui"));
+          ReloadPageSupport.field_d = DropdownSelectorPainter.loadRgbSpritesByName("frame_top", (byte) -124, param2, "commonui");
+          WidgetStateStyle.field_c = DropdownSelectorPainter.loadRgbSpritesByName("frame_bottom", (byte) -125, param2, "commonui");
+          LocalAccountNameSupport.field_e = GameplayController.a("jagex_logo_grey", (byte) 51, "commonui", param2);
+          NodeIterator.field_b = DropdownSelectorPainter.loadRgbSpritesByName("button", (byte) -124, param2, "commonui");
+          IgnoreListLookupSupport.validationStatusIcons = ManaStarParticle.a(param2, "validation", (byte) -4, "commonui");
+          gl.field_e = (BitmapFont) ((Object) ChatMessageWriteSupport.a("arezzo12", param2, param3, (byte) -87, "commonui"));
+          ArmiesOfGielinor.field_J = (BitmapFont) ((Object) ChatMessageWriteSupport.a("arezzo14", param2, param3, (byte) -87, "commonui"));
+          CipherPacketBuffer.field_t = (BitmapFont) ((Object) ChatMessageWriteSupport.a("arezzo14bold", param2, param3, (byte) -87, "commonui"));
           var4 = new RgbSprite(param0.getFileByName("", 45, "button.gif"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
           if (param1) {
             MoveEvent.g(90);
           }
-          pv.a("commonui", "dropdown", param2, 24914);
+          AccountNameFoldingSupport.a("commonui", "dropdown", param2, 24914);
           var5 = MapLayout.loadIndexedSpritesByName("screen_options", -28106, "commonui", param2);
           ToggleTurnSkipConsoleCommand.field_H = new IndexedSprite[4];
           HuffmanCodec.field_e = new IndexedSprite[4];
@@ -215,19 +215,19 @@ final class MoveEvent extends GameEvent {
             }
             var9 = var4.pixelHeight;
             ConsoleTextNode.pushRasterState((byte) -56);
-            var4.b();
+            var4.bindAsRasterTarget();
             stackIn_23_0 = 0;
             break;
           }
-          SoftwareRaster.c(stackIn_23_0, 0, SoftwareRaster.width, SoftwareRaster.height);
+          SoftwareRaster.grayscaleRectangle(stackIn_23_0, 0, SoftwareRaster.width, SoftwareRaster.height);
           var10_ref = new RgbSprite(var9, var9);
-          var10_ref.b();
+          var10_ref.bindAsRasterTarget();
           var4.drawPixels(0, 0);
           var11 = new RgbSprite(var9, var9);
-          var11.b();
+          var11.bindAsRasterTarget();
           var4.drawPixels(-var4.pixelWidth + var9, 0);
           var12 = new RgbSprite(-(var9 * 2) + var4.pixelWidth, var9);
-          var12.b();
+          var12.bindAsRasterTarget();
           var4.drawPixels(-var9, 0);
           QuickChatPhraseRepository.popRasterState(-18862);
           NodeIterator.field_b = new RgbSprite[]{var10_ref, var12, var11};
@@ -451,7 +451,7 @@ final class MoveEvent extends GameEvent {
             battlefield.registerUnit(obfuscationGuard ^ -18501, var9.occupant);
           }
           this.unit.movementSpent = true;
-          fl.recomputeClientStateChecksum(battlefield, obfuscationGuard ^ 26718);
+          WidgetTheme.recomputeClientStateChecksum(battlefield, obfuscationGuard ^ 26718);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

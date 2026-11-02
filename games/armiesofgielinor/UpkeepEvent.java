@@ -44,7 +44,7 @@ final class UpkeepEvent extends GameEvent {
               battlefield.d(var5.ownerPlayer, battlefield.field_ub[var4.ownerPlayer], 85, 10);
             }
           }
-          fl.recomputeClientStateChecksum(battlefield, -113);
+          WidgetTheme.recomputeClientStateChecksum(battlefield, -113);
           if (obfuscationGuard == -26661) {
             return;
           }
@@ -82,18 +82,18 @@ final class UpkeepEvent extends GameEvent {
           SectorCacheStore.field_j[3] = MapLayout.loadIndexedSpritesByName("coatofarms_banners", -28106, "basic", param0);
           SectorCacheStore.field_j[5] = MapLayout.loadIndexedSpritesByName("coatofarms_icons", -28106, "basic", param0);
           SectorCacheStore.field_j[4] = MapLayout.loadIndexedSpritesByName("coatofarms_toppers", -28106, "basic", param0);
-          RegionAnchor.field_m = fk.loadRgbSpritesByName("coatofarms_effects", (byte) -124, param0, "basic");
+          RegionAnchor.field_m = DropdownSelectorPainter.loadRgbSpritesByName("coatofarms_effects", (byte) -124, param0, "basic");
           GameplayController.a("coatofarms_palette", (byte) 51, "basic", param0);
           ClientConnectionState.field_a = GameplayController.a("coatofarms_scrollbutton", (byte) 51, "basic", param0);
-          wv.field_h = fk.loadRgbSpritesByName("coatofarms_buttons", (byte) -128, param0, "basic");
+          KeyedLoginCredentials.field_h = DropdownSelectorPainter.loadRgbSpritesByName("coatofarms_buttons", (byte) -128, param0, "basic");
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void g(int param0) {
-        if (param0 != 10) {
-          UpkeepEvent.g(30);
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != 10) {
+          UpkeepEvent.releaseStatics(30);
           field_z = null;
           chatTextBuffer = null;
           return;

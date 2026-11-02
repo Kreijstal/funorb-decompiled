@@ -37,12 +37,12 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
             var4 = AccountNameNormalizer.normalize(name, false);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!rs.isAccountNameSeparator(var4.charAt(0), (byte) -111) &&
-                !rs.isAccountNameSeparator(var4.charAt(var4.length() - 1), (byte) -74)) {
+              if (!PowerOfTwoSupport.isAccountNameSeparator(var4.charAt(0), (byte) -111) &&
+                !PowerOfTwoSupport.isAccountNameSeparator(var4.charAt(var4.length() - 1), (byte) -74)) {
                 var5 = 0;
                 for (var6 = 0; var6 < name.length(); var6++) {
                   var7 = name.charAt(var6);
-                  if (rs.isAccountNameSeparator((char) var7, (byte) -42)) {
+                  if (PowerOfTwoSupport.isAccountNameSeparator((char) var7, (byte) -42)) {
                     var5++;
                   } else {
                     var5 = 0;
@@ -117,8 +117,8 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
             var8 = param1[1].canvasWidth;
             param1[0].drawShadedGrayscale(param3, param4, param0);
             param1[2].drawShadedGrayscale(-var7 + param2 + param3, param4, param0);
-            SoftwareRaster.b(DefeatPlayerConsoleCommand.field_H);
-            SoftwareRaster.b(var6_int + param3, param4, param3 + param2 - var7, param1[1].canvasHeight + param4);
+            SoftwareRaster.saveClip(DefeatPlayerConsoleCommand.field_H);
+            SoftwareRaster.intersectClip(var6_int + param3, param4, param3 + param2 - var7, param1[1].canvasHeight + param4);
             if (param5 != -3225) {
               AdaptiveMidiPcmStream.a(true);
             }
@@ -127,7 +127,7 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
             for (param3 = var9; var10 > param3; param3 = param3 + var8) {
               param1[1].drawShadedGrayscale(param3, param4, param0);
             }
-            SoftwareRaster.a(DefeatPlayerConsoleCommand.field_H);
+            SoftwareRaster.restoreClip(DefeatPlayerConsoleCommand.field_H);
             return;
           }
           return;

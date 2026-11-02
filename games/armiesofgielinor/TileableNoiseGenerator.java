@@ -24,7 +24,7 @@ abstract class TileableNoiseGenerator {
         if (param0 != 0) {
           field_f = -108;
         }
-        pg.field_f = DirectByteStorage.field_h;
+        UnitAnimationSelectionSupport.field_f = DirectByteStorage.field_h;
     }
 
     private final void buildOctaveFrequencies(int obfuscationGuard) {
@@ -182,7 +182,7 @@ abstract class TileableNoiseGenerator {
               stackIn_35_0 = pu.field_k[0][1 + choiceState];
               stackIn_36_1 = (controlsEditable != 0);
               stackIn_35_0.inputEnabled = stackIn_36_1;
-              if (!fh.field_c &&
+              if (!GrowableIntArray.field_c &&
                 choiceState == 3) {
                 pu.field_k[0][choiceState + 1].inputEnabled = false;
               }
@@ -192,7 +192,7 @@ abstract class TileableNoiseGenerator {
             }
             if (pu.field_k[0][2].hovered) {
               if (!ToggleWidget.isCurrentRoomOwner(false)) {
-                DialogMessagePane.field_I = EmailCheckResult.a(4800, op.field_a, new String[]{ToggleWidget.currentRoom.ownerName});
+                DialogMessagePane.field_I = EmailCheckResult.a(4800, FriendRequestSupport.field_a, new String[]{ToggleWidget.currentRoom.ownerName});
               } else {
                 DialogMessagePane.field_I = ActionSpell.field_f;
               }
@@ -242,7 +242,7 @@ abstract class TileableNoiseGenerator {
                         CoatOfArms.field_d[choiceValue] = (byte) 0;
                       }
                     } else {
-                      CoatOfArms.field_d[optionIndex / 8] = (byte)GrowthEvent.bitwiseXor((int) CoatOfArms.field_d[optionIndex / 8], 1 << rn.bitwiseAnd(optionIndex, 7));
+                      CoatOfArms.field_d[optionIndex / 8] = (byte)GrowthEvent.bitwiseXor((int) CoatOfArms.field_d[optionIndex / 8], 1 << ProceduralMapSupport.bitwiseAnd(optionIndex, 7));
                     }
                   }
                 }
@@ -342,7 +342,7 @@ abstract class TileableNoiseGenerator {
           if (obfuscationGuard != 1) {
             field_e = (String) null;
           }
-          for (optionIndex = 0; tq.gameOptionCount > optionIndex; optionIndex++) {
+          for (optionIndex = 0; NineSliceSpriteSupport.gameOptionCount > optionIndex; optionIndex++) {
             groupChoices = pu.field_k[optionIndex + 4];
             optionChoices = groupChoices;
             stackIn_170_0 = (filterMode) ? -1 : 0;
@@ -371,7 +371,7 @@ abstract class TileableNoiseGenerator {
                   null != GameAppletShell.field_e[optionIndex]) {
                   thresholdOne = GameAppletShell.field_e[optionIndex][choiceValue];
                   if (0 != thresholdOne &&
-                    !bj.field_k &&
+                    !AlphaDecodedSpriteSupport.field_k &&
                     LoginForm.memberEntitlementValue <= 0) {
                     membersRequired = 1;
                   }
@@ -380,23 +380,23 @@ abstract class TileableNoiseGenerator {
                     thresholdOneFailed = 1;
                   }
                 }
-                if (null != jv.field_d &&
-                  jv.field_d[optionIndex] != null) {
-                  thresholdTwo = jv.field_d[optionIndex][choiceValue];
+                if (null != SoundPanSupport.field_d &&
+                  SoundPanSupport.field_d[optionIndex] != null) {
+                  thresholdTwo = SoundPanSupport.field_d[optionIndex][choiceValue];
                   if (0 < thresholdTwo &&
                     thresholdTwo > SummonAction.field_s) {
                     thresholdTwoFailed = 1;
                   }
                   if (thresholdTwo != 0 &&
-                    !bj.field_k &&
+                    !AlphaDecodedSpriteSupport.field_k &&
                     LoginForm.memberEntitlementValue <= 0) {
                     membersRequired = 1;
                   }
                 }
                 if (filterMode) {
-                  if (ke.field_b != null) {
-                    if (null != ke.field_b[optionIndex]) {
-                      stackIn_217_0 = (ke.field_b[optionIndex][choiceValue]) ? 1 : 0;
+                  if (SoundEffectPreloadSupport.field_b != null) {
+                    if (null != SoundEffectPreloadSupport.field_b[optionIndex]) {
+                      stackIn_217_0 = (SoundEffectPreloadSupport.field_b[optionIndex][choiceValue]) ? 1 : 0;
                     } else {
                       stackIn_217_0 = 0;
                     }
@@ -409,14 +409,14 @@ abstract class TileableNoiseGenerator {
                 filterChoiceBlocked = stackIn_217_0;
               }
               if (BufferedSocket.field_j >= 2 &&
-                br.heldKeys[12]) {
+                CampaignLookupSupport.heldKeys[12]) {
                 thresholdTwoFailed = 0;
                 thresholdOneFailed = 0;
                 membersRequired = 0;
                 filterChoiceBlocked = 0;
                 featureRequirementFailed = 0;
               }
-              fc.field_a = true;
+              EmptyWidgetPainter.field_a = true;
               if (membersRequired == 0 &&
                 thresholdTwoFailed == 0 &&
                 thresholdOneFailed == 0 &&
@@ -429,23 +429,23 @@ abstract class TileableNoiseGenerator {
               choiceBlocked = stackIn_230_0;
               if (choiceBlocked == 0 &&
                 0 <= choiceValue &&
-                null != fs.field_d && (!filterMode ||
+                null != PrivateTextRecipientSupport.field_d && (!filterMode ||
                 !SpellCastAction.field_s)) {
-                jp.field_a = false;
-                fc.field_a = false;
+                ArchiveLoadSequence.field_a = false;
+                EmptyWidgetPainter.field_a = false;
                 if (null == TeleportAction.field_B) {
-                  TeleportAction.field_B = new byte[tq.gameOptionCount];
-                  dt.field_d = new boolean[tq.gameOptionCount];
+                  TeleportAction.field_B = new byte[NineSliceSpriteSupport.gameOptionCount];
+                  DateValiditySupport.field_d = new boolean[NineSliceSpriteSupport.gameOptionCount];
                 }
                 for (var17_int = 0; var17_int < optionIndex; var17_int++) {
-                  dt.field_d[var17_int] = false;
+                  DateValiditySupport.field_d[var17_int] = false;
                 }
                 ConsoleTokenCursor.a(0, optionIndex, room, -1, filterMode, choiceValue, (byte) 103, -1);
                 if (BufferedSocket.field_j >= 2 &&
-                  br.heldKeys[12]) {
-                  fc.field_a = true;
+                  CampaignLookupSupport.heldKeys[12]) {
+                  EmptyWidgetPainter.field_a = true;
                 }
-                if (!fc.field_a) {
+                if (!EmptyWidgetPainter.field_a) {
                   choiceBlocked = 1;
                 }
               }
@@ -461,16 +461,16 @@ abstract class TileableNoiseGenerator {
                 } else {
                   if (choiceValue == -1) {
                     for (var18 = optionFilterBitOffset; var18 < groupChoices.length + optionFilterBitOffset - 1; var18++) {
-                      ClientContextMenu.field_d[var18 / 8] = (byte)rn.bitwiseAnd((int) ClientContextMenu.field_d[var18 / 8], ~(1 << rn.bitwiseAnd(7, var18)));
+                      ClientContextMenu.field_d[var18 / 8] = (byte)ProceduralMapSupport.bitwiseAnd((int) ClientContextMenu.field_d[var18 / 8], ~(1 << ProceduralMapSupport.bitwiseAnd(7, var18)));
                     }
                   } else {
-                    ClientContextMenu.field_d[(optionFilterBitOffset + choiceValue) / 8] = (byte)GrowthEvent.bitwiseXor((int) ClientContextMenu.field_d[(optionFilterBitOffset + choiceValue) / 8], 1 << rn.bitwiseAnd(choiceValue + optionFilterBitOffset, 7));
+                    ClientContextMenu.field_d[(optionFilterBitOffset + choiceValue) / 8] = (byte)GrowthEvent.bitwiseXor((int) ClientContextMenu.field_d[(optionFilterBitOffset + choiceValue) / 8], 1 << ProceduralMapSupport.bitwiseAnd(choiceValue + optionFilterBitOffset, 7));
                   }
                 }
               }
               if (filterMode &&
                 choiceBlocked != 0) {
-                ClientContextMenu.field_d[(optionFilterBitOffset + choiceValue) / 8] = (byte)rn.bitwiseAnd((int) ClientContextMenu.field_d[(optionFilterBitOffset + choiceValue) / 8], ~(1 << rn.bitwiseAnd(choiceValue + optionFilterBitOffset, 7)));
+                ClientContextMenu.field_d[(optionFilterBitOffset + choiceValue) / 8] = (byte)ProceduralMapSupport.bitwiseAnd((int) ClientContextMenu.field_d[(optionFilterBitOffset + choiceValue) / 8], ~(1 << ProceduralMapSupport.bitwiseAnd(choiceValue + optionFilterBitOffset, 7)));
               }
               if (choiceValue >= 0 &&
                 optionButton.hovered) {
@@ -483,13 +483,13 @@ abstract class TileableNoiseGenerator {
                     choiceDescription = VerticalScrollbar.field_Mb[optionIndex][choiceValue];
                   }
                 }
-                if (wb.field_a == null) {
+                if (LoginCredentialStagingSupport.field_a == null) {
                   choiceHint = null;
                 } else {
-                  if (null == wb.field_a[optionIndex]) {
+                  if (null == LoginCredentialStagingSupport.field_a[optionIndex]) {
                     choiceHint = null;
                   } else {
-                    choiceHint = wb.field_a[optionIndex][choiceValue];
+                    choiceHint = LoginCredentialStagingSupport.field_a[optionIndex][choiceValue];
                   }
                 }
                 tooltip = null;
@@ -512,10 +512,10 @@ abstract class TileableNoiseGenerator {
                   restrictionMessageReference = var25;
                 } else {
                   if (membersRequired != 0) {
-                    restrictionMessage = gt.field_a;
+                    restrictionMessage = LocalAccountNameSupport.field_a;
                   } else {
                     if (thresholdTwoFailed != 0) {
-                      var22_int = jv.field_d[optionIndex][choiceValue] - SummonAction.field_s;
+                      var22_int = SoundPanSupport.field_d[optionIndex][choiceValue] - SummonAction.field_s;
                       if (var22_int != 1) {
                         restrictionMessage = EmailCheckResult.a(4800, ByteStorage.field_a, new String[]{Integer.toString(var22_int)});
                       } else {
@@ -553,9 +553,9 @@ abstract class TileableNoiseGenerator {
                   }
                 }
                 if (controlsEditable != 0 &&
-                  !fc.field_a) {
+                  !EmptyWidgetPainter.field_a) {
                   restrictionMessageReference = null;
-                  if (jp.field_a) {
+                  if (ArchiveLoadSequence.field_a) {
                     restrictionMessageReference = "</col>" + ep.field_h + "<col=A00000>";
                     var25Lifetime1 = restrictionMessageReference;
                     restrictionMessageReference = var25Lifetime1;
@@ -565,7 +565,7 @@ abstract class TileableNoiseGenerator {
                   }
                   multipleRestrictionNames = 0;
                   for (restrictedOptionIndex = 0; restrictedOptionIndex < optionIndex; restrictedOptionIndex++) {
-                    if (dt.field_d[restrictedOptionIndex]) {
+                    if (DateValiditySupport.field_d[restrictedOptionIndex]) {
                       taggedRestrictionName = "</col>" + GridWidgetContainer.field_M[restrictedOptionIndex] + "<col=A00000>";
                       restrictionMessageReference = taggedRestrictionName;
                       restrictionMessage = restrictionMessageReference;
@@ -581,14 +581,14 @@ abstract class TileableNoiseGenerator {
                     }
                   }
                   if (multipleRestrictionNames == 0) {
-                    restrictionMessage = EmailCheckResult.a(4800, ab.field_e, new String[]{(String) (restrictionMessageReference)});
+                    restrictionMessage = EmailCheckResult.a(4800, AlphanumericTextSupport.field_e, new String[]{(String) (restrictionMessageReference)});
                   } else {
-                    restrictionMessage = mj.field_a + (String) (restrictionMessageReference);
+                    restrictionMessage = AudioShutdownSupport.field_a + (String) (restrictionMessageReference);
                   }
                 }
                 if (restrictionMessage != null) {
                   restrictionMessage = "<col=A00000>" + (String) (restrictionMessage);
-                  formattedRestrictionMessage = dj.a(6609, (String) (restrictionMessage), "<br>", "<br><col=A00000>");
+                  formattedRestrictionMessage = TextSplitSupport.a(6609, (String) (restrictionMessage), "<br>", "<br><col=A00000>");
                   if (tooltip != null) {
                     tooltip = (String) (tooltip) + "<br>" + formattedRestrictionMessage;
                   } else {
@@ -621,14 +621,14 @@ abstract class TileableNoiseGenerator {
                 }
               } else {
                 stackIn_327_0 = optionButton;
-                stackIn_328_1 = (fc.field_a) && ((byte)choiceValue == room.gameOptions[optionIndex]);
+                stackIn_328_1 = (EmptyWidgetPainter.field_a) && ((byte)choiceValue == room.gameOptions[optionIndex]);
                 stackIn_327_0.selected = stackIn_328_1;
               }
               stackIn_344_0 = optionButton;
               stackIn_345_1 = (controlsEditable != 0) && (choiceBlocked == 0);
               stackIn_344_0.inputEnabled = stackIn_345_1;
             }
-            optionFilterBitOffset = optionFilterBitOffset + (255 & t.field_b[optionIndex]);
+            optionFilterBitOffset = optionFilterBitOffset + (255 & ReloadPageSupport.field_b[optionIndex]);
           }
           if (roomOptionsChanged != 0) {
             if (filterMode) {
@@ -651,11 +651,11 @@ abstract class TileableNoiseGenerator {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_e = null;
         smokeSprites = null;
         field_l = null;
-        if (param0 >= -70) {
+        if (obfuscationGuard >= -70) {
           return;
         }
         field_h = null;
@@ -827,15 +827,15 @@ abstract class TileableNoiseGenerator {
         if (obfuscationGuard != -1) {
           return -123;
         }
-        if (rs.field_o == null) {
+        if (PowerOfTwoSupport.field_o == null) {
           return -1;
         }
-        if (pointerX >= VertexNormal.field_c && VertexNormal.field_c + rs.field_o.pixelWidth > pointerX && pointerY >= ProgressMessageDialog.field_pb &&
-          !(pointerY >= ProgressMessageDialog.field_pb + rs.field_o.pixelHeight)) {
+        if (pointerX >= VertexNormal.field_c && VertexNormal.field_c + PowerOfTwoSupport.field_o.pixelWidth > pointerX && pointerY >= ProgressMessageDialog.field_pb &&
+          !(pointerY >= ProgressMessageDialog.field_pb + PowerOfTwoSupport.field_o.pixelHeight)) {
           return 0;
         }
-        if (pointerX >= BattlefieldTheme.field_h && BattlefieldTheme.field_h + rs.field_o.pixelWidth > pointerX && ug.field_a <= pointerY &&
-          !(rs.field_o.pixelHeight + ug.field_a <= pointerY)) {
+        if (pointerX >= BattlefieldTheme.field_h && BattlefieldTheme.field_h + PowerOfTwoSupport.field_o.pixelWidth > pointerX && ProxyAuthenticationRequiredException.field_a <= pointerY &&
+          !(PowerOfTwoSupport.field_o.pixelHeight + ProxyAuthenticationRequiredException.field_a <= pointerY)) {
           return 1;
         }
         return -1;

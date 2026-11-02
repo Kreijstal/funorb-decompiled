@@ -116,13 +116,13 @@ final class TabbedPanel extends ClientUiComponent {
           }
           FullscreenMembershipDialog.activeContextMenu.addRoomAdmissionActions((byte) 96);
           if (param2) {
-            if (oo.watchedRoomId != FullscreenMembershipDialog.activeContextMenu.roomId) {
+            if (MembershipExpansionScreen.watchedRoomId != FullscreenMembershipDialog.activeContextMenu.roomId) {
               var12 = FullscreenMembershipDialog.activeContextMenu;
-              var13 = EmailCheckResult.a(4800, fs.field_a, new String[]{param3});
+              var13 = EmailCheckResult.a(4800, PrivateTextRecipientSupport.field_a, new String[]{param3});
               var12.menu.addTextAction(15, var13, (byte) -105);
             } else {
               var10 = FullscreenMembershipDialog.activeContextMenu;
-              var11 = EmailCheckResult.a(4800, cp.field_g, new String[]{param3});
+              var11 = EmailCheckResult.a(4800, EventPresenterFactory.field_g, new String[]{param3});
               var10.menu.addTextAction(16, var11, (byte) -103);
             }
           }
@@ -198,25 +198,25 @@ final class TabbedPanel extends ClientUiComponent {
           var9 = var8;
           if (param0.campaign.localGodId != 1) {
             if (param0.campaign.localGodId == 2) {
-              op.field_c[0][2] = lp.field_c[0];
+              FriendRequestSupport.field_c[0][2] = lp.field_c[0];
             }
           } else {
             stackIn_5_0 = (!var9[1].equalsIgnoreCase(NetworkGameShell.field_q[1])) ? 2 : 1;
             var3 = stackIn_5_0;
-            op.field_c[0][var3] = lp.field_c[0];
+            FriendRequestSupport.field_c[0][var3] = lp.field_c[0];
             stackIn_8_0 = (1 != var3) ? 1 : 2;
             var4 = stackIn_8_0;
-            op.field_c[0][var4] = lp.field_c[3];
+            FriendRequestSupport.field_c[0][var4] = lp.field_c[3];
           }
-          op.field_c[0][0] = lp.field_c[param0.campaign.localGodId];
+          FriendRequestSupport.field_c[0][0] = lp.field_c[param0.campaign.localGodId];
           var7 = 0;
           var3Lifetime1 = var7;
           if (param1 != -26) {
             return;
           }
-          while (var7 < op.field_c[0].length) {
-            ActionRequest.unitModels[76][var7] = WeightedScoreStrategy.b(op.field_c[0][var7], -20849);
-            ResourceProtocolClient.a(var7, op.field_c[0][var7], param1 - 100);
+          while (var7 < FriendRequestSupport.field_c[0].length) {
+            ActionRequest.unitModels[76][var7] = WeightedScoreStrategy.b(FriendRequestSupport.field_c[0][var7], -20849);
+            ResourceProtocolClient.a(var7, FriendRequestSupport.field_c[0][var7], param1 - 100);
             var7++;
           }
           return;
@@ -234,13 +234,13 @@ final class TabbedPanel extends ClientUiComponent {
         }
     }
 
-    final static af a(boolean param0, String param1, byte param2, String param3) {
+    final static LoginCredentials a(boolean param0, String param1, byte param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         String var7 = null;
         CharSequence var8 = null;
-        af stackIn_6_0 = null;
+        LoginCredentials stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -260,7 +260,7 @@ final class TabbedPanel extends ClientUiComponent {
             var8 = (CharSequence) ((Object) param1);
             var4_long = DraggableWidgetContainer.a(var8, param2 - 10);
           }
-          stackIn_6_0 = oi.a((String) (var6), param3, param0, param2 ^ 11, var4_long);
+          stackIn_6_0 = CheckMarkWidgetPainter.a((String) (var6), param3, param0, param2 ^ 11, var4_long);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

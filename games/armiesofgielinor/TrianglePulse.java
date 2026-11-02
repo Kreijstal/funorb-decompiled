@@ -14,20 +14,20 @@ final class TrianglePulse {
     private int value;
     static RgbSprite field_f;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
         field_i = null;
         field_j = null;
         field_f = null;
         statusProtectionMasks = null;
-        if (param0 != 16) {
+        if (obfuscationGuard != 16) {
           return;
         }
         field_a = null;
     }
 
     final static void openDefaultQuickChatMenu(byte obfuscationGuard) {
-        vs.showQuickChatMenu(256, AdaptiveMidiPcmStream.defaultQuickChatMenu);
+        QuickChatMenuDisplaySupport.showQuickChatMenu(256, AdaptiveMidiPcmStream.defaultQuickChatMenu);
         if (obfuscationGuard < 113) {
           field_d = (RgbSprite) null;
         }
@@ -228,7 +228,7 @@ final class TrianglePulse {
           hasPlayerNames = stackIn_28_0;
           packet.readBytes(0, room.gameOptions.length, 0, room.gameOptions);
           room.displayRating = packet.readUnsignedShort((byte) -104);
-          room.activityStartedMillis = vi.monotonicMillis(39) - (long)packet.readInt(1);
+          room.activityStartedMillis = MonotonicClockSupport.monotonicMillis(39) - (long)packet.readInt(1);
           if (hasCompletedDuration == 0) {
             room.completedDurationMillis = -1;
           } else {

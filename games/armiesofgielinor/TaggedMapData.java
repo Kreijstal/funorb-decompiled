@@ -40,10 +40,10 @@ final class TaggedMapData implements TaggedFieldReader {
         }
         CombatSandbox.a(dc.field_n, 3);
         TriangleRasterizer.useRasterClip();
-        SoftwareRaster.b();
+        SoftwareRaster.clearPixels();
         DebouncedValidator.e(9);
         if (var5 < 256) {
-          SoftwareRaster.b(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, -var5 + 256);
+          SoftwareRaster.fillRectangleBlended(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, -var5 + 256);
           QuickChatPhraseRepository.popRasterState(-18862);
           if (param2 > -60) {
             return;
@@ -226,17 +226,17 @@ final class TaggedMapData implements TaggedFieldReader {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_g = null;
         field_b = null;
         field_f = null;
-        if (param0 <= -6) {
+        if (obfuscationGuard <= -6) {
           field_h = null;
           field_d = null;
           field_i = null;
           return;
         }
-        TaggedMapData.a(85);
+        TaggedMapData.releaseStatics(85);
         field_h = null;
         field_d = null;
         field_i = null;
@@ -291,7 +291,7 @@ final class TaggedMapData implements TaggedFieldReader {
                   var9 = -var7 + packet.getReadBitPosition(false);
                   kq.enterTaggedPayload(var7, -24232, var9, var8, packet);
                   this.tiles[var6] = DebouncedValidator.readTaggedMapTile(var8, (byte) 70, packet);
-                  ao.finishTaggedPayload(var7, -126, var9, packet, var8);
+                  StatefulWidgetPainter.finishTaggedPayload(var7, -126, var9, packet, var8);
                 }
               } else {
                 if (0 < encodedLength) {

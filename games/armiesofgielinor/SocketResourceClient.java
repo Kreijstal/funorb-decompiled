@@ -100,7 +100,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
               }
             }
             this.idleMillis = 0;
-            this.lastPollMillis = vi.monotonicMillis(80);
+            this.lastPollMillis = MonotonicClockSupport.monotonicMillis(80);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -121,25 +121,25 @@ final class SocketResourceClient extends ResourceProtocolClient {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_s = null;
         field_v = null;
         themeSpriteArchive = null;
         field_x = null;
-        if (param0 != -4096) {
+        if (obfuscationGuard != -4096) {
           field_w = (String) null;
         }
         field_w = null;
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepMillis(long millis, int obfuscationGuard) {
         try {
           try {
-            Thread.sleep(param0);
+            Thread.sleep(millis);
           } catch (InterruptedException interruptedException) {
           }
-          if (param1 <= 3) {
-            SocketResourceClient.b(90, 21);
+          if (obfuscationGuard <= 3) {
+            SocketResourceClient.sine8192(90, 21);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -179,7 +179,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
           NetworkResourceRequest normalRequest;
           var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           if (null != this.socket) {
-            now = vi.monotonicMillis(-75);
+            now = MonotonicClockSupport.monotonicMillis(-75);
             elapsedThenHeaderLength = (int)(-this.lastPollMillis + now);
             this.lastPollMillis = now;
             if (200 < elapsedThenHeaderLength) {
@@ -381,7 +381,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
           try {
             this.outgoingRecord.position = 0;
             this.outgoingRecord.writeByte(1, 6);
-            this.outgoingRecord.a(3, (byte) 58);
+            this.outgoingRecord.writeMedium(3, (byte) 58);
             this.outgoingRecord.writeShort(true, 0);
             this.socket.write(this.outgoingRecord.payload, (byte) 20, 0, this.outgoingRecord.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -450,15 +450,15 @@ final class SocketResourceClient extends ResourceProtocolClient {
         }
     }
 
-    final static int b(int param0, int param1) {
-        param0 = param0 & 8191;
-        if (param1 != 100) {
+    final static int sine8192(int angle, int obfuscationGuard) {
+        angle = angle & 8191;
+        if (obfuscationGuard != 100) {
           field_v = (String) null;
         }
-        if (param0 < 4096) {
-          return param0 >= 2048 ? e.field_a[-param0 + 4096] : e.field_a[param0];
+        if (angle < 4096) {
+          return angle >= 2048 ? QuickChatMenuCloseSupport.field_a[-angle + 4096] : QuickChatMenuCloseSupport.field_a[angle];
         }
-        return param0 < 6144 ? -e.field_a[-4096 + param0] : -e.field_a[8192 - param0];
+        return angle < 6144 ? -QuickChatMenuCloseSupport.field_a[-4096 + angle] : -QuickChatMenuCloseSupport.field_a[8192 - angle];
     }
 
     final void invalidateTransport(byte obfuscationGuard) {
@@ -481,7 +481,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
           vg.field_q[0].normalizeCanvas();
           vg.field_q[1].normalizeCanvas();
           DeployEvent.field_z = param2;
-          ac.field_m = vg.field_q[0].pixelHeight;
+          ManaStarParticle.field_m = vg.field_q[0].pixelHeight;
           if (param0 < 118) {
             field_x = (String) null;
           }

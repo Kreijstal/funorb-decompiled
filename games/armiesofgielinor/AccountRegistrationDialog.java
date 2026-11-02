@@ -20,7 +20,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
           if (this.resultReceived) {
             return super.advanceDialogAnimation((byte) -1);
           }
-          var2 = ki.a(-61440);
+          var2 = QuinticFadeSupport.a(-61440);
           if (var2 == null) {
             return super.advanceDialogAnimation((byte) -1);
           }
@@ -35,18 +35,18 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
         if (this.resultReceived) {
           return super.advanceDialogAnimation((byte) -1);
         }
-        var2Lifetime1 = ki.a(-61440);
+        var2Lifetime1 = QuinticFadeSupport.a(-61440);
         if (var2Lifetime1 != null) {
           this.handleRegistrationResult(false, (byte) -53, var2Lifetime1);
         }
         return super.advanceDialogAnimation((byte) -1);
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_Cb = null;
         field_Bb = null;
         field_zb = null;
-        int var1 = 18 / ((-35 - param0) / 35);
+        int var1 = 18 / ((-35 - obfuscationGuard) / 35);
     }
 
     final void showUnavailable(byte obfuscationGuard) {
@@ -126,7 +126,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
               }
             }
           } else {
-            message = eq.field_i;
+            message = PasswordLoginCredentials.field_i;
           }
           if (resultGuard >= -2) {
             this.registrationForm = (AccountRegistrationForm) null;
@@ -144,7 +144,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
                 messagePane.addActionButton(ViewportManager.field_a, -1, 1);
               } else {
                 messagePane.addActionButton(QuickChatCommandDefinition.field_d, 11, 1);
-                messagePane.addActionButton(dt.field_c, 17, 1);
+                messagePane.addActionButton(DateValiditySupport.field_c, 17, 1);
               }
             } else {
               messagePane.addListenerButton(ProgressMessageDialog.field_kb, (WidgetListener) (this), (byte) 110);

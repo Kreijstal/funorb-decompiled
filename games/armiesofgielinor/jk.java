@@ -85,22 +85,22 @@ abstract class jk {
         }
     }
 
-    public static void a(int param0) {
-        int var1 = 15 % ((48 - param0) / 35);
+    public static void releaseStatics(int obfuscationGuard) {
+        int var1 = 15 % ((48 - obfuscationGuard) / 35);
         field_b = null;
         field_a = null;
     }
 
-    final static el b(int param0) {
+    final static MouseWheelSource b(int param0) {
         try {
           Throwable var1 = null;
-          el stackIn_3_0 = null;
+          MouseWheelSource stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 <= 64) {
-            return (el) null;
+            return (MouseWheelSource) null;
           }
           try {
-            stackIn_3_0 = (el) (Class.forName("sv").newInstance());
+            stackIn_3_0 = (MouseWheelSource) (Class.forName("AwtMouseWheelSource").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

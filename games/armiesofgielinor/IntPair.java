@@ -10,8 +10,8 @@ final class IntPair extends IntrusiveNode {
     static AnimationFrameSet field_q;
     static PlatformTaskService field_m;
 
-    public static void a(int param0) {
-        if (param0 != -10) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != -10) {
           IntPair.e(-3);
         }
         field_m = null;

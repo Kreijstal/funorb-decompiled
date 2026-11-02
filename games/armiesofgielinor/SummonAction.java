@@ -62,8 +62,8 @@ final class SummonAction extends PreparedAction {
             var4 = AccountNameNormalizer.normalize(param1, false);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!rs.isAccountNameSeparator(var4.charAt(0), (byte) -122) &&
-                !rs.isAccountNameSeparator(var4.charAt(-1 + var4.length()), (byte) -107)) {
+              if (!PowerOfTwoSupport.isAccountNameSeparator(var4.charAt(0), (byte) -122) &&
+                !PowerOfTwoSupport.isAccountNameSeparator(var4.charAt(-1 + var4.length()), (byte) -107)) {
                 if (param0 >= -22) {
                   stackIn_22_0 = (String) null;
                   return stackIn_22_0;
@@ -71,7 +71,7 @@ final class SummonAction extends PreparedAction {
                 var5 = 0;
                 for (var6 = 0; var6 < param1.length(); var6++) {
                   var7 = param1.charAt(var6);
-                  if (rs.isAccountNameSeparator((char) var7, (byte) -88)) {
+                  if (PowerOfTwoSupport.isAccountNameSeparator((char) var7, (byte) -88)) {
                     var5++;
                   } else {
                     var5 = 0;
@@ -110,12 +110,12 @@ final class SummonAction extends PreparedAction {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_A = null;
         lobbyPlayerOrder = null;
         field_w = null;
         field_y = null;
-        if (param0 < 61) {
+        if (obfuscationGuard < 61) {
           field_v = (String) null;
         }
         field_F = null;

@@ -69,7 +69,7 @@ final class EmailCheckResult {
                 break;
               }
               var7_ref_String = param1.substring(2 + var6_int, var5);
-              if (!vv.a(param0 ^ -4846, (CharSequence) ((Object) var7_ref_String))) {
+              if (!ConsoleTokenSupport.a(param0 ^ -4846, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -105,7 +105,7 @@ final class EmailCheckResult {
               break;
             }
             var9 = param1.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!vv.a(-110, (CharSequence) ((Object) var9))) {
+            if (!ConsoleTokenSupport.a(-110, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {

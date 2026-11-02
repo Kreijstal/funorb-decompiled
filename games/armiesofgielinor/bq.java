@@ -9,12 +9,12 @@ final class bq {
     static String field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_b = null;
         field_a = null;
         field_d = null;
-        if (param0 != 30156) {
-          bq.a(-73);
+        if (obfuscationGuard != 30156) {
+          bq.releaseStatics(-73);
         }
     }
 

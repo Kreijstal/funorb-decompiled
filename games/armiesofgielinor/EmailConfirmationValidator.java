@@ -22,14 +22,14 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.matchingValidator.validateText(obfuscationGuard ^ 0, text) == rn.validationInvalid) {
-            mismatchState = rn.validationInvalid;
+          if (this.matchingValidator.validateText(obfuscationGuard ^ 0, text) == ProceduralMapSupport.validationInvalid) {
+            mismatchState = ProceduralMapSupport.validationInvalid;
             return mismatchState;
           }
           if (!text.equals(this.checkedEmail)) {
-            result = dh.getEmailCheckResult(text, (byte) 67);
+            result = ImageProducerSurface.getEmailCheckResult(text, (byte) 67);
             if (!result.isComplete((byte) -74)) {
-              checkingState = so.validationChecking;
+              checkingState = FixedSquareRootSupport.validationChecking;
               return checkingState;
             }
             this.checkedEmail = text;
@@ -39,9 +39,9 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             this.matchingValidator = (MatchingTextValidator) null;
           }
           if (this.accepted) {
-            cachedResultState = oo.validationValid;
+            cachedResultState = MembershipExpansionScreen.validationValid;
           } else {
-            cachedResultState = rn.validationInvalid;
+            cachedResultState = ProceduralMapSupport.validationInvalid;
           }
           return cachedResultState;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -71,11 +71,11 @@ final class EmailConfirmationValidator extends TextFieldValidator {
           if (obfuscationGuard <= 89) {
             field_n = (AntialiasedBitmapFont) null;
           }
-          if (this.matchingValidator.validateText(-3137, text) == rn.validationInvalid) {
+          if (this.matchingValidator.validateText(-3137, text) == ProceduralMapSupport.validationInvalid) {
             stackIn_5_0 = this.matchingValidator.describeText((byte) 126, text);
             return stackIn_5_0;
           }
-          if (this.validateText(-3137, text) != rn.validationInvalid) {
+          if (this.validateText(-3137, text) != ProceduralMapSupport.validationInvalid) {
             stackIn_10_0 = CampaignRewardPreview.field_a;
             return stackIn_10_0;
           }
@@ -95,9 +95,9 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_n = null;
-        if (param0 < 91) {
+        if (obfuscationGuard < 91) {
           field_n = (AntialiasedBitmapFont) null;
           field_o = null;
           field_m = null;

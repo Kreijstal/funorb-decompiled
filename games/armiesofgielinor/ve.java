@@ -83,9 +83,9 @@ final class ve {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = (int[][]) null;
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           field_a = (int[][]) null;
         }
     }

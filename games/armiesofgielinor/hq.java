@@ -11,9 +11,9 @@ final class hq {
     static int maximumHeapMiB;
     static int field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_d = null;
-        if (param0 >= -50) {
+        if (obfuscationGuard >= -50) {
           return;
         }
         surroundTileSprites = null;
@@ -39,11 +39,11 @@ final class hq {
             BestScoreStrategy.field_l = param9;
             AiPlanningStrategy.field_c = param2;
             wj.field_n = param11;
-            rn.field_d = param8;
+            ProceduralMapSupport.field_d = param8;
             LineOfSightGrid.field_a = param4;
             DefeatPlayerConsoleCommand.field_E = param12;
             CampaignRewardPreview.field_d = param0;
-            fl.field_e = param13;
+            WidgetTheme.field_e = param13;
             SpriteDropdownMenu.field_v = param6;
             if (null != wj.field_n.randomDataFile) {
               try {

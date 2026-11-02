@@ -9,7 +9,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
     private int transitionTick;
     private AlphaWidgetContainer contentWrapper;
     private tv transitionStage;
-    static h field_db;
+    static LoginKind field_db;
     private int contentInsetTop;
     private Widget pendingContent;
     private int fadeInDuration;
@@ -19,7 +19,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
 
     final static void c(int param0, int param1, int param2) {
         if (param2 < 1) {
-          field_db = (h) null;
+          field_db = (LoginKind) null;
           InstructionsPanel.field_B = param0;
           QuickChatPhrase.field_C = param1;
           return;
@@ -32,7 +32,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
         if (this.transitionStage == TeleportAction.contentFadeOutStage) {
           return;
         }
-        this.transitionStage = ki.contentFadeInStage;
+        this.transitionStage = QuinticFadeSupport.contentFadeInStage;
         int var2 = 113 % ((obfuscationGuard - 69) / 50);
         this.transitionTick = 0;
         this.installContent(72, this.pendingContent);
@@ -69,7 +69,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           this.snapDialogAnimation(117);
           return super.advanceDialogAnimation((byte) -1);
         }
-        if (ki.contentFadeInStage != this.transitionStage) {
+        if (QuinticFadeSupport.contentFadeInStage != this.transitionStage) {
           if (obfuscationGuard == -1) {
             return super.advanceDialogAnimation((byte) -1);
           }
@@ -91,13 +91,13 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
         return super.advanceDialogAnimation((byte) -1);
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_db = null;
         field_gb = null;
         field_eb = null;
         unitAnimationSlotNames = null;
         field_Y = null;
-        if (param0 != -72) {
+        if (obfuscationGuard != -72) {
           return;
         }
         field_X = null;
@@ -112,7 +112,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           var2 = 71 % ((obfuscationGuard + 25) / 57);
           return;
         }
-        if (ki.contentFadeInStage != this.transitionStage) {
+        if (QuinticFadeSupport.contentFadeInStage != this.transitionStage) {
           this.setCenteredSize(this.pendingContent.width + 12, (byte) 98, 12 + (this.contentInsetTop + this.pendingContent.height));
           this.installContent(107, this.pendingContent);
         } else {
@@ -217,7 +217,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             if (param1 != 12) {
               field_Y = (String) null;
             }
-            so.field_b.a(255, var4, param0, param3);
+            FixedSquareRootSupport.field_b.paint(255, var4, param0, param3);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -274,7 +274,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
 
     static {
         unitAnimationSlotNames = new String[]{"ready", "walk", "run", "attack", "ranged", "jeer", "defend", "death"};
-        field_db = new h(3);
+        field_db = new LoginKind(3);
         field_Y = "Go Back";
         field_gb = "You cannot chat to <%0> because <%0> is offline in your friend list.";
     }

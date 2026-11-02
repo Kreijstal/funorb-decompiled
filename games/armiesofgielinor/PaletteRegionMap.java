@@ -26,7 +26,7 @@ final class PaletteRegionMap {
         if (11 == SoundCache.field_b) {
           AnimationFrameSet.d((byte) -13);
         }
-        SpellCastRequest.a(dd.field_a, TelepopEvent.field_C, UnitSpell.field_e, -1);
+        SpellCastRequest.a(ArchiveMasterIndex.field_a, TelepopEvent.field_C, UnitSpell.field_e, -1);
         if (param0 <= 106) {
           return;
         }
@@ -162,10 +162,10 @@ final class PaletteRegionMap {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_i = null;
         field_g = null;
-        if (param0 != 7742) {
+        if (obfuscationGuard != 7742) {
           field_g = (AnimationPlayer) null;
         }
         field_a = null;

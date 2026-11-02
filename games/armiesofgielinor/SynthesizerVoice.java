@@ -74,7 +74,7 @@ final class SynthesizerVoice {
         int initialFeedbackCoefficientIndex;
         int feedbackCoefficientIndex;
         int tailFeedbackCoefficientIndex;
-        vm.a(sampleScratch, 0, sampleCount);
+        ArrayBlockSupport.clearInts(sampleScratch, 0, sampleCount);
         if (durationMilliseconds < 10) {
           return sampleScratch;
         }

@@ -118,8 +118,8 @@ final class JavaSoundPcmPlayer extends PcmPlayer {
           this.line.start();
           this.lineCapacityFrames = capacityFrames;
         } catch (javax.sound.sampled.LineUnavailableException lineFailure) {
-          if (eb.bitCount((byte) -110, capacityFrames) != 1) {
-            this.openDevice(rs.nextPowerOfTwo((byte) 84, capacityFrames));
+          if (BitCountSupport.bitCount((byte) -110, capacityFrames) != 1) {
+            this.openDevice(PowerOfTwoSupport.nextPowerOfTwo((byte) 84, capacityFrames));
             return;
           }
           this.line = null;

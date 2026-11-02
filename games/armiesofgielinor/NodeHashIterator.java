@@ -44,7 +44,7 @@ final class NodeHashIterator implements Iterator {
             }
             if (param3) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, bn.viewportWidth, dt.viewportHeight);
+              var9.fillRect(0, 0, CalendarSupport.viewportWidth, DateValiditySupport.viewportHeight);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
@@ -66,12 +66,12 @@ final class NodeHashIterator implements Iterator {
               var10.setFont(BattleCharacter.field_g);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (304 - 6 * param2.length()) / 2, 22);
-              var9.drawImage(gp.field_e, -152 + bn.viewportWidth / 2, dt.viewportHeight / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(gp.field_e, -152 + CalendarSupport.viewportWidth / 2, DateValiditySupport.viewportHeight / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = bn.viewportWidth / 2 - 152;
-              var8 = -18 + dt.viewportHeight / 2;
+              var7 = CalendarSupport.viewportWidth / 2 - 152;
+              var8 = -18 + DateValiditySupport.viewportHeight / 2;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(2 + var7, var8 + 2, param4 * 3, 30);
@@ -87,7 +87,7 @@ final class NodeHashIterator implements Iterator {
             }
             var9.setFont(BattleCharacter.field_g);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(DefeatPlayerConsoleCommand.field_G, bn.viewportWidth / 2 - DefeatPlayerConsoleCommand.field_G.length() * 6 / 2, dt.viewportHeight / 2 - 26);
+            var9.drawString(DefeatPlayerConsoleCommand.field_G, CalendarSupport.viewportWidth / 2 - DefeatPlayerConsoleCommand.field_G.length() * 6 / 2, DateValiditySupport.viewportHeight / 2 - 26);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -116,7 +116,7 @@ final class NodeHashIterator implements Iterator {
     }
 
     final static void b(byte param0) {
-        SoftwareRaster.b();
+        SoftwareRaster.clearPixels();
         if (param0 != -90) {
           field_i = (QuickChatCommandDefinition) null;
           VerticalScrollbar.field_Rb.draw(2);
@@ -171,7 +171,7 @@ final class NodeHashIterator implements Iterator {
 
     final static void a(byte param0, ResourceArchive param1, ResourceArchive param2) {
         try {
-          jj.animationFramesArchive = param2;
+          FriendLookupSupport.animationFramesArchive = param2;
           PortalLossCondition.animationSkeletonsArchive = param1;
           if (param0 > -117) {
             field_a = (String) null;
@@ -181,10 +181,10 @@ final class NodeHashIterator implements Iterator {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_a = null;
         field_i = null;
-        int var1 = -28 % ((param0 + 69) / 51);
+        int var1 = -28 % ((obfuscationGuard + 69) / 51);
         field_f = null;
         field_e = null;
         field_h = null;

@@ -11,7 +11,7 @@ final class ConsoleParseException extends Exception {
         ProgressMessageDialog.field_lb = null;
         CipherPacketBuffer.currentBattlefield = null;
         ConsoleExpression.field_p = null;
-        vs.field_e = null;
+        QuickChatMenuDisplaySupport.field_e = null;
         NetworkResourceRequest.field_C = null;
         PaletteRegionMap.field_g = null;
         ResourceArchive.field_a = null;
@@ -30,29 +30,29 @@ final class ConsoleParseException extends Exception {
           return;
         }
         try {
-          if (0 == we.field_f.pressedButton) {
+          if (0 == ArchiveLoadStep.field_f.pressedButton) {
           } else {
             if (NodeIterator.field_a) {
             } else {
-              if (!vi.field_d) {
-                hf.textChatActive = true;
+              if (!MonotonicClockSupport.field_d) {
+                ClientStateChecksumSupport.textChatActive = true;
               } else {
                 ContextActionMenu.openPublicQuickChat(86);
               }
             }
           }
-          if (!hf.textChatActive) {
+          if (!ClientStateChecksumSupport.textChatActive) {
             return;
           }
           TextLineLayout.a(param7, param2, param4, 20, param0, param0, param5, 15676, param6);
           UnitCycler.field_g.updateInput(true, param3);
           if (param3) {
             if (qf.field_e.pressedButton != 0) {
-              hf.textChatActive = false;
+              ClientStateChecksumSupport.textChatActive = false;
             }
             if (ed.field_e.pressedButton != 0) {
               FullscreenFocusCanvas.clearChatText(8445);
-              hf.textChatActive = false;
+              ClientStateChecksumSupport.textChatActive = false;
               return;
             }
           }

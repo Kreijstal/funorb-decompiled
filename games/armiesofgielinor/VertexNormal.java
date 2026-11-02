@@ -87,9 +87,9 @@ final class VertexNormal {
           var8 = 0;
           if (ToggleWidget.currentRoom != null && (null != ep.field_p ||
             GameAppletShell.field_e != null ||
-            jv.field_d != null ||
+            SoundPanSupport.field_d != null ||
             CombatPresentation.field_j != null)) {
-            for (var9 = 0; var9 < tq.gameOptionCount; var9++) {
+            for (var9 = 0; var9 < NineSliceSpriteSupport.gameOptionCount; var9++) {
               var10_int = ToggleWidget.currentRoom.gameOptions[var9] & 255;
               if (null != ep.field_p &&
                 null != ep.field_p[var9] &&
@@ -103,15 +103,15 @@ final class VertexNormal {
                   var6 = var11_int;
                 }
                 if (var11_int != 0 &&
-                  !bj.field_k) {
+                  !AlphaDecodedSpriteSupport.field_k) {
                   var5_int = 1;
                 }
               }
-              if (jv.field_d != null &&
-                jv.field_d[var9] != null) {
-                var11_intLifetime1 = jv.field_d[var9][var10_int];
+              if (SoundPanSupport.field_d != null &&
+                SoundPanSupport.field_d[var9] != null) {
+                var11_intLifetime1 = SoundPanSupport.field_d[var9][var10_int];
                 if (var11_intLifetime1 != 0 &&
-                  !bj.field_k) {
+                  !AlphaDecodedSpriteSupport.field_k) {
                   var5_int = 1;
                 }
                 if (var11_intLifetime1 > var7) {
@@ -142,12 +142,12 @@ final class VertexNormal {
             if (var12.children == null) {
               var12.nameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
               var12.addChild(var12.nameComponent, 106);
-              var12.ratingComponent = new ClientUiComponent(0L, ws.field_P);
-              if (fh.field_c) {
+              var12.ratingComponent = new ClientUiComponent(0L, DialWidget.field_P);
+              if (GrowableIntArray.field_c) {
                 var12.addChild(var12.ratingComponent, param1 ^ 157);
               }
               var12.ratingComponent.horizontalAlignment = 2;
-              var12.field_fc = new ClientUiComponent(0L, eq.field_h);
+              var12.field_fc = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
               var12.addChild(var12.field_fc, 62);
               var12.inheritVisualStateForDescendants(-10027);
               var12.admissionButton = new ClientUiComponent(0L, QuickChatPhraseRepository.field_d);
@@ -221,7 +221,7 @@ final class VertexNormal {
               if (bu.field_a != param4) {
                 if (var12.invitationSent) {
                   var12.nameComponent.text = EmailCheckResult.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
-                  var12.cancelRejectButton.text = ac.field_s;
+                  var12.cancelRejectButton.text = ManaStarParticle.field_s;
                 } else {
                   if (var12.joinRequested) {
                     var12.nameComponent.text = EmailCheckResult.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
@@ -259,7 +259,7 @@ final class VertexNormal {
               stackIn_96_1 = jn.field_d;
               stackIn_96_2 = -20500;
               stackIn_96_3 = -var25_int + var12.width;
-              if (fh.field_c) {
+              if (GrowableIntArray.field_c) {
                 stackIn_97_4 = 42;
               } else {
                 stackIn_97_4 = 0;
@@ -307,7 +307,7 @@ final class VertexNormal {
                 ActionSpell.writePlayerAdmissionRequest(var12.accountId, param3, 6);
               } else {
                 if (0 == var12.cancelRejectButton.pressedButton) {
-                  bk.a(false, 0, BattleTutorial.pointerPressX, 0, var12, param4, TeleportAction.pointerPressY);
+                  MusicTrackSelectionSupport.a(false, 0, BattleTutorial.pointerPressX, 0, var12, param4, TeleportAction.pointerPressY);
                 } else {
                   SoundPlaybackHandle.writePlayerAdmissionCancellation(param3, var12.accountId, (byte) 97);
                 }
@@ -334,7 +334,7 @@ final class VertexNormal {
                     if (var6 <= var12.rating) {
                       if ((~var12.optionUnlockMask & var8) != 0) {
                         var25_int = fd.a(true, ~var12.optionUnlockMask & var8);
-                        var24Lifetime2 = EmailCheckResult.a(4800, h.field_f, new String[]{var20});
+                        var24Lifetime2 = EmailCheckResult.a(4800, LoginKind.field_f, new String[]{var20});
                         if (0 < var25_int &&
                           jl.field_c != null &&
                           jl.field_c.length >= var25_int &&
@@ -343,7 +343,7 @@ final class VertexNormal {
                         }
                       }
                     } else {
-                      var24Lifetime2 = EmailCheckResult.a(4800, bk.field_g, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = EmailCheckResult.a(4800, MusicTrackSelectionSupport.field_g, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.ratedGamesPlayed + var7;
@@ -377,7 +377,7 @@ final class VertexNormal {
                         }
                       }
                     } else {
-                      var24Lifetime2 = EmailCheckResult.a(4800, vi.field_b, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = EmailCheckResult.a(4800, MonotonicClockSupport.field_b, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
@@ -391,7 +391,7 @@ final class VertexNormal {
                 var25 = var30_refLifetime1;
                 var25 = null;
                 var26Lifetime1 = 0;
-                for (var27_int = 0; var27_int < tq.gameOptionCount; var27_int++) {
+                for (var27_int = 0; var27_int < NineSliceSpriteSupport.gameOptionCount; var27_int++) {
                   var28 = ToggleWidget.currentRoom.gameOptions[var27_int] & 255;
                   var29 = 0;
                   if (ep.field_p != null &&
@@ -404,7 +404,7 @@ final class VertexNormal {
                     null != GameAppletShell.field_e[var27_int]) {
                     var30_int = GameAppletShell.field_e[var27_int][var28];
                     if (var30_int != 0 &&
-                      !bj.field_k &&
+                      !AlphaDecodedSpriteSupport.field_k &&
                       !var12.packedFlag0) {
                       var29 = 1;
                     }
@@ -412,11 +412,11 @@ final class VertexNormal {
                       var29 = 1;
                     }
                   }
-                  if (jv.field_d != null &&
-                    null != jv.field_d[var27_int]) {
-                    var30_intLifetime1 = jv.field_d[var27_int][var28];
+                  if (SoundPanSupport.field_d != null &&
+                    null != SoundPanSupport.field_d[var27_int]) {
+                    var30_intLifetime1 = SoundPanSupport.field_d[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
-                      !bj.field_k &&
+                      !AlphaDecodedSpriteSupport.field_k &&
                       !var12.packedFlag0) {
                       var29 = 1;
                     }
@@ -483,10 +483,10 @@ final class VertexNormal {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_h = null;
         field_a = null;
-        if (param0 != -14691) {
+        if (obfuscationGuard != -14691) {
           return;
         }
         field_f = null;

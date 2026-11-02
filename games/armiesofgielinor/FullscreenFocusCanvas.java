@@ -14,14 +14,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static GameplayController gameplayController;
     static long tickDurationNanos;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_g = null;
         field_a = null;
         field_f = null;
         gameplayController = null;
         field_h = null;
         field_e = null;
-        if (param0 != 20000000) {
+        if (obfuscationGuard != 20000000) {
           field_e = (ClientUiComponent) null;
         }
     }
@@ -41,11 +41,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         if (obfuscationGuard != 8445) {
           FullscreenFocusCanvas.clearChatText(33);
           UpkeepEvent.chatTextBuffer.setLength(0);
-          rs.outgoingChatChannel = 0;
+          PowerOfTwoSupport.outgoingChatChannel = 0;
           return;
         }
         UpkeepEvent.chatTextBuffer.setLength(0);
-        rs.outgoingChatChannel = 0;
+        PowerOfTwoSupport.outgoingChatChannel = 0;
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {

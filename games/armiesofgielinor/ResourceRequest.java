@@ -45,7 +45,7 @@ abstract class ResourceRequest extends DualLinkedNode {
           var3.displayName = packet.readNullCircumfixedString((byte) 121);
           var3.availableUnitTypes = RasterViewportResizeHandler.readNullableUnsignedByteArray(packet, (byte) -98);
           var3.coatOfArms = CacheEntry.readSignedCoatOfArms(packet, false);
-          var3.godFavourLevels = gt.readSixUnsignedBytes(-2, packet);
+          var3.godFavourLevels = LocalAccountNameSupport.readSixUnsignedBytes(-2, packet);
           var3.equippedSpellIds = DateInputWidget.readUnsignedByteArray(packet, (byte) -24);
           stackIn_3_0 = var3;
           return stackIn_3_0;

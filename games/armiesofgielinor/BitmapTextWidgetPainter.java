@@ -116,7 +116,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
             }
             caretBottom = textTop + Math.min(contentHeight, Math.min(lineBottom, nextLineTop));
             CampaignUnitOverride.a(originX + widget.x, widget.x + originX + widget.width, widget.height + (widget.y + originY), widget.y + originY, (byte) 100);
-            t.field_c.drawLine(this.caretColour, caretBottom, absoluteX, (byte) 101, caretTop, absoluteX);
+            ReloadPageSupport.field_c.drawLine(this.caretColour, caretBottom, absoluteX, (byte) 101, caretTop, absoluteX);
             QuickChatPhraseRepository.popRasterState(-18862);
           }
           if (obfuscationGuard == 1024) {
@@ -543,7 +543,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
               selectionRight = layoutAlias.getCaretX((byte) -66, lastIndex);
             }
             right = selectionRight;
-            t.field_c.fillRectangle(this.selectionColour >>> 24, this.absoluteTextX(originX, widget, left, -109), this.paddingTop + originY + (widget.y + widget.contentOffsetY) + line.top, true, line.bottom, -left + right, this.selectionColour);
+            ReloadPageSupport.field_c.fillRectangle(this.selectionColour >>> 24, this.absoluteTextX(originX, widget, left, -109), this.paddingTop + originY + (widget.y + widget.contentOffsetY) + line.top, true, line.bottom, -left + right, this.selectionColour);
           }
           QuickChatPhraseRepository.popRasterState(obfuscationGuard + 2397);
           return;
@@ -561,10 +561,10 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_a = null;
         musicCrossfadeStream = null;
-        int var1 = -5 / ((-45 - param0) / 50);
+        int var1 = -5 / ((-45 - obfuscationGuard) / 50);
         field_s = null;
         field_r = null;
     }
@@ -705,7 +705,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
           if (CampaignMission.field_I == null) {
             return;
           }
-          CampaignMission.field_I.a(0, (java.awt.Component) ((Object) param1));
+          CampaignMission.field_I.attach(0, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

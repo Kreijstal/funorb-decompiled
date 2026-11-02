@@ -135,18 +135,18 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
         try {
           CampaignDefinition.field_t.drawOpaque(param4 + 2, param7 + param6 - 73);
           GradientUiRenderer.drawHollowGradientFrame(param4 + 0, -76 + param6 + param7, 309, 71, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
-          SoftwareRaster.b(param4 + 7, param7 - 70 + param6, 25, 25, 0, 128);
-          SoftwareRaster.b(37 + param4, param7 - 70 + param6, 265, 25, 0, 128);
-          var21 = param2.q((byte) 67);
+          SoftwareRaster.fillRectangleBlended(param4 + 7, param7 - 70 + param6, 25, 25, 0, 128);
+          SoftwareRaster.fillRectangleBlended(37 + param4, param7 - 70 + param6, 265, 25, 0, 128);
+          var21 = param2.getLabelWithStatusSuffixes((byte) 67);
           var8 = var21.toLowerCase();
           SoftwareRaster.setClip(param4 + 37, param7 - 70 + param6, 245 + param4, param6 + (param7 - 45));
           GradientUiRenderer.drawSolidText(var8, -param3 + (param4 + 42), param6 - 43 + param7, 16777215, true);
-          SoftwareRaster.a();
+          SoftwareRaster.resetClip();
           GradientUiRenderer.drawCenteredSolidText(param2.strength + param2.bonusStrength + "/" + param2.maximumStrength, param4 + 272, param6 - (42 - param7), 16777215, param1);
           ProgressMessageDialog.field_rb[param2.getUnitCategory(0)].draw(param4 + 9, param7 - 66 + param6);
-          var9 = param2.l(-27014);
-          SoftwareRaster.b(59 + param4, param7 - 41 + param6, 30, 30, 0, 128);
-          cp.field_e[eb.bitCount((byte) -120, ~var9 & 3)].draw(param4 + 62, param7 - (-param6 + 41));
+          var9 = param2.getStatusIconMask(-27014);
+          SoftwareRaster.fillRectangleBlended(59 + param4, param7 - 41 + param6, 30, 30, 0, 128);
+          EventPresenterFactory.field_e[BitCountSupport.bitCount((byte) -120, ~var9 & 3)].draw(param4 + 62, param7 - (-param6 + 41));
           var10 = param2.unitType;
           if (var10 == 34 &&
             param2.packedFlag8) {
@@ -177,23 +177,23 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
             }
           }
           if (var11 != var12) {
-            SoftwareRaster.b(param4 + 92, param7 - 41 + param6, 39, 30, 0, 128);
+            SoftwareRaster.fillRectangleBlended(param4 + 92, param7 - 41 + param6, 39, 30, 0, 128);
             GradientUiRenderer.drawCenteredSolidText(EmailCheckResult.a(4800, LinkButtonPainter.field_a, new String[]{Integer.toString(var11), Integer.toString(var12)}), param4 + 111, param7 - 41 + (param6 + 30), 16777215, true);
           } else {
-            SoftwareRaster.b(96 + param4, -41 - (-param6 - param7), 30, 30, 0, 128);
+            SoftwareRaster.fillRectangleBlended(96 + param4, -41 - (-param6 - param7), 30, 30, 0, 128);
             GradientUiRenderer.drawCenteredSolidText(Integer.toString(var11), param4 + 111, -41 - (-param6 - (param7 + 30)), 16777215, true);
           }
           var13 = 0;
-          SoftwareRaster.a(307 + param4 - 20, param7 - 26 + param6, 17, 0, 128);
+          SoftwareRaster.fillCircleBlended(307 + param4 - 20, param7 - 26 + param6, 17, 0, 128);
           var14 = WhirlpoolHasher.unitDefinitions[param2.unitType][12];
           if (var14 > -1) {
-            if (var14 < lb.field_e.length) {
-              lb.field_e[var14].draw(-35 + (308 + param4), -42 + param6 + param7);
+            if (var14 < ResourceClientErrorSupport.field_e.length) {
+              ResourceClientErrorSupport.field_e[var14].draw(-35 + (308 + param4), -42 + param6 + param7);
             } else {
-              SoftwareRaster.a(-35 + (param4 + 308), param7 + param6 - 42, 25, (int)(Math.random() * 16777215.0), 128);
+              SoftwareRaster.fillCircleBlended(-35 + (param4 + 308), param7 + param6 - 42, 25, (int)(Math.random() * 16777215.0), 128);
             }
           }
-          var15 = eb.bitCount((byte) -104, var9 >> 2);
+          var15 = BitCountSupport.bitCount((byte) -104, var9 >> 2);
           if ((var15 & 3) <= 0 &&
             var15 != 0) {
             stackIn_35_0 = 0;
@@ -201,10 +201,10 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
             stackIn_35_0 = 1;
           }
           var16 = stackIn_35_0 + (var15 >> 2);
-          SoftwareRaster.b(param4 + 284 - 150, -41 + param6 + param7, 130, 30 * var16, 0, 128);
+          SoftwareRaster.fillRectangleBlended(param4 + 284 - 150, -41 + param6 + param7, 130, 30 * var16, 0, 128);
           for (var17 = 5; 1 < var17; var17--) {
             if ((var9 & 1 << var17) != 0) {
-              cp.field_e[var17 + 1].draw(-(30 * (3 & var13)) + 235 + param4, (var13 >> 2) * 30 + (param7 - 41 + param6));
+              EventPresenterFactory.field_e[var17 + 1].draw(-(30 * (3 & var13)) + 235 + param4, (var13 >> 2) * 30 + (param7 - 41 + param6));
               var13++;
             }
           }
@@ -215,18 +215,18 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
               stackIn_44_0 = -1 + param2.statusEffectValue;
             }
             var17Lifetime1 = stackIn_44_0;
-            BattleCharacter.field_h[vr.field_a[param2.statusEffectType - 1] + var17Lifetime1].drawHalfSize(-(30 * (var13 & 3)) + (235 + param4), param7 + (-36 + param6) + (var13 >> 2) * 30);
-            km.field_h[0].drawHalfSize(param4 + 233 - 30 * (3 & var13), 30 * (var13 >> 2) + param7 - 37 + param6);
+            BattleCharacter.field_h[ThemeSpriteLoadingSupport.field_a[param2.statusEffectType - 1] + var17Lifetime1].drawHalfSize(-(30 * (var13 & 3)) + (235 + param4), param7 + (-36 + param6) + (var13 >> 2) * 30);
+            ProjectileEffect.field_h[0].drawHalfSize(param4 + 233 - 30 * (3 & var13), 30 * (var13 >> 2) + param7 - 37 + param6);
             var13++;
           }
           if (param2.equipmentDescriptor > -1) {
             BattleCharacter.field_h[BattlefieldTheme.field_p[param2.getEquipmentCategory(20640)][param2.getEquipmentId((byte) 81)]].drawHalfSize(235 + param4 - (var13 & 3) * 30, (var13 >> 2) * 30 + param7 + (-36 + param6));
-            km.field_h[0].drawHalfSize(-((var13 & 3) * 30) + (param4 + 233), (var13 >> 2) * 30 - 37 + param6 + param7);
+            ProjectileEffect.field_h[0].drawHalfSize(-((var13 & 3) * 30) + (param4 + 233), (var13 >> 2) * 30 - 37 + param6 + param7);
             var13++;
           }
           if (param2.accessoryType > 0) {
             BattleCharacter.field_h[AccountNameAvailabilityValidator.field_o[param2.accessoryType - 1]].drawHalfSize(-((3 & var13) * 30) + (235 + param4), 30 * (var13 >> 2) - 36 - (-param6 - param7));
-            km.field_h[0].drawHalfSize(param4 + 233 - 30 * (3 & var13), (var13 >> 2) * 30 + param7 + param6 - 37);
+            ProjectileEffect.field_h[0].drawHalfSize(param4 + 233 - 30 * (3 & var13), (var13 >> 2) * 30 + param7 + param6 - 37);
             var13++;
           }
           if (param2.immobilizedTurns > 0) {
@@ -238,22 +238,22 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
               stackIn_55_2 = 2;
             }
             ((RgbSprite) (Object) stackIn_54_0[stackIn_54_1[stackIn_55_2]]).drawHalfSize(235 + param4 - (var13 & 3) * 30, param7 + (-36 + param6) + 30 * (var13 >> 2));
-            km.field_h[0].drawHalfSize(-((var13 & 3) * 30) + (233 + param4), (var13 >> 2) * 30 + param7 - (-param6 + 37));
+            ProjectileEffect.field_h[0].drawHalfSize(-((var13 & 3) * 30) + (233 + param4), (var13 >> 2) * 30 + param7 - (-param6 + 37));
             var13++;
           }
           if (param2.meleeLifeSteal) {
             BattleCharacter.field_h[133].drawHalfSize(-((3 & var13) * 30) + 235 + param4, param6 - (36 - param7 - 30 * (var13 >> 2)));
-            km.field_h[0].drawHalfSize(param4 + 233 - 30 * (3 & var13), -37 + (param6 + param7) + (var13 >> 2) * 30);
+            ProjectileEffect.field_h[0].drawHalfSize(param4 + 233 - 30 * (3 & var13), -37 + (param6 + param7) + (var13 >> 2) * 30);
             var13++;
           }
           if (param2.packedFlag256) {
             BattleCharacter.field_h[122 + WhirlpoolHasher.unitDefinitions[param2.unitType][2]].drawHalfSize(param4 + (235 - (var13 & 3) * 30), param7 - 36 - (-param6 - (var13 >> 2) * 30));
-            km.field_h[0].drawHalfSize(param4 + 233 - 30 * (var13 & 3), param7 - 37 - (-param6 - (var13 >> 2) * 30));
+            ProjectileEffect.field_h[0].drawHalfSize(param4 + 233 - 30 * (var13 & 3), param7 - 37 - (-param6 - (var13 >> 2) * 30));
             var13++;
           }
           if (param2.packedFlag32) {
             BattleCharacter.field_h[j.field_j[LinkButtonPainter.a(param2.unitType, (byte) -125)]].drawHalfSize(-((3 & var13) * 30) + 235 + param4, 30 * (var13 >> 2) + param7 + param6 - 36);
-            km.field_h[0].drawHalfSize(-((var13 & 3) * 30) + (param4 + 233), param6 - 37 + (param7 + (var13 >> 2) * 30));
+            ProjectileEffect.field_h[0].drawHalfSize(-((var13 & 3) * 30) + (param4 + 233), param6 - 37 + (param7 + (var13 >> 2) * 30));
             var13++;
           }
           if (param5 == 80) {
@@ -321,7 +321,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
                 if (param2.unitType == 34 &&
                   !param2.packedFlag8) {
                   var18 = param2.battlefield.tiles[param2.tileY * param2.battlefield.mapWidth + param2.tileX];
-                  stackIn_110_0 = (var18.f(19725)) ? 0 : 1;
+                  stackIn_110_0 = (var18.isNotStructure(19725)) ? 0 : 1;
                   var19Lifetime1 = stackIn_110_0;
                   if (!param2.movementSpent &&
                     param2.attacksRemaining != 0 &&
@@ -332,7 +332,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
                       StandardContentDialog.field_ob.drawAdditive(param4 + 11, -36 + param6 + param7, 128);
                       break regionExit1;
                     }
-                    km.field_h[1].drawTransparent(7 + param4, -40 + (param6 + param7));
+                    ProjectileEffect.field_h[1].drawTransparent(7 + param4, -40 + (param6 + param7));
                     return;
                   }
                   StandardContentDialog.field_ob.drawWithBrightness(11 + param4, param6 - 36 + param7, 128);
@@ -355,7 +355,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
               }
             }
           }
-          km.field_h[1].drawTransparent(7 + param4, -40 + (param6 + param7));
+          ProjectileEffect.field_h[1].drawTransparent(7 + param4, -40 + (param6 + param7));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -650,7 +650,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
             field_E = (String[]) null;
             return false;
           }
-          if (!br.heldKeys[81]) {
+          if (!CampaignLookupSupport.heldKeys[81]) {
             stackIn_16_0 = this.focusNextChild(-57, rootWidget);
           } else {
             stackIn_16_0 = this.focusPreviousChild((byte) 88, rootWidget);
@@ -735,7 +735,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
           return;
         }
         int var2 = 0 % ((43 - param0) / 60);
-        param1 = uc.spellDefinitions[param1][8];
+        param1 = SpellDefinitionTable.spellDefinitions[param1][8];
         if (param1 < 0) {
           return;
         }
@@ -822,8 +822,8 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
         }
     }
 
-    public static void i(int param0) {
-        if (param0 != 0) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_E = null;
@@ -1021,10 +1021,10 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
     final static void a(int param0) {
         int var1 = 0;
         if (ResourceProtocolClient.effectsGain >= 224) {
-          mh.setEffectsGain(256, (byte) -60);
+          EffectsGainSupport.setEffectsGain(256, (byte) -60);
         } else {
           var1 = ResourceProtocolClient.effectsGain % 32;
-          mh.setEffectsGain(ResourceProtocolClient.effectsGain + 32 - var1, (byte) -36);
+          EffectsGainSupport.setEffectsGain(ResourceProtocolClient.effectsGain + 32 - var1, (byte) -36);
         }
         if (param0 != 30) {
           field_H = (IconLabelControl) null;

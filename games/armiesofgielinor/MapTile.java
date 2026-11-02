@@ -17,9 +17,9 @@ final class MapTile implements TaggedFieldReader {
     static boolean[] decodedSpriteHasAlpha;
     static int field_i;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_f = null;
-        if (param0 >= -19) {
+        if (obfuscationGuard >= -19) {
           return;
         }
         decodedSpriteHasAlpha = null;
@@ -170,7 +170,7 @@ final class MapTile implements TaggedFieldReader {
     final boolean hasModifierFlag1(int obfuscationGuard) {
         boolean stackIn_6_0 = false;
         if (obfuscationGuard != 12) {
-          this.l(-61);
+          this.isCaptureStrengthReduced(-61);
         }
         stackIn_6_0 = (this.metadata != null) && ((1 & this.metadata.modifierFlags) != 0);
         return stackIn_6_0;
@@ -331,7 +331,7 @@ final class MapTile implements TaggedFieldReader {
         if (this.occupant != null) {
           if (var8 != 0) {
             if (this.occupant.maximumStrength > this.occupant.strength) {
-              stackIn_80_0 = (this.occupant.a(23072)) ? 0 : 1;
+              stackIn_80_0 = (this.occupant.canLifeSteal(23072)) ? 0 : 1;
             } else {
               stackIn_80_0 = 0;
             }
@@ -350,7 +350,7 @@ final class MapTile implements TaggedFieldReader {
               if (-1 + this.occupant.maximumStrength > this.occupant.strength) {
                 this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this.occupant, 1)));
               }
-              this.battlefield.e(14, param1, this.ownerPlayer, param0);
+              this.battlefield.curePoisonAt(14, param1, this.ownerPlayer, param0);
             }
             if (var11 != 0) {
               this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DamageEvent(this.occupant, 3, false)));
@@ -385,7 +385,7 @@ final class MapTile implements TaggedFieldReader {
           if (var13 == 8) {
             if (var12 != 0) {
               this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this.occupant, 1)));
-              this.battlefield.e(14, param1, this.ownerPlayer, param0);
+              this.battlefield.curePoisonAt(14, param1, this.ownerPlayer, param0);
             }
             stackIn_115_0 = this.battlefield;
             stackIn_115_1 = param2;
@@ -414,7 +414,7 @@ final class MapTile implements TaggedFieldReader {
           }
           if (var12 != 0) {
             this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this.occupant, 1)));
-            this.battlefield.e(param3 + 14, param1, this.ownerPlayer, param0);
+            this.battlefield.curePoisonAt(param3 + 14, param1, this.ownerPlayer, param0);
           }
           stackIn_125_0 = this.battlefield;
           stackIn_125_1 = param2;
@@ -478,12 +478,12 @@ final class MapTile implements TaggedFieldReader {
           this.metadata.displayName != null) {
           var2 = this.metadata.displayName;
         } else {
-          if (jj.field_a.length > this.terrainType) {
+          if (FriendLookupSupport.field_a.length > this.terrainType) {
             if (null != this.battlefield &&
               this.battlefield.mapTheme == 4) {
-              var2 = dj.field_d[this.terrainType];
+              var2 = TextSplitSupport.field_d[this.terrainType];
             } else {
-              var2 = jj.field_a[this.terrainType];
+              var2 = FriendLookupSupport.field_a[this.terrainType];
             }
           }
         }
@@ -500,7 +500,7 @@ final class MapTile implements TaggedFieldReader {
         if (obfuscationGuard) {
           this.ownerPlayer = -78;
         }
-        return ck.isStructureTerrain(this.terrainType, -12);
+        return StructureTerrainSupport.isStructureTerrain(this.terrainType, -12);
     }
 
     private MapTile(int param0) {
@@ -509,18 +509,18 @@ final class MapTile implements TaggedFieldReader {
         this.captureStrength = this.getDefaultCaptureStrength(10);
     }
 
-    final void j(int param0) {
-        int var2 = -2 % ((param0 - 5) / 44);
+    final void refreshGodFromMetadata(int obfuscationGuard) {
+        int var2 = -2 % ((obfuscationGuard - 5) / 44);
         if (this.terrainType == 11) {
           this.godId = this.metadata.godId;
         }
     }
 
-    final void a(int param0) {
+    final void setModifierFlag8(int obfuscationGuard) {
         if (null == this.metadata) {
           this.metadata = new TileMetadata();
         }
-        if (param0 < 62) {
+        if (obfuscationGuard < 62) {
           return;
         }
         this.metadata.modifierFlags = this.metadata.modifierFlags | 8;
@@ -537,7 +537,7 @@ final class MapTile implements TaggedFieldReader {
         return 15;
     }
 
-    final void a(byte param0, Battlefield param1) {
+    final void attachBattlefield(byte obfuscationGuard, Battlefield battlefield) {
         String var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -545,12 +545,12 @@ final class MapTile implements TaggedFieldReader {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.battlefield = param1;
-          if (param0 != -68) {
+          this.battlefield = battlefield;
+          if (obfuscationGuard != -68) {
             var4 = (String) null;
             this.decodeTaggedField(-103, (CipherPacketBuffer) null, (String) null, (byte) 0);
           }
-          if (param1 == null) {
+          if (battlefield == null) {
             return;
           }
           this.teamEffectFlags = new int[this.battlefield.teamCount];
@@ -563,8 +563,8 @@ final class MapTile implements TaggedFieldReader {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("ne.EA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("ne.EA(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -581,8 +581,8 @@ final class MapTile implements TaggedFieldReader {
         return stackIn_4_0;
     }
 
-    final boolean l(int param0) {
-        if (param0 != -1) {
+    final boolean isCaptureStrengthReduced(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
           this.occupant = (Unit) null;
         }
         return this.captureStrength != this.getDefaultCaptureStrength(10) ? true : false;
@@ -636,8 +636,8 @@ final class MapTile implements TaggedFieldReader {
         this.metadata.modifierFlags = this.metadata.modifierFlags | 16;
     }
 
-    final void d(byte param0) {
-        if (param0 < 42) {
+    final void clearModifierFlag1(byte obfuscationGuard) {
+        if (obfuscationGuard < 42) {
           this.a(13, -128, -104, -117);
         }
         this.metadata.modifierFlags = this.metadata.modifierFlags & -2;
@@ -712,11 +712,11 @@ final class MapTile implements TaggedFieldReader {
         return this.battlefield.arePlayersAllied(this.ownerPlayer, obfuscationGuard - 17076, playerId);
     }
 
-    final void a(int param0, int param1) {
-        int var3 = -116 % ((-35 - param0) / 61);
+    final void assignOwner(int obfuscationGuard, int ownerPlayer) {
+        int var3 = -116 % ((-35 - obfuscationGuard) / 61);
         this.captureStrength = this.getDefaultCaptureStrength(10);
         if (this.terrainType != 11) {
-          this.ownerPlayer = param1;
+          this.ownerPlayer = ownerPlayer;
         } else {
           if (null != this.battlefield.campaignMission) {
             this.terrainChanged = true;
@@ -729,15 +729,15 @@ final class MapTile implements TaggedFieldReader {
     MapTile(int param0, Battlefield param1) {
         this(param0);
         try {
-          this.a((byte) -68, param1);
+          this.attachBattlefield((byte) -68, param1);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ne.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean f(int param0) {
-        if (param0 != 19725) {
-          this.d((byte) -22);
+    final boolean isNotStructure(int obfuscationGuard) {
+        if (obfuscationGuard != 19725) {
+          this.clearModifierFlag1((byte) -22);
         }
         return !this.isStructure(false) ? true : false;
     }

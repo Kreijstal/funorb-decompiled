@@ -81,8 +81,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           QuickChatHelpDialog.pumpAudioAndPruneSounds(128);
           if (FixedQuaternion.fullscreenCanvas != null &&
             FixedQuaternion.fullscreenCanvas.focusLost) {
-            ck.b(-127);
-            oi.a(false);
+            StructureTerrainSupport.b(-127);
+            CheckMarkWidgetPainter.a(false);
           }
           stackIn_10_1 = 127;
           stackIn_11_2 = (FixedQuaternion.fullscreenCanvas != null);
@@ -106,7 +106,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           }
           boolean decompiledFrameRemainder0 = true;
           if (!DelayedPacket.field_q) {
-            ii.a(el.field_d, (byte) -73);
+            ii.a(MouseWheelSource.field_d, (byte) -73);
             decompiledFrameRemainder0 = !(!this.c(102, true));
             if (decompiledFrameRemainder0) {
               this.r(-66);
@@ -118,7 +118,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             if (UiSelectionState.d(95)) {
               if (!ed.a(-83)) {
                 if (DefeatPlayerConsoleCommand.e((byte) 89)) {
-                  if (~pg.field_f != ~pg.field_e) {
+                  if (~UnitAnimationSelectionSupport.field_f != ~UnitAnimationSelectionSupport.field_e) {
                     this.d(0, false);
                     decompiledFrameRemainder0 = (var11 != 0);
                   }
@@ -140,7 +140,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     if (1 == var2_int ||
                       var2_int == 2) {
                       if (null != FixedQuaternion.fullscreenCanvas) {
-                        ck.b(-104);
+                        StructureTerrainSupport.b(-104);
                       }
                       if (var2_int == 2) {
                         CampaignResult.a((java.applet.Applet) (this), (byte) -3);
@@ -157,7 +157,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 if (1 == var2_int ||
                   var2_int == 2) {
                   if (null != FixedQuaternion.fullscreenCanvas) {
-                    ck.b(-104);
+                    StructureTerrainSupport.b(-104);
                   }
                   if (var2_int == 2) {
                     CampaignResult.a((java.applet.Applet) (this), (byte) -3);
@@ -200,8 +200,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   continue;
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 14) {
-                  RadialSummonItem.a(rs.nextPowerOfTwo((byte) 76, 8), DualNodeIterator.b((byte) -90), 150, CipherPacketBuffer.field_A, rs.nextPowerOfTwo((byte) 95, 1000), et.b(-1), 1024, 6, -84, UnitAnimationPreview.d((byte) 81));
-                  ep.a(lp.b(-126), -72, km.c(0));
+                  RadialSummonItem.a(PowerOfTwoSupport.nextPowerOfTwo((byte) 76, 8), DualNodeIterator.b((byte) -90), 150, CipherPacketBuffer.field_A, PowerOfTwoSupport.nextPowerOfTwo((byte) 95, 1000), et.b(-1), 1024, 6, -84, UnitAnimationPreview.d((byte) 81));
+                  ep.a(lp.b(-126), -72, ProjectileEffect.c(0));
                   s.field_d = 0;
                   ValidatedTextWidget.field_Z = true;
                   SpellCastAction.field_t = false;
@@ -215,15 +215,15 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     DisplaySettingsDialog.i((byte) 124);
                     PacketBuffer.i((byte) 109);
                     NanoGameClock.b(22963);
-                    SoftwareRaster.b();
+                    SoftwareRaster.clearPixels();
                     CipherPacketBuffer.a(false, 0, 1, 0);
                     AiUnitPlanner.field_t = true;
-                    du.field_h = false;
+                    SocketFactory.field_h = false;
                     FaceNormal.field_d = false;
                     ModalDialogHost.field_H = false;
                     ViewportManager.field_c = false;
-                    vs.field_j = true;
-                    uc.a(0);
+                    QuickChatMenuDisplaySupport.field_j = true;
+                    SpellDefinitionTable.a(0);
                   }
                   TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, SocialListPanel.field_Ob, true);
                   ScrollContainer.field_Qb = false;
@@ -265,7 +265,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 75) {
                   var2 = ByteStorage.incomingPacket;
-                  EffectPresentation.readCoatOfArms(ah.localCoat.parts, (PacketBuffer) (var2), false, ah.localCoat.colourIndices);
+                  EffectPresentation.readCoatOfArms(LocalCoatSupport.localCoat.parts, (PacketBuffer) (var2), false, LocalCoatSupport.localCoat.colourIndices);
                   ClientUiNode.field_w = true;
                   continue;
                 }
@@ -280,14 +280,14 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   continue;
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 82) {
-                  if (!bu.storedQuicksave.appendSnapshotChunk(fk.packetPayloadLength, -1, ByteStorage.incomingPacket)) {
+                  if (!bu.storedQuicksave.appendSnapshotChunk(DropdownSelectorPainter.packetPayloadLength, -1, ByteStorage.incomingPacket)) {
                     continue;
                   }
                   mv.field_b = true;
                   continue;
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 80) {
-                  pg.playerProfile = new PlayerProfile(ByteStorage.incomingPacket, true);
+                  UnitAnimationSelectionSupport.playerProfile = new PlayerProfile(ByteStorage.incomingPacket, true);
                   ve.field_b = true;
                   continue;
                 }
@@ -317,12 +317,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     stackIn_337_0 = ~MusicCrossfadeStream.deliveredOpcode;
                     stackIn_337_1 = -65;
                     if (stackIn_337_0 == stackIn_337_1 &&
-                      gt.isLocalAccountName(var8[var10_int], (byte) 121)) {
+                      LocalAccountNameSupport.isLocalAccountName(var8[var10_int], (byte) 121)) {
                       var9 = var10_int;
                     }
                     var10_int++;
                   }
-                  l.activeCampaignMission = null;
+                  QuickChatCategoryMenuSupport.activeCampaignMission = null;
                   ChannelFadeTimeConsoleCommand.field_F = false;
                   PointerInputHandler.field_f = null;
                   stackIn_194_0 = null;
@@ -357,9 +357,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     FullscreenFocusCanvas.gameplayController = var10;
                     ConsolePanel.a(true);
                     WhirlpoolHasher.d(7242);
-                    pc.b((byte) 16);
+                    ProxySocketFactory.b((byte) 16);
                   }
-                  SoftwareRaster.b();
+                  SoftwareRaster.clearPixels();
                   CipherPacketBuffer.a(false, -1, 1, jt.field_a);
                   ScrollContainer.field_Qb = false;
                   MusicPatch.field_w = true;
@@ -373,13 +373,13 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                       FullscreenFocusCanvas.gameplayController.d(127, false);
                     }
                     ValidatedTextWidget.field_Z = true;
-                    vs.field_j = true;
+                    QuickChatMenuDisplaySupport.field_j = true;
                     s.field_d = 0;
-                    du.field_h = false;
+                    SocketFactory.field_h = false;
                     CipherPacketBuffer.a(false, -2, 1, jt.field_a);
                     ViewportManager.field_c = false;
                     ModalDialogHost.field_H = false;
-                    uc.a(0);
+                    SpellDefinitionTable.a(0);
                   }
                   ScrollContainer.field_Qb = false;
                   continue;
@@ -394,7 +394,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 }
                 if (var2 != null) {
                   if (MusicCrossfadeStream.deliveredOpcode == 77) {
-                    ((GameplayController) (var2)).battlefield.appendSnapshotChunk(fk.packetPayloadLength, ByteStorage.incomingPacket, (byte) -81);
+                    ((GameplayController) (var2)).battlefield.appendSnapshotChunk(DropdownSelectorPainter.packetPayloadLength, ByteStorage.incomingPacket, (byte) -81);
                     continue;
                   }
                   if (MusicCrossfadeStream.deliveredOpcode == 67) {
@@ -402,10 +402,10 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                       ((GameplayController) (var2)).battlefield.snapshotBuffer.position = 0;
                       ((GameplayController) (var2)).battlefield.readLegacySnapshot(0, ((GameplayController) (var2)).battlefield.snapshotBuffer);
                       ((GameplayController) (var2)).battlefield.snapshotBuffer = null;
-                      mu.field_a = new cg();
+                      mu.field_a = new ScreenWipeTransition();
                       ((GameplayController) (var2)).battleGraphicsAssets.selectTheme(((GameplayController) (var2)).battlefield.mapTheme, 0);
                       ((GameplayController) (var2)).field_d = UnitLossCondition.battlefieldThemes[((GameplayController) (var2)).battlefield.mapTheme].musicTrack;
-                      oo.e(-387);
+                      MembershipExpansionScreen.e(-387);
                       if (((GameplayController) (var2)).battlefield.field_D == 3) {
                         ((GameplayController) (var2)).rebuildSummonMenus(true);
                       }
@@ -413,9 +413,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                       UnitModelViewer.a(((GameplayController) (var2)).controlledPlayerId, false);
                       ((GameplayController) (var2)).battlefield.field_Ab = true;
                       if (((GameplayController) (var2)).controlledPlayerId <= -1) {
-                        NodeHashTable.a(-1, op.field_c[0][0]);
+                        NodeHashTable.a(-1, FriendRequestSupport.field_c[0][0]);
                       } else {
-                        NodeHashTable.a(-1, op.field_c[0][((GameplayController) (var2)).battlefield.getPlayerTeamIndex(((GameplayController) (var2)).controlledPlayerId, -1)]);
+                        NodeHashTable.a(-1, FriendRequestSupport.field_c[0][((GameplayController) (var2)).battlefield.getPlayerTeamIndex(((GameplayController) (var2)).controlledPlayerId, -1)]);
                       }
                     }
                     var3Lifetime2 = ByteStorage.incomingPacket.readUnsignedByte(0);
@@ -487,8 +487,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     ((GameplayController) (var2)).battlefield.field_G = var4_ref_int__;
                     if (0 <= ((GameplayController) (var2)).controlledPlayerId) {
                       ((GameplayController) (var2)).field_Gb = ((GameplayController) (var2)).battlefield.field_rb[((GameplayController) (var2)).controlledPlayerId] * 768 >> 8;
-                      if (!(((GameplayController) (var2)).field_Gb <= pg.playerProfile.progressionCredit)) {
-                        ((GameplayController) (var2)).field_Gb = pg.playerProfile.progressionCredit;
+                      if (!(((GameplayController) (var2)).field_Gb <= UnitAnimationSelectionSupport.playerProfile.progressionCredit)) {
+                        ((GameplayController) (var2)).field_Gb = UnitAnimationSelectionSupport.playerProfile.progressionCredit;
                       }
                     } else {
                       ((GameplayController) (var2)).field_Gb = 0;
@@ -551,8 +551,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (ValidatedTextWidget.field_Z) {
             s.field_d = 0;
           }
-          if (br.heldKeys[82] &&
-            br.heldKeys[74]) {
+          if (CampaignLookupSupport.heldKeys[82] &&
+            CampaignLookupSupport.heldKeys[74]) {
             stackIn_348_0 = 1;
           } else {
             stackIn_348_0 = 0;
@@ -564,16 +564,16 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               var3Lifetime1 == 1) {
               SphinxActionRequest.a(2, (byte) 37);
               WhirlpoolHasher.a(127, 3);
-              ah.a((byte) 33, 4);
-              op.a(5, true);
+              LocalCoatSupport.a((byte) 33, 4);
+              FriendRequestSupport.a(5, true);
               SpellCastEvent.b(6, -32666);
               BestScoreStrategy.a(7, 1742);
               TutorialLayout.a(true);
               if (var3Lifetime1 != 1) {
                 if (FaceNormal.field_d) {
-                  du.field_h = false;
+                  SocketFactory.field_h = false;
                   AiUnitPlanner.field_t = true;
-                  vs.field_j = true;
+                  QuickChatMenuDisplaySupport.field_j = true;
                   if (!ViewportManager.field_c) {
                     CipherPacketBuffer.a(false, 0, 1, 0);
                     if (var11 != 0) {
@@ -589,7 +589,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   ModalDialogHost.field_H = false;
                   ViewportManager.field_c = false;
                   FaceNormal.field_d = false;
-                  uc.a(0);
+                  SpellDefinitionTable.a(0);
                 }
                 ScrollContainer.field_Qb = false;
                 SpellCastAction.field_t = false;
@@ -636,11 +636,11 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          mj.shutdownAudioPlayers((byte) -82);
+          AudioShutdownSupport.shutdownAudioPlayers((byte) -82);
           if (null != FixedQuaternion.fullscreenCanvas) {
-            ck.b(-116);
+            StructureTerrainSupport.b(-116);
           }
-          pg.a(false);
+          UnitAnimationSelectionSupport.a(false);
           if (obfuscationGuard != 103) {
             this.initializeClient(true);
           }
@@ -656,34 +656,34 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ki.field_b.ensureIndex((byte) 82) &&
-            ki.field_b.ensureAllGroupsAvailable(-27927)) {
+          if (QuinticFadeSupport.field_b.ensureIndex((byte) 82) &&
+            QuinticFadeSupport.field_b.ensureAllGroupsAvailable(-27927)) {
             if (ReportAbuseDialog.field_Lb.ensureIndex((byte) 82) &&
               ReportAbuseDialog.field_Lb.ensureAllGroupsAvailable(-27927)) {
               if (param0 > -18) {
                 return false;
               }
-              if (op.field_b.ensureIndex((byte) 82) &&
-                op.field_b.ensureAllGroupsAvailable(-27927)) {
-                if (bi.field_f.ensureIndex((byte) 82) &&
-                  bi.field_f.ensureAllGroupsAvailable(-27927)) {
+              if (FriendRequestSupport.field_b.ensureIndex((byte) 82) &&
+                FriendRequestSupport.field_b.ensureAllGroupsAvailable(-27927)) {
+                if (RasterImageSurface.field_f.ensureIndex((byte) 82) &&
+                  RasterImageSurface.field_f.ensureAllGroupsAvailable(-27927)) {
                   if (MusicCrossfadeStream.field_s.ensureIndex((byte) 82) &&
                     MusicCrossfadeStream.field_s.ensureAllGroupsAvailable(-27927)) {
                     return true;
                   }
-                  bn.a((byte) -24, 67.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, MusicCrossfadeStream.field_s));
+                  CalendarSupport.a((byte) -24, 67.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, MusicCrossfadeStream.field_s));
                   return false;
                 }
-                bn.a((byte) -24, 67.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, bi.field_f));
+                CalendarSupport.a((byte) -24, 67.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, RasterImageSurface.field_f));
                 return false;
               }
-              bn.a((byte) -24, 67.0f, EmailValidator.a(op.field_b, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
+              CalendarSupport.a((byte) -24, 67.0f, EmailValidator.a(FriendRequestSupport.field_b, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
               return false;
             }
-            bn.a((byte) -24, 67.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ReportAbuseDialog.field_Lb));
+            CalendarSupport.a((byte) -24, 67.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ReportAbuseDialog.field_Lb));
             return false;
           }
-          bn.a((byte) -24, 67.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ki.field_b));
+          CalendarSupport.a((byte) -24, 67.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, QuinticFadeSupport.field_b));
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -723,7 +723,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         var8 = obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder4 = true;
-          if (~pg.field_f == ~pg.field_e) {
+          if (~UnitAnimationSelectionSupport.field_f == ~UnitAnimationSelectionSupport.field_e) {
             var3_int = 0;
             if (null != ToggleTurnSkipConsoleCommand.debugConsole) {
               ToggleTurnSkipConsoleCommand.debugConsole.advanceConsole((byte) -120, true);
@@ -802,7 +802,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               !SpellCastAction.field_t &&
               !ScrollContainer.field_Qb) {
               if (ViewportManager.field_c &&
-                hf.textChatActive) {
+                ClientStateChecksumSupport.textChatActive) {
                 var3_int = 0;
               }
               GiveTileConsoleCommand.a(73, var3_int != 0);
@@ -859,10 +859,10 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               decompiledFrameRemainder1 = !(FaceNormal.field_d);
             }
             if (decompiledFrameRemainder1) {
-              br.a((byte) -97);
+              CampaignLookupSupport.a((byte) -97);
             }
             if (ValidatedTextWidget.field_Z) {
-              if (!(mj.field_c <= TelepopEvent.field_F)) {
+              if (!(AudioShutdownSupport.field_c <= TelepopEvent.field_F)) {
                 TelepopEvent.field_F = TelepopEvent.field_F + 1;
                 if ((var8 != 0) &&
                   (0 < TelepopEvent.field_F)) {
@@ -874,26 +874,26 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 TelepopEvent.field_F = TelepopEvent.field_F - 1;
               }
             }
-            var5 = mj.field_c * mj.field_c;
+            var5 = AudioShutdownSupport.field_c * AudioShutdownSupport.field_c;
             var6 = -(TelepopEvent.field_F * TelepopEvent.field_F) + var5;
             var7 = SoftwareRaster.height - (120 - var6 * 120 / var5);
             SpellCastAction.b(8, var7);
             if (null != ScrollWidgetContainer.field_P.first((byte) 111)) {
-              fieldTemp$0 = lq.field_b + 1;
-              lq.field_b = lq.field_b + 1;
+              fieldTemp$0 = IntegerPowerSupport.field_b + 1;
+              IntegerPowerSupport.field_b = IntegerPowerSupport.field_b + 1;
               if (fieldTemp$0 == 335) {
-                lq.field_b = 0;
+                IntegerPowerSupport.field_b = 0;
                 ScrollWidgetContainer.field_P.popFirst(0);
               }
             }
             decompiledFrameRemainder4 = (var8 != 0);
           }
           if (decompiledFrameRemainder4) {
-            if (~DirectByteStorage.field_h == ~pg.field_f) {
+            if (~DirectByteStorage.field_h == ~UnitAnimationSelectionSupport.field_f) {
               ValidationStatusWidget.field_X = ValidationStatusWidget.field_X + 1;
               decompiledFrameRemainder4 = (ValidationStatusWidget.field_X == 16);
               if (decompiledFrameRemainder4) {
-                if (!ke.field_a) {
+                if (!SoundEffectPreloadSupport.field_a) {
                   ed.a(false);
                   if (var8 != 0) {
                     CampaignMenuButton.b(-20267);
@@ -901,16 +901,16 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 } else {
                   CampaignMenuButton.b(-20267);
                 }
-                pg.field_f = or.field_c;
+                UnitAnimationSelectionSupport.field_f = DialWidgetPainter.field_c;
                 decompiledFrameRemainder4 = (var8 != 0);
               }
             }
             if (decompiledFrameRemainder4) {
-              if (or.field_c != pg.field_f) {
+              if (DialWidgetPainter.field_c != UnitAnimationSelectionSupport.field_f) {
                 ValidationStatusWidget.field_X = ValidationStatusWidget.field_X - 1;
                 decompiledFrameRemainder4 = (ValidationStatusWidget.field_X == 0);
                 if (decompiledFrameRemainder4) {
-                  pg.field_f = pg.field_e;
+                  UnitAnimationSelectionSupport.field_f = UnitAnimationSelectionSupport.field_e;
                   decompiledFrameRemainder4 = (var8 != 0);
                 }
               }
@@ -921,8 +921,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   }
                   CombatPresentation.n(param0 ^ -110);
                   CipherPacketBuffer.a(false, ClientContextMenu.field_a, 1, 0);
-                  if (ke.field_a) {
-                    ke.field_a = false;
+                  if (SoundEffectPreloadSupport.field_a) {
+                    SoundEffectPreloadSupport.field_a = false;
                     AiPlanningStrategy.a(false, 8028);
                   }
                   if (tv.field_a) {
@@ -932,7 +932,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     DisplaySettingsDialog.i((byte) 125);
                   }
                 }
-                pg.field_f = QuickChatMenu.field_Wb;
+                UnitAnimationSelectionSupport.field_f = QuickChatMenu.field_Wb;
               }
             }
           }
@@ -944,11 +944,11 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime1 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime1 != 0, -1, 1, 0);
-            du.field_h = true;
+            SocketFactory.field_h = true;
           }
           if (jt.field_a == -10 ||
             jt.field_a == -11) {
-            stackIn_196_0 = l.activeCampaignMission;
+            stackIn_196_0 = QuickChatCategoryMenuSupport.activeCampaignMission;
             stackIn_196_1 = -1;
             if (jt.field_a != -11) {
               stackIn_197_2 = null;
@@ -957,12 +957,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             }
             TextLineLayout.startCampaignMission(stackIn_196_0, stackIn_196_1, stackIn_197_2);
             if (jt.field_a == -10) {
-              qh.requestDeleteQuicksave((byte) 27);
+              QuicksaveRequestSupport.requestDeleteQuicksave((byte) 27);
             }
             FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime2 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime2 != 0, -1, 1, 0);
-            du.field_h = true;
+            SocketFactory.field_h = true;
           }
           if (jt.field_a == -8) {
             this.a(true, (byte) -67);
@@ -970,7 +970,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime3 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime3 != 0, -1, 1, 0);
-            du.field_h = true;
+            SocketFactory.field_h = true;
           }
           if (jt.field_a == -9) {
             this.a(true, (byte) -90);
@@ -978,17 +978,17 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime4 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime4 != 0, -1, 1, 0);
-            du.field_h = true;
+            SocketFactory.field_h = true;
           }
           if (-4 == jt.field_a) {
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 9);
             SpellCastAction.field_t = true;
-            TelepopEvent.field_F = mj.field_c;
+            TelepopEvent.field_F = AudioShutdownSupport.field_c;
           }
           if (jt.field_a == -5) {
             boolean decompiledSharedTail0 = !(ModalDialogHost.field_H);
             if (!decompiledSharedTail0) {
-              ov.writeSpectateRoomRequest(11, 3, 0);
+              SpectateRoomRequestSupport.writeSpectateRoomRequest(11, 3, 0);
               decompiledSharedTail0 = (var8 != 0);
             }
             if ((decompiledSharedTail0) &&
@@ -1016,7 +1016,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         try {
           var2 = VerticalScrollbar.p(0);
           if (PopupPresentation.h(obfuscationGuard ^ 31337)) {
-            GameAppletShell.a(false, fs.a(false), var2);
+            GameAppletShell.a(false, PrivateTextRecipientSupport.a(false), var2);
             return;
           }
           if (!DelayedPacket.field_q) {
@@ -1024,7 +1024,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             return;
           }
           if (!UiSelectionState.d(obfuscationGuard + 95)) {
-            bn.a((byte) -24, 100.0f, DateInputWidget.field_G);
+            CalendarSupport.a((byte) -24, 100.0f, DateInputWidget.field_G);
             PaletteRegionMap.a((byte) 122, var2);
             return;
           }
@@ -1037,15 +1037,15 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           }
           BoundedFile.a(jt.field_a, true, MusicPatch.field_w, false);
           if (null != mu.field_a) {
-            mu.field_a.a(obfuscationGuard ^ 8, GameClock.field_j);
+            mu.field_a.draw(obfuscationGuard ^ 8, GameClock.field_j);
             GameClock.field_j = GameClock.field_j + 1;
             if (50 == GameClock.field_j) {
               DisplaySettingsDialog.i((byte) 126);
             }
           }
           if (!MusicPatch.field_w ||
-            !du.field_h) {
-            tq.a(sq.c((byte) 54), false);
+            !SocketFactory.field_h) {
+            NineSliceSpriteSupport.a(ToastMessage.c((byte) 54), false);
           }
           var3 = FullscreenFocusCanvas.gameplayController;
           if (ModalDialogHost.field_H) {
@@ -1062,11 +1062,11 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           }
           if (!ed.a(-89)) {
             if (DefeatPlayerConsoleCommand.e((byte) 93)) {
-              SoftwareRaster.d(0, 0, SoftwareRaster.width, SoftwareRaster.height);
+              SoftwareRaster.darkenRectangle(0, 0, SoftwareRaster.width, SoftwareRaster.height);
               DefeatPlayerConsoleCommand.h(1976460609);
               if (obfuscationControl) {
                 if (FixedQuaternion.fullscreenCanvas == null) {
-                  stackIn_65_0 = ph.tickFocusSnapshot;
+                  stackIn_65_0 = AccountNameCharacterSupport.tickFocusSnapshot;
                 } else {
                   stackIn_65_0 = true;
                 }
@@ -1075,23 +1075,23 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             }
           } else {
             if (FixedQuaternion.fullscreenCanvas == null) {
-              stackIn_65_0 = ph.tickFocusSnapshot;
+              stackIn_65_0 = AccountNameCharacterSupport.tickFocusSnapshot;
             } else {
               stackIn_65_0 = true;
             }
             QuickChatCategoryRepository.a(stackIn_65_0, -5);
           }
-          if (~pg.field_f != ~pg.field_e) {
+          if (~UnitAnimationSelectionSupport.field_f != ~UnitAnimationSelectionSupport.field_e) {
             var4 = ValidationStatusWidget.field_X * 256 / 16;
             if (var4 > 0) {
-              SoftwareRaster.b(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, var4);
+              SoftwareRaster.fillRectangleBlended(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, var4);
             }
           }
           if (BufferedSocket.field_j >= 2 &&
             CoatOfArms.field_e) {
-            rs.field_n.drawText(Integer.toString(UnitModelPreview.field_i), 8, 23, 16777215, 1);
-            rs.field_n.drawRightAligned((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kB", 500, 100, 16777215, 1);
-            rs.field_n.drawRightAligned(Runtime.getRuntime().totalMemory() / 1024L + "kB", 500, 120, 16777215, 1);
+            PowerOfTwoSupport.field_n.drawText(Integer.toString(UnitModelPreview.field_i), 8, 23, 16777215, 1);
+            PowerOfTwoSupport.field_n.drawRightAligned((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kB", 500, 100, 16777215, 1);
+            PowerOfTwoSupport.field_n.drawRightAligned(Runtime.getRuntime().totalMemory() / 1024L + "kB", 500, 120, 16777215, 1);
           }
           ToggleTurnSkipConsoleCommand.h(2);
           ContentTransitionDialog.a(0, 12, var2, 0);
@@ -1126,473 +1126,473 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
     final void finishShutdown(byte obfuscationGuard) {
         try {
           ArmiesOfGielinor.s(3);
-          jg.a(-112);
-          NodeDeque.c(obfuscationGuard + 322);
-          ResourceArchive.b(obfuscationGuard + 71);
-          rr.a(-114);
+          jg.releaseStatics(-112);
+          NodeDeque.releaseStatics(obfuscationGuard + 322);
+          ResourceArchive.releaseStatics(obfuscationGuard + 71);
+          IndexedDecodedSpriteSupport.releaseStatics(-114);
           et.c(13626);
-          ed.b(15000);
-          gi.a(180);
+          ed.releaseStatics(15000);
+          AccountNameCheckStatusSupport.releaseStatics(180);
           AdaptiveMidiPcmStream.c((byte) 52);
-          MusicCrossfadeStream.e(256);
-          gp.a((byte) 115);
-          us.a(obfuscationGuard ^ 30);
+          MusicCrossfadeStream.releaseStatics(256);
+          gp.releaseStatics((byte) 115);
+          us.releaseStatics(obfuscationGuard ^ 30);
           CampaignMenu.d((byte) 44);
-          BattleGraphicsAssets.a((byte) -12);
-          ve.a(1);
-          CombatSandbox.a((byte) -8);
-          UnitModelViewer.b(1017);
-          qt.a((byte) 93);
-          s.a(53);
-          Spell.b(obfuscationGuard - 1700635368);
+          BattleGraphicsAssets.releaseStatics((byte) -12);
+          ve.releaseStatics(1);
+          CombatSandbox.releaseStatics((byte) -8);
+          UnitModelViewer.releaseStatics(1017);
+          BitReversalSupport.releaseStatics((byte) 93);
+          s.releaseStatics(53);
+          Spell.releaseStatics(obfuscationGuard - 1700635368);
           KeyboardInputListener.a(true);
-          t.a(0);
-          cd.a(false);
-          bt.c(0);
-          gv.b(93);
+          ReloadPageSupport.releaseStatics(0);
+          cd.releaseStatics(false);
+          bt.releaseStatics(0);
+          DecodedSpriteSupport.releaseStatics(93);
           GradientUiRenderer.releaseCaches();
-          vi.a(true);
+          MonotonicClockSupport.releaseStatics(true);
           NetworkGameShell.releaseSharedShellGlobals(71);
-          ContextualRuntimeException.c(1);
+          ContextualRuntimeException.releaseStatics(1);
           GameAppletShell.d(105);
-          BoundedUrlRequest.a((byte) 100);
-          PointerInputHandler.a((byte) -79);
-          el.b(-8834);
-          SoftwareRaster.d();
-          ah.a((byte) 32);
-          PacketBuffer.f(115);
-          l.a(true);
-          pv.a(213);
-          hb.a(obfuscationGuard ^ 71);
-          dt.a(-1);
-          qk.a(50);
-          ov.a((byte) 50);
-          ChatMessage.a(0);
+          BoundedUrlRequest.releaseStatics((byte) 100);
+          PointerInputHandler.releaseStatics((byte) -79);
+          MouseWheelSource.releaseStatics(-8834);
+          SoftwareRaster.releaseStatics();
+          LocalCoatSupport.a((byte) 32);
+          PacketBuffer.releaseStatics(115);
+          QuickChatCategoryMenuSupport.releaseStatics(true);
+          AccountNameFoldingSupport.releaseStatics(213);
+          hb.releaseStatics(obfuscationGuard ^ 71);
+          DateValiditySupport.releaseStatics(-1);
+          qk.releaseStatics(50);
+          SpectateRoomRequestSupport.releaseStatics((byte) 50);
+          ChatMessage.releaseStatics(0);
           er.a(-3);
-          ds.a(2);
-          GameClock.a((byte) -108);
-          bi.b(0);
-          jp.a((byte) -82);
-          FullscreenFocusCanvas.a(obfuscationGuard ^ -20000072);
-          ViewportManager.b((byte) -67);
-          CoatOfArms.a(false);
-          BattlefieldTheme.a((byte) -117);
+          PointerCaptureSupport.releaseStatics(2);
+          GameClock.releaseStatics((byte) -108);
+          RasterImageSurface.releaseStatics(0);
+          ArchiveLoadSequence.releaseStatics((byte) -82);
+          FullscreenFocusCanvas.releaseStatics(obfuscationGuard ^ -20000072);
+          ViewportManager.releaseStatics((byte) -67);
+          CoatOfArms.releaseStatics(false);
+          BattlefieldTheme.releaseStatics((byte) -117);
           ep.a((byte) 11);
-          PlayerProfile.b(0);
-          CampaignQuicksave.a(obfuscationGuard + 157);
+          PlayerProfile.releaseStatics(0);
+          CampaignQuicksave.releaseStatics(obfuscationGuard + 157);
           SoundCache.a((byte) -58);
           TutorialController.h(obfuscationGuard + 71);
-          cg.a((byte) -109);
+          ScreenWipeTransition.releaseStatics((byte) -109);
           GameplayController.d(obfuscationGuard ^ 49);
-          vd.a(256);
-          lb.a(obfuscationGuard + 13988);
-          CampaignMission.f(0);
+          vd.releaseStatics(256);
+          ResourceClientErrorSupport.releaseStatics(obfuscationGuard + 13988);
+          CampaignMission.releaseStatics(0);
           DebugConsole.c(obfuscationGuard ^ 3);
-          ResourceProtocolClient.c((byte) 35);
-          DiskCacheWorker.a(true);
-          dd.b(-56);
-          BufferedFile.b((byte) 78);
-          BufferedSocket.b((byte) 99);
-          Unit.q(-9480);
-          Battlefield.c(-1);
-          BitmapFont.a();
-          ke.a(obfuscationGuard + 156);
-          IntrusiveNode.b((byte) 4);
+          ResourceProtocolClient.releaseStatics((byte) 35);
+          DiskCacheWorker.releaseStatics(true);
+          ArchiveMasterIndex.releaseStatics(-56);
+          BufferedFile.releaseStatics((byte) 78);
+          BufferedSocket.releaseStatics((byte) 99);
+          Unit.releaseStatics(-9480);
+          Battlefield.releaseStatics(-1);
+          BitmapFont.releaseStatics();
+          SoundEffectPreloadSupport.releaseStatics(obfuscationGuard + 156);
+          IntrusiveNode.releaseStatics((byte) 4);
           wh.b(0);
-          ji.a(0);
-          MidiPcmStream.f(-128);
-          BattleViewportResizeHandler.b(-51);
+          AccountNameCheckSupport.releaseStatics(0);
+          MidiPcmStream.releaseStatics(-128);
+          BattleViewportResizeHandler.releaseStatics(-51);
           RasterViewportResizeHandler.a(960112080);
           PcmPlayer.clearServiceReference();
-          NodeHashTable.a(-83);
-          MusicPatchNode.a(9480);
+          NodeHashTable.releaseStatics(-83);
+          MusicPatchNode.releaseStatics(9480);
           MidiFileReader.releaseMessageTable();
           MusicPatchPcmStream.f(1048575);
-          dj.b((byte) 116);
-          it.a(obfuscationGuard + 76);
-          ClientUiComponent.h(-117);
-          LobbyRoom.e((byte) -58);
-          DualNodeHashTable.a(-116);
-          LobbyPlayer.e((byte) 20);
-          ii.a((byte) -1);
-          ArchiveIndex.a(obfuscationGuard + 2);
-          lg.a((byte) 126);
+          TextSplitSupport.b((byte) 116);
+          ChatMessageWriteSupport.a(obfuscationGuard + 76);
+          ClientUiComponent.releaseStatics(-117);
+          LobbyRoom.releaseStatics((byte) -58);
+          DualNodeHashTable.releaseStatics(-116);
+          LobbyPlayer.releaseStatics((byte) 20);
+          ii.releaseStatics((byte) -1);
+          ArchiveIndex.releaseStatics(obfuscationGuard + 2);
+          GzipDecoder.a((byte) 126);
           ArchiveProvider.a(false);
-          aq.a((byte) -22);
-          hq.a((byte) -73);
-          ModalDialog.f((byte) 97);
-          ModalDialogHost.l(17);
-          AccountRegistrationDialog.j((byte) 126);
-          ProgressDialog.n(260);
-          StandardContentDialog.j((byte) 49);
-          ProgressMessageDialog.n(0);
-          AccountRegistrationForm.f((byte) 19);
+          AccountCreationInfoText.releaseStatics((byte) -22);
+          hq.releaseStatics((byte) -73);
+          ModalDialog.releaseStatics((byte) 97);
+          ModalDialogHost.releaseStatics(17);
+          AccountRegistrationDialog.releaseStatics((byte) 126);
+          ProgressDialog.releaseStatics(260);
+          StandardContentDialog.releaseStatics((byte) 49);
+          ProgressMessageDialog.releaseStatics(0);
+          AccountRegistrationForm.releaseStatics((byte) 19);
           GuestPlayConfirmationForm.k(obfuscationGuard ^ -11944);
-          LoginForm.b(true);
-          AccountNameSelectionForm.f((byte) -117);
-          gl.a(true);
-          fl.a((byte) 82);
-          uu.a((byte) 30);
-          MapTile.g(-107);
-          MoveAttackRequest.e(-1);
-          eb.a(1);
-          da.a(false);
-          fm.a(95);
-          CampaignProgress.a(false);
+          LoginForm.releaseStatics(true);
+          AccountNameSelectionForm.releaseStatics((byte) -117);
+          gl.releaseStatics(true);
+          WidgetTheme.a((byte) 82);
+          uu.releaseStatics((byte) 30);
+          MapTile.releaseStatics(-107);
+          MoveAttackRequest.releaseStatics(-1);
+          BitCountSupport.releaseStatics(1);
+          LocalAccountSupport.releaseStatics(false);
+          fm.releaseStatics(95);
+          CampaignProgress.releaseStatics(false);
           MapLayout.a(0);
-          db.a(-3);
-          PaletteRegionMap.a(obfuscationGuard + 7814);
-          TriangleRasterizer.b();
-          MatchSetupPanel.g(256);
-          InstructionsPanel.q(-114);
-          la.b((byte) -111);
-          sg.a((byte) 93);
-          IntPair.a(-10);
-          SpellMenuGroup.a(-84);
-          TutorialLayout.a(obfuscationGuard ^ -4368117);
-          oo.b(-8616);
-          UiSelectionState.c((byte) 110);
-          fs.a(-1);
-          SpellCastAction.e(-4541);
-          AiPlanner.a(-27464);
-          su.a(true);
-          CampaignRewardPreview.a(126);
-          CombatEvent.e((byte) -127);
-          ManaEvent.g(-829);
+          IgnoreListLookupSupport.releaseStatics(-3);
+          PaletteRegionMap.releaseStatics(obfuscationGuard + 7814);
+          TriangleRasterizer.releaseStatics();
+          MatchSetupPanel.releaseStatics(256);
+          InstructionsPanel.releaseStatics(-114);
+          la.releaseStatics((byte) -111);
+          sg.releaseStatics((byte) 93);
+          IntPair.releaseStatics(-10);
+          SpellMenuGroup.releaseStatics(-84);
+          TutorialLayout.releaseStatics(obfuscationGuard ^ -4368117);
+          MembershipExpansionScreen.b(-8616);
+          UiSelectionState.releaseStatics((byte) 110);
+          PrivateTextRecipientSupport.a(-1);
+          SpellCastAction.releaseStatics(-4541);
+          AiPlanner.releaseStatics(-27464);
+          AiWeightProfile.releaseStatics(true);
+          CampaignRewardPreview.releaseStatics(126);
+          CombatEvent.releaseStatics((byte) -127);
+          ManaEvent.releaseStatics(-829);
           MoveEvent.g(obfuscationGuard ^ -29395);
           SummonEvent.d((byte) 113);
           TurnEffectEvent.a(true);
-          DeployRequest.a((byte) 44);
-          SphinxActionRequest.f(-27538);
+          DeployRequest.releaseStatics((byte) 44);
+          SphinxActionRequest.releaseStatics(-27538);
           SummonRequest.a((byte) -58);
-          GlobalSpell.a((byte) 103);
-          UnitSpell.c(6);
-          UnitModelPreview.b(obfuscationGuard ^ 298276648);
-          SpellConfirmationDialog.a(obfuscationGuard + 173);
-          MovementPlanner.b(-104);
-          RadialSummonMenu.a((byte) -122);
-          UnitCycler.a((byte) -55);
-          BattleCamera.d((byte) 55);
-          BattleUnitRenderer.a(0);
-          TurnTimerDial.a((byte) -95);
-          BattleTutorial.b(1);
-          EventPresenter.f(-126);
-          GameEvent.a((byte) -103);
+          GlobalSpell.releaseStatics((byte) 103);
+          UnitSpell.releaseStatics(6);
+          UnitModelPreview.releaseStatics(obfuscationGuard ^ 298276648);
+          SpellConfirmationDialog.releaseStatics(obfuscationGuard + 173);
+          MovementPlanner.releaseStatics(-104);
+          RadialSummonMenu.releaseStatics((byte) -122);
+          UnitCycler.releaseStatics((byte) -55);
+          BattleCamera.releaseStatics((byte) 55);
+          BattleUnitRenderer.releaseStatics(0);
+          TurnTimerDial.releaseStatics((byte) -95);
+          BattleTutorial.releaseStatics(1);
+          EventPresenter.releaseStatics(-126);
+          GameEvent.releaseStatics((byte) -103);
           UnitInfoPopup.a(obfuscationGuard ^ 101);
-          ActionSpell.a(false);
+          ActionSpell.releaseStatics(false);
           ActionRequest.a(100);
-          CipherPacketBuffer.k((byte) -97);
-          km.e(obfuscationGuard + 77);
+          CipherPacketBuffer.releaseStatics((byte) -97);
+          ProjectileEffect.releaseStatics(obfuscationGuard + 77);
           CombatPresentation.c(-128);
-          AnimationPlayer.b(-106);
-          ModelMesh.c();
-          DualLinkedNode.f(obfuscationGuard ^ 71);
-          ac.a((byte) 71);
-          PopupPresentation.d((byte) 109);
-          po.a(true);
-          DamageEvent.d((byte) -26);
-          StateChangeEvent.d((byte) 35);
-          OwnerChangeEvent.g(-19269);
-          SpellCastEvent.a(true);
-          UpkeepEvent.g(10);
-          OctaveNoiseMap.f(123);
-          ab.a((byte) 32);
-          vv.b((byte) 82);
-          bu.a(-128);
-          mh.a((byte) -119);
-          IconTextComponent.k(obfuscationGuard ^ -72);
-          ScrollContainer.k(0);
-          IconLabelControl.k(21755);
-          VerticalScrollbar.k(-1);
-          ClientUiNode.g(31343);
-          ContextActionMenu.e((byte) 5);
-          SocialListPanel.l(-8291);
+          AnimationPlayer.releaseStatics(-106);
+          ModelMesh.releaseStatics();
+          DualLinkedNode.releaseStatics(obfuscationGuard ^ 71);
+          ManaStarParticle.releaseStatics((byte) 71);
+          PopupPresentation.releaseStatics((byte) 109);
+          QuickChatShortcutSupport.releaseStatics(true);
+          DamageEvent.releaseStatics((byte) -26);
+          StateChangeEvent.releaseStatics((byte) 35);
+          OwnerChangeEvent.releaseStatics(-19269);
+          SpellCastEvent.releaseStatics(true);
+          UpkeepEvent.releaseStatics(10);
+          OctaveNoiseMap.releaseStatics(123);
+          AlphanumericTextSupport.releaseStatics((byte) 32);
+          ConsoleTokenSupport.releaseStatics((byte) 82);
+          bu.releaseStatics(-128);
+          EffectsGainSupport.releaseStatics((byte) -119);
+          IconTextComponent.releaseStatics(obfuscationGuard ^ -72);
+          ScrollContainer.releaseStatics(0);
+          IconLabelControl.releaseStatics(21755);
+          VerticalScrollbar.releaseStatics(-1);
+          ClientUiNode.releaseStatics(31343);
+          ContextActionMenu.releaseStatics((byte) 5);
+          SocialListPanel.releaseStatics(-8291);
           ClientContextMenu.a(-97);
-          ReportAbuseDialog.m(73);
-          CommunityTabGroup.a(-47);
-          bn.a(29022);
-          lm.a(1638);
-          ki.a((byte) 117);
-          ck.a(14);
-          th.a((byte) 73);
-          h.a(-25764);
-          af.b((byte) -120);
+          ReportAbuseDialog.releaseStatics(73);
+          CommunityTabGroup.releaseStatics(-47);
+          CalendarSupport.releaseStatics(29022);
+          lm.releaseStatics(1638);
+          QuinticFadeSupport.releaseStatics((byte) 117);
+          StructureTerrainSupport.releaseStatics(14);
+          FloorModSupport.releaseStatics((byte) 73);
+          LoginKind.releaseStatics(-25764);
+          LoginCredentials.releaseStatics((byte) -120);
           uh.a(obfuscationGuard + 20115);
-          DualNodeDeque.d(125);
-          ConsolePanel.c((byte) -109);
-          ConsoleTextNode.a(-22823);
-          cp.a(false);
+          DualNodeDeque.releaseStatics(125);
+          ConsolePanel.releaseStatics((byte) -109);
+          ConsoleTextNode.releaseStatics(-22823);
+          EventPresenterFactory.a(false);
           EditableTextField.f((byte) -123);
-          IndexedSpriteBase.a(18347);
-          hf.a((byte) 19);
-          HuffmanCodec.a(-1);
+          IndexedSpriteBase.releaseStatics(18347);
+          ClientStateChecksumSupport.releaseStatics((byte) 19);
+          HuffmanCodec.releaseStatics(-1);
           MapRepository.a(4116);
-          NodeIterator.a((byte) -121);
-          vs.a(obfuscationGuard ^ 21);
-          nr.a((byte) -119);
-          so.b(obfuscationGuard ^ -328);
-          jn.a(obfuscationGuard - 29);
-          op.a(true);
-          IsaacRandom.b(-119);
-          pg.a(20);
+          NodeIterator.releaseStatics((byte) -121);
+          QuickChatMenuDisplaySupport.releaseStatics(obfuscationGuard ^ 21);
+          NineSliceFrame.releaseStatics((byte) -119);
+          FixedSquareRootSupport.releaseStatics(obfuscationGuard ^ -328);
+          jn.releaseStatics(obfuscationGuard - 29);
+          FriendRequestSupport.releaseStatics(true);
+          IsaacRandom.releaseStatics(-119);
+          UnitAnimationSelectionSupport.releaseStatics(20);
           TabbedPanel.k(2);
-          AccountNamePrompt.k(obfuscationGuard ^ -72);
-          MatchConditionRegistry.a(true);
-          LeaderEscortCondition.e(25931);
-          UnitLossCondition.d(obfuscationGuard + 196);
-          PortalLossCondition.d(-12428);
-          LineOfSightGrid.b(obfuscationGuard ^ -90);
-          AnimationFrameSet.e((byte) -74);
-          TileMetadata.a(23582);
-          fd.a(-30097);
-          AnimationSequence.a(obfuscationGuard ^ 125);
-          qf.a((byte) 31);
-          pn.b((byte) -90);
-          SpriteDropdownControl.d((byte) -11);
-          UnitAnimationPreview.b((byte) 40);
-          pd.a((byte) 95);
-          QuickChatHelpDialog.l(obfuscationGuard ^ 55);
-          jk.a(obfuscationGuard ^ -28);
-          AiUnitPlanner.a(-31116);
-          DeathEvent.g(-81);
-          RevivalEvent.e((byte) 91);
-          TelefragEvent.g(-75);
-          ti.a((byte) 29);
-          lq.a(-31320);
-          TrianglePulse.b(16);
+          AccountNamePrompt.releaseStatics(obfuscationGuard ^ -72);
+          MatchConditionRegistry.releaseStatics(true);
+          LeaderEscortCondition.releaseStatics(25931);
+          UnitLossCondition.releaseStatics(obfuscationGuard + 196);
+          PortalLossCondition.releaseStatics(-12428);
+          LineOfSightGrid.releaseStatics(obfuscationGuard ^ -90);
+          AnimationFrameSet.releaseStatics((byte) -74);
+          TileMetadata.releaseStatics(23582);
+          fd.releaseStatics(-30097);
+          AnimationSequence.releaseStatics(obfuscationGuard ^ 125);
+          qf.releaseStatics((byte) 31);
+          GradientFrame.releaseStatics((byte) -90);
+          SpriteDropdownControl.releaseStatics((byte) -11);
+          UnitAnimationPreview.releaseStatics((byte) 40);
+          PasswordLengthSupport.releaseStatics((byte) 95);
+          QuickChatHelpDialog.releaseStatics(obfuscationGuard ^ 55);
+          jk.releaseStatics(obfuscationGuard ^ -28);
+          AiUnitPlanner.releaseStatics(-31116);
+          DeathEvent.releaseStatics(-81);
+          RevivalEvent.releaseStatics((byte) 91);
+          TelefragEvent.releaseStatics(-75);
+          TurnSkipToggleSupport.releaseStatics((byte) 29);
+          IntegerPowerSupport.releaseStatics(-31320);
+          TrianglePulse.releaseStatics(16);
           TickCounter.a(1);
-          FullscreenStatusDialog.n(12213);
-          se.a(0);
-          ByteStorage.b(9892);
+          FullscreenStatusDialog.releaseStatics(12213);
+          IgnoreRequestSupport.a(0);
+          ByteStorage.releaseStatics(9892);
           Bzip2Decoder.releaseSharedState();
-          Bzip2State.b((byte) 75);
+          Bzip2State.releaseStatics((byte) 75);
           dc.a(540);
-          BoundedFile.a(-98);
-          CheckBoxWidgetPainter.a((byte) -100);
-          ao.b((byte) -120);
-          or.a(false);
-          kp.a(2);
-          BitmapTextWidgetPainter.a((byte) 58);
-          Widget.c((byte) -124);
-          SingleChildWidgetContainer.i(-98);
+          BoundedFile.releaseStatics(-98);
+          CheckBoxWidgetPainter.releaseStatics((byte) -100);
+          StatefulWidgetPainter.releaseStatics((byte) -120);
+          DialWidgetPainter.releaseStatics(false);
+          MarkerSliderPainter.releaseStatics(2);
+          BitmapTextWidgetPainter.releaseStatics((byte) 58);
+          Widget.releaseStatics((byte) -124);
+          SingleChildWidgetContainer.releaseStatics(-98);
           TextLayout.a(obfuscationGuard - 51);
           DisplaySettingsDialog.p(0);
-          FullscreenDisplayMode.a(-121);
-          vq.a((byte) 107);
-          ResizableModalDialog.h((byte) 58);
-          DropdownSelector.a(obfuscationGuard - 11763);
-          InteractiveWidget.i(0);
-          GridWidgetContainer.e((byte) 68);
-          DequeWidgetContainer.d((byte) -89);
-          ArrayWidgetContainer.i(0);
-          vr.a((byte) -37);
-          jj.a((byte) -112);
+          FullscreenDisplayMode.releaseStatics(-121);
+          vq.releaseStatics((byte) 107);
+          ResizableModalDialog.releaseStatics((byte) 58);
+          DropdownSelector.releaseStatics(obfuscationGuard - 11763);
+          InteractiveWidget.releaseStatics(0);
+          GridWidgetContainer.releaseStatics((byte) 68);
+          DequeWidgetContainer.releaseStatics((byte) -89);
+          ArrayWidgetContainer.releaseStatics(0);
+          ThemeSpriteLoadingSupport.releaseStatics((byte) -37);
+          FriendLookupSupport.a((byte) -112);
           PcmPlayerService.releaseLabels(-74);
-          TaggedMapData.a(-91);
-          tf.a(false);
-          BattleCharacter.c(-1);
-          CombatViewTransition.b((byte) 120);
-          br.a(111);
-          SpriteControlNode.a(false);
+          TaggedMapData.releaseStatics(-91);
+          tf.releaseStatics(false);
+          BattleCharacter.releaseStatics(-1);
+          CombatViewTransition.releaseStatics((byte) 120);
+          CampaignLookupSupport.releaseStatics(111);
+          SpriteControlNode.releaseStatics(false);
           SpriteDropdownMenu.w(0);
-          MeshObject.a(-66);
-          FaceNormal.a((byte) -101);
-          VertexNormal.a(obfuscationGuard - 14619);
-          AnimationSkeleton.e(77);
-          mv.a((byte) -48);
+          MeshObject.releaseStatics(-66);
+          FaceNormal.releaseStatics((byte) -101);
+          VertexNormal.releaseStatics(obfuscationGuard - 14619);
+          AnimationSkeleton.releaseStatics(77);
+          mv.releaseStatics((byte) -48);
           AnimationFrame.releaseDecoderScratch();
-          rv.a(obfuscationGuard ^ -72);
-          PreparedAction.a(28038);
-          VineGrowthAction.a((byte) 119);
-          MoveAttackAction.e(obfuscationGuard + 4);
-          TeleportAction.a(false);
-          SocketResourceClient.e(obfuscationGuard - 4024);
-          NetworkResourceRequest.h(obfuscationGuard ^ 29322);
-          SectorCacheStore.b(1);
-          DiskCacheRequest.h(obfuscationGuard ^ -61);
+          LocalizedUrlSupport.releaseStatics(obfuscationGuard ^ -72);
+          PreparedAction.releaseStatics(28038);
+          VineGrowthAction.releaseStatics((byte) 119);
+          MoveAttackAction.releaseStatics(obfuscationGuard + 4);
+          TeleportAction.releaseStatics(false);
+          SocketResourceClient.releaseStatics(obfuscationGuard - 4024);
+          NetworkResourceRequest.releaseStatics(obfuscationGuard ^ 29322);
+          SectorCacheStore.releaseStatics(1);
+          DiskCacheRequest.releaseStatics(obfuscationGuard ^ -61);
           CachedArchiveProvider.e(obfuscationGuard - 56);
-          ek.a(236611664);
+          ek.releaseStatics(236611664);
           ResourceRequest.e((byte) -126);
-          is.a((byte) -5);
+          is.releaseStatics((byte) -5);
           VorbisSample.releaseSetup();
-          bq.a(30156);
-          pu.a((byte) -114);
-          uc.a((byte) -39);
-          gt.a(494);
-          de.a((byte) -116);
-          GameCanvas.a(79);
-          bk.a(true);
-          od.a(obfuscationGuard ^ 71);
-          cw.a((byte) -118);
+          bq.releaseStatics(30156);
+          pu.releaseStatics((byte) -114);
+          SpellDefinitionTable.releaseStatics((byte) -39);
+          LocalAccountNameSupport.releaseStatics(494);
+          SpellCastErrorSupport.releaseStatics((byte) -116);
+          GameCanvas.releaseStatics(79);
+          MusicTrackSelectionSupport.a(true);
+          ByteArrayPoolSupport.releaseStatics(obfuscationGuard ^ 71);
+          AttackRangeOverlaySupport.releaseStatics((byte) -118);
           VorbisFloor.releaseScratch();
-          mj.c((byte) -82);
-          lp.a(obfuscationGuard ^ -13095008);
-          cu.a((byte) -121);
-          e.b((byte) -13);
-          QuickChatMenu.k(85);
-          QuickChatCategoryRepository.a(40);
-          QuickChatPhraseRepository.a((byte) -110);
-          QuickChatCategory.h(-97);
+          AudioShutdownSupport.releaseStatics((byte) -82);
+          lp.releaseStatics(obfuscationGuard ^ -13095008);
+          cu.releaseStatics((byte) -121);
+          QuickChatMenuCloseSupport.releaseStatics((byte) -13);
+          QuickChatMenu.releaseStatics(85);
+          QuickChatCategoryRepository.releaseStatics(40);
+          QuickChatPhraseRepository.releaseStatics((byte) -110);
+          QuickChatCategory.releaseStatics(-97);
           QuickChatPhrase.e((byte) -74);
-          WeightedLruCache.a((byte) -57);
-          du.b(16);
-          ug.a(16);
-          NanoGameClock.d(0);
-          dh.c(-117);
+          WeightedLruCache.releaseStatics((byte) -57);
+          SocketFactory.releaseStatics(16);
+          ProxyAuthenticationRequiredException.releaseStatics(16);
+          NanoGameClock.releaseStatics(0);
+          ImageProducerSurface.releaseStatics(-117);
           SynthesizerVoice.releaseScratch();
           MusicPatchUsage.releaseUiReferences(-119);
-          AiInfluenceMap.a(61);
+          AiInfluenceMap.releaseStatics(61);
           AiPlanningStrategy.a(-1);
-          CameraOverviewTarget.e(-93);
-          j.b((byte) 125);
-          RadialSummonItem.b(76);
-          sq.a(false);
-          DeployAction.a(true);
-          c.a(obfuscationGuard + 157);
-          SummonAction.a((byte) 113);
-          AccountNameNormalizer.a(obfuscationGuard ^ 75);
-          WhirlpoolHasher.a(-28911);
-          StateChangeMarker.a((byte) -3);
-          DisplacedUnitMarker.e(1223);
+          CameraOverviewTarget.releaseStatics(-93);
+          j.releaseStatics((byte) 125);
+          RadialSummonItem.releaseStatics(76);
+          ToastMessage.releaseStatics(false);
+          DeployAction.releaseStatics(true);
+          c.releaseStatics(obfuscationGuard + 157);
+          SummonAction.releaseStatics((byte) 113);
+          AccountNameNormalizer.releaseStatics(obfuscationGuard ^ 75);
+          WhirlpoolHasher.releaseStatics(-28911);
+          StateChangeMarker.releaseStatics((byte) -3);
+          DisplacedUnitMarker.releaseStatics(1223);
           DeployEvent.g(-125);
-          CorpseConditionMarker.a(true);
-          SkeletonLimitMarker.a(false);
-          ParasiteEvent.d((byte) 46);
-          KingBlackDragonEvent.g(-43);
-          TelepopEvent.g(obfuscationGuard - 9);
-          GrowthEvent.g(-74);
-          MusicPatch.a((byte) 52);
+          CorpseConditionMarker.releaseStatics(true);
+          SkeletonLimitMarker.releaseStatics(false);
+          ParasiteEvent.releaseStatics((byte) 46);
+          KingBlackDragonEvent.releaseStatics(-43);
+          TelepopEvent.releaseStatics(obfuscationGuard - 9);
+          GrowthEvent.releaseStatics(-74);
+          MusicPatch.releaseStatics((byte) 52);
           MusicPatchEnvelope.a((byte) 99);
-          LabeledWidgetContainer.j(-12819);
-          ValidatedTextWidget.g((byte) -127);
-          EditableTextWidget.m(32);
-          ContentTransitionDialog.i(obfuscationGuard);
-          StripedProgressWidget.a((byte) -85);
-          NameSuggestionList.b(true);
-          HotspotTextWidget.b(true);
-          kw.b(true);
-          ValidationStatusWidget.c(false);
-          ToggleWidget.a(58);
-          TextFieldValidator.f(-1);
-          RegistrationAgreementPane.k(-15);
-          ws.a(obfuscationGuard + 197);
-          pi.a((byte) -63);
-          AttackEvent.a(false);
-          jv.a((byte) 36);
-          BestScoreStrategy.c((byte) 110);
-          AiActionCandidate.f(obfuscationGuard ^ -123);
-          WeightedScoreStrategy.c(-104);
-          TileableNoiseGenerator.c(obfuscationGuard ^ 18);
-          FixedQuaternion.a((byte) -57);
-          MovementPresentation.g(67);
-          EffectPresentation.c(obfuscationGuard ^ 40);
-          ph.a((byte) -54);
+          LabeledWidgetContainer.releaseStatics(-12819);
+          ValidatedTextWidget.releaseStatics((byte) -127);
+          EditableTextWidget.releaseStatics(32);
+          ContentTransitionDialog.releaseStatics(obfuscationGuard);
+          StripedProgressWidget.releaseStatics((byte) -85);
+          NameSuggestionList.releaseStatics(true);
+          HotspotTextWidget.releaseStatics(true);
+          ValidationStatusIcon.releaseStatics(true);
+          ValidationStatusWidget.releaseStatics(false);
+          ToggleWidget.releaseStatics(58);
+          TextFieldValidator.releaseStatics(-1);
+          RegistrationAgreementPane.releaseStatics(-15);
+          DialWidget.releaseStatics(obfuscationGuard + 197);
+          MarkerSliderWidget.releaseStatics((byte) -63);
+          AttackEvent.releaseStatics(false);
+          SoundPanSupport.a((byte) 36);
+          BestScoreStrategy.releaseStatics((byte) 110);
+          AiActionCandidate.releaseStatics(obfuscationGuard ^ -123);
+          WeightedScoreStrategy.releaseStatics(-104);
+          TileableNoiseGenerator.releaseStatics(obfuscationGuard ^ 18);
+          FixedQuaternion.releaseStatics((byte) -57);
+          MovementPresentation.releaseStatics(67);
+          EffectPresentation.releaseStatics(obfuscationGuard ^ 40);
+          AccountNameCharacterSupport.releaseStatics((byte) -54);
           DateOfBirthValidator.b(false);
-          NumericDateInputWidget.c(false);
-          wb.a(false);
-          bs.a(true);
-          tq.a((byte) -84);
-          DateInputWidget.n(0);
-          ScrollWidgetContainer.b(false);
-          SpriteScrollBar.d((byte) 68);
-          DirectByteStorage.c(1);
-          fh.a((byte) -28);
-          BitmapTextLayout.c(true);
-          DraggableWidgetContainer.j(0);
-          DropTargetWidgetContainer.k(obfuscationGuard ^ -36);
-          FullscreenConfirmationDialog.b(true);
-          FullscreenMembershipDialog.n(obfuscationGuard + 72);
-          ClippedWidgetContainer.j(obfuscationGuard + 150);
-          ScrollControlWidget.l(-24061);
-          IterableNodeHashTable.a(false);
-          IterableDualNodeDeque.a(19345);
-          CacheEntry.g(obfuscationGuard ^ 91);
-          QuickChatCommandDefinition.a((byte) -36);
-          StrongCacheEntry.c(true);
-          pc.d(35);
+          NumericDateInputWidget.releaseStatics(false);
+          LoginCredentialStagingSupport.releaseStatics(false);
+          bs.releaseStatics(true);
+          NineSliceSpriteSupport.releaseStatics((byte) -84);
+          DateInputWidget.releaseStatics(0);
+          ScrollWidgetContainer.releaseStatics(false);
+          SpriteScrollBar.releaseStatics((byte) 68);
+          DirectByteStorage.releaseStatics(1);
+          GrowableIntArray.a((byte) -28);
+          BitmapTextLayout.releaseStatics(true);
+          DraggableWidgetContainer.releaseStatics(0);
+          DropTargetWidgetContainer.releaseStatics(obfuscationGuard ^ -36);
+          FullscreenConfirmationDialog.releaseStatics(true);
+          FullscreenMembershipDialog.releaseStatics(obfuscationGuard + 72);
+          ClippedWidgetContainer.releaseStatics(obfuscationGuard + 150);
+          ScrollControlWidget.releaseStatics(-24061);
+          IterableNodeHashTable.releaseStatics(false);
+          IterableDualNodeDeque.releaseStatics(19345);
+          CacheEntry.releaseStatics(obfuscationGuard ^ 91);
+          QuickChatCommandDefinition.releaseStatics((byte) -36);
+          StrongCacheEntry.releaseStatics(true);
+          ProxySocketFactory.releaseStatics(35);
           SoundFilter.releaseScratch();
-          mu.a(0);
-          NodeHashIterator.a((byte) 100);
-          DualNodeIterator.a((byte) -121);
+          mu.releaseStatics(0);
+          NodeHashIterator.releaseStatics((byte) 100);
+          DualNodeIterator.releaseStatics((byte) -121);
           wj.a(true);
-          aj.a(obfuscationGuard + 155);
+          aj.releaseStatics(obfuscationGuard + 155);
           ko.a(false);
-          nt.a((byte) 97);
-          ChannelGainProfile.a(-4740);
+          nt.releaseStatics((byte) 97);
+          ChannelGainProfile.releaseStatics(-4740);
           SoundPlaybackHandle.a((byte) -75);
-          CampaignDefinition.a((byte) 9);
-          CampaignParticipant.a((byte) -95);
+          CampaignDefinition.releaseStatics((byte) 9);
+          CampaignParticipant.releaseStatics((byte) -95);
           CampaignUnitOverride.a(obfuscationGuard ^ -10);
-          CampaignMenuButton.c(obfuscationGuard ^ -72);
-          CampaignMenuEntry.a(-101);
-          bj.a(obfuscationGuard ^ -72);
-          SpriteButtonPainter.a(-26601);
-          LinkButtonPainter.a(-127);
-          TextEntryWidgetPainter.a(1);
-          MaskedTextEntryPainter.b((byte) 117);
-          oi.b(true);
-          AlphaWidgetContainer.c(false);
-          DisplayModeOptionPainter.c(false);
-          SocialListEntry.k(obfuscationGuard - 4103);
-          we.a((byte) 120);
-          b.a(true);
-          iw.a(-25771);
-          vg.a((byte) 89);
-          li.a((byte) 74);
-          ConsoleExpression.a(true);
-          ConsoleValue.a((byte) -114);
-          ConsoleCommand.d((byte) 126);
+          CampaignMenuButton.releaseStatics(obfuscationGuard ^ -72);
+          CampaignMenuEntry.releaseStatics(-101);
+          AlphaDecodedSpriteSupport.releaseStatics(obfuscationGuard ^ -72);
+          SpriteButtonPainter.releaseStatics(-26601);
+          LinkButtonPainter.releaseStatics(-127);
+          TextEntryWidgetPainter.releaseStatics(1);
+          MaskedTextEntryPainter.releaseStatics((byte) 117);
+          CheckMarkWidgetPainter.releaseStatics(true);
+          AlphaWidgetContainer.releaseStatics(false);
+          DisplayModeOptionPainter.releaseStatics(false);
+          SocialListEntry.releaseStatics(obfuscationGuard - 4103);
+          ArchiveLoadStep.releaseStatics((byte) 120);
+          SpriteSheetDecoder.releaseStatics(true);
+          iw.releaseStatics(-25771);
+          vg.releaseStatics((byte) 89);
+          li.releaseStatics((byte) 74);
+          ConsoleExpression.releaseStatics(true);
+          ConsoleValue.releaseStatics((byte) -114);
+          ConsoleCommand.releaseStatics((byte) 126);
           ConsoleParseException.a(0);
-          ConsoleEvaluationException.a(125);
+          ConsoleEvaluationException.releaseStatics(125);
           TextCursor.a(obfuscationGuard - 51);
-          ConsoleTokenCursor.b(-119);
-          TeamRoster.b(-51);
+          ConsoleTokenCursor.releaseStatics(-119);
+          TeamRoster.releaseStatics(-51);
           EmailCheckResult.a(true);
-          ClientConnectionState.a((byte) 96);
-          DelayedPacket.a(obfuscationGuard + 1);
-          wm.a(-10743);
+          ClientConnectionState.releaseStatics((byte) 96);
+          DelayedPacket.releaseStatics(obfuscationGuard + 1);
+          wm.releaseStatics(-10743);
           AccountRequestResult.a(200);
-          DialogMessagePane.a((byte) 63);
-          RasterState.a(-22856);
-          CampaignResult.a((byte) -116);
-          RegionAnchor.a(true);
+          DialogMessagePane.releaseStatics((byte) 63);
+          RasterState.releaseStatics(-22856);
+          CampaignResult.releaseStatics((byte) -116);
+          RegionAnchor.releaseStatics(true);
           LoginMethod.b((byte) -49);
-          wv.c((byte) -3);
-          oq.a(120);
-          eq.a(true);
-          HelloConsoleCommand.g(-90);
+          KeyedLoginCredentials.releaseStatics((byte) -3);
+          oq.releaseStatics(120);
+          PasswordLoginCredentials.releaseStatics(true);
+          HelloConsoleCommand.releaseStatics(-90);
           PrintCoatConsoleCommand.i(113);
-          SetCoatConsoleCommand.g(-5);
-          ChannelFadeTimeConsoleCommand.g(1);
-          ChannelBaseVolumeConsoleCommand.g(obfuscationGuard + 21408);
-          ListMissionsConsoleCommand.g(12600);
+          SetCoatConsoleCommand.releaseStatics(-5);
+          ChannelFadeTimeConsoleCommand.releaseStatics(1);
+          ChannelBaseVolumeConsoleCommand.releaseStatics(obfuscationGuard + 21408);
+          ListMissionsConsoleCommand.releaseStatics(12600);
           GiveTileConsoleCommand.e((byte) 120);
           DefeatPlayerWithMetricsConsoleCommand.g(123);
-          DefeatPlayerConsoleCommand.g(obfuscationGuard ^ -1746174247);
-          ToggleTurnSkipConsoleCommand.g(-128);
-          PrintVictoryConditionsConsoleCommand.g(-2260);
-          FixInvisibleUnitsConsoleCommand.e((byte) -97);
+          DefeatPlayerConsoleCommand.releaseStatics(obfuscationGuard ^ -1746174247);
+          ToggleTurnSkipConsoleCommand.releaseStatics(-128);
+          PrintVictoryConditionsConsoleCommand.releaseStatics(-2260);
+          FixInvisibleUnitsConsoleCommand.releaseStatics((byte) -97);
           MatchConditionEntry.a((byte) -127);
-          on.a(-7);
-          rs.a((byte) -121);
-          jl.a(-125);
-          ip.a(obfuscationGuard ^ 36);
+          TerrainScatterSupport.releaseStatics(-7);
+          PowerOfTwoSupport.releaseStatics((byte) -121);
+          jl.releaseStatics(-125);
+          WidgetStateStyle.releaseStatics(obfuscationGuard ^ 36);
           TextLineLayout.b(obfuscationGuard ^ 26972);
-          DropdownArrowPainter.a((byte) 86);
-          fc.a(obfuscationGuard ^ 43);
-          fk.a(true);
-          kq.a(obfuscationGuard ^ -3);
-          DropdownOptionList.b(false);
+          DropdownArrowPainter.releaseStatics((byte) 86);
+          EmptyWidgetPainter.releaseStatics(obfuscationGuard ^ 43);
+          DropdownSelectorPainter.releaseStatics(true);
+          kq.releaseStatics(obfuscationGuard ^ -3);
+          DropdownOptionList.releaseStatics(false);
           AccountNameAvailabilityValidator.h(29151);
-          EmailValidator.b(true);
-          EmailConfirmationValidator.g(obfuscationGuard ^ -55);
-          AgeValidator.h(-117);
-          MatchingTextValidator.g(49);
-          tv.a((byte) -126);
-          TextHotspotRegion.a(135);
-          ValidationState.b(-16356);
-          DebouncedValidator.d(65280);
-          rn.a(false);
+          EmailValidator.releaseStatics(true);
+          EmailConfirmationValidator.releaseStatics(obfuscationGuard ^ -55);
+          AgeValidator.releaseStatics(-117);
+          MatchingTextValidator.releaseStatics(49);
+          tv.releaseStatics((byte) -126);
+          TextHotspotRegion.releaseStatics(135);
+          ValidationState.releaseStatics(-16356);
+          DebouncedValidator.releaseStatics(65280);
+          ProceduralMapSupport.a(false);
           this.serverHost = null;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.GA(" + obfuscationGuard + ')');
@@ -1613,7 +1613,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         int var7 = 0;
         var7 = obfuscationControl ? 1 : 0;
         try {
-          li.field_n = new Random(vi.monotonicMillis(-108));
+          li.field_n = new Random(MonotonicClockSupport.monotonicMillis(-108));
           this.initializeDefaultSharedServices(4, 68, 24, 2, -119, 0, 1);
           UnitSpell.installViewportResizeListener(52, new BattleViewportResizeHandler());
           var2 = new AdaptiveMidiPcmStream();
@@ -1656,11 +1656,11 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             } else {
               UnitLossCondition.battlefieldThemes = TeleportAction.createThemeCatalog(-10128);
               this.configureOptionalPacketHandlers(true, false, true, true, 55, false, true);
-              jv.field_d = pi.field_M;
+              SoundPanSupport.field_d = MarkerSliderWidget.field_M;
               UnitAnimationPreview.opcodePayloadLengths[65] = -2;
               stackIn_26_0 = obfuscationGuard ? 1 : 0;
             }
-            bj.field_k = stackIn_26_0 != 0;
+            AlphaDecodedSpriteSupport.field_k = stackIn_26_0 != 0;
             UnitAnimationPreview.opcodePayloadLengths[80] = -2;
             UnitAnimationPreview.opcodePayloadLengths[77] = -2;
             UnitAnimationPreview.opcodePayloadLengths[68] = -1;
@@ -1670,7 +1670,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             UnitAnimationPreview.opcodePayloadLengths[78] = 4;
             UnitAnimationPreview.opcodePayloadLengths[82] = -2;
             UnitAnimationPreview.opcodePayloadLengths[79] = 4;
-            ke.field_b = IterableNodeHashTable.field_f;
+            SoundEffectPreloadSupport.field_b = IterableNodeHashTable.field_f;
             UnitAnimationPreview.opcodePayloadLengths[73] = 1;
             UnitAnimationPreview.opcodePayloadLengths[75] = 12;
             UnitAnimationPreview.opcodePayloadLengths[74] = -1;
@@ -1681,7 +1681,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             UnitAnimationPreview.opcodePayloadLengths[10] = -1;
             UnitAnimationPreview.opcodePayloadLengths[71] = 1;
             UnitAnimationPreview.opcodePayloadLengths[67] = 4;
-            fs.field_d = UnitModelViewer.field_o;
+            PrivateTextRecipientSupport.field_d = UnitModelViewer.field_o;
             UnitAnimationPreview.opcodePayloadLengths[69] = -1;
             return;
           }
@@ -1705,14 +1705,14 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           bt.field_e = SpriteButtonPainter.a(3, true);
           iw.field_l = DamageEvent.a(0, 5, (byte) 102, false, false);
           UnitAnimationPreview.field_j = SpriteButtonPainter.a(6, true);
-          br.field_d = SpriteButtonPainter.a(7, true);
+          CampaignLookupSupport.field_d = SpriteButtonPainter.a(7, true);
           SpellConfirmationDialog.field_f = SpriteButtonPainter.a(8, true);
           ep.field_b = SpriteButtonPainter.a(9, true);
           SummonAction.field_w = SpriteButtonPainter.a(10, true);
           CorpseConditionMarker.field_w = SpriteButtonPainter.a(11, true);
-          ki.field_b = SpriteButtonPainter.a(12, true);
-          op.field_b = SpriteButtonPainter.a(15, true);
-          bi.field_f = SpriteButtonPainter.a(14, true);
+          QuinticFadeSupport.field_b = SpriteButtonPainter.a(12, true);
+          FriendRequestSupport.field_b = SpriteButtonPainter.a(15, true);
+          RasterImageSurface.field_f = SpriteButtonPainter.a(14, true);
           MusicCrossfadeStream.field_s = SpriteButtonPainter.a(param0, true);
           ReportAbuseDialog.field_Lb = SpriteButtonPainter.a(18, true);
           GuestPlayConfirmationForm.field_M = SpriteButtonPainter.a(19, true);
@@ -1799,7 +1799,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         var6 = obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameCompleted0 = true;
-          l.activeCampaignMission = null;
+          QuickChatCategoryMenuSupport.activeCampaignMission = null;
           PointerInputHandler.field_f = null;
           if (!param0) {
             var3 = new String[SpriteDropdownControl.field_B];
@@ -1821,7 +1821,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               if (var4_ref_String == null) {
                 var4_ref_String = BoundedFile.field_i;
               }
-              var3[1] = vs.field_b;
+              var3[1] = QuickChatMenuDisplaySupport.field_b;
               var3[0] = var4_ref_String;
             }
             LinkButtonPainter.field_f.selectTheme(NetworkGameShell.field_D, 0);
@@ -1842,7 +1842,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (!IntrusiveNode.field_h) {
             stackIn_21_0 = null;
             stackIn_21_1 = null;
-            stackIn_21_8 = t.field_e;
+            stackIn_21_8 = ReloadPageSupport.field_e;
           } else {
             stackIn_21_0 = null;
             stackIn_21_1 = null;
@@ -1875,13 +1875,13 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           FullscreenFocusCanvas.gameplayController.battlefield.field_F = true;
           var5 = 0;
           while (SpriteDropdownControl.field_B > var5) {
-            FullscreenFocusCanvas.gameplayController.battlefield.playerCoats[var5] = ah.localCoat;
+            FullscreenFocusCanvas.gameplayController.battlefield.playerCoats[var5] = LocalCoatSupport.localCoat;
             var5++;
             if (var6 != 0) {
               return;
             }
           }
-          oo.e(-387);
+          MembershipExpansionScreen.e(-387);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1927,7 +1927,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           var3_int = -78 / ((param0 + 45) / 46);
           j.a((byte) 119);
           var4 = "basicfont12";
-          if (null != br.field_d) {
+          if (null != CampaignLookupSupport.field_d) {
             if (PrintVictoryConditionsConsoleCommand.field_K.ensureIndex((byte) 82) &&
               PrintVictoryConditionsConsoleCommand.field_K.ensureGroupAvailableByName(28979, "basic")) {
               if (PrintVictoryConditionsConsoleCommand.field_K.ensureIndex((byte) 82) &&
@@ -1938,8 +1938,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     PrintVictoryConditionsConsoleCommand.field_K.ensureGroupAvailableByName(28979, "lobby")) {
                     if (ResourceRequest.field_A.ensureIndex((byte) 82) &&
                       ResourceRequest.field_A.ensureGroupAvailableByName(28979, "lobby")) {
-                      if (br.field_d.ensureIndex((byte) 82) &&
-                        br.field_d.ensureAllGroupsAvailable(-27927)) {
+                      if (CampaignLookupSupport.field_d.ensureIndex((byte) 82) &&
+                        CampaignLookupSupport.field_d.ensureAllGroupsAvailable(-27927)) {
                         if (SpellConfirmationDialog.field_f.ensureIndex((byte) 82) &&
                           SpellConfirmationDialog.field_f.ensureAllGroupsAvailable(-27927)) {
                           if (ep.field_b.ensureIndex((byte) 82) &&
@@ -1972,9 +1972,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                                                   return false;
                                                 }
                                                 UpkeepEvent.h(65);
-                                                bn.a((byte) -24, 70.0f, ph.field_a);
+                                                CalendarSupport.a((byte) -24, 70.0f, AccountNameCharacterSupport.field_a);
                                                 this.renderClient(0);
-                                                jl.field_d = new SoundCache(br.field_d, SpellConfirmationDialog.field_f);
+                                                jl.field_d = new SoundCache(CampaignLookupSupport.field_d, SpellConfirmationDialog.field_f);
                                                 ClientUiNode.field_v[0] = jl.field_d.getSoundEffectByName("sword_slash_4", (byte) -97, "");
                                                 ClientUiNode.field_v[1] = jl.field_d.getSoundEffectByName("runewars_menu_mouseover", (byte) -97, "");
                                                 ClientUiNode.field_v[2] = jl.field_d.getSoundEffectByName("runewars_select_menu_item", (byte) -97, "");
@@ -1997,7 +1997,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                                                 var6_int = 0;
                                                 do {
                                                   if (var6_int >= var5_array2.length) {
-                                                    el.field_b[0] = jl.field_d.getSoundEffectByName("runewars_mana_whoosh", (byte) -97, "");
+                                                    MouseWheelSource.field_b[0] = jl.field_d.getSoundEffectByName("runewars_mana_whoosh", (byte) -97, "");
                                                     break;
                                                   }
                                                   var7_ref = var5_array2[var6_int];
@@ -2009,96 +2009,96 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                                                   if (var5_int >= 8) {
                                                     TurnTimerDial.a(126, jl.field_d);
                                                     TabbedPanel.a(jl.field_d, (byte) 123);
-                                                    br.field_d = null;
+                                                    CampaignLookupSupport.field_d = null;
                                                     ModalDialog.a(0);
                                                     break;
                                                   }
-                                                  el.field_b[var5_int + 1] = jl.field_d.getSoundEffectByName("runewars_mana_stars_" + (1 + var5_int), (byte) -97, "");
+                                                  MouseWheelSource.field_b[var5_int + 1] = jl.field_d.getSoundEffectByName("runewars_mana_stars_" + (1 + var5_int), (byte) -97, "");
                                                   var5_int++;
                                                 } while (var18 == 0);
                                                 return false;
                                               }
-                                              bn.a((byte) -24, 69.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, MusicPatchUsage.backgroundArchive));
+                                              CalendarSupport.a((byte) -24, 69.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, MusicPatchUsage.backgroundArchive));
                                               return false;
                                             }
-                                            bn.a((byte) -24, 66.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, AiInfluenceMap.field_f));
+                                            CalendarSupport.a((byte) -24, 66.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, AiInfluenceMap.field_f));
                                             return false;
                                           }
-                                          bn.a((byte) -24, 63.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, InteractiveWidget.field_F));
+                                          CalendarSupport.a((byte) -24, 63.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, InteractiveWidget.field_F));
                                           return false;
                                         }
-                                        bn.a((byte) -24, 61.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ChannelBaseVolumeConsoleCommand.field_M));
+                                        CalendarSupport.a((byte) -24, 61.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ChannelBaseVolumeConsoleCommand.field_M));
                                         return false;
                                       }
-                                      bn.a((byte) -24, 58.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, GuestPlayConfirmationForm.field_M));
+                                      CalendarSupport.a((byte) -24, 58.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, GuestPlayConfirmationForm.field_M));
                                       return false;
                                     }
-                                    bn.a((byte) -24, 56.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, CorpseConditionMarker.field_w));
+                                    CalendarSupport.a((byte) -24, 56.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, CorpseConditionMarker.field_w));
                                     return false;
                                   }
-                                  bn.a((byte) -24, 54.0f, EmailValidator.a(bt.field_e, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
+                                  CalendarSupport.a((byte) -24, 54.0f, EmailValidator.a(bt.field_e, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
                                   return false;
                                 }
-                                bn.a((byte) -24, 52.0f, EmailValidator.a(UnitAnimationPreview.field_j, 0, QuickChatPhraseRepository.field_a, "basic", is.field_f));
+                                CalendarSupport.a((byte) -24, 52.0f, EmailValidator.a(UnitAnimationPreview.field_j, 0, QuickChatPhraseRepository.field_a, "basic", is.field_f));
                                 return false;
                               }
-                              bn.a((byte) -24, 41.0f, EmailValidator.a(iw.field_l, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
+                              CalendarSupport.a((byte) -24, 41.0f, EmailValidator.a(iw.field_l, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
                               return false;
                             }
-                            bn.a((byte) -24, 38.0f, EmailValidator.a(SummonAction.field_w, 0, is.field_d, "", PacketBuffer.field_m));
+                            CalendarSupport.a((byte) -24, 38.0f, EmailValidator.a(SummonAction.field_w, 0, is.field_d, "", PacketBuffer.field_m));
                             return false;
                           }
-                          bn.a((byte) -24, 33.0f, LoginForm.a(is.field_d, 0, ep.field_b, -27638, PacketBuffer.field_m));
+                          CalendarSupport.a((byte) -24, 33.0f, LoginForm.a(is.field_d, 0, ep.field_b, -27638, PacketBuffer.field_m));
                           return false;
                         }
-                        bn.a((byte) -24, 28.0f, EmailValidator.a(SpellConfirmationDialog.field_f, 0, ds.field_b, "", ResourceProtocolClient.field_k));
+                        CalendarSupport.a((byte) -24, 28.0f, EmailValidator.a(SpellConfirmationDialog.field_f, 0, PointerCaptureSupport.field_b, "", ResourceProtocolClient.field_k));
                         return false;
                       }
-                      bn.a((byte) -24, 23.0f, EmailValidator.a(br.field_d, 0, ds.field_b, "", ResourceProtocolClient.field_k));
+                      CalendarSupport.a((byte) -24, 23.0f, EmailValidator.a(CampaignLookupSupport.field_d, 0, PointerCaptureSupport.field_b, "", ResourceProtocolClient.field_k));
                       return false;
                     }
-                    bn.a((byte) -24, 21.0f, EmailValidator.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, "lobby", is.field_f));
+                    CalendarSupport.a((byte) -24, 21.0f, EmailValidator.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, "lobby", is.field_f));
                     return false;
                   }
-                  bn.a((byte) -24, 18.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "lobby", TileMetadata.field_i));
+                  CalendarSupport.a((byte) -24, 18.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "lobby", TileMetadata.field_i));
                   return false;
                 }
-                bn.a((byte) -24, 16.0f, EmailValidator.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, var4, is.field_f));
+                CalendarSupport.a((byte) -24, 16.0f, EmailValidator.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, var4, is.field_f));
                 return false;
               }
-              bn.a((byte) -24, 13.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, var4, TileMetadata.field_i));
+              CalendarSupport.a((byte) -24, 13.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, var4, TileMetadata.field_i));
               return false;
             }
-            bn.a((byte) -24, 10.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
+            CalendarSupport.a((byte) -24, 10.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
             return false;
           }
           if (null != SpellConfirmationDialog.field_f) {
-            bn.a((byte) -24, 71.0f, ph.field_a);
+            CalendarSupport.a((byte) -24, 71.0f, AccountNameCharacterSupport.field_a);
             this.renderClient(0);
             SpellConfirmationDialog.field_f = null;
             ModalDialog.a(0);
             return false;
           }
           if (null != SummonAction.field_w) {
-            bn.a((byte) -24, 75.0f, LabeledWidgetContainer.field_M);
+            CalendarSupport.a((byte) -24, 75.0f, LabeledWidgetContainer.field_M);
             this.renderClient(0);
             SocialListPanel.field_Ob = MusicTrack.load(SummonAction.field_w, "", "Runewars Titlescreen");
             DeployRequest.field_B = MusicTrack.load(SummonAction.field_w, "", "legion");
             ChannelBaseVolumeConsoleCommand.field_K = MusicTrack.load(SummonAction.field_w, "", "Runewars win");
-            se.field_h = MusicTrack.load(SummonAction.field_w, "", "Runewars lose");
+            IgnoreRequestSupport.field_h = MusicTrack.load(SummonAction.field_w, "", "Runewars lose");
             var5_int = 0;
             do {
               if (!(var5_int < ConsoleEvaluationException.field_a.length)) {
-                fh.field_b = new MusicTrack[9];
-                fh.field_b[0] = MusicTrack.load(SummonAction.field_w, "", "the terrible tower");
-                fh.field_b[1] = MusicTrack.load(SummonAction.field_w, "", "venture2");
-                fh.field_b[2] = MusicTrack.load(SummonAction.field_w, "", "the other side");
-                fh.field_b[3] = MusicTrack.load(SummonAction.field_w, "", "the shadow");
-                fh.field_b[4] = MusicTrack.load(SummonAction.field_w, "", "faithless");
-                fh.field_b[5] = MusicTrack.load(SummonAction.field_w, "", "kingdom");
-                fh.field_b[6] = MusicTrack.load(SummonAction.field_w, "", "fight or flight");
-                fh.field_b[7] = MusicTrack.load(SummonAction.field_w, "", "soul wars");
-                fh.field_b[8] = MusicTrack.load(SummonAction.field_w, "", "brain_barrelchest_battle");
+                GrowableIntArray.field_b = new MusicTrack[9];
+                GrowableIntArray.field_b[0] = MusicTrack.load(SummonAction.field_w, "", "the terrible tower");
+                GrowableIntArray.field_b[1] = MusicTrack.load(SummonAction.field_w, "", "venture2");
+                GrowableIntArray.field_b[2] = MusicTrack.load(SummonAction.field_w, "", "the other side");
+                GrowableIntArray.field_b[3] = MusicTrack.load(SummonAction.field_w, "", "the shadow");
+                GrowableIntArray.field_b[4] = MusicTrack.load(SummonAction.field_w, "", "faithless");
+                GrowableIntArray.field_b[5] = MusicTrack.load(SummonAction.field_w, "", "kingdom");
+                GrowableIntArray.field_b[6] = MusicTrack.load(SummonAction.field_w, "", "fight or flight");
+                GrowableIntArray.field_b[7] = MusicTrack.load(SummonAction.field_w, "", "soul wars");
+                GrowableIntArray.field_b[8] = MusicTrack.load(SummonAction.field_w, "", "brain_barrelchest_battle");
                 qf.interfaceMusicTrack = MusicTrack.load(SummonAction.field_w, "", "AoG_interface_guthix");
                 break;
               }
@@ -2109,7 +2109,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, SocialListPanel.field_Ob, (byte) 86);
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, DeployRequest.field_B, (byte) 86);
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, ChannelBaseVolumeConsoleCommand.field_K, (byte) 86);
-            var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, se.field_h, (byte) 86);
+            var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, IgnoreRequestSupport.field_h, (byte) 86);
             var6 = ConsoleEvaluationException.field_a;
             var7_int = 0;
             do {
@@ -2140,7 +2140,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           }
           if (UnitAnimationPreview.field_j == null) {
             if (bt.field_e != null) {
-              uc.setChatHuffmanCodec(new HuffmanCodec(bt.field_e.getFileByName("huffman", -105, "")), 4);
+              SpellDefinitionTable.setChatHuffmanCodec(new HuffmanCodec(bt.field_e.getFileByName("huffman", -105, "")), 4);
               bt.field_e = null;
               ModalDialog.a(0);
               return false;
@@ -2168,86 +2168,86 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             ModalDialog.a(0);
             return true;
           }
-          bn.a((byte) -24, 90.0f, SectorCacheStore.field_i);
+          CalendarSupport.a((byte) -24, 90.0f, SectorCacheStore.field_i);
           this.renderClient(0);
-          rs.field_n = DropdownArrowPainter.a(var4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, (byte) -53, "");
+          PowerOfTwoSupport.field_n = DropdownArrowPainter.a(var4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, (byte) -53, "");
           DateInputWidget.field_E = DropdownArrowPainter.a("basic", iw.field_l, UnitAnimationPreview.field_j, (byte) -53, "smallfont");
-          TrianglePulse.field_i = it.a("introfont", iw.field_l, UnitAnimationPreview.field_j, (byte) -87, "basic");
-          nr.field_e = TurnEffectEvent.a("runewarsfont", UnitAnimationPreview.field_j, iw.field_l, "basic", -2088);
-          GradientUiRenderer.installFont(nr.field_e);
-          GradientUiRenderer.textBackdropSprites = fk.loadRgbSpritesByName("textshadow", (byte) -127, iw.field_l, "basic");
+          TrianglePulse.field_i = ChatMessageWriteSupport.a("introfont", iw.field_l, UnitAnimationPreview.field_j, (byte) -87, "basic");
+          NineSliceFrame.field_e = TurnEffectEvent.a("runewarsfont", UnitAnimationPreview.field_j, iw.field_l, "basic", -2088);
+          GradientUiRenderer.installFont(NineSliceFrame.field_e);
+          GradientUiRenderer.textBackdropSprites = DropdownSelectorPainter.loadRgbSpritesByName("textshadow", (byte) -127, iw.field_l, "basic");
           var5_array = MapLayout.loadIndexedSpritesByName("members_benefits_screenshots", -28106, "basic", iw.field_l);
           if (var5_array != null) {
             LineOfSightGrid.a(var5_array, (byte) 110, this);
           }
-          MatchConditionEntry.field_n = pv.a("basic", "background", iw.field_l, 24914);
-          cp.field_e = MapLayout.loadIndexedSpritesByName("statusicons", -28106, "basic", iw.field_l);
+          MatchConditionEntry.field_n = AccountNameFoldingSupport.a("basic", "background", iw.field_l, 24914);
+          EventPresenterFactory.field_e = MapLayout.loadIndexedSpritesByName("statusicons", -28106, "basic", iw.field_l);
           MapLayout.loadIndexedSpritesByName("armouricons", -28106, "basic", iw.field_l);
-          lb.field_e = MapLayout.loadIndexedSpritesByName("special_icons", -28106, "basic", iw.field_l);
+          ResourceClientErrorSupport.field_e = MapLayout.loadIndexedSpritesByName("special_icons", -28106, "basic", iw.field_l);
           TrianglePulse.field_d = GameplayController.a("godspark", (byte) 51, "basic", iw.field_l);
           DropdownSelector.field_M = DiskCacheRequest.loadRgbSpriteByName("mapbutton", "basic", iw.field_l, false);
           DiskCacheRequest.loadRgbSpriteByName("endturnbutton", "basic", iw.field_l, false);
           LineOfSightGrid.field_g = DiskCacheRequest.loadRgbSpriteByName("buttonring", "basic", iw.field_l, false);
-          e.field_b = ac.a(iw.field_l, "lozenge", (byte) -4, "basic");
-          bu.field_c = fk.loadRgbSpritesByName("endturnlozenge", (byte) -127, iw.field_l, "basic");
-          AgeValidator.field_l = ac.a(iw.field_l, "summonframe", (byte) -4, "basic");
+          QuickChatMenuCloseSupport.field_b = ManaStarParticle.a(iw.field_l, "lozenge", (byte) -4, "basic");
+          bu.field_c = DropdownSelectorPainter.loadRgbSpritesByName("endturnlozenge", (byte) -127, iw.field_l, "basic");
+          AgeValidator.field_l = ManaStarParticle.a(iw.field_l, "summonframe", (byte) -4, "basic");
           EventPresenter.field_t = DiskCacheRequest.loadRgbSpriteByName("bubblepoint", "basic", iw.field_l, false);
-          ii.field_a = ac.a(iw.field_l, "actionbuttons", (byte) -4, "basic");
-          od.field_a = ac.a(iw.field_l, "info_icons", (byte) -4, "basic");
+          ii.field_a = ManaStarParticle.a(iw.field_l, "actionbuttons", (byte) -4, "basic");
+          ByteArrayPoolSupport.field_a = ManaStarParticle.a(iw.field_l, "info_icons", (byte) -4, "basic");
           ProgressMessageDialog.field_rb = MapLayout.loadIndexedSpritesByName("trait_icons", -28106, "basic", iw.field_l);
           lp.field_b = MapLayout.loadIndexedSpritesByName("terrain_icons", -28106, "basic", iw.field_l);
           sg.field_b = MapLayout.loadIndexedSpritesByName("compare_icons", -28106, "basic", iw.field_l);
           CampaignRewardPreview.field_e = DiskCacheRequest.loadRgbSpriteByName("mapf", "basic", iw.field_l, false);
           MusicPatch.field_z = DiskCacheRequest.loadRgbSpriteByName("mapi", "basic", iw.field_l, false);
-          AnimationSkeleton.field_t = pv.a("basic", "turn", iw.field_l, 24914);
-          AttackEvent.field_y = fk.loadRgbSpritesByName("mapsquares", (byte) -127, iw.field_l, "basic");
-          SkeletonLimitMarker.field_s = fk.loadRgbSpritesByName("isomapsquares", (byte) -127, iw.field_l, "basic");
-          SpellMenuGroup.field_h = fk.loadRgbSpritesByName("maprotbutton", (byte) -128, iw.field_l, "basic");
-          TeleportAction.field_w = fk.loadRgbSpritesByName("placeicons", (byte) -124, iw.field_l, "basic");
+          AnimationSkeleton.field_t = AccountNameFoldingSupport.a("basic", "turn", iw.field_l, 24914);
+          AttackEvent.field_y = DropdownSelectorPainter.loadRgbSpritesByName("mapsquares", (byte) -127, iw.field_l, "basic");
+          SkeletonLimitMarker.field_s = DropdownSelectorPainter.loadRgbSpritesByName("isomapsquares", (byte) -127, iw.field_l, "basic");
+          SpellMenuGroup.field_h = DropdownSelectorPainter.loadRgbSpritesByName("maprotbutton", (byte) -128, iw.field_l, "basic");
+          TeleportAction.field_w = DropdownSelectorPainter.loadRgbSpritesByName("placeicons", (byte) -124, iw.field_l, "basic");
           SocialListPanel.field_Jb = DiskCacheRequest.loadRgbSpriteByName("slider", "basic", iw.field_l, false);
           MoveEvent.field_z = GameplayController.a("bcarrow", (byte) 51, "basic", iw.field_l);
           BestScoreStrategy.field_m = GameplayController.a("goldiv", (byte) 51, "basic", iw.field_l);
-          DraggableWidgetContainer.field_Q = fk.loadRgbSpritesByName("silverbar", (byte) -125, iw.field_l, "basic");
-          TaggedMapData.field_f = fk.loadRgbSpritesByName("pathfinder", (byte) -125, iw.field_l, "basic");
-          DeployAction.field_x = ac.a(iw.field_l, "unitheads", (byte) -4, "basic");
-          BattleViewportResizeHandler.field_i = fk.loadRgbSpritesByName("theme_icons", (byte) -127, iw.field_l, "basic");
+          DraggableWidgetContainer.field_Q = DropdownSelectorPainter.loadRgbSpritesByName("silverbar", (byte) -125, iw.field_l, "basic");
+          TaggedMapData.field_f = DropdownSelectorPainter.loadRgbSpritesByName("pathfinder", (byte) -125, iw.field_l, "basic");
+          DeployAction.field_x = ManaStarParticle.a(iw.field_l, "unitheads", (byte) -4, "basic");
+          BattleViewportResizeHandler.field_i = DropdownSelectorPainter.loadRgbSpritesByName("theme_icons", (byte) -127, iw.field_l, "basic");
           UpkeepEvent.a(iw.field_l, 116);
-          ArrayWidgetContainer.field_F = fk.loadRgbSpritesByName("fireball", (byte) -128, iw.field_l, "basic");
-          MatchConditionRegistry.field_d = fk.loadRgbSpritesByName("fortcontrols", (byte) -124, iw.field_l, "basic");
+          ArrayWidgetContainer.field_F = DropdownSelectorPainter.loadRgbSpritesByName("fireball", (byte) -128, iw.field_l, "basic");
+          MatchConditionRegistry.field_d = DropdownSelectorPainter.loadRgbSpritesByName("fortcontrols", (byte) -124, iw.field_l, "basic");
           StandardContentDialog.field_ob = DiskCacheRequest.loadRgbSpriteByName("smallorb", "basic", iw.field_l, false);
           DraggableWidgetContainer.field_J = DiskCacheRequest.loadRgbSpriteByName("bigorb", "basic", iw.field_l, false);
-          pg.field_c = DiskCacheRequest.loadRgbSpriteByName("bigorbring", "basic", iw.field_l, false);
-          UnitModelPreview.field_d = ac.a(iw.field_l, "godorbs", (byte) -4, "basic");
-          gt.field_c = ac.a(iw.field_l, "godframes", (byte) -4, "basic");
-          GuestPlayConfirmationForm.field_F = ac.a(iw.field_l, "godglows", (byte) -4, "basic");
-          BufferedFile.field_k = ac.a(iw.field_l, "godframeglows", (byte) -4, "basic");
+          UnitAnimationSelectionSupport.field_c = DiskCacheRequest.loadRgbSpriteByName("bigorbring", "basic", iw.field_l, false);
+          UnitModelPreview.field_d = ManaStarParticle.a(iw.field_l, "godorbs", (byte) -4, "basic");
+          LocalAccountNameSupport.field_c = ManaStarParticle.a(iw.field_l, "godframes", (byte) -4, "basic");
+          GuestPlayConfirmationForm.field_F = ManaStarParticle.a(iw.field_l, "godglows", (byte) -4, "basic");
+          BufferedFile.field_k = ManaStarParticle.a(iw.field_l, "godframeglows", (byte) -4, "basic");
           FullscreenMembershipDialog.a((byte) 80, UnitModelPreview.field_d);
-          hf.a(128, GuestPlayConfirmationForm.field_F, 0);
+          ClientStateChecksumSupport.a(128, GuestPlayConfirmationForm.field_F, 0);
           TeamRoster.field_e = new RgbSprite(71, 71);
           EditableTextWidget.a(8678, 256, 15, TeamRoster.field_e);
           FullscreenMembershipDialog.a((byte) 105, GuestPlayConfirmationForm.field_F);
           FullscreenMembershipDialog.a((byte) 124, BufferedFile.field_k);
           MaskedTextEntryPainter.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", iw.field_l, false);
-          km.field_h = ac.a(iw.field_l, "summonrings", (byte) -4, "basic");
-          jv.field_b = fk.loadRgbSpritesByName("chatbubbles", (byte) -128, iw.field_l, "basic");
+          ProjectileEffect.field_h = ManaStarParticle.a(iw.field_l, "summonrings", (byte) -4, "basic");
+          SoundPanSupport.field_b = DropdownSelectorPainter.loadRgbSpritesByName("chatbubbles", (byte) -128, iw.field_l, "basic");
           AttackEvent.field_O = GameplayController.a("results_award_badge", (byte) 51, "basic", iw.field_l);
           MidiPcmStream.field_H = (ArgbSprite) (DiskCacheRequest.loadRgbSpriteByName("shine", "basic", iw.field_l, false));
-          CampaignDefinition.field_t = pv.a("basic", "statboxbg", iw.field_l, 24914);
-          qt.field_e = pv.a("basic", "popupbg", iw.field_l, 24914);
-          vq.field_b = pv.a("basic", "gameinfobg", iw.field_l, 24914);
-          MusicPatchUsage.manaStarSprites = fk.loadRgbSpritesByName("manastars", (byte) -127, iw.field_l, "basic");
+          CampaignDefinition.field_t = AccountNameFoldingSupport.a("basic", "statboxbg", iw.field_l, 24914);
+          BitReversalSupport.field_e = AccountNameFoldingSupport.a("basic", "popupbg", iw.field_l, 24914);
+          vq.field_b = AccountNameFoldingSupport.a("basic", "gameinfobg", iw.field_l, 24914);
+          MusicPatchUsage.manaStarSprites = DropdownSelectorPainter.loadRgbSpritesByName("manastars", (byte) -127, iw.field_l, "basic");
           TrianglePulse.field_f = GameplayController.a("manaicon", (byte) 51, "basic", iw.field_l);
-          od.field_d = fk.loadRgbSpritesByName("overlayicons", (byte) -125, iw.field_l, "basic");
-          mv.field_a = fk.loadRgbSpritesByName("bloodsplat", (byte) -126, iw.field_l, "basic");
-          it.field_a = GameplayController.a("results_rune_icon", (byte) 51, "basic", iw.field_l);
-          ConsoleTextNode.field_k = fk.loadRgbSpritesByName("results_mini_button_silver", (byte) -124, iw.field_l, "basic");
-          IsaacRandom.field_a = fk.loadRgbSpritesByName("results_mini_button_gold", (byte) -127, iw.field_l, "basic");
-          BattleCharacter.field_h = ac.a(iw.field_l, "trinketicons", (byte) -4, "basic");
+          ByteArrayPoolSupport.field_d = DropdownSelectorPainter.loadRgbSpritesByName("overlayicons", (byte) -125, iw.field_l, "basic");
+          mv.field_a = DropdownSelectorPainter.loadRgbSpritesByName("bloodsplat", (byte) -126, iw.field_l, "basic");
+          ChatMessageWriteSupport.field_a = GameplayController.a("results_rune_icon", (byte) 51, "basic", iw.field_l);
+          ConsoleTextNode.field_k = DropdownSelectorPainter.loadRgbSpritesByName("results_mini_button_silver", (byte) -124, iw.field_l, "basic");
+          IsaacRandom.field_a = DropdownSelectorPainter.loadRgbSpritesByName("results_mini_button_gold", (byte) -127, iw.field_l, "basic");
+          BattleCharacter.field_h = ManaStarParticle.a(iw.field_l, "trinketicons", (byte) -4, "basic");
           AttackEvent.field_E = DiskCacheRequest.loadRgbSpriteByName("eye", "basic", iw.field_l, false);
-          cu.field_d = ac.a(iw.field_l, "trinketbuttons", (byte) -4, "basic");
+          cu.field_d = ManaStarParticle.a(iw.field_l, "trinketbuttons", (byte) -4, "basic");
           ChatMessage.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", iw.field_l);
-          ChatMessage.field_s.a();
-          EmailConfirmationValidator.field_o = fk.loadRgbSpritesByName("diamondscale", (byte) -128, iw.field_l, "basic");
+          ChatMessage.field_s.trimTransparentBorder();
+          EmailConfirmationValidator.field_o = DropdownSelectorPainter.loadRgbSpritesByName("diamondscale", (byte) -128, iw.field_l, "basic");
           jg.field_m = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
           var6_array = UnitLossCondition.battlefieldThemes;
           var7_int = 0;
@@ -2279,13 +2279,13 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           MoveAttackAction.field_x = jk.a(100, var13, 125, var12);
           var14 = new int[]{13369344};
           var15 = new int[]{4456448};
-          dh.field_l = jk.a(100, var15, 123, var14);
+          ImageProducerSurface.field_l = jk.a(100, var15, 123, var14);
           GradientUiRenderer.bakeGradientFrameBorders(0, 0, 640, 480, ChannelBaseVolumeConsoleCommand.field_J, ConsoleValue.field_b);
-          SocketResourceClient.a((byte) 125, ac.a(iw.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", iw.field_l));
-          IsaacRandom.field_k = fk.loadRgbSpritesByName("arrows", (byte) -124, iw.field_l, "basic");
-          pi.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", iw.field_l);
+          SocketResourceClient.a((byte) 125, ManaStarParticle.a(iw.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", iw.field_l));
+          IsaacRandom.field_k = DropdownSelectorPainter.loadRgbSpritesByName("arrows", (byte) -124, iw.field_l, "basic");
+          MarkerSliderWidget.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", iw.field_l);
           SpriteDropdownMenu.a(GameplayController.a("glowray", (byte) 51, "basic", iw.field_l), 0, GameplayController.a("glowspark", (byte) 51, "basic", iw.field_l));
-          MoveAttackRequest.field_C = fk.loadRgbSpritesByName("medals", (byte) -127, iw.field_l, "campaign");
+          MoveAttackRequest.field_C = DropdownSelectorPainter.loadRgbSpritesByName("medals", (byte) -127, iw.field_l, "campaign");
           DisplayModeOptionPainter.field_w[0] = DiskCacheRequest.loadRgbSpriteByName("campaign_1_glow", "campaign", iw.field_l, false);
           DisplayModeOptionPainter.field_w[1] = DiskCacheRequest.loadRgbSpriteByName("campaign_2_glow", "campaign", iw.field_l, false);
           DisplayModeOptionPainter.field_w[2] = DiskCacheRequest.loadRgbSpriteByName("campaign_3_glow", "campaign", iw.field_l, false);
@@ -2296,23 +2296,23 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           CampaignUnitOverride.a(300, MoveAttackRequest.field_A);
           CampaignUnitOverride.a(300, ChatMessage.field_t);
           CorpseConditionMarker.field_v = new RgbSprite(32, 32);
-          CorpseConditionMarker.field_v.b();
+          CorpseConditionMarker.field_v.bindAsRasterTarget();
           ChatMessage.field_t.d(0, 0, 32, 32);
-          so.field_b.a(5605);
+          FixedSquareRootSupport.field_b.bindRasterTarget(5605);
           ChatMessage.field_t = null;
           var16 = new RgbSprite[ArrayWidgetContainer.field_E.length][];
           var17 = 0;
           do {
             if (!(ArrayWidgetContainer.field_E.length > var17)) {
-              km.field_c = MapLayout.loadIndexedSpritesByName("prestigeicons", -28106, "basic", iw.field_l);
+              ProjectileEffect.field_c = MapLayout.loadIndexedSpritesByName("prestigeicons", -28106, "basic", iw.field_l);
               break;
             }
-            var16[var17] = fk.loadRgbSpritesByName(ArrayWidgetContainer.field_E[var17], (byte) -127, iw.field_l, "basic");
+            var16[var17] = DropdownSelectorPainter.loadRgbSpritesByName(ArrayWidgetContainer.field_E[var17], (byte) -127, iw.field_l, "basic");
             var17++;
           } while (var18 == 0);
           if (!LabeledWidgetContainer.field_L) {
-            dh.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", iw.field_l);
-            QuickChatPhrase.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, LoginMethod.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, LoginMethod.field_a.length, DropTargetWidgetContainer.field_L, km.field_c, CorpseConditionMarker.field_w, ki.field_d, var16);
+            ImageProducerSurface.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", iw.field_l);
+            QuickChatPhrase.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, LoginMethod.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, LoginMethod.field_a.length, DropTargetWidgetContainer.field_L, ProjectileEffect.field_c, CorpseConditionMarker.field_w, QuinticFadeSupport.field_d, var16);
             la.initializeChatHistory((byte) 30, 200);
             DisplayModeOptionPainter.a(124, ResourceRequest.field_A, PrintVictoryConditionsConsoleCommand.field_K);
           }
@@ -2324,7 +2324,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           do {
             if (var17 >= 64) {
               if (BufferedSocket.field_j >= 2) {
-                ToggleTurnSkipConsoleCommand.debugConsole = new DebugConsole(KeyboardInputListener.createDebugCommandRegistry(101), rs.field_n, IntPair.field_m);
+                ToggleTurnSkipConsoleCommand.debugConsole = new DebugConsole(KeyboardInputListener.createDebugCommandRegistry(101), PowerOfTwoSupport.field_n, IntPair.field_m);
               }
               break;
             }
@@ -2366,10 +2366,10 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             field_J = (BitmapFont) null;
           }
           jt.field_a = 16;
-          ClientConnectionState.a(50, true);
+          ClientConnectionState.setTicksPerSecond(50, true);
           QuickChatPhrase.a(param0 ^ -68, SocialListPanel.field_Ob);
-          DropdownSelector.a(128, 8, rs.field_n.capitalHeight, rs.field_n.maxDescent + rs.field_n.capitalHeight, rs.field_n, MusicPatch.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.capitalHeight, -99, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 320, MusicPatch.field_m[0].pixelWidth, rs.field_n.capitalHeight + rs.field_n.maxDescent, new pn(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false), rs.field_n);
-          wm.a(320, 128, 240, 16777215, rs.field_n.capitalHeight + rs.field_n.maxDescent, rs.field_n.capitalHeight, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.maxDescent + rs.field_n.capitalHeight, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), MusicPatch.field_m[0].pixelHeight, rs.field_n, 2, MusicPatch.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.capitalHeight, new pn(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false));
+          DropdownSelector.a(128, 8, PowerOfTwoSupport.field_n.capitalHeight, PowerOfTwoSupport.field_n.maxDescent + PowerOfTwoSupport.field_n.capitalHeight, PowerOfTwoSupport.field_n, MusicPatch.field_m[0].pixelHeight, 8, 2, 16777215, 240, PowerOfTwoSupport.field_n.capitalHeight, -99, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 255, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 320, MusicPatch.field_m[0].pixelWidth, PowerOfTwoSupport.field_n.capitalHeight + PowerOfTwoSupport.field_n.maxDescent, new GradientFrame(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false), PowerOfTwoSupport.field_n);
+          wm.a(320, 128, 240, 16777215, PowerOfTwoSupport.field_n.capitalHeight + PowerOfTwoSupport.field_n.maxDescent, PowerOfTwoSupport.field_n.capitalHeight, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 8, (byte) 90, 480, 8, PowerOfTwoSupport.field_n.maxDescent + PowerOfTwoSupport.field_n.capitalHeight, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), MusicPatch.field_m[0].pixelHeight, PowerOfTwoSupport.field_n, 2, MusicPatch.field_m[0].pixelWidth, PowerOfTwoSupport.field_n, 255, PowerOfTwoSupport.field_n.capitalHeight, new GradientFrame(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2403,18 +2403,18 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != ki.field_b &&
+          if (null != QuinticFadeSupport.field_b &&
             null == ReportAbuseDialog.field_Lb) {
-            bn.a((byte) -24, 97.0f, AiPlanner.field_R);
+            CalendarSupport.a((byte) -24, 97.0f, AiPlanner.field_R);
             this.renderClient(param0 ^ 11672);
-            QuickChatCategoryRepository.a(0, ki.field_b);
-            ki.field_b = null;
+            QuickChatCategoryRepository.a(0, QuinticFadeSupport.field_b);
+            QuinticFadeSupport.field_b = null;
             ModalDialog.a(0);
             return false;
           }
           if (null != ReportAbuseDialog.field_Lb &&
             iw.field_l != null) {
-            bn.a((byte) -24, 98.0f, AiPlanner.field_R);
+            CalendarSupport.a((byte) -24, 98.0f, AiPlanner.field_R);
             this.renderClient(0);
             ReportAbuseDialog.field_Lb = null;
             ModalDialog.a(param0 ^ 11672);
@@ -2423,15 +2423,15 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (param0 != 11672) {
             this.shutdownClient((byte) -74);
           }
-          if (op.field_b != null &&
-            null != bi.field_f &&
+          if (FriendRequestSupport.field_b != null &&
+            null != RasterImageSurface.field_f &&
             MusicCrossfadeStream.field_s != null &&
-            ki.field_b == null) {
-            bn.a((byte) -24, 99.0f, AiPlanner.field_R);
+            QuinticFadeSupport.field_b == null) {
+            CalendarSupport.a((byte) -24, 99.0f, AiPlanner.field_R);
             this.renderClient(0);
-            CoatOfArms.a(MusicCrossfadeStream.field_s, bi.field_f, op.field_b, 0);
-            op.field_b = null;
-            bi.field_f = null;
+            CoatOfArms.a(MusicCrossfadeStream.field_s, RasterImageSurface.field_f, FriendRequestSupport.field_b, 0);
+            FriendRequestSupport.field_b = null;
+            RasterImageSurface.field_f = null;
             MusicCrossfadeStream.field_s = null;
             ModalDialog.a(0);
             return false;
@@ -2458,7 +2458,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           }
           var2 = (jg) (ScrollWidgetContainer.field_P.first((byte) 97));
           if (null != var2) {
-            var4 = lq.field_b;
+            var4 = IntegerPowerSupport.field_b;
             if (var4 < 80) {
               var3 = -32 + var4 / 2;
               if (var5 != 0) {
@@ -2479,9 +2479,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 var3 = 8;
               }
             }
-            GradientUiRenderer.drawHollowGradientFrame(-5, var3 - 10, rs.field_n.textWidth(so.field_a[var2.field_l]) + 62, 48, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
-            DelayedPacket.field_k[var2.field_l].c(8, var3);
-            rs.field_n.drawText(so.field_a[var2.field_l], 42, var3 - (-5 - rs.field_n.maxAscent), 15658734, -1);
+            GradientUiRenderer.drawHollowGradientFrame(-5, var3 - 10, PowerOfTwoSupport.field_n.textWidth(FixedSquareRootSupport.field_a[var2.field_l]) + 62, 48, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
+            DelayedPacket.field_k[var2.field_l].drawQuarterSize(8, var3);
+            PowerOfTwoSupport.field_n.drawText(FixedSquareRootSupport.field_a[var2.field_l], 42, var3 - (-5 - PowerOfTwoSupport.field_n.maxAscent), 15658734, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

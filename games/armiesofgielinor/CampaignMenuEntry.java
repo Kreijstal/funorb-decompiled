@@ -25,9 +25,9 @@ final class CampaignMenuEntry extends IntrusiveNode {
     int left;
     RgbSprite highlightSprite;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         decodedSpriteAlphas = (byte[][]) null;
-        if (param0 != -101) {
+        if (obfuscationGuard != -101) {
           CampaignMenuEntry.a(-99, -40, -126, (byte) 12, -104);
         }
         field_E = null;
@@ -116,7 +116,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
         try {
           ChannelBaseVolumeConsoleCommand.field_L = lm.nameCheckComplete;
           if (param1 != -14) {
-            CampaignMenuEntry.a(7);
+            CampaignMenuEntry.releaseStatics(7);
           }
           if (255 == param3) {
             stackIn_11_0 = !(MusicCrossfadeStream.field_z >= 13);
@@ -218,7 +218,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
           var4 = 1;
           var5 = 1;
         }
-        pd.field_a = ek.a(-125, var4 * var2, var2 * var5);
+        PasswordLengthSupport.field_a = ek.a(-125, var4 * var2, var2 * var5);
     }
 
     final static RgbSprite[] a(int param0, int param1, int param2, byte param3, int param4) {
@@ -235,7 +235,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param3 <= 33) {
-          CampaignMenuEntry.a(111);
+          CampaignMenuEntry.releaseStatics(111);
         }
         if (param0 != 0) {
           var6[4] = SocialListEntry.a(false, param0, 64);
@@ -248,7 +248,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
         if (obfuscationGuard < 114) {
           this.containsPoint(106, -67, 2);
         }
-        stackIn_8_0 = (db.a(true, this.left) <= screenX) && (db.a(true, this.width + this.left) >= screenX) && (screenY >= MatchConditionEntry.a(this.top, (byte) 94)) && (MatchConditionEntry.a(this.height + this.top, (byte) 94) >= screenY);
+        stackIn_8_0 = (IgnoreListLookupSupport.a(true, this.left) <= screenX) && (IgnoreListLookupSupport.a(true, this.width + this.left) >= screenX) && (screenY >= MatchConditionEntry.a(this.top, (byte) 94)) && (MatchConditionEntry.a(this.height + this.top, (byte) 94) >= screenY);
         return stackIn_8_0;
     }
 

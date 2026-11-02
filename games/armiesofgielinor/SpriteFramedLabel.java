@@ -14,7 +14,7 @@ final class SpriteFramedLabel {
     private int x;
 
     final void drawLabel(int obfuscationGuard) {
-        SoftwareRaster.f(this.x, this.y, this.width, this.height, 7829367);
+        SoftwareRaster.fillRectangle(this.x, this.y, this.width, this.height, 7829367);
         ReportAbuseDialog.drawNineSlice(this.frameSprites, this.height, this.x, (byte) -47, this.y, this.width);
         if (obfuscationGuard >= 24) {
           this.drawText(-11727);

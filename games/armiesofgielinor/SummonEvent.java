@@ -13,14 +13,14 @@ final class SummonEvent extends GameEvent {
     private int unitType;
     private boolean field_y;
 
-    final static rn a(String param0, int param1) {
+    final static ProceduralMapSupport a(String param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
-        rn stackIn_12_0 = null;
-        rn stackIn_14_0 = null;
+        ProceduralMapSupport stackIn_12_0 = null;
+        ProceduralMapSupport stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -38,10 +38,10 @@ final class SummonEvent extends GameEvent {
             }
           }
           if (param1 < -12) {
-            stackIn_14_0 = ov.field_h;
+            stackIn_14_0 = SpectateRoomRequestSupport.field_h;
             return stackIn_14_0;
           }
-          stackIn_12_0 = (rn) null;
+          stackIn_12_0 = (ProceduralMapSupport) null;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -69,7 +69,7 @@ final class SummonEvent extends GameEvent {
           if (obfuscationGuard != -26661) {
             this.unitType = -119;
           }
-          fl.recomputeClientStateChecksum(battlefield, obfuscationGuard + 26537);
+          WidgetTheme.recomputeClientStateChecksum(battlefield, obfuscationGuard + 26537);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mb.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

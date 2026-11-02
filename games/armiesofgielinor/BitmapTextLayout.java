@@ -185,7 +185,7 @@ final class BitmapTextLayout extends TextLayout {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kp.decodeSpriteSheetFromArchive(false, param3, param1, param0)) {
+          if (!MarkerSliderPainter.decodeSpriteSheetFromArchive(false, param3, param1, param0)) {
             stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }
@@ -276,9 +276,9 @@ final class BitmapTextLayout extends TextLayout {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_j = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return;
         }
         field_e = null;
@@ -351,31 +351,31 @@ final class BitmapTextLayout extends TextLayout {
     }
 
     final static void b(boolean param0) {
-        tq.field_c = SoftwareRaster.width;
+        NineSliceSpriteSupport.field_c = SoftwareRaster.width;
         CachedArchiveProvider.field_p = SoftwareRaster.height;
         AlphaWidgetContainer.d(false);
         SpellCastEvent.field_E.setLayout(-2 + NumericDateInputWidget.field_T.height - 40, (byte) -124, 0, NumericDateInputWidget.field_T.width, 0);
-        t.field_g.setBounds(jn.field_d, -20500, GlobalSpell.field_f.width, 0, 0);
+        ReloadPageSupport.field_g.setBounds(jn.field_d, -20500, GlobalSpell.field_f.width, 0, 0);
         int var1 = 2 + jn.field_d;
-        IconTextComponent.field_Kb.setBounds(GlobalSpell.field_f.height - (!fh.field_c ? 0 : var1), -20500, GlobalSpell.field_f.width, !fh.field_c ? 0 : var1, 0);
-        mj.a((byte) 91);
-        cp.field_d.setBounds(40, -20500, NumericDateInputWidget.field_T.width, NumericDateInputWidget.field_T.height - 40, 0);
-        ClientContextMenu.field_n.setBounds(30, -20500, ov.field_i.width, 0, 0);
-        LobbyPlayer.field_Lb.setBounds(-30 + (-40 + ov.field_i.height) - 2, -20500, ov.field_i.width, 30, 0);
+        IconTextComponent.field_Kb.setBounds(GlobalSpell.field_f.height - (!GrowableIntArray.field_c ? 0 : var1), -20500, GlobalSpell.field_f.width, !GrowableIntArray.field_c ? 0 : var1, 0);
+        AudioShutdownSupport.a((byte) 91);
+        EventPresenterFactory.field_d.setBounds(40, -20500, NumericDateInputWidget.field_T.width, NumericDateInputWidget.field_T.height - 40, 0);
+        ClientContextMenu.field_n.setBounds(30, -20500, SpectateRoomRequestSupport.field_i.width, 0, 0);
+        LobbyPlayer.field_Lb.setBounds(-30 + (-40 + SpectateRoomRequestSupport.field_i.height) - 2, -20500, SpectateRoomRequestSupport.field_i.width, 30, 0);
         SpriteDropdownControl.field_v.setBounds(30, -20500, 68, 5, 5);
         ek.field_c.setBounds(30, -20500, 78, 5, 75);
         CombatViewTransition.field_p.setBounds(30, -20500, 48, 5, 155);
         bs.field_a.setBounds(30, -20500, 48, 5, 205);
-        int var2 = !fh.field_c ? 200 : 250;
+        int var2 = !GrowableIntArray.field_c ? 200 : 250;
         SphinxActionRequest.field_A.setBounds(30, -20500, -var2 + 363, 5, var2 + 5);
-        ModalDialog.field_K.setBounds(30, -20500, -370 + (-5 + ov.field_i.width), 5, 370);
+        ModalDialog.field_K.setBounds(30, -20500, -370 + (-5 + SpectateRoomRequestSupport.field_i.width), 5, 370);
         CipherPacketBuffer.field_x.setLayout(5, param0, LobbyPlayer.field_Lb.width - 5 - 5, 2, jn.field_c, 37, -32 + (LobbyPlayer.field_Lb.height - 5 - 5));
-        int var3 = (ov.field_i.width + 2) / 2;
-        ViewportManager.field_d.setBounds(40, -20500, var3 - 2, ov.field_i.height - 40, 0);
-        if (!fh.field_c) {
+        int var3 = (SpectateRoomRequestSupport.field_i.width + 2) / 2;
+        ViewportManager.field_d.setBounds(40, -20500, var3 - 2, SpectateRoomRequestSupport.field_i.height - 40, 0);
+        if (!GrowableIntArray.field_c) {
           var3 = 0;
         }
-        VineGrowthAction.field_x.setBounds(40, -20500, ov.field_i.width - var3, -40 + ov.field_i.height, var3);
+        VineGrowthAction.field_x.setBounds(40, -20500, SpectateRoomRequestSupport.field_i.width - var3, -40 + SpectateRoomRequestSupport.field_i.height, var3);
     }
 
     final static void sendBirthDateForChat(int day, int monthIndex, int year, int obfuscationGuard) {

@@ -25,8 +25,8 @@ final class QuickChatCommandDefinition {
         this.commandId = commandId;
     }
 
-    public static void a(byte param0) {
-        if (param0 == -36) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard == -36) {
           field_a = null;
           field_d = null;
           return;
@@ -53,13 +53,13 @@ final class QuickChatCommandDefinition {
           if (channelId == 1) {
             channelId = 0;
           }
-          rs.outgoingChatChannel = channelId;
+          PowerOfTwoSupport.outgoingChatChannel = channelId;
           RegistrationAgreementPane.chatRecipientName = recipientName;
           recipientCharacters = (CharSequence) ((Object) recipientName);
           wm.chatRecipientNameKey = AccountNameNormalizer.normalize(recipientCharacters, false);
-          dj.chatRecipientAccountId = accountId;
-          responseMenu = RasterState.buildQuickChatResponseMenu(-11, AccountNameAvailabilityValidator.field_n, responsePhraseIds, vs.field_g, hf.field_f);
-          vs.showQuickChatMenu(256, responseMenu);
+          TextSplitSupport.chatRecipientAccountId = accountId;
+          responseMenu = RasterState.buildQuickChatResponseMenu(-11, AccountNameAvailabilityValidator.field_n, responsePhraseIds, QuickChatMenuDisplaySupport.field_g, ClientStateChecksumSupport.field_f);
+          QuickChatMenuDisplaySupport.showQuickChatMenu(256, responseMenu);
           if (obfuscationGuard > 77) {
             return true;
           }

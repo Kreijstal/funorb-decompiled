@@ -133,11 +133,11 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         LobbyPlayer.d((byte) -24);
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_lb = null;
         modelProjectionCamera = null;
         field_rb = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_kb = null;
@@ -181,17 +181,17 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           null == UnitCycler.field_g) {
           var3 = 0;
         }
-        if (0 == rs.outgoingChatChannel &&
+        if (0 == PowerOfTwoSupport.outgoingChatChannel &&
           null != NumericDateInputWidget.roomSetup) {
           var3 = 0;
         }
-        if (rs.outgoingChatChannel == 2 &&
+        if (PowerOfTwoSupport.outgoingChatChannel == 2 &&
           !ToggleWidget.isChatRecipientAvailable(6)) {
           var3 = 0;
         }
-        if (rs.keyCode == 84) {
+        if (PowerOfTwoSupport.keyCode == 84) {
           if (var3 == 0) {
-            if (0 == rs.outgoingChatChannel) {
+            if (0 == PowerOfTwoSupport.outgoingChatChannel) {
               return true;
             }
             FullscreenFocusCanvas.clearChatText(8445);
@@ -212,19 +212,19 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             FullscreenFocusCanvas.clearChatText(8445);
             return true;
           }
-          var5 = rs.outgoingChatChannel;
+          var5 = PowerOfTwoSupport.outgoingChatChannel;
           if (var5 == 0 &&
             null != ToggleWidget.currentRoom) {
             var5 = 1;
           }
-          if (kp.getChatFilter(var5, param1 ^ -97) == 2) {
+          if (MarkerSliderPainter.getChatFilter(var5, param1 ^ -97) == 2) {
             FullscreenStatusDialog.setChatFilter(1, false, var5, param2);
           }
-          it.writeChatMessage(-1, -83, rs.outgoingChatChannel, RegistrationAgreementPane.chatRecipientName, param0, var4_ref_String);
+          ChatMessageWriteSupport.writeChatMessage(-1, -83, PowerOfTwoSupport.outgoingChatChannel, RegistrationAgreementPane.chatRecipientName, param0, var4_ref_String);
           FullscreenFocusCanvas.clearChatText(8445);
           return true;
         }
-        if (85 == rs.keyCode) {
+        if (85 == PowerOfTwoSupport.keyCode) {
           if (var3 == 0) {
             return true;
           }
@@ -251,10 +251,10 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         var17 = mv.localAccountName;
         var16 = nt.a(param1 - 47, var17);
         var18 = var16;
-        if (rs.outgoingChatChannel == 2) {
+        if (PowerOfTwoSupport.outgoingChatChannel == 2) {
           var56 = (CharSequence) ((Object) RegistrationAgreementPane.chatRecipientName);
-          var20 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{ug.a(16, var56)});
-          var8 = EmailCheckResult.a(4800, ov.field_l, new String[]{var16});
+          var20 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{ProxyAuthenticationRequiredException.a(16, var56)});
+          var8 = EmailCheckResult.a(4800, SpectateRoomRequestSupport.field_l, new String[]{var16});
           var9 = IntrusiveNode.field_e.textWidth(var20);
           var10 = IntrusiveNode.field_e.textWidth(var8);
           if (var9 > var10) {
@@ -272,7 +272,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           return true;
         }
         var7 = "";
-        if (0 != rs.outgoingChatChannel) {
+        if (0 != PowerOfTwoSupport.outgoingChatChannel) {
           var51 = var7 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var51);
           if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
@@ -333,7 +333,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             ActionSpell.a(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
           }
           if (obfuscationGuard != 11) {
-            ProgressMessageDialog.n(46);
+            ProgressMessageDialog.releaseStatics(46);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -386,7 +386,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           messagePane = pane;
           if (5 == statusCode) {
             pane.addActionButton(QuickChatCommandDefinition.field_d, 11, 1);
-            pane.addActionButton(dt.field_c, 17, obfuscationGuard ^ 99);
+            pane.addActionButton(DateValiditySupport.field_c, 17, obfuscationGuard ^ 99);
           } else {
             if (statusCode != 256) {
               paneAlias = pane;

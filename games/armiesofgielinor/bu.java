@@ -28,7 +28,7 @@ final class bu {
           param3.writeByte(param2 - 1, param1.immobilizedTurns);
           param3.writeByte(1, param1.movementFlags);
           if ((4 & param1.movementFlags) != 0) {
-            param3.a(param1.displayName, 413740432);
+            param3.writeNullCircumfixedString(param1.displayName, 413740432);
           }
           var5 = 0;
           if (0 != param1.tag) {
@@ -66,11 +66,11 @@ final class bu {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         storedQuicksave = null;
         field_c = null;
-        if (param0 >= -76) {
+        if (obfuscationGuard >= -76) {
           field_a = (ScrollContainer) null;
         }
     }

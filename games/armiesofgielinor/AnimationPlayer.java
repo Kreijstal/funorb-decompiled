@@ -17,11 +17,11 @@ final class AnimationPlayer {
     private AnimationSequence sequence;
     static byte[][] decodedSpriteIndices;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_n = null;
         delayedPackets = null;
         decodedSpriteIndices = (byte[][]) null;
-        int var1 = 20 % ((param0 + 44) / 51);
+        int var1 = 20 % ((obfuscationGuard + 44) / 51);
     }
 
     final boolean advance(int obfuscationGuard) {

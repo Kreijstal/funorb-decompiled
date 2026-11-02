@@ -23,14 +23,14 @@ final class DefeatPlayerConsoleCommand extends ConsoleCommand {
         int var1 = SummonRequest.a(true);
         int var2Lifetime1;
         if (param0 == 1976460609) {
-          var2 = so.a(param0 - 1976435396);
-          sg.field_c.a((byte) -111, var2 + (ov.field_b << 1), BattlefieldTheme.field_f - b.field_k, var1 + (b.field_k << 1), -ov.field_b + InstructionsPanel.field_r);
+          var2 = FixedSquareRootSupport.a(param0 - 1976435396);
+          sg.field_c.drawFrame((byte) -111, var2 + (SpectateRoomRequestSupport.field_b << 1), BattlefieldTheme.field_f - SpriteSheetDecoder.field_k, var1 + (SpriteSheetDecoder.field_k << 1), -SpectateRoomRequestSupport.field_b + InstructionsPanel.field_r);
           SpellCastEvent.h(15);
           return;
         }
-        DefeatPlayerConsoleCommand.g(37);
-        var2Lifetime1 = so.a(param0 - 1976435396);
-        sg.field_c.a((byte) -111, var2Lifetime1 + (ov.field_b << 1), BattlefieldTheme.field_f - b.field_k, var1 + (b.field_k << 1), -ov.field_b + InstructionsPanel.field_r);
+        DefeatPlayerConsoleCommand.releaseStatics(37);
+        var2Lifetime1 = FixedSquareRootSupport.a(param0 - 1976435396);
+        sg.field_c.drawFrame((byte) -111, var2Lifetime1 + (SpectateRoomRequestSupport.field_b << 1), BattlefieldTheme.field_f - SpriteSheetDecoder.field_k, var1 + (SpriteSheetDecoder.field_k << 1), -SpectateRoomRequestSupport.field_b + InstructionsPanel.field_r);
         SpellCastEvent.h(15);
     }
 
@@ -63,12 +63,12 @@ final class DefeatPlayerConsoleCommand extends ConsoleCommand {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_H = null;
         field_G = null;
         chatHistory = null;
-        if (param0 != 1746174305) {
-          DefeatPlayerConsoleCommand.g(-72);
+        if (obfuscationGuard != 1746174305) {
+          DefeatPlayerConsoleCommand.releaseStatics(-72);
         }
     }
 

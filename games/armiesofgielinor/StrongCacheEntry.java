@@ -16,12 +16,12 @@ final class StrongCacheEntry extends CacheEntry {
         return false;
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_A = null;
         field_D = null;
         field_C = null;
-        if (!param0) {
-          StrongCacheEntry.c(true);
+        if (!obfuscationGuard) {
+          StrongCacheEntry.releaseStatics(true);
         }
     }
 

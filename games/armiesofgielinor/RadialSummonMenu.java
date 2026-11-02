@@ -156,7 +156,7 @@ final class RadialSummonMenu {
     }
 
     final static void a(boolean param0, boolean param1) {
-        DebugConsole.field_w = !param1 ? new CommunityTabGroup(GridWidgetContainer.field_O, eb.field_c) : new CommunityTabGroup(TeleportAction.field_x, AccountNameAvailabilityValidator.field_l);
+        DebugConsole.field_w = !param1 ? new CommunityTabGroup(GridWidgetContainer.field_O, BitCountSupport.field_c) : new CommunityTabGroup(TeleportAction.field_x, AccountNameAvailabilityValidator.field_l);
         if (param0) {
           return;
         }
@@ -165,16 +165,16 @@ final class RadialSummonMenu {
         BitmapTextWidgetPainter.field_a.addChild(SocialListPanel.field_Lb, 97);
         LabeledWidgetContainer.field_R = new ClientUiComponent(0L, ArchiveIndex.field_b);
         LoginForm.field_K = new ClientUiComponent(0L, (ClientUiComponent) null);
-        LabeledWidgetContainer.field_R.addChild(bk.field_f, 54);
+        LabeledWidgetContainer.field_R.addChild(MusicTrackSelectionSupport.field_f, 54);
         LabeledWidgetContainer.field_R.addChild(LoginForm.field_K, 70);
         LoginForm.field_K.addChild(IconTextComponent.field_Kb, 112);
         LoginForm.field_K.addChild(ConsolePanel.field_m, 74);
         ClientUiComponent.a(27, param1);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_a = null;
-        if (param0 != -122) {
+        if (obfuscationGuard != -122) {
           field_a = (String) null;
         }
     }

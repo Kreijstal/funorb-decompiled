@@ -265,12 +265,12 @@ final class SpriteDropdownControl extends SpriteControlNode {
           synchronized (listenerLock) {
             SummonAction.keyEventReadIndex = FullscreenFocusCanvas.keyEventFrameEndIndex;
             if (!obfuscationGuard) {
-              SpriteDropdownControl.d((byte) 47);
+              SpriteDropdownControl.releaseStatics((byte) 47);
             }
-            fc.keyboardIdleTicks = fc.keyboardIdleTicks + 1;
+            EmptyWidgetPainter.keyboardIdleTicks = EmptyWidgetPainter.keyboardIdleTicks + 1;
             if (us.keyStateWriteIndex < 0) {
               for (keyEvent = 0; keyEvent < 112; keyEvent++) {
-                br.heldKeys[keyEvent] = false;
+                CampaignLookupSupport.heldKeys[keyEvent] = false;
               }
               us.keyStateWriteIndex = cc.keyStateReadIndex;
             } else {
@@ -278,10 +278,10 @@ final class SpriteDropdownControl extends SpriteControlNode {
                 keyEvent = SphinxActionRequest.keyStateEvents[cc.keyStateReadIndex];
                 cc.keyStateReadIndex = 127 & 1 + cc.keyStateReadIndex;
                 if (0 > keyEvent) {
-                  br.heldKeys[~keyEvent] = false;
+                  CampaignLookupSupport.heldKeys[~keyEvent] = false;
                   continue;
                 }
-                br.heldKeys[keyEvent] = true;
+                CampaignLookupSupport.heldKeys[keyEvent] = true;
               }
             }
             FullscreenFocusCanvas.keyEventFrameEndIndex = ProgressDialog.keyEventWriteIndex;
@@ -294,9 +294,9 @@ final class SpriteDropdownControl extends SpriteControlNode {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         equipmentTutorialMessages = null;
-        if (param0 != -11) {
+        if (obfuscationGuard != -11) {
           return;
         }
         field_J = null;
@@ -360,7 +360,7 @@ final class SpriteDropdownControl extends SpriteControlNode {
     }
 
     private final void drawBackground(boolean obfuscationGuard) {
-        SoftwareRaster.f(this.x, this.y, this.width, this.height, 7829367);
+        SoftwareRaster.fillRectangle(this.x, this.y, this.width, this.height, 7829367);
         ReportAbuseDialog.drawNineSlice(this.frameSprites, this.height, this.x, (byte) -47, this.y, this.width);
         if (obfuscationGuard) {
           this.colours = (int[]) null;

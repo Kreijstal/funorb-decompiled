@@ -15,7 +15,7 @@ final class SoftwareRaster {
     static int clipRight;
     static int[] scanlineMaskStarts;
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleBlended(int x, int y, int boxWidth, int boxHeight, int colour, int alpha) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$0 = 0;
@@ -23,31 +23,31 @@ final class SoftwareRaster {
         int var7;
         int var8;
         int var11;
-        if (param0 < clipLeft) {
-          param2 = param2 - (clipLeft - param0);
-          param0 = clipLeft;
+        if (x < clipLeft) {
+          boxWidth = boxWidth - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param1 < clipTop) {
-          param3 = param3 - (clipTop - param1);
-          param1 = clipTop;
+        if (y < clipTop) {
+          boxHeight = boxHeight - (clipTop - y);
+          y = clipTop;
         }
-        if (param0 + param2 > clipRight) {
-          param2 = clipRight - param0;
+        if (x + boxWidth > clipRight) {
+          boxWidth = clipRight - x;
         }
-        if (param1 + param3 > clipBottom) {
-          param3 = clipBottom - param1;
+        if (y + boxHeight > clipBottom) {
+          boxHeight = clipBottom - y;
         }
-        param4 = ((param4 & 16711935) * param5 >> 8 & 16711935) + ((param4 & 65280) * param5 >> 8 & 65280);
-        var6 = 256 - param5;
-        var7 = width - param2;
-        var8 = param0 + param1 * width;
-        for (var9 = 0; var9 < param3; var9++) {
-          for (var10 = -param2; var10 < 0; var10++) {
+        colour = ((colour & 16711935) * alpha >> 8 & 16711935) + ((colour & 65280) * alpha >> 8 & 65280);
+        var6 = 256 - alpha;
+        var7 = width - boxWidth;
+        var8 = x + y * width;
+        for (var9 = 0; var9 < boxHeight; var9++) {
+          for (var10 = -boxWidth; var10 < 0; var10++) {
             var11 = pixels[var8];
             var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & 65280) * var6 >> 8 & 65280);
             incrementValue$0 = var8;
             var8++;
-            pixels[incrementValue$0] = param4 + var11;
+            pixels[incrementValue$0] = colour + var11;
           }
           var8 = var8 + var7;
         }
@@ -70,10 +70,10 @@ final class SoftwareRaster {
         clipTop = top;
         clipRight = right;
         clipBottom = bottom;
-        SoftwareRaster.c();
+        SoftwareRaster.clearScanlineMasks();
     }
 
-    private final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final static void fillRoundedRectangle(int x, int y, int boxWidth, int boxHeight, int cornerRadius, int colour) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int incrementValue$6 = 0;
@@ -111,26 +111,26 @@ final class SoftwareRaster {
         int var19Lifetime2;
         int var20Lifetime1;
         int var20Lifetime2;
-        if (param4 == 0) {
-          SoftwareRaster.f(param0, param1, param2, param3, param5);
+        if (cornerRadius == 0) {
+          SoftwareRaster.fillRectangle(x, y, boxWidth, boxHeight, colour);
           return;
         }
-        if (param4 < 0) {
-          param4 = -param4;
+        if (cornerRadius < 0) {
+          cornerRadius = -cornerRadius;
         }
-        var6 = param0 + param4;
-        var7 = param1 + param4;
-        var8 = param1;
+        var6 = x + cornerRadius;
+        var7 = y + cornerRadius;
+        var8 = y;
         if (var8 < clipTop) {
           var8 = clipTop;
         }
-        var9 = param1 + param3;
+        var9 = y + boxHeight;
         if (var9 > clipBottom) {
           var9 = clipBottom;
         }
-        var10 = param2 - param4 - param4 - 1;
+        var10 = boxWidth - cornerRadius - cornerRadius - 1;
         var11 = var8;
-        var12 = param4 * param4;
+        var12 = cornerRadius * cornerRadius;
         var13 = 0;
         var14 = var7 - var11;
         var15 = var14 * var14;
@@ -154,7 +154,7 @@ final class SoftwareRaster {
               for (var20 = var17; var20 < var18; var20++) {
                 incrementValue$5 = var19;
                 var19++;
-                pixels[incrementValue$5] = param5;
+                pixels[incrementValue$5] = colour;
               }
               var11++;
               incrementValue$4 = var14;
@@ -170,17 +170,17 @@ final class SoftwareRaster {
           }
         }
         var14Lifetime1 = var11 - var7;
-        var17Lifetime1 = param0;
+        var17Lifetime1 = x;
         if (var17Lifetime1 < clipLeft) {
           var17Lifetime1 = clipLeft;
         }
-        var18Lifetime1 = param0 + param2;
+        var18Lifetime1 = x + boxWidth;
         if (var18Lifetime1 > clipRight) {
           var18Lifetime1 = clipRight;
         }
         var19Lifetime1 = var17Lifetime1 + var11 * width;
         var20Lifetime1 = width + var17Lifetime1 - var18Lifetime1;
-        var21 = param1 + param3 - param4 - 1;
+        var21 = y + boxHeight - cornerRadius - 1;
         if (var21 > clipBottom) {
           var21 = clipBottom;
         }
@@ -188,13 +188,13 @@ final class SoftwareRaster {
           for (var22 = var17Lifetime1; var22 < var18Lifetime1; var22++) {
             incrementValue$3 = var19Lifetime1;
             var19Lifetime1++;
-            pixels[incrementValue$3] = param5;
+            pixels[incrementValue$3] = colour;
           }
           var11++;
           var19Lifetime1 = var19Lifetime1 + var20Lifetime1;
         }
         var14Lifetime2 = 0;
-        var13Lifetime1 = param4;
+        var13Lifetime1 = cornerRadius;
         var16Lifetime1 = var14Lifetime2 * var14Lifetime2 + var12;
         var15Lifetime1 = var16Lifetime1 - var13Lifetime1;
         var16Lifetime1 = var16Lifetime1 - var14Lifetime2;
@@ -221,7 +221,7 @@ final class SoftwareRaster {
           for (var20Lifetime2 = var17Lifetime2; var20Lifetime2 <= var18Lifetime2; var20Lifetime2++) {
             incrementValue$2 = var19Lifetime2;
             var19Lifetime2++;
-            pixels[incrementValue$2] = param5;
+            pixels[incrementValue$2] = colour;
           }
           var11++;
           var16Lifetime1 = var16Lifetime1 + (var14Lifetime2 + var14Lifetime2);
@@ -232,66 +232,66 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void g(int param0, int param1, int param2, int param3) {
+    final static void addPixel(int x, int y, int colour, int intensity) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var5Lifetime1;
         int var5Lifetime2;
-        if (param0 >= clipLeft) {
-          if (param1 < clipTop ||
-            param0 >= clipRight ||
-            param1 >= clipBottom) {
+        if (x >= clipLeft) {
+          if (y < clipTop ||
+            x >= clipRight ||
+            y >= clipBottom) {
             return;
           }
-          var4 = param0 + param1 * width;
-          var5 = (param2 & 16711935) * param3;
-          param2 = (var5 & -16711936) + (param2 * param3 - var5 & 16711680) >>> 8;
+          var4 = x + y * width;
+          var5 = (colour & 16711935) * intensity;
+          colour = (var5 & -16711936) + (colour * intensity - var5 & 16711680) >>> 8;
           var5Lifetime1 = pixels[var4];
-          var6 = param2 + var5Lifetime1;
-          param2 = (param2 & 16711935) + (var5Lifetime1 & 16711935);
-          var5Lifetime2 = (param2 & 16777472) + (var6 - param2 & 65536);
+          var6 = colour + var5Lifetime1;
+          colour = (colour & 16711935) + (var5Lifetime1 & 16711935);
+          var5Lifetime2 = (colour & 16777472) + (var6 - colour & 65536);
           pixels[var4] = var6 - var5Lifetime2 | var5Lifetime2 - (var5Lifetime2 >>> 8);
           return;
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3) {
-        if (param0 < clipLeft) {
-          param2 = param2 - (clipLeft - param0);
-          param0 = clipLeft;
+    final static void darkenRectangle(int x, int y, int boxWidth, int boxHeight) {
+        if (x < clipLeft) {
+          boxWidth = boxWidth - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param1 < clipTop) {
-          param3 = param3 - (clipTop - param1);
-          param1 = clipTop;
+        if (y < clipTop) {
+          boxHeight = boxHeight - (clipTop - y);
+          y = clipTop;
         }
-        if (param0 + param2 > clipRight) {
-          param2 = clipRight - param0;
+        if (x + boxWidth > clipRight) {
+          boxWidth = clipRight - x;
         }
-        if (param1 + param3 > clipBottom) {
-          param3 = clipBottom - param1;
+        if (y + boxHeight > clipBottom) {
+          boxHeight = clipBottom - y;
         }
-        int var4 = width - param2;
-        int var5 = param0 + param1 * width;
-        SoftwareRaster.a(var5, pixels, 0, param2, -param3, var4);
+        int var4 = width - boxWidth;
+        int var5 = x + y * width;
+        SoftwareRaster.halveRows(var5, pixels, 0, boxWidth, -boxHeight, var4);
     }
 
-    final static void a() {
+    final static void resetClip() {
         clipLeft = 0;
         clipTop = 0;
         clipRight = width;
         clipBottom = height;
-        SoftwareRaster.c();
+        SoftwareRaster.clearScanlineMasks();
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
-        SoftwareRaster.e(param0, param1, param2, param4);
-        SoftwareRaster.e(param0, param1 + param3 - 1, param2, param4);
-        SoftwareRaster.h(param0, param1, param3, param4);
-        SoftwareRaster.h(param0 + param2 - 1, param1, param3, param4);
+    final static void drawRectangleOutline(int x, int y, int boxWidth, int boxHeight, int colour) {
+        SoftwareRaster.drawHorizontalLine(x, y, boxWidth, colour);
+        SoftwareRaster.drawHorizontalLine(x, y + boxHeight - 1, boxWidth, colour);
+        SoftwareRaster.drawVerticalLine(x, y, boxHeight, colour);
+        SoftwareRaster.drawVerticalLine(x + boxWidth - 1, y, boxHeight, colour);
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void grayscaleRectangle(int x, int y, int boxWidth, int boxHeight) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -300,27 +300,27 @@ final class SoftwareRaster {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$0 = 0;
-        if (param0 < clipLeft) {
-          param2 = param2 - (clipLeft - param0);
-          param0 = clipLeft;
+        if (x < clipLeft) {
+          boxWidth = boxWidth - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param0 + param2 > clipRight) {
-          param2 = clipRight - param0;
+        if (x + boxWidth > clipRight) {
+          boxWidth = clipRight - x;
         }
-        if (param1 < clipTop) {
-          param3 = param3 - (clipTop - param1);
-          param1 = clipTop;
+        if (y < clipTop) {
+          boxHeight = boxHeight - (clipTop - y);
+          y = clipTop;
         }
-        if (param1 + param3 > clipBottom) {
-          param3 = clipBottom - param1;
+        if (y + boxHeight > clipBottom) {
+          boxHeight = clipBottom - y;
         }
-        int var4 = param0 + param1 * width;
-        if (param2 > 0) {
-          if (param3 <= 0) {
+        int var4 = x + y * width;
+        if (boxWidth > 0) {
+          if (boxHeight <= 0) {
             return;
           }
-          for (var5 = 0; var5 < param3; var5++) {
-            for (var6 = 0; var6 < param2; var6++) {
+          for (var5 = 0; var5 < boxHeight; var5++) {
+            for (var6 = 0; var6 < boxWidth; var6++) {
               var7 = pixels[var4];
               var8 = var7 >> 15 & 510;
               var9 = var7 >> 8 & 255;
@@ -330,18 +330,18 @@ final class SoftwareRaster {
               var4++;
               pixels[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
             }
-            var4 = var4 + (width - param2);
+            var4 = var4 + (width - boxWidth);
           }
           return;
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4) {
-        int var5 = param2 * param2;
-        int var6 = param0 - param2 >> 4;
-        int var7 = param0 + param2 + 15 >> 4;
-        int var8 = param1 - param2 >> 4;
-        int var9 = param1 + param2 + 15 >> 4;
+    final static void fillRadialPaletteCircle(int centerX16, int centerY16, int radius16, int paletteScale, int[] palette) {
+        int var5 = radius16 * radius16;
+        int var6 = centerX16 - radius16 >> 4;
+        int var7 = centerX16 + radius16 + 15 >> 4;
+        int var8 = centerY16 - radius16 >> 4;
+        int var9 = centerY16 + radius16 + 15 >> 4;
         if (var6 < clipLeft) {
           var6 = clipLeft;
         }
@@ -354,30 +354,30 @@ final class SoftwareRaster {
         if (var9 > clipBottom) {
           var9 = clipBottom;
         }
-        int var10 = (var6 << 4) - param0;
+        int var10 = (var6 << 4) - centerX16;
         var10 = var10 * var10;
-        int var11 = (var6 + 1 << 4) - param0;
+        int var11 = (var6 + 1 << 4) - centerX16;
         var11 = var11 * var11;
-        int var12 = (var6 + 2 << 4) - param0;
+        int var12 = (var6 + 2 << 4) - centerX16;
         var12 = var12 * var12;
         int var13 = var11 - var10;
         int var14 = var12 - var11;
         int var15 = var14 - var13;
-        int var16 = (var8 << 4) - param1;
+        int var16 = (var8 << 4) - centerY16;
         var16 = var16 * var16;
-        int var17 = (var8 + 1 << 4) - param1;
+        int var17 = (var8 + 1 << 4) - centerY16;
         var17 = var17 * var17;
-        int var18 = (var8 + 2 << 4) - param1;
+        int var18 = (var8 + 2 << 4) - centerY16;
         var18 = var18 * var18;
         int var19 = var17 - var16;
         int var20 = var18 - var17;
         int var21 = var20 - var19;
         int var22 = var6 + var8 * width;
         int var23 = width + var6 - var7;
-        SoftwareRaster.a(0, 0, 0, 0, 0, var15, var5, var22, pixels, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        SoftwareRaster.a(0, 0, 0, 0, 0, var15, var5, var22, pixels, paletteScale, palette, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
-    private final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5) {
+    private final static void halveRows(int param0, int[] param1, int param2, int param3, int param4, int param5) {
         while (param4 < 0) {
           param2 = param0 + param3 - 7;
           while (param0 < param2) {
@@ -408,7 +408,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawLineBlended(int x1, int y1, int x2, int y2, int colour, int alpha) {
         int var6;
         int var7;
         int var8;
@@ -428,104 +428,104 @@ final class SoftwareRaster {
         int var15Lifetime1;
         int var16Lifetime1;
         int var17Lifetime1;
-        param2 = param2 - param0;
-        param3 = param3 - param1;
-        if (param3 == 0) {
-          if (param2 < 0) {
-            SoftwareRaster.e(param0 + param2 + 1, param1, -param2, param4, param5);
+        x2 = x2 - x1;
+        y2 = y2 - y1;
+        if (y2 == 0) {
+          if (x2 < 0) {
+            SoftwareRaster.drawHorizontalLineBlended(x1 + x2 + 1, y1, -x2, colour, alpha);
           } else {
-            SoftwareRaster.e(param0, param1, param2, param4, param5);
+            SoftwareRaster.drawHorizontalLineBlended(x1, y1, x2, colour, alpha);
           }
           return;
         }
-        if (param2 == 0) {
-          if (param3 < 0) {
-            SoftwareRaster.d(param0, param1 + param3 + 1, -param3, param4, param5);
+        if (x2 == 0) {
+          if (y2 < 0) {
+            SoftwareRaster.drawVerticalLineBlended(x1, y1 + y2 + 1, -y2, colour, alpha);
           } else {
-            SoftwareRaster.d(param0, param1, param3, param4, param5);
+            SoftwareRaster.drawVerticalLineBlended(x1, y1, y2, colour, alpha);
           }
           return;
         }
         var6 = 0;
-        if (param2 + param3 < 0) {
-          param0 = param0 + param2;
-          param2 = -param2;
-          param1 = param1 + param3;
-          param3 = -param3;
+        if (x2 + y2 < 0) {
+          x1 = x1 + x2;
+          x2 = -x2;
+          y1 = y1 + y2;
+          y2 = -y2;
           var6 = 1;
         }
-        var7 = 256 - param5;
-        var8 = (param4 >> 16 & 255) * param5;
-        var9 = (param4 >> 8 & 255) * param5;
-        var10 = (param4 & 255) * param5;
-        if (param2 <= param3) {
-          param0 = param0 << 16;
-          param0 = param0 + 32768;
-          param2 = param2 << 16;
-          var11 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
-          param3 = param3 + param1;
+        var7 = 256 - alpha;
+        var8 = (colour >> 16 & 255) * alpha;
+        var9 = (colour >> 8 & 255) * alpha;
+        var10 = (colour & 255) * alpha;
+        if (x2 <= y2) {
+          x1 = x1 << 16;
+          x1 = x1 + 32768;
+          x2 = x2 << 16;
+          var11 = (int)Math.floor((double)x2 / (double)y2 + 0.5);
+          y2 = y2 + y1;
           if (var6 != 0) {
-            param0 = param0 + var11;
-            param1++;
+            x1 = x1 + var11;
+            y1++;
           }
-          if (param1 < clipTop) {
-            param0 = param0 + var11 * (clipTop - param1);
-            param1 = clipTop;
+          if (y1 < clipTop) {
+            x1 = x1 + var11 * (clipTop - y1);
+            y1 = clipTop;
           }
-          if (param3 >= clipBottom) {
-            param3 = clipBottom - 1;
+          if (y2 >= clipBottom) {
+            y2 = clipBottom - 1;
           }
           if (var6 == 0) {
-            param3--;
+            y2--;
           }
-          while (param1 <= param3) {
-            var12 = param0 >> 16;
+          while (y1 <= y2) {
+            var12 = x1 >> 16;
             if (var12 >= clipLeft &&
               var12 < clipRight) {
-              var13 = var12 + param1 * width;
+              var13 = var12 + y1 * width;
               var14 = (pixels[var13] >> 16 & 255) * var7;
               var15 = (pixels[var13] >> 8 & 255) * var7;
               var16 = (pixels[var13] & 255) * var7;
               var17 = (var8 + var14 >> 8 << 16) + (var9 + var15 >> 8 << 8) + (var10 + var16 >> 8);
               pixels[var13] = var17;
             }
-            param0 = param0 + var11;
-            param1++;
+            x1 = x1 + var11;
+            y1++;
           }
           return;
         }
-        param1 = param1 << 16;
-        param1 = param1 + 32768;
-        param3 = param3 << 16;
-        var11Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
-        param2 = param2 + param0;
+        y1 = y1 << 16;
+        y1 = y1 + 32768;
+        y2 = y2 << 16;
+        var11Lifetime1 = (int)Math.floor((double)y2 / (double)x2 + 0.5);
+        x2 = x2 + x1;
         if (var6 != 0) {
-          param1 = param1 + var11Lifetime1;
-          param0++;
+          y1 = y1 + var11Lifetime1;
+          x1++;
         }
-        if (param0 < clipLeft) {
-          param1 = param1 + var11Lifetime1 * (clipLeft - param0);
-          param0 = clipLeft;
+        if (x1 < clipLeft) {
+          y1 = y1 + var11Lifetime1 * (clipLeft - x1);
+          x1 = clipLeft;
         }
-        if (param2 >= clipRight) {
-          param2 = clipRight - 1;
+        if (x2 >= clipRight) {
+          x2 = clipRight - 1;
         }
         if (var6 == 0) {
-          param2--;
+          x2--;
         }
-        while (param0 <= param2) {
-          var12Lifetime1 = param1 >> 16;
+        while (x1 <= x2) {
+          var12Lifetime1 = y1 >> 16;
           if (var12Lifetime1 >= clipTop &&
             var12Lifetime1 < clipBottom) {
-            var13Lifetime1 = param0 + var12Lifetime1 * width;
+            var13Lifetime1 = x1 + var12Lifetime1 * width;
             var14Lifetime1 = (pixels[var13Lifetime1] >> 16 & 255) * var7;
             var15Lifetime1 = (pixels[var13Lifetime1] >> 8 & 255) * var7;
             var16Lifetime1 = (pixels[var13Lifetime1] & 255) * var7;
             var17Lifetime1 = (var8 + var14Lifetime1 >> 8 << 16) + (var9 + var15Lifetime1 >> 8 << 8) + (var10 + var16Lifetime1 >> 8);
             pixels[var13Lifetime1] = var17Lifetime1;
           }
-          param1 = param1 + var11Lifetime1;
-          param0++;
+          y1 = y1 + var11Lifetime1;
+          x1++;
         }
         return;
     }
@@ -604,9 +604,9 @@ final class SoftwareRaster {
         var29 = field_h;
         var26 = var29;
         var11 = var26;
-        vm.a(var27, 0, param8);
-        vm.a(var28, 0, param8);
-        vm.a(var29, 0, param8);
+        ArrayBlockSupport.clearInts(var27, 0, param8);
+        ArrayBlockSupport.clearInts(var28, 0, param8);
+        ArrayBlockSupport.clearInts(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {
@@ -776,7 +776,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawHorizontalLineBlended(int x, int y, int length, int colour, int alpha) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -788,23 +788,23 @@ final class SoftwareRaster {
         int var11 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
-        if (param1 >= clipTop) {
-          if (param1 >= clipBottom) {
+        if (y >= clipTop) {
+          if (y >= clipBottom) {
             return;
           }
-          if (param0 < clipLeft) {
-            param2 = param2 - (clipLeft - param0);
-            param0 = clipLeft;
+          if (x < clipLeft) {
+            length = length - (clipLeft - x);
+            x = clipLeft;
           }
-          if (param0 + param2 > clipRight) {
-            param2 = clipRight - param0;
+          if (x + length > clipRight) {
+            length = clipRight - x;
           }
-          var5 = 256 - param4;
-          var6 = (param3 >> 16 & 255) * param4;
-          var7 = (param3 >> 8 & 255) * param4;
-          var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * width;
-          for (var13 = 0; var13 < param2; var13++) {
+          var5 = 256 - alpha;
+          var6 = (colour >> 16 & 255) * alpha;
+          var7 = (colour >> 8 & 255) * alpha;
+          var8 = (colour & 255) * alpha;
+          var12 = x + y * width;
+          for (var13 = 0; var13 < length; var13++) {
             var9 = (pixels[var12] >> 16 & 255) * var5;
             var10 = (pixels[var12] >> 8 & 255) * var5;
             var11 = (pixels[var12] & 255) * var5;
@@ -817,19 +817,19 @@ final class SoftwareRaster {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        if (param0 >= clipLeft) {
-          if (param1 < clipTop ||
-            param0 >= clipRight ||
-            param1 >= clipBottom) {
+    final static void setPixel(int x, int y, int colour) {
+        if (x >= clipLeft) {
+          if (y < clipTop ||
+            x >= clipRight ||
+            y >= clipBottom) {
             return;
           }
-          pixels[param0 + param1 * width] = param2;
+          pixels[x + y * width] = colour;
           return;
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void fillCircle(int centerX, int centerY, int radius, int colour) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -856,39 +856,39 @@ final class SoftwareRaster {
         int var13Lifetime1;
         int var14Lifetime1;
         int var15Lifetime1;
-        if (param2 == 0) {
-          SoftwareRaster.a(param0, param1, param3);
+        if (radius == 0) {
+          SoftwareRaster.setPixel(centerX, centerY, colour);
           return;
         }
-        if (param2 < 0) {
-          param2 = -param2;
+        if (radius < 0) {
+          radius = -radius;
         }
-        var4 = param1 - param2;
+        var4 = centerY - radius;
         if (var4 < clipTop) {
           var4 = clipTop;
         }
-        var5 = param1 + param2 + 1;
+        var5 = centerY + radius + 1;
         if (var5 > clipBottom) {
           var5 = clipBottom;
         }
         var6 = var4;
-        var7 = param2 * param2;
+        var7 = radius * radius;
         var8 = 0;
-        var9 = param1 - var6;
+        var9 = centerY - var6;
         var10 = var9 * var9;
         var11 = var10 - var9;
-        if (param1 > var5) {
-          param1 = var5;
+        if (centerY > var5) {
+          centerY = var5;
         }
-        while (var6 < param1) {
+        while (var6 < centerY) {
           while (true) {
             if (var11 > var7 &&
               var10 > var7) {
-              var12 = param0 - var8 + 1;
+              var12 = centerX - var8 + 1;
               if (var12 < clipLeft) {
                 var12 = clipLeft;
               }
-              var13 = param0 + var8;
+              var13 = centerX + var8;
               if (var13 > clipRight) {
                 var13 = clipRight;
               }
@@ -896,7 +896,7 @@ final class SoftwareRaster {
               for (var15 = var12; var15 < var13; var15++) {
                 incrementValue$4 = var14;
                 var14++;
-                pixels[incrementValue$4] = param3;
+                pixels[incrementValue$4] = colour;
               }
               var6++;
               incrementValue$3 = var9;
@@ -911,8 +911,8 @@ final class SoftwareRaster {
             var11 = var11 + (incrementValue$5 + var8);
           }
         }
-        var8Lifetime1 = param2;
-        var9Lifetime1 = var6 - param1;
+        var8Lifetime1 = radius;
+        var9Lifetime1 = var6 - centerY;
         var11Lifetime1 = var9Lifetime1 * var9Lifetime1 + var7;
         var10Lifetime1 = var11Lifetime1 - var8Lifetime1;
         var11Lifetime1 = var11Lifetime1 - var9Lifetime1;
@@ -927,11 +927,11 @@ final class SoftwareRaster {
             }
             break;
           }
-          var12Lifetime1 = param0 - var8Lifetime1;
+          var12Lifetime1 = centerX - var8Lifetime1;
           if (var12Lifetime1 < clipLeft) {
             var12Lifetime1 = clipLeft;
           }
-          var13Lifetime1 = param0 + var8Lifetime1;
+          var13Lifetime1 = centerX + var8Lifetime1;
           if (var13Lifetime1 > clipRight - 1) {
             var13Lifetime1 = clipRight - 1;
           }
@@ -939,7 +939,7 @@ final class SoftwareRaster {
           for (var15Lifetime1 = var12Lifetime1; var15Lifetime1 <= var13Lifetime1; var15Lifetime1++) {
             incrementValue$2 = var14Lifetime1;
             var14Lifetime1++;
-            pixels[incrementValue$2] = param3;
+            pixels[incrementValue$2] = colour;
           }
           var6++;
           var11Lifetime1 = var11Lifetime1 + (var9Lifetime1 + var9Lifetime1);
@@ -972,7 +972,7 @@ final class SoftwareRaster {
         return false;
     }
 
-    public static void d() {
+    public static void releaseStatics() {
         pixels = null;
         scanlineMaskStarts = null;
         scanlineMaskWidths = null;
@@ -981,31 +981,31 @@ final class SoftwareRaster {
         field_h = null;
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawHorizontalLineAdditive(int x, int y, int length, int colour, int intensity) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
         int var6Lifetime1;
-        if (param1 >= clipTop) {
-          if (param1 >= clipBottom) {
+        if (y >= clipTop) {
+          if (y >= clipBottom) {
             return;
           }
-          if (param0 < clipLeft) {
-            param2 = param2 - (clipLeft - param0);
-            param0 = clipLeft;
+          if (x < clipLeft) {
+            length = length - (clipLeft - x);
+            x = clipLeft;
           }
-          if (param0 + param2 > clipRight) {
-            param2 = clipRight - param0;
+          if (x + length > clipRight) {
+            length = clipRight - x;
           }
-          var5 = param0 + param1 * width;
-          var6 = (param3 & 16711935) * param4;
-          param3 = (var6 & -16711936) + (param3 * param4 - var6 & 16711680) >>> 8;
-          for (var7 = 0; var7 < param2; var7++) {
+          var5 = x + y * width;
+          var6 = (colour & 16711935) * intensity;
+          colour = (var6 & -16711936) + (colour * intensity - var6 & 16711680) >>> 8;
+          for (var7 = 0; var7 < length; var7++) {
             var6Lifetime1 = pixels[var5];
-            var8 = param3 + var6Lifetime1;
-            var6Lifetime1 = (param3 & 16711935) + (var6Lifetime1 & 16711935);
+            var8 = colour + var6Lifetime1;
+            var6Lifetime1 = (colour & 16711935) + (var6Lifetime1 & 16711935);
             var6Lifetime1 = (var6Lifetime1 & 16777472) + (var8 - var6Lifetime1 & 65536);
             incrementValue$0 = var5;
             var5++;
@@ -1015,34 +1015,34 @@ final class SoftwareRaster {
         }
     }
 
-    final static void g(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawBevelShadow(int x, int y, int boxWidth, int boxHeight, int colour) {
         int var6 = 0;
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          SoftwareRaster.e(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          SoftwareRaster.d(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRaster.drawHorizontalLineBlended(x + var6, y + boxHeight + var6, boxWidth, colour, var5);
+          SoftwareRaster.drawVerticalLineBlended(x + boxWidth + var6, y + var6, boxHeight + 1, colour, var5);
         }
     }
 
-    final static void h(int param0, int param1, int param2, int param3) {
+    final static void drawVerticalLine(int x, int y, int length, int colour) {
         int var4 = 0;
         int var5 = 0;
-        if (param0 >= clipLeft) {
-          if (param0 >= clipRight) {
+        if (x >= clipLeft) {
+          if (x >= clipRight) {
             return;
           }
-          if (param1 < clipTop) {
-            param2 = param2 - (clipTop - param1);
-            param1 = clipTop;
+          if (y < clipTop) {
+            length = length - (clipTop - y);
+            y = clipTop;
           }
-          if (param1 + param2 > clipBottom) {
-            param2 = clipBottom - param1;
+          if (y + length > clipBottom) {
+            length = clipBottom - y;
           }
-          var4 = param0 + param1 * width;
+          var4 = x + y * width;
           var5 = 0;
-          while (var5 < param2) {
-            pixels[var4] = param3;
+          while (var5 < length) {
+            pixels[var4] = colour;
             var5++;
             var4 = var4 + width;
           }
@@ -1050,23 +1050,23 @@ final class SoftwareRaster {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
-        if (clipLeft < param0) {
-          clipLeft = param0;
+    final static void intersectClip(int left, int top, int right, int bottom) {
+        if (clipLeft < left) {
+          clipLeft = left;
         }
-        if (clipTop < param1) {
-          clipTop = param1;
+        if (clipTop < top) {
+          clipTop = top;
         }
-        if (clipRight > param2) {
-          clipRight = param2;
+        if (clipRight > right) {
+          clipRight = right;
         }
-        if (clipBottom > param3) {
-          clipBottom = param3;
+        if (clipBottom > bottom) {
+          clipBottom = bottom;
         }
-        SoftwareRaster.c();
+        SoftwareRaster.clearScanlineMasks();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void fillRoundedRectangleBlended(int x, int y, int boxWidth, int boxHeight, int cornerRadius, int colour, int alpha) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int incrementValue$6 = 0;
@@ -1108,32 +1108,32 @@ final class SoftwareRaster {
         int var22Lifetime2;
         int var23Lifetime1;
         int var23Lifetime2;
-        if (param6 == 256) {
-          SoftwareRaster.f(param0, param1, param2, param3, param4, param5);
+        if (alpha == 256) {
+          SoftwareRaster.fillRoundedRectangle(x, y, boxWidth, boxHeight, cornerRadius, colour);
           return;
         }
-        if (param4 == 0) {
-          SoftwareRaster.b(param0, param1, param2, param3, param5, param6);
+        if (cornerRadius == 0) {
+          SoftwareRaster.fillRectangleBlended(x, y, boxWidth, boxHeight, colour, alpha);
           return;
         }
-        var7 = 256 - param6;
-        param5 = ((param5 & 16711935) * param6 >> 8 & 16711935) + ((param5 & 65280) * param6 >> 8 & 65280);
-        if (param4 < 0) {
-          param4 = -param4;
+        var7 = 256 - alpha;
+        colour = ((colour & 16711935) * alpha >> 8 & 16711935) + ((colour & 65280) * alpha >> 8 & 65280);
+        if (cornerRadius < 0) {
+          cornerRadius = -cornerRadius;
         }
-        var8 = param0 + param4;
-        var9 = param1 + param4;
-        var10 = param1;
+        var8 = x + cornerRadius;
+        var9 = y + cornerRadius;
+        var10 = y;
         if (var10 < clipTop) {
           var10 = clipTop;
         }
-        var11 = param1 + param3;
+        var11 = y + boxHeight;
         if (var11 > clipBottom) {
           var11 = clipBottom;
         }
-        var12 = param2 - param4 - param4 - 1;
+        var12 = boxWidth - cornerRadius - cornerRadius - 1;
         var13 = var10;
-        var14 = param4 * param4;
+        var14 = cornerRadius * cornerRadius;
         var15 = 0;
         var16 = var9 - var13;
         var17 = var16 * var16;
@@ -1159,7 +1159,7 @@ final class SoftwareRaster {
                 var23 = ((var23 & 16711935) * var7 >> 8 & 16711935) + ((var23 & 65280) * var7 >> 8 & 65280);
                 incrementValue$5 = var21;
                 var21++;
-                pixels[incrementValue$5] = param5 + var23;
+                pixels[incrementValue$5] = colour + var23;
               }
               var13++;
               incrementValue$4 = var16;
@@ -1175,17 +1175,17 @@ final class SoftwareRaster {
           }
         }
         var16Lifetime1 = var13 - var9;
-        var19Lifetime1 = param0;
+        var19Lifetime1 = x;
         if (var19Lifetime1 < clipLeft) {
           var19Lifetime1 = clipLeft;
         }
-        var20Lifetime1 = param0 + param2;
+        var20Lifetime1 = x + boxWidth;
         if (var20Lifetime1 > clipRight) {
           var20Lifetime1 = clipRight;
         }
         var21Lifetime1 = var19Lifetime1 + var13 * width;
         var22Lifetime1 = width + var19Lifetime1 - var20Lifetime1;
-        var23Lifetime1 = param1 + param3 - param4 - 1;
+        var23Lifetime1 = y + boxHeight - cornerRadius - 1;
         if (var23Lifetime1 > clipBottom) {
           var23Lifetime1 = clipBottom;
         }
@@ -1195,13 +1195,13 @@ final class SoftwareRaster {
             var25 = ((var25 & 16711935) * var7 >> 8 & 16711935) + ((var25 & 65280) * var7 >> 8 & 65280);
             incrementValue$3 = var21Lifetime1;
             var21Lifetime1++;
-            pixels[incrementValue$3] = param5 + var25;
+            pixels[incrementValue$3] = colour + var25;
           }
           var13++;
           var21Lifetime1 = var21Lifetime1 + var22Lifetime1;
         }
         var16Lifetime2 = 0;
-        var15Lifetime1 = param4;
+        var15Lifetime1 = cornerRadius;
         var18Lifetime1 = var16Lifetime2 * var16Lifetime2 + var14;
         var17Lifetime1 = var18Lifetime1 - var15Lifetime1;
         var18Lifetime1 = var18Lifetime1 - var16Lifetime2;
@@ -1230,7 +1230,7 @@ final class SoftwareRaster {
             var23Lifetime2 = ((var23Lifetime2 & 16711935) * var7 >> 8 & 16711935) + ((var23Lifetime2 & 65280) * var7 >> 8 & 65280);
             incrementValue$2 = var21Lifetime2;
             var21Lifetime2++;
-            pixels[incrementValue$2] = param5 + var23Lifetime2;
+            pixels[incrementValue$2] = colour + var23Lifetime2;
           }
           var13++;
           var18Lifetime1 = var18Lifetime1 + (var16Lifetime2 + var16Lifetime2);
@@ -1241,7 +1241,7 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawLineBlendedInclusive(int x1, int y1, int x2, int y2, int colour, int alpha) {
         int var6;
         int var7;
         int var8;
@@ -1260,88 +1260,88 @@ final class SoftwareRaster {
         int var14Lifetime1;
         int var15Lifetime1;
         int var16Lifetime1;
-        param2 = param2 - param0;
-        param3 = param3 - param1;
-        if (param3 == 0) {
-          if (param2 < 0) {
-            SoftwareRaster.e(param0 + param2, param1, -param2 + 1, param4, param5);
+        x2 = x2 - x1;
+        y2 = y2 - y1;
+        if (y2 == 0) {
+          if (x2 < 0) {
+            SoftwareRaster.drawHorizontalLineBlended(x1 + x2, y1, -x2 + 1, colour, alpha);
           } else {
-            SoftwareRaster.e(param0, param1, param2 + 1, param4, param5);
+            SoftwareRaster.drawHorizontalLineBlended(x1, y1, x2 + 1, colour, alpha);
           }
           return;
         }
-        if (param2 == 0) {
-          if (param3 < 0) {
-            SoftwareRaster.d(param0, param1 + param3, -param3 + 1, param4, param5);
+        if (x2 == 0) {
+          if (y2 < 0) {
+            SoftwareRaster.drawVerticalLineBlended(x1, y1 + y2, -y2 + 1, colour, alpha);
           } else {
-            SoftwareRaster.d(param0, param1, param3 + 1, param4, param5);
+            SoftwareRaster.drawVerticalLineBlended(x1, y1, y2 + 1, colour, alpha);
           }
           return;
         }
-        if (param2 + param3 < 0) {
-          param0 = param0 + param2;
-          param2 = -param2;
-          param1 = param1 + param3;
-          param3 = -param3;
+        if (x2 + y2 < 0) {
+          x1 = x1 + x2;
+          x2 = -x2;
+          y1 = y1 + y2;
+          y2 = -y2;
         }
-        var6 = 256 - param5;
-        var7 = (param4 >> 16 & 255) * param5;
-        var8 = (param4 >> 8 & 255) * param5;
-        var9 = (param4 & 255) * param5;
-        if (param2 <= param3) {
-          param0 = param0 << 16;
-          param0 = param0 + 32768;
-          param2 = param2 << 16;
-          var10 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
-          param3 = param3 + param1;
-          if (param1 < clipTop) {
-            param0 = param0 + var10 * (clipTop - param1);
-            param1 = clipTop;
+        var6 = 256 - alpha;
+        var7 = (colour >> 16 & 255) * alpha;
+        var8 = (colour >> 8 & 255) * alpha;
+        var9 = (colour & 255) * alpha;
+        if (x2 <= y2) {
+          x1 = x1 << 16;
+          x1 = x1 + 32768;
+          x2 = x2 << 16;
+          var10 = (int)Math.floor((double)x2 / (double)y2 + 0.5);
+          y2 = y2 + y1;
+          if (y1 < clipTop) {
+            x1 = x1 + var10 * (clipTop - y1);
+            y1 = clipTop;
           }
-          if (param3 >= clipBottom) {
-            param3 = clipBottom - 1;
+          if (y2 >= clipBottom) {
+            y2 = clipBottom - 1;
           }
-          while (param1 <= param3) {
-            var11 = param0 >> 16;
+          while (y1 <= y2) {
+            var11 = x1 >> 16;
             if (var11 >= clipLeft &&
               var11 < clipRight) {
-              var12 = var11 + param1 * width;
+              var12 = var11 + y1 * width;
               var13 = (pixels[var12] >> 16 & 255) * var6;
               var14 = (pixels[var12] >> 8 & 255) * var6;
               var15 = (pixels[var12] & 255) * var6;
               var16 = (var7 + var13 >> 8 << 16) + (var8 + var14 >> 8 << 8) + (var9 + var15 >> 8);
               pixels[var12] = var16;
             }
-            param0 = param0 + var10;
-            param1++;
+            x1 = x1 + var10;
+            y1++;
           }
           return;
         }
-        param1 = param1 << 16;
-        param1 = param1 + 32768;
-        param3 = param3 << 16;
-        var10Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
-        param2 = param2 + param0;
-        if (param0 < clipLeft) {
-          param1 = param1 + var10Lifetime1 * (clipLeft - param0);
-          param0 = clipLeft;
+        y1 = y1 << 16;
+        y1 = y1 + 32768;
+        y2 = y2 << 16;
+        var10Lifetime1 = (int)Math.floor((double)y2 / (double)x2 + 0.5);
+        x2 = x2 + x1;
+        if (x1 < clipLeft) {
+          y1 = y1 + var10Lifetime1 * (clipLeft - x1);
+          x1 = clipLeft;
         }
-        if (param2 >= clipRight) {
-          param2 = clipRight - 1;
+        if (x2 >= clipRight) {
+          x2 = clipRight - 1;
         }
-        while (param0 <= param2) {
-          var11Lifetime1 = param1 >> 16;
+        while (x1 <= x2) {
+          var11Lifetime1 = y1 >> 16;
           if (var11Lifetime1 >= clipTop &&
             var11Lifetime1 < clipBottom) {
-            var12Lifetime1 = param0 + var11Lifetime1 * width;
+            var12Lifetime1 = x1 + var11Lifetime1 * width;
             var13Lifetime1 = (pixels[var12Lifetime1] >> 16 & 255) * var6;
             var14Lifetime1 = (pixels[var12Lifetime1] >> 8 & 255) * var6;
             var15Lifetime1 = (pixels[var12Lifetime1] & 255) * var6;
             var16Lifetime1 = (var7 + var13Lifetime1 >> 8 << 16) + (var8 + var14Lifetime1 >> 8 << 8) + (var9 + var15Lifetime1 >> 8);
             pixels[var12Lifetime1] = var16Lifetime1;
           }
-          param1 = param1 + var10Lifetime1;
-          param0++;
+          y1 = y1 + var10Lifetime1;
+          x1++;
         }
         return;
     }
@@ -1353,37 +1353,37 @@ final class SoftwareRaster {
         SoftwareRaster.setClip(0, 0, targetWidth, targetHeight);
     }
 
-    final static void f(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillRectangle(int x, int y, int boxWidth, int boxHeight, int colour) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
-        if (param0 < clipLeft) {
-          param2 = param2 - (clipLeft - param0);
-          param0 = clipLeft;
+        if (x < clipLeft) {
+          boxWidth = boxWidth - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param1 < clipTop) {
-          param3 = param3 - (clipTop - param1);
-          param1 = clipTop;
+        if (y < clipTop) {
+          boxHeight = boxHeight - (clipTop - y);
+          y = clipTop;
         }
-        if (param0 + param2 > clipRight) {
-          param2 = clipRight - param0;
+        if (x + boxWidth > clipRight) {
+          boxWidth = clipRight - x;
         }
-        if (param1 + param3 > clipBottom) {
-          param3 = clipBottom - param1;
+        if (y + boxHeight > clipBottom) {
+          boxHeight = clipBottom - y;
         }
-        int var5 = width - param2;
-        int var6 = param0 + param1 * width;
-        for (var7 = -param3; var7 < 0; var7++) {
-          for (var8 = -param2; var8 < 0; var8++) {
+        int var5 = width - boxWidth;
+        int var6 = x + y * width;
+        for (var7 = -boxHeight; var7 < 0; var7++) {
+          for (var8 = -boxWidth; var8 < 0; var8++) {
             incrementValue$0 = var6;
             var6++;
-            pixels[incrementValue$0] = param4;
+            pixels[incrementValue$0] = colour;
           }
           var6 = var6 + var5;
         }
     }
 
-    final static void b() {
+    final static void clearPixels() {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1429,110 +1429,110 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void c() {
+    private final static void clearScanlineMasks() {
         scanlineMaskStarts = null;
         scanlineMaskWidths = null;
     }
 
-    final static void h(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawLine(int x1, int y1, int x2, int y2, int colour) {
         int var5;
         int var6;
         int var5Lifetime1;
         int var6Lifetime1;
-        param2 = param2 - param0;
-        param3 = param3 - param1;
-        if (param3 == 0) {
-          if (param2 < 0) {
-            SoftwareRaster.e(param0 + param2, param1, -param2 + 1, param4);
+        x2 = x2 - x1;
+        y2 = y2 - y1;
+        if (y2 == 0) {
+          if (x2 < 0) {
+            SoftwareRaster.drawHorizontalLine(x1 + x2, y1, -x2 + 1, colour);
           } else {
-            SoftwareRaster.e(param0, param1, param2 + 1, param4);
+            SoftwareRaster.drawHorizontalLine(x1, y1, x2 + 1, colour);
           }
           return;
         }
-        if (param2 == 0) {
-          if (param3 < 0) {
-            SoftwareRaster.h(param0, param1 + param3, -param3 + 1, param4);
+        if (x2 == 0) {
+          if (y2 < 0) {
+            SoftwareRaster.drawVerticalLine(x1, y1 + y2, -y2 + 1, colour);
           } else {
-            SoftwareRaster.h(param0, param1, param3 + 1, param4);
+            SoftwareRaster.drawVerticalLine(x1, y1, y2 + 1, colour);
           }
           return;
         }
-        if (param2 + param3 < 0) {
-          param0 = param0 + param2;
-          param2 = -param2;
-          param1 = param1 + param3;
-          param3 = -param3;
+        if (x2 + y2 < 0) {
+          x1 = x1 + x2;
+          x2 = -x2;
+          y1 = y1 + y2;
+          y2 = -y2;
         }
-        if (param2 <= param3) {
-          param0 = param0 << 16;
-          param0 = param0 + 32768;
-          param2 = param2 << 16;
-          var5 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
-          param3 = param3 + param1;
-          if (param1 < clipTop) {
-            param0 = param0 + var5 * (clipTop - param1);
-            param1 = clipTop;
+        if (x2 <= y2) {
+          x1 = x1 << 16;
+          x1 = x1 + 32768;
+          x2 = x2 << 16;
+          var5 = (int)Math.floor((double)x2 / (double)y2 + 0.5);
+          y2 = y2 + y1;
+          if (y1 < clipTop) {
+            x1 = x1 + var5 * (clipTop - y1);
+            y1 = clipTop;
           }
-          if (param3 >= clipBottom) {
-            param3 = clipBottom - 1;
+          if (y2 >= clipBottom) {
+            y2 = clipBottom - 1;
           }
-          while (param1 <= param3) {
-            var6 = param0 >> 16;
+          while (y1 <= y2) {
+            var6 = x1 >> 16;
             if (var6 >= clipLeft &&
               var6 < clipRight) {
-              pixels[var6 + param1 * width] = param4;
+              pixels[var6 + y1 * width] = colour;
             }
-            param0 = param0 + var5;
-            param1++;
+            x1 = x1 + var5;
+            y1++;
           }
           return;
         }
-        param1 = param1 << 16;
-        param1 = param1 + 32768;
-        param3 = param3 << 16;
-        var5Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
-        param2 = param2 + param0;
-        if (param0 < clipLeft) {
-          param1 = param1 + var5Lifetime1 * (clipLeft - param0);
-          param0 = clipLeft;
+        y1 = y1 << 16;
+        y1 = y1 + 32768;
+        y2 = y2 << 16;
+        var5Lifetime1 = (int)Math.floor((double)y2 / (double)x2 + 0.5);
+        x2 = x2 + x1;
+        if (x1 < clipLeft) {
+          y1 = y1 + var5Lifetime1 * (clipLeft - x1);
+          x1 = clipLeft;
         }
-        if (param2 >= clipRight) {
-          param2 = clipRight - 1;
+        if (x2 >= clipRight) {
+          x2 = clipRight - 1;
         }
-        while (param0 <= param2) {
-          var6Lifetime1 = param1 >> 16;
+        while (x1 <= x2) {
+          var6Lifetime1 = y1 >> 16;
           if (var6Lifetime1 >= clipTop &&
             var6Lifetime1 < clipBottom) {
-            pixels[param0 + var6Lifetime1 * width] = param4;
+            pixels[x1 + var6Lifetime1 * width] = colour;
           }
-          param1 = param1 + var5Lifetime1;
-          param0++;
+          y1 = y1 + var5Lifetime1;
+          x1++;
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3) {
+    final static void drawHorizontalLine(int x, int y, int length, int colour) {
         int var4 = 0;
         int var5 = 0;
-        if (param1 >= clipTop) {
-          if (param1 >= clipBottom) {
+        if (y >= clipTop) {
+          if (y >= clipBottom) {
             return;
           }
-          if (param0 < clipLeft) {
-            param2 = param2 - (clipLeft - param0);
-            param0 = clipLeft;
+          if (x < clipLeft) {
+            length = length - (clipLeft - x);
+            x = clipLeft;
           }
-          if (param0 + param2 > clipRight) {
-            param2 = clipRight - param0;
+          if (x + length > clipRight) {
+            length = clipRight - x;
           }
-          var4 = param0 + param1 * width;
-          for (var5 = 0; var5 < param2; var5++) {
-            pixels[var4 + var5] = param3;
+          var4 = x + y * width;
+          for (var5 = 0; var5 < length; var5++) {
+            pixels[var4 + var5] = colour;
           }
           return;
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillCircleBlended(int centerX, int centerY, int radius, int colour, int alpha) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -1571,46 +1571,46 @@ final class SoftwareRaster {
         int var22Lifetime1;
         int var23Lifetime1;
         int var24Lifetime1;
-        if (param4 == 0) {
+        if (alpha == 0) {
           return;
         }
-        if (param4 == 256) {
-          SoftwareRaster.a(param0, param1, param2, param3);
+        if (alpha == 256) {
+          SoftwareRaster.fillCircle(centerX, centerY, radius, colour);
           return;
         }
-        if (param2 < 0) {
-          param2 = -param2;
+        if (radius < 0) {
+          radius = -radius;
         }
-        var5 = 256 - param4;
-        var6 = (param3 >> 16 & 255) * param4;
-        var7 = (param3 >> 8 & 255) * param4;
-        var8 = (param3 & 255) * param4;
-        var12 = param1 - param2;
+        var5 = 256 - alpha;
+        var6 = (colour >> 16 & 255) * alpha;
+        var7 = (colour >> 8 & 255) * alpha;
+        var8 = (colour & 255) * alpha;
+        var12 = centerY - radius;
         if (var12 < clipTop) {
           var12 = clipTop;
         }
-        var13 = param1 + param2 + 1;
+        var13 = centerY + radius + 1;
         if (var13 > clipBottom) {
           var13 = clipBottom;
         }
         var14 = var12;
-        var15 = param2 * param2;
+        var15 = radius * radius;
         var16 = 0;
-        var17 = param1 - var14;
+        var17 = centerY - var14;
         var18 = var17 * var17;
         var19 = var18 - var17;
-        if (param1 > var13) {
-          param1 = var13;
+        if (centerY > var13) {
+          centerY = var13;
         }
-        while (var14 < param1) {
+        while (var14 < centerY) {
           while (true) {
             if (var19 > var15 &&
               var18 > var15) {
-              var20 = param0 - var16 + 1;
+              var20 = centerX - var16 + 1;
               if (var20 < clipLeft) {
                 var20 = clipLeft;
               }
-              var21 = param0 + var16;
+              var21 = centerX + var16;
               if (var21 > clipRight) {
                 var21 = clipRight;
               }
@@ -1637,7 +1637,7 @@ final class SoftwareRaster {
             var19 = var19 + (incrementValue$5 + var16);
           }
         }
-        var16Lifetime1 = param2;
+        var16Lifetime1 = radius;
         var17 = -var17;
         var19Lifetime1 = var17 * var17 + var15;
         var18Lifetime1 = var19Lifetime1 - var16Lifetime1;
@@ -1653,11 +1653,11 @@ final class SoftwareRaster {
             }
             break;
           }
-          var20Lifetime1 = param0 - var16Lifetime1;
+          var20Lifetime1 = centerX - var16Lifetime1;
           if (var20Lifetime1 < clipLeft) {
             var20Lifetime1 = clipLeft;
           }
-          var21Lifetime1 = param0 + var16Lifetime1;
+          var21Lifetime1 = centerX + var16Lifetime1;
           if (var21Lifetime1 > clipRight - 1) {
             var21Lifetime1 = clipRight - 1;
           }
@@ -1706,12 +1706,12 @@ final class SoftwareRaster {
         }
     }
 
-    final static void a(int[] param0) {
-        clipLeft = param0[0];
-        clipTop = param0[1];
-        clipRight = param0[2];
-        clipBottom = param0[3];
-        SoftwareRaster.c();
+    final static void restoreClip(int[] bounds) {
+        clipLeft = bounds[0];
+        clipTop = bounds[1];
+        clipRight = bounds[2];
+        clipBottom = bounds[3];
+        SoftwareRaster.clearScanlineMasks();
     }
 
     final static void b(int param0, int param1, int param2, int param3, int[] param4) {
@@ -1979,14 +1979,14 @@ final class SoftwareRaster {
         }
     }
 
-    final static void b(int[] param0) {
-        param0[0] = clipLeft;
-        param0[1] = clipTop;
-        param0[2] = clipRight;
-        param0[3] = clipBottom;
+    final static void saveClip(int[] bounds) {
+        bounds[0] = clipLeft;
+        bounds[1] = clipTop;
+        bounds[2] = clipRight;
+        bounds[3] = clipBottom;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillVerticalGradient(int x, int y, int boxWidth, int boxHeight, int topColour, int bottomColour) {
         int var10 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
@@ -1998,29 +1998,29 @@ final class SoftwareRaster {
         int var12;
         int var13;
         var6 = 0;
-        var7 = 65536 / param3;
-        if (param0 < clipLeft) {
-          param2 = param2 - (clipLeft - param0);
-          param0 = clipLeft;
+        var7 = 65536 / boxHeight;
+        if (x < clipLeft) {
+          boxWidth = boxWidth - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param1 < clipTop) {
-          var6 = var6 + (clipTop - param1) * var7;
-          param3 = param3 - (clipTop - param1);
-          param1 = clipTop;
+        if (y < clipTop) {
+          var6 = var6 + (clipTop - y) * var7;
+          boxHeight = boxHeight - (clipTop - y);
+          y = clipTop;
         }
-        if (param0 + param2 > clipRight) {
-          param2 = clipRight - param0;
+        if (x + boxWidth > clipRight) {
+          boxWidth = clipRight - x;
         }
-        if (param1 + param3 > clipBottom) {
-          param3 = clipBottom - param1;
+        if (y + boxHeight > clipBottom) {
+          boxHeight = clipBottom - y;
         }
-        var8 = width - param2;
-        var9 = param0 + param1 * width;
-        for (var10 = -param3; var10 < 0; var10++) {
+        var8 = width - boxWidth;
+        var9 = x + y * width;
+        for (var10 = -boxHeight; var10 < 0; var10++) {
           var11 = 65536 - var6 >> 8;
           var12 = var6 >> 8;
-          var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
-          for (var14 = -param2; var14 < 0; var14++) {
+          var13 = ((topColour & 16711935) * var11 + (bottomColour & 16711935) * var12 & -16711936) + ((topColour & 65280) * var11 + (bottomColour & 65280) * var12 & 16711680) >>> 8;
+          for (var14 = -boxWidth; var14 < 0; var14++) {
             incrementValue$0 = var9;
             var9++;
             pixels[incrementValue$0] = var13;
@@ -2030,7 +2030,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawVerticalLineBlended(int x, int y, int length, int colour, int alpha) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -2041,23 +2041,23 @@ final class SoftwareRaster {
         int var10 = 0;
         int var11 = 0;
         int var14 = 0;
-        if (param0 >= clipLeft) {
-          if (param0 >= clipRight) {
+        if (x >= clipLeft) {
+          if (x >= clipRight) {
             return;
           }
-          if (param1 < clipTop) {
-            param2 = param2 - (clipTop - param1);
-            param1 = clipTop;
+          if (y < clipTop) {
+            length = length - (clipTop - y);
+            y = clipTop;
           }
-          if (param1 + param2 > clipBottom) {
-            param2 = clipBottom - param1;
+          if (y + length > clipBottom) {
+            length = clipBottom - y;
           }
-          var5 = 256 - param4;
-          var6 = (param3 >> 16 & 255) * param4;
-          var7 = (param3 >> 8 & 255) * param4;
-          var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * width;
-          for (var13 = 0; var13 < param2; var13++) {
+          var5 = 256 - alpha;
+          var6 = (colour >> 16 & 255) * alpha;
+          var7 = (colour >> 8 & 255) * alpha;
+          var8 = (colour & 255) * alpha;
+          var12 = x + y * width;
+          for (var13 = 0; var13 < length; var13++) {
             var9 = (pixels[var12] >> 16 & 255) * var5;
             var10 = (pixels[var12] >> 8 & 255) * var5;
             var11 = (pixels[var12] & 255) * var5;

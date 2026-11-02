@@ -36,7 +36,7 @@ final class DualNodeIterator implements Iterator {
           if (param2 != 0) {
             packetJitterMillis = 2.5194855074937275;
           }
-          if (!kp.decodeSpriteSheetFromArchive(false, param3, param0, param1)) {
+          if (!MarkerSliderPainter.decodeSpriteSheetFromArchive(false, param3, param0, param1)) {
             return null;
           }
           stackIn_6_0 = LeaderEscortCondition.a(param4.getFile((byte) 58, param1, param3), 126);
@@ -81,9 +81,9 @@ final class DualNodeIterator implements Iterator {
         return this.cursor != this.deque.sentinel;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_d = null;
-        if (param0 > -60) {
+        if (obfuscationGuard > -60) {
           DualNodeIterator.b((byte) -85);
           field_g = null;
           return;

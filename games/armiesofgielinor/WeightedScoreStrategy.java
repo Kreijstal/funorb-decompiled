@@ -16,7 +16,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
         if (param1 != -20849) {
           field_m = (String) null;
         }
-        MeshData var8 = new MeshData(pd.field_d, true, false, true, true);
+        MeshData var8 = new MeshData(PasswordLengthSupport.field_d, true, false, true, true);
         MeshData var2 = var8;
         int var3 = VineGrowthAction.b(param1 + 20938, param0);
         int var4 = 127;
@@ -25,7 +25,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
           if (var6 < 0) {
             var6 = 0;
           }
-          var2.faceColors[var5] = (short)AccountRegistrationDialog.bitwiseOr(var6, rn.bitwiseAnd(~var4, var3));
+          var2.faceColors[var5] = (short)AccountRegistrationDialog.bitwiseOr(var6, ProceduralMapSupport.bitwiseAnd(~var4, var3));
         }
         return var2.createModel(SummonAction.field_x, fm.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
     }
@@ -38,19 +38,19 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (bk.field_e == null) {
+          if (MusicTrackSelectionSupport.field_e == null) {
             return false;
           }
-          if (param0 == bk.field_e.size(false)) {
+          if (param0 == MusicTrackSelectionSupport.field_e.size(false)) {
             return false;
           }
-          var2 = (fd) (bk.field_e.first((byte) 111));
+          var2 = (fd) (MusicTrackSelectionSupport.field_e.first((byte) 111));
           while (var2 != null) {
             var3 = var2.field_k;
             if (var3 == param1) {
               return true;
             }
-            var2 = (fd) (bk.field_e.next((byte) 123));
+            var2 = (fd) (MusicTrackSelectionSupport.field_e.next((byte) 123));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
           }
           var3 = (AiActionCandidate) (this.candidates.next((byte) 123));
         }
-        af.a((Throwable) null, -114, "ran out of orders! total " + this.totalWeight + ", num " + this.candidateCount + " w " + var2);
+        LoginCredentials.a((Throwable) null, -114, "ran out of orders! total " + this.totalWeight + ", num " + this.candidateCount + " w " + var2);
         return null;
     }
 
@@ -142,8 +142,8 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
         }
     }
 
-    public static void c(int param0) {
-        if (param0 > -98) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard > -98) {
           WeightedScoreStrategy.a(39, 60);
         }
         responseTargetAccountName = null;

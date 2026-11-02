@@ -58,11 +58,11 @@ abstract class ModalDialog extends DequeWidgetContainer {
         this.setBounds(SoundPlaybackHandle.dialogViewportWidth - width >> 1, width, DebugConsole.dialogViewportHeight - height >> 1, 8192, height);
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_I = null;
         field_M = null;
         groundShadowSprite = null;
-        int var1 = -89 % ((8 - param0) / 57);
+        int var1 = -89 % ((8 - obfuscationGuard) / 57);
         field_K = null;
         currentRoomPlayers = null;
         field_J = null;
@@ -86,7 +86,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           TutorialLayout.field_b = new RgbSprite(this.width, this.height);
         }
         CombatSandbox.a(TutorialLayout.field_b, 3);
-        SoftwareRaster.b();
+        SoftwareRaster.clearPixels();
         this.drawDialogBackground(0, 1851680193, 0);
         super.drawWidget(-originX - this.x, -originY - this.y, (byte) -106, renderLayer);
         QuickChatPhraseRepository.popRasterState(-18862);
@@ -167,7 +167,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         String stackIn_25_1 = null;
         boolean stackIn_26_2 = false;
         if (ViewportManager.field_c) {
-          stackIn_6_0 = (hf.textChatActive) ? 1 : 0;
+          stackIn_6_0 = (ClientStateChecksumSupport.textChatActive) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
@@ -176,25 +176,25 @@ abstract class ModalDialog extends DequeWidgetContainer {
           var4 = (ResourceArchive) null;
           ModalDialog.loadMusicPatch((ResourceArchive) null, -105, true);
         }
-        stackIn_13_0 = (param1) && (sq.c((byte) -103)) && (var2 == 0);
-        tq.a(stackIn_13_0, false);
+        stackIn_13_0 = (param1) && (ToastMessage.c((byte) -103)) && (var2 == 0);
+        NineSliceSpriteSupport.a(stackIn_13_0, false);
         if (null != FullscreenFocusCanvas.gameplayController) {
           FullscreenFocusCanvas.gameplayController.b(0, param1);
         }
         if (null != SectorCacheStore.field_a) {
           SectorCacheStore.field_a.b(0, param1);
         }
-        GradientUiRenderer.drawHollowGradientFrame(0, 0, so.field_b.field_a, so.field_b.field_g, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
+        GradientUiRenderer.drawHollowGradientFrame(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
         if (var2 != 0) {
           if (!ChannelFadeTimeConsoleCommand.field_F) {
             stackIn_22_0 = CampaignMenu.field_q;
           } else {
-            stackIn_22_0 = l.field_d;
+            stackIn_22_0 = QuickChatCategoryMenuSupport.field_d;
           }
           var3 = stackIn_22_0;
           stackIn_25_0 = false;
           stackIn_25_1 = var3;
-          stackIn_26_2 = (param1) && (sq.c((byte) -103));
+          stackIn_26_2 = (param1) && (ToastMessage.c((byte) -103));
           RevivalEvent.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
         }
     }

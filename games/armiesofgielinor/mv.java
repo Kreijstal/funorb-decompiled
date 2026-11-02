@@ -74,19 +74,19 @@ final class mv {
               } else {
                 var6Lifetime1 = -(var6Lifetime1 << 4) + 256;
               }
-              ds.field_a[param3].drawAdditive(param0 - 5 + (int)((double)var7Lifetime1 * Math.sin((double)(var5_intLifetime1 + param2) * 3.141592653589793 / 236.0)), param4 + var5_intLifetime1, var6Lifetime1 >> 2);
-              ds.field_a[param3].drawAdditive(param0 + (-20 + (int)((double)var7Lifetime1 * Math.sin(3.141592653589793 * (double)(5 + (param2 + var5_intLifetime1)) / 256.0))), param4 + var5_intLifetime1, var6Lifetime1 >> 2);
-              ds.field_a[param3].drawAdditive((int)(Math.sin((double)(var5_intLifetime1 + (param2 + 10)) * 3.141592653589793 / 216.0) * (double)var7Lifetime1) + 10 + param0, param4 + var5_intLifetime1, var6Lifetime1 >> 2);
+              PointerCaptureSupport.field_a[param3].drawAdditive(param0 - 5 + (int)((double)var7Lifetime1 * Math.sin((double)(var5_intLifetime1 + param2) * 3.141592653589793 / 236.0)), param4 + var5_intLifetime1, var6Lifetime1 >> 2);
+              PointerCaptureSupport.field_a[param3].drawAdditive(param0 + (-20 + (int)((double)var7Lifetime1 * Math.sin(3.141592653589793 * (double)(5 + (param2 + var5_intLifetime1)) / 256.0))), param4 + var5_intLifetime1, var6Lifetime1 >> 2);
+              PointerCaptureSupport.field_a[param3].drawAdditive((int)(Math.sin((double)(var5_intLifetime1 + (param2 + 10)) * 3.141592653589793 / 216.0) * (double)var7Lifetime1) + 10 + param0, param4 + var5_intLifetime1, var6Lifetime1 >> 2);
             }
             return;
           }
-          pv.field_e.b();
-          SoftwareRaster.b();
-          TrianglePulse.field_d.drawTintedGrayscale(0, TrianglePulse.field_d.pixelHeight >> 1, op.field_c[0][param3]);
-          so.field_b.a(5605);
-          pv.field_e.d(-20 + param0, -200 + param4, 75, 210, 255);
-          pv.field_e.c();
-          pv.field_e.d(-20 + param0, param4 + 10, 75, 50, 255);
+          AccountNameFoldingSupport.field_e.bindAsRasterTarget();
+          SoftwareRaster.clearPixels();
+          TrianglePulse.field_d.drawTintedGrayscale(0, TrianglePulse.field_d.pixelHeight >> 1, FriendRequestSupport.field_c[0][param3]);
+          FixedSquareRootSupport.field_b.bindRasterTarget(5605);
+          AccountNameFoldingSupport.field_e.d(-20 + param0, -200 + param4, 75, 210, 255);
+          AccountNameFoldingSupport.field_e.flipVertically();
+          AccountNameFoldingSupport.field_e.d(-20 + param0, param4 + 10, 75, 50, 255);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,8 +95,8 @@ final class mv {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 != -48) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != -48) {
           return;
         }
         field_a = null;

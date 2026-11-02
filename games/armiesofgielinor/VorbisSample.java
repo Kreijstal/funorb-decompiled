@@ -110,7 +110,7 @@ final class VorbisSample extends IntrusiveNode {
           bitReverse = new int[eighthBlockSize];
           reverseBits = ModalDialog.bitLength(eighthBlockSize - 1, -13337);
           for (reverseIndex = 0; reverseIndex < eighthBlockSize; reverseIndex++) {
-            bitReverse[reverseIndex] = qt.reverseBits(reverseIndex, reverseBits, (byte) -114);
+            bitReverse[reverseIndex] = BitReversalSupport.reverseBits(reverseIndex, reverseBits, (byte) -114);
           }
           if (blockKind == 0) {
             smallTrigA = trigA;

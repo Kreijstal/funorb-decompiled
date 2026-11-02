@@ -41,7 +41,7 @@ abstract class ResizableModalDialog extends ModalDialog {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        SoftwareRaster.a(6 + x, 35 + y, this.width - 12, this.height - 40, 2105376, 0);
+        SoftwareRaster.fillVerticalGradient(6 + x, 35 + y, this.width - 12, this.height - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
@@ -88,7 +88,7 @@ abstract class ResizableModalDialog extends ModalDialog {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            SoftwareRaster.e(x + var10, var8, -var10 + var11, var9);
+            SoftwareRaster.drawHorizontalLine(x + var10, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -101,14 +101,14 @@ abstract class ResizableModalDialog extends ModalDialog {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          SoftwareRaster.e(x, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRaster.e(x - (-this.width + 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRaster.drawHorizontalLine(x, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRaster.drawHorizontalLine(x - (-this.width + 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        gt.field_e.drawTransparent(this.width + (x - 90), 10 + y);
-        EquipmentBattleTutorial.a(t.field_d, x + 5, y + 35, this.width - 10, 8941);
-        EquipmentBattleTutorial.a(ip.field_c, x, -22 + y + this.height, this.width, obfuscationGuard ^ 1851672364);
+        LocalAccountNameSupport.field_e.drawTransparent(this.width + (x - 90), 10 + y);
+        EquipmentBattleTutorial.a(ReloadPageSupport.field_d, x + 5, y + 35, this.width - 10, 8941);
+        EquipmentBattleTutorial.a(WidgetStateStyle.field_c, x, -22 + y + this.height, this.width, obfuscationGuard ^ 1851672364);
         var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
@@ -121,8 +121,8 @@ abstract class ResizableModalDialog extends ModalDialog {
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          SoftwareRaster.e(x, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRaster.e(x + this.width - 6, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRaster.drawHorizontalLine(x, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRaster.drawHorizontalLine(x + this.width - 6, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
@@ -177,9 +177,9 @@ abstract class ResizableModalDialog extends ModalDialog {
           }
           startPosition = packet.position;
           textCharacters = (CharSequence) ((Object) text);
-          encodedText = nr.encodeSingleByteText(textCharacters, false);
+          encodedText = NineSliceFrame.encodeSingleByteText(textCharacters, false);
           packet.writeUnsignedSmart(true, encodedText.length);
-          packet.position = packet.position + ds.chatHuffmanCodec.compress(0, encodedText, encodedText.length, packet.payload, packet.position, (byte) 28);
+          packet.position = packet.position + PointerCaptureSupport.chatHuffmanCodec.compress(0, encodedText, encodedText.length, packet.payload, packet.position, (byte) 28);
           stackIn_3_0 = packet.position - startPosition;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -224,11 +224,11 @@ abstract class ResizableModalDialog extends ModalDialog {
         return super.snapDialogAnimation(66);
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         unitAnimationGroups = null;
         field_Q = null;
-        if (param0 <= 21) {
-          ResizableModalDialog.h((byte) -93);
+        if (obfuscationGuard <= 21) {
+          ResizableModalDialog.releaseStatics((byte) -93);
         }
     }
 
@@ -304,22 +304,22 @@ abstract class ResizableModalDialog extends ModalDialog {
           var6_int = ConsoleExpression.field_p[param4] + param4;
           if (cu.field_a) {
             var7_int = CipherPacketBuffer.currentBattlefield.getTileEffects(31, param0, param1, -1);
-            var8 = vs.field_e[param4].terrainType;
+            var8 = QuickChatMenuDisplaySupport.field_e[param4].terrainType;
             if (4 != var8 &&
               6 != var8 &&
               var8 != 2 &&
               (1 & var7_int) != 0) {
               StateChangeEvent.a(var6_int, param2 ^ -12933, param5, param3);
             }
-            if (vs.field_e[param4].hasCorpse(-121)) {
+            if (QuickChatMenuDisplaySupport.field_e[param4].hasCorpse(-121)) {
               GradientUiRenderer.multiplySprite(NetworkGameShell.boneShadowSprites[var6_int % 4], param3 - 10, -25 + param5);
             }
-            var9 = EditableTextWidget.field_Q[vs.field_e[param4].terrainType];
+            var9 = EditableTextWidget.field_Q[QuickChatMenuDisplaySupport.field_e[param4].terrainType];
             if (var9 > -1) {
               if (2 == var9) {
                 GradientUiRenderer.multiplySprite(oq.activeStructureShadows[17], -10 + param3, param5 - 25);
               } else {
-                if (vs.field_e[param4].terrainType == 3) {
+                if (QuickChatMenuDisplaySupport.field_e[param4].terrainType == 3) {
                   MidiPcmStream.a((byte) -124, param3 + 30, param4 + ConsoleExpression.field_p[param4], 32 + param5);
                 } else {
                   if (var9 == 1) {
@@ -333,7 +333,7 @@ abstract class ResizableModalDialog extends ModalDialog {
                           GradientUiRenderer.multiplySprite(oq.activeStructureShadows[var6_int % 8 + 0], param3 - 10, param5 - 35);
                         } else {
                           if (4 == var9) {
-                            ab.a(35 + param5, ConsoleExpression.field_p[param4] + param4, param3 + 30, false);
+                            AlphanumericTextSupport.a(35 + param5, ConsoleExpression.field_p[param4] + param4, param3 + 30, false);
                           }
                         }
                       } else {
@@ -344,7 +344,7 @@ abstract class ResizableModalDialog extends ModalDialog {
                 }
               }
             }
-            rs.a(26449, param3, param4, param5);
+            PowerOfTwoSupport.a(26449, param3, param4, param5);
           }
           var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.first((byte) 106));
           while (var7 != null) {
@@ -362,23 +362,23 @@ abstract class ResizableModalDialog extends ModalDialog {
                 stackIn_43_0 = TeamRoster.playerRingSprite;
                 stackIn_43_1 = -30 + var8Lifetime1;
                 stackIn_43_2 = var9Lifetime1 - 15;
-                stackIn_43_3 = op.field_c;
+                stackIn_43_3 = FriendRequestSupport.field_c;
                 if (!CipherPacketBuffer.currentBattlefield.teamGame) {
                   stackIn_44_4 = 0;
                 } else {
                   stackIn_44_4 = 1;
                 }
                 ((RgbSprite) (Object) stackIn_43_0).drawShadedGrayscale(stackIn_43_1, stackIn_43_2, stackIn_43_3[stackIn_44_4][var10]);
-                ModalDialog.groundShadowSprite.b(var8Lifetime1 - 40, -20 + var9Lifetime1);
+                ModalDialog.groundShadowSprite.drawMultiplied(var8Lifetime1 - 40, -20 + var9Lifetime1);
               }
             }
             var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
           }
-          if (vs.field_e[param4].occupant != null) {
-            if (vs.field_e[param4].occupant.presentationOwnsModel) {
+          if (QuickChatMenuDisplaySupport.field_e[param4].occupant != null) {
+            if (QuickChatMenuDisplaySupport.field_e[param4].occupant.presentationOwnsModel) {
               return;
             }
-            ModalDialog.groundShadowSprite.b(param3, param5);
+            ModalDialog.groundShadowSprite.drawMultiplied(param3, param5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

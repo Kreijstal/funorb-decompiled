@@ -3,7 +3,7 @@
  */
 final class FullscreenMembershipDialog extends ResizableModalDialog implements WidgetActivationListener {
     private InteractiveWidget closeButton;
-    static rn field_ab;
+    static ProceduralMapSupport field_ab;
     private InteractiveWidget membersButton;
     static RgbSprite[] activeFoliageShadows;
     static jl field_cb;
@@ -13,14 +13,14 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
     static String field_Y;
     static int[][] field_W;
 
-    public static void n(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_ab = null;
         activeFoliageShadows = null;
         field_db = null;
         field_X = null;
         activeContextMenu = null;
         field_W = (int[][]) null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_Y = null;
@@ -41,7 +41,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
           if (DamageEvent.isGuestSession(98)) {
             this.membersButton = this.createNoticeButton((WidgetListener) (this), true, ClientContextMenu.field_j);
           }
-          this.closeButton = this.createNoticeButton((WidgetListener) (this), true, pd.field_f);
+          this.closeButton = this.createNoticeButton((WidgetListener) (this), true, PasswordLengthSupport.field_f);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tn.<init>(" + (host != null ? "{...}" : "null") + ')');
         }
@@ -197,7 +197,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 < 67) {
-            field_ab = (rn) null;
+            field_ab = (ProceduralMapSupport) null;
           }
           var2_int = 0;
           if (param1.length != 6) {
@@ -223,9 +223,9 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
                 var10 >> 8 == var11) {
                 if (var11 < 128) {
                   var11 = var11 << 1;
-                  var4[var8] = AccountRegistrationDialog.bitwiseOr(var12, AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd(var5 * var11, -16777164) >>> 8, rn.bitwiseAnd(var11 * var6, 16711832) >>> 8), rn.bitwiseAnd(var7 * var11 >>> 8, 754974975)));
+                  var4[var8] = AccountRegistrationDialog.bitwiseOr(var12, AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(ProceduralMapSupport.bitwiseAnd(var5 * var11, -16777164) >>> 8, ProceduralMapSupport.bitwiseAnd(var11 * var6, 16711832) >>> 8), ProceduralMapSupport.bitwiseAnd(var7 * var11 >>> 8, 754974975)));
                 } else {
-                  var4[var8] = AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd((256 - var11) * var5 + var11 * 16711680 - 2139095040 >>> 7, 1727987712), rn.bitwiseAnd(8355863, (-var11 + 256) * var6 + (var11 - 128) * 65280) >>> 7), (256 - var11) * var7 + 255 * var11 - 32640 >>> 7), var12);
+                  var4[var8] = AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(ProceduralMapSupport.bitwiseAnd((256 - var11) * var5 + var11 * 16711680 - 2139095040 >>> 7, 1727987712), ProceduralMapSupport.bitwiseAnd(8355863, (-var11 + 256) * var6 + (var11 - 128) * 65280) >>> 7), (256 - var11) * var7 + 255 * var11 - 32640 >>> 7), var12);
                 }
               }
             }
@@ -255,7 +255,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
         RuntimeException decompiledCaughtException = null;
         try {
           if (!obfuscationGuard) {
-            stackIn_4_0 = (long)de.readTieredSignedInt(-111, packet, 4, 14, 30, 20);
+            stackIn_4_0 = (long)SpellCastErrorSupport.readTieredSignedInt(-111, packet, 4, 14, 30, 20);
             return stackIn_4_0;
           }
           stackIn_2_0 = 100L;
@@ -283,7 +283,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
     }
 
     static {
-        field_ab = new rn();
+        field_ab = new ProceduralMapSupport();
         field_cb = new jl();
         field_Y = "You must play 1 more rated game before playing with the current options.";
         field_X = "Email (Login):";

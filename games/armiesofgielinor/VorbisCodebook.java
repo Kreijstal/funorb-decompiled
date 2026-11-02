@@ -111,7 +111,7 @@ final class VorbisCodebook {
 
     private final static int lookupValueCount(int entryCount, int dimensions) {
         int valueCount = 0;
-        for (valueCount = (int)Math.pow((double)entryCount, 1.0 / (double)dimensions) + 1; lq.integerPower(valueCount, dimensions, (byte) 21) > entryCount; valueCount--) {
+        for (valueCount = (int)Math.pow((double)entryCount, 1.0 / (double)dimensions) + 1; IntegerPowerSupport.integerPower(valueCount, dimensions, (byte) 21) > entryCount; valueCount--) {
         }
         return valueCount;
     }

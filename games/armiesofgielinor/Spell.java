@@ -14,7 +14,7 @@ abstract class Spell {
     final static void a(String param0, byte param1) {
         try {
           if (param1 < 33) {
-            Spell.b(-9);
+            Spell.releaseStatics(-9);
           }
           if (null != FullscreenFocusCanvas.gameplayController) {
             FullscreenFocusCanvas.gameplayController.eventPresenters.clear(87);
@@ -23,8 +23,8 @@ abstract class Spell {
             SectorCacheStore.field_a.eventPresenters.clear(93);
           }
           Throwable var3 = (Throwable) null;
-          af.a((Throwable) null, -63, param0);
-          dj.a((byte) -124);
+          LoginCredentials.a((Throwable) null, -63, param0);
+          TextSplitSupport.a((byte) -124);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ik.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -34,10 +34,10 @@ abstract class Spell {
 
     abstract void prepareEffect(byte obfuscationGuard, Battlefield battlefield);
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_b = null;
-        if (param0 != -1700635440) {
-          Spell.b(-53);
+        if (obfuscationGuard != -1700635440) {
+          Spell.releaseStatics(-53);
           quickChatHelpDialog = null;
           field_a = null;
           return;

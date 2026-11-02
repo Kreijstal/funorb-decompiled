@@ -12,22 +12,22 @@ final class bt {
 
     final static void b(int param0) {
         if (param0 == 0) {
-          wb.stageLoginCredentials(true, (byte) 32, cd.field_e, qk.field_b);
-          se.field_f = true;
+          LoginCredentialStagingSupport.stageLoginCredentials(true, (byte) 32, cd.field_e, qk.field_b);
+          IgnoreRequestSupport.field_f = true;
           return;
         }
-        bt.c(83);
-        wb.stageLoginCredentials(true, (byte) 32, cd.field_e, qk.field_b);
-        se.field_f = true;
+        bt.releaseStatics(83);
+        LoginCredentialStagingSupport.stageLoginCredentials(true, (byte) 32, cd.field_e, qk.field_b);
+        IgnoreRequestSupport.field_f = true;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         quickChatShortcutLabels = null;
         field_e = null;
         field_d = null;
         field_a = null;
         field_b = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           bt.b(3);
         }
     }

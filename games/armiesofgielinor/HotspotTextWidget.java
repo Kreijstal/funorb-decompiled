@@ -7,7 +7,7 @@ class HotspotTextWidget extends InteractiveWidget {
     private String[] hotspotTooltips;
     static String field_O;
     private TextHotspotRegion hoveredHotspot;
-    static rn field_N;
+    static ProceduralMapSupport field_N;
 
     final void activate(int button, int pointerX, int pointerY, boolean notifyListener) {
         super.activate(button, pointerX, pointerY, notifyListener);
@@ -172,11 +172,11 @@ class HotspotTextWidget extends InteractiveWidget {
         this.rebuildHotspots(-128);
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_N = null;
         field_O = null;
-        if (!param0) {
-          field_N = (rn) null;
+        if (!obfuscationGuard) {
+          field_N = (ProceduralMapSupport) null;
         }
         decodedChatResponsePhraseIds = null;
     }
@@ -275,6 +275,6 @@ class HotspotTextWidget extends InteractiveWidget {
 
     static {
         field_O = "This unit has no magical ability.";
-        field_N = new rn();
+        field_N = new ProceduralMapSupport();
     }
 }

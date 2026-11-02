@@ -109,7 +109,7 @@ final class MatchConditionRegistry {
                   return stackIn_19_0;
                 }
               } else {
-                if (BattleViewportResizeHandler.field_h[var5].b(EditableTextField.field_Vb[var5][0], EditableTextField.field_Vb[var5][1], param1, param0)) {
+                if (BattleViewportResizeHandler.field_h[var5].isOpaqueAt(EditableTextField.field_Vb[var5][0], EditableTextField.field_Vb[var5][1], param1, param0)) {
                   stackIn_16_0 = var5;
                   return stackIn_16_0;
                 }
@@ -152,11 +152,11 @@ final class MatchConditionRegistry {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_d = null;
         field_a = null;
-        if (!param0) {
-          MatchConditionRegistry.a(true);
+        if (!obfuscationGuard) {
+          MatchConditionRegistry.releaseStatics(true);
         }
     }
 

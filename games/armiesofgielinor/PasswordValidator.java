@@ -36,15 +36,15 @@ final class PasswordValidator extends TextFieldValidator {
             return (String) (emptyDiagnostic);
           }
           passwordAlias = lowerPassword;
-          if (pd.hasInvalidPasswordLength(passwordAlias, 0)) {
+          if (PasswordLengthSupport.hasInvalidPasswordLength(passwordAlias, 0)) {
             lengthDiagnostic = SocialListPanel.field_Pb;
             return lengthDiagnostic;
           }
-          if (ab.containsNonAlphanumeric(passwordAlias, 0)) {
+          if (AlphanumericTextSupport.containsNonAlphanumeric(passwordAlias, 0)) {
             characterDiagnostic = CommunityTabGroup.field_c;
             return characterDiagnostic;
           }
-          if (ph.isAllSameCharacter(passwordAlias, (byte) 113)) {
+          if (AccountNameCharacterSupport.isAllSameCharacter(passwordAlias, (byte) 113)) {
             repeatedCharacterDiagnostic = CampaignMenu.field_v;
             return repeatedCharacterDiagnostic;
           }
@@ -57,10 +57,10 @@ final class PasswordValidator extends TextFieldValidator {
             return validNoNameDiagnostic;
           }
           if (DebouncedValidator.passwordContainsNameVariant(lowerName, passwordAlias, -76)) {
-            nameContainedDiagnostic = de.field_c;
+            nameContainedDiagnostic = SpellCastErrorSupport.field_c;
             return nameContainedDiagnostic;
           }
-          if (e.nameContainsPasswordVariant(-110, lowerName, passwordAlias)) {
+          if (QuickChatMenuCloseSupport.nameContainsPasswordVariant(-110, lowerName, passwordAlias)) {
             passwordContainedDiagnostic = er.field_b;
             return passwordContainedDiagnostic;
           }
@@ -68,7 +68,7 @@ final class PasswordValidator extends TextFieldValidator {
             validDiagnostic = SocialListPanel.field_Pb;
             return validDiagnostic;
           }
-          compactNameDiagnostic = de.field_c;
+          compactNameDiagnostic = SpellCastErrorSupport.field_c;
           return compactNameDiagnostic;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,20 +99,20 @@ final class PasswordValidator extends TextFieldValidator {
           lowerName = this.accountNameInput.text.toLowerCase();
           lowerPassword = text.toLowerCase();
           if (lowerPassword.length() == 0) {
-            emptyInvalidState = rn.validationInvalid;
+            emptyInvalidState = ProceduralMapSupport.validationInvalid;
             return emptyInvalidState;
           }
           if (obfuscationGuard != -3137) {
             field_j = 109;
           }
           if (!RegistrationAgreementPane.isPasswordAllowedForName(lowerPassword, lowerName, false)) {
-            nameInvalidState = rn.validationInvalid;
+            nameInvalidState = ProceduralMapSupport.validationInvalid;
             return nameInvalidState;
           }
           if (!this.containsEmailComponent(text, 127)) {
-            return oo.validationValid;
+            return MembershipExpansionScreen.validationValid;
           }
-          emailInvalidState = rn.validationInvalid;
+          emailInvalidState = ProceduralMapSupport.validationInvalid;
           return emailInvalidState;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -180,13 +180,13 @@ final class PasswordValidator extends TextFieldValidator {
         int var13Lifetime1Lifetime1;
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var9_int = fs.a(param3, 24340, param2, param8, param4, param5, param1);
+          var9_int = PrivateTextRecipientSupport.a(param3, 24340, param2, param8, param4, param5, param1);
           GradientUiRenderer.drawGradientFrame(param2, param8, param5, param1, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
           GradientUiRenderer.drawGradientFrame(param2 + 4, param8 + 4, param5 - 8, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
           GradientUiRenderer.drawGradientFrame(param2 + 4, -40 + (param1 + param8 - 4), -8 + param5, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
           if (var9_int == -3 &&
             param3 - param8 < 40 &&
-            0 < dd.field_e) {
+            0 < ArchiveMasterIndex.field_e) {
             if (!param0) {
               GradientUiRenderer.drawGradientFrame(8 + param2, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 128, true);
             } else {
@@ -197,7 +197,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           if (var9_int == -3 &&
             -param8 + param3 + 40 > param1 &&
-            NanoGameClock.field_q > dd.field_e) {
+            NanoGameClock.field_q > ArchiveMasterIndex.field_e) {
             if (param0) {
               GradientUiRenderer.drawGradientFrame(param2 + 8, param8 + (param1 - 40), -16 + param5, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true);
             } else {
@@ -208,22 +208,22 @@ final class PasswordValidator extends TextFieldValidator {
           }
           ClientConnectionState.field_a.drawWithOpacity(param2 + ((param5 >> 1) - 29), param8 + 14, 128);
           ClientConnectionState.field_a.drawWithOpacity(11 + ((param5 >> 1) + param2), 14 + param8, 128);
-          ClientConnectionState.field_a.c();
+          ClientConnectionState.field_a.flipVertically();
           ClientConnectionState.field_a.drawWithOpacity(-29 + param2 + (param5 >> 1), param7 + (param1 + param8 + 9), 128);
           ClientConnectionState.field_a.drawWithOpacity(11 + ((param5 >> 1) + param2), 9 + param1 + (param8 - 40), 128);
-          ClientConnectionState.field_a.c();
+          ClientConnectionState.field_a.flipVertically();
           if (AccountRegistrationForm.field_X < 0) {
             stackIn_18_0 = var9_int;
             return stackIn_18_0;
           }
-          var10 = param8 - (dd.field_e - 44);
+          var10 = param8 - (ArchiveMasterIndex.field_e - 44);
           var11 = 0;
-          if (od.field_c[AccountRegistrationForm.field_X]) {
+          if (ByteArrayPoolSupport.field_c[AccountRegistrationForm.field_X]) {
             var11 = -1;
           }
           var12_int = 0;
           scanLoop1: while (true) {
-            stackIn_25_0 = (!od.field_c[AccountRegistrationForm.field_X]) ? 0 : 1;
+            stackIn_25_0 = (!ByteArrayPoolSupport.field_c[AccountRegistrationForm.field_X]) ? 0 : 1;
             if (stackIn_25_0 + SectorCacheStore.field_j[AccountRegistrationForm.field_X].length > var12_int) {
               SoftwareRaster.setClip(8 + param2, 44 + param8, param2 + param5 - 8, param1 + (param8 - 40 - 4));
               if (var12_int % 2 != 1) {
@@ -236,7 +236,7 @@ final class PasswordValidator extends TextFieldValidator {
               if (var11 != param6) {
                 if (var9_int == var11) {
                   stackIn_40_0 = AccountRegistrationForm.field_X;
-                  stackIn_40_1 = pg.playerProfile.getUnlockLevel(param7 ^ -40);
+                  stackIn_40_1 = UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(param7 ^ -40);
                   stackIn_41_2 = !(2 > BufferedSocket.field_j);
                   if (!BufferedFile.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, BoundedFile.field_e[0])) {
                     GradientUiRenderer.drawGradientFrame(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, MoveAttackAction.field_x, 0, 128, false);
@@ -245,10 +245,10 @@ final class PasswordValidator extends TextFieldValidator {
                   }
                 } else {
                   stackIn_34_0 = AccountRegistrationForm.field_X;
-                  stackIn_34_1 = pg.playerProfile.getUnlockLevel(0);
+                  stackIn_34_1 = UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0);
                   stackIn_35_2 = !(BufferedSocket.field_j < 2);
                   if (!BufferedFile.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, BoundedFile.field_e[0])) {
-                    GradientUiRenderer.drawGradientFrame(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, dh.field_l, 0, 128, false);
+                    GradientUiRenderer.drawGradientFrame(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, ImageProducerSurface.field_l, 0, 128, false);
                   } else {
                     GradientUiRenderer.drawGradientFrame(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, AgeValidator.field_k, 0, 128, false);
                   }
@@ -287,7 +287,7 @@ final class PasswordValidator extends TextFieldValidator {
                       } else {
                         stackIn_77_1 = param5 / 2;
                       }
-                      ((IndexedSprite) (Object) stackIn_76_0).c(stackIn_77_1 + (param5 / 4 + param2) - (uh.field_e[2][0] >> 3), 40 + (var10 - (uh.field_e[2][1] >> 3)));
+                      ((IndexedSprite) (Object) stackIn_76_0).drawQuarterSize(stackIn_77_1 + (param5 / 4 + param2) - (uh.field_e[2][0] >> 3), 40 + (var10 - (uh.field_e[2][1] >> 3)));
                     } else {
                       if (AccountRegistrationForm.field_X == 3) {
                         stackIn_72_0 = SectorCacheStore.field_j[3][var11];
@@ -306,7 +306,7 @@ final class PasswordValidator extends TextFieldValidator {
                         } else {
                           stackIn_69_3 = 0;
                         }
-                        ((IndexedSprite) (Object) stackIn_68_0).d(stackIn_68_1 - (stackIn_68_2 - stackIn_69_3), var10 + 40 - (uh.field_e[AccountRegistrationForm.field_X][1] >> 2));
+                        ((IndexedSprite) (Object) stackIn_68_0).drawHalfSize(stackIn_68_1 - (stackIn_68_2 - stackIn_69_3), var10 + 40 - (uh.field_e[AccountRegistrationForm.field_X][1] >> 2));
                       }
                     }
                   } else {
@@ -319,7 +319,7 @@ final class PasswordValidator extends TextFieldValidator {
                     } else {
                       stackIn_63_4 = 0;
                     }
-                    ((IndexedSprite) (Object) stackIn_62_0).c(stackIn_62_1 + (stackIn_62_2 - (stackIn_62_3 - stackIn_63_4)), 40 + (var10 - (uh.field_e[1][1] >> 3)));
+                    ((IndexedSprite) (Object) stackIn_62_0).drawQuarterSize(stackIn_62_1 + (stackIn_62_2 - (stackIn_62_3 - stackIn_63_4)), 40 + (var10 - (uh.field_e[1][1] >> 3)));
                   }
                 }
                 if (MatchConditionEntry.a(80 + param1, (byte) 94) < var10) {
@@ -341,16 +341,16 @@ final class PasswordValidator extends TextFieldValidator {
             }
             break;
           }
-          SoftwareRaster.a();
+          SoftwareRaster.resetClip();
           if (AccountRegistrationForm.field_X > -1) {
             stackIn_87_0 = AccountRegistrationForm.field_X;
-            stackIn_87_1 = pg.playerProfile.getUnlockLevel(0);
+            stackIn_87_1 = UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0);
             stackIn_88_2 = !(BufferedSocket.field_j < 2);
             if (!BufferedFile.a(stackIn_87_0, stackIn_87_1, stackIn_88_2, var9_int, -1208926000, BoundedFile.field_e[0])) {
               param4 += 10;
               param3 += 30;
               var12 = null;
-              if (el.field_f[AccountRegistrationForm.field_X][var9_int] <= pg.playerProfile.getUnlockLevel(param7 ^ -40)) {
+              if (MouseWheelSource.field_f[AccountRegistrationForm.field_X][var9_int] <= UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(param7 ^ -40)) {
                 if (ve.field_a[AccountRegistrationForm.field_X][var9_int] < 0) {
                   var12 = "Unavailable to lowly players";
                 } else {
@@ -362,32 +362,32 @@ final class PasswordValidator extends TextFieldValidator {
                       if (0 != (1 << var18 & ve.field_a[AccountRegistrationForm.field_X][var9_int])) {
                         if (var13Lifetime1 != 0 &&
                           var12 != null) {
-                          var12 = EmailCheckResult.a(param7 + 4840, ModalDialogHost.field_L, new String[]{(String) (var12), so.field_a[var18]});
+                          var12 = EmailCheckResult.a(param7 + 4840, ModalDialogHost.field_L, new String[]{(String) (var12), FixedSquareRootSupport.field_a[var18]});
                         } else {
-                          var12 = so.field_a[var18];
+                          var12 = FixedSquareRootSupport.field_a[var18];
                         }
                         var13Lifetime1 = 1;
                       }
                       var18++;
                     }
                   } else {
-                    var12 = vs.field_i;
+                    var12 = QuickChatMenuDisplaySupport.field_i;
                   }
                 }
               } else {
-                var12 = EmailCheckResult.a(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(el.field_f[AccountRegistrationForm.field_X][var9_int])});
+                var12 = EmailCheckResult.a(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(MouseWheelSource.field_f[AccountRegistrationForm.field_X][var9_int])});
               }
               if (var12 != null) {
                 var19 = EmailCheckResult.a(4800, BattlefieldTheme.field_s, new String[]{(String) (var12)});
                 var12 = var19;
                 var13Lifetime1Lifetime1 = DateInputWidget.field_E.textWidth(var19);
-                if (var13Lifetime1Lifetime1 + param4 > db.a(true, 620)) {
-                  param4 = db.a(true, 620) - var13Lifetime1Lifetime1;
+                if (var13Lifetime1Lifetime1 + param4 > IgnoreListLookupSupport.a(true, 620)) {
+                  param4 = IgnoreListLookupSupport.a(true, 620) - var13Lifetime1Lifetime1;
                 }
                 if (10 + param3 > MatchConditionEntry.a(480, (byte) 94)) {
                   param3 -= 30;
                 }
-                SoftwareRaster.a(-6 + param4, param3 - 11, var13Lifetime1Lifetime1 + 12, 15, 5, 0, 128);
+                SoftwareRaster.fillRoundedRectangleBlended(-6 + param4, param3 - 11, var13Lifetime1Lifetime1 + 12, 15, 5, 0, 128);
                 DateInputWidget.field_E.drawText((String) (var12), param4, param3, 16777215, -1);
               }
             }

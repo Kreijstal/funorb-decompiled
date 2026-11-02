@@ -9,10 +9,10 @@ final class HelloConsoleCommand extends ConsoleCommand {
           return true;
         }
         if (param1 == -98) {
-          return (hf.field_a & 1 << param0) != 0 ? true : false;
+          return (ClientStateChecksumSupport.field_a & 1 << param0) != 0 ? true : false;
         }
         field_E = (String) null;
-        return (hf.field_a & 1 << param0) != 0 ? true : false;
+        return (ClientStateChecksumSupport.field_a & 1 << param0) != 0 ? true : false;
     }
 
     final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5) {
@@ -38,7 +38,7 @@ final class HelloConsoleCommand extends ConsoleCommand {
         RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard == -24872) {
-            result = new ConsoleValue(vv.consoleGreeting((byte) -62));
+            result = new ConsoleValue(ConsoleTokenSupport.consoleGreeting((byte) -62));
             return result;
           }
           guardResult = (ConsoleValue) null;
@@ -57,9 +57,9 @@ final class HelloConsoleCommand extends ConsoleCommand {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_E = null;
-        if (param0 > -14) {
+        if (obfuscationGuard > -14) {
           field_E = (String) null;
         }
     }

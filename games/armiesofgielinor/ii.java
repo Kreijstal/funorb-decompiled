@@ -6,9 +6,9 @@ final class ii {
     static int campaignPacketWord1;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_c = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           return;
         }
         field_a = null;

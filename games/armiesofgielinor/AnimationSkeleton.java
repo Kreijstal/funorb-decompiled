@@ -13,12 +13,12 @@ final class AnimationSkeleton extends IntrusiveNode {
     int[] transformMasks;
     int transformCount;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_m = null;
         effectsMixer = null;
         field_t = null;
         field_r = null;
-        if (param0 < 1) {
+        if (obfuscationGuard < 1) {
           field_m = (String) null;
         }
     }
@@ -102,7 +102,7 @@ final class AnimationSkeleton extends IntrusiveNode {
           String var2 = (String) null;
           AnimationSkeleton.addExceptionContext((Throwable) null, (String) null);
         }
-        return da.a(23660, CombatEvent.d((byte) 16));
+        return LocalAccountSupport.a(23660, CombatEvent.d((byte) 16));
     }
 
     static {

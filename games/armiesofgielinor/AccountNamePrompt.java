@@ -12,12 +12,12 @@ final class AccountNamePrompt extends ClientUiComponent {
     static String field_Jb;
     static String field_Ob;
 
-    public static void k(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_Jb = null;
         field_Pb = null;
         field_Ib = null;
         field_Nb = null;
-        if (param0 == 0) {
+        if (obfuscationGuard == 0) {
           field_Ob = null;
           return;
         }
@@ -64,7 +64,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             this.pollInput(false, true);
             return this.pendingResult;
           }
-          if (rs.keyCode == 85 &&
+          if (PowerOfTwoSupport.keyCode == 85 &&
             this.nameBuffer.length() > 0) {
             PortalLossCondition.a(' ', -1 + this.nameBuffer.length(), this.nameBuffer, true);
           }
@@ -85,8 +85,8 @@ final class AccountNamePrompt extends ClientUiComponent {
               }
             }
           }
-          if (rs.keyCode != 84) {
-            if (rs.keyCode != 13) {
+          if (PowerOfTwoSupport.keyCode != 84) {
+            if (PowerOfTwoSupport.keyCode != 13) {
               continue;
             }
             return 1;
@@ -119,9 +119,9 @@ final class AccountNamePrompt extends ClientUiComponent {
         if (0 != this.pendingResult) {
           return false;
         }
-        if (rs.keyCode != 85) {
+        if (PowerOfTwoSupport.keyCode != 85) {
           if (this.nameBuffer.length() >= 12) {
-            if (84 == rs.keyCode) {
+            if (84 == PowerOfTwoSupport.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -129,7 +129,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.keyCode == 13) {
+            if (PowerOfTwoSupport.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard != -101) {
@@ -152,7 +152,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           }
           if (MeshObject.a((byte) -125, (char) var2)) {
             discarded$10 = this.nameBuffer.append((char) var2);
-            if (84 == rs.keyCode) {
+            if (84 == PowerOfTwoSupport.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -160,7 +160,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.keyCode == 13) {
+            if (PowerOfTwoSupport.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard != -101) {
@@ -169,7 +169,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             return true;
           }
           if (!mu.a(28799, (char) var2)) {
-            if (84 == rs.keyCode) {
+            if (84 == PowerOfTwoSupport.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -177,7 +177,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.keyCode == 13) {
+            if (PowerOfTwoSupport.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard != -101) {
@@ -186,7 +186,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             return true;
           }
           discarded$11 = this.nameBuffer.append((char) var2);
-          if (84 == rs.keyCode) {
+          if (84 == PowerOfTwoSupport.keyCode) {
             if (this.nameBuffer.length() <= 0) {
               this.pendingResult = 1;
             } else {
@@ -194,7 +194,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               this.pendingResult = 2;
             }
           }
-          if (rs.keyCode == 13) {
+          if (PowerOfTwoSupport.keyCode == 13) {
             this.pendingResult = 1;
           }
           if (obfuscationGuard != -101) {
@@ -204,7 +204,7 @@ final class AccountNamePrompt extends ClientUiComponent {
         }
         if (this.nameBuffer.length() <= 0) {
           if (this.nameBuffer.length() >= 12) {
-            if (84 == rs.keyCode) {
+            if (84 == PowerOfTwoSupport.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -212,7 +212,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.keyCode == 13) {
+            if (PowerOfTwoSupport.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard == -101) {
@@ -235,7 +235,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           }
           if (MeshObject.a((byte) -125, (char) var2Lifetime1)) {
             discarded$6 = this.nameBuffer.append((char) var2Lifetime1);
-            if (84 == rs.keyCode) {
+            if (84 == PowerOfTwoSupport.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -243,7 +243,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.keyCode == 13) {
+            if (PowerOfTwoSupport.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard != -101) {
@@ -252,7 +252,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             return true;
           }
           if (!mu.a(28799, (char) var2Lifetime1)) {
-            if (84 == rs.keyCode) {
+            if (84 == PowerOfTwoSupport.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -260,7 +260,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.keyCode == 13) {
+            if (PowerOfTwoSupport.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard != -101) {
@@ -269,7 +269,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             return true;
           }
           discarded$7 = this.nameBuffer.append((char) var2Lifetime1);
-          if (84 == rs.keyCode) {
+          if (84 == PowerOfTwoSupport.keyCode) {
             if (this.nameBuffer.length() <= 0) {
               this.pendingResult = 1;
             } else {
@@ -277,7 +277,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               this.pendingResult = 2;
             }
           }
-          if (rs.keyCode == 13) {
+          if (PowerOfTwoSupport.keyCode == 13) {
             this.pendingResult = 1;
           }
           if (obfuscationGuard == -101) {
@@ -287,7 +287,7 @@ final class AccountNamePrompt extends ClientUiComponent {
         }
         PortalLossCondition.a(' ', this.nameBuffer.length() - 1, this.nameBuffer, true);
         if (this.nameBuffer.length() >= 12) {
-          if (84 == rs.keyCode) {
+          if (84 == PowerOfTwoSupport.keyCode) {
             if (this.nameBuffer.length() <= 0) {
               this.pendingResult = 1;
             } else {
@@ -295,7 +295,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               this.pendingResult = 2;
             }
           }
-          if (rs.keyCode == 13) {
+          if (PowerOfTwoSupport.keyCode == 13) {
             this.pendingResult = 1;
           }
           if (obfuscationGuard == -101) {
@@ -318,7 +318,7 @@ final class AccountNamePrompt extends ClientUiComponent {
         }
         if (MeshObject.a((byte) -125, (char) var2Lifetime2)) {
           discarded$2 = this.nameBuffer.append((char) var2Lifetime2);
-          if (84 == rs.keyCode) {
+          if (84 == PowerOfTwoSupport.keyCode) {
             if (this.nameBuffer.length() <= 0) {
               this.pendingResult = 1;
             } else {
@@ -326,7 +326,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               this.pendingResult = 2;
             }
           }
-          if (rs.keyCode == 13) {
+          if (PowerOfTwoSupport.keyCode == 13) {
             this.pendingResult = 1;
           }
           if (obfuscationGuard == -101) {
@@ -335,7 +335,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           return false;
         }
         if (!mu.a(28799, (char) var2Lifetime2)) {
-          if (84 == rs.keyCode) {
+          if (84 == PowerOfTwoSupport.keyCode) {
             if (this.nameBuffer.length() <= 0) {
               this.pendingResult = 1;
             } else {
@@ -343,7 +343,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               this.pendingResult = 2;
             }
           }
-          if (rs.keyCode == 13) {
+          if (PowerOfTwoSupport.keyCode == 13) {
             this.pendingResult = 1;
           }
           if (obfuscationGuard == -101) {
@@ -352,7 +352,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           return false;
         }
         discarded$3 = this.nameBuffer.append((char) var2Lifetime2);
-        if (84 == rs.keyCode) {
+        if (84 == PowerOfTwoSupport.keyCode) {
           if (this.nameBuffer.length() <= 0) {
             this.pendingResult = 1;
           } else {
@@ -360,7 +360,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             this.pendingResult = 2;
           }
         }
-        if (rs.keyCode == 13) {
+        if (PowerOfTwoSupport.keyCode == 13) {
           this.pendingResult = 1;
         }
         if (obfuscationGuard == -101) {
@@ -401,8 +401,8 @@ final class AccountNamePrompt extends ClientUiComponent {
           this.inputComponent.setBounds(jn.field_d, -20500, var9_int, 3 + jn.field_d, 5);
           var10 = var9_int + 5 + 5;
           var11 = 3 + (2 * jn.field_d + 3);
-          var12 = jp.a(anchorX, anchorWidth, var10, -1);
-          var13 = pd.a(var11, 0, anchorY, anchorHeight);
+          var12 = ArchiveLoadSequence.a(anchorX, anchorWidth, var10, -1);
+          var13 = PasswordLengthSupport.a(var11, 0, anchorY, anchorHeight);
           this.setBounds(var11, -20500, var10, var13, var12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

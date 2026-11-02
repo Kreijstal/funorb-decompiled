@@ -68,17 +68,17 @@ final class SpellCastRequest extends ActionRequest {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        if (vi.field_a == null) {
+        if (MonotonicClockSupport.field_a == null) {
           return;
         }
-        if (0 == vi.field_a.length) {
+        if (0 == MonotonicClockSupport.field_a.length) {
           return;
         }
         if (param0 < 0) {
           return;
         }
-        if (param0 < vi.field_a.length) {
-          we.playSoundAtVolume(100, param2, vi.field_a[param0]);
+        if (param0 < MonotonicClockSupport.field_a.length) {
+          ArchiveLoadStep.playSoundAtVolume(100, param2, MonotonicClockSupport.field_a[param0]);
           int var3 = -110 / ((-58 - param1) / 63);
           return;
         }
@@ -96,7 +96,7 @@ final class SpellCastRequest extends ActionRequest {
             KingBlackDragonEvent.field_C.showDialog(PointerInputHandler.field_a, param3 + 1);
           }
           PointerInputHandler.field_a.setProgress(param1, 30, param0, param2);
-          SoftwareRaster.b();
+          SoftwareRaster.clearPixels();
           DamageEvent.b((byte) 92, true);
           if (param3 == -1) {
             return;

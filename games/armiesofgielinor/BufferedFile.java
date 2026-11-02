@@ -39,7 +39,7 @@ final class BufferedFile {
         if (param4 != -1208926000) {
           field_a = (String) null;
         }
-        if (param1 < el.field_f[param0][param3]) {
+        if (param1 < MouseWheelSource.field_f[param0][param3]) {
           return false;
         }
         if (ve.field_a[param0][param3] < 0) {
@@ -83,7 +83,7 @@ final class BufferedFile {
             if (this.writeBufferStart != -1L &&
               this.writeBufferStart + (long)this.writeBuffer.length < this.position + (long)length) {
               var5_int = (int)(-this.position + this.writeBufferStart + (long)this.writeBuffer.length);
-              vm.a(source, sourceOffset, this.writeBuffer, (int)(-this.writeBufferStart + this.position), var5_int);
+              ArrayBlockSupport.copyBytes(source, sourceOffset, this.writeBuffer, (int)(-this.writeBufferStart + this.position), var5_int);
               sourceOffset = sourceOffset + var5_int;
               this.position = this.position + (long)var5_int;
               length = length - var5_int;
@@ -100,7 +100,7 @@ final class BufferedFile {
               if (this.writeBufferStart == -1L) {
                 this.writeBufferStart = this.position;
               }
-              vm.a(source, sourceOffset, this.writeBuffer, (int)(-this.writeBufferStart + this.position), length);
+              ArrayBlockSupport.copyBytes(source, sourceOffset, this.writeBuffer, (int)(-this.writeBufferStart + this.position), length);
               this.position = this.position + (long)length;
               if ((this.position - this.writeBufferStart) > (long)this.writeBufferLength) {
                 this.writeBufferLength = (int)(-this.writeBufferStart + this.position);
@@ -139,7 +139,7 @@ final class BufferedFile {
             if (var5_long > -1L &&
               var5_long < var7) {
               var9 = (int)(-var5_long + var7);
-              vm.a(source, (int)(-this.position + ((long)sourceOffset + var5_long)), this.readBuffer, (int)(var5_long - this.readBufferStart), var9);
+              ArrayBlockSupport.copyBytes(source, (int)(-this.position + ((long)sourceOffset + var5_long)), this.readBuffer, (int)(var5_long - this.readBufferStart), var9);
             }
             this.position = this.position + (long)length;
             return;
@@ -182,10 +182,10 @@ final class BufferedFile {
             stackIn_2_0 = (AntialiasedBitmapFont) null;
             return stackIn_2_0;
           }
-          if (!kp.decodeSpriteSheetFromArchive(false, param1, param0, param4)) {
+          if (!MarkerSliderPainter.decodeSpriteSheetFromArchive(false, param1, param0, param4)) {
             return null;
           }
-          stackIn_7_0 = lq.a(param2.getFile((byte) 103, param4, param1), 0);
+          stackIn_7_0 = IntegerPowerSupport.a(param2.getFile((byte) 103, param4, param1), 0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -207,8 +207,8 @@ final class BufferedFile {
         }
     }
 
-    public static void b(byte param0) {
-        if (param0 <= 40) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard <= 40) {
           field_k = (RgbSprite[]) null;
         }
         field_a = null;
@@ -234,7 +234,7 @@ final class BufferedFile {
 
     final static RgbSprite[] a(int param0, int param1, int param2, int param3) {
         if (param2 != 1) {
-          BufferedFile.b((byte) 15);
+          BufferedFile.releaseStatics((byte) 15);
         }
         return CampaignMenuEntry.a(param1, 1, param0, (byte) 58, param3);
     }
@@ -267,7 +267,7 @@ final class BufferedFile {
             if (this.writeBufferStart != -1L &&
               this.writeBufferStart <= this.position &&
               ((long)this.writeBufferLength + this.writeBufferStart) >= ((long)length + this.position)) {
-              vm.a(this.writeBuffer, (int)(-this.writeBufferStart + this.position), destination, destinationOffset, length);
+              ArrayBlockSupport.copyBytes(this.writeBuffer, (int)(-this.writeBufferStart + this.position), destination, destinationOffset, length);
               this.position = this.position + (long)length;
               return;
             }
@@ -280,7 +280,7 @@ final class BufferedFile {
               if (length < var9_int) {
                 var9_int = length;
               }
-              vm.a(this.readBuffer, (int)(-this.readBufferStart + this.position), destination, destinationOffset, var9_int);
+              ArrayBlockSupport.copyBytes(this.readBuffer, (int)(-this.readBufferStart + this.position), destination, destinationOffset, var9_int);
               destinationOffset = destinationOffset + var9_int;
               length = length - var9_int;
               this.position = this.position + (long)var9_int;
@@ -311,7 +311,7 @@ final class BufferedFile {
               if (this.readBufferLength < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.readBufferLength;
               }
-              vm.a(this.readBuffer, 0, destination, destinationOffset, var9_intLifetime1Lifetime1);
+              ArrayBlockSupport.copyBytes(this.readBuffer, 0, destination, destinationOffset, var9_intLifetime1Lifetime1);
               length = length - var9_intLifetime1Lifetime1;
               destinationOffset = destinationOffset + var9_intLifetime1Lifetime1;
               this.position = this.position + (long)var9_intLifetime1Lifetime1;
@@ -354,7 +354,7 @@ final class BufferedFile {
               if (var9 > -1L &&
                 var11 > var9) {
                 var13 = (int)(-var9 + var11);
-                vm.a(this.writeBuffer, (int)(-this.writeBufferStart + var9), destination, (int)(-var5_long + var9) + var7, var13);
+                ArrayBlockSupport.copyBytes(this.writeBuffer, (int)(-this.writeBufferStart + var9), destination, (int)(-var5_long + var9) + var7, var13);
                 if (var11 > this.position) {
                   length = (int)((long)length - (var11 - this.position));
                   this.position = var11;
@@ -430,7 +430,7 @@ final class BufferedFile {
     }
 
     final static void a(byte param0) {
-        t.field_c = NameSuggestionList.k(5);
+        ReloadPageSupport.field_c = NameSuggestionList.k(5);
         if (param0 < 78) {
           BufferedFile.a(59, -15, 35, -65);
         }
@@ -480,7 +480,7 @@ final class BufferedFile {
           if (var2 > -1L &&
             var4 > var2) {
             var6 = (int)(var4 - var2);
-            vm.a(this.writeBuffer, (int)(-this.writeBufferStart + var2), this.readBuffer, (int)(var2 - this.readBufferStart), var6);
+            ArrayBlockSupport.copyBytes(this.writeBuffer, (int)(-this.writeBufferStart + var2), this.readBuffer, (int)(var2 - this.readBufferStart), var6);
           }
           this.writeBufferStart = -1L;
           this.writeBufferLength = 0;

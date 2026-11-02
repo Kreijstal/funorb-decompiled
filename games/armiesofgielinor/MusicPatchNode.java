@@ -30,13 +30,13 @@ final class MusicPatchNode extends IntrusiveNode {
     int ageTicks;
     MusicPatchEnvelope envelope;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_r = null;
         field_z = null;
         field_k = null;
         field_C = null;
         field_G = null;
-        if (param0 != 9480) {
+        if (obfuscationGuard != 9480) {
           MusicPatchNode.f(69);
         }
     }
@@ -49,12 +49,12 @@ final class MusicPatchNode extends IntrusiveNode {
           this.envelope = null;
           return;
         }
-        MusicPatchNode.a(-82);
+        MusicPatchNode.releaseStatics(-82);
         this.envelope = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        jv.field_c = param2;
+        SoundPanSupport.field_c = param2;
         DualNodeDeque.field_g = param1;
         ActionRequest.field_n = param0;
         if (param3 != 3815) {
@@ -64,7 +64,7 @@ final class MusicPatchNode extends IntrusiveNode {
 
     final static void f(int param0) {
         if (param0 != -28093) {
-          MusicPatchNode.a(38);
+          MusicPatchNode.releaseStatics(38);
           BufferedFile.a((byte) 102);
           return;
         }

@@ -39,12 +39,12 @@ final class HuffmanCodec {
         return var3Lifetime1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_j = null;
         field_e = null;
         field_f = null;
         field_g = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           field_d = (String) null;
         }
         field_i = null;
@@ -57,11 +57,11 @@ final class HuffmanCodec {
             NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
             NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
             NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
-            DropTargetWidgetContainer.field_J.b();
-            SoftwareRaster.b();
+            DropTargetWidgetContainer.field_J.bindAsRasterTarget();
+            SoftwareRaster.clearPixels();
             gq.b(SectorCacheStore.field_j[3][0], 0, 0, param1);
             GradientUiRenderer.drawCenteredSolidText(DeployRequest.a(param2, (byte) 42), uh.field_e[3][0] >> 1, 20 + (uh.field_e[3][1] >> 1), 2, true);
-            NumericDateInputWidget.field_P.b();
+            NumericDateInputWidget.field_P.bindAsRasterTarget();
             DropTargetWidgetContainer.field_J.drawHalfSize(param0, param5);
           } else {
             gq.b(SectorCacheStore.field_j[3][0], param0, param5, param1);

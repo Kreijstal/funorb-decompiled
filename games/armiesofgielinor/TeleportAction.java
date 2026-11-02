@@ -94,12 +94,12 @@ final class TeleportAction extends PreparedAction {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_C = null;
         field_x = null;
         field_u = null;
         field_B = null;
-        if (param0) {
+        if (obfuscationGuard) {
           return;
         }
         contentFadeOutStage = null;

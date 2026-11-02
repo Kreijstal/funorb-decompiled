@@ -285,7 +285,7 @@ class MidiPcmStream extends PcmStream {
 
     private final void setDefaultProgram(int program, int channel, boolean obfuscationGuard) {
         this.channelDefaultPrograms[channel] = program;
-        this.channelBanks[channel] = rn.bitwiseAnd(-128, program);
+        this.channelBanks[channel] = ProceduralMapSupport.bitwiseAnd(-128, program);
         this.selectProgram(channel, (byte) 114, program);
         if (!obfuscationGuard) {
           this.playbackTime = -32L;
@@ -511,9 +511,9 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_G = null;
-        if (param0 != -128) {
+        if (obfuscationGuard != -128) {
           field_X = (String) null;
         }
         field_H = null;
@@ -952,67 +952,67 @@ class MidiPcmStream extends PcmStream {
         controller = (message & 32599) >> 8;
         controlValue = 127 & message >> 16;
         if (0 == controller) {
-          this.channelBanks[controlChannel] = rn.bitwiseAnd(-2080769, this.channelBanks[controlChannel]) + (controlValue << 14);
+          this.channelBanks[controlChannel] = ProceduralMapSupport.bitwiseAnd(-2080769, this.channelBanks[controlChannel]) + (controlValue << 14);
         }
         if (controller == 32) {
-          this.channelBanks[controlChannel] = (controlValue << 7) + rn.bitwiseAnd(this.channelBanks[controlChannel], -16257);
+          this.channelBanks[controlChannel] = (controlValue << 7) + ProceduralMapSupport.bitwiseAnd(this.channelBanks[controlChannel], -16257);
         }
         if (controller == 1) {
-          this.channelModulation[controlChannel] = rn.bitwiseAnd(this.channelModulation[controlChannel], -16257) + (controlValue << 7);
+          this.channelModulation[controlChannel] = ProceduralMapSupport.bitwiseAnd(this.channelModulation[controlChannel], -16257) + (controlValue << 7);
         }
         if (controller == 33) {
-          this.channelModulation[controlChannel] = rn.bitwiseAnd(this.channelModulation[controlChannel], -128) + controlValue;
+          this.channelModulation[controlChannel] = ProceduralMapSupport.bitwiseAnd(this.channelModulation[controlChannel], -128) + controlValue;
         }
         if (5 == controller) {
-          this.channelPortamentoTime[controlChannel] = rn.bitwiseAnd(-16257, this.channelPortamentoTime[controlChannel]) + (controlValue << 7);
+          this.channelPortamentoTime[controlChannel] = ProceduralMapSupport.bitwiseAnd(-16257, this.channelPortamentoTime[controlChannel]) + (controlValue << 7);
         }
         if (37 == controller) {
-          this.channelPortamentoTime[controlChannel] = controlValue + rn.bitwiseAnd(this.channelPortamentoTime[controlChannel], -128);
+          this.channelPortamentoTime[controlChannel] = controlValue + ProceduralMapSupport.bitwiseAnd(this.channelPortamentoTime[controlChannel], -128);
         }
         if (7 == controller) {
-          this.channelVolume[controlChannel] = (controlValue << 7) + rn.bitwiseAnd(-16257, this.channelVolume[controlChannel]);
+          this.channelVolume[controlChannel] = (controlValue << 7) + ProceduralMapSupport.bitwiseAnd(-16257, this.channelVolume[controlChannel]);
         }
         if (controller == 39) {
-          this.channelVolume[controlChannel] = controlValue + rn.bitwiseAnd(-128, this.channelVolume[controlChannel]);
+          this.channelVolume[controlChannel] = controlValue + ProceduralMapSupport.bitwiseAnd(-128, this.channelVolume[controlChannel]);
         }
         if (10 == controller) {
-          this.channelPan[controlChannel] = rn.bitwiseAnd(-16257, this.channelPan[controlChannel]) + (controlValue << 7);
+          this.channelPan[controlChannel] = ProceduralMapSupport.bitwiseAnd(-16257, this.channelPan[controlChannel]) + (controlValue << 7);
         }
         if (controller == 42) {
-          this.channelPan[controlChannel] = controlValue + rn.bitwiseAnd(this.channelPan[controlChannel], -128);
+          this.channelPan[controlChannel] = controlValue + ProceduralMapSupport.bitwiseAnd(this.channelPan[controlChannel], -128);
         }
         if (controller == 11) {
-          this.channelExpression[controlChannel] = rn.bitwiseAnd(this.channelExpression[controlChannel], -16257) + (controlValue << 7);
+          this.channelExpression[controlChannel] = ProceduralMapSupport.bitwiseAnd(this.channelExpression[controlChannel], -16257) + (controlValue << 7);
         }
         if (controller == 43) {
-          this.channelExpression[controlChannel] = rn.bitwiseAnd(-128, this.channelExpression[controlChannel]) + controlValue;
+          this.channelExpression[controlChannel] = ProceduralMapSupport.bitwiseAnd(-128, this.channelExpression[controlChannel]) + controlValue;
         }
         if (controller == 64) {
           if (controlValue >= 64) {
             this.channelFlags[controlChannel] = AccountRegistrationDialog.bitwiseOr(this.channelFlags[controlChannel], 1);
           } else {
-            this.channelFlags[controlChannel] = rn.bitwiseAnd(this.channelFlags[controlChannel], -2);
+            this.channelFlags[controlChannel] = ProceduralMapSupport.bitwiseAnd(this.channelFlags[controlChannel], -2);
           }
         }
         if (controller == 65) {
           if (controlValue < 64) {
             this.releasePortamentoNotes(false, controlChannel);
-            this.channelFlags[controlChannel] = rn.bitwiseAnd(this.channelFlags[controlChannel], -3);
+            this.channelFlags[controlChannel] = ProceduralMapSupport.bitwiseAnd(this.channelFlags[controlChannel], -3);
           } else {
             this.channelFlags[controlChannel] = AccountRegistrationDialog.bitwiseOr(this.channelFlags[controlChannel], 2);
           }
         }
         if (controller == 99) {
-          this.channelParameterSelection[controlChannel] = rn.bitwiseAnd(127, this.channelParameterSelection[controlChannel]) + (controlValue << 7);
+          this.channelParameterSelection[controlChannel] = ProceduralMapSupport.bitwiseAnd(127, this.channelParameterSelection[controlChannel]) + (controlValue << 7);
         }
         if (controller == 98) {
-          this.channelParameterSelection[controlChannel] = rn.bitwiseAnd(16256, this.channelParameterSelection[controlChannel]) + controlValue;
+          this.channelParameterSelection[controlChannel] = ProceduralMapSupport.bitwiseAnd(16256, this.channelParameterSelection[controlChannel]) + controlValue;
         }
         if (controller == 101) {
-          this.channelParameterSelection[controlChannel] = 16384 - (-rn.bitwiseAnd(127, this.channelParameterSelection[controlChannel]) - (controlValue << 7));
+          this.channelParameterSelection[controlChannel] = 16384 - (-ProceduralMapSupport.bitwiseAnd(127, this.channelParameterSelection[controlChannel]) - (controlValue << 7));
         }
         if (controller == 100) {
-          this.channelParameterSelection[controlChannel] = controlValue + (rn.bitwiseAnd(this.channelParameterSelection[controlChannel], 16256) + 16384);
+          this.channelParameterSelection[controlChannel] = controlValue + (ProceduralMapSupport.bitwiseAnd(this.channelParameterSelection[controlChannel], 16256) + 16384);
         }
         if (controller == 120) {
           this.allSoundOff(-23024, controlChannel);
@@ -1026,25 +1026,25 @@ class MidiPcmStream extends PcmStream {
         if (controller == 6) {
           selectedParameter = this.channelParameterSelection[controlChannel];
           if (16384 == selectedParameter) {
-            this.channelPitchBendSensitivity[controlChannel] = rn.bitwiseAnd(-16257, this.channelPitchBendSensitivity[controlChannel]) + (controlValue << 7);
+            this.channelPitchBendSensitivity[controlChannel] = ProceduralMapSupport.bitwiseAnd(-16257, this.channelPitchBendSensitivity[controlChannel]) + (controlValue << 7);
           }
         }
         if (38 == controller) {
           fineSelectedParameter = this.channelParameterSelection[controlChannel];
           if (fineSelectedParameter == 16384) {
-            this.channelPitchBendSensitivity[controlChannel] = controlValue + rn.bitwiseAnd(-128, this.channelPitchBendSensitivity[controlChannel]);
+            this.channelPitchBendSensitivity[controlChannel] = controlValue + ProceduralMapSupport.bitwiseAnd(-128, this.channelPitchBendSensitivity[controlChannel]);
           }
         }
         if (16 == controller) {
-          this.channelSampleOffsets[controlChannel] = rn.bitwiseAnd(-16257, this.channelSampleOffsets[controlChannel]) + (controlValue << 7);
+          this.channelSampleOffsets[controlChannel] = ProceduralMapSupport.bitwiseAnd(-16257, this.channelSampleOffsets[controlChannel]) + (controlValue << 7);
         }
         if (controller == 48) {
-          this.channelSampleOffsets[controlChannel] = controlValue + rn.bitwiseAnd(this.channelSampleOffsets[controlChannel], -128);
+          this.channelSampleOffsets[controlChannel] = controlValue + ProceduralMapSupport.bitwiseAnd(this.channelSampleOffsets[controlChannel], -128);
         }
         if (controller == 81) {
           if (controlValue < 64) {
             this.resetRetriggerPhases(controlChannel, (byte) -66);
-            this.channelFlags[controlChannel] = rn.bitwiseAnd(this.channelFlags[controlChannel], -5);
+            this.channelFlags[controlChannel] = ProceduralMapSupport.bitwiseAnd(this.channelFlags[controlChannel], -5);
           } else {
             this.channelFlags[controlChannel] = AccountRegistrationDialog.bitwiseOr(this.channelFlags[controlChannel], 4);
           }
@@ -1312,7 +1312,7 @@ class MidiPcmStream extends PcmStream {
         int bankChannel = 0;
         unusedBankChannel = bankChannel;
         while (bankChannel < 16) {
-          this.channelBanks[bankChannel] = rn.bitwiseAnd(this.channelDefaultPrograms[bankChannel], -128);
+          this.channelBanks[bankChannel] = ProceduralMapSupport.bitwiseAnd(this.channelDefaultPrograms[bankChannel], -128);
           bankChannel++;
         }
     }

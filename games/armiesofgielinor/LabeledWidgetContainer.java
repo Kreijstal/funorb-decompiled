@@ -35,8 +35,8 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
         return guardTooltip;
     }
 
-    public static void j(int param0) {
-        if (param0 != -12819) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != -12819) {
           return;
         }
         field_O = null;

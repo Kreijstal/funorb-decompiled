@@ -13,8 +13,8 @@ final class GrowthEvent extends GameEvent {
     int tileY;
     static String field_I;
 
-    public static void g(int param0) {
-        if (param0 <= -5) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard <= -5) {
           field_E = null;
           field_I = null;
           field_B = null;
@@ -50,7 +50,7 @@ final class GrowthEvent extends GameEvent {
           if (var6 != null) {
             var6.movementSpent = true;
           }
-          fl.recomputeClientStateChecksum(battlefield, obfuscationGuard ^ 26716);
+          WidgetTheme.recomputeClientStateChecksum(battlefield, obfuscationGuard ^ 26716);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kf.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

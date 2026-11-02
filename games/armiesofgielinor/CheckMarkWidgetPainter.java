@@ -1,0 +1,119 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class CheckMarkWidgetPainter implements WidgetPainter {
+    static String field_b;
+    static DualNodeHashTable lobbyPlayersById;
+    static String[] field_a;
+    static ArchiveMasterIndex field_c;
+
+    public static void releaseStatics(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
+          return;
+        }
+        lobbyPlayersById = null;
+        field_c = null;
+        field_b = null;
+        field_a = null;
+    }
+
+    final static LoginCredentials a(String param0, String param1, boolean param2, int param3, long param4) {
+        RuntimeException var6 = null;
+        oq stackIn_6_0 = null;
+        PasswordLoginCredentials stackIn_8_0 = null;
+        KeyedLoginCredentials stackIn_12_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param4 == 0L &&
+            param0 != null) {
+            stackIn_8_0 = new PasswordLoginCredentials(param0, param1);
+            return (LoginCredentials) ((Object) stackIn_8_0);
+          }
+          if (param2) {
+            stackIn_6_0 = new oq(param4, param1);
+            return (LoginCredentials) ((Object) stackIn_6_0);
+          }
+          if (param3 != 1) {
+            CheckMarkWidgetPainter.releaseStatics(true);
+          }
+          stackIn_12_0 = new KeyedLoginCredentials(param4, param1);
+          return (LoginCredentials) ((Object) stackIn_12_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_15_0 = var6;
+          stackIn_15_1 = new StringBuilder().append("oi.D(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+          if (param1 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final static void a(boolean param0) {
+        if (!ClientConnectionState.a(76)) {
+          return;
+        }
+        vq.a(4, param0, (byte) 61);
+    }
+
+    public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        RgbSprite var8 = null;
+        Widget var9 = null;
+        try {
+          var6_int = originX + widget.x;
+          if (obfuscationGuard > -79) {
+            var9 = (Widget) null;
+            this.paintWidget((Widget) null, 118, -124, false, 7);
+          }
+          var7 = widget.y + originY;
+          StateChangeEvent.a(widget.width, var6_int, widget.height, -52, var7);
+          var8 = IgnoreListLookupSupport.validationStatusIcons[1];
+          if (widget instanceof InteractiveWidget &&
+            ((InteractiveWidget) (widget)).active) {
+            var8.drawAdditive((widget.width - var8.canvasWidth >> 1) + (1 + var6_int), (-var8.canvasHeight + widget.height >> 1) + (1 + var7), 256);
+          }
+          if (!widget.isFocused(false)) {
+            return;
+          }
+          AccountNameSelectionForm.c(widget.width - 4, var6_int + 2, 124, -4 + widget.height, 2 + var7);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_11_0 = var6;
+          stackIn_11_1 = new StringBuilder().append("oi.C(");
+          if (widget == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(originX).append(',').append(obfuscationGuard).append(',').append(renderFlag).append(',').append(originY).append(')').toString());
+        }
+    }
+
+    static {
+        field_b = "The jade vine clones itself automatically.";
+        field_a = new String[]{"Complete the tutorial.", "Play a Rated game.", "Win a Rated game.", "Win a Rated game using only Saradomin and neutral units. <br>(devotee Achievement)", "Win a Rated game using only Zamorak and neutral units. <br>(devotee Achievement)", "Win a Rated game using only Guthix and neutral units. <br>(devotee Achievement)", "Win a Rated game using only Seren and neutral units. <br>(devotee Achievement)", "Win a Rated game using only Bandos and neutral units. <br>(devotee Achievement)", "Win a Rated game using only Menaphite pantheon and neutral units. <br>(devotee Achievement)", "Win a Rated game with all gods on the same favour level (favour level must be greater than one).", "Level a monk up to <%0> strength in a Rated game.", "Use all level 5 units for your chosen gods in a Rated game.", "Win a two-player Rated game with no gods in common with your opponent.", "Have 25 animated skeletons on the map at once in a Rated game.", "Obtain all units for all gods.", "Defeat the King Black Dragon in open combat in a Rated game.", "Win a Rated game without losing a unit.", "Win five Rated games without using flying units.", "Win a Rated free for all game with six or more players.", "Win five Rated free for all games with six or more players.", "Win ten Rated free for all games with six or more players.", "Win a game with all your gods' favour levels at one (neutral can be higher than one).", "Win a Rated game without losing your barbarian chieftain.", "Kill an enemy unit using the crystalline shapeshifter's special ability.", "Win a Rated Team Game in which the teams have no gods in common.", "Win a four-player Rated game in which you have no gods in common with your teammate.", "Win five Rated Team Games.", "Kill an enemy unit with a teammate's unit, using the sphinx's special ability.", "Win a Rated Team Game as the only remaining member of your team.", "Win a Rated game in which one of your teammates gets less than 10% of your team's kills. (The dead weight player does not get the Achievement.)", "Win a Rated Team Game in which you and your teammates all use the units of only one god (and not the same god).", "Have every player in your team use the same temporary portal at least once after it is opened by one of your team's portal mages.", "Use barbarians, werewolves, skeletons, necromancers and no other units to win a Rated game during Hallowe'en.", "Win 4 Rated games on Misthalin maps.", "Win 4 Rated games on Kharidian Desert maps.", "Win 4 Rated games on Frozen Wastes maps.", "Win 4 Rated games on Hallowvale Swamps maps.", "Win 4 Rated games on Forinthry Barrens maps.", "Complete a mission from the Zamorak Returns campaign without losing a single unit.", "Achieve a silver medal score on all missions in the Zamorak Returns campaign.", "Achieve a gold medal score on all missions in the Zamorak Returns campaign.", "Dethrone Efaritay and take over Hallowvale.", "Reach the eastern shores and conquer the port there.", "Bring down the last Zarosian resistance at Senntisten.", "Protect the dwarves in Ice Mountain from the wrath of the Blue Dragons.", "Achieve a silver medal score on all missions in the Saradomin Strikes campaign.", "Achieve a gold medal score on all missions in the Saradomin Strikes campaign.", "Siege and conquer the fortress of Peddewa.", "March the Brothers across the bridge over the Lum.", "Beat the other gods to it and take over the Zaros Temple!", "Defeat Riled Coyote with Path Sprinter.", "Achieve a silver medal score on all missions in the Guthix Awakens campaign.", "Achieve a gold medal score on all missions in the Guthix Awakens campaign.", "Take the Seat of Bandos.", "Drive Flametongue away.", "Banish all other Gods from Gielinor, bringing the 3rd age to a close."};
+    }
+}

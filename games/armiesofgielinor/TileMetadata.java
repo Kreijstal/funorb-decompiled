@@ -12,12 +12,12 @@ final class TileMetadata implements TaggedFieldReader {
     static int[] field_f;
     static String field_i;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_f = null;
         field_a = null;
         field_i = null;
         field_h = null;
-        if (param0 != 23582) {
+        if (obfuscationGuard != 23582) {
           field_f = (int[]) null;
         }
     }
@@ -95,7 +95,7 @@ final class TileMetadata implements TaggedFieldReader {
     final static void initializeAudioPlayers(java.awt.Component component, int effectsLatencyFrames, PlatformTaskService platformTasks, boolean stereo, int obfuscationGuard, MusicCrossfadeStream musicStream, int musicLatencyFrames, int sampleRate) {
         try {
           PcmPlayer.configureOutput(sampleRate, stereo, 10);
-          l.musicPlayer = PcmPlayer.create(platformTasks, component, 0, musicLatencyFrames);
+          QuickChatCategoryMenuSupport.musicPlayer = PcmPlayer.create(platformTasks, component, 0, musicLatencyFrames);
           TextCursor.effectsPlayer = PcmPlayer.create(platformTasks, component, 1, effectsLatencyFrames);
           AnimationSkeleton.effectsMixer = new PcmStreamMixer();
           DropTargetWidgetContainer.field_K = effectsLatencyFrames;
@@ -105,7 +105,7 @@ final class TileMetadata implements TaggedFieldReader {
           TextCursor.effectsPlayer.setStream(AnimationSkeleton.effectsMixer);
           BitmapTextWidgetPainter.musicCrossfadeStream = musicStream;
           BitmapTextWidgetPainter.musicCrossfadeStream.setMasterGain(SoundPlaybackHandle.musicGain, -120);
-          l.musicPlayer.setStream(BitmapTextWidgetPainter.musicCrossfadeStream);
+          QuickChatCategoryMenuSupport.musicPlayer.setStream(BitmapTextWidgetPainter.musicCrossfadeStream);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ca.F(" + (component != null ? "{...}" : "null") + ',' + effectsLatencyFrames + ',' + (platformTasks != null ? "{...}" : "null") + ',' + stereo + ',' + obfuscationGuard + ',' + (musicStream != null ? "{...}" : "null") + ',' + musicLatencyFrames + ',' + sampleRate + ')');
         }
@@ -115,7 +115,7 @@ final class TileMetadata implements TaggedFieldReader {
         if (param0 != 0) {
           TileMetadata.a(-47, true);
         }
-        return -CampaignMenuButton.lastPacketReadMillis + vi.monotonicMillis(-53);
+        return -CampaignMenuButton.lastPacketReadMillis + MonotonicClockSupport.monotonicMillis(-53);
     }
 
     final static LoginMethod[] getLoginMethods(int obfuscationGuard) {
@@ -128,17 +128,17 @@ final class TileMetadata implements TaggedFieldReader {
     final static void a(int param0, boolean param1) {
         if (ModalDialogHost.field_J > 0 &&
           WhirlpoolHasher.field_g) {
-          SoftwareRaster.d(0, 0, SoftwareRaster.width, CombatEvent.field_I.screenY);
+          SoftwareRaster.darkenRectangle(0, 0, SoftwareRaster.width, CombatEvent.field_I.screenY);
           GameClock.field_c.draw(param1, 20);
         }
         if ((!(PreparedAction.field_r <= 0) ||
           !(0 >= InstructionsPanel.field_D)) &&
           ChannelGainProfile.field_f) {
-          SoftwareRaster.d(0, 0, SoftwareRaster.width, CombatEvent.field_I.screenY);
+          SoftwareRaster.darkenRectangle(0, 0, SoftwareRaster.width, CombatEvent.field_I.screenY);
           LabeledWidgetContainer.field_R.draw(param1, 20);
         }
         if (param0 != 5295) {
-          TileMetadata.a(88);
+          TileMetadata.releaseStatics(88);
         }
     }
 

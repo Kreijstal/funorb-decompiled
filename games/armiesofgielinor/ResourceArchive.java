@@ -122,7 +122,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.groupNameLookup.get(rs.a((byte) -116, groupNameCharacters), 1);
+          groupId = this.index.groupNameLookup.get(PowerOfTwoSupport.a((byte) -116, groupNameCharacters), 1);
           stackIn_6_0 = this.ensureGroupAvailable(obfuscationGuard - 17085, groupId);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -139,9 +139,9 @@ final class ResourceArchive {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         connectedState = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           return;
         }
         field_a = null;
@@ -170,7 +170,7 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.groupNameLookup.get(rs.a((byte) -116, groupNameCharacters), 1);
+          groupId = this.index.groupNameLookup.get(PowerOfTwoSupport.a((byte) -116, groupNameCharacters), 1);
           if (!this.isValidGroup(groupId, -24876)) {
             return false;
           }
@@ -179,7 +179,7 @@ final class ResourceArchive {
             return stackIn_10_0;
           }
           fileNameCharacters = (CharSequence) ((Object) fileName);
-          fileId = this.index.fileNameLookups[groupId].get(rs.a((byte) -116, fileNameCharacters), 1);
+          fileId = this.index.fileNameLookups[groupId].get(PowerOfTwoSupport.a((byte) -116, fileNameCharacters), 1);
           stackIn_12_0 = this.ensureFileAvailable(groupId, fileId, 0);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -226,7 +226,7 @@ final class ResourceArchive {
           return -1;
         }
         if (obfuscationGuard >= -96) {
-          ResourceArchive.b(52);
+          ResourceArchive.releaseStatics(52);
         }
         return this.index.fileCapacities.length;
     }
@@ -302,7 +302,7 @@ final class ResourceArchive {
             field_f = (String) (((Object[]) (this.packedGroups[9]))[6]);
           }
           var4 = (CharSequence) ((Object) groupName);
-          var3_int = this.index.groupNameLookup.get(rs.a((byte) -116, var4), 1);
+          var3_int = this.index.groupNameLookup.get(PowerOfTwoSupport.a((byte) -116, var4), 1);
           if (this.isValidGroup(var3_int, -24876)) {
             return var3_int;
           }
@@ -433,7 +433,7 @@ final class ResourceArchive {
             return true;
           }
           var4 = (CharSequence) ((Object) groupName);
-          var3_int = this.index.groupNameLookup.get(rs.a((byte) -116, var4), 1);
+          var3_int = this.index.groupNameLookup.get(PowerOfTwoSupport.a((byte) -116, var4), 1);
           if (0 <= var3_int) {
             return true;
           }
@@ -472,7 +472,7 @@ final class ResourceArchive {
           }
           fileName = fileName.toLowerCase();
           var6 = (CharSequence) ((Object) fileName);
-          var5 = this.index.fileNameLookups[groupId].get(rs.a((byte) -116, var6), 1);
+          var5 = this.index.fileNameLookups[groupId].get(PowerOfTwoSupport.a((byte) -116, var6), 1);
           if (this.isValidFile(groupId, 0, var5)) {
             stackIn_8_0 = var5;
             return stackIn_8_0;
@@ -514,19 +514,19 @@ final class ResourceArchive {
           var3 = stackIn_5_0;
           stackIn_8_0 = (ProgressMessageDialog.pointerButton != 1) ? 0 : 1;
           var4 = stackIn_8_0;
-          TurnEffectEvent.field_z.updateInput(87, var4 != 0, var3 != 0, var1_int, var2, el.field_d);
+          TurnEffectEvent.field_z.updateInput(87, var4 != 0, var3 != 0, var1_int, var2, MouseWheelSource.field_d);
           while (true) {
             if (!Unit.pollKeyEvent((byte) -61)) {
               return;
             }
-            if (13 == rs.keyCode) {
+            if (13 == PowerOfTwoSupport.keyCode) {
               CipherPacketBuffer.a(true, 0, param0 + 20194, jt.field_a);
             }
-            if (12 == rs.keyCode) {
+            if (12 == PowerOfTwoSupport.keyCode) {
               stackIn_17_0 = !(CoatOfArms.field_e);
               CoatOfArms.field_e = stackIn_17_0;
             }
-            if (rs.keyCode != 11) {
+            if (PowerOfTwoSupport.keyCode != 11) {
               continue;
             }
             if (BufferedSocket.field_j < 2) {
@@ -534,8 +534,8 @@ final class ResourceArchive {
             }
             break;
           }
-          stackIn_24_0 = !(jv.field_a);
-          jv.field_a = stackIn_24_0;
+          stackIn_24_0 = !(SoundPanSupport.field_a);
+          SoundPanSupport.field_a = stackIn_24_0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -569,13 +569,13 @@ final class ResourceArchive {
           fileName = fileName.toLowerCase();
           var4_int = 119 % ((obfuscationGuard + 36) / 44);
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.groupNameLookup.get(rs.a((byte) -116, groupNameCharacters), 1);
+          groupId = this.index.groupNameLookup.get(PowerOfTwoSupport.a((byte) -116, groupNameCharacters), 1);
           if (!this.isValidGroup(groupId, -24876)) {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
           }
           fileNameCharacters = (CharSequence) ((Object) fileName);
-          fileId = this.index.fileNameLookups[groupId].get(rs.a((byte) -116, fileNameCharacters), 1);
+          fileId = this.index.fileNameLookups[groupId].get(PowerOfTwoSupport.a((byte) -116, fileNameCharacters), 1);
           stackIn_7_0 = this.getFile((byte) 119, fileId, groupId);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -732,7 +732,7 @@ final class ResourceArchive {
             encodedGroup = ko.getStoredBytes(false, 87, this.packedGroups[groupId]);
           }
           try {
-            groupData = el.decompressContainer(false, encodedGroup);
+            groupData = MouseWheelSource.decompressContainer(false, encodedGroup);
             decompressedAlias = groupData;
             decompressedBytes = decompressedAlias;
             splitData = decompressedBytes;
@@ -789,7 +789,7 @@ final class ResourceArchive {
                     candidateFileId = var20;
                   }
                   if (candidateFileId == requestedFileId) {
-                    vm.a(splitData, var17, selectedFileBytes, selectedFileWriteOffset, var19);
+                    ArrayBlockSupport.copyBytes(splitData, var17, selectedFileBytes, selectedFileWriteOffset, var19);
                     selectedFileWriteOffset = selectedFileWriteOffset + var19;
                   }
                   var17 = var17 + var19;
@@ -827,7 +827,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var19 < fileCount; var19++) {
                   var18 = var18 + allFileTable.readInt(1);
-                  vm.a(splitData, var16, splitFiles[var19], sizesOrWriteOffsets[var19], var18);
+                  ArrayBlockSupport.copyBytes(splitData, var16, splitFiles[var19], sizesOrWriteOffsets[var19], var18);
                   var16 = var16 + var18;
                   fileSizesOrOffsets[var19] = fileSizesOrOffsets[var19] + var18;
                 }
@@ -891,7 +891,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           var5 = (CharSequence) ((Object) groupName);
-          var4 = this.index.groupNameLookup.get(rs.a((byte) -116, var5), 1);
+          var4 = this.index.groupNameLookup.get(PowerOfTwoSupport.a((byte) -116, var5), 1);
           stackIn_4_0 = this.getGroupProgress(var4, (byte) 73);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -931,7 +931,7 @@ final class ResourceArchive {
           return 100;
         }
         if (obfuscationGuard != 73) {
-          ResourceArchive.b(-64);
+          ResourceArchive.releaseStatics(-64);
         }
         return this.provider.getGroupProgress(5926, groupId);
     }

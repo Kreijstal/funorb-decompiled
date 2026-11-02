@@ -56,9 +56,9 @@ final class vq {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           NumericDateInputWidget.field_J = param0;
-          ip.field_e = true;
+          WidgetStateStyle.field_e = true;
           if (NumericDateInputWidget.field_J == 0) {
-            var3_int = BattleTutorial.a(LoginMethod.field_d, SummonRequest.field_z, 7502, TaggedMapData.field_b, du.field_b);
+            var3_int = BattleTutorial.a(LoginMethod.field_d, SummonRequest.field_z, 7502, TaggedMapData.field_b, SocketFactory.field_b);
             var4 = 3 + var3_int;
             TileMetadata.field_h = new int[var4];
             AnimationFrameSet.field_v = new String[var4];
@@ -67,17 +67,17 @@ final class vq {
             }
             MusicPatchNode.field_G = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              AnimationFrameSet.field_v[var5] = du.field_b[var5];
+              AnimationFrameSet.field_v[var5] = SocketFactory.field_b[var5];
             }
             AnimationFrameSet.field_v[-3 + var4] = "";
             AnimationFrameSet.field_v[-2 + var4] = ClientContextMenu.field_j;
             TileMetadata.field_h[var4 - 2] = 0;
             MusicPatchNode.field_G[0] = 4;
-            AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
+            AnimationFrameSet.field_v[-1 + var4] = PasswordLengthSupport.field_f;
             TileMetadata.field_h[-1 + var4] = 1;
             MusicPatchNode.field_G[1] = 5;
           } else if (1 == NumericDateInputWidget.field_J) {
-            var3_int = BattleTutorial.a(LoginMethod.field_d, SummonRequest.field_z, 7502, TaggedMapData.field_b, du.field_b);
+            var3_int = BattleTutorial.a(LoginMethod.field_d, SummonRequest.field_z, 7502, TaggedMapData.field_b, SocketFactory.field_b);
             var4 = var3_int + 2;
             TileMetadata.field_h = new int[var4];
             AnimationFrameSet.field_v = new String[var4];
@@ -86,18 +86,18 @@ final class vq {
             }
             MusicPatchNode.field_G = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              AnimationFrameSet.field_v[var5] = du.field_b[var5];
+              AnimationFrameSet.field_v[var5] = SocketFactory.field_b[var5];
             }
             AnimationFrameSet.field_v[var4 - 2] = "";
-            AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
+            AnimationFrameSet.field_v[-1 + var4] = PasswordLengthSupport.field_f;
             TileMetadata.field_h[-1 + var4] = 0;
             MusicPatchNode.field_G[0] = 5;
           } else if (NumericDateInputWidget.field_J != 2) {
             if (NumericDateInputWidget.field_J == 3) {
               if (!IntPair.field_m.privilegedServicesEnabled) {
-                var3_int = BattleTutorial.a(LoginMethod.field_d, NodeHashIterator.field_a, 7502, TaggedMapData.field_b, du.field_b);
+                var3_int = BattleTutorial.a(LoginMethod.field_d, NodeHashIterator.field_a, 7502, TaggedMapData.field_b, SocketFactory.field_b);
               } else {
-                var3_int = BattleTutorial.a(LoginMethod.field_d, FullscreenStatusDialog.field_ab, 7502, TaggedMapData.field_b, du.field_b);
+                var3_int = BattleTutorial.a(LoginMethod.field_d, FullscreenStatusDialog.field_ab, 7502, TaggedMapData.field_b, SocketFactory.field_b);
               }
               var4 = var3_int + 2;
               TileMetadata.field_h = new int[var4];
@@ -107,14 +107,14 @@ final class vq {
               }
               MusicPatchNode.field_G = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                AnimationFrameSet.field_v[var5] = du.field_b[var5];
+                AnimationFrameSet.field_v[var5] = SocketFactory.field_b[var5];
               }
               AnimationFrameSet.field_v[-2 + var4] = "";
-              AnimationFrameSet.field_v[var4 - 1] = pd.field_f;
+              AnimationFrameSet.field_v[var4 - 1] = PasswordLengthSupport.field_f;
               TileMetadata.field_h[-1 + var4] = 0;
               MusicPatchNode.field_G[0] = 5;
             } else if (NumericDateInputWidget.field_J == 4) {
-              var3_int = BattleTutorial.a(LoginMethod.field_d, MoveAttackRequest.field_y, 7502, TaggedMapData.field_b, du.field_b);
+              var3_int = BattleTutorial.a(LoginMethod.field_d, MoveAttackRequest.field_y, 7502, TaggedMapData.field_b, SocketFactory.field_b);
               var4 = 2 + var3_int;
               AnimationFrameSet.field_v = new String[var4];
               TileMetadata.field_h = new int[var4];
@@ -123,17 +123,17 @@ final class vq {
               }
               MusicPatchNode.field_G = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                AnimationFrameSet.field_v[var5] = du.field_b[var5];
+                AnimationFrameSet.field_v[var5] = SocketFactory.field_b[var5];
               }
               AnimationFrameSet.field_v[-2 + var4] = "";
-              AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
+              AnimationFrameSet.field_v[-1 + var4] = PasswordLengthSupport.field_f;
               TileMetadata.field_h[-1 + var4] = 0;
               MusicPatchNode.field_G[0] = 5;
             } else {
               if (NumericDateInputWidget.field_J != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = BattleTutorial.a(LoginMethod.field_d, hb.field_a, 7502, TaggedMapData.field_b, du.field_b);
+              var3_int = BattleTutorial.a(LoginMethod.field_d, hb.field_a, 7502, TaggedMapData.field_b, SocketFactory.field_b);
               var4 = 3 + var3_int;
               AnimationFrameSet.field_v = new String[var4];
               TileMetadata.field_h = new int[var4];
@@ -142,21 +142,21 @@ final class vq {
               }
               MusicPatchNode.field_G = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                AnimationFrameSet.field_v[var5] = du.field_b[var5];
+                AnimationFrameSet.field_v[var5] = SocketFactory.field_b[var5];
               }
               AnimationFrameSet.field_v[var4 - 3] = "";
-              AnimationFrameSet.field_v[var4 - 2] = oo.field_j;
+              AnimationFrameSet.field_v[var4 - 2] = MembershipExpansionScreen.field_j;
               TileMetadata.field_h[-2 + var4] = 0;
               MusicPatchNode.field_G[0] = 3;
-              AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
+              AnimationFrameSet.field_v[-1 + var4] = PasswordLengthSupport.field_f;
               TileMetadata.field_h[var4 - 1] = 1;
               MusicPatchNode.field_G[1] = 5;
             }
           } else {
-            var3_int = BattleTutorial.a(LoginMethod.field_d, EmailCheckResult.a(4800, db.field_f, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, du.field_b);
+            var3_int = BattleTutorial.a(LoginMethod.field_d, EmailCheckResult.a(4800, IgnoreListLookupSupport.field_f, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, SocketFactory.field_b);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(du.field_b[var5])) {
+              if (!"<%0>".equals(SocketFactory.field_b[var5])) {
                 continue;
               }
               var4 = var5;
@@ -166,13 +166,13 @@ final class vq {
               throw new IllegalStateException();
             }
             ChatMessage.field_i = new String[var4];
-            vm.a(du.field_b, 0, ChatMessage.field_i, 0, var4);
+            ArrayBlockSupport.copyObjects(SocketFactory.field_b, 0, ChatMessage.field_i, 0, var4);
             KeyboardInputListener.field_d = new String[var3_int + (-var4 - 1)];
-            vm.a(du.field_b, 1 + var4, KeyboardInputListener.field_d, 0, -1 + var3_int - var4);
+            ArrayBlockSupport.copyObjects(SocketFactory.field_b, 1 + var4, KeyboardInputListener.field_d, 0, -1 + var3_int - var4);
             var4 = -1;
-            var3_int = BattleTutorial.a(LoginMethod.field_d, EmailCheckResult.a(4800, SummonAction.field_v, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, du.field_b);
+            var3_int = BattleTutorial.a(LoginMethod.field_d, EmailCheckResult.a(4800, SummonAction.field_v, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, SocketFactory.field_b);
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(du.field_b[var5])) {
+              if (!"<%0>".equals(SocketFactory.field_b[var5])) {
                 continue;
               }
               var4 = var5;
@@ -182,9 +182,9 @@ final class vq {
               throw new IllegalStateException();
             }
             QuickChatCategory.field_A = new String[var4];
-            vm.a(du.field_b, 0, QuickChatCategory.field_A, 0, var4);
+            ArrayBlockSupport.copyObjects(SocketFactory.field_b, 0, QuickChatCategory.field_A, 0, var4);
             IntrusiveNode.field_f = new String[var3_int - var4 - 1];
-            vm.a(du.field_b, var4 + 1, IntrusiveNode.field_f, 0, -1 + (-var4 + var3_int));
+            ArrayBlockSupport.copyObjects(SocketFactory.field_b, var4 + 1, IntrusiveNode.field_f, 0, -1 + (-var4 + var3_int));
             if (QuickChatCategory.field_A.length <= ChatMessage.field_i.length) {
               stackIn_31_0 = ChatMessage.field_i.length;
             } else {
@@ -211,7 +211,7 @@ final class vq {
             AnimationFrameSet.field_v[5] = "";
             MusicPatchNode.field_G[0] = 5;
             AnimationFrameSet.field_v[4] = TextLineLayout.field_f;
-            AnimationFrameSet.field_v[2] = od.field_e;
+            AnimationFrameSet.field_v[2] = ByteArrayPoolSupport.field_e;
             AnimationFrameSet.field_v[3] = WeightedScoreStrategy.field_m;
             TileMetadata.field_h[3] = 1;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
@@ -236,14 +236,14 @@ final class vq {
               }
               stackIn_47_0[stackIn_47_1] = stackIn_48_2;
             }
-            vi.monotonicMillis(71);
+            MonotonicClockSupport.monotonicMillis(71);
           }
-          ug.field_c.itemCount = MusicPatchNode.field_G.length;
+          ProxyAuthenticationRequiredException.field_c.itemCount = MusicPatchNode.field_G.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < AnimationFrameSet.field_v.length; var4Lifetime1++) {
             stackIn_89_0 = AnimationFrameSet.field_v[var4Lifetime1];
             stackIn_90_1 = !(TileMetadata.field_h[var4Lifetime1] < 0);
-            var5Lifetime1 = lg.a(stackIn_89_0, stackIn_90_1, (byte) -101);
+            var5Lifetime1 = GzipDecoder.a(stackIn_89_0, stackIn_90_1, (byte) -101);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -253,7 +253,7 @@ final class vq {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = lg.a(var11, false, (byte) -128);
+              var7Lifetime1 = GzipDecoder.a(var11, false, (byte) -128);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -261,50 +261,50 @@ final class vq {
             var4_ref_String__Lifetime1 = KeyboardInputListener.field_d;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = lg.a(var12, false, (byte) -122);
+              var7Lifetime1Lifetime1 = GzipDecoder.a(var12, false, (byte) -122);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
             }
           }
-          IterableNodeHashTable.field_i = (el.field_c + cp.field_a << 1) * ug.field_c.itemCount;
+          IterableNodeHashTable.field_i = (MouseWheelSource.field_c + EventPresenterFactory.field_a << 1) * ProxyAuthenticationRequiredException.field_c.itemCount;
           var4Lifetime2 = 0;
           var5Lifetime3 = -42 % ((-39 - param2) / 37);
           while (AnimationFrameSet.field_v.length > var4Lifetime2) {
             stackIn_115_0 = IterableNodeHashTable.field_i;
             if (0 > TileMetadata.field_h[var4Lifetime2]) {
-              stackIn_116_1 = fh.field_e;
+              stackIn_116_1 = GrowableIntArray.field_e;
             } else {
               stackIn_116_1 = TelepopEvent.field_B;
             }
             IterableNodeHashTable.field_i = stackIn_115_0 + stackIn_116_1;
             var4Lifetime2++;
           }
-          od.field_b = -(IterableNodeHashTable.field_i >> 1) + QuickChatPhrase.field_C;
-          lg.field_b = new int[AnimationFrameSet.field_v.length][];
+          ByteArrayPoolSupport.field_b = -(IterableNodeHashTable.field_i >> 1) + QuickChatPhrase.field_C;
+          GzipDecoder.field_b = new int[AnimationFrameSet.field_v.length][];
           var4Lifetime3 = 0;
-          var5Lifetime4 = od.field_b;
+          var5Lifetime4 = ByteArrayPoolSupport.field_b;
           while (AnimationFrameSet.field_v.length > var4Lifetime3) {
             var6Lifetime1 = TileMetadata.field_h[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = lg.a(AnimationFrameSet.field_v[var4Lifetime3], true, (byte) -89);
+              var7Lifetime2 = GzipDecoder.a(AnimationFrameSet.field_v[var4Lifetime3], true, (byte) -89);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + InstructionsPanel.field_B;
-              var5Lifetime4 = var5Lifetime4 + cp.field_a;
-              lg.field_b[var4Lifetime3] = new int[4];
-              lg.field_b[var4Lifetime3][0] = var8Lifetime1 - et.field_b;
-              lg.field_b[var4Lifetime3][1] = var5Lifetime4;
-              lg.field_b[var4Lifetime3][2] = var7Lifetime2 + (et.field_b << 1);
-              var5Lifetime4 = var5Lifetime4 + (TelepopEvent.field_B + (cp.field_a + (el.field_c << 1)));
-              lg.field_b[var4Lifetime3][3] = TelepopEvent.field_B + (el.field_c << 1);
+              var5Lifetime4 = var5Lifetime4 + EventPresenterFactory.field_a;
+              GzipDecoder.field_b[var4Lifetime3] = new int[4];
+              GzipDecoder.field_b[var4Lifetime3][0] = var8Lifetime1 - et.field_b;
+              GzipDecoder.field_b[var4Lifetime3][1] = var5Lifetime4;
+              GzipDecoder.field_b[var4Lifetime3][2] = var7Lifetime2 + (et.field_b << 1);
+              var5Lifetime4 = var5Lifetime4 + (TelepopEvent.field_B + (EventPresenterFactory.field_a + (MouseWheelSource.field_c << 1)));
+              GzipDecoder.field_b[var4Lifetime3][3] = TelepopEvent.field_B + (MouseWheelSource.field_c << 1);
             } else {
-              var5Lifetime4 = var5Lifetime4 + fh.field_e;
+              var5Lifetime4 = var5Lifetime4 + GrowableIntArray.field_e;
             }
             var4Lifetime3++;
           }
           if (NumericDateInputWidget.field_J != 2) {
-            ug.field_c.restoreSelection(0, param1, TeleportEvent.a(AiPlanningStrategy.pointerX, 120, ko.pointerY), 0);
+            ProxyAuthenticationRequiredException.field_c.restoreSelection(0, param1, TeleportEvent.a(AiPlanningStrategy.pointerX, 120, ko.pointerY), 0);
           } else {
-            ug.field_c.restoreSelection(-1, param1, -1, 0);
+            ProxyAuthenticationRequiredException.field_c.restoreSelection(-1, param1, -1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -314,13 +314,13 @@ final class vq {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_c = null;
         field_b = null;
         field_e = null;
         field_g = null;
         field_a = null;
-        if (param0 < 95) {
+        if (obfuscationGuard < 95) {
           field_c = (PlatformTaskService) null;
         }
         field_f = null;

@@ -14,8 +14,8 @@ final class BattleUnitRenderer {
           Unit var7 = (Unit) null;
           this.refreshUnitModel(-96, -101, (Unit) null);
         }
-        int surfaceWidth = so.field_b.field_a;
-        int surfaceHeight = so.field_b.field_g;
+        int surfaceWidth = FixedSquareRootSupport.field_b.width;
+        int surfaceHeight = FixedSquareRootSupport.field_b.height;
         if (screenX > surfaceWidth) {
           return false;
         }
@@ -157,7 +157,7 @@ final class BattleUnitRenderer {
                       -1 >= var6 + var10 ||
                       !(param3.pixelHeight > var10 + var6) ||
                       param3.pixelIndices[(var10 + var6) * param3.pixelWidth + (var7 + var9)] == 0) {
-                      SoftwareRaster.g(var7 + (param0 + var9), var10 + param4 + var6, param1, var9 * var9 + var10 * var10);
+                      SoftwareRaster.addPixel(var7 + (param0 + var9), var10 + param4 + var6, param1, var9 * var9 + var10 * var10);
                     }
                   }
                 }
@@ -179,10 +179,10 @@ final class BattleUnitRenderer {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         field_c = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           field_c = (String) null;
         }
     }
@@ -250,7 +250,7 @@ final class BattleUnitRenderer {
             SoundCache.field_a = null;
             BufferedFile.field_a = param6;
             MusicCrossfadeStream.field_z = param4;
-            ChannelBaseVolumeConsoleCommand.field_L = du.nameCheckPending;
+            ChannelBaseVolumeConsoleCommand.field_L = SocketFactory.nameCheckPending;
             RadialSummonMenu.field_e = param0;
             qk.field_b = param2;
           } else {

@@ -128,7 +128,7 @@ class PcmPlayer {
         if (stereo) {
           sampleCount = sampleCount << 1;
         }
-        vm.a(output, 0, sampleCount);
+        ArrayBlockSupport.clearInts(output, 0, sampleCount);
         this.framesUntilScheduling = this.framesUntilScheduling - frameCount;
         if (this.rootStream != null &&
           this.framesUntilScheduling <= 0) {
@@ -222,7 +222,7 @@ class PcmPlayer {
         if (this.rootStream != null) {
           this.rootStream.render(output, 0, frameCount);
         }
-        this.lastMixTimeMillis = vi.monotonicMillis(-121);
+        this.lastMixTimeMillis = MonotonicClockSupport.monotonicMillis(-121);
     }
 
     public static void clearServiceReference() {
@@ -236,7 +236,7 @@ class PcmPlayer {
             this.flushDevice();
           } catch (Exception flushFailure) {
             this.closeDevice();
-            this.reopenAtMillis = vi.monotonicMillis(127) + 2000L;
+            this.reopenAtMillis = MonotonicClockSupport.monotonicMillis(127) + 2000L;
           }
         } catch (RuntimeException | Error uncheckedFailure) {
           throw uncheckedFailure;
@@ -335,7 +335,7 @@ class PcmPlayer {
           if (this.closed) {
             return;
           }
-          nowMillis = vi.monotonicMillis(101);
+          nowMillis = MonotonicClockSupport.monotonicMillis(101);
           try {
             if (nowMillis > this.lastMixTimeMillis + 6000L) {
               this.lastMixTimeMillis = nowMillis - 6000L;
@@ -343,7 +343,7 @@ class PcmPlayer {
             while (nowMillis > this.lastMixTimeMillis + 5000L) {
               this.skipFrames(256);
               this.lastMixTimeMillis = this.lastMixTimeMillis + (long)(256000 / outputSampleRate);
-              nowMillis = vi.monotonicMillis(-116);
+              nowMillis = MonotonicClockSupport.monotonicMillis(-116);
             }
           } catch (java.lang.Exception clockFailure) {
             caughtFailure = clockFailure;
@@ -423,7 +423,7 @@ class PcmPlayer {
     PcmPlayer() {
         this.closed = false;
         this.workLimit = 32;
-        this.lastMixTimeMillis = vi.monotonicMillis(-89);
+        this.lastMixTimeMillis = MonotonicClockSupport.monotonicMillis(-89);
         this.bucketTails = new PcmStream[8];
         this.reopenAtMillis = 0L;
         this.framesUntilScheduling = 0;

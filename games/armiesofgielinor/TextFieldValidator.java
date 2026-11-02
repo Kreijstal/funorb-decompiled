@@ -66,9 +66,9 @@ abstract class TextFieldValidator extends DebouncedValidator implements Editable
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           field_i = (String) null;
           field_f = null;
           field_i = null;

@@ -29,8 +29,8 @@ final class j {
         this.field_c[param0] = this.field_c[param0] - this.field_k;
     }
 
-    public static void b(byte param0) {
-        int var1 = 92 % ((param0 - 88) / 37);
+    public static void releaseStatics(byte obfuscationGuard) {
+        int var1 = 92 % ((obfuscationGuard - 88) / 37);
         field_j = null;
         field_d = null;
         decodedSpriteOffsetXs = null;
@@ -51,17 +51,17 @@ final class j {
           DisplacedUnitMarker.field_t = new String[60];
           DisplacedUnitMarker.field_t[24] = ValidatedTextWidget.field_Y;
           DisplacedUnitMarker.field_t[11] = tf.field_p;
-          DisplacedUnitMarker.field_t[0] = od.field_g;
+          DisplacedUnitMarker.field_t[0] = ByteArrayPoolSupport.field_g;
           DisplacedUnitMarker.field_t[1] = la.field_e;
           DisplacedUnitMarker.field_t[13] = DeployAction.field_v;
           DisplacedUnitMarker.field_t[7] = gp.field_c;
-          DisplacedUnitMarker.field_t[3] = lb.field_d;
+          DisplacedUnitMarker.field_t[3] = ResourceClientErrorSupport.field_d;
           DisplacedUnitMarker.field_t[53] = ModalDialogHost.field_P;
           DisplacedUnitMarker.field_t[6] = AiInfluenceMap.field_k;
           DisplacedUnitMarker.field_t[9] = PreparedAction.field_k;
           DisplacedUnitMarker.field_t[8] = null;
-          DisplacedUnitMarker.field_t[4] = el.field_a;
-          DisplacedUnitMarker.field_t[54] = mh.field_d;
+          DisplacedUnitMarker.field_t[4] = MouseWheelSource.field_a;
+          DisplacedUnitMarker.field_t[54] = EffectsGainSupport.field_d;
           DisplacedUnitMarker.field_t[2] = ClientConnectionState.field_b;
           DisplacedUnitMarker.field_t[5] = PointerInputHandler.field_d;
           DisplacedUnitMarker.field_t[25] = AnimationSkeleton.field_m;
@@ -70,9 +70,9 @@ final class j {
           DisplacedUnitMarker.field_t[28] = NetworkGameShell.field_s;
           DisplacedUnitMarker.field_t[19] = s.field_b;
           DisplacedUnitMarker.field_t[21] = ConsolePanel.field_r;
-          DisplacedUnitMarker.field_t[26] = bj.field_l;
+          DisplacedUnitMarker.field_t[26] = AlphaDecodedSpriteSupport.field_l;
           DisplacedUnitMarker.field_t[46] = UnitModelViewer.field_d;
-          DisplacedUnitMarker.field_t[17] = su.field_c;
+          DisplacedUnitMarker.field_t[17] = AiWeightProfile.field_c;
           DisplacedUnitMarker.field_t[23] = ClientConnectionState.field_e;
           DisplacedUnitMarker.field_t[27] = NodeHashTable.field_b;
           DisplacedUnitMarker.field_t[30] = LoginMethod.field_e;
@@ -92,14 +92,14 @@ final class j {
           DisplacedUnitMarker.field_t[47] = qk.field_f;
           DisplacedUnitMarker.field_t[51] = nt.field_p;
           DisplacedUnitMarker.field_t[48] = StandardContentDialog.field_lb;
-          DisplacedUnitMarker.field_t[44] = dd.field_g;
-          DisplacedUnitMarker.field_t[37] = lg.field_c;
+          DisplacedUnitMarker.field_t[44] = ArchiveMasterIndex.field_g;
+          DisplacedUnitMarker.field_t[37] = GzipDecoder.field_c;
           CampaignDefinition.field_m = new String[3];
           DisplacedUnitMarker.field_t[52] = ToggleTurnSkipConsoleCommand.field_G;
           DisplacedUnitMarker.field_t[38] = PortalLossCondition.field_f;
           ParasiteEvent.field_A = new String[]{VertexNormal.field_a, QuickChatPhraseRepository.field_e, ClientUiComponent.field_lb, GridWidgetContainer.field_P};
           DisplacedUnitMarker.field_t[43] = FaceNormal.field_c;
-          DisplacedUnitMarker.field_t[33] = gv.field_b;
+          DisplacedUnitMarker.field_t[33] = DecodedSpriteSupport.field_b;
           DisplacedUnitMarker.field_t[59] = TickCounter.field_e;
           DisplacedUnitMarker.field_t[41] = CorpseConditionMarker.field_x;
           DisplacedUnitMarker.field_t[45] = ToggleTurnSkipConsoleCommand.field_G;
@@ -107,54 +107,54 @@ final class j {
           DisplacedUnitMarker.field_t[34] = LoginMethod.field_e;
           DisplacedUnitMarker.field_t[29] = ClippedWidgetContainer.field_I;
           DisplacedUnitMarker.field_t[39] = StateChangeEvent.field_y;
-          wb.field_b = new String[29];
-          CampaignDefinition.field_m[0] = on.field_o;
+          LoginCredentialStagingSupport.field_b = new String[29];
+          CampaignDefinition.field_m[0] = TerrainScatterSupport.field_o;
           CampaignDefinition.field_m[2] = CacheEntry.field_v;
           CampaignDefinition.field_m[1] = uh.field_b;
-          wb.field_b[0] = null;
-          wb.field_b[10] = DamageEvent.field_z;
+          LoginCredentialStagingSupport.field_b[0] = null;
+          LoginCredentialStagingSupport.field_b[10] = DamageEvent.field_z;
           if (param0 < 81) {
             return;
           }
-          wb.field_b[6] = el.field_a;
-          wb.field_b[13] = QuickChatPhrase.field_y;
-          du.field_g = new String[]{ClientContextMenu.field_l, ModalDialogHost.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, SpriteDropdownControl.field_I, we.field_h, AccountRegistrationForm.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, pi.field_P, StateChangeEvent.field_H, DisplaySettingsDialog.field_ib};
-          wb.field_b[18] = dd.field_g;
-          wb.field_b[4] = PrintVictoryConditionsConsoleCommand.field_H;
-          wb.field_b[14] = ov.field_d;
-          wb.field_b[17] = ke.field_f;
-          wb.field_b[12] = bk.field_b;
-          wb.field_b[27] = ModalDialogHost.field_P;
-          wb.field_b[28] = mh.field_d;
-          wb.field_b[23] = StandardContentDialog.field_lb;
-          wb.field_b[1] = ConsoleEvaluationException.field_d;
-          wb.field_b[22] = MeshObject.field_b;
-          wb.field_b[2] = cw.field_b;
-          wb.field_b[5] = SingleChildWidgetContainer.field_F;
-          wb.field_b[24] = ConsoleEvaluationException.field_d;
-          wb.field_b[15] = UnitModelViewer.field_w;
-          wb.field_b[26] = lb.field_d;
-          wb.field_b[21] = ConsoleExpression.field_u;
-          wb.field_b[7] = kw.field_N;
-          wb.field_b[8] = pu.field_h;
-          wb.field_b[3] = l.field_g;
-          wb.field_b[11] = DiskCacheRequest.field_J;
-          wb.field_b[19] = PlayerProfile.field_e;
-          wb.field_b[9] = jn.field_e;
-          wb.field_b[20] = CorpseConditionMarker.field_x;
-          oi.field_a[10] = EmailCheckResult.a(4800, oi.field_a[10], new String[]{Integer.toString(20)});
+          LoginCredentialStagingSupport.field_b[6] = MouseWheelSource.field_a;
+          LoginCredentialStagingSupport.field_b[13] = QuickChatPhrase.field_y;
+          SocketFactory.field_g = new String[]{ClientContextMenu.field_l, ModalDialogHost.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, SpriteDropdownControl.field_I, ArchiveLoadStep.field_h, AccountRegistrationForm.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, MarkerSliderWidget.field_P, StateChangeEvent.field_H, DisplaySettingsDialog.field_ib};
+          LoginCredentialStagingSupport.field_b[18] = ArchiveMasterIndex.field_g;
+          LoginCredentialStagingSupport.field_b[4] = PrintVictoryConditionsConsoleCommand.field_H;
+          LoginCredentialStagingSupport.field_b[14] = SpectateRoomRequestSupport.field_d;
+          LoginCredentialStagingSupport.field_b[17] = SoundEffectPreloadSupport.field_f;
+          LoginCredentialStagingSupport.field_b[12] = MusicTrackSelectionSupport.field_b;
+          LoginCredentialStagingSupport.field_b[27] = ModalDialogHost.field_P;
+          LoginCredentialStagingSupport.field_b[28] = EffectsGainSupport.field_d;
+          LoginCredentialStagingSupport.field_b[23] = StandardContentDialog.field_lb;
+          LoginCredentialStagingSupport.field_b[1] = ConsoleEvaluationException.field_d;
+          LoginCredentialStagingSupport.field_b[22] = MeshObject.field_b;
+          LoginCredentialStagingSupport.field_b[2] = AttackRangeOverlaySupport.field_b;
+          LoginCredentialStagingSupport.field_b[5] = SingleChildWidgetContainer.field_F;
+          LoginCredentialStagingSupport.field_b[24] = ConsoleEvaluationException.field_d;
+          LoginCredentialStagingSupport.field_b[15] = UnitModelViewer.field_w;
+          LoginCredentialStagingSupport.field_b[26] = ResourceClientErrorSupport.field_d;
+          LoginCredentialStagingSupport.field_b[21] = ConsoleExpression.field_u;
+          LoginCredentialStagingSupport.field_b[7] = ValidationStatusIcon.field_N;
+          LoginCredentialStagingSupport.field_b[8] = pu.field_h;
+          LoginCredentialStagingSupport.field_b[3] = QuickChatCategoryMenuSupport.field_g;
+          LoginCredentialStagingSupport.field_b[11] = DiskCacheRequest.field_J;
+          LoginCredentialStagingSupport.field_b[19] = PlayerProfile.field_e;
+          LoginCredentialStagingSupport.field_b[9] = jn.field_e;
+          LoginCredentialStagingSupport.field_b[20] = CorpseConditionMarker.field_x;
+          CheckMarkWidgetPainter.field_a[10] = EmailCheckResult.a(4800, CheckMarkWidgetPainter.field_a[10], new String[]{Integer.toString(20)});
           EmailValidator.battleHintMessages = new String[6];
-          EmailValidator.battleHintMessages[3] = jj.field_f;
+          EmailValidator.battleHintMessages[3] = FriendLookupSupport.field_f;
           EmailValidator.battleHintMessages[0] = DeployAction.field_C;
           EmailValidator.battleHintMessages[4] = DropdownOptionList.field_Y;
-          EmailValidator.battleHintMessages[2] = qt.field_a;
-          EmailValidator.battleHintMessages[1] = bk.field_c;
+          EmailValidator.battleHintMessages[2] = BitReversalSupport.field_a;
+          EmailValidator.battleHintMessages[1] = MusicTrackSelectionSupport.field_c;
           EmailValidator.battleHintMessages[5] = BoundedUrlRequest.field_g;
           var3 = 0;
           var1_intLifetime1 = var3;
-          while (jj.field_a.length > var3) {
-            if (dj.field_d[var3] == null) {
-              dj.field_d[var3] = jj.field_a[var3];
+          while (FriendLookupSupport.field_a.length > var3) {
+            if (TextSplitSupport.field_d[var3] == null) {
+              TextSplitSupport.field_d[var3] = FriendLookupSupport.field_a[var3];
             }
             var3++;
           }
@@ -248,16 +248,16 @@ final class j {
             var17 = var15;
             lm.field_b.height = 0;
             var17.width = 0;
-            var5 = so.field_d;
-            so.field_d.height = 0;
+            var5 = FixedSquareRootSupport.field_d;
+            FixedSquareRootSupport.field_d.height = 0;
             var5.width = 0;
-            pi.field_N.height = 0;
-            var6 = pi.field_N;
+            MarkerSliderWidget.field_N.height = 0;
+            var6 = MarkerSliderWidget.field_N;
             var6.width = 0;
             AccountRegistrationForm.field_F.text = uu.field_a.toUpperCase();
-            var7 = (2 + pd.field_c.width) / 2;
-            pi.field_N.setBounds(40, param0 - 20501, var7 - 2, -40 + pd.field_c.height, 0);
-            so.field_d.setBounds(40, param0 ^ -20499, -var7 + pd.field_c.width, -40 + pd.field_c.height, var7);
+            var7 = (2 + PasswordLengthSupport.field_c.width) / 2;
+            MarkerSliderWidget.field_N.setBounds(40, param0 - 20501, var7 - 2, -40 + PasswordLengthSupport.field_c.height, 0);
+            FixedSquareRootSupport.field_d.setBounds(40, param0 ^ -20499, -var7 + PasswordLengthSupport.field_c.width, -40 + PasswordLengthSupport.field_c.height, var7);
             if (lm.field_e.length == 1 &&
               lm.field_e[0] == 2) {
               var8 = 0;
@@ -287,58 +287,58 @@ final class j {
                 break;
               }
             }
-            so.field_d.inputEnabled = true;
+            FixedSquareRootSupport.field_d.inputEnabled = true;
             if (!SpellCastAction.field_s) {
-              stackIn_32_0 = so.field_d;
+              stackIn_32_0 = FixedSquareRootSupport.field_d;
               if (var8 != 0) {
                 stackIn_33_1 = DefeatPlayerWithMetricsConsoleCommand.field_E;
               } else {
-                stackIn_33_1 = fk.field_e;
+                stackIn_33_1 = DropdownSelectorPainter.field_e;
               }
               stackIn_32_0.text = ((String) (Object) stackIn_33_1).toUpperCase();
               stackIn_35_0 = AccountNameAvailabilityValidator.field_l;
               stackIn_35_1 = 4800;
               if (var8 == 0) {
-                stackIn_36_2 = ov.field_k;
+                stackIn_36_2 = SpectateRoomRequestSupport.field_k;
               } else {
                 stackIn_36_2 = ConsoleCommand.field_x;
               }
-              stackIn_35_0.text = EmailCheckResult.a(stackIn_35_1, stackIn_36_2, new String[]{so.field_d.text});
+              stackIn_35_0.text = EmailCheckResult.a(stackIn_35_1, stackIn_36_2, new String[]{FixedSquareRootSupport.field_d.text});
               SocialListPanel.field_Lb.inputEnabled = true;
-              fc.field_a = true;
-              pi.field_N.text = cg.field_i;
-              if (fs.field_d != null) {
-                jp.field_a = false;
-                fc.field_a = false;
+              EmptyWidgetPainter.field_a = true;
+              MarkerSliderWidget.field_N.text = ScreenWipeTransition.field_i;
+              if (PrivateTextRecipientSupport.field_d != null) {
+                ArchiveLoadSequence.field_a = false;
+                EmptyWidgetPainter.field_a = false;
                 if (null == TeleportAction.field_B) {
-                  dt.field_d = new boolean[tq.gameOptionCount];
-                  TeleportAction.field_B = new byte[tq.gameOptionCount];
+                  DateValiditySupport.field_d = new boolean[NineSliceSpriteSupport.gameOptionCount];
+                  TeleportAction.field_B = new byte[NineSliceSpriteSupport.gameOptionCount];
                 }
                 var13 = 0;
                 var9_intLifetime1 = var13;
-                while (var13 < tq.gameOptionCount) {
-                  dt.field_d[var13] = false;
+                while (var13 < NineSliceSpriteSupport.gameOptionCount) {
+                  DateValiditySupport.field_d[var13] = false;
                   var13++;
                 }
-                ConsoleTokenCursor.a(0, tq.gameOptionCount, NumericDateInputWidget.roomSetup, -1, true, -1, (byte) 89, -1);
+                ConsoleTokenCursor.a(0, NineSliceSpriteSupport.gameOptionCount, NumericDateInputWidget.roomSetup, -1, true, -1, (byte) 89, -1);
                 if (!(BufferedSocket.field_j < 2) &&
-                  br.heldKeys[12]) {
-                  fc.field_a = true;
+                  CampaignLookupSupport.heldKeys[12]) {
+                  EmptyWidgetPainter.field_a = true;
                 }
               }
-              if (!fc.field_a) {
-                so.field_d.inputEnabled = false;
-                if (so.field_d.hovered) {
+              if (!EmptyWidgetPainter.field_a) {
+                FixedSquareRootSupport.field_d.inputEnabled = false;
+                if (FixedSquareRootSupport.field_d.hovered) {
                   var9 = null;
-                  if (jp.field_a) {
+                  if (ArchiveLoadSequence.field_a) {
                     var9 = "<col=A00000>" + ep.field_h + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;
                     var9 = var11Lifetime1;
                   }
-                  for (var10Lifetime1 = 0; var10Lifetime1 < tq.gameOptionCount; var10Lifetime1++) {
-                    if (dt.field_d[var10Lifetime1]) {
+                  for (var10Lifetime1 = 0; var10Lifetime1 < NineSliceSpriteSupport.gameOptionCount; var10Lifetime1++) {
+                    if (DateValiditySupport.field_d[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + GridWidgetContainer.field_M[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
@@ -349,7 +349,7 @@ final class j {
                       }
                     }
                   }
-                  DialogMessagePane.field_I = "<col=A00000>" + kp.field_e + "<br>" + ov.field_j + (String) (var9);
+                  DialogMessagePane.field_I = "<col=A00000>" + MarkerSliderPainter.field_e + "<br>" + SpectateRoomRequestSupport.field_j + (String) (var9);
                 }
               }
             } else {
@@ -364,30 +364,30 @@ final class j {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = pi.field_N.font.textWidth(var16) + 3 * pi.field_N.font.characterWidth('.');
-              pi.field_N.textHorizontalPadding = (-var10Lifetime1 + pi.field_N.width) / 2;
+              var10Lifetime1 = MarkerSliderWidget.field_N.font.textWidth(var16) + 3 * MarkerSliderWidget.field_N.font.characterWidth('.');
+              MarkerSliderWidget.field_N.textHorizontalPadding = (-var10Lifetime1 + MarkerSliderWidget.field_N.width) / 2;
               if ((KeyboardInputListener.field_b & 48) == 16) {
                 var9 = var16 + ".";
               }
-              pi.field_N.horizontalAlignment = 0;
+              MarkerSliderWidget.field_N.horizontalAlignment = 0;
               if (32 == (48 & KeyboardInputListener.field_b)) {
                 var9 = (String) (var9) + "..";
               }
               if (48 == (48 & KeyboardInputListener.field_b)) {
                 var9 = (String) (var9) + "...";
               }
-              pi.field_N.text = (String) (var9);
-              so.field_d.text = ac.field_s.toUpperCase();
+              MarkerSliderWidget.field_N.text = (String) (var9);
+              FixedSquareRootSupport.field_d.text = ManaStarParticle.field_s.toUpperCase();
             }
           }
           if (param0 != 1) {
-            j.b((byte) 20);
+            j.releaseStatics((byte) 20);
           }
           stackIn_66_0 = BitmapTextWidgetPainter.field_a;
           stackIn_66_1 = true;
           stackIn_67_2 = (param2) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_66_0).updateInput(stackIn_66_1, stackIn_67_2);
-          stackIn_71_0 = pd.field_c;
+          stackIn_71_0 = PasswordLengthSupport.field_c;
           stackIn_71_1 = true;
           stackIn_72_2 = (param2) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_71_0).updateInput(stackIn_71_1, stackIn_72_2);
@@ -400,7 +400,7 @@ final class j {
             if (0 != SocialListPanel.field_Lb.pressedButton) {
               TextEntryWidgetPainter.a(-127, param3);
             }
-            if (so.field_d.pressedButton != 0) {
+            if (FixedSquareRootSupport.field_d.pressedButton != 0) {
               if (SpellCastAction.field_s) {
                 ManaEvent.a((byte) 69, param3);
               } else {
@@ -431,7 +431,7 @@ final class j {
           this.field_i = new FixedQuaternion();
           this.a(105);
           this.field_g = param0 << 16;
-          this.field_k = RasterViewportResizeHandler.multiplyFixed16(-55, this.field_g, so.sqrtFixed16(196608, -129));
+          this.field_k = RasterViewportResizeHandler.multiplyFixed16(-55, this.field_g, FixedSquareRootSupport.sqrtFixed16(196608, -129));
           this.a(2, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

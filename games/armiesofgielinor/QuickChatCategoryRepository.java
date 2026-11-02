@@ -12,7 +12,7 @@ final class QuickChatCategoryRepository {
     static boolean guestSession;
 
     final static void a(boolean param0, int param1) {
-        tq.a(param0, true, param1 ^ -81);
+        NineSliceSpriteSupport.a(param0, true, param1 ^ -81);
         if (param1 != -5) {
           field_g = (String) null;
         }
@@ -35,20 +35,20 @@ final class QuickChatCategoryRepository {
     }
 
     final static void a(java.applet.Applet param0, boolean param1) {
-        dj.a(param0, 0, "");
+        TextSplitSupport.a(param0, 0, "");
         if (!param1) {
           return;
         }
         try {
-          t.a((byte) -118, param0);
+          ReloadPageSupport.reloadPage((byte) -118, param0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "bl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_g = null;
-        int var1 = 69 / ((-73 - param0) / 51);
+        int var1 = 69 / ((-73 - obfuscationGuard) / 51);
         field_a = null;
         soundHandles = null;
     }
@@ -124,13 +124,13 @@ final class QuickChatCategoryRepository {
                 var9 = stackIn_10_0;
                 if (var20 == null) {
                   var8_ref_of = new LobbyPlayer(var22, var21, var3_long);
-                  oi.lobbyPlayersById.put(-1, var3_long, var8_ref_of);
+                  CheckMarkWidgetPainter.lobbyPlayersById.put(-1, var3_long, var8_ref_of);
                 } else {
                   if (var9 != 0) {
                     var20.setNames((byte) 53, var21, var22);
                   }
                 }
-                var8_ref_of.lastActivityMillis = vi.monotonicMillis(82) - (long)((PacketBuffer) ((Object) var1)).readInt(1);
+                var8_ref_of.lastActivityMillis = MonotonicClockSupport.monotonicMillis(82) - (long)((PacketBuffer) ((Object) var1)).readInt(1);
                 var8_ref_of.rating = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                 var10 = ((PacketBuffer) ((Object) var1)).readVarInt(-27);
                 stackIn_16_0 = var8_ref_of;
@@ -173,7 +173,7 @@ final class QuickChatCategoryRepository {
                     var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                     var4_ref_au = (LobbyRoom) (ClippedWidgetContainer.lobbyRoomsById.get((byte) -27, (long)var3));
                     if (var4_ref_au == null) {
-                      var4_ref_au = new LobbyRoom(tq.gameOptionCount);
+                      var4_ref_au = new LobbyRoom(NineSliceSpriteSupport.gameOptionCount);
                       ClippedWidgetContainer.lobbyRoomsById.put(-1, (long)var3, var4_ref_au);
                     }
                     TrianglePulse.decodeLobbyRoom(var4_ref_au, true, var1, 78);
@@ -267,10 +267,10 @@ final class QuickChatCategoryRepository {
                                   case 21:
                                     var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                                     if (var3 == 0) {
-                                      ph.field_d = 0L;
+                                      AccountNameCharacterSupport.field_d = 0L;
                                       break regionExit1;
                                     }
-                                    ph.field_d = vi.monotonicMillis(-59) + (long)var3;
+                                    AccountNameCharacterSupport.field_d = MonotonicClockSupport.monotonicMillis(-59) + (long)var3;
                                     break regionExit1;
                                   case 22:
                                     GlobalSpell.field_g = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
@@ -280,8 +280,8 @@ final class QuickChatCategoryRepository {
                                     ChannelBaseVolumeConsoleCommand.localAccountId = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                                     break regionExit1;
                                   default:
-                                    af.a((Throwable) null, 118, "L1: " + CampaignProgress.b(false));
-                                    dj.a((byte) -124);
+                                    LoginCredentials.a((Throwable) null, 118, "L1: " + CampaignProgress.b(false));
+                                    TextSplitSupport.a((byte) -124);
                                     break regionExit1;
                                 }
                               }
@@ -346,7 +346,7 @@ final class QuickChatCategoryRepository {
               var3_ref_of.unlinkSecondary((byte) -76);
               var3_ref_of = (LobbyPlayer) (ModalDialog.currentRoomPlayers.next((byte) 123));
             }
-            var3_ref_of = (LobbyPlayer) (oi.lobbyPlayersById.first((byte) 66));
+            var3_ref_of = (LobbyPlayer) (CheckMarkWidgetPainter.lobbyPlayersById.first((byte) 66));
             while (var3_ref_of != null) {
               if (var3_ref_of.invitationSent ||
                 var3_ref_of.joinRequested) {
@@ -357,7 +357,7 @@ final class QuickChatCategoryRepository {
                 var3_ref_of.invitationSent = false;
                 ResizableModalDialog.insertLobbyPlayerSorted((byte) 122, var3_ref_of);
               }
-              var3_ref_of = (LobbyPlayer) (oi.lobbyPlayersById.next(1));
+              var3_ref_of = (LobbyPlayer) (CheckMarkWidgetPainter.lobbyPlayersById.next(1));
             }
             if (1 == var2 &&
               ToggleWidget.currentRoom != null) {
@@ -365,10 +365,10 @@ final class QuickChatCategoryRepository {
             }
             if (4 == var2) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-              ToggleWidget.currentRoom = new LobbyRoom(tq.gameOptionCount);
+              ToggleWidget.currentRoom = new LobbyRoom(NineSliceSpriteSupport.gameOptionCount);
               ToggleWidget.currentRoom.setSecondaryKey(true, (long)var3);
               TrianglePulse.decodeLobbyRoom(ToggleWidget.currentRoom, false, var1, 97);
-              ph.field_d = 0L;
+              AccountNameCharacterSupport.field_d = 0L;
             } else {
               ToggleWidget.currentRoom = null;
             }
@@ -377,7 +377,7 @@ final class QuickChatCategoryRepository {
               NumericDateInputWidget.roomSetup = null;
             } else {
               if (null == NumericDateInputWidget.roomSetup) {
-                NumericDateInputWidget.roomSetup = new LobbyRoom(tq.gameOptionCount);
+                NumericDateInputWidget.roomSetup = new LobbyRoom(NineSliceSpriteSupport.gameOptionCount);
               }
             }
             if (3 != var2) {
@@ -465,9 +465,9 @@ final class QuickChatCategoryRepository {
             var5 = var10;
             if (var10 != null) {
               if (76 == var3) {
-                pd.field_d = var10;
+                PasswordLengthSupport.field_d = var10;
               }
-              if (th.a(var10, -17900)) {
+              if (FloorModSupport.a(var10, -17900)) {
                 DiskCacheRequest.unitProjectionVariants[var3] = true;
               }
               if (null != var10.faceRenderTypes) {

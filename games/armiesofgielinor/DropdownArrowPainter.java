@@ -10,19 +10,19 @@ final class DropdownArrowPainter implements WidgetPainter {
         int var1_int = 0;
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ds.field_a = new RgbSprite[op.field_c[0].length];
+          PointerCaptureSupport.field_a = new RgbSprite[FriendRequestSupport.field_c[0].length];
           if (param0) {
             field_a = true;
           }
-          GameCanvas.field_c = new RgbSprite[op.field_c[0].length];
+          GameCanvas.field_c = new RgbSprite[FriendRequestSupport.field_c[0].length];
           ConsoleTextNode.pushRasterState((byte) -56);
-          for (var1_int = 0; var1_int < op.field_c[0].length; var1_int++) {
-            ds.field_a[var1_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
+          for (var1_int = 0; var1_int < FriendRequestSupport.field_c[0].length; var1_int++) {
+            PointerCaptureSupport.field_a[var1_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
             GameCanvas.field_c[var1_int] = new RgbSprite(ClientUiNode.field_y.pixelWidth, ClientUiNode.field_y.pixelHeight);
-            ds.field_a[var1_int].b();
-            DiskCacheWorker.field_d.drawTintedGrayscale(0, 0, op.field_c[0][var1_int]);
-            GameCanvas.field_c[var1_int].b();
-            ClientUiNode.field_y.drawShadedGrayscale(0, 0, op.field_c[0][var1_int]);
+            PointerCaptureSupport.field_a[var1_int].bindAsRasterTarget();
+            DiskCacheWorker.field_d.drawTintedGrayscale(0, 0, FriendRequestSupport.field_c[0][var1_int]);
+            GameCanvas.field_c[var1_int].bindAsRasterTarget();
+            ClientUiNode.field_y.drawShadedGrayscale(0, 0, FriendRequestSupport.field_c[0][var1_int]);
           }
           QuickChatPhraseRepository.popRasterState(-18862);
         } catch (RuntimeException runtimeException) {
@@ -81,8 +81,8 @@ final class DropdownArrowPainter implements WidgetPainter {
         }
     }
 
-    public static void a(byte param0) {
-        int var1 = -29 / ((13 - param0) / 56);
+    public static void releaseStatics(byte obfuscationGuard) {
+        int var1 = -29 / ((13 - obfuscationGuard) / 56);
         field_c = null;
     }
 
@@ -161,7 +161,7 @@ final class DropdownArrowPainter implements WidgetPainter {
           for (var6_int = 0; var6_int <= widget.height; var6_int++) {
             var7 = 152 + var6_int * 48 / widget.height;
             var8 = var7 | (var7 << 16 | var7 << 8);
-            SoftwareRaster.e(widget.x + originX, var6_int + originY + widget.y, widget.width, var8);
+            SoftwareRaster.drawHorizontalLine(widget.x + originX, var6_int + originY + widget.y, widget.width, var8);
           }
           var6_intLifetime1 = 1;
           if (obfuscationGuard > -79) {
@@ -175,13 +175,13 @@ final class DropdownArrowPainter implements WidgetPainter {
             if (var9 >= SoftwareRaster.clipTop &&
               SoftwareRaster.clipBottom > var9) {
               if (SoftwareRaster.clipLeft < var7Lifetime1) {
-                SoftwareRaster.pixels[var9 * SoftwareRaster.width - (-var7Lifetime1 + 1)] = rn.bitwiseAnd(SoftwareRaster.pixels[-1 + (var7Lifetime1 + SoftwareRaster.width * var9)], 16711422) >> 1;
+                SoftwareRaster.pixels[var9 * SoftwareRaster.width - (-var7Lifetime1 + 1)] = ProceduralMapSupport.bitwiseAnd(SoftwareRaster.pixels[-1 + (var7Lifetime1 + SoftwareRaster.width * var9)], 16711422) >> 1;
               }
               if (var8Lifetime1 + var7Lifetime1 < SoftwareRaster.clipRight) {
-                SoftwareRaster.pixels[SoftwareRaster.width * var9 + (var7Lifetime1 + var8Lifetime1)] = rn.bitwiseAnd(16711422, SoftwareRaster.pixels[SoftwareRaster.width * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
+                SoftwareRaster.pixels[SoftwareRaster.width * var9 + (var7Lifetime1 + var8Lifetime1)] = ProceduralMapSupport.bitwiseAnd(16711422, SoftwareRaster.pixels[SoftwareRaster.width * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
               }
             }
-            SoftwareRaster.e(var7Lifetime1, var9, var8Lifetime1, 0);
+            SoftwareRaster.drawHorizontalLine(var7Lifetime1, var9, var8Lifetime1, 0);
             var6_intLifetime1++;
           }
           return;
@@ -218,19 +218,19 @@ final class DropdownArrowPainter implements WidgetPainter {
           if (obfuscationGuard != 42) {
             return false;
           }
-          if (ov.connectionState != ResourceArchive.connectedState) {
+          if (SpectateRoomRequestSupport.connectionState != ResourceArchive.connectedState) {
             return false;
           }
-          var2_long = vi.monotonicMillis(126);
+          var2_long = MonotonicClockSupport.monotonicMillis(126);
           if (HuffmanCodec.packetDelayMillis != 0 &&
             0 > ByteStorage.pendingOpcode) {
             var4_ref_qu = (DelayedPacket) (AnimationPlayer.delayedPackets.first((byte) 127));
             if (var4_ref_qu != null &&
               var2_long > var4_ref_qu.releaseAtMillis) {
               var4_ref_qu.unlink(-111);
-              fk.packetPayloadLength = var4_ref_qu.payload.length;
+              DropdownSelectorPainter.packetPayloadLength = var4_ref_qu.payload.length;
               ByteStorage.incomingPacket.position = 0;
-              for (var5_int = 0; fk.packetPayloadLength > var5_int; var5_int++) {
+              for (var5_int = 0; DropdownSelectorPainter.packetPayloadLength > var5_int; var5_int++) {
                 ByteStorage.incomingPacket.payload[var5_int] = var4_ref_qu.payload[var5_int];
               }
               QuickChatCommandDefinition.thirdPreviousOpcode = PrintCoatConsoleCommand.secondPreviousOpcode;
@@ -262,7 +262,7 @@ final class DropdownArrowPainter implements WidgetPainter {
               }
               ByteStorage.pendingOpcode = ByteStorage.incomingPacket.readCipheredOpcode(255);
               ByteStorage.incomingPacket.position = 0;
-              fk.packetPayloadLength = opcodePayloadLengths[ByteStorage.pendingOpcode];
+              DropdownSelectorPainter.packetPayloadLength = opcodePayloadLengths[ByteStorage.pendingOpcode];
             }
             if (!AgeValidator.isPacketPayloadReady(2)) {
               return false;
@@ -282,8 +282,8 @@ final class DropdownArrowPainter implements WidgetPainter {
                 var4 = 0;
               }
             }
-            var5 = new DelayedPacket(var2_long + (long)var4, ByteStorage.pendingOpcode, new byte[fk.packetPayloadLength]);
-            for (var6 = 0; var6 < fk.packetPayloadLength; var6++) {
+            var5 = new DelayedPacket(var2_long + (long)var4, ByteStorage.pendingOpcode, new byte[DropdownSelectorPainter.packetPayloadLength]);
+            for (var6 = 0; var6 < DropdownSelectorPainter.packetPayloadLength; var6++) {
               var5.payload[var6] = ByteStorage.incomingPacket.payload[var6];
             }
             AnimationPlayer.delayedPackets.addLast((byte) -119, (IntrusiveNode) (var5));

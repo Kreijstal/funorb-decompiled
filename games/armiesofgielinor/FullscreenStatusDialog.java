@@ -144,7 +144,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           var4.height = 80;
           var4.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild((byte) 10, var4);
-          this.closeButton = this.createCloseButton(pd.field_f, (WidgetListener) (this), 93);
+          this.closeButton = this.createCloseButton(PasswordLengthSupport.field_f, (WidgetListener) (this), 93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -195,8 +195,8 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
         }
     }
 
-    public static void n(int param0) {
-        if (param0 == 12213) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard == 12213) {
           field_X = null;
           field_Y = null;
           field_Z = null;
@@ -204,7 +204,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           field_ab = null;
           return;
         }
-        FullscreenStatusDialog.n(4);
+        FullscreenStatusDialog.releaseStatics(4);
         field_X = null;
         field_Y = null;
         field_Z = null;
@@ -214,7 +214,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
 
     private final void closeStatusNotice(byte obfuscationGuard) {
         if (obfuscationGuard != 60) {
-          FullscreenStatusDialog.n(-98);
+          FullscreenStatusDialog.releaseStatics(-98);
           if (!this.open) {
             return;
           }

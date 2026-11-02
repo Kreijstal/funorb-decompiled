@@ -17,7 +17,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
     int manaBonusPercent;
     int[] participantIds;
     int[] neighborMissionIds;
-    static el field_I;
+    static MouseWheelSource field_I;
     int mapSizeSetting;
     int missionId;
     CampaignDefinition campaign;
@@ -244,12 +244,12 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         return this.cachedLayout;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         tickTimestampsMillis = null;
         field_I = null;
         field_s = null;
         field_p = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           tickTimestampsMillis = (long[]) null;
         }
     }
@@ -323,7 +323,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         int var5Lifetime1;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var7 = fk.loadRgbSpritesByName(param1, (byte) -126, param3, param2);
+          var7 = DropdownSelectorPainter.loadRgbSpritesByName(param1, (byte) -126, param3, param2);
           var4 = var7;
           for (var5 = 0; var5 < 9; var5++) {
             var7[var5].normalizeCanvas();

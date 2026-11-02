@@ -108,7 +108,7 @@ final class BoundedUrlRequest implements Runnable {
             socketOutput = socket.getOutputStream();
             socketOutput.write(17);
             grabRequest = (CharSequence) ((Object) ("JAGGRAB " + this.url.getFile() + "\n\n"));
-            socketOutput.write(nr.encodeSingleByteText(grabRequest, false));
+            socketOutput.write(NineSliceFrame.encodeSingleByteText(grabRequest, false));
             this.input = new DataInputStream(socket.getInputStream());
           }
           this.response.position = 0;
@@ -203,10 +203,10 @@ final class BoundedUrlRequest implements Runnable {
         return this.response;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_f = null;
         field_k = null;
-        if (param0 < 48) {
+        if (obfuscationGuard < 48) {
           return;
         }
         field_e = null;

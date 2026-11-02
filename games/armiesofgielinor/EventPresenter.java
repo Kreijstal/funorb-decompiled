@@ -261,11 +261,11 @@ final class EventPresenter extends IntrusiveNode {
         return var2 != 0;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         rasterStatePool = null;
         field_t = null;
         field_o = null;
-        int var1 = -72 % ((param0 - 30) / 51);
+        int var1 = -72 % ((obfuscationGuard - 30) / 51);
         field_l = null;
     }
 
@@ -300,7 +300,7 @@ final class EventPresenter extends IntrusiveNode {
         stackIn_14_0 = TeamRoster.playerRingSprite;
         stackIn_14_1 = 10 + var4;
         stackIn_14_2 = var5 + 5;
-        stackIn_14_3 = op.field_c;
+        stackIn_14_3 = FriendRequestSupport.field_c;
         stackIn_15_4 = (this.battlefield.teamGame) ? 1 : 0;
         ((RgbSprite) (Object) stackIn_14_0).drawShadedGrayscale(stackIn_14_1, stackIn_14_2, stackIn_14_3[stackIn_15_4][this.event.unit.ownerPlayer]);
         if (obfuscationGuard != 31785) {
@@ -369,7 +369,7 @@ final class EventPresenter extends IntrusiveNode {
           this.acknowledged = true;
           this.presentation = null;
           this.event.completeAllPresentations(excludedEventKind + 7);
-          oo.e(-387);
+          MembershipExpansionScreen.e(-387);
         }
     }
 

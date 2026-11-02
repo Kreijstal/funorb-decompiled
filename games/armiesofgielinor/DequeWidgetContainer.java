@@ -45,7 +45,7 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
           }
           var8 = new NodeIterator(this.children);
           if (obfuscationGuard >= -121) {
-            DequeWidgetContainer.d((byte) 127);
+            DequeWidgetContainer.releaseStatics((byte) 127);
           }
           var4 = (Widget) (var8.first(50));
           while (var4 != null) {
@@ -495,7 +495,7 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
             this.children = (NodeDeque) null;
             return false;
           }
-          if (!br.heldKeys[81]) {
+          if (!CampaignLookupSupport.heldKeys[81]) {
             stackIn_13_0 = this.focusNextChild((byte) -123, rootWidget);
           } else {
             stackIn_13_0 = this.focusPreviousChild(false, rootWidget);
@@ -570,8 +570,8 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
         this.children = new NodeDeque();
     }
 
-    public static void d(byte param0) {
-        if (param0 != -89) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != -89) {
           DequeWidgetContainer.j(114);
         }
         field_C = null;

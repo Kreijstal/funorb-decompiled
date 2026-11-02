@@ -13,15 +13,15 @@ final class TutorialLayout {
 
     final int getRightX(byte obfuscationGuard, int stage) {
         int var3 = -102 / ((obfuscationGuard - 44) / 42);
-        return this.rightX[stage] + (-640 + so.field_b.field_a >> 1);
+        return this.rightX[stage] + (-640 + FixedSquareRootSupport.field_b.width >> 1);
     }
 
     final int getTopY(int stage, byte obfuscationGuard) {
         if (obfuscationGuard <= -100) {
-          return this.topY[stage] + (so.field_b.field_g - 480 >> 1);
+          return this.topY[stage] + (FixedSquareRootSupport.field_b.height - 480 >> 1);
         }
         field_c = (String) null;
-        return this.topY[stage] + (so.field_b.field_g - 480 >> 1);
+        return this.topY[stage] + (FixedSquareRootSupport.field_b.height - 480 >> 1);
     }
 
     final void setRightX(int obfuscationGuard, int screenX, int stage) {
@@ -42,11 +42,11 @@ final class TutorialLayout {
 
     final int getLeftX(int stage, int obfuscationGuard) {
         if (obfuscationGuard == 29) {
-          return (-640 + so.field_b.field_a >> 1) + this.leftX[stage];
+          return (-640 + FixedSquareRootSupport.field_b.width >> 1) + this.leftX[stage];
         }
         PacketBuffer var4 = (PacketBuffer) null;
         TutorialLayout.readSpell(-13, (PacketBuffer) null, 83);
-        return (-640 + so.field_b.field_a >> 1) + this.leftX[stage];
+        return (-640 + FixedSquareRootSupport.field_b.width >> 1) + this.leftX[stage];
     }
 
     final void setLeftX(int obfuscationGuard, int screenX, int stage) {
@@ -77,7 +77,7 @@ final class TutorialLayout {
             TutorialLayout.readSpell(-35, (PacketBuffer) null, 62);
           }
           spellId = packet.readUnsignedShort((byte) -104);
-          spellKind = uc.spellDefinitions[spellId][3];
+          spellKind = SpellDefinitionTable.spellDefinitions[spellId][3];
           if (spellKind == 4) {
             stackIn_16_0 = new GlobalSpell(spellId);
             return (Spell) ((Object) stackIn_16_0);
@@ -92,7 +92,7 @@ final class TutorialLayout {
             7 != spellKind) {
             return null;
           }
-          if (uc.spellDefinitions[spellId][4] != 5) {
+          if (SpellDefinitionTable.spellDefinitions[spellId][4] != 5) {
             stackIn_25_0 = new UnitSpell(spellId, packet.readUnsignedByte(obfuscationGuard ^ 4368051), packet.readUnsignedByte(0));
             return (Spell) ((Object) stackIn_25_0);
           }
@@ -116,8 +116,8 @@ final class TutorialLayout {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 == 4368051) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard == 4368051) {
           field_g = null;
           field_c = null;
           field_b = null;
@@ -152,10 +152,10 @@ final class TutorialLayout {
 
     final int getBottomY(int obfuscationGuard, int stage) {
         if (obfuscationGuard == -6) {
-          return (so.field_b.field_g - 480 >> 1) + this.bottomY[stage];
+          return (FixedSquareRootSupport.field_b.height - 480 >> 1) + this.bottomY[stage];
         }
         this.setRightX(-40, 11, -54);
-        return (so.field_b.field_g - 480 >> 1) + this.bottomY[stage];
+        return (FixedSquareRootSupport.field_b.height - 480 >> 1) + this.bottomY[stage];
     }
 
     TutorialLayout() {

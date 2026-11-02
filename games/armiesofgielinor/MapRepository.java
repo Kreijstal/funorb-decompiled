@@ -34,15 +34,15 @@ final class MapRepository {
     }
 
     final static void a(boolean param0) {
-        fh.field_i = false;
-        ac.field_n = false;
+        GrowableIntArray.field_i = false;
+        ManaStarParticle.field_n = false;
         if (!param0) {
           return;
         }
         try {
           gl.a(127, -1);
           ChannelBaseVolumeConsoleCommand.field_L = SpriteScrollBar.nameCheckResultConsumed;
-          mh.accountNameCheckState = SpriteScrollBar.nameCheckResultConsumed;
+          EffectsGainSupport.accountNameCheckState = SpriteScrollBar.nameCheckResultConsumed;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ou.M(" + param0 + ')');
         }
@@ -92,7 +92,7 @@ final class MapRepository {
           return;
         }
         try {
-          vi.showLoginWithDescription("", 640, (String) null);
+          MonotonicClockSupport.showLoginWithDescription("", 640, (String) null);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ou.D(" + obfuscationGuard + ')');
         }
@@ -374,7 +374,7 @@ final class MapRepository {
               if (param4) {
                 uh.field_f[var23] = var27 >> EditableTextWidget.field_M;
                 ArchiveProvider.field_a[var23] = var28 >> EditableTextWidget.field_M;
-                qt.field_c[var23] = var29;
+                BitReversalSupport.field_c[var23] = var29;
               }
               var23++;
               continue;
@@ -400,12 +400,12 @@ final class MapRepository {
                 var25 = param0.field_a[var23];
                 var26 = param0.field_n[var23];
                 TextLayout.field_c[var23] = (var18 * var26 + (var12 * var24 + var15 * var25) >> 16) + var9;
-                ji.field_c[var23] = var10 + (var13 * var24 + (var16 * var25 + var26 * var19) >> 16);
-                fl.field_f[var23] = (var26 * var20 + var24 * var14 + var25 * var17 >> 16) + var11;
+                AccountNameCheckSupport.field_c[var23] = var10 + (var13 * var24 + (var16 * var25 + var26 * var19) >> 16);
+                WidgetTheme.field_f[var23] = (var26 * var20 + var24 * var14 + var25 * var17 >> 16) + var11;
                 var24 = param0.field_m[var23];
                 var25 = param0.field_F[var23];
                 var26 = param0.field_I[var23];
-                dj.field_b[var23] = (var26 * var18 + var12 * var24 + var15 * var25 >> 16) + var9;
+                TextSplitSupport.field_b[var23] = (var26 * var18 + var12 * var24 + var15 * var25 >> 16) + var9;
                 li.field_k[var23] = var10 + (var16 * var25 + var24 * var13 + var19 * var26 >> 16);
                 is.field_e[var23] = var11 + (var26 * var20 + (var25 * var17 + var24 * var14) >> 16);
                 var23++;

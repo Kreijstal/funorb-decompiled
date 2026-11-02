@@ -57,16 +57,16 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return (1 & this.movementFlags) != 0 ? true : false;
     }
 
-    final int a(boolean param0) {
-        if (param0) {
+    final int getMovementTargetX(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           Unit var3 = (Unit) null;
           this.canParasitize((Unit) null, (byte) 94);
         }
         return this.movementTargetX;
     }
 
-    final boolean p(byte param0) {
-        if (param0 >= -94) {
+    final boolean hasUnitDefinitionFlag2(byte obfuscationGuard) {
+        if (obfuscationGuard >= -94) {
           this.attacksMade = -85;
         }
         return (2 & WhirlpoolHasher.unitDefinitions[this.unitType][10]) > 0 ? true : false;
@@ -111,7 +111,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
 
     final void setModelUnitType(int modelUnitType, int obfuscationGuard) {
         if (obfuscationGuard != 8) {
-          this.n((byte) 80);
+          this.queueTurnEffectEvents((byte) 80);
         }
         if (this.modelPreview == null) {
           this.modelPreview = new UnitModelPreview(this.field_R, modelUnitType, this.facingAngle);
@@ -127,7 +127,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return this.unitType == 27 ? true : false;
     }
 
-    final void n(byte param0) {
+    final void queueTurnEffectEvents(byte obfuscationGuard) {
         int stackIn_6_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_10_0 = 0;
@@ -149,7 +149,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (0 < this.bonusStrength) {
           this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this, 5)));
         }
-        if (this.a(param0 ^ -23050)) {
+        if (this.canLifeSteal(obfuscationGuard ^ -23050)) {
           var3 = this;
           var4 = 0;
           var5 = this.battlefield.getUnitAt(((Unit) (var3)).tileY, true, -1 + ((Unit) (var3)).tileX);
@@ -195,7 +195,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (this.poisoned) {
           this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this, 2)));
         }
-        if (param0 != -42) {
+        if (obfuscationGuard != -42) {
           Unit.m(45);
         }
     }
@@ -278,7 +278,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return stackIn_8_0;
     }
 
-    final int l(int param0) {
+    final int getStatusIconMask(int obfuscationGuard) {
         int var2 = 0;
         if (!this.movementSpent) {
           var2 = var2 | 1;
@@ -307,7 +307,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (this.meleeLifeSteal) {
           var2 = var2 | 256;
         }
-        if (param0 != -27014) {
+        if (obfuscationGuard != -27014) {
           return 27;
         }
         if (-1 < this.equipmentDescriptor) {
@@ -390,8 +390,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return stackIn_11_0;
     }
 
-    final int D(int param0) {
-        if (param0 > -63) {
+    final int getMovementTargetY(int obfuscationGuard) {
+        if (obfuscationGuard > -63) {
           this.tileX = 66;
         }
         return this.movementTargetY;
@@ -408,7 +408,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           if (FullscreenFocusCanvas.keyEventFrameEndIndex == SummonAction.keyEventReadIndex) {
             return false;
           }
-          rs.keyCode = gt.keyEventCodes[SummonAction.keyEventReadIndex];
+          PowerOfTwoSupport.keyCode = LocalAccountNameSupport.keyEventCodes[SummonAction.keyEventReadIndex];
           DualNodeDeque.typedCharacter = SpellCastAction.keyEventCharacters[SummonAction.keyEventReadIndex];
           guardRemainder = 86 % ((obfuscationGuard - 0) / 48);
           SummonAction.keyEventReadIndex = 127 & SummonAction.keyEventReadIndex + 1;
@@ -419,7 +419,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
 
     final void refreshForTurnChange(byte obfuscationGuard) {
         if (!this.poisoned &&
-          !this.a(23072) &&
+          !this.canLifeSteal(23072) &&
           this.maximumStrength > this.strength &&
           !this.movementSpent &&
           0 < this.attacksRemaining) {
@@ -446,22 +446,22 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         }
     }
 
-    final boolean f(byte param0) {
-        if (param0 >= -99) {
+    final boolean hasUnitDefinitionFlag8(byte obfuscationGuard) {
+        if (obfuscationGuard >= -99) {
           return true;
         }
         return 0 < (8 & WhirlpoolHasher.unitDefinitions[this.unitType][10]) ? true : false;
     }
 
-    final String q(byte param0) {
-        if (param0 <= 37) {
+    final String getLabelWithStatusSuffixes(byte obfuscationGuard) {
+        if (obfuscationGuard <= 37) {
           this.copyDetached(true);
         }
         String var2 = new String(this.displayName);
         if (this.hasMovementFlag1(false)) {
           var2 = var2 + " " + ConsoleExpression.field_r;
         }
-        if (this.u(8)) {
+        if (this.hasMovementFlag8AtFullStrength(8)) {
           var2 = var2 + " " + BoundedUrlRequest.field_f;
         }
         return var2;
@@ -474,7 +474,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return this != this.battlefield.tiles[this.battlefield.mapWidth * this.tileY + this.tileX].occupant ? true : false;
     }
 
-    final void z(int param0) {
+    final void resetPreviewAnimation(int obfuscationGuard) {
         if (null != this.modelPreview) {
           if (this.unitType == 34) {
             this.modelPreview.setUnitType((byte) 115, 75);
@@ -484,14 +484,14 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           }
           this.modelPreview.selectAnimation(-23162, 0);
         }
-        if (param0 != 10) {
+        if (obfuscationGuard != 10) {
           this.field_R = (int[]) null;
         }
     }
 
-    final boolean o(byte param0) {
+    final boolean hasSpellCostOneOverride(byte obfuscationGuard) {
         boolean stackIn_7_0 = false;
-        if (param0 != 98) {
+        if (obfuscationGuard != 98) {
           this.hasMovementTarget(-50);
         }
         stackIn_7_0 = (this.unitType == 73) || (this.accessoryType == 4);
@@ -509,10 +509,10 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         int var3 = 114 / ((-56 - obfuscationGuard) / 54);
     }
 
-    public static void q(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_T = null;
         field_n = null;
-        if (param0 != -9480) {
+        if (obfuscationGuard != -9480) {
           field_n = (String) null;
         }
         field_y = null;
@@ -527,11 +527,11 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean canLifeSteal(int obfuscationGuard) {
         boolean stackIn_4_0 = false;
         boolean stackIn_5_1 = false;
         boolean stackIn_9_0 = false;
-        if (param0 != 23072) {
+        if (obfuscationGuard != 23072) {
           this.statusEffectValue = -127;
         }
         stackIn_4_0 = this.meleeLifeSteal;
@@ -684,7 +684,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return stackIn_6_0;
     }
 
-    final void a(boolean param0, byte param1) {
+    final void removeFromPlay(boolean tileUpdateFlag, byte obfuscationGuard) {
         MapTile var3;
         int var4;
         int var5;
@@ -703,49 +703,49 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         switch (var4) {
           case 53:
             this.battlefield.refreshTileEffectsNear(this.tileY, this.tileX, 0, 1);
-            if (this.v(10)) {
+            if (this.hasUnitDefinitionFlag1(10)) {
               break;
             }
-            if (!param0) {
+            if (!tileUpdateFlag) {
               break;
             }
-            var6.a(106);
+            var6.setModifierFlag8(106);
             break;
           case 59:
             this.battlefield.refreshTileEffectsNear(this.tileY, this.tileX, 0, 1);
-            if (this.v(10)) {
+            if (this.hasUnitDefinitionFlag1(10)) {
               break;
             }
-            if (!param0) {
+            if (!tileUpdateFlag) {
               break;
             }
-            var6.a(106);
+            var6.setModifierFlag8(106);
             break;
           default:
-            if (this.v(10)) {
+            if (this.hasUnitDefinitionFlag1(10)) {
               break;
             }
-            if (!param0) {
+            if (!tileUpdateFlag) {
               break;
             }
-            var6.a(106);
+            var6.setModifierFlag8(106);
             break;
           case 63:
             this.battlefield.refreshTileEffectsNear(this.tileY, this.tileX, 0, 1);
-            if (this.v(10)) {
+            if (this.hasUnitDefinitionFlag1(10)) {
               break;
             }
-            if (!param0) {
+            if (!tileUpdateFlag) {
               break;
             }
-            var6.a(106);
+            var6.setModifierFlag8(106);
             break;
           case 43:
           case 58:
             this.battlefield.refreshTileEffectsNear(this.tileY, this.tileX, 0, 1);
-            if (!this.v(10) &&
-              param0) {
-              var6.a(106);
+            if (!this.hasUnitDefinitionFlag1(10) &&
+              tileUpdateFlag) {
+              var6.setModifierFlag8(106);
             }
             break;
         }
@@ -753,7 +753,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var3.occupant = null;
         }
         this.unlink(39);
-        if (param1 != 105) {
+        if (obfuscationGuard != 105) {
           this.field_X = false;
         }
         this.battlefield.refreshTileEffectsNear(this.tileY, this.tileX, 0, 3);
@@ -766,8 +766,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         this.battlefield.checkPlayerDefeat(this.ownerPlayer, true);
     }
 
-    final boolean s(int param0) {
-        if (param0 < 123) {
+    final boolean hasUnitDefinitionFlag32(int obfuscationGuard) {
+        if (obfuscationGuard < 123) {
           this.isSeaSlug((byte) -126);
         }
         return (32 & WhirlpoolHasher.unitDefinitions[this.unitType][10]) > 0 ? true : false;
@@ -853,9 +853,9 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         }
     }
 
-    final boolean u(int param0) {
+    final boolean hasMovementFlag8AtFullStrength(int obfuscationGuard) {
         boolean stackIn_6_0 = false;
-        if (param0 != 8) {
+        if (obfuscationGuard != 8) {
           Unit.pollKeyEvent((byte) 14);
         }
         stackIn_6_0 = (0 != (this.movementFlags & 8)) && (this.strength >= this.maximumStrength);
@@ -870,9 +870,9 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return 4 == this.getUnitCategory(0) ? true : false;
     }
 
-    final boolean r(byte param0) {
+    final boolean hasSpellCostThreeOverride(byte obfuscationGuard) {
         boolean stackIn_7_0 = false;
-        if (param0 <= 41) {
+        if (obfuscationGuard <= 41) {
           return false;
         }
         stackIn_7_0 = (0 != (WhirlpoolHasher.unitDefinitions[this.unitType][10] & 4096)) || (this.accessoryType == 3);
@@ -883,19 +883,19 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (this.isJadeVine((byte) 102)) {
           this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new UpkeepEvent(this.tileX, this.tileY)));
         }
-        if (this.p((byte) -128)) {
+        if (this.hasUnitDefinitionFlag2((byte) -128)) {
           this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(2, this.tileX, this.tileY, this.ownerPlayer)));
         }
-        if (this.d((byte) 105)) {
+        if (this.hasUnitDefinitionFlag16((byte) 105)) {
           this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(3, this.tileX, this.tileY, this.ownerPlayer)));
         }
-        if (this.f((byte) -116)) {
+        if (this.hasUnitDefinitionFlag8((byte) -116)) {
           this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(1, this.tileX, this.tileY, this.ownerPlayer)));
         }
         if (obfuscationGuard != -1) {
           return;
         }
-        if (this.s(124)) {
+        if (this.hasUnitDefinitionFlag32(124)) {
           this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(4, this.tileX, this.tileY, this.ownerPlayer)));
         }
         if (this.isDisplacedFromTile(26440)) {
@@ -935,8 +935,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return 117;
     }
 
-    private final boolean v(int param0) {
-        if (param0 != 10) {
+    private final boolean hasUnitDefinitionFlag1(int obfuscationGuard) {
+        if (obfuscationGuard != 10) {
           this.presentationOwnsModel = true;
         }
         return (WhirlpoolHasher.unitDefinitions[this.unitType][10] & 1) > 0 ? true : false;
@@ -954,8 +954,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         this.movementTargetY = -1;
     }
 
-    final boolean d(byte param0) {
-        if (param0 != 105) {
+    final boolean hasUnitDefinitionFlag16(byte obfuscationGuard) {
+        if (obfuscationGuard != 105) {
           return true;
         }
         return (WhirlpoolHasher.unitDefinitions[this.unitType][10] & 16) > 0 ? true : false;
@@ -1004,9 +1004,9 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var1 = var6;
           var24 = BoundedFile.field_e;
           for (var3 = 0; var3 < 8; var3++) {
-            var6[var3] = rn.bitwiseAnd(var17[var3], ~var24[var3]);
+            var6[var3] = ProceduralMapSupport.bitwiseAnd(var17[var3], ~var24[var3]);
           }
-          for (var1_int = 0; var1_int < so.field_a.length; var1_int++) {
+          for (var1_int = 0; var1_int < FixedSquareRootSupport.field_a.length; var1_int++) {
             if (DebouncedValidator.a(var1_int, ConsoleTextNode.field_n, 1)) {
               ScrollWidgetContainer.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(var1_int)));
             }
@@ -1110,7 +1110,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           this.facingAngle = 1792;
           if (0 == this.unitType &&
             this.packedFlag8) {
-            this.displayName = ov.field_a;
+            this.displayName = SpectateRoomRequestSupport.field_a;
             return;
           }
           if (this.unitType < ScrollContainer.unitDisplayNames.length) {

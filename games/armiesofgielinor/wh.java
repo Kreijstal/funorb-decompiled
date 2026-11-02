@@ -141,7 +141,7 @@ final class wh {
             var10 = var4[var5][var9][0];
             var4[var5][var9][0] = NetworkResourceRequest.a(var4[var5], var9, var10, var5, (byte) 15);
             var11 = var4[var5][var9][0];
-            var4[var5][var9] = od.a(-16399, var11);
+            var4[var5][var9] = ByteArrayPoolSupport.a(-16399, var11);
             if (null == var4[var5][var9]) {
               var4[var5][var9] = new String[1];
               var4[var5][var9][0] = var11;

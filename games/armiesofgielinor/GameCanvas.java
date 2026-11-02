@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameCanvas extends java.awt.Canvas {
-    static cg field_b;
+    static ScreenWipeTransition field_b;
     static RgbSprite[] field_c;
     static BufferedFile field_d;
     private java.awt.Component target;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_c = null;
-        if (param0 < 43) {
-          GameCanvas.a(-119);
+        if (obfuscationGuard < 43) {
+          GameCanvas.releaseStatics(-119);
           field_b = null;
           field_d = null;
           return;
@@ -90,7 +90,7 @@ final class GameCanvas extends java.awt.Canvas {
               var3_int = maximumLength;
             }
             var4 = new byte[var3_int];
-            packet.position = packet.position + ds.chatHuffmanCodec.decompress(packet.payload, packet.position, false, var3_int, 0, var4);
+            packet.position = packet.position + PointerCaptureSupport.chatHuffmanCodec.decompress(packet.payload, packet.position, false, var3_int, 0, var4);
             var5 = BattlefieldTheme.decodeSingleByteText(0, var3_int, -107, var4);
             stackIn_7_0 = var5;
             return stackIn_7_0;

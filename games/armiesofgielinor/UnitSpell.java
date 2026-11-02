@@ -16,8 +16,8 @@ final class UnitSpell extends Spell {
             Battlefield discardedBattlefield = (Battlefield) null;
             this.applyAccessoryEffect((byte) 119, (Battlefield) null);
           }
-          targetUnit.statusEffectType = uc.spellDefinitions[this.spellId][5];
-          targetUnit.statusEffectValue = uc.spellDefinitions[this.spellId][6];
+          targetUnit.statusEffectType = SpellDefinitionTable.spellDefinitions[this.spellId][5];
+          targetUnit.statusEffectValue = SpellDefinitionTable.spellDefinitions[this.spellId][6];
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wa.S(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
@@ -52,10 +52,10 @@ final class UnitSpell extends Spell {
           }
           targetUnit = battlefield.getUnitAt(this.targetY, true, this.targetX);
           refreshTarget = targetUnit;
-          if (uc.spellDefinitions[this.spellId][6] == 7) {
+          if (SpellDefinitionTable.spellDefinitions[this.spellId][6] == 7) {
             targetUnit.poisoned = true;
           }
-          if (uc.spellDefinitions[this.spellId][6] == 16) {
+          if (SpellDefinitionTable.spellDefinitions[this.spellId][6] == 16) {
             if (refreshTarget.immobilizedTurns > 0) {
               refreshTarget.immobilizedTurns = refreshTarget.immobilizedTurns - 1;
             } else {
@@ -100,7 +100,7 @@ final class UnitSpell extends Spell {
             discardedBattlefield = (Battlefield) null;
             this.applyUnitFlagsAndImmobilize((Battlefield) null, false);
           }
-          effectCode = uc.spellDefinitions[this.spellId][5];
+          effectCode = SpellDefinitionTable.spellDefinitions[this.spellId][5];
           if (effectCode != 0) {
             if (effectCode != 64) {
               this.queueAreaDamageOrHealing(true, battlefield);
@@ -134,7 +134,7 @@ final class UnitSpell extends Spell {
           }
           targetUnit = battlefield.getUnitAt(this.targetY, true, this.targetX);
           Unit targetAlias = targetUnit;
-          targetUnit.equipmentDescriptor = uc.spellDefinitions[this.spellId][6] | uc.spellDefinitions[this.spellId][5] << 5;
+          targetUnit.equipmentDescriptor = SpellDefinitionTable.spellDefinitions[this.spellId][6] | SpellDefinitionTable.spellDefinitions[this.spellId][5] << 5;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wa.I(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
@@ -158,15 +158,15 @@ final class UnitSpell extends Spell {
           if (obfuscationGuard != 78) {
             field_h = (String) null;
           }
-          radius = uc.spellDefinitions[this.spellId][7];
+          radius = SpellDefinitionTable.spellDefinitions[this.spellId][7];
           for (tileX = this.targetX - radius; tileX <= radius + this.targetX; tileX++) {
             for (tileY = -radius + this.targetY; this.targetY + radius >= tileY; tileY++) {
               targetUnit = battlefield.getUnitAt(tileY, true, tileX);
               if (targetUnit != null) {
-                for (shrinkIndex = 0; uc.spellDefinitions[this.spellId][6] > shrinkIndex; shrinkIndex++) {
+                for (shrinkIndex = 0; SpellDefinitionTable.spellDefinitions[this.spellId][6] > shrinkIndex; shrinkIndex++) {
                   battlefield.pendingEvents.addFirst(750, new TurnEffectEvent(targetUnit, 6));
                 }
-                for (growIndex = 0; uc.spellDefinitions[this.spellId][6] < growIndex; growIndex--) {
+                for (growIndex = 0; SpellDefinitionTable.spellDefinitions[this.spellId][6] < growIndex; growIndex--) {
                   battlefield.pendingEvents.addFirst(750, new TurnEffectEvent(targetUnit, 4));
                 }
               }
@@ -201,7 +201,7 @@ final class UnitSpell extends Spell {
         int obfuscationControl = 0;
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          radius = uc.spellDefinitions[this.spellId][7];
+          radius = SpellDefinitionTable.spellDefinitions[this.spellId][7];
           if (!obfuscationGuard) {
             this.targetX = -123;
           }
@@ -209,12 +209,12 @@ final class UnitSpell extends Spell {
             for (tileY = this.targetY - radius; radius + this.targetY >= tileY; tileY++) {
               targetUnit = battlefield.getUnitAt(tileY, true, tileX);
               if (targetUnit != null) {
-                if (uc.spellDefinitions[this.spellId][6] <= 0) {
-                  for (healIndex = 0; healIndex > uc.spellDefinitions[this.spellId][6]; healIndex--) {
+                if (SpellDefinitionTable.spellDefinitions[this.spellId][6] <= 0) {
+                  for (healIndex = 0; healIndex > SpellDefinitionTable.spellDefinitions[this.spellId][6]; healIndex--) {
                     battlefield.pendingEvents.addFirst(750, new TurnEffectEvent(targetUnit, 1));
                   }
                 } else {
-                  battlefield.pendingEvents.addFirst(750, new DamageEvent(targetUnit, battlefield.scaleIncomingDamage(targetUnit, (byte) -128, uc.spellDefinitions[this.spellId][5], uc.spellDefinitions[this.spellId][6]), false));
+                  battlefield.pendingEvents.addFirst(750, new DamageEvent(targetUnit, battlefield.scaleIncomingDamage(targetUnit, (byte) -128, SpellDefinitionTable.spellDefinitions[this.spellId][5], SpellDefinitionTable.spellDefinitions[this.spellId][6]), false));
                 }
               }
             }
@@ -273,8 +273,8 @@ final class UnitSpell extends Spell {
         int terrainTileY;
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (uc.spellDefinitions[this.spellId][5] == 5) {
-            ownershipRadius = uc.spellDefinitions[this.spellId][7];
+          if (SpellDefinitionTable.spellDefinitions[this.spellId][5] == 5) {
+            ownershipRadius = SpellDefinitionTable.spellDefinitions[this.spellId][7];
             for (ownershipTileX = this.targetX - ownershipRadius; ownershipRadius + this.targetX >= ownershipTileX; ownershipTileX++) {
               if (ownershipTileX >= 0) {
                 if (battlefield.mapWidth <= ownershipTileX) {
@@ -294,8 +294,8 @@ final class UnitSpell extends Spell {
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
-          if (uc.spellDefinitions[this.spellId][5] == 6) {
-            skeletonRadius = uc.spellDefinitions[this.spellId][7];
+          if (SpellDefinitionTable.spellDefinitions[this.spellId][5] == 6) {
+            skeletonRadius = SpellDefinitionTable.spellDefinitions[this.spellId][7];
             for (skeletonTileX = this.targetX - skeletonRadius; this.targetX + skeletonRadius >= skeletonTileX; skeletonTileX++) {
               if (0 <= skeletonTileX) {
                 if (battlefield.mapWidth <= skeletonTileX) {
@@ -316,15 +316,15 @@ final class UnitSpell extends Spell {
           }
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameCompleted0) &&
-            (uc.spellDefinitions[this.spellId][5] == 3)) {
-            terrainRadius = uc.spellDefinitions[this.spellId][7];
+            (SpellDefinitionTable.spellDefinitions[this.spellId][5] == 3)) {
+            terrainRadius = SpellDefinitionTable.spellDefinitions[this.spellId][7];
             for (terrainTileX = -terrainRadius + this.targetX; terrainRadius + this.targetX >= terrainTileX; terrainTileX++) {
               for (terrainTileY = this.targetY - terrainRadius; terrainRadius + this.targetY >= terrainTileY; terrainTileY++) {
-                battlefield.applyTerrainChange(terrainTileX, true, uc.spellDefinitions[this.spellId][6], castingPlayer, terrainTileY);
+                battlefield.applyTerrainChange(terrainTileX, true, SpellDefinitionTable.spellDefinitions[this.spellId][6], castingPlayer, terrainTileY);
               }
             }
           }
-          if (uc.spellDefinitions[this.spellId][5] == 4) {
+          if (SpellDefinitionTable.spellDefinitions[this.spellId][5] == 4) {
             crossingDirection = battlefield.getTerrainCrossingDirection(this.targetY, 2056, this.targetX);
             crossingTerrain = battlefield.getNormalizedTerrainAt(this.targetY, -85, this.targetX);
             crossingTileX = this.targetX;
@@ -363,7 +363,7 @@ final class UnitSpell extends Spell {
           if (obfuscationGuard != -100) {
             return;
           }
-          if (uc.spellDefinitions[this.spellId][5] == 7) {
+          if (SpellDefinitionTable.spellDefinitions[this.spellId][5] == 7) {
             battlefield.tiles[this.targetY * battlefield.mapWidth + this.targetX].ownerPlayer = -1;
             battlefield.recountMapStructures(-2);
             battlefield.recountStructures(obfuscationGuard ^ -98);
@@ -424,13 +424,13 @@ final class UnitSpell extends Spell {
         int obfuscationControl = 0;
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (uc.spellDefinitions[this.spellId][3] == 0) {
+          if (SpellDefinitionTable.spellDefinitions[this.spellId][3] == 0) {
             markedTarget = battlefield.getUnitAt(this.targetY, true, this.targetX);
             if (markedTarget != null) {
               markedTarget.packedFlag512 = true;
             }
           }
-          handlerKind = uc.spellDefinitions[this.spellId][4];
+          handlerKind = SpellDefinitionTable.spellDefinitions[this.spellId][4];
           if (obfuscationGuard != 26123) {
             return;
           }
@@ -508,7 +508,7 @@ final class UnitSpell extends Spell {
             field_h = (String) null;
           }
           if (accessoryTarget != null) {
-            targetUnit.accessoryType = uc.spellDefinitions[this.spellId][5];
+            targetUnit.accessoryType = SpellDefinitionTable.spellDefinitions[this.spellId][5];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -562,11 +562,11 @@ final class UnitSpell extends Spell {
           if (this.spellId == 120) {
             targetUnit.meleeLifeSteal = true;
           }
-          if (19 == uc.spellDefinitions[this.spellId][5]) {
+          if (19 == SpellDefinitionTable.spellDefinitions[this.spellId][5]) {
             flagTarget.packedFlag256 = true;
           }
-          if (uc.spellDefinitions[this.spellId][5] == 21) {
-            targetUnit.immobilizedTurns = targetUnit.immobilizedTurns + uc.spellDefinitions[this.spellId][6];
+          if (SpellDefinitionTable.spellDefinitions[this.spellId][5] == 21) {
+            targetUnit.immobilizedTurns = targetUnit.immobilizedTurns + SpellDefinitionTable.spellDefinitions[this.spellId][6];
             flagTarget.movementSpent = true;
             flagTarget.attacksRemaining = 0;
             if (flagTarget.immobilizedTurns <= 100) {
@@ -589,10 +589,10 @@ final class UnitSpell extends Spell {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_h = null;
         field_e = null;
-        if (param0 != 6) {
+        if (obfuscationGuard != 6) {
           field_h = (String) null;
         }
     }

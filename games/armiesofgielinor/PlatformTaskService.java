@@ -7,7 +7,7 @@ final class PlatformTaskService implements Runnable {
     private boolean microsoftJvm;
     BoundedFile cacheDataFile;
     static String javaVendor;
-    private hj field_l;
+    private MicrosoftCursorController field_l;
     private PlatformTask queueHead;
     boolean privilegedServicesEnabled;
     BoundedFile randomDataFile;
@@ -15,7 +15,7 @@ final class PlatformTaskService implements Runnable {
     BoundedFile[] cacheIndexFiles;
     private static int cacheStoreId;
     private static String userDirectory;
-    private fv field_q;
+    private MicrosoftDisplayController field_q;
     private static String osName;
     static String lowercaseOsName;
     BoundedFile masterIndexFile;
@@ -238,7 +238,7 @@ final class PlatformTaskService implements Runnable {
           BoundedFile var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
-          ug var3_ref3 = null;
+          ProxyAuthenticationRequiredException var3_ref3 = null;
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -306,7 +306,7 @@ final class PlatformTaskService implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (vi.monotonicMillis(-127) < networkBlockedUntilMillis) {
+                        if (MonotonicClockSupport.monotonicMillis(-127) < networkBlockedUntilMillis) {
                           throw new IOException();
                         }
                         var15 = (var8.integerArgument >> 24 & 255) + "." + (255 & var8.integerArgument >> 16) + "." + (255 & var8.integerArgument >> 8) + "." + (var8.integerArgument & 255);
@@ -314,9 +314,9 @@ final class PlatformTaskService implements Runnable {
                         break;
                       case 5:
                         if (this.microsoftJvm) {
-                          var8.result = this.field_q.a(0);
+                          var8.result = this.field_q.enumerateDisplayModes(0);
                         } else {
-                          var8.result = Class.forName("wu").getMethod("listmodes", new Class[]{}).invoke(this.field_o, new Object[]{});
+                          var8.result = Class.forName("AwtDisplayController").getMethod("listmodes", new Class[]{}).invoke(this.field_o, new Object[]{});
                         }
                         break;
                       case 6:
@@ -324,16 +324,16 @@ final class PlatformTaskService implements Runnable {
                         var8.result = var14;
                         var14.setResizable(false);
                         if (!this.microsoftJvm) {
-                          Class.forName("wu").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_o, new Object[]{var14, new Integer(var8.integerArgument >>> 16), new Integer(var8.integerArgument & 65535), new Integer(var8.secondIntegerArgument >> 16), new Integer(var8.secondIntegerArgument & 65535)});
+                          Class.forName("AwtDisplayController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_o, new Object[]{var14, new Integer(var8.integerArgument >>> 16), new Integer(var8.integerArgument & 65535), new Integer(var8.secondIntegerArgument >> 16), new Integer(var8.secondIntegerArgument & 65535)});
                         } else {
-                          this.field_q.a(65535 & var8.integerArgument, var8.secondIntegerArgument & 65535, var14, var8.secondIntegerArgument >> 16, var8.integerArgument >>> 16, false);
+                          this.field_q.enterFullscreen(65535 & var8.integerArgument, var8.secondIntegerArgument & 65535, var14, var8.secondIntegerArgument >> 16, var8.integerArgument >>> 16, false);
                         }
                         break;
                       case 7:
                         if (!this.microsoftJvm) {
-                          Class.forName("wu").getMethod("exit", new Class[]{}).invoke(this.field_o, new Object[]{});
+                          Class.forName("AwtDisplayController").getMethod("exit", new Class[]{}).invoke(this.field_o, new Object[]{});
                         } else {
-                          this.field_q.a(122, (java.awt.Frame) (var8.objectArgument));
+                          this.field_q.exitFullscreen(122, (java.awt.Frame) (var8.objectArgument));
                         }
                         break;
                       case 12:
@@ -351,9 +351,9 @@ final class PlatformTaskService implements Runnable {
                           var3_int = var8.integerArgument;
                           var4 = var8.secondIntegerArgument;
                           if (this.microsoftJvm) {
-                            this.field_l.a(var4, 74, var3_int);
+                            this.field_l.movePointer(var4, 74, var3_int);
                           } else {
-                            Class.forName("gf").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_b, new Object[]{new Integer(var3_int), new Integer(var4)});
+                            Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_b, new Object[]{new Integer(var3_int), new Integer(var4)});
                           }
                           break;
                         }
@@ -363,16 +363,16 @@ final class PlatformTaskService implements Runnable {
                           var3_int = stackIn_83_0;
                           var13 = (java.awt.Component) (var8.objectArgument);
                           if (this.microsoftJvm) {
-                            this.field_l.a(48, var3_int != 0, var13);
+                            this.field_l.setCursorVisible(48, var3_int != 0, var13);
                           } else {
-                            Class.forName("gf").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_b, new Object[]{var13, new Boolean(var3_int != 0)});
+                            Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_b, new Object[]{var13, new Boolean(var3_int != 0)});
                           }
                           break;
                         }
                         if (!this.microsoftJvm &&
                           var2_int == 17) {
                           var12 = (Object[]) (var8.objectArgument);
-                          Class.forName("gf").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_b, new Object[]{var12[0], var12[1], new Integer(var8.integerArgument), new Integer(var8.secondIntegerArgument), var12[2]});
+                          Class.forName("CursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_b, new Object[]{var12[0], var12[1], new Integer(var8.integerArgument), new Integer(var8.secondIntegerArgument), var12[2]});
                         } else {
                           if (var2_int != 16) {
                             throw PlatformTaskService.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
@@ -403,7 +403,7 @@ final class PlatformTaskService implements Runnable {
                         }
                         break;
                       case 21:
-                        if (networkBlockedUntilMillis > vi.monotonicMillis(46)) {
+                        if (networkBlockedUntilMillis > MonotonicClockSupport.monotonicMillis(46)) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
@@ -419,7 +419,7 @@ final class PlatformTaskService implements Runnable {
                     var8.result = ((Class) (var10[0])).getDeclaredMethod((String) (var10[1]), (Class[]) (var10[2]));
                     break;
                   case 4:
-                    if (vi.monotonicMillis(89) < networkBlockedUntilMillis) {
+                    if (MonotonicClockSupport.monotonicMillis(89) < networkBlockedUntilMillis) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
@@ -432,21 +432,21 @@ final class PlatformTaskService implements Runnable {
                     var8.result = var9;
                     break;
                   case 22:
-                    if (vi.monotonicMillis(-118) < networkBlockedUntilMillis) {
+                    if (MonotonicClockSupport.monotonicMillis(-118) < networkBlockedUntilMillis) {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (ug) null;
-                      var8.result = ti.a((String) (var8.objectArgument), (byte) 102, var8.integerArgument).a(111);
-                    } catch (ug decompiledCaughtParameter2) {
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
+                      var8.result = TurnSkipToggleSupport.a((String) (var8.objectArgument), (byte) 102, var8.integerArgument).openSocket(111);
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref3 = (ug) (Object) decompiledCaughtException;
+                      var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.result = var3_ref3.getMessage();
                       throw var3_ref3;
                     }
                     break;
                   case 1:
-                    if (vi.monotonicMillis(-108) < networkBlockedUntilMillis) {
+                    if (MonotonicClockSupport.monotonicMillis(-108) < networkBlockedUntilMillis) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.integerArgument);
@@ -509,7 +509,7 @@ final class PlatformTaskService implements Runnable {
         Throwable throwable = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
-        fv var7 = null;
+        MicrosoftDisplayController var7 = null;
         this.privilegedServicesEnabled = false;
         this.masterIndexFile = null;
         this.microsoftJvm = false;
@@ -586,18 +586,18 @@ final class PlatformTaskService implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        qi.a(cacheStoreId, cacheName, 1);
+        CacheFileLocator.configure(cacheStoreId, cacheName, 1);
         if (this.privilegedServicesEnabled) {
-          this.randomDataFile = new BoundedFile(qi.a("random.dat", cacheStoreId, 39, (String) null), "rw", 25L);
-          this.cacheDataFile = new BoundedFile(qi.a(true, "main_file_cache.dat2"), "rw", 314572800L);
-          this.masterIndexFile = new BoundedFile(qi.a(true, "main_file_cache.idx255"), "rw", 1048576L);
+          this.randomDataFile = new BoundedFile(CacheFileLocator.resolveLauncherFile("random.dat", cacheStoreId, 39, (String) null), "rw", 25L);
+          this.cacheDataFile = new BoundedFile(CacheFileLocator.getCacheFile(true, "main_file_cache.dat2"), "rw", 314572800L);
+          this.masterIndexFile = new BoundedFile(CacheFileLocator.getCacheFile(true, "main_file_cache.idx255"), "rw", 1048576L);
           this.cacheIndexFiles = new BoundedFile[cacheIndexCount];
           for (var5_int = 0; cacheIndexCount > var5_int; var5_int++) {
-            this.cacheIndexFiles[var5_int] = new BoundedFile(qi.a(true, "main_file_cache.idx" + var5_int), "rw", 1048576L);
+            this.cacheIndexFiles[var5_int] = new BoundedFile(CacheFileLocator.getCacheFile(true, "main_file_cache.idx" + var5_int), "rw", 1048576L);
           }
           if (this.microsoftJvm) {
             try {
-              Class.forName("qr").newInstance();
+              Class.forName("MicrosoftDirectSoundProbe").newInstance();
             } catch (java.lang.Throwable decompiledCaughtParameter8) {
               decompiledCaughtException = decompiledCaughtParameter8;
               throwable = decompiledCaughtException;
@@ -605,9 +605,9 @@ final class PlatformTaskService implements Runnable {
           }
           try {
             if (!this.microsoftJvm) {
-              this.field_o = Class.forName("wu").newInstance();
+              this.field_o = Class.forName("AwtDisplayController").newInstance();
             } else {
-              var7 = new fv();
+              var7 = new MicrosoftDisplayController();
               this.field_q = var7;
             }
           } catch (java.lang.Throwable decompiledCaughtParameter9) {
@@ -616,9 +616,9 @@ final class PlatformTaskService implements Runnable {
           }
           try {
             if (this.microsoftJvm) {
-              this.field_l = new hj();
+              this.field_l = new MicrosoftCursorController();
             } else {
-              this.field_b = Class.forName("gf").newInstance();
+              this.field_b = Class.forName("CursorController").newInstance();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter10) {
             decompiledCaughtException = decompiledCaughtParameter10;

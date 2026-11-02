@@ -21,9 +21,9 @@ final class AttackEvent extends GameEvent {
     static RgbSprite field_O;
     static String field_F;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_F = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_O = null;
           field_K = null;
           field_D = null;
@@ -107,7 +107,7 @@ final class AttackEvent extends GameEvent {
           if (bound <= 0) {
             throw new IllegalArgumentException();
           }
-          if (pg.isPowerOfTwoBits(bound, -10)) {
+          if (UnitAnimationSelectionSupport.isPowerOfTwoBits(bound, -10)) {
             stackIn_6_0 = (int)((long)bound * (4294967295L & (long)random.nextInt()) >> 32);
             return stackIn_6_0;
           }
@@ -118,7 +118,7 @@ final class AttackEvent extends GameEvent {
           do {
             var4 = random.nextInt();
           } while (var3_int <= var4);
-          stackIn_13_0 = th.floorModWithOffset(var4, 1, bound);
+          stackIn_13_0 = FloorModSupport.floorModWithOffset(var4, 1, bound);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class AttackEvent extends GameEvent {
             mapNamesByThemeAndSize = (String[][][]) null;
           }
           for (var1_int = 0; 5 > var1_int; var1_int++) {
-            EmailValidator.outgoingPacket.writeShort(true, pg.playerProfile.equippedSpellIds[var1_int]);
+            EmailValidator.outgoingPacket.writeShort(true, UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var1_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -157,7 +157,7 @@ final class AttackEvent extends GameEvent {
     }
 
     final static void d(byte param0) {
-        if (!fh.field_i) {
+        if (!GrowableIntArray.field_i) {
           throw new IllegalStateException();
         }
         if (null != GameClock.loginProgressDialog) {
@@ -171,7 +171,7 @@ final class AttackEvent extends GameEvent {
           BattleViewportResizeHandler.loginDialog.finishResize(105);
           return;
         }
-        AttackEvent.a(true);
+        AttackEvent.releaseStatics(true);
         KingBlackDragonEvent.field_C.showDialog(BattleViewportResizeHandler.loginDialog, 0);
         BattleViewportResizeHandler.loginDialog.replaceContent(ContextActionMenu.loginForm, (byte) 55);
         BattleViewportResizeHandler.loginDialog.finishResize(105);

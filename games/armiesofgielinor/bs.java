@@ -6,8 +6,8 @@ final class bs {
     static int[] field_b;
     static String field_c;
 
-    public static void a(boolean param0) {
-        if (!param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return;
         }
         field_a = null;
@@ -17,7 +17,7 @@ final class bs {
 
     final static int a(byte param0) {
         int var1 = 0 % ((-32 - param0) / 48);
-        return fc.keyboardIdleTicks;
+        return EmptyWidgetPainter.keyboardIdleTicks;
     }
 
     final static int a(PacketBuffer param0, int param1) {
@@ -30,9 +30,9 @@ final class bs {
         RuntimeException var2 = null;
         try {
           var2_int = param0.payload[param1 + param0.position];
-          if (param0.payload[param0.position] == we.field_a[0] &&
-            param0.payload[param0.position + 1] == we.field_a[1] &&
-            we.field_a[2] == param0.payload[param0.position + 2]) {
+          if (param0.payload[param0.position] == ArchiveLoadStep.field_a[0] &&
+            param0.payload[param0.position + 1] == ArchiveLoadStep.field_a[1] &&
+            ArchiveLoadStep.field_a[2] == param0.payload[param0.position + 2]) {
             param0.readInt(1);
           } else {
             var2_int = -1;

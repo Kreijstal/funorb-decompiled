@@ -204,10 +204,10 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_o = null;
         field_m = null;
-        int var1 = 53 / ((-78 - param0) / 43);
+        int var1 = 53 / ((-78 - obfuscationGuard) / 43);
         field_y = null;
     }
 
@@ -219,7 +219,7 @@ class Widget extends IntrusiveNode {
     }
 
     Widget(String param0, WidgetListener param1) {
-        this(param0, t.field_c.field_t, param1);
+        this(param0, ReloadPageSupport.field_c.field_t, param1);
     }
 
     final boolean a(int param0, char param1, int param2) {
@@ -314,7 +314,7 @@ class Widget extends IntrusiveNode {
           regionExit1: {
             var5 = this.isFocused(false) ? 1 : 0;
             if (param0) {
-              if (el.field_d != 0) {
+              if (MouseWheelSource.field_d != 0) {
                 if (var5 == 0) {
                   if (DeployEvent.pointerPressButton != 0) {
                     if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
@@ -329,12 +329,12 @@ class Widget extends IntrusiveNode {
                         return param0;
                       }
                       this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-                      var21 = bn.draggedWidget;
+                      var21 = CalendarSupport.draggedWidget;
                       if (var21 != null) {
                         if (var21.listener instanceof WidgetDropListener) {
                           ((WidgetDropListener) (var21.listener)).widgetDropped(var21, -14486, (DropTargetWidgetContainer) null);
                         }
-                        bn.draggedWidget = null;
+                        CalendarSupport.draggedWidget = null;
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
@@ -358,12 +358,12 @@ class Widget extends IntrusiveNode {
                     return param0;
                   }
                   this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-                  var23 = bn.draggedWidget;
+                  var23 = CalendarSupport.draggedWidget;
                   if (var23 != null) {
                     if (var23.listener instanceof WidgetDropListener) {
                       ((WidgetDropListener) (var23.listener)).widgetDropped(var23, -14486, (DropTargetWidgetContainer) null);
                     }
-                    bn.draggedWidget = null;
+                    CalendarSupport.draggedWidget = null;
                   }
                   if (var7 == 0) {
                     LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
@@ -385,7 +385,7 @@ class Widget extends IntrusiveNode {
                   OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
-                this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
+                this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, MouseWheelSource.field_d, param1 + 6327, this);
               }
               if (DeployEvent.pointerPressButton != 0) {
                 if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
@@ -397,13 +397,13 @@ class Widget extends IntrusiveNode {
                         return param0;
                       }
                       this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-                      var27 = bn.draggedWidget;
+                      var27 = CalendarSupport.draggedWidget;
                       var6 = var27;
                       if (var27 != null) {
                         if (var27.listener instanceof WidgetDropListener) {
                           ((WidgetDropListener) (var27.listener)).widgetDropped(var27, -14486, (DropTargetWidgetContainer) null);
                         }
-                        bn.draggedWidget = null;
+                        CalendarSupport.draggedWidget = null;
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
@@ -435,12 +435,12 @@ class Widget extends IntrusiveNode {
                 return param0;
               }
               this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-              var28 = bn.draggedWidget;
+              var28 = CalendarSupport.draggedWidget;
               if (var28 != null) {
                 if (var28.listener instanceof WidgetDropListener) {
                   ((WidgetDropListener) (var28.listener)).widgetDropped(var28, -14486, (DropTargetWidgetContainer) null);
                 }
-                bn.draggedWidget = null;
+                CalendarSupport.draggedWidget = null;
               }
               if (var7 == 0) {
                 break regionExit1;
@@ -458,7 +458,7 @@ class Widget extends IntrusiveNode {
           field_n = 69;
           var5 = this.isFocused(false) ? 1 : 0;
           if (param0) {
-            if (el.field_d == 0) {
+            if (MouseWheelSource.field_d == 0) {
               if (DeployEvent.pointerPressButton != 0) {
                 if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
                   if (var5 != 0) {
@@ -482,13 +482,13 @@ class Widget extends IntrusiveNode {
                 return param0;
               }
               this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-              var8 = bn.draggedWidget;
+              var8 = CalendarSupport.draggedWidget;
               var6 = var8;
               if (var8 != null) {
                 if (var8.listener instanceof WidgetDropListener) {
                   ((WidgetDropListener) (var8.listener)).widgetDropped(var8, -14486, (DropTargetWidgetContainer) null);
                 }
-                bn.draggedWidget = null;
+                CalendarSupport.draggedWidget = null;
               }
               if (var7 != 0 &&
                 var5 != 0 &&
@@ -500,7 +500,7 @@ class Widget extends IntrusiveNode {
               return param0;
             }
             if (var5 != 0) {
-              this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
+              this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, MouseWheelSource.field_d, param1 + 6327, this);
             }
             if (DeployEvent.pointerPressButton == 0) {
               if (ProgressMessageDialog.pointerButton != 0) {
@@ -514,13 +514,13 @@ class Widget extends IntrusiveNode {
                 return param0;
               }
               this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-              var10 = bn.draggedWidget;
+              var10 = CalendarSupport.draggedWidget;
               var6 = var10;
               if (var10 != null) {
                 if (var10.listener instanceof WidgetDropListener) {
                   ((WidgetDropListener) (var10.listener)).widgetDropped(var10, -14486, (DropTargetWidgetContainer) null);
                 }
-                bn.draggedWidget = null;
+                CalendarSupport.draggedWidget = null;
               }
               if (var7 != 0 &&
                 var5 != 0 &&
@@ -544,12 +544,12 @@ class Widget extends IntrusiveNode {
                   return param0;
                 }
                 this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-                var15 = bn.draggedWidget;
+                var15 = CalendarSupport.draggedWidget;
                 if (var15 != null) {
                   if (var15.listener instanceof WidgetDropListener) {
                     ((WidgetDropListener) (var15.listener)).widgetDropped(var15, -14486, (DropTargetWidgetContainer) null);
                   }
-                  bn.draggedWidget = null;
+                  CalendarSupport.draggedWidget = null;
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
@@ -578,12 +578,12 @@ class Widget extends IntrusiveNode {
               return param0;
             }
             this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-            var18 = bn.draggedWidget;
+            var18 = CalendarSupport.draggedWidget;
             if (var18 != null) {
               if (var18.listener instanceof WidgetDropListener) {
                 ((WidgetDropListener) (var18.listener)).widgetDropped(var18, -14486, (DropTargetWidgetContainer) null);
               }
-              bn.draggedWidget = null;
+              CalendarSupport.draggedWidget = null;
             }
             if (var7 == 0) {
               LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
@@ -822,7 +822,7 @@ class Widget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        t.field_c.a(cc.field_b, -127, var5, lq.field_e);
+        ReloadPageSupport.field_c.drawTooltip(cc.field_b, -127, var5, IntegerPowerSupport.field_e);
     }
 
     protected Widget() {

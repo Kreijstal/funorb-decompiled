@@ -15,11 +15,11 @@ final class TurnChangeEvent extends GameEvent {
     }
 
     final static void d(byte param0) {
-        vi.a(-76);
+        MonotonicClockSupport.a(-76);
         if (param0 != -112) {
           return;
         }
-        ListMissionsConsoleCommand.b(dh.field_n[0].canvasWidth, jn.field_c, MusicPatchNode.field_l, gl.field_c, jn.field_d, 1);
+        ListMissionsConsoleCommand.b(ImageProducerSurface.field_n[0].canvasWidth, jn.field_c, MusicPatchNode.field_l, gl.field_c, jn.field_d, 1);
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {

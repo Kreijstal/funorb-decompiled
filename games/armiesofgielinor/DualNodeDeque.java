@@ -73,10 +73,10 @@ final class DualNodeDeque {
         return null;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_e = null;
         field_a = null;
-        if (param0 <= 93) {
+        if (obfuscationGuard <= 93) {
           return;
         }
         field_k = null;
@@ -182,27 +182,27 @@ final class DualNodeDeque {
           var11 = 1;
           if (var11 != 0) {
             if (var7 != 0) {
-              l.activeStructureSprites[30].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[30].draw(param1, param4);
             }
             if (var5 != 0) {
-              l.activeStructureSprites[29].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[29].draw(param1, param4);
             }
-            l.activeStructureSprites[24].draw(param1, param4);
+            QuickChatCategoryMenuSupport.activeStructureSprites[24].draw(param1, param4);
             if (var6 != 0) {
-              l.activeStructureSprites[27].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[27].draw(param1, param4);
             }
             if (var8 != 0) {
-              l.activeStructureSprites[28].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[28].draw(param1, param4);
             }
           } else {
             if (var7 != 0 &&
               var8 != 0) {
-              l.activeStructureSprites[26].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[26].draw(param1, param4);
               return;
             }
             if (var5 != 0 &&
               var6 != 0) {
-              l.activeStructureSprites[25].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[25].draw(param1, param4);
             }
           }
           return;
@@ -212,23 +212,23 @@ final class DualNodeDeque {
             var11Lifetime1 = 1;
             if (var11Lifetime1 == 0) {
               if (var8 != 0) {
-                l.activeStructureSprites[26].draw(param1, param4);
+                QuickChatCategoryMenuSupport.activeStructureSprites[26].draw(param1, param4);
                 return;
               }
               if (var6 == 0) {
                 return;
               }
-              l.activeStructureSprites[25].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[25].draw(param1, param4);
               return;
             }
-            l.activeStructureSprites[30].draw(param1, param4);
-            l.activeStructureSprites[29].draw(param1, param4);
-            l.activeStructureSprites[24].draw(param1, param4);
+            QuickChatCategoryMenuSupport.activeStructureSprites[30].draw(param1, param4);
+            QuickChatCategoryMenuSupport.activeStructureSprites[29].draw(param1, param4);
+            QuickChatCategoryMenuSupport.activeStructureSprites[24].draw(param1, param4);
             if (var6 != 0) {
-              l.activeStructureSprites[27].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[27].draw(param1, param4);
             }
             if (var8 != 0) {
-              l.activeStructureSprites[28].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[28].draw(param1, param4);
             }
             return;
           }
@@ -243,17 +243,17 @@ final class DualNodeDeque {
           }
           var11Lifetime1Lifetime1 = stackIn_57_0;
           if (var11Lifetime1Lifetime1 != 0) {
-            l.activeStructureSprites[29].draw(param1, param4);
-            l.activeStructureSprites[24].draw(param1, param4);
+            QuickChatCategoryMenuSupport.activeStructureSprites[29].draw(param1, param4);
+            QuickChatCategoryMenuSupport.activeStructureSprites[24].draw(param1, param4);
             if (var6 != 0) {
-              l.activeStructureSprites[27].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[27].draw(param1, param4);
             }
             if (var8 != 0) {
-              l.activeStructureSprites[28].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[28].draw(param1, param4);
             }
           } else {
             if (var6 != 0) {
-              l.activeStructureSprites[25].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[25].draw(param1, param4);
             }
           }
           return;
@@ -263,30 +263,30 @@ final class DualNodeDeque {
           if (var11Lifetime2 == 0) {
             if (var7 != 0 &&
               var8 != 0) {
-              l.activeStructureSprites[26].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[26].draw(param1, param4);
               return;
             }
             return;
           }
           if (var7 != 0) {
-            l.activeStructureSprites[30].draw(param1, param4);
+            QuickChatCategoryMenuSupport.activeStructureSprites[30].draw(param1, param4);
           } else {
           }
-          l.activeStructureSprites[24].draw(param1, param4);
+          QuickChatCategoryMenuSupport.activeStructureSprites[24].draw(param1, param4);
           if (var8 == 0) {
             return;
           }
-          l.activeStructureSprites[28].draw(param1, param4);
+          QuickChatCategoryMenuSupport.activeStructureSprites[28].draw(param1, param4);
           return;
         }
         if (var7 == 0) {
           stackIn_177_0 = (var8 == 0) ? 0 : 1;
           var11Lifetime3 = stackIn_177_0;
           if (var11Lifetime3 != 0) {
-            l.activeStructureSprites[24].draw(param1, param4);
-            l.activeStructureSprites[27].draw(param1, param4);
+            QuickChatCategoryMenuSupport.activeStructureSprites[24].draw(param1, param4);
+            QuickChatCategoryMenuSupport.activeStructureSprites[27].draw(param1, param4);
             if (var8 != 0) {
-              l.activeStructureSprites[28].draw(param1, param4);
+              QuickChatCategoryMenuSupport.activeStructureSprites[28].draw(param1, param4);
             }
           } else {
           }
@@ -295,16 +295,16 @@ final class DualNodeDeque {
         var11Lifetime4 = 1;
         if (var11Lifetime4 == 0) {
           if (var8 != 0) {
-            l.activeStructureSprites[26].draw(param1, param4);
+            QuickChatCategoryMenuSupport.activeStructureSprites[26].draw(param1, param4);
             return;
           }
           return;
         }
-        l.activeStructureSprites[30].draw(param1, param4);
-        l.activeStructureSprites[24].draw(param1, param4);
-        l.activeStructureSprites[27].draw(param1, param4);
+        QuickChatCategoryMenuSupport.activeStructureSprites[30].draw(param1, param4);
+        QuickChatCategoryMenuSupport.activeStructureSprites[24].draw(param1, param4);
+        QuickChatCategoryMenuSupport.activeStructureSprites[27].draw(param1, param4);
         if (var8 != 0) {
-          l.activeStructureSprites[28].draw(param1, param4);
+          QuickChatCategoryMenuSupport.activeStructureSprites[28].draw(param1, param4);
         }
     }
 

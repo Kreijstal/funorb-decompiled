@@ -58,11 +58,11 @@ final class BattleViewportResizeHandler extends RasterViewportResizeHandler {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_f = null;
         loginDialog = null;
         field_i = null;
-        if (param0 >= -8) {
+        if (obfuscationGuard >= -8) {
           field_h = (RgbSprite[]) null;
           field_h = null;
           return;

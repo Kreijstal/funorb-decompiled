@@ -35,9 +35,9 @@ final class SocialListEntry extends ClientUiComponent {
         return var3;
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_Lb = null;
-        if (param0 == -4175) {
+        if (obfuscationGuard == -4175) {
           return;
         }
         SocialListEntry.a(true, -43, 13);

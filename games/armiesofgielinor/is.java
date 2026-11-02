@@ -29,11 +29,11 @@ final class is {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_a = null;
         field_e = null;
         field_d = null;
-        if (param0 == -5) {
+        if (obfuscationGuard == -5) {
           field_g = null;
           field_c = null;
           field_f = null;

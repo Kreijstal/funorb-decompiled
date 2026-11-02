@@ -28,13 +28,13 @@ final class UnitAnimationPreview {
         int alternateFrameGroup;
         if (obfuscationGuard >= 20) {
           frameGroup = this.animationPlayer.frameId >> 16;
-          frameSet = we.a(frameGroup, true);
+          frameSet = ArchiveLoadStep.a(frameGroup, true);
           MusicPatch.a(frameSet, (byte) -34);
           return;
         }
         field_m = (ClientUiComponent) null;
         alternateFrameGroup = this.animationPlayer.frameId >> 16;
-        alternateFrameSet = we.a(alternateFrameGroup, true);
+        alternateFrameSet = ArchiveLoadStep.a(alternateFrameGroup, true);
         MusicPatch.a(alternateFrameSet, (byte) -34);
     }
 
@@ -55,7 +55,7 @@ final class UnitAnimationPreview {
         }
         if (3 == this.animationSlot &&
           this.animationPlayer.frameIndex == ClientUiComponent.field_K[this.unitType][0]) {
-          dh.a(this.unitType, 4, 32);
+          ImageProducerSurface.a(this.unitType, 4, 32);
         }
         if (this.animationSlot != 4) {
           return;
@@ -63,7 +63,7 @@ final class UnitAnimationPreview {
         if (this.animationPlayer.frameIndex != ClientUiComponent.field_K[this.unitType][1]) {
           return;
         }
-        dh.a(this.unitType, 7, 32);
+        ImageProducerSurface.a(this.unitType, 7, 32);
         return;
     }
 
@@ -127,11 +127,11 @@ final class UnitAnimationPreview {
           copyFlagOne = 0;
           copyFlagTwo = 0;
           firstRotation = 0;
-          wrappedYaw = th.floorModWithOffset(this.yaw, 1, 2048);
+          wrappedYaw = FloorModSupport.floorModWithOffset(this.yaw, 1, 2048);
           halfTurn = 1024;
           fullTurn = 2048;
           tiltDivisor = 12;
-          wrappedTilt = th.floorModWithOffset(this.tilt - fullTurn / tiltDivisor + fullTurn, 1, 2048);
+          wrappedTilt = FloorModSupport.floorModWithOffset(this.tilt - fullTurn / tiltDivisor + fullTurn, 1, 2048);
           translationX = 0;
           translationY = (!this.projectionVariant ? 300 : 400) - this.tilt * 2;
           translationZ = -400;
@@ -156,11 +156,11 @@ final class UnitAnimationPreview {
         alternateCopyFlagOne = 0;
         alternateCopyFlagTwo = 0;
         alternateFirstRotation = 0;
-        alternateWrappedYaw = th.floorModWithOffset(this.yaw, 1, 2048);
+        alternateWrappedYaw = FloorModSupport.floorModWithOffset(this.yaw, 1, 2048);
         alternateHalfTurn = 1024;
         alternateFullTurn = 2048;
         alternateTiltDivisor = 12;
-        alternateWrappedTilt = th.floorModWithOffset(this.tilt - alternateFullTurn / alternateTiltDivisor + alternateFullTurn, 1, 2048);
+        alternateWrappedTilt = FloorModSupport.floorModWithOffset(this.tilt - alternateFullTurn / alternateTiltDivisor + alternateFullTurn, 1, 2048);
         alternateTranslationX = 0;
         alternateTranslationY = (!this.projectionVariant ? 300 : 400) - this.tilt * 2;
         alternateTranslationZ = -400;
@@ -193,37 +193,37 @@ final class UnitAnimationPreview {
         }
         this.animationVariant = animationVariant;
         animationGroup = ResizableModalDialog.unitAnimationGroups[this.unitType];
-        sequence = ck.animationSequencesByGroup[animationGroup][this.animationVariant];
+        sequence = StructureTerrainSupport.animationSequencesByGroup[animationGroup][this.animationVariant];
         guardRemainder = 81 % ((obfuscationGuard + 53) / 59);
         this.animationPlayer.selectSequence(-1, sequence);
         this.installFrameSet((byte) 122);
         soundSlot = this.animationSlot;
         if (soundSlot == 1) {
-          dh.a(this.unitType, 0, 32);
+          ImageProducerSurface.a(this.unitType, 0, 32);
           return;
         }
         if (2 == soundSlot) {
-          dh.a(this.unitType, 0, 32);
+          ImageProducerSurface.a(this.unitType, 0, 32);
           return;
         }
         if (soundSlot == 3) {
-          dh.a(this.unitType, 3, 32);
+          ImageProducerSurface.a(this.unitType, 3, 32);
           return;
         }
         if (soundSlot == 5) {
-          dh.a(this.unitType, 6, 32);
+          ImageProducerSurface.a(this.unitType, 6, 32);
           return;
         }
         if (soundSlot == 6) {
-          dh.a(this.unitType, 2, 32);
-          dh.a(this.unitType, 1, 32);
+          ImageProducerSurface.a(this.unitType, 2, 32);
+          ImageProducerSurface.a(this.unitType, 1, 32);
           return;
         }
         if (soundSlot != 7) {
           return;
         }
-        dh.a(this.unitType, 5, 32);
-        dh.a(this.unitType, 2, 32);
+        ImageProducerSurface.a(this.unitType, 5, 32);
+        ImageProducerSurface.a(this.unitType, 2, 32);
         return;
     }
 
@@ -240,8 +240,8 @@ final class UnitAnimationPreview {
         }
     }
 
-    public static void b(byte param0) {
-        if (param0 != 40) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard != 40) {
           return;
         }
         opcodePayloadLengths = null;
@@ -252,7 +252,7 @@ final class UnitAnimationPreview {
 
     final static ClientUiComponent d(byte param0) {
         if (param0 < 69) {
-          UnitAnimationPreview.b((byte) 50);
+          UnitAnimationPreview.releaseStatics((byte) 50);
           return MapTile.field_f.content;
         }
         return MapTile.field_f.content;
@@ -283,7 +283,7 @@ final class UnitAnimationPreview {
         this.selectModel(0, 0);
         this.enableAnimation(-28);
         this.selectAnimation(0, 0, (byte) 115);
-        this.configureProjection(0, 1, so.field_b.field_g >> 1, -29001, 0, so.field_b.field_a >> 1);
+        this.configureProjection(0, 1, FixedSquareRootSupport.field_b.height >> 1, -29001, 0, FixedSquareRootSupport.field_b.width >> 1);
         this.hidePreview((byte) -79);
     }
 

@@ -91,23 +91,23 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
     final static void openPrivateTextChat(int obfuscationGuard, String recipientName, long accountId) {
         CharSequence var5 = null;
         try {
-          rs.outgoingChatChannel = 2;
+          PowerOfTwoSupport.outgoingChatChannel = 2;
           RegistrationAgreementPane.chatRecipientName = recipientName;
           var5 = (CharSequence) ((Object) recipientName);
           wm.chatRecipientNameKey = AccountNameNormalizer.normalize(var5, false);
-          hf.textChatActive = true;
+          ClientStateChecksumSupport.textChatActive = true;
           if (obfuscationGuard != -23503) {
             ModalDialogHost.openPrivateTextChat(120, (String) null, 75L);
           }
-          dj.chatRecipientAccountId = accountId;
+          TextSplitSupport.chatRecipientAccountId = accountId;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gk.H(" + obfuscationGuard + ',' + (recipientName != null ? "{...}" : "null") + ',' + accountId + ')');
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_O = null;
-        if (param0 < 14) {
+        if (obfuscationGuard < 14) {
           field_L = (String) null;
         }
         field_P = null;

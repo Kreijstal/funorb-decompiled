@@ -32,7 +32,7 @@ abstract class IndexedSpriteBase {
           if (obfuscationGuard != -3404) {
             field_a = (String) null;
           }
-          stackIn_5_0 = (null != db.findIgnoredAccount(name, -87));
+          stackIn_5_0 = (null != IgnoreListLookupSupport.findIgnoredAccount(name, -87));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,10 +50,10 @@ abstract class IndexedSpriteBase {
 
     abstract void draw(int left, int top);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         field_b = null;
-        if (param0 != 18347) {
+        if (obfuscationGuard != 18347) {
           IndexedSpriteBase.b(-3);
         }
     }

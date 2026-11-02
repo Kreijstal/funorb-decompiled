@@ -18,7 +18,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         if (!param0) {
           return false;
         }
-        var1 = vi.monotonicMillis(-45);
+        var1 = MonotonicClockSupport.monotonicMillis(-45);
         var3 = var1 - EditableTextField.field_Lb;
         if (var3 > 30000L) {
           EditableTextField.field_Lb = var1;
@@ -140,7 +140,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
             break;
           }
           if (openingQuote != 34) {
-            selectedKind = hf.consoleCharacterKind;
+            selectedKind = ClientStateChecksumSupport.consoleCharacterKind;
           } else {
             selectedKind = BattleTutorial.consoleStringKind;
           }
@@ -196,8 +196,8 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         }
     }
 
-    public static void c(byte param0) {
-        int var1 = 13 % ((-54 - param0) / 57);
+    public static void releaseStatics(byte obfuscationGuard) {
+        int var1 = 13 % ((-54 - obfuscationGuard) / 57);
         field_h = null;
         decodedChatChannelLabel = null;
         field_m = null;

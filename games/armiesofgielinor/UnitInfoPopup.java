@@ -62,26 +62,26 @@ final class UnitInfoPopup extends IntrusiveNode {
         int var9Lifetime1;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          SpellConfirmationDialog.field_j.b();
-          SoftwareRaster.b();
+          SpellConfirmationDialog.field_j.bindAsRasterTarget();
+          SoftwareRaster.clearPixels();
           GradientUiRenderer.drawHollowGradientFrame(0, 0, 134, 61, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
-          qt.field_e.drawOpaque(2, 2);
-          SoftwareRaster.b(5, 5, 124, 18, 0, 192);
-          SoftwareRaster.b(5, 25, 30, 30, 0, 192);
+          BitReversalSupport.field_e.drawOpaque(2, 2);
+          SoftwareRaster.fillRectangleBlended(5, 5, 124, 18, 0, 192);
+          SoftwareRaster.fillRectangleBlended(5, 25, 30, 30, 0, 192);
           var7 = this.unit.displayName;
           SoftwareRaster.setClip(5, param2, 95, 23);
           stackIn_3_0 = DateInputWidget.field_E;
           stackIn_3_1 = var7;
           stackIn_3_2 = 10 - (this.nameScrollOffset >> 1);
           stackIn_3_3 = 17;
-          stackIn_3_4 = op.field_c;
+          stackIn_3_4 = FriendRequestSupport.field_c;
           if (param5.teamGame) {
             stackIn_4_5 = 1;
           } else {
             stackIn_4_5 = 0;
           }
           ((BinaryBitmapFont) (Object) stackIn_3_0).drawText(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4[stackIn_4_5][this.unit.ownerPlayer], -1);
-          SoftwareRaster.a();
+          SoftwareRaster.resetClip();
           var8 = this.unit.getEffectiveStrength((byte) 122);
           if (var8 < 0) {
             var8 = 0;
@@ -90,7 +90,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           stackIn_8_1 = var8 + "/" + this.unit.maximumStrength;
           stackIn_8_2 = 126;
           stackIn_8_3 = 18;
-          stackIn_8_4 = op.field_c;
+          stackIn_8_4 = FriendRequestSupport.field_c;
           if (!param5.teamGame) {
             stackIn_9_5 = 0;
           } else {
@@ -98,15 +98,15 @@ final class UnitInfoPopup extends IntrusiveNode {
           }
           ((BinaryBitmapFont) (Object) stackIn_8_0).drawRightAligned(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4[stackIn_9_5][this.unit.ownerPlayer], -1);
           if (param1 == this.unit.ownerPlayer) {
-            SoftwareRaster.b(99, 25, 30, 30, 0, 128);
-            SoftwareRaster.b(53, 25, 30, 30, 0, 128);
-            var9 = this.unit.l(-27014);
-            cp.field_e[eb.bitCount((byte) -97, ~var9 & 3)].draw(56, 25);
+            SoftwareRaster.fillRectangleBlended(99, 25, 30, 30, 0, 128);
+            SoftwareRaster.fillRectangleBlended(53, 25, 30, 30, 0, 128);
+            var9 = this.unit.getStatusIconMask(-27014);
+            EventPresenterFactory.field_e[BitCountSupport.bitCount((byte) -97, ~var9 & 3)].draw(56, 25);
           } else {
             if (param0 == null) {
-              SoftwareRaster.b(99, 25, 30, 30, 0, 128);
+              SoftwareRaster.fillRectangleBlended(99, 25, 30, 30, 0, 128);
             } else {
-              SoftwareRaster.b(37, 25, 92, 30, 0, 128);
+              SoftwareRaster.fillRectangleBlended(37, 25, 92, 30, 0, 128);
               ProgressMessageDialog.field_rb[param0.getUnitCategory(0)].draw(43, 32);
               sg.field_b[this.a(param0.getUnitCategory(0), this.unit.getUnitCategory(param2 - 5), -46)].draw(75, 32);
             }
@@ -114,20 +114,20 @@ final class UnitInfoPopup extends IntrusiveNode {
           ProgressMessageDialog.field_rb[this.unit.getUnitCategory(0)].draw(106, 32);
           DateInputWidget.field_E.drawCentered(-param5.getDamageTakenPercent(param5.mapWidth * this.unit.tileY + this.unit.tileX, param2 - 9, this.unit) + 100 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.drawShadedGrayscale(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
-          so.field_b.a(param2 + 5600);
+          FixedSquareRootSupport.field_b.bindRasterTarget(param2 + 5600);
           var9Lifetime1 = this.screenX - param3 - 75;
           var10 = this.screenY - (param4 + 80);
           SpellConfirmationDialog.field_j.drawWithOpacity(var9Lifetime1, var10, -this.fadeOffset + 32 << 3);
           var11 = WhirlpoolHasher.unitDefinitions[this.unit.unitType][12];
           if (var11 != -1) {
-            PreparedAction.a(32 - this.fadeOffset << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);
-            if (var11 < lb.field_e.length) {
-              lb.field_e[var11].drawAlpha(var9Lifetime1 + 101, var10 + 58, -this.fadeOffset + 32 << 3);
+            PreparedAction.a(32 - this.fadeOffset << 3, true, var9Lifetime1 + 96, QuickChatMenuCloseSupport.field_b, 40, 60 + var10);
+            if (var11 < ResourceClientErrorSupport.field_e.length) {
+              ResourceClientErrorSupport.field_e[var11].drawAlpha(var9Lifetime1 + 101, var10 + 58, -this.fadeOffset + 32 << 3);
             }
           }
           var12 = this.unit.f(param2 + 11);
           if (var12 != -1) {
-            PreparedAction.a(-this.fadeOffset + 32 << 3, true, var9Lifetime1, e.field_b, 40, var10 + 60);
+            PreparedAction.a(-this.fadeOffset + 32 << 3, true, var9Lifetime1, QuickChatMenuCloseSupport.field_b, 40, var10 + 60);
             ii.field_a[var12].drawScaledWithOpacity(var9Lifetime1 + 8, 60 + var10, 24, 24, -this.fadeOffset + 32 << 3);
           }
           return;
@@ -152,8 +152,8 @@ final class UnitInfoPopup extends IntrusiveNode {
     }
 
     private final int a(int param0, int param1, int param2) {
-        int var4 = fk.matchupDamagePercent[param1][param0];
-        int var5 = fk.matchupDamagePercent[param0][param1];
+        int var4 = DropdownSelectorPainter.matchupDamagePercent[param1][param0];
+        int var5 = DropdownSelectorPainter.matchupDamagePercent[param0][param1];
         if (var5 < var4) {
           if (-var5 + var4 <= 45) {
             return 1;
@@ -236,7 +236,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           this.nameScrollOffset = 0;
           this.unit = param0;
           this.screenY = param2;
-          this.maximumNameScroll = -110 + rs.field_n.textWidth(this.unit.displayName);
+          this.maximumNameScroll = -110 + PowerOfTwoSupport.field_n.textWidth(this.unit.displayName);
           if (this.maximumNameScroll < 0) {
             this.maximumNameScroll = 0;
           }

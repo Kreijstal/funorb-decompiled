@@ -31,7 +31,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           0 < this.cellFlags.length &&
           0 < var5.length &&
           oldRows > 0) {
-          vm.a(this.cellFlags, 0, var5, 0, var4 * Math.min(oldRows, newRows));
+          ArrayBlockSupport.copyInts(this.cellFlags, 0, var5, 0, var4 * Math.min(oldRows, newRows));
         }
         this.cellFlags = var5;
     }
@@ -283,7 +283,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           this.children.length > 0 &&
           var5.length > 0 &&
           oldRows > 0) {
-          vm.a(this.children, 0, var5, 0, Math.min(oldRows, newRows) * var4);
+          ArrayBlockSupport.copyObjects(this.children, 0, var5, 0, Math.min(oldRows, newRows) * var4);
         }
         this.children = var5;
     }
@@ -342,8 +342,8 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         }
     }
 
-    public static void e(byte param0) {
-        if (param0 <= 50) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard <= 50) {
           field_O = (String) null;
         }
         field_P = null;
@@ -397,7 +397,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         if (null != this.children && this.children.length > 0 && var5.length > 0 &&
           oldColumns > 0) {
           for (var6 = 0; var4 > var6; var6++) {
-            vm.a(this.children, var6 * oldColumns, var5, var6 * newColumns, Math.min(oldColumns, newColumns));
+            ArrayBlockSupport.copyObjects(this.children, var6 * oldColumns, var5, var6 * newColumns, Math.min(oldColumns, newColumns));
           }
         }
         if (obfuscationGuard != -20410) {
@@ -415,9 +415,9 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         try {
           var10 = new int[columns];
           int[] var8 = var10;
-          vm.a(var10, 0, columns, 1);
+          ArrayBlockSupport.fillInts(var10, 0, columns, 1);
           var9 = new int[rows];
-          vm.a(var9, 0, rows, 1);
+          ArrayBlockSupport.fillInts(var9, 0, rows, 1);
           this.setColumnWeights((byte) 78, var10);
           this.setRowWeights(0, var9);
         } catch (RuntimeException runtimeException) {
@@ -433,7 +433,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         if (this.cellFlags != null && 0 < this.cellFlags.length && var5.length > 0 &&
           oldColumns > 0) {
           for (var6 = 0; var4 > var6; var6++) {
-            vm.a(this.cellFlags, var6 * oldColumns, var5, newColumns * var6, Math.min(oldColumns, newColumns));
+            ArrayBlockSupport.copyInts(this.cellFlags, var6 * oldColumns, var5, newColumns * var6, Math.min(oldColumns, newColumns));
           }
         }
         if (!obfuscationGuard) {

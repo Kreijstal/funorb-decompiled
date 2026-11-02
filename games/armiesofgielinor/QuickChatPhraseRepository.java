@@ -11,16 +11,16 @@ final class QuickChatPhraseRepository {
 
     final static boolean c(int param0) {
         if (param0 <= -97) {
-          return !se.emailCheckResult.isComplete((byte) 125) ? true : false;
+          return !IgnoreRequestSupport.emailCheckResult.isComplete((byte) 125) ? true : false;
         }
         field_a = (String) null;
-        return !se.emailCheckResult.isComplete((byte) 125) ? true : false;
+        return !IgnoreRequestSupport.emailCheckResult.isComplete((byte) 125) ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_e = null;
         field_d = null;
-        if (param0 >= -107) {
+        if (obfuscationGuard >= -107) {
           return;
         }
         field_a = null;
@@ -44,23 +44,23 @@ final class QuickChatPhraseRepository {
     }
 
     final static void configurePunctuationKeys(byte obfuscationGuard) {
-        kw.awtToClientKeyCodes[46] = 72;
-        kw.awtToClientKeyCodes[61] = 27;
-        kw.awtToClientKeyCodes[192] = 28;
-        kw.awtToClientKeyCodes[222] = 58;
-        kw.awtToClientKeyCodes[520] = 59;
-        kw.awtToClientKeyCodes[44] = 71;
-        kw.awtToClientKeyCodes[93] = 43;
-        kw.awtToClientKeyCodes[45] = 26;
-        kw.awtToClientKeyCodes[92] = 74;
-        kw.awtToClientKeyCodes[59] = 57;
-        kw.awtToClientKeyCodes[91] = 42;
+        ValidationStatusIcon.awtToClientKeyCodes[46] = 72;
+        ValidationStatusIcon.awtToClientKeyCodes[61] = 27;
+        ValidationStatusIcon.awtToClientKeyCodes[192] = 28;
+        ValidationStatusIcon.awtToClientKeyCodes[222] = 58;
+        ValidationStatusIcon.awtToClientKeyCodes[520] = 59;
+        ValidationStatusIcon.awtToClientKeyCodes[44] = 71;
+        ValidationStatusIcon.awtToClientKeyCodes[93] = 43;
+        ValidationStatusIcon.awtToClientKeyCodes[45] = 26;
+        ValidationStatusIcon.awtToClientKeyCodes[92] = 74;
+        ValidationStatusIcon.awtToClientKeyCodes[59] = 57;
+        ValidationStatusIcon.awtToClientKeyCodes[91] = 42;
         if (obfuscationGuard >= 109) {
-          kw.awtToClientKeyCodes[47] = 73;
+          ValidationStatusIcon.awtToClientKeyCodes[47] = 73;
           return;
         }
         field_d = (ClientUiComponent) null;
-        kw.awtToClientKeyCodes[47] = 73;
+        ValidationStatusIcon.awtToClientKeyCodes[47] = 73;
     }
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -78,7 +78,7 @@ final class QuickChatPhraseRepository {
                 return;
               }
               var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-              param1.getAppletContext().showDocument(ck.a(-3780, var2, param1), "_top");
+              param1.getAppletContext().showDocument(StructureTerrainSupport.a(-3780, var2, param1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -30,7 +30,7 @@ final class CampaignResult {
           try {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-              param0.getAppletContext().showDocument(ck.a(-3780, var2, param0), "_top");
+              param0.getAppletContext().showDocument(StructureTerrainSupport.a(-3780, var2, param0), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;
@@ -61,8 +61,8 @@ final class CampaignResult {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 >= -113) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard >= -113) {
           CampaignResult.a(3);
           field_d = null;
           field_a = null;

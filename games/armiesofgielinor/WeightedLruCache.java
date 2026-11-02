@@ -127,8 +127,8 @@ final class WeightedLruCache {
         }
     }
 
-    public static void a(byte param0) {
-        int var1 = -24 % ((14 - param0) / 59);
+    public static void releaseStatics(byte obfuscationGuard) {
+        int var1 = -24 % ((14 - obfuscationGuard) / 59);
         field_b = null;
         terrainDamageTakenPercent = null;
     }

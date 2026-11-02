@@ -38,7 +38,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
           }
           if (1 == button) {
             this.pressOffsetY = -this.y + (pointerY - originY);
-            bn.draggedWidget = this;
+            CalendarSupport.draggedWidget = this;
             this.pressOffsetX = -originX - this.x + pointerX;
           }
           this.pressedButton = button;
@@ -133,11 +133,11 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_R = null;
         field_K = null;
         field_J = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           field_K = (String) null;
         }
         field_Q = null;
@@ -228,7 +228,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
           return;
         }
         if (null != DialogMessagePane.field_I) {
-          op.a(-116, DialogMessagePane.field_I);
+          FriendRequestSupport.a(-116, DialogMessagePane.field_I);
         }
         if (null != FullscreenMembershipDialog.activeContextMenu) {
           FullscreenMembershipDialog.activeContextMenu.draw((byte) -108, param0);
@@ -237,7 +237,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         if (Spell.field_b != null) {
           Spell.field_b.draw(param0, 20);
         }
-        qh.a(param0, 0);
+        QuicksaveRequestSupport.a(param0, 0);
     }
 
     DraggableWidgetContainer(int x, int y, int width, int height, WidgetPainter painter, WidgetListener listener, Widget child, boolean returnAfterDrag, boolean childPressPreventsDrag) {

@@ -28,7 +28,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
             nameCount = suggestions.length;
             this.names = new String[nameCount];
             for (nameIndex = 0; nameIndex < nameCount; nameIndex++) {
-              this.names[nameIndex] = ug.a(GrowthEvent.bitwiseXor(obfuscationGuard, 116), (CharSequence) ((Object) suggestions[nameIndex])).replace(' ', ' ');
+              this.names[nameIndex] = ProxyAuthenticationRequiredException.a(GrowthEvent.bitwiseXor(obfuscationGuard, 116), (CharSequence) ((Object) suggestions[nameIndex])).replace(' ', ' ');
             }
             buttonPainter = new LinkButtonPainter(ArmiesOfGielinor.field_J, 0, 1);
             this.buttons = new InteractiveWidget[nameCount + 1];
@@ -39,7 +39,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
               this.buttons[buttonIndex].setBounds(0, 80, 20 + 16 * buttonIndex, 8192, 15);
               this.addChild((byte) 10, (Widget) (this.buttons[buttonIndex]));
             }
-            this.buttons[nameCount] = new InteractiveWidget(h.field_h, (WidgetListener) (this));
+            this.buttons[nameCount] = new InteractiveWidget(LoginKind.field_h, (WidgetListener) (this));
             this.buttons[nameCount].painter = (WidgetPainter) ((Object) buttonPainter);
             this.buttons[nameCount].setBounds(0, obfuscationGuard, nameCount * 16 + 16 + 20, obfuscationGuard ^ 8292, 15);
             this.addChild((byte) 10, (Widget) (this.buttons[nameCount]));
@@ -67,27 +67,27 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
         var2[0] = 1;
         var2[2] = 16777215;
         var2[1] = 14737632;
-        VerticalScrollbar.field_Rb = new CombatSandbox(ChannelBaseVolumeConsoleCommand.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
+        VerticalScrollbar.field_Rb = new CombatSandbox(ChannelBaseVolumeConsoleCommand.field_J, IsaacRandom.field_k, PowerOfTwoSupport.field_n, var2, 0, 0);
         if (param0 != -28541) {
           field_F = 18;
         }
-        GameCanvas.field_b = new cg();
+        GameCanvas.field_b = new ScreenWipeTransition();
         TriangleRasterizer.useRasterClip();
         TriangleRasterizer.b(0.75f);
     }
 
-    final static fl k(int param0) {
+    final static WidgetTheme k(int param0) {
         if (param0 != 5) {
           field_J = (String) null;
         }
         if (GameAppletShell.field_b == null) {
-          GameAppletShell.field_b = new fl();
-          GameAppletShell.field_b.a(13421772, ArmiesOfGielinor.field_J);
+          GameAppletShell.field_b = new WidgetTheme();
+          GameAppletShell.field_b.installDefaultPainters(13421772, ArmiesOfGielinor.field_J);
           GameAppletShell.field_b.field_s = 7697781;
           GameAppletShell.field_b.field_o = 14;
           GameAppletShell.field_b.field_h = 0;
           GameAppletShell.field_b.field_c = 2763306;
-          GameAppletShell.field_b.field_m = gl.field_e;
+          GameAppletShell.field_b.font = gl.field_e;
           GameAppletShell.field_b.field_d = 4;
           GameAppletShell.field_b.field_x = 6;
           GameAppletShell.field_b.field_r = 5;
@@ -102,10 +102,10 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
         }
         BitmapFont var5 = ArmiesOfGielinor.field_J;
         if (obfuscationGuard > -82) {
-          NameSuggestionList.b(true);
+          NameSuggestionList.releaseStatics(true);
         }
         if (this.names != null) {
-          var5.drawParagraph(we.field_i, originX + this.x, originY + this.y, this.width, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
+          var5.drawParagraph(ArchiveLoadStep.field_i, originX + this.x, originY + this.y, this.width, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
         }
     }
 
@@ -117,7 +117,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ph.isAccountNameCharacter(-19, character)) {
+          if (!AccountNameCharacterSupport.isAccountNameCharacter(-19, character)) {
             return false;
           }
           if (text == null) {
@@ -130,7 +130,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
           if (var3_int >= 12) {
             return false;
           }
-          if (!rs.isAccountNameSeparator(character, (byte) -87)) {
+          if (!PowerOfTwoSupport.isAccountNameSeparator(character, (byte) -87)) {
             return true;
           }
           if (var3_int != 0) {
@@ -234,9 +234,9 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_I = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return;
         }
         field_J = null;

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ValidationState {
-    static b field_b;
+    static SpriteSheetDecoder field_b;
     static String field_a;
 
     final static boolean a(int param0) {
         int var1 = -61 / ((-54 - param0) / 62);
         if (ToggleTurnSkipConsoleCommand.debugConsole != null) {
-          return ToggleTurnSkipConsoleCommand.debugConsole.handleKey(-30847, DualNodeDeque.typedCharacter, rs.keyCode);
+          return ToggleTurnSkipConsoleCommand.debugConsole.handleKey(-30847, DualNodeDeque.typedCharacter, PowerOfTwoSupport.keyCode);
         }
         return false;
     }
@@ -47,7 +47,7 @@ final class ValidationState {
                 continue;
               }
               if (44 != character) {
-                tokens.addLast((byte) -119, (IntrusiveNode) (bi.readBareConsoleToken((byte) -118, cursor)));
+                tokens.addLast((byte) -119, (IntrusiveNode) (RasterImageSurface.readBareConsoleToken((byte) -118, cursor)));
                 continue;
               }
               tokens.addLast((byte) -119, (IntrusiveNode) (new ConsoleExpression(DateOfBirthValidator.consoleArgumentCommaKind, cursor.position - 1)));
@@ -71,9 +71,9 @@ final class ValidationState {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_b = null;
-        if (param0 != -16356) {
+        if (obfuscationGuard != -16356) {
           return;
         }
         field_a = null;

@@ -142,12 +142,12 @@ final class BattlefieldTheme {
         return this.ambientSounds[AttackEvent.nextBoundedInt(false, this.ambientSounds.length, li.field_n)];
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_r = null;
         field_p = (int[][]) null;
         field_s = null;
         field_k = null;
-        if (param0 >= -100) {
+        if (obfuscationGuard >= -100) {
           BattlefieldTheme.a(true, 87, 46, 119);
           quickChatHelpSubtitle = null;
           return;
@@ -255,13 +255,13 @@ final class BattlefieldTheme {
         this.terrainSprites = MapLayout.loadIndexedSpritesByName(this.terrainSpriteFile, -28106, "basic", SocketResourceClient.themeSpriteArchive);
         this.foliageSprites = MapLayout.loadIndexedSpritesByName(this.foliageSpriteFile, -28106, "basic", SocketResourceClient.themeSpriteArchive);
         this.structureSprites = MapLayout.loadIndexedSpritesByName(this.structureSpriteFile, -28106, "basic", SocketResourceClient.themeSpriteArchive);
-        this.foliageShadowSprites = fk.loadRgbSpritesByName(this.foliageShadowFile, (byte) -128, SocketResourceClient.themeSpriteArchive, "basic");
+        this.foliageShadowSprites = DropdownSelectorPainter.loadRgbSpritesByName(this.foliageShadowFile, (byte) -128, SocketResourceClient.themeSpriteArchive, "basic");
         if (obfuscationGuard > -63) {
           this.foliageShadowSprites = (RgbSprite[]) null;
-          this.structureShadowSprites = fk.loadRgbSpritesByName(this.structureShadowFile, (byte) -127, SocketResourceClient.themeSpriteArchive, "basic");
+          this.structureShadowSprites = DropdownSelectorPainter.loadRgbSpritesByName(this.structureShadowFile, (byte) -127, SocketResourceClient.themeSpriteArchive, "basic");
           return;
         }
-        this.structureShadowSprites = fk.loadRgbSpritesByName(this.structureShadowFile, (byte) -127, SocketResourceClient.themeSpriteArchive, "basic");
+        this.structureShadowSprites = DropdownSelectorPainter.loadRgbSpritesByName(this.structureShadowFile, (byte) -127, SocketResourceClient.themeSpriteArchive, "basic");
     }
 
     final void releaseSprites(int obfuscationGuard) {

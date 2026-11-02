@@ -57,10 +57,10 @@ abstract class AiPlanningStrategy {
           }
           boolean decompiledFrameRemainder1 = true;
           var5 = null;
-          if (th.socialListState != 2) {
-            su.field_d.inputEnabled = false;
-            bn.field_c.text = fm.field_c;
-            if (1 != th.socialListState) {
+          if (FloorModSupport.socialListState != 2) {
+            AiWeightProfile.field_d.inputEnabled = false;
+            CalendarSupport.field_c.text = fm.field_c;
+            if (1 != FloorModSupport.socialListState) {
               ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = ConsoleParseException.field_a;
               if (var19 != 0) {
                 ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = TeleportAction.field_u;
@@ -72,8 +72,8 @@ abstract class AiPlanningStrategy {
             decompiledFrameRemainder1 = (var19 != 0);
           }
           if (decompiledFrameRemainder1) {
-            su.field_d.inputEnabled = true;
-            bn.field_c.text = EmailCheckResult.a(4800, DisplayModeOptionPainter.field_A, new String[]{EmailValidator.currentLocationLabel});
+            AiWeightProfile.field_d.inputEnabled = true;
+            CalendarSupport.field_c.text = EmailCheckResult.a(4800, DisplayModeOptionPainter.field_A, new String[]{EmailValidator.currentLocationLabel});
             ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = null;
             var6 = null;
             var7 = (SocialListEntry) (var4.first((byte) 109));
@@ -85,7 +85,7 @@ abstract class AiPlanningStrategy {
                   if (null == var7.children) {
                     var7.nameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
                     var7.addChild(var7.nameComponent, 87);
-                    var7.locationComponent = new ClientUiComponent(0L, ws.field_P);
+                    var7.locationComponent = new ClientUiComponent(0L, DialWidget.field_P);
                     var7.addChild(var7.locationComponent, 96);
                     var7.previousNameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
                     var7.addChild(var7.previousNameComponent, 69);
@@ -167,9 +167,9 @@ abstract class AiPlanningStrategy {
                     var16 = var7.displayName;
                     SpriteDropdownMenu.openClientContextMenu(ListMissionsConsoleCommand.field_E.scrollContainer, var7, (int[]) null, (String) null, -1, 84, -1, var16, 0L);
                     if (null != var7.locationLabel &&
-                      !fs.isActivePrivateTextRecipient((byte) 110, FullscreenMembershipDialog.activeContextMenu.accountName) &&
+                      !PrivateTextRecipientSupport.isActivePrivateTextRecipient((byte) 110, FullscreenMembershipDialog.activeContextMenu.accountName) &&
                       !NodeIterator.field_a) {
-                      if (!vi.field_d) {
+                      if (!MonotonicClockSupport.field_d) {
                         var17 = FullscreenMembershipDialog.activeContextMenu;
                         var18 = EmailCheckResult.a(4800, MusicPatchNode.field_k, new String[]{var16});
                         var17.menu.addTextAction(8, var18, (byte) -115);
@@ -186,7 +186,7 @@ abstract class AiPlanningStrategy {
               } else {
                 decompiledFrameRemainder0 = (0 != ListMissionsConsoleCommand.field_E.addButton.pressedButton);
                 if (decompiledFrameRemainder0) {
-                  EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.addButton.screenX, ListMissionsConsoleCommand.field_E.addButton.screenY, ListMissionsConsoleCommand.field_E.addButton.width, ListMissionsConsoleCommand.field_E.addButton.height, GameAppletShell.field_a, kq.field_N, eq.field_h, eq.field_h);
+                  EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.addButton.screenX, ListMissionsConsoleCommand.field_E.addButton.screenY, ListMissionsConsoleCommand.field_E.addButton.width, ListMissionsConsoleCommand.field_E.addButton.height, GameAppletShell.field_a, kq.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -195,7 +195,7 @@ abstract class AiPlanningStrategy {
               if (ListMissionsConsoleCommand.field_E.removeButton.pressedButton == 0) {
                 break;
               }
-              EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.removeButton.screenX, ListMissionsConsoleCommand.field_E.removeButton.screenY, ListMissionsConsoleCommand.field_E.removeButton.width, ListMissionsConsoleCommand.field_E.removeButton.height, se.field_b, kq.field_N, eq.field_h, eq.field_h);
+              EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.removeButton.screenX, ListMissionsConsoleCommand.field_E.removeButton.screenY, ListMissionsConsoleCommand.field_E.removeButton.width, ListMissionsConsoleCommand.field_E.removeButton.height, IgnoreRequestSupport.field_b, kq.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
               DisplaySettingsDialog.field_fb = 1;
               break;
             }
@@ -319,7 +319,7 @@ abstract class AiPlanningStrategy {
         RuntimeException var4_ref = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          mh.accountNameCheckState = lm.nameCheckComplete;
+          EffectsGainSupport.accountNameCheckState = lm.nameCheckComplete;
           if (param3 != 255) {
             if (param3 >= 100 &&
               param3 <= 105) {
@@ -465,14 +465,14 @@ abstract class AiPlanningStrategy {
           }
           if (decompiledFrameRemainder0) {
             if (ActionSpell.viewportManager == null) {
-              FixedQuaternion.fullscreenCanvas = dj.openFullscreenCanvas(640, 0, IntPair.field_m, -36, 0, 480);
+              FixedQuaternion.fullscreenCanvas = TextSplitSupport.openFullscreenCanvas(640, 0, IntPair.field_m, -36, 0, 480);
               if (var3 != 0) {
                 FixedQuaternion.fullscreenCanvas = ActionSpell.viewportManager.enterFullscreen(-1);
-                ds.a(2, 99);
+                PointerCaptureSupport.a(2, 99);
               }
             } else {
               FixedQuaternion.fullscreenCanvas = ActionSpell.viewportManager.enterFullscreen(-1);
-              ds.a(2, 99);
+              PointerCaptureSupport.a(2, 99);
             }
             if (null != FixedQuaternion.fullscreenCanvas) {
               var2_int = 2;
@@ -488,7 +488,7 @@ abstract class AiPlanningStrategy {
             field_e = (String) null;
           }
           if (null == ActionSpell.viewportManager &&
-            bn.field_e) {
+            CalendarSupport.field_e) {
             vq.a(var2_int, param0, (byte) 13);
           }
           return;

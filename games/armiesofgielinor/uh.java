@@ -40,10 +40,10 @@ final class uh {
           NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
           NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
           NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
-          DropTargetWidgetContainer.field_J.b();
-          SoftwareRaster.b();
+          DropTargetWidgetContainer.field_J.bindAsRasterTarget();
+          SoftwareRaster.clearPixels();
           MatchSetupPanel.a(-1, -1, param2, -1, param5, param3, -1, false, 0, false, 0, param4);
-          NumericDateInputWidget.field_P.b();
+          NumericDateInputWidget.field_P.bindAsRasterTarget();
           DropTargetWidgetContainer.field_J.drawTransparent(param6, param0);
           if (!param1) {
             int[] var8 = (int[]) null;

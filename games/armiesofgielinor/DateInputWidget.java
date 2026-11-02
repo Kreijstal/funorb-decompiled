@@ -9,8 +9,8 @@ abstract class DateInputWidget extends DequeWidgetContainer implements Validatio
 
     abstract int getYear(byte obfuscationGuard);
 
-    public static void n(int param0) {
-        if (param0 != 0) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_G = null;
@@ -46,7 +46,7 @@ abstract class DateInputWidget extends DequeWidgetContainer implements Validatio
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard != -24) {
-            DateInputWidget.n(-95);
+            DateInputWidget.releaseStatics(-95);
           }
           var5 = new int[packet.readUnsignedByte(obfuscationGuard ^ -24)];
           var2 = var5;

@@ -44,13 +44,13 @@ final class AnimationFrameSet extends DualLinkedNode {
           return true;
         }
         if (this.encodedFrames == null) {
-          if (!jj.animationFramesArchive.ensureGroupAvailable(11894, this.groupId)) {
+          if (!FriendLookupSupport.animationFramesArchive.ensureGroupAvailable(11894, this.groupId)) {
             return false;
           }
-          encodedFileIds = jj.animationFramesArchive.getFileIds(-26, this.groupId);
+          encodedFileIds = FriendLookupSupport.animationFramesArchive.getFileIds(-26, this.groupId);
           this.encodedFrames = new byte[encodedFileIds.length][];
           for (encodedFileOrdinal = 0; encodedFileIds.length > encodedFileOrdinal; encodedFileOrdinal++) {
-            this.encodedFrames[encodedFileOrdinal] = jj.animationFramesArchive.getFile((byte) 114, encodedFileIds[encodedFileOrdinal], this.groupId);
+            this.encodedFrames[encodedFileOrdinal] = FriendLookupSupport.animationFramesArchive.getFile((byte) 114, encodedFileIds[encodedFileOrdinal], this.groupId);
           }
         }
         allSkeletonsAvailable = 1;
@@ -68,9 +68,9 @@ final class AnimationFrameSet extends DualLinkedNode {
           return false;
         }
         loadedSkeletons = new NodeDeque();
-        frameCapacity = jj.animationFramesArchive.getFileCapacity(this.groupId, obfuscationGuard ^ 65);
+        frameCapacity = FriendLookupSupport.animationFramesArchive.getFileCapacity(this.groupId, obfuscationGuard ^ 65);
         this.frames = new AnimationFrame[frameCapacity];
-        frameFileIds = jj.animationFramesArchive.getFileIds(-92, this.groupId);
+        frameFileIds = FriendLookupSupport.animationFramesArchive.getFileIds(-92, this.groupId);
         for (decodedFileOrdinal = 0; decodedFileOrdinal < frameFileIds.length; decodedFileOrdinal++) {
           frameBytes = this.encodedFrames[decodedFileOrdinal];
           frameHeader = new PacketBuffer(frameBytes);
@@ -106,10 +106,10 @@ final class AnimationFrameSet extends DualLinkedNode {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_z = null;
         unitUnlockGroups = (int[][]) null;
-        if (param0 >= -54) {
+        if (obfuscationGuard >= -54) {
           field_B = (String) null;
         }
         field_F = null;

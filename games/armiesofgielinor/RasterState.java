@@ -16,12 +16,12 @@ final class RasterState extends IntrusiveNode {
     int width;
     static String field_n;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_l = null;
         field_k = null;
         field_n = null;
         field_m = null;
-        if (param0 != -22856) {
+        if (obfuscationGuard != -22856) {
           field_m = (String) null;
         }
     }
@@ -49,26 +49,26 @@ final class RasterState extends IntrusiveNode {
             if (param2 != 0) {
               if (param2 != 1) {
                 if (param2 != 2) {
-                  rv.a(false, param3, param5, var7);
+                  LocalizedUrlSupport.a(false, param3, param5, var7);
                 } else {
-                  po.a((byte) -7, param0, param3, param5, var9, var8, var7, param1);
+                  QuickChatShortcutSupport.a((byte) -7, param0, param3, param5, var9, var8, var7, param1);
                   ResizableModalDialog.b(param0, param1, 0, param5, var7, param3);
                   IntrusiveNode.a(62, param1, param0, 19 + param3, var7, 39 + param5);
-                  cw.a(var7, 19 + param3, param5 + 39, -118, param1, param0);
+                  AttackRangeOverlaySupport.a(var7, 19 + param3, param5 + 39, -118, param1, param0);
                   TickCounter.a(var9, false, param0, param3, var7, 0, param1, param5, var8);
-                  var10 = vs.field_e[var7].metadata;
+                  var10 = QuickChatMenuDisplaySupport.field_e[var7].metadata;
                   if (var10 != null &&
                     (var10.modifierFlags & 1) != 0 &&
-                    -1 < vs.field_e[var7].ownerPlayer) {
-                    var11 = vs.field_e[var7].ownerPlayer;
+                    -1 < QuickChatMenuDisplaySupport.field_e[var7].ownerPlayer) {
+                    var11 = QuickChatMenuDisplaySupport.field_e[var7].ownerPlayer;
                     if (null != CipherPacketBuffer.currentBattlefield) {
                       var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
                     }
-                    UnitCycler.a(22 + param5, var11, var7 + ug.field_b, 119, param3 + 20);
+                    UnitCycler.a(22 + param5, var11, var7 + ProxyAuthenticationRequiredException.field_b, 119, param3 + 20);
                   }
-                  fs.a(param3, false, false, var9, param5, var7, param1, var8, param0);
-                  if (vs.field_e[var7].hasModifierFlag4((byte) -115)) {
-                    GameEvent.a(param3 + 20, true, ug.field_b + var7, vs.field_e[var7].ownerPlayer, 22 + param5);
+                  PrivateTextRecipientSupport.a(param3, false, false, var9, param5, var7, param1, var8, param0);
+                  if (QuickChatMenuDisplaySupport.field_e[var7].hasModifierFlag4((byte) -115)) {
+                    GameEvent.a(param3 + 20, true, ProxyAuthenticationRequiredException.field_b + var7, QuickChatMenuDisplaySupport.field_e[var7].ownerPlayer, 22 + param5);
                   }
                 }
               } else {
@@ -86,7 +86,7 @@ final class RasterState extends IntrusiveNode {
           } else {
             if (param2 == 2) {
               TickCounter.a(var9, true, param0, param3, var7, 0, param1, param5, var8);
-              fs.a(param3, false, true, var9, param5, var7, param1, var8, param0);
+              PrivateTextRecipientSupport.a(param3, false, true, var9, param5, var7, param1, var8, param0);
             }
           }
           return;
@@ -101,9 +101,9 @@ final class RasterState extends IntrusiveNode {
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var1_intLifetime1;
         try {
-          if (ck.field_c != null) {
+          if (StructureTerrainSupport.field_c != null) {
             for (var1_int = 0; var1_int < 16; var1_int++) {
-              ck.field_c[var1_int] = null;
+              StructureTerrainSupport.field_c[var1_int] = null;
             }
           }
           var1_intLifetime1 = -93 / ((28 - param0) / 54);
@@ -157,7 +157,7 @@ final class RasterState extends IntrusiveNode {
               var8[var10_int] = null;
             }
             if (obfuscationGuard >= -7) {
-              RasterState.a(-20);
+              RasterState.releaseStatics(-20);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -402,7 +402,7 @@ final class RasterState extends IntrusiveNode {
                 }
               }
             }
-            param1.b((byte) -39, var4);
+            param1.appendChecksum((byte) -39, var4);
             var17.unlink(-115);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

@@ -23,7 +23,7 @@ class ClientUiNode extends DualLinkedNode {
           }
           var2_int = mission.campaign.campaignIndex;
           var3 = mission.missionId;
-          stackIn_3_0 = mh.getProfileMissionScore(var2_int, -125, var3);
+          stackIn_3_0 = EffectsGainSupport.getProfileMissionScore(var2_int, -125, var3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,11 +57,11 @@ class ClientUiNode extends DualLinkedNode {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_v = null;
         field_u = null;
         field_x = null;
-        if (param0 != 31343) {
+        if (obfuscationGuard != 31343) {
           return;
         }
         field_y = null;
@@ -124,16 +124,16 @@ class ClientUiNode extends DualLinkedNode {
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           queryAlias = query;
-          values = dj.splitText(14, ':', queryAlias.substring(queryAlias.indexOf('=') + 1));
+          values = TextSplitSupport.splitText(14, ':', queryAlias.substring(queryAlias.indexOf('=') + 1));
           if (obfuscationGuard <= 88) {
             guardResult = (String) null;
             return guardResult;
           }
           for (valueIndex = 0; valueIndex < values.length; valueIndex++) {
             if (valueIndex % 2 == 0) {
-              ah.localCoat.setPart(119, Integer.parseInt(values[valueIndex]), valueIndex / 2);
+              LocalCoatSupport.localCoat.setPart(119, Integer.parseInt(values[valueIndex]), valueIndex / 2);
             } else {
-              ah.localCoat.setColour(valueIndex / 2, Integer.parseInt(values[valueIndex]), (byte) -128);
+              LocalCoatSupport.localCoat.setColour(valueIndex / 2, Integer.parseInt(values[valueIndex]), (byte) -128);
             }
           }
           successResult = "done.";

@@ -47,29 +47,29 @@ final class SetCoatConsoleCommand extends ConsoleCommand {
         int var7 = SoftwareRaster.width;
         int var8 = SoftwareRaster.height;
         RgbSprite var9 = new RgbSprite(16, param3);
-        var9.b();
-        SoftwareRaster.a(0, 0, 16, param3, param5, param1);
+        var9.bindAsRasterTarget();
+        SoftwareRaster.fillVerticalGradient(0, 0, 16, param3, param5, param1);
         Object var10 = null;
         Object var11 = null;
         if (param0) {
           var13 = var9.copySprite();
           var10 = var13;
-          var13.b();
-          SoftwareRaster.e(0, 0, 5, 0);
-          SoftwareRaster.e(0, 1, 3, 0);
-          SoftwareRaster.e(0, 2, 2, 0);
-          SoftwareRaster.e(0, 3, 1, 0);
-          SoftwareRaster.e(0, 4, 1, 0);
+          var13.bindAsRasterTarget();
+          SoftwareRaster.drawHorizontalLine(0, 0, 5, 0);
+          SoftwareRaster.drawHorizontalLine(0, 1, 3, 0);
+          SoftwareRaster.drawHorizontalLine(0, 2, 2, 0);
+          SoftwareRaster.drawHorizontalLine(0, 3, 1, 0);
+          SoftwareRaster.drawHorizontalLine(0, 4, 1, 0);
         }
         if (param4) {
           var14 = var9.copySprite();
           var11 = var14;
-          var14.b();
-          SoftwareRaster.e(11, 0, 5, 0);
-          SoftwareRaster.e(13, 1, 3, 0);
-          SoftwareRaster.e(14, 2, 2, 0);
-          SoftwareRaster.e(15, 3, 1, 0);
-          SoftwareRaster.e(15, 4, 1, 0);
+          var14.bindAsRasterTarget();
+          SoftwareRaster.drawHorizontalLine(11, 0, 5, 0);
+          SoftwareRaster.drawHorizontalLine(13, 1, 3, 0);
+          SoftwareRaster.drawHorizontalLine(14, 2, 2, 0);
+          SoftwareRaster.drawHorizontalLine(15, 3, 1, 0);
+          SoftwareRaster.drawHorizontalLine(15, 4, 1, 0);
         }
         if (param2 == -20600) {
           SoftwareRaster.setTarget(var16, var7, var8);
@@ -93,8 +93,8 @@ final class SetCoatConsoleCommand extends ConsoleCommand {
         super(commandName, parameterTypes, description);
     }
 
-    public static void g(int param0) {
-        if (param0 < -2) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard < -2) {
           field_E = null;
           kalphiteSprites = null;
           field_H = null;

@@ -7,10 +7,10 @@ final class hb {
     static String field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         field_b = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           field_b = (String) null;
         }
     }
@@ -19,7 +19,7 @@ final class hb {
         DialogMessagePane.field_I = null;
         ChannelBaseVolumeConsoleCommand.e((byte) -128);
         param11 = FixedQuaternion.a(param11, param9, param6, param2, param7, param13, (byte) -83);
-        qh.a(param11, param4, param1, param3, param5, param9, param0, -1, param12, param10);
+        QuicksaveRequestSupport.a(param11, param4, param1, param3, param5, param9, param0, -1, param12, param10);
         la.updateSocialListControls(param3, param4, -1);
         if (!param8) {
           field_b = (String) null;
@@ -37,14 +37,14 @@ final class hb {
           boolean decompiledFrameRemainder0 = true;
           if (null != MoveAttackRequest.sessionSocket) {
             if (param1 >= 0) {
-              decompiledFrameRemainder0 = (ResourceArchive.connectedState == ov.connectionState);
+              decompiledFrameRemainder0 = (ResourceArchive.connectedState == SpectateRoomRequestSupport.connectionState);
               if ((decompiledFrameRemainder0) && (0 == EmailValidator.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60))) {
+                (10000L + SummonEvent.field_G) < MonotonicClockSupport.monotonicMillis(-60))) {
                 EmailValidator.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             } else {
               if (0 == EmailValidator.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60)) {
+                (10000L + SummonEvent.field_G) < MonotonicClockSupport.monotonicMillis(-60)) {
                 EmailValidator.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             }
@@ -55,11 +55,11 @@ final class hb {
               if (EmailValidator.outgoingPacket.position > 0) {
                 try {
                   MoveAttackRequest.sessionSocket.write(EmailValidator.outgoingPacket.payload, (byte) 20, 0, EmailValidator.outgoingPacket.position);
-                  SummonEvent.field_G = vi.monotonicMillis(51);
+                  SummonEvent.field_G = MonotonicClockSupport.monotonicMillis(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  dj.a((byte) -127);
+                  TextSplitSupport.a((byte) -127);
                 }
                 EmailValidator.outgoingPacket.position = 0;
               }
@@ -87,14 +87,14 @@ final class hb {
           boolean decompiledFrameRemainder0 = true;
           if (null != MoveAttackRequest.sessionSocket) {
             if (param1 >= 0) {
-              decompiledFrameRemainder0 = (ResourceArchive.connectedState == ov.connectionState);
+              decompiledFrameRemainder0 = (ResourceArchive.connectedState == SpectateRoomRequestSupport.connectionState);
               if ((decompiledFrameRemainder0) && (0 == EmailValidator.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60))) {
+                (10000L + SummonEvent.field_G) < MonotonicClockSupport.monotonicMillis(-60))) {
                 EmailValidator.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             } else {
               if (0 == EmailValidator.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60)) {
+                (10000L + SummonEvent.field_G) < MonotonicClockSupport.monotonicMillis(-60)) {
                 EmailValidator.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             }
@@ -105,11 +105,11 @@ final class hb {
               if (EmailValidator.outgoingPacket.position > 0) {
                 try {
                   MoveAttackRequest.sessionSocket.write(EmailValidator.outgoingPacket.payload, (byte) 20, 0, EmailValidator.outgoingPacket.position);
-                  SummonEvent.field_G = vi.monotonicMillis(51);
+                  SummonEvent.field_G = MonotonicClockSupport.monotonicMillis(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  dj.a((byte) -127);
+                  TextSplitSupport.a((byte) -127);
                 }
                 EmailValidator.outgoingPacket.position = 0;
               }

@@ -46,12 +46,12 @@ final class pu {
     int[] field_I;
     short[] field_y;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_k = (IconTextComponent[][]) null;
         field_h = null;
         field_G = null;
-        if (param0 > -63) {
-          pu.a((byte) -1);
+        if (obfuscationGuard > -63) {
+          pu.releaseStatics((byte) -1);
         }
         field_B = null;
     }
@@ -77,7 +77,7 @@ final class pu {
             SummonAction.lobbyPlayerOrder.clear(76);
             SummonAction.lobbyPlayerOrder = null;
           }
-          oi.lobbyPlayersById = null;
+          CheckMarkWidgetPainter.lobbyPlayersById = null;
           if (param0 > -86) {
             return;
           }
@@ -91,13 +91,13 @@ final class pu {
             ModalDialog.currentRoomPlayers = null;
           }
           UnitCycler.currentRoomPlayersById = null;
-          if (null != oi.lobbyPlayersById) {
-            var3 = (LobbyPlayer) (oi.lobbyPlayersById.first((byte) 66));
+          if (null != CheckMarkWidgetPainter.lobbyPlayersById) {
+            var3 = (LobbyPlayer) (CheckMarkWidgetPainter.lobbyPlayersById.first((byte) 66));
             while (var3 != null) {
               var3.unlinkSecondary((byte) -76);
-              var3 = (LobbyPlayer) (oi.lobbyPlayersById.next(1));
+              var3 = (LobbyPlayer) (CheckMarkWidgetPainter.lobbyPlayersById.next(1));
             }
-            oi.lobbyPlayersById = null;
+            CheckMarkWidgetPainter.lobbyPlayersById = null;
             return;
           }
           return;

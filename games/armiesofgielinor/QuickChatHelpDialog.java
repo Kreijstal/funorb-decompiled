@@ -36,7 +36,7 @@ final class QuickChatHelpDialog extends ClientUiComponent {
         int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         SoundPlaybackHandle additionalHandle;
         try {
-          l.musicPlayer.pump();
+          QuickChatCategoryMenuSupport.musicPlayer.pump();
           TextCursor.effectsPlayer.pump();
           DelayedPacket.soundHandleCleanupCountdown = DelayedPacket.soundHandleCleanupCountdown - 1;
           if (obfuscationGuard != 128) {
@@ -71,8 +71,8 @@ final class QuickChatHelpDialog extends ClientUiComponent {
         }
     }
 
-    public static void l(int param0) {
-        if (param0 >= -103) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard >= -103) {
           return;
         }
         field_Jb = null;
@@ -133,7 +133,7 @@ final class QuickChatHelpDialog extends ClientUiComponent {
           this.closeButton.setBounds(15, -20500, 15, 5, -20 + header.width);
           body.setBounds(-header.height + this.height, -20500, this.width, header.height, 0);
           subtitle.setBounds(15, -20500, this.width, 20, 0);
-          body.skinSprites = tq.a(11579568, false, body.height, 2105376, 3, 8421504);
+          body.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(11579568, false, body.height, 2105376, 3, 8421504);
           header.addChild(this.closeButton, 64);
           body.addChild(subtitle, 111);
           this.addChild(header, 98);

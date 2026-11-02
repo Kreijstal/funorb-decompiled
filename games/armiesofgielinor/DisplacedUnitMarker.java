@@ -11,18 +11,18 @@ final class DisplacedUnitMarker extends PreparedAction {
           return "Please use a value from 0 to 256, inclusive.";
         }
         if (gain >= 0) {
-          previousGainText = "old volume: " + gi.campaignBaseChannelGain;
-          gi.campaignBaseChannelGain = gain;
+          previousGainText = "old volume: " + AccountNameCheckStatusSupport.campaignBaseChannelGain;
+          AccountNameCheckStatusSupport.campaignBaseChannelGain = gain;
           return previousGainText;
         }
         return "Please use a value from 0 to 256, inclusive.";
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_s = null;
         field_t = null;
-        if (param0 != 1223) {
-          DisplacedUnitMarker.e(41);
+        if (obfuscationGuard != 1223) {
+          DisplacedUnitMarker.releaseStatics(41);
         }
     }
 

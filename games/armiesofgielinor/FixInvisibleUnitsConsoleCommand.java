@@ -26,7 +26,7 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
           var6.writeInt((byte) -102, param2.field_m);
           var6.writeInt((byte) -86, param2.field_t);
           var6.writeInt((byte) -60, param2.field_s);
-          var6.b((byte) -39, var4);
+          var6.appendChecksum((byte) -39, var4);
           var6.writeByteLengthPrefix(var6.position - var4, 5930);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ot.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -38,7 +38,7 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
           if (FullscreenMembershipDialog.activeContextMenu.sourceComponent == null) {
             FullscreenMembershipDialog.activeContextMenu = null;
             if (param0 != 76) {
-              FixInvisibleUnitsConsoleCommand.e((byte) -104);
+              FixInvisibleUnitsConsoleCommand.releaseStatics((byte) -104);
               PointerInputHandler.contextMenuScrollContainer = null;
               return;
             }
@@ -52,7 +52,7 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
           PointerInputHandler.contextMenuScrollContainer = null;
           return;
         }
-        FixInvisibleUnitsConsoleCommand.e((byte) -104);
+        FixInvisibleUnitsConsoleCommand.releaseStatics((byte) -104);
         PointerInputHandler.contextMenuScrollContainer = null;
     }
 
@@ -89,10 +89,10 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         ignoreEntries = null;
         field_H = null;
-        int var1 = -2 % ((param0 + 35) / 35);
+        int var1 = -2 % ((obfuscationGuard + 35) / 35);
         field_F = null;
     }
 
@@ -111,13 +111,13 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
           NetworkResourceRequest.field_C = param3;
           CipherPacketBuffer.currentBattlefield = param0;
           PaletteRegionMap.field_g = new AnimationPlayer(param2);
-          PaletteRegionMap.field_g.selectSequence(-1, ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[76]][0]);
+          PaletteRegionMap.field_g.selectSequence(-1, StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[76]][0]);
           ResourceArchive.field_a = NetworkResourceRequest.field_C.camera;
           discarded$1 = new RgbSprite(80, 40);
           ConsoleParseException.field_c = CipherPacketBuffer.currentBattlefield.mapHeight;
           ResourceRequest.field_y = CipherPacketBuffer.currentBattlefield.mapWidth;
           ConsoleExpression.field_p = ResourceArchive.field_a.overlayValues;
-          vs.field_e = CipherPacketBuffer.currentBattlefield.tiles;
+          QuickChatMenuDisplaySupport.field_e = CipherPacketBuffer.currentBattlefield.tiles;
           bt.field_f = CipherPacketBuffer.currentBattlefield.mapTheme;
           Bzip2State.a((byte) 111);
           Unit.field_L = false;

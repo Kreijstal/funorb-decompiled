@@ -1044,8 +1044,8 @@ final class ModelMesh extends ModelMeshBase {
               }
               if (param1 &&
                 this.a(FixInvisibleUnitsConsoleCommand.field_G + TriangleRasterizer.projectionCenterX, EmailValidator.field_j + TriangleRasterizer.projectionCenterY, field_V[var9], field_V[var10], field_V[var11], var12, var13, var14_int)) {
-                fieldTemp$13 = ws.field_O;
-                ws.field_O = ws.field_O + 1;
+                fieldTemp$13 = DialWidget.field_O;
+                DialWidget.field_O = DialWidget.field_O + 1;
                 MoveAttackRequest.field_I[fieldTemp$13] = param2;
                 param1 = false;
               }
@@ -1324,7 +1324,7 @@ final class ModelMesh extends ModelMeshBase {
         return;
     }
 
-    public static void c() {
+    public static void releaseStatics() {
         field_ib = null;
         field_u = null;
         field_C = null;

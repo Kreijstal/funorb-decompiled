@@ -23,7 +23,7 @@ final class li extends IntrusiveNode {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var1_int = PaletteRegionMap.field_g.frameId >> 16;
-          var2 = we.a(var1_int, true);
+          var2 = ArchiveLoadStep.a(var1_int, true);
           MusicPatch.a(var2, (byte) -34);
           if (CipherPacketBuffer.currentBattlefield.localPlayer <= -1) {
             stackIn_4_0 = CipherPacketBuffer.currentBattlefield.currentPlayer;
@@ -47,11 +47,11 @@ final class li extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_p = null;
         field_k = null;
         field_m = null;
-        if (param0 != 74) {
+        if (obfuscationGuard != 74) {
           li.a(-95);
           field_n = null;
           return;

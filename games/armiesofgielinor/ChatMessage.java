@@ -35,8 +35,8 @@ final class ChatMessage {
           if (ChannelBaseVolumeConsoleCommand.localAccountId == this.accountId) {
             return 1;
           }
-          if (th.socialListState == 2 &&
-            jj.isFriend(82, this.accountName)) {
+          if (FloorModSupport.socialListState == 2 &&
+            FriendLookupSupport.isFriend(82, this.accountName)) {
             return 1;
           }
           return 0;
@@ -65,14 +65,14 @@ final class ChatMessage {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_g = null;
         field_s = null;
         field_l = null;
         field_o = null;
         field_t = null;
         field_i = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           ChatMessage.a(-123, 18, -64, -107, -63, (byte) 82, 91);
         }
     }
@@ -91,7 +91,7 @@ final class ChatMessage {
         this.accountName = gp.decodedChatAccountName;
         this.displayName = RegistrationAgreementPane.decodedChatDisplayName;
         this.contextId = DisplaySettingsDialog.decodedChatContextId;
-        this.privateMessageIdLow24 = th.decodedPrivateMessageIdLow24;
+        this.privateMessageIdLow24 = FloorModSupport.decodedPrivateMessageIdLow24;
         this.chatIconId = UnitModelViewer.decodedChatIconId;
         this.accountId = ModalDialogHost.decodedChatAccountId;
     }

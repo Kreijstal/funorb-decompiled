@@ -137,7 +137,7 @@ final class DebugConsole extends ConsolePanel {
           else {
             this.input.setCollapsedSelection(1 + caretIndex, false);
           }
-          vs.highlightedConsoleInput = NetworkGameShell.highlightConsoleSyntax(this.input.getText(0), -101);
+          QuickChatMenuDisplaySupport.highlightedConsoleInput = NetworkGameShell.highlightConsoleSyntax(this.input.getText(0), -101);
           return true;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
@@ -213,7 +213,7 @@ final class DebugConsole extends ConsolePanel {
         try {
           int guardQuotient = -78 / ((obfuscationGuard - 13) / 33);
           savedDisplayText = this.input.textComponent.text;
-          this.input.textComponent.text = vs.highlightedConsoleInput;
+          this.input.textComponent.text = QuickChatMenuDisplaySupport.highlightedConsoleInput;
           super.drawConsole(-100);
           this.input.textComponent.text = savedDisplayText;
         } catch (RuntimeException failure) {
@@ -250,14 +250,14 @@ final class DebugConsole extends ConsolePanel {
           sourceAlias = source;
           sourceSecondAlias = source;
           caretIndex = this.input.getCaretIndex(95);
-          tokens = vv.cachedConsoleTokenArray(source, 114);
+          tokens = ConsoleTokenSupport.cachedConsoleTokenArray(source, 114);
           tokenIndex = DualLinkedNode.consoleTokenAtCaret(caretIndex, tokens, -122);
           this.suggestionBackdrop.x = 0;
           prefix = "";
           if (0 <= tokenIndex) {
             token = tokens[tokenIndex];
             prefixLength = -token.sourceOffset + caretIndex;
-            if (rn.consoleCallKind == token.kind &&
+            if (ProceduralMapSupport.consoleCallKind == token.kind &&
               prefixLength > 0) {
               prefix = token.text.substring(0, Math.min(token.text.length(), prefixLength));
               this.suggestionBackdrop.x = this.font.textWidth(source.substring(0, token.sourceOffset));
@@ -278,7 +278,7 @@ final class DebugConsole extends ConsolePanel {
                 break;
               }
               if (0 < backwardTokenIndex &&
-                tokens[backwardTokenIndex - 1].kind == rn.consoleCallKind) {
+                tokens[backwardTokenIndex - 1].kind == ProceduralMapSupport.consoleCallKind) {
                 prefix = tokens[-1 + backwardTokenIndex].text;
                 this.suggestionBackdrop.x = this.font.textWidth(source.substring(0, tokens[-1 + backwardTokenIndex].sourceOffset));
               }
@@ -364,13 +364,13 @@ final class DebugConsole extends ConsolePanel {
           sourceAlias = source;
           sourceSecondAlias = source;
           caretIndex = this.input.getCaretIndex(-105);
-          tokens = vv.cachedConsoleTokenArray(source, obfuscationGuard - 11);
+          tokens = ConsoleTokenSupport.cachedConsoleTokenArray(source, obfuscationGuard - 11);
           tokenIndex = DualLinkedNode.consoleTokenAtCaret(caretIndex, tokens, -126);
           prefix = "";
           if (0 <= tokenIndex) {
             token = tokens[tokenIndex];
             prefixLength = caretIndex - token.sourceOffset;
-            if (rn.consoleCallKind == token.kind &&
+            if (ProceduralMapSupport.consoleCallKind == token.kind &&
               0 < prefixLength &&
               token.text.length() >= prefixLength) {
               prefix = token.text.substring(0, prefixLength);
@@ -502,7 +502,7 @@ final class DebugConsole extends ConsolePanel {
                 return true;
               }
               cursor = new ConsoleTokenCursor(tokenDeque);
-              expression = fk.parseConsoleExpression(cursor, -39);
+              expression = DropdownSelectorPainter.parseConsoleExpression(cursor, -39);
               if (!cursor.isAtEnd(124)) {
                 throw new ConsoleParseException(cursor.readToken((byte) 13).sourceOffset);
               }

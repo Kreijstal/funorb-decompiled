@@ -89,7 +89,7 @@ final class CampaignQuicksave {
           packet.writeByte(1, this.eliminatedPlayerMask);
           packet.writeInt((byte) -72, this.snapshotBytes.length);
           if (obfuscationGuard != 8) {
-            CampaignQuicksave.a(25);
+            CampaignQuicksave.releaseStatics(25);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -106,10 +106,10 @@ final class CampaignQuicksave {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         field_i = null;
-        int var1 = -54 % ((param0 + 65) / 39);
+        int var1 = -54 % ((obfuscationGuard + 65) / 39);
     }
 
     CampaignQuicksave(PacketBuffer packet, int formatVersion, boolean receiveInChunks) {
@@ -181,7 +181,7 @@ final class CampaignQuicksave {
           this.hasLostUnit = hasLostUnit ? true : false;
           this.damageTaken = damageTaken;
           this.playerMana = new int[battlefield.playerMana.length];
-          vm.a(battlefield.playerMana, 0, this.playerMana, 0, battlefield.playerMana.length);
+          ArrayBlockSupport.copyInts(battlefield.playerMana, 0, this.playerMana, 0, battlefield.playerMana.length);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sl.<init>(" + campaignIndex + ',' + missionId + ',' + (battlefield != null ? "{...}" : "null") + ',' + damageTaken + ',' + hasLostUnit + ')');
         }

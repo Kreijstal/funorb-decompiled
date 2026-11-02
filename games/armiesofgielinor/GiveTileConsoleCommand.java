@@ -108,7 +108,7 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
         stackIn_8_1 = 65524;
         stackIn_8_2 = 15;
         stackIn_9_3 = (50 >= SpriteDropdownControl.field_u) ? false : true;
-        stackIn_12_4 = el.field_d;
+        stackIn_12_4 = MouseWheelSource.field_d;
         stackIn_12_5 = 65528;
         stackIn_12_6 = 14;
         stackIn_12_7 = 13;
@@ -116,13 +116,13 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
         stackIn_12_9 = 11;
         stackIn_14_10 = (ViewportManager.field_c) || (ModalDialogHost.field_H);
         hb.a(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_9_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9, stackIn_14_10, param1, var2 != 0, 0);
-        if (cp.field_h) {
+        if (EventPresenterFactory.field_h) {
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 64);
-          cp.field_h = false;
+          EventPresenterFactory.field_h = false;
         }
-        if (cg.field_a) {
+        if (ScreenWipeTransition.field_a) {
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 10);
-          cg.field_a = false;
+          ScreenWipeTransition.field_a = false;
         }
         if (ChatMessage.field_w) {
           MoveAttackAction.a(1, uh.field_a, true, (byte) 90, false);

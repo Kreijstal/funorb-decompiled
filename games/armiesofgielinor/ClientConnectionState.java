@@ -41,14 +41,14 @@ final class ClientConnectionState {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_b = null;
         field_i = null;
         whirlpoolRoundTables = (long[][]) null;
         field_a = null;
         whirlpoolRoundConstants = null;
         field_c = null;
-        if (param0 != 96) {
+        if (obfuscationGuard != 96) {
           field_d = (String) null;
         }
         field_f = null;
@@ -60,19 +60,19 @@ final class ClientConnectionState {
         if (param0 <= 1) {
           field_f = (String) null;
         }
-        return ip.field_e;
+        return WidgetStateStyle.field_e;
     }
 
     public final String toString() {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, boolean param1) {
-        if (!param1) {
+    final static void setTicksPerSecond(int ticksPerSecond, boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           gl var3 = (gl) null;
           ClientConnectionState.a(false, (gl) null, (gl) null);
         }
-        FullscreenFocusCanvas.tickDurationNanos = 1000000000L / (long)param0;
+        FullscreenFocusCanvas.tickDurationNanos = 1000000000L / (long)ticksPerSecond;
     }
 
     final static int a(boolean param0, gl param1, gl param2) {
@@ -187,7 +187,7 @@ final class ClientConnectionState {
         var0 = var15;
         while (var15 <= 10) {
             var1 = -8 + var15 * 8;
-            whirlpoolRoundConstants[var15] = BufferedFile.a(we.a(whirlpoolRoundTables[7][7 + var1], 255L), BufferedFile.a(we.a(65280L, whirlpoolRoundTables[6][var1 + 6]), BufferedFile.a(we.a(whirlpoolRoundTables[5][var1 + 5], 16711680L), BufferedFile.a(we.a(4278190080L, whirlpoolRoundTables[4][var1 + 4]), BufferedFile.a(we.a(whirlpoolRoundTables[3][var1 + 3], 1095216660480L), BufferedFile.a(we.a(280375465082880L, whirlpoolRoundTables[2][var1 + 2]), BufferedFile.a(we.a(71776119061217280L, whirlpoolRoundTables[1][1 + var1]), we.a(-72057594037927936L, whirlpoolRoundTables[0][var1]))))))));
+            whirlpoolRoundConstants[var15] = BufferedFile.a(ArchiveLoadStep.a(whirlpoolRoundTables[7][7 + var1], 255L), BufferedFile.a(ArchiveLoadStep.a(65280L, whirlpoolRoundTables[6][var1 + 6]), BufferedFile.a(ArchiveLoadStep.a(whirlpoolRoundTables[5][var1 + 5], 16711680L), BufferedFile.a(ArchiveLoadStep.a(4278190080L, whirlpoolRoundTables[4][var1 + 4]), BufferedFile.a(ArchiveLoadStep.a(whirlpoolRoundTables[3][var1 + 3], 1095216660480L), BufferedFile.a(ArchiveLoadStep.a(280375465082880L, whirlpoolRoundTables[2][var1 + 2]), BufferedFile.a(ArchiveLoadStep.a(71776119061217280L, whirlpoolRoundTables[1][1 + var1]), ArchiveLoadStep.a(-72057594037927936L, whirlpoolRoundTables[0][var1]))))))));
             var15++;
         }
     }
