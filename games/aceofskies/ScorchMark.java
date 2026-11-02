@@ -45,7 +45,7 @@ final class ScorchMark {
             ScorchMark.a((byte) -14);
           }
           if (tn.a(param0, (byte) -127, param3, param1)) {
-            return bl.b(-95);
+            return SectorCacheStore.b(-95);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

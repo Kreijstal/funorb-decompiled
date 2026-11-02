@@ -22,8 +22,8 @@ final class RendererManager {
         String stackIn_19_2 = null;
         try {
           if (param1 < 89) {
-            jc var4 = (jc) null;
-            RendererManager.a((byte) -63, 59, (byte[]) null, (jc) null);
+            HardwareOpenGlRenderer var4 = (HardwareOpenGlRenderer) null;
+            RendererManager.a((byte) -63, 59, (byte[]) null, (HardwareOpenGlRenderer) null);
           }
           vu var3 = this.field_e;
           if (var3 == null ||
@@ -57,7 +57,7 @@ final class RendererManager {
         }
     }
 
-    final static vj a(byte param0, int param1, byte[] param2, jc param3) {
+    final static OpenGlShaderObject a(byte param0, int param1, byte[] param2, HardwareOpenGlRenderer param3) {
         String stackIn_21_2 = null;
         String stackIn_24_2 = null;
         try {
@@ -87,10 +87,10 @@ final class RendererManager {
             if (dg.field_Q[0] == 0) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               Object stackIn_15_0 = null;
-              return (vj) (stackIn_15_0);
+              return (OpenGlShaderObject) (stackIn_15_0);
             }
           }
-          vj stackIn_17_0 = new vj(param3, var4_long, param1);
+          OpenGlShaderObject stackIn_17_0 = new OpenGlShaderObject(param3, var4_long, param1);
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -355,7 +355,7 @@ final class RendererManager {
         return this.field_e.field_c;
     }
 
-    private RendererManager(ResourceArchive param0, ResourceArchive param1, d param2, rk param3, sn[] param4) {
+    private RendererManager(ResourceArchive param0, ResourceArchive param1, d param2, SystemTaskService param3, sn[] param4) {
         this.field_d = false;
         try {
           oi.field_d = param0;

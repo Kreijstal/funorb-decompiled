@@ -293,7 +293,7 @@ final class rr {
               if (0 == param0.length()) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              fe.a(param2, -7012, "document.cookie=\"" + var5 + "\"");
+              JavaScriptBridge.a(param2, -7012, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
             v.a(true, param2);

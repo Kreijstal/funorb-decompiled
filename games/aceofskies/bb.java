@@ -5,12 +5,12 @@ final class bb extends IntrusiveNode {
     int field_j;
     int[] field_e;
     int[] field_i;
-    en[] field_h;
+    SystemTask[] field_h;
     int[] field_l;
     byte[][][] field_k;
     static int[] field_m;
     int field_g;
-    en[] field_f;
+    SystemTask[] field_f;
 
     final static int a(cd param0, byte param1, cd param2) {
         String stackIn_5_2 = null;

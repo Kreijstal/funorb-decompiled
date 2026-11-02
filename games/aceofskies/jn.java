@@ -94,14 +94,14 @@ final class jn extends ab implements dn {
           field_t = true;
         }
         if (!cn.b(true) &&
-          !ml.field_p) {
+          !InstrumentPatch.field_p) {
           if (fa.field_b == null) {
             fa.field_b = sc.a(false, 4);
           }
           if (fa.field_b.field_g) {
             r.field_n = r.field_n & ~fa.field_b.field_e;
             hg.field_D = hg.field_D | fa.field_b.field_e;
-            ml.field_p = true;
+            InstrumentPatch.field_p = true;
             fa.field_b = null;
           }
         }

@@ -22,7 +22,7 @@ final class lh {
           if (param1 != 66) {
             field_a = (int[]) null;
           }
-          wl stackIn_3_0 = new wl(param0, param3, param2);
+          OpenGlRenderer stackIn_3_0 = new OpenGlRenderer(param0, param3, param2);
           return (GraphicsRenderer) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,7 +3,7 @@
  */
 final class uf {
     static String field_e;
-    private wl field_c;
+    private OpenGlRenderer field_c;
     int field_a;
     static String[] field_b;
     static int[] field_d;
@@ -33,7 +33,7 @@ final class uf {
         super.finalize();
     }
 
-    uf(wl param0, int param1, int param2) {
+    uf(OpenGlRenderer param0, int param1, int param2) {
         try {
           this.field_a = param2;
           this.field_c = param0;

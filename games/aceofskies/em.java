@@ -3,14 +3,14 @@
  */
 final class em {
     static String[] field_c;
-    private qi[] field_h;
+    private HardwareTexture2D[] field_h;
     static int[] field_b;
     static int rendererDefaultShadowColor;
     boolean field_e;
-    bp field_f;
-    bp field_a;
-    private bf field_g;
-    qi[] field_i;
+    HardwareVolumeTexture field_f;
+    HardwareVolumeTexture field_a;
+    private HardwareRenderer field_g;
+    HardwareTexture2D[] field_i;
 
     final boolean a(int param0) {
         int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -54,10 +54,10 @@ final class em {
               }
             }
           }
-          this.field_a = this.field_g.a(128, param0 ^ -96, 128, lc.field_g, 16, var24);
+          this.field_a = this.field_g.a(128, param0 ^ -96, 128, IterableNodeHashTable.field_g, 16, var24);
         }
         if (param0 != 0) {
-          this.field_f = (bp) null;
+          this.field_f = (HardwareVolumeTexture) null;
         }
         boolean stackIn_20_0 = (null != this.field_a);
         return stackIn_20_0;
@@ -65,7 +65,7 @@ final class em {
 
     final boolean b(boolean param0) {
         if (param0) {
-          this.field_h = (qi[]) null;
+          this.field_h = (HardwareTexture2D[]) null;
         }
         return this.field_e ? this.field_f != null ? true : false : null != this.field_i ? true : false;
     }
@@ -78,7 +78,7 @@ final class em {
         }
     }
 
-    em(bf param0) {
+    em(HardwareRenderer param0) {
         String stackIn_20_2 = null;
         this.field_h = null;
         this.field_f = null;
@@ -88,28 +88,28 @@ final class em {
           this.field_g = param0;
           this.field_e = this.field_g.field_J;
           if (this.field_e &&
-            !this.field_g.a((byte) -13, la.field_h, hh.field_c)) {
+            !this.field_g.a((byte) -13, BufferElementType.field_h, hh.field_c)) {
             this.field_e = false;
           }
           if (!this.field_e &&
-            !this.field_g.a(la.field_h, 0, hh.field_c)) {
+            !this.field_g.a(BufferElementType.field_h, 0, hh.field_c)) {
             return;
           }
           fd.a(-70);
           if (!this.field_e) {
-            this.field_i = new qi[16];
+            this.field_i = new HardwareTexture2D[16];
             for (int var2_int = 0; var2_int < 16; var2_int++) {
-              byte[] var15 = cs.a(false, var2_int * 32768, 32768, wl.field_r);
+              byte[] var15 = cs.a(false, var2_int * 32768, 32768, OpenGlRenderer.field_r);
               this.field_i[var2_int] = this.field_g.a(var15, 128, true, 128, hh.field_c, true);
             }
-            this.field_h = new qi[16];
+            this.field_h = new HardwareTexture2D[16];
             for (int var2_intLifetime1 = 0; 16 > var2_intLifetime1; var2_intLifetime1++) {
               byte[] var16 = cs.a(false, 32768 * var2_intLifetime1, 32768, lg.field_l);
               this.field_h[var2_intLifetime1] = this.field_g.a(var16, 128, true, 128, hh.field_c, true);
             }
             return;
           }
-          byte[] var17 = PacketBuffer.a(false, wl.field_r, 66);
+          byte[] var17 = PacketBuffer.a(false, OpenGlRenderer.field_r, 66);
           this.field_f = this.field_g.a(128, -123, 128, hh.field_c, 16, var17);
           byte[] var18 = PacketBuffer.a(false, lg.field_l, 101);
           this.field_g.a(128, -95, 128, hh.field_c, 16, var18);

@@ -20,8 +20,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public static int field_f;
 
     public final void stop() {
-        if (gh.field_f != this ||
-          sk.field_c) {
+        if (BufferedRandomAccessFile.field_f != this ||
+          RenderEffect.field_c) {
           return;
         }
         try {
@@ -43,8 +43,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             ci.field_f.getParent().remove((java.awt.Component) ((Object) ci.field_f));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (ku.field_f != null) {
-            var2 = ku.field_f;
+          if (DirectByteStorage.field_f != null) {
+            var2 = DirectByteStorage.field_f;
             decompiledFrameRemainder0 = ((var4));
           }
           if (decompiledFrameRemainder0) {
@@ -52,14 +52,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               var2 = si.field_d;
               if (var4) {
                 if (hu.field_a == null) {
-                  var2 = gh.field_f;
+                  var2 = BufferedRandomAccessFile.field_f;
                   var2 = hu.field_a;
                 } else {
                   var2 = hu.field_a;
                 }
               }
             } else if (hu.field_a == null) {
-              var2 = gh.field_f;
+              var2 = BufferedRandomAccessFile.field_f;
               if (var4) {
                 var2 = hu.field_a;
               }
@@ -121,8 +121,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final synchronized void paint(java.awt.Graphics param0) {
         String stackIn_26_2 = null;
         try {
-          if (gh.field_f == this &&
-            !sk.field_c) {
+          if (BufferedRandomAccessFile.field_f == this &&
+            !RenderEffect.field_c) {
             AceOfSkies.field_J = true;
             if (rl.field_p &&
               -mg.field_b + kh.a(-67) > 1000L) {
@@ -275,7 +275,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             ci.field_f.setSize(td.field_b, ArchiveIndex.field_h);
             ci.field_f.setVisible(true);
             if (null != si.field_d &&
-              null == ku.field_f) {
+              null == DirectByteStorage.field_f) {
               java.awt.Insets var7 = si.field_d.getInsets();
               ci.field_f.setLocation(ci.field_g + var7.left, var7.top + jt.field_x);
               if (AceOfSkies.obfuscationControl) {
@@ -300,10 +300,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           Object var3 = this;
           synchronized (var3) {
-            if (sk.field_c) {
+            if (RenderEffect.field_c) {
               return;
             }
-            sk.field_c = true;
+            RenderEffect.field_c = true;
           }
           if (null != hu.field_a) {
             hu.field_a.destroy();
@@ -406,7 +406,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               if (param0 >= -102) {
                 field_l = (fr) null;
               }
-              fe.a("loggedout", (byte) -108, bm.m(107));
+              JavaScriptBridge.a("loggedout", (byte) -108, bm.m(107));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var3 = decompiledCaughtException;
@@ -441,8 +441,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     }
 
     public final void destroy() {
-        if (this != gh.field_f ||
-          sk.field_c) {
+        if (this != BufferedRandomAccessFile.field_f ||
+          RenderEffect.field_c) {
           return;
         }
         try {
@@ -459,8 +459,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     }
 
     public final void start() {
-        if (this != gh.field_f ||
-          sk.field_c) {
+        if (this != BufferedRandomAccessFile.field_f ||
+          RenderEffect.field_c) {
           return;
         }
         try {
@@ -505,11 +505,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (rk.field_o != null) {
-                var1 = rk.field_o.toLowerCase();
+              if (SystemTaskService.field_o != null) {
+                var1 = SystemTaskService.field_o.toLowerCase();
                 if (-1 != ((String) (var1)).indexOf("sun") ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  String var2 = rk.field_l;
+                  String var2 = SystemTaskService.field_l;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -551,8 +551,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3 && decompiledFrameCompleted0 &&
-                (decompiledFrameRemainder2 = (rk.field_l != null))) {
-                stackIn_68_0 = rk.field_l.startsWith("1.");
+                (decompiledFrameRemainder2 = (SystemTaskService.field_l != null))) {
+                stackIn_68_0 = SystemTaskService.field_l.startsWith("1.");
               }
               if (decompiledFrameRemainder3 &&
                 decompiledFrameRemainder2 &&
@@ -561,8 +561,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 int var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (var1_int < rk.field_l.length()) {
-                    var3 = rk.field_l.charAt(var1_int);
+                  if (var1_int < SystemTaskService.field_l.length()) {
+                    var3 = SystemTaskService.field_l.charAt(var1_int);
                     stackIn_81_0 = -49;
                     stackIn_81_1 = ~var3;
                     decompiledFrameRemainder1 = ((!(var5)));
@@ -585,11 +585,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = gh.field_f;
+                var1 = BufferedRandomAccessFile.field_f;
                 if (null != hu.field_a) {
                   var1 = hu.field_a;
                 }
-                java.lang.reflect.Method var2_ref = rk.field_e;
+                java.lang.reflect.Method var2_ref = SystemTaskService.field_e;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -598,7 +598,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     Throwable var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                qp.a(34069);
+                OpenGlCubeTexture.a(34069);
                 this.b(-14829);
                 cl.field_fb = qd.a((java.awt.Component) ((Object) ci.field_f), true, ArchiveIndex.field_h, td.field_b);
                 this.initializeClient(28060);
@@ -705,7 +705,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           boolean var9 = (AceOfSkies.obfuscationControl);
           try {
             try {
-              if (null != gh.field_f) {
+              if (null != BufferedRandomAccessFile.field_f) {
                 cd.field_b = cd.field_b + 1;
                 if (cd.field_b >= 3) {
                   this.a(-110, "alreadyloaded");
@@ -714,19 +714,19 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                 return;
               }
-              bs.field_c = param4;
+              GameKeyHandler.field_c = param4;
               ArchiveIndex.field_h = param5;
               hb.field_b = param5;
-              gh.field_f = this;
+              BufferedRandomAccessFile.field_f = this;
               td.field_b = param0;
               nj.field_e = param0;
               ci.field_g = param1;
               jt.field_x = 0;
               fb.field_c = bm.m(124);
-              rk dupTemp$0 = new rk(param6, param3, param2, true);
+              SystemTaskService dupTemp$0 = new SystemTaskService(param6, param3, param2, true);
               pt.field_b = dupTemp$0;
               mj.field_a = dupTemp$0;
-              en var8 = pt.field_b.a(1, 1048576, (Runnable) (this));
+              SystemTask var8 = pt.field_b.a(1, 1048576, (Runnable) (this));
               while (true) {
                 if (var8.field_a == 0) {
                   IntrusiveNode.a(10L, false);

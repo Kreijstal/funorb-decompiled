@@ -18,7 +18,7 @@ final class lq {
               if (param1 != 61) {
                 return true;
               }
-              String var3 = (String) (fe.a("getcookies", (byte) -108, param0));
+              String var3 = (String) (JavaScriptBridge.a("getcookies", (byte) -108, param0));
               String[] var4 = ee.a((byte) 10, ';', var3);
               for (int var5 = 0; var5 < var4.length; var5++) {
                 int var6 = var4[var5].indexOf('=');

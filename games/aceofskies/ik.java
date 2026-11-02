@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ik extends cq implements qi {
+final class ik extends OpenGlTexture implements HardwareTexture2D {
     private int field_j;
     private int field_i;
     static int field_k;
@@ -16,38 +16,38 @@ final class ik extends cq implements qi {
         return false;
     }
 
-    ik(jc param0, hd param1, la param2, int param3, int param4) {
+    ik(HardwareOpenGlRenderer param0, hd param1, BufferElementType param2, int param3, int param4) {
         super(param0, 34037, param1, param2, param4 * param3, false);
         try {
           this.field_j = param3;
           this.field_i = param4;
-          this.field_g.a((jj) (this), -9135);
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param3, param4, 0, gq.a(this.field_h, -29824), kk.a(this.field_c, (byte) -117), (byte[]) null, 0);
+          this.field_g.a((HardwareTexture) (this), -9135);
+          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param3, param4, 0, WeightedObjectCache.a(this.field_h, -29824), kk.a(this.field_c, (byte) -117), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    ik(jc param0, hd param1, int param2, int param3, float[] param4, int param5, int param6) {
-        super(param0, 34037, param1, la.field_i, param3 * param2, false);
+    ik(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, float[] param4, int param5, int param6) {
+        super(param0, 34037, param1, BufferElementType.field_i, param3 * param2, false);
         try {
           this.field_j = param2;
           this.field_i = param3;
-          this.field_g.a((jj) (this), -9135);
+          this.field_g.a((HardwareTexture) (this), -9135);
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.a(false), param2, param3, 0, gq.a(this.field_h, -29824), 5126, param4, param5 * 4);
+          jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.a(false), param2, param3, 0, WeightedObjectCache.a(this.field_h, -29824), 5126, param4, param5 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    ik(jc param0, int param1, int param2, int[] param3, int param4, int param5) {
-        super(param0, 34037, lc.field_g, la.field_h, param1 * param2, false);
+    ik(HardwareOpenGlRenderer param0, int param1, int param2, int[] param3, int param4, int param5) {
+        super(param0, 34037, IterableNodeHashTable.field_g, BufferElementType.field_h, param1 * param2, false);
         try {
           this.field_j = param1;
           this.field_i = param2;
-          this.field_g.a((jj) (this), -9135);
+          this.field_g.a((HardwareTexture) (this), -9135);
           jaggl.OpenGL.glPixelStorei(3314, param5);
           jaggl.OpenGL.glTexImage2Di(this.field_e, 0, 6408, this.field_j, this.field_i, 0, 32993, this.field_g.field_Bc, param3, param4 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
@@ -56,15 +56,15 @@ final class ik extends cq implements qi {
         }
     }
 
-    ik(jc param0, hd param1, int param2, int param3, byte[] param4, int param5, int param6) {
-        super(param0, 34037, param1, la.field_h, param3 * param2, false);
+    ik(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, byte[] param4, int param5, int param6) {
+        super(param0, 34037, param1, BufferElementType.field_h, param3 * param2, false);
         try {
           this.field_i = param3;
           this.field_j = param2;
-          this.field_g.a((jj) (this), -9135);
+          this.field_g.a((HardwareTexture) (this), -9135);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param2, param3, 0, gq.a(this.field_h, -29824), 5121, param4, param5);
+          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param2, param3, 0, WeightedObjectCache.a(this.field_h, -29824), 5121, param4, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {

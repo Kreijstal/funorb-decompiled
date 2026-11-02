@@ -198,9 +198,9 @@ final class Vector2 {
         int var2 = 0;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          Object var1 = ua.field_d;
+          Object var1 = OpenGlBuffer.field_d;
           synchronized (var1) {
-            he.field_n = he.field_n + 1;
+            CacheReference.field_n = CacheReference.field_n + 1;
             ch.field_a = lt.field_u;
             if (param0 > fb.field_a) {
               for (var2 = 0; var2 < 112; var2++) {

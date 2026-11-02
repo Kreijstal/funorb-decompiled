@@ -14,14 +14,14 @@ final class oq extends rg implements dn {
           var3 = null;
           if (param1 == co.field_k) {
             var3 = ht.field_h;
-          } else if (param1 == ro.field_r) {
+          } else if (param1 == OpenGlIndexBuffer.field_r) {
             var3 = tt.field_b;
             this.field_n = this.field_n + 10;
             if (uf.a(false)) {
               this.field_n = this.field_n + 20;
               var3 = bi.field_o;
             }
-          } else if (un.field_o == param1) {
+          } else if (ArchiveNetworkClient.field_o == param1) {
             var3 = ur.field_c;
             this.field_n = this.field_n + 30;
           }

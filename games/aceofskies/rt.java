@@ -4,7 +4,7 @@
 abstract class rt implements ws {
     private int field_i;
     private boolean field_c;
-    wl field_j;
+    OpenGlRenderer field_j;
     private boolean field_a;
     int field_b;
     int field_d;
@@ -30,7 +30,7 @@ abstract class rt implements ws {
         this.field_j.field_lb = this.field_j.field_lb - param0;
         this.field_j.field_lb = this.field_j.field_lb + this.c(4);
         if (param1 != 1) {
-          this.field_j = (wl) null;
+          this.field_j = (OpenGlRenderer) null;
         }
     }
 
@@ -155,10 +155,10 @@ abstract class rt implements ws {
         if (param0 == 9987) {
           return;
         }
-        this.field_j = (wl) null;
+        this.field_j = (OpenGlRenderer) null;
     }
 
-    rt(wl param0, int param1, int param2, int param3, boolean param4) {
+    rt(OpenGlRenderer param0, int param1, int param2, int param3, boolean param4) {
         this.field_a = false;
         try {
           this.field_f = param1;

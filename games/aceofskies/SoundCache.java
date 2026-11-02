@@ -70,9 +70,9 @@ final class SoundCache {
             remainingByteBudget[0] <= 0) {
             return null;
           }
-          t var9 = (t) (this.vorbisSampleCache.findByKey((byte) 106, var6));
+          VorbisSample var9 = (VorbisSample) (this.vorbisSampleCache.findByKey((byte) 106, var6));
           if (var9 == null) {
-            var9 = t.a(this.vorbisSoundArchive, groupId, fileId);
+            var9 = VorbisSample.a(this.vorbisSoundArchive, groupId, fileId);
             if (var9 == null) {
               return null;
             }
@@ -153,7 +153,7 @@ final class SoundCache {
             remainingByteBudget[0] <= 0) {
             return null;
           }
-          bj var9 = bj.a(this.synthesizedSoundArchive, groupId, fileId);
+          SynthesizedSoundEffect var9 = SynthesizedSoundEffect.a(this.synthesizedSoundArchive, groupId, fileId);
           if (var9 == null) {
             return null;
           }

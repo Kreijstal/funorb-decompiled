@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rl {
-    private la field_h;
+    private BufferElementType field_h;
     private int field_d;
     static rl field_b;
     int field_l;
@@ -149,16 +149,16 @@ final class rl {
         if (param0 == 0) {
           nf.field_a = true;
           vn.field_f.e((byte) 89);
-          ua.a(wo.field_e, false, (byte) 104);
+          OpenGlBuffer.a(wo.field_e, false, (byte) 104);
           return;
         }
         rl.a(-83, (byte) 35);
         nf.field_a = true;
         vn.field_f.e((byte) 89);
-        ua.a(wo.field_e, false, (byte) 104);
+        OpenGlBuffer.a(wo.field_e, false, (byte) 104);
     }
 
-    private rl(int param0, int param1, la param2) {
+    private rl(int param0, int param1, BufferElementType param2) {
         String stackIn_6_2 = null;
         try {
           this.field_h = param2;
@@ -184,13 +184,13 @@ final class rl {
     }
 
     static {
-        field_b = new rl(0, 3, la.field_i);
-        field_m = new rl(1, 3, la.field_i);
-        field_c = new rl(2, 4, la.field_h);
-        field_k = new rl(3, 1, la.field_i);
-        field_j = new rl(4, 2, la.field_i);
-        field_g = new rl(5, 3, la.field_i);
-        field_n = new rl(6, 4, la.field_i);
+        field_b = new rl(0, 3, BufferElementType.field_i);
+        field_m = new rl(1, 3, BufferElementType.field_i);
+        field_c = new rl(2, 4, BufferElementType.field_h);
+        field_k = new rl(3, 1, BufferElementType.field_i);
+        field_j = new rl(4, 2, BufferElementType.field_i);
+        field_g = new rl(5, 3, BufferElementType.field_i);
+        field_n = new rl(6, 4, BufferElementType.field_i);
         field_e = ek.a((byte) 108, 16);
         field_p = false;
         field_i = "Unfortunately you are not eligible to create an account.";

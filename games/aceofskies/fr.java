@@ -45,18 +45,18 @@ final class fr {
           field_e = 'L';
         }
         if (param0) {
-          gq.field_e = gq.field_e + 1;
+          WeightedObjectCache.field_e = WeightedObjectCache.field_e + 1;
           us.a(param1 + 2069944240);
         }
         if (param2) {
           ef.field_m = ef.field_m + 1;
-          er.a((byte) -128);
+          SecondaryNodeDeque.a((byte) -128);
         }
     }
 
     final static void a(int param0, int param1) {
         try {
-          if (null != ft.field_l && (param1 < 0 ||
+          if (null != MidiNote.field_l && (param1 < 0 ||
             ca.field_f == wq.field_e)) {
             if (param0 >= -12) {
               fr.a(36, 96);
@@ -67,7 +67,7 @@ final class fr {
             }
             if (0 < q.outgoingPacket.position) {
               try {
-                ft.field_l.a(q.outgoingPacket.position, 0, 76, q.outgoingPacket.payload);
+                MidiNote.field_l.a(q.outgoingPacket.position, 0, 76, q.outgoingPacket.payload);
                 co.field_e = kh.a(-84);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 Throwable decompiledCaughtException = decompiledCaughtParameter0;

@@ -9,10 +9,10 @@ final class cc implements Runnable {
     private java.net.URL field_j;
     private DataInputStream field_g;
     static int field_i;
-    private rk field_d;
-    private en field_h;
-    private en field_e;
-    private en field_f;
+    private SystemTaskService field_d;
+    private SystemTask field_h;
+    private SystemTask field_e;
+    private SystemTask field_f;
     private int field_c;
 
     protected final void finalize() {
@@ -192,7 +192,7 @@ final class cc implements Runnable {
         }
     }
 
-    cc(rk param0, java.net.URL param1, int param2) {
+    cc(SystemTaskService param0, java.net.URL param1, int param2) {
         try {
           this.field_d = param0;
           this.field_j = param1;

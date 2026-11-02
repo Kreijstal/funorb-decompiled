@@ -158,7 +158,7 @@ class nr extends rt {
         this.field_n = param0;
     }
 
-    nr(wl param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
+    nr(OpenGlRenderer param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
         super(param0, param1, param2, param4 * param3, param5);
         int stackIn_13_0 = 0;
         String stackIn_24_2 = null;
@@ -209,7 +209,7 @@ class nr extends rt {
             decompiledSharedTail0 = ((var16));
           }
           if (decompiledSharedTail0) {
-            fg.a(this.field_m, this.field_k, this.field_f, 32993, 72, param6, this.field_j.field_tb, this.field_b);
+            CachedArchiveProvider.a(this.field_m, this.field_k, this.field_f, 32993, 72, param6, this.field_j.field_tb, this.field_b);
             this.a(true, false);
           }
           this.a(true, -128);
@@ -246,7 +246,7 @@ class nr extends rt {
         this.field_n = -1;
     }
 
-    nr(wl param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
+    nr(OpenGlRenderer param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
         super(param0, param1, param2, param4 * param3, param5);
         int stackIn_13_0 = 0;
         String stackIn_22_2 = null;
@@ -330,7 +330,7 @@ class nr extends rt {
         }
     }
 
-    nr(wl param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
+    nr(OpenGlRenderer param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
         super(param0, param1, param2, param3 * param4, param5);
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -343,7 +343,7 @@ class nr extends rt {
           boolean decompiledSharedTail0 = (!(param5) ||
             34037 == this.field_f);
           if (!decompiledSharedTail0) {
-            rq.a(param6, param1, param2, param4, param7, param3, -1);
+            MouseInputHandler.a(param6, param1, param2, param4, param7, param3, -1);
             this.a(true, false);
             decompiledSharedTail0 = (AceOfSkies.obfuscationControl);
           }
@@ -373,7 +373,7 @@ class nr extends rt {
         }
     }
 
-    nr(wl param0, int param1, int param2, int param3, int param4) {
+    nr(OpenGlRenderer param0, int param1, int param2, int param3, int param4) {
         super(param0, param1, param2, param4 * param3, false);
         this.field_l = -1;
         this.field_n = -1;

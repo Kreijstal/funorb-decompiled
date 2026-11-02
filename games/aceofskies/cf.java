@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf extends sk {
+final class cf extends RenderEffect {
     static int field_g;
     static String normalizedPlayerName;
     static ResourceArchive field_f;
@@ -60,7 +60,7 @@ final class cf extends sk {
         return true;
     }
 
-    final void a(int param0, int param1, jj param2) {
+    final void a(int param0, int param1, HardwareTexture param2) {
         try {
           this.field_b.a(param2, -9135);
           if (param1 <= 66) {
@@ -88,7 +88,7 @@ final class cf extends sk {
         this.a(-1, 10, -110);
     }
 
-    cf(bf param0) {
+    cf(HardwareRenderer param0) {
         super(param0);
     }
 

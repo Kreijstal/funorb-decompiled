@@ -71,32 +71,32 @@ final class sh extends to {
           boolean var4 = (tn.a(-64, param0));
           wu var5 = new wu();
           var5.field_r = (short)param0.b((byte) 87, 16);
-          var5.field_z = ua.a(param0, var5.field_z, 0, 16);
-          var5.field_P = ua.a(param0, var5.field_P, param1 + 14, 16);
-          var5.field_F = ua.a(param0, var5.field_F, 0, 16);
+          var5.field_z = OpenGlBuffer.a(param0, var5.field_z, 0, 16);
+          var5.field_P = OpenGlBuffer.a(param0, var5.field_P, param1 + 14, 16);
+          var5.field_F = OpenGlBuffer.a(param0, var5.field_F, 0, 16);
           var5.field_K = (short)param0.b((byte) 119, 16);
-          var5.field_I = ua.a(param0, var5.field_I, param1 + 14, 16);
-          var5.field_t = ua.a(param0, var5.field_t, 0, 16);
-          var5.field_m = ua.a(param0, var5.field_m, 0, 16);
+          var5.field_I = OpenGlBuffer.a(param0, var5.field_I, param1 + 14, 16);
+          var5.field_t = OpenGlBuffer.a(param0, var5.field_t, 0, 16);
+          var5.field_m = OpenGlBuffer.a(param0, var5.field_m, 0, 16);
           if (var3) {
             var5.field_q = (short)param0.b((byte) 83, 16);
-            var5.field_H = ua.a(param0, var5.field_H, 0, 16);
-            var5.field_L = ua.a(param0, var5.field_L, 0, 16);
-            var5.field_n = ua.a(param0, var5.field_n, param1 ^ -14, 16);
-            var5.field_B = ua.a(param0, var5.field_B, 0, 16);
-            var5.field_g = ua.a(param0, var5.field_g, param1 + 14, 16);
-            var5.field_D = ua.a(param0, var5.field_D, 0, 16);
+            var5.field_H = OpenGlBuffer.a(param0, var5.field_H, 0, 16);
+            var5.field_L = OpenGlBuffer.a(param0, var5.field_L, 0, 16);
+            var5.field_n = OpenGlBuffer.a(param0, var5.field_n, param1 ^ -14, 16);
+            var5.field_B = OpenGlBuffer.a(param0, var5.field_B, 0, 16);
+            var5.field_g = OpenGlBuffer.a(param0, var5.field_g, param1 + 14, 16);
+            var5.field_D = OpenGlBuffer.a(param0, var5.field_D, 0, 16);
           }
           if (var4) {
             param0.b((byte) 84, 16);
-            var5.field_G = ua.a(param0, var5.field_G, param1 ^ -14, 16);
-            var5.field_d = ua.a(param0, var5.field_d, 0, 16);
-            var5.field_y = ua.a(param0, var5.field_y, 0, 16);
-            var5.field_C = ua.a(param0, var5.field_C, param1 + 14, 16);
-            var5.field_v = ua.a(param0, var5.field_v, 0, 16);
+            var5.field_G = OpenGlBuffer.a(param0, var5.field_G, param1 ^ -14, 16);
+            var5.field_d = OpenGlBuffer.a(param0, var5.field_d, 0, 16);
+            var5.field_y = OpenGlBuffer.a(param0, var5.field_y, 0, 16);
+            var5.field_C = OpenGlBuffer.a(param0, var5.field_C, param1 + 14, 16);
+            var5.field_v = OpenGlBuffer.a(param0, var5.field_v, 0, 16);
           }
           if (tn.a(122, param0)) {
-            var5.field_u = ua.a(param0, var5.field_u, param1 + 14, 16);
+            var5.field_u = OpenGlBuffer.a(param0, var5.field_u, param1 + 14, 16);
           }
           if (tn.a(83, param0)) {
             var5.field_x = ao.a(param0, var5.field_x, true, 16);

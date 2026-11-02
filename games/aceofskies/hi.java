@@ -42,7 +42,7 @@ final class hi extends to {
             return true;
           }
           boolean stackIn_25_0 = (0 != (param1 & 8192));
-          boolean stackIn_27_0 = stackIn_25_0 | HighscoreNameEntry.a(param1, 544, param2) | gh.a(param2, false, param1);
+          boolean stackIn_27_0 = stackIn_25_0 | HighscoreNameEntry.a(param1, 544, param2) | BufferedRandomAccessFile.a(param2, false, param1);
           boolean stackIn_28_1 = ((55 & param2) != 0) ? false : true;
           return stackIn_27_0 & stackIn_28_1;
         }
@@ -56,7 +56,7 @@ final class hi extends to {
           return true;
         }
         boolean stackIn_10_0 = (0 != (param1 & 8192));
-        boolean stackIn_12_0 = stackIn_10_0 | HighscoreNameEntry.a(param1, 544, param2) | gh.a(param2, false, param1);
+        boolean stackIn_12_0 = stackIn_10_0 | HighscoreNameEntry.a(param1, 544, param2) | BufferedRandomAccessFile.a(param2, false, param1);
         boolean stackIn_13_1 = ((55 & param2) != 0) ? false : true;
         return stackIn_12_0 & stackIn_13_1;
     }

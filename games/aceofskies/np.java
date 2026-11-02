@@ -13,7 +13,7 @@ final class np extends hh {
           if (param1 != 4) {
             np.b(49);
           }
-          int stackIn_3_0 = ro.a(param2, true, -127, param0);
+          int stackIn_3_0 = OpenGlIndexBuffer.a(param2, true, -127, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -37,7 +37,7 @@ final class np extends hh {
 
     final static int a(int param0, int param1, byte param2) {
         int var3 = 83 % ((param2 - 18) / 54);
-        return bs.a(-1, ci.gameRandom, -param0 + param1) + param0;
+        return GameKeyHandler.a(-1, ci.gameRandom, -param0 + param1) + param0;
     }
 
     final boolean a(byte param0) {
@@ -120,7 +120,7 @@ final class np extends hh {
         }
     }
 
-    np(wl param0) {
+    np(OpenGlRenderer param0) {
         super(param0);
     }
 

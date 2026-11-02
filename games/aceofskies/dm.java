@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm implements ti {
-    private kr field_f;
+final class dm implements HardwareIndexBuffer {
+    private HardwareDirect3DRenderer field_f;
     private int field_b;
     private jagdx.IDirect3DIndexBuffer field_g;
     private boolean field_d;
-    private la field_e;
+    private BufferElementType field_e;
     private int field_a;
     private boolean field_c;
 
@@ -66,7 +66,7 @@ final class dm implements ti {
           }
           if (this.field_g != null) {
             this.field_g.a(1618);
-            this.field_g = this.field_f.field_Rc.a(this.field_a, var4, this.field_e != la.field_b ? 102 : 101, var3, this.field_g);
+            this.field_g = this.field_f.field_Rc.a(this.field_a, var4, this.field_e != BufferElementType.field_b ? 102 : 101, var3, this.field_g);
             this.field_b = this.field_a;
             if (param0 == -12880) {
               return;
@@ -74,7 +74,7 @@ final class dm implements ti {
             this.field_a = -21;
             return;
           }
-          this.field_g = this.field_f.field_Rc.a(this.field_a, var4, this.field_e != la.field_b ? 102 : 101, var3, this.field_g);
+          this.field_g = this.field_f.field_Rc.a(this.field_a, var4, this.field_e != BufferElementType.field_b ? 102 : 101, var3, this.field_g);
           this.field_b = this.field_a;
         }
         if (param0 == -12880) {
@@ -103,7 +103,7 @@ final class dm implements ti {
         this.a((byte) 35);
     }
 
-    dm(kr param0, la param1, boolean param2) {
+    dm(HardwareDirect3DRenderer param0, BufferElementType param1, boolean param2) {
         this.field_d = false;
         this.field_e = param1;
         this.field_f = param0;

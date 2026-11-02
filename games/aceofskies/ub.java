@@ -11,8 +11,8 @@ final class ub extends IntrusiveNode {
         String stackIn_12_2 = null;
         String stackIn_16_2 = null;
         try {
-          if (null != ml.field_m) {
-            ml.field_m.h((byte) -31);
+          if (null != InstrumentPatch.field_m) {
+            InstrumentPatch.field_m.h((byte) -31);
           }
           vr.field_b = new ce(param0, param1, false, true, true);
           if (param2 >= -82) {
@@ -1064,7 +1064,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "playfreeversion");
                 if (var2 != null) {
-                  mh.field_n = ea.a(0, var2);
+                  OpenGlVolumeTexture.field_n = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "reloadgame");
                 if (var2 != null) {
@@ -1170,7 +1170,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "quittowebsite");
                 if (var2 != null) {
-                  mb.field_s = ea.a(0, var2);
+                  SoftCacheReference.field_s = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "connectionrestored");
                 if (null != var2) {
@@ -1178,7 +1178,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "warning_ifyouquit");
                 if (var2 != null) {
-                  gq.field_d = ea.a(0, var2);
+                  WeightedObjectCache.field_d = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "warning_ifyouquitorleavepage");
                 if (var2 != null) {
@@ -1366,55 +1366,55 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "monthnames,0");
                 if (var2 != null) {
-                  fg.field_f[0] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[0] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "monthnames,1");
                 if (var2 != null) {
-                  fg.field_f[1] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[1] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "monthnames,2");
                 if (var2 != null) {
-                  fg.field_f[2] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[2] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "monthnames,3");
                 if (null != var2) {
-                  fg.field_f[3] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[3] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "monthnames,4");
                 if (null != var2) {
-                  fg.field_f[4] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[4] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "monthnames,5");
                 if (null != var2) {
-                  fg.field_f[5] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[5] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "monthnames,6");
                 if (var2 != null) {
-                  fg.field_f[6] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[6] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "monthnames,7");
                 if (null != var2) {
-                  fg.field_f[7] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[7] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "monthnames,8");
                 if (var2 != null) {
-                  fg.field_f[8] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[8] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "monthnames,9");
                 if (var2 != null) {
-                  fg.field_f[9] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[9] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "monthnames,10");
                 if (var2 != null) {
-                  fg.field_f[10] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[10] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "monthnames,11");
                 if (null != var2) {
-                  fg.field_f[11] = ea.a(0, var2);
+                  CachedArchiveProvider.field_f[11] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_welcome");
                 if (null != var2) {
-                  jc.field_Mc = ea.a(0, var2);
+                  HardwareOpenGlRenderer.field_Mc = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_u13_welcome");
                 if (null != var2) {
@@ -1434,7 +1434,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_password");
                 if (var2 != null) {
-                  vj.field_b = ea.a(0, var2);
+                  OpenGlShaderObject.field_b = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_password_confirm");
                 if (var2 != null) {
@@ -1486,7 +1486,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_select_alternative");
                 if (null != var2) {
-                  jc.field_wc = ea.a(0, var2);
+                  HardwareOpenGlRenderer.field_wc = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_optin_news");
                 if (null != var2) {
@@ -1614,7 +1614,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_username_available");
                 if (var2 != null) {
-                  dk.field_k = ea.a(0, var2);
+                  DiskCacheWorker.field_k = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_alert_namelength");
                 if (var2 != null) {
@@ -1638,7 +1638,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_alert_passrepeated");
                 if (var2 != null) {
-                  mh.field_j = ea.a(0, var2);
+                  OpenGlVolumeTexture.field_j = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_alert_passlength");
                 if (var2 != null) {
@@ -1666,7 +1666,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_alert_email_unavailable");
                 if (null != var2) {
-                  dk.field_i = ea.a(0, var2);
+                  DiskCacheWorker.field_i = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_alert_invaliddate");
                 if (null != var2) {
@@ -1682,7 +1682,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_alert_mismatch");
                 if (null != var2) {
-                  rp.field_c = ea.a(0, var2);
+                  HardwareRenderSprite.field_c = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_passwordvalid");
                 if (null != var2) {
@@ -1690,7 +1690,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_emailvalid");
                 if (null != var2) {
-                  gh.field_o = ea.a(0, var2);
+                  BufferedRandomAccessFile.field_o = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_account_success");
                 if (null != var2) {
@@ -1806,7 +1806,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "waitingfor_music");
                 if (null != var2) {
-                  rq.field_a = ea.a(0, var2);
+                  MouseInputHandler.field_a = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "waitingfor_instruments");
                 if (var2 != null) {
@@ -1850,7 +1850,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "loading_music");
                 if (var2 != null) {
-                  ei.field_c = ea.a(0, var2);
+                  GzipInflater.field_c = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "loading_instruments");
                 if (var2 != null) {
@@ -1886,7 +1886,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "unpacking_soundeffects");
                 if (var2 != null) {
-                  er.field_c = ea.a(0, var2);
+                  SecondaryNodeDeque.field_c = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "unpacking_music");
                 if (null != var2) {
@@ -1922,7 +1922,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "sound_colon");
                 if (var2 != null) {
-                  af.field_a = ea.a(0, var2);
+                  ByteStorage.field_a = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "music_colon");
                 if (null != var2) {
@@ -1930,7 +1930,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "fullscreen");
                 if (var2 != null) {
-                  dk.field_b = ea.a(0, var2);
+                  DiskCacheWorker.field_b = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "screensize");
                 if (null != var2) {
@@ -2094,7 +2094,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "returntogame");
                 if (null != var2) {
-                  ag.field_o = ea.a(0, var2);
+                  ArchiveRequest.field_o = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "endgameresign");
                 if (null != var2) {
@@ -2296,7 +2296,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "achieved");
                 if (var2 != null) {
-                  sk.field_d = ea.a(0, var2);
+                  RenderEffect.field_d = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "orbpoints");
                 if (var2 != null) {
@@ -2528,27 +2528,27 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "quickchat_shortcut_keys,0");
                 if (null != var2) {
-                  af.field_b[0] = ea.a(0, var2);
+                  ByteStorage.field_b[0] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "quickchat_shortcut_keys,1");
                 if (var2 != null) {
-                  af.field_b[1] = ea.a(0, var2);
+                  ByteStorage.field_b[1] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "quickchat_shortcut_keys,2");
                 if (null != var2) {
-                  af.field_b[2] = ea.a(0, var2);
+                  ByteStorage.field_b[2] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "quickchat_shortcut_keys,3");
                 if (var2 != null) {
-                  af.field_b[3] = ea.a(0, var2);
+                  ByteStorage.field_b[3] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "quickchat_shortcut_keys,4");
                 if (var2 != null) {
-                  af.field_b[4] = ea.a(0, var2);
+                  ByteStorage.field_b[4] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "quickchat_shortcut_keys,5");
                 if (null != var2) {
-                  af.field_b[5] = ea.a(0, var2);
+                  ByteStorage.field_b[5] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
@@ -2676,7 +2676,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "fs_accept_beforeaccept");
                 if (var2 != null) {
-                  qg.field_b = ea.a(0, var2);
+                  MouseWheelInput.field_b = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "fs_button_accept");
                 if (var2 != null) {
@@ -2684,7 +2684,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "fs_accept_afteraccept");
                 if (var2 != null) {
-                  dk.field_a = ea.a(0, var2);
+                  DiskCacheWorker.field_a = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "fs_button_cancel");
                 if (null != var2) {
@@ -2700,7 +2700,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "fs_accept_countdown_pl");
                 if (null != var2) {
-                  dh.field_d = ea.a(0, var2);
+                  InstrumentEnvelope.field_d = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "fs_nonmember");
                 if (null != var2) {
@@ -2780,7 +2780,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "hs_friend_tip");
                 if (var2 != null) {
-                  fs.field_f = ea.a(0, var2);
+                  BoundedRandomAccessFile.field_f = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "hs_friend_tip_multi");
                 if (var2 != null) {
@@ -2868,7 +2868,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "DEFAULT_PLAYER_NAME");
                 if (var2 != null) {
-                  vj.field_a = ea.a(0, var2);
+                  OpenGlShaderObject.field_a = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin1");
                 if (null != var2) {
@@ -2996,55 +2996,55 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,0");
                 if (var2 != null) {
-                  vf.field_l[0] = ea.a(0, var2);
+                  BufferedSocket.field_l[0] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,1");
                 if (null != var2) {
-                  vf.field_l[1] = ea.a(0, var2);
+                  BufferedSocket.field_l[1] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,2");
                 if (null != var2) {
-                  vf.field_l[2] = ea.a(0, var2);
+                  BufferedSocket.field_l[2] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,3");
                 if (var2 != null) {
-                  vf.field_l[3] = ea.a(0, var2);
+                  BufferedSocket.field_l[3] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,4");
                 if (var2 != null) {
-                  vf.field_l[4] = ea.a(0, var2);
+                  BufferedSocket.field_l[4] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,5");
                 if (var2 != null) {
-                  vf.field_l[5] = ea.a(0, var2);
+                  BufferedSocket.field_l[5] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,6");
                 if (var2 != null) {
-                  vf.field_l[6] = ea.a(0, var2);
+                  BufferedSocket.field_l[6] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,7");
                 if (null != var2) {
-                  vf.field_l[7] = ea.a(0, var2);
+                  BufferedSocket.field_l[7] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,8");
                 if (var2 != null) {
-                  vf.field_l[8] = ea.a(0, var2);
+                  BufferedSocket.field_l[8] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,9");
                 if (null != var2) {
-                  vf.field_l[9] = ea.a(0, var2);
+                  BufferedSocket.field_l[9] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,10");
                 if (var2 != null) {
-                  vf.field_l[10] = ea.a(0, var2);
+                  BufferedSocket.field_l[10] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,11");
                 if (var2 != null) {
-                  vf.field_l[11] = ea.a(0, var2);
+                  BufferedSocket.field_l[11] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,12");
                 if (null != var2) {
-                  vf.field_l[12] = ea.a(0, var2);
+                  BufferedSocket.field_l[12] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "sentence_separator");
                 if (var2 != null) {

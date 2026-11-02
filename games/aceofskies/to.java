@@ -296,7 +296,7 @@ abstract class to extends ea implements vm {
           if (param0 != 16) {
             to.b(-16, -37, 49);
           }
-          kj stackIn_3_0 = new kj(param2, param1, param4, param3);
+          JavaSoftwareRenderer stackIn_3_0 = new JavaSoftwareRenderer(param2, param1, param4, param3);
           return (GraphicsRenderer) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

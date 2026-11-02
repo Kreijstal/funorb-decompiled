@@ -6,7 +6,7 @@ final class ba extends r implements e {
 
     public final native void w(boolean param0);
 
-    ba(oa param0) {
+    ba(NativeSoftwareRenderer param0) {
     }
 
     protected final void finalize() {

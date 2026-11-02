@@ -11,7 +11,7 @@ final class sn {
         nh.field_c = param0;
         qk.field_g = param1;
         FlightSession.field_e = param3;
-        mb.a(SoftwareRasterizer.framebufferHeight / 2, SoftwareRasterizer.stride / 2, (byte) 74);
+        SoftCacheReference.a(SoftwareRasterizer.framebufferHeight / 2, SoftwareRasterizer.stride / 2, (byte) 74);
         if (param2 != 24097) {
           return;
         }

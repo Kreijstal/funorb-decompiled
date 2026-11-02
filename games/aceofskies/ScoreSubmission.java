@@ -30,21 +30,21 @@ final class ScoreSubmission extends IntrusiveNode {
             is.backgroundSprites = new RenderSprite[oo.backgroundSpriteData.length];
             sd.cloudSprites = new RenderSprite[na.cloudSpriteData.length];
             es.smokeSprites = new RenderSprite[tq.smokeSpriteData.length];
-            bl.explosionSprites = new RenderSprite[ud.explosionSpriteData.length];
+            SectorCacheStore.explosionSprites = new RenderSprite[ud.explosionSpriteData.length];
             ac.keySprites = new RenderSprite[qa.keySpriteData.length];
             jm.levelRingSprites = new RenderSprite[hq.levelRingSpriteData.length];
-            aa.achievementSprites = new RenderSprite[la.achievementSpriteData.length];
-            rs.medalSprites = new RenderSprite[af.medalSpriteData.length];
-            bs.upgradeSprites = new RenderSprite[qq.upgradeSpriteData.length];
+            aa.achievementSprites = new RenderSprite[BufferElementType.achievementSpriteData.length];
+            rs.medalSprites = new RenderSprite[ByteStorage.medalSpriteData.length];
+            GameKeyHandler.upgradeSprites = new RenderSprite[qq.upgradeSpriteData.length];
             HighscoreQuery.powerBulbSprites = new RenderSprite[tt.powerBulbSpriteData.length];
-            ua.counterPanelSprites = new RenderSprite[eb.counterPanelSpriteData.length];
+            OpenGlBuffer.counterPanelSprites = new RenderSprite[eb.counterPanelSpriteData.length];
             in.scoreDigitSprites = new RenderSprite[kb.scoreDigitSpriteData.length];
             ii.gaugeSprites = new RenderSprite[ArchiveIndex.gaugeSpriteData.length][];
             Pickup.powerchuteSprites = new RenderSprite[ol.powerchuteSpriteData.length];
             po.powerIconSprites = new RenderSprite[nu.powerIconSpriteData.length];
             co.scorchSprites = new RenderSprite[gn.scorchSpriteData.length];
             ec.radarSprites = new RenderSprite[FlightBody.radarSpriteData.length];
-            mb.brassButtonSprites = new RenderSprite[vl.brassButtonSpriteData.length];
+            SoftCacheReference.brassButtonSprites = new RenderSprite[vl.brassButtonSpriteData.length];
             CipherPacketBuffer.brassSliderSprites = new RenderSprite[qk.brassSliderSpriteData.length];
             ko.brassFrameSprites = new RenderSprite[gu.brassFrameSpriteData.length];
             for (int var2 = 0; ii.gaugeSprites.length > var2; var2++) {
@@ -71,7 +71,7 @@ final class ScoreSubmission extends IntrusiveNode {
             es.smokeSprites[var2Lifetime4] = var6.createSprite(tq.smokeSpriteData[var2Lifetime4], false);
           }
           for (int var2Lifetime5 = 0; ud.explosionSpriteData.length > var2Lifetime5; var2Lifetime5++) {
-            bl.explosionSprites[var2Lifetime5] = var6.createSprite(ud.explosionSpriteData[var2Lifetime5], false);
+            SectorCacheStore.explosionSprites[var2Lifetime5] = var6.createSprite(ud.explosionSpriteData[var2Lifetime5], false);
           }
           for (int var2Lifetime6 = 0; ol.powerchuteSpriteData.length > var2Lifetime6; var2Lifetime6++) {
             Pickup.powerchuteSprites[var2Lifetime6] = var6.createSprite(ol.powerchuteSpriteData[var2Lifetime6], false);
@@ -94,7 +94,7 @@ final class ScoreSubmission extends IntrusiveNode {
             var2Lifetime10++;
           }
           for (int var2Lifetime11 = 0; var2Lifetime11 < vl.brassButtonSpriteData.length; var2Lifetime11++) {
-            mb.brassButtonSprites[var2Lifetime11] = var6.createSprite(vl.brassButtonSpriteData[var2Lifetime11], false);
+            SoftCacheReference.brassButtonSprites[var2Lifetime11] = var6.createSprite(vl.brassButtonSpriteData[var2Lifetime11], false);
           }
           for (int var2Lifetime12 = 0; qk.brassSliderSpriteData.length > var2Lifetime12; var2Lifetime12++) {
             CipherPacketBuffer.brassSliderSprites[var2Lifetime12] = var6.createSprite(qk.brassSliderSpriteData[var2Lifetime12], false);
@@ -112,7 +112,7 @@ final class ScoreSubmission extends IntrusiveNode {
             }
           }
           for (int var2Lifetime15 = 0; qq.upgradeSpriteData.length > var2Lifetime15; var2Lifetime15++) {
-            bs.upgradeSprites[var2Lifetime15] = var6.createSprite(qq.upgradeSpriteData[var2Lifetime15], false);
+            GameKeyHandler.upgradeSprites[var2Lifetime15] = var6.createSprite(qq.upgradeSpriteData[var2Lifetime15], false);
           }
           for (int var2Lifetime16 = 0; var2Lifetime16 < tt.powerBulbSpriteData.length; var2Lifetime16++) {
             HighscoreQuery.powerBulbSprites[var2Lifetime16] = var6.createSprite(tt.powerBulbSpriteData[var2Lifetime16], false);
@@ -121,26 +121,26 @@ final class ScoreSubmission extends IntrusiveNode {
             jm.levelRingSprites[var2Lifetime17] = var6.createSprite(hq.levelRingSpriteData[var2Lifetime17], false);
           }
           for (int var2Lifetime18 = 0; var2Lifetime18 < eb.counterPanelSpriteData.length; var2Lifetime18++) {
-            ua.counterPanelSprites[var2Lifetime18] = var6.createSprite(eb.counterPanelSpriteData[var2Lifetime18], false);
+            OpenGlBuffer.counterPanelSprites[var2Lifetime18] = var6.createSprite(eb.counterPanelSpriteData[var2Lifetime18], false);
           }
           for (int var2Lifetime19 = 0; var2Lifetime19 < kb.scoreDigitSpriteData.length; var2Lifetime19++) {
             in.scoreDigitSprites[var2Lifetime19] = var6.createSprite(kb.scoreDigitSpriteData[var2Lifetime19], false);
           }
-          mp.titleImage = var6.createSprite(fs.titleImageData, false);
+          mp.titleImage = var6.createSprite(BoundedRandomAccessFile.titleImageData, false);
           dc.bulletSprite = var6.createSprite(RendererManager.bulletSpriteData, false);
           se.bigGameFont = var6.a(kn.bigFontMetrics, q.bigFontSpriteData, true);
-          kn.titleFont = var6.a(dp.titleFontMetrics, nc.titleFontSpriteData, true);
+          kn.titleFont = var6.a(ImageProducerRasterBuffer.titleFontMetrics, nc.titleFontSpriteData, true);
           PacketBuffer.gameFont = var6.a(hi.gameFontMetrics, CipherPacketBuffer.fontSpriteData, true);
-          for (int var2Lifetime20 = 0; la.achievementSpriteData.length > var2Lifetime20; var2Lifetime20++) {
-            aa.achievementSprites[var2Lifetime20] = var6.createSprite(la.achievementSpriteData[var2Lifetime20], false);
+          for (int var2Lifetime20 = 0; BufferElementType.achievementSpriteData.length > var2Lifetime20; var2Lifetime20++) {
+            aa.achievementSprites[var2Lifetime20] = var6.createSprite(BufferElementType.achievementSpriteData[var2Lifetime20], false);
           }
-          for (int var2Lifetime21 = 0; var2Lifetime21 < af.medalSpriteData.length; var2Lifetime21++) {
+          for (int var2Lifetime21 = 0; var2Lifetime21 < ByteStorage.medalSpriteData.length; var2Lifetime21++) {
             RenderSprite[] stackIn_78_0 = rs.medalSprites;
-            stackIn_78_0[var2Lifetime21] = var6.createSprite(af.medalSpriteData[var2Lifetime21], false);
+            stackIn_78_0[var2Lifetime21] = var6.createSprite(ByteStorage.medalSpriteData[var2Lifetime21], false);
           }
           lg.coinSprite = var6.createSprite(vl.coinSpriteData, false);
           ut.lockedSprite = var6.createSprite(es.lockedSpriteData, false);
-          dh.unachievedSprite = var6.createSprite(HighscoreQuery.unachievedSpriteData, false);
+          InstrumentEnvelope.unachievedSprite = var6.createSprite(HighscoreQuery.unachievedSpriteData, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

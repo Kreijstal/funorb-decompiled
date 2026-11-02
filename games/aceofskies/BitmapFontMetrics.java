@@ -11,7 +11,7 @@ final class BitmapFontMetrics {
     static boolean field_f;
     static sn[] field_c;
     int maxDescent;
-    static gh field_g;
+    static BufferedRandomAccessFile field_g;
 
     final int measureCharacterAdvance(byte obfuscationGuard, int glyphIndex) {
         try {

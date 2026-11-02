@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pn implements Runnable {
-    rk field_f;
+    SystemTaskService field_f;
     static int menuInitialRepeatDelay;
     volatile boolean field_e;
     volatile boolean field_a;
     static long[] field_b;
-    volatile tk[] field_c;
+    volatile AudioOutput[] field_c;
 
     final static byte[] a(byte[] param0, int param1) {
         String stackIn_28_2 = null;
@@ -76,7 +76,7 @@ final class pn implements Runnable {
         try {
           while (!this.field_a) {
             for (int var1_int = 0; var1_int < 2; var1_int++) {
-              tk var2 = this.field_c[var1_int];
+              AudioOutput var2 = this.field_c[var1_int];
               if (var2 != null) {
                 var2.h();
               }
@@ -136,7 +136,7 @@ final class pn implements Runnable {
     }
 
     pn() {
-        this.field_c = new tk[2];
+        this.field_c = new AudioOutput[2];
         this.field_a = false;
         this.field_e = false;
     }

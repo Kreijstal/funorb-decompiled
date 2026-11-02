@@ -22,7 +22,7 @@ final class wc {
               java.applet.Applet var5 = (java.applet.Applet) null;
               wc.a((String) null, (java.applet.Applet) null, 36, true);
             }
-            if (rk.field_f.startsWith("win") &&
+            if (SystemTaskService.field_f.startsWith("win") &&
               km.a(param0, param2 - 14300)) {
               return;
             }

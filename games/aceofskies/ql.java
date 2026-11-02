@@ -48,7 +48,7 @@ final class ql extends ud {
               var16 = 0;
             }
             int var18 = 255 & this.field_i[var16 & 255];
-            int var14 = ua.field_h[var11];
+            int var14 = OpenGlBuffer.field_h[var11];
             int var17 = this.field_i[var15 & 255] & 255;
             if (!this.field_n) {
               for (int var10 = 0; ms.field_d > var10; var10++) {
@@ -81,7 +81,7 @@ final class ql extends ud {
             }
             int var17Lifetime1 = this.field_i[var15Lifetime1 & 255] & 255;
             int var18Lifetime1 = 255 & this.field_i[255 & var16Lifetime1];
-            int var14Lifetime1 = ua.field_h[var11Lifetime1];
+            int var14Lifetime1 = OpenGlBuffer.field_h[var11Lifetime1];
             for (int var10Lifetime1 = 0; var10Lifetime1 < ms.field_d; var10Lifetime1++) {
               int var4_intLifetime1 = this.field_q * NetworkGameClient.field_v[var10Lifetime1];
               int var6Lifetime1 = this.a(false, var4_intLifetime1 * var8Lifetime1 >> 12, var17Lifetime1, var18Lifetime1, var11Lifetime1, var14Lifetime1, var12Lifetime1);
@@ -104,7 +104,7 @@ final class ql extends ud {
               var11Lifetime2 = var11Lifetime2 & 4095;
               int var17Lifetime2 = this.field_i[255 & var15Lifetime2] & 255;
               int var18Lifetime2 = this.field_i[var16Lifetime2 & 255] & 255;
-              int var14Lifetime2 = ua.field_h[var11Lifetime2];
+              int var14Lifetime2 = OpenGlBuffer.field_h[var11Lifetime2];
               if (this.field_n &&
                 var7 == -1 + this.field_s) {
                 for (var10Lifetime2 = 0; var10Lifetime2 < ms.field_d; var10Lifetime2++) {
@@ -141,7 +141,7 @@ final class ql extends ud {
 
     final void d(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
-        this.field_i = ro.b(-3992, this.field_m);
+        this.field_i = OpenGlIndexBuffer.b(-3992, this.field_m);
         this.a(98);
         if (param0 != 1) {
           this.field_i = (byte[]) null;
@@ -212,7 +212,7 @@ final class ql extends ud {
         int var11 = param1 - 4096;
         var12 = var12 & 255;
         int var10 = -4096 + param4;
-        int var15 = ua.field_h[param1];
+        int var15 = OpenGlBuffer.field_h[param1];
         int var14 = this.field_i[var13 + param2] & 3;
         if (var14 <= 1) {
           if (var14 != 0) {

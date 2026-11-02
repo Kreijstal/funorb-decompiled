@@ -5,7 +5,7 @@ abstract class RendererBitmapFont {
     private GraphicsRenderer renderer;
     static int[] field_b;
     private BitmapFontMetrics metrics;
-    static tk field_a;
+    static AudioOutput field_a;
 
     final int drawParagraph(int maskY, int left, int textColor, boolean obfuscationGuard, int shadowColor, int horizontalAlignment, int top, int lineSpacing, int maskX, RenderSprite[] inlineImages, aa mask, int verticalAlignment, int[] inlineImageBaselineOffsets, int width, int height, String text) {
         String stackIn_7_2 = null;
@@ -57,7 +57,7 @@ abstract class RendererBitmapFont {
         }
         if (null == oi.field_d &&
           param0 != -1) {
-          stackIn_6_0 = lc.a(true, false, true, (byte) -65, 1, param0);
+          stackIn_6_0 = IterableNodeHashTable.a(true, false, true, (byte) -65, 1, param0);
         } else {
           stackIn_6_0 = oi.field_d;
         }
@@ -72,9 +72,9 @@ abstract class RendererBitmapFont {
           try {
             if (tag.startsWith("col=")) {
               CharSequence var6 = (CharSequence) ((Object) tag.substring(4));
-              qg.rendererCurrentTextColor = -16777216 & qg.rendererCurrentTextColor | 16777215 & np.a(var6, 4, 16);
+              MouseWheelInput.rendererCurrentTextColor = -16777216 & MouseWheelInput.rendererCurrentTextColor | 16777215 & np.a(var6, 4, 16);
             } else if (tag.equals("/col")) {
-              qg.rendererCurrentTextColor = tf.rendererDefaultTextColor & 16777215 | qg.rendererCurrentTextColor & -16777216;
+              MouseWheelInput.rendererCurrentTextColor = tf.rendererDefaultTextColor & 16777215 | MouseWheelInput.rendererCurrentTextColor & -16777216;
             }
             if (obfuscationGuard != -16777216) {
               int[] var5 = (int[]) null;
@@ -82,30 +82,30 @@ abstract class RendererBitmapFont {
             }
             if (tag.startsWith("argb=")) {
               CharSequence var10 = (CharSequence) ((Object) tag.substring(5));
-              qg.rendererCurrentTextColor = np.a(var10, 4, 16);
+              MouseWheelInput.rendererCurrentTextColor = np.a(var10, 4, 16);
             } else if (tag.equals("/argb")) {
-              qg.rendererCurrentTextColor = tf.rendererDefaultTextColor;
+              MouseWheelInput.rendererCurrentTextColor = tf.rendererDefaultTextColor;
             } else if (tag.startsWith("str=")) {
               CharSequence var9 = (CharSequence) ((Object) tag.substring(4));
-              rs.rendererStrikethroughColor = qg.rendererCurrentTextColor & -16777216 | np.a(var9, 4, 16);
+              rs.rendererStrikethroughColor = MouseWheelInput.rendererCurrentTextColor & -16777216 | np.a(var9, 4, 16);
             } else if (tag.equals("str")) {
-              rs.rendererStrikethroughColor = -16777216 & qg.rendererCurrentTextColor | 8388608;
+              rs.rendererStrikethroughColor = -16777216 & MouseWheelInput.rendererCurrentTextColor | 8388608;
             } else if (tag.equals("/str")) {
               rs.rendererStrikethroughColor = -1;
             } else if (tag.startsWith("u=")) {
               CharSequence var8 = (CharSequence) ((Object) tag.substring(2));
-              PacketBuffer.rendererUnderlineColor = qg.rendererCurrentTextColor & -16777216 | np.a(var8, obfuscationGuard ^ -16777212, 16);
+              PacketBuffer.rendererUnderlineColor = MouseWheelInput.rendererCurrentTextColor & -16777216 | np.a(var8, obfuscationGuard ^ -16777212, 16);
             } else if (tag.equals("u")) {
-              PacketBuffer.rendererUnderlineColor = -16777216 & qg.rendererCurrentTextColor;
+              PacketBuffer.rendererUnderlineColor = -16777216 & MouseWheelInput.rendererCurrentTextColor;
             } else if (tag.equals("/u")) {
               PacketBuffer.rendererUnderlineColor = -1;
             } else if (tag.equalsIgnoreCase("shad=-1")) {
               es.rendererCurrentShadowColor = 0;
             } else if (tag.startsWith("shad=")) {
               CharSequence var7 = (CharSequence) ((Object) tag.substring(5));
-              es.rendererCurrentShadowColor = qg.rendererCurrentTextColor & -16777216 | np.a(var7, 4, 16);
+              es.rendererCurrentShadowColor = MouseWheelInput.rendererCurrentTextColor & -16777216 | np.a(var7, 4, 16);
             } else if (tag.equals("shad")) {
-              es.rendererCurrentShadowColor = qg.rendererCurrentTextColor & -16777216;
+              es.rendererCurrentShadowColor = MouseWheelInput.rendererCurrentTextColor & -16777216;
             } else if (tag.equals("/shad")) {
               es.rendererCurrentShadowColor = em.rendererDefaultShadowColor;
             } else if (tag.equals("br")) {
@@ -141,8 +141,8 @@ abstract class RendererBitmapFont {
           }
         }
         if (param2) {
-          gq.field_e = gq.field_e - 1;
-          if (gq.field_e == 0) {
+          WeightedObjectCache.field_e = WeightedObjectCache.field_e - 1;
+          if (WeightedObjectCache.field_e == 0) {
             sa.field_h = null;
           }
         }
@@ -224,7 +224,7 @@ abstract class RendererBitmapFont {
             } else if (var22Lifetime1 != var19 - 1) {
               this.prepareJustification(width, (byte) 104, vi.field_p[var22Lifetime1]);
               this.drawStyledText(maskX, inlineImages, left, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
-              tm.rendererSpaceExpansionQ8 = 0;
+              OpenGlRenderSprite.rendererSpaceExpansionQ8 = 0;
             } else {
               this.drawStyledText(maskX, inlineImages, left, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
             }
@@ -350,8 +350,8 @@ abstract class RendererBitmapFont {
                         stackIn_26_0 = var17.c();
                       }
                       int var18 = stackIn_26_0;
-                      if ((qg.rendererCurrentTextColor & -16777216) != -16777216) {
-                        var17.a(penX, baselineY + this.metrics.lineAdvance - var18, 0, qg.rendererCurrentTextColor & -16777216 | 16777215, 1);
+                      if ((MouseWheelInput.rendererCurrentTextColor & -16777216) != -16777216) {
+                        var17.a(penX, baselineY + this.metrics.lineAdvance - var18, 0, MouseWheelInput.rendererCurrentTextColor & -16777216 | 16777215, 1);
                       } else {
                         var17.a(penX, -var18 + this.metrics.lineAdvance + baselineY, 1, 0, 1);
                       }
@@ -373,8 +373,8 @@ abstract class RendererBitmapFont {
                   penX = penX + this.metrics.getPairKerning(0, (char) var14, var11);
                 }
                 if (var14 == 32) {
-                  if (tm.rendererSpaceExpansionQ8 > 0) {
-                    ed.rendererJustificationRemainderQ8 = ed.rendererJustificationRemainderQ8 + tm.rendererSpaceExpansionQ8;
+                  if (OpenGlRenderSprite.rendererSpaceExpansionQ8 > 0) {
+                    ed.rendererJustificationRemainderQ8 = ed.rendererJustificationRemainderQ8 + OpenGlRenderSprite.rendererSpaceExpansionQ8;
                     penX = penX + (ed.rendererJustificationRemainderQ8 >> 8);
                     ed.rendererJustificationRemainderQ8 = ed.rendererJustificationRemainderQ8 & 255;
                   }
@@ -382,12 +382,12 @@ abstract class RendererBitmapFont {
                   if (0 != (-16777216 & es.rendererCurrentShadowColor)) {
                     this.drawGlyph((char) var14, 1 + penX, baselineY + 1, es.rendererCurrentShadowColor, true);
                   }
-                  this.drawGlyph((char) var14, penX, baselineY, qg.rendererCurrentTextColor, false);
+                  this.drawGlyph((char) var14, penX, baselineY, MouseWheelInput.rendererCurrentTextColor, false);
                 } else {
                   if (0 != (es.rendererCurrentShadowColor & -16777216)) {
                     this.drawGlyphWithMask((char) var14, 1 + penX, baselineY + 1, es.rendererCurrentShadowColor, true, mask, maskX, maskY);
                   }
-                  this.drawGlyphWithMask((char) var14, penX, baselineY, qg.rendererCurrentTextColor, false, mask, maskX, maskY);
+                  this.drawGlyphWithMask((char) var14, penX, baselineY, MouseWheelInput.rendererCurrentTextColor, false, mask, maskX, maskY);
                 }
                 int var15 = this.metrics.measureCharacterAdvance((byte) 109, var14);
                 if (rs.rendererStrikethroughColor != -1) {
@@ -457,7 +457,7 @@ abstract class RendererBitmapFont {
             }
           }
           if (var4_int > 0) {
-            tm.rendererSpaceExpansionQ8 = (targetWidth - this.metrics.measureTextWidth((byte) 94, text) << 8) / var4_int;
+            OpenGlRenderSprite.rendererSpaceExpansionQ8 = (targetWidth - this.metrics.measureTextWidth((byte) 94, text) << 8) / var4_int;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -494,8 +494,8 @@ abstract class RendererBitmapFont {
     private final void resetTextStyle(int shadowColor, int underlineColor, int textColor) {
         rs.rendererStrikethroughColor = -1;
         tf.rendererDefaultTextColor = textColor;
-        qg.rendererCurrentTextColor = textColor;
-        tm.rendererSpaceExpansionQ8 = 0;
+        MouseWheelInput.rendererCurrentTextColor = textColor;
+        OpenGlRenderSprite.rendererSpaceExpansionQ8 = 0;
         PacketBuffer.rendererUnderlineColor = underlineColor;
         ed.rendererJustificationRemainderQ8 = 0;
         if (shadowColor == -1) {

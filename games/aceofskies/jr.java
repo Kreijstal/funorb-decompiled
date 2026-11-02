@@ -24,7 +24,7 @@ final class jr extends DualLinkNode {
         if (param0 != 32) {
           jr.a((byte) 88);
         }
-        boolean stackIn_6_0 = (SoundCache.field_d >= 10) && (13 <= bl.field_c);
+        boolean stackIn_6_0 = (SoundCache.field_d >= 10) && (13 <= SectorCacheStore.field_c);
         return stackIn_6_0;
     }
 

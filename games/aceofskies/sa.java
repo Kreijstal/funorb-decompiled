@@ -174,8 +174,8 @@ final class sa {
           var6.field_e = 0;
           vi var7 = new vi(var4, true);
           var7.field_e = 0;
-          var7.a(-117, bs.a(8947848, false));
-          var7.a(-105, 1).a(bs.a(11184810, false), false).a(2236962, -2);
+          var7.a(-117, GameKeyHandler.a(8947848, false));
+          var7.a(-105, 1).a(GameKeyHandler.a(11184810, false), false).a(2236962, -2);
           this.field_g = (ir) ((Object) new lj(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           de discarded$0 = new de(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           us discarded$1 = new us(param0, 16777215, -1, 125269879, 4473924, param1, 268435455);
@@ -275,7 +275,7 @@ final class sa {
         if (jq.field_fb == ht.field_k) {
           return nh.field_b;
         }
-        return dp.field_i;
+        return ImageProducerRasterBuffer.field_i;
     }
 
     public sa() {

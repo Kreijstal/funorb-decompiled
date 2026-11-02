@@ -42,7 +42,7 @@ final class wu {
     short[] field_G;
     static int[] field_c;
     int field_s;
-    static en field_l;
+    static SystemTask field_l;
     byte[] field_x;
 
     final void a(int param0, int param1, int param2, int param3, boolean param4) {
@@ -119,14 +119,14 @@ final class wu {
         }
     }
 
-    final static void a(int param0, boolean param1, java.awt.Component param2, rk param3, int param4, jt param5) {
+    final static void a(int param0, boolean param1, java.awt.Component param2, SystemTaskService param3, int param4, jt param5) {
         String stackIn_7_2 = null;
         String stackIn_11_2 = null;
         String stackIn_15_2 = null;
         try {
           wj.a(41, param3, param2, param0, param1, param5, param0, 1024);
           if (param4 != 32767) {
-            wu.a(47, false, (java.awt.Component) null, (rk) null, 11, (jt) null);
+            wu.a(47, false, (java.awt.Component) null, (SystemTaskService) null, 11, (jt) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -252,7 +252,7 @@ final class wu {
           }
           byte[] var2Lifetime9 = im.a(63, "myhs");
           if (var2Lifetime9 != null) {
-            wl.field_zc = ea.a(0, var2Lifetime9);
+            OpenGlRenderer.field_zc = ea.a(0, var2Lifetime9);
           }
           byte[] var2Lifetime10 = im.a(37, "allhs");
           if (var2Lifetime10 != null) {
@@ -260,7 +260,7 @@ final class wu {
           }
           byte[] var2Lifetime11 = im.a(91, "thisishidden");
           if (var2Lifetime11 != null) {
-            pe.field_c = ea.a(0, var2Lifetime11);
+            NodeHashTableIterator.field_c = ea.a(0, var2Lifetime11);
           }
           byte[] var2Lifetime12 = im.a(57, "orbcoin");
           if (null != var2Lifetime12) {
@@ -280,7 +280,7 @@ final class wu {
           }
           byte[] var2Lifetime16 = im.a(37, "achieve");
           if (var2Lifetime16 != null) {
-            ro.field_p = ea.a(0, var2Lifetime16);
+            OpenGlIndexBuffer.field_p = ea.a(0, var2Lifetime16);
           }
           byte[] var2Lifetime17 = im.a(85, "thousandseperator");
           if (var2Lifetime17 != null) {
@@ -312,87 +312,87 @@ final class wu {
           }
           byte[] var2Lifetime24 = im.a(89, "wave_announce,0");
           if (var2Lifetime24 != null) {
-            oe.classicWaveMessages[0] = ea.a(0, var2Lifetime24);
+            CanvasImageBuffer.classicWaveMessages[0] = ea.a(0, var2Lifetime24);
           }
           byte[] var2Lifetime25 = im.a(110, "wave_announce,1");
           if (var2Lifetime25 != null) {
-            oe.classicWaveMessages[1] = ea.a(0, var2Lifetime25);
+            CanvasImageBuffer.classicWaveMessages[1] = ea.a(0, var2Lifetime25);
           }
           byte[] var2Lifetime26 = im.a(94, "wave_announce,2");
           if (null != var2Lifetime26) {
-            oe.classicWaveMessages[2] = ea.a(0, var2Lifetime26);
+            CanvasImageBuffer.classicWaveMessages[2] = ea.a(0, var2Lifetime26);
           }
           byte[] var2Lifetime27 = im.a(75, "wave_announce,3");
           if (null != var2Lifetime27) {
-            oe.classicWaveMessages[3] = ea.a(0, var2Lifetime27);
+            CanvasImageBuffer.classicWaveMessages[3] = ea.a(0, var2Lifetime27);
           }
           byte[] var2Lifetime28 = im.a(100, "wave_announce,4");
           if (var2Lifetime28 != null) {
-            oe.classicWaveMessages[4] = ea.a(0, var2Lifetime28);
+            CanvasImageBuffer.classicWaveMessages[4] = ea.a(0, var2Lifetime28);
           }
           byte[] var2Lifetime29 = im.a(75, "wave_announce,5");
           if (null != var2Lifetime29) {
-            oe.classicWaveMessages[5] = ea.a(0, var2Lifetime29);
+            CanvasImageBuffer.classicWaveMessages[5] = ea.a(0, var2Lifetime29);
           }
           byte[] var2Lifetime30 = im.a(87, "wave_announce,6");
           if (null != var2Lifetime30) {
-            oe.classicWaveMessages[6] = ea.a(0, var2Lifetime30);
+            CanvasImageBuffer.classicWaveMessages[6] = ea.a(0, var2Lifetime30);
           }
           byte[] var2Lifetime31 = im.a(89, "wave_announce,7");
           if (null != var2Lifetime31) {
-            oe.classicWaveMessages[7] = ea.a(0, var2Lifetime31);
+            CanvasImageBuffer.classicWaveMessages[7] = ea.a(0, var2Lifetime31);
           }
           byte[] var2Lifetime32 = im.a(118, "wave_announce,8");
           if (null != var2Lifetime32) {
-            oe.classicWaveMessages[8] = ea.a(0, var2Lifetime32);
+            CanvasImageBuffer.classicWaveMessages[8] = ea.a(0, var2Lifetime32);
           }
           byte[] var2Lifetime33 = im.a(108, "wave_announce,9");
           if (var2Lifetime33 != null) {
-            oe.classicWaveMessages[9] = ea.a(0, var2Lifetime33);
+            CanvasImageBuffer.classicWaveMessages[9] = ea.a(0, var2Lifetime33);
           }
           byte[] var2Lifetime34 = im.a(127, "wave_announce,10");
           if (var2Lifetime34 != null) {
-            oe.classicWaveMessages[10] = ea.a(0, var2Lifetime34);
+            CanvasImageBuffer.classicWaveMessages[10] = ea.a(0, var2Lifetime34);
           }
           byte[] var2Lifetime35 = im.a(77, "wave_announce,11");
           if (var2Lifetime35 != null) {
-            oe.classicWaveMessages[11] = ea.a(0, var2Lifetime35);
+            CanvasImageBuffer.classicWaveMessages[11] = ea.a(0, var2Lifetime35);
           }
           byte[] var2Lifetime36 = im.a(44, "wave_announce,12");
           if (null != var2Lifetime36) {
-            oe.classicWaveMessages[12] = ea.a(0, var2Lifetime36);
+            CanvasImageBuffer.classicWaveMessages[12] = ea.a(0, var2Lifetime36);
           }
           byte[] var2Lifetime37 = im.a(101, "wave_announce,13");
           if (null != var2Lifetime37) {
-            oe.classicWaveMessages[13] = ea.a(0, var2Lifetime37);
+            CanvasImageBuffer.classicWaveMessages[13] = ea.a(0, var2Lifetime37);
           }
           byte[] var2Lifetime38 = im.a(70, "wave_announce,14");
           if (var2Lifetime38 != null) {
-            oe.classicWaveMessages[14] = ea.a(0, var2Lifetime38);
+            CanvasImageBuffer.classicWaveMessages[14] = ea.a(0, var2Lifetime38);
           }
           byte[] var2Lifetime39 = im.a(80, "wave_announce,15");
           if (var2Lifetime39 != null) {
-            oe.classicWaveMessages[15] = ea.a(0, var2Lifetime39);
+            CanvasImageBuffer.classicWaveMessages[15] = ea.a(0, var2Lifetime39);
           }
           byte[] var2Lifetime40 = im.a(63, "wave_announce,16");
           if (var2Lifetime40 != null) {
-            oe.classicWaveMessages[16] = ea.a(0, var2Lifetime40);
+            CanvasImageBuffer.classicWaveMessages[16] = ea.a(0, var2Lifetime40);
           }
           byte[] var2Lifetime41 = im.a(105, "wave_announce,17");
           if (var2Lifetime41 != null) {
-            oe.classicWaveMessages[17] = ea.a(0, var2Lifetime41);
+            CanvasImageBuffer.classicWaveMessages[17] = ea.a(0, var2Lifetime41);
           }
           byte[] var2Lifetime42 = im.a(117, "wave_announce,18");
           if (null != var2Lifetime42) {
-            oe.classicWaveMessages[18] = ea.a(0, var2Lifetime42);
+            CanvasImageBuffer.classicWaveMessages[18] = ea.a(0, var2Lifetime42);
           }
           byte[] var2Lifetime43 = im.a(59, "wave_announce,19");
           if (var2Lifetime43 != null) {
-            oe.classicWaveMessages[19] = ea.a(0, var2Lifetime43);
+            CanvasImageBuffer.classicWaveMessages[19] = ea.a(0, var2Lifetime43);
           }
           byte[] var2Lifetime44 = im.a(44, "wave_announce,20");
           if (null != var2Lifetime44) {
-            oe.classicWaveMessages[20] = ea.a(0, var2Lifetime44);
+            CanvasImageBuffer.classicWaveMessages[20] = ea.a(0, var2Lifetime44);
           }
           byte[] var2Lifetime45 = im.a(112, "powerup_messages,0");
           if (var2Lifetime45 != null) {

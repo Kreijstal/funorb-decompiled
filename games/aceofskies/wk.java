@@ -47,7 +47,7 @@ final class wk extends hh {
         String stackIn_20_2 = null;
         String stackIn_23_2 = null;
         try {
-          if (ht.field_k != dk.field_h) {
+          if (ht.field_k != DiskCacheWorker.field_h) {
             return false;
           }
           jq var8 = new jq(vn.field_f, param4);
@@ -60,7 +60,7 @@ final class wk extends hh {
           SpriteState.field_s = param6;
           ld.field_c = null;
           rt.field_e = param3;
-          fs.field_g = param0;
+          BoundedRandomAccessFile.field_g = param0;
           ht.field_k = jq.field_fb;
           nh.field_b = param2;
           return true;
@@ -96,7 +96,7 @@ final class wk extends hh {
         }
     }
 
-    wk(wl param0) {
+    wk(OpenGlRenderer param0) {
         super(param0);
         String stackIn_36_2 = null;
         int var6 = 0;

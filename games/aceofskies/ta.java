@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta extends sk {
+final class ta extends RenderEffect {
     static boolean field_h;
     private boolean field_g;
     static String field_f;
 
-    final void a(int param0, int param1, jj param2) {
+    final void a(int param0, int param1, HardwareTexture param2) {
         this.field_b.a(param2, -9135);
         if (param1 < 66) {
           return;
@@ -18,7 +18,7 @@ final class ta extends sk {
         }
     }
 
-    ta(bf param0) {
+    ta(HardwareRenderer param0) {
         super(param0);
         this.field_g = false;
     }
@@ -27,7 +27,7 @@ final class ta extends sk {
         if (param1 <= 2) {
           return;
         }
-        go var3 = this.field_b.O(29190);
+        HardwareCubeTexture var3 = this.field_b.O(29190);
         if (var3 == null) {
           this.field_b.a(ac.field_b, 0, 0);
           return;
@@ -41,7 +41,7 @@ final class ta extends sk {
         this.field_b.a(ResourceArchive.field_g, false);
         this.field_b.a(1, (byte) 120);
         this.field_b.a(du.field_l, true, bd.field_C);
-        this.field_b.a(true, 2, true, un.field_i, false);
+        this.field_b.a(true, 2, true, ArchiveNetworkClient.field_i, false);
         this.field_b.a(ac.field_b, 0, 0);
         ec var4 = this.field_b.d(12343);
         var4.a(this.field_b.f(false), (byte) -121);
@@ -77,8 +77,8 @@ final class ta extends sk {
         if (!param0) {
           return;
         }
-        jj var4 = (jj) null;
-        this.a(-60, 36, (jj) null);
+        HardwareTexture var4 = (HardwareTexture) null;
+        this.a(-60, 36, (HardwareTexture) null);
     }
 
     final void a(boolean param0) {
@@ -88,10 +88,10 @@ final class ta extends sk {
           this.field_b.a(1, (byte) 78);
           this.field_b.a(b.field_b, false);
           this.field_b.a(ru.field_a, true, ru.field_a);
-          this.field_b.a((byte) 124, 2, bs.field_a);
+          this.field_b.a((byte) 124, 2, GameKeyHandler.field_a);
           this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
           this.field_b.f(-21041);
-          this.field_b.a((jj) null, -9135);
+          this.field_b.a((HardwareTexture) null, -9135);
           this.field_b.a(0, (byte) 83);
           this.field_g = false;
         }

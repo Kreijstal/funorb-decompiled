@@ -12,7 +12,7 @@ final class pu {
           if (param0 != 21) {
             field_a = -115;
           }
-          if (!(bl.field_c >= 10)) {
+          if (!(SectorCacheStore.field_c >= 10)) {
             boolean var3_int = false;
             if (AceOfSkies.field_J) {
               AceOfSkies.field_J = false;
@@ -24,7 +24,7 @@ final class pu {
             qa.a(240, (byte) -4, 320);
             ArchiveIndex.a(0, false, param1, 0);
           } else if (SoundCache.field_d != 0) {
-            hj.a(param1, -12);
+            FullscreenFocusCanvas.a(param1, -12);
           } else {
             ul.a(param2, false, -7395);
             ArchiveIndex.a(0, false, param1, 0);

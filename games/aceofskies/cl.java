@@ -7,7 +7,7 @@ final class cl extends di {
     String field_bb;
     String field_I;
     static String field_db;
-    static pj field_fb;
+    static RasterBuffer field_fb;
 
     public static void a(byte param0) {
         if (param0 >= -93) {

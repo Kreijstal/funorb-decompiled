@@ -32,7 +32,7 @@ final class ek extends ab implements dn {
         Throwable var2 = null;
         boolean stackIn_8_0 = false;
         Throwable decompiledCaughtException = null;
-        Object var1 = ua.field_d;
+        Object var1 = OpenGlBuffer.field_d;
         synchronized (var1) {
           if (ch.field_a == lt.field_u) {
             return false;
@@ -113,7 +113,7 @@ final class ek extends ab implements dn {
             for (int var5 = 0; var3_int > var5; var5++) {
               this.field_t[var5] = new mi(this.field_v[var5], (no) (this));
               this.field_t[var5].field_e = (ir) ((Object) var4);
-              this.field_t[var5].field_k = jc.field_wc;
+              this.field_t[var5].field_k = HardwareOpenGlRenderer.field_wc;
               this.field_t[var5].a(15, 0, 20 + var5 * 16, 80, (byte) 124);
               this.a(this.field_t[var5], 1);
             }

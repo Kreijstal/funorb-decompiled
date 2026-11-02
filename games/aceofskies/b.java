@@ -44,7 +44,7 @@ final class b {
         if (param0 > -41) {
           return false;
         }
-        if (ml.field_p) {
+        if (InstrumentPatch.field_p) {
           stackIn_7_0 = true;
         } else {
           if (cn.b(true)) {

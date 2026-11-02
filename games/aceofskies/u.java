@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class u extends sk {
+final class u extends RenderEffect {
     private float field_h;
     static mg field_g;
     static Sprite[] field_i;
@@ -13,12 +13,12 @@ final class u extends sk {
         this.field_b.a((byte) 122, 0, CipherPacketBuffer.field_p);
         this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
         this.field_b.c(1, (byte) -99);
-        this.field_b.a((jj) null, -9135);
+        this.field_b.a((HardwareTexture) null, -9135);
         this.field_b.a(0, (byte) 57);
         this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
     }
 
-    u(bf param0, em param1) {
+    u(HardwareRenderer param0, em param1) {
         super(param0);
         this.field_h = 0.0f;
         try {
@@ -37,28 +37,28 @@ final class u extends sk {
 
     final void a(boolean param0, byte param1) {
         this.field_b.a(1, (byte) 41);
-        this.field_b.a(lo.field_j, true, bd.field_C);
+        this.field_b.a(OpenGlEnvironmentWaterEffect.field_j, true, bd.field_C);
         if (param1 < 2) {
           this.field_h = -0.11807350814342499f;
         }
         this.field_b.a(true, 0, true, CipherPacketBuffer.field_p, false);
-        this.field_b.a(un.field_i, 0, 0);
+        this.field_b.a(ArchiveNetworkClient.field_i, 0, 0);
         this.field_b.c(0, (byte) -86);
         this.field_b.a(0, (byte) 127);
         this.field_b.a((byte) -74, -16777216);
-        this.field_b.a(bs.field_a, 0, 0);
+        this.field_b.a(GameKeyHandler.field_a, 0, 0);
         this.d(18580);
     }
 
     final void a(int param0, int param1, int param2) {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != 1786747298) {
-          jj var6 = (jj) null;
-          this.a(-79, -84, (jj) null);
+          HardwareTexture var6 = (HardwareTexture) null;
+          this.a(-79, -84, (HardwareTexture) null);
         }
         this.field_b.a(1, (byte) 111);
         if ((128 & param1) != 0) {
-          this.field_b.a((jj) null, -9135);
+          this.field_b.a((HardwareTexture) null, -9135);
         } else if ((1 & param2) != 1) {
           if (!this.field_f.field_e) {
             this.field_b.a(this.field_f.field_i[0], -9135);
@@ -86,14 +86,14 @@ final class u extends sk {
         try {
           String var14 = param6.b(-17233);
           String var8 = param0.b(-17233);
-          if (ft.field_l == null &&
+          if (MidiNote.field_l == null &&
             !fp.a((byte) -116, false)) {
             int stackIn_5_0 = -1;
             return stackIn_5_0;
           }
           if (ca.field_f == qa.field_b) {
             q.outgoingPacket.position = 0;
-            qj.field_r = null;
+            StrongCacheReference.field_r = null;
             if (param2 != null) {
               var9 = 0;
               fa.field_c.position = 0;
@@ -154,12 +154,12 @@ final class u extends sk {
             IntKeyLookup.incomingPacket.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              ca.field_f = kf.field_m;
+              ca.field_f = OpenGlUnderwaterEffect.field_m;
               sd.field_j = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
                 oj.a(26099, bm.m(112));
-                rp.field_m = wo.field_h;
+                HardwareRenderSprite.field_m = wo.field_h;
                 te.b(true);
                 ld.field_d = false;
                 int stackIn_35_0 = var9Lifetime1;
@@ -167,16 +167,16 @@ final class u extends sk {
               }
               if (var9Lifetime1 == 99) {
                 wo.a(km.a(1), true);
-                qj.field_r = new Boolean(b.a(true, IntKeyLookup.incomingPacket));
+                StrongCacheReference.field_r = new Boolean(b.a(true, IntKeyLookup.incomingPacket));
                 IntKeyLookup.incomingPacket.position = 0;
               } else {
-                ag.field_s = -1;
+                ArchiveRequest.field_s = -1;
                 ca.field_f = cd.field_a;
                 qs.field_b = var9Lifetime1;
               }
             }
           }
-          if (ca.field_f == kf.field_m) {
+          if (ca.field_f == OpenGlUnderwaterEffect.field_m) {
             int var9Lifetime2 = 2;
             if (wo.a(var9Lifetime2, true)) {
               int var10Lifetime1 = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
@@ -201,19 +201,19 @@ final class u extends sk {
                 sf.a((byte) -125, bm.m(118), var9_ref_String);
               }
             } else {
-              rp.field_m = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
+              HardwareRenderSprite.field_m = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
             }
             te.b(true);
             ld.field_d = false;
             int stackIn_55_0 = qs.field_b;
             return stackIn_55_0;
           }
-          if (ft.field_l == null) {
+          if (MidiNote.field_l == null) {
             if (ld.field_d) {
               if (gm.g(-1) <= 30000L) {
-                rp.field_m = jf.field_b;
+                HardwareRenderSprite.field_m = jf.field_b;
               } else {
-                rp.field_m = rm.field_c;
+                HardwareRenderSprite.field_m = rm.field_c;
               }
               ld.field_d = false;
               int stackIn_63_0 = 249;
@@ -253,7 +253,7 @@ final class u extends sk {
         }
     }
 
-    final void a(int param0, int param1, jj param2) {
+    final void a(int param0, int param1, HardwareTexture param2) {
         try {
           if (param1 <= 66) {
             u.a(97, 109);

@@ -136,7 +136,7 @@ class ea extends IntrusiveNode {
     }
 
     ea(String param0, no param1) {
-        this(param0, ag.field_n.field_k, param1);
+        this(param0, ArchiveRequest.field_n.field_k, param1);
     }
 
     boolean a(ea param0, byte param1) {
@@ -199,7 +199,7 @@ class ea extends IntrusiveNode {
         }
         String var5 = fh.c((byte) -125);
         if (var5 != null) {
-          ag.field_n.a(10066329, var5, SpriteState.field_o, we.field_c);
+          ArchiveRequest.field_n.a(10066329, var5, SpriteState.field_o, we.field_c);
         }
     }
 
@@ -207,7 +207,7 @@ class ea extends IntrusiveNode {
         String stackIn_8_2 = null;
         try {
           if (param0 == 0) {
-            String stackIn_4_0 = hf.a(51, param1.length, 0, param1);
+            String stackIn_4_0 = SocketArchiveNetworkClient.a(51, param1.length, 0, param1);
             return stackIn_4_0;
           }
           String stackIn_2_0 = (String) null;
@@ -383,7 +383,7 @@ class ea extends IntrusiveNode {
         boolean var5 = (this.e(28660));
         if (!param3) {
           if (var5 &&
-            vj.pressedMouseButton != 0) {
+            OpenGlShaderObject.pressedMouseButton != 0) {
             this.d(7398);
           }
           fp.field_g = vu.heldMouseButton;
@@ -391,7 +391,7 @@ class ea extends IntrusiveNode {
           return param3;
         }
         if (nh.field_e == 0) {
-          if (vj.pressedMouseButton == 0) {
+          if (OpenGlShaderObject.pressedMouseButton == 0) {
             if (vu.heldMouseButton != 0) {
               fp.field_g = vu.heldMouseButton;
               qs.a(-6939, this.c((byte) -123));
@@ -414,7 +414,7 @@ class ea extends IntrusiveNode {
             qs.a(-6939, this.c((byte) -123));
             return param3;
           }
-          if (this.a(34, param2, ln.field_c, vj.pressedMouseButton, param0, this, lq.field_a)) {
+          if (this.a(34, param2, ln.field_c, OpenGlShaderObject.pressedMouseButton, param0, this, lq.field_a)) {
             param3 = false;
           } else if (var5) {
             this.d(7398);
@@ -482,7 +482,7 @@ class ea extends IntrusiveNode {
           }
           this.a(stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_49_4, stackIn_49_5, this, stackIn_50_7);
         }
-        if (vj.pressedMouseButton == 0) {
+        if (OpenGlShaderObject.pressedMouseButton == 0) {
           if (vu.heldMouseButton != 0) {
             fp.field_g = vu.heldMouseButton;
             qs.a(-6939, this.c((byte) -123));
@@ -506,7 +506,7 @@ class ea extends IntrusiveNode {
           qs.a(-6939, this.c((byte) -123));
           return param3;
         }
-        if (this.a(34, param2, ln.field_c, vj.pressedMouseButton, param0, this, lq.field_a)) {
+        if (this.a(34, param2, ln.field_c, OpenGlShaderObject.pressedMouseButton, param0, this, lq.field_a)) {
           param3 = false;
         } else if (var5) {
           this.d(7398);

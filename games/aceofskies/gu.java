@@ -51,33 +51,33 @@ final class gu {
           int var4 = var15.readUnsignedByte(param0 + 117);
           if (var4 != 0) {
             int var5 = var3_ref.field_f;
-            mb.field_t[0] = fj.playerDisplayName;
+            SoftCacheReference.field_t[0] = fj.playerDisplayName;
             for (int var6_int = 1; var6_int < var4; var6_int++) {
-              mb.field_t[var6_int] = var15.readNullTerminatedText(-17883);
+              SoftCacheReference.field_t[var6_int] = var15.readNullTerminatedText(-17883);
             }
             ud.a(var4, var5, 2);
             for (int var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ju.a(965924047, var15);
               if (var6_intLifetime1 != 0) {
-                FlightBody.a(fs.field_c, var6_intLifetime1, 54, tj.field_o, ld.field_a, HighscoreNameEntry.field_b);
+                FlightBody.a(BoundedRandomAccessFile.field_c, var6_intLifetime1, 54, tj.field_o, ld.field_a, HighscoreNameEntry.field_b);
               } else {
-                FlightBody.a(fs.field_c, var6_intLifetime1, 56, tj.field_o, ld.field_a, HighscoreNameEntry.field_b);
+                FlightBody.a(BoundedRandomAccessFile.field_c, var6_intLifetime1, 56, tj.field_o, ld.field_a, HighscoreNameEntry.field_b);
               }
             }
             Bullet.a(var5, true);
             String[][] var6 = new String[2][var5];
             int[][] var19 = new int[2][var5 * 4];
-            int var8 = os.field_w;
+            int var8 = DiskArchiveRequest.field_w;
             int var9 = 0;
             int var10 = 0;
             while (var9 < var8) {
               int var11 = uf.field_d[var9];
-              var6[0][var10] = mb.field_t[var11];
-              var19[0][var10 * 4] = js.field_c[var11];
+              var6[0][var10] = SoftCacheReference.field_t[var11];
+              var19[0][var10 * 4] = DualLinkDequeIterator.field_c[var11];
               var19[0][1 + var10 * 4] = hg.field_C[var11];
               var19[0][var10 * 4 + 2] = qd.field_p[var11];
               var19[0][3 + 4 * var10] = dd.field_c[var11];
-              if (fd.isCurrentPlayerName(mb.field_t[var11], (byte) -6) &&
+              if (fd.isCurrentPlayerName(SoftCacheReference.field_t[var11], (byte) -6) &&
                 qd.field_p[var11] + (hg.field_C[var11] + dd.field_c[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -90,12 +90,12 @@ final class gu {
             int var10Lifetime1 = var14;
             while (var8 > var9Lifetime1) {
               int var11Lifetime1 = uf.field_d[var9Lifetime1 + var5];
-              var6[1][var14] = mb.field_t[var11Lifetime1];
-              var19[1][var14 * 4] = js.field_c[var11Lifetime1];
+              var6[1][var14] = SoftCacheReference.field_t[var11Lifetime1];
+              var19[1][var14 * 4] = DualLinkDequeIterator.field_c[var11Lifetime1];
               var19[1][var14 * 4 + 1] = hg.field_C[var11Lifetime1];
               var19[1][2 + var14 * 4] = qd.field_p[var11Lifetime1];
               var19[1][3 + var14 * 4] = dd.field_c[var11Lifetime1];
-              if (fd.isCurrentPlayerName(mb.field_t[var11Lifetime1], (byte) -6) &&
+              if (fd.isCurrentPlayerName(SoftCacheReference.field_t[var11Lifetime1], (byte) -6) &&
                 hg.field_C[var11Lifetime1] + qd.field_p[var11Lifetime1] + dd.field_c[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
@@ -135,19 +135,19 @@ final class gu {
         }
     }
 
-    final static ml a(int param0, ResourceArchive param1, int param2) {
+    final static InstrumentPatch a(int param0, ResourceArchive param1, int param2) {
         String stackIn_10_2 = null;
         try {
           byte[] var4 = param1.d(param0, -2);
           byte[] var3 = var4;
           if (var4 == null) {
             Object stackIn_2_0 = null;
-            return (ml) (stackIn_2_0);
+            return (InstrumentPatch) (stackIn_2_0);
           }
           if (param2 != 16652) {
             brassFrameSpriteData = (SpriteData[]) null;
           }
-          ml stackIn_6_0 = new ml(var4);
+          InstrumentPatch stackIn_6_0 = new InstrumentPatch(var4);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

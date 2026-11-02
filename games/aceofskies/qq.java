@@ -15,9 +15,9 @@ final class qq {
     final static int a(int param0, int param1) {
         if (param0 != 20) {
           upgradeSpriteData = (SpriteData[]) null;
-          return bs.a(-1, ci.gameRandom, param1);
+          return GameKeyHandler.a(-1, ci.gameRandom, param1);
         }
-        return bs.a(-1, ci.gameRandom, param1);
+        return GameKeyHandler.a(-1, ci.gameRandom, param1);
     }
 
     public static void b(byte param0) {
@@ -35,12 +35,12 @@ final class qq {
           return;
         }
         du.menuActionLabels = new String[23];
-        du.menuActionLabels[4] = dk.field_b;
+        du.menuActionLabels[4] = DiskCacheWorker.field_b;
         du.menuActionLabels[11] = ne.field_h;
         du.menuActionLabels[0] = HighscoreNameEntry.field_c;
         du.menuActionLabels[16] = q.field_l;
         du.menuActionLabels[1] = s.field_h;
-        du.menuActionLabels[12] = af.field_a;
+        du.menuActionLabels[12] = ByteStorage.field_a;
         du.menuActionLabels[6] = ef.field_i;
         du.menuActionLabels[5] = ef.field_i;
         du.menuActionLabels[14] = so.field_a;

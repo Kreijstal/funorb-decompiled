@@ -17,7 +17,7 @@ final class rc extends hh {
         this.field_a.a(false, 0);
     }
 
-    rc(wl param0, qe param1) {
+    rc(OpenGlRenderer param0, qe param1) {
         super(param0);
         try {
           this.field_g = param1;

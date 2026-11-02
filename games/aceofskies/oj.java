@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends sk {
-    private go[] field_h;
+final class oj extends RenderEffect {
+    private HardwareCubeTexture[] field_h;
     private boolean field_i;
     private boolean field_f;
     static volatile int field_g;
 
-    oj(bf param0) {
+    oj(HardwareRenderer param0) {
         super(param0);
         String stackIn_36_2 = null;
         int var6 = 0;
@@ -62,7 +62,7 @@ final class oj extends sk {
                 var9++;
               }
             }
-            this.field_h = new go[3];
+            this.field_h = new HardwareCubeTexture[3];
             this.field_h[0] = this.field_b.a(64, -118, false, var27);
             this.field_h[1] = this.field_b.a(64, 80, false, var28);
             this.field_h[2] = this.field_b.a(64, -69, false, var29);
@@ -86,8 +86,8 @@ final class oj extends sk {
     final void a(boolean param0, byte param1) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 <= 2) {
-          jj var5 = (jj) null;
-          this.a(-6, -33, (jj) null);
+          HardwareTexture var5 = (HardwareTexture) null;
+          this.a(-6, -33, (HardwareTexture) null);
         }
         if (null == this.field_h) {
           this.field_b.a(ac.field_b, 0, 0);
@@ -100,16 +100,16 @@ final class oj extends sk {
           var6.a(1024, 1);
           this.field_b.a(qn.field_a, (byte) -127);
           if (this.field_i) {
-            this.field_b.a(lo.field_j, true, bd.field_C);
+            this.field_b.a(OpenGlEnvironmentWaterEffect.field_j, true, bd.field_C);
             this.field_b.a(true, 0, true, CipherPacketBuffer.field_p, false);
             this.field_b.a(ac.field_b, 0, 0);
           } else {
             this.field_b.a(bd.field_C, true, ru.field_a);
-            this.field_b.a((byte) 119, 0, un.field_i);
+            this.field_b.a((byte) 119, 0, ArchiveNetworkClient.field_i);
             this.field_b.a(2, (byte) 79);
-            this.field_b.a(lo.field_j, true, bd.field_C);
-            this.field_b.a((byte) 120, 0, un.field_i);
-            this.field_b.a(true, 1, true, un.field_i, false);
+            this.field_b.a(OpenGlEnvironmentWaterEffect.field_j, true, bd.field_C);
+            this.field_b.a((byte) 120, 0, ArchiveNetworkClient.field_i);
+            this.field_b.a(true, 1, true, ArchiveNetworkClient.field_i, false);
             this.field_b.a(ac.field_b, 0, 0);
             this.field_b.a(this.field_b.field_Kb, -9135);
           }
@@ -124,12 +124,12 @@ final class oj extends sk {
         return stackIn_4_0;
     }
 
-    final void a(int param0, int param1, jj param2) {
+    final void a(int param0, int param1, HardwareTexture param2) {
         try {
           this.field_b.a(param2, -9135);
           this.field_b.b(param0, false);
           if (param1 <= 66) {
-            this.field_h = (go[]) null;
+            this.field_h = (HardwareCubeTexture[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "oj.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -283,7 +283,7 @@ final class oj extends sk {
           this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
         } else {
           this.field_b.a(1, (byte) 45);
-          this.field_b.a((jj) null, -9135);
+          this.field_b.a((HardwareTexture) null, -9135);
           this.field_b.a(b.field_b, false);
           this.field_b.f(-21041);
           if (this.field_i) {
@@ -296,9 +296,9 @@ final class oj extends sk {
             this.field_b.a(2, (byte) 26);
             this.field_b.a(ru.field_a, true, ru.field_a);
             this.field_b.a((byte) 122, 0, CipherPacketBuffer.field_p);
-            this.field_b.a((byte) 121, 1, un.field_i);
+            this.field_b.a((byte) 121, 1, ArchiveNetworkClient.field_i);
             this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
-            this.field_b.a((jj) null, -9135);
+            this.field_b.a((HardwareTexture) null, -9135);
           }
           this.field_b.a(0, (byte) 103);
           this.field_f = false;

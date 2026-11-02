@@ -4,8 +4,8 @@
 final class eb {
     static SpriteData[] counterPanelSpriteData;
     private d field_d;
-    private gq field_a;
-    private wl field_b;
+    private WeightedObjectCache field_a;
+    private OpenGlRenderer field_b;
 
     final nr a(int param0, byte param1) {
         int[] var7;
@@ -50,7 +50,7 @@ final class eb {
             }
             nr stackIn_17_0 = null;
             nr stackIn_17_1 = null;
-            wl stackIn_17_2 = this.field_b;
+            OpenGlRenderer stackIn_17_2 = this.field_b;
             int stackIn_17_3 = 3553;
             int stackIn_17_4 = 6408;
             int stackIn_17_5 = var6;
@@ -74,7 +74,7 @@ final class eb {
             float[] var7_array = var9;
             nr stackIn_22_0 = null;
             nr stackIn_22_1 = null;
-            wl stackIn_22_2 = this.field_b;
+            OpenGlRenderer stackIn_22_2 = this.field_b;
             int stackIn_22_3 = 3553;
             int stackIn_22_4 = 34842;
             int stackIn_22_5 = var6;
@@ -100,7 +100,7 @@ final class eb {
           }
           nr stackIn_32_0 = null;
           nr stackIn_32_1 = null;
-          wl stackIn_32_2 = this.field_b;
+          OpenGlRenderer stackIn_32_2 = this.field_b;
           int stackIn_32_3 = 3553;
           int stackIn_32_4 = 6408;
           int stackIn_32_5 = var6;
@@ -137,7 +137,7 @@ final class eb {
             int[] var59 = this.field_d.a(param0, -10805, var6Lifetime1, false, 0.699999988079071f, var6Lifetime1);
             nr stackIn_46_0 = null;
             nr stackIn_46_1 = null;
-            wl stackIn_46_2 = this.field_b;
+            OpenGlRenderer stackIn_46_2 = this.field_b;
             int stackIn_46_3 = 3553;
             int stackIn_46_4 = 6408;
             int stackIn_46_5 = var6Lifetime1;
@@ -158,7 +158,7 @@ final class eb {
             int[] var60 = this.field_d.a(param0, -10805, var6Lifetime1, false, 0.699999988079071f, var6Lifetime1);
             nr stackIn_55_0 = null;
             nr stackIn_55_1 = null;
-            wl stackIn_55_2 = this.field_b;
+            OpenGlRenderer stackIn_55_2 = this.field_b;
             int stackIn_55_3 = 3553;
             int stackIn_55_4 = 6408;
             int stackIn_55_5 = var6Lifetime1;
@@ -178,7 +178,7 @@ final class eb {
           int[] var61 = this.field_d.a(var6Lifetime1, param0, (byte) -18, true, var6Lifetime1, 0.699999988079071f);
           nr stackIn_51_0 = null;
           nr stackIn_51_1 = null;
-          wl stackIn_51_2 = this.field_b;
+          OpenGlRenderer stackIn_51_2 = this.field_b;
           int stackIn_51_3 = 3553;
           int stackIn_51_4 = 6408;
           int stackIn_51_5 = var6Lifetime1;
@@ -202,7 +202,7 @@ final class eb {
           float[] var7_arrayLifetime1 = var9Lifetime1;
           nr stackIn_61_0 = null;
           nr stackIn_61_1 = null;
-          wl stackIn_61_2 = this.field_b;
+          OpenGlRenderer stackIn_61_2 = this.field_b;
           int stackIn_61_3 = 3553;
           int stackIn_61_4 = 34842;
           int stackIn_61_5 = var6Lifetime1;
@@ -223,7 +223,7 @@ final class eb {
           int[] var62 = this.field_d.a(param0, -10805, var6Lifetime1, false, 0.699999988079071f, var6Lifetime1);
           nr stackIn_66_0 = null;
           nr stackIn_66_1 = null;
-          wl stackIn_66_2 = this.field_b;
+          OpenGlRenderer stackIn_66_2 = this.field_b;
           int stackIn_66_3 = 3553;
           int stackIn_66_4 = 6408;
           int stackIn_66_5 = var6Lifetime1;
@@ -244,7 +244,7 @@ final class eb {
           int[] var63 = this.field_d.a(param0, -10805, var6Lifetime1, false, 0.699999988079071f, var6Lifetime1);
           nr stackIn_75_0 = null;
           nr stackIn_75_1 = null;
-          wl stackIn_75_2 = this.field_b;
+          OpenGlRenderer stackIn_75_2 = this.field_b;
           int stackIn_75_3 = 3553;
           int stackIn_75_4 = 6408;
           int stackIn_75_5 = var6Lifetime1;
@@ -264,7 +264,7 @@ final class eb {
         int[] var64 = this.field_d.a(var6Lifetime1, param0, (byte) -18, true, var6Lifetime1, 0.699999988079071f);
         nr stackIn_71_0 = null;
         nr stackIn_71_1 = null;
-        wl stackIn_71_2 = this.field_b;
+        OpenGlRenderer stackIn_71_2 = this.field_b;
         int stackIn_71_3 = 3553;
         int stackIn_71_4 = 6408;
         int stackIn_71_5 = var6Lifetime1;
@@ -298,8 +298,8 @@ final class eb {
         }
     }
 
-    eb(wl param0, d param1) {
-        this.field_a = new gq(256);
+    eb(OpenGlRenderer param0, d param1) {
+        this.field_a = new WeightedObjectCache(256);
         try {
           this.field_d = param1;
           this.field_b = param0;

@@ -256,7 +256,7 @@ final class ep extends ab implements bh, dn {
     public final void a(int param0, mi param1, int param2, int param3, byte param4) {
         try {
           if (param1 == this.field_y) {
-            ua.e(4754);
+            OpenGlBuffer.e(4754);
           } else if (this.field_v == param1) {
             this.d((byte) -128);
           }

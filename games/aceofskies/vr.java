@@ -9,7 +9,7 @@ final class vr {
     static Random field_h;
     private qe field_e;
     static ce field_b;
-    private wl field_g;
+    private OpenGlRenderer field_g;
     private hh[] field_d;
     private int field_i;
     static String[] field_c;
@@ -307,7 +307,7 @@ final class vr {
         }
     }
 
-    vr(wl param0) {
+    vr(OpenGlRenderer param0) {
         String stackIn_9_2 = null;
         this.field_f = 0;
         this.field_a = 0;

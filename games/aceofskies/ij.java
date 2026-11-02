@@ -39,7 +39,7 @@ final class ij extends hh {
           }
           int var4_int = param0.b(param2, 0);
           int var5 = param0.a(-122, var4_int, param1);
-          Sprite stackIn_3_0 = hj.a(false, var5, var4_int, param0);
+          Sprite stackIn_3_0 = FullscreenFocusCanvas.a(false, var5, var4_int, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,11 +89,11 @@ final class ij extends hh {
             return;
           }
           this.field_a.a(this.field_f.field_j, param0 + 66);
-          wl.field_Ub[2] = 0.0f;
-          wl.field_Ub[0] = 0.0f;
-          wl.field_Ub[3] = (float)(this.field_a.field_hb % 4000) / 4000.0f;
-          wl.field_Ub[1] = 0.0f;
-          jaggl.OpenGL.glTexGenfv(8194, 9473, wl.field_Ub, 0);
+          OpenGlRenderer.field_Ub[2] = 0.0f;
+          OpenGlRenderer.field_Ub[0] = 0.0f;
+          OpenGlRenderer.field_Ub[3] = (float)(this.field_a.field_hb % 4000) / 4000.0f;
+          OpenGlRenderer.field_Ub[1] = 0.0f;
+          jaggl.OpenGL.glTexGenfv(8194, 9473, OpenGlRenderer.field_Ub, 0);
           if (param0 != -65) {
             this.b((byte) -110);
             return;
@@ -109,11 +109,11 @@ final class ij extends hh {
           return;
         }
         this.field_a.a(this.field_f.field_j, 1);
-        wl.field_Ub[3] = 0.0f;
-        wl.field_Ub[1] = 0.0f;
-        wl.field_Ub[2] = 0.0f;
-        wl.field_Ub[0] = 0.0f;
-        jaggl.OpenGL.glTexGenfv(8194, 9473, wl.field_Ub, 0);
+        OpenGlRenderer.field_Ub[3] = 0.0f;
+        OpenGlRenderer.field_Ub[1] = 0.0f;
+        OpenGlRenderer.field_Ub[2] = 0.0f;
+        OpenGlRenderer.field_Ub[0] = 0.0f;
+        jaggl.OpenGL.glTexGenfv(8194, 9473, OpenGlRenderer.field_Ub, 0);
         if (param0 == -65) {
           return;
         }
@@ -124,13 +124,13 @@ final class ij extends hh {
         if (!(this.field_a.field_C <= 0)) {
           float var3 = -0.5f / (float)this.field_a.field_C;
           this.field_a.a(false, 1);
-          wl.field_Ub[0] = 0.0f;
-          wl.field_Ub[3] = this.field_a.field_Tb * var3 + 0.25f;
-          wl.field_Ub[2] = var3;
-          wl.field_Ub[1] = 0.0f;
+          OpenGlRenderer.field_Ub[0] = 0.0f;
+          OpenGlRenderer.field_Ub[3] = this.field_a.field_Tb * var3 + 0.25f;
+          OpenGlRenderer.field_Ub[2] = var3;
+          OpenGlRenderer.field_Ub[1] = 0.0f;
           jaggl.OpenGL.glPushMatrix();
           jaggl.OpenGL.glLoadIdentity();
-          jaggl.OpenGL.glTexGenfv(8192, 9474, wl.field_Ub, 0);
+          jaggl.OpenGL.glTexGenfv(8192, 9474, OpenGlRenderer.field_Ub, 0);
           jaggl.OpenGL.glPopMatrix();
           this.field_a.a(0.5f, (float)this.field_a.field_C, 61);
           this.field_a.a(this.field_d, 1);
@@ -152,7 +152,7 @@ final class ij extends hh {
         return true;
     }
 
-    ij(wl param0, qe param1) {
+    ij(OpenGlRenderer param0, qe param1) {
         super(param0);
         try {
           this.field_f = param1;

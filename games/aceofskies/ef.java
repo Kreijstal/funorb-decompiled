@@ -38,26 +38,26 @@ final class ef {
         field_i = null;
     }
 
-    final static void a(byte param0, rk param1, ResourceArchive param2) {
+    final static void a(byte param0, SystemTaskService param1, ResourceArchive param2) {
         String stackIn_27_2 = null;
         String stackIn_30_2 = null;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           rj.field_b = param2;
-          bl.field_g = "";
+          SectorCacheStore.field_g = "";
           if (param0 <= 93) {
             field_k = (gu) null;
           }
           bm.field_I = param1;
           if (rr.field_b.startsWith("win")) {
-            bl.field_g = bl.field_g + "windows/";
+            SectorCacheStore.field_g = SectorCacheStore.field_g + "windows/";
           } else if (rr.field_b.startsWith("linux")) {
-            bl.field_g = bl.field_g + "linux/";
+            SectorCacheStore.field_g = SectorCacheStore.field_g + "linux/";
           } else if (rr.field_b.startsWith("mac")) {
-            bl.field_g = bl.field_g + "macos/";
+            SectorCacheStore.field_g = SectorCacheStore.field_g + "macos/";
           }
           if (bm.field_I.field_p) {
-            bl.field_g = bl.field_g + "msjava/";
+            SectorCacheStore.field_g = SectorCacheStore.field_g + "msjava/";
           } else {
             if (!rr.field_a.startsWith("amd64") &&
               !rr.field_a.startsWith("x86_64")) {
@@ -66,16 +66,16 @@ final class ef {
                 !rr.field_a.startsWith("i586") &&
                 !rr.field_a.startsWith("x86")) {
                 if (!rr.field_a.startsWith("ppc")) {
-                  bl.field_g = bl.field_g + "universal/";
+                  SectorCacheStore.field_g = SectorCacheStore.field_g + "universal/";
                   return;
                 }
-                bl.field_g = bl.field_g + "ppc/";
+                SectorCacheStore.field_g = SectorCacheStore.field_g + "ppc/";
                 return;
               }
-              bl.field_g = bl.field_g + "x86/";
+              SectorCacheStore.field_g = SectorCacheStore.field_g + "x86/";
               return;
             }
-            bl.field_g = bl.field_g + "x86_64/";
+            SectorCacheStore.field_g = SectorCacheStore.field_g + "x86_64/";
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -182,13 +182,13 @@ final class ef {
         return;
     }
 
-    final hj b(byte param0) {
+    final FullscreenFocusCanvas b(byte param0) {
         this.field_n = ArchiveIndex.field_h;
         this.field_r = td.field_b;
         this.field_l.a(this.field_u, false, this.field_c);
         if (param0 == -111) {
           or.field_c = false;
-          hj var2 = uj.a(pt.field_b, 0, this.field_c, 0, 0, this.field_u);
+          FullscreenFocusCanvas var2 = uj.a(pt.field_b, 0, this.field_c, 0, 0, this.field_u);
           if (var2 == null) {
             this.c(1);
           }
@@ -196,7 +196,7 @@ final class ef {
         }
         this.field_p = -7;
         or.field_c = false;
-        hj var2Lifetime1 = uj.a(pt.field_b, 0, this.field_c, 0, 0, this.field_u);
+        FullscreenFocusCanvas var2Lifetime1 = uj.a(pt.field_b, 0, this.field_c, 0, 0, this.field_u);
         if (var2Lifetime1 == null) {
           this.c(1);
         }

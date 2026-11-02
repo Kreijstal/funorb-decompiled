@@ -74,7 +74,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         String var6 = "(" + ScoreSubmission.field_l + " " + kg.field_b + " " + hi.field_w + ") " + qs.field_b;
         String var1 = var6;
-        if (ag.field_s <= 0) {
+        if (ArchiveRequest.field_s <= 0) {
           if (param0 == 65) {
             return var1;
           }
@@ -82,7 +82,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           return var1;
         }
         String var1Lifetime1 = var6 + ":";
-        for (int var2 = 0; ag.field_s > var2; var2++) {
+        for (int var2 = 0; ArchiveRequest.field_s > var2; var2++) {
           String var7 = var1Lifetime1 + ' ';
           var1Lifetime1 = var7;
           int var3 = IntKeyLookup.incomingPacket.payload[var2] & 255;

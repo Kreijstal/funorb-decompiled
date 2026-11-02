@@ -14,7 +14,7 @@ final class v {
           try {
             String var3 = "";
             if (param2 != null) {
-              var3 = br.a(param2, (byte) -29);
+              var3 = ImageProducerCanvasImageBuffer.a(param2, (byte) -29);
             }
             if (param0 != null) {
               if (param2 != null) {
@@ -33,12 +33,12 @@ final class v {
             if (null == fb.field_c) {
               return;
             }
-            rk stackIn_16_0 = mj.field_a;
+            SystemTaskService stackIn_16_0 = mj.field_a;
             int stackIn_16_1 = 70;
             java.net.URL stackIn_16_2 = null;
             java.net.URL stackIn_16_3 = null;
             java.net.URL stackIn_16_4 = fb.field_c.getCodeBase();
-            StringBuilder stackIn_16_5 = new StringBuilder().append("clienterror.ws?c=").append(bs.field_c).append("&u=");
+            StringBuilder stackIn_16_5 = new StringBuilder().append("clienterror.ws?c=").append(GameKeyHandler.field_c).append("&u=");
             if (co.field_g == null) {
               stackIn_17_6 = "" + CipherPacketBuffer.field_o;
             } else {
@@ -46,7 +46,7 @@ final class v {
               java.net.URL stackIn_17_3 = null;
               stackIn_17_6 = co.field_g;
             }
-            en var4 = ((rk) (Object) stackIn_16_0).a((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, ((StringBuilder) (Object) stackIn_16_5).append(stackIn_17_6).append("&v1=").append(rk.field_o).append("&v2=").append(rk.field_l).append("&e=").append(var10).toString()));
+            SystemTask var4 = ((SystemTaskService) (Object) stackIn_16_0).a((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, ((StringBuilder) (Object) stackIn_16_5).append(stackIn_17_6).append("&v1=").append(SystemTaskService.field_o).append("&v2=").append(SystemTaskService.field_l).append("&e=").append(var10).toString()));
             while (var4.field_a == 0) {
               IntrusiveNode.a(1L, false);
             }
@@ -81,12 +81,12 @@ final class v {
             try {
               java.net.URL var4 = param1.getCodeBase();
               String var3 = jf.a(param1, var4, 70).getFile();
-              fe.a("updatelinks", -15201, new Object[]{"home", var3 + "home.ws"}, param1);
-              fe.a("updatelinks", -15201, new Object[]{"gamelist", var3 + "togamelist.ws"}, param1);
-              fe.a("updatelinks", -15201, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1);
-              fe.a("updatelinks", -15201, new Object[]{"options", var3 + "options.ws"}, param1);
-              fe.a("updatelinks", -15201, new Object[]{"terms", var3 + "terms.ws"}, param1);
-              fe.a("updatelinks", -15201, new Object[]{"privacy", var3 + "privacy.ws"}, param1);
+              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"home", var3 + "home.ws"}, param1);
+              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"gamelist", var3 + "togamelist.ws"}, param1);
+              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1);
+              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"options", var3 + "options.ws"}, param1);
+              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"terms", var3 + "terms.ws"}, param1);
+              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"privacy", var3 + "privacy.ws"}, param1);
               if (param0) {
                 return;
               }

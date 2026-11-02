@@ -33,7 +33,7 @@ final class om extends bn implements fq {
         }
     }
 
-    om(wl param0, int param1, byte[] param2, int param3) {
+    om(OpenGlRenderer param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
     }
 

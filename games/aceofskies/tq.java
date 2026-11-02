@@ -10,14 +10,14 @@ final class tq extends fa {
     static String[] field_e;
 
     final static boolean c(boolean param0) {
-        if (!ei.a("jaclib", (byte) -16)) {
+        if (!GzipInflater.a("jaclib", (byte) -16)) {
           return false;
         }
         if (param0) {
-          return ei.a("hw3d", (byte) -16);
+          return GzipInflater.a("hw3d", (byte) -16);
         }
         pendingScoreSubmissions = (IntrusiveDeque) null;
-        return ei.a("hw3d", (byte) -16);
+        return GzipInflater.a("hw3d", (byte) -16);
     }
 
     public static void b(int param0) {
@@ -32,7 +32,7 @@ final class tq extends fa {
     }
 
     final static void b(boolean param0) {
-        ua.menuActions[4] = new int[]{5};
+        OpenGlBuffer.menuActions[4] = new int[]{5};
         if (!param0) {
           tq.b(false);
         }

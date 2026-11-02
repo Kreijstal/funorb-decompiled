@@ -3,14 +3,14 @@
  */
 final class wq {
     private PacketBuffer field_b;
-    private gp field_h;
+    private NetworkArchiveRequest field_h;
     static eg field_e;
     private java.math.BigInteger field_c;
-    private un field_a;
+    private ArchiveNetworkClient field_a;
     private java.math.BigInteger field_f;
-    private fg[] field_g;
+    private CachedArchiveProvider[] field_g;
     static String field_i;
-    private dk field_d;
+    private DiskCacheWorker field_d;
 
     public static void b(int param0) {
         if (param0 != -14991) {
@@ -20,7 +20,7 @@ final class wq {
         field_i = null;
     }
 
-    final static el a(wl param0, int param1, int param2, boolean param3, int param4, int param5, int param6, byte[] param7) {
+    final static el a(OpenGlRenderer param0, int param1, int param2, boolean param3, int param4, int param5, int param6, byte[] param7) {
         String stackIn_16_2 = null;
         String stackIn_19_2 = null;
         try {
@@ -69,7 +69,7 @@ final class wq {
           }
         }
         if (param0 < 65) {
-          this.field_g = (fg[]) null;
+          this.field_g = (CachedArchiveProvider[]) null;
         }
         for (int var2Lifetime1 = 0; var2Lifetime1 < this.field_g.length; var2Lifetime1++) {
           if (null != this.field_g[var2Lifetime1]) {
@@ -78,11 +78,11 @@ final class wq {
         }
     }
 
-    wq(un param0, dk param1) {
+    wq(ArchiveNetworkClient param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final fg a(byte param0, bl param1, bl param2, boolean param3, int param4) {
+    final CachedArchiveProvider a(byte param0, SectorCacheStore param1, SectorCacheStore param2, boolean param3, int param4) {
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         try {
@@ -93,7 +93,7 @@ final class wq {
           if (param4 >= 0 &&
             this.field_g.length > param4) {
             if (this.field_g[param4] != null) {
-              fg stackIn_8_0 = this.field_g[param4];
+              CachedArchiveProvider stackIn_8_0 = this.field_g[param4];
               return stackIn_8_0;
             }
             this.field_b.position = 6 + param4 * 72;
@@ -101,9 +101,9 @@ final class wq {
             int var8 = this.field_b.readInt((byte) 125);
             byte[] var14 = new byte[64];
             this.field_b.a(0, 7186, 64, var14);
-            fg var10 = new fg(param4, param2, param1, this.field_a, this.field_d, var7, var14, var8, param3);
+            CachedArchiveProvider var10 = new CachedArchiveProvider(param4, param2, param1, this.field_a, this.field_d, var7, var14, var8, param3);
             this.field_g[param4] = var10;
-            fg stackIn_10_0 = var10;
+            CachedArchiveProvider stackIn_10_0 = var10;
             return stackIn_10_0;
           }
           throw new RuntimeException();
@@ -170,12 +170,12 @@ final class wq {
             throw new RuntimeException();
           }
         }
-        this.field_g = new fg[var3];
+        this.field_g = new CachedArchiveProvider[var3];
         this.field_b = var10;
         return true;
     }
 
-    private wq(un param0, dk param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private wq(ArchiveNetworkClient param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_d = param1;
           this.field_a = param0;

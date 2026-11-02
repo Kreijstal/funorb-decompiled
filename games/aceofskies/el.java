@@ -7,7 +7,7 @@ final class el extends nr {
     float field_r;
     float field_p;
 
-    el(wl param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
+    el(OpenGlRenderer param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
         super(param0, 3553, param1, param4, param5);
         try {
           this.field_q = param2;
@@ -21,7 +21,7 @@ final class el extends nr {
         }
     }
 
-    el(wl param0, int param1, int param2, int param3, int param4, int[] param5) {
+    el(OpenGlRenderer param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, 3553, 6408, param3, param4);
         try {
           this.field_o = param2;
@@ -35,7 +35,7 @@ final class el extends nr {
         }
     }
 
-    el(wl param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
+    el(OpenGlRenderer param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
         super(param0, param1, param2, param3, param4, param5, param6, param7, true);
         try {
           this.field_o = param4;
@@ -52,7 +52,7 @@ final class el extends nr {
         }
     }
 
-    el(wl param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
+    el(OpenGlRenderer param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
         super(param0, param1, 6408, param2, param3, param4, param5, param6, param7, true);
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;

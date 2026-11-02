@@ -27,7 +27,7 @@ final class tr {
             boolean decompiledFrameRemainder0 = true;
             if (ve.field_b[var3].field_f == param0.field_f) {
               int var4 = ve.field_b[var3].a(0);
-              if (gq.field_a < aa.field_c[var4]) {
+              if (WeightedObjectCache.field_a < aa.field_c[var4]) {
                 aa.field_c[var4] = aa.field_c[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

@@ -1,0 +1,154 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class OpenGlTransparentWaterEffect extends RenderEffect {
+    private HardwareOpenGlRenderer field_f;
+    private em field_g;
+    private mo field_h;
+
+    final void a(int param0, int param1, HardwareTexture param2) {
+        try {
+          if (param1 <= 66) {
+            this.field_f = (HardwareOpenGlRenderer) null;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw pn.a((Throwable) ((Object) runtimeException), "fm.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void a(boolean param0, boolean param1) {
+        this.field_b.a(bd.field_C, true, OpenGlEnvironmentWaterEffect.field_j);
+        if (param0) {
+          this.e(-33);
+        }
+    }
+
+    final void a(boolean param0, byte param1) {
+        jaggl.OpenGL.glBindProgramARB(34336, this.field_h.field_d);
+        jaggl.OpenGL.glEnable(34336);
+        this.field_b.a((byte) 125, 0, ArchiveNetworkClient.field_i);
+        if (param1 <= 2) {
+          this.e(51);
+        }
+    }
+
+    final void a(boolean param0) {
+        if (param0) {
+          this.field_b.a((byte) 125, 0, CipherPacketBuffer.field_p);
+          jaggl.OpenGL.glBindProgramARB(34336, 0);
+          jaggl.OpenGL.glDisable(34820);
+          jaggl.OpenGL.glDisable(34336);
+          return;
+        }
+        this.field_g = (em) null;
+        this.field_b.a((byte) 125, 0, CipherPacketBuffer.field_p);
+        jaggl.OpenGL.glBindProgramARB(34336, 0);
+        jaggl.OpenGL.glDisable(34820);
+        jaggl.OpenGL.glDisable(34336);
+    }
+
+    final void a(int param0, int param1, int param2) {
+        if (param0 == 1786747298) {
+          if (!this.field_g.field_e) {
+            int var4_int = 16 * (this.field_b.field_r % 4000) / 4000;
+            this.field_b.a(this.field_g.field_i[var4_int], -9135);
+            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, 0.0f, 0.0f, 0.0f, 1.0f);
+          } else {
+            float var4 = (float)(this.field_b.field_r % 4000) / 4000.0f;
+            this.field_b.a(this.field_g.field_f, -9135);
+            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var4, 0.0f, 0.0f, 1.0f);
+          }
+          return;
+        }
+        this.field_f = (HardwareOpenGlRenderer) null;
+        if (!this.field_g.field_e) {
+          int var4_intLifetime1 = 16 * (this.field_b.field_r % 4000) / 4000;
+          this.field_b.a(this.field_g.field_i[var4_intLifetime1], -9135);
+          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, 0.0f, 0.0f, 0.0f, 1.0f);
+        } else {
+          float var4Lifetime1 = (float)(this.field_b.field_r % 4000) / 4000.0f;
+          this.field_b.a(this.field_g.field_f, -9135);
+          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var4Lifetime1, 0.0f, 0.0f, 1.0f);
+        }
+    }
+
+    final static void a(int param0, byte param1, int param2) {
+        int var3 = 1 << param2;
+        if (param1 != 111) {
+          return;
+        }
+        if ((var3 & hg.field_D) != 0) {
+          return;
+        }
+        hg.field_D = hg.field_D | var3;
+        r.field_n = r.field_n | var3;
+        MenuScreen.field_g.addLast(92, new iq(param2));
+        if (!tt.field_a) {
+          sb.field_c.addLast(param1 + 6, new oc(param2, param0, NetworkGameClient.field_x, bo.field_h, se.field_b, GzipInflater.field_a - or.score));
+          if (param2 == 6) {
+            MenuScreen.field_g.addLast(116, new iq(-1));
+            si.c(true);
+            return;
+          }
+          return;
+        }
+        if (param2 != 6) {
+          return;
+        }
+        MenuScreen.field_g.addLast(116, new iq(-1));
+        si.c(true);
+    }
+
+    OpenGlTransparentWaterEffect(HardwareOpenGlRenderer param0, ResourceArchive param1, em param2) {
+        super(param0);
+        String stackIn_10_2 = null;
+        String stackIn_13_2 = null;
+        String stackIn_16_2 = null;
+        try {
+          this.field_g = param2;
+          this.field_f = param0;
+          if (param1 != null &&
+            this.field_g.b(false) &&
+            this.field_f.field_Vc) {
+            this.field_h = ac.a(true, 34336, param1.a("gl", (byte) -71, "transparent_water"), this.field_f);
+            return;
+          }
+          this.field_h = null;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var4;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("fm.<init>(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          if (param2 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw pn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+        }
+    }
+
+    final boolean e(int param0) {
+        if (param0 == 3) {
+          return null != this.field_h ? true : false;
+        }
+        this.field_h = (mo) null;
+        return null != this.field_h ? true : false;
+    }
+
+    static {
+    }
+}

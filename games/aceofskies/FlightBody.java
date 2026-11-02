@@ -190,19 +190,19 @@ class FlightBody {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int stackIn_10_0 = 0;
         int stackIn_25_0 = 0;
-        BitmapFontMetrics.field_b[os.field_w] = param1;
-        uf.field_d[os.field_w] = os.field_w;
-        js.field_c[os.field_w] = param5;
-        if (ft.field_o < param5) {
+        BitmapFontMetrics.field_b[DiskArchiveRequest.field_w] = param1;
+        uf.field_d[DiskArchiveRequest.field_w] = DiskArchiveRequest.field_w;
+        DualLinkDequeIterator.field_c[DiskArchiveRequest.field_w] = param5;
+        if (MidiNote.field_o < param5) {
           fj.field_d = param5;
         }
         if (param2 > 14) {
           if (op.field_a > param5) {
             nh.field_a = param5;
           }
-          hg.field_C[os.field_w] = param4;
-          qd.field_p[os.field_w] = param0;
-          dd.field_c[os.field_w] = param3;
+          hg.field_C[DiskArchiveRequest.field_w] = param4;
+          qd.field_p[DiskArchiveRequest.field_w] = param0;
+          dd.field_c[DiskArchiveRequest.field_w] = param3;
           int var6 = param0 + param4 + param3;
           if (0 == var6) {
             stackIn_25_0 = 0;
@@ -210,11 +210,11 @@ class FlightBody {
             stackIn_25_0 = param4 * 1000 / var6;
           }
           int var7 = stackIn_25_0;
-          ai.field_a[os.field_w] = var7;
+          ai.field_a[DiskArchiveRequest.field_w] = var7;
           if (nh.field_a > var7) {
             nh.field_a = var7;
           }
-          os.field_w = os.field_w + 1;
+          DiskArchiveRequest.field_w = DiskArchiveRequest.field_w + 1;
           if (fj.field_d >= var7) {
             return;
           }
@@ -225,9 +225,9 @@ class FlightBody {
         if (op.field_a > param5) {
           nh.field_a = param5;
         }
-        hg.field_C[os.field_w] = param4;
-        qd.field_p[os.field_w] = param0;
-        dd.field_c[os.field_w] = param3;
+        hg.field_C[DiskArchiveRequest.field_w] = param4;
+        qd.field_p[DiskArchiveRequest.field_w] = param0;
+        dd.field_c[DiskArchiveRequest.field_w] = param3;
         int var6Lifetime1 = param0 + param4 + param3;
         if (0 == var6Lifetime1) {
           stackIn_10_0 = 0;
@@ -235,11 +235,11 @@ class FlightBody {
           stackIn_10_0 = param4 * 1000 / var6Lifetime1;
         }
         int var7Lifetime1 = stackIn_10_0;
-        ai.field_a[os.field_w] = var7Lifetime1;
+        ai.field_a[DiskArchiveRequest.field_w] = var7Lifetime1;
         if (nh.field_a > var7Lifetime1) {
           nh.field_a = var7Lifetime1;
         }
-        os.field_w = os.field_w + 1;
+        DiskArchiveRequest.field_w = DiskArchiveRequest.field_w + 1;
         if (fj.field_d >= var7Lifetime1) {
           return;
         }

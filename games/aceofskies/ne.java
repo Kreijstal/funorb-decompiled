@@ -15,7 +15,7 @@ final class ne extends hh {
         return true;
     }
 
-    ne(wl param0) {
+    ne(OpenGlRenderer param0) {
         super(param0);
         this.field_d = false;
         try {

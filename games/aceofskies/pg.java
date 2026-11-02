@@ -10,7 +10,7 @@ final class pg {
     final static void a(java.awt.Canvas param0, int param1) {
         String stackIn_6_2 = null;
         try {
-          wl.a((java.awt.Component) ((Object) param0), (byte) -3);
+          OpenGlRenderer.a((java.awt.Component) ((Object) param0), (byte) -3);
           int var2_int = 59 / ((9 - param1) / 59);
           g.a((java.awt.Component) ((Object) param0), 0);
           if (null == SteeringMode.field_c) {

@@ -96,15 +96,15 @@ final class Bullet extends FlightBody {
     final static void a(int param0, boolean param1) {
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          qm.a(ft.field_o, (byte) -31, op.field_a, param1, param0, os.field_w, 0);
-          for (int var2_int = 0; os.field_w > var2_int; var2_int++) {
+          qm.a(MidiNote.field_o, (byte) -31, op.field_a, param1, param0, DiskArchiveRequest.field_w, 0);
+          for (int var2_int = 0; DiskArchiveRequest.field_w > var2_int; var2_int++) {
             uf.field_d[param0 + var2_int] = var2_int;
           }
-          qm.a(fj.field_d, (byte) -52, nh.field_a, false, param0 + param0, os.field_w + param0, param0);
-          if (param0 >= os.field_w) {
+          qm.a(fj.field_d, (byte) -52, nh.field_a, false, param0 + param0, DiskArchiveRequest.field_w + param0, param0);
+          if (param0 >= DiskArchiveRequest.field_w) {
             return;
           }
-          os.field_w = param0;
+          DiskArchiveRequest.field_w = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

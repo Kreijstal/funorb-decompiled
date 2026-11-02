@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cj implements tl {
+final class cj implements HardwareVertexBuffer {
     jagdx.IDirect3DVertexBuffer field_f;
     private int field_b;
     private byte field_g;
-    private kr field_e;
+    private HardwareDirect3DRenderer field_e;
     private boolean field_a;
     private int field_c;
     private boolean field_d;
@@ -102,7 +102,7 @@ final class cj implements tl {
         return null;
     }
 
-    cj(kr param0, boolean param1) {
+    cj(HardwareDirect3DRenderer param0, boolean param1) {
         this.field_d = false;
         this.field_e = param0;
         this.field_a = param1 ? true : false;

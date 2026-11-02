@@ -27,7 +27,7 @@ final class ds extends IntrusiveNode {
             return stackIn_4_0;
           }
           if (64 < var2_int) {
-            w stackIn_8_0 = ei.field_d;
+            w stackIn_8_0 = GzipInflater.field_d;
             return stackIn_8_0;
           }
           if (param1.charAt(0) == 34) {

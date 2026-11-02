@@ -4,7 +4,7 @@
 public class dxVertexLayout extends fa {
     jagdx.IDirect3DVertexDeclaration field_d;
 
-    dxVertexLayout(kr param0, pl[] param1) {
+    dxVertexLayout(HardwareDirect3DRenderer param0, pl[] param1) {
         jagdx.VertexElementCollection var10 = new jagdx.VertexElementCollection(param0.field_Ic);
         int var4 = 0;
         for (int var5 = 0; param1.length > var5; var5++) {

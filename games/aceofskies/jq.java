@@ -36,7 +36,7 @@ final class jq extends oo implements dn {
           return;
         }
         try {
-          fg.b(true);
+          CachedArchiveProvider.b(true);
           this.h((byte) -15);
           int var6_int = -106 % ((-27 - param4) / 61);
         } catch (RuntimeException runtimeException) {
@@ -64,7 +64,7 @@ final class jq extends oo implements dn {
             var4 = param1.field_f;
             if (param1.field_a == 248) {
               if (!param0) {
-                ua.c(0);
+                OpenGlBuffer.c(0);
               }
               var4 = rl.field_i;
               this.field_eb = true;
@@ -82,7 +82,7 @@ final class jq extends oo implements dn {
               var5.a((no) (this), param2 ^ 17536, mq.field_i);
             } else if (param1.field_a == 5) {
               var5.a(11, (byte) 105, ln.field_a);
-              var5.a(17, (byte) -126, mb.field_s);
+              var5.a(17, (byte) -126, SoftCacheReference.field_s);
             } else {
               var5.a(-1, (byte) -51, Bullet.field_j);
             }
@@ -118,7 +118,7 @@ final class jq extends oo implements dn {
           if (this.field_gb) {
             return super.h(11);
           }
-          fr var2 = oe.d(86);
+          fr var2 = CanvasImageBuffer.d(86);
           if (var2 == null) {
             return super.h(11);
           }
@@ -131,7 +131,7 @@ final class jq extends oo implements dn {
         if (this.field_gb) {
           return super.h(11);
         }
-        fr var2Lifetime1 = oe.d(86);
+        fr var2Lifetime1 = CanvasImageBuffer.d(86);
         if (var2Lifetime1 == null) {
           return super.h(11);
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mu extends RendererBitmapFont {
-    private wl field_f;
+    private OpenGlRenderer field_f;
     private si field_g;
     private boolean field_e;
     private el field_h;
@@ -67,7 +67,7 @@ final class mu extends RendererBitmapFont {
         }
     }
 
-    mu(wl param0, BitmapFontMetrics param1, SpriteData[] param2, boolean param3) {
+    mu(OpenGlRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int stackIn_22_2 = 0;
         int var8_int;

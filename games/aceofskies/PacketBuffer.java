@@ -35,10 +35,10 @@ class PacketBuffer extends IntrusiveNode {
           }
           int var3_int = -6 / ((param2 + 4) / 41);
           if (!(param1 instanceof byte[])) {
-            if (!(param1 instanceof af)) {
+            if (!(param1 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            af var5 = (af) (param1);
+            ByteStorage var5 = (ByteStorage) (param1);
             byte[] stackIn_12_0 = var5.b(-126);
             return stackIn_12_0;
           }
@@ -47,7 +47,7 @@ class PacketBuffer extends IntrusiveNode {
             byte[] stackIn_9_0 = var4;
             return stackIn_9_0;
           }
-          byte[] stackIn_7_0 = fg.a(var4, (byte) 107);
+          byte[] stackIn_7_0 = CachedArchiveProvider.a(var4, (byte) 107);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,7 +108,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           CharSequence var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + fs.a(false, param1.length(), var4, this.payload, this.position, 0);
+          this.position = this.position + BoundedRandomAccessFile.a(false, param1.length(), var4, this.payload, this.position, 0);
           int fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -418,7 +418,7 @@ class PacketBuffer extends IntrusiveNode {
         if (0 == var5) {
           return "";
         }
-        return hf.a(-111, var5, var4, this.payload);
+        return SocketArchiveNetworkClient.a(-111, var5, var4, this.payload);
     }
 
     final void b(int param0, String param1) {
@@ -494,7 +494,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, Object param1, rk param2) {
+    final static void a(int param0, Object param1, SystemTaskService param2) {
         String stackIn_19_2 = null;
         String stackIn_22_2 = null;
         Throwable decompiledCaughtException = null;
@@ -585,7 +585,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           CharSequence var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + fs.a(param0, param1.length(), var4, this.payload, this.position, 0);
+          this.position = this.position + BoundedRandomAccessFile.a(param0, param1.length(), var4, this.payload, this.position, 0);
           int fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -597,8 +597,8 @@ class PacketBuffer extends IntrusiveNode {
     final String readNullTerminatedText(int obfuscationGuard) {
         int fieldTemp$0 = 0;
         if (obfuscationGuard != -17883) {
-          rk var4 = (rk) null;
-          PacketBuffer.a(-24, (Object) null, (rk) null);
+          SystemTaskService var4 = (SystemTaskService) null;
+          PacketBuffer.a(-24, (Object) null, (SystemTaskService) null);
         }
         int var2 = this.position;
         do {
@@ -609,7 +609,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return hf.a(-124, var3, var2, this.payload);
+        return SocketArchiveNetworkClient.a(-124, var3, var2, this.payload);
     }
 
     final static void i(int param0) {

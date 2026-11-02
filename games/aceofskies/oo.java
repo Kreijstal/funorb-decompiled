@@ -17,14 +17,14 @@ class oo extends dg implements dn {
         if (param0 >= 82) {
           this.field_bb.a(4210752, 2121792, (byte) 61);
           jn var2 = new jn(this, this.field_U, ek.field_x);
-          var2.a(15, (byte) -57, ag.field_o);
+          var2.a(15, (byte) -57, ArchiveRequest.field_o);
           this.d(var2, -30244);
           return;
         }
         this.field_bb = (ss) null;
         this.field_bb.a(4210752, 2121792, (byte) 61);
         jn var2Lifetime1 = new jn(this, this.field_U, ek.field_x);
-        var2Lifetime1.a(15, (byte) -57, ag.field_o);
+        var2Lifetime1.a(15, (byte) -57, ArchiveRequest.field_o);
         this.d(var2Lifetime1, -30244);
     }
 
@@ -60,7 +60,7 @@ class oo extends dg implements dn {
         }
         this.field_z = false;
         if (this.field_cb) {
-          un.a(-21);
+          ArchiveNetworkClient.a(-21);
           return;
         }
         if (!this.field_V) {
@@ -136,7 +136,7 @@ class oo extends dg implements dn {
           jn var4 = var7;
           if (param1 == 5) {
             var7.a(11, (byte) 113, ln.field_a);
-            var7.a(17, (byte) -120, mb.field_s);
+            var7.a(17, (byte) -120, SoftCacheReference.field_s);
           } else if (param1 != 256) {
             jn stackIn_13_0 = var7;
             int stackIn_13_1 = -1;
@@ -153,7 +153,7 @@ class oo extends dg implements dn {
           if (param1 == 3) {
             var7.a(7, (byte) 75, lu.field_a);
           } else if (param1 == 4) {
-            var7.a(8, (byte) 101, mh.field_n);
+            var7.a(8, (byte) 101, OpenGlVolumeTexture.field_n);
           } else if (param1 == 6) {
             var7.a(9, (byte) -124, ao.field_d);
           } else if (param1 == 9) {

@@ -32,7 +32,7 @@ abstract class vo extends li implements dr {
         newQuery.entryLimit = entryLimit;
         newQuery.valuesPerEntry = valuesPerEntry;
         nh.pendingHighscoreQueries.addLast(81, newQuery);
-        ag.writeHighscoreQuery(opcode, 5, newQuery);
+        ArchiveRequest.writeHighscoreQuery(opcode, 5, newQuery);
         return newQuery;
     }
 

@@ -22,10 +22,10 @@ final class ic {
 
     final static void a(int param0) {
         Throwable decompiledCaughtException = null;
-        if (ua.field_d != null) {
-          Object var1 = ua.field_d;
+        if (OpenGlBuffer.field_d != null) {
+          Object var1 = OpenGlBuffer.field_d;
           synchronized (var1) {
-            ua.field_d = null;
+            OpenGlBuffer.field_d = null;
           }
         }
         if (param0 != 0) {
@@ -43,7 +43,7 @@ final class ic {
             return stackIn_4_0;
           }
           if (63 < var2_int) {
-            w stackIn_7_0 = ei.field_d;
+            w stackIn_7_0 = GzipInflater.field_d;
             return stackIn_7_0;
           }
           for (int var3 = 0; var3 < var2_int; var3++) {
@@ -54,7 +54,7 @@ final class ic {
                 w stackIn_15_0 = td.field_d;
                 return stackIn_15_0;
               }
-            } else if (ml.field_l.indexOf(var4) == -1) {
+            } else if (InstrumentPatch.field_l.indexOf(var4) == -1) {
               w stackIn_18_0 = td.field_d;
               return stackIn_18_0;
             }

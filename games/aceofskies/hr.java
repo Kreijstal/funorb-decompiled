@@ -17,7 +17,7 @@ abstract class hr extends or {
         field_e = null;
     }
 
-    abstract go a(int param0);
+    abstract HardwareCubeTexture a(int param0);
 
     final static void a(boolean param0, String param1, boolean param2, byte param3) {
         try {

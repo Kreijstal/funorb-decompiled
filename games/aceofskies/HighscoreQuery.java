@@ -60,9 +60,9 @@ final class HighscoreQuery extends IntrusiveNode {
           return;
         }
         try {
-          qg.field_d = param0;
+          MouseWheelInput.field_d = param0;
           po.field_j = param2;
-          ku.field_h = param3;
+          DirectByteStorage.field_h = param3;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "uc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

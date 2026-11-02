@@ -141,7 +141,7 @@ final class FlightSession {
                     Aircraft var12 = var10_ref_md__[var11];
                     if (var12 != null &&
                       var12.hitPoints > 0 && (this.playerAircraft != var12 ||
-                      var13) && gh.playerDefinition == var12.definition) {
+                      var13) && BufferedRandomAccessFile.playerDefinition == var12.definition) {
                       var9++;
                     }
                     var11++;
@@ -183,7 +183,7 @@ final class FlightSession {
                   int var11Lifetime1 = stackIn_90_0;
                   jm.levelRingSprites[1 + var8].a(var5, var6, 0, var11Lifetime1, 1);
                 }
-                bs.upgradeSprites[var7].a(var5, var6);
+                GameKeyHandler.upgradeSprites[var7].a(var5, var6);
                 if (var10 != 0) {
                   HighscoreQuery.powerBulbSprites[1].a(var5 - 9, -12 + var6, 0, var9 * 16843009, 2);
                 }
@@ -220,21 +220,21 @@ final class FlightSession {
                 renderer.d(33, 213, 0, -5782, -65281, -149 + sh.field_u + var4_int);
               }
               var4_int = var6 + (40 * var3_int >> 8);
-              ua.counterPanelSprites[1].a(-208 + sh.field_u, -var4_int);
+              OpenGlBuffer.counterPanelSprites[1].a(-208 + sh.field_u, -var4_int);
               this.drawRollingDigits(this.displayedMultiplier, 3, -var4_int + 4, true, this.multiplierAnimationTicks, this.targetMultiplier, -167 + sh.field_u, true, 10);
               var4_int = 146 * var3_int >> 8;
-              ua.counterPanelSprites[0].a(sh.field_u - 146 + var4_int, 0);
+              OpenGlBuffer.counterPanelSprites[0].a(sh.field_u - 146 + var4_int, 0);
               this.drawRollingDigits(this.displayedScore, 8, 4, false, this.scoreAnimationTicks, this.targetScore, -21 + (sh.field_u + var4_int), false, 10);
               var4_int = 130 * var3_int >> 8;
               this.drawRadar(renderer, var4_int, obfuscationGuard ^ -16732145);
               var4_int = 35 * var3_int >> 8;
               var7 = sh.field_u - 30;
-              var8 = var4_int + gp.field_w - 30;
+              var8 = var4_int + NetworkArchiveRequest.field_w - 30;
               var9 = 0;
               do {
                 if (var9 >= this.lives) {
                   var4_int = var3_int * 80 >> 8;
-                  var8 = gp.field_w - 150;
+                  var8 = NetworkArchiveRequest.field_w - 150;
                   var7 = -25 + (sh.field_u + var4_int);
                   ii.gaugeSprites[1][2].a(var7, var8);
                   var5_ref_bo.a(var7 + 20, var7, 124 + var8, -this.displayedWeaponHeat + var8 + 104, 82);
@@ -242,7 +242,7 @@ final class FlightSession {
                   var5_ref_bo.a(true);
                   ii.gaugeSprites[1][0].a(var7, var8);
                   var7 = var4_int + (sh.field_u - 50);
-                  var8 = -150 + gp.field_w;
+                  var8 = -150 + NetworkArchiveRequest.field_w;
                   ii.gaugeSprites[0][2].a(var7, var8);
                   var5_ref_bo.a(var7 + 20, var7, var8 + 124, -this.displayedHealthPercent + var8 + 101, -92);
                   ii.gaugeSprites[0][1].a(var7, var8);
@@ -256,9 +256,9 @@ final class FlightSession {
               } while (!var13);
               var9 = 0;
               do {
-                if (!(var9 < gh.playerDefinition.maximumHitPoints)) {
+                if (!(var9 < BufferedRandomAccessFile.playerDefinition.maximumHitPoints)) {
                   var7 = var4_int + (-80 + sh.field_u);
-                  var8 = -151 + gp.field_w;
+                  var8 = -151 + NetworkArchiveRequest.field_w;
                   ii.gaugeSprites[2][3].a(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
                   var5_ref_bo.a(30 + var7, var7, 135 + var8, -this.displayedTemporaryWeaponTicks + (103 + var8), obfuscationGuard + 20115);
                   ii.gaugeSprites[2][2].a(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
@@ -267,7 +267,7 @@ final class FlightSession {
                   var9 = (int)((1.0 + Math.sin((double)this.simulationTick * 3.141592653589793 / 20.0)) * (double)this.temporaryWeaponOpacity / 2.0);
                   break;
                 }
-                var10 = -(var9 * 100 / gh.playerDefinition.maximumHitPoints) + (var8 + 100);
+                var10 = -(var9 * 100 / BufferedRandomAccessFile.playerDefinition.maximumHitPoints) + (var8 + 100);
                 renderer.b(var10, var7 + 5, var7 + 10, 1879048192, var10, 1);
                 renderer.b(var10 + 1, var7 + 5, var7 + 10, 1073741824, var10 + 1, 1);
                 var9++;
@@ -546,8 +546,8 @@ final class FlightSession {
             }
             int var3_int = qq.a(20, this.aircraft.length);
             if (null != this.aircraft[var3_int]) {
-              boolean stackIn_19_0 = !(gh.playerDefinition != aircraft.definition);
-              boolean stackIn_23_1 = !(this.aircraft[var3_int].definition != gh.playerDefinition);
+              boolean stackIn_19_0 = !(BufferedRandomAccessFile.playerDefinition != aircraft.definition);
+              boolean stackIn_23_1 = !(this.aircraft[var3_int].definition != BufferedRandomAccessFile.playerDefinition);
               if (stackIn_19_0 ^ stackIn_23_1) {
                 aircraft.targetAircraft = this.aircraft[var3_int];
               }
@@ -564,7 +564,7 @@ final class FlightSession {
           regionExit1: {
             boolean decompiledFrameCompleted1 = true;
             regionExit2: {
-              if (ro.field_u == aircraft.definition) {
+              if (OpenGlIndexBuffer.field_u == aircraft.definition) {
                 if (aircraft.targetAircraft != null) {
                   return;
                 }
@@ -577,7 +577,7 @@ final class FlightSession {
                   if (obfuscationControl) {
                     while (true) {
                       if (stackIn_153_0 != stackIn_153_1 && (!(2 >= candidateAircraft.lifecyclePhase) ||
-                        obfuscationControl) && (candidateAircraft.definition == gh.playerDefinition &&
+                        obfuscationControl) && (candidateAircraft.definition == BufferedRandomAccessFile.playerDefinition &&
                         candidateAircraft.targetAircraft != aircraft &&
                         candidateAircraft.pursuingAircraft == null)) {
                         break regionExit2;
@@ -601,8 +601,8 @@ final class FlightSession {
                   if (stackIn_153_0 != stackIn_153_1 &&
                     candidateAircraft.lifecyclePhase > 2 &&
                     this.playerAircraft != candidateAircraft &&
-                    candidateAircraft.definition != ro.field_u &&
-                    candidateAircraft.definition != gh.playerDefinition) {
+                    candidateAircraft.definition != OpenGlIndexBuffer.field_u &&
+                    candidateAircraft.definition != BufferedRandomAccessFile.playerDefinition) {
                     if (aircraft.targetAircraft != null) {
                       aircraft.targetAircraft.pursuingAircraft = null;
                     }
@@ -625,7 +625,7 @@ final class FlightSession {
                       if (stackIn_88_0 != null &&
                         2 < candidateAircraft.lifecyclePhase &&
                         this.playerAircraft != candidateAircraft &&
-                        ro.field_u != candidateAircraft.definition) {
+                        OpenGlIndexBuffer.field_u != candidateAircraft.definition) {
                         if (aircraft.targetAircraft != null) {
                           aircraft.targetAircraft.pursuingAircraft = null;
                         }
@@ -643,7 +643,7 @@ final class FlightSession {
                 }
                 stackIn_88_0.pursuingAircraft = aircraft;
               }
-              if (gh.playerDefinition == aircraft.definition) {
+              if (BufferedRandomAccessFile.playerDefinition == aircraft.definition) {
                 if (null != aircraft.targetAircraft) {
                   return;
                 }
@@ -655,7 +655,7 @@ final class FlightSession {
                     return;
                   }
                   if (candidateAircraft != null &&
-                    candidateAircraft.lifecyclePhase > 2 && (gh.playerDefinition != candidateAircraft.definition ||
+                    candidateAircraft.lifecyclePhase > 2 && (BufferedRandomAccessFile.playerDefinition != candidateAircraft.definition ||
                     obfuscationControl) && (aircraft != candidateAircraft.targetAircraft &&
                     candidateAircraft.pursuingAircraft == null)) {
                     if (aircraft.targetAircraft != null) {
@@ -701,7 +701,7 @@ final class FlightSession {
                   stackIn_153_0 = null;
                   stackIn_153_1 = candidateAircraft;
                   if (stackIn_153_0 != stackIn_153_1 && (!(2 >= candidateAircraft.lifecyclePhase) ||
-                    obfuscationControl) && (candidateAircraft.definition == gh.playerDefinition &&
+                    obfuscationControl) && (candidateAircraft.definition == BufferedRandomAccessFile.playerDefinition &&
                     candidateAircraft.targetAircraft != aircraft &&
                     candidateAircraft.pursuingAircraft == null)) {
                     break;
@@ -821,32 +821,32 @@ final class FlightSession {
             return;
           }
           bo.field_h = 0;
-          gh.playerDefinition.maximumSpeed = ub.basePlayerDefinition.maximumSpeed;
+          BufferedRandomAccessFile.playerDefinition.maximumSpeed = ub.basePlayerDefinition.maximumSpeed;
           this.fireRateUpgradeLevel = 0;
           this.targetUpgradeCredits = 0;
           this.multiplierPanelHidePhase = 200;
-          ei.field_a = 0;
+          GzipInflater.field_a = 0;
           this.targetScore = 0;
           this.turnRateUpgradeLevel = 0;
           this.upgradeCredits = 0;
           this.scoreMultiplier = 1;
           this.invulnerabilityCheat = false;
           this.targetMultiplier = 1;
-          gh.playerDefinition.turnRate = ub.basePlayerDefinition.turnRate;
+          BufferedRandomAccessFile.playerDefinition.turnRate = ub.basePlayerDefinition.turnRate;
           or.score = 0;
           se.field_b = 0;
           this.healthUpgradeLevel = 0;
           this.displayedUpgradeCredits = 0;
           NetworkGameClient.field_x = 0;
-          gh.playerDefinition.maximumHitPoints = ub.basePlayerDefinition.maximumHitPoints;
+          BufferedRandomAccessFile.playerDefinition.maximumHitPoints = ub.basePlayerDefinition.maximumHitPoints;
           this.displayedScore = 0;
-          gh.playerDefinition.fireInterval = ub.basePlayerDefinition.fireInterval;
+          BufferedRandomAccessFile.playerDefinition.fireInterval = ub.basePlayerDefinition.fireInterval;
           r.field_n = 0;
           this.speedUpgradeLevel = 0;
           this.displayedMultiplier = 1;
-          gh.playerDefinition.heatReduction = ub.basePlayerDefinition.heatReduction;
+          BufferedRandomAccessFile.playerDefinition.heatReduction = ub.basePlayerDefinition.heatReduction;
           Aircraft var3 = this.playerAircraft;
-          this.playerAircraft = new Aircraft(new Vector2(), gh.playerDefinition);
+          this.playerAircraft = new Aircraft(new Vector2(), BufferedRandomAccessFile.playerDefinition);
           this.playerAircraft.engineSound = po.a(this.computeSpatialVolume(this.playerAircraft.position, 200, this.playerAircraft.position), 0, this.playerAircraft.definition.getEngineSample((byte) -88));
           this.aircraft = new Aircraft[16];
           this.bullets = new Bullet[1000];
@@ -930,7 +930,7 @@ final class FlightSession {
                 var4.advance(obfuscationGuard + 95);
                 var5 = false;
                 if (null != var4.sourceAircraft) {
-                  if (ro.field_u == var4.sourceAircraft.definition) {
+                  if (OpenGlIndexBuffer.field_u == var4.sourceAircraft.definition) {
                     Aircraft[] var6_ref_md__Lifetime2 = this.aircraft;
                     int var7Lifetime2 = 0;
                     scanLoop1: while (true) {
@@ -939,7 +939,7 @@ final class FlightSession {
                         Object stackIn_11_0Lifetime1Lifetime1 = null;
                         Aircraft stackIn_11_1Lifetime1Lifetime1 = var8Lifetime2;
                         if (stackIn_11_0Lifetime1Lifetime1 != stackIn_11_1Lifetime1Lifetime1 &&
-                          0 < var8Lifetime2.hitPoints && ((ro.field_u != var8Lifetime2.definition ||
+                          0 < var8Lifetime2.hitPoints && ((OpenGlIndexBuffer.field_u != var8Lifetime2.definition ||
                           var9) &&
                           (this.playerAircraft != var8Lifetime2 ||
                           this.respawnInvulnerabilityTicks <= 0 ||
@@ -962,7 +962,7 @@ final class FlightSession {
                       }
                       break;
                     }
-                  } else if (var4.sourceAircraft.definition != gh.playerDefinition) {
+                  } else if (var4.sourceAircraft.definition != BufferedRandomAccessFile.playerDefinition) {
                     var6_ref_md__ = this.aircraft;
                     var7 = 0;
                     scanLoop2: while (true) {
@@ -971,7 +971,7 @@ final class FlightSession {
                         stackIn_11_0Lifetime1 = null;
                         stackIn_11_1Lifetime1 = var8;
                         if (stackIn_11_0Lifetime1 != stackIn_11_1Lifetime1 &&
-                          var8.hitPoints > 0 && ((var8.definition == gh.playerDefinition ||
+                          var8.hitPoints > 0 && ((var8.definition == BufferedRandomAccessFile.playerDefinition ||
                           var9) &&
                           (this.playerAircraft != var8 ||
                           this.respawnInvulnerabilityTicks <= 0) &&
@@ -996,7 +996,7 @@ final class FlightSession {
                         stackIn_11_0Lifetime1 = null;
                         stackIn_11_1Lifetime1 = var8;
                         if (stackIn_11_0Lifetime1 != stackIn_11_1Lifetime1 && (!(var8.hitPoints <= 0) ||
-                          var9) && var8.definition != gh.playerDefinition && (uh.a(obfuscationGuard + 185, var8.position, (double)(var8.definition.collisionRadius * 2), var4.position) ||
+                          var9) && var8.definition != BufferedRandomAccessFile.playerDefinition && (uh.a(obfuscationGuard + 185, var8.position, (double)(var8.definition.collisionRadius * 2), var4.position) ||
                           var9)) {
                           if (var4.sourceAircraft == this.playerAircraft) {
                             this.shotsHit = this.shotsHit + 1;
@@ -1032,7 +1032,7 @@ final class FlightSession {
                     Object stackIn_11_0Lifetime2 = null;
                     Aircraft stackIn_11_1Lifetime2 = var8Lifetime1;
                     if (stackIn_11_0Lifetime2 != stackIn_11_1Lifetime2 && (!(0 >= var8Lifetime1.hitPoints) ||
-                      var9) && gh.playerDefinition != var8Lifetime1.definition && (this.playerAircraft != var8Lifetime1 ||
+                      var9) && BufferedRandomAccessFile.playerDefinition != var8Lifetime1.definition && (this.playerAircraft != var8Lifetime1 ||
                       0 >= this.respawnInvulnerabilityTicks ||
                       var9) && (uh.a(122, var8Lifetime1.position, (double)(var8Lifetime1.definition.collisionRadius * 2), var4.position) ||
                       var9)) {
@@ -1174,7 +1174,7 @@ final class FlightSession {
           if (var8 < 1) {
             return;
           }
-          if (ro.field_u != aircraft.definition) {
+          if (OpenGlIndexBuffer.field_u != aircraft.definition) {
             if (aircraft.temporaryWeapon == 3) {
               bo.a(fd.field_b[3], var8, 23187);
               if (!var9) {
@@ -1363,7 +1363,7 @@ final class FlightSession {
             int stackIn_13_2 = (this.arcadeMode) ? 1 : 0;
             int stackIn_15_3 = 65535;
             int stackIn_16_4 = (!this.arcadeMode) ? 0 : 1;
-            to.lastScoreSubmission = new ScoreSubmission(stackIn_13_2, stackIn_15_3 ^ stackIn_16_4, NetworkGameClient.field_x, bo.field_h, se.field_b, ei.field_a, new int[]{100 * this.finalScore + this.finalAccuracyPercent});
+            to.lastScoreSubmission = new ScoreSubmission(stackIn_13_2, stackIn_15_3 ^ stackIn_16_4, NetworkGameClient.field_x, bo.field_h, se.field_b, GzipInflater.field_a, new int[]{100 * this.finalScore + this.finalAccuracyPercent});
             if (!cn.b(true)) {
               ClientException.queueScoreSubmission(to.lastScoreSubmission, true, 3);
             }
@@ -1382,7 +1382,7 @@ final class FlightSession {
         boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           se.field_b = se.field_b + 8;
-          ei.field_a = ei.field_a - 3;
+          GzipInflater.field_a = GzipInflater.field_a - 3;
           bo.field_h = bo.field_h - 5;
           NetworkGameClient.field_x = NetworkGameClient.field_x + 10;
           if (!this.attractMode) {
@@ -1468,7 +1468,7 @@ final class FlightSession {
                 tt.field_a = true;
               }
               if (decompiledFrameRemainder1) {
-                int discarded$0 = this.spawnAircraft((byte) 108, ro.field_u, 1, 0);
+                int discarded$0 = this.spawnAircraft((byte) 108, OpenGlIndexBuffer.field_u, 1, 0);
               }
               if (bk.lastKeyCode == 51) {
                 tt.field_a = true;
@@ -1500,7 +1500,7 @@ final class FlightSession {
                   }
                   if ((var4 != null ||
                     var5) &&
-                    var4.definition != gh.playerDefinition) {
+                    var4.definition != BufferedRandomAccessFile.playerDefinition) {
                     var4.hitPoints = 0;
                   }
                   var3++;
@@ -1753,7 +1753,7 @@ final class FlightSession {
               decompiledFrameRemainder0 = ((var5));
             }
             if (decompiledFrameRemainder0) {
-              ei.field_a = ei.field_a + points;
+              GzipInflater.field_a = GzipInflater.field_a + points;
               if (var5) {
                 if (qq.a(20, 10) >= 5) {
                   NetworkGameClient.field_x = NetworkGameClient.field_x - points;
@@ -1775,15 +1775,15 @@ final class FlightSession {
             !this.arcadeMode) {
             if (var3_int < 5000 &&
               or.score >= 5000) {
-              fm.a(255, (byte) 111, 0);
+              OpenGlTransparentWaterEffect.a(255, (byte) 111, 0);
             }
             if (var3_int < 30000 &&
               or.score >= 30000) {
-              fm.a(254, (byte) 111, 1);
+              OpenGlTransparentWaterEffect.a(254, (byte) 111, 1);
             }
             if (var3_int < 80000 &&
               or.score >= 80000) {
-              fm.a(253, (byte) 111, 2);
+              OpenGlTransparentWaterEffect.a(253, (byte) 111, 2);
             }
           }
           int var4 = -30 / ((26 - obfuscationGuard) / 46);
@@ -1846,7 +1846,7 @@ final class FlightSession {
           if (obfuscationGuard != -19054) {
             this.removeSmokeParticle(-82, -76);
           }
-          int discarded$1 = this.spawnAircraft((byte) -8, gh.playerDefinition, 1, 0);
+          int discarded$1 = this.spawnAircraft((byte) -8, BufferedRandomAccessFile.playerDefinition, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var2 = decompiledCaughtParameter0;
@@ -1986,7 +1986,7 @@ final class FlightSession {
                       stackIn_169_0 = waveAircraft;
                       if (!obfuscationControl) {
                         if (stackIn_169_0 != null &&
-                          gh.playerDefinition != waveAircraft.definition &&
+                          BufferedRandomAccessFile.playerDefinition != waveAircraft.definition &&
                           waveAircraft.lifecyclePhase > 2) {
                           if (waveAircraft.definition == sl.field_p) {
                             var8_int++;
@@ -1997,7 +1997,7 @@ final class FlightSession {
                           if (gm.field_y == waveAircraft.definition) {
                             var6_int++;
                           }
-                          if (ro.field_u == waveAircraft.definition) {
+                          if (OpenGlIndexBuffer.field_u == waveAircraft.definition) {
                             var9++;
                           }
                           if (ju.field_k == waveAircraft.definition) {
@@ -2078,7 +2078,7 @@ final class FlightSession {
                       if (var4 > (this.classicWaveIndex / 5)) {
                         break scanLoop2;
                       }
-                      if (this.classicWaveIndex >= (oe.classicWaveMessages.length - 1)) {
+                      if (this.classicWaveIndex >= (CanvasImageBuffer.classicWaveMessages.length - 1)) {
                         if (0 < var4) {
                           break scanLoop2;
                         }
@@ -2110,7 +2110,7 @@ final class FlightSession {
                   if (decompiledFrameRemainder1) {
                     if (!this.attractMode &&
                       this.noLivesLost) {
-                      fm.a(250, (byte) 111, 5);
+                      OpenGlTransparentWaterEffect.a(250, (byte) 111, 5);
                     }
                     this.finishGame(false, true, 100);
                     decompiledFrameRemainder1 = ((obfuscationControl));
@@ -2131,7 +2131,7 @@ final class FlightSession {
                   if ((stackIn_265_0 != null ||
                     obfuscationControl) && (!(populationAircraft.lifecyclePhase <= 2) ||
                     obfuscationControl)) {
-                    if (gh.playerDefinition != populationAircraft.definition) {
+                    if (BufferedRandomAccessFile.playerDefinition != populationAircraft.definition) {
                       var4++;
                     } else {
                       var5Lifetime1Lifetime1++;
@@ -2140,13 +2140,13 @@ final class FlightSession {
                   var7Lifetime2++;
                 }
                 if (var5Lifetime1Lifetime1 < 7) {
-                  int discarded$1 = this.spawnAircraft((byte) -1, gh.playerDefinition, 1, 0);
+                  int discarded$1 = this.spawnAircraft((byte) -1, BufferedRandomAccessFile.playerDefinition, 1, 0);
                 }
                 if (var4 < 7) {
                   var4 = qq.a(20, 100);
                   if (var4 == 0 &&
                     (hg.field_D & 64) != 0) {
-                    int discarded$2 = this.spawnAircraft((byte) 54, ro.field_u, 1, 0);
+                    int discarded$2 = this.spawnAircraft((byte) 54, OpenGlIndexBuffer.field_u, 1, 0);
                     decompiledFrameRemainder1 = ((obfuscationControl));
                   }
                   if (decompiledFrameRemainder1) {
@@ -2209,7 +2209,7 @@ final class FlightSession {
                     break;
                   }
                   if (attractPlayerCandidate != null &&
-                    attractPlayerCandidate.definition == gh.playerDefinition &&
+                    attractPlayerCandidate.definition == BufferedRandomAccessFile.playerDefinition &&
                     attractPlayerCandidate.hitPoints > 0) {
                     this.playerAircraft = attractPlayerCandidate;
                   }
@@ -2367,10 +2367,10 @@ final class FlightSession {
             this.startClassicWave(-8);
           }
           boolean var5Lifetime3 = false;
-          if (sh.field_u < gp.field_w) {
+          if (sh.field_u < NetworkArchiveRequest.field_w) {
             stackIn_381_0 = (double)sh.field_u;
           } else {
-            stackIn_381_0 = (double)gp.field_w;
+            stackIn_381_0 = (double)NetworkArchiveRequest.field_w;
           }
           double viewportMinimumExtent = stackIn_381_0;
           double minimumCameraScale = viewportMinimumExtent * 100.0 / 480.0;
@@ -2391,12 +2391,12 @@ final class FlightSession {
           Vector2 playerPosition = this.playerAircraft.position;
           double scaledPlayerOffsetX = Math.abs(this.cameraScale * playerPosition.x / 1000.0);
           double scaledPlayerOffsetY = Math.abs(playerPosition.y * this.cameraScale / 1000.0);
-          if (1.01 * scaledPlayerOffsetX < (double)(gp.field_w / 4) &&
+          if (1.01 * scaledPlayerOffsetX < (double)(NetworkArchiveRequest.field_w / 4) &&
             (double)(sh.field_u / 4) > scaledPlayerOffsetY * 1.01) {
             var5Lifetime3 = true;
           }
           if (0.99 * scaledPlayerOffsetX > (double)(sh.field_u / 4) ||
-            scaledPlayerOffsetY * 0.99 > (double)(gp.field_w / 4)) {
+            scaledPlayerOffsetY * 0.99 > (double)(NetworkArchiveRequest.field_w / 4)) {
             var4Lifetime2 = true;
           }
           if (this.cameraScale > maximumCameraScale) {
@@ -2561,7 +2561,7 @@ final class FlightSession {
                   aircraft.weaponHeat = 200;
                   if (this.playerAircraft == aircraft &&
                     !this.attractMode) {
-                    bm.a((byte) -70, mh.field_o);
+                    bm.a((byte) -70, OpenGlVolumeTexture.field_o);
                     if (var5) {
                       this.fireBullets((byte) 60, aircraft);
                       aircraft.fireCooldown = aircraft.fireCooldown + 2;
@@ -2580,7 +2580,7 @@ final class FlightSession {
             0 < aircraft.temporaryWeapon) {
             if (aircraft.temporaryWeapon == 3) {
               aircraft.weaponHeat = 200;
-              bm.a((byte) -70, mh.field_o);
+              bm.a((byte) -70, OpenGlVolumeTexture.field_o);
             }
             aircraft.temporaryWeapon = 0;
             aircraft.temporaryWeaponTicks = 0;
@@ -2598,7 +2598,7 @@ final class FlightSession {
           aircraft.fireRequested = false;
           aircraft.advance(2);
           aircraft.wrapWorld(3200.0, (byte) 49, 2400.0);
-          if (ro.field_u != aircraft.definition) {
+          if (OpenGlIndexBuffer.field_u != aircraft.definition) {
             if (0 < aircraft.bankOffset) {
               aircraft.bankOffset = aircraft.bankOffset - 1;
             }
@@ -2739,11 +2739,11 @@ final class FlightSession {
             decompiledFrameRemainder0 = ((var4));
           }
           if (decompiledFrameRemainder0) {
-            if (aircraft.definition == ro.field_u) {
+            if (aircraft.definition == OpenGlIndexBuffer.field_u) {
               aircraft.bankOffset = aircraft.bankOffset + 1;
             }
             if (!(92 <= aircraft.lifecyclePhase)) {
-              if (aircraft.definition != ro.field_u) {
+              if (aircraft.definition != OpenGlIndexBuffer.field_u) {
                 stackIn_23_0Lifetime1 = aircraft.lifecyclePhase + 164;
               } else {
                 stackIn_23_0Lifetime1 = 256;
@@ -2753,11 +2753,11 @@ final class FlightSession {
               this.scratchPosition.setFrom(aircraft.position, true);
               this.scratchPosition.add((byte) 103, oh.a(5.0, (byte) 28));
               this.emitDepthSmoke(this.scratchPosition, 16777215, qq.a(20, 64) + 64, 0, aircraft.lifecyclePhase);
-            } else if (ro.field_u == aircraft.definition) {
+            } else if (OpenGlIndexBuffer.field_u == aircraft.definition) {
               jp.a(50, aircraft.engineSound);
               aircraft.engineSound = po.a(this.computeSpatialVolume(this.playerAircraft.position, 200, aircraft.position), 0, kn.field_c[4]);
               if (var4) {
-                if (aircraft.definition != ro.field_u) {
+                if (aircraft.definition != OpenGlIndexBuffer.field_u) {
                   stackIn_23_0 = aircraft.lifecyclePhase + 164;
                 } else {
                   stackIn_23_0 = 256;
@@ -2778,14 +2778,14 @@ final class FlightSession {
               aircraft.engineSound = null;
               this.emitAircraftScorchMark(aircraft, 8073);
               this.emitDepthSmoke(this.scratchPosition, -aircraft.definition.collisionRadius * 4, 240, 0, 0);
-              if (aircraft.definition == ro.field_u &&
+              if (aircraft.definition == OpenGlIndexBuffer.field_u &&
                 !this.attractMode &&
                 !this.arcadeMode) {
-                fm.a(249, (byte) 111, 6);
+                OpenGlTransparentWaterEffect.a(249, (byte) 111, 6);
               }
               int var3_int = this.computeSpatialVolume(this.playerAircraft.position, 200, aircraft.position);
               if (var3_int > 0) {
-                if (ro.field_u == aircraft.definition) {
+                if (OpenGlIndexBuffer.field_u == aircraft.definition) {
                   gg.a(kn.field_c[5], var3_int, -27227);
                   if (var4) {
                     if (gm.field_y == aircraft.definition) {
@@ -2848,7 +2848,7 @@ final class FlightSession {
           this.finalAccuracyPercent = stackIn_5_1;
           if (accuracyTarget == this.finalAccuracyPercent &&
             awardFlag) {
-            fm.a(248, (byte) 111, 7);
+            OpenGlTransparentWaterEffect.a(248, (byte) 111, 7);
           }
           boolean decompiledFrameRemainder0 = true;
           if (!cn.b(true)) {
@@ -2904,8 +2904,8 @@ final class FlightSession {
         boolean var18 = (AceOfSkies.obfuscationControl);
         try {
           int var4_int = -insetOffset + 64;
-          int var5 = -64 + gp.field_w + insetOffset;
-          ec.radarSprites[0].a(3 - insetOffset, insetOffset + (-126 + gp.field_w));
+          int var5 = -64 + NetworkArchiveRequest.field_w + insetOffset;
+          ec.radarSprites[0].a(3 - insetOffset, insetOffset + (-126 + NetworkArchiveRequest.field_w));
           int var6 = 7 * -this.simulationTick & 511;
           ec.radarSprites[1].a((float)var4_int, (float)var5, 4096, 65536 * var6 / 511);
           if (obfuscationGuard != 16711935) {
@@ -2929,7 +2929,7 @@ final class FlightSession {
               if (var12 > 255) {
                 var12 = 0;
               }
-              if (gh.playerDefinition == var9_ref_md.definition) {
+              if (BufferedRandomAccessFile.playerDefinition == var9_ref_md.definition) {
                 var12 = 127 + (var12 >> 1);
               }
               int var13 = var11 * var11 + var10 * var10;
@@ -2943,7 +2943,7 @@ final class FlightSession {
               var11 = var11 + var5;
               int var14 = 2;
               if (var9_ref_md != this.playerAircraft) {
-                if (gh.playerDefinition == var9_ref_md.definition) {
+                if (BufferedRandomAccessFile.playerDefinition == var9_ref_md.definition) {
                   var15 = 65280 | var12 << 24;
                   decompiledFrameRemainder0 = ((var18));
                 }
@@ -2967,7 +2967,7 @@ final class FlightSession {
                         }
                         if (decompiledFrameRemainder0) {
                           if (var9_ref_md.definition != ju.field_k) {
-                            if (var9_ref_md.definition == ro.field_u) {
+                            if (var9_ref_md.definition == OpenGlIndexBuffer.field_u) {
                               var14 = 5;
                               var15 = var12 << 24 | 65535;
                               decompiledFrameRemainder0 = ((var18));
@@ -3179,7 +3179,7 @@ final class FlightSession {
                 if (!obfuscationControl) {
                   if (null != candidate &&
                     this.playerAircraft != candidate &&
-                    candidate.definition == gh.playerDefinition) {
+                    candidate.definition == BufferedRandomAccessFile.playerDefinition) {
                     wingmanCount++;
                   }
                   aircraftIndex++;
@@ -3191,7 +3191,7 @@ final class FlightSession {
               break;
             }
             if (wingmanCount == 5) {
-              fm.a(252, (byte) 111, 3);
+              OpenGlTransparentWaterEffect.a(252, (byte) 111, 3);
             }
             this.spawnWingman(-19054);
           }
@@ -3206,7 +3206,7 @@ final class FlightSession {
             12 == this.turnRateUpgradeLevel &&
             this.fireRateUpgradeLevel == 12 &&
             this.speedUpgradeLevel == 12) {
-            fm.a(251, (byte) 111, 4);
+            OpenGlTransparentWaterEffect.a(251, (byte) 111, 4);
           }
           boolean decompiledFrameCompleted0 = true;
           this.queueTimedHudMessage(50, (byte) -86, 65280, ae.upgradeLabels[upgradeCode]);
@@ -3396,7 +3396,7 @@ final class FlightSession {
           int var11 = (int)(this.backgroundPanX - this.cameraLookAheadX * 2.0 / 3.0);
           int var12 = (int)(this.backgroundPanY - this.cameraLookAheadY * 2.0 / 3.0);
           double var13 = (double)(sh.field_u / 2);
-          double var15 = (double)(gp.field_w / 2);
+          double var15 = (double)(NetworkArchiveRequest.field_w / 2);
           int var17 = this.backgroundTint;
           if (this.lightningCountdown <= 10) {
             boolean decompiledSharedTail0 = !(this.lightningCountdown <= 5);
@@ -3413,7 +3413,7 @@ final class FlightSession {
           int var20 = (int)(this.cameraLookAheadY + var15);
           int var21 = -1280 + var12;
           scanLoop2: while (true) {
-            if (var21 <= gp.field_w) {
+            if (var21 <= NetworkArchiveRequest.field_w) {
               int var22_int = this.backgroundTileX;
               stackIn_48_0 = var11 - 1720;
               if (var28) {
@@ -3421,7 +3421,7 @@ final class FlightSession {
               }
               int var23 = stackIn_48_0;
               while (var23 <= sh.field_u) {
-                is.backgroundSprites[qg.a((byte) 110, is.backgroundSprites.length, var22_int * 23 + 7 * var18)].a((int)(var13 + this.cameraLookAheadX) + var23, var21 + (int)(var15 + this.cameraLookAheadY), 1, 0, 0);
+                is.backgroundSprites[MouseWheelInput.a((byte) 110, is.backgroundSprites.length, var22_int * 23 + 7 * var18)].a((int)(var13 + this.cameraLookAheadX) + var23, var21 + (int)(var15 + this.cameraLookAheadY), 1, 0, 0);
                 var22_int++;
                 var23 += 1720;
               }
@@ -3445,7 +3445,7 @@ final class FlightSession {
               if (stackIn_70_0 >= stackIn_70_1 &&
                 -var25 - 500 <= var24 &&
                 (500 + var25 + sh.field_u) >= var23Lifetime1 &&
-                var24 <= var25 + gp.field_w + 500) {
+                var24 <= var25 + NetworkArchiveRequest.field_w + 500) {
                 co.scorchSprites[var22.spriteIndex].b(-(var25 >> 1) + var23Lifetime1, var24 - (var25 >> 1), var25, var25);
               } else {
                 int incrementValue$0 = var21Lifetime1;
@@ -3489,8 +3489,8 @@ final class FlightSession {
                   if (var22_ref.lifetimeTicks < 512) {
                     if (var22_ref.colourOrBlastRadius < 0) {
                       var25Lifetime1 = (int)(var3 * (double)(2 * -var22_ref.colourOrBlastRadius));
-                      var26 = var22_ref.ageTicks * bl.explosionSprites.length / var22_ref.lifetimeTicks;
-                      bl.explosionSprites[var26].b(-(var25Lifetime1 >> 1) + var23Lifetime2, -(var25Lifetime1 >> 1) + var24Lifetime1, var25Lifetime1, var25Lifetime1);
+                      var26 = var22_ref.ageTicks * SectorCacheStore.explosionSprites.length / var22_ref.lifetimeTicks;
+                      SectorCacheStore.explosionSprites[var26].b(-(var25Lifetime1 >> 1) + var23Lifetime2, -(var25Lifetime1 >> 1) + var24Lifetime1, var25Lifetime1, var25Lifetime1);
                     } else {
                       var25Lifetime1 = var22_ref.spriteIndex;
                       var26 = (int)(var3 * (double)(50 * var22_ref.ageTicks) / (double)var22_ref.lifetimeTicks + 10.0);
@@ -3602,7 +3602,7 @@ final class FlightSession {
                   decompiledFrameRemainder2 = ((var28));
                 }
                 if (decompiledFrameRemainder2) {
-                  if (ro.field_u == var23_ref_md.definition) {
+                  if (OpenGlIndexBuffer.field_u == var23_ref_md.definition) {
                     var23_ref_md.definition.getSprites(-32275)[0].a((float)var24Lifetime2Lifetime1, (float)var25Lifetime2Lifetime1, (int)((double)(var23_ref_md.lifecyclePhase * 32) * var3), 0);
                     var23_ref_md.definition.getSprites(-32275)[1].a((float)var24Lifetime2Lifetime1, (float)var25Lifetime2Lifetime1, (int)((double)(32 * var23_ref_md.lifecyclePhase) * var3), var23_ref_md.bankOffset << 10);
                     int var27Lifetime1Lifetime1 = (var23_ref_md.bankOffset & 536870975) << 3;
@@ -3656,8 +3656,8 @@ final class FlightSession {
                   es.smokeSprites[var25Lifetime3Lifetime1].a(-(var26Lifetime2Lifetime1 >> 1) + var23Lifetime4Lifetime1, -(var26Lifetime2Lifetime1 >> 1) + var24Lifetime3Lifetime1, var26Lifetime2Lifetime1, var26Lifetime2Lifetime1, 0, 16777215 & var22_refLifetime1.colourOrBlastRadius | -9633548 & var27Lifetime2 << 23, 1);
                 } else {
                   var25Lifetime3Lifetime1 = (int)(var3 * (double)(2 * -var22_refLifetime1.colourOrBlastRadius));
-                  var26Lifetime2Lifetime1 = bl.explosionSprites.length * var22_refLifetime1.ageTicks / var22_refLifetime1.lifetimeTicks;
-                  bl.explosionSprites[var26Lifetime2Lifetime1].b(-(var25Lifetime3Lifetime1 >> 1) + var23Lifetime4Lifetime1, var24Lifetime3Lifetime1 - (var25Lifetime3Lifetime1 >> 1), var25Lifetime3Lifetime1, var25Lifetime3Lifetime1);
+                  var26Lifetime2Lifetime1 = SectorCacheStore.explosionSprites.length * var22_refLifetime1.ageTicks / var22_refLifetime1.lifetimeTicks;
+                  SectorCacheStore.explosionSprites[var26Lifetime2Lifetime1].b(-(var25Lifetime3Lifetime1 >> 1) + var23Lifetime4Lifetime1, var24Lifetime3Lifetime1 - (var25Lifetime3Lifetime1 >> 1), var25Lifetime3Lifetime1, var25Lifetime3Lifetime1);
                 }
               }
             }
@@ -3744,7 +3744,7 @@ final class FlightSession {
             return stackIn_40_0;
           }
           if (selectedType == 5) {
-            AircraftDefinition stackIn_42_0 = ro.field_u;
+            AircraftDefinition stackIn_42_0 = OpenGlIndexBuffer.field_u;
             return stackIn_42_0;
           }
           AircraftDefinition stackIn_44_0 = kk.field_N;
@@ -3862,16 +3862,16 @@ final class FlightSession {
     private final void startAttractMode(byte obfuscationGuard) {
         try {
           wd.hudMessages.clear(268435455);
-          gh.playerDefinition.fireInterval = ub.basePlayerDefinition.fireInterval;
+          BufferedRandomAccessFile.playerDefinition.fireInterval = ub.basePlayerDefinition.fireInterval;
           this.paused = false;
-          gh.playerDefinition.maximumHitPoints = ub.basePlayerDefinition.maximumHitPoints;
-          gh.playerDefinition.heatReduction = ub.basePlayerDefinition.heatReduction;
-          gh.playerDefinition.maximumSpeed = ub.basePlayerDefinition.maximumSpeed;
-          gh.playerDefinition.turnRate = ub.basePlayerDefinition.turnRate;
+          BufferedRandomAccessFile.playerDefinition.maximumHitPoints = ub.basePlayerDefinition.maximumHitPoints;
+          BufferedRandomAccessFile.playerDefinition.heatReduction = ub.basePlayerDefinition.heatReduction;
+          BufferedRandomAccessFile.playerDefinition.maximumSpeed = ub.basePlayerDefinition.maximumSpeed;
+          BufferedRandomAccessFile.playerDefinition.turnRate = ub.basePlayerDefinition.turnRate;
           this.invulnerabilityCheat = false;
           Aircraft var2 = this.playerAircraft;
           this.stopAircraftEngineSounds(true);
-          this.playerAircraft = new Aircraft(new Vector2(), gh.playerDefinition);
+          this.playerAircraft = new Aircraft(new Vector2(), BufferedRandomAccessFile.playerDefinition);
           this.aircraft = new Aircraft[16];
           this.aircraft[0] = this.playerAircraft;
           this.playerAircraft.engineSound = po.a(this.computeSpatialVolume(this.playerAircraft.position, 200, this.playerAircraft.position), 0, this.playerAircraft.definition.getEngineSample((byte) 93));
@@ -3929,14 +3929,14 @@ final class FlightSession {
           if (this.lightningCountdown == -1) {
             this.lightningCountdown = this.lightningRandomBound;
           }
-          this.queueHudMessage(16744448, (byte) -44, oe.classicWaveMessages[this.classicWaveIndex]);
+          this.queueHudMessage(16744448, (byte) -44, CanvasImageBuffer.classicWaveMessages[this.classicWaveIndex]);
           int[] waveComposition = ArchiveProvider.classicWaveCompositions[this.classicWaveIndex];
           if (obfuscationGuard != -20416) {
             this.respawnInvulnerabilityTicks = -42;
           }
           int remainingPickupBudget = waveComposition[6];
           if (waveComposition[5] > 0) {
-            remainingPickupBudget = this.spawnAircraft((byte) -128, ro.field_u, waveComposition[5], remainingPickupBudget);
+            remainingPickupBudget = this.spawnAircraft((byte) -128, OpenGlIndexBuffer.field_u, waveComposition[5], remainingPickupBudget);
           }
           if (waveComposition[4] > 0) {
             remainingPickupBudget = this.spawnAircraft((byte) -118, ju.field_k, waveComposition[4], remainingPickupBudget);
@@ -4132,7 +4132,7 @@ final class FlightSession {
             this.targetMultiplier = this.scoreMultiplier;
             this.multiplierAnimationTicks = 20;
           }
-          int var3Lifetime1 = this.displayedHealthPercent - this.playerAircraft.hitPoints * 100 / gh.playerDefinition.maximumHitPoints;
+          int var3Lifetime1 = this.displayedHealthPercent - this.playerAircraft.hitPoints * 100 / BufferedRandomAccessFile.playerDefinition.maximumHitPoints;
           this.displayedTemporaryWeaponTicks = this.playerAircraft.temporaryWeaponTicks + this.displayedTemporaryWeaponTicks >> 1;
           if (var3Lifetime1 > 0) {
             this.displayedHealthPercent = this.displayedHealthPercent - (1 + (var3Lifetime1 >> 4));
@@ -4167,7 +4167,7 @@ final class FlightSession {
           if (!this.attractMode &&
             !this.arcadeMode &&
             !this.paused &&
-            1 == vj.pressedMouseButton) {
+            1 == OpenGlShaderObject.pressedMouseButton) {
             int var4Lifetime1 = -22 + ln.field_c;
             int var5 = -22 + lq.field_a;
             int var6 = 0;

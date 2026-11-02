@@ -18,7 +18,7 @@ final class fb {
           cf.field_g = qd.field_m;
           uu.pointerMoved = si.field_b;
           si.field_b = false;
-          vj.pressedMouseButton = me.field_b;
+          OpenGlShaderObject.pressedMouseButton = me.field_b;
           ln.field_c = kg.field_a;
           lq.field_a = SteeringMode.field_e;
           me.field_b = 0;
@@ -36,9 +36,9 @@ final class fb {
     final static int b(int param0) {
         if (param0 != 0) {
           fb.b(-21);
-          return he.field_n;
+          return CacheReference.field_n;
         }
-        return he.field_n;
+        return CacheReference.field_n;
     }
 
     static {

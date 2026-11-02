@@ -12,7 +12,7 @@ final class cd {
     final static void a(java.awt.Canvas param0, int param1) {
         String stackIn_9_2 = null;
         try {
-          ei.a(107, (java.awt.Component) ((Object) param0));
+          GzipInflater.a(107, (java.awt.Component) ((Object) param0));
           de.a((java.awt.Component) ((Object) param0), false);
           if (param1 < 22) {
             field_c = (String) null;
@@ -60,7 +60,7 @@ final class cd {
             String var6 = (String) null;
             cd.a((ResourceArchive) null, (String) null, (String) null, -13);
           }
-          IndexedSprite stackIn_3_0 = bl.a((byte) -123, var5, param0, var4_int);
+          IndexedSprite stackIn_3_0 = SectorCacheStore.a((byte) -123, var5, param0, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

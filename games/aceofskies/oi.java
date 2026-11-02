@@ -21,27 +21,27 @@ final class oi {
         field_d = null;
     }
 
-    final static oe a(java.awt.Canvas param0, int param1, int param2, int param3) {
+    final static CanvasImageBuffer a(java.awt.Canvas param0, int param1, int param2, int param3) {
         try {
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              Class var4 = Class.forName("c");
+              Class var4 = Class.forName("BufferedImageCanvasImageBuffer");
               if (param1 > -12) {
                 field_a = (ResourceArchive) null;
               }
-              oe var5 = (oe) (var4.newInstance());
+              CanvasImageBuffer var5 = (CanvasImageBuffer) (var4.newInstance());
               var5.a(-12189, param2, param0, param3);
-              oe stackIn_3_0 = var5;
+              CanvasImageBuffer stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var4_ref = decompiledCaughtException;
-              br var5_ref = new br();
-              ((oe) ((Object) var5_ref)).a(-12189, param2, param0, param3);
-              br stackIn_5_0 = var5_ref;
-              return (oe) ((Object) stackIn_5_0);
+              ImageProducerCanvasImageBuffer var5_ref = new ImageProducerCanvasImageBuffer();
+              ((CanvasImageBuffer) ((Object) var5_ref)).a(-12189, param2, param0, param3);
+              ImageProducerCanvasImageBuffer stackIn_5_0 = var5_ref;
+              return (CanvasImageBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -66,10 +66,10 @@ final class oi {
         if (param1 != 20665) {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
           oi.a((java.awt.Canvas) null, 77, -52, -1);
-          dh.field_c = param0;
+          InstrumentEnvelope.field_c = param0;
           return;
         }
-        dh.field_c = param0;
+        InstrumentEnvelope.field_c = param0;
     }
 
     static {

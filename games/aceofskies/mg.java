@@ -36,9 +36,9 @@ final class mg {
           return;
         }
         try {
-          int var4 = 40 + un.e(-107);
+          int var4 = 40 + ArchiveNetworkClient.e(-107);
           int var5 = sh.field_u - var3 >> 1;
-          int var6 = gp.field_w - var4 >> 1;
+          int var6 = NetworkArchiveRequest.field_w - var4 >> 1;
           param0.d(var4, var3, var6, param1 ^ -1150034421, -65281, var5);
           var2.a(var3 + var5, var5, var4 + var6, var6, param1 ^ 1150039868);
           param0.SA(0, var6, SoftwareRasterizer.stride, var4, SoftwareRasterizer.framebuffer, SoftwareRasterizer.stride * var6, SoftwareRasterizer.stride);

@@ -13,7 +13,7 @@ final class uj {
         field_b = null;
     }
 
-    final static hj a(rk param0, int param1, int param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas a(SystemTaskService param0, int param1, int param2, int param3, int param4, int param5) {
         String stackIn_8_2 = null;
         try {
           java.awt.Frame var8 = kn.a(param0, param2, param5, param4, param3, 29742);
@@ -21,13 +21,13 @@ final class uj {
           if (var8 == null) {
             return null;
           }
-          hj var7 = new hj();
+          FullscreenFocusCanvas var7 = new FullscreenFocusCanvas();
           var7.field_a = var8;
           var7.field_a.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, param1, param2, param5);
           var7.addFocusListener(var7);
           var7.requestFocus();
-          hj stackIn_4_0 = var7;
+          FullscreenFocusCanvas stackIn_4_0 = var7;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

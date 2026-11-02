@@ -101,7 +101,7 @@ final class mp extends vo {
             this.field_i = param0;
           }
           if (this.field_f) {
-            String stackIn_18_0 = dk.field_k;
+            String stackIn_18_0 = DiskCacheWorker.field_k;
             return stackIn_18_0;
           }
           String stackIn_16_0 = HudMessage.field_e;

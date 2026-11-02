@@ -4,7 +4,7 @@
 final class le {
     int[] field_a;
 
-    le(kj param0, it param1) {
+    le(JavaSoftwareRenderer param0, it param1) {
         this.field_a = new int[4096];
     }
 }

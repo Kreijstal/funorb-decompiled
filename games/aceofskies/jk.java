@@ -30,7 +30,7 @@ final class jk {
               return true;
             }
           }
-          char[] var6 = wb.field_b;
+          char[] var6 = WhirlpoolHasher.field_b;
           char[] var2Lifetime1 = var6;
           if (param1 != -26024) {
             synthesizedSoundArchive = (ResourceArchive) null;
@@ -52,7 +52,7 @@ final class jk {
         }
     }
 
-    final void a(byte param0, wl param1) {
+    final void a(byte param0, OpenGlRenderer param1) {
         this.field_a = param1.a((byte) -49, 24, (byte[]) null, 196584, true);
         hl discarded$0 = new hl(this.field_a, 5126, 2, 0);
         hl discarded$3 = new hl(this.field_a, 5126, 3, 8);

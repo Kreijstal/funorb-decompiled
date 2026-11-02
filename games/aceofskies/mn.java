@@ -9,10 +9,10 @@ final class mn {
             if (!tq.c(true)) {
               throw new RuntimeException("");
             }
-            if (!ei.a("jagdx", (byte) -16)) {
+            if (!GzipInflater.a("jagdx", (byte) -16)) {
               throw new RuntimeException("");
             }
-            Class var5 = Class.forName("kr");
+            Class var5 = Class.forName("HardwareDirect3DRenderer");
             if (param0 != 1) {
               d var7 = (d) null;
               mn.a((byte) 32, -121, (java.awt.Canvas) null, (ResourceArchive) null, (d) null);

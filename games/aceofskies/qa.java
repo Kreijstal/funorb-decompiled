@@ -55,8 +55,8 @@ final class qa {
                 stackIn_21_0 = cn.field_z.length;
               }
               int var7 = stackIn_21_0;
-              if (cc.field_b.length < gp.field_v.length) {
-                stackIn_24_0 = gp.field_v.length;
+              if (cc.field_b.length < NetworkArchiveRequest.field_v.length) {
+                stackIn_24_0 = NetworkArchiveRequest.field_v.length;
               } else {
                 stackIn_24_0 = cc.field_b.length;
               }

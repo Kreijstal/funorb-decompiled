@@ -17,13 +17,13 @@ abstract class sf extends IntrusiveNode {
             return stackIn_2_0;
           }
           if (~param2.length < param1) {
-            ku var3 = new ku();
-            ((af) ((Object) var3)).a((byte) 56, param2);
-            ku stackIn_5_0 = var3;
+            DirectByteStorage var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).a((byte) 56, param2);
+            DirectByteStorage stackIn_5_0 = var3;
             return stackIn_5_0;
           }
           if (param0) {
-            byte[] stackIn_10_0 = fg.a(param2, (byte) 121);
+            byte[] stackIn_10_0 = CachedArchiveProvider.a(param2, (byte) 121);
             return stackIn_10_0;
           }
           byte[] stackIn_8_0 = (byte[]) (param2);
@@ -52,7 +52,7 @@ abstract class sf extends IntrusiveNode {
 
     final static ej[] d(byte param0) {
         if (param0 >= 52) {
-          return new ej[]{gm.field_v, FlightBody.field_c, av.field_a, pg.field_d, qe.field_e, HudMessage.field_g, ej.field_b, kb.field_C, op.field_b, qd.field_n, rc.field_e, NetworkGameClient.field_H, lc.field_b, ml.field_j};
+          return new ej[]{gm.field_v, FlightBody.field_c, av.field_a, pg.field_d, qe.field_e, HudMessage.field_g, ej.field_b, kb.field_C, op.field_b, qd.field_n, rc.field_e, NetworkGameClient.field_H, IterableNodeHashTable.field_b, InstrumentPatch.field_j};
         }
         return (ej[]) null;
     }
@@ -83,7 +83,7 @@ abstract class sf extends IntrusiveNode {
             } else {
               var5Lifetime6 = var7 + "; Expires=" + bt.a(false, 94608000000L + kh.a(-125)) + "; Max-Age=" + 94608000L;
             }
-            fe.a(param1, -7012, "document.cookie=\"" + var5Lifetime6 + "\"");
+            JavaScriptBridge.a(param1, -7012, "document.cookie=\"" + var5Lifetime6 + "\"");
           } catch (Throwable throwable) {
           }
           if (param0 > -110) {

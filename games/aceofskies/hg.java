@@ -60,13 +60,13 @@ final class hg extends to {
             return null;
           }
           if (uk.field_j == nb.field_c &&
-            param1.equals(ua.field_j)) {
-            nb.field_c = dk.field_h;
+            param1.equals(OpenGlBuffer.field_j)) {
+            nb.field_c = DiskCacheWorker.field_h;
             fr stackIn_8_0 = GameAppletShell.field_l;
             return stackIn_8_0;
           }
           GameAppletShell.field_l = null;
-          ua.field_j = param1;
+          OpenGlBuffer.field_j = param1;
           nb.field_c = jq.field_fb;
           Object stackIn_10_0 = null;
           return (fr) (stackIn_10_0);
@@ -239,7 +239,7 @@ final class hg extends to {
           if (var45.field_x != null &&
             1 < var45.field_f) {
             byte[] var61 = var45.field_x;
-            nr.a(hs.field_a, false, var61, 0, 0);
+            nr.a(IterableDualLinkDeque.field_a, false, var61, 0, 0);
           } else {
             pn.a(true);
           }
@@ -310,12 +310,12 @@ final class hg extends to {
               stackIn_38_0 = null;
             }
             me var21 = stackIn_38_0;
-            int var22 = qj.field_t[var15Lifetime1];
-            int var23 = ro.field_t[var15Lifetime1];
-            int var24 = qj.field_t[var16];
-            int var25 = ro.field_t[var16];
-            int var26 = qj.field_t[var17];
-            int var27 = ro.field_t[var17];
+            int var22 = StrongCacheReference.field_t[var15Lifetime1];
+            int var23 = OpenGlIndexBuffer.field_t[var15Lifetime1];
+            int var24 = StrongCacheReference.field_t[var16];
+            int var25 = OpenGlIndexBuffer.field_t[var16];
+            int var26 = StrongCacheReference.field_t[var17];
+            int var27 = OpenGlIndexBuffer.field_t[var17];
             if (var18 == var19 &&
               var20 == var19) {
               var28 = var55[var18];
@@ -330,7 +330,7 @@ final class hg extends to {
               var32 = 65280 & var30;
               var33 = var32 * var28 >>> 8 & -872349952 | (var31 * var28 & -16711822) >>> 8;
               var33 = var33 + var29 * 65793;
-              gq.a((byte) 114, var26, var22, var23, var24, var27, (var33 & 16711422) >> 1, var25);
+              WeightedObjectCache.a((byte) 114, var26, var22, var23, var24, var27, (var33 & 16711422) >> 1, var25);
             } else {
               var28 = var55[var18];
               var29 = var55[var19];

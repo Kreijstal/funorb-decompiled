@@ -25,14 +25,14 @@ final class bt {
           int var7 = qs.field_a.get(11);
           int var8 = qs.field_a.get(12);
           int var9 = qs.field_a.get(13);
-          return jc.field_Rc[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + fk.field_b[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return HardwareOpenGlRenderer.field_Rc[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + fk.field_b[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }
 
     final static void a(int param0) {
-        if (null != ml.field_m) {
-          ml.field_m.h((byte) -23);
+        if (null != InstrumentPatch.field_m) {
+          InstrumentPatch.field_m.h((byte) -23);
           fd.field_f = new ep();
           if (param0 != 10) {
             field_a = (pt) null;

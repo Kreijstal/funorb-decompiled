@@ -69,7 +69,7 @@ final class po extends ka {
             if (param1.length() <= var4) {
               return null;
             }
-            if (cg.a(param1.charAt(var4), (byte) 118)) {
+            if (OpenGlVertexBuffer.a(param1.charAt(var4), (byte) 118)) {
               var4++;
               continue;
             }
@@ -177,7 +177,7 @@ final class po extends ka {
         }
     }
 
-    po(bf param0, int param1, int param2, boolean param3, boolean param4) {
+    po(HardwareRenderer param0, int param1, int param2, boolean param3, boolean param4) {
         String stackIn_20_2 = null;
         try {
           this.field_d = param2;
@@ -199,10 +199,10 @@ final class po extends ka {
             this.field_f = new am(ln.a(17, this.field_g, this.field_d));
           }
           if (!param3 &&
-            !la.a(this.field_d, this.field_g, (byte) 21)) {
+            !BufferElementType.a(this.field_d, this.field_g, (byte) 21)) {
             return;
           }
-          this.field_i = new ms(hs.a(true, this.field_g, this.field_d));
+          this.field_i = new ms(IterableDualLinkDeque.a(true, this.field_g, this.field_d));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

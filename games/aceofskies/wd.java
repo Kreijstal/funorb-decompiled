@@ -20,7 +20,7 @@ final class wd extends ab implements ue, dn, bh {
     public final void a(int param0, mi param1, int param2, int param3, byte param4) {
         try {
           if (param1 == this.field_w) {
-            pj.b((byte) -26);
+            RasterBuffer.b((byte) -26);
           } else if (this.field_A == param1) {
             boolean discarded$0 = this.k(90);
           }
@@ -293,7 +293,7 @@ final class wd extends ab implements ue, dn, bh {
         int var3 = 20;
         var3 = var3 + this.a(var3, ah.field_r, this.field_E, -1, 170);
         var3 = var3 + (this.a("", var3, this.field_u, (byte) -100, 170, 20, lj.field_e) + 5);
-        var3 = var3 + this.a(var3, vj.field_b, this.field_y, -1, 170);
+        var3 = var3 + this.a(var3, OpenGlShaderObject.field_b, this.field_y, -1, 170);
         var3 = var3 + (5 + this.a(nq.field_b, var3, this.field_F, tj.field_n, -2791, 170));
         var3 = var3 + (this.a(es.field_g, var3, this.field_D, sc.field_b, -2791, 170) + 5);
         var3 = var3 + this.a(false, dd.field_b, this.field_x, var3, 170);
@@ -358,7 +358,7 @@ final class wd extends ab implements ue, dn, bh {
           if (bt.field_a == var4) {
             return false;
           }
-          if (jc.field_Pc == var4) {
+          if (HardwareOpenGlRenderer.field_Pc == var4) {
             return false;
           }
           if (GameAppletShell.field_o != var4) {

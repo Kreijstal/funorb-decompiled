@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class am {
-    private tl field_b;
+    private HardwareVertexBuffer field_b;
     static int nextScoreSubmissionId;
 
     final static SoundPlayback a(PcmSample param0, boolean param1) {
@@ -29,7 +29,7 @@ final class am {
 
     final void a(boolean param0) {
         if (!param0) {
-          this.field_b = (tl) null;
+          this.field_b = (HardwareVertexBuffer) null;
           if (this.field_b != null) {
             this.field_b.a(4665);
             return;

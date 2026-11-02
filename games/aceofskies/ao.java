@@ -76,7 +76,7 @@ abstract class ao {
             try {
               String var9 = param0.getParameter("cookieprefix");
               String var3 = var9 + "settings";
-              String var4 = (String) (fe.a("getcookies", (byte) -108, param0));
+              String var4 = (String) (JavaScriptBridge.a("getcookies", (byte) -108, param0));
               if (param1) {
                 String stackIn_3_0 = (String) null;
                 return stackIn_3_0;

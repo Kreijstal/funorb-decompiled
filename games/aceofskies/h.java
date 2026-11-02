@@ -6,7 +6,7 @@ final class h extends RendererBitmapFont implements e {
 
     final native void drawGlyph(char glyph, int x, int y, int color, boolean shadowPass);
 
-    h(oa param0, ya param1, BitmapFontMetrics param2, SpriteData[] param3, RenderSprite[] param4) {
+    h(NativeSoftwareRenderer param0, ya param1, BitmapFontMetrics param2, SpriteData[] param3, RenderSprite[] param4) {
         super(param0, param2);
         byte[][] var6 = new byte[param3.length][];
         int[] var7 = new int[param3.length];
@@ -31,7 +31,7 @@ final class h extends RendererBitmapFont implements e {
 
     public final native void w(boolean param0);
 
-    private final native void JA(oa param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
+    private final native void JA(NativeSoftwareRenderer param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
 
     final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
         this.NA(glyph, x, y, color, shadowPass, mask, maskX, maskY);

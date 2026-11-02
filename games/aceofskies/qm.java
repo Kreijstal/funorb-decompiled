@@ -208,7 +208,7 @@ class qm implements ir, et {
           }
           int var12 = stackIn_6_0 + Math.min(stackIn_6_1, Math.min(stackIn_6_2, stackIn_7_3));
           fp.a((byte) 108, param2 + param4.field_h, param4.field_h + param2 + param4.field_n, param4.field_q + (param1 + param4.field_p), param4.field_p + param1);
-          ag.field_n.a(this.field_d, var11, var10, var10, 13053, var12);
+          ArchiveRequest.field_n.a(this.field_d, var11, var10, var10, 13053, var12);
           sl.c(2765);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -289,7 +289,7 @@ class qm implements ir, et {
             for (int var11 = param6; param5 > var11; var11++) {
               int var12 = uf.field_d[var11];
               if (param3) {
-                stackIn_25_0 = js.field_c[var12];
+                stackIn_25_0 = DualLinkDequeIterator.field_c[var12];
               } else {
                 stackIn_25_0 = ai.field_a[var12];
               }
@@ -489,7 +489,7 @@ class qm implements ir, et {
           } else {
             var4 = param2;
           }
-          wb var5 = new wb();
+          WhirlpoolHasher var5 = new WhirlpoolHasher();
           var5.b((byte) 0);
           var5.a(8, var4, (long)(param1 * 8));
           byte[] var6 = new byte[64];
@@ -587,7 +587,7 @@ class qm implements ir, et {
                 stackIn_18_0 = 0;
               }
               int var16 = stackIn_18_0;
-              ag.field_n.a(var16 - var15, var14.field_f + this.field_a + (param4.field_h + param2 + param4.field_l), this.field_j, this.a(param4, 95, param3, var15), this.field_j >>> 24, (byte) -54, var14.field_d);
+              ArchiveRequest.field_n.a(var16 - var15, var14.field_f + this.field_a + (param4.field_h + param2 + param4.field_l), this.field_j, this.a(param4, 95, param3, var15), this.field_j >>> 24, (byte) -54, var14.field_d);
             }
             sl.c(2765);
             return;

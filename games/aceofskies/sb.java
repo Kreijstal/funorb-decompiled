@@ -3,16 +3,16 @@
  */
 final class sb {
     private d field_d;
-    private gq field_b;
+    private WeightedObjectCache field_b;
     static IntrusiveDeque field_c;
-    private bf field_a;
+    private HardwareRenderer field_a;
 
-    final qi a(byte param0, int param1) {
+    final HardwareTexture2D a(byte param0, int param1) {
         int stackIn_8_0 = 0;
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         Object var3 = this.field_b.a((long)param1, -120);
         if (var3 != null) {
-          return (qi) (var3);
+          return (HardwareTexture2D) (var3);
         }
         if (!this.field_d.a(param1, -3804)) {
           return null;
@@ -27,12 +27,12 @@ final class sb {
         if (!var5.field_i) {
           if (var5.field_q == 2) {
             int[] var7_array = this.field_d.a(param1, -10805, var6, false, 0.699999988079071f, var6);
-            bf stackIn_14_0 = this.field_a;
+            HardwareRenderer stackIn_14_0 = this.field_a;
             int[] stackIn_14_1 = var7_array;
             int stackIn_14_2 = var6;
             int stackIn_14_3 = param0 ^ -69;
             boolean stackIn_15_4 = (0 == var5.field_k) ? false : true;
-            qi var13 = ((bf) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_15_4, var6);
+            HardwareTexture2D var13 = ((HardwareRenderer) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_15_4, var6);
             var13.a(var5.field_l, var5.field_d, (byte) -127);
             this.field_b.a((long)param1, var13, -123);
             if (param0 != -69) {
@@ -43,12 +43,12 @@ final class sb {
           }
           if (!sj.a((int) var5.field_c, (byte) -109)) {
             int[] var7_arrayLifetime4 = this.field_d.a(param1, -10805, var6, false, 0.699999988079071f, var6);
-            bf stackIn_20_0 = this.field_a;
+            HardwareRenderer stackIn_20_0 = this.field_a;
             int[] stackIn_20_1 = var7_arrayLifetime4;
             int stackIn_20_2 = var6;
             int stackIn_20_3 = param0 ^ -69;
             boolean stackIn_21_4 = (0 == var5.field_k) ? false : true;
-            qi var14 = ((bf) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_21_4, var6);
+            HardwareTexture2D var14 = ((HardwareRenderer) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_21_4, var6);
             var14.a(var5.field_l, var5.field_d, (byte) -127);
             this.field_b.a((long)param1, var14, -123);
             if (param0 != -69) {
@@ -58,12 +58,12 @@ final class sb {
             return var14;
           }
           int[] var7_arrayLifetime5 = this.field_d.a(var6, param1, (byte) -18, true, var6, 0.699999988079071f);
-          bf stackIn_26_0 = this.field_a;
+          HardwareRenderer stackIn_26_0 = this.field_a;
           int[] stackIn_26_1 = var7_arrayLifetime5;
           int stackIn_26_2 = var6;
           int stackIn_26_3 = param0 ^ -69;
           boolean stackIn_27_4 = (0 == var5.field_k) ? false : true;
-          qi var4 = ((bf) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4, var6);
+          HardwareTexture2D var4 = ((HardwareRenderer) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4, var6);
           var4.a(var5.field_l, var5.field_d, (byte) -127);
           this.field_b.a((long)param1, var4, -123);
           if (param0 == -69) {
@@ -78,9 +78,9 @@ final class sb {
           float[] var11 = var12;
           float[] var10 = var11;
           float[] var7 = var10;
-          bf stackIn_58_0 = this.field_a;
+          HardwareRenderer stackIn_58_0 = this.field_a;
           boolean stackIn_59_1 = (var5.field_k == 0) ? false : true;
-          qi var22 = ((bf) (Object) stackIn_58_0).a(stackIn_59_1, var6, var12, lc.field_g, (byte) 40, var6);
+          HardwareTexture2D var22 = ((HardwareRenderer) (Object) stackIn_58_0).a(stackIn_59_1, var6, var12, IterableNodeHashTable.field_g, (byte) 40, var6);
           var22.a(var5.field_l, var5.field_d, (byte) -127);
           this.field_b.a((long)param1, var22, -123);
           if (param0 == -69) {
@@ -92,13 +92,13 @@ final class sb {
         }
         if (var5.field_q == 2) {
           int[] var7_arrayLifetime1 = this.field_d.a(param1, -10805, var6, false, 0.699999988079071f, var6);
-          bf stackIn_37_0 = this.field_a;
+          HardwareRenderer stackIn_37_0 = this.field_a;
           int[] stackIn_37_1 = var7_arrayLifetime1;
           int stackIn_37_2 = var6;
           int stackIn_37_3 = param0 ^ -69;
           boolean stackIn_38_4 = (0 == var5.field_k) ? false : true;
-          qi var19 = ((bf) (Object) stackIn_37_0).a(stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_38_4, var6);
-          qi var4Lifetime1 = var19;
+          HardwareTexture2D var19 = ((HardwareRenderer) (Object) stackIn_37_0).a(stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_38_4, var6);
+          HardwareTexture2D var4Lifetime1 = var19;
           var19.a(var5.field_l, var5.field_d, (byte) -127);
           this.field_b.a((long)param1, var19, -123);
           if (param0 == -69) {
@@ -110,13 +110,13 @@ final class sb {
         }
         if (sj.a((int) var5.field_c, (byte) -109)) {
           int[] var7_arrayLifetime2 = this.field_d.a(var6, param1, (byte) -18, true, var6, 0.699999988079071f);
-          bf stackIn_51_0 = this.field_a;
+          HardwareRenderer stackIn_51_0 = this.field_a;
           int[] stackIn_51_1 = var7_arrayLifetime2;
           int stackIn_51_2 = var6;
           int stackIn_51_3 = param0 ^ -69;
           boolean stackIn_52_4 = (0 == var5.field_k) ? false : true;
-          qi var21 = ((bf) (Object) stackIn_51_0).a(stackIn_51_1, stackIn_51_2, stackIn_51_3, stackIn_52_4, var6);
-          qi var4Lifetime2 = var21;
+          HardwareTexture2D var21 = ((HardwareRenderer) (Object) stackIn_51_0).a(stackIn_51_1, stackIn_51_2, stackIn_51_3, stackIn_52_4, var6);
+          HardwareTexture2D var4Lifetime2 = var21;
           var21.a(var5.field_l, var5.field_d, (byte) -127);
           this.field_b.a((long)param1, var21, -123);
           if (param0 == -69) {
@@ -127,13 +127,13 @@ final class sb {
           return var21;
         }
         int[] var7_arrayLifetime3 = this.field_d.a(param1, -10805, var6, false, 0.699999988079071f, var6);
-        bf stackIn_44_0 = this.field_a;
+        HardwareRenderer stackIn_44_0 = this.field_a;
         int[] stackIn_44_1 = var7_arrayLifetime3;
         int stackIn_44_2 = var6;
         int stackIn_44_3 = param0 ^ -69;
         boolean stackIn_45_4 = (0 == var5.field_k) ? false : true;
-        qi var20 = ((bf) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_44_2, stackIn_44_3, stackIn_45_4, var6);
-        qi var4Lifetime3 = var20;
+        HardwareTexture2D var20 = ((HardwareRenderer) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_44_2, stackIn_44_3, stackIn_45_4, var6);
+        HardwareTexture2D var4Lifetime3 = var20;
         var20.a(var5.field_l, var5.field_d, (byte) -127);
         this.field_b.a((long)param1, var20, -123);
         if (param0 == -69) {
@@ -240,7 +240,7 @@ final class sb {
         String stackIn_11_2 = null;
         try {
           if (param0 > 9) {
-            double stackIn_4_0 = Math.sqrt(lc.a(param1, false, param2));
+            double stackIn_4_0 = Math.sqrt(IterableNodeHashTable.a(param1, false, param2));
             return stackIn_4_0;
           }
           double stackIn_2_0 = 0.5045225109294477;
@@ -274,8 +274,8 @@ final class sb {
         sb.a(-47, (Vector2) null, (Vector2) null);
     }
 
-    sb(bf param0, d param1) {
-        this.field_b = new gq(256);
+    sb(HardwareRenderer param0, d param1) {
+        this.field_b = new WeightedObjectCache(256);
         try {
           this.field_d = param1;
           this.field_a = param0;

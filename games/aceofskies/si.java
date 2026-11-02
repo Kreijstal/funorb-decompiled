@@ -54,7 +54,7 @@ final class si {
         int var3 = 89 / ((-23 - param0) / 54);
     }
 
-    si(wl param0, int param1) {
+    si(OpenGlRenderer param0, int param1) {
         try {
           this.field_a = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {

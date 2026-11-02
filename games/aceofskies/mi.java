@@ -91,7 +91,7 @@ class mi extends ea {
               field_r = (String) null;
               return true;
             }
-            if (cg.a(param1.charAt(var3_int), (byte) 117)) {
+            if (OpenGlVertexBuffer.a(param1.charAt(var3_int), (byte) 117)) {
               var3_int++;
               continue;
             }
@@ -113,7 +113,7 @@ class mi extends ea {
     }
 
     mi(String param0, no param1) {
-        this(param0, ag.field_n.field_c, param1);
+        this(param0, ArchiveRequest.field_n.field_c, param1);
     }
 
     final static boolean b(int param0, int param1, int param2) {
@@ -282,7 +282,7 @@ class mi extends ea {
         this.field_v = true;
         this.field_t = false;
         this.field_u = true;
-        this.field_e = ag.field_n.field_p;
+        this.field_e = ArchiveRequest.field_n.field_p;
     }
 
     static {
