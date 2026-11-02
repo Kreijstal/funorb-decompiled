@@ -44,7 +44,7 @@ final class bl {
         int var6Lifetime1;
         var14 = wizardrun.field_H;
         try {
-          var5_int = param1.b(param4);
+          var5_int = param1.stringWidth(param4);
           if (var5_int <= param3 &&
             -1 == param4.indexOf("<br>")) {
             param2[0] = param4;
@@ -62,7 +62,7 @@ final class bl {
             if (var11 == 32 ||
               45 == var11) {
               var12 = param4.substring(var7, var10 + 1).trim();
-              var13 = param1.b(var12);
+              var13 = param1.stringWidth(var12);
               if (var13 >= param3) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

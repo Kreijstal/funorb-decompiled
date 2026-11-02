@@ -13,7 +13,7 @@ final class hk extends rg {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, -1, param2);
-        PacketBuffer.field_i.b(this.field_X, (this.field_r >> 1) + param0, 103 + param2, 16777215, param1);
+        PacketBuffer.field_i.drawStringCentered(this.field_X, (this.field_r >> 1) + param0, 103 + param2, 16777215, param1);
         if (null != this.field_cb) {
           SoftwareRasterizer.f(20 + param0, -7 + param2 + 120, 260, 8421504);
           PacketBuffer.field_i.a(this.field_cb, 20 + param0, param2 + 128, 260, 100, 16777215, -1, 1, 0, PacketBuffer.field_i.field_M);

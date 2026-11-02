@@ -50,7 +50,7 @@ final class eh implements bf {
           if (this.field_b == null) {
             return;
           }
-          this.field_b.b(var12.field_k, var8 + var7 / 2, var12.field_J + var9 + this.field_b.field_E, this.field_c, this.field_g);
+          this.field_b.drawStringCentered(var12.field_k, var8 + var7 / 2, var12.field_J + var9 + this.field_b.field_E, this.field_c, this.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

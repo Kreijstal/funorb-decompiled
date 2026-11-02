@@ -81,7 +81,7 @@ final class cf extends af {
           this.field_j = param2;
           var8 = this.a(param4, 108, param3, param2);
           var9 = var8;
-          var9.field_e[0] = param0 - param2.b(param4);
+          var9.field_e[0] = param0 - param2.stringWidth(param4);
           var9.field_e[param4.length()] = param0;
           lk.a(-58, param2, 0, var9, param4);
         } catch (RuntimeException runtimeException) {
@@ -122,7 +122,7 @@ final class cf extends af {
           this.field_k = 1;
           this.field_j = param0;
           var8 = this.a(param1, 46, param4, param0);
-          var7 = param0.b(param1);
+          var7 = param0.stringWidth(param1);
           var8.field_e[0] = -(var7 >> 1) + param2;
           var8.field_e[param1.length()] = param2 + (var7 >> 1);
           lk.a(90, param0, 0, var8, param1);
@@ -303,13 +303,13 @@ final class cf extends af {
             var14 = new fg(stackIn_37_2, stackIn_37_3, stackIn_38_4);
             var14.field_e[0] = 0;
             if (var13 != null) {
-              var14.field_e[var13.length()] = param5.b(var13);
+              var14.field_e[var13.length()] = param5.stringWidth(var13);
               stackIn_41_0 = -76;
               stackIn_41_1 = (BitmapFont) (param5);
               if (param2 != 3) {
                 stackIn_42_2 = 0;
               } else {
-                stackIn_42_2 = this.a(param5.b(var13), var13, 6454, param3);
+                stackIn_42_2 = this.a(param5.stringWidth(var13), var13, 6454, param3);
               }
               lk.a(stackIn_41_0, stackIn_41_1, stackIn_42_2, var14, var13);
             }
@@ -362,7 +362,7 @@ final class cf extends af {
           var7 = this.a(param3, 70, param0, param4);
           var8 = var7;
           var7.field_e[0] = param2;
-          var8.field_e[param3.length()] = param4.b(param3) + param2;
+          var8.field_e[param3.length()] = param4.stringWidth(param3) + param2;
           lk.a(113, param4, 0, var8, param3);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "cf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');

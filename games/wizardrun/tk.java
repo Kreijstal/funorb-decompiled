@@ -62,7 +62,7 @@ final class tk implements bf {
           if (!param2.d((byte) 53)) {
             return;
           }
-          var7 = this.field_d.b(param2.field_k);
+          var7 = this.field_d.stringWidth(param2.field_k);
           var8 = this.field_d.field_M + this.field_d.field_B;
           var9 = param2.field_o + param0;
           var10 = param2.field_l + param1;

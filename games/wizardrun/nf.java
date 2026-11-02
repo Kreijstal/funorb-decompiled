@@ -610,10 +610,10 @@ final class nf {
               var1_int = var1_int + e.field_d;
             }
             if (0 > var4) {
-              le.field_j.c(var6, var8Lifetime1, var1_int + lc.field_a, var5, -1);
+              le.field_j.drawString(var6, var8Lifetime1, var1_int + lc.field_a, var5, -1);
               var1_int = var1_int + si.field_f;
             } else {
-              uf.field_c.c(var6, var8Lifetime1, var1_int + ki.field_I, var5, -1);
+              uf.field_c.drawString(var6, var8Lifetime1, var1_int + ki.field_I, var5, -1);
               var1_int = var1_int + (ec.field_c + na.field_e + e.field_d);
             }
             var3++;

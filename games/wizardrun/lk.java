@@ -37,7 +37,7 @@ final class lk {
           for (var8 = 1; var8 < param4.length(); var8++) {
             var9 = param4.charAt(var8);
             if (var9 == 60) {
-              var6 = param3.field_e[0] + (var5_int >> 8) + param1.b(param4.substring(0, var8));
+              var6 = param3.field_e[0] + (var5_int >> 8) + param1.stringWidth(param4.substring(0, var8));
             }
             if (-1 != var6) {
               param3.field_e[var8] = var6;
@@ -45,7 +45,7 @@ final class lk {
               if (var9 == 32) {
                 var5_int = var5_int + param2;
               }
-              param3.field_e[var8] = param3.field_e[0] + (var5_int >> 8) + (param1.b(param4.substring(0, 1 + var8)) - param1.a((char) var9));
+              param3.field_e[var8] = param3.field_e[0] + (var5_int >> 8) + (param1.stringWidth(param4.substring(0, 1 + var8)) - param1.charWidth((char) var9));
             }
             if (var9 == 62) {
               var6 = -1;

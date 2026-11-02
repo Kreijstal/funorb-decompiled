@@ -170,7 +170,7 @@ final class od {
             var7 = this.field_g.field_B + this.field_g.field_M;
           }
           var9 = SoftwareRasterizer.width >> 2;
-          var10 = this.field_g.b(param3);
+          var10 = this.field_g.stringWidth(param3);
           var11 = this.field_g.field_M + this.field_g.field_B;
           var12 = 1;
           if (var10 > var9 ||
@@ -188,7 +188,7 @@ final class od {
             var10 = 0;
             var11 = var11 + var7 * (var12Lifetime1 - 1);
             for (var14Lifetime2 = 0; var12Lifetime1 > var14Lifetime2; var14Lifetime2++) {
-              var15 = this.field_g.b(sd.field_b[var14Lifetime2]);
+              var15 = this.field_g.stringWidth(sd.field_b[var14Lifetime2]);
               if (var10 < var15) {
                 var10 = var15;
               }
@@ -329,7 +329,7 @@ final class od {
         int var8 = 0;
         String var9 = null;
         try {
-          var5_int = this.field_g.b(param0);
+          var5_int = this.field_g.stringWidth(param0);
           if (param3 != 2562) {
             var9 = (String) null;
             this.a(8, 10, (byte) 65, (String) null);
@@ -345,7 +345,7 @@ final class od {
           }
           SoftwareRasterizer.drawRectOutline(var7, var8, var5_int + 6, var6 + 6, this.field_q);
           SoftwareRasterizer.fillRect(var7 + 1, 1 + var8, 4 + var5_int, 4 + var6, this.field_p);
-          this.field_g.c(param0, 3 + var7, var8 - (-3 - this.field_g.field_q), this.field_q, -1);
+          this.field_g.drawString(param0, 3 + var7, var8 - (-3 - this.field_g.field_q), this.field_q, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

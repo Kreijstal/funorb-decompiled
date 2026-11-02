@@ -21,15 +21,15 @@ final class eg extends qh {
     int field_y;
 
     private final void a(int param0, int param1, boolean param2, String param3, int param4) {
-        GameGraphicsResources.wizardFont2.b(param3, -1 + param1, param4, 0, -1);
-        GameGraphicsResources.wizardFont2.b(param3, param1 + 1, param4, 0, -1);
-        GameGraphicsResources.wizardFont2.b(param3, param1, -1 + param4, 0, -1);
-        GameGraphicsResources.wizardFont2.b(param3, param1, 1 + param4, 0, -1);
+        GameGraphicsResources.wizardFont2.drawStringCentered(param3, -1 + param1, param4, 0, -1);
+        GameGraphicsResources.wizardFont2.drawStringCentered(param3, param1 + 1, param4, 0, -1);
+        GameGraphicsResources.wizardFont2.drawStringCentered(param3, param1, -1 + param4, 0, -1);
+        GameGraphicsResources.wizardFont2.drawStringCentered(param3, param1, 1 + param4, 0, -1);
         if (!param2) {
           return;
         }
         try {
-          GameGraphicsResources.wizardFont2.b(param3, param1, param4, param0, -1);
+          GameGraphicsResources.wizardFont2.drawStringCentered(param3, param1, param4, param0, -1);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "eg.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -673,11 +673,11 @@ final class eg extends qh {
                                   if (this.field_o == 7) {
                                     var10 = 500;
                                   }
-                                  a.font12.b(Integer.toString(var10), 16 + var2, var3 - 1, 0, -1);
-                                  a.font12.b(Integer.toString(var10), 16 + var2, var3 + 1, 0, -1);
-                                  a.font12.b(Integer.toString(var10), var2 + 16 - 1, var3, 0, -1);
-                                  a.font12.b(Integer.toString(var10), 17 + var2, var3, 0, -1);
-                                  a.font12.b(Integer.toString(var10), var2 + 16, var3, 16777215, -1);
+                                  a.font12.drawStringCentered(Integer.toString(var10), 16 + var2, var3 - 1, 0, -1);
+                                  a.font12.drawStringCentered(Integer.toString(var10), 16 + var2, var3 + 1, 0, -1);
+                                  a.font12.drawStringCentered(Integer.toString(var10), var2 + 16 - 1, var3, 0, -1);
+                                  a.font12.drawStringCentered(Integer.toString(var10), 17 + var2, var3, 0, -1);
+                                  a.font12.drawStringCentered(Integer.toString(var10), var2 + 16, var3, 16777215, -1);
                                   break regionExit1;
                               }
                             }
@@ -751,7 +751,7 @@ final class eg extends qh {
                 }
                 if (nk.field_T >= 50 &&
                   nk.field_T < 100) {
-                  var11 = GameGraphicsResources.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
+                  var11 = GameGraphicsResources.wizardFont2.stringWidth(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
                   var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
                   if (var12 < var11 / 2) {
                     var12 = var11 / 2;
@@ -768,7 +768,7 @@ final class eg extends qh {
                 }
                 if (nk.field_T >= 100 &&
                   nk.field_T < 150) {
-                  var11 = GameGraphicsResources.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 59, wb.field_a));
+                  var11 = GameGraphicsResources.wizardFont2.stringWidth(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 59, wb.field_a));
                   var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
@@ -785,7 +785,7 @@ final class eg extends qh {
                 }
                 if (nk.field_T >= 150 &&
                   nk.field_T < 200) {
-                  var11 = GameGraphicsResources.wizardFont2.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 66, ei.field_m));
+                  var11 = GameGraphicsResources.wizardFont2.stringWidth(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 66, ei.field_m));
                   var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;

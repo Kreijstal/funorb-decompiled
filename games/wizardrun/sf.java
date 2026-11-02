@@ -28,10 +28,10 @@ final class sf {
             sf.a(false, 17, (String) null);
           }
           if (!param0) {
-            stackIn_6_0 = le.field_j.b(param2);
+            stackIn_6_0 = le.field_j.stringWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = uf.field_c.b(param2);
+          stackIn_4_0 = uf.field_c.stringWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

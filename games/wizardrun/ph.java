@@ -39,20 +39,20 @@ final class ph extends ge {
           if (param2 == 1) {
             var6 = vk.field_o;
             if (param1) {
-              var7 = GameGraphicsResources.wizardFont2.b(var6);
+              var7 = GameGraphicsResources.wizardFont2.stringWidth(var6);
               ok.selectStarSprites[2].e(268 - (var7 / 2 + ok.selectStarSprites[2].field_z), param0);
               ok.selectStarSprites[2].e(var7 / 2 + 268, param0);
             }
             if (param3 > -98) {
               ph.a((byte) 46);
             }
-            GameGraphicsResources.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, 18 + param0 - 1, 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, 1 + (18 + param0), 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18 + 1, 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 270, 2 + param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, param0 + 18, var5, -1);
             return;
           }
           if ((param2 != 5 ||
@@ -121,20 +121,20 @@ final class ph extends ge {
               else {
                 if (param2 != 4) {
                   if (param1) {
-                    var7Lifetime2Lifetime2 = GameGraphicsResources.wizardFont2.b(var6);
+                    var7Lifetime2Lifetime2 = GameGraphicsResources.wizardFont2.stringWidth(var6);
                     ok.selectStarSprites[2].e(268 - (var7Lifetime2Lifetime2 / 2 + ok.selectStarSprites[2].field_z), param0);
                     ok.selectStarSprites[2].e(var7Lifetime2Lifetime2 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
                     ph.a((byte) 46);
                   }
-                  GameGraphicsResources.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, 18 + param0 - 1, 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, 1 + (18 + param0), 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18 + 1, 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 270, 2 + param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, param0 + 18, var5, -1);
                   return;
                 }
                 if (!e.a(-114)) {
@@ -147,20 +147,20 @@ final class ph extends ge {
                 }
                 else {
                   if (param1) {
-                    var7Lifetime2Lifetime3 = GameGraphicsResources.wizardFont2.b(var6);
+                    var7Lifetime2Lifetime3 = GameGraphicsResources.wizardFont2.stringWidth(var6);
                     ok.selectStarSprites[2].e(268 - (var7Lifetime2Lifetime3 / 2 + ok.selectStarSprites[2].field_z), param0);
                     ok.selectStarSprites[2].e(var7Lifetime2Lifetime3 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
                     ph.a((byte) 46);
                   }
-                  GameGraphicsResources.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
-                  GameGraphicsResources.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, 18 + param0 - 1, 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, 1 + (18 + param0), 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18 + 1, 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 270, 2 + param0 + 18, 0, -1);
+                  GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, param0 + 18, var5, -1);
                   return;
                 }
               }
@@ -172,20 +172,20 @@ final class ph extends ge {
             }
             var6 = od.field_o;
             if (param1) {
-              var7Lifetime3 = GameGraphicsResources.wizardFont2.b(var6);
+              var7Lifetime3 = GameGraphicsResources.wizardFont2.stringWidth(var6);
               ok.selectStarSprites[2].e(268 - (var7Lifetime3 / 2 + ok.selectStarSprites[2].field_z), param0);
               ok.selectStarSprites[2].e(var7Lifetime3 / 2 + 268, param0);
             }
             if (param3 > -98) {
               ph.a((byte) 46);
             }
-            GameGraphicsResources.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
-            GameGraphicsResources.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, 18 + param0 - 1, 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, 1 + (18 + param0), 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18 + 1, 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 270, 2 + param0 + 18, 0, -1);
+            GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, param0 + 18, var5, -1);
             return;
           }
         }
@@ -198,20 +198,20 @@ final class ph extends ge {
           }
         }
         if (param1) {
-          var7Lifetime1 = GameGraphicsResources.wizardFont2.b(var6);
+          var7Lifetime1 = GameGraphicsResources.wizardFont2.stringWidth(var6);
           ok.selectStarSprites[2].e(268 - (var7Lifetime1 / 2 + ok.selectStarSprites[2].field_z), param0);
           ok.selectStarSprites[2].e(var7Lifetime1 / 2 + 268, param0);
         }
         if (param3 > -98) {
           ph.a((byte) 46);
         }
-        GameGraphicsResources.wizardFont2.b(var6, 267, param0 + 18, 0, -1);
-        GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18, 0, -1);
-        GameGraphicsResources.wizardFont2.b(var6, 268, 18 + param0 - 1, 0, -1);
-        GameGraphicsResources.wizardFont2.b(var6, 268, 1 + (18 + param0), 0, -1);
-        GameGraphicsResources.wizardFont2.b(var6, 269, param0 + 18 + 1, 0, -1);
-        GameGraphicsResources.wizardFont2.b(var6, 270, 2 + param0 + 18, 0, -1);
-        GameGraphicsResources.wizardFont2.b(var6, 268, param0 + 18, var5, -1);
+        GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
+        GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
+        GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, 18 + param0 - 1, 0, -1);
+        GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, 1 + (18 + param0), 0, -1);
+        GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18 + 1, 0, -1);
+        GameGraphicsResources.wizardFont2.drawStringCentered(var6, 270, 2 + param0 + 18, 0, -1);
+        GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, param0 + 18, var5, -1);
     }
 
     ph() {

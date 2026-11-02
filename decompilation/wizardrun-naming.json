@@ -908,6 +908,62 @@
       "renamedSymbol": "M:uc.drawLoadingScreen(ZLjava/awt/Canvas;)V"
     },
     {
+      "symbol": "M:vd.a(C)I",
+      "originalName": "a",
+      "to": "charWidth",
+      "evidence": "Indexes the per-glyph advance table with the translated character.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitmapFont.charWidth(C)I"
+    },
+    {
+      "symbol": "M:vd.a(II)V",
+      "originalName": "a",
+      "to": "setColors",
+      "evidence": "Sets colour and shadow colour and resets alpha to 256 and the other draw state.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitmapFont.setColors(II)V"
+    },
+    {
+      "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+      "originalName": "a",
+      "to": "drawStringRight",
+      "evidence": "Draws at x minus the full string width after setting colours.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitmapFont.drawStringRight(Ljava/lang/String;IIII)V"
+    },
+    {
+      "symbol": "M:vd.b(Ljava/lang/String;)I",
+      "originalName": "b",
+      "to": "stringWidth",
+      "evidence": "Sums glyph advances and returns zero for null; used to centre and right-align text.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitmapFont.stringWidth(Ljava/lang/String;)I"
+    },
+    {
+      "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+      "originalName": "b",
+      "to": "drawStringCentered",
+      "evidence": "Draws at x minus half the string width after setting colours.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitmapFont.drawStringCentered(Ljava/lang/String;IIII)V"
+    },
+    {
+      "symbol": "M:vd.c(Ljava/lang/String;I)I",
+      "originalName": "c",
+      "to": "maxLineWidth",
+      "evidence": "Wraps the text, then returns the widest line width.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitmapFont.maxLineWidth(Ljava/lang/String;I)I"
+    },
+    {
+      "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+      "originalName": "c",
+      "to": "drawString",
+      "evidence": "Draws at the given x after setting colours.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitmapFont.drawString(Ljava/lang/String;IIII)V"
+    },
+    {
       "symbol": "M:vg.a(ILjava/lang/String;Lkl;Ljava/lang/String;)Lo;",
       "originalName": "a",
       "to": "loadSprite",
@@ -136476,7 +136532,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#0",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#0",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -136487,7 +136543,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#1",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#1",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -136498,7 +136554,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#10",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#10",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#10",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -136509,7 +136565,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#11",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#11",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#11",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -136520,7 +136576,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#12",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#12",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -136531,7 +136587,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#2",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#2",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136542,7 +136598,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#3",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#3",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -136553,7 +136609,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#4",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#4",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -136564,7 +136620,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#5",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#5",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -136575,7 +136631,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#6",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#6",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -136586,7 +136642,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#7",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#7",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -136597,7 +136653,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#8",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#8",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#8",
       "originalName": "var9_int",
       "renamedName": "var9_int",
       "declaration": {
@@ -136608,7 +136664,7 @@
     },
     {
       "symbol": "L:vd.b(Ljava/lang/String;)I#9",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)I#9",
+      "renamedSymbol": "L:BitmapFont.stringWidth(Ljava/lang/String;)I#9",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -136806,7 +136862,7 @@
     },
     {
       "symbol": "L:vd.c(Ljava/lang/String;I)I#0",
-      "renamedSymbol": "L:BitmapFont.c(Ljava/lang/String;I)I#0",
+      "renamedSymbol": "L:BitmapFont.maxLineWidth(Ljava/lang/String;I)I#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -136817,7 +136873,7 @@
     },
     {
       "symbol": "L:vd.c(Ljava/lang/String;I)I#1",
-      "renamedSymbol": "L:BitmapFont.c(Ljava/lang/String;I)I#1",
+      "renamedSymbol": "L:BitmapFont.maxLineWidth(Ljava/lang/String;I)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -136828,7 +136884,7 @@
     },
     {
       "symbol": "L:vd.c(Ljava/lang/String;I)I#2",
-      "renamedSymbol": "L:BitmapFont.c(Ljava/lang/String;I)I#2",
+      "renamedSymbol": "L:BitmapFont.maxLineWidth(Ljava/lang/String;I)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -136839,7 +136895,7 @@
     },
     {
       "symbol": "L:vd.c(Ljava/lang/String;I)I#3",
-      "renamedSymbol": "L:BitmapFont.c(Ljava/lang/String;I)I#3",
+      "renamedSymbol": "L:BitmapFont.maxLineWidth(Ljava/lang/String;I)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -166495,9 +166551,9 @@
     },
     {
       "symbol": "M:vd.a(C)I",
-      "renamedSymbol": "M:BitmapFont.a(C)I",
+      "renamedSymbol": "M:BitmapFont.charWidth(C)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "charWidth",
       "declaration": {
         "file": "vd.java",
         "start": 1007,
@@ -166506,9 +166562,9 @@
     },
     {
       "symbol": "M:vd.a(II)V",
-      "renamedSymbol": "M:BitmapFont.a(II)V",
+      "renamedSymbol": "M:BitmapFont.setColors(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setColors",
       "declaration": {
         "file": "vd.java",
         "start": 30425,
@@ -166583,9 +166639,9 @@
     },
     {
       "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
-      "renamedSymbol": "M:BitmapFont.a(Ljava/lang/String;IIII)V",
+      "renamedSymbol": "M:BitmapFont.drawStringRight(Ljava/lang/String;IIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawStringRight",
       "declaration": {
         "file": "vd.java",
         "start": 30711,
@@ -166649,9 +166705,9 @@
     },
     {
       "symbol": "M:vd.b(Ljava/lang/String;)I",
-      "renamedSymbol": "M:BitmapFont.b(Ljava/lang/String;)I",
+      "renamedSymbol": "M:BitmapFont.stringWidth(Ljava/lang/String;)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "stringWidth",
       "declaration": {
         "file": "vd.java",
         "start": 10502,
@@ -166682,9 +166738,9 @@
     },
     {
       "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
-      "renamedSymbol": "M:BitmapFont.b(Ljava/lang/String;IIII)V",
+      "renamedSymbol": "M:BitmapFont.drawStringCentered(Ljava/lang/String;IIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawStringCentered",
       "declaration": {
         "file": "vd.java",
         "start": 768,
@@ -166693,9 +166749,9 @@
     },
     {
       "symbol": "M:vd.c(Ljava/lang/String;I)I",
-      "renamedSymbol": "M:BitmapFont.c(Ljava/lang/String;I)I",
+      "renamedSymbol": "M:BitmapFont.maxLineWidth(Ljava/lang/String;I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "maxLineWidth",
       "declaration": {
         "file": "vd.java",
         "start": 1101,
@@ -166704,9 +166760,9 @@
     },
     {
       "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
-      "renamedSymbol": "M:BitmapFont.c(Ljava/lang/String;IIII)V",
+      "renamedSymbol": "M:BitmapFont.drawString(Ljava/lang/String;IIII)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "drawString",
       "declaration": {
         "file": "vd.java",
         "start": 4347,
@@ -219064,7 +219120,7 @@
     },
     {
       "symbol": "P:vd.a(C)I#0",
-      "renamedSymbol": "P:BitmapFont.a(C)I#0",
+      "renamedSymbol": "P:BitmapFont.charWidth(C)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -219075,7 +219131,7 @@
     },
     {
       "symbol": "P:vd.a(II)V#0",
-      "renamedSymbol": "P:BitmapFont.a(II)V#0",
+      "renamedSymbol": "P:BitmapFont.setColors(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -219086,7 +219142,7 @@
     },
     {
       "symbol": "P:vd.a(II)V#1",
-      "renamedSymbol": "P:BitmapFont.a(II)V#1",
+      "renamedSymbol": "P:BitmapFont.setColors(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -219361,7 +219417,7 @@
     },
     {
       "symbol": "P:vd.a(Ljava/lang/String;IIII)V#0",
-      "renamedSymbol": "P:BitmapFont.a(Ljava/lang/String;IIII)V#0",
+      "renamedSymbol": "P:BitmapFont.drawStringRight(Ljava/lang/String;IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -219372,7 +219428,7 @@
     },
     {
       "symbol": "P:vd.a(Ljava/lang/String;IIII)V#1",
-      "renamedSymbol": "P:BitmapFont.a(Ljava/lang/String;IIII)V#1",
+      "renamedSymbol": "P:BitmapFont.drawStringRight(Ljava/lang/String;IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -219383,7 +219439,7 @@
     },
     {
       "symbol": "P:vd.a(Ljava/lang/String;IIII)V#2",
-      "renamedSymbol": "P:BitmapFont.a(Ljava/lang/String;IIII)V#2",
+      "renamedSymbol": "P:BitmapFont.drawStringRight(Ljava/lang/String;IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -219394,7 +219450,7 @@
     },
     {
       "symbol": "P:vd.a(Ljava/lang/String;IIII)V#3",
-      "renamedSymbol": "P:BitmapFont.a(Ljava/lang/String;IIII)V#3",
+      "renamedSymbol": "P:BitmapFont.drawStringRight(Ljava/lang/String;IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -219405,7 +219461,7 @@
     },
     {
       "symbol": "P:vd.a(Ljava/lang/String;IIII)V#4",
-      "renamedSymbol": "P:BitmapFont.a(Ljava/lang/String;IIII)V#4",
+      "renamedSymbol": "P:BitmapFont.drawStringRight(Ljava/lang/String;IIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -219768,7 +219824,7 @@
     },
     {
       "symbol": "P:vd.b(Ljava/lang/String;)I#0",
-      "renamedSymbol": "P:BitmapFont.b(Ljava/lang/String;)I#0",
+      "renamedSymbol": "P:BitmapFont.stringWidth(Ljava/lang/String;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -219834,7 +219890,7 @@
     },
     {
       "symbol": "P:vd.b(Ljava/lang/String;IIII)V#0",
-      "renamedSymbol": "P:BitmapFont.b(Ljava/lang/String;IIII)V#0",
+      "renamedSymbol": "P:BitmapFont.drawStringCentered(Ljava/lang/String;IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -219845,7 +219901,7 @@
     },
     {
       "symbol": "P:vd.b(Ljava/lang/String;IIII)V#1",
-      "renamedSymbol": "P:BitmapFont.b(Ljava/lang/String;IIII)V#1",
+      "renamedSymbol": "P:BitmapFont.drawStringCentered(Ljava/lang/String;IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -219856,7 +219912,7 @@
     },
     {
       "symbol": "P:vd.b(Ljava/lang/String;IIII)V#2",
-      "renamedSymbol": "P:BitmapFont.b(Ljava/lang/String;IIII)V#2",
+      "renamedSymbol": "P:BitmapFont.drawStringCentered(Ljava/lang/String;IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -219867,7 +219923,7 @@
     },
     {
       "symbol": "P:vd.b(Ljava/lang/String;IIII)V#3",
-      "renamedSymbol": "P:BitmapFont.b(Ljava/lang/String;IIII)V#3",
+      "renamedSymbol": "P:BitmapFont.drawStringCentered(Ljava/lang/String;IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -219878,7 +219934,7 @@
     },
     {
       "symbol": "P:vd.b(Ljava/lang/String;IIII)V#4",
-      "renamedSymbol": "P:BitmapFont.b(Ljava/lang/String;IIII)V#4",
+      "renamedSymbol": "P:BitmapFont.drawStringCentered(Ljava/lang/String;IIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -219889,7 +219945,7 @@
     },
     {
       "symbol": "P:vd.c(Ljava/lang/String;I)I#0",
-      "renamedSymbol": "P:BitmapFont.c(Ljava/lang/String;I)I#0",
+      "renamedSymbol": "P:BitmapFont.maxLineWidth(Ljava/lang/String;I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -219900,7 +219956,7 @@
     },
     {
       "symbol": "P:vd.c(Ljava/lang/String;I)I#1",
-      "renamedSymbol": "P:BitmapFont.c(Ljava/lang/String;I)I#1",
+      "renamedSymbol": "P:BitmapFont.maxLineWidth(Ljava/lang/String;I)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -219911,7 +219967,7 @@
     },
     {
       "symbol": "P:vd.c(Ljava/lang/String;IIII)V#0",
-      "renamedSymbol": "P:BitmapFont.c(Ljava/lang/String;IIII)V#0",
+      "renamedSymbol": "P:BitmapFont.drawString(Ljava/lang/String;IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -219922,7 +219978,7 @@
     },
     {
       "symbol": "P:vd.c(Ljava/lang/String;IIII)V#1",
-      "renamedSymbol": "P:BitmapFont.c(Ljava/lang/String;IIII)V#1",
+      "renamedSymbol": "P:BitmapFont.drawString(Ljava/lang/String;IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -219933,7 +219989,7 @@
     },
     {
       "symbol": "P:vd.c(Ljava/lang/String;IIII)V#2",
-      "renamedSymbol": "P:BitmapFont.c(Ljava/lang/String;IIII)V#2",
+      "renamedSymbol": "P:BitmapFont.drawString(Ljava/lang/String;IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -219944,7 +220000,7 @@
     },
     {
       "symbol": "P:vd.c(Ljava/lang/String;IIII)V#3",
-      "renamedSymbol": "P:BitmapFont.c(Ljava/lang/String;IIII)V#3",
+      "renamedSymbol": "P:BitmapFont.drawString(Ljava/lang/String;IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -219955,7 +220011,7 @@
     },
     {
       "symbol": "P:vd.c(Ljava/lang/String;IIII)V#4",
-      "renamedSymbol": "P:BitmapFont.c(Ljava/lang/String;IIII)V#4",
+      "renamedSymbol": "P:BitmapFont.drawString(Ljava/lang/String;IIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -227653,7 +227709,7 @@
       "original": "bl.java",
       "renamed": "bl.java",
       "inputSha256": "c0bf3b3b8a0e736946fb06542a788d5bf573cff3ac1b42ae95bf3056826b2660",
-      "outputSha256": "d358cec50d7b326e7d6048f1bc205bdf828838035878bf5bb72e2de88a135593",
+      "outputSha256": "6d04fa8ba4e8b2062279327809bab04f1c97b5adf61bada3c53c0cdbabec9765",
       "edits": [
         {
           "start": 416,
@@ -227661,6 +227717,20 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 1353,
+          "end": 1354,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
+          "start": 2012,
+          "end": 2013,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         }
       ]
     },
@@ -228011,7 +228081,7 @@
       "original": "cf.java",
       "renamed": "cf.java",
       "inputSha256": "8eea374e5276c1405f3117fbce968ecd0349b83630142e82a9ffaa1463530e02",
-      "outputSha256": "e3bda6da3fedb35b1381f3acfb7515c7cfb324c5bd9d5842d8b04d0665f72dd6",
+      "outputSha256": "6336e2e0e6cfb75d68a63b18c753bf53335ddfd0e09ba299cf1a8a7f82a1f5e5",
       "edits": [
         {
           "start": 208,
@@ -228035,6 +228105,13 @@
           "renamed": "BitmapFont"
         },
         {
+          "start": 2814,
+          "end": 2815,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 3545,
           "end": 3547,
           "symbol": "C:da",
@@ -228047,6 +228124,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 4149,
+          "end": 4150,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 5396,
@@ -228077,6 +228161,13 @@
           "renamed": "BitmapFont"
         },
         {
+          "start": 10373,
+          "end": 10374,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 10447,
           "end": 10449,
           "symbol": "C:vd",
@@ -228084,11 +228175,25 @@
           "renamed": "BitmapFont"
         },
         {
+          "start": 10596,
+          "end": 10597,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 11886,
           "end": 11888,
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 12600,
+          "end": 12601,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 12984,
@@ -229359,7 +229464,7 @@
       "original": "df.java",
       "renamed": "RasterBuffer.java",
       "inputSha256": "193d02b5fddd5f4d116f4c562858064f72f7d4b3c30c47d0f2d771a4c62e239b",
-      "outputSha256": "e4793ae67e173d32119ae4729ce5fe2f2116f6fbf37d23e8bffa3570a261bd8b",
+      "outputSha256": "b4e848cb38b23b25368f1cf105f015053047425d0cda00af9355b508547ebc6e",
       "edits": [
         {
           "start": 53,
@@ -229719,6 +229824,48 @@
           "renamed": "Sprite"
         },
         {
+          "start": 6107,
+          "end": 6108,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 6212,
+          "end": 6213,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 6315,
+          "end": 6316,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 6421,
+          "end": 6422,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 6526,
+          "end": 6527,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 6589,
+          "end": 6590,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 6719,
           "end": 6721,
           "symbol": "C:ta",
@@ -229864,6 +230011,13 @@
           "symbol": "M:ed.b([I)V",
           "original": "b",
           "renamed": "saveClip"
+        },
+        {
+          "start": 8202,
+          "end": 8203,
+          "symbol": "M:vd.c(Ljava/lang/String;I)I",
+          "original": "c",
+          "renamed": "maxLineWidth"
         },
         {
           "start": 8211,
@@ -230067,6 +230221,20 @@
           "symbol": "M:ed.b([I)V",
           "original": "b",
           "renamed": "saveClip"
+        },
+        {
+          "start": 12332,
+          "end": 12333,
+          "symbol": "M:vd.c(Ljava/lang/String;I)I",
+          "original": "c",
+          "renamed": "maxLineWidth"
+        },
+        {
+          "start": 12587,
+          "end": 12588,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 13069,
@@ -233776,7 +233944,7 @@
       "original": "eg.java",
       "renamed": "eg.java",
       "inputSha256": "490d383f9928c3183ff158153a52b2e03b1e0b51e8ddeae77eb160b2288069ac",
-      "outputSha256": "1858949d9b1f643b428139ff228cc4b3baf34b684676ce5e5212dcb6322079fb",
+      "outputSha256": "0784f39d78e7c028856164ffc8011dbfe21fd31850f950798a3a8206be43e6a3",
       "edits": [
         {
           "start": 156,
@@ -233800,6 +233968,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 506,
+          "end": 507,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 553,
           "end": 555,
           "symbol": "C:jj",
@@ -233812,6 +233987,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 564,
+          "end": 565,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 610,
@@ -233828,6 +234010,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 621,
+          "end": 622,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 668,
           "end": 670,
           "symbol": "C:jj",
@@ -233842,6 +234031,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 679,
+          "end": 680,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 792,
           "end": 794,
           "symbol": "C:jj",
@@ -233854,6 +234050,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 803,
+          "end": 804,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 1857,
@@ -234176,11 +234379,25 @@
           "renamed": "font12"
         },
         {
+          "start": 26447,
+          "end": 26448,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 26539,
           "end": 26546,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 26547,
+          "end": 26548,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 26639,
@@ -234190,6 +234407,13 @@
           "renamed": "font12"
         },
         {
+          "start": 26647,
+          "end": 26648,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 26739,
           "end": 26746,
           "symbol": "F:a.field_a:Lgb;",
@@ -234197,11 +234421,25 @@
           "renamed": "font12"
         },
         {
+          "start": 26747,
+          "end": 26748,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 26835,
           "end": 26842,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 26843,
+          "end": 26844,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 26942,
@@ -234284,6 +234522,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 29920,
+          "end": 29921,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 29940,
           "end": 29942,
           "symbol": "C:wl",
@@ -234333,6 +234578,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 30776,
+          "end": 30777,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 30796,
           "end": 30798,
           "symbol": "C:wl",
@@ -234380,6 +234632,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 31633,
+          "end": 31634,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 31653,
@@ -235771,7 +236030,7 @@
       "original": "eh.java",
       "renamed": "eh.java",
       "inputSha256": "cfa603da140d2420c9fa572acbe72e6849800828782b05597f11f04b0d7f54ac",
-      "outputSha256": "551a5056e38ccd40de09659b77736de0c9865f19ac8526f03e82608483797bfa",
+      "outputSha256": "884f442ed99293ccc6bfb2a94fafe48c576e52a5b253f7803cd3ef39c8f15fe0",
       "edits": [
         {
           "start": 81,
@@ -235828,6 +236087,13 @@
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1754,
+          "end": 1755,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 2813,
@@ -238906,7 +239172,7 @@
       "original": "hk.java",
       "renamed": "hk.java",
       "inputSha256": "beb65a34c307d022f61f3fa771144a4aa3e7439f210c361b44d5590a52f890ad",
-      "outputSha256": "47d4d51739938648721ec2646385e9e6f5d9f36299c9aeb953490a41c759fc8f",
+      "outputSha256": "88ac8e59d994893100e5401963d6d03e371e0c378c2f08e7977075b7dc854fce",
       "edits": [
         {
           "start": 382,
@@ -238914,6 +239180,13 @@
           "symbol": "C:va",
           "original": "va",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 393,
+          "end": 394,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 519,
@@ -242839,7 +243112,7 @@
       "original": "lk.java",
       "renamed": "lk.java",
       "inputSha256": "d8d6412bbf3f69672708dccfc6e320d4daf90146dcbef0a11c6dfa591d0f136f",
-      "outputSha256": "36b61726233f4285199500ad75ea55d737abaae9c59f09f9da38a43856b85c94",
+      "outputSha256": "ed35123f068e395a9c7dae612bf0f43f904ef1bb47b370d7fd660ad6b72b0c21",
       "edits": [
         {
           "start": 70,
@@ -242870,6 +243143,27 @@
           "renamed": "BitmapFont"
         },
         {
+          "start": 1250,
+          "end": 1251,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
+          "start": 1565,
+          "end": 1566,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
+          "start": 1607,
+          "end": 1608,
+          "symbol": "M:vd.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
           "start": 2850,
           "end": 2857,
           "symbol": "F:lk.field_a:I",
@@ -242882,7 +243176,7 @@
       "original": "ll.java",
       "renamed": "ll.java",
       "inputSha256": "608d01db347d2bd2e4ed2f47dbc6892bc8eae7e40f9b5f8e83662588c95a3412",
-      "outputSha256": "888cff84b9577ca4a2b13dbe7619518252b41b01be8e91f12dbf1385e894660c",
+      "outputSha256": "e058f7fed79555a23a4cac3135d5629c568bf5aaeee6e51dfaae4283d5ae69a9",
       "edits": [
         {
           "start": 203,
@@ -243016,6 +243310,27 @@
           "symbol": "C:eb",
           "original": "eb",
           "renamed": "ClientException"
+        },
+        {
+          "start": 10772,
+          "end": 10773,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 11026,
+          "end": 11027,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
+        },
+        {
+          "start": 11317,
+          "end": 11318,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 11549,
@@ -244122,7 +244437,7 @@
       "original": "nf.java",
       "renamed": "nf.java",
       "inputSha256": "0548fae8624dc98e67f7df519da384c287dc351c63b2e3ab84d541484676a74f",
-      "outputSha256": "dc198f83e904f979258cb1558b6daf7eb1a7703ca9c23137a942eb26c8e14f92",
+      "outputSha256": "c1fbe82b5af066704982f1fabf06f0aea7c9352658f9913a494346e0e0c1ed44",
       "edits": [
         {
           "start": 1305,
@@ -244179,6 +244494,20 @@
           "symbol": "C:pf",
           "original": "pf",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 25100,
+          "end": 25101,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 25251,
+          "end": 25252,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         }
       ]
     },
@@ -248550,7 +248879,7 @@
       "original": "od.java",
       "renamed": "od.java",
       "inputSha256": "3a4790b8e3c25703d94f7c2e742b96c6bce2a1c759f4fc5f0f7b04c5c7dbbf06",
-      "outputSha256": "1845cc06dbbf250c6203044914cc9586951fe0aff33802f4e95b79c155a1c36a",
+      "outputSha256": "9ba180d9c798dde5727b602416b014860d73e200574208fa2fef652872a69965",
       "edits": [
         {
           "start": 281,
@@ -248707,6 +249036,20 @@
           "renamed": "width"
         },
         {
+          "start": 6029,
+          "end": 6030,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
+          "start": 6785,
+          "end": 6786,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 6964,
           "end": 6966,
           "symbol": "C:ed",
@@ -248798,6 +249141,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 12323,
+          "end": 12324,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 12588,
           "end": 12590,
           "symbol": "C:ed",
@@ -248880,6 +249230,13 @@
           "symbol": "M:ed.c(IIIII)V",
           "original": "c",
           "renamed": "fillRect"
+        },
+        {
+          "start": 12981,
+          "end": 12982,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         }
       ]
     },
@@ -251822,7 +252179,7 @@
       "original": "ph.java",
       "renamed": "ph.java",
       "inputSha256": "545923d4402781b6891498731299ddf9e498472c731409dd3fd6646e59f5e0a8",
-      "outputSha256": "0256c0fb2acfb3c9729d272f2c4b03ee66df81d03236038b5598a8fa1464c7b3",
+      "outputSha256": "922b8911a36cf1c733c228cdbec1ffe671799875b9b02275f2101feec12c0b3e",
       "edits": [
         {
           "start": 1135,
@@ -251837,6 +252194,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 1146,
+          "end": 1147,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 1172,
@@ -251874,6 +252238,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 1405,
+          "end": 1406,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 1451,
           "end": 1453,
           "symbol": "C:jj",
@@ -251886,6 +252257,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 1462,
+          "end": 1463,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 1508,
@@ -251902,6 +252280,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 1519,
+          "end": 1520,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 1569,
           "end": 1571,
           "symbol": "C:jj",
@@ -251914,6 +252299,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 1580,
+          "end": 1581,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 1632,
@@ -251930,6 +252322,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 1643,
+          "end": 1644,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 1693,
           "end": 1695,
           "symbol": "C:jj",
@@ -251944,6 +252343,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 1704,
+          "end": 1705,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 1754,
           "end": 1756,
           "symbol": "C:jj",
@@ -251956,6 +252362,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 1765,
+          "end": 1766,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 2245,
@@ -252182,6 +252595,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 5645,
+          "end": 5646,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 5677,
           "end": 5684,
           "symbol": "F:ok.field_d:[Lo;",
@@ -252217,6 +252637,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 5982,
+          "end": 5983,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 6034,
           "end": 6036,
           "symbol": "C:jj",
@@ -252229,6 +252656,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 6045,
+          "end": 6046,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 6097,
@@ -252245,6 +252679,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 6108,
+          "end": 6109,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 6164,
           "end": 6166,
           "symbol": "C:jj",
@@ -252257,6 +252698,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 6175,
+          "end": 6176,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 6233,
@@ -252273,6 +252721,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 6244,
+          "end": 6245,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 6300,
           "end": 6302,
           "symbol": "C:jj",
@@ -252285,6 +252740,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 6311,
+          "end": 6312,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 6367,
@@ -252301,6 +252763,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 6378,
+          "end": 6379,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 6835,
           "end": 6837,
           "symbol": "C:jj",
@@ -252313,6 +252782,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 6846,
+          "end": 6847,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 6878,
@@ -252350,6 +252826,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 7183,
+          "end": 7184,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 7235,
           "end": 7237,
           "symbol": "C:jj",
@@ -252362,6 +252845,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 7246,
+          "end": 7247,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 7298,
@@ -252378,6 +252868,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 7309,
+          "end": 7310,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 7365,
           "end": 7367,
           "symbol": "C:jj",
@@ -252390,6 +252887,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 7376,
+          "end": 7377,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 7434,
@@ -252406,6 +252910,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 7445,
+          "end": 7446,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 7501,
           "end": 7503,
           "symbol": "C:jj",
@@ -252418,6 +252929,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 7512,
+          "end": 7513,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 7568,
@@ -252434,6 +252952,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 7579,
+          "end": 7580,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 7903,
           "end": 7905,
           "symbol": "C:jj",
@@ -252446,6 +252971,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 7914,
+          "end": 7915,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 7940,
@@ -252483,6 +253015,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 8191,
+          "end": 8192,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 8237,
           "end": 8239,
           "symbol": "C:jj",
@@ -252495,6 +253034,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 8248,
+          "end": 8249,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 8294,
@@ -252511,6 +253057,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 8305,
+          "end": 8306,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 8355,
           "end": 8357,
           "symbol": "C:jj",
@@ -252523,6 +253076,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 8366,
+          "end": 8367,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 8418,
@@ -252539,6 +253099,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 8429,
+          "end": 8430,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 8479,
           "end": 8481,
           "symbol": "C:jj",
@@ -252551,6 +253118,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 8490,
+          "end": 8491,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 8540,
@@ -252567,6 +253141,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 8551,
+          "end": 8552,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 8881,
           "end": 8883,
           "symbol": "C:jj",
@@ -252579,6 +253160,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 8892,
+          "end": 8893,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 8914,
@@ -252616,6 +253204,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 9141,
+          "end": 9142,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 9183,
           "end": 9185,
           "symbol": "C:jj",
@@ -252628,6 +253223,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 9194,
+          "end": 9195,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 9236,
@@ -252644,6 +253246,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 9247,
+          "end": 9248,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 9293,
           "end": 9295,
           "symbol": "C:jj",
@@ -252656,6 +253265,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 9304,
+          "end": 9305,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 9352,
@@ -252672,6 +253288,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 9363,
+          "end": 9364,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 9409,
           "end": 9411,
           "symbol": "C:jj",
@@ -252686,6 +253309,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 9420,
+          "end": 9421,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 9466,
           "end": 9468,
           "symbol": "C:jj",
@@ -252698,6 +253328,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 9477,
+          "end": 9478,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 9901,
@@ -255207,7 +255844,7 @@
       "original": "sf.java",
       "renamed": "sf.java",
       "inputSha256": "f28fb756a0d6aba36b605dbabd9803791b9c2b6851c20293c0b00371b13bcbf0",
-      "outputSha256": "d5aea03c4b441da22189f043855ad6560cb0b16c534d4ee5224c74eec4cb3a47",
+      "outputSha256": "6b66ed84e671be3609efb1b2e51432b2889b98d3004daaf44e78f7547e080a9b",
       "edits": [
         {
           "start": 150,
@@ -255215,6 +255852,20 @@
           "symbol": "C:oi",
           "original": "oi",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 885,
+          "end": 886,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
+          "start": 975,
+          "end": 976,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 11615,
@@ -257019,7 +257670,7 @@
       "original": "tk.java",
       "renamed": "tk.java",
       "inputSha256": "795ec33f7016a969865777dfaa90e7dc917b846146b0433fc9f602cdfb7b8183",
-      "outputSha256": "0fc5ff333922fdec365054419e8c5cd2918f8a59fc627cdb3d3febaf5df3cef2",
+      "outputSha256": "cddea0d7159ab2e126d2ccb2a5d33c00f495703ca7c98e6d077190c7f493757f",
       "edits": [
         {
           "start": 185,
@@ -257048,6 +257699,13 @@
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2298,
+          "end": 2299,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 3802,
@@ -261515,7 +262173,7 @@
       "original": "vd.java",
       "renamed": "BitmapFont.java",
       "inputSha256": "4cec30c9a79ee2736df60ed288c7cb9c5dd1656171e493b351623646b31ec3ac",
-      "outputSha256": "0f0fd9475526fb96c88467f8281e29225b4dec7a8b7244446d50fb05a4cf7df0",
+      "outputSha256": "6e7c289980b07f7004b3185720ddeb4a74d6d42a91e26b7eb7f01565c1a4d041",
       "edits": [
         {
           "start": 53,
@@ -261532,6 +262190,76 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 768,
+          "end": 769,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 906,
+          "end": 907,
+          "symbol": "M:vd.a(II)V",
+          "original": "a",
+          "renamed": "setColors"
+        },
+        {
+          "start": 962,
+          "end": 963,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
+          "start": 1007,
+          "end": 1008,
+          "symbol": "M:vd.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 1101,
+          "end": 1102,
+          "symbol": "M:vd.c(Ljava/lang/String;I)I",
+          "original": "c",
+          "renamed": "maxLineWidth"
+        },
+        {
+          "start": 1353,
+          "end": 1354,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
+          "start": 3509,
+          "end": 3510,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
+          "start": 3693,
+          "end": 3694,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
+          "start": 4347,
+          "end": 4348,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 4485,
+          "end": 4486,
+          "symbol": "M:vd.a(II)V",
+          "original": "a",
+          "renamed": "setColors"
+        },
+        {
           "start": 9832,
           "end": 9834,
           "symbol": "C:ed",
@@ -261546,11 +262274,109 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 10502,
+          "end": 10503,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 17181,
           "end": 17183,
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 18024,
+          "end": 18025,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
+          "start": 25776,
+          "end": 25777,
+          "symbol": "M:vd.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 26171,
+          "end": 26172,
+          "symbol": "M:vd.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 26550,
+          "end": 26551,
+          "symbol": "M:vd.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 26914,
+          "end": 26915,
+          "symbol": "M:vd.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 27261,
+          "end": 27262,
+          "symbol": "M:vd.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 27592,
+          "end": 27593,
+          "symbol": "M:vd.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 27907,
+          "end": 27908,
+          "symbol": "M:vd.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 28204,
+          "end": 28205,
+          "symbol": "M:vd.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 30425,
+          "end": 30426,
+          "symbol": "M:vd.a(II)V",
+          "original": "a",
+          "renamed": "setColors"
+        },
+        {
+          "start": 30711,
+          "end": 30712,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
+        },
+        {
+          "start": 30849,
+          "end": 30850,
+          "symbol": "M:vd.a(II)V",
+          "original": "a",
+          "renamed": "setColors"
+        },
+        {
+          "start": 30905,
+          "end": 30906,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 30936,
@@ -263016,7 +263842,7 @@
       "original": "wizardrun.java",
       "renamed": "wizardrun.java",
       "inputSha256": "8176a9846caa5aad0ed46dbe90fdb664c8ec85276a6c288b4c53ea3bf24ade0b",
-      "outputSha256": "9b1f02b67c4e5d196eb6b02c19963d16ae76ad90629f678423683e5e59352b8d",
+      "outputSha256": "fc001d99e06ce52fcf5e18622650e86b5c95f96457e9d00524d3304409e0579a",
       "edits": [
         {
           "start": 94,
@@ -263579,6 +264405,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 6263,
+          "end": 6264,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 6350,
           "end": 6352,
           "symbol": "C:wl",
@@ -263614,6 +264447,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 6490,
+          "end": 6491,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 6581,
           "end": 6583,
           "symbol": "C:wl",
@@ -263647,6 +264487,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 6727,
+          "end": 6728,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 6812,
@@ -263691,6 +264538,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 6953,
+          "end": 6954,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 7050,
           "end": 7052,
           "symbol": "C:wl",
@@ -263724,6 +264578,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 7190,
+          "end": 7191,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 7315,
@@ -265727,6 +266588,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 39284,
+          "end": 39285,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 39342,
           "end": 39344,
           "symbol": "C:jj",
@@ -265739,6 +266607,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 39353,
+          "end": 39354,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 39411,
@@ -265755,6 +266630,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 39422,
+          "end": 39423,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 39487,
           "end": 39489,
           "symbol": "C:jj",
@@ -265769,6 +266651,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 39498,
+          "end": 39499,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 39635,
           "end": 39637,
           "symbol": "C:jj",
@@ -265781,6 +266670,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 39646,
+          "end": 39647,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 39745,
@@ -265818,6 +266714,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 40021,
+          "end": 40022,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 40278,
           "end": 40285,
           "symbol": "F:ok.field_d:[Lo;",
@@ -265853,6 +266756,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 40464,
+          "end": 40465,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 40508,
           "end": 40510,
           "symbol": "C:jj",
@@ -265865,6 +266775,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 40519,
+          "end": 40520,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 40563,
@@ -265881,6 +266798,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 40574,
+          "end": 40575,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 40618,
           "end": 40620,
           "symbol": "C:jj",
@@ -265893,6 +266817,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 40629,
+          "end": 40630,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 40673,
@@ -265909,6 +266840,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 40684,
+          "end": 40685,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 40742,
           "end": 40744,
           "symbol": "C:jj",
@@ -265921,6 +266859,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 40753,
+          "end": 40754,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 41127,
@@ -265944,6 +266889,13 @@
           "renamed": "font12"
         },
         {
+          "start": 41425,
+          "end": 41426,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 41601,
           "end": 41608,
           "symbol": "F:ok.field_d:[Lo;",
@@ -265958,6 +266910,13 @@
           "renamed": "font12"
         },
         {
+          "start": 41718,
+          "end": 41719,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 41885,
           "end": 41892,
           "symbol": "F:ok.field_d:[Lo;",
@@ -265970,6 +266929,13 @@
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 41998,
+          "end": 41999,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 42352,
@@ -265991,6 +266957,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 42402,
+          "end": 42403,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 42414,
@@ -266021,6 +266994,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 42471,
+          "end": 42472,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 42483,
           "end": 42485,
           "symbol": "C:jj",
@@ -266047,6 +267027,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 42540,
+          "end": 42541,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 42552,
@@ -266077,6 +267064,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 42605,
+          "end": 42606,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 42617,
           "end": 42619,
           "symbol": "C:jj",
@@ -266103,6 +267097,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 42670,
+          "end": 42671,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 42682,
@@ -266145,6 +267146,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 54087,
+          "end": 54088,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 54137,
@@ -266406,6 +267414,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 57276,
+          "end": 57277,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 57295,
           "end": 57297,
           "symbol": "C:jj",
@@ -266581,6 +267596,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 60763,
+          "end": 60764,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 60824,
           "end": 60826,
           "symbol": "C:jj",
@@ -266607,6 +267629,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 60881,
+          "end": 60882,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 60909,
@@ -266637,6 +267666,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 61024,
+          "end": 61025,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 61069,
           "end": 61071,
           "symbol": "C:jj",
@@ -266663,6 +267699,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 61181,
+          "end": 61182,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 61183,
@@ -266826,6 +267869,13 @@
           "renamed": "font12"
         },
         {
+          "start": 66803,
+          "end": 66804,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
+        },
+        {
           "start": 66829,
           "end": 66831,
           "symbol": "C:jj",
@@ -266845,6 +267895,13 @@
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 66893,
+          "end": 66894,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
         },
         {
           "start": 66912,
@@ -266868,6 +267925,13 @@
           "renamed": "font12"
         },
         {
+          "start": 66977,
+          "end": 66978,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
+        },
+        {
           "start": 66996,
           "end": 66998,
           "symbol": "C:jj",
@@ -266887,6 +267951,13 @@
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 67098,
+          "end": 67099,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
         },
         {
           "start": 67117,
@@ -266910,6 +267981,13 @@
           "renamed": "font12"
         },
         {
+          "start": 67182,
+          "end": 67183,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
+        },
+        {
           "start": 67207,
           "end": 67209,
           "symbol": "C:jj",
@@ -266929,6 +268007,13 @@
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 67266,
+          "end": 67267,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
         },
         {
           "start": 67291,
@@ -267295,6 +268380,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 69830,
+          "end": 69831,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 69895,
           "end": 69902,
           "symbol": "F:a.field_a:Lgb;",
@@ -267314,6 +268406,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 70382,
+          "end": 70383,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 70407,
@@ -267344,6 +268443,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 70461,
+          "end": 70462,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 70486,
           "end": 70488,
           "symbol": "C:jj",
@@ -267370,6 +268476,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 70540,
+          "end": 70541,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 70559,
@@ -267660,11 +268773,25 @@
           "renamed": "font12"
         },
         {
+          "start": 74737,
+          "end": 74738,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 74810,
           "end": 74817,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 74818,
+          "end": 74819,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 74891,
@@ -267674,11 +268801,25 @@
           "renamed": "font12"
         },
         {
+          "start": 74899,
+          "end": 74900,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 74971,
           "end": 74978,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 74979,
+          "end": 74980,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 75052,
@@ -267688,11 +268829,25 @@
           "renamed": "font12"
         },
         {
+          "start": 75060,
+          "end": 75061,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 75240,
           "end": 75247,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 75248,
+          "end": 75249,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 75323,
@@ -267702,11 +268857,25 @@
           "renamed": "font12"
         },
         {
+          "start": 75331,
+          "end": 75332,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 75406,
           "end": 75413,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 75414,
+          "end": 75415,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 75488,
@@ -267716,11 +268885,25 @@
           "renamed": "font12"
         },
         {
+          "start": 75496,
+          "end": 75497,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 75571,
           "end": 75578,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 75579,
+          "end": 75580,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 75749,
@@ -267738,11 +268921,25 @@
           "renamed": "font12"
         },
         {
+          "start": 75904,
+          "end": 75905,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 75967,
           "end": 75974,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 75975,
+          "end": 75976,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
         },
         {
           "start": 76038,
@@ -267752,11 +268949,25 @@
           "renamed": "font12"
         },
         {
+          "start": 76046,
+          "end": 76047,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 76115,
           "end": 76122,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 76123,
+          "end": 76124,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
         },
         {
           "start": 76193,
@@ -267766,11 +268977,25 @@
           "renamed": "font12"
         },
         {
+          "start": 76201,
+          "end": 76202,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 76272,
           "end": 76279,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 76280,
+          "end": 76281,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
         },
         {
           "start": 76356,
@@ -267780,11 +269005,25 @@
           "renamed": "font12"
         },
         {
+          "start": 76364,
+          "end": 76365,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 76401,
           "end": 76408,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 76409,
+          "end": 76410,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 76460,
@@ -267794,11 +269033,25 @@
           "renamed": "font12"
         },
         {
+          "start": 76468,
+          "end": 76469,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 76533,
           "end": 76540,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 76541,
+          "end": 76542,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 76611,
@@ -267808,11 +269061,25 @@
           "renamed": "font12"
         },
         {
+          "start": 76619,
+          "end": 76620,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 76743,
           "end": 76750,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 76751,
+          "end": 76752,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 76804,
@@ -267822,6 +269089,13 @@
           "renamed": "font12"
         },
         {
+          "start": 76812,
+          "end": 76813,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
+        },
+        {
           "start": 76892,
           "end": 76899,
           "symbol": "F:a.field_a:Lgb;",
@@ -267829,11 +269103,25 @@
           "renamed": "font12"
         },
         {
+          "start": 76900,
+          "end": 76901,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
+        },
+        {
           "start": 76982,
           "end": 76989,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 76990,
+          "end": 76991,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
         },
         {
           "start": 78473,
@@ -267865,11 +269153,25 @@
           "renamed": "font12"
         },
         {
+          "start": 78635,
+          "end": 78636,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 78685,
           "end": 78692,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 78693,
+          "end": 78694,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 78768,
@@ -267879,11 +269181,25 @@
           "renamed": "font12"
         },
         {
+          "start": 78776,
+          "end": 78777,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 78851,
           "end": 78858,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 78859,
+          "end": 78860,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 78933,
@@ -267893,11 +269209,25 @@
           "renamed": "font12"
         },
         {
+          "start": 78941,
+          "end": 78942,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 79016,
           "end": 79023,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 79024,
+          "end": 79025,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 79110,
@@ -267921,11 +269251,25 @@
           "renamed": "font12"
         },
         {
+          "start": 79364,
+          "end": 79365,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 79433,
           "end": 79440,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 79441,
+          "end": 79442,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 79510,
@@ -267935,11 +269279,25 @@
           "renamed": "font12"
         },
         {
+          "start": 79518,
+          "end": 79519,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 79586,
           "end": 79593,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 79594,
+          "end": 79595,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 79663,
@@ -267949,11 +269307,25 @@
           "renamed": "font12"
         },
         {
+          "start": 79671,
+          "end": 79672,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 79810,
           "end": 79817,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 79818,
+          "end": 79819,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
         },
         {
           "start": 79877,
@@ -267963,11 +269335,25 @@
           "renamed": "font12"
         },
         {
+          "start": 79885,
+          "end": 79886,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
+        },
+        {
           "start": 79944,
           "end": 79951,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 79952,
+          "end": 79953,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
         },
         {
           "start": 80010,
@@ -267977,11 +269363,25 @@
           "renamed": "font12"
         },
         {
+          "start": 80018,
+          "end": 80019,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
+        },
+        {
           "start": 80077,
           "end": 80084,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 80085,
+          "end": 80086,
+          "symbol": "M:vd.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringRight"
         },
         {
           "start": 80242,
@@ -267991,6 +269391,13 @@
           "renamed": "font12"
         },
         {
+          "start": 80250,
+          "end": 80251,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 80348,
           "end": 80355,
           "symbol": "F:a.field_a:Lgb;",
@@ -267998,11 +269405,25 @@
           "renamed": "font12"
         },
         {
+          "start": 80356,
+          "end": 80357,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 80474,
           "end": 80481,
           "symbol": "F:a.field_a:Lgb;",
           "original": "field_a",
           "renamed": "font12"
+        },
+        {
+          "start": 80482,
+          "end": 80483,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 80773,
@@ -268117,6 +269538,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 81575,
+          "end": 81576,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 81613,
           "end": 81615,
           "symbol": "C:jj",
@@ -268143,6 +269571,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 81664,
+          "end": 81665,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 81698,
@@ -268173,6 +269608,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 81772,
+          "end": 81773,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 81818,
           "end": 81825,
           "symbol": "F:hj.field_g:Lgb;",
@@ -268192,6 +269634,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 81851,
+          "end": 81852,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 81886,
@@ -268227,6 +269676,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 82215,
+          "end": 82216,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 82244,
@@ -268565,6 +270021,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 84276,
+          "end": 84277,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 84309,
           "end": 84311,
           "symbol": "C:jj",
@@ -268579,6 +270042,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 84320,
+          "end": 84321,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 84403,
           "end": 84405,
           "symbol": "C:jj",
@@ -268591,6 +270061,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 84414,
+          "end": 84415,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 84512,
@@ -269013,6 +270490,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 88256,
+          "end": 88257,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 88360,
           "end": 88362,
           "symbol": "C:jj",
@@ -269025,6 +270509,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 88371,
+          "end": 88372,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 88470,
@@ -269041,6 +270532,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 88481,
+          "end": 88482,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 88592,
           "end": 88594,
           "symbol": "C:jj",
@@ -269055,6 +270553,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 88603,
+          "end": 88604,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 88812,
           "end": 88814,
           "symbol": "C:jj",
@@ -269067,6 +270572,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 88823,
+          "end": 88824,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 88996,
@@ -269102,6 +270614,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 89401,
+          "end": 89402,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 89699,
@@ -269179,6 +270698,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 90648,
+          "end": 90649,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 90677,
@@ -269298,6 +270824,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 91640,
+          "end": 91641,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 91669,
@@ -269454,6 +270987,13 @@
           "renamed": "wizardFont"
         },
         {
+          "start": 93668,
+          "end": 93669,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 93787,
           "end": 93789,
           "symbol": "C:jj",
@@ -269466,6 +271006,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 93798,
+          "end": 93799,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 93893,
@@ -269482,6 +271029,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 93904,
+          "end": 93905,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 94086,
           "end": 94088,
           "symbol": "C:jj",
@@ -269494,6 +271048,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 94097,
+          "end": 94098,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 94272,
@@ -269522,6 +271083,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 94555,
+          "end": 94556,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 94575,
@@ -269643,6 +271211,34 @@
           "renamed": "frameSprites"
         },
         {
+          "start": 97479,
+          "end": 97480,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 97784,
+          "end": 97785,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 98277,
+          "end": 98278,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 98802,
+          "end": 98803,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 99249,
           "end": 99251,
           "symbol": "C:da",
@@ -269748,6 +271344,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 101344,
+          "end": 101345,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 101346,
           "end": 101348,
           "symbol": "C:nl",
@@ -269776,6 +271379,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 101453,
+          "end": 101454,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 101455,
           "end": 101457,
           "symbol": "C:nl",
@@ -269795,6 +271405,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 101603,
+          "end": 101604,
+          "symbol": "M:vd.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 101605,
@@ -269867,6 +271484,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 102067,
+          "end": 102068,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 102228,
           "end": 102229,
           "symbol": "M:wizardrun.u(I)V",
@@ -269914,6 +271538,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 103456,
+          "end": 103457,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 103575,
@@ -269979,6 +271610,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 104138,
+          "end": 104139,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 105046,
           "end": 105047,
           "symbol": "M:wizardrun.t(I)V",
@@ -270028,6 +271666,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 108987,
+          "end": 108988,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 109199,
           "end": 109201,
           "symbol": "C:jj",
@@ -270056,6 +271701,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 109425,
+          "end": 109426,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 109686,
           "end": 109688,
           "symbol": "C:jj",
@@ -270075,6 +271727,13 @@
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 110339,
+          "end": 110340,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 110682,
@@ -270189,6 +271848,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 115180,
+          "end": 115181,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 115314,
           "end": 115316,
           "symbol": "C:jj",
@@ -270256,6 +271922,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 118389,
+          "end": 118390,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
+        },
+        {
           "start": 118462,
           "end": 118464,
           "symbol": "C:jj",
@@ -270282,6 +271955,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 118917,
+          "end": 118918,
+          "symbol": "M:vd.b(Ljava/lang/String;)I",
+          "original": "b",
+          "renamed": "stringWidth"
         },
         {
           "start": 119132,
@@ -270844,6 +272524,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 168021,
+          "end": 168022,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 168068,
           "end": 168070,
           "symbol": "C:jj",
@@ -270856,6 +272543,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 168079,
+          "end": 168080,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 168125,
@@ -270872,6 +272566,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 168136,
+          "end": 168137,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 168182,
           "end": 168184,
           "symbol": "C:jj",
@@ -270886,6 +272587,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 168193,
+          "end": 168194,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 168239,
           "end": 168241,
           "symbol": "C:jj",
@@ -270898,6 +272606,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 168250,
+          "end": 168251,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 172183,
@@ -270956,6 +272671,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 173405,
+          "end": 173406,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 173462,
           "end": 173464,
           "symbol": "C:jj",
@@ -270968,6 +272690,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 173473,
+          "end": 173474,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 173607,
@@ -270984,6 +272713,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 173618,
+          "end": 173619,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 173681,
           "end": 173683,
           "symbol": "C:jj",
@@ -270996,6 +272732,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 173692,
+          "end": 173693,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 173756,
@@ -271012,6 +272755,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 173767,
+          "end": 173768,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 173826,
           "end": 173828,
           "symbol": "C:jj",
@@ -271024,6 +272774,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 173837,
+          "end": 173838,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 173891,
@@ -271040,6 +272797,13 @@
           "renamed": "wizardFont2"
         },
         {
+          "start": 173902,
+          "end": 173903,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 173956,
           "end": 173958,
           "symbol": "C:jj",
@@ -271052,6 +272816,13 @@
           "symbol": "F:jj.field_b:Lgb;",
           "original": "field_b",
           "renamed": "wizardFont2"
+        },
+        {
+          "start": 173967,
+          "end": 173968,
+          "symbol": "M:vd.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 174384,
@@ -271578,10 +273349,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/wizardrun"
     },
-    "rulesSha256": "f9ca5ee0cf4d9ea0fe6c7448b3deb8bb570caacf8a684671de233a3e0596f836",
+    "rulesSha256": "d8a28c940502adac1cdb85679ff487a13e05029dbc7d4d14b73a8959c726ec8f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "afac4540005f24ce5d2bf2eb36ddf3038dab1c3099a63da88e9df330365ae2e3",
-    "outputTreeSha256": "7ba7bac91ac9ea148917a2161d329c8d5f273d6bf3c7919ad177bbf3ba6081cb",
+    "outputTreeSha256": "5c9f5beb4a3517dc2c950493b74f405b0439600fbcfc4ee47c9d44e752ed7611",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
